@@ -1,187 +1,215 @@
 export const id = 28;
 export const ids = [28];
 export const modules = {
-  37538: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => HM,
-      i: () => hM,
-      m: () => mM,
-      p: () => LM
+  37318: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => tU,
+      e: () => gU,
+      f: () => NU,
+      h: () => YU
     });
-    var OM = iM(35017),
-      SM = iM(37542),
-      jM = iM(37544),
-      aM = iM(9328),
-      PM = iM(1516),
-      nM = iM(44),
-      QM = iM(65),
-      zM = iM(1303);
+    var cU = zU(34859),
+      yU = zU(37325),
+      QU = zU(37334),
+      AU = zU(9282),
+      FU = zU(1492),
+      oU = zU(61),
+      DU = zU(73),
+      EU = zU(1305);
 
-    function LM() {
-      var MM;
-      return (0, PM.e)(SM.e, (0, SM.t)()), (0, zM.jsx)(zM.Fragment, {
-        children: null === (MM = (0, SM.t)()) || void 0 === MM ? void 0 : MM.content
+    function YU() {
+      var UU;
+      return (0, FU.j)(yU.d, (0, yU.o)()), (0, EU.jsx)(EU.Fragment, {
+        children: null === (UU = (0, yU.o)()) || void 0 === UU ? void 0 : UU.content
       })
     }
 
-    function mM(MM) {
-      var rM;
+    function NU(UU) {
+      var XU;
       let {
-        show: iM
-      } = MM;
-      (0, PM.e)(SM.e, (0, SM.t)());
-      const QM = null === (rM = (0, SM.t)()) || void 0 === rM ? void 0 : rM.menu;
-      return (0, nM.useEffect)((() => {
-        var MM;
-        iM || (null === QM || void 0 === QM || null === (MM = QM.onClose) || void 0 === MM || MM.call(QM), (0, jM.q)())
-      }), [iM, QM]), (0, nM.useEffect)((() => iM ? (0, aM.e)(jM.y, jM.f) : void 0), [iM]), (0, zM.jsx)(OM.e, {
-        showing: iM,
+        show: zU
+      } = UU;
+      (0, FU.j)(yU.d, (0, yU.o)());
+      const DU = null === (XU = (0, yU.o)()) || void 0 === XU ? void 0 : XU.menu;
+      return (0, oU.useEffect)((() => {
+        var UU;
+        zU || (null === DU || void 0 === DU || null === (UU = DU.onClose) || void 0 === UU || UU.call(DU), (0, QU.t)())
+      }), [zU, DU]), (0, oU.useEffect)((() => zU ? (0, AU.d)(QU.x, QU.i) : void 0), [zU]), (0, EU.jsx)(cU.e, {
+        showing: zU,
         globallyUniqueKey: "clientGameMenu",
-        children: null === QM || void 0 === QM ? void 0 : QM.content
+        children: null === DU || void 0 === DU ? void 0 : DU.content
       })
     }
+    const IU = new Map,
+      pU = new Set;
 
-    function HM(MM) {
+    function aU(UU, XU) {
+      XU ? IU.set(UU, XU) : IU.delete(UU);
+      for (const zU of pU) zU()
+    }
+
+    function tU(UU) {
       let {
-        placement: rM = "bottom"
-      } = MM;
-      return (0, zM.jsx)("div", {
-        id: `clientGameHud-${rM}`,
+        placement: XU = "bottom"
+      } = UU;
+      const zU = (0, oU.useRef)(null);
+      return (0, oU.useLayoutEffect)((() => {
+        const UU = zU.current;
+        return aU(XU, UU), () => {
+          IU.get(XU) === UU && aU(XU, null)
+        }
+      }), [XU]), (0, EU.jsx)("div", {
+        ref: zU,
+        id: `clientGameHud-${XU}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function hM(MM) {
+    function gU(UU) {
       let {
-        children: rM,
-        placement: iM = "bottom"
-      } = MM;
-      const [OM, SM] = (0, nM.useState)(null);
-      return (0, nM.useEffect)((() => {
-        SM(document.getElementById(`clientGameHud-${iM}`))
-      }), [iM]), OM ? (0, QM.createPortal)(rM, OM) : null
+        children: XU,
+        placement: zU = "bottom"
+      } = UU;
+      const [cU, yU] = (0, oU.useState)((() => {
+        var UU;
+        return null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null
+      }));
+      return (0, oU.useEffect)((() => {
+        const UU = () => {
+          var UU;
+          yU(null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null)
+        };
+        return pU.add(UU), UU(), () => {
+          pU.delete(UU)
+        }
+      }), [zU]), cU ? (0, DU.createPortal)(XU, cU) : null
     }
   },
-  37454: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => tM,
-      e: () => eM,
-      f: () => bM,
-      i: () => GM,
-      k: () => CM
+  37222: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => LU,
+      f: () => PU,
+      h: () => WU,
+      i: () => ZU,
+      m: () => RU
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(3508),
-      PM = iM(313),
-      nM = iM(2640),
-      QM = iM(22),
-      zM = iM(2067),
-      LM = iM(30),
-      mM = iM(2084),
-      HM = iM(19),
-      hM = iM(2088),
-      JM = iM(1464),
-      dM = iM(9419),
-      yM = iM(2111),
-      lM = iM(1188),
-      EM = iM(1303);
-    const UM = 7e3;
+    var cU = zU(61),
+      yU = zU(1106),
+      QU = zU.n(yU),
+      AU = zU(3478),
+      FU = zU(320),
+      oU = zU(2616),
+      DU = zU(31),
+      EU = zU(2032),
+      YU = zU(42),
+      NU = zU(2047),
+      IU = zU(27),
+      pU = zU(2053),
+      aU = zU(1444),
+      tU = zU(9395),
+      gU = zU(2077),
+      kU = zU(1193),
+      GU = zU(1305);
+    const BU = 7e3;
 
-    function GM() {
+    function ZU() {
       const {
-        loadingOverlayVisible: MM,
-        openInGameMenuName: rM,
-        openEverythingMenuName: iM
-      } = (0, HM.m)(["loadingOverlayVisible", "openInGameMenuName", "openEverythingMenuName"]);
-      return MM || null !== rM || null !== iM
+        loadingOverlayVisible: UU,
+        openInGameMenuName: XU,
+        openEverythingMenuName: zU
+      } = (0, IU.q)(["loadingOverlayVisible", "openInGameMenuName", "openEverythingMenuName"]);
+      return UU || null !== XU || null !== zU
     }
 
-    function CM(MM, rM, iM) {
-      const SM = (0, OM.useRef)(iM);
-      SM.current = iM;
-      const jM = (0, OM.useRef)({
-        card: MM,
+    function RU(UU, XU, zU) {
+      const yU = (0, cU.useRef)(zU);
+      yU.current = zU;
+      const QU = (0, cU.useRef)({
+        card: UU,
         ms: 0
       });
-      (0, OM.useEffect)((() => {
-        if (rM || null === MM) return;
-        jM.current.card !== MM && (jM.current = {
-          card: MM,
+      (0, cU.useEffect)((() => {
+        if (XU || null === UU) return;
+        QU.current.card !== UU && (QU.current = {
+          card: UU,
           ms: 0
         });
-        const iM = jM.current,
-          OM = performance.now(),
-          aM = setTimeout((() => {
-            SM.current()
-          }), UM - iM.ms);
+        const zU = QU.current,
+          cU = performance.now(),
+          AU = setTimeout((() => {
+            yU.current()
+          }), BU - zU.ms);
         return () => {
-          clearTimeout(aM), iM.ms += performance.now() - OM
+          clearTimeout(AU), zU.ms += performance.now() - cU
         }
-      }), [rM, MM])
+      }), [XU, UU])
     }
-    const eM = (0, OM.memo)((function() {
+    const PU = (0, cU.memo)((function() {
       const {
-        isTouchScreen: MM
-      } = (0, HM.m)(["isTouchScreen"]), rM = (0, JM.y)();
-      (0, aM.d)();
-      const iM = (0, nM.f)("showBasicMovementControls"),
-        [SM, QM] = (0, OM.useState)("movement"),
-        zM = "movement" === SM,
-        mM = rM && !1 !== iM;
-      (0, OM.useEffect)((() => {
-        "padActions" !== SM || mM || QM("done")
-      }), [SM, mM]);
-      const hM = GM();
-      return CM("done" === SM ? null : SM, hM, (() => {
-        QM("movement" === SM && (0, JM.l)() ? "padActions" : "done")
-      })), LM.g.getItem(PM.Cb) > 2 ? (0, EM.jsx)(gM, {
+        isTouchScreen: UU
+      } = (0, IU.q)(["isTouchScreen"]), XU = (0, aU.F)();
+      (0, AU.e)();
+      const zU = (0, oU.f)("showBasicMovementControls"),
+        [yU, EU] = (0, cU.useState)("movement"),
+        NU = "movement" === yU,
+        pU = XU && !1 !== zU;
+      (0, cU.useEffect)((() => {
+        "padActions" !== yU || pU || EU("done")
+      }), [yU, pU]);
+      const tU = ZU();
+      RU("done" === yU ? null : yU, tU, (() => {
+        EU("movement" === yU && (0, aU.n)() ? "padActions" : "done")
+      }));
+      const gU = YU.k.getItem(FU.Rb) > 2,
+        kU = !gU && (!UU || XU) && NU && !1 !== zU;
+      return (0, cU.useEffect)((() => {
+        kU && !tU && DU.k.UY("controlsTutorialShown", "movement")
+      }), [kU, tU]), gU ? (0, GU.jsx)(eU, {
         showingMovementControls: !1
-      }) : (0, EM.jsxs)(EM.Fragment, {
-        children: [MM && !rM || !zM || !1 === iM ? null : (0, EM.jsxs)("div", {
-          className: jM()("ControlsTutorialDiv", {
-            Covered: hM
+      }) : (0, GU.jsxs)(GU.Fragment, {
+        children: [kU ? (0, GU.jsxs)("div", {
+          className: QU()("ControlsTutorialDiv", {
+            Covered: tU
           }),
-          children: [(0, EM.jsx)(bM, {}), (0, EM.jsx)(tM, {
+          children: [(0, GU.jsx)(WU, {}), (0, GU.jsx)(LU, {
             header: "Sprint",
             noaAction: "sprint"
-          }), (0, EM.jsx)(tM, {
+          }), (0, GU.jsx)(LU, {
             header: "Jump",
             noaAction: "jump"
           })]
-        }), "padActions" === SM && mM && (0, EM.jsx)(wM, {
-          covered: hM
-        }), (0, EM.jsx)(gM, {
-          showingMovementControls: "done" !== SM
+        }) : null, "padActions" === yU && pU && (0, GU.jsx)(dU, {
+          covered: tU
+        }), (0, GU.jsx)(eU, {
+          showingMovementControls: "done" !== yU
         })]
       })
     }));
 
-    function bM() {
-      const MM = (0, JM.y)();
-      return (0, EM.jsxs)("div", {
+    function WU() {
+      const UU = (0, aU.F)();
+      return (0, GU.jsxs)("div", {
         className: "KeyControlDiv",
-        children: [(0, EM.jsx)("div", {
+        children: [(0, GU.jsx)("div", {
           className: "KeyHeader",
           children: "Move"
-        }), MM && (0, EM.jsx)(hM.d, {
+        }), UU && (0, GU.jsx)(pU.c, {
           noaAction: "forward"
-        }), !MM && (0, EM.jsxs)(EM.Fragment, {
-          children: [(0, EM.jsx)("div", {
+        }), !UU && (0, GU.jsxs)(GU.Fragment, {
+          children: [(0, GU.jsx)("div", {
             className: "WasdKeysTopRow",
-            children: (0, EM.jsx)(hM.d, {
+            children: (0, GU.jsx)(pU.c, {
               noaAction: "forward"
             })
-          }), (0, EM.jsxs)("div", {
+          }), (0, GU.jsxs)("div", {
             className: "WasdKeysBottomRow",
-            children: [(0, EM.jsx)(hM.d, {
+            children: [(0, GU.jsx)(pU.c, {
               noaAction: "left"
-            }), (0, EM.jsx)(hM.d, {
+            }), (0, GU.jsx)(pU.c, {
               noaAction: "backward"
-            }), (0, EM.jsx)(hM.d, {
+            }), (0, GU.jsx)(pU.c, {
               noaAction: "right"
             })]
           })]
@@ -189,406 +217,406 @@ export const modules = {
       })
     }
 
-    function wM(MM) {
+    function dU(UU) {
       let {
-        covered: rM
-      } = MM;
+        covered: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, lM.A)(), OM = (0, nM.f)("useInventory");
-      return (0, EM.jsxs)("div", {
-        className: jM()("ControlsTutorialDiv", {
-          Covered: rM
+        t: zU
+      } = (0, kU.I)(), cU = (0, oU.f)("useInventory");
+      return (0, GU.jsxs)("div", {
+        className: QU()("ControlsTutorialDiv", {
+          Covered: XU
         }),
-        children: [(0, EM.jsx)(tM, {
-          header: iM("controller:tutorialMine"),
+        children: [(0, GU.jsx)(LU, {
+          header: zU("controller:tutorialMine"),
           noaAction: "primary-fire"
-        }), (0, EM.jsx)(tM, {
-          header: iM("controller:tutorialPlace"),
+        }), (0, GU.jsx)(LU, {
+          header: zU("controller:tutorialPlace"),
           noaAction: "alt-fire"
-        }), !1 !== OM && (0, EM.jsx)(tM, {
-          header: iM("controller:tutorialInventory"),
+        }), !1 !== cU && (0, GU.jsx)(LU, {
+          header: zU("controller:tutorialInventory"),
           noaAction: "OpenInventory"
-        }), (0, EM.jsx)(tM, {
-          header: iM("controller:tutorialPause"),
+        }), (0, GU.jsx)(LU, {
+          header: zU("controller:tutorialPause"),
           noaAction: "OpenSettings"
         })]
       })
     }
 
-    function tM(MM) {
+    function LU(UU) {
       let {
-        header: rM,
-        noaAction: iM
-      } = MM;
-      return (0, EM.jsxs)("div", {
+        header: XU,
+        noaAction: zU
+      } = UU;
+      return (0, GU.jsxs)("div", {
         className: "KeyControlDiv",
-        children: [(0, EM.jsx)("div", {
+        children: [(0, GU.jsx)("div", {
           className: "KeyHeader",
-          children: rM
-        }), (0, EM.jsx)(hM.d, {
-          noaAction: iM
+          children: XU
+        }), (0, GU.jsx)(pU.c, {
+          noaAction: zU
         })]
       })
     }
 
-    function gM(MM) {
+    function eU(UU) {
       let {
-        showingMovementControls: rM
-      } = MM;
+        showingMovementControls: XU
+      } = UU;
       const {
-        isTouchScreen: iM
-      } = (0, HM.m)(["isTouchScreen"]), SM = (0, JM.y)(), jM = (0, yM.c)("OpenShop"), [aM, PM] = (0, OM.useState)(!1), hM = `SeenShopControls|${(0,mM.f)("connectedGame",(MM=>MM.gameNameWithVariation))}`, lM = () => (!(0, JM.l)() || null !== (0, dM.e)("OpenShop")) && !LM.g.getItem(hM) && zM.d.get("shopInfo") && !rM, UM = () => (PM(!0), LM.g.setItem(hM, !0), (0, JM.l)() || QM.i.Tz("showShopTouchTutorial"), setTimeout((() => {
-        PM(!1)
+        isTouchScreen: zU
+      } = (0, IU.q)(["isTouchScreen"]), yU = (0, aU.F)(), QU = (0, gU.d)("OpenShop"), [AU, FU] = (0, cU.useState)(!1), pU = `SeenShopControls|${(0,NU.e)("connectedGame",(UU=>UU.gameNameWithVariation))}`, kU = () => (!(0, aU.n)() || null !== (0, tU.c)("OpenShop")) && !YU.k.getItem(pU) && EU.d.get("shopInfo") && !XU, BU = () => (FU(!0), YU.k.setItem(pU, !0), (0, aU.n)() || DU.k.UY("showShopTouchTutorial"), setTimeout((() => {
+        FU(!1)
       }), 7e3));
-      (0, OM.useEffect)((() => {
-        let MM;
-        const rM = QM.i.subscribe("showShopTutorial", (() => {
-          lM() && (MM = UM())
+      (0, cU.useEffect)((() => {
+        let UU;
+        const XU = DU.k.subscribe("showShopTutorial", (() => {
+          kU() && (UU = BU())
         }));
         return () => {
-          clearTimeout(MM), QM.i.unsubscribe(rM)
+          clearTimeout(UU), DU.k.unsubscribe(XU)
         }
-      }), [rM]);
-      const GM = (0, OM.useRef)();
-      return (0, nM.c)("currencyAmounts", (MM => {
-        if (lM()) {
-          let iM = !1;
-          const OM = zM.d.get("shopInfo");
-          for (const SM in OM) {
-            for (const jM in OM[SM].items) {
-              var rM;
-              const aM = OM[SM].items[jM];
-              if (void 0 !== aM.currency && MM[aM.currency] && aM.cost <= MM[aM.currency].amount && (null === (rM = aM.hidden) || void 0 === rM || !rM)) {
-                iM = !0;
+      }), [XU]);
+      const ZU = (0, cU.useRef)();
+      return (0, oU.e)("currencyAmounts", (UU => {
+        if (kU()) {
+          let zU = !1;
+          const cU = EU.d.get("shopInfo");
+          for (const yU in cU) {
+            for (const QU in cU[yU].items) {
+              var XU;
+              const AU = cU[yU].items[QU];
+              if (void 0 !== AU.currency && UU[AU.currency] && AU.cost <= UU[AU.currency].amount && (null === (XU = AU.hidden) || void 0 === XU || !XU)) {
+                zU = !0;
                 break
               }
             }
-            if (iM) break
+            if (zU) break
           }
-          iM && (GM.current = UM())
+          zU && (ZU.current = BU())
         }
-      })), (0, OM.useEffect)((() => () => {
-        clearTimeout(GM.current)
-      }), [rM]), !aM || SM && !jM ? null : (0, EM.jsx)("div", {
+      })), (0, cU.useEffect)((() => () => {
+        clearTimeout(ZU.current)
+      }), [XU]), !AU || yU && !QU ? null : (0, GU.jsx)("div", {
         className: "ControlsTutorialDiv",
-        children: iM && !SM ? null : (0, EM.jsx)(tM, {
+        children: zU && !yU ? null : (0, GU.jsx)(LU, {
           header: "Shop",
           noaAction: "OpenShop"
         })
       })
     }
   },
-  35017: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM
+  34859: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU
     });
-    var OM = iM(4919),
-      SM = iM(4923);
+    var cU = zU(4977),
+      yU = zU(4982);
 
-    function jM(MM) {
+    function QU(UU) {
       let {
-        children: rM,
-        showing: iM,
-        globallyUniqueKey: jM,
-        alwaysMountChildren: aM = !1,
-        doGameplayStartStopOnShow: PM = !0,
-        keepsMovement: nM = !1
-      } = MM;
-      return (0, SM.c)(!0, iM, jM, nM), (0, OM.c)(PM, iM), iM || aM ? rM : null
+        children: XU,
+        showing: zU,
+        globallyUniqueKey: QU,
+        alwaysMountChildren: AU = !1,
+        doGameplayStartStopOnShow: FU = !0,
+        keepsMovement: oU = !1
+      } = UU;
+      return (0, yU.c)(!0, zU, QU, oU), (0, cU.d)(FU, zU), zU || AU ? XU : null
     }
   },
-  37629: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM,
-      e: () => aM,
-      g: () => PM,
-      h: () => nM
+  37418: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => QU,
+      f: () => AU,
+      h: () => FU,
+      j: () => oU
     });
-    var OM = iM(44),
-      SM = iM(3508);
-    const jM = 8,
-      aM = "InGameHeaderContainer",
-      PM = "TopRightElements";
+    var cU = zU(61),
+      yU = zU(3478);
+    const QU = 8,
+      AU = "InGameHeaderContainer",
+      FU = "TopRightElements";
 
-    function nM(MM) {
-      const [rM] = (0, SM.d)(), [iM, nM] = (0, OM.useState)(!1);
-      return (0, OM.useLayoutEffect)((() => {
-        if (!MM) return;
-        const rM = document.querySelector(`.${aM}`),
-          iM = document.querySelector(`.${PM}`),
-          OM = () => {
-            const OM = MM.getBoundingClientRect(),
-              SM = rM ? rM.getBoundingClientRect().right : 0,
-              aM = iM ? iM.getBoundingClientRect().left : window.innerWidth,
-              PM = OM.left < SM + jM,
-              QM = OM.right > aM - jM;
-            nM(PM || QM)
+    function oU(UU) {
+      const [XU] = (0, yU.e)(), [zU, oU] = (0, cU.useState)(!1);
+      return (0, cU.useLayoutEffect)((() => {
+        if (!UU) return;
+        const XU = document.querySelector(`.${AU}`),
+          zU = document.querySelector(`.${FU}`),
+          cU = () => {
+            const cU = UU.getBoundingClientRect(),
+              yU = XU ? XU.getBoundingClientRect().right : 0,
+              AU = zU ? zU.getBoundingClientRect().left : window.innerWidth,
+              FU = cU.left < yU + QU,
+              DU = cU.right > AU - QU;
+            oU(FU || DU)
           };
-        OM();
-        const SM = new ResizeObserver(OM);
-        return SM.observe(MM), rM && SM.observe(rM), iM && SM.observe(iM), () => {
-          SM.disconnect()
+        cU();
+        const yU = new ResizeObserver(cU);
+        return yU.observe(UU), XU && yU.observe(XU), zU && yU.observe(zU), () => {
+          yU.disconnect()
         }
-      }), [MM, rM]), iM
+      }), [UU, XU]), zU
     }
   },
-  40515: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM,
-      g: () => SM,
-      j: () => jM
+  40278: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => AU,
+      h: () => yU,
+      i: () => QU
     });
-    var OM = iM(44);
+    var cU = zU(61);
 
-    function SM(MM) {
-      return PM(MM, nM)
+    function yU(UU) {
+      return FU(UU, oU)
     }
 
-    function jM(MM) {
-      return PM(MM, QM)
+    function QU(UU) {
+      return FU(UU, DU)
     }
 
-    function aM(MM) {
-      return `${Math.floor(MM/60)}:${String(MM%60).padStart(2,"0")}`
+    function AU(UU) {
+      return `${Math.floor(UU/60)}:${String(UU%60).padStart(2,"0")}`
     }
 
-    function PM(MM, rM) {
-      const [, iM] = (0, OM.useState)(null);
-      return (0, OM.useEffect)((() => {
-        if (0 === MM) return;
-        const OM = window.setInterval((() => {
-          const OM = rM(MM);
-          iM((rM => (null === rM || void 0 === rM ? void 0 : rM.endsAt) === MM && rM.value === OM ? rM : {
-            endsAt: MM,
-            value: OM
+    function FU(UU, XU) {
+      const [, zU] = (0, cU.useState)(null);
+      return (0, cU.useEffect)((() => {
+        if (0 === UU) return;
+        const cU = window.setInterval((() => {
+          const cU = XU(UU);
+          zU((XU => (null === XU || void 0 === XU ? void 0 : XU.endsAt) === UU && XU.value === cU ? XU : {
+            endsAt: UU,
+            value: cU
           }))
         }), 250);
         return () => {
-          window.clearInterval(OM)
+          window.clearInterval(cU)
         }
-      }), [MM, rM]), rM(MM)
+      }), [UU, XU]), XU(UU)
     }
 
-    function nM(MM) {
-      return (MM - performance.now()) / 1e3
+    function oU(UU) {
+      return (UU - performance.now()) / 1e3
     }
 
-    function QM(MM) {
-      return Math.max(0, Math.ceil(nM(MM)))
+    function DU(UU) {
+      return Math.max(0, Math.ceil(oU(UU)))
     }
   },
-  9419: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM,
-      h: () => QM,
-      j: () => LM,
-      m: () => zM,
-      o: () => nM,
-      r: () => HM
+  9395: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => FU,
+      e: () => DU,
+      i: () => YU,
+      m: () => EU,
+      o: () => oU,
+      s: () => IU
     });
-    var OM = iM(22),
-      SM = iM(2120),
-      jM = iM(1474),
-      aM = iM(1464);
-    const PM = MM => {
-        var rM, iM;
-        return (0, aM.l)() && null !== (rM = null === (iM = (0, jM.d)()) || void 0 === iM ? void 0 : iM.getGlyphForNoaAction(MM)) && void 0 !== rM ? rM : null
+    var cU = zU(31),
+      yU = zU(2082),
+      QU = zU(1457),
+      AU = zU(1444);
+    const FU = UU => {
+        var XU, zU;
+        return (0, AU.n)() && null !== (XU = null === (zU = (0, QU.e)()) || void 0 === zU ? void 0 : zU.getGlyphForNoaAction(UU)) && void 0 !== XU ? XU : null
       },
-      nM = "controllerGlyph:",
-      QM = MM => {
-        var rM, iM;
-        return null !== (rM = null === (iM = (0, jM.d)()) || void 0 === iM ? void 0 : iM.getPadGlyphIconName(MM)) && void 0 !== rM ? rM : `${nM}xbox/${MM}`
+      oU = "controllerGlyph:",
+      DU = UU => {
+        var XU, zU;
+        return null !== (XU = null === (zU = (0, QU.e)()) || void 0 === zU ? void 0 : zU.getPadGlyphIconName(UU)) && void 0 !== XU ? XU : `${oU}xbox/${UU}`
       },
-      zM = MM => MM.startsWith(nM),
-      LM = MM => {
-        var rM, iM;
-        return zM(MM) && null !== (rM = null === (iM = (0, jM.d)()) || void 0 === iM ? void 0 : iM.getPadGlyphIconUrl(MM)) && void 0 !== rM ? rM : null
+      EU = UU => UU.startsWith(oU),
+      YU = UU => {
+        var XU, zU;
+        return EU(UU) && null !== (XU = null === (zU = (0, QU.e)()) || void 0 === zU ? void 0 : zU.getPadGlyphIconUrl(UU)) && void 0 !== XU ? XU : null
       },
-      mM = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", aM.c, SM.f, SM.d],
-      HM = MM => {
-        const rM = mM.map((rM => OM.i.subscribe(rM, MM)));
+      NU = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", AU.c, yU.d, yU.c],
+      IU = UU => {
+        const XU = NU.map((XU => cU.k.subscribe(XU, UU)));
         return () => {
-          for (const MM of rM) OM.i.unsubscribe(MM)
+          for (const UU of XU) cU.k.unsubscribe(UU)
         }
       }
   },
-  9328: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM,
-      e: () => SM
+  9282: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU,
+      d: () => yU
     });
-    let OM = null;
-    const SM = function(MM) {
-        const rM = {
-          cycle: MM,
+    let cU = null;
+    const yU = function(UU) {
+        const XU = {
+          cycle: UU,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return OM = rM, () => {
-          OM === rM && (OM = null)
+        return cU = XU, () => {
+          cU === XU && (cU = null)
         }
       },
-      jM = () => {
-        var MM;
-        return null !== (MM = OM) && void 0 !== MM && MM.canCycle() ? OM.cycle : null
+      QU = () => {
+        var UU;
+        return null !== (UU = cU) && void 0 !== UU && UU.canCycle() ? cU.cycle : null
       }
   },
-  37544: (MM, rM, iM) => {
-    iM.d(rM, {
-      B: () => lM,
-      b: () => jM,
-      f: () => JM,
-      i: () => dM,
-      j: () => PM,
-      m: () => mM,
-      q: () => yM,
-      u: () => LM,
-      x: () => EM,
-      y: () => hM
+  37334: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU,
+      i: () => aU,
+      l: () => tU,
+      o: () => FU,
+      r: () => NU,
+      t: () => gU,
+      v: () => YU,
+      w: () => GU,
+      x: () => pU,
+      y: () => kU
     });
-    var OM = iM(19),
-      SM = iM(22);
-    const jM = "clientGameInventoryButtonsChanged",
-      aM = new Map;
+    var cU = zU(27),
+      yU = zU(31);
+    const QU = "clientGameInventoryButtonsChanged",
+      AU = new Map;
 
-    function PM() {
-      return [...aM.values()].sort(((MM, rM) => {
-        var iM, OM;
-        return (null !== (iM = MM.order) && void 0 !== iM ? iM : 0) - (null !== (OM = rM.order) && void 0 !== OM ? OM : 0)
+    function FU() {
+      return [...AU.values()].sort(((UU, XU) => {
+        var zU, cU;
+        return (null !== (zU = UU.order) && void 0 !== zU ? zU : 0) - (null !== (cU = XU.order) && void 0 !== cU ? cU : 0)
       }))
     }
-    let nM = null;
+    let oU = null;
 
-    function QM(MM) {
-      nM = MM
+    function DU(UU) {
+      oU = UU
     }
-    let zM = !1;
+    let EU = !1;
 
-    function LM(MM) {
-      zM = !0;
+    function YU(UU) {
+      EU = !0;
       try {
-        MM.onClick()
+        UU.onClick()
       } finally {
-        zM = !1
+        EU = !1
       }
-      MM.panel && "clientGame" === OM.d.get("openInGameMenuName") && QM(MM.id)
+      UU.panel && "clientGame" === cU.e.get("openInGameMenuName") && DU(UU.id)
     }
 
-    function mM() {
-      return zM
+    function NU() {
+      return EU
     }
 
-    function HM() {
-      return PM().filter((MM => MM.panel && !MM.disabled))
+    function IU() {
+      return FU().filter((UU => UU.panel && !UU.disabled))
     }
 
-    function hM(MM) {
-      const rM = HM(),
-        iM = rM.findIndex((MM => MM.id === nM));
-      return !(iM < 0 || rM.length < 2) && (LM(rM[(iM + MM + rM.length) % rM.length]), !0)
+    function pU(UU) {
+      const XU = IU(),
+        zU = XU.findIndex((UU => UU.id === oU));
+      return !(zU < 0 || XU.length < 2) && (YU(XU[(zU + UU + XU.length) % XU.length]), !0)
     }
 
-    function JM() {
-      return null !== nM && HM().length > 1
+    function aU() {
+      return null !== oU && IU().length > 1
     }
 
-    function dM() {
-      QM(null)
+    function tU() {
+      DU(null)
     }
 
-    function yM() {
-      "inventory" !== OM.d.get("openInGameMenuName") && QM(null)
+    function gU() {
+      "inventory" !== cU.e.get("openInGameMenuName") && DU(null)
     }
 
-    function lM() {
-      const MM = nM;
-      return QM(null), MM
+    function kU() {
+      const UU = oU;
+      return DU(null), UU
     }
 
-    function EM(MM) {
-      return aM.set(MM.id, MM), SM.i.Tz(jM, PM(), !0), () => {
-        aM.get(MM.id) === MM && (aM.delete(MM.id), SM.i.Tz(jM, PM()))
+    function GU(UU) {
+      return AU.set(UU.id, UU), yU.k.UY(QU, FU(), !0), () => {
+        AU.get(UU.id) === UU && (AU.delete(UU.id), yU.k.UY(QU, FU()))
       }
     }
   },
-  37542: (MM, rM, iM) => {
-    iM.d(rM, {
-      A: () => HM,
-      C: () => zM,
-      e: () => PM,
-      g: () => lM,
-      k: () => dM,
-      n: () => yM,
-      p: () => mM,
-      t: () => QM,
-      w: () => JM
+  37325: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => FU,
+      h: () => kU,
+      j: () => tU,
+      l: () => gU,
+      n: () => NU,
+      o: () => DU,
+      r: () => aU,
+      t: () => IU,
+      u: () => EU
     });
-    var OM = iM(19),
-      SM = iM(22),
-      jM = iM(1313),
-      aM = iM(37544);
-    const PM = "clientGameUiChanged";
-    let nM = null;
+    var cU = zU(27),
+      yU = zU(31),
+      QU = zU(1310),
+      AU = zU(37334);
+    const FU = "clientGameUiChanged";
+    let oU = null;
 
-    function QM() {
-      return nM
+    function DU() {
+      return oU
     }
 
-    function zM(MM, rM) {
-      const iM = {
-        content: MM,
-        menu: rM
+    function EU(UU, XU) {
+      const zU = {
+        content: UU,
+        menu: XU
       };
-      return nM = iM, SM.i.Tz(PM, nM, !0), () => {
-        nM === iM && (nM = null, hM = !1, dM(), SM.i.Tz(PM, null))
+      return oU = zU, yU.k.UY(FU, oU, !0), () => {
+        oU === zU && (oU = null, pU = !1, tU(), yU.k.UY(FU, null))
       }
     }
-    let LM = null;
+    let YU = null;
 
-    function mM() {
-      return LM
+    function NU() {
+      return YU
     }
 
-    function HM(MM) {
-      return LM = MM, () => {
-        LM === MM && (LM = null)
+    function IU(UU) {
+      return YU = UU, () => {
+        YU === UU && (YU = null)
       }
     }
-    let hM = !1;
+    let pU = !1;
 
-    function JM() {
-      const MM = OM.d.get("openInGameMenuName");
-      "clientGame" !== MM && (hM = "inventory" === MM), (0, aM.m)() || (0, aM.i)(), (0, jM.z)(jM.e), OM.d.set({
+    function aU() {
+      const UU = cU.e.get("openInGameMenuName");
+      "clientGame" !== UU && (pU = "inventory" === UU), (0, AU.r)() || (0, AU.l)(), (0, QU.u)(QU.c), cU.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function dM() {
-      EM(!1)
+    function tU() {
+      GU(!1)
     }
 
-    function yM() {
-      EM(hM)
+    function gU() {
+      GU(pU)
     }
 
-    function lM() {
-      hM && EM(!1)
+    function kU() {
+      pU && GU(!1)
     }
 
-    function EM(MM) {
-      "clientGame" === OM.d.get("openInGameMenuName") && OM.d.set({
-        openInGameMenuName: MM ? "inventory" : null
-      }), MM || (0, aM.i)(), hM = !1
+    function GU(UU) {
+      "clientGame" === cU.e.get("openInGameMenuName") && cU.e.set({
+        openInGameMenuName: UU ? "inventory" : null
+      }), UU || (0, AU.l)(), pU = !1
     }
   },
-  40659: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => Fr
+  40422: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => mX
     });
-    var OM = iM(181);
-    const SM = ["gingerbreadLane", "toyRow", "iceRink", "carousel", "greatTree", "cocoaCorner", "lanternWalk", "marketGate", "santasGrotto"],
-      jM = {
+    var cU = zU(212);
+    const yU = ["gingerbreadLane", "toyRow", "iceRink", "carousel", "greatTree", "cocoaCorner", "lanternWalk", "marketGate", "santasGrotto"],
+      QU = {
         gingerbreadLane: "\ud83c\udf6a",
         toyRow: "\ud83e\uddf8",
         iceRink: "\u26f8\ufe0f",
@@ -599,102 +627,102 @@ export const modules = {
         marketGate: "\ud83d\udeaa",
         santasGrotto: "\ud83c\udf85"
       };
-    var aM = iM(44),
-      PM = iM(37542),
-      nM = iM(1116),
-      QM = iM.n(nM),
-      zM = iM(19),
-      LM = iM(1464),
-      mM = iM(30),
-      HM = iM(1188),
-      hM = iM(37454),
-      JM = iM(1516),
-      dM = iM(22),
-      yM = iM(39532),
-      lM = iM(39526);
-    const EM = 400,
-      UM = 2 * Math.PI * 17;
+    var AU = zU(61),
+      FU = zU(37325),
+      oU = zU(1106),
+      DU = zU.n(oU),
+      EU = zU(27),
+      YU = zU(1444),
+      NU = zU(42),
+      IU = zU(1193),
+      pU = zU(37222),
+      aU = zU(1492),
+      tU = zU(31),
+      gU = zU(39315),
+      kU = zU(39311);
+    const GU = 400,
+      BU = 2 * Math.PI * 17;
 
-    function GM(MM, rM, iM) {
+    function ZU(UU, XU, zU) {
       const {
-        santaMarketMinX: OM,
-        santaMarketMinZ: SM,
-        santaMarketSize: jM
-      } = MM;
-      return (0, lM.c)(rM, iM, {
-        mapMinX: OM,
-        mapMaxX: OM + jM,
-        mapMinZ: SM,
-        mapMaxZ: SM + jM
+        santaMarketMinX: cU,
+        santaMarketMinZ: yU,
+        santaMarketSize: QU
+      } = UU;
+      return (0, kU.e)(XU, zU, {
+        mapMinX: cU,
+        mapMaxX: cU + QU,
+        mapMinZ: yU,
+        mapMaxZ: yU + QU
       })
     }
-    class CM {
+    class RU {
       constructor() {
         this.state = "idle", this.ownRing = !1, this.faded = !1, this.lastPressAt = -1 / 0, this.predictedAt = 0, this.timedOutPressAt = null, this.cooldownUntil = 0, this.averageRoundTrip = null, this.recentRoundTrips = []
       }
-      press(MM, rM, iM) {
-        var OM, SM;
-        this.forgetOldRoundTrips(MM);
-        const jM = MM - this.lastPressAt;
-        if (this.lastPressAt = MM, jM < this.quietMs() || this.awaitingTimedOut(MM) || "idle" !== this.state || iM || MM < this.cooldownUntil || null === rM) return 0;
-        const aM = Math.max(0, rM.awaySpeed) * ((null !== (OM = this.averageRoundTrip) && void 0 !== OM ? OM : 300) / 1e3);
-        return rM.distance + aM > 3.5 ? 0 : (this.state = "predicted", this.predictedAt = MM, this.ownRing = !0, this.faded = !1, 500 + (null !== (SM = this.averageRoundTrip) && void 0 !== SM ? SM : 0))
+      press(UU, XU, zU) {
+        var cU, yU;
+        this.forgetOldRoundTrips(UU);
+        const QU = UU - this.lastPressAt;
+        if (this.lastPressAt = UU, QU < this.quietMs() || this.awaitingTimedOut(UU) || "idle" !== this.state || zU || UU < this.cooldownUntil || null === XU) return 0;
+        const AU = Math.max(0, XU.awaySpeed) * ((null !== (cU = this.averageRoundTrip) && void 0 !== cU ? cU : 300) / 1e3);
+        return XU.distance + AU > 3.5 ? 0 : (this.state = "predicted", this.predictedAt = UU, this.ownRing = !0, this.faded = !1, 500 + (null !== (yU = this.averageRoundTrip) && void 0 !== yU ? yU : 0))
       }
-      turnedAway(MM, rM, iM) {
-        if (!this.mayTurnAway(MM)) return !1;
-        const OM = 4 * (this.averageRoundTrip + 150) / 1e3;
-        return !(rM <= 40 + (OM >= iM ? 180 : 180 * Math.asin(OM / iM) / Math.PI) && iM <= 5 + Math.max(.5, OM)) && (this.faded = !0, !0)
+      turnedAway(UU, XU, zU) {
+        if (!this.mayTurnAway(UU)) return !1;
+        const cU = 4 * (this.averageRoundTrip + 150) / 1e3;
+        return !(XU <= 40 + (cU >= zU ? 180 : 180 * Math.asin(cU / zU) / Math.PI) && zU <= 5 + Math.max(.5, cU)) && (this.faded = !0, !0)
       }
-      mayTurnAway(MM) {
-        return null !== this.averageRoundTrip && "idle" !== this.state && this.ownRing && !this.faded && MM - this.predictedAt <= 350
+      mayTurnAway(UU) {
+        return null !== this.averageRoundTrip && "idle" !== this.state && this.ownRing && !this.faded && UU - this.predictedAt <= 350
       }
-      GL(MM, rM, iM) {
-        const OM = rM > 0 || !iM,
-          SM = "predicted" === this.state;
-        return iM && (this.cooldownUntil = MM + 1e3), OM && SM ? this.learnRoundTrip(MM, MM - this.predictedAt) : OM && this.awaitingTimedOut(MM) && (this.timedOutPressAt = null), rM > 0 ? (this.state = "confirmed", SM ? null : (this.ownRing = !1, this.faded = !1, {
+      PY(UU, XU, zU) {
+        const cU = XU > 0 || !zU,
+          yU = "predicted" === this.state;
+        return zU && (this.cooldownUntil = UU + 1e3), cU && yU ? this.learnRoundTrip(UU, UU - this.predictedAt) : cU && this.awaitingTimedOut(UU) && (this.timedOutPressAt = null), XU > 0 ? (this.state = "confirmed", yU ? null : (this.ownRing = !1, this.faded = !1, {
           kind: "start",
-          ms: rM
-        })) : "idle" === this.state ? null : (this.state = "idle", this.faded && !iM ? null : {
+          ms: XU
+        })) : "idle" === this.state ? null : (this.state = "idle", this.faded && !zU ? null : {
           kind: "end",
-          done: iM
+          done: zU
         })
       }
-      expired(MM) {
-        var rM;
-        return !("predicted" !== this.state || MM - this.predictedAt < 1200 + (null !== (rM = this.averageRoundTrip) && void 0 !== rM ? rM : 0)) && (this.state = "idle", this.timedOutPressAt = this.predictedAt, this.learnRoundTrip(MM, MM - this.predictedAt), !this.faded)
+      expired(UU) {
+        var XU;
+        return !("predicted" !== this.state || UU - this.predictedAt < 1200 + (null !== (XU = this.averageRoundTrip) && void 0 !== XU ? XU : 0)) && (this.state = "idle", this.timedOutPressAt = this.predictedAt, this.learnRoundTrip(UU, UU - this.predictedAt), !this.faded)
       }
       stop() {
         this.state = "idle", this.cooldownUntil = 0, this.timedOutPressAt = null
       }
       quietMs() {
-        var MM;
-        const rM = this.recentRoundTrips.reduce(((MM, rM) => {
+        var UU;
+        const XU = this.recentRoundTrips.reduce(((UU, XU) => {
           let {
-            ms: iM
-          } = rM;
-          return Math.max(MM, iM)
-        }), null !== (MM = this.averageRoundTrip) && void 0 !== MM ? MM : 0);
-        return Math.max(300, rM > 0 ? 1.5 * rM + 300 : 1e3)
+            ms: zU
+          } = XU;
+          return Math.max(UU, zU)
+        }), null !== (UU = this.averageRoundTrip) && void 0 !== UU ? UU : 0);
+        return Math.max(300, XU > 0 ? 1.5 * XU + 300 : 1e3)
       }
-      awaitingTimedOut(MM) {
-        return null !== this.timedOutPressAt && MM - this.timedOutPressAt >= 3500 && (this.timedOutPressAt = null), null !== this.timedOutPressAt
+      awaitingTimedOut(UU) {
+        return null !== this.timedOutPressAt && UU - this.timedOutPressAt >= 3500 && (this.timedOutPressAt = null), null !== this.timedOutPressAt
       }
-      forgetOldRoundTrips(MM) {
-        for (; this.recentRoundTrips.length > 0 && MM - this.recentRoundTrips[0].at > 3e4;) this.recentRoundTrips.shift()
+      forgetOldRoundTrips(UU) {
+        for (; this.recentRoundTrips.length > 0 && UU - this.recentRoundTrips[0].at > 3e4;) this.recentRoundTrips.shift()
       }
-      learnRoundTrip(MM, rM) {
-        const iM = Math.min(2e3, Math.max(0, rM));
-        this.averageRoundTrip = null === this.averageRoundTrip ? iM : this.averageRoundTrip + .3 * (iM - this.averageRoundTrip), this.recentRoundTrips.push({
-          at: MM,
-          ms: iM
+      learnRoundTrip(UU, XU) {
+        const zU = Math.min(2e3, Math.max(0, XU));
+        this.averageRoundTrip = null === this.averageRoundTrip ? zU : this.averageRoundTrip + .3 * (zU - this.averageRoundTrip), this.recentRoundTrips.push({
+          at: UU,
+          ms: zU
         })
       }
     }
-    const eM = "secretSantaHudChanged",
-      bM = "SecretSantaHudShown",
-      wM = "SecretSantaMatchOrFinish",
-      tM = ["Wrapping", "Naughty", "Cancelled"],
-      gM = {
+    const PU = "secretSantaHudChanged",
+      WU = "SecretSantaHudShown",
+      dU = "SecretSantaMatchOrFinish",
+      LU = ["Wrapping", "Naughty", "Cancelled"],
+      eU = {
         shown: !1,
         market: null,
         hint: null,
@@ -703,78 +731,78 @@ export const modules = {
         naughtyEndsAt: 0,
         pulse: 0
       };
-    class uM {
-      constructor(MM) {
-        this.onWrapStart = MM, this.view = gM, this.nextHintAt = 0, this.endTimer = null, this.finishEndTimer = null, this.map = null, this.arrow = null, this.countdown = null, this.countdownAnimation = null, this.ring = null, this.ringFill = null, this.ringAnimation = null, this.ringEndAnimation = null, this.flash = null, this.flashAnimation = null, this.wrap = new CM, this.drawnArrow = "", this.drawnInDistrict = !1, this.drawnInCircle = !1, this.bindMap = MM => {
-          this.map = MM, this.drawnInDistrict = !1, this.drawnInCircle = !1
-        }, this.bindArrow = MM => {
-          this.arrow = MM, this.drawnArrow = ""
-        }, this.bindCountdown = MM => {
-          var rM;
-          null === (rM = this.countdownAnimation) || void 0 === rM || rM.cancel(), this.countdownAnimation = null, this.countdown = MM, this.restartCountdown()
-        }, this.bindRing = MM => {
-          var rM;
-          this.stopRing(), this.ring = MM, this.ringFill = null !== (rM = null === MM || void 0 === MM ? void 0 : MM.querySelector(".SecretSantaRingFill")) && void 0 !== rM ? rM : null;
-          const iM = this.view.naughtyEndsAt - performance.now();
-          MM && iM > 0 && this.runRing("Naughty", iM)
-        }, this.bindFlash = MM => {
-          var rM;
-          null === (rM = this.flashAnimation) || void 0 === rM || rM.cancel(), this.flashAnimation = null, this.flash = MM
+    class CU {
+      constructor(UU) {
+        this.onWrapStart = UU, this.view = eU, this.nextHintAt = 0, this.endTimer = null, this.finishEndTimer = null, this.map = null, this.arrow = null, this.countdown = null, this.countdownAnimation = null, this.ring = null, this.ringFill = null, this.ringAnimation = null, this.ringEndAnimation = null, this.flash = null, this.flashAnimation = null, this.wrap = new RU, this.drawnArrow = "", this.drawnInDistrict = !1, this.drawnInCircle = !1, this.bindMap = UU => {
+          this.map = UU, this.drawnInDistrict = !1, this.drawnInCircle = !1
+        }, this.bindArrow = UU => {
+          this.arrow = UU, this.drawnArrow = ""
+        }, this.bindCountdown = UU => {
+          var XU;
+          null === (XU = this.countdownAnimation) || void 0 === XU || XU.cancel(), this.countdownAnimation = null, this.countdown = UU, this.restartCountdown()
+        }, this.bindRing = UU => {
+          var XU;
+          this.stopRing(), this.ring = UU, this.ringFill = null !== (XU = null === UU || void 0 === UU ? void 0 : UU.querySelector(".SecretSantaRingFill")) && void 0 !== XU ? XU : null;
+          const zU = this.view.naughtyEndsAt - performance.now();
+          UU && zU > 0 && this.runRing("Naughty", zU)
+        }, this.bindFlash = UU => {
+          var XU;
+          null === (XU = this.flashAnimation) || void 0 === XU || XU.cancel(), this.flashAnimation = null, this.flash = UU
         }
       }
       getView() {
         return this.view
       }
-      receiveMarket(MM) {
-        this.Tz({
+      receiveMarket(UU) {
+        this.UY({
           ...this.view,
-          market: MM
+          market: UU
         })
       }
-      receiveHint(MM) {
-        const rM = this.view.hint,
-          iM = RM(this.nextHintAt, performance.now() + MM.santaHintNextInMs),
-          OM = iM > this.nextHintAt,
-          SM = !rM || rM.santaHintContract !== MM.santaHintContract || rM.santaHintDistrict !== MM.santaHintDistrict || rM.santaHintCircleX !== MM.santaHintCircleX || rM.santaHintCircleZ !== MM.santaHintCircleZ;
-        this.nextHintAt = iM;
-        const jM = "hunting" === MM.santaHintState && (OM || SM) ? this.view.pulse + 1 : this.view.pulse;
-        this.Tz({
+      receiveHint(UU) {
+        const XU = this.view.hint,
+          zU = wU(this.nextHintAt, performance.now() + UU.santaHintNextInMs),
+          cU = zU > this.nextHintAt,
+          yU = !XU || XU.santaHintContract !== UU.santaHintContract || XU.santaHintDistrict !== UU.santaHintDistrict || XU.santaHintCircleX !== UU.santaHintCircleX || XU.santaHintCircleZ !== UU.santaHintCircleZ;
+        this.nextHintAt = zU;
+        const QU = "hunting" === UU.santaHintState && (cU || yU) ? this.view.pulse + 1 : this.view.pulse;
+        this.UY({
           ...this.view,
-          hint: MM,
-          pulse: jM
+          hint: UU,
+          pulse: QU
         }), this.restartCountdown()
       }
-      receiveStatus(MM) {
-        var rM;
-        const iM = performance.now(),
-          OM = RM(this.view.endsAt, iM + MM.santaStatusMsLeft),
-          SM = MM.santaStatusNaughtyMs > 0 ? RM(this.view.naughtyEndsAt, iM + MM.santaStatusNaughtyMs) : 0,
-          jM = 0 !== SM && 0 === this.view.naughtyEndsAt;
-        this.Tz({
+      receiveStatus(UU) {
+        var XU;
+        const zU = performance.now(),
+          cU = wU(this.view.endsAt, zU + UU.santaStatusMsLeft),
+          yU = UU.santaStatusNaughtyMs > 0 ? wU(this.view.naughtyEndsAt, zU + UU.santaStatusNaughtyMs) : 0,
+          QU = 0 !== yU && 0 === this.view.naughtyEndsAt;
+        this.UY({
           ...this.view,
-          status: MM,
-          endsAt: OM,
-          naughtyEndsAt: SM,
-          shown: MM.santaStatusMsLeft > 0
-        }), this.scheduleEnd(OM - iM), jM ? this.runRing("Naughty", MM.santaStatusNaughtyMs) : 0 === SM && null !== (rM = this.ring) && void 0 !== rM && rM.classList.contains("Naughty") && this.stopRing()
+          status: UU,
+          endsAt: cU,
+          naughtyEndsAt: yU,
+          shown: UU.santaStatusMsLeft > 0
+        }), this.scheduleEnd(cU - zU), QU ? this.runRing("Naughty", UU.santaStatusNaughtyMs) : 0 === yU && null !== (XU = this.ring) && void 0 !== XU && XU.classList.contains("Naughty") && this.stopRing()
       }
-      pressGift(MM, rM) {
+      pressGift(UU, XU) {
         if (!this.view.shown) return !1;
-        const iM = this.wrap.press(MM, rM, this.view.naughtyEndsAt > MM);
-        return iM > 0 && this.startWrapRing(Math.max(1, iM - (performance.now() - MM))), iM > 0
+        const zU = this.wrap.press(UU, XU, this.view.naughtyEndsAt > UU);
+        return zU > 0 && this.startWrapRing(Math.max(1, zU - (performance.now() - UU))), zU > 0
       }
-      aimAtWrap(MM, rM) {
-        const iM = performance.now();
-        return this.wrap.turnedAway(iM, MM, rM) && this.endWrapRing(!1), this.wrap.mayTurnAway(iM)
+      aimAtWrap(UU, XU) {
+        const zU = performance.now();
+        return this.wrap.turnedAway(zU, UU, XU) && this.endWrapRing(!1), this.wrap.mayTurnAway(zU)
       }
-      receiveWrap(MM, rM) {
-        const iM = this.wrap.GL(performance.now(), MM, rM);
-        "start" === (null === iM || void 0 === iM ? void 0 : iM.kind) ? this.startWrapRing(iM.ms): "end" === (null === iM || void 0 === iM ? void 0 : iM.kind) && (iM.done && this.ring && !this.ring.classList.contains("Wrapping") && this.runRing("Wrapping", 1), this.endWrapRing(iM.done))
+      receiveWrap(UU, XU) {
+        const zU = this.wrap.PY(performance.now(), UU, XU);
+        "start" === (null === zU || void 0 === zU ? void 0 : zU.kind) ? this.startWrapRing(zU.ms): "end" === (null === zU || void 0 === zU ? void 0 : zU.kind) && (zU.done && this.ring && !this.ring.classList.contains("Wrapping") && this.runRing("Wrapping", 1), this.endWrapRing(zU.done))
       }
       snowBlink() {
-        var MM, rM, iM;
-        null === (MM = this.flashAnimation) || void 0 === MM || MM.cancel();
-        this.flashAnimation = null !== (rM = null === (iM = this.flash) || void 0 === iM ? void 0 : iM.animate([{
+        var UU, XU, zU;
+        null === (UU = this.flashAnimation) || void 0 === UU || UU.cancel();
+        this.flashAnimation = null !== (XU = null === (zU = this.flash) || void 0 === zU ? void 0 : zU.animate([{
           opacity: 1
         }, {
           opacity: 1,
@@ -784,278 +812,278 @@ export const modules = {
           opacity: 0
         }], {
           duration: 500
-        })) && void 0 !== rM ? rM : null
+        })) && void 0 !== XU ? XU : null
       }
-      frame(MM, rM) {
+      frame(UU, XU) {
         this.wrap.expired(performance.now()) && this.endWrapRing(!1);
         const {
-          market: iM,
-          hint: OM
+          market: zU,
+          hint: cU
         } = this.view;
-        if (!this.view.shown || !iM || !rM || !this.arrow || !this.map) return;
-        const [SM, jM] = GM(iM, rM[0], rM[2]), aM = Math.min(100, Math.max(0, SM)), PM = Math.min(100, Math.max(0, jM)), nM = Math.min(95, Math.max(5, aM)), QM = Math.min(95, Math.max(5, PM)), zM = Math.round(180 * function(MM) {
-          return MM - yM.g
-        }(MM) / Math.PI), LM = `${nM.toFixed(1)}% ${QM.toFixed(1)}% ${zM}`;
-        LM !== this.drawnArrow && (this.drawnArrow = LM, this.arrow.style.left = `${nM.toFixed(1)}%`, this.arrow.style.top = `${QM.toFixed(1)}%`, this.arrow.style.transform = `translate(-50%, -50%) rotate(${zM}deg)`);
-        const mM = "hunting" === (null === OM || void 0 === OM ? void 0 : OM.santaHintState) ? OM : null,
-          HM = null !== mM && function(MM, rM) {
-            const iM = MM => Math.min(2, Math.max(0, Math.floor(MM / (100 / 3))));
-            return 3 * iM(rM) + iM(MM)
-          }(aM, PM) === mM.santaHintDistrict;
-        HM !== this.drawnInDistrict && (this.drawnInDistrict = HM, this.map.toggleAttribute("data-in-district", HM));
-        const hM = null !== mM && function(MM, rM) {
-          let [iM, , OM] = rM;
+        if (!this.view.shown || !zU || !XU || !this.arrow || !this.map) return;
+        const [yU, QU] = ZU(zU, XU[0], XU[2]), AU = Math.min(100, Math.max(0, yU)), FU = Math.min(100, Math.max(0, QU)), oU = Math.min(95, Math.max(5, AU)), DU = Math.min(95, Math.max(5, FU)), EU = Math.round(180 * function(UU) {
+          return UU - gU.g
+        }(UU) / Math.PI), YU = `${oU.toFixed(1)}% ${DU.toFixed(1)}% ${EU}`;
+        YU !== this.drawnArrow && (this.drawnArrow = YU, this.arrow.style.left = `${oU.toFixed(1)}%`, this.arrow.style.top = `${DU.toFixed(1)}%`, this.arrow.style.transform = `translate(-50%, -50%) rotate(${EU}deg)`);
+        const NU = "hunting" === (null === cU || void 0 === cU ? void 0 : cU.santaHintState) ? cU : null,
+          IU = null !== NU && function(UU, XU) {
+            const zU = UU => Math.min(2, Math.max(0, Math.floor(UU / (100 / 3))));
+            return 3 * zU(XU) + zU(UU)
+          }(AU, FU) === NU.santaHintDistrict;
+        IU !== this.drawnInDistrict && (this.drawnInDistrict = IU, this.map.toggleAttribute("data-in-district", IU));
+        const pU = null !== NU && function(UU, XU) {
+          let [zU, , cU] = XU;
           const {
-            santaHintCircleX: SM,
-            santaHintCircleZ: jM,
-            santaHintCircleR: aM
-          } = MM;
-          return null !== SM && null !== jM && aM > 0 && Math.hypot(iM - SM, OM - jM) <= aM
-        }(mM, rM);
-        hM !== this.drawnInCircle && (this.drawnInCircle = hM, this.map.toggleAttribute("data-in-circle", hM))
+            santaHintCircleX: yU,
+            santaHintCircleZ: QU,
+            santaHintCircleR: AU
+          } = UU;
+          return null !== yU && null !== QU && AU > 0 && Math.hypot(zU - yU, cU - QU) <= AU
+        }(NU, XU);
+        pU !== this.drawnInCircle && (this.drawnInCircle = pU, this.map.toggleAttribute("data-in-circle", pU))
       }
       dispose() {
-        var MM, rM;
-        null !== this.endTimer && (window.clearTimeout(this.endTimer), this.endTimer = null), this.clearFinishEnd(), document.body.classList.remove(wM), null === (MM = this.countdownAnimation) || void 0 === MM || MM.cancel(), this.countdownAnimation = null, this.stopRing(), null === (rM = this.flashAnimation) || void 0 === rM || rM.cancel(), this.flashAnimation = null, this.map = this.arrow = this.ring = this.flash = null, this.countdown = this.ringFill = null, document.body.classList.remove(bM), this.view = gM
+        var UU, XU;
+        null !== this.endTimer && (window.clearTimeout(this.endTimer), this.endTimer = null), this.clearFinishEnd(), document.body.classList.remove(dU), null === (UU = this.countdownAnimation) || void 0 === UU || UU.cancel(), this.countdownAnimation = null, this.stopRing(), null === (XU = this.flashAnimation) || void 0 === XU || XU.cancel(), this.flashAnimation = null, this.map = this.arrow = this.ring = this.flash = null, this.countdown = this.ringFill = null, document.body.classList.remove(WU), this.view = eU
       }
-      Tz(MM) {
-        this.view = MM, document.body.classList.toggle(bM, MM.shown), MM.shown && (this.clearFinishEnd(), document.body.classList.add(wM)), dM.i.Tz(eM, MM, !0)
+      UY(UU) {
+        this.view = UU, document.body.classList.toggle(WU, UU.shown), UU.shown && (this.clearFinishEnd(), document.body.classList.add(dU)), tU.k.UY(PU, UU, !0)
       }
-      scheduleEnd(MM) {
+      scheduleEnd(UU) {
         null !== this.endTimer && window.clearTimeout(this.endTimer), this.endTimer = window.setTimeout((() => {
-          this.endTimer = null, this.wrap.stop(), this.Tz({
+          this.endTimer = null, this.wrap.stop(), this.UY({
             ...this.view,
             shown: !1,
             naughtyEndsAt: 0
           }), this.stopRing(), this.clearFinishEnd(), this.finishEndTimer = window.setTimeout((() => {
-            this.finishEndTimer = null, document.body.classList.remove(wM)
+            this.finishEndTimer = null, document.body.classList.remove(dU)
           }), 13e3)
-        }), MM)
+        }), UU)
       }
       clearFinishEnd() {
         null !== this.finishEndTimer && (window.clearTimeout(this.finishEndTimer), this.finishEndTimer = null)
       }
       restartCountdown() {
-        var MM, rM;
-        null === (MM = this.countdownAnimation) || void 0 === MM || MM.cancel(), this.countdownAnimation = null;
-        const iM = this.nextHintAt - performance.now();
-        if (!this.countdown || "hunting" !== (null === (rM = this.view.hint) || void 0 === rM ? void 0 : rM.santaHintState) || iM <= 0) return;
-        const OM = EM * (1 - Math.min(1, iM / 1e4));
+        var UU, XU;
+        null === (UU = this.countdownAnimation) || void 0 === UU || UU.cancel(), this.countdownAnimation = null;
+        const zU = this.nextHintAt - performance.now();
+        if (!this.countdown || "hunting" !== (null === (XU = this.view.hint) || void 0 === XU ? void 0 : XU.santaHintState) || zU <= 0) return;
+        const cU = GU * (1 - Math.min(1, zU / 1e4));
         this.countdownAnimation = this.countdown.animate([{
-          strokeDashoffset: OM
+          strokeDashoffset: cU
         }, {
-          strokeDashoffset: EM
+          strokeDashoffset: GU
         }], {
-          duration: iM,
+          duration: zU,
           fill: "forwards"
         })
       }
-      runRing(MM, rM) {
+      runRing(UU, XU) {
         if (this.stopRing(), !this.ring || !this.ringFill) return;
-        this.ring.classList.add(MM);
-        const [iM, OM] = "Wrapping" === MM ? [UM, 0] : [0, UM], SM = [{
-          strokeDashoffset: iM
+        this.ring.classList.add(UU);
+        const [zU, cU] = "Wrapping" === UU ? [BU, 0] : [0, BU], yU = [{
+          strokeDashoffset: zU
         }, {
-          strokeDashoffset: OM
-        }], jM = this.ringFill.animate(SM, {
-          duration: rM,
+          strokeDashoffset: cU
+        }], QU = this.ringFill.animate(yU, {
+          duration: XU,
           fill: "forwards"
         });
-        this.ringAnimation = jM, "Naughty" === MM && (jM.onfinish = () => {
-          this.ringAnimation === jM && this.stopRing()
+        this.ringAnimation = QU, "Naughty" === UU && (QU.onfinish = () => {
+          this.ringAnimation === QU && this.stopRing()
         })
       }
-      startWrapRing(MM) {
-        this.runRing("Wrapping", MM), this.onWrapStart()
+      startWrapRing(UU) {
+        this.runRing("Wrapping", UU), this.onWrapStart()
       }
-      endWrapRing(MM) {
-        const rM = this.ring;
-        if (null === rM || void 0 === rM || !rM.classList.contains("Wrapping")) return;
-        var iM, OM;
-        MM ? null === (iM = this.ringAnimation) || void 0 === iM || iM.finish() : null === (OM = this.ringAnimation) || void 0 === OM || OM.pause();
-        rM.classList.toggle("Cancelled", !MM);
-        const SM = rM.animate([{
+      endWrapRing(UU) {
+        const XU = this.ring;
+        if (null === XU || void 0 === XU || !XU.classList.contains("Wrapping")) return;
+        var zU, cU;
+        UU ? null === (zU = this.ringAnimation) || void 0 === zU || zU.finish() : null === (cU = this.ringAnimation) || void 0 === cU || cU.pause();
+        XU.classList.toggle("Cancelled", !UU);
+        const yU = XU.animate([{
           opacity: 1,
           scale: 1
         }, {
           opacity: 0,
-          scale: MM ? 1.6 : .8
+          scale: UU ? 1.6 : .8
         }], {
-          duration: MM ? 350 : 300,
-          easing: MM ? "ease-out" : "ease-in",
+          duration: UU ? 350 : 300,
+          easing: UU ? "ease-out" : "ease-in",
           fill: "forwards"
         });
-        this.ringEndAnimation = SM, SM.onfinish = () => {
-          this.ringEndAnimation === SM && this.stopRing()
+        this.ringEndAnimation = yU, yU.onfinish = () => {
+          this.ringEndAnimation === yU && this.stopRing()
         }
       }
       stopRing() {
-        var MM, rM, iM;
-        null === (MM = this.ringAnimation) || void 0 === MM || MM.cancel(), null === (rM = this.ringEndAnimation) || void 0 === rM || rM.cancel(), this.ringAnimation = this.ringEndAnimation = null, null === (iM = this.ring) || void 0 === iM || iM.classList.remove(...tM)
+        var UU, XU, zU;
+        null === (UU = this.ringAnimation) || void 0 === UU || UU.cancel(), null === (XU = this.ringEndAnimation) || void 0 === XU || XU.cancel(), this.ringAnimation = this.ringEndAnimation = null, null === (zU = this.ring) || void 0 === zU || zU.classList.remove(...LU)
       }
     }
 
-    function RM(MM, rM) {
-      return 0 !== MM && Math.abs(rM - MM) < 1e3 ? Math.min(MM, rM) : rM
+    function wU(UU, XU) {
+      return 0 !== UU && Math.abs(XU - UU) < 1e3 ? Math.min(UU, XU) : XU
     }
-    var pM = iM(1303);
-    const WM = "secretSantaControlsShown",
-      sM = (0, aM.memo)((function(MM) {
+    var qU = zU(1305);
+    const OU = "secretSantaControlsShown",
+      SU = (0, AU.memo)((function(UU) {
         let {
-          controller: rM
-        } = MM;
+          controller: XU
+        } = UU;
         const {
-          isTouchScreen: iM
-        } = (0, zM.m)(["isTouchScreen"]), OM = (0, LM.y)(), {
-          t: SM
-        } = (0, HM.A)(), jM = (0, JM.e)(eM, rM.getView()).shown, PM = (0, hM.i)(), [nM] = (0, aM.useState)((() => {
-          var MM;
-          return null !== (MM = mM.g.getItem(WM)) && void 0 !== MM ? MM : 0
-        })), [dM, yM] = (0, aM.useState)(nM >= 2), [lM, EM] = (0, aM.useState)(!1), UM = (0, aM.useRef)(!1), GM = !dM && lM && jM && (!iM || OM);
-        return (0, aM.useEffect)((() => {
-          if (!jM || lM || dM) return;
-          const MM = setTimeout((() => {
-            EM(!0)
+          isTouchScreen: zU
+        } = (0, EU.q)(["isTouchScreen"]), cU = (0, YU.F)(), {
+          t: yU
+        } = (0, IU.I)(), QU = (0, aU.j)(PU, XU.getView()).shown, FU = (0, pU.i)(), [oU] = (0, AU.useState)((() => {
+          var UU;
+          return null !== (UU = NU.k.getItem(OU)) && void 0 !== UU ? UU : 0
+        })), [tU, gU] = (0, AU.useState)(oU >= 2), [kU, GU] = (0, AU.useState)(!1), BU = (0, AU.useRef)(!1), ZU = !tU && kU && QU && (!zU || cU);
+        return (0, AU.useEffect)((() => {
+          if (!QU || kU || tU) return;
+          const UU = setTimeout((() => {
+            GU(!0)
           }), 12500);
           return () => {
-            clearTimeout(MM)
+            clearTimeout(UU)
           }
-        }), [jM, lM, dM]), (0, aM.useEffect)((() => {
-          !GM || PM || UM.current || (UM.current = !0, mM.g.setItem(WM, nM + 1))
-        }), [GM, PM, nM]), (0, hM.k)(GM ? "secretSanta" : null, PM, (() => {
-          yM(!0)
-        })), GM ? (0, pM.jsxs)("div", {
-          className: QM()("ControlsTutorialDiv", {
-            Covered: PM
+        }), [QU, kU, tU]), (0, AU.useEffect)((() => {
+          !ZU || FU || BU.current || (BU.current = !0, NU.k.setItem(OU, oU + 1))
+        }), [ZU, FU, oU]), (0, pU.m)(ZU ? "secretSanta" : null, FU, (() => {
+          gU(!0)
+        })), ZU ? (0, qU.jsxs)("div", {
+          className: DU()("ControlsTutorialDiv", {
+            Covered: FU
           }),
-          children: [(0, pM.jsx)(hM.f, {}), (0, pM.jsx)(hM.b, {
+          children: [(0, qU.jsx)(pU.h, {}), (0, qU.jsx)(pU.c, {
             header: "Jump",
             noaAction: "jump"
-          }), (0, pM.jsx)(hM.b, {
-            header: SM("secretSantaHud:givePresent"),
+          }), (0, qU.jsx)(pU.c, {
+            header: yU("secretSantaHud:givePresent"),
             noaAction: "alt-fire"
-          }), OM && (0, pM.jsx)(hM.b, {
-            header: SM("controller:tutorialPause"),
+          }), cU && (0, qU.jsx)(pU.c, {
+            header: yU("controller:tutorialPause"),
             noaAction: "OpenSettings"
           })]
         }) : null
       }));
-    var DM = iM(37538),
-      kM = iM(3815),
-      ZM = iM(37629),
-      oM = iM(40515);
-    const fM = (0, aM.memo)((function(MM) {
+    var rU = zU(37318),
+      uU = zU(3796),
+      fU = zU(37418),
+      iU = zU(40278);
+    const HU = (0, AU.memo)((function(UU) {
       let {
-        controller: rM,
-        naughtyEndsAt: iM
-      } = MM;
-      return (0, pM.jsxs)("div", {
-        ref: rM.bindRing,
+        controller: XU,
+        naughtyEndsAt: zU
+      } = UU;
+      return (0, qU.jsxs)("div", {
+        ref: XU.bindRing,
         className: "SecretSantaRing",
-        children: [(0, pM.jsxs)("svg", {
+        children: [(0, qU.jsxs)("svg", {
           viewBox: "0 0 40 40",
           "aria-hidden": "true",
-          children: [(0, pM.jsx)("circle", {
+          children: [(0, qU.jsx)("circle", {
             className: "SecretSantaRingTrack",
             cx: "20",
             cy: "20",
             r: 17
-          }), (0, pM.jsx)("circle", {
+          }), (0, qU.jsx)("circle", {
             className: "SecretSantaRingFill",
             cx: "20",
             cy: "20",
             r: 17,
             style: {
-              strokeDasharray: UM,
-              strokeDashoffset: UM
+              strokeDasharray: BU,
+              strokeDashoffset: BU
             }
           })]
-        }), iM > 0 && (0, pM.jsx)(YM, {
-          endsAt: iM
+        }), zU > 0 && (0, qU.jsx)(MU, {
+          endsAt: zU
         })]
       })
     }));
 
-    function YM(MM) {
+    function MU(UU) {
       let {
-        endsAt: rM
-      } = MM;
+        endsAt: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, HM.A)(), OM = (0, oM.j)(rM);
-      return OM <= 0 ? null : (0, pM.jsxs)("div", {
+        t: zU
+      } = (0, IU.I)(), cU = (0, iU.i)(XU);
+      return cU <= 0 ? null : (0, qU.jsxs)("div", {
         className: "SecretSantaNaughty SmallTextBold",
-        children: [(0, pM.jsx)("span", {
+        children: [(0, qU.jsx)("span", {
           className: "SecretSantaNaughtyTitle",
-          children: iM("secretSantaHud:naughty")
-        }), (0, pM.jsx)("span", {
-          children: iM("secretSantaHud:naughtyWait", {
-            seconds: OM
+          children: zU("secretSantaHud:naughty")
+        }), (0, qU.jsx)("span", {
+          children: zU("secretSantaHud:naughtyWait", {
+            seconds: cU
           })
         })]
       })
     }
 
-    function NM(MM) {
-      return MM && jM[MM] || "\u2744\ufe0f"
+    function vU(UU) {
+      return UU && QU[UU] || "\u2744\ufe0f"
     }
-    var AM = iM(39571);
-    const xM = (0, aM.memo)((function(MM) {
-      var rM, iM;
+    var VU = zU(39367);
+    const sU = (0, AU.memo)((function(UU) {
+      var XU, zU;
       let {
-        controller: OM,
-        market: jM,
-        hint: aM,
-        pulse: PM
-      } = MM;
+        controller: cU,
+        market: QU,
+        hint: AU,
+        pulse: FU
+      } = UU;
       const {
-        t: nM
-      } = (0, HM.A)(), zM = null !== (rM = null === aM || void 0 === aM ? void 0 : aM.santaHintState) && void 0 !== rM ? rM : "none", LM = "hunting" === zM && aM ? aM.santaHintDistrict : -1, mM = null !== (iM = null === jM || void 0 === jM ? void 0 : jM.santaMarketDistricts) && void 0 !== iM ? iM : SM;
-      return (0, pM.jsxs)("div", {
-        ref: OM.bindMap,
-        className: QM()("SecretSantaMinimap", `State-${zM}`),
-        children: [(0, pM.jsx)("div", {
+        t: oU
+      } = (0, IU.I)(), EU = null !== (XU = null === AU || void 0 === AU ? void 0 : AU.santaHintState) && void 0 !== XU ? XU : "none", YU = "hunting" === EU && AU ? AU.santaHintDistrict : -1, NU = null !== (zU = null === QU || void 0 === QU ? void 0 : QU.santaMarketDistricts) && void 0 !== zU ? zU : yU;
+      return (0, qU.jsxs)("div", {
+        ref: cU.bindMap,
+        className: DU()("SecretSantaMinimap", `State-${EU}`),
+        children: [(0, qU.jsx)("div", {
           className: "SecretSantaMinimapGrid",
-          children: mM.map(((MM, rM) => (0, pM.jsxs)("div", {
-            className: QM()("SecretSantaDistrict", `District-${MM}`, {
-              Target: rM === LM
+          children: NU.map(((UU, XU) => (0, qU.jsxs)("div", {
+            className: DU()("SecretSantaDistrict", `District-${UU}`, {
+              Target: XU === YU
             }),
-            children: [(0, pM.jsx)("span", {
+            children: [(0, qU.jsx)("span", {
               className: "SecretSantaDistrictIcon",
-              children: NM(MM)
-            }), (0, pM.jsx)("span", {
+              children: vU(UU)
+            }), (0, qU.jsx)("span", {
               className: "SecretSantaDistrictLabel",
-              children: nM(`secretSantaHud:district_${MM}`)
+              children: oU(`secretSantaHud:district_${UU}`)
             })]
-          }, MM)))
-        }), LM >= 0 && (0, pM.jsx)("div", {
+          }, UU)))
+        }), YU >= 0 && (0, qU.jsx)("div", {
           className: "SecretSantaDistrictPulse",
           style: {
-            left: LM % 3 * (100 / 3) + "%",
-            top: Math.floor(LM / 3) * (100 / 3) + "%"
+            left: YU % 3 * (100 / 3) + "%",
+            top: Math.floor(YU / 3) * (100 / 3) + "%"
           }
-        }, PM), jM && aM && "hunting" === zM && (0, pM.jsx)("div", {
+        }, FU), QU && AU && "hunting" === EU && (0, qU.jsx)("div", {
           className: "SecretSantaCircleClip",
-          children: (0, pM.jsx)(vM, {
-            market: jM,
-            hint: aM
+          children: (0, qU.jsx)(nU, {
+            market: QU,
+            hint: AU
           })
-        }), (0, pM.jsx)("div", {
+        }), (0, qU.jsx)("div", {
           className: "SecretSantaMinimapArrowClip",
-          children: (0, pM.jsx)("div", {
-            ref: OM.bindArrow,
+          children: (0, qU.jsx)("div", {
+            ref: cU.bindArrow,
             className: "SecretSantaMinimapArrow",
-            children: (0, pM.jsxs)("svg", {
+            children: (0, qU.jsxs)("svg", {
               viewBox: "0 2 20 20",
-              children: [(0, pM.jsx)("path", {
+              children: [(0, qU.jsx)("path", {
                 className: "SecretSantaMinimapArrowBody",
                 d: "M10 1.5 14.2 6.4H5.8Z"
-              }), (0, pM.jsx)("circle", {
+              }), (0, qU.jsx)("circle", {
                 className: "SecretSantaMinimapArrowBody",
                 cx: "10",
                 cy: "12",
                 r: "5"
-              }), (0, pM.jsx)("circle", {
+              }), (0, qU.jsx)("circle", {
                 className: "SecretSantaMinimapArrowDot",
                 cx: "10",
                 cy: "12",
@@ -1063,395 +1091,395 @@ export const modules = {
               })]
             })
           })
-        }), (0, pM.jsx)("svg", {
+        }), (0, qU.jsx)("svg", {
           className: "SecretSantaCountdown",
           viewBox: "0 0 100 100",
           preserveAspectRatio: "none",
           "aria-hidden": "true",
-          children: (0, pM.jsx)("path", {
-            ref: OM.bindCountdown,
+          children: (0, qU.jsx)("path", {
+            ref: cU.bindCountdown,
             d: "M50 0H100V100H0V0Z",
             style: {
-              strokeDasharray: EM,
-              strokeDashoffset: EM
+              strokeDasharray: GU,
+              strokeDashoffset: GU
             }
           })
-        }), "lost" === zM && (0, pM.jsxs)("div", {
+        }), "lost" === EU && (0, qU.jsxs)("div", {
           className: "SecretSantaLost",
-          children: [(0, pM.jsx)("span", {
+          children: [(0, qU.jsx)("span", {
             className: "SecretSantaLostIcon",
             children: "\u2744\ufe0f"
-          }), (0, pM.jsx)("span", {
+          }), (0, qU.jsx)("span", {
             className: "SmallTextBold",
-            children: nM("secretSantaHud:lost")
+            children: oU("secretSantaHud:lost")
           })]
         })]
       })
     }));
 
-    function vM(MM) {
+    function nU(UU) {
       let {
-        market: rM,
-        hint: iM
-      } = MM;
+        market: XU,
+        hint: zU
+      } = UU;
       const {
-        santaHintCircleX: OM,
-        santaHintCircleZ: SM,
-        santaHintCircleR: jM,
-        santaHintContract: PM
-      } = iM, nM = (0, aM.useMemo)((() => (0, AM.f)({
-        ...(0, AM.d)(`${PM}:${OM}:${SM}`),
+        santaHintCircleX: cU,
+        santaHintCircleZ: yU,
+        santaHintCircleR: QU,
+        santaHintContract: FU
+      } = zU, oU = (0, AU.useMemo)((() => (0, VU.i)({
+        ...(0, VU.e)(`${FU}:${cU}:${yU}`),
         radius: 50,
         squareness: 2
-      })), [PM, OM, SM]);
-      if (null === OM || null === SM || jM <= 0) return null;
-      const [QM, zM] = GM(rM, OM, SM), LM = 200 * jM / rM.santaMarketSize;
-      return (0, pM.jsx)("div", {
+      })), [FU, cU, yU]);
+      if (null === cU || null === yU || QU <= 0) return null;
+      const [DU, EU] = ZU(XU, cU, yU), YU = 200 * QU / XU.santaMarketSize;
+      return (0, qU.jsx)("div", {
         className: "SecretSantaCircle",
         style: {
-          left: `${QM}%`,
-          top: `${zM}%`,
-          width: `${LM}%`,
-          height: `${LM}%`
+          left: `${DU}%`,
+          top: `${EU}%`,
+          width: `${YU}%`,
+          height: `${YU}%`
         },
-        children: (0, pM.jsxs)("svg", {
+        children: (0, qU.jsxs)("svg", {
           viewBox: "0 0 100 100",
           preserveAspectRatio: "none",
-          children: [(0, pM.jsx)("path", {
+          children: [(0, qU.jsx)("path", {
             className: "SecretSantaCircleShadow",
-            d: nM
-          }), (0, pM.jsx)("path", {
+            d: oU
+          }), (0, qU.jsx)("path", {
             className: "SecretSantaCircleDashes",
-            d: nM
+            d: oU
           })]
         })
       })
     }
-    const FM = "\x01";
+    const mU = "\x01";
 
-    function BM(MM) {
+    function lU(UU) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, JM.e)(eM, rM.getView());
-      return (0, pM.jsxs)(pM.Fragment, {
-        children: [(0, pM.jsx)("div", {
-          ref: rM.bindFlash,
+        controller: XU
+      } = UU;
+      const zU = (0, aU.j)(PU, XU.getView());
+      return (0, qU.jsxs)(qU.Fragment, {
+        children: [(0, qU.jsx)("div", {
+          ref: XU.bindFlash,
           className: "SecretSantaFlash",
           "aria-hidden": "true"
-        }), (0, pM.jsx)(fM, {
-          controller: rM,
-          naughtyEndsAt: iM.naughtyEndsAt
-        }), iM.shown && (0, pM.jsxs)(pM.Fragment, {
-          children: [(0, pM.jsx)(VM, {
-            status: iM.status,
-            endsAt: iM.endsAt
-          }), (0, pM.jsx)(XM, {
-            controller: rM,
-            market: iM.market,
-            hint: iM.hint,
-            pulse: iM.pulse
-          }), (0, pM.jsx)(DM.i, {
-            children: (0, pM.jsx)(rr, {
-              market: iM.market,
-              hint: iM.hint
+        }), (0, qU.jsx)(HU, {
+          controller: XU,
+          naughtyEndsAt: zU.naughtyEndsAt
+        }), zU.shown && (0, qU.jsxs)(qU.Fragment, {
+          children: [(0, qU.jsx)(TU, {
+            status: zU.status,
+            endsAt: zU.endsAt
+          }), (0, qU.jsx)(xU, {
+            controller: XU,
+            market: zU.market,
+            hint: zU.hint,
+            pulse: zU.pulse
+          }), (0, qU.jsx)(rU.e, {
+            children: (0, qU.jsx)(XX, {
+              market: zU.market,
+              hint: zU.hint
             })
           })]
         })]
       })
     }
 
-    function XM(MM) {
+    function xU(UU) {
       let {
-        controller: rM,
-        market: iM,
-        hint: OM,
-        pulse: SM
-      } = MM;
-      const [jM, PM] = (0, aM.useState)(null);
-      return (0, kM.m)(jM, IM), (0, pM.jsx)("div", {
-        ref: PM,
+        controller: XU,
+        market: zU,
+        hint: cU,
+        pulse: yU
+      } = UU;
+      const [QU, FU] = (0, AU.useState)(null);
+      return (0, uU.m)(QU, JU), (0, qU.jsx)("div", {
+        ref: FU,
         className: "SecretSantaMapPanel",
-        children: (0, pM.jsx)(xM, {
-          controller: rM,
-          market: iM,
-          hint: OM,
-          pulse: SM
+        children: (0, qU.jsx)(sU, {
+          controller: XU,
+          market: zU,
+          hint: cU,
+          pulse: yU
         })
       })
     }
 
-    function IM(MM) {
-      const rM = () => {
-        const rM = MM.getBoundingClientRect();
-        let iM = 0;
-        for (const MM of TM()) MM.left < rM.right && MM.right > rM.left && (iM = Math.max(iM, MM.bottom));
-        const OM = (0, kM.i)(rM.left, rM.right, iM);
-        KM(MM, "--ss-map-top", iM + 6), KM(MM, "--ss-map-bottom", null === OM ? null : (0, kM.e)(MM) - OM + 6)
+    function JU(UU) {
+      const XU = () => {
+        const XU = UU.getBoundingClientRect();
+        let zU = 0;
+        for (const UU of bU()) UU.left < XU.right && UU.right > XU.left && (zU = Math.max(zU, UU.bottom));
+        const cU = (0, uU.j)(XU.left, XU.right, zU);
+        jU(UU, "--ss-map-top", zU + 6), jU(UU, "--ss-map-bottom", null === cU ? null : (0, uU.g)(UU) - cU + 6)
       };
-      rM();
-      const iM = qM(rM);
+      XU();
+      const zU = KU(XU);
       return {
-        layout: rM,
+        layout: XU,
         clear: () => {
-          iM(), MM.style.removeProperty("--ss-map-top"), MM.style.removeProperty("--ss-map-bottom")
+          zU(), UU.style.removeProperty("--ss-map-top"), UU.style.removeProperty("--ss-map-bottom")
         }
       }
     }
 
-    function KM(MM, rM, iM) {
-      const OM = null === iM ? "" : `${Math.ceil(iM)}px`;
-      MM.style.getPropertyValue(rM) !== OM && MM.style.setProperty(rM, OM)
+    function jU(UU, XU, zU) {
+      const cU = null === zU ? "" : `${Math.ceil(zU)}px`;
+      UU.style.getPropertyValue(XU) !== cU && UU.style.setProperty(XU, cU)
     }
 
-    function qM(MM) {
-      const rM = document.querySelector(`.${ZM.g}`),
-        iM = new ResizeObserver(MM);
-      for (const jM of [document.querySelector(`.${ZM.e}`), rM]) jM && iM.observe(jM);
-      const OM = new MutationObserver(MM),
-        SM = null === rM || void 0 === rM ? void 0 : rM.querySelector(".TopRightElementsRight");
-      return SM && OM.observe(SM, {
+    function KU(UU) {
+      const XU = document.querySelector(`.${fU.h}`),
+        zU = new ResizeObserver(UU);
+      for (const QU of [document.querySelector(`.${fU.f}`), XU]) QU && zU.observe(QU);
+      const cU = new MutationObserver(UU),
+        yU = null === XU || void 0 === XU ? void 0 : XU.querySelector(".TopRightElementsRight");
+      return yU && cU.observe(yU, {
         childList: !0,
         subtree: !0,
         characterData: !0
       }), () => {
-        iM.disconnect(), OM.disconnect()
+        zU.disconnect(), cU.disconnect()
       }
     }
 
-    function TM() {
-      const MM = `.${ZM.g}`,
-        rM = document.querySelectorAll(`.${ZM.e}, ${MM} .TopRightIcon:not(.TopRightTray *), ${MM} .CondensedSocialBarInner`);
-      return Array.from(rM, (MM => MM.getBoundingClientRect())).filter((MM => MM.width > 0 && MM.height > 0))
+    function bU() {
+      const UU = `.${fU.h}`,
+        XU = document.querySelectorAll(`.${fU.f}, ${UU} .TopRightIcon:not(.TopRightTray *), ${UU} .CondensedSocialBarInner`);
+      return Array.from(XU, (UU => UU.getBoundingClientRect())).filter((UU => UU.width > 0 && UU.height > 0))
     }
-    const VM = (0, aM.memo)((function(MM) {
+    const TU = (0, AU.memo)((function(UU) {
       let {
-        status: rM,
-        endsAt: iM
-      } = MM;
+        status: XU,
+        endsAt: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, HM.A)(), [SM, jM] = (0, aM.useState)(null);
-      return function(MM) {
-        (0, aM.useLayoutEffect)((() => {
-          if (!MM) return;
-          const rM = () => {
-            MM.style.removeProperty("top");
-            const rM = TM(),
-              iM = Array.from(MM.children, (MM => MM.getBoundingClientRect()));
-            let OM = 0;
-            for (let MM = 0; MM < rM.length; MM++) {
-              let MM = OM;
-              for (const SM of iM)
-                for (const iM of rM) {
-                  SM.left < iM.right + ZM.c && SM.right > iM.left - ZM.c && SM.top + OM < iM.bottom + 4 && SM.bottom + OM > iM.top && (MM = Math.max(MM, Math.ceil(iM.bottom + 4 - SM.top)))
+        t: cU
+      } = (0, IU.I)(), [yU, QU] = (0, AU.useState)(null);
+      return function(UU) {
+        (0, AU.useLayoutEffect)((() => {
+          if (!UU) return;
+          const XU = () => {
+            UU.style.removeProperty("top");
+            const XU = bU(),
+              zU = Array.from(UU.children, (UU => UU.getBoundingClientRect()));
+            let cU = 0;
+            for (let UU = 0; UU < XU.length; UU++) {
+              let UU = cU;
+              for (const yU of zU)
+                for (const zU of XU) {
+                  yU.left < zU.right + fU.d && yU.right > zU.left - fU.d && yU.top + cU < zU.bottom + 4 && yU.bottom + cU > zU.top && (UU = Math.max(UU, Math.ceil(zU.bottom + 4 - yU.top)))
                 }
-              if (MM === OM) break;
-              OM = MM
+              if (UU === cU) break;
+              cU = UU
             }
-            OM > 0 && (MM.style.top = `${MM.getBoundingClientRect().top+OM}px`)
+            cU > 0 && (UU.style.top = `${UU.getBoundingClientRect().top+cU}px`)
           };
-          rM();
-          const iM = new ResizeObserver(rM);
-          iM.observe(MM);
-          const OM = qM(rM),
-            SM = new MutationObserver((MM => {
-              MM.some((MM => {
-                const rM = MM.target instanceof Element ? MM.target : MM.target.parentElement;
-                return !(null !== rM && void 0 !== rM && rM.closest(".SecretSantaClock"))
-              })) && rM()
+          XU();
+          const zU = new ResizeObserver(XU);
+          zU.observe(UU);
+          const cU = KU(XU),
+            yU = new MutationObserver((UU => {
+              UU.some((UU => {
+                const XU = UU.target instanceof Element ? UU.target : UU.target.parentElement;
+                return !(null !== XU && void 0 !== XU && XU.closest(".SecretSantaClock"))
+              })) && XU()
             }));
-          return SM.observe(MM, {
+          return yU.observe(UU, {
             childList: !0,
             subtree: !0,
             characterData: !0
-          }), window.addEventListener("resize", rM), () => {
-            iM.disconnect(), OM(), SM.disconnect(), window.removeEventListener("resize", rM)
+          }), window.addEventListener("resize", XU), () => {
+            zU.disconnect(), cU(), yU.disconnect(), window.removeEventListener("resize", XU)
           }
-        }), [MM])
-      }(SM), (0, pM.jsxs)("div", {
-        ref: jM,
+        }), [UU])
+      }(yU), (0, qU.jsxs)("div", {
+        ref: QU,
         className: "SecretSantaTop",
-        children: [(0, pM.jsxs)("div", {
+        children: [(0, qU.jsxs)("div", {
           className: "SecretSantaTopBar",
-          children: [(0, pM.jsx)(cM, {
-            endsAt: iM
-          }), rM && (0, pM.jsxs)("span", {
+          children: [(0, qU.jsx)(hU, {
+            endsAt: zU
+          }), XU && (0, qU.jsxs)("span", {
             className: "SecretSantaScore",
-            children: [(0, pM.jsxs)("span", {
+            children: [(0, qU.jsxs)("span", {
               className: "SecretSantaPoints",
-              children: ["\u2b50 ", rM.santaStatusPoints]
-            }, rM.santaStatusPoints), (0, pM.jsx)("span", {
+              children: ["\u2b50 ", XU.santaStatusPoints]
+            }, XU.santaStatusPoints), (0, qU.jsx)("span", {
               className: "SecretSantaRank",
-              children: OM("secretSantaHud:rank", {
-                rank: rM.santaStatusRank,
-                players: rM.santaStatusPlayers
+              children: cU("secretSantaHud:rank", {
+                rank: XU.santaStatusRank,
+                players: XU.santaStatusPlayers
               })
             })]
           })]
-        }), rM && (0, pM.jsx)(Mr, {
-          status: rM
+        }), XU && (0, qU.jsx)(UX, {
+          status: XU
         })]
       })
     }));
 
-    function cM(MM) {
+    function hU(UU) {
       let {
-        endsAt: rM
-      } = MM;
-      const iM = (0, oM.j)(rM);
-      return 0 === rM ? (0, pM.jsx)("span", {
+        endsAt: XU
+      } = UU;
+      const zU = (0, iU.i)(XU);
+      return 0 === XU ? (0, qU.jsx)("span", {
         className: "SecretSantaClock"
-      }) : (0, pM.jsxs)("span", {
-        className: QM()("SecretSantaClock", {
-          Urgent: iM <= 30
+      }) : (0, qU.jsxs)("span", {
+        className: DU()("SecretSantaClock", {
+          Urgent: zU <= 30
         }),
-        children: [(0, pM.jsx)("span", {
+        children: [(0, qU.jsx)("span", {
           "aria-hidden": "true",
           children: "\u23f1"
-        }), (0, oM.d)(iM)]
+        }), (0, iU.e)(zU)]
       })
     }
-    const Mr = (0, aM.memo)((function(MM) {
+    const UX = (0, AU.memo)((function(UU) {
         let {
-          status: rM
-        } = MM;
+          status: XU
+        } = UU;
         const {
-          t: iM
-        } = (0, HM.A)(), OM = Math.min(2, Math.max(0, rM.santaStatusHunters)), SM = rM.santaStatusScarf, jM = rM.santaStatusKnown ? (0, pM.jsxs)("span", {
+          t: zU
+        } = (0, IU.I)(), cU = Math.min(2, Math.max(0, XU.santaStatusHunters)), yU = XU.santaStatusScarf, QU = XU.santaStatusKnown ? (0, qU.jsxs)("span", {
           className: "SecretSantaSpotted",
-          children: [(0, pM.jsx)("span", {
+          children: [(0, qU.jsx)("span", {
             "aria-hidden": "true",
             children: "\ud83d\udc41"
-          }), " ", Or(iM("secretSantaHud:spottedScarf", {
-            scarf: FM
-          }), (0, pM.jsx)(ir, {
-            scarf: SM
+          }), " ", cX(zU("secretSantaHud:spottedScarf", {
+            scarf: mU
+          }), (0, qU.jsx)(zX, {
+            scarf: yU
           }))]
-        }) : (0, pM.jsx)("span", {
-          children: Or(iM("secretSantaHud:youWear", {
-            scarf: FM
-          }), (0, pM.jsx)(ir, {
-            scarf: SM
+        }) : (0, qU.jsx)("span", {
+          children: cX(zU("secretSantaHud:youWear", {
+            scarf: mU
+          }), (0, qU.jsx)(zX, {
+            scarf: yU
           }))
         });
-        return (0, pM.jsxs)("div", {
+        return (0, qU.jsxs)("div", {
           className: "SecretSantaYouTab",
-          children: [OM > 0 && (0, pM.jsxs)("span", {
+          children: [cU > 0 && (0, qU.jsxs)("span", {
             className: "SecretSantaHunters",
-            children: [(0, pM.jsx)("span", {
+            children: [(0, qU.jsx)("span", {
               "aria-hidden": "true",
               children: "\ud83c\udf85"
-            }), " ", iM(1 === OM ? "secretSantaHud:hunters1" : "secretSantaHud:hunters2")]
-          }), jM]
-        }, OM)
+            }), " ", zU(1 === cU ? "secretSantaHud:hunters1" : "secretSantaHud:hunters2")]
+          }), QU]
+        }, cU)
       })),
-      rr = (0, aM.memo)((function(MM) {
-        var rM;
+      XX = (0, AU.memo)((function(UU) {
+        var XU;
         let {
-          market: iM,
-          hint: OM
-        } = MM;
+          market: zU,
+          hint: cU
+        } = UU;
         const {
-          t: SM
-        } = (0, HM.A)(), jM = null !== (rM = null === OM || void 0 === OM ? void 0 : OM.santaHintState) && void 0 !== rM ? rM : "none";
-        let aM, PM = jM;
-        if (OM && "none" !== jM)
-          if ("lost" === jM) aM = (0, pM.jsxs)(pM.Fragment, {
-            children: [(0, pM.jsx)("span", {
+          t: yU
+        } = (0, IU.I)(), QU = null !== (XU = null === cU || void 0 === cU ? void 0 : cU.santaHintState) && void 0 !== XU ? XU : "none";
+        let AU, FU = QU;
+        if (cU && "none" !== QU)
+          if ("lost" === QU) AU = (0, qU.jsxs)(qU.Fragment, {
+            children: [(0, qU.jsx)("span", {
               "aria-hidden": "true",
               children: "\u2744\ufe0f"
-            }), " ", SM("secretSantaHud:lostLine")]
+            }), " ", yU("secretSantaHud:lostLine")]
           });
-          else if (null !== OM.santaHintScarf) PM = `scarf-${OM.santaHintScarf}`, aM = Or(SM("secretSantaHud:lookingFor", {
-          scarf: FM
-        }), (0, pM.jsx)(ir, {
-          scarf: OM.santaHintScarf
+          else if (null !== cU.santaHintScarf) FU = `scarf-${cU.santaHintScarf}`, AU = cX(yU("secretSantaHud:lookingFor", {
+          scarf: mU
+        }), (0, qU.jsx)(zX, {
+          scarf: cU.santaHintScarf
         }));
         else {
-          const MM = null === iM || void 0 === iM ? void 0 : iM.santaMarketDistricts[OM.santaHintDistrict];
-          PM = `district-${null!==MM&&void 0!==MM?MM:"?"}`, aM = Or(SM("secretSantaHud:findIn", {
-            district: FM
-          }), (0, pM.jsxs)("span", {
-            className: QM()("SecretSantaDistrictName", void 0 !== MM && `District-${MM}`),
-            children: [(0, pM.jsxs)("span", {
+          const UU = null === zU || void 0 === zU ? void 0 : zU.santaMarketDistricts[cU.santaHintDistrict];
+          FU = `district-${null!==UU&&void 0!==UU?UU:"?"}`, AU = cX(yU("secretSantaHud:findIn", {
+            district: mU
+          }), (0, qU.jsxs)("span", {
+            className: DU()("SecretSantaDistrictName", void 0 !== UU && `District-${UU}`),
+            children: [(0, qU.jsxs)("span", {
               "aria-hidden": "true",
-              children: [NM(MM), " "]
-            }), void 0 !== MM ? SM(`secretSantaHud:district_${MM}`) : "?"]
+              children: [vU(UU), " "]
+            }), void 0 !== UU ? yU(`secretSantaHud:district_${UU}`) : "?"]
           }))
-        } else aM = SM("secretSantaHud:finding");
-        return (0, pM.jsx)("div", {
-          className: QM()("SecretSantaTarget", `State-${jM}`),
-          children: aM
-        }, PM)
+        } else AU = yU("secretSantaHud:finding");
+        return (0, qU.jsx)("div", {
+          className: DU()("SecretSantaTarget", `State-${QU}`),
+          children: AU
+        }, FU)
       }));
 
-    function ir(MM) {
+    function zX(UU) {
       let {
-        scarf: rM
-      } = MM;
+        scarf: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, HM.A)();
-      return (0, pM.jsxs)("span", {
-        className: QM()("SecretSantaScarf", `Scarf-${rM}`),
-        children: [(0, pM.jsx)("span", {
+        t: zU
+      } = (0, IU.I)();
+      return (0, qU.jsxs)("span", {
+        className: DU()("SecretSantaScarf", `Scarf-${XU}`),
+        children: [(0, qU.jsx)("span", {
           className: "SecretSantaScarfSwatch"
-        }), iM(`secretSantaHud:scarfName_${rM}`)]
+        }), zU(`secretSantaHud:scarfName_${XU}`)]
       })
     }
 
-    function Or(MM, rM) {
-      const [iM, OM = ""] = MM.split(FM);
-      return (0, pM.jsxs)(pM.Fragment, {
-        children: [iM, rM, OM]
+    function cX(UU, XU) {
+      const [zU, cU = ""] = UU.split(mU);
+      return (0, qU.jsxs)(qU.Fragment, {
+        children: [zU, XU, cU]
       })
     }
-    var Sr = iM(4577);
-    const jr = [226, 36, 52],
-      ar = [246, 250, 255],
-      Pr = [168, 214, 255],
-      nr = [24, 24, 28],
-      Qr = [44, 44, 50],
-      zr = [112, 112, 122],
-      Lr = [255, 112, 36];
+    var yX = zU(4608);
+    const QX = [226, 36, 52],
+      AX = [246, 250, 255],
+      FX = [168, 214, 255],
+      oX = [24, 24, 28],
+      DX = [44, 44, 50],
+      EX = [112, 112, 122],
+      YX = [255, 112, 36];
 
-    function mr(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+    function NX(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
       return [{
         timeFraction: 0,
-        minColor: [MM[0], MM[1], MM[2], iM],
-        maxColor: [rM[0], rM[1], rM[2], iM]
+        minColor: [UU[0], UU[1], UU[2], zU],
+        maxColor: [XU[0], XU[1], XU[2], zU]
       }, {
         timeFraction: 1,
-        minColor: [MM[0], MM[1], MM[2], 0],
-        maxColor: [rM[0], rM[1], rM[2], 0]
+        minColor: [UU[0], UU[1], UU[2], 0],
+        maxColor: [XU[0], XU[1], XU[2], 0]
       }]
     }
 
-    function Hr(MM, rM, iM) {
-      let [OM, SM, jM] = MM;
+    function IX(UU, XU, zU) {
+      let [cU, yU, QU] = UU;
       return {
-        pos1: [OM - rM, SM, jM - rM],
-        pos2: [OM + rM, SM + iM, jM + rM]
+        pos1: [cU - XU, yU, QU - XU],
+        pos2: [cU + XU, yU + zU, QU + XU]
       }
     }
 
-    function hr(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const iM = .45 * rM;
+    function pX(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const zU = .45 * XU;
       return [{
         texture: "square_particle",
-        ...Hr(MM, iM, 1.4 * rM),
+        ...IX(UU, zU, 1.4 * XU),
         dir1: [-.7, .5, -.7],
         dir2: [.7, 1.4, .7],
         minEmitPower: .5,
         maxEmitPower: 1,
         minLifeTime: .8,
         maxLifeTime: 1.4,
-        minSize: .18 * rM,
-        maxSize: .34 * rM,
-        manualEmitCount: Math.round(26 * rM),
+        minSize: .18 * XU,
+        maxSize: .34 * XU,
+        manualEmitCount: Math.round(26 * XU),
         gravity: [0, .6, 0],
         velocityGradients: [{
           timeFraction: 0,
@@ -1462,12 +1490,12 @@ export const modules = {
           factor: .2,
           factor2: .3
         }],
-        colorGradients: mr(Qr, zr, .95),
+        colorGradients: NX(DX, EX, .95),
         hideDist: 48,
-        blendMode: Sr.d.Standard
+        blendMode: yX.f.Standard
       }, {
         texture: "square_particle",
-        ...Hr(MM, .6 * iM, 1.2 * rM),
+        ...IX(UU, .6 * zU, 1.2 * XU),
         dir1: [-1.4, 1.2, -1.4],
         dir2: [1.4, 2.6, 1.4],
         minEmitPower: 1.2,
@@ -1476,7 +1504,7 @@ export const modules = {
         maxLifeTime: 1,
         minSize: .1,
         maxSize: .18,
-        manualEmitCount: Math.round(14 * rM),
+        manualEmitCount: Math.round(14 * XU),
         gravity: [0, -14, 0],
         velocityGradients: [{
           timeFraction: 0,
@@ -1485,18 +1513,18 @@ export const modules = {
         }],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [nr[0], nr[1], nr[2], 1],
+          minColor: [oX[0], oX[1], oX[2], 1],
           maxColor: [58, 52, 48, 1]
         }, {
           timeFraction: 1,
-          minColor: [nr[0], nr[1], nr[2], 1],
+          minColor: [oX[0], oX[1], oX[2], 1],
           maxColor: [58, 52, 48, 1]
         }],
         hideDist: 48,
-        blendMode: Sr.d.Standard
+        blendMode: yX.f.Standard
       }, {
         texture: "glint",
-        ...Hr(MM, .7 * iM, 1.2 * rM),
+        ...IX(UU, .7 * zU, 1.2 * XU),
         dir1: [-.8, .8, -.8],
         dir2: [.8, 2, .8],
         minEmitPower: .6,
@@ -1505,23 +1533,23 @@ export const modules = {
         maxLifeTime: .8,
         minSize: .06,
         maxSize: .14,
-        manualEmitCount: Math.round(6 * rM),
+        manualEmitCount: Math.round(6 * XU),
         gravity: [0, 1, 0],
         velocityGradients: [{
           timeFraction: 0,
           factor: 1,
           factor2: 1
         }],
-        colorGradients: mr(Lr, jr),
+        colorGradients: NX(YX, QX),
         hideDist: 48,
-        blendMode: Sr.d.Add
+        blendMode: yX.f.Add
       }]
     }
 
-    function Jr(MM, rM) {
+    function aX(UU, XU) {
       return {
         texture: "glint",
-        ...Hr(MM, .9, 1.9),
+        ...IX(UU, .9, 1.9),
         dir1: [-.5, .6, -.5],
         dir2: [.5, 1.6, .5],
         minEmitPower: .6,
@@ -1530,37 +1558,37 @@ export const modules = {
         maxLifeTime: 1.5,
         minSize: .05,
         maxSize: .13,
-        manualEmitCount: rM,
+        manualEmitCount: XU,
         gravity: [0, .4, 0],
         velocityGradients: [{
           timeFraction: 0,
           factor: 1,
           factor2: 1
         }],
-        colorGradients: mr(ar, Pr),
+        colorGradients: NX(AX, FX),
         hideDist: 16,
-        blendMode: Sr.d.Add
+        blendMode: yX.f.Add
       }
     }
-    var dr = iM(83);
-    const yr = "harp_pling",
-      lr = "cloth1",
-      Er = [
+    var tX = zU(97);
+    const gX = "harp_pling",
+      kX = "cloth1",
+      GX = [
         [0, .55, 1],
         [110, .55, 1.5]
       ],
-      Ur = [
+      BX = [
         [0, .5, 1],
         [85, .5, 1.26],
         [170, .5, 1.5],
         [255, .45, 2]
       ],
-      Gr = [
+      ZX = [
         [0, .4, .75],
         [170, .4, .63]
       ],
-      Cr = "keysJingle",
-      er = [
+      RX = "keysJingle",
+      PX = [
         [],
         [
           [.45, 1]
@@ -1571,15 +1599,15 @@ export const modules = {
         ]
       ];
 
-    function br(MM, rM) {
-      return 1 === rM ? MM : {
-        ...MM,
-        manualEmitCount: Math.max(1, Math.round(MM.manualEmitCount * rM))
+    function WX(UU, XU) {
+      return 1 === XU ? UU : {
+        ...UU,
+        manualEmitCount: Math.max(1, Math.round(UU.manualEmitCount * XU))
       }
     }
-    class wr {
-      constructor(MM, rM) {
-        this.api = MM, this.localPlayerId = rM, this.layers = [{
+    class dX {
+      constructor(UU, XU) {
+        this.api = UU, this.localPlayerId = XU, this.layers = [{
           sound: null,
           volume: 0,
           target: 0,
@@ -1589,460 +1617,460 @@ export const modules = {
           volume: 0,
           target: 0,
           rate: 1
-        }], this.timers = new Set, this.camera = [0, 0, 0], this.look = [0, 0, 1], this.hint = null, this.spotted = !1, this.lastFrameAt = 0, this.particleShare = (0, dr.isMobile)() ? .6 : 1, MM.preloadSounds([yr, Cr, lr])
+        }], this.timers = new Set, this.camera = [0, 0, 0], this.look = [0, 0, 1], this.hint = null, this.spotted = !1, this.lastFrameAt = 0, this.particleShare = (0, tX.isMobile)() ? .6 : 1, UU.preloadSounds([gX, RX, kX])
       }
       reset() {
         this.hint = null, this.spotted = !1, this.setBells(0)
       }
-      receiveHint(MM) {
-        const rM = this.hint;
-        this.hint = MM, "none" !== MM.santaHintState && (rM && rM.santaHintContract === MM.santaHintContract ? null === rM.santaHintScarf && null !== MM.santaHintScarf && this.play(Ur) : this.play(Er))
+      receiveHint(UU) {
+        const XU = this.hint;
+        this.hint = UU, "none" !== UU.santaHintState && (XU && XU.santaHintContract === UU.santaHintContract ? null === XU.santaHintScarf && null !== UU.santaHintScarf && this.play(BX) : this.play(GX))
       }
-      receiveStatus(MM) {
-        MM.santaStatusKnown && !this.spotted && this.play(Gr), this.spotted = MM.santaStatusKnown
+      receiveStatus(UU) {
+        UU.santaStatusKnown && !this.spotted && this.play(ZX), this.spotted = UU.santaStatusKnown
       }
       wrapStarted() {
-        this.api.playSound(this.localPlayerId, lr, .5, 1.2)
+        this.api.playSound(this.localPlayerId, kX, .5, 1.2)
       }
-      setBells(MM) {
-        const rM = er[MM];
-        this.layers.forEach(((MM, iM) => {
-          var OM;
-          const [SM, jM] = null !== (OM = rM[iM]) && void 0 !== OM ? OM : [0, MM.rate];
-          var aM;
-          (0 === SM && MM.target > 0 && MM.sound && this.stopLater(MM), MM.target = SM, SM > 0 && jM !== MM.rate) && (MM.rate = jM, null === (aM = MM.sound) || void 0 === aM || aM.rate(jM))
+      setBells(UU) {
+        const XU = PX[UU];
+        this.layers.forEach(((UU, zU) => {
+          var cU;
+          const [yU, QU] = null !== (cU = XU[zU]) && void 0 !== cU ? cU : [0, UU.rate];
+          var AU;
+          (0 === yU && UU.target > 0 && UU.sound && this.stopLater(UU), UU.target = yU, yU > 0 && QU !== UU.rate) && (UU.rate = QU, null === (AU = UU.sound) || void 0 === AU || AU.rate(QU))
         }))
       }
-      receiveFx(MM) {
+      receiveFx(UU) {
         let {
-          santaFxKind: rM,
-          santaFxAt: iM
-        } = MM;
+          santaFxKind: XU,
+          santaFxAt: zU
+        } = UU;
         if (this.api.particlesEnabled())
-          if ("caughtSanta" === rM) iM && this.burst(hr(iM));
-          else if ("toTunnel" === rM) this.later(300, (() => {
-          const [MM, rM, iM] = this.ahead();
-          this.burst([Jr([MM, rM - 1, iM], 36)])
+          if ("caughtSanta" === XU) zU && this.burst(pX(zU));
+          else if ("toTunnel" === XU) this.later(300, (() => {
+          const [UU, XU, zU] = this.ahead();
+          this.burst([aX([UU, XU - 1, zU], 36)])
         }));
         else {
-          const [MM, rM, iM] = this.ahead();
-          this.burst(hr([MM, rM - .6, iM], .8))
+          const [UU, XU, zU] = this.ahead();
+          this.burst(pX([UU, XU - .6, zU], .8))
         }
       }
-      frame(MM) {
+      frame(UU) {
         const {
-          cameraPosition: rM,
-          cameraDirection: iM
-        } = MM;
-        this.camera[0] = rM[0], this.camera[1] = rM[1], this.camera[2] = rM[2], this.look[0] = iM[0], this.look[1] = iM[1], this.look[2] = iM[2];
-        const OM = performance.now(),
-          SM = Math.min(.1, (OM - (this.lastFrameAt || OM)) / 1e3);
-        this.lastFrameAt = OM;
-        for (const aM of this.layers) {
-          if (0 === aM.volume && 0 === aM.target && !aM.sound) continue;
-          aM.target > 0 && !aM.sound && (aM.sound = this.api.playSound(this.localPlayerId, Cr, 0, aM.rate, void 0, !0));
-          const MM = (aM.target > aM.volume ? 3 : 1.2) * SM;
-          var jM;
-          if (aM.volume = aM.target > aM.volume ? Math.min(aM.target, aM.volume + MM) : Math.max(aM.target, aM.volume - MM), aM.volume <= 0 && 0 === aM.target) this.silence(aM);
-          else null === (jM = aM.sound) || void 0 === jM || jM.setRelativeVolume(aM.volume)
+          cameraPosition: XU,
+          cameraDirection: zU
+        } = UU;
+        this.camera[0] = XU[0], this.camera[1] = XU[1], this.camera[2] = XU[2], this.look[0] = zU[0], this.look[1] = zU[1], this.look[2] = zU[2];
+        const cU = performance.now(),
+          yU = Math.min(.1, (cU - (this.lastFrameAt || cU)) / 1e3);
+        this.lastFrameAt = cU;
+        for (const AU of this.layers) {
+          if (0 === AU.volume && 0 === AU.target && !AU.sound) continue;
+          AU.target > 0 && !AU.sound && (AU.sound = this.api.playSound(this.localPlayerId, RX, 0, AU.rate, void 0, !0));
+          const UU = (AU.target > AU.volume ? 3 : 1.2) * yU;
+          var QU;
+          if (AU.volume = AU.target > AU.volume ? Math.min(AU.target, AU.volume + UU) : Math.max(AU.target, AU.volume - UU), AU.volume <= 0 && 0 === AU.target) this.silence(AU);
+          else null === (QU = AU.sound) || void 0 === QU || QU.setRelativeVolume(AU.volume)
         }
       }
       dispose() {
-        for (const MM of this.timers) window.clearTimeout(MM);
+        for (const UU of this.timers) window.clearTimeout(UU);
         this.timers.clear();
-        for (const MM of this.layers) MM.target = 0, this.silence(MM)
+        for (const UU of this.layers) UU.target = 0, this.silence(UU)
       }
-      silence(MM) {
-        var rM;
-        null === (rM = MM.sound) || void 0 === rM || rM.stop(), MM.sound = null, MM.volume = 0
+      silence(UU) {
+        var XU;
+        null === (XU = UU.sound) || void 0 === XU || XU.stop(), UU.sound = null, UU.volume = 0
       }
-      stopLater(MM) {
-        const rM = MM.sound,
-          iM = window.setTimeout((() => {
-            this.timers.delete(iM), MM.sound === rM && 0 === MM.target && this.silence(MM)
-          }), MM.volume / 1.2 * 1e3 + 150);
-        this.timers.add(iM)
+      stopLater(UU) {
+        const XU = UU.sound,
+          zU = window.setTimeout((() => {
+            this.timers.delete(zU), UU.sound === XU && 0 === UU.target && this.silence(UU)
+          }), UU.volume / 1.2 * 1e3 + 150);
+        this.timers.add(zU)
       }
       ahead() {
-        const [MM, rM, iM] = this.camera, [OM, SM, jM] = this.look;
-        return [MM + 1.8 * OM, rM + 1.8 * SM - .35, iM + 1.8 * jM]
+        const [UU, XU, zU] = this.camera, [cU, yU, QU] = this.look;
+        return [UU + 1.8 * cU, XU + 1.8 * yU - .35, zU + 1.8 * QU]
       }
-      later(MM, rM) {
-        const iM = window.setTimeout((() => {
-          this.timers.delete(iM), rM()
-        }), MM);
-        this.timers.add(iM)
+      later(UU, XU) {
+        const zU = window.setTimeout((() => {
+          this.timers.delete(zU), XU()
+        }), UU);
+        this.timers.add(zU)
       }
-      play(MM) {
-        for (const [rM, iM, OM] of MM) 0 === rM ? this.api.playSound(this.localPlayerId, yr, iM, OM) : this.later(rM, (() => {
-          this.api.playSound(this.localPlayerId, yr, iM, OM)
+      play(UU) {
+        for (const [XU, zU, cU] of UU) 0 === XU ? this.api.playSound(this.localPlayerId, gX, zU, cU) : this.later(XU, (() => {
+          this.api.playSound(this.localPlayerId, gX, zU, cU)
         }))
       }
-      burst(MM) {
-        for (const rM of MM) this.api.playParticleEffect(br(rM, this.particleShare))
+      burst(UU) {
+        for (const XU of UU) this.api.playParticleEffect(WX(XU, this.particleShare))
       }
     }
-    class tr {
-      constructor(MM) {
-        this.api = MM, this.wait = null
+    class LX {
+      constructor(UU) {
+        this.api = UU, this.wait = null
       }
-      GL(MM) {
-        const rM = performance.now();
+      PY(UU) {
+        const XU = performance.now();
         this.wait = {
-          min: MM.santaFlyoverMin,
-          max: MM.santaFlyoverMax,
-          start: MM.santaFlyoverStart,
-          until: rM + MM.santaFlyoverWaitMs,
+          min: UU.santaFlyoverMin,
+          max: UU.santaFlyoverMax,
+          start: UU.santaFlyoverStart,
+          until: XU + UU.santaFlyoverWaitMs,
           loadedAt: null,
           settledFrames: 0,
-          lastFrameAt: rM
+          lastFrameAt: XU
         }
       }
-      frame(MM) {
-        const rM = this.wait;
-        if (!rM) return;
-        const iM = performance.now(),
-          OM = iM - rM.lastFrameAt;
-        rM.lastFrameAt = iM, iM > rM.until ? this.wait = null : null !== rM.loadedAt ? (rM.settledFrames = OM <= 60 ? rM.settledFrames + 1 : 0, rM.settledFrames >= 6 && iM - rM.loadedAt >= 300 && (this.wait = null, this.api.sendCommand("santaFlyoverReady"))) : MM && this.isLoaded(rM, MM) && (rM.loadedAt = iM)
+      frame(UU) {
+        const XU = this.wait;
+        if (!XU) return;
+        const zU = performance.now(),
+          cU = zU - XU.lastFrameAt;
+        XU.lastFrameAt = zU, zU > XU.until ? this.wait = null : null !== XU.loadedAt ? (XU.settledFrames = cU <= 60 ? XU.settledFrames + 1 : 0, XU.settledFrames >= 6 && zU - XU.loadedAt >= 300 && (this.wait = null, this.api.sendCommand("santaFlyoverReady"))) : UU && this.isLoaded(XU, UU) && (XU.loadedAt = zU)
       }
-      isLoaded(MM, rM) {
+      isLoaded(UU, XU) {
         let {
-          min: iM,
-          max: SM,
-          start: jM
-        } = MM;
-        if (rM[0] < iM[0] || rM[0] > SM[0] || rM[2] < iM[2] || rM[2] > SM[2]) return !1;
-        const aM = OM.f.HL,
-          PM = MM => MM.map((MM => Math.floor(MM / aM))),
-          nM = [PM(rM), PM(jM)],
-          [QM, zM] = [PM(iM), PM(SM)];
-        for (let OM = QM[0]; OM <= zM[0]; OM++)
-          for (let MM = QM[1]; MM <= zM[1]; MM++)
-            for (let rM = QM[2]; rM <= zM[2]; rM++) {
-              if (nM.some((iM => {
-                  let [SM, jM, aM] = iM;
-                  return (OM - SM) ** 2 + (MM - jM) ** 2 + (rM - aM) ** 2 <= 4
-                })) && !this.api.isBlockInLoadedChunk(OM * aM, MM * aM, rM * aM)) return !1
+          min: zU,
+          max: yU,
+          start: QU
+        } = UU;
+        if (XU[0] < zU[0] || XU[0] > yU[0] || XU[2] < zU[2] || XU[2] > yU[2]) return !1;
+        const AU = cU.f.aY,
+          FU = UU => UU.map((UU => Math.floor(UU / AU))),
+          oU = [FU(XU), FU(QU)],
+          [DU, EU] = [FU(zU), FU(yU)];
+        for (let cU = DU[0]; cU <= EU[0]; cU++)
+          for (let UU = DU[1]; UU <= EU[1]; UU++)
+            for (let XU = DU[2]; XU <= EU[2]; XU++) {
+              if (oU.some((zU => {
+                  let [yU, QU, AU] = zU;
+                  return (cU - yU) ** 2 + (UU - QU) ** 2 + (XU - AU) ** 2 <= 4
+                })) && !this.api.isBlockInLoadedChunk(cU * AU, UU * AU, XU * AU)) return !1
             }
         return !0
       }
     }
-    var gr = iM(40215);
-    const ur = [20, 9, 20],
-      Rr = [8, 12],
-      pr = .3,
-      Wr = [.05, .13],
-      sr = {
+    var eX = zU(39988);
+    const CX = [20, 9, 20],
+      wX = [8, 12],
+      qX = .3,
+      OX = [.05, .13],
+      SX = {
         kind: "smokePuff"
       },
-      Dr = [245, 250, 255],
-      kr = {
-        vL: 900,
+      rX = [245, 250, 255],
+      uX = {
+        xY: 900,
         perS: 80
       },
-      Zr = {
-        vL: 360,
+      fX = {
+        xY: 360,
         perS: 34
       };
-    class or {
-      constructor(MM) {
-        this.api = MM, this.tier = (0, dr.isMobile)() ? Zr : kr, this.system = null, this.at = [0, 0, 0], this.last = [0, 0, 0], this.budget = 0, this.lastMs = 0, this.roofed = !1, this.nextRoofCheckMs = 0
+    class iX {
+      constructor(UU) {
+        this.api = UU, this.tier = (0, tX.isMobile)() ? fX : uX, this.system = null, this.at = [0, 0, 0], this.last = [0, 0, 0], this.budget = 0, this.lastMs = 0, this.roofed = !1, this.nextRoofCheckMs = 0
       }
-      onAfterRender(MM) {
-        const rM = performance.now(),
-          iM = 0 === this.lastMs ? 0 : Math.min(rM - this.lastMs, 250) / 1e3;
-        if (this.lastMs = rM, !this.api.particlesEnabled()) return void this.dispose();
-        const OM = Math.hypot(MM[0] - this.last[0], MM[1] - this.last[1], MM[2] - this.last[2]) > 20;
-        if (this.last[0] = MM[0], this.last[1] = MM[1], this.last[2] = MM[2], OM && this.dispose(), (OM || rM >= this.nextRoofCheckMs) && (this.nextRoofCheckMs = rM + 250, this.roofed = this.hasRoof(MM)), this.roofed) return void(this.budget = 0);
-        const SM = this.at;
-        let jM;
-        SM[0] = MM[0], SM[1] = MM[1] + 7, SM[2] = MM[2], this.system ? (this.budget = Math.min(this.budget + this.tier.perS * iM, this.tier.perS / 4), jM = Math.floor(this.budget), this.budget -= jM) : (this.system = this.api.createParticles(this.opts(), {
-          pos: SM,
-          half: ur
-        }), jM = Math.floor(this.tier.vL / 2)), jM > 0 && (this.system.moveTo(SM, ur), this.system.emit(jM))
+      onAfterRender(UU) {
+        const XU = performance.now(),
+          zU = 0 === this.lastMs ? 0 : Math.min(XU - this.lastMs, 250) / 1e3;
+        if (this.lastMs = XU, !this.api.particlesEnabled()) return void this.dispose();
+        const cU = Math.hypot(UU[0] - this.last[0], UU[1] - this.last[1], UU[2] - this.last[2]) > 20;
+        if (this.last[0] = UU[0], this.last[1] = UU[1], this.last[2] = UU[2], cU && this.dispose(), (cU || XU >= this.nextRoofCheckMs) && (this.nextRoofCheckMs = XU + 250, this.roofed = this.hasRoof(UU)), this.roofed) return void(this.budget = 0);
+        const yU = this.at;
+        let QU;
+        yU[0] = UU[0], yU[1] = UU[1] + 7, yU[2] = UU[2], this.system ? (this.budget = Math.min(this.budget + this.tier.perS * zU, this.tier.perS / 4), QU = Math.floor(this.budget), this.budget -= QU) : (this.system = this.api.createParticles(this.opts(), {
+          pos: yU,
+          half: CX
+        }), QU = Math.floor(this.tier.xY / 2)), QU > 0 && (this.system.moveTo(yU, CX), this.system.emit(QU))
       }
       dispose() {
-        var MM;
-        null === (MM = this.system) || void 0 === MM || MM.dispose(), this.system = null
+        var UU;
+        null === (UU = this.system) || void 0 === UU || UU.dispose(), this.system = null
       }
-      hasRoof(MM) {
-        let [rM, iM, OM] = MM;
-        const SM = Math.floor(rM),
-          jM = Math.floor(OM);
-        let aM = 0;
-        for (let PM = Math.floor(iM) + 1; PM <= Math.floor(iM) + 16; PM++)
-          if (aM = this.api.isSolidToPlayerBlockId(this.api.getBlockId(SM, PM, jM)) ? aM + 1 : 0, aM >= 4) return !0;
+      hasRoof(UU) {
+        let [XU, zU, cU] = UU;
+        const yU = Math.floor(XU),
+          QU = Math.floor(cU);
+        let AU = 0;
+        for (let FU = Math.floor(zU) + 1; FU <= Math.floor(zU) + 16; FU++)
+          if (AU = this.api.isSolidToPlayerBlockId(this.api.getBlockId(yU, FU, QU)) ? AU + 1 : 0, AU >= 4) return !0;
         return !1
       }
       opts() {
-        const [MM, rM, iM] = Dr;
+        const [UU, XU, zU] = rX;
         return {
-          texture: sr,
-          vL: this.tier.vL,
-          minLifeTime: Rr[0] / gr.e,
-          maxLifeTime: Rr[1] / gr.e,
-          minEmitPower: 1.1 * gr.e * .8,
-          maxEmitPower: 1.1 * gr.e * 1.2,
-          minSize: Wr[0],
-          maxSize: Wr[1],
+          texture: SX,
+          xY: this.tier.xY,
+          minLifeTime: wX[0] / eX.d,
+          maxLifeTime: wX[1] / eX.d,
+          minEmitPower: 1.1 * eX.d * .8,
+          maxEmitPower: 1.1 * eX.d * 1.2,
+          minSize: OX[0],
+          maxSize: OX[1],
           emitRate: 0,
           gravity: [0, 0, 0],
           dir1: [-.3, -1, -.3],
-          dir2: [pr, -1, pr],
+          dir2: [qX, -1, qX],
           colorGradients: [{
             timeFraction: 0,
-            minColor: [MM, rM, iM, 0]
+            minColor: [UU, XU, zU, 0]
           }, {
             timeFraction: .12,
-            minColor: [MM, rM, iM, .9]
+            minColor: [UU, XU, zU, .9]
           }, {
             timeFraction: .85,
-            minColor: [MM, rM, iM, .9]
+            minColor: [UU, XU, zU, .9]
           }, {
             timeFraction: 1,
-            minColor: [MM, rM, iM, 0]
+            minColor: [UU, XU, zU, 0]
           }],
-          blendMode: Sr.d.Standard
+          blendMode: yX.f.Standard
         }
       }
     }
-    var fr = iM(37501);
-    class Yr {
+    var HX = zU(37281);
+    class MX {
       constructor() {
-        this.element = null, this.fade = null, this.fadeLookedAt = -1 / 0, this.armedUntil = 0, this.shownAt = null, this.drawn = -1, this.bind = MM => {
-          this.element = MM, this.drawn = -1
+        this.element = null, this.fade = null, this.fadeLookedAt = -1 / 0, this.armedUntil = 0, this.shownAt = null, this.drawn = -1, this.bind = UU => {
+          this.element = UU, this.drawn = -1
         }
       }
-      receiveFlyover(MM) {
-        this.armedUntil = performance.now() + MM + 3e3
+      receiveFlyover(UU) {
+        this.armedUntil = performance.now() + UU + 3e3
       }
-      frame(MM) {
-        const rM = performance.now(),
-          iM = this.snowAlpha(rM);
-        if (iM <= 0) return null !== this.shownAt && (this.armedUntil = 0), this.shownAt = null, void this.draw(0);
+      frame(UU) {
+        const XU = performance.now(),
+          zU = this.snowAlpha(XU);
+        if (zU <= 0) return null !== this.shownAt && (this.armedUntil = 0), this.shownAt = null, void this.draw(0);
         if (null === this.shownAt) {
-          if (iM < 1 || MM && rM >= this.armedUntil) return void this.draw(0);
-          this.shownAt = rM
+          if (zU < 1 || UU && XU >= this.armedUntil) return void this.draw(0);
+          this.shownAt = XU
         }
-        this.draw(Math.min(1, (rM - this.shownAt) / 300) * iM)
+        this.draw(Math.min(1, (XU - this.shownAt) / 300) * zU)
       }
-      snowAlpha(MM) {
-        var rM, iM, OM, SM;
-        (null === (rM = this.fade) || void 0 === rM || !rM.isConnected) && MM - this.fadeLookedAt >= 250 && (this.fadeLookedAt = MM, this.fade = document.querySelector(`[${fr.b}]`));
-        const jM = null === (iM = this.fade) || void 0 === iM ? void 0 : iM.style;
-        if (!jM || "none" === jM.display) return 0;
-        const aM = null !== (OM = null === (SM = jM.backgroundColor.match(/\d+/g)) || void 0 === SM ? void 0 : SM.slice(0, 3).map(Number)) && void 0 !== OM ? OM : [];
-        return 3 === aM.length && aM.every((MM => MM >= 200)) && Number(jM.opacity) || 0
+      snowAlpha(UU) {
+        var XU, zU, cU, yU;
+        (null === (XU = this.fade) || void 0 === XU || !XU.isConnected) && UU - this.fadeLookedAt >= 250 && (this.fadeLookedAt = UU, this.fade = document.querySelector(`[${HX.e}]`));
+        const QU = null === (zU = this.fade) || void 0 === zU ? void 0 : zU.style;
+        if (!QU || "none" === QU.display) return 0;
+        const AU = null !== (cU = null === (yU = QU.backgroundColor.match(/\d+/g)) || void 0 === yU ? void 0 : yU.slice(0, 3).map(Number)) && void 0 !== cU ? cU : [];
+        return 3 === AU.length && AU.every((UU => UU >= 200)) && Number(QU.opacity) || 0
       }
-      draw(MM) {
-        const rM = Math.round(100 * MM) / 100;
-        this.element && rM !== this.drawn && (this.drawn = rM, this.element.style.opacity = String(rM), this.element.style.display = rM > 0 ? "flex" : "none")
+      draw(UU) {
+        const XU = Math.round(100 * UU) / 100;
+        this.element && XU !== this.drawn && (this.drawn = XU, this.element.style.opacity = String(XU), this.element.style.display = XU > 0 ? "flex" : "none")
       }
     }
-    const Nr = (0, aM.memo)((function(MM) {
+    const vX = (0, AU.memo)((function(UU) {
         let {
-          controller: rM
-        } = MM;
+          controller: XU
+        } = UU;
         const {
-          t: iM
-        } = (0, HM.A)();
-        return (0, pM.jsx)("div", {
-          ref: rM.bind,
+          t: zU
+        } = (0, IU.I)();
+        return (0, qU.jsx)("div", {
+          ref: XU.bind,
           className: "SecretSantaSnowTitle",
           "data-camera-keeper": "",
           "aria-hidden": "true",
-          children: (0, pM.jsxs)("div", {
+          children: (0, qU.jsxs)("div", {
             className: "SecretSantaSnowTitleCard",
-            children: [(0, pM.jsxs)("div", {
+            children: [(0, qU.jsxs)("div", {
               className: "SecretSantaSnowTitleName",
-              children: [(0, pM.jsx)("span", {
+              children: [(0, qU.jsx)("span", {
                 className: "SecretSantaSnowTitleIcon",
                 children: "\ud83c\udf85"
-              }), iM("secretSantaHud:titleName")]
-            }), (0, pM.jsx)("div", {
+              }), zU("secretSantaHud:titleName")]
+            }), (0, qU.jsx)("div", {
               className: "SecretSantaSnowTitleLine",
-              children: iM("secretSantaHud:titleLine")
+              children: zU("secretSantaHud:titleLine")
             })]
           })
         })
       })),
-      Ar = "SecretSantaMode",
-      xr = OM.f.jy * OM.f.playerEyeToHeightRatio;
+      VX = "SecretSantaMode",
+      sX = cU.f.cg * cU.f.playerEyeToHeightRatio;
 
-    function vr(MM) {
-      document.body.classList.toggle("SecretSantaPodium", MM)
+    function nX(UU) {
+      document.body.classList.toggle("SecretSantaPodium", UU)
     }
-    const Fr = function(MM, rM, iM, OM) {
+    const mX = function(UU, XU, zU, cU) {
       let {
-        localPlayerId: SM
-      } = OM;
-      const jM = new uM((() => {
-          var MM;
-          null === (MM = JM) || void 0 === MM || MM.wrapStarted()
+        localPlayerId: yU
+      } = cU;
+      const QU = new CU((() => {
+          var UU;
+          null === (UU = aU) || void 0 === UU || UU.wrapStarted()
         })),
-        nM = new Yr,
-        QM = [0, 0, 0];
-      let zM = null;
-      const LM = [0, 0, 0],
-        mM = [0, 0, 0];
-      let HM = null,
-        hM = null,
-        JM = null,
-        dM = null,
-        yM = null,
-        lM = null;
-      const EM = MM => {
-          HM && null !== MM && MM !== SM && !lM && (lM = {
-            target: MM,
+        oU = new MX,
+        DU = [0, 0, 0];
+      let EU = null;
+      const YU = [0, 0, 0],
+        NU = [0, 0, 0];
+      let IU = null,
+        pU = null,
+        aU = null,
+        tU = null,
+        gU = null,
+        kU = null;
+      const GU = UU => {
+          IU && null !== UU && UU !== yU && !kU && (kU = {
+            target: UU,
             at: performance.now(),
             first: null
           })
         },
-        UM = (MM, rM) => {
-          lM = null, jM.pressGift(MM.at, rM) && (zM = MM.target)
+        BU = (UU, XU) => {
+          kU = null, QU.pressGift(UU.at, XU) && (EU = UU.target)
         },
-        GM = (MM, rM) => {
-          if (null === zM) return;
-          if (!MM.readDrawnPosition(zM, LM)) return void(zM = null);
-          mM[0] = rM[0], mM[1] = rM[1] + xr, mM[2] = rM[2];
-          const iM = Math.hypot(LM[0] - rM[0], LM[1] - rM[1], LM[2] - rM[2]);
-          jM.aimAtWrap(function(MM, rM, iM) {
-            const OM = iM[0] - MM[0],
-              SM = iM[2] - MM[2],
-              jM = Math.hypot(rM[0], rM[2]);
-            let aM = MM[1];
-            const PM = jM > 0 ? (OM * rM[0] + SM * rM[2]) / jM : 0;
-            PM > 0 && (aM += rM[1] / jM * PM), aM = Math.max(iM[1], Math.min(iM[1] + 1.8, aM));
-            const nM = [OM, aM - MM[1], SM],
-              QM = Math.hypot(nM[0], nM[1], nM[2]),
-              zM = Math.hypot(rM[0], rM[1], rM[2]);
-            if (0 === QM || 0 === zM) return 0;
-            const LM = (nM[0] * rM[0] + nM[1] * rM[1] + nM[2] * rM[2]) / (QM * zM);
-            return 180 * Math.acos(Math.max(-1, Math.min(1, LM))) / Math.PI
-          }(mM, MM.getActionRay().direction, LM), iM) || (zM = null)
+        ZU = (UU, XU) => {
+          if (null === EU) return;
+          if (!UU.readDrawnPosition(EU, YU)) return void(EU = null);
+          NU[0] = XU[0], NU[1] = XU[1] + sX, NU[2] = XU[2];
+          const zU = Math.hypot(YU[0] - XU[0], YU[1] - XU[1], YU[2] - XU[2]);
+          QU.aimAtWrap(function(UU, XU, zU) {
+            const cU = zU[0] - UU[0],
+              yU = zU[2] - UU[2],
+              QU = Math.hypot(XU[0], XU[2]);
+            let AU = UU[1];
+            const FU = QU > 0 ? (cU * XU[0] + yU * XU[2]) / QU : 0;
+            FU > 0 && (AU += XU[1] / QU * FU), AU = Math.max(zU[1], Math.min(zU[1] + 1.8, AU));
+            const oU = [cU, AU - UU[1], yU],
+              DU = Math.hypot(oU[0], oU[1], oU[2]),
+              EU = Math.hypot(XU[0], XU[1], XU[2]);
+            if (0 === DU || 0 === EU) return 0;
+            const YU = (oU[0] * XU[0] + oU[1] * XU[1] + oU[2] * XU[2]) / (DU * EU);
+            return 180 * Math.acos(Math.max(-1, Math.min(1, YU))) / Math.PI
+          }(NU, UU.getActionRay().direction, YU), zU) || (EU = null)
         },
-        CM = (MM, rM, iM) => {
-          const OM = [0, 0, 0];
-          iM && MM.readDrawnPosition(rM.target, OM) ? rM.first ? UM(rM, function(MM, rM, iM, OM) {
-            const SM = iM[0] - MM[0],
-              jM = iM[1] - MM[1],
-              aM = iM[2] - MM[2],
-              PM = Math.hypot(SM, jM, aM);
-            return 0 === PM || OM <= 0 ? {
-              distance: PM,
+        RU = (UU, XU, zU) => {
+          const cU = [0, 0, 0];
+          zU && UU.readDrawnPosition(XU.target, cU) ? XU.first ? BU(XU, function(UU, XU, zU, cU) {
+            const yU = zU[0] - UU[0],
+              QU = zU[1] - UU[1],
+              AU = zU[2] - UU[2],
+              FU = Math.hypot(yU, QU, AU);
+            return 0 === FU || cU <= 0 ? {
+              distance: FU,
               awaySpeed: 0
             } : {
-              distance: PM,
-              awaySpeed: (SM * (iM[0] - rM[0]) + jM * (iM[1] - rM[1]) + aM * (iM[2] - rM[2])) / PM / OM
+              distance: FU,
+              awaySpeed: (yU * (zU[0] - XU[0]) + QU * (zU[1] - XU[1]) + AU * (zU[2] - XU[2])) / FU / cU
             }
-          }(iM, rM.first.pos, OM, (performance.now() - rM.first.at) / 1e3)) : rM.first = {
-            pos: OM,
+          }(zU, XU.first.pos, cU, (performance.now() - XU.first.at) / 1e3)) : XU.first = {
+            pos: cU,
             at: performance.now()
-          } : UM(rM, null)
+          } : BU(XU, null)
         };
       return {
-        onCreate: MM => {
-          HM = MM, document.body.classList.add(Ar), JM = new wr(MM, SM), dM = new or(MM), yM = new tr(MM), hM = (0, PM.C)((0, aM.createElement)(aM.Fragment, null, (0, aM.createElement)(BM, {
-            controller: jM
-          }), (0, aM.createElement)(sM, {
-            controller: jM
-          }), (0, aM.createElement)(Nr, {
-            controller: nM
+        onCreate: UU => {
+          IU = UU, document.body.classList.add(VX), aU = new dX(UU, yU), tU = new iX(UU), gU = new LX(UU), pU = (0, FU.u)((0, AU.createElement)(AU.Fragment, null, (0, AU.createElement)(lU, {
+            controller: QU
+          }), (0, AU.createElement)(SU, {
+            controller: QU
+          }), (0, AU.createElement)(vX, {
+            controller: oU
           })))
         },
         onClose: () => {
-          var MM, rM, iM;
-          document.body.classList.remove(Ar), vr(!1), null === (MM = hM) || void 0 === MM || MM(), hM = null, jM.dispose(), null === (rM = JM) || void 0 === rM || rM.dispose(), JM = null, null === (iM = dM) || void 0 === iM || iM.dispose(), dM = null, yM = null, HM = null
+          var UU, XU, zU;
+          document.body.classList.remove(VX), nX(!1), null === (UU = pU) || void 0 === UU || UU(), pU = null, QU.dispose(), null === (XU = aU) || void 0 === XU || XU.dispose(), aU = null, null === (zU = tU) || void 0 === zU || zU.dispose(), tU = null, gU = null, IU = null
         },
-        onPlayerAltAction: (MM, rM, iM, OM, SM, jM) => {
-          EM(jM)
+        onPlayerAltAction: (UU, XU, zU, cU, yU, QU) => {
+          GU(QU)
         },
-        onPlayerAttackEntity: (MM, rM) => {
-          EM(rM)
+        onPlayerAttackEntity: (UU, XU) => {
+          GU(XU)
         },
-        onAfterRender: (MM, rM) => {
-          var iM, OM, aM, PM;
-          const zM = null !== (iM = HM) && void 0 !== iM && iM.readDrawnPosition(SM, QM) ? QM : null;
-          lM && HM && CM(HM, lM, zM), HM && zM && GM(HM, zM), jM.frame(rM.cameraHeading, zM), null === (OM = JM) || void 0 === OM || OM.frame(rM), null === (aM = dM) || void 0 === aM || aM.onAfterRender(rM.cameraPosition), null === (PM = yM) || void 0 === PM || PM.frame(zM), nM.frame(jM.getView().shown)
+        onAfterRender: (UU, XU) => {
+          var zU, cU, AU, FU;
+          const EU = null !== (zU = IU) && void 0 !== zU && zU.readDrawnPosition(yU, DU) ? DU : null;
+          kU && IU && RU(IU, kU, EU), IU && EU && ZU(IU, EU), QU.frame(XU.cameraHeading, EU), null === (cU = aU) || void 0 === cU || cU.frame(XU), null === (AU = tU) || void 0 === AU || AU.onAfterRender(XU.cameraPosition), null === (FU = gU) || void 0 === FU || FU.frame(EU), oU.frame(QU.getView().shown)
         },
-        onReceivedMessageFromServer: (MM, rM) => {
-          var iM;
-          if ("secretSantaHint" === MM) jM.receiveHint(rM), null === (iM = JM) || void 0 === iM || iM.receiveHint(rM);
-          else if ("secretSantaStatus" === MM) {
-            var OM;
-            jM.receiveStatus(rM), null === (OM = JM) || void 0 === OM || OM.receiveStatus(rM)
-          } else if ("secretSantaWrap" === MM) {
-            lM && UM(lM, null);
+        onReceivedMessageFromServer: (UU, XU) => {
+          var zU;
+          if ("secretSantaHint" === UU) QU.receiveHint(XU), null === (zU = aU) || void 0 === zU || zU.receiveHint(XU);
+          else if ("secretSantaStatus" === UU) {
+            var cU;
+            QU.receiveStatus(XU), null === (cU = aU) || void 0 === cU || cU.receiveStatus(XU)
+          } else if ("secretSantaWrap" === UU) {
+            kU && BU(kU, null);
             const {
-              santaWrapMs: MM,
-              santaWrapDone: iM
-            } = rM;
-            jM.receiveWrap(MM, iM)
-          } else if ("secretSantaMarket" === MM) {
-            var SM;
-            null === (SM = JM) || void 0 === SM || SM.reset(), jM.receiveMarket(rM)
-          } else if ("secretSantaBells" === MM) {
-            var aM;
-            null === (aM = JM) || void 0 === aM || aM.setBells(rM.santaBellsLevel)
-          } else if ("secretSantaFx" === MM) {
-            var PM;
-            const MM = rM;
-            "toTunnel" === MM.santaFxKind && jM.snowBlink(), null === (PM = JM) || void 0 === PM || PM.receiveFx(MM)
-          } else if ("secretSantaFlyover" === MM) {
-            var QM;
-            null === (QM = yM) || void 0 === QM || QM.GL(rM), nM.receiveFlyover(rM.santaFlyoverWaitMs)
-          } else "secretSantaPodium" === MM && vr(rM.santaPodiumShown)
+              santaWrapMs: UU,
+              santaWrapDone: zU
+            } = XU;
+            QU.receiveWrap(UU, zU)
+          } else if ("secretSantaMarket" === UU) {
+            var yU;
+            null === (yU = aU) || void 0 === yU || yU.reset(), QU.receiveMarket(XU)
+          } else if ("secretSantaBells" === UU) {
+            var AU;
+            null === (AU = aU) || void 0 === AU || AU.setBells(XU.santaBellsLevel)
+          } else if ("secretSantaFx" === UU) {
+            var FU;
+            const UU = XU;
+            "toTunnel" === UU.santaFxKind && QU.snowBlink(), null === (FU = aU) || void 0 === FU || FU.receiveFx(UU)
+          } else if ("secretSantaFlyover" === UU) {
+            var DU;
+            null === (DU = gU) || void 0 === DU || DU.PY(XU), oU.receiveFlyover(XU.santaFlyoverWaitMs)
+          } else "secretSantaPodium" === UU && nX(XU.santaPodiumShown)
         }
       }
     }
   },
-  39532: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      g: () => SM
+  39315: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => QU,
+      g: () => yU
     });
-    var OM = iM(332);
-    const SM = (0, OM.wb)([0, 0, -1]),
-      jM = [{
+    var cU = zU(344);
+    const yU = (0, cU.Cb)([0, 0, -1]),
+      QU = [{
         name: "S",
-        bearing: (0, OM.wb)([0, 0, 1])
+        bearing: (0, cU.Cb)([0, 0, 1])
       }, {
         name: "E",
-        bearing: (0, OM.wb)([-1, 0, 0])
+        bearing: (0, cU.Cb)([-1, 0, 0])
       }, {
         name: "N",
-        bearing: SM
+        bearing: yU
       }, {
         name: "W",
-        bearing: (0, OM.wb)([1, 0, 0])
+        bearing: (0, cU.Cb)([1, 0, 0])
       }]
   },
-  39526: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      d: () => jM
+  39311: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => yU,
+      i: () => QU
     });
-    var OM = iM(39532);
+    var cU = zU(39315);
 
-    function SM(MM, rM, iM) {
-      return [100 * (iM.mapMaxX - MM) / (iM.mapMaxX - iM.mapMinX), 100 * (rM - iM.mapMinZ) / (iM.mapMaxZ - iM.mapMinZ)]
+    function yU(UU, XU, zU) {
+      return [100 * (zU.mapMaxX - UU) / (zU.mapMaxX - zU.mapMinX), 100 * (XU - zU.mapMinZ) / (zU.mapMaxZ - zU.mapMinZ)]
     }
 
-    function jM(MM, rM, iM, jM) {
-      const [aM, PM] = SM(MM, rM, jM), nM = OM.g - iM;
+    function QU(UU, XU, zU, QU) {
+      const [AU, FU] = yU(UU, XU, QU), oU = cU.g - zU;
       return {
-        rotation: nM,
-        transform: `rotate(${nM}rad) translate(-${aM}%, -${PM}%)`
+        rotation: oU,
+        transform: `rotate(${oU}rad) translate(-${AU}%, -${FU}%)`
       }
     }
   },
-  39571: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      f: () => aM
+  39367: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU,
+      i: () => AU
     });
-    var OM = iM(4586);
-    const SM = [{
+    var cU = zU(4619);
+    const yU = [{
       lobes: [3, 4],
       amount: [.04, .055]
     }, {
@@ -2050,106 +2078,106 @@ export const modules = {
       amount: [.025, .035]
     }];
 
-    function jM(MM) {
-      const rM = new OM.h(MM);
+    function QU(UU) {
+      const XU = new cU.l(UU);
       return {
         radius: 45,
         squareness: 3,
-        wobbles: SM.map((MM => {
+        wobbles: yU.map((UU => {
           let {
-            lobes: iM,
-            amount: OM
-          } = MM;
+            lobes: zU,
+            amount: cU
+          } = UU;
           return {
-            lobes: iM[Math.floor(rM.next() * iM.length)],
-            amount: OM[0] + rM.next() * (OM[1] - OM[0]),
-            phase: 2 * rM.next() * Math.PI
+            lobes: zU[Math.floor(XU.next() * zU.length)],
+            amount: cU[0] + XU.next() * (cU[1] - cU[0]),
+            phase: 2 * XU.next() * Math.PI
           }
         })),
         samples: 160
       }
     }
 
-    function aM(MM) {
+    function AU(UU) {
       let {
-        radius: rM,
-        squareness: iM,
-        wobbles: OM,
-        samples: SM
-      } = MM;
-      const jM = [];
-      for (let aM = 0; aM < SM; aM++) {
-        const MM = 2 * Math.PI * aM / SM,
-          PM = Math.cos(MM),
-          nM = Math.sin(MM),
-          QM = rM * (Math.abs(PM) ** iM + Math.abs(nM) ** iM) ** (-1 / iM) * OM.reduce(((rM, iM) => {
+        radius: XU,
+        squareness: zU,
+        wobbles: cU,
+        samples: yU
+      } = UU;
+      const QU = [];
+      for (let AU = 0; AU < yU; AU++) {
+        const UU = 2 * Math.PI * AU / yU,
+          FU = Math.cos(UU),
+          oU = Math.sin(UU),
+          DU = XU * (Math.abs(FU) ** zU + Math.abs(oU) ** zU) ** (-1 / zU) * cU.reduce(((XU, zU) => {
             let {
-              lobes: OM,
-              amount: SM,
-              phase: jM
-            } = iM;
-            return rM + SM * Math.sin(OM * MM + jM)
+              lobes: cU,
+              amount: yU,
+              phase: QU
+            } = zU;
+            return XU + yU * Math.sin(cU * UU + QU)
           }), 1);
-        jM.push(`${(50+QM*PM).toFixed(2)} ${(50+QM*nM).toFixed(2)}`)
+        QU.push(`${(50+DU*FU).toFixed(2)} ${(50+DU*oU).toFixed(2)}`)
       }
-      return `M${jM.join("L")}Z`
+      return `M${QU.join("L")}Z`
     }
   },
-  40215: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM,
-      i: () => jM
+  39988: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => cU,
+      f: () => QU
     });
-    const OM = 1 / .6,
-      SM = {
+    const cU = 1 / .6,
+      yU = {
         kind: "smokePuff"
       };
-    class jM {
-      constructor(MM, rM, iM) {
-        this.style = MM, this.vL = rM, this.half = iM, this.particles = null, this.lastFrame = -1
+    class QU {
+      constructor(UU, XU, zU) {
+        this.style = UU, this.xY = XU, this.half = zU, this.particles = null, this.lastFrame = -1
       }
-      emit(MM, rM, iM) {
-        let jM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return iM !== this.lastFrame && (this.lastFrame = iM, this.particles || (this.particles = MM.createParticles(function(MM, rM) {
+      emit(UU, XU, zU) {
+        let QU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return zU !== this.lastFrame && (this.lastFrame = zU, this.particles || (this.particles = UU.createParticles(function(UU, XU) {
           const [
-            [iM, jM, aM],
-            [PM, nM, QM]
-          ] = MM.colours;
+            [zU, QU, AU],
+            [FU, oU, DU]
+          ] = UU.colours;
           return {
-            texture: MM.soft ? SM : "square_particle",
-            vL: rM,
-            minLifeTime: MM.life[0] / OM,
-            maxLifeTime: MM.life[1] / OM,
-            minEmitPower: MM.power[0] * OM,
-            maxEmitPower: MM.power[1] * OM,
-            minSize: MM.size[0],
-            maxSize: MM.size[1],
+            texture: UU.soft ? yU : "square_particle",
+            xY: XU,
+            minLifeTime: UU.life[0] / cU,
+            maxLifeTime: UU.life[1] / cU,
+            minEmitPower: UU.power[0] * cU,
+            maxEmitPower: UU.power[1] * cU,
+            minSize: UU.size[0],
+            maxSize: UU.size[1],
             emitRate: 0,
-            gravity: [0, MM.lift * OM * OM, 0],
-            dir1: [-MM.spread, 1, -MM.spread],
-            dir2: [MM.spread, 1, MM.spread],
+            gravity: [0, UU.lift * cU * cU, 0],
+            dir1: [-UU.spread, 1, -UU.spread],
+            dir2: [UU.spread, 1, UU.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [iM, jM, aM, MM.alpha],
-              maxColor: [PM, nM, QM, MM.alpha]
+              minColor: [zU, QU, AU, UU.alpha],
+              maxColor: [FU, oU, DU, UU.alpha]
             }, {
               timeFraction: 1,
-              minColor: [iM, jM, aM, 0],
-              maxColor: [PM, nM, QM, 0]
+              minColor: [zU, QU, AU, 0],
+              maxColor: [FU, oU, DU, 0]
             }],
-            blendMode: MM.blendMode
+            blendMode: UU.blendMode
           }
-        }(this.style, this.vL), {
-          pos: rM,
+        }(this.style, this.xY), {
+          pos: XU,
           half: this.half
-        })), this.particles.moveTo(rM, this.half), this.particles.emit(jM), !0)
+        })), this.particles.moveTo(XU, this.half), this.particles.emit(QU), !0)
       }
       dispose() {
-        var MM;
-        null === (MM = this.particles) || void 0 === MM || MM.stop(), this.particles = null
+        var UU;
+        null === (UU = this.particles) || void 0 === UU || UU.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

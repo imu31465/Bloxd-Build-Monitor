@@ -1,286 +1,291 @@
-export const id = 51;
-export const ids = [51, 229];
+export const id = 52;
+export const ids = [52, 220];
 export const modules = {
-  35106: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      packDisplayName: () => hM,
-      packModelMessage: () => JM,
-      packModelSummary: () => yM,
-      refusedPackModels: () => dM
+  34956: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      packDisplayName: () => aU,
+      packModelMessage: () => tU,
+      packModelSummary: () => kU,
+      refusedPackModels: () => gU
     });
-    var OM = iM(35113),
-      SM = iM(35120);
-    const jM = "DRACO",
-      aM = 0,
-      PM = 1,
-      nM = 0,
-      QM = 1,
-      zM = 32768;
+    var cU = zU(34959),
+      yU = zU(34968);
+    const QU = "DRACO",
+      AU = 0,
+      FU = 1,
+      oU = 0,
+      DU = 1,
+      EU = 32768;
 
-    function LM(MM) {
-      const rM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
-      let iM = 0;
-      const OM = () => {
-          if (iM >= MM.byteLength) throw new RangeError("past the stream");
-          return MM[iM++]
+    function YU(UU) {
+      const XU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength);
+      let zU = 0;
+      const cU = () => {
+          if (zU >= UU.byteLength) throw new RangeError("past the stream");
+          return UU[zU++]
         },
-        SM = () => {
-          if (iM + 4 > MM.byteLength) throw new RangeError("past the stream");
-          const OM = rM.getUint32(iM, !0);
-          return iM += 4, OM
+        yU = () => {
+          if (zU + 4 > UU.byteLength) throw new RangeError("past the stream");
+          const cU = XU.getUint32(zU, !0);
+          return zU += 4, cU
         },
-        LM = () => {
-          let MM = 0;
-          for (let rM = 0; rM < 35; rM += 7) {
-            const iM = OM();
-            if (MM += (127 & iM) * 2 ** rM, 0 === (128 & iM)) return MM
+        YU = () => {
+          let UU = 0;
+          for (let XU = 0; XU < 35; XU += 7) {
+            const zU = cU();
+            if (UU += (127 & zU) * 2 ** XU, 0 === (128 & zU)) return UU
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let MM = 0; MM < jM.length; MM++)
-          if (OM() !== jM.charCodeAt(MM)) return null;
-        const rM = OM(),
-          mM = OM(),
-          HM = OM(),
-          hM = OM(),
-          JM = OM() | OM() << 8;
-        if (2 !== rM) return null;
-        0 !== (JM & zM) && function(MM, rM, iM) {
-          const OM = () => {
-              rM(iM())
+        for (let UU = 0; UU < QU.length; UU++)
+          if (cU() !== QU.charCodeAt(UU)) return null;
+        const XU = cU(),
+          NU = cU(),
+          IU = cU(),
+          pU = cU(),
+          aU = cU() | cU() << 8;
+        if (2 !== XU) return null;
+        0 !== (aU & EU) && function(UU, XU, zU) {
+          const cU = () => {
+              XU(zU())
             },
-            SM = () => {
-              let iM = 1,
-                SM = !0;
-              for (; iM > 0;) {
-                iM--, SM || OM(), SM = !1;
-                const jM = MM();
-                for (let iM = 0; iM < jM; iM++) OM(), rM(MM());
-                iM += MM()
+            yU = () => {
+              let zU = 1,
+                yU = !0;
+              for (; zU > 0;) {
+                zU--, yU || cU(), yU = !1;
+                const QU = UU();
+                for (let zU = 0; zU < QU; zU++) cU(), XU(UU());
+                zU += UU()
               }
             },
-            jM = MM();
-          for (let aM = 0; aM < jM; aM++) MM(), SM();
-          SM()
-        }(LM, (rM => {
-          if (iM + rM > MM.byteLength) throw new RangeError("past the stream");
-          iM += rM
-        }), OM);
-        const dM = mM < 2 ? SM : LM;
-        if (HM === aM) return {
+            QU = UU();
+          for (let AU = 0; AU < QU; AU++) UU(), yU();
+          yU()
+        }(YU, (XU => {
+          if (zU + XU > UU.byteLength) throw new RangeError("past the stream");
+          zU += XU
+        }), cU);
+        const tU = NU < 2 ? yU : YU;
+        if (IU === AU) return {
           faces: 0,
-          vertices: SM()
+          vertices: yU(),
+          minor: NU
         };
-        if (HM !== PM) return null;
-        if (hM === nM) {
+        if (IU !== FU) return null;
+        if (pU === oU) {
           return {
-            faces: dM(),
-            vertices: dM()
+            faces: tU(),
+            vertices: tU(),
+            minor: NU
           }
         }
-        if (hM !== QM) return null;
-        OM(), mM < 2 && LM();
-        const yM = LM();
+        if (pU !== DU) return null;
+        cU(), NU < 2 && YU();
+        const gU = YU();
         return {
-          faces: LM(),
-          vertices: yM
+          faces: YU(),
+          vertices: gU,
+          minor: NU
         }
       } catch {
         return null
       }
     }
 
-    function mM(MM, rM, iM) {
-      var OM, SM;
-      if (null === (OM = null === (SM = MM.extensionsUsed) || void 0 === SM ? void 0 : SM.includes("KHR_draco_mesh_compression")) || void 0 === OM || !OM) return null;
-      for (const hM of null !== (jM = MM.meshes) && void 0 !== jM ? jM : []) {
-        var jM;
-        for (const OM of hM.primitives) {
-          var aM, PM, nM, QM, zM, mM;
-          const SM = null === (aM = OM.extensions) || void 0 === aM ? void 0 : aM.KHR_draco_mesh_compression;
-          if ("object" !== typeof SM || null === SM) continue;
-          const jM = null === (PM = MM.bufferViews) || void 0 === PM ? void 0 : PM[SM.bufferView];
-          if (null === rM || void 0 === jM) return HM;
-          const hM = null !== (nM = jM.byteOffset) && void 0 !== nM ? nM : 0,
-            JM = LM(rM.subarray(hM, hM + jM.byteLength));
-          if (null === JM && !iM) continue;
-          const dM = null !== (QM = MM.accessors) && void 0 !== QM ? QM : [],
-            yM = null === (zM = dM[OM.attributes.POSITION]) || void 0 === zM ? void 0 : zM.count,
-            lM = void 0 === OM.indices ? 0 : null === (mM = dM[OM.indices]) || void 0 === mM ? void 0 : mM.count;
-          if (null === JM || void 0 === yM || void 0 === lM || 3 * JM.faces !== lM || JM.vertices > yM) return HM
+    function NU(UU, XU, zU) {
+      var cU, yU;
+      if (null === (cU = null === (yU = UU.extensionsUsed) || void 0 === yU ? void 0 : yU.includes("KHR_draco_mesh_compression")) || void 0 === cU || !cU) return null;
+      for (const aU of null !== (QU = UU.meshes) && void 0 !== QU ? QU : []) {
+        var QU;
+        for (const cU of aU.primitives) {
+          var AU, FU, oU, DU, EU, NU;
+          const yU = null === (AU = cU.extensions) || void 0 === AU ? void 0 : AU.KHR_draco_mesh_compression;
+          if ("object" !== typeof yU || null === yU) continue;
+          const QU = null === (FU = UU.bufferViews) || void 0 === FU ? void 0 : FU[yU.bufferView];
+          if (null === XU || void 0 === QU) return IU;
+          const aU = null !== (oU = QU.byteOffset) && void 0 !== oU ? oU : 0,
+            tU = YU(XU.subarray(aU, aU + QU.byteLength));
+          if (null === tU && !zU) continue;
+          const gU = null !== (DU = UU.accessors) && void 0 !== DU ? DU : [],
+            kU = null === (EU = gU[cU.attributes.POSITION]) || void 0 === EU ? void 0 : EU.count,
+            GU = void 0 === cU.indices ? 0 : null === (NU = gU[cU.indices]) || void 0 === NU ? void 0 : NU.count;
+          if (null === tU || void 0 === kU || void 0 === GU || 3 * tU.faces !== GU || tU.vertices > kU) return IU;
+          if (zU && tU.minor < 2) return pU
         }
       }
       return null
     }
-    const HM = "has a Draco stream whose counts don't match its accessors";
+    const IU = "has a Draco stream whose counts don't match its accessors",
+      pU = "has a Draco stream too old to decode: export it again";
 
-    function hM(MM) {
-      var rM;
-      return null !== (rM = MM.name) && void 0 !== rM ? rM : MM.fromFolderName || MM.id
+    function aU(UU) {
+      var XU;
+      return null !== (XU = UU.name) && void 0 !== XU ? XU : UU.fromFolderName || UU.id
     }
 
-    function JM(MM, rM, iM) {
-      return `Texture pack "${MM}": model "${rM}" was not loaded because it ${iM}. The default model is used instead.`
+    function tU(UU, XU, zU) {
+      return `Texture pack "${UU}": model "${XU}" was not loaded because it ${zU}. The default model is used instead.`
     }
 
-    function dM(MM, rM, iM) {
+    function gU(UU, XU, zU) {
       let {
-        strictDraco: jM = !1
+        strictDraco: QU = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const aM = {};
-      for (const [PM, nM] of Object.entries(rM)) {
-        let rM;
-        if (nM.startsWith("data:")) try {
-          const MM = new Uint8Array((0, SM.v)(nM));
-          if (rM = (0, OM.c)(MM), null === rM) {
+      const AU = {};
+      for (const [FU, oU] of Object.entries(XU)) {
+        let XU;
+        if (oU.startsWith("data:")) try {
+          const UU = new Uint8Array((0, yU.p)(oU));
+          if (XU = (0, cU.d)(UU), null === XU) {
             const {
-              json: iM,
-              bin: OM
-            } = (0, SM.E)(MM);
-            rM = mM(iM, OM, jM)
+              json: zU,
+              bin: cU
+            } = (0, yU.w)(UU);
+            XU = NU(zU, cU, QU)
           }
         } catch {
-          rM = "is not a binary glTF 2.0 file"
-        } else rM = "loads data from outside the file";
-        rM && (aM[PM] = rM, iM && console.warn(JM(MM, PM, rM)))
+          XU = "is not a binary glTF 2.0 file"
+        } else XU = "loads data from outside the file";
+        XU && (AU[FU] = XU, zU && console.warn(tU(UU, FU, XU)))
       }
-      return aM
+      return AU
     }
 
-    function yM(MM, rM) {
-      const iM = Object.keys(rM);
-      if (0 === iM.length) return null;
-      if (1 === iM.length) return JM(MM, iM[0], rM[iM[0]]);
-      const OM = iM.map((MM => `"${MM}" ${rM[MM]}`)).join("; ");
-      return `Texture pack "${MM}": ${iM.length} models were not loaded (${OM}). The default models are used instead.`
+    function kU(UU, XU) {
+      const zU = Object.keys(XU);
+      if (0 === zU.length) return null;
+      if (1 === zU.length) return tU(UU, zU[0], XU[zU[0]]);
+      const cU = zU.map((UU => `"${UU}" ${XU[UU]}`)).join("; ");
+      return `Texture pack "${UU}": ${zU.length} models were not loaded (${cU}). The default models are used instead.`
     }
   },
-  64133: (MM, rM, iM) => {
-    iM.d(rM, {
-      packAssets: () => yM
+  64155: (UU, XU, zU) => {
+    zU.d(XU, {
+      packAssets: () => gU
     });
-    var OM = iM(2263),
-      SM = iM(2257),
-      jM = iM(35106),
-      aM = iM(3619),
-      PM = iM(3647);
+    var cU = zU(2219),
+      yU = zU(2210),
+      QU = zU(34956),
+      AU = zU(3581),
+      FU = zU(3612);
 
-    function nM(MM, rM, iM, OM) {
-      const SM = `${(0,aM.b)(MM,rM)}|sheets${iM}`;
-      return OM === PM.c ? SM : `${SM}|layers${OM}`
+    function oU(UU, XU, zU, cU) {
+      const yU = `${(0,AU.e)(UU,XU)}|sheets${zU}`;
+      return cU === FU.e ? yU : `${yU}|layers${cU}`
     }
-    var QM = iM(3652),
-      zM = iM(3586),
-      LM = iM(3580),
-      mM = iM(3625);
-    var HM = iM(53774);
-    const hM = 256;
-    let JM = null,
-      dM = null;
+    var DU = zU(3617),
+      EU = zU(3548),
+      YU = zU(3534),
+      NU = zU(3590);
+    var IU = zU(53774);
+    const pU = 256;
+    let aU = null,
+      tU = null;
 
-    function yM(MM) {
-      var rM;
-      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PM.c;
-      if ((null === (rM = JM) || void 0 === rM ? void 0 : rM.pack) === MM.pack && JM.maxLayerWidth === iM) return JM.assets;
-      const yM = (0, HM.g)(MM.pack, (0, HM.j)(MM));
-      if (null === yM || !(0, SM.g)(yM)) return Promise.resolve(null);
-      const EM = async function(MM, rM, iM) {
-        var HM;
-        const JM = null !== (HM = MM.textureOverrides) && void 0 !== HM ? HM : {},
+    function gU(UU) {
+      var XU;
+      let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : FU.e;
+      if ((null === (XU = aU) || void 0 === XU ? void 0 : XU.pack) === UU.pack && aU.maxLayerWidth === zU) return aU.assets;
+      const gU = (0, IU.d)(UU.pack, (0, IU.l)(UU));
+      if (null === gU || !(0, yU.h)(gU)) return Promise.resolve(null);
+      const GU = async function(UU, XU, zU) {
+        var IU;
+        const aU = null !== (IU = UU.textureOverrides) && void 0 !== IU ? IU : {},
           {
-            id: yM,
-            version: EM
-          } = MM.metaData,
-          UM = rM && yM !== OM.o.CUSTOM,
-          GM = {};
-        UM && (dM = GM);
-        let CM, eM, bM = UM ? await async function(MM, rM, iM, OM) {
-          const SM = nM(MM, rM, iM, PM.c),
-            jM = nM(MM, rM, iM, OM),
-            QM = await (0, aM.g)((MM => MM === SM || MM === jM));
-          return null !== QM && (OM === PM.c || QM.blockAtlasWidth <= OM) ? QM : null
-        }(yM, EM, hM, iM): null;
-        if (null === bM) {
+            id: gU,
+            version: GU
+          } = UU.metaData,
+          BU = XU && gU !== cU.p.CUSTOM,
+          ZU = {};
+        BU && (tU = ZU);
+        let RU, PU, WU = BU ? await async function(UU, XU, zU, cU) {
+          const yU = oU(UU, XU, zU, FU.e),
+            QU = oU(UU, XU, zU, cU),
+            DU = await (0, AU.i)((UU => UU === yU || UU === QU));
+          return null !== DU && (cU === FU.e || DU.blockAtlasWidth <= cU) ? DU : null
+        }(gU, GU, pU, zU): null;
+        if (null === WU) {
           const {
-            blockMetadata: MM,
-            getDefaultTexture: rM,
-            textureNameToIndex: jM
-          } = await (0, SM.m)(), PM = (0, zM.b)(MM, ((MM, iM) => ({
-            url: lM(JM, rM, MM, "block" === iM ? LM.f.BLOCK : LM.f.ITEM)
-          }))), QM = await
-          function(MM, rM, iM, OM, SM, jM) {
-            return (0, mM.c)((aM => aM.WasmTextureWorker.generateRequired(MM, rM, iM, OM, SM, jM)))
-          }(MM, jM, PM, yM === OM.b, iM, hM), HM = QM.assets;
-          bM = {
-            ...HM,
+            blockMetadata: UU,
+            getDefaultTexture: XU,
+            textureNameToIndex: QU
+          } = await (0, yU.n)(), FU = (0, EU.b)(UU, ((UU, zU) => ({
+            url: kU(aU, XU, UU, "block" === zU ? YU.f.BLOCK : YU.f.ITEM)
+          }))), DU = await
+          function(UU, XU, zU, cU, yU, QU) {
+            return (0, NU.e)((AU => AU.WasmTextureWorker.generateRequired(UU, XU, zU, cU, yU, QU)))
+          }(UU, QU, FU, gU === cU.b, zU, pU), IU = DU.assets;
+          WU = {
+            ...IU,
             averageColors: {}
-          }, CM = QM.averageColors(), UM && (eM = CM.then((async MM => {
-            null !== MM && dM === GM && await
-            function(MM, rM, iM, OM, SM) {
-              return (0, aM.i)(nM(MM, rM, OM, SM), iM)
-            }(yM, EM, {
-              ...HM,
-              averageColors: MM
-            }, hM, QM.layerCap)
+          }, RU = DU.averageColors(), BU && (PU = RU.then((async UU => {
+            null !== UU && tU === ZU && await
+            function(UU, XU, zU, cU, yU) {
+              return (0, AU.n)(oU(UU, XU, cU, yU), zU)
+            }(gU, GU, {
+              ...IU,
+              averageColors: UU
+            }, pU, DU.layerCap)
           })))
         }
-        return function(MM, rM) {
-          var iM, OM;
-          let SM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((PM = MM.averageColors, 0 === Object.keys(null !== PM && void 0 !== PM ? PM : {}).length ? null : MM.averageColors)),
-            aM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var PM;
-          const nM = null !== (iM = rM.textureOverrides) && void 0 !== iM ? iM : {},
-            zM = null !== (OM = rM.modelOverrides) && void 0 !== OM ? OM : {},
-            LM = 0 === Object.keys(zM).length ? {} : (0, jM.refusedPackModels)((0, jM.packDisplayName)(rM.metaData), zM, !0, {
+        return function(UU, XU) {
+          var zU, cU;
+          let yU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((FU = UU.averageColors, 0 === Object.keys(null !== FU && void 0 !== FU ? FU : {}).length ? null : UU.averageColors)),
+            AU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var FU;
+          const oU = null !== (zU = XU.textureOverrides) && void 0 !== zU ? zU : {},
+            EU = null !== (cU = XU.modelOverrides) && void 0 !== cU ? cU : {},
+            YU = 0 === Object.keys(EU).length ? {} : (0, QU.refusedPackModels)((0, QU.packDisplayName)(XU.metaData), EU, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: mM,
-              rotatedBlockTextures: HM
-            } = MM,
-            hM = MM => {
-              var rM, iM;
-              return null !== (rM = null !== (iM = mM[MM]) && void 0 !== iM ? iM : HM[MM]) && void 0 !== rM ? rM : null
+              animatedBlockTextures: NU,
+              rotatedBlockTextures: IU
+            } = UU,
+            pU = UU => {
+              var XU, zU;
+              return null !== (XU = null !== (zU = NU[UU]) && void 0 !== zU ? zU : IU[UU]) && void 0 !== XU ? XU : null
             };
           return {
             terrain: {
-              atlasSheets: MM.blockAtlasArr,
-              texture: hM
+              atlasSheets: UU.blockAtlasArr,
+              texture: pU
             },
-            sheetPixels: [...MM.blockAtlasPixels],
-            heldUntil: aM,
-            sheetLayout: MM.imagesPerAtlas,
-            sheetWidth: MM.blockAtlasWidth,
-            armourAtlasUrl: MM.armourAtlas,
-            texture: MM => {
-              var rM, iM;
-              return null !== (rM = null !== (iM = hM(MM)) && void 0 !== iM ? iM : (0, QM.c)(nM, MM)) && void 0 !== rM ? rM : null
+            sheetPixels: [...UU.blockAtlasPixels],
+            heldUntil: AU,
+            sheetLayout: UU.imagesPerAtlas,
+            sheetWidth: UU.blockAtlasWidth,
+            armourAtlasUrl: UU.armourAtlas,
+            texture: UU => {
+              var XU, zU;
+              return null !== (XU = null !== (zU = pU(UU)) && void 0 !== zU ? zU : (0, DU.b)(oU, UU)) && void 0 !== XU ? XU : null
             },
-            model: MM => void 0 === LM[MM] && zM[MM] || null,
-            averageColours: SM
+            model: UU => void 0 === YU[UU] && EU[UU] || null,
+            averageColours: yU
           }
-        }(bM, MM, CM, eM)
-      }(yM, null === MM.gameSource, iM), UM = {
-        pack: MM.pack,
-        maxLayerWidth: iM,
-        assets: EM
+        }(WU, UU, RU, PU)
+      }(gU, null === UU.gameSource, zU), BU = {
+        pack: UU.pack,
+        maxLayerWidth: zU,
+        assets: GU
       };
-      return JM = UM, EM.catch((() => {
-        JM === UM && (JM = null)
-      })), EM
+      return aU = BU, GU.catch((() => {
+        aU === BU && (aU = null)
+      })), GU
     }
 
-    function lM(MM, rM, OM, SM) {
-      const jM = (0, QM.c)(MM, OM);
-      if (jM) return jM;
+    function kU(UU, XU, cU, yU) {
+      const QU = (0, DU.b)(UU, cU);
+      if (QU) return QU;
       try {
-        return rM(OM, SM).url
+        return XU(cU, yU).url
       } catch {
-        return iM(3721)
+        return zU(3687)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

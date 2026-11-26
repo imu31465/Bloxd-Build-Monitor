@@ -1,382 +1,1370 @@
 export const id = 203;
 export const ids = [203];
 export const modules = {
-  38710: (MM, rM, iM) => {
-    var OM = iM(38716);
-
-    function SM(MM) {
-      for (var rM, iM, SM = 0, jM = MM.length, aM = 0; aM < MM.length;) {
-        for (rM = MM[aM], iM = 0; aM < jM && MM[aM] === rM;) ++aM, ++iM;
-        SM += OM.log2(iM) / 7 | 0, SM += OM.log2(rM >>> 0) / 7 | 0, SM += 2
-      }
-      return SM
-    }
-    rM.size = SM, rM.encode = function(MM, rM) {
-      rM || (rM = new Uint8Array(SM(MM)));
-      for (var iM, OM, jM = 0, aM = rM.length, PM = 0; PM < MM.length;) {
-        for (iM = MM[PM], OM = 0; PM < MM.length && MM[PM] === iM;) ++PM, ++OM;
-        for (; jM < aM && OM >= 128;) rM[jM++] = 128 + (127 & OM), OM >>>= 7;
-        if (jM >= aM) throw new Error("RLE buffer overflow");
-        for (rM[jM++] = OM, iM >>>= 0; jM < aM && iM >= 128;) rM[jM++] = 128 + (127 & iM), iM >>>= 7;
-        if (jM >= aM) throw new Error("RLE buffer overflow");
-        rM[jM++] = iM
-      }
-      return rM
-    }, rM.decode = function(MM, rM) {
-      for (var iM, OM, SM, jM, aM = rM.length, PM = MM.length, nM = 0, QM = 0; QM < PM;) {
-        for (iM = 0, OM = 0; QM < PM && MM[QM] >= 128;) iM += (127 & MM[QM++]) << OM, OM += 7;
-        if (iM += MM[QM++] << OM, QM >= PM) throw new Error("RLE buffer underrun");
-        if (nM + iM > aM) throw new Error("Chunk buffer overflow");
-        for (SM = 0, OM = 0; QM < PM && MM[QM] >= 128;) SM += (127 & MM[QM++]) << OM, OM += 7;
-        if (QM >= PM) throw new Error("RLE buffer underrun");
-        for (SM += MM[QM++] << OM, jM = 0; jM < iM; ++jM) rM[nM++] = SM
-      }
-      return rM
-    }
-  },
-  38716: (MM, rM) => {
-    function iM(MM) {
-      var rM = 32;
-      return (MM &= -MM) && rM--, 65535 & MM && (rM -= 16), 16711935 & MM && (rM -= 8), 252645135 & MM && (rM -= 4), 858993459 & MM && (rM -= 2), 1431655765 & MM && (rM -= 1), rM
-    }
-    rM.INT_BITS = 32, rM.INT_MAX = 2147483647, rM.INT_MIN = -1 << 31, rM.sign = function(MM) {
-      return (MM > 0) - (MM < 0)
-    }, rM.abs = function(MM) {
-      var rM = MM >> 31;
-      return (MM ^ rM) - rM
-    }, rM.min = function(MM, rM) {
-      return rM ^ (MM ^ rM) & -(MM < rM)
-    }, rM.max = function(MM, rM) {
-      return MM ^ (MM ^ rM) & -(MM < rM)
-    }, rM.isPow2 = function(MM) {
-      return !(MM & MM - 1) && !!MM
-    }, rM.log2 = function(MM) {
-      var rM, iM;
-      return rM = (MM > 65535) << 4, rM |= iM = ((MM >>>= rM) > 255) << 3, rM |= iM = ((MM >>>= iM) > 15) << 2, (rM |= iM = ((MM >>>= iM) > 3) << 1) | (MM >>>= iM) >> 1
-    }, rM.log10 = function(MM) {
-      return MM >= 1e9 ? 9 : MM >= 1e8 ? 8 : MM >= 1e7 ? 7 : MM >= 1e6 ? 6 : MM >= 1e5 ? 5 : MM >= 1e4 ? 4 : MM >= 1e3 ? 3 : MM >= 100 ? 2 : MM >= 10 ? 1 : 0
-    }, rM.popCount = function(MM) {
-      return 16843009 * ((MM = (858993459 & (MM -= MM >>> 1 & 1431655765)) + (MM >>> 2 & 858993459)) + (MM >>> 4) & 252645135) >>> 24
-    }, rM.countTrailingZeros = iM, rM.nextPow2 = function(MM) {
-      return MM += 0 === MM, --MM, MM |= MM >>> 1, MM |= MM >>> 2, MM |= MM >>> 4, MM |= MM >>> 8, (MM |= MM >>> 16) + 1
-    }, rM.prevPow2 = function(MM) {
-      return MM |= MM >>> 1, MM |= MM >>> 2, MM |= MM >>> 4, MM |= MM >>> 8, (MM |= MM >>> 16) - (MM >>> 1)
-    }, rM.parity = function(MM) {
-      return MM ^= MM >>> 16, MM ^= MM >>> 8, MM ^= MM >>> 4, 27030 >>> (MM &= 15) & 1
-    };
-    var OM = new Array(256);
-    ! function(MM) {
-      for (var rM = 0; rM < 256; ++rM) {
-        var iM = rM,
-          OM = rM,
-          SM = 7;
-        for (iM >>>= 1; iM; iM >>>= 1) OM <<= 1, OM |= 1 & iM, --SM;
-        MM[rM] = OM << SM & 255
-      }
-    }(OM), rM.reverse = function(MM) {
-      return OM[255 & MM] << 24 | OM[MM >>> 8 & 255] << 16 | OM[MM >>> 16 & 255] << 8 | OM[MM >>> 24 & 255]
-    }, rM.interleave2 = function(MM, rM) {
-      return (MM = 1431655765 & ((MM = 858993459 & ((MM = 252645135 & ((MM = 16711935 & ((MM &= 65535) | MM << 8)) | MM << 4)) | MM << 2)) | MM << 1)) | (rM = 1431655765 & ((rM = 858993459 & ((rM = 252645135 & ((rM = 16711935 & ((rM &= 65535) | rM << 8)) | rM << 4)) | rM << 2)) | rM << 1)) << 1
-    }, rM.deinterleave2 = function(MM, rM) {
-      return (MM = 65535 & ((MM = 16711935 & ((MM = 252645135 & ((MM = 858993459 & ((MM = MM >>> rM & 1431655765) | MM >>> 1)) | MM >>> 2)) | MM >>> 4)) | MM >>> 16)) << 16 >> 16
-    }, rM.interleave3 = function(MM, rM, iM) {
-      return MM = 1227133513 & ((MM = 3272356035 & ((MM = 251719695 & ((MM = 4278190335 & ((MM &= 1023) | MM << 16)) | MM << 8)) | MM << 4)) | MM << 2), (MM |= (rM = 1227133513 & ((rM = 3272356035 & ((rM = 251719695 & ((rM = 4278190335 & ((rM &= 1023) | rM << 16)) | rM << 8)) | rM << 4)) | rM << 2)) << 1) | (iM = 1227133513 & ((iM = 3272356035 & ((iM = 251719695 & ((iM = 4278190335 & ((iM &= 1023) | iM << 16)) | iM << 8)) | iM << 4)) | iM << 2)) << 2
-    }, rM.deinterleave3 = function(MM, rM) {
-      return (MM = 1023 & ((MM = 4278190335 & ((MM = 251719695 & ((MM = 3272356035 & ((MM = MM >>> rM & 1227133513) | MM >>> 2)) | MM >>> 4)) | MM >>> 8)) | MM >>> 16)) << 22 >> 22
-    }, rM.nextCombination = function(MM) {
-      var rM = MM | MM - 1;
-      return rM + 1 | (~rM & -~rM) - 1 >>> iM(MM) + 1
-    }
-  },
-  40924: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      emptyColumnHeight: () => EM,
-      loadHeatmapSchematic: () => UM,
-      readSchematicBlocks: () => GM
+  41680: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => oU,
+      d: () => FU,
+      f: () => AU
     });
-    var OM = iM(4136),
-      SM = iM.n(OM),
-      jM = iM(4118),
-      aM = iM(38710),
-      PM = iM(181),
-      nM = iM(9816),
-      QM = iM(40543);
-    const zM = [{
-        name: "x",
-        type: "int"
-      }, {
-        name: "y",
-        type: "int"
-      }, {
-        name: "z",
-        type: "int"
-      }],
-      LM = [{
-        name: "name",
-        type: "string"
-      }, {
-        name: "startOffset",
-        type: {
-          type: "record",
-          fields: zM
+    var cU = zU(41685),
+      yU = zU(5318),
+      QU = zU(41692);
+
+    function AU(UU) {
+      return UU.payloadKind === yU.jc.Msgpack ? (0, cU.d)(UU.payload) : void 0
+    }
+
+    function FU(UU, XU) {
+      if (XU.payloadKind === yU.jc.Bytes || XU.payloadKind === yU.jc.MsgpackBin) return (0, QU.d)(UU, XU.payload)
+    }
+
+    function oU(UU) {
+      return null !== UU && "object" === typeof UU
+    }
+  },
+  41695: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => YU,
+      e: () => NU,
+      i: () => IU,
+      m: () => EU,
+      o: () => tU
+    });
+    var cU = zU(5318),
+      yU = zU(41699);
+    const QU = new Map,
+      AU = new Set,
+      FU = new Set;
+    let oU = 0,
+      DU = 0;
+
+    function EU(UU, XU) {
+      let zU = QU.get(UU);
+      return zU || (zU = new Set, QU.set(UU, zU)), zU.add(XU), () => {
+        zU.delete(XU)
+      }
+    }
+
+    function YU() {
+      return 0 !== oU
+    }
+
+    function NU(UU) {
+      return AU.add(UU), () => {
+        AU.delete(UU)
+      }
+    }
+
+    function IU(UU) {
+      return FU.add(UU), () => {
+        FU.delete(UU)
+      }
+    }
+    const pU = "A raw message listener threw";
+
+    function aU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AU;
+      for (const cU of XU) try {
+        cU()
+      } catch (zU) {
+        UU ? (0, yU.p)(zU, pU) : console.error(pU, zU)
+      }
+    }
+    const tU = {
+      fire: function(UU) {
+        if ("connection" === UU.type) {
+          const XU = UU.phase === cU.E.Activated && UU.conn !== oU && UU.conn > DU,
+            zU = (UU.phase === cU.E.Left || UU.phase === cU.E.Closed) && UU.conn === oU;
+          return void(XU || zU ? (oU = XU ? UU.conn : 0, aU(!0)) : UU.phase === cU.E.Resumed && 0 !== oU && UU.conn > DU && (oU = UU.conn, aU(!0, FU)))
         }
-      }, {
-        name: "dimensions",
-        type: {
-          type: "record",
-          fields: zM
-        }
-      }, {
-        name: "chunkData",
-        type: {
-          type: "array",
-          items: {
-            type: "record",
-            fields: [...zM, {
-              name: "rle",
-              type: "bytes"
-            }]
+        const XU = QU.get(UU.TE);
+        if (XU && UU.conn === oU && 0 !== oU)
+          for (const cU of XU) try {
+            cU(UU)
+          } catch (zU) {
+            (0, yU.p)(zU, pU)
           }
+      },
+      close: function(UU) {
+        DU = Math.max(DU, UU, oU), 0 !== oU && (oU = 0, aU(!1))
+      }
+    }
+  },
+  41674: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => DU,
+      e: () => oU,
+      h: () => FU
+    });
+    var cU = zU(1280),
+      yU = zU(41652);
+    const QU = new TextDecoder,
+      AU = new TextEncoder;
+
+    function FU(UU, XU) {
+      const zU = UU.queries.entityName(XU);
+      if (zU === yU.Nc) return;
+      const AU = UU.memoryData(UU.scratch(), 4 + zU, 4, "entity_name's answer");
+      if (!AU) return;
+      const FU = AU.getUint32(0, !0),
+        oU = QU.decode(new Uint8Array(AU.buffer, AU.byteOffset + 4, zU));
+      return (0, cU.b)(oU, !1, FU === yU._d ? null : FU)
+    }
+
+    function oU(UU, XU, zU) {
+      const cU = AU.encode(zU);
+      if (cU.length > yU.Gb) return !1;
+      const QU = UU.memoryView(Uint8Array, UU.scratch(), cU.length, "has_effect's name");
+      return !!QU && (QU.set(cU), 1 === UU.queries.hasEffect(XU, cU.length))
+    }
+
+    function DU(UU, XU, zU, cU) {
+      const AU = UU.queries.blockData(XU, zU, cU);
+      if (AU === yU.Nc) return;
+      const FU = UU.memoryView(Uint8Array, UU.scratch(), AU, "block_data's answer");
+      return FU ? JSON.parse(QU.decode(FU)) : void 0
+    }
+  },
+  41685: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => yU,
+      e: () => EU
+    });
+    const cU = new TextDecoder;
+
+    function yU(UU) {
+      const XU = new QU(UU),
+        zU = XU.value();
+      if (XU.at !== UU.length) throw new Error(`msgpack: ${UU.length-XU.at} bytes after the value`);
+      return zU
+    }
+    class QU {
+      constructor(UU) {
+        this.bytes = UU, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(UU.buffer, UU.byteOffset, UU.byteLength)
+      }
+      value() {
+        const UU = this.u8();
+        if (UU <= 127) return UU;
+        if (UU >= 224) return UU - 256;
+        if (UU >= 128 && UU <= 143) return this.map(15 & UU);
+        if (UU >= 144 && UU <= 159) return this.array(15 & UU);
+        if (UU >= 160 && UU <= 191) return this.str(31 & UU);
+        switch (UU) {
+          case 192:
+            return null;
+          case 194:
+            return !1;
+          case 195:
+            return !0;
+          case 196:
+            return this.bin(this.u8());
+          case 197:
+            return this.bin(this.u16());
+          case 198:
+            return this.bin(this.u32());
+          case 199:
+            return this.ext(this.u8());
+          case 200:
+            return this.ext(this.u16());
+          case 201:
+            return this.ext(this.u32());
+          case 202:
+            return this.view.getFloat32(this.take(4), !1);
+          case 203:
+            return this.view.getFloat64(this.take(8), !1);
+          case 204:
+            return this.u8();
+          case 205:
+            return this.u16();
+          case 206:
+            return this.u32();
+          case 207:
+            return this.int64(!1);
+          case 208:
+            return this.view.getInt8(this.take(1));
+          case 209:
+            return this.view.getInt16(this.take(2), !1);
+          case 210:
+            return this.view.getInt32(this.take(4), !1);
+          case 211:
+            return this.int64(!0);
+          case 212:
+            return this.ext(1);
+          case 213:
+            return this.ext(2);
+          case 214:
+            return this.ext(4);
+          case 215:
+            return this.ext(8);
+          case 216:
+            return this.ext(16);
+          case 217:
+            return this.str(this.u8());
+          case 218:
+            return this.str(this.u16());
+          case 219:
+            return this.str(this.u32());
+          case 220:
+            return this.array(this.u16());
+          case 221:
+            return this.array(this.u32());
+          case 222:
+            return this.map(this.u16());
+          case 223:
+            return this.map(this.u32());
+          default:
+            throw new Error(`msgpack: unknown byte 0x${UU.toString(16)} at ${this.at-1}`)
         }
-      }],
-      mM = SM().Type.forSchema({
-        type: "record",
-        fields: LM
-      }),
-      HM = SM().Type.forSchema({
-        type: "record",
-        fields: [...LM, {
-          name: "blockData",
-          type: {
-            type: "array",
-            items: {
-              type: "record",
-              fields: [...zM, {
-                name: "data",
-                type: "bytes"
-              }]
+      }
+      take(UU) {
+        const XU = this.at;
+        if (XU + UU > this.bytes.length) throw new Error(`msgpack: ${UU} bytes past the end at ${XU}`);
+        return this.at = XU + UU, XU
+      }
+      u8() {
+        return this.view.getUint8(this.take(1))
+      }
+      u16() {
+        return this.view.getUint16(this.take(2), !1)
+      }
+      u32() {
+        return this.view.getUint32(this.take(4), !1)
+      }
+      int64(UU) {
+        const XU = this.take(8);
+        return UU ? this.view.getBigInt64(XU, !1) : this.view.getBigUint64(XU, !1)
+      }
+      str(UU) {
+        const XU = this.take(UU),
+          zU = this.bytes;
+        if (UU < 16) {
+          let yU = "";
+          for (let QU = XU; QU < XU + UU; QU++) {
+            const AU = zU[QU];
+            if (AU >= 128) return cU.decode(zU.subarray(XU, XU + UU));
+            yU += String.fromCharCode(AU)
+          }
+          return yU
+        }
+        return cU.decode(zU.subarray(XU, XU + UU))
+      }
+      bin(UU) {
+        const XU = this.take(UU);
+        return this.bytes.subarray(XU, XU + UU)
+      }
+      enter() {
+        if (++this.depth > 512) throw new Error("msgpack: nested too deep")
+      }
+      array(UU) {
+        this.enter();
+        const XU = [];
+        for (let zU = 0; zU < UU; zU++) XU.push(this.value());
+        return this.depth--, XU
+      }
+      map(UU) {
+        this.enter();
+        const XU = {};
+        for (let zU = 0; zU < UU; zU++) {
+          const UU = this.value(),
+            zU = this.value();
+          XU["__proto__" === UU ? "__proto_" : String(UU)] = zU
+        }
+        return this.depth--, XU
+      }
+      ext(UU) {
+        const XU = this.view.getInt8(this.take(1)),
+          zU = this.take(UU);
+        if (0 !== XU) {
+          if (-1 === XU) {
+            if (1 === UU) return new Date(NaN);
+            if (4 === UU) return new Date(1e3 * this.view.getUint32(zU, !1));
+            if (8 === UU) {
+              const UU = this.view.getUint32(zU, !1),
+                XU = UU >>> 2,
+                cU = 4294967296 * (3 & UU) + this.view.getUint32(zU + 4, !1);
+              return new Date(1e3 * cU + XU / 1e6)
+            }
+            if (12 === UU) {
+              const UU = this.view.getUint32(zU, !1),
+                XU = 4294967296 * this.view.getInt32(zU + 4, !1) + this.view.getUint32(zU + 8, !1);
+              return new Date(1e3 * XU + UU / 1e6)
             }
           }
-        }, {
-          name: "pasteOffset",
-          type: {
-            type: "record",
-            fields: zM
-          }
-        }]
-      }),
-      hM = 2,
-      JM = 6,
-      dM = 16,
-      yM = 4096,
-      lM = PM.f.HL,
-      EM = -2147483648;
-    async function UM(MM) {
-      const rM = await (0, QM.b)(),
-        iM = await GM(new Uint8Array(await MM.arrayBuffer()), (MM => rM.get(MM)));
-      return {
-        surface: iM.surface,
-        topDown: eM(iM.columnTops)
+          throw new Error(`msgpack: ext type ${XU} of ${UU} bytes`)
+        }
       }
     }
-    async function GM(MM, rM) {
-      var iM;
-      if (MM.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const OM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength).getUint32(0, !0);
-      if (OM > JM) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const SM = (OM >= hM ? HM : mM).decode(jM.Vz.from(MM.subarray(4)), 0).value;
-      if (!SM) throw new Error("The file isn't a schematic.");
-      if (0 === SM.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const PM = null !== (iM = SM.pasteOffset) && void 0 !== iM ? iM : {
-          x: 0,
-          y: 0,
-          z: 0
-        },
-        nM = [PM.x, PM.y, PM.z].map((MM => Math.floor(MM / lM))),
-        QM = SM.chunkData.map((MM => ({
-          x: MM.x + nM[0],
-          y: MM.y + nM[1],
-          z: MM.z + nM[2],
-          rle: MM.rle
-        }))),
-        zM = new Map;
-      for (const [jM, mM] of QM.entries()) {
-        const MM = new Uint16Array(lM ** 3);
-        aM.decode(mM.rle, MM), zM.set(`${mM.x},${mM.y},${mM.z}`, MM), jM % dM === dM - 1 && await bM()
+    const AU = new TextEncoder,
+      FU = -(2n ** 63n),
+      oU = 2n ** 63n - 1n,
+      DU = 2n ** 64n - 1n;
+
+    function EU(UU) {
+      const XU = new YU;
+      return XU.value(UU, 0), XU.bytes()
+    }
+    class YU {
+      constructor() {
+        this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
-      const LM = (MM, rM, iM) => MM * lM * lM + rM * lM + iM,
-        yM = (MM, rM, iM) => {
-          var OM, SM;
-          const jM = Math.floor(MM / lM),
-            aM = Math.floor(rM / lM),
-            PM = Math.floor(iM / lM);
-          return null !== (OM = null === (SM = zM.get(`${jM},${aM},${PM}`)) || void 0 === SM ? void 0 : SM[LM(MM - jM * lM, rM - aM * lM, iM - PM * lM)]) && void 0 !== OM ? OM : 0
-        },
-        UM = new Map,
-        GM = [],
-        eM = [];
-      for (const [jM, aM] of QM.entries()) {
-        const MM = zM.get(`${aM.x},${aM.y},${aM.z}`),
-          iM = [aM.x * lM, aM.y * lM, aM.z * lM],
-          OM = (rM, OM, SM) => rM < 0 || OM < 0 || SM < 0 || rM >= lM || OM >= lM || SM >= lM ? yM(iM[0] + rM, iM[1] + OM, iM[2] + SM) : MM[LM(rM, OM, SM)],
-          SM = `${aM.x},${aM.z}`;
-        let PM = UM.get(SM);
-        void 0 === PM && (PM = {
-          chunkX: aM.x,
-          chunkZ: aM.z,
-          heights: new Int32Array(lM * lM).fill(EM),
-          colours: new Uint8Array(lM * lM * 3)
-        }, UM.set(SM, PM));
-        for (let jM = 0; jM < lM; jM++)
-          for (let SM = 0; SM < lM; SM++)
-            for (let aM = 0; aM < lM; aM++) {
-              const nM = MM[LM(jM, SM, aM)];
-              if (0 === nM) continue;
-              const QM = iM[0] + jM,
-                zM = iM[1] + SM,
-                mM = iM[2] + aM,
-                HM = rM(nM);
-              if (null === HM) continue;
-              const hM = aM * lM + jM;
-              zM > PM.heights[hM] && (PM.heights[hM] = zM, PM.colours.set(HM, 3 * hM));
-              !CM(nM) && (CM(OM(jM + 1, SM, aM)) || CM(OM(jM - 1, SM, aM)) || CM(OM(jM, SM + 1, aM)) || CM(OM(jM, SM - 1, aM)) || CM(OM(jM, SM, aM + 1)) || CM(OM(jM, SM, aM - 1))) && (GM.push(QM, zM, mM), eM.push(HM[0], HM[1], HM[2]))
+      bytes() {
+        return this.buf.subarray(0, this.at)
+      }
+      value(UU, XU) {
+        if (XU > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof UU) {
+          case "undefined":
+            return this.u8(212), this.u8(0), void this.u8(0);
+          case "boolean":
+            return void this.u8(UU ? 195 : 194);
+          case "number":
+            return void this.number(UU);
+          case "bigint":
+            return void this.bigint(UU);
+          case "string":
+            return void this.string(UU);
+          case "object":
+            if (null === UU) this.u8(192);
+            else if (UU instanceof Uint8Array) this.head(UU.length, 196, -1, 197, 198), this.room(UU.length), this.buf.set(UU, this.at), this.at += UU.length;
+            else if (Array.isArray(UU)) {
+              this.head(UU.length, 220, 144, 220, 221);
+              for (const zU of UU) this.value(zU, XU + 1)
+            } else {
+              var zU, cU;
+              if (Object.getPrototypeOf(UU) !== Object.prototype && null !== Object.getPrototypeOf(UU)) throw new Error(`msgpack: can't encode a ${null!==(zU=null===(cU=UU.constructor)||void 0===cU?void 0:cU.name)&&void 0!==zU?zU:"object"}`);
+              {
+                const zU = Object.keys(UU);
+                this.head(zU.length, 222, 128, 222, 223);
+                for (const cU of zU) this.string(cU), this.value(UU[cU], XU + 1)
+              }
             }
-        jM % dM === dM - 1 && await bM()
+            return;
+          default:
+            throw new Error("msgpack: can't encode a " + typeof UU)
+        }
       }
-      if (0 === GM.length) throw new Error("The schematic has no blocks in it.");
+      number(UU) {
+        Number.isInteger(UU) && UU >= -2147483648 && UU <= 4294967295 ? UU >= 0 ? UU < 128 ? this.u8(UU) : UU < 256 ? (this.u8(204), this.u8(UU)) : UU < 65536 ? (this.u8(205), this.u16(UU)) : (this.u8(206), this.u32(UU)) : UU >= -32 ? this.u8(UU + 256) : UU >= -128 ? (this.u8(208), this.u8(UU + 256)) : UU >= -32768 ? (this.u8(209), this.u16(UU + 65536)) : (this.u8(210), this.u32(UU >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, UU, !1), this.at += 8)
+      }
+      bigint(UU) {
+        const XU = UU >= FU && UU <= oU;
+        if (!XU && (UU < 0n || UU > DU)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(XU ? 211 : 207), this.room(8), XU ? this.view.setBigInt64(this.at, UU, !1) : this.view.setBigUint64(this.at, UU, !1), this.at += 8
+      }
+      string(UU) {
+        const XU = AU.encode(UU);
+        this.head(XU.length, 217, 160, 218, 219), this.room(XU.length), this.buf.set(XU, this.at), this.at += XU.length
+      }
+      head(UU, XU, zU, cU, yU) {
+        zU >= 0 && UU < (160 === zU ? 32 : 16) ? this.u8(zU | UU) : XU !== cU && UU < 256 ? (this.u8(XU), this.u8(UU)) : UU < 65536 ? (this.u8(cU), this.u16(UU)) : (this.u8(yU), this.u32(UU))
+      }
+      room(UU) {
+        if (this.at + UU <= this.buf.length) return;
+        let XU = 2 * this.buf.length;
+        for (; XU < this.at + UU;) XU *= 2;
+        const zU = new Uint8Array(XU);
+        zU.set(this.buf.subarray(0, this.at)), this.buf = zU, this.view = new DataView(zU.buffer)
+      }
+      u8(UU) {
+        this.room(1), this.buf[this.at++] = UU
+      }
+      u16(UU) {
+        this.room(2), this.view.setUint16(this.at, UU, !1), this.at += 2
+      }
+      u32(UU) {
+        this.room(4), this.view.setUint32(this.at, UU, !1), this.at += 4
+      }
+    }
+  },
+  41692: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => AU
+    });
+    var cU = zU(41676);
+    const yU = new TextDecoder("utf-8", {
+      ignoreBOM: !0
+    });
+    class QU {
+      constructor(UU) {
+        this.buf = UU, this.at = 0, this.view = null
+      }
+      bool() {
+        return 0 !== this.u8()
+      }
+      long() {
+        let UU = this.u8(),
+          XU = 127 & UU,
+          zU = 128;
+        for (; 128 & UU;) {
+          if (zU > 2 ** 63) throw new RangeError("avro: varint too long");
+          UU = this.u8(), XU += (127 & UU) * zU, zU *= 128
+        }
+        return XU % 2 === 1 ? -(XU + 1) / 2 : XU / 2
+      }
+      float() {
+        const UU = this.take(4);
+        return this.floats().getFloat32(UU, !0)
+      }
+      double() {
+        const UU = this.take(8);
+        return this.floats().getFloat64(UU, !0)
+      }
+      str() {
+        const UU = this.size(),
+          XU = this.take(UU),
+          zU = XU + UU;
+        if (UU <= 32) {
+          let UU = "";
+          for (let cU = XU; cU < zU; cU++) {
+            const QU = this.buf[cU];
+            if (QU >= 128) return yU.decode(this.buf.subarray(XU, zU));
+            UU += String.fromCharCode(QU)
+          }
+          return UU
+        }
+        return yU.decode(this.buf.subarray(XU, zU))
+      }
+      bytes() {
+        return this.fixed(this.size())
+      }
+      fixed(UU) {
+        const XU = this.take(UU);
+        return this.buf.slice(XU, XU + UU)
+      }
+      index(UU) {
+        const XU = this.long();
+        if (!(XU >= 0 && XU < UU)) throw new RangeError(`avro: index ${XU} of ${UU}`);
+        return XU
+      }
+      AY(UU) {
+        const XU = [];
+        for (let zU = this.long(); 0 !== zU; zU = this.long()) {
+          zU = this.block(zU);
+          for (let cU = 0; cU < zU; cU++) XU.push(UU(this))
+        }
+        return XU
+      }
+      map(UU) {
+        const XU = {};
+        for (let zU = this.long(); 0 !== zU; zU = this.long()) {
+          zU = this.block(zU);
+          for (let cU = 0; cU < zU; cU++) {
+            XU[this.str()] = UU(this)
+          }
+        }
+        return XU
+      }
+      end() {
+        if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
+      }
+      block(UU) {
+        let XU = UU;
+        if (XU < 0 && (XU = -XU, this.long()), XU > this.buf.length - this.at) throw new RangeError(`avro: block of ${XU} items in ${this.buf.length-this.at} bytes`);
+        return XU
+      }
+      floats() {
+        return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
+      }
+      size() {
+        const UU = this.long();
+        if (UU < 0) throw new RangeError(`avro: length ${UU}`);
+        return UU
+      }
+      u8() {
+        const UU = this.buf[this.at];
+        if (void 0 === UU) throw new RangeError("avro: truncated");
+        return this.at++, UU
+      }
+      take(UU) {
+        const XU = this.at;
+        if (UU > this.buf.length - XU) throw new RangeError("avro: truncated");
+        return this.at = XU + UU, XU
+      }
+    }
+
+    function AU(UU, XU) {
+      const zU = new QU(XU),
+        yU = (0, cU.lb)(UU, zU);
+      return zU.end(), yU
+    }
+  },
+  41676: (UU, XU, zU) => {
+    zU.d(XU, {
+      $: () => pU,
+      C: () => DU,
+      F: () => AU,
+      G: () => eU,
+      H: () => yU,
+      I: () => FU,
+      L: () => IU,
+      N: () => dU,
+      O: () => WU,
+      S: () => RU,
+      U: () => EU,
+      V: () => YU,
+      Z: () => LU,
+      c: () => ZU,
+      cb: () => GU,
+      eb: () => aU,
+      g: () => tU,
+      ib: () => oU,
+      j: () => gU,
+      k: () => kU,
+      lb: () => CU,
+      o: () => PU,
+      p: () => cU,
+      s: () => QU,
+      w: () => BU,
+      y: () => NU
+    });
+    const cU = 2,
+      yU = 12,
+      QU = 27,
+      AU = 40,
+      FU = 52,
+      oU = 59,
+      DU = 63,
+      EU = 83,
+      YU = 84,
+      NU = 89,
+      IU = 91,
+      pU = 93,
+      aU = 94,
+      tU = 95,
+      gU = 97,
+      kU = 101,
+      GU = 102,
+      BU = 73,
+      ZU = 16,
+      RU = 86,
+      PU = 60,
+      WU = 17,
+      dU = 56,
+      LU = 100,
+      eU = 81;
+
+    function CU(UU, XU) {
+      switch (UU) {
+        case cU:
+          return function(UU) {
+            return {
+              vX: jU(UU),
+              nX: UU.float(),
+              mX: UU.long()
+            }
+          }(XU);
+        case yU:
+          return function(UU) {
+            return {
+              nU: rU(UU),
+              mU: rU(UU)
+            }
+          }(XU);
+        case QU:
+          return function(UU) {
+            return {
+              fc: UU.bool(),
+              Hc: rU(UU)
+            }
+          }(XU);
+        case AU:
+          return XU.str();
+        case FU:
+          return function(UU) {
+            return {
+              id: UU.long(),
+              Cz: AX(UU)
+            }
+          }(XU);
+        case oU:
+          return function(UU) {
+            return {
+              Ec: rU(UU),
+              Yc: oX(UU)
+            }
+          }(XU);
+        case DU:
+          return XU.str();
+        case EU:
+        case YU:
+          return XU.long();
+        case NU:
+          return function(UU) {
+            return {
+              Mc: UU.long(),
+              vc: UU.bool(),
+              Vc: UU.float()
+            }
+          }(XU);
+        case IU:
+          return XU.long();
+        case pU:
+          return function(UU) {
+            return {
+              yX: UU.bool(),
+              iU: YX(UU)
+            }
+          }(XU);
+        case aU:
+          return function(UU) {
+            return {
+              id: UU.str(),
+              position: EX(UU),
+              Pc: NX(UU),
+              style: vU(UU),
+              dc: UU.bool()
+            }
+          }(XU);
+        case tU:
+          return function(UU) {
+            return {
+              id: rU(UU)
+            }
+          }(XU);
+        case gU:
+          return function(UU) {
+            return {
+              Ey: UU.long(),
+              Yy: UU.str(),
+              Ny: yX(UU),
+              Iy: yX(UU),
+              py: rU(UU),
+              ty: rU(UU),
+              gy: rU(UU),
+              ky: rU(UU),
+              Gy: rU(UU),
+              By: yX(UU),
+              Zy: yX(UU),
+              Ry: rU(UU),
+              Py: rU(UU),
+              Wy: rU(UU)
+            }
+          }(XU);
+        case kU:
+          return XU.str();
+        case GU:
+          return XU.long();
+        case BU:
+          return function(UU) {
+            return {
+              uQ: UU.long(),
+              fQ: UU.str(),
+              iQ: UU.float()
+            }
+          }(XU);
+        case ZU:
+          return function(UU) {
+            return {
+              lU: UU.bool(),
+              xU: rU(UU),
+              JU: UU.str(),
+              jU: pX(UU),
+              KU: pX(UU),
+              bU: UU.bool(),
+              TU: UU.long(),
+              hU: aX(UU)
+            }
+          }(XU);
+        case RU:
+          return function(UU) {
+            return {
+              DU: rU(UU)
+            }
+          }(XU);
+        case PU:
+          return function(UU) {
+            return {
+              iX: UU.str(),
+              HX: UU.str(),
+              MX: tX(UU),
+              wQ: UU.str(),
+              qQ: TU(UU),
+              OQ: UU.float()
+            }
+          }(XU);
+        case WU:
+          return function(UU) {
+            return {
+              iX: UU.str(),
+              HX: UU.str(),
+              MX: tX(UU)
+            }
+          }(XU);
+        case dU:
+          return function(UU) {
+            return UU.AY(gX)
+          }(XU);
+        case LU:
+          return function(UU) {
+            return {
+              KQ: GX(UU),
+              XA: nU(UU)
+            }
+          }(XU);
+        case eU:
+          return function(UU) {
+            return {
+              uy: UU.bool(),
+              iy: rU(UU),
+              Hy: ZX(UU),
+              vy: iX(UU)
+            }
+          }(XU);
+        default:
+          throw new Error(`no reader for to-client message ${UU}`)
+      }
+    }
+
+    function wU(UU) {
       return {
-        name: SM.name,
-        surface: {
-          positions: Int32Array.from(GM),
-          colours: Uint8Array.from(eM),
-          count: GM.length / 3
-        },
-        columnTops: [...UM.values()]
+        entityName: UU.str()
       }
     }
 
-    function CM(MM) {
-      if (0 === MM) return !0;
-      const rM = nM.k[MM];
-      return void 0 === rM || rM.CH || rM.transTex || !1 === rM.solid
+    function qU(UU) {
+      const XU = UU.index(4);
+      return 0 === XU ? UU.str() : 1 === XU ? UU.long() : 2 === XU ? UU.bool() : wU(UU)
     }
 
-    function eM(MM) {
-      let rM = 1 / 0,
-        iM = -1 / 0,
-        OM = 1 / 0,
-        SM = -1 / 0;
-      for (const {
-          chunkX: hM,
-          chunkZ: JM,
-          heights: dM
-        }
-        of MM) dM.forEach(((MM, jM) => {
-        if (MM === EM) return;
-        const aM = hM * lM + jM % lM,
-          PM = JM * lM + Math.floor(jM / lM);
-        rM = Math.min(rM, aM), iM = Math.max(iM, aM), OM = Math.min(OM, PM), SM = Math.max(SM, PM)
-      }));
-      const jM = iM - rM + 1,
-        aM = SM - OM + 1,
-        PM = Math.max(1, Math.ceil(jM / yM), Math.ceil(aM / yM)),
-        nM = Math.ceil(jM / PM),
-        QM = Math.ceil(aM / PM),
-        zM = document.createElement("canvas");
-      zM.width = nM, zM.height = QM;
-      const LM = zM.getContext("2d");
-      if (!LM) throw new Error("Couldn't draw the schematic from above.");
-      const mM = LM.createImageData(nM, QM),
-        HM = new Int32Array(nM * QM).fill(EM);
-      for (const {
-          chunkX: hM,
-          chunkZ: JM,
-          heights: dM,
-          colours: yM
-        }
-        of MM) dM.forEach(((MM, rM) => {
-        const SM = hM * lM + rM % lM,
-          jM = JM * lM + Math.floor(rM / lM),
-          aM = Math.floor((jM - OM) / PM) * nM + Math.floor((iM - SM) / PM);
-        MM === EM || MM <= HM[aM] || (HM[aM] = MM, mM.data.set(yM.subarray(3 * rM, 3 * rM + 3), 4 * aM), mM.data[4 * aM + 3] = 255)
-      }));
-      return LM.putImageData(mM, 0, 0), {
-        maxX: iM,
-        minZ: OM,
-        width: nM * PM,
-        depth: QM * PM,
-        canvas: zM
+    function OU(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return UU.map(qU)
+      }(UU)
+    }
+
+    function SU(UU) {
+      return {
+        translationKey: UU.str(),
+        params: OU(UU)
       }
     }
 
-    function bM() {
-      return new Promise((MM => {
-        setTimeout(MM, 0)
+    function rU(UU) {
+      return 0 === UU.index(2) ? null : UU.str()
+    }
+
+    function uU(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          color: rU(UU),
+          colour: rU(UU),
+          fontSize: rU(UU)
+        }
+      }(UU)
+    }
+
+    function fU(UU) {
+      return {
+        icon: UU.str(),
+        style: uU(UU)
+      }
+    }
+
+    function iU(UU) {
+      const XU = UU.index(3);
+      return 0 === XU ? {
+        string: UU.str()
+      } : 1 === XU ? {
+        styledEntityName: wU(UU)
+      } : {
+        styledTranslatedText: SU(UU)
+      }
+    }
+
+    function HU(UU) {
+      const XU = UU.index(3);
+      return 0 === XU ? null : 1 === XU ? UU.str() : UU.long()
+    }
+
+    function MU(UU) {
+      return 0 === UU.index(2) ? null : UU.float()
+    }
+
+    function vU(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          color: rU(UU),
+          colour: rU(UU),
+          fontWeight: HU(UU),
+          fontStyle: rU(UU),
+          fontSize: rU(UU),
+          opacity: MU(UU)
+        }
+      }(UU)
+    }
+
+    function VU(UU) {
+      return {
+        str: iU(UU),
+        style: vU(UU),
+        clickableUrl: rU(UU)
+      }
+    }
+
+    function sU(UU) {
+      return UU.str()
+    }
+
+    function nU(UU) {
+      return UU.AY(sU)
+    }
+
+    function mU(UU) {
+      return 0 === UU.index(2) ? null : nU(UU)
+    }
+
+    function lU(UU) {
+      return {
+        type: UU.str(),
+        progress: UU.float(),
+        width: rU(UU),
+        height: rU(UU),
+        colours: mU(UU),
+        backgroundColour: rU(UU)
+      }
+    }
+
+    function xU(UU) {
+      return {
+        type: UU.str(),
+        action: UU.str(),
+        style: vU(UU)
+      }
+    }
+
+    function JU(UU) {
+      const XU = UU.index(7);
+      return 0 === XU ? {
+        string: UU.str()
+      } : 1 === XU ? {
+        entityName: wU(UU)
+      } : 2 === XU ? {
+        translatedText: SU(UU)
+      } : 3 === XU ? {
+        styledIcon: fU(UU)
+      } : 4 === XU ? {
+        VX: VU(UU)
+      } : 5 === XU ? {
+        styledProgressBar: lU(UU)
+      } : {
+        styledKeyBinding: xU(UU)
+      }
+    }
+
+    function jU(UU) {
+      return UU.AY(JU)
+    }
+    const KU = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+
+    function bU(UU) {
+      return KU[UU.index(5)]
+    }
+
+    function TU(UU) {
+      return 0 === UU.index(2) ? null : UU.double()
+    }
+
+    function hU(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          Sz: TU(UU),
+          rz: UU.double(),
+          uz: UU.double(),
+          fz: UU.bool(),
+          description: jU(UU),
+          iz: UU.str(),
+          scale: TU(UU),
+          rotation: TU(UU)
+        }
+      }(UU)
+    }
+
+    function UX(UU) {
+      return 0 === UU.index(2) ? null : UU.bool()
+    }
+
+    function XX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          vz: UU.double(),
+          icon: UU.str(),
+          label: jU(UU),
+          Vz: UU.bool(),
+          scale: TU(UU),
+          rotation: TU(UU),
+          sz: UX(UU)
+        }
+      }(UU)
+    }
+
+    function zX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          Sz: TU(UU),
+          mz: UU.double(),
+          lz: UU.double(),
+          xz: UU.double(),
+          gravity: UU.double(),
+          Jz: UU.double(),
+          jz: UU.double(),
+          Kz: UU.double(),
+          fz: UU.bool(),
+          description: jU(UU),
+          icon: rU(UU)
+        }
+      }(UU)
+    }
+
+    function cX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          speed: UU.double(),
+          Tz: UU.double(),
+          label: jU(UU),
+          icon: rU(UU),
+          scale: TU(UU),
+          rotation: TU(UU)
+        }
+      }(UU)
+    }
+
+    function yX(UU) {
+      return 0 === UU.index(2) ? null : UU.long()
+    }
+
+    function QX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          Uc: UU.long(),
+          Xc: UU.double(),
+          zc: UU.double(),
+          yc: yX(UU),
+          label: jU(UU),
+          icon: rU(UU)
+        }
+      }(UU)
+    }
+
+    function AX(UU) {
+      return {
+        type: bU(UU),
+        progressBar: hU(UU),
+        timedClick: XX(UU),
+        gravityBar: zX(UU),
+        precisionBar: cX(UU),
+        rhythmClick: QX(UU)
+      }
+    }
+    const FX = ["playerGone", "rateLimited"];
+
+    function oX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return FX[UU.index(2)]
+      }(UU)
+    }
+
+    function DX(UU) {
+      return UU.float()
+    }
+
+    function EX(UU) {
+      return UU.AY(DX)
+    }
+
+    function YX(UU) {
+      return 0 === UU.index(2) ? null : EX(UU)
+    }
+
+    function NX(UU) {
+      return 0 === UU.index(2) ? null : jU(UU)
+    }
+
+    function IX(UU) {
+      return UU.long()
+    }
+
+    function pX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return UU.AY(IX)
+      }(UU)
+    }
+
+    function aX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          XX: UU.str(),
+          zX: UU.long()
+        }
+      }(UU)
+    }
+
+    function tX(UU) {
+      const XU = UU.index(3);
+      return 0 === XU ? null : 1 === XU ? UU.str() : SU(UU)
+    }
+
+    function gX(UU) {
+      return {
+        AU: UU.str(),
+        FU: UU.str(),
+        oU: UU.str()
+      }
+    }
+
+    function kX(UU) {
+      return {
+        bQ: UU.str(),
+        TQ: rU(UU),
+        hQ: rU(UU),
+        UA: nU(UU)
+      }
+    }
+
+    function GX(UU) {
+      return UU.AY(kX)
+    }
+
+    function BX(UU) {
+      return {
+        My: UU.str(),
+        x: UU.long(),
+        y: UU.long(),
+        z: UU.long()
+      }
+    }
+
+    function ZX(UU) {
+      return UU.AY(BX)
+    }
+
+    function RX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          EQ: UU.float(),
+          YQ: UU.long(),
+          NQ: UU.long()
+        }
+      }(UU)
+    }
+
+    function PX(UU) {
+      return {
+        blockName: UU.str(),
+        zQ: UU.bool(),
+        cQ: UU.bool(),
+        yQ: UU.bool(),
+        QQ: UU.float(),
+        AQ: UU.float(),
+        FQ: UU.long(),
+        oQ: RX(UU)
+      }
+    }
+
+    function WX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return UU.AY(PX)
+      }(UU)
+    }
+
+    function dX(UU) {
+      return {
+        Ty: UU.str(),
+        hy: WX(UU)
+      }
+    }
+
+    function LX(UU) {
+      return {
+        blockName: UU.str(),
+        frequency: UU.float()
+      }
+    }
+
+    function eX(UU) {
+      return UU.AY(LX)
+    }
+
+    function CX(UU) {
+      return {
+        aQ: UU.str(),
+        tQ: UU.str(),
+        frequency: UU.float(),
+        gQ: eX(UU)
+      }
+    }
+
+    function wX(UU) {
+      return UU.AY(CX)
+    }
+
+    function qX(UU) {
+      return {
+        blockName: UU.str(),
+        radius: UU.long(),
+        ZQ: UU.long(),
+        my: UU.long(),
+        ly: UU.long(),
+        RQ: UU.float()
+      }
+    }
+
+    function OX(UU) {
+      return UU.AY(qX)
+    }
+
+    function SX(UU) {
+      return {
+        my: UU.long(),
+        ly: UU.long(),
+        xy: UU.long(),
+        Jy: UU.bool(),
+        jy: dX(UU),
+        IQ: wX(UU),
+        GQ: OX(UU)
+      }
+    }
+
+    function rX(UU) {
+      return UU.AY(SX)
+    }
+
+    function uX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          name: UU.str(),
+          eQ: rU(UU)
+        }
+      }(UU)
+    }
+
+    function fX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          terrain: uX(UU),
+          CQ: OX(UU)
+        }
+      }(UU)
+    }
+
+    function iX(UU) {
+      return 0 === UU.index(2) ? null : function(UU) {
+        return {
+          layers: rX(UU),
+          WQ: fX(UU)
+        }
+      }(UU)
+    }
+  },
+  41667: (UU, XU, zU) => {
+    zU.d(XU, {
+      $: () => GU,
+      A: () => PU,
+      B: () => wU,
+      D: () => BU,
+      G: () => ZU,
+      J: () => tU,
+      N: () => LU,
+      Q: () => OU,
+      U: () => pU,
+      V: () => rU,
+      W: () => kU,
+      Y: () => gU,
+      b: () => yU,
+      c: () => SU,
+      db: () => RU,
+      e: () => qU,
+      i: () => IU,
+      m: () => aU,
+      o: () => CU,
+      r: () => WU,
+      v: () => eU,
+      y: () => dU
+    });
+    var cU = zU(3318);
+    const yU = {
+      Chat: 49,
+      UiRequestResponded: 91,
+      CodeCollab: 89,
+      SetCustomLobbyBlock: 60,
+      UpdateBook: 56,
+      UpdateBoard: 33,
+      UpdateMyCosmetic: 45,
+      PlayEmote: 90,
+      ReqDiscordReportKey: 9,
+      UserReport: 11,
+      LobbyReport: 12,
+      CustomGameReport: 13,
+      IgnoreUser: 34,
+      ShopMenuChanged: 26,
+      GeneralCookieSet: 72,
+      CompleteTask: 69,
+      OpenIronChest: 80,
+      ChangeIronChestPasskey: 81,
+      StopSleeping: 78,
+      AnalyticsUpdate: 3,
+      UiRequestResp: 15,
+      QteResponse: 16,
+      ItemBought: 25,
+      LeaderboardRequest: 40,
+      UpdateNameTag: 53,
+      LobbyManage: 96
+    };
+
+    function QU(UU, XU) {
+      return !ArrayBuffer.isView(UU) || UU instanceof DataView ? Array.isArray(UU) ? UU.map((UU => XU(UU))) : UU : Array.from(UU, (UU => XU(UU)))
+    }
+
+    function AU(UU) {
+      if ("string" !== typeof UU) return UU;
+      for (let XU = 0; XU < UU.length; XU++) {
+        const zU = UU.charCodeAt(XU);
+        if (zU >= 55296 && zU <= 57343) return oU.decode(FU.encode(UU))
+      }
+      return UU
+    }
+    const FU = new TextEncoder,
+      oU = new TextDecoder;
+
+    function DU(UU) {
+      return UU
+    }
+    let EU;
+
+    function YU(UU) {
+      return null === UU || "object" !== typeof UU ? UU : [AU(UU.policy), AU(UU.ZD)]
+    }
+
+    function NU(UU) {
+      return null === UU || "object" !== typeof UU ? UU : [QU(UU.jU, DU), QU(UU.uA, DU)]
+    }
+
+    function IU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [AU(XU.TE), AU(XU.hE)];
+      var XU
+    }
+
+    function pU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [XU.id, XU.KD];
+      var XU
+    }
+
+    function aU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [XU.Ey, AU(XU.Yy), XU.Ny, AU(XU.ty), XU.By, XU.Zy, XU.zD, AU(XU.cD), AU(XU.yD)];
+      var XU
+    }
+
+    function tU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [QU(XU.cF, DU), XU.yF];
+      var XU
+    }
+
+    function gU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [QU(XU.ED, (UU => AU(UU))), AU(XU.YD), XU.ND];
+      var XU
+    }
+
+    function kU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [QU(XU.tD, DU), AU(XU.gD), XU.kD];
+      var XU
+    }
+
+    function GU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [AU(XU.FU), AU(XU.oU)];
+      var XU
+    }
+
+    function BU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [AU(XU.GA)];
+      var XU
+    }
+
+    function ZU(UU) {
+      return AU(UU)
+    }
+
+    function RU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [AU(XU.GD), AU(XU.BD), AU(XU.policy), AU(XU.ZD)];
+      var XU
+    }
+
+    function PU(UU) {
+      return YU(UU)
+    }
+
+    function WU(UU) {
+      return YU(UU)
+    }
+
+    function dU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [AU(XU.bD)];
+      var XU
+    }
+
+    function LU(UU) {
+      return UU
+    }
+
+    function eU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [AU(XU.pA), AU(XU.aA)];
+      var XU
+    }
+
+    function CU(UU) {
+      return AU(UU)
+    }
+
+    function wU(UU) {
+      return NU(UU)
+    }
+
+    function qU(UU) {
+      return NU(UU)
+    }
+
+    function OU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [AU(XU.xD)];
+      var XU
+    }
+
+    function SU(UU) {
+      return (EU ??= (0, cU.d)().map((UU => UU.name)), EU).map((XU => {
+        return "string" === typeof(zU = UU[XU]) ? AU(zU) : QU(zU, DU);
+        var zU
       }))
     }
-  },
-  40543: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM
-    });
-    var OM = iM(40551);
-    async function SM() {
-      const {
-        averageColors: MM
-      } = await iM.e(231).then((() => iM(35131)));
-      return new OM.c(MM)
+
+    function rU(UU) {
+      return null === (XU = UU) || "object" !== typeof XU ? XU : [XU.iA, XU.HA, XU.MA];
+      var XU
     }
   },
-  40551: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => PM,
-      g: () => aM
+  9894: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => yU,
+      f: () => QU
     });
-    var OM = iM(9816);
-    const SM = {
-        Water: [63, 118, 228],
-        Lava: [232, 110, 30]
-      },
-      jM = [150, 150, 150],
-      aM = -2147483648;
-    class PM {
-      constructor(MM) {
-        this.averages = MM, this.byId = new Map
-      }
-      get(MM) {
-        var rM, iM, aM, PM, nM;
-        const QM = this.byId.get(MM);
-        if (void 0 !== QM) return QM;
-        const zM = null !== (rM = null === (iM = OM.k[MM]) || void 0 === iM ? void 0 : iM.name) && void 0 !== rM ? rM : "",
-          LM = zM.split("|")[0],
-          mM = null !== (aM = this.averages[zM]) && void 0 !== aM ? aM : this.averages[LM],
-          HM = null !== (PM = null !== (nM = null === mM || void 0 === mM ? void 0 : mM[0]) && void 0 !== nM ? nM : SM[LM]) && void 0 !== PM ? PM : 0 === (null === mM || void 0 === mM ? void 0 : mM.length) ? null : jM;
-        return this.byId.set(MM, HM), HM
-      }
-      getDrawnIds() {
-        const MM = new Uint8Array(65536);
-        for (let rM = 1; rM < 65536; rM++) void 0 !== OM.k[rM] && null !== this.get(rM) && (MM[rM] = 1);
-        return MM
-      }
-      drawPixel(MM, rM, iM, OM, SM, jM) {
-        const PM = function(MM, rM, iM) {
-            const OM = MM - rM + (MM - iM);
-            return Math.max(.65, Math.min(1.2, .97 + .055 * OM))
-          }(OM, SM === aM ? OM : SM, jM === aM ? OM : jM),
-          nM = this.get(iM);
-        MM[rM] = nM[0] * PM, MM[rM + 1] = nM[1] * PM, MM[rM + 2] = nM[2] * PM, MM[rM + 3] = 255
-      }
-    }
+    var cU = zU(9834);
+    const yU = "Air",
+      QU = Object.freeze(new cU.g(yU, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  9918: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      e: () => jM
+  40101: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => QU,
+      e: () => FU
     });
-    var OM = iM(9863);
-    const SM = "Air",
-      jM = Object.freeze(new OM.c(SM, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var cU = zU(344),
+      yU = zU(4895);
+    const QU = new Set(yU.m),
+      AU = new Map;
+
+    function FU(UU, XU) {
+      let zU = AU.get(XU);
+      void 0 === zU && (zU = new Map, AU.set(XU, zU));
+      let yU = zU.get(UU);
+      return void 0 === yU && (yU = `${UU}${(0,cU.y)(XU)}`, zU.set(UU, yU)), yU
+    }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,199 +1,199 @@
 export const id = 110;
 export const ids = [108, 110];
 export const modules = {
-  37390: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      countDecodesAs: () => LM,
-      decodedAudio: () => mM
+  37148: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      countDecodesAs: () => YU,
+      decodedAudio: () => NU
     });
-    var OM = iM(3291),
-      SM = iM(5265);
-    const jM = SM.Howler,
-      aM = new Map;
-    let PM = 0;
-    const nM = {
+    var cU = zU(3258),
+      yU = zU(5378);
+    const QU = yU.Howler,
+      AU = new Map;
+    let FU = 0;
+    const oU = {
         song: 0,
         sound: 0
       },
-      QM = new WeakMap,
-      zM = new WeakSet;
+      DU = new WeakMap,
+      EU = new WeakSet;
 
-    function LM(MM, rM) {
-      return QM.set(MM, rM), MM
+    function YU(UU, XU) {
+      return DU.set(UU, XU), UU
     }
 
-    function mM() {
+    function NU() {
       return {
-        bytes: PM,
-        songsDecoded: nM.song,
-        soundsDecoded: nM.sound
+        bytes: FU,
+        songsDecoded: oU.song,
+        soundsDecoded: oU.sound
       }
     }
 
-    function HM(MM) {
-      if (zM.has(MM)) return;
-      zM.add(MM);
-      const rM = 1 === MM.decodeAudioData.length,
-        iM = MM.decodeAudioData.bind(MM);
-      MM.decodeAudioData = (MM, OM, SM) => {
-        const zM = MM => {
-          const rM = jM._howls.filter((MM => "loaded" !== MM._state));
+    function IU(UU) {
+      if (EU.has(UU)) return;
+      EU.add(UU);
+      const XU = 1 === UU.decodeAudioData.length,
+        zU = UU.decodeAudioData.bind(UU);
+      UU.decodeAudioData = (UU, cU, yU) => {
+        const EU = UU => {
+          const XU = QU._howls.filter((UU => "loaded" !== UU._state));
           try {
-            null === OM || void 0 === OM || OM(MM)
+            null === cU || void 0 === cU || cU(UU)
           } finally {
-            const iM = rM.find((MM => "loaded" === MM._state));
-            void 0 !== iM && "string" === typeof iM._src && function(MM, rM, iM) {
-              var OM;
-              PM += iM - (null !== (OM = aM.get(rM)) && void 0 !== OM ? OM : 0), aM.set(rM, iM);
-              const SM = QM.get(MM);
-              void 0 !== SM && nM[SM]++
-            }(iM, iM._src, MM.length * MM.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const zU = XU.find((UU => "loaded" === UU._state));
+            void 0 !== zU && "string" === typeof zU._src && function(UU, XU, zU) {
+              var cU;
+              FU += zU - (null !== (cU = AU.get(XU)) && void 0 !== cU ? cU : 0), AU.set(XU, zU);
+              const yU = DU.get(UU);
+              void 0 !== yU && oU[yU]++
+            }(zU, zU._src, UU.length * UU.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return MM
+          return UU
         };
-        if (!rM) return iM(MM, zM, SM);
-        const LM = iM(MM).then(zM);
-        return LM.catch((MM => {
-          null === SM || void 0 === SM || SM(MM)
-        })), LM
+        if (!XU) return zU(UU, EU, yU);
+        const YU = zU(UU).then(EU);
+        return YU.catch((UU => {
+          null === yU || void 0 === yU || yU(UU)
+        })), YU
       }
-    }(0, OM.g)(mM);
-    const hM = SM.Howl.prototype,
-      JM = hM.init;
-    hM.init = function(MM) {
-      return SM.Howler.volume(), jM.ctx && HM(jM.ctx), JM.call(this, MM)
+    }(0, cU.c)(NU);
+    const pU = yU.Howl.prototype,
+      aU = pU.init;
+    pU.init = function(UU) {
+      return yU.Howler.volume(), QU.ctx && IU(QU.ctx), aU.call(this, UU)
     };
-    const dM = hM.unload;
-    hM.unload = function() {
-      const MM = this._src,
-        rM = dM.call(this);
-      if ("string" !== typeof MM) return rM;
-      const iM = aM.get(MM);
-      return void 0 !== iM && function(MM) {
-        return !jM._howls.some((rM => rM._src === MM || "string" === typeof rM._src && MM.indexOf(rM._src) >= 0))
-      }(MM) && (aM.delete(MM), PM -= iM), rM
+    const tU = pU.unload;
+    pU.unload = function() {
+      const UU = this._src,
+        XU = tU.call(this);
+      if ("string" !== typeof UU) return XU;
+      const zU = AU.get(UU);
+      return void 0 !== zU && function(UU) {
+        return !QU._howls.some((XU => XU._src === UU || "string" === typeof XU._src && UU.indexOf(XU._src) >= 0))
+      }(UU) && (AU.delete(UU), FU -= zU), XU
     }
   },
-  5265: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      Howl: () => SM.Howl,
-      Howler: () => SM.Howler,
-      musicOutput: () => dM,
-      readyAudioContext: () => yM
+  5378: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      Howl: () => yU.Howl,
+      Howler: () => yU.Howler,
+      musicOutput: () => tU,
+      readyAudioContext: () => gU
     });
-    var OM, SM = iM(5269),
-      jM = iM(3839),
-      aM = iM(5026);
-    const PM = SM.Howler;
+    var cU, yU = zU(5383),
+      QU = zU(3837),
+      AU = zU(5092);
+    const FU = yU.Howler;
 
-    function nM() {
-      var MM, rM;
-      if (PM.ctx || !PM.usingWebAudio || "undefined" === typeof AudioContext || !(0, aM.k)()) return;
-      const iM = navigator.audioSession;
-      let OM;
-      "auto" === (null === iM || void 0 === iM ? void 0 : iM.type) && (iM.type = "ambient");
+    function oU() {
+      var UU, XU;
+      if (FU.ctx || !FU.usingWebAudio || "undefined" === typeof AudioContext || !(0, AU.j)()) return;
+      const zU = navigator.audioSession;
+      let cU;
+      "auto" === (null === zU || void 0 === zU ? void 0 : zU.type) && (zU.type = "ambient");
       try {
-        OM = new AudioContext({
+        cU = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const SM = OM.createGain();
-      SM.gain.setValueAtTime(PM._muted ? 0 : null !== (MM = PM._volume) && void 0 !== MM ? MM : 1, OM.currentTime), SM.connect(OM.destination), PM.ctx = OM, PM.masterGain = SM, null === (rM = PM._setup) || void 0 === rM || rM.call(PM)
+      const yU = cU.createGain();
+      yU.gain.setValueAtTime(FU._muted ? 0 : null !== (UU = FU._volume) && void 0 !== UU ? UU : 1, cU.currentTime), yU.connect(cU.destination), FU.ctx = cU, FU.masterGain = yU, null === (XU = FU._setup) || void 0 === XU || XU.call(FU)
     }
-    PM._mobileUnloaded = !0;
-    const QM = PM.volume.bind(SM.Howler);
-    PM.volume = function() {
-      return nM(), QM(...arguments)
+    FU._mobileUnloaded = !0;
+    const DU = FU.volume.bind(yU.Howler);
+    FU.volume = function() {
+      return oU(), DU(...arguments)
     };
-    const zM = PM.mute.bind(SM.Howler);
-    PM.mute = MM => (nM(), zM(MM));
-    const LM = SM.Howl.prototype,
-      mM = LM.init;
+    const EU = FU.mute.bind(yU.Howler);
+    FU.mute = UU => (oU(), EU(UU));
+    const YU = yU.Howl.prototype,
+      NU = YU.init;
 
-    function HM() {
-      for (; PM._html5AudioPool.length < PM.html5PoolSize;) {
-        const MM = new Audio;
-        MM._unlocked = !0, PM._releaseHtml5Audio(MM)
+    function IU() {
+      for (; FU._html5AudioPool.length < FU.html5PoolSize;) {
+        const UU = new Audio;
+        UU._unlocked = !0, FU._releaseHtml5Audio(UU)
       }
-      for (const rM of PM._howls)
-        if (!rM._webAudio)
-          for (const iM of rM._getSoundIds()) {
-            var MM;
-            const OM = null === (MM = rM._soundById(iM)) || void 0 === MM ? void 0 : MM._node;
-            OM && !OM._unlocked && (OM._unlocked = !0, OM.load())
+      for (const XU of FU._howls)
+        if (!XU._webAudio)
+          for (const zU of XU._getSoundIds()) {
+            var UU;
+            const cU = null === (UU = XU._soundById(zU)) || void 0 === UU ? void 0 : UU._node;
+            cU && !cU._unlocked && (cU._unlocked = !0, cU.load())
           }
     }
-    LM.init = function(MM) {
-      return nM(), mM.call(this, MM)
-    }, (0, aM.k)() && (PM._unlockAudio = () => {
-      const MM = PM.ctx;
-      if (PM._audioUnlocked || !MM) return;
-      PM.autoUnlock = !1;
-      const rM = MM.createBuffer(1, 1, 22050);
-      PM._scratchBuffer = rM;
-      const iM = new AbortController;
-      let OM = "afterPaint";
-      const SM = () => {
-          var OM;
-          if (PM._audioUnlocked) return;
-          null === (OM = PM._autoResume) || void 0 === OM || OM.call(PM);
-          const SM = MM.createBufferSource();
-          SM.buffer = rM, SM.connect(MM.destination), SM.start(0), MM.resume().catch((() => {})), SM.onended = () => {
-            SM.disconnect(0), PM._audioUnlocked = !0, iM.abort();
-            for (const MM of PM._howls) MM._emit("unlock")
+    YU.init = function(UU) {
+      return oU(), NU.call(this, UU)
+    }, (0, AU.j)() && (FU._unlockAudio = () => {
+      const UU = FU.ctx;
+      if (FU._audioUnlocked || !UU) return;
+      FU.autoUnlock = !1;
+      const XU = UU.createBuffer(1, 1, 22050);
+      FU._scratchBuffer = XU;
+      const zU = new AbortController;
+      let cU = "afterPaint";
+      const yU = () => {
+          var cU;
+          if (FU._audioUnlocked) return;
+          null === (cU = FU._autoResume) || void 0 === cU || cU.call(FU);
+          const yU = UU.createBufferSource();
+          yU.buffer = XU, yU.connect(UU.destination), yU.start(0), UU.resume().catch((() => {})), yU.onended = () => {
+            yU.disconnect(0), FU._audioUnlocked = !0, zU.abort();
+            for (const UU of FU._howls) UU._emit("unlock")
           }
         },
-        nM = () => {
-          HM(), SM()
+        oU = () => {
+          IU(), yU()
         },
-        QM = rM => {
-          if (HM(), "inTap" === OM) {
-            if ("running" === MM.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), SM()
-          } else "afterPaint" === OM && (OM = "queued", (0, jM.d)(rM.timeStamp, (() => {
-            OM = "inTap", SM()
+        DU = XU => {
+          if (IU(), "inTap" === cU) {
+            if ("running" === UU.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), yU()
+          } else "afterPaint" === cU && (cU = "queued", (0, QU.d)(XU.timeStamp, (() => {
+            cU = "inTap", yU()
           })))
         };
-      for (const jM of ["touchstart", "touchend"]) document.addEventListener(jM, nM, {
+      for (const QU of ["touchstart", "touchend"]) document.addEventListener(QU, oU, {
         capture: !0,
-        signal: iM.signal
+        signal: zU.signal
       });
-      for (const jM of aM.e) document.addEventListener(jM, QM, {
+      for (const QU of AU.c) document.addEventListener(QU, DU, {
         capture: !0,
-        signal: iM.signal
+        signal: zU.signal
       })
     });
-    let hM = 0;
-    const JM = null === (OM = PM._autoSuspend) || void 0 === OM ? void 0 : OM.bind(SM.Howler);
+    let pU = 0;
+    const aU = null === (cU = FU._autoSuspend) || void 0 === cU ? void 0 : cU.bind(yU.Howler);
 
-    function dM() {
-      yM();
+    function tU() {
+      gU();
       const {
-        ctx: MM,
-        masterGain: rM
-      } = PM;
-      return MM && rM ? {
-        ctx: MM,
-        destination: rM,
-        holdAwake: MM => {
-          var rM, iM;
-          (hM += MM ? 1 : -1, MM) ? null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM): null === (iM = PM._autoSuspend) || void 0 === iM || iM.call(PM)
+        ctx: UU,
+        masterGain: XU
+      } = FU;
+      return UU && XU ? {
+        ctx: UU,
+        destination: XU,
+        holdAwake: UU => {
+          var XU, zU;
+          (pU += UU ? 1 : -1, UU) ? null === (XU = FU._autoResume) || void 0 === XU || XU.call(FU): null === (zU = FU._autoSuspend) || void 0 === zU || zU.call(FU)
         },
         wake: () => {
-          var rM;
-          "running" !== MM.state && (null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM), MM.resume().catch((() => {})))
+          var XU;
+          "running" !== UU.state && (null === (XU = FU._autoResume) || void 0 === XU || XU.call(FU), UU.resume().catch((() => {})))
         }
       } : null
     }
 
-    function yM() {
-      var MM;
-      (PM.volume(), PM.ctx && PM.autoUnlock) && (null === (MM = PM._unlockAudio) || void 0 === MM || MM.call(PM))
+    function gU() {
+      var UU;
+      (FU.volume(), FU.ctx && FU.autoUnlock) && (null === (UU = FU._unlockAudio) || void 0 === UU || UU.call(FU))
     }
-    JM && (PM._autoSuspend = () => hM > 0 ? SM.Howler : JM())
+    aU && (FU._autoSuspend = () => pU > 0 ? yU.Howler : aU())
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,73 +1,73 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  40528: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => SM
+  40288: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => yU
     });
-    const OM = .4,
-      SM = function(MM, rM, iM, SM) {
-        let jM, {
-            localPlayerId: aM
-          } = SM,
-          PM = !1,
-          nM = null,
-          QM = null,
-          zM = null,
-          LM = 1,
-          mM = null,
-          HM = 0,
-          hM = 0;
+    const cU = .4,
+      yU = function(UU, XU, zU, yU) {
+        let QU, {
+            localPlayerId: AU
+          } = yU,
+          FU = !1,
+          oU = null,
+          DU = null,
+          EU = null,
+          YU = 1,
+          NU = null,
+          IU = 0,
+          pU = 0;
 
-        function JM() {
-          if (mM) {
-            const MM = mM;
-            MM.fade(MM.getVolume(), 0, 500), setTimeout((() => {
-              MM.stop()
-            }), 500), mM = null
+        function aU() {
+          if (NU) {
+            const UU = NU;
+            UU.fade(UU.getVolume(), 0, 500), setTimeout((() => {
+              UU.stop()
+            }), 500), NU = null
           }
-          hM = 0
+          pU = 0
         }
 
-        function dM(MM) {
-          var rM;
-          if (!nM || PM || null === QM) return void(mM && JM());
-          const iM = Date.now();
-          if (!mM || iM - HM > 54e3) {
-            if (mM) {
-              const MM = mM;
-              MM.fade(MM.getVolume(), 0, 2e3), setTimeout((() => {
-                MM.stop()
+        function tU(UU) {
+          var XU;
+          if (!oU || FU || null === DU) return void(NU && aU());
+          const zU = Date.now();
+          if (!NU || zU - IU > 54e3) {
+            if (NU) {
+              const UU = NU;
+              UU.fade(UU.getVolume(), 0, 2e3), setTimeout((() => {
+                UU.stop()
               }), 2e3)
             }
-            mM = jM.playSound(aM, "crowdAmbience", OM, 1), HM = iM, hM = OM
+            NU = QU.playSound(AU, "crowdAmbience", cU, 1), IU = zU, pU = cU
           }
-          const SM = function() {
-              if (null === QM || null === zM || !nM) return 0;
-              const MM = jM.getPositionView(nM);
-              if (!MM) return 0;
-              const rM = Math.abs(MM[2] - QM),
-                iM = Math.abs(MM[2] - zM),
-                OM = Math.min(rM, iM);
-              return Math.max(0, 1 - OM / LM)
+          const yU = function() {
+              if (null === DU || null === EU || !oU) return 0;
+              const UU = QU.getPositionView(oU);
+              if (!UU) return 0;
+              const XU = Math.abs(UU[2] - DU),
+                zU = Math.abs(UU[2] - EU),
+                cU = Math.min(XU, zU);
+              return Math.max(0, 1 - cU / YU)
             }(),
-            dM = MM / 1e3;
-          hM += (OM + .6 * SM - hM) * Math.min(1, 2 * dM), null === (rM = mM) || void 0 === rM || rM.setRelativeVolume(hM)
+            tU = UU / 1e3;
+          pU += (cU + .6 * yU - pU) * Math.min(1, 2 * tU), null === (XU = NU) || void 0 === XU || XU.setRelativeVolume(pU)
         }
         return {
-          onCreate: MM => {
-            jM = MM
+          onCreate: UU => {
+            QU = UU
           },
-          onReceivedMessageFromServer: (MM, rM) => {
-            var iM;
-            "ballState" === MM ? (nM = null !== (iM = rM.eId) && void 0 !== iM ? iM : null, nM || JM()) : "frozen" === MM ? PM = rM.frozen : "pitchInfo" === MM && (QM = rM.goalZRed, zM = rM.goalZBlue, LM = Math.abs(zM - QM) / 2)
+          onReceivedMessageFromServer: (UU, XU) => {
+            var zU;
+            "ballState" === UU ? (oU = null !== (zU = XU.eId) && void 0 !== zU ? zU : null, oU || aU()) : "frozen" === UU ? FU = XU.frozen : "pitchInfo" === UU && (DU = XU.goalZRed, EU = XU.goalZBlue, YU = Math.abs(EU - DU) / 2)
           },
-          bL: MM => {
-            dM(MM)
+          LY: UU => {
+            tU(UU)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

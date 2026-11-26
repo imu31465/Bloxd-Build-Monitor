@@ -1,37 +1,49 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  9640: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      pageBody: () => OM
+  9612: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      pageBody: () => cU
     });
-    const OM = {
-      whatIs: ["Build a home, earn some gold and take life at your own pace. Bloxd Greenville is a chill social sandbox and life sim set in a laid-back town. You work jobs, play mini-games and hang out with other players, and there's no rush to do any of it."],
-      howToPlay: ["Press B to pick your starting house, then take the portal to the Town Square and start earning gold. Choose a job. You could help customers at the Market, smash blocks and buildings in Demolition, dig for minerals in Mining, or try Woodcutting and Farming. Jobs level up the more you work them, so your earnings grow over time.", "Spend your gold in the shop on new houses like the Castle, Treehouse, Hobbit Hole or Japanese House. Or grab an Empty Plot and build a house of your own. You can also unlock fast travel, buy flower and wool packs, and sell the stuff you collect. Keep your mood up by resting in your bed, because a happy player earns alot more. Once your home's ready, throw a party and invite everyone over."],
-      features: ["Unlock and Switch Between Houses and Plots", "Build Your Own House on an Empty Plot", "5 Jobs to Level Up: Market, Demolition, Mining, Woodcutting and Farming", "PvP Arena and Spleef Mini-Games", "Unlock Fast Travel to Get Around Quickly", "Host Parties and Choose Who Can Visit", "Turn On PvP or Build a Parkour Course at Home"],
-      tips: ["Rest in your bed when your mood drops. Low mood means lower earnings.", "A better bed means bigger earnings, so upgrade it when you can", "Sell the items you collect in the shop for extra gold", "In Mining, head back up to sell when your backpack's full", "Some minerals need a higher Mining level, so keep levelling", "Use the booster in Demolition to multi-jump up tall buildings", "Spleef needs at least 2 players, so bring a mate", "Building a parkour course? Light blue wool is the start, yellow is a checkpoint, orange is the finish and red eliminates players"],
-      similarGames: ["plots", "classic_creative", "fishing", "classic"],
+    const cU = {
+      whatIs: ["Sharp aim and quick feet are what separate top frag from instant respawn. Bloxd Cube Warfare is a fast, free block FPS where the firefights don't stop. You can play Free-For-All, Team Deathmatch or Gun Game, and you'll unlock over 15 guns along the way. If you'd rather have objectives, kits and vehicles in big 12v12 battles, have a look at Frontline."],
+      howToPlay: ["Join a match and vote on the map. In Free-For-All it's every player for themselves. Team Deathmatch puts you on a side, and your team has to outscore the other one. Rounds last 10 minutes. Get taken down and you'll respawn with 8 seconds of invincibility, though your killstreak resets.", "Keep taking down opponents without going down yourself and you'll build killstreaks. They reward you across 3 tiers with things like extra health, more damage, faster movement or free blocks. New guns unlock in the shop. There are pistols, SMGs, shotguns, sniper rifles and LMGs, and you can take any of them into Teams or FFA. Gun Game has its own queue. Every elimination swaps your weapon for the next one, and to win you need a final takedown with the sword.", "Some matches throw in a twist. In Collect Diamonds you gather diamonds to win. Explosives keeps handing you explosives, and each takedown gets you more."],
+      features: ["Free-For-All, Team Deathmatch and Gun Game", "Over 15 Guns, Including the AK-47, AWP, Deagle, Striker-12 and GPMG", "Killstreak Rewards Across 3 Tiers", "Place Blocks for Cover with Killstreak Rewards", "Match Modifiers: Collect Diamonds and Explosives", "Maps Including Snowbase, Sienna, Cabins and More, with Map Voting", "Leaderboards and Player Stats"],
+      tips: ["Keep moving. Standing still makes you an easy target", "Go for headshots, especially once you've got the Goodaimer killstreak", "Use those 8 seconds of respawn invincibility to get back into position", "Stay alive to keep your killstreak going, because it resets when you're taken down", "Place blocks for cover, but remember every map has a build height limit", "In Collect Diamonds, shoot the diamonds around the map so they drop, then grab them", "Try every gun in Gun Game before you unlock your favourite in the shop"],
+      similarGames: ["frontline", "classic_survivalGuns", "infection", "skywars"],
       faq: [{
-        question: "What is Bloxd Greenville?",
-        answer: "A town life sim where you build a home, earn gold from jobs and play mini-games with other players."
+        question: "What is Cube Warfare?",
+        answer: "A fast block shooter with 10-minute rounds, killstreak rewards and over 15 guns to unlock."
       }, {
-        question: "How do I earn gold in Greenville?",
-        answer: "Work jobs like Market, Demolition, Mining, Woodcutting and Farming, eliminate players in the Arena and Spleef, and sell what you collect. Keep your mood up as well, because low mood cuts your earnings."
+        question: "What modes are in Cube Warfare?",
+        answer: "Free-For-All, Team Deathmatch and Gun Game. You'll be in Free-For-All by default."
       }, {
-        question: "Can I build my own house in Greenville?",
-        answer: "Yes! Pick one of the ready-made houses in the shop, or unlock an Empty Plot and build from scratch."
+        question: "How does team deathmatch work in Cube Warfare?",
+        answer: "Pick Team Deathmatch and work with your team to outscore the other side before the 10-minute round is up."
       }, {
-        question: "How do I change my house in Bloxd Greenville?",
-        answer: "Unlock new houses in the Houses section of the shop, then switch to whichever one you like."
+        question: "What is Gun Game in Bloxd Cube Warfare?",
+        answer: "It's a mode with its own queue. Each elimination upgrades your weapon, and a final takedown with the sword wins it."
       }, {
-        question: "Can my friends visit my house?",
-        answer: "Sure. Turn on Allow Entry, add friends to your whitelist, or host a party to invite everyone over. You also get to choose who's allowed to edit your home."
+        question: "How do I unlock new guns in Cube Warfare?",
+        answer: "Through the shop. Once they're unlocked you can take them into Free-For-All or Team Deathmatch, and Gun Game lets you try the lot."
       }, {
-        question: "Which mini-games are in Greenville?",
-        answer: "Spleef, where you try to make every other player fall, and the Arena, where you battle other players in PvP. Both pay out gold."
+        question: "How many guns are in Cube Warfare?",
+        answer: "Over 15. That includes the AK-47, AWP, M16, MP40, SKAR, Deagle and Striker-12."
+      }, {
+        question: "What are killstreaks in Cube Warfare?",
+        answer: "Rewards for taking down opponents without being eliminated, like Healthup, Hitem, Speedy and Autoblocks. There are 3 tiers, and your streak resets when you go down."
+      }, {
+        question: "What is Collect Diamonds?",
+        answer: "A match modifier for Free-For-All and Team Deathmatch. You need 30 diamonds to win in FFA, or 100 as a team. When someone's taken down they drop all their diamonds, so you can steal theirs. Shoot the diamonds placed around the map and they'll drop too. Those respawn every 15 seconds."
+      }, {
+        question: "What is the Explosives modifier?",
+        answer: "You keep getting explosives all match, and every takedown gives you more."
+      }, {
+        question: "What maps are in Cube Warfare?",
+        answer: "Snowbase, Sienna and Cabins, among others. You get to vote for the next one."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,262 +1,285 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  37538: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => HM,
-      i: () => hM,
-      m: () => mM,
-      p: () => LM
+  37318: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => tU,
+      e: () => gU,
+      f: () => NU,
+      h: () => YU
     });
-    var OM = iM(35017),
-      SM = iM(37542),
-      jM = iM(37544),
-      aM = iM(9328),
-      PM = iM(1516),
-      nM = iM(44),
-      QM = iM(65),
-      zM = iM(1303);
+    var cU = zU(34859),
+      yU = zU(37325),
+      QU = zU(37334),
+      AU = zU(9282),
+      FU = zU(1492),
+      oU = zU(61),
+      DU = zU(73),
+      EU = zU(1305);
 
-    function LM() {
-      var MM;
-      return (0, PM.e)(SM.e, (0, SM.t)()), (0, zM.jsx)(zM.Fragment, {
-        children: null === (MM = (0, SM.t)()) || void 0 === MM ? void 0 : MM.content
+    function YU() {
+      var UU;
+      return (0, FU.j)(yU.d, (0, yU.o)()), (0, EU.jsx)(EU.Fragment, {
+        children: null === (UU = (0, yU.o)()) || void 0 === UU ? void 0 : UU.content
       })
     }
 
-    function mM(MM) {
-      var rM;
+    function NU(UU) {
+      var XU;
       let {
-        show: iM
-      } = MM;
-      (0, PM.e)(SM.e, (0, SM.t)());
-      const QM = null === (rM = (0, SM.t)()) || void 0 === rM ? void 0 : rM.menu;
-      return (0, nM.useEffect)((() => {
-        var MM;
-        iM || (null === QM || void 0 === QM || null === (MM = QM.onClose) || void 0 === MM || MM.call(QM), (0, jM.q)())
-      }), [iM, QM]), (0, nM.useEffect)((() => iM ? (0, aM.e)(jM.y, jM.f) : void 0), [iM]), (0, zM.jsx)(OM.e, {
-        showing: iM,
+        show: zU
+      } = UU;
+      (0, FU.j)(yU.d, (0, yU.o)());
+      const DU = null === (XU = (0, yU.o)()) || void 0 === XU ? void 0 : XU.menu;
+      return (0, oU.useEffect)((() => {
+        var UU;
+        zU || (null === DU || void 0 === DU || null === (UU = DU.onClose) || void 0 === UU || UU.call(DU), (0, QU.t)())
+      }), [zU, DU]), (0, oU.useEffect)((() => zU ? (0, AU.d)(QU.x, QU.i) : void 0), [zU]), (0, EU.jsx)(cU.e, {
+        showing: zU,
         globallyUniqueKey: "clientGameMenu",
-        children: null === QM || void 0 === QM ? void 0 : QM.content
+        children: null === DU || void 0 === DU ? void 0 : DU.content
       })
     }
+    const IU = new Map,
+      pU = new Set;
 
-    function HM(MM) {
+    function aU(UU, XU) {
+      XU ? IU.set(UU, XU) : IU.delete(UU);
+      for (const zU of pU) zU()
+    }
+
+    function tU(UU) {
       let {
-        placement: rM = "bottom"
-      } = MM;
-      return (0, zM.jsx)("div", {
-        id: `clientGameHud-${rM}`,
+        placement: XU = "bottom"
+      } = UU;
+      const zU = (0, oU.useRef)(null);
+      return (0, oU.useLayoutEffect)((() => {
+        const UU = zU.current;
+        return aU(XU, UU), () => {
+          IU.get(XU) === UU && aU(XU, null)
+        }
+      }), [XU]), (0, EU.jsx)("div", {
+        ref: zU,
+        id: `clientGameHud-${XU}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function hM(MM) {
+    function gU(UU) {
       let {
-        children: rM,
-        placement: iM = "bottom"
-      } = MM;
-      const [OM, SM] = (0, nM.useState)(null);
-      return (0, nM.useEffect)((() => {
-        SM(document.getElementById(`clientGameHud-${iM}`))
-      }), [iM]), OM ? (0, QM.createPortal)(rM, OM) : null
+        children: XU,
+        placement: zU = "bottom"
+      } = UU;
+      const [cU, yU] = (0, oU.useState)((() => {
+        var UU;
+        return null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null
+      }));
+      return (0, oU.useEffect)((() => {
+        const UU = () => {
+          var UU;
+          yU(null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null)
+        };
+        return pU.add(UU), UU(), () => {
+          pU.delete(UU)
+        }
+      }), [zU]), cU ? (0, DU.createPortal)(XU, cU) : null
     }
   },
-  35017: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM
+  34859: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU
     });
-    var OM = iM(4919),
-      SM = iM(4923);
+    var cU = zU(4977),
+      yU = zU(4982);
 
-    function jM(MM) {
+    function QU(UU) {
       let {
-        children: rM,
-        showing: iM,
-        globallyUniqueKey: jM,
-        alwaysMountChildren: aM = !1,
-        doGameplayStartStopOnShow: PM = !0,
-        keepsMovement: nM = !1
-      } = MM;
-      return (0, SM.c)(!0, iM, jM, nM), (0, OM.c)(PM, iM), iM || aM ? rM : null
+        children: XU,
+        showing: zU,
+        globallyUniqueKey: QU,
+        alwaysMountChildren: AU = !1,
+        doGameplayStartStopOnShow: FU = !0,
+        keepsMovement: oU = !1
+      } = UU;
+      return (0, yU.c)(!0, zU, QU, oU), (0, cU.d)(FU, zU), zU || AU ? XU : null
     }
   },
-  9328: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM,
-      e: () => SM
+  9282: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU,
+      d: () => yU
     });
-    let OM = null;
-    const SM = function(MM) {
-        const rM = {
-          cycle: MM,
+    let cU = null;
+    const yU = function(UU) {
+        const XU = {
+          cycle: UU,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return OM = rM, () => {
-          OM === rM && (OM = null)
+        return cU = XU, () => {
+          cU === XU && (cU = null)
         }
       },
-      jM = () => {
-        var MM;
-        return null !== (MM = OM) && void 0 !== MM && MM.canCycle() ? OM.cycle : null
+      QU = () => {
+        var UU;
+        return null !== (UU = cU) && void 0 !== UU && UU.canCycle() ? cU.cycle : null
       }
   },
-  37544: (MM, rM, iM) => {
-    iM.d(rM, {
-      B: () => lM,
-      b: () => jM,
-      f: () => JM,
-      i: () => dM,
-      j: () => PM,
-      m: () => mM,
-      q: () => yM,
-      u: () => LM,
-      x: () => EM,
-      y: () => hM
+  37334: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU,
+      i: () => aU,
+      l: () => tU,
+      o: () => FU,
+      r: () => NU,
+      t: () => gU,
+      v: () => YU,
+      w: () => GU,
+      x: () => pU,
+      y: () => kU
     });
-    var OM = iM(19),
-      SM = iM(22);
-    const jM = "clientGameInventoryButtonsChanged",
-      aM = new Map;
+    var cU = zU(27),
+      yU = zU(31);
+    const QU = "clientGameInventoryButtonsChanged",
+      AU = new Map;
 
-    function PM() {
-      return [...aM.values()].sort(((MM, rM) => {
-        var iM, OM;
-        return (null !== (iM = MM.order) && void 0 !== iM ? iM : 0) - (null !== (OM = rM.order) && void 0 !== OM ? OM : 0)
+    function FU() {
+      return [...AU.values()].sort(((UU, XU) => {
+        var zU, cU;
+        return (null !== (zU = UU.order) && void 0 !== zU ? zU : 0) - (null !== (cU = XU.order) && void 0 !== cU ? cU : 0)
       }))
     }
-    let nM = null;
+    let oU = null;
 
-    function QM(MM) {
-      nM = MM
+    function DU(UU) {
+      oU = UU
     }
-    let zM = !1;
+    let EU = !1;
 
-    function LM(MM) {
-      zM = !0;
+    function YU(UU) {
+      EU = !0;
       try {
-        MM.onClick()
+        UU.onClick()
       } finally {
-        zM = !1
+        EU = !1
       }
-      MM.panel && "clientGame" === OM.d.get("openInGameMenuName") && QM(MM.id)
+      UU.panel && "clientGame" === cU.e.get("openInGameMenuName") && DU(UU.id)
     }
 
-    function mM() {
-      return zM
+    function NU() {
+      return EU
     }
 
-    function HM() {
-      return PM().filter((MM => MM.panel && !MM.disabled))
+    function IU() {
+      return FU().filter((UU => UU.panel && !UU.disabled))
     }
 
-    function hM(MM) {
-      const rM = HM(),
-        iM = rM.findIndex((MM => MM.id === nM));
-      return !(iM < 0 || rM.length < 2) && (LM(rM[(iM + MM + rM.length) % rM.length]), !0)
+    function pU(UU) {
+      const XU = IU(),
+        zU = XU.findIndex((UU => UU.id === oU));
+      return !(zU < 0 || XU.length < 2) && (YU(XU[(zU + UU + XU.length) % XU.length]), !0)
     }
 
-    function JM() {
-      return null !== nM && HM().length > 1
+    function aU() {
+      return null !== oU && IU().length > 1
     }
 
-    function dM() {
-      QM(null)
+    function tU() {
+      DU(null)
     }
 
-    function yM() {
-      "inventory" !== OM.d.get("openInGameMenuName") && QM(null)
+    function gU() {
+      "inventory" !== cU.e.get("openInGameMenuName") && DU(null)
     }
 
-    function lM() {
-      const MM = nM;
-      return QM(null), MM
+    function kU() {
+      const UU = oU;
+      return DU(null), UU
     }
 
-    function EM(MM) {
-      return aM.set(MM.id, MM), SM.i.Tz(jM, PM(), !0), () => {
-        aM.get(MM.id) === MM && (aM.delete(MM.id), SM.i.Tz(jM, PM()))
+    function GU(UU) {
+      return AU.set(UU.id, UU), yU.k.UY(QU, FU(), !0), () => {
+        AU.get(UU.id) === UU && (AU.delete(UU.id), yU.k.UY(QU, FU()))
       }
     }
   },
-  37542: (MM, rM, iM) => {
-    iM.d(rM, {
-      A: () => HM,
-      C: () => zM,
-      e: () => PM,
-      g: () => lM,
-      k: () => dM,
-      n: () => yM,
-      p: () => mM,
-      t: () => QM,
-      w: () => JM
+  37325: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => FU,
+      h: () => kU,
+      j: () => tU,
+      l: () => gU,
+      n: () => NU,
+      o: () => DU,
+      r: () => aU,
+      t: () => IU,
+      u: () => EU
     });
-    var OM = iM(19),
-      SM = iM(22),
-      jM = iM(1313),
-      aM = iM(37544);
-    const PM = "clientGameUiChanged";
-    let nM = null;
+    var cU = zU(27),
+      yU = zU(31),
+      QU = zU(1310),
+      AU = zU(37334);
+    const FU = "clientGameUiChanged";
+    let oU = null;
 
-    function QM() {
-      return nM
+    function DU() {
+      return oU
     }
 
-    function zM(MM, rM) {
-      const iM = {
-        content: MM,
-        menu: rM
+    function EU(UU, XU) {
+      const zU = {
+        content: UU,
+        menu: XU
       };
-      return nM = iM, SM.i.Tz(PM, nM, !0), () => {
-        nM === iM && (nM = null, hM = !1, dM(), SM.i.Tz(PM, null))
+      return oU = zU, yU.k.UY(FU, oU, !0), () => {
+        oU === zU && (oU = null, pU = !1, tU(), yU.k.UY(FU, null))
       }
     }
-    let LM = null;
+    let YU = null;
 
-    function mM() {
-      return LM
+    function NU() {
+      return YU
     }
 
-    function HM(MM) {
-      return LM = MM, () => {
-        LM === MM && (LM = null)
+    function IU(UU) {
+      return YU = UU, () => {
+        YU === UU && (YU = null)
       }
     }
-    let hM = !1;
+    let pU = !1;
 
-    function JM() {
-      const MM = OM.d.get("openInGameMenuName");
-      "clientGame" !== MM && (hM = "inventory" === MM), (0, aM.m)() || (0, aM.i)(), (0, jM.z)(jM.e), OM.d.set({
+    function aU() {
+      const UU = cU.e.get("openInGameMenuName");
+      "clientGame" !== UU && (pU = "inventory" === UU), (0, AU.r)() || (0, AU.l)(), (0, QU.u)(QU.c), cU.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function dM() {
-      EM(!1)
+    function tU() {
+      GU(!1)
     }
 
-    function yM() {
-      EM(hM)
+    function gU() {
+      GU(pU)
     }
 
-    function lM() {
-      hM && EM(!1)
+    function kU() {
+      pU && GU(!1)
     }
 
-    function EM(MM) {
-      "clientGame" === OM.d.get("openInGameMenuName") && OM.d.set({
-        openInGameMenuName: MM ? "inventory" : null
-      }), MM || (0, aM.i)(), hM = !1
+    function GU(UU) {
+      "clientGame" === cU.e.get("openInGameMenuName") && cU.e.set({
+        openInGameMenuName: UU ? "inventory" : null
+      }), UU || (0, AU.l)(), pU = !1
     }
   },
-  40563: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => cM
+  40328: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => hU
     });
-    const OM = {
+    const cU = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -266,270 +289,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var SM = iM(44),
-      jM = iM(39012),
-      aM = iM(332);
-    const PM = ["Basic", "Rare", "Super"];
+    var yU = zU(61),
+      QU = zU(38782),
+      AU = zU(344);
+    const FU = ["Basic", "Rare", "Super"];
 
-    function nM(MM, rM) {
-      return `${"Basic"===rM?"":`${rM} `}${"Simple"===MM?"":`${MM} `}Lucky Block`
+    function oU(UU, XU) {
+      return `${"Basic"===XU?"":`${XU} `}${"Simple"===UU?"":`${UU} `}Lucky Block`
     }
-    const QM = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((MM => PM.map((rM => [nM(MM, rM), {
-      category: MM,
-      rarity: rM
+    const DU = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((UU => FU.map((XU => [oU(UU, XU), {
+      category: UU,
+      rarity: XU
     }])))));
-    QM.keys();
+    DU.keys();
 
-    function zM(MM) {
-      return QM.get(MM)
+    function EU(UU) {
+      return DU.get(UU)
     }
-    const LM = "Obsidian",
-      mM = ["Cobweb"],
-      HM = [...["Red", "Blue", "Green", "Yellow"].map((MM => `${(0,aM.$)(MM)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", LM, ...mM];
+    const YU = "Obsidian",
+      NU = ["Cobweb"],
+      IU = [...["Red", "Blue", "Green", "Yellow"].map((UU => `${(0,AU._)(UU)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", YU, ...NU];
 
-    function hM(MM) {
-      return HM.includes(MM)
+    function pU(UU) {
+      return IU.includes(UU)
     }
-    var JM = iM(625);
+    var aU = zU(646);
 
-    function dM(MM, rM) {
-      const iM = zM(MM);
-      if (iM) {
-        const MM = zM(rM);
-        if (!MM) return;
-        const OM = PM.length - 1 - PM.indexOf(MM.rarity);
-        return (MM.category === iM.category ? 0 : 1) * PM.length + OM
+    function tU(UU, XU) {
+      const zU = EU(UU);
+      if (zU) {
+        const UU = EU(XU);
+        if (!UU) return;
+        const cU = FU.length - 1 - FU.indexOf(UU.rarity);
+        return (UU.category === zU.category ? 0 : 1) * FU.length + cU
       }
-      if (!hM(MM)) return;
-      if (rM === MM) return 0;
-      const OM = MM => hM(MM) && !mM.includes(MM) && MM !== LM;
-      return OM(MM) && OM(rM) ? 1 : void 0
+      if (!pU(UU)) return;
+      if (XU === UU) return 0;
+      const cU = UU => pU(UU) && !NU.includes(UU) && UU !== YU;
+      return cU(UU) && cU(XU) ? 1 : void 0
     }
-    const yM = [...Array.from({
-      length: JM.r - JM.q
-    }, ((MM, rM) => JM.q + rM)), ...Array.from({
-      length: JM.q
-    }, ((MM, rM) => rM))];
-    class lM {
-      constructor(MM) {
-        this.inventory = MM, this.pending = new Map
+    const gU = [...Array.from({
+      length: aU.s - aU.o
+    }, ((UU, XU) => aU.o + XU)), ...Array.from({
+      length: aU.o
+    }, ((UU, XU) => XU))];
+    class kU {
+      constructor(UU) {
+        this.inventory = UU, this.pending = new Map
       }
-      onPlace(MM) {
-        var rM;
-        const iM = this.inventory.selectedSlot(),
-          OM = this.inventory.itemAt(iM);
-        (null === OM || void 0 === OM ? void 0 : OM.name) === MM && (null !== (rM = OM.amount) && void 0 !== rM ? rM : 1) <= 1 && EM(MM) && this.pending.set(iM, MM)
+      onPlace(UU) {
+        var XU;
+        const zU = this.inventory.selectedSlot(),
+          cU = this.inventory.itemAt(zU);
+        (null === cU || void 0 === cU ? void 0 : cU.name) === UU && (null !== (XU = cU.amount) && void 0 !== XU ? XU : 1) <= 1 && GU(UU) && this.pending.set(zU, UU)
       }
-      onDrop(MM, rM) {
-        rM < JM.q && null === this.inventory.itemAt(rM) && EM(MM) && this.refill(rM, MM)
+      onDrop(UU, XU) {
+        XU < aU.o && null === this.inventory.itemAt(XU) && GU(UU) && this.refill(XU, UU)
       }
-      bL() {
-        const MM = [...this.pending];
+      LY() {
+        const UU = [...this.pending];
         this.pending.clear();
-        for (const [rM, iM] of MM) null === this.inventory.itemAt(rM) && this.refill(rM, iM)
+        for (const [XU, zU] of UU) null === this.inventory.itemAt(XU) && this.refill(XU, zU)
       }
-      refill(MM, rM) {
-        const iM = function(MM, rM, iM, OM) {
-          let SM, jM = 1 / 0;
-          for (const aM of yM) {
-            if (aM === rM) continue;
-            const PM = OM(aM);
-            if (!PM || aM < JM.q && rM !== iM) continue;
-            const nM = dM(MM, PM.name);
-            void 0 !== nM && nM < jM && (SM = aM, jM = nM)
+      refill(UU, XU) {
+        const zU = function(UU, XU, zU, cU) {
+          let yU, QU = 1 / 0;
+          for (const AU of gU) {
+            if (AU === XU) continue;
+            const FU = cU(AU);
+            if (!FU || AU < aU.o && XU !== zU) continue;
+            const oU = tU(UU, FU.name);
+            void 0 !== oU && oU < QU && (yU = AU, QU = oU)
           }
-          return SM
-        }(rM, MM, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== iM && this.inventory.swap(MM, iM)
+          return yU
+        }(XU, UU, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== zU && this.inventory.swap(UU, zU)
       }
     }
 
-    function EM(MM) {
-      return !!zM(MM) || hM(MM)
+    function GU(UU) {
+      return !!EU(UU) || pU(UU)
     }
-    var UM = iM(37542),
-      GM = iM(65),
-      CM = iM(1116),
-      eM = iM.n(CM);
-    const bM = "Lucky Clover",
-      wM = {
+    var BU = zU(37325),
+      ZU = zU(73),
+      RU = zU(1106),
+      PU = zU.n(RU);
+    const WU = "Lucky Clover",
+      dU = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function tM(MM) {
-      return wM[MM][0]
+    function LU(UU) {
+      return dU[UU][0]
     }
 
-    function gM(MM) {
-      return PM.filter((rM => MM >= tM(rM)))
+    function eU(UU) {
+      return FU.filter((XU => UU >= LU(XU)))
     }
-    var uM = iM(313),
-      RM = iM(2640),
-      pM = iM(19),
-      WM = iM(2811),
-      sM = iM(2026),
-      DM = iM(37538),
-      kM = iM(1398);
-    var ZM = iM(1303);
-    const oM = {
-      Basic: aM.L.whiteUiText,
-      Rare: aM.L.goldUiText,
-      Super: aM.L.cyanUiText
+    var CU = zU(320),
+      wU = zU(2616),
+      qU = zU(27),
+      OU = zU(2827),
+      SU = zU(1993),
+      rU = zU(37318),
+      uU = zU(1390);
+    var fU = zU(1305);
+    const iU = {
+      Basic: AU.H.whiteUiText,
+      Rare: AU.H.goldUiText,
+      Super: AU.H.cyanUiText
     };
-    let fM = 1;
+    let HU = 1;
 
-    function YM() {
-      const MM = (0, RM.f)("currencyAmounts"),
-        rM = null === MM || void 0 === MM ? void 0 : MM.Clovers;
-      return !rM || rM.hidden ? null : (0, ZM.jsx)(DM.i, {
-        children: (0, ZM.jsx)(NM, {
-          amount: rM.amount
+    function MU() {
+      const UU = (0, wU.f)("currencyAmounts"),
+        XU = null === UU || void 0 === UU ? void 0 : UU.Clovers;
+      return !XU || XU.hidden ? null : (0, fU.jsx)(rU.e, {
+        children: (0, fU.jsx)(vU, {
+          amount: XU.amount
         })
       })
     }
 
-    function NM(MM) {
-      var rM, iM, OM;
+    function vU(UU) {
+      var XU, zU, cU;
       let {
-        amount: jM
-      } = MM;
+        amount: QU
+      } = UU;
       const {
-        openEverythingMenuName: nM
-      } = (0, pM.m)(["openEverythingMenuName"]), QM = (0, WM.b)(), [zM, LM] = (0, SM.useState)(jM), [mM, HM] = (0, SM.useState)(null), [hM, JM] = (0, SM.useState)(0), [dM, yM] = (0, SM.useState)([]), lM = (0, SM.useRef)(jM), EM = (0, SM.useRef)(!1), UM = (0, SM.useRef)(null), CM = nM === uM.m.SHOP;
-      (0, SM.useEffect)((() => {
-        const MM = lM.current;
-        if (lM.current = jM, jM <= MM || CM) return void LM(jM);
-        const rM = QM || dM.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (iM = jM - MM, OM = !EM.current, iM <= 0 || !OM && iM < 40 ? 0 : Math.min(4, Math.ceil(iM / 30)));
-        var iM, OM;
-        if (EM.current = !0, gM(jM).length > gM(MM).length && JM(fM++), rM > 0) {
-          const MM = [];
-          for (let iM = 0; iM < rM; iM++) MM.push({
-            id: fM++,
+        openEverythingMenuName: oU
+      } = (0, qU.q)(["openEverythingMenuName"]), DU = (0, OU.e)(), [EU, YU] = (0, yU.useState)(QU), [NU, IU] = (0, yU.useState)(null), [pU, aU] = (0, yU.useState)(0), [tU, gU] = (0, yU.useState)([]), kU = (0, yU.useRef)(QU), GU = (0, yU.useRef)(!1), BU = (0, yU.useRef)(null), RU = oU === CU.s.SHOP;
+      (0, yU.useEffect)((() => {
+        const UU = kU.current;
+        if (kU.current = QU, QU <= UU || RU) return void YU(QU);
+        const XU = DU || tU.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (zU = QU - UU, cU = !GU.current, zU <= 0 || !cU && zU < 40 ? 0 : Math.min(4, Math.ceil(zU / 30)));
+        var zU, cU;
+        if (GU.current = !0, eU(QU).length > eU(UU).length && aU(HU++), XU > 0) {
+          const UU = [];
+          for (let zU = 0; zU < XU; zU++) UU.push({
+            id: HU++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * iM
+            delayMs: 70 * zU
           });
-          yM((rM => [...rM, ...MM]))
+          gU((XU => [...XU, ...UU]))
         }
-        const SM = rM > 0 ? 600 : 0;
-        HM({
-          id: fM++,
-          delayMs: SM
+        const yU = XU > 0 ? 600 : 0;
+        IU({
+          id: HU++,
+          delayMs: yU
         });
-        const PM = performance.now() + SM;
-        let nM = 0;
-        const zM = rM => {
-          const iM = aM.d.clamp((rM - PM) / 600, 0, 1);
-          LM(Math.round(MM + (jM - MM) * iM)), iM < 1 && (nM = requestAnimationFrame(zM))
+        const FU = performance.now() + yU;
+        let oU = 0;
+        const EU = XU => {
+          const zU = AU.d.clamp((XU - FU) / 600, 0, 1);
+          YU(Math.round(UU + (QU - UU) * zU)), zU < 1 && (oU = requestAnimationFrame(EU))
         };
-        return nM = requestAnimationFrame(zM), () => {
-          cancelAnimationFrame(nM)
+        return oU = requestAnimationFrame(EU), () => {
+          cancelAnimationFrame(oU)
         }
-      }), [jM, CM]);
-      const wM = function(MM) {
-          var rM;
-          const iM = null !== (rM = PM.find((rM => MM < tM(rM)))) && void 0 !== rM ? rM : "Super";
+      }), [QU, RU]);
+      const dU = function(UU) {
+          var XU;
+          const zU = null !== (XU = FU.find((XU => UU < LU(XU)))) && void 0 !== XU ? XU : "Super";
           return {
-            rarity: iM,
-            progress: aM.d.clamp(MM / tM(iM), 0, 1)
+            rarity: zU,
+            progress: AU.d.clamp(UU / LU(zU), 0, 1)
           }
-        }(zM),
-        RM = gM(zM).at(-1);
-      return (0, ZM.jsxs)(ZM.Fragment, {
-        children: [(0, ZM.jsx)("div", {
+        }(EU),
+        wU = eU(EU).at(-1);
+      return (0, fU.jsxs)(fU.Fragment, {
+        children: [(0, fU.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, ZM.jsxs)("div", {
-            className: eM()("LuckyCloverWallet", {
-              Capped: RM && "Basic" !== RM
+          children: (0, fU.jsxs)("div", {
+            className: PU()("LuckyCloverWallet", {
+              Capped: wU && "Basic" !== wU
             }),
-            style: RM && {
-              "--luckyTierColour": oM[RM]
+            style: wU && {
+              "--luckyTierColour": iU[wU]
             },
-            children: [(0, ZM.jsx)("div", {
+            children: [(0, fU.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${wM.progress})`
+                transform: `scaleX(${dU.progress})`
               }
-            }), hM > 0 && (0, ZM.jsx)("div", {
+            }), pU > 0 && (0, fU.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(rM=null===mM||void 0===mM?void 0:mM.delayMs)&&void 0!==rM?rM:0}ms`
+                animationDelay: `${null!==(XU=null===NU||void 0===NU?void 0:NU.delayMs)&&void 0!==XU?XU:0}ms`
               }
-            }, hM), (0, ZM.jsx)("div", {
-              ref: UM,
-              className: eM()("LuckyCloverWalletIcon", mM && "Bounce"),
+            }, pU), (0, fU.jsx)("div", {
+              ref: BU,
+              className: PU()("LuckyCloverWalletIcon", NU && "Bounce"),
               style: {
-                animationDelay: `${null!==(OM=null===mM||void 0===mM?void 0:mM.delayMs)&&void 0!==OM?OM:0}ms`
+                animationDelay: `${null!==(cU=null===NU||void 0===NU?void 0:NU.delayMs)&&void 0!==cU?cU:0}ms`
               },
-              children: (0, ZM.jsx)(sM.b, {
-                itemName: bM,
+              children: (0, fU.jsx)(SU.c, {
+                itemName: WU,
                 amount: 0
               })
-            }, null !== (iM = null === mM || void 0 === mM ? void 0 : mM.id) && void 0 !== iM ? iM : 0), (0, ZM.jsx)("span", {
+            }, null !== (zU = null === NU || void 0 === NU ? void 0 : NU.id) && void 0 !== zU ? zU : 0), (0, fU.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: zM
-            }), RM && (0, ZM.jsx)(kM.b, {
+              children: EU
+            }), wU && (0, fU.jsx)(uU.d, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, GM.createPortal)(dM.map((MM => (0, ZM.jsx)(AM, {
-          flyer: MM,
-          target: UM,
+        }), (0, ZU.createPortal)(tU.map((UU => (0, fU.jsx)(VU, {
+          flyer: UU,
+          target: BU,
           onDone: () => {
-            yM((rM => rM.filter((rM => rM.id !== MM.id))))
+            gU((XU => XU.filter((XU => XU.id !== UU.id))))
           }
-        }, MM.id))), document.body)]
+        }, UU.id))), document.body)]
       })
     }
 
-    function AM(MM) {
+    function VU(UU) {
       let {
-        flyer: rM,
-        target: iM,
-        onDone: OM
-      } = MM;
-      const jM = (0, SM.useRef)(null);
-      return (0, SM.useEffect)((() => {
-        var MM;
-        const SM = null === (MM = iM.current) || void 0 === MM ? void 0 : MM.getBoundingClientRect();
-        if (!jM.current || !SM) return void OM();
+        flyer: XU,
+        target: zU,
+        onDone: cU
+      } = UU;
+      const QU = (0, yU.useRef)(null);
+      return (0, yU.useEffect)((() => {
+        var UU;
+        const yU = null === (UU = zU.current) || void 0 === UU ? void 0 : UU.getBoundingClientRect();
+        if (!QU.current || !yU) return void cU();
         const {
-          x: aM,
-          y: PM
-        } = rM, nM = aM + 140 * (Math.random() - .5), QM = PM - 30 - 40 * Math.random(), zM = jM.current.animate([{
-          transform: `translate(${aM}px, ${PM}px) scale(0.3)`,
+          x: AU,
+          y: FU
+        } = XU, oU = AU + 140 * (Math.random() - .5), DU = FU - 30 - 40 * Math.random(), EU = QU.current.animate([{
+          transform: `translate(${AU}px, ${FU}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${nM}px, ${QM}px) scale(1.3)`,
+          transform: `translate(${oU}px, ${DU}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${SM.left}px, ${SM.top}px) scale(0.8)`,
+          transform: `translate(${yU.left}px, ${yU.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: rM.delayMs,
+          delay: XU.delayMs,
           fill: "backwards"
         });
-        return zM.onfinish = OM, () => {
-          zM.cancel()
+        return EU.onfinish = cU, () => {
+          EU.cancel()
         }
-      }), []), (0, ZM.jsx)("div", {
-        ref: jM,
+      }), []), (0, fU.jsx)("div", {
+        ref: QU,
         className: "LuckyCloverFlying",
-        children: (0, ZM.jsx)(sM.b, {
-          itemName: bM,
+        children: (0, fU.jsx)(SU.c, {
+          itemName: WU,
           amount: 0
         })
       })
     }
-    var xM = iM(22);
-    const vM = "luckyGearUpgradeView",
-      FM = {
+    var sU = zU(31);
+    const nU = "luckyGearUpgradeView",
+      mU = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -537,13 +560,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function BM(MM) {
-      var rM;
-      return null !== (rM = FM[MM.split(" ")[0]]) && void 0 !== rM ? rM : "#e07bff"
+    function lU(UU) {
+      var XU;
+      return null !== (XU = mU[UU.split(" ")[0]]) && void 0 !== XU ? XU : "#e07bff"
     }
-    class XM {
-      constructor(MM, rM) {
-        this.selectedSlot = MM, this.itemAt = rM, this.rings = [], this.unseen = new Map, this.view = {
+    class xU {
+      constructor(UU, XU) {
+        this.selectedSlot = UU, this.itemAt = XU, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -551,200 +574,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      GL(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [iM, OM, SM] of MM) this.rings.push({
+      PY(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [zU, cU, yU] of UU) this.rings.push({
           id: this.nextId++,
-          slot: iM,
-          colour: BM(SM),
-          until: rM + 1200
-        }), iM !== this.selectedSlot() && this.unseen.set(iM, {
-          from: OM,
-          to: SM
+          slot: zU,
+          colour: lU(yU),
+          until: XU + 1200
+        }), zU !== this.selectedSlot() && this.unseen.set(zU, {
+          from: cU,
+          to: yU
         });
-        this.Tz()
+        this.UY()
       }
-      bL() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      LY() {
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const rM = this.rings.filter((rM => rM.until > MM));
-        let iM = rM.length !== this.rings.length;
-        this.rings = rM;
-        for (const [OM, {
-            from: SM,
-            to: jM
+        const XU = this.rings.filter((XU => XU.until > UU));
+        let zU = XU.length !== this.rings.length;
+        this.rings = XU;
+        for (const [cU, {
+            from: yU,
+            to: QU
           }] of this.unseen) {
-          const MM = this.itemAt(OM);
-          (OM === this.selectedSlot() || MM !== jM && MM !== SM) && (this.unseen.delete(OM), iM = !0)
+          const UU = this.itemAt(cU);
+          (cU === this.selectedSlot() || UU !== QU && UU !== yU) && (this.unseen.delete(cU), zU = !0)
         }
-        iM && this.Tz()
+        zU && this.UY()
       }
-      Tz() {
+      UY() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, xM.i.Tz(vM, this.view)
+        }, sU.k.UY(nU, this.view)
       }
     }
-    var IM = iM(1516);
+    var JU = zU(1492);
 
-    function KM(MM) {
-      return document.querySelector(`.HotBar [data-inven-idx="${MM}"]`)
+    function jU(UU) {
+      return document.querySelector(`.HotBar [data-inven-idx="${UU}"]`)
     }
 
-    function qM(MM) {
+    function KU(UU) {
       let {
-        ring: rM
-      } = MM;
-      const [iM, OM] = (0, SM.useState)(null);
-      return (0, SM.useLayoutEffect)((() => {
-        var MM, iM;
-        OM(null !== (MM = null === (iM = KM(rM.slot)) || void 0 === iM ? void 0 : iM.getBoundingClientRect()) && void 0 !== MM ? MM : null)
-      }), [rM]), iM ? (0, ZM.jsx)("div", {
+        ring: XU
+      } = UU;
+      const [zU, cU] = (0, yU.useState)(null);
+      return (0, yU.useLayoutEffect)((() => {
+        var UU, zU;
+        cU(null !== (UU = null === (zU = jU(XU.slot)) || void 0 === zU ? void 0 : zU.getBoundingClientRect()) && void 0 !== UU ? UU : null)
+      }), [XU]), zU ? (0, fU.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: iM.left,
-          top: iM.top,
-          width: iM.width,
-          height: iM.height,
-          "--ringColour": rM.colour,
+          left: zU.left,
+          top: zU.top,
+          width: zU.width,
+          height: zU.height,
+          "--ringColour": XU.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function TM(MM) {
+    function bU(UU) {
       let {
-        slot: rM
-      } = MM;
-      const [iM, OM] = (0, SM.useState)(null);
-      return (0, SM.useLayoutEffect)((() => {
-        const MM = () => {
-          OM(KM(rM))
+        slot: XU
+      } = UU;
+      const [zU, cU] = (0, yU.useState)(null);
+      return (0, yU.useLayoutEffect)((() => {
+        const UU = () => {
+          cU(jU(XU))
         };
-        MM();
-        const iM = new MutationObserver(MM),
-          SM = document.querySelector(".BottomMiddleElements");
-        return SM && iM.observe(SM, {
+        UU();
+        const zU = new MutationObserver(UU),
+          yU = document.querySelector(".BottomMiddleElements");
+        return yU && zU.observe(yU, {
           childList: !0,
           subtree: !0
         }), () => {
-          iM.disconnect()
+          zU.disconnect()
         }
-      }), [rM]), iM ? (0, GM.createPortal)((0, ZM.jsx)("div", {
+      }), [XU]), zU ? (0, ZU.createPortal)((0, fU.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), iM) : null
+      }), zU) : null
     }
 
-    function VM(MM) {
+    function TU(UU) {
       let {
-        controller: rM
-      } = MM;
-      const iM = (0, IM.e)(vM, rM.getView());
-      return (0, ZM.jsxs)(ZM.Fragment, {
-        children: [iM.rings.map((MM => (0, ZM.jsx)(qM, {
-          ring: MM
-        }, MM.id))), iM.unseenSlots.map((MM => (0, ZM.jsx)(TM, {
-          slot: MM
-        }, MM)))]
+        controller: XU
+      } = UU;
+      const zU = (0, JU.j)(nU, XU.getView());
+      return (0, fU.jsxs)(fU.Fragment, {
+        children: [zU.rings.map((UU => (0, fU.jsx)(KU, {
+          ring: UU
+        }, UU.id))), zU.unseenSlots.map((UU => (0, fU.jsx)(bU, {
+          slot: UU
+        }, UU)))]
       })
     }
-    const cM = function(MM, rM, iM, aM) {
-      let PM, {
-          localPlayerId: nM
-        } = aM,
-        QM = null;
-      const zM = new lM({
-          itemAt: MM => PM.getItemSlot(nM, MM),
-          selectedSlot: () => PM.getSelectedInventorySlotI(nM),
-          swap: (MM, rM) => {
-            PM.swapInventorySlots(MM, rM)
+    const hU = function(UU, XU, zU, AU) {
+      let FU, {
+          localPlayerId: oU
+        } = AU,
+        DU = null;
+      const EU = new kU({
+          itemAt: UU => FU.getItemSlot(oU, UU),
+          selectedSlot: () => FU.getSelectedInventorySlotI(oU),
+          swap: (UU, XU) => {
+            FU.swapInventorySlots(UU, XU)
           }
         }),
-        LM = new XM((() => PM.getSelectedInventorySlotI(nM)), (MM => {
-          var rM;
-          return null === (rM = PM.getItemSlot(nM, MM)) || void 0 === rM ? void 0 : rM.name
+        YU = new xU((() => FU.getSelectedInventorySlotI(oU)), (UU => {
+          var XU;
+          return null === (XU = FU.getItemSlot(oU, UU)) || void 0 === XU ? void 0 : XU.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, jM.d)()
+          placeAgainstBeds: (0, QU.d)()
         },
-        onCreate: MM => {
-          PM = MM, QM = (0, UM.C)((0, SM.createElement)(SM.Fragment, null, (0, SM.createElement)(YM), (0, SM.createElement)(VM, {
-            controller: LM
+        onCreate: UU => {
+          FU = UU, DU = (0, BU.u)((0, yU.createElement)(yU.Fragment, null, (0, yU.createElement)(MU), (0, yU.createElement)(TU, {
+            controller: YU
           })))
         },
         onClose: () => {
-          var MM;
-          null === (MM = QM) || void 0 === MM || MM()
+          var UU;
+          null === (UU = DU) || void 0 === UU || UU()
         },
-        bL: () => {
-          zM.bL(), LM.bL()
+        LY: () => {
+          EU.LY(), YU.LY()
         },
-        onReceivedMessageFromServer: (MM, rM) => {
-          "luckyGearUpgrade" === MM && LM.GL(rM)
+        onReceivedMessageFromServer: (UU, XU) => {
+          "luckyGearUpgrade" === UU && YU.PY(XU)
         },
-        onPlayerChangeBlock: (MM, rM, iM, OM, SM, jM) => {
-          "Air" !== jM && zM.onPlace(jM)
+        onPlayerChangeBlock: (UU, XU, zU, cU, yU, QU) => {
+          "Air" !== QU && EU.onPlace(QU)
         },
-        onPlayerDropItem: (MM, rM, iM, OM) => {
-          zM.onDrop(rM, OM)
+        onPlayerDropItem: (UU, XU, zU, cU) => {
+          EU.onDrop(XU, cU)
         },
-        onPlayerAltAction: (MM, rM, iM, SM, jM, aM) => {
-          if (!aM || "Mesh" !== PM.getEntityType(aM)) return;
-          const nM = PM.getEntityName(aM),
-            QM = Object.values(OM).find((MM => MM.name === nM));
-          QM && PM.openShop(MM, !1, QM.shopTab)
+        onPlayerAltAction: (UU, XU, zU, yU, QU, AU) => {
+          if (!AU || "Mesh" !== FU.getEntityType(AU)) return;
+          const oU = FU.getEntityName(AU),
+            DU = Object.values(cU).find((UU => UU.name === oU));
+          DU && FU.openShop(UU, !1, DU.shopTab)
         }
       }
     }
   },
-  39012: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM
+  38782: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => FU
     });
-    var OM = iM(332),
-      SM = iM(37858),
-      jM = iM(4854);
-    const aM = ["Leaf Bed", "_Leaf Bed Head", ...OM.Ec.flatMap((MM => [`${MM} Bed`, `_${MM} Bed Head`, `${MM} Strongbed`, `_${MM} Strongbed Head`]))];
+    var cU = zU(344),
+      yU = zU(37662),
+      QU = zU(4909);
+    const AU = ["Leaf Bed", "_Leaf Bed Head", ...cU.Oc.flatMap((UU => [`${UU} Bed`, `_${UU} Bed Head`, `${UU} Strongbed`, `_${UU} Strongbed Head`]))];
 
-    function PM() {
-      let MM;
+    function FU() {
+      let UU;
       return {
-        onCreate(rM) {
-          MM = rM
+        onCreate(XU) {
+          UU = XU
         },
-        altVetoBlocks: aM,
-        onPlayerAttemptAltAction(rM, iM, OM, aM, PM, nM) {
-          var QM;
-          if ((0, SM.e)(MM.getMetaInfo(PM).rootName) && !MM.isEntityInteractable(nM) && (0, jM.g)(null === (QM = MM.TrM(rM)) || void 0 === QM ? void 0 : QM.typeObj.type)) return "preventAction"
+        altVetoBlocks: AU,
+        onPlayerAttemptAltAction(XU, zU, cU, AU, FU, oU) {
+          var DU;
+          if ((0, yU.b)(UU.getMetaInfo(FU).rootName) && !UU.isEntityInteractable(oU) && (0, QU.d)(null === (DU = UU.HzU(XU)) || void 0 === DU ? void 0 : DU.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37858: (MM, rM, iM) => {
-    function OM(MM) {
-      return MM.includes("Leaf Bed")
+  37662: (UU, XU, zU) => {
+    function cU(UU) {
+      return UU.includes("Leaf Bed")
     }
 
-    function SM(MM) {
-      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
+    function yU(UU) {
+      return / Bed(?: Head)?(?:\||$)/.test(UU) && !cU(UU)
     }
 
-    function jM(MM) {
-      return MM.includes(" Strongbed")
+    function QU(UU) {
+      return UU.includes(" Strongbed")
     }
 
-    function aM(MM) {
-      return OM(MM) || SM(MM) || jM(MM)
+    function AU(UU) {
+      return cU(UU) || yU(UU) || QU(UU)
     }
-    iM.d(rM, {
-      e: () => aM,
-      g: () => OM,
-      h: () => jM,
-      l: () => SM
+    zU.d(XU, {
+      b: () => AU,
+      c: () => cU,
+      g: () => QU,
+      j: () => yU
     })
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

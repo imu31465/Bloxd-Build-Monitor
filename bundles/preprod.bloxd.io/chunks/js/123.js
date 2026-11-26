@@ -1,475 +1,837 @@
 export const id = 123;
-export const ids = [123, 706];
+export const ids = [123];
 export const modules = {
-  5372: (MM, rM, iM) => {
-    var OM = iM(5376);
-
-    function SM() {}
-
-    function jM() {}
-    jM.resetWarningCache = SM, MM.exports = function() {
-      function MM(MM, rM, iM, SM, jM, aM) {
-        if (aM !== OM) {
-          var PM = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw PM.name = "Invariant Violation", PM
-        }
-      }
-
-      function rM() {
-        return MM
-      }
-      MM.isRequired = MM;
-      var iM = {
-        array: MM,
-        bigint: MM,
-        bool: MM,
-        func: MM,
-        number: MM,
-        object: MM,
-        string: MM,
-        symbol: MM,
-        any: MM,
-        arrayOf: rM,
-        element: MM,
-        elementType: MM,
-        instanceOf: rM,
-        node: MM,
-        objectOf: rM,
-        oneOf: rM,
-        oneOfType: rM,
-        shape: rM,
-        exact: rM,
-        checkPropTypes: jM,
-        resetWarningCache: SM
-      };
-      return iM.PropTypes = iM, iM
-    }
-  },
-  5368: (MM, rM, iM) => {
-    MM.exports = iM(5372)()
-  },
-  5376: MM => {
-    MM.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
-  },
-  7088: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => zM
+  9484: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => tX
     });
-    var OM = iM(1591),
-      SM = iM(1520),
-      jM = iM(1188),
-      aM = iM(7093),
-      PM = iM(7068),
-      nM = iM(7051),
-      QM = iM(1303);
+    var cU = zU(1577),
+      yU = zU(27),
+      QU = zU(5101),
+      AU = zU(61),
+      FU = zU(1492);
+    var oU = zU(2005),
+      DU = zU(1568),
+      EU = zU(1410),
+      YU = zU(1193),
+      NU = zU(9489),
+      IU = zU(5026),
+      pU = zU(173),
+      aU = zU(1131),
+      tU = zU(31),
+      gU = zU(1262),
+      kU = zU(1800),
+      GU = zU(97),
+      BU = zU(1349),
+      ZU = zU(1482),
+      RU = zU(4962),
+      PU = zU(4762),
+      WU = zU(4706),
+      dU = zU(3612),
+      LU = zU(2494),
+      eU = zU(1376),
+      CU = zU(825),
+      wU = zU(1241),
+      qU = zU(1079),
+      OU = zU(1236),
+      SU = zU(3673),
+      rU = zU(3519),
+      uU = zU(1414),
+      fU = zU(1384),
+      iU = zU(5527),
+      HU = zU(9502),
+      MU = zU(3270),
+      vU = zU(1305);
 
-    function zM() {
+    function VU(UU) {
+      let {
+        onApply: XU,
+        onSkip: zU
+      } = UU;
       const {
-        t: MM
-      } = (0, jM.A)(), rM = (0, OM.useNavigatePreserveSearch)();
-      return (0, PM.c)(), (0, QM.jsxs)("div", {
-        className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, QM.jsx)("div", {
-          className: "ShaderPackPublishBack",
-          children: (0, QM.jsx)(SM.c, {
-            onClick: () => {
-              rM(nM.P)
-            },
-            children: MM("shaderPackListing:backToPacks")
+        t: cU
+      } = (0, YU.I)();
+      return (0, AU.useEffect)((() => {
+        MU.i.skipPlayWait()
+      }), []), (0, vU.jsx)(uU.k, {
+        icon: "download",
+        title: "customTexturePack:downloadTitle",
+        subtitle: (0, vU.jsxs)("div", {
+          className: "CustomTexturePackDownloaderSubtitleText",
+          children: [cU("customTexturePack:downloadPrompt"), (0, vU.jsx)("div", {
+            className: "CustomTexturePackDownloaderWarningText",
+            children: cU("customTexturePack:authorWarning")
+          }), (0, vU.jsx)("div", {
+            className: "CustomTexturePackDownloaderSecondaryText",
+            children: cU("customTexturePack:existingPackSaved")
+          })]
+        }),
+        confirm: {
+          text: "general:apply",
+          onClick: XU
+        },
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: zU
+        }
+      })
+    }
+    async function sU() {
+      let UU = !1;
+      const XU = EU.NotificationProvider.showCustomPopup({
+        body: XU => (0, vU.jsx)(VU, {
+          onApply: () => {
+            UU = !0, XU()
+          },
+          onSkip: XU
+        }),
+        disableExitButton: !0,
+        disablePressBackgroundToClose: !0
+      });
+      return await XU.getResult(), UU
+    }
+    let nU = {
+      wanted: !1
+    };
+    let mU = null;
+
+    function lU(UU) {
+      UU.setGamePackConfirm(sU), mU = UU
+    }
+    var xU = zU(3873),
+      JU = zU(1545),
+      jU = zU(42),
+      KU = zU(3626);
+
+    function bU(UU) {
+      let {
+        schematicId: XU,
+        texturePackKey: zU,
+        onClose: cU
+      } = UU;
+      const [yU, QU] = (0, AU.useState)("prompt"), [FU, oU] = (0, AU.useState)(null), DU = (0, xU.b)();
+
+      function EU() {
+        cU()
+      }
+      return "prompt" === yU ? (0, vU.jsx)(VU, {
+        onApply: async function() {
+          QU("downloading");
+          try {
+            const UU = await async function(UU, XU) {
+              const zU = await (0, iU.c)(XU);
+              if (zU) return {
+                pack: zU,
+                key: XU
+              };
+              const cU = await aU.userContextManager.getCurrentUserContext(),
+                yU = (await JU.c.getGame(cU, UU, !0)).customTexturePackKey;
+              if (!yU) return null;
+              const QU = await (0, iU.c)(yU);
+              if (!QU) throw new Error("The texture pack could not be found");
+              return {
+                pack: QU,
+                key: yU
+              }
+            }(XU, zU);
+            if (!DU.current) return;
+            if (!UU) return void cU();
+            if ((0, SU.n)(UU.pack)) return void QU("refused");
+            const yU = rU.c.toJson(),
+              AU = rU.c.isUsingTemporaryTexturePack() ? "customGame" : "player";
+            if (rU.c.setFromJson(UU.pack, "customGame"), await rU.c.saveTemporaryTexturePack(UU.key), DU.current) return void(0, kU.reloadBloxd)();
+            rU.c.setFromJson(yU, AU), await (0, KU.t)(jU.g)
+          } catch (UU) {
+            oU(UU instanceof Error ? UU.message : String(UU)), QU("error")
+          }
+        },
+        onSkip: EU
+      }) : "downloading" === yU ? (0, vU.jsx)(uU.k, {
+        icon: "download",
+        title: "customTexturePack:downloading",
+        subtitle: (0, vU.jsx)("div", {
+          className: "CustomTexturePackDownloaderLogoLoaderContainer",
+          children: (0, vU.jsx)(fU.b, {
+            showFace: !0
           })
-        }), (0, QM.jsx)("h1", {
-          className: "ShaderPackPublishTitle",
-          children: MM("shaderPackListing:publishTitle")
-        }), (0, QM.jsx)(aM.ShaderPackPublishForm, {
-          existing: null,
-          onPublished: MM => {
-            rM((0, nM.W)(MM.packId), {
-              replace: !0
+        })
+      }) : "error" === yU ? (0, vU.jsx)(uU.k, {
+        icon: "face-worried",
+        title: "customTexturePack:errorTitle",
+        subtitle: FU,
+        confirm: {
+          text: "customTexturePack:refreshPage",
+          onClick: () => {
+            window.location.reload()
+          }
+        },
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: EU
+        }
+      }) : "refused" === yU ? (0, vU.jsx)(uU.k, {
+        icon: "face-worried",
+        title: "customTexturePack:cantApplyTitle",
+        subtitle: "customTexturePack:gamePackHasExternalUrls",
+        confirm: {
+          text: "general:continue",
+          onClick: EU
+        }
+      }) : null
+    }
+    var TU = zU(9510),
+      hU = zU(4700),
+      UX = zU(1857),
+      XX = zU(1835),
+      zX = zU(4704),
+      cX = zU(2205),
+      yX = zU(9516);
+    var QX = zU(5161),
+      AX = zU(1322),
+      FX = zU(1791),
+      oX = zU(687),
+      DX = zU(781),
+      EX = zU(1877);
+
+    function YX() {
+      const UU = yU.e.get("clientEscMenuOptions");
+      oU.gameBridge.send("setLookSensitivity", yU.e.get("isTouchScreen") ? (0, DX.s)(UU) : UU.mouseSensitivity)
+    }
+    const NX = 45e3;
+
+    function IX(UU) {
+      const XU = UU.asError();
+      if (XU.debugResult.QU || (0, FX.b)(XU.debugResult.error)) return;
+      console.log("Failed to join lobby:", XU.message);
+      const zU = "timedOut" === XU.debugResult.gameServerUnreachable;
+      (0, XX.reportClientError)("matchmake_failed", XU.message, zU ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : pU.m[XU.code]);
+      const {
+        error: cU
+      } = XU.debugResult;
+      if (cU instanceof dU.q && "default" !== cU.packSource) {
+        const UU = (0, zX.d)("js", "game" === cU.packSource ? "game" : "page", (0, zX.h)(cU));
+        (0, XX.reportClientError)("texture_pack", cU, UU)
+      }
+    }
+
+    function pX(UU) {
+      if (null === UU || void 0 === UU || !UU.isError()) return !1;
+      const XU = UU.asError();
+      return XU.code === pU.m.REQUEST_TO_MATCHMAKING && !(0, FX.b)(XU.debugResult.error)
+    }
+    async function aX(UU, XU, zU) {
+      const cU = (0, QX.J)(XU);
+      async function AU(UU, XU, zU, cU) {
+        var AU;
+        if (cU.aborted) return null;
+        null === yU.e.get("gameEntrySource") && (0, yU.n)("directPlayUrl"), oX.H && (0, HU.g)().catch((() => {})), yU.e.set({
+          gameState: "findingLobby"
+        }), tU.k.UY("loadingScreenState", "loadingPage:findingLobby");
+        const FU = await aU.userContextManager.getCurrentUserContext();
+        oU.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: XU,
+          discordContext: UU instanceof wU.f ? UU.getSerialisableParams() : null
+        }), (0, UX.h)(null !== (AU = MU.i.playInputAt()) && void 0 !== AU ? AU : performance.now());
+        const DU = await async function(UU, XU, zU, cU, yU) {
+          try {
+            await (0, EX.l)(QU.reqLibsLoadedPromise, NX, "Required libraries timed out")
+          } catch (AU) {
+            const UU = AU instanceof EX.g ? `Required libraries still loading after ${NX/1e3} s: ${(0,QU.requiredLibsPending)().join(", ")}` : AU.toString();
+            return gU.c.errorWithCode(UU, pU.m.LOAD_REQUIRED_LIBS, {
+              error: AU,
+              severity: "medium"
             })
           }
-        })]
+          return tU.k.UY("matchmakeAndPlayStepCompleted", {
+            step: pU.m.LOAD_REQUIRED_LIBS,
+            totalSubSteps: 1
+          }), (0, QU.matchmakeAndPlayMaybeUnloaded)(UU, XU, zU, cU, yU)
+        }(UU, XU, zU, FU, cU), EU = DU.isError() ? DU.asError() : null;
+        if (cU.aborted) return EU && IX(DU), oU.gameBridge.send("leaveGame", {
+          reloadPath: null
+        }), null;
+        if (null !== EU && void 0 !== EU && EU.debugResult.QU) return console.log("Join cancelled:", EU.message), null;
+        if (EU) return DU;
+        const {
+          gameNameWithVariation: YU,
+          lobbyName: NU
+        } = DU.getValue();
+        return YX(), (0, AX.B)().setGameViewShown(!0), FU.recordJoin(YU, NU), (0, BU.I)(), DU
+      }
+      return cU && (0, yU.n)("updateRejoin"), (0, cX.l)((async yU => {
+        try {
+          var QU;
+          let FU = UU,
+            oU = await AU(FU, XU, zU, yU);
+          for (let UU = 0; cU && UU < QX.k && (pX(oU) && await (0, QX.L)((0, QX.r)(UU), yU)); UU++) FU = (0, QX.t)(FU, UU + 1, "string" === typeof FU && (0, OU.G)(FU)), oU = await AU(FU, XU, zU, yU);
+          return null !== (QU = oU) && void 0 !== QU && QU.isError() && IX(oU), oU
+        } catch (FU) {
+          if ((0, XX.reportClientError)("matchmake_failed", FU, "unexpected"), oU.gameBridge.send("leaveGame", {
+              reloadPath: yU.aborted ? null : "/"
+            }), yU.aborted) return null;
+          throw FU
+        }
+      }), (async UU => {
+        var zU;
+        if (cU) return;
+        const yU = (0, BU.B)();
+        null !== yU && (await yU, UU.aborted) || (null !== (zU = CU.d[XU]) && void 0 !== zU && zU.playAdBeforeMatchmaking ? (MU.i.skipPlayWait(), await new Promise((UU => {
+          (0, BU.bb)((() => {
+            UU(!0)
+          }), "video_start")
+        }))) : (0, BU.bb)((() => {}), "video_start"))
+      }))
+    }
+
+    function tX() {
+      const {
+        t: UU
+      } = (0, YU.I)(), XU = (0, DU.useNavigatePreserveSearch)(), zU = (0, cU.w)(), wU = (0, cU.C)(), SU = (0, AU.useRef)({
+        t: UU,
+        navigate: XU
+      });
+      SU.current = {
+        t: UU,
+        navigate: XU
+      };
+      const uU = (0, AU.useRef)("");
+      uU.current = zU.pathname + zU.search;
+      const {
+        gameState: fU,
+        clientEscMenuOptions: iU
+      } = (0, yU.q)(["gameState", "clientEscMenuOptions"]), MU = (0, AU.useRef)(null), VU = (0, AU.useRef)(!1);
+      var sU;
+      (0, AU.useEffect)((() => () => {
+        tU.k.UY("leftPlayPage")
+      }), []), (0, cX.m)(), (0, cX.o)(), sU = oX.H, (0, AU.useEffect)((() => {
+        if (!sU) return;
+        let UU = !0;
+        return (0, HU.g)().then((XU => {
+          UU && lU(XU)
+        })).catch((() => {})), () => {
+          var XU;
+          UU = !1, nU.wanted = !1, null === (XU = mU) || void 0 === XU || XU.setGamePackConfirm(null), mU = null
+        }
+      }), [sU]), (0, AU.useEffect)((() => {
+        var UU, XU, cU;
+        (0, QU.needGameClientNow)();
+        const {
+          t: AU,
+          navigate: FU
+        } = SU.current, YU = (0, TU.d)(wU, zU.search);
+        if (wU.lobbyName && !new URLSearchParams(zU.search).has("lobby")) return void FU((0, eU.b)(YU.gameNameWithVariation, YU.lobbyName), {
+          replace: !0
+        });
+        let ZU = Promise.resolve({
+          shouldMatchmake: !0
+        });
+        const fU = new AbortController;
+        if ("/play/discord-custom-lobby" === zU.pathname) {
+          const UU = yU.e.get("discordContext");
+          if (!UU) return void FU("/");
+          ZU = IU.d.setupDiscordLobby(UU, "classic").then((() => ({
+            shouldMatchmake: !0,
+            discordContext: UU
+          }))).catch((XU => (console.error("Failed to setup discord lobby", XU), {
+            shouldMatchmake: !1,
+            discordContext: UU
+          })))
+        } else if (!YU.gameNameWithVariation || !(0, OU.E)(YU.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${YU.gameNameWithVariation}`), void FU(-1);
+        const iU = MU.current;
+        if (null !== iU && YU.gameNameWithVariation === iU.gameNameWithVariation && YU.lobbyName === iU.lobbyName) return;
+        if (oU.gameBridge.latest("connectedGame").replay) return void(0, cX.h)(null);
+        if ("releaseCountdown" === (null === (UU = (0, LU.i)(YU.gameNameWithVariation)) || void 0 === UU ? void 0 : UU.type)) return console.error(`Game hasn't been released yet: ${YU.gameNameWithVariation}`), void FU(-1);
+        const sU = VU.current;
+        VU.current = !1, (0, BU.D)(), yU.e.set({
+          gameState: "loadingScreen"
+        });
+        const mU = function() {
+            nU.wanted = !1;
+            const UU = {
+              wanted: !0
+            };
+            return nU = UU, () => UU.wanted
+          }(),
+          xU = YU.gameNameWithVariation;
+        if (xU && (oX.H || (0, qU.l)(xU))) {
+          const UU = oX.H ? Promise.all([(0, HU.g)(), aU.userContextManager.getCurrentUserContext()]).then((UU => {
+            let [XU, zU] = UU;
+            if (mU()) return lU(XU), XU.packForGame(xU, zU, mU)
+          })) : async function(UU, XU) {
+            await rU.c.indexedDbValuesAreLoaded();
+            const zU = await aU.userContextManager.getCurrentUserContext(),
+              cU = (0, qU.p)(UU);
+            let yU;
+            try {
+              yU = await JU.c.getGame(zU, cU, !0)
+            } catch (oU) {
+              return void console.error("Failed to get game", oU)
+            }
+            if (null !== XU && void 0 !== XU && XU.aborted) return;
+            const QU = yU.customTexturePackKey;
+            if (!QU) return void(rU.c.isUsingTemporaryTexturePack() && ((0, kU.reloadBloxd)(), await new Promise((() => {}))));
+            if (rU.c.isUsingTemporaryTexturePack() && rU.c.getTemporaryTexturePackSource() === QU) return;
+            const AU = EU.NotificationProvider.showCustomPopup({
+                body: UU => (0, vU.jsx)(bU, {
+                  schematicId: cU,
+                  texturePackKey: QU,
+                  onClose: UU
+                }),
+                disableExitButton: !0,
+                disablePressBackgroundToClose: !0
+              }),
+              FU = () => {
+                AU.tearDownNotification()
+              };
+            null === XU || void 0 === XU || XU.addEventListener("abort", FU, {
+              once: !0
+            }), await AU.getResult(), null === XU || void 0 === XU || XU.removeEventListener("abort", FU)
+          }(xU, fU.signal), XU = ZU;
+          ZU = UU.catch((UU => {
+            console.error("Failed to check for custom texture pack", UU)
+          })).then((() => XU))
+        }
+        const jU = {
+          wasm: oX.H,
+          game: YU.gameNameWithVariation,
+          custom: void 0 !== xU && (0, qU.l)(xU),
+          lobbyName: null !== (XU = YU.lobbyName) && void 0 !== XU ? XU : null,
+          direct: null !== YU.directJoinVmUrl && void 0 !== YU.directJoinVmUrl,
+          discord: "/play/discord-custom-lobby" === zU.pathname,
+          adBeforeMatchmaking: void 0 !== xU && !0 === (null === (cU = CU.d[xU]) || void 0 === cU ? void 0 : cU.playAdBeforeMatchmaking),
+          afterAnother: null !== MU.current || (0, cX.d)()
+        };
+        (0, yX.g)(null);
+        const KU = !(UX = jU).wasm || void 0 === UX.game || UX.custom || UX.direct || UX.discord || UX.adBeforeMatchmaking || UX.afterAnother ? null : () => {
+          ! function(UU, XU) {
+            (0, yX.g)({
+              key: (0, yX.e)(UU, XU),
+              settled: Promise.all([QU.matchmakingLibrariesPromise, aU.userContextManager.getCurrentUserContext()]).then((zU => {
+                let [cU, yU] = zU;
+                if (void 0 === cU.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
+                return cU.matchmakeForAhead(UU, XU, yU)
+              })).catch((UU => ({
+                result: gU.c.errorWithCode(String(UU), pU.m.REQUEST_TO_MATCHMAKING, {
+                  error: UU,
+                  severity: "medium"
+                }),
+                at: performance.now()
+              })))
+            })
+          }(jU.lobbyName, jU.game)
+        };
+        var UX;
+        const XX = null !== MU.current;
+        MU.current = null, (0, cX.h)(null);
+        const zX = () => {
+          sU ? (0, DU.navigateToHomePage)() : (VU.current = XX, FU(-1))
+        };
+        let QX = !1;
+        const AX = zU.pathname + zU.search,
+          DX = () => !QX && uU.current === AX;
+        return (0, yX.b)(ZU, KU, (UU => {
+          let {
+            shouldMatchmake: XU,
+            discordContext: zU
+          } = UU;
+          DX() && (XU ? aX(null !== zU && void 0 !== zU ? zU : YU.lobbyName, zU ? "classic" : YU.gameNameWithVariation, YU.directJoinVmUrl).then((UU => {
+            if (null !== UU && DX())
+              if (UU.isError()) {
+                var XU, zU;
+                const cU = UU.asError(),
+                  QU = null !== (XU = cU.debugResult.severity) && void 0 !== XU ? XU : "high";
+                if (tU.k.UY("joinFailed", {
+                    step: null !== (zU = cU.code) && void 0 !== zU ? zU : null,
+                    severity: QU
+                  }), (0, FX.b)(cU.debugResult.error)) return void FX.e.reload();
+                if (cU.code === pU.m.SHADER_PACK) return void(0, hU.e)(cU.message, FU);
+                const DU = yU.e.get("gameEntrySource"),
+                  IU = cU.code === pU.m.INITIALISE_WEBGL ? (0, PU.d)() : null,
+                  {
+                    error: aU
+                  } = cU.debugResult;
+                let gU;
+                if ((0, NU.d)(AU, cU)) gU = Promise.resolve(!1);
+                else if (null !== IU) gU = (0, PU.k)(IU);
+                else if (aU instanceof dU.q) gU = (0, WU.d)(aU);
+                else {
+                  let UU;
+                  switch (QU) {
+                    case "low":
+                      UU = "face-diagonal-mouth";
+                      break;
+                    case "medium":
+                      UU = "face-worried";
+                      break;
+                    case "high":
+                      UU = "face-dizzy"
+                  }
+                  const XU = aU instanceof EX.g;
+                  let zU = cU.message;
+                  XU ? zU = AU("general:gameFilesStalled") : cU.debugResult.gameServerUnreachable && (zU = AU((0, GU.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
+                  gU = EU.NotificationProvider.showPromptPopup({
+                    icon: UU,
+                    title: pU.D[cU.code],
+                    subtitle: (0, vU.jsxs)(vU.Fragment, {
+                      children: [zU, aU instanceof Error && !XU && (0, vU.jsx)("div", {
+                        style: {
+                          fontSize: "0.9rem",
+                          paddingTop: "1rem"
+                        },
+                        children: (0, vU.jsx)(RU.b, {
+                          errorString: aU.stack
+                        })
+                      })]
+                    }),
+                    confirmText: AU("general:tryAgain"),
+                    cancelText: AU("general:cancel")
+                  }).getResult().then((UU => !0 === UU))
+                }
+                gU.then((UU => {
+                  if (UU) {
+                    (0, yU.n)(DU);
+                    const UU = (0, eU.b)(YU.gameNameWithVariation, YU.lobbyName);
+                    "low" === QU ? FU(UU) : (0, kU.reloadBloxd)(UU)
+                  }
+                })), oU.gameBridge.send("leaveGame", {
+                  reloadPath: "/"
+                }), zX()
+              } else {
+                const {
+                  gameNameWithVariation: XU,
+                  lobbyName: zU
+                } = UU.getValue();
+                MU.current = {
+                  gameNameWithVariation: XU,
+                  lobbyName: zU
+                };
+                const cU = (0, eU.b)(XU, zU);
+                FU(cU, {
+                  replace: !0
+                })
+              }
+          })).catch((UU => {
+            if (!DX()) return;
+            tU.k.UY("joinFailed", {
+              step: null,
+              severity: "unexpected"
+            });
+            EU.NotificationProvider.showPromptPopup({
+              icon: "face-dizzy",
+              title: "Unexpected Error",
+              subtitle: (0, vU.jsxs)(vU.Fragment, {
+                children: [AU("homePage:pleaseCopyError"), (0, vU.jsx)("div", {
+                  style: {
+                    fontSize: "0.9rem",
+                    paddingTop: "1rem"
+                  },
+                  children: (0, vU.jsx)(RU.b, {
+                    errorString: UU.stack
+                  })
+                })]
+              }),
+              confirmText: AU("general:tryAgain"),
+              cancelText: AU("general:cancel")
+            }).getResult().then((UU => {
+              !0 === UU && (0, kU.reloadBloxd)((0, eU.b)(YU.gameNameWithVariation, YU.lobbyName))
+            })), zX()
+          })) : FU(-1))
+        }), DX), () => {
+          QX = !0, fU.abort()
+        }
+      }), [wU, zU.search, zU.pathname]), (0, AU.useEffect)((() => {
+        iU.disableFullscreen && (0, ZU.d)() ? (0, ZU.i)() : !iU.disableFullscreen && (0, ZU.e)() && (0, ZU.p)({
+          automatic: !0
+        })
+      }), [fU, iU]), (0, AU.useEffect)((() => {
+        "inGame" === fU && YX()
+      }), [fU, iU]), (0, AU.useEffect)((() => {
+        "inGame" !== fU && yU.e.set({
+          openInGameMenuName: null
+        })
+      }), [fU]);
+      const xU = function(UU) {
+        const XU = (0, yU.k)(UU),
+          [zU, cU] = (0, AU.useState)(0),
+          [QU, oU] = (0, AU.useState)(!1);
+        (0, FU.f)("gameJoined", (() => {
+          (0, yU.k)(yU.e.get("gameState")) && (cU((UU => UU + 1)), oU(!0))
+        })), (0, AU.useEffect)((() => {
+          XU || oU(!1)
+        }), [XU]);
+        const DU = "inGame" === UU;
+        return {
+          mounted: DU || XU && QU,
+          shown: DU,
+          key: zU
+        }
+      }(fU);
+      return (0, vU.jsx)(vU.Fragment, {
+        children: xU.mounted && (0, vU.jsx)(QU.InGameUi, {
+          shown: xU.shown
+        }, xU.key)
       })
     }
   },
-  7068: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => mM,
-      e: () => HM,
-      h: () => LM,
-      l: () => hM
+  5527: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => yU
     });
-    var OM = iM(44),
-      SM = iM(7054),
-      jM = iM(1573),
-      aM = iM(7051),
-      PM = iM(7077),
-      nM = iM(1142);
-    const QM = "shaderPackListingView",
-      zM = "shaderPackListingFilterOpen";
-
-    function LM() {
-      var MM;
-      const [rM, iM] = (0, PM.e)(QM, SM.E[0]);
-      return [null !== (MM = SM.E.find((MM => MM === rM))) && void 0 !== MM ? MM : SM.E[0], iM]
-    }
-
-    function mM() {
-      (0, OM.useEffect)((() => () => {
-        window.location.pathname.startsWith(aM.P) || (0, aM.h)()
-      }), [])
-    }
-
-    function HM() {
-      return (0, PM.e)(zM, !1)
-    }
-
-    function hM() {
-      const {
-        userContext: MM,
-        isUserContextUpdating: rM
-      } = (0, nM.b)(), [iM, SM] = (0, OM.useState)(null), aM = (0, OM.useRef)(new Set);
-
-      function PM(MM, rM) {
-        SM((iM => {
-          const OM = new Set(iM);
-          return rM ? OM.add(MM) : OM.delete(MM), OM
-        }))
-      }
-      return (0, OM.useEffect)((() => {
-        if (rM) return;
-        let iM = !1;
-        return jM.c.getFavouriteShaderPacks(MM).then((MM => {
-          iM || SM(new Set(MM))
-        })).catch((MM => {
-          console.error("Failed to get favourite shader packs", MM), iM || SM(new Set)
-        })), () => {
-          iM = !0
+    var cU = zU(1203);
+    async function yU(UU) {
+      const XU = await fetch(`${cU.clientSideServerUrls.s3Url}/${UU}`, {
+        headers: {
+          Accept: "application/json"
         }
-      }), [MM, rM]), {
-        isFavourite: MM => null === iM ? null : iM.has(MM),
-        toggle: function(rM) {
-          if (null === iM || aM.current.has(rM)) return;
-          aM.current.add(rM);
-          const OM = !iM.has(rM);
-          PM(rM, OM), (OM ? jM.c.favouriteShaderPack(MM, rM) : jM.c.unfavouriteShaderPack(MM, rM)).catch((MM => {
-            console.error("Failed to change a favourite shader pack", MM), PM(rM, !OM)
-          })).finally((() => {
-            aM.current.delete(rM)
-          }))
-        }
-      }
-    }
-  },
-  7051: (MM, rM, iM) => {
-    iM.d(rM, {
-      $: () => DM,
-      B: () => zM,
-      F: () => RM,
-      I: () => JM,
-      K: () => fM,
-      N: () => ZM,
-      P: () => aM,
-      S: () => oM,
-      W: () => nM,
-      Y: () => PM,
-      c: () => lM,
-      d: () => wM,
-      db: () => kM,
-      fb: () => EM,
-      g: () => dM,
-      h: () => mM,
-      j: () => LM,
-      jb: () => uM,
-      n: () => pM,
-      q: () => HM,
-      r: () => WM,
-      u: () => YM,
-      w: () => hM,
-      x: () => yM,
-      z: () => gM
-    });
-    var OM = iM(7054),
-      SM = iM(143),
-      jM = iM(4937);
-    const aM = "/shader-packs",
-      PM = `${aM}/publish`;
-
-    function nM(MM) {
-      return `${aM}/${encodeURIComponent(MM)}`
-    }
-    let QM = null;
-
-    function zM(MM) {
-      QM = MM
-    }
-
-    function LM() {
-      return QM
-    }
-
-    function mM() {
-      QM = null
-    }
-
-    function HM(MM) {
-      return MM.playerHasRank("developer") || MM.playerHasRank("admin")
-    }
-    const hM = ["terrain", "water", "models", "sunShadows", "strict"],
-      JM = {
-        terrain: "shaderPackListing:filterTerrain",
-        water: "shaderPackListing:filterWater",
-        models: "shaderPackListing:filterModels",
-        sunShadows: "shaderPackListing:filterShadows",
-        strict: "shaderPackListing:filterAllGames"
-      };
-
-    function dM(MM, rM) {
-      return MM.withFeatures.includes(rM) ? "with" : MM.withoutFeatures.includes(rM) ? "without" : null
-    }
-
-    function yM(MM) {
-      return null === MM ? "with" : "with" === MM ? "without" : null
-    }
-
-    function lM(MM) {
-      return "with" === MM ? "only" : null === MM ? "include" : void 0
-    }
-
-    function EM(MM, rM) {
-      const iM = dM(MM, rM),
-        OM = MM => MM.filter((MM => MM !== rM));
-      return {
-        withFeatures: null === iM ? [...MM.withFeatures, rM] : OM(MM.withFeatures),
-        withoutFeatures: "with" === iM ? [...MM.withoutFeatures, rM] : OM(MM.withoutFeatures)
-      }
-    }
-    const UM = "section",
-      GM = "sort",
-      CM = "filters",
-      eM = "q",
-      bM = "banned",
-      wM = "popular",
-      tM = "strict";
-
-    function gM(MM) {
-      var rM, iM, SM;
-      const aM = MM.get(UM),
-        PM = (null !== (rM = MM.get(CM)) && void 0 !== rM ? rM : tM).split(","),
-        nM = MM.get(bM);
-      return {
-        section: "favourites" === aM || "mine" === aM ? aM : "explore",
-        sort: null !== (iM = OM.y.find((rM => rM === MM.get(GM)))) && void 0 !== iM ? iM : wM,
-        withFeatures: hM.filter((MM => PM.includes(MM) && !PM.includes(`-${MM}`))),
-        withoutFeatures: hM.filter((MM => PM.includes(`-${MM}`))),
-        searchQuery: (null === (SM = MM.get(eM)) || void 0 === SM ? void 0 : SM.slice(0, OM.M)) || null,
-        pageNumber: (0, jM.d)(MM.get(jM.c)),
-        banned: "only" === nM ? "with" : "include" === nM ? null : "without"
-      }
-    }
-
-    function uM(MM, rM) {
-      var iM;
-      const OM = sM(rM);
-      (0, jM.f)(MM, UM, "explore" === rM.section ? null : rM.section), (0, jM.f)(MM, GM, rM.sort === wM ? null : rM.sort), (0, jM.f)(MM, CM, OM === tM ? null : OM), (0, jM.f)(MM, eM, rM.searchQuery), (0, jM.f)(MM, bM, null !== (iM = lM(rM.banned)) && void 0 !== iM ? iM : null), (0, jM.h)(MM, rM.pageNumber)
-    }
-
-    function RM(MM) {
-      const rM = new URLSearchParams;
-      return uM(rM, {
-        section: "explore",
-        sort: wM,
-        withFeatures: "strict" === MM ? [MM] : [MM, "strict"],
-        withoutFeatures: [],
-        searchQuery: null,
-        pageNumber: 1,
-        banned: "without"
-      }), `${aM}?${rM.toString()}`
-    }
-
-    function pM(MM) {
-      return sM(MM) === tM
-    }
-
-    function WM(MM) {
-      return null !== MM.searchQuery || "with" === MM.banned || sM(MM) !== tM
-    }
-
-    function sM(MM) {
-      return hM.flatMap((rM => {
-        const iM = dM(MM, rM);
-        return "with" === iM ? [rM] : "without" === iM ? [`-${rM}`] : []
-      })).join(",")
-    }
-    const DM = {
-        popular: "shaderPackListing:sortPopular",
-        updated: "shaderPackListing:sortUpdated",
-        newest: "shaderPackListing:sortNewest"
-      },
-      kM = {
-        forest: "shaderPackListing:viewForest",
-        desert: "shaderPackListing:viewDesert",
-        water: "shaderPackListing:viewWater",
-        night: "shaderPackListing:viewNight",
-        cave: "shaderPackListing:viewCave"
-      };
-
-    function ZM(MM) {
-      return Math.round(100 * Math.max(0, 1 - 1 / MM))
-    }
-
-    function oM(MM, rM, iM, SM) {
-      const jM = [];
-      MM.isBanned && jM.push({
-        tone: "warning",
-        text: SM("shaderPackListing:ownerBanned"),
-        detail: null
       });
+      if (404 === XU.status || 403 === XU.status) return null;
+      if (!XU.ok) throw new Error(`Failed to download the texture pack (${XU.status})`);
+      return await XU.json()
+    }
+  },
+  9489: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => tU,
+      e: () => gU
+    });
+    var cU = zU(173),
+      yU = zU(212),
+      QU = zU(1079),
+      AU = zU(1086),
+      FU = zU(1236),
+      oU = zU(2005),
+      DU = zU(2494),
+      EU = zU(1545),
+      YU = zU(1410),
+      NU = zU(1131),
+      IU = zU(9493),
+      pU = zU(1568),
+      aU = zU(1592);
+
+    function tU(UU, XU) {
+      const zU = !0 === XU.debugResult.gameRefused,
+        QU = zU || XU.code === cU.m.REQUEST_TO_MATCHMAKING ? (0, IU.h)(XU.message) : null;
+      if (null !== QU) return ZU(UU, UU((0, IU.n)(QU)), UU(IU.j[QU])), !0;
+      if (zU) return async function(UU) {
+        const {
+          gameNameWithVariation: XU,
+          lobbyName: zU,
+          shownLobbyName: cU
+        } = oU.gameBridge.latest("connectedGame"), yU = "classic" === XU && (0, FU.A)(zU) ? cU : await (0, DU.g)(UU, XU, zU);
+        return "" !== yU ? UU("general:cantJoinGame", {
+          game: yU
+        }) : UU("general:cantJoinThisGame")
+      }(UU).then((zU => {
+        ZU(UU, zU, XU.message)
+      })), !0;
       const {
-        pending: aM
-      } = MM;
-      if (null === MM.brokenError || aM && !aM.error || jM.push({
-          tone: "warning",
-          text: SM("shaderPackListing:ownerBroken"),
-          detail: MM.brokenError
-        }), null !== aM && void 0 !== aM && aM.error) jM.push({
-        tone: "warning",
-        text: SM(rM ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, OM.m)(aM.error) ? null : aM.error
-      });
-      else if (aM) {
-        const MM = null === aM.renderNotBefore ? 0 : aM.renderNotBefore - iM,
-          OM = String(Math.ceil(MM / 6e4)),
-          PM = SM(rM ? MM > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : MM > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: OM
-          });
-        jM.push({
-          tone: "info",
-          text: PM,
-          detail: null
-        })
+        joinFailure: AU
+      } = XU.debugResult, EU = "refused" === (null === AU || void 0 === AU ? void 0 : AU.at) ? AU.code : null;
+      return EU === yU.e.schematicNotPublished.code ? (async function(UU, XU) {
+        const zU = kU(),
+          cU = await BU(zU);
+        if (null === cU || cU.gamePublished) return void ZU(UU, UU("general:cantJoinThisGame"), XU);
+        await GU(UU, "rocket-launch", UU("studio:gameNotPublishedTitle", {
+          game: cU.name
+        }), UU("studio:publishInStudio"), zU)
+      }(UU, XU.message), !0) : (EU === yU.e.schematicBanned.code || EU === yU.e.customGameTakenDown.code) && (BU(kU()).then((XU => {
+        gU(UU, XU)
+      })), !0)
+    }
+
+    function gU(UU, XU) {
+      !0 !== (null === XU || void 0 === XU ? void 0 : XU.takenDown) ? ZU(UU, UU("general:cantJoinThisGame"), yU.e.customGameTakenDown.text) : GU(UU, "lock", UU("studio:gameTakenDownTitle", {
+        game: XU.name
+      }), UU("studio:viewInStudio"), XU.schematicId)
+    }
+
+    function kU() {
+      return (0, QU.p)(oU.gameBridge.latest("connectedGame").gameNameWithVariation)
+    }
+    async function GU(UU, XU, zU, cU, yU) {
+      !0 === await YU.NotificationProvider.showPromptPopup({
+        icon: XU,
+        title: zU,
+        confirmText: cU,
+        cancelText: UU("general:cancel")
+      }).getResult() && (0, pU.navigatePreserveSearch)((0, aU.r)((0, AU.e)(yU), "manage"))
+    }
+    async function BU(UU) {
+      try {
+        return await EU.c.getGame(await NU.userContextManager.getCurrentUserContext(), UU, !0)
+      } catch (XU) {
+        return (0, EU.e)(XU) || console.error(`Failed to get game ${UU}`, XU), null
       }
-      return MM.listed || jM.push({
-        tone: "info",
-        text: SM("shaderPackListing:ownerUnlisted"),
-        detail: null
-      }), jM
     }
 
-    function fM(MM) {
-      return Math.max(1, Math.round(MM / 1024))
+    function ZU(UU, XU, zU) {
+      YU.NotificationProvider.showPromptPopup({
+        icon: "lock",
+        title: XU,
+        subtitle: zU,
+        confirmText: UU("general:ok"),
+        cancelText: ""
+      })
     }
+  },
+  9510: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => AU
+    });
+    var cU = zU(1376),
+      yU = zU(1236),
+      QU = zU(646);
 
-    function YM(MM, rM, iM) {
-      return MM instanceof SM.e && MM.errorMessageForUser ? MM.errorMessageForUser : rM(iM)
-    }
-  },
-  7077: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM
-    });
-    var OM = iM(44),
-      SM = iM(30);
-
-    function jM(MM, rM) {
-      var iM;
-      const [jM, aM] = (0, OM.useState)(null !== (iM = SM.g.getItem(MM)) && void 0 !== iM ? iM : rM);
-      return [jM, rM => {
-        SM.g.setItem(MM, rM), aM(rM)
-      }]
-    }
-  },
-  7148: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      d: () => jM
-    });
-    var OM = iM(30);
-    const SM = "shaderPack";
-    async function jM() {
-      var MM;
-      let rM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (MM = await OM.f.getItem(SM, rM)) && void 0 !== MM ? MM : null
-    }
-  },
-  7054: (MM, rM, iM) => {
-    iM.d(rM, {
-      D: () => aM,
-      E: () => OM,
-      I: () => mM,
-      M: () => zM,
-      Q: () => UM,
-      U: () => LM,
-      V: () => QM,
-      b: () => hM,
-      e: () => dM,
-      g: () => JM,
-      k: () => HM,
-      m: () => EM,
-      q: () => CM,
-      t: () => nM,
-      v: () => SM,
-      w: () => GM,
-      y: () => jM,
-      z: () => PM
-    });
-    const OM = ["forest", "desert", "water", "night", "cave"];
-    const SM = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
+    function AU(UU) {
+      return UU = function(UU, XU) {
+        var zU;
+        const cU = new URLSearchParams(XU),
+          yU = cU.get("lobby"),
+          QU = cU.get("vm"),
+          AU = null !== (zU = yU) && void 0 !== zU ? zU : UU.lobbyName,
+          FU = null !== QU && void 0 !== QU ? QU : UU.directJoinVmUrl;
+        if (AU === UU.lobbyName && FU === UU.directJoinVmUrl) return UU;
+        return {
+          ...UU,
+          lobbyName: AU,
+          directJoinVmUrl: FU
         }
-      },
-      jM = ["popular", "updated", "newest"],
-      aM = 3,
-      PM = 32,
-      nM = 300;
-
-    function QM(MM, rM) {
-      return MM.slice(0, rM).replace(/[\uD800-\uDBFF]$/, "")
+      }(UU, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), UU = function(UU) {
+        if ((0, QU.P)(UU.directJoinVmUrl)) return UU;
+        const XU = (0, yU.S)(UU.directJoinVmUrl);
+        null === XU && (UU.directJoinVmUrl = void 0);
+        return UU
+      }(UU = function(UU) {
+        if ((0, QU.P)(UU.gameNameWithVariation)) return UU;
+        return UU.gameNameWithVariation = (0, cU.j)(UU.gameNameWithVariation), UU
+      }(UU))
     }
-    const zM = 64,
-      LM = 512,
-      mM = 18e5;
+  },
+  9505: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU,
+      h: () => yU
+    });
+    let cU = !1;
 
-    function HM(MM) {
-      const rM = MM,
-        iM = null === rM || void 0 === rM ? void 0 : rM.files;
-      return "number" === typeof(null === rM || void 0 === rM ? void 0 : rM.apiVersion) && "string" === typeof rM.name && (null === rM.author || "string" === typeof rM.author) && (void 0 === rM.keepCircleShadows || "boolean" === typeof rM.keepCircleShadows) && "object" === typeof iM && null !== iM && Object.values(iM).every((MM => "string" === typeof MM))
-    }
-    const hM = "Bloxdhub",
-      JM = "https://bloxdhub.com/shaders";
-
-    function dM(MM) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(MM)}`
-    }
-    const yM = "Screenshot generation failed.",
-      lM = "Its screenshots couldn't be generated:";
-
-    function EM(MM) {
-      var rM;
-      return MM === yM || null !== (rM = null === MM || void 0 === MM ? void 0 : MM.startsWith(lM)) && void 0 !== rM && rM
+    function yU() {
+      cU = !0
     }
 
-    function UM(MM, rM) {
-      return `shaderPacks/${MM}/${rM}.json`
+    function QU() {
+      return cU
+    }
+  },
+  9516: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => FU,
+      e: () => yU,
+      g: () => QU,
+      h: () => AU
+    });
+    let cU = null;
+
+    function yU(UU, XU) {
+      return `${XU}\n${null!==UU&&void 0!==UU?UU:""}`
     }
 
-    function GM(MM, rM, iM, OM) {
-      return null === rM.renderId ? CM(MM, rM.baselineVersion, iM, OM) : `${MM}/${function(MM,rM,iM,OM){return`shaderPacks/${MM}/${rM}/${iM}-${OM}.webp`}(rM.packId,rM.renderId,iM,OM)}`
+    function QU(UU) {
+      cU = UU
     }
 
-    function CM(MM, rM, iM, OM) {
-      return `${MM}/${function(MM,rM,iM){return`shaderPacks/baseline/${MM}/${rM}-${iM}.webp`}(rM,iM,OM)}`
+    function AU(UU) {
+      const XU = cU;
+      return cU = null, null !== XU && XU.key === UU ? XU.settled : null
+    }
+
+    function FU(UU, XU, zU, cU) {
+      let yU = !1;
+      null !== XU && setTimeout((() => {
+        cU() && !yU && XU()
+      }), 0), UU.then((UU => {
+        yU = !0, zU(UU)
+      }))
+    }
+  },
+  9502: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => IU,
+      g: () => NU,
+      k: () => pU
+    });
+    var cU = zU(3519),
+      yU = zU(2410),
+      QU = zU(2210),
+      AU = zU(5085),
+      FU = zU(3887),
+      oU = zU(9505);
+    let DU = null;
+
+    function EU() {
+      return Promise.all([zU.e(86), zU.e(89), zU.e(103), zU.e(228), zU.e(227), zU.e(148), zU.e(212), zU.e(234), zU.e(153), zU.e(101), zU.e(236), zU.e(75)]).then((() => zU(41736)))
+    }
+
+    function YU() {
+      Promise.all([zU.e(84), zU.e(87), zU.e(85), zU.e(86), zU.e(103), zU.e(100), zU.e(294), zU.e(203), zU.e(242), zU.e(268), zU.e(236), zU.e(54)]).then((() => zU(42104))).catch((() => {}))
+    }
+
+    function NU() {
+      return AU.e.cancelDownloadForJoin(), (0, FU.e)(), (0, yU.g)(), (0, oU.h)(), (0, QU.l)(), YU(), Promise.all([zU.e(89), zU.e(103), zU.e(228), zU.e(227), zU.e(148), zU.e(153), zU.e(70)]).then((() => zU(42151))).then((UU => {
+        let {
+          startJoinLoad: XU
+        } = UU;
+        XU()
+      }), (() => {})), DU ??= EU().then((UU => (UU.startWasmPlay(), UU.followPageUiPack((UU => {
+        cU.c.showGamePack(UU)
+      })), UU)), (UU => {
+        throw DU = null, UU
+      })), DU
+    }
+
+    function IU() {
+      return YU(), zU.e(296).then((() => zU(42154))).catch((() => {})), EU().then((() => {}))
+    }
+
+    function pU() {
+      return EU().then((UU => {
+        UU.startWasmPreviews(), UU.prefetchWasmPreviews()
+      }))
+    }
+  },
+  9493: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU,
+      f: () => AU,
+      h: () => FU,
+      j: () => DU,
+      n: () => oU
+    });
+    var cU = zU(212),
+      yU = zU(5057);
+
+    function QU(UU) {
+      return AU(UU) === cU.e.gameOrPluginOnPlayerAuthRejected.code
+    }
+
+    function AU(UU) {
+      return "object" === typeof UU && null !== UU ? UU.code : void 0
+    }
+
+    function FU(UU) {
+      var XU;
+      return null !== (XU = Object.keys(yU.b).find((XU => yU.b[XU] === UU))) && void 0 !== XU ? XU : null
+    }
+
+    function oU(UU) {
+      return "notWhitelisted" === UU ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    }
+    const DU = {
+      private: "customLobby:cantJoinPrivate",
+      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
+      banned: "customLobby:cantJoinBanned",
+      adminLocked: "customLobby:cantJoinAdminLocked"
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

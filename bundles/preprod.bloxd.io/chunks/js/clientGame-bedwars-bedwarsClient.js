@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  40357: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => SM
+  40137: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => yU
     });
-    var OM = iM(39012);
-    const SM = function(MM, rM, iM) {
-      let SM;
+    var cU = zU(38782);
+    const yU = function(UU, XU, zU) {
+      let yU;
       return {
         plugins: {
-          placeAgainstBeds: (0, OM.d)()
+          placeAgainstBeds: (0, cU.d)()
         },
-        onCreate: MM => {
-          SM = MM
+        onCreate: UU => {
+          yU = UU
         },
-        onPlayerAltAction: (MM, rM, iM, OM, jM, aM) => {
-          ((MM, rM) => {
-            if (!rM || "Mesh" !== SM.getEntityType(rM)) return;
-            const iM = SM.getEntityName(rM);
-            "Upgrades" === iM ? SM.openShop(MM, !1, "Upgrades") : "Items" === iM && SM.openShop(MM, !1, "Recommended")
-          })(MM, aM)
+        onPlayerAltAction: (UU, XU, zU, cU, QU, AU) => {
+          ((UU, XU) => {
+            if (!XU || "Mesh" !== yU.getEntityType(XU)) return;
+            const zU = yU.getEntityName(XU);
+            "Upgrades" === zU ? yU.openShop(UU, !1, "Upgrades") : "Items" === zU && yU.openShop(UU, !1, "Recommended")
+          })(UU, AU)
         }
       }
     }
   },
-  39012: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM
+  38782: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => FU
     });
-    var OM = iM(332),
-      SM = iM(37858),
-      jM = iM(4854);
-    const aM = ["Leaf Bed", "_Leaf Bed Head", ...OM.Ec.flatMap((MM => [`${MM} Bed`, `_${MM} Bed Head`, `${MM} Strongbed`, `_${MM} Strongbed Head`]))];
+    var cU = zU(344),
+      yU = zU(37662),
+      QU = zU(4909);
+    const AU = ["Leaf Bed", "_Leaf Bed Head", ...cU.Oc.flatMap((UU => [`${UU} Bed`, `_${UU} Bed Head`, `${UU} Strongbed`, `_${UU} Strongbed Head`]))];
 
-    function PM() {
-      let MM;
+    function FU() {
+      let UU;
       return {
-        onCreate(rM) {
-          MM = rM
+        onCreate(XU) {
+          UU = XU
         },
-        altVetoBlocks: aM,
-        onPlayerAttemptAltAction(rM, iM, OM, aM, PM, nM) {
-          var QM;
-          if ((0, SM.e)(MM.getMetaInfo(PM).rootName) && !MM.isEntityInteractable(nM) && (0, jM.g)(null === (QM = MM.TrM(rM)) || void 0 === QM ? void 0 : QM.typeObj.type)) return "preventAction"
+        altVetoBlocks: AU,
+        onPlayerAttemptAltAction(XU, zU, cU, AU, FU, oU) {
+          var DU;
+          if ((0, yU.b)(UU.getMetaInfo(FU).rootName) && !UU.isEntityInteractable(oU) && (0, QU.d)(null === (DU = UU.HzU(XU)) || void 0 === DU ? void 0 : DU.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37858: (MM, rM, iM) => {
-    function OM(MM) {
-      return MM.includes("Leaf Bed")
+  37662: (UU, XU, zU) => {
+    function cU(UU) {
+      return UU.includes("Leaf Bed")
     }
 
-    function SM(MM) {
-      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
+    function yU(UU) {
+      return / Bed(?: Head)?(?:\||$)/.test(UU) && !cU(UU)
     }
 
-    function jM(MM) {
-      return MM.includes(" Strongbed")
+    function QU(UU) {
+      return UU.includes(" Strongbed")
     }
 
-    function aM(MM) {
-      return OM(MM) || SM(MM) || jM(MM)
+    function AU(UU) {
+      return cU(UU) || yU(UU) || QU(UU)
     }
-    iM.d(rM, {
-      e: () => aM,
-      g: () => OM,
-      h: () => jM,
-      l: () => SM
+    zU.d(XU, {
+      b: () => AU,
+      c: () => cU,
+      g: () => QU,
+      j: () => yU
     })
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

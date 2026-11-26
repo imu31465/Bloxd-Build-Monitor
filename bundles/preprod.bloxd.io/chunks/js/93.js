@@ -1,99 +1,99 @@
 export const id = 93;
 export const ids = [93];
 export const modules = {
-  5121: MM => {
-    function rM(MM) {
-      return MM instanceof Map ? MM.clear = MM.delete = MM.set = function() {
+  5243: UU => {
+    function XU(UU) {
+      return UU instanceof Map ? UU.clear = UU.delete = UU.set = function() {
         throw new Error("map is read-only")
-      } : MM instanceof Set && (MM.add = MM.clear = MM.delete = function() {
+      } : UU instanceof Set && (UU.add = UU.clear = UU.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(MM), Object.getOwnPropertyNames(MM).forEach((iM => {
-        const OM = MM[iM],
-          SM = typeof OM;
-        "object" !== SM && "function" !== SM || Object.isFrozen(OM) || rM(OM)
-      })), MM
+      }), Object.freeze(UU), Object.getOwnPropertyNames(UU).forEach((zU => {
+        const cU = UU[zU],
+          yU = typeof cU;
+        "object" !== yU && "function" !== yU || Object.isFrozen(cU) || XU(cU)
+      })), UU
     }
-    class iM {
-      constructor(MM) {
-        void 0 === MM.data && (MM.data = {}), this.data = MM.data, this.isMatchIgnored = !1
+    class zU {
+      constructor(UU) {
+        void 0 === UU.data && (UU.data = {}), this.data = UU.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function OM(MM) {
-      return MM.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function cU(UU) {
+      return UU.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function SM(MM) {
-      const rM = Object.create(null);
-      for (const jM in MM) rM[jM] = MM[jM];
-      for (var iM = arguments.length, OM = new Array(iM > 1 ? iM - 1 : 0), SM = 1; SM < iM; SM++) OM[SM - 1] = arguments[SM];
-      return OM.forEach((function(MM) {
-        for (const iM in MM) rM[iM] = MM[iM]
-      })), rM
+    function yU(UU) {
+      const XU = Object.create(null);
+      for (const QU in UU) XU[QU] = UU[QU];
+      for (var zU = arguments.length, cU = new Array(zU > 1 ? zU - 1 : 0), yU = 1; yU < zU; yU++) cU[yU - 1] = arguments[yU];
+      return cU.forEach((function(UU) {
+        for (const zU in UU) XU[zU] = UU[zU]
+      })), XU
     }
-    const jM = MM => !!MM.scope;
-    class aM {
-      constructor(MM, rM) {
-        this.buffer = "", this.classPrefix = rM.classPrefix, MM.walk(this)
+    const QU = UU => !!UU.scope;
+    class AU {
+      constructor(UU, XU) {
+        this.buffer = "", this.classPrefix = XU.classPrefix, UU.walk(this)
       }
-      addText(MM) {
-        this.buffer += OM(MM)
+      addText(UU) {
+        this.buffer += cU(UU)
       }
-      openNode(MM) {
-        if (!jM(MM)) return;
-        const rM = ((MM, rM) => {
+      openNode(UU) {
+        if (!QU(UU)) return;
+        const XU = ((UU, XU) => {
           let {
-            prefix: iM
-          } = rM;
-          if (MM.startsWith("language:")) return MM.replace("language:", "language-");
-          if (MM.includes(".")) {
-            const rM = MM.split(".");
-            return [`${iM}${rM.shift()}`, ...rM.map(((MM, rM) => `${MM}${"_".repeat(rM+1)}`))].join(" ")
+            prefix: zU
+          } = XU;
+          if (UU.startsWith("language:")) return UU.replace("language:", "language-");
+          if (UU.includes(".")) {
+            const XU = UU.split(".");
+            return [`${zU}${XU.shift()}`, ...XU.map(((UU, XU) => `${UU}${"_".repeat(XU+1)}`))].join(" ")
           }
-          return `${iM}${MM}`
-        })(MM.scope, {
+          return `${zU}${UU}`
+        })(UU.scope, {
           prefix: this.classPrefix
         });
-        this.span(rM)
+        this.span(XU)
       }
-      closeNode(MM) {
-        jM(MM) && (this.buffer += "</span>")
+      closeNode(UU) {
+        QU(UU) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(MM) {
-        this.buffer += `<span class="${MM}">`
+      span(UU) {
+        this.buffer += `<span class="${UU}">`
       }
     }
-    const PM = function() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const rM = {
+    const FU = function() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const XU = {
         children: []
       };
-      return Object.assign(rM, MM), rM
+      return Object.assign(XU, UU), XU
     };
-    class nM {
+    class oU {
       constructor() {
-        this.ZE = PM(), this.stack = [this.ZE]
+        this.WG = FU(), this.stack = [this.WG]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.ZE
+        return this.WG
       }
-      add(MM) {
-        this.top.children.push(MM)
+      add(UU) {
+        this.top.children.push(UU)
       }
-      openNode(MM) {
-        const rM = PM({
-          scope: MM
+      openNode(UU) {
+        const XU = FU({
+          scope: UU
         });
-        this.add(rM), this.stack.push(rM)
+        this.add(XU), this.stack.push(XU)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.ZE, null, 4)
+        return JSON.stringify(this.WG, null, 4)
       }
-      walk(MM) {
-        return this.constructor._walk(MM, this.ZE)
+      walk(UU) {
+        return this.constructor._walk(UU, this.WG)
       }
-      static _walk(MM, rM) {
-        return "string" === typeof rM ? MM.addText(rM) : rM.children && (MM.openNode(rM), rM.children.forEach((rM => this._walk(MM, rM))), MM.closeNode(rM)), MM
+      static _walk(UU, XU) {
+        return "string" === typeof XU ? UU.addText(XU) : XU.children && (UU.openNode(XU), XU.children.forEach((XU => this._walk(UU, XU))), UU.closeNode(XU)), UU
       }
-      static _collapse(MM) {
-        "string" !== typeof MM && MM.children && (MM.children.every((MM => "string" === typeof MM)) ? MM.children = [MM.children.join("")] : MM.children.forEach((MM => {
-          nM._collapse(MM)
+      static _collapse(UU) {
+        "string" !== typeof UU && UU.children && (UU.children.every((UU => "string" === typeof UU)) ? UU.children = [UU.children.join("")] : UU.children.forEach((UU => {
+          oU._collapse(UU)
         })))
       }
     }
-    class QM extends nM {
-      constructor(MM) {
-        super(), this.options = MM
+    class DU extends oU {
+      constructor(UU) {
+        super(), this.options = UU
       }
-      addText(MM) {
-        "" !== MM && this.add(MM)
+      addText(UU) {
+        "" !== UU && this.add(UU)
       }
-      startScope(MM) {
-        this.openNode(MM)
+      startScope(UU) {
+        this.openNode(UU)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(MM, rM) {
-        const iM = MM.root;
-        rM && (iM.scope = `language:${rM}`), this.add(iM)
+      __addSublanguage(UU, XU) {
+        const zU = UU.root;
+        XU && (zU.scope = `language:${XU}`), this.add(zU)
       }
       toHTML() {
-        return new aM(this, this.options).value()
+        return new AU(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function zM(MM) {
-      return MM ? "string" === typeof MM ? MM : MM.source : null
+    function EU(UU) {
+      return UU ? "string" === typeof UU ? UU : UU.source : null
     }
 
-    function LM(MM) {
-      return hM("(?=", MM, ")")
+    function YU(UU) {
+      return pU("(?=", UU, ")")
     }
 
-    function mM(MM) {
-      return hM("(?:", MM, ")*")
+    function NU(UU) {
+      return pU("(?:", UU, ")*")
     }
 
-    function HM(MM) {
-      return hM("(?:", MM, ")?")
+    function IU(UU) {
+      return pU("(?:", UU, ")?")
     }
 
-    function hM() {
-      for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-      return rM.map((MM => zM(MM))).join("")
+    function pU() {
+      for (var UU = arguments.length, XU = new Array(UU), zU = 0; zU < UU; zU++) XU[zU] = arguments[zU];
+      return XU.map((UU => EU(UU))).join("")
     }
 
-    function JM() {
-      for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-      const OM = function(MM) {
-        const rM = MM[MM.length - 1];
-        return "object" === typeof rM && rM.constructor === Object ? (MM.splice(MM.length - 1, 1), rM) : {}
-      }(rM);
-      return "(" + (OM.capture ? "" : "?:") + rM.map((MM => zM(MM))).join("|") + ")"
+    function aU() {
+      for (var UU = arguments.length, XU = new Array(UU), zU = 0; zU < UU; zU++) XU[zU] = arguments[zU];
+      const cU = function(UU) {
+        const XU = UU[UU.length - 1];
+        return "object" === typeof XU && XU.constructor === Object ? (UU.splice(UU.length - 1, 1), XU) : {}
+      }(XU);
+      return "(" + (cU.capture ? "" : "?:") + XU.map((UU => EU(UU))).join("|") + ")"
     }
 
-    function dM(MM) {
-      return new RegExp(MM.toString() + "|").exec("").length - 1
+    function tU(UU) {
+      return new RegExp(UU.toString() + "|").exec("").length - 1
     }
-    const yM = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const gU = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function lM(MM, rM) {
+    function kU(UU, XU) {
       let {
-        joinWith: iM
-      } = rM, OM = 0;
-      return MM.map((MM => {
-        OM += 1;
-        const rM = OM;
-        let iM = zM(MM),
-          SM = "";
-        for (; iM.length > 0;) {
-          const MM = yM.exec(iM);
-          if (!MM) {
-            SM += iM;
+        joinWith: zU
+      } = XU, cU = 0;
+      return UU.map((UU => {
+        cU += 1;
+        const XU = cU;
+        let zU = EU(UU),
+          yU = "";
+        for (; zU.length > 0;) {
+          const UU = gU.exec(zU);
+          if (!UU) {
+            yU += zU;
             break
           }
-          SM += iM.substring(0, MM.index), iM = iM.substring(MM.index + MM[0].length), "\\" === MM[0][0] && MM[1] ? SM += "\\" + String(Number(MM[1]) + rM) : (SM += MM[0], "(" === MM[0] && OM++)
+          yU += zU.substring(0, UU.index), zU = zU.substring(UU.index + UU[0].length), "\\" === UU[0][0] && UU[1] ? yU += "\\" + String(Number(UU[1]) + XU) : (yU += UU[0], "(" === UU[0] && cU++)
         }
-        return SM
-      })).map((MM => `(${MM})`)).join(iM)
+        return yU
+      })).map((UU => `(${UU})`)).join(zU)
     }
-    const EM = "[a-zA-Z]\\w*",
-      UM = "[a-zA-Z_]\\w*",
-      GM = "\\b\\d+(\\.\\d+)?",
-      CM = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      eM = "\\b(0b[01]+)",
-      bM = {
-        JL: "\\\\[\\s\\S]",
+    const GU = "[a-zA-Z]\\w*",
+      BU = "[a-zA-Z_]\\w*",
+      ZU = "\\b\\d+(\\.\\d+)?",
+      RU = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      PU = "\\b(0b[01]+)",
+      WU = {
+        gY: "\\\\[\\s\\S]",
         relevance: 0
       },
-      wM = {
+      dU = {
         scope: "string",
-        JL: "'",
+        gY: "'",
         end: "'",
         illegal: "\\n",
-        contains: [bM]
+        contains: [WU]
       },
-      tM = {
+      LU = {
         scope: "string",
-        JL: '"',
+        gY: '"',
         end: '"',
         illegal: "\\n",
-        contains: [bM]
+        contains: [WU]
       },
-      gM = function(MM, rM) {
-        const iM = SM({
+      eU = function(UU, XU) {
+        const zU = yU({
           scope: "comment",
-          JL: MM,
-          end: rM,
+          gY: UU,
+          end: XU,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        iM.contains.push({
+        zU.contains.push({
           scope: "doctag",
-          JL: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          gY: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const OM = JM("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return iM.contains.push({
-          JL: hM(/[ ]+/, "(", OM, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), iM
+        const cU = aU("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return zU.contains.push({
+          gY: pU(/[ ]+/, "(", cU, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), zU
       },
-      uM = gM("//", "$"),
-      RM = gM("/\\*", "\\*/"),
-      pM = gM("#", "$"),
-      WM = {
+      CU = eU("//", "$"),
+      wU = eU("/\\*", "\\*/"),
+      qU = eU("#", "$"),
+      OU = {
         scope: "number",
-        JL: GM,
+        gY: ZU,
         relevance: 0
       },
-      sM = {
+      SU = {
         scope: "number",
-        JL: CM,
+        gY: RU,
         relevance: 0
       },
-      DM = {
+      rU = {
         scope: "number",
-        JL: eM,
+        gY: PU,
         relevance: 0
       },
-      kM = {
+      uU = {
         scope: "regexp",
-        JL: /\/(?=[^/\n]*\/)/,
+        gY: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [bM, {
-          JL: /\[/,
+        contains: [WU, {
+          gY: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [bM]
+          contains: [WU]
         }]
       },
-      ZM = {
+      fU = {
         scope: "title",
-        JL: EM,
+        gY: GU,
         relevance: 0
       },
-      oM = {
+      iU = {
         scope: "title",
-        JL: UM,
+        gY: BU,
         relevance: 0
       },
-      fM = {
-        JL: "\\.\\s*" + UM,
+      HU = {
+        gY: "\\.\\s*" + BU,
         relevance: 0
       };
-    var YM = Object.freeze({
+    var MU = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: wM,
-      BACKSLASH_ESCAPE: bM,
-      BINARY_NUMBER_MODE: DM,
-      BINARY_NUMBER_RE: eM,
-      COMMENT: gM,
-      C_BLOCK_COMMENT_MODE: RM,
-      C_LINE_COMMENT_MODE: uM,
-      C_NUMBER_MODE: sM,
-      C_NUMBER_RE: CM,
-      END_SAME_AS_BEGIN: function(MM) {
-        return Object.assign(MM, {
-          "on:begin": (MM, rM) => {
-            rM.data._beginMatch = MM[1]
+      APOS_STRING_MODE: dU,
+      BACKSLASH_ESCAPE: WU,
+      BINARY_NUMBER_MODE: rU,
+      BINARY_NUMBER_RE: PU,
+      COMMENT: eU,
+      C_BLOCK_COMMENT_MODE: wU,
+      C_LINE_COMMENT_MODE: CU,
+      C_NUMBER_MODE: SU,
+      C_NUMBER_RE: RU,
+      END_SAME_AS_BEGIN: function(UU) {
+        return Object.assign(UU, {
+          "on:begin": (UU, XU) => {
+            XU.data._beginMatch = UU[1]
           },
-          "on:end": (MM, rM) => {
-            rM.data._beginMatch !== MM[1] && rM.ignoreMatch()
+          "on:end": (UU, XU) => {
+            XU.data._beginMatch !== UU[1] && XU.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: pM,
-      IDENT_RE: EM,
+      HASH_COMMENT_MODE: qU,
+      IDENT_RE: GU,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: fM,
-      NUMBER_MODE: WM,
-      NUMBER_RE: GM,
+      METHOD_GUARD: HU,
+      NUMBER_MODE: OU,
+      NUMBER_RE: ZU,
       PHRASAL_WORDS_MODE: {
-        JL: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        gY: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: tM,
-      REGEXP_MODE: kM,
+      QUOTE_STRING_MODE: LU,
+      REGEXP_MODE: uU,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const rM = /^#![ ]*\//;
-        return MM.binary && (MM.JL = hM(rM, /.*\b/, MM.binary, /\b.*/)), SM({
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const XU = /^#![ ]*\//;
+        return UU.binary && (UU.gY = pU(XU, /.*\b/, UU.binary, /\b.*/)), yU({
           scope: "meta",
-          JL: rM,
+          gY: XU,
           end: /$/,
           relevance: 0,
-          "on:begin": (MM, rM) => {
-            0 !== MM.index && rM.ignoreMatch()
+          "on:begin": (UU, XU) => {
+            0 !== UU.index && XU.ignoreMatch()
           }
-        }, MM)
+        }, UU)
       },
-      TITLE_MODE: ZM,
-      UNDERSCORE_IDENT_RE: UM,
-      UNDERSCORE_TITLE_MODE: oM
+      TITLE_MODE: fU,
+      UNDERSCORE_IDENT_RE: BU,
+      UNDERSCORE_TITLE_MODE: iU
     });
 
-    function NM(MM, rM) {
-      "." === MM.input[MM.index - 1] && rM.ignoreMatch()
+    function vU(UU, XU) {
+      "." === UU.input[UU.index - 1] && XU.ignoreMatch()
     }
 
-    function AM(MM, rM) {
-      void 0 !== MM.className && (MM.scope = MM.className, delete MM.className)
+    function VU(UU, XU) {
+      void 0 !== UU.className && (UU.scope = UU.className, delete UU.className)
     }
 
-    function xM(MM, rM) {
-      rM && MM.beginKeywords && (MM.JL = "\\b(" + MM.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", MM.__beforeBegin = NM, MM.keywords = MM.keywords || MM.beginKeywords, delete MM.beginKeywords, void 0 === MM.relevance && (MM.relevance = 0))
+    function sU(UU, XU) {
+      XU && UU.beginKeywords && (UU.gY = "\\b(" + UU.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", UU.__beforeBegin = vU, UU.keywords = UU.keywords || UU.beginKeywords, delete UU.beginKeywords, void 0 === UU.relevance && (UU.relevance = 0))
     }
 
-    function vM(MM, rM) {
-      Array.isArray(MM.illegal) && (MM.illegal = JM(...MM.illegal))
+    function nU(UU, XU) {
+      Array.isArray(UU.illegal) && (UU.illegal = aU(...UU.illegal))
     }
 
-    function FM(MM, rM) {
-      if (MM.match) {
-        if (MM.JL || MM.end) throw new Error("begin & end are not supported with match");
-        MM.JL = MM.match, delete MM.match
+    function mU(UU, XU) {
+      if (UU.match) {
+        if (UU.gY || UU.end) throw new Error("begin & end are not supported with match");
+        UU.gY = UU.match, delete UU.match
       }
     }
 
-    function BM(MM, rM) {
-      void 0 === MM.relevance && (MM.relevance = 1)
+    function lU(UU, XU) {
+      void 0 === UU.relevance && (UU.relevance = 1)
     }
-    const XM = (MM, rM) => {
-        if (!MM.beforeMatch) return;
-        if (MM.starts) throw new Error("beforeMatch cannot be used with starts");
-        const iM = Object.assign({}, MM);
-        Object.keys(MM).forEach((rM => {
-          delete MM[rM]
-        })), MM.keywords = iM.keywords, MM.JL = hM(iM.beforeMatch, LM(iM.JL)), MM.starts = {
+    const xU = (UU, XU) => {
+        if (!UU.beforeMatch) return;
+        if (UU.starts) throw new Error("beforeMatch cannot be used with starts");
+        const zU = Object.assign({}, UU);
+        Object.keys(UU).forEach((XU => {
+          delete UU[XU]
+        })), UU.keywords = zU.keywords, UU.gY = pU(zU.beforeMatch, YU(zU.gY)), UU.starts = {
           relevance: 0,
-          contains: [Object.assign(iM, {
+          contains: [Object.assign(zU, {
             endsParent: !0
           })]
-        }, MM.relevance = 0, delete iM.beforeMatch
+        }, UU.relevance = 0, delete zU.beforeMatch
       },
-      IM = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      JU = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function KM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const OM = Object.create(null);
-      return "string" === typeof MM ? SM(iM, MM.split(" ")) : Array.isArray(MM) ? SM(iM, MM) : Object.keys(MM).forEach((function(iM) {
-        Object.assign(OM, KM(MM[iM], rM, iM))
-      })), OM;
+    function jU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const cU = Object.create(null);
+      return "string" === typeof UU ? yU(zU, UU.split(" ")) : Array.isArray(UU) ? yU(zU, UU) : Object.keys(UU).forEach((function(zU) {
+        Object.assign(cU, jU(UU[zU], XU, zU))
+      })), cU;
 
-      function SM(MM, iM) {
-        rM && (iM = iM.map((MM => MM.toLowerCase()))), iM.forEach((function(rM) {
-          const iM = rM.split("|");
-          OM[iM[0]] = [MM, qM(iM[0], iM[1])]
+      function yU(UU, zU) {
+        XU && (zU = zU.map((UU => UU.toLowerCase()))), zU.forEach((function(XU) {
+          const zU = XU.split("|");
+          cU[zU[0]] = [UU, KU(zU[0], zU[1])]
         }))
       }
     }
 
-    function qM(MM, rM) {
-      return rM ? Number(rM) : function(MM) {
-        return IM.includes(MM.toLowerCase())
-      }(MM) ? 0 : 1
+    function KU(UU, XU) {
+      return XU ? Number(XU) : function(UU) {
+        return JU.includes(UU.toLowerCase())
+      }(UU) ? 0 : 1
     }
-    const TM = {},
-      VM = MM => {
-        console.error(MM)
+    const bU = {},
+      TU = UU => {
+        console.error(UU)
       },
-      cM = function(MM) {
-        for (var rM = arguments.length, iM = new Array(rM > 1 ? rM - 1 : 0), OM = 1; OM < rM; OM++) iM[OM - 1] = arguments[OM];
-        console.log(`WARN: ${MM}`, ...iM)
+      hU = function(UU) {
+        for (var XU = arguments.length, zU = new Array(XU > 1 ? XU - 1 : 0), cU = 1; cU < XU; cU++) zU[cU - 1] = arguments[cU];
+        console.log(`WARN: ${UU}`, ...zU)
       },
-      Mr = (MM, rM) => {
-        TM[`${MM}/${rM}`] || (console.log(`Deprecated as of ${MM}. ${rM}`), TM[`${MM}/${rM}`] = !0)
+      UX = (UU, XU) => {
+        bU[`${UU}/${XU}`] || (console.log(`Deprecated as of ${UU}. ${XU}`), bU[`${UU}/${XU}`] = !0)
       },
-      rr = new Error;
+      XX = new Error;
 
-    function ir(MM, rM, iM) {
+    function zX(UU, XU, zU) {
       let {
-        key: OM
-      } = iM, SM = 0;
-      const jM = MM[OM],
-        aM = {},
-        PM = {};
-      for (let nM = 1; nM <= rM.length; nM++) PM[nM + SM] = jM[nM], aM[nM + SM] = !0, SM += dM(rM[nM - 1]);
-      MM[OM] = PM, MM[OM]._emit = aM, MM[OM]._multi = !0
+        key: cU
+      } = zU, yU = 0;
+      const QU = UU[cU],
+        AU = {},
+        FU = {};
+      for (let oU = 1; oU <= XU.length; oU++) FU[oU + yU] = QU[oU], AU[oU + yU] = !0, yU += tU(XU[oU - 1]);
+      UU[cU] = FU, UU[cU]._emit = AU, UU[cU]._multi = !0
     }
 
-    function Or(MM) {
-      ! function(MM) {
-        MM.scope && "object" === typeof MM.scope && null !== MM.scope && (MM.beginScope = MM.scope, delete MM.scope)
-      }(MM), "string" === typeof MM.beginScope && (MM.beginScope = {
-          _wrap: MM.beginScope
-        }), "string" === typeof MM.endScope && (MM.endScope = {
-          _wrap: MM.endScope
+    function cX(UU) {
+      ! function(UU) {
+        UU.scope && "object" === typeof UU.scope && null !== UU.scope && (UU.beginScope = UU.scope, delete UU.scope)
+      }(UU), "string" === typeof UU.beginScope && (UU.beginScope = {
+          _wrap: UU.beginScope
+        }), "string" === typeof UU.endScope && (UU.endScope = {
+          _wrap: UU.endScope
         }),
-        function(MM) {
-          if (Array.isArray(MM.JL)) {
-            if (MM.skip || MM.excludeBegin || MM.returnBegin) throw VM("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), rr;
-            if ("object" !== typeof MM.beginScope || null === MM.beginScope) throw VM("beginScope must be object"), rr;
-            ir(MM, MM.JL, {
+        function(UU) {
+          if (Array.isArray(UU.gY)) {
+            if (UU.skip || UU.excludeBegin || UU.returnBegin) throw TU("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), XX;
+            if ("object" !== typeof UU.beginScope || null === UU.beginScope) throw TU("beginScope must be object"), XX;
+            zX(UU, UU.gY, {
               key: "beginScope"
-            }), MM.JL = lM(MM.JL, {
+            }), UU.gY = kU(UU.gY, {
               joinWith: ""
             })
           }
-        }(MM),
-        function(MM) {
-          if (Array.isArray(MM.end)) {
-            if (MM.skip || MM.excludeEnd || MM.returnEnd) throw VM("skip, excludeEnd, returnEnd not compatible with endScope: {}"), rr;
-            if ("object" !== typeof MM.endScope || null === MM.endScope) throw VM("endScope must be object"), rr;
-            ir(MM, MM.end, {
+        }(UU),
+        function(UU) {
+          if (Array.isArray(UU.end)) {
+            if (UU.skip || UU.excludeEnd || UU.returnEnd) throw TU("skip, excludeEnd, returnEnd not compatible with endScope: {}"), XX;
+            if ("object" !== typeof UU.endScope || null === UU.endScope) throw TU("endScope must be object"), XX;
+            zX(UU, UU.end, {
               key: "endScope"
-            }), MM.end = lM(MM.end, {
+            }), UU.end = kU(UU.end, {
               joinWith: ""
             })
           }
-        }(MM)
+        }(UU)
     }
 
-    function Sr(MM) {
-      function rM(rM, iM) {
-        return new RegExp(zM(rM), "m" + (MM.case_insensitive ? "i" : "") + (MM.unicodeRegex ? "u" : "") + (iM ? "g" : ""))
+    function yX(UU) {
+      function XU(XU, zU) {
+        return new RegExp(EU(XU), "m" + (UU.case_insensitive ? "i" : "") + (UU.unicodeRegex ? "u" : "") + (zU ? "g" : ""))
       }
-      class iM {
+      class zU {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(MM, rM) {
-          rM.position = this.position++, this.matchIndexes[this.matchAt] = rM, this.regexes.push([rM, MM]), this.matchAt += dM(MM) + 1
+        addRule(UU, XU) {
+          XU.position = this.position++, this.matchIndexes[this.matchAt] = XU, this.regexes.push([XU, UU]), this.matchAt += tU(UU) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const MM = this.regexes.map((MM => MM[1]));
-          this.matcherRe = rM(lM(MM, {
+          const UU = this.regexes.map((UU => UU[1]));
+          this.matcherRe = XU(kU(UU, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(MM) {
+        exec(UU) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const rM = this.matcherRe.exec(MM);
-          if (!rM) return null;
-          const iM = rM.findIndex(((MM, rM) => rM > 0 && void 0 !== MM)),
-            OM = this.matchIndexes[iM];
-          return rM.splice(0, iM), Object.assign(rM, OM)
+          const XU = this.matcherRe.exec(UU);
+          if (!XU) return null;
+          const zU = XU.findIndex(((UU, XU) => XU > 0 && void 0 !== UU)),
+            cU = this.matchIndexes[zU];
+          return XU.splice(0, zU), Object.assign(XU, cU)
         }
       }
-      class OM {
+      class cU {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(MM) {
-          if (this.multiRegexes[MM]) return this.multiRegexes[MM];
-          const rM = new iM;
-          return this.rules.slice(MM).forEach((MM => {
-            let [iM, OM] = MM;
-            return rM.addRule(iM, OM)
-          })), rM.compile(), this.multiRegexes[MM] = rM, rM
+        getMatcher(UU) {
+          if (this.multiRegexes[UU]) return this.multiRegexes[UU];
+          const XU = new zU;
+          return this.rules.slice(UU).forEach((UU => {
+            let [zU, cU] = UU;
+            return XU.addRule(zU, cU)
+          })), XU.compile(), this.multiRegexes[UU] = XU, XU
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(MM, rM) {
-          this.rules.push([MM, rM]), "JL" === rM.type && this.count++
+        addRule(UU, XU) {
+          this.rules.push([UU, XU]), "gY" === XU.type && this.count++
         }
-        exec(MM) {
-          const rM = this.getMatcher(this.regexIndex);
-          rM.lastIndex = this.lastIndex;
-          let iM = rM.exec(MM);
+        exec(UU) {
+          const XU = this.getMatcher(this.regexIndex);
+          XU.lastIndex = this.lastIndex;
+          let zU = XU.exec(UU);
           if (this.resumingScanAtSamePosition())
-            if (iM && iM.index === this.lastIndex);
+            if (zU && zU.index === this.lastIndex);
             else {
-              const rM = this.getMatcher(0);
-              rM.lastIndex = this.lastIndex + 1, iM = rM.exec(MM)
-            } return iM && (this.regexIndex += iM.position + 1, this.regexIndex === this.count && this.considerAll()), iM
+              const XU = this.getMatcher(0);
+              XU.lastIndex = this.lastIndex + 1, zU = XU.exec(UU)
+            } return zU && (this.regexIndex += zU.position + 1, this.regexIndex === this.count && this.considerAll()), zU
         }
       }
-      if (MM.compilerExtensions || (MM.compilerExtensions = []), MM.contains && MM.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return MM.classNameAliases = SM(MM.classNameAliases || {}),
-        function iM(jM, aM) {
-          const PM = jM;
-          if (jM.isCompiled) return PM;
-          [AM, FM, Or, XM].forEach((MM => MM(jM, aM))), MM.compilerExtensions.forEach((MM => MM(jM, aM))), jM.__beforeBegin = null, [xM, vM, BM].forEach((MM => MM(jM, aM))), jM.isCompiled = !0;
-          let nM = null;
-          return "object" === typeof jM.keywords && jM.keywords.$pattern && (jM.keywords = Object.assign({}, jM.keywords), nM = jM.keywords.$pattern, delete jM.keywords.$pattern), nM = nM || /\w+/, jM.keywords && (jM.keywords = KM(jM.keywords, MM.case_insensitive)), PM.keywordPatternRe = rM(nM, !0), aM && (jM.JL || (jM.JL = /\B|\b/), PM.beginRe = rM(PM.JL), jM.end || jM.endsWithParent || (jM.end = /\B|\b/), jM.end && (PM.endRe = rM(PM.end)), PM.terminatorEnd = zM(PM.end) || "", jM.endsWithParent && aM.terminatorEnd && (PM.terminatorEnd += (jM.end ? "|" : "") + aM.terminatorEnd)), jM.illegal && (PM.illegalRe = rM(jM.illegal)), jM.contains || (jM.contains = []), jM.contains = [].concat(...jM.contains.map((function(MM) {
-            return function(MM) {
-              MM.variants && !MM.cachedVariants && (MM.cachedVariants = MM.variants.map((function(rM) {
-                return SM(MM, {
+      if (UU.compilerExtensions || (UU.compilerExtensions = []), UU.contains && UU.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return UU.classNameAliases = yU(UU.classNameAliases || {}),
+        function zU(QU, AU) {
+          const FU = QU;
+          if (QU.isCompiled) return FU;
+          [VU, mU, cX, xU].forEach((UU => UU(QU, AU))), UU.compilerExtensions.forEach((UU => UU(QU, AU))), QU.__beforeBegin = null, [sU, nU, lU].forEach((UU => UU(QU, AU))), QU.isCompiled = !0;
+          let oU = null;
+          return "object" === typeof QU.keywords && QU.keywords.$pattern && (QU.keywords = Object.assign({}, QU.keywords), oU = QU.keywords.$pattern, delete QU.keywords.$pattern), oU = oU || /\w+/, QU.keywords && (QU.keywords = jU(QU.keywords, UU.case_insensitive)), FU.keywordPatternRe = XU(oU, !0), AU && (QU.gY || (QU.gY = /\B|\b/), FU.beginRe = XU(FU.gY), QU.end || QU.endsWithParent || (QU.end = /\B|\b/), QU.end && (FU.endRe = XU(FU.end)), FU.terminatorEnd = EU(FU.end) || "", QU.endsWithParent && AU.terminatorEnd && (FU.terminatorEnd += (QU.end ? "|" : "") + AU.terminatorEnd)), QU.illegal && (FU.illegalRe = XU(QU.illegal)), QU.contains || (QU.contains = []), QU.contains = [].concat(...QU.contains.map((function(UU) {
+            return function(UU) {
+              UU.variants && !UU.cachedVariants && (UU.cachedVariants = UU.variants.map((function(XU) {
+                return yU(UU, {
                   variants: null
-                }, rM)
+                }, XU)
               })));
-              if (MM.cachedVariants) return MM.cachedVariants;
-              if (jr(MM)) return SM(MM, {
-                starts: MM.starts ? SM(MM.starts) : null
+              if (UU.cachedVariants) return UU.cachedVariants;
+              if (QX(UU)) return yU(UU, {
+                starts: UU.starts ? yU(UU.starts) : null
               });
-              if (Object.isFrozen(MM)) return SM(MM);
-              return MM
-            }("self" === MM ? jM : MM)
-          }))), jM.contains.forEach((function(MM) {
-            iM(MM, PM)
-          })), jM.starts && iM(jM.starts, aM), PM.matcher = function(MM) {
-            const rM = new OM;
-            return MM.contains.forEach((MM => rM.addRule(MM.JL, {
-              rule: MM,
-              type: "JL"
-            }))), MM.terminatorEnd && rM.addRule(MM.terminatorEnd, {
+              if (Object.isFrozen(UU)) return yU(UU);
+              return UU
+            }("self" === UU ? QU : UU)
+          }))), QU.contains.forEach((function(UU) {
+            zU(UU, FU)
+          })), QU.starts && zU(QU.starts, AU), FU.matcher = function(UU) {
+            const XU = new cU;
+            return UU.contains.forEach((UU => XU.addRule(UU.gY, {
+              rule: UU,
+              type: "gY"
+            }))), UU.terminatorEnd && XU.addRule(UU.terminatorEnd, {
               type: "end"
-            }), MM.illegal && rM.addRule(MM.illegal, {
+            }), UU.illegal && XU.addRule(UU.illegal, {
               type: "illegal"
-            }), rM
-          }(PM), PM
-        }(MM)
+            }), XU
+          }(FU), FU
+        }(UU)
     }
 
-    function jr(MM) {
-      return !!MM && (MM.endsWithParent || jr(MM.starts))
+    function QX(UU) {
+      return !!UU && (UU.endsWithParent || QX(UU.starts))
     }
-    class ar extends Error {
-      constructor(MM, rM) {
-        super(MM), this.name = "HTMLInjectionError", this.html = rM
+    class AX extends Error {
+      constructor(UU, XU) {
+        super(UU), this.name = "HTMLInjectionError", this.html = XU
       }
     }
-    const Pr = OM,
-      nr = SM,
-      Qr = Symbol("nomatch"),
-      zr = function(MM) {
-        const OM = Object.create(null),
-          SM = Object.create(null),
-          jM = [];
-        let aM = !0;
-        const PM = "Could not find the language '{}', did you forget to load/include a language module?",
-          nM = {
+    const FX = cU,
+      oX = yU,
+      DX = Symbol("nomatch"),
+      EX = function(UU) {
+        const cU = Object.create(null),
+          yU = Object.create(null),
+          QU = [];
+        let AU = !0;
+        const FU = "Could not find the language '{}', did you forget to load/include a language module?",
+          oU = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let zM = {
+        let EU = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: QM
+          __emitter: DU
         };
 
-        function dM(MM) {
-          return zM.noHighlightRe.test(MM)
+        function tU(UU) {
+          return EU.noHighlightRe.test(UU)
         }
 
-        function yM(MM, rM, iM) {
-          let OM = "",
-            SM = "";
-          "object" === typeof rM ? (OM = MM, iM = rM.ignoreIllegals, SM = rM.language) : (Mr("10.7.0", "highlight(lang, code, ...args) has been deprecated."), Mr("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), SM = MM, OM = rM), void 0 === iM && (iM = !0);
-          const jM = {
-            code: OM,
-            language: SM
+        function gU(UU, XU, zU) {
+          let cU = "",
+            yU = "";
+          "object" === typeof XU ? (cU = UU, zU = XU.ignoreIllegals, yU = XU.language) : (UX("10.7.0", "highlight(lang, code, ...args) has been deprecated."), UX("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), yU = UU, cU = XU), void 0 === zU && (zU = !0);
+          const QU = {
+            code: cU,
+            language: yU
           };
-          tM("before:highlight", jM);
-          const aM = jM.result ? jM.result : lM(jM.language, jM.code, iM);
-          return aM.code = jM.code, tM("after:highlight", aM), aM
+          LU("before:highlight", QU);
+          const AU = QU.result ? QU.result : kU(QU.language, QU.code, zU);
+          return AU.code = QU.code, LU("after:highlight", AU), AU
         }
 
-        function lM(MM, rM, SM, jM) {
-          const nM = Object.create(null);
+        function kU(UU, XU, yU, QU) {
+          const oU = Object.create(null);
 
-          function QM() {
-            if (!tM.keywords) return void uM.addText(RM);
-            let MM = 0;
-            tM.keywordPatternRe.lastIndex = 0;
-            let rM = tM.keywordPatternRe.exec(RM),
-              iM = "";
-            for (; rM;) {
-              iM += RM.substring(MM, rM.index);
-              const SM = CM.case_insensitive ? rM[0].toLowerCase() : rM[0],
-                jM = (OM = SM, tM.keywords[OM]);
-              if (jM) {
-                const [MM, OM] = jM;
-                if (uM.addText(iM), iM = "", nM[SM] = (nM[SM] || 0) + 1, nM[SM] <= 7 && (pM += OM), MM.startsWith("_")) iM += rM[0];
+          function DU() {
+            if (!LU.keywords) return void CU.addText(wU);
+            let UU = 0;
+            LU.keywordPatternRe.lastIndex = 0;
+            let XU = LU.keywordPatternRe.exec(wU),
+              zU = "";
+            for (; XU;) {
+              zU += wU.substring(UU, XU.index);
+              const yU = RU.case_insensitive ? XU[0].toLowerCase() : XU[0],
+                QU = (cU = yU, LU.keywords[cU]);
+              if (QU) {
+                const [UU, cU] = QU;
+                if (CU.addText(zU), zU = "", oU[yU] = (oU[yU] || 0) + 1, oU[yU] <= 7 && (qU += cU), UU.startsWith("_")) zU += XU[0];
                 else {
-                  const iM = CM.classNameAliases[MM] || MM;
-                  mM(rM[0], iM)
+                  const zU = RU.classNameAliases[UU] || UU;
+                  NU(XU[0], zU)
                 }
-              } else iM += rM[0];
-              MM = tM.keywordPatternRe.lastIndex, rM = tM.keywordPatternRe.exec(RM)
+              } else zU += XU[0];
+              UU = LU.keywordPatternRe.lastIndex, XU = LU.keywordPatternRe.exec(wU)
             }
-            var OM;
-            iM += RM.substring(MM), uM.addText(iM)
+            var cU;
+            zU += wU.substring(UU), CU.addText(zU)
           }
 
-          function LM() {
-            null != tM.subLanguage ? function() {
-              if ("" === RM) return;
-              let MM = null;
-              if ("string" === typeof tM.subLanguage) {
-                if (!OM[tM.subLanguage]) return void uM.addText(RM);
-                MM = lM(tM.subLanguage, RM, !0, gM[tM.subLanguage]), gM[tM.subLanguage] = MM._top
-              } else MM = EM(RM, tM.subLanguage.length ? tM.subLanguage : null);
-              tM.relevance > 0 && (pM += MM.relevance), uM.__addSublanguage(MM._emitter, MM.language)
-            }() : QM(), RM = ""
+          function YU() {
+            null != LU.subLanguage ? function() {
+              if ("" === wU) return;
+              let UU = null;
+              if ("string" === typeof LU.subLanguage) {
+                if (!cU[LU.subLanguage]) return void CU.addText(wU);
+                UU = kU(LU.subLanguage, wU, !0, eU[LU.subLanguage]), eU[LU.subLanguage] = UU._top
+              } else UU = GU(wU, LU.subLanguage.length ? LU.subLanguage : null);
+              LU.relevance > 0 && (qU += UU.relevance), CU.__addSublanguage(UU._emitter, UU.language)
+            }() : DU(), wU = ""
           }
 
-          function mM(MM, rM) {
-            "" !== MM && (uM.startScope(rM), uM.addText(MM), uM.endScope())
+          function NU(UU, XU) {
+            "" !== UU && (CU.startScope(XU), CU.addText(UU), CU.endScope())
           }
 
-          function HM(MM, rM) {
-            let iM = 1;
-            const OM = rM.length - 1;
-            for (; iM <= OM;) {
-              if (!MM._emit[iM]) {
-                iM++;
+          function IU(UU, XU) {
+            let zU = 1;
+            const cU = XU.length - 1;
+            for (; zU <= cU;) {
+              if (!UU._emit[zU]) {
+                zU++;
                 continue
               }
-              const OM = CM.classNameAliases[MM[iM]] || MM[iM],
-                SM = rM[iM];
-              OM ? mM(SM, OM) : (RM = SM, QM(), RM = ""), iM++
+              const cU = RU.classNameAliases[UU[zU]] || UU[zU],
+                yU = XU[zU];
+              cU ? NU(yU, cU) : (wU = yU, DU(), wU = ""), zU++
             }
           }
 
-          function hM(MM, rM) {
-            return MM.scope && "string" === typeof MM.scope && uM.openNode(CM.classNameAliases[MM.scope] || MM.scope), MM.beginScope && (MM.beginScope._wrap ? (mM(RM, CM.classNameAliases[MM.beginScope._wrap] || MM.beginScope._wrap), RM = "") : MM.beginScope._multi && (HM(MM.beginScope, rM), RM = "")), tM = Object.create(MM, {
+          function pU(UU, XU) {
+            return UU.scope && "string" === typeof UU.scope && CU.openNode(RU.classNameAliases[UU.scope] || UU.scope), UU.beginScope && (UU.beginScope._wrap ? (NU(wU, RU.classNameAliases[UU.beginScope._wrap] || UU.beginScope._wrap), wU = "") : UU.beginScope._multi && (IU(UU.beginScope, XU), wU = "")), LU = Object.create(UU, {
               parent: {
-                value: tM
+                value: LU
               }
-            }), tM
+            }), LU
           }
 
-          function JM(MM, rM, OM) {
-            let SM = function(MM, rM) {
-              const iM = MM && MM.exec(rM);
-              return iM && 0 === iM.index
-            }(MM.endRe, OM);
-            if (SM) {
-              if (MM["on:end"]) {
-                const OM = new iM(MM);
-                MM["on:end"](rM, OM), OM.isMatchIgnored && (SM = !1)
+          function aU(UU, XU, cU) {
+            let yU = function(UU, XU) {
+              const zU = UU && UU.exec(XU);
+              return zU && 0 === zU.index
+            }(UU.endRe, cU);
+            if (yU) {
+              if (UU["on:end"]) {
+                const cU = new zU(UU);
+                UU["on:end"](XU, cU), cU.isMatchIgnored && (yU = !1)
               }
-              if (SM) {
-                for (; MM.endsParent && MM.parent;) MM = MM.parent;
-                return MM
+              if (yU) {
+                for (; UU.endsParent && UU.parent;) UU = UU.parent;
+                return UU
               }
             }
-            if (MM.endsWithParent) return JM(MM.parent, rM, OM)
+            if (UU.endsWithParent) return aU(UU.parent, XU, cU)
           }
 
-          function dM(MM) {
-            return 0 === tM.matcher.regexIndex ? (RM += MM[0], 1) : (DM = !0, 0)
+          function tU(UU) {
+            return 0 === LU.matcher.regexIndex ? (wU += UU[0], 1) : (rU = !0, 0)
           }
 
-          function yM(MM) {
-            const iM = MM[0],
-              OM = rM.substring(MM.index),
-              SM = JM(tM, MM, OM);
-            if (!SM) return Qr;
-            const jM = tM;
-            tM.endScope && tM.endScope._wrap ? (LM(), mM(iM, tM.endScope._wrap)) : tM.endScope && tM.endScope._multi ? (LM(), HM(tM.endScope, MM)) : jM.skip ? RM += iM : (jM.returnEnd || jM.excludeEnd || (RM += iM), LM(), jM.excludeEnd && (RM = iM));
+          function gU(UU) {
+            const zU = UU[0],
+              cU = XU.substring(UU.index),
+              yU = aU(LU, UU, cU);
+            if (!yU) return DX;
+            const QU = LU;
+            LU.endScope && LU.endScope._wrap ? (YU(), NU(zU, LU.endScope._wrap)) : LU.endScope && LU.endScope._multi ? (YU(), IU(LU.endScope, UU)) : QU.skip ? wU += zU : (QU.returnEnd || QU.excludeEnd || (wU += zU), YU(), QU.excludeEnd && (wU = zU));
             do {
-              tM.scope && uM.closeNode(), tM.skip || tM.subLanguage || (pM += tM.relevance), tM = tM.parent
-            } while (tM !== SM.parent);
-            return SM.starts && hM(SM.starts, MM), jM.returnEnd ? 0 : iM.length
+              LU.scope && CU.closeNode(), LU.skip || LU.subLanguage || (qU += LU.relevance), LU = LU.parent
+            } while (LU !== yU.parent);
+            return yU.starts && pU(yU.starts, UU), QU.returnEnd ? 0 : zU.length
           }
-          let UM = {};
+          let BU = {};
 
-          function GM(OM, jM) {
-            const PM = jM && jM[0];
-            if (RM += OM, null == PM) return LM(), 0;
-            if ("JL" === UM.type && "end" === jM.type && UM.index === jM.index && "" === PM) {
-              if (RM += rM.slice(jM.index, jM.index + 1), !aM) {
-                const rM = new Error(`0 width match regex (${MM})`);
-                throw rM.languageName = MM, rM.badRule = UM.rule, rM
+          function ZU(cU, QU) {
+            const FU = QU && QU[0];
+            if (wU += cU, null == FU) return YU(), 0;
+            if ("gY" === BU.type && "end" === QU.type && BU.index === QU.index && "" === FU) {
+              if (wU += XU.slice(QU.index, QU.index + 1), !AU) {
+                const XU = new Error(`0 width match regex (${UU})`);
+                throw XU.languageName = UU, XU.badRule = BU.rule, XU
               }
               return 1
             }
-            if (UM = jM, "JL" === jM.type) return function(MM) {
-              const rM = MM[0],
-                OM = MM.rule,
-                SM = new iM(OM),
-                jM = [OM.__beforeBegin, OM["on:begin"]];
-              for (const iM of jM)
-                if (iM && (iM(MM, SM), SM.isMatchIgnored)) return dM(rM);
-              return OM.skip ? RM += rM : (OM.excludeBegin && (RM += rM), LM(), OM.returnBegin || OM.excludeBegin || (RM = rM)), hM(OM, MM), OM.returnBegin ? 0 : rM.length
-            }(jM);
-            if ("illegal" === jM.type && !SM) {
-              const MM = new Error('Illegal lexeme "' + PM + '" for mode "' + (tM.scope || "<unnamed>") + '"');
-              throw MM.mode = tM, MM
+            if (BU = QU, "gY" === QU.type) return function(UU) {
+              const XU = UU[0],
+                cU = UU.rule,
+                yU = new zU(cU),
+                QU = [cU.__beforeBegin, cU["on:begin"]];
+              for (const zU of QU)
+                if (zU && (zU(UU, yU), yU.isMatchIgnored)) return tU(XU);
+              return cU.skip ? wU += XU : (cU.excludeBegin && (wU += XU), YU(), cU.returnBegin || cU.excludeBegin || (wU = XU)), pU(cU, UU), cU.returnBegin ? 0 : XU.length
+            }(QU);
+            if ("illegal" === QU.type && !yU) {
+              const UU = new Error('Illegal lexeme "' + FU + '" for mode "' + (LU.scope || "<unnamed>") + '"');
+              throw UU.mode = LU, UU
             }
-            if ("end" === jM.type) {
-              const MM = yM(jM);
-              if (MM !== Qr) return MM
+            if ("end" === QU.type) {
+              const UU = gU(QU);
+              if (UU !== DX) return UU
             }
-            if ("illegal" === jM.type && "" === PM) return RM += "\n", 1;
-            if (sM > 1e5 && sM > 3 * jM.index) {
+            if ("illegal" === QU.type && "" === FU) return wU += "\n", 1;
+            if (SU > 1e5 && SU > 3 * QU.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return RM += PM, PM.length
+            return wU += FU, FU.length
           }
-          const CM = eM(MM);
-          if (!CM) throw VM(PM.replace("{}", MM)), new Error('Unknown language: "' + MM + '"');
-          const bM = Sr(CM);
-          let wM = "",
-            tM = jM || bM;
-          const gM = {},
-            uM = new zM.__emitter(zM);
+          const RU = PU(UU);
+          if (!RU) throw TU(FU.replace("{}", UU)), new Error('Unknown language: "' + UU + '"');
+          const WU = yX(RU);
+          let dU = "",
+            LU = QU || WU;
+          const eU = {},
+            CU = new EU.__emitter(EU);
           ! function() {
-            const MM = [];
-            for (let rM = tM; rM !== CM; rM = rM.parent) rM.scope && MM.unshift(rM.scope);
-            MM.forEach((MM => uM.openNode(MM)))
+            const UU = [];
+            for (let XU = LU; XU !== RU; XU = XU.parent) XU.scope && UU.unshift(XU.scope);
+            UU.forEach((UU => CU.openNode(UU)))
           }();
-          let RM = "",
-            pM = 0,
-            WM = 0,
-            sM = 0,
-            DM = !1;
+          let wU = "",
+            qU = 0,
+            OU = 0,
+            SU = 0,
+            rU = !1;
           try {
-            if (CM.__emitTokens) CM.__emitTokens(rM, uM);
+            if (RU.__emitTokens) RU.__emitTokens(XU, CU);
             else {
-              for (tM.matcher.considerAll();;) {
-                sM++, DM ? DM = !1 : tM.matcher.considerAll(), tM.matcher.lastIndex = WM;
-                const MM = tM.matcher.exec(rM);
-                if (!MM) break;
-                const iM = GM(rM.substring(WM, MM.index), MM);
-                WM = MM.index + iM
+              for (LU.matcher.considerAll();;) {
+                SU++, rU ? rU = !1 : LU.matcher.considerAll(), LU.matcher.lastIndex = OU;
+                const UU = LU.matcher.exec(XU);
+                if (!UU) break;
+                const zU = ZU(XU.substring(OU, UU.index), UU);
+                OU = UU.index + zU
               }
-              GM(rM.substring(WM))
+              ZU(XU.substring(OU))
             }
-            return uM.finalize(), wM = uM.toHTML(), {
-              language: MM,
-              value: wM,
-              relevance: pM,
+            return CU.finalize(), dU = CU.toHTML(), {
+              language: UU,
+              value: dU,
+              relevance: qU,
               illegal: !1,
-              _emitter: uM,
-              _top: tM
+              _emitter: CU,
+              _top: LU
             }
-          } catch (kM) {
-            if (kM.message && kM.message.includes("Illegal")) return {
-              language: MM,
-              value: Pr(rM),
+          } catch (uU) {
+            if (uU.message && uU.message.includes("Illegal")) return {
+              language: UU,
+              value: FX(XU),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: kM.message,
-                index: WM,
-                context: rM.slice(WM - 100, WM + 100),
-                mode: kM.mode,
-                resultSoFar: wM
+                message: uU.message,
+                index: OU,
+                context: XU.slice(OU - 100, OU + 100),
+                mode: uU.mode,
+                resultSoFar: dU
               },
-              _emitter: uM
+              _emitter: CU
             };
-            if (aM) return {
-              language: MM,
-              value: Pr(rM),
+            if (AU) return {
+              language: UU,
+              value: FX(XU),
               illegal: !1,
               relevance: 0,
-              errorRaised: kM,
-              _emitter: uM,
-              _top: tM
+              errorRaised: uU,
+              _emitter: CU,
+              _top: LU
             };
-            throw kM
+            throw uU
           }
         }
 
-        function EM(MM, rM) {
-          rM = rM || zM.languages || Object.keys(OM);
-          const iM = function(MM) {
-              const rM = {
-                value: Pr(MM),
+        function GU(UU, XU) {
+          XU = XU || EU.languages || Object.keys(cU);
+          const zU = function(UU) {
+              const XU = {
+                value: FX(UU),
                 illegal: !1,
                 relevance: 0,
-                _top: nM,
-                _emitter: new zM.__emitter(zM)
+                _top: oU,
+                _emitter: new EU.__emitter(EU)
               };
-              return rM._emitter.addText(MM), rM
-            }(MM),
-            SM = rM.filter(eM).filter(wM).map((rM => lM(rM, MM, !1)));
-          SM.unshift(iM);
-          const jM = SM.sort(((MM, rM) => {
-              if (MM.relevance !== rM.relevance) return rM.relevance - MM.relevance;
-              if (MM.language && rM.language) {
-                if (eM(MM.language).supersetOf === rM.language) return 1;
-                if (eM(rM.language).supersetOf === MM.language) return -1
+              return XU._emitter.addText(UU), XU
+            }(UU),
+            yU = XU.filter(PU).filter(dU).map((XU => kU(XU, UU, !1)));
+          yU.unshift(zU);
+          const QU = yU.sort(((UU, XU) => {
+              if (UU.relevance !== XU.relevance) return XU.relevance - UU.relevance;
+              if (UU.language && XU.language) {
+                if (PU(UU.language).supersetOf === XU.language) return 1;
+                if (PU(XU.language).supersetOf === UU.language) return -1
               }
               return 0
             })),
-            [aM, PM] = jM,
-            QM = aM;
-          return QM.secondBest = PM, QM
+            [AU, FU] = QU,
+            DU = AU;
+          return DU.secondBest = FU, DU
         }
 
-        function UM(MM) {
-          let rM = null;
-          const iM = function(MM) {
-            let rM = MM.className + " ";
-            rM += MM.parentNode ? MM.parentNode.className : "";
-            const iM = zM.languageDetectRe.exec(rM);
-            if (iM) {
-              const rM = eM(iM[1]);
-              return rM || (cM(PM.replace("{}", iM[1])), cM("Falling back to no-highlight mode for this block.", MM)), rM ? iM[1] : "no-highlight"
+        function BU(UU) {
+          let XU = null;
+          const zU = function(UU) {
+            let XU = UU.className + " ";
+            XU += UU.parentNode ? UU.parentNode.className : "";
+            const zU = EU.languageDetectRe.exec(XU);
+            if (zU) {
+              const XU = PU(zU[1]);
+              return XU || (hU(FU.replace("{}", zU[1])), hU("Falling back to no-highlight mode for this block.", UU)), XU ? zU[1] : "no-highlight"
             }
-            return rM.split(/\s+/).find((MM => dM(MM) || eM(MM)))
-          }(MM);
-          if (dM(iM)) return;
-          if (tM("before:highlightElement", {
-              el: MM,
-              language: iM
-            }), MM.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", MM);
-          if (MM.children.length > 0 && (zM.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(MM)), zM.throwUnescapedHTML)) {
-            throw new ar("One of your code blocks includes unescaped HTML.", MM.innerHTML)
+            return XU.split(/\s+/).find((UU => tU(UU) || PU(UU)))
+          }(UU);
+          if (tU(zU)) return;
+          if (LU("before:highlightElement", {
+              el: UU,
+              language: zU
+            }), UU.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", UU);
+          if (UU.children.length > 0 && (EU.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(UU)), EU.throwUnescapedHTML)) {
+            throw new AX("One of your code blocks includes unescaped HTML.", UU.innerHTML)
           }
-          rM = MM;
-          const OM = rM.textContent,
-            jM = iM ? yM(OM, {
-              language: iM,
+          XU = UU;
+          const cU = XU.textContent,
+            QU = zU ? gU(cU, {
+              language: zU,
               ignoreIllegals: !0
-            }) : EM(OM);
-          MM.innerHTML = jM.value, MM.dataset.highlighted = "yes",
-            function(MM, rM, iM) {
-              const OM = rM && SM[rM] || iM;
-              MM.classList.add("hljs"), MM.classList.add(`language-${OM}`)
-            }(MM, iM, jM.language), MM.result = {
-              language: jM.language,
-              re: jM.relevance,
-              relevance: jM.relevance
-            }, jM.secondBest && (MM.secondBest = {
-              language: jM.secondBest.language,
-              relevance: jM.secondBest.relevance
-            }), tM("after:highlightElement", {
-              el: MM,
-              result: jM,
-              text: OM
+            }) : GU(cU);
+          UU.innerHTML = QU.value, UU.dataset.highlighted = "yes",
+            function(UU, XU, zU) {
+              const cU = XU && yU[XU] || zU;
+              UU.classList.add("hljs"), UU.classList.add(`language-${cU}`)
+            }(UU, zU, QU.language), UU.result = {
+              language: QU.language,
+              re: QU.relevance,
+              relevance: QU.relevance
+            }, QU.secondBest && (UU.secondBest = {
+              language: QU.secondBest.language,
+              relevance: QU.secondBest.relevance
+            }), LU("after:highlightElement", {
+              el: UU,
+              result: QU,
+              text: cU
             })
         }
-        let GM = !1;
+        let ZU = !1;
 
-        function CM() {
-          if ("loading" === document.readyState) return GM || window.addEventListener("DOMContentLoaded", (function() {
-            CM()
-          }), !1), void(GM = !0);
-          document.querySelectorAll(zM.cssSelector).forEach(UM)
+        function RU() {
+          if ("loading" === document.readyState) return ZU || window.addEventListener("DOMContentLoaded", (function() {
+            RU()
+          }), !1), void(ZU = !0);
+          document.querySelectorAll(EU.cssSelector).forEach(BU)
         }
 
-        function eM(MM) {
-          return MM = (MM || "").toLowerCase(), OM[MM] || OM[SM[MM]]
+        function PU(UU) {
+          return UU = (UU || "").toLowerCase(), cU[UU] || cU[yU[UU]]
         }
 
-        function bM(MM, rM) {
+        function WU(UU, XU) {
           let {
-            languageName: iM
-          } = rM;
-          "string" === typeof MM && (MM = [MM]), MM.forEach((MM => {
-            SM[MM.toLowerCase()] = iM
+            languageName: zU
+          } = XU;
+          "string" === typeof UU && (UU = [UU]), UU.forEach((UU => {
+            yU[UU.toLowerCase()] = zU
           }))
         }
 
-        function wM(MM) {
-          const rM = eM(MM);
-          return rM && !rM.disableAutodetect
+        function dU(UU) {
+          const XU = PU(UU);
+          return XU && !XU.disableAutodetect
         }
 
-        function tM(MM, rM) {
-          const iM = MM;
-          jM.forEach((function(MM) {
-            MM[iM] && MM[iM](rM)
+        function LU(UU, XU) {
+          const zU = UU;
+          QU.forEach((function(UU) {
+            UU[zU] && UU[zU](XU)
           }))
         }
-        Object.assign(MM, {
-          highlight: yM,
-          highlightAuto: EM,
-          highlightAll: CM,
-          highlightElement: UM,
-          highlightBlock: function(MM) {
-            return Mr("10.7.0", "highlightBlock will be removed entirely in v12.0"), Mr("10.7.0", "Please use highlightElement now."), UM(MM)
+        Object.assign(UU, {
+          highlight: gU,
+          highlightAuto: GU,
+          highlightAll: RU,
+          highlightElement: BU,
+          highlightBlock: function(UU) {
+            return UX("10.7.0", "highlightBlock will be removed entirely in v12.0"), UX("10.7.0", "Please use highlightElement now."), BU(UU)
           },
-          configure: function(MM) {
-            zM = nr(zM, MM)
+          configure: function(UU) {
+            EU = oX(EU, UU)
           },
           initHighlighting: () => {
-            CM(), Mr("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            RU(), UX("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            CM(), Mr("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            RU(), UX("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(rM, iM) {
-            let SM = null;
+          registerLanguage: function(XU, zU) {
+            let yU = null;
             try {
-              SM = iM(MM)
-            } catch (jM) {
-              if (VM("Language definition for '{}' could not be registered.".replace("{}", rM)), !aM) throw jM;
-              VM(jM), SM = nM
+              yU = zU(UU)
+            } catch (QU) {
+              if (TU("Language definition for '{}' could not be registered.".replace("{}", XU)), !AU) throw QU;
+              TU(QU), yU = oU
             }
-            SM.name || (SM.name = rM), OM[rM] = SM, SM.rawDefinition = iM.bind(null, MM), SM.aliases && bM(SM.aliases, {
-              languageName: rM
+            yU.name || (yU.name = XU), cU[XU] = yU, yU.rawDefinition = zU.bind(null, UU), yU.aliases && WU(yU.aliases, {
+              languageName: XU
             })
           },
-          unregisterLanguage: function(MM) {
-            delete OM[MM];
-            for (const rM of Object.keys(SM)) SM[rM] === MM && delete SM[rM]
+          unregisterLanguage: function(UU) {
+            delete cU[UU];
+            for (const XU of Object.keys(yU)) yU[XU] === UU && delete yU[XU]
           },
           listLanguages: function() {
-            return Object.keys(OM)
+            return Object.keys(cU)
           },
-          getLanguage: eM,
-          registerAliases: bM,
-          autoDetection: wM,
-          inherit: nr,
-          addPlugin: function(MM) {
-            ! function(MM) {
-              MM["before:highlightBlock"] && !MM["before:highlightElement"] && (MM["before:highlightElement"] = rM => {
-                MM["before:highlightBlock"](Object.assign({
-                  block: rM.el
-                }, rM))
-              }), MM["after:highlightBlock"] && !MM["after:highlightElement"] && (MM["after:highlightElement"] = rM => {
-                MM["after:highlightBlock"](Object.assign({
-                  block: rM.el
-                }, rM))
+          getLanguage: PU,
+          registerAliases: WU,
+          autoDetection: dU,
+          inherit: oX,
+          addPlugin: function(UU) {
+            ! function(UU) {
+              UU["before:highlightBlock"] && !UU["before:highlightElement"] && (UU["before:highlightElement"] = XU => {
+                UU["before:highlightBlock"](Object.assign({
+                  block: XU.el
+                }, XU))
+              }), UU["after:highlightBlock"] && !UU["after:highlightElement"] && (UU["after:highlightElement"] = XU => {
+                UU["after:highlightBlock"](Object.assign({
+                  block: XU.el
+                }, XU))
               })
-            }(MM), jM.push(MM)
+            }(UU), QU.push(UU)
           },
-          removePlugin: function(MM) {
-            const rM = jM.indexOf(MM); - 1 !== rM && jM.splice(rM, 1)
+          removePlugin: function(UU) {
+            const XU = QU.indexOf(UU); - 1 !== XU && QU.splice(XU, 1)
           }
-        }), MM.debugMode = function() {
-          aM = !1
-        }, MM.safeMode = function() {
-          aM = !0
-        }, MM.versionString = "11.11.1", MM.regex = {
-          concat: hM,
-          lookahead: LM,
-          either: JM,
-          optional: HM,
-          anyNumberOfTimes: mM
+        }), UU.debugMode = function() {
+          AU = !1
+        }, UU.safeMode = function() {
+          AU = !0
+        }, UU.versionString = "11.11.1", UU.regex = {
+          concat: pU,
+          lookahead: YU,
+          either: aU,
+          optional: IU,
+          anyNumberOfTimes: NU
         };
-        for (const iM in YM) "object" === typeof YM[iM] && rM(YM[iM]);
-        return Object.assign(MM, YM), MM
+        for (const zU in MU) "object" === typeof MU[zU] && XU(MU[zU]);
+        return Object.assign(UU, MU), UU
       },
-      Lr = zr({});
-    Lr.newInstance = () => zr({}), MM.exports = Lr, Lr.HighlightJS = Lr, Lr.default = Lr
+      YX = EX({});
+    YX.newInstance = () => EX({}), UU.exports = YX, YX.HighlightJS = YX, YX.default = YX
   },
-  5115: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM
+  5235: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => cU
     });
-    const OM = iM(5121)
+    const cU = zU(5243)
   },
-  5125: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => LM
+  5251: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => YU
     });
-    const OM = "[A-Za-z$_][0-9A-Za-z$_]*",
-      SM = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      jM = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      aM = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      PM = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      nM = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      QM = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      zM = [].concat(nM, aM, PM);
+    const cU = "[A-Za-z$_][0-9A-Za-z$_]*",
+      yU = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      QU = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      AU = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      FU = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      oU = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      DU = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      EU = [].concat(oU, AU, FU);
 
-    function LM(MM) {
-      const rM = MM.regex,
-        iM = OM,
-        LM = "<>",
-        mM = "</>",
-        HM = {
-          JL: /<[A-Za-z0-9\\._:-]+/,
+    function YU(UU) {
+      const XU = UU.regex,
+        zU = cU,
+        YU = "<>",
+        NU = "</>",
+        IU = {
+          gY: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (MM, rM) => {
-            const iM = MM[0].length + MM.index,
-              OM = MM.input[iM];
-            if ("<" === OM || "," === OM) return void rM.ignoreMatch();
-            let SM;
-            ">" === OM && (((MM, rM) => {
+          isTrulyOpeningTag: (UU, XU) => {
+            const zU = UU[0].length + UU.index,
+              cU = UU.input[zU];
+            if ("<" === cU || "," === cU) return void XU.ignoreMatch();
+            let yU;
+            ">" === cU && (((UU, XU) => {
               let {
-                after: iM
-              } = rM;
-              const OM = "</" + MM[0].slice(1);
-              return -1 !== MM.input.indexOf(OM, iM)
-            })(MM, {
-              after: iM
-            }) || rM.ignoreMatch());
-            const jM = MM.input.substring(iM);
-            ((SM = jM.match(/^\s*=/)) || (SM = jM.match(/^\s+extends\s+/)) && 0 === SM.index) && rM.ignoreMatch()
+                after: zU
+              } = XU;
+              const cU = "</" + UU[0].slice(1);
+              return -1 !== UU.input.indexOf(cU, zU)
+            })(UU, {
+              after: zU
+            }) || XU.ignoreMatch());
+            const QU = UU.input.substring(zU);
+            ((yU = QU.match(/^\s*=/)) || (yU = QU.match(/^\s+extends\s+/)) && 0 === yU.index) && XU.ignoreMatch()
           }
         },
-        hM = {
-          $pattern: OM,
-          keyword: SM,
-          literal: jM,
-          built_in: zM,
-          "variable.language": QM
+        pU = {
+          $pattern: cU,
+          keyword: yU,
+          literal: QU,
+          built_in: EU,
+          "variable.language": DU
         },
-        JM = "[0-9](_?[0-9])*",
-        dM = `\\.(${JM})`,
-        yM = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        lM = {
+        aU = "[0-9](_?[0-9])*",
+        tU = `\\.(${aU})`,
+        gU = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        kU = {
           className: "number",
           variants: [{
-            JL: `(\\b(${yM})((${dM})|\\.)?|(${dM}))[eE][+-]?(${JM})\\b`
+            gY: `(\\b(${gU})((${tU})|\\.)?|(${tU}))[eE][+-]?(${aU})\\b`
           }, {
-            JL: `\\b(${yM})\\b((${dM})\\b|\\.)?|(${dM})\\b`
+            gY: `\\b(${gU})\\b((${tU})\\b|\\.)?|(${tU})\\b`
           }, {
-            JL: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            gY: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            JL: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            gY: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            JL: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            gY: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            JL: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            gY: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            JL: "\\b0[0-7]+n?\\b"
+            gY: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        EM = {
+        GU = {
           className: "subst",
-          JL: "\\$\\{",
+          gY: "\\$\\{",
           end: "\\}",
-          keywords: hM,
+          keywords: pU,
           contains: []
         },
-        UM = {
-          JL: ".?html`",
+        BU = {
+          gY: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [UU.BACKSLASH_ESCAPE, GU],
             subLanguage: "xml"
           }
         },
-        GM = {
-          JL: ".?css`",
+        ZU = {
+          gY: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [UU.BACKSLASH_ESCAPE, GU],
             subLanguage: "css"
           }
         },
-        CM = {
-          JL: ".?gql`",
+        RU = {
+          gY: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [UU.BACKSLASH_ESCAPE, GU],
             subLanguage: "graphql"
           }
         },
-        eM = {
+        PU = {
           className: "string",
-          JL: "`",
+          gY: "`",
           end: "`",
-          contains: [MM.BACKSLASH_ESCAPE, EM]
+          contains: [UU.BACKSLASH_ESCAPE, GU]
         },
-        bM = {
+        WU = {
           className: "comment",
-          variants: [MM.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [UU.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              JL: "(?=@[A-Za-z]+)",
+              gY: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                JL: "@[A-Za-z]+"
+                gY: "@[A-Za-z]+"
               }, {
                 className: "type",
-                JL: "\\{",
+                gY: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                JL: iM + "(?=\\s*(-)|$)",
+                gY: zU + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                JL: /(?=[^\n])\s/,
+                gY: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), MM.C_BLOCK_COMMENT_MODE, MM.C_LINE_COMMENT_MODE]
+          }), UU.C_BLOCK_COMMENT_MODE, UU.C_LINE_COMMENT_MODE]
         },
-        wM = [MM.APOS_STRING_MODE, MM.QUOTE_STRING_MODE, UM, GM, CM, eM, {
+        dU = [UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, BU, ZU, RU, PU, {
           match: /\$\d+/
-        }, lM];
-      EM.contains = wM.concat({
-        JL: /\{/,
+        }, kU];
+      GU.contains = dU.concat({
+        gY: /\{/,
         end: /\}/,
-        keywords: hM,
-        contains: ["self"].concat(wM)
+        keywords: pU,
+        contains: ["self"].concat(dU)
       });
-      const tM = [].concat(bM, EM.contains),
-        gM = tM.concat([{
-          JL: /(\s*)\(/,
+      const LU = [].concat(WU, GU.contains),
+        eU = LU.concat([{
+          gY: /(\s*)\(/,
           end: /\)/,
-          keywords: hM,
-          contains: ["self"].concat(tM)
+          keywords: pU,
+          contains: ["self"].concat(LU)
         }]),
-        uM = {
+        CU = {
           className: "params",
-          JL: /(\s*)\(/,
+          gY: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: hM,
-          contains: gM
+          keywords: pU,
+          contains: eU
         },
-        RM = {
+        wU = {
           variants: [{
-            match: [/class/, /\s+/, iM, /\s+/, /extends/, /\s+/, rM.concat(iM, "(", rM.concat(/\./, iM), ")*")],
+            match: [/class/, /\s+/, zU, /\s+/, /extends/, /\s+/, XU.concat(zU, "(", XU.concat(/\./, zU), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, iM],
+            match: [/class/, /\s+/, zU],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        pM = {
+        qU = {
           relevance: 0,
-          match: rM.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: XU.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...aM, ...PM]
+            _: [...AU, ...FU]
           }
         },
-        WM = {
+        OU = {
           variants: [{
-            match: [/function/, /\s+/, iM, /(?=\s*\()/]
+            match: [/function/, /\s+/, zU, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [uM],
+          contains: [CU],
           illegal: /%/
         };
-      const sM = {
-        match: rM.concat(/\b/, (DM = [...nM, "super", "import"].map((MM => `${MM}\\s*\\(`)), rM.concat("(?!", DM.join("|"), ")")), iM, rM.lookahead(/\s*\(/)),
+      const SU = {
+        match: XU.concat(/\b/, (rU = [...oU, "super", "import"].map((UU => `${UU}\\s*\\(`)), XU.concat("(?!", rU.join("|"), ")")), zU, XU.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var DM;
-      const kM = {
-          JL: rM.concat(/\./, rM.lookahead(rM.concat(iM, /(?![0-9A-Za-z$_(])/))),
-          end: iM,
+      var rU;
+      const uU = {
+          gY: XU.concat(/\./, XU.lookahead(XU.concat(zU, /(?![0-9A-Za-z$_(])/))),
+          end: zU,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        ZM = {
-          match: [/get|set/, /\s+/, iM, /(?=\()/],
+        fU = {
+          match: [/get|set/, /\s+/, zU, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            JL: /\(\)/
-          }, uM]
+            gY: /\(\)/
+          }, CU]
         },
-        oM = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + MM.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        fM = {
-          match: [/const|var|let/, /\s+/, iM, /\s*/, /=\s*/, /(async\s*)?/, rM.lookahead(oM)],
+        iU = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + UU.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        HU = {
+          match: [/const|var|let/, /\s+/, zU, /\s*/, /=\s*/, /(async\s*)?/, XU.lookahead(iU)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [uM]
+          contains: [CU]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: hM,
+        keywords: pU,
         exports: {
-          PARAMS_CONTAINS: gM,
-          CLASS_REFERENCE: pM
+          PARAMS_CONTAINS: eU,
+          CLASS_REFERENCE: qU
         },
         illegal: /#(?![$_A-z])/,
-        contains: [MM.SHEBANG({
+        contains: [UU.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          JL: /^\s*['"]use (strict|asm)['"]/
-        }, MM.APOS_STRING_MODE, MM.QUOTE_STRING_MODE, UM, GM, CM, eM, bM, {
+          gY: /^\s*['"]use (strict|asm)['"]/
+        }, UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, BU, ZU, RU, PU, WU, {
           match: /\$\d+/
-        }, lM, pM, {
+        }, kU, qU, {
           scope: "attr",
-          match: iM + rM.lookahead(":"),
+          match: zU + XU.lookahead(":"),
           relevance: 0
-        }, fM, {
-          JL: "(" + MM.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, HU, {
+          gY: "(" + UU.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [bM, MM.REGEXP_MODE, {
+          contains: [WU, UU.REGEXP_MODE, {
             className: "function",
-            JL: oM,
+            gY: iU,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                JL: MM.UNDERSCORE_IDENT_RE,
+                gY: UU.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                JL: /\(\s*\)/,
+                gY: /\(\s*\)/,
                 skip: !0
               }, {
-                JL: /(\s*)\(/,
+                gY: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: hM,
-                contains: gM
+                keywords: pU,
+                contains: eU
               }]
             }]
           }, {
-            JL: /,/,
+            gY: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              JL: LM,
-              end: mM
+              gY: YU,
+              end: NU
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              JL: HM.JL,
-              "on:begin": HM.isTrulyOpeningTag,
-              end: HM.end
+              gY: IU.gY,
+              "on:begin": IU.isTrulyOpeningTag,
+              end: IU.end
             }],
             subLanguage: "xml",
             contains: [{
-              JL: HM.JL,
-              end: HM.end,
+              gY: IU.gY,
+              end: IU.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, WM, {
+        }, OU, {
           beginKeywords: "while if switch catch for"
         }, {
-          JL: "\\b(?!function)" + MM.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          gY: "\\b(?!function)" + UU.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [uM, MM.inherit(MM.TITLE_MODE, {
-            JL: iM,
+          contains: [CU, UU.inherit(UU.TITLE_MODE, {
+            gY: zU,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, kM, {
-          match: "\\$" + iM,
+        }, uU, {
+          match: "\\$" + zU,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [uM]
-        }, sM, {
+          contains: [CU]
+        }, SU, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, RM, ZM, {
+        }, wU, fU, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  5134: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => mM
+  5253: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => NU
     });
-    const OM = "[A-Za-z$_][0-9A-Za-z$_]*",
-      SM = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      jM = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      aM = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      PM = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      nM = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      QM = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      zM = [].concat(nM, aM, PM);
+    const cU = "[A-Za-z$_][0-9A-Za-z$_]*",
+      yU = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      QU = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      AU = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      FU = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      oU = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      DU = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      EU = [].concat(oU, AU, FU);
 
-    function LM(MM) {
-      const rM = MM.regex,
-        iM = OM,
-        LM = "<>",
-        mM = "</>",
-        HM = {
-          JL: /<[A-Za-z0-9\\._:-]+/,
+    function YU(UU) {
+      const XU = UU.regex,
+        zU = cU,
+        YU = "<>",
+        NU = "</>",
+        IU = {
+          gY: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (MM, rM) => {
-            const iM = MM[0].length + MM.index,
-              OM = MM.input[iM];
-            if ("<" === OM || "," === OM) return void rM.ignoreMatch();
-            let SM;
-            ">" === OM && (((MM, rM) => {
+          isTrulyOpeningTag: (UU, XU) => {
+            const zU = UU[0].length + UU.index,
+              cU = UU.input[zU];
+            if ("<" === cU || "," === cU) return void XU.ignoreMatch();
+            let yU;
+            ">" === cU && (((UU, XU) => {
               let {
-                after: iM
-              } = rM;
-              const OM = "</" + MM[0].slice(1);
-              return -1 !== MM.input.indexOf(OM, iM)
-            })(MM, {
-              after: iM
-            }) || rM.ignoreMatch());
-            const jM = MM.input.substring(iM);
-            ((SM = jM.match(/^\s*=/)) || (SM = jM.match(/^\s+extends\s+/)) && 0 === SM.index) && rM.ignoreMatch()
+                after: zU
+              } = XU;
+              const cU = "</" + UU[0].slice(1);
+              return -1 !== UU.input.indexOf(cU, zU)
+            })(UU, {
+              after: zU
+            }) || XU.ignoreMatch());
+            const QU = UU.input.substring(zU);
+            ((yU = QU.match(/^\s*=/)) || (yU = QU.match(/^\s+extends\s+/)) && 0 === yU.index) && XU.ignoreMatch()
           }
         },
-        hM = {
-          $pattern: OM,
-          keyword: SM,
-          literal: jM,
-          built_in: zM,
-          "variable.language": QM
+        pU = {
+          $pattern: cU,
+          keyword: yU,
+          literal: QU,
+          built_in: EU,
+          "variable.language": DU
         },
-        JM = "[0-9](_?[0-9])*",
-        dM = `\\.(${JM})`,
-        yM = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        lM = {
+        aU = "[0-9](_?[0-9])*",
+        tU = `\\.(${aU})`,
+        gU = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        kU = {
           className: "number",
           variants: [{
-            JL: `(\\b(${yM})((${dM})|\\.)?|(${dM}))[eE][+-]?(${JM})\\b`
+            gY: `(\\b(${gU})((${tU})|\\.)?|(${tU}))[eE][+-]?(${aU})\\b`
           }, {
-            JL: `\\b(${yM})\\b((${dM})\\b|\\.)?|(${dM})\\b`
+            gY: `\\b(${gU})\\b((${tU})\\b|\\.)?|(${tU})\\b`
           }, {
-            JL: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            gY: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            JL: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            gY: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            JL: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            gY: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            JL: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            gY: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            JL: "\\b0[0-7]+n?\\b"
+            gY: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        EM = {
+        GU = {
           className: "subst",
-          JL: "\\$\\{",
+          gY: "\\$\\{",
           end: "\\}",
-          keywords: hM,
+          keywords: pU,
           contains: []
         },
-        UM = {
-          JL: ".?html`",
+        BU = {
+          gY: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [UU.BACKSLASH_ESCAPE, GU],
             subLanguage: "xml"
           }
         },
-        GM = {
-          JL: ".?css`",
+        ZU = {
+          gY: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [UU.BACKSLASH_ESCAPE, GU],
             subLanguage: "css"
           }
         },
-        CM = {
-          JL: ".?gql`",
+        RU = {
+          gY: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [MM.BACKSLASH_ESCAPE, EM],
+            contains: [UU.BACKSLASH_ESCAPE, GU],
             subLanguage: "graphql"
           }
         },
-        eM = {
+        PU = {
           className: "string",
-          JL: "`",
+          gY: "`",
           end: "`",
-          contains: [MM.BACKSLASH_ESCAPE, EM]
+          contains: [UU.BACKSLASH_ESCAPE, GU]
         },
-        bM = {
+        WU = {
           className: "comment",
-          variants: [MM.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [UU.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              JL: "(?=@[A-Za-z]+)",
+              gY: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                JL: "@[A-Za-z]+"
+                gY: "@[A-Za-z]+"
               }, {
                 className: "type",
-                JL: "\\{",
+                gY: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                JL: iM + "(?=\\s*(-)|$)",
+                gY: zU + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                JL: /(?=[^\n])\s/,
+                gY: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), MM.C_BLOCK_COMMENT_MODE, MM.C_LINE_COMMENT_MODE]
+          }), UU.C_BLOCK_COMMENT_MODE, UU.C_LINE_COMMENT_MODE]
         },
-        wM = [MM.APOS_STRING_MODE, MM.QUOTE_STRING_MODE, UM, GM, CM, eM, {
+        dU = [UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, BU, ZU, RU, PU, {
           match: /\$\d+/
-        }, lM];
-      EM.contains = wM.concat({
-        JL: /\{/,
+        }, kU];
+      GU.contains = dU.concat({
+        gY: /\{/,
         end: /\}/,
-        keywords: hM,
-        contains: ["self"].concat(wM)
+        keywords: pU,
+        contains: ["self"].concat(dU)
       });
-      const tM = [].concat(bM, EM.contains),
-        gM = tM.concat([{
-          JL: /(\s*)\(/,
+      const LU = [].concat(WU, GU.contains),
+        eU = LU.concat([{
+          gY: /(\s*)\(/,
           end: /\)/,
-          keywords: hM,
-          contains: ["self"].concat(tM)
+          keywords: pU,
+          contains: ["self"].concat(LU)
         }]),
-        uM = {
+        CU = {
           className: "params",
-          JL: /(\s*)\(/,
+          gY: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: hM,
-          contains: gM
+          keywords: pU,
+          contains: eU
         },
-        RM = {
+        wU = {
           variants: [{
-            match: [/class/, /\s+/, iM, /\s+/, /extends/, /\s+/, rM.concat(iM, "(", rM.concat(/\./, iM), ")*")],
+            match: [/class/, /\s+/, zU, /\s+/, /extends/, /\s+/, XU.concat(zU, "(", XU.concat(/\./, zU), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, iM],
+            match: [/class/, /\s+/, zU],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        pM = {
+        qU = {
           relevance: 0,
-          match: rM.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: XU.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...aM, ...PM]
+            _: [...AU, ...FU]
           }
         },
-        WM = {
+        OU = {
           variants: [{
-            match: [/function/, /\s+/, iM, /(?=\s*\()/]
+            match: [/function/, /\s+/, zU, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [uM],
+          contains: [CU],
           illegal: /%/
         };
-      const sM = {
-        match: rM.concat(/\b/, (DM = [...nM, "super", "import"].map((MM => `${MM}\\s*\\(`)), rM.concat("(?!", DM.join("|"), ")")), iM, rM.lookahead(/\s*\(/)),
+      const SU = {
+        match: XU.concat(/\b/, (rU = [...oU, "super", "import"].map((UU => `${UU}\\s*\\(`)), XU.concat("(?!", rU.join("|"), ")")), zU, XU.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var DM;
-      const kM = {
-          JL: rM.concat(/\./, rM.lookahead(rM.concat(iM, /(?![0-9A-Za-z$_(])/))),
-          end: iM,
+      var rU;
+      const uU = {
+          gY: XU.concat(/\./, XU.lookahead(XU.concat(zU, /(?![0-9A-Za-z$_(])/))),
+          end: zU,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        ZM = {
-          match: [/get|set/, /\s+/, iM, /(?=\()/],
+        fU = {
+          match: [/get|set/, /\s+/, zU, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            JL: /\(\)/
-          }, uM]
+            gY: /\(\)/
+          }, CU]
         },
-        oM = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + MM.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        fM = {
-          match: [/const|var|let/, /\s+/, iM, /\s*/, /=\s*/, /(async\s*)?/, rM.lookahead(oM)],
+        iU = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + UU.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        HU = {
+          match: [/const|var|let/, /\s+/, zU, /\s*/, /=\s*/, /(async\s*)?/, XU.lookahead(iU)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [uM]
+          contains: [CU]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: hM,
+        keywords: pU,
         exports: {
-          PARAMS_CONTAINS: gM,
-          CLASS_REFERENCE: pM
+          PARAMS_CONTAINS: eU,
+          CLASS_REFERENCE: qU
         },
         illegal: /#(?![$_A-z])/,
-        contains: [MM.SHEBANG({
+        contains: [UU.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          JL: /^\s*['"]use (strict|asm)['"]/
-        }, MM.APOS_STRING_MODE, MM.QUOTE_STRING_MODE, UM, GM, CM, eM, bM, {
+          gY: /^\s*['"]use (strict|asm)['"]/
+        }, UU.APOS_STRING_MODE, UU.QUOTE_STRING_MODE, BU, ZU, RU, PU, WU, {
           match: /\$\d+/
-        }, lM, pM, {
+        }, kU, qU, {
           scope: "attr",
-          match: iM + rM.lookahead(":"),
+          match: zU + XU.lookahead(":"),
           relevance: 0
-        }, fM, {
-          JL: "(" + MM.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, HU, {
+          gY: "(" + UU.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [bM, MM.REGEXP_MODE, {
+          contains: [WU, UU.REGEXP_MODE, {
             className: "function",
-            JL: oM,
+            gY: iU,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                JL: MM.UNDERSCORE_IDENT_RE,
+                gY: UU.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                JL: /\(\s*\)/,
+                gY: /\(\s*\)/,
                 skip: !0
               }, {
-                JL: /(\s*)\(/,
+                gY: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: hM,
-                contains: gM
+                keywords: pU,
+                contains: eU
               }]
             }]
           }, {
-            JL: /,/,
+            gY: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              JL: LM,
-              end: mM
+              gY: YU,
+              end: NU
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              JL: HM.JL,
-              "on:begin": HM.isTrulyOpeningTag,
-              end: HM.end
+              gY: IU.gY,
+              "on:begin": IU.isTrulyOpeningTag,
+              end: IU.end
             }],
             subLanguage: "xml",
             contains: [{
-              JL: HM.JL,
-              end: HM.end,
+              gY: IU.gY,
+              end: IU.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, WM, {
+        }, OU, {
           beginKeywords: "while if switch catch for"
         }, {
-          JL: "\\b(?!function)" + MM.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          gY: "\\b(?!function)" + UU.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [uM, MM.inherit(MM.TITLE_MODE, {
-            JL: iM,
+          contains: [CU, UU.inherit(UU.TITLE_MODE, {
+            gY: zU,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, kM, {
-          match: "\\$" + iM,
+        }, uU, {
+          match: "\\$" + zU,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [uM]
-        }, sM, {
+          contains: [CU]
+        }, SU, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, RM, ZM, {
+        }, wU, fU, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function mM(MM) {
-      const rM = MM.regex,
-        iM = LM(MM),
-        aM = OM,
-        PM = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        nM = {
-          JL: [/namespace/, /\s+/, MM.IDENT_RE],
+    function NU(UU) {
+      const XU = UU.regex,
+        zU = YU(UU),
+        AU = cU,
+        FU = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        oU = {
+          gY: [/namespace/, /\s+/, UU.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        mM = {
+        NU = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: PM
+            built_in: FU
           },
-          contains: [iM.exports.CLASS_REFERENCE]
+          contains: [zU.exports.CLASS_REFERENCE]
         },
-        HM = {
-          $pattern: OM,
-          keyword: SM.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: jM,
-          built_in: zM.concat(PM),
-          "variable.language": QM
+        IU = {
+          $pattern: cU,
+          keyword: yU.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: QU,
+          built_in: EU.concat(FU),
+          "variable.language": DU
         },
-        hM = {
+        pU = {
           className: "meta",
-          JL: "@" + aM
+          gY: "@" + AU
         },
-        JM = (MM, rM, iM) => {
-          const OM = MM.contains.findIndex((MM => MM.label === rM));
-          if (-1 === OM) throw new Error("can not find mode to replace");
-          MM.contains.splice(OM, 1, iM)
+        aU = (UU, XU, zU) => {
+          const cU = UU.contains.findIndex((UU => UU.label === XU));
+          if (-1 === cU) throw new Error("can not find mode to replace");
+          UU.contains.splice(cU, 1, zU)
         };
-      Object.assign(iM.keywords, HM), iM.exports.PARAMS_CONTAINS.push(hM);
-      const dM = iM.contains.find((MM => "attr" === MM.scope)),
-        yM = Object.assign({}, dM, {
-          match: rM.concat(aM, rM.lookahead(/\s*\?:/))
+      Object.assign(zU.keywords, IU), zU.exports.PARAMS_CONTAINS.push(pU);
+      const tU = zU.contains.find((UU => "attr" === UU.scope)),
+        gU = Object.assign({}, tU, {
+          match: XU.concat(AU, XU.lookahead(/\s*\?:/))
         });
-      iM.exports.PARAMS_CONTAINS.push([iM.exports.CLASS_REFERENCE, dM, yM]), iM.contains = iM.contains.concat([hM, nM, mM, yM]), JM(iM, "shebang", MM.SHEBANG()), JM(iM, "use_strict", {
+      zU.exports.PARAMS_CONTAINS.push([zU.exports.CLASS_REFERENCE, tU, gU]), zU.contains = zU.contains.concat([pU, oU, NU, gU]), aU(zU, "shebang", UU.SHEBANG()), aU(zU, "use_strict", {
         className: "meta",
         relevance: 10,
-        JL: /^\s*['"]use strict['"]/
+        gY: /^\s*['"]use strict['"]/
       });
-      return iM.contains.find((MM => "func.def" === MM.label)).relevance = 0, Object.assign(iM, {
+      return zU.contains.find((UU => "func.def" === UU.label)).relevance = 0, Object.assign(zU, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), iM
+      }), zU
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

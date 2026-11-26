@@ -1,276 +1,276 @@
 export const id = 62;
 export const ids = [62];
 export const modules = {
-  34843: () => {
+  40656: () => {
     ! function() {
-      function MM(rM) {
-        return (MM = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(MM) {
-          return typeof MM
-        } : function(MM) {
-          return MM && "function" == typeof Symbol && MM.constructor === Symbol && MM !== Symbol.prototype ? "symbol" : typeof MM
-        })(rM)
+      function UU(XU) {
+        return (UU = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(UU) {
+          return typeof UU
+        } : function(UU) {
+          return UU && "function" == typeof Symbol && UU.constructor === Symbol && UU !== Symbol.prototype ? "symbol" : typeof UU
+        })(XU)
       }
 
-      function rM(rM, iM, OM) {
-        return (iM = function(rM) {
-          var iM = function(rM) {
-            if ("object" != MM(rM) || !rM) return rM;
-            var iM = rM[Symbol.toPrimitive];
-            if (void 0 !== iM) {
-              var OM = iM.call(rM, "string");
-              if ("object" != MM(OM)) return OM;
+      function XU(XU, zU, cU) {
+        return (zU = function(XU) {
+          var zU = function(XU) {
+            if ("object" != UU(XU) || !XU) return XU;
+            var zU = XU[Symbol.toPrimitive];
+            if (void 0 !== zU) {
+              var cU = zU.call(XU, "string");
+              if ("object" != UU(cU)) return cU;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(rM)
-          }(rM);
-          return "symbol" == MM(iM) ? iM : iM + ""
-        }(iM)) in rM ? Object.defineProperty(rM, iM, {
-          value: OM,
+            return String(XU)
+          }(XU);
+          return "symbol" == UU(zU) ? zU : zU + ""
+        }(zU)) in XU ? Object.defineProperty(XU, zU, {
+          value: cU,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : rM[iM] = OM, rM
+        }) : XU[zU] = cU, XU
       }
 
-      function iM(MM, rM) {
-        var iM = Object.keys(MM);
+      function zU(UU, XU) {
+        var zU = Object.keys(UU);
         if (Object.getOwnPropertySymbols) {
-          var OM = Object.getOwnPropertySymbols(MM);
-          rM && (OM = OM.filter((function(rM) {
-            return Object.getOwnPropertyDescriptor(MM, rM).enumerable
-          }))), iM.push.apply(iM, OM)
+          var cU = Object.getOwnPropertySymbols(UU);
+          XU && (cU = cU.filter((function(XU) {
+            return Object.getOwnPropertyDescriptor(UU, XU).enumerable
+          }))), zU.push.apply(zU, cU)
         }
-        return iM
+        return zU
       }
 
-      function OM(MM) {
-        for (var OM = 1; arguments.length > OM; OM++) {
-          var SM = null != arguments[OM] ? arguments[OM] : {};
-          OM % 2 ? iM(Object(SM), !0).forEach((function(iM) {
-            rM(MM, iM, SM[iM])
-          })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(MM, Object.getOwnPropertyDescriptors(SM)) : iM(Object(SM)).forEach((function(rM) {
-            Object.defineProperty(MM, rM, Object.getOwnPropertyDescriptor(SM, rM))
+      function cU(UU) {
+        for (var cU = 1; arguments.length > cU; cU++) {
+          var yU = null != arguments[cU] ? arguments[cU] : {};
+          cU % 2 ? zU(Object(yU), !0).forEach((function(zU) {
+            XU(UU, zU, yU[zU])
+          })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(UU, Object.getOwnPropertyDescriptors(yU)) : zU(Object(yU)).forEach((function(XU) {
+            Object.defineProperty(UU, XU, Object.getOwnPropertyDescriptor(yU, XU))
           }))
         }
-        return MM
+        return UU
       }
 
-      function SM(MM, rM, iM, OM, SM, jM, aM) {
+      function yU(UU, XU, zU, cU, yU, QU, AU) {
         try {
-          var PM = MM[jM](aM),
-            nM = PM.value
-        } catch (MM) {
-          return void iM(MM)
+          var FU = UU[QU](AU),
+            oU = FU.value
+        } catch (UU) {
+          return void zU(UU)
         }
-        PM.done ? rM(nM) : Promise.resolve(nM).then(OM, SM)
+        FU.done ? XU(oU) : Promise.resolve(oU).then(cU, yU)
       }
 
-      function jM(MM) {
+      function QU(UU) {
         return function() {
-          var rM = this,
-            iM = arguments;
-          return new Promise((function(OM, jM) {
-            var aM = MM.apply(rM, iM);
+          var XU = this,
+            zU = arguments;
+          return new Promise((function(cU, QU) {
+            var AU = UU.apply(XU, zU);
 
-            function PM(MM) {
-              SM(aM, OM, jM, PM, nM, "next", MM)
+            function FU(UU) {
+              yU(AU, cU, QU, FU, oU, "next", UU)
             }
 
-            function nM(MM) {
-              SM(aM, OM, jM, PM, nM, "throw", MM)
+            function oU(UU) {
+              yU(AU, cU, QU, FU, oU, "throw", UU)
             }
-            PM(void 0)
+            FU(void 0)
           }))
         }
       }
-      const aM = ["type"];
-      var PM = function(MM) {
-          return MM[MM.DomContentLoaded = 0] = "DomContentLoaded", MM[MM.Load = 1] = "Load", MM[MM.FullSnapshot = 2] = "FullSnapshot", MM[MM.IncrementalSnapshot = 3] = "IncrementalSnapshot", MM[MM.Meta = 4] = "Meta", MM[MM.Custom = 5] = "Custom", MM[MM.Plugin = 6] = "Plugin", MM
+      const AU = ["type"];
+      var FU = function(UU) {
+          return UU[UU.DomContentLoaded = 0] = "DomContentLoaded", UU[UU.Load = 1] = "Load", UU[UU.FullSnapshot = 2] = "FullSnapshot", UU[UU.IncrementalSnapshot = 3] = "IncrementalSnapshot", UU[UU.Meta = 4] = "Meta", UU[UU.Custom = 5] = "Custom", UU[UU.Plugin = 6] = "Plugin", UU
         }({}),
-        nM = function(MM) {
-          return MM[MM.Mutation = 0] = "Mutation", MM[MM.MouseMove = 1] = "MouseMove", MM[MM.MouseInteraction = 2] = "MouseInteraction", MM[MM.Scroll = 3] = "Scroll", MM[MM.ViewportResize = 4] = "ViewportResize", MM[MM.Input = 5] = "Input", MM[MM.TouchMove = 6] = "TouchMove", MM[MM.MediaInteraction = 7] = "MediaInteraction", MM[MM.StyleSheetRule = 8] = "StyleSheetRule", MM[MM.CanvasMutation = 9] = "CanvasMutation", MM[MM.Font = 10] = "Font", MM[MM.Log = 11] = "Log", MM[MM.Drag = 12] = "Drag", MM[MM.StyleDeclaration = 13] = "StyleDeclaration", MM[MM.Selection = 14] = "Selection", MM[MM.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", MM[MM.CustomElement = 16] = "CustomElement", MM
+        oU = function(UU) {
+          return UU[UU.Mutation = 0] = "Mutation", UU[UU.MouseMove = 1] = "MouseMove", UU[UU.MouseInteraction = 2] = "MouseInteraction", UU[UU.Scroll = 3] = "Scroll", UU[UU.ViewportResize = 4] = "ViewportResize", UU[UU.Input = 5] = "Input", UU[UU.TouchMove = 6] = "TouchMove", UU[UU.MediaInteraction = 7] = "MediaInteraction", UU[UU.StyleSheetRule = 8] = "StyleSheetRule", UU[UU.CanvasMutation = 9] = "CanvasMutation", UU[UU.Font = 10] = "Font", UU[UU.Log = 11] = "Log", UU[UU.Drag = 12] = "Drag", UU[UU.StyleDeclaration = 13] = "StyleDeclaration", UU[UU.Selection = 14] = "Selection", UU[UU.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", UU[UU.CustomElement = 16] = "CustomElement", UU
         }({}),
-        QM = function(MM) {
-          return MM[MM.MouseUp = 0] = "MouseUp", MM[MM.MouseDown = 1] = "MouseDown", MM[MM.Click = 2] = "Click", MM[MM.ContextMenu = 3] = "ContextMenu", MM[MM.DblClick = 4] = "DblClick", MM[MM.Focus = 5] = "Focus", MM[MM.Blur = 6] = "Blur", MM[MM.TouchStart = 7] = "TouchStart", MM[MM.TouchMove_Departed = 8] = "TouchMove_Departed", MM[MM.TouchEnd = 9] = "TouchEnd", MM[MM.TouchCancel = 10] = "TouchCancel", MM
+        DU = function(UU) {
+          return UU[UU.MouseUp = 0] = "MouseUp", UU[UU.MouseDown = 1] = "MouseDown", UU[UU.Click = 2] = "Click", UU[UU.ContextMenu = 3] = "ContextMenu", UU[UU.DblClick = 4] = "DblClick", UU[UU.Focus = 5] = "Focus", UU[UU.Blur = 6] = "Blur", UU[UU.TouchStart = 7] = "TouchStart", UU[UU.TouchMove_Departed = 8] = "TouchMove_Departed", UU[UU.TouchEnd = 9] = "TouchEnd", UU[UU.TouchCancel = 10] = "TouchCancel", UU
         }({}),
-        zM = function(MM) {
-          return MM[MM.Mouse = 0] = "Mouse", MM[MM.Pen = 1] = "Pen", MM[MM.Touch = 2] = "Touch", MM
+        EU = function(UU) {
+          return UU[UU.Mouse = 0] = "Mouse", UU[UU.Pen = 1] = "Pen", UU[UU.Touch = 2] = "Touch", UU
         }({}),
-        LM = function(MM) {
-          return MM[MM["2D"] = 0] = "2D", MM[MM.WebGL = 1] = "WebGL", MM[MM.WebGL2 = 2] = "WebGL2", MM
+        YU = function(UU) {
+          return UU[UU["2D"] = 0] = "2D", UU[UU.WebGL = 1] = "WebGL", UU[UU.WebGL2 = 2] = "WebGL2", UU
         }({}),
-        mM = function(MM) {
-          return MM[MM.Play = 0] = "Play", MM[MM.Pause = 1] = "Pause", MM[MM.Seeked = 2] = "Seeked", MM[MM.VolumeChange = 3] = "VolumeChange", MM[MM.RateChange = 4] = "RateChange", MM
+        NU = function(UU) {
+          return UU[UU.Play = 0] = "Play", UU[UU.Pause = 1] = "Pause", UU[UU.Seeked = 2] = "Seeked", UU[UU.VolumeChange = 3] = "VolumeChange", UU[UU.RateChange = 4] = "RateChange", UU
         }({}),
-        HM = function(MM) {
-          return MM[MM.Document = 0] = "Document", MM[MM.DocumentType = 1] = "DocumentType", MM[MM.Element = 2] = "Element", MM[MM.Text = 3] = "Text", MM[MM.CDATA = 4] = "CDATA", MM[MM.Comment = 5] = "Comment", MM
+        IU = function(UU) {
+          return UU[UU.Document = 0] = "Document", UU[UU.DocumentType = 1] = "DocumentType", UU[UU.Element = 2] = "Element", UU[UU.Text = 3] = "Text", UU[UU.CDATA = 4] = "CDATA", UU[UU.Comment = 5] = "Comment", UU
         }({});
 
-      function hM(MM, rM) {
-        return -1 !== MM.indexOf(rM)
+      function pU(UU, XU) {
+        return -1 !== UU.indexOf(XU)
       }
       "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
-      var JM = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
-      new RegExp(`^${JM.source}`, "i"), new RegExp(JM.source, "gi"), "0".repeat(32), "0".repeat(16);
-      var dM = {
+      var aU = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
+      new RegExp(`^${aU.source}`, "i"), new RegExp(aU.source, "gi"), "0".repeat(32), "0".repeat(16);
+      var tU = {
           Node: ["childNodes", "parentNode", "parentElement", "textContent"],
           ShadowRoot: ["host", "styleSheets"],
           Element: ["shadowRoot"],
           MutationObserver: []
         },
-        yM = {
+        gU = {
           Node: ["contains", "getRootNode"],
           ShadowRoot: ["getSelection"],
           Element: ["querySelector", "querySelectorAll"],
           MutationObserver: ["constructor"]
         },
-        lM = {};
+        kU = {};
 
-      function EM(MM) {
-        if (lM[MM]) return lM[MM];
-        const rM = function(MM) {
-            var rM, iM;
-            const OM = null === (rM = globalThis) || void 0 === rM || null === (rM = rM.Zone) || void 0 === rM || null === (iM = rM.__symbol__) || void 0 === iM ? void 0 : iM.call(rM, MM);
-            return OM && globalThis[OM] ? globalThis[OM] : void 0
-          }(MM) || globalThis[MM],
-          iM = rM.prototype,
-          OM = MM in dM ? dM[MM] : void 0,
-          SM = Boolean(OM && OM.every((MM => {
-            var rM;
-            return Boolean(null === (rM = Object.getOwnPropertyDescriptor(iM, MM)) || void 0 === rM || null === (rM = rM.get) || void 0 === rM ? void 0 : rM.toString().includes("[native code]"))
+      function GU(UU) {
+        if (kU[UU]) return kU[UU];
+        const XU = function(UU) {
+            var XU, zU;
+            const cU = null === (XU = globalThis) || void 0 === XU || null === (XU = XU.Zone) || void 0 === XU || null === (zU = XU.__symbol__) || void 0 === zU ? void 0 : zU.call(XU, UU);
+            return cU && globalThis[cU] ? globalThis[cU] : void 0
+          }(UU) || globalThis[UU],
+          zU = XU.prototype,
+          cU = UU in tU ? tU[UU] : void 0,
+          yU = Boolean(cU && cU.every((UU => {
+            var XU;
+            return Boolean(null === (XU = Object.getOwnPropertyDescriptor(zU, UU)) || void 0 === XU || null === (XU = XU.get) || void 0 === XU ? void 0 : XU.toString().includes("[native code]"))
           }))),
-          jM = MM in yM ? yM[MM] : void 0,
-          aM = Boolean(jM && jM.every((MM => {
-            var rM;
-            return "function" == typeof iM[MM] && (null === (rM = iM[MM]) || void 0 === rM ? void 0 : rM.toString().includes("[native code]"))
+          QU = UU in gU ? gU[UU] : void 0,
+          AU = Boolean(QU && QU.every((UU => {
+            var XU;
+            return "function" == typeof zU[UU] && (null === (XU = zU[UU]) || void 0 === XU ? void 0 : XU.toString().includes("[native code]"))
           })));
-        if (SM && aM) return lM[MM] = rM.prototype, rM.prototype;
-        const PM = document.createElement("iframe");
-        PM.style.display = "none";
-        let nM = !1;
+        if (yU && AU) return kU[UU] = XU.prototype, XU.prototype;
+        const FU = document.createElement("iframe");
+        FU.style.display = "none";
+        let oU = !1;
         try {
-          document.body.appendChild(PM);
-          const OM = PM.contentWindow;
-          if (!OM) return rM.prototype;
-          const SM = OM[MM].prototype;
-          return SM ? (hM(QM = navigator.userAgent, "AppleWebKit") && !hM(QM, "Chrome") && (PM.classList.add("rr-block", "ph-no-capture"), PM.setAttribute("__rrwebUntaintedPrototype", MM), nM = !0), lM[MM] = SM) : iM
-        } catch (MM) {
-          return iM
+          document.body.appendChild(FU);
+          const cU = FU.contentWindow;
+          if (!cU) return XU.prototype;
+          const yU = cU[UU].prototype;
+          return yU ? (pU(DU = navigator.userAgent, "AppleWebKit") && !pU(DU, "Chrome") && (FU.classList.add("rr-block", "ph-no-capture"), FU.setAttribute("__rrwebUntaintedPrototype", UU), oU = !0), kU[UU] = yU) : zU
+        } catch (UU) {
+          return zU
         } finally {
-          !nM && PM.parentNode && document.body.removeChild(PM)
+          !oU && FU.parentNode && document.body.removeChild(FU)
         }
-        var QM
+        var DU
       }
-      var UM = Object.create(null);
+      var BU = Object.create(null);
 
-      function GM(MM, rM, iM) {
-        var OM;
-        const SM = UM[MM],
-          jM = SM[iM];
-        if (jM) return jM.call(rM);
-        const aM = EM(MM),
-          PM = null === (OM = Object.getOwnPropertyDescriptor(aM, iM)) || void 0 === OM ? void 0 : OM.get;
-        return PM ? (SM[iM] = PM, PM.call(rM)) : rM[iM]
+      function ZU(UU, XU, zU) {
+        var cU;
+        const yU = BU[UU],
+          QU = yU[zU];
+        if (QU) return QU.call(XU);
+        const AU = GU(UU),
+          FU = null === (cU = Object.getOwnPropertyDescriptor(AU, zU)) || void 0 === cU ? void 0 : cU.get;
+        return FU ? (yU[zU] = FU, FU.call(XU)) : XU[zU]
       }
-      UM.Node = Object.create(null), UM.ShadowRoot = Object.create(null), UM.MutationObserver = Object.create(null), UM.Element = Object.create(null);
-      var CM, eM = {};
+      BU.Node = Object.create(null), BU.ShadowRoot = Object.create(null), BU.MutationObserver = Object.create(null), BU.Element = Object.create(null);
+      var RU, PU = {};
 
-      function bM(MM, rM, iM) {
-        const OM = `${MM}.${String(iM)}`;
-        if (eM[OM]) return eM[OM].bind(rM);
-        const SM = EM(MM)[iM];
-        return "function" != typeof SM ? rM[iM] : (eM[OM] = SM, SM.bind(rM))
-      }
-
-      function wM() {
-        return EM("MutationObserver").constructor
+      function WU(UU, XU, zU) {
+        const cU = `${UU}.${String(zU)}`;
+        if (PU[cU]) return PU[cU].bind(XU);
+        const yU = GU(UU)[zU];
+        return "function" != typeof yU ? XU[zU] : (PU[cU] = yU, yU.bind(XU))
       }
 
-      function tM(MM, rM, iM) {
+      function dU() {
+        return GU("MutationObserver").constructor
+      }
+
+      function LU(UU, XU, zU) {
         try {
-          if (!(rM in MM)) return () => {};
-          const OM = MM[rM],
-            SM = {
-              next: OM
+          if (!(XU in UU)) return () => {};
+          const cU = UU[XU],
+            yU = {
+              next: cU
             },
-            jM = iM((function() {
-              for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-              return SM.next.apply(this, rM)
+            QU = zU((function() {
+              for (var UU = arguments.length, XU = new Array(UU), zU = 0; zU < UU; zU++) XU[zU] = arguments[zU];
+              return yU.next.apply(this, XU)
             }));
-          return "function" == typeof jM && (jM.prototype = jM.prototype || {}, Object.defineProperties(jM, {
+          return "function" == typeof QU && (QU.prototype = QU.prototype || {}, Object.defineProperties(QU, {
             __rrweb_original__: {
               enumerable: !1,
-              value: OM
+              value: cU
             },
             __rrweb_layer__: {
               enumerable: !1,
-              value: SM
+              value: yU
             }
-          })), MM[rM] = jM, () => {
-            if (MM[rM] === jM) return void(MM[rM] = SM.next);
-            const iM = MM => {
-              var rM;
-              return "function" == typeof MM ? null !== (rM = MM.__rrweb_layer__) && void 0 !== rM ? rM : MM.__posthog_layer__ : void 0
+          })), UU[XU] = QU, () => {
+            if (UU[XU] === QU) return void(UU[XU] = yU.next);
+            const zU = UU => {
+              var XU;
+              return "function" == typeof UU ? null !== (XU = UU.__rrweb_layer__) && void 0 !== XU ? XU : UU.__posthog_layer__ : void 0
             };
-            let OM = MM[rM],
-              aM = iM(OM);
-            for (; aM;) {
-              if (aM.next === jM) return void(aM.next = SM.next);
-              OM = aM.next, aM = iM(OM)
+            let cU = UU[XU],
+              AU = zU(cU);
+            for (; AU;) {
+              if (AU.next === QU) return void(AU.next = yU.next);
+              cU = AU.next, AU = zU(cU)
             }
           }
-        } catch (MM) {
+        } catch (UU) {
           return () => {}
         }
       }
-      var gM = {
-        childNodes: MM => GM("Node", MM, "childNodes"),
-        parentNode: MM => GM("Node", MM, "parentNode"),
-        parentElement: MM => GM("Node", MM, "parentElement"),
-        textContent: MM => GM("Node", MM, "textContent"),
-        isConnected(MM) {
-          if (void 0 === CM) {
-            var rM;
-            const MM = null === (rM = Object.getOwnPropertyDescriptor(EM("Node"), "isConnected")) || void 0 === rM ? void 0 : rM.get;
-            CM = (null == MM ? void 0 : MM.toString().includes("[native code]")) ? MM : null
+      var eU = {
+        childNodes: UU => ZU("Node", UU, "childNodes"),
+        parentNode: UU => ZU("Node", UU, "parentNode"),
+        parentElement: UU => ZU("Node", UU, "parentElement"),
+        textContent: UU => ZU("Node", UU, "textContent"),
+        isConnected(UU) {
+          if (void 0 === RU) {
+            var XU;
+            const UU = null === (XU = Object.getOwnPropertyDescriptor(GU("Node"), "isConnected")) || void 0 === XU ? void 0 : XU.get;
+            RU = (null == UU ? void 0 : UU.toString().includes("[native code]")) ? UU : null
           }
-          return null == CM ? void 0 : CM.call(MM)
+          return null == RU ? void 0 : RU.call(UU)
         },
-        contains: (MM, rM) => bM("Node", MM, "contains")(rM),
-        getRootNode: MM => bM("Node", MM, "getRootNode")(),
-        host: MM => MM && "host" in MM ? GM("ShadowRoot", MM, "host") : null,
-        styleSheets: MM => MM.styleSheets,
-        shadowRoot: MM => MM && "shadowRoot" in MM ? GM("Element", MM, "shadowRoot") : null,
-        querySelector: (MM, rM) => bM("Element", MM, "querySelector")(rM),
-        querySelectorAll: (MM, rM) => bM("Element", MM, "querySelectorAll")(rM),
-        mutationObserver: wM,
-        patch: tM
+        contains: (UU, XU) => WU("Node", UU, "contains")(XU),
+        getRootNode: UU => WU("Node", UU, "getRootNode")(),
+        host: UU => UU && "host" in UU ? ZU("ShadowRoot", UU, "host") : null,
+        styleSheets: UU => UU.styleSheets,
+        shadowRoot: UU => UU && "shadowRoot" in UU ? ZU("Element", UU, "shadowRoot") : null,
+        querySelector: (UU, XU) => WU("Element", UU, "querySelector")(XU),
+        querySelectorAll: (UU, XU) => WU("Element", UU, "querySelectorAll")(XU),
+        mutationObserver: dU,
+        patch: LU
       };
 
-      function uM() {
+      function CU() {
         try {
           if ("undefined" != typeof performance && performance.now) return performance.now()
-        } catch (MM) {}
+        } catch (UU) {}
         return Date.now()
       }
-      var RM = 0,
-        pM = 0;
+      var wU = 0,
+        qU = 0;
 
-      function WM() {
-        RM += 1
+      function OU() {
+        wU += 1
       }
 
-      function sM() {
-        return RM
+      function SU() {
+        return wU
       }
 
-      function DM(MM, rM) {
-        return (rM !== RM || MM > 6e4) && (pM += 1, !0)
+      function rU(UU, XU) {
+        return (XU !== wU || UU > 6e4) && (qU += 1, !0)
       }
-      var kM = 0,
-        ZM = 0,
-        oM = 0,
-        fM = {
+      var uU = 0,
+        fU = 0,
+        iU = 0,
+        HU = {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
@@ -278,15 +278,15 @@ export const modules = {
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
         },
-        YM = null,
-        NM = null,
-        AM = [],
-        xM = 0,
-        vM = 0,
-        FM = {
+        MU = null,
+        vU = null,
+        VU = [],
+        sU = 0,
+        nU = 0,
+        mU = {
           slowestBatchMs: 0
         },
-        BM = {
+        lU = {
           deferredCount: 0,
           failedCount: 0,
           abandonedCount: 0,
@@ -294,1040 +294,1040 @@ export const modules = {
           slowestSliceMs: 0
         };
 
-      function XM(MM) {
-        var rM;
-        (kM += 1) > 1 || (fM = {
+      function xU(UU) {
+        var XU;
+        (uU += 1) > 1 || (HU = {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
           cssRuleCount: 0,
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
-        }, AM = [], xM = 0, NM = (rM = MM) && rM > 0 ? rM : null, ZM = uM(), oM = RM)
+        }, VU = [], sU = 0, vU = (XU = UU) && XU > 0 ? XU : null, fU = CU(), iU = wU)
       }
 
-      function IM() {
-        return 0 === kM ? YM || {
+      function JU() {
+        return 0 === uU ? MU || {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
           cssRuleCount: 0,
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
-        } : (kM -= 1) > 0 ? fM : (fM.durationMs = uM() - ZM, fM.deferredStylesheetCount = xM, BM.deferredCount += xM, NM = null, DM(fM.durationMs, oM) ? fM : YM = fM)
+        } : (uU -= 1) > 0 ? HU : (HU.durationMs = CU() - fU, HU.deferredStylesheetCount = sU, lU.deferredCount += sU, vU = null, rU(HU.durationMs, iU) ? HU : MU = HU)
       }
 
-      function KM(MM, rM, iM) {
-        let OM = MM.length;
-        if (iM >= 32) return OM;
-        for (let SM = 0; MM.length > SM; SM++) {
-          const jM = MM[SM];
+      function jU(UU, XU, zU) {
+        let cU = UU.length;
+        if (zU >= 32) return cU;
+        for (let yU = 0; UU.length > yU; yU++) {
+          const QU = UU[yU];
           try {
-            const MM = jM.cssRules;
-            if (MM && MM.length) OM += KM(MM, rM, iM + 1);
-            else if (rM && jM.styleSheet) {
-              const MM = jM.styleSheet;
-              if (!rM.has(MM)) {
-                rM.add(MM);
-                const SM = MM.rules || MM.cssRules;
-                SM && (OM += KM(SM, rM, iM + 1))
+            const UU = QU.cssRules;
+            if (UU && UU.length) cU += jU(UU, XU, zU + 1);
+            else if (XU && QU.styleSheet) {
+              const UU = QU.styleSheet;
+              if (!XU.has(UU)) {
+                XU.add(UU);
+                const yU = UU.rules || UU.cssRules;
+                yU && (cU += jU(yU, XU, zU + 1))
               }
             }
-          } catch (MM) {}
+          } catch (UU) {}
         }
-        return OM
+        return cU
       }
 
-      function qM(MM) {
-        if (0 === kM) return;
-        const rM = KM(MM, null, 0);
-        fM.cssRuleCount += rM, vM > 0 && (fM.nonDeferrableCssRuleCount += rM)
+      function KU(UU) {
+        if (0 === uU) return;
+        const XU = jU(UU, null, 0);
+        HU.cssRuleCount += XU, nU > 0 && (HU.nonDeferrableCssRuleCount += XU)
       }
 
-      function TM(MM) {
-        vM += 1;
+      function bU(UU) {
+        nU += 1;
         try {
-          return MM()
+          return UU()
         } finally {
-          vM -= 1
+          nU -= 1
         }
       }
 
-      function VM(MM) {
-        kM > 0 && (fM.stylesheetMs += MM)
+      function TU(UU) {
+        uU > 0 && (HU.stylesheetMs += UU)
       }
 
-      function cM(MM) {
-        if (0 === kM || null === NM) return !1;
-        const rM = fM.cssRuleCount - fM.nonDeferrableCssRuleCount;
-        return rM >= NM || rM + function(MM) {
+      function hU(UU) {
+        if (0 === uU || null === vU) return !1;
+        const XU = HU.cssRuleCount - HU.nonDeferrableCssRuleCount;
+        return XU >= vU || XU + function(UU) {
           try {
-            const rM = MM && (MM.rules || MM.cssRules);
-            if (!rM) return 0;
-            const iM = new WeakSet;
-            return iM.add(MM), KM(rM, iM, 0)
-          } catch (MM) {
+            const XU = UU && (UU.rules || UU.cssRules);
+            if (!XU) return 0;
+            const zU = new WeakSet;
+            return zU.add(UU), jU(XU, zU, 0)
+          } catch (UU) {
             return 0
           }
-        }(MM) > NM
+        }(UU) > vU
       }
 
-      function Mr() {
-        const MM = AM;
-        return AM = [], MM
+      function UX() {
+        const UU = VU;
+        return VU = [], UU
       }
 
-      function rr() {
-        BM.failedCount += 1
+      function XX() {
+        lU.failedCount += 1
       }
 
-      function ir(MM) {
-        MM > 0 && (BM.abandonedCount += MM)
+      function zX(UU) {
+        UU > 0 && (lU.abandonedCount += UU)
       }
 
-      function Or(MM) {
-        return Or = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(MM) {
-          return typeof MM
-        } : function(MM) {
-          return MM && "function" == typeof Symbol && MM.constructor === Symbol && MM !== Symbol.prototype ? "symbol" : typeof MM
-        }, Or(MM)
+      function cX(UU) {
+        return cX = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(UU) {
+          return typeof UU
+        } : function(UU) {
+          return UU && "function" == typeof Symbol && UU.constructor === Symbol && UU !== Symbol.prototype ? "symbol" : typeof UU
+        }, cX(UU)
       }
 
-      function Sr(MM, rM, iM) {
-        return (rM = function(MM) {
-          var rM = function(MM) {
-            if ("object" != Or(MM) || !MM) return MM;
-            var rM = MM[Symbol.toPrimitive];
-            if (void 0 !== rM) {
-              var iM = rM.call(MM, "string");
-              if ("object" != Or(iM)) return iM;
+      function yX(UU, XU, zU) {
+        return (XU = function(UU) {
+          var XU = function(UU) {
+            if ("object" != cX(UU) || !UU) return UU;
+            var XU = UU[Symbol.toPrimitive];
+            if (void 0 !== XU) {
+              var zU = XU.call(UU, "string");
+              if ("object" != cX(zU)) return zU;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(MM)
-          }(MM);
-          return "symbol" == Or(rM) ? rM : rM + ""
-        }(rM)) in MM ? Object.defineProperty(MM, rM, {
-          value: iM,
+            return String(UU)
+          }(UU);
+          return "symbol" == cX(XU) ? XU : XU + ""
+        }(XU)) in UU ? Object.defineProperty(UU, XU, {
+          value: zU,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : MM[rM] = iM, MM
+        }) : UU[XU] = zU, UU
       }
 
-      function jr(MM) {
-        return MM.nodeType === MM.ELEMENT_NODE
+      function QX(UU) {
+        return UU.nodeType === UU.ELEMENT_NODE
       }
 
-      function ar(MM) {
-        const rM = MM && "host" in MM && "mode" in MM && gM.host(MM) || null;
-        return Boolean(rM && "shadowRoot" in rM && gM.shadowRoot(rM) === MM)
+      function AX(UU) {
+        const XU = UU && "host" in UU && "mode" in UU && eU.host(UU) || null;
+        return Boolean(XU && "shadowRoot" in XU && eU.shadowRoot(XU) === UU)
       }
 
-      function Pr(MM) {
-        return "[object ShadowRoot]" === {}.toString.call(MM)
+      function FX(UU) {
+        return "[object ShadowRoot]" === {}.toString.call(UU)
       }
 
-      function nr(MM) {
-        return MM.includes(" background-clip: text;") && !MM.includes(" -webkit-background-clip: text;") && (MM = MM.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), MM
+      function oX(UU) {
+        return UU.includes(" background-clip: text;") && !UU.includes(" -webkit-background-clip: text;") && (UU = UU.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), UU
       }
 
-      function Qr(MM) {
+      function DX(UU) {
         const {
-          cssText: rM
-        } = MM;
-        if (3 > rM.split('"').length) return rM;
-        const iM = ["@import", `url(${JSON.stringify(MM.href)})`];
-        return "" === MM.layerName ? iM.push("layer") : MM.layerName && iM.push(`layer(${MM.layerName})`), MM.supportsText && iM.push(`supports(${MM.supportsText})`), MM.media.length && iM.push(MM.media.mediaText), iM.join(" ") + ";"
+          cssText: XU
+        } = UU;
+        if (3 > XU.split('"').length) return XU;
+        const zU = ["@import", `url(${JSON.stringify(UU.href)})`];
+        return "" === UU.layerName ? zU.push("layer") : UU.layerName && zU.push(`layer(${UU.layerName})`), UU.supportsText && zU.push(`supports(${UU.supportsText})`), UU.media.length && zU.push(UU.media.mediaText), zU.join(" ") + ";"
       }
-      var zr = 0;
+      var EX = 0;
 
-      function Lr(MM) {
-        const rM = 0 === zr,
-          iM = rM ? uM() : 0;
-        zr += 1;
+      function YX(UU) {
+        const XU = 0 === EX,
+          zU = XU ? CU() : 0;
+        EX += 1;
         try {
-          const rM = MM.rules || MM.cssRules;
-          if (!rM) return null;
-          qM(rM);
-          let iM = MM.href;
-          return !iM && MM.ownerNode && (iM = MM.ownerNode.baseURI), nr(Array.from(rM, (MM => mr(MM, iM))).join(""))
-        } catch (MM) {
+          const XU = UU.rules || UU.cssRules;
+          if (!XU) return null;
+          KU(XU);
+          let zU = UU.href;
+          return !zU && UU.ownerNode && (zU = UU.ownerNode.baseURI), oX(Array.from(XU, (UU => NX(UU, zU))).join(""))
+        } catch (UU) {
           return null
         } finally {
-          zr -= 1, rM && VM(uM() - iM)
+          EX -= 1, XU && TU(CU() - zU)
         }
       }
 
-      function mr(MM, rM) {
-        if (hr(MM)) {
-          let rM;
+      function NX(UU, XU) {
+        if (pX(UU)) {
+          let XU;
           try {
-            rM = Lr(MM.styleSheet) || Qr(MM)
-          } catch (iM) {
-            rM = MM.cssText
+            XU = YX(UU.styleSheet) || DX(UU)
+          } catch (zU) {
+            XU = UU.cssText
           }
           try {
-            var iM;
-            if (rM && (null === (iM = MM.styleSheet) || void 0 === iM ? void 0 : iM.href)) return Rr(rM, MM.styleSheet.href)
-          } catch (MM) {}
-          return rM
+            var zU;
+            if (XU && (null === (zU = UU.styleSheet) || void 0 === zU ? void 0 : zU.href)) return wX(XU, UU.styleSheet.href)
+          } catch (UU) {}
+          return XU
         } {
-          let iM = MM.cssText;
-          return Jr(MM) && MM.selectorText.includes(":") && (iM = Hr(iM)), rM ? Rr(iM, rM) : iM
+          let zU = UU.cssText;
+          return aX(UU) && UU.selectorText.includes(":") && (zU = IX(zU)), XU ? wX(zU, XU) : zU
         }
       }
 
-      function Hr(MM) {
-        return MM.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2")
+      function IX(UU) {
+        return UU.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2")
       }
 
-      function hr(MM) {
-        return "styleSheet" in MM
+      function pX(UU) {
+        return "styleSheet" in UU
       }
 
-      function Jr(MM) {
-        return "selectorText" in MM
+      function aX(UU) {
+        return "selectorText" in UU
       }
-      var dr = /^-?[A-Za-z_][\w-]*$/,
-        yr = /^-?[A-Za-z_][\w-]*(\.-?[A-Za-z_][\w-]*)*$/;
-      var lr = class {
+      var tX = /^-?[A-Za-z_][\w-]*$/,
+        gX = /^-?[A-Za-z_][\w-]*(\.-?[A-Za-z_][\w-]*)*$/;
+      var kX = class {
         constructor() {
-          Sr(this, "idNodeMap", new Map), Sr(this, "nodeMetaMap", new WeakMap)
+          yX(this, "idNodeMap", new Map), yX(this, "nodeMetaMap", new WeakMap)
         }
-        getId(MM) {
-          var rM, iM;
-          return MM && null !== (rM = null === (iM = this.getMeta(MM)) || void 0 === iM ? void 0 : iM.id) && void 0 !== rM ? rM : -1
+        getId(UU) {
+          var XU, zU;
+          return UU && null !== (XU = null === (zU = this.getMeta(UU)) || void 0 === zU ? void 0 : zU.id) && void 0 !== XU ? XU : -1
         }
-        lD(MM) {
-          return this.idNodeMap.get(MM) || null
+        icU(UU) {
+          return this.idNodeMap.get(UU) || null
         }
         getIds() {
           return Array.from(this.idNodeMap.keys())
         }
-        getMeta(MM) {
-          return this.nodeMetaMap.get(MM) || null
+        getMeta(UU) {
+          return this.nodeMetaMap.get(UU) || null
         }
-        removeNodeFromMap(MM) {
-          const rM = this.getId(MM);
-          if (this.idNodeMap.delete(rM), MM.childNodes && MM.childNodes.forEach((MM => this.removeNodeFromMap(MM))), jr(MM)) {
-            const rM = gM.shadowRoot(MM);
-            rM && this.removeNodeFromMap(rM), "IFRAME" === MM.nodeName && MM.contentDocument && this.removeNodeFromMap(MM.contentDocument)
+        removeNodeFromMap(UU) {
+          const XU = this.getId(UU);
+          if (this.idNodeMap.delete(XU), UU.childNodes && UU.childNodes.forEach((UU => this.removeNodeFromMap(UU))), QX(UU)) {
+            const XU = eU.shadowRoot(UU);
+            XU && this.removeNodeFromMap(XU), "IFRAME" === UU.nodeName && UU.contentDocument && this.removeNodeFromMap(UU.contentDocument)
           }
         }
-        has(MM) {
-          return this.idNodeMap.has(MM)
+        has(UU) {
+          return this.idNodeMap.has(UU)
         }
-        hasNode(MM) {
-          return this.nodeMetaMap.has(MM)
+        hasNode(UU) {
+          return this.nodeMetaMap.has(UU)
         }
-        add(MM, rM) {
-          this.idNodeMap.set(rM.id, MM), this.nodeMetaMap.set(MM, rM)
+        add(UU, XU) {
+          this.idNodeMap.set(XU.id, UU), this.nodeMetaMap.set(UU, XU)
         }
-        replace(MM, rM) {
-          const iM = this.lD(MM);
-          if (iM) {
-            const MM = this.nodeMetaMap.get(iM);
-            MM && this.nodeMetaMap.set(rM, MM)
+        replace(UU, XU) {
+          const zU = this.icU(UU);
+          if (zU) {
+            const UU = this.nodeMetaMap.get(zU);
+            UU && this.nodeMetaMap.set(XU, UU)
           }
-          this.idNodeMap.set(MM, rM)
+          this.idNodeMap.set(UU, XU)
         }
         reset() {
           this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
         }
       };
 
-      function Er(MM) {
+      function GX(UU) {
         let {
-          element: rM,
-          maskInputOptions: iM,
-          tagName: OM,
-          type: SM,
-          value: jM,
-          maskInputFn: aM
-        } = MM, PM = jM || "";
-        const nM = SM && Ur(SM);
-        return (iM[OM.toLowerCase()] || nM && iM[nM]) && (PM = aM ? aM(PM, rM) : "*".repeat(PM.length)), PM
+          element: XU,
+          maskInputOptions: zU,
+          tagName: cU,
+          type: yU,
+          value: QU,
+          maskInputFn: AU
+        } = UU, FU = QU || "";
+        const oU = yU && BX(yU);
+        return (zU[cU.toLowerCase()] || oU && zU[oU]) && (FU = AU ? AU(FU, XU) : "*".repeat(FU.length)), FU
       }
 
-      function Ur(MM) {
-        return MM.toLowerCase()
+      function BX(UU) {
+        return UU.toLowerCase()
       }
-      var Gr = new Set(["rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]);
+      var ZX = new Set(["rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]);
 
-      function Cr(MM) {
+      function RX(UU) {
         let {
-          element: rM,
-          name: iM,
-          value: OM,
-          maskAllElementAttributes: SM,
-          maskAttributeFn: jM,
-          isGenerated: aM = !1
-        } = MM;
-        return OM ? SM ? aM && Gr.has(Ur(iM)) ? OM : "*".repeat(OM.length) : jM ? jM(iM, OM, rM) : OM : OM
+          element: XU,
+          name: zU,
+          value: cU,
+          maskAllElementAttributes: yU,
+          maskAttributeFn: QU,
+          isGenerated: AU = !1
+        } = UU;
+        return cU ? yU ? AU && ZX.has(BX(zU)) ? cU : "*".repeat(cU.length) : QU ? QU(zU, cU, XU) : cU : cU
       }
-      var er = "__rrweb_original__";
+      var PX = "__rrweb_original__";
 
-      function br(MM) {
+      function WX(UU) {
         try {
-          const rM = MM.type;
-          return MM.hasAttribute("data-rr-is-password") ? "password" : rM ? Ur(rM) : null
-        } catch (MM) {
+          const XU = UU.type;
+          return UU.hasAttribute("data-rr-is-password") ? "password" : XU ? BX(XU) : null
+        } catch (UU) {
           return null
         }
       }
-      var wr = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
-        tr = /^(?:[a-z+]+:)?\/\//i,
-        gr = /^www\..*/i,
-        ur = /^(data:)([^,]*),(.*)/i;
+      var dX = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+        LX = /^(?:[a-z+]+:)?\/\//i,
+        eX = /^www\..*/i,
+        CX = /^(data:)([^,]*),(.*)/i;
 
-      function Rr(MM, rM) {
-        return (MM || "").replace(wr, ((MM, iM, OM, SM, jM, aM) => {
-          const PM = OM || jM || aM,
-            nM = iM || SM || "";
-          if (!PM) return MM;
-          if (tr.test(PM) || gr.test(PM)) return `url(${nM}${PM}${nM})`;
-          if (ur.test(PM)) return `url(${nM}${PM}${nM})`;
-          if ("/" === PM[0]) return `url(${nM}${function(MM){let rM="";return rM=MM.indexOf("//")>-1?MM.split("/").slice(0,3).join("/"):MM.split("/")[0],rM=rM.split("?")[0],rM}(rM)+PM}${nM})`;
-          const QM = rM.split("/"),
-            zM = PM.split("/");
-          QM.pop();
-          for (const rM of zM) "." !== rM && (".." === rM ? QM.pop() : QM.push(rM));
-          return `url(${nM}${QM.join("/")}${nM})`
+      function wX(UU, XU) {
+        return (UU || "").replace(dX, ((UU, zU, cU, yU, QU, AU) => {
+          const FU = cU || QU || AU,
+            oU = zU || yU || "";
+          if (!FU) return UU;
+          if (LX.test(FU) || eX.test(FU)) return `url(${oU}${FU}${oU})`;
+          if (CX.test(FU)) return `url(${oU}${FU}${oU})`;
+          if ("/" === FU[0]) return `url(${oU}${function(UU){let XU="";return XU=UU.indexOf("//")>-1?UU.split("/").slice(0,3).join("/"):UU.split("/")[0],XU=XU.split("?")[0],XU}(XU)+FU}${oU})`;
+          const DU = XU.split("/"),
+            EU = FU.split("/");
+          DU.pop();
+          for (const XU of EU) "." !== XU && (".." === XU ? DU.pop() : DU.push(XU));
+          return `url(${oU}${DU.join("/")}${oU})`
         }))
       }
-      var pr, Wr, sr = new Map,
-        Dr = 1,
-        kr = new RegExp("[^a-z0-9-_:]");
+      var qX, OX, SX = new Map,
+        rX = 1,
+        uX = new RegExp("[^a-z0-9-_:]");
 
-      function Zr() {
-        return Dr++
+      function fX() {
+        return rX++
       }
-      var or = !1,
-        fr = /^[^ \t\n\r\u000c]+/,
-        Yr = /^[, \t\n\r\u000c]+/,
-        Nr = new WeakMap;
+      var iX = !1,
+        HX = /^[^ \t\n\r\u000c]+/,
+        MX = /^[, \t\n\r\u000c]+/,
+        vX = new WeakMap;
 
-      function Ar(MM, rM) {
-        return rM && "" !== rM.trim() ? xr(MM, rM) : rM
-      }
-
-      function xr(MM, rM) {
-        let iM = Nr.get(MM);
-        if (iM || (iM = MM.createElement("a"), Nr.set(MM, iM)), rM) {
-          if (rM.startsWith("blob:") || rM.startsWith("data:")) return rM
-        } else rM = "";
-        return iM.setAttribute("href", rM), iM.href
+      function VX(UU, XU) {
+        return XU && "" !== XU.trim() ? sX(UU, XU) : XU
       }
 
-      function vr(MM, rM) {
-        return (null == rM ? void 0 : rM.maxBase64ImageLength) ? function(MM, rM) {
-          return rM && MM.length > rM ? "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InN0cmlwZXMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgICAgIDxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iYmxhY2siLz4KICAgICAgPHBhdGggZD0iTTggMEgxNkwwIDE2VjhMOCAwWiIgZmlsbD0iIzJEMkQyRCIvPgogICAgICA8cGF0aCBkPSJNMTYgOFYxNkg4TDE2IDhaIiBmaWxsPSIjMkQyRDJEIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3RyaXBlcykiLz4KPC9zdmc+Cg==" : MM
-        }(MM, rM.maxBase64ImageLength) : MM
+      function sX(UU, XU) {
+        let zU = vX.get(UU);
+        if (zU || (zU = UU.createElement("a"), vX.set(UU, zU)), XU) {
+          if (XU.startsWith("blob:") || XU.startsWith("data:")) return XU
+        } else XU = "";
+        return zU.setAttribute("href", XU), zU.href
       }
 
-      function Fr(MM, rM, iM, OM, SM, jM) {
-        if (!OM) return OM;
-        if ("src" === iM || "href" === iM && ("use" !== rM || "#" !== OM[0])) {
-          if ("link" === rM && SM) {
-            var aM;
-            const MM = null === (aM = SM.sheet) || void 0 === aM ? void 0 : aM.href;
-            if (MM) return MM
+      function nX(UU, XU) {
+        return (null == XU ? void 0 : XU.maxBase64ImageLength) ? function(UU, XU) {
+          return XU && UU.length > XU ? "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InN0cmlwZXMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgICAgIDxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iYmxhY2siLz4KICAgICAgPHBhdGggZD0iTTggMEgxNkwwIDE2VjhMOCAwWiIgZmlsbD0iIzJEMkQyRCIvPgogICAgICA8cGF0aCBkPSJNMTYgOFYxNkg4TDE2IDhaIiBmaWxsPSIjMkQyRDJEIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3RyaXBlcykiLz4KPC9zdmc+Cg==" : UU
+        }(UU, XU.maxBase64ImageLength) : UU
+      }
+
+      function mX(UU, XU, zU, cU, yU, QU) {
+        if (!cU) return cU;
+        if ("src" === zU || "href" === zU && ("use" !== XU || "#" !== cU[0])) {
+          if ("link" === XU && yU) {
+            var AU;
+            const UU = null === (AU = yU.sheet) || void 0 === AU ? void 0 : AU.href;
+            if (UU) return UU
           }
-          const iM = Ar(MM, OM);
-          if (iM.startsWith("data:")) {
-            if ("img" === rM && SM) {
-              let MM = iM;
-              return ((null == jM ? void 0 : jM.type) || void 0 !== (null == jM ? void 0 : jM.quality)) && (MM = function(MM, rM, iM, OM) {
-                if (1e5 > rM.length) return rM;
-                if (!MM.complete || 0 === MM.naturalWidth) return rM;
-                if (MM.naturalWidth > 4096 || MM.naturalHeight > 4096) return rM;
-                const SM = sr.get(rM);
-                if (SM && SM.type === iM && SM.quality === OM) return SM.result;
+          const zU = VX(UU, cU);
+          if (zU.startsWith("data:")) {
+            if ("img" === XU && yU) {
+              let UU = zU;
+              return ((null == QU ? void 0 : QU.type) || void 0 !== (null == QU ? void 0 : QU.quality)) && (UU = function(UU, XU, zU, cU) {
+                if (1e5 > XU.length) return XU;
+                if (!UU.complete || 0 === UU.naturalWidth) return XU;
+                if (UU.naturalWidth > 4096 || UU.naturalHeight > 4096) return XU;
+                const yU = SX.get(XU);
+                if (yU && yU.type === zU && yU.quality === cU) return yU.result;
                 try {
-                  const SM = document.createElement("canvas");
-                  SM.width = MM.naturalWidth, SM.height = MM.naturalHeight;
-                  const jM = SM.getContext("2d");
-                  if (!jM) return rM;
-                  jM.drawImage(MM, 0, 0);
-                  const aM = SM.toDataURL(iM || "image/webp", null != OM ? OM : .4),
-                    PM = rM.length > aM.length ? aM : rM;
-                  if (sr.size >= 10) {
-                    const MM = sr.keys().next().value;
-                    void 0 !== MM && sr.delete(MM)
+                  const yU = document.createElement("canvas");
+                  yU.width = UU.naturalWidth, yU.height = UU.naturalHeight;
+                  const QU = yU.getContext("2d");
+                  if (!QU) return XU;
+                  QU.drawImage(UU, 0, 0);
+                  const AU = yU.toDataURL(zU || "image/webp", null != cU ? cU : .4),
+                    FU = XU.length > AU.length ? AU : XU;
+                  if (SX.size >= 10) {
+                    const UU = SX.keys().next().value;
+                    void 0 !== UU && SX.delete(UU)
                   }
-                  return sr.set(rM, {
-                    type: iM,
-                    quality: OM,
-                    result: PM
-                  }), PM
-                } catch (MM) {
-                  return rM
+                  return SX.set(XU, {
+                    type: zU,
+                    quality: cU,
+                    result: FU
+                  }), FU
+                } catch (UU) {
+                  return XU
                 }
-              }(SM, iM, jM.type, jM.quality)), vr(MM, jM)
+              }(yU, zU, QU.type, QU.quality)), nX(UU, QU)
             }
-            if ("image" === rM) return vr(iM, jM)
+            if ("image" === XU) return nX(zU, QU)
           }
-          return iM
+          return zU
         }
-        if ("xlink:href" === iM && "#" !== OM[0]) {
-          const iM = Ar(MM, OM);
-          return "image" === rM && iM.startsWith("data:") ? vr(iM, jM) : iM
+        if ("xlink:href" === zU && "#" !== cU[0]) {
+          const zU = VX(UU, cU);
+          return "image" === XU && zU.startsWith("data:") ? nX(zU, QU) : zU
         }
-        return "background" !== iM || "table" !== rM && "td" !== rM && "th" !== rM ? "srcset" === iM ? function(MM, rM) {
-          if ("" === rM.trim()) return rM;
-          let iM = 0;
+        return "background" !== zU || "table" !== XU && "td" !== XU && "th" !== XU ? "srcset" === zU ? function(UU, XU) {
+          if ("" === XU.trim()) return XU;
+          let zU = 0;
 
-          function OM(MM) {
-            let OM;
-            const SM = MM.exec(rM.substring(iM));
-            return SM ? (OM = SM[0], iM += OM.length, OM) : ""
+          function cU(UU) {
+            let cU;
+            const yU = UU.exec(XU.substring(zU));
+            return yU ? (cU = yU[0], zU += cU.length, cU) : ""
           }
-          const SM = [];
-          for (; OM(Yr), rM.length > iM;) {
-            let jM = OM(fr);
-            if ("," === jM.slice(-1)) jM = Ar(MM, jM.substring(0, jM.length - 1)), SM.push(jM);
+          const yU = [];
+          for (; cU(MX), XU.length > zU;) {
+            let QU = cU(HX);
+            if ("," === QU.slice(-1)) QU = VX(UU, QU.substring(0, QU.length - 1)), yU.push(QU);
             else {
-              let OM = "";
-              jM = Ar(MM, jM);
-              let aM = !1;
+              let cU = "";
+              QU = VX(UU, QU);
+              let AU = !1;
               for (;;) {
-                const MM = rM.charAt(iM);
-                if ("" === MM) {
-                  SM.push((jM + OM).trim());
+                const UU = XU.charAt(zU);
+                if ("" === UU) {
+                  yU.push((QU + cU).trim());
                   break
                 }
-                if (aM) ")" === MM && (aM = !1);
+                if (AU) ")" === UU && (AU = !1);
                 else {
-                  if ("," === MM) {
-                    iM += 1, SM.push((jM + OM).trim());
+                  if ("," === UU) {
+                    zU += 1, yU.push((QU + cU).trim());
                     break
                   }
-                  "(" === MM && (aM = !0)
+                  "(" === UU && (AU = !0)
                 }
-                OM += MM, iM += 1
+                cU += UU, zU += 1
               }
             }
           }
-          return SM.join(", ")
-        }(MM, OM) : "style" === iM ? Rr(OM, xr(MM)) : "object" === rM && "data" === iM ? Ar(MM, OM) : OM : Ar(MM, OM)
+          return yU.join(", ")
+        }(UU, cU) : "style" === zU ? wX(cU, sX(UU)) : "object" === XU && "data" === zU ? VX(UU, cU) : cU : VX(UU, cU)
       }
 
-      function Br(MM, rM, iM) {
-        return ("video" === MM || "audio" === MM) && "autoplay" === Ur(rM)
+      function lX(UU, XU, zU) {
+        return ("video" === UU || "audio" === UU) && "autoplay" === BX(XU)
       }
 
-      function Xr(MM) {
-        return "string" == typeof MM && Ur(MM).split(/\s+/).includes("stylesheet")
+      function xX(UU) {
+        return "string" == typeof UU && BX(UU).split(/\s+/).includes("stylesheet")
       }
 
-      function Ir(MM, rM, iM) {
-        if (!MM) return !1;
-        if (MM.nodeType !== MM.ELEMENT_NODE) return !!iM && Ir(gM.parentNode(MM), rM, iM);
-        for (let OM = MM.classList.length; OM--;)
-          if (rM.test(MM.classList[OM])) return !0;
-        return !!iM && Ir(gM.parentNode(MM), rM, iM)
+      function JX(UU, XU, zU) {
+        if (!UU) return !1;
+        if (UU.nodeType !== UU.ELEMENT_NODE) return !!zU && JX(eU.parentNode(UU), XU, zU);
+        for (let cU = UU.classList.length; cU--;)
+          if (XU.test(UU.classList[cU])) return !0;
+        return !!zU && JX(eU.parentNode(UU), XU, zU)
       }
 
-      function Kr(MM, rM, iM, OM) {
-        let SM;
-        if (jr(MM)) {
-          if (SM = MM, !gM.childNodes(SM).length) return !1
+      function jX(UU, XU, zU, cU) {
+        let yU;
+        if (QX(UU)) {
+          if (yU = UU, !eU.childNodes(yU).length) return !1
         } else {
-          if (null === gM.parentElement(MM)) return !1;
-          SM = gM.parentElement(MM)
+          if (null === eU.parentElement(UU)) return !1;
+          yU = eU.parentElement(UU)
         }
         try {
-          if ("string" == typeof rM) {
-            if (OM) {
-              if (SM.closest(`.${rM}`)) return !0
-            } else if (SM.classList.contains(rM)) return !0
-          } else if (Ir(SM, rM, OM)) return !0;
-          if (iM)
-            if (OM) {
-              if (SM.closest(iM)) return !0
-            } else if (SM.matches(iM)) return !0
-        } catch (MM) {}
+          if ("string" == typeof XU) {
+            if (cU) {
+              if (yU.closest(`.${XU}`)) return !0
+            } else if (yU.classList.contains(XU)) return !0
+          } else if (JX(yU, XU, cU)) return !0;
+          if (zU)
+            if (cU) {
+              if (yU.closest(zU)) return !0
+            } else if (yU.matches(zU)) return !0
+        } catch (UU) {}
         return !1
       }
 
-      function qr(MM, rM, iM) {
-        const OM = MM.removeEventListener;
-        "function" == typeof OM && OM.call(MM, rM, iM)
+      function KX(UU, XU, zU) {
+        const cU = UU.removeEventListener;
+        "function" == typeof cU && cU.call(UU, XU, zU)
       }
-      var Tr = new Map;
+      var bX = new Map;
 
-      function Vr(MM, rM) {
-        return Array.from(MM.styleSheets).find((MM => MM.href === rM))
+      function TX(UU, XU) {
+        return Array.from(UU.styleSheets).find((UU => UU.href === XU))
       }
 
-      function cr(MM) {
-        return null == MM ? "" : MM.toLowerCase()
+      function hX(UU) {
+        return null == UU ? "" : UU.toLowerCase()
       }
-      var Mi = !1,
-        ri = !1;
+      var Uz = !1,
+        Xz = !1;
 
-      function ii(MM, rM) {
+      function zz(UU, XU) {
         const {
-          doc: iM,
-          mirror: OM,
-          blockClass: SM,
-          blockSelector: jM,
-          maskTextClass: aM,
-          maskTextSelector: PM,
-          skipChild: nM = !1,
-          inlineStylesheet: QM = !0,
-          maskInputOptions: zM = {},
-          maskTextFn: LM,
-          maskInputFn: mM,
-          maskAllElementAttributes: hM = !1,
-          maskAttributeFn: JM,
-          slimDOMOptions: dM,
-          dataURLOptions: yM = {},
-          inlineImages: lM = !1,
-          recordCanvas: EM = !1,
-          canvasMaskingConfigured: UM,
-          onSerialize: GM,
-          onIframeLoad: CM,
-          iframeLoadTimeout: eM = 5e3,
-          onIframeListenerRegistered: bM,
-          onStylesheetLoad: wM,
-          stylesheetLoadTimeout: tM = 5e3,
-          keepIframeSrcFn: uM = () => !1,
-          newlyAddedElement: RM = !1,
-          depth: pM = 0,
-          maxDepth: WM = 50
-        } = rM;
+          doc: zU,
+          mirror: cU,
+          blockClass: yU,
+          blockSelector: QU,
+          maskTextClass: AU,
+          maskTextSelector: FU,
+          skipChild: oU = !1,
+          inlineStylesheet: DU = !0,
+          maskInputOptions: EU = {},
+          maskTextFn: YU,
+          maskInputFn: NU,
+          maskAllElementAttributes: pU = !1,
+          maskAttributeFn: aU,
+          slimDOMOptions: tU,
+          dataURLOptions: gU = {},
+          inlineImages: kU = !1,
+          recordCanvas: GU = !1,
+          canvasMaskingConfigured: BU,
+          onSerialize: ZU,
+          onIframeLoad: RU,
+          iframeLoadTimeout: PU = 5e3,
+          onIframeListenerRegistered: WU,
+          onStylesheetLoad: dU,
+          stylesheetLoadTimeout: LU = 5e3,
+          keepIframeSrcFn: CU = () => !1,
+          newlyAddedElement: wU = !1,
+          depth: qU = 0,
+          maxDepth: OU = 50
+        } = XU;
         let {
-          needsMask: sM
-        } = rM, {
-          preserveWhiteSpace: DM = !0
-        } = rM;
-        if (pM >= WM) return ri = !0, Mi || (Mi = !0, console.warn(`[rrweb-snapshot] DOM tree depth exceeded max depth of ${WM}. Children beyond this depth will not be recorded. This may indicate deeply nested DOM structures.`)), null;
-        sM || (sM = Kr(MM, aM, PM, void 0 === sM)), kM > 0 && (fM.nodeCount += 1);
-        const ZM = function(MM, rM) {
+          needsMask: SU
+        } = XU, {
+          preserveWhiteSpace: rU = !0
+        } = XU;
+        if (qU >= OU) return Xz = !0, Uz || (Uz = !0, console.warn(`[rrweb-snapshot] DOM tree depth exceeded max depth of ${OU}. Children beyond this depth will not be recorded. This may indicate deeply nested DOM structures.`)), null;
+        SU || (SU = jX(UU, AU, FU, void 0 === SU)), uU > 0 && (HU.nodeCount += 1);
+        const fU = function(UU, XU) {
           const {
-            doc: iM,
-            mirror: OM,
-            blockClass: SM,
-            blockSelector: jM,
-            needsMask: aM,
-            inlineStylesheet: PM,
-            maskInputOptions: nM = {},
-            maskTextFn: QM,
-            maskInputFn: zM,
-            maskAllElementAttributes: LM = !1,
-            maskAttributeFn: mM,
-            dataURLOptions: hM = {},
-            inlineImages: JM,
-            recordCanvas: dM,
-            canvasMaskingConfigured: yM,
-            keepIframeSrcFn: lM,
-            newlyAddedElement: EM = !1
-          } = rM, UM = function(MM, rM) {
-            if (!rM.hasNode(MM)) return;
-            const iM = rM.getId(MM);
-            return 1 === iM ? void 0 : iM
-          }(iM, OM);
-          switch (MM.nodeType) {
-            case MM.DOCUMENT_NODE:
-              return "CSS1Compat" !== MM.compatMode ? {
-                type: HM.Document,
+            doc: zU,
+            mirror: cU,
+            blockClass: yU,
+            blockSelector: QU,
+            needsMask: AU,
+            inlineStylesheet: FU,
+            maskInputOptions: oU = {},
+            maskTextFn: DU,
+            maskInputFn: EU,
+            maskAllElementAttributes: YU = !1,
+            maskAttributeFn: NU,
+            dataURLOptions: pU = {},
+            inlineImages: aU,
+            recordCanvas: tU,
+            canvasMaskingConfigured: gU,
+            keepIframeSrcFn: kU,
+            newlyAddedElement: GU = !1
+          } = XU, BU = function(UU, XU) {
+            if (!XU.hasNode(UU)) return;
+            const zU = XU.getId(UU);
+            return 1 === zU ? void 0 : zU
+          }(zU, cU);
+          switch (UU.nodeType) {
+            case UU.DOCUMENT_NODE:
+              return "CSS1Compat" !== UU.compatMode ? {
+                type: IU.Document,
                 childNodes: [],
-                compatMode: MM.compatMode
+                compatMode: UU.compatMode
               } : {
-                type: HM.Document,
+                type: IU.Document,
                 childNodes: []
               };
-            case MM.DOCUMENT_TYPE_NODE:
+            case UU.DOCUMENT_TYPE_NODE:
               return {
-                type: HM.DocumentType, name: MM.name, publicId: MM.publicId, systemId: MM.systemId, rootId: UM
+                type: IU.DocumentType, name: UU.name, publicId: UU.publicId, systemId: UU.systemId, rootId: BU
               };
-            case MM.ELEMENT_NODE:
-              return function(MM, rM) {
+            case UU.ELEMENT_NODE:
+              return function(UU, XU) {
                 const {
-                  doc: iM,
-                  blockClass: OM,
-                  blockSelector: SM,
-                  inlineStylesheet: jM,
-                  maskInputOptions: aM = {},
-                  maskInputFn: PM,
-                  maskAllElementAttributes: nM = !1,
-                  maskAttributeFn: QM,
-                  dataURLOptions: zM = {},
-                  inlineImages: LM,
-                  recordCanvas: mM,
-                  canvasMaskingConfigured: hM,
-                  keepIframeSrcFn: JM,
-                  newlyAddedElement: dM = !1,
-                  rootId: yM
-                } = rM, lM = function(MM, rM, iM) {
+                  doc: zU,
+                  blockClass: cU,
+                  blockSelector: yU,
+                  inlineStylesheet: QU,
+                  maskInputOptions: AU = {},
+                  maskInputFn: FU,
+                  maskAllElementAttributes: oU = !1,
+                  maskAttributeFn: DU,
+                  dataURLOptions: EU = {},
+                  inlineImages: YU,
+                  recordCanvas: NU,
+                  canvasMaskingConfigured: pU,
+                  keepIframeSrcFn: aU,
+                  newlyAddedElement: tU = !1,
+                  rootId: gU
+                } = XU, kU = function(UU, XU, zU) {
                   try {
-                    if ("string" == typeof rM) {
-                      if (MM.classList.contains(rM)) return !0
+                    if ("string" == typeof XU) {
+                      if (UU.classList.contains(XU)) return !0
                     } else
-                      for (let iM = MM.classList.length; iM--;)
-                        if (rM.test(MM.classList[iM])) return !0;
-                    if (iM) return MM.matches(iM)
-                  } catch (MM) {}
+                      for (let zU = UU.classList.length; zU--;)
+                        if (XU.test(UU.classList[zU])) return !0;
+                    if (zU) return UU.matches(zU)
+                  } catch (UU) {}
                   return !1
-                }(MM, OM, SM), EM = function(MM) {
-                  if (MM instanceof HTMLFormElement) return "form";
-                  const rM = Ur(MM.tagName);
-                  return kr.test(rM) ? "div" : rM
-                }(MM), UM = new Set;
-                let GM = {};
-                const CM = MM.attributes.length;
-                for (let HM = 0; CM > HM; HM++) {
-                  const rM = MM.attributes[HM];
-                  Br(EM, rM.name) || (GM[rM.name] = Fr(iM, EM, Ur(rM.name), rM.value, MM, zM))
+                }(UU, cU, yU), GU = function(UU) {
+                  if (UU instanceof HTMLFormElement) return "form";
+                  const XU = BX(UU.tagName);
+                  return uX.test(XU) ? "div" : XU
+                }(UU), BU = new Set;
+                let ZU = {};
+                const RU = UU.attributes.length;
+                for (let IU = 0; RU > IU; IU++) {
+                  const XU = UU.attributes[IU];
+                  lX(GU, XU.name) || (ZU[XU.name] = mX(zU, GU, BX(XU.name), XU.value, UU, EU))
                 }
-                if ("link" === EM && jM && !lM && Xr(GM.rel)) {
-                  let rM = MM.sheet;
-                  if (!rM) {
-                    const OM = function(MM) {
-                      return MM.href
-                    }(MM);
-                    OM && (rM = Vr(iM, OM), !rM && OM.includes(".css")) && (rM = Vr(iM, window.location.origin + "/" + OM.replace(window.location.href, "")))
+                if ("link" === GU && QU && !kU && xX(ZU.rel)) {
+                  let XU = UU.sheet;
+                  if (!XU) {
+                    const cU = function(UU) {
+                      return UU.href
+                    }(UU);
+                    cU && (XU = TX(zU, cU), !XU && cU.includes(".css")) && (XU = TX(zU, window.location.origin + "/" + cU.replace(window.location.href, "")))
                   }
-                  let OM = null;
-                  rM && (cM(rM) ? kM > 0 && (AM.push(MM), xM += 1) : OM = Lr(rM)), OM && (delete GM.rel, delete GM.href, GM._cssText = OM)
+                  let cU = null;
+                  XU && (hU(XU) ? uU > 0 && (VU.push(UU), sU += 1) : cU = YX(XU)), cU && (delete ZU.rel, delete ZU.href, ZU._cssText = cU)
                 }
-                var eM;
-                if ("style" === EM && MM.sheet && !(MM.innerText || gM.textContent(MM) || "").trim().length) {
-                  const rM = TM((() => Lr(MM.sheet)));
-                  rM && (GM._cssText = rM)
+                var PU;
+                if ("style" === GU && UU.sheet && !(UU.innerText || eU.textContent(UU) || "").trim().length) {
+                  const XU = bU((() => YX(UU.sheet)));
+                  XU && (ZU._cssText = XU)
                 }
-                if ("input" === EM || "textarea" === EM || "select" === EM) {
-                  const rM = MM.value,
-                    iM = MM.checked;
-                  "radio" !== GM.type && "checkbox" !== GM.type && "submit" !== GM.type && "button" !== GM.type && rM ? GM.value = Er({
-                    element: MM,
-                    type: br(MM),
-                    tagName: EM,
-                    value: rM,
-                    maskInputOptions: aM,
-                    maskInputFn: PM
-                  }) : iM && (GM.checked = iM)
+                if ("input" === GU || "textarea" === GU || "select" === GU) {
+                  const XU = UU.value,
+                    zU = UU.checked;
+                  "radio" !== ZU.type && "checkbox" !== ZU.type && "submit" !== ZU.type && "button" !== ZU.type && XU ? ZU.value = GX({
+                    element: UU,
+                    type: WX(UU),
+                    tagName: GU,
+                    value: XU,
+                    maskInputOptions: AU,
+                    maskInputFn: FU
+                  }) : zU && (ZU.checked = zU)
                 }
-                if ("option" === EM && (MM.selected && !aM.select ? GM.selected = !0 : delete GM.selected), "dialog" === EM && MM.open) {
+                if ("option" === GU && (UU.selected && !AU.select ? ZU.selected = !0 : delete ZU.selected), "dialog" === GU && UU.open) {
                   try {
-                    GM.rr_open_mode = MM.matches("dialog:modal") ? "modal" : "non-modal"
-                  } catch (MM) {
-                    GM.rr_open_mode = "modal", GM.ph_rr_could_not_detect_modal = !0
+                    ZU.rr_open_mode = UU.matches("dialog:modal") ? "modal" : "non-modal"
+                  } catch (UU) {
+                    ZU.rr_open_mode = "modal", ZU.ph_rr_could_not_detect_modal = !0
                   }
-                  UM.add("rr_open_mode")
+                  BU.add("rr_open_mode")
                 }
-                if ("canvas" === EM && mM && !(null == hM ? void 0 : hM())) try {
-                  if ("2d" === MM.__context)(function(MM) {
-                    const rM = MM.getContext("2d");
-                    if (!rM) return !0;
-                    for (let iM = 0; MM.width > iM; iM += 50)
-                      for (let OM = 0; MM.height > OM; OM += 50) {
-                        const SM = rM.getImageData,
-                          jM = er in SM ? SM[er] : SM;
-                        let aM;
+                if ("canvas" === GU && NU && !(null == pU ? void 0 : pU())) try {
+                  if ("2d" === UU.__context)(function(UU) {
+                    const XU = UU.getContext("2d");
+                    if (!XU) return !0;
+                    for (let zU = 0; UU.width > zU; zU += 50)
+                      for (let cU = 0; UU.height > cU; cU += 50) {
+                        const yU = XU.getImageData,
+                          QU = PX in yU ? yU[PX] : yU;
+                        let AU;
                         try {
-                          aM = jM.call(rM, iM, OM, Math.min(50, MM.width - iM), Math.min(50, MM.height - OM))
-                        } catch (MM) {
+                          AU = QU.call(XU, zU, cU, Math.min(50, UU.width - zU), Math.min(50, UU.height - cU))
+                        } catch (UU) {
                           return !1
                         }
-                        if (new Uint32Array(aM.data.buffer).some((MM => 0 !== MM))) return !1
+                        if (new Uint32Array(AU.data.buffer).some((UU => 0 !== UU))) return !1
                       }
                     return !0
-                  })(MM) || (GM.rr_dataURL = MM.toDataURL(zM.type, zM.quality));
-                  else if (!("__context" in MM)) {
-                    const rM = MM.toDataURL(zM.type, zM.quality),
-                      OM = iM.createElement("canvas");
-                    OM.width = MM.width, OM.height = MM.height, rM !== OM.toDataURL(zM.type, zM.quality) && (GM.rr_dataURL = rM)
+                  })(UU) || (ZU.rr_dataURL = UU.toDataURL(EU.type, EU.quality));
+                  else if (!("__context" in UU)) {
+                    const XU = UU.toDataURL(EU.type, EU.quality),
+                      cU = zU.createElement("canvas");
+                    cU.width = UU.width, cU.height = UU.height, XU !== cU.toDataURL(EU.type, EU.quality) && (ZU.rr_dataURL = XU)
                   }
-                } catch (MM) {
-                  "SecurityError" === (null == (eM = MM) ? void 0 : eM.name) ? or || (or = !0, console.warn("Cannot read canvas pixels, so this canvas is left out of the recording. A cross-origin image or video drawn into it taints it.", eM)): console.warn("Cannot read canvas pixels, so this canvas is left out of the recording.", eM)
+                } catch (UU) {
+                  "SecurityError" === (null == (PU = UU) ? void 0 : PU.name) ? iX || (iX = !0, console.warn("Cannot read canvas pixels, so this canvas is left out of the recording. A cross-origin image or video drawn into it taints it.", PU)): console.warn("Cannot read canvas pixels, so this canvas is left out of the recording.", PU)
                 }
-                let bM, wM = !1;
-                if ("img" === EM && LM) {
-                  pr || (pr = iM.createElement("canvas"), Wr = pr.getContext("2d"));
-                  const rM = MM,
-                    OM = rM.currentSrc || rM.getAttribute("src") || "<unknown-src>",
-                    SM = rM.crossOrigin,
-                    jM = (rM, iM) => wM ? Cr({
-                      element: MM,
-                      name: rM,
-                      value: iM,
-                      maskAllElementAttributes: nM,
-                      maskAttributeFn: QM
-                    }) : iM,
-                    aM = () => {
-                      qr(rM, "load", aM);
+                let WU, dU = !1;
+                if ("img" === GU && YU) {
+                  qX || (qX = zU.createElement("canvas"), OX = qX.getContext("2d"));
+                  const XU = UU,
+                    cU = XU.currentSrc || XU.getAttribute("src") || "<unknown-src>",
+                    yU = XU.crossOrigin,
+                    QU = (XU, zU) => dU ? RX({
+                      element: UU,
+                      name: XU,
+                      value: zU,
+                      maskAllElementAttributes: oU,
+                      maskAttributeFn: DU
+                    }) : zU,
+                    AU = () => {
+                      KX(XU, "load", AU);
                       try {
-                        pr.width = rM.naturalWidth, pr.height = rM.naturalHeight, Wr.drawImage(rM, 0, 0);
-                        const MM = pr.toDataURL(zM.type, zM.quality);
-                        GM.rr_dataURL = jM("rr_dataURL", MM)
-                      } catch (MM) {
-                        if ("anonymous" !== rM.crossOrigin) return rM.crossOrigin = "anonymous", void(rM.complete && 0 !== rM.naturalWidth ? aM() : rM.addEventListener("load", aM));
-                        console.warn(`Cannot inline img src=${OM}! Error: ${MM}`)
+                        qX.width = XU.naturalWidth, qX.height = XU.naturalHeight, OX.drawImage(XU, 0, 0);
+                        const UU = qX.toDataURL(EU.type, EU.quality);
+                        ZU.rr_dataURL = QU("rr_dataURL", UU)
+                      } catch (UU) {
+                        if ("anonymous" !== XU.crossOrigin) return XU.crossOrigin = "anonymous", void(XU.complete && 0 !== XU.naturalWidth ? AU() : XU.addEventListener("load", AU));
+                        console.warn(`Cannot inline img src=${cU}! Error: ${UU}`)
                       }
-                      "anonymous" === rM.crossOrigin && (SM ? GM.crossOrigin = jM("crossOrigin", SM) : rM.removeAttribute("crossorigin"))
+                      "anonymous" === XU.crossOrigin && (yU ? ZU.crossOrigin = QU("crossOrigin", yU) : XU.removeAttribute("crossorigin"))
                     };
-                  rM.complete && 0 !== rM.naturalWidth ? aM() : rM.addEventListener("load", aM)
+                  XU.complete && 0 !== XU.naturalWidth ? AU() : XU.addEventListener("load", AU)
                 }
-                if ("audio" === EM || "video" === EM) {
-                  const rM = GM;
-                  rM.rr_mediaState = MM.paused ? "paused" : "played", UM.add("rr_mediaState"), rM.rr_mediaCurrentTime = MM.currentTime, rM.rr_mediaPlaybackRate = MM.playbackRate, rM.rr_mediaMuted = MM.muted, rM.rr_mediaLoop = MM.loop, rM.rr_mediaVolume = MM.volume
+                if ("audio" === GU || "video" === GU) {
+                  const XU = ZU;
+                  XU.rr_mediaState = UU.paused ? "paused" : "played", BU.add("rr_mediaState"), XU.rr_mediaCurrentTime = UU.currentTime, XU.rr_mediaPlaybackRate = UU.playbackRate, XU.rr_mediaMuted = UU.muted, XU.rr_mediaLoop = UU.loop, XU.rr_mediaVolume = UU.volume
                 }
-                if (dM || (MM.scrollLeft && (GM.rr_scrollLeft = MM.scrollLeft), MM.scrollTop && (GM.rr_scrollTop = MM.scrollTop)), lM) {
-                  var tM, uM, RM;
+                if (tU || (UU.scrollLeft && (ZU.rr_scrollLeft = UU.scrollLeft), UU.scrollTop && (ZU.rr_scrollTop = UU.scrollTop)), kU) {
+                  var LU, CU, wU;
                   const {
-                    width: rM,
-                    height: OM,
-                    left: SM,
-                    top: jM
-                  } = MM.getBoundingClientRect(), aM = null === (tM = iM.defaultView) || void 0 === tM ? void 0 : tM.getComputedStyle(MM);
-                  GM = {
-                    class: GM.class,
-                    rr_width: `${rM}px`,
-                    rr_height: `${OM}px`,
-                    rr_left: `${Math.floor(SM+((null===(uM=iM.defaultView)||void 0===uM?void 0:uM.scrollX)||0))}px`,
-                    rr_top: `${Math.floor(jM+((null===(RM=iM.defaultView)||void 0===RM?void 0:RM.scrollY)||0))}px`
-                  }, UM.add("rr_width"), UM.add("rr_height"), UM.add("rr_left"), UM.add("rr_top"), aM && (GM.rr_position = aM.position || "static", UM.add("rr_position"), aM.transform && "none" !== aM.transform && (GM.rr_transform = aM.transform, UM.add("rr_transform")), aM.display && aM.display.startsWith("inline") && (GM.rr_display = aM.display, UM.add("rr_display")))
+                    width: XU,
+                    height: cU,
+                    left: yU,
+                    top: QU
+                  } = UU.getBoundingClientRect(), AU = null === (LU = zU.defaultView) || void 0 === LU ? void 0 : LU.getComputedStyle(UU);
+                  ZU = {
+                    class: ZU.class,
+                    rr_width: `${XU}px`,
+                    rr_height: `${cU}px`,
+                    rr_left: `${Math.floor(yU+((null===(CU=zU.defaultView)||void 0===CU?void 0:CU.scrollX)||0))}px`,
+                    rr_top: `${Math.floor(QU+((null===(wU=zU.defaultView)||void 0===wU?void 0:wU.scrollY)||0))}px`
+                  }, BU.add("rr_width"), BU.add("rr_height"), BU.add("rr_left"), BU.add("rr_top"), AU && (ZU.rr_position = AU.position || "static", BU.add("rr_position"), AU.transform && "none" !== AU.transform && (ZU.rr_transform = AU.transform, BU.add("rr_transform")), AU.display && AU.display.startsWith("inline") && (ZU.rr_display = AU.display, BU.add("rr_display")))
                 }
-                if ("iframe" !== EM || JM(GM.src) || (MM.contentDocument || (GM.rr_src = GM.src), delete GM.src), nM || QM)
-                  for (const [HM, gM] of Object.entries(GM)) "string" != typeof gM && null !== gM || (GM[HM] = Cr({
-                    element: MM,
-                    name: HM,
-                    value: gM,
-                    maskAllElementAttributes: nM,
-                    maskAttributeFn: QM,
-                    isGenerated: UM.has(HM)
+                if ("iframe" !== GU || aU(ZU.src) || (UU.contentDocument || (ZU.rr_src = ZU.src), delete ZU.src), oU || DU)
+                  for (const [IU, eU] of Object.entries(ZU)) "string" != typeof eU && null !== eU || (ZU[IU] = RX({
+                    element: UU,
+                    name: IU,
+                    value: eU,
+                    maskAllElementAttributes: oU,
+                    maskAttributeFn: DU,
+                    isGenerated: BU.has(IU)
                   }));
-                wM = !0;
+                dU = !0;
                 try {
-                  customElements.get(EM) && (bM = !0)
-                } catch (MM) {}
+                  customElements.get(GU) && (WU = !0)
+                } catch (UU) {}
                 return {
-                  type: HM.Element,
-                  tagName: EM,
-                  attributes: GM,
+                  type: IU.Element,
+                  tagName: GU,
+                  attributes: ZU,
                   childNodes: [],
-                  isSVG: (pM = MM, Boolean("svg" === pM.tagName || pM.ownerSVGElement) || void 0),
-                  needBlock: lM,
-                  rootId: yM,
-                  isCustom: bM
+                  isSVG: (qU = UU, Boolean("svg" === qU.tagName || qU.ownerSVGElement) || void 0),
+                  needBlock: kU,
+                  rootId: gU,
+                  isCustom: WU
                 };
-                var pM
-              }(MM, {
-                doc: iM,
-                blockClass: SM,
-                blockSelector: jM,
-                inlineStylesheet: PM,
-                maskInputOptions: nM,
-                maskInputFn: zM,
-                maskAllElementAttributes: LM,
-                maskAttributeFn: mM,
-                dataURLOptions: hM,
-                inlineImages: JM,
-                recordCanvas: dM,
-                canvasMaskingConfigured: yM,
-                keepIframeSrcFn: lM,
-                newlyAddedElement: EM,
-                rootId: UM
+                var qU
+              }(UU, {
+                doc: zU,
+                blockClass: yU,
+                blockSelector: QU,
+                inlineStylesheet: FU,
+                maskInputOptions: oU,
+                maskInputFn: EU,
+                maskAllElementAttributes: YU,
+                maskAttributeFn: NU,
+                dataURLOptions: pU,
+                inlineImages: aU,
+                recordCanvas: tU,
+                canvasMaskingConfigured: gU,
+                keepIframeSrcFn: kU,
+                newlyAddedElement: GU,
+                rootId: BU
               });
-            case MM.TEXT_NODE:
-              return function(MM, rM) {
+            case UU.TEXT_NODE:
+              return function(UU, XU) {
                 const {
-                  needsMask: iM,
-                  maskTextFn: OM,
-                  rootId: SM
-                } = rM, jM = gM.parentNode(MM), aM = jM && jM.tagName;
-                let PM = gM.textContent(MM);
-                const nM = "STYLE" === aM || void 0,
-                  QM = "SCRIPT" === aM || void 0;
-                if (nM && PM) {
+                  needsMask: zU,
+                  maskTextFn: cU,
+                  rootId: yU
+                } = XU, QU = eU.parentNode(UU), AU = QU && QU.tagName;
+                let FU = eU.textContent(UU);
+                const oU = "STYLE" === AU || void 0,
+                  DU = "SCRIPT" === AU || void 0;
+                if (oU && FU) {
                   try {
-                    var zM;
-                    if (MM.nextSibling || MM.previousSibling);
-                    else if (cM(jM.sheet));
-                    else if (null === (zM = jM.sheet) || void 0 === zM ? void 0 : zM.cssRules) {
-                      const MM = Lr(jM.sheet);
-                      MM && !/(?:^|[\s;{}])-?[a-zA-Z][\w-]*\s*:\s*;/.test(MM) && (PM = MM)
+                    var EU;
+                    if (UU.nextSibling || UU.previousSibling);
+                    else if (hU(QU.sheet));
+                    else if (null === (EU = QU.sheet) || void 0 === EU ? void 0 : EU.cssRules) {
+                      const UU = YX(QU.sheet);
+                      UU && !/(?:^|[\s;{}])-?[a-zA-Z][\w-]*\s*:\s*;/.test(UU) && (FU = UU)
                     }
-                  } catch (rM) {
-                    console.warn(`Cannot get CSS styles from text's parentNode. Error: ${rM}`, MM)
+                  } catch (XU) {
+                    console.warn(`Cannot get CSS styles from text's parentNode. Error: ${XU}`, UU)
                   }
-                  PM = Rr(PM, xr(rM.doc))
+                  FU = wX(FU, sX(XU.doc))
                 }
-                return QM && (PM = "SCRIPT_PLACEHOLDER"), !nM && !QM && PM && iM && (PM = OM ? OM(PM, gM.parentElement(MM)) : PM.replace(/[\S]/g, "*")), {
-                  type: HM.Text,
-                  textContent: PM || "",
-                  isStyle: nM,
-                  rootId: SM
+                return DU && (FU = "SCRIPT_PLACEHOLDER"), !oU && !DU && FU && zU && (FU = cU ? cU(FU, eU.parentElement(UU)) : FU.replace(/[\S]/g, "*")), {
+                  type: IU.Text,
+                  textContent: FU || "",
+                  isStyle: oU,
+                  rootId: yU
                 }
-              }(MM, {
-                doc: iM,
-                needsMask: aM,
-                maskTextFn: QM,
-                rootId: UM
+              }(UU, {
+                doc: zU,
+                needsMask: AU,
+                maskTextFn: DU,
+                rootId: BU
               });
-            case MM.CDATA_SECTION_NODE:
+            case UU.CDATA_SECTION_NODE:
               return {
-                type: HM.CDATA, textContent: "", rootId: UM
+                type: IU.CDATA, textContent: "", rootId: BU
               };
-            case MM.COMMENT_NODE:
+            case UU.COMMENT_NODE:
               return {
-                type: HM.Comment, textContent: gM.textContent(MM) || "", rootId: UM
+                type: IU.Comment, textContent: eU.textContent(UU) || "", rootId: BU
               };
             default:
               return !1
           }
-        }(MM, {
-          doc: iM,
-          mirror: OM,
-          blockClass: SM,
-          blockSelector: jM,
-          needsMask: sM,
-          inlineStylesheet: QM,
-          maskInputOptions: zM,
-          maskTextFn: LM,
-          maskInputFn: mM,
-          maskAllElementAttributes: hM,
-          maskAttributeFn: JM,
-          dataURLOptions: yM,
-          inlineImages: lM,
-          recordCanvas: EM,
-          canvasMaskingConfigured: UM,
-          keepIframeSrcFn: uM,
-          newlyAddedElement: RM
+        }(UU, {
+          doc: zU,
+          mirror: cU,
+          blockClass: yU,
+          blockSelector: QU,
+          needsMask: SU,
+          inlineStylesheet: DU,
+          maskInputOptions: EU,
+          maskTextFn: YU,
+          maskInputFn: NU,
+          maskAllElementAttributes: pU,
+          maskAttributeFn: aU,
+          dataURLOptions: gU,
+          inlineImages: kU,
+          recordCanvas: GU,
+          canvasMaskingConfigured: BU,
+          keepIframeSrcFn: CU,
+          newlyAddedElement: wU
         });
-        if (!ZM) return console.warn(MM, "not serialized"), null;
-        let oM;
-        oM = OM.hasNode(MM) ? OM.getId(MM) : function(MM, rM) {
-          if (rM.comment && MM.type === HM.Comment) return !0;
-          if (MM.type === HM.Element) {
-            if (rM.script && ("script" === MM.tagName || "link" === MM.tagName && ("preload" === MM.attributes.rel && "script" === MM.attributes.as || "modulepreload" === MM.attributes.rel) || "link" === MM.tagName && "prefetch" === MM.attributes.rel && "string" == typeof MM.attributes.href && "js" === function(MM) {
-                var rM;
-                let iM;
+        if (!fU) return console.warn(UU, "not serialized"), null;
+        let iU;
+        iU = cU.hasNode(UU) ? cU.getId(UU) : function(UU, XU) {
+          if (XU.comment && UU.type === IU.Comment) return !0;
+          if (UU.type === IU.Element) {
+            if (XU.script && ("script" === UU.tagName || "link" === UU.tagName && ("preload" === UU.attributes.rel && "script" === UU.attributes.as || "modulepreload" === UU.attributes.rel) || "link" === UU.tagName && "prefetch" === UU.attributes.rel && "string" == typeof UU.attributes.href && "js" === function(UU) {
+                var XU;
+                let zU;
                 try {
-                  iM = new URL(MM, window.location.href)
-                } catch (MM) {
+                  zU = new URL(UU, window.location.href)
+                } catch (UU) {
                   return null
                 }
-                const OM = iM.pathname.match(/\.([0-9a-z]+)(?:$)/i);
-                return null !== (rM = null == OM ? void 0 : OM[1]) && void 0 !== rM ? rM : null
-              }(MM.attributes.href))) return !0;
-            if (rM.headFavicon && ("link" === MM.tagName && "shortcut icon" === MM.attributes.rel || "meta" === MM.tagName && (cr(MM.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === cr(MM.attributes.name) || ["icon", "apple-touch-icon", "shortcut icon"].includes(cr(MM.attributes.rel))))) return !0;
-            if ("meta" === MM.tagName) {
-              if (rM.headMetaDescKeywords && cr(MM.attributes.name).match(/^description|keywords$/)) return !0;
-              if (rM.headMetaSocial && (cr(MM.attributes.property).match(/^(og|twitter|fb):/) || cr(MM.attributes.name).match(/^(og|twitter):/) || "pinterest" === cr(MM.attributes.name))) return !0;
-              if (rM.headMetaRobots && ["robots", "googlebot", "bingbot"].includes(cr(MM.attributes.name))) return !0;
-              if (rM.headMetaHttpEquiv && void 0 !== MM.attributes["http-equiv"]) return !0;
-              if (rM.headMetaAuthorship && (["author", "generator", "framework", "publisher", "progid"].includes(cr(MM.attributes.name)) || cr(MM.attributes.property).match(/^article:/) || cr(MM.attributes.property).match(/^product:/))) return !0;
-              if (rM.headMetaVerification && ["google-site-verification", "yandex-verification", "csrf-token", "p:domain_verify", "verify-v1", "verification", "shopify-checkout-api-token"].includes(cr(MM.attributes.name))) return !0
+                const cU = zU.pathname.match(/\.([0-9a-z]+)(?:$)/i);
+                return null !== (XU = null == cU ? void 0 : cU[1]) && void 0 !== XU ? XU : null
+              }(UU.attributes.href))) return !0;
+            if (XU.headFavicon && ("link" === UU.tagName && "shortcut icon" === UU.attributes.rel || "meta" === UU.tagName && (hX(UU.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === hX(UU.attributes.name) || ["icon", "apple-touch-icon", "shortcut icon"].includes(hX(UU.attributes.rel))))) return !0;
+            if ("meta" === UU.tagName) {
+              if (XU.headMetaDescKeywords && hX(UU.attributes.name).match(/^description|keywords$/)) return !0;
+              if (XU.headMetaSocial && (hX(UU.attributes.property).match(/^(og|twitter|fb):/) || hX(UU.attributes.name).match(/^(og|twitter):/) || "pinterest" === hX(UU.attributes.name))) return !0;
+              if (XU.headMetaRobots && ["robots", "googlebot", "bingbot"].includes(hX(UU.attributes.name))) return !0;
+              if (XU.headMetaHttpEquiv && void 0 !== UU.attributes["http-equiv"]) return !0;
+              if (XU.headMetaAuthorship && (["author", "generator", "framework", "publisher", "progid"].includes(hX(UU.attributes.name)) || hX(UU.attributes.property).match(/^article:/) || hX(UU.attributes.property).match(/^product:/))) return !0;
+              if (XU.headMetaVerification && ["google-site-verification", "yandex-verification", "csrf-token", "p:domain_verify", "verify-v1", "verification", "shopify-checkout-api-token"].includes(hX(UU.attributes.name))) return !0
             }
           }
           return !1
-        }(ZM, dM) || !DM && ZM.type === HM.Text && !ZM.isStyle && !ZM.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : Zr();
-        const YM = Object.assign(ZM, {
-          id: oM
+        }(fU, tU) || !rU && fU.type === IU.Text && !fU.isStyle && !fU.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : fX();
+        const MU = Object.assign(fU, {
+          id: iU
         });
-        if (OM.add(MM, YM), -2 === oM) return null;
-        GM && GM(MM);
-        let NM = !nM;
-        if (YM.type === HM.Element) {
-          NM = NM && !YM.needBlock, delete YM.needBlock;
-          const rM = gM.shadowRoot(MM);
-          rM && Pr(rM) && (YM.isShadowHost = !0)
+        if (cU.add(UU, MU), -2 === iU) return null;
+        ZU && ZU(UU);
+        let vU = !oU;
+        if (MU.type === IU.Element) {
+          vU = vU && !MU.needBlock, delete MU.needBlock;
+          const XU = eU.shadowRoot(UU);
+          XU && FX(XU) && (MU.isShadowHost = !0)
         }
-        if ((YM.type === HM.Document || YM.type === HM.Element) && NM) {
-          dM.headWhitespace && YM.type === HM.Element && "head" === YM.tagName && (DM = !1);
-          const rM = {
-            doc: iM,
-            mirror: OM,
-            blockClass: SM,
-            blockSelector: jM,
-            needsMask: sM,
-            maskTextClass: aM,
-            maskTextSelector: PM,
-            skipChild: nM,
-            inlineStylesheet: QM,
-            maskInputOptions: zM,
-            maskTextFn: LM,
-            maskInputFn: mM,
-            maskAllElementAttributes: hM,
-            maskAttributeFn: JM,
-            slimDOMOptions: dM,
-            dataURLOptions: yM,
-            inlineImages: lM,
-            recordCanvas: EM,
-            canvasMaskingConfigured: UM,
-            preserveWhiteSpace: DM,
-            onSerialize: GM,
-            onIframeLoad: CM,
-            iframeLoadTimeout: eM,
-            onIframeListenerRegistered: bM,
-            onStylesheetLoad: wM,
-            stylesheetLoadTimeout: tM,
-            keepIframeSrcFn: uM,
-            depth: pM + 1,
-            maxDepth: WM
+        if ((MU.type === IU.Document || MU.type === IU.Element) && vU) {
+          tU.headWhitespace && MU.type === IU.Element && "head" === MU.tagName && (rU = !1);
+          const XU = {
+            doc: zU,
+            mirror: cU,
+            blockClass: yU,
+            blockSelector: QU,
+            needsMask: SU,
+            maskTextClass: AU,
+            maskTextSelector: FU,
+            skipChild: oU,
+            inlineStylesheet: DU,
+            maskInputOptions: EU,
+            maskTextFn: YU,
+            maskInputFn: NU,
+            maskAllElementAttributes: pU,
+            maskAttributeFn: aU,
+            slimDOMOptions: tU,
+            dataURLOptions: gU,
+            inlineImages: kU,
+            recordCanvas: GU,
+            canvasMaskingConfigured: BU,
+            preserveWhiteSpace: rU,
+            onSerialize: ZU,
+            onIframeLoad: RU,
+            iframeLoadTimeout: PU,
+            onIframeListenerRegistered: WU,
+            onStylesheetLoad: dU,
+            stylesheetLoadTimeout: LU,
+            keepIframeSrcFn: CU,
+            depth: qU + 1,
+            maxDepth: OU
           };
-          if (YM.type === HM.Element && "textarea" === YM.tagName && void 0 !== YM.attributes.value);
+          if (MU.type === IU.Element && "textarea" === MU.tagName && void 0 !== MU.attributes.value);
           else
-            for (const iM of Array.from(gM.childNodes(MM))) {
-              const MM = ii(iM, rM);
-              MM && YM.childNodes.push(MM)
+            for (const zU of Array.from(eU.childNodes(UU))) {
+              const UU = zz(zU, XU);
+              UU && MU.childNodes.push(UU)
             }
-          let RM = null;
-          if (jr(MM) && (RM = gM.shadowRoot(MM)))
-            for (const MM of Array.from(gM.childNodes(RM))) {
-              const iM = ii(MM, rM);
-              iM && (Pr(RM) && (iM.isShadow = !0), YM.childNodes.push(iM))
+          let wU = null;
+          if (QX(UU) && (wU = eU.shadowRoot(UU)))
+            for (const UU of Array.from(eU.childNodes(wU))) {
+              const zU = zz(UU, XU);
+              zU && (FX(wU) && (zU.isShadow = !0), MU.childNodes.push(zU))
             }
         }
-        const vM = gM.parentNode(MM);
-        if (vM && ar(vM) && Pr(vM) && (YM.isShadow = !0), YM.type === HM.Element && "iframe" === YM.tagName) {
-          const rM = function(MM, rM, iM) {
-            const OM = () => {},
-              SM = MM.contentWindow;
-            if (!SM) return OM;
-            let jM;
+        const nU = eU.parentNode(UU);
+        if (nU && AX(nU) && FX(nU) && (MU.isShadow = !0), MU.type === IU.Element && "iframe" === MU.tagName) {
+          const XU = function(UU, XU, zU) {
+            const cU = () => {},
+              yU = UU.contentWindow;
+            if (!yU) return cU;
+            let QU;
             try {
-              jM = SM.document.readyState
-            } catch (MM) {
-              return OM
+              QU = yU.document.readyState
+            } catch (UU) {
+              return cU
             }
-            const aM = () => rM();
-            if ("complete" !== jM) {
-              let OM = !1,
-                SM = null;
-              const jM = () => {
-                  OM || (OM = !0, null !== SM && (clearTimeout(SM), SM = null), qr(MM, "load", PM), MM.addEventListener("load", aM), rM())
+            const AU = () => XU();
+            if ("complete" !== QU) {
+              let cU = !1,
+                yU = null;
+              const QU = () => {
+                  cU || (cU = !0, null !== yU && (clearTimeout(yU), yU = null), KX(UU, "load", FU), UU.addEventListener("load", AU), XU())
                 },
-                PM = () => jM();
-              return SM = setTimeout(jM, iM), MM.addEventListener("load", PM), () => {
-                null !== SM && (clearTimeout(SM), SM = null), OM ? qr(MM, "load", aM) : (OM = !0, qr(MM, "load", PM))
+                FU = () => QU();
+              return yU = setTimeout(QU, zU), UU.addEventListener("load", FU), () => {
+                null !== yU && (clearTimeout(yU), yU = null), cU ? KX(UU, "load", AU) : (cU = !0, KX(UU, "load", FU))
               }
             }
-            const PM = "about:blank";
-            let nM;
+            const FU = "about:blank";
+            let oU;
             try {
-              nM = SM.location.href
-            } catch (MM) {
-              return OM
+              oU = yU.location.href
+            } catch (UU) {
+              return cU
             }
-            if (nM !== PM || MM.src === PM || "" === MM.src) {
-              const iM = setTimeout(rM, 0);
-              return MM.addEventListener("load", aM), () => {
-                clearTimeout(iM), qr(MM, "load", aM)
+            if (oU !== FU || UU.src === FU || "" === UU.src) {
+              const zU = setTimeout(XU, 0);
+              return UU.addEventListener("load", AU), () => {
+                clearTimeout(zU), KX(UU, "load", AU)
               }
             }
-            return MM.addEventListener("load", aM), () => {
-              qr(MM, "load", aM)
+            return UU.addEventListener("load", AU), () => {
+              KX(UU, "load", AU)
             }
-          }(MM, (() => {
-            const rM = MM.contentDocument;
-            if (rM && CM) {
-              const iM = ii(rM, {
-                doc: rM,
-                mirror: OM,
-                blockClass: SM,
-                blockSelector: jM,
-                needsMask: sM,
-                maskTextClass: aM,
-                maskTextSelector: PM,
+          }(UU, (() => {
+            const XU = UU.contentDocument;
+            if (XU && RU) {
+              const zU = zz(XU, {
+                doc: XU,
+                mirror: cU,
+                blockClass: yU,
+                blockSelector: QU,
+                needsMask: SU,
+                maskTextClass: AU,
+                maskTextSelector: FU,
                 skipChild: !1,
-                inlineStylesheet: QM,
-                maskInputOptions: zM,
-                maskTextFn: LM,
-                maskInputFn: mM,
-                maskAllElementAttributes: hM,
-                maskAttributeFn: JM,
-                slimDOMOptions: dM,
-                dataURLOptions: yM,
-                inlineImages: lM,
-                recordCanvas: EM,
-                canvasMaskingConfigured: UM,
-                preserveWhiteSpace: DM,
-                onSerialize: GM,
-                onIframeLoad: CM,
-                iframeLoadTimeout: eM,
-                onIframeListenerRegistered: bM,
-                onStylesheetLoad: wM,
-                stylesheetLoadTimeout: tM,
-                keepIframeSrcFn: uM,
-                depth: pM + 1,
-                maxDepth: WM
+                inlineStylesheet: DU,
+                maskInputOptions: EU,
+                maskTextFn: YU,
+                maskInputFn: NU,
+                maskAllElementAttributes: pU,
+                maskAttributeFn: aU,
+                slimDOMOptions: tU,
+                dataURLOptions: gU,
+                inlineImages: kU,
+                recordCanvas: GU,
+                canvasMaskingConfigured: BU,
+                preserveWhiteSpace: rU,
+                onSerialize: ZU,
+                onIframeLoad: RU,
+                iframeLoadTimeout: PU,
+                onIframeListenerRegistered: WU,
+                onStylesheetLoad: dU,
+                stylesheetLoadTimeout: LU,
+                keepIframeSrcFn: CU,
+                depth: qU + 1,
+                maxDepth: OU
               });
-              iM && CM(MM, iM)
+              zU && RU(UU, zU)
             }
-          }), eM);
-          null == bM || bM(MM, rM)
+          }), PU);
+          null == WU || WU(UU, XU)
         }
-        return YM.type === HM.Element && "link" === YM.tagName && Xr(YM.attributes.rel) && function(rM, nM, HM) {
-          if (Tr.has(rM)) return;
-          let bM;
+        return MU.type === IU.Element && "link" === MU.tagName && xX(MU.attributes.rel) && function(XU, oU, IU) {
+          if (bX.has(XU)) return;
+          let WU;
           try {
-            bM = rM.sheet
-          } catch (MM) {
+            WU = XU.sheet
+          } catch (UU) {
             return
           }
-          if (bM) return;
-          const gM = new AbortController;
-          let RM = !1;
-          const kM = () => {
-              if (!RM) {
-                RM = !0;
+          if (WU) return;
+          const eU = new AbortController;
+          let wU = !1;
+          const uU = () => {
+              if (!wU) {
+                wU = !0;
                 try {
                   (() => {
-                    if (wM) {
-                      const rM = ii(MM, {
-                        doc: iM,
-                        mirror: OM,
-                        blockClass: SM,
-                        blockSelector: jM,
-                        needsMask: sM,
-                        maskTextClass: aM,
-                        maskTextSelector: PM,
+                    if (dU) {
+                      const XU = zz(UU, {
+                        doc: zU,
+                        mirror: cU,
+                        blockClass: yU,
+                        blockSelector: QU,
+                        needsMask: SU,
+                        maskTextClass: AU,
+                        maskTextSelector: FU,
                         skipChild: !1,
-                        inlineStylesheet: QM,
-                        maskInputOptions: zM,
-                        maskTextFn: LM,
-                        maskInputFn: mM,
-                        maskAllElementAttributes: hM,
-                        maskAttributeFn: JM,
-                        slimDOMOptions: dM,
-                        dataURLOptions: yM,
-                        inlineImages: lM,
-                        recordCanvas: EM,
-                        canvasMaskingConfigured: UM,
-                        preserveWhiteSpace: DM,
-                        onSerialize: GM,
-                        onIframeLoad: CM,
-                        iframeLoadTimeout: eM,
-                        onStylesheetLoad: wM,
-                        stylesheetLoadTimeout: tM,
-                        keepIframeSrcFn: uM,
-                        depth: pM,
-                        maxDepth: WM
+                        inlineStylesheet: DU,
+                        maskInputOptions: EU,
+                        maskTextFn: YU,
+                        maskInputFn: NU,
+                        maskAllElementAttributes: pU,
+                        maskAttributeFn: aU,
+                        slimDOMOptions: tU,
+                        dataURLOptions: gU,
+                        inlineImages: kU,
+                        recordCanvas: GU,
+                        canvasMaskingConfigured: BU,
+                        preserveWhiteSpace: rU,
+                        onSerialize: ZU,
+                        onIframeLoad: RU,
+                        iframeLoadTimeout: PU,
+                        onStylesheetLoad: dU,
+                        stylesheetLoadTimeout: LU,
+                        keepIframeSrcFn: CU,
+                        depth: qU,
+                        maxDepth: OU
                       });
-                      rM && wM(MM, rM)
+                      XU && dU(UU, XU)
                     }
                   })()
                 } finally {
-                  Tr.delete(rM), gM.abort()
+                  bX.delete(XU), eU.abort()
                 }
               }
             },
-            ZM = setTimeout(kM, HM);
-          gM.signal.addEventListener("abort", (() => clearTimeout(ZM)), {
+            fU = setTimeout(uU, IU);
+          eU.signal.addEventListener("abort", (() => clearTimeout(fU)), {
             once: !0
-          }), rM.addEventListener("load", kM, {
-            signal: gM.signal,
+          }), XU.addEventListener("load", uU, {
+            signal: eU.signal,
             once: !0
-          }), Tr.set(rM, gM)
-        }(MM, 0, tM), YM
+          }), bX.set(XU, eU)
+        }(UU, 0, LU), MU
       }
 
-      function Oi(MM) {
-        return !0 === MM || "all" === MM ? {
+      function cz(UU) {
+        return !0 === UU || "all" === UU ? {
           script: !0,
           comment: !0,
           headFavicon: !0,
@@ -1336,38 +1336,38 @@ export const modules = {
           headMetaRobots: !0,
           headMetaHttpEquiv: !0,
           headMetaVerification: !0,
-          headMetaAuthorship: "all" === MM,
-          headMetaDescKeywords: "all" === MM,
-          headTitleMutations: "all" === MM
-        } : !1 === MM ? {} : MM
+          headMetaAuthorship: "all" === UU,
+          headMetaDescKeywords: "all" === UU,
+          headTitleMutations: "all" === UU
+        } : !1 === UU ? {} : UU
       }
-      var Si = class MM {
+      var yz = class UU {
         constructor() {
-          Sr(this, "parentElement", null), Sr(this, "parentNode", null), Sr(this, "ownerDocument", void 0), Sr(this, "firstChild", null), Sr(this, "lastChild", null), Sr(this, "previousSibling", null), Sr(this, "nextSibling", null), Sr(this, "ELEMENT_NODE", 1), Sr(this, "TEXT_NODE", 3), Sr(this, "nodeType", void 0), Sr(this, "nodeName", void 0), Sr(this, "RRNodeType", void 0)
+          yX(this, "parentElement", null), yX(this, "parentNode", null), yX(this, "ownerDocument", void 0), yX(this, "firstChild", null), yX(this, "lastChild", null), yX(this, "previousSibling", null), yX(this, "nextSibling", null), yX(this, "ELEMENT_NODE", 1), yX(this, "TEXT_NODE", 3), yX(this, "nodeType", void 0), yX(this, "nodeName", void 0), yX(this, "RRNodeType", void 0)
         }
         get childNodes() {
-          const MM = [];
-          let rM = this.firstChild;
-          for (; rM;) MM.push(rM), rM = rM.nextSibling;
-          return MM
+          const UU = [];
+          let XU = this.firstChild;
+          for (; XU;) UU.push(XU), XU = XU.nextSibling;
+          return UU
         }
-        contains(rM) {
-          if (!(rM instanceof MM)) return !1;
-          if (rM.ownerDocument !== this.ownerDocument) return !1;
-          if (rM === this) return !0;
-          for (; rM.parentNode;) {
-            if (rM.parentNode === this) return !0;
-            rM = rM.parentNode
+        contains(XU) {
+          if (!(XU instanceof UU)) return !1;
+          if (XU.ownerDocument !== this.ownerDocument) return !1;
+          if (XU === this) return !0;
+          for (; XU.parentNode;) {
+            if (XU.parentNode === this) return !0;
+            XU = XU.parentNode
           }
           return !1
         }
-        appendChild(MM) {
+        appendChild(UU) {
           throw new Error("RRDomException: Failed to execute 'appendChild' on 'RRNode': This RRNode type does not support this method.")
         }
-        insertBefore(MM, rM) {
+        insertBefore(UU, XU) {
           throw new Error("RRDomException: Failed to execute 'insertBefore' on 'RRNode': This RRNode type does not support this method.")
         }
-        removeChild(MM) {
+        removeChild(UU) {
           throw new Error("RRDomException: Failed to execute 'removeChild' on 'RRNode': This RRNode type does not support this method.")
         }
         toString() {
@@ -1375,194 +1375,194 @@ export const modules = {
         }
       };
 
-      function ji(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
-        const OM = {
+      function Qz(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
+        const cU = {
           capture: !0,
           passive: !0
         };
-        return iM.addEventListener(MM, rM, OM), () => ai(iM, MM, rM, OM)
+        return zU.addEventListener(UU, XU, cU), () => Az(zU, UU, XU, cU)
       }
 
-      function ai(MM, rM, iM, OM) {
-        Pi((() => {
-          const SM = MM.removeEventListener;
-          "function" == typeof SM && (void 0 !== OM ? SM.call(MM, rM, iM, OM) : SM.call(MM, rM, iM))
+      function Az(UU, XU, zU, cU) {
+        Fz((() => {
+          const yU = UU.removeEventListener;
+          "function" == typeof yU && (void 0 !== cU ? yU.call(UU, XU, zU, cU) : yU.call(UU, XU, zU))
         }))
       }
 
-      function Pi(MM) {
+      function Fz(UU) {
         try {
-          MM()
-        } catch (MM) {
-          if (!(MM instanceof DOMException && "SecurityError" === MM.name)) throw MM
+          UU()
+        } catch (UU) {
+          if (!(UU instanceof DOMException && "SecurityError" === UU.name)) throw UU
         }
       }
 
-      function ni(MM) {
-        MM.forEach((MM => {
-          if ("function" == typeof MM) try {
-            MM()
-          } catch (MM) {}
+      function oz(UU) {
+        UU.forEach((UU => {
+          if ("function" == typeof UU) try {
+            UU()
+          } catch (UU) {}
         }))
       }
-      var Qi = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
-        zi = {
+      var Dz = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
+        Ez = {
           map: {},
-          getId: () => (console.warn(Qi), -1),
-          lD: () => (console.warn(Qi), null),
+          getId: () => (console.warn(Dz), -1),
+          icU: () => (console.warn(Dz), null),
           removeNodeFromMap() {
-            console.warn(Qi)
+            console.warn(Dz)
           },
-          has: () => (console.warn(Qi), !1),
+          has: () => (console.warn(Dz), !1),
           reset() {
-            console.warn(Qi)
+            console.warn(Dz)
           }
         };
 
-      function Li(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-          OM = null,
-          SM = 0;
+      function Yz(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+          cU = null,
+          yU = 0;
         return function() {
-          for (var jM = arguments.length, aM = new Array(jM), PM = 0; PM < jM; PM++) aM[PM] = arguments[PM];
-          const nM = Date.now();
-          SM || !1 !== iM.leading || (SM = nM);
-          const QM = rM - (nM - SM),
-            zM = this;
-          0 >= QM || QM > rM ? (OM && (clearTimeout(OM), OM = null), SM = nM, MM.apply(zM, aM)) : OM || !1 === iM.trailing || (OM = setTimeout((() => {
-            SM = !1 === iM.leading ? 0 : Date.now(), OM = null, MM.apply(zM, aM)
-          }), QM))
+          for (var QU = arguments.length, AU = new Array(QU), FU = 0; FU < QU; FU++) AU[FU] = arguments[FU];
+          const oU = Date.now();
+          yU || !1 !== zU.leading || (yU = oU);
+          const DU = XU - (oU - yU),
+            EU = this;
+          0 >= DU || DU > XU ? (cU && (clearTimeout(cU), cU = null), yU = oU, UU.apply(EU, AU)) : cU || !1 === zU.trailing || (cU = setTimeout((() => {
+            yU = !1 === zU.leading ? 0 : Date.now(), cU = null, UU.apply(EU, AU)
+          }), DU))
         }
       }
 
-      function mi(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
-        const jM = SM.Object.getOwnPropertyDescriptor(MM, rM),
-          aM = () => mi(MM, rM, jM || {}, !0);
-        if (OM) return SM.Object.defineProperty(MM, rM, iM), aM;
-        const PM = function(MM) {
-          let rM = "function" == typeof MM.setTimeout ? MM.setTimeout : void 0;
+      function Nz(UU, XU, zU, cU) {
+        let yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
+        const QU = yU.Object.getOwnPropertyDescriptor(UU, XU),
+          AU = () => Nz(UU, XU, QU || {}, !0);
+        if (cU) return yU.Object.defineProperty(UU, XU, zU), AU;
+        const FU = function(UU) {
+          let XU = "function" == typeof UU.setTimeout ? UU.setTimeout : void 0;
           try {
-            var iM, OM;
-            const SM = null === (iM = MM.Zone) || void 0 === iM || null === (OM = iM.__symbol__) || void 0 === OM ? void 0 : OM.call(iM, "setTimeout"),
-              jM = SM ? MM[SM] : void 0;
-            "function" == typeof jM && (rM = jM)
-          } catch (MM) {}
-          if (!rM) return () => {};
-          const SM = rM;
-          return rM => {
+            var zU, cU;
+            const yU = null === (zU = UU.Zone) || void 0 === zU || null === (cU = zU.__symbol__) || void 0 === cU ? void 0 : cU.call(zU, "setTimeout"),
+              QU = yU ? UU[yU] : void 0;
+            "function" == typeof QU && (XU = QU)
+          } catch (UU) {}
+          if (!XU) return () => {};
+          const yU = XU;
+          return XU => {
             try {
-              SM.call(MM, rM, 0)
-            } catch (MM) {}
+              yU.call(UU, XU, 0)
+            } catch (UU) {}
           }
-        }(SM);
-        return SM.Object.defineProperty(MM, rM, {
-          set(MM) {
-            if (PM((() => {
+        }(yU);
+        return yU.Object.defineProperty(UU, XU, {
+          set(UU) {
+            if (FU((() => {
                 try {
-                  iM.set.call(this, MM)
-                } catch (MM) {}
-              })), jM && jM.set) {
-              if (jM.get) try {
-                jM.get.call(this)
-              } catch (MM) {
+                  zU.set.call(this, UU)
+                } catch (UU) {}
+              })), QU && QU.set) {
+              if (QU.get) try {
+                QU.get.call(this)
+              } catch (UU) {
                 return
               }
-              jM.set.call(this, MM)
+              QU.set.call(this, UU)
             }
           }
-        }), aM
+        }), AU
       }
-      "undefined" != typeof window && window.Proxy && window.Reflect && (zi = new Proxy(zi, {
-        get: (MM, rM, iM) => ("map" === rM && console.warn(Qi), Reflect.get(MM, rM, iM))
+      "undefined" != typeof window && window.Proxy && window.Reflect && (Ez = new Proxy(Ez, {
+        get: (UU, XU, zU) => ("map" === XU && console.warn(Dz), Reflect.get(UU, XU, zU))
       }));
-      var Hi = Date.now;
+      var Iz = Date.now;
 
-      function Ji(MM) {
-        var rM, iM, OM, SM;
-        const jM = MM.document;
+      function pz(UU) {
+        var XU, zU, cU, yU;
+        const QU = UU.document;
         return {
-          left: jM.scrollingElement ? jM.scrollingElement.scrollLeft : void 0 !== MM.pageXOffset ? MM.pageXOffset : jM.documentElement.scrollLeft || (null == jM ? void 0 : jM.body) && (null === (rM = gM.parentElement(jM.body)) || void 0 === rM ? void 0 : rM.scrollLeft) || (null == jM || null === (iM = jM.body) || void 0 === iM ? void 0 : iM.scrollLeft) || 0,
-          top: jM.scrollingElement ? jM.scrollingElement.scrollTop : void 0 !== MM.pageYOffset ? MM.pageYOffset : (null == jM ? void 0 : jM.documentElement.scrollTop) || (null == jM ? void 0 : jM.body) && (null === (OM = gM.parentElement(jM.body)) || void 0 === OM ? void 0 : OM.scrollTop) || (null == jM || null === (SM = jM.body) || void 0 === SM ? void 0 : SM.scrollTop) || 0
+          left: QU.scrollingElement ? QU.scrollingElement.scrollLeft : void 0 !== UU.pageXOffset ? UU.pageXOffset : QU.documentElement.scrollLeft || (null == QU ? void 0 : QU.body) && (null === (XU = eU.parentElement(QU.body)) || void 0 === XU ? void 0 : XU.scrollLeft) || (null == QU || null === (zU = QU.body) || void 0 === zU ? void 0 : zU.scrollLeft) || 0,
+          top: QU.scrollingElement ? QU.scrollingElement.scrollTop : void 0 !== UU.pageYOffset ? UU.pageYOffset : (null == QU ? void 0 : QU.documentElement.scrollTop) || (null == QU ? void 0 : QU.body) && (null === (cU = eU.parentElement(QU.body)) || void 0 === cU ? void 0 : cU.scrollTop) || (null == QU || null === (yU = QU.body) || void 0 === yU ? void 0 : yU.scrollTop) || 0
         }
       }
 
-      function di() {
+      function az() {
         return window.innerHeight || document.documentElement && document.documentElement.clientHeight || document.body && document.body.clientHeight
       }
 
-      function yi() {
+      function tz() {
         return window.innerWidth || document.documentElement && document.documentElement.clientWidth || document.body && document.body.clientWidth
       }
 
-      function li(MM) {
-        return MM ? MM.nodeType === MM.ELEMENT_NODE ? MM : gM.parentElement(MM) : null
+      function gz(UU) {
+        return UU ? UU.nodeType === UU.ELEMENT_NODE ? UU : eU.parentElement(UU) : null
       }
 
-      function Ei(MM, rM, iM, OM) {
-        if (!MM) return !1;
-        const SM = li(MM);
-        if (!SM) return !1;
+      function kz(UU, XU, zU, cU) {
+        if (!UU) return !1;
+        const yU = gz(UU);
+        if (!yU) return !1;
         try {
-          if ("string" == typeof rM) {
-            if (SM.classList.contains(rM)) return !0;
-            if (OM && null !== SM.closest("." + rM)) return !0
-          } else if (Ir(SM, rM, OM)) return !0
-        } catch (MM) {}
-        if (iM) {
-          if (SM.matches(iM)) return !0;
-          if (OM && null !== SM.closest(iM)) return !0
+          if ("string" == typeof XU) {
+            if (yU.classList.contains(XU)) return !0;
+            if (cU && null !== yU.closest("." + XU)) return !0
+          } else if (JX(yU, XU, cU)) return !0
+        } catch (UU) {}
+        if (zU) {
+          if (yU.matches(zU)) return !0;
+          if (cU && null !== yU.closest(zU)) return !0
         }
         return !1
       }
 
-      function Ui(MM, rM, iM) {
-        return !("TITLE" !== MM.tagName || !iM.headTitleMutations) || -2 === rM.getId(MM)
+      function Gz(UU, XU, zU) {
+        return !("TITLE" !== UU.tagName || !zU.headTitleMutations) || -2 === XU.getId(UU)
       }
 
-      function Gi(MM, rM) {
-        if (ar(MM)) return !1;
-        const iM = rM.getId(MM);
-        if (!rM.has(iM)) return !0;
-        const OM = gM.parentNode(MM);
-        return (!OM || OM.nodeType !== MM.DOCUMENT_NODE) && (!OM || Gi(OM, rM))
+      function Bz(UU, XU) {
+        if (AX(UU)) return !1;
+        const zU = XU.getId(UU);
+        if (!XU.has(zU)) return !0;
+        const cU = eU.parentNode(UU);
+        return (!cU || cU.nodeType !== UU.DOCUMENT_NODE) && (!cU || Bz(cU, XU))
       }
 
-      function Ci(MM) {
-        return Boolean(MM.changedTouches)
+      function Zz(UU) {
+        return Boolean(UU.changedTouches)
       }
 
-      function ei(MM, rM) {
-        return Boolean("IFRAME" === MM.nodeName && rM.getMeta(MM))
+      function Rz(UU, XU) {
+        return Boolean("IFRAME" === UU.nodeName && XU.getMeta(UU))
       }
 
-      function bi(MM, rM) {
-        return Boolean("LINK" === MM.nodeName && MM.nodeType === MM.ELEMENT_NODE && MM.getAttribute && "stylesheet" === MM.getAttribute("rel") && rM.getMeta(MM))
+      function Pz(UU, XU) {
+        return Boolean("LINK" === UU.nodeName && UU.nodeType === UU.ELEMENT_NODE && UU.getAttribute && "stylesheet" === UU.getAttribute("rel") && XU.getMeta(UU))
       }
 
-      function wi(MM) {
-        return !!MM && (MM instanceof Si && "shadowRoot" in MM ? Boolean(MM.shadowRoot) : Boolean(gM.shadowRoot(MM)))
+      function Wz(UU) {
+        return !!UU && (UU instanceof yz && "shadowRoot" in UU ? Boolean(UU.shadowRoot) : Boolean(eU.shadowRoot(UU)))
       }
-      /[1-9][0-9]{12}/.test(Date.now().toString()) || (Hi = () => (new Date).getTime());
-      var ti = class {
+      /[1-9][0-9]{12}/.test(Date.now().toString()) || (Iz = () => (new Date).getTime());
+      var dz = class {
         constructor() {
-          Sr(this, "id", 1), Sr(this, "styleIDMap", new WeakMap), Sr(this, "idStyleMap", new Map)
+          yX(this, "id", 1), yX(this, "styleIDMap", new WeakMap), yX(this, "idStyleMap", new Map)
         }
-        getId(MM) {
-          var rM;
-          return null !== (rM = this.styleIDMap.get(MM)) && void 0 !== rM ? rM : -1
+        getId(UU) {
+          var XU;
+          return null !== (XU = this.styleIDMap.get(UU)) && void 0 !== XU ? XU : -1
         }
-        has(MM) {
-          return this.styleIDMap.has(MM)
+        has(UU) {
+          return this.styleIDMap.has(UU)
         }
-        add(MM, rM) {
-          if (this.has(MM)) return this.getId(MM);
-          let iM;
-          return iM = void 0 === rM ? this.id++ : rM, this.styleIDMap.set(MM, iM), this.idStyleMap.set(iM, MM), iM
+        add(UU, XU) {
+          if (this.has(UU)) return this.getId(UU);
+          let zU;
+          return zU = void 0 === XU ? this.id++ : XU, this.styleIDMap.set(UU, zU), this.idStyleMap.set(zU, UU), zU
         }
-        getStyle(MM) {
-          return this.idStyleMap.get(MM) || null
+        getStyle(UU) {
+          return this.idStyleMap.get(UU) || null
         }
         reset() {
           this.styleIDMap = new WeakMap, this.idStyleMap = new Map, this.id = 1
@@ -1572,97 +1572,97 @@ export const modules = {
         }
       };
 
-      function gi(MM) {
-        var rM;
-        let iM = null;
-        return "getRootNode" in MM && (null === (rM = gM.getRootNode(MM)) || void 0 === rM ? void 0 : rM.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && gM.host(gM.getRootNode(MM)) && (iM = gM.host(gM.getRootNode(MM))), iM
+      function Lz(UU) {
+        var XU;
+        let zU = null;
+        return "getRootNode" in UU && (null === (XU = eU.getRootNode(UU)) || void 0 === XU ? void 0 : XU.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && eU.host(eU.getRootNode(UU)) && (zU = eU.host(eU.getRootNode(UU))), zU
       }
 
-      function ui(MM) {
-        const rM = MM.ownerDocument;
-        if (!rM) return !1;
-        if (gM.contains(rM, MM)) return !0;
-        const iM = gM.isConnected(MM);
-        return "boolean" == typeof iM ? iM : function(MM) {
-          const rM = MM.ownerDocument;
-          if (!rM) return !1;
-          const iM = function(MM) {
-            let rM, iM = MM;
-            for (; rM = gi(iM);) iM = rM;
-            return iM
-          }(MM);
-          return gM.contains(rM, iM)
-        }(MM)
+      function ez(UU) {
+        const XU = UU.ownerDocument;
+        if (!XU) return !1;
+        if (eU.contains(XU, UU)) return !0;
+        const zU = eU.isConnected(UU);
+        return "boolean" == typeof zU ? zU : function(UU) {
+          const XU = UU.ownerDocument;
+          if (!XU) return !1;
+          const zU = function(UU) {
+            let XU, zU = UU;
+            for (; XU = Lz(zU);) zU = XU;
+            return zU
+          }(UU);
+          return eU.contains(XU, zU)
+        }(UU)
       }
 
-      function Ri(MM) {
-        return "__ln" in MM
+      function Cz(UU) {
+        return "__ln" in UU
       }
-      var Wi, si = class {
+      var wz, qz = class {
           constructor() {
-            Sr(this, "length", 0), Sr(this, "head", null), Sr(this, "tail", null)
+            yX(this, "length", 0), yX(this, "head", null), yX(this, "tail", null)
           }
-          get(MM) {
-            if (MM >= this.length) throw new Error("Position outside of list range");
-            let rM = this.head;
-            for (let iM = 0; MM > iM; iM++) rM = (null == rM ? void 0 : rM.next) || null;
-            return rM
+          get(UU) {
+            if (UU >= this.length) throw new Error("Position outside of list range");
+            let XU = this.head;
+            for (let zU = 0; UU > zU; zU++) XU = (null == XU ? void 0 : XU.next) || null;
+            return XU
           }
-          addNode(MM) {
-            const rM = {
-              value: MM,
+          addNode(UU) {
+            const XU = {
+              value: UU,
               previous: null,
               next: null
             };
-            if (MM.__ln = rM, MM.previousSibling && Ri(MM.previousSibling)) {
-              const iM = MM.previousSibling.__ln.next;
-              rM.next = iM, rM.previous = MM.previousSibling.__ln, MM.previousSibling.__ln.next = rM, iM && (iM.previous = rM)
-            } else if (MM.nextSibling && Ri(MM.nextSibling) && MM.nextSibling.__ln.previous) {
-              const iM = MM.nextSibling.__ln.previous;
-              rM.previous = iM, rM.next = MM.nextSibling.__ln, MM.nextSibling.__ln.previous = rM, iM && (iM.next = rM)
-            } else this.head && (this.head.previous = rM), rM.next = this.head, this.head = rM;
-            null === rM.next && (this.tail = rM), this.length++
+            if (UU.__ln = XU, UU.previousSibling && Cz(UU.previousSibling)) {
+              const zU = UU.previousSibling.__ln.next;
+              XU.next = zU, XU.previous = UU.previousSibling.__ln, UU.previousSibling.__ln.next = XU, zU && (zU.previous = XU)
+            } else if (UU.nextSibling && Cz(UU.nextSibling) && UU.nextSibling.__ln.previous) {
+              const zU = UU.nextSibling.__ln.previous;
+              XU.previous = zU, XU.next = UU.nextSibling.__ln, UU.nextSibling.__ln.previous = XU, zU && (zU.next = XU)
+            } else this.head && (this.head.previous = XU), XU.next = this.head, this.head = XU;
+            null === XU.next && (this.tail = XU), this.length++
           }
-          removeNode(MM) {
-            const rM = MM.__ln;
-            this.head && (rM.previous ? (rM.previous.next = rM.next, rM.next ? rM.next.previous = rM.previous : this.tail = rM.previous) : (this.head = rM.next, this.head ? this.head.previous = null : this.tail = null), MM.__ln && delete MM.__ln, this.length--)
+          removeNode(UU) {
+            const XU = UU.__ln;
+            this.head && (XU.previous ? (XU.previous.next = XU.next, XU.next ? XU.next.previous = XU.previous : this.tail = XU.previous) : (this.head = XU.next, this.head ? this.head.previous = null : this.tail = null), UU.__ln && delete UU.__ln, this.length--)
           }
         },
-        Di = (MM, rM) => `${MM}@${rM}`,
-        ki = class {
+        Oz = (UU, XU) => `${UU}@${XU}`,
+        Sz = class {
           constructor() {
-            Sr(this, "frozen", !1), Sr(this, "locked", !1), Sr(this, "texts", []), Sr(this, "attributes", []), Sr(this, "attributeMap", new WeakMap), Sr(this, "generatedAttributes", new WeakMap), Sr(this, "removes", []), Sr(this, "mapRemoves", new Set), Sr(this, "movedMap", {}), Sr(this, "addedSet", new Set), Sr(this, "movedSet", new Set), Sr(this, "droppedSet", new Set), Sr(this, "removesSubTreeCache", new Set), Sr(this, "mutationCb", void 0), Sr(this, "blockClass", void 0), Sr(this, "blockSelector", void 0), Sr(this, "maskTextClass", void 0), Sr(this, "maskTextSelector", void 0), Sr(this, "inlineStylesheet", void 0), Sr(this, "maskInputOptions", void 0), Sr(this, "maskTextFn", void 0), Sr(this, "maskInputFn", void 0), Sr(this, "maskAllElementAttributes", void 0), Sr(this, "maskAttributeFn", void 0), Sr(this, "keepIframeSrcFn", void 0), Sr(this, "recordCanvas", void 0), Sr(this, "canvasMaskingConfigured", void 0), Sr(this, "inlineImages", void 0), Sr(this, "slimDOMOptions", void 0), Sr(this, "dataURLOptions", void 0), Sr(this, "doc", void 0), Sr(this, "mirror", void 0), Sr(this, "iframeManager", void 0), Sr(this, "stylesheetManager", void 0), Sr(this, "shadowDomManager", void 0), Sr(this, "canvasManager", void 0), Sr(this, "processedNodeManager", void 0), Sr(this, "unattachedDoc", void 0), Sr(this, "canvasManagerReleased", !1), Sr(this, "processMutations", (MM => {
-              MM.forEach(this.processMutation), this.emit()
-            })), Sr(this, "emit", (() => {
+            yX(this, "frozen", !1), yX(this, "locked", !1), yX(this, "texts", []), yX(this, "attributes", []), yX(this, "attributeMap", new WeakMap), yX(this, "generatedAttributes", new WeakMap), yX(this, "removes", []), yX(this, "mapRemoves", new Set), yX(this, "movedMap", {}), yX(this, "addedSet", new Set), yX(this, "movedSet", new Set), yX(this, "droppedSet", new Set), yX(this, "removesSubTreeCache", new Set), yX(this, "mutationCb", void 0), yX(this, "blockClass", void 0), yX(this, "blockSelector", void 0), yX(this, "maskTextClass", void 0), yX(this, "maskTextSelector", void 0), yX(this, "inlineStylesheet", void 0), yX(this, "maskInputOptions", void 0), yX(this, "maskTextFn", void 0), yX(this, "maskInputFn", void 0), yX(this, "maskAllElementAttributes", void 0), yX(this, "maskAttributeFn", void 0), yX(this, "keepIframeSrcFn", void 0), yX(this, "recordCanvas", void 0), yX(this, "canvasMaskingConfigured", void 0), yX(this, "inlineImages", void 0), yX(this, "slimDOMOptions", void 0), yX(this, "dataURLOptions", void 0), yX(this, "doc", void 0), yX(this, "mirror", void 0), yX(this, "iframeManager", void 0), yX(this, "stylesheetManager", void 0), yX(this, "shadowDomManager", void 0), yX(this, "canvasManager", void 0), yX(this, "processedNodeManager", void 0), yX(this, "unattachedDoc", void 0), yX(this, "canvasManagerReleased", !1), yX(this, "processMutations", (UU => {
+              UU.forEach(this.processMutation), this.emit()
+            })), yX(this, "emit", (() => {
               if (this.frozen || this.locked) return;
-              const MM = uM(),
-                rM = sM();
+              const UU = CU(),
+                XU = SU();
               try {
                 this.processBufferedMutations()
               } finally {
-                iM = uM() - MM, OM = rM, kM > 0 || DM(iM, null != OM ? OM : RM) || iM > FM.slowestBatchMs && (FM.slowestBatchMs = iM)
+                zU = CU() - UU, cU = XU, uU > 0 || rU(zU, null != cU ? cU : wU) || zU > mU.slowestBatchMs && (mU.slowestBatchMs = zU)
               }
-              var iM, OM
-            })), Sr(this, "processBufferedMutations", (() => {
-              const MM = [],
-                rM = new Set,
-                iM = new si,
-                OM = MM => {
-                  let rM = MM,
-                    iM = -2;
-                  for (; - 2 === iM;) rM = rM && rM.nextSibling, iM = rM && this.mirror.getId(rM);
-                  return iM
+              var zU, cU
+            })), yX(this, "processBufferedMutations", (() => {
+              const UU = [],
+                XU = new Set,
+                zU = new qz,
+                cU = UU => {
+                  let XU = UU,
+                    zU = -2;
+                  for (; - 2 === zU;) XU = XU && XU.nextSibling, zU = XU && this.mirror.getId(XU);
+                  return zU
                 };
-              let SM;
-              const jM = jM => {
-                var aM;
-                const PM = gM.parentNode(jM);
-                if (!PM || !ui(jM) || "TEXTAREA" === PM.tagName) return;
-                if (this.isBlockedAtEmission(PM)) return;
-                const nM = ar(PM) ? this.mirror.getId(gi(jM)) : this.mirror.getId(PM),
-                  QM = OM(jM);
-                if (-1 === nM || -1 === QM) return iM.addNode(jM);
-                null !== (aM = SM) && void 0 !== aM || (SM = {
+              let yU;
+              const QU = QU => {
+                var AU;
+                const FU = eU.parentNode(QU);
+                if (!FU || !ez(QU) || "TEXTAREA" === FU.tagName) return;
+                if (this.isBlockedAtEmission(FU)) return;
+                const oU = AX(FU) ? this.mirror.getId(Lz(QU)) : this.mirror.getId(FU),
+                  DU = cU(QU);
+                if (-1 === oU || -1 === DU) return zU.addNode(QU);
+                null !== (AU = yU) && void 0 !== AU || (yU = {
                   doc: this.doc,
                   mirror: this.mirror,
                   blockClass: this.blockClass,
@@ -1682,52 +1682,52 @@ export const modules = {
                   recordCanvas: this.recordCanvas,
                   canvasMaskingConfigured: this.canvasMaskingConfigured,
                   inlineImages: this.inlineImages,
-                  onSerialize: MM => {
-                    ei(MM, this.mirror) && this.iframeManager.addIframe(MM), bi(MM, this.mirror) && this.stylesheetManager.trackLinkElement(MM), wi(MM) && !Ei(MM, this.blockClass, this.blockSelector, !0) && this.shadowDomManager.addShadowRoot(gM.shadowRoot(MM), this.doc)
+                  onSerialize: UU => {
+                    Rz(UU, this.mirror) && this.iframeManager.addIframe(UU), Pz(UU, this.mirror) && this.stylesheetManager.trackLinkElement(UU), Wz(UU) && !kz(UU, this.blockClass, this.blockSelector, !0) && this.shadowDomManager.addShadowRoot(eU.shadowRoot(UU), this.doc)
                   },
-                  onIframeLoad: (MM, rM) => {
-                    this.iframeManager.attachIframe(MM, rM), this.shadowDomManager.observeAttachShadow(MM)
+                  onIframeLoad: (UU, XU) => {
+                    this.iframeManager.attachIframe(UU, XU), this.shadowDomManager.observeAttachShadow(UU)
                   },
-                  onIframeListenerRegistered: (MM, rM) => {
-                    this.iframeManager.registerLoadListenerDisposer(MM, rM)
+                  onIframeListenerRegistered: (UU, XU) => {
+                    this.iframeManager.registerLoadListenerDisposer(UU, XU)
                   },
-                  onStylesheetLoad: (MM, rM) => {
-                    this.stylesheetManager.attachLinkElement(MM, rM)
+                  onStylesheetLoad: (UU, XU) => {
+                    this.stylesheetManager.attachLinkElement(UU, XU)
                   }
                 });
-                const zM = ii(jM, SM);
-                zM && (MM.push({
-                  parentId: nM,
-                  nextId: QM,
-                  node: zM
-                }), rM.add(zM.id))
+                const EU = zz(QU, yU);
+                EU && (UU.push({
+                  parentId: oU,
+                  nextId: DU,
+                  node: EU
+                }), XU.add(EU.id))
               };
-              for (const nM of this.mapRemoves) this.mapRemoves.delete(nM), this.mirror.removeNodeFromMap(nM);
-              for (const nM of this.movedSet) oi(this.removesSubTreeCache, nM) && !this.movedSet.has(gM.parentNode(nM)) || jM(nM);
-              for (const nM of this.addedSet) fi(this.droppedSet, nM) || oi(this.removesSubTreeCache, nM) ? fi(this.movedSet, nM) ? jM(nM) : this.droppedSet.add(nM) : jM(nM);
-              let aM = null;
-              for (; iM.length;) {
-                let MM = null;
-                if (aM) {
-                  const rM = this.mirror.getId(gM.parentNode(aM.value)),
-                    iM = OM(aM.value); - 1 !== rM && -1 !== iM && (MM = aM)
+              for (const oU of this.mapRemoves) this.mapRemoves.delete(oU), this.mirror.removeNodeFromMap(oU);
+              for (const oU of this.movedSet) uz(this.removesSubTreeCache, oU) && !this.movedSet.has(eU.parentNode(oU)) || QU(oU);
+              for (const oU of this.addedSet) fz(this.droppedSet, oU) || uz(this.removesSubTreeCache, oU) ? fz(this.movedSet, oU) ? QU(oU) : this.droppedSet.add(oU) : QU(oU);
+              let AU = null;
+              for (; zU.length;) {
+                let UU = null;
+                if (AU) {
+                  const XU = this.mirror.getId(eU.parentNode(AU.value)),
+                    zU = cU(AU.value); - 1 !== XU && -1 !== zU && (UU = AU)
                 }
-                if (!MM) {
-                  let rM = iM.tail;
-                  for (; rM;) {
-                    const iM = rM;
-                    if (rM = rM.previous, iM) {
-                      const rM = this.mirror.getId(gM.parentNode(iM.value));
-                      if (-1 === OM(iM.value)) continue;
-                      if (-1 !== rM) {
-                        MM = iM;
+                if (!UU) {
+                  let XU = zU.tail;
+                  for (; XU;) {
+                    const zU = XU;
+                    if (XU = XU.previous, zU) {
+                      const XU = this.mirror.getId(eU.parentNode(zU.value));
+                      if (-1 === cU(zU.value)) continue;
+                      if (-1 !== XU) {
+                        UU = zU;
                         break
                       } {
-                        const rM = gM.parentNode(iM.value);
-                        if (rM && rM.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-                          const OM = gM.host(rM);
-                          if (-1 !== this.mirror.getId(OM)) {
-                            MM = iM;
+                        const XU = eU.parentNode(zU.value);
+                        if (XU && XU.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+                          const cU = eU.host(XU);
+                          if (-1 !== this.mirror.getId(cU)) {
+                            UU = zU;
                             break
                           }
                         }
@@ -1735,186 +1735,186 @@ export const modules = {
                     }
                   }
                 }
-                if (!MM) {
-                  for (; iM.head;) iM.removeNode(iM.head.value);
+                if (!UU) {
+                  for (; zU.head;) zU.removeNode(zU.head.value);
                   break
                 }
-                aM = MM.previous, iM.removeNode(MM.value), jM(MM.value)
+                AU = UU.previous, zU.removeNode(UU.value), QU(UU.value)
               }
-              const PM = {
-                texts: this.texts.filter((MM => !this.isBlockedAtEmission(MM.node))).map((MM => {
-                  const rM = MM.node,
-                    iM = gM.parentNode(rM);
-                  return iM && "TEXTAREA" === iM.tagName && this.genTextAreaValueMutation(iM), {
-                    id: this.mirror.getId(rM),
-                    value: MM.value
+              const FU = {
+                texts: this.texts.filter((UU => !this.isBlockedAtEmission(UU.node))).map((UU => {
+                  const XU = UU.node,
+                    zU = eU.parentNode(XU);
+                  return zU && "TEXTAREA" === zU.tagName && this.genTextAreaValueMutation(zU), {
+                    id: this.mirror.getId(XU),
+                    value: UU.value
                   }
-                })).filter((MM => !rM.has(MM.id))).filter((MM => this.mirror.has(MM.id))),
-                attributes: this.attributes.filter((MM => !this.isBlockedAtEmission(MM.node))).map((MM => {
+                })).filter((UU => !XU.has(UU.id))).filter((UU => this.mirror.has(UU.id))),
+                attributes: this.attributes.filter((UU => !this.isBlockedAtEmission(UU.node))).map((UU => {
                   const {
-                    attributes: rM
-                  } = MM;
-                  if (!this.maskAllElementAttributes && !this.maskAttributeFn && "string" == typeof rM.style) {
-                    const iM = JSON.stringify(MM.styleDiff),
-                      OM = JSON.stringify(MM._unchangedStyles);
-                    rM.style.length > iM.length && (iM + OM).split("var(").length === rM.style.split("var(").length && (rM.style = MM.styleDiff)
+                    attributes: XU
+                  } = UU;
+                  if (!this.maskAllElementAttributes && !this.maskAttributeFn && "string" == typeof XU.style) {
+                    const zU = JSON.stringify(UU.styleDiff),
+                      cU = JSON.stringify(UU._unchangedStyles);
+                    XU.style.length > zU.length && (zU + cU).split("var(").length === XU.style.split("var(").length && (XU.style = UU.styleDiff)
                   }
                   if (this.maskAllElementAttributes || this.maskAttributeFn)
-                    for (const [OM, SM] of Object.entries(rM))
-                      if ("string" == typeof SM || null === SM) {
-                        var iM;
-                        rM[OM] = Cr({
-                          element: MM.node,
-                          name: OM,
-                          value: SM,
+                    for (const [cU, yU] of Object.entries(XU))
+                      if ("string" == typeof yU || null === yU) {
+                        var zU;
+                        XU[cU] = RX({
+                          element: UU.node,
+                          name: cU,
+                          value: yU,
                           maskAllElementAttributes: this.maskAllElementAttributes,
                           maskAttributeFn: this.maskAttributeFn,
-                          isGenerated: null === (iM = this.generatedAttributes.get(MM.node)) || void 0 === iM ? void 0 : iM.has(OM)
+                          isGenerated: null === (zU = this.generatedAttributes.get(UU.node)) || void 0 === zU ? void 0 : zU.has(cU)
                         })
                       } return {
-                    id: this.mirror.getId(MM.node),
-                    attributes: rM
+                    id: this.mirror.getId(UU.node),
+                    attributes: XU
                   }
-                })).filter((MM => !rM.has(MM.id))).filter((MM => this.mirror.has(MM.id))),
+                })).filter((UU => !XU.has(UU.id))).filter((UU => this.mirror.has(UU.id))),
                 removes: this.removes,
-                adds: MM
+                adds: UU
               };
-              this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.generatedAttributes = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, (PM.texts.length || PM.attributes.length || PM.removes.length || PM.adds.length) && this.mutationCb(PM)
-            })), Sr(this, "bufferBelongsToIframe", (MM => this.doc === MM.contentDocument)), Sr(this, "genTextAreaValueMutation", (MM => {
-              let rM = this.attributeMap.get(MM);
-              rM || (rM = {
-                node: MM,
+              this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.generatedAttributes = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, (FU.texts.length || FU.attributes.length || FU.removes.length || FU.adds.length) && this.mutationCb(FU)
+            })), yX(this, "bufferBelongsToIframe", (UU => this.doc === UU.contentDocument)), yX(this, "genTextAreaValueMutation", (UU => {
+              let XU = this.attributeMap.get(UU);
+              XU || (XU = {
+                node: UU,
                 attributes: {},
                 styleDiff: {},
                 _unchangedStyles: {}
-              }, this.attributes.push(rM), this.attributeMap.set(MM, rM));
-              const iM = Array.from(gM.childNodes(MM), (MM => gM.textContent(MM) || "")).join("");
-              rM.attributes.value = Er({
-                element: MM,
+              }, this.attributes.push(XU), this.attributeMap.set(UU, XU));
+              const zU = Array.from(eU.childNodes(UU), (UU => eU.textContent(UU) || "")).join("");
+              XU.attributes.value = GX({
+                element: UU,
                 maskInputOptions: this.maskInputOptions,
-                tagName: MM.tagName,
-                type: br(MM),
-                value: iM,
+                tagName: UU.tagName,
+                type: WX(UU),
+                value: zU,
                 maskInputFn: this.maskInputFn
               })
-            })), Sr(this, "processMutation", (MM => {
-              if (!Ui(MM.target, this.mirror, this.slimDOMOptions)) switch (MM.type) {
+            })), yX(this, "processMutation", (UU => {
+              if (!Gz(UU.target, this.mirror, this.slimDOMOptions)) switch (UU.type) {
                 case "characterData": {
-                  const rM = gM.textContent(MM.target);
-                  Ei(MM.target, this.blockClass, this.blockSelector, !1) || rM === MM.oldValue || this.texts.push({
-                    value: Kr(MM.target, this.maskTextClass, this.maskTextSelector, !0) && rM ? this.maskTextFn ? this.maskTextFn(rM, li(MM.target)) : rM.replace(/[\S]/g, "*") : rM,
-                    node: MM.target
+                  const XU = eU.textContent(UU.target);
+                  kz(UU.target, this.blockClass, this.blockSelector, !1) || XU === UU.oldValue || this.texts.push({
+                    value: jX(UU.target, this.maskTextClass, this.maskTextSelector, !0) && XU ? this.maskTextFn ? this.maskTextFn(XU, gz(UU.target)) : XU.replace(/[\S]/g, "*") : XU,
+                    node: UU.target
                   });
                   break
                 }
                 case "attributes": {
-                  var rM;
-                  const OM = MM.target,
-                    SM = Ur(OM.tagName),
-                    jM = MM.attributeName,
-                    aM = null !== (rM = MM.attributeNamespace) && void 0 !== rM ? rM : null;
-                  let PM = function(MM, rM, iM) {
-                      if (!iM) return rM;
-                      const OM = MM.getAttributeNodeNS(iM, rM);
-                      if (OM) return OM.name;
-                      if ("http://www.w3.org/1999/xlink" === iM) return `xlink:${rM}`;
-                      if ("http://www.w3.org/XML/1998/namespace" === iM) return `xml:${rM}`;
-                      if ("http://www.w3.org/2000/xmlns/" === iM) return "xmlns" === rM ? rM : `xmlns:${rM}`;
-                      const SM = MM.lookupPrefix(iM);
-                      return SM ? `${SM}:${rM}` : rM
-                    }(OM, jM, aM),
-                    nM = aM ? OM.getAttributeNS(aM, jM) : MM.target.getAttribute(jM);
-                  if ("value" === PM) {
-                    const MM = OM,
-                      rM = br(MM);
-                    nM = Er({
-                      element: MM,
+                  var XU;
+                  const cU = UU.target,
+                    yU = BX(cU.tagName),
+                    QU = UU.attributeName,
+                    AU = null !== (XU = UU.attributeNamespace) && void 0 !== XU ? XU : null;
+                  let FU = function(UU, XU, zU) {
+                      if (!zU) return XU;
+                      const cU = UU.getAttributeNodeNS(zU, XU);
+                      if (cU) return cU.name;
+                      if ("http://www.w3.org/1999/xlink" === zU) return `xlink:${XU}`;
+                      if ("http://www.w3.org/XML/1998/namespace" === zU) return `xml:${XU}`;
+                      if ("http://www.w3.org/2000/xmlns/" === zU) return "xmlns" === XU ? XU : `xmlns:${XU}`;
+                      const yU = UU.lookupPrefix(zU);
+                      return yU ? `${yU}:${XU}` : XU
+                    }(cU, QU, AU),
+                    oU = AU ? cU.getAttributeNS(AU, QU) : UU.target.getAttribute(QU);
+                  if ("value" === FU) {
+                    const UU = cU,
+                      XU = WX(UU);
+                    oU = GX({
+                      element: UU,
                       maskInputOptions: this.maskInputOptions,
-                      tagName: OM.tagName,
-                      type: rM,
-                      value: nM,
+                      tagName: cU.tagName,
+                      type: XU,
+                      value: oU,
                       maskInputFn: this.maskInputFn
                     })
                   }
-                  if (Ei(MM.target, this.blockClass, this.blockSelector, !1) || nM === MM.oldValue) return;
-                  let QM = this.attributeMap.get(MM.target);
-                  const zM = "iframe" === SM && "src" === PM;
-                  if (zM && !this.keepIframeSrcFn(nM) && OM.contentDocument) return;
-                  if ("type" === PM && "input" === SM && "password" === (MM.oldValue || "").toLowerCase() && OM.setAttribute("data-rr-is-password", "true"), !Br(SM, PM)) {
-                    var iM;
-                    QM || (QM = {
-                      node: MM.target,
+                  if (kz(UU.target, this.blockClass, this.blockSelector, !1) || oU === UU.oldValue) return;
+                  let DU = this.attributeMap.get(UU.target);
+                  const EU = "iframe" === yU && "src" === FU;
+                  if (EU && !this.keepIframeSrcFn(oU) && cU.contentDocument) return;
+                  if ("type" === FU && "input" === yU && "password" === (UU.oldValue || "").toLowerCase() && cU.setAttribute("data-rr-is-password", "true"), !lX(yU, FU)) {
+                    var zU;
+                    DU || (DU = {
+                      node: UU.target,
                       attributes: {},
                       styleDiff: {},
                       _unchangedStyles: {}
-                    }, this.attributes.push(QM), this.attributeMap.set(MM.target, QM));
-                    const rM = Fr(this.doc, SM, Ur(PM), nM, OM, this.dataURLOptions);
-                    if (zM && !this.keepIframeSrcFn(nM) && (PM = "rr_src"), QM.attributes[PM] = rM, null === (iM = this.generatedAttributes.get(MM.target)) || void 0 === iM || iM.delete(PM), "style" === PM) {
+                    }, this.attributes.push(DU), this.attributeMap.set(UU.target, DU));
+                    const XU = mX(this.doc, yU, BX(FU), oU, cU, this.dataURLOptions);
+                    if (EU && !this.keepIframeSrcFn(oU) && (FU = "rr_src"), DU.attributes[FU] = XU, null === (zU = this.generatedAttributes.get(UU.target)) || void 0 === zU || zU.delete(FU), "style" === FU) {
                       if (!this.unattachedDoc) try {
                         this.unattachedDoc = document.implementation.createHTMLDocument()
-                      } catch (MM) {
+                      } catch (UU) {
                         this.unattachedDoc = this.doc
                       }
-                      const rM = this.unattachedDoc.createElement("span"),
-                        iM = OM.style;
-                      MM.oldValue && (rM.style.cssText = MM.oldValue);
-                      for (const MM of Array.from(iM)) {
-                        const OM = iM.getPropertyValue(MM),
-                          SM = iM.getPropertyPriority(MM);
-                        OM !== rM.style.getPropertyValue(MM) || SM !== rM.style.getPropertyPriority(MM) ? QM.styleDiff[MM] = "" === SM ? OM : [OM, SM] : QM._unchangedStyles[MM] = [OM, SM]
+                      const XU = this.unattachedDoc.createElement("span"),
+                        zU = cU.style;
+                      UU.oldValue && (XU.style.cssText = UU.oldValue);
+                      for (const UU of Array.from(zU)) {
+                        const cU = zU.getPropertyValue(UU),
+                          yU = zU.getPropertyPriority(UU);
+                        cU !== XU.style.getPropertyValue(UU) || yU !== XU.style.getPropertyPriority(UU) ? DU.styleDiff[UU] = "" === yU ? cU : [cU, yU] : DU._unchangedStyles[UU] = [cU, yU]
                       }
-                      for (const MM of Array.from(rM.style)) "" === iM.getPropertyValue(MM) && (QM.styleDiff[MM] = !1)
-                    } else if ("open" === PM && "dialog" === SM) {
-                      QM.attributes.rr_open_mode = OM.matches("dialog:modal") ? "modal" : "non-modal";
-                      let rM = this.generatedAttributes.get(MM.target);
-                      rM || (rM = new Set, this.generatedAttributes.set(MM.target, rM)), rM.add("rr_open_mode")
+                      for (const UU of Array.from(XU.style)) "" === zU.getPropertyValue(UU) && (DU.styleDiff[UU] = !1)
+                    } else if ("open" === FU && "dialog" === yU) {
+                      DU.attributes.rr_open_mode = cU.matches("dialog:modal") ? "modal" : "non-modal";
+                      let XU = this.generatedAttributes.get(UU.target);
+                      XU || (XU = new Set, this.generatedAttributes.set(UU.target, XU)), XU.add("rr_open_mode")
                     }
                   }
                   break
                 }
                 case "childList":
-                  if (Ei(MM.target, this.blockClass, this.blockSelector, !0)) return;
-                  if ("TEXTAREA" === MM.target.tagName) return void this.genTextAreaValueMutation(MM.target);
-                  MM.addedNodes.forEach((rM => this.genAdds(rM, MM.target))), MM.removedNodes.forEach((rM => {
-                    const iM = this.mirror.getId(rM),
-                      OM = ar(MM.target) ? this.mirror.getId(gM.host(MM.target)) : this.mirror.getId(MM.target);
-                    Ei(MM.target, this.blockClass, this.blockSelector, !1) || Ui(rM, this.mirror, this.slimDOMOptions) || ! function(MM, rM) {
-                      return -1 !== rM.getId(MM)
-                    }(rM, this.mirror) || (this.addedSet.has(rM) ? (Zi(this.addedSet, rM), this.droppedSet.add(rM)) : this.addedSet.has(MM.target) && -1 === iM || Gi(MM.target, this.mirror) || (this.movedSet.has(rM) && this.movedMap[Di(iM, OM)] ? Zi(this.movedSet, rM) : (this.removes.push({
-                      parentId: OM,
-                      id: iM,
-                      isShadow: !(!ar(MM.target) || !Pr(MM.target)) || void 0
-                    }), function(MM, rM) {
-                      const iM = [MM];
-                      for (; iM.length;) {
-                        const MM = iM.pop();
-                        rM.has(MM) || (rM.add(MM), gM.childNodes(MM).forEach((MM => iM.push(MM))))
+                  if (kz(UU.target, this.blockClass, this.blockSelector, !0)) return;
+                  if ("TEXTAREA" === UU.target.tagName) return void this.genTextAreaValueMutation(UU.target);
+                  UU.addedNodes.forEach((XU => this.genAdds(XU, UU.target))), UU.removedNodes.forEach((XU => {
+                    const zU = this.mirror.getId(XU),
+                      cU = AX(UU.target) ? this.mirror.getId(eU.host(UU.target)) : this.mirror.getId(UU.target);
+                    kz(UU.target, this.blockClass, this.blockSelector, !1) || Gz(XU, this.mirror, this.slimDOMOptions) || ! function(UU, XU) {
+                      return -1 !== XU.getId(UU)
+                    }(XU, this.mirror) || (this.addedSet.has(XU) ? (rz(this.addedSet, XU), this.droppedSet.add(XU)) : this.addedSet.has(UU.target) && -1 === zU || Bz(UU.target, this.mirror) || (this.movedSet.has(XU) && this.movedMap[Oz(zU, cU)] ? rz(this.movedSet, XU) : (this.removes.push({
+                      parentId: cU,
+                      id: zU,
+                      isShadow: !(!AX(UU.target) || !FX(UU.target)) || void 0
+                    }), function(UU, XU) {
+                      const zU = [UU];
+                      for (; zU.length;) {
+                        const UU = zU.pop();
+                        XU.has(UU) || (XU.add(UU), eU.childNodes(UU).forEach((UU => zU.push(UU))))
                       }
-                    }(rM, this.removesSubTreeCache))), this.mapRemoves.add(rM))
+                    }(XU, this.removesSubTreeCache))), this.mapRemoves.add(XU))
                   }))
               }
-            })), Sr(this, "genAdds", ((MM, rM) => {
-              if (!this.processedNodeManager.inOtherBuffer(MM, this)) {
-                if (this.addedSet.has(MM)) return this.addedSet.delete(MM), void this.addedSet.add(MM);
-                if (!this.movedSet.has(MM)) {
-                  if (this.mirror.hasNode(MM)) {
-                    if (Ui(MM, this.mirror, this.slimDOMOptions)) return;
-                    this.movedSet.add(MM);
-                    let iM = null;
-                    rM && this.mirror.hasNode(rM) && (iM = this.mirror.getId(rM)), iM && -1 !== iM && (this.movedMap[Di(this.mirror.getId(MM), iM)] = !0)
-                  } else this.addedSet.add(MM), this.droppedSet.delete(MM);
-                  if (!Ei(MM, this.blockClass, this.blockSelector, !1)) {
-                    if (MM.nodeType === MM.TEXT_NODE) return;
-                    const rM = gM.childNodes(MM);
-                    for (let MM = 0, iM = rM.length; iM > MM; MM++) {
-                      const iM = rM[MM];
-                      iM && this.genAdds(iM)
+            })), yX(this, "genAdds", ((UU, XU) => {
+              if (!this.processedNodeManager.inOtherBuffer(UU, this)) {
+                if (this.addedSet.has(UU)) return this.addedSet.delete(UU), void this.addedSet.add(UU);
+                if (!this.movedSet.has(UU)) {
+                  if (this.mirror.hasNode(UU)) {
+                    if (Gz(UU, this.mirror, this.slimDOMOptions)) return;
+                    this.movedSet.add(UU);
+                    let zU = null;
+                    XU && this.mirror.hasNode(XU) && (zU = this.mirror.getId(XU)), zU && -1 !== zU && (this.movedMap[Oz(this.mirror.getId(UU), zU)] = !0)
+                  } else this.addedSet.add(UU), this.droppedSet.delete(UU);
+                  if (!kz(UU, this.blockClass, this.blockSelector, !1)) {
+                    if (UU.nodeType === UU.TEXT_NODE) return;
+                    const XU = eU.childNodes(UU);
+                    for (let UU = 0, zU = XU.length; zU > UU; UU++) {
+                      const zU = XU[UU];
+                      zU && this.genAdds(zU)
                     }
-                    if (wi(MM)) {
-                      const rM = gM.childNodes(gM.shadowRoot(MM));
-                      for (let iM = 0, OM = rM.length; OM > iM; iM++) {
-                        const OM = rM[iM];
-                        OM && (this.processedNodeManager.add(OM, this), this.genAdds(OM, MM))
+                    if (Wz(UU)) {
+                      const XU = eU.childNodes(eU.shadowRoot(UU));
+                      for (let zU = 0, cU = XU.length; cU > zU; zU++) {
+                        const cU = XU[zU];
+                        cU && (this.processedNodeManager.add(cU, this), this.genAdds(cU, UU))
                       }
                     }
                   }
@@ -1922,9 +1922,9 @@ export const modules = {
               }
             }))
           }
-          init(MM) {
-            ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "maskAllElementAttributes", "maskAttributeFn", "keepIframeSrcFn", "recordCanvas", "canvasMaskingConfigured", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((rM => {
-              this[rM] = MM[rM]
+          init(UU) {
+            ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "maskAllElementAttributes", "maskAttributeFn", "keepIframeSrcFn", "recordCanvas", "canvasMaskingConfigured", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((XU => {
+              this[XU] = UU[XU]
             })), this.canvasManager.acquire()
           }
           freeze() {
@@ -1952,79 +1952,79 @@ export const modules = {
             return this.doc
           }
           destroy() {
-            for (const MM of this.mapRemoves) this.mapRemoves.delete(MM), this.mirror.removeNodeFromMap(MM)
+            for (const UU of this.mapRemoves) this.mapRemoves.delete(UU), this.mirror.removeNodeFromMap(UU)
           }
-          isBlockedAtEmission(MM) {
-            const rM = this.blockClass,
-              iM = rM && "string" != typeof rM && (rM.global || rM.sticky) ? new RegExp(rM) : null;
-            for (; MM;) {
-              if (iM && (iM.lastIndex = 0), Ei(MM, iM || rM, this.blockSelector, !0)) return !0;
-              const OM = "getRootNode" in MM ? gM.getRootNode(MM) : null;
-              MM = (null == OM ? void 0 : OM.nodeType) === Node.DOCUMENT_FRAGMENT_NODE ? gM.host(OM) : null
+          isBlockedAtEmission(UU) {
+            const XU = this.blockClass,
+              zU = XU && "string" != typeof XU && (XU.global || XU.sticky) ? new RegExp(XU) : null;
+            for (; UU;) {
+              if (zU && (zU.lastIndex = 0), kz(UU, zU || XU, this.blockSelector, !0)) return !0;
+              const cU = "getRootNode" in UU ? eU.getRootNode(UU) : null;
+              UU = (null == cU ? void 0 : cU.nodeType) === Node.DOCUMENT_FRAGMENT_NODE ? eU.host(cU) : null
             }
             return !1
           }
         };
 
-      function Zi(MM, rM) {
-        const iM = [rM];
-        for (; iM.length;) {
-          const rM = iM.pop();
-          if (MM.delete(rM), rM.nodeType === rM.TEXT_NODE) continue;
-          const OM = gM.childNodes(rM);
-          for (let MM = 0, SM = OM.length; SM > MM; MM++) {
-            const rM = OM[MM];
-            rM && iM.push(rM)
+      function rz(UU, XU) {
+        const zU = [XU];
+        for (; zU.length;) {
+          const XU = zU.pop();
+          if (UU.delete(XU), XU.nodeType === XU.TEXT_NODE) continue;
+          const cU = eU.childNodes(XU);
+          for (let UU = 0, yU = cU.length; yU > UU; UU++) {
+            const XU = cU[UU];
+            XU && zU.push(XU)
           }
         }
       }
 
-      function oi(MM, rM, iM) {
-        return 0 !== MM.size && function(MM, rM) {
-          const iM = gM.parentNode(rM);
-          return !!iM && MM.has(iM)
-        }(MM, rM)
+      function uz(UU, XU, zU) {
+        return 0 !== UU.size && function(UU, XU) {
+          const zU = eU.parentNode(XU);
+          return !!zU && UU.has(zU)
+        }(UU, XU)
       }
 
-      function fi(MM, rM) {
-        if (0 === MM.size) return !1;
-        let iM = gM.parentNode(rM);
-        for (; iM;) {
-          if (MM.has(iM)) return !0;
-          iM = gM.parentNode(iM)
+      function fz(UU, XU) {
+        if (0 === UU.size) return !1;
+        let zU = eU.parentNode(XU);
+        for (; zU;) {
+          if (UU.has(zU)) return !0;
+          zU = eU.parentNode(zU)
         }
         return !1
       }
-      var Yi = function(MM) {
-          let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "rrweb";
-          return Wi ? function() {
+      var iz = function(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "rrweb";
+          return wz ? function() {
             try {
-              return MM(...arguments)
-            } catch (MM) {
-              if (Wi && !0 === Wi(MM, rM)) return;
-              throw MM
+              return UU(...arguments)
+            } catch (UU) {
+              if (wz && !0 === wz(UU, XU)) return;
+              throw UU
             }
-          } : MM
+          } : UU
         },
-        Ni = [];
+        Hz = [];
 
-      function Ai(MM) {
+      function Mz(UU) {
         try {
-          if ("composedPath" in MM) {
-            const rM = MM.composedPath();
-            if (rM.length) return rM[0]
-          } else if ("path" in MM && MM.path.length) return MM.path[0]
-        } catch (MM) {}
-        return MM && MM.target
+          if ("composedPath" in UU) {
+            const XU = UU.composedPath();
+            if (XU.length) return XU[0]
+          } else if ("path" in UU && UU.path.length) return UU.path[0]
+        } catch (UU) {}
+        return UU && UU.target
       }
 
-      function xi(MM, rM) {
-        const iM = new ki;
-        let OM;
-        iM.init(MM);
+      function vz(UU, XU) {
+        const zU = new Sz;
+        let cU;
+        zU.init(UU);
         try {
-          OM = new(wM())(Yi(iM.processMutations.bind(iM)));
-          const SM = {
+          cU = new(dU())(iz(zU.processMutations.bind(zU)));
+          const yU = {
             attributes: !0,
             attributeOldValue: !0,
             characterData: !0,
@@ -2032,979 +2032,979 @@ export const modules = {
             childList: !0,
             subtree: !0
           };
-          return MM.attributeFilter && MM.attributeFilter.length > 0 && (SM.attributeFilter = MM.attributeFilter), OM.observe(rM, SM), Ni.push(iM), {
-            observer: OM,
-            buffer: iM
+          return UU.attributeFilter && UU.attributeFilter.length > 0 && (yU.attributeFilter = UU.attributeFilter), cU.observe(XU, yU), Hz.push(zU), {
+            observer: cU,
+            buffer: zU
           }
-        } catch (MM) {
+        } catch (UU) {
           try {
-            null == OM || OM.disconnect(), iM.destroy(), iM.reset()
-          } catch (MM) {}
-          throw MM
+            null == cU || cU.disconnect(), zU.destroy(), zU.reset()
+          } catch (UU) {}
+          throw UU
         }
       }
 
-      function vi(MM) {
+      function Vz(UU) {
         let {
-          scrollCb: rM,
-          doc: iM,
-          mirror: OM,
-          blockClass: SM,
-          blockSelector: jM,
-          sampling: aM
-        } = MM;
-        const PM = new Map,
-          nM = MM => {
-            const aM = Ai(MM);
-            if (!aM || Ei(aM, SM, jM, !0)) return;
-            const nM = OM.getId(aM);
-            let QM, zM;
-            if (aM === iM && iM.defaultView) {
-              const MM = Ji(iM.defaultView);
-              QM = MM.left, zM = MM.top
-            } else QM = aM.scrollLeft, zM = aM.scrollTop;
-            const LM = `${QM},${zM}`;
-            PM.get(nM) !== LM && (PM.set(nM, LM), rM({
-              id: nM,
-              x: QM,
-              y: zM
+          scrollCb: XU,
+          doc: zU,
+          mirror: cU,
+          blockClass: yU,
+          blockSelector: QU,
+          sampling: AU
+        } = UU;
+        const FU = new Map,
+          oU = UU => {
+            const AU = Mz(UU);
+            if (!AU || kz(AU, yU, QU, !0)) return;
+            const oU = cU.getId(AU);
+            let DU, EU;
+            if (AU === zU && zU.defaultView) {
+              const UU = pz(zU.defaultView);
+              DU = UU.left, EU = UU.top
+            } else DU = AU.scrollLeft, EU = AU.scrollTop;
+            const YU = `${DU},${EU}`;
+            FU.get(oU) !== YU && (FU.set(oU, YU), XU({
+              id: oU,
+              x: DU,
+              y: EU
             }))
           },
-          QM = [ji("scroll", Yi(Li(Yi((MM => nM(MM))), aM.scroll || 100)), iM)];
-        return "onscrollend" in iM && QM.push(ji("scrollend", Yi(nM), iM)), () => QM.forEach((MM => MM()))
+          DU = [Qz("scroll", iz(Yz(iz((UU => oU(UU))), AU.scroll || 100)), zU)];
+        return "onscrollend" in zU && DU.push(Qz("scrollend", iz(oU), zU)), () => DU.forEach((UU => UU()))
       }
 
-      function Fi(MM, rM) {
-        for (let iM = Ni.length - 1; iM >= 0; iM--) {
-          const OM = Ni[iM];
-          if (!OM) continue;
-          let SM = OM.bufferBelongsToIframe(MM);
-          !SM && rM && rM.has(OM.bufferDoc()) && (SM = !0), SM && (OM.reset(), Ni.splice(iM, 1))
+      function sz(UU, XU) {
+        for (let zU = Hz.length - 1; zU >= 0; zU--) {
+          const cU = Hz[zU];
+          if (!cU) continue;
+          let yU = cU.bufferBelongsToIframe(UU);
+          !yU && XU && XU.has(cU.bufferDoc()) && (yU = !0), yU && (cU.reset(), Hz.splice(zU, 1))
         }
       }
-      var Bi = ["INPUT", "TEXTAREA", "SELECT"],
-        Xi = new WeakMap;
+      var nz = ["INPUT", "TEXTAREA", "SELECT"],
+        mz = new WeakMap;
 
-      function Ii(MM) {
-        return function MM(rM, iM) {
-          if (ci("CSSGroupingRule") && rM.parentRule instanceof CSSGroupingRule || ci("CSSMediaRule") && rM.parentRule instanceof CSSMediaRule || ci("CSSSupportsRule") && rM.parentRule instanceof CSSSupportsRule || ci("CSSConditionRule") && rM.parentRule instanceof CSSConditionRule) {
-            const OM = Array.from(rM.parentRule.cssRules).indexOf(rM);
-            return iM.unshift(OM), MM(rM.parentRule, iM)
+      function lz(UU) {
+        return function UU(XU, zU) {
+          if (bz("CSSGroupingRule") && XU.parentRule instanceof CSSGroupingRule || bz("CSSMediaRule") && XU.parentRule instanceof CSSMediaRule || bz("CSSSupportsRule") && XU.parentRule instanceof CSSSupportsRule || bz("CSSConditionRule") && XU.parentRule instanceof CSSConditionRule) {
+            const cU = Array.from(XU.parentRule.cssRules).indexOf(XU);
+            return zU.unshift(cU), UU(XU.parentRule, zU)
           }
-          if (rM.parentStyleSheet) {
-            const MM = Array.from(rM.parentStyleSheet.cssRules).indexOf(rM);
-            iM.unshift(MM)
+          if (XU.parentStyleSheet) {
+            const UU = Array.from(XU.parentStyleSheet.cssRules).indexOf(XU);
+            zU.unshift(UU)
           }
-          return iM
-        }(MM, [])
+          return zU
+        }(UU, [])
       }
 
-      function Ki(MM, rM, iM) {
-        let OM, SM;
-        return MM ? (MM.ownerNode ? OM = rM.getId(MM.ownerNode) : SM = iM.getId(MM), {
-          styleId: SM,
-          id: OM
+      function xz(UU, XU, zU) {
+        let cU, yU;
+        return UU ? (UU.ownerNode ? cU = XU.getId(UU.ownerNode) : yU = zU.getId(UU), {
+          styleId: yU,
+          id: cU
         }) : {}
       }
 
-      function qi(MM, rM) {
+      function Jz(UU, XU) {
         let {
-          mirror: iM,
-          stylesheetManager: OM
-        } = MM;
-        var SM, jM;
-        let aM = null;
-        aM = iM.getId("#document" === rM.nodeName ? rM : gM.host(rM));
-        const PM = "#document" === rM.nodeName ? null === (SM = rM.defaultView) || void 0 === SM ? void 0 : SM.Document : null === (jM = rM.ownerDocument) || void 0 === jM || null === (jM = jM.defaultView) || void 0 === jM ? void 0 : jM.ShadowRoot,
-          nM = (null == PM ? void 0 : PM.prototype) ? Object.getOwnPropertyDescriptor(null == PM ? void 0 : PM.prototype, "adoptedStyleSheets") : void 0;
-        return null !== aM && -1 !== aM && PM && nM ? (Object.defineProperty(rM, "adoptedStyleSheets", {
-          configurable: nM.configurable,
-          enumerable: nM.enumerable,
+          mirror: zU,
+          stylesheetManager: cU
+        } = UU;
+        var yU, QU;
+        let AU = null;
+        AU = zU.getId("#document" === XU.nodeName ? XU : eU.host(XU));
+        const FU = "#document" === XU.nodeName ? null === (yU = XU.defaultView) || void 0 === yU ? void 0 : yU.Document : null === (QU = XU.ownerDocument) || void 0 === QU || null === (QU = QU.defaultView) || void 0 === QU ? void 0 : QU.ShadowRoot,
+          oU = (null == FU ? void 0 : FU.prototype) ? Object.getOwnPropertyDescriptor(null == FU ? void 0 : FU.prototype, "adoptedStyleSheets") : void 0;
+        return null !== AU && -1 !== AU && FU && oU ? (Object.defineProperty(XU, "adoptedStyleSheets", {
+          configurable: oU.configurable,
+          enumerable: oU.enumerable,
           get() {
-            var MM;
-            return null === (MM = nM.get) || void 0 === MM ? void 0 : MM.call(this)
+            var UU;
+            return null === (UU = oU.get) || void 0 === UU ? void 0 : UU.call(this)
           },
-          set(MM) {
-            let rM;
+          set(UU) {
+            let XU;
             try {
-              var iM;
-              rM = null === (iM = nM.set) || void 0 === iM ? void 0 : iM.call(this, MM)
-            } catch (MM) {
-              if (MM && "object" == typeof MM && "NotAllowedError" === MM.name) return;
-              throw MM
+              var zU;
+              XU = null === (zU = oU.set) || void 0 === zU ? void 0 : zU.call(this, UU)
+            } catch (UU) {
+              if (UU && "object" == typeof UU && "NotAllowedError" === UU.name) return;
+              throw UU
             }
-            if (null !== aM && -1 !== aM) try {
-              OM.adoptStyleSheets(MM, aM)
-            } catch (MM) {}
-            return rM
+            if (null !== AU && -1 !== AU) try {
+              cU.adoptStyleSheets(UU, AU)
+            } catch (UU) {}
+            return XU
           }
-        }), Yi((() => {
-          Object.defineProperty(rM, "adoptedStyleSheets", {
-            configurable: nM.configurable,
-            enumerable: nM.enumerable,
-            get: nM.get,
-            set: nM.set
+        }), iz((() => {
+          Object.defineProperty(XU, "adoptedStyleSheets", {
+            configurable: oU.configurable,
+            enumerable: oU.enumerable,
+            get: oU.get,
+            set: oU.set
           })
         }))) : () => {}
       }
-      var Ti = new Set;
+      var jz = new Set;
 
-      function Vi(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const iM = MM.doc.defaultView;
-        if (!iM) return () => {};
-        let SM, jM;
-        ! function(MM, rM) {
+      function Kz(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const zU = UU.doc.defaultView;
+        if (!zU) return () => {};
+        let yU, QU;
+        ! function(UU, XU) {
           const {
-            mutationCb: iM,
-            mousemoveCb: OM,
-            mouseInteractionCb: SM,
-            scrollCb: jM,
-            viewportResizeCb: aM,
-            inputCb: PM,
-            mediaInteractionCb: nM,
-            styleSheetRuleCb: QM,
-            styleDeclarationCb: zM,
-            canvasMutationCb: LM,
-            fontCb: mM,
-            selectionCb: HM,
-            customElementCb: hM
-          } = MM;
-          MM.mutationCb = function() {
-            rM.mutation && rM.mutation(...arguments), iM(...arguments)
-          }, MM.mousemoveCb = function() {
-            rM.mousemove && rM.mousemove(...arguments), OM(...arguments)
-          }, MM.mouseInteractionCb = function() {
-            rM.mouseInteraction && rM.mouseInteraction(...arguments), SM(...arguments)
-          }, MM.scrollCb = function() {
-            rM.scroll && rM.scroll(...arguments), jM(...arguments)
-          }, MM.viewportResizeCb = function() {
-            rM.viewportResize && rM.viewportResize(...arguments), aM(...arguments)
-          }, MM.inputCb = function() {
-            rM.input && rM.input(...arguments), PM(...arguments)
-          }, MM.mediaInteractionCb = function() {
-            rM.mediaInteaction && rM.mediaInteaction(...arguments), nM(...arguments)
-          }, MM.styleSheetRuleCb = function() {
-            rM.styleSheetRule && rM.styleSheetRule(...arguments), QM(...arguments)
-          }, MM.styleDeclarationCb = function() {
-            rM.styleDeclaration && rM.styleDeclaration(...arguments), zM(...arguments)
-          }, MM.canvasMutationCb = function() {
-            rM.canvasMutation && rM.canvasMutation(...arguments), LM(...arguments)
-          }, MM.fontCb = function() {
-            rM.font && rM.font(...arguments), mM(...arguments)
-          }, MM.selectionCb = function() {
-            rM.selection && rM.selection(...arguments), HM(...arguments)
-          }, MM.customElementCb = function() {
-            rM.customElement && rM.customElement(...arguments), hM(...arguments)
+            mutationCb: zU,
+            mousemoveCb: cU,
+            mouseInteractionCb: yU,
+            scrollCb: QU,
+            viewportResizeCb: AU,
+            inputCb: FU,
+            mediaInteractionCb: oU,
+            styleSheetRuleCb: DU,
+            styleDeclarationCb: EU,
+            canvasMutationCb: YU,
+            fontCb: NU,
+            selectionCb: IU,
+            customElementCb: pU
+          } = UU;
+          UU.mutationCb = function() {
+            XU.mutation && XU.mutation(...arguments), zU(...arguments)
+          }, UU.mousemoveCb = function() {
+            XU.mousemove && XU.mousemove(...arguments), cU(...arguments)
+          }, UU.mouseInteractionCb = function() {
+            XU.mouseInteraction && XU.mouseInteraction(...arguments), yU(...arguments)
+          }, UU.scrollCb = function() {
+            XU.scroll && XU.scroll(...arguments), QU(...arguments)
+          }, UU.viewportResizeCb = function() {
+            XU.viewportResize && XU.viewportResize(...arguments), AU(...arguments)
+          }, UU.inputCb = function() {
+            XU.input && XU.input(...arguments), FU(...arguments)
+          }, UU.mediaInteractionCb = function() {
+            XU.mediaInteaction && XU.mediaInteaction(...arguments), oU(...arguments)
+          }, UU.styleSheetRuleCb = function() {
+            XU.styleSheetRule && XU.styleSheetRule(...arguments), DU(...arguments)
+          }, UU.styleDeclarationCb = function() {
+            XU.styleDeclaration && XU.styleDeclaration(...arguments), EU(...arguments)
+          }, UU.canvasMutationCb = function() {
+            XU.canvasMutation && XU.canvasMutation(...arguments), YU(...arguments)
+          }, UU.fontCb = function() {
+            XU.font && XU.font(...arguments), NU(...arguments)
+          }, UU.selectionCb = function() {
+            XU.selection && XU.selection(...arguments), IU(...arguments)
+          }, UU.customElementCb = function() {
+            XU.customElement && XU.customElement(...arguments), pU(...arguments)
           }
-        }(MM, rM);
-        const aM = [],
-          PM = Yi((() => {
+        }(UU, XU);
+        const AU = [],
+          FU = iz((() => {
             try {
-              if (jM) try {
-                jM.destroy(), jM.reset()
+              if (QU) try {
+                QU.destroy(), QU.reset()
               } finally {
-                const MM = Ni.indexOf(jM); - 1 !== MM && Ni.splice(MM, 1)
+                const UU = Hz.indexOf(QU); - 1 !== UU && Hz.splice(UU, 1)
               }
-              MM.shadowDomManager.resetForDoc(MM.doc), null == SM || SM.disconnect()
+              UU.shadowDomManager.resetForDoc(UU.doc), null == yU || yU.disconnect()
             } finally {
-              ni(aM)
+              oz(AU)
             }
           })),
-          LM = (MM, rM) => {
-            const iM = Yi((() => {
+          YU = (UU, XU) => {
+            const zU = iz((() => {
               try {
-                return rM()
-              } catch (rM) {
-                throw Ti.add(MM), rM
+                return XU()
+              } catch (XU) {
+                throw jz.add(UU), XU
               }
             }))();
-            "function" == typeof iM && aM.push(iM)
+            "function" == typeof zU && AU.push(zU)
           };
         try {
-          if (MM.recordDOM && LM("mutation", (() => {
-              const rM = xi(MM, MM.doc);
-              SM = rM.observer, jM = rM.buffer
-            })), LM("move", (() => function(MM) {
+          if (UU.recordDOM && YU("mutation", (() => {
+              const XU = vz(UU, UU.doc);
+              yU = XU.observer, QU = XU.buffer
+            })), YU("move", (() => function(UU) {
               let {
-                mousemoveCb: rM,
-                sampling: iM,
-                doc: OM,
-                mirror: SM
-              } = MM;
-              if (!1 === iM.mousemove) return () => {};
-              const jM = "number" == typeof iM.mousemove ? iM.mousemove : 50,
-                aM = "number" == typeof iM.mousemoveCallback ? iM.mousemoveCallback : 500;
-              let PM, QM = [];
-              const zM = Li(Yi((MM => {
-                  const iM = Date.now() - PM;
-                  rM(QM.map((MM => (MM.timeOffset -= iM, MM))), MM), QM = [], PM = null
-                })), aM),
-                LM = Yi(Li(Yi((MM => {
-                  const rM = Ai(MM),
+                mousemoveCb: XU,
+                sampling: zU,
+                doc: cU,
+                mirror: yU
+              } = UU;
+              if (!1 === zU.mousemove) return () => {};
+              const QU = "number" == typeof zU.mousemove ? zU.mousemove : 50,
+                AU = "number" == typeof zU.mousemoveCallback ? zU.mousemoveCallback : 500;
+              let FU, DU = [];
+              const EU = Yz(iz((UU => {
+                  const zU = Date.now() - FU;
+                  XU(DU.map((UU => (UU.timeOffset -= zU, UU))), UU), DU = [], FU = null
+                })), AU),
+                YU = iz(Yz(iz((UU => {
+                  const XU = Mz(UU),
                     {
-                      clientX: iM,
-                      clientY: OM
-                    } = Ci(MM) ? MM.changedTouches[0] : MM;
-                  PM || (PM = Hi()), QM.push({
-                    x: iM,
-                    y: OM,
-                    id: SM.getId(rM),
-                    timeOffset: Hi() - PM
-                  }), zM("undefined" != typeof DragEvent && MM instanceof DragEvent ? nM.Drag : MM instanceof MouseEvent ? nM.MouseMove : nM.TouchMove)
-                })), jM, {
+                      clientX: zU,
+                      clientY: cU
+                    } = Zz(UU) ? UU.changedTouches[0] : UU;
+                  FU || (FU = Iz()), DU.push({
+                    x: zU,
+                    y: cU,
+                    id: yU.getId(XU),
+                    timeOffset: Iz() - FU
+                  }), EU("undefined" != typeof DragEvent && UU instanceof DragEvent ? oU.Drag : UU instanceof MouseEvent ? oU.MouseMove : oU.TouchMove)
+                })), QU, {
                   trailing: !1
                 })),
-                mM = [ji("mousemove", LM, OM), ji("touchmove", LM, OM), ji("drag", LM, OM)];
-              return Yi((() => {
-                mM.forEach((MM => MM()))
+                NU = [Qz("mousemove", YU, cU), Qz("touchmove", YU, cU), Qz("drag", YU, cU)];
+              return iz((() => {
+                NU.forEach((UU => UU()))
               }))
-            }(MM))), LM("mouseInteraction", (() => function(MM) {
+            }(UU))), YU("mouseInteraction", (() => function(UU) {
               let {
-                mouseInteractionCb: rM,
-                doc: iM,
-                mirror: SM,
-                blockClass: jM,
-                blockSelector: aM,
-                sampling: PM
-              } = MM;
-              if (!1 === PM.mouseInteraction) return () => {};
-              const nM = !0 === PM.mouseInteraction || void 0 === PM.mouseInteraction ? {} : PM.mouseInteraction,
-                LM = [];
-              let mM = null;
-              return Object.keys(QM).filter((MM => Number.isNaN(Number(MM)) && !MM.endsWith("_Departed") && !1 !== nM[MM])).forEach((MM => {
-                let PM = Ur(MM);
-                const nM = (MM => iM => {
-                  const PM = Ai(iM);
-                  if (Ei(PM, jM, aM, !0)) return;
-                  let nM = null,
-                    LM = MM;
-                  if ("pointerType" in iM) {
-                    switch (iM.pointerType) {
+                mouseInteractionCb: XU,
+                doc: zU,
+                mirror: yU,
+                blockClass: QU,
+                blockSelector: AU,
+                sampling: FU
+              } = UU;
+              if (!1 === FU.mouseInteraction) return () => {};
+              const oU = !0 === FU.mouseInteraction || void 0 === FU.mouseInteraction ? {} : FU.mouseInteraction,
+                YU = [];
+              let NU = null;
+              return Object.keys(DU).filter((UU => Number.isNaN(Number(UU)) && !UU.endsWith("_Departed") && !1 !== oU[UU])).forEach((UU => {
+                let FU = BX(UU);
+                const oU = (UU => zU => {
+                  const FU = Mz(zU);
+                  if (kz(FU, QU, AU, !0)) return;
+                  let oU = null,
+                    YU = UU;
+                  if ("pointerType" in zU) {
+                    switch (zU.pointerType) {
                       case "mouse":
-                        nM = zM.Mouse;
+                        oU = EU.Mouse;
                         break;
                       case "touch":
-                        nM = zM.Touch;
+                        oU = EU.Touch;
                         break;
                       case "pen":
-                        nM = zM.Pen
+                        oU = EU.Pen
                     }
-                    nM === zM.Touch && (QM[MM] === QM.MouseDown ? LM = "TouchStart" : QM[MM] === QM.MouseUp && (LM = "TouchEnd"))
-                  } else Ci(iM) && (nM = zM.Touch);
-                  null !== nM ? (mM = nM, (LM.startsWith("Touch") && nM === zM.Touch || LM.startsWith("Mouse") && nM === zM.Mouse) && (nM = null)) : QM[MM] === QM.Click && (nM = mM, mM = null);
-                  const HM = Ci(iM) ? iM.changedTouches[0] : iM;
-                  if (!HM) return;
-                  const hM = SM.getId(PM),
+                    oU === EU.Touch && (DU[UU] === DU.MouseDown ? YU = "TouchStart" : DU[UU] === DU.MouseUp && (YU = "TouchEnd"))
+                  } else Zz(zU) && (oU = EU.Touch);
+                  null !== oU ? (NU = oU, (YU.startsWith("Touch") && oU === EU.Touch || YU.startsWith("Mouse") && oU === EU.Mouse) && (oU = null)) : DU[UU] === DU.Click && (oU = NU, NU = null);
+                  const IU = Zz(zU) ? zU.changedTouches[0] : zU;
+                  if (!IU) return;
+                  const pU = yU.getId(FU),
                     {
-                      clientX: JM,
-                      clientY: dM
-                    } = HM;
-                  Yi(rM)(OM({
-                    type: QM[LM],
-                    id: hM,
-                    x: JM,
-                    y: dM
-                  }, null !== nM && {
-                    pointerType: nM
+                      clientX: aU,
+                      clientY: tU
+                    } = IU;
+                  iz(XU)(cU({
+                    type: DU[YU],
+                    id: pU,
+                    x: aU,
+                    y: tU
+                  }, null !== oU && {
+                    pointerType: oU
                   }))
-                })(MM);
-                if (window.PointerEvent) switch (QM[MM]) {
-                  case QM.MouseDown:
-                  case QM.MouseUp:
-                    PM = PM.replace("mouse", "pointer");
+                })(UU);
+                if (window.PointerEvent) switch (DU[UU]) {
+                  case DU.MouseDown:
+                  case DU.MouseUp:
+                    FU = FU.replace("mouse", "pointer");
                     break;
-                  case QM.TouchStart:
-                  case QM.TouchEnd:
+                  case DU.TouchStart:
+                  case DU.TouchEnd:
                     return
                 }
-                LM.push(ji(PM, nM, iM))
-              })), Yi((() => {
-                LM.forEach((MM => MM()))
+                YU.push(Qz(FU, oU, zU))
+              })), iz((() => {
+                YU.forEach((UU => UU()))
               }))
-            }(MM))), LM("scroll", (() => vi(MM))), LM("viewportResize", (() => function(MM, rM) {
+            }(UU))), YU("scroll", (() => Vz(UU))), YU("viewportResize", (() => function(UU, XU) {
               let {
-                viewportResizeCb: iM
-              } = MM, {
-                win: OM
-              } = rM, SM = -1, jM = -1;
-              return ji("resize", Yi(Li(Yi((() => {
-                const MM = di(),
-                  rM = yi();
-                SM === MM && jM === rM || (iM({
-                  width: Number(rM),
-                  height: Number(MM)
-                }), SM = MM, jM = rM)
-              })), 200)), OM)
-            }(MM, {
-              win: iM
-            }))), LM("input", (() => function(MM) {
+                viewportResizeCb: zU
+              } = UU, {
+                win: cU
+              } = XU, yU = -1, QU = -1;
+              return Qz("resize", iz(Yz(iz((() => {
+                const UU = az(),
+                  XU = tz();
+                yU === UU && QU === XU || (zU({
+                  width: Number(XU),
+                  height: Number(UU)
+                }), yU = UU, QU = XU)
+              })), 200)), cU)
+            }(UU, {
+              win: zU
+            }))), YU("input", (() => function(UU) {
               let {
-                inputCb: rM,
-                doc: iM,
-                mirror: SM,
-                blockClass: jM,
-                blockSelector: aM,
-                ignoreClass: PM,
-                ignoreSelector: nM,
-                maskInputOptions: QM,
-                maskInputFn: zM,
-                sampling: LM,
-                userTriggeredOnInput: mM
-              } = MM;
+                inputCb: XU,
+                doc: zU,
+                mirror: yU,
+                blockClass: QU,
+                blockSelector: AU,
+                ignoreClass: FU,
+                ignoreSelector: oU,
+                maskInputOptions: DU,
+                maskInputFn: EU,
+                sampling: YU,
+                userTriggeredOnInput: NU
+              } = UU;
 
-              function HM(MM) {
-                let rM = Ai(MM);
-                const OM = MM.isTrusted,
-                  SM = iM.defaultView;
-                if (rM && SM && !(rM instanceof SM.HTMLElement)) return;
-                const LM = rM && rM.tagName;
-                if (rM && "OPTION" === LM && (rM = gM.parentElement(rM)), !rM || !LM || 0 > Bi.indexOf(LM) || Ei(rM, jM, aM, !0)) return;
-                if (rM.classList.contains(PM) || nM && rM.matches(nM)) return;
-                let HM = rM.value,
-                  JM = !1;
-                const dM = br(rM) || "";
-                "radio" === dM || "checkbox" === dM ? JM = rM.checked : (QM[LM.toLowerCase()] || QM[dM]) && (HM = Er({
-                  element: rM,
-                  maskInputOptions: QM,
-                  tagName: LM,
-                  type: dM,
-                  value: HM,
-                  maskInputFn: zM
-                })), hM(rM, mM ? {
-                  text: HM,
-                  isChecked: JM,
-                  userTriggered: OM
+              function IU(UU) {
+                let XU = Mz(UU);
+                const cU = UU.isTrusted,
+                  yU = zU.defaultView;
+                if (XU && yU && !(XU instanceof yU.HTMLElement)) return;
+                const YU = XU && XU.tagName;
+                if (XU && "OPTION" === YU && (XU = eU.parentElement(XU)), !XU || !YU || 0 > nz.indexOf(YU) || kz(XU, QU, AU, !0)) return;
+                if (XU.classList.contains(FU) || oU && XU.matches(oU)) return;
+                let IU = XU.value,
+                  aU = !1;
+                const tU = WX(XU) || "";
+                "radio" === tU || "checkbox" === tU ? aU = XU.checked : (DU[YU.toLowerCase()] || DU[tU]) && (IU = GX({
+                  element: XU,
+                  maskInputOptions: DU,
+                  tagName: YU,
+                  type: tU,
+                  value: IU,
+                  maskInputFn: EU
+                })), pU(XU, NU ? {
+                  text: IU,
+                  isChecked: aU,
+                  userTriggered: cU
                 } : {
-                  text: HM,
-                  isChecked: JM
+                  text: IU,
+                  isChecked: aU
                 });
-                const yM = rM.name;
-                "radio" === dM && yM && JM && iM.querySelectorAll(`input[type="radio"][name="${yM}"]`).forEach((MM => {
-                  if (MM !== rM) {
-                    const rM = MM.value;
-                    hM(MM, mM ? {
-                      text: rM,
-                      isChecked: !JM,
+                const gU = XU.name;
+                "radio" === tU && gU && aU && zU.querySelectorAll(`input[type="radio"][name="${gU}"]`).forEach((UU => {
+                  if (UU !== XU) {
+                    const XU = UU.value;
+                    pU(UU, NU ? {
+                      text: XU,
+                      isChecked: !aU,
                       userTriggered: !1
                     } : {
-                      text: rM,
-                      isChecked: !JM
+                      text: XU,
+                      isChecked: !aU
                     })
                   }
                 }))
               }
 
-              function hM(MM, iM) {
-                const jM = Xi.get(MM);
-                if (!jM || jM.text !== iM.text || jM.isChecked !== iM.isChecked) {
-                  Xi.set(MM, iM);
-                  const jM = SM.getId(MM);
-                  Yi(rM)(OM(OM({}, iM), {}, {
-                    id: jM
+              function pU(UU, zU) {
+                const QU = mz.get(UU);
+                if (!QU || QU.text !== zU.text || QU.isChecked !== zU.isChecked) {
+                  mz.set(UU, zU);
+                  const QU = yU.getId(UU);
+                  iz(XU)(cU(cU({}, zU), {}, {
+                    id: QU
                   }))
                 }
               }
-              const JM = ("last" === LM.input ? ["change"] : ["input", "change"]).map((MM => ji(MM, Yi(HM), iM))),
-                dM = iM.defaultView;
-              if (!dM) return () => {
-                JM.forEach((MM => MM()))
+              const aU = ("last" === YU.input ? ["change"] : ["input", "change"]).map((UU => Qz(UU, iz(IU), zU))),
+                tU = zU.defaultView;
+              if (!tU) return () => {
+                aU.forEach((UU => UU()))
               };
-              const yM = dM.Object.getOwnPropertyDescriptor(dM.HTMLInputElement.prototype, "value");
-              return yM && yM.set && JM.push(...[
-                [dM.HTMLInputElement.prototype, "value"],
-                [dM.HTMLInputElement.prototype, "checked"],
-                [dM.HTMLSelectElement.prototype, "value"],
-                [dM.HTMLTextAreaElement.prototype, "value"],
-                [dM.HTMLSelectElement.prototype, "selectedIndex"],
-                [dM.HTMLOptionElement.prototype, "selected"]
-              ].map((MM => mi(MM[0], MM[1], {
+              const gU = tU.Object.getOwnPropertyDescriptor(tU.HTMLInputElement.prototype, "value");
+              return gU && gU.set && aU.push(...[
+                [tU.HTMLInputElement.prototype, "value"],
+                [tU.HTMLInputElement.prototype, "checked"],
+                [tU.HTMLSelectElement.prototype, "value"],
+                [tU.HTMLTextAreaElement.prototype, "value"],
+                [tU.HTMLSelectElement.prototype, "selectedIndex"],
+                [tU.HTMLOptionElement.prototype, "selected"]
+              ].map((UU => Nz(UU[0], UU[1], {
                 set() {
-                  Yi(HM)({
+                  iz(IU)({
                     target: this,
                     isTrusted: !1
                   })
                 }
-              }, !1, dM)))), Yi((() => {
-                ni(JM)
+              }, !1, tU)))), iz((() => {
+                oz(aU)
               }))
-            }(MM))), LM("mediaInteraction", (() => function(MM) {
+            }(UU))), YU("mediaInteraction", (() => function(UU) {
               let {
-                mediaInteractionCb: rM,
-                blockClass: iM,
-                blockSelector: OM,
-                mirror: SM,
-                sampling: jM,
-                doc: aM
-              } = MM;
-              const PM = Yi((MM => Li(Yi((jM => {
-                  const aM = Ai(jM);
-                  if (!aM || Ei(aM, iM, OM, !0)) return;
+                mediaInteractionCb: XU,
+                blockClass: zU,
+                blockSelector: cU,
+                mirror: yU,
+                sampling: QU,
+                doc: AU
+              } = UU;
+              const FU = iz((UU => Yz(iz((QU => {
+                  const AU = Mz(QU);
+                  if (!AU || kz(AU, zU, cU, !0)) return;
                   const {
-                    currentTime: PM,
-                    volume: nM,
-                    muted: QM,
-                    playbackRate: zM,
-                    loop: LM
-                  } = aM;
-                  rM({
-                    type: MM,
-                    id: SM.getId(aM),
-                    currentTime: PM,
-                    volume: nM,
-                    muted: QM,
-                    playbackRate: zM,
-                    loop: LM
+                    currentTime: FU,
+                    volume: oU,
+                    muted: DU,
+                    playbackRate: EU,
+                    loop: YU
+                  } = AU;
+                  XU({
+                    type: UU,
+                    id: yU.getId(AU),
+                    currentTime: FU,
+                    volume: oU,
+                    muted: DU,
+                    playbackRate: EU,
+                    loop: YU
                   })
-                })), jM.media || 500))),
-                nM = [ji("play", PM(mM.Play), aM), ji("pause", PM(mM.Pause), aM), ji("seeked", PM(mM.Seeked), aM), ji("volumechange", PM(mM.VolumeChange), aM), ji("ratechange", PM(mM.RateChange), aM)];
-              return Yi((() => {
-                nM.forEach((MM => MM()))
+                })), QU.media || 500))),
+                oU = [Qz("play", FU(NU.Play), AU), Qz("pause", FU(NU.Pause), AU), Qz("seeked", FU(NU.Seeked), AU), Qz("volumechange", FU(NU.VolumeChange), AU), Qz("ratechange", FU(NU.RateChange), AU)];
+              return iz((() => {
+                oU.forEach((UU => UU()))
               }))
-            }(MM))), MM.recordDOM) {
-            const rM = function(MM) {
-              const rM = new Map,
-                iM = new Set;
-              let OM = !0;
-              const SM = MM => {
-                  if (OM) try {
-                    MM()
-                  } catch (MM) {}
+            }(UU))), UU.recordDOM) {
+            const XU = function(UU) {
+              const XU = new Map,
+                zU = new Set;
+              let cU = !0;
+              const yU = UU => {
+                  if (cU) try {
+                    UU()
+                  } catch (UU) {}
                 },
-                jM = MM => {
-                  var iM;
-                  const OM = rM.get(MM);
-                  if (OM) {
-                    for (; null === (iM = OM[0]) || void 0 === iM ? void 0 : iM.ready;) {
-                      const MM = OM.shift();
-                      (null == MM ? void 0 : MM.emit) && SM(MM.emit)
+                QU = UU => {
+                  var zU;
+                  const cU = XU.get(UU);
+                  if (cU) {
+                    for (; null === (zU = cU[0]) || void 0 === zU ? void 0 : zU.ready;) {
+                      const UU = cU.shift();
+                      (null == UU ? void 0 : UU.emit) && yU(UU.emit)
                     }
-                    0 === OM.length && rM.delete(MM)
+                    0 === cU.length && XU.delete(UU)
                   }
                 };
               return {
-                queueMutation(MM, iM) {
-                  if (!MM) return void SM(iM);
-                  const OM = rM.get(MM);
-                  OM ? (OM.push({
-                    emit: iM,
+                queueMutation(UU, zU) {
+                  if (!UU) return void yU(zU);
+                  const cU = XU.get(UU);
+                  cU ? (cU.push({
+                    emit: zU,
                     ready: !0
-                  }), jM(MM)) : SM(iM)
+                  }), QU(UU)) : yU(zU)
                 },
-                queuePendingMutation(aM, PM, nM) {
-                  if (!OM) return () => {};
-                  let QM = rM.get(aM);
-                  QM || (QM = [], rM.set(aM, QM));
-                  const zM = {
-                    emit: PM,
+                queuePendingMutation(AU, FU, oU) {
+                  if (!cU) return () => {};
+                  let DU = XU.get(AU);
+                  DU || (DU = [], XU.set(AU, DU));
+                  const EU = {
+                    emit: FU,
                     ready: !1
                   };
-                  QM.push(zM);
-                  let LM, mM = !1,
-                    HM = !1;
-                  const hM = () => {
-                    mM || HM || (mM = !0, void 0 !== LM && iM.delete(LM), zM.ready = !0, zM.emit = void 0, jM(aM))
+                  DU.push(EU);
+                  let YU, NU = !1,
+                    IU = !1;
+                  const pU = () => {
+                    NU || IU || (NU = !0, void 0 !== YU && zU.delete(YU), EU.ready = !0, EU.emit = void 0, QU(AU))
                   };
                   try {
-                    LM = MM.setTimeout(hM, 5e3), mM || HM ? MM.clearTimeout(LM) : iM.add(LM)
-                  } catch (MM) {
-                    hM()
+                    YU = UU.setTimeout(pU, 5e3), NU || IU ? UU.clearTimeout(YU) : zU.add(YU)
+                  } catch (UU) {
+                    pU()
                   }
-                  return rM => {
-                    !HM && OM && (HM = !0, void 0 !== LM && (MM.clearTimeout(LM), iM.delete(LM)), mM ? rM && SM(nM) : (zM.ready = !0, rM || (zM.emit = void 0), jM(aM)))
+                  return XU => {
+                    !IU && cU && (IU = !0, void 0 !== YU && (UU.clearTimeout(YU), zU.delete(YU)), NU ? XU && yU(oU) : (EU.ready = !0, XU || (EU.emit = void 0), QU(AU)))
                   }
                 },
                 reset() {
-                  OM = !1, iM.forEach((rM => MM.clearTimeout(rM))), iM.clear(), rM.clear()
+                  cU = !1, zU.forEach((XU => UU.clearTimeout(XU))), zU.clear(), XU.clear()
                 }
               }
-            }(iM);
-            aM.push(rM.reset), LM("styleSheet", (() => function(MM, rM) {
+            }(zU);
+            AU.push(XU.reset), YU("styleSheet", (() => function(UU, XU) {
               let {
-                styleSheetRuleCb: iM,
-                mirror: OM,
-                stylesheetManager: SM
-              } = MM, {
-                win: jM,
-                mutationQueue: aM
-              } = rM;
-              if (!jM.CSSStyleSheet || !jM.CSSStyleSheet.prototype) return () => {};
-              const PM = jM.CSSStyleSheet.prototype.insertRule;
-              jM.CSSStyleSheet.prototype.insertRule = new Proxy(PM, {
-                apply: Yi(((MM, rM, jM) => {
-                  const [PM] = jM, nM = MM.apply(rM, jM);
-                  SM.onCssomSheetMutation(rM);
+                styleSheetRuleCb: zU,
+                mirror: cU,
+                stylesheetManager: yU
+              } = UU, {
+                win: QU,
+                mutationQueue: AU
+              } = XU;
+              if (!QU.CSSStyleSheet || !QU.CSSStyleSheet.prototype) return () => {};
+              const FU = QU.CSSStyleSheet.prototype.insertRule;
+              QU.CSSStyleSheet.prototype.insertRule = new Proxy(FU, {
+                apply: iz(((UU, XU, QU) => {
+                  const [FU] = QU, oU = UU.apply(XU, QU);
+                  yU.onCssomSheetMutation(XU);
                   const {
-                    id: QM,
-                    styleId: zM
-                  } = Ki(rM, OM, SM.styleMirror);
-                  return (QM && -1 !== QM || zM && -1 !== zM) && aM.queueMutation(rM, (() => iM({
-                    id: QM,
-                    styleId: zM,
+                    id: DU,
+                    styleId: EU
+                  } = xz(XU, cU, yU.styleMirror);
+                  return (DU && -1 !== DU || EU && -1 !== EU) && AU.queueMutation(XU, (() => zU({
+                    id: DU,
+                    styleId: EU,
                     adds: [{
-                      rule: PM,
-                      index: nM
+                      rule: FU,
+                      index: oU
                     }]
-                  }))), nM
+                  }))), oU
                 }), "host")
-              }), jM.CSSStyleSheet.prototype.addRule = function(MM, rM) {
-                let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
-                return jM.CSSStyleSheet.prototype.insertRule.apply(this, [`${MM} { ${rM} }`, iM])
+              }), QU.CSSStyleSheet.prototype.addRule = function(UU, XU) {
+                let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
+                return QU.CSSStyleSheet.prototype.insertRule.apply(this, [`${UU} { ${XU} }`, zU])
               };
-              const nM = jM.CSSStyleSheet.prototype.deleteRule;
-              let QM, zM;
-              jM.CSSStyleSheet.prototype.deleteRule = new Proxy(nM, {
-                apply: Yi(((MM, rM, jM) => {
-                  const [PM] = jM, nM = MM.apply(rM, jM);
-                  SM.onCssomSheetMutation(rM);
+              const oU = QU.CSSStyleSheet.prototype.deleteRule;
+              let DU, EU;
+              QU.CSSStyleSheet.prototype.deleteRule = new Proxy(oU, {
+                apply: iz(((UU, XU, QU) => {
+                  const [FU] = QU, oU = UU.apply(XU, QU);
+                  yU.onCssomSheetMutation(XU);
                   const {
-                    id: QM,
-                    styleId: zM
-                  } = Ki(rM, OM, SM.styleMirror);
-                  return (QM && -1 !== QM || zM && -1 !== zM) && aM.queueMutation(rM, (() => iM({
-                    id: QM,
-                    styleId: zM,
+                    id: DU,
+                    styleId: EU
+                  } = xz(XU, cU, yU.styleMirror);
+                  return (DU && -1 !== DU || EU && -1 !== EU) && AU.queueMutation(XU, (() => zU({
+                    id: DU,
+                    styleId: EU,
                     removes: [{
-                      index: PM
+                      index: FU
                     }]
-                  }))), nM
+                  }))), oU
                 }), "host")
-              }), jM.CSSStyleSheet.prototype.removeRule = function(MM) {
-                return jM.CSSStyleSheet.prototype.deleteRule.apply(this, [MM])
-              }, jM.CSSStyleSheet.prototype.replace && (QM = jM.CSSStyleSheet.prototype.replace, jM.CSSStyleSheet.prototype.replace = new Proxy(QM, {
-                apply: Yi(((MM, rM, jM) => {
-                  const [PM] = jM, nM = MM.apply(rM, jM);
+              }), QU.CSSStyleSheet.prototype.removeRule = function(UU) {
+                return QU.CSSStyleSheet.prototype.deleteRule.apply(this, [UU])
+              }, QU.CSSStyleSheet.prototype.replace && (DU = QU.CSSStyleSheet.prototype.replace, QU.CSSStyleSheet.prototype.replace = new Proxy(DU, {
+                apply: iz(((UU, XU, QU) => {
+                  const [FU] = QU, oU = UU.apply(XU, QU);
                   try {
-                    const MM = null == nM ? void 0 : nM.then;
-                    if (rM.ownerNode || !nM || "function" != typeof MM) return nM;
-                    SM.onCssomSheetMutation(rM);
+                    const UU = null == oU ? void 0 : oU.then;
+                    if (XU.ownerNode || !oU || "function" != typeof UU) return oU;
+                    yU.onCssomSheetMutation(XU);
                     const {
-                      id: jM,
-                      styleId: QM
-                    } = Ki(rM, OM, SM.styleMirror);
-                    if (!(jM && -1 !== jM || QM && -1 !== QM)) return nM;
-                    const zM = aM.queuePendingMutation(rM, (() => iM({
-                      id: jM,
-                      styleId: QM,
-                      replace: PM
+                      id: QU,
+                      styleId: DU
+                    } = xz(XU, cU, yU.styleMirror);
+                    if (!(QU && -1 !== QU || DU && -1 !== DU)) return oU;
+                    const EU = AU.queuePendingMutation(XU, (() => zU({
+                      id: QU,
+                      styleId: DU,
+                      replace: FU
                     })), (() => {
-                      const MM = Lr(rM);
-                      null !== MM && iM({
-                        id: jM,
-                        styleId: QM,
-                        replace: MM
+                      const UU = YX(XU);
+                      null !== UU && zU({
+                        id: QU,
+                        styleId: DU,
+                        replace: UU
                       })
                     }));
                     try {
-                      MM.call(nM, (() => zM(!0)), (() => zM(!1)))
-                    } catch (iM) {
-                      zM(!1)
+                      UU.call(oU, (() => EU(!0)), (() => EU(!1)))
+                    } catch (zU) {
+                      EU(!1)
                     }
-                  } catch (iM) {}
-                  return nM
+                  } catch (zU) {}
+                  return oU
                 }), "host")
-              })), jM.CSSStyleSheet.prototype.replaceSync && (zM = jM.CSSStyleSheet.prototype.replaceSync, jM.CSSStyleSheet.prototype.replaceSync = new Proxy(zM, {
-                apply: Yi(((MM, rM, jM) => {
-                  const [PM] = jM, nM = MM.apply(rM, jM);
-                  SM.onCssomSheetMutation(rM);
+              })), QU.CSSStyleSheet.prototype.replaceSync && (EU = QU.CSSStyleSheet.prototype.replaceSync, QU.CSSStyleSheet.prototype.replaceSync = new Proxy(EU, {
+                apply: iz(((UU, XU, QU) => {
+                  const [FU] = QU, oU = UU.apply(XU, QU);
+                  yU.onCssomSheetMutation(XU);
                   const {
-                    id: QM,
-                    styleId: zM
-                  } = Ki(rM, OM, SM.styleMirror);
-                  return (QM && -1 !== QM || zM && -1 !== zM) && aM.queueMutation(rM, (() => iM({
-                    id: QM,
-                    styleId: zM,
-                    replaceSync: PM
-                  }))), nM
+                    id: DU,
+                    styleId: EU
+                  } = xz(XU, cU, yU.styleMirror);
+                  return (DU && -1 !== DU || EU && -1 !== EU) && AU.queueMutation(XU, (() => zU({
+                    id: DU,
+                    styleId: EU,
+                    replaceSync: FU
+                  }))), oU
                 }), "host")
               }));
-              const LM = {};
-              MO("CSSGroupingRule") ? LM.CSSGroupingRule = jM.CSSGroupingRule : (MO("CSSMediaRule") && (LM.CSSMediaRule = jM.CSSMediaRule), MO("CSSConditionRule") && (LM.CSSConditionRule = jM.CSSConditionRule), MO("CSSSupportsRule") && (LM.CSSSupportsRule = jM.CSSSupportsRule));
-              const mM = {};
-              return Object.entries(LM).forEach((MM => {
-                let [rM, jM] = MM;
-                mM[rM] = {
-                  insertRule: jM.prototype.insertRule,
-                  deleteRule: jM.prototype.deleteRule
-                }, jM.prototype.insertRule = new Proxy(mM[rM].insertRule, {
-                  apply: Yi(((MM, rM, jM) => {
-                    const [PM] = jM, nM = MM.apply(rM, jM);
-                    SM.onCssomSheetMutation(rM.parentStyleSheet);
+              const YU = {};
+              Tz("CSSGroupingRule") ? YU.CSSGroupingRule = QU.CSSGroupingRule : (Tz("CSSMediaRule") && (YU.CSSMediaRule = QU.CSSMediaRule), Tz("CSSConditionRule") && (YU.CSSConditionRule = QU.CSSConditionRule), Tz("CSSSupportsRule") && (YU.CSSSupportsRule = QU.CSSSupportsRule));
+              const NU = {};
+              return Object.entries(YU).forEach((UU => {
+                let [XU, QU] = UU;
+                NU[XU] = {
+                  insertRule: QU.prototype.insertRule,
+                  deleteRule: QU.prototype.deleteRule
+                }, QU.prototype.insertRule = new Proxy(NU[XU].insertRule, {
+                  apply: iz(((UU, XU, QU) => {
+                    const [FU] = QU, oU = UU.apply(XU, QU);
+                    yU.onCssomSheetMutation(XU.parentStyleSheet);
                     const {
-                      id: QM,
-                      styleId: zM
-                    } = Ki(rM.parentStyleSheet, OM, SM.styleMirror);
-                    if (rM.parentStyleSheet && (QM && -1 !== QM || zM && -1 !== zM)) {
-                      const MM = [...Ii(rM), nM];
-                      aM.queueMutation(rM.parentStyleSheet, (() => iM({
-                        id: QM,
-                        styleId: zM,
+                      id: DU,
+                      styleId: EU
+                    } = xz(XU.parentStyleSheet, cU, yU.styleMirror);
+                    if (XU.parentStyleSheet && (DU && -1 !== DU || EU && -1 !== EU)) {
+                      const UU = [...lz(XU), oU];
+                      AU.queueMutation(XU.parentStyleSheet, (() => zU({
+                        id: DU,
+                        styleId: EU,
                         adds: [{
-                          rule: PM,
-                          index: MM
+                          rule: FU,
+                          index: UU
                         }]
                       })))
                     }
-                    return nM
+                    return oU
                   }), "host")
-                }), jM.prototype.deleteRule = new Proxy(mM[rM].deleteRule, {
-                  apply: Yi(((MM, rM, jM) => {
-                    const [PM] = jM, nM = MM.apply(rM, jM);
-                    SM.onCssomSheetMutation(rM.parentStyleSheet);
+                }), QU.prototype.deleteRule = new Proxy(NU[XU].deleteRule, {
+                  apply: iz(((UU, XU, QU) => {
+                    const [FU] = QU, oU = UU.apply(XU, QU);
+                    yU.onCssomSheetMutation(XU.parentStyleSheet);
                     const {
-                      id: QM,
-                      styleId: zM
-                    } = Ki(rM.parentStyleSheet, OM, SM.styleMirror);
-                    if (rM.parentStyleSheet && (QM && -1 !== QM || zM && -1 !== zM)) {
-                      const MM = [...Ii(rM), PM];
-                      aM.queueMutation(rM.parentStyleSheet, (() => iM({
-                        id: QM,
-                        styleId: zM,
+                      id: DU,
+                      styleId: EU
+                    } = xz(XU.parentStyleSheet, cU, yU.styleMirror);
+                    if (XU.parentStyleSheet && (DU && -1 !== DU || EU && -1 !== EU)) {
+                      const UU = [...lz(XU), FU];
+                      AU.queueMutation(XU.parentStyleSheet, (() => zU({
+                        id: DU,
+                        styleId: EU,
                         removes: [{
-                          index: MM
+                          index: UU
                         }]
                       })))
                     }
-                    return nM
+                    return oU
                   }), "host")
                 })
-              })), Yi((() => {
-                jM.CSSStyleSheet.prototype.insertRule = PM, jM.CSSStyleSheet.prototype.deleteRule = nM, QM && (jM.CSSStyleSheet.prototype.replace = QM), zM && (jM.CSSStyleSheet.prototype.replaceSync = zM), Object.entries(LM).forEach((MM => {
-                  let [rM, iM] = MM;
-                  iM.prototype.insertRule = mM[rM].insertRule, iM.prototype.deleteRule = mM[rM].deleteRule
+              })), iz((() => {
+                QU.CSSStyleSheet.prototype.insertRule = FU, QU.CSSStyleSheet.prototype.deleteRule = oU, DU && (QU.CSSStyleSheet.prototype.replace = DU), EU && (QU.CSSStyleSheet.prototype.replaceSync = EU), Object.entries(YU).forEach((UU => {
+                  let [XU, zU] = UU;
+                  zU.prototype.insertRule = NU[XU].insertRule, zU.prototype.deleteRule = NU[XU].deleteRule
                 }))
               }))
-            }(MM, {
-              win: iM,
-              mutationQueue: rM
-            }))), LM("adoptedStyleSheet", (() => qi(MM, MM.doc))), LM("styleDeclaration", (() => function(MM, rM) {
+            }(UU, {
+              win: zU,
+              mutationQueue: XU
+            }))), YU("adoptedStyleSheet", (() => Jz(UU, UU.doc))), YU("styleDeclaration", (() => function(UU, XU) {
               let {
-                styleDeclarationCb: iM,
-                mirror: OM,
-                ignoreCSSAttributes: SM,
-                stylesheetManager: jM
-              } = MM, {
-                win: aM,
-                mutationQueue: PM
-              } = rM;
-              const nM = aM.CSSStyleDeclaration.prototype.setProperty;
-              aM.CSSStyleDeclaration.prototype.setProperty = new Proxy(nM, {
-                apply: Yi(((MM, rM, aM) => {
-                  var nM;
-                  const [QM, zM, LM] = aM, mM = MM.apply(rM, aM);
-                  if (SM.has(QM)) return mM;
-                  const HM = null === (nM = rM.parentRule) || void 0 === nM ? void 0 : nM.parentStyleSheet;
-                  jM.onCssomSheetMutation(HM);
+                styleDeclarationCb: zU,
+                mirror: cU,
+                ignoreCSSAttributes: yU,
+                stylesheetManager: QU
+              } = UU, {
+                win: AU,
+                mutationQueue: FU
+              } = XU;
+              const oU = AU.CSSStyleDeclaration.prototype.setProperty;
+              AU.CSSStyleDeclaration.prototype.setProperty = new Proxy(oU, {
+                apply: iz(((UU, XU, AU) => {
+                  var oU;
+                  const [DU, EU, YU] = AU, NU = UU.apply(XU, AU);
+                  if (yU.has(DU)) return NU;
+                  const IU = null === (oU = XU.parentRule) || void 0 === oU ? void 0 : oU.parentStyleSheet;
+                  QU.onCssomSheetMutation(IU);
                   const {
-                    id: hM,
-                    styleId: JM
-                  } = Ki(HM, OM, jM.styleMirror);
-                  if (hM && -1 !== hM || JM && -1 !== JM) {
-                    const MM = Ii(rM.parentRule);
-                    PM.queueMutation(HM, (() => iM({
-                      id: hM,
-                      styleId: JM,
+                    id: pU,
+                    styleId: aU
+                  } = xz(IU, cU, QU.styleMirror);
+                  if (pU && -1 !== pU || aU && -1 !== aU) {
+                    const UU = lz(XU.parentRule);
+                    FU.queueMutation(IU, (() => zU({
+                      id: pU,
+                      styleId: aU,
                       set: {
-                        property: QM,
-                        value: zM,
-                        priority: LM
+                        property: DU,
+                        value: EU,
+                        priority: YU
                       },
-                      index: MM
+                      index: UU
                     })))
                   }
-                  return mM
+                  return NU
                 }), "host")
               });
-              const QM = aM.CSSStyleDeclaration.prototype.removeProperty;
-              return aM.CSSStyleDeclaration.prototype.removeProperty = new Proxy(QM, {
-                apply: Yi(((MM, rM, aM) => {
-                  var nM;
-                  const [QM] = aM, zM = MM.apply(rM, aM);
-                  if (SM.has(QM)) return zM;
-                  const LM = null === (nM = rM.parentRule) || void 0 === nM ? void 0 : nM.parentStyleSheet;
-                  jM.onCssomSheetMutation(LM);
+              const DU = AU.CSSStyleDeclaration.prototype.removeProperty;
+              return AU.CSSStyleDeclaration.prototype.removeProperty = new Proxy(DU, {
+                apply: iz(((UU, XU, AU) => {
+                  var oU;
+                  const [DU] = AU, EU = UU.apply(XU, AU);
+                  if (yU.has(DU)) return EU;
+                  const YU = null === (oU = XU.parentRule) || void 0 === oU ? void 0 : oU.parentStyleSheet;
+                  QU.onCssomSheetMutation(YU);
                   const {
-                    id: mM,
-                    styleId: HM
-                  } = Ki(LM, OM, jM.styleMirror);
-                  if (mM && -1 !== mM || HM && -1 !== HM) {
-                    const MM = Ii(rM.parentRule);
-                    PM.queueMutation(LM, (() => iM({
-                      id: mM,
-                      styleId: HM,
+                    id: NU,
+                    styleId: IU
+                  } = xz(YU, cU, QU.styleMirror);
+                  if (NU && -1 !== NU || IU && -1 !== IU) {
+                    const UU = lz(XU.parentRule);
+                    FU.queueMutation(YU, (() => zU({
+                      id: NU,
+                      styleId: IU,
                       remove: {
-                        property: QM
+                        property: DU
                       },
-                      index: MM
+                      index: UU
                     })))
                   }
-                  return zM
+                  return EU
                 }), "host")
-              }), Yi((() => {
-                aM.CSSStyleDeclaration.prototype.setProperty = nM, aM.CSSStyleDeclaration.prototype.removeProperty = QM
+              }), iz((() => {
+                AU.CSSStyleDeclaration.prototype.setProperty = oU, AU.CSSStyleDeclaration.prototype.removeProperty = DU
               }))
-            }(MM, {
-              win: iM,
-              mutationQueue: rM
-            }))), MM.collectFonts && LM("font", (() => function(MM) {
+            }(UU, {
+              win: zU,
+              mutationQueue: XU
+            }))), UU.collectFonts && YU("font", (() => function(UU) {
               let {
-                fontCb: rM,
-                doc: iM
-              } = MM;
-              const OM = iM.defaultView;
-              if (!OM) return () => {};
-              const SM = [],
-                jM = new WeakMap,
-                aM = OM.FontFace;
-              OM.FontFace = function(MM, rM, iM) {
-                const OM = new aM(MM, rM, iM);
-                return jM.set(OM, {
-                  family: MM,
-                  buffer: "string" != typeof rM,
-                  descriptors: iM,
-                  fontSource: "string" == typeof rM ? rM : JSON.stringify(Array.from(new Uint8Array(rM)))
-                }), OM
+                fontCb: XU,
+                doc: zU
+              } = UU;
+              const cU = zU.defaultView;
+              if (!cU) return () => {};
+              const yU = [],
+                QU = new WeakMap,
+                AU = cU.FontFace;
+              cU.FontFace = function(UU, XU, zU) {
+                const cU = new AU(UU, XU, zU);
+                return QU.set(cU, {
+                  family: UU,
+                  buffer: "string" != typeof XU,
+                  descriptors: zU,
+                  fontSource: "string" == typeof XU ? XU : JSON.stringify(Array.from(new Uint8Array(XU)))
+                }), cU
               };
-              const PM = tM(iM.fonts, "add", (function(MM) {
-                return function(iM) {
-                  return setTimeout(Yi((() => {
-                    const MM = jM.get(iM);
-                    MM && (rM(MM), jM.delete(iM))
-                  })), 0), MM.apply(this, [iM])
+              const FU = LU(zU.fonts, "add", (function(UU) {
+                return function(zU) {
+                  return setTimeout(iz((() => {
+                    const UU = QU.get(zU);
+                    UU && (XU(UU), QU.delete(zU))
+                  })), 0), UU.apply(this, [zU])
                 }
               }));
-              return SM.push((() => {
-                OM.FontFace = aM
-              })), SM.push(PM), Yi((() => {
-                SM.forEach((MM => MM()))
+              return yU.push((() => {
+                cU.FontFace = AU
+              })), yU.push(FU), iz((() => {
+                yU.forEach((UU => UU()))
               }))
-            }(MM)))
+            }(UU)))
           }
-          LM("selection", (() => function(MM) {
+          YU("selection", (() => function(UU) {
             const {
-              doc: rM,
-              mirror: iM,
-              blockClass: OM,
-              blockSelector: SM,
-              selectionCb: jM
-            } = MM;
-            let aM = !0;
-            const PM = Yi((() => {
-              const MM = rM.getSelection();
-              if (!MM || aM && (null == MM ? void 0 : MM.isCollapsed)) return;
-              aM = MM.isCollapsed || !1;
-              const PM = [],
-                nM = MM.rangeCount || 0;
-              for (let rM = 0; nM > rM; rM++) {
+              doc: XU,
+              mirror: zU,
+              blockClass: cU,
+              blockSelector: yU,
+              selectionCb: QU
+            } = UU;
+            let AU = !0;
+            const FU = iz((() => {
+              const UU = XU.getSelection();
+              if (!UU || AU && (null == UU ? void 0 : UU.isCollapsed)) return;
+              AU = UU.isCollapsed || !1;
+              const FU = [],
+                oU = UU.rangeCount || 0;
+              for (let XU = 0; oU > XU; XU++) {
                 const {
-                  startContainer: jM,
-                  startOffset: aM,
-                  endContainer: nM,
-                  endOffset: QM
-                } = MM.getRangeAt(rM);
-                Ei(jM, OM, SM, !0) || Ei(nM, OM, SM, !0) || PM.push({
-                  start: iM.getId(jM),
-                  startOffset: aM,
-                  end: iM.getId(nM),
-                  endOffset: QM
+                  startContainer: QU,
+                  startOffset: AU,
+                  endContainer: oU,
+                  endOffset: DU
+                } = UU.getRangeAt(XU);
+                kz(QU, cU, yU, !0) || kz(oU, cU, yU, !0) || FU.push({
+                  start: zU.getId(QU),
+                  startOffset: AU,
+                  end: zU.getId(oU),
+                  endOffset: DU
                 })
               }
-              jM({
-                Ld: PM
+              QU({
+                Qt: FU
               })
             }));
-            return PM(), ji("selectionchange", PM)
-          }(MM))), LM("customElement", (() => function(MM) {
+            return FU(), Qz("selectionchange", FU)
+          }(UU))), YU("customElement", (() => function(UU) {
             let {
-              doc: rM,
-              customElementCb: iM
-            } = MM;
-            const OM = rM.defaultView;
-            return OM && OM.customElements ? tM(OM.customElements, "define", (function(MM) {
-              return function(rM, OM, SM) {
+              doc: XU,
+              customElementCb: zU
+            } = UU;
+            const cU = XU.defaultView;
+            return cU && cU.customElements ? LU(cU.customElements, "define", (function(UU) {
+              return function(XU, cU, yU) {
                 try {
-                  iM({
+                  zU({
                     define: {
-                      name: rM
+                      name: XU
                     }
                   })
-                } catch (MM) {
-                  console.warn(`Custom element callback failed for ${rM}`)
+                } catch (UU) {
+                  console.warn(`Custom element callback failed for ${XU}`)
                 }
-                return MM.apply(this, [rM, OM, SM])
+                return UU.apply(this, [XU, cU, yU])
               }
             })) : () => {}
-          }(MM)));
-          for (const rM of MM.plugins) LM(`plugin:${rM.name}`, (() => rM.observer(rM.callback, iM, rM.options)))
-        } catch (MM) {
+          }(UU)));
+          for (const XU of UU.plugins) YU(`plugin:${XU.name}`, (() => XU.observer(XU.callback, zU, XU.options)))
+        } catch (UU) {
           try {
-            PM()
-          } catch (MM) {}
-          throw MM
+            FU()
+          } catch (UU) {}
+          throw UU
         }
-        return PM
+        return FU
       }
 
-      function ci(MM) {
-        return void 0 !== window[MM]
+      function bz(UU) {
+        return void 0 !== window[UU]
       }
 
-      function MO(MM) {
-        return Boolean(void 0 !== window[MM] && window[MM].prototype && "insertRule" in window[MM].prototype && "deleteRule" in window[MM].prototype)
+      function Tz(UU) {
+        return Boolean(void 0 !== window[UU] && window[UU].prototype && "insertRule" in window[UU].prototype && "deleteRule" in window[UU].prototype)
       }
-      var rO = class {
-          constructor(MM) {
-            Sr(this, "generateIdFn", void 0), Sr(this, "iframeRemoteIdToLocalIdMap", new WeakMap), Sr(this, "iframeLocalIdToRemoteIdMap", new WeakMap), this.generateIdFn = MM
+      var hz = class {
+          constructor(UU) {
+            yX(this, "generateIdFn", void 0), yX(this, "iframeRemoteIdToLocalIdMap", new WeakMap), yX(this, "iframeLocalIdToRemoteIdMap", new WeakMap), this.generateIdFn = UU
           }
-          getId(MM, rM, iM, OM) {
-            if (0 > rM) return rM;
-            const SM = iM || this.getRemoteIdToLocalIdMap(MM),
-              jM = OM || this.getLocalIdToRemoteIdMap(MM);
-            let aM = SM.get(rM);
-            return void 0 === aM && (aM = this.generateIdFn(), SM.set(rM, aM), jM.set(aM, rM)), aM
+          getId(UU, XU, zU, cU) {
+            if (0 > XU) return XU;
+            const yU = zU || this.getRemoteIdToLocalIdMap(UU),
+              QU = cU || this.getLocalIdToRemoteIdMap(UU);
+            let AU = yU.get(XU);
+            return void 0 === AU && (AU = this.generateIdFn(), yU.set(XU, AU), QU.set(AU, XU)), AU
           }
-          getIds(MM, rM) {
-            const iM = this.getRemoteIdToLocalIdMap(MM),
-              OM = this.getLocalIdToRemoteIdMap(MM);
-            return rM.map((rM => this.getId(MM, rM, iM, OM)))
+          getIds(UU, XU) {
+            const zU = this.getRemoteIdToLocalIdMap(UU),
+              cU = this.getLocalIdToRemoteIdMap(UU);
+            return XU.map((XU => this.getId(UU, XU, zU, cU)))
           }
-          getRemoteId(MM, rM, iM) {
-            var OM;
-            return "number" != typeof rM || 0 > rM ? rM : null !== (OM = (iM || this.getLocalIdToRemoteIdMap(MM)).get(rM)) && void 0 !== OM ? OM : -1
+          getRemoteId(UU, XU, zU) {
+            var cU;
+            return "number" != typeof XU || 0 > XU ? XU : null !== (cU = (zU || this.getLocalIdToRemoteIdMap(UU)).get(XU)) && void 0 !== cU ? cU : -1
           }
-          getRemoteIds(MM, rM) {
-            const iM = this.getLocalIdToRemoteIdMap(MM);
-            return rM.map((rM => this.getRemoteId(MM, rM, iM)))
+          getRemoteIds(UU, XU) {
+            const zU = this.getLocalIdToRemoteIdMap(UU);
+            return XU.map((XU => this.getRemoteId(UU, XU, zU)))
           }
-          reset(MM) {
-            if (!MM) return this.iframeRemoteIdToLocalIdMap = new WeakMap, void(this.iframeLocalIdToRemoteIdMap = new WeakMap);
-            this.iframeRemoteIdToLocalIdMap.delete(MM), this.iframeLocalIdToRemoteIdMap.delete(MM)
+          reset(UU) {
+            if (!UU) return this.iframeRemoteIdToLocalIdMap = new WeakMap, void(this.iframeLocalIdToRemoteIdMap = new WeakMap);
+            this.iframeRemoteIdToLocalIdMap.delete(UU), this.iframeLocalIdToRemoteIdMap.delete(UU)
           }
-          getRemoteIdToLocalIdMap(MM) {
-            let rM = this.iframeRemoteIdToLocalIdMap.get(MM);
-            return rM || (rM = new Map, this.iframeRemoteIdToLocalIdMap.set(MM, rM)), rM
+          getRemoteIdToLocalIdMap(UU) {
+            let XU = this.iframeRemoteIdToLocalIdMap.get(UU);
+            return XU || (XU = new Map, this.iframeRemoteIdToLocalIdMap.set(UU, XU)), XU
           }
-          getLocalIdToRemoteIdMap(MM) {
-            let rM = this.iframeLocalIdToRemoteIdMap.get(MM);
-            return rM || (rM = new Map, this.iframeLocalIdToRemoteIdMap.set(MM, rM)), rM
+          getLocalIdToRemoteIdMap(UU) {
+            let XU = this.iframeLocalIdToRemoteIdMap.get(UU);
+            return XU || (XU = new Map, this.iframeLocalIdToRemoteIdMap.set(UU, XU)), XU
           }
         },
-        iO = class {
-          constructor(MM) {
-            Sr(this, "iframes", new WeakMap), Sr(this, "crossOriginIframeMap", new WeakMap), Sr(this, "crossOriginIframeMirror", new rO(Zr)), Sr(this, "crossOriginIframeStyleMirror", void 0), Sr(this, "crossOriginIframeRootIdMap", new WeakMap), Sr(this, "mirror", void 0), Sr(this, "mutationCb", void 0), Sr(this, "wrappedEmit", void 0), Sr(this, "loadListener", void 0), Sr(this, "pageHideListener", void 0), Sr(this, "stylesheetManager", void 0), Sr(this, "recordCrossOriginIframes", void 0), Sr(this, "messageHandler", void 0), Sr(this, "nestedIframeListeners", new Map), Sr(this, "attachedWindows", new WeakMap), Sr(this, "attachedDocuments", new WeakMap), Sr(this, "attachedIframes", new Map), Sr(this, "loadListenerDisposers", new WeakMap), Sr(this, "iframeElementsById", new Map), Sr(this, "pageHideHandlers", new WeakMap), this.mutationCb = MM.mutationCb, this.wrappedEmit = MM.wrappedEmit, this.stylesheetManager = MM.stylesheetManager, this.recordCrossOriginIframes = MM.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new rO(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = MM.mirror, this.messageHandler = this.handleMessage.bind(this), this.recordCrossOriginIframes && window.addEventListener("message", this.messageHandler)
+        Uc = class {
+          constructor(UU) {
+            yX(this, "iframes", new WeakMap), yX(this, "crossOriginIframeMap", new WeakMap), yX(this, "crossOriginIframeMirror", new hz(fX)), yX(this, "crossOriginIframeStyleMirror", void 0), yX(this, "crossOriginIframeRootIdMap", new WeakMap), yX(this, "mirror", void 0), yX(this, "mutationCb", void 0), yX(this, "wrappedEmit", void 0), yX(this, "loadListener", void 0), yX(this, "pageHideListener", void 0), yX(this, "stylesheetManager", void 0), yX(this, "recordCrossOriginIframes", void 0), yX(this, "messageHandler", void 0), yX(this, "nestedIframeListeners", new Map), yX(this, "attachedWindows", new WeakMap), yX(this, "attachedDocuments", new WeakMap), yX(this, "attachedIframes", new Map), yX(this, "loadListenerDisposers", new WeakMap), yX(this, "iframeElementsById", new Map), yX(this, "pageHideHandlers", new WeakMap), this.mutationCb = UU.mutationCb, this.wrappedEmit = UU.wrappedEmit, this.stylesheetManager = UU.stylesheetManager, this.recordCrossOriginIframes = UU.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new hz(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = UU.mirror, this.messageHandler = this.handleMessage.bind(this), this.recordCrossOriginIframes && window.addEventListener("message", this.messageHandler)
           }
-          addIframe(MM) {
-            this.iframes.set(MM, !0), MM.contentWindow && this.crossOriginIframeMap.set(MM.contentWindow, MM)
+          addIframe(UU) {
+            this.iframes.set(UU, !0), UU.contentWindow && this.crossOriginIframeMap.set(UU.contentWindow, UU)
           }
-          registerLoadListenerDisposer(MM, rM) {
-            let iM = this.loadListenerDisposers.get(MM);
-            iM || (iM = new Set, this.loadListenerDisposers.set(MM, iM)), iM.add(rM);
-            const OM = this.mirror.getId(MM); - 1 !== OM && this.iframeElementsById.set(OM, MM)
+          registerLoadListenerDisposer(UU, XU) {
+            let zU = this.loadListenerDisposers.get(UU);
+            zU || (zU = new Set, this.loadListenerDisposers.set(UU, zU)), zU.add(XU);
+            const cU = this.mirror.getId(UU); - 1 !== cU && this.iframeElementsById.set(cU, UU)
           }
-          getIframeElementById(MM) {
-            var rM, iM, OM;
-            return null !== (rM = null !== (iM = null === (OM = this.attachedIframes.get(MM)) || void 0 === OM ? void 0 : OM.element) && void 0 !== iM ? iM : this.iframeElementsById.get(MM)) && void 0 !== rM ? rM : null
+          getIframeElementById(UU) {
+            var XU, zU, cU;
+            return null !== (XU = null !== (zU = null === (cU = this.attachedIframes.get(UU)) || void 0 === cU ? void 0 : cU.element) && void 0 !== zU ? zU : this.iframeElementsById.get(UU)) && void 0 !== XU ? XU : null
           }
-          forgetIframeId(MM) {
-            this.attachedIframes.delete(MM), this.iframeElementsById.delete(MM)
+          forgetIframeId(UU) {
+            this.attachedIframes.delete(UU), this.iframeElementsById.delete(UU)
           }
-          disposeLoadListeners(MM) {
-            const rM = this.loadListenerDisposers.get(MM);
-            rM && (rM.forEach((MM => Pi(MM))), this.loadListenerDisposers.delete(MM))
+          disposeLoadListeners(UU) {
+            const XU = this.loadListenerDisposers.get(UU);
+            XU && (XU.forEach((UU => Fz(UU))), this.loadListenerDisposers.delete(UU))
           }
-          removePageHideListener(MM) {
-            const rM = this.pageHideHandlers.get(MM);
-            rM && (rM.forEach((MM => {
+          removePageHideListener(UU) {
+            const XU = this.pageHideHandlers.get(UU);
+            XU && (XU.forEach((UU => {
               let {
-                win: rM,
-                handler: iM
-              } = MM;
-              ai(rM, "pagehide", iM)
-            })), this.pageHideHandlers.delete(MM))
+                win: XU,
+                handler: zU
+              } = UU;
+              Az(XU, "pagehide", zU)
+            })), this.pageHideHandlers.delete(UU))
           }
-          addLoadListener(MM) {
-            this.loadListener = MM
+          addLoadListener(UU) {
+            this.loadListener = UU
           }
-          addPageHideListener(MM) {
-            this.pageHideListener = MM
+          addPageHideListener(UU) {
+            this.pageHideListener = UU
           }
           removeLoadListener() {
             this.loadListener = void 0
           }
-          trackIframeContent(MM, rM) {
-            const iM = this.mirror.getId(MM);
-            return this.attachedIframes.set(iM, {
-              element: MM,
-              content: rM
-            }), iM
+          trackIframeContent(UU, XU) {
+            const zU = this.mirror.getId(UU);
+            return this.attachedIframes.set(zU, {
+              element: UU,
+              content: XU
+            }), zU
           }
-          attachIframe(MM, rM) {
-            var iM;
-            const OM = this.trackIframeContent(MM, rM);
-            if (MM.contentDocument) {
-              let rM = this.attachedDocuments.get(MM);
-              rM || (rM = new Set, this.attachedDocuments.set(MM, rM)), rM.add(MM.contentDocument)
+          attachIframe(UU, XU) {
+            var zU;
+            const cU = this.trackIframeContent(UU, XU);
+            if (UU.contentDocument) {
+              let XU = this.attachedDocuments.get(UU);
+              XU || (XU = new Set, this.attachedDocuments.set(UU, XU)), XU.add(UU.contentDocument)
             }
             this.mutationCb({
               adds: [{
-                parentId: OM,
+                parentId: cU,
                 nextId: null,
-                node: rM
+                node: XU
               }],
               removes: [],
               texts: [],
               attributes: [],
               isAttachIframe: !0
             });
-            const SM = MM.contentWindow;
-            if (this.recordCrossOriginIframes && SM && !this.nestedIframeListeners.has(SM)) {
-              const rM = this.handleMessage.bind(this);
-              Pi((() => {
-                SM.addEventListener("message", rM), this.nestedIframeListeners.set(SM, rM);
-                let iM = this.attachedWindows.get(MM);
-                iM || (iM = new Set, this.attachedWindows.set(MM, iM)), iM.add(SM)
+            const yU = UU.contentWindow;
+            if (this.recordCrossOriginIframes && yU && !this.nestedIframeListeners.has(yU)) {
+              const XU = this.handleMessage.bind(this);
+              Fz((() => {
+                yU.addEventListener("message", XU), this.nestedIframeListeners.set(yU, XU);
+                let zU = this.attachedWindows.get(UU);
+                zU || (zU = new Set, this.attachedWindows.set(UU, zU)), zU.add(yU)
               }))
             }
-            Pi((() => {
-              const rM = MM.contentWindow;
-              if (!rM) return;
-              let iM = this.pageHideHandlers.get(MM);
-              if (iM)
-                for (const MM of iM)
-                  if (MM.win === rM) return;
-              const OM = () => {
-                var rM;
-                null === (rM = this.pageHideListener) || void 0 === rM || rM.call(this, MM), MM.contentDocument && this.mirror.removeNodeFromMap(MM.contentDocument)
+            Fz((() => {
+              const XU = UU.contentWindow;
+              if (!XU) return;
+              let zU = this.pageHideHandlers.get(UU);
+              if (zU)
+                for (const UU of zU)
+                  if (UU.win === XU) return;
+              const cU = () => {
+                var XU;
+                null === (XU = this.pageHideListener) || void 0 === XU || XU.call(this, UU), UU.contentDocument && this.mirror.removeNodeFromMap(UU.contentDocument)
               };
-              rM.addEventListener("pagehide", OM), iM || (iM = new Set, this.pageHideHandlers.set(MM, iM)), iM.add({
-                win: rM,
-                handler: OM
+              XU.addEventListener("pagehide", cU), zU || (zU = new Set, this.pageHideHandlers.set(UU, zU)), zU.add({
+                win: XU,
+                handler: cU
               })
-            })), null === (iM = this.loadListener) || void 0 === iM || iM.call(this, MM), MM.contentDocument && MM.contentDocument.adoptedStyleSheets && MM.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(MM.contentDocument.adoptedStyleSheets, this.mirror.getId(MM.contentDocument))
+            })), null === (zU = this.loadListener) || void 0 === zU || zU.call(this, UU), UU.contentDocument && UU.contentDocument.adoptedStyleSheets && UU.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(UU.contentDocument.adoptedStyleSheets, this.mirror.getId(UU.contentDocument))
           }
-          handleMessage(MM) {
-            const rM = MM;
-            if ("rrweb" !== rM.data.type || rM.origin !== rM.data.origin) return;
-            if (!MM.source) return;
-            const iM = this.crossOriginIframeMap.get(MM.source);
-            if (!iM) return;
-            const OM = this.transformCrossOriginEvent(iM, rM.data.event);
-            OM && this.wrappedEmit(OM, rM.data.isCheckout)
+          handleMessage(UU) {
+            const XU = UU;
+            if ("rrweb" !== XU.data.type || XU.origin !== XU.data.origin) return;
+            if (!UU.source) return;
+            const zU = this.crossOriginIframeMap.get(UU.source);
+            if (!zU) return;
+            const cU = this.transformCrossOriginEvent(zU, XU.data.event);
+            cU && this.wrappedEmit(cU, XU.data.isCheckout)
           }
-          transformCrossOriginEvent(MM, rM) {
-            switch (rM.type) {
-              case PM.FullSnapshot: {
-                this.crossOriginIframeMirror.reset(MM), this.crossOriginIframeStyleMirror.reset(MM), this.replaceIdOnNode(rM.data.node, MM);
-                const iM = rM.data.node.id;
-                return this.crossOriginIframeRootIdMap.set(MM, iM), this.patchRootIdOnNode(rM.data.node, iM), this.trackIframeContent(MM, rM.data.node), {
-                  timestamp: rM.timestamp,
-                  type: PM.IncrementalSnapshot,
+          transformCrossOriginEvent(UU, XU) {
+            switch (XU.type) {
+              case FU.FullSnapshot: {
+                this.crossOriginIframeMirror.reset(UU), this.crossOriginIframeStyleMirror.reset(UU), this.replaceIdOnNode(XU.data.node, UU);
+                const zU = XU.data.node.id;
+                return this.crossOriginIframeRootIdMap.set(UU, zU), this.patchRootIdOnNode(XU.data.node, zU), this.trackIframeContent(UU, XU.data.node), {
+                  timestamp: XU.timestamp,
+                  type: FU.IncrementalSnapshot,
                   data: {
-                    source: nM.Mutation,
+                    source: oU.Mutation,
                     adds: [{
-                      parentId: this.mirror.getId(MM),
+                      parentId: this.mirror.getId(UU),
                       nextId: null,
-                      node: rM.data.node
+                      node: XU.data.node
                     }],
                     removes: [],
                     texts: [],
@@ -3013,436 +3013,436 @@ export const modules = {
                   }
                 }
               }
-              case PM.Meta:
-              case PM.Load:
-              case PM.DomContentLoaded:
+              case FU.Meta:
+              case FU.Load:
+              case FU.DomContentLoaded:
                 return !1;
-              case PM.Plugin:
-                return rM;
-              case PM.Custom:
-                return this.replaceIds(rM.data.payload, MM, ["id", "parentId", "previousId", "nextId"]), rM;
-              case PM.IncrementalSnapshot:
-                switch (rM.data.source) {
-                  case nM.Mutation:
-                    return rM.data.adds.forEach((rM => {
-                      this.replaceIds(rM, MM, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(rM.node, MM);
-                      const iM = this.crossOriginIframeRootIdMap.get(MM);
-                      iM && this.patchRootIdOnNode(rM.node, iM)
-                    })), rM.data.removes.forEach((rM => {
-                      this.replaceIds(rM, MM, ["parentId", "id"])
-                    })), rM.data.attributes.forEach((rM => {
-                      this.replaceIds(rM, MM, ["id"])
-                    })), rM.data.texts.forEach((rM => {
-                      this.replaceIds(rM, MM, ["id"])
-                    })), rM;
-                  case nM.Drag:
-                  case nM.TouchMove:
-                  case nM.MouseMove:
-                    return rM.data.positions.forEach((rM => {
-                      this.replaceIds(rM, MM, ["id"])
-                    })), rM;
-                  case nM.ViewportResize:
+              case FU.Plugin:
+                return XU;
+              case FU.Custom:
+                return this.replaceIds(XU.data.payload, UU, ["id", "parentId", "previousId", "nextId"]), XU;
+              case FU.IncrementalSnapshot:
+                switch (XU.data.source) {
+                  case oU.Mutation:
+                    return XU.data.adds.forEach((XU => {
+                      this.replaceIds(XU, UU, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(XU.node, UU);
+                      const zU = this.crossOriginIframeRootIdMap.get(UU);
+                      zU && this.patchRootIdOnNode(XU.node, zU)
+                    })), XU.data.removes.forEach((XU => {
+                      this.replaceIds(XU, UU, ["parentId", "id"])
+                    })), XU.data.attributes.forEach((XU => {
+                      this.replaceIds(XU, UU, ["id"])
+                    })), XU.data.texts.forEach((XU => {
+                      this.replaceIds(XU, UU, ["id"])
+                    })), XU;
+                  case oU.Drag:
+                  case oU.TouchMove:
+                  case oU.MouseMove:
+                    return XU.data.positions.forEach((XU => {
+                      this.replaceIds(XU, UU, ["id"])
+                    })), XU;
+                  case oU.ViewportResize:
                     return !1;
-                  case nM.MediaInteraction:
-                  case nM.MouseInteraction:
-                  case nM.Scroll:
-                  case nM.CanvasMutation:
-                  case nM.Input:
-                    return this.replaceIds(rM.data, MM, ["id"]), rM;
-                  case nM.StyleSheetRule:
-                  case nM.StyleDeclaration:
-                    return this.replaceIds(rM.data, MM, ["id"]), this.replaceStyleIds(rM.data, MM, ["styleId"]), rM;
-                  case nM.Font:
-                    return rM;
-                  case nM.Selection:
-                    return rM.data.Ld.forEach((rM => {
-                      this.replaceIds(rM, MM, ["start", "end"])
-                    })), rM;
-                  case nM.AdoptedStyleSheet:
-                    var iM;
-                    return this.replaceIds(rM.data, MM, ["id"]), this.replaceStyleIds(rM.data, MM, ["styleIds"]), null === (iM = rM.data.styles) || void 0 === iM || iM.forEach((rM => {
-                      this.replaceStyleIds(rM, MM, ["styleId"])
-                    })), rM
+                  case oU.MediaInteraction:
+                  case oU.MouseInteraction:
+                  case oU.Scroll:
+                  case oU.CanvasMutation:
+                  case oU.Input:
+                    return this.replaceIds(XU.data, UU, ["id"]), XU;
+                  case oU.StyleSheetRule:
+                  case oU.StyleDeclaration:
+                    return this.replaceIds(XU.data, UU, ["id"]), this.replaceStyleIds(XU.data, UU, ["styleId"]), XU;
+                  case oU.Font:
+                    return XU;
+                  case oU.Selection:
+                    return XU.data.Qt.forEach((XU => {
+                      this.replaceIds(XU, UU, ["start", "end"])
+                    })), XU;
+                  case oU.AdoptedStyleSheet:
+                    var zU;
+                    return this.replaceIds(XU.data, UU, ["id"]), this.replaceStyleIds(XU.data, UU, ["styleIds"]), null === (zU = XU.data.styles) || void 0 === zU || zU.forEach((XU => {
+                      this.replaceStyleIds(XU, UU, ["styleId"])
+                    })), XU
                 }
             }
             return !1
           }
-          replace(MM, rM, iM, OM) {
-            for (const SM of OM)(Array.isArray(rM[SM]) || "number" == typeof rM[SM]) && (rM[SM] = Array.isArray(rM[SM]) ? MM.getIds(iM, rM[SM]) : MM.getId(iM, rM[SM]));
-            return rM
+          replace(UU, XU, zU, cU) {
+            for (const yU of cU)(Array.isArray(XU[yU]) || "number" == typeof XU[yU]) && (XU[yU] = Array.isArray(XU[yU]) ? UU.getIds(zU, XU[yU]) : UU.getId(zU, XU[yU]));
+            return XU
           }
-          replaceIds(MM, rM, iM) {
-            return this.replace(this.crossOriginIframeMirror, MM, rM, iM)
+          replaceIds(UU, XU, zU) {
+            return this.replace(this.crossOriginIframeMirror, UU, XU, zU)
           }
-          replaceStyleIds(MM, rM, iM) {
-            return this.replace(this.crossOriginIframeStyleMirror, MM, rM, iM)
+          replaceStyleIds(UU, XU, zU) {
+            return this.replace(this.crossOriginIframeStyleMirror, UU, XU, zU)
           }
-          replaceIdOnNode(MM, rM) {
-            this.replaceIds(MM, rM, ["id", "rootId"]), "childNodes" in MM && MM.childNodes.forEach((MM => {
-              this.replaceIdOnNode(MM, rM)
+          replaceIdOnNode(UU, XU) {
+            this.replaceIds(UU, XU, ["id", "rootId"]), "childNodes" in UU && UU.childNodes.forEach((UU => {
+              this.replaceIdOnNode(UU, XU)
             }))
           }
-          patchRootIdOnNode(MM, rM) {
-            MM.type === HM.Document || MM.rootId || (MM.rootId = rM), "childNodes" in MM && MM.childNodes.forEach((MM => {
-              this.patchRootIdOnNode(MM, rM)
+          patchRootIdOnNode(UU, XU) {
+            UU.type === IU.Document || UU.rootId || (UU.rootId = XU), "childNodes" in UU && UU.childNodes.forEach((UU => {
+              this.patchRootIdOnNode(UU, XU)
             }))
           }
-          removeIframeById(MM) {
-            const rM = this.attachedIframes.get(MM),
-              iM = (null == rM ? void 0 : rM.element) || this.iframeElementsById.get(MM) || this.mirror.lD(MM);
-            if (this.iframeElementsById.delete(MM), iM) {
-              const MM = iM.contentWindow,
-                rM = this.attachedWindows.get(iM);
-              rM && (rM.forEach((MM => {
-                const rM = this.nestedIframeListeners.get(MM);
-                rM && (ai(MM, "message", rM), this.nestedIframeListeners.delete(MM)), this.crossOriginIframeMap.delete(MM)
-              })), this.attachedWindows.delete(iM)), MM && this.nestedIframeListeners.has(MM) && (ai(MM, "message", this.nestedIframeListeners.get(MM)), this.nestedIframeListeners.delete(MM)), MM && this.crossOriginIframeMap.delete(MM), this.iframes.delete(iM), this.disposeLoadListeners(iM), this.removePageHideListener(iM);
-              const OM = this.attachedDocuments.get(iM);
-              OM && (OM.forEach((MM => {
-                Pi((() => this.mirror.removeNodeFromMap(MM)))
-              })), Pi((() => Fi(iM, OM))), this.attachedDocuments.delete(iM))
+          removeIframeById(UU) {
+            const XU = this.attachedIframes.get(UU),
+              zU = (null == XU ? void 0 : XU.element) || this.iframeElementsById.get(UU) || this.mirror.icU(UU);
+            if (this.iframeElementsById.delete(UU), zU) {
+              const UU = zU.contentWindow,
+                XU = this.attachedWindows.get(zU);
+              XU && (XU.forEach((UU => {
+                const XU = this.nestedIframeListeners.get(UU);
+                XU && (Az(UU, "message", XU), this.nestedIframeListeners.delete(UU)), this.crossOriginIframeMap.delete(UU)
+              })), this.attachedWindows.delete(zU)), UU && this.nestedIframeListeners.has(UU) && (Az(UU, "message", this.nestedIframeListeners.get(UU)), this.nestedIframeListeners.delete(UU)), UU && this.crossOriginIframeMap.delete(UU), this.iframes.delete(zU), this.disposeLoadListeners(zU), this.removePageHideListener(zU);
+              const cU = this.attachedDocuments.get(zU);
+              cU && (cU.forEach((UU => {
+                Fz((() => this.mirror.removeNodeFromMap(UU)))
+              })), Fz((() => sz(zU, cU))), this.attachedDocuments.delete(zU))
             }
-            rM && this.attachedIframes.delete(MM)
+            XU && this.attachedIframes.delete(UU)
           }
           cleanupDetachedIframes() {
             if (0 === this.attachedIframes.size) return;
-            const MM = [];
-            this.attachedIframes.forEach(((rM, iM) => {
-              this.mirror.has(iM) || MM.push(iM)
-            })), MM.forEach((MM => this.removeIframeById(MM)))
+            const UU = [];
+            this.attachedIframes.forEach(((XU, zU) => {
+              this.mirror.has(zU) || UU.push(zU)
+            })), UU.forEach((UU => this.removeIframeById(UU)))
           }
           reattachIframes() {
-            this.attachedIframes.forEach(((MM, rM) => {
+            this.attachedIframes.forEach(((UU, XU) => {
               let {
-                content: iM
-              } = MM;
-              this.mirror.has(rM) ? this.mutationCb({
+                content: zU
+              } = UU;
+              this.mirror.has(XU) ? this.mutationCb({
                 adds: [{
-                  parentId: rM,
+                  parentId: XU,
                   nextId: null,
-                  node: iM
+                  node: zU
                 }],
                 removes: [],
                 texts: [],
                 attributes: [],
                 isAttachIframe: !0
-              }) : this.attachedIframes.delete(rM)
+              }) : this.attachedIframes.delete(XU)
             }))
           }
           destroy() {
-            this.recordCrossOriginIframes && ai(window, "message", this.messageHandler), this.nestedIframeListeners.forEach(((MM, rM) => {
-              ai(rM, "message", MM)
+            this.recordCrossOriginIframes && Az(window, "message", this.messageHandler), this.nestedIframeListeners.forEach(((UU, XU) => {
+              Az(XU, "message", UU)
             })), this.nestedIframeListeners.clear();
-            const MM = new Set;
-            this.iframeElementsById.forEach((rM => MM.add(rM))), this.attachedIframes.forEach((rM => {
+            const UU = new Set;
+            this.iframeElementsById.forEach((XU => UU.add(XU))), this.attachedIframes.forEach((XU => {
               let {
-                element: iM
-              } = rM;
-              return MM.add(iM)
-            })), MM.forEach((MM => {
-              this.disposeLoadListeners(MM), this.removePageHideListener(MM)
+                element: zU
+              } = XU;
+              return UU.add(zU)
+            })), UU.forEach((UU => {
+              this.disposeLoadListeners(UU), this.removePageHideListener(UU)
             })), this.crossOriginIframeMirror.reset(), this.crossOriginIframeStyleMirror.reset(), this.attachedIframes.clear(), this.crossOriginIframeMap = new WeakMap, this.iframes = new WeakMap, this.crossOriginIframeRootIdMap = new WeakMap, this.loadListenerDisposers = new WeakMap, this.pageHideHandlers = new WeakMap, this.attachedDocuments = new WeakMap, this.attachedWindows = new WeakMap, this.iframeElementsById = new Map
           }
         },
-        OO = class {
-          constructor(MM) {
-            Sr(this, "shadowDoms", new WeakSet), Sr(this, "mutationCb", void 0), Sr(this, "scrollCb", void 0), Sr(this, "bypassOptions", void 0), Sr(this, "mirror", void 0), Sr(this, "restoreHandlers", []), this.mutationCb = MM.mutationCb, this.scrollCb = MM.scrollCb, this.bypassOptions = MM.bypassOptions, this.mirror = MM.mirror, this.init()
+        Xc = class {
+          constructor(UU) {
+            yX(this, "shadowDoms", new WeakSet), yX(this, "mutationCb", void 0), yX(this, "scrollCb", void 0), yX(this, "bypassOptions", void 0), yX(this, "mirror", void 0), yX(this, "restoreHandlers", []), this.mutationCb = UU.mutationCb, this.scrollCb = UU.scrollCb, this.bypassOptions = UU.bypassOptions, this.mirror = UU.mirror, this.init()
           }
           init() {
             this.reset(), this.patchAttachShadow(Element, document)
           }
-          addShadowRoot(MM, rM) {
-            var iM, SM;
-            if (!Pr(MM)) return;
-            if (this.shadowDoms.has(MM)) return;
-            this.shadowDoms.add(MM);
-            const jM = null !== (iM = null === (SM = gM.host(MM)) || void 0 === SM ? void 0 : SM.ownerDocument) && void 0 !== iM ? iM : rM,
+          addShadowRoot(UU, XU) {
+            var zU, yU;
+            if (!FX(UU)) return;
+            if (this.shadowDoms.has(UU)) return;
+            this.shadowDoms.add(UU);
+            const QU = null !== (zU = null === (yU = eU.host(UU)) || void 0 === yU ? void 0 : yU.ownerDocument) && void 0 !== zU ? zU : XU,
               {
-                observer: aM,
-                buffer: PM
-              } = xi(OM(OM({}, this.bypassOptions), {}, {
-                doc: jM,
+                observer: AU,
+                buffer: FU
+              } = vz(cU(cU({}, this.bypassOptions), {}, {
+                doc: QU,
                 mutationCb: this.mutationCb,
                 mirror: this.mirror,
                 shadowDomManager: this
-              }), MM);
+              }), UU);
             this.restoreHandlers.push({
-              doc: jM,
+              doc: QU,
               handler() {
-                aM.disconnect(), PM.destroy(), PM.releaseCanvasManager();
-                const MM = Ni.indexOf(PM); - 1 !== MM && Ni.splice(MM, 1)
+                AU.disconnect(), FU.destroy(), FU.releaseCanvasManager();
+                const UU = Hz.indexOf(FU); - 1 !== UU && Hz.splice(UU, 1)
               }
             }), this.restoreHandlers.push({
-              doc: jM,
-              handler: vi(OM(OM({}, this.bypassOptions), {}, {
+              doc: QU,
+              handler: Vz(cU(cU({}, this.bypassOptions), {}, {
                 scrollCb: this.scrollCb,
-                doc: MM,
+                doc: UU,
                 mirror: this.mirror
               }))
             }), setTimeout((() => {
-              MM.adoptedStyleSheets && MM.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(MM.adoptedStyleSheets, this.mirror.getId(gM.host(MM))), this.restoreHandlers.push({
-                doc: jM,
-                handler: qi({
+              UU.adoptedStyleSheets && UU.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(UU.adoptedStyleSheets, this.mirror.getId(eU.host(UU))), this.restoreHandlers.push({
+                doc: QU,
+                handler: Jz({
                   mirror: this.mirror,
                   stylesheetManager: this.bypassOptions.stylesheetManager
-                }, MM)
+                }, UU)
               })
             }), 0)
           }
-          observeAttachShadow(MM) {
-            Pi((() => {
-              const rM = MM.contentWindow,
-                iM = MM.contentDocument;
-              rM && iM && this.patchAttachShadow(rM.Element, iM)
+          observeAttachShadow(UU) {
+            Fz((() => {
+              const XU = UU.contentWindow,
+                zU = UU.contentDocument;
+              XU && zU && this.patchAttachShadow(XU.Element, zU)
             }))
           }
-          patchAttachShadow(MM, rM) {
-            const iM = this;
+          patchAttachShadow(UU, XU) {
+            const zU = this;
             this.restoreHandlers.push({
-              doc: rM,
-              handler: tM(MM.prototype, "attachShadow", (function(MM) {
-                return function(OM) {
-                  const SM = MM.call(this, OM),
-                    jM = gM.shadowRoot(this);
-                  return jM && ui(this) && iM.addShadowRoot(jM, rM), SM
+              doc: XU,
+              handler: LU(UU.prototype, "attachShadow", (function(UU) {
+                return function(cU) {
+                  const yU = UU.call(this, cU),
+                    QU = eU.shadowRoot(this);
+                  return QU && ez(this) && zU.addShadowRoot(QU, XU), yU
                 }
               }))
             })
           }
           reset() {
-            this.restoreHandlers.forEach((MM => {
+            this.restoreHandlers.forEach((UU => {
               let {
-                handler: rM
-              } = MM;
+                handler: XU
+              } = UU;
               try {
-                rM()
-              } catch (rM) {}
+                XU()
+              } catch (XU) {}
             })), this.restoreHandlers = [], this.shadowDoms = new WeakSet
           }
-          resetForDoc(MM) {
-            const rM = [];
-            for (const iM of this.restoreHandlers)
-              if (iM.doc === MM) try {
-                iM.handler()
-              } catch (MM) {} else rM.push(iM);
-            this.restoreHandlers = rM
+          resetForDoc(UU) {
+            const XU = [];
+            for (const zU of this.restoreHandlers)
+              if (zU.doc === UU) try {
+                zU.handler()
+              } catch (UU) {} else XU.push(zU);
+            this.restoreHandlers = XU
           }
         },
-        SO = "skip-frame";
+        zc = "skip-frame";
 
-      function jO(MM) {
-        if ("object" != typeof MM || null === MM) return !1;
+      function cc(UU) {
+        if ("object" != typeof UU || null === UU) return !1;
         const {
-          x: rM,
-          y: iM,
-          width: OM,
-          height: SM
-        } = MM;
-        return Number.isFinite(rM) && Number.isFinite(iM) && Number.isFinite(OM) && Number.isFinite(SM) && OM >= 0 && SM >= 0
+          x: XU,
+          y: zU,
+          width: cU,
+          height: yU
+        } = UU;
+        return Number.isFinite(XU) && Number.isFinite(zU) && Number.isFinite(cU) && Number.isFinite(yU) && cU >= 0 && yU >= 0
       }
-      for (var aO = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", PO = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256), nO = 0; 64 > nO; nO++) PO[aO.charCodeAt(nO)] = nO;
-      var QO = function(MM) {
-          var rM, iM = new Uint8Array(MM),
-            OM = iM.length,
-            SM = "";
-          for (rM = 0; OM > rM; rM += 3) SM += aO[iM[rM] >> 2], SM += aO[(3 & iM[rM]) << 4 | iM[rM + 1] >> 4], SM += aO[(15 & iM[rM + 1]) << 2 | iM[rM + 2] >> 6], SM += aO[63 & iM[rM + 2]];
-          return OM % 3 == 2 ? SM = SM.substring(0, SM.length - 1) + "=" : OM % 3 == 1 && (SM = SM.substring(0, SM.length - 2) + "=="), SM
+      for (var yc = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", Qc = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256), Ac = 0; 64 > Ac; Ac++) Qc[yc.charCodeAt(Ac)] = Ac;
+      var Fc = function(UU) {
+          var XU, zU = new Uint8Array(UU),
+            cU = zU.length,
+            yU = "";
+          for (XU = 0; cU > XU; XU += 3) yU += yc[zU[XU] >> 2], yU += yc[(3 & zU[XU]) << 4 | zU[XU + 1] >> 4], yU += yc[(15 & zU[XU + 1]) << 2 | zU[XU + 2] >> 6], yU += yc[63 & zU[XU + 2]];
+          return cU % 3 == 2 ? yU = yU.substring(0, yU.length - 1) + "=" : cU % 3 == 1 && (yU = yU.substring(0, yU.length - 2) + "=="), yU
         },
-        zO = !1,
-        LO = new Map,
-        mO = (MM, rM, iM) => {
-          if (!MM || !JO(MM, rM) && "object" != typeof MM) return;
-          const OM = function(MM, rM) {
-            let iM = LO.get(MM);
-            return iM || (iM = new Map, LO.set(MM, iM)), iM.has(rM) || iM.set(rM, []), iM.get(rM)
-          }(iM, MM.constructor.name);
-          let SM = OM.indexOf(MM);
-          return -1 === SM && (SM = OM.length, OM.push(MM)), SM
+        oc = !1,
+        Dc = new Map,
+        Ec = (UU, XU, zU) => {
+          if (!UU || !Ic(UU, XU) && "object" != typeof UU) return;
+          const cU = function(UU, XU) {
+            let zU = Dc.get(UU);
+            return zU || (zU = new Map, Dc.set(UU, zU)), zU.has(XU) || zU.set(XU, []), zU.get(XU)
+          }(zU, UU.constructor.name);
+          let yU = cU.indexOf(UU);
+          return -1 === yU && (yU = cU.length, cU.push(UU)), yU
         };
 
-      function HO(MM, rM, iM, OM) {
-        if (MM instanceof Array) return MM.map((MM => HO(MM, rM, iM, OM)));
-        if (null === MM) return MM;
-        if (MM instanceof Float32Array || MM instanceof Float64Array || MM instanceof Int32Array || MM instanceof Uint32Array || MM instanceof Uint8Array || MM instanceof Uint16Array || MM instanceof Int16Array || MM instanceof Int8Array || MM instanceof Uint8ClampedArray) return {
-          rr_type: MM.constructor.name,
-          args: [Object.values(MM)]
+      function Yc(UU, XU, zU, cU) {
+        if (UU instanceof Array) return UU.map((UU => Yc(UU, XU, zU, cU)));
+        if (null === UU) return UU;
+        if (UU instanceof Float32Array || UU instanceof Float64Array || UU instanceof Int32Array || UU instanceof Uint32Array || UU instanceof Uint8Array || UU instanceof Uint16Array || UU instanceof Int16Array || UU instanceof Int8Array || UU instanceof Uint8ClampedArray) return {
+          rr_type: UU.constructor.name,
+          args: [Object.values(UU)]
         };
-        if (MM instanceof ArrayBuffer) return {
-          rr_type: MM.constructor.name,
-          base64: QO(MM)
+        if (UU instanceof ArrayBuffer) return {
+          rr_type: UU.constructor.name,
+          base64: Fc(UU)
         };
-        if (MM instanceof DataView) return {
-          rr_type: MM.constructor.name,
-          args: [HO(MM.buffer, rM, iM, OM), MM.byteOffset, MM.byteLength]
+        if (UU instanceof DataView) return {
+          rr_type: UU.constructor.name,
+          args: [Yc(UU.buffer, XU, zU, cU), UU.byteOffset, UU.byteLength]
         };
-        if (MM instanceof HTMLImageElement) {
-          const rM = MM.constructor.name,
+        if (UU instanceof HTMLImageElement) {
+          const XU = UU.constructor.name,
             {
-              src: iM
-            } = MM;
+              src: zU
+            } = UU;
           return {
-            rr_type: rM,
-            src: iM
+            rr_type: XU,
+            src: zU
           }
         }
-        if (MM instanceof HTMLCanvasElement) {
-          const rM = "HTMLImageElement";
-          let iM;
+        if (UU instanceof HTMLCanvasElement) {
+          const XU = "HTMLImageElement";
+          let zU;
           try {
-            iM = MM.toDataURL(OM.type, OM.quality)
-          } catch (MM) {
-            throw function(MM) {
-              "SecurityError" === (null == MM ? void 0 : MM.name) ? zO || (zO = !0, console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read. A cross-origin image or video drawn into it taints it.", MM)): console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read.", MM)
-            }(MM), MM
+            zU = UU.toDataURL(cU.type, cU.quality)
+          } catch (UU) {
+            throw function(UU) {
+              "SecurityError" === (null == UU ? void 0 : UU.name) ? oc || (oc = !0, console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read. A cross-origin image or video drawn into it taints it.", UU)): console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read.", UU)
+            }(UU), UU
           }
           return {
-            rr_type: rM,
-            src: iM
+            rr_type: XU,
+            src: zU
           }
         }
-        return MM instanceof ImageData ? {
-          rr_type: MM.constructor.name,
-          args: [HO(MM.data, rM, iM, OM), MM.width, MM.height]
-        } : JO(MM, rM) || "object" == typeof MM ? {
-          rr_type: MM.constructor.name,
-          index: mO(MM, rM, iM)
-        } : MM
+        return UU instanceof ImageData ? {
+          rr_type: UU.constructor.name,
+          args: [Yc(UU.data, XU, zU, cU), UU.width, UU.height]
+        } : Ic(UU, XU) || "object" == typeof UU ? {
+          rr_type: UU.constructor.name,
+          index: Ec(UU, XU, zU)
+        } : UU
       }
-      var hO = (MM, rM, iM, OM) => MM.map((MM => HO(MM, rM, iM, OM))),
-        JO = (MM, rM) => {
-          const iM = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((MM => "function" == typeof rM[MM]));
-          return Boolean(iM.find((iM => MM instanceof rM[iM])))
+      var Nc = (UU, XU, zU, cU) => UU.map((UU => Yc(UU, XU, zU, cU))),
+        Ic = (UU, XU) => {
+          const zU = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((UU => "function" == typeof XU[UU]));
+          return Boolean(zU.find((zU => UU instanceof XU[zU])))
         },
-        dO = ["webgl", "webgl2"];
+        pc = ["webgl", "webgl2"];
 
-      function yO(MM) {
-        return "nodeType" in MM
+      function ac(UU) {
+        return "nodeType" in UU
       }
 
-      function lO(MM, rM, iM, SM) {
-        const jM = [];
+      function tc(UU, XU, zU, yU) {
+        const QU = [];
         try {
-          if (SM) {
-            const SM = function(MM, rM, iM) {
-              const SM = MM.GPUCanvasContext;
-              if ((null == SM ? void 0 : SM.prototype) && "function" == typeof SM.prototype.configure) return tM(SM.prototype, "configure", (function(SM) {
-                return function(jM) {
-                  const aM = function(MM) {
+          if (yU) {
+            const yU = function(UU, XU, zU) {
+              const yU = UU.GPUCanvasContext;
+              if ((null == yU ? void 0 : yU.prototype) && "function" == typeof yU.prototype.configure) return LU(yU.prototype, "configure", (function(yU) {
+                return function(QU) {
+                  const AU = function(UU) {
                     const {
-                      canvas: rM
-                    } = MM;
-                    return rM && "object" == typeof rM ? rM : null
+                      canvas: XU
+                    } = UU;
+                    return XU && "object" == typeof XU ? XU : null
                   }(this);
-                  if (!aM || yO(aM) && Ei(aM, rM, iM, !0)) return SM.call(this, jM);
-                  yO(aM) && !("__context" in aM) && (aM.__context = "webgpu");
-                  const PM = function(MM) {
-                    const rM = MM.GPUTextureUsage;
-                    return rM ? rM.COPY_SRC | rM.RENDER_ATTACHMENT : null
-                  }(MM);
-                  return SM.call(this, null !== PM && jM ? OM(OM({}, jM), {}, {
-                    usage: "number" == typeof jM.usage ? jM.usage | PM : PM
-                  }) : jM)
+                  if (!AU || ac(AU) && kz(AU, XU, zU, !0)) return yU.call(this, QU);
+                  ac(AU) && !("__context" in AU) && (AU.__context = "webgpu");
+                  const FU = function(UU) {
+                    const XU = UU.GPUTextureUsage;
+                    return XU ? XU.COPY_SRC | XU.RENDER_ATTACHMENT : null
+                  }(UU);
+                  return yU.call(this, null !== FU && QU ? cU(cU({}, QU), {}, {
+                    usage: "number" == typeof QU.usage ? QU.usage | FU : FU
+                  }) : QU)
                 }
               }))
-            }(MM, rM, iM);
-            SM && jM.push(SM)
+            }(UU, XU, zU);
+            yU && QU.push(yU)
           }
-          const aM = tM(MM.HTMLCanvasElement.prototype, "getContext", (function(MM) {
-            return function(OM) {
-              const jM = function(MM) {
-                return "experimental-webgl" === MM ? "webgl" : MM
-              }(OM);
-              for (var aM = arguments.length, PM = new Array(aM > 1 ? aM - 1 : 0), nM = 1; nM < aM; nM++) PM[nM - 1] = arguments[nM];
-              if (!Ei(this, rM, iM, !0) && ("__context" in this || (this.__context = jM), SM && dO.includes(jM)))
-                if (PM[0] && "object" == typeof PM[0]) {
-                  const MM = PM[0];
-                  MM.preserveDrawingBuffer || (MM.preserveDrawingBuffer = !0)
-                } else PM.splice(0, 1, {
+          const AU = LU(UU.HTMLCanvasElement.prototype, "getContext", (function(UU) {
+            return function(cU) {
+              const QU = function(UU) {
+                return "experimental-webgl" === UU ? "webgl" : UU
+              }(cU);
+              for (var AU = arguments.length, FU = new Array(AU > 1 ? AU - 1 : 0), oU = 1; oU < AU; oU++) FU[oU - 1] = arguments[oU];
+              if (!kz(this, XU, zU, !0) && ("__context" in this || (this.__context = QU), yU && pc.includes(QU)))
+                if (FU[0] && "object" == typeof FU[0]) {
+                  const UU = FU[0];
+                  UU.preserveDrawingBuffer || (UU.preserveDrawingBuffer = !0)
+                } else FU.splice(0, 1, {
                   preserveDrawingBuffer: !0
                 });
-              return MM.apply(this, [OM, ...PM])
+              return UU.apply(this, [cU, ...FU])
             }
           }));
-          jM.push(aM)
-        } catch (MM) {
+          QU.push(AU)
+        } catch (UU) {
           console.warn("failed to patch HTMLCanvasElement.prototype.getContext")
         }
         return () => {
-          jM.forEach((MM => MM()))
+          QU.forEach((UU => UU()))
         }
       }
 
-      function EO(MM, rM, iM, OM, SM, jM, aM) {
-        const PM = [],
-          nM = Object.getOwnPropertyNames(MM);
-        for (const QM of nM)
-          if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(QM)) try {
-            if ("function" != typeof MM[QM]) continue;
-            const nM = tM(MM, QM, (function(MM) {
+      function gc(UU, XU, zU, cU, yU, QU, AU) {
+        const FU = [],
+          oU = Object.getOwnPropertyNames(UU);
+        for (const DU of oU)
+          if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(DU)) try {
+            if ("function" != typeof UU[DU]) continue;
+            const oU = LU(UU, DU, (function(UU) {
               return function() {
-                for (var PM = arguments.length, nM = new Array(PM), zM = 0; zM < PM; zM++) nM[zM] = arguments[zM];
-                const LM = MM.apply(this, nM);
-                if (mO(LM, jM, this), this.canvas && "tagName" in this.canvas && !Ei(this.canvas, OM, SM, !0)) {
-                  let OM;
+                for (var FU = arguments.length, oU = new Array(FU), EU = 0; EU < FU; EU++) oU[EU] = arguments[EU];
+                const YU = UU.apply(this, oU);
+                if (Ec(YU, QU, this), this.canvas && "tagName" in this.canvas && !kz(this.canvas, cU, yU, !0)) {
+                  let cU;
                   try {
-                    OM = hO(nM, jM, this, aM)
-                  } catch (MM) {}
-                  OM && iM(this.canvas, {
-                    type: rM,
-                    property: QM,
-                    args: OM
+                    cU = Nc(oU, QU, this, AU)
+                  } catch (UU) {}
+                  cU && zU(this.canvas, {
+                    type: XU,
+                    property: DU,
+                    args: cU
                   })
                 }
-                return LM
+                return YU
               }
             }));
-            PM.push(nM)
-          } catch (jM) {
-            const aM = mi(MM, QM, {
-              set(MM) {
-                this.canvas && "tagName" in this.canvas && !Ei(this.canvas, OM, SM, !0) && iM(this.canvas, {
-                  type: rM,
-                  property: QM,
-                  args: [MM],
+            FU.push(oU)
+          } catch (QU) {
+            const AU = Nz(UU, DU, {
+              set(UU) {
+                this.canvas && "tagName" in this.canvas && !kz(this.canvas, cU, yU, !0) && zU(this.canvas, {
+                  type: XU,
+                  property: DU,
+                  args: [UU],
                   setter: !0
                 })
               }
             });
-            PM.push(aM)
+            FU.push(AU)
           }
-        return PM
+        return FU
       }
-      var UO = '(function() {\n\t//#region ../../../../../../setup-pnpm/node_modules/.bin/store/v11/links/@/base64-arraybuffer/1.0.2/f63fa6b5c318cf1c9f6bdd1d4292ad2f15f76f2ec78475025a2d44070e896fe9/node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js\n\tvar chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n\tvar lookup = typeof Uint8Array === "undefined" ? [] : /* @__PURE__ */ new Uint8Array(256);\n\tfor (var i = 0; i < chars.length; i++) lookup[chars.charCodeAt(i)] = i;\n\tvar encode = function(arraybuffer) {\n\t\tvar bytes = new Uint8Array(arraybuffer), i, len = bytes.length, base64 = "";\n\t\tfor (i = 0; i < len; i += 3) {\n\t\t\tbase64 += chars[bytes[i] >> 2];\n\t\t\tbase64 += chars[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];\n\t\t\tbase64 += chars[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];\n\t\t\tbase64 += chars[bytes[i + 2] & 63];\n\t\t}\n\t\tif (len % 3 === 2) base64 = base64.substring(0, base64.length - 1) + "=";\n\t\telse if (len % 3 === 1) base64 = base64.substring(0, base64.length - 2) + "==";\n\t\treturn base64;\n\t};\n\t//#endregion\n\t//#region ../rrweb/src/record/workers/image-bitmap-data-url-worker.ts\n\tconst lastFingerprintMap = /* @__PURE__ */ new Map();\n\tconst transparentFingerprintMap = /* @__PURE__ */ new Map();\n\tconst lastSentAtMap = /* @__PURE__ */ new Map();\n\tconst PROVIDER_KEYFRAME_INTERVAL_MS = 3e4;\n\tfunction hashPixels(data) {\n\t\tconst view = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >>> 2);\n\t\tlet primaryHash = 2166136261;\n\t\tlet secondaryHash = 2654435769;\n\t\tfor (let i = 0; i < view.length; i++) {\n\t\t\tprimaryHash ^= view[i];\n\t\t\tprimaryHash = Math.imul(primaryHash, 16777619);\n\t\t\tsecondaryHash ^= view[i];\n\t\t\tsecondaryHash = Math.imul(secondaryHash, 2246822507);\n\t\t}\n\t\treturn `${(primaryHash >>> 0).toString(16)}:${(secondaryHash >>> 0).toString(16)}`;\n\t}\n\tfunction frameFingerprint(width, height, data) {\n\t\treturn `${width}x${height}:${hashPixels(data)}`;\n\t}\n\tfunction transparentFingerprint(width, height) {\n\t\tconst pixelCount = width * height;\n\t\tlet hash = transparentFingerprintMap.get(pixelCount);\n\t\tif (hash === void 0) {\n\t\t\thash = hashPixels(new Uint8ClampedArray(pixelCount * 4));\n\t\t\ttransparentFingerprintMap.set(pixelCount, hash);\n\t\t}\n\t\treturn `${width}x${height}:${hash}`;\n\t}\n\tconst worker = self;\n\tlet reusableCanvas = null;\n\tlet reusableCtx = null;\n\tworker.onmessage = async function(e) {\n\t\tif ("resetFrameDedup" in e.data) {\n\t\t\tlastFingerprintMap.clear();\n\t\t\treturn;\n\t\t}\n\t\tif ("OffscreenCanvas" in globalThis) {\n\t\t\tconst { id, bitmap, width, height, displayWidth, displayHeight, dataURLOptions, maskRegions } = e.data;\n\t\t\ttry {\n\t\t\t\tif (!reusableCanvas || reusableCanvas.width !== width || reusableCanvas.height !== height) {\n\t\t\t\t\treusableCanvas = new OffscreenCanvas(width, height);\n\t\t\t\t\treusableCtx = reusableCanvas.getContext("2d", { willReadFrequently: true });\n\t\t\t\t}\n\t\t\t\tconst ctx = reusableCtx;\n\t\t\t\tctx.clearRect(0, 0, width, height);\n\t\t\t\tctx.drawImage(bitmap, 0, 0);\n\t\t\t\tbitmap.close();\n\t\t\t\tif (maskRegions) {\n\t\t\t\t\tctx.fillStyle = "black";\n\t\t\t\t\tfor (const region of maskRegions) ctx.fillRect(region.x, region.y, region.width, region.height);\n\t\t\t\t}\n\t\t\t\tconst fingerprint = frameFingerprint(width, height, ctx.getImageData(0, 0, width, height).data);\n\t\t\t\tif (fingerprint === (lastFingerprintMap.get(id) ?? transparentFingerprint(width, height))) {\n\t\t\t\t\tconst lastSentAt = lastSentAtMap.get(id);\n\t\t\t\t\tif (!(maskRegions !== void 0 && lastSentAt !== void 0 && Date.now() - lastSentAt >= PROVIDER_KEYFRAME_INTERVAL_MS)) return worker.postMessage({ id });\n\t\t\t\t}\n\t\t\t\tconst blob = await reusableCanvas.convertToBlob(dataURLOptions);\n\t\t\t\tconst arrayBuffer = await blob.arrayBuffer();\n\t\t\t\tworker.postMessage({\n\t\t\t\t\tid,\n\t\t\t\t\ttype: blob.type,\n\t\t\t\t\tbase64: encode(arrayBuffer),\n\t\t\t\t\tdisplayWidth,\n\t\t\t\t\tdisplayHeight\n\t\t\t\t});\n\t\t\t\tlastFingerprintMap.set(id, fingerprint);\n\t\t\t\tlastSentAtMap.set(id, Date.now());\n\t\t\t} catch {\n\t\t\t\tworker.postMessage({ id });\n\t\t\t}\n\t\t} else {\n\t\t\te.data.bitmap.close();\n\t\t\treturn worker.postMessage({ id: e.data.id });\n\t\t}\n\t};\n\t//#endregion\n})();\n',
-        GO = "undefined" != typeof self && self.Blob && new Blob(["(self.URL || self.webkitURL).revokeObjectURL(self.location.href);", UO], {
+      var kc = '(function() {\n\t//#region ../../../../../../setup-pnpm/node_modules/.bin/store/v11/links/@/base64-arraybuffer/1.0.2/f63fa6b5c318cf1c9f6bdd1d4292ad2f15f76f2ec78475025a2d44070e896fe9/node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js\n\tvar chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n\tvar lookup = typeof Uint8Array === "undefined" ? [] : /* @__PURE__ */ new Uint8Array(256);\n\tfor (var i = 0; i < chars.length; i++) lookup[chars.charCodeAt(i)] = i;\n\tvar encode = function(arraybuffer) {\n\t\tvar bytes = new Uint8Array(arraybuffer), i, len = bytes.length, base64 = "";\n\t\tfor (i = 0; i < len; i += 3) {\n\t\t\tbase64 += chars[bytes[i] >> 2];\n\t\t\tbase64 += chars[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];\n\t\t\tbase64 += chars[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];\n\t\t\tbase64 += chars[bytes[i + 2] & 63];\n\t\t}\n\t\tif (len % 3 === 2) base64 = base64.substring(0, base64.length - 1) + "=";\n\t\telse if (len % 3 === 1) base64 = base64.substring(0, base64.length - 2) + "==";\n\t\treturn base64;\n\t};\n\t//#endregion\n\t//#region ../rrweb/src/record/workers/image-bitmap-data-url-worker.ts\n\tconst lastFingerprintMap = /* @__PURE__ */ new Map();\n\tconst transparentFingerprintMap = /* @__PURE__ */ new Map();\n\tconst lastSentAtMap = /* @__PURE__ */ new Map();\n\tconst PROVIDER_KEYFRAME_INTERVAL_MS = 3e4;\n\tfunction hashPixels(data) {\n\t\tconst view = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >>> 2);\n\t\tlet primaryHash = 2166136261;\n\t\tlet secondaryHash = 2654435769;\n\t\tfor (let i = 0; i < view.length; i++) {\n\t\t\tprimaryHash ^= view[i];\n\t\t\tprimaryHash = Math.imul(primaryHash, 16777619);\n\t\t\tsecondaryHash ^= view[i];\n\t\t\tsecondaryHash = Math.imul(secondaryHash, 2246822507);\n\t\t}\n\t\treturn `${(primaryHash >>> 0).toString(16)}:${(secondaryHash >>> 0).toString(16)}`;\n\t}\n\tfunction frameFingerprint(width, height, data) {\n\t\treturn `${width}x${height}:${hashPixels(data)}`;\n\t}\n\tfunction transparentFingerprint(width, height) {\n\t\tconst pixelCount = width * height;\n\t\tlet hash = transparentFingerprintMap.get(pixelCount);\n\t\tif (hash === void 0) {\n\t\t\thash = hashPixels(new Uint8ClampedArray(pixelCount * 4));\n\t\t\ttransparentFingerprintMap.set(pixelCount, hash);\n\t\t}\n\t\treturn `${width}x${height}:${hash}`;\n\t}\n\tconst worker = self;\n\tlet reusableCanvas = null;\n\tlet reusableCtx = null;\n\tworker.onmessage = async function(e) {\n\t\tif ("resetFrameDedup" in e.data) {\n\t\t\tlastFingerprintMap.clear();\n\t\t\treturn;\n\t\t}\n\t\tif ("OffscreenCanvas" in globalThis) {\n\t\t\tconst { id, bitmap, width, height, displayWidth, displayHeight, dataURLOptions, maskRegions } = e.data;\n\t\t\ttry {\n\t\t\t\tif (!reusableCanvas || reusableCanvas.width !== width || reusableCanvas.height !== height) {\n\t\t\t\t\treusableCanvas = new OffscreenCanvas(width, height);\n\t\t\t\t\treusableCtx = reusableCanvas.getContext("2d", { willReadFrequently: true });\n\t\t\t\t}\n\t\t\t\tconst ctx = reusableCtx;\n\t\t\t\tctx.clearRect(0, 0, width, height);\n\t\t\t\tctx.drawImage(bitmap, 0, 0);\n\t\t\t\tbitmap.close();\n\t\t\t\tif (maskRegions) {\n\t\t\t\t\tctx.fillStyle = "black";\n\t\t\t\t\tfor (const region of maskRegions) ctx.fillRect(region.x, region.y, region.width, region.height);\n\t\t\t\t}\n\t\t\t\tconst fingerprint = frameFingerprint(width, height, ctx.getImageData(0, 0, width, height).data);\n\t\t\t\tif (fingerprint === (lastFingerprintMap.get(id) ?? transparentFingerprint(width, height))) {\n\t\t\t\t\tconst lastSentAt = lastSentAtMap.get(id);\n\t\t\t\t\tif (!(maskRegions !== void 0 && lastSentAt !== void 0 && Date.now() - lastSentAt >= PROVIDER_KEYFRAME_INTERVAL_MS)) return worker.postMessage({ id });\n\t\t\t\t}\n\t\t\t\tconst blob = await reusableCanvas.convertToBlob(dataURLOptions);\n\t\t\t\tconst arrayBuffer = await blob.arrayBuffer();\n\t\t\t\tworker.postMessage({\n\t\t\t\t\tid,\n\t\t\t\t\ttype: blob.type,\n\t\t\t\t\tbase64: encode(arrayBuffer),\n\t\t\t\t\tdisplayWidth,\n\t\t\t\t\tdisplayHeight\n\t\t\t\t});\n\t\t\t\tlastFingerprintMap.set(id, fingerprint);\n\t\t\t\tlastSentAtMap.set(id, Date.now());\n\t\t\t} catch {\n\t\t\t\tworker.postMessage({ id });\n\t\t\t}\n\t\t} else {\n\t\t\te.data.bitmap.close();\n\t\t\treturn worker.postMessage({ id: e.data.id });\n\t\t}\n\t};\n\t//#endregion\n})();\n',
+        Gc = "undefined" != typeof self && self.Blob && new Blob(["(self.URL || self.webkitURL).revokeObjectURL(self.location.href);", kc], {
           type: "text/javascript;charset=utf-8"
         });
 
-      function CO(MM) {
-        let rM;
+      function Bc(UU) {
+        let XU;
         try {
-          if (rM = GO && (self.URL || self.webkitURL).createObjectURL(GO), !rM) throw "";
-          const iM = new Worker(rM, {
-            name: null == MM ? void 0 : MM.name
+          if (XU = Gc && (self.URL || self.webkitURL).createObjectURL(Gc), !XU) throw "";
+          const zU = new Worker(XU, {
+            name: null == UU ? void 0 : UU.name
           });
-          return iM.addEventListener("error", (() => {
-            (self.URL || self.webkitURL).revokeObjectURL(rM)
-          })), iM
-        } catch (rM) {
-          return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(UO), {
-            name: null == MM ? void 0 : MM.name
+          return zU.addEventListener("error", (() => {
+            (self.URL || self.webkitURL).revokeObjectURL(XU)
+          })), zU
+        } catch (XU) {
+          return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(kc), {
+            name: null == UU ? void 0 : UU.name
           })
         }
       }
-      var eO = "A page CSP that omits blob: from worker-src or script-src blocks it";
+      var Zc = "A page CSP that omits blob: from worker-src or script-src blocks it";
 
-      function bO(MM) {
-        for (var rM = arguments.length, iM = new Array(rM > 1 ? rM - 1 : 0), OM = 1; OM < rM; OM++) iM[OM - 1] = arguments[OM];
-        console.warn(`[replay] canvas capture: ${MM}`, ...iM)
+      function Rc(UU) {
+        for (var XU = arguments.length, zU = new Array(XU > 1 ? XU - 1 : 0), cU = 1; cU < XU; cU++) zU[cU - 1] = arguments[cU];
+        console.warn(`[replay] canvas capture: ${UU}`, ...zU)
       }
-      var wO, tO, gO, uO = class {
+      var Pc, Wc, dc, Lc = class {
           onFullSnapshot() {
-            var MM;
-            null === (MM = this.resetFrameDedup) || void 0 === MM || MM.call(this)
+            var UU;
+            null === (UU = this.resetFrameDedup) || void 0 === UU || UU.call(this)
           }
           acquire() {
             this.refCount += 1
@@ -3465,66 +3465,66 @@ export const modules = {
           unlock() {
             this.locked = !1
           }
-          constructor(MM) {
-            Sr(this, "pendingCanvasMutations", new Map), Sr(this, "rafStamps", {
+          constructor(UU) {
+            yX(this, "pendingCanvasMutations", new Map), yX(this, "rafStamps", {
               latestId: 0,
               invokeId: null
-            }), Sr(this, "mirror", void 0), Sr(this, "mutationCb", void 0), Sr(this, "resetObservers", void 0), Sr(this, "frozen", !1), Sr(this, "locked", !1), Sr(this, "rafIdTimestamp", null), Sr(this, "rafIdFlush", null), Sr(this, "refCount", 0), Sr(this, "torndown", !1), Sr(this, "resetFrameDedup", null), Sr(this, "processMutation", ((MM, rM) => {
-              (this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(MM) || this.pendingCanvasMutations.set(MM, []), this.pendingCanvasMutations.get(MM).push(rM)
+            }), yX(this, "mirror", void 0), yX(this, "mutationCb", void 0), yX(this, "resetObservers", void 0), yX(this, "frozen", !1), yX(this, "locked", !1), yX(this, "rafIdTimestamp", null), yX(this, "rafIdFlush", null), yX(this, "refCount", 0), yX(this, "torndown", !1), yX(this, "resetFrameDedup", null), yX(this, "processMutation", ((UU, XU) => {
+              (this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(UU) || this.pendingCanvasMutations.set(UU, []), this.pendingCanvasMutations.get(UU).push(XU)
             }));
             const {
-              sampling: rM = "all",
-              win: iM,
-              blockClass: OM,
-              blockSelector: SM,
-              recordCanvas: jM,
-              dataURLOptions: aM,
-              resolutionScale: PM,
-              canvasMasking: nM
-            } = MM;
-            this.mutationCb = MM.mutationCb, this.mirror = MM.mirror, jM && "all" === rM && this.initCanvasMutationObserver(iM, OM, SM, aM), jM && "number" == typeof rM && this.initCanvasFPSObserver(rM, iM, OM, SM, {
-              dataURLOptions: aM,
-              resolutionScale: PM,
-              canvasMasking: nM
+              sampling: XU = "all",
+              win: zU,
+              blockClass: cU,
+              blockSelector: yU,
+              recordCanvas: QU,
+              dataURLOptions: AU,
+              resolutionScale: FU,
+              canvasMasking: oU
+            } = UU;
+            this.mutationCb = UU.mutationCb, this.mirror = UU.mirror, QU && "all" === XU && this.initCanvasMutationObserver(zU, cU, yU, AU), QU && "number" == typeof XU && this.initCanvasFPSObserver(XU, zU, cU, yU, {
+              dataURLOptions: AU,
+              resolutionScale: FU,
+              canvasMasking: oU
             })
           }
-          initCanvasFPSObserver(MM, rM, iM, OM, SM) {
-            var aM = this;
-            if (!("OffscreenCanvas" in rM)) return void bO("disabled because this browser does not support OffscreenCanvas");
-            const PM = "number" == typeof SM.resolutionScale && Number.isFinite(SM.resolutionScale) ? Math.min(1, Math.max(.1, SM.resolutionScale)) : 1,
-              nM = lO(rM, iM, OM, !0),
-              QM = new Map;
-            let zM;
+          initCanvasFPSObserver(UU, XU, zU, cU, yU) {
+            var AU = this;
+            if (!("OffscreenCanvas" in XU)) return void Rc("disabled because this browser does not support OffscreenCanvas");
+            const FU = "number" == typeof yU.resolutionScale && Number.isFinite(yU.resolutionScale) ? Math.min(1, Math.max(.1, yU.resolutionScale)) : 1,
+              oU = tc(XU, zU, cU, !0),
+              DU = new Map;
+            let EU;
             try {
-              zM = new CO
-            } catch (MM) {
-              return bO(`disabled because the encode worker did not start. ${eO}`, MM), void nM()
+              EU = new Bc
+            } catch (UU) {
+              return Rc(`disabled because the encode worker did not start. ${Zc}`, UU), void oU()
             }
-            let mM = !1;
-            zM.onerror = MM => {
-              var rM;
-              mM = !0, bO(`stopped because the encode worker failed. ${eO}`, MM), cancelAnimationFrame(dM), null === (rM = zM.terminate) || void 0 === rM || rM.call(zM), this.resetFrameDedup = null
+            let NU = !1;
+            EU.onerror = UU => {
+              var XU;
+              NU = !0, Rc(`stopped because the encode worker failed. ${Zc}`, UU), cancelAnimationFrame(tU), null === (XU = EU.terminate) || void 0 === XU || XU.call(EU), this.resetFrameDedup = null
             }, this.resetFrameDedup = () => {
-              zM.postMessage({
+              EU.postMessage({
                 resetFrameDedup: !0
               })
-            }, zM.onmessage = MM => {
+            }, EU.onmessage = UU => {
               const {
-                id: rM
-              } = MM.data;
-              if (QM.set(rM, !1), !("base64" in MM.data)) return;
+                id: XU
+              } = UU.data;
+              if (DU.set(XU, !1), !("base64" in UU.data)) return;
               const {
-                base64: iM,
-                type: OM,
-                displayWidth: SM,
-                displayHeight: jM
-              } = MM.data;
+                base64: zU,
+                type: cU,
+                displayWidth: yU,
+                displayHeight: QU
+              } = UU.data;
               this.mutationCb({
-                id: rM,
-                type: LM["2D"],
+                id: XU,
+                type: YU["2D"],
                 commands: [{
                   property: "clearRect",
-                  args: [0, 0, SM, jM]
+                  args: [0, 0, yU, QU]
                 }, {
                   property: "drawImage",
                   args: [{
@@ -3533,481 +3533,481 @@ export const modules = {
                       rr_type: "Blob",
                       data: [{
                         rr_type: "ArrayBuffer",
-                        base64: iM
+                        base64: zU
                       }],
-                      type: OM
+                      type: cU
                     }]
-                  }, 0, 0, SM, jM]
+                  }, 0, 0, yU, QU]
                 }],
-                displayWidth: SM,
-                displayHeight: jM
+                displayWidth: yU,
+                displayHeight: QU
               })
             };
-            let HM = !1,
-              hM = !1;
-            const JM = 1e3 / MM;
-            let dM, yM = 0;
-            const lM = MM => {
-              var nM;
-              mM || (yM && JM > MM - yM || (yM = MM, (() => {
-                const MM = [],
-                  SM = rM => {
+            let IU = !1,
+              pU = !1;
+            const aU = 1e3 / UU;
+            let tU, gU = 0;
+            const kU = UU => {
+              var oU;
+              NU || (gU && aU > UU - gU || (gU = UU, (() => {
+                const UU = [],
+                  yU = XU => {
                     try {
-                      rM.querySelectorAll("canvas").forEach((rM => {
-                        Ei(rM, iM, OM, !0) || MM.push(rM)
-                      })), rM.querySelectorAll("*").forEach((MM => {
-                        MM.shadowRoot && SM(MM.shadowRoot)
+                      XU.querySelectorAll("canvas").forEach((XU => {
+                        kz(XU, zU, cU, !0) || UU.push(XU)
+                      })), XU.querySelectorAll("*").forEach((UU => {
+                        UU.shadowRoot && yU(UU.shadowRoot)
                       }))
-                    } catch (MM) {}
+                    } catch (UU) {}
                   };
-                return SM(rM.document), MM
-              })().forEach((nM = jM((function*(MM) {
-                const rM = aM.mirror.getId(MM);
-                if (-1 !== rM && !QM.get(rM) && 0 !== MM.width && 0 !== MM.height) {
-                  QM.set(rM, !0);
+                return yU(XU.document), UU
+              })().forEach((oU = QU((function*(UU) {
+                const XU = AU.mirror.getId(UU);
+                if (-1 !== XU && !DU.get(XU) && 0 !== UU.width && 0 !== UU.height) {
+                  DU.set(XU, !0);
                   try {
-                    if (["webgl", "webgl2"].includes(MM.__context)) {
-                      var iM, OM;
-                      const SM = MM.getContext(MM.__context);
-                      if (null == SM || null === (iM = SM.isContextLost) || void 0 === iM ? void 0 : iM.call(SM)) return void QM.set(rM, !1);
-                      !1 === (null == SM || null === (OM = SM.getContextAttributes()) || void 0 === OM ? void 0 : OM.preserveDrawingBuffer) && SM.clear(SM.COLOR_BUFFER_BIT)
+                    if (["webgl", "webgl2"].includes(UU.__context)) {
+                      var zU, cU;
+                      const yU = UU.getContext(UU.__context);
+                      if (null == yU || null === (zU = yU.isContextLost) || void 0 === zU ? void 0 : zU.call(yU)) return void DU.set(XU, !1);
+                      !1 === (null == yU || null === (cU = yU.getContextAttributes()) || void 0 === cU ? void 0 : cU.preserveDrawingBuffer) && yU.clear(yU.COLOR_BUFFER_BIT)
                     }
-                    const jM = MM.clientWidth || MM.width,
-                      aM = MM.clientHeight || MM.height,
-                      nM = Math.max(1, Math.round(jM * PM)),
-                      LM = Math.max(1, Math.round(aM * PM)),
-                      mM = function(MM, rM, iM, OM, SM, jM) {
-                        if (!MM || "function" != typeof MM.regionsFn) return;
-                        let aM;
+                    const QU = UU.clientWidth || UU.width,
+                      AU = UU.clientHeight || UU.height,
+                      oU = Math.max(1, Math.round(QU * FU)),
+                      YU = Math.max(1, Math.round(AU * FU)),
+                      NU = function(UU, XU, zU, cU, yU, QU) {
+                        if (!UU || "function" != typeof UU.regionsFn) return;
+                        let AU;
                         try {
-                          aM = MM.regionsFn(rM)
-                        } catch (MM) {
-                          return SO
+                          AU = UU.regionsFn(XU)
+                        } catch (UU) {
+                          return zc
                         }
-                        if (void 0 === aM) return;
-                        if (!Array.isArray(aM) || !aM.every(jO)) return SO;
-                        const PM = iM / SM,
-                          nM = OM / jM;
-                        return aM.filter((MM => MM.width > 0 && MM.height > 0)).map((MM => {
-                          const rM = Math.floor(MM.x * PM),
-                            iM = Math.floor(MM.y * nM);
+                        if (void 0 === AU) return;
+                        if (!Array.isArray(AU) || !AU.every(cc)) return zc;
+                        const FU = zU / yU,
+                          oU = cU / QU;
+                        return AU.filter((UU => UU.width > 0 && UU.height > 0)).map((UU => {
+                          const XU = Math.floor(UU.x * FU),
+                            zU = Math.floor(UU.y * oU);
                           return {
-                            x: rM,
-                            y: iM,
-                            width: Math.ceil((MM.x + MM.width) * PM) - rM,
-                            height: Math.ceil((MM.y + MM.height) * nM) - iM
+                            x: XU,
+                            y: zU,
+                            width: Math.ceil((UU.x + UU.width) * FU) - XU,
+                            height: Math.ceil((UU.y + UU.height) * oU) - zU
                           }
                         }))
-                      }(SM.canvasMasking, MM, nM, LM, jM, aM);
-                    if ("skip-frame" === mM) return HM || (HM = !0, bO("dropped a frame because the mask provider did not return valid regions. A provider that always fails records no canvas frames at all")), void QM.set(rM, !1);
-                    const hM = yield createImageBitmap(MM, 1 > PM ? {
-                      resizeWidth: nM,
-                      resizeHeight: LM,
+                      }(yU.canvasMasking, UU, oU, YU, QU, AU);
+                    if ("skip-frame" === NU) return IU || (IU = !0, Rc("dropped a frame because the mask provider did not return valid regions. A provider that always fails records no canvas frames at all")), void DU.set(XU, !1);
+                    const pU = yield createImageBitmap(UU, 1 > FU ? {
+                      resizeWidth: oU,
+                      resizeHeight: YU,
                       resizeQuality: "medium"
                     } : {
-                      resizeWidth: nM,
-                      resizeHeight: LM
+                      resizeWidth: oU,
+                      resizeHeight: YU
                     });
-                    zM.postMessage({
-                      id: rM,
-                      bitmap: hM,
-                      width: nM,
-                      height: LM,
-                      displayWidth: jM,
-                      displayHeight: aM,
-                      dataURLOptions: SM.dataURLOptions,
-                      maskRegions: mM
-                    }, [hM])
-                  } catch (MM) {
-                    hM || (hM = !0, bO("dropped a frame because the snapshot failed. A canvas that fails every frame records no canvas frames at all", MM)), QM.set(rM, !1)
+                    EU.postMessage({
+                      id: XU,
+                      bitmap: pU,
+                      width: oU,
+                      height: YU,
+                      displayWidth: QU,
+                      displayHeight: AU,
+                      dataURLOptions: yU.dataURLOptions,
+                      maskRegions: NU
+                    }, [pU])
+                  } catch (UU) {
+                    pU || (pU = !0, Rc("dropped a frame because the snapshot failed. A canvas that fails every frame records no canvas frames at all", UU)), DU.set(XU, !1)
                   }
                 }
-              })), function(MM) {
-                return nM.apply(this, arguments)
-              }))), dM = requestAnimationFrame(lM))
+              })), function(UU) {
+                return oU.apply(this, arguments)
+              }))), tU = requestAnimationFrame(kU))
             };
-            dM = requestAnimationFrame(lM), this.resetObservers = () => {
-              var MM;
-              nM(), cancelAnimationFrame(dM), null === (MM = zM.terminate) || void 0 === MM || MM.call(zM), this.resetFrameDedup = null
+            tU = requestAnimationFrame(kU), this.resetObservers = () => {
+              var UU;
+              oU(), cancelAnimationFrame(tU), null === (UU = EU.terminate) || void 0 === UU || UU.call(EU), this.resetFrameDedup = null
             }
           }
-          initCanvasMutationObserver(MM, rM, iM, OM) {
+          initCanvasMutationObserver(UU, XU, zU, cU) {
             this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher();
-            const SM = lO(MM, rM, iM, !1),
-              jM = function(MM, rM, iM, OM, SM) {
-                const jM = [],
-                  aM = Object.getOwnPropertyNames(rM.CanvasRenderingContext2D.prototype);
-                for (const PM of aM) try {
-                  if ("function" != typeof rM.CanvasRenderingContext2D.prototype[PM]) continue;
-                  const aM = tM(rM.CanvasRenderingContext2D.prototype, PM, (function(jM) {
+            const yU = tc(UU, XU, zU, !1),
+              QU = function(UU, XU, zU, cU, yU) {
+                const QU = [],
+                  AU = Object.getOwnPropertyNames(XU.CanvasRenderingContext2D.prototype);
+                for (const FU of AU) try {
+                  if ("function" != typeof XU.CanvasRenderingContext2D.prototype[FU]) continue;
+                  const AU = LU(XU.CanvasRenderingContext2D.prototype, FU, (function(QU) {
                     return function() {
-                      for (var aM = arguments.length, nM = new Array(aM), QM = 0; QM < aM; QM++) nM[QM] = arguments[QM];
-                      return Ei(this.canvas, iM, OM, !0) || setTimeout((() => {
-                        let iM;
+                      for (var AU = arguments.length, oU = new Array(AU), DU = 0; DU < AU; DU++) oU[DU] = arguments[DU];
+                      return kz(this.canvas, zU, cU, !0) || setTimeout((() => {
+                        let zU;
                         try {
-                          iM = hO(nM, rM, this, SM)
-                        } catch (MM) {
+                          zU = Nc(oU, XU, this, yU)
+                        } catch (UU) {
                           return
                         }
-                        MM(this.canvas, {
-                          type: LM["2D"],
-                          property: PM,
-                          args: iM
+                        UU(this.canvas, {
+                          type: YU["2D"],
+                          property: FU,
+                          args: zU
                         })
-                      }), 0), jM.apply(this, nM)
+                      }), 0), QU.apply(this, oU)
                     }
                   }));
-                  jM.push(aM)
-                } catch (SM) {
-                  const aM = mi(rM.CanvasRenderingContext2D.prototype, PM, {
-                    set(rM) {
-                      Ei(this.canvas, iM, OM, !0) || MM(this.canvas, {
-                        type: LM["2D"],
-                        property: PM,
-                        args: [rM],
+                  QU.push(AU)
+                } catch (yU) {
+                  const AU = Nz(XU.CanvasRenderingContext2D.prototype, FU, {
+                    set(XU) {
+                      kz(this.canvas, zU, cU, !0) || UU(this.canvas, {
+                        type: YU["2D"],
+                        property: FU,
+                        args: [XU],
                         setter: !0
                       })
                     }
                   });
-                  jM.push(aM)
+                  QU.push(AU)
                 }
                 return () => {
-                  jM.forEach((MM => MM()))
+                  QU.forEach((UU => UU()))
                 }
-              }(this.processMutation.bind(this), MM, rM, iM, OM),
-              aM = function(MM, rM, iM, OM, SM) {
-                const jM = [];
-                return void 0 !== rM.WebGLRenderingContext && jM.push(...EO(rM.WebGLRenderingContext.prototype, LM.WebGL, MM, iM, OM, rM, SM)), void 0 !== rM.WebGL2RenderingContext && jM.push(...EO(rM.WebGL2RenderingContext.prototype, LM.WebGL2, MM, iM, OM, rM, SM)), () => {
-                  jM.forEach((MM => MM()))
+              }(this.processMutation.bind(this), UU, XU, zU, cU),
+              AU = function(UU, XU, zU, cU, yU) {
+                const QU = [];
+                return void 0 !== XU.WebGLRenderingContext && QU.push(...gc(XU.WebGLRenderingContext.prototype, YU.WebGL, UU, zU, cU, XU, yU)), void 0 !== XU.WebGL2RenderingContext && QU.push(...gc(XU.WebGL2RenderingContext.prototype, YU.WebGL2, UU, zU, cU, XU, yU)), () => {
+                  QU.forEach((UU => UU()))
                 }
-              }(this.processMutation.bind(this), MM, rM, iM, OM);
+              }(this.processMutation.bind(this), UU, XU, zU, cU);
             this.resetObservers = () => {
-              SM(), jM(), aM()
+              yU(), QU(), AU()
             }
           }
           startPendingCanvasMutationFlusher() {
             this.rafIdFlush = requestAnimationFrame((() => this.flushPendingCanvasMutations()))
           }
           startRAFTimestamping() {
-            const MM = rM => {
-              this.rafStamps.latestId = rM, this.rafIdTimestamp = requestAnimationFrame(MM)
+            const UU = XU => {
+              this.rafStamps.latestId = XU, this.rafIdTimestamp = requestAnimationFrame(UU)
             };
-            this.rafIdTimestamp = requestAnimationFrame(MM)
+            this.rafIdTimestamp = requestAnimationFrame(UU)
           }
           flushPendingCanvasMutations() {
-            this.pendingCanvasMutations.forEach(((MM, rM) => {
-              const iM = this.mirror.getId(rM);
-              this.flushPendingCanvasMutationFor(rM, iM)
+            this.pendingCanvasMutations.forEach(((UU, XU) => {
+              const zU = this.mirror.getId(XU);
+              this.flushPendingCanvasMutationFor(XU, zU)
             })), this.rafIdFlush = requestAnimationFrame((() => this.flushPendingCanvasMutations()))
           }
-          flushPendingCanvasMutationFor(MM, rM) {
+          flushPendingCanvasMutationFor(UU, XU) {
             if (this.frozen || this.locked) return;
-            const iM = this.pendingCanvasMutations.get(MM);
-            if (!iM || -1 === rM) return;
-            const OM = iM.map((MM => function(MM, rM) {
-                if (null == MM) return {};
-                var iM, OM, SM = function(MM, rM) {
-                  if (null == MM) return {};
-                  var iM = {};
-                  for (var OM in MM)
-                    if ({}.hasOwnProperty.call(MM, OM)) {
-                      if (rM.includes(OM)) continue;
-                      iM[OM] = MM[OM]
-                    } return iM
-                }(MM, rM);
+            const zU = this.pendingCanvasMutations.get(UU);
+            if (!zU || -1 === XU) return;
+            const cU = zU.map((UU => function(UU, XU) {
+                if (null == UU) return {};
+                var zU, cU, yU = function(UU, XU) {
+                  if (null == UU) return {};
+                  var zU = {};
+                  for (var cU in UU)
+                    if ({}.hasOwnProperty.call(UU, cU)) {
+                      if (XU.includes(cU)) continue;
+                      zU[cU] = UU[cU]
+                    } return zU
+                }(UU, XU);
                 if (Object.getOwnPropertySymbols) {
-                  var jM = Object.getOwnPropertySymbols(MM);
-                  for (OM = 0; jM.length > OM; OM++) rM.includes(iM = jM[OM]) || {}.propertyIsEnumerable.call(MM, iM) && (SM[iM] = MM[iM])
+                  var QU = Object.getOwnPropertySymbols(UU);
+                  for (cU = 0; QU.length > cU; cU++) XU.includes(zU = QU[cU]) || {}.propertyIsEnumerable.call(UU, zU) && (yU[zU] = UU[zU])
                 }
-                return SM
-              }(MM, aM))),
+                return yU
+              }(UU, AU))),
               {
-                type: SM
-              } = iM[0];
+                type: yU
+              } = zU[0];
             this.mutationCb({
-              id: rM,
-              type: SM,
-              commands: OM
-            }), this.pendingCanvasMutations.delete(MM)
+              id: XU,
+              type: yU,
+              commands: cU
+            }), this.pendingCanvasMutations.delete(UU)
           }
         },
-        RO = class {
-          constructor(MM) {
-            var rM;
-            Sr(this, "trackedLinkElements", new WeakSet), Sr(this, "pendingDeferredSheets", new Set), Sr(this, "mutationCb", void 0), Sr(this, "adoptedStyleSheetCb", void 0), Sr(this, "maskAllElementAttributes", void 0), Sr(this, "maskAttributeFn", void 0), Sr(this, "styleMirror", new ti), this.mutationCb = MM.mutationCb, this.adoptedStyleSheetCb = MM.adoptedStyleSheetCb, this.maskAllElementAttributes = null !== (rM = MM.maskAllElementAttributes) && void 0 !== rM && rM, this.maskAttributeFn = MM.maskAttributeFn
+        ec = class {
+          constructor(UU) {
+            var XU;
+            yX(this, "trackedLinkElements", new WeakSet), yX(this, "pendingDeferredSheets", new Set), yX(this, "mutationCb", void 0), yX(this, "adoptedStyleSheetCb", void 0), yX(this, "maskAllElementAttributes", void 0), yX(this, "maskAttributeFn", void 0), yX(this, "styleMirror", new dz), this.mutationCb = UU.mutationCb, this.adoptedStyleSheetCb = UU.adoptedStyleSheetCb, this.maskAllElementAttributes = null !== (XU = UU.maskAllElementAttributes) && void 0 !== XU && XU, this.maskAttributeFn = UU.maskAttributeFn
           }
-          attachLinkElement(MM, rM) {
-            "_cssText" in rM.attributes && this.mutationCb({
+          attachLinkElement(UU, XU) {
+            "_cssText" in XU.attributes && this.mutationCb({
               adds: [],
               removes: [],
               texts: [],
               attributes: [{
-                id: rM.id,
-                attributes: rM.attributes
+                id: XU.id,
+                attributes: XU.attributes
               }]
-            }), this.trackLinkElement(MM)
+            }), this.trackLinkElement(UU)
           }
-          beginDeferredLinkInlining(MM, rM) {
-            if (-1 === rM || !MM.isConnected) return null;
-            let iM = null,
-              OM = null;
+          beginDeferredLinkInlining(UU, XU) {
+            if (-1 === XU || !UU.isConnected) return null;
+            let zU = null,
+              cU = null;
             try {
-              OM = MM.sheet, OM && (iM = function(MM) {
-                const rM = [];
-                let iM = !1,
-                  OM = null;
-                const SM = new Map;
+              cU = UU.sheet, cU && (zU = function(UU) {
+                const XU = [];
+                let zU = !1,
+                  cU = null;
+                const yU = new Map;
 
-                function jM(MM) {
-                  const SM = rM.pop();
-                  if ("group" === SM.kind) {
-                    if (null === MM) {
-                      for (; rM.length > 0 && "group" === rM[rM.length - 1].kind;) rM.pop();
-                      return void jM(null)
+                function QU(UU) {
+                  const yU = XU.pop();
+                  if ("group" === yU.kind) {
+                    if (null === UU) {
+                      for (; XU.length > 0 && "group" === XU[XU.length - 1].kind;) XU.pop();
+                      return void QU(null)
                     }
-                    const iM = rM[rM.length - 1];
-                    return iM.parts.push(MM), void(iM.index += 1)
+                    const zU = XU[XU.length - 1];
+                    return zU.parts.push(UU), void(zU.index += 1)
                   }
-                  if (!SM.importRule) return iM = !0, void(OM = MM);
-                  aM(rM[rM.length - 1], SM.importRule, MM)
+                  if (!yU.importRule) return zU = !0, void(cU = UU);
+                  AU(XU[XU.length - 1], yU.importRule, UU)
                 }
 
-                function aM(MM, rM, iM) {
+                function AU(UU, XU, zU) {
                   try {
-                    let SM;
+                    let yU;
                     try {
-                      SM = iM || Qr(rM)
-                    } catch (MM) {
-                      SM = rM.cssText
+                      yU = zU || DX(XU)
+                    } catch (UU) {
+                      yU = XU.cssText
                     }
                     try {
-                      var OM;
-                      SM && (null === (OM = rM.styleSheet) || void 0 === OM ? void 0 : OM.href) && (SM = Rr(SM, rM.styleSheet.href))
-                    } catch (MM) {}
-                    SM && MM.parts.push(SM), MM.index += 1
-                  } catch (MM) {
-                    jM(null)
+                      var cU;
+                      yU && (null === (cU = XU.styleSheet) || void 0 === cU ? void 0 : cU.href) && (yU = wX(yU, XU.styleSheet.href))
+                    } catch (UU) {}
+                    yU && UU.parts.push(yU), UU.index += 1
+                  } catch (UU) {
+                    QU(null)
                   }
                 }
 
-                function PM(MM) {
-                  const iM = MM.rules[MM.index];
-                  if ("sheet" === MM.kind && hr(iM)) {
-                    const OM = SM.get(iM);
-                    return null === OM ? (MM.parts.push(iM.cssText), void(MM.index += 1)) : OM ? void rM.push({
+                function FU(UU) {
+                  const zU = UU.rules[UU.index];
+                  if ("sheet" === UU.kind && pX(zU)) {
+                    const cU = yU.get(zU);
+                    return null === cU ? (UU.parts.push(zU.cssText), void(UU.index += 1)) : cU ? void XU.push({
                       kind: "sheet",
-                      sheet: OM.sheet,
-                      rules: OM.rules,
-                      sheetHref: OM.sheetHref,
+                      sheet: cU.sheet,
+                      rules: cU.rules,
+                      sheetHref: cU.sheetHref,
                       index: 0,
                       parts: [],
-                      importRule: iM
-                    }) : void aM(MM, iM, null)
+                      importRule: zU
+                    }) : void AU(UU, zU, null)
                   }
-                  if (function(MM, iM) {
+                  if (function(UU, zU) {
                       try {
-                        const OM = function(MM) {
-                          const rM = MM;
-                          if (!rM.cssRules || 0 === rM.cssRules.length) return null;
-                          if (rM.media && "string" == typeof rM.media.mediaText) return `@media ${rM.media.mediaText} {`;
-                          if (Jr(MM)) {
-                            if ("number" == typeof rM.type && 1 !== rM.type) return null;
-                            const iM = rM.style ? rM.style.cssText : "";
-                            return `${MM.selectorText} {${iM?" "+iM:""}`
+                        const cU = function(UU) {
+                          const XU = UU;
+                          if (!XU.cssRules || 0 === XU.cssRules.length) return null;
+                          if (XU.media && "string" == typeof XU.media.mediaText) return `@media ${XU.media.mediaText} {`;
+                          if (aX(UU)) {
+                            if ("number" == typeof XU.type && 1 !== XU.type) return null;
+                            const zU = XU.style ? XU.style.cssText : "";
+                            return `${UU.selectorText} {${zU?" "+zU:""}`
                           }
-                          if ("containerName" in rM) return "string" != typeof rM.containerQuery || rM.containerName && !dr.test(rM.containerName) ? null : `@container ${rM.containerName?`${rM.containerName} `:""}${rM.containerQuery} {`;
-                          if ("string" == typeof rM.conditionText) {
-                            let OM = "";
+                          if ("containerName" in XU) return "string" != typeof XU.containerQuery || XU.containerName && !tX.test(XU.containerName) ? null : `@container ${XU.containerName?`${XU.containerName} `:""}${XU.containerQuery} {`;
+                          if ("string" == typeof XU.conditionText) {
+                            let cU = "";
                             try {
-                              var iM;
-                              OM = (null === (iM = MM.constructor) || void 0 === iM ? void 0 : iM.name) || ""
-                            } catch (MM) {
+                              var zU;
+                              cU = (null === (zU = UU.constructor) || void 0 === zU ? void 0 : zU.name) || ""
+                            } catch (UU) {
                               return null
                             }
-                            return "" === OM || "Object" === OM || "CSSSupportsRule" === OM ? `@supports ${rM.conditionText} {` : null
+                            return "" === cU || "Object" === cU || "CSSSupportsRule" === cU ? `@supports ${XU.conditionText} {` : null
                           }
-                          return "string" == typeof rM.name ? "keyText" in rM.cssRules[0] ? dr.test(rM.name) ? `@keyframes ${rM.name} {` : null : "" === rM.name ? "@layer {" : yr.test(rM.name) ? `@layer ${rM.name} {` : null : null
-                        }(MM);
-                        if (null === OM) return !1;
-                        const SM = iM.sheetHref;
-                        return rM.push({
+                          return "string" == typeof XU.name ? "keyText" in XU.cssRules[0] ? tX.test(XU.name) ? `@keyframes ${XU.name} {` : null : "" === XU.name ? "@layer {" : gX.test(XU.name) ? `@layer ${XU.name} {` : null : null
+                        }(UU);
+                        if (null === cU) return !1;
+                        const yU = zU.sheetHref;
+                        return XU.push({
                           kind: "group",
-                          rules: Array.from(MM.cssRules),
-                          sheetHref: SM,
+                          rules: Array.from(UU.cssRules),
+                          sheetHref: yU,
                           index: 0,
                           parts: [],
-                          prelude: SM ? Rr(OM, SM) : OM,
-                          fixColons: "sheet" === iM.kind && Jr(MM) && MM.selectorText.includes(":")
+                          prelude: yU ? wX(cU, yU) : cU,
+                          fixColons: "sheet" === zU.kind && aX(UU) && UU.selectorText.includes(":")
                         }), !0
-                      } catch (MM) {
+                      } catch (UU) {
                         return !1
                       }
-                    }(iM, MM)) return;
-                  let OM = iM.cssText;
-                  "sheet" === MM.kind && Jr(iM) && iM.selectorText.includes(":") && (OM = Hr(OM)), MM.parts.push(MM.sheetHref ? Rr(OM, MM.sheetHref) : OM), MM.index += 1
+                    }(zU, UU)) return;
+                  let cU = zU.cssText;
+                  "sheet" === UU.kind && aX(zU) && zU.selectorText.includes(":") && (cU = IX(cU)), UU.parts.push(UU.sheetHref ? wX(cU, UU.sheetHref) : cU), UU.index += 1
                 }
-                return function(MM) {
+                return function(UU) {
                   try {
-                    const iM = MM.rules || MM.cssRules;
-                    if (!iM) return !1;
-                    qM(iM);
-                    let OM = MM.href;
-                    !OM && MM.ownerNode && (OM = MM.ownerNode.baseURI);
-                    const jM = Array.from(iM);
-                    return rM.push({
+                    const zU = UU.rules || UU.cssRules;
+                    if (!zU) return !1;
+                    KU(zU);
+                    let cU = UU.href;
+                    !cU && UU.ownerNode && (cU = UU.ownerNode.baseURI);
+                    const QU = Array.from(zU);
+                    return XU.push({
                         kind: "sheet",
-                        sheet: MM,
-                        rules: jM,
-                        sheetHref: OM,
+                        sheet: UU,
+                        rules: QU,
+                        sheetHref: cU,
                         index: 0,
                         parts: [],
                         importRule: null
                       }),
-                      function(MM, rM) {
-                        const iM = [{
-                          sheet: rM,
-                          rules: MM,
+                      function(UU, XU) {
+                        const zU = [{
+                          sheet: XU,
+                          rules: UU,
                           index: 0
                         }];
-                        for (; iM.length > 0;) {
-                          const rM = iM[iM.length - 1];
-                          if (rM.index >= rM.rules.length) {
-                            iM.pop();
+                        for (; zU.length > 0;) {
+                          const XU = zU[zU.length - 1];
+                          if (XU.index >= XU.rules.length) {
+                            zU.pop();
                             continue
                           }
-                          const OM = rM.rules[rM.index];
-                          if (rM.index += 1, !hr(OM) || SM.has(OM)) continue;
-                          let jM = null;
+                          const cU = XU.rules[XU.index];
+                          if (XU.index += 1, !pX(cU) || yU.has(cU)) continue;
+                          let QU = null;
                           try {
-                            jM = OM.styleSheet
-                          } catch (MM) {
-                            SM.set(OM, null);
+                            QU = cU.styleSheet
+                          } catch (UU) {
+                            yU.set(cU, null);
                             continue
                           }
-                          if (jM && !iM.some((MM => MM.sheet === jM))) try {
-                            const MM = jM.rules || jM.cssRules;
-                            if (!MM) continue;
-                            qM(MM);
-                            let rM = jM.href;
-                            !rM && jM.ownerNode && (rM = jM.ownerNode.baseURI);
-                            const aM = Array.from(MM);
-                            SM.set(OM, {
-                              sheet: jM,
-                              rules: aM,
-                              sheetHref: rM
-                            }), iM.push({
-                              sheet: jM,
-                              rules: aM,
+                          if (QU && !zU.some((UU => UU.sheet === QU))) try {
+                            const UU = QU.rules || QU.cssRules;
+                            if (!UU) continue;
+                            KU(UU);
+                            let XU = QU.href;
+                            !XU && QU.ownerNode && (XU = QU.ownerNode.baseURI);
+                            const AU = Array.from(UU);
+                            yU.set(cU, {
+                              sheet: QU,
+                              rules: AU,
+                              sheetHref: XU
+                            }), zU.push({
+                              sheet: QU,
+                              rules: AU,
                               index: 0
                             })
-                          } catch (MM) {}
+                          } catch (UU) {}
                         }
-                      }(jM, MM), !0
-                  } catch (MM) {
+                      }(QU, UU), !0
+                  } catch (UU) {
                     return !1
                   }
-                }(MM) || (iM = !0), {
-                  advance(MM) {
-                    if (iM) return !0;
-                    const SM = uM();
-                    let aM = MM > 0 ? MM : 1;
+                }(UU) || (zU = !0), {
+                  advance(UU) {
+                    if (zU) return !0;
+                    const yU = CU();
+                    let AU = UU > 0 ? UU : 1;
                     try {
-                      for (; !iM && aM > 0;) {
-                        const iM = rM[rM.length - 1];
-                        if (iM.index >= iM.rules.length) {
-                          let rM = null;
+                      for (; !zU && AU > 0;) {
+                        const zU = XU[XU.length - 1];
+                        if (zU.index >= zU.rules.length) {
+                          let XU = null;
                           try {
-                            if ("group" === iM.kind) {
-                              const MM = iM.prelude + iM.parts.join("") + "}";
-                              rM = iM.fixColons ? Hr(MM) : MM
-                            } else rM = nr(iM.parts.join(""))
-                          } catch (MM) {}
-                          jM(rM)
+                            if ("group" === zU.kind) {
+                              const UU = zU.prelude + zU.parts.join("") + "}";
+                              XU = zU.fixColons ? IX(UU) : UU
+                            } else XU = oX(zU.parts.join(""))
+                          } catch (UU) {}
+                          QU(XU)
                         } else {
-                          aM -= 1;
+                          AU -= 1;
                           try {
-                            PM(iM)
-                          } catch (MM) {
-                            jM(null)
+                            FU(zU)
+                          } catch (UU) {
+                            QU(null)
                           }
                         }
                       }
-                    } catch (MM) {
-                      iM = !0, OM = null
+                    } catch (UU) {
+                      zU = !0, cU = null
                     } finally {
-                      VM(uM() - SM)
+                      TU(CU() - yU)
                     }
-                    return iM
+                    return zU
                   },
-                  text: () => iM ? OM : null,
+                  text: () => zU ? cU : null,
                   remainingRules() {
-                    if (iM) return 0;
-                    let MM = 0;
-                    for (const iM of rM) MM += iM.rules.length - iM.index;
-                    return MM
+                    if (zU) return 0;
+                    let UU = 0;
+                    for (const zU of XU) UU += zU.rules.length - zU.index;
+                    return UU
                   }
                 }
-              }(OM))
-            } catch (MM) {}
-            if (!iM || !OM) return rr(), null;
-            const SM = iM;
-            let jM = !1;
-            const aM = {
-              sheet: OM,
+              }(cU))
+            } catch (UU) {}
+            if (!zU || !cU) return XX(), null;
+            const yU = zU;
+            let QU = !1;
+            const AU = {
+              sheet: cU,
               invalidate() {
-                jM = !0
+                QU = !0
               }
             };
-            this.pendingDeferredSheets.add(aM);
-            let PM = !1;
+            this.pendingDeferredSheets.add(AU);
+            let FU = !1;
             return {
-              advance: iM => {
-                if (PM) return !0;
-                const nM = uM(),
-                  QM = sM();
-                let zM = !0;
+              advance: zU => {
+                if (FU) return !0;
+                const oU = CU(),
+                  DU = SU();
+                let EU = !0;
                 try {
-                  if (jM) return PM = !0, rr(), !0;
-                  if (!SM.advance(iM)) return zM = !1, !1;
-                  PM = !0;
-                  const aM = SM.text();
-                  if (!MM.isConnected) return !0;
-                  let nM = null;
+                  if (QU) return FU = !0, XX(), !0;
+                  if (!yU.advance(zU)) return EU = !1, !1;
+                  FU = !0;
+                  const AU = yU.text();
+                  if (!UU.isConnected) return !0;
+                  let oU = null;
                   try {
-                    nM = MM.sheet
-                  } catch (MM) {}
-                  return nM !== OM ? (rr(), !0) : aM ? (this.emitCssTextMutation(MM, rM, aM), !0) : (rr(), !0)
+                    oU = UU.sheet
+                  } catch (UU) {}
+                  return oU !== cU ? (XX(), !0) : AU ? (this.emitCssTextMutation(UU, XU, AU), !0) : (XX(), !0)
                 } finally {
-                  zM && this.pendingDeferredSheets.delete(aM), DM(LM = uM() - nM, null != (mM = QM) ? mM : RM) || (BM.totalMs += LM, LM > BM.slowestSliceMs && (BM.slowestSliceMs = LM))
+                  EU && this.pendingDeferredSheets.delete(AU), rU(YU = CU() - oU, null != (NU = DU) ? NU : wU) || (lU.totalMs += YU, YU > lU.slowestSliceMs && (lU.slowestSliceMs = YU))
                 }
-                var LM, mM
+                var YU, NU
               },
-              remainingRules: () => SM.remainingRules(),
+              remainingRules: () => yU.remainingRules(),
               discard: () => {
-                this.pendingDeferredSheets.delete(aM)
+                this.pendingDeferredSheets.delete(AU)
               }
             }
           }
-          onCssomSheetMutation(MM) {
-            if (MM && 0 !== this.pendingDeferredSheets.size)
-              for (const rM of this.pendingDeferredSheets) rM.sheet === MM && (this.pendingDeferredSheets.delete(rM), rM.invalidate())
+          onCssomSheetMutation(UU) {
+            if (UU && 0 !== this.pendingDeferredSheets.size)
+              for (const XU of this.pendingDeferredSheets) XU.sheet === UU && (this.pendingDeferredSheets.delete(XU), XU.invalidate())
           }
-          inlineDeferredLinkElement(MM, rM) {
-            var iM;
-            null === (iM = this.beginDeferredLinkInlining(MM, rM)) || void 0 === iM || iM.advance(1 / 0)
+          inlineDeferredLinkElement(UU, XU) {
+            var zU;
+            null === (zU = this.beginDeferredLinkInlining(UU, XU)) || void 0 === zU || zU.advance(1 / 0)
           }
-          emitCssTextMutation(MM, rM, iM) {
+          emitCssTextMutation(UU, XU, zU) {
             this.mutationCb({
               adds: [],
               removes: [],
               texts: [],
               attributes: [{
-                id: rM,
+                id: XU,
                 attributes: {
-                  _cssText: Cr({
-                    element: MM,
+                  _cssText: RX({
+                    element: UU,
                     name: "_cssText",
-                    value: iM,
+                    value: zU,
                     maskAllElementAttributes: this.maskAllElementAttributes,
                     maskAttributeFn: this.maskAttributeFn
                   })
@@ -4015,159 +4015,159 @@ export const modules = {
               }]
             })
           }
-          trackLinkElement(MM) {
-            this.trackedLinkElements.has(MM) || (this.trackedLinkElements.add(MM), this.trackStylesheetInLinkElement(MM))
+          trackLinkElement(UU) {
+            this.trackedLinkElements.has(UU) || (this.trackedLinkElements.add(UU), this.trackStylesheetInLinkElement(UU))
           }
-          adoptStyleSheets(MM, rM) {
-            if (0 === MM.length) return;
-            const iM = {
-                id: rM,
+          adoptStyleSheets(UU, XU) {
+            if (0 === UU.length) return;
+            const zU = {
+                id: XU,
                 styleIds: []
               },
-              OM = [];
-            for (const SM of MM) {
-              let MM;
-              if (this.styleMirror.has(SM)) MM = this.styleMirror.getId(SM);
+              cU = [];
+            for (const yU of UU) {
+              let UU;
+              if (this.styleMirror.has(yU)) UU = this.styleMirror.getId(yU);
               else {
-                const rM = this.styleMirror.add(SM);
-                MM = rM;
-                const iM = uM();
+                const XU = this.styleMirror.add(yU);
+                UU = XU;
+                const zU = CU();
                 try {
-                  TM((() => {
+                  bU((() => {
                     try {
-                      const MM = SM.rules || SM.cssRules;
-                      MM && qM(MM)
-                    } catch (MM) {}
-                    OM.push({
-                      styleId: rM,
-                      rules: Array.from(SM.rules || CSSRule, ((MM, rM) => ({
-                        rule: mr(MM, SM.href),
-                        index: rM
+                      const UU = yU.rules || yU.cssRules;
+                      UU && KU(UU)
+                    } catch (UU) {}
+                    cU.push({
+                      styleId: XU,
+                      rules: Array.from(yU.rules || CSSRule, ((UU, XU) => ({
+                        rule: NX(UU, yU.href),
+                        index: XU
                       })))
                     })
                   }))
                 } finally {
-                  VM(uM() - iM)
+                  TU(CU() - zU)
                 }
               }
-              iM.styleIds.push(MM)
+              zU.styleIds.push(UU)
             }
-            OM.length > 0 && (iM.styles = OM), this.adoptedStyleSheetCb(iM)
+            cU.length > 0 && (zU.styles = cU), this.adoptedStyleSheetCb(zU)
           }
           reset() {
-            this.styleMirror.reset(), this.trackedLinkElements = new WeakSet, this.pendingDeferredSheets.clear(), Tr.forEach((MM => MM.abort())), Tr.clear()
+            this.styleMirror.reset(), this.trackedLinkElements = new WeakSet, this.pendingDeferredSheets.clear(), bX.forEach((UU => UU.abort())), bX.clear()
           }
-          trackStylesheetInLinkElement(MM) {}
+          trackStylesheetInLinkElement(UU) {}
         },
-        pO = class {
+        Cc = class {
           constructor() {
-            Sr(this, "nodeMap", new WeakMap), Sr(this, "active", !1)
+            yX(this, "nodeMap", new WeakMap), yX(this, "active", !1)
           }
-          inOtherBuffer(MM, rM) {
-            const iM = this.nodeMap.get(MM);
-            return iM && Array.from(iM).some((MM => MM !== rM))
+          inOtherBuffer(UU, XU) {
+            const zU = this.nodeMap.get(UU);
+            return zU && Array.from(zU).some((UU => UU !== XU))
           }
-          add(MM, rM) {
+          add(UU, XU) {
             this.active || (this.active = !0, requestAnimationFrame((() => {
               this.nodeMap = new WeakMap, this.active = !1
-            }))), this.nodeMap.set(MM, (this.nodeMap.get(MM) || new Set).add(rM))
+            }))), this.nodeMap.set(UU, (this.nodeMap.get(UU) || new Set).add(XU))
           }
           destroy() {}
         },
-        WO = !1;
+        wc = !1;
       try {
-        if (2 !== Array.from([1], (MM => 2 * MM))[0]) {
-          var sO;
-          const MM = document.createElement("iframe");
-          document.body.appendChild(MM), Array.from = (null === (sO = MM.contentWindow) || void 0 === sO ? void 0 : sO.Array.from) || Array.from, document.body.removeChild(MM)
+        if (2 !== Array.from([1], (UU => 2 * UU))[0]) {
+          var qc;
+          const UU = document.createElement("iframe");
+          document.body.appendChild(UU), Array.from = (null === (qc = UU.contentWindow) || void 0 === qc ? void 0 : qc.Array.from) || Array.from, document.body.removeChild(UU)
         }
-      } catch (MM) {
-        console.debug("Unable to override Array.from", MM)
+      } catch (UU) {
+        console.debug("Unable to override Array.from", UU)
       }
-      var DO = new lr,
-        kO = new Set([nM.Mutation, nM.MediaInteraction, nM.StyleSheetRule, nM.CanvasMutation, nM.Font, nM.Log, nM.StyleDeclaration, nM.AdoptedStyleSheet]);
+      var Oc = new kX,
+        Sc = new Set([oU.Mutation, oU.MediaInteraction, oU.StyleSheetRule, oU.CanvasMutation, oU.Font, oU.Log, oU.StyleDeclaration, oU.AdoptedStyleSheet]);
 
-      function ZO(MM) {
-        const rM = window;
-        if ("function" == typeof rM.requestIdleCallback) {
-          const iM = rM.requestIdleCallback(MM, {
+      function rc(UU) {
+        const XU = window;
+        if ("function" == typeof XU.requestIdleCallback) {
+          const zU = XU.requestIdleCallback(UU, {
             timeout: 2e3
           });
           return {
             cancel() {
-              var MM;
-              return null === (MM = rM.cancelIdleCallback) || void 0 === MM ? void 0 : MM.call(rM, iM)
+              var UU;
+              return null === (UU = XU.cancelIdleCallback) || void 0 === UU ? void 0 : UU.call(XU, zU)
             }
           }
         }
-        const iM = setTimeout(MM, 250);
+        const zU = setTimeout(UU, 250);
         return {
-          cancel: () => clearTimeout(iM)
+          cancel: () => clearTimeout(zU)
         }
       }
 
-      function oO() {
-        let MM, rM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          iM = !1,
-          SM = !1;
+      function uc() {
+        let UU, XU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          zU = !1,
+          yU = !1;
         const {
-          emit: jM,
-          checkoutEveryNms: aM,
-          checkoutEveryNth: QM,
-          blockClass: zM = "rr-block",
-          blockSelector: LM = null,
-          ignoreClass: mM = "rr-ignore",
-          ignoreSelector: HM = null,
-          maskTextClass: hM = "rr-mask",
-          maskTextSelector: JM = null,
-          inlineStylesheet: dM = !0,
-          inlineStylesheetBudgetRules: yM,
-          maskAllInputs: lM,
-          maskInputOptions: EM,
-          slimDOMOptions: UM,
-          maskInputFn: GM,
-          maskTextFn: CM,
-          maskAllElementAttributes: eM = !1,
-          maskAttributeFn: bM,
-          hooks: wM,
-          packFn: tM,
-          sampling: uM = {},
-          dataURLOptions: RM = {},
-          canvasResolutionScale: pM,
-          canvasMasking: sM,
-          mousemoveWait: DM,
-          recordDOM: kM = !0,
-          recordCanvas: ZM = !1,
-          recordCrossOriginIframes: oM = !1,
-          recordAfter: fM = ("DOMContentLoaded" === rM.recordAfter ? rM.recordAfter : "load"),
-          userTriggeredOnInput: YM = !1,
-          collectFonts: NM = !1,
-          inlineImages: AM = !1,
-          plugins: xM,
-          keepIframeSrcFn: vM = () => !1,
-          ignoreCSSAttributes: FM = new Set([]),
-          attributeFilter: BM,
-          errorHandler: KM
-        } = rM;
-        ! function(MM) {
-          Wi = MM
-        }(KM);
-        const qM = OM({
+          emit: QU,
+          checkoutEveryNms: AU,
+          checkoutEveryNth: DU,
+          blockClass: EU = "rr-block",
+          blockSelector: YU = null,
+          ignoreClass: NU = "rr-ignore",
+          ignoreSelector: IU = null,
+          maskTextClass: pU = "rr-mask",
+          maskTextSelector: aU = null,
+          inlineStylesheet: tU = !0,
+          inlineStylesheetBudgetRules: gU,
+          maskAllInputs: kU,
+          maskInputOptions: GU,
+          slimDOMOptions: BU,
+          maskInputFn: ZU,
+          maskTextFn: RU,
+          maskAllElementAttributes: PU = !1,
+          maskAttributeFn: WU,
+          hooks: dU,
+          packFn: LU,
+          sampling: CU = {},
+          dataURLOptions: wU = {},
+          canvasResolutionScale: qU,
+          canvasMasking: SU,
+          mousemoveWait: rU,
+          recordDOM: uU = !0,
+          recordCanvas: fU = !1,
+          recordCrossOriginIframes: iU = !1,
+          recordAfter: HU = ("DOMContentLoaded" === XU.recordAfter ? XU.recordAfter : "load"),
+          userTriggeredOnInput: MU = !1,
+          collectFonts: vU = !1,
+          inlineImages: VU = !1,
+          plugins: sU,
+          keepIframeSrcFn: nU = () => !1,
+          ignoreCSSAttributes: mU = new Set([]),
+          attributeFilter: lU,
+          errorHandler: jU
+        } = XU;
+        ! function(UU) {
+          wz = UU
+        }(jU);
+        const KU = cU({
             type: "image/webp",
             quality: .4,
             maxBase64ImageLength: 1048576
-          }, RM),
-          TM = !oM || window.parent === window;
-        let VM = !1;
-        if (!TM) try {
-          window.parent.document && (VM = !1)
-        } catch (rM) {
-          VM = !0
+          }, wU),
+          bU = !iU || window.parent === window;
+        let TU = !1;
+        if (!bU) try {
+          window.parent.document && (TU = !1)
+        } catch (XU) {
+          TU = !0
         }
-        if (TM && !jM) throw new Error("emit function is required");
-        if (!TM && !VM) return () => {};
-        void 0 !== DM && void 0 === uM.mousemove && (uM.mousemove = DM), DO.reset();
-        const cM = !0 === lM ? {
+        if (bU && !QU) throw new Error("emit function is required");
+        if (!bU && !TU) return () => {};
+        void 0 !== rU && void 0 === CU.mousemove && (CU.mousemove = rU), Oc.reset();
+        const hU = !0 === kU ? {
             color: !0,
             date: !0,
             "datetime-local": !0,
@@ -4184,190 +4184,190 @@ export const modules = {
             textarea: !0,
             select: !0,
             password: !0
-          } : void 0 !== EM ? EM : {
+          } : void 0 !== GU ? GU : {
             password: !0
           },
-          rr = Oi(void 0 !== UM && UM);
-        let Or;
+          XX = cz(void 0 !== BU && BU);
+        let cX;
         ! function() {
-          let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
-          "NodeList" in MM && !MM.NodeList.prototype.forEach && (MM.NodeList.prototype.forEach = [].forEach), "DOMTokenList" in MM && !MM.DOMTokenList.prototype.forEach && (MM.DOMTokenList.prototype.forEach = [].forEach)
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
+          "NodeList" in UU && !UU.NodeList.prototype.forEach && (UU.NodeList.prototype.forEach = [].forEach), "DOMTokenList" in UU && !UU.DOMTokenList.prototype.forEach && (UU.DOMTokenList.prototype.forEach = [].forEach)
         }();
-        let Sr = 0;
-        const jr = new Map;
-        let ar, Pr;
-        const nr = MM => {
-          for (const rM of xM || []) rM.eventProcessor && (MM = rM.eventProcessor(MM));
-          return tM && !VM && (MM = tM(MM)), MM
+        let yX = 0;
+        const QX = new Map;
+        let AX, FX;
+        const oX = UU => {
+          for (const XU of sU || []) XU.eventProcessor && (UU = XU.eventProcessor(UU));
+          return LU && !TU && (UU = LU(UU)), UU
         };
-        wO = (MM, rM) => {
-          var iM;
-          const OM = MM;
-          if (OM.timestamp = Hi(), !(null === (iM = Ni[0]) || void 0 === iM ? void 0 : iM.isFrozen()) || OM.type === PM.FullSnapshot || OM.type === PM.IncrementalSnapshot && kO.has(OM.data.source) || Ni.forEach((MM => MM.unfreeze())), TM) null == jM || jM(nr(OM), rM);
-          else if (VM) {
-            const MM = {
+        Pc = (UU, XU) => {
+          var zU;
+          const cU = UU;
+          if (cU.timestamp = Iz(), !(null === (zU = Hz[0]) || void 0 === zU ? void 0 : zU.isFrozen()) || cU.type === FU.FullSnapshot || cU.type === FU.IncrementalSnapshot && Sc.has(cU.data.source) || Hz.forEach((UU => UU.unfreeze())), bU) null == QU || QU(oX(cU), XU);
+          else if (TU) {
+            const UU = {
               type: "rrweb",
-              event: nr(OM),
+              event: oX(cU),
               origin: window.location.origin,
-              isCheckout: rM
+              isCheckout: XU
             };
-            window.parent.postMessage(MM, "*")
+            window.parent.postMessage(UU, "*")
           }
-          if (OM.type === PM.FullSnapshot) Or = OM, Sr = 0;
-          else if (OM.type === PM.IncrementalSnapshot) {
-            if (OM.data.source === nM.Mutation && OM.data.isAttachIframe) return;
-            Sr++, (QM && Sr >= QM || aM && OM.timestamp - Or.timestamp > aM) && tO(!0)
+          if (cU.type === FU.FullSnapshot) cX = cU, yX = 0;
+          else if (cU.type === FU.IncrementalSnapshot) {
+            if (cU.data.source === oU.Mutation && cU.data.isAttachIframe) return;
+            yX++, (DU && yX >= DU || AU && cU.timestamp - cX.timestamp > AU) && Wc(!0)
           }
         };
-        const Qr = MM => {
-            if (MM.removes && MM.removes.length > 0) {
-              const rM = MM.adds.length > 0 ? new Set(MM.adds.map((MM => MM.node.id))) : null,
-                iM = new Set;
-              if (MM.adds.length > 0)
-                for (const OM of MM.adds) {
-                  const MM = DO.lD(OM.node.id);
-                  MM && "IFRAME" === MM.nodeName && iM.add(MM)
+        const DX = UU => {
+            if (UU.removes && UU.removes.length > 0) {
+              const XU = UU.adds.length > 0 ? new Set(UU.adds.map((UU => UU.node.id))) : null,
+                zU = new Set;
+              if (UU.adds.length > 0)
+                for (const cU of UU.adds) {
+                  const UU = Oc.icU(cU.node.id);
+                  UU && "IFRAME" === UU.nodeName && zU.add(UU)
                 }
-              MM.removes.forEach((MM => {
+              UU.removes.forEach((UU => {
                 let {
-                  id: OM
-                } = MM;
-                if (rM && rM.has(OM)) return;
-                const SM = Hr.getIframeElementById(OM);
-                SM && iM.has(SM) ? Hr.forgetIframeId(OM) : (null == ar || ar(OM), Hr.removeIframeById(OM))
-              })), null == Pr || Pr(), Hr.cleanupDetachedIframes()
+                  id: cU
+                } = UU;
+                if (XU && XU.has(cU)) return;
+                const yU = IX.getIframeElementById(cU);
+                yU && zU.has(yU) ? IX.forgetIframeId(cU) : (null == AX || AX(cU), IX.removeIframeById(cU))
+              })), null == FX || FX(), IX.cleanupDetachedIframes()
             }
-            wO({
-              type: PM.IncrementalSnapshot,
-              data: OM({
-                source: nM.Mutation
-              }, MM)
+            Pc({
+              type: FU.IncrementalSnapshot,
+              data: cU({
+                source: oU.Mutation
+              }, UU)
             })
           },
-          zr = MM => wO({
-            type: PM.IncrementalSnapshot,
-            data: OM({
-              source: nM.Scroll
-            }, MM)
+          EX = UU => Pc({
+            type: FU.IncrementalSnapshot,
+            data: cU({
+              source: oU.Scroll
+            }, UU)
           }),
-          Lr = MM => wO({
-            type: PM.IncrementalSnapshot,
-            data: OM({
-              source: nM.CanvasMutation
-            }, MM)
+          YX = UU => Pc({
+            type: FU.IncrementalSnapshot,
+            data: cU({
+              source: oU.CanvasMutation
+            }, UU)
           }),
-          mr = new RO({
-            mutationCb: Qr,
-            adoptedStyleSheetCb: MM => wO({
-              type: PM.IncrementalSnapshot,
-              data: OM({
-                source: nM.AdoptedStyleSheet
-              }, MM)
+          NX = new ec({
+            mutationCb: DX,
+            adoptedStyleSheetCb: UU => Pc({
+              type: FU.IncrementalSnapshot,
+              data: cU({
+                source: oU.AdoptedStyleSheet
+              }, UU)
             }),
-            maskAllElementAttributes: eM,
-            maskAttributeFn: bM
+            maskAllElementAttributes: PU,
+            maskAttributeFn: WU
           }),
-          Hr = new iO({
-            mirror: DO,
-            mutationCb: Qr,
-            stylesheetManager: mr,
-            recordCrossOriginIframes: oM,
-            wrappedEmit: wO
+          IX = new Uc({
+            mirror: Oc,
+            mutationCb: DX,
+            stylesheetManager: NX,
+            recordCrossOriginIframes: iU,
+            wrappedEmit: Pc
           });
-        for (const OM of xM || []) OM.getMirror && OM.getMirror({
-          nodeMirror: DO,
-          crossOriginIframeMirror: Hr.crossOriginIframeMirror,
-          crossOriginIframeStyleMirror: Hr.crossOriginIframeStyleMirror
+        for (const cU of sU || []) cU.getMirror && cU.getMirror({
+          nodeMirror: Oc,
+          crossOriginIframeMirror: IX.crossOriginIframeMirror,
+          crossOriginIframeStyleMirror: IX.crossOriginIframeStyleMirror
         });
-        const hr = new pO,
-          Jr = null == sM ? void 0 : sM.configured;
-        gO = new uO({
-          recordCanvas: ZM,
-          mutationCb: Lr,
+        const pX = new Cc,
+          aX = null == SU ? void 0 : SU.configured;
+        dc = new Lc({
+          recordCanvas: fU,
+          mutationCb: YX,
           win: window,
-          blockClass: zM,
-          blockSelector: LM,
-          mirror: DO,
-          sampling: uM.canvas,
-          dataURLOptions: qM,
-          resolutionScale: pM,
-          canvasMasking: sM
+          blockClass: EU,
+          blockSelector: YU,
+          mirror: Oc,
+          sampling: CU.canvas,
+          dataURLOptions: KU,
+          resolutionScale: qU,
+          canvasMasking: SU
         });
-        const dr = new OO({
-          mutationCb: Qr,
-          scrollCb: zr,
+        const tX = new Xc({
+          mutationCb: DX,
+          scrollCb: EX,
           bypassOptions: {
-            blockClass: zM,
-            blockSelector: LM,
-            maskTextClass: hM,
-            maskTextSelector: JM,
-            inlineStylesheet: dM,
-            maskInputOptions: cM,
-            dataURLOptions: qM,
-            maskTextFn: CM,
-            maskInputFn: GM,
-            maskAllElementAttributes: eM,
-            maskAttributeFn: bM,
-            recordCanvas: ZM,
-            canvasMaskingConfigured: Jr,
-            inlineImages: AM,
-            sampling: uM,
-            slimDOMOptions: rr,
-            iframeManager: Hr,
-            stylesheetManager: mr,
-            canvasManager: gO,
-            keepIframeSrcFn: vM,
-            processedNodeManager: hr,
-            attributeFilter: BM
+            blockClass: EU,
+            blockSelector: YU,
+            maskTextClass: pU,
+            maskTextSelector: aU,
+            inlineStylesheet: tU,
+            maskInputOptions: hU,
+            dataURLOptions: KU,
+            maskTextFn: RU,
+            maskInputFn: ZU,
+            maskAllElementAttributes: PU,
+            maskAttributeFn: WU,
+            recordCanvas: fU,
+            canvasMaskingConfigured: aX,
+            inlineImages: VU,
+            sampling: CU,
+            slimDOMOptions: XX,
+            iframeManager: IX,
+            stylesheetManager: NX,
+            canvasManager: dc,
+            keepIframeSrcFn: nU,
+            processedNodeManager: pX,
+            attributeFilter: lU
           },
-          mirror: DO
+          mirror: Oc
         });
-        tO = function() {
-          let rM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (kM) {
-            XM(yM);
+        Wc = function() {
+          let XU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (uU) {
+            xU(gU);
             try {
-              if (wO({
-                  type: PM.Meta,
+              if (Pc({
+                  type: FU.Meta,
                   data: {
                     href: window.location.href,
-                    width: yi(),
-                    height: di()
+                    width: tz(),
+                    height: az()
                   }
-                }, rM), iM) return;
-              null == MM || MM.cancel(), MM = void 0, mr.reset(), dr.init(), Ni.forEach((MM => MM.lock()));
-              let OM = null,
-                SM = [];
+                }, XU), zU) return;
+              null == UU || UU.cancel(), UU = void 0, NX.reset(), tX.init(), Hz.forEach((UU => UU.lock()));
+              let cU = null,
+                yU = [];
               try {
-                OM = function(MM, rM) {
+                cU = function(UU, XU) {
                   const {
-                    mirror: iM = new lr,
-                    blockClass: OM = "rr-block",
-                    blockSelector: SM = null,
-                    maskTextClass: jM = "rr-mask",
-                    maskTextSelector: aM = null,
-                    inlineStylesheet: PM = !0,
-                    inlineImages: nM = !1,
-                    recordCanvas: QM = !1,
-                    canvasMaskingConfigured: zM,
-                    maskAllInputs: LM = !1,
-                    maskTextFn: mM,
-                    maskInputFn: HM,
-                    maskAllElementAttributes: hM = !1,
-                    maskAttributeFn: JM,
-                    slimDOM: dM = !1,
-                    dataURLOptions: yM,
-                    preserveWhiteSpace: lM,
-                    onSerialize: EM,
-                    onIframeLoad: UM,
-                    iframeLoadTimeout: GM,
-                    onIframeListenerRegistered: CM,
-                    onStylesheetLoad: eM,
-                    stylesheetLoadTimeout: bM,
-                    keepIframeSrcFn: wM = () => !1,
-                    maxDepth: tM,
-                    inlineStylesheetBudgetRules: gM
-                  } = rM || {}, uM = !0 === LM ? {
+                    mirror: zU = new kX,
+                    blockClass: cU = "rr-block",
+                    blockSelector: yU = null,
+                    maskTextClass: QU = "rr-mask",
+                    maskTextSelector: AU = null,
+                    inlineStylesheet: FU = !0,
+                    inlineImages: oU = !1,
+                    recordCanvas: DU = !1,
+                    canvasMaskingConfigured: EU,
+                    maskAllInputs: YU = !1,
+                    maskTextFn: NU,
+                    maskInputFn: IU,
+                    maskAllElementAttributes: pU = !1,
+                    maskAttributeFn: aU,
+                    slimDOM: tU = !1,
+                    dataURLOptions: gU,
+                    preserveWhiteSpace: kU,
+                    onSerialize: GU,
+                    onIframeLoad: BU,
+                    iframeLoadTimeout: ZU,
+                    onIframeListenerRegistered: RU,
+                    onStylesheetLoad: PU,
+                    stylesheetLoadTimeout: WU,
+                    keepIframeSrcFn: dU = () => !1,
+                    maxDepth: LU,
+                    inlineStylesheetBudgetRules: eU
+                  } = XU || {}, CU = !0 === YU ? {
                     color: !0,
                     date: !0,
                     "datetime-local": !0,
@@ -4384,1403 +4384,1403 @@ export const modules = {
                     textarea: !0,
                     select: !0,
                     password: !0
-                  } : !1 === LM ? {
+                  } : !1 === YU ? {
                     password: !0
-                  } : LM, RM = Oi(dM);
-                  XM(gM);
+                  } : YU, wU = cz(tU);
+                  xU(eU);
                   try {
-                    return ii(MM, {
-                      doc: MM,
-                      mirror: iM,
-                      blockClass: OM,
-                      blockSelector: SM,
-                      maskTextClass: jM,
-                      maskTextSelector: aM,
+                    return zz(UU, {
+                      doc: UU,
+                      mirror: zU,
+                      blockClass: cU,
+                      blockSelector: yU,
+                      maskTextClass: QU,
+                      maskTextSelector: AU,
                       skipChild: !1,
-                      inlineStylesheet: PM,
-                      maskInputOptions: uM,
-                      maskTextFn: mM,
-                      maskInputFn: HM,
-                      maskAllElementAttributes: hM,
-                      maskAttributeFn: JM,
-                      slimDOMOptions: RM,
-                      dataURLOptions: yM,
-                      inlineImages: nM,
-                      recordCanvas: QM,
-                      canvasMaskingConfigured: zM,
-                      preserveWhiteSpace: lM,
-                      onSerialize: EM,
-                      onIframeLoad: UM,
-                      iframeLoadTimeout: GM,
-                      onIframeListenerRegistered: CM,
-                      onStylesheetLoad: eM,
-                      stylesheetLoadTimeout: bM,
-                      keepIframeSrcFn: wM,
+                      inlineStylesheet: FU,
+                      maskInputOptions: CU,
+                      maskTextFn: NU,
+                      maskInputFn: IU,
+                      maskAllElementAttributes: pU,
+                      maskAttributeFn: aU,
+                      slimDOMOptions: wU,
+                      dataURLOptions: gU,
+                      inlineImages: oU,
+                      recordCanvas: DU,
+                      canvasMaskingConfigured: EU,
+                      preserveWhiteSpace: kU,
+                      onSerialize: GU,
+                      onIframeLoad: BU,
+                      iframeLoadTimeout: ZU,
+                      onIframeListenerRegistered: RU,
+                      onStylesheetLoad: PU,
+                      stylesheetLoadTimeout: WU,
+                      keepIframeSrcFn: dU,
                       newlyAddedElement: !1,
-                      maxDepth: tM
+                      maxDepth: LU
                     })
                   } finally {
-                    IM()
+                    JU()
                   }
                 }(document, {
-                  mirror: DO,
-                  blockClass: zM,
-                  blockSelector: LM,
-                  maskTextClass: hM,
-                  maskTextSelector: JM,
-                  inlineStylesheet: dM,
-                  maskAllInputs: cM,
-                  inlineStylesheetBudgetRules: yM,
-                  maskTextFn: CM,
-                  maskInputFn: GM,
-                  maskAllElementAttributes: eM,
-                  maskAttributeFn: bM,
-                  slimDOM: rr,
-                  dataURLOptions: qM,
-                  recordCanvas: ZM,
-                  canvasMaskingConfigured: Jr,
-                  inlineImages: AM,
-                  onSerialize(MM) {
-                    ei(MM, DO) && Hr.addIframe(MM), bi(MM, DO) && mr.trackLinkElement(MM), wi(MM) && dr.addShadowRoot(gM.shadowRoot(MM), document)
+                  mirror: Oc,
+                  blockClass: EU,
+                  blockSelector: YU,
+                  maskTextClass: pU,
+                  maskTextSelector: aU,
+                  inlineStylesheet: tU,
+                  maskAllInputs: hU,
+                  inlineStylesheetBudgetRules: gU,
+                  maskTextFn: RU,
+                  maskInputFn: ZU,
+                  maskAllElementAttributes: PU,
+                  maskAttributeFn: WU,
+                  slimDOM: XX,
+                  dataURLOptions: KU,
+                  recordCanvas: fU,
+                  canvasMaskingConfigured: aX,
+                  inlineImages: VU,
+                  onSerialize(UU) {
+                    Rz(UU, Oc) && IX.addIframe(UU), Pz(UU, Oc) && NX.trackLinkElement(UU), Wz(UU) && tX.addShadowRoot(eU.shadowRoot(UU), document)
                   },
-                  onIframeLoad(MM, rM) {
-                    Hr.attachIframe(MM, rM), dr.observeAttachShadow(MM)
+                  onIframeLoad(UU, XU) {
+                    IX.attachIframe(UU, XU), tX.observeAttachShadow(UU)
                   },
-                  onIframeListenerRegistered(MM, rM) {
-                    Hr.registerLoadListenerDisposer(MM, rM)
+                  onIframeListenerRegistered(UU, XU) {
+                    IX.registerLoadListenerDisposer(UU, XU)
                   },
-                  onStylesheetLoad(MM, rM) {
-                    mr.attachLinkElement(MM, rM)
+                  onStylesheetLoad(UU, XU) {
+                    NX.attachLinkElement(UU, XU)
                   },
-                  keepIframeSrcFn: vM
+                  keepIframeSrcFn: nU
                 })
               } finally {
-                SM = Mr()
+                yU = UX()
               }
-              if (iM) return;
-              if (!OM) return console.warn("Failed to snapshot the document");
-              if (wO({
-                  type: PM.FullSnapshot,
+              if (zU) return;
+              if (!cU) return console.warn("Failed to snapshot the document");
+              if (Pc({
+                  type: FU.FullSnapshot,
                   data: {
-                    node: OM,
-                    initialOffset: Ji(window)
+                    node: cU,
+                    initialOffset: pz(window)
                   }
-                }, rM), iM) return;
-              if (Ni.forEach((MM => MM.unlock())), gO.onFullSnapshot(), SM.length) {
-                const rM = function(MM, rM, iM) {
-                  let OM = !1,
-                    SM = null,
-                    jM = 0,
-                    aM = null;
-                  const PM = () => null !== aM || MM.length > jM,
-                    nM = () => {
-                      const iM = MM[jM];
-                      MM[jM] = null, jM += 1, iM && Pi((() => {
-                        aM = rM.beginDeferredLinkInlining(iM, DO.getId(iM))
+                }, XU), zU) return;
+              if (Hz.forEach((UU => UU.unlock())), dc.onFullSnapshot(), yU.length) {
+                const XU = function(UU, XU, zU) {
+                  let cU = !1,
+                    yU = null,
+                    QU = 0,
+                    AU = null;
+                  const FU = () => null !== AU || UU.length > QU,
+                    oU = () => {
+                      const zU = UU[QU];
+                      UU[QU] = null, QU += 1, zU && Fz((() => {
+                        AU = XU.beginDeferredLinkInlining(zU, Oc.getId(zU))
                       }))
                     },
-                    QM = () => {
-                      if (!aM) return;
-                      const MM = aM;
-                      let rM = !0;
-                      Pi((() => {
-                        rM = MM.advance(200)
-                      })), rM && (aM = null)
+                    DU = () => {
+                      if (!AU) return;
+                      const UU = AU;
+                      let XU = !0;
+                      Fz((() => {
+                        XU = UU.advance(200)
+                      })), XU && (AU = null)
                     },
-                    zM = MM => {
-                      if (SM = null, OM) return;
-                      let rM = 0;
+                    EU = UU => {
+                      if (yU = null, cU) return;
+                      let XU = 0;
                       do {
                         try {
-                          aM || nM(), QM()
-                        } catch (MM) {
-                          null == aM || aM.discard(), aM = null, ir(1)
+                          AU || oU(), DU()
+                        } catch (UU) {
+                          null == AU || AU.discard(), AU = null, zX(1)
                         }
-                        rM += 1
-                      } while (!OM && PM() && (MM ? !MM.didTimeout && MM.timeRemaining() > 5 : 10 > rM));
-                      OM || (PM() ? SM = ZO(zM) : iM())
+                        XU += 1
+                      } while (!cU && FU() && (UU ? !UU.didTimeout && UU.timeRemaining() > 5 : 10 > XU));
+                      cU || (FU() ? yU = rc(EU) : zU())
                     };
-                  return SM = ZO(zM), {
+                  return yU = rc(EU), {
                     cancel() {
-                      OM = !0, null == aM || aM.discard(), aM = null, null == SM || SM.cancel(), SM = null
+                      cU = !0, null == AU || AU.discard(), AU = null, null == yU || yU.cancel(), yU = null
                     },
                     flush() {
-                      if (OM) return;
-                      OM = !0, null == SM || SM.cancel(), SM = null;
-                      let rM = 0,
-                        zM = 0;
-                      for (; PM() && 50 > rM;) {
-                        aM || nM();
-                        const iM = aM;
-                        if (iM)
-                          if (Math.floor(iM.remainingRules() / 200) + 1 > 50 - rM) iM.discard(), aM = null, zM += 1;
+                      if (cU) return;
+                      cU = !0, null == yU || yU.cancel(), yU = null;
+                      let XU = 0,
+                        EU = 0;
+                      for (; FU() && 50 > XU;) {
+                        AU || oU();
+                        const zU = AU;
+                        if (zU)
+                          if (Math.floor(zU.remainingRules() / 200) + 1 > 50 - XU) zU.discard(), AU = null, EU += 1;
                           else {
                             try {
-                              QM()
-                            } catch (MM) {
-                              null == aM || aM.discard(), aM = null, zM += 1
+                              DU()
+                            } catch (UU) {
+                              null == AU || AU.discard(), AU = null, EU += 1
                             }
-                            rM += 1
+                            XU += 1
                           }
                       }
-                      if (PM() || zM > 0) {
-                        let rM = zM + (null !== aM ? 1 : 0);
-                        for (let iM = jM; MM.length > iM; iM++) null !== MM[iM] && (rM += 1);
-                        ir(rM), null == aM || aM.discard(), aM = null
+                      if (FU() || EU > 0) {
+                        let XU = EU + (null !== AU ? 1 : 0);
+                        for (let zU = QU; UU.length > zU; zU++) null !== UU[zU] && (XU += 1);
+                        zX(XU), null == AU || AU.discard(), AU = null
                       }
-                      iM()
+                      zU()
                     }
                   }
-                }(SM, mr, (() => {
-                  MM === rM && (MM = void 0)
+                }(yU, NX, (() => {
+                  UU === XU && (UU = void 0)
                 }));
-                MM = rM
+                UU = XU
               }
-              oM && Hr.reattachIframes(), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && mr.adoptStyleSheets(document.adoptedStyleSheets, DO.getId(document))
+              iU && IX.reattachIframes(), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && NX.adoptStyleSheets(document.adoptedStyleSheets, Oc.getId(document))
             } finally {
-              IM()
+              JU()
             }
           }
         };
         try {
-          const rM = [];
-          rM.push(ji("pagehide", (() => {
+          const XU = [];
+          XU.push(Qz("pagehide", (() => {
             try {
-              null == MM || MM.flush()
-            } catch (rM) {}
-            MM = void 0
+              null == UU || UU.flush()
+            } catch (XU) {}
+            UU = void 0
           }), window));
-          for (const MM of ["visibilitychange", "freeze", "resume"]) rM.push(ji(MM, WM, document));
-          ar = MM => {
-            const iM = jr.get(MM);
-            iM && (iM.forEach((MM => {
-              Pi(MM);
-              const iM = rM.indexOf(MM); - 1 !== iM && rM.splice(iM, 1)
-            })), jr.delete(MM))
-          }, Pr = () => {
-            for (const [rM] of jr) {
-              const iM = DO.lD(rM);
-              if (iM) try {
-                iM.contentDocument && iM.contentDocument.defaultView || null == ar || ar(rM)
-              } catch (MM) {
-                null == ar || ar(rM)
-              } else null == ar || ar(rM)
+          for (const UU of ["visibilitychange", "freeze", "resume"]) XU.push(Qz(UU, OU, document));
+          AX = UU => {
+            const zU = QX.get(UU);
+            zU && (zU.forEach((UU => {
+              Fz(UU);
+              const zU = XU.indexOf(UU); - 1 !== zU && XU.splice(zU, 1)
+            })), QX.delete(UU))
+          }, FX = () => {
+            for (const [XU] of QX) {
+              const zU = Oc.icU(XU);
+              if (zU) try {
+                zU.contentDocument && zU.contentDocument.defaultView || null == AX || AX(XU)
+              } catch (UU) {
+                null == AX || AX(XU)
+              } else null == AX || AX(XU)
             }
           };
-          const jM = MM => {
-            var rM;
-            return Yi(Vi)({
-              mutationCb: Qr,
-              mousemoveCb: (MM, rM) => wO({
-                type: PM.IncrementalSnapshot,
+          const QU = UU => {
+            var XU;
+            return iz(Kz)({
+              mutationCb: DX,
+              mousemoveCb: (UU, XU) => Pc({
+                type: FU.IncrementalSnapshot,
                 data: {
-                  source: rM,
-                  positions: MM
+                  source: XU,
+                  positions: UU
                 }
               }),
-              mouseInteractionCb: MM => wO({
-                type: PM.IncrementalSnapshot,
-                data: OM({
-                  source: nM.MouseInteraction
-                }, MM)
+              mouseInteractionCb: UU => Pc({
+                type: FU.IncrementalSnapshot,
+                data: cU({
+                  source: oU.MouseInteraction
+                }, UU)
               }),
-              scrollCb: zr,
-              viewportResizeCb: MM => wO({
-                type: PM.IncrementalSnapshot,
-                data: OM({
-                  source: nM.ViewportResize
-                }, MM)
+              scrollCb: EX,
+              viewportResizeCb: UU => Pc({
+                type: FU.IncrementalSnapshot,
+                data: cU({
+                  source: oU.ViewportResize
+                }, UU)
               }),
-              inputCb: MM => wO({
-                type: PM.IncrementalSnapshot,
-                data: OM({
-                  source: nM.Input
-                }, MM)
+              inputCb: UU => Pc({
+                type: FU.IncrementalSnapshot,
+                data: cU({
+                  source: oU.Input
+                }, UU)
               }),
-              mediaInteractionCb: MM => wO({
-                type: PM.IncrementalSnapshot,
-                data: OM({
-                  source: nM.MediaInteraction
-                }, MM)
+              mediaInteractionCb: UU => Pc({
+                type: FU.IncrementalSnapshot,
+                data: cU({
+                  source: oU.MediaInteraction
+                }, UU)
               }),
-              styleSheetRuleCb: MM => wO({
-                type: PM.IncrementalSnapshot,
-                data: OM({
-                  source: nM.StyleSheetRule
-                }, MM)
+              styleSheetRuleCb: UU => Pc({
+                type: FU.IncrementalSnapshot,
+                data: cU({
+                  source: oU.StyleSheetRule
+                }, UU)
               }),
-              styleDeclarationCb: MM => wO({
-                type: PM.IncrementalSnapshot,
-                data: OM({
-                  source: nM.StyleDeclaration
-                }, MM)
+              styleDeclarationCb: UU => Pc({
+                type: FU.IncrementalSnapshot,
+                data: cU({
+                  source: oU.StyleDeclaration
+                }, UU)
               }),
-              canvasMutationCb: Lr,
-              fontCb: MM => wO({
-                type: PM.IncrementalSnapshot,
-                data: OM({
-                  source: nM.Font
-                }, MM)
+              canvasMutationCb: YX,
+              fontCb: UU => Pc({
+                type: FU.IncrementalSnapshot,
+                data: cU({
+                  source: oU.Font
+                }, UU)
               }),
-              selectionCb(MM) {
-                wO({
-                  type: PM.IncrementalSnapshot,
-                  data: OM({
-                    source: nM.Selection
-                  }, MM)
+              selectionCb(UU) {
+                Pc({
+                  type: FU.IncrementalSnapshot,
+                  data: cU({
+                    source: oU.Selection
+                  }, UU)
                 })
               },
-              customElementCb(MM) {
-                wO({
-                  type: PM.IncrementalSnapshot,
-                  data: OM({
-                    source: nM.CustomElement
-                  }, MM)
+              customElementCb(UU) {
+                Pc({
+                  type: FU.IncrementalSnapshot,
+                  data: cU({
+                    source: oU.CustomElement
+                  }, UU)
                 })
               },
-              blockClass: zM,
-              ignoreClass: mM,
-              ignoreSelector: HM,
-              maskTextClass: hM,
-              maskTextSelector: JM,
-              maskInputOptions: cM,
-              inlineStylesheet: dM,
-              sampling: uM,
-              recordDOM: kM,
-              recordCanvas: ZM,
-              canvasMaskingConfigured: Jr,
-              inlineImages: AM,
-              userTriggeredOnInput: YM,
-              collectFonts: NM,
-              doc: MM,
-              maskInputFn: GM,
-              maskTextFn: CM,
-              maskAllElementAttributes: eM,
-              maskAttributeFn: bM,
-              keepIframeSrcFn: vM,
-              blockSelector: LM,
-              slimDOMOptions: rr,
-              dataURLOptions: qM,
-              mirror: DO,
-              iframeManager: Hr,
-              stylesheetManager: mr,
-              shadowDomManager: dr,
-              processedNodeManager: hr,
-              canvasManager: gO,
-              ignoreCSSAttributes: FM,
-              attributeFilter: BM,
-              plugins: (null == xM || null === (rM = xM.filter((MM => MM.observer))) || void 0 === rM ? void 0 : rM.map((MM => ({
-                name: MM.name,
-                observer: MM.observer,
-                options: MM.options,
-                callback: rM => wO({
-                  type: PM.Plugin,
+              blockClass: EU,
+              ignoreClass: NU,
+              ignoreSelector: IU,
+              maskTextClass: pU,
+              maskTextSelector: aU,
+              maskInputOptions: hU,
+              inlineStylesheet: tU,
+              sampling: CU,
+              recordDOM: uU,
+              recordCanvas: fU,
+              canvasMaskingConfigured: aX,
+              inlineImages: VU,
+              userTriggeredOnInput: MU,
+              collectFonts: vU,
+              doc: UU,
+              maskInputFn: ZU,
+              maskTextFn: RU,
+              maskAllElementAttributes: PU,
+              maskAttributeFn: WU,
+              keepIframeSrcFn: nU,
+              blockSelector: YU,
+              slimDOMOptions: XX,
+              dataURLOptions: KU,
+              mirror: Oc,
+              iframeManager: IX,
+              stylesheetManager: NX,
+              shadowDomManager: tX,
+              processedNodeManager: pX,
+              canvasManager: dc,
+              ignoreCSSAttributes: mU,
+              attributeFilter: lU,
+              plugins: (null == sU || null === (XU = sU.filter((UU => UU.observer))) || void 0 === XU ? void 0 : XU.map((UU => ({
+                name: UU.name,
+                observer: UU.observer,
+                options: UU.options,
+                callback: XU => Pc({
+                  type: FU.Plugin,
                   data: {
-                    plugin: MM.name,
-                    payload: rM
+                    plugin: UU.name,
+                    payload: XU
                   }
                 })
               })))) || []
-            }, wM)
+            }, dU)
           };
-          Hr.addLoadListener((MM => {
+          IX.addLoadListener((UU => {
             try {
-              const iM = DO.getId(MM),
-                OM = jM(MM.contentDocument);
-              if ("function" == typeof OM && (rM.push(OM), -1 !== iM)) {
-                let MM = jr.get(iM);
-                MM || (MM = new Set, jr.set(iM, MM)), MM.add(OM)
+              const zU = Oc.getId(UU),
+                cU = QU(UU.contentDocument);
+              if ("function" == typeof cU && (XU.push(cU), -1 !== zU)) {
+                let UU = QX.get(zU);
+                UU || (UU = new Set, QX.set(zU, UU)), UU.add(cU)
               }
-            } catch (rM) {
-              console.warn(rM)
+            } catch (XU) {
+              console.warn(XU)
             }
-          })), Hr.addPageHideListener((MM => {
-            const rM = DO.getId(MM);
-            null == ar || ar(rM), Fi(MM)
+          })), IX.addPageHideListener((UU => {
+            const XU = Oc.getId(UU);
+            null == AX || AX(XU), sz(UU)
           }));
-          let aM = -1;
-          const QM = MM => wO({
-              type: PM.Custom,
+          let AU = -1;
+          const DU = UU => Pc({
+              type: FU.Custom,
               data: {
                 tag: "rrweb/fullscreen",
-                payload: MM
+                payload: UU
               }
             }),
-            yM = () => {
-              var MM, rM, iM, OM;
-              const SM = document,
-                jM = null !== (MM = null !== (rM = null !== (iM = null !== (OM = SM.fullscreenElement) && void 0 !== OM ? OM : SM.webkitFullscreenElement) && void 0 !== iM ? iM : SM.mozFullScreenElement) && void 0 !== rM ? rM : SM.msFullscreenElement) && void 0 !== MM ? MM : null,
-                PM = jM ? DO.getId(jM) : -1;
-              PM !== aM && (-1 !== aM && QM({
-                id: aM,
+            gU = () => {
+              var UU, XU, zU, cU;
+              const yU = document,
+                QU = null !== (UU = null !== (XU = null !== (zU = null !== (cU = yU.fullscreenElement) && void 0 !== cU ? cU : yU.webkitFullscreenElement) && void 0 !== zU ? zU : yU.mozFullScreenElement) && void 0 !== XU ? XU : yU.msFullscreenElement) && void 0 !== UU ? UU : null,
+                FU = QU ? Oc.getId(QU) : -1;
+              FU !== AU && (-1 !== AU && DU({
+                id: AU,
                 enter: !1
-              }), aM = PM, -1 !== PM && QM({
-                id: PM,
+              }), AU = FU, -1 !== FU && DU({
+                id: FU,
                 enter: !0
               }))
             },
-            lM = () => {
-              if (iM || SM) return;
-              if (SM = !0, tO(), iM) return;
-              const MM = jM(document);
-              iM ? "function" == typeof MM && ni([MM]) : ("function" == typeof MM && rM.push(MM), rM.push(ji("fullscreenchange", yM)), rM.push(ji("webkitfullscreenchange", yM)), rM.push(ji("mozfullscreenchange", yM)), rM.push(ji("MSFullscreenChange", yM)), WO = !0)
+            kU = () => {
+              if (zU || yU) return;
+              if (yU = !0, Wc(), zU) return;
+              const UU = QU(document);
+              zU ? "function" == typeof UU && oz([UU]) : ("function" == typeof UU && XU.push(UU), XU.push(Qz("fullscreenchange", gU)), XU.push(Qz("webkitfullscreenchange", gU)), XU.push(Qz("mozfullscreenchange", gU)), XU.push(Qz("MSFullscreenChange", gU)), wc = !0)
             };
-          return ["interactive", "complete"].includes(document.readyState) ? lM() : (rM.push(ji("DOMContentLoaded", (() => {
-            wO({
-              type: PM.DomContentLoaded,
+          return ["interactive", "complete"].includes(document.readyState) ? kU() : (XU.push(Qz("DOMContentLoaded", (() => {
+            Pc({
+              type: FU.DomContentLoaded,
               data: {}
-            }), "DOMContentLoaded" === fM && setTimeout(lM, 0)
-          }))), rM.push(ji("load", (() => {
-            wO({
-              type: PM.Load,
+            }), "DOMContentLoaded" === HU && setTimeout(kU, 0)
+          }))), XU.push(Qz("load", (() => {
+            Pc({
+              type: FU.Load,
               data: {}
-            }), "load" === fM && lM()
+            }), "load" === HU && kU()
           }), window))), () => {
-            iM = !0;
+            zU = !0;
             try {
-              null == MM || MM.flush()
-            } catch (rM) {}
-            MM = void 0, ni(rM), hr.destroy(), Hr.removeLoadListener(), Hr.destroy(), jr.clear(), dr.reset(), DO.reset(), WO = !1, Wi = void 0
+              null == UU || UU.flush()
+            } catch (XU) {}
+            UU = void 0, oz(XU), pX.destroy(), IX.removeLoadListener(), IX.destroy(), QX.clear(), tX.reset(), Oc.reset(), wc = !1, wz = void 0
           }
-        } catch (rM) {
-          console.warn(rM)
+        } catch (XU) {
+          console.warn(XU)
         }
       }
-      oO.addCustomEvent = (MM, rM) => {
-        if (!WO) throw new Error("please add custom event after start recording");
-        wO({
-          type: PM.Custom,
+      uc.addCustomEvent = (UU, XU) => {
+        if (!wc) throw new Error("please add custom event after start recording");
+        Pc({
+          type: FU.Custom,
           data: {
-            tag: MM,
-            payload: rM
+            tag: UU,
+            payload: XU
           }
         })
-      }, oO.freezePage = () => {
-        Ni.forEach((MM => MM.freeze()))
-      }, oO.takeFullSnapshot = MM => {
-        if (!WO) throw new Error("please take full snapshot after start recording");
-        tO(MM)
-      }, oO.isRecording = () => WO, oO.mirror = DO, "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
-      var fO = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
-      new RegExp(`^${fO.source}`, "i"), new RegExp(fO.source, "gi"), "0".repeat(32), "0".repeat(16);
-      var YO = Object.create(null);
+      }, uc.freezePage = () => {
+        Hz.forEach((UU => UU.freeze()))
+      }, uc.takeFullSnapshot = UU => {
+        if (!wc) throw new Error("please take full snapshot after start recording");
+        Wc(UU)
+      }, uc.isRecording = () => wc, uc.mirror = Oc, "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
+      var fc = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
+      new RegExp(`^${fc.source}`, "i"), new RegExp(fc.source, "gi"), "0".repeat(32), "0".repeat(16);
+      var ic = Object.create(null);
 
-      function NO(MM) {
-        return NO = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(MM) {
-          return typeof MM
-        } : function(MM) {
-          return MM && "function" == typeof Symbol && MM.constructor === Symbol && MM !== Symbol.prototype ? "symbol" : typeof MM
-        }, NO(MM)
+      function Hc(UU) {
+        return Hc = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(UU) {
+          return typeof UU
+        } : function(UU) {
+          return UU && "function" == typeof Symbol && UU.constructor === Symbol && UU !== Symbol.prototype ? "symbol" : typeof UU
+        }, Hc(UU)
       }
 
-      function AO(MM, rM, iM) {
-        return (rM = function(MM) {
-          var rM = function(MM) {
-            if ("object" != NO(MM) || !MM) return MM;
-            var rM = MM[Symbol.toPrimitive];
-            if (void 0 !== rM) {
-              var iM = rM.call(MM, "string");
-              if ("object" != NO(iM)) return iM;
+      function Mc(UU, XU, zU) {
+        return (XU = function(UU) {
+          var XU = function(UU) {
+            if ("object" != Hc(UU) || !UU) return UU;
+            var XU = UU[Symbol.toPrimitive];
+            if (void 0 !== XU) {
+              var zU = XU.call(UU, "string");
+              if ("object" != Hc(zU)) return zU;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(MM)
-          }(MM);
-          return "symbol" == NO(rM) ? rM : rM + ""
-        }(rM)) in MM ? Object.defineProperty(MM, rM, {
-          value: iM,
+            return String(UU)
+          }(UU);
+          return "symbol" == Hc(XU) ? XU : XU + ""
+        }(XU)) in UU ? Object.defineProperty(UU, XU, {
+          value: zU,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : MM[rM] = iM, MM
+        }) : UU[XU] = zU, UU
       }
-      YO.Node = Object.create(null), YO.ShadowRoot = Object.create(null), YO.MutationObserver = Object.create(null), YO.Element = Object.create(null);
-      var xO = class {
-          constructor(MM) {
-            AO(this, "fileName", void 0), AO(this, "functionName", void 0), AO(this, "lineNumber", void 0), AO(this, "columnNumber", void 0), this.fileName = MM.fileName || "", this.functionName = MM.functionName || "", this.lineNumber = MM.lineNumber, this.columnNumber = MM.columnNumber
+      ic.Node = Object.create(null), ic.ShadowRoot = Object.create(null), ic.MutationObserver = Object.create(null), ic.Element = Object.create(null);
+      var vc = class {
+          constructor(UU) {
+            Mc(this, "fileName", void 0), Mc(this, "functionName", void 0), Mc(this, "lineNumber", void 0), Mc(this, "columnNumber", void 0), this.fileName = UU.fileName || "", this.functionName = UU.functionName || "", this.lineNumber = UU.lineNumber, this.columnNumber = UU.columnNumber
           }
           toString() {
-            const MM = this.lineNumber || "",
-              rM = this.columnNumber || "";
-            return this.functionName ? `${this.functionName} (${this.fileName}:${MM}:${rM})` : `${this.fileName}:${MM}:${rM}`
+            const UU = this.lineNumber || "",
+              XU = this.columnNumber || "";
+            return this.functionName ? `${this.functionName} (${this.fileName}:${UU}:${XU})` : `${this.fileName}:${UU}:${XU}`
           }
         },
-        vO = /(^|@)\S+:\d+/,
-        FO = /^\s*at .*(\S+:\d+|\(native\))/m,
-        BO = /^(eval@)?(\[native code])?$/,
-        XO = {
-          parse(MM) {
-            return MM ? void 0 !== MM.stacktrace || void 0 !== MM["opera#sourceloc"] ? this.parseOpera(MM) : MM.stack && MM.stack.match(FO) ? this.parseV8OrIE(MM) : MM.stack ? this.parseFFOrSafari(MM) : [] : []
+        Vc = /(^|@)\S+:\d+/,
+        sc = /^\s*at .*(\S+:\d+|\(native\))/m,
+        nc = /^(eval@)?(\[native code])?$/,
+        mc = {
+          parse(UU) {
+            return UU ? void 0 !== UU.stacktrace || void 0 !== UU["opera#sourceloc"] ? this.parseOpera(UU) : UU.stack && UU.stack.match(sc) ? this.parseV8OrIE(UU) : UU.stack ? this.parseFFOrSafari(UU) : [] : []
           },
-          extractLocation(MM) {
-            if (-1 === MM.indexOf(":")) return [MM];
-            const rM = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(MM.replace(/[()]/g, ""));
-            if (!rM) throw new Error(`Cannot parse given url: ${MM}`);
-            return [rM[1], rM[2] || void 0, rM[3] || void 0]
+          extractLocation(UU) {
+            if (-1 === UU.indexOf(":")) return [UU];
+            const XU = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(UU.replace(/[()]/g, ""));
+            if (!XU) throw new Error(`Cannot parse given url: ${UU}`);
+            return [XU[1], XU[2] || void 0, XU[3] || void 0]
           },
-          parseV8OrIE(MM) {
-            return MM.stack.split("\n").filter((function(MM) {
-              return !!MM.match(FO)
-            }), this).map((function(MM) {
-              MM.indexOf("(eval ") > -1 && (MM = MM.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(\),.*$)/g, ""));
-              let rM = MM.replace(/^\s+/, "").replace(/\(eval code/g, "(");
-              const iM = rM.match(/ (\((.+):(\d+):(\d+)\)$)/);
-              rM = iM ? rM.replace(iM[0], "") : rM;
-              const OM = rM.split(/\s+/).slice(1),
-                SM = this.extractLocation(iM ? iM[1] : OM.pop());
-              return new xO({
-                functionName: OM.join(" ") || void 0,
-                fileName: ["eval", "<anonymous>"].indexOf(SM[0]) > -1 ? void 0 : SM[0],
-                lineNumber: SM[1],
-                columnNumber: SM[2]
+          parseV8OrIE(UU) {
+            return UU.stack.split("\n").filter((function(UU) {
+              return !!UU.match(sc)
+            }), this).map((function(UU) {
+              UU.indexOf("(eval ") > -1 && (UU = UU.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(\),.*$)/g, ""));
+              let XU = UU.replace(/^\s+/, "").replace(/\(eval code/g, "(");
+              const zU = XU.match(/ (\((.+):(\d+):(\d+)\)$)/);
+              XU = zU ? XU.replace(zU[0], "") : XU;
+              const cU = XU.split(/\s+/).slice(1),
+                yU = this.extractLocation(zU ? zU[1] : cU.pop());
+              return new vc({
+                functionName: cU.join(" ") || void 0,
+                fileName: ["eval", "<anonymous>"].indexOf(yU[0]) > -1 ? void 0 : yU[0],
+                lineNumber: yU[1],
+                columnNumber: yU[2]
               })
             }), this)
           },
-          parseFFOrSafari(MM) {
-            return MM.stack.split("\n").filter((function(MM) {
-              return !MM.match(BO)
-            }), this).map((function(MM) {
-              if (MM.indexOf(" > eval") > -1 && (MM = MM.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), -1 === MM.indexOf("@") && -1 === MM.indexOf(":")) return new xO({
-                functionName: MM
+          parseFFOrSafari(UU) {
+            return UU.stack.split("\n").filter((function(UU) {
+              return !UU.match(nc)
+            }), this).map((function(UU) {
+              if (UU.indexOf(" > eval") > -1 && (UU = UU.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), -1 === UU.indexOf("@") && -1 === UU.indexOf(":")) return new vc({
+                functionName: UU
               });
               {
-                const rM = /((.*".+"[^@]*)?[^@]*)(?:@)/,
-                  iM = MM.match(rM),
-                  OM = iM && iM[1] ? iM[1] : void 0,
-                  SM = this.extractLocation(MM.replace(rM, ""));
-                return new xO({
-                  functionName: OM,
-                  fileName: SM[0],
-                  lineNumber: SM[1],
-                  columnNumber: SM[2]
+                const XU = /((.*".+"[^@]*)?[^@]*)(?:@)/,
+                  zU = UU.match(XU),
+                  cU = zU && zU[1] ? zU[1] : void 0,
+                  yU = this.extractLocation(UU.replace(XU, ""));
+                return new vc({
+                  functionName: cU,
+                  fileName: yU[0],
+                  lineNumber: yU[1],
+                  columnNumber: yU[2]
                 })
               }
             }), this)
           },
-          parseOpera(MM) {
-            return !MM.stacktrace || MM.message.indexOf("\n") > -1 && MM.message.split("\n").length > MM.stacktrace.split("\n").length ? this.parseOpera9(MM) : MM.stack ? this.parseOpera11(MM) : this.parseOpera10(MM)
+          parseOpera(UU) {
+            return !UU.stacktrace || UU.message.indexOf("\n") > -1 && UU.message.split("\n").length > UU.stacktrace.split("\n").length ? this.parseOpera9(UU) : UU.stack ? this.parseOpera11(UU) : this.parseOpera10(UU)
           },
-          parseOpera9(MM) {
-            const rM = /Line (\d+).*script (?:in )?(\S+)/i,
-              iM = MM.message.split("\n"),
-              OM = [];
-            for (let SM = 2, jM = iM.length; jM > SM; SM += 2) {
-              const MM = rM.exec(iM[SM]);
-              MM && OM.push(new xO({
-                fileName: MM[2],
-                lineNumber: parseFloat(MM[1])
+          parseOpera9(UU) {
+            const XU = /Line (\d+).*script (?:in )?(\S+)/i,
+              zU = UU.message.split("\n"),
+              cU = [];
+            for (let yU = 2, QU = zU.length; QU > yU; yU += 2) {
+              const UU = XU.exec(zU[yU]);
+              UU && cU.push(new vc({
+                fileName: UU[2],
+                lineNumber: parseFloat(UU[1])
               }))
             }
-            return OM
+            return cU
           },
-          parseOpera10(MM) {
-            const rM = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,
-              iM = MM.stacktrace.split("\n"),
-              OM = [];
-            for (let SM = 0, jM = iM.length; jM > SM; SM += 2) {
-              const MM = rM.exec(iM[SM]);
-              MM && OM.push(new xO({
-                functionName: MM[3] || void 0,
-                fileName: MM[2],
-                lineNumber: parseFloat(MM[1])
+          parseOpera10(UU) {
+            const XU = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,
+              zU = UU.stacktrace.split("\n"),
+              cU = [];
+            for (let yU = 0, QU = zU.length; QU > yU; yU += 2) {
+              const UU = XU.exec(zU[yU]);
+              UU && cU.push(new vc({
+                functionName: UU[3] || void 0,
+                fileName: UU[2],
+                lineNumber: parseFloat(UU[1])
               }))
             }
-            return OM
+            return cU
           },
-          parseOpera11(MM) {
-            return MM.stack.split("\n").filter((function(MM) {
-              return !!MM.match(vO) && !MM.match(/^Error created at/)
-            }), this).map((function(MM) {
-              const rM = MM.split("@"),
-                iM = this.extractLocation(rM.pop());
-              return new xO({
-                functionName: (rM.shift() || "").replace(/<anonymous function(: (\w+))?>/, "$2").replace(/\([^)]*\)/g, "") || void 0,
-                fileName: iM[0],
-                lineNumber: iM[1],
-                columnNumber: iM[2]
+          parseOpera11(UU) {
+            return UU.stack.split("\n").filter((function(UU) {
+              return !!UU.match(Vc) && !UU.match(/^Error created at/)
+            }), this).map((function(UU) {
+              const XU = UU.split("@"),
+                zU = this.extractLocation(XU.pop());
+              return new vc({
+                functionName: (XU.shift() || "").replace(/<anonymous function(: (\w+))?>/, "$2").replace(/\([^)]*\)/g, "") || void 0,
+                fileName: zU[0],
+                lineNumber: zU[1],
+                columnNumber: zU[2]
               })
             }), this)
           }
         };
 
-      function IO(MM) {
-        if (!MM || !MM.outerHTML) return "";
-        let rM = "";
-        for (; MM.parentElement;) {
-          let iM = MM.localName;
-          if (!iM) break;
-          iM = iM.toLowerCase();
-          const OM = MM.parentElement,
-            SM = [];
-          if (OM.children && OM.children.length > 0)
-            for (let MM = 0; OM.children.length > MM; MM++) {
-              const rM = OM.children[MM];
-              rM.localName && rM.localName.toLowerCase && rM.localName.toLowerCase() === iM && SM.push(rM)
+      function lc(UU) {
+        if (!UU || !UU.outerHTML) return "";
+        let XU = "";
+        for (; UU.parentElement;) {
+          let zU = UU.localName;
+          if (!zU) break;
+          zU = zU.toLowerCase();
+          const cU = UU.parentElement,
+            yU = [];
+          if (cU.children && cU.children.length > 0)
+            for (let UU = 0; cU.children.length > UU; UU++) {
+              const XU = cU.children[UU];
+              XU.localName && XU.localName.toLowerCase && XU.localName.toLowerCase() === zU && yU.push(XU)
             }
-          SM.length > 1 && (iM += `:eq(${SM.indexOf(MM)})`), rM = iM + (rM ? ">" + rM : ""), MM = OM
+          yU.length > 1 && (zU += `:eq(${yU.indexOf(UU)})`), XU = zU + (XU ? ">" + XU : ""), UU = cU
         }
-        return rM
+        return XU
       }
 
-      function KO(MM) {
-        return Array.isArray(MM)
+      function xc(UU) {
+        return Array.isArray(UU)
       }
 
-      function qO(MM) {
-        return "object" == typeof MM && null !== MM && !KO(MM)
+      function Jc(UU) {
+        return "object" == typeof UU && null !== UU && !xc(UU)
       }
 
-      function TO(MM, rM) {
-        if (0 === rM) return !0;
-        const iM = Object.keys(MM);
-        for (const OM of iM)
-          if (qO(MM[OM]) && TO(MM[OM], rM - 1)) return !0;
+      function jc(UU, XU) {
+        if (0 === XU) return !0;
+        const zU = Object.keys(UU);
+        for (const cU of zU)
+          if (Jc(UU[cU]) && jc(UU[cU], XU - 1)) return !0;
         return !1
       }
 
-      function VO(MM, rM) {
-        const iM = {
+      function Kc(UU, XU) {
+        const zU = {
           numOfKeysLimit: 50,
           depthOfLimit: 4
         };
-        Object.assign(iM, rM);
-        const OM = [],
-          SM = [];
-        return JSON.stringify(MM, (function(MM, rM) {
-          if (OM.length > 0) {
-            const iM = OM.indexOf(this);
-            ~iM ? OM.splice(iM + 1) : OM.push(this), ~iM ? SM.splice(iM, 1 / 0, MM) : SM.push(MM), ~OM.indexOf(rM) && (rM = OM[0] === rM ? "[Circular ~]" : "[Circular ~." + SM.slice(0, OM.indexOf(rM)).join(".") + "]")
-          } else OM.push(rM);
-          if (null === rM) return rM;
-          if (void 0 === rM) return "undefined";
-          if (qO(jM = rM) && Object.keys(jM).length > iM.numOfKeysLimit || "function" == typeof jM || qO(jM) && TO(jM, iM.depthOfLimit)) return function(MM) {
-            let rM = MM.toString();
-            return iM.stringLengthLimit && rM.length > iM.stringLengthLimit && (rM = `${rM.slice(0,iM.stringLengthLimit)}...`), rM
-          }(rM);
-          var jM;
-          if ("bigint" == typeof rM) return rM.toString() + "n";
-          if (rM instanceof Event) {
-            const MM = {};
-            for (const iM in rM) {
-              const OM = rM[iM];
-              MM[iM] = KO(OM) ? IO(OM.length ? OM[0] : null) : OM
+        Object.assign(zU, XU);
+        const cU = [],
+          yU = [];
+        return JSON.stringify(UU, (function(UU, XU) {
+          if (cU.length > 0) {
+            const zU = cU.indexOf(this);
+            ~zU ? cU.splice(zU + 1) : cU.push(this), ~zU ? yU.splice(zU, 1 / 0, UU) : yU.push(UU), ~cU.indexOf(XU) && (XU = cU[0] === XU ? "[Circular ~]" : "[Circular ~." + yU.slice(0, cU.indexOf(XU)).join(".") + "]")
+          } else cU.push(XU);
+          if (null === XU) return XU;
+          if (void 0 === XU) return "undefined";
+          if (Jc(QU = XU) && Object.keys(QU).length > zU.numOfKeysLimit || "function" == typeof QU || Jc(QU) && jc(QU, zU.depthOfLimit)) return function(UU) {
+            let XU = UU.toString();
+            return zU.stringLengthLimit && XU.length > zU.stringLengthLimit && (XU = `${XU.slice(0,zU.stringLengthLimit)}...`), XU
+          }(XU);
+          var QU;
+          if ("bigint" == typeof XU) return XU.toString() + "n";
+          if (XU instanceof Event) {
+            const UU = {};
+            for (const zU in XU) {
+              const cU = XU[zU];
+              UU[zU] = xc(cU) ? lc(cU.length ? cU[0] : null) : cU
             }
-            return MM
+            return UU
           }
-          return rM instanceof Node ? rM instanceof HTMLElement ? rM ? rM.outerHTML : "" : rM.nodeName : rM instanceof Error ? rM.stack ? rM.stack + "\nEnd of stack for Error object" : rM.name + ": " + rM.message : rM
+          return XU instanceof Node ? XU instanceof HTMLElement ? XU ? XU.outerHTML : "" : XU.nodeName : XU instanceof Error ? XU.stack ? XU.stack + "\nEnd of stack for Error object" : XU.name + ": " + XU.message : XU
         }))
       }
-      var cO = {
+      var bc = {
         level: ["assert", "clear", "count", "countReset", "debug", "dir", "dirxml", "error", "group", "groupCollapsed", "groupEnd", "info", "log", "table", "time", "timeEnd", "timeLog", "trace", "warn"],
         lengthThreshold: 1e3,
         logger: "console"
       };
 
-      function MS(MM, rM, iM) {
-        const OM = iM ? Object.assign({}, cO, iM) : cO,
-          SM = OM.logger;
-        if (!SM) return () => {};
-        let jM;
-        jM = "string" == typeof SM ? rM[SM] : SM;
-        let aM = 0,
-          PM = !1,
-          nM = !0;
-        const QM = [];
-        if (OM.level.includes("error")) {
-          const iM = rM => {
-            const iM = rM.message;
-            MM({
+      function Tc(UU, XU, zU) {
+        const cU = zU ? Object.assign({}, bc, zU) : bc,
+          yU = cU.logger;
+        if (!yU) return () => {};
+        let QU;
+        QU = "string" == typeof yU ? XU[yU] : yU;
+        let AU = 0,
+          FU = !1,
+          oU = !0;
+        const DU = [];
+        if (cU.level.includes("error")) {
+          const zU = XU => {
+            const zU = XU.message;
+            UU({
               level: "error",
-              trace: XO.parse(rM.error).map((MM => MM.toString())),
-              payload: [VO(iM, OM.stringifyOptions)]
+              trace: mc.parse(XU.error).map((UU => UU.toString())),
+              payload: [Kc(zU, cU.stringifyOptions)]
             })
           };
-          rM.addEventListener("error", iM), QM.push((() => {
-            rM.removeEventListener("error", iM)
+          XU.addEventListener("error", zU), DU.push((() => {
+            XU.removeEventListener("error", zU)
           }));
-          const SM = rM => {
-            let iM, SM;
-            rM.reason instanceof Error ? (iM = rM.reason, SM = [VO(`Uncaught (in promise) ${iM.name}: ${iM.message}`, OM.stringifyOptions)]) : (iM = new Error, SM = [VO("Uncaught (in promise)", OM.stringifyOptions), VO(rM.reason, OM.stringifyOptions)]), MM({
+          const yU = XU => {
+            let zU, yU;
+            XU.reason instanceof Error ? (zU = XU.reason, yU = [Kc(`Uncaught (in promise) ${zU.name}: ${zU.message}`, cU.stringifyOptions)]) : (zU = new Error, yU = [Kc("Uncaught (in promise)", cU.stringifyOptions), Kc(XU.reason, cU.stringifyOptions)]), UU({
               level: "error",
-              trace: XO.parse(iM).map((MM => MM.toString())),
-              payload: SM
+              trace: mc.parse(zU).map((UU => UU.toString())),
+              payload: yU
             })
           };
-          rM.addEventListener("unhandledrejection", SM), QM.push((() => {
-            rM.removeEventListener("unhandledrejection", SM)
+          XU.addEventListener("unhandledrejection", yU), DU.push((() => {
+            XU.removeEventListener("unhandledrejection", yU)
           }))
         }
-        for (const LM of OM.level) QM.push(zM(jM, LM));
+        for (const YU of cU.level) DU.push(EU(QU, YU));
         return () => {
-          nM = !1, QM.forEach((MM => MM()))
+          oU = !1, DU.forEach((UU => UU()))
         };
 
-        function zM(rM, iM) {
-          return rM[iM] ? function(SM, jM) {
+        function EU(XU, zU) {
+          return XU[zU] ? function(yU, QU) {
             try {
-              if (!(jM in SM)) return () => {};
-              const QM = SM[jM],
-                zM = {
-                  next: QM
+              if (!(QU in yU)) return () => {};
+              const DU = yU[QU],
+                EU = {
+                  next: DU
                 },
-                LM = (SM => function() {
-                  for (var jM = arguments.length, QM = new Array(jM), zM = 0; zM < jM; zM++) QM[zM] = arguments[zM];
-                  if (SM.apply(rM, QM), nM && !("assert" === iM && QM[0] || PM)) {
-                    PM = !0;
+                YU = (yU => function() {
+                  for (var QU = arguments.length, DU = new Array(QU), EU = 0; EU < QU; EU++) DU[EU] = arguments[EU];
+                  if (yU.apply(XU, DU), oU && !("assert" === zU && DU[0] || FU)) {
+                    FU = !0;
                     try {
-                      const rM = XO.parse(new Error).map((MM => MM.toString())).splice(1),
-                        SM = ("assert" === iM ? QM.slice(1) : QM).map((MM => VO(MM, OM.stringifyOptions)));
-                      aM++, OM.lengthThreshold > aM ? MM({
-                        level: iM,
-                        trace: rM,
-                        payload: SM
-                      }) : aM === OM.lengthThreshold && MM({
+                      const XU = mc.parse(new Error).map((UU => UU.toString())).splice(1),
+                        yU = ("assert" === zU ? DU.slice(1) : DU).map((UU => Kc(UU, cU.stringifyOptions)));
+                      AU++, cU.lengthThreshold > AU ? UU({
+                        level: zU,
+                        trace: XU,
+                        payload: yU
+                      }) : AU === cU.lengthThreshold && UU({
                         level: "warn",
                         trace: [],
-                        payload: [VO("The number of log records reached the threshold.")]
+                        payload: [Kc("The number of log records reached the threshold.")]
                       })
-                    } catch (MM) {
-                      SM.apply(rM, ["rrweb logger error:", MM, ...QM])
+                    } catch (UU) {
+                      yU.apply(XU, ["rrweb logger error:", UU, ...DU])
                     } finally {
-                      PM = !1
+                      FU = !1
                     }
                   }
                 })((function() {
-                  for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-                  return zM.next.apply(this, rM)
+                  for (var UU = arguments.length, XU = new Array(UU), zU = 0; zU < UU; zU++) XU[zU] = arguments[zU];
+                  return EU.next.apply(this, XU)
                 }));
-              return "function" == typeof LM && (LM.prototype = LM.prototype || {}, Object.defineProperties(LM, {
+              return "function" == typeof YU && (YU.prototype = YU.prototype || {}, Object.defineProperties(YU, {
                 __rrweb_original__: {
                   enumerable: !1,
-                  value: QM
+                  value: DU
                 },
                 __rrweb_layer__: {
                   enumerable: !1,
-                  value: zM
+                  value: EU
                 }
-              })), SM[jM] = LM, () => {
-                if (SM[jM] === LM) return void(SM[jM] = zM.next);
-                const MM = MM => {
-                  var rM;
-                  return "function" == typeof MM ? null !== (rM = MM.__rrweb_layer__) && void 0 !== rM ? rM : MM.__posthog_layer__ : void 0
+              })), yU[QU] = YU, () => {
+                if (yU[QU] === YU) return void(yU[QU] = EU.next);
+                const UU = UU => {
+                  var XU;
+                  return "function" == typeof UU ? null !== (XU = UU.__rrweb_layer__) && void 0 !== XU ? XU : UU.__posthog_layer__ : void 0
                 };
-                let rM = SM[jM],
-                  iM = MM(rM);
-                for (; iM;) {
-                  if (iM.next === LM) return void(iM.next = zM.next);
-                  rM = iM.next, iM = MM(rM)
+                let XU = yU[QU],
+                  zU = UU(XU);
+                for (; zU;) {
+                  if (zU.next === YU) return void(zU.next = EU.next);
+                  XU = zU.next, zU = UU(XU)
                 }
               }
-            } catch (MM) {
+            } catch (UU) {
               return () => {}
             }
-          }(rM, iM) : () => {}
+          }(XU, zU) : () => {}
         }
       }
-      const rS = "u" > typeof window ? window : void 0,
-        iS = "u" > typeof globalThis ? globalThis : rS,
-        OS = null == iS ? void 0 : iS.document,
-        SS = null == iS ? void 0 : iS.location;
-      null != iS && iS.XMLHttpRequest && new iS.XMLHttpRequest;
-      const jS = "undefined" != typeof globalThis ? globalThis : rS;
-      jS && "undefined" == typeof self && (jS.self = jS), jS && "undefined" == typeof File && (jS.File = function() {});
-      const aS = null != rS ? rS : {},
-        PS = Object.prototype,
-        nS = PS.hasOwnProperty,
-        QS = PS.toString,
-        zS = Array.isArray || function(MM) {
-          return "[object Array]" === QS.call(MM)
+      const hc = "u" > typeof window ? window : void 0,
+        Uy = "u" > typeof globalThis ? globalThis : hc,
+        Xy = null == Uy ? void 0 : Uy.document,
+        zy = null == Uy ? void 0 : Uy.location;
+      null != Uy && Uy.XMLHttpRequest && new Uy.XMLHttpRequest;
+      const cy = "undefined" != typeof globalThis ? globalThis : hc;
+      cy && "undefined" == typeof self && (cy.self = cy), cy && "undefined" == typeof File && (cy.File = function() {});
+      const yy = null != hc ? hc : {},
+        Qy = Object.prototype,
+        Ay = Qy.hasOwnProperty,
+        Fy = Qy.toString,
+        oy = Array.isArray || function(UU) {
+          return "[object Array]" === Fy.call(UU)
         },
-        LS = MM => "function" == typeof MM,
-        mS = MM => MM === Object(MM) && !zS(MM),
-        HS = MM => void 0 === MM,
-        hS = MM => "[object String]" == QS.call(MM),
-        JS = MM => null === MM,
-        dS = MM => HS(MM) || JS(MM),
-        yS = MM => "[object Number]" == QS.call(MM) && MM == MM,
-        lS = MM => "[object Boolean]" === QS.call(MM),
-        ES = MM => MM instanceof FormData;
+        Dy = UU => "function" == typeof UU,
+        Ey = UU => UU === Object(UU) && !oy(UU),
+        Yy = UU => void 0 === UU,
+        Ny = UU => "[object String]" == Fy.call(UU),
+        Iy = UU => null === UU,
+        py = UU => Yy(UU) || Iy(UU),
+        ay = UU => "[object Number]" == Fy.call(UU) && UU == UU,
+        ty = UU => "[object Boolean]" === Fy.call(UU),
+        gy = UU => UU instanceof FormData;
 
-      function US(MM, rM, iM, OM, SM) {
-        return rM > iM && (OM.warn("min cannot be greater than max."), rM = iM), yS(MM) ? MM > iM ? (OM.warn(" cannot be  greater than max: " + iM + ". Using max value instead."), iM) : rM > MM ? (OM.warn(" cannot be less than min: " + rM + ". Using min value instead."), rM) : MM : (OM.warn(" must be a number. using max or fallback. max: " + iM + ", fallback: " + SM), US(null != SM ? SM : iM, rM, iM, OM))
+      function ky(UU, XU, zU, cU, yU) {
+        return XU > zU && (cU.warn("min cannot be greater than max."), XU = zU), ay(UU) ? UU > zU ? (cU.warn(" cannot be  greater than max: " + zU + ". Using max value instead."), zU) : XU > UU ? (cU.warn(" cannot be less than min: " + XU + ". Using min value instead."), XU) : UU : (cU.warn(" must be a number. using max or fallback. max: " + zU + ", fallback: " + yU), ky(null != yU ? yU : zU, XU, zU, cU))
       }
-      var GS = class {
-        constructor(MM) {
-          this.C = {}, this.I = MM.I, this.R = US(MM.bucketSize, 0, 100, MM.A), this.$ = US(MM.refillRate, 0, this.R, MM.A), this.O = US(MM.refillInterval, 0, 864e5, MM.A)
+      var Gy = class {
+        constructor(UU) {
+          this.C = {}, this.I = UU.I, this.R = ky(UU.bucketSize, 0, 100, UU.A), this.$ = ky(UU.refillRate, 0, this.R, UU.A), this.O = ky(UU.refillInterval, 0, 864e5, UU.A)
         }
-        F(MM, rM) {
-          const iM = Math.floor((rM - MM.lastAccess) / this.O);
-          iM > 0 && (MM.tokens = Math.min(MM.tokens + iM * this.$, this.R), MM.lastAccess = MM.lastAccess + iM * this.O)
+        F(UU, XU) {
+          const zU = Math.floor((XU - UU.lastAccess) / this.O);
+          zU > 0 && (UU.tokens = Math.min(UU.tokens + zU * this.$, this.R), UU.lastAccess = UU.lastAccess + zU * this.O)
         }
-        consumeRateLimit(MM) {
-          var rM;
-          const iM = Date.now(),
-            OM = String(MM);
-          let SM = this.C[OM];
-          return SM ? this.F(SM, iM) : (SM = {
+        consumeRateLimit(UU) {
+          var XU;
+          const zU = Date.now(),
+            cU = String(UU);
+          let yU = this.C[cU];
+          return yU ? this.F(yU, zU) : (yU = {
             tokens: this.R,
-            lastAccess: iM
-          }, this.C[OM] = SM), 0 === SM.tokens || (SM.tokens--, 0 === SM.tokens && (null === (rM = this.I) || void 0 === rM || rM.call(this, MM)), 0 === SM.tokens)
+            lastAccess: zU
+          }, this.C[cU] = yU), 0 === yU.tokens || (yU.tokens--, 0 === yU.tokens && (null === (XU = this.I) || void 0 === XU || XU.call(this, UU)), 0 === yU.tokens)
         }
         stop() {
           this.C = {}
         }
       };
 
-      function CS(MM) {
-        return MM ? MM.split("#")[0] : MM
+      function By(UU) {
+        return UU ? UU.split("#")[0] : UU
       }
-      const eS = "NativeGzipValidationError";
-      let bS;
-      const wS = MM => {
-          throw function(MM, rM) {
-            const iM = new Error(rM);
+      const Zy = "NativeGzipValidationError";
+      let Ry;
+      const Py = UU => {
+          throw function(UU, XU) {
+            const zU = new Error(XU);
             try {
-              Object.defineProperty(iM, "name", {
-                value: MM,
+              Object.defineProperty(zU, "name", {
+                value: UU,
                 writable: !0,
                 enumerable: !0,
                 configurable: !0
               })
-            } catch (MM) {}
-            return iM
-          }(eS, `Native gzip produced invalid output: ${MM}`)
+            } catch (UU) {}
+            return zU
+          }(Zy, `Native gzip produced invalid output: ${UU}`)
         },
-        tS = (gS = jM((function*(MM, rM) {
-          18 > MM.size && wS("too-short");
-          const iM = new Uint8Array(yield MM.slice(0, 10).arrayBuffer());
-          var OM;
-          (2 > (OM = iM).length || 31 !== OM[0] || 139 !== OM[1] || 8 !== iM[2]) && wS("invalid-header");
-          const SM = new DataView(yield MM.slice(MM.size - 8).arrayBuffer());
-          SM.getUint32(0, !0) !== (MM => {
-            const rM = (() => {
-              if (bS) return bS;
-              bS = [];
-              for (let MM = 0; 256 > MM; MM++) {
-                let rM = MM;
-                for (let MM = 0; 8 > MM; MM++) rM = 1 & rM ? 3988292384 ^ rM >>> 1 : rM >>> 1;
-                bS[MM] = rM >>> 0
+        Wy = (dy = QU((function*(UU, XU) {
+          18 > UU.size && Py("too-short");
+          const zU = new Uint8Array(yield UU.slice(0, 10).arrayBuffer());
+          var cU;
+          (2 > (cU = zU).length || 31 !== cU[0] || 139 !== cU[1] || 8 !== zU[2]) && Py("invalid-header");
+          const yU = new DataView(yield UU.slice(UU.size - 8).arrayBuffer());
+          yU.getUint32(0, !0) !== (UU => {
+            const XU = (() => {
+              if (Ry) return Ry;
+              Ry = [];
+              for (let UU = 0; 256 > UU; UU++) {
+                let XU = UU;
+                for (let UU = 0; 8 > UU; UU++) XU = 1 & XU ? 3988292384 ^ XU >>> 1 : XU >>> 1;
+                Ry[UU] = XU >>> 0
               }
-              return bS
+              return Ry
             })();
-            let iM = 4294967295;
-            for (let OM = 0; MM.length > OM; OM++) iM = rM[255 & (iM ^ MM[OM])] ^ iM >>> 8;
-            return (4294967295 ^ iM) >>> 0
-          })(rM) && wS("invalid-crc");
-          const jM = rM.length >>> 0;
-          SM.getUint32(4, !0) !== jM && wS("invalid-size")
-        })), function(MM, rM) {
-          return gS.apply(this, arguments)
+            let zU = 4294967295;
+            for (let cU = 0; UU.length > cU; cU++) zU = XU[255 & (zU ^ UU[cU])] ^ zU >>> 8;
+            return (4294967295 ^ zU) >>> 0
+          })(XU) && Py("invalid-crc");
+          const QU = XU.length >>> 0;
+          yU.getUint32(4, !0) !== QU && Py("invalid-size")
+        })), function(UU, XU) {
+          return dy.apply(this, arguments)
         });
-      var gS;
+      var dy;
 
-      function uS() {
-        return uS = jM((function*(MM) {
-          let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-            iM = arguments.length > 2 ? arguments[2] : void 0;
+      function Ly() {
+        return Ly = QU((function*(UU) {
+          let XU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+            zU = arguments.length > 2 ? arguments[2] : void 0;
           try {
-            const rM = (new TextEncoder).encode(MM),
-              iM = new globalThis.CompressionStream("gzip"),
-              SM = iM.writable.getWriter(),
-              aM = SM.write(rM).then((() => SM.close())).catch((OM = jM((function*(MM) {
+            const XU = (new TextEncoder).encode(UU),
+              zU = new globalThis.CompressionStream("gzip"),
+              yU = zU.writable.getWriter(),
+              AU = yU.write(XU).then((() => yU.close())).catch((cU = QU((function*(UU) {
                 try {
-                  yield SM.abort(MM)
-                } catch (MM) {}
-                throw MM
-              })), function(MM) {
-                return OM.apply(this, arguments)
+                  yield yU.abort(UU)
+                } catch (UU) {}
+                throw UU
+              })), function(UU) {
+                return cU.apply(this, arguments)
               })),
-              PM = new Response(iM.readable).blob(),
-              [nM] = yield Promise.all([PM, aM]);
-            return yield tS(nM, rM), nM
-          } catch (MM) {
-            if (null == iM ? void 0 : iM.rethrow) throw MM;
-            return rM && console.error("Failed to gzip compress data", MM), null
+              FU = new Response(zU.readable).blob(),
+              [oU] = yield Promise.all([FU, AU]);
+            return yield Wy(oU, XU), oU
+          } catch (UU) {
+            if (null == zU ? void 0 : zU.rethrow) throw UU;
+            return XU && console.error("Failed to gzip compress data", UU), null
           }
-          var OM
-        })), uS.apply(this, arguments)
+          var cU
+        })), Ly.apply(this, arguments)
       }
-      const RS = "0.9.4",
-        pS = {
+      const ey = "0.9.4",
+        Cy = {
           DEBUG: !1,
-          LIB_VERSION: RS,
+          LIB_VERSION: ey,
           LIB_NAME: "browser-common",
-          JS_SDK_VERSION: RS
+          JS_SDK_VERSION: ey
         },
-        WS = function(MM) {
+        wy = function(UU) {
           let {
-            debugEnabled: rM
+            debugEnabled: XU
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          const iM = {
-            N(iM) {
-              let OM;
+          const zU = {
+            N(zU) {
+              let cU;
               try {
-                OM = typeof window > "u" ? void 0 : window
-              } catch (MM) {
+                cU = typeof window > "u" ? void 0 : window
+              } catch (UU) {
                 return
               }
-              for (var SM = arguments.length, jM = new Array(SM > 1 ? SM - 1 : 0), aM = 1; aM < SM; aM++) jM[aM - 1] = arguments[aM];
-              OM && (pS.DEBUG || OM.POSTHOG_DEBUG || rM) && !HS(OM.console) && OM.console && ("__rrweb_original__" in OM.console[iM] ? OM.console[iM].__rrweb_original__ : OM.console[iM])(MM, ...jM)
+              for (var yU = arguments.length, QU = new Array(yU > 1 ? yU - 1 : 0), AU = 1; AU < yU; AU++) QU[AU - 1] = arguments[AU];
+              cU && (Cy.DEBUG || cU.POSTHOG_DEBUG || XU) && !Yy(cU.console) && cU.console && ("__rrweb_original__" in cU.console[zU] ? cU.console[zU].__rrweb_original__ : cU.console[zU])(UU, ...QU)
             },
             debug() {
-              for (var MM = arguments.length, rM = new Array(MM), OM = 0; OM < MM; OM++) rM[OM] = arguments[OM];
-              iM.N("debug", ...rM)
+              for (var UU = arguments.length, XU = new Array(UU), cU = 0; cU < UU; cU++) XU[cU] = arguments[cU];
+              zU.N("debug", ...XU)
             },
             info() {
-              for (var MM = arguments.length, rM = new Array(MM), OM = 0; OM < MM; OM++) rM[OM] = arguments[OM];
-              iM.N("log", ...rM)
+              for (var UU = arguments.length, XU = new Array(UU), cU = 0; cU < UU; cU++) XU[cU] = arguments[cU];
+              zU.N("log", ...XU)
             },
             warn() {
-              for (var MM = arguments.length, rM = new Array(MM), OM = 0; OM < MM; OM++) rM[OM] = arguments[OM];
-              iM.N("warn", ...rM)
+              for (var UU = arguments.length, XU = new Array(UU), cU = 0; cU < UU; cU++) XU[cU] = arguments[cU];
+              zU.N("warn", ...XU)
             },
             error() {
-              for (var MM = arguments.length, rM = new Array(MM), OM = 0; OM < MM; OM++) rM[OM] = arguments[OM];
-              iM.N("error", ...rM)
+              for (var UU = arguments.length, XU = new Array(UU), cU = 0; cU < UU; cU++) XU[cU] = arguments[cU];
+              zU.N("error", ...XU)
             },
             critical() {
-              for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
-              console.error(MM, ...iM)
+              for (var XU = arguments.length, zU = new Array(XU), cU = 0; cU < XU; cU++) zU[cU] = arguments[cU];
+              console.error(UU, ...zU)
             },
-            uninitializedWarning(MM) {
-              iM.error(`You must initialize PostHog before calling ${MM}`)
+            uninitializedWarning(UU) {
+              zU.error(`You must initialize PostHog before calling ${UU}`)
             },
-            createLogger: (rM, iM) => WS(`${MM} ${rM}`, iM)
+            createLogger: (XU, zU) => wy(`${UU} ${XU}`, zU)
           };
-          return iM
+          return zU
         },
-        sS = WS("[PostHog.js]"),
-        DS = sS.createLogger;
+        qy = wy("[PostHog.js]"),
+        Oy = qy.createLogger;
 
-      function kS(MM, rM) {
-        if (!dS(MM))
-          if (zS(MM)) MM.forEach(rM);
-          else if (ES(MM)) MM.forEach(((MM, iM) => rM(MM, iM)));
+      function Sy(UU, XU) {
+        if (!py(UU))
+          if (oy(UU)) UU.forEach(XU);
+          else if (gy(UU)) UU.forEach(((UU, zU) => XU(UU, zU)));
         else
-          for (const iM in MM) nS.call(MM, iM) && rM(MM[iM], iM)
+          for (const zU in UU) Ay.call(UU, zU) && XU(UU[zU], zU)
       }
 
-      function ZS(MM, rM, iM, OM) {
+      function ry(UU, XU, zU, cU) {
         const {
-          capture: SM = !1,
-          passive: jM = !0
-        } = null != OM ? OM : {};
-        null == MM || MM.addEventListener(rM, iM, {
-          capture: SM,
-          passive: jM
+          capture: yU = !1,
+          passive: QU = !0
+        } = null != cU ? cU : {};
+        null == UU || UU.addEventListener(XU, zU, {
+          capture: yU,
+          passive: QU
         })
       }
-      const oS = ["localhost", "127.0.0.1"],
-        fS = MM => {
-          const rM = null == OS ? void 0 : OS.createElement("a");
-          return HS(rM) ? null : (rM.href = MM, rM)
+      const uy = ["localhost", "127.0.0.1"],
+        fy = UU => {
+          const XU = null == Xy ? void 0 : Xy.createElement("a");
+          return Yy(XU) ? null : (XU.href = UU, XU)
         },
-        YS = () => {},
-        NS = MM => {
-          var rM;
-          if (LS(MM)) return null !== (rM = MM.__posthog_layer__) && void 0 !== rM ? rM : MM.__rrweb_layer__
+        iy = () => {},
+        Hy = UU => {
+          var XU;
+          if (Dy(UU)) return null !== (XU = UU.__posthog_layer__) && void 0 !== XU ? XU : UU.__rrweb_layer__
         };
 
-      function AS(MM, rM, iM) {
+      function My(UU, XU, zU) {
         try {
-          if (!(rM in MM)) return YS;
-          const OM = {
-              next: MM[rM]
+          if (!(XU in UU)) return iy;
+          const cU = {
+              next: UU[XU]
             },
-            SM = iM((function() {
-              for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
-              return OM.next.apply(this, rM)
+            yU = zU((function() {
+              for (var UU = arguments.length, XU = new Array(UU), zU = 0; zU < UU; zU++) XU[zU] = arguments[zU];
+              return cU.next.apply(this, XU)
             }));
-          return LS(SM) && (SM.prototype = SM.prototype || {}, Object.defineProperties(SM, {
+          return Dy(yU) && (yU.prototype = yU.prototype || {}, Object.defineProperties(yU, {
             __posthog_wrapped__: {
               enumerable: !1,
               value: !0
             },
             __posthog_layer__: {
               enumerable: !1,
-              value: OM
+              value: cU
             }
-          })), MM[rM] = SM, () => {
-            if (MM[rM] === SM) return void(MM[rM] = OM.next);
-            let iM = MM[rM],
-              jM = NS(iM);
-            for (; jM;) {
-              if (jM.next === SM) return void(jM.next = OM.next);
-              iM = jM.next, jM = NS(iM)
+          })), UU[XU] = yU, () => {
+            if (UU[XU] === yU) return void(UU[XU] = cU.next);
+            let zU = UU[XU],
+              QU = Hy(zU);
+            for (; QU;) {
+              if (QU.next === yU) return void(QU.next = cU.next);
+              zU = QU.next, QU = Hy(zU)
             }
           }
-        } catch (MM) {
-          return YS
+        } catch (UU) {
+          return iy
         }
       }
 
-      function xS(MM, rM) {
-        var iM;
-        const OM = function(MM) {
+      function vy(UU, XU) {
+        var zU;
+        const cU = function(UU) {
             try {
-              return "string" == typeof MM ? new URL(MM).hostname : "url" in MM ? new URL(MM.url).hostname : MM.hostname
-            } catch (MM) {
+              return "string" == typeof UU ? new URL(UU).hostname : "url" in UU ? new URL(UU.url).hostname : UU.hostname
+            } catch (UU) {
               return null
             }
-          }(MM),
-          SM = {
-            hostname: OM,
+          }(UU),
+          yU = {
+            hostname: cU,
             isHostDenied: !1
           };
-        if (!(null === (iM = rM.payloadHostDenyList) || void 0 === iM ? void 0 : iM.length) || !(null == OM ? void 0 : OM.trim().length)) return SM;
-        for (const jM of rM.payloadHostDenyList)
-          if (OM.endsWith(jM)) return {
-            hostname: OM,
+        if (!(null === (zU = XU.payloadHostDenyList) || void 0 === zU ? void 0 : zU.length) || !(null == cU ? void 0 : cU.trim().length)) return yU;
+        for (const QU of XU.payloadHostDenyList)
+          if (cU.endsWith(QU)) return {
+            hostname: cU,
             isHostDenied: !0
           };
-        return SM
+        return yU
       }
 
-      function vS(MM) {
-        var rM;
-        const iM = null == rS || null === (rM = rS.location) || void 0 === rM ? void 0 : rM.href;
-        return HS(iM) ? void 0 : function(MM, rM) {
-          var iM;
-          const OM = null == MM || null === (iM = MM.config) || void 0 === iM ? void 0 : iM.get_current_url;
-          if (!LS(OM)) return rM;
+      function Vy(UU) {
+        var XU;
+        const zU = null == hc || null === (XU = hc.location) || void 0 === XU ? void 0 : XU.href;
+        return Yy(zU) ? void 0 : function(UU, XU) {
+          var zU;
+          const cU = null == UU || null === (zU = UU.config) || void 0 === zU ? void 0 : zU.get_current_url;
+          if (!Dy(cU)) return XU;
           try {
-            const MM = OM(rM);
-            return hS(MM) && MM ? MM : rM
-          } catch (MM) {
-            return sS.error("Error in get_current_url, falling back to window.location.href", MM), rM
+            const UU = cU(XU);
+            return Ny(UU) && UU ? UU : XU
+          } catch (UU) {
+            return qy.error("Error in get_current_url, falling back to window.location.href", UU), XU
           }
-        }(MM, iM)
+        }(UU, zU)
       }
-      const FS = "$stored_person_properties",
-        BS = new RegExp("^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$"),
-        XS = /(^|[^0-9A-Za-z_])([0-9][0-9 -]*[0-9])(?=$|[^0-9A-Za-z_])/g,
-        IS = [16, 15, 14, 13],
-        KS = new RegExp("^(\\d{3}-?\\d{2}-?\\d{4})$"),
-        qS = new RegExp("(^|[^0-9])((?!000|666)[0-9]{3}-?(?!00)[0-9]{2}-?(?!0000)[0-9]{4})(?=$|([^0-9]))", "g"),
-        TS = /[0-9A-Za-z_]/;
+      const sy = "$stored_person_properties",
+        ny = new RegExp("^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$"),
+        my = /(^|[^0-9A-Za-z_])([0-9][0-9 -]*[0-9])(?=$|[^0-9A-Za-z_])/g,
+        ly = [16, 15, 14, 13],
+        xy = new RegExp("^(\\d{3}-?\\d{2}-?\\d{4})$"),
+        Jy = new RegExp("(^|[^0-9])((?!000|666)[0-9]{3}-?(?!00)[0-9]{2}-?(?!0000)[0-9]{4})(?=$|([^0-9]))", "g"),
+        jy = /[0-9A-Za-z_]/;
 
-      function VS(MM) {
-        let rM = 0,
-          iM = !1;
-        for (let OM = MM.length - 1; OM >= 0; OM--) {
-          let SM = MM.charCodeAt(OM) - 48;
-          iM && (SM *= 2, SM > 9 && (SM -= 9)), rM += SM, iM = !iM
+      function Ky(UU) {
+        let XU = 0,
+          zU = !1;
+        for (let cU = UU.length - 1; cU >= 0; cU--) {
+          let yU = UU.charCodeAt(cU) - 48;
+          zU && (yU *= 2, yU > 9 && (yU -= 9)), XU += yU, zU = !zU
         }
-        return rM % 10 == 0
+        return XU % 10 == 0
       }
-      const cS = 1e6;
+      const by = 1e6;
 
-      function Mj(MM) {
-        var rM;
-        return Math.min(cS, null !== (rM = MM.payloadSizeLimitBytes) && void 0 !== rM ? rM : cS)
+      function Ty(UU) {
+        var XU;
+        return Math.min(by, null !== (XU = UU.payloadSizeLimitBytes) && void 0 !== XU ? XU : by)
       }
-      const rj = {
+      const hy = {
           initiatorTypes: ["audio", "beacon", "body", "css", "early-hint", "embed", "fetch", "frame", "iframe", "icon", "image", "img", "input", "link", "navigation", "object", "ping", "script", "track", "video", "xmlhttprequest"],
-          maskRequestFn: MM => MM,
+          maskRequestFn: UU => UU,
           recordHeaders: !1,
           recordBody: !1,
           recordInitialRequests: !1,
           recordPerformance: !1,
           performanceEntryTypeToObserve: ["first-input", "navigation", "paint", "resource"],
-          payloadSizeLimitBytes: cS,
+          payloadSizeLimitBytes: by,
           payloadHostDenyList: [".lr-ingest.io", ".ingest.sentry.io", ".clarity.ms", "google-analytics.com", "analytics.google.com", "nr-data.net", "datadoghq.com", "datadoghq.eu", "ddog-gov.com", "segment.io", "rudderstack.com", "amplitude.com", "mixpanel.com", "hotjar.com", "hotjar.io", "fullstory.com"],
           streamNetworkBody: !1
         },
-        ij = ["authorization", "x-forwarded-for", "authorization", "cookie", "set-cookie", "x-api-key", "x-real-ip", "remote-addr", "forwarded", "proxy-authorization", "x-csrf-token", "x-csrftoken", "x-xsrf-token"],
-        Oj = ["password", "secret", "passwd", "api_key", "apikey", "auth", "credentials", "mysql_pwd", "privatekey", "private_key", "token"],
-        Sj = ["auth", "token", "secret", "session", "api-key", "apikey", "api_key", "credential", "password", "passwd", "cookie", "csrf", "xsrf"],
-        jj = MM => {
-          dS(MM) || kS(Object.keys(MM), (rM => {
-            (MM => {
-              const rM = MM.toLowerCase();
-              return ij.includes(rM) || Sj.some((MM => rM.includes(MM)))
-            })(rM) && (MM[rM] = "redacted")
+        UQ = ["authorization", "x-forwarded-for", "authorization", "cookie", "set-cookie", "x-api-key", "x-real-ip", "remote-addr", "forwarded", "proxy-authorization", "x-csrf-token", "x-csrftoken", "x-xsrf-token"],
+        XQ = ["password", "secret", "passwd", "api_key", "apikey", "auth", "credentials", "mysql_pwd", "privatekey", "private_key", "token"],
+        zQ = ["auth", "token", "secret", "session", "api-key", "apikey", "api_key", "credential", "password", "passwd", "cookie", "csrf", "xsrf"],
+        cQ = UU => {
+          py(UU) || Sy(Object.keys(UU), (XU => {
+            (UU => {
+              const XU = UU.toLowerCase();
+              return UQ.includes(XU) || zQ.some((UU => XU.includes(UU)))
+            })(XU) && (UU[XU] = "redacted")
           }))
         },
-        aj = ["/s/", "/e/", "/i/"];
+        yQ = ["/s/", "/e/", "/i/"];
 
-      function Pj(MM, rM, iM, OM) {
-        if (dS(MM)) return MM;
-        let SM = (null == rM ? void 0 : rM["content-length"]) || function(MM) {
-          return new Blob([MM]).size
-        }(MM);
-        return hS(SM) && (SM = parseInt(SM)), SM > iM ? `[SessionRecording] ${OM} body too large to record (${SM} bytes)` : MM
+      function QQ(UU, XU, zU, cU) {
+        if (py(UU)) return UU;
+        let yU = (null == XU ? void 0 : XU["content-length"]) || function(UU) {
+          return new Blob([UU]).size
+        }(UU);
+        return Ny(yU) && (yU = parseInt(yU)), yU > zU ? `[SessionRecording] ${cU} body too large to record (${yU} bytes)` : UU
       }
 
-      function nj(MM, rM) {
-        if (dS(MM)) return MM;
-        let iM = MM;
-        return function(MM) {
-          let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          if (dS(MM)) return !1;
-          if (hS(MM)) {
-            if (MM = MM.trim(), rM ? BS.test((MM || "").replace(/[- ]/g, "")) : function(MM) {
-                let rM;
-                for (XS.lastIndex = 0; rM = XS.exec(MM);) {
-                  const MM = rM[2];
-                  if (!MM) continue;
-                  const iM = MM.replace(/[- ]/g, "");
-                  for (let rM = 0; iM.length > rM; rM++)
-                    for (const MM of IS) {
-                      const OM = rM + MM;
-                      if (iM.length >= OM) {
-                        const MM = iM.slice(rM, OM);
-                        if (BS.test(MM) && VS(MM)) return !0
+      function AQ(UU, XU) {
+        if (py(UU)) return UU;
+        let zU = UU;
+        return function(UU) {
+          let XU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          if (py(UU)) return !1;
+          if (Ny(UU)) {
+            if (UU = UU.trim(), XU ? ny.test((UU || "").replace(/[- ]/g, "")) : function(UU) {
+                let XU;
+                for (my.lastIndex = 0; XU = my.exec(UU);) {
+                  const UU = XU[2];
+                  if (!UU) continue;
+                  const zU = UU.replace(/[- ]/g, "");
+                  for (let XU = 0; zU.length > XU; XU++)
+                    for (const UU of ly) {
+                      const cU = XU + UU;
+                      if (zU.length >= cU) {
+                        const UU = zU.slice(XU, cU);
+                        if (ny.test(UU) && Ky(UU)) return !0
                       }
                     }
                 }
                 return !1
-              }(MM)) return !1;
-            if (rM ? KS.test(MM) : function(MM) {
-                let rM;
-                for (qS.lastIndex = 0; rM = qS.exec(MM);) {
-                  const MM = rM[1],
-                    iM = rM[3];
-                  if (!(MM && iM && TS.test(MM) && TS.test(iM))) return !0
+              }(UU)) return !1;
+            if (XU ? xy.test(UU) : function(UU) {
+                let XU;
+                for (Jy.lastIndex = 0; XU = Jy.exec(UU);) {
+                  const UU = XU[1],
+                    zU = XU[3];
+                  if (!(UU && zU && jy.test(UU) && jy.test(zU))) return !0
                 }
                 return !1
-              }(MM)) return !1
+              }(UU)) return !1
           }
           return !0
-        }(iM, !1) || (iM = "[SessionRecording] " + rM + " body redacted"), kS(Oj, (MM => {
-          (null == iM ? void 0 : iM.length) && -1 !== (null == iM ? void 0 : iM.indexOf(MM)) && (iM = "[SessionRecording] " + rM + " body redacted as might contain: " + MM)
-        })), iM
+        }(zU, !1) || (zU = "[SessionRecording] " + XU + " body redacted"), Sy(XQ, (UU => {
+          (null == zU ? void 0 : zU.length) && -1 !== (null == zU ? void 0 : zU.indexOf(UU)) && (zU = "[SessionRecording] " + XU + " body redacted as might contain: " + UU)
+        })), zU
       }
-      const Qj = new WeakSet,
-        zj = DS("[Recorder]"),
-        Lj = MM => "navigation" === MM.entryType,
-        mj = MM => "resource" === MM.entryType,
-        Hj = () => {};
+      const FQ = new WeakSet,
+        oQ = Oy("[Recorder]"),
+        DQ = UU => "navigation" === UU.entryType,
+        EQ = UU => "resource" === UU.entryType,
+        YQ = () => {};
 
-      function hj(MM, rM) {
-        var iM;
-        return Lj(rM) && "complete" === (null === (iM = MM.document) || void 0 === iM ? void 0 : iM.readyState) && rM.loadEventEnd > 0
-      }
-
-      function Jj(MM, rM) {
-        return rM.recordInitialRequests ? MM.performance.getEntries().filter((iM => hj(MM, iM) || mj(iM) && rM.initiatorTypes.includes(iM.initiatorType))) : rM.performanceEntryTypeToObserve.includes("navigation") ? function(MM) {
-          var rM;
-          return "complete" !== (null === (rM = MM.document) || void 0 === rM ? void 0 : rM.readyState) ? [] : MM.performance.getEntriesByType("navigation").filter((rM => hj(MM, rM)))
-        }(MM) : []
+      function NQ(UU, XU) {
+        var zU;
+        return DQ(XU) && "complete" === (null === (zU = UU.document) || void 0 === zU ? void 0 : zU.readyState) && XU.loadEventEnd > 0
       }
 
-      function dj(MM, rM) {
-        return !!rM && (lS(rM) || rM[MM])
+      function IQ(UU, XU) {
+        return XU.recordInitialRequests ? UU.performance.getEntries().filter((zU => NQ(UU, zU) || EQ(zU) && XU.initiatorTypes.includes(zU.initiatorType))) : XU.performanceEntryTypeToObserve.includes("navigation") ? function(UU) {
+          var XU;
+          return "complete" !== (null === (XU = UU.document) || void 0 === XU ? void 0 : XU.readyState) ? [] : UU.performance.getEntriesByType("navigation").filter((XU => NQ(UU, XU)))
+        }(UU) : []
       }
 
-      function yj(MM) {
+      function pQ(UU, XU) {
+        return !!XU && (ty(XU) || XU[UU])
+      }
+
+      function aQ(UU) {
         if ("undefined" == typeof Request) return !1;
-        if (MM instanceof Request) return !0;
+        if (UU instanceof Request) return !0;
         try {
-          return "[object Request]" === {}.toString.call(MM)
-        } catch (MM) {
+          return "[object Request]" === {}.toString.call(UU)
+        } catch (UU) {
           return !1
         }
       }
-      const lj = ["image/", "video/", "audio/", "font/", "application/octet-stream", "application/pdf", "application/zip", "application/wasm"];
+      const tQ = ["image/", "video/", "audio/", "font/", "application/octet-stream", "application/pdf", "application/zip", "application/wasm"];
 
-      function Ej(MM) {
+      function gQ(UU) {
         let {
-          type: rM,
-          recordBody: iM,
-          headers: OM,
-          url: SM
-        } = MM;
+          type: XU,
+          recordBody: zU,
+          headers: cU,
+          url: yU
+        } = UU;
 
-        function jM(MM) {
-          const rM = Object.keys(OM).find((MM => "content-type" === MM.toLowerCase())),
-            iM = rM && OM[rM];
-          return MM.some((MM => null == iM ? void 0 : iM.toLowerCase().includes(MM)))
+        function QU(UU) {
+          const XU = Object.keys(cU).find((UU => "content-type" === UU.toLowerCase())),
+            zU = XU && cU[XU];
+          return UU.some((UU => null == zU ? void 0 : zU.toLowerCase().includes(UU)))
         }
-        if (!iM) return !1;
-        if (function MM(rM) {
+        if (!zU) return !1;
+        if (function UU(XU) {
             try {
-              return "string" == typeof rM ? rM.startsWith("blob:") : rM instanceof URL ? "blob:" === rM.protocol : !!yj(rM) && MM(rM.url)
-            } catch (MM) {
+              return "string" == typeof XU ? XU.startsWith("blob:") : XU instanceof URL ? "blob:" === XU.protocol : !!aQ(XU) && UU(XU.url)
+            } catch (UU) {
               return !1
             }
-          }(SM)) return !1;
-        if (jM(lj)) return !1;
-        if (lS(iM)) return !0;
-        if (zS(iM)) return jM(iM);
-        const aM = iM[rM];
-        return lS(aM) ? aM : jM(aM)
+          }(yU)) return !1;
+        if (QU(tQ)) return !1;
+        if (ty(zU)) return !0;
+        if (oy(zU)) return QU(zU);
+        const AU = zU[XU];
+        return ty(AU) ? AU : QU(AU)
       }
 
-      function Uj(MM, rM, iM, OM, SM) {
-        return Gj.apply(this, arguments)
+      function kQ(UU, XU, zU, cU, yU) {
+        return GQ.apply(this, arguments)
       }
 
-      function Gj() {
-        return Gj = jM((function*(MM, rM, iM, OM, SM) {
-          let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          if (jM > 10) return zj.warn("Failed to get performance entry for request", {
-            url: iM,
-            initiatorType: rM
+      function GQ() {
+        return GQ = QU((function*(UU, XU, zU, cU, yU) {
+          let QU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          if (QU > 10) return oQ.warn("Failed to get performance entry for request", {
+            url: zU,
+            initiatorType: XU
           }), null;
-          const aM = function(MM, rM) {
-            for (let iM = MM.length - 1; iM >= 0; iM -= 1)
-              if (rM(MM[iM])) return MM[iM]
-          }(MM.performance.getEntriesByName(iM), (MM => mj(MM) && MM.initiatorType === rM && (HS(OM) || MM.startTime >= OM) && (HS(SM) || SM >= MM.startTime)));
-          return aM || (yield new Promise((MM => setTimeout(MM, 50 * jM))), Uj(MM, rM, iM, OM, SM, jM + 1))
-        })), Gj.apply(this, arguments)
+          const AU = function(UU, XU) {
+            for (let zU = UU.length - 1; zU >= 0; zU -= 1)
+              if (XU(UU[zU])) return UU[zU]
+          }(UU.performance.getEntriesByName(zU), (UU => EQ(UU) && UU.initiatorType === XU && (Yy(cU) || UU.startTime >= cU) && (Yy(yU) || yU >= UU.startTime)));
+          return AU || (yield new Promise((UU => setTimeout(UU, 50 * QU))), kQ(UU, XU, zU, cU, yU, QU + 1))
+        })), GQ.apply(this, arguments)
       }
 
-      function Cj(MM) {
+      function BQ(UU) {
         let {
-          body: rM,
-          options: iM,
-          url: OM
-        } = MM;
-        if (dS(rM)) return null;
+          body: XU,
+          options: zU,
+          url: cU
+        } = UU;
+        if (py(XU)) return null;
         const {
-          hostname: SM,
-          isHostDenied: jM
-        } = xS(OM, iM);
-        if (jM) return SM + " is in deny list";
-        if (hS(rM)) return rM;
-        if ((MM => "u" > typeof Document && MM instanceof Document)(rM)) return rM.textContent;
-        if (ES(rM)) return function(MM) {
-          let rM, iM, OM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "&";
-          const SM = [];
-          return kS(MM, (function(MM, OM) {
-            HS(MM) || HS(OM) || "undefined" === OM || (rM = encodeURIComponent((MM => MM instanceof File)(MM) ? MM.name : MM.toString()), iM = encodeURIComponent(OM), SM[SM.length] = iM + "=" + rM)
-          })), SM.join(OM)
-        }(rM);
-        if (mS(rM)) try {
-          return JSON.stringify(rM)
-        } catch (rM) {
+          hostname: yU,
+          isHostDenied: QU
+        } = vy(cU, zU);
+        if (QU) return yU + " is in deny list";
+        if (Ny(XU)) return XU;
+        if ((UU => "u" > typeof Document && UU instanceof Document)(XU)) return XU.textContent;
+        if (gy(XU)) return function(UU) {
+          let XU, zU, cU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "&";
+          const yU = [];
+          return Sy(UU, (function(UU, cU) {
+            Yy(UU) || Yy(cU) || "undefined" === cU || (XU = encodeURIComponent((UU => UU instanceof File)(UU) ? UU.name : UU.toString()), zU = encodeURIComponent(cU), yU[yU.length] = zU + "=" + XU)
+          })), yU.join(cU)
+        }(XU);
+        if (Ey(XU)) try {
+          return JSON.stringify(XU)
+        } catch (XU) {
           return "[SessionReplay] Failed to stringify response object"
         }
-        return "[SessionReplay] Cannot read body of type " + toString.call(rM)
+        return "[SessionReplay] Cannot read body of type " + toString.call(XU)
       }
 
-      function ej(MM, rM) {
+      function ZQ(UU, XU) {
         let {
-          entry: iM,
-          method: SM,
-          status: jM,
-          networkRequest: aM,
-          isInitial: PM,
-          start: nM,
-          end: QM,
-          url: zM,
-          initiatorType: LM
-        } = rM;
-        nM = iM ? iM.startTime : nM, QM = iM ? iM.responseEnd : QM;
-        const mM = Math.floor(Date.now() - MM.performance.now()),
-          HM = Math.floor(mM + (nM || 0)),
-          hM = [OM(OM({}, iM ? JSON.parse(JSON.stringify(iM.toJSON())) : {
-            name: zM
+          entry: zU,
+          method: yU,
+          status: QU,
+          networkRequest: AU,
+          isInitial: FU,
+          start: oU,
+          end: DU,
+          url: EU,
+          initiatorType: YU
+        } = XU;
+        oU = zU ? zU.startTime : oU, DU = zU ? zU.responseEnd : DU;
+        const NU = Math.floor(Date.now() - UU.performance.now()),
+          IU = Math.floor(NU + (oU || 0)),
+          pU = [cU(cU({}, zU ? JSON.parse(JSON.stringify(zU.toJSON())) : {
+            name: EU
           }), {}, {
-            startTime: HS(nM) ? void 0 : Math.round(nM),
-            endTime: HS(QM) ? void 0 : Math.round(QM),
-            timeOrigin: mM,
-            timestamp: HM,
-            method: SM,
-            initiatorType: LM || (iM ? iM.initiatorType : void 0),
-            status: jM,
-            requestHeaders: aM.requestHeaders,
-            requestBody: aM.requestBody,
-            responseHeaders: aM.responseHeaders,
-            responseBody: aM.responseBody,
-            isInitial: PM
+            startTime: Yy(oU) ? void 0 : Math.round(oU),
+            endTime: Yy(DU) ? void 0 : Math.round(DU),
+            timeOrigin: NU,
+            timestamp: IU,
+            method: yU,
+            initiatorType: YU || (zU ? zU.initiatorType : void 0),
+            status: QU,
+            requestHeaders: AU.requestHeaders,
+            requestBody: AU.requestBody,
+            responseHeaders: AU.responseHeaders,
+            responseBody: AU.responseBody,
+            isInitial: FU
           })];
-        if ((MM => !JS(MM) && ("navigation" === MM.entryType || "resource" === MM.entryType))(iM))
-          for (const OM of iM.serverTiming || []) hM.push({
-            timeOrigin: mM,
-            timestamp: HM,
-            startTime: Math.round(iM.startTime),
-            name: OM.name,
-            duration: OM.duration,
+        if ((UU => !Iy(UU) && ("navigation" === UU.entryType || "resource" === UU.entryType))(zU))
+          for (const cU of zU.serverTiming || []) pU.push({
+            timeOrigin: NU,
+            timestamp: IU,
+            startTime: Math.round(zU.startTime),
+            name: cU.name,
+            duration: cU.duration,
             entryType: "serverTiming"
           });
-        return hM
+        return pU
       }
-      const bj = ["video/", "audio/"];
+      const RQ = ["video/", "audio/"];
 
-      function wj(MM) {
-        return mS(MM) && LS(MM.getReader) && LS(MM.tee)
+      function PQ(UU) {
+        return Ey(UU) && Dy(UU.getReader) && Dy(UU.tee)
       }
-      const tj = "[SessionReplay] Timeout while trying to read body",
-        gj = "[SessionReplay] Failed to read body";
+      const WQ = "[SessionReplay] Timeout while trying to read body",
+        dQ = "[SessionReplay] Failed to read body";
 
-      function uj(MM) {
-        return `${gj}: ${MM}`
-      }
-
-      function Rj(MM) {
-        return `[SessionReplay] Body too large to record (> ${MM} bytes)`
+      function LQ(UU) {
+        return `${dQ}: ${UU}`
       }
 
-      function pj(MM, rM) {
-        if (!rM.streamNetworkBody) return function(MM) {
-          return new Promise((rM => {
-            const iM = setTimeout((() => rM(tj)), 500);
+      function eQ(UU) {
+        return `[SessionReplay] Body too large to record (> ${UU} bytes)`
+      }
+
+      function CQ(UU, XU) {
+        if (!XU.streamNetworkBody) return function(UU) {
+          return new Promise((XU => {
+            const zU = setTimeout((() => XU(WQ)), 500);
             try {
-              MM.clone().text().then((MM => rM(MM)), (MM => rM(uj(MM)))).finally((() => clearTimeout(iM)))
-            } catch (MM) {
-              clearTimeout(iM), rM(gj)
+              UU.clone().text().then((UU => XU(UU)), (UU => XU(LQ(UU)))).finally((() => clearTimeout(zU)))
+            } catch (UU) {
+              clearTimeout(zU), XU(dQ)
             }
           }))
-        }(MM);
-        const iM = Mj(rM);
-        return function(MM, rM) {
+        }(UU);
+        const zU = Ty(XU);
+        return function(UU, XU) {
           try {
-            var iM, OM;
-            const SM = null === (iM = MM.headers) || void 0 === iM || null === (OM = iM.get) || void 0 === OM ? void 0 : OM.call(iM, "content-length");
-            if (!SM) return !1;
-            const jM = parseInt(SM, 10);
-            return Number.isFinite(jM) && jM > rM
-          } catch (MM) {
+            var zU, cU;
+            const yU = null === (zU = UU.headers) || void 0 === zU || null === (cU = zU.get) || void 0 === cU ? void 0 : cU.call(zU, "content-length");
+            if (!yU) return !1;
+            const QU = parseInt(yU, 10);
+            return Number.isFinite(QU) && QU > XU
+          } catch (UU) {
             return !1
           }
-        }(MM, iM) ? Promise.resolve(Rj(iM)) : function(MM, rM) {
-          return new Promise((iM => {
-            let OM, SM = !1;
+        }(UU, zU) ? Promise.resolve(eQ(zU)) : function(UU, XU) {
+          return new Promise((zU => {
+            let cU, yU = !1;
 
-            function jM() {
+            function QU() {
               try {
-                null == OM || OM.cancel().catch((() => {}))
-              } catch (MM) {}
+                null == cU || cU.cancel().catch((() => {}))
+              } catch (UU) {}
             }
 
-            function aM(MM) {
-              SM || (SM = !0, clearTimeout(PM), jM(), iM(MM))
+            function AU(UU) {
+              yU || (yU = !0, clearTimeout(FU), QU(), zU(UU))
             }
-            const PM = setTimeout((() => aM(tj)), 500);
-            let nM;
+            const FU = setTimeout((() => AU(WQ)), 500);
+            let oU;
             try {
-              nM = MM.clone()
-            } catch (MM) {
-              return void aM(gj)
+              oU = UU.clone()
+            } catch (UU) {
+              return void AU(dQ)
             }
-            const QM = nM.body;
-            if (!wj(QM) || "undefined" == typeof TextDecoder) {
+            const DU = oU.body;
+            if (!PQ(DU) || "undefined" == typeof TextDecoder) {
               try {
-                nM.text().then((MM => aM(MM)), (MM => aM(uj(MM))))
-              } catch (MM) {
-                aM(gj)
+                oU.text().then((UU => AU(UU)), (UU => AU(LQ(UU))))
+              } catch (UU) {
+                AU(dQ)
               }
               return
             }
             try {
-              OM = QM.getReader()
-            } catch (MM) {
-              return void aM(gj)
+              cU = DU.getReader()
+            } catch (UU) {
+              return void AU(dQ)
             }
-            const zM = [];
-            let LM = 0;
-            ! function MM() {
-              OM.read().then((iM => {
+            const EU = [];
+            let YU = 0;
+            ! function UU() {
+              cU.read().then((zU => {
                 let {
-                  done: OM,
-                  value: PM
-                } = iM;
-                if (SM) jM();
-                else if (OM) aM((new TextDecoder).decode(function(MM, rM) {
-                  const iM = new Uint8Array(rM);
-                  let OM = 0;
-                  for (const SM of MM) iM.set(SM, OM), OM += SM.byteLength;
-                  return iM
-                }(zM, LM)));
+                  done: cU,
+                  value: FU
+                } = zU;
+                if (yU) QU();
+                else if (cU) AU((new TextDecoder).decode(function(UU, XU) {
+                  const zU = new Uint8Array(XU);
+                  let cU = 0;
+                  for (const yU of UU) zU.set(yU, cU), cU += yU.byteLength;
+                  return zU
+                }(EU, YU)));
                 else {
-                  if (PM) {
-                    if (LM + PM.byteLength > rM) return void aM(Rj(rM));
-                    LM += PM.byteLength, zM.push(PM)
+                  if (FU) {
+                    if (YU + FU.byteLength > XU) return void AU(eQ(XU));
+                    YU += FU.byteLength, EU.push(FU)
                   }
-                  MM()
+                  UU()
                 }
-              }), (MM => aM(uj(MM))))
+              }), (UU => AU(LQ(UU))))
             }()
           }))
-        }(MM, iM)
+        }(UU, zU)
       }
 
-      function Wj(MM) {
-        return sj.apply(this, arguments)
+      function wQ(UU) {
+        return qQ.apply(this, arguments)
       }
 
-      function sj() {
-        return (sj = jM((function*(MM) {
+      function qQ() {
+        return (qQ = QU((function*(UU) {
           let {
-            r: rM,
-            options: iM,
-            url: OM
-          } = MM;
+            r: XU,
+            options: zU,
+            url: cU
+          } = UU;
           const {
-            hostname: SM,
-            isHostDenied: jM
-          } = xS(OM, iM);
-          return jM ? Promise.resolve(SM + " is in deny list") : pj(rM, iM)
+            hostname: yU,
+            isHostDenied: QU
+          } = vy(cU, zU);
+          return QU ? Promise.resolve(yU + " is in deny list") : CQ(XU, zU)
         }))).apply(this, arguments)
       }
 
-      function Dj(MM) {
-        return kj.apply(this, arguments)
+      function OQ(UU) {
+        return SQ.apply(this, arguments)
       }
 
-      function kj() {
-        return (kj = jM((function*(MM) {
+      function SQ() {
+        return (SQ = QU((function*(UU) {
           let {
-            r: rM,
-            options: iM,
-            url: OM
-          } = MM;
-          const SM = function(MM) {
+            r: XU,
+            options: zU,
+            url: cU
+          } = UU;
+          const yU = function(UU) {
             let {
-              r: rM,
-              options: iM,
-              url: OM
-            } = MM;
-            var SM;
-            if ("chunked" === rM.headers.get("Transfer-Encoding")) return "Chunked Transfer-Encoding is not supported";
-            const jM = null === (SM = rM.headers.get("Content-Type")) || void 0 === SM ? void 0 : SM.toLowerCase(),
-              aM = bj.some((MM => null == jM ? void 0 : jM.startsWith(MM)));
-            if (jM && aM) return `Content-Type ${jM} is not supported`;
+              r: XU,
+              options: zU,
+              url: cU
+            } = UU;
+            var yU;
+            if ("chunked" === XU.headers.get("Transfer-Encoding")) return "Chunked Transfer-Encoding is not supported";
+            const QU = null === (yU = XU.headers.get("Content-Type")) || void 0 === yU ? void 0 : yU.toLowerCase(),
+              AU = RQ.some((UU => null == QU ? void 0 : QU.startsWith(UU)));
+            if (QU && AU) return `Content-Type ${QU} is not supported`;
             const {
-              hostname: PM,
-              isHostDenied: nM
-            } = xS(OM, iM);
-            return nM ? PM + " is in deny list" : null
+              hostname: FU,
+              isHostDenied: oU
+            } = vy(cU, zU);
+            return oU ? FU + " is in deny list" : null
           }({
-            r: rM,
-            options: iM,
-            url: OM
+            r: XU,
+            options: zU,
+            url: cU
           });
-          return JS(SM) ? pj(rM, iM) : Promise.resolve(SM)
+          return Iy(yU) ? CQ(XU, zU) : Promise.resolve(yU)
         }))).apply(this, arguments)
       }
-      let Zj = null;
+      let rQ = null;
 
-      function oj(MM, rM, iM) {
-        if (!("performance" in rM)) return () => {};
-        if (Zj) return zj.warn("Network observer already initialised, doing nothing"), () => {};
-        const SM = iM ? Object.assign({}, rj, iM) : rj;
-        let aM = !0,
-          PM = !1;
-        const nM = rM => {
-            if (!aM) return;
-            const iM = [];
-            let jM = !1;
-            rM.requests.forEach((MM => {
-              const rM = "serverTiming" === MM.entryType;
-              if (rM && jM) return;
-              let OM;
+      function uQ(UU, XU, zU) {
+        if (!("performance" in XU)) return () => {};
+        if (rQ) return oQ.warn("Network observer already initialised, doing nothing"), () => {};
+        const yU = zU ? Object.assign({}, hy, zU) : hy;
+        let AU = !0,
+          FU = !1;
+        const oU = XU => {
+            if (!AU) return;
+            const zU = [];
+            let QU = !1;
+            XU.requests.forEach((UU => {
+              const XU = "serverTiming" === UU.entryType;
+              if (XU && QU) return;
+              let cU;
               try {
-                OM = SM.maskRequestFn(MM)
-              } catch (MM) {
-                return PM || (PM = !0, zj.warn("Network capture masking callback failed; dropping the record. Further masking failures will not be logged for this observer.")), void(rM || (jM = !0))
+                cU = yU.maskRequestFn(UU)
+              } catch (UU) {
+                return FU || (FU = !0, oQ.warn("Network capture masking callback failed; dropping the record. Further masking failures will not be logged for this observer.")), void(XU || (QU = !0))
               }
-              rM || (jM = !OM || (MM => !!MM && Qj.has(MM))(OM)), OM && iM.push(OM)
-            })), iM.length > 0 && MM(OM(OM({}, rM), {}, {
-              requests: iM
+              XU || (QU = !cU || (UU => !!UU && FQ.has(UU))(cU)), cU && zU.push(cU)
+            })), zU.length > 0 && UU(cU(cU({}, XU), {}, {
+              requests: zU
             }))
           },
-          QM = function(MM, rM, iM) {
+          DU = function(UU, XU, zU) {
             try {
-              MM({
-                requests: Jj(rM, iM).flatMap((MM => ej(rM, {
-                  entry: MM,
+              UU({
+                requests: IQ(XU, zU).flatMap((UU => ZQ(XU, {
+                  entry: UU,
                   method: void 0,
                   status: void 0,
                   networkRequest: {},
@@ -5788,582 +5788,582 @@ export const modules = {
                 }))),
                 isInitial: !0
               })
-            } catch (MM) {
-              zj.error("Failed to capture initial performance entries for network capture", MM)
+            } catch (UU) {
+              oQ.error("Failed to capture initial performance entries for network capture", UU)
             }
-            const OM = rM.PerformanceObserver,
-              SM = null == OM ? void 0 : OM.supportedEntryTypes;
-            if (!OM || !zS(SM)) return;
-            const jM = SM.filter((MM => iM.performanceEntryTypeToObserve.includes(MM)));
-            if (!jM.length) return;
-            const aM = new OM((OM => {
-              MM({
-                requests: OM.getEntries().filter((MM => Lj(MM) || mj(MM) && iM.initiatorTypes.includes(MM.initiatorType) && (MM => !iM.recordBody && !iM.recordHeaders || "xmlhttprequest" !== MM.initiatorType && "fetch" !== MM.initiatorType)(MM))).flatMap((MM => ej(rM, {
-                  entry: MM,
+            const cU = XU.PerformanceObserver,
+              yU = null == cU ? void 0 : cU.supportedEntryTypes;
+            if (!cU || !oy(yU)) return;
+            const QU = yU.filter((UU => zU.performanceEntryTypeToObserve.includes(UU)));
+            if (!QU.length) return;
+            const AU = new cU((cU => {
+              UU({
+                requests: cU.getEntries().filter((UU => DQ(UU) || EQ(UU) && zU.initiatorTypes.includes(UU.initiatorType) && (UU => !zU.recordBody && !zU.recordHeaders || "xmlhttprequest" !== UU.initiatorType && "fetch" !== UU.initiatorType)(UU))).flatMap((UU => ZQ(XU, {
+                  entry: UU,
                   method: void 0,
                   status: void 0,
                   networkRequest: {}
                 })))
               })
             }));
-            return aM.observe({
-              entryTypes: jM
+            return AU.observe({
+              entryTypes: QU
             }), () => {
-              aM.disconnect()
+              AU.disconnect()
             }
-          }(nM, rM, SM),
-          zM = SM.recordHeaders || SM.recordBody;
-        if (!QM && !zM) return aM = !1, Hj;
-        let LM = () => {},
-          mM = () => {};
-        return zM && (LM = function(MM, rM, iM) {
-          if (!iM.initiatorTypes.includes("xmlhttprequest")) return () => {};
-          const OM = dj("request", iM.recordHeaders),
-            SM = dj("response", iM.recordHeaders),
-            jM = AS(rM.XMLHttpRequest.prototype, "open", (jM => function(aM, PM) {
-              let nM = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-                QM = arguments.length > 3 ? arguments[3] : void 0,
-                zM = arguments.length > 4 ? arguments[4] : void 0;
-              const LM = this;
+          }(oU, XU, yU),
+          EU = yU.recordHeaders || yU.recordBody;
+        if (!DU && !EU) return AU = !1, YQ;
+        let YU = () => {},
+          NU = () => {};
+        return EU && (YU = function(UU, XU, zU) {
+          if (!zU.initiatorTypes.includes("xmlhttprequest")) return () => {};
+          const cU = pQ("request", zU.recordHeaders),
+            yU = pQ("response", zU.recordHeaders),
+            QU = My(XU.XMLHttpRequest.prototype, "open", (QU => function(AU, FU) {
+              let oU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+                DU = arguments.length > 3 ? arguments[3] : void 0,
+                EU = arguments.length > 4 ? arguments[4] : void 0;
+              const YU = this;
               try {
-                const jM = new Request(PM),
-                  nM = {};
-                let QM, zM;
-                const mM = {},
-                  HM = LM.setRequestHeader.bind(LM);
-                LM.setRequestHeader = (MM, rM) => (mM[MM] = rM, HM(MM, rM)), OM && (nM.requestHeaders = mM);
-                const hM = LM.send.bind(LM);
-                LM.send = MM => (Ej({
+                const QU = new Request(FU),
+                  oU = {};
+                let DU, EU;
+                const NU = {},
+                  IU = YU.setRequestHeader.bind(YU);
+                YU.setRequestHeader = (UU, XU) => (NU[UU] = XU, IU(UU, XU)), cU && (oU.requestHeaders = NU);
+                const pU = YU.send.bind(YU);
+                YU.send = UU => (gQ({
                   type: "request",
-                  headers: mM,
-                  url: PM,
-                  recordBody: iM.recordBody
-                }) && (nM.requestBody = Cj({
-                  body: MM,
-                  options: iM,
-                  url: PM
-                })), QM = rM.performance.now(), hM(MM));
-                const JM = () => {
-                    LM.removeEventListener("readystatechange", dM), LM.removeEventListener("error", JM), LM.removeEventListener("abort", JM), LM.removeEventListener("timeout", JM)
+                  headers: NU,
+                  url: FU,
+                  recordBody: zU.recordBody
+                }) && (oU.requestBody = BQ({
+                  body: UU,
+                  options: zU,
+                  url: FU
+                })), DU = XU.performance.now(), pU(UU));
+                const aU = () => {
+                    YU.removeEventListener("readystatechange", tU), YU.removeEventListener("error", aU), YU.removeEventListener("abort", aU), YU.removeEventListener("timeout", aU)
                   },
-                  dM = () => {
-                    if (LM.readyState !== LM.DONE) return;
-                    JM(), zM = rM.performance.now();
-                    const OM = {};
-                    LM.getAllResponseHeaders().trim().split(/[\r\n]+/).forEach((MM => {
-                      const rM = MM.split(": "),
-                        iM = rM.shift(),
-                        SM = rM.join(": ");
-                      iM && (OM[iM] = SM)
-                    })), SM && (nM.responseHeaders = OM), Ej({
+                  tU = () => {
+                    if (YU.readyState !== YU.DONE) return;
+                    aU(), EU = XU.performance.now();
+                    const cU = {};
+                    YU.getAllResponseHeaders().trim().split(/[\r\n]+/).forEach((UU => {
+                      const XU = UU.split(": "),
+                        zU = XU.shift(),
+                        yU = XU.join(": ");
+                      zU && (cU[zU] = yU)
+                    })), yU && (oU.responseHeaders = cU), gQ({
                       type: "response",
-                      headers: OM,
-                      url: PM,
-                      recordBody: iM.recordBody
-                    }) && (nM.responseBody = Cj({
-                      body: LM.response,
-                      options: iM,
-                      url: PM
-                    })), Uj(rM, "xmlhttprequest", jM.url, QM, zM).then((iM => {
-                      MM({
-                        requests: ej(rM, {
-                          entry: iM,
-                          method: aM,
-                          status: null == LM ? void 0 : LM.status,
-                          networkRequest: nM,
-                          start: QM,
-                          end: zM,
-                          url: PM.toString(),
+                      headers: cU,
+                      url: FU,
+                      recordBody: zU.recordBody
+                    }) && (oU.responseBody = BQ({
+                      body: YU.response,
+                      options: zU,
+                      url: FU
+                    })), kQ(XU, "xmlhttprequest", QU.url, DU, EU).then((zU => {
+                      UU({
+                        requests: ZQ(XU, {
+                          entry: zU,
+                          method: AU,
+                          status: null == YU ? void 0 : YU.status,
+                          networkRequest: oU,
+                          start: DU,
+                          end: EU,
+                          url: FU.toString(),
                           initiatorType: "xmlhttprequest"
                         })
                       })
                     })).catch((() => {}))
                   };
-                LM.addEventListener("readystatechange", dM), LM.addEventListener("error", JM), LM.addEventListener("abort", JM), LM.addEventListener("timeout", JM)
-              } catch (MM) {
-                zj.error("Failed to instrument XHR for network capture", MM)
+                YU.addEventListener("readystatechange", tU), YU.addEventListener("error", aU), YU.addEventListener("abort", aU), YU.addEventListener("timeout", aU)
+              } catch (UU) {
+                oQ.error("Failed to instrument XHR for network capture", UU)
               }
-              jM.call(LM, aM, PM.toString(), nM, QM, zM)
+              QU.call(YU, AU, FU.toString(), oU, DU, EU)
             }));
           return () => {
-            jM()
+            QU()
           }
-        }(nM, rM, SM), mM = !0 === SM.captureFetchSynchronously ? function(MM, rM, iM) {
-          if (!iM.initiatorTypes.includes("fetch")) return () => {};
-          const OM = dj("request", iM.recordHeaders),
-            SM = dj("response", iM.recordHeaders),
-            aM = AS(rM, "fetch", (aM => function(PM, nM) {
-              let QM;
+        }(oU, XU, yU), NU = !0 === yU.captureFetchSynchronously ? function(UU, XU, zU) {
+          if (!zU.initiatorTypes.includes("fetch")) return () => {};
+          const cU = pQ("request", zU.recordHeaders),
+            yU = pQ("response", zU.recordHeaders),
+            AU = My(XU, "fetch", (AU => function(FU, oU) {
+              let DU;
               try {
-                QM = new Request(PM, nM)
-              } catch (MM) {
-                zj.error("Failed to instrument fetch for network capture", MM);
+                DU = new Request(FU, oU)
+              } catch (UU) {
+                oQ.error("Failed to instrument fetch for network capture", UU);
                 try {
-                  return Promise.resolve(aM(PM, nM))
-                } catch (MM) {
-                  return new Promise(((iM, OM) => OM(MM)))
+                  return Promise.resolve(AU(FU, oU))
+                } catch (UU) {
+                  return new Promise(((zU, cU) => cU(UU)))
                 }
               }
-              const zM = {};
-              let LM, mM;
-              const HM = jM((function*() {
+              const EU = {};
+              let YU, NU;
+              const IU = QU((function*() {
                   try {
-                    const MM = {};
-                    QM.headers.forEach(((rM, iM) => {
-                      MM[iM] = rM
-                    })), OM && (zM.requestHeaders = MM), !wj(null == nM ? void 0 : nM.body) && Ej({
+                    const UU = {};
+                    DU.headers.forEach(((XU, zU) => {
+                      UU[zU] = XU
+                    })), cU && (EU.requestHeaders = UU), !PQ(null == oU ? void 0 : oU.body) && gQ({
                       type: "request",
-                      headers: MM,
-                      url: PM,
-                      recordBody: iM.recordBody
-                    }) && (zM.requestBody = yield Wj({
-                      r: QM,
-                      options: iM,
-                      url: PM
+                      headers: UU,
+                      url: FU,
+                      recordBody: zU.recordBody
+                    }) && (EU.requestBody = yield wQ({
+                      r: DU,
+                      options: zU,
+                      url: FU
                     }))
-                  } catch (MM) {
-                    zj.error("Failed to record fetch request for network capture", MM)
+                  } catch (UU) {
+                    oQ.error("Failed to record fetch request for network capture", UU)
                   }
                 }))(),
-                hM = (JM = jM((function*(MM) {
+                pU = (aU = QU((function*(UU) {
                   try {
-                    const rM = {};
-                    MM.headers.forEach(((MM, iM) => {
-                      rM[iM] = MM
-                    })), SM && (zM.responseHeaders = rM), Ej({
+                    const XU = {};
+                    UU.headers.forEach(((UU, zU) => {
+                      XU[zU] = UU
+                    })), yU && (EU.responseHeaders = XU), gQ({
                       type: "response",
-                      headers: rM,
-                      url: PM,
-                      recordBody: iM.recordBody
-                    }) && (zM.responseBody = yield Dj({
-                      r: MM,
-                      options: iM,
-                      url: PM
+                      headers: XU,
+                      url: FU,
+                      recordBody: zU.recordBody
+                    }) && (EU.responseBody = yield OQ({
+                      r: UU,
+                      options: zU,
+                      url: FU
                     }))
-                  } catch (MM) {
-                    zj.error("Failed to record fetch response for network capture", MM)
+                  } catch (UU) {
+                    oQ.error("Failed to record fetch response for network capture", UU)
                   }
-                })), function(MM) {
-                  return JM.apply(this, arguments)
+                })), function(UU) {
+                  return aU.apply(this, arguments)
                 });
-              var JM;
+              var aU;
               try {
-                LM = rM.performance.now()
-              } catch (MM) {}
-              let dM;
+                YU = XU.performance.now()
+              } catch (UU) {}
+              let tU;
               try {
-                dM = yj(PM) ? aM(QM) : aM(PM, nM)
-              } catch (MM) {
-                dM = new Promise(((iM, OM) => OM(MM)))
+                tU = aQ(FU) ? AU(DU) : AU(FU, oU)
+              } catch (UU) {
+                tU = new Promise(((zU, cU) => cU(UU)))
               }
-              const yM = Promise.resolve(dM).then((MM => {
+              const gU = Promise.resolve(tU).then((UU => {
                 try {
-                  mM = rM.performance.now()
-                } catch (MM) {}
+                  NU = XU.performance.now()
+                } catch (UU) {}
                 return {
                   status: "fulfilled",
-                  response: MM
+                  response: UU
                 }
-              }), (MM => ({
+              }), (UU => ({
                 status: "rejected",
-                error: MM
+                error: UU
               })));
-              return jM((function*() {
-                let iM;
+              return QU((function*() {
+                let zU;
                 try {
-                  yield HM;
-                  const MM = yield yM;
-                  if ("rejected" === MM.status) throw MM.error;
-                  return iM = MM.response, yield hM(iM), iM
+                  yield IU;
+                  const UU = yield gU;
+                  if ("rejected" === UU.status) throw UU.error;
+                  return zU = UU.response, yield pU(zU), zU
                 } finally {
-                  (OM = iM, Uj(rM, "fetch", QM.url, LM, mM).then((iM => {
-                    MM({
-                      requests: ej(rM, {
-                        entry: iM,
-                        method: QM.method,
-                        status: null == OM ? void 0 : OM.status,
-                        networkRequest: zM,
-                        start: LM,
-                        end: mM,
-                        url: QM.url,
+                  (cU = zU, kQ(XU, "fetch", DU.url, YU, NU).then((zU => {
+                    UU({
+                      requests: ZQ(XU, {
+                        entry: zU,
+                        method: DU.method,
+                        status: null == cU ? void 0 : cU.status,
+                        networkRequest: EU,
+                        start: YU,
+                        end: NU,
+                        url: DU.url,
                         initiatorType: "fetch"
                       })
                     })
                   }))).catch((() => {}))
                 }
-                var OM
+                var cU
               }))()
             }));
           return () => {
-            aM()
+            AU()
           }
-        }(nM, rM, SM) : function(MM, rM, iM) {
-          if (!iM.initiatorTypes.includes("fetch")) return () => {};
-          const OM = dj("request", iM.recordHeaders),
-            SM = dj("response", iM.recordHeaders),
-            aM = AS(rM, "fetch", (aM => function() {
-              var PM = jM((function*(jM, PM) {
-                let nM, QM;
+        }(oU, XU, yU) : function(UU, XU, zU) {
+          if (!zU.initiatorTypes.includes("fetch")) return () => {};
+          const cU = pQ("request", zU.recordHeaders),
+            yU = pQ("response", zU.recordHeaders),
+            AU = My(XU, "fetch", (AU => function() {
+              var FU = QU((function*(QU, FU) {
+                let oU, DU;
                 try {
-                  nM = new Request(jM, PM)
-                } catch (MM) {
-                  return zj.error("Failed to instrument fetch for network capture", MM), aM(jM, PM)
+                  oU = new Request(QU, FU)
+                } catch (UU) {
+                  return oQ.error("Failed to instrument fetch for network capture", UU), AU(QU, FU)
                 }
-                const zM = {};
-                let LM, mM;
+                const EU = {};
+                let YU, NU;
                 try {
                   try {
-                    const MM = {};
-                    nM.headers.forEach(((rM, iM) => {
-                      MM[iM] = rM
-                    })), OM && (zM.requestHeaders = MM), !wj(null == PM ? void 0 : PM.body) && Ej({
+                    const UU = {};
+                    oU.headers.forEach(((XU, zU) => {
+                      UU[zU] = XU
+                    })), cU && (EU.requestHeaders = UU), !PQ(null == FU ? void 0 : FU.body) && gQ({
                       type: "request",
-                      headers: MM,
-                      url: jM,
-                      recordBody: iM.recordBody
-                    }) && (zM.requestBody = yield Wj({
-                      r: nM,
-                      options: iM,
-                      url: jM
+                      headers: UU,
+                      url: QU,
+                      recordBody: zU.recordBody
+                    }) && (EU.requestBody = yield wQ({
+                      r: oU,
+                      options: zU,
+                      url: QU
                     }))
-                  } catch (MM) {
-                    zj.error("Failed to record fetch request for network capture", MM)
+                  } catch (UU) {
+                    oQ.error("Failed to record fetch request for network capture", UU)
                   }
-                  LM = rM.performance.now(), QM = yj(jM) ? yield aM(nM): yield aM(jM, PM), mM = rM.performance.now();
+                  YU = XU.performance.now(), DU = aQ(QU) ? yield AU(oU): yield AU(QU, FU), NU = XU.performance.now();
                   try {
-                    const MM = {};
-                    QM.headers.forEach(((rM, iM) => {
-                      MM[iM] = rM
-                    })), SM && (zM.responseHeaders = MM), Ej({
+                    const UU = {};
+                    DU.headers.forEach(((XU, zU) => {
+                      UU[zU] = XU
+                    })), yU && (EU.responseHeaders = UU), gQ({
                       type: "response",
-                      headers: MM,
-                      url: jM,
-                      recordBody: iM.recordBody
-                    }) && (zM.responseBody = yield Dj({
-                      r: QM,
-                      options: iM,
-                      url: jM
+                      headers: UU,
+                      url: QU,
+                      recordBody: zU.recordBody
+                    }) && (EU.responseBody = yield OQ({
+                      r: DU,
+                      options: zU,
+                      url: QU
                     }))
-                  } catch (MM) {
-                    zj.error("Failed to record fetch response for network capture", MM)
+                  } catch (UU) {
+                    oQ.error("Failed to record fetch response for network capture", UU)
                   }
-                  return QM
+                  return DU
                 } finally {
-                  Uj(rM, "fetch", nM.url, LM, mM).then((iM => {
-                    MM({
-                      requests: ej(rM, {
-                        entry: iM,
-                        method: nM.method,
-                        status: null == QM ? void 0 : QM.status,
-                        networkRequest: zM,
-                        start: LM,
-                        end: mM,
-                        url: nM.url,
+                  kQ(XU, "fetch", oU.url, YU, NU).then((zU => {
+                    UU({
+                      requests: ZQ(XU, {
+                        entry: zU,
+                        method: oU.method,
+                        status: null == DU ? void 0 : DU.status,
+                        networkRequest: EU,
+                        start: YU,
+                        end: NU,
+                        url: oU.url,
                         initiatorType: "fetch"
                       })
                     })
                   })).catch((() => {}))
                 }
               }));
-              return function(MM, rM) {
-                return PM.apply(this, arguments)
+              return function(UU, XU) {
+                return FU.apply(this, arguments)
               }
             }()));
           return () => {
-            aM()
+            AU()
           }
-        }(nM, rM, SM)), Zj = () => {
-          aM = !1, null == QM || QM(), LM(), mM(), Zj = null
-        }, Zj
+        }(oU, XU, yU)), rQ = () => {
+          AU = !1, null == DU || DU(), YU(), NU(), rQ = null
+        }, rQ
       }
-      const fj = "$replay_override_sampling",
-        Yj = "$replay_override_linked_flag",
-        Nj = "$replay_override_url_trigger",
-        Aj = "$replay_override_event_trigger",
-        xj = "$session_is_sampled",
-        vj = "$session_recording_url_trigger_activated_session",
-        Fj = "$session_recording_event_trigger_activated_session",
-        Bj = "$posthog_sr_group_event_trigger_",
-        Xj = "$posthog_sr_group_url_trigger_",
-        Ij = "$sess_rec_flush_size",
-        Kj = "$sdk_debug_replay_event_trigger_status",
-        qj = "$sdk_debug_replay_linked_flag_trigger_status",
-        Tj = "$sdk_debug_replay_matched_recording_trigger_groups",
-        Vj = "$sdk_debug_replay_pending_trigger_conditions",
-        cj = "$sdk_debug_replay_remote_trigger_matching_config",
-        Ma = "$sdk_debug_replay_trigger_groups_count",
-        ra = "$sdk_debug_replay_url_trigger_status",
-        ia = "$sdk_debug_rrweb_attached",
-        Oa = "$sdk_debug_rrweb_start_attempted",
-        Sa = "$session_recording_start_reason",
-        ja = "disabled",
-        aa = "sampled",
-        Pa = "active",
-        na = "buffering",
-        Qa = "paused",
-        za = "rrweb_error",
-        La = "trigger_activated",
-        ma = "trigger_pending",
-        Ha = "trigger_disabled";
+      const fQ = "$replay_override_sampling",
+        iQ = "$replay_override_linked_flag",
+        HQ = "$replay_override_url_trigger",
+        MQ = "$replay_override_event_trigger",
+        vQ = "$session_is_sampled",
+        VQ = "$session_recording_url_trigger_activated_session",
+        sQ = "$session_recording_event_trigger_activated_session",
+        nQ = "$posthog_sr_group_event_trigger_",
+        mQ = "$posthog_sr_group_url_trigger_",
+        lQ = "$sess_rec_flush_size",
+        xQ = "$sdk_debug_replay_event_trigger_status",
+        JQ = "$sdk_debug_replay_linked_flag_trigger_status",
+        jQ = "$sdk_debug_replay_matched_recording_trigger_groups",
+        KQ = "$sdk_debug_replay_pending_trigger_conditions",
+        bQ = "$sdk_debug_replay_remote_trigger_matching_config",
+        TQ = "$sdk_debug_replay_trigger_groups_count",
+        hQ = "$sdk_debug_replay_url_trigger_status",
+        UA = "$sdk_debug_rrweb_attached",
+        XA = "$sdk_debug_rrweb_start_attempted",
+        zA = "$session_recording_start_reason",
+        cA = "disabled",
+        yA = "sampled",
+        QA = "active",
+        AA = "buffering",
+        FA = "paused",
+        oA = "rrweb_error",
+        DA = "trigger_activated",
+        EA = "trigger_pending",
+        YA = "trigger_disabled";
 
-      function ha(MM, rM, iM, OM, SM, jM) {
-        return 0 === rM ? Ha : (null == MM ? void 0 : MM.get_property(iM ? OM + iM : SM)) === jM ? La : ma
+      function NA(UU, XU, zU, cU, yU, QU) {
+        return 0 === XU ? YA : (null == UU ? void 0 : UU.get_property(zU ? cU + zU : yU)) === QU ? DA : EA
       }
 
-      function Ja(MM, rM, iM) {
-        return rM.some((rM => {
-          var OM;
-          return "regex" === rM.matching && (null !== (OM = null == iM ? void 0 : iM.get(rM.url)) && void 0 !== OM ? OM : new RegExp(rM.url)).test(MM)
+      function IA(UU, XU, zU) {
+        return XU.some((XU => {
+          var cU;
+          return "regex" === XU.matching && (null !== (cU = null == zU ? void 0 : zU.get(XU.url)) && void 0 !== cU ? cU : new RegExp(XU.url)).test(UU)
         }))
       }
 
-      function da(MM) {
-        return MM.includes("trigger_activated") ? La : MM.includes("trigger_pending") ? ma : Ha
+      function pA(UU) {
+        return UU.includes("trigger_activated") ? DA : UU.includes("trigger_pending") ? EA : YA
       }
 
-      function ya(MM) {
-        const rM = new Set(MM);
-        switch (rM.delete(Ha), rM.size) {
+      function aA(UU) {
+        const XU = new Set(UU);
+        switch (XU.delete(YA), XU.size) {
           case 0:
-            return Ha;
+            return YA;
           case 1:
-            return Array.from(rM)[0];
+            return Array.from(XU)[0];
           default:
-            return ma
+            return EA
         }
       }
-      var la = class {
-          constructor(MM) {
-            this.q = MM
+      var tA = class {
+          constructor(UU) {
+            this.q = UU
           }
-          triggerStatus(MM) {
-            return da(this.q.map((rM => rM.triggerStatus(MM))))
+          triggerStatus(UU) {
+            return pA(this.q.map((XU => XU.triggerStatus(UU))))
           }
-          triggerStatusNoSideEffects(MM) {
-            return da(this.q.map((rM => rM.triggerStatusNoSideEffects(MM))))
-          }
-          stop() {
-            this.q.forEach((MM => MM.stop()))
-          }
-        },
-        Ea = class {
-          constructor(MM) {
-            this.q = MM
-          }
-          triggerStatus(MM) {
-            return ya(this.q.map((rM => rM.triggerStatus(MM))))
-          }
-          triggerStatusNoSideEffects(MM) {
-            return ya(this.q.map((rM => rM.triggerStatusNoSideEffects(MM))))
+          triggerStatusNoSideEffects(UU) {
+            return pA(this.q.map((XU => XU.triggerStatusNoSideEffects(UU))))
           }
           stop() {
-            this.q.forEach((MM => MM.stop()))
+            this.q.forEach((UU => UU.stop()))
           }
         },
-        Ua = class {
+        gA = class {
+          constructor(UU) {
+            this.q = UU
+          }
+          triggerStatus(UU) {
+            return aA(this.q.map((XU => XU.triggerStatus(UU))))
+          }
+          triggerStatusNoSideEffects(UU) {
+            return aA(this.q.map((XU => XU.triggerStatusNoSideEffects(UU))))
+          }
+          stop() {
+            this.q.forEach((UU => UU.stop()))
+          }
+        },
+        kA = class {
           triggerStatus() {
             return this.triggerStatusNoSideEffects()
           }
           triggerStatusNoSideEffects() {
-            return La
+            return DA
           }
           stop() {}
         };
-      const Ga = MM => "sessionRecording" in MM;
-      var Ca = class {
-          constructor(MM, rM) {
-            this._instance = MM, this.j = [], this.B = [], this.H = new Map, this.U = new Map, this.W = "", this.urlBlocked = !1, this.V = rM
+      const GA = UU => "sessionRecording" in UU;
+      var BA = class {
+          constructor(UU, XU) {
+            this._instance = UU, this.j = [], this.B = [], this.H = new Map, this.U = new Map, this.W = "", this.urlBlocked = !1, this.V = XU
           }
-          onConfig(MM) {
-            var rM, iM;
-            this.j = (Ga(MM) ? mS(MM.sessionRecording) ? null === (rM = MM.sessionRecording) || void 0 === rM ? void 0 : rM.urlTriggers : [] : null == MM ? void 0 : MM.urlTriggers) || [], this.B = (Ga(MM) ? mS(MM.sessionRecording) ? null === (iM = MM.sessionRecording) || void 0 === iM ? void 0 : iM.urlBlocklist : [] : null == MM ? void 0 : MM.urlBlocklist) || [], this.G()
+          onConfig(UU) {
+            var XU, zU;
+            this.j = (GA(UU) ? Ey(UU.sessionRecording) ? null === (XU = UU.sessionRecording) || void 0 === XU ? void 0 : XU.urlTriggers : [] : null == UU ? void 0 : UU.urlTriggers) || [], this.B = (GA(UU) ? Ey(UU.sessionRecording) ? null === (zU = UU.sessionRecording) || void 0 === zU ? void 0 : zU.urlBlocklist : [] : null == UU ? void 0 : UU.urlBlocklist) || [], this.G()
           }
           G() {
             this.H.clear(), this.U.clear();
-            for (const MM of this.j)
-              if ("regex" === MM.matching && !this.H.has(MM.url)) try {
-                this.H.set(MM.url, new RegExp(MM.url))
-              } catch (rM) {
-                sS.error("Invalid URL trigger regex pattern:", MM.url, rM)
+            for (const UU of this.j)
+              if ("regex" === UU.matching && !this.H.has(UU.url)) try {
+                this.H.set(UU.url, new RegExp(UU.url))
+              } catch (XU) {
+                qy.error("Invalid URL trigger regex pattern:", UU.url, XU)
               }
-            for (const MM of this.B)
-              if ("regex" === MM.matching && !this.U.has(MM.url)) try {
-                this.U.set(MM.url, new RegExp(MM.url))
-              } catch (rM) {
-                sS.error("Invalid URL blocklist regex pattern:", MM.url, rM)
+            for (const UU of this.B)
+              if ("regex" === UU.matching && !this.U.has(UU.url)) try {
+                this.U.set(UU.url, new RegExp(UU.url))
+              } catch (XU) {
+                qy.error("Invalid URL blocklist regex pattern:", UU.url, XU)
               }
           }
-          onRemoteConfig(MM) {
-            this.onConfig(MM)
+          onRemoteConfig(UU) {
+            this.onConfig(UU)
           }
-          Z(MM) {
-            return ha(this._instance, this.j.length, this.V, Xj, vj, MM)
+          Z(UU) {
+            return NA(this._instance, this.j.length, this.V, mQ, VQ, UU)
           }
-          triggerStatus(MM) {
-            const rM = this.triggerStatusNoSideEffects(MM);
+          triggerStatus(UU) {
+            const XU = this.triggerStatusNoSideEffects(UU);
             return this._instance.register_for_session({
-              [ra]: rM
-            }), rM
+              [hQ]: XU
+            }), XU
           }
-          triggerStatusNoSideEffects(MM) {
-            return this.Z(MM)
+          triggerStatusNoSideEffects(UU) {
+            return this.Z(UU)
           }
           isCurrentUrlBlocked() {
-            const MM = vS(this._instance);
-            if (!MM) return !1;
+            const UU = Vy(this._instance);
+            if (!UU) return !1;
             try {
-              return Ja(MM, this.B, this.U)
-            } catch (MM) {
+              return IA(UU, this.B, this.U)
+            } catch (UU) {
               return !0
             }
           }
-          checkUrlBlocklist(MM, rM) {
-            const iM = vS(this._instance);
-            if (!iM) return;
-            if (iM === this.W) return;
-            this.W = iM;
-            const OM = this.urlBlocked,
-              SM = Ja(iM, this.B, this.U);
-            OM && SM || (SM && !OM ? MM() : !SM && OM && rM())
+          checkUrlBlocklist(UU, XU) {
+            const zU = Vy(this._instance);
+            if (!zU) return;
+            if (zU === this.W) return;
+            this.W = zU;
+            const cU = this.urlBlocked,
+              yU = IA(zU, this.B, this.U);
+            cU && yU || (yU && !cU ? UU() : !yU && cU && XU())
           }
-          checkUrlTriggerConditions(MM, rM, iM, OM) {
-            const SM = vS(this._instance);
-            if (!SM) return;
-            if (SM === this.W) return;
-            this.W = SM;
-            const jM = this.urlBlocked,
-              aM = Ja(SM, this.B, this.U);
-            aM && !jM ? MM() : !aM && jM && rM();
-            const PM = this.Z(OM) === La,
-              nM = Ja(SM, this.j, this.H);
-            !PM && nM && iM("url", SM)
+          checkUrlTriggerConditions(UU, XU, zU, cU) {
+            const yU = Vy(this._instance);
+            if (!yU) return;
+            if (yU === this.W) return;
+            this.W = yU;
+            const QU = this.urlBlocked,
+              AU = IA(yU, this.B, this.U);
+            AU && !QU ? UU() : !AU && QU && XU();
+            const FU = this.Z(cU) === DA,
+              oU = IA(yU, this.j, this.H);
+            !FU && oU && zU("url", yU)
           }
           stop() {
             this.W = ""
           }
         },
-        ea = class {
-          constructor(MM) {
-            this._instance = MM, this.linkedFlag = null, this.linkedFlagSeen = !1, this.J = () => {}
+        ZA = class {
+          constructor(UU) {
+            this._instance = UU, this.linkedFlag = null, this.linkedFlagSeen = !1, this.J = () => {}
           }
           triggerStatus() {
-            const MM = this.triggerStatusNoSideEffects();
+            const UU = this.triggerStatusNoSideEffects();
             return this._instance.register_for_session({
-              [qj]: MM
-            }), MM
+              [JQ]: UU
+            }), UU
           }
           triggerStatusNoSideEffects() {
-            let MM = ma;
-            return dS(this.linkedFlag) && (MM = Ha), this.linkedFlagSeen && (MM = La), MM
+            let UU = EA;
+            return py(this.linkedFlag) && (UU = YA), this.linkedFlagSeen && (UU = DA), UU
           }
-          onConfig(MM, rM) {
-            var iM;
-            if (this.linkedFlag = (Ga(MM) ? mS(MM.sessionRecording) ? null === (iM = MM.sessionRecording) || void 0 === iM ? void 0 : iM.linkedFlag : null : null == MM ? void 0 : MM.linkedFlag) || null, !dS(this.linkedFlag) && !this.linkedFlagSeen) {
-              const MM = hS(this.linkedFlag) ? this.linkedFlag : this.linkedFlag.flag,
-                iM = hS(this.linkedFlag) ? null : this.linkedFlag.variant;
-              this.J = this._instance.onFeatureFlags(((OM, SM) => {
-                let jM = !1;
-                if (mS(SM) && MM in SM) {
-                  const rM = SM[MM];
-                  jM = lS(rM) ? !0 === rM : iM ? rM === iM : !!rM
+          onConfig(UU, XU) {
+            var zU;
+            if (this.linkedFlag = (GA(UU) ? Ey(UU.sessionRecording) ? null === (zU = UU.sessionRecording) || void 0 === zU ? void 0 : zU.linkedFlag : null : null == UU ? void 0 : UU.linkedFlag) || null, !py(this.linkedFlag) && !this.linkedFlagSeen) {
+              const UU = Ny(this.linkedFlag) ? this.linkedFlag : this.linkedFlag.flag,
+                zU = Ny(this.linkedFlag) ? null : this.linkedFlag.variant;
+              this.J = this._instance.onFeatureFlags(((cU, yU) => {
+                let QU = !1;
+                if (Ey(yU) && UU in yU) {
+                  const XU = yU[UU];
+                  QU = ty(XU) ? !0 === XU : zU ? XU === zU : !!XU
                 }
-                const aM = jM && !this.linkedFlagSeen;
-                this.linkedFlagSeen = jM, aM && rM(MM, iM)
+                const AU = QU && !this.linkedFlagSeen;
+                this.linkedFlagSeen = QU, AU && XU(UU, zU)
               }))
             }
           }
-          onRemoteConfig(MM, rM) {
-            this.onConfig(MM, rM)
+          onRemoteConfig(UU, XU) {
+            this.onConfig(UU, XU)
           }
           stop() {
             this.J()
           }
         },
-        ba = class {
-          constructor(MM, rM) {
-            this._instance = MM, this.K = [], this.V = rM
+        RA = class {
+          constructor(UU, XU) {
+            this._instance = UU, this.K = [], this.V = XU
           }
-          onConfig(MM) {
-            var rM;
-            this.K = (Ga(MM) ? mS(MM.sessionRecording) ? null === (rM = MM.sessionRecording) || void 0 === rM ? void 0 : rM.eventTriggers : [] : null == MM ? void 0 : MM.eventTriggers) || []
+          onConfig(UU) {
+            var XU;
+            this.K = (GA(UU) ? Ey(UU.sessionRecording) ? null === (XU = UU.sessionRecording) || void 0 === XU ? void 0 : XU.eventTriggers : [] : null == UU ? void 0 : UU.eventTriggers) || []
           }
-          onRemoteConfig(MM) {
-            this.onConfig(MM)
+          onRemoteConfig(UU) {
+            this.onConfig(UU)
           }
-          X(MM) {
-            return ha(this._instance, this.K.length, this.V, Bj, Fj, MM)
+          X(UU) {
+            return NA(this._instance, this.K.length, this.V, nQ, sQ, UU)
           }
-          triggerStatus(MM) {
-            const rM = this.triggerStatusNoSideEffects(MM);
+          triggerStatus(UU) {
+            const XU = this.triggerStatusNoSideEffects(UU);
             return this._instance.register_for_session({
-              [Kj]: rM
-            }), rM
+              [xQ]: XU
+            }), XU
           }
-          triggerStatusNoSideEffects(MM) {
-            return this.X(MM)
+          triggerStatusNoSideEffects(UU) {
+            return this.X(UU)
           }
-          checkEventTriggerConditions(MM, rM, iM) {
+          checkEventTriggerConditions(UU, XU, zU) {
             if (0 === this.K.length) return;
-            const OM = this.X(iM) === La,
-              SM = this.K.includes(MM);
-            !OM && SM && rM("event", MM)
+            const cU = this.X(zU) === DA,
+              yU = this.K.includes(UU);
+            !cU && yU && XU("event", UU)
           }
           stop() {}
         },
-        wa = class {
-          constructor(MM, rM, iM) {
-            if (this._instance = MM, this.group = rM, this.Y = new Ca(MM, rM.id), this.tt = new ba(MM, rM.id), this.et = new ea(MM), rM.conditions.events && rM.conditions.events.length > 0 || rM.conditions.urls && rM.conditions.urls.length > 0 || rM.conditions.flag) {
-              const MM = (rM.conditions.events || []).map((MM => MM.name)),
-                OM = {
-                  urlTriggers: rM.conditions.urls || [],
-                  eventTriggers: MM,
-                  linkedFlag: rM.conditions.flag || null,
+        PA = class {
+          constructor(UU, XU, zU) {
+            if (this._instance = UU, this.group = XU, this.Y = new BA(UU, XU.id), this.tt = new RA(UU, XU.id), this.et = new ZA(UU), XU.conditions.events && XU.conditions.events.length > 0 || XU.conditions.urls && XU.conditions.urls.length > 0 || XU.conditions.flag) {
+              const UU = (XU.conditions.events || []).map((UU => UU.name)),
+                cU = {
+                  urlTriggers: XU.conditions.urls || [],
+                  eventTriggers: UU,
+                  linkedFlag: XU.conditions.flag || null,
                   urlBlocklist: []
                 };
-              this.Y.onConfig(OM), this.tt.onConfig(OM), this.et.onConfig(OM, iM);
-              const SM = [this.tt, this.Y, this.et];
-              this.nt = "any" === rM.conditions.matchType ? new la(SM) : new Ea(SM)
-            } else this.nt = new Ua
+              this.Y.onConfig(cU), this.tt.onConfig(cU), this.et.onConfig(cU, zU);
+              const yU = [this.tt, this.Y, this.et];
+              this.nt = "any" === XU.conditions.matchType ? new tA(yU) : new gA(yU)
+            } else this.nt = new kA
           }
-          triggerStatus(MM) {
-            return this.nt.triggerStatus(MM)
+          triggerStatus(UU) {
+            return this.nt.triggerStatus(UU)
           }
-          triggerStatusNoSideEffects(MM) {
-            return this.nt.triggerStatusNoSideEffects(MM)
+          triggerStatusNoSideEffects(UU) {
+            return this.nt.triggerStatusNoSideEffects(UU)
           }
-          getPendingTriggerConditions(MM) {
-            return "trigger_pending" !== this.triggerStatusNoSideEffects(MM) ? [] : [{
+          getPendingTriggerConditions(UU) {
+            return "trigger_pending" !== this.triggerStatusNoSideEffects(UU) ? [] : [{
               label: "URL condition not matched",
-              status: this.Y.triggerStatusNoSideEffects(MM)
+              status: this.Y.triggerStatusNoSideEffects(UU)
             }, {
               label: "event condition not matched",
-              status: this.tt.triggerStatusNoSideEffects(MM)
+              status: this.tt.triggerStatusNoSideEffects(UU)
             }, {
               label: "linked flag condition not matched",
               status: this.et.triggerStatusNoSideEffects()
-            }].filter((MM => {
+            }].filter((UU => {
               let {
-                status: rM
-              } = MM;
-              return rM === ma
-            })).map((MM => {
+                status: XU
+              } = UU;
+              return XU === EA
+            })).map((UU => {
               let {
-                label: rM
-              } = MM;
-              return rM
+                label: XU
+              } = UU;
+              return XU
             }))
           }
-          checkEventTriggerConditions(MM, rM, iM) {
-            this.tt.checkEventTriggerConditions(MM, rM, iM)
+          checkEventTriggerConditions(UU, XU, zU) {
+            this.tt.checkEventTriggerConditions(UU, XU, zU)
           }
-          checkUrlTriggerConditions(MM, rM, iM, OM) {
-            this.Y.checkUrlTriggerConditions(MM, rM, iM, OM)
+          checkUrlTriggerConditions(UU, XU, zU, cU) {
+            this.Y.checkUrlTriggerConditions(UU, XU, zU, cU)
           }
-          activateTrigger(MM, rM) {
-            var iM;
-            const OM = "url" === MM ? Xj + this.group.id : Bj + this.group.id;
-            null === (iM = this._instance.persistence) || void 0 === iM || iM.register({
-              [OM]: rM
+          activateTrigger(UU, XU) {
+            var zU;
+            const cU = "url" === UU ? mQ + this.group.id : nQ + this.group.id;
+            null === (zU = this._instance.persistence) || void 0 === zU || zU.register({
+              [cU]: XU
             })
           }
           stop() {
@@ -6371,368 +6371,368 @@ export const modules = {
           }
         };
 
-      function ta(MM) {
-        if (MM.rrwebError) return za;
-        if (!MM.receivedFlags) return na;
-        if (!MM.isRecordingEnabled) return ja;
-        if (MM.urlTriggerMatching.urlBlocked) return Qa;
-        const rM = !0 === MM.isSampled,
-          iM = new la([MM.eventTriggerMatching, MM.urlTriggerMatching, MM.linkedFlagMatching]).triggerStatus(MM.sessionId);
-        return rM ? aa : "trigger_activated" === iM ? Pa : "trigger_pending" === iM ? na : !1 === MM.isSampled ? ja : Pa
+      function WA(UU) {
+        if (UU.rrwebError) return oA;
+        if (!UU.receivedFlags) return AA;
+        if (!UU.isRecordingEnabled) return cA;
+        if (UU.urlTriggerMatching.urlBlocked) return FA;
+        const XU = !0 === UU.isSampled,
+          zU = new tA([UU.eventTriggerMatching, UU.urlTriggerMatching, UU.linkedFlagMatching]).triggerStatus(UU.sessionId);
+        return XU ? yA : "trigger_activated" === zU ? QA : "trigger_pending" === zU ? AA : !1 === UU.isSampled ? cA : QA
       }
 
-      function ga(MM) {
-        if (MM.rrwebError) return za;
-        if (!MM.receivedFlags) return na;
-        if (!MM.isRecordingEnabled) return ja;
-        if (MM.urlTriggerMatching.urlBlocked) return Qa;
-        const rM = new Ea([MM.eventTriggerMatching, MM.urlTriggerMatching, MM.linkedFlagMatching]).triggerStatus(MM.sessionId),
-          iM = rM !== Ha,
-          OM = lS(MM.isSampled);
-        return iM && "trigger_pending" === rM ? na : iM && "trigger_disabled" === rM || OM && !MM.isSampled ? ja : !0 === MM.isSampled ? aa : Pa
+      function dA(UU) {
+        if (UU.rrwebError) return oA;
+        if (!UU.receivedFlags) return AA;
+        if (!UU.isRecordingEnabled) return cA;
+        if (UU.urlTriggerMatching.urlBlocked) return FA;
+        const XU = new gA([UU.eventTriggerMatching, UU.urlTriggerMatching, UU.linkedFlagMatching]).triggerStatus(UU.sessionId),
+          zU = XU !== YA,
+          cU = ty(UU.isSampled);
+        return zU && "trigger_pending" === XU ? AA : zU && "trigger_disabled" === XU || cU && !UU.isSampled ? cA : !0 === UU.isSampled ? yA : QA
       }
 
-      function ua() {
-        const MM = [];
-        return function(rM, iM) {
-          if (mS(iM) || zS(iM)) {
-            for (; MM.length > 0 && MM[MM.length - 1] !== this;) MM.pop();
-            return MM.includes(iM) ? "[Circular]" : (MM.push(iM), iM)
+      function LA() {
+        const UU = [];
+        return function(XU, zU) {
+          if (Ey(zU) || oy(zU)) {
+            for (; UU.length > 0 && UU[UU.length - 1] !== this;) UU.pop();
+            return UU.includes(zU) ? "[Circular]" : (UU.push(zU), zU)
           }
-          return iM
+          return zU
         }
       }
 
-      function Ra(MM) {
+      function eA(UU) {
         try {
-          const rM = JSON.stringify(MM, ua());
-          return rM ? new Blob([rM]).size : 0
-        } catch (MM) {
+          const XU = JSON.stringify(UU, LA());
+          return XU ? new Blob([XU]).size : 0
+        } catch (UU) {
           return -1
         }
       }
 
-      function pa(MM) {
-        if (JS(MM)) return 4;
-        if (HS(MM)) return 0;
-        switch (typeof MM) {
+      function CA(UU) {
+        if (Iy(UU)) return 4;
+        if (Yy(UU)) return 0;
+        switch (typeof UU) {
           case "string":
-            return MM.length + 2;
+            return UU.length + 2;
           case "number":
-            return String(MM).length;
+            return String(UU).length;
           case "boolean":
-            return MM ? 4 : 5;
+            return UU ? 4 : 5;
           case "object": {
-            if (zS(MM)) {
-              let rM = 2;
-              for (let iM = 0; MM.length > iM; iM++) {
-                iM > 0 && (rM += 1);
-                const OM = MM[iM];
-                rM += HS(OM) || JS(OM) ? 4 : pa(OM)
+            if (oy(UU)) {
+              let XU = 2;
+              for (let zU = 0; UU.length > zU; zU++) {
+                zU > 0 && (XU += 1);
+                const cU = UU[zU];
+                XU += Yy(cU) || Iy(cU) ? 4 : CA(cU)
               }
-              return rM
+              return XU
             }
-            const rM = MM;
-            let iM = 2,
-              OM = !0;
-            for (const MM in rM) {
-              if (!{}.hasOwnProperty.call(rM, MM)) continue;
-              const SM = rM[MM];
-              HS(SM) || (OM || (iM += 1), OM = !1, iM += MM.length + 3 + pa(SM))
+            const XU = UU;
+            let zU = 2,
+              cU = !0;
+            for (const UU in XU) {
+              if (!{}.hasOwnProperty.call(XU, UU)) continue;
+              const yU = XU[UU];
+              Yy(yU) || (cU || (zU += 1), cU = !1, zU += UU.length + 3 + CA(yU))
             }
-            return iM
+            return zU
           }
           default:
             return 0
         }
       }
 
-      function Wa(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6606028.8;
-        if (MM.size >= rM && MM.data.length > 1) {
-          const rM = Math.floor(MM.data.length / 2),
-            iM = MM.sizes.slice(0, rM),
-            OM = MM.sizes.slice(rM);
-          return [Wa({
-            size: iM.reduce(((MM, rM) => MM + rM), 0),
-            data: MM.data.slice(0, rM),
-            sizes: iM,
-            sessionId: MM.sessionId,
-            windowId: MM.windowId
-          }), Wa({
-            size: OM.reduce(((MM, rM) => MM + rM), 0),
-            data: MM.data.slice(rM),
-            sizes: OM,
-            sessionId: MM.sessionId,
-            windowId: MM.windowId
-          })].flatMap((MM => MM))
+      function wA(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6606028.8;
+        if (UU.size >= XU && UU.data.length > 1) {
+          const XU = Math.floor(UU.data.length / 2),
+            zU = UU.sizes.slice(0, XU),
+            cU = UU.sizes.slice(XU);
+          return [wA({
+            size: zU.reduce(((UU, XU) => UU + XU), 0),
+            data: UU.data.slice(0, XU),
+            sizes: zU,
+            sessionId: UU.sessionId,
+            windowId: UU.windowId
+          }), wA({
+            size: cU.reduce(((UU, XU) => UU + XU), 0),
+            data: UU.data.slice(XU),
+            sizes: cU,
+            sessionId: UU.sessionId,
+            windowId: UU.windowId
+          })].flatMap((UU => UU))
         }
-        return [MM]
+        return [UU]
       }
-      var sa = Uint8Array,
-        Da = Uint16Array,
-        ka = Uint32Array,
-        Za = new sa([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]),
-        oa = new sa([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]),
-        fa = new sa([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]),
-        Ya = function(MM, rM) {
-          for (var iM = new Da(31), OM = 0; 31 > OM; ++OM) iM[OM] = rM += 1 << MM[OM - 1];
-          var SM = new ka(iM[30]);
-          for (OM = 1; 30 > OM; ++OM)
-            for (var jM = iM[OM]; iM[OM + 1] > jM; ++jM) SM[jM] = jM - iM[OM] << 5 | OM;
-          return [iM, SM]
+      var qA = Uint8Array,
+        OA = Uint16Array,
+        SA = Uint32Array,
+        rA = new qA([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]),
+        uA = new qA([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]),
+        fA = new qA([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]),
+        iA = function(UU, XU) {
+          for (var zU = new OA(31), cU = 0; 31 > cU; ++cU) zU[cU] = XU += 1 << UU[cU - 1];
+          var yU = new SA(zU[30]);
+          for (cU = 1; 30 > cU; ++cU)
+            for (var QU = zU[cU]; zU[cU + 1] > QU; ++QU) yU[QU] = QU - zU[cU] << 5 | cU;
+          return [zU, yU]
         },
-        Na = Ya(Za, 2),
-        Aa = Na[1];
-      Na[0][28] = 258, Aa[258] = 28;
-      for (var xa = Ya(oa, 0)[1], va = new Da(32768), Fa = 0; 32768 > Fa; ++Fa) {
-        var Ba = (43690 & Fa) >>> 1 | (21845 & Fa) << 1;
-        va[Fa] = ((65280 & (Ba = (61680 & (Ba = (52428 & Ba) >>> 2 | (13107 & Ba) << 2)) >>> 4 | (3855 & Ba) << 4)) >>> 8 | (255 & Ba) << 8) >>> 1
+        HA = iA(rA, 2),
+        MA = HA[1];
+      HA[0][28] = 258, MA[258] = 28;
+      for (var vA = iA(uA, 0)[1], VA = new OA(32768), sA = 0; 32768 > sA; ++sA) {
+        var nA = (43690 & sA) >>> 1 | (21845 & sA) << 1;
+        VA[sA] = ((65280 & (nA = (61680 & (nA = (52428 & nA) >>> 2 | (13107 & nA) << 2)) >>> 4 | (3855 & nA) << 4)) >>> 8 | (255 & nA) << 8) >>> 1
       }
-      var Xa = function(MM, rM, iM) {
-          for (var OM = MM.length, SM = 0, jM = new Da(rM); OM > SM; ++SM) ++jM[MM[SM] - 1];
-          var aM, PM = new Da(rM);
-          for (SM = 0; rM > SM; ++SM) PM[SM] = PM[SM - 1] + jM[SM - 1] << 1;
-          if (iM) {
-            aM = new Da(1 << rM);
-            var nM = 15 - rM;
-            for (SM = 0; OM > SM; ++SM)
-              if (MM[SM])
-                for (var QM = SM << 4 | MM[SM], zM = rM - MM[SM], LM = PM[MM[SM] - 1]++ << zM, mM = LM | (1 << zM) - 1; mM >= LM; ++LM) aM[va[LM] >>> nM] = QM
+      var mA = function(UU, XU, zU) {
+          for (var cU = UU.length, yU = 0, QU = new OA(XU); cU > yU; ++yU) ++QU[UU[yU] - 1];
+          var AU, FU = new OA(XU);
+          for (yU = 0; XU > yU; ++yU) FU[yU] = FU[yU - 1] + QU[yU - 1] << 1;
+          if (zU) {
+            AU = new OA(1 << XU);
+            var oU = 15 - XU;
+            for (yU = 0; cU > yU; ++yU)
+              if (UU[yU])
+                for (var DU = yU << 4 | UU[yU], EU = XU - UU[yU], YU = FU[UU[yU] - 1]++ << EU, NU = YU | (1 << EU) - 1; NU >= YU; ++YU) AU[VA[YU] >>> oU] = DU
           } else
-            for (aM = new Da(OM), SM = 0; OM > SM; ++SM) aM[SM] = va[PM[MM[SM] - 1]++] >>> 15 - MM[SM];
-          return aM
+            for (AU = new OA(cU), yU = 0; cU > yU; ++yU) AU[yU] = VA[FU[UU[yU] - 1]++] >>> 15 - UU[yU];
+          return AU
         },
-        Ia = new sa(288);
-      for (Fa = 0; 144 > Fa; ++Fa) Ia[Fa] = 8;
-      for (Fa = 144; 256 > Fa; ++Fa) Ia[Fa] = 9;
-      for (Fa = 256; 280 > Fa; ++Fa) Ia[Fa] = 7;
-      for (Fa = 280; 288 > Fa; ++Fa) Ia[Fa] = 8;
-      var Ka = new sa(32);
-      for (Fa = 0; 32 > Fa; ++Fa) Ka[Fa] = 5;
-      var qa = Xa(Ia, 9, 0),
-        Ta = Xa(Ka, 5, 0),
-        Va = function(MM) {
-          return (MM / 8 | 0) + (7 & MM && 1)
+        lA = new qA(288);
+      for (sA = 0; 144 > sA; ++sA) lA[sA] = 8;
+      for (sA = 144; 256 > sA; ++sA) lA[sA] = 9;
+      for (sA = 256; 280 > sA; ++sA) lA[sA] = 7;
+      for (sA = 280; 288 > sA; ++sA) lA[sA] = 8;
+      var xA = new qA(32);
+      for (sA = 0; 32 > sA; ++sA) xA[sA] = 5;
+      var JA = mA(lA, 9, 0),
+        jA = mA(xA, 5, 0),
+        KA = function(UU) {
+          return (UU / 8 | 0) + (7 & UU && 1)
         },
-        ca = function(MM, rM, iM) {
-          (null == rM || 0 > rM) && (rM = 0), (null == iM || iM > MM.length) && (iM = MM.length);
-          var OM = new(MM instanceof Da ? Da : MM instanceof ka ? ka : sa)(iM - rM);
-          return OM.set(MM.subarray(rM, iM)), OM
+        bA = function(UU, XU, zU) {
+          (null == XU || 0 > XU) && (XU = 0), (null == zU || zU > UU.length) && (zU = UU.length);
+          var cU = new(UU instanceof OA ? OA : UU instanceof SA ? SA : qA)(zU - XU);
+          return cU.set(UU.subarray(XU, zU)), cU
         },
-        MP = function(MM, rM, iM) {
-          var OM = rM / 8 | 0;
-          MM[OM] |= iM <<= 7 & rM, MM[OM + 1] |= iM >>> 8
+        TA = function(UU, XU, zU) {
+          var cU = XU / 8 | 0;
+          UU[cU] |= zU <<= 7 & XU, UU[cU + 1] |= zU >>> 8
         },
-        rP = function(MM, rM, iM) {
-          var OM = rM / 8 | 0;
-          MM[OM] |= iM <<= 7 & rM, MM[OM + 1] |= iM >>> 8, MM[OM + 2] |= iM >>> 16
+        hA = function(UU, XU, zU) {
+          var cU = XU / 8 | 0;
+          UU[cU] |= zU <<= 7 & XU, UU[cU + 1] |= zU >>> 8, UU[cU + 2] |= zU >>> 16
         },
-        iP = function(MM, rM) {
-          for (var iM = [], OM = 0; MM.length > OM; ++OM) MM[OM] && iM.push({
-            s: OM,
-            f: MM[OM]
+        UF = function(UU, XU) {
+          for (var zU = [], cU = 0; UU.length > cU; ++cU) UU[cU] && zU.push({
+            s: cU,
+            f: UU[cU]
           });
-          var SM = iM.length,
-            jM = iM.slice();
-          if (!SM) return [new sa(0), 0];
-          if (1 == SM) {
-            var aM = new sa(iM[0].s + 1);
-            return aM[iM[0].s] = 1, [aM, 1]
+          var yU = zU.length,
+            QU = zU.slice();
+          if (!yU) return [new qA(0), 0];
+          if (1 == yU) {
+            var AU = new qA(zU[0].s + 1);
+            return AU[zU[0].s] = 1, [AU, 1]
           }
-          iM.sort((function(MM, rM) {
-            return MM.f - rM.f
-          })), iM.push({
+          zU.sort((function(UU, XU) {
+            return UU.f - XU.f
+          })), zU.push({
             s: -1,
             f: 25001
           });
-          var PM = iM[0],
-            nM = iM[1],
-            QM = 0,
-            zM = 1,
-            LM = 2;
-          for (iM[0] = {
+          var FU = zU[0],
+            oU = zU[1],
+            DU = 0,
+            EU = 1,
+            YU = 2;
+          for (zU[0] = {
               s: -1,
-              f: PM.f + nM.f,
-              l: PM,
-              r: nM
-            }; zM != SM - 1;) PM = iM[iM[LM].f > iM[QM].f ? QM++ : LM++], nM = iM[QM != zM && iM[LM].f > iM[QM].f ? QM++ : LM++], iM[zM++] = {
+              f: FU.f + oU.f,
+              l: FU,
+              r: oU
+            }; EU != yU - 1;) FU = zU[zU[YU].f > zU[DU].f ? DU++ : YU++], oU = zU[DU != EU && zU[YU].f > zU[DU].f ? DU++ : YU++], zU[EU++] = {
             s: -1,
-            f: PM.f + nM.f,
-            l: PM,
-            r: nM
+            f: FU.f + oU.f,
+            l: FU,
+            r: oU
           };
-          var mM = jM[0].s;
-          for (OM = 1; SM > OM; ++OM) jM[OM].s > mM && (mM = jM[OM].s);
-          var HM = new Da(mM + 1),
-            hM = OP(iM[zM - 1], HM, 0);
-          if (hM > rM) {
-            OM = 0;
-            var JM = 0,
-              dM = hM - rM,
-              yM = 1 << dM;
-            for (jM.sort((function(MM, rM) {
-                return HM[rM.s] - HM[MM.s] || MM.f - rM.f
-              })); SM > OM; ++OM) {
-              var lM = jM[OM].s;
-              if (rM >= HM[lM]) break;
-              JM += yM - (1 << hM - HM[lM]), HM[lM] = rM
+          var NU = QU[0].s;
+          for (cU = 1; yU > cU; ++cU) QU[cU].s > NU && (NU = QU[cU].s);
+          var IU = new OA(NU + 1),
+            pU = XF(zU[EU - 1], IU, 0);
+          if (pU > XU) {
+            cU = 0;
+            var aU = 0,
+              tU = pU - XU,
+              gU = 1 << tU;
+            for (QU.sort((function(UU, XU) {
+                return IU[XU.s] - IU[UU.s] || UU.f - XU.f
+              })); yU > cU; ++cU) {
+              var kU = QU[cU].s;
+              if (XU >= IU[kU]) break;
+              aU += gU - (1 << pU - IU[kU]), IU[kU] = XU
             }
-            for (JM >>>= dM; JM > 0;) {
-              var EM = jM[OM].s;
-              rM > HM[EM] ? JM -= 1 << rM - HM[EM]++ - 1 : ++OM
+            for (aU >>>= tU; aU > 0;) {
+              var GU = QU[cU].s;
+              XU > IU[GU] ? aU -= 1 << XU - IU[GU]++ - 1 : ++cU
             }
-            for (; OM >= 0 && JM; --OM) {
-              var UM = jM[OM].s;
-              HM[UM] == rM && (--HM[UM], ++JM)
+            for (; cU >= 0 && aU; --cU) {
+              var BU = QU[cU].s;
+              IU[BU] == XU && (--IU[BU], ++aU)
             }
-            hM = rM
+            pU = XU
           }
-          return [new sa(HM), hM]
+          return [new qA(IU), pU]
         },
-        OP = function(MM, rM, iM) {
-          return -1 == MM.s ? Math.max(OP(MM.l, rM, iM + 1), OP(MM.r, rM, iM + 1)) : rM[MM.s] = iM
+        XF = function(UU, XU, zU) {
+          return -1 == UU.s ? Math.max(XF(UU.l, XU, zU + 1), XF(UU.r, XU, zU + 1)) : XU[UU.s] = zU
         },
-        SP = function(MM) {
-          for (var rM = MM.length; rM && !MM[--rM];);
-          for (var iM = new Da(++rM), OM = 0, SM = MM[0], jM = 1, aM = function(MM) {
-              iM[OM++] = MM
-            }, PM = 1; rM >= PM; ++PM)
-            if (MM[PM] == SM && PM != rM) ++jM;
+        zF = function(UU) {
+          for (var XU = UU.length; XU && !UU[--XU];);
+          for (var zU = new OA(++XU), cU = 0, yU = UU[0], QU = 1, AU = function(UU) {
+              zU[cU++] = UU
+            }, FU = 1; XU >= FU; ++FU)
+            if (UU[FU] == yU && FU != XU) ++QU;
             else {
-              if (!SM && jM > 2) {
-                for (; jM > 138; jM -= 138) aM(32754);
-                jM > 2 && (aM(jM > 10 ? jM - 11 << 5 | 28690 : jM - 3 << 5 | 12305), jM = 0)
-              } else if (jM > 3) {
-                for (aM(SM), --jM; jM > 6; jM -= 6) aM(8304);
-                jM > 2 && (aM(jM - 3 << 5 | 8208), jM = 0)
+              if (!yU && QU > 2) {
+                for (; QU > 138; QU -= 138) AU(32754);
+                QU > 2 && (AU(QU > 10 ? QU - 11 << 5 | 28690 : QU - 3 << 5 | 12305), QU = 0)
+              } else if (QU > 3) {
+                for (AU(yU), --QU; QU > 6; QU -= 6) AU(8304);
+                QU > 2 && (AU(QU - 3 << 5 | 8208), QU = 0)
               }
-              for (; jM--;) aM(SM);
-              jM = 1, SM = MM[PM]
-            } return [iM.subarray(0, OM), rM]
+              for (; QU--;) AU(yU);
+              QU = 1, yU = UU[FU]
+            } return [zU.subarray(0, cU), XU]
         },
-        jP = function(MM, rM) {
-          for (var iM = 0, OM = 0; rM.length > OM; ++OM) iM += MM[OM] * rM[OM];
-          return iM
+        cF = function(UU, XU) {
+          for (var zU = 0, cU = 0; XU.length > cU; ++cU) zU += UU[cU] * XU[cU];
+          return zU
         },
-        aP = function(MM, rM, iM) {
-          var OM = iM.length,
-            SM = Va(rM + 2);
-          MM[SM] = 255 & OM, MM[SM + 1] = OM >>> 8, MM[SM + 2] = 255 ^ MM[SM], MM[SM + 3] = 255 ^ MM[SM + 1];
-          for (var jM = 0; OM > jM; ++jM) MM[SM + jM + 4] = iM[jM];
-          return 8 * (SM + 4 + OM)
+        yF = function(UU, XU, zU) {
+          var cU = zU.length,
+            yU = KA(XU + 2);
+          UU[yU] = 255 & cU, UU[yU + 1] = cU >>> 8, UU[yU + 2] = 255 ^ UU[yU], UU[yU + 3] = 255 ^ UU[yU + 1];
+          for (var QU = 0; cU > QU; ++QU) UU[yU + QU + 4] = zU[QU];
+          return 8 * (yU + 4 + cU)
         },
-        PP = function(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM) {
-          MP(rM, zM++, iM), ++SM[256];
-          for (var LM = iP(SM, 15), mM = LM[0], HM = LM[1], hM = iP(jM, 15), JM = hM[0], dM = hM[1], yM = SP(mM), lM = yM[0], EM = yM[1], UM = SP(JM), GM = UM[0], CM = UM[1], eM = new Da(19), bM = 0; lM.length > bM; ++bM) eM[31 & lM[bM]]++;
-          for (bM = 0; GM.length > bM; ++bM) eM[31 & GM[bM]]++;
-          for (var wM = iP(eM, 7), tM = wM[0], gM = wM[1], uM = 19; uM > 4 && !tM[fa[uM - 1]]; --uM);
-          var RM, pM, WM, sM, DM = QM + 5 << 3,
-            kM = jP(SM, Ia) + jP(jM, Ka) + aM,
-            ZM = jP(SM, mM) + jP(jM, JM) + aM + 14 + 3 * uM + jP(eM, tM) + (2 * eM[16] + 3 * eM[17] + 7 * eM[18]);
-          if (kM >= DM && ZM >= DM) return aP(rM, zM, MM.subarray(nM, nM + QM));
-          if (MP(rM, zM, 1 + (kM > ZM)), zM += 2, kM > ZM) {
-            RM = Xa(mM, HM, 0), pM = mM, WM = Xa(JM, dM, 0), sM = JM;
-            var oM = Xa(tM, gM, 0);
-            for (MP(rM, zM, EM - 257), MP(rM, zM + 5, CM - 1), MP(rM, zM + 10, uM - 4), zM += 14, bM = 0; uM > bM; ++bM) MP(rM, zM + 3 * bM, tM[fa[bM]]);
-            zM += 3 * uM;
-            for (var fM = [lM, GM], YM = 0; 2 > YM; ++YM) {
-              var NM = fM[YM];
-              for (bM = 0; NM.length > bM; ++bM) MP(rM, zM, oM[AM = 31 & NM[bM]]), zM += tM[AM], AM > 15 && (MP(rM, zM, NM[bM] >>> 5 & 127), zM += NM[bM] >>> 12)
+        QF = function(UU, XU, zU, cU, yU, QU, AU, FU, oU, DU, EU) {
+          TA(XU, EU++, zU), ++yU[256];
+          for (var YU = UF(yU, 15), NU = YU[0], IU = YU[1], pU = UF(QU, 15), aU = pU[0], tU = pU[1], gU = zF(NU), kU = gU[0], GU = gU[1], BU = zF(aU), ZU = BU[0], RU = BU[1], PU = new OA(19), WU = 0; kU.length > WU; ++WU) PU[31 & kU[WU]]++;
+          for (WU = 0; ZU.length > WU; ++WU) PU[31 & ZU[WU]]++;
+          for (var dU = UF(PU, 7), LU = dU[0], eU = dU[1], CU = 19; CU > 4 && !LU[fA[CU - 1]]; --CU);
+          var wU, qU, OU, SU, rU = DU + 5 << 3,
+            uU = cF(yU, lA) + cF(QU, xA) + AU,
+            fU = cF(yU, NU) + cF(QU, aU) + AU + 14 + 3 * CU + cF(PU, LU) + (2 * PU[16] + 3 * PU[17] + 7 * PU[18]);
+          if (uU >= rU && fU >= rU) return yF(XU, EU, UU.subarray(oU, oU + DU));
+          if (TA(XU, EU, 1 + (uU > fU)), EU += 2, uU > fU) {
+            wU = mA(NU, IU, 0), qU = NU, OU = mA(aU, tU, 0), SU = aU;
+            var iU = mA(LU, eU, 0);
+            for (TA(XU, EU, GU - 257), TA(XU, EU + 5, RU - 1), TA(XU, EU + 10, CU - 4), EU += 14, WU = 0; CU > WU; ++WU) TA(XU, EU + 3 * WU, LU[fA[WU]]);
+            EU += 3 * CU;
+            for (var HU = [kU, ZU], MU = 0; 2 > MU; ++MU) {
+              var vU = HU[MU];
+              for (WU = 0; vU.length > WU; ++WU) TA(XU, EU, iU[VU = 31 & vU[WU]]), EU += LU[VU], VU > 15 && (TA(XU, EU, vU[WU] >>> 5 & 127), EU += vU[WU] >>> 12)
             }
-          } else RM = qa, pM = Ia, WM = Ta, sM = Ka;
-          for (bM = 0; PM > bM; ++bM)
-            if (OM[bM] > 255) {
-              var AM;
-              rP(rM, zM, RM[257 + (AM = OM[bM] >>> 18 & 31)]), zM += pM[AM + 257], AM > 7 && (MP(rM, zM, OM[bM] >>> 23 & 31), zM += Za[AM]);
-              var xM = 31 & OM[bM];
-              rP(rM, zM, WM[xM]), zM += sM[xM], xM > 3 && (rP(rM, zM, OM[bM] >>> 5 & 8191), zM += oa[xM])
-            } else rP(rM, zM, RM[OM[bM]]), zM += pM[OM[bM]];
-          return rP(rM, zM, RM[256]), zM + pM[256]
+          } else wU = JA, qU = lA, OU = jA, SU = xA;
+          for (WU = 0; FU > WU; ++WU)
+            if (cU[WU] > 255) {
+              var VU;
+              hA(XU, EU, wU[257 + (VU = cU[WU] >>> 18 & 31)]), EU += qU[VU + 257], VU > 7 && (TA(XU, EU, cU[WU] >>> 23 & 31), EU += rA[VU]);
+              var sU = 31 & cU[WU];
+              hA(XU, EU, OU[sU]), EU += SU[sU], sU > 3 && (hA(XU, EU, cU[WU] >>> 5 & 8191), EU += uA[sU])
+            } else hA(XU, EU, wU[cU[WU]]), EU += qU[cU[WU]];
+          return hA(XU, EU, wU[256]), EU + qU[256]
         },
-        nP = new ka([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]),
-        QP = (new sa(0), function() {
-          for (var MM = new ka(256), rM = 0; 256 > rM; ++rM) {
-            for (var iM = rM, OM = 9; --OM;) iM = (1 & iM && 3988292384) ^ iM >>> 1;
-            MM[rM] = iM
+        AF = new SA([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]),
+        FF = (new qA(0), function() {
+          for (var UU = new SA(256), XU = 0; 256 > XU; ++XU) {
+            for (var zU = XU, cU = 9; --cU;) zU = (1 & zU && 3988292384) ^ zU >>> 1;
+            UU[XU] = zU
           }
-          return MM
+          return UU
         }()),
-        zP = function(MM, rM, iM) {
-          for (; iM; ++rM) MM[rM] = iM, iM >>>= 8
+        oF = function(UU, XU, zU) {
+          for (; zU; ++XU) UU[XU] = zU, zU >>>= 8
         };
 
-      function LP(MM, rM) {
-        var iM = "";
-        if (!rM && "undefined" != typeof TextDecoder) return (new TextDecoder).decode(MM);
-        for (var OM = 0; MM.length > OM;) {
-          var SM = MM[OM++];
-          128 > SM || rM ? iM += String.fromCharCode(SM) : 224 > SM ? iM += String.fromCharCode((31 & SM) << 6 | 63 & MM[OM++]) : 240 > SM ? iM += String.fromCharCode((15 & SM) << 12 | (63 & MM[OM++]) << 6 | 63 & MM[OM++]) : (SM = ((15 & SM) << 18 | (63 & MM[OM++]) << 12 | (63 & MM[OM++]) << 6 | 63 & MM[OM++]) - 65536, iM += String.fromCharCode(55296 | SM >> 10, 56320 | 1023 & SM))
+      function DF(UU, XU) {
+        var zU = "";
+        if (!XU && "undefined" != typeof TextDecoder) return (new TextDecoder).decode(UU);
+        for (var cU = 0; UU.length > cU;) {
+          var yU = UU[cU++];
+          128 > yU || XU ? zU += String.fromCharCode(yU) : 224 > yU ? zU += String.fromCharCode((31 & yU) << 6 | 63 & UU[cU++]) : 240 > yU ? zU += String.fromCharCode((15 & yU) << 12 | (63 & UU[cU++]) << 6 | 63 & UU[cU++]) : (yU = ((15 & yU) << 18 | (63 & UU[cU++]) << 12 | (63 & UU[cU++]) << 6 | 63 & UU[cU++]) - 65536, zU += String.fromCharCode(55296 | yU >> 10, 56320 | 1023 & yU))
         }
-        return iM
+        return zU
       }
-      var mP = class {
-        constructor(MM) {
-          let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          var iM, OM, SM, jM;
-          this._rrweb = MM, this.it = rM, this.rt = {}, this.ot = Date.now(), this.st = -1 / 0, this.ut = () => {
-            const MM = Date.now(),
-              rM = MM - this.ot;
-            rM > 0 ? (this.ct = Math.min(this.dt, this.ct + rM / 1e3 * this.ht), this.ot = MM) : this.ot = MM
-          }, this.ft = MM => {
-            if (!this.rt[MM]) {
-              var rM, iM;
-              this.rt[MM] = !0;
-              const OM = this.vt(MM);
-              null === (rM = (iM = this.it).onBlockedNode) || void 0 === rM || rM.call(iM, MM, OM)
+      var EF = class {
+        constructor(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          var zU, cU, yU, QU;
+          this._rrweb = UU, this.it = XU, this.rt = {}, this.ot = Date.now(), this.st = -1 / 0, this.ut = () => {
+            const UU = Date.now(),
+              XU = UU - this.ot;
+            XU > 0 ? (this.ct = Math.min(this.dt, this.ct + XU / 1e3 * this.ht), this.ot = UU) : this.ot = UU
+          }, this.ft = UU => {
+            if (!this.rt[UU]) {
+              var XU, zU;
+              this.rt[UU] = !0;
+              const cU = this.vt(UU);
+              null === (XU = (zU = this.it).onBlockedNode) || void 0 === XU || XU.call(zU, UU, cU)
             }
-          }, this.yt = MM => {
-            const rM = this.vt(MM);
-            if ("svg" !== (null == rM ? void 0 : rM.nodeName) && rM instanceof Element) {
-              const MM = rM.closest("svg");
-              if (MM) return [this._rrweb.mirror.getId(MM), MM]
+          }, this.yt = UU => {
+            const XU = this.vt(UU);
+            if ("svg" !== (null == XU ? void 0 : XU.nodeName) && XU instanceof Element) {
+              const UU = XU.closest("svg");
+              if (UU) return [this._rrweb.mirror.getId(UU), UU]
             }
-            return [MM, rM]
-          }, this.vt = MM => this._rrweb.mirror.lD(MM), this.bt = MM => {
-            var rM, iM, OM, SM, jM, aM, PM, nM;
-            return (null !== (rM = null === (iM = MM.removes) || void 0 === iM ? void 0 : iM.length) && void 0 !== rM ? rM : 0) + (null !== (OM = null === (SM = MM.attributes) || void 0 === SM ? void 0 : SM.length) && void 0 !== OM ? OM : 0) + (null !== (jM = null === (aM = MM.texts) || void 0 === aM ? void 0 : aM.length) && void 0 !== jM ? jM : 0) + (null !== (PM = null === (nM = MM.adds) || void 0 === nM ? void 0 : nM.length) && void 0 !== PM ? PM : 0)
-          }, this.throttleMutations = MM => {
-            if (3 !== MM.type || 0 !== MM.data.source) return MM;
-            const rM = MM.data,
-              iM = this.bt(rM);
-            if (rM.attributes) {
-              const MM = rM.attributes.length;
-              rM.attributes = rM.attributes.filter((MM => {
-                const [rM] = this.yt(MM.id);
-                return !this.wt.consumeRateLimit(rM) && MM
+            return [UU, XU]
+          }, this.vt = UU => this._rrweb.mirror.icU(UU), this.bt = UU => {
+            var XU, zU, cU, yU, QU, AU, FU, oU;
+            return (null !== (XU = null === (zU = UU.removes) || void 0 === zU ? void 0 : zU.length) && void 0 !== XU ? XU : 0) + (null !== (cU = null === (yU = UU.attributes) || void 0 === yU ? void 0 : yU.length) && void 0 !== cU ? cU : 0) + (null !== (QU = null === (AU = UU.texts) || void 0 === AU ? void 0 : AU.length) && void 0 !== QU ? QU : 0) + (null !== (FU = null === (oU = UU.adds) || void 0 === oU ? void 0 : oU.length) && void 0 !== FU ? FU : 0)
+          }, this.throttleMutations = UU => {
+            if (3 !== UU.type || 0 !== UU.data.source) return UU;
+            const XU = UU.data,
+              zU = this.bt(XU);
+            if (XU.attributes) {
+              const UU = XU.attributes.length;
+              XU.attributes = XU.attributes.filter((UU => {
+                const [XU] = this.yt(UU.id);
+                return !this.wt.consumeRateLimit(XU) && UU
               }));
-              const iM = MM - rM.attributes.length;
-              var OM, SM;
-              iM > 0 && (null === (OM = (SM = this.it).onDroppedAttributeMutations) || void 0 === OM || OM.call(SM, iM))
+              const zU = UU - XU.attributes.length;
+              var cU, yU;
+              zU > 0 && (null === (cU = (yU = this.it).onDroppedAttributeMutations) || void 0 === cU || cU.call(yU, zU))
             }
-            const jM = this.bt(rM);
-            if (0 === jM && iM !== jM) return;
-            if (this.kt) return MM;
+            const QU = this.bt(XU);
+            if (0 === QU && zU !== QU) return;
+            if (this.kt) return UU;
             this.ut();
-            const aM = pa(MM);
-            var PM, nM;
-            return aM > this.ct ? (null === (PM = (nM = this.it).onDroppedOversizedMutation) || void 0 === PM || PM.call(nM, aM), void this._t()) : (this.ct -= aM, MM)
+            const AU = CA(UU);
+            var FU, oU;
+            return AU > this.ct ? (null === (FU = (oU = this.it).onDroppedOversizedMutation) || void 0 === FU || FU.call(oU, AU), void this._t()) : (this.ct -= AU, UU)
           }, this._t = () => {
             if (this.St) return;
-            const MM = Math.max(0, this.xt - (Date.now() - this.st));
+            const UU = Math.max(0, this.xt - (Date.now() - this.st));
             this.St = setTimeout((() => {
-              var MM, rM;
-              this.St = void 0, this.st = Date.now(), null === (MM = (rM = this.it).requestFullSnapshot) || void 0 === MM || MM.call(rM)
-            }), MM)
-          }, this.wt = new GS({
-            bucketSize: null !== (iM = this.it.bucketSize) && void 0 !== iM ? iM : 100,
-            refillRate: null !== (OM = this.it.refillRate) && void 0 !== OM ? OM : 10,
+              var UU, XU;
+              this.St = void 0, this.st = Date.now(), null === (UU = (XU = this.it).requestFullSnapshot) || void 0 === UU || UU.call(XU)
+            }), UU)
+          }, this.wt = new Gy({
+            bucketSize: null !== (zU = this.it.bucketSize) && void 0 !== zU ? zU : 100,
+            refillRate: null !== (cU = this.it.refillRate) && void 0 !== cU ? cU : 10,
             refillInterval: 1e3,
             I: this.ft,
-            A: sS
-          }), this.dt = null !== (SM = this.it.bytesBucketSize) && void 0 !== SM ? SM : 0, this.ht = null !== (jM = this.it.bytesRefillRate) && void 0 !== jM ? jM : 25600, this.kt = !Number.isFinite(this.dt) || 0 >= this.dt, this.ct = this.dt;
-          const aM = this.it.resyncIntervalMs;
-          this.xt = yS(aM) && Number.isFinite(aM) && aM > 0 ? aM : 3e5
+            A: qy
+          }), this.dt = null !== (yU = this.it.bytesBucketSize) && void 0 !== yU ? yU : 0, this.ht = null !== (QU = this.it.bytesRefillRate) && void 0 !== QU ? QU : 25600, this.kt = !Number.isFinite(this.dt) || 0 >= this.dt, this.ct = this.dt;
+          const AU = this.it.resyncIntervalMs;
+          this.xt = ay(AU) && Number.isFinite(AU) && AU > 0 ? AU : 3e5
         }
         reset() {
           this.rt = {}, this.St && (clearTimeout(this.St), this.St = void 0), this.st = Date.now()
@@ -6741,422 +6741,422 @@ export const modules = {
           this.wt.stop(), this.reset(), this.ct = this.dt, this.ot = Date.now(), this.st = -1 / 0
         }
       };
-      Math.trunc || (Math.trunc = function(MM) {
-        return 0 > MM ? Math.ceil(MM) : Math.floor(MM)
-      }), Number.isInteger || (Number.isInteger = function(MM) {
-        return yS(MM) && isFinite(MM) && Math.floor(MM) === MM
-      }), rS && !HS(rS.crypto) && crypto;
-      let HP = null;
-      const hP = {
+      Math.trunc || (Math.trunc = function(UU) {
+        return 0 > UU ? Math.ceil(UU) : Math.floor(UU)
+      }), Number.isInteger || (Number.isInteger = function(UU) {
+        return ay(UU) && isFinite(UU) && Math.floor(UU) === UU
+      }), hc && !Yy(hc.crypto) && crypto;
+      let YF = null;
+      const NF = {
         At() {
-          if (!JS(HP)) return HP;
-          if (HP = !0, HS(rS)) HP = !1;
+          if (!Iy(YF)) return YF;
+          if (YF = !0, Yy(hc)) YF = !1;
           else try {
-            const MM = "__support__";
-            hP.$t(MM, "xyz"), '"xyz"' !== hP.Ot(MM) && (HP = !1), hP.Pt(MM)
-          } catch (MM) {
-            HP = !1
+            const UU = "__support__";
+            NF.$t(UU, "xyz"), '"xyz"' !== NF.Ot(UU) && (YF = !1), NF.Pt(UU)
+          } catch (UU) {
+            YF = !1
           }
-          return HP
+          return YF
         },
-        Lt(MM) {
-          sS.error("sessionStorage error: ", MM)
+        Lt(UU) {
+          qy.error("sessionStorage error: ", UU)
         },
-        Ot(MM) {
+        Ot(UU) {
           try {
-            return null == rS ? void 0 : rS.sessionStorage.getItem(MM)
-          } catch (MM) {
-            hP.Lt(MM)
+            return null == hc ? void 0 : hc.sessionStorage.getItem(UU)
+          } catch (UU) {
+            NF.Lt(UU)
           }
           return null
         },
-        Dt(MM) {
+        Dt(UU) {
           try {
-            return JSON.parse(hP.Ot(MM)) || null
-          } catch (MM) {}
+            return JSON.parse(NF.Ot(UU)) || null
+          } catch (UU) {}
           return null
         },
-        $t(MM, rM) {
+        $t(UU, XU) {
           try {
-            return null == rS || rS.sessionStorage.setItem(MM, JSON.stringify(rM)), !0
-          } catch (MM) {
-            hP.Lt(MM)
+            return null == hc || hc.sessionStorage.setItem(UU, JSON.stringify(XU)), !0
+          } catch (UU) {
+            NF.Lt(UU)
           }
           return !1
         },
-        Pt(MM) {
+        Pt(UU) {
           try {
-            null == rS || rS.sessionStorage.removeItem(MM)
-          } catch (MM) {
-            hP.Lt(MM)
+            null == hc || hc.sessionStorage.removeItem(UU)
+          } catch (UU) {
+            NF.Lt(UU)
           }
         }
       };
-      pS.DEBUG = !1, pS.LIB_VERSION = "1.438.7", pS.LIB_NAME = "web";
-      var JP = pS,
-        dP = class {
-          constructor(MM) {
-            if (!MM.persistence) throw new Error("it is not valid to not have persistence and be this far into setting up the application");
-            this.Ft = MM.get_property.bind(MM), this.Nt = MM.persistence.set_property.bind(MM.persistence)
+      Cy.DEBUG = !1, Cy.LIB_VERSION = "1.438.7", Cy.LIB_NAME = "web";
+      var IF = Cy,
+        pF = class {
+          constructor(UU) {
+            if (!UU.persistence) throw new Error("it is not valid to not have persistence and be this far into setting up the application");
+            this.Ft = UU.get_property.bind(UU), this.Nt = UU.persistence.set_property.bind(UU.persistence)
           }
-          trackSize(MM, rM) {
-            this.Nt(Ij, {
-              sessionId: MM,
-              size: this.currentTrackedSize(MM) + rM
+          trackSize(UU, XU) {
+            this.Nt(lQ, {
+              sessionId: UU,
+              size: this.currentTrackedSize(UU) + XU
             })
           }
-          currentTrackedSize(MM) {
-            const rM = this.Ft(Ij);
-            return mS(iM = rM) && hS(iM.sessionId) && yS(iM.size) && rM.sessionId === MM ? rM.size : 0;
-            var iM
+          currentTrackedSize(UU) {
+            const XU = this.Ft(lQ);
+            return Ey(zU = XU) && Ny(zU.sessionId) && ay(zU.size) && XU.sessionId === UU ? XU.size : 0;
+            var zU
           }
         };
 
-      function yP(MM, rM) {
-        return function(MM) {
-          let rM = 0;
-          for (let iM = 0; MM.length > iM; iM++) rM = (rM << 5) - rM + MM.charCodeAt(iM), rM |= 0;
-          return Math.abs(rM)
-        }(MM) % 100 < US(100 * rM, 0, 100, sS)
+      function aF(UU, XU) {
+        return function(UU) {
+          let XU = 0;
+          for (let zU = 0; UU.length > zU; zU++) XU = (XU << 5) - XU + UU.charCodeAt(zU), XU |= 0;
+          return Math.abs(XU)
+        }(UU) % 100 < ky(100 * XU, 0, 100, qy)
       }
-      const lP = (MM, rM) => {
-          if (!(MM => {
+      const tF = (UU, XU) => {
+          if (!(UU => {
               try {
-                new RegExp(MM)
-              } catch (MM) {
+                new RegExp(UU)
+              } catch (UU) {
                 return !1
               }
               return !0
-            })(rM)) return !1;
+            })(XU)) return !1;
           try {
-            return new RegExp(rM).test(MM)
-          } catch (MM) {
+            return new RegExp(XU).test(UU)
+          } catch (UU) {
             return !1
           }
         },
-        EP = MM => MM.toLowerCase(),
-        UP = {
-          exact: (MM, rM) => rM.some((rM => MM.some((MM => rM === MM)))),
-          is_not: (MM, rM) => rM.every((rM => MM.every((MM => rM !== MM)))),
-          regex: (MM, rM) => rM.some((rM => MM.some((MM => lP(rM, MM))))),
-          not_regex: (MM, rM) => rM.every((rM => MM.every((MM => !lP(rM, MM))))),
-          icontains: (MM, rM) => rM.map(EP).some((rM => MM.map(EP).some((MM => rM.includes(MM))))),
-          not_icontains: (MM, rM) => rM.map(EP).every((rM => MM.map(EP).every((MM => !rM.includes(MM))))),
-          gt: (MM, rM) => rM.some((rM => {
-            const iM = parseFloat(rM);
-            return !isNaN(iM) && MM.some((MM => iM > parseFloat(MM)))
+        gF = UU => UU.toLowerCase(),
+        kF = {
+          exact: (UU, XU) => XU.some((XU => UU.some((UU => XU === UU)))),
+          is_not: (UU, XU) => XU.every((XU => UU.every((UU => XU !== UU)))),
+          regex: (UU, XU) => XU.some((XU => UU.some((UU => tF(XU, UU))))),
+          not_regex: (UU, XU) => XU.every((XU => UU.every((UU => !tF(XU, UU))))),
+          icontains: (UU, XU) => XU.map(gF).some((XU => UU.map(gF).some((UU => XU.includes(UU))))),
+          not_icontains: (UU, XU) => XU.map(gF).every((XU => UU.map(gF).every((UU => !XU.includes(UU))))),
+          gt: (UU, XU) => XU.some((XU => {
+            const zU = parseFloat(XU);
+            return !isNaN(zU) && UU.some((UU => zU > parseFloat(UU)))
           })),
-          lt: (MM, rM) => rM.some((rM => {
-            const iM = parseFloat(rM);
-            return !isNaN(iM) && MM.some((MM => iM < parseFloat(MM)))
+          lt: (UU, XU) => XU.some((XU => {
+            const zU = parseFloat(XU);
+            return !isNaN(zU) && UU.some((UU => zU < parseFloat(UU)))
           }))
         },
-        GP = new Set(["is_not", "not_icontains", "not_regex"]);
+        GF = new Set(["is_not", "not_icontains", "not_regex"]);
 
-      function CP(MM, rM, iM) {
-        return !MM || 0 === MM.length || MM.every((MM => {
-          const OM = "person" === MM.type ? iM : rM,
-            SM = null == OM ? void 0 : OM[MM.key],
-            jM = MM.operator || "exact";
-          if (HS(SM) || JS(SM)) return GP.has(jM);
-          const aM = UP[jM];
-          return !!aM && !HS(MM.value) && !JS(MM.value) && aM(zS(MM.value) ? MM.value.map(String) : [String(MM.value)], zS(SM) ? SM.map(String) : [String(SM)])
+      function BF(UU, XU, zU) {
+        return !UU || 0 === UU.length || UU.every((UU => {
+          const cU = "person" === UU.type ? zU : XU,
+            yU = null == cU ? void 0 : cU[UU.key],
+            QU = UU.operator || "exact";
+          if (Yy(yU) || Iy(yU)) return GF.has(QU);
+          const AU = kF[QU];
+          return !!AU && !Yy(UU.value) && !Iy(UU.value) && AU(oy(UU.value) ? UU.value.map(String) : [String(UU.value)], oy(yU) ? yU.map(String) : [String(yU)])
         }))
       }
-      const eP = DS("[SessionRecording]");
+      const ZF = Oy("[SessionRecording]");
 
-      function bP(MM, rM) {
-        return rM ? MM : "!" + MM
+      function RF(UU, XU) {
+        return XU ? UU : "!" + UU
       }
 
-      function wP(MM, rM) {
-        return MM === rM || MM !== "!" + rM && null
+      function PF(UU, XU) {
+        return UU === XU || UU !== "!" + XU && null
       }
-      var tP = class {
-          constructor(MM, rM, iM, OM, SM, jM, aM) {
-            this._instance = MM, this.Y = rM, this.tt = iM, this.et = OM, this.qt = SM, this.jt = jM, this.Bt = aM, this.zt = null, this.Ht = ga
+      var WF = class {
+          constructor(UU, XU, zU, cU, yU, QU, AU) {
+            this._instance = UU, this.Y = XU, this.tt = zU, this.et = cU, this.qt = yU, this.jt = QU, this.Bt = AU, this.zt = null, this.Ht = dA
           }
-          onRemoteConfig(MM) {
-            this.zt = yS(MM.sampleRate) ? MM.sampleRate : null, "any" === MM.triggerMatchType ? (this.Ut = new la([this.tt, this.Y]), this.Ht = ta) : (this.Ut = new Ea([this.tt, this.Y]), this.Ht = ga), this._instance.register_for_session({
-              [cj]: MM.triggerMatchType
-            }), this.Y.onConfig(MM), this.tt.onConfig(MM), this.et.onConfig(MM, ((MM, rM) => {
+          onRemoteConfig(UU) {
+            this.zt = ay(UU.sampleRate) ? UU.sampleRate : null, "any" === UU.triggerMatchType ? (this.Ut = new tA([this.tt, this.Y]), this.Ht = WA) : (this.Ut = new gA([this.tt, this.Y]), this.Ht = dA), this._instance.register_for_session({
+              [bQ]: UU.triggerMatchType
+            }), this.Y.onConfig(UU), this.tt.onConfig(UU), this.et.onConfig(UU, ((UU, XU) => {
               this.qt("linked_flag_matched", {
-                flag: MM,
-                variant: rM
+                flag: UU,
+                variant: XU
               }), this.Bt()
             }))
           }
-          getStatus(MM) {
+          getStatus(UU) {
             return this.Ht({
               receivedFlags: !0,
               isRecordingEnabled: !0,
-              isSampled: MM.isSampled,
-              rrwebError: MM.rrwebError,
-              urlTriggerMatching: MM.urlTriggerMatching,
-              eventTriggerMatching: MM.eventTriggerMatching,
-              linkedFlagMatching: MM.linkedFlagMatching,
-              sessionId: MM.sessionId
+              isSampled: UU.isSampled,
+              rrwebError: UU.rrwebError,
+              urlTriggerMatching: UU.urlTriggerMatching,
+              eventTriggerMatching: UU.eventTriggerMatching,
+              linkedFlagMatching: UU.linkedFlagMatching,
+              sessionId: UU.sessionId
             })
           }
-          getMinimumDuration(MM) {
-            const rM = this._instance.get_property("$session_recording_remote_config"),
-              iM = null == rM ? void 0 : rM.minimumDurationMilliseconds;
-            return yS(iM) ? iM : null
+          getMinimumDuration(UU) {
+            const XU = this._instance.get_property("$session_recording_remote_config"),
+              zU = null == XU ? void 0 : XU.minimumDurationMilliseconds;
+            return ay(zU) ? zU : null
           }
-          checkUrlTriggers(MM, rM, iM, OM) {
-            this.Y.checkUrlTriggerConditions(rM, iM, OM, MM)
+          checkUrlTriggers(UU, XU, zU, cU) {
+            this.Y.checkUrlTriggerConditions(XU, zU, cU, UU)
           }
-          setupEventTriggerListeners(MM, rM, iM) {
-            if (0 !== this.tt.K.length && dS(this.Wt)) return this.Wt = MM((MM => {
+          setupEventTriggerListeners(UU, XU, zU) {
+            if (0 !== this.tt.K.length && py(this.Wt)) return this.Wt = UU((UU => {
               try {
-                this.tt.checkEventTriggerConditions(MM.event, iM, rM)
-              } catch (MM) {
-                eP.error("Could not activate event trigger", MM)
+                this.tt.checkEventTriggerConditions(UU.event, zU, XU)
+              } catch (UU) {
+                ZF.error("Could not activate event trigger", UU)
               }
             })), this.Wt
           }
-          makeSamplingDecisions(MM) {
-            var rM;
-            const iM = this.zt;
-            var OM, SM;
-            if (!yS(iM)) return null === (OM = this._instance.persistence) || void 0 === OM || OM.unregister("$session_is_sampled"), void(null === (SM = this._instance.persistence) || void 0 === SM || SM.unregister("$replay_sample_rate"));
-            const jM = this._instance.get_property(xj),
-              aM = this._instance.get_property("$replay_sample_rate"),
-              PM = wP(jM, MM),
-              nM = yS(aM) && aM !== iM,
-              QM = HS(aM) && jM === MM,
-              zM = nM || QM || !lS(PM),
-              LM = zM ? yP(MM, iM) : PM;
-            zM && (LM ? this.qt("sampled") : eP.warn(`Sample rate (${iM}) has determined that this sessionId (${MM}) will not be sent to the server.`)), null === (rM = this._instance.persistence) || void 0 === rM || rM.register({
-              $session_is_sampled: bP(MM, LM),
-              $replay_sample_rate: JS(aM) && jM === MM ? null : iM
+          makeSamplingDecisions(UU) {
+            var XU;
+            const zU = this.zt;
+            var cU, yU;
+            if (!ay(zU)) return null === (cU = this._instance.persistence) || void 0 === cU || cU.unregister("$session_is_sampled"), void(null === (yU = this._instance.persistence) || void 0 === yU || yU.unregister("$replay_sample_rate"));
+            const QU = this._instance.get_property(vQ),
+              AU = this._instance.get_property("$replay_sample_rate"),
+              FU = PF(QU, UU),
+              oU = ay(AU) && AU !== zU,
+              DU = Yy(AU) && QU === UU,
+              EU = oU || DU || !ty(FU),
+              YU = EU ? aF(UU, zU) : FU;
+            EU && (YU ? this.qt("sampled") : ZF.warn(`Sample rate (${zU}) has determined that this sessionId (${UU}) will not be sent to the server.`)), null === (XU = this._instance.persistence) || void 0 === XU || XU.register({
+              $session_is_sampled: RF(UU, YU),
+              $replay_sample_rate: Iy(AU) && QU === UU ? null : zU
             })
           }
-          ensureSamplingDecision(MM) {
-            if (!yS(this.zt)) return;
-            const rM = this._instance.get_property(xj);
-            lS(wP(rM, MM)) || this.makeSamplingDecisions(MM)
+          ensureSamplingDecision(UU) {
+            if (!ay(this.zt)) return;
+            const XU = this._instance.get_property(vQ);
+            ty(PF(XU, UU)) || this.makeSamplingDecisions(UU)
           }
           onFlushComplete() {}
           clearConditionalRecordingPersistence() {
-            var MM, rM, iM, OM, SM;
-            null === (MM = this._instance.persistence) || void 0 === MM || MM.unregister("$session_recording_event_trigger_activated_session"), null === (rM = this._instance.persistence) || void 0 === rM || rM.unregister("$session_recording_url_trigger_activated_session"), null === (iM = this._instance.persistence) || void 0 === iM || iM.unregister("$session_is_sampled"), null === (OM = this._instance.persistence) || void 0 === OM || OM.unregister("$replay_sample_rate"), null === (SM = this._instance.persistence) || void 0 === SM || SM.unregister("$session_past_minimum_duration")
+            var UU, XU, zU, cU, yU;
+            null === (UU = this._instance.persistence) || void 0 === UU || UU.unregister("$session_recording_event_trigger_activated_session"), null === (XU = this._instance.persistence) || void 0 === XU || XU.unregister("$session_recording_url_trigger_activated_session"), null === (zU = this._instance.persistence) || void 0 === zU || zU.unregister("$session_is_sampled"), null === (cU = this._instance.persistence) || void 0 === cU || cU.unregister("$replay_sample_rate"), null === (yU = this._instance.persistence) || void 0 === yU || yU.unregister("$session_past_minimum_duration")
           }
-          updateActiveTriggers(MM) {}
-          hasPendingTriggers(MM) {
-            var rM;
-            return (null === (rM = this.Ut) || void 0 === rM ? void 0 : rM.triggerStatus(MM)) === ma
+          updateActiveTriggers(UU) {}
+          hasPendingTriggers(UU) {
+            var XU;
+            return (null === (XU = this.Ut) || void 0 === XU ? void 0 : XU.triggerStatus(UU)) === EA
           }
-          getPendingTriggerConditions(MM) {
+          getPendingTriggerConditions(UU) {
             return [{
               label: "URL condition not matched",
-              status: this.Y.triggerStatusNoSideEffects(MM)
+              status: this.Y.triggerStatusNoSideEffects(UU)
             }, {
               label: "event condition not matched",
-              status: this.tt.triggerStatusNoSideEffects(MM)
+              status: this.tt.triggerStatusNoSideEffects(UU)
             }, {
               label: "linked flag condition not matched",
               status: this.et.triggerStatusNoSideEffects()
-            }].filter((MM => {
+            }].filter((UU => {
               let {
-                status: rM
-              } = MM;
-              return rM === ma
-            })).map((MM => {
+                status: XU
+              } = UU;
+              return XU === EA
+            })).map((UU => {
               let {
-                label: rM
-              } = MM;
-              return rM
+                label: XU
+              } = UU;
+              return XU
             }))
           }
           stop() {
-            var MM;
-            null === (MM = this.Wt) || void 0 === MM || MM.call(this), this.Wt = void 0, this.tt.stop(), this.Y.stop(), this.et.stop()
+            var UU;
+            null === (UU = this.Wt) || void 0 === UU || UU.call(this), this.Wt = void 0, this.tt.stop(), this.Y.stop(), this.et.stop()
           }
         },
-        gP = class {
-          constructor(MM, rM, iM, OM, SM) {
-            this._instance = MM, this.Y = rM, this.qt = iM, this.Vt = OM, this.Bt = SM, this.Gt = [], this.Qt = new Map, this.Zt = !1
+        dF = class {
+          constructor(UU, XU, zU, cU, yU) {
+            this._instance = UU, this.Y = XU, this.qt = zU, this.Vt = cU, this.Bt = yU, this.Gt = [], this.Qt = new Map, this.Zt = !1
           }
-          onRemoteConfig(MM) {
-            MM.triggerGroups && 0 !== MM.triggerGroups.length ? (this.Jt(MM.triggerGroups), this._instance.register_for_session({
-              [cj]: "v2_trigger_groups",
-              [Ma]: MM.triggerGroups.length
-            }), this.Y.onConfig(MM)) : eP.warn("[V2Strategy] No trigger groups configured")
+          onRemoteConfig(UU) {
+            UU.triggerGroups && 0 !== UU.triggerGroups.length ? (this.Jt(UU.triggerGroups), this._instance.register_for_session({
+              [bQ]: "v2_trigger_groups",
+              [TQ]: UU.triggerGroups.length
+            }), this.Y.onConfig(UU)) : ZF.warn("[V2Strategy] No trigger groups configured")
           }
-          getStatus(MM) {
-            return function(MM) {
-              if (MM.rrwebError) return za;
-              if (!MM.receivedFlags) return na;
-              if (!MM.isRecordingEnabled) return ja;
-              if (MM.urlTriggerMatching.urlBlocked) return Qa;
-              const rM = MM.triggerGroupMatchers,
-                iM = MM.triggerGroupSamplingResults;
-              if (0 === rM.length) return ja;
-              let OM = !1,
-                SM = !1;
-              for (const jM of rM) {
-                const rM = jM.triggerStatus(MM.sessionId);
-                if ("trigger_activated" === rM) {
-                  const MM = jM.group.id,
-                    rM = iM.get(MM);
-                  HS(rM) ? sS.warn("[V2 Triggers] Group activated but no sampling decision found", {
-                    groupId: MM
-                  }) : !0 === rM && (SM = !0)
-                } else "trigger_pending" === rM && (OM = !0)
+          getStatus(UU) {
+            return function(UU) {
+              if (UU.rrwebError) return oA;
+              if (!UU.receivedFlags) return AA;
+              if (!UU.isRecordingEnabled) return cA;
+              if (UU.urlTriggerMatching.urlBlocked) return FA;
+              const XU = UU.triggerGroupMatchers,
+                zU = UU.triggerGroupSamplingResults;
+              if (0 === XU.length) return cA;
+              let cU = !1,
+                yU = !1;
+              for (const QU of XU) {
+                const XU = QU.triggerStatus(UU.sessionId);
+                if ("trigger_activated" === XU) {
+                  const UU = QU.group.id,
+                    XU = zU.get(UU);
+                  Yy(XU) ? qy.warn("[V2 Triggers] Group activated but no sampling decision found", {
+                    groupId: UU
+                  }) : !0 === XU && (yU = !0)
+                } else "trigger_pending" === XU && (cU = !0)
               }
-              return SM ? aa : OM ? na : ja
+              return yU ? yA : cU ? AA : cA
             }({
               receivedFlags: !0,
               isRecordingEnabled: !0,
-              isSampled: MM.isSampled,
-              rrwebError: MM.rrwebError,
-              urlTriggerMatching: MM.urlTriggerMatching,
-              eventTriggerMatching: MM.eventTriggerMatching,
-              linkedFlagMatching: MM.linkedFlagMatching,
-              sessionId: MM.sessionId,
+              isSampled: UU.isSampled,
+              rrwebError: UU.rrwebError,
+              urlTriggerMatching: UU.urlTriggerMatching,
+              eventTriggerMatching: UU.eventTriggerMatching,
+              linkedFlagMatching: UU.linkedFlagMatching,
+              sessionId: UU.sessionId,
               triggerGroupMatchers: this.Gt,
               triggerGroupSamplingResults: this.Qt,
-              minimumDuration: this.getMinimumDuration(MM.sessionId)
+              minimumDuration: this.getMinimumDuration(UU.sessionId)
             })
           }
-          getMinimumDuration(MM) {
-            let rM = null;
-            for (const iM of this.Gt)
-              if ("trigger_activated" === iM.triggerStatus(MM)) {
-                const MM = iM.group.minDurationMs;
-                yS(MM) && (JS(rM) || rM > MM) && (rM = MM)
-              } return rM
+          getMinimumDuration(UU) {
+            let XU = null;
+            for (const zU of this.Gt)
+              if ("trigger_activated" === zU.triggerStatus(UU)) {
+                const UU = zU.group.minDurationMs;
+                ay(UU) && (Iy(XU) || XU > UU) && (XU = UU)
+              } return XU
           }
-          checkUrlTriggers(MM, rM, iM, OM) {
-            this.Y.checkUrlBlocklist(rM, iM);
-            for (const SM of this.Gt) SM.checkUrlTriggerConditions(rM, iM, (rM => {
-              this.Kt(SM, void 0) && (SM.activateTrigger(rM, MM), this.updateActiveTriggers(MM), this.Bt(rM))
-            }), MM)
+          checkUrlTriggers(UU, XU, zU, cU) {
+            this.Y.checkUrlBlocklist(XU, zU);
+            for (const yU of this.Gt) yU.checkUrlTriggerConditions(XU, zU, (XU => {
+              this.Kt(yU, void 0) && (yU.activateTrigger(XU, UU), this.updateActiveTriggers(UU), this.Bt(XU))
+            }), UU)
           }
-          setupEventTriggerListeners(MM, rM, iM) {
-            return this.Wt = MM((MM => {
-              var iM;
-              if (this.Zt) return eP.info("[SessionRecorder] Stopping trigger checks - initial buffer flushed"), null === (iM = this.Wt) || void 0 === iM || iM.call(this), void(this.Wt = void 0);
+          setupEventTriggerListeners(UU, XU, zU) {
+            return this.Wt = UU((UU => {
+              var zU;
+              if (this.Zt) return ZF.info("[SessionRecorder] Stopping trigger checks - initial buffer flushed"), null === (zU = this.Wt) || void 0 === zU || zU.call(this), void(this.Wt = void 0);
               try {
-                for (const iM of this.Gt) iM.checkEventTriggerConditions(MM.event, (OM => {
-                  if (!this.Kt(iM, MM.properties)) return;
-                  const SM = (iM.group.conditions.events || []).filter((rM => rM.name === MM.event)),
-                    jM = this._instance.get_property(FS);
-                  SM.some((rM => !rM.properties || 0 === rM.properties.length || CP(rM.properties, MM.properties, jM))) && (iM.activateTrigger(OM, rM), this.updateActiveTriggers(rM), this.Bt(OM))
-                }), rM)
-              } catch (MM) {
-                eP.error("Could not activate event trigger for trigger groups", MM)
+                for (const zU of this.Gt) zU.checkEventTriggerConditions(UU.event, (cU => {
+                  if (!this.Kt(zU, UU.properties)) return;
+                  const yU = (zU.group.conditions.events || []).filter((XU => XU.name === UU.event)),
+                    QU = this._instance.get_property(sy);
+                  yU.some((XU => !XU.properties || 0 === XU.properties.length || BF(XU.properties, UU.properties, QU))) && (zU.activateTrigger(cU, XU), this.updateActiveTriggers(XU), this.Bt(cU))
+                }), XU)
+              } catch (UU) {
+                ZF.error("Could not activate event trigger for trigger groups", UU)
               }
             })), this.Wt
           }
-          makeSamplingDecisions(MM) {
-            for (const iM of this.Gt) {
-              var rM;
-              const OM = iM.group,
-                SM = OM.id,
-                jM = OM.sampleRate,
-                aM = "$posthog_sr_group_sampling_" + SM,
-                PM = this._instance.get_property(aM);
-              let nM = null,
-                QM = !1,
-                zM = !1,
-                LM = !1;
-              if (mS(PM)) {
-                const rM = PM.sessionId,
-                  iM = PM.sampleRate,
-                  OM = PM.sampled;
-                QM = "string" == typeof rM && rM !== MM, zM = yS(iM) && iM !== jM, nM = rM === MM && yS(iM) && iM === jM && lS(OM) ? OM : null
-              } else nM = PM === MM || null, QM = "string" == typeof PM && PM !== MM, LM = PM === MM;
-              const mM = QM || zM || LM || !lS(nM),
-                HM = mM ? yP(MM + SM, jM) : nM;
-              mM && this.Vt("triggerGroupSamplingDecisionMade", {
-                group_id: SM,
-                group_name: OM.name,
-                sampleRate: jM,
-                isSampled: HM
-              }), this.Qt.set(SM, HM), null === (rM = this._instance.persistence) || void 0 === rM || rM.register({
-                [aM]: {
-                  sessionId: MM,
-                  sampleRate: jM,
-                  sampled: HM
+          makeSamplingDecisions(UU) {
+            for (const zU of this.Gt) {
+              var XU;
+              const cU = zU.group,
+                yU = cU.id,
+                QU = cU.sampleRate,
+                AU = "$posthog_sr_group_sampling_" + yU,
+                FU = this._instance.get_property(AU);
+              let oU = null,
+                DU = !1,
+                EU = !1,
+                YU = !1;
+              if (Ey(FU)) {
+                const XU = FU.sessionId,
+                  zU = FU.sampleRate,
+                  cU = FU.sampled;
+                DU = "string" == typeof XU && XU !== UU, EU = ay(zU) && zU !== QU, oU = XU === UU && ay(zU) && zU === QU && ty(cU) ? cU : null
+              } else oU = FU === UU || null, DU = "string" == typeof FU && FU !== UU, YU = FU === UU;
+              const NU = DU || EU || YU || !ty(oU),
+                IU = NU ? aF(UU + yU, QU) : oU;
+              NU && this.Vt("triggerGroupSamplingDecisionMade", {
+                group_id: yU,
+                group_name: cU.name,
+                sampleRate: QU,
+                isSampled: IU
+              }), this.Qt.set(yU, IU), null === (XU = this._instance.persistence) || void 0 === XU || XU.register({
+                [AU]: {
+                  sessionId: UU,
+                  sampleRate: QU,
+                  sampled: IU
                 }
               })
             }
-            this.updateActiveTriggers(MM)
+            this.updateActiveTriggers(UU)
           }
-          ensureSamplingDecision(MM) {}
+          ensureSamplingDecision(UU) {}
           onFlushComplete() {
             this.Zt = !0
           }
           clearConditionalRecordingPersistence() {
-            var MM, rM, iM;
-            null === (MM = this._instance.persistence) || void 0 === MM || MM.unregister("$session_is_sampled"), null === (rM = this._instance.persistence) || void 0 === rM || rM.unregister("$replay_sample_rate"), null === (iM = this._instance.persistence) || void 0 === iM || iM.unregister("$session_past_minimum_duration");
-            for (const aM of this.Gt) {
-              var OM, SM, jM;
-              const MM = aM.group.id;
-              null === (OM = this._instance.persistence) || void 0 === OM || OM.unregister("$posthog_sr_group_event_trigger_" + MM), null === (SM = this._instance.persistence) || void 0 === SM || SM.unregister("$posthog_sr_group_url_trigger_" + MM), null === (jM = this._instance.persistence) || void 0 === jM || jM.unregister("$posthog_sr_group_sampling_" + MM)
+            var UU, XU, zU;
+            null === (UU = this._instance.persistence) || void 0 === UU || UU.unregister("$session_is_sampled"), null === (XU = this._instance.persistence) || void 0 === XU || XU.unregister("$replay_sample_rate"), null === (zU = this._instance.persistence) || void 0 === zU || zU.unregister("$session_past_minimum_duration");
+            for (const AU of this.Gt) {
+              var cU, yU, QU;
+              const UU = AU.group.id;
+              null === (cU = this._instance.persistence) || void 0 === cU || cU.unregister("$posthog_sr_group_event_trigger_" + UU), null === (yU = this._instance.persistence) || void 0 === yU || yU.unregister("$posthog_sr_group_url_trigger_" + UU), null === (QU = this._instance.persistence) || void 0 === QU || QU.unregister("$posthog_sr_group_sampling_" + UU)
             }
           }
-          updateActiveTriggers(MM) {
-            const rM = [];
-            for (const iM of this.Gt) {
-              const OM = iM.group,
-                SM = OM.id,
-                jM = "trigger_activated" === iM.triggerStatus(MM),
-                aM = !0 === this.Qt.get(SM);
-              jM && rM.push({
-                id: SM,
-                name: OM.name,
+          updateActiveTriggers(UU) {
+            const XU = [];
+            for (const zU of this.Gt) {
+              const cU = zU.group,
+                yU = cU.id,
+                QU = "trigger_activated" === zU.triggerStatus(UU),
+                AU = !0 === this.Qt.get(yU);
+              QU && XU.push({
+                id: yU,
+                name: cU.name,
                 matched: !0,
-                sampled: aM
+                sampled: AU
               })
             }
             this._instance.register_for_session({
-              [Tj]: rM
+              [jQ]: XU
             })
           }
-          hasPendingTriggers(MM) {
-            for (const rM of this.Gt)
-              if ("trigger_pending" === rM.triggerStatus(MM)) return !0;
+          hasPendingTriggers(UU) {
+            for (const XU of this.Gt)
+              if ("trigger_pending" === XU.triggerStatus(UU)) return !0;
             return !1
           }
-          getPendingTriggerConditions(MM) {
-            return this.Gt.flatMap((rM => "trigger_pending" !== rM.triggerStatusNoSideEffects(MM) ? [] : rM.getPendingTriggerConditions(MM).map((MM => `trigger group "${rM.group.name}": ${MM}`))))
+          getPendingTriggerConditions(UU) {
+            return this.Gt.flatMap((XU => "trigger_pending" !== XU.triggerStatusNoSideEffects(UU) ? [] : XU.getPendingTriggerConditions(UU).map((UU => `trigger group "${XU.group.name}": ${UU}`))))
           }
           stop() {
-            var MM;
-            null === (MM = this.Wt) || void 0 === MM || MM.call(this), this.Wt = void 0, this.Gt.forEach((MM => MM.stop())), this.Gt = [], this.Qt.clear(), this.Y.stop()
+            var UU;
+            null === (UU = this.Wt) || void 0 === UU || UU.call(this), this.Wt = void 0, this.Gt.forEach((UU => UU.stop())), this.Gt = [], this.Qt.clear(), this.Y.stop()
           }
-          Kt(MM, rM) {
-            const iM = MM.group.conditions.properties;
-            return !iM || 0 === iM.length || CP(iM, rM, this._instance.get_property(FS))
+          Kt(UU, XU) {
+            const zU = UU.group.conditions.properties;
+            return !zU || 0 === zU.length || BF(zU, XU, this._instance.get_property(sy))
           }
-          Jt(MM) {
-            this.Gt.forEach((MM => MM.stop())), this.Gt = [], this.Qt.clear();
-            for (const rM of MM) {
-              const MM = new wa(this._instance, rM, ((MM, iM) => {
+          Jt(UU) {
+            this.Gt.forEach((UU => UU.stop())), this.Gt = [], this.Qt.clear();
+            for (const XU of UU) {
+              const UU = new PA(this._instance, XU, ((UU, zU) => {
                 this.qt("linked_flag_matched", {
-                  flag: MM,
-                  variant: iM,
-                  group_id: rM.id,
-                  group_name: rM.name
+                  flag: UU,
+                  variant: zU,
+                  group_id: XU.id,
+                  group_name: XU.name
                 }), this.Bt()
               }));
-              this.Gt.push(MM)
+              this.Gt.push(UU)
             }
           }
         };
-      const uP = ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "irclid", "_kx"],
-        RP = 1e5,
-        pP = /^[A-Za-z0-9]*[A-Za-z][A-Za-z0-9]*$/,
-        WP = [],
-        sP = () => !1,
-        DP = "@type @id actionStatus availability bestRating contentRating encodingFormat eventAttendanceMode eventStatus highPrice inLanguage isAccessibleForFree isFamilyFriendly itemCondition itemListOrder lowPrice maximumAttendeeCapacity nonprofitStatus numberOfItems offerCount position price priceCurrency priceValidUntil publicAccess ratingCount ratingValue reviewCount smokingAllowed worstRating".split(" "),
-        kP = "Action BorrowAction ReadAction SearchAction SeekToAction SolveMathAction WatchAction".split(" "),
-        ZP = "AutoDealer Bakery BarOrPub CafeOrCoffeeShop CollegeOrUniversity Corporation DaySpa Dentist EducationalOrganization Electrician FoodEstablishment GovernmentOrganization HealthClub Hotel LegalService Library LibrarySystem LocalBusiness Locksmith LodgingBusiness MedicalBusiness NGO OnlineStore Organization PerformingGroup Pharmacy Physician Plumber RealEstateAgent Restaurant School SportsOrganization Store".split(" "),
-        oP = "Accommodation AdministrativeArea Country Place State".split(" "),
-        fP = {
+      const LF = ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "irclid", "_kx"],
+        eF = 1e5,
+        CF = /^[A-Za-z0-9]*[A-Za-z][A-Za-z0-9]*$/,
+        wF = [],
+        qF = () => !1,
+        OF = "@type @id actionStatus availability bestRating contentRating encodingFormat eventAttendanceMode eventStatus highPrice inLanguage isAccessibleForFree isFamilyFriendly itemCondition itemListOrder lowPrice maximumAttendeeCapacity nonprofitStatus numberOfItems offerCount position price priceCurrency priceValidUntil publicAccess ratingCount ratingValue reviewCount smokingAllowed worstRating".split(" "),
+        SF = "Action BorrowAction ReadAction SearchAction SeekToAction SolveMathAction WatchAction".split(" "),
+        rF = "AutoDealer Bakery BarOrPub CafeOrCoffeeShop CollegeOrUniversity Corporation DaySpa Dentist EducationalOrganization Electrician FoodEstablishment GovernmentOrganization HealthClub Hotel LegalService Library LibrarySystem LocalBusiness Locksmith LodgingBusiness MedicalBusiness NGO OnlineStore Organization PerformingGroup Pharmacy Physician Plumber RealEstateAgent Restaurant School SportsOrganization Store".split(" "),
+        uF = "Accommodation AdministrativeArea Country Place State".split(" "),
+        fF = {
           AggregateOffer: {
             offers: ["Offer"]
           },
@@ -7177,8 +7177,8 @@ export const modules = {
             educationalUse: !0,
             interactivityType: !0,
             aggregateRating: ["AggregateRating"],
-            potentialAction: kP,
-            publisher: ZP
+            potentialAction: SF,
+            publisher: rF
           },
           Event: {
             startDate: !0,
@@ -7191,10 +7191,10 @@ export const modules = {
             itemListElement: ["ListItem"]
           },
           ListItem: {
-            item: WP
+            item: wF
           },
           Offer: {
-            seller: ZP
+            seller: rF
           },
           Organization: {
             name: !0,
@@ -7228,7 +7228,7 @@ export const modules = {
             productionDate: !0,
             releaseDate: !0,
             brand: ["Brand", "Organization"],
-            manufacturer: ZP,
+            manufacturer: rF,
             offers: ["Offer", "AggregateOffer"],
             aggregateRating: ["AggregateRating"]
           },
@@ -7236,416 +7236,416 @@ export const modules = {
             name: !0,
             serviceType: !0,
             category: !0,
-            provider: ZP,
-            areaServed: oP,
+            provider: rF,
+            areaServed: uF,
             offers: ["AggregateOffer", "Offer"],
             aggregateRating: ["AggregateRating"]
           },
           OfferCatalog: {
             name: !0,
-            itemListElement: WP
+            itemListElement: wF
           }
         },
-        YP = [
-          ["3DModel AboutPage Answer Article AudioObject Blog BlogPosting Book Clip CollectionPage Comment ContactPage Course CreativeWorkSeason CreativeWorkSeries DataCatalog DataDownload DataFeed Dataset DiscussionForumPosting Episode FAQPage Game HowTo HowToDirection HowToSection HowToStep HowToTip ImageObject LearningResource MediaObject Message MobileApplication Movie MusicPlaylist MusicRecording NewsArticle Photograph PodcastEpisode PodcastSeries ProfilePage QAPage Question Quiz Recipe Review ScholarlyArticle SearchResultsPage SiteNavigationElement SocialMediaPosting SoftwareApplication TVEpisode TVSeries TechArticle VacationRental VideoGame VideoObject WebApplication WebPage WebPageElement WebSite".split(" "), fP.CreativeWork],
-          ["BroadcastEvent BusinessEvent EducationEvent Festival MusicEvent SportsEvent TheaterEvent".split(" "), fP.Event],
-          [ZP, fP.Organization],
-          [oP, fP.Place],
-          ["Car IndividualProduct ProductGroup ProductModel".split(" "), fP.Product]
+        iF = [
+          ["3DModel AboutPage Answer Article AudioObject Blog BlogPosting Book Clip CollectionPage Comment ContactPage Course CreativeWorkSeason CreativeWorkSeries DataCatalog DataDownload DataFeed Dataset DiscussionForumPosting Episode FAQPage Game HowTo HowToDirection HowToSection HowToStep HowToTip ImageObject LearningResource MediaObject Message MobileApplication Movie MusicPlaylist MusicRecording NewsArticle Photograph PodcastEpisode PodcastSeries ProfilePage QAPage Question Quiz Recipe Review ScholarlyArticle SearchResultsPage SiteNavigationElement SocialMediaPosting SoftwareApplication TVEpisode TVSeries TechArticle VacationRental VideoGame VideoObject WebApplication WebPage WebPageElement WebSite".split(" "), fF.CreativeWork],
+          ["BroadcastEvent BusinessEvent EducationEvent Festival MusicEvent SportsEvent TheaterEvent".split(" "), fF.Event],
+          [rF, fF.Organization],
+          [uF, fF.Place],
+          ["Car IndividualProduct ProductGroup ProductModel".split(" "), fF.Product]
         ];
 
-      function NP(MM, rM) {
-        return nS.call(MM, rM) ? MM[rM] : void 0
+      function HF(UU, XU) {
+        return Ay.call(UU, XU) ? UU[XU] : void 0
       }
 
-      function AP(MM) {
-        const rM = typeof MM;
-        return JS(MM) || "string" === rM || "number" === rM || "boolean" === rM
+      function MF(UU) {
+        const XU = typeof UU;
+        return Iy(UU) || "string" === XU || "number" === XU || "boolean" === XU
       }
 
-      function xP(MM, rM) {
-        return rM && function(MM) {
-          return hS(MM) && /^(https?:\/\/|\/|\.\.?\/)/i.test(MM.trim())
-        }(MM) ? rM(MM.trim()) || void 0 : MM
+      function vF(UU, XU) {
+        return XU && function(UU) {
+          return Ny(UU) && /^(https?:\/\/|\/|\.\.?\/)/i.test(UU.trim())
+        }(UU) ? XU(UU.trim()) || void 0 : UU
       }
 
-      function vP(MM, rM) {
-        return zS(MM) && MM.every(AP) ? MM.map((MM => xP(MM, rM))).filter((MM => !HS(MM))) : AP(MM) ? xP(MM, rM) : void 0
+      function VF(UU, XU) {
+        return oy(UU) && UU.every(MF) ? UU.map((UU => vF(UU, XU))).filter((UU => !Yy(UU))) : MF(UU) ? vF(UU, XU) : void 0
       }
 
-      function FP(MM, rM) {
-        if ("string" != typeof MM) return;
-        const iM = MM.trim(),
-          OM = iM.indexOf("#"),
-          SM = 0 > OM ? iM : iM.slice(OM + 1);
-        if (SM && !(0 > OM && (/^[a-z][a-z\d+.-]*:/i.test(iM) || iM.includes("/") || iM.includes("?")))) try {
-          return rM(SM) ? SM : void 0
-        } catch (MM) {
+      function sF(UU, XU) {
+        if ("string" != typeof UU) return;
+        const zU = UU.trim(),
+          cU = zU.indexOf("#"),
+          yU = 0 > cU ? zU : zU.slice(cU + 1);
+        if (yU && !(0 > cU && (/^[a-z][a-z\d+.-]*:/i.test(zU) || zU.includes("/") || zU.includes("?")))) try {
+          return XU(yU) ? yU : void 0
+        } catch (UU) {
           return
         }
       }
 
-      function BP(MM) {
-        if (nS.call(fP, MM)) return fP[MM];
-        for (const [rM, iM] of YP)
-          if (rM.includes(MM)) return iM
+      function nF(UU) {
+        if (Ay.call(fF, UU)) return fF[UU];
+        for (const [XU, zU] of iF)
+          if (XU.includes(UU)) return zU
       }
 
-      function XP(MM, rM, iM) {
-        Object.defineProperty(MM, rM, {
+      function mF(UU, XU, zU) {
+        Object.defineProperty(UU, XU, {
           configurable: !0,
           enumerable: !0,
-          value: iM,
+          value: zU,
           writable: !0
         })
       }
 
-      function IP(MM, rM, iM, OM) {
-        if (zS(MM)) {
-          const SM = MM.map((MM => IP(MM, rM, iM, OM))).filter((MM => !HS(MM)));
-          return SM.length ? SM : void 0
+      function lF(UU, XU, zU, cU) {
+        if (oy(UU)) {
+          const yU = UU.map((UU => lF(UU, XU, zU, cU))).filter((UU => !Yy(UU)));
+          return yU.length ? yU : void 0
         }
-        return KP(MM, rM, iM, OM) || void 0
+        return xF(UU, XU, zU, cU) || void 0
       }
 
-      function KP(MM, rM, iM, OM) {
-        if (!mS(MM) || ! function(MM) {
-            return MM.remainingNodes ? (MM.remainingNodes--, !0) : (MM.exceeded = !0, !1)
-          }(iM)) return null;
-        const SM = NP(MM, "@type"),
-          jM = function(MM) {
-            const rM = new Set,
-              iM = "string" == typeof MM ? [MM] : zS(MM) ? MM : [],
-              OM = [];
-            for (const SM of iM) {
-              if ("string" != typeof SM) continue;
-              const MM = SM.replace(/^https?:\/\/schema\.org\//, "");
-              if (100 >= MM.length && pP.test(MM) && !rM.has(MM) && (rM.add(MM), OM.push(MM), 20 === OM.length)) break
+      function xF(UU, XU, zU, cU) {
+        if (!Ey(UU) || ! function(UU) {
+            return UU.remainingNodes ? (UU.remainingNodes--, !0) : (UU.exceeded = !0, !1)
+          }(zU)) return null;
+        const yU = HF(UU, "@type"),
+          QU = function(UU) {
+            const XU = new Set,
+              zU = "string" == typeof UU ? [UU] : oy(UU) ? UU : [],
+              cU = [];
+            for (const yU of zU) {
+              if ("string" != typeof yU) continue;
+              const UU = yU.replace(/^https?:\/\/schema\.org\//, "");
+              if (100 >= UU.length && CF.test(UU) && !XU.has(UU) && (XU.add(UU), cU.push(UU), 20 === cU.length)) break
             }
-            return OM
-          }(SM),
-          aM = jM.filter((MM => !!BP(MM) && (!OM || !OM.length || OM.includes(MM)))),
-          PM = {};
-        for (const QM of DP) {
-          const OM = "@type" === QM ? jM.length ? "string" == typeof SM ? jM[0] : jM : void 0 : "@id" === QM ? FP(NP(MM, QM), rM) : vP(NP(MM, QM), iM.maskUrl);
-          HS(OM) || XP(PM, QM, OM)
+            return cU
+          }(yU),
+          AU = QU.filter((UU => !!nF(UU) && (!cU || !cU.length || cU.includes(UU)))),
+          FU = {};
+        for (const DU of OF) {
+          const cU = "@type" === DU ? QU.length ? "string" == typeof yU ? QU[0] : QU : void 0 : "@id" === DU ? sF(HF(UU, DU), XU) : VF(HF(UU, DU), zU.maskUrl);
+          Yy(cU) || mF(FU, DU, cU)
         }
-        for (const QM of aM) {
-          const OM = BP(QM);
-          for (const SM of Object.keys(OM)) {
-            const jM = NP(MM, SM),
-              aM = OM[SM];
-            if (!0 === aM) {
-              const MM = vP(jM, iM.maskUrl);
-              HS(MM) || XP(PM, SM, MM)
+        for (const DU of AU) {
+          const cU = nF(DU);
+          for (const yU of Object.keys(cU)) {
+            const QU = HF(UU, yU),
+              AU = cU[yU];
+            if (!0 === AU) {
+              const UU = VF(QU, zU.maskUrl);
+              Yy(UU) || mF(FU, yU, UU)
             } else {
-              const MM = IP(jM, rM, iM, aM);
-              HS(MM) || XP(PM, SM, MM)
+              const UU = lF(QU, XU, zU, AU);
+              Yy(UU) || mF(FU, yU, UU)
             }
           }
         }
-        const nM = IP(NP(MM, "@graph"), rM, iM);
-        return HS(nM) || XP(PM, "@graph", nM), Object.keys(PM).length ? PM : null
+        const oU = lF(HF(UU, "@graph"), XU, zU);
+        return Yy(oU) || mF(FU, "@graph", oU), Object.keys(FU).length ? FU : null
       }
 
-      function qP(MM, rM, iM) {
-        if (!mS(MM)) return null;
-        const SM = NP(MM, "@context");
-        if ("string" != typeof SM || !/^https?:\/\/schema\.org\/?$/.test(SM)) return null;
-        const jM = KP(MM, rM, iM);
-        return jM ? OM({
+      function JF(UU, XU, zU) {
+        if (!Ey(UU)) return null;
+        const yU = HF(UU, "@context");
+        if ("string" != typeof yU || !/^https?:\/\/schema\.org\/?$/.test(yU)) return null;
+        const QU = xF(UU, XU, zU);
+        return QU ? cU({
           "@context": "https://schema.org"
-        }, jM) : null
+        }, QU) : null
       }
 
-      function TP(MM) {
-        var rM;
-        return "SCRIPT" === MM.nodeName && "application/ld+json" === (null === (rM = MM.getAttribute("type")) || void 0 === rM ? void 0 : rM.trim().toLowerCase())
+      function jF(UU) {
+        var XU;
+        return "SCRIPT" === UU.nodeName && "application/ld+json" === (null === (XU = UU.getAttribute("type")) || void 0 === XU ? void 0 : XU.trim().toLowerCase())
       }
 
-      function VP(MM, rM, iM) {
-        if ("string" == typeof rM ? MM.classList.contains(rM) : rM && Array.from(MM.classList).some((MM => (rM.lastIndex = 0, rM.test(MM))))) return !0;
+      function KF(UU, XU, zU) {
+        if ("string" == typeof XU ? UU.classList.contains(XU) : XU && Array.from(UU.classList).some((UU => (XU.lastIndex = 0, XU.test(UU))))) return !0;
         try {
-          return !!iM && MM.matches(iM)
-        } catch (MM) {
+          return !!zU && UU.matches(zU)
+        } catch (UU) {
           return !1
         }
       }
 
-      function cP(MM, rM, iM) {
-        for (let OM = MM; OM;) {
-          if (VP(OM, rM, iM)) return !0;
-          const MM = OM.parentNode;
-          OM = OM.parentElement || (MM && MM.nodeType === MM.DOCUMENT_FRAGMENT_NODE ? MM.host : null)
+      function bF(UU, XU, zU) {
+        for (let cU = UU; cU;) {
+          if (KF(cU, XU, zU)) return !0;
+          const UU = cU.parentNode;
+          cU = cU.parentElement || (UU && UU.nodeType === UU.DOCUMENT_FRAGMENT_NODE ? UU.host : null)
         }
         return !1
       }
 
-      function Mn(MM) {
-        return TP(MM) ? [MM] : MM.nodeType !== MM.ELEMENT_NODE ? [] : Array.from(MM.querySelectorAll("script")).filter(TP)
+      function TF(UU) {
+        return jF(UU) ? [UU] : UU.nodeType !== UU.ELEMENT_NODE ? [] : Array.from(UU.querySelectorAll("script")).filter(jF)
       }
 
-      function rn(MM) {
-        return mS(MM) ? MM.network_timing : MM
+      function hF(UU) {
+        return Ey(UU) ? UU.network_timing : UU
       }
-      const On = DS("[SessionRecording]"),
-        Sn = [1, 2, 3, 4, 5, 6, 7, 12],
-        jn = MM => ({
-          rrwebMethod: MM,
+      const Uo = Oy("[SessionRecording]"),
+        Xo = [1, 2, 3, 4, 5, 6, 7, 12],
+        zo = UU => ({
+          rrwebMethod: UU,
           enqueuedAt: Date.now(),
           attempt: 1
         });
 
-      function an() {
-        var MM;
-        return null == aS || null === (MM = aS.__PosthogExtensions__) || void 0 === MM ? void 0 : MM.rrweb
+      function co() {
+        var UU;
+        return null == yy || null === (UU = yy.__PosthogExtensions__) || void 0 === UU ? void 0 : UU.rrweb
       }
 
-      function Pn() {
-        var MM;
-        return null === (MM = an()) || void 0 === MM ? void 0 : MM.record
+      function yo() {
+        var UU;
+        return null === (UU = co()) || void 0 === UU ? void 0 : UU.record
       }
 
-      function nn(MM) {
+      function Qo(UU) {
         try {
-          return JSON.stringify(MM)
-        } catch (rM) {
-          if (rM instanceof RangeError) throw rM;
-          return JSON.stringify(MM, ua())
+          return JSON.stringify(UU)
+        } catch (XU) {
+          if (XU instanceof RangeError) throw XU;
+          return JSON.stringify(UU, LA())
         }
       }
 
-      function Qn(MM) {
-        return LP(function(MM, rM) {
-          void 0 === rM && (rM = {});
-          var iM = function() {
-              var MM = 4294967295;
+      function Ao(UU) {
+        return DF(function(UU, XU) {
+          void 0 === XU && (XU = {});
+          var zU = function() {
+              var UU = 4294967295;
               return {
-                p(rM) {
-                  for (var iM = MM, OM = 0; rM.length > OM; ++OM) iM = QP[255 & iM ^ rM[OM]] ^ iM >>> 8;
-                  MM = iM
+                p(XU) {
+                  for (var zU = UU, cU = 0; XU.length > cU; ++cU) zU = FF[255 & zU ^ XU[cU]] ^ zU >>> 8;
+                  UU = zU
                 },
-                d: () => 4294967295 ^ MM
+                d: () => 4294967295 ^ UU
               }
             }(),
-            OM = MM.length;
-          iM.p(MM);
-          var SM, jM, aM, PM, nM = (PM = 10 + ((SM = rM).filename && SM.filename.length + 1 || 0), function(MM, rM, iM, OM, SM, jM) {
-              var aM = MM.length,
-                PM = new sa(OM + aM + 5 * (1 + Math.floor(aM / 7e3)) + 8),
-                nM = PM.subarray(OM, PM.length - 8),
-                QM = 0;
-              if (!rM || 8 > aM)
-                for (var zM = 0; aM >= zM; zM += 65535) {
-                  var LM = zM + 65535;
-                  aM > LM ? QM = aP(nM, QM, MM.subarray(zM, LM)) : (nM[zM] = jM, QM = aP(nM, QM, MM.subarray(zM, aM)))
+            cU = UU.length;
+          zU.p(UU);
+          var yU, QU, AU, FU, oU = (FU = 10 + ((yU = XU).filename && yU.filename.length + 1 || 0), function(UU, XU, zU, cU, yU, QU) {
+              var AU = UU.length,
+                FU = new qA(cU + AU + 5 * (1 + Math.floor(AU / 7e3)) + 8),
+                oU = FU.subarray(cU, FU.length - 8),
+                DU = 0;
+              if (!XU || 8 > AU)
+                for (var EU = 0; AU >= EU; EU += 65535) {
+                  var YU = EU + 65535;
+                  AU > YU ? DU = yF(oU, DU, UU.subarray(EU, YU)) : (oU[EU] = QU, DU = yF(oU, DU, UU.subarray(EU, AU)))
                 } else {
-                  for (var mM = nP[rM - 1], HM = mM >>> 13, hM = 8191 & mM, JM = (1 << iM) - 1, dM = new Da(32768), yM = new Da(JM + 1), lM = Math.ceil(iM / 3), EM = 2 * lM, UM = function(rM) {
-                      return (MM[rM] ^ MM[rM + 1] << lM ^ MM[rM + 2] << EM) & JM
-                    }, GM = new ka(25e3), CM = new Da(288), eM = new Da(32), bM = 0, wM = 0, tM = (zM = 0, 0), gM = 0, uM = 0; aM > zM; ++zM) {
-                    var RM = UM(zM),
-                      pM = 32767 & zM,
-                      WM = yM[RM];
-                    if (dM[pM] = WM, yM[RM] = pM, zM >= gM) {
-                      var sM = aM - zM;
-                      if ((bM > 7e3 || tM > 24576) && sM > 423) {
-                        QM = PP(MM, nM, 0, GM, CM, eM, wM, tM, uM, zM - uM, QM), tM = bM = wM = 0, uM = zM;
-                        for (var DM = 0; 286 > DM; ++DM) CM[DM] = 0;
-                        for (DM = 0; 30 > DM; ++DM) eM[DM] = 0
+                  for (var NU = AF[XU - 1], IU = NU >>> 13, pU = 8191 & NU, aU = (1 << zU) - 1, tU = new OA(32768), gU = new OA(aU + 1), kU = Math.ceil(zU / 3), GU = 2 * kU, BU = function(XU) {
+                      return (UU[XU] ^ UU[XU + 1] << kU ^ UU[XU + 2] << GU) & aU
+                    }, ZU = new SA(25e3), RU = new OA(288), PU = new OA(32), WU = 0, dU = 0, LU = (EU = 0, 0), eU = 0, CU = 0; AU > EU; ++EU) {
+                    var wU = BU(EU),
+                      qU = 32767 & EU,
+                      OU = gU[wU];
+                    if (tU[qU] = OU, gU[wU] = qU, EU >= eU) {
+                      var SU = AU - EU;
+                      if ((WU > 7e3 || LU > 24576) && SU > 423) {
+                        DU = QF(UU, oU, 0, ZU, RU, PU, dU, LU, CU, EU - CU, DU), LU = WU = dU = 0, CU = EU;
+                        for (var rU = 0; 286 > rU; ++rU) RU[rU] = 0;
+                        for (rU = 0; 30 > rU; ++rU) PU[rU] = 0
                       }
-                      var kM = 2,
-                        ZM = 0,
-                        oM = hM,
-                        fM = pM - WM & 32767;
-                      if (sM > 2 && RM == UM(zM - fM))
-                        for (var YM = Math.min(HM, sM) - 1, NM = Math.min(32767, zM), AM = Math.min(258, sM); NM >= fM && --oM && pM != WM;) {
-                          if (MM[zM + kM] == MM[zM + kM - fM]) {
-                            for (var xM = 0; AM > xM && MM[zM + xM] == MM[zM + xM - fM]; ++xM);
-                            if (xM > kM) {
-                              if (kM = xM, ZM = fM, xM > YM) break;
-                              var vM = Math.min(fM, xM - 2),
-                                FM = 0;
-                              for (DM = 0; vM > DM; ++DM) {
-                                var BM = zM - fM + DM + 32768 & 32767,
-                                  XM = BM - dM[BM] + 32768 & 32767;
-                                XM > FM && (FM = XM, WM = BM)
+                      var uU = 2,
+                        fU = 0,
+                        iU = pU,
+                        HU = qU - OU & 32767;
+                      if (SU > 2 && wU == BU(EU - HU))
+                        for (var MU = Math.min(IU, SU) - 1, vU = Math.min(32767, EU), VU = Math.min(258, SU); vU >= HU && --iU && qU != OU;) {
+                          if (UU[EU + uU] == UU[EU + uU - HU]) {
+                            for (var sU = 0; VU > sU && UU[EU + sU] == UU[EU + sU - HU]; ++sU);
+                            if (sU > uU) {
+                              if (uU = sU, fU = HU, sU > MU) break;
+                              var nU = Math.min(HU, sU - 2),
+                                mU = 0;
+                              for (rU = 0; nU > rU; ++rU) {
+                                var lU = EU - HU + rU + 32768 & 32767,
+                                  xU = lU - tU[lU] + 32768 & 32767;
+                                xU > mU && (mU = xU, OU = lU)
                               }
                             }
                           }
-                          fM += (pM = WM) - (WM = dM[pM]) + 32768 & 32767
+                          HU += (qU = OU) - (OU = tU[qU]) + 32768 & 32767
                         }
-                      if (ZM) {
-                        GM[tM++] = 268435456 | Aa[kM] << 18 | xa[ZM];
-                        var IM = 31 & Aa[kM],
-                          KM = 31 & xa[ZM];
-                        wM += Za[IM] + oa[KM], ++CM[257 + IM], ++eM[KM], gM = zM + kM, ++bM
-                      } else GM[tM++] = MM[zM], ++CM[MM[zM]]
+                      if (fU) {
+                        ZU[LU++] = 268435456 | MA[uU] << 18 | vA[fU];
+                        var JU = 31 & MA[uU],
+                          jU = 31 & vA[fU];
+                        dU += rA[JU] + uA[jU], ++RU[257 + JU], ++PU[jU], eU = EU + uU, ++WU
+                      } else ZU[LU++] = UU[EU], ++RU[UU[EU]]
                     }
                   }
-                  QM = PP(MM, nM, jM, GM, CM, eM, wM, tM, uM, zM - uM, QM)
+                  DU = QF(UU, oU, QU, ZU, RU, PU, dU, LU, CU, EU - CU, DU)
                 }
-              return ca(PM, 0, OM + Va(QM) + 8)
-            }(jM = MM, null == (aM = rM).level ? 6 : aM.level, null == aM.mem ? Math.ceil(1.5 * Math.max(8, Math.min(13, Math.log(jM.length)))) : 12 + aM.mem, PM, 0, !0)),
-            QM = nM.length;
-          return function(MM, rM) {
-            var iM = rM.filename;
-            if (MM[0] = 31, MM[1] = 139, MM[2] = 8, MM[8] = 2 > rM.level ? 4 : 9 == rM.level ? 2 : 0, MM[9] = 3, 0 != rM.mtime && zP(MM, 4, Math.floor(new Date(rM.mtime || Date.now()) / 1e3)), iM) {
-              MM[3] = 8;
-              for (var OM = 0; iM.length >= OM; ++OM) MM[OM + 10] = iM.charCodeAt(OM)
+              return bA(FU, 0, cU + KA(DU) + 8)
+            }(QU = UU, null == (AU = XU).level ? 6 : AU.level, null == AU.mem ? Math.ceil(1.5 * Math.max(8, Math.min(13, Math.log(QU.length)))) : 12 + AU.mem, FU, 0, !0)),
+            DU = oU.length;
+          return function(UU, XU) {
+            var zU = XU.filename;
+            if (UU[0] = 31, UU[1] = 139, UU[2] = 8, UU[8] = 2 > XU.level ? 4 : 9 == XU.level ? 2 : 0, UU[9] = 3, 0 != XU.mtime && oF(UU, 4, Math.floor(new Date(XU.mtime || Date.now()) / 1e3)), zU) {
+              UU[3] = 8;
+              for (var cU = 0; zU.length >= cU; ++cU) UU[cU + 10] = zU.charCodeAt(cU)
             }
-          }(nM, rM), zP(nM, QM - 8, iM.d()), zP(nM, QM - 4, OM), nM
-        }(function(MM) {
-          var rM = MM.length;
-          if ("undefined" != typeof TextEncoder) return (new TextEncoder).encode(MM);
-          for (var iM = new sa(MM.length + (MM.length >>> 1)), OM = 0, SM = function(MM) {
-              iM[OM++] = MM
-            }, jM = 0; rM > jM; ++jM) {
-            if (OM + 5 > iM.length) {
-              var aM = new sa(OM + 8 + (rM - jM << 1));
-              aM.set(iM), iM = aM
+          }(oU, XU), oF(oU, DU - 8, zU.d()), oF(oU, DU - 4, cU), oU
+        }(function(UU) {
+          var XU = UU.length;
+          if ("undefined" != typeof TextEncoder) return (new TextEncoder).encode(UU);
+          for (var zU = new qA(UU.length + (UU.length >>> 1)), cU = 0, yU = function(UU) {
+              zU[cU++] = UU
+            }, QU = 0; XU > QU; ++QU) {
+            if (cU + 5 > zU.length) {
+              var AU = new qA(cU + 8 + (XU - QU << 1));
+              AU.set(zU), zU = AU
             }
-            var PM = MM.charCodeAt(jM);
-            128 > PM ? SM(PM) : 2048 > PM ? (SM(192 | PM >>> 6), SM(128 | 63 & PM)) : PM > 55295 && 57344 > PM ? (SM(240 | (PM = 65536 + (1047552 & PM) | 1023 & MM.charCodeAt(++jM)) >>> 18), SM(128 | PM >>> 12 & 63), SM(128 | PM >>> 6 & 63), SM(128 | 63 & PM)) : (SM(224 | PM >>> 12), SM(128 | PM >>> 6 & 63), SM(128 | 63 & PM))
+            var FU = UU.charCodeAt(QU);
+            128 > FU ? yU(FU) : 2048 > FU ? (yU(192 | FU >>> 6), yU(128 | 63 & FU)) : FU > 55295 && 57344 > FU ? (yU(240 | (FU = 65536 + (1047552 & FU) | 1023 & UU.charCodeAt(++QU)) >>> 18), yU(128 | FU >>> 12 & 63), yU(128 | FU >>> 6 & 63), yU(128 | 63 & FU)) : (yU(224 | FU >>> 12), yU(128 | FU >>> 6 & 63), yU(128 | 63 & FU))
           }
-          return ca(iM, 0, OM)
-        }(nn(MM))), !0)
+          return bA(zU, 0, cU)
+        }(Qo(UU))), !0)
       }
 
-      function zn(MM) {
-        return Ln.apply(this, arguments)
+      function Fo(UU) {
+        return oo.apply(this, arguments)
       }
 
-      function Ln() {
-        return Ln = jM((function*(MM) {
-          const rM = yield function(MM) {
-            return uS.apply(this, arguments)
-          }(nn(MM), JP.DEBUG, {
+      function oo() {
+        return oo = QU((function*(UU) {
+          const XU = yield function(UU) {
+            return Ly.apply(this, arguments)
+          }(Qo(UU), IF.DEBUG, {
             rethrow: !0
           });
-          return LP(new Uint8Array(yield rM.arrayBuffer()), !0)
-        })), Ln.apply(this, arguments)
+          return DF(new Uint8Array(yield XU.arrayBuffer()), !0)
+        })), oo.apply(this, arguments)
       }
-      let mn, Hn;
-      const hn = "undefined" != typeof globalThis && "CompressionStream" in globalThis && "TextEncoder" in globalThis && "Response" in globalThis && "function" == typeof Response.prototype.blob;
-      let Jn = !1;
+      let Do, Eo;
+      const Yo = "undefined" != typeof globalThis && "CompressionStream" in globalThis && "TextEncoder" in globalThis && "Response" in globalThis && "function" == typeof Response.prototype.blob;
+      let No = !1;
 
-      function dn(MM) {
-        var rM;
-        return zS(MM) && 0 === MM.length ? (mn = null !== (rM = mn) && void 0 !== rM ? rM : Qn([]), mn) : Qn(MM)
-      }
-
-      function yn(MM) {
-        return En.apply(this, arguments)
+      function Io(UU) {
+        var XU;
+        return oy(UU) && 0 === UU.length ? (Do = null !== (XU = Do) && void 0 !== XU ? XU : Ao([]), Do) : Ao(UU)
       }
 
-      function En() {
-        return (En = jM((function*(MM) {
-          var rM;
-          return zS(MM) && 0 === MM.length ? mn || (Hn = null !== (rM = Hn) && void 0 !== rM ? rM : zn([]).then((MM => (mn = MM, MM))).catch((MM => {
-            throw mn = void 0, Hn = void 0, MM
-          })), Hn) : zn(MM)
+      function po(UU) {
+        return ao.apply(this, arguments)
+      }
+
+      function ao() {
+        return (ao = QU((function*(UU) {
+          var XU;
+          return oy(UU) && 0 === UU.length ? Do || (Eo = null !== (XU = Eo) && void 0 !== XU ? XU : Fo([]).then((UU => (Do = UU, UU))).catch((UU => {
+            throw Do = void 0, Eo = void 0, UU
+          })), Eo) : Fo(UU)
         }))).apply(this, arguments)
       }
 
-      function Un(MM) {
-        return hn && !Jn && function(MM) {
-          return 2 === MM.type || 3 === MM.type && (0 === MM.data.source || 8 === MM.data.source)
-        }(MM)
+      function to(UU) {
+        return Yo && !No && function(UU) {
+          return 2 === UU.type || 3 === UU.type && (0 === UU.data.source || 8 === UU.data.source)
+        }(UU)
       }
 
-      function Gn(MM) {
+      function go(UU) {
         return {
-          event: MM,
-          size: pa(MM)
+          event: UU,
+          size: CA(UU)
         }
       }
 
-      function Cn(MM, rM) {
-        return OM(OM({}, MM), {}, {
-          data: rM,
+      function ko(UU, XU) {
+        return cU(cU({}, UU), {}, {
+          data: XU,
           cv: "2024-10"
         })
       }
 
-      function en(MM, rM) {
-        return OM(OM({}, MM), {}, {
+      function Go(UU, XU) {
+        return cU(cU({}, UU), {}, {
           cv: "2024-10",
-          data: OM(OM({}, MM.data), rM)
+          data: cU(cU({}, UU.data), XU)
         })
       }
 
-      function bn(MM) {
+      function Bo(UU) {
         try {
-          if (2 === MM.type) return Gn(Cn(MM, Qn(MM.data)));
-          if (3 === MM.type && 0 === MM.data.source) return Gn(en(MM, {
-            texts: dn(MM.data.texts),
-            attributes: dn(MM.data.attributes),
-            removes: dn(MM.data.removes),
-            adds: dn(MM.data.adds)
+          if (2 === UU.type) return go(ko(UU, Ao(UU.data)));
+          if (3 === UU.type && 0 === UU.data.source) return go(Go(UU, {
+            texts: Io(UU.data.texts),
+            attributes: Io(UU.data.attributes),
+            removes: Io(UU.data.removes),
+            adds: Io(UU.data.adds)
           }));
-          if (3 === MM.type && 8 === MM.data.source) return Gn(en(MM, {
-            adds: MM.data.adds ? Qn(MM.data.adds) : void 0,
-            removes: MM.data.removes ? Qn(MM.data.removes) : void 0
+          if (3 === UU.type && 8 === UU.data.source) return go(Go(UU, {
+            adds: UU.data.adds ? Ao(UU.data.adds) : void 0,
+            removes: UU.data.removes ? Ao(UU.data.removes) : void 0
           }))
-        } catch (MM) {
-          On.warn("could not compress event - will use uncompressed event", MM)
+        } catch (UU) {
+          Uo.warn("could not compress event - will use uncompressed event", UU)
         }
         return {
-          event: MM,
-          size: Ra(MM)
+          event: UU,
+          size: eA(UU)
         }
       }
 
-      function wn() {
-        return (wn = jM((function*(MM) {
+      function Zo() {
+        return (Zo = QU((function*(UU) {
           try {
-            if (2 === MM.type) return Gn(Cn(MM, yield zn(MM.data)));
-            if (3 === MM.type && 0 === MM.data.source) {
-              const [rM, iM, OM, SM] = yield Promise.all([yn(MM.data.texts), yn(MM.data.attributes), yn(MM.data.removes), yn(MM.data.adds)]);
-              return Gn(en(MM, {
-                texts: rM,
-                attributes: iM,
-                removes: OM,
-                adds: SM
+            if (2 === UU.type) return go(ko(UU, yield Fo(UU.data)));
+            if (3 === UU.type && 0 === UU.data.source) {
+              const [XU, zU, cU, yU] = yield Promise.all([po(UU.data.texts), po(UU.data.attributes), po(UU.data.removes), po(UU.data.adds)]);
+              return go(Go(UU, {
+                texts: XU,
+                attributes: zU,
+                removes: cU,
+                adds: yU
               }))
             }
-            if (3 === MM.type && 8 === MM.data.source) {
-              const [rM, iM] = yield Promise.all([MM.data.adds ? zn(MM.data.adds) : void 0, MM.data.removes ? zn(MM.data.removes) : void 0]);
-              return Gn(en(MM, {
-                adds: rM,
-                removes: iM
+            if (3 === UU.type && 8 === UU.data.source) {
+              const [XU, zU] = yield Promise.all([UU.data.adds ? Fo(UU.data.adds) : void 0, UU.data.removes ? Fo(UU.data.removes) : void 0]);
+              return go(Go(UU, {
+                adds: XU,
+                removes: zU
               }))
             }
-          } catch (rM) {
-            return (MM => {
-              if (!MM || "object" != typeof MM) return !1;
-              const rM = "name" in MM ? String(MM.name) : "";
-              return (MM => !(!MM || "object" != typeof MM) && "NotReadableError" === ("name" in MM ? String(MM.name) : ""))(MM) || rM === eS
-            })(rM) && (Jn = !0), On.warn("could not compress event asynchronously - trying synchronous compression", rM), bn(MM)
+          } catch (XU) {
+            return (UU => {
+              if (!UU || "object" != typeof UU) return !1;
+              const XU = "name" in UU ? String(UU.name) : "";
+              return (UU => !(!UU || "object" != typeof UU) && "NotReadableError" === ("name" in UU ? String(UU.name) : ""))(UU) || XU === Zy
+            })(XU) && (No = !0), Uo.warn("could not compress event asynchronously - trying synchronous compression", XU), Bo(UU)
           }
           return {
-            event: MM,
-            size: Ra(MM)
+            event: UU,
+            size: eA(UU)
           }
         }))).apply(this, arguments)
       }
 
-      function tn(MM, rM) {
-        return 5 === MM.type && MM.data.tag === rM
+      function Ro(UU, XU) {
+        return 5 === UU.type && UU.data.tag === XU
       }
 
-      function gn(MM) {
-        return tn(MM, "sessionIdle")
+      function Po(UU) {
+        return Ro(UU, "sessionIdle")
       }
 
-      function un(MM) {
-        return tn(MM, "$session_ending")
+      function Wo(UU) {
+        return Ro(UU, "$session_ending")
       }
 
-      function Rn(MM) {
-        return tn(MM, "$session_starting")
+      function Lo(UU) {
+        return Ro(UU, "$session_starting")
       }
-      var pn = class {
+      var eo = class {
         get sessionId() {
           return this.Xt
         }
@@ -7657,73 +7657,73 @@ export const modules = {
           return this._instance.config.session_recording.session_idle_threshold_ms || 3e5
         }
         get ee() {
-          return wP(this._instance.get_property(xj), this.sessionId)
+          return PF(this._instance.get_property(vQ), this.sessionId)
         }
         get zt() {
-          var MM;
-          const rM = null === (MM = this.ne) || void 0 === MM ? void 0 : MM.sampleRate;
-          return yS(rM) ? rM : null
+          var UU;
+          const XU = null === (UU = this.ne) || void 0 === UU ? void 0 : UU.sampleRate;
+          return ay(XU) ? XU : null
         }
         get ie() {
-          var MM, rM;
-          return null !== (MM = null === (rM = this.re) || void 0 === rM ? void 0 : rM.getMinimumDuration(this.sessionId)) && void 0 !== MM ? MM : null
+          var UU, XU;
+          return null !== (UU = null === (XU = this.re) || void 0 === XU ? void 0 : XU.getMinimumDuration(this.sessionId)) && void 0 !== UU ? UU : null
         }
-        constructor(MM, rM) {
-          this._instance = MM, this.oe = "/s/", this._forceAllowLocalhostNetworkCapture = !1, this.se = void 0, this.ae = !1, this.le = Date.now(), this.ue = !1, this.ce = [], this.de = "unknown", this.he = 0, this.fe = 0, this.ve = 0, this.pe = 0, this.me = 0, this.ge = !1, this.ye = !1, this.be = !1, this.we = !1, this.ke = !1, this._e = !1, this.Se = !1, this.xe = !1, this.Ce = !1, this.Ie = !1, this.Me = !1, this.Te = void 0, this.Re = void 0, this.Ee = !1, this.Ae = [], this.$e = 0, this.Oe = 0, this.Pe = !1, this.Le = void 0, this.Wt = void 0, this.De = void 0, this.Fe = void 0, this.Ne = void 0, this.qe = (MM, rM, iM) => {
-            var OM, SM, jM, aM;
-            if (!iM) return;
-            if (MM === this.Xt && rM === this.je) return;
-            const PM = !iM.noSessionId && (iM.activityTimeout || iM.sessionPastMaximumLength),
-              nM = this.Xt,
-              QM = this.je;
-            var zM;
-            if (PM && this.Vt("$session_ending", {
-                currentSessionId: nM,
-                currentWindowId: QM,
-                nextSessionId: MM,
-                nextWindowId: rM,
-                changeReason: iM,
+        constructor(UU, XU) {
+          this._instance = UU, this.oe = "/s/", this._forceAllowLocalhostNetworkCapture = !1, this.se = void 0, this.ae = !1, this.le = Date.now(), this.ue = !1, this.ce = [], this.de = "unknown", this.he = 0, this.fe = 0, this.ve = 0, this.pe = 0, this.me = 0, this.ge = !1, this.ye = !1, this.be = !1, this.we = !1, this.ke = !1, this._e = !1, this.Se = !1, this.xe = !1, this.Ce = !1, this.Ie = !1, this.Me = !1, this.Te = void 0, this.Re = void 0, this.Ee = !1, this.Ae = [], this.$e = 0, this.Oe = 0, this.Pe = !1, this.Le = void 0, this.Wt = void 0, this.De = void 0, this.Fe = void 0, this.Ne = void 0, this.qe = (UU, XU, zU) => {
+            var cU, yU, QU, AU;
+            if (!zU) return;
+            if (UU === this.Xt && XU === this.je) return;
+            const FU = !zU.noSessionId && (zU.activityTimeout || zU.sessionPastMaximumLength),
+              oU = this.Xt,
+              DU = this.je;
+            var EU;
+            if (FU && this.Vt("$session_ending", {
+                currentSessionId: oU,
+                currentWindowId: DU,
+                nextSessionId: UU,
+                nextWindowId: XU,
+                changeReason: zU,
                 lastActivityTimestamp: this.le,
-                flushed_size: null === (zM = this.Be) || void 0 === zM ? void 0 : zM.currentTrackedSize(nM)
-              }), null === (OM = this._instance.persistence) || void 0 === OM || OM.unregister("$debug_first_full_snapshot_timestamp"), null === (SM = an()) || void 0 === SM || null === (jM = SM.resetMaxDepthState) || void 0 === jM || jM.call(SM), this.Vt("$session_id_change", {
-                sessionId: MM,
-                windowId: rM,
-                changeReason: iM
-              }), this.ze(), !(!1 === this.de && this.isStarted || this.Xt === MM && this.je === rM)) {
-              const rM = this.Xt !== MM && !1 !== this.de;
-              this.de = "unknown", this.He(rM)
+                flushed_size: null === (EU = this.Be) || void 0 === EU ? void 0 : EU.currentTrackedSize(oU)
+              }), null === (cU = this._instance.persistence) || void 0 === cU || cU.unregister("$debug_first_full_snapshot_timestamp"), null === (yU = co()) || void 0 === yU || null === (QU = yU.resetMaxDepthState) || void 0 === QU || QU.call(yU), this.Vt("$session_id_change", {
+                sessionId: UU,
+                windowId: XU,
+                changeReason: zU
+              }), this.ze(), !(!1 === this.de && this.isStarted || this.Xt === UU && this.je === XU)) {
+              const XU = this.Xt !== UU && !1 !== this.de;
+              this.de = "unknown", this.He(XU)
             }
-            PM && this.Vt("$session_starting", {
-              previousSessionId: nM,
-              previousWindowId: QM,
-              nextSessionId: MM,
-              nextWindowId: rM,
-              changeReason: iM,
+            FU && this.Vt("$session_starting", {
+              previousSessionId: oU,
+              previousWindowId: DU,
+              nextSessionId: UU,
+              nextWindowId: XU,
+              changeReason: zU,
               lastActivityTimestamp: this.le
-            }), null === (aM = this.re) || void 0 === aM || aM.makeSamplingDecisions(MM)
+            }), null === (AU = this.re) || void 0 === AU || AU.makeSamplingDecisions(UU)
           }, this.Ue = !1, this.We = () => {
-            var MM;
-            return (null === (MM = this._instance.persistence) || void 0 === MM ? void 0 : MM.props.$session_past_minimum_duration) === this.Xt
+            var UU;
+            return (null === (UU = this._instance.persistence) || void 0 === UU ? void 0 : UU.props.$session_past_minimum_duration) === this.Xt
           }, this.Ve = () => {
-            var MM, rM;
+            var UU, XU;
             if (0 === this.Rt.data.length) return null;
-            const iM = null === (MM = this.Rt.data[0]) || void 0 === MM ? void 0 : MM.timestamp,
-              OM = null === (rM = this.Rt.data[this.Rt.data.length - 1]) || void 0 === rM ? void 0 : rM.timestamp;
-            return yS(iM) && yS(OM) ? OM - iM : null
+            const zU = null === (UU = this.Rt.data[0]) || void 0 === UU ? void 0 : UU.timestamp,
+              cU = null === (XU = this.Rt.data[this.Rt.data.length - 1]) || void 0 === XU ? void 0 : XU.timestamp;
+            return ay(zU) && ay(cU) ? cU - zU : null
           }, this.Ge = () => {
-            var MM, rM;
-            const iM = this.ie;
-            if (!yS(iM)) return !1;
-            if (null === (MM = null === (rM = this._instance.config.session_recording) || void 0 === rM ? void 0 : rM.strictMinimumDuration) || void 0 === MM || !MM) {
-              const MM = this.Qe;
-              return yS(MM) && MM >= 0 && iM > MM
+            var UU, XU;
+            const zU = this.ie;
+            if (!ay(zU)) return !1;
+            if (null === (UU = null === (XU = this._instance.config.session_recording) || void 0 === XU ? void 0 : XU.strictMinimumDuration) || void 0 === UU || !UU) {
+              const UU = this.Qe;
+              return ay(UU) && UU >= 0 && zU > UU
             }
             if (this.We()) return !1;
-            const OM = this.Ve();
-            return !!JS(OM) || iM > OM || (null === (SM = this._instance.persistence) || void 0 === SM || SM.register({
+            const cU = this.Ve();
+            return !!Iy(cU) || zU > cU || (null === (yU = this._instance.persistence) || void 0 === yU || yU.register({
               $session_past_minimum_duration: this.Xt
             }), !1);
-            var SM
+            var yU
           }, this.Ze = () => {
             "buffering" !== this.status ? (this.ge && this.ye && this.Je && (this.Ke(void 0), this.be && (this.be = !1, this.jt())), this.Xe(), this.Ye(!0)) : this.tn()
           }, this.en = () => {
@@ -7733,314 +7733,314 @@ export const modules = {
           }, this.rn = () => {
             this.Vt("browser online", {})
           }, this.sn = () => {
-            (null == OS ? void 0 : OS.visibilityState) && ("visible" === OS.visibilityState && (this.Je = !0), this.Vt("window " + OS.visibilityState, {}))
-          }, this.Je = null == rM || rM;
+            (null == Xy ? void 0 : Xy.visibilityState) && ("visible" === Xy.visibilityState && (this.Je = !0), this.Vt("window " + Xy.visibilityState, {}))
+          }, this.Je = null == XU || XU;
           const {
-            sessionId: iM,
-            windowId: OM,
-            sessionStartTimestamp: SM
+            sessionId: zU,
+            windowId: cU,
+            sessionStartTimestamp: yU
           } = this.Yt.checkAndGetSessionAndWindowId();
-          this.Xt = iM, this.je = OM, this._sessionStartTimestamp = SM, this.et = new ea(this._instance), this.Y = new Ca(this._instance), this.tt = new ba(this._instance), this.Rt = this.tn(), this.an = "ph_replay_pending_buffer_" + JSON.stringify([this._instance.config.persistence_name || this._instance.config.token, this._instance.config.token]), this.Yt.sessionTimeoutMs > this.te || On.warn(`session_idle_threshold_ms (${this.te}) is greater than the session timeout (${this.Yt.sessionTimeoutMs}). Session will never be detected as idle`), this.Be = new dP(this._instance)
+          this.Xt = zU, this.je = cU, this._sessionStartTimestamp = yU, this.et = new ZA(this._instance), this.Y = new BA(this._instance), this.tt = new RA(this._instance), this.Rt = this.tn(), this.an = "ph_replay_pending_buffer_" + JSON.stringify([this._instance.config.persistence_name || this._instance.config.token, this._instance.config.token]), this.Yt.sessionTimeoutMs > this.te || Uo.warn(`session_idle_threshold_ms (${this.te}) is greater than the session timeout (${this.Yt.sessionTimeoutMs}). Session will never be detected as idle`), this.Be = new pF(this._instance)
         }
-        setDocumentWasEverVisible(MM) {
-          MM && (this.Je = !0)
+        setDocumentWasEverVisible(UU) {
+          UU && (this.Je = !0)
         }
         get ln() {
-          var MM, rM, iM, OM, SM, jM, aM, PM, nM;
-          const QM = null === (MM = this.ne) || void 0 === MM ? void 0 : MM.masking,
-            zM = {
-              maskAllInputs: null === (rM = this._instance.config.session_recording) || void 0 === rM ? void 0 : rM.maskAllInputs,
-              maskTextSelector: null === (iM = this._instance.config.session_recording) || void 0 === iM ? void 0 : iM.maskTextSelector,
-              blockSelector: null === (OM = this._instance.config.session_recording) || void 0 === OM ? void 0 : OM.blockSelector,
-              maskAllElementAttributes: null === (SM = this._instance.config.session_recording) || void 0 === SM ? void 0 : SM.maskAllElementAttributes
+          var UU, XU, zU, cU, yU, QU, AU, FU, oU;
+          const DU = null === (UU = this.ne) || void 0 === UU ? void 0 : UU.masking,
+            EU = {
+              maskAllInputs: null === (XU = this._instance.config.session_recording) || void 0 === XU ? void 0 : XU.maskAllInputs,
+              maskTextSelector: null === (zU = this._instance.config.session_recording) || void 0 === zU ? void 0 : zU.maskTextSelector,
+              blockSelector: null === (cU = this._instance.config.session_recording) || void 0 === cU ? void 0 : cU.blockSelector,
+              maskAllElementAttributes: null === (yU = this._instance.config.session_recording) || void 0 === yU ? void 0 : yU.maskAllElementAttributes
             },
-            LM = null !== (jM = null == zM ? void 0 : zM.maskAllInputs) && void 0 !== jM ? jM : null == QM ? void 0 : QM.maskAllInputs,
-            mM = null !== (aM = null == zM ? void 0 : zM.maskTextSelector) && void 0 !== aM ? aM : null == QM ? void 0 : QM.maskTextSelector,
-            HM = null !== (PM = null == zM ? void 0 : zM.blockSelector) && void 0 !== PM ? PM : null == QM ? void 0 : QM.blockSelector,
-            hM = null !== (nM = null == zM ? void 0 : zM.maskAllElementAttributes) && void 0 !== nM ? nM : null == QM ? void 0 : QM.maskAllElementAttributes;
-          return HS(LM) && HS(mM) && HS(HM) && HS(hM) ? void 0 : {
-            maskAllInputs: null == LM || LM,
-            maskTextSelector: mM,
-            blockSelector: HM,
-            maskAllElementAttributes: hM
+            YU = null !== (QU = null == EU ? void 0 : EU.maskAllInputs) && void 0 !== QU ? QU : null == DU ? void 0 : DU.maskAllInputs,
+            NU = null !== (AU = null == EU ? void 0 : EU.maskTextSelector) && void 0 !== AU ? AU : null == DU ? void 0 : DU.maskTextSelector,
+            IU = null !== (FU = null == EU ? void 0 : EU.blockSelector) && void 0 !== FU ? FU : null == DU ? void 0 : DU.blockSelector,
+            pU = null !== (oU = null == EU ? void 0 : EU.maskAllElementAttributes) && void 0 !== oU ? oU : null == DU ? void 0 : DU.maskAllElementAttributes;
+          return Yy(YU) && Yy(NU) && Yy(IU) && Yy(pU) ? void 0 : {
+            maskAllInputs: null == YU || YU,
+            maskTextSelector: NU,
+            blockSelector: IU,
+            maskAllElementAttributes: pU
           }
         }
         un() {
-          var MM;
+          var UU;
           if (this.xe) return;
-          const rM = null === (MM = this.ne) || void 0 === MM ? void 0 : MM.masking;
-          if (dS(rM)) return;
-          const iM = this._instance.config.session_recording,
-            OM = ["maskAllInputs", "maskTextSelector", "blockSelector", "maskAllElementAttributes"].filter((MM => {
-              const OM = null == iM ? void 0 : iM[MM],
-                SM = rM[MM];
-              return !HS(OM) && OM !== SM
+          const XU = null === (UU = this.ne) || void 0 === UU ? void 0 : UU.masking;
+          if (py(XU)) return;
+          const zU = this._instance.config.session_recording,
+            cU = ["maskAllInputs", "maskTextSelector", "blockSelector", "maskAllElementAttributes"].filter((UU => {
+              const cU = null == zU ? void 0 : zU[UU],
+                yU = XU[UU];
+              return !Yy(cU) && cU !== yU
             }));
-          0 !== OM.length && (this.xe = !0, On.warn('Session recording masking is configured both in `posthog.init` and in your project settings, and they differ. The `session_recording` options in `posthog.init` take precedence, so the project ("Privacy and masking") setting is ignored for: ' + OM.join(", ") + ". Remove these masking options from `posthog.init` to use the project setting instead. See https://posthog.com/docs/session-replay/privacy", {
+          0 !== cU.length && (this.xe = !0, Uo.warn('Session recording masking is configured both in `posthog.init` and in your project settings, and they differ. The `session_recording` options in `posthog.init` take precedence, so the project ("Privacy and masking") setting is ignored for: ' + cU.join(", ") + ". Remove these masking options from `posthog.init` to use the project setting instead. See https://posthog.com/docs/session-replay/privacy", {
             client: {
-              maskAllInputs: null == iM ? void 0 : iM.maskAllInputs,
-              maskTextSelector: null == iM ? void 0 : iM.maskTextSelector,
-              blockSelector: null == iM ? void 0 : iM.blockSelector,
-              maskAllElementAttributes: null == iM ? void 0 : iM.maskAllElementAttributes
+              maskAllInputs: null == zU ? void 0 : zU.maskAllInputs,
+              maskTextSelector: null == zU ? void 0 : zU.maskTextSelector,
+              blockSelector: null == zU ? void 0 : zU.blockSelector,
+              maskAllElementAttributes: null == zU ? void 0 : zU.maskAllElementAttributes
             },
-            project: rM
+            project: XU
           }))
         }
         get cn() {
-          var MM;
-          return US(null === (MM = this._instance.config.session_recording.canvasCapture) || void 0 === MM ? void 0 : MM.resolutionScale, .1, 1, DS("canvas recording resolution scale"), 1)
+          var UU;
+          return ky(null === (UU = this._instance.config.session_recording.canvasCapture) || void 0 === UU ? void 0 : UU.resolutionScale, .1, 1, Oy("canvas recording resolution scale"), 1)
         }
         get dn() {
-          var MM, rM, iM, OM, SM, jM, aM;
-          const PM = this._instance.config.session_recording.captureCanvas,
-            nM = null === (MM = this.ne) || void 0 === MM ? void 0 : MM.canvasRecording,
-            QM = null !== (rM = null !== (iM = null == PM ? void 0 : PM.recordCanvas) && void 0 !== iM ? iM : null == nM ? void 0 : nM.enabled) && void 0 !== rM && rM,
-            zM = null !== (OM = null !== (SM = null == PM ? void 0 : PM.canvasFps) && void 0 !== SM ? SM : null == nM ? void 0 : nM.fps) && void 0 !== OM ? OM : 4;
-          let LM = null !== (jM = null !== (aM = null == PM ? void 0 : PM.canvasQuality) && void 0 !== aM ? aM : null == nM ? void 0 : nM.quality) && void 0 !== jM ? jM : .4;
-          if ("string" == typeof LM) {
-            const MM = parseFloat(LM);
-            LM = isNaN(MM) ? .4 : MM
+          var UU, XU, zU, cU, yU, QU, AU;
+          const FU = this._instance.config.session_recording.captureCanvas,
+            oU = null === (UU = this.ne) || void 0 === UU ? void 0 : UU.canvasRecording,
+            DU = null !== (XU = null !== (zU = null == FU ? void 0 : FU.recordCanvas) && void 0 !== zU ? zU : null == oU ? void 0 : oU.enabled) && void 0 !== XU && XU,
+            EU = null !== (cU = null !== (yU = null == FU ? void 0 : FU.canvasFps) && void 0 !== yU ? yU : null == oU ? void 0 : oU.fps) && void 0 !== cU ? cU : 4;
+          let YU = null !== (QU = null !== (AU = null == FU ? void 0 : FU.canvasQuality) && void 0 !== AU ? AU : null == oU ? void 0 : oU.quality) && void 0 !== QU ? QU : .4;
+          if ("string" == typeof YU) {
+            const UU = parseFloat(YU);
+            YU = isNaN(UU) ? .4 : UU
           }
           return {
-            enabled: QM,
-            fps: US(zM, 0, 12, DS("canvas recording fps"), 4),
-            quality: US(LM, 0, 1, DS("canvas recording quality"), .4)
+            enabled: DU,
+            fps: ky(EU, 0, 12, Oy("canvas recording fps"), 4),
+            quality: ky(YU, 0, 1, Oy("canvas recording quality"), .4)
           }
         }
         get hn() {
-          var MM;
-          const rM = !!(null === (MM = this.ne) || void 0 === MM ? void 0 : MM.consoleLogRecordingEnabled),
-            iM = this._instance.config.enable_recording_console_log;
-          return null != iM ? iM : rM
+          var UU;
+          const XU = !!(null === (UU = this.ne) || void 0 === UU ? void 0 : UU.consoleLogRecordingEnabled),
+            zU = this._instance.config.enable_recording_console_log;
+          return null != zU ? zU : XU
         }
-        get jL() {
-          var MM, rM, iM;
-          const OM = null === (MM = this.ne) || void 0 === MM ? void 0 : MM.networkPayloadCapture,
-            SM = {
-              recordHeaders: null === (rM = this._instance.config.session_recording) || void 0 === rM ? void 0 : rM.recordHeaders,
-              recordBody: null === (iM = this._instance.config.session_recording) || void 0 === iM ? void 0 : iM.recordBody
+        get FY() {
+          var UU, XU, zU;
+          const cU = null === (UU = this.ne) || void 0 === UU ? void 0 : UU.networkPayloadCapture,
+            yU = {
+              recordHeaders: null === (XU = this._instance.config.session_recording) || void 0 === XU ? void 0 : XU.recordHeaders,
+              recordBody: null === (zU = this._instance.config.session_recording) || void 0 === zU ? void 0 : zU.recordBody
             },
-            jM = (null == SM ? void 0 : SM.recordHeaders) || (null == OM ? void 0 : OM.recordHeaders),
-            aM = (null == SM ? void 0 : SM.recordBody) || (null == OM ? void 0 : OM.recordBody),
-            PM = rn(this._instance.config.capture_performance),
-            nM = rn(null == OM ? void 0 : OM.capturePerformance),
-            QM = !!(lS(PM) ? PM : nM);
-          return jM || aM || QM ? {
-            recordHeaders: jM,
-            recordBody: aM,
-            recordPerformance: QM
+            QU = (null == yU ? void 0 : yU.recordHeaders) || (null == cU ? void 0 : cU.recordHeaders),
+            AU = (null == yU ? void 0 : yU.recordBody) || (null == cU ? void 0 : cU.recordBody),
+            FU = hF(this._instance.config.capture_performance),
+            oU = hF(null == cU ? void 0 : cU.capturePerformance),
+            DU = !!(ty(FU) ? FU : oU);
+          return QU || AU || DU ? {
+            recordHeaders: QU,
+            recordBody: AU,
+            recordPerformance: DU
           } : void 0
         }
         vn() {
-          var MM, rM;
-          const iM = [],
-            SM = null === (MM = aS.__PosthogExtensions__) || void 0 === MM || null === (MM = MM.rrwebPlugins) || void 0 === MM ? void 0 : MM.getRecordConsolePlugin;
-          SM && this.hn && iM.push(SM());
-          const jM = null === (rM = aS.__PosthogExtensions__) || void 0 === rM || null === (rM = rM.rrwebPlugins) || void 0 === rM ? void 0 : rM.getRecordNetworkPlugin;
-          if (this.jL && LS(jM))
-            if (!oS.includes(SS.hostname) || this._forceAllowLocalhostNetworkCapture) {
-              const MM = LS(this._instance.requestRouter.isIngestionEndpoint) ? this._instance.requestRouter.isIngestionEndpoint.bind(this._instance.requestRouter) : void 0;
-              iM.push(jM(OM(OM({}, ((MM, rM, iM) => {
-                const SM = {
-                    payloadSizeLimitBytes: rj.payloadSizeLimitBytes,
-                    performanceEntryTypeToObserve: [...rj.performanceEntryTypeToObserve],
-                    payloadHostDenyList: [...rM.payloadHostDenyList || [], ...rj.payloadHostDenyList]
+          var UU, XU;
+          const zU = [],
+            yU = null === (UU = yy.__PosthogExtensions__) || void 0 === UU || null === (UU = UU.rrwebPlugins) || void 0 === UU ? void 0 : UU.getRecordConsolePlugin;
+          yU && this.hn && zU.push(yU());
+          const QU = null === (XU = yy.__PosthogExtensions__) || void 0 === XU || null === (XU = XU.rrwebPlugins) || void 0 === XU ? void 0 : XU.getRecordNetworkPlugin;
+          if (this.FY && Dy(QU))
+            if (!uy.includes(zy.hostname) || this._forceAllowLocalhostNetworkCapture) {
+              const UU = Dy(this._instance.requestRouter.isIngestionEndpoint) ? this._instance.requestRouter.isIngestionEndpoint.bind(this._instance.requestRouter) : void 0;
+              zU.push(QU(cU(cU({}, ((UU, XU, zU) => {
+                const yU = {
+                    payloadSizeLimitBytes: hy.payloadSizeLimitBytes,
+                    performanceEntryTypeToObserve: [...hy.performanceEntryTypeToObserve],
+                    payloadHostDenyList: [...XU.payloadHostDenyList || [], ...hy.payloadHostDenyList]
                   },
-                  jM = !1 !== MM.session_recording.recordHeaders && rM.recordHeaders,
-                  aM = !1 !== MM.session_recording.recordBody && rM.recordBody,
-                  PM = !1 !== MM.capture_performance && rM.recordPerformance,
-                  nM = (MM => {
-                    const rM = Mj(MM);
-                    return MM => ((null == MM ? void 0 : MM.requestBody) && (MM.requestBody = Pj(MM.requestBody, MM.requestHeaders, rM, "Request")), (null == MM ? void 0 : MM.responseBody) && (MM.responseBody = Pj(MM.responseBody, MM.responseHeaders, rM, "Response")), MM)
-                  })(SM),
-                  QM = rM => {
-                    return nM(((MM, rM, iM) => {
-                      var OM;
-                      if (null == iM ? void 0 : iM(MM.name)) return;
-                      const SM = fS(MM.name);
-                      let jM = 0 === rM.indexOf("http") ? null === (OM = fS(rM)) || void 0 === OM ? void 0 : OM.pathname : rM;
-                      "/" === jM && (jM = "");
-                      const aM = null == SM ? void 0 : SM.pathname.replace(jM || "", "");
-                      return SM && aM && aj.some((MM => 0 === aM.indexOf(MM))) ? void 0 : MM
-                    })((jj((OM = rM).requestHeaders), jj(OM.responseHeaders), OM), MM.api_host, iM));
-                    var OM
+                  QU = !1 !== UU.session_recording.recordHeaders && XU.recordHeaders,
+                  AU = !1 !== UU.session_recording.recordBody && XU.recordBody,
+                  FU = !1 !== UU.capture_performance && XU.recordPerformance,
+                  oU = (UU => {
+                    const XU = Ty(UU);
+                    return UU => ((null == UU ? void 0 : UU.requestBody) && (UU.requestBody = QQ(UU.requestBody, UU.requestHeaders, XU, "Request")), (null == UU ? void 0 : UU.responseBody) && (UU.responseBody = QQ(UU.responseBody, UU.responseHeaders, XU, "Response")), UU)
+                  })(yU),
+                  DU = XU => {
+                    return oU(((UU, XU, zU) => {
+                      var cU;
+                      if (null == zU ? void 0 : zU(UU.name)) return;
+                      const yU = fy(UU.name);
+                      let QU = 0 === XU.indexOf("http") ? null === (cU = fy(XU)) || void 0 === cU ? void 0 : cU.pathname : XU;
+                      "/" === QU && (QU = "");
+                      const AU = null == yU ? void 0 : yU.pathname.replace(QU || "", "");
+                      return yU && AU && yQ.some((UU => 0 === AU.indexOf(UU))) ? void 0 : UU
+                    })((cQ((cU = XU).requestHeaders), cQ(cU.responseHeaders), cU), UU.api_host, zU));
+                    var cU
                   },
-                  zM = LS(MM.session_recording.maskNetworkRequestFn);
-                return zM && LS(MM.session_recording.maskCapturedNetworkRequestFn) ? sS.warn("Both `maskNetworkRequestFn` and `maskCapturedNetworkRequestFn` are defined. `maskNetworkRequestFn` will be ignored.") : zM && (MM.session_recording.maskCapturedNetworkRequestFn = rM => {
-                  const iM = MM.session_recording.maskNetworkRequestFn({
-                    url: rM.name
+                  EU = Dy(UU.session_recording.maskNetworkRequestFn);
+                return EU && Dy(UU.session_recording.maskCapturedNetworkRequestFn) ? qy.warn("Both `maskNetworkRequestFn` and `maskCapturedNetworkRequestFn` are defined. `maskNetworkRequestFn` will be ignored.") : EU && (UU.session_recording.maskCapturedNetworkRequestFn = XU => {
+                  const zU = UU.session_recording.maskNetworkRequestFn({
+                    url: XU.name
                   });
-                  return !iM && rM.isInitial ? iM : OM(OM({}, rM), {}, {
-                    name: null == iM ? void 0 : iM.url
+                  return !zU && XU.isInitial ? zU : cU(cU({}, XU), {}, {
+                    name: null == zU ? void 0 : zU.url
                   })
-                }), SM.maskRequestFn = LS(MM.session_recording.maskCapturedNetworkRequestFn) ? rM => {
-                  var iM, OM;
-                  const SM = QM(rM);
-                  if (!SM) return;
-                  const jM = SM.isInitial ? {
+                }), yU.maskRequestFn = Dy(UU.session_recording.maskCapturedNetworkRequestFn) ? XU => {
+                  var zU, cU;
+                  const yU = DU(XU);
+                  if (!yU) return;
+                  const QU = yU.isInitial ? {
                       name: "",
-                      entryType: SM.entryType,
-                      startTime: SM.startTime,
-                      duration: SM.duration,
-                      endTime: SM.endTime,
-                      timeOrigin: SM.timeOrigin,
-                      timestamp: SM.timestamp,
+                      entryType: yU.entryType,
+                      startTime: yU.startTime,
+                      duration: yU.duration,
+                      endTime: yU.endTime,
+                      timeOrigin: yU.timeOrigin,
+                      timestamp: yU.timestamp,
                       isInitial: !0
                     } : void 0,
-                    aM = null === (iM = (OM = MM.session_recording).maskCapturedNetworkRequestFn) || void 0 === iM ? void 0 : iM.call(OM, SM);
-                  return dS(aM) && jM ? (Qj.add(jM), jM) : null != aM ? aM : void 0
-                } : MM => function(MM) {
-                  if (!HS(MM)) return MM.requestBody = nj(MM.requestBody, "Request"), MM.responseBody = nj(MM.responseBody, "Response"), MM
-                }(QM(MM)), OM(OM(OM({}, rj), SM), {}, {
-                  recordHeaders: jM,
-                  recordBody: aM,
-                  recordPerformance: PM,
-                  recordInitialRequests: PM,
-                  streamNetworkBody: !0 === MM.session_recording.streamNetworkBody
+                    AU = null === (zU = (cU = UU.session_recording).maskCapturedNetworkRequestFn) || void 0 === zU ? void 0 : zU.call(cU, yU);
+                  return py(AU) && QU ? (FQ.add(QU), QU) : null != AU ? AU : void 0
+                } : UU => function(UU) {
+                  if (!Yy(UU)) return UU.requestBody = AQ(UU.requestBody, "Request"), UU.responseBody = AQ(UU.responseBody, "Response"), UU
+                }(DU(UU)), cU(cU(cU({}, hy), yU), {}, {
+                  recordHeaders: QU,
+                  recordBody: AU,
+                  recordPerformance: FU,
+                  recordInitialRequests: FU,
+                  streamNetworkBody: !0 === UU.session_recording.streamNetworkBody
                 })
-              })(this._instance.config, this.jL, MM)), {}, {
+              })(this._instance.config, this.FY, UU)), {}, {
                 captureFetchSynchronously: !0 === this._instance.config.__preview_replay_sync_fetch
               })))
-            } else On.info("NetworkCapture not started because we are on localhost.");
-          return iM
+            } else Uo.info("NetworkCapture not started because we are on localhost.");
+          return zU
         }
-        pn(MM) {
-          return this._instance.config.disable_capture_url_hashes ? CS(MM) : MM
+        pn(UU) {
+          return this._instance.config.disable_capture_url_hashes ? By(UU) : UU
         }
-        mn(MM) {
-          const rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? CS(MM) : this.pn(MM),
-            iM = this._instance.config.mask_personal_data_properties ? [...uP, ...this._instance.config.custom_personal_data_properties || []] : [];
-          return this.gn(function(MM, rM) {
-            if (!MM || !rM || !rM.length) return MM;
-            const iM = MM.split("#"),
-              OM = iM[1],
-              SM = (iM[0] || "").split("?"),
-              jM = SM[1],
-              aM = SM[0],
-              PM = (jM || "").split("&"),
-              nM = [];
-            for (let zM = 0; PM.length > zM; zM++) {
-              const MM = PM[zM].split("=");
-              zS(MM) && (rM.includes(MM[0]) ? nM.push(MM[0] + "=<masked>") : nM.push(PM[zM]))
+        mn(UU) {
+          const XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? By(UU) : this.pn(UU),
+            zU = this._instance.config.mask_personal_data_properties ? [...LF, ...this._instance.config.custom_personal_data_properties || []] : [];
+          return this.gn(function(UU, XU) {
+            if (!UU || !XU || !XU.length) return UU;
+            const zU = UU.split("#"),
+              cU = zU[1],
+              yU = (zU[0] || "").split("?"),
+              QU = yU[1],
+              AU = yU[0],
+              FU = (QU || "").split("&"),
+              oU = [];
+            for (let EU = 0; FU.length > EU; EU++) {
+              const UU = FU[EU].split("=");
+              oy(UU) && (XU.includes(UU[0]) ? oU.push(UU[0] + "=<masked>") : oU.push(FU[EU]))
             }
-            let QM = aM;
-            return null != jM && (QM += "?" + nM.join("&")), null != OM && (QM += "#" + OM), QM
-          }(rM, iM))
+            let DU = AU;
+            return null != QU && (DU += "?" + oU.join("&")), null != cU && (DU += "#" + cU), DU
+          }(XU, zU))
         }
-        gn(MM) {
-          const rM = this._instance.config.session_recording;
-          if (rM.maskCapturedNetworkRequestFn) {
-            var iM;
-            const OM = rM.maskCapturedNetworkRequestFn({
-              name: MM
+        gn(UU) {
+          const XU = this._instance.config.session_recording;
+          if (XU.maskCapturedNetworkRequestFn) {
+            var zU;
+            const cU = XU.maskCapturedNetworkRequestFn({
+              name: UU
             });
-            return null !== (iM = null == OM ? void 0 : OM.name) && void 0 !== iM ? iM : null == OM ? void 0 : OM.url
+            return null !== (zU = null == cU ? void 0 : cU.name) && void 0 !== zU ? zU : null == cU ? void 0 : cU.url
           }
-          if (rM.maskNetworkRequestFn) {
-            const iM = rM.maskNetworkRequestFn({
-              url: MM
+          if (XU.maskNetworkRequestFn) {
+            const zU = XU.maskNetworkRequestFn({
+              url: UU
             });
-            return null == iM ? void 0 : iM.url
+            return null == zU ? void 0 : zU.url
           }
-          return MM
+          return UU
         }
-        yn(MM) {
+        yn(UU) {
           try {
-            return MM.rrwebMethod(), !0
-          } catch (rM) {
+            return UU.rrwebMethod(), !0
+          } catch (XU) {
             return 10 > this.ce.length ? this.ce.push({
-              enqueuedAt: MM.enqueuedAt || Date.now(),
-              attempt: MM.attempt + 1,
-              rrwebMethod: MM.rrwebMethod
-            }) : On.warn("could not emit queued rrweb event.", rM, MM), !1
+              enqueuedAt: UU.enqueuedAt || Date.now(),
+              attempt: UU.attempt + 1,
+              rrwebMethod: UU.rrwebMethod
+            }) : Uo.warn("could not emit queued rrweb event.", XU, UU), !1
           }
         }
-        Vt(MM, rM) {
-          return this.yn(jn((() => Pn().addCustomEvent(MM, rM))))
+        Vt(UU, XU) {
+          return this.yn(zo((() => yo().addCustomEvent(UU, XU))))
         }
         bn() {
-          var MM;
-          return this.ae && !0 === (null === (MM = this._instance.config.session_recording) || void 0 === MM ? void 0 : MM.captureJsonLd) && !this.Y.urlBlocked && !0 !== this.de
+          var UU;
+          return this.ae && !0 === (null === (UU = this._instance.config.session_recording) || void 0 === UU ? void 0 : UU.captureJsonLd) && !this.Y.urlBlocked && !0 !== this.de
         }
-        wn(MM) {
+        wn(UU) {
           if (!this.bn()) return !1;
           try {
-            const rM = Pn();
-            return !!rM && (rM.addCustomEvent("$json_ld", MM), this.bn())
-          } catch (MM) {
+            const XU = yo();
+            return !!XU && (XU.addCustomEvent("$json_ld", UU), this.bn())
+          } catch (UU) {
             return !1
           }
         }
         kn() {
-          let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
           Promise.resolve().then((() => {
-            var rM;
-            return null === (rM = this._n) || void 0 === rM ? void 0 : rM.scan(MM)
+            var XU;
+            return null === (XU = this._n) || void 0 === XU ? void 0 : XU.scan(UU)
           }))
         }
         Sn() {
           try {
-            if (this._instance.config.capture_pageview || !rS) return;
-            const MM = new URL(rS.location.href),
-              rM = this.mn(MM.origin + MM.pathname + MM.search);
-            this.xn !== rM && (this.xn = rM, this.Vt("$url_changed", {
-              href: rM
+            if (this._instance.config.capture_pageview || !hc) return;
+            const UU = new URL(hc.location.href),
+              XU = this.mn(UU.origin + UU.pathname + UU.search);
+            this.xn !== XU && (this.xn = XU, this.Vt("$url_changed", {
+              href: XU
             }))
-          } catch (MM) {}
+          } catch (UU) {}
         }
         Cn() {
           if (this.ce.length) {
-            const MM = [...this.ce];
-            this.ce = [], MM.forEach((MM => {
-              Date.now() - MM.enqueuedAt > 2e3 || this.yn(MM)
+            const UU = [...this.ce];
+            this.ce = [], UU.forEach((UU => {
+              Date.now() - UU.enqueuedAt > 2e3 || this.yn(UU)
             }))
           }
         }
         jt() {
-          return this.yn(jn((() => Pn().takeFullSnapshot())))
+          return this.yn(zo((() => yo().takeFullSnapshot())))
         }
         get In() {
-          var MM, rM, iM;
-          if ((null === (MM = this.re) || void 0 === MM ? void 0 : MM.hasPendingTriggers(this.sessionId)) && !["sampled", "active"].includes(this.status)) {
-            var OM;
-            const MM = null === (OM = this._instance.config.session_recording) || void 0 === OM ? void 0 : OM.trigger_pending_buffer_interval_millis;
-            return yS(MM) && Number.isFinite(MM) && MM >= 1e3 && 36e5 >= MM ? MM : 6e4
+          var UU, XU, zU;
+          if ((null === (UU = this.re) || void 0 === UU ? void 0 : UU.hasPendingTriggers(this.sessionId)) && !["sampled", "active"].includes(this.status)) {
+            var cU;
+            const UU = null === (cU = this._instance.config.session_recording) || void 0 === cU ? void 0 : cU.trigger_pending_buffer_interval_millis;
+            return ay(UU) && Number.isFinite(UU) && UU >= 1e3 && 36e5 >= UU ? UU : 6e4
           }
-          return null !== (rM = null === (iM = this._instance.config.session_recording) || void 0 === iM ? void 0 : iM.full_snapshot_interval_millis) && void 0 !== rM ? rM : 3e5
+          return null !== (XU = null === (zU = this._instance.config.session_recording) || void 0 === zU ? void 0 : zU.full_snapshot_interval_millis) && void 0 !== XU ? XU : 3e5
         }
         Mn() {
           if (this.Tn && clearInterval(this.Tn), !0 === this.de) return;
-          const MM = this.In;
-          MM && (this.Tn = setInterval((() => {
+          const UU = this.In;
+          UU && (this.Tn = setInterval((() => {
             this.jt()
-          }), MM))
+          }), UU))
         }
-        Bt(MM) {
-          "event" === MM && this.Rn(), !this.Y.urlBlocked && ["sampled", "active"].includes(this.status) && this.Mn()
+        Bt(UU) {
+          "event" === UU && this.Rn(), !this.Y.urlBlocked && ["sampled", "active"].includes(this.status) && this.Mn()
         }
         En() {
-          var MM;
-          this.Y.urlBlocked || (this.Y.urlBlocked = !0, null === (MM = this._n) || void 0 === MM || MM.scan(), clearInterval(this.Tn), On.info("recording paused due to URL blocker"), this.Vt("recording paused", {
+          var UU;
+          this.Y.urlBlocked || (this.Y.urlBlocked = !0, null === (UU = this._n) || void 0 === UU || UU.scan(), clearInterval(this.Tn), Uo.info("recording paused due to URL blocker"), this.Vt("recording paused", {
             reason: "url blocker"
           }))
         }
         An() {
-          var MM;
-          this.Y.urlBlocked && (null === (MM = this._n) || void 0 === MM || MM.scan(), this.Y.urlBlocked = !1, this.jt(), this.kn(), this.Mn(), this.Vt("recording resumed", {
+          var UU;
+          this.Y.urlBlocked && (null === (UU = this._n) || void 0 === UU || UU.scan(), this.Y.urlBlocked = !1, this.jt(), this.kn(), this.Mn(), this.Vt("recording resumed", {
             reason: "left blocked url"
-          }), On.info("recording resumed"))
+          }), Uo.info("recording resumed"))
         }
-        $n(MM, rM) {
-          var iM;
-          if ("event" === MM && this.Rn(), !this.ue && (null === (iM = this.re) || void 0 === iM ? void 0 : iM.hasPendingTriggers(this.sessionId))) {
+        $n(UU, XU) {
+          var zU;
+          if ("event" === UU && this.Rn(), !this.ue && (null === (zU = this.re) || void 0 === zU ? void 0 : zU.hasPendingTriggers(this.sessionId))) {
             this.ue = !0;
             try {
-              var OM, SM;
-              const iM = "url" === MM ? vj : Fj;
-              null === (OM = this._instance.persistence) || void 0 === OM || OM.register({
-                [iM]: this.sessionId
-              }), null === (SM = this.re) || void 0 === SM || SM.updateActiveTriggers(this.sessionId), this.Bt(), this.Ye(), this.qt(MM + "_trigger_matched", {
-                ["url" === MM ? "matchedUrl" : "matchedEvent"]: rM
+              var cU, yU;
+              const zU = "url" === UU ? VQ : sQ;
+              null === (cU = this._instance.persistence) || void 0 === cU || cU.register({
+                [zU]: this.sessionId
+              }), null === (yU = this.re) || void 0 === yU || yU.updateActiveTriggers(this.sessionId), this.Bt(), this.Ye(), this.qt(UU + "_trigger_matched", {
+                ["url" === UU ? "matchedUrl" : "matchedEvent"]: XU
               })
             } finally {
               this.ue = !1
@@ -8051,95 +8051,95 @@ export const modules = {
           return !!this.se
         }
         get ne() {
-          const MM = this._instance.get_property("$session_recording_remote_config");
-          if (!MM) return;
-          let rM;
+          const UU = this._instance.get_property("$session_recording_remote_config");
+          if (!UU) return;
+          let XU;
           try {
-            rM = mS(MM) ? MM : JSON.parse(MM)
-          } catch (MM) {
-            return void On.warn("persisted remote config for session recording is invalid and will be ignored", MM)
+            XU = Ey(UU) ? UU : JSON.parse(UU)
+          } catch (UU) {
+            return void Uo.warn("persisted remote config for session recording is invalid and will be ignored", UU)
           }
           if (!this.isStarted && !this.Ue) {
-            var iM;
-            const OM = null !== (iM = rM.cache_timestamp) && void 0 !== iM ? iM : Date.now();
-            if (Date.now() - OM > 36e5) return void On.info("persisted remote config for session recording is stale and will be ignored", {
-              cacheTimestamp: OM,
-              persistedConfig: MM
+            var zU;
+            const cU = null !== (zU = XU.cache_timestamp) && void 0 !== zU ? zU : Date.now();
+            if (Date.now() - cU > 36e5) return void Uo.info("persisted remote config for session recording is stale and will be ignored", {
+              cacheTimestamp: cU,
+              persistedConfig: UU
             })
           }
-          return rM
+          return XU
         }
-        On(MM, rM, iM) {
-          this._instance.get_property(MM) && (rM(), iM())
+        On(UU, XU, zU) {
+          this._instance.get_property(UU) && (XU(), zU())
         }
-        start(MM) {
-          var rM, iM;
-          const OM = this.ne;
-          if (!OM) return void On.info("remote config must be stored in persistence before recording can start");
+        start(UU) {
+          var XU, zU;
+          const cU = this.ne;
+          if (!cU) return void Uo.info("remote config must be stored in persistence before recording can start");
           if (!this.isStarted) {
-            const MM = !1 !== this.de && !this.we;
-            this.Ke(MM ? "no_interaction_since_recording_started" : void 0), this.we = !1, this.ye = MM, this.be = !1
+            const UU = !1 !== this.de && !this.we;
+            this.Ke(UU ? "no_interaction_since_recording_started" : void 0), this.we = !1, this.ye = UU, this.be = !1
           }
           this.Pe && (this.Pn(), this.tn());
           const {
-            sessionId: SM,
-            windowId: jM,
-            sessionStartTimestamp: aM
+            sessionId: yU,
+            windowId: QU,
+            sessionStartTimestamp: AU
           } = this.Yt.checkAndGetSessionAndWindowId();
-          this.Xt = SM, this.je = jM, this._sessionStartTimestamp = aM, this.Ln(), null === (rM = this._instance.persistence) || void 0 === rM || rM.unregister("$debug_first_full_snapshot_timestamp"), (null == OM ? void 0 : OM.endpoint) && (this.oe = null == OM ? void 0 : OM.endpoint), this.re = 2 === (null == OM ? void 0 : OM.version) && (null == OM ? void 0 : OM.triggerGroups) && OM.triggerGroups.length > 0 ? new gP(this._instance, this.Y, this.qt.bind(this), this.Vt.bind(this), this.Bt.bind(this)) : new tP(this._instance, this.Y, this.tt, this.et, this.qt.bind(this), this.jt.bind(this), this.Bt.bind(this)), this.re.onRemoteConfig(OM), null === (iM = this.Wt) || void 0 === iM || iM.call(this), this.Wt = this.re.setupEventTriggerListeners(this._instance.on.bind(this._instance, "eventCaptured"), this.sessionId, ((MM, rM) => this.$n(MM, rM))), this.On(fj, (() => {
+          this.Xt = yU, this.je = QU, this._sessionStartTimestamp = AU, this.Ln(), null === (XU = this._instance.persistence) || void 0 === XU || XU.unregister("$debug_first_full_snapshot_timestamp"), (null == cU ? void 0 : cU.endpoint) && (this.oe = null == cU ? void 0 : cU.endpoint), this.re = 2 === (null == cU ? void 0 : cU.version) && (null == cU ? void 0 : cU.triggerGroups) && cU.triggerGroups.length > 0 ? new dF(this._instance, this.Y, this.qt.bind(this), this.Vt.bind(this), this.Bt.bind(this)) : new WF(this._instance, this.Y, this.tt, this.et, this.qt.bind(this), this.jt.bind(this), this.Bt.bind(this)), this.re.onRemoteConfig(cU), null === (zU = this.Wt) || void 0 === zU || zU.call(this), this.Wt = this.re.setupEventTriggerListeners(this._instance.on.bind(this._instance, "eventCaptured"), this.sessionId, ((UU, XU) => this.$n(UU, XU))), this.On(fQ, (() => {
             this.overrideSampling()
           }), (() => {
-            var MM;
-            return null === (MM = this._instance.persistence) || void 0 === MM ? void 0 : MM.unregister(fj)
-          })), this.On(Yj, (() => {
+            var UU;
+            return null === (UU = this._instance.persistence) || void 0 === UU ? void 0 : UU.unregister(fQ)
+          })), this.On(iQ, (() => {
             this.overrideLinkedFlag()
           }), (() => {
-            var MM;
-            return null === (MM = this._instance.persistence) || void 0 === MM ? void 0 : MM.unregister(Yj)
-          })), this.On(Aj, (() => {
+            var UU;
+            return null === (UU = this._instance.persistence) || void 0 === UU ? void 0 : UU.unregister(iQ)
+          })), this.On(MQ, (() => {
             this.overrideTrigger("event")
           }), (() => {
-            var MM;
-            return null === (MM = this._instance.persistence) || void 0 === MM ? void 0 : MM.unregister(Aj)
-          })), this.On(Nj, (() => {
+            var UU;
+            return null === (UU = this._instance.persistence) || void 0 === UU ? void 0 : UU.unregister(MQ)
+          })), this.On(HQ, (() => {
             this.overrideTrigger("url")
           }), (() => {
-            var MM;
-            return null === (MM = this._instance.persistence) || void 0 === MM ? void 0 : MM.unregister(Nj)
-          })), this.re.makeSamplingDecisions(this.sessionId), this.Dn(), this.ke || (ZS(rS, "beforeunload", this.Ze), ZS(rS, "pagehide", this.en), ZS(rS, "offline", this.nn), ZS(rS, "online", this.rn), ZS(OS, "visibilitychange", this.sn), !this.De && LS(this.Yt.onSessionId) && (this.De = this.Yt.onSessionId(this.qe)), !this.Fe && LS(this.Yt.on) ? this.Fe = this.Yt.on("forcedIdleReset", (() => {
-            this.ze(), this.de = "unknown", this.stop(), this.Ne = this.Yt.onSessionId(((MM, rM, iM) => {
-              var OM;
-              null === (OM = this.Ne) || void 0 === OM || OM.call(this), this.Ne = void 0, this.qe(MM, rM, iM)
+            var UU;
+            return null === (UU = this._instance.persistence) || void 0 === UU ? void 0 : UU.unregister(HQ)
+          })), this.re.makeSamplingDecisions(this.sessionId), this.Dn(), this.ke || (ry(hc, "beforeunload", this.Ze), ry(hc, "pagehide", this.en), ry(hc, "offline", this.nn), ry(hc, "online", this.rn), ry(Xy, "visibilitychange", this.sn), !this.De && Dy(this.Yt.onSessionId) && (this.De = this.Yt.onSessionId(this.qe)), !this.Fe && Dy(this.Yt.on) ? this.Fe = this.Yt.on("forcedIdleReset", (() => {
+            this.ze(), this.de = "unknown", this.stop(), this.Ne = this.Yt.onSessionId(((UU, XU, zU) => {
+              var cU;
+              null === (cU = this.Ne) || void 0 === cU || cU.call(this), this.Ne = void 0, this.qe(UU, XU, zU)
             }))
-          })) : LS(this.Yt.on) || On.warn("bundled core has no SessionIdManager.on (requires posthog-js >= 1.268.6); recording will start but skip forced-idle-reset handling"), dS(this.Le) && (this.Le = this._instance.on("eventCaptured", (MM => {
+          })) : Dy(this.Yt.on) || Uo.warn("bundled core has no SessionIdManager.on (requires posthog-js >= 1.268.6); recording will start but skip forced-idle-reset handling"), py(this.Le) && (this.Le = this._instance.on("eventCaptured", (UU => {
             try {
-              if ("$pageview" === MM.event) {
-                const rM = (null == MM ? void 0 : MM.properties.$current_url) ? this.mn(MM.properties.$current_url) : "";
-                if (!rM) return;
+              if ("$pageview" === UU.event) {
+                const XU = (null == UU ? void 0 : UU.properties.$current_url) ? this.mn(UU.properties.$current_url) : "";
+                if (!XU) return;
                 this.Vt("$pageview", {
-                  href: rM
+                  href: XU
                 })
               }
-            } catch (MM) {
-              On.error("Could not add $pageview to rrweb session", MM)
+            } catch (UU) {
+              Uo.error("Could not add $pageview to rrweb session", UU)
             }
-          }))), "active" === this.status && this.qt(MM || "recording_initialized"))
+          }))), "active" === this.status && this.qt(UU || "recording_initialized"))
         }
         Fn() {
-          var MM, rM, iM, OM, SM, jM;
-          null == rS || rS.removeEventListener("beforeunload", this.Ze), null == rS || rS.removeEventListener("pagehide", this.en), null == rS || rS.removeEventListener("offline", this.nn), null == rS || rS.removeEventListener("online", this.rn), null == OS || OS.removeEventListener("visibilitychange", this.sn), clearInterval(this.Tn), this.Nn(), null === (MM = this.Le) || void 0 === MM || MM.call(this), this.Le = void 0, null === (rM = this.Wt) || void 0 === rM || rM.call(this), this.Wt = void 0, null === (iM = this.De) || void 0 === iM || iM.call(this), this.De = void 0, null === (OM = this.Fe) || void 0 === OM || OM.call(this), this.Fe = void 0, null === (SM = this.Ne) || void 0 === SM || SM.call(this), this.Ne = void 0, null === (jM = this.re) || void 0 === jM || jM.stop(), this.qn(), this.Pn()
+          var UU, XU, zU, cU, yU, QU;
+          null == hc || hc.removeEventListener("beforeunload", this.Ze), null == hc || hc.removeEventListener("pagehide", this.en), null == hc || hc.removeEventListener("offline", this.nn), null == hc || hc.removeEventListener("online", this.rn), null == Xy || Xy.removeEventListener("visibilitychange", this.sn), clearInterval(this.Tn), this.Nn(), null === (UU = this.Le) || void 0 === UU || UU.call(this), this.Le = void 0, null === (XU = this.Wt) || void 0 === XU || XU.call(this), this.Wt = void 0, null === (zU = this.De) || void 0 === zU || zU.call(this), this.De = void 0, null === (cU = this.Fe) || void 0 === cU || cU.call(this), this.Fe = void 0, null === (yU = this.Ne) || void 0 === yU || yU.call(this), this.Ne = void 0, null === (QU = this.re) || void 0 === QU || QU.stop(), this.qn(), this.Pn()
         }
         Pn() {
           this.Oe += 1, this.Ae = [], this.$e = 0, this.jn = void 0, this.Pe = !1
         }
         qn() {
-          var MM, rM;
-          null === (MM = this.Bn) || void 0 === MM || MM.stop(), this.ce = [], null === (rM = this._n) || void 0 === rM || rM.stop(), this._n = void 0, this.ae = !1;
+          var UU, XU;
+          null === (UU = this.Bn) || void 0 === UU || UU.stop(), this.ce = [], null === (XU = this._n) || void 0 === XU || XU.stop(), this._n = void 0, this.ae = !1;
           try {
-            var iM;
-            null === (iM = this.se) || void 0 === iM || iM.call(this)
-          } catch (MM) {
-            On.warn("could not stop rrweb", MM)
+            var zU;
+            null === (zU = this.se) || void 0 === zU || zU.call(this)
+          } catch (UU) {
+            Uo.warn("could not stop rrweb", UU)
           }
           this.se = void 0
         }
@@ -8147,17 +8147,17 @@ export const modules = {
           if (!this.jn || 0 === this.$e) return !1;
           if (this.Pe) return !0;
           this.Pe = !0, this.Hn = void 0;
-          const MM = this.Oe;
+          const UU = this.Oe;
           return this.Nn(), this.qn(), this.jn.catch((() => {})).then((() => {
-            MM === this.Oe && (this.Pe = !1, this.Ye(), this.tn(), this.Un(), this.Fn(), On.info("stopped"))
+            UU === this.Oe && (this.Pe = !1, this.Ye(), this.tn(), this.Un(), this.Fn(), Uo.info("stopped"))
           })).catch((() => {
-            this.Pe = !1, this.Un(), this.Fn(), On.info("stopped")
+            this.Pe = !1, this.Un(), this.Fn(), Uo.info("stopped")
           })), !0
         }
         stop() {
           if (this.qn(), this.Ue) this.Xe();
           else if (this.zn()) return;
-          this.Ye(), this.tn(), this.Un(), this.Fn(), On.info("stopped")
+          this.Ye(), this.tn(), this.Un(), this.Fn(), Uo.info("stopped")
         }
         Un() {
           this.Ke(void 0, {
@@ -8167,205 +8167,205 @@ export const modules = {
         flushBeforeIdentityReset() {
           (this.isStarted || this.Pe) && (this.Xe(), this.Ye())
         }
-        He(MM) {
+        He(UU) {
           this.Ue = !0, this.le = Date.now();
           try {
-            var rM, iM;
-            this.stop(), this.Wn = void 0, this.me = 0, this.fe = 0, this.ve = 0, this.pe = 0, null === (rM = an()) || void 0 === rM || null === (iM = rM.resetSnapshotCostState) || void 0 === iM || iM.call(rM), this.start("session_id_changed")
+            var XU, zU;
+            this.stop(), this.Wn = void 0, this.me = 0, this.fe = 0, this.ve = 0, this.pe = 0, null === (XU = co()) || void 0 === XU || null === (zU = XU.resetSnapshotCostState) || void 0 === zU || zU.call(XU), this.start("session_id_changed")
           } finally {
             this.Ue = !1
           }
-          this.Ke(MM ? "no_interaction_since_session_rotated" : void 0), this.ye = !1
+          this.Ke(UU ? "no_interaction_since_session_rotated" : void 0), this.ye = !1
         }
-        Ke(MM) {
+        Ke(UU) {
           let {
-            preserveLogDedup: rM = !1
+            preserveLogDedup: XU = !1
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (this.ge = !HS(MM), this.Hn = MM, HS(MM)) return void(rM || (this.Vn = void 0));
+          if (this.ge = !Yy(UU), this.Hn = UU, Yy(UU)) return void(XU || (this.Vn = void 0));
           if (this.Ue) return;
-          const iM = `${this.sessionId}:${MM}`;
-          iM !== this.Vn && (this.Vn = iM, On.info(`holding buffer: ${MM}. nothing is uploaded until the user interacts with the page`))
+          const zU = `${this.sessionId}:${UU}`;
+          zU !== this.Vn && (this.Vn = zU, Uo.info(`holding buffer: ${UU}. nothing is uploaded until the user interacts with the page`))
         }
         Rn() {
           this.isStarted || (this.we = !0), this.ge && (this.Ke(void 0), this.ye = !1, this.be && (this.be = !1, this.jt()), this.Gn())
         }
         discard() {
           let {
-            discardProducerEvents: MM = !1
+            discardProducerEvents: UU = !1
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          this.ge = !0, MM && (this.tn(), this.qn()), this.tn(), this.Fn(), this.tn(), this.Un(), On.info("discarded")
+          this.ge = !0, UU && (this.tn(), this.qn()), this.tn(), this.Fn(), this.tn(), this.Un(), Uo.info("discarded")
         }
-        Qn(MM, rM, iM, OM, SM) {
-          if (-1 === iM) return this.me += 1, void On.warn("could not stringify event - dropping it to keep the rest of the recording");
-          const jM = {
-            $snapshot_bytes: iM,
-            $snapshot_data: rM,
-            $session_id: OM,
-            $window_id: SM
+        Qn(UU, XU, zU, cU, yU) {
+          if (-1 === zU) return this.me += 1, void Uo.warn("could not stringify event - dropping it to keep the rest of the recording");
+          const QU = {
+            $snapshot_bytes: zU,
+            $snapshot_data: XU,
+            $session_id: cU,
+            $window_id: yU
           };
-          "disabled" !== this.status ? (this.Zn(MM, OM), this.Jn(jM)) : this.tn()
+          "disabled" !== this.status ? (this.Zn(UU, cU), this.Jn(QU)) : this.tn()
         }
         Kn() {
           try {
             this.Xn()
-          } catch (MM) {
-            this.Se || (this.Se = !0, On.error("could not track full snapshot cost", MM))
+          } catch (UU) {
+            this.Se || (this.Se = !0, Uo.error("could not track full snapshot cost", UU))
           }
         }
         Xn() {
-          var MM, rM;
-          const iM = null === (MM = an()) || void 0 === MM || null === (rM = MM.getLastSnapshotCost) || void 0 === rM ? void 0 : rM.call(MM);
-          iM && iM !== this.Wn && (this.Wn = iM, 500 > iM.durationMs || On.warn("full snapshot was slow, the page may have been unresponsive while it ran", {
-            durationMs: Math.round(iM.durationMs),
-            stylesheetMs: Math.round(iM.stylesheetMs),
-            nodeCount: iM.nodeCount,
-            cssRuleCount: iM.cssRuleCount,
-            nonDeferrableCssRuleCount: iM.nonDeferrableCssRuleCount,
-            deferredStylesheetCount: iM.deferredStylesheetCount
+          var UU, XU;
+          const zU = null === (UU = co()) || void 0 === UU || null === (XU = UU.getLastSnapshotCost) || void 0 === XU ? void 0 : XU.call(UU);
+          zU && zU !== this.Wn && (this.Wn = zU, 500 > zU.durationMs || Uo.warn("full snapshot was slow, the page may have been unresponsive while it ran", {
+            durationMs: Math.round(zU.durationMs),
+            stylesheetMs: Math.round(zU.stylesheetMs),
+            nodeCount: zU.nodeCount,
+            cssRuleCount: zU.cssRuleCount,
+            nonDeferrableCssRuleCount: zU.nonDeferrableCssRuleCount,
+            deferredStylesheetCount: zU.deferredStylesheetCount
           }))
         }
-        Zn(MM, rM) {
-          2 !== MM.type ? 3 === MM.type && (HS(this.Te) || this.Te === rM || this.Re === rM || (this.Re = rM, On.info("incremental snapshot for a session with no full snapshot - requesting one", {
-            sessionId: rM
-          }), this.jt())) : this.Te = rM
+        Zn(UU, XU) {
+          2 !== UU.type ? 3 === UU.type && (Yy(this.Te) || this.Te === XU || this.Re === XU || (this.Re = XU, Uo.info("incremental snapshot for a session with no full snapshot - requesting one", {
+            sessionId: XU
+          }), this.jt())) : this.Te = XU
         }
-        Yn(MM) {
-          MM.counted && MM.generation === this.Oe && (this.$e = Math.max(0, this.$e - 1)), MM.counted = !1, this.Ae = this.Ae.filter((rM => rM !== MM))
+        Yn(UU) {
+          UU.counted && UU.generation === this.Oe && (this.$e = Math.max(0, this.$e - 1)), UU.counted = !1, this.Ae = this.Ae.filter((XU => XU !== UU))
         }
-        ti(MM, rM, iM) {
-          MM.processed || MM.generation !== this.Oe || (MM.processed = !0, this.Qn(MM.event, rM, iM, MM.targetSessionId, MM.targetWindowId))
+        ti(UU, XU, zU) {
+          UU.processed || UU.generation !== this.Oe || (UU.processed = !0, this.Qn(UU.event, XU, zU, UU.targetSessionId, UU.targetWindowId))
         }
-        ei(MM) {
+        ei(UU) {
           try {
-            let rM, iM = MM.event;
-            if (MM.compressionEnabled) try {
+            let XU, zU = UU.event;
+            if (UU.compressionEnabled) try {
               ({
-                event: iM,
-                size: rM
-              } = bn(MM.event))
-            } catch (MM) {
-              On.warn("could not process queued compression event - will use uncompressed event", MM)
+                event: zU,
+                size: XU
+              } = Bo(UU.event))
+            } catch (UU) {
+              Uo.warn("could not process queued compression event - will use uncompressed event", UU)
             }
-            HS(rM) && (rM = Ra(MM.event));
+            Yy(XU) && (XU = eA(UU.event));
             try {
-              this.ti(MM, iM, rM)
-            } catch (MM) {
-              On.warn("could not capture queued compression event", MM)
+              this.ti(UU, zU, XU)
+            } catch (UU) {
+              Uo.warn("could not capture queued compression event", UU)
             }
           } finally {
-            this.Yn(MM)
+            this.Yn(UU)
           }
         }
         Xe() {
-          [...this.Ae].forEach((MM => {
+          [...this.Ae].forEach((UU => {
             try {
-              this.ei(MM)
-            } catch (MM) {
-              On.warn("could not drain queued compression event", MM)
+              this.ei(UU)
+            } catch (UU) {
+              Uo.warn("could not drain queued compression event", UU)
             }
           }))
         }
-        ni(MM, rM, iM, OM) {
-          var SM = this;
-          const aM = {
-            event: MM,
-            compressionEnabled: rM,
-            targetSessionId: iM,
-            targetWindowId: OM,
+        ni(UU, XU, zU, cU) {
+          var yU = this;
+          const AU = {
+            event: UU,
+            compressionEnabled: XU,
+            targetSessionId: zU,
+            targetWindowId: cU,
             generation: this.Oe,
             processed: !1,
             counted: !0
           };
-          this.Ae.push(aM), this.$e += 1;
-          const PM = (nM = jM((function*() {
+          this.Ae.push(AU), this.$e += 1;
+          const FU = (oU = QU((function*() {
             try {
-              if (aM.processed) return;
-              let iM, OM;
+              if (AU.processed) return;
+              let zU, cU;
               try {
-                const SM = rM ? Un(MM) ? yield function(MM) {
-                  return wn.apply(this, arguments)
-                }(MM): bn(MM): {
-                  event: MM,
-                  size: Ra(MM)
+                const yU = XU ? to(UU) ? yield function(UU) {
+                  return Zo.apply(this, arguments)
+                }(UU): Bo(UU): {
+                  event: UU,
+                  size: eA(UU)
                 };
-                iM = SM.event, OM = SM.size
-              } catch (rM) {
-                On.warn("could not process queued compression event - will use uncompressed event", rM), iM = MM, OM = Ra(MM)
+                zU = yU.event, cU = yU.size
+              } catch (XU) {
+                Uo.warn("could not process queued compression event - will use uncompressed event", XU), zU = UU, cU = eA(UU)
               }
-              SM.ti(aM, iM, OM)
+              yU.ti(AU, zU, cU)
             } finally {
-              SM.Yn(aM)
+              yU.Yn(AU)
             }
           })), function() {
-            return nM.apply(this, arguments)
+            return oU.apply(this, arguments)
           });
-          var nM;
-          this.jn = this.jn ? this.jn.catch((() => {})).then(PM) : PM()
+          var oU;
+          this.jn = this.jn ? this.jn.catch((() => {})).then(FU) : FU()
         }
-        onRRwebEmit(MM) {
-          var rM, iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM;
+        onRRwebEmit(UU) {
+          var XU, zU, cU, yU, QU, AU, FU, oU, DU, EU, YU, NU;
           if (!this._instance.sessionManager) return;
-          if (this.Cn(), !MM || !mS(MM)) return;
-          if (4 === MM.type) {
-            const rM = this.mn(MM.data.href);
-            if (this.xn = rM, !rM) return;
-            MM.data.href = rM
+          if (this.Cn(), !UU || !Ey(UU)) return;
+          if (4 === UU.type) {
+            const XU = this.mn(UU.data.href);
+            if (this.xn = XU, !XU) return;
+            UU.data.href = XU
           } else this.Sn();
-          if (null === (rM = this.re) || void 0 === rM || rM.checkUrlTriggers(this.sessionId, (() => this.En()), (() => this.An()), ((MM, rM) => this.$n(MM, rM))), this.Y.urlBlocked && (5 !== (zM = MM).type || "recording paused" !== zM.data.tag)) return;
-          2 === MM.type && (this.Kn(), Promise.resolve().then((() => this.Kn())), this.Mn(), null === (LM = this.Bn) || void 0 === LM || LM.reset(), null === (mM = this._instance.persistence) || void 0 === mM || mM.register_once({
-            $debug_first_full_snapshot_timestamp: MM.timestamp
+          if (null === (XU = this.re) || void 0 === XU || XU.checkUrlTriggers(this.sessionId, (() => this.En()), (() => this.An()), ((UU, XU) => this.$n(UU, XU))), this.Y.urlBlocked && (5 !== (EU = UU).type || "recording paused" !== EU.data.tag)) return;
+          2 === UU.type && (this.Kn(), Promise.resolve().then((() => this.Kn())), this.Mn(), null === (YU = this.Bn) || void 0 === YU || YU.reset(), null === (NU = this._instance.persistence) || void 0 === NU || NU.register_once({
+            $debug_first_full_snapshot_timestamp: UU.timestamp
           }, void 0));
-          const HM = 2 === MM.type && (null === (iM = this.re) || void 0 === iM ? void 0 : iM.hasPendingTriggers(this.sessionId));
-          HM && this.ii();
-          const hM = this.Bn ? this.Bn.throttleMutations(MM) : MM;
-          if (!hM) return void(!0 === this.de && this.he++);
-          const JM = function(MM) {
-              const rM = MM;
-              if (rM && mS(rM) && 6 === rM.type && mS(rM.data) && "rrweb/console@1" === rM.data.plugin) {
-                rM.data.payload.payload.length > 10 && (rM.data.payload.payload = rM.data.payload.payload.slice(0, 10), rM.data.payload.payload.push("...[truncated]"));
-                const iM = [];
-                for (let MM = 0; rM.data.payload.payload.length > MM; MM++) iM.push(rM.data.payload.payload[MM] && rM.data.payload.payload[MM].length > 2e3 ? rM.data.payload.payload[MM].slice(0, 2e3) + "...[truncated]" : rM.data.payload.payload[MM]);
-                return rM.data.payload.payload = iM, MM
+          const IU = 2 === UU.type && (null === (zU = this.re) || void 0 === zU ? void 0 : zU.hasPendingTriggers(this.sessionId));
+          IU && this.ii();
+          const pU = this.Bn ? this.Bn.throttleMutations(UU) : UU;
+          if (!pU) return void(!0 === this.de && this.he++);
+          const aU = function(UU) {
+              const XU = UU;
+              if (XU && Ey(XU) && 6 === XU.type && Ey(XU.data) && "rrweb/console@1" === XU.data.plugin) {
+                XU.data.payload.payload.length > 10 && (XU.data.payload.payload = XU.data.payload.payload.slice(0, 10), XU.data.payload.payload.push("...[truncated]"));
+                const zU = [];
+                for (let UU = 0; XU.data.payload.payload.length > UU; UU++) zU.push(XU.data.payload.payload[UU] && XU.data.payload.payload[UU].length > 2e3 ? XU.data.payload.payload[UU].slice(0, 2e3) + "...[truncated]" : XU.data.payload.payload[UU]);
+                return XU.data.payload.payload = zU, UU
               }
-              return MM
-            }(hM),
-            dM = function(MM) {
-              return un(MM) ? MM.data.payload : null
-            }(JM),
-            yM = function(MM) {
-              return Rn(MM) ? MM.data.payload : null
-            }(JM),
-            lM = function(MM) {
-              return gn(MM) ? MM.data.payload : null
-            }(JM);
-          dM || yM ? (null == dM ? void 0 : dM.lastActivityTimestamp) && (JM.timestamp = dM.lastActivityTimestamp) : (null == lM ? void 0 : lM.sessionId) || this.ri(JM);
-          const EM = null !== (OM = null !== (SM = null !== (jM = null == dM ? void 0 : dM.currentSessionId) && void 0 !== jM ? jM : null == yM ? void 0 : yM.nextSessionId) && void 0 !== SM ? SM : null == lM ? void 0 : lM.sessionId) && void 0 !== OM ? OM : this.Xt,
-            UM = null !== (aM = null !== (PM = null !== (nM = null == dM ? void 0 : dM.currentWindowId) && void 0 !== nM ? nM : null == yM ? void 0 : yM.nextWindowId) && void 0 !== PM ? PM : null == lM ? void 0 : lM.windowId) && void 0 !== aM ? aM : this.je;
-          if (!0 === this.de && ! function(MM) {
-              return gn(MM) || un(MM) || Rn(MM)
-            }(JM)) return void(function(MM) {
-            return 2 === MM.type || 4 === MM.type || 3 === MM.type && 9 !== MM.data.source
-          }(JM) && this.he++);
-          2 === JM.type && (this.he = 0), lM && (JM.timestamp = lM.lastActivityTimestamp + lM.threshold);
-          const GM = this.ae;
-          this.ae = !0, HM ? this.kn(!0) : GM || this.kn();
-          const CM = null === (QM = this._instance.config.session_recording.compress_events) || void 0 === QM || QM;
-          if (5 === JM.type && "$json_ld" === JM.data.tag) {
-            let rM;
+              return UU
+            }(pU),
+            tU = function(UU) {
+              return Wo(UU) ? UU.data.payload : null
+            }(aU),
+            gU = function(UU) {
+              return Lo(UU) ? UU.data.payload : null
+            }(aU),
+            kU = function(UU) {
+              return Po(UU) ? UU.data.payload : null
+            }(aU);
+          tU || gU ? (null == tU ? void 0 : tU.lastActivityTimestamp) && (aU.timestamp = tU.lastActivityTimestamp) : (null == kU ? void 0 : kU.sessionId) || this.ri(aU);
+          const GU = null !== (cU = null !== (yU = null !== (QU = null == tU ? void 0 : tU.currentSessionId) && void 0 !== QU ? QU : null == gU ? void 0 : gU.nextSessionId) && void 0 !== yU ? yU : null == kU ? void 0 : kU.sessionId) && void 0 !== cU ? cU : this.Xt,
+            BU = null !== (AU = null !== (FU = null !== (oU = null == tU ? void 0 : tU.currentWindowId) && void 0 !== oU ? oU : null == gU ? void 0 : gU.nextWindowId) && void 0 !== FU ? FU : null == kU ? void 0 : kU.windowId) && void 0 !== AU ? AU : this.je;
+          if (!0 === this.de && ! function(UU) {
+              return Po(UU) || Wo(UU) || Lo(UU)
+            }(aU)) return void(function(UU) {
+            return 2 === UU.type || 4 === UU.type || 3 === UU.type && 9 !== UU.data.source
+          }(aU) && this.he++);
+          2 === aU.type && (this.he = 0), kU && (aU.timestamp = kU.lastActivityTimestamp + kU.threshold);
+          const ZU = this.ae;
+          this.ae = !0, IU ? this.kn(!0) : ZU || this.kn();
+          const RU = null === (DU = this._instance.config.session_recording.compress_events) || void 0 === DU || DU;
+          if (5 === aU.type && "$json_ld" === aU.data.tag) {
+            let XU;
             try {
-              rM = rS ? this.mn(rS.location.href) : void 0
-            } catch (MM) {}
-            JM.data.href = rM
+              XU = hc ? this.mn(hc.location.href) : void 0
+            } catch (UU) {}
+            aU.data.href = XU
           }
-          if (this.$e > 0 || CM && Un(JM)) return void this.ni(JM, CM, EM, UM);
+          if (this.$e > 0 || RU && to(aU)) return void this.ni(aU, RU, GU, BU);
           const {
-            event: eM,
-            size: bM
-          } = CM ? bn(JM) : {
-            event: JM,
-            size: Ra(JM)
+            event: PU,
+            size: WU
+          } = RU ? Bo(aU) : {
+            event: aU,
+            size: eA(aU)
           };
-          this.Qn(JM, eM, bM, EM, UM)
+          this.Qn(aU, PU, WU, GU, BU)
         }
         get status() {
           return this.re ? this.re.getStatus({
@@ -8377,19 +8377,19 @@ export const modules = {
             eventTriggerMatching: this.tt,
             linkedFlagMatching: this.et,
             remoteConfig: this.ne
-          }) : ja
+          }) : cA
         }
-        log(MM) {
-          let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "log";
-          var iM;
-          null === (iM = this._instance.sessionRecording) || void 0 === iM || iM.onRRwebEmit({
+        log(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "log";
+          var zU;
+          null === (zU = this._instance.sessionRecording) || void 0 === zU || zU.onRRwebEmit({
             type: 6,
             data: {
               plugin: "rrweb/console@1",
               payload: {
-                level: rM,
+                level: XU,
                 trace: [],
-                payload: [JSON.stringify(MM)]
+                payload: [JSON.stringify(UU)]
               }
             },
             timestamp: Date.now()
@@ -8399,24 +8399,24 @@ export const modules = {
           this.et.linkedFlagSeen = !0, this.jt(), this.Rn(), this.qt("linked_flag_overridden")
         }
         overrideSampling() {
-          var MM;
-          null === (MM = this._instance.persistence) || void 0 === MM || MM.register({
+          var UU;
+          null === (UU = this._instance.persistence) || void 0 === UU || UU.register({
             $session_is_sampled: this.sessionId,
             $replay_sample_rate: null
           }), this.jt(), this.Rn(), this.qt("sampling_overridden")
         }
-        overrideTrigger(MM) {
-          this.$n(MM), this.Rn()
+        overrideTrigger(UU) {
+          this.$n(UU), this.Rn()
         }
         oi() {
           try {
-            var MM;
-            const rM = null == rS || null === (MM = rS.location) || void 0 === MM ? void 0 : MM.href;
-            if (!rM) return;
-            const iM = this.mn(rM);
-            if (!iM) return;
-            return new URL(iM).hostname || void 0
-          } catch (MM) {
+            var UU;
+            const XU = null == hc || null === (UU = hc.location) || void 0 === UU ? void 0 : UU.href;
+            if (!XU) return;
+            const zU = this.mn(XU);
+            if (!zU) return;
+            return new URL(zU).hostname || void 0
+          } catch (UU) {
             return
           }
         }
@@ -8429,64 +8429,64 @@ export const modules = {
           }), 2e3))
         }
         ai() {
-          return this.Te !== this.Rt.sessionId && 0 !== this.Rt.data.length && this.Rt.data.every((MM => 5 === (null == MM ? void 0 : MM.type) && !un(MM) && !Rn(MM)))
+          return this.Te !== this.Rt.sessionId && 0 !== this.Rt.data.length && this.Rt.data.every((UU => 5 === (null == UU ? void 0 : UU.type) && !Wo(UU) && !Lo(UU)))
         }
         li() {
-          var MM, rM;
-          return null !== (MM = null === (rM = this.re) || void 0 === rM ? void 0 : rM.getPendingTriggerConditions(this.sessionId)) && void 0 !== MM ? MM : []
+          var UU, XU;
+          return null !== (UU = null === (XU = this.re) || void 0 === XU ? void 0 : XU.getPendingTriggerConditions(this.sessionId)) && void 0 !== UU ? UU : []
         }
-        ui(MM) {
-          if ("buffering" !== MM) return HS(this.ci) || this._instance.register_for_session({
-            [Vj]: []
+        ui(UU) {
+          if ("buffering" !== UU) return Yy(this.ci) || this._instance.register_for_session({
+            [KQ]: []
           }), void(this.ci = void 0);
-          const rM = this.li();
-          if (0 === rM.length) return HS(this.ci) || this._instance.register_for_session({
-            [Vj]: []
+          const XU = this.li();
+          if (0 === XU.length) return Yy(this.ci) || this._instance.register_for_session({
+            [KQ]: []
           }), void(this.ci = void 0);
-          const iM = rM.join(", "),
-            OM = `${this.sessionId}:${iM}`;
-          OM !== this.ci && (this.ci = OM, this._instance.register_for_session({
-            [Vj]: rM
-          }), On.info(`buffering: ${iM}`))
+          const zU = XU.join(", "),
+            cU = `${this.sessionId}:${zU}`;
+          cU !== this.ci && (this.ci = cU, this._instance.register_for_session({
+            [KQ]: XU
+          }), Uo.info(`buffering: ${zU}`))
         }
         di() {
-          var MM;
-          return "memory" !== this._instance.config.persistence && !0 !== (null === (MM = this._instance.persistence) || void 0 === MM ? void 0 : MM.hi) && hP.At()
+          var UU;
+          return "memory" !== this._instance.config.persistence && !0 !== (null === (UU = this._instance.persistence) || void 0 === UU ? void 0 : UU.hi) && NF.At()
         }
         fi() {
-          0 !== this.Rt.data.length && this.Rt.size !== this.pi && 943718.4 >= this.Rt.size && this.di() && (this.pi = this.Rt.size, hP.$t(this.an, this.Rt))
+          0 !== this.Rt.data.length && this.Rt.size !== this.pi && 943718.4 >= this.Rt.size && this.di() && (this.pi = this.Rt.size, NF.$t(this.an, this.Rt))
         }
         Ln() {
           if (this.Ee || !this.di()) return;
           this.Ee = !0;
-          const MM = hP.Dt(this.an);
-          hP.Pt(this.an), mS(MM) && zS(MM.data) && 0 !== MM.data.length && zS(MM.sizes) && MM.sizes.length === MM.data.length && yS(MM.size) && MM.sessionId === this.Xt && MM.windowId === this.je && (this.Rt.data.length > 0 || (this.Rt = MM))
+          const UU = NF.Dt(this.an);
+          NF.Pt(this.an), Ey(UU) && oy(UU.data) && 0 !== UU.data.length && oy(UU.sizes) && UU.sizes.length === UU.data.length && ay(UU.size) && UU.sessionId === this.Xt && UU.windowId === this.je && (this.Rt.data.length > 0 || (this.Rt = UU))
         }
         Ye() {
-          let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          var rM;
+          let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          var XU;
           if (this.Nn(), this.ge) return this.Rt;
-          if (this.ai()) return this.Rt.size > 943718.4 ? this.tn() : (MM && this.fi(), this.Rt);
-          const iM = this.Rt;
-          null === (rM = this.re) || void 0 === rM || rM.ensureSamplingDecision(this.sessionId);
-          const SM = this.Ge(),
-            jM = this.status;
-          if (this.ui(jM), "buffering" === jM || "paused" === jM || "disabled" === jM || SM) return !MM || "active" !== jM && "sampled" !== jM || this.fi(), this.Gn(), this.Rt;
-          if (this.Rt !== iM) return this.Rt;
-          if (iM.data.length > 0) {
-            var aM;
-            const MM = this.oi();
-            Wa(iM).forEach((rM => {
+          if (this.ai()) return this.Rt.size > 943718.4 ? this.tn() : (UU && this.fi(), this.Rt);
+          const zU = this.Rt;
+          null === (XU = this.re) || void 0 === XU || XU.ensureSamplingDecision(this.sessionId);
+          const yU = this.Ge(),
+            QU = this.status;
+          if (this.ui(QU), "buffering" === QU || "paused" === QU || "disabled" === QU || yU) return !UU || "active" !== QU && "sampled" !== QU || this.fi(), this.Gn(), this.Rt;
+          if (this.Rt !== zU) return this.Rt;
+          if (zU.data.length > 0) {
+            var AU;
+            const UU = this.oi();
+            wA(zU).forEach((XU => {
               try {
-                var iM;
-                null === (iM = this.Be) || void 0 === iM || iM.trackSize(rM.sessionId, rM.size), this.mi(OM(OM(OM(OM({
-                  $snapshot_bytes: rM.size,
-                  $snapshot_data: rM.data,
-                  $session_id: rM.sessionId,
-                  $window_id: rM.windowId,
-                  $lib: JP.LIB_NAME,
-                  $lib_version: JP.LIB_VERSION,
-                  $snapshot_host: MM
+                var zU;
+                null === (zU = this.Be) || void 0 === zU || zU.trackSize(XU.sessionId, XU.size), this.mi(cU(cU(cU(cU({
+                  $snapshot_bytes: XU.size,
+                  $snapshot_data: XU.data,
+                  $session_id: XU.sessionId,
+                  $window_id: XU.windowId,
+                  $lib: IF.LIB_NAME,
+                  $lib_version: IF.LIB_VERSION,
+                  $snapshot_host: UU
                 }, this.fe > 0 ? {
                   $sdk_debug_replay_throttled_mutations_dropped: this.fe
                 } : {}), this.ve > 0 ? {
@@ -8496,27 +8496,27 @@ export const modules = {
                 } : {}), this.me > 0 ? {
                   $sdk_debug_replay_unstringifiable_events_dropped: this.me
                 } : {}))
-              } catch (MM) {
-                On.warn("could not capture snapshot chunk - skipping it", MM)
+              } catch (UU) {
+                Uo.warn("could not capture snapshot chunk - skipping it", UU)
               }
-            })), HS(this.pi) || (hP.Pt(this.an), this.pi = void 0), null === (aM = this.re) || void 0 === aM || aM.onFlushComplete()
+            })), Yy(this.pi) || (NF.Pt(this.an), this.pi = void 0), null === (AU = this.re) || void 0 === AU || AU.onFlushComplete()
           }
           return this.tn()
         }
-        Jn(MM) {
-          var rM;
-          const iM = 2 + ((null === (rM = this.Rt) || void 0 === rM ? void 0 : rM.data.length) || 0),
-            OM = MM.$session_id,
-            SM = this.Rt.sessionId !== OM;
-          if (SM || !0 !== this.de && !this.ge && this.Rt.size + MM.$snapshot_bytes + iM > 943718.4) {
-            const rM = this.Xt;
-            if (this.Rt = this.Ye(), this.Xt !== rM) return;
-            SM && this.Rt.data.length > 0 && (this.Rt = this.tn()), this.Rt.sessionId = OM, this.Rt.windowId = MM.$window_id
+        Jn(UU) {
+          var XU;
+          const zU = 2 + ((null === (XU = this.Rt) || void 0 === XU ? void 0 : XU.data.length) || 0),
+            cU = UU.$session_id,
+            yU = this.Rt.sessionId !== cU;
+          if (yU || !0 !== this.de && !this.ge && this.Rt.size + UU.$snapshot_bytes + zU > 943718.4) {
+            const XU = this.Xt;
+            if (this.Rt = this.Ye(), this.Xt !== XU) return;
+            yU && this.Rt.data.length > 0 && (this.Rt = this.tn()), this.Rt.sessionId = cU, this.Rt.windowId = UU.$window_id
           }
-          this.ge && (this.be || this.Rt.size + MM.$snapshot_bytes + iM > 943718.4) ? this.be = !0 : (this.Rt.size += MM.$snapshot_bytes, this.Rt.data.push(MM.$snapshot_data), this.Rt.sizes.push(MM.$snapshot_bytes), !0 === this.de || this.ge || this.Gn())
+          this.ge && (this.be || this.Rt.size + UU.$snapshot_bytes + zU > 943718.4) ? this.be = !0 : (this.Rt.size += UU.$snapshot_bytes, this.Rt.data.push(UU.$snapshot_data), this.Rt.sizes.push(UU.$snapshot_bytes), !0 === this.de || this.ge || this.Gn())
         }
-        mi(MM) {
-          this._instance.capture("$snapshot", MM, {
+        mi(UU) {
+          this._instance.capture("$snapshot", UU, {
             _url: this._instance.requestRouter.endpointFor("api", this.oe),
             _noTruncate: !0,
             _batchKey: "recordings",
@@ -8524,18 +8524,18 @@ export const modules = {
           })
         }
         get Qe() {
-          var MM, rM;
-          const iM = null === (MM = this.Rt) || void 0 === MM ? void 0 : MM.data[(null === (rM = this.Rt) || void 0 === rM ? void 0 : rM.data.length) - 1];
-          return iM ? iM.timestamp - this._sessionStartTimestamp : null
+          var UU, XU;
+          const zU = null === (UU = this.Rt) || void 0 === UU ? void 0 : UU.data[(null === (XU = this.Rt) || void 0 === XU ? void 0 : XU.data.length) - 1];
+          return zU ? zU.timestamp - this._sessionStartTimestamp : null
         }
         ii() {
           if (!this.Rt || 0 === this.Rt.data.length) return this.tn();
-          let MM = -1;
-          for (let rM = this.Rt.data.length - 1; rM >= 0; rM--)
-            if (4 === this.Rt.data[rM].type) {
-              MM = rM;
+          let UU = -1;
+          for (let XU = this.Rt.data.length - 1; XU >= 0; XU--)
+            if (4 === this.Rt.data[XU].type) {
+              UU = XU;
               break
-            } return 0 > MM ? this.tn() : (this.Rt.data = this.Rt.data.slice(MM), this.Rt.sizes = this.Rt.sizes.slice(MM), this.Rt.size = this.Rt.sizes.reduce(((MM, rM) => MM + rM), 0), this.Rt)
+            } return 0 > UU ? this.tn() : (this.Rt.data = this.Rt.data.slice(UU), this.Rt.sizes = this.Rt.sizes.slice(UU), this.Rt.size = this.Rt.sizes.reduce(((UU, XU) => UU + XU), 0), this.Rt)
         }
         tn() {
           return this.Rt = {
@@ -8546,21 +8546,21 @@ export const modules = {
             windowId: this.je
           }, this.Rt
         }
-        qt(MM, rM) {
+        qt(UU, XU) {
           this._instance.register_for_session({
-            [Sa]: MM
-          }), On.info(MM.replace("_", " "), rM), "session_id_changed" !== MM && this.Vt("$recording_started", OM({
-            reason: MM
-          }, rM))
+            [zA]: UU
+          }), Uo.info(UU.replace("_", " "), XU), "session_id_changed" !== UU && this.Vt("$recording_started", cU({
+            reason: UU
+          }, XU))
         }
-        gi(MM) {
-          var rM;
-          return 3 === MM.type && -1 !== Sn.indexOf(null === (rM = MM.data) || void 0 === rM ? void 0 : rM.source)
+        gi(UU) {
+          var XU;
+          return 3 === UU.type && -1 !== Xo.indexOf(null === (XU = UU.data) || void 0 === XU ? void 0 : XU.source)
         }
-        ri(MM) {
-          const rM = this.gi(MM);
-          rM || !0 === this.de || MM.timestamp - this.le > this.te && (this.de = !0, clearInterval(this.Tn), this.Vt("sessionIdle", {
-            eventTimestamp: MM.timestamp,
+        ri(UU) {
+          const XU = this.gi(UU);
+          XU || !0 === this.de || UU.timestamp - this.le > this.te && (this.de = !0, clearInterval(this.Tn), this.Vt("sessionIdle", {
+            eventTimestamp: UU.timestamp,
             lastActivityTimestamp: this.le,
             threshold: this.te,
             bufferLength: this.Rt.data.length,
@@ -8569,55 +8569,55 @@ export const modules = {
             windowId: this.je
           }), this.Ye());
           const {
-            windowId: iM,
-            sessionId: OM
-          } = this.Yt.checkAndGetSessionAndWindowId(!rM, MM.timestamp);
-          let SM = !1;
-          if (rM && (this.le = MM.timestamp, this.de)) {
-            const rM = "unknown" === this.de;
-            this.de = !1, rM || (this.Vt("sessionNoLongerIdle", {
+            windowId: zU,
+            sessionId: cU
+          } = this.Yt.checkAndGetSessionAndWindowId(!XU, UU.timestamp);
+          let yU = !1;
+          if (XU && (this.le = UU.timestamp, this.de)) {
+            const XU = "unknown" === this.de;
+            this.de = !1, XU || (this.Vt("sessionNoLongerIdle", {
               reason: "user activity",
-              type: MM.type
-            }), SM = !0)
+              type: UU.type
+            }), yU = !0)
           }
-          const jM = this.Xt !== OM,
-            aM = this.je !== iM;
-          if (this.je = iM, this.Xt = OM, jM || aM) {
-            const MM = jM && !1 !== this.de;
-            MM && (this.de = "unknown"), this.He(MM)
-          } else if (rM && this.Rn(), SM) {
-            var PM;
-            const MM = ["sampled", "active"].includes(this.status) || (null === (PM = this.re) || void 0 === PM ? void 0 : PM.hasPendingTriggers(this.sessionId));
-            this.he > 0 && MM && this.jt(), this.kn(), this.Mn()
+          const QU = this.Xt !== cU,
+            AU = this.je !== zU;
+          if (this.je = zU, this.Xt = cU, QU || AU) {
+            const UU = QU && !1 !== this.de;
+            UU && (this.de = "unknown"), this.He(UU)
+          } else if (XU && this.Rn(), yU) {
+            var FU;
+            const UU = ["sampled", "active"].includes(this.status) || (null === (FU = this.re) || void 0 === FU ? void 0 : FU.hasPendingTriggers(this.sessionId));
+            this.he > 0 && UU && this.jt(), this.kn(), this.Mn()
           }
         }
         ze() {
-          var MM;
-          null === (MM = this.re) || void 0 === MM || MM.clearConditionalRecordingPersistence()
+          var UU;
+          null === (UU = this.re) || void 0 === UU || UU.clearConditionalRecordingPersistence()
         }
         get sdkDebugProperties() {
-          var MM;
+          var UU;
           return {
             $recording_status: this.status,
             $sdk_debug_replay_flush_hold_reason: this.Hn,
             $sdk_debug_replay_internal_buffer_length: this.Rt.data.length,
             $sdk_debug_replay_internal_buffer_size: this.Rt.size,
             $sdk_debug_session_start: this._sessionStartTimestamp,
-            $sdk_debug_replay_flushed_size: null === (MM = this.Be) || void 0 === MM ? void 0 : MM.currentTrackedSize(this.sessionId),
+            $sdk_debug_replay_flushed_size: null === (UU = this.Be) || void 0 === UU ? void 0 : UU.currentTrackedSize(this.sessionId),
             $sdk_debug_replay_rrweb_error: this.ke,
-            [ia]: this.yi,
-            [Oa]: this._e
+            [UA]: this.yi,
+            [XA]: this._e
           }
         }
         get yi() {
-          var MM, rM, iM;
-          return !!this.se && (null === (MM = null === (rM = Pn()) || void 0 === rM || null === (iM = rM.isRecording) || void 0 === iM ? void 0 : iM.call(rM)) || void 0 === MM || MM)
+          var UU, XU, zU;
+          return !!this.se && (null === (UU = null === (XU = yo()) || void 0 === XU || null === (zU = XU.isRecording) || void 0 === zU ? void 0 : zU.call(XU)) || void 0 === UU || UU)
         }
         Dn() {
-          var MM;
+          var UU;
           if (this.se) return;
           this._e = !0;
-          const rM = {
+          const XU = {
               blockClass: "ph-no-capture",
               blockSelector: void 0,
               ignoreClass: "ph-ignore-input",
@@ -8639,136 +8639,136 @@ export const modules = {
               sampling: void 0,
               attributeFilter: void 0
             },
-            iM = this._instance.config.session_recording;
-          for (const [zM, LM] of Object.entries(iM || {}))
-            if (zM in rM)
-              if ("maskInputOptions" === zM) rM.maskInputOptions = OM({
+            zU = this._instance.config.session_recording;
+          for (const [EU, YU] of Object.entries(zU || {}))
+            if (EU in XU)
+              if ("maskInputOptions" === EU) XU.maskInputOptions = cU({
                 password: !0
-              }, LM);
-              else if ("sampling" === zM) {
-            const MM = null != LM ? LM : {},
-              iM = {};
-            HS(MM.mousemove) || (iM.mousemove = MM.mousemove), HS(MM.mouseInteraction) || (iM.mouseInteraction = MM.mouseInteraction), rM.sampling = iM
-          } else rM[zM] = LM;
-          var SM, jM, aM, PM;
-          !0 === (null == iM ? void 0 : iM.captureJsonLd) && !0 !== rM.slimDOMOptions && "all" !== rM.slimDOMOptions && (rM.slimDOMOptions = OM(OM({}, rM.slimDOMOptions), {}, {
+              }, YU);
+              else if ("sampling" === EU) {
+            const UU = null != YU ? YU : {},
+              zU = {};
+            Yy(UU.mousemove) || (zU.mousemove = UU.mousemove), Yy(UU.mouseInteraction) || (zU.mouseInteraction = UU.mouseInteraction), XU.sampling = zU
+          } else XU[EU] = YU;
+          var yU, QU, AU, FU;
+          !0 === (null == zU ? void 0 : zU.captureJsonLd) && !0 !== XU.slimDOMOptions && "all" !== XU.slimDOMOptions && (XU.slimDOMOptions = cU(cU({}, XU.slimDOMOptions), {}, {
             script: !0
-          })), this.dn && this.dn.enabled && (rM.recordCanvas = !0, rM.sampling = OM(OM({}, rM.sampling), {}, {
+          })), this.dn && this.dn.enabled && (XU.recordCanvas = !0, XU.sampling = cU(cU({}, XU.sampling), {}, {
             canvas: this.dn.fps
-          }), rM.dataURLOptions = {
+          }), XU.dataURLOptions = {
             type: "image/webp",
             quality: this.dn.quality
-          }, rM.canvasResolutionScale = this.cn, rM.canvasMasking = {
+          }, XU.canvasResolutionScale = this.cn, XU.canvasMasking = {
             configured: () => {
-              var MM;
-              return LS(null === (MM = this._instance.config.session_recording) || void 0 === MM || null === (MM = MM.canvasCapture) || void 0 === MM ? void 0 : MM.maskRegionsFn)
+              var UU;
+              return Dy(null === (UU = this._instance.config.session_recording) || void 0 === UU || null === (UU = UU.canvasCapture) || void 0 === UU ? void 0 : UU.maskRegionsFn)
             },
-            regionsFn: MM => {
-              var rM;
-              const iM = null === (rM = this._instance.config.session_recording) || void 0 === rM || null === (rM = rM.canvasCapture) || void 0 === rM ? void 0 : rM.maskRegionsFn;
-              if (LS(iM)) try {
-                var OM;
-                return null !== (OM = iM(MM)) && void 0 !== OM ? OM : null
-              } catch (MM) {
-                return this.Ie || (this.Ie = !0, On.warn("canvasCapture.maskRegionsFn threw, canvas frames will be skipped", MM)), null
+            regionsFn: UU => {
+              var XU;
+              const zU = null === (XU = this._instance.config.session_recording) || void 0 === XU || null === (XU = XU.canvasCapture) || void 0 === XU ? void 0 : XU.maskRegionsFn;
+              if (Dy(zU)) try {
+                var cU;
+                return null !== (cU = zU(UU)) && void 0 !== cU ? cU : null
+              } catch (UU) {
+                return this.Ie || (this.Ie = !0, Uo.warn("canvasCapture.maskRegionsFn threw, canvas frames will be skipped", UU)), null
               }
             }
-          }), this.ln && (rM.maskAllInputs = null === (SM = this.ln.maskAllInputs) || void 0 === SM || SM, rM.maskTextSelector = null !== (jM = this.ln.maskTextSelector) && void 0 !== jM ? jM : void 0, rM.blockSelector = null !== (aM = this.ln.blockSelector) && void 0 !== aM ? aM : void 0, rM.maskAllElementAttributes = null !== (PM = this.ln.maskAllElementAttributes) && void 0 !== PM && PM), rM.maskAllElementAttributes && rM.maskAttributeFn && (rM.maskAttributeFn = void 0, this.Ce || (this.Ce = !0, On.warn('`maskAllElementAttributes` and `maskAttributeFn` are mutually exclusive, and `maskAttributeFn` is being ignored. Remove one of the two. Note that `maskAllElementAttributes` can also come from your project\'s "Privacy and masking" settings. See https://posthog.com/docs/session-replay/privacy'))), this.un();
-          const nM = Pn();
-          if (!nM) return void On.error("_startRecorder was called but rrwebRecord is not available. This indicates something has gone wrong.");
-          this.Bn = null !== (MM = this.Bn) && void 0 !== MM ? MM : new mP(nM, {
+          }), this.ln && (XU.maskAllInputs = null === (yU = this.ln.maskAllInputs) || void 0 === yU || yU, XU.maskTextSelector = null !== (QU = this.ln.maskTextSelector) && void 0 !== QU ? QU : void 0, XU.blockSelector = null !== (AU = this.ln.blockSelector) && void 0 !== AU ? AU : void 0, XU.maskAllElementAttributes = null !== (FU = this.ln.maskAllElementAttributes) && void 0 !== FU && FU), XU.maskAllElementAttributes && XU.maskAttributeFn && (XU.maskAttributeFn = void 0, this.Ce || (this.Ce = !0, Uo.warn('`maskAllElementAttributes` and `maskAttributeFn` are mutually exclusive, and `maskAttributeFn` is being ignored. Remove one of the two. Note that `maskAllElementAttributes` can also come from your project\'s "Privacy and masking" settings. See https://posthog.com/docs/session-replay/privacy'))), this.un();
+          const oU = yo();
+          if (!oU) return void Uo.error("_startRecorder was called but rrwebRecord is not available. This indicates something has gone wrong.");
+          this.Bn = null !== (UU = this.Bn) && void 0 !== UU ? UU : new EF(oU, {
             refillRate: this._instance.config.session_recording.__mutationThrottlerRefillRate,
             bucketSize: this._instance.config.session_recording.__mutationThrottlerBucketSize,
-            onBlockedNode: (MM, rM) => {
-              const iM = `Too many mutations on node '${MM}'. Rate limiting. This could be due to SVG animations or something similar`;
-              On.info(iM, {
-                node: rM
-              }), this.log("[SessionRecording] " + iM, "warn")
+            onBlockedNode: (UU, XU) => {
+              const zU = `Too many mutations on node '${UU}'. Rate limiting. This could be due to SVG animations or something similar`;
+              Uo.info(zU, {
+                node: XU
+              }), this.log("[SessionRecording] " + zU, "warn")
             },
-            onDroppedAttributeMutations: MM => this.fe += MM,
+            onDroppedAttributeMutations: UU => this.fe += UU,
             bytesRefillRate: this._instance.config.session_recording.__mutationBytesRefillRate,
             bytesBucketSize: this._instance.config.session_recording.__mutationBytesBucketSize,
             resyncIntervalMs: this.In,
-            onDroppedOversizedMutation: MM => {
-              0 === this.ve && this.log("[SessionRecording] Dropped an oversized DOM mutation to keep the recording playable. The recording will resync with a full snapshot.", "warn"), this.ve += 1, this.pe += MM
+            onDroppedOversizedMutation: UU => {
+              0 === this.ve && this.log("[SessionRecording] Dropped an oversized DOM mutation to keep the recording playable. The recording will resync with a full snapshot.", "warn"), this.ve += 1, this.pe += UU
             },
             requestFullSnapshot: () => this.jt()
           });
-          const QM = this.vn();
-          if (this.se = nM(OM(OM({
-              emit: MM => {
-                this.onRRwebEmit(MM)
+          const DU = this.vn();
+          if (this.se = oU(cU(cU({
+              emit: UU => {
+                this.onRRwebEmit(UU)
               },
-              plugins: QM,
-              errorHandler: (MM, rM) => "rrweb" === rM && (this.Me || (this.Me = !0, On.error("rrweb internal error - recording will continue but may be incomplete", MM)), !0)
-            }, rM), {}, {
+              plugins: DU,
+              errorHandler: (UU, XU) => "rrweb" === XU && (this.Me || (this.Me = !0, Uo.error("rrweb internal error - recording will continue but may be incomplete", UU)), !0)
+            }, XU), {}, {
               recordAfter: "DOMContentLoaded"
-            })), !this.se) return this.ke = !0, void On.error("rrweb failed to start - Loss of recording data is possible. Check the browser console for rrweb errors.");
-          this.ke = !1, !0 === (null == iM ? void 0 : iM.captureJsonLd) && OS && (null == rS ? void 0 : rS.MutationObserver) && !this._n && (this._n = function(MM, rM, iM) {
-            const OM = new WeakMap,
-              SM = iM.getCaptureState || (() => !0);
-            let jM = RP;
-            const aM = function(MM, rM) {
-                const iM = rM.attributeFilter;
-                return rM.maskAllElementAttributes || rM.maskAttributeFn || (null == iM ? void 0 : iM.length) && !iM.includes("id") ? sP : iM => {
-                  const OM = MM.getElementById(iM);
-                  return !!OM && "SCRIPT" !== OM.nodeName && (!rM.isRecordedElement || rM.isRecordedElement(OM)) && !cP(OM, rM.blockClass, rM.blockSelector)
+            })), !this.se) return this.ke = !0, void Uo.error("rrweb failed to start - Loss of recording data is possible. Check the browser console for rrweb errors.");
+          this.ke = !1, !0 === (null == zU ? void 0 : zU.captureJsonLd) && Xy && (null == hc ? void 0 : hc.MutationObserver) && !this._n && (this._n = function(UU, XU, zU) {
+            const cU = new WeakMap,
+              yU = zU.getCaptureState || (() => !0);
+            let QU = eF;
+            const AU = function(UU, XU) {
+                const zU = XU.attributeFilter;
+                return XU.maskAllElementAttributes || XU.maskAttributeFn || (null == zU ? void 0 : zU.length) && !zU.includes("id") ? qF : zU => {
+                  const cU = UU.getElementById(zU);
+                  return !!cU && "SCRIPT" !== cU.nodeName && (!XU.isRecordedElement || XU.isRecordedElement(cU)) && !bF(cU, XU.blockClass, XU.blockSelector)
                 }
-              }(MM, iM),
-              PM = rM => {
+              }(UU, zU),
+              FU = XU => {
                 try {
-                  const PM = SM();
-                  if (!jM || !1 === PM || !rM.isConnected || rM.ownerDocument !== MM || function(MM, rM) {
-                      return cP(MM, rM.blockClass, rM.blockSelector) || cP(MM, rM.maskTextClass, rM.maskTextSelector)
-                    }(rM, iM)) return;
-                  const nM = function(MM) {
-                    let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : sP,
-                      iM = arguments.length > 2 ? arguments[2] : void 0;
-                    if (!MM || MM.length > RP) return null;
+                  const FU = yU();
+                  if (!QU || !1 === FU || !XU.isConnected || XU.ownerDocument !== UU || function(UU, XU) {
+                      return bF(UU, XU.blockClass, XU.blockSelector) || bF(UU, XU.maskTextClass, XU.maskTextSelector)
+                    }(XU, zU)) return;
+                  const oU = function(UU) {
+                    let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qF,
+                      zU = arguments.length > 2 ? arguments[2] : void 0;
+                    if (!UU || UU.length > eF) return null;
                     try {
-                      const OM = JSON.parse(MM),
-                        SM = {
-                          maskUrl: iM,
+                      const cU = JSON.parse(UU),
+                        yU = {
+                          maskUrl: zU,
                           remainingNodes: 2048,
                           exceeded: !1
                         },
-                        jM = zS(OM) ? OM.map((MM => qP(MM, rM, SM))) : qP(OM, rM, SM);
-                      if (SM.exceeded || JS(jM) || zS(jM) && (!jM.length || jM.some(JS))) return null;
-                      const aM = JSON.stringify(jM);
-                      return aM.length > 2e4 ? null : [jM, aM]
-                    } catch (MM) {
+                        QU = oy(cU) ? cU.map((UU => JF(UU, XU, yU))) : JF(cU, XU, yU);
+                      if (yU.exceeded || Iy(QU) || oy(QU) && (!QU.length || QU.some(Iy))) return null;
+                      const AU = JSON.stringify(QU);
+                      return AU.length > 2e4 ? null : [QU, AU]
+                    } catch (UU) {
                       return null
                     }
-                  }(rM.text, aM, iM.maskUrl);
-                  if (!nM) return void OM.delete(rM);
-                  const [QM, zM] = nM;
-                  if (JS(PM)) return void OM.set(rM, zM);
-                  if (OM.get(rM) !== zM) {
-                    if (zM.length > jM) return void(jM = 0);
-                    iM.emit(QM) && (OM.set(rM, zM), jM -= zM.length)
+                  }(XU.text, AU, zU.maskUrl);
+                  if (!oU) return void cU.delete(XU);
+                  const [DU, EU] = oU;
+                  if (Iy(FU)) return void cU.set(XU, EU);
+                  if (cU.get(XU) !== EU) {
+                    if (EU.length > QU) return void(QU = 0);
+                    zU.emit(DU) && (cU.set(XU, EU), QU -= EU.length)
                   }
-                } catch (MM) {
+                } catch (UU) {
                   return
                 }
               };
             try {
-              const iM = new rM((MM => {
+              const zU = new XU((UU => {
                 try {
-                  if (!jM || !1 === SM()) return;
-                  const rM = MM => {
-                    for (const rM of Mn(MM)) PM(rM)
+                  if (!QU || !1 === yU()) return;
+                  const XU = UU => {
+                    for (const XU of TF(UU)) FU(XU)
                   };
-                  for (const iM of MM)
-                    if ("childList" === iM.type) TP(iM.target) && PM(iM.target), iM.addedNodes.forEach(rM);
-                    else if ("characterData" === iM.type) {
-                    const MM = iM.target.parentNode;
-                    MM && TP(MM) && PM(MM)
-                  } else "attributes" === iM.type && TP(iM.target) && PM(iM.target)
-                } catch (MM) {
+                  for (const zU of UU)
+                    if ("childList" === zU.type) jF(zU.target) && FU(zU.target), zU.addedNodes.forEach(XU);
+                    else if ("characterData" === zU.type) {
+                    const UU = zU.target.parentNode;
+                    UU && jF(UU) && FU(UU)
+                  } else "attributes" === zU.type && jF(zU.target) && FU(zU.target)
+                } catch (UU) {
                   return
                 }
               }));
-              return iM.observe(MM, {
+              return zU.observe(UU, {
                 attributes: !0,
                 attributeFilter: ["type"],
                 characterData: !0,
@@ -8776,79 +8776,79 @@ export const modules = {
                 subtree: !0
               }), {
                 scan() {
-                  let rM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                  jM && !1 !== SM() && Mn(MM.documentElement).forEach((MM => {
-                    rM && OM.delete(MM), PM(MM)
+                  let XU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                  QU && !1 !== yU() && TF(UU.documentElement).forEach((UU => {
+                    XU && cU.delete(UU), FU(UU)
                   }))
                 },
-                stop: () => iM.disconnect()
+                stop: () => zU.disconnect()
               }
-            } catch (MM) {
+            } catch (UU) {
               return {
                 scan() {},
                 stop() {}
               }
             }
-          }(OS, rS.MutationObserver, {
-            maskUrl: MM => this.mn(MM),
-            attributeFilter: rM.attributeFilter,
-            blockClass: rM.blockClass,
-            blockSelector: rM.blockSelector,
-            isRecordedElement: MM => nM.mirror.getId(MM) > 0,
-            maskAllElementAttributes: rM.maskAllElementAttributes,
-            maskAttributeFn: rM.maskAttributeFn,
-            maskTextClass: rM.maskTextClass,
-            maskTextSelector: rM.maskTextSelector,
+          }(Xy, hc.MutationObserver, {
+            maskUrl: UU => this.mn(UU),
+            attributeFilter: XU.attributeFilter,
+            blockClass: XU.blockClass,
+            blockSelector: XU.blockSelector,
+            isRecordedElement: UU => oU.mirror.getId(UU) > 0,
+            maskAllElementAttributes: XU.maskAllElementAttributes,
+            maskAttributeFn: XU.maskAttributeFn,
+            maskTextClass: XU.maskTextClass,
+            maskTextSelector: XU.maskTextSelector,
             getCaptureState: () => {
-              var MM;
-              return !0 !== (null === (MM = this._instance.config.session_recording) || void 0 === MM ? void 0 : MM.captureJsonLd) || this.Y.urlBlocked || this.Y.isCurrentUrlBlocked() ? null : this.bn()
+              var UU;
+              return !0 !== (null === (UU = this._instance.config.session_recording) || void 0 === UU ? void 0 : UU.captureJsonLd) || this.Y.urlBlocked || this.Y.isCurrentUrlBlocked() ? null : this.bn()
             },
-            emit: MM => this.wn(MM)
-          }), this.Y.isCurrentUrlBlocked() && this._n.scan()), this.le = Date.now(), this.de = lS(this.de) ? this.de : "unknown", this.tryAddCustomEvent("$remote_config_received", this.ne), this.Vt("$session_options", {
-            sessionRecordingOptions: rM,
-            activePlugins: QM.map((MM => null == MM ? void 0 : MM.name))
+            emit: UU => this.wn(UU)
+          }), this.Y.isCurrentUrlBlocked() && this._n.scan()), this.le = Date.now(), this.de = ty(this.de) ? this.de : "unknown", this.tryAddCustomEvent("$remote_config_received", this.ne), this.Vt("$session_options", {
+            sessionRecordingOptions: XU,
+            activePlugins: DU.map((UU => null == UU ? void 0 : UU.name))
           }), this.Vt("$posthog_config", {
             config: this._instance.config
           })
         }
-        tryAddCustomEvent(MM, rM) {
-          return this.Vt(MM, rM)
+        tryAddCustomEvent(UU, XU) {
+          return this.Vt(UU, XU)
         }
       };
-      aS.__PosthogExtensions__ = aS.__PosthogExtensions__ || {}, aS.__PosthogExtensions__.rrwebPlugins = {
-        getRecordConsolePlugin: MM => ({
+      yy.__PosthogExtensions__ = yy.__PosthogExtensions__ || {}, yy.__PosthogExtensions__.rrwebPlugins = {
+        getRecordConsolePlugin: UU => ({
           name: "rrweb/console@1",
-          observer: MS,
-          options: MM
+          observer: Tc,
+          options: UU
         }),
-        getRecordNetworkPlugin: MM => ({
+        getRecordNetworkPlugin: UU => ({
           name: "rrweb/network@1",
-          observer: oj,
-          options: MM
+          observer: uQ,
+          options: UU
         })
-      }, aS.__PosthogExtensions__.rrweb = {
-        record: oO,
+      }, yy.__PosthogExtensions__.rrweb = {
+        record: uc,
         version: "v2",
-        wasMaxDepthReached: () => ri,
+        wasMaxDepthReached: () => Xz,
         resetMaxDepthState() {
-          ri = !1, Mi = !1
+          Xz = !1, Uz = !1
         },
-        getLastSnapshotCost: () => YM,
-        getMutationCost: () => OM({}, FM),
-        getDeferredStylesheetStats: () => OM({}, BM),
-        getDiscardedDurationSamples: () => pM,
-        getObserverInitFailures: () => Ti.size ? Array.from(Ti) : void 0,
+        getLastSnapshotCost: () => MU,
+        getMutationCost: () => cU({}, mU),
+        getDeferredStylesheetStats: () => cU({}, lU),
+        getDiscardedDurationSamples: () => qU,
+        getObserverInitFailures: () => jz.size ? Array.from(jz) : void 0,
         resetSnapshotCostState() {
-          kM = 0, ZM = 0, oM = 0, RM = 0, pM = 0, fM = {
+          uU = 0, fU = 0, iU = 0, wU = 0, qU = 0, HU = {
             durationMs: 0,
             stylesheetMs: 0,
             nodeCount: 0,
             cssRuleCount: 0,
             nonDeferrableCssRuleCount: 0,
             deferredStylesheetCount: 0
-          }, YM = null, NM = null, AM = [], xM = 0, vM = 0, FM = {
+          }, MU = null, vU = null, VU = [], sU = 0, nU = 0, mU = {
             slowestBatchMs: 0
-          }, BM = {
+          }, lU = {
             deferredCount: 0,
             failedCount: 0,
             abandonedCount: 0,
@@ -8856,9 +8856,9 @@ export const modules = {
             slowestSliceMs: 0
           }
         }
-      }, aS.__PosthogExtensions__.initSessionRecording = (MM, rM) => new pn(MM, rM)
+      }, yy.__PosthogExtensions__.initSessionRecording = (UU, XU) => new eo(UU, XU)
     }()
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

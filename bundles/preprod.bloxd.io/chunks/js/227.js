@@ -1,613 +1,949 @@
 export const id = 227;
 export const ids = [227];
 export const modules = {
-  37331: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => ir
+  41910: (UU, XU, zU) => {
+    function cU(UU, XU, zU) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(UU, XU).getContext("2d", zU);
+      const cU = document.createElement("canvas");
+      return cU.width = UU, cU.height = XU, cU.getContext("2d", zU)
+    }
+
+    function yU(UU, XU) {
+      return UU.getContext("2d", XU)
+    }
+    zU.d(XU, {
+      c: () => yU,
+      d: () => cU
+    })
+  },
+  41867: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => FU
     });
-    var OM = iM(44);
-    const SM = "newPlayerDeal",
-      jM = 36e5,
-      aM = [4, 12, 20, 20, 30];
-    const PM = 12 * jM;
+    const cU = 1 << 20,
+      yU = 1 << 21,
+      QU = 1024,
+      AU = 2048;
 
-    function nM(MM) {
-      return MM - PM
+    function FU(UU, XU, zU) {
+      const FU = UU + cU,
+        oU = XU + QU,
+        DU = zU + cU;
+      return FU < 0 || FU >= yU || DU < 0 || DU >= yU || oU < 0 || oU >= AU ? -1 : (FU * yU + DU) * AU + oU
     }
+  },
+  41865: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => cU,
+      d: () => AU,
+      h: () => yU,
+      i: () => QU,
+      j: () => EU,
+      m: () => DU,
+      n: () => oU,
+      q: () => FU
+    });
+    zU(3854);
+    zU(41867);
 
-    function QM(MM, rM, iM) {
-      const OM = nM(iM);
-      return rM >= OM && rM < iM && (null === MM.lastShownAt || MM.lastShownAt < OM)
-    }
+    function cU(UU) {}
 
-    function zM(MM, rM) {
-      const {
-        arrival: iM,
-        now: OM,
-        endsAt: SM,
-        playedOnDevice: PM
-      } = rM;
-      return !(OM >= SM || !PM) && (!(!QM(MM, OM, SM) && 0 !== MM.shownCount && null !== MM.lastShownAt) || "open" === iM && OM - MM.lastShownAt >= (nM = MM.shownCount, aM[Math.min(Math.max(nM, 1), aM.length) - 1] * jM));
-      var nM
-    }
-    var LM = iM(313),
-      mM = iM(1548),
-      HM = iM(19),
-      hM = iM(2401),
-      JM = iM(3381),
-      dM = iM(3385),
-      yM = iM(2060),
-      lM = iM(1202),
-      EM = iM(1144);
-    var UM = iM(1429),
-      GM = iM(30),
-      CM = iM(673),
-      eM = iM(2741),
-      bM = iM(1438),
-      wM = iM(2743),
-      tM = iM(2397),
-      gM = iM(1142),
-      uM = iM(2779),
-      RM = iM(2782),
-      pM = iM(3432),
-      WM = iM(1188),
-      sM = iM(1520),
-      DM = iM(3452),
-      kM = iM(35070),
-      ZM = iM(2787),
-      oM = iM(35077),
-      fM = iM(1303);
+    function yU(UU) {}
 
-    function YM(MM) {
-      let {
-        shownView: rM,
-        close: iM
-      } = MM;
-      const {
-        t: SM
-      } = (0, WM.A)(), jM = (0, uM.S)(), {
-        purchaseUnderWay: aM,
-        notice: PM,
-        needsLogin: nM,
-        buyPack: QM
-      } = (0, oM.e)("popup", ((MM, rM) => {
-        iM(!1), (0, pM.e)(MM, rM)
-      })), zM = null === jM;
-      (0, OM.useEffect)((() => {
-        zM && iM(!1)
-      }), [zM, iM]);
-      const LM = null !== jM && void 0 !== jM ? jM : rM;
-      return (0, fM.jsxs)("div", {
-        className: "NewPlayerDealPopup",
-        children: [(0, fM.jsx)("div", {
-          className: "NewPlayerDealPopupTitle",
-          children: SM("newPlayerDeal:title")
-        }), (0, fM.jsx)("div", {
-          className: "NewPlayerDealPopupSub",
-          children: SM("newPlayerDeal:samePrice")
-        }), (0, fM.jsx)(kM.e, {
-          className: "NewPlayerDealClockBig",
-          endsAt: LM.endsAt
-        }), (0, fM.jsx)(kM.i, {
-          view: LM,
-          needsLogin: nM,
-          busy: aM,
-          highlight: null,
-          onBuy: MM => {
-            QM(LM, MM)
-          }
-        }), (0, fM.jsx)(DM.i, {
-          notice: PM,
-          className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, fM.jsx)(DM.b, {
-          className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, fM.jsx)(sM.e, {
-          className: "NewPlayerDealNoThanks",
-          onClick: () => {
-            iM(!0)
-          },
-          children: SM("newPlayerDeal:noThanks")
-        })]
-      })
-    }
+    function QU(UU) {}
 
-    function NM(MM) {
-      let {
-        arm: rM,
-        children: iM
-      } = MM;
-      return (0, OM.useEffect)((() => {
-        (0, uM.M)(!0)
-      }), []), (0, uM.U)(rM, "popup"), iM
-    }
+    function AU(UU) {}
 
-    function AM(MM) {
-      let rM = null;
-      UM.NotificationProvider.showCustomPopup({
-        body: iM => (0, fM.jsx)(NM, {
-          arm: MM.arm,
-          children: (0, fM.jsx)(YM, {
-            shownView: MM,
-            close: MM => {
-              rM ??= MM, iM()
-            }
-          })
-        }),
-        middleScreenPopupContainerClassName: "NewPlayerDealPopupContainer",
-        middleScreenPopupClassName: "NewPlayerDealPopupPanel",
-        disableExitButton: !0,
-        unlockPointerKey: "NewPlayerDealPopup"
-      }).getResult().then((iM => {
-        (0, uM.M)(!1), !1 !== rM && "notificationTornDown" !== iM && (0, uM.G)("new_player_deal.close", (0, ZM.b)(MM.arm, "popup"))
-      }))
-    }
-    const xM = 2500,
-      vM = 6e4;
-    const FM = 500,
-      BM = 6e4;
+    function FU(UU) {}
 
-    function XM(MM) {
-      const rM = Date.now() + BM;
-      return new Promise((iM => {
-        const OM = () => {
-          MM() ? (0, wM.e)() || UM.NotificationProvider.hasPopup() || (0, bM.m)() || (0, uM.v)() || null !== HM.d.get("openEverythingMenuName") ? Date.now() > rM ? iM(!1) : setTimeout(OM, FM) : iM(!0) : iM(!1)
-        };
-        OM()
-      }))
-    }
-    const IM = "newPlayerDealPointerDeferred_";
-    let KM = !1,
-      qM = null;
+    function oU(UU, XU, zU) {}
 
-    function TM(MM, rM) {
-      var iM;
-      return (null === (iM = qM) || void 0 === iM ? void 0 : iM.accountId) === rM && qM.shownCount === MM.shownCount
-    }
+    function DU(UU) {}
 
-    function VM(MM, rM, iM) {
-      return !!TM(rM, iM) && (qM = null, (0, uM.A)(iM), AM(MM), !0)
-    }
-    async function cM(MM, rM, iM, OM) {
-      if (KM) return !1;
-      let SM;
-      KM = !0;
-      try {
-        SM = await async function(MM) {
-          const {
-            newPlayerDeal: rM,
-            counted: iM
-          } = await (0, EM.postJsonWithMetricsCookiesAndJsonResponse)(`${lM.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
-            shownCount: MM
-          }, {
-            retries: 1
-          });
-          return {
-            newPlayerDeal: rM,
-            counted: !0 === iM
-          }
-        }(rM.shownCount)
-      } catch (jM) {
-        return console.error("New player deal: counting a showing of its popup failed", jM), !1
-      } finally {
-        KM = !1
+    function EU(UU) {}
+  },
+  41863: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => GU,
+      e: () => pU,
+      h: () => lU,
+      l: () => eU,
+      o: () => qU,
+      r: () => OU,
+      t: () => kU,
+      w: () => tU,
+      y: () => gU,
+      C: () => LU,
+      F: () => VU,
+      J: () => RU,
+      K: () => iU,
+      L: () => mU,
+      N: () => SU,
+      Q: () => uU
+    });
+    var cU = zU(5318),
+      yU = zU(41699),
+      QU = (zU(41865), zU(13));
+    class AU {
+      constructor(UU, XU) {
+        this.memory = UU, this.access = XU, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.xY = 0, this.u32 = new QU.l(0), this.f32 = new QU.g(0), this.u8 = new QU.e(0), this.dataView = new QU.i(new ArrayBuffer(0)), this.refresh()
       }
-      return (0, uM.N)(iM, SM.newPlayerDeal), SM.counted && null !== SM.newPlayerDeal && (qM = {
-        accountId: OM,
-        shownCount: SM.newPlayerDeal.shownCount
-      }, "landingPage" === HM.d.get("gameState") && VM(MM, SM.newPlayerDeal, OM)), !0
+      refresh() {
+        this.ptr = this.access.ptr(), this.xY = this.access.xY(), this.buffer = (0, QU.K)(this.memory()), this.u32 = new QU.l(this.buffer, this.ptr, this.xY >>> 2), this.f32 = new QU.g(this.buffer, this.ptr, this.xY >>> 2), this.u8 = new QU.e(this.buffer, this.ptr, this.xY), this.dataView = new QU.i(this.buffer, this.ptr, this.xY)
+      }
+      ensureViews() {
+        (0, QU.K)(this.memory()) !== this.buffer && this.refresh()
+      }
+      get view() {
+        return this.ensureViews(), this.dataView
+      }
+      room(UU) {
+        return !!this.fits(UU) || (this.dropped++, !1)
+      }
+      fits(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
+        this.ensureViews();
+        const zU = XU + UU;
+        return zU <= this.xY || zU <= cU.Gc && 0 !== this.access.reserve(zU) && (this.refresh(), zU <= this.xY)
+      }
+      consume(UU) {
+        const XU = this.cursor - UU;
+        XU > 0 && UU > 0 && (this.ensureViews(), this.u8.copyWithin(0, UU, this.cursor)), this.cursor = XU > 0 ? XU : 0
+      }
+      writeRecord(UU, XU, zU, yU, QU) {
+        if (!this.room(cU.sb)) return !1;
+        const AU = this.cursor >>> 2;
+        return this.u32[AU] = 65535 & UU | (65535 & XU) << 16, this.f32[AU + 1] = zU, this.f32[AU + 2] = yU, this.u32[AU + 3] = QU >>> 0, this.cursor += cU.sb, !0
+      }
+      writeOptions(UU, XU) {
+        const zU = XU.byteLength,
+          yU = cU.sb + (0, cU.De)(zU);
+        if (!this.fits(yU)) return !1;
+        const QU = this.cursor,
+          AU = QU >>> 2;
+        this.u32[AU] = cU.tb.Options, this.u32[AU + 1] = zU, this.u32[AU + 2] = 0, this.u32[AU + 3] = UU >>> 0;
+        const FU = QU + cU.sb;
+        return this.u8.set(XU, FU), this.u8.fill(0, FU + zU, QU + yU), this.cursor += yU, !0
+      }
+      writeWorkerRecord(UU, XU, zU, yU, QU, AU) {
+        const FU = AU.byteLength,
+          oU = cU.Sd + (0, cU.De)(FU);
+        if (FU > cU.Od) return this.dropped++, !1;
+        if (!this.room(oU)) return !1;
+        const DU = this.cursor,
+          EU = DU >>> 2;
+        this.u32[EU] = UU >>> 0, this.u32[EU + 1] = 65535 & XU | (65535 & zU) << 16, this.u32[EU + 2] = yU >>> 0, this.u32[EU + 3] = QU >>> 0, this.u32[EU + 4] = FU;
+        const YU = DU + cU.Sd;
+        return this.u8.set(AU, YU), this.u8.fill(0, YU + FU, DU + oU), this.cursor += oU, !0
+      }
+      written() {
+        return this.ensureViews(), this.u8.subarray(0, this.cursor)
+      }
+      writeFrame(UU, XU) {
+        return this.writeNet(cU.$b.Frame, UU, XU)
+      }
+      writeOpen(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(cU.$b.Open, UU, oU(XU))
+      }
+      writeClose(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(cU.$b.Close, UU, oU(XU))
+      }
+      writeNet(UU, XU, zU) {
+        const yU = zU.byteLength,
+          QU = cU._b + (0, cU.De)(yU);
+        if (yU > cU.Vb) return this.dropped++, !1;
+        if (!this.room(QU)) return !1;
+        const AU = this.cursor;
+        this.u32[AU >>> 2] = yU, this.u32[1 + (AU >>> 2)] = (0, cU.ve)(UU, XU);
+        const FU = AU + cU._b;
+        return this.u8.set(zU, FU), this.u8.fill(0, FU + yU, AU + QU), this.cursor += QU, !0
+      }
+      gY(UU, XU, zU) {
+        const yU = cU.q + (0, cU.De)(zU);
+        if (!this.room(yU)) return -1;
+        const QU = this.cursor;
+        this.u32[QU >>> 2] = 65535 & UU | (65535 & XU) << 16, this.u32[1 + (QU >>> 2)] = zU;
+        const AU = QU + cU.q;
+        return this.u8.fill(0, AU, QU + yU), this.cursor += yU, AU
+      }
+      growForCmd(UU) {
+        return this.fits(cU.q + (0, cU.De)(UU), 0)
+      }
+      writeCmd(UU, XU, zU) {
+        const cU = this.gY(UU, XU, zU.byteLength);
+        return !(cU < 0) && (this.u8.set(zU, cU), !0)
+      }
+      copyWritten(UU, XU) {
+        return this.ensureViews(), this.u8.slice(UU, UU + XU)
+      }
     }
-    let Mr = null;
+    const FU = new QU.e(0);
 
-    function rr(MM, rM, iM, SM, jM) {
-      var aM;
-      const {
-        gameState: PM
-      } = (0, HM.m)(["gameState"]), mM = "landingPage" === PM, {
-        pointing: hM
-      } = (0, eM.f)(), JM = (0, OM.useRef)(hM);
-      JM.current = hM;
-      const dM = (0, OM.useRef)(MM);
-      dM.current = MM;
-      const lM = (0, OM.useRef)(rM);
-      lM.current = rM;
-      const EM = (0, OM.useRef)(iM);
-      EM.current = iM;
-      const [UM, bM] = (0, OM.useState)(null), wM = (0, OM.useRef)(0), tM = (0, OM.useRef)(0), gM = (0, OM.useRef)(!1), uM = (0, OM.useCallback)((MM => {
-        "open" === function(MM) {
-          const rM = MM ? (0, CM.e)() : (0, CM.peekVisitSessionId)(),
-            iM = null !== rM && rM === Mr ? "return" : "open";
-          return Mr = rM, iM
-        }(MM) && (gM.current = !0), wM.current++, bM({
-          seq: wM.current,
-          kind: gM.current ? "open" : "return"
+    function oU(UU) {
+      if (0 === UU) return FU;
+      const XU = new QU.e(cU.Yb);
+      for (let zU = 0; zU < cU.Yb; zU++) XU[zU] = UU >>> 8 * zU & 255;
+      return XU
+    }
+    class DU {
+      constructor(UU, XU) {
+        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new AU(XU, {
+          ptr: () => UU.AN(),
+          xY: () => UU.wAU(),
+          reserve: XU => UU.VAU(XU)
+        }), this.net = new AU(XU, {
+          ptr: () => UU.HAU(),
+          xY: () => UU.iAU(),
+          reserve: XU => UU.sAU(XU)
+        }), this.worker = new AU(XU, {
+          ptr: () => UU.YFU(),
+          xY: () => UU.EFU(),
+          reserve: XU => UU.nAU(XU)
+        }), this.cmd = new AU(XU, {
+          ptr: () => UU.BAU(),
+          xY: () => UU.kAU(),
+          reserve: XU => UU.GAU(XU)
         })
-      }), []);
-      (0, OM.useEffect)((() => {
-        if (!mM) return void bM(null);
-        uM(!0);
-        const MM = () => {
-          "visible" === document.visibilityState && uM(!0)
-        };
-        return document.addEventListener("visibilitychange", MM), () => {
-          document.removeEventListener("visibilitychange", MM)
-        }
-      }), [mM, uM]);
-      const RM = null !== (aM = null === MM || void 0 === MM ? void 0 : MM.endsAt) && void 0 !== aM ? aM : null;
-      (0, OM.useEffect)((() => {
-        if (!mM || null === RM) return;
-        const MM = nM(RM) - Date.now();
-        if (MM <= 0 || MM > yM.c) return;
-        const rM = setTimeout((() => {
-          uM(!1)
-        }), MM);
-        return () => {
-          clearTimeout(rM)
-        }
-      }), [mM, RM, uM]);
-      const pM = null !== MM && null !== SM && null === jM;
-      (0, OM.useEffect)((() => {
-        if (null === UM || !pM || tM.current >= UM.seq) return;
-        const MM = () => wM.current === UM.seq && "landingPage" === HM.d.get("gameState"),
-          rM = setTimeout((() => {
-            const rM = dM.current,
-              iM = lM.current;
-            if (null === rM || null === iM || !MM()) return;
-            tM.current = UM.seq;
-            const OM = Date.now(),
-              jM = TM(iM, SM);
-            if (!(jM || zM(iM, {
-                arrival: UM.kind,
-                now: OM,
-                endsAt: rM.endsAt,
-                playedOnDevice: GM.g.getItem(LM.Cb) > 0
-              }))) return void(gM.current = !1);
-            const aM = QM(iM, OM, rM.endsAt);
-            XM(MM).then((async MM => {
-              const rM = dM.current;
-              MM && null !== rM && lM.current === iM && (!JM.current || aM || function(MM, rM) {
-                return GM.g.getItem(IM + MM) === rM
-              }(SM, iM.shownCount) ? jM ? VM(rM, iM, SM) && (gM.current = !1) : await cM(rM, iM, EM.current, SM) && (gM.current = !1) : function(MM, rM) {
-                GM.g.setItem(IM + MM, rM)
-              }(SM, iM.shownCount))
-            }))
-          }), xM);
-        return () => {
-          clearTimeout(rM)
-        }
-      }), [UM, pM, SM])
+      }
+      reset(UU, XU, zU) {
+        this.input.consume(UU), this.worker.consume(XU), this.cmd.consume(zU)
+      }
     }
+    var EU = zU(36981),
+      YU = zU(2588),
+      NU = zU(5315),
+      IU = zU(41871);
+    const pU = "coreFrame",
+      aU = "fatalStatus",
+      tU = "otherCall",
+      gU = "coreRings",
+      kU = "netIn",
+      GU = "abi",
+      BU = "netOut",
+      ZU = "workerOut",
+      RU = "worldgenHost",
+      PU = "eventWalker",
+      WU = "netEvent",
+      dU = "envEvent",
+      LU = "sharedTables",
+      eU = "inputAction",
+      CU = "frameSends",
+      wU = new Set([PU, WU, dU, CU, eU, LU]),
+      qU = "wasmMemory",
+      OU = "meshHost";
 
-    function ir() {
+    function SU(UU, XU) {
+      UU.forEachWorkerOut(((zU, yU, QU) => {
+        if ((0, cU.oe)(zU)) try {
+          var AU;
+          null === (AU = XU.worldgen) || void 0 === AU || AU.take(zU, QU)
+        } catch (oU) {
+          UU.crash(RU, oU)
+        } else try {
+          var FU;
+          null === (FU = XU.mesh) || void 0 === FU || FU.take(zU, yU, QU)
+        } catch (oU) {
+          UU.crash(OU, oU)
+        }
+      }))
+    }
+    const rU = 1048576;
+
+    function uU(UU, XU) {
+      let zU = !1;
+      const cU = () => {
+        zU = !1, XU()
+      };
+      return () => {
+        !zU && UU.cursor >= rU && (zU = !0, queueMicrotask(cU))
+      }
+    }
+    const fU = new Set([aU, tU, RU, OU]);
+
+    function iU(UU) {
+      return wU.has(UU.site) ? UU.error instanceof WebAssembly.RuntimeError || (0, yU.l)(UU.error) : !fU.has(UU.site) && UU.error instanceof Error
+    }
+    const HU = "events",
+      MU = [],
+      vU = "debugLog",
+      VU = "terrainTextures",
+      sU = "sunShadowTextures",
+      nU = new TextDecoder;
+
+    function mU(UU, XU) {
       const {
-        userContext: MM
-      } = (0, gM.b)(), rM = (0, hM.usePurchasesAllowed)(), [iM, jM] = (0, OM.useState)(RM.m);
-      (0, OM.useEffect)((() => (jM((0, RM.m)()), (0, RM.q)(jM))), []);
-      const aM = (0, uM.d)(MM);
-      ! function(MM, rM, iM) {
-        const [jM, aM] = (0, OM.useState)(0);
-        (0, OM.useEffect)((() => {
-          if (!rM || null === MM) return;
-          if (null !== iM) return void(0, uM.J)(MM, (0, RM.h)());
-          if (null !== (0, uM.j)(MM)) return;
-          let OM, jM = !1;
-          return (0, dM.getBillingClient)().getOfferings(SM).then((rM => {
-            let {
-              offering: iM
-            } = rM;
-            (0, uM.J)(MM, null === iM ? [] : iM.packages.filter(JM.isPricedPackage))
-          }), (MM => {
-            console.error("New player deal: loading its prices failed", MM), jM || (OM = setTimeout((() => {
-              aM((MM => MM + 1))
-            }), vM))
-          })), () => {
-            jM = !0, clearTimeout(OM)
+        site: zU,
+        error: yU,
+        header: QU
+      } = UU, AU = QU ? (0, cU.ke)(QU.lastError) : "noFrame", FU = `CORE-${zU===aU?AU:zU}`, oU = null === yU || void 0 === yU ? "" : ` ${(0,EU.l)(yU)}`, DU = {
+        site: zU,
+        wasmBuild: XU.wasm,
+        clientVersion: XU.client
+      };
+      return QU && (DU.status = String(QU.status), DU.lastError = AU, DU.lastErrorCode = String(QU.lastError), DU.lastErrorDetail = String(QU.lastErrorDetail), DU.errorCount = String(QU.errorCount), DU.frameIndex = String(QU.frameIndex), DU.tickIndex = String(QU.tickIndex)), {
+        code: FU,
+        message: `core ${zU}, last error ${AU};${oU}`,
+        details: DU
+      }
+    }
+    class lU {
+      constructor(UU, XU, zU) {
+        this.core = UU, this.memory = XU, this.handlers = zU, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
+          ptr: 0,
+          len: 0,
+          net: MU,
+          netOffsets: this.netOffsets,
+          kind: "none"
+        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new DU(UU, XU)
+      }
+      get netKeptFrames() {
+        return this.keptFrames
+      }
+      get netWrittenSinceFrame() {
+        return this.rings.net.cursor - this.netKept
+      }
+      hasPendingCommands() {
+        return this.rings.cmd.cursor > 0
+      }
+      framePaces(UU) {
+        if (this.stopped || this.drawsHeld) return !1;
+        try {
+          return this.core.LAU(UU)
+        } catch (XU) {
+          return this.crash(pU, XU), !1
+        }
+      }
+      get isStopped() {
+        return this.stopped
+      }
+      frame(UU, XU) {
+        var zU;
+        let QU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this.stopped) return !1;
+        if (!this.writePendingInput()) return !1;
+        const {
+          input: AU,
+          net: FU,
+          worker: oU,
+          cmd: DU
+        } = this.rings, EU = FU.cursor, YU = XU && !this.drawsHeld;
+        let tU = cU.L.Fatal;
+        const gU = AU.cursor,
+          GU = oU.cursor,
+          BU = DU.cursor;
+        let ZU, RU = null;
+        const dU = this.handlers.onSends;
+        try {
+          const XU = (YU ? cU.cb.Draws : 0) | (QU ? cU.cb.NetAll : 0) | (dU ? cU.cb.StopForSends : 0);
+          tU = (0, IU.g)((() => {
+            let zU = this.core.frame(UU, gU, FU.cursor, GU, XU, BU);
+            for (; zU === cU.qd && dU;) {
+              var yU;
+              if (ZU ??= null === (yU = this.gameHost) || void 0 === yU ? void 0 : yU.takeFault(), void 0 === ZU && !this.takeSends(dU)) return cU.L.Fatal;
+              zU = this.core.ht()
+            }
+            return zU
+          }))
+        } catch (nU) {
+          RU = {
+            error: nU
           }
-        }), [MM, rM, iM, jM])
-      }(aM, null !== (0, uM.n)(MM) && (rM || null !== iM), iM);
-      const PM = (0, uM.S)();
-      return rr(PM, (0, uM.n)(MM), MM, aM, iM),
-        function() {
-          const {
-            userContext: MM
-          } = (0, gM.b)(), {
-            gameState: rM
-          } = (0, HM.m)(["gameState"]);
-          (0, OM.useEffect)((() => {
-            if ("landingPage" !== rM || !MM.isLoggedIn() && !(0, hM.guestsMayBuy)()) return;
-            const iM = (0, uM.g)(MM),
-              OM = (0, tM.u)((MM => iM.includes(MM.item)));
-            null !== OM && ((0, mM.reportAnalyticsClick)({
-              id: "store.login_resume",
-              value: OM.item
-            }), (0, tM.n)({
-              mode: "self",
-              source: "loginResume",
-              highlight: OM.item
-            }))
-          }), [MM, rM])
-        }(),
-        function(MM, rM, iM) {
-          const SM = (0, OM.useRef)(null);
-          (0, OM.useEffect)((() => {
-            if (null === iM || null === MM || null === rM || SM.current === iM) return;
-            SM.current = iM;
-            const OM = MM.packs[0].pack;
-            switch (iM.show) {
-              case "popup":
-                (0, uM.A)(rM), AM(MM);
-                break;
-              case "store":
-                (0, tM.n)({
-                  mode: "self",
-                  source: "newPlayerDeal"
-                });
-                break;
-              case "resume":
-                (0, tM.n)({
-                  mode: "self",
-                  source: "loginResume",
-                  highlight: OM.packageId
-                });
-                break;
-              case "bought":
-                (0, tM.n)({
-                  mode: "self",
-                  source: "newPlayerDeal"
-                }), (0, uM.z)(rM), (0, oM.c)(OM.gems);
-                break;
-              case "gift":
-                (0, tM.n)({
-                  mode: "gift",
-                  source: "newPlayerDeal",
-                  giftRecipientName: "Friend"
-                })
-            }
-          }), [iM, MM, rM])
-        }(PM, aM, iM), null
-    }
-  },
-  35070: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => hM,
-      i: () => dM
-    });
-    iM(35072);
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1188),
-      PM = iM(1520),
-      nM = iM(2796),
-      QM = iM(1398),
-      zM = iM(2382),
-      LM = iM(3449),
-      mM = iM(2412),
-      HM = iM(1303);
-
-    function hM(MM) {
-      let {
-        endsAt: rM,
-        className: iM
-      } = MM;
-      return (0, HM.jsxs)("span", {
-        className: jM()("NewPlayerDealClock", iM),
-        children: [(0, HM.jsx)(QM.b, {
-          name: "hourglass"
-        }), (0, HM.jsx)(nM.f, {
-          toTime: rM
-        })]
-      })
-    }
-
-    function JM(MM) {
-      let {
-        offered: rM,
-        needsLogin: iM,
-        busy: OM,
-        highlight: SM,
-        onBuy: nM
-      } = MM;
-      const {
-        t: QM
-      } = (0, aM.A)(), {
-        pack: hM
-      } = rM, JM = (0, LM.c)(rM.package);
-      return (0, HM.jsxs)("div", {
-        className: jM()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: SM
-        }),
-        children: [(0, HM.jsxs)("div", {
-          className: "NewPlayerDealPackArt",
-          children: [(0, HM.jsx)("img", {
-            src: mM.c[rM.tier],
-            alt: "",
-            draggable: !1
-          }), (0, HM.jsx)("span", {
-            className: "NewPlayerDealTag",
-            children: QM("newPlayerDeal:tag")
-          })]
-        }), (0, HM.jsx)("div", {
-          className: "NewPlayerDealPackText",
-          children: (0, HM.jsx)(zM.b, {
-            className: "NewPlayerDealPackAmount",
-            amount: hM.gems
-          })
-        }), (0, HM.jsx)(PM.p, {
-          className: "NewPlayerDealBuy",
-          loading: OM,
-          onClick: nM,
-          ariaLabel: QM("newPlayerDeal:buyLabel", {
-            amount: hM.gems.toLocaleString(),
-            price: JM
-          }),
-          children: QM(iM ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: JM
-          })
-        })]
-      })
-    }
-
-    function dM(MM) {
-      let {
-        view: rM,
-        needsLogin: iM,
-        busy: SM,
-        highlight: PM,
-        onBuy: nM
-      } = MM;
-      const {
-        t: QM
-      } = (0, aM.A)();
-      return (0, HM.jsxs)("div", {
-        className: jM()("NewPlayerDealPacks", rM.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [rM.packs.map(((MM, rM) => (0, HM.jsxs)(OM.Fragment, {
-          children: [rM > 0 && (0, HM.jsx)("div", {
-            className: "NewPlayerDealDivider",
-            "aria-hidden": !0,
-            children: (0, HM.jsx)("i", {})
-          }), (0, HM.jsx)(JM, {
-            offered: MM,
-            needsLogin: iM,
-            busy: SM,
-            highlight: PM === MM.pack.packageId,
-            onBuy: () => {
-              nM(MM)
-            }
-          })]
-        }, MM.pack.packageId))), (0, HM.jsx)("div", {
-          className: "NewPlayerDealUnder",
-          children: (0, HM.jsx)("span", {
-            className: "NewPlayerDealLimit",
-            children: QM("newPlayerDeal:limit")
-          })
-        })]
-      })
-    }
-  },
-  35077: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => wM,
-      e: () => gM
-    });
-    iM(35072);
-    var OM = iM(3442),
-      SM = iM(1548),
-      jM = iM(2401),
-      aM = iM(3432),
-      PM = iM(3411),
-      nM = iM(3439),
-      QM = iM(3385),
-      zM = iM(1188),
-      LM = iM(1429),
-      mM = iM(1142),
-      HM = iM(1520),
-      hM = iM(1398),
-      JM = iM(2382),
-      dM = iM(2910),
-      yM = iM(2779),
-      lM = iM(2782),
-      EM = iM(2787),
-      UM = iM(1303);
-    const GM = new nM.c(QM.getBillingClient, QM.addPurchaseRecordListener);
-    let CM = !1;
-
-    function eM(MM, rM) {
-      null !== MM && (0, yM.u)(MM) || ((0, SM.reportAnalyticsClick)({
-        id: "store.purchase_done",
-        value: `self:${rM.pack.packageId}`
-      }), null !== MM && (0, yM.z)(MM), wM(rM.pack.gems))
-    }
-
-    function bM(MM, rM, iM) {
-      const SM = (0, yM.d)(rM);
-      switch (MM.kind) {
-        case "completed":
-          eM(SM, iM);
-          break;
-        case "pending":
-          jM = MM.intentId, aM = () => {
-            dM.i.refresh(), eM(SM, iM)
-          }, CM || (CM = !0, GM.listen()), GM.follow(jM, aM);
-          break;
-        case "unknownPackage":
-          (0, yM.N)(rM, null);
-          break;
-        case "failed":
-          MM.errorKey === OM.d.newPlayerDealUnavailable && (0, yM.N)(rM, null)
+        }
+        ZU ??= null === (zU = this.gameHost) || void 0 === zU ? void 0 : zU.takeFault();
+        const LU = this.stopped || null !== RU || void 0 !== ZU;
+        this.rings.reset(LU ? AU.cursor : gU, LU ? oU.cursor : GU, LU ? DU.cursor : BU);
+        const eU = null === RU && void 0 === ZU,
+          CU = eU && !this.stopped && tU === cU.L.Fatal && 0 === this.core.CI(),
+          wU = eU && !CU ? this.headerView() : null,
+          qU = CU ? {
+            ...null !== (OU = this.lastHeader) && void 0 !== OU ? OU : (0, cU.Ee)(new Uint32Array(cU.fb)),
+            status: cU.L.Fatal,
+            lastError: cU.K.CoreBusy,
+            lastErrorDetail: 0
+          } : null === wU ? null : (0, cU.Ee)(wU);
+        var OU;
+        null !== qU && (this.lastHeader = qU);
+        const SU = null !== qU && tU !== cU.L.Fatal,
+          rU = SU && null !== wU ? wU[cU.jb.NetInKept] : 0,
+          uU = SU && rU <= EU && rU % 4 === 0 ? rU : null;
+        var fU, iU;
+        null !== qU && null !== uU && tU === cU.L.Errors && (null === (fU = (iU = this.handlers).onErrors) || void 0 === fU || fU.call(iU, qU));
+        const HU = null === uU ? MU : this.readEvents(EU);
+        if (FU.consume(EU - (null !== uU && void 0 !== uU ? uU : 0)), this.netKept = null !== uU && void 0 !== uU ? uU : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== RU) return this.crash(pU, void 0 === ZU || ZU instanceof yU.c ? RU.error : ZU), !1;
+        if (void 0 !== ZU || null === qU) return this.crashOn(pU, ZU), !1;
+        if (CU) return this.crash(aU, null), !1;
+        const vU = this.headerView()[cU.jb.FrameDraw];
+        if (this.lastFrameKind = (0, NU.g)(YU, vU), tU === cU.L.Fatal) return this.crash(aU, null), !1;
+        if (null === uU) return this.crash(kU, `the core kept ${rU} of ${EU} net-in bytes`), !1;
+        if (this.eventWalker) {
+          if (this.stopped) return !1;
+          const UU = this.frameEvents,
+            XU = this.headerView();
+          UU.ptr = XU[cU.jb.EventsPtr], UU.len = XU[cU.jb.EventsLen], UU.net = HU, UU.kind = this.lastFrameKind;
+          try {
+            this.eventWalker(UU)
+          } catch (nU) {
+            return this.crashOn(PU, nU), !1
+          }
+          return this.handEnvEvents()
+        }
+        for (const cU of HU) {
+          if (this.stopped) return !1;
+          try {
+            var VU, sU;
+            null === (VU = (sU = this.handlers).onNetEvent) || void 0 === VU || VU.call(sU, cU)
+          } catch (nU) {
+            return this.crashOn(WU, nU), !1
+          }
+        }
+        return this.handEnvEvents()
       }
-      var jM, aM
-    }
-
-    function wM(MM) {
-      LM.NotificationProvider.showCustomPopup({
-        body: rM => (0, UM.jsx)(tM, {
-          gems: MM,
-          close: rM
-        }),
-        middleScreenPopupClassName: "NewPlayerDealAddedPopup",
-        disableExitButton: !0
-      })
-    }
-
-    function tM(MM) {
-      let {
-        gems: rM,
-        close: iM
-      } = MM;
-      const {
-        t: OM
-      } = (0, zM.A)();
-      return (0, UM.jsxs)("div", {
-        className: "NewPlayerDealAdded",
-        children: [(0, UM.jsxs)("div", {
-          className: "NewPlayerDealAddedHead",
-          children: [(0, UM.jsx)(hM.b, {
-            name: "circle-check"
-          }), (0, UM.jsx)(JM.b, {
-            amount: rM
-          }), (0, UM.jsx)("span", {
-            children: OM("newPlayerDeal:added")
-          })]
-        }), (0, UM.jsx)(HM.p, {
-          className: "NewPlayerDealAddedOk",
-          onClick: iM,
-          children: OM("general:ok")
-        })]
-      })
-    }
-
-    function gM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.e;
-      const {
-        userContext: iM
-      } = (0, mM.b)(), {
-        purchaseUnderWay: OM,
-        notice: SM,
-        buy: nM
-      } = (0, PM.d)(rM), QM = (0, lM.m)(), zM = iM.mayBuy() || (0, jM.guestsMayBuy)(), LM = null === QM ? !zM : QM.guest && !iM.isLoggedIn();
-      return {
-        purchaseUnderWay: OM,
-        notice: SM,
-        needsLogin: LM,
-        buyPack: function(OM, SM) {
-          (0, yM.G)("new_player_deal.buy", (0, EM.b)(OM.arm, MM, SM.pack.packageId)), null === QM ? nM(function(MM) {
-            return {
-              sku: MM.pack.packageId,
-              tier: MM.tier,
-              amount: MM.pack.gems,
-              bonusPercent: 0,
-              package: MM.package
+      handEnvEvents() {
+        for (const QU of this.graceEvents) {
+          if (this.stopped) return !1;
+          try {
+            var UU, XU;
+            null === (UU = (XU = this.handlers).onReconnectGrace) || void 0 === UU || UU.call(XU, QU)
+          } catch (yU) {
+            return this.crashOn(WU, yU), !1
+          }
+        }
+        for (const QU of this.envEvents) {
+          if (this.stopped) return !1;
+          try {
+            var zU, cU;
+            null === (zU = (cU = this.handlers).onEnvEvent) || void 0 === zU || zU.call(cU, QU)
+          } catch (yU) {
+            return this.crashOn(dU, yU), !1
+          }
+        }
+        return !this.stopped
+      }
+      setEventWalker(UU) {
+        this.eventWalker = UU
+      }
+      writePendingInput() {
+        if (this.stopped) return !1;
+        const {
+          input: UU
+        } = this.rings;
+        try {
+          const XU = this.unsentUiPrefs;
+          XU && UU.writeRecord(cU.tb.UiPrefs, 0, XU.nametagCutDistance, 0, (0, cU.Fe)(XU)) && (this.unsentUiPrefs = null);
+          const zU = this.unsentEnvPrefs;
+          zU && UU.writeRecord(cU.tb.EnvPrefs, (0, cU.le)(zU), zU.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
+          const yU = this.unsentLookPrefs;
+          yU && UU.writeRecord(cU.tb.Sensitivity, 0, yU.mouse, yU.touch, (0, YU.m)(yU.fovPercent)) && (this.unsentLookPrefs = null);
+          let QU = 0;
+          for (const {
+              aux: cU,
+              payload: AU
             }
-          }(SM), null, {
-            followPending: !1
-          }).then((MM => {
-            bM(MM, iM, SM)
-          })) : LM ? rM(SM.pack.packageId, null) : eM((0, yM.d)(iM), SM)
+            of this.unsentOptions) {
+            if (!UU.writeOptions(cU, AU)) {
+              if (UU.cursor > 0) break;
+              this.optionsDropped++
+            }
+            QU++
+          }
+          QU > 0 && this.unsentOptions.splice(0, QU)
+        } catch (XU) {
+          return this.crash(gU, XU), !1
+        }
+        return !0
+      }
+      setHoldDraws(UU) {
+        this.drawsHeld = UU
+      }
+      setUiPrefs(UU) {
+        this.unsentUiPrefs = {
+          ...UU
         }
       }
+      setEnvPrefs(UU) {
+        this.unsentEnvPrefs = {
+          ...UU
+        }
+      }
+      setLookPrefs(UU) {
+        this.unsentLookPrefs = {
+          ...UU
+        }
+      }
+      queueOptions(UU, XU) {
+        return !this.isStopped && (XU.byteLength > cU.dc.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
+          aux: UU,
+          payload: XU
+        }), !0))
+      }
+      setChunkCap(UU) {
+        return this.callCore("setChunkCap", null, (XU => XU.KAU(UU)))
+      }
+      shedMemory(UU) {
+        const XU = this.callCore("shedMemory", null, (XU => XU.yFU(UU)));
+        return 0 === XU ? null : XU
+      }
+      addDistanceInUse() {
+        const UU = this.callCore("addDistanceInUse", null, (UU => UU.IAU()));
+        return 0 === UU ? null : UU
+      }
+      setChunkAddDistance(UU, XU) {
+        return this.callCore("setChunkAddDistance", !1, (zU => zU.jAU(UU, XU)))
+      }
+      setGameHost(UU) {
+        return this.callCore("setGameHost", !1, (XU => (XU.dAU(UU), this.gameHost = UU, !0)))
+      }
+      setAntiCheatProbes(UU) {
+        return this.callCore("setAntiCheatProbes", !1, (XU => XU.xAU(UU)))
+      }
+      setAmbientOcclusion(UU) {
+        this.callCore("setAmbientOcclusion", void 0, (XU => {
+          XU.lAU(UU)
+        }))
+      }
+      setPoseLod(UU) {
+        this.callCore("setPoseLod", void 0, (XU => {
+          XU.TAU(UU)
+        }))
+      }
+      setDebugLog(UU, XU) {
+        this.callCore(vU, void 0, (zU => {
+          zU.Jt(UU, XU)
+        }))
+      }
+      takeDebugLog(UU) {
+        return this.callCore(vU, [], (XU => XU.jt(UU)))
+      }
+      setTextureLayers(UU) {
+        return this.callCore("setTextureLayers", !1, (XU => XU.cFU(UU)))
+      }
+      setBlockColours(UU) {
+        let {
+          blocks: XU,
+          counts: zU,
+          values: cU
+        } = UU;
+        return this.callCore("setBlockColours", !1, (UU => UU.JcU(XU, zU, cU)))
+      }
+      terrainTextureNames() {
+        return this.callCore(VU, [], (UU => UU.DFU()))
+      }
+      setTerrainTextures(UU, XU, zU, cU) {
+        return this.callCore(VU, !1, (yU => yU.zFU(UU, zU, XU, cU)))
+      }
+      setShaderPack(UU, XU, zU, cU, yU, QU) {
+        return this.callCore("setShaderPack", !1, (AU => {
+          var FU, oU;
+          return null !== (FU = null === (oU = AU.QyU) || void 0 === oU ? void 0 : oU.call(AU, UU, XU, zU, cU, yU, QU)) && void 0 !== FU && FU
+        }))
+      }
+      sunShadowWantedTextures() {
+        return this.callCore(sU, null, (UU => {
+          var XU, zU;
+          return null !== (XU = null === (zU = UU.QFU) || void 0 === zU ? void 0 : zU.call(UU)) && void 0 !== XU ? XU : null
+        }))
+      }
+      setSunShadowTexture(UU, XU, zU, cU, yU) {
+        this.callCore(sU, void 0, (QU => {
+          var AU;
+          null === (AU = QU.UFU) || void 0 === AU || AU.call(QU, UU, XU, zU, cU, yU)
+        }))
+      }
+      takeSunShadowWarnings() {
+        return this.callCore(sU, [], (UU => {
+          var XU, zU;
+          return null !== (XU = null === (zU = UU.FFU) || void 0 === zU ? void 0 : zU.call(UU)) && void 0 !== XU ? XU : []
+        }))
+      }
+      sunShadowsHeld() {
+        return this.callCore(sU, null, (UU => {
+          var XU, zU;
+          return null !== (XU = null === (zU = UU.AFU) || void 0 === zU ? void 0 : zU.call(UU)) && void 0 !== XU ? XU : null
+        }))
+      }
+      callCore(UU, XU, zU) {
+        if (this.stopped) return XU;
+        try {
+          return zU(this.core)
+        } catch (cU) {
+          return this.crash(UU, cU), XU
+        }
+      }
+      readEvents(UU) {
+        this.netOffsets.length = 0;
+        const XU = this.headerView(),
+          zU = XU[cU.jb.EventsPtr],
+          yU = XU[cU.jb.EventsLen];
+        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === yU) return MU;
+        const QU = [],
+          AU = this.memory().buffer;
+        if (zU % 4 !== 0 || zU + yU > AU.byteLength) return this.crash(HU, `events of ${yU} bytes at ${zU} outside ${AU.byteLength} bytes of memory`), MU;
+        const FU = new DataView(AU, zU, yU),
+          oU = this.rings.net,
+          DU = (XU, zU) => XU + zU <= UU ? oU.copyWritten(XU, zU) : null;
+        let EU = 0;
+        for (; EU < yU;) {
+          const UU = EU + cU.V,
+            XU = UU <= yU ? FU.getUint32(EU, !0) : -1,
+            oU = XU >>> 16;
+          if (XU < 0 || oU > yU - UU) return this.crash(HU, `event record at ${EU} overruns its ${yU} bytes`), MU;
+          const eU = 65535 & XU,
+            CU = XU => FU.getUint32(UU + 4 * XU, !0);
+          if (eU === cU.W.RawMessage) {
+            const UU = oU >= cU.Kc.BYTES ? 65535 & CU(1) : -1,
+              XU = UU === cU.Kc.STRING_TYPE,
+              zU = oU === (XU ? cU.Kc.STRING_TYPE_BYTES : cU.Kc.BYTES) ? DU(CU(2), CU(3)) : null,
+              yU = XU && zU ? DU(CU(4), CU(5)) : null;
+            if (!zU || XU && !yU) return this.crash(HU, `RawMessage at ${EU} of ${oU} bytes names bytes outside net-in`), MU;
+            this.netOffsets.push(EU), QU.push({
+              type: "message",
+              conn: CU(0),
+              TE: UU,
+              payloadKind: CU(1) >>> 16,
+              payload: zU,
+              stringType: yU ? nU.decode(yU) : null
+            })
+          } else if (eU === cU.W.CoreErrors) {
+            var YU, NU;
+            const UU = oU >= 4 ? CU(0) : -1;
+            if (UU < 0 || UU > cU.H.PAIRS_MAX || oU !== 4 * (cU.H.FIXED_WORDS + cU.H.PAIR_WORDS * UU)) return this.crash(HU, `CoreErrors at ${EU} of ${oU} bytes`), MU;
+            const XU = [];
+            for (let zU = 0; zU < UU; zU++) XU.push({
+              code: CU(1 + 2 * zU),
+              detail: CU(2 + 2 * zU)
+            });
+            null === (YU = (NU = this.handlers).onCoreErrors) || void 0 === YU || YU.call(NU, XU, CU(1 + 2 * UU))
+          } else if (eU === cU.W.RenderReload) {
+            var IU, pU;
+            if (oU !== cU.Yc.BYTES) return this.crash(HU, `RenderReload at ${EU} of ${oU} bytes`), MU;
+            null === (IU = (pU = this.handlers).onRenderReload) || void 0 === IU || IU.call(pU, CU(0), CU(1), CU(2))
+          } else if (eU === cU.W.JoinPreloadEnded) {
+            var aU, tU;
+            if (oU !== cU.Bb.BYTES) return this.crash(HU, `JoinPreloadEnded at ${EU} of ${oU} bytes`), MU;
+            null === (aU = (tU = this.handlers).onJoinPreloadEnded) || void 0 === aU || aU.call(tU, {
+              chunks: CU(cU.Bb.CHUNKS),
+              bytes: CU(cU.Bb.BYTES_HELD),
+              asked: CU(cU.Bb.ASKED),
+              replaced: CU(cU.Bb.REPLACED),
+              dropped: CU(cU.Bb.DROPPED)
+            })
+          } else if (eU === cU.W.Images) {
+            var gU, kU;
+            null === (gU = (kU = this.handlers).onImages) || void 0 === gU || gU.call(kU, new Uint8Array(AU.slice(zU + UU, zU + UU + oU)))
+          } else if (eU === cU.W.ModelRequests)
+            for (let zU = 0; zU < oU >>> 2; zU++) {
+              var GU, BU;
+              null === (GU = (BU = this.handlers).onModelRequest) || void 0 === GU || GU.call(BU, CU(zU))
+            } else if (eU === cU.W.ModelTaken) {
+              var ZU, RU;
+              if (oU < 4) return this.crash(HU, `ModelTaken at ${EU} of ${oU} bytes`), MU;
+              const UU = new Uint32Array((oU >>> 2) - 1);
+              for (let XU = 0; XU < UU.length; XU++) UU[XU] = CU(1 + XU);
+              null === (ZU = (RU = this.handlers).onModelTaken) || void 0 === ZU || ZU.call(RU, CU(0), UU)
+            } else if (eU === cU.W.TerrainTexturesWanted) {
+            var PU, WU;
+            if (0 !== oU) return this.crash(HU, `TerrainTexturesWanted at ${EU} of ${oU} bytes`), MU;
+            null === (PU = (WU = this.handlers).onTerrainTexturesWanted) || void 0 === PU || PU.call(WU)
+          } else if (eU === cU.W.KeepAliveDue) {
+            var dU, LU;
+            if (oU > cU.Fb) return this.crash(HU, `KeepAliveDue at ${EU} of ${oU} bytes`), MU;
+            null === (dU = (LU = this.handlers).onKeepAlive) || void 0 === dU || dU.call(LU, new Uint8Array(AU, zU + UU, oU).slice())
+          } else if (eU === cU.W.ConnectionState) {
+            if (oU !== cU.u) return this.crash(HU, `ConnectionState at ${EU} of ${oU} bytes`), MU;
+            this.netOffsets.push(EU), QU.push({
+              type: "connection",
+              conn: CU(0),
+              phase: CU(1),
+              code: 0 | CU(2)
+            })
+          } else if (eU === cU.W.EnvLighting || eU === cU.W.SkyImages) {
+            if (oU !== (eU === cU.W.EnvLighting ? cU.R : cU.vd)) return this.crash(HU, `event ${eU} at ${EU} of ${oU} bytes`), MU;
+            this.envEvents.push({
+              kind: eU,
+              payload: new Uint8Array(AU.slice(zU + UU, zU + UU + oU))
+            })
+          } else if (eU === cU.W.ReconnectGrace) {
+            if (oU !== cU.qc) return this.crash(HU, `ReconnectGrace at ${EU} of ${oU} bytes`), MU;
+            const UU = CU(2);
+            this.graceEvents.push({
+              conn: CU(0),
+              graceMs: CU(1),
+              sessionBased: 0 !== (UU & cU.Oc.SessionBased),
+              replayOffer: 0 !== (UU & cU.Oc.ReplayOffer)
+            })
+          }
+          EU = UU + (0, cU.De)(oU)
+        }
+        return QU
+      }
+      takeSends(UU) {
+        this.atSendsStop = !0;
+        try {
+          UU()
+        } catch (XU) {
+          this.crashOn(CU, XU)
+        } finally {
+          this.atSendsStop = !1
+        }
+        return !this.stopped
+      }
+      forEachNetOut(UU) {
+        this.forEachOut(BU, "net-out", cU.jb.NetOutPtr, cU.jb.NetOutLen, cU._b, 0, ((XU, zU, yU, QU) => {
+          const AU = (0, cU.ue)(zU);
+          AU === cU.$b.Frame ? UU((0, cU.se)(zU), yU) : this.crash(BU, `net-out record at ${QU} is kind ${AU}, not a frame`)
+        }))
+      }
+      forEachWorkerOut(UU) {
+        this.forEachOut(ZU, "worker-out", cU.jb.WorkerOutPtr, cU.jb.WorkerOutLen, cU.Md, 4, ((XU, zU, yU, QU) => {
+          const AU = 255 & XU,
+            FU = AU === cU.ae.Init ? this.initOf(yU, QU) : yU;
+          null !== FU && UU(AU, XU >>> 8 & 16777215, FU)
+        }))
+      }
+      initOf(UU, XU) {
+        const zU = this.memory().buffer;
+        if (UU.byteLength !== cU.mb) return this.crash(ZU, `worker-out Init record at ${XU} is ${UU.byteLength} bytes, not a view`), null;
+        const yU = new DataView(UU.buffer, UU.byteOffset, cU.mb),
+          QU = yU.getUint32(0, !0),
+          AU = yU.getUint32(4, !0);
+        return QU + AU > zU.byteLength ? (this.crash(ZU, `worker-out Init record at ${XU} names ${AU} bytes at ${QU} outside ${zU.byteLength} bytes of memory`), null) : new Uint8Array(zU, QU, AU)
+      }
+      forEachOut(UU, XU, zU, yU, QU, AU, FU) {
+        if (!this.headerReadable()) return;
+        const oU = this.headerView(),
+          DU = oU[zU],
+          EU = oU[yU];
+        if (0 === EU) return;
+        const YU = this.memory().buffer;
+        if (DU % 4 !== 0 || DU + EU > YU.byteLength) return void this.crash(UU, `${XU} of ${EU} bytes at ${DU} outside ${YU.byteLength} bytes of memory`);
+        const NU = new DataView(YU, DU, EU);
+        let IU = 0;
+        for (; IU < EU;) {
+          const zU = IU + QU,
+            yU = zU <= EU ? NU.getUint32(IU + AU, !0) : -1;
+          if (yU < 0 || yU > EU - zU) return void this.crash(UU, `${XU} record at ${IU} overruns its ${EU} bytes`);
+          if (FU(NU.getUint32(IU, !0), NU.getUint32(IU + 4, !0), new Uint8Array(YU, DU + zU, yU), IU), this.stopped) return;
+          IU = zU + (0, cU.De)(yU)
+        }
+      }
+      forEachEvent(UU) {
+        if (this.stopped || null === this.lastHeader) return;
+        const XU = this.headerView(),
+          zU = XU[cU.jb.EventsPtr],
+          yU = XU[cU.jb.EventsLen];
+        if (0 === yU) return;
+        const QU = this.memory().buffer;
+        if (zU % 4 !== 0 || zU + yU > QU.byteLength) return void this.crash(HU, `events of ${yU} bytes at ${zU} outside ${QU.byteLength} bytes of memory`);
+        const AU = new DataView(QU, zU, yU);
+        let FU = 0;
+        for (; FU < yU;) {
+          const XU = FU + cU.V,
+            zU = XU <= yU ? AU.getUint32(FU, !0) : -1,
+            QU = zU >>> 16;
+          if (zU < 0 || QU > yU - XU) return void this.crash(HU, `event record at ${FU} overruns its ${yU} bytes`);
+          UU(65535 & zU, AU, XU, QU), FU = XU + (0, cU.De)(QU)
+        }
+      }
+      crashOn(UU, XU) {
+        XU instanceof yU.c ? this.crash(HU, XU.message) : this.crash(UU, XU)
+      }
+      crash(UU, XU) {
+        this.stopped || (this.stopped = !0, this.handlers.onCrash({
+          site: UU,
+          error: XU,
+          header: this.lastHeader
+        }))
+      }
+      headerWord(UU) {
+        return this.headerReadable() ? this.headerView()[UU] : 0
+      }
+      headerReadable() {
+        return !this.stopped && (null !== this.lastHeader || this.atSendsStop)
+      }
+      readLoadCounts(UU) {
+        const XU = this.loadCountWords();
+        return null !== XU && (UU.chunksReceived = XU[cU.Pb.ChunksReceived], UU.chunksCancelled = this.headerView()[cU.jb.ChunksCancelled], UU.chunksStored = XU[cU.Pb.ChunksStored], UU.jobsSent = XU[cU.Pb.JobsSent], UU.jobsDone = XU[cU.Pb.JobsDone], UU.jobsInFlight = XU[cU.Pb.JobsInFlight], UU.workersLive = XU[cU.Pb.WorkersLive], UU.workersRetired = XU[cU.Pb.WorkersRetired], !0)
+      }
+      readViewQueuedPrograms() {
+        var UU, XU;
+        const zU = null !== (UU = null === (XU = this.loadCountWords()) || void 0 === XU ? void 0 : XU[cU.Pb.ViewQueuedPrograms]) && void 0 !== UU ? UU : 0;
+        return 0 === zU ? null : zU - 1
+      }
+      readFirstViewWait(UU, XU) {
+        const zU = this.loadCountWords();
+        return null === zU ? null : [zU[cU.Pb.FirstViewLinkMs], zU[cU.Pb.FirstViewTerrainMs], zU[cU.Pb.FirstViewHeldMs], zU[cU.Pb.FirstViewOtherMs], zU[cU.Pb.FirstViewGaps], zU[cU.Pb.FirstViewGapMs], UU, XU]
+      }
+      loadCountWords() {
+        if (this.stopped || null === this.lastHeader) return null;
+        const UU = this.core.xt();
+        if (0 === UU) return null;
+        const XU = this.memory().buffer;
+        return XU !== this.loadCountsBuffer && (this.loadCountsBuffer = XU, this.loadCounts = new Uint32Array(XU, UU, cU.Jb)), this.loadCounts
+      }
+      headerView() {
+        const UU = this.memory().buffer;
+        return UU !== this.headerBuffer && (this.headerBuffer = UU, this.header = new Uint32Array(UU, this.core.CI(), cU.fb)), this.header
+      }
     }
   },
-  35072: () => {}
+  41871: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => AU,
+      g: () => QU
+    });
+    var cU = zU(5179);
+    let yU = null;
+
+    function QU(UU) {
+      yU = {
+        scanned: !1
+      };
+      try {
+        return UU()
+      } finally {
+        yU = null
+      }
+    }
+
+    function AU() {
+      const UU = yU;
+      if (null === UU) return (0, cU.f)();
+      const XU = (0, cU.f)(!UU.scanned);
+      return UU.scanned = !0, XU
+    }
+  },
+  41927: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => cU
+    });
+    const cU = {
+      webgpu: "rust_webgpu",
+      webgl: "rust_webgl2",
+      webgl1: "rust_webgl1"
+    }
+  },
+  41947: (UU, XU, zU) => {
+    function cU() {
+      return zU(41955)
+    }
+
+    function yU() {
+      return zU(41957)
+    }
+
+    function QU(UU) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(UU)
+    }
+    zU.d(XU, {
+      d: () => QU,
+      e: () => cU,
+      f: () => yU
+    })
+  },
+  36981: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => FU,
+      h: () => DU,
+      j: () => AU,
+      l: () => YU
+    });
+    var cU = zU(36972),
+      yU = zU(13);
+    const QU = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+
+    function AU(UU) {
+      if (UU instanceof WebAssembly.RuntimeError) return !0;
+      const XU = UU instanceof Error ? UU.stack : void 0;
+      return "string" === typeof XU && QU.test(XU)
+    }
+
+    function FU(UU, XU, zU) {
+      var yU;
+      const AU = UU instanceof Error ? UU.name : "thrown",
+        FU = (UU instanceof Error && null !== (yU = UU.stack) && void 0 !== yU ? yU : "").split("\n").filter((UU => QU.test(UU))).slice(0, 8).map((UU => UU.trim())),
+        oU = null === XU ? "wasm memory unknown" : `wasm memory ${Math.round(XU/2**20)} MB`,
+        DU = null === zU.panic ? "" : `, panic: ${(0,cU.e)(zU.panic)}`,
+        EU = `${AU}: ${UU instanceof Error?UU.message:String(UU)}`;
+      return `${(0,cU.l)(zU.kind,zU.refusedBytes)} ${EU} (${oU})${DU}${FU.length>0?` | ${FU.join(" < ")}`:""}`
+    }
+    const oU = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
+
+    function DU(UU) {
+      var XU;
+      let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(UU instanceof Error) || !oU.test(UU.message)) return {};
+      if (!("detached" in zU)) return {
+        arrayBufferDetached: "absent"
+      };
+      return {
+        arrayBufferDetached: (0, yU.W)(null === (XU = (0, yU.P)(zU, "detached")) || void 0 === XU ? void 0 : XU.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
+      }
+    }
+    const EU = 500;
+
+    function YU(UU) {
+      let XU = "[object Object]";
+      try {
+        XU = String(UU)
+      } catch {}
+      if ("[object Object]" !== XU) return XU;
+      try {
+        var zU, cU;
+        return null !== (zU = null === (cU = JSON.stringify(UU)) || void 0 === cU ? void 0 : cU.slice(0, EU)) && void 0 !== zU ? zU : XU
+      } catch {
+        return XU
+      }
+    }
+  },
+  41955: (UU, XU, zU) => {
+    UU.exports = zU.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  },
+  41957: (UU, XU, zU) => {
+    UU.exports = zU.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  },
+  36972: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => cU,
+      d: () => QU,
+      e: () => oU,
+      i: () => AU,
+      l: () => yU
+    });
+    const cU = /^alloc_failed (\d+) bytes$/;
+
+    function yU(UU, XU) {
+      return QU(UU, XU) ? `trap=alloc_failed ${XU} bytes` : `trap=${UU}`
+    }
+
+    function QU(UU, XU) {
+      return "unreachable" === UU && XU > 0
+    }
+
+    function AU(UU, XU, zU) {
+      const cU = function(UU) {
+        return UU instanceof WebAssembly.RuntimeError ? /unreachable/i.test(UU.message) ? "unreachable" : /out of bounds/i.test(UU.message) ? "out_of_bounds" : "runtime_error" : (UU instanceof RangeError || UU instanceof Error && "InternalError" === UU.name) && /call stack|recursion/i.test(UU.message) ? "stack_overflow" : "js_error"
+      }(UU);
+      if ("unreachable" !== cU) return {
+        kind: cU,
+        panic: null,
+        refusedBytes: 0
+      };
+      const yU = XU(),
+        QU = zU();
+      return {
+        kind: cU,
+        panic: QU > 0 ? null : yU,
+        refusedBytes: QU
+      }
+    }
+    const FU = 300;
+
+    function oU(UU) {
+      return UU.replace(/\s*\n\s*/g, " / ").slice(0, FU)
+    }
+  }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

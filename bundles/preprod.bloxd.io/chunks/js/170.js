@@ -1,1111 +1,785 @@
 export const id = 170;
 export const ids = [170];
 export const modules = {
-  8703: (MM, rM) => {
-    var iM = "youtube",
-      OM = [61802],
-      SM = "f167",
-      jM = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
-    rM.b = {
-      prefix: "fab",
-      iconName: iM,
-      icon: [576, 512, OM, SM, jM]
-    }, rM.c = rM.b
-  },
-  7398: (MM, rM) => {
-    Object.defineProperty(rM, "__esModule", {
-      value: !0
+  37318: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => tU,
+      e: () => gU,
+      f: () => NU,
+      h: () => YU
     });
-    var iM = "bolt",
-      OM = [9889, "zap"],
-      SM = "f0e7",
-      jM = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
-    rM.definition = {
-      prefix: "fas",
-      iconName: iM,
-      icon: [448, 512, OM, SM, jM]
-    }, rM.faBolt = rM.definition, rM.prefix = "fas", rM.iconName = iM, rM.width = 448, rM.height = 512, rM.ligatures = OM, rM.unicode = SM, rM.svgPathData = jM, rM.aliases = OM
-  },
-  8143: (MM, rM) => {
-    var iM = "person-military-pointing",
-      OM = [],
-      SM = "e54a",
-      jM = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
-    rM.e = {
-      prefix: "fas",
-      iconName: iM,
-      icon: [512, 512, OM, SM, jM]
-    }, rM.f = rM.e
-  },
-  8315: (MM, rM) => {
-    var iM = "sparkle",
-      OM = [],
-      SM = "e5d6",
-      jM = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
-    rM.b = {
-      prefix: "fas",
-      iconName: iM,
-      icon: [512, 512, OM, SM, jM]
-    }, rM.e = rM.b
-  },
-  8414: (MM, rM) => {
-    var iM = "user",
-      OM = [128100, 62144, 62470, "user-alt", "user-large"],
-      SM = "f007",
-      jM = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
-    rM.d = {
-      prefix: "fas",
-      iconName: iM,
-      icon: [448, 512, OM, SM, jM]
-    }, rM.f = rM.d
-  },
-  8540: (MM, rM) => {
-    var iM = "wrench",
-      OM = [128295],
-      SM = "f0ad",
-      jM = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
-    rM.e = {
-      prefix: "fas",
-      iconName: iM,
-      icon: [576, 512, OM, SM, jM]
-    }, rM.f = rM.e
-  },
-  8565: (MM, rM, iM) => {
-    var OM = iM(7398);
-    rM.c = {
-      prefix: OM.prefix,
-      iconName: OM.iconName,
-      icon: [OM.width, OM.height, OM.aliases, OM.unicode, OM.svgPathData]
-    }, rM.f = rM.c, OM.prefix, OM.iconName, OM.width, OM.height, OM.aliases, OM.unicode, OM.svgPathData, OM.aliases
-  },
-  42157: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM,
-      g: () => aM
-    });
-    var OM = iM(3698);
-    let SM = null,
-      jM = null;
+    var cU = zU(34859),
+      yU = zU(37325),
+      QU = zU(37334),
+      AU = zU(9282),
+      FU = zU(1492),
+      oU = zU(61),
+      DU = zU(73),
+      EU = zU(1305);
 
-    function aM() {
-      return jM ??= iM.e(234).then((() => iM(37271))).then((MM => {
+    function YU() {
+      var UU;
+      return (0, FU.j)(yU.d, (0, yU.o)()), (0, EU.jsx)(EU.Fragment, {
+        children: null === (UU = (0, yU.o)()) || void 0 === UU ? void 0 : UU.content
+      })
+    }
+
+    function NU(UU) {
+      var XU;
+      let {
+        show: zU
+      } = UU;
+      (0, FU.j)(yU.d, (0, yU.o)());
+      const DU = null === (XU = (0, yU.o)()) || void 0 === XU ? void 0 : XU.menu;
+      return (0, oU.useEffect)((() => {
+        var UU;
+        zU || (null === DU || void 0 === DU || null === (UU = DU.onClose) || void 0 === UU || UU.call(DU), (0, QU.t)())
+      }), [zU, DU]), (0, oU.useEffect)((() => zU ? (0, AU.d)(QU.x, QU.i) : void 0), [zU]), (0, EU.jsx)(cU.e, {
+        showing: zU,
+        globallyUniqueKey: "clientGameMenu",
+        children: null === DU || void 0 === DU ? void 0 : DU.content
+      })
+    }
+    const IU = new Map,
+      pU = new Set;
+
+    function aU(UU, XU) {
+      XU ? IU.set(UU, XU) : IU.delete(UU);
+      for (const zU of pU) zU()
+    }
+
+    function tU(UU) {
+      let {
+        placement: XU = "bottom"
+      } = UU;
+      const zU = (0, oU.useRef)(null);
+      return (0, oU.useLayoutEffect)((() => {
+        const UU = zU.current;
+        return aU(XU, UU), () => {
+          IU.get(XU) === UU && aU(XU, null)
+        }
+      }), [XU]), (0, EU.jsx)("div", {
+        ref: zU,
+        id: `clientGameHud-${XU}`,
+        style: {
+          display: "contents"
+        }
+      })
+    }
+
+    function gU(UU) {
+      let {
+        children: XU,
+        placement: zU = "bottom"
+      } = UU;
+      const [cU, yU] = (0, oU.useState)((() => {
+        var UU;
+        return null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null
+      }));
+      return (0, oU.useEffect)((() => {
+        const UU = () => {
+          var UU;
+          yU(null !== (UU = IU.get(zU)) && void 0 !== UU ? UU : null)
+        };
+        return pU.add(UU), UU(), () => {
+          pU.delete(UU)
+        }
+      }), [zU]), cU ? (0, DU.createPortal)(XU, cU) : null
+    }
+  },
+  9282: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU,
+      d: () => yU
+    });
+    let cU = null;
+    const yU = function(UU) {
+        const XU = {
+          cycle: UU,
+          canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
+        };
+        return cU = XU, () => {
+          cU === XU && (cU = null)
+        }
+      },
+      QU = () => {
+        var UU;
+        return null !== (UU = cU) && void 0 !== UU && UU.canCycle() ? cU.cycle : null
+      }
+  },
+  39331: (UU, XU, zU) => {
+    function cU(UU, XU, zU) {
+      var cU;
+      const {
+        width: yU,
+        height: QU
+      } = zU, AU = null !== (cU = UU.text) && void 0 !== cU ? cU : UU, FU = (AU.x / 100 - .5) * yU, oU = (AU.y / 100 - .5) * QU, DU = yU / 2 - XU.x;
+      if (null !== UU.text && Math.abs(FU) <= DU && oU >= XU.top - QU / 2 && oU <= QU / 2 - XU.bottom) return {
+        x: AU.x,
+        y: AU.y
+      };
+      const EU = Math.min(0 === FU ? 1 / 0 : DU / Math.abs(FU), oU > 0 ? (QU / 2 - XU.bottom) / oU : oU < 0 ? (XU.top - QU / 2) / oU : 1 / 0);
+      return !Number.isFinite(EU) || EU < 0 ? {
+        x: 50,
+        y: 50
+      } : {
+        x: 50 + FU * EU / yU * 100,
+        y: 50 + oU * EU / QU * 100
+      }
+    }
+    zU.d(XU, {
+      d: () => cU
+    })
+  },
+  39374: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => AU
+    });
+    const cU = 4,
+      yU = 12e3,
+      QU = 1e3;
+    class AU {
+      constructor() {
         let {
-          ITEM_SPRITES: rM,
-          ITEM_SPRITES_WITHOUT_FILE: iM,
-          ITEM_FILES_WITHOUT_SPRITE: jM
-        } = MM;
-        SM = function(MM, rM, iM) {
-          const SM = new Set,
-            jM = (0, OM.u)(rM);
-          let aM = 0;
-          for (const [OM, PM] of MM.entries()) OM === jM[aM] ? aM++ : SM.add(PM);
-          if ("" !== iM)
-            for (const PM of iM.split(OM.s)) SM.add(PM);
-          return SM
-        }(rM.split(OM.s), iM, jM)
-      }), (MM => {
-        throw jM = null, MM
-      })), jM
-    }
-
-    function PM(MM) {
-      var rM, iM;
-      return null !== (rM = null === (iM = SM) || void 0 === iM ? void 0 : iM.has(MM)) && void 0 !== rM && rM
-    }
-  },
-  42151: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      d: () => PM
-    });
-    var OM = iM(42157);
-    let SM = null,
-      jM = null;
-
-    function aM() {
-      return SM ??= iM.e(73).then((() => iM(63252))).catch((MM => {
-        throw SM = null, MM
-      })), SM
-    }
-
-    function PM() {
-      return jM ??= Promise.all([aM(), (0, OM.g)()]).then((MM => {
-        let [rM] = MM;
-        return rM
-      }), (MM => {
-        throw jM = null, MM
-      })), jM
-    }
-  },
-  53668: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => BM,
-      d: () => VM,
-      e: () => xM,
-      g: () => vM,
-      j: () => FM,
-      m: () => rr,
-      o: () => AM,
-      s: () => NM
-    });
-    var OM = iM(4848),
-      SM = iM(4874),
-      jM = iM(35037),
-      aM = iM(3693),
-      PM = iM(3690),
-      nM = iM(1418),
-      QM = iM(41906),
-      zM = iM(83),
-      LM = iM(1270),
-      mM = iM(42053),
-      HM = iM(42151),
-      hM = iM(8703),
-      JM = iM(8143),
-      dM = iM(8315),
-      yM = iM(8414),
-      lM = iM(8540),
-      EM = iM(8565);
-    const UM = {
-      youtube: hM.c,
-      "person-military-pointing": JM.f,
-      sparkle: dM.e,
-      user: yM.f,
-      wrench: lM.f,
-      zap: EM.f
-    };
-
-    function GM(MM) {
-      const [rM, iM, , , OM] = MM.icon;
-      return {
-        width: rM,
-        height: iM,
-        path: "string" === typeof OM ? OM : OM.join(" ")
+          limit: UU = cU,
+          windowMs: XU = yU,
+          spacingMs: zU = QU,
+          now: AU = Date.now
+        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = UU, this.windowMs = XU, this.spacingMs = zU, this.now = AU
+      }
+      isPacing() {
+        return !this.canSendPriority() || this.isPriorityWaiting()
+      }
+      canSendPriority() {
+        return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
+      }
+      tryStart() {
+        for (const UU of this.priority) UU.flush();
+        return !this.isPacing() && (this.start(), !0)
+      }
+      start() {
+        this.prune();
+        const UU = this.now();
+        this.sent.push(UU), this.lastSentAt = UU, this.schedule(), this.notify()
+      }
+      addPriority(UU) {
+        return this.priority.add(UU), () => {
+          this.priority.delete(UU)
+        }
+      }
+      subscribe(UU) {
+        return this.listeners.add(UU), () => {
+          this.listeners.delete(UU)
+        }
+      }
+      dispose() {
+        this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
+      }
+      isPriorityWaiting() {
+        for (const UU of this.priority)
+          if (UU.waiting()) return !0;
+        return !1
+      }
+      prune() {
+        const UU = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= UU;) this.sent.shift()
+      }
+      schedule() {
+        this.clearTimer();
+        const UU = this.now(),
+          XU = this.lastSentAt + this.spacingMs,
+          zU = Math.min(XU > UU ? XU : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        zU !== 1 / 0 && (this.timer = setTimeout((() => {
+          this.timer = null, this.prune(), this.schedule(), this.notify()
+        }), Math.max(0, zU - UU)))
+      }
+      notify() {
+        for (const UU of this.listeners) UU()
+      }
+      clearTimer() {
+        null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
-    const CM = new Map(Object.entries(UM).map((MM => {
-      let [rM, iM] = MM;
-      return [rM, GM(iM)]
-    })));
-    let eM = !1;
-    const bM = new Set;
-    var wM = iM(41939);
-    const tM = "Jetbrains Mono",
-      gM = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
-      uM = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
+  },
+  37334: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU,
+      i: () => aU,
+      l: () => tU,
+      o: () => FU,
+      r: () => NU,
+      t: () => gU,
+      v: () => YU,
+      w: () => GU,
+      x: () => pU,
+      y: () => kU
+    });
+    var cU = zU(27),
+      yU = zU(31);
+    const QU = "clientGameInventoryButtonsChanged",
+      AU = new Map;
 
-    function RM(MM) {
-      return MM.split(",").map((MM => {
-        const [rM, iM = rM] = MM.slice(2).split("-");
-        return [parseInt(rM, 16), parseInt(iM, 16)]
+    function FU() {
+      return [...AU.values()].sort(((UU, XU) => {
+        var zU, cU;
+        return (null !== (zU = UU.order) && void 0 !== zU ? zU : 0) - (null !== (cU = XU.order) && void 0 !== cU ? cU : 0)
       }))
     }
-    const pM = {
-        latin: RM(gM),
-        rest: RM(uM)
-      },
-      WM = new RegExp(`[${pM.rest.map((MM=>{let[rM,iM]=MM;return`\\u{${rM.toString(16)}}-\\u{${iM.toString(16)}}`})).join("")}]`, "u");
+    let oU = null;
 
-    function sM(MM) {
-      return rM => {
-        console.warn(`[bloxd-wasm-client] the text font's ${MM} file did not load`, rM)
-      }
+    function DU(UU) {
+      oU = UU
     }
-    const DM = 397,
-      kM = 1,
-      ZM = {
-        translate: MM => [MM],
-        keyBindingText: MM => MM,
-        isFriend: () => !1,
-        hiddenNames: {},
-        loadsFontRest: !1
-      };
-    let oM = null,
-      fM = 0,
-      YM = "none";
+    let EU = !1;
 
-    function NM() {
-      return fM
-    }
-
-    function AM() {
-      fM++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? YM = "all" : "none" === YM && (YM = "notBoards")
-    }(0, nM.t)((() => {
-      (function() {
-        const MM = eM;
-        return eM = !1, MM
-      })() && AM(!1)
-    }));
-    const xM = new class {
-      constructor(MM) {
-        this.loaded = MM, this.latin = null, this.rest = null, this.restWanted = !1
-      }
-      load() {
-        if (null === this.latin) {
-          this.latin = new FontFace(tM, `url(${(0,wM.f)()}) format("woff2")`, {
-            unicodeRange: gM
-          }).load().then((MM => {
-            document.fonts.add(MM), this.loaded()
-          }), sM("Latin"));
-          const MM = new FontFace(tM, `url(${(0,wM.g)()}) format("woff2")`, {
-            unicodeRange: uM,
-            display: "swap"
-          });
-          document.fonts.add(MM), MM.loaded.then((() => {
-            this.loaded()
-          }), sM("rest")), this.rest = MM, this.restWanted && MM.load()
-        }
-        return this.latin
-      }
-      loadRest() {
-        var MM;
-        this.restWanted || (this.restWanted = !0, null === (MM = this.rest) || void 0 === MM || MM.load())
-      }
-      loadFor(MM) {
-        !this.restWanted && WM.test(MM) && this.loadRest()
-      }
-    }(AM);
-
-    function vM(MM) {
-      Object.assign(ZM, MM), ZM.loadsFontRest && xM.loadRest(), AM(!1)
-    }
-
-    function FM(MM) {
-      MM !== oM && (oM = MM, AM())
-    }
-
-    function BM(MM) {
-      if ("none" === YM || null === MM) return;
-      MM(DM, "all" === YM ? 0 : kM, new Uint8Array(0)) && (YM = "none")
-    }
-    const XM = new Map,
-      IM = new Map;
-
-    function KM(MM, rM, iM) {
-      var OM;
-      const SM = iM ? `${MM}#${iM.join(",")}` : MM,
-        jM = XM.get(SM);
-      if (jM) return jM.image;
-      const aM = {
-        image: null !== (OM = IM.get(SM)) && void 0 !== OM ? OM : null
-      };
-      return XM.set(SM, aM), rM().then((async MM => {
-        if (null === MM) return null;
-        const rM = new Image;
-        rM.crossOrigin = "anonymous", rM.src = MM, await rM.decode();
-        const OM = await createImageBitmap(rM);
-        if (!iM) return OM;
-        try {
-          return function(MM, rM) {
-            let [iM, OM, SM] = rM;
-            const jM = (0, QM.d)(MM.width, MM.height),
-              {
-                canvas: aM
-              } = jM;
-            return jM.drawImage(MM, 0, 0), jM.globalCompositeOperation = "multiply", jM.fillStyle = `rgb(${iM}, ${OM}, ${SM})`, jM.fillRect(0, 0, aM.width, aM.height), jM.globalCompositeOperation = "destination-in", jM.drawImage(MM, 0, 0), aM
-          }(OM, iM)
-        } finally {
-          OM.close()
-        }
-      })).then((MM => {
-        XM.get(SM) === aM && IM.delete(SM), MM !== aM.image && (aM.image = MM, AM(!1))
-      }), (rM => {
-        console.warn(`[bloxd-wasm-client] text icon ${MM} did not load`, rM), XM.get(SM) === aM && (XM.delete(SM), IM.delete(SM), null !== aM.image && AM(!1))
-      })), aM.image
-    }(0, mM.c)((() => {
-      IM.clear();
-      for (const [MM, {
-          image: rM
-        }] of XM) null !== rM && IM.set(MM, rM);
-      XM.clear(), AM(!1)
-    }));
-    const qM = new Set(OM.e),
-      TM = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
-
-    function VM() {
-      (0, HM.d)().catch((() => {}))
-    }
-
-    function cM(MM) {
-      return qM.has(MM) ? KM(`icon:${MM}`, (async () => {
-        var rM, iM;
-        return null !== (rM = null === (iM = (0, mM.f)()) || void 0 === iM ? void 0 : iM.textureUrl(MM)) && void 0 !== rM ? rM : (await (0, HM.c)()).ingameIconUrl(MM)
-      })) : null
-    }
-    let Mr = "unasked";
-    const rr = {
-      get canSeeRealPlayerNames() {
-        return zM.featureFlags.canSeeRealPlayerNames
-      },
-      get canSeePlayerWrittenText() {
-        return zM.featureFlags.canSeePlayerWrittenText
-      },
-      get localPlayerDbId() {
-        return oM
-      },
-      shownPlayerName: MM => (0, LM.d)(MM, ZM.hiddenNames),
-      translate: (MM, rM) => {
-        const iM = "object" === typeof rM && null !== rM ? rM : void 0;
-        return ZM.translate(MM, (0, LM.g)(iM, ZM.hiddenNames))
-      },
-      keyBindingText: MM => ZM.keyBindingText(MM),
-      isFriend: MM => ZM.isFriend(MM, ZM.hiddenNames),
-      iconImage: function(MM) {
-        if (qM.has(MM)) return cM(MM);
-        if ("unasked" === Mr && (Mr = "loading", (0, PM.h)().then((() => {
-            Mr = "in", AM(!1)
-          }), (MM => {
-            Mr = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", MM)
-          }))), "in" !== Mr) return null;
-        const rM = (0, aM.d)(MM),
-          iM = void 0 === rM ? void 0 : (0, jM.itemTypeNameOf)(rM);
-        if ("Gun" === iM) return null;
-        const OM = (0, PM.e)(MM),
-          nM = void 0 !== iM && TM.has(iM);
-        if (nM && void 0 === OM) return null;
-        const QM = void 0 !== rM && "GrayscaleArmour" === (0, jM.itemTypeOf)(rM) || Object.hasOwn(SM.d, MM),
-          zM = null !== OM && void 0 !== OM ? OM : MM;
-        return KM(nM ? `block:${zM}` : `item:${zM}`, (async () => {
-          var MM, rM;
-          const iM = (0, mM.f)(),
-            OM = await (0, HM.d)();
-          return null !== (MM = null !== (rM = null === iM || void 0 === iM ? void 0 : iM.textureUrl(zM)) && void 0 !== rM ? rM : OM.itemSpriteUrl(zM)) && void 0 !== MM ? MM : nM ? null : OM.notFoundUrl()
-        }), QM ? (0, SM.f)(MM) : void 0)
-      },
-      effectImage: cM,
-      rankIcon: function(MM) {
-        const rM = CM.get(MM);
-        if (rM) return rM;
-        const iM = (0, nM.f)(MM, (0, nM.l)(MM));
-        if (!iM) return (0, nM.h)("brands") && (0, nM.h)("solid") ? bM.has(MM) || (bM.add(MM), console.warn(`[bloxd-wasm-client] unknown rank icon "${MM}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : eM = !0, null;
-        const OM = GM(iM);
-        return CM.set(MM, OM), OM
-      },
-      glyphsShown: MM => {
-        xM.loadFor(MM)
-      }
-    }
-  },
-  53661: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => Cr,
-      h: () => Jr
-    });
-    var OM = iM(37696),
-      SM = iM(41906),
-      jM = iM(39922),
-      aM = iM(605),
-      PM = iM(313);
-    const nM = {
-        DEFAULT_FONT_SIZE: 47,
-        DEFAULT_SUBTITLE_FONT_SIZE: 30,
-        HORIZONTAL_PADDING: 30,
-        VERTICAL_PADDING: 22,
-        TEXT_SHADOW_WIDTH: 2,
-        LINE_SPACING: 8,
-        EFFECT_ICON_SIZE: 70
-      },
-      QM = 41;
-
-    function zM(MM) {
-      return `bolder ${MM}px 'Jetbrains Mono'`
-    }
-
-    function LM(MM) {
-      return "object" === typeof MM && null !== MM
-    }
-
-    function mM(MM, rM) {
-      const iM = "number" === typeof MM ? MM : "string" === typeof MM ? Number(MM.replace("px", "")) : NaN;
-      return Number.isFinite(iM) && iM > 0 ? iM : rM
-    }
-
-    function HM(MM) {
-      return LM(MM) ? MM : void 0
-    }
-
-    function hM(MM) {
-      const rM = "number" === typeof MM ? aM.y[MM] : MM;
-      return "string" === typeof rM && Object.hasOwn(aM.n, rM) ? aM.n[rM] : void 0
-    }
-
-    function JM(MM, rM) {
-      return "string" === typeof MM ? MM : LM(MM) ? "string" === typeof MM.translationKey ? rM.translate(MM.translationKey, MM.params).map((MM => "string" === typeof MM ? MM : MM.icon)).join("") : "string" === typeof MM.entityName ? rM.shownPlayerName(MM.entityName) : "" : void 0 === MM || null === MM ? "" : String(MM)
-    }
-
-    function dM(MM, rM, iM, OM) {
-      if (!Array.isArray(MM)) return [];
-      const SM = [];
-      for (const zM of MM) {
-        var jM, aM;
-        if (LM(zM) && "chatTag" in zM) {
-          SM.push({
-            kind: "rank",
-            rank: zM
-          });
-          continue
-        }
-        if (LM(zM) && "icon" in zM && !("mainRGB" in zM)) {
-          var QM;
-          SM.push({
-            kind: "icon",
-            icon: String(zM.icon),
-            size: mM(null === (QM = HM(zM.style)) || void 0 === QM ? void 0 : QM.fontSize, nM.DEFAULT_FONT_SIZE)
-          });
-          continue
-        }
-        if (LM(zM) && (0, PM.rb)(zM)) {
-          SM.push({
-            kind: "text",
-            text: "",
-            size: rM,
-            colour: OM
-          });
-          continue
-        }
-        let MM, hM;
-        LM(zM) && (0, PM.nb)(zM) ? (MM = iM.keyBindingText(String(zM.action)), hM = HM(zM.style)) : LM(zM) && "str" in zM ? (MM = zM.str, hM = HM(zM.style)) : MM = zM;
-        const dM = mM(null === (jM = hM) || void 0 === jM ? void 0 : jM.fontSize, rM),
-          yM = null !== (aM = (0, PM.Ub)(hM)) && void 0 !== aM ? aM : OM;
-        if (LM(MM) && "string" === typeof MM.translationKey) {
-          const rM = iM.translate(MM.translationKey, MM.params);
-          if (rM.some((MM => "string" !== typeof MM))) {
-            for (const MM of rM) SM.push("string" === typeof MM ? {
-              kind: "text",
-              text: MM,
-              size: dM,
-              colour: yM
-            } : {
-              kind: "icon",
-              icon: MM.icon,
-              size: dM
-            });
-            continue
-          }
-        }
-        SM.push({
-          kind: "text",
-          text: JM(MM, iM),
-          size: dM,
-          colour: yM
-        })
-      }
-      return SM
-    }
-
-    function yM(MM) {
-      return void 0 !== MM && "rank" !== MM.kind
-    }
-
-    function lM(MM, rM) {
-      const iM = yM(MM),
-        OM = yM(rM);
-      return void 0 === MM && !OM || !iM && void 0 === rM ? 0 : iM !== OM ? .5 * nM.HORIZONTAL_PADDING : 0
-    }
-
-    function EM(MM) {
-      return "rank" === MM.kind ? nM.DEFAULT_FONT_SIZE : MM.size
-    }
-
-    function UM(MM, rM, iM) {
-      return "icon" === MM.kind ? MM.size : "rank" === MM.kind ? function(MM, rM) {
-        const iM = rM.rankIcon(MM.rank.icon);
-        return iM ? QM * (iM.width / iM.height) : QM
-      }(MM, iM) + nM.HORIZONTAL_PADDING : (iM.glyphsShown(MM.text), rM.font = zM(MM.size), rM.measureText(MM.text).width)
-    }
-
-    function GM(MM, rM, iM) {
-      if (0 === MM.length) return {
-        width: 0,
-        height: 0,
-        sizes: []
-      };
-      let OM = 0;
-      for (const aM of MM) OM = Math.max(OM, EM(aM));
-      const SM = [];
-      let jM = lM(void 0, MM[0]);
-      for (let aM = 0; aM < MM.length; aM++) {
-        const OM = jM;
-        jM += UM(MM[aM], rM, iM), jM += lM(MM[aM], MM[aM + 1]), SM.push({
-          x: OM,
-          width: jM - OM
-        })
-      }
-      return {
-        width: jM,
-        height: OM + nM.VERTICAL_PADDING,
-        sizes: SM
-      }
-    }
-
-    function CM(MM, rM, iM, OM, SM, jM, aM) {
-      rM += lM(void 0, MM[0]);
-      for (let PM = 0; PM < MM.length; PM++) {
-        const nM = eM(MM[PM], rM, iM, OM, SM, jM, aM);
-        rM += 0 === nM ? 0 : nM + lM(MM[PM], MM[PM + 1])
-      }
-    }
-
-    function eM(MM, rM, iM, OM, SM, jM, aM, PM) {
-      var LM;
-      if ("icon" === MM.kind) {
-        const OM = jM.iconImage(MM.icon);
-        return OM && aM.push({
-          image: OM,
-          x: rM,
-          y: iM + nM.VERTICAL_PADDING / 2,
-          size: MM.size
-        }), MM.size
-      }
-      if ("rank" === MM.kind) {
-        const aM = null !== PM && void 0 !== PM ? PM : UM(MM, SM, jM);
-        return function(MM, rM, iM, OM, SM, jM, aM) {
-          var PM, zM;
-          const {
-            rank: LM
-          } = MM;
-          jM.fillStyle = LM.mainRGB, jM.fillRect(rM, iM, OM, SM);
-          const mM = aM.rankIcon(LM.icon);
-          if (!mM) return;
-          const HM = QM / mM.height,
-            hM = rM + (OM - mM.width * HM) / 2,
-            JM = iM + (SM - QM) / 2,
-            dM = new Path2D(mM.path),
-            yM = nM.TEXT_SHADOW_WIDTH,
-            lM = (null === (PM = LM.nameTag) || void 0 === PM ? void 0 : PM.iconShadowRGB) || "black";
-          for (const nM of [-1, 1])
-            for (const MM of [-1, 1]) wM(jM, dM, hM + yM * nM, JM + yM * MM, HM, lM);
-          wM(jM, dM, hM, JM, HM, (null === (zM = LM.nameTag) || void 0 === zM ? void 0 : zM.iconRGB) || "white")
-        }(MM, rM, iM, aM, OM, SM, jM), aM
-      }
-      if (0 === MM.text.length) return 0;
-      const mM = zM(MM.size);
-      SM.font = mM;
-      const HM = null !== PM && void 0 !== PM ? PM : SM.measureText(MM.text).width;
-      return function(MM, rM, iM, OM, SM, jM) {
-        const aM = nM.TEXT_SHADOW_WIDTH;
-        jM.font = OM, jM.fillStyle = "black";
-        for (const PM of [-1, 1])
-          for (const OM of [-1, 1]) jM.fillText(MM, rM + aM * PM, iM + aM * OM);
-        jM.fillStyle = SM, jM.fillText(MM, rM, iM)
-      }(MM.text, rM, iM + OM - nM.VERTICAL_PADDING + 5, mM, null !== (LM = MM.colour) && void 0 !== LM ? LM : "white", SM), HM
-    }
-
-    function bM(MM, rM) {
-      for (const {
-          image: iM,
-          x: OM,
-          y: SM,
-          size: jM
-        }
-        of MM) rM.imageSmoothingEnabled = !1, rM.drawImage(iM, OM, SM, jM, jM)
-    }
-
-    function wM(MM, rM, iM, OM, SM, jM) {
-      MM.save(), MM.translate(iM, OM), MM.scale(SM, SM), MM.fillStyle = jM, MM.fill(rM), MM.restore()
-    }
-
-    function tM(MM, rM, iM) {
-      const OM = "object" === typeof MM && null !== MM ? MM : {},
-        SM = function(MM, rM, iM) {
-          if (!Array.isArray(MM) || 0 === MM.length) return [];
-          const OM = [{
-            width: 0,
-            height: 0,
-            y: 0,
-            items: []
-          }];
-          for (const aM of dM(MM, nM.DEFAULT_FONT_SIZE, iM)) {
-            if ("text" !== aM.kind) {
-              OM[OM.length - 1].items.push({
-                content: aM,
-                chars: 1,
-                size: {
-                  x: 0,
-                  width: 0
-                }
-              });
-              continue
-            }
-            if (0 === aM.text.length) continue;
-            const MM = OM[OM.length - 1].items.reduce(((MM, rM) => MM + ("text" === rM.content.kind ? (0, jM.d)(rM.content.text) : rM.chars)), 0);
-            (0, jM.g)(aM.text, MM).forEach(((MM, rM) => {
-              rM > 0 && OM.push({
-                width: 0,
-                height: 0,
-                y: 0,
-                items: []
-              }), MM.length > 0 && OM[OM.length - 1].items.push({
-                content: {
-                  ...aM,
-                  text: MM
-                },
-                chars: MM.length,
-                size: {
-                  x: 0,
-                  width: 0
-                }
-              })
-            }))
-          }
-          let SM = nM.VERTICAL_PADDING / 2;
-          for (const jM of OM) {
-            if (0 === jM.items.length) continue;
-            const {
-              width: MM,
-              height: OM,
-              sizes: aM
-            } = GM(jM.items.map((MM => MM.content)), rM, iM);
-            jM.items.forEach(((MM, rM) => {
-              MM.size = aM[rM]
-            })), jM.width = MM, jM.height = OM, jM.y = SM, SM += OM + nM.LINE_SPACING
-          }
-          return OM
-        }(OM.content, rM, iM);
-      let aM = 0,
-        PM = nM.VERTICAL_PADDING,
-        QM = 0;
-      for (const jM of SM) {
-        aM = Math.max(aM, jM.width + 2 * nM.HORIZONTAL_PADDING), PM += jM.height + nM.LINE_SPACING;
-        for (const MM of jM.items) QM += MM.chars
-      }
-      const zM = "string" === typeof OM.backgroundColor ? OM.backgroundColor : "#22283b";
-      return {
-        width: aM,
-        height: PM,
-        chars: QM,
-        draw: (MM, rM) => {
-          const OM = [];
-          if (MM.fillStyle = zM, MM.fillRect(0, 0, aM, PM), null === rM)
-            for (const jM of SM) jM.items.length > 0 && CM(jM.items.map((MM => MM.content)), 0, jM.y, jM.height, MM, iM, OM);
-          else {
-            let jM = 0;
-            for (const aM of SM)
-              for (const SM of aM.items) {
-                if (jM >= rM) break;
-                eM("text" === SM.content.kind ? {
-                  ...SM.content,
-                  text: SM.content.text.substring(0, rM - jM)
-                } : SM.content, SM.size.x, aM.y, aM.height, MM, iM, OM, SM.size.width), jM += SM.chars
-              }
-          }
-          bM(OM, MM)
-        }
-      }
-    }
-    var gM = iM(4848),
-      uM = iM(1279),
-      RM = iM(2148);
-    const pM = 10,
-      WM = 3,
-      sM = 3,
-      DM = [{
-        healthFraction: .25,
-        colour: "#ff0000"
-      }, {
-        healthFraction: .5,
-        colour: "#ffaa00"
-      }, {
-        healthFraction: 1,
-        colour: "#00ff00"
-      }],
-      kM = 64,
-      ZM = 69,
-      oM = {
-        icon: RM.e,
-        mainRGB: "transparent",
-        chatTag: [],
-        nameTag: {
-          iconRGB: "#f38ab6",
-          iconShadowRGB: "black"
-        },
-        visible: !0
-      };
-
-    function fM(MM) {
-      return "object" !== typeof MM || null === MM || Array.isArray(MM) ? void 0 : MM
-    }
-    const YM = new Set(gM.e);
-
-    function NM(MM, rM) {
-      return "string" === typeof MM ? mM(MM, rM) : rM
-    }
-
-    function AM(MM) {
-      return NM(MM.width, WM)
-    }
-
-    function xM(MM, rM) {
-      var iM;
-      const OM = null !== (iM = MM.applyTo) && void 0 !== iM ? iM : "both";
-      return "both" === OM || OM === rM
-    }
-
-    function vM(MM) {
-      const rM = AM(MM);
-      return "glow" === MM.style ? rM * sM : Math.ceil(rM / 2) + 1
-    }
-
-    function FM(MM, rM, iM) {
-      var OM, SM;
-      const jM = null !== (OM = fM(MM.info)) && void 0 !== OM ? OM : {},
-        PM = "string" === typeof MM.name ? MM.name : "",
-        QM = jM.subtitle;
-      if (Array.isArray(jM.content) && 0 === jM.content.length && !(Array.isArray(QM) && QM.length > 0)) return null;
-      const zM = "number" === typeof MM.hideNameSeed ? MM.hideNameSeed : null,
-        LM = "" === PM || !0 === MM.mesh ? PM : (0, uM.e)(PM, !iM.canSeeRealPlayerNames, zM);
-      if (!LM && !jM.content) return null;
-      const mM = "string" === typeof MM.colour ? MM.colour : "default",
-        HM = Object.hasOwn(aM.x, mM) ? aM.x[mM] : void 0,
-        JM = jM.content ? dM(jM.content, nM.DEFAULT_FONT_SIZE, iM, HM) : [{
-          kind: "text",
-          text: LM,
-          size: nM.DEFAULT_FONT_SIZE,
-          colour: HM
-        }],
-        yM = [];
-      for (const aM of Array.isArray(MM.ranks) ? MM.ranks : []) {
-        const MM = hM(aM);
-        null !== MM && void 0 !== MM && MM.nameTag && MM.visible && yM.push({
-          kind: "rank",
-          rank: MM
-        })
-      }
-      yM.push(...JM);
-      ("boolean" === typeof MM.player ? MM.player : Array.isArray(MM.ranks)) && "" !== PM && iM.isFriend(PM) && yM.push({
-        kind: "rank",
-        rank: oM
-      }), "number" === typeof MM.RQ && yM.push({
-        kind: "text",
-        text: ` ${MM.RQ}m`,
-        size: nM.DEFAULT_FONT_SIZE,
-        colour: "#cef3ff"
-      });
-      const lM = QM ? dM(QM, nM.DEFAULT_SUBTITLE_FONT_SIZE, iM) : null,
-        EM = "string" === typeof jM.backgroundColor ? jM.backgroundColor : "#22283b",
-        UM = "string" === typeof jM.subtitleBackgroundColor ? jM.subtitleBackgroundColor : "#1a1e2d",
-        eM = fM(jM.healthbar),
-        wM = fM(jM.border),
-        tM = Array.isArray(MM.effects) ? MM.effects.filter((MM => "string" === typeof MM && YM.has(MM))) : [],
-        gM = "number" === typeof MM.health ? Math.max(0, Math.min(1, MM.health)) : null,
-        RM = GM(yM, rM, iM),
-        WM = GM(null !== lM && void 0 !== lM ? lM : [], rM, iM),
-        FM = {
-          width: nM.EFFECT_ICON_SIZE * tM.length,
-          height: tM.length > 0 ? nM.EFFECT_ICON_SIZE : 0
-        },
-        BM = wM && xM(wM, "nametag") ? vM(wM) : 0,
-        XM = NM(null === eM || void 0 === eM ? void 0 : eM.height, pM),
-        IM = wM && xM(wM, "healthbar") ? vM(wM) : 0,
-        KM = "never" === (null !== (SM = null === eM || void 0 === eM ? void 0 : eM.display) && void 0 !== SM ? SM : "onDamage") ? 0 : XM + IM,
-        qM = Math.max(FM.height, BM),
-        TM = Math.max(nM.VERTICAL_PADDING, KM, BM);
-      let VM = Math.max(RM.width, WM.width, FM.width);
-      if (wM) {
-        const MM = vM(wM) + nM.HORIZONTAL_PADDING / 2;
-        VM = Math.max(VM, Math.max(RM.width, WM.width) + nM.HORIZONTAL_PADDING + 2 * MM)
-      }
-      const cM = RM.height + WM.height + qM + TM,
-        Mr = RM.width + nM.HORIZONTAL_PADDING,
-        rr = WM.width + nM.HORIZONTAL_PADDING,
-        ir = Math.max(Mr, rr),
-        Or = (VM - ir) / 2,
-        Sr = Math.max(FM.height, BM);
-      return {
-        width: VM,
-        height: cM,
-        draw: MM => {
-          const rM = [];
-          if (MM.fillStyle = EM, MM.fillRect(Or, Sr, ir, RM.height), CM(yM, (VM - Mr) / 2 + nM.HORIZONTAL_PADDING / 2, Sr, RM.height, MM, iM, rM), lM) {
-            const OM = Sr + RM.height;
-            MM.fillStyle = UM, MM.fillRect(Or, OM, ir, WM.height), CM(lM, (VM - rr) / 2 + nM.HORIZONTAL_PADDING / 2, OM, WM.height, MM, iM, rM)
-          }
-          let OM = null;
-          if (null !== gM) {
-            const rM = cM - XM - IM;
-            null !== eM && void 0 !== eM && eM.backgroundColour && (MM.fillStyle = eM.backgroundColour, MM.fillRect(Or, rM, ir, XM)), MM.fillStyle = function(MM, rM) {
-              const iM = null === MM || void 0 === MM ? void 0 : MM.foregroundColour;
-              if ("string" === typeof iM) return iM;
-              const OM = [...Array.isArray(iM) && iM.length > 0 ? iM : DM].sort(((MM, rM) => MM.healthFraction - rM.healthFraction)),
-                SM = OM.find((MM => rM <= MM.healthFraction));
-              return (null !== SM && void 0 !== SM ? SM : OM[OM.length - 1]).colour
-            }(eM, gM), MM.fillRect(Or, rM, Math.round(ir * gM), XM), OM = {
-              x: Or,
-              y: rM,
-              width: ir,
-              height: XM
-            }
-          }
-          if (wM) {
-            const rM = [];
-            xM(wM, "nametag") && rM.push({
-              x: Or,
-              y: Sr,
-              width: ir,
-              height: RM.height + (lM ? WM.height : 0)
-            }), OM && xM(wM, "healthbar") && rM.push(OM), rM.length > 0 && function(MM, rM, iM) {
-              const OM = AM(rM),
-                SM = OM / 2,
-                jM = MM => MM.width > 0 && MM.height > 0,
-                aM = iM.map((MM => ({
-                  x: MM.x + SM,
-                  y: MM.y + SM,
-                  width: MM.width - OM,
-                  height: MM.height - OM
-                }))).filter(jM);
-              if (0 === aM.length) return;
-              const PM = rM => {
-                const iM = rM.filter(jM);
-                if (0 !== iM.length) {
-                  MM.beginPath();
-                  for (const rM of iM) MM.rect(rM.x, rM.y, rM.width, rM.height);
-                  MM.stroke()
-                }
-              };
-              if (MM.save(), MM.strokeStyle = rM.colour, MM.lineWidth = OM, MM.lineJoin = "round", "glow" === rM.style) MM.shadowColor = rM.colour, MM.shadowBlur = OM * sM, PM(aM), PM(aM);
-              else if ("double" === rM.style) {
-                PM(aM);
-                const MM = OM + 2;
-                PM(aM.map((rM => ({
-                  x: rM.x + MM,
-                  y: rM.y + MM,
-                  width: rM.width - 2 * MM,
-                  height: rM.height - 2 * MM
-                }))))
-              } else PM(aM);
-              MM.restore()
-            }(MM, wM, rM)
-          }
-          bM(rM, MM);
-          for (let SM = 0; SM < tM.length; SM++) {
-            const rM = iM.effectImage(tM[SM]);
-            rM && (MM.imageSmoothingEnabled = !1, MM.drawImage(rM, 5 + ZM * SM, 5, kM, kM))
-          }
-        }
-      }
-    }
-    var BM = iM(39689);
-    const XM = 256,
-      IM = 1024,
-      KM = {
-        width: 1,
-        height: 7 / 8
-      };
-    var qM = iM(39691);
-    const TM = {
-      leaderboard: ""
-    };
-    var VM = iM(53668);
-    const cM = {
-        Nametag: 1,
-        MultilineText: 2,
-        Board: 3,
-        Leaderboard: 4
-      },
-      Mr = 2048,
-      rr = 256,
-      ir = 10,
-      Or = 4,
-      Sr = 65536,
-      jr = new TextDecoder;
-    let ar = VM.m,
-      Pr = -1;
-    const nr = new Map,
-      Qr = new Map;
-    let zr = 0;
-    const Lr = new TextEncoder;
-
-    function mr(MM, rM) {
-      const iM = Lr.encode(JSON.stringify(rM)),
-        OM = new Uint8Array(iM.length + 1);
-      return OM[0] = MM, OM.set(iM, 1), OM
-    }
-    const Hr = {
-        name: "Ag",
-        info: null,
-        colour: "default",
-        ranks: [],
-        effects: [],
-        health: .5,
-        RQ: null,
-        hideNameSeed: null
-      },
-      hr = [mr(cM.Nametag, Hr), mr(cM.Nametag, {
-        ...Hr,
-        info: {
-          content: [{
-            str: "Ag"
-          }],
-          subtitle: ["Ag"]
-        }
-      }), mr(cM.MultilineText, {
-        box: {
-          content: ["Ag"]
-        },
-        shown: null
-      }), ...OM.e.map(((MM, rM) => mr(cM.Board, {
-        shared: {
-          text: "Ag",
-          textSize: rM
-        },
-        w: 0,
-        h: 0
-      })))];
-
-    function Jr(MM) {
-      VM.e.load().then((() => {
-        if (MM()) return;
-        const rM = (0, SM.d)(1, 1, {
-          willReadFrequently: !0
-        });
-        var iM;
-        rM && (iM = rM.canvas, hr.map((MM => Cr(MM, iM))))
-      }))
-    }
-    let dr = VM.s;
-
-    function yr() {
-      nr.clear(), Qr.clear()
-    }
-
-    function lr(MM, rM) {
-      const iM = MM.get(rM);
-      return void 0 !== iM && (MM.delete(rM), MM.set(rM, iM)), iM
-    }
-
-    function Er(MM, rM, iM) {
-      MM.set(rM, iM), MM.size > rr && MM.delete(MM.keys().next().value)
-    }
-
-    function Ur(MM, rM, iM) {
-      if (MM === cM.Nametag) {
-        let MM = lr(nr, rM);
-        return void 0 === MM && (MM = FM(JSON.parse(rM), iM, ar), Er(nr, rM, MM)), MM
-      }
-      if (MM === cM.MultilineText) {
-        var SM;
-        const MM = JSON.parse(rM),
-          OM = JSON.stringify(null !== (SM = MM.box) && void 0 !== SM ? SM : null),
-          jM = "number" === typeof MM.shown ? MM.shown : null;
-        let aM = lr(Qr, OM);
-        void 0 === aM && (aM = tM(MM.box, iM, ar), Er(Qr, OM, aM));
-        const PM = null === jM ? null : Math.min(Math.max(0, Math.floor(jM)), aM.chars),
-          nM = aM;
-        return {
-          width: nM.width,
-          height: nM.height,
-          draw: MM => {
-            nM.draw(MM, PM)
-          }
-        }
-      }
-      if (MM === cM.Board) return function(MM, rM) {
-        var iM;
-        if (!rM.canSeePlayerWrittenText) return null;
-        const {
-          shared: SM,
-          w: jM = 0,
-          h: aM = 0
-        } = MM, PM = !jM;
-        let nM;
-        if (PM) {
-          var QM, zM;
-          nM = null !== (QM = null === SM || void 0 === SM || null === (zM = SM.text) || void 0 === zM ? void 0 : zM.toString()) && void 0 !== QM ? QM : ""
-        } else {
-          if ("string" !== typeof(null === SM || void 0 === SM ? void 0 : SM.text)) return null;
-          nM = SM.text
-        }
-        if ("" === nM.trim()) return null;
-        const LM = null !== (iM = null === SM || void 0 === SM ? void 0 : SM.textSize) && void 0 !== iM ? iM : 0,
-          mM = OM.e[LM].ingameFontSize;
-        let HM = KM,
-          hM = XM;
-        PM || (nM = (0, OM.l)(nM, LM, jM, aM), HM = (0, OM.p)(jM, aM), hM = Math.min(XM, IM / Math.max(HM.width, HM.height)));
-        const JM = Math.round(hM * HM.width),
-          dM = Math.round(hM * HM.height),
-          yM = hM / XM;
-        return {
-          width: JM,
-          height: dM,
-          draw: MM => {
-            BM.d.fontSize = mM * yM, BM.d.fontWeight = "bold", BM.d.font = "'Jetbrains Mono', monospace", BM.d.drawText(MM, nM, 0, (-10 - 7 * LM) * yM, JM, dM)
-          }
-        }
-      }(JSON.parse(rM), ar);
-      if (MM === cM.Leaderboard) return function(MM, rM, iM) {
-        var OM;
-        const SM = (0, qM.j)(MM.opts, TM),
-          jM = (0, qM.d)(SM, iM),
-          aM = {
-            top: (0, qM.f)(SM, (0, qM.k)(MM.top)),
-            around: null !== (OM = MM.around) && void 0 !== OM ? OM : null,
-            showPlayerText: rM.canSeePlayerWrittenText,
-            localPlayerDbId: rM.localPlayerDbId
-          };
-        return {
-          width: jM.pixelWidth,
-          height: jM.pixelHeight,
-          draw: MM => {
-            const {
-              a: rM,
-              d: iM
-            } = MM.getTransform();
-            (0, qM.c)(MM, Math.round(jM.pixelWidth * rM), Math.round(jM.pixelHeight * iM), jM, SM, aM)
-          }
-        }
-      }(JSON.parse(rM), ar, Mr);
-      throw new Error(`unknown text plane kind ${MM}`)
-    }
-    const Gr = 2 ** Math.floor(Math.log2(Mr));
-
-    function Cr(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function YU(UU) {
+      EU = !0;
       try {
-        if (MM.length < 2) return [0, 0];
-        const jM = (0, SM.b)(rM);
-        if (!jM) return [0, 0];
-        const aM = dr();
-        aM !== Pr && (Pr = aM, yr());
-        const [PM] = MM, nM = jr.decode(MM.subarray(1));
-        let QM;
-        PM !== cM.Board && PM !== cM.Leaderboard || !ar.canSeePlayerWrittenText || ar.glyphsShown(nM), jM.save();
-        try {
-          QM = Ur(PM, nM, jM)
-        } finally {
-          jM.restore()
-        }
-        if (null === QM || !(QM.width > 0 && QM.height > 0)) return [0, 0];
-        const zM = Math.min(1, Mr / QM.width, Mr / QM.height),
-          LM = MM => OM ? function(MM) {
-            const rM = 2 ** Math.ceil(Math.log2(MM));
-            return Math.min(Gr, rM - MM > MM - rM / 2 ? rM / 2 : rM)
-          }(MM) : Math.min(Mr, Math.ceil(MM * zM)),
-          [mM, HM] = [LM(QM.width), LM(QM.height)];
-        ! function(MM, rM, iM, OM, SM) {
-          const jM = Math.max(MM.width, iM),
-            aM = Math.max(MM.height, OM),
-            PM = SM || jM * aM > Math.max(Or * iM * OM, Sr),
-            [nM, QM] = PM ? [iM, OM] : [jM, aM];
-          nM === MM.width && QM === MM.height ? rM.clearRect(0, 0, nM, QM) : (MM.width = nM, MM.height = QM)
-        }(rM, jM, mM, HM, iM), jM.save();
-        try {
-          const [MM, rM] = OM ? [mM / QM.width, HM / QM.height] : [zM, zM];
-          1 === MM && 1 === rM || jM.scale(MM, rM), QM.draw(jM)
-        } finally {
-          jM.restore()
-        }
-        return [mM, HM]
-      } catch (jM) {
-        ! function(MM, rM) {
-          zr < ir && (zr++, console.warn(`[bloxd-wasm-client] ${MM}`, rM))
-        }("could not raster a text plane", jM);
-        try {
-          rM.width = 1
-        } catch {}
-        return [0, 0]
+        UU.onClick()
+      } finally {
+        EU = !1
+      }
+      UU.panel && "clientGame" === cU.e.get("openInGameMenuName") && DU(UU.id)
+    }
+
+    function NU() {
+      return EU
+    }
+
+    function IU() {
+      return FU().filter((UU => UU.panel && !UU.disabled))
+    }
+
+    function pU(UU) {
+      const XU = IU(),
+        zU = XU.findIndex((UU => UU.id === oU));
+      return !(zU < 0 || XU.length < 2) && (YU(XU[(zU + UU + XU.length) % XU.length]), !0)
+    }
+
+    function aU() {
+      return null !== oU && IU().length > 1
+    }
+
+    function tU() {
+      DU(null)
+    }
+
+    function gU() {
+      "inventory" !== cU.e.get("openInGameMenuName") && DU(null)
+    }
+
+    function kU() {
+      const UU = oU;
+      return DU(null), UU
+    }
+
+    function GU(UU) {
+      return AU.set(UU.id, UU), yU.k.UY(QU, FU(), !0), () => {
+        AU.get(UU.id) === UU && (AU.delete(UU.id), yU.k.UY(QU, FU()))
       }
     }
+  },
+  37325: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => FU,
+      h: () => kU,
+      j: () => tU,
+      l: () => gU,
+      n: () => NU,
+      o: () => DU,
+      r: () => aU,
+      t: () => IU,
+      u: () => EU
+    });
+    var cU = zU(27),
+      yU = zU(31),
+      QU = zU(1310),
+      AU = zU(37334);
+    const FU = "clientGameUiChanged";
+    let oU = null;
+
+    function DU() {
+      return oU
+    }
+
+    function EU(UU, XU) {
+      const zU = {
+        content: UU,
+        menu: XU
+      };
+      return oU = zU, yU.k.UY(FU, oU, !0), () => {
+        oU === zU && (oU = null, pU = !1, tU(), yU.k.UY(FU, null))
+      }
+    }
+    let YU = null;
+
+    function NU() {
+      return YU
+    }
+
+    function IU(UU) {
+      return YU = UU, () => {
+        YU === UU && (YU = null)
+      }
+    }
+    let pU = !1;
+
+    function aU() {
+      const UU = cU.e.get("openInGameMenuName");
+      "clientGame" !== UU && (pU = "inventory" === UU), (0, AU.r)() || (0, AU.l)(), (0, QU.u)(QU.c), cU.e.set({
+        openInGameMenuName: "clientGame",
+        openEverythingMenuName: null
+      })
+    }
+
+    function tU() {
+      GU(!1)
+    }
+
+    function gU() {
+      GU(pU)
+    }
+
+    function kU() {
+      pU && GU(!1)
+    }
+
+    function GU(UU) {
+      "clientGame" === cU.e.get("openInGameMenuName") && cU.e.set({
+        openInGameMenuName: UU ? "inventory" : null
+      }), UU || (0, AU.l)(), pU = !1
+    }
+  },
+  39378: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => AU
+    });
+    var cU = zU(61),
+      yU = zU(39339),
+      QU = zU(1305);
+
+    function AU(UU) {
+      let {
+        icon: XU
+      } = UU;
+      const zU = (0, cU.useCallback)((UU => {
+        null === UU || void 0 === UU || UU.replaceChildren((0, yU.e)(XU))
+      }), [XU]);
+      return (0, QU.jsx)("span", {
+        className: "SkyblockMapIconSlot",
+        ref: zU
+      })
+    }
+  },
+  39339: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => PU,
+      f: () => RU
+    });
+    const cU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
+      yU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
+      QU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC";
+    var AU = zU(39342);
+    const FU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
+    var oU = zU(39348);
+    var DU = zU(39353);
+    var EU = zU(39361);
+    const YU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
+    zU(61);
+    const NU = zU.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
+    const IU = zU.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
+      pU = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
+    var aU = zU(19102),
+      tU = zU(21217),
+      gU = zU(23505),
+      kU = zU(25090),
+      GU = zU(26809);
+    const BU = {
+      ashen_fort: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIAP8R6PR2RCBzRu2/kemQbirvQ/GRlUIwyAFIJyUkIFbobyUHhjjVAiSgCmM1p9HWCFI0YKYD/gVgjDMapAibAphQYENkwYAeH1pEdiBhHAAAAAASUVORK5CYII=",
+      auction: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+kApf/vw4qEFT8H6SoJsr8/5quIMKKg62VwIrxmfx/apEbWBKkCOQMbArhimB8YhThBUQpIggAQqYxE90Y9BMAAAAASUVORK5CYII=",
+      bank: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8w+OoOwbfFcSr+/+ugAhi/X8zz/0gVD1aFCNNui6Ow0RWDBWGmIbPJVwhzFwgjs7G6EwcmDQAAuONyKxIgH/AAAAAASUVORK5CYII=",
+      carrot: aU,
+      castle: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgoAD8R8I4wf+pRW7/n2nrgzEDDsX/YQrxmfr/yIHdYAkQDWNP6uvDUAxXAMIgBSCcm5mJqRAkAVIUbK0ExgQV1kSZgzEuhXDPYMGkAQC0sV3YpEV43gAAAABJRU5ErkJggg==",
+      cinderfall: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATUlEQVR4nGNgoAD8h2K84P//N/5gjE/x/78dLHCFIDYuxWDJxqys/362tjgVwhXBFOJS/P+yCROKImNNbbAYhkJ000AKQRir9TgwaQAA9pxTDDdv+r4AAAAASUVORK5CYII=",
+      combat_1: tU,
+      cow: FU,
+      craft: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPklEQVR4nGNgIAH8JxIz/L+2JA2Mp6VZYGUzwBSCBPFhBphCYq0GKy7w0kARwCGGIgjHhBTiNxHdLTjECAMAZEReU1MzQpcAAAAASUVORK5CYII=",
+      dungeons: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQUlEQVR4nGNgIBP8R8NYwf++KbPhOKewHKtiuAJ5KT0wBinEphis6L+1AVwhiA0Sw6oQpgiGKVdIjBvBinFg0gAAOOVdfOFyr7kAAAAASUVORK5CYII=",
+      emberwatch: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgoAD8h2L8Cv6/8f//t4PlPy4N/48c2A2WACm6bMIEZk/q68NQDFYIwyAFIJybmYnbVJCJ+BTBFRIyjSSFcJ8TE0Q4AQDqiVfWwMcDkgAAAABJRU5ErkJggg==",
+      enemy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIBP8R8NYwf///W3/n3r4wjEDFsUYikB4s4o2hmKwhDY3L1wRiI1ToQgLK1whiI1TIQjnCYqBMUgRNoVgxSAJmCIQjdfnxAQPXgAAraZYPXKBMfkAAAAASUVORK5CYII=",
+      farm: zU(26825),
+      farming_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+nbP//87SU8Cr+D1J0w1H///9LXjgV/4cpQsbYFIMlPjw+hILxKqyJMv8fbK1EuUKwYhyYNAAAbaVgzAUMTa8AAAAASUVORK5CYII=",
+      fishing: cU,
+      fishing_1: cU,
+      forest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwf+c/TZgbN+jA8YMWBRjKAJhg3JlDMUoikAKQFgxWgi7qcQogiuuiTL/H2ythFcRSQrBiolRhBMAAJ9tQRoOB1rEAAAAAElFTkSuQmCC",
+      guardian_gold: yU,
+      guardian_iron: QU,
+      hub: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgoAL4T5SirGUf/uNTDJa0r78GxjpRK7Aq/v8p2x8s8eHxIThGVwhWdMNR//88LSWwgv+XvLArhJlwcnMXfhNBgjVR5nCFIDY2hXCPYMGkAQDGNGSEX91FFwAAAABJRU5ErkJggg==",
+      island: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgoAD8h2K84L//OlcwxqcYrECvyQKOGXAohkn870pxgLMxFC17FgfGOfut4Ni7Xwe74u60ADDO8rIC03jdCVIEwkT5nBhFOAEAI1k9HXZqyYAAAAAASUVORK5CYII=",
+      melon: gU,
+      mines: kU,
+      mining_1: kU,
+      npc: AU,
+      npc_beaver_lumberjack: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASUlEQVR4nGNgIAP8h2JcfDD4XxQVCMYwBSB2nJsbhmKwhJKyMlwDiI1TYUVyMFgBCIPYeBX+/3zt/6vbJ6moEBljUwhWjAOTBgAZSmJ9XCb2zAAAAABJRU5ErkJggg==",
+      npc_chef: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8R8NYwf+v33/B8f1nH7AqRlEEU3gfi+L/RVGB/y/feQlXAGKDxLAqlJDX//9pfycYg9g4FYIUxLm5gfHJvgz8Cl9vaQFjkEIQxuohHJg0AACncHuimGgHPgAAAABJRU5ErkJggg==",
+      npc_cow: FU,
+      npc_draugr_warper: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAb0lEQVR4nGNgIBIwIrH/41PDCFPU+/IzVlXF4rxgdSwwgUV33oFpXh42MP35yy+sVv///x9is8GxR2D6gpUcRAEjxGYmZF2nvv/BygYBuNUwk0BASoKHIe38M+wKQZLIAMa/iOZGsDuxehtVDWEAAHwCHXf9ctZjAAAAAElFTkSuQmCC",
+      npc_dwarf_blue_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf//51lRMAMWxf/TM0r+/z/AjoLTM0owFENMeSCBirGY+l+r/SpY8OGmBjBGFkNR6DD9FVwRDIPEyFYIVowDkwYAEBZzAwnUgyIAAAAASUVORK5CYII=",
+      npc_dwarf_braided_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwX9deRUUzIBFMYYiXIr/h5rqYMUYCr9+/wUWjLE2AGNkMRSF6Q6mcEUwDBLDUIiuCNlkDA/hwKQBAPnYUUW1+JaKAAAAAElFTkSuQmCC",
+      npc_dwarf_child: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATklEQVR4nGNgIBP8R8NYwX8lZeX/6hoaYAxiY1P8f1trHlbMgKb4/5qGDKwYQ+HX77/+q0jKwxWA2CAxDIVEW32gqwRDEUgMq4dwYNIAAP19arcJQ+nsAAAAAElFTkSuQmCC",
+      npc_dwarf_forked_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwX91DQ0UzIBFMVhick4EXBGMja74f1tKAFaMofDr91//VSTlwSaBMIgNEsOqEN2NWBWCTFFSVkbBIDGsHsKBSQMAnGRas5Ev2yIAAAAASUVORK5CYII=",
+      npc_dwarf_ginger_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgIBP8R8NYwf//B9hRMAMWxf//n2f9//+BBCo+z4qh+P/dFd0YGKvCr99//WfQ8/z/dNMUMAaxwWLoCt/umPn/ZaMLCgaJYSgEmfK4wgEFg03G5iEcmDQAAGl2d4woNRHRAAAAAElFTkSuQmCC",
+      npc_dwarf_grey_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQklEQVR4nGNgIBP8R8NYwX8vUxsUzIBFMYYiXIr/O+mbYcUYCr9+//VfRVIebhKIDRLDUJiSkoIVk60QrBgHJg0AAIrsWQuZyZ2qAAAAAElFTkSuQmCC",
+      npc_dwarf_hair_buns: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVklEQVR4nGNgIBP8R8NYwX8tRXkUzIBF8X81OZn/ilKSYBqZzYCmGCw4JTsarhDGxlD49fsvsOC8omQwRhZDUbisLBOuCIZBYhgK0RUhm4zhIRyYNAAAK2NaB/Me8/sAAAAASUVORK5CYII=",
+      npc_dwarf_purple_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8bw8D/LqYRYAxiY1P8/+TEQqyYAU3x/z2tWVgxhsKv33+BBZFNgomhKIS5DR2TrRCsGAcmDQAAxtNi2UvD/ZAAAAAASUVORK5CYII=",
+      npc_dwarf_red_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXUlEQVR4nGNgIBP8R8NYwf//DyT+/3cqhOAHElgV/y8urv///zwrCi4ursdQDJEEmYiMz7NiKpxiZvXfUEnr/7npBWAMYoPEsCqEKQLhDdUR/5uNTchXCFaMA5MGAHoVbT+3iic1AAAAAElFTkSuQmCC",
+      npc_dwarf_short_beard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATklEQVR4nGNgIBP8R8NYwX91DQ0UzIBF8f9trXlYMQOa4v9rGjKwYgyFX7//AgsimwQTQ1F4oKsEw40gMQyFIFOUlJVRMDY3ghXjwKQBAAoPYHs6ybo9AAAAAElFTkSuQmCC",
+      npc_farmer_gill: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWUlEQVR4nGNgIBP8R8NYwf+bW0v+b53gD8cMOBT/X2cfgYIZsChEMQmfqf/PXrr1X0Je///rLS1gDGKDxLAq/LS/E67wZF/G/2XrdmFXCFOETyFYMQ5MGgAAx9NujhmsqqEAAAAASUVORK5CYII=",
+      npc_fire_mage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf8jtqZwvNJMH6tiFEX4FP//v5EDK8ZQ+PX7r/8WQuz/1+YFgjGIDRLDULi9LAKuCIZBYhgKJ+nJYcVYPYQDkwYAY/ZlGR1JAIkAAAAASUVORK5CYII=",
+      npc_forge_mother: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8x4FRwP+vzy+AJSKd7MEYWQxF4avbJ8EYphDGx1D49fsvTBOhYigKfS0s/l9dPAsFg8SwKpyYkAVXBGLjVPj/POv//x+0Ifg8K1aFYMXEBA9BAACWKnGnkFHGrQAAAABJRU5ErkJggg==",
+      npc_goblin_goggles: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNkQAX/0fiMGAyQIhMPGxRVZ3YcgathwqUIBKBi/2Gq//tMzWDw4HBkwAZ2/NjPsCV7Btzq/1+//2LQ1dFkSMgoBQssmNHNcPnKdQZuTjawgXCFTd0zsJpYV5oBVsgCEzj+7wRWhTAA8wwcPNt2A4zRAUrw4DAMWQ1hAADlHCXxWLGl2AAAAABJRU5ErkJggg==",
+      npc_goblin_mad_scientist: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAV0lEQVR4nGNgIBP8R8NYwX/PzoT/qpZGYAxiY1P8//8DCayYAU3x/7OXboEFkRXAxFAUfv3+67+SsvL//+dZwRjEBolhKIQpQMcYCkGOx4axeggHJg0AAFKzbFf/ov6kAAAAAElFTkSuQmCC",
+      npc_gold_guardian: yU,
+      npc_gold_watermelon_stag: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgIAP8R6KR2Sjg/5sH4f9hNDKbAZ9ifIoYQIKfV6nAFSKxURVt8jH7f1+R9//ZVH8wBrFBYuiKwZIgiS27w8AYxAaJ4TQVWSEuN4IVo2HSAQCFHFiN1+WGFAAAAABJRU5ErkJggg==",
+      npc_head_8_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdElEQVR4nGNgIBIwIrH/41PDCFO06sIzMMNbQ5Jh643ncFVhBlJgdXCFSnJqDBJiMgwvXj1BMe7eo1tghSzIgrPqMlAU+eXUwNlMyBINs7gYZJTkwBjERgYoCud0iGBlYygEgStrdoAxVq/DPIQhi6mGMAAAMzccpadovTMAAAAASUVORK5CYII=",
+      npc_human_archer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAc0lEQVR4nGNkQID/DNgBI5wAKTqwtAOrKofoCrA6FmTBvinLUBQV5UTB2SgKf//5i8N2BoTVX7//YuC2VmfwZOYCC2z/+43h69GbDNycbGB1cIWHXBywmmS35wBYIRNOu9AA3I1ffnzFqxBmNdh6ItQQBgAsaRzpv2C9aQAAAABJRU5ErkJggg==",
+      npc_human_desert_guard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAfklEQVR4nGNkQID/DNgBI5wAKfpxdztWVRzKnmB1LDCBdReZGUSEhVAUvXn7Ds6GKwSB23MnoigUDIiFs5lgDH9PB4Zll+7DJUBskBiKQ0FunBoXy/D9xw8UEzk5OBiyFy1GdSPHpTMM+rw8KApvfv6CaTUhALMabD0RaggDACCpH2oXfV//AAAAAElFTkSuQmCC",
+      npc_human_sentry: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYUlEQVR4nGNgIBIwIrH/41PDCFOkqamJVdX169fB6liQBXNMTVAUTTl9BkPj/6/ff4Gs/j81LhaMkcVQrO4JC2Xg5OBA0f39xw+GklWrUa2edvYcTh+DABNeWSRAdPAQDQAzViKkGPwLjwAAAABJRU5ErkJggg==",
+      npc_iron_guardian: QU,
+      npc_jackal_priest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdklEQVR4nGNgQID/UIyVzwQT1NTUZBAWFoYrALFBYjDFjDCF/zdyMGADjP4/wBQLTODVVXkGh8UwCyDgQOw/BgaGmyhWg8GZcxexsjEUmhjpM3z79g2MQWxkALcaBP79/cvAwc4OZyO8gGYiPoDQghqGuNQQBgAoCCX1U3QMRQAAAABJRU5ErkJggg==",
+      npc_minotaur: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAaklEQVR4nGNgIAP8R6KR2Sjg/9fnF8AKMgJ8wBhZDEXhq9snwRimEMbHUPj1+6//DBYBCBMtAiBi6ApBkhMTsv5fXTwLjEHsODc37Ar/n2eFKwSxcSp8sGHO//8ftMEYxMamEKwYByYNAABmXHNFjN9ucgAAAABJRU5ErkJggg==",
+      npc_minotaur_elder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAg0lEQVR4nGNgIBIwIrH/41PDBFP09fkFMKMuJxWMQQAq9h9ZIcPXLz8ZXt0+CTcGxAaJwQBcIbeMIYOYqjlcAsQGiaG78X9ZajxDvJ01iuMWHjrK0DV7IVgd3EQQ2LMX4k50NgiwIHPy8mczMCiqgdlaOrcYyqdFYVgN9x0WgKyGMAAArq0oYNR0jFIAAAAASUVORK5CYII=",
+      npc_minotaur_warrior: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAjUlEQVR4nGNkQAX/0fiMGAyQooWVjiiq4tv3o6th+P/q9sn//z9oo+BXt0/+h9nCgmLE/VuoFvMgmHCF3DKGDIycvxmq3XzA/G137jHwcediKuwLDme4ungWXCKKgYFh3fLtDAcvQ/hMyDbt2XsBKxtF4Y8/vxn8A4wYuHmZwBjEBolhDR5Un2BVQxgAAJW+Nj/Gsfy4AAAAAElFTkSuQmCC",
+      npc_monster_hunter_lorenzo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH9NLa3/ru5eYBoZM6AphkvsrU0BY5wKv37/9d/awAauEMQGiWEoPNmaDVcEw7PigjAVIlsHw3gVIrsRm0KwYmKChyAAAIfVZAdaM2LxAAAAAElFTkSuQmCC",
+      npc_npc_pig_head: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8h2JcfDD4/3Lyjv9fe3bCJMHsl5N3YCj+/3/HfQjecAWOX2JVuOHKfwZ1U7giEBunQpB1yBinwkJta7giEBurwrOXbv3/+v0XCgaJYfU5DkwaAADzDIUDTIstKgAAAABJRU5ErkJggg==",
+      npc_painter_spencer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR42mNgIBIwovH/45JHVvj/XZc7w+/vfxme3GViYGBgYDBetAuuBqbw/+MKB6xWynYcYGBgYGCEK/z6/ReDsoYpg5OsMAMDAwPDvsdvGe7eOM3AzcmGqjDFyZPh26+fKKZ9+/mDYcPpYwwMDAyMTMT6Gq4Q3TR8wfOfyCDEDwAFFSX0ZxYXtAAAAABJRU5ErkJggg==",
+      npc_pig: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARklEQVR4nGNgIAP8x4FRwP/3x87A8ds9R+CYAU0xiiQMP1y0FlOhu7YJhkKQGFYTQSYgY5xWg0yAKYKxyXYjWDExwUMQAABoKIoUBfmEPAAAAABJRU5ErkJggg==",
+      npc_pig_napoleon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoAD8h2K84L++ofF/V3dvvIr/gxRtszH9//X7LzCbAYvi///Ps/6Xk5dHwSAxdMX//2+48p9B3RRMw9gvJ+/ArvBrz04UjFNhobY1XBGIjU0hWDEOTBoAAIrnYG/Xae9eAAAAAElFTkSuQmCC",
+      npc_pig_worker: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgIAP8R8NYwf/YhDQ4dnb1xKnhP0gSHesbGmMo/v9/w5X/DOqmYBrGfjl5B3aFhdrW/7/27ARjEBunQpAEOsZQGGLn+L8oKvD/1++/wBjEBolh9RAOTBoAAGcEbivle0KRAAAAAElFTkSuQmCC",
+      npc_piggy_banker: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXElEQVR4nGNgIBP8R8NYwX9Xd+//2jq6cMyAQ/F/OXn5//8fSPz/f54VzGbAohAsgQ2jK/7/f8OV/wzqpmAaxn45eQd2hV97dqJgnAoLta3hikBsbArBinFg0gAAgophxWZsQvAAAAAASUVORK5CYII=",
+      npc_portal_mage: oU,
+      npc_rabbit_aristocrat: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8h2JcfDD4P3fB+v/3csphkmB2S/tUDMX/+yYuIE7h3AXrwYqRMU4TlZSV4YpAbJwKYe4EYRC7prYLU6GLocX/ODe3/1+//wJjEBskhtXnODBpAAD3lm2BX81XrwAAAABJRU5ErkJggg==",
+      npc_smuglyn: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASklEQVR42mNgIAP8x4FRFWlqamLF6IrBgj1hoSgYq8Kv33/9txBi/z81LhaMQWyQGIbC5VmZcEUwDBLDUIiuCIRB1pOtkOjgIQgAhutlSTAZTWcAAAAASUVORK5CYII=",
+      npc_tentacle_boy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAiElEQVR4nGNkQID/DNgBI5wAKXJw8Wb48vkjhqozJ4+A1bHABKI0arEad+akBdzY/ybmNgw/f/3CqpCdjQ1sKthEM4scHM5DsZ7hf23T3v9fv//6z8srAmaj80FqmGC6JMSkUExB54Ot1ubgYSgoXQkWuHXrKpiG8UFyMAA3HkbjEIMoRqMxxABOskezGUlSqQAAAABJRU5ErkJggg==",
+      npc_tentacle_girl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNgwA3+QzEYMOGQ/H9viS7Dp4N+MDEGFmRFO8PqGYTFRBjevnrDwMCwjuHN4/twSRZsikD07U1BUKnLKArBQExYAIxh7OvX78DlUNzoMbEWKxtDYb11MFY2htXPPr5nOH7mApiW4hdECxAkX/fbJIGDYqV3MYwND0eiAQAf4TQGGrZ+tQAAAABJRU5ErkJggg==",
+      npc_tentacle_guy: DU,
+      npc_tentacle_guy_fisherman: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIBP8R8NYwX9XD7//JuY2cMyARTFcUtfQDIxxKf4fHFaFgRPjWzAVVpXP/K+krAymYWycCrMzeuEKQWycCmE0jI1NIVgxEo3MJg0AAIJsWIj/ilEbAAAAAElFTkSuQmCC",
+      npc_wolf_in_suit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8h2JcfDD47+0X/N/a1gEmCWY7u3piKAYrRMfOuBQqKSvDFYHYOBV+/f4LbCUIg9g4FYIUgEwCYbxu/P/5GtxEEBubQrBiHJg0AAB07Vx5G7sqWQAAAABJRU5ErkJggg==",
+      npc_wolf_security: EU,
+      player: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQElEQVR4nGNgoAD8h2K84D8M4FP8/9HLz3CFIDYuxUQpBEugK8SmGCy4cttpmASYjVUhkiJ8YhAJbO7GGT64AACb2mXTEt92cwAAAABJRU5ErkJggg==",
+      portal: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOL7zz9wfPLcDdwKQZL901eAMUixrowDpkKQbphJMFPxKoSZCMI4FYIkQBiZjdXnxAQPQQAAOtFywhRvXJwAAAAASUVORK5CYII=",
+      portal_orange: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOLzJAs4/tSkglshSPJjldT/D4UCYMW6Mg6YCkG6YSbBTMWrEGQiDONUCJIAYWQ2Vp8TEzwEAQAA6GVEbqZ9DwAAAABJRU5ErkJggg==",
+      quest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAMElEQVR4nGNgoAD8h2K84P//Xwf+/35tSFDxf+or/P3a8P/nVSrEuZMoRVQ3EScAAIINMAfVJxmxAAAAAElFTkSuQmCC",
+      quest_search: NU,
+      quest_talk: IU,
+      scorched_flats: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIBP8R8NYwf8HT+6jYAYsisES/vIicEUg9t4TuzAUY5gGUoRNIVwxSBJGY1W0wF0LjKuMFcAYxsewGiYJchtMAzaFYMU4MGkAADMzb36mUd86AAAAAElFTkSuQmCC",
+      scorp_pit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgoAD8R8I4wf//l6rA+MUCG5yK/z/T1kc27T8uxeiCWBXCrUQ2cUOCHHYTQRIgU2BuxKYQxUSYApwmIgmi08QDAPP+Ttl2n8EbAAAAAElFTkSuQmCC",
+      shooting_gallery: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8x4IxwP9n2vpw/P+SFxijK4ZIIoGaKHP8CkE0WNH///83q2jjVwhj41WIDLAphCsGScIwLl+DFRMKGoIAAPFdcuGHeG5wAAAAAElFTkSuQmCC",
+      smelt: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgIBH8J4DB4P+8efPwYgaoYjCnoKAAK56HTSG6lXgV/n5t+P9zhQphhSBFeBUS4xmwYmKChygAADFjjqm4UTd5AAAAAElFTkSuQmCC",
+      talk: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANElEQVR4nGNgIBH8x4Ph4D8+wICkGC6Ai2Yg2cRdx67hxBjuhGnA5xkUk3FJYphKSBFBAACXuoGa4rCq3AAAAABJRU5ErkJggg==",
+      tower_of_doom: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgIAP8J0bsf1VBG0gQBduaucHYmAr/X/L6/9/aAKdCBpjiqKAkMMaliPoKwYrQFeJUjAOTBgBhWEzjnMiaVwAAAABJRU5ErkJggg==",
+      unknown: pU,
+      watermelon: GU
+    };
+
+    function ZU(UU, XU) {
+      const zU = document.createElement("img");
+      return zU.className = XU, zU.src = UU, zU.alt = "", zU.draggable = !1, zU
+    }
+
+    function RU(UU) {
+      return Object.hasOwn(BU, UU) || UU.startsWith("npc_")
+    }
+
+    function PU(UU) {
+      var XU;
+      const zU = null !== (XU = BU[UU]) && void 0 !== XU ? XU : UU.startsWith("npc_") ? AU : pU;
+      if ("portal" !== UU) return ZU(zU, "SkyblockMapIcon");
+      const cU = document.createElement("span");
+      cU.className = "SkyblockMapIcon Portal";
+      const yU = document.createElement("span");
+      return yU.className = "SkyblockMapIconTint", yU.style.maskImage = yU.style.webkitMaskImage = `url("${YU}")`, cU.append(ZU(zU, "SkyblockMapIconLayer"), yU, ZU(YU, "SkyblockMapIconLayer SkyblockMapIconShade")), cU
+    }
+  },
+  34891: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => yU,
+      f: () => AU
+    });
+    const cU = [{
+      threshold: 10n ** 180n,
+      suffix: "NoQig"
+    }, {
+      threshold: 10n ** 177n,
+      suffix: "OcQig"
+    }, {
+      threshold: 10n ** 174n,
+      suffix: "SpQig"
+    }, {
+      threshold: 10n ** 171n,
+      suffix: "SQig"
+    }, {
+      threshold: 10n ** 168n,
+      suffix: "QiQig"
+    }, {
+      threshold: 10n ** 165n,
+      suffix: "QaQig"
+    }, {
+      threshold: 10n ** 162n,
+      suffix: "TQig"
+    }, {
+      threshold: 10n ** 159n,
+      suffix: "DQig"
+    }, {
+      threshold: 10n ** 156n,
+      suffix: "UQig"
+    }, {
+      threshold: 10n ** 153n,
+      suffix: "Qig"
+    }, {
+      threshold: 10n ** 150n,
+      suffix: "NoQag"
+    }, {
+      threshold: 10n ** 147n,
+      suffix: "OcQag"
+    }, {
+      threshold: 10n ** 144n,
+      suffix: "SpQag"
+    }, {
+      threshold: 10n ** 141n,
+      suffix: "SQag"
+    }, {
+      threshold: 10n ** 138n,
+      suffix: "QiQag"
+    }, {
+      threshold: 10n ** 135n,
+      suffix: "QaQag"
+    }, {
+      threshold: 10n ** 132n,
+      suffix: "TQag"
+    }, {
+      threshold: 10n ** 129n,
+      suffix: "DQag"
+    }, {
+      threshold: 10n ** 126n,
+      suffix: "UQag"
+    }, {
+      threshold: 10n ** 123n,
+      suffix: "Qag"
+    }, {
+      threshold: 10n ** 120n,
+      suffix: "NoTg"
+    }, {
+      threshold: 10n ** 117n,
+      suffix: "OcTg"
+    }, {
+      threshold: 10n ** 114n,
+      suffix: "SpTg"
+    }, {
+      threshold: 10n ** 111n,
+      suffix: "STg"
+    }, {
+      threshold: 10n ** 108n,
+      suffix: "QiTg"
+    }, {
+      threshold: 10n ** 105n,
+      suffix: "QaTg"
+    }, {
+      threshold: 10n ** 102n,
+      suffix: "TTg"
+    }, {
+      threshold: 10n ** 99n,
+      suffix: "DTg"
+    }, {
+      threshold: 10n ** 96n,
+      suffix: "UTg"
+    }, {
+      threshold: 10n ** 93n,
+      suffix: "Tg"
+    }, {
+      threshold: 10n ** 90n,
+      suffix: "NoVg"
+    }, {
+      threshold: 10n ** 87n,
+      suffix: "OcVg"
+    }, {
+      threshold: 10n ** 84n,
+      suffix: "SpVg"
+    }, {
+      threshold: 10n ** 81n,
+      suffix: "SVg"
+    }, {
+      threshold: 10n ** 78n,
+      suffix: "QiVg"
+    }, {
+      threshold: 10n ** 75n,
+      suffix: "QaVg"
+    }, {
+      threshold: 10n ** 72n,
+      suffix: "TVg"
+    }, {
+      threshold: 10n ** 69n,
+      suffix: "DVg"
+    }, {
+      threshold: 10n ** 66n,
+      suffix: "UVg"
+    }, {
+      threshold: 10n ** 63n,
+      suffix: "Vg"
+    }, {
+      threshold: 10n ** 60n,
+      suffix: "NoD"
+    }, {
+      threshold: 10n ** 57n,
+      suffix: "OcD"
+    }, {
+      threshold: 10n ** 54n,
+      suffix: "SpD"
+    }, {
+      threshold: 10n ** 51n,
+      suffix: "SD"
+    }, {
+      threshold: 10n ** 48n,
+      suffix: "QiD"
+    }, {
+      threshold: 10n ** 45n,
+      suffix: "QaD"
+    }, {
+      threshold: 10n ** 42n,
+      suffix: "TD"
+    }, {
+      threshold: 10n ** 39n,
+      suffix: "DD"
+    }, {
+      threshold: 10n ** 36n,
+      suffix: "UD"
+    }, {
+      threshold: 10n ** 33n,
+      suffix: "D"
+    }, {
+      threshold: 10n ** 30n,
+      suffix: "No"
+    }, {
+      threshold: 10n ** 27n,
+      suffix: "Oc"
+    }, {
+      threshold: 10n ** 24n,
+      suffix: "Sep"
+    }, {
+      threshold: 10n ** 21n,
+      suffix: "S"
+    }, {
+      threshold: 10n ** 18n,
+      suffix: "Qi"
+    }, {
+      threshold: 10n ** 15n,
+      suffix: "Qa"
+    }, {
+      threshold: 10n ** 12n,
+      suffix: "T"
+    }, {
+      threshold: 10n ** 9n,
+      suffix: "B"
+    }, {
+      threshold: 10n ** 6n,
+      suffix: "M"
+    }, {
+      threshold: 1000n,
+      suffix: "K"
+    }];
+
+    function yU(UU) {
+      let XU, zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof UU) {
+        if (!Number.isFinite(UU)) return "0";
+        if (Math.abs(UU) < 100) {
+          const XU = UU < 0 ? "-" : "",
+            zU = Math.abs(UU);
+          return zU >= 10 ? `${XU}${zU.toFixed(1).replace(/\.0$/,"")}` : `${XU}${zU.toFixed(2).replace(/\.?0+$/,"")}`
+        }
+        XU = BigInt(Math.floor(UU))
+      } else XU = UU;
+      const yU = XU < 0n ? -XU : XU,
+        QU = XU < 0n ? "-" : "",
+        AU = yU.toString();
+      if (AU.length <= zU) return `${QU}${AU}`;
+      const FU = 3 * Math.floor((AU.length - 1) / 3);
+      if (FU < 3) return `${QU}${AU}`;
+      if (FU > 3 * cU.length) {
+        const UU = AU[0],
+          XU = AU.slice(1, 3).replace(/0+$/, "");
+        return `${QU}${XU?`${UU}.${XU}`:UU}e${AU.length-1}`
+      }
+      const {
+        threshold: oU,
+        suffix: DU
+      } = cU[cU.length - FU / 3], EU = yU / oU, YU = Number(1000n * (yU % oU) / oU), NU = Number(EU) + YU / 1e3;
+      let IU;
+      return IU = NU >= 100 ? Math.floor(NU).toString() : NU >= 10 ? NU.toFixed(1).replace(/\.0$/, "") : NU.toFixed(2).replace(/\.?0+$/, ""), `${QU}${IU}${DU}`
+    }
+    const QU = cU.map((UU => {
+      let {
+        threshold: XU,
+        suffix: zU
+      } = UU;
+      return {
+        threshold: Number(XU),
+        suffix: zU
+      }
+    })).filter((UU => {
+      let {
+        threshold: XU
+      } = UU;
+      return Number.isFinite(XU)
+    }));
+
+    function AU(UU) {
+      const XU = Math.abs(UU),
+        zU = UU < 0 ? "-" : "";
+      for (const {
+          threshold: cU,
+          suffix: yU
+        }
+        of QU)
+        if (XU >= cU) {
+          const UU = XU / cU;
+          if (UU >= 1e3) return `${zU}${XU.toExponential(2).replace("e+","e")}`;
+          let QU;
+          return QU = UU >= 100 ? Math.floor(UU).toString() : UU >= 10 ? UU.toFixed(1).replace(/\.0$/, "") : UU.toFixed(2).replace(/\.?0+$/, ""), `${zU}${QU}${yU}`
+        } return `${zU}${XU}`
+    }
+  },
+  19102: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAFT2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIxMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLzEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiPgogICA8ZGM6dGl0bGU+CiAgICA8cmRmOkFsdD4KICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlBsYW5rczwvcmRmOmxpPgogICAgPC9yZGY6QWx0PgogICA8L2RjOnRpdGxlPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC42IgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTA5LTExVDA2OjA4OjEzLTA0OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5RDOytAAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz9PxTcRtLAQDKJWKlEhaGOR4AvUIp7gq0kul0RI4nEXkWAr2AoKoo2vQv8CbQVrQVAUQay1VbTRcM7lAhExs8zOt7/dGXZnQVGTWsqq8EEqnTFDYwHv3PyCt+qVGuqoRaEtrFnG1MyoSkn7vKfMibc9Tq3S5/61uqhuaVBWLTysGWZGeFx4ci1jOLwj3KwlwlHhM+FuUy4ofOfoEZdfHI67/O2wqYaCoDQKe+O/OPKLtYSZEpaX05FKrmqF+zgvqdfTszMS28VbsQgxRgAvE4wQxE8fQzL76aGfXllRIt+Xz59mRXI1mQ2ymCwTJ0GGblFXpbouMSa6LiNJ1un/375asYF+t3p9ACqfbfu9E6q2Ibdl219Htp07hvInuEwX81cOYfBD9K2i1nEAng04vypqkV242ISWRyNshvNSubgSi8HbKTTMQ9MN1C66PSvsc/IA6rp81TXs7UOXnPcs/QAlUWfIbV2y+QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9JREFUGJVjYKAQ/IdiOGDEpqh6jiYDAwMDQ2vKdbgaJnzG5nSqwEzHUPj/1WJThpZPDxg+vv2N212vFpv+/9/H+f9yFi/MjXB3wtz4/38fJwMDAwPDlTssDLrTPmO4nwXGuHIHwsSmCMVELGLkAQBi0iUZsdoC/wAAAABJRU5ErkJggg=="
+  },
+  21217: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9miMYIsbCweGlYDflREymLmRgKizHKYPPmmTejZsbrvZFkq2wVJTZ+LfgL2CprpYiUbFkTG/ScZ6Zmkjm3c8/nfu89p3vPBVc0rWWsym7IZHNmJBxUZmKzSvUzNbTSyCAeVbOMiamRKGXt444KJ950OrXKn/vXahcSlgYVNcJDmmHmhEeFx1dyhsPbws1aSl0QPhX2m3JB4VtHj+f5xeFknr8cNqORELgahJVkCcdLWEuZGWF5Ob5Melkr3Md5iTeRnZ6S2CbeikWEMEEUxhgmRIAeBmQO0EkvXbKiTH73b/4kS5KryWywiskiSVLk8Iu6LNUTEnXREzLSrDr9/9tXS+/rzVf3BqHqybbf2qF6C743bfvz0La/j8D9CBfZYv7SAfS/i75Z1Hz7UL8OZ5dFLb4D5xvQ8mCopvorucVdug6vJ1AXg6Zr8Mzle1bY5/geomvyVVewuwcdcr5+/gejEmgBy3n7uAAAAGRJREFUGJWVkDEOgCAMRZ+Eu5iQeBtu6MpRnNkYuUZhULQwKP7lN+n7bVOY1HJ5+eJsq8q+AiA5ARCDALAdpxsdk5yIQYhBcL5rPWCDmka4j73oBscJzptug9UpDWsIfrxn9kQqJZUnE6phAjUAAAAASUVORK5CYII="
+  },
+  23505: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGtJREFUGJVjYKAC+A/FDAwMDAxMuBR9fr6D4esduAasCv9/fr6D4cX7yyiC6Ar/f36+g4GBgYFBQlAXp0K4InTTGBgYGBjRrYOZxPTVg4FbBUUNROHXO6iYgYHhv3eYEHafImMXfz6siggCADC+M1RlDaxOAAAAAElFTkSuQmCC"
+  },
+  25090: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE9JREFUGJVjYCASMKLx/+OSR1b4/z9PMqqqL3OxGcbwHxl3MXj9/8+T/B+LLQgNNVHm/6E24FT4f2qRG9xUXAqRFTHgUoiuCNnNWD1COQAAFWcvZJ927BwAAAAASUVORK5CYII="
+  },
+  26809: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAH1JREFUGJVjYKAC+A/FDAwMDAxMuBSdyDdkWLzBGKYBq8L/J+wNGR4se4IiiK7w/wl7QwYGBgYGBS0ZnArhih5cQzUNWeH/E/mGcAUKWjIMtwuZGGIDzjIwMDAwwgkGBob/UIfDQWzAWQbvMCHGraveYXoCGbv482HxJxEAAJssJtLET2YfAAAAAElFTkSuQmCC"
+  },
+  26825: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAItJREFUGJVjYKAA/Ifh3nJb/Arv7E79X+Mp+p+BgeH/1EYX7Ir299n8v7M79f/+PhuYyQwMDAwMTOgqZXU1GR5fvs4gq6vJcGd3KswpDCzoCmGKHl++zrB3901UybBACwYGBob/NZ6icLfBMFSOgRHJbQwMDAwMjkVHGMICLRiRDVq1/gTCE+gmkA0A4Aw5D/wQUU0AAAAASUVORK5CYII="
+  },
+  39342: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC"
+  },
+  39348: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
+  },
+  39353: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  },
+  39361: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

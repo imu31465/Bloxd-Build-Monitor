@@ -33,22 +33,78 @@
   text-align: center
 }
 
-.StudioGameList .StudioPageHeader .GoldButton .ButtonBody {
-  font-size: 1rem
+.StudioLeaderboard .StudioLeaderboardBanner {
+  background-color: rgba(255, 185, 20, .12);
+  border-left: .2rem solid #ffb914;
+  display: flex;
+  flex-direction: column;
+  font-size: .9rem;
+  gap: .35rem;
+  padding: .75rem 1rem
 }
 
-.StudioGameList .StudioGameListStatusChip {
-  background-color: #394980;
+.StudioLeaderboard .StudioLeaderboardCategories,
+.StudioLeaderboard .StudioLeaderboardScopes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem
+}
+
+.StudioLeaderboard .StudioLeaderboardScopes+.StudioLeaderboardCategories {
+  margin-top: -1rem
+}
+
+.StudioLeaderboard .StudioLeaderboardTableScroll {
+  overflow-x: auto;
+  overflow-y: hidden
+}
+
+.StudioLeaderboard .StudioLeaderboardOwner .ProfilePreview {
+  background-color: #303a59;
+  cursor: inherit;
+  font-size: .85rem
+}
+
+.StudioLeaderboard .StudioLeaderboardOwner .ProfilePreviewLeft {
+  transform: none
+}
+
+.StudioLeaderboard .StudioLeaderboardEngagementScore {
+  font-weight: 800
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition {
   color: #cfcfcf;
-  display: inline-block;
-  font-size: .85em;
   font-weight: 800;
-  padding: .15rem .6rem
+  white-space: nowrap
 }
 
-.StudioGameList .StudioGameListStatusChip.StudioGameListStatusChipPublished {
-  background-color: rgba(29, 208, 109, .15);
-  color: #1dd06d
+.StudioLeaderboard .StudioLeaderboardPosition .StudioLeaderboardPositionItem {
+  -ms-interpolation-mode: nearest-neighbor;
+  height: 1.5rem;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  margin-right: .4rem;
+  vertical-align: -.35rem;
+  width: 1.5rem
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition {
+  color: var(--studioTopRankColour)
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition1 {
+  --studioTopRankColour: #5ce1d8
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition2 {
+  --studioTopRankColour: #ffb914
+}
+
+.StudioLeaderboard .StudioLeaderboardPosition.StudioLeaderboardTopPosition.StudioLeaderboardTopPosition3 {
+  --studioTopRankColour: #cfcfcf
 }
 
 .MiddleScreenPopupBackground .MiddleScreenPopup.SchematicPopup {

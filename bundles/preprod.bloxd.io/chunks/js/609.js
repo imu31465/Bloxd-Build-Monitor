@@ -1,82 +1,76 @@
 export const id = 609;
 export const ids = [609];
 export const modules = {
-  44141: (MM, rM, iM) => {
-    iM.d(rM, {
-      collectImportedWorldCodePluginNames: () => QM
+  44309: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      installImageBitmapTextureLoader: () => DU
     });
-    var OM = iM(2638),
-      SM = iM(37802),
-      jM = iM(44073),
-      aM = iM.n(jM);
+    var cU = zU(40983),
+      yU = zU(44311),
+      QU = zU(3572);
 
-    function PM(MM) {
-      return aM().isImportDeclaration(MM) && aM().isStringLiteral(MM.moduleSpecifier) && function(MM) {
-        const rM = MM.importClause;
-        if (!rM) return !0;
-        if (rM.isTypeOnly) return !1;
-        const iM = rM.namedBindings;
-        return !(iM && !aM().isNamespaceImport(iM)) || !!rM.name || iM.elements.some((MM => !MM.isTypeOnly))
-      }(MM) || aM().isExportDeclaration(MM) && MM.moduleSpecifier && aM().isStringLiteral(MM.moduleSpecifier) && function(MM) {
-        return !MM.isTypeOnly && (!MM.exportClause || !aM().isNamedExports(MM.exportClause) || 0 === MM.exportClause.elements.length || MM.exportClause.elements.some((MM => !MM.isTypeOnly)))
-      }(MM) ? MM.moduleSpecifier.text : aM().isImportEqualsDeclaration(MM) && !MM.isTypeOnly && aM().isExternalModuleReference(MM.moduleReference) && MM.moduleReference.expression && aM().isStringLiteral(MM.moduleReference.expression) ? MM.moduleReference.expression.text : aM().isCallExpression(MM) && aM().isIdentifier(MM.expression) && "require" === MM.expression.text && 1 === MM.arguments.length && aM().isStringLiteral(MM.arguments[0]) ? MM.arguments[0].text : void 0
-    }
-
-    function nM(MM, rM, iM) {
-      if (!rM.startsWith("./") && !rM.startsWith("../")) return;
-      const SM = ((MM.includes("/") ? MM.slice(0, MM.lastIndexOf("/") + 1) : "") + rM).split("/"),
-        jM = [];
-      for (const OM of SM)
-        if ("" !== OM && "." !== OM)
-          if (".." !== OM) jM.push(OM);
-          else {
-            if (0 === jM.length) return;
-            jM.pop()
-          } const aM = jM.join("/");
-      for (const PM of [aM, `${aM}.ts`, `${aM}.js`])
-        if (PM in iM && !(0, OM.k)(PM)) return PM
-    }
-
-    function QM(MM) {
-      const rM = new Set,
-        iM = (0, SM.d)(MM);
-      if (!iM) return [];
-      const OM = [iM],
-        jM = new Set;
-      for (; OM.length > 0;) {
-        const iM = OM.pop();
-        if (!iM || jM.has(iM)) continue;
-        jM.add(iM);
-        const QM = aM().createSourceFile(iM, MM[iM], aM().ScriptTarget.Latest, !1),
-          zM = QM => {
-            const LM = PM(QM),
-              mM = LM ? (0, SM.u)(LM) : null;
-            if (mM) rM.add(mM);
-            else if (LM) {
-              const rM = nM(iM, LM, MM);
-              rM && !jM.has(rM) && OM.push(rM)
-            }
-            aM().forEachChild(QM, zM)
-          };
-        zM(QM)
+    function AU(UU, XU) {
+      if ("string" === typeof UU) {
+        const zU = (0, QU.h)(UU);
+        return zU ? new Blob([(0, QU.e)(zU.base64)], {
+          type: zU.mimeType || XU
+        }) : null
       }
-      return [...rM].sort()
+      return UU instanceof Blob ? UU : new Blob([UU], {
+        type: XU
+      })
+    }
+    const FU = function(UU, XU, zU, cU) {
+      let QU, FU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+        oU = arguments.length > 5 ? arguments[5] : void 0,
+        DU = arguments.length > 6 ? arguments[6] : void 0;
+      try {
+        QU = AU(UU, FU)
+      } catch {
+        QU = null
+      }
+      return QU ? (createImageBitmap(QU, {
+        premultiplyAlpha: "none",
+        colorSpaceConversion: "none",
+        ...oU
+      }).then((UU => {
+        XU(UU)
+      }), (() => {
+        (0, yU.e)(UU, XU, zU, cU, FU, oU, DU)
+      })), null) : (0, yU.e)(UU, XU, zU, cU, FU, oU, DU)
+    };
+    let oU = "idle";
+
+    function DU() {
+      "idle" === oU && "function" === typeof createImageBitmap && (oU = "pending", async function() {
+        const UU = document.createElement("canvas");
+        UU.width = 1, UU.height = 2;
+        const XU = UU.getContext("2d");
+        if (!XU) throw new Error("2d context unavailable");
+        XU.fillStyle = "#f00", XU.fillRect(0, 0, 1, 1), XU.fillStyle = "#0f0", XU.fillRect(0, 1, 1, 1);
+        const zU = AU(UU.toDataURL(), "");
+        if (!zU) throw new Error("toDataURL did not produce a base64 data URL");
+        const cU = await createImageBitmap(zU, {
+          premultiplyAlpha: "none",
+          colorSpaceConversion: "none",
+          imageOrientation: "flipY"
+        });
+        XU.drawImage(cU, 0, 0);
+        const yU = XU.getImageData(0, 0, 1, 1).data;
+        return yU[1] > yU[0]
+      }().catch((() => (oU = "idle", !1))).then((UU => {
+        "pending" === oU && (oU = "concluded"), UU && (cU.c.loadImage = FU)
+      })))
     }
   },
-  44110: MM => {
-    function rM(MM) {
-      var rM = new Error("Cannot find module '" + MM + "'");
-      throw rM.code = "MODULE_NOT_FOUND", rM
-    }
-    rM.keys = () => [], rM.resolve = rM, rM.id = 44110, MM.exports = rM
-  },
-  44103: () => {},
-  44081: () => {},
-  44112: () => {},
-  44094: () => {},
-  44089: () => {},
-  44076: () => {},
-  44107: () => {}
+  44311: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => cU.k,
+      e: () => cU.s
+    });
+    var cU = zU(41152);
+    (0, cU.A)()
+  }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

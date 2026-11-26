@@ -1,373 +1,373 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  41634: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      startWasmPadGameplay: () => fM
+  41618: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      startWasmPadGameplay: () => HU
     });
-    iM(41640);
-    var OM = iM(41642),
-      SM = iM(41656),
-      jM = iM(2067),
-      aM = iM(41669),
-      PM = iM(5200),
-      nM = iM(5188),
-      QM = iM(41674),
-      zM = iM(41677),
-      LM = iM(5207),
-      mM = iM(41739),
-      HM = iM(2622),
-      hM = iM(9451),
-      JM = iM(41650),
-      dM = iM(9425),
-      yM = iM(40140);
-    const lM = MM => {
-        const rM = LM.c.indexOf(MM);
-        if (rM < 0) throw new Error(`No core action "${MM}"`);
-        return rM
+    zU(41624);
+    var cU = zU(41633),
+      yU = zU(41640),
+      QU = zU(2032),
+      AU = zU(41652),
+      FU = zU(5326),
+      oU = zU(5312),
+      DU = zU(41657),
+      EU = zU(41660),
+      YU = zU(5336),
+      NU = zU(41727),
+      IU = zU(2588),
+      pU = zU(9431),
+      aU = zU(41636),
+      tU = zU(9404),
+      gU = zU(39926);
+    const kU = UU => {
+        const XU = YU.c.indexOf(UU);
+        if (XU < 0) throw new Error(`No core action "${UU}"`);
+        return XU
       },
-      EM = lM("primary-fire"),
-      UM = lM("alt-fire"),
-      GM = lM("mid-fire"),
-      CM = lM("jump"),
-      eM = lM("ReloadGun"),
-      bM = lM("SwapCameraZoom"),
-      wM = lM("TouchAction1"),
-      tM = {
-        SpecialAction1: lM("SpecialAction1"),
-        SpecialAction2: lM("SpecialAction2")
+      GU = kU("primary-fire"),
+      BU = kU("alt-fire"),
+      ZU = kU("mid-fire"),
+      RU = kU("jump"),
+      PU = kU("ReloadGun"),
+      WU = kU("SwapCameraZoom"),
+      dU = kU("TouchAction1"),
+      LU = {
+        SpecialAction1: kU("SpecialAction1"),
+        SpecialAction2: kU("SpecialAction2")
       },
-      gM = (MM, rM) => {
-        (0, HM.y)(PM.L.PadAction, MM, 0, 0, (0, HM.u)(rM, performance.now()))
+      eU = (UU, XU) => {
+        (0, IU.y)(FU.K.PadAction, UU, 0, 0, (0, IU.v)(XU, performance.now()))
       },
-      uM = MM => {
-        gM(MM, aM.kd.Down)
+      CU = UU => {
+        eU(UU, AU.Bd.Down)
       },
-      RM = MM => {
-        gM(MM, 0)
+      wU = UU => {
+        eU(UU, 0)
       },
-      pM = MM => {
-        uM(MM), RM(MM)
+      qU = UU => {
+        CU(UU), wU(UU)
       },
-      WM = () => {
-        const MM = (0, zM.e)();
-        return null !== MM && void 0 !== MM && MM.isCoreRunning ? MM : null
+      OU = () => {
+        const UU = (0, EU.f)();
+        return null !== UU && void 0 !== UU && UU.isCoreRunning ? UU : null
       },
-      sM = MM => aM.v.playerFlags(MM.api.apiView, 0),
-      DM = MM => null !== MM && aM.v.targetBlockId(MM.api.apiView, 0) !== aM.Pc,
-      kM = () => {
-        const MM = (0, hM.b)(),
-          rM = new JM.e;
-        let iM = !1;
-        const OM = (MM, rM) => {
-            (0, HM.y)(PM.L.PadLook, aM.rd.Rate, MM, rM, 0)
+      SU = UU => AU.w.playerFlags(UU.api.apiView, 0),
+      rU = UU => null !== UU && AU.w.targetBlockId(UU.api.apiView, 0) !== AU.cd,
+      uU = () => {
+        const UU = (0, pU.b)(),
+          XU = new aU.c;
+        let zU = !1;
+        const cU = (UU, XU) => {
+            (0, IU.y)(FU.K.PadLook, AU.Hd.Rate, UU, XU, 0)
           },
-          SM = () => {
-            iM = !1, rM.reset(), OM(0, 0)
+          yU = () => {
+            zU = !1, XU.reset(), cU(0, 0)
           };
         return {
-          update: (SM, jM, nM) => {
-            iM || (MM.discardPending(), iM = !0);
-            const QM = (0, JM.n)(rM, SM, jM, nM, performance.now());
-            OM(QM.yawRadPerSec, QM.pitchRadPerSec);
-            const zM = MM.drainLookDelta();
-            0 === zM.PD && 0 === zM.nD || (0, HM.y)(PM.L.PadLook, aM.rd.Gyro, zM.PD, zM.nD, 0)
+          update: (yU, QU, oU) => {
+            zU || (UU.discardPending(), zU = !0);
+            const DU = (0, aU.n)(XU, yU, QU, oU, performance.now());
+            cU(DU.yawRadPerSec, DU.pitchRadPerSec);
+            const EU = UU.drainLookDelta();
+            0 === EU.zq && 0 === EU.Qq || (0, IU.y)(FU.K.PadLook, AU.Hd.Gyro, EU.zq, EU.Qq, 0)
           },
-          release: SM,
-          uninstall: SM
+          release: yU,
+          uninstall: yU
         }
       },
-      ZM = () => {
-        const MM = WM();
-        return null !== MM && 0 !== (sM(MM) & aM.yd.PadSneakToggled)
+      fU = () => {
+        const UU = OU();
+        return null !== UU && 0 !== (SU(UU) & AU.Od.PadSneakToggled)
       },
-      oM = () => {
-        const MM = (MM => {
-          const rM = MM => function() {
-            return (0, mM.b)(), MM(...arguments)
+      iU = () => {
+        const UU = (UU => {
+          const XU = UU => function() {
+            return (0, NU.c)(), UU(...arguments)
           };
           return {
-            primaryFireDown: rM((MM => (gM(EM, aM.kd.Down | (MM ? aM.kd.Repeat : 0)), 0))),
-            primaryFireUp: rM((() => {
-              RM(EM)
+            primaryFireDown: XU((UU => (eU(GU, AU.Bd.Down | (UU ? AU.Bd.Repeat : 0)), 0))),
+            primaryFireUp: XU((() => {
+              wU(GU)
             })),
-            altFireDown: rM((() => (uM(UM), 0))),
-            altFireUp: rM((() => {
-              RM(UM)
+            altFireDown: XU((() => (CU(BU), 0))),
+            altFireUp: XU((() => {
+              wU(BU)
             })),
-            jumpDown: rM((() => {
-              pM(CM)
+            jumpDown: XU((() => {
+              qU(RU)
             })),
-            specialActionDown: rM((MM => {
-              uM(tM[MM])
+            specialActionDown: XU((UU => {
+              CU(LU[UU])
             })),
-            specialActionUp: rM((MM => {
-              RM(tM[MM])
+            specialActionUp: XU((UU => {
+              wU(LU[UU])
             })),
-            reloadGun: rM((() => {
-              pM(eM)
+            reloadGun: XU((() => {
+              qU(PU)
             })),
-            dropItem: rM((MM => {
-              gM(aM.od.Drop, aM.kd.Down | (MM ? aM.kd.Stack : 0))
+            dropItem: XU((UU => {
+              eU(AU.Ed.Drop, AU.Bd.Down | (UU ? AU.Bd.Stack : 0))
             })),
-            swapCameraZoom: rM((() => {
-              pM(bM)
+            swapCameraZoom: XU((() => {
+              qU(WU)
             })),
-            pickBlock: rM((() => (pM(GM), DM(MM()))))
+            pickBlock: XU((() => (qU(ZU), rU(UU()))))
           }
-        })(WM);
-        let rM = !1,
-          iM = null;
-        const OM = () => {
-          var MM;
-          null === (MM = iM) || void 0 === MM || MM(), iM = null
+        })(OU);
+        let XU = !1,
+          zU = null;
+        const cU = () => {
+          var UU;
+          null === (UU = zU) || void 0 === UU || UU(), zU = null
         };
         return {
-          bodies: () => MM,
-          look: kM(),
-          move: (MM, iM) => {
-            var SM;
-            OM();
+          bodies: () => UU,
+          look: uU(),
+          move: (UU, zU) => {
+            var yU;
+            cU();
             const {
-              bits: jM,
-              flips: PM
-            } = (MM => {
-              if (null === MM) return {
-                bits: aM.qd.Peek,
+              bits: QU,
+              flips: FU
+            } = (UU => {
+              if (null === UU) return {
+                bits: AU.Gd.Peek,
                 flips: 0
               };
-              const rM = MM.sneakHeld ? aM.qd.SneakHeld : 0;
-              return "hold" === MM.mode ? {
-                bits: rM | aM.qd.SneakHoldMode,
-                flips: MM.sneakTogglePressed ? 1 : 0
+              const XU = UU.sneakHeld ? AU.Gd.SneakHeld : 0;
+              return "hold" === UU.mode ? {
+                bits: XU | AU.Gd.SneakHoldMode,
+                flips: UU.sneakTogglePressed ? 1 : 0
               } : {
-                bits: rM,
-                flips: MM.sneakPressed || MM.sneakTogglePressed ? 1 : 0
+                bits: XU,
+                flips: UU.sneakPressed || UU.sneakTogglePressed ? 1 : 0
               }
-            })(iM);
-            null !== (SM = WM()) && void 0 !== SM && SM.padMove(MM.x, MM.y, MM.magnitude, MM.headingOffset, (MM => aM.qd.Active | (MM.jumpHeld ? aM.qd.JumpHeld : 0) | (MM.jumpPressed ? aM.qd.JumpPressed : 0) | (MM.running ? aM.qd.Running : 0) | (MM.sprintHeld ? aM.qd.SprintHeld : 0))(MM) | jM, PM) && (rM = !0), (0, dM.g)(ZM())
+            })(zU);
+            null !== (yU = OU()) && void 0 !== yU && yU.padMove(UU.x, UU.y, UU.magnitude, UU.headingOffset, (UU => AU.Gd.Active | (UU.jumpHeld ? AU.Gd.JumpHeld : 0) | (UU.jumpPressed ? AU.Gd.JumpPressed : 0) | (UU.running ? AU.Gd.Running : 0) | (UU.sprintHeld ? AU.Gd.SprintHeld : 0))(UU) | QU, FU) && (XU = !0), (0, tU.f)(fU())
           },
           stopMoving: () => {
-            var MM;
-            rM && (rM = !(null !== (MM = WM()) && void 0 !== MM && MM.padMove(0, 0, 0, 0, 0, 0)), OM(), iM = (0, nM.y)((() => {
-              OM(), (0, dM.g)(ZM())
+            var UU;
+            XU && (XU = !(null !== (UU = OU()) && void 0 !== UU && UU.padMove(0, 0, 0, 0, 0, 0)), cU(), zU = (0, oU.t)((() => {
+              cU(), (0, tU.f)(fU())
             })))
           },
-          uninstall: OM,
-          deviceChanged: MM => {
-            var iM;
-            "touch" === MM ? ((0, dM.g)(!1), null !== (iM = WM()) && void 0 !== iM && iM.padMove(0, 0, 0, 0, aM.qd.EndToggle, 0) && (rM = !1)) : "gamepad" === MM && (0, dM.g)(ZM())
+          uninstall: cU,
+          deviceChanged: UU => {
+            var zU;
+            "touch" === UU ? ((0, tU.f)(!1), null !== (zU = OU()) && void 0 !== zU && zU.padMove(0, 0, 0, 0, AU.Gd.EndToggle, 0) && (XU = !1)) : "gamepad" === UU && (0, tU.f)(fU())
           },
-          hasPlayer: () => null !== WM(),
+          hasPlayer: () => null !== OU(),
           isPlayerDead: () => {
-            var MM;
-            return !1 === (null === (MM = WM()) || void 0 === MM ? void 0 : MM.localPlayerAlive())
+            var UU;
+            return !1 === (null === (UU = OU()) || void 0 === UU ? void 0 : UU.localPlayerAlive())
           },
           isReplayMode: () => {
-            const MM = WM();
-            return null !== MM && 0 !== (sM(MM) & aM.yd.Replay)
+            const UU = OU();
+            return null !== UU && 0 !== (SU(UU) & AU.Od.Replay)
           },
           isFreeCameraOn: () => {
-            const MM = WM();
-            return null !== MM && 0 !== (sM(MM) & aM.yd.FreeCam)
+            const UU = OU();
+            return null !== UU && 0 !== (SU(UU) & AU.Od.FreeCam)
           },
-          targetsBlock: () => DM(WM()),
+          targetsBlock: () => rU(OU()),
           selectedSlotEmpty: () => {
-            var MM;
-            return !(null !== (MM = WM()) && void 0 !== MM && MM.items.sQ())
+            var UU;
+            return !(null !== (UU = OU()) && void 0 !== UU && UU.items.uD())
           },
-          pickBlockAllowed: () => !!jM.d.get("creative") && !!jM.d.get("canPickBlocks"),
-          scrollHotbar: MM => {
-            gM(aM.od.Hotbar, aM.kd.Down | (MM > 0 ? aM.kd.Next : 0))
+          pickBlockAllowed: () => !!QU.d.get("creative") && !!QU.d.get("canPickBlocks"),
+          scrollHotbar: UU => {
+            eU(AU.Ed.Hotbar, AU.Bd.Down | (UU > 0 ? AU.Bd.Next : 0))
           },
-          hasFullInventory: QM.m,
-          hasLobbyTab: () => (0, yM.d)({
-            lobbyLeaderboardInfo: jM.d.get("lobbyLeaderboardInfo"),
-            lobbyManage: jM.d.get("lobbyManage")
+          hasFullInventory: DU.n,
+          hasLobbyTab: () => (0, gU.c)({
+            lobbyLeaderboardInfo: QU.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: QU.d.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var MM, rM, iM, OM;
-            const SM = WM();
+            var UU, XU, zU, cU;
+            const yU = OU();
             return {
-              holdingGun: !1 !== (null === SM || void 0 === SM ? void 0 : SM.localPlayerAlive()) && "Gun" === (null === SM || void 0 === SM || null === (MM = SM.items.sQ()) || void 0 === MM || null === (rM = MM.typeObj) || void 0 === rM ? void 0 : rM.type),
-              customButtons: null !== (iM = jM.d.get("customButtons")) && void 0 !== iM ? iM : null,
-              touchscreenActionButton: null !== (OM = jM.d.get("touchscreenActionButton")) && void 0 !== OM ? OM : null
+              holdingGun: !1 !== (null === yU || void 0 === yU ? void 0 : yU.localPlayerAlive()) && "Gun" === (null === yU || void 0 === yU || null === (UU = yU.items.uD()) || void 0 === UU || null === (XU = UU.typeObj) || void 0 === XU ? void 0 : XU.type),
+              customButtons: null !== (zU = QU.d.get("customButtons")) && void 0 !== zU ? zU : null,
+              touchscreenActionButton: null !== (cU = QU.d.get("touchscreenActionButton")) && void 0 !== cU ? cU : null
             }
           },
-          pressTouchButton: MM => {
-            MM ? uM(wM) : RM(wM)
+          pressTouchButton: UU => {
+            UU ? CU(dU) : wU(dU)
           }
         }
       },
-      fM = () => {
-        const MM = (0, SM.d)(oM()),
-          rM = (0, OM.c)(),
-          iM = null;
+      HU = () => {
+        const UU = (0, yU.e)(iU()),
+          XU = (0, cU.e)(),
+          zU = null;
         return () => {
-          MM(), rM(), null === iM || void 0 === iM || iM()
+          UU(), XU(), null === zU || void 0 === zU || zU()
         }
       }
   },
-  5188: (MM, rM, iM) => {
-    iM.d(rM, {
-      A: () => gM,
-      B: () => uM,
-      F: () => lM,
-      H: () => aM,
-      I: () => PM,
-      K: () => wM,
-      e: () => bM,
-      g: () => UM,
-      i: () => pM,
-      k: () => RM,
-      n: () => yM,
-      r: () => CM,
-      v: () => EM,
-      x: () => GM,
-      y: () => tM
+  5312: (UU, XU, zU) => {
+    zU.d(XU, {
+      B: () => kU,
+      D: () => AU,
+      H: () => FU,
+      L: () => dU,
+      b: () => WU,
+      c: () => BU,
+      f: () => qU,
+      h: () => wU,
+      j: () => gU,
+      m: () => RU,
+      n: () => GU,
+      r: () => ZU,
+      t: () => LU,
+      x: () => eU,
+      y: () => CU
     });
-    var OM = iM(5196);
-    const SM = {
+    var cU = zU(5315);
+    const yU = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let jM = SM;
+    let QU = yU;
 
-    function aM(MM) {
-      jM = null !== MM && void 0 !== MM ? MM : SM
+    function AU(UU) {
+      QU = null !== UU && void 0 !== UU ? UU : yU
     }
 
-    function PM() {
-      return jM
+    function FU() {
+      return QU
     }
-    const nM = new Set,
-      QM = new Set;
-    let zM = -1;
-    const LM = new Set,
-      mM = new Set;
-    let HM = 0,
-      hM = 0;
-    const JM = new Set,
-      dM = new Set;
+    const oU = new Set,
+      DU = new Set;
+    let EU = -1;
+    const YU = new Set,
+      NU = new Set;
+    let IU = 0,
+      pU = 0;
+    const aU = new Set,
+      tU = new Set;
 
-    function yM(MM) {
-      return nM.add(MM), () => {
-        nM.delete(MM)
+    function gU(UU) {
+      return oU.add(UU), () => {
+        oU.delete(UU)
       }
     }
 
-    function lM(MM, rM) {
-      for (const OM of nM) try {
-        OM(MM)
-      } catch (iM) {
-        rM(iM)
+    function kU(UU, XU) {
+      for (const cU of oU) try {
+        cU(UU)
+      } catch (zU) {
+        XU(zU)
       }
     }
 
-    function EM(MM) {
-      return QM.add(MM), () => {
-        QM.delete(MM)
+    function GU(UU) {
+      return DU.add(UU), () => {
+        DU.delete(UU)
       }
     }
 
-    function UM(MM, rM) {
-      const iM = zM < 0 ? 0 : MM - zM;
-      zM = MM;
-      for (const SM of QM) try {
-        SM(iM)
-      } catch (OM) {
-        rM(OM)
+    function BU(UU, XU) {
+      const zU = EU < 0 ? 0 : UU - EU;
+      EU = UU;
+      for (const yU of DU) try {
+        yU(zU)
+      } catch (cU) {
+        XU(cU)
       }
     }
 
-    function GM(MM) {
-      return LM.add(MM), () => {
-        LM.delete(MM)
+    function ZU(UU) {
+      return YU.add(UU), () => {
+        YU.delete(UU)
       }
     }
 
-    function CM(MM) {
-      return mM.add(MM), () => {
-        mM.delete(MM)
+    function RU(UU) {
+      return NU.add(UU), () => {
+        NU.delete(UU)
       }
     }
-    let eM = 0;
+    let PU = 0;
 
-    function bM(MM) {
-      eM += MM
+    function WU(UU) {
+      PU += UU
     }
 
-    function wM() {
-      const MM = eM;
-      return eM = 0, MM
+    function dU() {
+      const UU = PU;
+      return PU = 0, UU
     }
 
-    function tM(MM) {
-      return JM.add(MM), () => {
-        JM.delete(MM)
-      }
-    }
-
-    function gM(MM) {
-      return dM.add(MM), () => {
-        dM.delete(MM)
+    function LU(UU) {
+      return aU.add(UU), () => {
+        aU.delete(UU)
       }
     }
 
-    function uM() {
-      HM = 0, hM = 0, zM = -1
+    function eU(UU) {
+      return tU.add(UU), () => {
+        tU.delete(UU)
+      }
     }
 
-    function RM(MM, rM) {
-      if ("paced" === MM) return hM += rM, null;
-      if ("drawn" !== MM && "skipped" !== MM) return null;
-      const iM = rM + hM;
-      return hM = 0, iM
+    function CU() {
+      IU = 0, pU = 0, EU = -1
     }
 
-    function pM(MM, rM, iM, SM) {
-      const jM = (0, OM.l)(rM),
-        aM = MM > 0 ? performance.now() : 0;
-      for (let OM = 0; OM < MM; OM++)
-        for (const MM of JM) try {
-          MM()
-        } catch (PM) {
-          SM(PM)
+    function wU(UU, XU) {
+      if ("paced" === UU) return pU += XU, null;
+      if ("drawn" !== UU && "skipped" !== UU) return null;
+      const zU = XU + pU;
+      return pU = 0, zU
+    }
+
+    function qU(UU, XU, zU, yU) {
+      const QU = (0, cU.j)(XU),
+        AU = UU > 0 ? performance.now() : 0;
+      for (let cU = 0; cU < UU; cU++)
+        for (const UU of aU) try {
+          UU()
+        } catch (FU) {
+          yU(FU)
         }
-      if (MM > 0 && bM(performance.now() - aM), null !== iM) {
-        for (const MM of LM) try {
-          MM(iM)
-        } catch (PM) {
-          SM(PM)
+      if (UU > 0 && WU(performance.now() - AU), null !== zU) {
+        for (const UU of YU) try {
+          UU(zU)
+        } catch (FU) {
+          yU(FU)
         }
-        HM += iM
+        IU += zU
       }
-      if ("drawn" === rM) {
-        const MM = HM;
-        HM = 0;
-        for (const rM of mM) try {
-          rM(MM)
-        } catch (PM) {
-          SM(PM)
+      if ("drawn" === XU) {
+        const UU = IU;
+        IU = 0;
+        for (const XU of NU) try {
+          XU(UU)
+        } catch (FU) {
+          yU(FU)
         }
       }
-      for (const OM of dM) try {
-        OM(MM, jM)
-      } catch (PM) {
-        SM(PM)
+      for (const cU of tU) try {
+        cU(UU, QU)
+      } catch (FU) {
+        yU(FU)
       }
     }
   },
-  5207: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      g: () => jM,
-      j: () => aM,
-      n: () => OM,
-      o: () => PM
+  5336: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => yU,
+      g: () => QU,
+      h: () => AU,
+      j: () => cU,
+      n: () => FU
     });
-    const OM = {
+    const cU = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      SM = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      jM = {
+      yU = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      QU = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      aM = {
+      AU = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      PM = [16]
+      FU = [16]
   },
-  41739: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM,
-      c: () => jM,
-      e: () => SM
+  41727: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => AU,
+      d: () => QU,
+      f: () => yU
     });
-    let OM = null;
+    let cU = null;
 
-    function SM(MM) {
-      OM = MM
+    function yU(UU) {
+      cU = UU
     }
 
-    function jM(MM) {
-      OM === MM && (OM = null)
+    function QU(UU) {
+      cU === UU && (cU = null)
     }
 
-    function aM() {
-      var MM;
-      null === (MM = OM) || void 0 === MM || MM()
+    function AU() {
+      var UU;
+      null === (UU = cU) || void 0 === UU || UU()
     }
   },
-  5214: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      h: () => aM,
-      k: () => QM
+  5342: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => FU,
+      e: () => AU,
+      f: () => DU
     });
-    var OM = iM(2619),
-      SM = iM(2622);
-    const jM = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var cU = zU(2580),
+      yU = zU(2588);
+    const QU = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function aM(MM) {
-      return MM instanceof HTMLElement && (!!(MM.isContentEditable || MM instanceof HTMLTextAreaElement || MM instanceof HTMLSelectElement) || MM instanceof HTMLInputElement && !jM.has(MM.type))
+    function AU(UU) {
+      return UU instanceof HTMLElement && (!!(UU.isContentEditable || UU instanceof HTMLTextAreaElement || UU instanceof HTMLSelectElement) || UU instanceof HTMLInputElement && !QU.has(UU.type))
     }
 
-    function PM(MM) {
-      let rM = null;
-      const iM = iM => {
-          const SM = aM(iM);
-          SM !== rM && (rM = SM, MM(OM.l.UiCapture, OM.C.Keyboard, 0, 0, SM ? OM.C.Keyboard : 0))
+    function FU(UU) {
+      let XU = null;
+      const zU = zU => {
+          const yU = AU(zU);
+          yU !== XU && (XU = yU, UU(cU.j.UiCapture, cU.F.Keyboard, 0, 0, yU ? cU.F.Keyboard : 0))
         },
-        SM = MM => {
-          iM(MM.target)
+        yU = UU => {
+          zU(UU.target)
         },
-        jM = MM => {
-          iM(MM.relatedTarget)
+        QU = UU => {
+          zU(UU.relatedTarget)
         },
-        PM = () => {
-          iM(document.activeElement)
+        FU = () => {
+          zU(document.activeElement)
         },
-        nM = {
+        oU = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", SM, nM), document.addEventListener("focusout", jM, nM), document.addEventListener("keydown", PM, nM), iM(document.activeElement), () => {
-        document.removeEventListener("focusin", SM, nM), document.removeEventListener("focusout", jM, nM), document.removeEventListener("keydown", PM, nM)
+      return document.addEventListener("focusin", yU, oU), document.addEventListener("focusout", QU, oU), document.addEventListener("keydown", FU, oU), zU(document.activeElement), () => {
+        document.removeEventListener("focusin", yU, oU), document.removeEventListener("focusout", QU, oU), document.removeEventListener("keydown", FU, oU)
       }
     }
-    const nM = new Map;
+    const oU = new Map;
 
-    function QM(MM, rM) {
-      var iM;
-      let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      nM.set(OM, (null !== (iM = nM.get(OM)) && void 0 !== iM ? iM : 0) & ~MM | rM & MM);
-      let jM = 0;
-      for (const SM of nM.values()) jM |= SM;
-      return (0, SM.B)(MM, jM & MM)
+    function DU(UU, XU) {
+      var zU;
+      let cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      oU.set(cU, (null !== (zU = oU.get(cU)) && void 0 !== zU ? zU : 0) & ~UU | XU & UU);
+      let QU = 0;
+      for (const yU of oU.values()) QU |= yU;
+      return (0, yU.J)(UU, QU & UU)
     }
   },
-  37858: (MM, rM, iM) => {
-    function OM(MM) {
-      return MM.includes("Leaf Bed")
+  37662: (UU, XU, zU) => {
+    function cU(UU) {
+      return UU.includes("Leaf Bed")
     }
 
-    function SM(MM) {
-      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
+    function yU(UU) {
+      return / Bed(?: Head)?(?:\||$)/.test(UU) && !cU(UU)
     }
 
-    function jM(MM) {
-      return MM.includes(" Strongbed")
+    function QU(UU) {
+      return UU.includes(" Strongbed")
     }
 
-    function aM(MM) {
-      return OM(MM) || SM(MM) || jM(MM)
+    function AU(UU) {
+      return cU(UU) || yU(UU) || QU(UU)
     }
-    iM.d(rM, {
-      e: () => aM,
-      g: () => OM,
-      h: () => jM,
-      l: () => SM
+    zU.d(XU, {
+      b: () => AU,
+      c: () => cU,
+      g: () => QU,
+      j: () => yU
     })
   },
-  37855: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => QM
+  37659: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => DU
     });
-    var OM = iM(37858),
-      SM = iM(9816);
-    const jM = [],
-      aM = [],
-      PM = [],
-      nM = [];
-    for (const zM of Object.keys(SM.p))(0, OM.g)(zM) ? jM.push(zM) : (0, OM.l)(zM) && aM.push(zM), (0, OM.h)(zM) && PM.push(zM), (zM.includes(" Bed Head") || zM.includes(" Strongbed Head")) && nM.push(zM);
-    const QM = {
-      leafBeds: jM,
-      woolBeds: aM,
-      strongBeds: PM,
-      beds: [...jM, ...aM, ...PM],
-      bedHeads: nM,
+    var cU = zU(37662),
+      yU = zU(9782);
+    const QU = [],
+      AU = [],
+      FU = [],
+      oU = [];
+    for (const EU of Object.keys(yU.l))(0, cU.c)(EU) ? QU.push(EU) : (0, cU.j)(EU) && AU.push(EU), (0, cU.g)(EU) && FU.push(EU), (EU.includes(" Bed Head") || EU.includes(" Strongbed Head")) && oU.push(EU);
+    const DU = {
+      leafBeds: QU,
+      woolBeds: AU,
+      strongBeds: FU,
+      beds: [...QU, ...AU, ...FU],
+      bedHeads: oU,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6944: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => aM,
-      d: () => SM,
-      e: () => nM,
-      h: () => jM,
-      l: () => QM,
-      n: () => OM,
-      o: () => PM
+  7056: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => AU,
+      f: () => yU,
+      j: () => oU,
+      k: () => QU,
+      l: () => DU,
+      o: () => cU,
+      p: () => FU
     });
-    let OM = function(MM) {
-        return MM[MM.DEFAULT = 0] = "DEFAULT", MM[MM.BOAT = 1] = "BOAT", MM[MM.GLIDER = 2] = "GLIDER", MM[MM.BALLOON = 3] = "BALLOON", MM[MM.SLEEPING = 4] = "SLEEPING", MM[MM.RIDING_MOB = 5] = "RIDING_MOB", MM[MM.CAR = 6] = "CAR", MM[MM.HOVERCRAFT = 7] = "HOVERCRAFT", MM
+    let cU = function(UU) {
+        return UU[UU.DEFAULT = 0] = "DEFAULT", UU[UU.BOAT = 1] = "BOAT", UU[UU.GLIDER = 2] = "GLIDER", UU[UU.BALLOON = 3] = "BALLOON", UU[UU.SLEEPING = 4] = "SLEEPING", UU[UU.RIDING_MOB = 5] = "RIDING_MOB", UU[UU.CAR = 6] = "CAR", UU[UU.HOVERCRAFT = 7] = "HOVERCRAFT", UU
       }({}),
-      SM = function(MM) {
-        return MM[MM.WOOD = 0] = "WOOD", MM[MM.OBSIDIAN = 1] = "OBSIDIAN", MM[MM.SPEED = 2] = "SPEED", MM
+      yU = function(UU) {
+        return UU[UU.WOOD = 0] = "WOOD", UU[UU.OBSIDIAN = 1] = "OBSIDIAN", UU[UU.SPEED = 2] = "SPEED", UU
       }({}),
-      jM = function(MM) {
-        return MM[MM.WOOD = 0] = "WOOD", MM[MM.IRON = 1] = "IRON", MM[MM.GOLD = 2] = "GOLD", MM[MM.DIAMOND = 3] = "DIAMOND", MM
+      QU = function(UU) {
+        return UU[UU.WOOD = 0] = "WOOD", UU[UU.IRON = 1] = "IRON", UU[UU.GOLD = 2] = "GOLD", UU[UU.DIAMOND = 3] = "DIAMOND", UU
       }({}),
-      aM = function(MM) {
-        return MM[MM.YELLOW = 0] = "YELLOW", MM[MM.WHITE = 1] = "WHITE", MM[MM.RED = 2] = "RED", MM[MM.PURPLE = 3] = "PURPLE", MM[MM.PINK = 4] = "PINK", MM[MM.ORANGE = 5] = "ORANGE", MM[MM.MAGENTA = 6] = "MAGENTA", MM[MM.LIME = 7] = "LIME", MM[MM.LIGHT_GRAY = 8] = "LIGHT_GRAY", MM[MM.LIGHT_BLUE = 9] = "LIGHT_BLUE", MM[MM.GREEN = 10] = "GREEN", MM[MM.GRAY = 11] = "GRAY", MM[MM.CYAN = 12] = "CYAN", MM[MM.BROWN = 13] = "BROWN", MM[MM.BLUE = 14] = "BLUE", MM[MM.BLACK = 15] = "BLACK", MM
+      AU = function(UU) {
+        return UU[UU.YELLOW = 0] = "YELLOW", UU[UU.WHITE = 1] = "WHITE", UU[UU.RED = 2] = "RED", UU[UU.PURPLE = 3] = "PURPLE", UU[UU.PINK = 4] = "PINK", UU[UU.ORANGE = 5] = "ORANGE", UU[UU.MAGENTA = 6] = "MAGENTA", UU[UU.LIME = 7] = "LIME", UU[UU.LIGHT_GRAY = 8] = "LIGHT_GRAY", UU[UU.LIGHT_BLUE = 9] = "LIGHT_BLUE", UU[UU.GREEN = 10] = "GREEN", UU[UU.GRAY = 11] = "GRAY", UU[UU.CYAN = 12] = "CYAN", UU[UU.BROWN = 13] = "BROWN", UU[UU.BLUE = 14] = "BLUE", UU[UU.BLACK = 15] = "BLACK", UU
       }({}),
-      PM = function(MM) {
-        return MM[MM.ROTATION_1 = 0] = "ROTATION_1", MM[MM.ROTATION_2 = 1] = "ROTATION_2", MM[MM.ROTATION_3 = 2] = "ROTATION_3", MM[MM.ROTATION_4 = 3] = "ROTATION_4", MM
+      FU = function(UU) {
+        return UU[UU.ROTATION_1 = 0] = "ROTATION_1", UU[UU.ROTATION_2 = 1] = "ROTATION_2", UU[UU.ROTATION_3 = 2] = "ROTATION_3", UU[UU.ROTATION_4 = 3] = "ROTATION_4", UU
       }({}),
-      nM = function(MM) {
-        return MM[MM.KART = 0] = "KART", MM[MM.OFF_ROADER = 1] = "OFF_ROADER", MM[MM.CAR = 2] = "CAR", MM[MM.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", MM[MM.ARMORED_CAR = 4] = "ARMORED_CAR", MM[MM.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", MM[MM.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", MM[MM.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", MM
+      oU = function(UU) {
+        return UU[UU.KART = 0] = "KART", UU[UU.OFF_ROADER = 1] = "OFF_ROADER", UU[UU.CAR = 2] = "CAR", UU[UU.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", UU[UU.ARMORED_CAR = 4] = "ARMORED_CAR", UU[UU.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", UU[UU.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", UU[UU.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", UU
       }({});
-    OM.DEFAULT, OM.BOAT, SM.SPEED, OM.GLIDER, jM.DIAMOND, OM.BALLOON, aM.BLACK, OM.SLEEPING, PM.ROTATION_4, OM.RIDING_MOB, OM.CAR, nM.MOONSTONE_MINING_DRILL, OM.HOVERCRAFT;
-    let QM = function(MM) {
-      return MM[MM.NORMAL = 0] = "NORMAL", MM[MM.GLIDING = 1] = "GLIDING", MM[MM.FLOATING = 2] = "FLOATING", MM
+    cU.DEFAULT, cU.BOAT, yU.SPEED, cU.GLIDER, QU.DIAMOND, cU.BALLOON, AU.BLACK, cU.SLEEPING, FU.ROTATION_4, cU.RIDING_MOB, cU.CAR, oU.MOONSTONE_MINING_DRILL, cU.HOVERCRAFT;
+    let DU = function(UU) {
+      return UU[UU.NORMAL = 0] = "NORMAL", UU[UU.GLIDING = 1] = "GLIDING", UU[UU.FLOATING = 2] = "FLOATING", UU
     }({})
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

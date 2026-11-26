@@ -49,6 +49,16 @@
   width: 100vw
 }
 
+.HomePage .HomePageInner.HomePageInnerUnderMenu {
+  content-visibility: hidden
+}
+
+@supports not (content-visibility:hidden) {
+  .HomePage .HomePageInner.HomePageInnerUnderMenu {
+    visibility: hidden
+  }
+}
+
 .HomePage .HomePageInner .HomePageInnerRight {
   --home-inner-padding-left: max(var(--notchLeft), 0.5rem);
   --home-inner-padding-right: max(var(--notchRight), 0.5rem);
@@ -146,6 +156,10 @@
   opacity: 1;
   pointer-events: auto;
   transition: opacity .6s
+}
+
+.HomeHeader.HomeHeaderUnderFollowBadge {
+  padding-top: 1.5rem
 }
 
 .HomeHeader .HomeHeaderInner {
@@ -1512,41 +1526,6 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
   z-index: 1
 }
 
-.GenericVideoWrapper .NitroVideoSkip {
-  background-color: rgba(26, 31, 46, .6);
-  border: 1px solid #0f0f0f;
-  bottom: 1rem;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 600;
-  left: 1rem;
-  padding: .5rem 1rem;
-  pointer-events: none;
-  position: absolute;
-  z-index: 3
-}
-
-.GenericVideoWrapper .NitroVideoSkip:not(:disabled) {
-  cursor: pointer;
-  pointer-events: auto
-}
-
-@media(hover:hover) {
-  .GenericVideoWrapper .NitroVideoSkip:not(:disabled):hover {
-    background-color: #394980
-  }
-}
-
-.GenericVideoWrapper .NitroVideoSkip:not(:disabled).pad-focused {
-  background-color: #394980
-}
-
-@media(hover:none) {
-  .GenericVideoWrapper .NitroVideoSkip:not(:disabled):active {
-    background-color: #394980
-  }
-}
-
 .GenericVideoWrapper .GenericVideo {
   height: 600px;
   position: relative;
@@ -1554,16 +1533,10 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
   z-index: 2
 }
 
-.GenericVideoWrapper .GenericVideo.AditudeVideo,
-.GenericVideoWrapper .GenericVideo.NitroVideo {
+.GenericVideoWrapper .GenericVideo.AditudeVideo {
   aspect-ratio: 16/9;
   height: auto;
   width: min(80vw, 160vh)
-}
-
-.GenericVideoWrapper .GenericVideo .NitroVideoPlacement {
-  height: 100%;
-  width: 100%
 }
 
 .GenericVideoWrapper .GenericVideo.GamVideo {
@@ -2967,39 +2940,24 @@ a {
   color: #e73131
 }
 
-.LoadableButton.ReportButton,
-.LoadableButton.StopRecordingButton {
+.LoadableButton.ReportButton {
   background-color: #3c4b68
 }
 
 @media(hover:hover) {
-
-  .LoadableButton.ReportButton:hover,
-  .LoadableButton.StopRecordingButton:hover {
+  .LoadableButton.ReportButton:hover {
     background-color: #394980
   }
 }
 
-.LoadableButton.ReportButton.pad-focused,
-.LoadableButton.StopRecordingButton.pad-focused {
+.LoadableButton.ReportButton.pad-focused {
   background-color: #394980
 }
 
 @media(hover:none) {
-
-  .LoadableButton.ReportButton:active,
-  .LoadableButton.StopRecordingButton:active {
+  .LoadableButton.ReportButton:active {
     background-color: #394980
   }
-}
-
-.LoadableButton.StopRecordingButton {
-  color: #e34f4f
-}
-
-.LoadableButton.StopRecordingButton .StopRecordingButtonLabel {
-  color: #fff;
-  white-space: nowrap
 }
 
 .LoadableButton.DisabledLoadableButton {
@@ -3510,7 +3468,6 @@ a {
 @media(pointer:coarse) {
 
   .HomeHeader .TopRightIconsContainer .TopRightIcons .NotificationBell:before,
-  .HomeHeader .TopRightIconsContainer .TopRightIcons .StopRecordingButton:before,
   .HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightIcon>.UiItemIcon:before {
     content: "";
     inset: min(0px, (100% - 44px)/2) max(var(--header-icon-gap, 1.25rem)/-2, min(0px, (100% - 44px)/2));
@@ -3530,15 +3487,6 @@ a {
     justify-content: center;
     min-width: 1em
   }
-}
-
-.HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightStopRecording {
-  align-self: center
-}
-
-.HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightStopRecording .StopRecordingButton {
-  font-size: 1.6rem;
-  padding: .4rem
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame {
@@ -6693,76 +6641,6 @@ a {
   }
 }
 
-.PaymentEntryIcon {
-  align-items: center;
-  color: #ffb914;
-  display: flex;
-  flex-shrink: 0;
-  font-size: 1.6rem;
-  justify-content: center;
-  position: relative
-}
-
-.PaymentEntryIcon .PaymentEntryIconRevokedBadge {
-  bottom: -.3rem;
-  color: #ff8a80;
-  font-size: 1rem;
-  position: absolute;
-  right: -.3rem
-}
-
-.PremiumCurrencyIcon {
-  flex-shrink: 0;
-  height: 1.1em;
-  vertical-align: -.15em;
-  width: 1.1em
-}
-
-.PremiumCurrencyAmount {
-  align-items: center;
-  display: inline-flex;
-  gap: .3em;
-  white-space: nowrap
-}
-
-.PremiumCurrencyAmount .PremiumCurrencyAmountPending {
-  position: relative;
-  visibility: hidden
-}
-
-.PremiumCurrencyAmount .PremiumCurrencyAmountPending:after {
-  content: "...";
-  left: 50%;
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
-  visibility: visible
-}
-
-.PremiumCurrencyAmount.PremiumCurrencyAmountBalance {
-  color: #ffb914;
-  display: flex;
-  font-size: 1.25rem;
-  font-weight: 800;
-  gap: .4rem;
-  padding: .25rem 0;
-  pointer-events: none;
-  text-shadow: -1px -1px 0 rgba(48, 58, 89, .6), -1px 0 0 rgba(48, 58, 89, .6), -1px 1px 0 rgba(48, 58, 89, .6), 0 -1px 0 rgba(48, 58, 89, .6), 0 0 0 rgba(48, 58, 89, .6), 0 1px 0 rgba(48, 58, 89, .6), 1px -1px 0 rgba(48, 58, 89, .6), 1px 0 0 rgba(48, 58, 89, .6), 1px 1px 0 rgba(48, 58, 89, .6)
-}
-
-.PremiumCurrencyAmount.PremiumCurrencyAmountBalance .svg-inline--fa,
-.PremiumCurrencyAmount.PremiumCurrencyAmountBalance.svg-inline--fa {
-  paint-order: stroke fill
-}
-
-.PremiumCurrencyAmount.PremiumCurrencyAmountBalance .svg-inline--fa path:only-of-type,
-.PremiumCurrencyAmount.PremiumCurrencyAmountBalance.svg-inline--fa path:only-of-type {
-  stroke: rgba(48, 58, 89, .6);
-  vector-effect: non-scaling-stroke;
-  stroke-width: 2px;
-  stroke-linejoin: round
-}
-
 .UpdateLogPopupOuter {
   z-index: 21
 }
@@ -6948,6 +6826,76 @@ a {
 
 .ProfilePicture .ProfilePictureComponent.ProfilePictureComponentHat {
   z-index: 5
+}
+
+.PaymentEntryIcon {
+  align-items: center;
+  color: #ffb914;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 1.6rem;
+  justify-content: center;
+  position: relative
+}
+
+.PaymentEntryIcon .PaymentEntryIconRevokedBadge {
+  bottom: -.3rem;
+  color: #ff8a80;
+  font-size: 1rem;
+  position: absolute;
+  right: -.3rem
+}
+
+.PremiumCurrencyIcon {
+  flex-shrink: 0;
+  height: 1.1em;
+  vertical-align: -.15em;
+  width: 1.1em
+}
+
+.PremiumCurrencyAmount {
+  align-items: center;
+  display: inline-flex;
+  gap: .3em;
+  white-space: nowrap
+}
+
+.PremiumCurrencyAmount .PremiumCurrencyAmountPending {
+  position: relative;
+  visibility: hidden
+}
+
+.PremiumCurrencyAmount .PremiumCurrencyAmountPending:after {
+  content: "...";
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  visibility: visible
+}
+
+.PremiumCurrencyAmount.PremiumCurrencyAmountBalance {
+  color: #ffb914;
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 800;
+  gap: .4rem;
+  padding: .25rem 0;
+  pointer-events: none;
+  text-shadow: -1px -1px 0 rgba(48, 58, 89, .6), -1px 0 0 rgba(48, 58, 89, .6), -1px 1px 0 rgba(48, 58, 89, .6), 0 -1px 0 rgba(48, 58, 89, .6), 0 0 0 rgba(48, 58, 89, .6), 0 1px 0 rgba(48, 58, 89, .6), 1px -1px 0 rgba(48, 58, 89, .6), 1px 0 0 rgba(48, 58, 89, .6), 1px 1px 0 rgba(48, 58, 89, .6)
+}
+
+.PremiumCurrencyAmount.PremiumCurrencyAmountBalance .svg-inline--fa,
+.PremiumCurrencyAmount.PremiumCurrencyAmountBalance.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.PremiumCurrencyAmount.PremiumCurrencyAmountBalance .svg-inline--fa path:only-of-type,
+.PremiumCurrencyAmount.PremiumCurrencyAmountBalance.svg-inline--fa path:only-of-type {
+  stroke: rgba(48, 58, 89, .6);
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
 }
 
 .BottomLeftIcons {
@@ -7848,13 +7796,6 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarIdentityTop .NotificationBellContainer {
   padding: calc(1.3rem + var(--notchTop)) .5rem 0 0
-}
-
-.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarIdentityTop .SocialBarIdentityActions {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: .4rem
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialSectionTitle {
@@ -9535,7 +9476,7 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   margin: calc(var(--contrast-border-top)*-1) calc(var(--contrast-border-right)*-1) calc(var(--contrast-border-bottom)*-1) calc(var(--contrast-border-left)*-1) !important
 }
 
-.AdBannerContainer.AdBannerContainerHoldsFrame .AdBannerSlot>.AdBanner.AdBannerExtraContrast.AdBannerAwaitingAd:not(.NitroBanner) {
+.AdBannerContainer.AdBannerContainerHoldsFrame .AdBannerSlot>.AdBanner.AdBannerExtraContrast.AdBannerAwaitingAd {
   margin: 0 !important
 }
 
@@ -9622,22 +9563,6 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   z-index: 2
 }
 
-.AdBannerContainer .AdBanner.NitroBanner:empty {
-  min-height: var(--nitro-slot-height);
-  min-width: var(--nitro-slot-width)
-}
-
-.AdBannerContainer .AdBanner.NitroBanner:empty,
-.AdBannerContainer .AdBanner.NitroBannerUnfilled {
-  opacity: 0;
-  pointer-events: none
-}
-
-.AdBannerContainer .AdBanner.NitroBanner:empty *,
-.AdBannerContainer .AdBanner.NitroBannerUnfilled * {
-  pointer-events: none !important
-}
-
 .AdBannerContainer .AdBanner.AdBannerExtraContrast {
   background-color: #fff;
   border-color: #f2f2f2 !important;
@@ -9655,14 +9580,14 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   top: calc(100% + var(--contrast-border-bottom))
 }
 
-.AdBannerContainer .AdBanner.AdBannerAwaitingAd:not(.NitroBanner) {
+.AdBannerContainer .AdBanner.AdBannerAwaitingAd {
   background-color: transparent;
   border-style: none !important;
   box-shadow: none;
   outline: none
 }
 
-.AdBannerContainer .AdBanner.AdBannerAwaitingAd:not(.NitroBanner) .AdBannerRemoveAds {
+.AdBannerContainer .AdBanner.AdBannerAwaitingAd .AdBannerRemoveAds {
   visibility: hidden
 }
 
@@ -10952,6 +10877,24 @@ html[data-app-covered] .WholeAppWrapper .AdBannerContainer .AdBanner.CosmeticPac
   visibility: hidden
 }
 
+.CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea .CosmeticShopDetailPreviewNo3d {
+  align-content: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  height: 100%;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%
+}
+
+.CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea .CosmeticShopDetailPreviewNo3d img {
+  height: 8rem;
+  object-fit: contain;
+  width: 8rem
+}
+
 .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea .CosmeticShopDetailPreviewStill {
   background-position: center 87.2%;
   background-repeat: no-repeat;
@@ -11500,7 +11443,7 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 
 .PremiumCurrencyBundles .PremiumCurrencyBundle {
   --pileGlow: rgba(243, 138, 182, .18);
-  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28124,131,251%29%27 stop-opacity=%270.35%27/><stop offset=%27.7%27 stop-color=%27rgb%28124,131,251%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.2%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L18.38 -68.58Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L18.38 -68.58L35.5 -61.49Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2830%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2890%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28150%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28210%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28270%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28330%29%27/></svg>");
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-71 -71 142 142%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28124,131,251%29%27 stop-opacity=%270.35%27/><stop offset=%27.7%27 stop-color=%27rgb%28124,131,251%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.2%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L18.38 -68.58Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L18.38 -68.58L35.5 -61.49Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2830%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2890%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28150%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28210%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28270%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28330%29%27/></svg>");
   --rayTurn: 60s;
   align-items: center;
   background: radial-gradient(circle at 50% 52%, #545efa, #463bd9 45%, #222a9f);
@@ -11526,7 +11469,7 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   position: absolute;
   top: 52%;
   transform: translate(-50%, -50%);
-  width: 200%;
+  width: 142%;
   z-index: -1
 }
 
@@ -11673,13 +11616,13 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier3,
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier4 {
   --pileGlow: rgba(243, 138, 182, .28);
-  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28143,150,252%29%27 stop-opacity=%270.45%27/><stop offset=%27.7%27 stop-color=%27rgb%28143,150,252%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.25%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L12.33 -69.92Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L12.33 -69.92L24.28 -66.72Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2820%29%27/><use href=%27%23w%27 transform=%27rotate%2840%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2880%29%27/><use href=%27%23w%27 transform=%27rotate%28100%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28140%29%27/><use href=%27%23w%27 transform=%27rotate%28160%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28200%29%27/><use href=%27%23w%27 transform=%27rotate%28220%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28260%29%27/><use href=%27%23w%27 transform=%27rotate%28280%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28320%29%27/><use href=%27%23w%27 transform=%27rotate%28340%29%27/></svg>");
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-71 -71 142 142%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28143,150,252%29%27 stop-opacity=%270.45%27/><stop offset=%27.7%27 stop-color=%27rgb%28143,150,252%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.25%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L12.33 -69.92Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L12.33 -69.92L24.28 -66.72Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2820%29%27/><use href=%27%23w%27 transform=%27rotate%2840%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2880%29%27/><use href=%27%23w%27 transform=%27rotate%28100%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28140%29%27/><use href=%27%23w%27 transform=%27rotate%28160%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28200%29%27/><use href=%27%23w%27 transform=%27rotate%28220%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28260%29%27/><use href=%27%23w%27 transform=%27rotate%28280%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28320%29%27/><use href=%27%23w%27 transform=%27rotate%28340%29%27/></svg>");
   --rayTurn: 40s
 }
 
 .PremiumCurrencyBundles .PremiumCurrencyBundle.PremiumCurrencyBundleTier5 {
   --pileGlow: rgba(243, 138, 182, .4);
-  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-100 -100 200 200%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28255,185,20%29%27 stop-opacity=%270.3%27/><stop offset=%27.7%27 stop-color=%27rgb%28255,185,20%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.25%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L9.27 -70.39Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L9.27 -70.39L18.38 -68.58Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2815%29%27/><use href=%27%23w%27 transform=%27rotate%2830%29%27/><use href=%27%23w%27 transform=%27rotate%2845%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2875%29%27/><use href=%27%23w%27 transform=%27rotate%2890%29%27/><use href=%27%23w%27 transform=%27rotate%28105%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28135%29%27/><use href=%27%23w%27 transform=%27rotate%28150%29%27/><use href=%27%23w%27 transform=%27rotate%28165%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28195%29%27/><use href=%27%23w%27 transform=%27rotate%28210%29%27/><use href=%27%23w%27 transform=%27rotate%28225%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28255%29%27/><use href=%27%23w%27 transform=%27rotate%28270%29%27/><use href=%27%23w%27 transform=%27rotate%28285%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28315%29%27/><use href=%27%23w%27 transform=%27rotate%28330%29%27/><use href=%27%23w%27 transform=%27rotate%28345%29%27/></svg>");
+  --rays: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-71 -71 142 142%27><defs><radialGradient id=%27l%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%28255,185,20%29%27 stop-opacity=%270.3%27/><stop offset=%27.7%27 stop-color=%27rgb%28255,185,20%29%27 stop-opacity=%270%27/></radialGradient><radialGradient id=%27d%27 gradientUnits=%27userSpaceOnUse%27 cx=%270%27 cy=%270%27 r=%27100%27><stop offset=%27.15%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270.25%27/><stop offset=%27.7%27 stop-color=%27rgb%2834,42,159%29%27 stop-opacity=%270%27/></radialGradient><g id=%27w%27><path fill=%27url%28%23l%29%27 d=%27M0 0L0 -71L9.27 -70.39Z%27/><path fill=%27url%28%23d%29%27 d=%27M0 0L9.27 -70.39L18.38 -68.58Z%27/></g></defs><use href=%27%23w%27/><use href=%27%23w%27 transform=%27rotate%2815%29%27/><use href=%27%23w%27 transform=%27rotate%2830%29%27/><use href=%27%23w%27 transform=%27rotate%2845%29%27/><use href=%27%23w%27 transform=%27rotate%2860%29%27/><use href=%27%23w%27 transform=%27rotate%2875%29%27/><use href=%27%23w%27 transform=%27rotate%2890%29%27/><use href=%27%23w%27 transform=%27rotate%28105%29%27/><use href=%27%23w%27 transform=%27rotate%28120%29%27/><use href=%27%23w%27 transform=%27rotate%28135%29%27/><use href=%27%23w%27 transform=%27rotate%28150%29%27/><use href=%27%23w%27 transform=%27rotate%28165%29%27/><use href=%27%23w%27 transform=%27rotate%28180%29%27/><use href=%27%23w%27 transform=%27rotate%28195%29%27/><use href=%27%23w%27 transform=%27rotate%28210%29%27/><use href=%27%23w%27 transform=%27rotate%28225%29%27/><use href=%27%23w%27 transform=%27rotate%28240%29%27/><use href=%27%23w%27 transform=%27rotate%28255%29%27/><use href=%27%23w%27 transform=%27rotate%28270%29%27/><use href=%27%23w%27 transform=%27rotate%28285%29%27/><use href=%27%23w%27 transform=%27rotate%28300%29%27/><use href=%27%23w%27 transform=%27rotate%28315%29%27/><use href=%27%23w%27 transform=%27rotate%28330%29%27/><use href=%27%23w%27 transform=%27rotate%28345%29%27/></svg>");
   --rayTurn: 25s
 }
 
@@ -12447,6 +12390,10 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   color: #f2f2f2
 }
 
+.LegalText [id] {
+  scroll-margin-top: max(4rem, 60px)
+}
+
 .SwitchTargetElementContainer {
   --transition-time: 1s;
   align-items: center;
@@ -12733,11 +12680,21 @@ html[data-app-covered=skipped] .WholeAppWrapper {
 }
 
 .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody {
+  --title-lines: 1;
+  --tip-lines: 1;
+  container-type: inline-size;
   align-items: center;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   justify-content: center
+}
+
+@media(orientation:portrait) {
+  .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody {
+    --title-lines: 2;
+    --tip-lines: 3
+  }
 }
 
 .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .LogoLoaderLoadingContainer {
@@ -12750,15 +12707,46 @@ html[data-app-covered=skipped] .WholeAppWrapper {
 }
 
 .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .MainLoadingState {
+  flex-shrink: 0;
   font-size: 3rem;
+  font-size: min(3rem, 4.5cqi);
+  height: calc(var(--title-lines)*1.2em);
+  line-height: 1.2;
   margin-bottom: 1rem;
-  text-align: center
+  text-align: center;
+  width: 100%
+}
+
+@media(orientation:portrait) {
+  .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .MainLoadingState {
+    font-size: min(3rem, 7.5cqi)
+  }
+}
+
+.LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .MainLoadingState .MainLoadingStateText {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--title-lines);
+  display: -webkit-box;
+  margin: calc(max(.2em, 6px)*-1);
+  overflow: hidden;
+  padding: max(.2em, 6px)
 }
 
 .LoadingOverlay .LoadingOverlayRight .LoadingOverlayRightBody .MiniLoadingMessage {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--tip-lines);
+  box-sizing: content-box;
   color: #f2f2f2;
+  display: -webkit-box;
+  flex-shrink: 0;
   font-size: 1.4rem;
-  text-align: center
+  height: calc(var(--tip-lines)*1.25em);
+  line-height: 1.25;
+  margin: -.15em;
+  overflow: hidden;
+  padding: .15em;
+  text-align: center;
+  width: 100%
 }
 
 .HidableBannerWrapperHidden *,
@@ -15218,6 +15206,30 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   to {
     opacity: 0
   }
+}
+
+.SessionReplayFollowBadge {
+  align-items: center;
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex;
+  gap: 6px;
+  left: 50%;
+  padding: 2px 8px;
+  pointer-events: none;
+  position: fixed;
+  top: var(--hud-auto-inset-top);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 2147483645
+}
+
+.SessionReplayFollowBadge .SessionReplayFollowBadgeDot {
+  background: #e34f4f;
+  height: 8px;
+  width: 8px
 }
 
 .RouterError {
@@ -18232,4 +18244,23 @@ html[data-app-covered] .WholeAppWrapper .UpdateWaitingProgress.Sweeping .UpdateW
   .BlockHopperRunDistance {
     font-size: 1.9rem
   }
+}
+
+.SessionReplayDot {
+  background: #e34f4f;
+  left: 50%;
+  padding: .25rem;
+  pointer-events: none;
+  position: fixed;
+  top: var(--hud-auto-inset-top);
+  transform: translateX(-50%);
+  z-index: 2147483646
+}
+
+.SessionReplayDot:after {
+  background: #fff;
+  content: "";
+  display: block;
+  height: .5rem;
+  width: .5rem
 }

@@ -57,11 +57,6 @@
   }
 }
 
-.EverythingMenuContainer .EverythingMenu .EverythingMenuTabList .EverythingMenuTabListButtonContainer .EverythingMenuStopRecording {
-  align-items: center;
-  display: flex
-}
-
 .EverythingMenuContainer .EverythingMenu .EverythingMenuTabList .EverythingMenuTabListButtonContainer .EverythingMenuWallet {
   align-items: center;
   cursor: pointer;
@@ -2170,6 +2165,10 @@
   letter-spacing: .05em
 }
 
+.RecordingIndicator.RecordingIndicatorClipping .RecordingIndicatorDot {
+  animation: none
+}
+
 @keyframes RecordingIndicatorPulse {
 
   0%,
@@ -2203,6 +2202,16 @@
   font-size: 4rem;
   height: 100%;
   justify-content: center;
+  width: 100%
+}
+
+.CharCustomisation .MenuBody .CharacterCustomisationNoWebGl {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
   width: 100%
 }
 
@@ -6165,8 +6174,14 @@ html[data-app-covered] .WholeAppWrapper .DailyDropTile.DailyDropTileReady:before
   position: absolute
 }
 
-.DailyDropReveal .DailyDropRevealFigures .DailyDropRevealFigure .DailyDropRevealFigureArt .DailyDropRevealBeforeHead {
+.DailyDropReveal .DailyDropRevealFigures .DailyDropRevealFigure .DailyDropRevealFigureArt .DailyDropRevealHead {
   font-size: calc(min(11rem, 30vw)/2)
+}
+
+.DailyDropReveal .DailyDropRevealFigures .DailyDropRevealFigure .DailyDropRevealFigureArt .DailyDropRevealAfterPiece {
+  height: 70%;
+  object-fit: contain;
+  width: 70%
 }
 
 .DailyDropReveal .DailyDropRevealFigures .DailyDropRevealFigure .DailyDropRevealFigureArt .DailyDropRevealLive {

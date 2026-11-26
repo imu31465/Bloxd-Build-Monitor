@@ -1,28 +1,28 @@
 export const id = 83;
 export const ids = [83];
 export const modules = {
-  37356: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM
+  37112: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => yU
     });
-    const OM = {
-      wait: function(MM) {
-        return new Promise((rM => {
-          setTimeout(rM, MM)
+    const cU = {
+      wait: function(UU) {
+        return new Promise((XU => {
+          setTimeout(XU, UU)
         }))
       },
       stallMs: 2e4
     };
-    class SM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : OM;
-        this.url = MM, this.options = rM, this.timing = iM, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = MM
+    class yU {
+      constructor(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : cU;
+        this.url = UU, this.options = XU, this.timing = zU, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = UU
       }
       ready() {
         if (null === this.fetched) {
-          const MM = new AbortController;
-          this.fetchAbort = MM, this.fetched = this.fetchWithRetries(MM.signal).then((rM => (this.fetchAbort === MM && (this.fetchAbort = null), rM)))
+          const UU = new AbortController;
+          this.fetchAbort = UU, this.fetched = this.fetchWithRetries(UU.signal).then((XU => (this.fetchAbort === UU && (this.fetchAbort = null), XU)))
         }
         return this.fetched
       }
@@ -38,86 +38,86 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(MM) {
-        for (let rM = 0;; rM++) {
-          const iM = new URL(this.url);
-          if (rM > 0 && iM.searchParams.set("cache-bust", `${Date.now()}-${rM}`), await this.fetchWhole(iM, MM)) return this.scriptUrl = iM, !0;
-          if (rM >= 3 || MM.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** rM), MM.aborted) return !1
+      async fetchWithRetries(UU) {
+        for (let XU = 0;; XU++) {
+          const zU = new URL(this.url);
+          if (XU > 0 && zU.searchParams.set("cache-bust", `${Date.now()}-${XU}`), await this.fetchWhole(zU, UU)) return this.scriptUrl = zU, !0;
+          if (XU >= 3 || UU.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** XU), UU.aborted) return !1
         }
       }
-      async fetchWhole(MM, rM) {
-        const iM = new AbortController;
-        let OM;
-        const SM = () => {
-            clearTimeout(OM), OM = setTimeout((() => {
-              iM.abort()
+      async fetchWhole(UU, XU) {
+        const zU = new AbortController;
+        let cU;
+        const yU = () => {
+            clearTimeout(cU), cU = setTimeout((() => {
+              zU.abort()
             }), this.timing.stallMs)
           },
-          jM = () => {
-            iM.abort()
+          QU = () => {
+            zU.abort()
           };
-        rM.addEventListener("abort", jM, {
+        XU.addEventListener("abort", QU, {
           once: !0
-        }), SM();
+        }), yU();
         try {
-          var aM;
-          const rM = await fetch(MM, {
-            signal: iM.signal
+          var AU;
+          const XU = await fetch(UU, {
+            signal: zU.signal
           });
-          if (!rM.ok) return !1;
-          const OM = null === (aM = rM.body) || void 0 === aM ? void 0 : aM.getReader();
-          if (!OM) return !1;
+          if (!XU.ok) return !1;
+          const cU = null === (AU = XU.body) || void 0 === AU ? void 0 : AU.getReader();
+          if (!cU) return !1;
           for (;;) {
             const {
-              done: MM
-            } = await OM.read();
-            if (MM) return !0;
-            SM()
+              done: UU
+            } = await cU.read();
+            if (UU) return !0;
+            yU()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(OM), rM.removeEventListener("abort", jM)
+          clearTimeout(cU), XU.removeEventListener("abort", QU)
         }
       }
     }
   },
-  53795: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      createWorldgenWorker: () => zM,
-      prefetchWorldgenWorker: () => PM,
-      stopWorldgenWorkerPrefetch: () => nM,
-      worldgenWorkerReady: () => aM,
-      worldgenWorkerScriptUrl: () => QM
+  53801: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      createWorldgenWorker: () => EU,
+      prefetchWorldgenWorker: () => FU,
+      stopWorldgenWorkerPrefetch: () => oU,
+      worldgenWorkerReady: () => AU,
+      worldgenWorkerScriptUrl: () => DU
     });
-    const OM = new(iM(37356).b)(new URL(iM.p + iM.u(82), iM.b), {
+    const cU = new(zU(37112).b)(new URL(zU.p + zU.u(82), zU.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let SM = !1,
-      jM = !1;
+    let yU = !1,
+      QU = !1;
 
-    function aM() {
-      return SM = !0, OM.ready()
+    function AU() {
+      return yU = !0, cU.ready()
     }
 
-    function PM() {
-      OM.ready()
+    function FU() {
+      cU.ready()
     }
 
-    function nM() {
-      SM || jM || (jM = !0, OM.cancel())
+    function oU() {
+      yU || QU || (QU = !0, cU.cancel())
     }
 
-    function QM() {
-      return OM.href
+    function DU() {
+      return cU.href
     }
 
-    function zM() {
-      return OM.start()
+    function EU() {
+      return cU.start()
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

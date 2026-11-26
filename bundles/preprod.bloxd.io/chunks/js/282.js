@@ -1,624 +1,884 @@
 export const id = 282;
 export const ids = [282];
 export const modules = {
-  41354: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      e: () => PM
+  41346: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => NU
     });
-    var OM = iM(39711),
-      SM = iM(41121),
-      jM = iM(41323),
-      aM = {};
-    class PM {
-      constructor(MM) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = MM, this.checkInputs = () => {}
-      }
-      add(MM) {
-        const rM = MM.getSimpleName();
-        this.attached[rM] ? OM.e.Warn("camera input of type " + rM + " already exists on camera") : (this.attached[rM] = MM, MM.camera = this.camera, MM.checkInputs && (this.checkInputs = this._addCheckInputs(MM.checkInputs.bind(MM))), this.attachedToElement && MM.attachControl(this.noPreventDefault))
-      }
-      remove(MM) {
-        for (const rM in this.attached) {
-          const iM = this.attached[rM];
-          if (iM === MM) return iM.detachControl(), iM.camera = null, delete this.attached[rM], void this.rebuildInputCheck()
+    var cU = zU(41113),
+      yU = zU(41121),
+      QU = zU(37819),
+      AU = zU(37923),
+      FU = zU(41314),
+      oU = zU(41228),
+      DU = zU(37863),
+      EU = zU(41293),
+      YU = zU(41134);
+    let NU = (() => {
+      var UU, XU;
+      let zU, NU, IU, pU, aU, tU, gU, kU, GU, BU, ZU, RU, PU, WU = FU.e,
+        dU = [],
+        LU = [],
+        eU = [],
+        CU = [],
+        wU = [],
+        qU = [],
+        OU = [],
+        SU = [],
+        rU = [],
+        uU = [],
+        fU = [],
+        iU = [],
+        HU = [],
+        MU = [],
+        vU = [],
+        VU = [],
+        sU = [],
+        nU = [],
+        mU = [],
+        lU = [],
+        xU = [];
+      return UU = class extends WU {
+        get range() {
+          return this._range
         }
-      }
-      removeByType(MM) {
-        for (const rM in this.attached) {
-          const iM = this.attached[rM];
-          iM.getClassName() === MM && (iM.detachControl(), iM.camera = null, delete this.attached[rM], this.rebuildInputCheck())
+        set range(UU) {
+          this._range = UU, this._inverseSquaredRange = 1 / (this.range * this.range)
         }
-      }
-      _addCheckInputs(MM) {
-        const rM = this.checkInputs;
-        return () => {
-          rM(), MM()
+        get intensityMode() {
+          return this._intensityMode
         }
-      }
-      attachInput(MM) {
-        this.attachedToElement && MM.attachControl(this.noPreventDefault)
-      }
-      attachElement() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!this.attachedToElement) {
-          MM = !jM.b.ForceAttachControlToAlwaysPreventDefault && MM, this.attachedToElement = !0, this.noPreventDefault = MM;
-          for (const rM in this.attached) this.attached[rM].attachControl(MM)
+        set intensityMode(UU) {
+          this._intensityMode = UU, this._computePhotometricScale()
         }
-      }
-      detachElement() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const rM in this.attached) this.attached[rM].detachControl(), MM && (this.attached[rM].camera = null);
-        this.attachedToElement = !1
-      }
-      rebuildInputCheck() {
-        this.checkInputs = () => {};
-        for (const MM in this.attached) {
-          const rM = this.attached[MM];
-          rM.checkInputs && (this.checkInputs = this._addCheckInputs(rM.checkInputs.bind(rM)))
+        get radius() {
+          return this._radius
         }
-      }
-      clear() {
-        this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
-      }
-      serialize(MM) {
-        const rM = {};
-        for (const iM in this.attached) {
-          const MM = this.attached[iM],
-            OM = SM.b.Serialize(MM);
-          rM[MM.getClassName()] = OM
+        set radius(UU) {
+          this._radius = UU, this._computePhotometricScale()
         }
-        MM.inputsmgr = rM
+        get renderPriority() {
+          return (0, cU.e)(this, XU, "f")
+        }
+        set renderPriority(UU) {
+          (0, cU.f)(this, XU, UU, "f")
+        }
+        get shadowEnabled() {
+          return this._shadowEnabled
+        }
+        set shadowEnabled(UU) {
+          this._shadowEnabled !== UU && (this._shadowEnabled = UU, this._markMeshesAsLightDirty())
+        }
+        get includedOnlyMeshes() {
+          return this._includedOnlyMeshes
+        }
+        set includedOnlyMeshes(UU) {
+          this._includedOnlyMeshes = UU, this._hookArrayForIncludedOnly(UU)
+        }
+        get excludedMeshes() {
+          return this._excludedMeshes
+        }
+        set excludedMeshes(UU) {
+          this._excludedMeshes = UU, this._hookArrayForExcluded(UU)
+        }
+        get excludeWithLayerMask() {
+          return this._excludeWithLayerMask
+        }
+        set excludeWithLayerMask(UU) {
+          this._excludeWithLayerMask = UU, this._resyncMeshes()
+        }
+        get includeOnlyWithLayerMask() {
+          return this._includeOnlyWithLayerMask
+        }
+        set includeOnlyWithLayerMask(UU) {
+          this._includeOnlyWithLayerMask = UU, this._resyncMeshes()
+        }
+        get lightmapMode() {
+          return this._lightmapMode
+        }
+        set lightmapMode(UU) {
+          this._lightmapMode !== UU && (this._lightmapMode = UU, this._markMeshesAsLightDirty())
+        }
+        getViewMatrix(UU) {
+          return null
+        }
+        getProjectionMatrix(UU, XU) {
+          return null
+        }
+        constructor(zU, yU, QU) {
+          super(zU, yU, !1), this.diffuse = ((0, cU.n)(this, dU), (0, cU.n)(this, LU, new AU.b(1, 1, 1))), this.specular = ((0, cU.n)(this, eU), (0, cU.n)(this, CU, new AU.b(1, 1, 1))), this.falloffType = ((0, cU.n)(this, wU), (0, cU.n)(this, qU, UU.FALLOFF_DEFAULT)), this.intensity = ((0, cU.n)(this, OU), (0, cU.n)(this, SU, 1)), this._range = ((0, cU.n)(this, rU), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = UU.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, cU.n)(this, uU, void 0), XU.set(this, ((0, cU.n)(this, fU), (0, cU.n)(this, iU, 0))), this._shadowEnabled = ((0, cU.n)(this, HU), (0, cU.n)(this, MU, !0)), this._includedOnlyMeshes = (0, cU.n)(this, vU), this._excludeWithLayerMask = (0, cU.n)(this, VU, 0), this._includeOnlyWithLayerMask = ((0, cU.n)(this, sU), (0, cU.n)(this, nU, 0)), this._lightmapMode = ((0, cU.n)(this, mU), (0, cU.n)(this, lU, 0)), this._shadowGenerators = ((0, cU.n)(this, xU), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, QU || this.nS().addLight(this), this._uniformBuffer = new oU.b(this.nS().qp(), void 0, void 0, zU), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], QU || this._resyncMeshes()
+        }
+        transferTexturesToEffect(UU, XU) {
+          return this
+        }
+        _bindLight(UU, XU, zU, cU) {
+          let yU = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const QU = UU.toString();
+          let FU = !1;
+          if (this._uniformBuffer.bindToEffect(zU, "Light" + QU), this._renderId !== XU.getRenderId() || this._lastUseSpecular !== cU || !this._uniformBuffer.useUbo) {
+            this._renderId = XU.getRenderId(), this._lastUseSpecular = cU;
+            const UU = this.getScaledIntensity();
+            this.transferToEffect(zU, QU), this.diffuse.scaleToRef(UU, AU.i.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", AU.i.Color3[0], this.range, QU), cU && (this.specular.scaleToRef(UU, AU.i.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", AU.i.Color3[1], this.radius, QU)), FU = !0
+          }
+          if (this.transferTexturesToEffect(zU, QU), XU.shadowsEnabled && this.shadowEnabled && yU) {
+            const UU = this.getShadowGenerator(XU.activeCamera) ?? this.getShadowGenerator();
+            UU && (UU.bindShadowLight(QU, zU), FU = !0)
+          }
+          FU ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
+        }
+        getClassName() {
+          return "Light"
+        }
+        toString(UU) {
+          let XU = "Name: " + this.name;
+          if (XU += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
+            for (let zU = 0; zU < this.animations.length; zU++) XU += ", animation[0]: " + this.animations[zU].toString(UU);
+          return XU
+        }
+        _syncParentEnabledState() {
+          super._syncParentEnabledState(), this.oR() || this._resyncMeshes()
+        }
+        YC(UU) {
+          super.YC(UU), this._resyncMeshes()
+        }
+        getShadowGenerator() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return null === this._shadowGenerators ? null : this._shadowGenerators.get(UU) ?? null
+        }
+        getShadowGenerators() {
+          return this._shadowGenerators
+        }
+        getAbsolutePosition() {
+          return QU.q.Zero()
+        }
+        canAffectMesh(UU) {
+          return !UU || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(UU)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(UU)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & UU.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & UU.layerMask)))
+        }
+        dispose(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._shadowGenerators) {
+            const UU = this._shadowGenerators.values();
+            for (let XU = UU.next(); !0 !== XU.done; XU = UU.next()) {
+              XU.value.dispose()
+            }
+            this._shadowGenerators = null
+          }
+          if (this.nS().stopAnimation(this), this._parentContainer) {
+            const UU = this._parentContainer.lights.indexOf(this);
+            UU > -1 && this._parentContainer.lights.splice(UU, 1), this._parentContainer = null
+          }
+          for (const zU of this.nS().meshes) zU._removeLightSource(this, !0);
+          this._uniformBuffer.dispose(), this.nS().removeLight(this), super.dispose(UU, XU)
+        }
+        getTypeID() {
+          return 0
+        }
+        getScaledIntensity() {
+          return this._photometricScale * this.intensity
+        }
+        clone(XU) {
+          let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const cU = UU.GetConstructorFromName(this.getTypeID(), XU, this.nS());
+          if (!cU) return null;
+          const yU = YU.b.Clone(cU, this);
+          return XU && (yU.name = XU), zU && (yU.parent = zU), yU.YC(this.isEnabled()), this.onClonedObservable.notifyObservers(yU), yU
+        }
+        serialize() {
+          const UU = YU.b.Serialize(this);
+          if (UU.uniqueId = this.uniqueId, UU.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(UU), this.excludedMeshes.length > 0) {
+            UU.excludedMeshesIds = [];
+            for (const XU of this.excludedMeshes) UU.excludedMeshesIds.push(XU.id)
+          }
+          if (this.includedOnlyMeshes.length > 0) {
+            UU.includedOnlyMeshesIds = [];
+            for (const XU of this.includedOnlyMeshes) UU.includedOnlyMeshesIds.push(XU.id)
+          }
+          return YU.b.AppendSerializedAnimations(this, UU), UU.Qt = this.serializeAnimationRanges(), UU.isEnabled = this.isEnabled(), UU
+        }
+        static GetConstructorFromName(UU, XU, zU) {
+          const cU = FU.e.Construct("Light_Type_" + UU, XU, zU);
+          return cU || null
+        }
+        static Parse(XU, zU) {
+          let cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const yU = UU.GetConstructorFromName(XU.type, XU.name, zU);
+          if (!yU) return null;
+          const QU = YU.b.Parse(yU, XU, zU, cU);
+          if (XU.excludedMeshesIds && (QU._excludedMeshesIds = XU.excludedMeshesIds), XU.includedOnlyMeshesIds && (QU._includedOnlyMeshesIds = XU.includedOnlyMeshesIds), void 0 !== XU.parentId && (QU._waitingParentId = XU.parentId), void 0 !== XU.parentInstanceIndex && (QU._waitingParentInstanceIndex = XU.parentInstanceIndex), void 0 !== XU.falloffType && (QU.falloffType = XU.falloffType), void 0 !== XU.lightmapMode && (QU.lightmapMode = XU.lightmapMode), XU.animations) {
+            for (let UU = 0; UU < XU.animations.length; UU++) {
+              const zU = XU.animations[UU],
+                cU = (0, DU.e)("BABYLON.Animation");
+              cU && QU.animations.push(cU.Parse(zU))
+            }
+            FU.e.ParseAnimationRanges(QU, XU, zU)
+          }
+          return XU.autoAnimate && zU.beginAnimation(QU, XU.autoAnimateFrom, XU.autoAnimateTo, XU.autoAnimateLoop, XU.autoAnimateSpeed || 1), void 0 !== XU.isEnabled && QU.YC(XU.isEnabled), QU._onParsed(XU, zU, cU), QU
+        }
+        _onParsed(UU, XU) {}
+        _hookArrayForExcluded(UU) {
+          var XU = this;
+          const zU = UU.push;
+          UU.push = function() {
+            for (var cU = arguments.length, yU = new Array(cU), QU = 0; QU < cU; QU++) yU[QU] = arguments[QU];
+            const AU = zU.apply(UU, yU);
+            if (XU._clusteredContainer) return AU;
+            for (const UU of yU) UU._resyncLightSource(XU);
+            return AU
+          };
+          const cU = UU.splice;
+          UU.splice = (XU, zU) => {
+            const yU = cU.call(UU, XU, zU ?? UU.length);
+            if (this._clusteredContainer) return yU;
+            for (const UU of yU) UU._resyncLightSource(this);
+            return yU
+          }, this._resyncMeshes()
+        }
+        _hookArrayForIncludedOnly(UU) {
+          var XU = this;
+          const zU = UU.push;
+          UU.push = function() {
+            for (var cU = arguments.length, yU = new Array(cU), QU = 0; QU < cU; QU++) yU[QU] = arguments[QU];
+            const AU = zU.apply(UU, yU);
+            return XU._resyncMeshes(), AU
+          };
+          const cU = UU.splice;
+          UU.splice = (XU, zU) => {
+            const yU = cU.call(UU, XU, zU ?? UU.length);
+            return this._resyncMeshes(), yU
+          }, this._resyncMeshes()
+        }
+        _resyncMeshes() {
+          if (!this._clusteredContainer)
+            for (const UU of this.nS().meshes) UU._resyncLightSource(this)
+        }
+        _markMeshesAsLightDirty() {
+          for (const UU of this.nS().meshes) - 1 !== UU.lightSources.indexOf(this) && UU._markSubMeshesAsLightDirty()
+        }
+        _computePhotometricScale() {
+          this._photometricScale = this._getPhotometricScale(), this.nS().resetCachedMaterial()
+        }
+        _getPhotometricScale() {
+          let XU = 0;
+          const zU = this.getTypeID();
+          let cU = this.intensityMode;
+          switch (cU === UU.INTENSITYMODE_AUTOMATIC && (cU = zU === UU.LIGHTTYPEID_DIRECTIONALLIGHT ? UU.INTENSITYMODE_ILLUMINANCE : UU.INTENSITYMODE_LUMINOUSINTENSITY), zU) {
+            case UU.LIGHTTYPEID_POINTLIGHT:
+            case UU.LIGHTTYPEID_SPOTLIGHT:
+              switch (cU) {
+                case UU.INTENSITYMODE_LUMINOUSPOWER:
+                  XU = 1 / (4 * Math.PI);
+                  break;
+                case UU.INTENSITYMODE_LUMINOUSINTENSITY:
+                  XU = 1;
+                  break;
+                case UU.INTENSITYMODE_LUMINANCE:
+                  XU = this.radius * this.radius
+              }
+              break;
+            case UU.LIGHTTYPEID_DIRECTIONALLIGHT:
+              switch (cU) {
+                case UU.INTENSITYMODE_ILLUMINANCE:
+                  XU = 1;
+                  break;
+                case UU.INTENSITYMODE_LUMINANCE: {
+                  let UU = this.radius;
+                  UU = Math.max(UU, .001);
+                  XU = 2 * Math.PI * (1 - Math.cos(UU));
+                  break
+                }
+              }
+              break;
+            case UU.LIGHTTYPEID_HEMISPHERICLIGHT:
+            case UU.LIGHTTYPEID_RECT_AREALIGHT:
+              XU = 1
+          }
+          return XU
+        }
+        _reorderLightsInScene() {
+          const UU = this.nS();
+          0 != this._renderPriority && (UU.requireLightSorting = !0), this.nS().sortLightsByPriority()
+        }
+        areLightTexturesReady() {
+          return !0
+        }
+        _isReady() {
+          return !0
+        }
+      }, XU = new WeakMap, (() => {
+        const XU = "function" === typeof Symbol && Symbol.metadata ? Object.create(WU[Symbol.metadata] ?? null) : void 0;
+        zU = [(0, yU.m)()], NU = [(0, yU.m)()], IU = [(0, yU.I)()], pU = [(0, yU.I)()], aU = [(0, yU.I)()], tU = [(0, yU.I)()], gU = [(0, yU.I)()], kU = [(0, yU.I)()], GU = [(0, yU.c)("_reorderLightsInScene")], BU = [(0, yU.I)("shadowEnabled")], ZU = [(0, yU.I)("excludeWithLayerMask")], RU = [(0, yU.I)("includeOnlyWithLayerMask")], PU = [(0, yU.I)("lightmapMode")], (0, cU.j)(UU, null, aU, {
+          kind: "getter",
+          name: "range",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "range" in UU,
+            get: UU => UU.range
+          },
+          metadata: XU
+        }, null, dU), (0, cU.j)(UU, null, tU, {
+          kind: "getter",
+          name: "intensityMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "intensityMode" in UU,
+            get: UU => UU.intensityMode
+          },
+          metadata: XU
+        }, null, dU), (0, cU.j)(UU, null, gU, {
+          kind: "getter",
+          name: "radius",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "radius" in UU,
+            get: UU => UU.radius
+          },
+          metadata: XU
+        }, null, dU), (0, cU.j)(UU, null, GU, {
+          kind: "accessor",
+          name: "renderPriority",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "renderPriority" in UU,
+            get: UU => UU.renderPriority,
+            set: (UU, XU) => {
+              UU.renderPriority = XU
+            }
+          },
+          metadata: XU
+        }, iU, HU), (0, cU.j)(null, null, zU, {
+          kind: "field",
+          name: "diffuse",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "diffuse" in UU,
+            get: UU => UU.diffuse,
+            set: (UU, XU) => {
+              UU.diffuse = XU
+            }
+          },
+          metadata: XU
+        }, LU, eU), (0, cU.j)(null, null, NU, {
+          kind: "field",
+          name: "specular",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "specular" in UU,
+            get: UU => UU.specular,
+            set: (UU, XU) => {
+              UU.specular = XU
+            }
+          },
+          metadata: XU
+        }, CU, wU), (0, cU.j)(null, null, IU, {
+          kind: "field",
+          name: "falloffType",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "falloffType" in UU,
+            get: UU => UU.falloffType,
+            set: (UU, XU) => {
+              UU.falloffType = XU
+            }
+          },
+          metadata: XU
+        }, qU, OU), (0, cU.j)(null, null, pU, {
+          kind: "field",
+          name: "intensity",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "intensity" in UU,
+            get: UU => UU.intensity,
+            set: (UU, XU) => {
+              UU.intensity = XU
+            }
+          },
+          metadata: XU
+        }, SU, rU), (0, cU.j)(null, null, kU, {
+          kind: "field",
+          name: "_renderPriority",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_renderPriority" in UU,
+            get: UU => UU._renderPriority,
+            set: (UU, XU) => {
+              UU._renderPriority = XU
+            }
+          },
+          metadata: XU
+        }, uU, fU), (0, cU.j)(null, null, BU, {
+          kind: "field",
+          name: "_shadowEnabled",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_shadowEnabled" in UU,
+            get: UU => UU._shadowEnabled,
+            set: (UU, XU) => {
+              UU._shadowEnabled = XU
+            }
+          },
+          metadata: XU
+        }, MU, vU), (0, cU.j)(null, null, ZU, {
+          kind: "field",
+          name: "_excludeWithLayerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_excludeWithLayerMask" in UU,
+            get: UU => UU._excludeWithLayerMask,
+            set: (UU, XU) => {
+              UU._excludeWithLayerMask = XU
+            }
+          },
+          metadata: XU
+        }, VU, sU), (0, cU.j)(null, null, RU, {
+          kind: "field",
+          name: "_includeOnlyWithLayerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_includeOnlyWithLayerMask" in UU,
+            get: UU => UU._includeOnlyWithLayerMask,
+            set: (UU, XU) => {
+              UU._includeOnlyWithLayerMask = XU
+            }
+          },
+          metadata: XU
+        }, nU, mU), (0, cU.j)(null, null, PU, {
+          kind: "field",
+          name: "_lightmapMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_lightmapMode" in UU,
+            get: UU => UU._lightmapMode,
+            set: (UU, XU) => {
+              UU._lightmapMode = XU
+            }
+          },
+          metadata: XU
+        }, lU, xU), XU && Object.defineProperty(UU, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: XU
+        })
+      })(), UU.FALLOFF_DEFAULT = EU.e.FALLOFF_DEFAULT, UU.FALLOFF_PHYSICAL = EU.e.FALLOFF_PHYSICAL, UU.FALLOFF_GLTF = EU.e.FALLOFF_GLTF, UU.FALLOFF_STANDARD = EU.e.FALLOFF_STANDARD, UU.LIGHTMAP_DEFAULT = EU.e.LIGHTMAP_DEFAULT, UU.LIGHTMAP_SPECULAR = EU.e.LIGHTMAP_SPECULAR, UU.LIGHTMAP_SHADOWSONLY = EU.e.LIGHTMAP_SHADOWSONLY, UU.INTENSITYMODE_AUTOMATIC = EU.e.INTENSITYMODE_AUTOMATIC, UU.INTENSITYMODE_LUMINOUSPOWER = EU.e.INTENSITYMODE_LUMINOUSPOWER, UU.INTENSITYMODE_LUMINOUSINTENSITY = EU.e.INTENSITYMODE_LUMINOUSINTENSITY, UU.INTENSITYMODE_ILLUMINANCE = EU.e.INTENSITYMODE_ILLUMINANCE, UU.INTENSITYMODE_LUMINANCE = EU.e.INTENSITYMODE_LUMINANCE, UU.LIGHTTYPEID_POINTLIGHT = EU.e.LIGHTTYPEID_POINTLIGHT, UU.LIGHTTYPEID_DIRECTIONALLIGHT = EU.e.LIGHTTYPEID_DIRECTIONALLIGHT, UU.LIGHTTYPEID_SPOTLIGHT = EU.e.LIGHTTYPEID_SPOTLIGHT, UU.LIGHTTYPEID_HEMISPHERICLIGHT = EU.e.LIGHTTYPEID_HEMISPHERICLIGHT, UU.LIGHTTYPEID_RECT_AREALIGHT = EU.e.LIGHTTYPEID_RECT_AREALIGHT, UU
+    })()
+  },
+  41314: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => YU
+    });
+    var cU = zU(41113),
+      yU = zU(37819),
+      QU = zU(41121),
+      AU = zU(37846),
+      FU = zU(37841),
+      oU = zU(40989),
+      DU = zU(41134);
+    class EU {
+      constructor() {
+        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new AU.e, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new AU.e, this._inheritVisibility = !1, this._isVisible = !0
       }
-      parse(MM) {
-        const rM = MM.inputsmgr;
-        if (rM) {
-          this.clear();
-          for (const MM in rM) {
-            const iM = aM[MM];
-            if (iM) {
-              const OM = rM[MM],
-                jM = SM.b.Parse((() => new iM), OM, null);
-              this.add(jM)
+    }
+    let YU = (() => {
+      var UU;
+      let XU, zU, YU, NU, IU, pU = [],
+        aU = [],
+        tU = [],
+        gU = [],
+        kU = [],
+        GU = [],
+        BU = [],
+        ZU = [],
+        RU = [],
+        PU = [];
+      return UU = class {
+        static AddNodeConstructor(UU, XU) {
+          this._NodeConstructors[UU] = XU
+        }
+        static Construct(UU, XU, zU, cU) {
+          const yU = this._NodeConstructors[UU];
+          return yU ? yU(XU, zU, cU) : null
+        }
+        set accessibilityTag(UU) {
+          this._accessibilityTag = UU, this.onAccessibilityTagChangedObservable.notifyObservers(UU)
+        }
+        get accessibilityTag() {
+          return this._accessibilityTag
+        }
+        get doNotSerialize() {
+          return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
+        }
+        set doNotSerialize(UU) {
+          this._nodeDataStorage._doNotSerialize = UU
+        }
+        oR() {
+          return this._nodeDataStorage._isDisposed
+        }
+        set parent(UU) {
+          if (this._parentNode === UU) return;
+          const XU = this._parentNode;
+          if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
+            const XU = this._parentNode._children.indexOf(this); - 1 !== XU && this._parentNode._children.splice(XU, 1), UU || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+          }
+          this._parentNode = UU, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), XU || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
+        }
+        get parent() {
+          return this._parentNode
+        }
+        get inheritVisibility() {
+          return this._nodeDataStorage._inheritVisibility
+        }
+        set inheritVisibility(UU) {
+          this._nodeDataStorage._inheritVisibility = UU
+        }
+        get isVisible() {
+          return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
+        }
+        set isVisible(UU) {
+          this._nodeDataStorage._isVisible = UU
+        }
+        _serializeAsParent(UU) {
+          UU.parentId = this.uniqueId
+        }
+        _addToSceneRootNodes() {
+          -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
+        }
+        _removeFromSceneRootNodes() {
+          if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
+            const UU = this._scene.rootNodes,
+              XU = UU.length - 1;
+            UU[this._nodeDataStorage._sceneRootNodesIndex] = UU[XU], UU[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
+          }
+        }
+        get animationPropertiesOverride() {
+          return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
+        }
+        set animationPropertiesOverride(UU) {
+          this._animationPropertiesOverride = UU
+        }
+        getClassName() {
+          return "Node"
+        }
+        set onDispose(UU) {
+          this._onDisposeObserver && this.bS.remove(this._onDisposeObserver), this._onDisposeObserver = this.bS.add(UU)
+        }
+        get onEnabledStateChangedObservable() {
+          return this._nodeDataStorage._onEnabledStateChangedObservable
+        }
+        get onEffectiveEnabledStateChangedObservable() {
+          var UU;
+          return (UU = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (UU._onEffectiveEnabledStateChangedObservable = new AU.e)
+        }
+        get onClonedObservable() {
+          return this._nodeDataStorage._onClonedObservable
+        }
+        constructor(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            zU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          this._isDirty = !1, this._nodeDataStorage = new EU, this.name = (0, cU.n)(this, pU, void 0), this.id = ((0, cU.n)(this, aU), (0, cU.n)(this, tU, void 0)), this.uniqueId = ((0, cU.n)(this, gU), (0, cU.n)(this, kU, void 0)), this.state = ((0, cU.n)(this, GU), (0, cU.n)(this, BU, "")), this.metadata = ((0, cU.n)(this, ZU), (0, cU.n)(this, RU, null)), this._internalMetadata = (0, cU.n)(this, PU), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new AU.e, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = yU.e.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.bS = new AU.e, this._onDisposeObserver = null, this._behaviors = new Array, this.name = UU, this.id = UU, this._scene = XU || FU.b.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), zU && this._addToSceneRootNodes()
+        }
+        nS() {
+          return this._scene
+        }
+        qp() {
+          return this._scene.qp()
+        }
+        addBehavior(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return -1 !== this._behaviors.indexOf(UU) || (UU.init(), this._scene.isLoading && !XU ? this._scene.onDataLoadedObservable.addOnce((() => {
+            this._behaviors.includes(UU) && UU.attach(this)
+          })) : UU.attach(this), this._behaviors.push(UU)), this
+        }
+        removeBehavior(UU) {
+          const XU = this._behaviors.indexOf(UU);
+          return -1 === XU || (this._behaviors.splice(XU, 1), UU.detach()), this
+        }
+        get behaviors() {
+          return this._behaviors
+        }
+        getBehaviorByName(UU) {
+          for (const XU of this._behaviors)
+            if (XU.name === UU) return XU;
+          return null
+        }
+        getWorldMatrix() {
+          return this._currentRenderId !== this._scene.getRenderId() && this.computeWorldMatrix(), this._worldMatrix
+        }
+        _getWorldMatrixDeterminant() {
+          return this._worldMatrixDeterminantIsDirty && (this._worldMatrixDeterminantIsDirty = !1, this._worldMatrixDeterminant = this._worldMatrix.determinant()), this._worldMatrixDeterminant
+        }
+        get worldMatrixFromCache() {
+          return this._worldMatrix
+        }
+        _initCache() {
+          this._cache = {}
+        }
+        updateCache(UU) {
+          !UU && this.isSynchronized() || this._updateCache()
+        }
+        _getActionManagerForTrigger(UU) {
+          return this.parent ? this.parent._getActionManagerForTrigger(UU, !1) : null
+        }
+        _updateCache(UU) {}
+        _isSynchronized() {
+          return !0
+        }
+        _markSyncedWithParent() {
+          this._parentNode && (this._parentUpdateId = this._parentNode._childUpdateId)
+        }
+        isSynchronizedWithParent() {
+          return !this._parentNode || !this._parentNode._isDirty && this._parentUpdateId === this._parentNode._childUpdateId && this._parentNode.isSynchronized()
+        }
+        isSynchronized() {
+          return !(this._parentNode && !this.isSynchronizedWithParent()) && this._isSynchronized()
+        }
+        isReady() {
+          return this._nodeDataStorage._isReady
+        }
+        OzU(UU) {
+          return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
+        }
+        isEnabled() {
+          return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
+        }
+        _hasEffectiveEnabledStateObservers() {
+          const UU = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
+          return !!UU && UU.hasObservers()
+        }
+        _syncParentEnabledState() {
+          const UU = this._hasEffectiveEnabledStateObservers(),
+            XU = UU ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
+            for (const zU of this._children) zU._syncParentEnabledState();
+          if (UU) {
+            const UU = this.isEnabled();
+            UU !== XU && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(UU)
+          }
+        }
+        YC(UU) {
+          if (this._nodeDataStorage._isEnabled === UU) return;
+          const XU = this._hasEffectiveEnabledStateObservers(),
+            zU = XU ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isEnabled = UU, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(UU), XU) {
+            const UU = this.isEnabled();
+            UU !== zU && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(UU)
+          }
+        }
+        isDescendantOf(UU) {
+          return !!this.parent && (this.parent === UU || this.parent.isDescendantOf(UU))
+        }
+        _getDescendants(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            zU = arguments.length > 2 ? arguments[2] : void 0;
+          if (this._children)
+            for (let cU = 0; cU < this._children.length; cU++) {
+              const yU = this._children[cU];
+              zU && !zU(yU) || UU.push(yU), XU || yU._getDescendants(UU, !1, zU)
+            }
+        }
+        getDescendants(UU, XU) {
+          const zU = [];
+          return this._getDescendants(zU, UU, XU), zU
+        }
+        getChildMeshes(UU, XU) {
+          const zU = [];
+          return this._getDescendants(zU, UU, (UU => (!XU || XU(UU)) && void 0 !== UU.cullingStrategy)), zU
+        }
+        getChildren(UU) {
+          let XU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this.getDescendants(XU, UU)
+        }
+        _setReady(UU) {
+          UU !== this._nodeDataStorage._isReady && (UU ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
+        }
+        getAnimationByName(UU) {
+          for (let XU = 0; XU < this.animations.length; XU++) {
+            const zU = this.animations[XU];
+            if (zU.name === UU) return zU
+          }
+          return null
+        }
+        createAnimationRange(XU, zU, cU) {
+          if (!this._ranges[XU]) {
+            this._ranges[XU] = UU._AnimationRangeFactory(XU, zU, cU);
+            for (let UU = 0, yU = this.animations.length; UU < yU; UU++) this.animations[UU] && this.animations[UU].createRange(XU, zU, cU)
+          }
+        }
+        deleteAnimationRange(UU) {
+          let XU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          for (let zU = 0, cU = this.animations.length; zU < cU; zU++) this.animations[zU] && this.animations[zU].deleteRange(UU, XU);
+          this._ranges[UU] = null
+        }
+        getAnimationRange(UU) {
+          return this._ranges[UU] || null
+        }
+        clone(XU, zU, cU) {
+          const yU = DU.b.Clone((() => new UU(XU, this.nS())), this);
+          if (zU && (yU.parent = zU), !cU) {
+            const UU = this.getDescendants(!0);
+            for (let zU = 0; zU < UU.length; zU++) {
+              const cU = UU[zU];
+              cU.clone(XU + "." + cU.name, yU)
             }
           }
-        } else
-          for (const iM in this.attached) {
-            const rM = aM[this.attached[iM].getClassName()];
-            if (rM) {
-              const OM = SM.b.Parse((() => new rM), MM, null);
-              this.remove(this.attached[iM]), this.add(OM)
+          return yU
+        }
+        getAnimationRanges() {
+          const UU = [];
+          let XU;
+          for (XU in this._ranges) UU.push(this._ranges[XU]);
+          return UU
+        }
+        beginAnimation(UU, XU, zU, cU) {
+          const yU = this.getAnimationRange(UU);
+          return yU ? this._scene.beginAnimation(this, yU.from, yU.to, XU, zU, cU) : null
+        }
+        serializeAnimationRanges() {
+          const UU = [];
+          for (const XU in this._ranges) {
+            const zU = this._ranges[XU];
+            if (!zU) continue;
+            const cU = {};
+            cU.name = XU, cU.from = zU.from, cU.to = zU.to, UU.push(cU)
+          }
+          return UU
+        }
+        computeWorldMatrix(UU) {
+          return this._worldMatrix || (this._worldMatrix = yU.e.Identity()), this._worldMatrix
+        }
+        dispose(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._nodeDataStorage._isDisposed = !0, !UU) {
+            const zU = this.getDescendants(!0);
+            for (const cU of zU) cU.dispose(UU, XU)
+          }
+          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.bS.notifyObservers(this), this.bS.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
+          for (const zU of this._behaviors) zU.detach();
+          this._behaviors.length = 0, this.metadata = null
+        }
+        static ParseAnimationRanges(UU, XU, zU) {
+          if (XU.Qt)
+            for (let cU = 0; cU < XU.Qt.length; cU++) {
+              const zU = XU.Qt[cU];
+              UU.createAnimationRange(zU.name, zU.from, zU.to)
+            }
+        }
+        getHierarchyBoundingVectors() {
+          let UU, XU, zU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            cU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          this.nS().incrementRenderId(), this.computeWorldMatrix(!0);
+          const QU = this;
+          if (QU.gM && QU.uB) {
+            const zU = QU.gM();
+            UU = zU.boundingBox.minimumWorld.clone(), XU = zU.boundingBox.maximumWorld.clone()
+          } else UU = new yU.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), XU = new yU.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+          if (zU) {
+            const zU = this.getDescendants(!1);
+            for (const QU of zU) {
+              const zU = QU;
+              if (zU.computeWorldMatrix(!0), cU && !cU(zU)) continue;
+              if (!zU.gM || 0 === zU.getTotalVertices()) continue;
+              const AU = zU.gM().boundingBox,
+                FU = AU.minimumWorld,
+                oU = AU.maximumWorld;
+              yU.q.CheckExtends(FU, UU, XU), yU.q.CheckExtends(oU, UU, XU)
             }
           }
-      }
-    }
-  },
-  42241: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => EM
-    });
-    var OM = iM(41099),
-      SM = iM(41105),
-      jM = iM(41003),
-      aM = iM(38040),
-      PM = iM(41091),
-      nM = iM(41560),
-      QM = iM(38085),
-      zM = iM(38068),
-      LM = iM(41121),
-      mM = iM(40939),
-      HM = iM(39711),
-      hM = iM(41145),
-      JM = iM(38885),
-      dM = iM(41186);
-    var yM = iM(41005);
-    let lM = !1;
-    let EM = (() => {
-        var MM;
-        let rM, iM, QM, EM, UM, GM, CM, eM, bM, wM = PM.c,
-          tM = [],
-          gM = [],
-          uM = [],
-          RM = [],
-          pM = [],
-          WM = [],
-          sM = [],
-          DM = [],
-          kM = [],
-          ZM = [],
-          oM = [],
-          fM = [],
-          YM = [],
-          NM = [],
-          AM = [];
-        return MM = class extends wM {
-          set boundingBoxSize(MM) {
-            if (this._boundingBoxSize && this._boundingBoxSize.equals(MM)) return;
-            this._boundingBoxSize = MM;
-            const rM = this.Hk();
-            rM && rM.markAllMaterialsAsDirty(1)
+          return {
+            min: UU,
+            max: XU
           }
-          get boundingBoxSize() {
-            return this._boundingBoxSize
-          }
-          set rotationY(MM) {
-            this._rotationY = MM, this.setReflectionTextureMatrix(aM.d.RotationY(this._rotationY))
-          }
-          get rotationY() {
-            return this._rotationY
-          }
-          get noMipmap() {
-            return this._noMipmap
-          }
-          get forcedExtension() {
-            return this._forcedExtension
-          }
-          constructor(MM, rM) {
-            let iM, SM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              jM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              PM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              QM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              LM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              EM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
-              UM = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              GM = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-              CM = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-              eM = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
-              bM = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
-              wM = arguments.length > 13 ? arguments[13] : void 0,
-              xM = arguments.length > 14 ? arguments[14] : void 0;
-            super(rM), this._delayedOnLoad = (0, OM.m)(this, tM), this.onLoadObservable = new zM.d, this.url = (0, OM.m)(this, gM, void 0), this.boundingBoxPosition = ((0, OM.m)(this, uM), (0, OM.m)(this, RM, aM.q.Zero())), this._boundingBoxSize = (0, OM.m)(this, pM), this._rotationY = 0, this._files = (0, OM.m)(this, WM, null), this._forcedExtension = ((0, OM.m)(this, sM), (0, OM.m)(this, DM, null)), this._extensions = ((0, OM.m)(this, kM), (0, OM.m)(this, ZM, null)), this._textureMatrix = ((0, OM.m)(this, oM), (0, OM.m)(this, fM, void 0)), this._textureMatrixRefraction = ((0, OM.m)(this, YM), (0, OM.m)(this, NM, new aM.d)), this._format = (0, OM.m)(this, AM), this._buffer = null, lM || (lM = !0, yM.d.prototype._partialLoadFile = function(MM, rM, iM, OM) {
-              let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-              this._loadFile(MM, (MM => {
-                iM[rM] = MM, iM._internalCount++, 6 === iM._internalCount && OM(iM)
-              }), void 0, void 0, !0, ((MM, rM) => {
-                SM && MM && SM(MM.status + " " + MM.statusText, rM)
-              }))
-            }, yM.d.prototype._cascadeLoadFiles = function(MM, rM, iM) {
-              let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-              const SM = [];
-              SM._internalCount = 0;
-              for (let jM = 0; jM < 6; jM++) this._partialLoadFile(iM[jM], jM, SM, rM, OM)
-            }, yM.d.prototype._cascadeLoadImgs = function(MM, rM, iM, OM) {
-              let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                jM = arguments.length > 5 ? arguments[5] : void 0;
-              const aM = [];
-              aM._internalCount = 0;
-              for (let PM = 0; PM < 6; PM++) this._partialLoadImg(OM[PM], PM, aM, MM, rM, iM, SM, jM)
-            }, yM.d.prototype._partialLoadImg = function(MM, rM, iM, OM, SM, jM) {
-              let aM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-                PM = arguments.length > 7 ? arguments[7] : void 0;
-              const nM = (0, JM.d)();
-              (0, hM.p)(MM, (MM => {
-                iM[rM] = MM, iM._internalCount++, OM && OM.removePendingData(nM), 6 === iM._internalCount && jM && jM(SM, iM)
-              }), ((MM, rM) => {
-                OM && OM.removePendingData(nM), aM && aM(MM, rM)
-              }), OM ? OM.offlineProvider : null, PM), OM && OM.addPendingData(nM)
-            }, yM.d.prototype.createCubeTextureBase = function(MM, rM, iM, OM) {
-              let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-                aM = arguments.length > 6 ? arguments[6] : void 0,
-                PM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-                nM = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-                QM = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-                zM = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-                LM = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-                hM = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
-                JM = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
-                yM = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
-                lM = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
-              const EM = LM || new mM.c(this, 7);
-              EM.isCube = !0, EM.url = MM, EM.generateMipMaps = !OM, EM._lodGenerationScale = QM, EM._lodGenerationOffset = zM, EM._useSRGBBuffer = !!yM && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!OM), EM !== LM && (EM.label = MM.substring(0, 60)), this._doNotHandleContextLost || (EM._extension = PM, EM._files = iM, EM._buffer = lM);
-              const UM = MM;
-              this._transformTextureUrl && !LM && (MM = this._transformTextureUrl(MM));
-              const GM = PM ?? function(MM) {
-                  const rM = MM.split("?")[0],
-                    iM = rM.lastIndexOf(".");
-                  return iM > -1 ? rM.substring(iM).toLowerCase() : ""
-                }(MM),
-                CM = (0, dM.e)(GM),
-                eM = (MM, rM) => {
-                  EM.dispose(), jM ? jM(MM, rM) : MM && HM.e.Warn(MM)
-                },
-                bM = (jM, LM) => {
-                  MM === UM ? jM && eM(jM.status + " " + jM.statusText, LM) : (HM.e.Warn(`Failed to load ${MM}, falling back to the ${UM}`), this.createCubeTextureBase(UM, rM, iM, !!OM, SM, eM, aM, PM, nM, QM, zM, EM, hM, JM, yM, lM))
-                };
-              if (CM) CM.then((OM => {
-                const jM = MM => {
-                  hM && hM(EM, MM), OM.loadCubeData(MM, EM, nM, SM, ((MM, rM) => {
-                    eM(MM, rM)
-                  }))
-                };
-                lM ? jM(lM) : iM && 6 === iM.length ? OM.supportCascades ? this._cascadeLoadFiles(rM, (MM => jM(MM.map((MM => new Uint8Array(MM))))), iM, eM) : eM("Textures type does not support cascades.") : this._loadFile(MM, (MM => jM(new Uint8Array(MM))), void 0, rM ? rM.offlineProvider || null : void 0, !0, bM)
-              }));
-              else {
-                if (!iM || 0 === iM.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
-                this._cascadeLoadImgs(rM, EM, ((MM, rM) => {
-                  JM && JM(MM, rM)
-                }), iM, eM)
-              }
-              return this._internalTexturesCache.push(EM), EM
-            }), this.name = MM, this.url = MM, this._noMipmap = jM, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = aM.d.Identity(), this.coordinatesMode = nM.h.CUBIC_MODE;
-            let vM = null;
-            null === SM || Array.isArray(SM) ? (this._noMipmap = jM, this._format = EM, this._createPolynomials = CM, iM = SM, this._loaderOptions = wM, this._useSRGBBuffer = xM, this._lodScale = eM, this._lodOffset = bM) : (iM = SM.extensions ?? null, this._noMipmap = SM.noMipmap ?? !1, PM = SM.files ?? null, vM = SM.buffer ?? null, this._format = SM.format ?? 5, UM = SM.prefiltered ?? !1, GM = SM.forcedExtension ?? null, this._createPolynomials = SM.createPolynomials ?? !1, this._lodScale = SM.lodScale ?? .8, this._lodOffset = SM.lodOffset ?? 0, this._loaderOptions = SM.loaderOptions, this._useSRGBBuffer = SM.useSRGBBuffer, this._sphericalPolynomialTargetSize = SM.sphericalPolynomialTargetSize ?? 0, QM = SM.onLoad ?? null, LM = SM.onError ?? null), (MM || PM) && this.updateURL(MM, GM, QM, UM, LM, iM, this.Hk()?.useDelayedTextureLoading, PM, vM)
-          }
-          getClassName() {
-            return "CubeTexture"
-          }
-          updateURL(MM) {
-            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              aM = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-              PM = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              nM = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
-            this.name && !this.name.startsWith("data:") || (this.name = MM), this.url = MM, rM && (this._forcedExtension = rM);
-            const QM = MM.lastIndexOf("."),
-              zM = rM || (QM > -1 ? MM.substring(QM).toLowerCase() : ""),
-              LM = 0 === zM.indexOf(".dds"),
-              mM = 0 === zM.indexOf(".env"),
-              HM = 0 === zM.indexOf(".basis");
-            if (mM ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = OM, OM && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), PM) this._files = PM;
-            else if (HM || mM || LM || jM || (jM = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, jM) {
-              for (let rM = 0; rM < jM.length; rM++) this._files.push(MM + jM[rM]);
-              this._extensions = jM
+        }
+      }, (() => {
+        const yU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        XU = [(0, QU.I)()], zU = [(0, QU.I)()], YU = [(0, QU.I)()], NU = [(0, QU.I)()], IU = [(0, QU.I)()], (0, cU.j)(null, null, XU, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "name" in UU,
+            get: UU => UU.name,
+            set: (UU, XU) => {
+              UU.name = XU
             }
-            this._buffer = nM, aM ? (this.delayLoadState = 4, this._delayedOnLoad = iM, this._delayedOnError = SM) : this._loadTexture(iM, SM)
-          }
-          delayLoad(MM) {
-            4 === this.delayLoadState && (MM && (this._forcedExtension = MM), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
-          }
-          getReflectionTextureMatrix() {
-            return this._textureMatrix
-          }
-          setReflectionTextureMatrix(MM) {
-            if (MM.updateFlag === this._textureMatrix.updateFlag) return;
-            if (MM.isIdentity() !== this._textureMatrix.isIdentity() && this.Hk()?.markAllMaterialsAsDirty(1, (MM => -1 !== MM.getActiveTextures().indexOf(this))), this._textureMatrix = MM, !this.Hk()?.useRightHandedSystem) return;
-            const rM = aM.l.sh[0],
-              iM = aM.l.Quaternion[0],
-              OM = aM.l.sh[1];
-            this._textureMatrix.decompose(rM, iM, OM), iM.z *= -1, iM.w *= -1, aM.d.ComposeToRef(rM, iM, OM, this._textureMatrixRefraction)
-          }
-          getRefractionTextureMatrix() {
-            return this.Hk()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
-          }
-          _loadTexture() {
-            let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-              rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            const iM = this.Hk(),
-              OM = this._texture;
-            this._texture = this._getFromCache(this.url, this._noMipmap, void 0, void 0, this._useSRGBBuffer, this.isCube);
-            const SM = () => {
-                this.onLoadObservable.notifyObservers(this), OM && (OM.dispose(), this.Hk()?.markAllMaterialsAsDirty(1)), MM && MM()
-              },
-              aM = (MM, iM) => {
-                this._loadingError = !0, this._errorObject = {
-                  message: MM,
-                  exception: iM
-                }, rM && rM(MM, iM), nM.h.OnTextureLoadErrorObservable.notifyObservers(this)
-              };
-            this._texture ? this._texture.isReady ? jM.c.SetImmediate((() => SM())) : this._texture.onLoadedObservable.add((() => SM())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, iM, this._lodScale, this._lodOffset, MM, aM, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, iM, this._files, this._noMipmap, MM, aM, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
-          }
-          clone() {
-            let rM = 0;
-            const iM = this.irradianceTexture,
-              OM = LM.b.Clone((() => {
-                const iM = new MM(this.url, this.Hk() || this._getEngine(), this._extensions, this._noMipmap, this._files);
-                return rM = iM.uniqueId, iM
-              }), this);
-            return OM.uniqueId = rM, iM && !this.irradianceTexture && (this.irradianceTexture = iM), OM
-          }
-        }, (() => {
-          const jM = "function" === typeof Symbol && Symbol.metadata ? Object.create(wM[Symbol.metadata] ?? null) : void 0;
-          rM = [(0, SM.L)()], iM = [(0, SM.J)()], QM = [(0, SM.J)()], EM = [(0, SM.L)("rotationY")], UM = [(0, SM.L)("files")], GM = [(0, SM.L)("forcedExtension")], CM = [(0, SM.L)("extensions")], eM = [(0, SM.u)("textureMatrix")], bM = [(0, SM.u)("textureMatrixRefraction")], (0, OM.i)(MM, null, QM, {
-            kind: "getter",
-            name: "boundingBoxSize",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "boundingBoxSize" in MM,
-              get: MM => MM.boundingBoxSize
-            },
-            metadata: jM
-          }, null, tM), (0, OM.i)(MM, null, EM, {
-            kind: "setter",
-            name: "rotationY",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "rotationY" in MM,
-              set: (MM, rM) => {
-                MM.rotationY = rM
-              }
-            },
-            metadata: jM
-          }, null, tM), (0, OM.i)(null, null, rM, {
-            kind: "field",
-            name: "url",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "url" in MM,
-              get: MM => MM.url,
-              set: (MM, rM) => {
-                MM.url = rM
-              }
-            },
-            metadata: jM
-          }, gM, uM), (0, OM.i)(null, null, iM, {
-            kind: "field",
-            name: "boundingBoxPosition",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "boundingBoxPosition" in MM,
-              get: MM => MM.boundingBoxPosition,
-              set: (MM, rM) => {
-                MM.boundingBoxPosition = rM
-              }
-            },
-            metadata: jM
-          }, RM, pM), (0, OM.i)(null, null, UM, {
-            kind: "field",
-            name: "_files",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "_files" in MM,
-              get: MM => MM._files,
-              set: (MM, rM) => {
-                MM._files = rM
-              }
-            },
-            metadata: jM
-          }, WM, sM), (0, OM.i)(null, null, GM, {
-            kind: "field",
-            name: "_forcedExtension",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "_forcedExtension" in MM,
-              get: MM => MM._forcedExtension,
-              set: (MM, rM) => {
-                MM._forcedExtension = rM
-              }
-            },
-            metadata: jM
-          }, DM, kM), (0, OM.i)(null, null, CM, {
-            kind: "field",
-            name: "_extensions",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "_extensions" in MM,
-              get: MM => MM._extensions,
-              set: (MM, rM) => {
-                MM._extensions = rM
-              }
-            },
-            metadata: jM
-          }, ZM, oM), (0, OM.i)(null, null, eM, {
-            kind: "field",
-            name: "_textureMatrix",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "_textureMatrix" in MM,
-              get: MM => MM._textureMatrix,
-              set: (MM, rM) => {
-                MM._textureMatrix = rM
-              }
-            },
-            metadata: jM
-          }, fM, YM), (0, OM.i)(null, null, bM, {
-            kind: "field",
-            name: "_textureMatrixRefraction",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "_textureMatrixRefraction" in MM,
-              get: MM => MM._textureMatrixRefraction,
-              set: (MM, rM) => {
-                MM._textureMatrixRefraction = rM
-              }
-            },
-            metadata: jM
-          }, NM, AM), jM && Object.defineProperty(MM, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: jM
-          })
-        })(), MM
-      })(),
-      UM = !1;
-
-    function GM(MM, rM, iM) {
-      let OM = "";
-      for (const SM of MM) OM += SM;
-      return new EM(OM, rM, null, iM, MM)
-    }
-
-    function CM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        OM = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const SM = rM.useDelayedTextureLoading;
-      rM.useDelayedTextureLoading = !1;
-      const jM = new EM(MM, rM, null, !1, null, null, null, void 0, !0, iM, OM);
-      return rM.useDelayedTextureLoading = SM, jM
-    }
-
-    function eM(MM, rM, iM) {
-      const OM = LM.b.Parse((() => {
-        let OM = !1;
-        return MM.prefiltered && (OM = MM.prefiltered), new EM(iM + (MM.url ?? MM.name), rM, MM.extensions, !1, MM.files || null, null, null, void 0, OM, MM.forcedExtension)
-      }), MM, rM);
-      if (MM.boundingBoxPosition && (OM.boundingBoxPosition = aM.q.FromArray(MM.boundingBoxPosition)), MM.boundingBoxSize && (OM.boundingBoxSize = aM.q.FromArray(MM.boundingBoxSize)), MM.animations)
-        for (let SM = 0; SM < MM.animations.length; SM++) {
-          const rM = MM.animations[SM],
-            iM = (0, QM.b)("BABYLON.Animation");
-          iM && OM.animations.push(iM.Parse(rM))
-        }
-      return OM
-    }
-    UM || (UM = !0, EM.CreateFromImages = GM, EM.CreateFromPrefilteredData = CM, EM.Parse = eM, nM.h._CubeTextureParser = eM, (0, QM.e)("BABYLON.CubeTexture", EM))
-  },
-  42283: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM
-    });
-    var OM = iM(39711),
-      SM = iM(41560),
-      jM = iM(41034),
-      aM = iM(40949),
-      PM = iM(40939);
-    let nM = !1;
-    class QM extends SM.h {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          QM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          zM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
-          LM = arguments.length > 6 ? arguments[6] : void 0;
-        const mM = !iM || iM._isScene;
-        super(null, mM ? iM : iM?.YJ, mM ? !OM : iM, LM, QM, void 0, void 0, void 0, void 0, zM), nM || (nM = !0, aM.ThinEngine.prototype.createDynamicTexture = function(MM, rM, iM, OM) {
-          const SM = new PM.c(this, 4);
-          return SM.baseWidth = MM, SM.baseHeight = rM, iM && (MM = this.needPOTTextures ? (0, jM.e)(MM, this._caps.maxTextureSize) : MM, rM = this.needPOTTextures ? (0, jM.e)(rM, this._caps.maxTextureSize) : rM), SM.width = MM, SM.height = rM, SM.isReady = !1, SM.generateMipMaps = iM, SM.samplingMode = OM, this.updateTextureSamplingMode(OM, SM), this._internalTexturesCache.push(SM), SM
-        }, aM.ThinEngine.prototype.updateDynamicTexture = function(MM, rM, iM) {
-          let OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            SM = arguments.length > 4 ? arguments[4] : void 0,
-            jM = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-          if (!MM) return;
-          const aM = this._gl,
-            PM = aM.TEXTURE_2D,
-            nM = this._bindTextureDirectly(PM, MM, !0, jM);
-          this._unpackFlipY(void 0 === iM ? MM.invertY : iM), OM && aM.pixelStorei(aM.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
-          const QM = this._getWebGLTextureType(MM.type),
-            zM = this._getInternalFormat(SM || MM.format),
-            LM = this._getRGBABufferInternalSizedFormat(MM.type, zM);
-          aM.texImage2D(PM, 0, LM, zM, QM, rM), MM.generateMipMaps && aM.generateMipmap(PM), nM || this._bindTextureDirectly(PM, null), OM && aM.pixelStorei(aM.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), SM && (MM.format = SM), MM._dynamicTextureSource = rM, MM._premulAlpha = OM, MM.invertY = iM || !1, MM.isReady = !0
-        }), this.name = MM, this.wrapU = SM.h.CLAMP_ADDRESSMODE, this.wrapV = SM.h.CLAMP_ADDRESSMODE, this._generateMipMaps = OM;
-        const HM = this._getEngine();
-        if (!HM) return;
-        if (rM.getContext) this._canvas = rM, this._ownCanvas = !1, this._texture = HM.createDynamicTexture(this._canvas.width, this._canvas.height, OM, QM);
-        else {
-          this._canvas = HM.createCanvas(1, 1), this._ownCanvas = !0;
-          const MM = rM;
-          MM.width || 0 === MM.width ? this._texture = HM.createDynamicTexture(MM.width, MM.height, OM, QM) : this._texture = HM.createDynamicTexture(rM, rM, OM, QM)
-        }
-        const hM = this.getSize();
-        this._canvas.width !== hM.width && (this._canvas.width = hM.width), this._canvas.height !== hM.height && (this._canvas.height = hM.height), this._context = this._canvas.getContext("2d")
-      }
-      getClassName() {
-        return "DynamicTexture"
-      }
-      get canRescale() {
-        return !0
-      }
-      _recreate(MM) {
-        this._canvas.width = MM.width, this._canvas.height = MM.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(MM.width, MM.height, this._generateMipMaps, this.samplingMode)
-      }
-      scale(MM) {
-        const rM = this.getSize();
-        rM.width *= MM, rM.height *= MM, this._recreate(rM)
-      }
-      scaleTo(MM, rM) {
-        const iM = this.getSize();
-        iM.width = MM, iM.height = rM, this._recreate(iM)
-      }
-      getContext() {
-        return this._context
-      }
-      clear(MM) {
-        const rM = this.getSize();
-        MM && (this._context.fillStyle = MM), this._context.clearRect(0, 0, rM.width, rM.height)
-      }
-      update(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === MM || MM, rM, this._format || void 0, void 0, iM)
-      }
-      drawText(MM, rM, iM, OM, SM, jM, aM) {
-        let PM = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
-        const nM = this.getSize();
-        if (jM && (this._context.fillStyle = jM, this._context.fillRect(0, 0, nM.width, nM.height)), this._context.font = OM, null === rM || void 0 === rM) {
-          const iM = this._context.measureText(MM);
-          rM = (nM.width - iM.width) / 2
-        }
-        if (null === iM || void 0 === iM) {
-          const MM = parseInt(OM.replace(/\D/g, ""));
-          iM = nM.height / 2 + MM / 3.65
-        }
-        this._context.fillStyle = SM || "", this._context.fillText(MM, rM, iM), PM && this.update(aM)
-      }
-      dispose() {
-        super.dispose(), this._ownCanvas && this._canvas?.remove?.(), this._canvas = null, this._context = null
-      }
-      clone() {
-        const MM = this.Hk();
-        if (!MM) return this;
-        const rM = this.getSize(),
-          iM = new QM(this.name, rM, MM, this._generateMipMaps);
-        return iM.hasAlpha = this.hasAlpha, iM.level = this.level, iM.wrapU = this.wrapU, iM.wrapV = this.wrapV, iM
-      }
-      serialize() {
-        const MM = this.Hk();
-        MM && !MM.isReady() && OM.e.Warn("The scene must be ready before serializing the dynamic texture");
-        const rM = super.serialize();
-        return QM._IsCanvasElement(this._canvas) && (rM.base64String = this._canvas.toDataURL()), rM.invertY = this._invertY, rM.samplingMode = this.samplingMode, rM
-      }
-      static _IsCanvasElement(MM) {
-        return void 0 !== MM.toDataURL
-      }
-      _rebuild() {
-        this.update()
-      }
-    }
-  },
-  42260: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM
-    });
-    var OM = iM(41560);
-    class SM extends OM.h {
-      get depth() {
-        return this._depth
-      }
-      constructor(MM, rM, iM, SM, jM, aM) {
-        let PM = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          nM = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-          QM = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : OM.h.TRILINEAR_SAMPLINGMODE,
-          zM = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-          LM = arguments.length > 10 ? arguments[10] : void 0,
-          mM = arguments.length > 11 ? arguments[11] : void 0;
-        super(null, aM, !PM, nM), this.format = jM, this._texture = aM.ph().createRawTexture2DArray(MM, rM, iM, SM, jM, PM, nM, QM, null, zM, LM ?? 0, mM), this._depth = SM, this.is2DArray = !0
-      }
-      update(MM) {
-        this.updateMipLevel(MM, 0)
-      }
-      updateMipLevel(MM, rM) {
-        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, MM, this._texture.format, this._texture.invertY, null, this._texture.type, rM)
-      }
-      static CreateRGBATexture(MM, rM, iM, OM, jM) {
-        return new SM(MM, rM, iM, OM, 5, jM, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
-      }
-    }
-  },
-  42256: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM.b
-    });
-    var OM = iM(41463);
-    (0, OM.f)()
-  },
-  41190: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM.d
-    });
-    var OM = iM(41196);
-    (0, OM.b)()
+          },
+          metadata: yU
+        }, pU, aU), (0, cU.j)(null, null, zU, {
+          kind: "field",
+          name: "id",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "id" in UU,
+            get: UU => UU.id,
+            set: (UU, XU) => {
+              UU.id = XU
+            }
+          },
+          metadata: yU
+        }, tU, gU), (0, cU.j)(null, null, YU, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "uniqueId" in UU,
+            get: UU => UU.uniqueId,
+            set: (UU, XU) => {
+              UU.uniqueId = XU
+            }
+          },
+          metadata: yU
+        }, kU, GU), (0, cU.j)(null, null, NU, {
+          kind: "field",
+          name: "state",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "state" in UU,
+            get: UU => UU.state,
+            set: (UU, XU) => {
+              UU.state = XU
+            }
+          },
+          metadata: yU
+        }, BU, ZU), (0, cU.j)(null, null, IU, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "metadata" in UU,
+            get: UU => UU.metadata,
+            set: (UU, XU) => {
+              UU.metadata = XU
+            }
+          },
+          metadata: yU
+        }, RU, PU), yU && Object.defineProperty(UU, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: yU
+        })
+      })(), UU._AnimationRangeFactory = (UU, XU, zU) => {
+        throw (0, oU.m)("AnimationRange")
+      }, UU._NodeConstructors = {}, UU
+    })()
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

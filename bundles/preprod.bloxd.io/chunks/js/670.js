@@ -1,79 +1,19 @@
 export const id = 670;
 export const ids = [670];
 export const modules = {
-  64013: (MM, rM, iM) => {
-    iM.d(rM, {
-      createShadowTask: () => jM
+  64085: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      lod3DPixelShader: () => AU
     });
-    var OM = null;
-
-    function SM(MM) {
-      return OM?.get(MM)
-    }
-
-    function jM(MM, rM) {
-      const iM = new Set;
-      0;
-      const OM = {
-        name: "tL",
-        engine: MM,
-        YJ: rM,
-        _passes: [],
-        async _preload() {
-          const MM = [];
-          for (const iM of rM.lights) {
-            const rM = iM.shadowGenerator,
-              OM = rM ? SM(rM) : null;
-            rM?._preloadShadowTask && OM && MM.push(aM(rM, OM))
-          }
-          await Promise.all(MM)
-        },
-        record() {
-          OM._passes.length = 0;
-          for (const OM of rM.lights) {
-            const jM = OM.shadowGenerator,
-              aM = jM ? SM(jM) : null;
-            if (jM?._ensureShadowTaskState && aM && !jM._preloadPending) {
-              iM.add(jM);
-              const OM = jM._ensureShadowTaskState(MM, rM, aM),
-                SM = rM._renderableVersion;
-              OM._task.record(), OM._recordedVersion = SM
-            }
-          }
-        },
-        execute() {
-          let OM = 0;
-          for (const jM of rM.lights) {
-            const aM = jM.shadowGenerator,
-              PM = aM ? SM(aM) : null;
-            if (aM?._ensureShadowTaskState && aM._renderShadowMap && PM && !aM._preloadPending) {
-              iM.add(aM);
-              const SM = aM._shadowTaskState ?? null,
-                jM = aM._ensureShadowTaskState(MM, rM, PM);
-              if (jM !== SM || jM._recordedVersion !== rM._renderableVersion) {
-                const MM = rM._renderableVersion;
-                jM._task.record(), jM._recordedVersion = MM
-              }
-              OM += aM._renderShadowMap(MM, jM)
-            }
-          }
-          return OM
-        },
-        dispose() {
-          OM._passes.length = 0;
-          for (const MM of iM) {
-            const rM = MM._shadowTaskState;
-            rM && (rM._task.dispose(), MM._shadowTaskState = void 0)
-          }
-          iM.clear()
-        }
-      };
-      return OM
-    }
-    async function aM(MM, rM) {
-      MM._preloadPending = rM, await (MM._preloadShadowTask?.(rM)), MM._preloadPending === rM && (MM._preloadPending = void 0)
+    var cU = zU(40961);
+    const yU = "lod3DPixelShader",
+      QU = "precision highp float;precision highp sampler3D;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler3D textureSampler;uniform float lod;uniform float slice;uniform int gamma;void main(void)\n{ivec3 textureCoordinates=ivec3(vUV*vec2(textureSize(textureSampler,0).xy),int(slice));gl_FragColor=texelFetch(textureSampler,textureCoordinates,int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
+    cU.b.ShadersStore[yU] || (cU.b.ShadersStore[yU] = QU);
+    const AU = {
+      name: yU,
+      shader: QU
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

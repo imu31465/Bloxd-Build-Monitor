@@ -1,472 +1,289 @@
 export const id = 616;
-export const ids = [615, 616];
+export const ids = [616];
 export const modules = {
-  44422: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      _DDSTextureLoader: () => jM
+  44477: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      _BasisTextureLoader: () => kU
     });
-    var OM = iM(41086),
-      SM = iM(44406);
-    class jM {
-      constructor() {
-        this.supportCascades = !0
-      }
-      loadCubeData(MM, rM, iM, jM) {
-        const aM = rM.ph();
-        let PM, nM = !1,
-          QM = 1e3;
-        if (Array.isArray(MM))
-          for (let OM = 0; OM < MM.length; OM++) {
-            const iM = MM[OM];
-            PM = SM.DDSTools.GetDDSInfo(iM), rM.width = PM.width, rM.height = PM.height, nM = (PM.isRGB || PM.isLuminance || PM.mipmapCount > 1) && rM.generateMipMaps, aM._unpackFlipY(PM.isCompressed), SM.DDSTools.UploadDDSLevels(aM, rM, iM, PM, nM, 6, -1, OM), PM.isFourCC || 1 !== PM.mipmapCount ? QM = PM.mipmapCount - 1 : aM.generateMipMapsForCubemap(rM)
-          } else {
-            const jM = MM;
-            PM = SM.DDSTools.GetDDSInfo(jM), rM.width = PM.width, rM.height = PM.height, iM && (PM.sphericalPolynomial = new OM.c), nM = (PM.isRGB || PM.isLuminance || PM.mipmapCount > 1) && rM.generateMipMaps, aM._unpackFlipY(PM.isCompressed), SM.DDSTools.UploadDDSLevels(aM, rM, jM, PM, nM, 6), PM.isFourCC || 1 !== PM.mipmapCount ? QM = PM.mipmapCount - 1 : aM.generateMipMapsForCubemap(rM, !1)
-          }
-        aM._setCubeMapTextureParams(rM, nM, QM), rM.isReady = !0, rM.onLoadedObservable.notifyObservers(rM), rM.onLoadedObservable.clear(), jM && jM({
-          isDDS: !0,
-          width: rM.width,
-          info: PM,
-          data: MM,
-          texture: rM
-        })
-      }
-      loadData(MM, rM, iM) {
-        const OM = SM.DDSTools.GetDDSInfo(MM),
-          jM = (OM.isRGB || OM.isLuminance || OM.mipmapCount > 1) && rM.generateMipMaps && Math.max(OM.width, OM.height) >> OM.mipmapCount - 1 === 1;
-        iM(OM.width, OM.height, jM, OM.isFourCC, (() => {
-          SM.DDSTools.UploadDDSLevels(rM.ph(), rM, MM, OM, jM, 1)
-        }))
-      }
-    }
-  },
-  44412: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => QM
-    });
-    var OM = iM(38040),
-      SM = iM(38074),
-      jM = iM(41086),
-      aM = iM(38044),
-      PM = iM(38173);
-    class nM {
-      constructor(MM, rM, iM, OM) {
-        this.name = MM, this.worldAxisForNormal = rM, this.worldAxisForFileX = iM, this.worldAxisForFileY = OM
-      }
-    }
-    class QM {
-      static _NearestPow2Floor(MM) {
-        return MM <= 1 ? 1 : 1 << Math.floor(Math.log2(MM))
-      }
-      static ConvertCubeMapTextureToSphericalPolynomial(MM) {
-        if (!MM.isCube) return null;
-        MM.Hk()?.ph().flushFramebuffer();
-        const rM = MM.getSize().width,
-          iM = MM._sphericalPolynomialTargetSize,
-          OM = iM > 0 ? this._NearestPow2Floor(iM) : 0,
-          SM = !MM.noMipmap && !0 === MM._texture?.generateMipMaps,
-          jM = OM > 0 && OM < rM && SM,
-          aM = jM ? Math.max(0, Math.round(Math.log2(rM / OM))) : 0,
-          PM = jM ? Math.max(1, Math.floor(rM / Math.pow(2, aM))) : rM,
-          nM = MM.readPixels(0, aM, void 0, !1),
-          QM = MM.readPixels(1, aM, void 0, !1);
-        let zM, LM;
-        MM.isRenderTarget ? (zM = MM.readPixels(3, aM, void 0, !1), LM = MM.readPixels(2, aM, void 0, !1)) : (zM = MM.readPixels(2, aM, void 0, !1), LM = MM.readPixels(3, aM, void 0, !1));
-        const mM = MM.readPixels(4, aM, void 0, !1),
-          HM = MM.readPixels(5, aM, void 0, !1),
-          hM = MM.gammaSpace,
-          JM = OM > 0 && OM < rM && !jM;
-        return new Promise((MM => {
-          Promise.all([QM, nM, zM, LM, mM, HM]).then((iM => {
-            let [SM, jM, aM, nM, QM, zM] = iM, LM = PM;
-            if (JM) {
-              const MM = 4;
-              SM = this._DownsampleFace(SM, rM, OM, MM), jM = this._DownsampleFace(jM, rM, OM, MM), aM = this._DownsampleFace(aM, rM, OM, MM), nM = this._DownsampleFace(nM, rM, OM, MM), QM = this._DownsampleFace(QM, rM, OM, MM), zM = this._DownsampleFace(zM, rM, OM, MM), LM = OM
-            }
-            const mM = {
-              size: LM,
-              right: jM,
-              left: SM,
-              up: aM,
-              down: nM,
-              front: QM,
-              back: zM,
-              format: 5,
-              type: SM instanceof Float32Array ? 1 : 0,
-              gammaSpace: hM
-            };
-            MM(this.ConvertCubeMapToSphericalPolynomial(mM))
-          }))
-        }))
-      }
-      static _AreaElement(MM, rM) {
-        return Math.atan2(MM * rM, Math.sqrt(MM * MM + rM * rM + 1))
-      }
-      static _DownsampleFace(MM, rM, iM, OM) {
-        const SM = MM instanceof Float32Array ? MM : Float32Array.from(MM),
-          jM = iM * iM * OM,
-          aM = new Float32Array(jM),
-          PM = rM / iM,
-          nM = 1 / (PM * PM);
-        for (let zM = 0; zM < iM; zM++) {
-          const MM = Math.floor(zM * PM),
-            jM = Math.floor((zM + 1) * PM);
-          for (let QM = 0; QM < iM; QM++) {
-            const LM = Math.floor(QM * PM),
-              mM = Math.floor((QM + 1) * PM),
-              HM = (zM * iM + QM) * OM;
-            for (let iM = 0; iM < OM; iM++) {
-              let PM = 0;
-              for (let aM = MM; aM < jM; aM++)
-                for (let MM = LM; MM < mM; MM++) PM += SM[(aM * rM + MM) * OM + iM];
-              aM[HM + iM] = PM * nM
-            }
-          }
-        }
-        if (MM instanceof Float32Array) return aM;
-        const QM = new(0, MM.constructor)(jM);
-        for (let zM = 0; zM < jM; zM++) QM[zM] = aM[zM] + .5 | 0;
-        return QM
-      }
-      static ConvertCubeMapToSphericalPolynomial(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const iM = rM > 0 ? this._NearestPow2Floor(rM) : 0;
-        if (iM > 0 && MM.size > iM) {
-          const rM = 5 === MM.format ? 4 : 3,
-            OM = ["right", "left", "up", "down", "front", "back"],
-            SM = {};
-          for (const jM of OM) SM[jM] = this._DownsampleFace(MM[jM], MM.size, iM, rM);
-          MM = {
-            ...MM,
-            ...SM,
-            size: iM
-          }
-        }
-        const OM = new jM.b;
-        let nM = 0;
-        const QM = 2 / MM.size,
-          zM = QM,
-          LM = .5 * QM,
-          mM = LM - 1;
-        for (let jM = 0; jM < 6; jM++) {
-          const rM = this._FileFaces[jM],
-            iM = MM[rM.name];
-          let HM = mM;
-          const hM = 5 === MM.format ? 4 : 3;
-          for (let jM = 0; jM < MM.size; jM++) {
-            let JM = mM;
-            for (let zM = 0; zM < MM.size; zM++) {
-              const mM = rM.worldAxisForFileX.scale(JM).add(rM.worldAxisForFileY.scale(HM)).add(rM.worldAxisForNormal);
-              mM.normalize();
-              const dM = this._AreaElement(JM - LM, HM - LM) - this._AreaElement(JM - LM, HM + LM) - this._AreaElement(JM + LM, HM - LM) + this._AreaElement(JM + LM, HM + LM);
-              let yM = iM[jM * MM.size * hM + zM * hM + 0],
-                lM = iM[jM * MM.size * hM + zM * hM + 1],
-                EM = iM[jM * MM.size * hM + zM * hM + 2];
-              isNaN(yM) && (yM = 0), isNaN(lM) && (lM = 0), isNaN(EM) && (EM = 0), 0 === MM.type && (yM /= 255, lM /= 255, EM /= 255), MM.gammaSpace && (yM = Math.pow((0, SM.Clamp)(yM), aM.h), lM = Math.pow((0, SM.Clamp)(lM), aM.h), EM = Math.pow((0, SM.Clamp)(EM), aM.h));
-              const UM = this.MAX_HDRI_VALUE;
-              if (this.PRESERVE_CLAMPED_COLORS) {
-                const MM = Math.max(yM, lM, EM);
-                if (MM > UM) {
-                  const rM = UM / MM;
-                  yM *= rM, lM *= rM, EM *= rM
-                }
-              } else yM = (0, SM.Clamp)(yM, 0, UM), lM = (0, SM.Clamp)(lM, 0, UM), EM = (0, SM.Clamp)(EM, 0, UM);
-              const GM = new PM.d(yM, lM, EM);
-              OM.addLight(mM, GM, dM), nM += dM, JM += QM
-            }
-            HM += zM
-          }
-        }
-        const HM = 6 * (4 * Math.PI) / 6 / nM;
-        return OM.scaleInPlace(HM), OM.convertIncidentRadianceToIrradiance(), OM.convertIrradianceToLambertianRadiance(), jM.c.FromHarmonics(OM)
-      }
-    }
-    QM._FileFaces = [new nM("right", new OM.q(1, 0, 0), new OM.q(0, 0, -1), new OM.q(0, -1, 0)), new nM("left", new OM.q(-1, 0, 0), new OM.q(0, 0, 1), new OM.q(0, -1, 0)), new nM("up", new OM.q(0, 1, 0), new OM.q(1, 0, 0), new OM.q(0, 0, 1)), new nM("down", new OM.q(0, -1, 0), new OM.q(1, 0, 0), new OM.q(0, 0, -1)), new nM("front", new OM.q(0, 0, 1), new OM.q(1, 0, 0), new OM.q(0, -1, 0)), new nM("back", new OM.q(0, 0, -1), new OM.q(-1, 0, 0), new OM.q(0, -1, 0))], QM.MAX_HDRI_VALUE = 4096, QM.PRESERVE_CLAMPED_COLORS = !1
-  },
-  44406: (MM, rM, iM) => {
-    iM.d(rM, {
-      DDSTools: () => hM
-    });
-    var OM = iM(38074),
-      SM = iM(39711),
-      jM = iM(44412),
-      aM = iM(41176);
-    const PM = 131072,
-      nM = 131072;
+    var cU, yU = zU(41205),
+      QU = zU(39493),
+      AU = zU(41557),
+      FU = zU(40940);
 
-    function QM(MM) {
-      return MM.charCodeAt(0) + (MM.charCodeAt(1) << 8) + (MM.charCodeAt(2) << 16) + (MM.charCodeAt(3) << 24)
-    }
-    const zM = QM("DXT1"),
-      LM = QM("DXT3"),
-      mM = QM("DXT5"),
-      HM = QM("DX10");
-    class hM {
-      static GetDDSInfo(MM) {
-        const rM = new Int32Array(MM.buffer, MM.byteOffset, 31),
-          iM = new Int32Array(MM.buffer, MM.byteOffset, 35);
-        let OM = 1;
-        rM[2] & PM && (OM = Math.max(1, rM[7]));
-        const SM = rM[21],
-          jM = SM === HM ? iM[32] : 0;
-        let aM = 0;
-        switch (SM) {
-          case 113:
-            aM = 2;
-            break;
-          case 116:
-            aM = 1;
-            break;
-          case HM:
-            if (10 === jM) {
-              aM = 2;
-              break
-            }
-            if (2 === jM) {
-              aM = 1;
-              break
-            }
-        }
-        return {
-          width: rM[4],
-          height: rM[3],
-          mipmapCount: OM,
-          isFourCC: 4 === (4 & rM[20]),
-          isRGB: 64 === (64 & rM[20]),
-          isLuminance: (rM[20] & nM) === nM,
-          isCube: 512 === (512 & rM[28]),
-          isCompressed: SM === zM || SM === LM || SM === mM,
-          dxgiFormat: jM,
-          textureType: aM
-        }
-      }
-      static _GetHalfFloatAsFloatRGBAArrayBuffer(MM, rM, iM, OM, SM, jM) {
-        const PM = new Float32Array(OM),
-          nM = new Uint16Array(SM, iM);
-        let QM = 0;
-        for (let zM = 0; zM < rM; zM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 4 * (rM + zM * MM);
-            PM[QM] = (0, aM.c)(nM[iM]), PM[QM + 1] = (0, aM.c)(nM[iM + 1]), PM[QM + 2] = (0, aM.c)(nM[iM + 2]), hM.StoreLODInAlphaChannel ? PM[QM + 3] = jM : PM[QM + 3] = (0, aM.c)(nM[iM + 3]), QM += 4
-          }
-        return PM
-      }
-      static _GetHalfFloatRGBAArrayBuffer(MM, rM, iM, OM, SM, jM) {
-        if (hM.StoreLODInAlphaChannel) {
-          const PM = new Uint16Array(OM),
-            nM = new Uint16Array(SM, iM);
-          let QM = 0;
-          for (let iM = 0; iM < rM; iM++)
-            for (let rM = 0; rM < MM; rM++) {
-              const OM = 4 * (rM + iM * MM);
-              PM[QM] = nM[OM], PM[QM + 1] = nM[OM + 1], PM[QM + 2] = nM[OM + 2], PM[QM + 3] = (0, aM.g)(jM), QM += 4
-            }
-          return PM
-        }
-        return new Uint16Array(SM, iM, OM)
-      }
-      static _GetFloatRGBAArrayBuffer(MM, rM, iM, OM, SM, jM) {
-        if (hM.StoreLODInAlphaChannel) {
-          const aM = new Float32Array(OM),
-            PM = new Float32Array(SM, iM);
-          let nM = 0;
-          for (let iM = 0; iM < rM; iM++)
-            for (let rM = 0; rM < MM; rM++) {
-              const OM = 4 * (rM + iM * MM);
-              aM[nM] = PM[OM], aM[nM + 1] = PM[OM + 1], aM[nM + 2] = PM[OM + 2], aM[nM + 3] = jM, nM += 4
-            }
-          return aM
-        }
-        return new Float32Array(SM, iM, OM)
-      }
-      static _GetFloatAsHalfFloatRGBAArrayBuffer(MM, rM, iM, OM, SM, jM) {
-        const PM = new Uint16Array(OM),
-          nM = new Float32Array(SM, iM);
-        let QM = 0;
-        for (let zM = 0; zM < rM; zM++)
-          for (let rM = 0; rM < MM; rM++) PM[QM] = (0, aM.g)(nM[QM]), PM[QM + 1] = (0, aM.g)(nM[QM + 1]), PM[QM + 2] = (0, aM.g)(nM[QM + 2]), hM.StoreLODInAlphaChannel ? PM[QM + 3] = (0, aM.g)(jM) : PM[QM + 3] = (0, aM.g)(nM[QM + 3]), QM += 4;
-        return PM
-      }
-      static _GetFloatAsUIntRGBAArrayBuffer(MM, rM, iM, SM, jM, aM) {
-        const PM = new Uint8Array(SM),
-          nM = new Float32Array(jM, iM);
-        let QM = 0;
-        for (let zM = 0; zM < rM; zM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 4 * (rM + zM * MM);
-            PM[QM] = 255 * (0, OM.Clamp)(nM[iM]), PM[QM + 1] = 255 * (0, OM.Clamp)(nM[iM + 1]), PM[QM + 2] = 255 * (0, OM.Clamp)(nM[iM + 2]), hM.StoreLODInAlphaChannel ? PM[QM + 3] = aM : PM[QM + 3] = 255 * (0, OM.Clamp)(nM[iM + 3]), QM += 4
-          }
-        return PM
-      }
-      static _GetHalfFloatAsUIntRGBAArrayBuffer(MM, rM, iM, SM, jM, PM) {
-        const nM = new Uint8Array(SM),
-          QM = new Uint16Array(jM, iM);
-        let zM = 0;
-        for (let LM = 0; LM < rM; LM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 4 * (rM + LM * MM);
-            nM[zM] = 255 * (0, OM.Clamp)((0, aM.c)(QM[iM])), nM[zM + 1] = 255 * (0, OM.Clamp)((0, aM.c)(QM[iM + 1])), nM[zM + 2] = 255 * (0, OM.Clamp)((0, aM.c)(QM[iM + 2])), hM.StoreLODInAlphaChannel ? nM[zM + 3] = PM : nM[zM + 3] = 255 * (0, OM.Clamp)((0, aM.c)(QM[iM + 3])), zM += 4
-          }
-        return nM
-      }
-      static _GetRGBAArrayBuffer(MM, rM, iM, OM, SM, jM, aM, PM, nM) {
-        const QM = new Uint8Array(OM),
-          zM = new Uint8Array(SM, iM);
-        let LM = 0;
-        for (let mM = 0; mM < rM; mM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 4 * (rM + mM * MM);
-            QM[LM] = zM[iM + jM], QM[LM + 1] = zM[iM + aM], QM[LM + 2] = zM[iM + PM], QM[LM + 3] = zM[iM + nM], LM += 4
-          }
-        return QM
-      }
-      static _ExtractLongWordOrder(MM) {
-        return 0 === MM || 255 === MM || -16777216 === MM ? 0 : 1 + hM._ExtractLongWordOrder(MM >> 8)
-      }
-      static _GetRGBArrayBuffer(MM, rM, iM, OM, SM, jM, aM, PM) {
-        const nM = new Uint8Array(OM),
-          QM = new Uint8Array(SM, iM);
-        let zM = 0;
-        for (let LM = 0; LM < rM; LM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = 3 * (rM + LM * MM);
-            nM[zM] = QM[iM + jM], nM[zM + 1] = QM[iM + aM], nM[zM + 2] = QM[iM + PM], zM += 3
-          }
-        return nM
-      }
-      static _GetLuminanceArrayBuffer(MM, rM, iM, OM, SM) {
-        const jM = new Uint8Array(OM),
-          aM = new Uint8Array(SM, iM);
-        let PM = 0;
-        for (let nM = 0; nM < rM; nM++)
-          for (let rM = 0; rM < MM; rM++) {
-            const iM = rM + nM * MM;
-            jM[PM] = aM[iM], PM++
-          }
-        return jM
-      }
-      static UploadDDSLevels(MM, rM, iM, OM, aM, nM) {
-        let QM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
-          JM = arguments.length > 7 ? arguments[7] : void 0,
-          dM = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          yM = null;
-        OM.sphericalPolynomial && (yM = []);
-        const lM = !!MM.getCaps().s3tc;
-        rM.generateMipMaps = aM;
-        const EM = new Int32Array(iM.buffer, iM.byteOffset, 31);
-        let UM, GM, CM, eM, bM, wM, tM, gM = 0,
-          uM = 0,
-          RM = 1;
-        if (542327876 !== EM[0]) return void SM.e.Error("Invalid magic number in DDS header");
-        if (!OM.isFourCC && !OM.isRGB && !OM.isLuminance) return void SM.e.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
-        if (OM.isCompressed && !lM) return void SM.e.Error("Compressed textures are not supported on this platform.");
-        let pM = EM[22];
-        eM = EM[1] + 4;
-        let WM = !1;
-        if (OM.isFourCC) switch (UM = EM[21], UM) {
-          case zM:
-            RM = 8, uM = 33777;
-            break;
-          case LM:
-            RM = 16, uM = 33778;
-            break;
-          case mM:
-            RM = 16, uM = 33779;
-            break;
-          case 113:
-            WM = !0, pM = 64;
-            break;
-          case 116:
-            WM = !0, pM = 128;
-            break;
-          case HM: {
-            eM += 20;
-            let MM = !1;
-            switch (OM.dxgiFormat) {
-              case 10:
-                WM = !0, pM = 64, MM = !0;
-                break;
-              case 2:
-                WM = !0, pM = 128, MM = !0;
-                break;
-              case 88:
-                OM.isRGB = !0, OM.isFourCC = !1, pM = 32, MM = !0
-            }
-            if (MM) break
-          }
-          default:
-            return void SM.e.Error(["Unsupported FourCC code:", (sM = UM, String.fromCharCode(255 & sM, sM >> 8 & 255, sM >> 16 & 255, sM >> 24 & 255))])
-        }
-        var sM;
-        const DM = hM._ExtractLongWordOrder(EM[23]),
-          kM = hM._ExtractLongWordOrder(EM[24]),
-          ZM = hM._ExtractLongWordOrder(EM[25]),
-          oM = hM._ExtractLongWordOrder(EM[26]);
-        WM && (uM = MM._getRGBABufferInternalSizedFormat(OM.textureType)), wM = 1, EM[2] & PM && !1 !== aM && (wM = Math.max(1, EM[7]));
-        const fM = JM || 0,
-          YM = MM.getCaps();
-        for (let SM = fM; SM < nM; SM++) {
-          for (GM = EM[4], CM = EM[3], tM = 0; tM < wM; ++tM) {
-            if (-1 === QM || QM === tM) {
-              const jM = -1 === QM ? tM : 0;
-              if (!OM.isCompressed && OM.isFourCC) {
-                rM.format = 5, gM = GM * CM * 4;
-                let OM = null;
-                if (MM._badOS || MM._badDesktopOS || !YM.textureHalfFloat && !YM.textureFloat) 128 === pM ? (OM = hM._GetFloatAsUIntRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM), yM && 0 == jM && yM.push(hM._GetFloatRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM))) : 64 === pM && (OM = hM._GetHalfFloatAsUIntRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM), yM && 0 == jM && yM.push(hM._GetHalfFloatAsFloatRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM))), rM.type = 0;
-                else {
-                  const MM = YM.textureFloat && (dM && YM.textureFloatLinearFiltering || !dM),
-                    SM = YM.textureHalfFloat && (dM && YM.textureHalfFloatLinearFiltering || !dM),
-                    aM = (128 === pM || 64 === pM && !SM) && MM ? 1 : (64 === pM || 128 === pM && !MM) && SM ? 2 : 0;
-                  let PM, nM = null;
-                  if (128 === pM) switch (aM) {
-                    case 1:
-                      PM = hM._GetFloatRGBAArrayBuffer, nM = null;
-                      break;
-                    case 2:
-                      PM = hM._GetFloatAsHalfFloatRGBAArrayBuffer, nM = hM._GetFloatRGBAArrayBuffer;
-                      break;
-                    case 0:
-                      PM = hM._GetFloatAsUIntRGBAArrayBuffer, nM = hM._GetFloatRGBAArrayBuffer
-                  } else switch (aM) {
-                    case 1:
-                      PM = hM._GetHalfFloatAsFloatRGBAArrayBuffer, nM = null;
-                      break;
-                    case 2:
-                      PM = hM._GetHalfFloatRGBAArrayBuffer, nM = hM._GetHalfFloatAsFloatRGBAArrayBuffer;
-                      break;
-                    case 0:
-                      PM = hM._GetHalfFloatAsUIntRGBAArrayBuffer, nM = hM._GetHalfFloatAsFloatRGBAArrayBuffer
-                  }
-                  rM.type = aM, OM = PM(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM), yM && 0 == jM && yM.push(nM ? nM(GM, CM, iM.byteOffset + eM, gM, iM.buffer, jM) : OM)
+    function oU() {
+      const UU = 0,
+        XU = 1,
+        zU = 2,
+        cU = 3,
+        yU = 6,
+        QU = 8,
+        AU = 9,
+        FU = 10,
+        oU = 14;
+      let DU = null;
+
+      function EU(UU, XU, zU, cU, yU) {
+        const QU = UU.getImageTranscodedSizeInBytes(XU, zU, cU);
+        let AU = new Uint8Array(QU);
+        if (!UU.transcodeImage(AU, XU, zU, cU, 1, 0)) return null;
+        if (yU) {
+          AU = function(UU, XU, zU, cU) {
+            const yU = new Uint16Array(4),
+              QU = new Uint16Array(zU * cU),
+              AU = zU / 4,
+              FU = cU / 4;
+            for (let oU = 0; oU < FU; oU++)
+              for (let cU = 0; cU < AU; cU++) {
+                const FU = XU + 8 * (oU * AU + cU);
+                yU[0] = UU[FU] | UU[FU + 1] << 8, yU[1] = UU[FU + 2] | UU[FU + 3] << 8, yU[2] = (2 * (31 & yU[0]) + 1 * (31 & yU[1])) / 3 | (2 * (2016 & yU[0]) + 1 * (2016 & yU[1])) / 3 & 2016 | (2 * (63488 & yU[0]) + 1 * (63488 & yU[1])) / 3 & 63488, yU[3] = (2 * (31 & yU[1]) + 1 * (31 & yU[0])) / 3 | (2 * (2016 & yU[1]) + 1 * (2016 & yU[0])) / 3 & 2016 | (2 * (63488 & yU[1]) + 1 * (63488 & yU[0])) / 3 & 63488;
+                for (let XU = 0; XU < 4; XU++) {
+                  const AU = UU[FU + 4 + XU];
+                  let DU = (4 * oU + XU) * zU + 4 * cU;
+                  QU[DU++] = yU[3 & AU], QU[DU++] = yU[AU >> 2 & 3], QU[DU++] = yU[AU >> 4 & 3], QU[DU] = yU[AU >> 6 & 3]
                 }
-                OM && MM._uploadDataToTextureDirectly(rM, OM, SM, jM)
-              } else if (OM.isRGB) rM.type = 0, 24 === pM ? (rM.format = 4, gM = GM * CM * 3, bM = hM._GetRGBArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, DM, kM, ZM), MM._uploadDataToTextureDirectly(rM, bM, SM, jM)) : (rM.format = 5, gM = GM * CM * 4, bM = hM._GetRGBAArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer, DM, kM, ZM, oM), MM._uploadDataToTextureDirectly(rM, bM, SM, jM));
-              else if (OM.isLuminance) {
-                const OM = MM._getUnpackAlignement(),
-                  aM = GM;
-                gM = Math.floor((GM + OM - 1) / OM) * OM * (CM - 1) + aM, bM = hM._GetLuminanceArrayBuffer(GM, CM, iM.byteOffset + eM, gM, iM.buffer), rM.format = 1, rM.type = 0, MM._uploadDataToTextureDirectly(rM, bM, SM, jM)
-              } else gM = Math.max(4, GM) / 4 * Math.max(4, CM) / 4 * RM, bM = new Uint8Array(iM.buffer, iM.byteOffset + eM, gM), rM.type = 0, MM._uploadCompressedDataToTextureDirectly(rM, uM, GM, CM, bM, SM, jM)
-            }
-            eM += pM ? GM * CM * (pM / 8) : gM, GM *= .5, CM *= .5, GM = Math.max(1, GM), CM = Math.max(1, CM)
-          }
-          if (void 0 !== JM) break
+              }
+            return QU
+          }(AU, 0, UU.getImageWidth(XU, zU) + 3 & -4, UU.getImageHeight(XU, zU) + 3 & -4)
         }
-        yM && yM.length > 0 ? OM.sphericalPolynomial = jM.e.ConvertCubeMapToSphericalPolynomial({
-          size: EM[4],
-          right: yM[0],
-          left: yM[1],
-          up: yM[2],
-          down: yM[3],
-          front: yM[4],
-          back: yM[5],
-          format: 5,
-          type: 1,
-          gammaSpace: !1
-        }) : OM.sphericalPolynomial = void 0
+        return AU
+      }
+      onmessage = YU => {
+        if ("init" === YU.data.action) {
+          if (YU.data.url) try {
+            importScripts(YU.data.url)
+          } catch (NU) {
+            postMessage({
+              action: "error",
+              error: NU
+            })
+          }
+          DU || (DU = BASIS({
+            wasmBinary: YU.data.wasmBinary
+          })), null !== DU && DU.then((UU => {
+            BASIS = UU, UU.initializeBasis(), postMessage({
+              action: "init"
+            })
+          }))
+        } else if ("transcode" === YU.data.action) {
+          const DU = YU.data.config,
+            NU = YU.data.imageData,
+            IU = new BASIS.BasisFile(NU),
+            pU = function(UU) {
+              const XU = UU.getHasAlpha(),
+                zU = UU.getNumImages(),
+                cU = [];
+              for (let yU = 0; yU < zU; yU++) {
+                const XU = {
+                    levels: []
+                  },
+                  zU = UU.getNumLevels(yU);
+                for (let cU = 0; cU < zU; cU++) {
+                  const zU = {
+                    width: UU.getImageWidth(yU, cU),
+                    height: UU.getImageHeight(yU, cU)
+                  };
+                  XU.levels.push(zU)
+                }
+                cU.push(XU)
+              }
+              return {
+                hasAlpha: XU,
+                images: cU
+              }
+            }(IU);
+          let aU = YU.data.ignoreSupportedFormats ? null : function(DU, EU) {
+              let YU = null;
+              DU.supportedCompressionFormats && (YU = DU.supportedCompressionFormats.astc ? FU : DU.supportedCompressionFormats.bc7 ? yU : DU.supportedCompressionFormats.s3tc ? EU.hasAlpha ? cU : zU : DU.supportedCompressionFormats.pvrtc ? EU.hasAlpha ? AU : QU : DU.supportedCompressionFormats.etc2 ? XU : DU.supportedCompressionFormats.etc1 ? UU : oU);
+              return YU
+            }(YU.data.config, pU),
+            tU = !1;
+          null === aU && (tU = !0, aU = pU.hasAlpha ? cU : zU);
+          let gU = !0;
+          IU.startTranscoding() || (gU = !1);
+          const kU = [];
+          for (let UU = 0; UU < pU.images.length && gU; UU++) {
+            const XU = pU.images[UU];
+            if (void 0 === DU.loadSingleImage || DU.loadSingleImage === UU) {
+              let zU = XU.levels.length;
+              !1 === DU.loadMipmapLevels && (zU = 1);
+              for (let cU = 0; cU < zU; cU++) {
+                const zU = XU.levels[cU],
+                  yU = EU(IU, UU, cU, aU, tU);
+                if (!yU) {
+                  gU = !1;
+                  break
+                }
+                zU.transcodedPixels = yU, kU.push(zU.transcodedPixels.buffer)
+              }
+            }
+          }
+          IU.close(), IU.delete(), tU && (aU = -1), gU ? postMessage({
+            action: "transcode",
+            success: gU,
+            id: YU.data.id,
+            fileInfo: pU,
+            format: aU
+          }, kU) : postMessage({
+            action: "transcode",
+            success: gU,
+            id: YU.data.id
+          })
+        }
+      }
+    }! function(UU) {
+      UU[UU.cTFETC1 = 0] = "cTFETC1", UU[UU.cTFETC2 = 1] = "cTFETC2", UU[UU.cTFBC1 = 2] = "cTFBC1", UU[UU.cTFBC3 = 3] = "cTFBC3", UU[UU.cTFBC4 = 4] = "cTFBC4", UU[UU.cTFBC5 = 5] = "cTFBC5", UU[UU.cTFBC7 = 6] = "cTFBC7", UU[UU.cTFPVRTC1_4_RGB = 8] = "cTFPVRTC1_4_RGB", UU[UU.cTFPVRTC1_4_RGBA = 9] = "cTFPVRTC1_4_RGBA", UU[UU.cTFASTC_4x4 = 10] = "cTFASTC_4x4", UU[UU.cTFATC_RGB = 11] = "cTFATC_RGB", UU[UU.cTFATC_RGBA_INTERPOLATED_ALPHA = 12] = "cTFATC_RGBA_INTERPOLATED_ALPHA", UU[UU.cTFRGBA32 = 13] = "cTFRGBA32", UU[UU.cTFRGB565 = 14] = "cTFRGB565", UU[UU.cTFBGR565 = 15] = "cTFBGR565", UU[UU.cTFRGBA4444 = 16] = "cTFRGBA4444", UU[UU.cTFFXT1_RGB = 17] = "cTFFXT1_RGB", UU[UU.cTFPVRTC2_4_RGB = 18] = "cTFPVRTC2_4_RGB", UU[UU.cTFPVRTC2_4_RGBA = 19] = "cTFPVRTC2_4_RGBA", UU[UU.cTFETC2_EAC_R11 = 20] = "cTFETC2_EAC_R11", UU[UU.cTFETC2_EAC_RG11 = 21] = "cTFETC2_EAC_RG11"
+    }(cU || (cU = {}));
+    const DU = {
+      JSModuleURL: `${yU.j._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.js`,
+      WasmModuleURL: `${yU.j._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.wasm`
+    };
+    let EU = null,
+      YU = null,
+      NU = 0;
+    const IU = async () => (EU || (EU = new Promise(((UU, XU) => {
+      YU ? UU(YU) : yU.j.LoadFileAsync(yU.j.GetBabylonScriptURL(DU.WasmModuleURL)).then((zU => {
+        if ("function" !== typeof URL) return XU("Basis transcoder requires an environment with a URL constructor");
+        const cU = URL.createObjectURL(new Blob([`(${oU})()`], {
+          type: "application/javascript"
+        }));
+        YU = new Worker(cU), async function(UU, XU, zU) {
+          return await new Promise(((cU, QU) => {
+            const AU = XU => {
+              "init" === XU.data.action ? (UU.removeEventListener("message", AU), cU(UU)) : "error" === XU.data.action && QU(XU.data.error || "error initializing worker")
+            };
+            UU.addEventListener("message", AU), UU.postMessage({
+              action: "init",
+              url: zU ? yU.j.GetBabylonScriptURL(zU) : void 0,
+              wasmBinary: XU
+            }, [XU])
+          }))
+        }(YU, zU, DU.JSModuleURL).then(UU, XU)
+      })).catch(XU)
+    }))), await EU), pU = async (UU, XU) => {
+      const zU = UU instanceof ArrayBuffer ? new Uint8Array(UU) : UU;
+      return await new Promise(((UU, cU) => {
+        IU().then((() => {
+          const yU = NU++,
+            QU = XU => {
+              "transcode" === XU.data.action && XU.data.id === yU && (YU.removeEventListener("message", QU), XU.data.success ? UU(XU.data) : cU("Transcode is not supported on this device"))
+            };
+          YU.addEventListener("message", QU);
+          const AU = new Uint8Array(zU.byteLength);
+          AU.set(new Uint8Array(zU.buffer, zU.byteOffset, zU.byteLength)), YU.postMessage({
+            action: "transcode",
+            id: yU,
+            imageData: AU,
+            config: XU,
+            ignoreSupportedFormats: false
+          }, [AU.buffer])
+        }), (UU => {
+          cU(UU)
+        }))
+      }))
+    }, aU = (UU, XU) => {
+      let zU = XU._gl?.TEXTURE_2D;
+      UU.isCube && (zU = XU._gl?.TEXTURE_CUBE_MAP), XU._bindTextureDirectly(zU, UU, !0)
+    }, tU = (UU, XU) => {
+      const zU = UU.qp();
+      for (let yU = 0; yU < XU.fileInfo.images.length; yU++) {
+        const oU = XU.fileInfo.images[yU].levels[0];
+        if (UU._invertVScale = UU.invertY, -1 === XU.format || XU.format === cU.cTFRGB565)
+          if (UU.type = 10, UU.format = 4, !zU._features.basisNeedsPOT || Math.log2(oU.width) % 1 === 0 && Math.log2(oU.height) % 1 === 0) UU._invertVScale = !UU.invertY, UU.width = oU.width + 3 & -4, UU.height = oU.height + 3 & -4, UU.samplingMode = 2, aU(UU, zU), zU._uploadDataToTextureDirectly(UU, new Uint16Array(oU.transcodedPixels.buffer), yU, 0, 4, !0);
+          else {
+            const XU = new FU.e(zU, 2);
+            UU._invertVScale = UU.invertY, XU.type = 10, XU.format = 4, XU.width = oU.width + 3 & -4, XU.height = oU.height + 3 & -4, aU(XU, zU), zU._uploadDataToTextureDirectly(XU, new Uint16Array(oU.transcodedPixels.buffer), yU, 0, 4, !0), zU._rescaleTexture(XU, UU, zU.scenes[0], zU._getInternalFormat(4), (() => {
+              zU._releaseTexture(XU), aU(UU, zU)
+            }))
+          }
+        else {
+          UU.width = oU.width, UU.height = oU.height, UU.generateMipMaps = XU.fileInfo.images[yU].levels.length > 1;
+          const cU = gU.GetInternalFormatFromBasisFormat(XU.format, zU);
+          UU.format = cU, aU(UU, zU);
+          const FU = XU.fileInfo.images[yU].levels;
+          for (let XU = 0; XU < FU.length; XU++) {
+            const QU = FU[XU];
+            zU._uploadCompressedDataToTextureDirectly(UU, cU, QU.width, QU.height, QU.transcodedPixels, yU, XU)
+          }!zU._features.basisNeedsPOT || Math.log2(UU.width) % 1 === 0 && Math.log2(UU.height) % 1 === 0 || (QU.b.Warn("Loaded .basis texture width and height are not a power of two. Texture wrapping will be set to Texture.CLAMP_ADDRESSMODE as other modes are not supported with non power of two dimensions in webGL 1."), UU._cachedWrapU = AU.e.CLAMP_ADDRESSMODE, UU._cachedWrapV = AU.e.CLAMP_ADDRESSMODE)
+        }
+      }
+    }, gU = {
+      JSModuleURL: DU.JSModuleURL,
+      WasmModuleURL: DU.WasmModuleURL,
+      GetInternalFormatFromBasisFormat: (UU, XU) => {
+        let zU;
+        switch (UU) {
+          case cU.cTFETC1:
+            zU = 36196;
+            break;
+          case cU.cTFBC1:
+            zU = 33776;
+            break;
+          case cU.cTFBC4:
+            zU = 33779;
+            break;
+          case cU.cTFASTC_4x4:
+            zU = 37808;
+            break;
+          case cU.cTFETC2:
+            zU = 37496;
+            break;
+          case cU.cTFBC7:
+            zU = 36492
+        }
+        if (void 0 === zU) throw "The chosen Basis transcoder format is not currently supported";
+        return zU
+      },
+      TranscodeAsync: pU,
+      LoadTextureFromTranscodeResult: tU
+    };
+    class kU {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(UU, XU, zU, cU, QU) {
+        if (Array.isArray(UU)) return;
+        const AU = XU.qp().getCaps(),
+          FU = {
+            supportedCompressionFormats: {
+              etc1: !!AU.etc1,
+              s3tc: !!AU.s3tc,
+              pvrtc: !!AU.pvrtc,
+              etc2: !!AU.etc2,
+              astc: !!AU.astc,
+              bc7: !!AU.bptc
+            }
+          };
+        pU(UU, FU).then((UU => {
+          const zU = UU.fileInfo.images[0].levels.length > 1 && XU.generateMipMaps;
+          tU(XU, UU), XU.qp()._setCubeMapTextureParams(XU, zU), XU.isReady = !0, XU.onLoadedObservable.notifyObservers(XU), XU.onLoadedObservable.clear(), cU && cU()
+        })).catch((UU => {
+          yU.j.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), XU.isReady = !0, QU && QU(UU)
+        }))
+      }
+      loadData(UU, XU, zU) {
+        const cU = XU.qp().getCaps(),
+          QU = {
+            supportedCompressionFormats: {
+              etc1: !!cU.etc1,
+              s3tc: !!cU.s3tc,
+              pvrtc: !!cU.pvrtc,
+              etc2: !!cU.etc2,
+              astc: !!cU.astc,
+              bc7: !!cU.bptc
+            }
+          };
+        pU(UU, QU).then((UU => {
+          const cU = UU.fileInfo.images[0].levels[0],
+            yU = UU.fileInfo.images[0].levels.length > 1 && XU.generateMipMaps;
+          zU(cU.width, cU.height, yU, -1 !== UU.format, (() => {
+            tU(XU, UU)
+          }))
+        })).catch((UU => {
+          yU.j.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), yU.j.Warn(`Failed to transcode Basis file: ${UU}`), zU(0, 0, !1, !1, (() => {}), !0)
+        }))
       }
     }
-    hM.StoreLODInAlphaChannel = !1
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

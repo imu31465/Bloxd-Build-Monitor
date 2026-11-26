@@ -1,25 +1,25 @@
-export const id = 59;
-export const ids = [59];
+export const id = 60;
+export const ids = [60];
 export const modules = {
-  5083: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      MAX_LINES: () => PM,
-      MAX_SETTLE_MS: () => aM,
-      SETTLE_MS: () => jM,
-      ScrollDebugLog: () => UM,
-      changeText: () => dM,
-      elementText: () => lM,
-      fullStateText: () => JM,
-      startScrollDebug: () => GM,
-      touchedText: () => EM
+  5190: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      MAX_LINES: () => FU,
+      MAX_SETTLE_MS: () => AU,
+      SETTLE_MS: () => QU,
+      ScrollDebugLog: () => BU,
+      changeText: () => tU,
+      elementText: () => kU,
+      fullStateText: () => aU,
+      startScrollDebug: () => ZU,
+      touchedText: () => GU
     });
-    var OM = iM(19),
-      SM = iM(3122);
-    const jM = 300,
-      aM = 2e3,
-      PM = 40,
-      nM = 2,
-      QM = {
+    var cU = zU(27),
+      yU = zU(3099);
+    const QU = 300,
+      AU = 2e3,
+      FU = 40,
+      oU = 2,
+      DU = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      zM = Object.keys(QM),
-      LM = new Set(["scrollHeight", "innerHeight"]);
+      EU = Object.keys(DU),
+      YU = new Set(["scrollHeight", "innerHeight"]);
 
-    function mM(MM, rM) {
-      const iM = 10 ** rM;
-      return Math.round(MM * iM) / iM
+    function NU(UU, XU) {
+      const zU = 10 ** XU;
+      return Math.round(UU * zU) / zU
     }
 
-    function HM() {
-      const MM = window.visualViewport;
+    function IU() {
+      const UU = window.visualViewport;
       return {
-        vvOffsetTop: mM(MM.offsetTop, 1),
-        vvOffsetLeft: mM(MM.offsetLeft, 1),
-        vvPageTop: mM(MM.pageTop, 1),
-        vvPageLeft: mM(MM.pageLeft, 1),
-        vvHeight: mM(MM.height, 1),
-        vvScale: mM(MM.scale, 3),
-        scrollX: mM(window.scrollX, 1),
-        scrollY: mM(window.scrollY, 1),
+        vvOffsetTop: NU(UU.offsetTop, 1),
+        vvOffsetLeft: NU(UU.offsetLeft, 1),
+        vvPageTop: NU(UU.pageTop, 1),
+        vvPageLeft: NU(UU.pageLeft, 1),
+        vvHeight: NU(UU.height, 1),
+        vvScale: NU(UU.scale, 3),
+        scrollX: NU(window.scrollX, 1),
+        scrollY: NU(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function hM(MM, rM) {
-      return `${QM[MM]} ${rM}`
+    function pU(UU, XU) {
+      return `${DU[UU]} ${XU}`
     }
 
-    function JM(MM) {
-      return zM.map((rM => hM(rM, String(MM[rM])))).join(", ")
+    function aU(UU) {
+      return EU.map((XU => pU(XU, String(UU[XU])))).join(", ")
     }
 
-    function dM(MM, rM, iM, OM) {
-      return zM.flatMap((SM => {
-        const jM = MM[SM] !== rM[SM],
-          aM = iM[SM] < Math.min(MM[SM], rM[SM]) || OM[SM] > Math.max(MM[SM], rM[SM]);
-        if (!jM && !aM && !LM.has(SM)) return [];
-        return [hM(SM, `${jM?`${MM[SM]} -> ${rM[SM]}`:String(rM[SM])}${aM?` (via ${iM[SM]}..${OM[SM]})`:""}`)]
+    function tU(UU, XU, zU, cU) {
+      return EU.flatMap((yU => {
+        const QU = UU[yU] !== XU[yU],
+          AU = zU[yU] < Math.min(UU[yU], XU[yU]) || cU[yU] > Math.max(UU[yU], XU[yU]);
+        if (!QU && !AU && !YU.has(yU)) return [];
+        return [pU(yU, `${QU?`${UU[yU]} -> ${XU[yU]}`:String(XU[yU])}${AU?` (via ${zU[yU]}..${cU[yU]})`:""}`)]
       })).join(", ")
     }
 
-    function yM(MM, rM, iM) {
-      return Object.fromEntries(zM.map((OM => [OM, iM(MM[OM], rM[OM])])))
+    function gU(UU, XU, zU) {
+      return Object.fromEntries(EU.map((cU => [cU, zU(UU[cU], XU[cU])])))
     }
 
-    function lM(MM) {
-      var rM;
-      const iM = (null !== (rM = MM.getAttribute("class")) && void 0 !== rM ? rM : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${MM.tagName.toLowerCase()}${iM?`.${iM}`:""}`
+    function kU(UU) {
+      var XU;
+      const zU = (null !== (XU = UU.getAttribute("class")) && void 0 !== XU ? XU : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${UU.tagName.toLowerCase()}${zU?`.${zU}`:""}`
     }
 
-    function EM(MM, rM) {
-      const iM = [];
-      for (let OM = MM.parentElement; null !== OM && iM.length < nM; OM = OM.parentElement) {
-        const MM = rM(OM);
-        "auto" !== MM && iM.push(`${MM} on ${lM(OM)}`)
+    function GU(UU, XU) {
+      const zU = [];
+      for (let cU = UU.parentElement; null !== cU && zU.length < oU; cU = cU.parentElement) {
+        const UU = XU(cU);
+        "auto" !== UU && zU.push(`${UU} on ${kU(cU)}`)
       }
-      return `${lM(MM)} touch-action ${rM(MM)}${iM.length>0?` (${iM.join(", ")})`:""}`
+      return `${kU(UU)} touch-action ${XU(UU)}${zU.length>0?` (${zU.join(", ")})`:""}`
     }
-    class UM {
-      constructor(MM) {
-        this.deps = MM, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const MM = this.deps.now(),
-            rM = MM - this.lastEventMs;
-          if (rM < jM && MM - this.burstStartMs < aM) return void(this.timer = setTimeout(this.settle, jM - rM));
+    class BU {
+      constructor(UU) {
+        this.deps = UU, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const UU = this.deps.now(),
+            XU = UU - this.lastEventMs;
+          if (XU < QU && UU - this.burstStartMs < AU) return void(this.timer = setTimeout(this.settle, QU - XU));
           this.timer = null;
-          const iM = this.deps.read(),
+          const zU = this.deps.read(),
             {
-              last: OM,
-              innerScrolled: SM,
-              burstTouch: nM
+              last: cU,
+              innerScrolled: yU,
+              burstTouch: oU
             } = this,
-            QM = yM(this.low, iM, Math.min),
-            LM = yM(this.high, iM, Math.max);
-          if (this.last = iM, this.low = iM, this.high = iM, this.innerScrolled = null, HM = QM, hM = LM, zM.every((MM => HM[MM] === hM[MM])) || !this.burstInGame || !this.deps.inGame()) return;
-          var HM, hM;
-          if (this.lines === PM) return this.capped = !0, void this.deps.log(`further changes unlogged: ${PM} lines logged`);
+            DU = gU(this.low, zU, Math.min),
+            YU = gU(this.high, zU, Math.max);
+          if (this.last = zU, this.low = zU, this.high = zU, this.innerScrolled = null, IU = DU, pU = YU, EU.every((UU => IU[UU] === pU[UU])) || !this.burstInGame || !this.deps.inGame()) return;
+          var IU, pU;
+          if (this.lines === FU) return this.capped = !0, void this.deps.log(`further changes unlogged: ${FU} lines logged`);
           this.lines++;
-          const JM = null === nM ? "no touch yet" : `touch on ${nM.text}, ${Math.round(this.burstStartMs-nM.atMs)} ms before`,
-            EM = null === SM ? "" : `; inner scroll ${lM(SM)} scrollTop ${mM(SM.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(MM-this.burstStartMs)} ms; ${JM}${EM}: ${dM(OM,iM,QM,LM)}`)
-        }, this.last = MM.read(), this.low = this.last, this.high = this.last, MM.log(`start: ${JM(this.last)}`)
+          const aU = null === oU ? "no touch yet" : `touch on ${oU.text}, ${Math.round(this.burstStartMs-oU.atMs)} ms before`,
+            GU = null === yU ? "" : `; inner scroll ${kU(yU)} scrollTop ${NU(yU.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(UU-this.burstStartMs)} ms; ${aU}${GU}: ${tU(cU,zU,DU,YU)}`)
+        }, this.last = UU.read(), this.low = this.last, this.high = this.last, UU.log(`start: ${aU(this.last)}`)
       }
       moved() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const rM = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== MM && (null === rM || !MM.contains(rM.target))) return;
-        const iM = this.deps.now();
-        this.lastEventMs = iM, null === this.timer && (this.burstStartMs = iM, this.burstInGame = this.deps.inGame(), this.burstTouch = rM, this.timer = setTimeout(this.settle, jM));
-        const OM = this.deps.read();
-        this.low = yM(this.low, OM, Math.min), this.high = yM(this.high, OM, Math.max), this.innerScrolled = null !== MM && void 0 !== MM ? MM : this.innerScrolled
+        const XU = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== UU && (null === XU || !UU.contains(XU.target))) return;
+        const zU = this.deps.now();
+        this.lastEventMs = zU, null === this.timer && (this.burstStartMs = zU, this.burstInGame = this.deps.inGame(), this.burstTouch = XU, this.timer = setTimeout(this.settle, QU));
+        const cU = this.deps.read();
+        this.low = gU(this.low, cU, Math.min), this.high = gU(this.high, cU, Math.max), this.innerScrolled = null !== UU && void 0 !== UU ? UU : this.innerScrolled
       }
     }
 
-    function GM() {
-      let MM = null;
-      const rM = new UM({
-        read: HM,
-        inGame: () => "inGame" === OM.d.get("gameState"),
-        lastTouch: () => MM,
-        log: MM => {
-          (0, SM.k)("scroll", MM)
+    function ZU() {
+      let UU = null;
+      const XU = new BU({
+        read: IU,
+        inGame: () => "inGame" === cU.e.get("gameState"),
+        lastTouch: () => UU,
+        log: UU => {
+          (0, yU.l)("scroll", UU)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (rM => {
-        if (rM.target instanceof Element) {
-          const iM = EM(rM.target, (MM => getComputedStyle(MM).touchAction));
-          MM = {
-            target: rM.target,
-            text: iM,
+      document.addEventListener("touchstart", (XU => {
+        if (XU.target instanceof Element) {
+          const zU = GU(XU.target, (UU => getComputedStyle(UU).touchAction));
+          UU = {
+            target: XU.target,
+            text: zU,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (MM => {
-        rM.moved(MM.target instanceof Element ? MM.target : null)
+      }), document.addEventListener("scroll", (UU => {
+        XU.moved(UU.target instanceof Element ? UU.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const iM = () => {
-        rM.moved()
+      const zU = () => {
+        XU.moved()
       };
-      window.addEventListener("resize", iM, {
+      window.addEventListener("resize", zU, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", iM, {
+      }), window.visualViewport.addEventListener("scroll", zU, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", iM, {
+      }), window.visualViewport.addEventListener("resize", zU, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

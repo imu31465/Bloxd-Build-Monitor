@@ -1,2240 +1,2652 @@
 export const id = 285;
 export const ids = [285];
 export const modules = {
-  42190: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => NM
+  41383: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => cU
     });
-    var OM = iM(41099),
-      SM = iM(41105),
-      jM = iM(38068),
-      aM = iM(38040),
-      PM = iM(38074),
-      nM = iM(41328),
-      QM = iM(41502),
-      zM = iM(41283),
-      LM = iM(41009),
-      mM = iM(38044);
-    class HM {
-      constructor() {
-        this._zoomStopsAnimation = !1, this._idleRotationSpeed = .05, this._idleRotationWaitTime = 2e3, this._idleRotationSpinupTime = 2e3, this.targetAlpha = null, this._attachedCamera = null, this._isPointerDown = !1, this._lastFrameTime = null, this._lastInteractionTime = -1 / 0, this._cameraRotationSpeed = 0, this._lastFrameRadius = 0
-      }
-      get name() {
-        return "AutoRotation"
-      }
-      set zoomStopsAnimation(MM) {
-        this._zoomStopsAnimation = MM
-      }
-      get zoomStopsAnimation() {
-        return this._zoomStopsAnimation
-      }
-      set idleRotationSpeed(MM) {
-        this._idleRotationSpeed = MM
-      }
-      get idleRotationSpeed() {
-        return this._idleRotationSpeed
-      }
-      set idleRotationWaitTime(MM) {
-        this._idleRotationWaitTime = MM
-      }
-      get idleRotationWaitTime() {
-        return this._idleRotationWaitTime
-      }
-      set idleRotationSpinupTime(MM) {
-        this._idleRotationSpinupTime = MM
-      }
-      get idleRotationSpinupTime() {
-        return this._idleRotationSpinupTime
-      }
-      get rotationInProgress() {
-        return Math.abs(this._cameraRotationSpeed) > 0
-      }
-      get attachedNode() {
-        return this._attachedCamera
-      }
-      init() {}
-      attach(MM) {
-        this._attachedCamera = MM;
-        const rM = this._attachedCamera.Hk();
-        this._onPrePointerObservableObserver = rM.onPrePointerObservable.add((MM => {
-          MM.type !== zM.d.POINTERDOWN ? MM.type === zM.d.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onAfterCheckInputsObserver = MM.onAfterCheckInputsObservable.add((() => {
-          if (this._reachTargetAlpha()) return;
-          const MM = LM.b.Now;
-          let rM = 0;
-          null != this._lastFrameTime && (rM = MM - this._lastFrameTime), this._lastFrameTime = MM, this._applyUserInteraction();
-          const iM = MM - this._lastInteractionTime - this._idleRotationWaitTime,
-            OM = Math.max(Math.min(iM / this._idleRotationSpinupTime, 1), 0);
-          this._cameraRotationSpeed = this._idleRotationSpeed * OM, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (rM / 1e3))
-        }))
-      }
-      detach() {
-        if (!this._attachedCamera) return;
-        const MM = this._attachedCamera.Hk();
-        this._onPrePointerObservableObserver && MM.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
-      }
-      resetLastInteractionTime(MM) {
-        this._lastInteractionTime = MM ?? LM.b.Now
-      }
-      _reachTargetAlpha() {
-        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < mM.d
-      }
-      _userIsZooming() {
-        return !!this._attachedCamera && 0 !== this._attachedCamera.inertialRadiusOffset
-      }
-      _shouldAnimationStopForInteraction() {
-        if (!this._attachedCamera) return !1;
-        let MM = !1;
-        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (MM = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? MM : this._userIsZooming()
-      }
-      _applyUserInteraction() {
-        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = LM.b.Now)
-      }
-      _userIsMoving() {
-        return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
+    class cU {
+      constructor(UU, XU, zU) {
+        this.bu = UU, this.bv = XU, this.distance = zU, this.faceId = 0, this.subMeshId = 0, this._internalSubMeshId = 0
       }
     }
-    iM(42196);
-    class hM {
-      constructor() {
-        this._easingMode = hM.EASINGMODE_EASEIN
+  },
+  41389: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => AU
+    });
+    var cU = zU(37827),
+      yU = zU(37819),
+      QU = zU(37825);
+    class AU {
+      constructor(UU, XU, zU) {
+        this.vectors = (0, cU.d)(8, yU.q.Zero), this.center = yU.q.Zero(), this.centerWorld = yU.q.Zero(), this.extendSize = yU.q.Zero(), this.extendSizeWorld = yU.q.Zero(), this.directions = (0, cU.d)(3, yU.q.Zero), this.vectorsWorld = (0, cU.d)(8, yU.q.Zero), this.minimumWorld = yU.q.Zero(), this.maximumWorld = yU.q.Zero(), this.minimum = yU.q.Zero(), this.maximum = yU.q.Zero(), this._drawWrapperFront = null, this._drawWrapperBack = null, this.reConstruct(UU, XU, zU)
       }
-      setEasingMode(MM) {
-        const rM = Math.min(Math.max(MM, 0), 2);
-        this._easingMode = rM
+      reConstruct(UU, XU, zU) {
+        const cU = UU.x,
+          QU = UU.y,
+          AU = UU.z,
+          FU = XU.x,
+          oU = XU.y,
+          DU = XU.z,
+          EU = this.vectors;
+        this.minimum.sUU(cU, QU, AU), this.maximum.sUU(FU, oU, DU), EU[0].sUU(cU, QU, AU), EU[1].sUU(FU, oU, DU), EU[2].sUU(FU, QU, AU), EU[3].sUU(cU, oU, AU), EU[4].sUU(cU, QU, DU), EU[5].sUU(FU, oU, AU), EU[6].sUU(cU, oU, DU), EU[7].sUU(FU, QU, DU), XU.addToRef(UU, this.center).scaleInPlace(.5), XU.subtractToRef(UU, this.extendSize).scaleInPlace(.5), this._worldMatrix = zU || yU.e.IdentityReadOnly, this._update(this._worldMatrix)
       }
-      getEasingMode() {
-        return this._easingMode
+      scale(UU) {
+        const XU = AU._TmpVector3,
+          zU = this.maximum.subtractToRef(this.minimum, XU[0]),
+          cU = zU.length();
+        zU.normalizeFromLength(cU);
+        const yU = cU * UU,
+          QU = zU.scaleInPlace(.5 * yU),
+          FU = this.center.subtractToRef(QU, XU[1]),
+          oU = this.center.addToRef(QU, XU[2]);
+        return this.reConstruct(FU, oU, this._worldMatrix), this
       }
-      easeInCore(MM) {
-        throw new Error("You must implement this method")
+      getWorldMatrix() {
+        return this._worldMatrix
       }
-      ease(MM) {
-        switch (this._easingMode) {
-          case hM.EASINGMODE_EASEIN:
-            return this.easeInCore(MM);
-          case hM.EASINGMODE_EASEOUT:
-            return 1 - this.easeInCore(1 - MM)
-        }
-        return MM >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - MM))) + .5 : .5 * this.easeInCore(2 * MM)
-      }
-    }
-    hM.EASINGMODE_EASEIN = 0, hM.EASINGMODE_EASEOUT = 1, hM.EASINGMODE_EASEINOUT = 2;
-    var JM = iM(42200);
-    class dM {
-      constructor() {
-        this.transitionDuration = 450, this.lowerRadiusTransitionRange = 2, this.upperRadiusTransitionRange = -2, this._autoTransitionRange = !1, this._attachedCamera = null, this._radiusIsAnimating = !1, this._radiusBounceTransition = null, this._animatables = new Array
-      }
-      get name() {
-        return "Bouncing"
-      }
-      get autoTransitionRange() {
-        return this._autoTransitionRange
-      }
-      set autoTransitionRange(MM) {
-        if (this._autoTransitionRange === MM) return;
-        this._autoTransitionRange = MM;
-        const rM = this._attachedCamera;
-        rM && (MM ? this._onMeshTargetChangedObserver = rM.onMeshTargetChangedObservable.add((MM => {
-          if (MM && (MM.computeWorldMatrix(!0), MM.aY)) {
-            const rM = MM.aY().diagonalLength;
-            this.lowerRadiusTransitionRange = .05 * rM, this.upperRadiusTransitionRange = .05 * rM
+      _update(UU) {
+        const XU = this.minimumWorld,
+          zU = this.maximumWorld,
+          cU = this.directions,
+          QU = this.vectorsWorld,
+          AU = this.vectors;
+        if (UU.isIdentity()) {
+          XU.YL(this.minimum), zU.YL(this.maximum);
+          for (let UU = 0; UU < 8; ++UU) QU[UU].YL(AU[UU]);
+          this.extendSizeWorld.YL(this.extendSize), this.centerWorld.YL(this.center)
+        } else {
+          XU.IUU(Number.MAX_VALUE), zU.IUU(-Number.MAX_VALUE);
+          for (let cU = 0; cU < 8; ++cU) {
+            const FU = QU[cU];
+            yU.q.TransformCoordinatesToRef(AU[cU], UU, FU), XU.minimizeInPlace(FU), zU.maximizeInPlace(FU)
           }
-        })) : this._onMeshTargetChangedObserver && rM.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
+          zU.subtractToRef(XU, this.extendSizeWorld).scaleInPlace(.5), zU.addToRef(XU, this.centerWorld).scaleInPlace(.5)
+        }
+        yU.q.FromArrayToRef(UU.m, 0, cU[0]), yU.q.FromArrayToRef(UU.m, 4, cU[1]), yU.q.FromArrayToRef(UU.m, 8, cU[2]), this._worldMatrix = UU
       }
-      get attachedNode() {
-        return this._attachedCamera
+      isInFrustum(UU) {
+        return AU.IsInFrustum(this.vectorsWorld, UU)
       }
-      init() {}
-      attach(MM) {
-        this._attachedCamera = MM, this._onAfterCheckInputsObserver = MM.onAfterCheckInputsObservable.add((() => {
-          this._attachedCamera && (this._isRadiusAtLimit(this._attachedCamera.lowerRadiusLimit) && this._applyBoundRadiusAnimation(this.lowerRadiusTransitionRange), this._isRadiusAtLimit(this._attachedCamera.upperRadiusLimit) && this._applyBoundRadiusAnimation(this.upperRadiusTransitionRange))
-        }))
+      isCompletelyInFrustum(UU) {
+        return AU.IsCompletelyInFrustum(this.vectorsWorld, UU)
       }
-      detach() {
-        this._attachedCamera && (this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null)
+      intersectsPoint(UU) {
+        const XU = this.minimumWorld,
+          zU = this.maximumWorld,
+          cU = XU.x,
+          yU = XU.y,
+          AU = XU.z,
+          FU = zU.x,
+          oU = zU.y,
+          DU = zU.z,
+          EU = UU.x,
+          YU = UU.y,
+          NU = UU.z,
+          IU = -QU.c;
+        return !(FU - EU < IU || IU > EU - cU) && (!(oU - YU < IU || IU > YU - yU) && !(DU - NU < IU || IU > NU - AU))
       }
-      _isRadiusAtLimit(MM) {
-        return !!this._attachedCamera && (this._attachedCamera.radius === MM && !this._radiusIsAnimating)
+      intersectsSphere(UU) {
+        return AU.IntersectsSphere(this.minimumWorld, this.maximumWorld, UU.centerWorld, UU.radiusWorld)
       }
-      _applyBoundRadiusAnimation(MM) {
-        if (!this._attachedCamera) return;
-        this._radiusBounceTransition || (dM.EasingFunction.setEasingMode(dM.EasingMode), this._radiusBounceTransition = JM.b.CreateAnimation("radius", JM.b.ANIMATIONTYPE_FLOAT, 60, dM.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
-        const rM = JM.b.TransitionTo("radius", this._attachedCamera.radius + MM, this._attachedCamera, this._attachedCamera.Hk(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
-        rM && this._animatables.push(rM)
+      intersectsMinMax(UU, XU) {
+        const zU = this.minimumWorld,
+          cU = this.maximumWorld,
+          yU = zU.x,
+          QU = zU.y,
+          AU = zU.z,
+          FU = cU.x,
+          oU = cU.y,
+          DU = cU.z,
+          EU = UU.x,
+          YU = UU.y,
+          NU = UU.z,
+          IU = XU.x,
+          pU = XU.y,
+          aU = XU.z;
+        return !(FU < EU || yU > IU) && (!(oU < YU || QU > pU) && !(DU < NU || AU > aU))
       }
-      _clearAnimationLocks() {
-        this._radiusIsAnimating = !1, this._attachedCamera && (this._attachedCamera.wheelPrecision = this._cachedWheelPrecision)
+      dispose() {
+        this._drawWrapperFront?.dispose(), this._drawWrapperBack?.dispose()
       }
-      stopAllAnimations() {
-        for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0].onAnimationEnd = null, this._animatables[0].stop(), this._animatables.shift()
+      static Intersects(UU, XU) {
+        return UU.intersectsMinMax(XU.minimumWorld, XU.maximumWorld)
+      }
+      static IntersectsSphere(UU, XU, zU, cU) {
+        const QU = AU._TmpVector3[0];
+        yU.q.ClampToRef(zU, UU, XU, QU);
+        return yU.q.DistanceSquared(zU, QU) <= cU * cU
+      }
+      static IsCompletelyInFrustum(UU, XU) {
+        for (let zU = 0; zU < 6; ++zU) {
+          const cU = XU[zU];
+          for (let XU = 0; XU < 8; ++XU)
+            if (cU.dotCoordinate(UU[XU]) < 0) return !1
+        }
+        return !0
+      }
+      static IsInFrustum(UU, XU) {
+        for (let zU = 0; zU < 6; ++zU) {
+          let cU = !0;
+          const yU = XU[zU];
+          for (let XU = 0; XU < 8; ++XU)
+            if (yU.dotCoordinate(UU[XU]) >= 0) {
+              cU = !1;
+              break
+            } if (cU) return !1
+        }
+        return !0
       }
     }
-    dM.EasingFunction = new class extends hM {
-      constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        super(), this.amplitude = MM
+    AU._TmpVector3 = (0, cU.d)(3, yU.q.Zero)
+  },
+  41387: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => YU
+    });
+    var cU = zU(37827),
+      yU = zU(37819),
+      QU = zU(41389);
+    class AU {
+      constructor(UU, XU, zU) {
+        this.center = yU.q.Zero(), this.centerWorld = yU.q.Zero(), this.minimum = yU.q.Zero(), this.maximum = yU.q.Zero(), this.reConstruct(UU, XU, zU)
       }
-      easeInCore(MM) {
-        const rM = Math.max(0, this.amplitude);
-        return Math.pow(MM, 3) - MM * rM * Math.sin(3.141592653589793 * MM)
+      reConstruct(UU, XU, zU) {
+        this.minimum.YL(UU), this.maximum.YL(XU);
+        const cU = yU.q.Distance(UU, XU);
+        XU.addToRef(UU, this.center).scaleInPlace(.5), this.radius = .5 * cU, this._update(zU || yU.e.IdentityReadOnly)
       }
-    }(.3), dM.EasingMode = hM.EASINGMODE_EASEOUT;
-    class yM {
-      constructor() {
-        this.onTargetFramingAnimationEndObservable = new jM.d, this._mode = yM.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
+      scale(UU) {
+        const XU = AU._TmpVector3,
+          zU = this.maximum.subtractToRef(this.minimum, XU[0]),
+          cU = zU.length();
+        zU.normalizeFromLength(cU);
+        const yU = cU * UU,
+          QU = zU.scaleInPlace(.5 * yU),
+          FU = this.center.subtractToRef(QU, XU[1]),
+          oU = this.center.addToRef(QU, XU[2]);
+        return this.reConstruct(FU, oU, this._worldMatrix), this
       }
-      get name() {
-        return "Framing"
+      getWorldMatrix() {
+        return this._worldMatrix
       }
-      set mode(MM) {
-        this._mode = MM
-      }
-      get mode() {
-        return this._mode
-      }
-      set radiusScale(MM) {
-        this._radiusScale = MM
-      }
-      get radiusScale() {
-        return this._radiusScale
-      }
-      set positionScale(MM) {
-        this._positionScale = MM
-      }
-      get positionScale() {
-        return this._positionScale
-      }
-      set defaultElevation(MM) {
-        this._defaultElevation = MM
-      }
-      get defaultElevation() {
-        return this._defaultElevation
-      }
-      set elevationReturnTime(MM) {
-        this._elevationReturnTime = MM
-      }
-      get elevationReturnTime() {
-        return this._elevationReturnTime
-      }
-      set elevationReturnWaitTime(MM) {
-        this._elevationReturnWaitTime = MM
-      }
-      get elevationReturnWaitTime() {
-        return this._elevationReturnWaitTime
-      }
-      set zoomStopsAnimation(MM) {
-        this._zoomStopsAnimation = MM
-      }
-      get zoomStopsAnimation() {
-        return this._zoomStopsAnimation
-      }
-      set framingTime(MM) {
-        this._framingTime = MM
-      }
-      get framingTime() {
-        return this._framingTime
-      }
-      get attachedNode() {
-        return this._attachedCamera
-      }
-      init() {}
-      attach(MM) {
-        this._attachedCamera = MM;
-        const rM = this._attachedCamera.Hk();
-        yM.EasingFunction.setEasingMode(yM.EasingMode), this._onPrePointerObservableObserver = rM.onPrePointerObservable.add((MM => {
-          MM.type !== zM.d.POINTERDOWN ? MM.type === zM.d.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onMeshTargetChangedObserver = MM.onMeshTargetChangedObservable.add((MM => {
-          MM && MM.aY && this.zoomOnMesh(MM, void 0, (() => {
-            this.onTargetFramingAnimationEndObservable.notifyObservers()
-          }))
-        })), this._onAfterCheckInputsObserver = MM.onAfterCheckInputsObservable.add((() => {
-          this._applyUserInteraction(), this._maintainCameraAboveGround()
-        }))
-      }
-      detach() {
-        if (!this._attachedCamera) return;
-        const MM = this._attachedCamera.Hk();
-        this._onPrePointerObservableObserver && MM.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
-      }
-      zoomOnMesh(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        MM.computeWorldMatrix(!0);
-        const OM = MM.aY().boundingBox;
-        this.zoomOnBoundingInfo(OM.minimumWorld, OM.maximumWorld, rM, iM)
-      }
-      zoomOnMeshHierarchy(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        MM.computeWorldMatrix(!0);
-        const OM = MM.getHierarchyBoundingVectors(!0);
-        this.zoomOnBoundingInfo(OM.min, OM.max, rM, iM)
-      }
-      zoomOnMeshesHierarchy(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const OM = new aM.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          SM = new aM.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        for (let jM = 0; jM < MM.length; jM++) {
-          const rM = MM[jM].getHierarchyBoundingVectors(!0);
-          aM.q.CheckExtends(rM.min, OM, SM), aM.q.CheckExtends(rM.max, OM, SM)
-        }
-        this.zoomOnBoundingInfo(OM, SM, rM, iM)
-      }
-      zoomOnBoundingInfo(MM, rM) {
-        let iM, OM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        if (!this._attachedCamera) return !1;
-        const jM = MM.y,
-          PM = jM + (rM.y - jM) * this._positionScale,
-          nM = rM.subtract(MM).scale(.5);
-        if (!isFinite(PM)) return !1;
-        if (OM) iM = new aM.q(0, PM, 0);
+      _update(UU) {
+        if (UU.isIdentity()) this.centerWorld.YL(this.center), this.radiusWorld = this.radius;
         else {
-          const rM = MM.add(nM);
-          iM = new aM.q(rM.x, PM, rM.z)
-        }
-        this._vectorTransition || (this._vectorTransition = JM.b.CreateAnimation("target", JM.b.ANIMATIONTYPE_VECTOR3, 60, yM.EasingFunction)), this._betaIsAnimating = !0;
-        let QM = JM.b.TransitionTo("target", iM, this._attachedCamera, this._attachedCamera.Hk(), 60, this._vectorTransition, this._framingTime);
-        QM && this._animatables.push(QM);
-        let zM = 0;
-        if (this._mode === yM.FitFrustumSidesMode) {
-          const iM = this._calculateLowerRadiusFromModelBoundingSphere(MM, rM);
-          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = nM.length() + this._attachedCamera.minZ), zM = iM
-        } else this._mode === yM.IgnoreBoundsSizeMode && (zM = this._calculateLowerRadiusFromModelBoundingSphere(MM, rM), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
-        if (this.autoCorrectCameraLimitsAndSensibility) {
-          const iM = rM.subtract(MM).length();
-          this._attachedCamera.panningSensibility = 5e3 / iM, this._attachedCamera.wheelPrecision = 100 / zM
-        }
-        return this._radiusTransition || (this._radiusTransition = JM.b.CreateAnimation("radius", JM.b.ANIMATIONTYPE_FLOAT, 60, yM.EasingFunction)), QM = JM.b.TransitionTo("radius", zM, this._attachedCamera, this._attachedCamera.Hk(), 60, this._radiusTransition, this._framingTime, (() => {
-          this.stopAllAnimations(), SM && SM(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
-        })), QM && this._animatables.push(QM), !0
-      }
-      _calculateLowerRadiusFromModelBoundingSphere(MM, rM) {
-        const iM = this._attachedCamera;
-        if (!iM) return 0;
-        let OM = iM._calculateLowerRadiusFromModelBoundingSphere(MM, rM, this._radiusScale);
-        return iM.lowerRadiusLimit && this._mode === yM.IgnoreBoundsSizeMode && (OM = OM < iM.lowerRadiusLimit ? iM.lowerRadiusLimit : OM), iM.upperRadiusLimit && (OM = OM > iM.upperRadiusLimit ? iM.upperRadiusLimit : OM), OM
-      }
-      _maintainCameraAboveGround() {
-        if (this._elevationReturnTime < 0) return;
-        const MM = LM.b.Now - this._lastInteractionTime,
-          rM = .5 * Math.PI - this._defaultElevation,
-          iM = .5 * Math.PI;
-        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > iM && MM >= this._elevationReturnWaitTime) {
-          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = JM.b.CreateAnimation("beta", JM.b.ANIMATIONTYPE_FLOAT, 60, yM.EasingFunction));
-          const MM = JM.b.TransitionTo("beta", rM, this._attachedCamera, this._attachedCamera.Hk(), 60, this._betaTransition, this._elevationReturnTime, (() => {
-            this._clearAnimationLocks(), this.stopAllAnimations()
-          }));
-          MM && this._animatables.push(MM)
+          yU.q.TransformCoordinatesToRef(this.center, UU, this.centerWorld);
+          const XU = AU._TmpVector3[0];
+          yU.q.TransformNormalFromFloatsToRef(1, 1, 1, UU, XU), this.radiusWorld = Math.max(Math.abs(XU.x), Math.abs(XU.y), Math.abs(XU.z)) * this.radius
         }
       }
-      _clearAnimationLocks() {
-        this._betaIsAnimating = !1
+      isInFrustum(UU) {
+        const XU = this.centerWorld,
+          zU = this.radiusWorld;
+        for (let cU = 0; cU < 6; cU++)
+          if (UU[cU].dotCoordinate(XU) <= -zU) return !1;
+        return !0
       }
-      _applyUserInteraction() {
-        this.isUserIsMoving && (this._lastInteractionTime = LM.b.Now, this.stopAllAnimations(), this._clearAnimationLocks())
+      isCenterInFrustum(UU) {
+        const XU = this.centerWorld;
+        for (let zU = 0; zU < 6; zU++)
+          if (UU[zU].dotCoordinate(XU) < 0) return !1;
+        return !0
       }
-      stopAllAnimations() {
-        for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0] && (this._animatables[0].onAnimationEnd = null, this._animatables[0].stop()), this._animatables.shift()
+      intersectsPoint(UU) {
+        const XU = yU.q.DistanceSquared(this.centerWorld, UU);
+        return !(this.radiusWorld * this.radiusWorld < XU)
       }
-      get isUserIsMoving() {
-        return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
+      static Intersects(UU, XU) {
+        const zU = yU.q.DistanceSquared(UU.centerWorld, XU.centerWorld),
+          cU = UU.radiusWorld + XU.radiusWorld;
+        return !(cU * cU < zU)
+      }
+      static CreateFromCenterAndRadius(UU, XU, zU) {
+        this._TmpVector3[0].YL(UU), this._TmpVector3[1].sUU(0, 0, XU), this._TmpVector3[2].YL(UU), this._TmpVector3[0].addInPlace(this._TmpVector3[1]), this._TmpVector3[2].ZyU(this._TmpVector3[1]);
+        const cU = new AU(this._TmpVector3[0], this._TmpVector3[2]);
+        return cU._worldMatrix = zU || yU.e.Identity(), cU
       }
     }
-    yM.EasingFunction = new class extends hM {
+    AU._TmpVector3 = (0, cU.d)(3, yU.q.Zero);
+    const FU = {
+        min: 0,
+        max: 0
+      },
+      oU = {
+        min: 0,
+        max: 0
+      },
+      DU = (UU, XU, zU) => {
+        const cU = yU.q.Dot(XU.centerWorld, UU),
+          QU = Math.abs(yU.q.Dot(XU.directions[0], UU)) * XU.extendSize.x + Math.abs(yU.q.Dot(XU.directions[1], UU)) * XU.extendSize.y + Math.abs(yU.q.Dot(XU.directions[2], UU)) * XU.extendSize.z;
+        zU.min = cU - QU, zU.max = cU + QU
+      },
+      EU = (UU, XU, zU) => (DU(UU, XU, FU), DU(UU, zU, oU), !(FU.min > oU.max || oU.min > FU.max));
+    class YU {
+      constructor(UU, XU, zU) {
+        this._isLocked = !1, this.boundingBox = new QU.e(UU, XU, zU), this.dyU = new AU(UU, XU, zU)
+      }
+      reConstruct(UU, XU, zU) {
+        this.boundingBox.reConstruct(UU, XU, zU), this.dyU.reConstruct(UU, XU, zU)
+      }
+      get minimum() {
+        return this.boundingBox.minimum
+      }
+      get maximum() {
+        return this.boundingBox.maximum
+      }
+      get isLocked() {
+        return this._isLocked
+      }
+      set isLocked(UU) {
+        this._isLocked = UU
+      }
+      update(UU) {
+        this._isLocked || (this.boundingBox._update(UU), this.dyU._update(UU))
+      }
+      centerOn(UU, XU) {
+        const zU = YU._TmpVector3[0].YL(UU).ZyU(XU),
+          cU = YU._TmpVector3[1].YL(UU).addInPlace(XU);
+        return this.boundingBox.reConstruct(zU, cU, this.boundingBox.getWorldMatrix()), this.dyU.reConstruct(zU, cU, this.boundingBox.getWorldMatrix()), this
+      }
+      encapsulate(UU) {
+        const XU = yU.q.Minimize(this.minimum, UU),
+          zU = yU.q.Maximize(this.maximum, UU);
+        return this.reConstruct(XU, zU, this.boundingBox.getWorldMatrix()), this
+      }
+      encapsulateBoundingInfo(UU) {
+        const XU = yU.l.Matrix[0];
+        this.boundingBox.getWorldMatrix().invertToRef(XU);
+        const zU = yU.l.Sp[0];
+        return yU.q.TransformCoordinatesToRef(UU.boundingBox.minimumWorld, XU, zU), this.encapsulate(zU), yU.q.TransformCoordinatesToRef(UU.boundingBox.maximumWorld, XU, zU), this.encapsulate(zU), this
+      }
+      scale(UU) {
+        return this.boundingBox.scale(UU), this.dyU.scale(UU), this
+      }
+      isInFrustum(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if ((2 === XU || 3 === XU) && this.dyU.isCenterInFrustum(UU)) return !0;
+        if (!this.dyU.isInFrustum(UU)) return !1;
+        return !(1 !== XU && 3 !== XU) || this.boundingBox.isInFrustum(UU)
+      }
+      get diagonalLength() {
+        const UU = this.boundingBox;
+        return UU.maximumWorld.subtractToRef(UU.minimumWorld, YU._TmpVector3[0]).length()
+      }
+      isCompletelyInFrustum(UU) {
+        return this.boundingBox.isCompletelyInFrustum(UU)
+      }
+      _checkCollision(UU) {
+        return UU._canDoCollision(this.dyU.centerWorld, this.dyU.radiusWorld, this.boundingBox.minimumWorld, this.boundingBox.maximumWorld)
+      }
+      intersectsPoint(UU) {
+        return !!this.dyU.centerWorld && (!!this.dyU.intersectsPoint(UU) && !!this.boundingBox.intersectsPoint(UU))
+      }
+      intersects(UU, XU) {
+        if (!AU.Intersects(this.dyU, UU.dyU)) return !1;
+        if (!QU.e.Intersects(this.boundingBox, UU.boundingBox)) return !1;
+        if (!XU) return !0;
+        const zU = this.boundingBox,
+          cU = UU.boundingBox;
+        return !!EU(zU.directions[0], zU, cU) && (!!EU(zU.directions[1], zU, cU) && (!!EU(zU.directions[2], zU, cU) && (!!EU(cU.directions[0], zU, cU) && (!!EU(cU.directions[1], zU, cU) && (!!EU(cU.directions[2], zU, cU) && (!!EU(yU.q.Cross(zU.directions[0], cU.directions[0]), zU, cU) && (!!EU(yU.q.Cross(zU.directions[0], cU.directions[1]), zU, cU) && (!!EU(yU.q.Cross(zU.directions[0], cU.directions[2]), zU, cU) && (!!EU(yU.q.Cross(zU.directions[1], cU.directions[0]), zU, cU) && (!!EU(yU.q.Cross(zU.directions[1], cU.directions[1]), zU, cU) && (!!EU(yU.q.Cross(zU.directions[1], cU.directions[2]), zU, cU) && (!!EU(yU.q.Cross(zU.directions[2], cU.directions[0]), zU, cU) && (!!EU(yU.q.Cross(zU.directions[2], cU.directions[1]), zU, cU) && !!EU(yU.q.Cross(zU.directions[2], cU.directions[2]), zU, cU))))))))))))))
+      }
+    }
+    YU._TmpVector3 = (0, cU.d)(2, yU.q.Zero)
+  },
+  41406: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU,
+      e: () => oU,
+      i: () => FU,
+      m: () => AU
+    });
+    var cU = zU(41246),
+      yU = zU(37819);
+
+    function QU(UU) {
+      -1 === UU.indexOf("vClipPlane") && UU.push("vClipPlane"), -1 === UU.indexOf("vClipPlane2") && UU.push("vClipPlane2"), -1 === UU.indexOf("vClipPlane3") && UU.push("vClipPlane3"), -1 === UU.indexOf("vClipPlane4") && UU.push("vClipPlane4"), -1 === UU.indexOf("vClipPlane5") && UU.push("vClipPlane5"), -1 === UU.indexOf("vClipPlane6") && UU.push("vClipPlane6")
+    }
+
+    function AU(UU, XU, zU) {
+      const cU = !!(UU.clipPlane ?? XU.clipPlane),
+        yU = !!(UU.clipPlane2 ?? XU.clipPlane2),
+        QU = !!(UU.clipPlane3 ?? XU.clipPlane3),
+        AU = !!(UU.clipPlane4 ?? XU.clipPlane4),
+        FU = !!(UU.clipPlane5 ?? XU.clipPlane5),
+        oU = !!(UU.clipPlane6 ?? XU.clipPlane6);
+      cU && zU.push("#define CLIPPLANE"), yU && zU.push("#define CLIPPLANE2"), QU && zU.push("#define CLIPPLANE3"), AU && zU.push("#define CLIPPLANE4"), FU && zU.push("#define CLIPPLANE5"), oU && zU.push("#define CLIPPLANE6")
+    }
+
+    function FU(UU, XU, zU) {
+      let cU = !1;
+      const yU = !!(UU.clipPlane ?? XU.clipPlane),
+        QU = !!(UU.clipPlane2 ?? XU.clipPlane2),
+        AU = !!(UU.clipPlane3 ?? XU.clipPlane3),
+        FU = !!(UU.clipPlane4 ?? XU.clipPlane4),
+        oU = !!(UU.clipPlane5 ?? XU.clipPlane5),
+        DU = !!(UU.clipPlane6 ?? XU.clipPlane6);
+      return zU.CLIPPLANE !== yU && (zU.CLIPPLANE = yU, cU = !0), zU.CLIPPLANE2 !== QU && (zU.CLIPPLANE2 = QU, cU = !0), zU.CLIPPLANE3 !== AU && (zU.CLIPPLANE3 = AU, cU = !0), zU.CLIPPLANE4 !== FU && (zU.CLIPPLANE4 = FU, cU = !0), zU.CLIPPLANE5 !== oU && (zU.CLIPPLANE5 = oU, cU = !0), zU.CLIPPLANE6 !== DU && (zU.CLIPPLANE6 = DU, cU = !0), cU
+    }
+
+    function oU(UU, XU, zU) {
+      let cU = XU.clipPlane ?? zU.clipPlane;
+      DU(UU, "vClipPlane", cU), cU = XU.clipPlane2 ?? zU.clipPlane2, DU(UU, "vClipPlane2", cU), cU = XU.clipPlane3 ?? zU.clipPlane3, DU(UU, "vClipPlane3", cU), cU = XU.clipPlane4 ?? zU.clipPlane4, DU(UU, "vClipPlane4", cU), cU = XU.clipPlane5 ?? zU.clipPlane5, DU(UU, "vClipPlane5", cU), cU = XU.clipPlane6 ?? zU.clipPlane6, DU(UU, "vClipPlane6", cU)
+    }
+
+    function DU(UU, XU, zU) {
+      if (zU) {
+        const QU = cU.d.nS()?.floatingOriginOffset || yU.q.ZeroReadOnly;
+        UU.setFloat4(XU, zU.normal.x, zU.normal.y, zU.normal.z, zU.d + yU.q.Dot(zU.normal, QU))
+      }
+    }
+  },
+  41422: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => cU
+    });
+    class cU {
       constructor() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        super(), this.exponent = MM
+        this._defines = {}, this._currentRank = 32, this._maxRank = -1, this._mesh = null
       }
-      easeInCore(MM) {
-        return this.exponent <= 0 ? MM : (Math.exp(this.exponent * MM) - 1) / (Math.exp(this.exponent) - 1)
+      unBindMesh() {
+        this._mesh = null
       }
-    }, yM.EasingMode = hM.EASINGMODE_EASEINOUT, yM.IgnoreBoundsSizeMode = 0, yM.FitFrustumSidesMode = 1;
-    var lM = iM(41323),
-      EM = iM(41320),
-      UM = iM(41354),
-      GM = iM(41205);
-    let CM = (() => {
-        var MM;
-        let rM, iM = [],
-          jM = [];
-        return MM = class {
-          constructor() {
-            this._currentMousePointerIdDown = -1, this.buttons = (0, OM.m)(this, iM, [0, 1, 2]), this._pointerInput = (0, OM.m)(this, jM)
-          }
-          attachControl(MM) {
-            MM = GM.e.BackCompatCameraNoPreventDefault(arguments);
-            const rM = this.camera.ph(),
-              iM = rM.getInputElement();
-            let OM = 0,
-              SM = null;
-            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = jM => {
-              const aM = jM.event,
-                PM = "touch" === aM.pointerType;
-              if (jM.type !== zM.d.POINTERMOVE && -1 === this.buttons.indexOf(aM.button)) return;
-              const nM = aM.target;
-              if (this._altKey = aM.altKey, this._ctrlKey = aM.ctrlKey, this._metaKey = aM.metaKey, this._shiftKey = aM.shiftKey, this._buttonsPressed = aM.buttons, rM.isPointerLock) {
-                const MM = aM.movementX,
-                  rM = aM.movementY;
-                this.onTouch(null, MM, rM), this._pointA = null, this._pointB = null
-              } else {
-                if (jM.type !== zM.d.POINTERDOWN && jM.type !== zM.d.POINTERDOUBLETAP && PM && this._pointA?.pointerId !== aM.pointerId && this._pointB?.pointerId !== aM.pointerId) return;
-                if (jM.type !== zM.d.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !PM)
-                  if (jM.type === zM.d.POINTERDOUBLETAP) this.onDoubleTap(aM.pointerType, aM);
-                  else if (jM.type !== zM.d.POINTERUP || this._currentMousePointerIdDown !== aM.pointerId && !PM) {
-                  if (jM.type === zM.d.POINTERMOVE)
-                    if (MM || aM.preventDefault(), this._pointA && null === this._pointB) {
-                      const MM = aM.clientX - this._pointA.x,
-                        rM = aM.clientY - this._pointA.y;
-                      this._pointA.x = aM.clientX, this._pointA.y = aM.clientY, this.onTouch(this._pointA, MM, rM)
-                    } else if (this._pointA && this._pointB) {
-                    const MM = this._pointA.pointerId === aM.pointerId ? this._pointA : this._pointB;
-                    MM.x = aM.clientX, MM.y = aM.clientY;
-                    const rM = this._pointA.x - this._pointB.x,
-                      iM = this._pointA.y - this._pointB.y,
-                      PM = rM * rM + iM * iM,
-                      nM = {
-                        x: (this._pointA.x + this._pointB.x) / 2,
-                        y: (this._pointA.y + this._pointB.y) / 2,
-                        pointerId: aM.pointerId,
-                        type: jM.type
-                      };
-                    this.onMultiTouch(this._pointA, this._pointB, OM, PM, SM, nM), SM = nM, OM = PM
+      addFallback(UU, XU) {
+        this._defines[UU] || (UU < this._currentRank && (this._currentRank = UU), UU > this._maxRank && (this._maxRank = UU), this._defines[UU] = new Array), this._defines[UU].push(XU)
+      }
+      addCPUSkinningFallback(UU, XU) {
+        this._mesh = XU, UU < this._currentRank && (this._currentRank = UU), UU > this._maxRank && (this._maxRank = UU)
+      }
+      get hasMoreFallbacks() {
+        return this._currentRank <= this._maxRank
+      }
+      reduce(UU, XU) {
+        if (this._mesh && this._mesh.computeBonesUsingShaders && this._mesh.numBoneInfluencers > 0) {
+          this._mesh.computeBonesUsingShaders = !1, UU = UU.replace("#define NUM_BONE_INFLUENCERS " + this._mesh.numBoneInfluencers, "#define NUM_BONE_INFLUENCERS 0"), XU._bonesComputationForcedToCPU = !0;
+          const zU = this._mesh.nS();
+          for (let UU = 0; UU < zU.meshes.length; UU++) {
+            const cU = zU.meshes[UU];
+            if (cU.material) {
+              if (cU.computeBonesUsingShaders && 0 !== cU.numBoneInfluencers)
+                if (cU.material.getEffect() === XU) cU.computeBonesUsingShaders = !1;
+                else if (cU.uB)
+                for (const UU of cU.uB) {
+                  if (UU.effect === XU) {
+                    cU.computeBonesUsingShaders = !1;
+                    break
                   }
-                } else {
-                  try {
-                    nM?.releasePointerCapture(aM.pointerId)
-                  } catch (QM) {}
-                  PM || (this._pointB = null), rM._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == aM.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == aM.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== OM || SM) && (this.onMultiTouch(this._pointA, this._pointB, OM, 0, SM, null), OM = 0, SM = null), this._currentMousePointerIdDown = -1, this.onButtonUp(aM), MM || aM.preventDefault()
-                } else {
-                  try {
-                    nM?.setPointerCapture(aM.pointerId)
-                  } catch (QM) {}
-                  if (null === this._pointA) this._pointA = {
-                    x: aM.clientX,
-                    y: aM.clientY,
-                    pointerId: aM.pointerId,
-                    type: aM.pointerType,
-                    button: aM.button
-                  };
-                  else {
-                    if (null !== this._pointB) return;
-                    this._pointB = {
-                      x: aM.clientX,
-                      y: aM.clientY,
-                      pointerId: aM.pointerId,
-                      type: aM.pointerType,
-                      button: aM.button
-                    }
-                  } - 1 !== this._currentMousePointerIdDown || PM || (this._currentMousePointerIdDown = aM.pointerId), this.onButtonDown(aM), MM || (aM.preventDefault(), iM && iM.focus())
                 }
-              }
-            }, this._observer = this.camera.Hk()._inputManager._addCameraPointerObserver(this._pointerInput, zM.d.POINTERDOWN | zM.d.POINTERUP | zM.d.POINTERMOVE | zM.d.POINTERDOUBLETAP), this._onLostFocus = () => {
-              this._pointA = this._pointB = null, OM = 0, SM = null, this.onLostFocus()
-            }, this._contextMenuBind = MM => this.onContextMenu(MM), iM && iM.addEventListener("contextmenu", this._contextMenuBind, !1);
-            const jM = this.camera.Hk().ph().getHostWindow();
-            jM && GM.e.RegisterTopRootEvents(jM, [{
-              name: "blur",
-              handler: this._onLostFocus
-            }])
+            } else !this._mesh.material && cU.computeBonesUsingShaders && cU.numBoneInfluencers > 0 && (cU.computeBonesUsingShaders = !1)
           }
-          detachControl() {
-            if (this._onLostFocus) {
-              const MM = this.camera.Hk().ph().getHostWindow();
-              MM && GM.e.UnregisterTopRootEvents(MM, [{
-                name: "blur",
-                handler: this._onLostFocus
-              }])
-            }
-            if (this._observer) {
-              if (this.camera.Hk()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
-                const MM = this.camera.Hk().ph().getInputElement();
-                MM && MM.removeEventListener("contextmenu", this._contextMenuBind)
-              }
-              this._onLostFocus = null
-            }
-            this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._currentMousePointerIdDown = -1
-          }
-          getClassName() {
-            return "BaseCameraPointersInput"
-          }
-          getSimpleName() {
-            return "pointers"
-          }
-          onDoubleTap(MM, rM) {}
-          onTouch(MM, rM, iM) {}
-          onMultiTouch(MM, rM, iM, OM, SM, jM) {}
-          onContextMenu(MM) {
-            MM.preventDefault()
-          }
-          onButtonDown(MM) {}
-          onButtonUp(MM) {}
-          onLostFocus() {}
-        }, (() => {
-          const aM = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          rM = [(0, SM.L)()], (0, OM.i)(null, null, rM, {
-            kind: "field",
-            name: "buttons",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "buttons" in MM,
-              get: MM => MM.buttons,
-              set: (MM, rM) => {
-                MM.buttons = rM
-              }
-            },
-            metadata: aM
-          }, iM, jM), aM && Object.defineProperty(MM, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: aM
-          })
-        })(), MM
-      })(),
-      eM = (() => {
-        var MM;
-        let rM, iM, jM, aM = CM,
-          PM = [],
-          nM = [],
-          QM = [],
-          zM = [],
-          LM = [],
-          mM = [];
-        return MM = class extends aM {
-          constructor() {
-            super(...arguments), this.pinchZoom = (0, OM.m)(this, PM, !0), this.multiTouchPanning = ((0, OM.m)(this, nM), (0, OM.m)(this, QM, !0)), this.multiTouchPanAndZoom = ((0, OM.m)(this, zM), (0, OM.m)(this, LM, !0)), this._isPinching = ((0, OM.m)(this, mM), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
-          }
-          _computePinchZoom(MM, rM) {}
-          _computeMultiTouchPanning(MM, rM) {}
-          onMultiTouch(MM, rM, iM, OM, SM, jM) {
-            0 === iM && null === SM || 0 === OM && null === jM || (this.multiTouchPanAndZoom ? (this._computePinchZoom(iM, OM), this._computeMultiTouchPanning(SM, jM)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(iM, OM), this._isPinching = !0) : this._computeMultiTouchPanning(SM, jM)) : this.multiTouchPanning ? this._computeMultiTouchPanning(SM, jM) : this.pinchZoom && this._computePinchZoom(iM, OM))
-          }
-          onButtonUp(MM) {
-            this._twoFingerActivityCount = 0, this._isPinching = !1
-          }
-          onLostFocus() {
-            this._twoFingerActivityCount = 0, this._isPinching = !1
-          }
-        }, (() => {
-          const HM = "function" === typeof Symbol && Symbol.metadata ? Object.create(aM[Symbol.metadata] ?? null) : void 0;
-          rM = [(0, SM.L)()], iM = [(0, SM.L)()], jM = [(0, SM.L)()], (0, OM.i)(null, null, rM, {
-            kind: "field",
-            name: "pinchZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "pinchZoom" in MM,
-              get: MM => MM.pinchZoom,
-              set: (MM, rM) => {
-                MM.pinchZoom = rM
-              }
-            },
-            metadata: HM
-          }, PM, nM), (0, OM.i)(null, null, iM, {
-            kind: "field",
-            name: "multiTouchPanning",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "multiTouchPanning" in MM,
-              get: MM => MM.multiTouchPanning,
-              set: (MM, rM) => {
-                MM.multiTouchPanning = rM
-              }
-            },
-            metadata: HM
-          }, QM, zM), (0, OM.i)(null, null, jM, {
-            kind: "field",
-            name: "multiTouchPanAndZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "multiTouchPanAndZoom" in MM,
-              get: MM => MM.multiTouchPanAndZoom,
-              set: (MM, rM) => {
-                MM.multiTouchPanAndZoom = rM
-              }
-            },
-            metadata: HM
-          }, LM, mM), HM && Object.defineProperty(MM, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: HM
-          })
-        })(), MM
-      })(),
-      bM = (() => {
-        var MM;
-        let rM, iM, jM, aM, PM, nM, QM, zM = eM,
-          LM = [],
-          mM = [],
-          HM = [],
-          hM = [],
-          JM = [],
-          dM = [],
-          yM = [],
-          lM = [],
-          EM = [],
-          UM = [],
-          GM = [],
-          CM = [],
-          bM = [],
-          wM = [];
-        return MM = class extends zM {
-          constructor() {
-            super(...arguments), this.buttons = (0, OM.m)(this, LM, [0, 1, 2]), this.angularSensibilityX = ((0, OM.m)(this, mM), (0, OM.m)(this, HM, 1e3)), this.angularSensibilityY = ((0, OM.m)(this, hM), (0, OM.m)(this, JM, 1e3)), this.pinchPrecision = ((0, OM.m)(this, dM), (0, OM.m)(this, yM, 12)), this.pinchDeltaPercentage = ((0, OM.m)(this, lM), (0, OM.m)(this, EM, 0)), this.useNaturalPinchZoom = ((0, OM.m)(this, UM), (0, OM.m)(this, GM, !1)), this.panningSensibility = ((0, OM.m)(this, CM), (0, OM.m)(this, bM, 1e3)), this.pinchInwards = ((0, OM.m)(this, wM), !0), this._activeEntry = null, this._pointerLockConditions = {
-              button: 0,
-              modifiers: {}
-            }, this._pointerModifiers = {
-              ctrl: !1,
-              alt: !1,
-              shift: !1
-            }, this._pointerConditions = {
-              modifiers: this._pointerModifiers
-            }
-          }
-          getClassName() {
-            return "ArcRotateCameraPointersInput"
-          }
-          _computeMultiTouchPanning(MM, rM) {
-            if (MM && rM) {
-              const iM = rM.x - MM.x,
-                OM = rM.y - MM.y,
-                SM = this.camera.movement.input.getEntry("pointer", "pan"),
-                jM = SM?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-              0 !== jM && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -iM * jM, this.camera.movement.panAccumulatedPixels.y += OM * jM)
-            }
-          }
-          _computePinchZoom(rM, iM) {
-            const OM = this.camera.radius || MM.MinimumRadiusForPinch;
-            if (this.useNaturalPinchZoom) this.camera.radius = OM * Math.sqrt(rM) / Math.sqrt(iM);
-            else if (this.pinchDeltaPercentage) {
-              const MM = .001 * (iM - rM) * OM * this.pinchDeltaPercentage;
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += MM
-            } else {
-              const MM = (iM - rM) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += MM
-            }
-          }
-          onTouch(MM, rM, iM) {
-            const OM = this._activeEntry ?? (this.camera.ph().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
-            if (OM)
-              if ("pan" === OM.interaction) {
-                const MM = OM.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-                0 !== MM && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -rM * MM, this.camera.movement.panAccumulatedPixels.y += iM * MM)
-              } else if ("rotate" === OM.interaction) {
-              const MM = OM.yI ?? OM.sensitivity ?? 1 / this.angularSensibilityX,
-                SM = OM.pI ?? OM.sensitivity ?? 1 / this.angularSensibilityY;
-              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -rM * MM, this.camera.movement.rotationAccumulatedPixels.y += -iM * SM
-            }
-          }
-          onDoubleTap() {
-            this.camera.useInputToRestoreState && this.camera.restoreState()
-          }
-          onMultiTouch(MM, rM, iM, OM, SM, jM) {
-            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(OM) - Math.sqrt(iM)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(MM, rM, iM, OM, SM, jM)
-          }
-          onButtonDown(MM) {
-            this._pointerConditions.button = MM.button, this._pointerModifiers.ctrl = MM.ctrlKey, this._pointerModifiers.alt = MM.altKey, this._pointerModifiers.shift = MM.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(MM)
-          }
-          onButtonUp(MM) {
-            this._activeEntry = null, super.onButtonUp(MM)
-          }
-          onLostFocus() {
-            this._activeEntry = null, super.onLostFocus()
-          }
-        }, (() => {
-          const eM = "function" === typeof Symbol && Symbol.metadata ? Object.create(zM[Symbol.metadata] ?? null) : void 0;
-          rM = [(0, SM.L)()], iM = [(0, SM.L)()], jM = [(0, SM.L)()], aM = [(0, SM.L)()], PM = [(0, SM.L)()], nM = [(0, SM.L)()], QM = [(0, SM.L)()], (0, OM.i)(null, null, rM, {
-            kind: "field",
-            name: "buttons",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "buttons" in MM,
-              get: MM => MM.buttons,
-              set: (MM, rM) => {
-                MM.buttons = rM
-              }
-            },
-            metadata: eM
-          }, LM, mM), (0, OM.i)(null, null, iM, {
-            kind: "field",
-            name: "angularSensibilityX",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "angularSensibilityX" in MM,
-              get: MM => MM.angularSensibilityX,
-              set: (MM, rM) => {
-                MM.angularSensibilityX = rM
-              }
-            },
-            metadata: eM
-          }, HM, hM), (0, OM.i)(null, null, jM, {
-            kind: "field",
-            name: "angularSensibilityY",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "angularSensibilityY" in MM,
-              get: MM => MM.angularSensibilityY,
-              set: (MM, rM) => {
-                MM.angularSensibilityY = rM
-              }
-            },
-            metadata: eM
-          }, JM, dM), (0, OM.i)(null, null, aM, {
-            kind: "field",
-            name: "pinchPrecision",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "pinchPrecision" in MM,
-              get: MM => MM.pinchPrecision,
-              set: (MM, rM) => {
-                MM.pinchPrecision = rM
-              }
-            },
-            metadata: eM
-          }, yM, lM), (0, OM.i)(null, null, PM, {
-            kind: "field",
-            name: "pinchDeltaPercentage",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "pinchDeltaPercentage" in MM,
-              get: MM => MM.pinchDeltaPercentage,
-              set: (MM, rM) => {
-                MM.pinchDeltaPercentage = rM
-              }
-            },
-            metadata: eM
-          }, EM, UM), (0, OM.i)(null, null, nM, {
-            kind: "field",
-            name: "useNaturalPinchZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "useNaturalPinchZoom" in MM,
-              get: MM => MM.useNaturalPinchZoom,
-              set: (MM, rM) => {
-                MM.useNaturalPinchZoom = rM
-              }
-            },
-            metadata: eM
-          }, GM, CM), (0, OM.i)(null, null, QM, {
-            kind: "field",
-            name: "panningSensibility",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "panningSensibility" in MM,
-              get: MM => MM.panningSensibility,
-              set: (MM, rM) => {
-                MM.panningSensibility = rM
-              }
-            },
-            metadata: eM
-          }, bM, wM), eM && Object.defineProperty(MM, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: eM
-          })
-        })(), MM.MinimumRadiusForPinch = .001, MM
-      })();
-    UM.c.ArcRotateCameraPointersInput = bM;
-    var wM = iM(41287);
-    let tM = (() => {
-      var MM;
-      let rM, iM, jM, PM, nM, QM, zM, LM, mM, HM, hM, JM = [],
-        dM = [],
-        yM = [],
-        lM = [],
-        EM = [],
-        UM = [],
-        CM = [],
-        eM = [],
-        bM = [],
-        tM = [],
-        gM = [],
-        uM = [],
-        RM = [],
-        pM = [],
-        WM = [],
-        sM = [],
-        DM = [],
-        kM = [],
-        ZM = [],
-        oM = [],
-        fM = [];
-      return MM = class {
+        } else {
+          const XU = this._defines[this._currentRank];
+          if (XU)
+            for (let zU = 0; zU < XU.length; zU++) UU = UU.replace("#define " + XU[zU], "");
+          this._currentRank++
+        }
+        return UU
+      }
+    }
+  },
+  41374: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => kU
+    });
+    var cU = zU(41113),
+      yU = zU(41121),
+      QU = zU(41205),
+      AU = zU(37846),
+      FU = zU(37841),
+      oU = zU(41378),
+      DU = zU(41228),
+      EU = zU(39493),
+      YU = zU(38505),
+      NU = zU(41395),
+      IU = zU(41134);
+    let pU = (() => {
+      var UU;
+      let XU, zU, QU, AU, FU, oU, DU, EU, YU, NU, pU, aU, tU = [];
+      return UU = class {
         constructor() {
-          this.camera = (0, OM.m)(this, JM), this.keysUp = (0, OM.m)(this, dM, [38]), this.keysDown = ((0, OM.m)(this, yM), (0, OM.m)(this, lM, [40])), this.keysLeft = ((0, OM.m)(this, EM), (0, OM.m)(this, UM, [37])), this.keysRight = ((0, OM.m)(this, CM), (0, OM.m)(this, eM, [39])), this.keysReset = ((0, OM.m)(this, bM), (0, OM.m)(this, tM, [220])), this.keysZoomIn = ((0, OM.m)(this, gM), (0, OM.m)(this, uM, [187, 107])), this.keysZoomOut = ((0, OM.m)(this, RM), (0, OM.m)(this, pM, [189, 109])), this.panningSensibility = ((0, OM.m)(this, WM), (0, OM.m)(this, sM, 50)), this.zoomingSensibility = ((0, OM.m)(this, DM), (0, OM.m)(this, kM, 25)), this.angularSpeed = ((0, OM.m)(this, ZM), (0, OM.m)(this, oM, .01)), this._useAltToZoom = ((0, OM.m)(this, fM), !0), this._keys = new Array, this._keyboardModifiers = {
-            ctrl: !1,
-            alt: !1
-          }, this._keyboardConditions = {
-            modifiers: this._keyboardModifiers
-          }, this._rotateDirection = new aM.o, this._panDirection = new aM.o
+          this._func = (0, cU.n)(this, tU), this.reset()
         }
-        get useAltToZoom() {
-          return this._useAltToZoom
+        reset() {
+          this.enabled = !1, this.mask = 255, this.funcRef = 1, this.funcMask = 255, this.func = 519, this.opStencilFail = 7680, this.opDepthFail = 7680, this.opStencilDepthPass = 7681, this.backFunc = 519, this.backOpStencilFail = 7680, this.backOpDepthFail = 7680, this.backOpStencilDepthPass = 7681
         }
-        set useAltToZoom(MM) {
-          this._useAltToZoom = MM, this._applyUseAltToZoomToInputMap()
+        get func() {
+          return this._func
         }
-        _applyUseAltToZoomToInputMap() {
-          if (!this.camera?.movement) return;
-          const MM = this.camera.movement.input,
-            rM = MM.getEntry("keyboard", "zoom", {
-              modifiers: {
-                alt: !0
-              }
-            });
-          !this._useAltToZoom && rM ? MM.inputMap.splice(MM.inputMap.indexOf(rM), 1) : this._useAltToZoom && !rM && MM.addEntry({
-            source: "keyboard",
-            modifiers: {
-              alt: !0
-            },
-            interaction: "zoom"
-          })
+        set func(UU) {
+          this._func = UU
         }
-        attachControl(MM) {
-          MM = GM.e.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.Hk(), this._engine = this._scene.ph(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
-            this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((rM => {
-            const iM = rM.event;
-            if (!iM.metaKey)
-              if (rM.type === wM.b.KEYDOWN) {
-                if (this._ctrlPressed = iM.ctrlKey, this._altPressed = iM.altKey, -1 !== this.keysUp.indexOf(iM.keyCode) || -1 !== this.keysDown.indexOf(iM.keyCode) || -1 !== this.keysLeft.indexOf(iM.keyCode) || -1 !== this.keysRight.indexOf(iM.keyCode) || -1 !== this.keysReset.indexOf(iM.keyCode) || -1 !== this.keysZoomIn.indexOf(iM.keyCode) || -1 !== this.keysZoomOut.indexOf(iM.keyCode)) {
-                  -1 === this._keys.indexOf(iM.keyCode) && this._keys.push(iM.keyCode), iM.preventDefault && (MM || iM.preventDefault())
-                }
-              } else if (-1 !== this.keysUp.indexOf(iM.keyCode) || -1 !== this.keysDown.indexOf(iM.keyCode) || -1 !== this.keysLeft.indexOf(iM.keyCode) || -1 !== this.keysRight.indexOf(iM.keyCode) || -1 !== this.keysReset.indexOf(iM.keyCode) || -1 !== this.keysZoomIn.indexOf(iM.keyCode) || -1 !== this.keysZoomOut.indexOf(iM.keyCode)) {
-              const rM = this._keys.indexOf(iM.keyCode);
-              rM >= 0 && this._keys.splice(rM, 1), iM.preventDefault && (MM || iM.preventDefault())
-            }
-          })))
+        get backFunc() {
+          return this._backFunc
         }
-        detachControl() {
-          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
+        set backFunc(UU) {
+          this._backFunc = UU
         }
-        checkInputs() {
-          if (this._onKeyboardObserver) {
-            const MM = this.camera,
-              rM = MM.movement.input;
-            this._keyboardModifiers.ctrl = this._ctrlPressed, this._keyboardModifiers.alt = this._altPressed;
-            const iM = this._rotateDirection.set(0, 0),
-              OM = this._panDirection.set(0, 0);
-            let SM = 0,
-              jM = 0;
-            for (let aM = 0; aM < this._keys.length; aM++) {
-              const PM = this._keys[aM];
-              if (this._keyboardConditions.key = PM, -1 === this.keysReset.indexOf(PM)) {
-                const MM = rM.resolveInteraction("keyboard", this._keyboardConditions);
-                if (MM)
-                  if ("pan" === MM.interaction) jM = Math.max(jM, MM.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(PM) ? OM.x -= 1 : -1 !== this.keysRight.indexOf(PM) ? OM.x += 1 : -1 !== this.keysUp.indexOf(PM) ? OM.y += 1 : -1 !== this.keysDown.indexOf(PM) && (OM.y -= 1);
-                  else if ("zoom" === MM.interaction) {
-                  const iM = MM.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(PM) || -1 !== this.keysZoomIn.indexOf(PM) ? rM.handlers.zoom(iM) : -1 === this.keysDown.indexOf(PM) && -1 === this.keysZoomOut.indexOf(PM) || rM.handlers.zoom(-iM)
-                } else "rotate" === MM.interaction && (SM = Math.max(SM, MM.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(PM) ? iM.x -= 1 : -1 !== this.keysRight.indexOf(PM) ? iM.x += 1 : -1 !== this.keysUp.indexOf(PM) ? iM.y -= 1 : -1 !== this.keysDown.indexOf(PM) && (iM.y += 1))
-              } - 1 !== this.keysReset.indexOf(PM) && MM.useInputToRestoreState && MM.restoreState()
-            }
-            0 === iM.x && 0 === iM.y || (iM.normalize().scaleInPlace(SM), rM.handlers.rotate(iM.x, iM.y)), 0 === OM.x && 0 === OM.y || (OM.normalize().scaleInPlace(jM), rM.handlers.pan(OM.x, OM.y))
-          }
+        get funcRef() {
+          return this._funcRef
+        }
+        set funcRef(UU) {
+          this._funcRef = UU
+        }
+        get funcMask() {
+          return this._funcMask
+        }
+        set funcMask(UU) {
+          this._funcMask = UU
+        }
+        get opStencilFail() {
+          return this._opStencilFail
+        }
+        set opStencilFail(UU) {
+          this._opStencilFail = UU
+        }
+        get opDepthFail() {
+          return this._opDepthFail
+        }
+        set opDepthFail(UU) {
+          this._opDepthFail = UU
+        }
+        get opStencilDepthPass() {
+          return this._opStencilDepthPass
+        }
+        set opStencilDepthPass(UU) {
+          this._opStencilDepthPass = UU
+        }
+        get backOpStencilFail() {
+          return this._backOpStencilFail
+        }
+        set backOpStencilFail(UU) {
+          this._backOpStencilFail = UU
+        }
+        get backOpDepthFail() {
+          return this._backOpDepthFail
+        }
+        set backOpDepthFail(UU) {
+          this._backOpDepthFail = UU
+        }
+        get backOpStencilDepthPass() {
+          return this._backOpStencilDepthPass
+        }
+        set backOpStencilDepthPass(UU) {
+          this._backOpStencilDepthPass = UU
+        }
+        get mask() {
+          return this._mask
+        }
+        set mask(UU) {
+          this._mask = UU
+        }
+        get enabled() {
+          return this._enabled
+        }
+        set enabled(UU) {
+          this._enabled = UU
         }
         getClassName() {
-          return "ArcRotateCameraKeyboardMoveInput"
+          return "MaterialStencilState"
         }
-        getSimpleName() {
-          return "keyboard"
+        copyTo(UU) {
+          IU.b.Clone((() => UU), this)
+        }
+        serialize() {
+          return IU.b.Serialize(this)
+        }
+        parse(UU, XU, zU) {
+          IU.b.Parse((() => this), UU, XU, zU)
         }
       }, (() => {
-        const aM = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        rM = [(0, SM.L)()], iM = [(0, SM.L)()], jM = [(0, SM.L)()], PM = [(0, SM.L)()], nM = [(0, SM.L)()], QM = [(0, SM.L)()], zM = [(0, SM.L)()], LM = [(0, SM.L)()], mM = [(0, SM.L)()], HM = [(0, SM.L)()], hM = [(0, SM.L)()], (0, OM.i)(MM, null, hM, {
+        const IU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        XU = [(0, yU.I)()], zU = [(0, yU.I)()], QU = [(0, yU.I)()], AU = [(0, yU.I)()], FU = [(0, yU.I)()], oU = [(0, yU.I)()], DU = [(0, yU.I)()], EU = [(0, yU.I)()], YU = [(0, yU.I)()], NU = [(0, yU.I)()], pU = [(0, yU.I)()], aU = [(0, yU.I)()], (0, cU.j)(UU, null, XU, {
           kind: "getter",
-          name: "useAltToZoom",
+          name: "func",
           static: !1,
           private: !1,
           access: {
-            has: MM => "useAltToZoom" in MM,
-            get: MM => MM.useAltToZoom
+            has: UU => "func" in UU,
+            get: UU => UU.func
           },
-          metadata: aM
-        }, null, JM), (0, OM.i)(null, null, rM, {
-          kind: "field",
-          name: "keysUp",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, zU, {
+          kind: "getter",
+          name: "backFunc",
           static: !1,
           private: !1,
           access: {
-            has: MM => "keysUp" in MM,
-            get: MM => MM.keysUp,
-            set: (MM, rM) => {
-              MM.keysUp = rM
-            }
+            has: UU => "backFunc" in UU,
+            get: UU => UU.backFunc
           },
-          metadata: aM
-        }, dM, yM), (0, OM.i)(null, null, iM, {
-          kind: "field",
-          name: "keysDown",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, QU, {
+          kind: "getter",
+          name: "funcRef",
           static: !1,
           private: !1,
           access: {
-            has: MM => "keysDown" in MM,
-            get: MM => MM.keysDown,
-            set: (MM, rM) => {
-              MM.keysDown = rM
-            }
+            has: UU => "funcRef" in UU,
+            get: UU => UU.funcRef
           },
-          metadata: aM
-        }, lM, EM), (0, OM.i)(null, null, jM, {
-          kind: "field",
-          name: "keysLeft",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, AU, {
+          kind: "getter",
+          name: "funcMask",
           static: !1,
           private: !1,
           access: {
-            has: MM => "keysLeft" in MM,
-            get: MM => MM.keysLeft,
-            set: (MM, rM) => {
-              MM.keysLeft = rM
-            }
+            has: UU => "funcMask" in UU,
+            get: UU => UU.funcMask
           },
-          metadata: aM
-        }, UM, CM), (0, OM.i)(null, null, PM, {
-          kind: "field",
-          name: "keysRight",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, FU, {
+          kind: "getter",
+          name: "opStencilFail",
           static: !1,
           private: !1,
           access: {
-            has: MM => "keysRight" in MM,
-            get: MM => MM.keysRight,
-            set: (MM, rM) => {
-              MM.keysRight = rM
-            }
+            has: UU => "opStencilFail" in UU,
+            get: UU => UU.opStencilFail
           },
-          metadata: aM
-        }, eM, bM), (0, OM.i)(null, null, nM, {
-          kind: "field",
-          name: "keysReset",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, oU, {
+          kind: "getter",
+          name: "opDepthFail",
           static: !1,
           private: !1,
           access: {
-            has: MM => "keysReset" in MM,
-            get: MM => MM.keysReset,
-            set: (MM, rM) => {
-              MM.keysReset = rM
-            }
+            has: UU => "opDepthFail" in UU,
+            get: UU => UU.opDepthFail
           },
-          metadata: aM
-        }, tM, gM), (0, OM.i)(null, null, QM, {
-          kind: "field",
-          name: "keysZoomIn",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, DU, {
+          kind: "getter",
+          name: "opStencilDepthPass",
           static: !1,
           private: !1,
           access: {
-            has: MM => "keysZoomIn" in MM,
-            get: MM => MM.keysZoomIn,
-            set: (MM, rM) => {
-              MM.keysZoomIn = rM
-            }
+            has: UU => "opStencilDepthPass" in UU,
+            get: UU => UU.opStencilDepthPass
           },
-          metadata: aM
-        }, uM, RM), (0, OM.i)(null, null, zM, {
-          kind: "field",
-          name: "keysZoomOut",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, EU, {
+          kind: "getter",
+          name: "backOpStencilFail",
           static: !1,
           private: !1,
           access: {
-            has: MM => "keysZoomOut" in MM,
-            get: MM => MM.keysZoomOut,
-            set: (MM, rM) => {
-              MM.keysZoomOut = rM
-            }
+            has: UU => "backOpStencilFail" in UU,
+            get: UU => UU.backOpStencilFail
           },
-          metadata: aM
-        }, pM, WM), (0, OM.i)(null, null, LM, {
-          kind: "field",
-          name: "panningSensibility",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, YU, {
+          kind: "getter",
+          name: "backOpDepthFail",
           static: !1,
           private: !1,
           access: {
-            has: MM => "panningSensibility" in MM,
-            get: MM => MM.panningSensibility,
-            set: (MM, rM) => {
-              MM.panningSensibility = rM
-            }
+            has: UU => "backOpDepthFail" in UU,
+            get: UU => UU.backOpDepthFail
           },
-          metadata: aM
-        }, sM, DM), (0, OM.i)(null, null, mM, {
-          kind: "field",
-          name: "zoomingSensibility",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, NU, {
+          kind: "getter",
+          name: "backOpStencilDepthPass",
           static: !1,
           private: !1,
           access: {
-            has: MM => "zoomingSensibility" in MM,
-            get: MM => MM.zoomingSensibility,
-            set: (MM, rM) => {
-              MM.zoomingSensibility = rM
-            }
+            has: UU => "backOpStencilDepthPass" in UU,
+            get: UU => UU.backOpStencilDepthPass
           },
-          metadata: aM
-        }, kM, ZM), (0, OM.i)(null, null, HM, {
-          kind: "field",
-          name: "angularSpeed",
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, pU, {
+          kind: "getter",
+          name: "mask",
           static: !1,
           private: !1,
           access: {
-            has: MM => "angularSpeed" in MM,
-            get: MM => MM.angularSpeed,
-            set: (MM, rM) => {
-              MM.angularSpeed = rM
-            }
+            has: UU => "mask" in UU,
+            get: UU => UU.mask
           },
-          metadata: aM
-        }, oM, fM), aM && Object.defineProperty(MM, Symbol.metadata, {
+          metadata: IU
+        }, null, tU), (0, cU.j)(UU, null, aU, {
+          kind: "getter",
+          name: "enabled",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "enabled" in UU,
+            get: UU => UU.enabled
+          },
+          metadata: IU
+        }, null, tU), IU && Object.defineProperty(UU, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: aM
+          value: IU
         })
-      })(), MM
+      })(), UU
     })();
-    UM.c.ArcRotateCameraKeyboardMoveInput = tM;
-    var gM = iM(38744),
-      uM = iM(41295);
-    let RM = (() => {
-      var MM;
-      let rM, iM, jM, nM = [],
-        QM = [],
-        LM = [],
-        HM = [],
-        hM = [],
-        JM = [];
-      return MM = class {
-        constructor() {
-          this.wheelPrecision = (0, OM.m)(this, nM, 3), this.zoomToMouseLocation = ((0, OM.m)(this, QM), (0, OM.m)(this, LM, !1)), this.wheelDeltaPercentage = ((0, OM.m)(this, HM), (0, OM.m)(this, hM, 0)), this.customComputeDeltaFromMouseWheel = ((0, OM.m)(this, JM), null), this._viewOffset = new aM.q(0, 0, 0), this._globalOffset = new aM.q(0, 0, 0), this._inertialPanning = aM.q.Zero(), this._zoomToMouseRadiusOffset = 0
+    var aU = zU(41400),
+      tU = zU(41017),
+      gU = zU(40989);
+    let kU = (() => {
+      var UU;
+      let XU, zU, gU, kU, GU, BU, ZU, RU, PU, WU, dU, LU, eU, CU, wU, qU, OU, SU, rU, uU, fU, iU, HU, MU, vU, VU, sU, nU, mU, lU = [],
+        xU = [],
+        JU = [],
+        jU = [],
+        KU = [],
+        bU = [],
+        TU = [],
+        hU = [],
+        UX = [],
+        XX = [],
+        zX = [],
+        cX = [],
+        yX = [],
+        QX = [],
+        AX = [],
+        FX = [],
+        oX = [],
+        DX = [],
+        EX = [],
+        YX = [],
+        NX = [],
+        IX = [],
+        pX = [],
+        aX = [],
+        tX = [],
+        gX = [],
+        kX = [],
+        GX = [],
+        BX = [],
+        ZX = [],
+        RX = [],
+        PX = [],
+        WX = [],
+        dX = [],
+        LX = [],
+        eX = [],
+        CX = [],
+        wX = [],
+        qX = [],
+        OX = [],
+        SX = [],
+        rX = [],
+        uX = [],
+        fX = [],
+        iX = [],
+        HX = [],
+        MX = [],
+        vX = [],
+        VX = [],
+        sX = [],
+        nX = [];
+      return UU = class {
+        get useVertexPulling() {
+          return this._useVertexPulling
         }
-        _computeDeltaFromMouseWheelLegacyEvent(MM, rM) {
-          let iM;
-          const OM = .01 * MM * this.wheelDeltaPercentage * rM;
-          return iM = MM > 0 ? OM / (1 + this.wheelDeltaPercentage) : OM * (1 + this.wheelDeltaPercentage), iM
+        set useVertexPulling(XU) {
+          this._useVertexPulling !== XU && (this._useVertexPulling = XU, this.OzU(UU.MiscDirtyFlag))
         }
-        attachControl(MM) {
-          MM = GM.e.BackCompatCameraNoPreventDefault(arguments), this._wheel = rM => {
-            if (rM.type !== zM.d.POINTERWHEEL) return;
-            const iM = rM.event;
-            let OM;
-            const SM = iM.deltaMode === uM.c.DOM_DELTA_LINE ? 40 : 1,
-              jM = -iM.deltaY * SM;
-            if (this.customComputeDeltaFromMouseWheel) OM = this.customComputeDeltaFromMouseWheel(jM, this, iM);
-            else if (this.wheelDeltaPercentage) {
-              if (OM = this._computeDeltaFromMouseWheelLegacyEvent(jM, this.camera.radius), OM > 0) {
-                const MM = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
-                let rM = this.camera.radius,
-                  iM = MM + OM;
-                for (let OM = 0; OM < 20 && !(rM <= iM) && !(Math.abs(iM * this.camera.inertia) < .001); OM++) rM -= iM, iM *= this.camera.inertia;
-                rM = (0, PM.Clamp)(rM, 0, Number.MAX_VALUE), OM = this._computeDeltaFromMouseWheelLegacyEvent(jM, rM)
-              }
-            } else {
-              const MM = this.camera.movement.input.getEntry("wheel", "zoom");
-              OM = jM * (MM?.sensitivity ?? 1 / (40 * this.wheelPrecision))
-            }
-            OM && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(OM)) : this.camera.movement.zoomAccumulatedPixels += OM), iM.preventDefault && (MM || iM.preventDefault())
-          }, this._observer = this.camera.Hk()._inputManager._addCameraPointerObserver(this._wheel, zM.d.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.P_(0)
+        get _supportGlowLayer() {
+          return !1
         }
-        detachControl() {
-          this._observer && (this.camera.Hk()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
+        set _glowModeEnabled(UU) {}
+        get shaderLanguage() {
+          return this._shaderLanguage
         }
-        checkInputs() {
-          if (!this.zoomToMouseLocation) return;
-          const MM = this.camera;
-          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(MM.inertialAlphaOffset) + Math.abs(MM.inertialBetaOffset) + Math.abs(MM.inertialRadiusOffset)) {
-            this._updateHitPlane(), MM.target.addInPlace(this._inertialPanning), MM.radius -= this._zoomToMouseRadiusOffset;
-            const rM = MM.movement.getFrameIndependentDecay(MM.inertia);
-            this._inertialPanning.scaleInPlace(rM), this._zoomToMouseRadiusOffset *= rM, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < mM.d && (this._zoomToMouseRadiusOffset = 0)
+        get canRenderToMRT() {
+          return !1
+        }
+        set alpha(XU) {
+          if (this._alpha === XU) return;
+          const zU = this._alpha;
+          this._alpha = XU, 1 !== zU && 1 !== XU || this.OzU(UU.MiscDirtyFlag + UU.PrePassDirtyFlag)
+        }
+        get alpha() {
+          return this._alpha
+        }
+        set backFaceCulling(XU) {
+          this._backFaceCulling !== XU && (this._backFaceCulling = XU, this.OzU(UU.TextureDirtyFlag))
+        }
+        get backFaceCulling() {
+          return this._backFaceCulling
+        }
+        set textureRepetitionMode(XU) {
+          const zU = Math.max(0, Math.min(0 | XU, 4));
+          this._textureRepetitionMode !== zU && (this._textureRepetitionMode = zU, this.OzU(UU.TextureDirtyFlag))
+        }
+        get textureRepetitionMode() {
+          return this._textureRepetitionMode
+        }
+        set cullBackFaces(XU) {
+          this._cullBackFaces !== XU && (this._cullBackFaces = XU, this.OzU(UU.TextureDirtyFlag))
+        }
+        get cullBackFaces() {
+          return this._cullBackFaces
+        }
+        get blockDirtyMechanism() {
+          return this._blockDirtyMechanism
+        }
+        set blockDirtyMechanism(UU) {
+          this._blockDirtyMechanism !== UU && (this._blockDirtyMechanism = UU, UU || this.markDirty())
+        }
+        atomicMaterialsUpdate(UU) {
+          this.blockDirtyMechanism = !0;
+          try {
+            UU(this)
+          } finally {
+            this.blockDirtyMechanism = !1
           }
+        }
+        get hasRenderTargetTextures() {
+          return this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._eventInfo.hasRenderTargetTextures
+        }
+        set onDispose(UU) {
+          this._onDisposeObserver && this.bS.remove(this._onDisposeObserver), this._onDisposeObserver = this.bS.add(UU)
+        }
+        get onBindObservable() {
+          return this._onBindObservable || (this._onBindObservable = new AU.e), this._onBindObservable
+        }
+        set onBind(UU) {
+          this._onBindObserver && this.onBindObservable.remove(this._onBindObserver), this._onBindObserver = this.onBindObservable.add(UU)
+        }
+        get onUnBindObservable() {
+          return this._onUnBindObservable || (this._onUnBindObservable = new AU.e), this._onUnBindObservable
+        }
+        get onEffectCreatedObservable() {
+          return this._onEffectCreatedObservable || (this._onEffectCreatedObservable = new AU.e), this._onEffectCreatedObservable
+        }
+        set alphaMode(UU) {
+          this._alphaMode[0] = UU
+        }
+        get alphaMode() {
+          return this._alphaMode[0]
+        }
+        get alphaModes() {
+          return this._alphaMode
+        }
+        setAlphaMode(XU) {
+          let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          this._alphaMode[zU] !== XU && (this._alphaMode[zU] = XU, this.OzU(UU.TextureDirtyFlag))
+        }
+        set needDepthPrePass(UU) {
+          this._needDepthPrePass !== UU && (this._needDepthPrePass = UU, this._needDepthPrePass && (this.checkReadyOnEveryCall = !0))
+        }
+        get needDepthPrePass() {
+          return this._needDepthPrePass
+        }
+        get isPrePassCapable() {
+          return !1
+        }
+        set fogEnabled(XU) {
+          this._fogEnabled !== XU && (this._fogEnabled = XU, this.OzU(UU.MiscDirtyFlag))
+        }
+        get fogEnabled() {
+          return this._fogEnabled
+        }
+        get wireframe() {
+          switch (this._fillMode) {
+            case UU.WireFrameFillMode:
+            case UU.LineListDrawMode:
+            case UU.LineLoopDrawMode:
+            case UU.LineStripDrawMode:
+              return !0
+          }
+          return this._scene.forceWireframe
+        }
+        set wireframe(XU) {
+          this.fillMode = XU ? UU.WireFrameFillMode : UU.TriangleFillMode
+        }
+        get pointsCloud() {
+          switch (this._fillMode) {
+            case UU.PointFillMode:
+            case UU.PointListDrawMode:
+              return !0
+          }
+          return this._scene.forcePointsCloud
+        }
+        set pointsCloud(XU) {
+          this.fillMode = XU ? UU.PointFillMode : UU.TriangleFillMode
+        }
+        get fillMode() {
+          return this._fillMode
+        }
+        set fillMode(XU) {
+          this._fillMode !== XU && (this._fillMode = XU, this.OzU(UU.MiscDirtyFlag))
+        }
+        get useLogarithmicDepth() {
+          return this._useLogarithmicDepth
+        }
+        set useLogarithmicDepth(UU) {
+          const XU = this.nS().qp().getCaps().fragmentDepthSupported;
+          UU && !XU && EU.b.Warn("Logarithmic depth has been requested for a material on a device that doesn't support it."), this._useLogarithmicDepth = UU && XU, this._markAllSubMeshesAsMiscDirty()
+        }
+        get isVertexOutputInvariant() {
+          return this._isVertexOutputInvariant
+        }
+        set isVertexOutputInvariant(UU) {
+          this._isVertexOutputInvariant !== UU && (this._isVertexOutputInvariant = UU, this._markAllSubMeshesAsMiscDirty())
+        }
+        _getDrawWrapper() {
+          return this._drawWrapper
+        }
+        _setDrawWrapper(UU) {
+          this._drawWrapper = UU
+        }
+        constructor(XU, zU, yU) {
+          let oU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          this.customShaderNameResolve = (0, cU.n)(this, lU), this.shadowDepthWrapper = null, this.allowShaderHotSwapping = !0, this._shaderLanguage = 0, this._forceGLSL = !1, this._useVertexPulling = !1, this.id = (0, cU.n)(this, xU, void 0), this.uniqueId = ((0, cU.n)(this, JU), (0, cU.n)(this, jU, void 0)), this._loadedUniqueId = (0, cU.n)(this, KU), this.name = (0, cU.n)(this, bU, void 0), this.metadata = ((0, cU.n)(this, TU), (0, cU.n)(this, hU, null)), this._internalMetadata = (0, cU.n)(this, UX), this.reservedDataStore = null, this.checkReadyOnEveryCall = (0, cU.n)(this, XX, !1), this.checkReadyOnlyOnce = ((0, cU.n)(this, zX), (0, cU.n)(this, cX, !1)), this.state = ((0, cU.n)(this, yX), (0, cU.n)(this, QX, "")), this._alpha = ((0, cU.n)(this, AX), (0, cU.n)(this, FX, 1)), this.inspectableCustomProperties = (0, cU.n)(this, oX), this._backFaceCulling = (0, cU.n)(this, DX, !0), this._textureRepetitionMode = ((0, cU.n)(this, EX), (0, cU.n)(this, YX, 0)), this.textureRepetitionHexTilingParams = ((0, cU.n)(this, NX), (0, cU.n)(this, IX, [1, .6, 7, .5])), this._cullBackFaces = ((0, cU.n)(this, pX), (0, cU.n)(this, aX, !0)), this._blockDirtyMechanism = ((0, cU.n)(this, tX), !1), this.sideOrientation = (0, cU.n)(this, gX, null), this.onCompiled = ((0, cU.n)(this, kX), null), this.onError = null, this.getRenderTargetTextures = null, this.doNotSerialize = !1, this._storeEffectOnSubMeshes = !1, this.animations = null, this.bS = new AU.e, this._onDisposeObserver = null, this._onUnBindObservable = null, this._onBindObserver = null, this._alphaMode = (0, cU.n)(this, GX, [2]), this._needDepthPrePass = ((0, cU.n)(this, BX), (0, cU.n)(this, ZX, !1)), this.disableDepthWrite = ((0, cU.n)(this, RX), (0, cU.n)(this, PX, !1)), this.disableColorWrite = ((0, cU.n)(this, WX), (0, cU.n)(this, dX, !1)), this.forceDepthWrite = ((0, cU.n)(this, LX), (0, cU.n)(this, eX, !1)), this.depthFunction = ((0, cU.n)(this, CX), (0, cU.n)(this, wX, 0)), this.separateCullingPass = ((0, cU.n)(this, qX), (0, cU.n)(this, OX, !1)), this._fogEnabled = ((0, cU.n)(this, SX), (0, cU.n)(this, rX, !0)), this.pointSize = ((0, cU.n)(this, uX), (0, cU.n)(this, fX, 1)), this.zOffset = ((0, cU.n)(this, iX), (0, cU.n)(this, HX, 0)), this.zOffsetUnits = ((0, cU.n)(this, MX), (0, cU.n)(this, vX, 0)), this.clipPlane = (0, cU.n)(this, VX), this.stencil = new pU, this._isVertexOutputInvariant = (0, cU.n)(this, sX, UU.ForceVertexOutputInvariant), this._materialContext = (0, cU.n)(this, nX), this._useUBO = !1, this._fillMode = UU.TriangleFillMode, this._cachedDepthWriteState = !1, this._cachedColorWriteState = !1, this._cachedDepthFunctionState = 0, this._indexInSceneMaterialArray = -1, this.meshMap = null, this._parentContainer = null, this._uniformBufferLayoutBuilt = !1, this._eventInfo = {}, this._callbackPluginEventGeneric = () => {}, this._callbackPluginEventIsReadyForSubMesh = () => {}, this._callbackPluginEventPrepareDefines = () => {}, this._callbackPluginEventPrepareDefinesBeforeAttributes = () => {}, this._callbackPluginEventHardBindForSubMesh = () => {}, this._callbackPluginEventBindForSubMesh = () => {}, this._callbackPluginEventHasRenderTargetTextures = () => {}, this._callbackPluginEventFillRenderTargetTextures = () => {}, this._transparencyMode = null, this.name = XU;
+          const EU = zU || FU.b.LastCreatedScene;
+          EU && (this._scene = EU, this._dirtyCallbacks = {}, this._forceGLSL = oU, this._dirtyCallbacks[1] = this._markAllSubMeshesAsTexturesDirty.bind(this), this._dirtyCallbacks[2] = this._markAllSubMeshesAsLightsDirty.bind(this), this._dirtyCallbacks[4] = this._markAllSubMeshesAsFresnelDirty.bind(this), this._dirtyCallbacks[8] = this._markAllSubMeshesAsAttributesDirty.bind(this), this._dirtyCallbacks[16] = this._markAllSubMeshesAsMiscDirty.bind(this), this._dirtyCallbacks[32] = this._markAllSubMeshesAsPrePassDirty.bind(this), this._dirtyCallbacks[127] = this._markAllSubMeshesAsAllDirty.bind(this), this.id = XU || QU.j.RandomId(), this.uniqueId = this._scene.getUniqueId(), this._materialContext = this._scene.qp().createMaterialContext(), this._drawWrapper = new NU.c(this._scene.qp(), !1), this._drawWrapper.materialContext = this._materialContext, this._uniformBuffer = new DU.b(this._scene.qp(), void 0, void 0, XU), this._useUBO = this.nS().qp().supportsUniformBuffers, this._createUniformBuffer(), yU || this._scene.addMaterial(this), this._scene.useMaterialMeshMap && (this.meshMap = {}), UU.OnEventObservable.notifyObservers(this, 1))
+        }
+        _createUniformBuffer() {
+          const UU = this.nS().qp();
+          this._uniformBuffer?.dispose(), UU.isWebGPU && !this._forceGLSL ? (this._uniformBuffer = new DU.b(UU, void 0, void 0, this.name, !0), this._shaderLanguage = 1) : this._uniformBuffer = new DU.b(this._scene.qp(), void 0, void 0, this.name), this._uniformBufferLayoutBuilt = !1
+        }
+        toString(UU) {
+          return "Name: " + this.name
         }
         getClassName() {
-          return "ArcRotateCameraMouseWheelInput"
+          return "Material"
         }
-        getSimpleName() {
-          return "mousewheel"
+        get _isMaterial() {
+          return !0
         }
-        _updateHitPlane() {
-          const MM = this.camera,
-            rM = MM.target.subtract(MM.position);
-          this._hitPlane = gM.d.FromPositionAndNormal(MM.target, rM)
+        get isFrozen() {
+          return this.checkReadyOnlyOnce
         }
-        _getPosition() {
-          const MM = this.camera,
-            rM = MM.Hk(),
-            iM = rM.createPickingRay(rM.pointerX, rM.pointerY, aM.d.Identity(), MM, !1);
-          0 === MM.targetScreenOffset.x && 0 === MM.targetScreenOffset.y || (this._viewOffset.set(MM.targetScreenOffset.x, MM.targetScreenOffset.y, 0), MM.getViewMatrix().invertToRef(MM._cameraTransformMatrix), this._globalOffset = aM.q.TransformNormal(this._viewOffset, MM._cameraTransformMatrix), iM.origin.addInPlace(this._globalOffset));
-          let OM = 0;
-          return this._hitPlane && (OM = iM.intersectsPlane(this._hitPlane) ?? 0), iM.origin.addInPlace(iM.direction.scaleInPlace(OM))
+        freeze() {
+          this.markDirty(), this.checkReadyOnlyOnce = !0
         }
-        _zoomToMouse(MM) {
-          const rM = this.camera,
-            iM = 1 - rM.inertia,
-            OM = rM.movement.getFrameIndependentInputScale(rM.inertia);
-          if (rM.lowerRadiusLimit) {
-            const SM = rM.lowerRadiusLimit ?? 0;
-            rM.radius - (this._zoomToMouseRadiusOffset + MM * OM) / iM < SM && (MM = ((rM.radius - SM) * iM - this._zoomToMouseRadiusOffset) / OM)
+        unfreeze() {
+          this.markDirty(), this.checkReadyOnlyOnce = !1
+        }
+        isReady(UU, XU) {
+          return !0
+        }
+        isReadyForSubMesh(UU, XU, zU) {
+          const cU = XU.materialDefines;
+          return !!cU && (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = cU, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), this._eventInfo.isReadyForSubMesh)
+        }
+        getEffect() {
+          return this._drawWrapper.effect
+        }
+        nS() {
+          return this._scene
+        }
+        _getEffectiveOrientation(UU) {
+          return null !== this.sideOrientation ? this.sideOrientation : UU.sideOrientation
+        }
+        get transparencyMode() {
+          return this._transparencyMode
+        }
+        set transparencyMode(UU) {
+          this._transparencyMode = UU
+        }
+        get _hasTransparencyMode() {
+          return null != this._transparencyMode
+        }
+        get _transparencyModeIsBlend() {
+          return this._transparencyMode === UU.MATERIAL_ALPHABLEND || this._transparencyMode === UU.MATERIAL_ALPHATESTANDBLEND
+        }
+        get _transparencyModeIsTest() {
+          return this._transparencyMode === UU.MATERIAL_ALPHATEST || this._transparencyMode === UU.MATERIAL_ALPHATESTANDBLEND
+        }
+        get _disableAlphaBlending() {
+          return this._transparencyMode === UU.MATERIAL_OPAQUE || this._transparencyMode === UU.MATERIAL_ALPHATEST
+        }
+        needAlphaBlending() {
+          return this._hasTransparencyMode ? this._transparencyModeIsBlend : !this._disableAlphaBlending && this.alpha < 1
+        }
+        needAlphaBlendingForMesh(UU) {
+          return this._hasTransparencyMode ? this._transparencyModeIsBlend : UU.visibility < 1 || !this._disableAlphaBlending && (UU.hasVertexAlpha || this.needAlphaBlending())
+        }
+        needAlphaTesting() {
+          return !!this._hasTransparencyMode && this._transparencyModeIsTest
+        }
+        needAlphaTestingForMesh(UU) {
+          return this._hasTransparencyMode ? this._transparencyModeIsTest : !this.needAlphaBlendingForMesh(UU) && this.needAlphaTesting()
+        }
+        getAlphaTestTexture() {
+          return null
+        }
+        markDirty() {
+          let XU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const zU = this.nS().meshes;
+          for (const UU of zU)
+            if (UU.uB)
+              for (const zU of UU.uB)
+                if (zU.Hp() === this)
+                  for (const UU of zU._drawWrappers) UU && this._materialContext === UU.materialContext && (UU._wasPreviouslyReady = !1, UU._wasPreviouslyUsingInstances = null, UU._forceRebindOnNextCall = XU);
+          XU && this.OzU(UU.AllDirtyFlag)
+        }
+        _preBind(XU) {
+          let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const cU = this._scene.qp(),
+            yU = (null == zU ? this.sideOrientation : zU) === UU.ClockWiseSideOrientation,
+            QU = XU || this._getDrawWrapper();
+          return (0, tU.c)(QU) && QU.materialContext && (QU.materialContext.useVertexPulling = this.useVertexPulling), cU.enableEffect(QU), cU.setState(this.backFaceCulling, this.zOffset, !1, yU, this._scene._mirroredCameraPosition ? !this.cullBackFaces : this.cullBackFaces, this.stencil, this.zOffsetUnits), yU
+        }
+        bind(UU, XU) {}
+        buildUniformLayout() {
+          const UU = this._uniformBuffer;
+          this._eventInfo.ubo = UU, this._callbackPluginEventGeneric(8, this._eventInfo), UU.create(), this._uniformBufferLayoutBuilt = !0
+        }
+        bindForSubMesh(UU, XU, zU) {
+          const cU = zU._drawWrapper;
+          this._eventInfo.subMesh = zU, this._callbackPluginEventBindForSubMesh(this._eventInfo), cU._forceRebindOnNextCall = !1
+        }
+        bindOnlyWorldMatrix(UU) {}
+        bindView(UU) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : UU.setMatrix("view", this.nS().getViewMatrix())
+        }
+        bindViewProjection(UU) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : (UU.setMatrix("viewProjection", this.nS().getTransformMatrix()), UU.setMatrix("projection", this.nS().getProjectionMatrix()), UU.setMatrix("inverseProjection", this.nS().getInverseProjectionMatrix()))
+        }
+        bindEyePosition(UU, XU) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : this._scene.bindEyePosition(UU, XU)
+        }
+        _afterBind(UU) {
+          let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          if (this._scene._cachedMaterial = this, this._needToBindSceneUbo && XU && (this._needToBindSceneUbo = !1, (0, aU.x)(XU, this.nS().getSceneUniformBuffer()), this._scene.finalizeSceneUbo()), this._scene._cachedVisibility = UU ? UU.visibility : 1, this._onBindObservable && UU && this._onBindObservable.notifyObservers(UU), this.disableDepthWrite) {
+            const UU = this._scene.qp();
+            this._cachedDepthWriteState = UU.getDepthWrite(), UU.setDepthWrite(!1)
           }
-          if (rM.upperRadiusLimit) {
-            const SM = rM.upperRadiusLimit ?? 0;
-            rM.radius - (this._zoomToMouseRadiusOffset + MM * OM) / iM > SM && (MM = ((rM.radius - SM) * iM - this._zoomToMouseRadiusOffset) / OM)
+          if (this.disableColorWrite) {
+            const UU = this._scene.qp();
+            this._cachedColorWriteState = UU.getColorWrite(), UU.setColorWrite(!1)
           }
-          const SM = MM / iM / rM.radius,
-            jM = this._getPosition(),
-            PM = aM.l.sh[6];
-          jM.subtractToRef(rM.target, PM), PM.scaleInPlace(SM), PM.scaleInPlace(iM), PM.scaleInPlace(OM), this._inertialPanning.addInPlace(PM), this._zoomToMouseRadiusOffset += MM * OM
+          if (0 !== this.depthFunction) {
+            const UU = this._scene.qp();
+            this._cachedDepthFunctionState = UU.getDepthFunction() || 0, UU.setDepthFunction(this.depthFunction)
+          }
         }
-        _zeroIfClose(MM) {
-          Math.abs(MM.x) < mM.d && (MM.x = 0), Math.abs(MM.y) < mM.d && (MM.y = 0), Math.abs(MM.z) < mM.d && (MM.z = 0)
+        unbind() {
+          if (this._scene.getSceneUniformBuffer().unbindEffect(), this._onUnBindObservable && this._onUnBindObservable.notifyObservers(this), 0 !== this.depthFunction) {
+            this._scene.qp().setDepthFunction(this._cachedDepthFunctionState)
+          }
+          if (this.disableDepthWrite) {
+            this._scene.qp().setDepthWrite(this._cachedDepthWriteState)
+          }
+          if (this.disableColorWrite) {
+            this._scene.qp().setColorWrite(this._cachedColorWriteState)
+          }
+        }
+        getAnimatables() {
+          return this._eventInfo.animatables = [], this._callbackPluginEventGeneric(256, this._eventInfo), this._eventInfo.animatables
+        }
+        getActiveTextures() {
+          return this._eventInfo.activeTextures = [], this._callbackPluginEventGeneric(512, this._eventInfo), this._eventInfo.activeTextures
+        }
+        hasTexture(UU) {
+          return this._eventInfo.hasTexture = !1, this._eventInfo.texture = UU, this._callbackPluginEventGeneric(1024, this._eventInfo), this._eventInfo.hasTexture
+        }
+        clone(UU) {
+          return null
+        }
+        _clonePlugins(XU, zU) {
+          const cU = {};
+          if (this._serializePlugins(cU), UU._ParsePlugins(cU, XU, this._scene, zU), this.pluginManager)
+            for (const UU of this.pluginManager._plugins) {
+              const zU = XU.pluginManager.getPlugin(UU.name);
+              zU && UU.copyTo(zU)
+            }
+        }
+        getBindedMeshes() {
+          if (this.meshMap) {
+            const UU = [];
+            for (const XU in this.meshMap) {
+              const zU = this.meshMap[XU];
+              zU && UU.push(zU)
+            }
+            return UU
+          }
+          return this._scene.meshes.filter((UU => UU.material === this))
+        }
+        forceCompilation(UU, XU, zU, cU) {
+          const yU = {
+              clipPlane: !1,
+              useInstances: !1,
+              ...zU
+            },
+            QU = this.nS(),
+            AU = this.allowShaderHotSwapping;
+          this.allowShaderHotSwapping = !1;
+          const FU = () => {
+            if (!this._scene || !this._scene.qp()) return;
+            const zU = QU.clipPlane;
+            if (yU.clipPlane && (QU.clipPlane = new YU.d(0, 0, 0, 1)), this._storeEffectOnSubMeshes) {
+              let zU = !0,
+                QU = null;
+              if (UU.uB) {
+                const XU = new oU.d(0, 0, 0, 0, 0, UU, void 0, !1, !1);
+                XU.materialDefines && (XU.materialDefines._renderId = -1), this.isReadyForSubMesh(UU, XU, yU.useInstances) || (XU.effect && XU.effect.getCompilationError() && XU.effect.allFallbacksProcessed() ? QU = XU.effect.getCompilationError() : (zU = !1, setTimeout(FU, 16)))
+              }
+              zU && (this.allowShaderHotSwapping = AU, QU && cU && cU(QU), XU && XU(this))
+            } else this.isReady() ? (this.allowShaderHotSwapping = AU, XU && XU(this)) : setTimeout(FU, 16);
+            yU.clipPlane && (QU.clipPlane = zU)
+          };
+          FU()
+        }
+        async forceCompilationAsync(UU, XU) {
+          return await new Promise(((zU, cU) => {
+            this.forceCompilation(UU, (() => {
+              zU()
+            }), XU, (UU => {
+              cU(UU)
+            }))
+          }))
+        }
+        OzU(XU) {
+          this.nS().blockMaterialDirtyMechanism || this._blockDirtyMechanism || (UU._DirtyCallbackArray.length = 0, XU & UU.ImageProcessingDirtyFlag && UU._DirtyCallbackArray.push(UU._ImageProcessingDirtyCallBack), XU & UU.TextureDirtyFlag && UU._DirtyCallbackArray.push(UU._TextureDirtyCallBack), XU & UU.LightDirtyFlag && UU._DirtyCallbackArray.push(UU._LightsDirtyCallBack), XU & UU.FresnelDirtyFlag && UU._DirtyCallbackArray.push(UU._FresnelDirtyCallBack), XU & UU.AttributesDirtyFlag && UU._DirtyCallbackArray.push(UU._AttributeDirtyCallBack), XU & UU.MiscDirtyFlag && UU._DirtyCallbackArray.push(UU._MiscDirtyCallBack), XU & UU.PrePassDirtyFlag && UU._DirtyCallbackArray.push(UU._PrePassDirtyCallBack), UU._DirtyCallbackArray.length && this._markAllSubMeshesAsDirty(UU._RunDirtyCallBacks), this.nS().resetCachedMaterial())
+        }
+        resetDrawCache() {
+          const UU = this.nS().meshes;
+          for (const XU of UU)
+            if (XU.uB)
+              for (const UU of XU.uB) UU.Hp() === this && UU.resetDrawCache()
+        }
+        _markAllSubMeshesAsDirty(UU) {
+          const XU = this.nS();
+          if (XU.blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
+          const zU = XU.meshes;
+          for (const cU of zU)
+            if (cU.uB)
+              for (const zU of cU.uB) {
+                if ((zU.Hp() || (XU._hasDefaultMaterial ? XU.defaultMaterial : null)) === this)
+                  for (const XU of zU._drawWrappers) XU && XU.defines && XU.defines.markAllAsDirty && this._materialContext === XU.materialContext && UU(XU.defines)
+              }
+        }
+        _markScenePrePassDirty() {
+          if (this.nS().blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
+          const UU = this.nS().enablePrePassRenderer();
+          UU && UU.OzU()
+        }
+        _markAllSubMeshesAsAllDirty() {
+          this._markAllSubMeshesAsDirty(UU._AllDirtyCallBack)
+        }
+        _markAllSubMeshesAsImageProcessingDirty() {
+          this._markAllSubMeshesAsDirty(UU._ImageProcessingDirtyCallBack)
+        }
+        _markAllSubMeshesAsTexturesDirty() {
+          this._markAllSubMeshesAsDirty(UU._TextureDirtyCallBack)
+        }
+        _markAllSubMeshesAsFresnelDirty() {
+          this._markAllSubMeshesAsDirty(UU._FresnelDirtyCallBack)
+        }
+        _markAllSubMeshesAsFresnelAndMiscDirty() {
+          this._markAllSubMeshesAsDirty(UU._FresnelAndMiscDirtyCallBack)
+        }
+        _markAllSubMeshesAsLightsDirty() {
+          this._markAllSubMeshesAsDirty(UU._LightsDirtyCallBack)
+        }
+        _markAllSubMeshesAsAttributesDirty() {
+          this._markAllSubMeshesAsDirty(UU._AttributeDirtyCallBack)
+        }
+        _markAllSubMeshesAsMiscDirty() {
+          this._markAllSubMeshesAsDirty(UU._MiscDirtyCallBack)
+        }
+        _markAllSubMeshesAsPrePassDirty() {
+          this._markAllSubMeshesAsDirty(UU._PrePassDirtyCallBack)
+        }
+        _markAllSubMeshesAsTexturesAndMiscDirty() {
+          this._markAllSubMeshesAsDirty(UU._TextureAndMiscDirtyCallBack)
+        }
+        _checkScenePerformancePriority() {
+          if (0 !== this._scene.performancePriority) {
+            this.checkReadyOnlyOnce = !0;
+            const UU = this._scene.onScenePerformancePriorityChangedObservable.addOnce((() => {
+              this.checkReadyOnlyOnce = !1
+            }));
+            this.bS.add((() => {
+              this._scene.onScenePerformancePriorityChangedObservable.remove(UU)
+            }))
+          }
+        }
+        setPrePassRenderer(UU) {
+          return !1
+        }
+        dispose(UU, XU, zU) {
+          const cU = this.nS();
+          if (cU.stopAnimation(this), cU.freeProcessedMaterials(), cU.removeMaterial(this), this._eventInfo.forceDisposeTextures = XU, this._callbackPluginEventGeneric(2, this._eventInfo), this._parentContainer) {
+            const UU = this._parentContainer.materials.indexOf(this);
+            UU > -1 && this._parentContainer.materials.splice(UU, 1), this._parentContainer = null
+          }
+          if (!0 !== zU)
+            if (this.meshMap)
+              for (const yU in this.meshMap) {
+                const UU = this.meshMap[yU];
+                this._disposeMeshResources(UU)
+              } else {
+                const UU = cU.meshes;
+                for (const XU of UU) this._disposeMeshResources(XU)
+              }
+          this._uniformBuffer.dispose(), this._drawWrapper.effect && (this._storeEffectOnSubMeshes || this._drawWrapper.effect.dispose(), this._drawWrapper.effect = null), this.metadata = null, this.bS.notifyObservers(this), this.bS.clear(), this._onBindObservable && this._onBindObservable.clear(), this._onUnBindObservable && this._onUnBindObservable.clear(), this._onEffectCreatedObservable && this._onEffectCreatedObservable.clear(), this._eventInfo && (this._eventInfo = {})
+        }
+        _disposeMeshResources(UU) {
+          if (!UU) return;
+          const XU = UU.geometry,
+            zU = UU._internalAbstractMeshDataInfo._materialForRenderPass;
+          if (this._storeEffectOnSubMeshes) {
+            if (UU.uB && zU)
+              for (const cU of UU.uB) {
+                const UU = cU._drawWrappers;
+                for (let yU = 0; yU < UU.length; yU++) {
+                  const QU = UU[yU]?.effect;
+                  if (!QU) continue;
+                  zU[yU] === this && (XU?._releaseVertexArrayObject(QU), cU._removeDrawWrapper(yU, !0, !0))
+                }
+              }
+          } else XU?._releaseVertexArrayObject(this._drawWrapper.effect);
+          UU.material !== this || UU.KyU || (UU.material = null)
+        }
+        serialize() {
+          const UU = IU.b.Serialize(this);
+          return UU.stencil = this.stencil.serialize(), UU.uniqueId = this.uniqueId, this._serializePlugins(UU), UU
+        }
+        _serializePlugins(UU) {
+          if (UU.plugins = {}, this.pluginManager)
+            for (const XU of this.pluginManager._plugins) XU.doNotSerialize || (UU.plugins[XU.getClassName()] = XU.serialize())
+        }
+        static ParseAlphaMode(UU, XU) {
+          void 0 !== UU._alphaMode ? XU._alphaMode = Array.isArray(UU._alphaMode) ? [...UU._alphaMode] : [UU._alphaMode] : void 0 !== UU.alphaMode ? XU._alphaMode = Array.isArray(UU.alphaMode) ? [...UU.alphaMode] : [UU.alphaMode] : XU._alphaMode = [2]
+        }
+        static Parse(XU, zU, cU) {
+          if (XU.customType) {
+            if ("BABYLON.PBRMaterial" === XU.customType && XU.overloadedAlbedo && (XU.customType = "BABYLON.LegacyPBRMaterial", !BABYLON.LegacyPBRMaterial)) return EU.b.Error("Your scene is trying to load a legacy version of the PBRMaterial, please, include it from the materials library."), null
+          } else XU.customType = "BABYLON.StandardMaterial";
+          const yU = QU.j.Instantiate(XU.customType).Parse(XU, zU, cU);
+          return yU._loadedUniqueId = XU.uniqueId, UU.ParseAlphaMode(XU, yU), yU
+        }
+        static _ParsePlugins(UU, XU, zU, cU) {
+          if (UU.plugins)
+            for (const yU in UU.plugins) {
+              const AU = UU.plugins[yU];
+              let FU = XU.pluginManager?.getPlugin(AU.name);
+              if (!FU) {
+                const UU = QU.j.Instantiate("BABYLON." + yU);
+                UU && (FU = new UU(XU))
+              }
+              FU?.parse(AU, zU, cU)
+            }
         }
       }, (() => {
-        const aM = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        rM = [(0, SM.L)()], iM = [(0, SM.L)()], jM = [(0, SM.L)()], (0, OM.i)(null, null, rM, {
-          kind: "field",
-          name: "wheelPrecision",
+        const QU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        XU = [(0, yU.I)()], zU = [(0, yU.I)()], gU = [(0, yU.I)()], kU = [(0, yU.I)()], GU = [(0, yU.I)()], BU = [(0, yU.I)()], ZU = [(0, yU.I)()], RU = [(0, yU.I)("alpha")], PU = [(0, yU.I)("backFaceCulling")], WU = [(0, yU.I)("textureRepetitionMode")], dU = [(0, yU.I)("textureRepetitionHexTilingParams")], LU = [(0, yU.I)("cullBackFaces")], eU = [(0, yU.I)()], CU = [(0, yU.I)()], wU = [(0, yU.I)()], qU = [(0, yU.I)()], OU = [(0, yU.I)()], SU = [(0, yU.I)()], rU = [(0, yU.I)()], uU = [(0, yU.I)()], fU = [(0, yU.I)("fogEnabled")], iU = [(0, yU.I)()], HU = [(0, yU.I)()], MU = [(0, yU.I)()], vU = [(0, yU.I)()], VU = [(0, yU.I)()], sU = [(0, yU.I)()], nU = [(0, yU.I)()], mU = [(0, yU.I)()], (0, cU.j)(UU, null, vU, {
+          kind: "getter",
+          name: "pointsCloud",
           static: !1,
           private: !1,
           access: {
-            has: MM => "wheelPrecision" in MM,
-            get: MM => MM.wheelPrecision,
-            set: (MM, rM) => {
-              MM.wheelPrecision = rM
-            }
+            has: UU => "pointsCloud" in UU,
+            get: UU => UU.pointsCloud
           },
-          metadata: aM
-        }, nM, QM), (0, OM.i)(null, null, iM, {
-          kind: "field",
-          name: "zoomToMouseLocation",
+          metadata: QU
+        }, null, lU), (0, cU.j)(UU, null, VU, {
+          kind: "getter",
+          name: "fillMode",
           static: !1,
           private: !1,
           access: {
-            has: MM => "zoomToMouseLocation" in MM,
-            get: MM => MM.zoomToMouseLocation,
-            set: (MM, rM) => {
-              MM.zoomToMouseLocation = rM
-            }
+            has: UU => "fillMode" in UU,
+            get: UU => UU.fillMode
           },
-          metadata: aM
-        }, LM, HM), (0, OM.i)(null, null, jM, {
-          kind: "field",
-          name: "wheelDeltaPercentage",
+          metadata: QU
+        }, null, lU), (0, cU.j)(UU, null, sU, {
+          kind: "getter",
+          name: "useLogarithmicDepth",
           static: !1,
           private: !1,
           access: {
-            has: MM => "wheelDeltaPercentage" in MM,
-            get: MM => MM.wheelDeltaPercentage,
-            set: (MM, rM) => {
-              MM.wheelDeltaPercentage = rM
+            has: UU => "useLogarithmicDepth" in UU,
+            get: UU => UU.useLogarithmicDepth
+          },
+          metadata: QU
+        }, null, lU), (0, cU.j)(UU, null, mU, {
+          kind: "getter",
+          name: "transparencyMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "transparencyMode" in UU,
+            get: UU => UU.transparencyMode
+          },
+          metadata: QU
+        }, null, lU), (0, cU.j)(null, null, XU, {
+          kind: "field",
+          name: "id",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "id" in UU,
+            get: UU => UU.id,
+            set: (UU, XU) => {
+              UU.id = XU
             }
           },
-          metadata: aM
-        }, hM, JM), aM && Object.defineProperty(MM, Symbol.metadata, {
+          metadata: QU
+        }, xU, JU), (0, cU.j)(null, null, zU, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "uniqueId" in UU,
+            get: UU => UU.uniqueId,
+            set: (UU, XU) => {
+              UU.uniqueId = XU
+            }
+          },
+          metadata: QU
+        }, jU, KU), (0, cU.j)(null, null, gU, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "name" in UU,
+            get: UU => UU.name,
+            set: (UU, XU) => {
+              UU.name = XU
+            }
+          },
+          metadata: QU
+        }, bU, TU), (0, cU.j)(null, null, kU, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "metadata" in UU,
+            get: UU => UU.metadata,
+            set: (UU, XU) => {
+              UU.metadata = XU
+            }
+          },
+          metadata: QU
+        }, hU, UX), (0, cU.j)(null, null, GU, {
+          kind: "field",
+          name: "checkReadyOnEveryCall",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "checkReadyOnEveryCall" in UU,
+            get: UU => UU.checkReadyOnEveryCall,
+            set: (UU, XU) => {
+              UU.checkReadyOnEveryCall = XU
+            }
+          },
+          metadata: QU
+        }, XX, zX), (0, cU.j)(null, null, BU, {
+          kind: "field",
+          name: "checkReadyOnlyOnce",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "checkReadyOnlyOnce" in UU,
+            get: UU => UU.checkReadyOnlyOnce,
+            set: (UU, XU) => {
+              UU.checkReadyOnlyOnce = XU
+            }
+          },
+          metadata: QU
+        }, cX, yX), (0, cU.j)(null, null, ZU, {
+          kind: "field",
+          name: "state",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "state" in UU,
+            get: UU => UU.state,
+            set: (UU, XU) => {
+              UU.state = XU
+            }
+          },
+          metadata: QU
+        }, QX, AX), (0, cU.j)(null, null, RU, {
+          kind: "field",
+          name: "_alpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_alpha" in UU,
+            get: UU => UU._alpha,
+            set: (UU, XU) => {
+              UU._alpha = XU
+            }
+          },
+          metadata: QU
+        }, FX, oX), (0, cU.j)(null, null, PU, {
+          kind: "field",
+          name: "_backFaceCulling",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_backFaceCulling" in UU,
+            get: UU => UU._backFaceCulling,
+            set: (UU, XU) => {
+              UU._backFaceCulling = XU
+            }
+          },
+          metadata: QU
+        }, DX, EX), (0, cU.j)(null, null, WU, {
+          kind: "field",
+          name: "_textureRepetitionMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_textureRepetitionMode" in UU,
+            get: UU => UU._textureRepetitionMode,
+            set: (UU, XU) => {
+              UU._textureRepetitionMode = XU
+            }
+          },
+          metadata: QU
+        }, YX, NX), (0, cU.j)(null, null, dU, {
+          kind: "field",
+          name: "textureRepetitionHexTilingParams",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "textureRepetitionHexTilingParams" in UU,
+            get: UU => UU.textureRepetitionHexTilingParams,
+            set: (UU, XU) => {
+              UU.textureRepetitionHexTilingParams = XU
+            }
+          },
+          metadata: QU
+        }, IX, pX), (0, cU.j)(null, null, LU, {
+          kind: "field",
+          name: "_cullBackFaces",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_cullBackFaces" in UU,
+            get: UU => UU._cullBackFaces,
+            set: (UU, XU) => {
+              UU._cullBackFaces = XU
+            }
+          },
+          metadata: QU
+        }, aX, tX), (0, cU.j)(null, null, eU, {
+          kind: "field",
+          name: "sideOrientation",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "sideOrientation" in UU,
+            get: UU => UU.sideOrientation,
+            set: (UU, XU) => {
+              UU.sideOrientation = XU
+            }
+          },
+          metadata: QU
+        }, gX, kX), (0, cU.j)(null, null, CU, {
+          kind: "field",
+          name: "_alphaMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_alphaMode" in UU,
+            get: UU => UU._alphaMode,
+            set: (UU, XU) => {
+              UU._alphaMode = XU
+            }
+          },
+          metadata: QU
+        }, GX, BX), (0, cU.j)(null, null, wU, {
+          kind: "field",
+          name: "_needDepthPrePass",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_needDepthPrePass" in UU,
+            get: UU => UU._needDepthPrePass,
+            set: (UU, XU) => {
+              UU._needDepthPrePass = XU
+            }
+          },
+          metadata: QU
+        }, ZX, RX), (0, cU.j)(null, null, qU, {
+          kind: "field",
+          name: "disableDepthWrite",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "disableDepthWrite" in UU,
+            get: UU => UU.disableDepthWrite,
+            set: (UU, XU) => {
+              UU.disableDepthWrite = XU
+            }
+          },
+          metadata: QU
+        }, PX, WX), (0, cU.j)(null, null, OU, {
+          kind: "field",
+          name: "disableColorWrite",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "disableColorWrite" in UU,
+            get: UU => UU.disableColorWrite,
+            set: (UU, XU) => {
+              UU.disableColorWrite = XU
+            }
+          },
+          metadata: QU
+        }, dX, LX), (0, cU.j)(null, null, SU, {
+          kind: "field",
+          name: "forceDepthWrite",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "forceDepthWrite" in UU,
+            get: UU => UU.forceDepthWrite,
+            set: (UU, XU) => {
+              UU.forceDepthWrite = XU
+            }
+          },
+          metadata: QU
+        }, eX, CX), (0, cU.j)(null, null, rU, {
+          kind: "field",
+          name: "depthFunction",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "depthFunction" in UU,
+            get: UU => UU.depthFunction,
+            set: (UU, XU) => {
+              UU.depthFunction = XU
+            }
+          },
+          metadata: QU
+        }, wX, qX), (0, cU.j)(null, null, uU, {
+          kind: "field",
+          name: "separateCullingPass",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "separateCullingPass" in UU,
+            get: UU => UU.separateCullingPass,
+            set: (UU, XU) => {
+              UU.separateCullingPass = XU
+            }
+          },
+          metadata: QU
+        }, OX, SX), (0, cU.j)(null, null, fU, {
+          kind: "field",
+          name: "_fogEnabled",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_fogEnabled" in UU,
+            get: UU => UU._fogEnabled,
+            set: (UU, XU) => {
+              UU._fogEnabled = XU
+            }
+          },
+          metadata: QU
+        }, rX, uX), (0, cU.j)(null, null, iU, {
+          kind: "field",
+          name: "pointSize",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "pointSize" in UU,
+            get: UU => UU.pointSize,
+            set: (UU, XU) => {
+              UU.pointSize = XU
+            }
+          },
+          metadata: QU
+        }, fX, iX), (0, cU.j)(null, null, HU, {
+          kind: "field",
+          name: "zOffset",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "zOffset" in UU,
+            get: UU => UU.zOffset,
+            set: (UU, XU) => {
+              UU.zOffset = XU
+            }
+          },
+          metadata: QU
+        }, HX, MX), (0, cU.j)(null, null, MU, {
+          kind: "field",
+          name: "zOffsetUnits",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "zOffsetUnits" in UU,
+            get: UU => UU.zOffsetUnits,
+            set: (UU, XU) => {
+              UU.zOffsetUnits = XU
+            }
+          },
+          metadata: QU
+        }, vX, VX), (0, cU.j)(null, null, nU, {
+          kind: "field",
+          name: "_isVertexOutputInvariant",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_isVertexOutputInvariant" in UU,
+            get: UU => UU._isVertexOutputInvariant,
+            set: (UU, XU) => {
+              UU._isVertexOutputInvariant = XU
+            }
+          },
+          metadata: QU
+        }, sX, nX), QU && Object.defineProperty(UU, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: aM
+          value: QU
         })
-      })(), MM
+      })(), UU.TriangleFillMode = 0, UU.WireFrameFillMode = 1, UU.PointFillMode = 2, UU.PointListDrawMode = 3, UU.LineListDrawMode = 4, UU.LineLoopDrawMode = 5, UU.LineStripDrawMode = 6, UU.TriangleStripDrawMode = 7, UU.TriangleFanDrawMode = 8, UU.ClockWiseSideOrientation = 0, UU.CounterClockWiseSideOrientation = 1, UU.ImageProcessingDirtyFlag = 64, UU.TextureDirtyFlag = 1, UU.LightDirtyFlag = 2, UU.FresnelDirtyFlag = 4, UU.AttributesDirtyFlag = 8, UU.MiscDirtyFlag = 16, UU.PrePassDirtyFlag = 32, UU.AllDirtyFlag = 127, UU.MATERIAL_OPAQUE = 0, UU.MATERIAL_ALPHATEST = 1, UU.MATERIAL_ALPHABLEND = 2, UU.MATERIAL_ALPHATESTANDBLEND = 3, UU.MATERIAL_NORMALBLENDMETHOD_WHITEOUT = 0, UU.MATERIAL_NORMALBLENDMETHOD_RNM = 1, UU.LIGHTFALLOFF_PHYSICAL = 0, UU.LIGHTFALLOFF_GLTF = 1, UU.LIGHTFALLOFF_STANDARD = 2, UU.OnEventObservable = new AU.e, UU.ForceVertexOutputInvariant = !1, UU._AllDirtyCallBack = UU => UU.markAllAsDirty(), UU._ImageProcessingDirtyCallBack = UU => UU.markAsImageProcessingDirty(), UU._TextureDirtyCallBack = UU => UU.markAsTexturesDirty(), UU._FresnelDirtyCallBack = UU => UU.markAsFresnelDirty(), UU._MiscDirtyCallBack = UU => UU.markAsMiscDirty(), UU._PrePassDirtyCallBack = UU => UU.markAsPrePassDirty(), UU._LightsDirtyCallBack = UU => UU.markAsLightDirty(), UU._AttributeDirtyCallBack = UU => UU.markAsAttributesDirty(), UU._FresnelAndMiscDirtyCallBack = XU => {
+        UU._FresnelDirtyCallBack(XU), UU._MiscDirtyCallBack(XU)
+      }, UU._TextureAndMiscDirtyCallBack = XU => {
+        UU._TextureDirtyCallBack(XU), UU._MiscDirtyCallBack(XU)
+      }, UU._DirtyCallbackArray = [], UU._RunDirtyCallBacks = XU => {
+        for (const zU of UU._DirtyCallbackArray) zU(XU)
+      }, UU
     })();
-    UM.c.ArcRotateCameraMouseWheelInput = RM;
-    var pM, WM, sM = iM(40990);
-    class DM extends UM.e {
-      constructor(MM) {
-        super(MM)
+    Object.getOwnPropertyDescriptor(kU.prototype, "pluginManager") || Object.defineProperty(kU.prototype, "pluginManager", (0, gU.i)("Material", "pluginManager"))
+  },
+  41413: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => yU
+    });
+    var cU = zU(41003);
+    class yU {
+      static get DiffuseTextureEnabled() {
+        return this._DiffuseTextureEnabled
       }
-      addMouseWheel() {
-        return this.add(new RM), this
+      static set DiffuseTextureEnabled(UU) {
+        this._DiffuseTextureEnabled !== UU && (this._DiffuseTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
       }
-      addPointers() {
-        return this.add(new bM), this
+      static get BaseWeightTextureEnabled() {
+        return this._BaseWeightTextureEnabled
       }
-      addKeyboard() {
-        return this.add(new tM), this
+      static set BaseWeightTextureEnabled(UU) {
+        this._BaseWeightTextureEnabled !== UU && (this._BaseWeightTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
       }
-    }(pM = DM.prototype).addVRDeviceOrientation ?? (pM.addVRDeviceOrientation = (0, sM.j)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (WM = DM.prototype).addGamepad ?? (WM.addGamepad = (0, sM.j)("ArcRotateCameraInputsManager", "addGamepad"));
-    var kM = iM(38085),
-      ZM = iM(41340),
-      oM = iM(41349);
-    class fM extends ZM.b {
-      constructor(MM, rM, iM) {
-        super(MM, rM, iM), this.input = new oM.d({
-          pan: (MM, rM) => {
-            this.panAccumulatedPixels.x += MM, this.panAccumulatedPixels.y += rM
-          },
-          rotate: (MM, rM) => {
-            this.rotationAccumulatedPixels.x += MM, this.rotationAccumulatedPixels.y += rM
-          },
-          zoom: MM => {
-            this.zoomAccumulatedPixels += MM
-          }
-        }, (() => this._createDefaultInputMap()))
+      static get BaseDiffuseRoughnessTextureEnabled() {
+        return this._BaseDiffuseRoughnessTextureEnabled
       }
-      _createDefaultInputMap() {
-        return [{
-          source: "pointer",
-          button: 0,
-          modifiers: {
-            ctrl: !0
-          },
-          interaction: "pan"
-        }, {
-          source: "pointer",
-          button: 0,
-          interaction: "rotate"
-        }, {
-          source: "pointer",
-          button: 2,
-          interaction: "pan"
-        }, {
-          source: "wheel",
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          key: [187, 107, 189, 109],
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          modifiers: {
-            ctrl: !0
-          },
-          interaction: "pan"
-        }, {
-          source: "keyboard",
-          modifiers: {
-            alt: !0
-          },
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          interaction: "rotate"
-        }]
+      static set BaseDiffuseRoughnessTextureEnabled(UU) {
+        this._BaseDiffuseRoughnessTextureEnabled !== UU && (this._BaseDiffuseRoughnessTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get DetailTextureEnabled() {
+        return this._DetailTextureEnabled
+      }
+      static set DetailTextureEnabled(UU) {
+        this._DetailTextureEnabled !== UU && (this._DetailTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get DecalMapEnabled() {
+        return this._DecalMapEnabled
+      }
+      static set DecalMapEnabled(UU) {
+        this._DecalMapEnabled !== UU && (this._DecalMapEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get AmbientTextureEnabled() {
+        return this._AmbientTextureEnabled
+      }
+      static set AmbientTextureEnabled(UU) {
+        this._AmbientTextureEnabled !== UU && (this._AmbientTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get OpacityTextureEnabled() {
+        return this._OpacityTextureEnabled
+      }
+      static set OpacityTextureEnabled(UU) {
+        this._OpacityTextureEnabled !== UU && (this._OpacityTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get ReflectionTextureEnabled() {
+        return this._ReflectionTextureEnabled
+      }
+      static set ReflectionTextureEnabled(UU) {
+        this._ReflectionTextureEnabled !== UU && (this._ReflectionTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get EmissiveTextureEnabled() {
+        return this._EmissiveTextureEnabled
+      }
+      static set EmissiveTextureEnabled(UU) {
+        this._EmissiveTextureEnabled !== UU && (this._EmissiveTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get SpecularTextureEnabled() {
+        return this._SpecularTextureEnabled
+      }
+      static set SpecularTextureEnabled(UU) {
+        this._SpecularTextureEnabled !== UU && (this._SpecularTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get BumpTextureEnabled() {
+        return this._BumpTextureEnabled
+      }
+      static set BumpTextureEnabled(UU) {
+        this._BumpTextureEnabled !== UU && (this._BumpTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get LightmapTextureEnabled() {
+        return this._LightmapTextureEnabled
+      }
+      static set LightmapTextureEnabled(UU) {
+        this._LightmapTextureEnabled !== UU && (this._LightmapTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get RefractionTextureEnabled() {
+        return this._RefractionTextureEnabled
+      }
+      static set RefractionTextureEnabled(UU) {
+        this._RefractionTextureEnabled !== UU && (this._RefractionTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get ColorGradingTextureEnabled() {
+        return this._ColorGradingTextureEnabled
+      }
+      static set ColorGradingTextureEnabled(UU) {
+        this._ColorGradingTextureEnabled !== UU && (this._ColorGradingTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get FresnelEnabled() {
+        return this._FresnelEnabled
+      }
+      static set FresnelEnabled(UU) {
+        this._FresnelEnabled !== UU && (this._FresnelEnabled = UU, cU.c.MarkAllMaterialsAsDirty(4))
+      }
+      static get ClearCoatTextureEnabled() {
+        return this._ClearCoatTextureEnabled
+      }
+      static set ClearCoatTextureEnabled(UU) {
+        this._ClearCoatTextureEnabled !== UU && (this._ClearCoatTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get ClearCoatBumpTextureEnabled() {
+        return this._ClearCoatBumpTextureEnabled
+      }
+      static set ClearCoatBumpTextureEnabled(UU) {
+        this._ClearCoatBumpTextureEnabled !== UU && (this._ClearCoatBumpTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get ClearCoatTintTextureEnabled() {
+        return this._ClearCoatTintTextureEnabled
+      }
+      static set ClearCoatTintTextureEnabled(UU) {
+        this._ClearCoatTintTextureEnabled !== UU && (this._ClearCoatTintTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get SheenTextureEnabled() {
+        return this._SheenTextureEnabled
+      }
+      static set SheenTextureEnabled(UU) {
+        this._SheenTextureEnabled !== UU && (this._SheenTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get AnisotropicTextureEnabled() {
+        return this._AnisotropicTextureEnabled
+      }
+      static set AnisotropicTextureEnabled(UU) {
+        this._AnisotropicTextureEnabled !== UU && (this._AnisotropicTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get ThicknessTextureEnabled() {
+        return this._ThicknessTextureEnabled
+      }
+      static set ThicknessTextureEnabled(UU) {
+        this._ThicknessTextureEnabled !== UU && (this._ThicknessTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get RefractionIntensityTextureEnabled() {
+        return this._ThicknessTextureEnabled
+      }
+      static set RefractionIntensityTextureEnabled(UU) {
+        this._RefractionIntensityTextureEnabled !== UU && (this._RefractionIntensityTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get TranslucencyIntensityTextureEnabled() {
+        return this._TranslucencyIntensityTextureEnabled
+      }
+      static set TranslucencyIntensityTextureEnabled(UU) {
+        this._TranslucencyIntensityTextureEnabled !== UU && (this._TranslucencyIntensityTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get TranslucencyColorTextureEnabled() {
+        return this._TranslucencyColorTextureEnabled
+      }
+      static set TranslucencyColorTextureEnabled(UU) {
+        this._TranslucencyColorTextureEnabled !== UU && (this._TranslucencyColorTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+      static get IridescenceTextureEnabled() {
+        return this._IridescenceTextureEnabled
+      }
+      static set IridescenceTextureEnabled(UU) {
+        this._IridescenceTextureEnabled !== UU && (this._IridescenceTextureEnabled = UU, cU.c.MarkAllMaterialsAsDirty(1))
+      }
+    }
+    yU._DiffuseTextureEnabled = !0, yU._BaseWeightTextureEnabled = !0, yU._BaseDiffuseRoughnessTextureEnabled = !0, yU._DetailTextureEnabled = !0, yU._DecalMapEnabled = !0, yU._AmbientTextureEnabled = !0, yU._OpacityTextureEnabled = !0, yU._ReflectionTextureEnabled = !0, yU._EmissiveTextureEnabled = !0, yU._SpecularTextureEnabled = !0, yU._BumpTextureEnabled = !0, yU._LightmapTextureEnabled = !0, yU._RefractionTextureEnabled = !0, yU._ColorGradingTextureEnabled = !0, yU._FresnelEnabled = !0, yU._ClearCoatTextureEnabled = !0, yU._ClearCoatBumpTextureEnabled = !0, yU._ClearCoatTintTextureEnabled = !0, yU._SheenTextureEnabled = !0, yU._AnisotropicTextureEnabled = !0, yU._ThicknessTextureEnabled = !0, yU._RefractionIntensityTextureEnabled = !0, yU._TranslucencyIntensityTextureEnabled = !0, yU._TranslucencyColorTextureEnabled = !0, yU._IridescenceTextureEnabled = !0
+  },
+  41400: (UU, XU, zU) => {
+    zU.d(XU, {
+      $: () => sU,
+      B: () => BU,
+      D: () => wU,
+      F: () => ZU,
+      H: () => eU,
+      K: () => CU,
+      L: () => IU,
+      O: () => NU,
+      Q: () => VU,
+      S: () => fU,
+      T: () => rU,
+      V: () => SU,
+      Z: () => GU,
+      _: () => qU,
+      bb: () => nU,
+      e: () => OU,
+      fb: () => mU,
+      h: () => RU,
+      i: () => YU,
+      ib: () => jU,
+      kb: () => xU,
+      m: () => gU,
+      mb: () => JU,
+      nb: () => pU,
+      p: () => kU,
+      q: () => LU,
+      t: () => oU,
+      w: () => aU,
+      x: () => tU
+    });
+    var cU = zU(39493),
+      yU = zU(37841),
+      QU = zU(41293),
+      AU = zU(41406),
+      FU = zU(41413);
+
+    function oU(UU, XU, zU) {
+      if (!UU || UU.LOGARITHMICDEPTH || UU.indexOf && UU.indexOf("LOGARITHMICDEPTH") >= 0) {
+        const UU = zU.activeCamera;
+        1 === UU.mode && cU.b.Error("Logarithmic depth is not compatible with orthographic cameras!", 20), XU.setFloat("logarithmicDepthConstant", 2 / (Math.log(UU.maxZ + 1) / Math.LN2))
+      }
+    }
+    const DU = {
+        r: 0,
+        g: 0,
+        b: 0
+      },
+      EU = {
+        NUM_MORPH_INFLUENCERS: 0,
+        NORMAL: !1,
+        TANGENT: !1,
+        UV: !1,
+        UV2: !1,
+        COLOR: !1
+      };
+
+    function YU(UU, XU, zU) {
+      let cU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      zU && UU.fogEnabled && (!XU || XU.applyFog) && 0 !== UU.fogMode && (zU.setFloat4("vFogInfos", UU.fogMode, UU.fogStart, UU.fogEnd, UU.fogDensity), cU ? (UU.fogColor.toLinearSpaceToRef(DU, UU.qp().useExactSrgbConversions), zU.setColor3("vFogColor", DU)) : zU.setColor3("vFogColor", UU.fogColor))
+    }
+
+    function NU(UU, XU, zU, cU, yU, QU, AU, FU, oU, DU) {
+      const YU = UU.numMaxInfluencers || UU.numInfluencers;
+      return YU <= 0 ? 0 : (XU.push("#define MORPHTARGETS"), UU.hasPositions && XU.push("#define MORPHTARGETTEXTURE_HASPOSITIONS"), UU.hasNormals && XU.push("#define MORPHTARGETTEXTURE_HASNORMALS"), UU.hasTangents && XU.push("#define MORPHTARGETTEXTURE_HASTANGENTS"), UU.hasUVs && XU.push("#define MORPHTARGETTEXTURE_HASUVS"), UU.hasUV2s && XU.push("#define MORPHTARGETTEXTURE_HASUV2S"), UU.hasColors && XU.push("#define MORPHTARGETTEXTURE_HASCOLORS"), UU.supportsPositions && yU && XU.push("#define MORPHTARGETS_POSITION"), UU.supportsNormals && QU && XU.push("#define MORPHTARGETS_NORMAL"), UU.supportsTangents && AU && XU.push("#define MORPHTARGETS_TANGENT"), UU.supportsUVs && FU && XU.push("#define MORPHTARGETS_UV"), UU.supportsUV2s && oU && XU.push("#define MORPHTARGETS_UV2"), UU.supportsColors && DU && XU.push("#define MORPHTARGETS_COLOR"), XU.push("#define NUM_MORPH_INFLUENCERS " + YU), UU.isUsingTextureForTargets && XU.push("#define MORPHTARGETS_TEXTURE"), EU.NUM_MORPH_INFLUENCERS = YU, EU.NORMAL = QU, EU.TANGENT = AU, EU.UV = FU, EU.UV2 = oU, EU.COLOR = DU, IU(zU, cU, EU, yU), YU)
+    }
+
+    function IU(UU, XU, zU) {
+      let QU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const AU = zU.NUM_MORPH_INFLUENCERS;
+      if (AU > 0 && yU.b.LastCreatedEngine) {
+        const FU = yU.b.LastCreatedEngine.getCaps().maxVertexAttribs,
+          oU = XU.morphTargetManager;
+        if (oU?.isUsingTextureForTargets) return;
+        const DU = oU && oU.supportsPositions && QU,
+          EU = oU && oU.supportsNormals && zU.NORMAL,
+          YU = oU && oU.supportsTangents && zU.TANGENT,
+          NU = oU && oU.supportsUVs && zU.UV1,
+          IU = oU && oU.supportsUV2s && zU.UV2,
+          pU = oU && oU.supportsColors && zU.VERTEXCOLOR;
+        for (let zU = 0; zU < AU; zU++) DU && UU.push("position" + zU), EU && UU.push("normal" + zU), YU && UU.push("tangent" + zU), NU && UU.push("uv_" + zU), IU && UU.push("uv2_" + zU), pU && UU.push("color" + zU), UU.length > FU && cU.b.Error("Cannot add more vertex attributes for mesh " + XU.name)
       }
     }
 
-    function YM(MM, rM) {
-      return isNaN(MM) ? rM : MM
+    function pU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      UU.push("world0"), UU.push("world1"), UU.push("world2"), UU.push("world3"), XU && (UU.push("previousWorld0"), UU.push("previousWorld1"), UU.push("previousWorld2"), UU.push("previousWorld3"))
     }
-    let NM = (() => {
-        var MM;
-        let rM, iM, nM, zM, LM, hM, JM, UM, CM, eM, bM, wM, tM, gM, uM, RM, pM, WM, sM, kM, ZM, oM, NM, AM, xM, vM, FM, BM, XM = EM.g,
-          IM = [],
-          KM = [],
-          qM = [],
-          TM = [],
-          VM = [],
-          cM = [],
-          Mr = [],
-          rr = [],
-          ir = [],
-          Or = [],
-          Sr = [],
-          jr = [],
-          ar = [],
-          Pr = [],
-          nr = [],
-          Qr = [],
-          zr = [],
-          Lr = [],
-          mr = [],
-          Hr = [],
-          hr = [],
-          Jr = [],
-          dr = [],
-          yr = [],
-          lr = [],
-          Er = [],
-          Ur = [],
-          Gr = [],
-          Cr = [],
-          er = [],
-          br = [],
-          wr = [],
-          tr = [],
-          gr = [],
-          ur = [],
-          Rr = [],
-          pr = [],
-          Wr = [],
-          sr = [],
-          Dr = [],
-          kr = [],
-          Zr = [],
-          or = [],
-          fr = [],
-          Yr = [],
-          Nr = [],
-          Ar = [];
-        return MM = class extends XM {
-          get target() {
-            return this.wL
-          }
-          set target(MM) {
-            this.setTarget(MM)
-          }
-          get targetHost() {
-            return this._targetHost
-          }
-          set targetHost(MM) {
-            MM && this.setTarget(MM)
-          }
-          getTarget() {
-            return this.target
-          }
-          get position() {
-            return this._position
-          }
-          set position(MM) {
-            this.setPosition(MM)
-          }
-          set upVector(MM) {
-            this._upToYMatrix || (this._yToUpMatrix = new aM.d, this._upToYMatrix = new aM.d, this._upVector = aM.q.Zero()), MM.normalize(), this._upVector.jR(MM), this.setMatUp()
-          }
-          get upVector() {
-            return this._upVector
-          }
-          setMatUp() {
-            aM.d.RotationAlignToRef(aM.q.UpReadOnly, this._upVector, this._yToUpMatrix), aM.d.RotationAlignToRef(this._upVector, aM.q.UpReadOnly, this._upToYMatrix)
-          }
-          get inertialAlphaOffset() {
-            if (0 !== this._inertialAlphaOffset) return this._inertialAlphaOffset;
-            if (0 !== this.movement.rotationAccumulatedPixels.x) return this.movement.rotationAccumulatedPixels.x;
-            const MM = this.movement.rotationDeltaCurrentFrame.x;
-            return Math.abs(MM) < this._rotationEpsilon ? 0 : MM
-          }
-          set inertialAlphaOffset(MM) {
-            this._inertialAlphaOffset = MM, 0 === MM && this.movement.resetRotationVelocity()
-          }
-          get inertialBetaOffset() {
-            if (0 !== this._inertialBetaOffset) return this._inertialBetaOffset;
-            if (0 !== this.movement.rotationAccumulatedPixels.y) return this.movement.rotationAccumulatedPixels.y;
-            const MM = this.movement.rotationDeltaCurrentFrame.y;
-            return Math.abs(MM) < this._rotationEpsilon ? 0 : MM
-          }
-          set inertialBetaOffset(MM) {
-            this._inertialBetaOffset = MM, 0 === MM && this.movement.resetRotationVelocity()
-          }
-          get inertialRadiusOffset() {
-            if (0 !== this._inertialRadiusOffset) return this._inertialRadiusOffset;
-            if (0 !== this.movement.zoomAccumulatedPixels) return this.movement.zoomAccumulatedPixels;
-            const MM = this.movement.zoomDeltaCurrentFrame;
-            return Math.abs(MM) < this._rotationEpsilon ? 0 : MM
-          }
-          set inertialRadiusOffset(MM) {
-            this._inertialRadiusOffset = MM, 0 === MM && this.movement.resetZoomVelocity()
-          }
-          get panningInertia() {
-            return this._panningInertia
-          }
-          set panningInertia(MM) {
-            this._panningInertia = MM, this.movement && (this.movement.panInertia = MM)
-          }
-          get inertia() {
-            return this._inertia
-          }
-          set inertia(MM) {
-            this._inertia = MM, this.movement && (this.movement.rotationInertia = MM, this.movement.zoomInertia = MM)
-          }
-          get angularSensibilityX() {
-            const MM = this.inputs.attached.pointers;
-            return MM ? MM.angularSensibilityX : 0
-          }
-          set angularSensibilityX(MM) {
-            const rM = this.inputs.attached.pointers;
-            rM && (rM.angularSensibilityX = MM)
-          }
-          get angularSensibilityY() {
-            const MM = this.inputs.attached.pointers;
-            return MM ? MM.angularSensibilityY : 0
-          }
-          set angularSensibilityY(MM) {
-            const rM = this.inputs.attached.pointers;
-            rM && (rM.angularSensibilityY = MM)
-          }
-          get pinchPrecision() {
-            const MM = this.inputs.attached.pointers;
-            return MM ? MM.pinchPrecision : 0
-          }
-          set pinchPrecision(MM) {
-            const rM = this.inputs.attached.pointers;
-            rM && (rM.pinchPrecision = MM)
-          }
-          get pinchDeltaPercentage() {
-            const MM = this.inputs.attached.pointers;
-            return MM ? MM.pinchDeltaPercentage : 0
-          }
-          set pinchDeltaPercentage(MM) {
-            const rM = this.inputs.attached.pointers;
-            rM && (rM.pinchDeltaPercentage = MM)
-          }
-          get useNaturalPinchZoom() {
-            const MM = this.inputs.attached.pointers;
-            return !!MM && MM.useNaturalPinchZoom
-          }
-          set useNaturalPinchZoom(MM) {
-            const rM = this.inputs.attached.pointers;
-            rM && (rM.useNaturalPinchZoom = MM)
-          }
-          get panningSensibility() {
-            const MM = this.inputs.attached.pointers;
-            return MM ? MM.panningSensibility : 0
-          }
-          set panningSensibility(MM) {
-            const rM = this.inputs.attached.pointers;
-            rM && (rM.panningSensibility = MM)
-          }
-          get keysUp() {
-            const MM = this.inputs.attached.keyboard;
-            return MM ? MM.keysUp : []
-          }
-          set keysUp(MM) {
-            const rM = this.inputs.attached.keyboard;
-            rM && (rM.keysUp = MM)
-          }
-          get keysDown() {
-            const MM = this.inputs.attached.keyboard;
-            return MM ? MM.keysDown : []
-          }
-          set keysDown(MM) {
-            const rM = this.inputs.attached.keyboard;
-            rM && (rM.keysDown = MM)
-          }
-          get keysLeft() {
-            const MM = this.inputs.attached.keyboard;
-            return MM ? MM.keysLeft : []
-          }
-          set keysLeft(MM) {
-            const rM = this.inputs.attached.keyboard;
-            rM && (rM.keysLeft = MM)
-          }
-          get keysRight() {
-            const MM = this.inputs.attached.keyboard;
-            return MM ? MM.keysRight : []
-          }
-          set keysRight(MM) {
-            const rM = this.inputs.attached.keyboard;
-            rM && (rM.keysRight = MM)
-          }
-          get wheelPrecision() {
-            const MM = this.inputs.attached.mousewheel;
-            return MM ? MM.wheelPrecision : 0
-          }
-          set wheelPrecision(MM) {
-            const rM = this.inputs.attached.mousewheel;
-            rM && (rM.wheelPrecision = MM)
-          }
-          get zoomToMouseLocation() {
-            const MM = this.inputs.attached.mousewheel;
-            return !!MM && MM.zoomToMouseLocation
-          }
-          set zoomToMouseLocation(MM) {
-            const rM = this.inputs.attached.mousewheel;
-            rM && (rM.zoomToMouseLocation = MM)
-          }
-          get wheelDeltaPercentage() {
-            const MM = this.inputs.attached.mousewheel;
-            return MM ? MM.wheelDeltaPercentage : 0
-          }
-          set wheelDeltaPercentage(MM) {
-            const rM = this.inputs.attached.mousewheel;
-            rM && (rM.wheelDeltaPercentage = MM)
-          }
-          get _useCtrlForPanning() {
-            return this._useCtrlForPanningInternal
-          }
-          set _useCtrlForPanning(MM) {
-            this._useCtrlForPanningInternal = MM;
-            const rM = this.movement.input,
-              iM = rM.getEntry("keyboard", "pan", {
-                modifiers: {
-                  ctrl: !0
-                }
-              });
-            !MM && iM ? rM.inputMap.splice(rM.inputMap.indexOf(iM), 1) : MM && !iM && rM.addEntry({
-              source: "keyboard",
-              modifiers: {
-                ctrl: !0
-              },
-              interaction: "pan"
-            });
-            const OM = rM.getEntry("pointer", "pan", {
-              modifiers: {
-                ctrl: !0
-              }
-            });
-            !MM && OM ? rM.inputMap.splice(rM.inputMap.indexOf(OM), 1) : MM && !OM && rM.addEntry({
-              source: "pointer",
-              button: 0,
-              modifiers: {
-                ctrl: !0
-              },
-              interaction: "pan"
-            })
-          }
-          get _panningMouseButton() {
-            return this._panningMouseButtonInternal
-          }
-          set _panningMouseButton(MM) {
-            this._panningMouseButtonInternal = MM;
-            const rM = this.movement.input.getEntry("pointer", "pan", {
-              modifiers: {}
-            });
-            rM && (rM.button = MM)
-          }
-          get isInterpolating() {
-            return this._isInterpolating
-          }
-          get bouncingBehavior() {
-            return this._bouncingBehavior
-          }
-          get useBouncingBehavior() {
-            return null != this._bouncingBehavior
-          }
-          set useBouncingBehavior(MM) {
-            MM !== this.useBouncingBehavior && (MM ? (this._bouncingBehavior = new dM, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
-          }
-          get framingBehavior() {
-            return this._framingBehavior
-          }
-          get useFramingBehavior() {
-            return null != this._framingBehavior
-          }
-          set useFramingBehavior(MM) {
-            MM !== this.useFramingBehavior && (MM ? (this._framingBehavior = new yM, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
-          }
-          get autoRotationBehavior() {
-            return this._autoRotationBehavior
-          }
-          get useAutoRotationBehavior() {
-            return null != this._autoRotationBehavior
-          }
-          set useAutoRotationBehavior(MM) {
-            MM !== this.useAutoRotationBehavior && (MM ? (this._autoRotationBehavior = new HM, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
-          }
-          constructor(MM, rM, iM, SM, PM, nM) {
-            var QM;
-            let zM = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-            super(MM, aM.q.Zero(), nM, zM), QM = this, this.alpha = ((0, OM.m)(this, IM), (0, OM.m)(this, KM, void 0)), this.beta = ((0, OM.m)(this, qM), (0, OM.m)(this, TM, void 0)), this.radius = ((0, OM.m)(this, VM), (0, OM.m)(this, cM, void 0)), this.overrideCloneAlphaBetaRadius = ((0, OM.m)(this, Mr), (0, OM.m)(this, rr, void 0)), this.wL = ((0, OM.m)(this, ir), (0, OM.m)(this, Or, void 0)), this._targetHost = ((0, OM.m)(this, Sr), (0, OM.m)(this, jr, void 0)), this._upToYMatrix = (0, OM.m)(this, ar), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, OM.m)(this, Pr, null), this.upperAlphaLimit = ((0, OM.m)(this, nr), (0, OM.m)(this, Qr, null)), this.lowerBetaLimit = ((0, OM.m)(this, zr), (0, OM.m)(this, Lr, .01)), this.upperBetaLimit = ((0, OM.m)(this, mr), (0, OM.m)(this, Hr, Math.PI - .01)), this.lowerRadiusLimit = ((0, OM.m)(this, hr), (0, OM.m)(this, Jr, null)), this.upperRadiusLimit = ((0, OM.m)(this, dr), (0, OM.m)(this, yr, null)), this.lowerTargetYLimit = ((0, OM.m)(this, lr), (0, OM.m)(this, Er, -1 / 0)), this.inertialPanningX = ((0, OM.m)(this, Ur), (0, OM.m)(this, Gr, 0)), this.inertialPanningY = ((0, OM.m)(this, Cr), (0, OM.m)(this, er, 0)), this.pinchToPanMaxDistance = ((0, OM.m)(this, br), (0, OM.m)(this, wr, 20)), this.panningDistanceLimit = ((0, OM.m)(this, tr), (0, OM.m)(this, gr, null)), this.panningOriginTarget = ((0, OM.m)(this, ur), (0, OM.m)(this, Rr, aM.q.Zero())), this._panningInertia = ((0, OM.m)(this, pr), .9), this._inertia = .9, this.zoomOnFactor = (0, OM.m)(this, Wr, 1), this.targetScreenOffset = ((0, OM.m)(this, sr), (0, OM.m)(this, Dr, aM.o.Zero())), this.allowUpsideDown = ((0, OM.m)(this, kr), (0, OM.m)(this, Zr, !0)), this.useInputToRestoreState = ((0, OM.m)(this, or), (0, OM.m)(this, fr, !0)), this.restoreStateInterpolationFactor = ((0, OM.m)(this, Yr), (0, OM.m)(this, Nr, 0)), this._currentInterpolationFactor = ((0, OM.m)(this, Ar), 0), this._viewMatrix = new aM.d, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new aM.q(1, 1, 0), this._transformedDirection = new aM.q, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new jM.d, this.checkCollisions = !1, this.collisionRadius = new aM.q(.5, .5, .5), this._previousPosition = aM.q.Zero(), this._collisionVelocity = aM.q.Zero(), this._newPosition = aM.q.Zero(), this._computationVector = aM.q.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new aM.q(NaN, NaN, NaN), this._goalTargetScreenOffset = new aM.o(NaN, NaN), this._onCollisionPositionChange = function(MM, rM) {
-              let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              iM ? (QM.setPosition(rM), QM.Rm && QM.Rm(iM)) : QM._previousPosition.jR(QM._position);
-              const OM = Math.cos(QM.alpha),
-                SM = Math.sin(QM.alpha),
-                jM = Math.cos(QM.beta);
-              let aM = Math.sin(QM.beta);
-              0 === aM && (aM = 1e-4);
-              const PM = QM._getTargetPosition();
-              QM._computationVector.iMM(QM.radius * OM * aM, QM.radius * jM, QM.radius * SM * aM), PM.addToRef(QM._computationVector, QM._newPosition), QM._position.jR(QM._newPosition);
-              let nM = QM.upVector;
-              QM.allowUpsideDown && QM.beta < 0 && (nM = nM.clone(), nM = nM.VJ()), QM._computeViewMatrix(QM._position, PM, nM), QM._viewMatrix.addAtIndex(12, QM.targetScreenOffset.x), QM._viewMatrix.addAtIndex(13, QM.targetScreenOffset.y), QM._collisionTriggered = !1
-            }, this.wL = aM.q.Zero(), PM && this.setTarget(PM), this.alpha = rM, this.beta = iM, this.radius = SM, this.getViewMatrix(), this.inputs = new DM(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new fM(this.Hk(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
-          }
-          _initCache() {
-            super._initCache(), this._cache.wL = new aM.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = aM.o.Zero()
-          }
-          _updateCache(MM) {
-            MM || super._updateCache(), this._cache.wL.jR(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.jR(this.targetScreenOffset)
-          }
-          _getTargetPosition() {
-            if (this._targetHost && this._targetHost.getAbsolutePosition) {
-              const MM = this._targetHost.getAbsolutePosition();
-              this._targetBoundingCenter ? MM.addToRef(this._targetBoundingCenter, this.wL) : this.wL.jR(MM)
-            }
-            const MM = this._getLockedTargetPosition();
-            return MM || this.wL
-          }
-          storeState() {
-            return this._storedAlpha = this.alpha, this._storedBeta = this.beta, this._storedRadius = this.radius, this._storedTarget = this._getTargetPosition().clone(), this._storedTargetScreenOffset = this.targetScreenOffset.clone(), super.storeState()
-          }
-          _restoreStateValues() {
-            return this.hasStateStored() && this.restoreStateInterpolationFactor > mM.d && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
-          }
-          stopInterpolation() {
-            this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget.set(NaN, NaN, NaN), this._goalTargetScreenOffset.set(NaN, NaN)
-          }
-          interpolateTo() {
-            let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
-              rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
-              iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
-              OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
-              SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
-              jM = arguments.length > 5 ? arguments[5] : void 0;
-            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != jM ? this._currentInterpolationFactor = jM : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = YM(MM, this._goalAlpha), this._goalBeta = YM(rM, this._goalBeta), this._goalRadius = YM(iM, this._goalRadius), this._goalTarget.set(YM(OM.x, this._goalTarget.x), YM(OM.y, this._goalTarget.y), YM(OM.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(YM(SM.x, this._goalTargetScreenOffset.x), YM(SM.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, PM.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, PM.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, PM.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, PM.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
-          }
-          _isSynchronizedViewMatrix() {
-            return !!super._isSynchronizedViewMatrix() && (this._cache.wL.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
-          }
-          attachControl(MM, rM) {
-            let iM = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-              OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            const SM = arguments;
-            rM = GM.e.BackCompatCameraNoPreventDefault(SM), this._useCtrlForPanning = iM, this._panningMouseButton = OM, "boolean" === typeof SM[0] && (SM.length > 1 && (this._useCtrlForPanning = SM[1]), SM.length > 2 && (this._panningMouseButton = SM[2])), this.inputs.attachElement(rM), this._reset = () => {
-              this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0
-            }
-          }
-          detachControl() {
-            this.inputs.detachElement(), this._reset && this._reset()
-          }
-          _applyRotationAndZoomDelta(MM, rM, iM) {
-            const OM = this.invertRotation ? -1 : 1;
-            let SM = MM * this._calculateHandednessMultiplier();
-            this.beta < 0 && (SM *= -1), this.alpha += SM * OM, this.beta += rM * OM, this.radius -= iM
-          }
-          _applyPanDelta(MM, rM) {
-            const iM = aM.l.sh[0].iMM(MM, rM, rM);
-            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), iM.multiplyInPlace(this.panningAxis), aM.q.TransformNormalToRef(iM, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
-              const MM = this.upVector,
-                rM = aM.q.CrossToRef(this._transformedDirection, MM, this._transformedDirection);
-              aM.q.CrossToRef(MM, rM, this._transformedDirection)
-            } else this.panningAxis.y || (this._transformedDirection.y = 0);
-            if (!this._targetHost)
-              if (null !== this.panningDistanceLimit) {
-                this._transformedDirection.addInPlace(this.wL);
-                aM.q.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.wL.jR(this._transformedDirection)
-              } else {
-                if (this.parent) {
-                  const MM = aM.l.Matrix[0];
-                  this.parent.getWorldMatrix().getRotationMatrixToRef(MM), MM.transposeToRef(MM), aM.q.TransformCoordinatesToRef(this._transformedDirection, MM, this._transformedDirection)
-                }
-                this.wL.addInPlace(this._transformedDirection)
-              }
-          }
-          _checkInputs() {
-            if (this._collisionTriggered) return;
-            this.inputs.checkInputs();
-            let MM = !1;
-            this.movement.computeCurrentFrameDeltas();
-            const rM = this.movement.rotationDeltaCurrentFrame,
-              iM = this.movement.zoomDeltaCurrentFrame,
-              OM = this.movement.panDeltaCurrentFrame;
-            if (0 === rM.x && 0 === rM.y && 0 === iM && 0 === OM.x && 0 === OM.y || (MM = !0, 0 === rM.x && 0 === rM.y && 0 === iM || this._applyRotationAndZoomDelta(rM.x, rM.y, iM), 0 === OM.x && 0 === OM.y || this._applyPanDelta(OM.x, OM.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), MM = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
-              this._applyPanDelta(this.inertialPanningX, this.inertialPanningY), this.inertialPanningX *= this.panningInertia, this.inertialPanningY *= this.panningInertia;
-              const rM = this._panningEpsilon;
-              Math.abs(this.inertialPanningX) < rM && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < rM && (this.inertialPanningY = 0), MM = !0
-            }
-            if (MM) this.stopInterpolation();
-            else if (this._isInterpolating) {
-              let MM = !1;
-              const rM = this._scene.ph().getDeltaTime() / 1e3,
-                iM = 1 - Math.pow(2, -rM / this._currentInterpolationFactor),
-                OM = YM(this._goalRadius, this.radius);
-              if (!isNaN(this._goalTarget.x) || !isNaN(this._goalTarget.y) || !isNaN(this._goalTarget.z)) {
-                const rM = aM.l.sh[0].set(YM(this._goalTarget.x, this.wL.x), YM(this._goalTarget.y, this.wL.y), YM(this._goalTarget.z, this.wL.z));
-                aM.q.LerpToRef(this.target, rM, iM, this.wL), 10 * aM.q.Distance(this.target, rM) / OM < mM.d ? (this._goalTarget.set(NaN, NaN, NaN), this.target.jR(rM), this.setTarget(this.target, !1, !0, !0)) : MM = !0
-              }
-              if (!isNaN(this._goalAlpha) || !isNaN(this._goalBeta)) {
-                const rM = aM.h.RotationAlphaBetaGammaToRef(YM(this._goalAlpha, this.alpha), YM(this._goalBeta, this.beta), 0, aM.l.Quaternion[0]),
-                  OM = aM.h.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, aM.l.Quaternion[1]),
-                  SM = aM.h.SlerpToRef(OM, rM, iM, aM.l.Quaternion[2]);
-                SM.normalize();
-                const jM = SM.toAlphaBetaGammaToRef(aM.l.sh[0]);
-                if (this.alpha = jM.x, this.beta = jM.y, SM.isApprox(rM, mM.d / 5)) {
-                  this._goalAlpha = NaN, this._goalBeta = NaN;
-                  const MM = rM.toAlphaBetaGammaToRef(aM.l.sh[0]);
-                  this.alpha = MM.x, this.beta = MM.y
-                } else MM = !0
-              }
-              if (isNaN(this._goalRadius) || (this.radius += (OM - this.radius) * iM, Math.abs(OM / this.radius - 1) < mM.d ? (this._goalRadius = NaN, this.radius = OM) : MM = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
-                const rM = aM.l.Vector2[0].set(YM(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), YM(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
-                aM.o.LerpToRef(this.targetScreenOffset, rM, iM, this.targetScreenOffset), aM.o.Distance(this.targetScreenOffset, rM) < mM.d ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.jR(rM)) : MM = !0
-              }
-              this._isInterpolating = MM
-            }
-            this._checkLimits(), super._checkInputs()
-          }
-          _checkLimits() {
-            null === this.lowerBetaLimit || void 0 === this.lowerBetaLimit ? this.allowUpsideDown && this.beta > Math.PI && (this.beta = this.beta - 2 * Math.PI) : this.beta < this.lowerBetaLimit && (this.beta = this.lowerBetaLimit), null === this.upperBetaLimit || void 0 === this.upperBetaLimit ? this.allowUpsideDown && this.beta < -Math.PI && (this.beta = this.beta + 2 * Math.PI) : this.beta > this.upperBetaLimit && (this.beta = this.upperBetaLimit), null !== this.lowerAlphaLimit && this.alpha < this.lowerAlphaLimit && (this.alpha = this.lowerAlphaLimit), null !== this.upperAlphaLimit && this.alpha > this.upperAlphaLimit && (this.alpha = this.upperAlphaLimit), null !== this.lowerRadiusLimit && this.radius < this.lowerRadiusLimit && (this.radius = this.lowerRadiusLimit, this.inertialRadiusOffset = 0), null !== this.upperRadiusLimit && this.radius > this.upperRadiusLimit && (this.radius = this.upperRadiusLimit, this.inertialRadiusOffset = 0), this.target.y = Math.max(this.target.y, this.lowerTargetYLimit)
-          }
-          rebuildAnglesAndRadius() {
-            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || aM.q.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
-            const MM = this.alpha;
-            var rM, iM;
-            this.alpha = function(MM) {
-              let rM = Math.PI / 2;
-              return 0 === MM.x && 0 === MM.z || (rM = Math.acos(MM.x / Math.sqrt(Math.pow(MM.x, 2) + Math.pow(MM.z, 2)))), MM.z < 0 && (rM = 2 * Math.PI - rM), rM
-            }(this._computationVector), this.beta = (rM = this._computationVector.y, iM = this.radius, Math.acos(rM / iM));
-            const OM = Math.round((MM - this.alpha) / (2 * Math.PI));
-            this.alpha += 2 * OM * Math.PI, this._checkLimits()
-          }
-          setPosition(MM) {
-            this._position.equals(MM) || (this._position.jR(MM), this.rebuildAnglesAndRadius())
-          }
-          setTarget(MM) {
-            let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-              OM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            if (OM = this.overrideCloneAlphaBetaRadius ?? OM, MM.computeWorldMatrix) rM && MM.aY ? this._targetBoundingCenter = MM.aY().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, MM.computeWorldMatrix(), this._targetHost = MM, this.wL = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
-            else {
-              const rM = MM,
-                OM = this._getTargetPosition();
-              if (OM && !iM && OM.equals(rM)) return;
-              this._targetHost = null, this.wL = rM, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
-            }
-            OM || this.rebuildAnglesAndRadius()
-          }
-          _getViewMatrix() {
-            const MM = Math.cos(this.alpha),
-              rM = Math.sin(this.alpha),
-              iM = Math.cos(this.beta);
-            let OM = Math.sin(this.beta);
-            0 === OM && (OM = 1e-4), 0 === this.radius && (this.radius = 1e-4);
-            const SM = this._getTargetPosition();
-            if (this._computationVector.iMM(this.radius * MM * OM, this.radius * iM, this.radius * rM * OM), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || aM.q.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), SM.addToRef(this._computationVector, this._newPosition), this.Hk().collisionsEnabled && this.checkCollisions) {
-              const MM = this.Hk().collisionCoordinator;
-              this._collider || (this._collider = MM.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, MM.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
-            } else {
-              this._position.jR(this._newPosition);
-              let MM = this.upVector;
-              this.allowUpsideDown && OM < 0 && (MM = MM.VJ()), this._computeViewMatrix(this._position, SM, MM), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
-            }
-            return this._currentTarget.jR(SM), this._viewMatrix
-          }
-          zoomOn(MM) {
-            let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            MM = MM || this.Hk().meshes;
-            const iM = QM.d.MinMax(MM);
-            let OM = this._calculateLowerRadiusFromModelBoundingSphere(iM.min, iM.max);
-            if (OM = Math.max(Math.min(OM, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = OM * this.zoomOnFactor, this.mode === lM.b.ORTHOGRAPHIC_CAMERA) {
-              const MM = this.Hk().ph().getAspectRatio(this),
-                rM = OM * this.zoomOnFactor / 2;
-              this.orthoLeft = -rM * MM, this.orthoRight = rM * MM, this.orthoBottom = -rM, this.orthoTop = rM
-            }
-            this.focusOn({
-              min: iM.min,
-              max: iM.max,
-              distance: OM
-            }, rM)
-          }
-          focusOn(MM) {
-            let rM, iM, OM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (void 0 === MM.min) {
-              const OM = MM || this.Hk().meshes;
-              rM = QM.d.MinMax(OM), iM = aM.q.Distance(rM.min, rM.max)
-            } else {
-              rM = MM, iM = MM.distance
-            }
-            this.wL = QM.d.Center(rM), OM || (this.maxZ = 2 * iM)
-          }
-          createRigCamera(rM, iM) {
-            let OM = 0;
-            switch (this.cameraRigMode) {
-              case lM.b.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case lM.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case lM.b.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case lM.b.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case lM.b.RIG_MODE_VR:
-                OM = this._cameraRigParams.stereoHalfAngle * (0 === iM ? 1 : -1);
-                break;
-              case lM.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                OM = this._cameraRigParams.stereoHalfAngle * (0 === iM ? -1 : 1)
-            }
-            const SM = new MM(rM, this.alpha + OM, this.beta, this.radius, this.wL, this.Hk());
-            return SM._cameraRigParams = {}, SM.isRigCamera = !0, SM.rigParent = this, SM.upVector = this.upVector, SM.mode = this.mode, SM.orthoLeft = this.orthoLeft, SM.orthoRight = this.orthoRight, SM.orthoBottom = this.orthoBottom, SM.orthoTop = this.orthoTop, SM
-          }
-          _updateRigCameras() {
-            const MM = this._rigCameras[0],
-              rM = this._rigCameras[1];
-            switch (MM.beta = rM.beta = this.beta, this.cameraRigMode) {
-              case lM.b.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case lM.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case lM.b.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case lM.b.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case lM.b.RIG_MODE_VR:
-                MM.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, rM.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
-                break;
-              case lM.b.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                MM.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, rM.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
-            }
-            super._updateRigCameras()
-          }
-          _calculateLowerRadiusFromModelBoundingSphere(MM, rM) {
-            let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-            const OM = aM.q.Distance(MM, rM),
-              SM = this.Hk().ph().getAspectRatio(this),
-              jM = Math.tan(this.fov / 2),
-              PM = jM * SM,
-              nM = .5 * OM * iM,
-              QM = nM * Math.sqrt(1 + 1 / (PM * PM)),
-              zM = nM * Math.sqrt(1 + 1 / (jM * jM));
-            return Math.max(QM, zM)
-          }
-          dispose() {
-            this.inputs.clear(), super.dispose()
-          }
-          getClassName() {
-            return "ArcRotateCamera"
-          }
-        }, (() => {
-          const jM = "function" === typeof Symbol && Symbol.metadata ? Object.create(XM[Symbol.metadata] ?? null) : void 0;
-          rM = [(0, SM.L)()], iM = [(0, SM.L)()], nM = [(0, SM.L)()], zM = [(0, SM.L)()], LM = [(0, SM.J)("target")], hM = [(0, SM.y)("targetHost")], JM = [(0, SM.L)()], UM = [(0, SM.L)()], CM = [(0, SM.L)()], eM = [(0, SM.L)()], bM = [(0, SM.L)()], wM = [(0, SM.L)()], tM = [(0, SM.L)()], gM = [(0, SM.L)()], uM = [(0, SM.L)()], RM = [(0, SM.L)()], pM = [(0, SM.L)()], WM = [(0, SM.L)()], sM = [(0, SM.L)()], kM = [(0, SM.L)()], ZM = [(0, SM.J)()], oM = [(0, SM.L)()], NM = [(0, SM.L)()], AM = [(0, SM.L)()], xM = [(0, SM.F)()], vM = [(0, SM.L)()], FM = [(0, SM.L)()], BM = [(0, SM.L)()], (0, OM.i)(MM, null, JM, {
-            kind: "getter",
-            name: "inertialAlphaOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "inertialAlphaOffset" in MM,
-              get: MM => MM.inertialAlphaOffset
-            },
-            metadata: jM
-          }, null, IM), (0, OM.i)(MM, null, UM, {
-            kind: "getter",
-            name: "inertialBetaOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "inertialBetaOffset" in MM,
-              get: MM => MM.inertialBetaOffset
-            },
-            metadata: jM
-          }, null, IM), (0, OM.i)(MM, null, CM, {
-            kind: "getter",
-            name: "inertialRadiusOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "inertialRadiusOffset" in MM,
-              get: MM => MM.inertialRadiusOffset
-            },
-            metadata: jM
-          }, null, IM), (0, OM.i)(MM, null, oM, {
-            kind: "getter",
-            name: "panningInertia",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "panningInertia" in MM,
-              get: MM => MM.panningInertia
-            },
-            metadata: jM
-          }, null, IM), (0, OM.i)(MM, null, NM, {
-            kind: "getter",
-            name: "zoomToMouseLocation",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "zoomToMouseLocation" in MM,
-              get: MM => MM.zoomToMouseLocation
-            },
-            metadata: jM
-          }, null, IM), (0, OM.i)(null, null, rM, {
-            kind: "field",
-            name: "alpha",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "alpha" in MM,
-              get: MM => MM.alpha,
-              set: (MM, rM) => {
-                MM.alpha = rM
-              }
-            },
-            metadata: jM
-          }, KM, qM), (0, OM.i)(null, null, iM, {
-            kind: "field",
-            name: "beta",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "beta" in MM,
-              get: MM => MM.beta,
-              set: (MM, rM) => {
-                MM.beta = rM
-              }
-            },
-            metadata: jM
-          }, TM, VM), (0, OM.i)(null, null, nM, {
-            kind: "field",
-            name: "radius",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "radius" in MM,
-              get: MM => MM.radius,
-              set: (MM, rM) => {
-                MM.radius = rM
-              }
-            },
-            metadata: jM
-          }, cM, Mr), (0, OM.i)(null, null, zM, {
-            kind: "field",
-            name: "overrideCloneAlphaBetaRadius",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "overrideCloneAlphaBetaRadius" in MM,
-              get: MM => MM.overrideCloneAlphaBetaRadius,
-              set: (MM, rM) => {
-                MM.overrideCloneAlphaBetaRadius = rM
-              }
-            },
-            metadata: jM
-          }, rr, ir), (0, OM.i)(null, null, LM, {
-            kind: "field",
-            name: "wL",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "wL" in MM,
-              get: MM => MM.wL,
-              set: (MM, rM) => {
-                MM.wL = rM
-              }
-            },
-            metadata: jM
-          }, Or, Sr), (0, OM.i)(null, null, hM, {
-            kind: "field",
-            name: "_targetHost",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "_targetHost" in MM,
-              get: MM => MM._targetHost,
-              set: (MM, rM) => {
-                MM._targetHost = rM
-              }
-            },
-            metadata: jM
-          }, jr, ar), (0, OM.i)(null, null, eM, {
-            kind: "field",
-            name: "lowerAlphaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "lowerAlphaLimit" in MM,
-              get: MM => MM.lowerAlphaLimit,
-              set: (MM, rM) => {
-                MM.lowerAlphaLimit = rM
-              }
-            },
-            metadata: jM
-          }, Pr, nr), (0, OM.i)(null, null, bM, {
-            kind: "field",
-            name: "upperAlphaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "upperAlphaLimit" in MM,
-              get: MM => MM.upperAlphaLimit,
-              set: (MM, rM) => {
-                MM.upperAlphaLimit = rM
-              }
-            },
-            metadata: jM
-          }, Qr, zr), (0, OM.i)(null, null, wM, {
-            kind: "field",
-            name: "lowerBetaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "lowerBetaLimit" in MM,
-              get: MM => MM.lowerBetaLimit,
-              set: (MM, rM) => {
-                MM.lowerBetaLimit = rM
-              }
-            },
-            metadata: jM
-          }, Lr, mr), (0, OM.i)(null, null, tM, {
-            kind: "field",
-            name: "upperBetaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "upperBetaLimit" in MM,
-              get: MM => MM.upperBetaLimit,
-              set: (MM, rM) => {
-                MM.upperBetaLimit = rM
-              }
-            },
-            metadata: jM
-          }, Hr, hr), (0, OM.i)(null, null, gM, {
-            kind: "field",
-            name: "lowerRadiusLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "lowerRadiusLimit" in MM,
-              get: MM => MM.lowerRadiusLimit,
-              set: (MM, rM) => {
-                MM.lowerRadiusLimit = rM
-              }
-            },
-            metadata: jM
-          }, Jr, dr), (0, OM.i)(null, null, uM, {
-            kind: "field",
-            name: "upperRadiusLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "upperRadiusLimit" in MM,
-              get: MM => MM.upperRadiusLimit,
-              set: (MM, rM) => {
-                MM.upperRadiusLimit = rM
-              }
-            },
-            metadata: jM
-          }, yr, lr), (0, OM.i)(null, null, RM, {
-            kind: "field",
-            name: "lowerTargetYLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "lowerTargetYLimit" in MM,
-              get: MM => MM.lowerTargetYLimit,
-              set: (MM, rM) => {
-                MM.lowerTargetYLimit = rM
-              }
-            },
-            metadata: jM
-          }, Er, Ur), (0, OM.i)(null, null, pM, {
-            kind: "field",
-            name: "inertialPanningX",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "inertialPanningX" in MM,
-              get: MM => MM.inertialPanningX,
-              set: (MM, rM) => {
-                MM.inertialPanningX = rM
-              }
-            },
-            metadata: jM
-          }, Gr, Cr), (0, OM.i)(null, null, WM, {
-            kind: "field",
-            name: "inertialPanningY",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "inertialPanningY" in MM,
-              get: MM => MM.inertialPanningY,
-              set: (MM, rM) => {
-                MM.inertialPanningY = rM
-              }
-            },
-            metadata: jM
-          }, er, br), (0, OM.i)(null, null, sM, {
-            kind: "field",
-            name: "pinchToPanMaxDistance",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "pinchToPanMaxDistance" in MM,
-              get: MM => MM.pinchToPanMaxDistance,
-              set: (MM, rM) => {
-                MM.pinchToPanMaxDistance = rM
-              }
-            },
-            metadata: jM
-          }, wr, tr), (0, OM.i)(null, null, kM, {
-            kind: "field",
-            name: "panningDistanceLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "panningDistanceLimit" in MM,
-              get: MM => MM.panningDistanceLimit,
-              set: (MM, rM) => {
-                MM.panningDistanceLimit = rM
-              }
-            },
-            metadata: jM
-          }, gr, ur), (0, OM.i)(null, null, ZM, {
-            kind: "field",
-            name: "panningOriginTarget",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "panningOriginTarget" in MM,
-              get: MM => MM.panningOriginTarget,
-              set: (MM, rM) => {
-                MM.panningOriginTarget = rM
-              }
-            },
-            metadata: jM
-          }, Rr, pr), (0, OM.i)(null, null, AM, {
-            kind: "field",
-            name: "zoomOnFactor",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "zoomOnFactor" in MM,
-              get: MM => MM.zoomOnFactor,
-              set: (MM, rM) => {
-                MM.zoomOnFactor = rM
-              }
-            },
-            metadata: jM
-          }, Wr, sr), (0, OM.i)(null, null, xM, {
-            kind: "field",
-            name: "targetScreenOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "targetScreenOffset" in MM,
-              get: MM => MM.targetScreenOffset,
-              set: (MM, rM) => {
-                MM.targetScreenOffset = rM
-              }
-            },
-            metadata: jM
-          }, Dr, kr), (0, OM.i)(null, null, vM, {
-            kind: "field",
-            name: "allowUpsideDown",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "allowUpsideDown" in MM,
-              get: MM => MM.allowUpsideDown,
-              set: (MM, rM) => {
-                MM.allowUpsideDown = rM
-              }
-            },
-            metadata: jM
-          }, Zr, or), (0, OM.i)(null, null, FM, {
-            kind: "field",
-            name: "useInputToRestoreState",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "useInputToRestoreState" in MM,
-              get: MM => MM.useInputToRestoreState,
-              set: (MM, rM) => {
-                MM.useInputToRestoreState = rM
-              }
-            },
-            metadata: jM
-          }, fr, Yr), (0, OM.i)(null, null, BM, {
-            kind: "field",
-            name: "restoreStateInterpolationFactor",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "restoreStateInterpolationFactor" in MM,
-              get: MM => MM.restoreStateInterpolationFactor,
-              set: (MM, rM) => {
-                MM.restoreStateInterpolationFactor = rM
-              }
-            },
-            metadata: jM
-          }, Nr, Ar), jM && Object.defineProperty(MM, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: jM
-          })
-        })(), MM
-      })(),
-      AM = !1;
-    AM || (AM = !0, nM.d.AddNodeConstructor("ArcRotateCamera", ((MM, rM) => () => new NM(MM, 0, 0, 1, aM.q.Zero(), rM))), (0, kM.e)("BABYLON.ArcRotateCamera", NM))
-  },
-  41358: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM.d
-    });
-    var OM = iM(41362);
-    (0, OM.e)()
-  },
-  41362: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => zM,
-      e: () => mM
-    });
-    var OM = iM(41099),
-      SM = iM(41105),
-      jM = iM(38040),
-      aM = iM(38173),
-      PM = iM(41366),
-      nM = iM(41328),
-      QM = iM(38085);
-    let zM = (() => {
-        var MM;
-        let rM, iM, nM = PM.d,
-          QM = [],
-          zM = [],
-          LM = [],
-          mM = [];
-        return MM = class extends nM {
-          constructor(MM, rM, iM, SM) {
-            super(MM, iM, SM), this.groundColor = (0, OM.m)(this, QM, new aM.d(0, 0, 0)), this.direction = ((0, OM.m)(this, zM), (0, OM.m)(this, LM, void 0)), (0, OM.m)(this, mM), this.direction = rM || jM.q.Up()
-          }
-          _buildUniformLayout() {
-            this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
-          }
-          getClassName() {
-            return "HemisphericLight"
-          }
-          setDirectionToTarget(MM) {
-            return this.direction = jM.q.Normalize(MM.subtract(jM.q.Zero())), this.direction
-          }
-          getShadowGenerator() {
-            return null
-          }
-          transferToEffect(MM, rM) {
-            const iM = jM.q.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", iM.x, iM.y, iM.z, 0, rM), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), rM), this
-          }
-          transferToNodeMaterialEffect(MM, rM) {
-            const iM = jM.q.Normalize(this.direction);
-            return MM.setFloat3(rM, iM.x, iM.y, iM.z), this
-          }
-          computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = jM.d.Identity()), this._worldMatrix
-          }
-          getTypeID() {
-            return PM.d.LIGHTTYPEID_HEMISPHERICLIGHT
-          }
-          prepareLightSpecificDefines(MM, rM) {
-            MM["HEMILIGHT" + rM] = !0
-          }
-        }, (() => {
-          const jM = "function" === typeof Symbol && Symbol.metadata ? Object.create(nM[Symbol.metadata] ?? null) : void 0;
-          rM = [(0, SM.r)()], iM = [(0, SM.J)()], (0, OM.i)(null, null, rM, {
-            kind: "field",
-            name: "groundColor",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "groundColor" in MM,
-              get: MM => MM.groundColor,
-              set: (MM, rM) => {
-                MM.groundColor = rM
-              }
-            },
-            metadata: jM
-          }, QM, zM), (0, OM.i)(null, null, iM, {
-            kind: "field",
-            name: "direction",
-            static: !1,
-            private: !1,
-            access: {
-              has: MM => "direction" in MM,
-              get: MM => MM.direction,
-              set: (MM, rM) => {
-                MM.direction = rM
-              }
-            },
-            metadata: jM
-          }, LM, mM), jM && Object.defineProperty(MM, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: jM
-          })
-        })(), MM
-      })(),
-      LM = !1;
 
-    function mM() {
-      LM || (LM = !0, nM.d.AddNodeConstructor("Light_Type_3", ((MM, rM) => () => new zM(MM, jM.q.Zero(), rM))), (0, QM.e)("BABYLON.HemisphericLight", zM))
+    function aU(UU, XU) {
+      const zU = UU.morphTargetManager;
+      UU && zU && XU.setFloatArray("morphTargetInfluences", zU.influences)
     }
+
+    function tU(UU, XU) {
+      XU.bindToEffect(UU, "Scene")
+    }
+
+    function gU(UU, XU, zU, cU) {
+      let yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        QU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        AU = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        oU = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        DU = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        EU = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        YU = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+        NU = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 0;
+      if (UU.texturesEnabled && yU && FU.b.ReflectionTextureEnabled) {
+        if (zU.eUU("reflectionMatrix", yU.getReflectionTextureMatrix()), zU.updateFloat2("vReflectionInfos", yU.level * UU.iblIntensity, NU), oU && yU.boundingBoxSize) {
+          const UU = yU;
+          zU.updateVector3("vReflectionPosition", UU.boundingBoxPosition), zU.updateVector3("vReflectionSize", UU.boundingBoxSize)
+        }
+        if (QU) {
+          const UU = yU.getSize().width;
+          zU.updateFloat2("vReflectionFilteringInfo", UU, Math.log2(UU))
+        }
+        if (EU && !XU.USEIRRADIANCEMAP) {
+          const UU = yU.sphericalPolynomial;
+          if (XU.USESPHERICALFROMREFLECTIONMAP && UU)
+            if (XU.SPHERICAL_HARMONICS) {
+              const XU = UU.preScaledHarmonics;
+              zU.updateVector3("vSphericalL00", XU.l00), zU.updateVector3("vSphericalL1_1", XU.l1_1), zU.updateVector3("vSphericalL10", XU.l10), zU.updateVector3("vSphericalL11", XU.l11), zU.updateVector3("vSphericalL2_2", XU.l2_2), zU.updateVector3("vSphericalL2_1", XU.l2_1), zU.updateVector3("vSphericalL20", XU.l20), zU.updateVector3("vSphericalL21", XU.l21), zU.updateVector3("vSphericalL22", XU.l22)
+            } else zU.updateFloat3("vSphericalX", UU.x.x, UU.x.y, UU.x.z), zU.updateFloat3("vSphericalY", UU.y.x, UU.y.y, UU.y.z), zU.updateFloat3("vSphericalZ", UU.z.x, UU.z.y, UU.z.z), zU.updateFloat3("vSphericalXX_ZZ", UU.xx.x - UU.zz.x, UU.xx.y - UU.zz.y, UU.xx.z - UU.zz.z), zU.updateFloat3("vSphericalYY_ZZ", UU.yy.x - UU.zz.x, UU.yy.y - UU.zz.y, UU.yy.z - UU.zz.z), zU.updateFloat3("vSphericalZZ", UU.zz.x, UU.zz.y, UU.zz.z), zU.updateFloat3("vSphericalXY", UU.xy.x, UU.xy.y, UU.xy.z), zU.updateFloat3("vSphericalYZ", UU.yz.x, UU.yz.y, UU.yz.z), zU.updateFloat3("vSphericalZX", UU.zx.x, UU.zx.y, UU.zx.z)
+        } else DU && XU.USEIRRADIANCEMAP && XU.USE_IRRADIANCE_DOMINANT_DIRECTION && yU.irradianceTexture && zU.updateVector3("vReflectionDominantDirection", yU.irradianceTexture._dominantDirection);
+        AU && zU.updateFloat3("vReflectionMicrosurfaceInfos", yU.getSize().width, yU.lodGenerationScale, yU.lodGenerationOffset)
+      }
+      YU && zU.updateColor3("vReflectionColor", cU)
+    }
+
+    function kU(UU, XU, zU) {
+      let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+        yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      if (cU && FU.b.ReflectionTextureEnabled) {
+        XU.LODBASEDMICROSFURACE ? zU.setTexture("reflectionSampler", cU) : (zU.setTexture("reflectionSampler", cU._lodTextureMid || cU), zU.setTexture("reflectionSamplerLow", cU._lodTextureLow || cU), zU.setTexture("reflectionSamplerHigh", cU._lodTextureHigh || cU)), XU.USEIRRADIANCEMAP && zU.setTexture("irradianceSampler", cU.irradianceTexture);
+        const QU = UU.iblCdfGenerator;
+        yU && QU && zU.setTexture("icdfSampler", QU.getIcdfTexture())
+      }
+    }
+
+    function GU(UU, XU, zU) {
+      XU._needUVs = !0, XU[zU] = !0, UU.optimizeUVAllocation && UU.getTextureMatrix().isIdentityAs3x2() ? (XU[zU + "DIRECTUV"] = UU.coordinatesIndex + 1, XU["MAINUV" + (UU.coordinatesIndex + 1)] = !0) : XU[zU + "DIRECTUV"] = 0
+    }
+
+    function BU(UU, XU, zU) {
+      const cU = UU.getTextureMatrix();
+      XU.eUU(zU + "Matrix", cU)
+    }
+
+    function ZU(UU, XU, zU) {
+      zU.BAKED_VERTEX_ANIMATION_TEXTURE && zU.INSTANCES && UU.push("bakedVertexAnimationSettingsInstanced")
+    }
+
+    function RU(UU, XU, zU) {
+      var cU;
+      if (XU && UU && (UU.computeBonesUsingShaders && XU._bonesComputationForcedToCPU && (UU.computeBonesUsingShaders = !1), UU.useBones && UU.computeBonesUsingShaders && UU.skeleton)) {
+        const yU = UU.skeleton;
+        if (yU.isUsingTextureForMatrices && XU.getUniformIndex("boneTextureInfo") > -1) {
+          const zU = yU.getTransformMatrixTexture(UU);
+          XU.setTexture("boneSampler", zU), XU.setFloat2("boneTextureInfo", yU._textureWidth, yU._textureHeight)
+        } else {
+          const QU = yU.getTransformMatrices(UU);
+          QU && (XU.setMatrices("mBones", QU), zU && UU.nS().prePassRenderer && UU.nS().prePassRenderer.getIndex(2) && (zU.previousBones[UU.uniqueId] || (zU.previousBones[UU.uniqueId] = QU.slice()), XU.setMatrices("mPreviousBones", zU.previousBones[UU.uniqueId]), cU = QU, zU.previousBones[UU.uniqueId].set(cU)))
+        }
+      }
+    }
+
+    function PU(UU, XU, zU, cU, yU) {
+      let QU = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+      UU._bindLight(XU, zU, cU, yU, QU)
+    }
+    const WU = 4,
+      dU = new WeakMap;
+
+    function LU(UU, XU, zU, cU) {
+      let yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4;
+      const QU = Math.min(XU.lightSources.length, yU);
+      for (let AU = 0; AU < QU; AU++) {
+        PU(XU.lightSources[AU], AU, UU, zU, "boolean" === typeof cU ? cU : cU.SPECULARTERM, XU.receiveShadows)
+      }
+    }
+
+    function eU(UU, XU, zU, cU) {
+      zU.NUM_BONE_INFLUENCERS > 0 && (cU.addCPUSkinningFallback(0, XU), UU.push("matricesIndices"), UU.push("matricesWeights"), zU.NUM_BONE_INFLUENCERS > 4 && (UU.push("matricesIndicesExtra"), UU.push("matricesWeightsExtra")))
+    }
+
+    function CU(UU, XU) {
+      (XU.INSTANCES || XU.THIN_INSTANCES) && pU(UU, !!XU.PREPASS_VELOCITY), XU.INSTANCESCOLOR && UU.push("instanceColor")
+    }
+
+    function wU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+        cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        yU = 0;
+      for (let QU = 0; QU < zU && UU["LIGHT" + QU]; QU++) QU > 0 && (yU = cU + QU, XU.addFallback(yU, "LIGHT" + QU)), UU.SHADOWS || (UU["SHADOW" + QU] && XU.addFallback(cU, "SHADOW" + QU), UU["SHADOWPCF" + QU] && XU.addFallback(cU, "SHADOWPCF" + QU), UU["SHADOWPCSS" + QU] && XU.addFallback(cU, "SHADOWPCSS" + QU), UU["SHADOWPOISSON" + QU] && XU.addFallback(cU, "SHADOWPOISSON" + QU), UU["SHADOWESM" + QU] && XU.addFallback(cU, "SHADOWESM" + QU), UU["SHADOWCLOSEESM" + QU] && XU.addFallback(cU, "SHADOWCLOSEESM" + QU));
+      return yU
+    }
+
+    function qU(UU, XU, zU, cU, yU, QU, AU) {
+      let FU = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        oU = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        DU = arguments.length > 9 ? arguments[9] : void 0,
+        EU = arguments.length > 10 ? arguments[10] : void 0;
+      if (AU._areMiscDirty) {
+        AU.LOGARITHMICDEPTH = zU, AU.POINTSIZE = cU, AU.FOG = yU && function(UU, XU) {
+          return XU.fogEnabled && UU.applyFog && 0 !== XU.fogMode
+        }(UU, XU), AU.NONUNIFORMSCALING = UU.nonUniformScaling, AU.ALPHATEST = QU, AU.DECAL_AFTER_DETAIL = FU, AU.USE_VERTEX_PULLING = oU, AU.RIGHT_HANDED = XU.useRightHandedSystem;
+        const YU = oU ? DU?.geometry?.getIndexBuffer() : null,
+          NU = !!DU && DU.isUnIndexed;
+        AU.VERTEX_PULLING_USE_INDEX_BUFFER = !!YU && !NU, AU.VERTEX_PULLING_INDEX_BUFFER_32BITS = !(!YU || NU) && YU.is32Bits, AU.VERTEXOUTPUT_INVARIANT = !!EU
+      }
+    }
+
+    function OU(UU, XU, zU) {
+      let cU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (!UU.lightsEnabled || cU) return !0;
+      const yU = XU.lightSources,
+        QU = Math.min(yU.length, zU);
+      for (let AU = 0; AU < QU; AU++)
+        if (!yU[AU].areLightTexturesReady()) return !1;
+      return !0
+    }
+
+    function SU(UU, XU, zU, yU) {
+      let QU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4,
+        AU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!zU._areLightsDirty) return zU._needNormals;
+      const FU = QU;
+      QU = function(UU, XU) {
+        const zU = UU.qp().getCaps().maxUniformBuffersPerShaderStage;
+        if (null == zU) return XU;
+        const cU = Math.max(zU - WU, 1);
+        return Math.min(XU, cU)
+      }(UU, QU);
+      let oU = 0;
+      const DU = {
+        needNormals: zU._needNormals,
+        needRebuild: !1,
+        lightmapMode: !1,
+        shadowEnabled: !1,
+        specularEnabled: !1
+      };
+      if (UU.lightsEnabled && !AU) {
+        XU.lightSources.length > QU && QU < FU && function(UU, XU, zU, yU) {
+          let QU = dU.get(UU);
+          QU || (QU = new Set, dU.set(UU, QU)), QU.has(yU) || (QU.add(yU), cU.b.Warn(`maxSimultaneousLights is ${XU} but this engine supports at most ${zU} simultaneous lights. Each light declares its own uniform buffer in the vertex shader, so the ${yU} lights affecting this mesh plus the scene, mesh, material and leftover buffers would need ${yU+WU} uniform buffers, over the device limit of ${UU.getCaps().maxUniformBuffersPerShaderStage} per shader stage. The light count has been clamped to ${zU}, so the extra lights will not contribute to the render. Set maxSimultaneousLights to ${zU} or less to silence this warning.`))
+        }(UU.qp(), FU, QU, Math.min(XU.lightSources.length, FU));
+        for (const cU of XU.lightSources)
+          if (uU(UU, XU, cU, oU, zU, yU, DU), oU++, oU === QU) break
+      }
+      zU.SPECULARTERM = DU.specularEnabled, zU.SHADOWS = DU.shadowEnabled;
+      const EU = Math.max(QU, zU.MAXLIGHTCOUNT || 0);
+      for (let cU = oU; cU < EU; cU++) void 0 !== zU["LIGHT" + cU] && (zU["LIGHT" + cU] = !1, zU["HEMILIGHT" + cU] = !1, zU["POINTLIGHT" + cU] = !1, zU["DIRLIGHT" + cU] = !1, zU["SPOTLIGHT" + cU] = !1, zU["AREALIGHT" + cU] = !1, zU["CLUSTLIGHT" + cU] = !1, zU["SHADOW" + cU] = !1, zU["SHADOWCSM" + cU] = !1, zU["SHADOWCSMDEBUG" + cU] = !1, zU["SHADOWCSMNUM_CASCADES" + cU] = !1, zU["SHADOWCSMUSESHADOWMAXZ" + cU] = !1, zU["SHADOWCSMNOBLEND" + cU] = !1, zU["SHADOWCSM_RIGHTHANDED" + cU] = !1, zU["SHADOWPCF" + cU] = !1, zU["SHADOWPCSS" + cU] = !1, zU["SHADOWPOISSON" + cU] = !1, zU["SHADOWESM" + cU] = !1, zU["SHADOWCLOSEESM" + cU] = !1, zU["SHADOWCUBE" + cU] = !1, zU["SHADOWLOWQUALITY" + cU] = !1, zU["SHADOWMEDIUMQUALITY" + cU] = !1);
+      zU.LIGHTCOUNT = oU, zU.MAXLIGHTCOUNT = QU;
+      const YU = UU.qp().getCaps();
+      return void 0 === zU.SHADOWFLOAT && (DU.needRebuild = !0), zU.SHADOWFLOAT = DU.shadowEnabled && (YU.textureFloatRender && YU.textureFloatLinearFiltering || YU.textureHalfFloatRender && YU.textureHalfFloatLinearFiltering), zU.LIGHTMAPEXCLUDED = DU.lightmapMode, DU.needRebuild && zU.rebuild(), DU.needNormals
+    }
+
+    function rU(UU, XU, zU) {
+      let cU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 8,
+        QU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (XU && FU.b.ReflectionTextureEnabled) {
+        if (!XU.isReadyOrNotBlocking()) return !1;
+        zU._needNormals = !0, zU.REFLECTION = !0, zU.GAMMAREFLECTION = XU.gammaSpace, zU.RGBDREFLECTION = XU.isRGBD, zU.LODINREFLECTIONALPHA = XU.lodLevelInAlpha, zU.LINEARSPECULARREFLECTION = XU.linearSpecularLOD, zU.USEIRRADIANCEMAP = !1, zU.LODBASEDMICROSFURACE = UU.qp().getCaps().textureLOD;
+        const AU = UU.qp();
+        switch (cU && yU > 0 ? (zU.NUM_SAMPLES = "" + yU, AU._features.needTypeSuffixInShaderConstants && (zU.NUM_SAMPLES = zU.NUM_SAMPLES + "u"), zU.REALTIME_FILTERING = !0, UU.iblCdfGenerator && (zU.IBL_CDF_FILTERING = !0)) : zU.REALTIME_FILTERING = !1, zU.INVERTCUBICMAP = 6 === XU.coordinatesMode, zU.REFLECTIONMAP_3D = XU.isCube, zU.REFLECTIONMAP_OPPOSITEZ = zU.REFLECTIONMAP_3D && UU.useRightHandedSystem ? !XU.invertZ : XU.invertZ, zU.REFLECTIONMAP_CUBIC = !1, zU.REFLECTIONMAP_EXPLICIT = !1, zU.REFLECTIONMAP_PLANAR = !1, zU.REFLECTIONMAP_PROJECTION = !1, zU.REFLECTIONMAP_SKYBOX = !1, zU.REFLECTIONMAP_SPHERICAL = !1, zU.REFLECTIONMAP_EQUIRECTANGULAR = !1, zU.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, zU.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, XU.coordinatesMode) {
+          case 0:
+            zU.REFLECTIONMAP_EXPLICIT = !0;
+            break;
+          case 2:
+            zU.REFLECTIONMAP_PLANAR = !0;
+            break;
+          case 4:
+            zU.REFLECTIONMAP_PROJECTION = !0;
+            break;
+          case 5:
+            zU.REFLECTIONMAP_SKYBOX = !0;
+            break;
+          case 1:
+            zU.REFLECTIONMAP_SPHERICAL = !0;
+            break;
+          case 7:
+            zU.REFLECTIONMAP_EQUIRECTANGULAR = !0;
+            break;
+          case 8:
+            zU.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !0;
+            break;
+          case 9:
+            zU.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !0;
+            break;
+          default:
+            zU.REFLECTIONMAP_CUBIC = !0, zU.USE_LOCAL_REFLECTIONMAP_CUBIC = !!XU.boundingBoxSize
+        }
+        5 !== XU.coordinatesMode && (XU.irradianceTexture ? (zU.USEIRRADIANCEMAP = !0, zU.USESPHERICALFROMREFLECTIONMAP = !1, zU.USESPHERICALINVERTEX = !1, XU.irradianceTexture._dominantDirection ? zU.USE_IRRADIANCE_DOMINANT_DIRECTION = !0 : zU.USE_IRRADIANCE_DOMINANT_DIRECTION = !1) : XU.isCube && (zU.USESPHERICALFROMREFLECTIONMAP = !0, zU.USEIRRADIANCEMAP = !1, zU.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, zU.USESPHERICALINVERTEX = QU))
+      } else zU.REFLECTION = !1, zU.REFLECTIONMAP_3D = !1, zU.REFLECTIONMAP_SPHERICAL = !1, zU.REFLECTIONMAP_PLANAR = !1, zU.REFLECTIONMAP_CUBIC = !1, zU.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, zU.REFLECTIONMAP_PROJECTION = !1, zU.REFLECTIONMAP_SKYBOX = !1, zU.REFLECTIONMAP_EXPLICIT = !1, zU.REFLECTIONMAP_EQUIRECTANGULAR = !1, zU.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, zU.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, zU.INVERTCUBICMAP = !1, zU.USESPHERICALFROMREFLECTIONMAP = !1, zU.USEIRRADIANCEMAP = !1, zU.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, zU.USESPHERICALINVERTEX = !1, zU.REFLECTIONMAP_OPPOSITEZ = !1, zU.LODINREFLECTIONALPHA = !1, zU.GAMMAREFLECTION = !1, zU.RGBDREFLECTION = !1, zU.LINEARSPECULARREFLECTION = !1;
+      return !0
+    }
+
+    function uU(UU, XU, zU, cU, yU, AU, FU) {
+      switch (FU.needNormals = !0, void 0 === yU["LIGHT" + cU] && (FU.needRebuild = !0), yU["LIGHT" + cU] = !0, yU["SPOTLIGHT" + cU] = !1, yU["HEMILIGHT" + cU] = !1, yU["POINTLIGHT" + cU] = !1, yU["DIRLIGHT" + cU] = !1, yU["AREALIGHT" + cU] = !1, yU["CLUSTLIGHT" + cU] = !1, zU.prepareLightSpecificDefines(yU, cU), yU["LIGHT_FALLOFF_PHYSICAL" + cU] = !1, yU["LIGHT_FALLOFF_GLTF" + cU] = !1, yU["LIGHT_FALLOFF_STANDARD" + cU] = !1, zU.falloffType) {
+        case QU.e.FALLOFF_GLTF:
+          yU["LIGHT_FALLOFF_GLTF" + cU] = !0;
+          break;
+        case QU.e.FALLOFF_PHYSICAL:
+          yU["LIGHT_FALLOFF_PHYSICAL" + cU] = !0;
+          break;
+        case QU.e.FALLOFF_STANDARD:
+          yU["LIGHT_FALLOFF_STANDARD" + cU] = !0
+      }
+      if (AU && !zU.specular.equalsFloats(0, 0, 0) && (FU.specularEnabled = !0), yU["SHADOW" + cU] = !1, yU["SHADOWCSM" + cU] = !1, yU["SHADOWCSMDEBUG" + cU] = !1, yU["SHADOWCSMNUM_CASCADES" + cU] = !1, yU["SHADOWCSMUSESHADOWMAXZ" + cU] = !1, yU["SHADOWCSMNOBLEND" + cU] = !1, yU["SHADOWCSM_RIGHTHANDED" + cU] = !1, yU["SHADOWPCF" + cU] = !1, yU["SHADOWPCSS" + cU] = !1, yU["SHADOWPOISSON" + cU] = !1, yU["SHADOWESM" + cU] = !1, yU["SHADOWCLOSEESM" + cU] = !1, yU["SHADOWCUBE" + cU] = !1, yU["SHADOWLOWQUALITY" + cU] = !1, yU["SHADOWMEDIUMQUALITY" + cU] = !1, XU && XU.receiveShadows && UU.shadowsEnabled && zU.shadowEnabled) {
+        const XU = zU.getShadowGenerator(UU.activeCamera) ?? zU.getShadowGenerator();
+        if (XU) {
+          const UU = XU.getShadowMap();
+          UU && UU.renderList && UU.renderList.length > 0 && (FU.shadowEnabled = !0, XU.prepareDefines(yU, cU))
+        }
+      }
+      zU.lightmapMode != QU.e.LIGHTMAP_DEFAULT ? (FU.lightmapMode = !0, yU["LIGHTMAPEXCLUDED" + cU] = !0, yU["LIGHTMAPNOSPECULAR" + cU] = zU.lightmapMode == QU.e.LIGHTMAP_SHADOWSONLY) : (yU["LIGHTMAPEXCLUDED" + cU] = !1, yU["LIGHTMAPNOSPECULAR" + cU] = !1)
+    }
+
+    function fU(UU, XU, zU, cU, yU) {
+      let QU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        FU = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        oU = function(UU, XU) {
+          let zU = !1;
+          if (UU.activeCamera) {
+            const cU = XU.CAMERA_ORTHOGRAPHIC ? 1 : 0,
+              yU = XU.CAMERA_PERSPECTIVE ? 1 : 0,
+              QU = 1 === UU.activeCamera.mode ? 1 : 0,
+              AU = 0 === UU.activeCamera.mode ? 1 : 0;
+            (cU ^ QU || yU ^ AU) && (XU.CAMERA_ORTHOGRAPHIC = 1 === QU, XU.CAMERA_PERSPECTIVE = 1 === AU, zU = !0)
+          }
+          return zU
+        }(UU, cU);
+      !1 !== QU && (oU = (0, AU.i)(zU, UU, cU)), cU.DEPTHPREPASS !== !XU.getColorWrite() && (cU.DEPTHPREPASS = !cU.DEPTHPREPASS, oU = !0), cU.INSTANCES !== yU && (cU.INSTANCES = yU, oU = !0), cU.THIN_INSTANCES !== FU && (cU.THIN_INSTANCES = FU, oU = !0), oU && cU.markAsUnprocessed()
+    }
+    const iU = 40,
+      HU = 64,
+      MU = new WeakMap,
+      vU = new WeakSet;
+
+    function VU(UU, XU, zU, yU) {
+      let QU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        AU = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+        FU = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      if (!XU._areAttributesDirty && XU._needNormals === XU._normals && XU._needUVs === XU._uvs) return !1;
+      XU._normals = XU._needNormals, XU._uvs = XU._needUVs, XU.NORMAL = XU._needNormals && UU.isVerticesDataPresent("normal"), XU._needNormals && UU.isVerticesDataPresent("tangent") && (XU.TANGENT = !0);
+      for (let cU = 1; cU <= 6; ++cU) XU["UV" + cU] = !!XU._needUVs && UU.isVerticesDataPresent(`uv${1===cU?"":cU}`);
+      if (zU) {
+        const zU = UU.useVertexColors && UU.isVerticesDataPresent("color");
+        XU.VERTEXCOLOR = zU, XU.VERTEXALPHA = UU.hasVertexAlpha && zU && AU
+      }
+      return UU.isVerticesDataPresent("instanceColor") && (UU.jyU || UU.hasThinInstances) && (XU.INSTANCESCOLOR = !0), yU && function(UU, XU) {
+        if (UU.useBones && UU.computeBonesUsingShaders && UU.skeleton) {
+          XU.NUM_BONE_INFLUENCERS = UU.numBoneInfluencers;
+          const zU = void 0 !== XU.BONETEXTURE;
+          if (UU.skeleton.isUsingTextureForMatrices && zU) XU.BONETEXTURE = !0;
+          else {
+            XU.BonesPerMesh = UU.skeleton.bones.length + 1, XU.BONETEXTURE = !zU && void 0;
+            const yU = UU.nS(),
+              QU = yU.prePassRenderer;
+            if (QU && QU.enabled) {
+              const zU = -1 === QU.excludedSkinnedMesh.indexOf(UU);
+              XU.BONES_VELOCITY_ENABLED = zU
+            }
+            const AU = !0 === XU.MULTIVIEW,
+              FU = 2 * XU.BonesPerMesh + (AU ? 1 : 0);
+            if (MU.get(UU.skeleton) !== FU) {
+              MU.set(UU.skeleton, FU);
+              const zU = yU.qp().getCaps().maxVertexUniformVectors;
+              if (zU && !vU.has(UU.skeleton)) {
+                const yU = 4 * XU.BonesPerMesh,
+                  QU = AU ? HU : iU,
+                  FU = Math.max(zU - QU, 0);
+                (yU > FU || AU && 3 * yU > zU) && (vU.add(UU.skeleton), cU.b.Warn(`Skeleton "${UU.skeleton.name}": ${UU.skeleton.bones.length} bones stored as vertex uniforms use ${yU} of ~${FU} usable uniform vectors${AU?" (multiview)":""} on a device reporting ${zU}. This can exceed the GPU vertex-uniform limit and make the mesh silently fail to render. Set skeleton.useTextureToStoreBoneMatrices = true to store bone matrices in a texture.`))
+              }
+            }
+          }
+        } else XU.NUM_BONE_INFLUENCERS = 0, XU.BonesPerMesh = 0, void 0 !== XU.BONETEXTURE && (XU.BONETEXTURE = !1)
+      }(UU, XU), QU && function(UU, XU) {
+        const zU = UU.morphTargetManager;
+        zU ? (XU.MORPHTARGETS_UV = zU.supportsUVs && XU.UV1, XU.MORPHTARGETS_UV2 = zU.supportsUV2s && XU.UV2, XU.MORPHTARGETS_TANGENT = zU.supportsTangents && XU.TANGENT, XU.MORPHTARGETS_NORMAL = zU.supportsNormals && XU.NORMAL, XU.MORPHTARGETS_POSITION = zU.supportsPositions, XU.MORPHTARGETS_COLOR = zU.supportsColors, XU.MORPHTARGETTEXTURE_HASUVS = zU.hasUVs, XU.MORPHTARGETTEXTURE_HASUV2S = zU.hasUV2s, XU.MORPHTARGETTEXTURE_HASTANGENTS = zU.hasTangents, XU.MORPHTARGETTEXTURE_HASNORMALS = zU.hasNormals, XU.MORPHTARGETTEXTURE_HASPOSITIONS = zU.hasPositions, XU.MORPHTARGETTEXTURE_HASCOLORS = zU.hasColors, XU.NUM_MORPH_INFLUENCERS = zU.numMaxInfluencers || zU.numInfluencers, XU.MORPHTARGETS = XU.NUM_MORPH_INFLUENCERS > 0, XU.MORPHTARGETS_TEXTURE = zU.isUsingTextureForTargets) : (XU.MORPHTARGETS_UV = !1, XU.MORPHTARGETS_UV2 = !1, XU.MORPHTARGETS_TANGENT = !1, XU.MORPHTARGETS_NORMAL = !1, XU.MORPHTARGETS_POSITION = !1, XU.MORPHTARGETS_COLOR = !1, XU.MORPHTARGETTEXTURE_HASUVS = !1, XU.MORPHTARGETTEXTURE_HASUV2S = !1, XU.MORPHTARGETTEXTURE_HASTANGENTS = !1, XU.MORPHTARGETTEXTURE_HASNORMALS = !1, XU.MORPHTARGETTEXTURE_HASPOSITIONS = !1, XU.MORPHTARGETTEXTURE_HAS_COLORS = !1, XU.MORPHTARGETS = !1, XU.NUM_MORPH_INFLUENCERS = 0)
+      }(UU, XU), FU && function(UU, XU) {
+        const zU = UU.bakedVertexAnimationManager;
+        XU.BAKED_VERTEX_ANIMATION_TEXTURE = !(!zU || !zU.isEnabled)
+      }(UU, XU), !0
+    }
+
+    function sU(UU, XU) {
+      if (UU.activeCamera) {
+        const zU = XU.MULTIVIEW;
+        XU.MULTIVIEW = null !== UU.activeCamera.outputRenderTarget && UU.activeCamera.outputRenderTarget.getViewCount() > 1, XU.MULTIVIEW != zU && XU.markAsUnprocessed()
+      }
+    }
+
+    function nU(UU, XU, zU) {
+      const cU = XU.ORDER_INDEPENDENT_TRANSPARENCY,
+        yU = XU.ORDER_INDEPENDENT_TRANSPARENCY_16BITS;
+      XU.ORDER_INDEPENDENT_TRANSPARENCY = UU.useOrderIndependentTransparency && zU, XU.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !UU.qp().getCaps().textureFloatLinearFiltering, cU === XU.ORDER_INDEPENDENT_TRANSPARENCY && yU === XU.ORDER_INDEPENDENT_TRANSPARENCY_16BITS || XU.markAsUnprocessed()
+    }
+
+    function mU(UU, XU, zU) {
+      const cU = XU.PREPASS;
+      if (!XU._arePrePassDirty) return;
+      const yU = [{
+        type: 1,
+        define: "PREPASS_POSITION",
+        index: "PREPASS_POSITION_INDEX"
+      }, {
+        type: 9,
+        define: "PREPASS_LOCAL_POSITION",
+        index: "PREPASS_LOCAL_POSITION_INDEX"
+      }, {
+        type: 2,
+        define: "PREPASS_VELOCITY",
+        index: "PREPASS_VELOCITY_INDEX"
+      }, {
+        type: 11,
+        define: "PREPASS_VELOCITY_LINEAR",
+        index: "PREPASS_VELOCITY_LINEAR_INDEX"
+      }, {
+        type: 3,
+        define: "PREPASS_REFLECTIVITY",
+        index: "PREPASS_REFLECTIVITY_INDEX"
+      }, {
+        type: 0,
+        define: "PREPASS_IRRADIANCE_LEGACY",
+        index: "PREPASS_IRRADIANCE_LEGACY_INDEX"
+      }, {
+        type: 7,
+        define: "PREPASS_ALBEDO_SQRT",
+        index: "PREPASS_ALBEDO_SQRT_INDEX"
+      }, {
+        type: 5,
+        define: "PREPASS_DEPTH",
+        index: "PREPASS_DEPTH_INDEX"
+      }, {
+        type: 10,
+        define: "PREPASS_SCREENSPACE_DEPTH",
+        index: "PREPASS_SCREENSPACE_DEPTH_INDEX"
+      }, {
+        type: 6,
+        define: "PREPASS_NORMAL",
+        index: "PREPASS_NORMAL_INDEX"
+      }, {
+        type: 8,
+        define: "PREPASS_WORLD_NORMAL",
+        index: "PREPASS_WORLD_NORMAL_INDEX"
+      }, {
+        type: 14,
+        define: "PREPASS_IRRADIANCE",
+        index: "PREPASS_IRRADIANCE_INDEX"
+      }];
+      if (UU.prePassRenderer && UU.prePassRenderer.enabled && zU) {
+        XU.PREPASS = !0, XU.SCENE_MRT_COUNT = UU.prePassRenderer.mrtCount, XU.PREPASS_NORMAL_WORLDSPACE = UU.prePassRenderer.generateNormalsInWorldSpace, XU.PREPASS_COLOR = !0, XU.PREPASS_COLOR_INDEX = 0;
+        for (let zU = 0; zU < yU.length; zU++) {
+          const cU = UU.prePassRenderer.getIndex(yU[zU].type); - 1 !== cU ? (XU[yU[zU].define] = !0, XU[yU[zU].index] = cU) : XU[yU[zU].define] = !1
+        }
+      } else {
+        XU.PREPASS = !1;
+        for (let UU = 0; UU < yU.length; UU++) XU[yU[UU].define] = !1
+      }
+      XU.PREPASS != cU && (XU.markAsUnprocessed(), XU.markAsImageProcessingDirty())
+    }
+
+    function lU(UU, XU, zU, cU) {
+      let yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        QU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        AU = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        FU = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        oU = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        DU = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
+      yU && yU.push("Light" + UU), QU || (XU.push("vLightData" + UU, "vLightDiffuse" + UU, "vLightSpecular" + UU, "vLightDirection" + UU, "vLightWidth" + UU, "vLightHeight" + UU, "vLightFalloff" + UU, "vLightGround" + UU, "vSliceData" + UU, "vSliceRanges" + UU, "lightMatrix" + UU, "shadowsInfo" + UU, "depthValues" + UU), zU.push("shadowTexture" + UU), zU.push("depthTexture" + UU), XU.push("viewFrustumZ" + UU, "cascadeBlendFactor" + UU, "lightSizeUVCorrection" + UU, "depthCorrection" + UU, "penumbraDarkness" + UU, "frustumLengths" + UU), cU && (zU.push("projectionLightTexture" + UU), XU.push("textureProjectionMatrix" + UU)), AU && zU.push("iesLightTexture" + UU), oU && zU.push("rectAreaLightEmissionTexture" + UU), FU && (zU.push("lightDataTexture" + UU), DU || zU.push("tileMaskTexture" + UU)))
+    }
+
+    function xU(UU, XU, zU) {
+      const cU = ["vReflectionMicrosurfaceInfos", "vReflectionDominantDirection", "reflectionMatrix", "vReflectionInfos", "vReflectionPosition", "vReflectionSize", "vReflectionColor", "vReflectionFilteringInfo"];
+      zU && cU.push("vSphericalX", "vSphericalY", "vSphericalZ", "vSphericalXX_ZZ", "vSphericalYY_ZZ", "vSphericalZZ", "vSphericalXY", "vSphericalYZ", "vSphericalZX", "vSphericalL00", "vSphericalL1_1", "vSphericalL10", "vSphericalL11", "vSphericalL2_2", "vSphericalL2_1", "vSphericalL20", "vSphericalL21", "vSphericalL22"), UU.push(...cU);
+      XU.push("reflectionSampler", "reflectionSamplerLow", "reflectionSamplerHigh", "irradianceSampler", "icdfSampler")
+    }
+
+    function JU(UU, XU, zU) {
+      let cU, yU, QU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 4,
+        AU = null;
+      if (UU.uniformsNames) {
+        const FU = UU;
+        cU = FU.uniformsNames, yU = FU.uniformBuffersNames, XU = FU.samplers, zU = FU.defines, QU = FU.maxSimultaneousLights || 0, AU = FU.shaderLanguage ?? null
+      } else cU = UU, XU || (XU = []);
+      for (let FU = 0; FU < QU && zU["LIGHT" + FU]; FU++) lU(FU, cU, XU, zU["PROJECTEDLIGHTTEXTURE" + FU], yU, !1, zU["IESLIGHTTEXTURE" + FU], zU["CLUSTLIGHT" + FU], zU["RECTAREALIGHTEMISSIONTEXTURE" + FU], 1 === AU);
+      zU.NUM_MORPH_INFLUENCERS && (cU.push("morphTargetInfluences"), cU.push("morphTargetCount")), zU.BAKED_VERTEX_ANIMATION_TEXTURE && (cU.push("bakedVertexAnimationSettings"), cU.push("bakedVertexAnimationTextureSizeInverted"), cU.push("bakedVertexAnimationTime"), XU.push("bakedVertexAnimationTexture"))
+    }
+
+    function jU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        zU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        cU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        QU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      UU.addUniform("vReflectionInfos", 2), UU.addUniform("reflectionMatrix", 16), XU && UU.addUniform("vReflectionMicrosurfaceInfos", 3), zU && (UU.addUniform("vReflectionPosition", 3), UU.addUniform("vReflectionSize", 3)), cU && (UU.addUniform("vReflectionFilteringInfo", 2), UU.addUniform("vReflectionDominantDirection", 3)), QU && UU.addUniform("vReflectionColor", 3), yU && (UU.addUniform("vSphericalL00", 3), UU.addUniform("vSphericalL1_1", 3), UU.addUniform("vSphericalL10", 3), UU.addUniform("vSphericalL11", 3), UU.addUniform("vSphericalL2_2", 3), UU.addUniform("vSphericalL2_1", 3), UU.addUniform("vSphericalL20", 3), UU.addUniform("vSphericalL21", 3), UU.addUniform("vSphericalL22", 3), UU.addUniform("vSphericalX", 3), UU.addUniform("vSphericalY", 3), UU.addUniform("vSphericalZ", 3), UU.addUniform("vSphericalXX_ZZ", 3), UU.addUniform("vSphericalYY_ZZ", 3), UU.addUniform("vSphericalZZ", 3), UU.addUniform("vSphericalXY", 3), UU.addUniform("vSphericalYZ", 3), UU.addUniform("vSphericalZX", 3))
+    }
+  },
+  41415: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => QU
+    });
+    var cU = zU(37819),
+      yU = zU(41374);
+    class QU extends yU.c {
+      constructor(UU, XU) {
+        let zU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        super(UU, XU, void 0, arguments.length > 3 && void 0 !== arguments[3] && arguments[3]), this._normalMatrix = new cU.e, this._storeEffectOnSubMeshes = zU
+      }
+      getEffect() {
+        return this._storeEffectOnSubMeshes ? this._activeEffect : super.getEffect()
+      }
+      isReady(UU, XU) {
+        return !!UU && (!this._storeEffectOnSubMeshes || (!UU.uB || 0 === UU.uB.length || this.isReadyForSubMesh(UU, UU.uB[0], XU)))
+      }
+      _isReadyForSubMesh(UU) {
+        const XU = UU.materialDefines;
+        return !(this.checkReadyOnEveryCall || !UU.effect || !XU || XU._renderId !== this.nS().getRenderId())
+      }
+      bindOnlyWorldMatrix(UU) {
+        this._activeEffect.setMatrix("world", UU)
+      }
+      bindOnlyNormalMatrix(UU) {
+        this._activeEffect.setMatrix("normalMatrix", UU)
+      }
+      bind(UU, XU) {
+        XU && this.bindForSubMesh(UU, XU, XU.uB[0])
+      }
+      _afterBind(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          zU = arguments.length > 2 ? arguments[2] : void 0;
+        super._afterBind(UU, XU, zU), this.nS()._cachedEffect = XU, zU ? zU._drawWrapper._forceRebindOnNextCall = !1 : this._drawWrapper._forceRebindOnNextCall = !1
+      }
+      _mustRebind(UU, XU, zU) {
+        let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        return zU._drawWrapper._forceRebindOnNextCall || UU.isCachedMaterialInvalid(this, XU, cU)
+      }
+      dispose(UU, XU, zU) {
+        this._activeEffect = void 0, super.dispose(UU, XU, zU)
+      }
+    }
+  },
+  41438: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU,
+      f: () => yU
+    });
+    const cU = new WeakMap;
+
+    function yU(UU) {
+      const XU = UU.getVertexBuffers();
+      if (!XU) return null;
+      let zU = cU.get(UU);
+      if (zU) {
+        let UU = !1;
+        for (const cU in XU)
+          if (!zU.has(cU)) {
+            UU = !0;
+            break
+          } if (!UU) return zU
+      } else zU = new Map, cU.set(UU, zU);
+      for (const cU in XU) {
+        const UU = XU[cU];
+        if (UU) {
+          const XU = UU.byteOffset,
+            yU = UU.byteStride,
+            QU = UU.type,
+            AU = UU.normalized;
+          zU.set(cU, {
+            offset: XU,
+            stride: yU,
+            type: QU,
+            normalized: AU
+          })
+        }
+      }
+      return zU
+    }
+
+    function QU(UU, XU) {
+      XU.forEach(((XU, zU) => {
+        const cU = `vp_${zU}_info`;
+        UU.setFloat4(cU, XU.offset, XU.stride, XU.type, XU.normalized ? 1 : 0)
+      }))
+    }
+  },
+  41393: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => FU,
+      e: () => oU
+    });
+    var cU = zU(41113),
+      yU = zU(37819),
+      QU = zU(41121);
+    let AU = (() => {
+      var UU;
+      let XU, zU, yU = [];
+      return UU = class {
+        static extractMinAndMaxIndexed(UU, XU, zU, cU, yU, QU) {
+          for (let AU = zU; AU < zU + cU; AU++) {
+            const zU = 3 * XU[AU],
+              cU = UU[zU],
+              FU = UU[zU + 1],
+              oU = UU[zU + 2];
+            yU.minimizeInPlaceFromFloats(cU, FU, oU), QU.maximizeInPlaceFromFloats(cU, FU, oU)
+          }
+        }
+        static extractMinAndMax(UU, XU, zU, cU, yU, QU) {
+          for (let AU = XU, FU = XU * cU; AU < XU + zU; AU++, FU += cU) {
+            const XU = UU[FU],
+              zU = UU[FU + 1],
+              cU = UU[FU + 2];
+            yU.minimizeInPlaceFromFloats(XU, zU, cU), QU.maximizeInPlaceFromFloats(XU, zU, cU)
+          }
+        }
+      }, (() => {
+        const AU = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        XU = [QU.e.filter((function() {
+          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0]) && !Array.isArray(arguments.length <= 1 ? void 0 : arguments[1])
+        }))], zU = [QU.e.filter((function() {
+          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
+        }))], (0, cU.j)(UU, null, XU, {
+          kind: "method",
+          name: "extractMinAndMaxIndexed",
+          static: !0,
+          private: !1,
+          access: {
+            has: UU => "extractMinAndMaxIndexed" in UU,
+            get: UU => UU.extractMinAndMaxIndexed
+          },
+          metadata: AU
+        }, null, yU), (0, cU.j)(UU, null, zU, {
+          kind: "method",
+          name: "extractMinAndMax",
+          static: !0,
+          private: !1,
+          access: {
+            has: UU => "extractMinAndMax" in UU,
+            get: UU => UU.extractMinAndMax
+          },
+          metadata: AU
+        }, null, yU), AU && Object.defineProperty(UU, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: AU
+        }), (0, cU.n)(UU, yU)
+      })(), UU
+    })();
+
+    function FU(UU, XU, zU, cU) {
+      let QU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const FU = new yU.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+        oU = new yU.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+      return AU.extractMinAndMaxIndexed(UU, XU, zU, cU, FU, oU), QU && (FU.x -= FU.x * QU.x + QU.y, FU.y -= FU.y * QU.x + QU.y, FU.z -= FU.z * QU.x + QU.y, oU.x += oU.x * QU.x + QU.y, oU.y += oU.y * QU.x + QU.y, oU.z += oU.z * QU.x + QU.y), {
+        minimum: FU,
+        maximum: oU
+      }
+    }
+
+    function oU(UU, XU, zU) {
+      let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+        QU = arguments.length > 4 ? arguments[4] : void 0;
+      const FU = new yU.q(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+        oU = new yU.q(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+      return QU || (QU = 3), AU.extractMinAndMax(UU, XU, zU, QU, FU, oU), cU && (FU.x -= FU.x * cU.x + cU.y, FU.y -= FU.y * cU.x + cU.y, FU.z -= FU.z * cU.x + cU.y, oU.x += oU.x * cU.x + cU.y, oU.y += oU.y * cU.x + cU.y, oU.z += oU.z * cU.x + cU.y), {
+        minimum: FU,
+        maximum: oU
+      }
+    }
+  },
+  41378: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => EU
+    });
+    var cU, yU = zU(41237),
+      QU = zU(41383),
+      AU = zU(41387),
+      FU = zU(41393),
+      oU = zU(41395),
+      DU = zU(40989);
+    class EU {
+      get materialDefines() {
+        const UU = this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.defines : this._getDrawWrapper()?.defines;
+        return "string" === typeof UU ? null : UU
+      }
+      set materialDefines(UU) {
+        (this._mainDrawWrapperOverride ?? this._getDrawWrapper(void 0, !0)).defines = UU
+      }
+      _getDrawWrapper(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        UU = UU ?? this._engine.currentRenderPassId;
+        let zU = this._drawWrappers[UU];
+        return !zU && XU && (this._drawWrappers[UU] = zU = new oU.c(this._mesh.nS().qp())), zU
+      }
+      _removeDrawWrapper(UU) {
+        let XU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._drawWrappers[UU]?.dispose(XU), this._drawWrappers[UU] = void 0
+      }
+      get effect() {
+        return this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.effect : this._getDrawWrapper()?.effect ?? null
+      }
+      get _drawWrapper() {
+        return this._mainDrawWrapperOverride ?? this._getDrawWrapper(void 0, !0)
+      }
+      get _drawWrapperOverride() {
+        return this._mainDrawWrapperOverride
+      }
+      _setMainDrawWrapperOverride(UU) {
+        this._mainDrawWrapperOverride = UU
+      }
+      setEffect(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          zU = arguments.length > 2 ? arguments[2] : void 0,
+          cU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const yU = this._drawWrapper;
+        yU.setEffect(UU, XU, cU), void 0 !== zU && (yU.materialContext = zU), UU || (yU.defines = null, yU.materialContext = void 0)
+      }
+      resetDrawCache(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this._drawWrappers) {
+          if (void 0 !== UU) return void this._removeDrawWrapper(UU, !0, XU);
+          for (const UU of this._drawWrappers) UU?.dispose(XU)
+        }
+        this._drawWrappers = []
+      }
+      static AddToMesh(UU, XU, zU, cU, yU, QU, AU) {
+        return new EU(UU, XU, zU, cU, yU, QU, AU, !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7])
+      }
+      constructor(UU, XU, zU, cU, yU, QU, AU) {
+        let FU = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          oU = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8];
+        this.materialIndex = UU, this.verticesStart = XU, this.verticesCount = zU, this.indexStart = cU, this.indexCount = yU, this._mainDrawWrapperOverride = null, this._linesIndexCount = 0, this._linesIndexBuffer = null, this._lastColliderWorldVertices = null, this._lastColliderTransformMatrix = null, this._wasDispatched = !1, this._renderId = 0, this._alphaIndex = 0, this._distanceToCamera = 0, this._currentMaterial = null, this._mesh = QU, this._renderingMesh = AU || QU, oU && QU.uB.push(this), this._engine = this._mesh.nS().qp(), this.resetDrawCache(), this._trianglePlanes = [], this._id = QU.uB.length - 1, FU && (this.refreshBoundingInfo(), QU.computeWorldMatrix(!0))
+      }
+      get IsGlobal() {
+        return 0 === this.verticesStart && this.verticesCount === this._mesh.getTotalVertices() && 0 === this.indexStart && this.indexCount === this._mesh.getTotalIndices()
+      }
+      gM() {
+        return this.IsGlobal || this._mesh.hasThinInstances ? this._mesh.gM() : this._boundingInfo
+      }
+      setBoundingInfo(UU) {
+        return this._boundingInfo = UU, this
+      }
+      getMesh() {
+        return this._mesh
+      }
+      getRenderingMesh() {
+        return this._renderingMesh
+      }
+      getReplacementMesh() {
+        return this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null
+      }
+      getEffectiveMesh() {
+        const UU = this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null;
+        return UU || this._renderingMesh
+      }
+      Hp() {
+        let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        const XU = this._renderingMesh.getMaterialForRenderPass(this._engine.currentRenderPassId) ?? this._renderingMesh.material;
+        if (!XU) return UU && this._mesh.nS()._hasDefaultMaterial ? this._mesh.nS().defaultMaterial : null;
+        if (this._isMultiMaterial(XU)) {
+          const UU = XU.getSubMaterial(this.materialIndex);
+          return this._currentMaterial !== UU && (this._currentMaterial = UU, this.resetDrawCache()), UU
+        }
+        return XU
+      }
+      _isMultiMaterial(UU) {
+        return void 0 !== UU.getSubMaterial
+      }
+      refreshBoundingInfo() {
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (this._lastColliderWorldVertices = null, this.IsGlobal || !this._renderingMesh || !this._renderingMesh.geometry) return this;
+        if (UU || (UU = this._renderingMesh.getVerticesData(yU.h.PositionKind)), !UU) return this._boundingInfo = this._mesh.gM(), this;
+        const XU = this._renderingMesh.yyU();
+        let zU;
+        if (0 === this.indexStart && this.indexCount === XU.length) {
+          const UU = this._renderingMesh.gM();
+          zU = {
+            minimum: UU.minimum.clone(),
+            maximum: UU.maximum.clone()
+          }
+        } else zU = (0, FU.d)(UU, XU, this.indexStart, this.indexCount, this._renderingMesh.geometry.boundingBias);
+        return this._boundingInfo ? this._boundingInfo.reConstruct(zU.minimum, zU.maximum) : this._boundingInfo = new AU.b(zU.minimum, zU.maximum), this
+      }
+      _checkCollision(UU) {
+        return this.gM()._checkCollision(UU)
+      }
+      updateBoundingInfo(UU) {
+        let XU = this.gM();
+        return XU || (this.refreshBoundingInfo(), XU = this.gM()), XU && XU.update(UU), this
+      }
+      isInFrustum(UU) {
+        const XU = this.gM();
+        return !!XU && XU.isInFrustum(UU, this._mesh.cullingStrategy)
+      }
+      isCompletelyInFrustum(UU) {
+        const XU = this.gM();
+        return !!XU && XU.isCompletelyInFrustum(UU)
+      }
+      render(UU) {
+        return this._renderingMesh.render(this, UU, this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : void 0), this
+      }
+      _getLinesIndexBuffer(UU, XU) {
+        if (!this._linesIndexBuffer) {
+          const zU = 6 * Math.floor(this.indexCount / 3),
+            cU = this.verticesStart + this.verticesCount > 65535 ? new Uint32Array(zU) : new Uint16Array(zU);
+          let yU = 0;
+          if (0 === UU.length)
+            for (let UU = this.indexStart; UU < this.indexStart + this.indexCount; UU += 3) cU[yU++] = UU, cU[yU++] = UU + 1, cU[yU++] = UU + 1, cU[yU++] = UU + 2, cU[yU++] = UU + 2, cU[yU++] = UU;
+          else
+            for (let XU = this.indexStart; XU < this.indexStart + this.indexCount; XU += 3) cU[yU++] = UU[XU], cU[yU++] = UU[XU + 1], cU[yU++] = UU[XU + 1], cU[yU++] = UU[XU + 2], cU[yU++] = UU[XU + 2], cU[yU++] = UU[XU];
+          this._linesIndexBuffer = XU.createIndexBuffer(cU), this._linesIndexCount = cU.length
+        }
+        return this._linesIndexBuffer
+      }
+      canIntersects(UU) {
+        const XU = this.gM();
+        return !!XU && UU.intersectsBox(XU.boundingBox)
+      }
+      intersects(UU, XU, zU, cU, yU) {
+        const QU = this.Hp();
+        if (!QU) return null;
+        let AU = 3,
+          FU = !1;
+        switch (QU.fillMode) {
+          case 3:
+          case 5:
+          case 6:
+          case 8:
+            return null;
+          case 7:
+            AU = 1, FU = !0
+        }
+        return 4 === QU.fillMode ? zU.length ? this._intersectLines(UU, XU, zU, this._mesh.intersectionThreshold, cU) : this._intersectUnIndexedLines(UU, XU, zU, this._mesh.intersectionThreshold, cU) : !zU.length && this._mesh._unIndexed ? this._intersectUnIndexedTriangles(UU, XU, zU, cU, yU) : this._intersectTriangles(UU, XU, zU, AU, FU, cU, yU)
+      }
+      _intersectLines(UU, XU, zU, cU, yU) {
+        let AU = null;
+        for (let FU = this.indexStart; FU < this.indexStart + this.indexCount; FU += 2) {
+          const oU = XU[zU[FU]],
+            DU = XU[zU[FU + 1]],
+            EU = UU.intersectionSegment(oU, DU, cU);
+          if (!(EU < 0) && ((yU || !AU || EU < AU.distance) && (AU = new QU.e(null, null, EU), AU.faceId = FU / 2, yU))) break
+        }
+        return AU
+      }
+      _intersectUnIndexedLines(UU, XU, zU, cU, yU) {
+        let AU = null;
+        for (let FU = this.verticesStart; FU < this.verticesStart + this.verticesCount; FU += 2) {
+          const zU = XU[FU],
+            oU = XU[FU + 1],
+            DU = UU.intersectionSegment(zU, oU, cU);
+          if (!(DU < 0) && ((yU || !AU || DU < AU.distance) && (AU = new QU.e(null, null, DU), AU.faceId = FU / 2, yU))) break
+        }
+        return AU
+      }
+      _intersectTriangles(UU, XU, zU, cU, yU, QU, AU) {
+        let FU = null,
+          oU = -1;
+        for (let DU = this.indexStart; DU < this.indexStart + this.indexCount - (3 - cU); DU += cU) {
+          oU++;
+          const cU = zU[DU],
+            EU = zU[DU + 1],
+            YU = zU[DU + 2];
+          if (yU && 4294967295 === YU) {
+            DU += 2;
+            continue
+          }
+          const NU = XU[cU],
+            IU = XU[EU],
+            pU = XU[YU];
+          if (!NU || !IU || !pU) continue;
+          if (AU && !AU(NU, IU, pU, UU, cU, EU, YU)) continue;
+          const aU = UU.intersectsTriangle(NU, IU, pU);
+          if (aU) {
+            if (aU.distance < 0) continue;
+            if ((QU || !FU || aU.distance < FU.distance) && (FU = aU, FU.faceId = oU, QU)) break
+          }
+        }
+        return FU
+      }
+      _intersectUnIndexedTriangles(UU, XU, zU, cU, yU) {
+        let QU = null;
+        for (let AU = this.verticesStart; AU < this.verticesStart + this.verticesCount; AU += 3) {
+          const zU = XU[AU],
+            FU = XU[AU + 1],
+            oU = XU[AU + 2];
+          if (yU && !yU(zU, FU, oU, UU, -1, -1, -1)) continue;
+          const DU = UU.intersectsTriangle(zU, FU, oU);
+          if (DU) {
+            if (DU.distance < 0) continue;
+            if ((cU || !QU || DU.distance < QU.distance) && (QU = DU, QU.faceId = AU / 3, cU)) break
+          }
+        }
+        return QU
+      }
+      _rebuild() {
+        this._linesIndexBuffer && (this._linesIndexBuffer = null)
+      }
+      clone(UU, XU) {
+        const zU = new EU(this.materialIndex, this.verticesStart, this.verticesCount, this.indexStart, this.indexCount, UU, XU, !1);
+        if (!this.IsGlobal) {
+          const UU = this.gM();
+          if (!UU) return zU;
+          zU._boundingInfo = new AU.b(UU.minimum, UU.maximum)
+        }
+        return zU
+      }
+      dispose() {
+        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._linesIndexBuffer && (this._mesh.nS().qp()._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null);
+        const XU = this._mesh.uB.indexOf(this);
+        this._mesh.uB.splice(XU, 1), this.resetDrawCache(void 0, UU)
+      }
+      getClassName() {
+        return "SubMesh"
+      }
+      static CreateFromIndices(UU, XU, zU, cU, yU) {
+        let QU = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          AU = Number.MAX_VALUE,
+          FU = -Number.MAX_VALUE;
+        const oU = (yU || cU).yyU();
+        for (let DU = XU; DU < XU + zU; DU++) {
+          const UU = oU[DU];
+          UU < AU && (AU = UU), UU > FU && (FU = UU)
+        }
+        return new EU(UU, AU, FU - AU + 1, XU, zU, cU, yU, QU)
+      }
+    }(cU = EU.prototype).projectToRef ?? (cU.projectToRef = (0, DU.k)("SubMesh", "projectToRef"))
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

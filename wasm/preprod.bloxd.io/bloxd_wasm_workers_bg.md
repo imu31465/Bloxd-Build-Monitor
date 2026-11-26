@@ -1,49 +1,55 @@
 # WASM module: `bloxd_wasm_workers_bg`
 
-> environment **preprod.bloxd.io** · build `fo1voe.f743fbcf` · analyzed 2026-11-26T01:26:18+09:00
-> source: https://preprod.bloxd.io/static/media/bloxd_wasm_workers_bg.a748c387a816d887f35c.wasm
-> 201,241 bytes (196.5 KB) · sha256 `d70704eca78df456…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **preprod.bloxd.io** · build `fecih8.fbb4bdb3` · analyzed 2026-11-26T22:08:29+09:00
+> source: https://preprod.bloxd.io/static/media/bloxd_wasm_workers_bg.8d69bfc9c0063cf52d1d.wasm
+> 203,635 bytes (198.9 KB) · sha256 `e095c7f514df56db…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `3c13c0d0b93f6cef.798` → `2f19b60033a1412a.798` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 201,241 → 203,635 bytes (+2,394)
+- defined functions 167 → 169
+- code bytes 190,078 → 192,404
+- data bytes 9,979 → 10,051
+- name-section module id `2f19b60033a1412a.798` → `f4b057f6546edfb1.790`
 - export identifiers rotated by the obfuscator: 1/33 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `cannot modify the panic hook from a panicking thread|`; `p2d/greedy/pair_bits.rs`; `rwlock overflowed read locksj`
+- removed embedded strings: `cannot modify the panic hook from a panicking threadd`; `range start index `; `rwlock overflowed read locksR`
 
 ## Overview
 
 | Metric | Value |
 |---|---|
-| Functions defined / imported | 167 / 5 |
+| Functions defined / imported | 169 / 5 |
 | Exports / imports | 33 / 5 |
-| Code bytes (function bodies) | 190,078 (185.6 KB) |
-| Total local variables | 1,489 |
-| Instructions (scanable bodies) | 94,763 |
-| Data segments / bytes | 9 / 9,979 |
+| Code bytes (function bodies) | 192,404 (187.9 KB) |
+| Total local variables | 1,531 |
+| Instructions (scanable bodies) | 95,959 |
+| Data segments / bytes | 9 / 10,051 |
 | Element segments / entries | 1 / 44 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `2f19b60033a1412a.798` |
+| name-section module id | `f4b057f6546edfb1.790` |
 | Sections | 12 |
 
 ## Sections
 
 | id | Section | Bytes | Items |
 |---|---|---:|---:|
-| 1 | type | 179 | 23 |
+| 1 | type | 167 | 22 |
 | 2 | import | 61 | 5 |
-| 3 | function | 169 | 167 |
+| 3 | function | 171 | 169 |
 | 4 | table | 5 | 1 |
 | 5 | memory | 3 | 1 |
 | 6 | global | 25 | 3 |
-| 7 | export | 247 | 33 |
+| 7 | export | 249 | 33 |
 | 9 | element | 75 | 1 |
 | 12 | datacount | 1 | — |
-| 10 | code | 190,350 | 167 |
-| 11 | data | 10,060 | 9 |
+| 10 | code | 192,680 | 169 |
+| 11 | data | 10,132 | 9 |
 | 0 | custom:name | 28 | — |
 
 ## Types
 
-23 function types; top shapes: `(i32 i32 i32) -> (i32)` ×1, `(i32 i32) -> (i32)` ×1, `(i32 i32) -> ()` ×1, `(i32) -> ()` ×1, `(i32 i32 i32) -> ()` ×1, `(i32) -> (i32)` ×1, `() -> (i32)` ×1, `(i32 i32 i32 i32 i32) -> ()` ×1
+22 function types; top shapes: `(i32 i32 i32) -> (i32)` ×1, `(i32 i32) -> (i32)` ×1, `(i32 i32) -> ()` ×1, `(i32) -> ()` ×1, `(i32 i32 i32) -> ()` ×1, `(i32) -> (i32)` ×1, `() -> (i32)` ×1, `(i32 i32 i32 i32 i32) -> ()` ×1
 
 ## Imports
 
@@ -51,11 +57,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `ubqt.h6KF` | func | `(i32) -> ()` |
-| 1 | `ubqt.b3Rm` | func | `(i32) -> ()` |
-| 2 | `ubqt.MQbf` | func | `(i32 i32) -> ()` |
-| 3 | `ubqt.JqhQ` | func | `(i32 i32) -> (i32)` |
-| 4 | `ubqt.jSOa` | func | `(i32 i32) -> ()` |
+| 0 | `Fqvn.lpCP` | func | `(i32) -> ()` |
+| 1 | `Fqvn.dDwL` | func | `(i32) -> ()` |
+| 2 | `Fqvn.XLCD` | func | `(i32 i32) -> ()` |
+| 3 | `Fqvn.eWAM` | func | `(i32 i32) -> (i32)` |
+| 4 | `Fqvn.GCsP` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -63,39 +69,39 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `OySK` | func | 50 | `() -> (i32)` |
-| `sade` | func | 129 | `(i32) -> (i32)` |
-| `TnPD` | func | 138 | `(i32 i32 i32 i32) -> (i32)` |
-| `lUgX` | func | 124 | `(i32) -> (i32)` |
-| `bb80` | func | 117 | `(f64) -> (i32)` |
-| `GO7m` | func | 40 | `() -> (i32)` |
-| `Werc` | func | 100 | `() -> (i32)` |
-| `NMl8` | func | 127 | `(i32) -> (i32)` |
-| `F9DQ` | func | 145 | `() -> (i32)` |
+| `wB30` | func | 126 | `(i32) -> (i32)` |
+| `bNQP` | func | 170 | `(i32) -> ()` |
+| `V1kr` | func | 131 | `(i32) -> (i32)` |
+| `BYKM` | func | 141 | `(i32 i32 i32) -> (i32 i32)` |
+| `P8rC` | func | 130 | `(i32) -> (i32)` |
+| `dRXF` | func | 117 | `(i32) -> ()` |
+| `C0eT` | func | 169 | `(i32) -> (i32)` |
+| `i960` | func | 51 | `() -> (i32)` |
+| `nwsP` | func | 114 | `(i32) -> (i32)` |
+| `JP2Z` | func | 5 | `(i32 i32) -> (i32)` |
+| `E1LJ` | func | 106 | `(i32 i32) -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `twcE` | func | 15 | `(i32 i32 i32) -> ()` |
-| `ihFU` | func | 136 | `() -> ()` |
-| `fUOL` | func | 137 | `(i32 i32) -> (i32)` |
-| `Uwrf` | func | 104 | `(i32 i32) -> (i32)` |
-| `tdab` | func | 151 | `(i32 i32 i32) -> ()` |
-| `xjug` | global | 1 | `` |
-| `kyK4` | func | 57 | `(i32 i32) -> (i32)` |
-| `kfqu` | func | 71 | `(i32 i32) -> ()` |
-| `gb0Z` | func | 140 | `() -> (i32 i32)` |
-| `Esv8` | global | 2 | `` |
-| `xf8I` | func | 92 | `(i32 i32) -> ()` |
-| `fGp8` | func | 168 | `(i32) -> ()` |
-| `HqeW` | func | 126 | `(i32) -> (i32)` |
-| `ZQVh` | func | 125 | `(i32) -> (i32)` |
-| `DyMY` | func | 115 | `(i32) -> ()` |
-| `ZsRo` | func | 112 | `(i32) -> (i32)` |
-| `Dp3L` | func | 128 | `(i32) -> (i32)` |
-| `phES` | func | 96 | `() -> (i32)` |
-| `raMV` | func | 167 | `(i32) -> (i32)` |
-| `smxk` | func | 139 | `(i32 i32 i32) -> (i32 i32)` |
-| `aS1Z` | func | 5 | `(i32 i32) -> (i32)` |
-| `mqQL` | func | 170 | `() -> (i32)` |
-| `yfGf` | func | 136 | `() -> ()` |
+| `ekXA` | func | 16 | `(i32 i32 i32) -> ()` |
+| `uWKF` | func | 119 | `(f64) -> (i32)` |
+| `XqHW` | func | 94 | `(i32 i32) -> ()` |
+| `MTcm` | func | 129 | `(i32) -> (i32)` |
+| `mDFn` | global | 1 | `` |
+| `fsNR` | func | 138 | `() -> ()` |
+| `GAdg` | func | 138 | `() -> ()` |
+| `HtvS` | func | 102 | `() -> (i32)` |
+| `AcxI` | func | 142 | `() -> (i32 i32)` |
+| `yVTn` | func | 153 | `(i32 i32 i32) -> ()` |
+| `OlfR` | func | 128 | `(i32) -> (i32)` |
+| `dVER` | func | 140 | `(i32 i32 i32 i32) -> (i32)` |
+| `CbLf` | global | 2 | `` |
+| `Mn6c` | func | 127 | `(i32) -> (i32)` |
+| `Asro` | func | 98 | `() -> (i32)` |
+| `p7WZ` | func | 40 | `() -> (i32)` |
+| `akhw` | func | 139 | `(i32 i32) -> (i32)` |
+| `AN7Y` | func | 172 | `() -> (i32)` |
+| `mWKL` | func | 147 | `() -> (i32)` |
+| `qR4A` | func | 58 | `(i32 i32) -> (i32)` |
+| `Nfgx` | func | 73 | `(i32 i32) -> ()` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -103,20 +109,20 @@
 
 - memory 0: min 17 pages · max ∞ · shared=False
 - table 0: funcref · min 45 · max 45
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1059208, `i32` = i32.const 1059424
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1059280, `i32` = i32.const 1059504
 
 ## Functions
 
-- 167 bodies · 190,078 code bytes · avg 1.1 KB
-- instruction scan: 167 bodies fully decoded, 0 degraded (unknown/extension opcodes)
+- 169 bodies · 192,404 code bytes · avg 1.1 KB
+- instruction scan: 169 bodies fully decoded, 0 degraded (unknown/extension opcodes)
 
 | Body size | Functions |
 |---|---:|
 | <= 32 bytes | 31 |
 | <= 64 bytes | 4 |
 | <= 128 bytes | 33 |
-| <= 256 bytes | 34 |
-| <= 512 bytes | 22 |
+| <= 256 bytes | 35 |
+| <= 512 bytes | 23 |
 | <= 1024 bytes | 16 |
 | <= 2048 bytes | 9 |
 | <= 4096 bytes | 11 |
@@ -128,21 +134,21 @@ Largest functions:
 
 | # | type | locals | body bytes | instructions | dominant opcodes |
 |---:|---|---:|---:|---:|---|
-| 0 | `(i32 i32) -> (i32)` | 145 | 55,528 | 27,822 | local.get×7965, i32.const×3939, local.set×1848, i32.add×1792, local.tee×1446 |
+| 0 | `(i32 i32) -> (i32)` | 159 | 55,456 | 27,732 | local.get×7935, i32.const×3924, local.set×1844, i32.add×1790, local.tee×1442 |
 | 1 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> ()` | 79 | 18,146 | 9,149 | local.get×2799, i32.const×1192, local.set×661, i32.add×478, end×462 |
 | 2 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` | 100 | 10,232 | 5,391 | local.get×1725, i32.const×519, local.tee×357, i32.add×340, local.set×301 |
 | 3 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` | 25 | 4,850 | 2,627 | local.get×818, i32.const×314, local.tee×167, i32.add×154, br_if×132 |
 | 4 | `(i32 i32 i32 i32 i32 i32) -> (i32)` | 34 | 4,220 | 2,264 | local.get×700, i32.const×261, i32.add×236, local.set×234, br_if×100 |
 | 5 | `(i32) -> (i32)` | 9 | 4,901 | 2,140 | local.get×498, i32.const×447, i32.store×201, local.tee×154, i32.load×103 |
 | 6 | `(i32 i32 i32) -> ()` | 65 | 4,027 | 2,080 | local.get×643, i32.const×234, i32.add×173, local.tee×132, local.set×128 |
-| 7 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` | 61 | 4,017 | 2,137 | local.get×672, i32.const×233, local.set×180, br_if×131, i32.add×123 |
-| 8 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` | 34 | 3,499 | 1,791 | local.get×540, i32.const×216, local.set×150, local.tee×91, i32.load×91 |
-| 9 | `(i32 i32 i32 i32) -> ()` | 29 | 3,272 | 1,826 | local.get×749, local.tee×214, select×149, i32.const×97, i32.lt_s×78 |
-| 10 | `(i32 i32 i32) -> ()` | 20 | 3,518 | 1,626 | local.get×475, i32.const×238, i32.add×87, local.set×84, local.tee×80 |
-| 11 | `(i32 i32 i32) -> (i32)` | 30 | 2,981 | 1,579 | local.get×405, i32.const×226, local.set×135, i32.add×87, end×87 |
-| 12 | `(i32 i32 i32 i32 i32) -> ()` | 30 | 2,780 | 1,478 | local.get×437, i32.const×198, local.set×104, i32.add×82, local.tee×65 |
-| 13 | `(i32) -> ()` | 4 | 2,731 | 1,281 | local.get×346, i32.load×203, local.tee×118, i32.const×115, end×115 |
-| 14 | `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` | 55 | 2,226 | 1,212 | local.get×397, i32.const×128, local.set×120, end×57, i32.add×57 |
+| 7 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> ()` | 59 | 3,676 | 2,019 | local.get×673, i32.const×230, local.set×206, i32.add×97, end×92 |
+| 8 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` | 61 | 4,017 | 2,137 | local.get×672, i32.const×233, local.set×180, br_if×131, i32.add×123 |
+| 9 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` | 34 | 3,499 | 1,791 | local.get×540, i32.const×216, local.set×150, local.tee×91, i32.load×91 |
+| 10 | `(i32 i32 i32 i32) -> ()` | 29 | 3,272 | 1,826 | local.get×749, local.tee×214, select×149, i32.const×97, i32.lt_s×78 |
+| 11 | `(i32 i32 i32) -> ()` | 20 | 3,518 | 1,626 | local.get×475, i32.const×238, i32.add×87, local.set×84, local.tee×80 |
+| 12 | `(i32 i32 i32) -> (i32)` | 30 | 2,981 | 1,579 | local.get×405, i32.const×226, local.set×135, i32.add×87, end×87 |
+| 13 | `(i32 i32 i32 i32 i32) -> ()` | 30 | 2,780 | 1,478 | local.get×437, i32.const×198, local.set×104, i32.add×82, local.tee×65 |
+| 14 | `(i32) -> ()` | 4 | 2,752 | 1,290 | local.get×349, i32.load×205, local.tee×119, end×116, i32.const×115 |
 | 15 | `(i32 i32 i32) -> ()` | 24 | 2,117 | 1,186 | local.get×373, i32.add×237, i32.const×168, i32.xor×114, local.tee×85 |
 | 16 | `(i32 i32 i32) -> ()` | 31 | 2,818 | 1,175 | local.get×298, i32.const×112, f64.const×93, local.tee×72, br_if×61 |
 | 17 | `(i32 i32 i32 i32 i32 i32 i32 i32) -> ()` | 47 | 1,697 | 887 | local.get×246, i32.const×128, local.set×75, i32.add×66, local.tee×51 |
@@ -157,7 +163,7 @@ Largest functions:
 | 26 | `(i32 i32) -> ()` | 27 | 1,008 | 491 | local.get×162, i32.load×54, local.tee×54, i32.store×54, end×29 |
 | 27 | `(i32 i32 i32 i32 i32) -> (i32)` | 8 | 896 | 481 | local.get×156, i32.add×57, i32.const×47, local.tee×23, i32.store8×20 |
 | 28 | `(i32 i32 i32 i32 i32 i32) -> (i32)` | 15 | 905 | 452 | local.get×161, i32.const×56, local.set×51, i32.store×38, local.tee×22 |
-| 99 | `(i32 i32) -> (i32)` | 123 | 17,621 | 8,095 | local.get×2461, i32.const×1018, local.set×467, end×391, i32.store×336 |
+| 101 | `(i32 i32) -> (i32)` | 128 | 17,873 | 8,211 | local.get×2502, i32.const×1028, local.set×472, end×402, i32.store×342 |
 
 ## Embedded strings (data segments)
 
@@ -190,31 +196,31 @@ attempted to take ownership of Rust value while it was borrowed
 
 | opcode | count |
 |---|---:|
-| `local.get` | 27,738 |
-| `i32.const` | 12,656 |
-| `local.set` | 5,565 |
-| `i32.add` | 5,458 |
-| `local.tee` | 4,901 |
-| `end` | 4,204 |
-| `i32.load` | 3,612 |
-| `br_if` | 2,930 |
-| `i32.store` | 2,614 |
-| `block` | 1,857 |
-| `if` | 1,744 |
-| `i32.and` | 1,542 |
-| `i32.shl` | 1,460 |
-| `call` | 1,403 |
-| `br` | 1,173 |
-| `i32.sub` | 1,127 |
-| `i32.eqz` | 870 |
-| `i32.load8_u` | 835 |
-| `i64.const` | 819 |
-| `select` | 791 |
-| `i32.or` | 725 |
-| `i64.store` | 694 |
+| `local.get` | 28,140 |
+| `i32.const` | 12,781 |
+| `local.set` | 5,678 |
+| `i32.add` | 5,522 |
+| `local.tee` | 4,945 |
+| `end` | 4,261 |
+| `i32.load` | 3,641 |
+| `br_if` | 2,975 |
+| `i32.store` | 2,627 |
+| `block` | 1,876 |
+| `if` | 1,769 |
+| `i32.and` | 1,567 |
+| `i32.shl` | 1,484 |
+| `call` | 1,421 |
+| `br` | 1,192 |
+| `i32.sub` | 1,136 |
+| `i32.eqz` | 893 |
+| `i32.load8_u` | 843 |
+| `i64.const` | 818 |
+| `select` | 804 |
+| `i32.or` | 740 |
+| `i64.store` | 697 |
 | `i32.store8` | 618 |
-| `i32.gt_u` | 586 |
-| `i32.eq` | 583 |
+| `i32.eq` | 592 |
+| `i32.ne` | 591 |
 
 ## Custom sections
 
@@ -223,4 +229,4 @@ attempted to take ownership of Rust value while it was borrowed
 ## Analysis quality
 
 - sections consumed: 12, structural errors: 0
-- bodies fully decoded: 167/167 (degraded: 0)
+- bodies fully decoded: 169/169 (degraded: 0)

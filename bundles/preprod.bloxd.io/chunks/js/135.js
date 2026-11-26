@@ -1,1631 +1,1855 @@
 export const id = 135;
-export const ids = [135, 705];
+export const ids = [135, 136];
 export const modules = {
-  37278: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => kr
+  7126: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => yU
     });
-    var OM = iM(313),
-      SM = iM(3902),
-      jM = iM(3945),
-      aM = iM(3938),
-      PM = iM(3934),
-      nM = iM(1188),
-      QM = iM(30),
-      zM = iM(1830),
-      LM = iM(1440),
-      mM = iM(1520),
-      HM = iM(1116),
-      hM = iM.n(HM),
-      JM = iM(1763),
-      dM = iM(44),
-      yM = iM(65),
-      lM = iM(2482),
-      EM = iM(1382),
-      UM = iM(1694),
-      GM = iM(1142),
-      CM = iM(3821),
-      eM = iM(4934),
-      bM = iM(2796),
-      wM = iM(2006),
-      tM = iM(3898),
-      gM = iM(1843),
-      uM = iM(1573),
-      RM = iM(2280),
-      pM = iM(1396),
-      WM = iM(2818),
-      sM = iM(5417),
-      DM = iM(1303);
-    const kM = 15e3,
-      ZM = 2500;
+    var cU = zU(1305);
 
-    function oM(MM) {
-      var rM;
+    function yU(UU) {
       let {
-        eventName: iM
-      } = MM;
-      const {
-        t: OM
-      } = (0, nM.A)(), SM = gM.e[iM], [jM, aM] = (0, dM.useState)((() => Date.now() >= SM.endsAt.getTime())), [PM, QM] = (0, dM.useState)("overall"), zM = function(MM, rM) {
-        const {
-          userContext: iM,
-          isUserContextUpdating: OM
-        } = (0, GM.b)(), SM = `${MM}:${rM}`, [jM, aM] = (0, dM.useState)({
-          requestKey: SM,
-          leaderboard: {
-            status: "loading"
-          }
-        });
-        return (0, dM.useEffect)((() => {
-          if (OM) return;
-          let jM, PM = !1;
-          const nM = async () => {
-            if ("visible" === document.visibilityState) try {
-              const OM = await uM.c.getGameEventLeaderboard(iM, {
-                event: MM,
-                scope: rM
-              });
-              PM || aM({
-                requestKey: SM,
-                leaderboard: {
-                  status: "loaded",
-                  leaderboard: OM
-                }
-              })
-            } catch {
-              PM || aM((MM => MM.requestKey === SM && "loaded" === MM.leaderboard.status ? MM : {
-                requestKey: SM,
-                leaderboard: {
-                  status: "unavailable"
-                }
-              }))
-            }
-            PM || (jM = setTimeout(nM, kM))
-          };
-          return nM(), () => {
-            PM = !0, clearTimeout(jM)
-          }
-        }), [MM, rM, SM, iM, OM]), jM.requestKey === SM ? jM.leaderboard : {
-          status: "loading"
-        }
-      }(iM, PM), LM = function(MM) {
-        const rM = (0, dM.useRef)(null),
-          iM = (0, dM.useRef)(0),
-          OM = (0, dM.useRef)(),
-          [SM, jM] = (0, dM.useState)({});
-        return (0, dM.useEffect)((() => {
-          const SM = null === MM || void 0 === MM ? void 0 : MM.entries;
-          if (!SM) return;
-          const aM = new Map(SM.map((MM => [MM.player.name, MM.value]))),
-            PM = rM.current;
-          if (rM.current = aM, null === PM) return;
-          const nM = {};
-          for (const [MM, rM] of aM) {
-            const OM = PM.get(MM);
-            void 0 !== OM && rM > OM && (nM[MM] = {
-              amount: rM - OM,
-              key: iM.current++
-            })
-          }
-          0 !== Object.keys(nM).length && (jM(nM), clearTimeout(OM.current), OM.current = setTimeout((() => {
-            jM({})
-          }), ZM))
-        }), [MM]), (0, dM.useEffect)((() => () => {
-          clearTimeout(OM.current)
-        }), []), SM
-      }("loaded" === zM.status ? zM.leaderboard : null), mM = function(MM) {
-        const [rM, iM] = (0, dM.useState)(null), OM = "loaded" === MM.status ? MM.leaderboard.goalProgress : void 0;
-        return (0, dM.useEffect)((() => {
-          OM && iM(OM)
-        }), [OM]), rM
-      }(zM), HM = RM.f[`profileEffect_${SM.prizePack}`];
-      if (jM) return null;
-      const JM = "loaded" === zM.status ? zM.leaderboard : null,
-        yM = null !== (rM = null === JM || void 0 === JM ? void 0 : JM.entries) && void 0 !== rM ? rM : null,
-        lM = null !== JM && void 0 !== JM && JM.own && null !== yM && !yM.some((MM => MM.isOwn)) ? JM.own : null;
-      return (0, DM.jsx)("section", {
-        className: "GameEventPanel AnimFadeIn",
-        children: (0, DM.jsxs)("div", {
-          className: "GameEventPanelCard",
-          children: [(0, DM.jsxs)("div", {
-            className: "GameEventPanelInfo",
-            children: [(0, DM.jsxs)("div", {
-              className: "GameEventPanelStatus",
-              children: [(0, DM.jsxs)("span", {
-                className: "GameEventPanelLive",
-                children: [(0, DM.jsx)("span", {
-                  className: "GameEventPanelLiveDot"
-                }), OM("gameEvents:live")]
-              }), (0, DM.jsxs)("span", {
-                className: "GameEventPanelEndsIn",
-                children: [OM("gameEvents:endsIn"), (0, DM.jsx)(bM.c, {
-                  toTime: SM.endsAt,
-                  onReachEndOfCountdown: () => {
-                    aM(!0)
-                  }
-                })]
-              })]
-            }), (0, DM.jsx)("h2", {
-              className: "GameEventPanelTitle",
-              children: OM(SM.titleKey)
-            }), (0, DM.jsxs)("div", {
-              className: "GameEventPanelPrize",
-              children: [(0, DM.jsxs)("div", {
-                className: "GameEventPanelPrizeSummary",
-                children: [HM && (0, DM.jsx)("div", {
-                  className: "GameEventPanelPrizePreview",
-                  children: (0, DM.jsx)(HM, {})
-                }), (0, DM.jsxs)("div", {
-                  className: "GameEventPanelPrizeText",
-                  children: [(0, DM.jsx)("div", {
-                    className: "GameEventPanelPrizeLabel",
-                    children: OM("gameEvents:prize")
-                  }), (0, DM.jsx)("div", {
-                    className: "GameEventPanelPrizeName",
-                    children: OM(SM.prizeNameKey)
-                  })]
-                })]
-              }), (0, DM.jsx)(fM, {
-                event: SM,
-                progress: mM
-              })]
-            })]
-          }), (0, DM.jsxs)("div", {
-            className: "GameEventPanelLeaderboard",
-            children: [(0, DM.jsxs)("div", {
-              className: "GameEventPanelLeaderboardHeader",
-              children: [(0, DM.jsx)("h3", {
-                className: "GameEventPanelLeaderboardTitle",
-                children: OM(SM.leaderboard.titleKey)
-              }), (0, DM.jsx)(sM.e, {
-                ariaLabel: OM("gameEvents:leaderboardScope"),
-                options: gM.b.map((MM => ({
-                  value: MM,
-                  label: OM(`gameEvents:${MM}Scope`)
-                }))),
-                value: PM,
-                onChange: QM
-              })]
-            }), "loading" === zM.status && (0, DM.jsx)("div", {
-              className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, DM.jsx)(pM.d, {})
-            }), ("unavailable" === zM.status || "loaded" === zM.status && null === yM) && (0, DM.jsx)("div", {
-              className: "GameEventPanelLeaderboardMessage",
-              children: OM("gameEvents:leaderboardUnavailable")
-            }), null !== yM && 0 === yM.length && (0, DM.jsx)("div", {
-              className: "GameEventPanelLeaderboardMessage",
-              children: OM("friends" === PM ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== yM && yM.length > 0 && (0, DM.jsx)("ol", {
-              className: "GameEventPanelRows",
-              children: yM.map((MM => {
-                const rM = LM[MM.player.name];
-                return (0, DM.jsxs)("li", {
-                  className: hM()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: MM.isOwn,
-                    GameEventPanelRowTop: MM.rank <= 3
-                  }),
-                  children: [(0, DM.jsxs)("span", {
-                    className: "GameEventPanelRank",
-                    children: ["#", MM.rank]
-                  }), (0, DM.jsx)("div", {
-                    className: "GameEventPanelPlayer",
-                    children: (0, DM.jsx)(WM.f, {
-                      playerSocialPreview: {
-                        ...MM.player,
-                        location: {
-                          status: "offline"
-                        }
-                      },
-                      showLocation: !1
-                    })
-                  }), void 0 !== rM && (0, DM.jsxs)("span", {
-                    className: "GameEventPanelGain",
-                    children: ["+", rM.amount.toLocaleString()]
-                  }, rM.key), (0, DM.jsx)("span", {
-                    className: "GameEventPanelScore",
-                    children: MM.value.toLocaleString()
-                  })]
-                }, MM.player.name)
-              }))
-            }), lM && (0, DM.jsxs)("div", {
-              className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, DM.jsxs)("span", {
-                className: "GameEventPanelRank",
-                children: ["#", lM.rank.toLocaleString()]
-              }), (0, DM.jsx)("span", {
-                className: "GameEventPanelPlayer",
-                children: OM("gameEvents:yourPlace")
-              }), (0, DM.jsx)("span", {
-                className: "GameEventPanelScore",
-                children: lM.value.toLocaleString()
-              })]
-            })]
-          })]
-        })
-      })
-    }
-
-    function fM(MM) {
-      let {
-        event: rM,
-        progress: iM
-      } = MM;
-      const {
-        t: OM
-      } = (0, nM.A)(), SM = null !== iM && rM.prizeGoals.some(((MM, rM) => iM[rM] >= MM.target));
-      return (0, DM.jsxs)("div", {
-        className: "GameEventPanelGoals",
-        children: [(0, DM.jsx)("div", {
-          className: "GameEventPanelGoalsHeading",
-          children: OM(SM ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, DM.jsx)("div", {
-          className: "GameEventPanelGoalRow",
-          children: rM.prizeGoals.map(((MM, rM) => {
-            const SM = null === iM ? null : Math.min(iM[rM], MM.target);
-            return (0, DM.jsxs)(dM.Fragment, {
-              children: [rM > 0 && (0, DM.jsx)("div", {
-                className: "GameEventPanelGoalsOr",
-                children: OM("gameEvents:goalsOr")
-              }), (0, DM.jsxs)("div", {
-                className: hM()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: SM === MM.target
-                }),
-                children: [(0, DM.jsx)("span", {
-                  className: "GameEventPanelGoalLabel",
-                  children: OM(MM.labelKey)
-                }), (0, DM.jsxs)("div", {
-                  className: "GameEventPanelGoalBar",
-                  children: [(0, DM.jsx)("div", {
-                    className: "GameEventPanelGoalBarFill",
-                    style: {
-                      width: (null !== SM && void 0 !== SM ? SM : 0) / MM.target * 100 + "%"
-                    }
-                  }), null !== SM && (0, DM.jsxs)("span", {
-                    className: "GameEventPanelGoalCount",
-                    children: [SM.toLocaleString(), " / ", MM.target.toLocaleString()]
-                  })]
-                })]
-              })]
-            }, MM.board)
-          }))
+        href: XU,
+        children: zU
+      } = UU;
+      return (0, cU.jsxs)("a", {
+        className: "WorldCodeAiExternalLink",
+        href: XU,
+        target: "_blank",
+        rel: "noreferrer noopener",
+        children: [zU, " ", (0, cU.jsx)("span", {
+          "aria-hidden": "true",
+          children: "\u2197"
         })]
       })
     }
-    var YM = iM(1630),
-      NM = iM(1675),
-      AM = iM(1099),
-      xM = iM(783),
-      vM = iM(3875);
+  },
+  7123: (UU, XU, zU) => {
+    zU.d(XU, {
+      WorldCodeAiChatGptNotice: () => EU,
+      WorldCodeAiDeepSeekNotice: () => DU,
+      e: () => AU,
+      h: () => oU,
+      k: () => FU
+    });
+    var cU = zU(1193),
+      yU = zU(7126),
+      QU = zU(1305);
+    const AU = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+      FU = "https://openai.com/policies/terms-of-use/",
+      oU = "https://openai.com/policies/privacy-policy/";
 
-    function FM(MM) {
+    function DU() {
+      const {
+        t: UU
+      } = (0, cU.I)();
+      return (0, QU.jsxs)(QU.Fragment, {
+        children: [UU("superBotXd:deepSeekNotice"), " ", (0, QU.jsx)(yU.c, {
+          href: AU,
+          children: UU("superBotXd:deepSeekPrivacyPolicy")
+        })]
+      })
+    }
+
+    function EU() {
+      const {
+        t: UU
+      } = (0, cU.I)();
+      return (0, QU.jsxs)(QU.Fragment, {
+        children: [UU("aiHelperChatGpt:notice"), " ", (0, QU.jsx)(yU.c, {
+          href: FU,
+          children: UU("aiHelperChatGpt:terms")
+        }), " ", (0, QU.jsx)(yU.c, {
+          href: oU,
+          children: UU("aiHelperChatGpt:privacyPolicy")
+        })]
+      })
+    }
+  },
+  7117: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => wU
+    });
+    var cU = zU(61),
+      yU = zU(1193),
+      QU = zU(142),
+      AU = zU(241),
+      FU = zU(1494),
+      oU = zU(1349),
+      DU = zU(27),
+      EU = zU(1734),
+      YU = zU(3774),
+      NU = zU(3767),
+      IU = zU(3485),
+      pU = zU(1305);
+
+    function aU(UU) {
       let {
-        gameNameWithVariation: rM
-      } = MM;
-      const iM = (0, YM.F)(rM),
-        [OM, SM] = (0, dM.useState)(null);
-      if ((0, dM.useEffect)((() => {
-          if (!iM) return;
-          let MM = !0;
-          return (0, NM.h)(iM).then((rM => {
-            MM && SM(rM)
-          })).catch((MM => {
-            console.error(`Failed to load the page copy for ${iM.name}`, MM)
-          })), () => {
-            MM = !1
-          }
-        }), [iM]), !iM || !OM || OM.name !== iM.name) return null;
-      const jM = (0, NM.e)(OM),
-        aM = new Set((0, AM.c)((0, xM.i)()).map((MM => (0, YM.w)(MM)))),
-        PM = OM.similarGames.filter((MM => aM.has((0, YM.w)(MM))));
-      return (0, DM.jsx)("div", {
-        className: "GamePageContent",
-        children: (0, DM.jsxs)("div", {
-          className: "GamePageContentColumns",
-          children: [(0, DM.jsxs)("section", {
-            className: "GamePageContentSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.whatIs
-            }), OM.whatIs.map((MM => (0, DM.jsx)("p", {
-              children: MM
-            }, MM)))]
-          }), (0, DM.jsxs)("section", {
-            className: "GamePageContentSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.howToPlay
-            }), OM.howToPlay.map((MM => (0, DM.jsx)("p", {
-              children: MM
-            }, MM)))]
-          }), (0, DM.jsxs)("section", {
-            className: "GamePageContentSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.features
-            }), (0, DM.jsx)("ul", {
-              children: OM.features.map((MM => (0, DM.jsx)("li", {
-                children: MM
-              }, MM)))
+        allowsPersonalizedAds: XU
+      } = UU;
+      return (0, pU.jsxs)(pU.Fragment, {
+        children: [(0, pU.jsx)("h2", {
+          children: "4. Cookies and Tracking Technologies"
+        }), (0, pU.jsx)("h3", {
+          children: "4.1 What Are Cookies?"
+        }), (0, pU.jsx)("p", {
+          children: "Cookies are small data files stored on your device that help identify you when you visit a website. They allow the site to remember your preferences and provide a smoother experience."
+        }), (0, pU.jsx)("h3", {
+          children: "4.2 Types of Cookies We Use"
+        }), (0, pU.jsx)("p", {
+          children: "We use different types of cookies to enhance your experience and ensure that Bloxd.io\xa0functions properly. Here\u2019s what each type of cookie does:"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Type of Cookie"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Purpose"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Example"
+              })
             })]
-          }), (0, DM.jsxs)("aside", {
-            className: "GamePageContentSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.tips
-            }), (0, DM.jsx)("ul", {
-              children: OM.tips.map((MM => (0, DM.jsx)("li", {
-                children: MM
-              }, MM)))
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Functional Cookies"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Ensure the website works properly by enabling basic functions like navigation and settings."
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Remembering your game settings, progress or language preferences."
+              })
             })]
-          }), (0, DM.jsxs)("section", {
-            className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.faq
-            }), OM.faq.map((MM => {
-              let {
-                question: rM,
-                answer: iM
-              } = MM;
-              return (0, DM.jsxs)("div", {
-                className: "GamePageContentFaqItem",
-                children: [(0, DM.jsx)("h3", {
-                  children: rM
-                }), (0, DM.jsx)("p", {
-                  children: iM
-                })]
-              }, rM)
-            }))]
-          }), PM.length > 0 && (0, DM.jsxs)("nav", {
-            className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, DM.jsx)("h2", {
-              children: jM.similarGames
-            }), (0, DM.jsx)("ul", {
-              className: "GamePageContentSimilarGames",
-              children: PM.map((MM => (0, DM.jsx)("li", {
-                children: (0, DM.jsx)(vM.h, {
-                  source: {
-                    type: "game",
-                    gameNameWithVariation: MM
-                  },
-                  entrySource: "other",
-                  gameWidth: "100%",
-                  useLongRatio: !0
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Analytical Cookies"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Help us understand how players use the site by collecting anonymized data (e.g., pages visited)."
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Tracking the number of visitors or identifying popular game features."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Ad Cookies"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["Manage ad display frequency, prevent repetitive ads, and help detect fraudulent activity", XU ? ", and with your consent, enable personalized advertising based on your interests and browsing behavior." : "."]
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["Ensuring the same ad doesn\u2019t appear too frequently or detecting fraudulent ad interactions", XU ? ", and when you consent, showing you ads that are more relevant to your interests." : "."]
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Notice Acceptance Cookies"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Record whether you have acknowledged or accepted notices, such as our cookie policy."
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Storing your acceptance of our cookie banner or other notifications."
+              })
+            })]
+          }), NU.c && (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Session Recording Storage (only until a recording is sent)"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Store, on your device, parts of a recording that haven\u2019t been sent to us yet, and a small helper that finishes sending them after you close the page. They hold no ID that links them to you or your device."
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Session recordings (section 2.5)."
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("h3", {
+          children: "4.3 Managing Cookies"
+        }), (0, pU.jsx)("p", {
+          children: "You can control cookie settings through your browser. Below are links to guides on how to manage cookies for common browsers:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Google Chrome: Go to Settings > Privacy and Security > Clear browsing data > Cookies and other site data."
+          }), (0, pU.jsx)("li", {
+            children: "Mozilla Firefox: Go to Options > Privacy & Security > Cookies and Site Data > Clear Data."
+          }), (0, pU.jsx)("li", {
+            children: "Safari: Go to Preferences > Privacy > Manage Website Data > Remove All."
+          }), (0, pU.jsx)("li", {
+            children: "Microsoft Edge: Go to Settings > Cookies and site permissions > Manage and delete cookies and site data."
+          })]
+        })]
+      })
+    }
+
+    function tU(UU) {
+      let {
+        allowsPersonalizedAds: XU
+      } = UU;
+      return (0, pU.jsxs)(pU.Fragment, {
+        children: [(0, pU.jsx)("h2", {
+          children: "2. Information We Collect, Why We Collect It, and How It Is Used"
+        }), (0, pU.jsx)("h3", {
+          children: "2.1 Visitors"
+        }), (0, pU.jsx)("h4", {
+          children: "2.1.1 Data Collection and Usage"
+        }), (0, pU.jsxs)("p", {
+          children: ["When you interact with Bloxd.io, certain data is collected to ensure the website operates correctly and securely. By default, we apply the highest level of privacy protection for all visitors. This means that we collect only the minimal amount of information necessary to operate the website and ensure its functionality.", NU.c && " In some places we also record some visits (section 2.5).", " The following types of information may be collected:", " "]
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Type of Information"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What We Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Why We Collect It"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Technical Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "IP address, browser type, device type, screen resolution, language selection"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To ensure the website functions correctly and displays in your preferred language."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Usage Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Pages visited, time spent on pages, clicks, and interactions"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To analyze how the website is used and to improve player experience."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Cookie Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["Cookies that store settings, advert frequency, fraud prevention", XU ? ", and with your consent, enable personalized advertising" : ""]
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["To enhance your experience by remembering your preferences, save your game progress, and ensure ads are displayed an appropriate number of times and to prevent fraudulent activity.", XU ? " With your consent, cookies may also be used to enable personalized advertising based on your interests." : ""]
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Moderation Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Anonymized IP address, Chat logs, username, reports"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To maintain a safe environment in chat rooms and enforce community guidelines."
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "Data Retention:\xa0Data related to visitors is retained as long as the account is active, or 14 months after your last play session. If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
+        }), (0, pU.jsx)("h3", {
+          children: "2.2 Chat Rooms"
+        }), (0, pU.jsx)("p", {
+          children: "Bloxd.io includes online social features, such as chat rooms, where players can interact. We implement several measures to ensure chat safety:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Automated Moderation: Tools are used to automatically detect and filter inappropriate content."
+          }), (0, pU.jsx)("li", {
+            children: "Manual Moderation: Human moderators review flagged content to ensure compliance with our chat safety rules."
+          }), (0, pU.jsx)("li", {
+            children: "User Reports: players can report content they believe violates guidelines, and it will be reviewed by moderators."
+          })]
+        }), NU.c && (0, pU.jsxs)(pU.Fragment, {
+          children: [(0, pU.jsx)("p", {
+            children: "We keep chat logs for moderation because it is in our legitimate interest, and our players', to keep chat safe."
+          }), (0, pU.jsx)("p", {
+            children: "Chat you send, including private messages, may appear in other players\u2019 session recordings, watched only by Bloxd staff to fix problems in the game, and staff watching one may read the chat sent in its games from these logs (section 2.5). Chat logs are kept 30 days."
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "Before participating in chat rooms, players and their guardians are encouraged to review our Community Conduct."
+        }), (0, pU.jsx)("h3", {
+          children: "2.3 Registered players"
+        }), (0, pU.jsx)("h4", {
+          children: "2.3.1 Age Requirements and Parental Consent"
+        }), (0, pU.jsxs)("p", {
+          children: ["Accounts on Bloxd.io can only be created by players aged 13 or older, or by younger players with parental consent. For those registering through Google, Google will verify the user\u2019s age and obtain parental consent if required. For more details, refer to", " ", (0, pU.jsx)("a", {
+            href: "https://families.google.com/familylink/privacy/child-policy",
+            children: "Google\u2019s Child Privacy Policy"
+          }), "."]
+        }), (0, pU.jsx)("h4", {
+          children: "2.3.2 Data Collection for Registered Players"
+        }), (0, pU.jsx)("p", {
+          children: "When creating an account, the following data is collected to provide personalized services and enhance user experience:"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Type of Information"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What We Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Why We Collect It"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Account Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Username, email address"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To create and manage user accounts."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Profile Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Optional profile details (e.g., avatar)"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To personalize the user experience."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Technical Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "IP address, device type, browser type"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To secure accounts and ensure the website functions correctly."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Usage Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Pages visited, site interactions"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To improve the user experience and offer tailored features."
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "Data Retention: Data related to registered players is retained for as long as the account is active, 14 months after your last play session or If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
+        }), (0, pU.jsx)("h3", {
+          children: "2.3.3 Data Collection for Store Purchases"
+        }), (0, pU.jsx)("p", {
+          children: "When making a store purchase as a registered player, the following data is collected by us or our payment partners listed in section 3.3 to provide a compliant checkout experience and access to their purchase:"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Type of Information"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What We Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Why We Collect It"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Account Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "User ID, email address"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To attach any purchase made to your account."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Technical Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Transaction ID, IP address, device type, browser type"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Combat fraud and reporting."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Usage Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Pages visited, site interactions, purchase history"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: NU.c ? "To secure accounts, ensure the website functions correctly, and understand how players use the store so we can improve it (section 2.6)." : "To secure accounts and ensure the website functions correctly."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Usage Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Pages visited, site interactions"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To improve the user experience and offer tailored features after purchase."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Payment Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Payment Information, Billing address "
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To complete and validate your purchase"
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "Our payment providers, who act as our merchant of record, securely collect payment information and handle it according to the required security & law. Payment information is not shared with or processed by bloxd."
+        }), (0, pU.jsx)("p", {
+          children: "Data Retention: Data related to purchases can be stored for up to 5 years after fulfilling the purposes for which the data were collected to combat fraud and for reporting purposes."
+        }), (0, pU.jsx)("h3", {
+          children: "2.4 When You Contact Us"
+        }), (0, pU.jsx)("p", {
+          children: "When you reach out to us, we collect information to help us respond to you effectively:"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Type of Information"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What We Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Why We Collect It"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Contact Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Your email address or phone number"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To get back to you about your questions or concerns."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Message Content"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What you say in your message"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "To understand and address your issue or feedback."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Technical Info"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Date, time, and details of how you contacted us"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "For security and to ensure we respond appropriately."
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "Data Retention:\xa0We will retain the personal data collected from your inquiries for up to\xa0three months after your query is resolved or closed. This extended period allows us to ensure that any follow-up questions can be addressed. If the inquiry is from a child under the age of 13, any data collected will be deleted as soon as possible."
+        })]
+      })
+    }
+
+    function gU(UU) {
+      let {
+        allowsPersonalizedAds: XU
+      } = UU;
+      return (0, pU.jsxs)(pU.Fragment, {
+        children: [(0, pU.jsx)("h3", {
+          children: "3.3 Service Providers"
+        }), (0, pU.jsx)("p", {
+          children: "We work with trusted third-party service providers to help operate the website and deliver services effectively. These providers only receive the data necessary to perform their functions and are required to maintain the confidentiality and security of your information. The key service providers we work with are categorized as follows:"
+        }), (0, pU.jsx)("h4", {
+          children: "Hosting and Data Storage"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Service Provider"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Do"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "AWS Cloud"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Data storage and processing"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Hosts our servers and stores backup, data securely."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Digital Ocean"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Data storage and processing"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Hosts our servers and stores data securely."
+              })
+            })]
+          }), NU.c && (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Hetzner"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Session recordings and analytics data (sections 2.5 and 2.6)"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Runs, in Finland, the tool our staff use to watch session recordings and search our analytics data. It processes and plays back session recordings, which Amazon Web Services stores, and stores the tool\u2019s own staff accounts, saved charts and their results, notes and view log."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Google Firebase"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Email, User data, app usage data, device information"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Provides backend services including database for registered users"
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("h4", {
+          children: "Website Security and Performance"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Service Provider"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Do"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://www.cloudflare.com/en-gb/privacypolicy/",
+                  children: "Cloudflare"
                 })
-              }, MM)))
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "IP addresses, browser types, device information"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Provides\xa0website security, performance optimization, and protection against malicious attacks."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://policies.google.com/privacy",
+                  children: "Google reCAPTCHA"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "IP addresses, browser types, device information"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Protection against malicious attacks."
+              })
             })]
           })]
-        })
-      })
-    }
-    var BM = iM(1398),
-      XM = iM(83),
-      IM = iM(1144),
-      KM = iM(35064),
-      qM = iM(1733),
-      TM = iM(1608),
-      VM = iM(1591),
-      cM = iM(1685),
-      Mr = iM(1530),
-      rr = iM(1429),
-      ir = iM(37280),
-      Or = iM(1240),
-      Sr = iM(1073),
-      jr = iM(332),
-      ar = iM(1088),
-      Pr = iM(1627),
-      nr = iM(9525),
-      Qr = iM(19),
-      zr = iM(2721),
-      Lr = iM(821),
-      mr = iM(1229),
-      Hr = iM(6982),
-      hr = iM(3881);
-
-    function Jr(MM) {
-      let {
-        preview: rM,
-        isBroken: iM
-      } = MM;
-      const OM = null === rM ? null : (0, jM.g)(rM, "small"),
-        aM = (0, SM.c)(null !== OM && void 0 !== OM ? OM : jM.t);
-      return null === rM ? (0, DM.jsx)("div", {
-        className: hM()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: iM
-        }),
-        children: (0, DM.jsx)(BM.b, {
-          name: iM ? "triangle-exclamation" : "star"
-        })
-      }) : (0, DM.jsx)("div", {
-        className: hM()("FeaturedGamesPopupSlotThumbnail", PM.k),
-        style: (0, PM.h)(aM),
-        role: "img",
-        "aria-label": rM.name,
-        children: (0, DM.jsx)(PM.e, {
-          image: aM
-        })
-      })
-    }
-
-    function dr(MM) {
-      let {
-        schematicId: rM,
-        gameName: iM
-      } = MM;
-      const {
-        userContext: SM
-      } = (0, GM.b)(), jM = (0, hr.b)(), [aM, PM] = (0, dM.useState)(null), [nM, QM] = (0, dM.useState)(null), [zM, LM] = (0, dM.useState)(!1), HM = (0, dM.useCallback)((() => {
-        QM(null), uM.c.getFeaturedGames(SM).then((MM => {
-          jM.current && PM(MM.slots)
-        })).catch((MM => {
-          console.error("Failed to get featured games", MM), jM.current && QM("Failed to load featured games")
-        }))
-      }), [SM, jM]);
-      (0, dM.useEffect)((() => {
-        HM()
-      }), [HM]);
-      const hM = (MM, rM) => {
-        zM || (LM(!0), uM.c.setFeaturedGame(SM, MM, rM).then((() => {
-          jM.current && HM()
-        })).catch((MM => {
-          console.error("Failed to set featured game", MM), jM.current && QM("Failed to update the featured slot")
-        })).finally((() => {
-          jM.current && LM(!1)
-        })))
-      };
-      return (0, DM.jsxs)("div", {
-        className: "FeaturedGamesPopupBody",
-        children: [(0, DM.jsx)("h1", {
-          className: "FeaturedGamesPopupTitle",
-          children: "Featured Games"
-        }), !aM && !nM && (0, DM.jsx)("div", {
-          className: "FeaturedGamesPopupLoader",
-          children: (0, DM.jsx)(pM.d, {})
-        }), nM && (0, DM.jsx)("div", {
-          className: "FeaturedGamesPopupError",
-          children: nM
-        }), aM && (0, DM.jsxs)(DM.Fragment, {
-          children: [(0, DM.jsx)("div", {
-            className: "FeaturedGamesPopupSlots",
-            children: aM.map((MM => {
-              const iM = MM.schematicId === rM,
-                SM = null === MM.schematicId,
-                {
-                  categoryGroup: jM
-                } = OM.I[MM.slotId];
-              return (0, DM.jsxs)("div", {
-                className: "FeaturedGamesPopupSlot",
-                children: [(0, DM.jsx)(Jr, {
-                  preview: MM.preview,
-                  isBroken: !SM
-                }), (0, DM.jsxs)("div", {
-                  className: "FeaturedGamesPopupSlotText",
-                  children: [(0, DM.jsxs)("div", {
-                    className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, OM.ab)(jM), " \xb7 position", " ", (0, OM.J)(MM.slotId, OM.Jb) + 1, " of", " ", (0, OM.Gb)(jM, OM.Jb)]
-                  }), SM && (0, DM.jsx)("div", {
-                    className: "FeaturedGamesPopupSlotEmpty",
-                    children: "Empty"
-                  }), !SM && null !== MM.preview && (0, DM.jsx)("div", {
-                    className: "FeaturedGamesPopupSlotGame",
-                    children: MM.preview.name
-                  }), !SM && null === MM.preview && (0, DM.jsxs)("div", {
-                    className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, DM.jsx)(BM.b, {
-                      name: "triangle-exclamation"
-                    }), " Pinned game is no longer published"]
-                  })]
-                }), (0, DM.jsxs)("div", {
-                  className: "FeaturedGamesPopupSlotActions",
-                  children: [SM && (0, DM.jsxs)(mM.u, {
-                    className: "FeaturedGamesPopupSlotButton",
-                    onClick: () => {
-                      hM(MM.slotId, rM)
-                    },
-                    disabled: zM,
-                    children: [(0, DM.jsx)(BM.b, {
-                      name: "star"
-                    }), " Feature here"]
-                  }), !SM && !iM && (0, DM.jsxs)(mM.V, {
-                    className: "FeaturedGamesPopupSlotButton",
-                    onClick: () => {
-                      hM(MM.slotId, rM)
-                    },
-                    disabled: zM,
-                    children: [(0, DM.jsx)(BM.b, {
-                      name: "star"
-                    }), " Replace"]
-                  }), !SM && (0, DM.jsxs)(mM.J, {
-                    className: "FeaturedGamesPopupSlotButton",
-                    onClick: () => {
-                      hM(MM.slotId, null)
-                    },
-                    disabled: zM,
-                    children: [(0, DM.jsx)(BM.b, {
-                      name: "xmark"
-                    }), " Clear"]
-                  })]
-                })]
-              }, MM.slotId)
-            }))
-          }), (0, DM.jsx)("p", {
-            className: "FeaturedGamesPopupHint",
-            children: "A game leaves its slot once it ranks higher on its own."
+        }), (0, pU.jsx)("h4", {
+          children: "Advertising Management"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Service Provider"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Do"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://adinplay.com/privacy-policy",
+                  children: "Adinplay"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["Advertiser data, ad performance data", XU ? ", personalized with your consent" : ""]
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Manages and delivers in-game advertisements on our website."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://aditude.com/privacy",
+                  children: "Aditude"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["Advertiser data, ad performance data", XU ? ", personalized with your consent" : ""]
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Manages and delivers in-game advertisements on our website."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://policies.google.com/privacy",
+                  children: "Google Ads Manager"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["Advertiser data, ad performance data", XU ? ", personalized with your consent" : ""]
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Manages and optimizes the display of advertisements on our website."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://policies.google.com/privacy",
+                  children: "Google AdMob"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["Device advertising identifier, IP address, app usage and ad interaction data", XU ? ", personalized with your consent" : ""]
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Delivers banner, interstitial, and rewarded ads within our iOS and Android mobile apps."
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("h4", {
+          children: "Analytics"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Service Provider"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Do"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://policies.google.com/technologies/partner-sites",
+                  children: "Google Analytics"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Usage data, pages visited, interactions on the site"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Analyzes website usage to help us understand how the site is used and improve user experience."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://docs.bytebrew.io/BBSettings/privacypolicy",
+                  children: "ByteBrew"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Usage data, device data, interactions on the site"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Analyzes website usage to help us understand how the site is used and improve user experience."
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("h4", {
+          children: "Content Moderation"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Service Provider"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Do"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://www.lassomoderation.com/privacy-policy/",
+                  children: "Lasso Moderation"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Anonymized IP addresses, chat logs, usernames, reports, custom lobby metadata, custom game metadata, thumbnail uploads"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Provides automated and manual moderation services to ensure chat safety and compliance with guidelines."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://www.purgomalum.com/",
+                  children: "PurgoMalum"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Chat logs"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Provides profanity filtering for moderating chat messages."
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("h4", {
+          children: "Payment Providers"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Service Provider"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Collect"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Do"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "https://xsolla.com/privacypolicy",
+                  children: "Xsolla"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "User ID, Email Address, IP addresses, Purchase History, Purchase Request"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Act as our merchant of record, handling all our secure payment protection insurance and checkout experience to complete your purchase and handle payment support."
+              })
+            })]
+          })]
+        }), (0, pU.jsx)("h4", {
+          children: "Platform Integrations"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Service Provider"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Information Processed"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Do"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: "http://www.google.com/policies/privacy",
+                  children: "YouTube API Services"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Public YouTube channel identifiers submitted by creators"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Retrieves and displays publicly available YouTube content."
+              })
+            })]
           })]
         })]
       })
     }
-    var yr = iM(5046),
-      lr = iM(4963),
-      Er = iM(3839);
-    const Ur = 8,
-      Gr = 12;
-
-    function Cr(MM) {
-      let {
-        customLobbies: rM,
-        favouriteLobbies: iM,
-        toggleLikeLobby: OM,
-        showReport: SM
-      } = MM;
-      const [jM, aM] = (0, dM.useState)(Ur);
-      return (0, dM.useEffect)((() => {
-        if (jM >= rM.length) return;
-        let MM = !0;
-        return (0, Er.e)().then((() => {
-          MM && aM(jM + Gr)
-        })), () => {
-          MM = !1
-        }
-      }), [jM, rM.length]), (0, DM.jsx)(DM.Fragment, {
-        children: rM.slice(0, jM).map((MM => (0, DM.jsx)(lr.e, {
-          customLobby: MM,
-          favouriteLobbies: iM,
-          toggleLikeLobby: OM,
-          showReport: SM
-        }, MM.name)))
-      })
-    }
-    var er = iM(4971),
-      br = iM(4987),
-      wr = iM(4948),
-      tr = iM(3963),
-      gr = iM(9517),
-      ur = iM(192);
-    const Rr = {
-      skyblock: [iM(37305).b]
-    };
-    var pr = iM(625);
-    const Wr = {
-      listedVariations: null,
-      backgroundImage: jM.t,
-      badges: [],
-      category: null,
-      title: null,
-      variationTitle: null,
-      description: null,
-      ownerSocialPreviewWithoutLocation: null,
-      ccu: null,
-      favourites: null,
-      isFavourite: null,
-      useRejoinLastLobbyButton: null,
-      showWorldsInsteadOfCustomLobbies: null,
-      canCreateCustomLobbies: null,
-      countdownInformation: null
-    };
-
-    function sr(MM, rM) {
-      const iM = Lr.g[MM.schematicId];
-      return {
-        listedVariations: [],
-        backgroundImage: (0, jM.g)(MM, "large"),
-        badges: [],
-        category: MM.gameCategory,
-        title: void 0 !== (null === iM || void 0 === iM ? void 0 : iM.title) ? rM(iM.title) : MM.name,
-        variationTitle: null,
-        description: void 0 !== (null === iM || void 0 === iM ? void 0 : iM.description) ? rM(iM.description) : MM.description,
-        ownerSocialPreviewWithoutLocation: "owner" in MM ? MM.owner : null,
-        ccu: MM.ccu,
-        favourites: MM.favourites,
-        isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in MM ? MM.persistWorld : null,
-        showWorldsInsteadOfCustomLobbies: !1,
-        canCreateCustomLobbies: !0,
-        countdownInformation: null
-      }
-    }
-
-    function Dr(MM) {
-      var rM, iM, OM;
-      return null !== (rM = null !== (iM = (0, ur.m)() ? function(MM) {
-        for (const [rM, iM] of Object.entries(Rr)) {
-          const OM = [rM, ...iM.map((MM => (0, jr.Kb)(rM, MM)))];
-          if (OM.includes(MM)) return OM
-        }
-        return null
-      }(MM) : null) && void 0 !== iM ? iM : null === (OM = Lr.e[MM]) || void 0 === OM ? void 0 : OM.listedVariations) && void 0 !== rM ? rM : null
-    }
-
-    function kr() {
-      const {
-        gameNameWithVariation: MM
-      } = (0, TM.D)();
-      if ((0, dM.useEffect)(tr.r, []), MM && (0, Or.r)(MM)) return (0, DM.jsx)(Zr, {
-        urlId: MM
-      }, MM);
-      const rM = MM && (0, Sr.m)(MM) ? MM : "firstParty";
-      return (0, DM.jsx)(or, {}, rM)
-    }
-
-    function Zr(MM) {
-      let {
-        urlId: rM
-      } = MM;
-      const {
-        userContext: iM,
-        isUserContextUpdating: OM
-      } = (0, GM.b)(), SM = (0, dM.useMemo)((() => (0, qM.g)(rM)), [rM]);
-      (0, dM.useMemo)((() => {
-        if (null === SM) return;
-        const MM = IM.userContextManager.peekCurrentUserContext();
-        (null !== MM ? uM.c.getGame(MM, SM.schematicId) : IM.userContextManager.getCurrentUserContext().then((MM => uM.c.getGame(MM, SM.schematicId)))).catch((MM => {
-          console.error(`Failed to get the custom game ${SM.schematicId}`, MM), (0, qM.f)(rM)
-        }))
-      }), [SM, rM]);
-      const [jM, aM] = (0, dM.useState)(null), PM = (0, KM.d)();
-      (0, dM.useEffect)((() => {
-        if (null !== SM || OM) return;
-        let MM = !0;
-        return uM.c.getGameByUrlId(iM, rM).then((iM => {
-          MM && aM({
-            urlId: rM,
-            game: iM
-          })
-        })).catch((iM => {
-          console.error(`Failed to find the custom game with urlId ${rM}`, iM), MM && (0, VM.navigateToHomePage)()
-        })), () => {
-          MM = !1
-        }
-      }), [rM, SM, OM, iM]);
-      const nM = null !== SM && void 0 !== SM ? SM : (null === jM || void 0 === jM ? void 0 : jM.urlId) === rM ? jM.game : null;
-      return null === nM ? (0, DM.jsx)(pM.d, {}) : PM ? (0, DM.jsx)(or, {
-        gameNameWithVariation: (0, Sr.w)(nM.schematicId),
-        knownCustomGame: nM
-      }, nM.schematicId) : null
-    }
-
-    function or(MM) {
-      var rM, iM, aM, HM, gM, RM, pM, sM;
-      let {
-        gameNameWithVariation: kM,
-        knownCustomGame: ZM = null
-      } = MM;
-      const {
-        t: fM
-      } = (0, nM.A)();
-      (0, zr.j)();
-      const NM = (0, zr.q)(),
-        {
-          userContext: AM,
-          isUserContextUpdating: xM
-        } = (0, GM.b)(),
-        vM = (0, wr.d)(),
-        IM = (0, VM.useNavigatePreserveSearch)(),
-        KM = (0, TM.D)(),
-        qM = (0, dM.useMemo)((() => kM ? {
-          gameNameWithVariation: kM
-        } : KM), [kM, KM]),
-        Mr = (0, nr.d)(qM),
-        Or = (0, dM.useMemo)((() => {
-          const MM = function(MM) {
-            var rM, iM;
-            const OM = Dr(MM);
-            if (!OM || 0 === OM.length || OM.includes(MM)) return MM;
-            const SM = QM.g.getItem((0, lM.n)(MM));
-            if (SM && OM.includes(SM)) return SM;
-            return null !== (rM = null === (iM = Lr.e[MM]) || void 0 === iM ? void 0 : iM.defaultListedVariation) && void 0 !== rM ? rM : OM[0]
-          }(Mr.gameNameWithVariation);
-          return MM === Mr.gameNameWithVariation ? Mr : {
-            ...Mr,
-            gameNameWithVariation: MM
-          }
-        }), [Mr]);
-      (0, dM.useEffect)((() => {
-        const MM = Mr.gameNameWithVariation;
-        Or.gameNameWithVariation !== MM && MM !== (0, jr.Mb)(MM) && IM((0, YM.x)(Or.gameNameWithVariation), {
-          replace: !0
-        })
-      }), [Or.gameNameWithVariation, Mr.gameNameWithVariation, IM]);
-      const [hr, Jr] = (0, dM.useState)(""), Er = dM.useRef(null), [Ur, Gr] = (0, dM.useState)(), tr = (0, Sr.m)(Or.gameNameWithVariation), ur = (0, dM.useMemo)((() => tr ? null : function(MM, rM, iM) {
-        var OM, SM;
-        const aM = Lr.e[MM];
-        return (0, pr.J)(aM) ? null : {
-          listedVariations: Dr(MM),
-          backgroundImage: (0, jM.m)(MM, (0, jM.d)(aM)),
-          badges: (0, zM.filterBadges)(aM.badges),
-          category: aM.type,
-          title: iM(aM.title),
-          variationTitle: aM.variationTitle ? iM(aM.variationTitle) : null,
-          description: iM(aM.description),
-          ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== rM ? null !== (OM = rM[MM]) && void 0 !== OM ? OM : 0 : null,
-          favourites: null,
-          isFavourite: null,
-          useRejoinLastLobbyButton: aM.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: aM.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (SM = aM.canCreateCustomLobbies) || void 0 === SM || SM,
-          countdownInformation: (0, lM.j)(MM)
-        }
-      }(Or.gameNameWithVariation, NM, fM)), [tr, Or.gameNameWithVariation, NM, fM]), [Rr, kr] = (0, dM.useState)(!1), [Zr, or] = (0, dM.useState)((() => ZM ? sr(ZM, fM) : Wr)), Yr = null !== ur && void 0 !== ur ? ur : Zr, [Nr] = (0, dM.useState)(Yr === Wr), Ar = (0, SM.c)(Yr.backgroundImage, {
-        keepPrevious: !0,
-        decode: !0
-      }), {
-        recentlyPlayedPublicLobbies: xr,
-        recentlyPlayedCustomLobbies: vr
-      } = (0, dM.useMemo)((() => function(MM, rM, iM, OM) {
-        var SM;
-        const jM = MM => {
-            const iM = (0, Sr.p)(MM),
-              OM = rM.find((rM => "custom" === rM.type ? rM.schematicId === iM : rM.gameNameWithVariation === MM));
-            return OM ? [...OM.recentLobbies] : []
-          },
-          aM = (0, zM.getRecentGameNameWithVariationLobbiesKey)(MM),
-          PM = null !== (SM = QM.g.getItem(aM)) && void 0 !== SM ? SM : [],
-          nM = [...jM(MM), ...PM],
-          LM = [];
-        for (const QM of nM)(0, mr.P)(QM) && !LM.includes(QM) && LM.push(QM);
-        let mM = nM;
-        if (iM) {
-          const MM = jM("classic_worlds"),
-            rM = nM.filter((rM => !MM.includes(rM)));
-          mM = [...MM, ...rM]
-        }
-        const HM = [],
-          hM = !1 === OM ? [] : mM;
-        for (const QM of hM)(0, mr.P)(QM) || HM.includes(QM) || HM.push(QM);
-        return {
-          recentlyPlayedPublicLobbies: LM,
-          recentlyPlayedCustomLobbies: HM
-        }
-      }(Or.gameNameWithVariation, vM, Yr.showWorldsInsteadOfCustomLobbies, Yr.canCreateCustomLobbies)), [Or.gameNameWithVariation, vM, Yr.showWorldsInsteadOfCustomLobbies, Yr.canCreateCustomLobbies]), [Fr, Br] = (0, dM.useState)(!0), [Xr, Ir] = (0, dM.useState)([]), [Kr, qr] = (0, dM.useState)(null), [Tr, Vr] = (0, dM.useState)("explore"), cr = (0, dM.useRef)(!1), Mi = (0, dM.useCallback)((MM => {
-        (0, yM.unstable_batchedUpdates)((() => {
-          Gr(MM), or((rM => ({
-            ...sr(MM, fM),
-            isFavourite: rM.isFavourite
-          })))
-        }))
-      }), [fM]);
-      (0, dM.useEffect)((() => {
-        null === Qr.d.get("gameEntrySource") && (0, Qr.j)("gameInformationPageDirect")
-      }), []);
-      const ri = (0, dM.useRef)(null);
-      (0, dM.useEffect)((() => {
-        const MM = MM => {
-            ri.current = MM.target instanceof Element ? MM.target.closest("a, button") : null
-          },
-          rM = MM => {
-            "Tab" === MM.key && (ri.current = null)
-          };
-        return document.addEventListener("pointerdown", MM, !0), document.addEventListener("keydown", rM, !0), () => {
-          document.removeEventListener("pointerdown", MM, !0), document.removeEventListener("keydown", rM, !0)
-        }
-      }), []), (0, CM.d)("Enter", (MM => {
-        const rM = MM.target instanceof Element ? MM.target : null;
-        if (MM.defaultPrevented || null !== rM && void 0 !== rM && rM.closest("input, textarea, select")) return;
-        const iM = null === rM || void 0 === rM ? void 0 : rM.closest("a, button");
-        iM && iM !== ri.current || (MM.preventDefault(), zi())
-      })), (0, eM.e)(VM.navigateToHomePage);
-      const ii = xr.length > 0 || vr.length > 0,
-        Oi = !Yr.useRejoinLastLobbyButton || 0 === xr.length,
-        Si = tr && null === Yr.ownerSocialPreviewWithoutLocation,
-        ji = AM.getPlayerName() === (null === Ur || void 0 === Ur || null === (rM = Ur.owner) || void 0 === rM ? void 0 : rM.name),
-        ai = null !== (iM = null === (aM = Yr.badges.find((MM => "event" === MM.type))) || void 0 === aM ? void 0 : aM.event) && void 0 !== iM ? iM : null,
-        Pi = Oi ? mM.p : mM.e,
-        ni = (0, DM.jsx)(LM.i, {
-          tooltipInner: (0, DM.jsx)("div", {
-            children: fM("homePage:quickPlayInfo")
-          }),
-          hoverOnly: !0,
-          children: (0, DM.jsx)(Pi, {
-            className: "GameInformationButton",
-            padDefaultFocus: Oi,
-            showPress: !0,
-            onClick: () => {
-              zi()
-            },
-            children: (0, DM.jsxs)("div", {
-              className: "GameInformationButtonInner",
-              children: [Oi && (0, DM.jsxs)(DM.Fragment, {
-                children: [(0, DM.jsx)(BM.b, {
-                  name: "play"
-                }), " "]
-              }), fM("homePage:quickPlay")]
-            })
-          })
-        });
-      (0, dM.useEffect)((() => {
-        if (!tr || xM) return;
-        let MM = !0;
-        const rM = (0, Sr.p)(Or.gameNameWithVariation);
-        return uM.c.getGame(AM, rM).then((rM => {
-          MM && Mi(rM)
-        })).catch((rM => {
-          console.error("Failed to get Custom Game information", rM), MM && (0, VM.navigateToHomePage)()
-        })), uM.c.getFavouriteGames(AM).then((iM => {
-          MM && or((MM => ({
-            ...MM,
-            isFavourite: iM.includes(rM)
-          })))
-        })).catch((rM => {
-          console.error("Failed to get favourite games", rM), MM && kr(!0)
-        })), () => {
-          MM = !1
-        }
-      }), [tr, xM, Or.gameNameWithVariation, Mi, AM]);
-      const Qi = !tr && null === ur;
-
-      function zi(MM) {
-        (0, gr.e)(), IM((0, EM.b)(Or.gameNameWithVariation, MM))
-      }(0, dM.useEffect)((() => {
-        Qi && (0, VM.navigateToHomePage)()
-      }), [Qi]), (0, dM.useEffect)((() => {
-        if (!1 === Yr.canCreateCustomLobbies) return;
-        let MM = !0;
-        return null !== Yr.showWorldsInsteadOfCustomLobbies && !1 === xM && (Br(!0), uM.c.getFavouriteLobbies(AM).then((MM => {
-          qr(MM)
-        })), uM.c.getOpenCustomLobbies(AM, {
-          gameNameWithVariation: Yr.showWorldsInsteadOfCustomLobbies ? "classic" : Or.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === Tr,
-          onlyFavouriteLobbies: "favourite" === Tr
-        }).then((rM => {
-          MM && (0, yM.unstable_batchedUpdates)((() => {
-            Ir(rM), Br(!1)
-          }))
-        })).catch((rM => {
-          console.error("Failed to get open custom lobbies", rM), MM && Br(!1)
-        }))), () => {
-          MM = !1
-        }
-      }), [xM, Or, Tr, Yr.showWorldsInsteadOfCustomLobbies, Yr.canCreateCustomLobbies, AM]);
-      const Li = (0, dM.useCallback)((async MM => {
-          try {
-            if (!Kr) return;
-            Kr.includes(MM) ? (uM.c.unfavouriteLobby(AM, MM), qr(Kr.filter((rM => rM !== MM)))) : (uM.c.favouriteLobby(AM, MM).catch((MM => {
-              console.error("Failed to favourite lobby", MM)
-            })), qr([...Kr, MM]))
-          } catch (rM) {
-            console.error("Failed to like lobby", rM)
-          }
-        }), [AM, Kr]),
-        mi = (null === Ur || void 0 === Ur ? void 0 : Ur.schematicId) === (0, Sr.p)(Mr.gameNameWithVariation) ? Ur : null,
-        Hi = mi && (0, YM.H)(Mr.gameNameWithVariation, (MM => fM(MM)), mi);
-      (0, cM.g)(mi && (0, YM.x)(Mr.gameNameWithVariation, mi));
-      const Ji = XM.featureFlags.canUseCustomLobbies && !0 === Yr.canCreateCustomLobbies,
-        di = (0, DM.jsx)("div", {
-          className: "GameInformationPageContentAnchor",
-          children: (0, DM.jsx)(FM, {
-            gameNameWithVariation: Or.gameNameWithVariation
-          })
-        });
-      return (0, DM.jsx)(DM.Fragment, {
-        children: (0, DM.jsxs)("article", {
-          className: hM()("GameInformation", {
-            GameInformationFadeIn: Nr,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (HM = Yr.countdownInformation) || void 0 === HM ? void 0 : HM.type)
-          }),
-          children: [Hi && (0, DM.jsx)(UM.c, {
-            meta: Hi
-          }), (0, DM.jsxs)("div", {
-            className: "GameInformationInner",
-            children: [(0, DM.jsxs)("div", {
-              className: "GameInformationTop",
-              children: [(0, DM.jsxs)("div", {
-                className: "GameInformationTopBackgroundContainer",
-                children: [(0, DM.jsx)("div", {
-                  className: "GameInformationTopBackgroundColor"
-                }), (0, DM.jsx)("div", {
-                  className: hM()("GameInformationTopBackgroundImage", PM.k),
-                  style: (0, PM.h)(Ar),
-                  children: (0, DM.jsx)(PM.e, {
-                    image: Ar
-                  })
-                })]
-              }), (0, DM.jsxs)("div", {
-                className: "GameInformationTopLeft",
-                children: [(0, DM.jsx)(yr.c, {}), (0, DM.jsxs)("div", {
-                  className: "GameInformationTopLeftBody",
-                  children: [(0, DM.jsxs)("div", {
-                    className: "GameInformationHeader",
-                    children: [(0, DM.jsxs)("div", {
-                      className: hM()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: Si
-                      }),
-                      children: [Yr.badges.map((MM => (0, DM.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${MM.type}`,
-                        children: (0, DM.jsx)(tM.b, {
-                          badge: MM
-                        })
-                      }, MM.type))), tr && (0, DM.jsx)("div", {
-                        className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, DM.jsx)(wM.b, {
-                          text: (0, OM.U)({
-                            type: "playerCrafted"
-                          })
-                        })
-                      }), Yr.category && (0, DM.jsx)("div", {
-                        className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, DM.jsx)(wM.b, {
-                          text: [{
-                            str: (0, OM.W)(Yr.category).toUpperCase()
-                          }]
-                        })
-                      }), null !== Yr.ccu && (0, DM.jsxs)("div", {
-                        className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, DM.jsx)(BM.b, {
-                          name: "user"
-                        }), (0, mr.T)(Yr.ccu), " online"]
-                      }), null !== Yr.ownerSocialPreviewWithoutLocation && (0, DM.jsxs)("div", {
-                        className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, DM.jsx)("span", {
-                          children: "Made by"
-                        }), (0, DM.jsx)(WM.f, {
-                          playerSocialPreview: {
-                            ...Yr.ownerSocialPreviewWithoutLocation,
-                            location: {
-                              status: "offline"
-                            }
-                          },
-                          showLocation: !1,
-                          linkToProfile: !0
-                        })]
-                      }), Si && (0, DM.jsxs)("div", {
-                        className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, DM.jsx)("span", {
-                          children: "Made by"
-                        }), (0, DM.jsx)("div", {
-                          className: "CustomGameChipOwnerPlaceholder"
-                        })]
-                      }), null !== Yr.favourites && (null !== Yr.isFavourite || tr && !Rr) && (0, DM.jsx)(mM.y, {
-                        onClick: () => {
-                          ! function() {
-                            if (!0 !== cr.current && (cr.current = !0, null !== Yr.isFavourite)) {
-                              const MM = (0, Sr.p)(Or.gameNameWithVariation);
-                              let rM;
-                              Yr.isFavourite ? (rM = -1, uM.c.unfavouriteGame(AM, MM).catch((MM => {
-                                console.error("Failed to get unfavourite game", MM)
-                              })).finally((() => {
-                                cr.current = !1
-                              }))) : (rM = 1, uM.c.favouriteGame(AM, MM).catch((MM => {
-                                console.error("Failed to get favourite game", MM)
-                              })).finally((() => {
-                                cr.current = !1
-                              }))), or((MM => ({
-                                ...MM,
-                                isFavourite: !MM.isFavourite
-                              }))), or((MM => ({
-                                ...MM,
-                                favourites: MM.favourites + rM
-                              })))
-                            }
-                          }()
-                        },
-                        isLiked: null !== (gM = Yr.isFavourite) && void 0 !== gM && gM,
-                        disabled: null === Yr.isFavourite,
-                        className: hM()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === Yr.isFavourite
-                        })
-                      }, null === Yr.isFavourite ? "pending" : "known"), tr && !Si && XM.featureFlags.useSocialFeatures && !ji && (0, DM.jsx)(er.e, {
-                        targetType: "customGame",
-                        targetId: (0, Sr.p)(Or.gameNameWithVariation),
-                        className: "CustomGameChip AnimFadeIn"
-                      }), (AM.playerHasRank("developer") || AM.playerHasRank("admin") && ji) && (0, DM.jsxs)(mM.p, {
-                        className: "CustomGameChip AnimFadeIn",
-                        onClick: () => {
-                          IM((0, Pr.p)((0, ar.e)(Or.gameNameWithVariation, !0)))
-                        },
-                        children: [(0, DM.jsx)(BM.b, {
-                          name: "star-christmas"
-                        }), " ", fM("studio:viewInStudio")]
-                      }), tr && AM.playerHasRank("developer") && (0, DM.jsxs)(mM.e, {
-                        className: "CustomGameChip AnimFadeIn",
-                        onClick: () => {
-                          (0, Hr.b)({
-                            schematicId: (0, Sr.p)(Or.gameNameWithVariation),
-                            canOverride: !0
-                          })
-                        },
-                        children: [(0, DM.jsx)(BM.b, {
-                          name: "circle-info"
-                        }), " Approval Info"]
-                      }), tr && AM.playerHasRank("developer") && (0, DM.jsxs)(mM.e, {
-                        className: "CustomGameChip AnimFadeIn",
-                        onClick: () => {
-                          rr.NotificationProvider.showCustomPopup({
-                            body: () => (0, DM.jsx)(dr, {
-                              schematicId: (0, Sr.p)(Or.gameNameWithVariation),
-                              gameName: Yr.title
-                            }),
-                            middleScreenPopupClassName: "FeaturedGamesPopup",
-                            onClose: () => {},
-                            unlockPointerKey: "featuredGamesPopup"
-                          })
-                        },
-                        children: [(0, DM.jsx)(BM.b, {
-                          name: "star"
-                        }), " Featured Games"]
-                      }), "updateCountdown" === (null === (RM = Yr.countdownInformation) || void 0 === RM ? void 0 : RM.type) && (0, DM.jsxs)("div", {
-                        className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, DM.jsxs)("div", {
-                          className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, DM.jsx)(bM.c, {
-                            toTime: Yr.countdownInformation.countdownToTime
-                          })]
-                        }), (0, DM.jsx)("div", {
-                          className: "GameChipUpdateCountdownBottom",
-                          children: Yr.countdownInformation.previewText
-                        })]
-                      })]
-                    }, Si ? "pending" : "shown"), (0, DM.jsxs)("header", {
-                      className: "GameInformationTitle",
-                      children: [(0, DM.jsx)("div", {
-                        className: "GameInformationTitleAndChips",
-                        children: (0, DM.jsxs)("h1", {
-                          className: "GameInformationTitleText FullyFancyText",
-                          children: [Yr.title, " ", Yr.variationTitle && (null === (pM = Lr.e[Or.gameNameWithVariation]) || void 0 === pM ? void 0 : pM.variationThumbnailUseBigRatio) && (0, DM.jsx)("span", {
-                            className: "GameInformationTitleVariation",
-                            children: Yr.variationTitle
-                          })]
-                        })
-                      }), Yr.listedVariations && Yr.listedVariations.length > 0 && (0, DM.jsx)("div", {
-                        className: hM()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (sM = Lr.e[Or.gameNameWithVariation]) || void 0 === sM ? void 0 : sM.variationThumbnailUseBigRatio
-                        }),
-                        children: Yr.listedVariations.map((MM => {
-                          var rM, iM;
-                          return (0, DM.jsxs)(fr, {
-                            variation: MM,
-                            isSelected: Or.gameNameWithVariation === MM,
-                            children: [null !== NM && (0, DM.jsx)("div", {
-                              className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, DM.jsxs)("div", {
-                                className: "GameInformationVariationCCUInner",
-                                children: [(0, DM.jsx)(BM.b, {
-                                  name: "user"
-                                }), " ", (0, mr.T)(null !== (rM = NM[MM]) && void 0 !== rM ? rM : 0)]
-                              })
-                            }), (0, DM.jsx)("div", {
-                              className: "GameInformationVariationTitle SmallTextBold",
-                              children: fM(null !== (iM = Lr.e[MM].variationTitle) && void 0 !== iM ? iM : Lr.e[MM].title)
-                            }), (0, DM.jsx)("div", {
-                              className: "ThumbnailBadgesContainer",
-                              children: (0, zM.filterBadges)(Lr.e[MM].badges).map((MM => (0, DM.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + MM.type,
-                                children: (0, DM.jsx)("div", {
-                                  className: "ThumbnailBadgeMain",
-                                  children: (0, DM.jsx)(tM.b, {
-                                    badge: MM
-                                  })
-                                })
-                              }, MM.type)))
-                            })]
-                          }, MM)
-                        }))
-                      })]
-                    }), Yr.description && (0, DM.jsx)("p", {
-                      className: "GameInformationDescription",
-                      children: Yr.description
-                    })]
-                  }), (0, DM.jsxs)("div", {
-                    className: "GameInformationButtonRows",
-                    children: [(0, DM.jsxs)("div", {
-                      className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!Oi && (0, DM.jsx)(LM.i, {
-                        tooltipInner: (0, DM.jsx)("div", {
-                          children: fM("homePage:rejoinLobbyNumberInfo")
-                        }),
-                        hoverOnly: !0,
-                        children: (0, DM.jsx)(mM.p, {
-                          className: "GameInformationButton",
-                          padDefaultFocus: !0,
-                          showPress: !0,
-                          onClick: () => {
-                            zi(xr[0])
-                          },
-                          children: (0, DM.jsxs)("div", {
-                            className: "GameInformationButtonInner",
-                            children: [(0, DM.jsx)(BM.b, {
-                              name: "play"
-                            }), " ", fM("homePage:rejoinLobbyNumber", {
-                              number: xr[0]
-                            })]
-                          })
-                        })
-                      }), Oi && ni]
-                    }), (0, DM.jsxs)("div", {
-                      className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!Oi && ni, (0, DM.jsxs)("div", {
-                        className: "JoinLobbyContainer",
-                        children: [(0, DM.jsx)(BM.b, {
-                          name: "magnifying-glass",
-                          className: "JoinLobbyInputIcon"
-                        }), (0, DM.jsx)(JM.b, {
-                          className: "JoinLobbyInput",
-                          placeholderText: fM("homePage:lobbyName"),
-                          maxLength: mr.Q,
-                          domRef: Er,
-                          onValueChange: MM => {
-                            MM = (0, mr.vb)(MM), Jr(MM)
-                          },
-                          onEnter: () => {
-                            0 === hr.length ? zi(xr[0]) : zi(hr)
-                          }
-                        }), (0, DM.jsx)(mM.e, {
-                          className: "JoinLobbyButton",
-                          showPress: !0,
-                          onClick: () => {
-                            0 === hr.length ? zi(xr[0]) : zi(hr)
-                          },
-                          children: fM("general:join")
-                        })]
-                      })]
-                    }), (0, DM.jsxs)("section", {
-                      className: hM()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !ii
-                      }),
-                      children: [(0, DM.jsx)("div", {
-                        className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, DM.jsxs)("div", {
-                          className: "LobbyCollectionTitle",
-                          children: [(0, DM.jsx)(BM.b, {
-                            name: "clock-rotate-left"
-                          }), ii && (0, DM.jsx)("h2", {
-                            className: "VisuallyHidden",
-                            children: fM("homePage:recentlyPlayedLobbies")
-                          })]
-                        })
-                      }), (0, DM.jsx)(br.b, {
-                        lobbyGroups: [xr, vr],
-                        onLobbyClick: MM => {
-                          zi(MM)
-                        },
-                        keyPrefix: Or.gameNameWithVariation
-                      })]
-                    })]
-                  })]
-                })]
-              }), null !== ai && (0, DM.jsx)(oM, {
-                eventName: ai
-              })]
-            }), Ji && (0, DM.jsx)("div", {
-              className: "GameInformationBottom",
-              children: (0, DM.jsxs)("section", {
-                className: "LobbyCollection",
-                children: [(0, DM.jsxs)("div", {
-                  className: hM()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === Yr.showWorldsInsteadOfCustomLobbies
-                  }),
-                  children: [!0 === Yr.showWorldsInsteadOfCustomLobbies && (0, DM.jsxs)("h2", {
-                    className: "LobbyCollectionTitle",
-                    children: [(0, DM.jsx)(BM.b, {
-                      name: "planet-ringed",
-                      kit: "duotone"
-                    }), (0, DM.jsxs)("div", {
-                      className: "LobbyCollectionTitleText",
-                      children: [(0, DM.jsx)("div", {
-                        className: "LobbyCollectionTitleTextBackground"
-                      }), fM("game:worlds")]
-                    })]
-                  }), !1 === Yr.showWorldsInsteadOfCustomLobbies && (0, DM.jsxs)("h2", {
-                    className: "LobbyCollectionTitle",
-                    children: [(0, DM.jsx)(BM.b, {
-                      name: "joystick"
-                    }), (0, DM.jsxs)("div", {
-                      className: "LobbyCollectionTitleText",
-                      children: [(0, DM.jsx)("div", {
-                        className: "LobbyCollectionTitleTextBackground"
-                      }), fM("homePage:customLobbies")]
-                    })]
-                  }), (0, DM.jsx)(mM.V, {
-                    onClick: () => {
-                      Vr("explore")
-                    },
-                    active: "explore" === Tr,
-                    children: fM("general:explore")
-                  }), (0, DM.jsx)(mM.V, {
-                    onClick: () => {
-                      Vr("favourite")
-                    },
-                    active: "favourite" === Tr,
-                    children: fM("homePage:favouriteLobbies")
-                  }), (0, DM.jsx)(mM.V, {
-                    onClick: () => {
-                      Vr("owned")
-                    },
-                    active: "owned" === Tr,
-                    children: fM("homePage:ownedLobbies")
-                  })]
-                }), (0, DM.jsxs)("div", {
-                  className: "CustomLobbyList",
-                  children: [(0, DM.jsxs)("div", {
-                    className: "CustomLobbyListInner",
-                    children: [(0, DM.jsx)(lr.c, {
-                      label: "Create",
-                      onClick: () => {
-                        rr.NotificationProvider.showCustomPopup({
-                          body: MM => (0, DM.jsx)(ir.CreateCustomLobby, {
-                            gameNameWithVariation: Or.gameNameWithVariation,
-                            close: MM
-                          }),
-                          middleScreenPopupClassName: "CreateCustomLobbyPopup"
-                        })
-                      }
-                    }), !0 === Fr && (0, DM.jsx)(lr.g, {}), !1 === Fr && (0, DM.jsx)(Cr, {
-                      customLobbies: Xr,
-                      favouriteLobbies: Kr,
-                      toggleLikeLobby: Li,
-                      showReport: XM.featureFlags.useSocialFeatures && "owned" !== Tr
-                    })]
-                  }), di]
-                })]
-              })
-            })]
-          }), !Ji && di]
-        })
-      })
-    }
-
-    function fr(MM) {
-      let {
-        variation: rM,
-        isSelected: iM,
-        children: OM
-      } = MM;
-      const nM = Lr.e[rM],
-        zM = (0, jM.m)(rM, (0, jM.p)(nM)),
-        LM = (0, SM.c)(zM),
-        mM = (0, aM.e)([(0, jM.j)(rM, (0, jM.d)(nM))]);
-      return (0, DM.jsxs)(VM.LinkPreserveSearch, {
-        to: (0, YM.x)(rM),
-        replace: !0,
-        className: hM()("GameInformationVariation", PM.k, {
-          SelectedGameInformationVariation: iM
-        }),
-        onClick: MM => {
-          if (!(0, Mr.d)(MM)) return;
-          const iM = (0, lM.n)(rM);
-          QM.g.setItem(iM, rM)
+    const kU = {
+        CA: {
+          name: "Canada",
+          status: "bySubdivision"
         },
-        onMouseEnter: mM.start,
-        onMouseLeave: mM.cancel,
-        onFocus: mM.start,
-        onBlur: mM.cancel,
-        style: (0, PM.h)(LM),
-        children: [(0, DM.jsx)(PM.e, {
-          image: LM
-        }), OM]
+        US: {
+          name: "the United States",
+          status: "bySubdivision"
+        },
+        AT: {
+          name: "Austria",
+          status: "off"
+        },
+        AX: {
+          name: "\xc5land",
+          status: "off"
+        },
+        BE: {
+          name: "Belgium",
+          status: "off"
+        },
+        BG: {
+          name: "Bulgaria",
+          status: "off"
+        },
+        CY: {
+          name: "Cyprus",
+          status: "off"
+        },
+        CZ: {
+          name: "Czechia",
+          status: "off"
+        },
+        DE: {
+          name: "Germany",
+          status: "off"
+        },
+        DK: {
+          name: "Denmark",
+          status: "off"
+        },
+        EE: {
+          name: "Estonia",
+          status: "off"
+        },
+        ES: {
+          name: "Spain",
+          status: "off"
+        },
+        FI: {
+          name: "Finland",
+          status: "off"
+        },
+        FR: {
+          name: "France",
+          status: "off"
+        },
+        GB: {
+          name: "the United Kingdom",
+          status: "off"
+        },
+        GF: {
+          name: "French Guiana",
+          status: "off"
+        },
+        GG: {
+          name: "Guernsey",
+          status: "off"
+        },
+        GI: {
+          name: "Gibraltar",
+          status: "off"
+        },
+        GP: {
+          name: "Guadeloupe",
+          status: "off"
+        },
+        GR: {
+          name: "Greece",
+          status: "off"
+        },
+        HR: {
+          name: "Croatia",
+          status: "off"
+        },
+        HU: {
+          name: "Hungary",
+          status: "off"
+        },
+        IE: {
+          name: "Ireland",
+          status: "off"
+        },
+        IM: {
+          name: "the Isle of Man",
+          status: "off"
+        },
+        IS: {
+          name: "Iceland",
+          status: "off"
+        },
+        IT: {
+          name: "Italy",
+          status: "off"
+        },
+        JE: {
+          name: "Jersey",
+          status: "off"
+        },
+        LI: {
+          name: "Liechtenstein",
+          status: "off"
+        },
+        LT: {
+          name: "Lithuania",
+          status: "off"
+        },
+        LU: {
+          name: "Luxembourg",
+          status: "off"
+        },
+        LV: {
+          name: "Latvia",
+          status: "off"
+        },
+        MF: {
+          name: "Saint Martin",
+          status: "off"
+        },
+        MQ: {
+          name: "Martinique",
+          status: "off"
+        },
+        MT: {
+          name: "Malta",
+          status: "off"
+        },
+        NL: {
+          name: "the Netherlands",
+          status: "off"
+        },
+        NO: {
+          name: "Norway",
+          status: "off"
+        },
+        PL: {
+          name: "Poland",
+          status: "off"
+        },
+        PT: {
+          name: "Portugal",
+          status: "off"
+        },
+        RE: {
+          name: "R\xe9union",
+          status: "off"
+        },
+        RO: {
+          name: "Romania",
+          status: "off"
+        },
+        SE: {
+          name: "Sweden",
+          status: "off"
+        },
+        SI: {
+          name: "Slovenia",
+          status: "off"
+        },
+        SK: {
+          name: "Slovakia",
+          status: "off"
+        },
+        YT: {
+          name: "Mayotte",
+          status: "off"
+        }
+      },
+      GU = {
+        "CA-QC": {
+          name: "Quebec",
+          status: "linked"
+        },
+        "CA-AB": {
+          name: "Alberta",
+          status: "linked"
+        },
+        "CA-BC": {
+          name: "British Columbia",
+          status: "linked"
+        },
+        "CA-MB": {
+          name: "Manitoba",
+          status: "linked"
+        },
+        "CA-NB": {
+          name: "New Brunswick",
+          status: "linked"
+        },
+        "CA-NL": {
+          name: "Newfoundland and Labrador",
+          status: "linked"
+        },
+        "CA-NS": {
+          name: "Nova Scotia",
+          status: "linked"
+        },
+        "CA-NT": {
+          name: "the Northwest Territories",
+          status: "linked"
+        },
+        "CA-NU": {
+          name: "Nunavut",
+          status: "linked"
+        },
+        "CA-ON": {
+          name: "Ontario",
+          status: "linked"
+        },
+        "CA-PE": {
+          name: "Prince Edward Island",
+          status: "linked"
+        },
+        "CA-SK": {
+          name: "Saskatchewan",
+          status: "linked"
+        },
+        "CA-YT": {
+          name: "Yukon",
+          status: "linked"
+        },
+        "US-AK": {
+          name: "Alaska",
+          status: "linked"
+        },
+        "US-AL": {
+          name: "Alabama",
+          status: "linked"
+        },
+        "US-AR": {
+          name: "Arkansas",
+          status: "linked"
+        },
+        "US-AZ": {
+          name: "Arizona",
+          status: "linked"
+        },
+        "US-CA": {
+          name: "California",
+          status: "linked"
+        },
+        "US-CO": {
+          name: "Colorado",
+          status: "linked"
+        },
+        "US-CT": {
+          name: "Connecticut",
+          status: "linked"
+        },
+        "US-DC": {
+          name: "the District of Columbia (Washington, DC)",
+          status: "linked"
+        },
+        "US-DE": {
+          name: "Delaware",
+          status: "linked"
+        },
+        "US-FL": {
+          name: "Florida",
+          status: "linked"
+        },
+        "US-GA": {
+          name: "Georgia",
+          status: "linked"
+        },
+        "US-HI": {
+          name: "Hawaii",
+          status: "linked"
+        },
+        "US-IA": {
+          name: "Iowa",
+          status: "linked"
+        },
+        "US-ID": {
+          name: "Idaho",
+          status: "linked"
+        },
+        "US-IL": {
+          name: "Illinois",
+          status: "linked"
+        },
+        "US-IN": {
+          name: "Indiana",
+          status: "linked"
+        },
+        "US-KS": {
+          name: "Kansas",
+          status: "linked"
+        },
+        "US-KY": {
+          name: "Kentucky",
+          status: "linked"
+        },
+        "US-LA": {
+          name: "Louisiana",
+          status: "linked"
+        },
+        "US-MA": {
+          name: "Massachusetts",
+          status: "linked"
+        },
+        "US-MD": {
+          name: "Maryland",
+          status: "linked"
+        },
+        "US-ME": {
+          name: "Maine",
+          status: "linked"
+        },
+        "US-MI": {
+          name: "Michigan",
+          status: "linked"
+        },
+        "US-MN": {
+          name: "Minnesota",
+          status: "linked"
+        },
+        "US-MO": {
+          name: "Missouri",
+          status: "linked"
+        },
+        "US-MS": {
+          name: "Mississippi",
+          status: "linked"
+        },
+        "US-MT": {
+          name: "Montana",
+          status: "linked"
+        },
+        "US-NC": {
+          name: "North Carolina",
+          status: "linked"
+        },
+        "US-ND": {
+          name: "North Dakota",
+          status: "linked"
+        },
+        "US-NE": {
+          name: "Nebraska",
+          status: "linked"
+        },
+        "US-NH": {
+          name: "New Hampshire",
+          status: "linked"
+        },
+        "US-NJ": {
+          name: "New Jersey",
+          status: "linked"
+        },
+        "US-NM": {
+          name: "New Mexico",
+          status: "linked"
+        },
+        "US-NV": {
+          name: "Nevada",
+          status: "linked"
+        },
+        "US-NY": {
+          name: "New York",
+          status: "linked"
+        },
+        "US-OH": {
+          name: "Ohio",
+          status: "linked"
+        },
+        "US-OK": {
+          name: "Oklahoma",
+          status: "linked"
+        },
+        "US-OR": {
+          name: "Oregon",
+          status: "linked"
+        },
+        "US-PA": {
+          name: "Pennsylvania",
+          status: "linked"
+        },
+        "US-RI": {
+          name: "Rhode Island",
+          status: "linked"
+        },
+        "US-SC": {
+          name: "South Carolina",
+          status: "off"
+        },
+        "US-SD": {
+          name: "South Dakota",
+          status: "linked"
+        },
+        "US-TN": {
+          name: "Tennessee",
+          status: "linked"
+        },
+        "US-TX": {
+          name: "Texas",
+          status: "linked"
+        },
+        "US-UT": {
+          name: "Utah",
+          status: "linked"
+        },
+        "US-VA": {
+          name: "Virginia",
+          status: "linked"
+        },
+        "US-VT": {
+          name: "Vermont",
+          status: "linked"
+        },
+        "US-WA": {
+          name: "Washington",
+          status: "linked"
+        },
+        "US-WI": {
+          name: "Wisconsin",
+          status: "linked"
+        },
+        "US-WV": {
+          name: "West Virginia",
+          status: "linked"
+        },
+        "US-WY": {
+          name: "Wyoming",
+          status: "linked"
+        }
+      };
+    new Set;
+
+    function BU(UU, XU) {
+      return UU.replace(/^the /, "").localeCompare(XU.replace(/^the /, ""))
+    }
+    const ZU = new Intl.ListFormat("en-GB", {
+      type: "conjunction"
+    });
+
+    function RU() {
+      const {
+        countries: UU,
+        subdivisions: XU
+      } = function(UU) {
+        const XU = [],
+          zU = [];
+        for (const [cU, yU] of Object.entries(kU))
+          if ("bySubdivision" === yU.status) {
+            const XU = Object.entries(GU).filter((XU => {
+              let [zU, yU] = XU;
+              return zU.startsWith(`${cU}-`) && UU(yU)
+            })).map((UU => {
+              let [, XU] = UU;
+              return XU.name
+            }));
+            XU.length > 0 && zU.push({
+              country: yU.name,
+              names: XU.sort(BU)
+            })
+          } else UU({
+            ...yU,
+            status: yU.status
+          }) && XU.push(yU.name);
+        return {
+          countries: XU.sort(BU),
+          subdivisions: zU.sort(((UU, XU) => BU(UU.country, XU.country)))
+        }
+      }((UU => {
+        let {
+          status: XU
+        } = UU;
+        return "off" === XU
+      }));
+      return (0, pU.jsxs)("ul", {
+        children: [(0, pU.jsxs)("li", {
+          children: ["Countries and territories: ", ZU.format(UU), "."]
+        }), XU.map((UU => {
+          let {
+            country: XU,
+            names: zU
+          } = UU;
+          return (0, pU.jsxs)("li", {
+            children: ["In ", XU, ": ", ZU.format(zU), "."]
+          }, XU)
+        }))]
       })
     }
-  },
-  6982: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => lM
-    });
-    var OM = iM(44),
-      SM = iM(1520),
-      jM = iM(1573),
-      aM = iM(3881),
-      PM = iM(1142),
-      nM = iM(1396),
-      QM = iM(1440),
-      zM = iM(1398),
-      LM = iM(1116),
-      mM = iM.n(LM),
-      HM = iM(6975),
-      hM = iM(1303);
 
-    function JM(MM) {
-      let {
-        info: rM,
-        className: iM
-      } = MM;
-      const {
-        statusText: OM,
-        rowText: SM
-      } = (0, HM.f)();
-      return (0, hM.jsxs)("div", {
-        className: mM()("GameApprovalInfoDetails", iM),
-        children: [(0, hM.jsxs)("div", {
-          className: mM()("GameApprovalInfoSummary", rM.overallPassed ? "Passed" : "Failed"),
-          children: [(0, hM.jsx)(zM.b, {
-            name: rM.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, hM.jsx)("span", {
-            children: OM(rM.status)
-          })]
-        }), rM.rows.length > 0 && (0, hM.jsx)("div", {
-          className: "GameApprovalInfoRows",
-          children: rM.rows.map((MM => {
-            const {
-              label: rM,
-              value: iM
-            } = SM(MM);
-            return (0, hM.jsxs)("div", {
-              className: mM()("GameApprovalInfoRow", MM.passed ? "Passed" : "Failed"),
-              children: [(0, hM.jsx)(zM.b, {
-                name: MM.passed ? "check" : "xmark"
-              }), (0, hM.jsxs)("div", {
-                className: "GameApprovalInfoRowText",
-                children: [(0, hM.jsx)("div", {
-                  className: "GameApprovalInfoRowLabel",
-                  children: rM
-                }), null !== iM && (0, hM.jsx)("div", {
-                  className: "GameApprovalInfoRowValue",
-                  children: iM
-                })]
-              })]
-            }, MM.kind)
-          }))
+    function PU() {
+      return (0, pU.jsxs)(pU.Fragment, {
+        children: [(0, pU.jsx)("h3", {
+          id: "session-recordings",
+          children: "2.5 Session Recordings"
+        }), (0, pU.jsx)("p", {
+          children: "To fix problems in the game, we record some visits to Bloxd by players of any age, guests too, once you have agreed to Bloxd\u2019s privacy popup. We record on bloxd.io in a web browser and in our Android and iOS apps, never in our desktop apps or on other websites and platforms that host Bloxd, such as Discord or CrazyGames."
+        }), (0, pU.jsx)("p", {
+          children: "What we record: your screen in the game and on Bloxd\u2019s pages as you see them, including chat, usernames, other players\u2019 characters and builds; where you move, click, tap and scroll, and which keys and buttons you press; which pages, games and menus you open and what happens in them, such as dying, changing a setting or starting a purchase; how smoothly the game runs (frame rate, loading times, connection and error messages), the kind of device and browser you use, your country, and when the recording was made. Text typed into input fields, such as the chat box, is hidden, as is chat you are still typing on a controller\u2019s on-screen keyboard. Everything else on screen is recorded, including the Code Editor and the World Code you write in it, the AI Helper\u2019s answers, signs, name tags, party codes, lobby names, and text a page shows back as you type, such as search hints and previews. We never record sound, your camera or microphone, payment pages or adverts. Chat you send, including private messages, can appear in other players\u2019 recordings, and staff may also read the chat sent in a recorded game from the chat logs we keep for moderation (section 2.2)."
+        }), (0, pU.jsx)("p", {
+          children: "Each recording is linked to your player ID: your account\u2019s when you are logged in, else your guest ID. It also keeps a scrambled code made from your internet (IP) address, never the address itself, and whether your network looks shared by many people, such as a school\u2019s."
+        }), (0, pU.jsx)("p", {
+          children: "Why: to fix problems in the game, which is in our legitimate interest. Only Bloxd staff can watch recordings, and we never use one to make decisions about anyone, such as bans. If a recording shows a bug, our staff may look at your other recordings, and may keep recording every game you play for up to 14 days to find and fix it; while that happens you\u2019ll see \u201cRecording to help fix a bug\u201d on screen. In our iOS app, you\u2019ll see a red dot on screen while any other recording is made."
+        }), (0, pU.jsx)("p", {
+          children: "Where we never record: we only record when your IP address shows which country you\u2019re in and your device\u2019s time zone is in the same country, never when your IP address belongs to a VPN, proxy or hosting service, and never in these places:"
+        }), (0, pU.jsx)(RU, {}), (0, pU.jsx)("p", {
+          children: "Where they\u2019re kept: recordings are stored with Amazon Web Services, and their events in our analytics database at DigitalOcean, both in the United States. Our staff tool at Hetzner in Finland processes them and lets staff watch them (section 2.6). Section 6 explains how we protect data stored in other countries."
+        }), (0, pU.jsx)("p", {
+          children: "How long: we delete each recording 90 days after it is made. If our staff keep a recording to fix a bug, for example one that may come back in next year\u2019s Halloween or Christmas event, we keep that copy until the bug is fixed, and never more than a year after it was made. Chat logs, which staff may see beside a recording, are kept 30 days."
+        }), (0, pU.jsxs)("p", {
+          children: ["Your right to object: you can object to being recorded at any time, without giving a reason. Turn off Record my play in Settings (Account) and we stop recording on that device at once; if you are logged in, your other devices stop from your next visit on them, and none records you while you are logged in until you turn it back on, which also withdraws an objection you emailed. Or email", " ", (0, pU.jsx)("a", {
+            href: "mailto:privacy@bloxd.io",
+            children: "privacy@bloxd.io"
+          }), " with your username, and from your next visit we never record you while you are logged in."]
+        }), (0, pU.jsxs)("p", {
+          children: ["Your rights: to ask about recordings of your play or have them deleted, email us at ", (0, pU.jsx)("a", {
+            href: "mailto:privacy@bloxd.io",
+            children: "privacy@bloxd.io"
+          }), " with your username. We reply within 30 days (section 8)."]
         })]
       })
     }
-    var dM = iM(1188),
-      yM = iM(1429);
 
-    function lM(MM) {
-      yM.NotificationProvider.showCustomPopup({
-        body: () => (0, hM.jsx)(EM, {
-          ...MM
-        }),
-        middleScreenPopupClassName: "ApprovalInfoPopup",
-        onClose: () => {},
-        unlockPointerKey: "approvalInfoPopup"
+    function WU() {
+      return (0, pU.jsxs)(pU.Fragment, {
+        children: [(0, pU.jsx)("h3", {
+          children: "2.6 Our Staff Analytics Tool"
+        }), (0, pU.jsx)("p", {
+          children: "Bloxd staff use a tool we run ourselves, PostHog, on servers at Hetzner in Finland, to watch session recordings (section 2.5), which Amazon Web Services stores in the United States, and to search our analytics data. Through it, staff can see how players use Bloxd, store purchases (what was bought, when and for how much, but never card or bank details), and AI Helper questions and answers that players chose to share with us, which we keep for 30 days."
+        }), (0, pU.jsx)("p", {
+          children: "Only Bloxd staff can use it. We use each kind of data only for the reasons this policy gives for collecting it: for example, shared AI Helper conversations only to improve the AI Helper. Besides parts of session recordings, the tool keeps staff accounts, saved charts and their results, notes and a log of what staff viewed, for the times in section 7."
+        })]
       })
     }
 
-    function EM(MM) {
-      let {
-        schematicId: rM,
-        canOverride: iM,
-        onApprovalChanged: LM
-      } = MM;
+    function dU() {
+      return (0, pU.jsxs)(pU.Fragment, {
+        children: [(0, pU.jsx)("h2", {
+          children: "8. Your Rights"
+        }), (0, pU.jsx)("h3", {
+          children: "8.1 Your Choices and Control"
+        }), (0, pU.jsx)("p", {
+          children: "As a user of Bloxd.io, you have the right to:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Access Your Data: Request a copy of the personal information we hold about you."
+          }), (0, pU.jsx)("li", {
+            children: "Correct Your Data: Ask us to correct any inaccurate or incomplete information."
+          }), (0, pU.jsx)("li", {
+            children: "Delete Your Data: Request the deletion of your personal information when it is no longer needed."
+          }), (0, pU.jsx)("li", {
+            children: "Limit Data Collection: Request that we limit the collection or use of your data."
+          }), (0, pU.jsx)("li", {
+            children: "Object to Data Processing: Object to certain types of data processing, such as for marketing purposes."
+          }), (0, pU.jsxs)("li", {
+            children: ["Withdraw Consent: Where we rely on your consent, withdraw it at any time, as described in section 3.2, or for the AI Helper in section", NU.c ? " 2.7" : " 2.5", "."]
+          }), NU.c && (0, pU.jsx)("li", {
+            children: "Session Recordings: you can object to being recorded, or ask to see or delete recordings of your play (section 2.5)."
+          })]
+        }), (0, pU.jsx)("h3", {
+          children: "8.2 Parental Choices and Control "
+        }), (0, pU.jsx)("p", {
+          children: "As a verified parent or guardian of a child using Bloxd.io, you have the right to:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Access Your Child\u2019s Data: Request a copy of the personal information we\u2019ve collected about your child, including details like username, email address, and chat logs."
+          }), (0, pU.jsx)("li", {
+            children: "Correct Your Child\u2019s Data: Ask us to correct any inaccurate or incomplete information about your child."
+          }), (0, pU.jsx)("li", {
+            children: "Delete Your Child\u2019s Data: Request the deletion of your child\u2019s account and all associated data. Once verified, we will delete this data promptly, typically within 30 days. This will also remove any saved progress in the game."
+          }), (0, pU.jsx)("li", {
+            children: "Limit Data Collection for Your Child: Request that we limit the collection or use of certain types of data, such as usage information, from your child."
+          })]
+        }), NU.c && (0, pU.jsx)("p", {
+          children: "For session recordings, you can also object to your child being recorded, or ask to see or delete recordings of their play (section 2.5)."
+        }), (0, pU.jsx)("h3", {
+          children: "8.3 How to Exercise Your Rights"
+        }), (0, pU.jsx)("p", {
+          children: "To exercise any of these rights, contact us using the information provided below. We may require proof of identity before proceeding with your request. Responses will typically be provided within 30 days."
+        }), (0, pU.jsx)("h3", {
+          children: "8.4 Your California Privacy Rights"
+        }), (0, pU.jsx)("p", {
+          children: "If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act (together, the \u201cCCPA\u201d), gives you the rights below. This section supplements the rest of this Privacy Policy."
+        }), (0, pU.jsx)("p", {
+          children: "Personal Information We Collect: In the past 12 months we have collected the following categories of personal information, from you, from your device, and from the service providers listed in section 3.3, for the purposes described in sections 2 and 3:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Identifiers, such as your username, email address, user ID, IP address and device advertising identifiers."
+          }), (0, pU.jsx)("li", {
+            children: "Internet or other electronic network activity information, such as pages visited, interactions with our website and ad interactions."
+          }), (0, pU.jsx)("li", {
+            children: "Commercial information, such as your purchase history."
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "Sale and Sharing of Personal Information: Our advertising partners listed in section 3.3 may collect identifiers and internet or other electronic network activity information through cookies and similar technologies on our website to deliver and measure ads. This may be considered a \u201csale\u201d or \u201csharing\u201d of personal information under the CCPA."
+        }), (0, pU.jsx)("p", {
+          children: "Under the CCPA, you have the right to:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Know: Request the categories and specific pieces of personal information we have collected about you, and how we use and disclose it."
+          }), (0, pU.jsx)("li", {
+            children: "Delete: Request the deletion of personal information we have collected from you."
+          }), (0, pU.jsx)("li", {
+            children: "Correct: Ask us to correct inaccurate personal information we hold about you."
+          }), (0, pU.jsx)("li", {
+            children: "Opt Out of Sale or Sharing: Opt out of the sale or sharing of your personal information."
+          }), (0, pU.jsx)("li", {
+            children: "Non-Discrimination: Exercise any of these rights without being treated differently by us."
+          })]
+        }), (0, pU.jsxs)("p", {
+          children: ["To opt out of the sale or sharing of your personal information, use the \u201cDo Not Sell My Personal Information\u201d link shown to California visitors in the footer of our home page and at the top of this Privacy Policy, or email us at", " ", (0, pU.jsx)("a", {
+            href: "mailto:privacy@bloxd.io",
+            children: "privacy@bloxd.io"
+          }), ". To exercise your other rights, contact us as described in section 8.3. You may also ask an authorized agent to make a request on your behalf; we may ask the agent for proof of your permission and ask you to verify your identity with us."]
+        })]
+      })
+    }
+    var LU = zU(7123);
+
+    function eU() {
       const {
-        t: mM
-      } = (0, dM.A)(), {
-        userContext: HM
-      } = (0, PM.b)(), yM = (0, aM.b)(), [lM, EM] = (0, OM.useState)(null), [UM, GM] = (0, OM.useState)(null), [CM, eM] = (0, OM.useState)(!1), bM = (0, OM.useCallback)((() => {
-        GM(null), jM.c.getGameApprovalInfo(HM, rM).then((MM => {
-          yM.current && EM(MM)
-        })).catch((MM => {
-          console.error("Failed to get game approval info", MM), yM.current && GM(mM("studio:approvalLoadFailed"))
-        }))
-      }), [HM, rM, yM, mM]);
-      (0, OM.useEffect)((() => {
-        bM()
-      }), [bM]);
-      const wM = MM => {
-        CM || (eM(!0), jM.c.setGameApproval(HM, rM, MM).then((() => {
-          null === LM || void 0 === LM || LM(), yM.current && bM()
-        })).catch((MM => {
-          console.error("Failed to set game approval", MM)
-        })).finally((() => {
-          yM.current && eM(!1)
-        })))
-      };
-      return (0, hM.jsxs)("div", {
-        className: "ApprovalInfoPopupBody",
-        children: [(0, hM.jsx)("h1", {
-          className: "ApprovalInfoPopupTitle",
-          children: mM("studio:approvalTitle")
-        }), !lM && !UM && (0, hM.jsx)("div", {
-          className: "ApprovalInfoPopupLoader",
-          children: (0, hM.jsx)(nM.d, {})
-        }), UM && (0, hM.jsx)("div", {
-          className: "ApprovalInfoPopupError",
-          children: UM
-        }), lM && (0, hM.jsxs)(hM.Fragment, {
-          children: [(0, hM.jsx)(JM, {
-            info: lM
-          }), iM && (0, hM.jsxs)("div", {
-            className: "ApprovalInfoPopupActions",
-            children: [!0 !== lM.manualOverride && (0, hM.jsx)(QM.i, {
-              tooltipInner: (0, hM.jsx)("div", {
-                children: mM("studio:approvalApproveTooltip")
-              }),
-              children: (0, hM.jsxs)(SM.p, {
-                className: "ApprovalInfoPopupActionButton",
-                onClick: () => {
-                  wM(!0)
-                },
-                disabled: CM,
-                children: [(0, hM.jsx)(zM.b, {
-                  name: "check"
-                }), " ", mM("studio:approvalApprove")]
+        t: UU
+      } = (0, yU.I)(), XU = !(0, AU.shouldUseUkPrivacyPolicy)(), zU = NU.c ? "2.7" : "2.5";
+      return (0, pU.jsxs)("div", {
+        className: "LegalText",
+        children: [(0, pU.jsx)("div", {
+          className: "BloxdInformationHeader FullyFancyText",
+          children: UU("homePage:privacyPolicy")
+        }), (0, pU.jsx)("p", {
+          children: (0, pU.jsxs)("em", {
+            children: ["Last updated: ", YU.f.toLocaleDateString()]
+          })
+        }), (0, pU.jsx)("p", {
+          children: "This Privacy Policy outlines how Bloxd LTD collects, uses, and protects your information when you visit and interact with Bloxd.io. This document is intended to provide clarity on our practices and your rights concerning your data."
+        }), (0, pU.jsx)("h2", {
+          children: "1. Who We Are"
+        }), (0, pU.jsx)("p", {
+          children: "At Bloxd.io, we take your privacy\u2014and the privacy of your children\u2014very seriously. This Privacy Policy explains how we collect, use, and protect the information of both you and your child when you use our website. Our goal is to make sure you understand what information we collect, why we collect it, and how we keep it safe. We also want to ensure that you know your rights and how you can exercise them."
+        }), (0, pU.jsx)("p", {
+          children: "Whether you\u2019re a parent, guardian, or player, this document is designed to provide you with clear and straightforward information about our privacy practices. We\u2019re committed to providing a safe and enjoyable environment for our younger players while respecting the privacy and concerns of parents and guardians."
+        }), (0, pU.jsx)(tU, {
+          allowsPersonalizedAds: XU
+        }), NU.c && (0, pU.jsxs)(pU.Fragment, {
+          children: [(0, pU.jsx)(PU, {}), (0, pU.jsx)(WU, {})]
+        }), (0, pU.jsxs)("h3", {
+          children: [zU, " The AI Helper in the Code Editor"]
+        }), (0, pU.jsx)("p", {
+          children: "The Code Editor\u2019s AI Helper answers questions about the code of games made in Bloxd.io. To answer, the AI is sent your question, your game\u2019s code, the recent messages in that chat, errors your game showed and the AI notes you kept. When the AI looks it up, it is also sent what is in your game: its blocks, your position, health and inventory, and the names and positions of players near you. Where this goes depends on the AI you use:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Bot.xd: your browser sends them to OVHcloud, a company in France, whose AI models answer."
+          }), (0, pU.jsx)("li", {
+            children: "Super Bot.xd: our game servers send them to DeepSeek, a company in China, or to OVHcloud when Super Bot.xd runs on its models. We ask for your consent before you first use DeepSeek."
+          }), (0, pU.jsxs)("li", {
+            children: ["ChatGPT: when Bot.xd isn\u2019t working on our website, you can ask ChatGPT instead. We open it in a new tab that sends OpenAI, a company in the United States, your question, the code of the file you have open, the names and line counts of your other files and the names of the functions in your main file; a question too long for that is copied for you to paste in yourself. We ask for your consent first, ChatGPT is for ages 13 and up, and OpenAI\u2019s ", (0, pU.jsx)("a", {
+              href: LU.k,
+              children: "terms"
+            }), " and ", (0, pU.jsx)("a", {
+              href: LU.h,
+              children: "privacy policy"
+            }), " apply. If you paste its answer back, the code it puts in your files goes with your later questions as part of your files; its words don\u2019t, except to your own keys while their safety check is off. We count how many answers are pasted."]
+          }), (0, pU.jsx)("li", {
+            children: "Your own API key: if you add a key from another AI company, your browser sends your questions straight to that company, and its terms and privacy policy apply. Your key is kept only in your browser."
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "Bot.xd\u2019s and Super Bot.xd\u2019s questions and answers are also sent to a safety model run by OVHcloud to check them, and so is the code sent with Super Bot.xd\u2019s questions. So are your own keys\u2019 questions and answers, unless you turn off the safety check for your own keys. A ChatGPT answer you paste back isn\u2019t checked. Where we ask for your consent, that consent is our basis for sending this data; otherwise our basis is providing the AI Helper you asked to use."
+        }), (0, pU.jsx)("p", {
+          children: "If you agree when asked, we keep what the AI was sent for each question, as listed above, and its answers, linked to your account or guest account, to improve the AI Helper. You can change this in the AI Helper\u2019s AI settings. To stop sending anything to DeepSeek or ChatGPT, stop using Super Bot.xd or ChatGPT."
+        }), (0, pU.jsx)("p", {
+          children: "Data Retention: AI Helper chats you agreed to share are deleted after 30 days."
+        }), (0, pU.jsx)("h2", {
+          children: "3. Third-Party Data Use"
+        }), (0, pU.jsx)("h3", {
+          children: "3.1 Scope of This Privacy Policy"
+        }), (0, pU.jsxs)("p", {
+          children: ["This Privacy Policy applies only to the Bloxd.io game and its related services when accessed through the official Bloxd.io website or our mobile apps (such as those on iOS and Android).", " "]
+        }), (0, pU.jsx)("p", {
+          children: "If you use Bloxd.io through a third-party platform or website, this Privacy Policy does not cover those environments. We recommend checking the privacy policies of those sites or platforms and making sure you understand how your data is used before engaging with them."
+        }), (0, pU.jsx)("p", {
+          children: "We may also work with third-party services for some features in our game. These third parties have their own privacy policies, which apply in addition to ours. We encourage you to review those policies as well."
+        }), (0, pU.jsx)("h3", {
+          children: "3.2 Advertisers"
+        }), (0, pU.jsx)("p", {
+          children: "Bloxd.io displays ads from selected partners. On our website, ads are managed and delivered by our web advertising partners; within our mobile apps (available on iOS and Android), ads are delivered through Google AdMob."
+        }), XU && (0, pU.jsx)("p", {
+          children: "With your consent, we may display personalized ads tailored to your interests based on information such as your browsing history, device information, your device\u2019s advertising identifier, and your interactions with our site and apps. Where you do not provide consent, you will only be shown non-personalized ads."
+        }), !XU && (0, pU.jsx)("p", {
+          children: "These ads are non-personalized, meaning they are not based on your personal data or browsing behavior, but rather on general context. We do not collect personal data from children under 13 for advertising purposes."
+        }), (0, pU.jsx)("p", {
+          children: "Where the EU or UK General Data Protection Regulation (GDPR) applies, our website asks for your advertising and cookie choices through a consent prompt registered with the IAB Transparency and Consent Framework when you first visit. You can review, change or withdraw your consent at any time through the consent settings link shown in the footer of our home page and at the top of this Privacy Policy, or by contacting us. Withdrawing consent does not affect processing carried out before you withdrew it."
+        }), (0, pU.jsx)(gU, {
+          allowsPersonalizedAds: XU
+        }), (0, pU.jsx)("h4", {
+          children: "AI Helper"
+        }), (0, pU.jsxs)("table", {
+          children: [(0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Service Provider"
               })
-            }), !1 !== lM.manualOverride && (0, hM.jsx)(QM.i, {
-              tooltipInner: (0, hM.jsx)("div", {
-                children: mM("studio:approvalDenyTooltip")
-              }),
-              children: (0, hM.jsxs)(SM.J, {
-                className: "ApprovalInfoPopupActionButton",
-                onClick: () => {
-                  wM(!1)
-                },
-                disabled: CM,
-                children: [(0, hM.jsx)(zM.b, {
-                  name: "xmark"
-                }), " ", mM("studio:approvalDeny")]
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Collect"
               })
-            }), null !== lM.manualOverride && (0, hM.jsx)(QM.i, {
-              tooltipInner: (0, hM.jsx)("div", {
-                children: mM("studio:approvalClearOverrideTooltip")
-              }),
-              children: (0, hM.jsxs)(SM.e, {
-                className: "ApprovalInfoPopupActionButton",
-                onClick: () => {
-                  wM(null)
-                },
-                disabled: CM,
-                children: [(0, hM.jsx)(zM.b, {
-                  name: "arrows-rotate"
-                }), " ", mM("studio:approvalClearOverride")]
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "What They Do"
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "OVHcloud"
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["AI Helper questions, game code and chats, as section ", zU, " describes"]
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Runs the AI models that answer Bot.xd and some Super Bot.xd questions, and the safety check."
+              })
+            })]
+          }), (0, pU.jsxs)("tr", {
+            children: [(0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: (0, pU.jsx)("a", {
+                  href: LU.e,
+                  children: "DeepSeek"
+                })
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsxs)("p", {
+                children: ["AI Helper questions, game code and chats, as section ", zU, " describes"]
+              })
+            }), (0, pU.jsx)("td", {
+              children: (0, pU.jsx)("p", {
+                children: "Runs the AI model that answers Super Bot.xd questions."
               })
             })]
           })]
+        }), (0, pU.jsx)("h3", {
+          children: "3.4 YouTube API Services"
+        }), (0, pU.jsxs)("p", {
+          children: ["Bloxd.io uses YouTube API Services to show YouTube videos, livestreams and Shorts from Bloxd creators on our homepage, and to find the YouTube channel that a creator links to their Bloxd profile. By using these features, you agree to be bound by the", " ", (0, pU.jsx)("a", {
+            href: "https://www.youtube.com/t/terms",
+            children: "YouTube Terms of Service"
+          }), "."]
+        }), (0, pU.jsxs)("p", {
+          children: ["YouTube API Services are provided by Google. Google\u2019s use of information is described in the Google Privacy Policy at", " ", (0, pU.jsx)("a", {
+            href: "http://www.google.com/policies/privacy",
+            children: "http://www.google.com/policies/privacy"
+          }), "."]
+        }), (0, pU.jsx)("p", {
+          children: "We only retrieve publicly available YouTube data: video titles, thumbnails, publish dates, view and live viewer counts and live status, and the channel ID for a YouTube handle a creator adds to their profile. We do not ask you to sign in with YouTube or Google for these features, and we do not access your YouTube account. Creators can remove their linked YouTube handle from their profile, or contact us to remove it, at any time; this deletes the stored channel ID straight away, and deleting an account removes it too."
+        }), (0, pU.jsx)(aU, {
+          allowsPersonalizedAds: XU
+        }), (0, pU.jsx)("h2", {
+          children: "5. Security Measures"
+        }), (0, pU.jsx)("p", {
+          children: "We take the security of your data seriously. We implement various measures to ensure your personal information is protected and manage it according to applicable data protection laws."
+        }), (0, pU.jsx)("h3", {
+          children: "5.1 Technologies and Procedures"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "We use encryption\xa0and other security technologies to safeguard your personal information during transmission and storage."
+          }), (0, pU.jsx)("li", {
+            children: "Our servers are hosted by trusted partners who apply high security standards to protect the data we store."
+          }), (0, pU.jsx)("li", {
+            children: "We regularly monitor our systems for potential vulnerabilities and use firewalls and anti-virus software to prevent unauthorized access."
+          })]
+        }), (0, pU.jsx)("h3", {
+          children: "5.2 Staff Training and Compliance"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Our team is trained to manage your data securely and in accordance with data protection laws like GDPR\xa0and COPPA."
+          }), (0, pU.jsx)("li", {
+            children: "Internal procedures are in place to ensure that only authorized personnel can access sensitive data."
+          })]
+        }), (0, pU.jsx)("h3", {
+          children: "5.3 Data Breach Notification"
+        }), (0, pU.jsx)("p", {
+          children: "In the unlikely event of a data breach that affects your personal information:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "We will promptly notify\xa0affected users, as required by law."
+          }), (0, pU.jsx)("li", {
+            children: "The notification will include:"
+          })]
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "What data was compromised."
+          }), (0, pU.jsx)("li", {
+            children: "The steps we are taking to resolve the issue and protect your data."
+          }), (0, pU.jsx)("li", {
+            children: "Recommendations for what you can do to protect yourself (e.g., change passwords)."
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "We take all necessary steps to ensure that breaches are addressed swiftly to minimize any potential harm."
+        }), (0, pU.jsx)("h2", {
+          children: "6. International Data Transfers"
+        }), (0, pU.jsxs)("p", {
+          children: ["Your data may be transferred to servers in other countries. All international transfers comply with relevant data protection regulations, ensuring that your information is safeguarded.", NU.c && " Session recordings are stored in the United States by Amazon Web Services, and their events in our analytics database at DigitalOcean in the United States. Our staff analytics tool at Hetzner in Finland processes and plays back recordings (section 2.6).", " ", "The AI Helper sends data to France and China, and ChatGPT to the United States, as section ", zU, " describes. With your own API key, your questions go to the company you chose, wherever it is."]
+        }), (0, pU.jsx)("h2", {
+          children: "7. Data Retention"
+        }), (0, pU.jsx)("p", {
+          children: "We retain your data only for as long as necessary to fulfil the purposes outlined in this policy:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsx)("li", {
+            children: "Technical and Usage Data:\xa0Retained for 14 months after your last visit to the site or until you request removal and the removal is verified."
+          }), (0, pU.jsx)("li", {
+            children: "Personal Data for Registered players:\xa0Retained for as long as the account is active. Upon request for account deletion, data will be removed promptly, typically within 30 days after the request is processed."
+          }), (0, pU.jsx)("li", {
+            children: "Contact Information:\xa0Retained for three months after the query is resolved or closed. If personal data from children is collected, it will be deleted as soon as possible."
+          }), (0, pU.jsx)("li", {
+            children: "Cookies:\xa0Cookies are retained for varying periods, depending on their purpose. Functional cookies are typically retained for as long as they are needed to operate the site, while analytical cookies may be retained for a shorter period to analyze site performance."
+          }), (0, pU.jsx)("li", {
+            children: "YouTube API Data:\xa0Public video metadata retrieved from YouTube API Services is refreshed every hour and is never kept for more than 24 hours. Creator-linked YouTube handles and channel IDs are retained while the link remains on the account and deleted as soon as it is removed."
+          }), NU.c && (0, pU.jsxs)(pU.Fragment, {
+            children: [(0, pU.jsx)("li", {
+              children: "Session Recordings:\xa0Retained for 90 days after each recording, or up to one year if kept to fix a bug (section 2.5)."
+            }), (0, pU.jsx)("li", {
+              children: "Staff Analytics Tool:\xa0staff notes on a recording are deleted with it; the log of what staff viewed is kept for one year; saved charts are reviewed every year and deleted once unused for a year, and their results are refreshed or deleted within 7 days; staff accounts are deleted within 30 days of a staff member leaving (section 2.6)."
+            })]
+          }), (0, pU.jsxs)("li", {
+            children: ["AI Helper Chats:\xa0Kept only if you agree to share them, and deleted after 30 days", NU.c && " (section 2.7)", "."]
+          })]
+        }), (0, pU.jsx)("p", {
+          children: "If we collect personal data beyond what is outlined above, we will remove it as soon as possible once it is no longer needed."
+        }), (0, pU.jsx)(dU, {}), (0, pU.jsx)("h2", {
+          children: "9. Contact Us"
+        }), (0, pU.jsx)("p", {
+          children: "Got questions or concerns? We\u2019re here to help. Reach out to us at:"
+        }), (0, pU.jsxs)("ul", {
+          children: [(0, pU.jsxs)("li", {
+            children: ["Email: ", (0, pU.jsx)("a", {
+              href: "mailto:privacy@bloxd.io",
+              children: "privacy@bloxd.io"
+            })]
+          }), (0, pU.jsx)("li", {
+            children: "Address: Bloxd LTD, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE"
+          })]
+        }), (0, pU.jsx)("h2", {
+          children: "10. Updates to This Policy"
+        }), (0, pU.jsx)("p", {
+          children: "We may update this policy occasionally to reflect changes in our practices or the law. When we do, we\u2019ll update the \u201cLast updated\u201d date at the top. Please check back occasionally to stay informed."
         })]
       })
     }
-  },
-  6975: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM,
-      f: () => aM
-    });
-    var OM = iM(332),
-      SM = iM(1188);
-    const jM = {
-      manuallyApproved: "studio:approvalStatusManuallyApproved",
-      manuallyAndAutoApproved: "studio:approvalStatusManuallyAndAutoApproved",
-      manuallyDenied: "studio:approvalStatusManuallyDenied",
-      autoApproved: "studio:approvalStatusAutoApproved",
-      notApproved: "studio:approvalStatusNotApproved",
-      notIndexed: "studio:approvalStatusNotIndexed"
-    };
 
-    function aM() {
+    function CU() {
       const {
-        t: MM,
-        selectedLanguage: rM
-      } = (0, SM.A)();
-      return {
-        statusText: rM => MM(jM[rM]),
-        rowText: iM => {
-          const jM = (MM, iM) => (0, OM.db)((0, SM.n)(rM.code, MM), 0, iM);
-          switch (iM.kind) {
-            case "ownerAccountAge": {
-              const rM = iM.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
-              return {
-                label: MM("studio:approvalAccountAgeLabel"),
-                value: MM(rM, {
-                  age: jM(rM, iM.accountAgeMs),
-                  days: iM.minAccountAgeDays
-                })
-              }
+        adMobPrivacyOptionsRequired: UU
+      } = (0, DU.q)(["adMobPrivacyOptionsRequired"]);
+      if (!UU) return null;
+      return (0, pU.jsx)(FU.f, {
+        className: "PrivacyChoicesButton",
+        onClick: () => {
+          (async () => {
+            try {
+              await EU.d.request("ads.showPrivacyOptions", {})
+            } catch (UU) {
+              console.error("Failed to open AdMob privacy options:", UU)
             }
-            case "sinceUnbannedOrUnmuted":
-              return {
-                label: MM("studio:approvalSinceUnbannedLabel"), value: MM("studio:approvalSinceUnbannedValue", {
-                  time: jM("studio:approvalSinceUnbannedValue", iM.sinceMs),
-                  days: iM.minDays
-                })
-              };
-            case "reportHold": {
-              const {
-                detail: rM
-              } = iM;
-              if (null === rM) return {
-                label: MM("studio:approvalUnderInvestigation"),
-                value: null
-              };
-              const OM = rM.weightedReporters.toFixed(1),
-                SM = rM.threshold.toFixed(1),
-                aM = MM("studio:approvalReportHoldLabel", {
-                  hours: rM.windowHours
-                });
-              if (null === rM.heldUntil) return {
-                label: aM,
-                value: MM("studio:approvalReportHoldValue", {
-                  weightedReporters: OM,
-                  threshold: SM
-                })
-              };
-              const PM = "studio:approvalReportHoldValueHeld";
-              return {
-                label: aM,
-                value: MM(PM, {
-                  weightedReporters: OM,
-                  threshold: SM,
-                  time: jM(PM, rM.heldUntil - Date.now())
-                })
-              }
-            }
-          }
-        }
-      }
+          })()
+        },
+        children: "Manage Privacy Choices"
+      })
     }
 
-    function PM(MM) {
-      return null === MM.manualOverride && MM.rows.some((MM => "reportHold" === MM.kind && !MM.passed))
+    function wU() {
+      return (0, cU.useEffect)((() => {
+        const UU = window.location.hash.slice(1);
+        var XU;
+        "" !== UU && (null === (XU = document.getElementById(UU)) || void 0 === XU || XU.scrollIntoView())
+      }), []), (0, pU.jsxs)(pU.Fragment, {
+        children: [(0, QU.isDiscordClient)() && (0, pU.jsx)(pU.Fragment, {
+          children: (0, pU.jsx)(FU.f, {
+            className: "PrivacyChoicesButton",
+            onClick: () => {
+              (0, oU.r)()
+            },
+            children: "Adjust Discord Privacy Choices"
+          })
+        }), (0, pU.jsx)(CU, {}), (0, pU.jsx)(IU.b, {
+          className: "PrivacyPolicyLinks"
+        }), (0, pU.jsx)(eU, {})]
+      })
     }
-  },
-  35064: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM
-    });
-    var OM = iM(44),
-      SM = iM(3839);
-
-    function jM() {
-      const [MM, rM] = (0, OM.useState)(!1);
-      return (0, OM.useLayoutEffect)((() => {
-        let MM = !0;
-        return (0, SM.e)().then((() => {
-          MM && rM(!0)
-        })), () => {
-          MM = !1
-        }
-      }), []), MM
-    }
-  },
-  9525: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM
-    });
-    var OM = iM(1382),
-      SM = iM(1229),
-      jM = iM(625);
-
-    function aM(MM) {
-      return MM = function(MM, rM) {
-        var iM;
-        const OM = new URLSearchParams(rM),
-          SM = OM.get("lobby"),
-          jM = OM.get("vm"),
-          aM = null !== (iM = SM) && void 0 !== iM ? iM : MM.lobbyName,
-          PM = null !== jM && void 0 !== jM ? jM : MM.directJoinVmUrl;
-        if (aM === MM.lobbyName && PM === MM.directJoinVmUrl) return MM;
-        return {
-          ...MM,
-          lobbyName: aM,
-          directJoinVmUrl: PM
-        }
-      }(MM, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), MM = function(MM) {
-        if ((0, jM.J)(MM.directJoinVmUrl)) return MM;
-        const rM = (0, SM.bb)(MM.directJoinVmUrl);
-        null === rM && (MM.directJoinVmUrl = void 0);
-        return MM
-      }(MM = function(MM) {
-        if ((0, jM.J)(MM.gameNameWithVariation)) return MM;
-        return MM.gameNameWithVariation = (0, OM.h)(MM.gameNameWithVariation), MM
-      }(MM))
-    }
-  },
-  9517: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      e: () => SM
-    });
-    let OM = !1;
-
-    function SM() {
-      OM = !0
-    }
-
-    function jM() {
-      return OM
-    }
-  },
-  37305: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      f: () => OM
-    });
-    const OM = "skyblockSkills",
-      SM = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

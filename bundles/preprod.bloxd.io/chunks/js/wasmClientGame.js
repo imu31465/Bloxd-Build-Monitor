@@ -1,339 +1,160 @@
 export const id = 68;
 export const ids = [68];
 export const modules = {
-  53677: (MM, rM, iM) => {
-    var OM = {
-      "./bedwars/bedwarsClient": [40357, 9],
-      "./bridgeBattle/bridgeBattleClient": [40364, 10],
-      "./buildAFactory2/buildAFactory2Client": [39483, 87, 85, 248, 267, 11],
-      "./classic/classicClient": [40373, 12],
-      "./classic/smp2Client": [40376, 13],
-      "./clutch/clutchClient": [40383, 14],
-      "./containmentBreach/containmentBreachClient": [40388, 243, 15],
-      "./cooking/cookingClient": [40502, 16],
-      "./defusal/defusalClient": [40511, 17],
-      "./frontline/frontlineClient": [40513, 87, 85, 18],
-      "./goalRush/goalRushClient": [40528, 19],
-      "./greenville/greenvilleClient": [40534, 172, 273, 20],
-      "./hideseek/hideseekClient": [40557, 21],
-      "./luckyBedwars/luckyBedwarsClient": [40563, 22],
-      "./murderMystery/murderMysteryClient": [40569, 23],
-      "./ninetyNineNights/ninetyNineNightsClient": [40575, 24],
-      "./oneBlock/oneBlockClient": [40582, 25],
-      "./plots/plotsClient": [40588, 265, 243, 26],
-      "./pvpCiv/pvpCivClient": [40655, 27],
-      "./secretSanta/secretSantaClient": [40659, 28],
-      "./skyIslands/skyIslandsClient": [40666, 29],
-      "./skyblock/skyblockClient": [39519, 87, 257, 248, 172, 237, 30],
-      "./tsunami/tsunamiClient": [40668, 31]
+  53669: (UU, XU, zU) => {
+    var cU = {
+      "./bedwars/bedwarsClient": [40137, 9],
+      "./bridgeBattle/bridgeBattleClient": [40143, 10],
+      "./buildAFactory2/buildAFactory2Client": [39269, 87, 85, 244, 263, 11],
+      "./classic/classicClient": [40147, 12],
+      "./classic/smp2Client": [40151, 13],
+      "./clutch/clutchClient": [40155, 14],
+      "./containmentBreach/containmentBreachClient": [40158, 239, 15],
+      "./cooking/cookingClient": [40264, 16],
+      "./defusal/defusalClient": [40271, 17],
+      "./frontline/frontlineClient": [40275, 87, 85, 18],
+      "./goalRush/goalRushClient": [40288, 19],
+      "./greenville/greenvilleClient": [40296, 170, 269, 20],
+      "./hideseek/hideseekClient": [40324, 21],
+      "./luckyBedwars/luckyBedwarsClient": [40328, 22],
+      "./murderMystery/murderMysteryClient": [40333, 23],
+      "./ninetyNineNights/ninetyNineNightsClient": [40338, 24],
+      "./oneBlock/oneBlockClient": [40342, 25],
+      "./plots/plotsClient": [40349, 261, 239, 26],
+      "./pvpCiv/pvpCivClient": [40416, 27],
+      "./secretSanta/secretSantaClient": [40422, 28],
+      "./skyIslands/skyIslandsClient": [40427, 29],
+      "./skyblock/skyblockClient": [39303, 87, 253, 244, 170, 232, 30],
+      "./tsunami/tsunamiClient": [40435, 31]
     };
 
-    function SM(MM) {
-      if (!iM.o(OM, MM)) return Promise.resolve().then((() => {
-        var rM = new Error("Cannot find module '" + MM + "'");
-        throw rM.code = "MODULE_NOT_FOUND", rM
+    function yU(UU) {
+      if (!zU.o(cU, UU)) return Promise.resolve().then((() => {
+        var XU = new Error("Cannot find module '" + UU + "'");
+        throw XU.code = "MODULE_NOT_FOUND", XU
       }));
-      var rM = OM[MM],
-        SM = rM[0];
-      return Promise.all(rM.slice(1).map(iM.e)).then((() => iM(SM)))
+      var XU = cU[UU],
+        yU = XU[0];
+      return Promise.all(XU.slice(1).map(zU.e)).then((() => zU(yU)))
     }
-    SM.keys = () => Object.keys(OM), SM.id = 53677, MM.exports = SM
+    yU.keys = () => Object.keys(cU), yU.id = 53669, UU.exports = yU
   },
-  37316: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => zM,
-      f: () => PM,
-      i: () => QM,
-      j: () => nM,
-      l: () => EM
+  39858: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => QU,
+      h: () => yU
     });
-    var OM = iM(632),
-      SM = iM(1845),
-      jM = iM(5200);
-    class aM {
-      constructor(MM, rM) {
-        this.width = MM, this.vL = rM, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(MM * rM)
-      }
-      push(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const iM = this.data,
-          OM = this.next * this.width;
-        for (let SM = 0; SM < this.width; SM++) iM[OM + SM] = MM[rM + SM];
-        this.next = (this.next + 1) % this.vL, this.size = Math.min(this.size + 1, this.vL)
-      }
-      rows() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const iM = [],
-          OM = (this.next - this.size + this.vL) % this.vL;
-        for (let SM = 0; SM < this.size; SM++) {
-          const jM = (OM + SM) % this.vL * this.width;
-          this.data[jM + MM] >= rM && iM.push(Array.from(this.data.subarray(jM, jM + this.width)))
-        }
-        return iM
-      }
-      lines() {
-        return this.rows().map((MM => MM.join(",")))
-      }
-    }
-    const PM = 10,
-      nM = {
-        idle: 0,
-        ML: 1,
-        pD: 2,
-        ZD: 3,
-        yd: 4
-      },
-      QM = {
-        none: 0,
-        skipped: 1,
-        paced: 2,
-        drawn: 3
-      },
-      zM = {
-        lockGained: 1,
-        lockLost: 2,
-        lockError: 3,
-        visible: 4,
-        hidden: 5,
-        focus: 6,
-        blur: 7,
-        jsClient: 8,
-        wasmClient: 9,
-        droppedCopies: 10,
-        stepsLost: 11,
-        cameraSetsLost: 12
-      },
-      LM = 12e3,
-      mM = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      HM = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      hM = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      JM = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      dM = ["nowMs", "change", "count"];
+    var cU = zU(31);
 
-    function yM(MM) {
-      return "js" === MM ? zM.jsClient : zM.wasmClient
-    }
-    class lM {
-      constructor() {
-        this.steps = new aM(PM, LM), this.events = new aM(HM.length, LM), this.frames = new aM(hM.length, LM), this.cameraSets = new aM(jM.g, 256), this.changes = new aM(dM.length, 256)
-      }
-    }
-    const EM = new class {
-      constructor() {
-        this.rings = null, this.sample = new Float64Array(HM.length), this.startedClient = null, this.startedAtMs = 0
-      }
-      get client() {
-        return this.startedClient
-      }
-      start(MM, rM) {
-        this.startedClient = MM, this.startedAtMs = performance.now(), null !== this.rings ? this.change(yM(MM)) : rM && this.allocate()
-      }
-      lockGained() {
-        this.allocate(), this.change(zM.lockGained)
-      }
-      allocate() {
-        null === this.rings && (this.rings = new lM, null !== this.startedClient && this.changeAt(this.startedAtMs, yM(this.startedClient), 1))
-      }
-      step(MM, rM) {
-        var iM;
-        MM[rM + 6] !== nM.yd && (null === (iM = this.rings) || void 0 === iM || iM.steps.push(MM, rM))
-      }
-      cameraSet(MM, rM) {
-        var iM;
-        null === (iM = this.rings) || void 0 === iM || iM.cameraSets.push(MM, rM)
-      }
-      mouseMove(MM, rM) {
-        const iM = this.rings;
-        if (null === iM) return;
-        const OM = this.sample;
-        OM[0] = MM.timeStamp, OM[1] = performance.now(), OM[2] = MM.movementX, OM[3] = MM.movementY, OM[4] = rM ? 1 : 0, iM.events.push(OM)
-      }
-      frame(MM, rM, iM, OM) {
-        const SM = this.rings;
-        if (null === SM || OM === QM.none) return;
-        const jM = this.sample;
-        jM[0] = performance.now(), jM[1] = MM, jM[2] = rM, jM[3] = iM, jM[4] = OM, SM.frames.push(jM)
-      }
-      change(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), MM, rM)
-      }
-      changeAt(MM, rM, iM) {
-        const OM = this.rings;
-        if (null === OM) return;
-        const SM = this.sample;
-        SM[0] = MM, SM[1] = rM, SM[2] = iM, OM.changes.push(SM)
-      }
-      dumpText() {
-        var MM, rM;
-        const iM = this.rings;
-        return [`look records (${this.startedClient}): ${mM.join(",")}`, ...null !== (MM = null === iM || void 0 === iM ? void 0 : iM.steps.lines()) && void 0 !== MM ? MM : [], `mousemove events: ${HM.join(",")}`, ...null !== (rM = null === iM || void 0 === iM ? void 0 : iM.events.lines()) && void 0 !== rM ? rM : []].join("\n")
-      }
-      toJson(MM, rM) {
-        var iM;
-        const SM = MM - 6e4,
-          jM = this.rings,
-          aM = function(MM, rM) {
-            var iM;
-            let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const jM = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.rows(OM, SM)) && void 0 !== iM ? iM : [];
-            return {
-              columns: rM,
-              fromMs: 0 === jM.length ? null : jM[0][OM],
-              rows: jM
-            }
-          };
-        return {
-          version: OM.c,
-          client: null !== (iM = this.startedClient) && void 0 !== iM ? iM : "not started",
-          savedAt: (new Date).toISOString(),
-          savedAtMs: MM,
-          keptMs: 6e4,
-          page: window.location.href,
-          userAgent: navigator.userAgent,
-          devicePixelRatio: window.devicePixelRatio,
-          screen: {
-            width: window.screen.width,
-            height: window.screen.height
-          },
-          Vd: null !== document.pointerLockElement,
-          visibility: document.visibilityState,
-          ...rM,
-          outcomes: nM,
-          frameKinds: QM,
-          changes: zM,
-          lookSteps: aM(null === jM || void 0 === jM ? void 0 : jM.steps, mM),
-          mouseMoves: aM(null === jM || void 0 === jM ? void 0 : jM.events, HM, 1),
-          frames: aM(null === jM || void 0 === jM ? void 0 : jM.frames, hM),
-          cameraSets: aM(null === jM || void 0 === jM ? void 0 : jM.cameraSets, JM),
-          pageChanges: aM(null === jM || void 0 === jM ? void 0 : jM.changes, dM)
-        }
-      }
-      save(MM) {
-        const rM = JSON.stringify(this.toJson(performance.now(), MM));
-        (0, SM.c)(new Blob([rM], {
-          type: "application/json"
-        }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
-      }
-    }
-  },
-  40065: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      d: () => SM
-    });
-    var OM = iM(22);
-
-    function SM(MM) {
-      return "refetchCode" === MM || "devDownloadJson" === MM || MM.startsWith("Plugin")
+    function yU(UU) {
+      return "refetchCode" === UU || "devDownloadJson" === UU || UU.startsWith("Plugin")
     }
 
-    function jM(MM, rM) {
-      "refetchCode" !== MM ? "Plugin|MobAiPlugin|ShowPetUi" !== MM ? Promise.all([iM.e(121), iM.e(122), iM.e(117), iM.e(119), iM.e(236)]).then((() => iM(44386))).then((iM => {
+    function QU(UU, XU) {
+      "refetchCode" !== UU ? "Plugin|MobAiPlugin|ShowPetUi" !== UU ? Promise.all([zU.e(120), zU.e(121), zU.e(116), zU.e(118), zU.e(231)]).then((() => zU(44426))).then((zU => {
         let {
-          runClientGameMessage: OM
-        } = iM;
-        OM(MM, rM)
-      })).catch((rM => {
-        console.error(`Game message ${MM} failed`, rM)
-      })) : OM.i.Tz("showPetUi", rM) : OM.i.Tz("refetchCode")
+          runClientGameMessage: cU
+        } = zU;
+        cU(UU, XU)
+      })).catch((XU => {
+        console.error(`Game message ${UU} failed`, XU)
+      })) : cU.k.UY("showPetUi", XU) : cU.k.UY("refetchCode")
     }
   },
-  53658: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM,
-      e: () => SM
+  53645: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => cU,
+      f: () => yU
     });
-    const OM = ["recording", "freecam", "keyframe"];
+    const cU = ["recording", "freecam", "keyframe"];
 
-    function SM() {
-      const MM = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(MM[1]) << 32n | BigInt(MM[0])
+    function yU() {
+      const UU = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(UU[1]) << 32n | BigInt(UU[0])
     }
   },
-  34956: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      f: () => nM
+  34791: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => FU,
+      h: () => oU
     });
-    var OM = iM(19);
-    const SM = 24,
-      jM = "farNametags",
-      aM = 1e5;
+    var cU = zU(27);
+    const yU = 24,
+      QU = "farNametags",
+      AU = 1e5;
 
-    function PM() {
-      var MM;
-      return null === (MM = OM.d.get("showDistantNametags")) || void 0 === MM || MM
+    function FU() {
+      var UU;
+      return null === (UU = cU.e.get("showDistantNametags")) || void 0 === UU || UU
     }
 
-    function nM() {
-      var MM;
-      return null !== (MM = function() {
-        const MM = new URLSearchParams(window.location.search).get(jM),
-          rM = null === MM || "" === MM ? NaN : Number(MM);
-        return Number.isFinite(rM) && rM >= 0 ? Math.min(rM, aM) : null
-      }()) && void 0 !== MM ? MM : PM() ? 0 : SM
+    function oU() {
+      var UU;
+      return null !== (UU = function() {
+        const UU = new URLSearchParams(window.location.search).get(QU),
+          XU = null === UU || "" === UU ? NaN : Number(UU);
+        return Number.isFinite(XU) && XU >= 0 ? Math.min(XU, AU) : null
+      }()) && void 0 !== UU ? UU : FU() ? 0 : yU
     }
   },
-  45248: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      blockIdOf: () => zQ.e,
-      clearWasmCameraScreen: () => lS,
-      creativeItemIds: () => yO.creativeItemIds,
-      decodeMapSettings: () => HQ,
-      drainTextRerasters: () => Mn.b,
-      enchantmentPerksOf: () => yO.enchantmentPerksOf,
-      endGameHost: () => bQ,
-      followCursorAim: () => mQ,
-      followMenuPrefs: () => yj,
-      loadAudio: () => EQ,
-      loadClientGame: () => lQ,
-      loadTextIcons: () => Mn.d,
-      rasterText: () => cP.e,
-      readBoardToEdit: () => QQ,
-      readDrawCensus: () => hQ.f,
-      setTextHost: () => Mn.g,
-      setTextLocalPlayer: () => Mn.j,
-      showInCreativeInvenOf: () => yO.showInCreativeInvenOf,
-      startGameHost: () => eQ,
-      startShellAnalytics: () => aQ,
-      startSkyFeed: () => bn,
-      textChanged: () => Mn.o,
-      warmText: () => cP.h,
-      wasmCameraScreen: () => yS
+  45247: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      blockIdOf: () => oD.c,
+      clearWasmCameraScreen: () => ty,
+      creativeItemIds: () => ac.creativeItemIds,
+      decodeMapSettings: () => YD,
+      drainTextRerasters: () => hF.e,
+      enchantmentPerksOf: () => ac.enchantmentPerksOf,
+      endGameHost: () => RD,
+      followCursorAim: () => ED,
+      followMenuPrefs: () => aQ,
+      loadAudio: () => gD,
+      loadClientGame: () => tD,
+      loadTextIcons: () => hF.h,
+      rasterText: () => TF.e,
+      readBoardToEdit: () => FD,
+      readDrawCensus: () => ND.h,
+      setTextHost: () => hF.m,
+      setTextLocalPlayer: () => hF.n,
+      showInCreativeInvenOf: () => ac.showInCreativeInvenOf,
+      startGameHost: () => ZD,
+      startShellAnalytics: () => yD,
+      startSkyFeed: () => Zo,
+      textChanged: () => hF.s,
+      warmText: () => TF.f,
+      wasmCameraScreen: () => ay
     });
-    iM(37451);
-    var OM = iM(19),
-      SM = iM(37769),
-      jM = iM(40240),
-      aM = iM(22),
-      PM = iM(3809),
-      nM = iM(37767),
-      QM = iM(1313),
-      zM = iM(613),
-      LM = iM(39230),
-      mM = iM(5198),
-      HM = iM(41714),
-      hM = iM(41669);
-    const JM = hM.Fb / 4,
-      dM = hM.o.PlaySound,
-      yM = hM.o.SoundReset,
-      lM = mM.Y.ReplayFailed,
-      EM = mM.Y.RecorderEvent;
-    class UM {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.core = MM, this.memory = rM, this.audio = iM, this.serverIds = new Int32Array(256).fill(hM.Nc), this.kinds = new Uint16Array(256), this.idStr = new Array(256).fill(null), this.indexById = new Map, this.queries = void 0, this.buffer = null, this.viewPtr = -1, this.view = new DataView(new ArrayBuffer(hM.v.BYTES)), this.renderPtr = 0, this.vL = 0, this.renderCapacity = 0, this.render = new Float32Array(0), this.visPtr = 0, this.vis = new Uint8Array(0), this.renderBuffer = null, this.eventsBuffer = null, this.eventsPtr = 0, this.eventsLen = 0, this.events = new DataView(new ArrayBuffer(0)), this.audioView = null, this.scratchPtr = -1, this.scratchView = null, this.corruption = null, this.replay = null, this.queries = new hM.V(MM, (() => {
+    zU(37215);
+    var cU = zU(27),
+      yU = zU(37540),
+      QU = zU(40012),
+      AU = zU(31),
+      FU = zU(3791),
+      oU = zU(37538),
+      DU = zU(1310),
+      EU = zU(633),
+      YU = zU(39002),
+      NU = zU(5318),
+      IU = zU(41699),
+      pU = zU(41652);
+    const aU = pU.Mb / 4,
+      tU = pU.p.PlaySound,
+      gU = pU.p.SoundReset,
+      kU = NU.W.ReplayFailed,
+      GU = NU.W.RecorderEvent;
+    class BU {
+      constructor(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.core = UU, this.memory = XU, this.audio = zU, this.serverIds = new Int32Array(256).fill(pU.ad), this.kinds = new Uint16Array(256), this.idStr = new Array(256).fill(null), this.indexById = new Map, this.queries = void 0, this.buffer = null, this.viewPtr = -1, this.view = new DataView(new ArrayBuffer(pU.w.BYTES)), this.renderPtr = 0, this.xY = 0, this.renderCapacity = 0, this.render = new Float32Array(0), this.visPtr = 0, this.vis = new Uint8Array(0), this.renderBuffer = null, this.eventsBuffer = null, this.eventsPtr = 0, this.eventsLen = 0, this.events = new DataView(new ArrayBuffer(0)), this.audioView = null, this.scratchPtr = -1, this.scratchView = null, this.corruption = null, this.replay = null, this.queries = new pU.$(UU, (() => {
           this.scratchPtr = -1, this.ensureViews()
         }))
       }
       scratch() {
-        return this.scratchPtr < 0 && (this.scratchPtr = this.core.eSM(), this.ensureViews()), this.scratchPtr
+        return this.scratchPtr < 0 && (this.scratchPtr = this.core.oQU(), this.ensureViews()), this.scratchPtr
       }
-      eventBytes(MM, rM) {
-        const iM = this.eventView();
-        return new Uint8Array(iM.buffer, iM.byteOffset + MM, rM)
+      eventBytes(UU, XU) {
+        const zU = this.eventView();
+        return new Uint8Array(zU.buffer, zU.byteOffset + UU, XU)
       }
       get apiView() {
         return this.ensureViews(), this.view
@@ -342,364 +163,364 @@ export const modules = {
         this.memory().buffer !== this.buffer && this.reView()
       }
       get localId() {
-        return hM.v.localId(this.apiView, 0)
+        return pU.w.localId(this.apiView, 0)
       }
       localDeaths() {
-        return hM.v.localDeaths(this.apiView, 0)
+        return pU.w.localDeaths(this.apiView, 0)
       }
       rereadDirectory() {
-        const MM = this.apiView,
-          rM = hM.v.entRenderPtr(MM, 0),
-          iM = hM.v.entVisPtr(MM, 0),
-          OM = hM.v.entCapacity(MM, 0);
-        if (rM !== this.renderPtr || iM !== this.visPtr || OM !== this.vL || this.renderBuffer !== this.buffer) {
-          this.renderPtr = rM, this.visPtr = iM, this.vL = OM, this.renderBuffer = this.buffer;
-          const MM = this.memoryView(Float32Array, rM, OM * JM, "the render array"),
-            SM = this.memoryView(Uint8Array, iM, OM, "the visibility array");
-          this.renderCapacity = MM && SM ? OM : 0, this.render = MM && SM ? MM : new Float32Array(0), this.vis = MM && SM ? SM : new Uint8Array(0)
+        const UU = this.apiView,
+          XU = pU.w.entRenderPtr(UU, 0),
+          zU = pU.w.entVisPtr(UU, 0),
+          cU = pU.w.entCapacity(UU, 0);
+        if (XU !== this.renderPtr || zU !== this.visPtr || cU !== this.xY || this.renderBuffer !== this.buffer) {
+          this.renderPtr = XU, this.visPtr = zU, this.xY = cU, this.renderBuffer = this.buffer;
+          const UU = this.memoryView(Float32Array, XU, cU * aU, "the render array"),
+            yU = this.memoryView(Uint8Array, zU, cU, "the visibility array");
+          this.renderCapacity = UU && yU ? cU : 0, this.render = UU && yU ? UU : new Float32Array(0), this.vis = UU && yU ? yU : new Uint8Array(0)
         }
       }
-      memoryView(MM, rM, iM, OM) {
+      memoryView(UU, XU, zU, cU) {
         try {
-          return (0, HM.l)(MM, this.memory().buffer, rM, iM, OM)
-        } catch (SM) {
-          return this.keepCorruption(SM), null
+          return (0, IU.t)(UU, this.memory().buffer, XU, zU, cU)
+        } catch (yU) {
+          return this.keepCorruption(yU), null
         }
       }
-      memoryData(MM, rM, iM, OM) {
+      memoryData(UU, XU, zU, cU) {
         try {
-          return (0, HM.g)(this.memory().buffer, MM, rM, iM, OM)
-        } catch (SM) {
-          return this.keepCorruption(SM), null
+          return (0, IU.e)(this.memory().buffer, UU, XU, zU, cU)
+        } catch (yU) {
+          return this.keepCorruption(yU), null
         }
       }
-      scratchData(MM, rM) {
-        const iM = this.scratch(),
-          OM = this.scratchView;
-        return (null === OM || void 0 === OM ? void 0 : OM.buffer) === this.memory().buffer && OM.byteOffset === iM && OM.byteLength >= MM ? OM : (this.scratchView = this.memoryData(iM, MM, 8, rM), this.scratchView)
+      scratchData(UU, XU) {
+        const zU = this.scratch(),
+          cU = this.scratchView;
+        return (null === cU || void 0 === cU ? void 0 : cU.buffer) === this.memory().buffer && cU.byteOffset === zU && cU.byteLength >= UU ? cU : (this.scratchView = this.memoryData(zU, UU, 8, XU), this.scratchView)
       }
-      reportCorruption(MM) {
-        this.keepCorruption(new HM.d(MM))
+      reportCorruption(UU) {
+        this.keepCorruption(new IU.c(UU))
       }
-      keepCorruption(MM) {
-        if (!(MM instanceof HM.d)) throw MM;
-        this.corruption ??= MM
+      keepCorruption(UU) {
+        if (!(UU instanceof IU.c)) throw UU;
+        this.corruption ??= UU
       }
       throwCorruption() {
         if (this.corruption) throw this.corruption
       }
-      walk(MM, rM, iM) {
+      walk(UU, XU, zU) {
         this.rereadDirectory(), this.throwCorruption();
         const {
-          ptr: OM,
-          len: SM
-        } = MM;
-        this.eventsPtr = OM, this.eventsLen = SM, this.eventsBuffer = null;
-        const jM = this.eventView();
-        for (let QM = 0; QM < SM;) {
-          const MM = jM.getUint32(QM, !0),
-            iM = 65535 & MM,
-            OM = MM >>> 16,
-            SM = QM + mM.U;
-          if (iM === hM.o.EntitySpawned) {
-            var aM;
-            if (OM !== hM.Hb.BYTES) throw wM(iM, QM, OM);
-            const MM = hM.Hb.serverId(jM, SM);
-            this.spawned(MM, hM.Hb.index(jM, SM), hM.Hb.kind(jM, SM)), null === (aM = rM.entityAdded) || void 0 === aM || aM.call(rM, MM)
-          } else if ((iM === hM.o.ChunkSlot || iM === hM.o.EntityInfoChanged) && !(0, hM.ge)(iM, jM, SM, OM, rM)) throw wM(iM, QM, OM);
-          QM = SM + (0, mM.oe)(OM)
+          ptr: cU,
+          len: yU
+        } = UU;
+        this.eventsPtr = cU, this.eventsLen = yU, this.eventsBuffer = null;
+        const QU = this.eventView();
+        for (let DU = 0; DU < yU;) {
+          const UU = QU.getUint32(DU, !0),
+            zU = 65535 & UU,
+            cU = UU >>> 16,
+            yU = DU + NU.V;
+          if (zU === pU.p.EntitySpawned) {
+            var AU;
+            if (cU !== pU.Rb.BYTES) throw dU(zU, DU, cU);
+            const UU = pU.Rb.serverId(QU, yU);
+            this.spawned(UU, pU.Rb.index(QU, yU), pU.Rb.kind(QU, yU)), null === (AU = XU.entityAdded) || void 0 === AU || AU.call(XU, UU)
+          } else if ((zU === pU.p.ChunkSlot || zU === pU.p.EntityInfoChanged) && !(0, pU.pe)(zU, QU, yU, cU, XU)) throw dU(zU, DU, cU);
+          DU = yU + (0, NU.De)(cU)
         }
         try {
-          var PM;
-          null === (PM = rM.afterPrescan) || void 0 === PM || PM.call(rM), this.throwCorruption(), !iM() && this.dispatch(MM, rM, iM) && (this.throwCorruption(), this.applyListener(), rM.afterWalk(MM.kind)), this.throwCorruption()
-        } catch (nM) {
-          throw nM instanceof HM.d && (this.corruption ??= nM), nM
+          var FU;
+          null === (FU = XU.afterPrescan) || void 0 === FU || FU.call(XU), this.throwCorruption(), !zU() && this.dispatch(UU, XU, zU) && (this.throwCorruption(), this.applyListener(), XU.afterWalk(UU.kind)), this.throwCorruption()
+        } catch (oU) {
+          throw oU instanceof IU.c && (this.corruption ??= oU), oU
         } finally {
-          iM() || null !== this.corruption || this.applyDespawns(SM, rM)
+          zU() || null !== this.corruption || this.applyDespawns(yU, XU)
         }
       }
-      applyDespawns(MM, rM) {
-        const iM = this.eventView();
-        for (let SM = 0; SM < MM;) {
-          const MM = iM.getUint32(SM, !0),
-            jM = SM + mM.U;
-          if ((65535 & MM) === hM.o.EntityDespawned && MM >>> 16 === hM.Hb.BYTES) {
-            const MM = hM.Hb.serverId(iM, jM);
-            var OM;
-            if (this.despawned(MM, hM.Hb.index(iM, jM))) null === (OM = rM.entityRemoved) || void 0 === OM || OM.call(rM, MM)
+      applyDespawns(UU, XU) {
+        const zU = this.eventView();
+        for (let yU = 0; yU < UU;) {
+          const UU = zU.getUint32(yU, !0),
+            QU = yU + NU.V;
+          if ((65535 & UU) === pU.p.EntityDespawned && UU >>> 16 === pU.Rb.BYTES) {
+            const UU = pU.Rb.serverId(zU, QU);
+            var cU;
+            if (this.despawned(UU, pU.Rb.index(zU, QU))) null === (cU = XU.entityRemoved) || void 0 === cU || cU.call(XU, UU)
           }
-          SM = jM + (0, mM.oe)(MM >>> 16)
+          yU = QU + (0, NU.De)(UU >>> 16)
         }
         this.rereadDirectory()
       }
-      dispatch(MM, rM, iM) {
+      dispatch(UU, XU, zU) {
         const {
-          len: OM,
-          net: SM,
-          netOffsets: jM
-        } = MM;
-        let aM = this.eventView(),
-          PM = 0;
-        for (let eM = 0; eM < OM;) {
-          const MM = aM.getUint32(eM, !0),
-            OM = 65535 & MM,
-            tM = MM >>> 16,
-            gM = eM + mM.U;
-          let uM = !1;
-          if (PM < SM.length && jM[PM] === eM) rM.netEvent(SM[PM]), PM++, uM = !0;
-          else if (OM === mM.Y.LocalPlayerBound) {
-            var nM;
-            if (tM !== mM.Hb) throw wM(OM, eM, tM);
-            null === (nM = rM.localPlayerBound) || void 0 === nM || nM.call(rM, aM.getInt32(gM, !0)), uM = !0
-          } else if (OM === mM.Y.LocalHurt) {
-            var QM;
-            if (tM !== mM.Eb) throw wM(OM, eM, tM);
-            null === (QM = rM.localHurt) || void 0 === QM || QM.call(rM, aM.getInt32(gM, !0), aM.getFloat32(gM + 4, !0), aM.getUint32(gM + 8, !0)), uM = !0
-          } else if (OM === mM.Y.AttackHit) {
-            var zM;
-            if (tM !== mM.b) throw wM(OM, eM, tM);
-            const MM = aM.getFloat32(gM, !0),
-              iM = aM.getFloat32(gM + 4, !0),
-              SM = aM.getFloat32(gM + 8, !0),
-              jM = aM.getUint32(gM + 12, !0);
-            null === (zM = rM.attackHit) || void 0 === zM || zM.call(rM, MM, iM, SM, 0 !== (jM & mM.k.Crit), 0 !== (jM & mM.k.HitSelf))
-          } else if (OM === mM.Y.PhysicsType) {
-            var LM;
-            if (tM !== mM.cc) throw wM(OM, eM, tM);
-            null === (LM = rM.physicsType) || void 0 === LM || LM.call(rM, aM.getUint32(gM, !0), aM.getInt32(gM + 4, !0)), uM = !0
-          } else if (OM === mM.Y.VehicleEffect) {
-            var HM;
-            const MM = bM(aM, gM, tM);
-            if (null === MM) throw wM(OM, eM, tM);
-            null === (HM = rM.vehicleEffect) || void 0 === HM || HM.call(rM, MM.op, MM.name, MM.icon, MM.level, MM.durationMs), uM = !0
-          } else if (OM === mM.Y.ZoomChanged) {
-            var JM;
-            if (tM !== mM.Vd) throw wM(OM, eM, tM);
-            null === (JM = rM.zoomChanged) || void 0 === JM || JM.call(rM, aM.getFloat32(gM, !0), aM.getUint8(gM + 4)), uM = !0
-          } else if (OM === mM.Y.ZoomDisabled) {
-            var UM;
-            if (0 !== tM) throw wM(OM, eM, tM);
-            null === (UM = rM.zoomDisabled) || void 0 === UM || UM.call(rM), uM = !0
-          } else if (OM === mM.Y.BhopDisabled) {
-            var GM;
-            if (0 !== tM) throw wM(OM, eM, tM);
-            null === (GM = rM.bhopDisabled) || void 0 === GM || GM.call(rM), uM = !0
-          } else if (OM === mM.Y.GameCamera) {
-            var CM;
-            null === (CM = rM.gameCamera) || void 0 === CM || CM.call(rM, new Uint8Array(aM.buffer, aM.byteOffset + gM, tM).slice()), uM = !0
-          } else if (OM === hM.o.ChunkSlot || OM === hM.o.EntityInfoChanged);
-          else if (OM >= dM && OM <= yM) {
-            if (this.audio && !this.audio.onAudioEvent(OM, aM, gM, tM)) throw wM(OM, eM, tM)
-          } else if (OM >= lM && OM <= EM) {
+          len: cU,
+          net: yU,
+          netOffsets: QU
+        } = UU;
+        let AU = this.eventView(),
+          FU = 0;
+        for (let PU = 0; PU < cU;) {
+          const UU = AU.getUint32(PU, !0),
+            cU = 65535 & UU,
+            LU = UU >>> 16,
+            eU = PU + NU.V;
+          let CU = !1;
+          if (FU < yU.length && QU[FU] === PU) XU.netEvent(yU[FU]), FU++, CU = !0;
+          else if (cU === NU.W.LocalPlayerBound) {
+            var oU;
+            if (LU !== NU.Nb) throw dU(cU, PU, LU);
+            null === (oU = XU.localPlayerBound) || void 0 === oU || oU.call(XU, AU.getInt32(eU, !0)), CU = !0
+          } else if (cU === NU.W.LocalHurt) {
+            var DU;
+            if (LU !== NU.Lb) throw dU(cU, PU, LU);
+            null === (DU = XU.localHurt) || void 0 === DU || DU.call(XU, AU.getInt32(eU, !0), AU.getFloat32(eU + 4, !0), AU.getUint32(eU + 8, !0)), CU = !0
+          } else if (cU === NU.W.AttackHit) {
+            var EU;
+            if (LU !== NU.c) throw dU(cU, PU, LU);
+            const UU = AU.getFloat32(eU, !0),
+              zU = AU.getFloat32(eU + 4, !0),
+              yU = AU.getFloat32(eU + 8, !0),
+              QU = AU.getUint32(eU + 12, !0);
+            null === (EU = XU.attackHit) || void 0 === EU || EU.call(XU, UU, zU, yU, 0 !== (QU & NU.h.Crit), 0 !== (QU & NU.h.HitSelf))
+          } else if (cU === NU.W.PhysicsType) {
+            var YU;
+            if (LU !== NU.fc) throw dU(cU, PU, LU);
+            null === (YU = XU.physicsType) || void 0 === YU || YU.call(XU, AU.getUint32(eU, !0), AU.getInt32(eU + 4, !0)), CU = !0
+          } else if (cU === NU.W.VehicleEffect) {
+            var IU;
+            const UU = WU(AU, eU, LU);
+            if (null === UU) throw dU(cU, PU, LU);
+            null === (IU = XU.vehicleEffect) || void 0 === IU || IU.call(XU, UU.op, UU.name, UU.icon, UU.level, UU.durationMs), CU = !0
+          } else if (cU === NU.W.ZoomChanged) {
+            var aU;
+            if (LU !== NU.ge) throw dU(cU, PU, LU);
+            null === (aU = XU.zoomChanged) || void 0 === aU || aU.call(XU, AU.getFloat32(eU, !0), AU.getUint8(eU + 4)), CU = !0
+          } else if (cU === NU.W.ZoomDisabled) {
+            var BU;
+            if (0 !== LU) throw dU(cU, PU, LU);
+            null === (BU = XU.zoomDisabled) || void 0 === BU || BU.call(XU), CU = !0
+          } else if (cU === NU.W.BhopDisabled) {
+            var ZU;
+            if (0 !== LU) throw dU(cU, PU, LU);
+            null === (ZU = XU.bhopDisabled) || void 0 === ZU || ZU.call(XU), CU = !0
+          } else if (cU === NU.W.GameCamera) {
+            var RU;
+            null === (RU = XU.gameCamera) || void 0 === RU || RU.call(XU, new Uint8Array(AU.buffer, AU.byteOffset + eU, LU).slice()), CU = !0
+          } else if (cU === pU.p.ChunkSlot || cU === pU.p.EntityInfoChanged);
+          else if (cU >= tU && cU <= gU) {
+            if (this.audio && !this.audio.onAudioEvent(cU, AU, eU, LU)) throw dU(cU, PU, LU)
+          } else if (cU >= kU && cU <= GU) {
             if (this.replay) {
-              if (!this.replay.onReplayEvent(OM, aM, gM, tM)) throw wM(OM, eM, tM);
-              uM = !0
+              if (!this.replay.onReplayEvent(cU, AU, eU, LU)) throw dU(cU, PU, LU);
+              CU = !0
             }
-          } else if (OM >= hM.bd && OM <= hM.dd && OM !== mM.Y.EnvLighting) {
-            if (!(0, hM.ge)(OM, aM, gM, tM, rM)) throw wM(OM, eM, tM);
-            uM = !0
+          } else if (cU >= pU.ud && cU <= pU.vd && cU !== NU.W.EnvLighting) {
+            if (!(0, pU.pe)(cU, AU, eU, LU, XU)) throw dU(cU, PU, LU);
+            CU = !0
           }
-          if (uM) {
-            if (iM()) return !1;
-            aM = this.eventView()
+          if (CU) {
+            if (zU()) return !1;
+            AU = this.eventView()
           }
-          eM = gM + (0, mM.oe)(tM)
+          PU = eU + (0, NU.De)(LU)
         }
-        return !iM()
+        return !zU()
       }
       applyListener() {
-        var MM;
+        var UU;
         if (!this.audio) return;
-        const rM = hM.v.audioViewPtr(this.apiView, 0),
-          iM = this.memory().buffer;
-        let OM = this.audioView;
-        (null === (MM = OM) || void 0 === MM ? void 0 : MM.buffer) === iM && OM.byteOffset === rM || (OM = (0, HM.g)(iM, rM, hM.w.BYTES, 8, "the audio view"), this.audioView = OM), OM && this.audio.applyListener(OM)
+        const XU = pU.w.audioViewPtr(this.apiView, 0),
+          zU = this.memory().buffer;
+        let cU = this.audioView;
+        (null === (UU = cU) || void 0 === UU ? void 0 : UU.buffer) === zU && cU.byteOffset === XU || (cU = (0, IU.e)(zU, XU, pU.z.BYTES, 8, "the audio view"), this.audioView = cU), cU && this.audio.applyListener(cU)
       }
-      indexOf(MM) {
-        return this.indexById.get("number" === typeof MM ? MM : +MM)
+      indexOf(UU) {
+        return this.indexById.get("number" === typeof UU ? UU : +UU)
       }
-      isLocal(MM) {
-        return MM !== hM.Nc && MM === hM.v.localId(this.apiView, 0)
+      isLocal(UU) {
+        return UU !== pU.ad && UU === pU.w.localId(this.apiView, 0)
       }
-      XE(MM) {
-        const rM = [0, 0, 0];
-        return this.readPosition("number" === typeof MM ? MM : +MM, rM) ? rM : null
+      wG(UU) {
+        const XU = [0, 0, 0];
+        return this.readPosition("number" === typeof UU ? UU : +UU, XU) ? XU : null
       }
-      readPosition(MM, rM) {
-        const iM = this.apiView;
-        if (void 0 !== this.indexById.get(MM) && this.isLocal(MM)) {
-          for (let MM = 0; MM < 3; MM++) rM[MM] = hM.v.localPos(iM, 0, MM);
+      readPosition(UU, XU) {
+        const zU = this.apiView;
+        if (void 0 !== this.indexById.get(UU) && this.isLocal(UU)) {
+          for (let UU = 0; UU < 3; UU++) XU[UU] = pU.w.localPos(zU, 0, UU);
           return !0
         }
-        return this.readDrawnPosition(MM, rM)
+        return this.readDrawnPosition(UU, XU)
       }
-      readDrawnPosition(MM, rM) {
-        const iM = this.apiView,
-          OM = this.indexById.get(MM);
-        if (void 0 === OM || OM >= this.renderCapacity) return rM[0] = rM[1] = rM[2] = NaN, !1;
-        const SM = OM * JM;
-        for (let jM = 0; jM < 3; jM++) rM[jM] = this.render[SM + jM] + hM.v.origin(iM, 0, jM);
+      readDrawnPosition(UU, XU) {
+        const zU = this.apiView,
+          cU = this.indexById.get(UU);
+        if (void 0 === cU || cU >= this.renderCapacity) return XU[0] = XU[1] = XU[2] = NaN, !1;
+        const yU = cU * aU;
+        for (let QU = 0; QU < 3; QU++) XU[QU] = this.render[yU + QU] + pU.w.origin(zU, 0, QU);
         return !0
       }
-      checkValid(MM) {
-        return void 0 !== this.indexOf(MM)
+      checkValid(UU) {
+        return void 0 !== this.indexOf(UU)
       }
-      isAlive(MM) {
-        const rM = this.indexOf(MM);
-        if (void 0 === rM) return null;
-        if (this.ensureViews(), rM >= this.renderCapacity) return null;
-        const iM = this.vis[rM];
-        return 0 === iM ? null : 0 !== (iM & hM.de.Alive)
+      isAlive(UU) {
+        const XU = this.indexOf(UU);
+        if (void 0 === XU) return null;
+        if (this.ensureViews(), XU >= this.renderCapacity) return null;
+        const zU = this.vis[XU];
+        return 0 === zU ? null : 0 !== (zU & pU.oe.Alive)
       }
-      getEntityType(MM) {
-        const rM = this.indexOf(MM);
-        return void 0 === rM ? this.isLocal("number" === typeof MM ? MM : +MM) ? "Player" : null : CM(this.kinds[rM])
+      getEntityType(UU) {
+        const XU = this.indexOf(UU);
+        return void 0 === XU ? this.isLocal("number" === typeof UU ? UU : +UU) ? "Player" : null : RU(this.kinds[XU])
       }
-      spawned(MM, rM, iM) {
-        if (rM >= 1048576) throw new HM.d(`entity ${MM} spawned at index ${rM}`);
-        this.ensureIndex(rM), this.serverIds[rM] === MM && null !== this.idStr[rM] || (this.idStr[rM] = String(MM)), this.serverIds[rM] = MM, this.kinds[rM] = iM, this.indexById.set(MM, rM)
+      spawned(UU, XU, zU) {
+        if (XU >= 1048576) throw new IU.c(`entity ${UU} spawned at index ${XU}`);
+        this.ensureIndex(XU), this.serverIds[XU] === UU && null !== this.idStr[XU] || (this.idStr[XU] = String(UU)), this.serverIds[XU] = UU, this.kinds[XU] = zU, this.indexById.set(UU, XU)
       }
-      despawned(MM, rM) {
-        let iM = !1;
-        return this.indexById.get(MM) === rM && (this.indexById.delete(MM), iM = !0), rM < this.serverIds.length && this.serverIds[rM] === MM && (this.serverIds[rM] = hM.Nc, this.kinds[rM] = 0, this.idStr[rM] = null), iM
+      despawned(UU, XU) {
+        let zU = !1;
+        return this.indexById.get(UU) === XU && (this.indexById.delete(UU), zU = !0), XU < this.serverIds.length && this.serverIds[XU] === UU && (this.serverIds[XU] = pU.ad, this.kinds[XU] = 0, this.idStr[XU] = null), zU
       }
-      ensureIndex(MM) {
-        const rM = this.serverIds.length;
-        if (MM < rM) return;
-        let iM = 2 * rM;
-        for (; iM <= MM;) iM *= 2;
-        const OM = new Int32Array(iM).fill(hM.Nc);
-        OM.set(this.serverIds), this.serverIds = OM;
-        const SM = new Uint16Array(iM);
-        SM.set(this.kinds), this.kinds = SM;
-        for (let jM = rM; jM < iM; jM++) this.idStr.push(null)
+      ensureIndex(UU) {
+        const XU = this.serverIds.length;
+        if (UU < XU) return;
+        let zU = 2 * XU;
+        for (; zU <= UU;) zU *= 2;
+        const cU = new Int32Array(zU).fill(pU.ad);
+        cU.set(this.serverIds), this.serverIds = cU;
+        const yU = new Uint16Array(zU);
+        yU.set(this.kinds), this.kinds = yU;
+        for (let QU = XU; QU < zU; QU++) this.idStr.push(null)
       }
       eventView() {
-        const MM = this.memory().buffer;
-        return MM !== this.eventsBuffer && (this.eventsBuffer = MM, this.events = new DataView(MM, this.eventsPtr, this.eventsLen)), this.events
+        const UU = this.memory().buffer;
+        return UU !== this.eventsBuffer && (this.eventsBuffer = UU, this.events = new DataView(UU, this.eventsPtr, this.eventsLen)), this.events
       }
       reView() {
-        const MM = this.memory().buffer;
-        this.buffer = MM, this.viewPtr < 0 && (this.viewPtr = this.core.bSM()), this.view = new DataView(MM, this.viewPtr, hM.v.BYTES), this.rereadDirectory()
+        const UU = this.memory().buffer;
+        this.buffer = UU, this.viewPtr < 0 && (this.viewPtr = this.core.DQU()), this.view = new DataView(UU, this.viewPtr, pU.w.BYTES), this.rereadDirectory()
       }
     }
 
-    function GM(MM) {
-      return MM >>> hM.e === hM.s.Item
+    function ZU(UU) {
+      return UU >>> pU.d === pU.s.Item
     }
 
-    function CM(MM) {
-      var rM, iM;
-      const OM = MM & hM.f;
-      switch (MM >>> hM.e) {
-        case hM.s.Lifeform:
-          return null !== (rM = zM.j[OM]) && void 0 !== rM ? rM : null;
-        case hM.s.Throwable:
-          return null !== (iM = LM.j[OM]) && void 0 !== iM ? iM : null;
-        case hM.s.Mesh:
+    function RU(UU) {
+      var XU, zU;
+      const cU = UU & pU.f;
+      switch (UU >>> pU.d) {
+        case pU.s.Lifeform:
+          return null !== (XU = EU.h[cU]) && void 0 !== XU ? XU : null;
+        case pU.s.Throwable:
+          return null !== (zU = YU.j[cU]) && void 0 !== zU ? zU : null;
+        case pU.s.Mesh:
           return "Mesh";
-        case hM.s.Audio:
+        case pU.s.Audio:
           return "AudioEntity";
-        case hM.s.Item:
+        case pU.s.Item:
           return "Item";
         default:
           return null
       }
     }
-    const eM = new TextDecoder;
+    const PU = new TextDecoder;
 
-    function bM(MM, rM, iM) {
-      if (iM < mM.Cd.HEAD_BYTES) return null;
-      const OM = MM.getUint32(rM, !0),
-        SM = MM.getUint32(rM + 20, !0),
-        jM = MM.getUint32(rM + 24, !0),
-        aM = mM.Cd.HEAD_BYTES + (0, mM.oe)(SM);
-      if (OM !== mM.Cd.UPDATE && OM !== mM.Cd.REMOVE || SM > iM || aM + jM > iM) return null;
-      const PM = (iM, OM) => eM.decode(new Uint8Array(MM.buffer, MM.byteOffset + rM + iM, OM)),
-        nM = MM.getFloat64(rM + 12, !0);
+    function WU(UU, XU, zU) {
+      if (zU < NU.Jd.HEAD_BYTES) return null;
+      const cU = UU.getUint32(XU, !0),
+        yU = UU.getUint32(XU + 20, !0),
+        QU = UU.getUint32(XU + 24, !0),
+        AU = NU.Jd.HEAD_BYTES + (0, NU.De)(yU);
+      if (cU !== NU.Jd.UPDATE && cU !== NU.Jd.REMOVE || yU > zU || AU + QU > zU) return null;
+      const FU = (zU, cU) => PU.decode(new Uint8Array(UU.buffer, UU.byteOffset + XU + zU, cU)),
+        oU = UU.getFloat64(XU + 12, !0);
       return {
-        op: OM,
-        level: MM.getFloat64(rM + 4, !0),
-        durationMs: Number.isNaN(nM) ? null : nM,
-        name: PM(mM.Cd.HEAD_BYTES, SM),
-        icon: PM(aM, jM)
+        op: cU,
+        level: UU.getFloat64(XU + 4, !0),
+        durationMs: Number.isNaN(oU) ? null : oU,
+        name: FU(NU.Jd.HEAD_BYTES, yU),
+        icon: FU(AU, QU)
       }
     }
 
-    function wM(MM, rM, iM) {
-      return new HM.d(`event ${MM} at ${rM} of ${iM} bytes`)
+    function dU(UU, XU, zU) {
+      return new IU.c(`event ${UU} at ${XU} of ${zU} bytes`)
     }
-    var tM = iM(6944),
-      gM = iM(332),
-      uM = iM(1229),
-      RM = iM(40231),
-      pM = iM(40065),
-      WM = iM(2058),
-      sM = iM(42111),
-      DM = iM(2e3),
-      kM = iM(40261),
-      ZM = iM(40287),
-      oM = iM(40279),
-      fM = iM(41706),
-      YM = iM(2622),
-      NM = iM(40253),
-      AM = iM(40285);
+    var LU = zU(7056),
+      eU = zU(344),
+      CU = zU(1236),
+      wU = zU(40007),
+      qU = zU(39858),
+      OU = zU(2023),
+      SU = zU(42121),
+      rU = zU(1974),
+      uU = zU(40032),
+      fU = zU(40060),
+      iU = zU(40048),
+      HU = zU(41685),
+      MU = zU(2588),
+      vU = zU(40023),
+      VU = zU(40058);
 
-    function xM(MM) {
-      if (!(0, AM.g)(MM)) return null;
-      const rM = Number(MM);
-      return (0 | rM) === rM ? rM : null
+    function sU(UU) {
+      if (!(0, VU.g)(UU)) return null;
+      const XU = Number(UU);
+      return (0 | XU) === XU ? XU : null
     }
-    class vM {
-      constructor(MM) {
-        this.api = MM, this.bodyHeading = 0, this.viewHeading = 0, this.defaultPose = (0, NM.h)(), this.defaultPoseRead = !1, this.defaultFov = 0, this.baseFov = 0, this.aspect = 1, this.QS = null, this.entityLive = !1, this.entityFeet = [0, 0, 0], this.entityAim = [0, 0, 0], this.entityHeading = 0, this.entityPitch = null, this.entityLookHeading = null, this.localId = hM.Nc, this.localName = String(hM.Nc)
+    class nU {
+      constructor(UU) {
+        this.api = UU, this.bodyHeading = 0, this.viewHeading = 0, this.defaultPose = (0, vU.k)(), this.defaultPoseRead = !1, this.defaultFov = 0, this.baseFov = 0, this.aspect = 1, this.FX = null, this.entityLive = !1, this.entityFeet = [0, 0, 0], this.entityAim = [0, 0, 0], this.entityHeading = 0, this.entityPitch = null, this.entityLookHeading = null, this.localId = pU.ad, this.localName = String(pU.ad)
       }
       readView() {
-        this.defaultPoseRead = !1, this.QS = null;
-        const MM = this.api.queries.directorView() >= hM.sb.BYTES ? this.api.scratchData(hM.sb.BYTES, "the director's view") : null;
-        null !== MM && (this.defaultFov = (0, DM.J)(hM.sb.fov(MM, 0)), this.baseFov = (0, DM.J)(hM.sb.baseFov(MM, 0)), this.aspect = hM.sb.aspect(MM, 0), this.bodyHeading = hM.sb.bodyHeading(MM, 0))
+        this.defaultPoseRead = !1, this.FX = null;
+        const UU = this.api.queries.directorView() >= pU.Ab.BYTES ? this.api.scratchData(pU.Ab.BYTES, "the director's view") : null;
+        null !== UU && (this.defaultFov = (0, rU.D)(pU.Ab.fov(UU, 0)), this.baseFov = (0, rU.D)(pU.Ab.baseFov(UU, 0)), this.aspect = pU.Ab.aspect(UU, 0), this.bodyHeading = pU.Ab.bodyHeading(UU, 0))
       }
       getViewHeading() {
         return this.viewHeading
       }
-      setViewHeading(MM) {
-        this.viewHeading = MM
+      setViewHeading(UU) {
+        this.viewHeading = UU
       }
       get localPlayerId() {
-        const MM = hM.v.localId(this.api.apiView, 0);
-        return MM !== this.localId && (this.localId = MM, this.localName = String(MM)), this.localName
+        const UU = pU.w.localId(this.api.apiView, 0);
+        return UU !== this.localId && (this.localId = UU, this.localName = String(UU)), this.localName
       }
-      getEntityPosition(MM) {
-        return this.readEntity(MM) ? this.entityFeet : null
+      getEntityPosition(UU) {
+        return this.readEntity(UU) ? this.entityFeet : null
       }
-      getEntityAimPoint(MM) {
-        return this.readEntity(MM) ? this.entityAim : null
+      getEntityAimPoint(UU) {
+        return this.readEntity(UU) ? this.entityAim : null
       }
-      getEntityHeading(MM) {
-        const rM = xM(MM);
-        if (null === rM) return null;
-        const iM = hM.v.localId(this.api.apiView, 0);
-        return rM === iM && iM !== hM.Nc ? this.viewHeading : this.readEntity(MM) ? this.entityHeading : null
+      getEntityHeading(UU) {
+        const XU = sU(UU);
+        if (null === XU) return null;
+        const zU = pU.w.localId(this.api.apiView, 0);
+        return XU === zU && zU !== pU.ad ? this.viewHeading : this.readEntity(UU) ? this.entityHeading : null
       }
-      getEntityPitch(MM) {
-        return this.readEntity(MM) ? this.entityPitch : null
+      getEntityPitch(UU) {
+        return this.readEntity(UU) ? this.entityPitch : null
       }
-      getEntityLookHeading(MM) {
-        return this.readEntity(MM) ? this.entityLookHeading : null
+      getEntityLookHeading(UU) {
+        return this.readEntity(UU) ? this.entityLookHeading : null
       }
-      raycastTerrain(MM, rM, iM) {
-        const OM = this.api.queries.cameraSweep(MM[0], MM[1], MM[2], rM[0], rM[1], rM[2], iM);
-        return OM < iM - 1e-6 ? OM : null
+      raycastTerrain(UU, XU, zU) {
+        const cU = this.api.queries.cameraSweep(UU[0], UU[1], UU[2], XU[0], XU[1], XU[2], zU);
+        return cU < zU - 1e-6 ? cU : null
       }
       getDefaultPose() {
         if (this.defaultPoseRead) return this.defaultPose;
         this.defaultPoseRead = !0;
-        const MM = this.defaultPose;
-        MM.fov = this.defaultFov;
-        const rM = this.api.queries.directorDefaultPose() >= hM.lb.BYTES ? this.api.scratchData(hM.lb.BYTES, "the director's default pose") : null;
-        if (null === rM) return MM;
-        for (let iM = 0; iM < 3; iM++) MM.position[iM] = hM.lb.eye(rM, 0, iM);
-        return MM.heading = hM.lb.heading(rM, 0), MM.pitch = hM.lb.pitch(rM, 0), MM
+        const UU = this.defaultPose;
+        UU.fov = this.defaultFov;
+        const XU = this.api.queries.directorDefaultPose() >= pU.sb.BYTES ? this.api.scratchData(pU.sb.BYTES, "the director's default pose") : null;
+        if (null === XU) return UU;
+        for (let zU = 0; zU < 3; zU++) UU.position[zU] = pU.sb.eye(XU, 0, zU);
+        return UU.heading = pU.sb.heading(XU, 0), UU.pitch = pU.sb.pitch(XU, 0), UU
       }
       getDefaultFov() {
         return this.defaultFov
@@ -710,365 +531,365 @@ export const modules = {
       getAspectRatio() {
         return this.aspect
       }
-      readEntity(MM) {
-        const rM = xM(MM);
-        if (null === rM) return !1;
-        if (rM === this.QS) return this.entityLive;
-        this.QS = rM;
-        const iM = this.api.queries.directorEntity(rM) >= hM.nb.BYTES ? this.api.scratchData(hM.nb.BYTES, "the director's entity") : null;
-        if (this.entityLive = null !== iM, null === iM) return !1;
-        for (let jM = 0; jM < 3; jM++) this.entityFeet[jM] = hM.nb.feet(iM, 0, jM), this.entityAim[jM] = this.entityFeet[jM];
-        this.entityAim[1] += hM.nb.eyeHeight(iM, 0), this.entityHeading = hM.nb.heading(iM, 0);
-        const OM = hM.nb.pitch(iM, 0);
-        this.entityPitch = Number.isNaN(OM) ? null : OM;
-        const SM = hM.nb.lookHeading(iM, 0);
-        return this.entityLookHeading = Number.isNaN(SM) ? null : SM, !0
+      readEntity(UU) {
+        const XU = sU(UU);
+        if (null === XU) return !1;
+        if (XU === this.FX) return this.entityLive;
+        this.FX = XU;
+        const zU = this.api.queries.directorEntity(XU) >= pU.wb.BYTES ? this.api.scratchData(pU.wb.BYTES, "the director's entity") : null;
+        if (this.entityLive = null !== zU, null === zU) return !1;
+        for (let QU = 0; QU < 3; QU++) this.entityFeet[QU] = pU.wb.feet(zU, 0, QU), this.entityAim[QU] = this.entityFeet[QU];
+        this.entityAim[1] += pU.wb.eyeHeight(zU, 0), this.entityHeading = pU.wb.heading(zU, 0);
+        const cU = pU.wb.pitch(zU, 0);
+        this.entityPitch = Number.isNaN(cU) ? null : cU;
+        const yU = pU.wb.lookHeading(zU, 0);
+        return this.entityLookHeading = Number.isNaN(yU) ? null : yU, !0
       }
     }
-    const FM = {
+    const mU = {
         mode: "default"
       },
-      BM = {
+      lU = {
         show: () => {},
         clear: () => {}
       };
 
-    function XM() {
+    function xU() {
       return "undefined" !== typeof document && "hidden" === document.visibilityState
     }
-    class IM {
-      constructor(MM) {
-        this.options = MM, this.uL = void 0, this.director = void 0, this.latest = FM, this.pending = void 0, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.look = {
-          PD: 0,
-          nD: 0
+    class JU {
+      constructor(UU) {
+        this.options = UU, this.qY = void 0, this.director = void 0, this.latest = mU, this.pending = void 0, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.look = {
+          zq: 0,
+          Qq: 0
         }, this.pointedAt = {
           heading: 0,
           pitch: 0
-        }, this.engaged = !1, this.calledThisFrame = !1, this.holding = !1, this.lastCallMs = 0, this.answeredPose = !1, this.Sd = new Int32Array(3 * hM.Kd), this.centresLen = 0, this.centresUnsent = !1, this.next = new Int32Array(3 * hM.Kd), this.uL = new vM(MM.api), this.director = new oM.d(this.uL)
+        }, this.engaged = !1, this.calledThisFrame = !1, this.holding = !1, this.lastCallMs = 0, this.answeredPose = !1, this.Ut = new Int32Array(3 * pU.Xd), this.centresLen = 0, this.centresUnsent = !1, this.next = new Int32Array(3 * pU.Xd), this.qY = new nU(UU.api), this.director = new iU.e(this.qY)
       }
-      settingsChanged(MM) {
-        let rM = FM;
-        if (MM.length > 0) try {
-          rM = (0, fM.c)(MM)
+      settingsChanged(UU) {
+        let XU = mU;
+        if (UU.length > 0) try {
+          XU = (0, HU.d)(UU)
         } catch {}
-        this.latest = rM, this.pending = rM
+        this.latest = XU, this.pending = XU
       }
-      call(MM, rM, iM, OM, SM, jM) {
-        var aM, PM;
-        let nM;
+      call(UU, XU, zU, cU, yU, QU) {
+        var AU, FU;
+        let oU;
         this.holding = !1;
         try {
-          nM = this.answer(MM, rM, iM, OM, SM, jM)
-        } catch (mM) {
-          var QM, zM;
-          throw this.answeredPose = !1, null === (QM = (zM = this.options).showFacing) || void 0 === QM || QM.call(zM, null), mM
+          oU = this.answer(UU, XU, zU, cU, yU, QU)
+        } catch (NU) {
+          var DU, EU;
+          throw this.answeredPose = !1, null === (DU = (EU = this.options).showFacing) || void 0 === DU || DU.call(EU, null), NU
         }
-        const LM = this.answeredPose && 0 === (OM & hM.qb.Held);
-        return this.answeredPose = nM !== hM.kb.None, this.holding = this.answeredPose && !LM, null === (aM = (PM = this.options).showFacing) || void 0 === aM || aM.call(PM, this.holding ? this.facing : null), nM
+        const YU = this.answeredPose && 0 === (cU & pU.zb.Held);
+        return this.answeredPose = oU !== pU.qb.None, this.holding = this.answeredPose && !YU, null === (AU = (FU = this.options).showFacing) || void 0 === AU || AU.call(FU, this.holding ? this.facing : null), oU
       }
       holdsView() {
         return this.holding
       }
-      answer(MM, rM, iM, OM, SM, jM) {
+      answer(UU, XU, zU, cU, yU, QU) {
         this.calledThisFrame = !0, this.engaged = !0, this.lastCallMs = this.now();
         const {
-          uL: aM
+          qY: AU
         } = this;
-        aM.readView();
-        if (0 !== (OM & hM.qb.Held) || aM.setViewHeading((0, kM.s)(aM.bodyHeading)), void 0 !== this.pending) {
-          const MM = this.pending;
-          this.pending = void 0, this.director.setSettings(MM), this.syncShownSettings()
+        AU.readView();
+        if (0 !== (cU & pU.zb.Held) || AU.setViewHeading((0, uU.z)(AU.bodyHeading)), void 0 !== this.pending) {
+          const UU = this.pending;
+          this.pending = void 0, this.director.setSettings(UU), this.syncShownSettings()
         }
-        this.readLook((0, YM.h)(rM), (0, YM.h)(iM), OM, (0, YM.h)(SM), (0, YM.h)(jM));
-        const PM = this.director.update(MM / 1e3, this.look);
-        if (this.syncShownSettings(), this.writeCentres(this.director.getLoadingPositions()), this.hidden() || this.screen().show(this.director.getScreenFade(), this.director.getSettings()), !PM) return hM.kb.None;
-        const [nM, QM, zM] = PM.position;
-        if (0 === this.options.api.queries.directorPose(nM, QM, zM, (0, kM.s)(PM.heading), (0, kM.h)(PM.pitch), (0, DM.l)(PM.fov))) return hM.kb.None;
-        if ("default" === this.director.getSettings().mode) return hM.kb.Pose;
+        this.readLook((0, MU.f)(XU), (0, MU.f)(zU), cU, (0, MU.f)(yU), (0, MU.f)(QU));
+        const FU = this.director.update(UU / 1e3, this.look);
+        if (this.syncShownSettings(), this.writeCentres(this.director.getLoadingPositions()), this.hidden() || this.screen().show(this.director.getScreenFade(), this.director.getSettings()), !FU) return pU.qb.None;
+        const [oU, DU, EU] = FU.position;
+        if (0 === this.options.api.queries.directorPose(oU, DU, EU, (0, uU.z)(FU.heading), (0, uU.j)(FU.pitch), (0, rU.l)(FU.fov))) return pU.qb.None;
+        if ("default" === this.director.getSettings().mode) return pU.qb.Pose;
         switch (this.facing) {
           case "camera":
-            return hM.kb.FaceCamera;
+            return pU.qb.FaceCamera;
           case "cursor":
-            return hM.kb.FaceCursor;
+            return pU.qb.FaceCursor;
           default:
-            return hM.kb.FaceMovement
+            return pU.qb.FaceMovement
         }
       }
-      afterFrame(MM) {
-        MM ? (this.calledThisFrame || (this.holding = !1, this.engaged && this.idle()), this.calledThisFrame = !1) : this.centresLen > 0 && this.hidden() && this.now() - this.lastCallMs > 1e3 && this.setCentres(0), this.centresUnsent && this.sendCentres()
+      afterFrame(UU) {
+        UU ? (this.calledThisFrame || (this.holding = !1, this.engaged && this.idle()), this.calledThisFrame = !1) : this.centresLen > 0 && this.hidden() && this.now() - this.lastCallMs > 1e3 && this.setCentres(0), this.centresUnsent && this.sendCentres()
       }
       reset() {
-        this.latest = FM, this.idle()
+        this.latest = mU, this.idle()
       }
       restart() {
-        const MM = this.holding;
-        this.idle(), this.holding = MM
+        const UU = this.holding;
+        this.idle(), this.holding = UU
       }
       idle() {
-        var MM, rM;
-        this.engaged && this.screen().clear(), this.engaged = !1, this.holding = !1, this.director = new oM.d(this.uL), this.pending = this.latest, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.answeredPose = !1, null === (MM = (rM = this.options).showFacing) || void 0 === MM || MM.call(rM, null), this.setCentres(0)
+        var UU, XU;
+        this.engaged && this.screen().clear(), this.engaged = !1, this.holding = !1, this.director = new iU.e(this.qY), this.pending = this.latest, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.answeredPose = !1, null === (UU = (XU = this.options).showFacing) || void 0 === UU || UU.call(XU, null), this.setCentres(0)
       }
       syncShownSettings() {
-        const MM = this.director.getSettings();
-        if (MM === this.shownSettings) return;
-        this.shownSettings = MM;
-        const rM = (0, ZM.f)(MM);
-        this.facing = rM.facing, this.mouseTurns = rM.mouseTurns
+        const UU = this.director.getSettings();
+        if (UU === this.shownSettings) return;
+        this.shownSettings = UU;
+        const XU = (0, fU.d)(UU);
+        this.facing = XU.facing, this.mouseTurns = XU.mouseTurns
       }
-      readLook(MM, rM, iM, OM, SM) {
-        const jM = this.look,
-          aM = 0 !== (iM & hM.qb.LookPointed);
-        if (null === this.mouseTurns && !aM) return jM.PD = 0, jM.nD = 0, void(jM.pointedAt = void 0);
-        let PM;
-        aM && (this.pointedAt.heading = OM, this.pointedAt.pitch = SM, PM = this.pointedAt);
+      readLook(UU, XU, zU, cU, yU) {
+        const QU = this.look,
+          AU = 0 !== (zU & pU.zb.LookPointed);
+        if (null === this.mouseTurns && !AU) return QU.zq = 0, QU.Qq = 0, void(QU.pointedAt = void 0);
+        let FU;
+        AU && (this.pointedAt.heading = cU, this.pointedAt.pitch = yU, FU = this.pointedAt);
         const {
-          uL: nM
+          qY: oU
         } = this;
-        nM.setViewHeading((0, ZM.c)(nM.getViewHeading(), MM, rM, PM, "look" === this.mouseTurns, jM))
+        oU.setViewHeading((0, fU.b)(oU.getViewHeading(), UU, XU, FU, "look" === this.mouseTurns, QU))
       }
-      writeCentres(MM) {
-        const rM = this.next,
-          iM = Math.min(MM.length, hM.Kd);
-        for (let OM = 0; OM < iM; OM++)
-          for (let iM = 0; iM < 3; iM++) rM[3 * OM + iM] = Math.floor(MM[OM][iM] / hM.A);
-        this.setCentres(iM)
+      writeCentres(UU) {
+        const XU = this.next,
+          zU = Math.min(UU.length, pU.Xd);
+        for (let cU = 0; cU < zU; cU++)
+          for (let zU = 0; zU < 3; zU++) XU[3 * cU + zU] = Math.floor(UU[cU][zU] / pU.E);
+        this.setCentres(zU)
       }
-      setCentres(MM) {
+      setCentres(UU) {
         const {
-          Sd: rM,
-          next: iM
+          Ut: XU,
+          next: zU
         } = this;
-        let OM = MM === this.centresLen;
-        for (let SM = 0; OM && SM < 3 * MM; SM++) OM = rM[SM] === iM[SM];
-        OM || (rM.fill(0), rM.set(iM.subarray(0, 3 * MM)), this.centresLen = MM, this.centresUnsent = !0, this.sendCentres())
+        let cU = UU === this.centresLen;
+        for (let yU = 0; cU && yU < 3 * UU; yU++) cU = XU[yU] === zU[yU];
+        cU || (XU.fill(0), XU.set(zU.subarray(0, 3 * UU)), this.centresLen = UU, this.centresUnsent = !0, this.sendCentres())
       }
       sendCentres() {
-        const MM = this.options.cmd();
-        null !== MM && (0, hM.Kf)(MM, 0, this.Sd, this.centresLen) && (this.centresUnsent = !1)
+        const UU = this.options.cmd();
+        null !== UU && (0, pU.Mf)(UU, 0, this.Ut, this.centresLen) && (this.centresUnsent = !1)
       }
       screen() {
-        var MM, rM, iM;
-        return null !== (MM = null === (rM = (iM = this.options).screen) || void 0 === rM ? void 0 : rM.call(iM)) && void 0 !== MM ? MM : BM
+        var UU, XU, zU;
+        return null !== (UU = null === (XU = (zU = this.options).screen) || void 0 === XU ? void 0 : XU.call(zU)) && void 0 !== UU ? UU : lU
       }
       hidden() {
-        var MM;
-        return (null !== (MM = this.options.isPageHidden) && void 0 !== MM ? MM : XM)()
+        var UU;
+        return (null !== (UU = this.options.isPageHidden) && void 0 !== UU ? UU : xU)()
       }
       now() {
-        var MM, rM, iM;
-        return null !== (MM = null === (rM = (iM = this.options).now) || void 0 === rM ? void 0 : rM.call(iM)) && void 0 !== MM ? MM : performance.now()
+        var UU, XU, zU;
+        return null !== (UU = null === (XU = (zU = this.options).now) || void 0 === XU ? void 0 : XU.call(zU)) && void 0 !== UU ? UU : performance.now()
       }
     }
-    var KM = iM(40165),
-      qM = iM(41871);
-    const TM = hM.A * hM.A * hM.A,
-      VM = Math.log2(hM.A),
-      cM = hM.A - 1,
-      Mr = 65535,
-      rr = hM.M.BYTES / 4,
-      ir = new Uint16Array(TM);
+    var jU = zU(39936),
+      KU = zU(41867);
+    const bU = pU.E * pU.E * pU.E,
+      TU = Math.log2(pU.E),
+      hU = pU.E - 1,
+      UX = 65535,
+      XX = pU.U.BYTES / 4,
+      zX = new Uint16Array(bU);
 
-    function Or(MM, rM, iM) {
-      return MM * hM.A * hM.A + rM * hM.A + iM
+    function cX(UU, XU, zU) {
+      return UU * pU.E * pU.E + XU * pU.E + zU
     }
-    class Sr {
-      constructor(MM) {
-        this.chunk = MM
+    class yX {
+      constructor(UU) {
+        this.chunk = UU
       }
       get data() {
         return this.chunk.gameVoxels()
       }
-      index(MM, rM, iM) {
-        return Or(MM, rM, iM)
+      index(UU, XU, zU) {
+        return cX(UU, XU, zU)
       }
     }
-    class jr {
+    class QX {
       constructor() {
         this.ids = new Map, this.cleared = new Set, this.layers = 0, this.patched = null, this.from = null
       }
     }
-    class ar {
-      constructor(MM, rM, iM, OM) {
-        this.table = MM, this.slot = rM, this.generation = iM, this.epoch = OM, this.Xm = new Sr(this), this.writes = null, this.writeCount = 0, this.shownVersion = 0, this.shownCore = -1, this.shownWrites = -1, this.data = ir, this.dataPtr = 0, this.dataBuffer = null, this.dataStamp = -1, this.version = 0, this.layers = null, this.layersVersion = -1, this.layersPtr = -1, this.staleLayers = 0
+    class AX {
+      constructor(UU, XU, zU, cU) {
+        this.table = UU, this.slot = XU, this.generation = zU, this.epoch = cU, this.lN = new yX(this), this.writes = null, this.writeCount = 0, this.shownVersion = 0, this.shownCore = -1, this.shownWrites = -1, this.data = zX, this.dataPtr = 0, this.dataBuffer = null, this.dataStamp = -1, this.version = 0, this.layers = null, this.layersVersion = -1, this.layersPtr = -1, this.staleLayers = 0
       }
-      get Kh() {
+      get Kp() {
         return this.voxelData(), this.version === this.shownCore && this.writeCount === this.shownWrites || (this.shownCore = this.version, this.shownWrites = this.writeCount, this.shownVersion = this.table.nextVersion()), this.shownVersion
       }
-      get NH() {
-        const MM = this.gameVoxels(),
-          rM = this.layers ??= new Uint16Array(hM.A);
+      get MI() {
+        const UU = this.gameVoxels(),
+          XU = this.layers ??= new Uint16Array(pU.E);
         this.layersVersion === this.version && this.layersPtr === this.dataPtr || (this.layersVersion = this.version, this.layersPtr = this.dataPtr, this.staleLayers = -1);
-        for (let iM = 0; 0 !== this.staleLayers; iM++) {
-          const OM = 1 << iM;
-          0 !== (this.staleLayers & OM) && (this.staleLayers &= ~OM, rM[iM] = Pr(MM, iM))
+        for (let zU = 0; 0 !== this.staleLayers; zU++) {
+          const cU = 1 << zU;
+          0 !== (this.staleLayers & cU) && (this.staleLayers &= ~cU, XU[zU] = FX(UU, zU))
         }
-        return rM
+        return XU
       }
       voxelData() {
         return this.dataStamp === this.table.stamp && 0 !== this.data.length ? this.data : this.reread()
       }
       gameVoxels() {
-        const MM = this.voxelData(),
-          rM = this.writes;
-        if (null === rM || 0 === rM.ids.size) return MM;
-        if (rM.from !== MM) {
-          const iM = rM.patched ??= new Uint16Array(TM);
-          iM.set(MM);
-          for (const [MM, OM] of rM.ids) iM[MM] = OM;
-          rM.from = MM
+        const UU = this.voxelData(),
+          XU = this.writes;
+        if (null === XU || 0 === XU.ids.size) return UU;
+        if (XU.from !== UU) {
+          const zU = XU.patched ??= new Uint16Array(bU);
+          zU.set(UU);
+          for (const [UU, cU] of XU.ids) zU[UU] = cU;
+          XU.from = UU
         }
-        return rM.patched
+        return XU.patched
       }
-      written(MM) {
-        var rM;
-        return null === (rM = this.writes) || void 0 === rM ? void 0 : rM.ids.get(MM)
+      written(UU) {
+        var XU;
+        return null === (XU = this.writes) || void 0 === XU ? void 0 : XU.ids.get(UU)
       }
       hasWrites() {
         return null !== this.writes && 0 !== this.writes.ids.size
       }
-      write(MM, rM, iM) {
-        const OM = this.writes ??= new jr;
-        OM.ids.set(MM, rM), iM && OM.cleared.add(MM), null !== OM.from && (OM.patched[MM] = rM);
-        const SM = 1 << (MM >> VM & cM);
-        OM.layers |= SM, this.staleLayers |= SM, this.writeCount++
+      write(UU, XU, zU) {
+        const cU = this.writes ??= new QX;
+        cU.ids.set(UU, XU), zU && cU.cleared.add(UU), null !== cU.from && (cU.patched[UU] = XU);
+        const yU = 1 << (UU >> TU & hU);
+        cU.layers |= yU, this.staleLayers |= yU, this.writeCount++
       }
       clearWrites() {
-        const MM = this.writes;
-        null !== MM && (this.staleLayers |= MM.layers, MM.ids.clear(), MM.cleared.clear(), MM.layers = 0, MM.from = null)
+        const UU = this.writes;
+        null !== UU && (this.staleLayers |= UU.layers, UU.ids.clear(), UU.cleared.clear(), UU.layers = 0, UU.from = null)
       }
-      dataCleared(MM) {
-        var rM;
-        return !0 === (null === (rM = this.writes) || void 0 === rM ? void 0 : rM.cleared.has(MM))
+      dataCleared(UU) {
+        var XU;
+        return !0 === (null === (XU = this.writes) || void 0 === XU ? void 0 : XU.cleared.has(UU))
       }
       reread() {
         this.dataStamp = this.table.stamp;
-        const MM = this.table.slotWords(),
-          rM = this.slot * rr;
-        if (this.epoch !== this.table.epoch || rM + rr > MM.length || 0 === MM[rM + 3] || MM[rM + 2] !== this.generation) return this.data = ir, this.dataPtr = 0, ir;
-        this.version = MM[rM + 1];
-        const iM = MM[rM + 0],
-          OM = MM.buffer;
-        return iM === this.dataPtr && OM === this.dataBuffer || (this.dataPtr = iM, this.dataBuffer = OM, this.data = this.table.voxelsAt(OM, iM)), this.data
+        const UU = this.table.slotWords(),
+          XU = this.slot * XX;
+        if (this.epoch !== this.table.epoch || XU + XX > UU.length || 0 === UU[XU + 3] || UU[XU + 2] !== this.generation) return this.data = zX, this.dataPtr = 0, zX;
+        this.version = UU[XU + 1];
+        const zU = UU[XU + 0],
+          cU = UU.buffer;
+        return zU === this.dataPtr && cU === this.dataBuffer || (this.dataPtr = zU, this.dataBuffer = cU, this.data = this.table.voxelsAt(cU, zU)), this.data
       }
     }
 
-    function Pr(MM, rM) {
-      const iM = MM[rM * hM.A];
-      for (let OM = 0; OM < hM.A; OM++) {
-        const SM = Or(OM, rM, 0);
-        for (let rM = 0; rM < hM.A; rM++)
-          if (MM[SM + rM] !== iM) return Mr
+    function FX(UU, XU) {
+      const zU = UU[XU * pU.E];
+      for (let cU = 0; cU < pU.E; cU++) {
+        const yU = cX(cU, XU, 0);
+        for (let XU = 0; XU < pU.E; XU++)
+          if (UU[yU + XU] !== zU) return UX
       }
-      return iM
+      return zU
     }
-    const nr = new Uint32Array(0);
+    const oX = new Uint32Array(0);
 
-    function Qr(MM, rM, iM) {
-      return Or(MM & cM, rM & cM, iM & cM)
+    function DX(UU, XU, zU) {
+      return cX(UU & hU, XU & hU, zU & hU)
     }
-    class zr {
-      constructor(MM, rM) {
-        this.memory = MM, this.apiView = rM, this.chunks = new Map, this.written = [], this.lastKey = -1, this.lastChunk = void 0, this.slotsPtr = 0, this.slotsLen = 0, this.slotsBuffer = null, this.slots = nr, this.walkPtr = 0, this.walkLen = 0, this.walkBuffer = null, this.walk = nr, this.epoch = 0, this.stamp = 0, this.versions = 0, this.corruption = null
+    class EX {
+      constructor(UU, XU) {
+        this.memory = UU, this.apiView = XU, this.chunks = new Map, this.written = [], this.lastKey = -1, this.lastChunk = void 0, this.slotsPtr = 0, this.slotsLen = 0, this.slotsBuffer = null, this.slots = oX, this.walkPtr = 0, this.walkLen = 0, this.walkBuffer = null, this.walk = oX, this.epoch = 0, this.stamp = 0, this.versions = 0, this.corruption = null
       }
-      apply(MM, rM, iM, OM, SM, jM) {
-        if (this.lastKey = -1, this.lastChunk = void 0, this.stamp++, jM === hM.Q.ResetAll) return this.chunks.clear(), void this.epoch++;
-        if (jM !== hM.Q.Stored && jM !== hM.Q.Unloaded) throw new HM.d(`ChunkSlot flags ${jM}`);
-        const aM = (0, qM.b)(MM, rM, iM);
-        if (aM < 0) return;
-        if (jM === hM.Q.Unloaded) return void this.chunks.delete(aM);
-        const PM = this.chunks.get(aM);
-        (null === PM || void 0 === PM ? void 0 : PM.slot) === OM && PM.generation === SM || this.chunks.set(aM, new ar(this, OM, SM, this.epoch))
+      apply(UU, XU, zU, cU, yU, QU) {
+        if (this.lastKey = -1, this.lastChunk = void 0, this.stamp++, QU === pU.X.ResetAll) return this.chunks.clear(), void this.epoch++;
+        if (QU !== pU.X.Stored && QU !== pU.X.Unloaded) throw new IU.c(`ChunkSlot flags ${QU}`);
+        const AU = (0, KU.b)(UU, XU, zU);
+        if (AU < 0) return;
+        if (QU === pU.X.Unloaded) return void this.chunks.delete(AU);
+        const FU = this.chunks.get(AU);
+        (null === FU || void 0 === FU ? void 0 : FU.slot) === cU && FU.generation === yU || this.chunks.set(AU, new AX(this, cU, yU, this.epoch))
       }
       touch() {
         this.stamp++, this.clearOverlay(), this.viewWalkThrough()
       }
       refresh() {
         if (this.stamp++, this.corruption) throw this.corruption;
-        const MM = this.apiView(),
-          rM = hM.v.chunkSlotsPtr(MM, 0),
-          iM = hM.v.chunkSlotsLen(MM, 0);
-        rM === this.slotsPtr && iM === this.slotsLen || (this.slotsPtr = rM, this.slotsLen = iM, this.slotsBuffer = null, this.slotWords()), this.viewWalkThrough(), this.clearOverlay()
+        const UU = this.apiView(),
+          XU = pU.w.chunkSlotsPtr(UU, 0),
+          zU = pU.w.chunkSlotsLen(UU, 0);
+        XU === this.slotsPtr && zU === this.slotsLen || (this.slotsPtr = XU, this.slotsLen = zU, this.slotsBuffer = null, this.slotWords()), this.viewWalkThrough(), this.clearOverlay()
       }
       viewWalkThrough() {
-        const MM = this.apiView(),
-          rM = hM.v.walkThroughPtr(MM, 0),
-          iM = hM.v.walkThroughLen(MM, 0);
-        rM === this.walkPtr && iM === this.walkLen || (this.walkPtr = rM, this.walkLen = iM, this.walkBuffer = null, this.walkWords())
+        const UU = this.apiView(),
+          XU = pU.w.walkThroughPtr(UU, 0),
+          zU = pU.w.walkThroughLen(UU, 0);
+        XU === this.walkPtr && zU === this.walkLen || (this.walkPtr = XU, this.walkLen = zU, this.walkBuffer = null, this.walkWords())
       }
       clearOverlay() {
-        for (const MM of this.written) MM.clearWrites();
+        for (const UU of this.written) UU.clearWrites();
         this.written.length = 0
       }
       nextVersion() {
         return ++this.versions
       }
       slotWords() {
-        const MM = this.memory().buffer;
-        var rM;
-        MM !== this.slotsBuffer && (this.slotsBuffer = MM, this.slots = null !== (rM = (0, HM.l)(Uint32Array, MM, this.slotsPtr, this.slotsLen * rr, "the chunk directory")) && void 0 !== rM ? rM : nr);
+        const UU = this.memory().buffer;
+        var XU;
+        UU !== this.slotsBuffer && (this.slotsBuffer = UU, this.slots = null !== (XU = (0, IU.t)(Uint32Array, UU, this.slotsPtr, this.slotsLen * XX, "the chunk directory")) && void 0 !== XU ? XU : oX);
         return this.slots
       }
-      voxelsAt(MM, rM) {
+      voxelsAt(UU, XU) {
         try {
-          var iM;
-          return null !== (iM = (0, HM.l)(Uint16Array, MM, rM, TM, "a chunk's voxels")) && void 0 !== iM ? iM : ir
-        } catch (OM) {
-          if (!(OM instanceof HM.d)) throw OM;
-          return this.corruption ??= OM, ir
+          var zU;
+          return null !== (zU = (0, IU.t)(Uint16Array, UU, XU, bU, "a chunk's voxels")) && void 0 !== zU ? zU : zX
+        } catch (cU) {
+          if (!(cU instanceof IU.c)) throw cU;
+          return this.corruption ??= cU, zX
         }
       }
-      chunk(MM, rM, iM) {
-        var OM;
-        return null !== (OM = this.chunks.get((0, qM.b)(MM, rM, iM))) && void 0 !== OM ? OM : null
+      chunk(UU, XU, zU) {
+        var cU;
+        return null !== (cU = this.chunks.get((0, KU.b)(UU, XU, zU))) && void 0 !== cU ? cU : null
       }
-      isLoaded(MM, rM, iM) {
-        return void 0 !== this.chunkAt(Math.floor(MM), Math.floor(rM), Math.floor(iM))
+      isLoaded(UU, XU, zU) {
+        return void 0 !== this.chunkAt(Math.floor(UU), Math.floor(XU), Math.floor(zU))
       }
-      jP(MM, rM, iM) {
-        var OM;
-        const SM = Math.floor(MM),
-          jM = Math.floor(rM),
-          aM = Math.floor(iM),
-          PM = this.chunkAt(SM, jM, aM);
-        if (!PM) return 0;
-        const nM = Qr(SM, jM, aM);
-        return null !== (OM = PM.written(nM)) && void 0 !== OM ? OM : PM.voxelData()[nM]
+      yF(UU, XU, zU) {
+        var cU;
+        const yU = Math.floor(UU),
+          QU = Math.floor(XU),
+          AU = Math.floor(zU),
+          FU = this.chunkAt(yU, QU, AU);
+        if (!FU) return 0;
+        const oU = DX(yU, QU, AU);
+        return null !== (cU = FU.written(oU)) && void 0 !== cU ? cU : FU.voxelData()[oU]
       }
-      setOverlay(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const jM = this.chunkAt(MM, rM, iM);
-        return !!jM && (jM.hasWrites() || this.written.push(jM), jM.write(Qr(MM, rM, iM), OM, SM), !0)
+      setOverlay(UU, XU, zU, cU) {
+        let yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const QU = this.chunkAt(UU, XU, zU);
+        return !!QU && (QU.hasWrites() || this.written.push(QU), QU.write(DX(UU, XU, zU), cU, yU), !0)
       }
-      version(MM, rM, iM) {
-        var OM, SM;
-        return null !== (OM = null === (SM = this.chunks.get((0, qM.b)(MM, rM, iM))) || void 0 === SM ? void 0 : SM.Kh) && void 0 !== OM ? OM : null
+      version(UU, XU, zU) {
+        var cU, yU;
+        return null !== (cU = null === (yU = this.chunks.get((0, KU.b)(UU, XU, zU))) || void 0 === yU ? void 0 : yU.Kp) && void 0 !== cU ? cU : null
       }
-      scan(MM, rM, iM, OM, SM, jM, aM, PM) {
-        const nM = hM.A;
-        let QM = 0;
-        for (let zM = Math.floor(rM / nM); zM * nM < SM; zM++) {
-          const LM = zM * nM,
-            mM = Math.min(SM - LM, nM);
-          for (let SM = Math.floor(MM / nM); SM * nM < OM; SM++) {
-            const HM = SM * nM,
-              hM = Math.min(OM - HM, nM);
-            for (let OM = Math.floor(iM / nM); OM * nM < jM; OM++) {
-              const JM = this.chunks.get((0, qM.b)(SM, zM, OM));
-              if (!JM) continue;
-              const dM = OM * nM,
-                yM = Math.max(iM - dM, 0),
-                lM = Math.min(jM - dM, nM),
-                EM = JM.NH,
-                UM = JM.gameVoxels();
-              for (let iM = Math.max(rM - LM, 0); iM < mM; iM++) {
-                const rM = EM[iM];
-                if (rM === Mr || 0 !== aM[rM]) {
-                  QM++;
-                  for (let rM = Math.max(MM - HM, 0); rM < hM; rM++) {
-                    const MM = Or(rM, iM, 0);
-                    for (let OM = yM; OM < lM; OM++) {
-                      const SM = UM[MM + OM];
-                      0 !== aM[SM] && PM.push(HM + rM, LM + iM, dM + OM, SM)
+      scan(UU, XU, zU, cU, yU, QU, AU, FU) {
+        const oU = pU.E;
+        let DU = 0;
+        for (let EU = Math.floor(XU / oU); EU * oU < yU; EU++) {
+          const YU = EU * oU,
+            NU = Math.min(yU - YU, oU);
+          for (let yU = Math.floor(UU / oU); yU * oU < cU; yU++) {
+            const IU = yU * oU,
+              pU = Math.min(cU - IU, oU);
+            for (let cU = Math.floor(zU / oU); cU * oU < QU; cU++) {
+              const aU = this.chunks.get((0, KU.b)(yU, EU, cU));
+              if (!aU) continue;
+              const tU = cU * oU,
+                gU = Math.max(zU - tU, 0),
+                kU = Math.min(QU - tU, oU),
+                GU = aU.MI,
+                BU = aU.gameVoxels();
+              for (let zU = Math.max(XU - YU, 0); zU < NU; zU++) {
+                const XU = GU[zU];
+                if (XU === UX || 0 !== AU[XU]) {
+                  DU++;
+                  for (let XU = Math.max(UU - IU, 0); XU < pU; XU++) {
+                    const UU = cX(XU, zU, 0);
+                    for (let cU = gU; cU < kU; cU++) {
+                      const yU = BU[UU + cU];
+                      0 !== AU[yU] && FU.push(IU + XU, YU + zU, tU + cU, yU)
                     }
                   }
                 }
@@ -1076,49 +897,49 @@ export const modules = {
             }
           }
         }
-        return QM
+        return DU
       }
-      columnTops(MM, rM, iM, OM, SM, jM, aM, PM, nM) {
-        (0, KM.e)(((MM, rM, iM) => {
-          var OM;
-          return null !== (OM = this.chunks.get((0, qM.b)(MM, rM, iM))) && void 0 !== OM ? OM : null
-        }), Mr, MM, rM, iM, OM, SM, jM, aM, PM, nM)
+      columnTops(UU, XU, zU, cU, yU, QU, AU, FU, oU) {
+        (0, jU.e)(((UU, XU, zU) => {
+          var cU;
+          return null !== (cU = this.chunks.get((0, KU.b)(UU, XU, zU))) && void 0 !== cU ? cU : null
+        }), UX, UU, XU, zU, cU, yU, QU, AU, FU, oU)
       }
-      dataCleared(MM, rM, iM) {
-        var OM;
-        const SM = Math.floor(MM),
-          jM = Math.floor(rM),
-          aM = Math.floor(iM);
-        return !0 === (null === (OM = this.chunkAt(SM, jM, aM)) || void 0 === OM ? void 0 : OM.dataCleared(Qr(SM, jM, aM)))
+      dataCleared(UU, XU, zU) {
+        var cU;
+        const yU = Math.floor(UU),
+          QU = Math.floor(XU),
+          AU = Math.floor(zU);
+        return !0 === (null === (cU = this.chunkAt(yU, QU, AU)) || void 0 === cU ? void 0 : cU.dataCleared(DX(yU, QU, AU)))
       }
-      isWalkThrough(MM) {
-        if (!Number.isInteger(MM) || MM < 0 || MM > 65535) return !1;
-        const rM = this.walkWords(),
-          iM = MM >>> 5;
-        return iM < rM.length && 1 === (rM[iM] >>> (31 & MM) & 1)
+      isWalkThrough(UU) {
+        if (!Number.isInteger(UU) || UU < 0 || UU > 65535) return !1;
+        const XU = this.walkWords(),
+          zU = UU >>> 5;
+        return zU < XU.length && 1 === (XU[zU] >>> (31 & UU) & 1)
       }
       walkWords() {
-        const MM = this.memory().buffer;
-        var rM;
-        MM !== this.walkBuffer && (this.walkBuffer = MM, this.walk = null !== (rM = (0, HM.l)(Uint32Array, MM, this.walkPtr, this.walkLen, "the walk-through bits")) && void 0 !== rM ? rM : nr);
+        const UU = this.memory().buffer;
+        var XU;
+        UU !== this.walkBuffer && (this.walkBuffer = UU, this.walk = null !== (XU = (0, IU.t)(Uint32Array, UU, this.walkPtr, this.walkLen, "the walk-through bits")) && void 0 !== XU ? XU : oX);
         return this.walk
       }
-      chunkAt(MM, rM, iM) {
-        if ((0 | MM) !== MM || (0 | rM) !== rM || (0 | iM) !== iM) return;
-        const OM = (0, qM.b)(MM >> VM, rM >> VM, iM >> VM);
-        return OM !== this.lastKey && (this.lastKey = OM, this.lastChunk = this.chunks.get(OM)), this.lastChunk
+      chunkAt(UU, XU, zU) {
+        if ((0 | UU) !== UU || (0 | XU) !== XU || (0 | zU) !== zU) return;
+        const cU = (0, KU.b)(UU >> TU, XU >> TU, zU >> TU);
+        return cU !== this.lastKey && (this.lastKey = cU, this.lastChunk = this.chunks.get(cU)), this.lastChunk
       }
     }
-    var Lr = iM(39507),
-      mr = iM(38784),
-      Hr = iM(39210),
-      hr = iM(37758),
-      Jr = iM(37554),
-      dr = iM(34985),
-      yr = iM(40173),
-      lr = iM(181);
-    const Er = ["ambient", "cars", "crowd", "customGame_horror", "dig", "fire", "fishing", "gameStart", "gunMisc", "gunPistol", "gunRifle", "gunSemiAutomatic", "gunShotgun", "gunSubmachineGun", "mobBear", "mobCat", "mobCow", "mobCrone", "mobDeer", "mobDog", "mobFennec", "mobGolem", "mobGorilla", "mobHorse", "mobKnight", "mobPig", "mobReaver", "mobSheep", "mobSkeleton", "mobStag", "mobStalker", "mobWarper", "mobWraith", "mobZombie", "note", "phoneAndMoney", "police", "randomBeep", "randomCannon", "randomCash", "randomExp", "randomFallsmall", "randomFire", "randomFirecracker", "randomItems", "randomLaugh", "randomMagic", "randomSplash", "rpg", "step", "survivalFactory", "town"],
-      Ur = [
+    var YX = zU(39293),
+      NX = zU(38557),
+      IX = zU(38981),
+      pX = zU(37523),
+      aX = zU(37345),
+      tX = zU(34824),
+      gX = zU(39942),
+      kX = zU(212);
+    const GX = ["ambient", "cars", "crowd", "customGame_horror", "dig", "fire", "fishing", "gameStart", "gunMisc", "gunPistol", "gunRifle", "gunSemiAutomatic", "gunShotgun", "gunSubmachineGun", "mobBear", "mobCat", "mobCow", "mobCrone", "mobDeer", "mobDog", "mobFennec", "mobGolem", "mobGorilla", "mobHorse", "mobKnight", "mobPig", "mobReaver", "mobSheep", "mobSkeleton", "mobStag", "mobStalker", "mobWarper", "mobWraith", "mobZombie", "note", "phoneAndMoney", "police", "randomBeep", "randomCannon", "randomCash", "randomExp", "randomFallsmall", "randomFire", "randomFirecracker", "randomItems", "randomLaugh", "randomMagic", "randomSplash", "rpg", "step", "survivalFactory", "town"],
+      BX = [
         ["ZombieGrunt1", 33],
         ["ZombieGrunt2", 33],
         ["ZombieGrunt3", 33],
@@ -1563,23 +1384,23 @@ export const modules = {
         ["zapAccent1", 3],
         ["zapAccent2", 3]
       ],
-      Gr = Ur.map((MM => {
-        let [rM] = MM;
-        return rM
+      ZX = BX.map((UU => {
+        let [XU] = UU;
+        return XU
       })),
-      Cr = Uint8Array.from(Ur, (MM => {
-        let [, rM] = MM;
-        return rM
+      RX = Uint8Array.from(BX, (UU => {
+        let [, XU] = UU;
+        return XU
       })),
-      er = {
+      PX = {
         semi_automatic: 11,
         submachine: 13,
         rifle: 10,
         pistol: 9,
         shotgun: 12
       },
-      br = 8,
-      wr = [
+      WX = 8,
+      dX = [
         [20, 3],
         [23, 3],
         [26, 2],
@@ -1622,92 +1443,92 @@ export const modules = {
         [404, 9],
         [434, 4]
       ];
-    var tr = iM(37713),
-      gr = iM(37737),
-      ur = iM(37730),
-      Rr = iM(222);
-    class pr {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Rr.d;
-        this.sound = MM, this.onError = rM, this.idle = iM, this.queue = [], this.asked = new Set, this.cancelIdle = null, this.gen = 0, this.onIdle = MM => {
+    var LX = zU(37484),
+      eX = zU(37495),
+      CX = zU(37492),
+      wX = zU(264);
+    class qX {
+      constructor(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wX.b;
+        this.sound = UU, this.onError = XU, this.idle = zU, this.queue = [], this.asked = new Set, this.cancelIdle = null, this.gen = 0, this.onIdle = UU => {
           this.cancelIdle = null;
           try {
-            if (MM.timeRemaining() >= 1) {
-              let MM = this.queue.shift();
-              for (; void 0 !== MM && !this.load(MM);) MM = this.queue.shift()
+            if (UU.timeRemaining() >= 1) {
+              let UU = this.queue.shift();
+              for (; void 0 !== UU && !this.load(UU);) UU = this.queue.shift()
             }
-          } catch (rM) {
-            this.onError(rM)
+          } catch (XU) {
+            this.onError(XU)
           } finally {
             this.schedule()
           }
         }
       }
-      preload(MM) {
-        const rM = [...MM].sort(((MM, rM) => MM - rM));
-        for (const iM of rM) this.asked.has(iM) || (this.asked.add(iM), this.queue.push(iM));
+      preload(UU) {
+        const XU = [...UU].sort(((UU, XU) => UU - XU));
+        for (const zU of XU) this.asked.has(zU) || (this.asked.add(zU), this.queue.push(zU));
         this.schedule()
       }
       cancel() {
-        var MM;
-        this.queue.length = 0, this.asked.clear(), this.gen++, null === (MM = this.cancelIdle) || void 0 === MM || MM.call(this), this.cancelIdle = null
+        var UU;
+        this.queue.length = 0, this.asked.clear(), this.gen++, null === (UU = this.cancelIdle) || void 0 === UU || UU.call(this), this.cancelIdle = null
       }
       schedule() {
         null === this.cancelIdle && this.queue.length > 0 && (this.cancelIdle = this.idle(this.onIdle))
       }
-      load(MM) {
-        const rM = this.sound(MM, !1),
-          iM = this.sound(MM, !0),
-          [OM, SM] = "unloaded" === rM.state() && "unloaded" !== iM.state() ? [iM, rM] : [rM, iM],
-          jM = this.gen,
-          aM = () => {
+      load(UU) {
+        const XU = this.sound(UU, !1),
+          zU = this.sound(UU, !0),
+          [cU, yU] = "unloaded" === XU.state() && "unloaded" !== zU.state() ? [zU, XU] : [XU, zU],
+          QU = this.gen,
+          AU = () => {
             try {
-              jM === this.gen && "unloaded" === SM.state() && SM.load()
-            } catch (MM) {
-              this.onError(MM)
+              QU === this.gen && "unloaded" === yU.state() && yU.load()
+            } catch (UU) {
+              this.onError(UU)
             }
           },
-          PM = OM.state();
-        return "unloaded" === PM ? (OM.once("load", aM), OM.load(), !0) : "unloaded" === SM.state() && ("loading" === PM ? (OM.once("load", aM), !1) : (SM.load(), !0))
+          FU = cU.state();
+        return "unloaded" === FU ? (cU.once("load", AU), cU.load(), !0) : "unloaded" === yU.state() && ("loading" === FU ? (cU.once("load", AU), !1) : (yU.load(), !0))
       }
     }
-    var Wr = iM(41993);
+    var OX = zU(41987);
 
-    function sr(MM) {
-      var rM;
-      const iM = function(MM) {
-        let rM = 0,
-          iM = Gr.length;
-        for (; rM < iM;) {
-          const OM = rM + iM >>> 1;
-          Gr[OM] < MM ? rM = OM + 1 : iM = OM
+    function SX(UU) {
+      var XU;
+      const zU = function(UU) {
+        let XU = 0,
+          zU = ZX.length;
+        for (; XU < zU;) {
+          const cU = XU + zU >>> 1;
+          ZX[cU] < UU ? XU = cU + 1 : zU = cU
         }
-        return rM
-      }(MM);
-      if ("" === MM || null === (rM = Gr[iM]) || void 0 === rM || !rM.startsWith(MM)) return null;
-      if (Gr[iM] === MM) return [iM, 1];
-      let OM = iM + 1;
-      for (; OM < Gr.length && Gr[OM].startsWith(MM);) OM++;
-      return [iM, OM - iM]
+        return XU
+      }(UU);
+      if ("" === UU || null === (XU = ZX[zU]) || void 0 === XU || !XU.startsWith(UU)) return null;
+      if (ZX[zU] === UU) return [zU, 1];
+      let cU = zU + 1;
+      for (; cU < ZX.length && ZX[cU].startsWith(UU);) cU++;
+      return [zU, cU - zU]
     }
 
-    function Dr(MM) {
-      let [rM, iM] = MM, OM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-      return 1 === iM ? rM : rM + Math.floor(OM() * iM)
+    function rX(UU) {
+      let [XU, zU] = UU, cU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+      return 1 === zU ? XU : XU + Math.floor(cU() * zU)
     }
 
-    function kr(MM) {
-      for (const rM of wr)
-        if (rM[0] <= MM && MM < rM[0] + rM[1]) return rM;
+    function uX(UU) {
+      for (const XU of dX)
+        if (XU[0] <= UU && UU < XU[0] + XU[1]) return XU;
       return null
     }
 
-    function Zr(MM) {
-      const rM = [];
-      for (let iM = 0; iM < Cr.length; iM++) Cr[iM] === MM && rM.push(iM);
-      return rM
+    function fX(UU) {
+      const XU = [];
+      for (let zU = 0; zU < RX.length; zU++) RX[zU] === UU && XU.push(zU);
+      return XU
     }
-    const or = {
+    const iX = {
         coneInnerAngle: 360,
         coneOuterAngle: 360,
         coneOuterGain: 0,
@@ -1716,20 +1537,20 @@ export const modules = {
         panningModel: "HRTF",
         rolloffFactor: 1
       },
-      fr = lr.f.jy * lr.f.playerEyeToHeightRatio,
-      Yr = [0, 0, -1, 0, 1, 0],
-      Nr = Er.indexOf("note");
+      HX = kX.f.cg * kX.f.playerEyeToHeightRatio,
+      MX = [0, 0, -1, 0, 1, 0],
+      vX = GX.indexOf("note");
 
-    function Ar(MM) {
-      return MM >= 0 ? Math.min(1, MM) : 0
+    function VX(UU) {
+      return UU >= 0 ? Math.min(1, UU) : 0
     }
-    class xr {
-      constructor(MM, rM, iM, OM, SM) {
-        this.group = MM, this.loudness = rM, this.startMs = iM, this.howl = OM, this.host = SM, this.id = 0, this.direct = !1
+    class sX {
+      constructor(UU, XU, zU, cU, yU) {
+        this.group = UU, this.loudness = XU, this.startMs = zU, this.howl = cU, this.host = yU, this.id = 0, this.direct = !1
       }
       getDurationMs() {
-        const MM = this.host.alive(this.id);
-        return MM ? 1e3 * this.howl.duration(this.id) / MM.rate : 0
+        const UU = this.host.alive(this.id);
+        return UU ? 1e3 * this.howl.duration(this.id) / UU.rate : 0
       }
       isAlive() {
         return void 0 !== this.host.alive(this.id)
@@ -1741,1091 +1562,1091 @@ export const modules = {
         this.host.drop(this.id)
       }
     }
-    class vr {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          OM = arguments.length > 3 ? arguments[3] : void 0;
-        this.createHowl = MM, this.listener = rM, this.now = iM, this.errors = 0, this.howls = new Map, this.live = new Map, this.core = new Map, this.level = 1, this.master = 1, this.pose = new Float64Array(9), this.nextPose = new Float64Array(9), this.posed = !1, this.loader = void 0, this.voices = new ur.e, this.failed = new Set, this.started = new Set, this.voiceHost = {
-          alive: MM => this.aliveVoice(MM),
-          started: MM => this.started.has(MM),
-          drop: MM => {
-            var rM;
-            null === (rM = this.live.get(MM)) || void 0 === rM || rM.howl.stop(MM), this.forget(MM)
+    class nX {
+      constructor(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          cU = arguments.length > 3 ? arguments[3] : void 0;
+        this.createHowl = UU, this.listener = XU, this.now = zU, this.errors = 0, this.howls = new Map, this.live = new Map, this.core = new Map, this.level = 1, this.master = 1, this.pose = new Float64Array(9), this.nextPose = new Float64Array(9), this.posed = !1, this.loader = void 0, this.voices = new CX.b, this.failed = new Set, this.started = new Set, this.voiceHost = {
+          alive: UU => this.aliveVoice(UU),
+          started: UU => this.started.has(UU),
+          drop: UU => {
+            var XU;
+            null === (XU = this.live.get(UU)) || void 0 === XU || XU.howl.stop(UU), this.forget(UU)
           }
         }, this.handlers = {
-          playSound: (MM, rM, iM, OM, SM, jM, aM, PM, nM) => {
-            if (OM >= Gr.length) return;
-            const QM = 0 !== (SM & hM.Wd.Loop);
-            SM & hM.Wd.TwoD ? this.start(OM, !1, aM, jM, PM, QM, kr(OM)) : this.startSpatial(OM, aM, jM, PM, QM, MM, rM, iM, nM, this.earDistSq(MM, rM, iM), kr(OM))
+          playSound: (UU, XU, zU, cU, yU, QU, AU, FU, oU) => {
+            if (cU >= ZX.length) return;
+            const DU = 0 !== (yU & pU.ge.Loop);
+            yU & pU.ge.TwoD ? this.start(cU, !1, AU, QU, FU, DU, uX(cU)) : this.startSpatial(cU, AU, QU, FU, DU, UU, XU, zU, oU, this.earDistSq(UU, XU, zU), uX(cU))
           },
-          soundPos: (MM, rM, iM, OM) => {
-            const SM = this.core.get(OM);
-            var jM;
-            void 0 !== SM && (null === (jM = this.live.get(SM)) || void 0 === jM || jM.howl.pos(iM, rM, MM, SM))
+          soundPos: (UU, XU, zU, cU) => {
+            const yU = this.core.get(cU);
+            var QU;
+            void 0 !== yU && (null === (QU = this.live.get(yU)) || void 0 === QU || QU.howl.pos(zU, XU, UU, yU))
           },
-          soundSet: (MM, rM, iM, OM) => {
-            const SM = this.core.get(MM),
-              jM = void 0 === SM ? void 0 : this.live.get(SM);
-            void 0 !== SM && jM && (this.setRel(SM, rM), jM.rate = iM, jM.howl.rate(iM, SM), jM.spatial && jM.howl.pannerAttr({
-              refDistance: OM
-            }, SM))
+          soundSet: (UU, XU, zU, cU) => {
+            const yU = this.core.get(UU),
+              QU = void 0 === yU ? void 0 : this.live.get(yU);
+            void 0 !== yU && QU && (this.setRel(yU, XU), QU.rate = zU, QU.howl.rate(zU, yU), QU.spatial && QU.howl.pannerAttr({
+              refDistance: cU
+            }, yU))
           },
-          soundFade: (MM, rM, iM, OM) => {
-            const SM = this.core.get(MM);
-            void 0 !== SM && this.fade(SM, rM, iM, 0 !== (OM & hM.Td.StopAfter))
+          soundFade: (UU, XU, zU, cU) => {
+            const yU = this.core.get(UU);
+            void 0 !== yU && this.fade(yU, XU, zU, 0 !== (cU & pU.de.StopAfter))
           },
-          soundStop: MM => {
-            const rM = this.core.get(MM);
-            var iM;
-            void 0 !== rM && (null === (iM = this.live.get(rM)) || void 0 === iM || iM.howl.stop(rM), this.forget(rM))
+          soundStop: UU => {
+            const XU = this.core.get(UU);
+            var zU;
+            void 0 !== XU && (null === (zU = this.live.get(XU)) || void 0 === zU || zU.howl.stop(XU), this.forget(XU))
           },
           soundReset: () => {
             this.stopCore()
           }
-        }, this.loader = new pr(((MM, rM) => this.howl(MM, rM)), (MM => {
-          this.errors++, console.error("Audio preload failed", MM)
-        }), OM)
+        }, this.loader = new qX(((UU, XU) => this.howl(UU, XU)), (UU => {
+          this.errors++, console.error("Audio preload failed", UU)
+        }), cU)
       }
-      preload(MM) {
-        this.loader.preload(MM)
+      preload(UU) {
+        this.loader.preload(UU)
       }
       cancelPreload() {
         this.loader.cancel()
       }
       freeSoundsAfterGame() {
-        for (let MM = 0; MM < Gr.length; MM++) {
-          if (gr.b.has(Er[Cr[MM]])) continue;
-          const rM = [];
-          for (const iM of [!1, !0]) {
-            const OM = Fr(MM, iM),
-              SM = this.howls.get(OM);
-            void 0 !== SM && "loading" !== SM.state() && rM.push({
-              key: OM,
-              howl: SM
+        for (let UU = 0; UU < ZX.length; UU++) {
+          if (eX.d.has(GX[RX[UU]])) continue;
+          const XU = [];
+          for (const zU of [!1, !0]) {
+            const cU = mX(UU, zU),
+              yU = this.howls.get(cU);
+            void 0 !== yU && "loading" !== yU.state() && XU.push({
+              key: cU,
+              howl: yU
             })
           }
-          if (rM.some((MM => {
+          if (XU.some((UU => {
               let {
-                howl: rM
-              } = MM;
-              return "loaded" === rM.state()
+                howl: XU
+              } = UU;
+              return "loaded" === XU.state()
             })))
             for (const {
-                key: MM,
-                howl: iM
+                key: UU,
+                howl: zU
               }
-              of rM) this.howls.delete(MM), "loaded" === iM.state() ? (0, tr.i)(iM) : iM.unload()
+              of XU) this.howls.delete(UU), "loaded" === zU.state() ? (0, LX.h)(zU) : zU.unload()
         }
       }
-      onAudioEvent(MM, rM, iM, OM) {
-        if (MM < hM.o.PlaySound || MM > hM.o.SoundReset) return !1;
+      onAudioEvent(UU, XU, zU, cU) {
+        if (UU < pU.p.PlaySound || UU > pU.p.SoundReset) return !1;
         try {
-          return (0, hM.ge)(MM, rM, iM, OM, this.handlers)
-        } catch (SM) {
-          return this.errors++, console.error("Audio event failed", SM), !0
+          return (0, pU.pe)(UU, XU, zU, cU, this.handlers)
+        } catch (yU) {
+          return this.errors++, console.error("Audio event failed", yU), !0
         }
       }
-      applyListener(MM) {
-        const rM = this.nextPose;
-        for (let OM = 0; OM < 3; OM++) rM[2 - OM] = hM.w.listener(MM, 0, OM), rM[5 - OM] = hM.w.forward(MM, 0, OM), rM[8 - OM] = hM.w.up(MM, 0, OM);
-        0 === rM[3] && 0 === rM[4] && 0 === rM[5] && rM.set(this.posed ? this.pose.subarray(3) : Yr, 3);
-        for (let OM = 0; OM < 9; OM++)
-          if (!Number.isFinite(rM[OM])) return;
-        const iM = this.pose;
+      applyListener(UU) {
+        const XU = this.nextPose;
+        for (let cU = 0; cU < 3; cU++) XU[2 - cU] = pU.z.listener(UU, 0, cU), XU[5 - cU] = pU.z.forward(UU, 0, cU), XU[8 - cU] = pU.z.up(UU, 0, cU);
+        0 === XU[3] && 0 === XU[4] && 0 === XU[5] && XU.set(this.posed ? this.pose.subarray(3) : MX, 3);
+        for (let cU = 0; cU < 9; cU++)
+          if (!Number.isFinite(XU[cU])) return;
+        const zU = this.pose;
         if (this.posed) {
-          let MM = !0;
-          for (let OM = 0; OM < 9 && MM; OM++) MM = rM[OM] === iM[OM];
-          if (MM) return
+          let UU = !0;
+          for (let cU = 0; cU < 9 && UU; cU++) UU = XU[cU] === zU[cU];
+          if (UU) return
         }
-        this.listener.apply(rM) && (iM.set(rM), this.posed = !0)
+        this.listener.apply(XU) && (zU.set(XU), this.posed = !0)
       }
-      playGame(MM, rM, iM, OM, SM, jM, aM) {
-        const PM = sr(MM);
-        if (null === PM) return Wr.b;
-        const nM = Dr(PM),
-          QM = PM[1] > 1 ? PM : null;
-        if (!iM) {
+      playGame(UU, XU, zU, cU, yU, QU, AU) {
+        const FU = SX(UU);
+        if (null === FU) return OX.d;
+        const oU = rX(FU),
+          DU = FU[1] > 1 ? FU : null;
+        if (!zU) {
           const {
-            howl: MM,
-            id: iM
-          } = this.start(nM, !1, rM, 0, 1, aM, QM);
-          return this.gameSound(MM, iM, !1)
+            howl: UU,
+            id: zU
+          } = this.start(oU, !1, XU, 0, 1, AU, DU);
+          return this.gameSound(UU, zU, !1)
         }
-        const zM = iM[0],
-          LM = iM[1] + fr,
-          mM = iM[2];
-        if (!Number.isFinite(zM) || !Number.isFinite(LM) || !Number.isFinite(mM)) return Wr.b;
-        let HM;
-        if (OM) {
-          const MM = zM - OM[0],
-            rM = LM - OM[1],
-            iM = mM - OM[2];
-          if (HM = MM * MM + rM * rM + iM * iM, HM > SM * SM) return Wr.b
-        } else HM = this.earDistSq(zM, LM, mM);
-        const hM = this.startSpatial(nM, rM, 0, 1, aM, zM, LM, mM, jM, HM, QM);
-        return hM ? this.gameSound(hM.howl, hM.id, !0) : Wr.b
+        const EU = zU[0],
+          YU = zU[1] + HX,
+          NU = zU[2];
+        if (!Number.isFinite(EU) || !Number.isFinite(YU) || !Number.isFinite(NU)) return OX.d;
+        let IU;
+        if (cU) {
+          const UU = EU - cU[0],
+            XU = YU - cU[1],
+            zU = NU - cU[2];
+          if (IU = UU * UU + XU * XU + zU * zU, IU > yU * yU) return OX.d
+        } else IU = this.earDistSq(EU, YU, NU);
+        const pU = this.startSpatial(oU, XU, 0, 1, AU, EU, YU, NU, QU, IU, DU);
+        return pU ? this.gameSound(pU.howl, pU.id, !0) : OX.d
       }
-      setMaster(MM, rM) {
-        this.level = Ar(MM);
-        const iM = rM ? this.level : 0;
-        if (iM !== this.master) {
-          this.master = iM;
-          for (const [MM, rM] of this.live) rM.fadeMs = 0, rM.gain = rM.rel * this.master, rM.howl.volume(rM.gain, MM)
+      setMaster(UU, XU) {
+        this.level = VX(UU);
+        const zU = XU ? this.level : 0;
+        if (zU !== this.master) {
+          this.master = zU;
+          for (const [UU, XU] of this.live) XU.fadeMs = 0, XU.gain = XU.rel * this.master, XU.howl.volume(XU.gain, UU)
         }
       }
       stopCore() {
-        for (const rM of [...this.core.values()]) {
-          var MM;
-          null === (MM = this.live.get(rM)) || void 0 === MM || MM.howl.stop(rM)
+        for (const XU of [...this.core.values()]) {
+          var UU;
+          null === (UU = this.live.get(XU)) || void 0 === UU || UU.howl.stop(XU)
         }
         this.core.clear()
       }
       stopAll() {
         this.cancelPreload();
-        for (const [MM, rM] of [...this.live]) rM.howl.stop(MM), this.forget(MM);
+        for (const [UU, XU] of [...this.live]) XU.howl.stop(UU), this.forget(UU);
         this.core.clear()
       }
-      gameSound(MM, rM, iM) {
-        const OM = {
-          stop: () => (this.live.has(rM) && MM.stop(rM), OM),
-          fade: (MM, iM, SM) => {
-            var jM, aM;
-            const PM = this.level > 0 ? iM / this.level : iM > 0 && null !== (jM = null === (aM = this.live.get(rM)) || void 0 === aM ? void 0 : aM.rel) && void 0 !== jM ? jM : 0;
-            return this.fade(rM, PM, SM, !1), OM
+      gameSound(UU, XU, zU) {
+        const cU = {
+          stop: () => (this.live.has(XU) && UU.stop(XU), cU),
+          fade: (UU, zU, yU) => {
+            var QU, AU;
+            const FU = this.level > 0 ? zU / this.level : zU > 0 && null !== (QU = null === (AU = this.live.get(XU)) || void 0 === AU ? void 0 : AU.rel) && void 0 !== QU ? QU : 0;
+            return this.fade(XU, FU, yU, !1), cU
           },
-          rate: iM => {
-            const SM = this.live.get(rM);
-            return SM && (SM.rate = function(MM) {
-              return MM > 0 && MM < 1 / 0 ? MM : 1
-            }(iM), MM.rate(SM.rate, rM)), OM
+          rate: zU => {
+            const yU = this.live.get(XU);
+            return yU && (yU.rate = function(UU) {
+              return UU > 0 && UU < 1 / 0 ? UU : 1
+            }(zU), UU.rate(yU.rate, XU)), cU
           },
           getVolume: () => {
-            var MM, iM;
-            return (null !== (MM = null === (iM = this.live.get(rM)) || void 0 === iM ? void 0 : iM.rel) && void 0 !== MM ? MM : 0) * this.level
+            var UU, zU;
+            return (null !== (UU = null === (zU = this.live.get(XU)) || void 0 === zU ? void 0 : zU.rel) && void 0 !== UU ? UU : 0) * this.level
           },
           getRelativeVolume: () => {
-            var MM, iM;
-            return null !== (MM = null === (iM = this.live.get(rM)) || void 0 === iM ? void 0 : iM.rel) && void 0 !== MM ? MM : 0
+            var UU, zU;
+            return null !== (UU = null === (zU = this.live.get(XU)) || void 0 === zU ? void 0 : zU.rel) && void 0 !== UU ? UU : 0
           },
-          setRelativeVolume: MM => (this.setRel(rM, MM), OM),
-          setPannerAttr: SM => {
-            if (iM && this.live.has(rM)) {
-              const iM = {
-                ...or,
-                refDistance: hr.l
+          setRelativeVolume: UU => (this.setRel(XU, UU), cU),
+          setPannerAttr: yU => {
+            if (zU && this.live.has(XU)) {
+              const zU = {
+                ...iX,
+                refDistance: pX.g
               };
-              for (const [MM, rM] of Object.entries(SM)) "number" !== typeof rM && "string" !== typeof rM || (iM[MM] = rM);
-              MM.pannerAttr({
-                coneOuterAngle: iM.coneOuterAngle
-              }, rM), MM.pannerAttr(iM, rM)
+              for (const [UU, XU] of Object.entries(yU)) "number" !== typeof XU && "string" !== typeof XU || (zU[UU] = XU);
+              UU.pannerAttr({
+                coneOuterAngle: zU.coneOuterAngle
+              }, XU), UU.pannerAttr(zU, XU)
             }
-            return OM
+            return cU
           },
-          setPosition: SM => (iM && this.live.has(rM) && Number.isFinite(SM[0] + SM[1] + SM[2]) && MM.pos(SM[2], SM[1], SM[0], rM), OM)
+          setPosition: yU => (zU && this.live.has(XU) && Number.isFinite(yU[0] + yU[1] + yU[2]) && UU.pos(yU[2], yU[1], yU[0], XU), cU)
         };
-        return OM
+        return cU
       }
-      startSpatial(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM) {
-        const LM = this.howl(MM, !0);
-        let mM = null;
-        if (!SM) {
-          if (this.failed.has(LM)) return null;
-          const iM = Cr[MM] === Nr ? null : (0, ur.i)(Gr[MM]),
-            OM = (0, ur.f)(Ar(rM), Math.sqrt(QM), nM);
-          if (mM = new xr(iM, OM, this.now(), LM, this.voiceHost), !this.voices.admit(mM)) return null
+      startSpatial(UU, XU, zU, cU, yU, QU, AU, FU, oU, DU, EU) {
+        const YU = this.howl(UU, !0);
+        let NU = null;
+        if (!yU) {
+          if (this.failed.has(YU)) return null;
+          const zU = RX[UU] === vX ? null : (0, CX.e)(ZX[UU]),
+            cU = (0, CX.d)(VX(XU), Math.sqrt(DU), oU);
+          if (NU = new sX(zU, cU, this.now(), YU, this.voiceHost), !this.voices.admit(NU)) return null
         }
-        const HM = this.start(MM, !0, rM, iM, OM, SM, zM);
-        return mM && (mM.id = HM.id, mM.direct = "loaded" === LM.state() && !LM._playLock), LM.pannerAttr({
+        const IU = this.start(UU, !0, XU, zU, cU, yU, EU);
+        return NU && (NU.id = IU.id, NU.direct = "loaded" === YU.state() && !YU._playLock), YU.pannerAttr({
           coneOuterAngle: 360
-        }, HM.id), LM.pannerAttr({
-          ...or,
-          refDistance: nM
-        }, HM.id), LM.pos(PM, aM, jM, HM.id), HM
+        }, IU.id), YU.pannerAttr({
+          ...iX,
+          refDistance: oU
+        }, IU.id), YU.pos(FU, AU, QU, IU.id), IU
       }
-      aliveVoice(MM) {
-        const rM = this.live.get(MM);
-        if (!rM) return;
-        const iM = rM.howl._soundById(MM);
-        if (iM && !iM._ended) return rM;
-        this.forget(MM)
+      aliveVoice(UU) {
+        const XU = this.live.get(UU);
+        if (!XU) return;
+        const zU = XU.howl._soundById(UU);
+        if (zU && !zU._ended) return XU;
+        this.forget(UU)
       }
-      earDistSq(MM, rM, iM) {
+      earDistSq(UU, XU, zU) {
         if (!this.posed) return 0;
-        const OM = MM - this.pose[2],
-          SM = rM - this.pose[1],
-          jM = iM - this.pose[0];
-        return OM * OM + SM * SM + jM * jM
+        const cU = UU - this.pose[2],
+          yU = XU - this.pose[1],
+          QU = zU - this.pose[0];
+        return cU * cU + yU * yU + QU * QU
       }
-      start(MM, rM, iM, OM, SM, jM, aM) {
-        const PM = Ar(iM),
-          nM = this.howl(MM, rM);
-        "unloaded" === nM.state() && (nM.load(), null !== aM && this.loadPick(aM, rM));
-        const QM = nM.play(tr.e),
-          zM = PM * this.master;
-        return nM.volume(zM, QM), this.live.set(QM, {
-          howl: nM,
-          rel: PM,
-          gain: zM,
-          fadeFrom: zM,
+      start(UU, XU, zU, cU, yU, QU, AU) {
+        const FU = VX(zU),
+          oU = this.howl(UU, XU);
+        "unloaded" === oU.state() && (oU.load(), null !== AU && this.loadPick(AU, XU));
+        const DU = oU.play(LX.d),
+          EU = FU * this.master;
+        return oU.volume(EU, DU), this.live.set(DU, {
+          howl: oU,
+          rel: FU,
+          gain: EU,
+          fadeFrom: EU,
           fadeAt: 0,
           fadeMs: 0,
-          rate: SM,
-          handle: OM,
-          spatial: rM,
+          rate: yU,
+          handle: cU,
+          spatial: XU,
           stopTimer: void 0
-        }), 0 !== OM && this.core.set(OM, QM), 1 !== SM && nM.rate(SM, QM), jM && nM.loop(!0, QM), {
-          howl: nM,
-          id: QM
+        }), 0 !== cU && this.core.set(cU, DU), 1 !== yU && oU.rate(yU, DU), QU && oU.loop(!0, DU), {
+          howl: oU,
+          id: DU
         }
       }
-      loadPick(MM, rM) {
-        let [iM, OM] = MM;
-        for (let jM = iM; jM < iM + OM; jM++) {
-          var SM;
-          const MM = this.howl(jM, rM);
-          "unloaded" === MM.state() && "loading" !== (null === (SM = this.howls.get(Fr(jM, !rM))) || void 0 === SM ? void 0 : SM.state()) && MM.load()
+      loadPick(UU, XU) {
+        let [zU, cU] = UU;
+        for (let QU = zU; QU < zU + cU; QU++) {
+          var yU;
+          const UU = this.howl(QU, XU);
+          "unloaded" === UU.state() && "loading" !== (null === (yU = this.howls.get(mX(QU, !XU))) || void 0 === yU ? void 0 : yU.state()) && UU.load()
         }
       }
-      howl(MM, rM) {
-        const iM = Fr(MM, rM);
-        let OM = this.howls.get(iM);
-        if (!OM) {
-          const SM = this.createHowl(Gr[MM], rM);
-          SM.on("end", (MM => {
-            SM.loop(MM) || this.forget(MM)
-          })), SM.on("stop", (MM => {
-            this.forget(MM)
-          })), SM.on("play", (MM => {
-            this.live.has(MM) && this.started.add(MM)
-          })), SM.on("loaderror", (MM => {
-            if ("loaded" !== SM.state()) {
-              this.failed.add(SM);
-              for (const [MM, rM] of this.live) rM.howl === SM && this.forget(MM)
-            } else "number" === typeof MM && this.forget(MM)
-          })), this.howls.set(iM, SM), OM = SM
+      howl(UU, XU) {
+        const zU = mX(UU, XU);
+        let cU = this.howls.get(zU);
+        if (!cU) {
+          const yU = this.createHowl(ZX[UU], XU);
+          yU.on("end", (UU => {
+            yU.loop(UU) || this.forget(UU)
+          })), yU.on("stop", (UU => {
+            this.forget(UU)
+          })), yU.on("play", (UU => {
+            this.live.has(UU) && this.started.add(UU)
+          })), yU.on("loaderror", (UU => {
+            if ("loaded" !== yU.state()) {
+              this.failed.add(yU);
+              for (const [UU, XU] of this.live) XU.howl === yU && this.forget(UU)
+            } else "number" === typeof UU && this.forget(UU)
+          })), this.howls.set(zU, yU), cU = yU
         }
-        return OM
+        return cU
       }
-      setRel(MM, rM) {
-        const iM = this.live.get(MM);
-        iM && (Br(iM), iM.fadeMs = 0, iM.rel = Ar(rM), iM.gain = iM.rel * this.master, iM.howl.volume(iM.gain, MM))
+      setRel(UU, XU) {
+        const zU = this.live.get(UU);
+        zU && (lX(zU), zU.fadeMs = 0, zU.rel = VX(XU), zU.gain = zU.rel * this.master, zU.howl.volume(zU.gain, UU))
       }
-      fade(MM, rM, iM, OM) {
-        const SM = this.live.get(MM);
-        if (!SM) return;
-        Br(SM);
+      fade(UU, XU, zU, cU) {
+        const yU = this.live.get(UU);
+        if (!yU) return;
+        lX(yU);
         const {
-          howl: jM
-        } = SM, aM = this.gainNow(SM);
-        SM.rel = Ar(rM), SM.gain = SM.rel * this.master;
-        const PM = iM > 0 ? Math.min(iM, 65535) : 0,
-          nM = 0 === PM || aM === SM.gain;
-        SM.fadeMs = nM ? 0 : PM, nM ? jM.volume(SM.gain, MM) : (SM.fadeFrom = aM, SM.fadeAt = this.now(), jM.fade(aM, SM.gain, PM, MM)), OM && (nM ? jM.stop(MM) : SM.stopTimer = setTimeout((() => {
-          SM.stopTimer = void 0, jM.stop(MM)
-        }), PM))
+          howl: QU
+        } = yU, AU = this.gainNow(yU);
+        yU.rel = VX(XU), yU.gain = yU.rel * this.master;
+        const FU = zU > 0 ? Math.min(zU, 65535) : 0,
+          oU = 0 === FU || AU === yU.gain;
+        yU.fadeMs = oU ? 0 : FU, oU ? QU.volume(yU.gain, UU) : (yU.fadeFrom = AU, yU.fadeAt = this.now(), QU.fade(AU, yU.gain, FU, UU)), cU && (oU ? QU.stop(UU) : yU.stopTimer = setTimeout((() => {
+          yU.stopTimer = void 0, QU.stop(UU)
+        }), FU))
       }
-      gainNow(MM) {
-        if (MM.fadeMs > 0) {
-          const rM = (this.now() - MM.fadeAt) / MM.fadeMs;
-          if (rM < 1) return MM.fadeFrom + (MM.gain - MM.fadeFrom) * Math.max(0, rM);
-          MM.fadeMs = 0
+      gainNow(UU) {
+        if (UU.fadeMs > 0) {
+          const XU = (this.now() - UU.fadeAt) / UU.fadeMs;
+          if (XU < 1) return UU.fadeFrom + (UU.gain - UU.fadeFrom) * Math.max(0, XU);
+          UU.fadeMs = 0
         }
-        return MM.gain
+        return UU.gain
       }
-      forget(MM) {
-        this.started.delete(MM);
-        const rM = this.live.get(MM);
-        rM && (Br(rM), this.live.delete(MM), 0 !== rM.handle && this.core.get(rM.handle) === MM && this.core.delete(rM.handle))
+      forget(UU) {
+        this.started.delete(UU);
+        const XU = this.live.get(UU);
+        XU && (lX(XU), this.live.delete(UU), 0 !== XU.handle && this.core.get(XU.handle) === UU && this.core.delete(XU.handle))
       }
     }
 
-    function Fr(MM, rM) {
-      return 2 * MM + (rM ? 1 : 0)
+    function mX(UU, XU) {
+      return 2 * UU + (XU ? 1 : 0)
     }
 
-    function Br(MM) {
-      void 0 !== MM.stopTimer && (clearTimeout(MM.stopTimer), MM.stopTimer = void 0)
+    function lX(UU) {
+      void 0 !== UU.stopTimer && (clearTimeout(UU.stopTimer), UU.stopTimer = void 0)
     }
-    var Xr = iM(41695),
-      Ir = iM(40181);
-    class Kr {
-      constructor(MM, rM, iM, OM) {
-        this.key = MM, this.model = rM, this.host = OM, this.vL = void 0, this.records = void 0, this.origin = [0, 0, 0], this.count = 0, this.pSM = Number.NaN, this.sentOrigin = [Number.NaN, Number.NaN, Number.NaN], this.dirtyList = [], this.isDirty = void 0, this.tail = void 0, this.tailView = void 0, this.tailCut = new Uint8Array(0), this.made = !1, this.dh = !1, this.vL = Math.max(1, Math.ceil(iM)), this.records = new Float32Array(this.vL * Lr.d), this.isDirty = new Uint8Array(this.vL), this.tail = new Uint8Array(this.vL * hM.gc.Bytes), this.tailView = new DataView(this.tail.buffer), this.make(OM.cmd())
+    var xX = zU(41674),
+      JX = zU(39948);
+    class jX {
+      constructor(UU, XU, zU, cU) {
+        this.key = UU, this.model = XU, this.host = cU, this.xY = void 0, this.records = void 0, this.origin = [0, 0, 0], this.count = 0, this.aQU = Number.NaN, this.sentOrigin = [Number.NaN, Number.NaN, Number.NaN], this.dirtyList = [], this.isDirty = void 0, this.tail = void 0, this.tailView = void 0, this.tailCut = new Uint8Array(0), this.made = !1, this.kp = !1, this.xY = Math.max(1, Math.ceil(zU)), this.records = new Float32Array(this.xY * YX.e), this.isDirty = new Uint8Array(this.xY), this.tail = new Uint8Array(this.xY * pU.yc.Bytes), this.tailView = new DataView(this.tail.buffer), this.make(cU.cmd())
       }
-      setOrigin(MM, rM, iM) {
-        this.origin[0] = MM, this.origin[1] = rM, this.origin[2] = iM
+      setOrigin(UU, XU, zU) {
+        this.origin[0] = UU, this.origin[1] = XU, this.origin[2] = zU
       }
-      markDirty(MM) {
-        !this.dh && MM >= 0 && MM < this.vL && MM < hM.gc.Max && this.fh(MM, MM + 1)
+      markDirty(UU) {
+        !this.kp && UU >= 0 && UU < this.xY && UU < pU.yc.Max && this.vp(UU, UU + 1)
       }
-      commit(MM) {
-        if (this.dh) return;
-        (MM = Math.min(Math.max(Math.floor(MM), 0), this.vL, hM.gc.Max)) > this.count && this.fh(this.count, MM), this.count = MM;
+      commit(UU) {
+        if (this.kp) return;
+        (UU = Math.min(Math.max(Math.floor(UU), 0), this.xY, pU.yc.Max)) > this.count && this.vp(this.count, UU), this.count = UU;
         const {
-          origin: rM,
-          sentOrigin: iM,
-          dirtyList: OM
-        } = this, SM = this.pSM !== MM, jM = iM[0] !== rM[0] || iM[1] !== rM[1] || iM[2] !== rM[2];
-        if (0 === OM.length && !SM && !jM) return;
-        const aM = this.host.cmd();
-        if (!aM || !this.make(aM)) return;
-        const PM = OM.length,
+          origin: XU,
+          sentOrigin: zU,
+          dirtyList: cU
+        } = this, yU = this.aQU !== UU, QU = zU[0] !== XU[0] || zU[1] !== XU[1] || zU[2] !== XU[2];
+        if (0 === cU.length && !yU && !QU) return;
+        const AU = this.host.cmd();
+        if (!AU || !this.make(AU)) return;
+        const FU = cU.length,
           {
-            records: nM,
-            tailView: QM
+            records: oU,
+            tailView: DU
           } = this;
-        for (let zM = 0; zM < PM; zM++) {
-          const MM = OM[zM],
-            rM = MM * Lr.d,
-            iM = zM * hM.gc.Bytes,
-            SM = 0 !== nM[rM + Lr.h] ? hM.gc.Hidden : 0;
-          QM.setUint32(iM, (MM | SM) >>> 0, !0), QM.setFloat32(iM + 4, nM[rM], !0), QM.setFloat32(iM + 8, nM[rM + 1], !0), QM.setFloat32(iM + 12, nM[rM + 2], !0)
+        for (let EU = 0; EU < FU; EU++) {
+          const UU = cU[EU],
+            XU = UU * YX.e,
+            zU = EU * pU.yc.Bytes,
+            yU = 0 !== oU[XU + YX.h] ? pU.yc.Hidden : 0;
+          DU.setUint32(zU, (UU | yU) >>> 0, !0), DU.setFloat32(zU + 4, oU[XU], !0), DU.setFloat32(zU + 8, oU[XU + 1], !0), DU.setFloat32(zU + 12, oU[XU + 2], !0)
         }
-        if ((0, hM.Oe)(aM, 0, this.key, MM, rM, PM, this.tailOf(PM))) {
-          for (let MM = 0; MM < PM; MM++) this.isDirty[OM[MM]] = 0;
-          OM.length = 0, this.pSM = MM, iM[0] = rM[0], iM[1] = rM[1], iM[2] = rM[2]
+        if ((0, pU.Xe)(AU, 0, this.key, UU, XU, FU, this.tailOf(FU))) {
+          for (let UU = 0; UU < FU; UU++) this.isDirty[cU[UU]] = 0;
+          cU.length = 0, this.aQU = UU, zU[0] = XU[0], zU[1] = XU[1], zU[2] = XU[2]
         }
       }
-      grow(MM) {
-        (MM = Math.ceil(MM)) <= this.vL || this.dh || (this.records = (0, Ir.e)(this.records, new Float32Array(MM * Lr.d)), this.isDirty = (0, Ir.e)(this.isDirty, new Uint8Array(MM)), this.tail = new Uint8Array(MM * hM.gc.Bytes), this.tailView = new DataView(this.tail.buffer), this.vL = MM)
+      grow(UU) {
+        (UU = Math.ceil(UU)) <= this.xY || this.kp || (this.records = (0, JX.e)(this.records, new Float32Array(UU * YX.e)), this.isDirty = (0, JX.e)(this.isDirty, new Uint8Array(UU)), this.tail = new Uint8Array(UU * pU.yc.Bytes), this.tailView = new DataView(this.tail.buffer), this.xY = UU)
       }
       dispose() {
-        this.dh || (this.dh = !0, this.host.dh(this, this.made ? this.key : null))
+        this.kp || (this.kp = !0, this.host.kp(this, this.made ? this.key : null))
       }
-      make(MM) {
-        if (!this.made && MM) {
+      make(UU) {
+        if (!this.made && UU) {
           const {
-            item: rM,
-            scale: iM,
-            yaw: OM
+            item: XU,
+            scale: zU,
+            yaw: cU
           } = this.model;
-          this.made = (0, hM.Se)(MM, 0, this.key, rM, iM, OM)
+          this.made = (0, pU.Ze)(UU, 0, this.key, XU, zU, cU)
         }
         return this.made
       }
-      tailOf(MM) {
-        const rM = MM * hM.gc.Bytes;
-        return this.tailCut.buffer === this.tail.buffer && this.tailCut.length === rM || (this.tailCut = this.tail.subarray(0, rM)), this.tailCut
+      tailOf(UU) {
+        const XU = UU * pU.yc.Bytes;
+        return this.tailCut.buffer === this.tail.buffer && this.tailCut.length === XU || (this.tailCut = this.tail.subarray(0, XU)), this.tailCut
       }
-      fh(MM, rM) {
+      vp(UU, XU) {
         const {
-          dirtyList: iM,
-          isDirty: OM
+          dirtyList: zU,
+          isDirty: cU
         } = this;
-        for (let SM = MM; SM < rM; SM++) 0 === OM[SM] && (OM[SM] = 1, iM.push(SM))
+        for (let yU = UU; yU < XU; yU++) 0 === cU[yU] && (cU[yU] = 1, zU.push(yU))
       }
     }
-    var qr = iM(620),
-      Tr = iM(45251);
-    const Vr = new TextEncoder,
-      cr = new Uint8Array(0),
-      Mi = [0, 0, 0];
-    class ri {
-      constructor(MM, rM) {
+    var KX = zU(638),
+      bX = zU(45253);
+    const TX = new TextEncoder,
+      hX = new Uint8Array(0),
+      Uz = [0, 0, 0];
+    class Xz {
+      constructor(UU, XU) {
         this.keys = 0, this.live = new Set, this.owing = new Set, this.host = void 0, this.host = {
-          cmd: MM,
-          serverId: rM,
-          owes: MM => {
-            this.owing.add(MM)
+          cmd: UU,
+          serverId: XU,
+          owes: UU => {
+            this.owing.add(UU)
           },
-          settled: (MM, rM) => {
-            this.owing.delete(MM), rM && this.live.delete(MM)
+          settled: (UU, XU) => {
+            this.owing.delete(UU), XU && this.live.delete(UU)
           }
         }
       }
-      create(MM, rM) {
-        return iM = MM, qr.p.includes(iM) ? this.add({
-          lifeform: zM.j.indexOf(MM)
-        }, rM) : null;
-        var iM
+      create(UU, XU) {
+        return zU = UU, KX.o.includes(zU) ? this.add({
+          lifeform: EU.h.indexOf(UU)
+        }, XU) : null;
+        var zU
       }
-      createCosmetic(MM, rM) {
-        const iM = Tr.COSMETIC_MODEL_KEYS.get(MM);
-        return void 0 === iM ? null : this.add({
-          attachment: iM
-        }, rM)
+      createCosmetic(UU, XU) {
+        const zU = bX.COSMETIC_MODEL_KEYS.get(UU);
+        return void 0 === zU ? null : this.add({
+          attachment: zU
+        }, XU)
       }
-      add(MM, rM) {
-        const iM = new ii(++this.keys, MM, rM, this.host);
-        return this.live.add(iM), iM
+      add(UU, XU) {
+        const zU = new zz(++this.keys, UU, XU, this.host);
+        return this.live.add(zU), zU
       }
       disposeAll() {
-        for (const MM of [...this.live]) MM.dispose()
+        for (const UU of [...this.live]) UU.dispose()
       }
       flush() {
         if (0 === this.owing.size) return;
-        const MM = this.host.cmd();
-        for (const rM of this.owing)
-          if (!rM.sync(MM)) return
+        const UU = this.host.cmd();
+        for (const XU of this.owing)
+          if (!XU.sync(UU)) return
       }
     }
-    class ii {
-      constructor(MM, rM, iM, OM) {
-        this.key = MM, this.source = rM, this.scale = iM, this.host = OM, this.feet = [0, 0, 0], this.yaw = 0, this.visible = !1, this.clip = null, this.clipBytes = cr, this.perch = null, this.owed = 1, this.dh = !1, this.sync()
+    class zz {
+      constructor(UU, XU, zU, cU) {
+        this.key = UU, this.source = XU, this.scale = zU, this.host = cU, this.feet = [0, 0, 0], this.yaw = 0, this.visible = !1, this.clip = null, this.clipBytes = hX, this.perch = null, this.owed = 1, this.kp = !1, this.sync()
       }
-      setPose(MM, rM) {
-        this.dh || (this.feet[0] = MM[0], this.feet[1] = MM[1], this.feet[2] = MM[2], this.yaw = rM, this.owed |= 2, this.sync())
+      setPose(UU, XU) {
+        this.kp || (this.feet[0] = UU[0], this.feet[1] = UU[1], this.feet[2] = UU[2], this.yaw = XU, this.owed |= 2, this.sync())
       }
-      setVisible(MM) {
-        this.dh || MM === this.visible || (this.visible = MM, this.owed |= 4, this.sync())
+      setVisible(UU) {
+        this.kp || UU === this.visible || (this.visible = UU, this.owed |= 4, this.sync())
       }
-      setClip(MM) {
-        this.dh || MM === this.clip || (this.clip = MM, this.clipBytes = null === MM ? cr : Vr.encode(MM), this.owed |= 16, this.sync())
+      setClip(UU) {
+        this.kp || UU === this.clip || (this.clip = UU, this.clipBytes = null === UU ? hX : TX.encode(UU), this.owed |= 16, this.sync())
       }
-      setPerch(MM) {
-        this.dh || (this.perch = MM, this.owed |= 32, this.sync())
+      setPerch(UU) {
+        this.kp || (this.perch = UU, this.owed |= 32, this.sync())
       }
       dispose() {
-        this.dh || (this.dh = !0, this.owed = 1 & this.owed ? 0 : 8, this.sync())
+        this.kp || (this.kp = !0, this.owed = 1 & this.owed ? 0 : 8, this.sync())
       }
       sync() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.host.cmd();
-        return this.write(MM) ? (this.host.settled(this, this.dh), !0) : (this.host.owes(this), !1)
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.host.cmd();
+        return this.write(UU) ? (this.host.settled(this, this.kp), !0) : (this.host.owes(this), !1)
       }
-      write(MM) {
-        if (!MM) return this.owed = 0, !0;
+      write(UU) {
+        if (!UU) return this.owed = 0, !0;
         if (1 & this.owed) {
-          if (!("lifeform" in this.source ? (0, hM.af)(MM, 0, this.key, this.source.lifeform, this.scale) : (0, hM.se)(MM, 0, this.key, this.source.attachment, this.scale))) return !1;
+          if (!("lifeform" in this.source ? (0, pU.ef)(UU, 0, this.key, this.source.lifeform, this.scale) : (0, pU.Be)(UU, 0, this.key, this.source.attachment, this.scale))) return !1;
           this.owed &= -2
         }
         const {
-          owed: rM,
-          perch: iM
-        } = this, OM = (2 & rM ? hM.Ic.Pose : 0) | (4 & rM ? hM.Ic.Visible : 0) | (16 & rM ? hM.Ic.Clip : 0) | (32 & rM ? hM.Ic.Perch : 0);
-        if (0 !== OM) {
-          var SM, jM;
-          if (!(0, hM.Ye)(MM, 0, this.key, OM, this.visible ? 1 : 0, iM ? 1 : 0, this.feet, this.yaw, iM ? this.host.serverId(iM.QS) : 0, null !== (SM = null === iM || void 0 === iM ? void 0 : iM.offset) && void 0 !== SM ? SM : Mi, null !== (jM = null === iM || void 0 === iM ? void 0 : iM.yaw) && void 0 !== jM ? jM : 0, 16 & rM ? this.clipBytes : cr)) return !1;
+          owed: XU,
+          perch: zU
+        } = this, cU = (2 & XU ? pU.Tc.Pose : 0) | (4 & XU ? pU.Tc.Visible : 0) | (16 & XU ? pU.Tc.Clip : 0) | (32 & XU ? pU.Tc.Perch : 0);
+        if (0 !== cU) {
+          var yU, QU;
+          if (!(0, pU.af)(UU, 0, this.key, cU, this.visible ? 1 : 0, zU ? 1 : 0, this.feet, this.yaw, zU ? this.host.serverId(zU.FX) : 0, null !== (yU = null === zU || void 0 === zU ? void 0 : zU.offset) && void 0 !== yU ? yU : Uz, null !== (QU = null === zU || void 0 === zU ? void 0 : zU.yaw) && void 0 !== QU ? QU : 0, 16 & XU ? this.clipBytes : hX)) return !1;
           this.owed &= -55
         }
         if (8 & this.owed) {
-          if (!(0, hM.Ue)(MM, 0, this.key)) return !1;
+          if (!(0, pU._e)(UU, 0, this.key)) return !1;
           this.owed = 0
         }
         return !0
       }
     }
-    var Oi = iM(42094);
+    var cz = zU(42102);
 
-    function Si(MM, rM, iM, OM) {
-      return (0, Oi.e)(), (0, hM.Lf)(MM, rM, iM, OM)
+    function yz(UU, XU, zU, cU) {
+      return (0, cz.e)(), (0, pU.Nf)(UU, XU, zU, cU)
     }
-    var ji = iM(40199),
-      ai = iM(41682),
-      Pi = iM(42106);
-    const ni = [0, 0, 0],
-      Qi = [0, 0, 0],
-      zi = [0, 0, 0],
-      Li = [0, 0, 0],
-      mi = {
+    var Qz = zU(39969),
+      Az = zU(41667),
+      Fz = zU(42112);
+    const oz = [0, 0, 0],
+      Dz = [0, 0, 0],
+      Ez = [0, 0, 0],
+      Yz = [0, 0, 0],
+      Nz = {
         origin: [0, 0, 0],
         direction: [0, 0, 1]
       },
-      Hi = [0, 0, 0],
-      Ji = [0, 0],
-      di = [1, 1, 1],
-      yi = 1 / 3;
-    const li = mr.g;
+      Iz = [0, 0, 0],
+      pz = [0, 0],
+      az = [1, 1, 1],
+      tz = 1 / 3;
+    const gz = NX.f;
 
-    function Ei(MM) {
-      const rM = mr.e[MM],
-        iM = rM && mr.g[rM.mainMultiblock];
-      return iM && {
-        main: iM,
-        x: rM.compX,
-        y: rM.compY,
-        z: rM.compZ
+    function kz(UU) {
+      const XU = NX.c[UU],
+        zU = XU && NX.f[XU.mainMultiblock];
+      return zU && {
+        main: zU,
+        x: XU.compX,
+        y: XU.compY,
+        z: XU.compZ
       }
     }
 
-    function Ui(MM) {
-      if (null === MM || void 0 === MM) return hM.Nc;
-      const rM = +MM;
-      return Number.isInteger(rM) && rM >= -2147483648 && rM <= 2147483647 && String(rM) === String(MM) ? rM : hM.Nc
+    function Gz(UU) {
+      if (null === UU || void 0 === UU) return pU.ad;
+      const XU = +UU;
+      return Number.isInteger(XU) && XU >= -2147483648 && XU <= 2147483647 && String(XU) === String(UU) ? XU : pU.ad
     }
 
-    function Gi(MM, rM, iM) {
-      return (0, hM.Uf)(MM, 0, rM, null !== iM && void 0 !== iM ? iM : Number.NaN)
+    function Bz(UU, XU, zU) {
+      return (0, pU.Vf)(UU, 0, XU, null !== zU && void 0 !== zU ? zU : Number.NaN)
     }
-    class Ci {
-      constructor(MM) {
-        this.deps = MM, this.api = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.tables = void 0, this.meshKeys = 0, this.liveMeshes = new Set, this.poolKeys = 0, this.livePools = new Set, this.cameraTurn = new ji.b((() => this.tables.getClientOption("forcedCameraDirectionTransitionMs")), (MM => {
-          var rM, iM;
-          null === (rM = (iM = this.deps).setLocalOptions) || void 0 === rM || rM.call(iM, MM)
-        })), this.mobModels = new ri((() => this.deps.cmd()), Ui), this.owedFrees = [], this.pendingStyle = void 0, this.pendingFar = void 0, this.farSet = !1, this.routeMesh = 0, this.routeOffset = 0, this.routeLook = "", this.routeSlide = {
+    class Zz {
+      constructor(UU) {
+        this.deps = UU, this.api = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.tables = void 0, this.meshKeys = 0, this.liveMeshes = new Set, this.poolKeys = 0, this.livePools = new Set, this.cameraTurn = new Qz.d((() => this.tables.getClientOption("forcedCameraDirectionTransitionMs")), (UU => {
+          var XU, zU;
+          null === (XU = (zU = this.deps).setLocalOptions) || void 0 === XU || XU.call(zU, UU)
+        })), this.mobModels = new Xz((() => this.deps.cmd()), Gz), this.owedFrees = [], this.pendingStyle = void 0, this.pendingFar = void 0, this.farSet = !1, this.routeMesh = 0, this.routeOffset = 0, this.routeLook = "", this.routeSlide = {
           uvOffset: [0, 0]
         }, this.poolHost = {
           cmd: () => this.deps.cmd(),
-          dh: (MM, rM) => {
-            this.livePools.delete(MM), null !== rM && (this.owedFrees.push(rM), this.flushOwed())
+          kp: (UU, XU) => {
+            this.livePools.delete(UU), null !== XU && (this.owedFrees.push(XU), this.flushOwed())
           }
-        }, this.api = MM.api, this.live = MM.live, this.chunks = MM.chunks, this.items = MM.items, this.tables = MM.tables
+        }, this.api = UU.api, this.live = UU.live, this.chunks = UU.chunks, this.items = UU.items, this.tables = UU.tables
       }
-      isLocal(MM) {
-        return null !== MM && void 0 !== MM && +MM === this.api.localId
+      isLocal(UU) {
+        return null !== UU && void 0 !== UU && +UU === this.api.localId
       }
-      assertLocal(MM, rM) {
-        if (!this.isLocal(MM)) throw new Error(`Attempted to ${rM} for a player that is not the local player`)
+      assertLocal(UU, XU) {
+        if (!this.isLocal(UU)) throw new Error(`Attempted to ${XU} for a player that is not the local player`)
       }
-      XE(MM) {
-        const rM = this.api.XE(MM);
-        if (!rM) throw new Error(`Entity ${MM} has no replicated position`);
-        return rM
+      wG(UU) {
+        const XU = this.api.wG(UU);
+        if (!XU) throw new Error(`Entity ${UU} has no replicated position`);
+        return XU
       }
-      checkValid(MM) {
-        return !!this.deps.isSessionLive() && (null === MM || void 0 === MM || this.api.checkValid(MM))
+      checkValid(UU) {
+        return !!this.deps.isSessionLive() && (null === UU || void 0 === UU || this.api.checkValid(UU))
       }
-      isAlive(MM) {
-        return !1 !== this.api.isAlive(MM)
+      isAlive(UU) {
+        return !1 !== this.api.isAlive(UU)
       }
-      getItemStat(MM, rM, iM) {
-        return this.isLocal(MM) || null !== MM && "Player" === this.api.getEntityType(MM) ? this.tables.getItemStat(rM, iM) : this.tables.getDefaultItemStat(rM, iM)
+      getItemStat(UU, XU, zU) {
+        return this.isLocal(UU) || null !== UU && "Player" === this.api.getEntityType(UU) ? this.tables.getItemStat(XU, zU) : this.tables.getDefaultItemStat(XU, zU)
       }
-      getClientOption(MM, rM) {
-        return this.assertLocal(MM, "get a client option"), this.tables.getClientOption(rM)
+      getClientOption(UU, XU) {
+        return this.assertLocal(UU, "get a client option"), this.tables.getClientOption(XU)
       }
-      openShop(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          iM = arguments.length > 2 ? arguments[2] : void 0;
-        this.assertLocal(MM, "open shop"), aM.i.Tz("showShopFromServer", {
-          toggle: rM,
-          SS: iM
+      openShop(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          zU = arguments.length > 2 ? arguments[2] : void 0;
+        this.assertLocal(UU, "open shop"), AU.k.UY("showShopFromServer", {
+          toggle: XU,
+          Hc: zU
         }, !0)
       }
-      sendMessage(MM, rM, iM) {
-        this.assertLocal(MM, "send a message");
-        const OM = "string" === typeof rM ? [{
-          str: rM,
-          style: iM
-        }] : rM;
-        aM.i.Tz("chat", {
-          content: OM
+      sendMessage(UU, XU, zU) {
+        this.assertLocal(UU, "send a message");
+        const cU = "string" === typeof XU ? [{
+          str: XU,
+          style: zU
+        }] : XU;
+        AU.k.UY("chat", {
+          content: cU
         }, !0)
       }
-      getEntityType(MM) {
-        return this.api.getEntityType(MM)
+      getEntityType(UU) {
+        return this.api.getEntityType(UU)
       }
-      getEntityName(MM) {
-        const rM = Ui(MM);
-        return rM === hM.Nc ? void 0 : (0, Xr.j)(this.api, rM)
+      getEntityName(UU) {
+        const XU = Gz(UU);
+        return XU === pU.ad ? void 0 : (0, xX.h)(this.api, XU)
       }
-      hasEffect(MM, rM) {
-        const iM = Ui(MM);
-        return iM !== hM.Nc && (0, Xr.i)(this.api, iM, rM)
+      hasEffect(UU, XU) {
+        const zU = Gz(UU);
+        return zU !== pU.ad && (0, xX.e)(this.api, zU, XU)
       }
-      getMetaInfo(MM) {
-        return this.tables.getMetaInfo(MM)
+      getMetaInfo(UU) {
+        return this.tables.getMetaInfo(UU)
       }
-      getPlayerDbId(MM) {
-        return this.assertLocal(MM, "get a DB ID"), this.deps.playerDbId()
+      getPlayerDbId(UU) {
+        return this.assertLocal(UU, "get a DB ID"), this.deps.playerDbId()
       }
-      getBlockData(MM, rM, iM) {
-        if (!this.chunks.dataCleared(MM, rM, iM)) return (0, Xr.e)(this.api, MM, rM, iM)
+      getBlockData(UU, XU, zU) {
+        if (!this.chunks.dataCleared(UU, XU, zU)) return (0, xX.c)(this.api, UU, XU, zU)
       }
-      cW(MM, rM, iM, OM) {
-        this.setBlockId(MM, rM, iM, this.tables.getItemId(OM))
+      Jw(UU, XU, zU, cU) {
+        this.setBlockId(UU, XU, zU, this.tables.getItemId(cU))
       }
-      setOtherEntitySetting(MM, rM, iM, OM) {
-        if (!this.isLocal(MM)) throw new Error("Attempted to set an other-entity setting for a player that is not the local player");
-        if (!Object.hasOwn(hM.ad, iM)) throw new Error(`Unknown other-entity setting ${iM}`);
-        const SM = hM.ad[iM],
-          jM = Ui(rM);
-        if (jM === hM.Nc || !this.deps.beforeWrite()) return;
-        const aM = (0, fM.f)(OM);
-        if (aM.length > 16384) throw new Error(`The other-entity setting ${iM}'s value is over 16384 bytes`);
-        const PM = this.api.memoryView(Uint8Array, this.api.scratch(), aM.length, "set_other_entity_setting's value");
-        PM && (PM.set(aM), this.api.queries.setOtherEntitySetting(jM, SM, aM.length))
+      setOtherEntitySetting(UU, XU, zU, cU) {
+        if (!this.isLocal(UU)) throw new Error("Attempted to set an other-entity setting for a player that is not the local player");
+        if (!Object.hasOwn(pU.rd, zU)) throw new Error(`Unknown other-entity setting ${zU}`);
+        const yU = pU.rd[zU],
+          QU = Gz(XU);
+        if (QU === pU.ad || !this.deps.beforeWrite()) return;
+        const AU = (0, HU.e)(cU);
+        if (AU.length > 16384) throw new Error(`The other-entity setting ${zU}'s value is over 16384 bytes`);
+        const FU = this.api.memoryView(Uint8Array, this.api.scratch(), AU.length, "set_other_entity_setting's value");
+        FU && (FU.set(AU), this.api.queries.setOtherEntitySetting(QU, yU, AU.length))
       }
-      getPositionView(MM) {
-        return this.live.position(+MM)
+      getPositionView(UU) {
+        return this.live.position(+UU)
       }
-      readDrawnPosition(MM, rM) {
-        return this.api.readDrawnPosition(Ui(MM), rM)
+      readDrawnPosition(UU, XU) {
+        return this.api.readDrawnPosition(Gz(UU), XU)
       }
-      getDrawnHeading(MM) {
-        const rM = this.drawnEntity(MM);
-        if (!rM) return null;
-        if (1 === hM.nb.headingIsDrawn(rM, 0)) return hM.nb.heading(rM, 0);
-        const iM = this.api.apiView;
-        return this.isLocal(MM) && 0 === (hM.v.playerFlags(iM, 0) & hM.yd.FreeCam) ? hM.v.heading(iM, 0) : null
+      getDrawnHeading(UU) {
+        const XU = this.drawnEntity(UU);
+        if (!XU) return null;
+        if (1 === pU.wb.headingIsDrawn(XU, 0)) return pU.wb.heading(XU, 0);
+        const zU = this.api.apiView;
+        return this.isLocal(UU) && 0 === (pU.w.playerFlags(zU, 0) & pU.Od.FreeCam) ? pU.w.heading(zU, 0) : null
       }
-      getDrawnEyeHeight(MM) {
-        const rM = this.drawnEntity(MM),
-          iM = rM ? hM.nb.eyeHeight(rM, 0) : 0;
-        return iM > 0 ? iM : null
+      getDrawnEyeHeight(UU) {
+        const XU = this.drawnEntity(UU),
+          zU = XU ? pU.wb.eyeHeight(XU, 0) : 0;
+        return zU > 0 ? zU : null
       }
-      drawnEntity(MM) {
-        const rM = Ui(MM);
-        return rM === hM.Nc || this.api.queries.directorEntity(rM) < hM.nb.BYTES ? null : this.api.scratchData(hM.nb.BYTES, "the drawn DirectorEntity")
+      drawnEntity(UU) {
+        const XU = Gz(UU);
+        return XU === pU.ad || this.api.queries.directorEntity(XU) < pU.wb.BYTES ? null : this.api.scratchData(pU.wb.BYTES, "the drawn DirectorEntity")
       }
-      isEntityDrawn(MM) {
-        const rM = Ui(MM);
-        return rM !== hM.Nc && 1 === this.api.queries.entityDrawn(rM)
+      isEntityDrawn(UU) {
+        const XU = Gz(UU);
+        return XU !== pU.ad && 1 === this.api.queries.entityDrawn(XU)
       }
       getPlayerIds() {
-        return Pi.e.ids()
+        return Fz.d.ids()
       }
-      getPlayerCosmetics(MM) {
-        var rM;
-        return null !== (rM = (0, Pi.g)(MM)) && void 0 !== rM ? rM : null
+      getPlayerCosmetics(UU) {
+        var XU;
+        return null !== (XU = (0, Fz.g)(UU)) && void 0 !== XU ? XU : null
       }
       getLocalPlayerMovement() {
-        const MM = hM.v.playerFlags(this.api.apiView, 0);
-        return 0 === (MM & hM.yd.Replay) && this.api.readDrawnPosition(this.api.localId, zi) ? {
-          onGround: 0 !== (MM & hM.yd.OnGround),
-          jumpHeld: 0 !== (MM & hM.yd.JumpHeld)
+        const UU = pU.w.playerFlags(this.api.apiView, 0);
+        return 0 === (UU & pU.Od.Replay) && this.api.readDrawnPosition(this.api.localId, Ez) ? {
+          onGround: 0 !== (UU & pU.Od.OnGround),
+          jumpHeld: 0 !== (UU & pU.Od.JumpHeld)
         } : null
       }
       isLocalPlayerInVehicle() {
-        return (0, Hr.B)(this.deps.localPhysicsType())
+        return (0, IX.x)(this.deps.localPhysicsType())
       }
-      TrM(MM) {
-        return this.isLocal(MM) ? this.items.sQ() : null
+      HzU(UU) {
+        return this.isLocal(UU) ? this.items.uD() : null
       }
       getInventoryItems() {
         return this.items.playerItems()
       }
       getHeldGunInaccuracy() {
-        var MM, rM;
-        return "Gun" === (null === (MM = this.aliveHeld()) || void 0 === MM || null === (rM = MM.typeObj) || void 0 === rM ? void 0 : rM.type) ? this.items.inaccuracy : null
+        var UU, XU;
+        return "Gun" === (null === (UU = this.aliveHeld()) || void 0 === UU || null === (XU = UU.typeObj) || void 0 === XU ? void 0 : XU.type) ? this.items.inaccuracy : null
       }
       aliveHeld() {
-        return !1 === this.api.isAlive(this.api.localId) ? null : this.items.sQ()
+        return !1 === this.api.isAlive(this.api.localId) ? null : this.items.uD()
       }
       isCrosshairShown() {
-        var MM, rM;
-        const iM = (0, Jr.e)(OM.d.get("crosshairGameView"), OM.d.get("crosshairShownOverride"));
-        if (null !== iM) return iM;
-        const SM = null === (MM = this.aliveHeld()) || void 0 === MM ? void 0 : MM.typeObj,
-          jM = "Gun" === (null === SM || void 0 === SM ? void 0 : SM.type),
-          aM = jM || !0 === (null === SM || void 0 === SM ? void 0 : SM.showsAimingUi),
-          PM = 0 === (hM.v.playerFlags(this.api.apiView, 0) & hM.yd.ZoomFirstPerson),
-          nM = null !== (rM = this.tables.getClientOption("gunshotOrigin")) && void 0 !== rM ? rM : null;
-        return (0, Jr.k)({
-          gun: jM,
-          aimable: aM
-        }, PM, (0, dr.b)(), nM)
+        var UU, XU;
+        const zU = (0, aX.c)(cU.e.get("crosshairGameView"), cU.e.get("crosshairShownOverride"));
+        if (null !== zU) return zU;
+        const yU = null === (UU = this.aliveHeld()) || void 0 === UU ? void 0 : UU.typeObj,
+          QU = "Gun" === (null === yU || void 0 === yU ? void 0 : yU.type),
+          AU = QU || !0 === (null === yU || void 0 === yU ? void 0 : yU.showsAimingUi),
+          FU = 0 === (pU.w.playerFlags(this.api.apiView, 0) & pU.Od.ZoomFirstPerson),
+          oU = null !== (XU = this.tables.getClientOption("gunshotOrigin")) && void 0 !== XU ? XU : null;
+        return (0, aX.h)({
+          gun: QU,
+          aimable: AU
+        }, FU, (0, tX.e)(), oU)
       }
-      setCrosshairShown(MM) {
-        OM.d.set({
-          crosshairShownOverride: MM
+      setCrosshairShown(UU) {
+        cU.e.set({
+          crosshairShownOverride: UU
         })
       }
-      getInventoryFreeSlotCount(MM) {
-        return this.isLocal(MM) ? this.items.freeSlots() : null
+      getInventoryFreeSlotCount(UU) {
+        return this.isLocal(UU) ? this.items.freeSlots() : null
       }
-      getSelectedInventorySlotI(MM) {
-        return this.isLocal(MM) ? this.items.selectedSlot : null
+      getSelectedInventorySlotI(UU) {
+        return this.isLocal(UU) ? this.items.selectedSlot : null
       }
-      getItemSlot(MM, rM) {
-        return this.isLocal(MM) ? this.items.slot(rM) : null
+      getItemSlot(UU, XU) {
+        return this.isLocal(UU) ? this.items.slot(XU) : null
       }
-      swapInventorySlots(MM, rM) {
-        return this.items.swap(MM, rM)
+      swapInventorySlots(UU, XU) {
+        return this.items.swap(UU, XU)
       }
-      isPlayerCrouching(MM) {
-        if (this.isLocal(MM)) return 0 !== (hM.v.playerFlags(this.api.apiView, 0) & hM.yd.Crouching);
-        const rM = Ui(MM);
-        return rM !== hM.Nc && 1 === this.api.queries.entityCrouching(rM)
+      isPlayerCrouching(UU) {
+        if (this.isLocal(UU)) return 0 !== (pU.w.playerFlags(this.api.apiView, 0) & pU.Od.Crouching);
+        const XU = Gz(UU);
+        return XU !== pU.ad && 1 === this.api.queries.entityCrouching(XU)
       }
       getMiningBlock() {
         return this.live.breakingPosition()
       }
       isMining() {
-        return 0 !== (hM.v.playerFlags(this.api.apiView, 0) & hM.yd.AttemptingBreak)
+        return 0 !== (pU.w.playerFlags(this.api.apiView, 0) & pU.Od.AttemptingBreak)
       }
       getTargetedBlock() {
-        return this.live.pMM()
+        return this.live.gXU()
       }
       getActionRay() {
-        const MM = this.api.apiView;
-        for (let rM = 0; rM < 3; rM++) mi.origin[rM] = hM.v.KMM(MM, 0, rM), mi.direction[rM] = hM.v.actionDir(MM, 0, rM);
-        return mi
+        const UU = this.api.apiView;
+        for (let XU = 0; XU < 3; XU++) Nz.origin[XU] = pU.w.rXU(UU, 0, XU), Nz.direction[XU] = pU.w.actionDir(UU, 0, XU);
+        return Nz
       }
-      canModifyBlockAt(MM, rM, iM) {
-        return 1 === this.api.queries.canModify(MM, rM, iM)
+      canModifyBlockAt(UU, XU, zU) {
+        return 1 === this.api.queries.canModify(UU, XU, zU)
       }
-      isSolidToPlayerBlockId(MM) {
-        return this.tables.isSolidBlockId(MM) && !this.chunks.isWalkThrough(MM)
+      isSolidToPlayerBlockId(UU) {
+        return this.tables.isSolidBlockId(UU) && !this.chunks.isWalkThrough(UU)
       }
-      blockNameToBlockId(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.tables.blockNameToBlockId(MM, rM)
+      blockNameToBlockId(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.tables.blockNameToBlockId(UU, XU)
       }
-      blockIdToBlockName(MM) {
-        return this.tables.nameOfId(MM)
+      blockIdToBlockName(UU) {
+        return this.tables.nameOfId(UU)
       }
-      lrM(MM, rM, iM, OM, SM) {
-        return 1 === this.api.queries.terrainBlocked(OM, MM, rM, iM, Ui(null !== SM && void 0 !== SM ? SM : null))
+      AzU(UU, XU, zU, cU, yU) {
+        return 1 === this.api.queries.terrainBlocked(cU, UU, XU, zU, Gz(null !== yU && void 0 !== yU ? yU : null))
       }
-      getChunkVersion(MM, rM, iM) {
-        return this.chunks.version(MM, rM, iM)
+      getChunkVersion(UU, XU, zU) {
+        return this.chunks.version(UU, XU, zU)
       }
-      scanBlocks(MM, rM, iM, OM, SM, jM, aM, PM) {
-        return this.chunks.scan(MM, rM, iM, OM, SM, jM, aM, PM)
+      scanBlocks(UU, XU, zU, cU, yU, QU, AU, FU) {
+        return this.chunks.scan(UU, XU, zU, cU, yU, QU, AU, FU)
       }
-      readColumnTops(MM, rM, iM, OM, SM, jM, aM, PM, nM) {
-        this.chunks.columnTops(MM, rM, iM, OM, SM, jM, aM, PM, nM)
+      readColumnTops(UU, XU, zU, cU, yU, QU, AU, FU, oU) {
+        this.chunks.columnTops(UU, XU, zU, cU, yU, QU, AU, FU, oU)
       }
-      isBlockInLoadedChunk(MM, rM, iM) {
-        return this.chunks.isLoaded(MM, rM, iM)
+      isBlockInLoadedChunk(UU, XU, zU) {
+        return this.chunks.isLoaded(UU, XU, zU)
       }
-      getBlockId(MM, rM, iM) {
-        return this.chunks.jP(MM, rM, iM)
+      getBlockId(UU, XU, zU) {
+        return this.chunks.yF(UU, XU, zU)
       }
-      playSound(MM, rM, iM, OM, SM) {
-        let jM = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        if (!this.isLocal(MM)) return null;
-        const aM = this.playSoundFrom(rM, iM, SM, jM);
-        return 1 === OM ? aM : aM.rate(OM)
+      playSound(UU, XU, zU, cU, yU) {
+        let QU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        if (!this.isLocal(UU)) return null;
+        const AU = this.playSoundFrom(XU, zU, yU, QU);
+        return 1 === cU ? AU : AU.rate(cU)
       }
-      preloadSounds(MM) {
-        var rM, iM;
-        null === (rM = (iM = this.deps).preloadSounds) || void 0 === rM || rM.call(iM, MM)
+      preloadSounds(UU) {
+        var XU, zU;
+        null === (XU = (zU = this.deps).preloadSounds) || void 0 === XU || XU.call(zU, UU)
       }
-      playSoundFrom(MM, rM, iM, OM) {
-        var SM, jM;
-        const aM = this.deps.playSound;
-        if (!aM) return Wr.b;
-        const PM = null === iM || void 0 === iM ? void 0 : iM.kS,
-          nM = null !== (SM = null === iM || void 0 === iM ? void 0 : iM.maxHearDist) && void 0 !== SM ? SM : hr.i,
-          QM = null !== (jM = null === iM || void 0 === iM ? void 0 : iM.refDistance) && void 0 !== jM ? jM : hr.l;
-        let zM = null;
-        if (Array.isArray(PM)) ni[0] = PM[0], ni[1] = PM[1], ni[2] = PM[2], zM = ni;
-        else if (void 0 !== PM && null !== PM) {
-          const MM = Ui(PM);
-          if (!this.api.isLocal(MM)) {
-            if (!this.api.readPosition(MM, ni)) return Wr.b;
-            zM = ni
+      playSoundFrom(UU, XU, zU, cU) {
+        var yU, QU;
+        const AU = this.deps.playSound;
+        if (!AU) return OX.d;
+        const FU = null === zU || void 0 === zU ? void 0 : zU.qy,
+          oU = null !== (yU = null === zU || void 0 === zU ? void 0 : zU.maxHearDist) && void 0 !== yU ? yU : pX.f,
+          DU = null !== (QU = null === zU || void 0 === zU ? void 0 : zU.refDistance) && void 0 !== QU ? QU : pX.g;
+        let EU = null;
+        if (Array.isArray(FU)) oz[0] = FU[0], oz[1] = FU[1], oz[2] = FU[2], EU = oz;
+        else if (void 0 !== FU && null !== FU) {
+          const UU = Gz(FU);
+          if (!this.api.isLocal(UU)) {
+            if (!this.api.readPosition(UU, oz)) return OX.d;
+            EU = oz
           }
         }
-        return aM(MM, rM, zM, zM && this.ear(), nM, QM, OM)
+        return AU(UU, XU, EU, EU && this.ear(), oU, DU, cU)
       }
       ear() {
-        if (this.api.readPosition(this.api.localId, Qi)) Qi[1] += fr;
+        if (this.api.readPosition(this.api.localId, Dz)) Dz[1] += HX;
         else {
-          const MM = this.api.apiView;
-          if (0 === hM.v.viewProj(MM, 0, 3) && 0 === hM.v.viewProj(MM, 0, 7) && 0 === hM.v.viewProj(MM, 0, 11)) return null;
-          for (let rM = 0; rM < 3; rM++) Qi[rM] = hM.v.eye(MM, 0, rM)
+          const UU = this.api.apiView;
+          if (0 === pU.w.viewProj(UU, 0, 3) && 0 === pU.w.viewProj(UU, 0, 7) && 0 === pU.w.viewProj(UU, 0, 11)) return null;
+          for (let XU = 0; XU < 3; XU++) Dz[XU] = pU.w.eye(UU, 0, XU)
         }
-        return Number.isFinite(Qi[0] + Qi[1] + Qi[2]) ? Qi : null
+        return Number.isFinite(Dz[0] + Dz[1] + Dz[2]) ? Dz : null
       }
-      setBlockId(MM, rM, iM, OM) {
-        if (!Number.isInteger(OM) || OM < 0 || OM > 65535) throw new Error(`Invalid block id ${OM}`);
-        if (!this.deps.beforeWrite() || !this.chunks.isLoaded(MM, rM, iM)) return;
-        const SM = Math.floor(MM),
-          jM = Math.floor(rM),
-          aM = Math.floor(iM),
-          PM = this.predictedCells(SM, jM, aM, OM);
-        if (1 === this.api.queries.cW(SM, jM, aM, OM)) {
-          for (let MM = 0; MM < PM.length; MM += 5) this.chunks.setOverlay(PM[MM], PM[MM + 1], PM[MM + 2], PM[MM + 3], 1 === PM[MM + 4]);
+      setBlockId(UU, XU, zU, cU) {
+        if (!Number.isInteger(cU) || cU < 0 || cU > 65535) throw new Error(`Invalid block id ${cU}`);
+        if (!this.deps.beforeWrite() || !this.chunks.isLoaded(UU, XU, zU)) return;
+        const yU = Math.floor(UU),
+          QU = Math.floor(XU),
+          AU = Math.floor(zU),
+          FU = this.predictedCells(yU, QU, AU, cU);
+        if (1 === this.api.queries.Jw(yU, QU, AU, cU)) {
+          for (let UU = 0; UU < FU.length; UU += 5) this.chunks.setOverlay(FU[UU], FU[UU + 1], FU[UU + 2], FU[UU + 3], 1 === FU[UU + 4]);
           this.live.refreshTarget()
         }
       }
       particlesEnabled() {
         return this.deps.particles.enabled()
       }
-      createParticles(MM, rM) {
-        return this.deps.particles.create(MM, rM)
+      createParticles(UU, XU) {
+        return this.deps.particles.create(UU, XU)
       }
-      playParticleEffect(MM) {
-        this.deps.particles.playEffect(MM)
+      playParticleEffect(UU) {
+        this.deps.particles.playEffect(UU)
       }
-      burstParticlePreset(MM, rM, iM) {
-        this.deps.particles.burstPreset(MM, rM, iM)
+      burstParticlePreset(UU, XU, zU) {
+        this.deps.particles.burstPreset(UU, XU, zU)
       }
-      createGameMesh(MM, rM, iM) {
-        const OM = ++this.meshKeys,
-          SM = this.deps.cmd();
-        if (!SM) return OM;
+      createGameMesh(UU, XU, zU) {
+        const cU = ++this.meshKeys,
+          yU = this.deps.cmd();
+        if (!yU) return cU;
         const {
-          look: jM,
-          colour: aM
-        } = function(MM) {
-          switch (MM.kind) {
+          look: QU,
+          colour: AU
+        } = function(UU) {
+          switch (UU.kind) {
             case void 0:
             case "flatEmissive":
-              return MM.onTop ? {
-                look: hM.Ob.FlatOnTop,
-                colour: [...MM.rgb, MM.alpha]
-              } : MM.opaque ? {
-                look: hM.Ob.FlatOpaque,
-                colour: [...MM.rgb, 1]
+              return UU.onTop ? {
+                look: pU.dc.FlatOnTop,
+                colour: [...UU.rgb, UU.alpha]
+              } : UU.opaque ? {
+                look: pU.dc.FlatOpaque,
+                colour: [...UU.rgb, 1]
               } : {
-                look: hM.Ob.Flat,
-                colour: [...MM.rgb, MM.alpha]
+                look: pU.dc.Flat,
+                colour: [...UU.rgb, UU.alpha]
               };
             case "chevronPath":
               return {
-                look: hM.Ob.Chevrons, colour: [...(0, yr.c)(MM.colour), MM.alpha]
+                look: pU.dc.Chevrons, colour: [...(0, gX.d)(UU.colour), UU.alpha]
               };
             case "furnaceFire":
               return {
-                look: hM.Ob.FurnaceFire, colour: [1, 1, 1, 1]
+                look: pU.dc.FurnaceFire, colour: [1, 1, 1, 1]
               }
           }
-        }(rM), PM = Math.floor(MM.positions.length / 3), nM = function(MM, rM) {
-          const iM = Math.floor(MM.positions.length / 3),
-            OM = MM.indices.length,
-            SM = iM * (rM ? 5 : 3),
-            jM = new Uint8Array(4 * (SM + OM)),
-            aM = new DataView(jM.buffer);
-          for (let QM = 0; QM < 3 * iM; QM++) aM.setFloat32(4 * QM, MM.positions[QM], !0);
-          if (rM) {
-            var PM;
-            const rM = null !== (PM = MM.uvs) && void 0 !== PM ? PM : [];
-            for (let MM = 0; MM < 2 * iM; MM++) {
-              var nM;
-              aM.setFloat32(4 * (3 * iM + MM), null !== (nM = rM[MM]) && void 0 !== nM ? nM : 0, !0)
+        }(XU), FU = Math.floor(UU.positions.length / 3), oU = function(UU, XU) {
+          const zU = Math.floor(UU.positions.length / 3),
+            cU = UU.indices.length,
+            yU = zU * (XU ? 5 : 3),
+            QU = new Uint8Array(4 * (yU + cU)),
+            AU = new DataView(QU.buffer);
+          for (let DU = 0; DU < 3 * zU; DU++) AU.setFloat32(4 * DU, UU.positions[DU], !0);
+          if (XU) {
+            var FU;
+            const XU = null !== (FU = UU.uvs) && void 0 !== FU ? FU : [];
+            for (let UU = 0; UU < 2 * zU; UU++) {
+              var oU;
+              AU.setFloat32(4 * (3 * zU + UU), null !== (oU = XU[UU]) && void 0 !== oU ? oU : 0, !0)
             }
           }
-          for (let QM = 0; QM < OM; QM++) aM.setUint32(4 * (SM + QM), MM.indices[QM], !0);
-          return jM
-        }(MM, (0, Lr.l)(rM));
-        return (0, hM.Be)(SM, 0, OM, jM, aM, iM, PM, MM.indices.length, nM) && this.liveMeshes.add(OM), OM
+          for (let DU = 0; DU < cU; DU++) AU.setUint32(4 * (yU + DU), UU.indices[DU], !0);
+          return QU
+        }(UU, (0, YX.l)(XU));
+        return (0, pU.Ne)(yU, 0, cU, QU, AU, zU, FU, UU.indices.length, oU) && this.liveMeshes.add(cU), cU
       }
-      setGameMesh(MM, rM) {
-        var iM;
-        const OM = this.deps.cmd();
-        if (!OM) return;
-        let SM = 0;
-        rM.anchor && (SM |= hM.Sb.Anchor, Hi[0] = rM.anchor[0], Hi[1] = rM.anchor[1], Hi[2] = rM.anchor[2]), void 0 !== rM.visible && (SM |= hM.Sb.Visible), rM.uvOffset && (SM |= hM.Sb.UvOffset, Ji[0] = rM.uvOffset[0], Ji[1] = rM.uvOffset[1]);
-        const jM = null !== (iM = rM.visibility) && void 0 !== iM ? iM : 1;
-        void 0 !== rM.visibility && (SM |= hM.Sb.Visibility), rM.scale && (SM |= hM.Sb.Scale, di[0] = rM.scale[0], di[1] = rM.scale[1], di[2] = rM.scale[2]), 0 !== SM && (0, hM.Ie)(OM, 0, MM, SM, rM.visible ? 1 : 0, Hi, Ji, jM, di)
+      setGameMesh(UU, XU) {
+        var zU;
+        const cU = this.deps.cmd();
+        if (!cU) return;
+        let yU = 0;
+        XU.anchor && (yU |= pU.fc.Anchor, Iz[0] = XU.anchor[0], Iz[1] = XU.anchor[1], Iz[2] = XU.anchor[2]), void 0 !== XU.visible && (yU |= pU.fc.Visible), XU.uvOffset && (yU |= pU.fc.UvOffset, pz[0] = XU.uvOffset[0], pz[1] = XU.uvOffset[1]);
+        const QU = null !== (zU = XU.visibility) && void 0 !== zU ? zU : 1;
+        void 0 !== XU.visibility && (yU |= pU.fc.Visibility), XU.scale && (yU |= pU.fc.Scale, az[0] = XU.scale[0], az[1] = XU.scale[1], az[2] = XU.scale[2]), 0 !== yU && (0, pU.Qe)(cU, 0, UU, yU, XU.visible ? 1 : 0, Iz, pz, QU, az)
       }
-      disposeGameMesh(MM) {
-        const rM = this.deps.cmd();
-        rM && !(0, hM.Ee)(rM, 0, MM) || this.liveMeshes.delete(MM)
+      disposeGameMesh(UU) {
+        const XU = this.deps.cmd();
+        XU && !(0, pU.Pe)(XU, 0, UU) || this.liveMeshes.delete(UU)
       }
-      hasPackModel(MM) {
-        var rM, iM, OM;
-        return null !== (rM = null === (iM = (OM = this.deps).hasPackModel) || void 0 === iM ? void 0 : iM.call(OM, MM)) && void 0 !== rM && rM
+      hasPackModel(UU) {
+        var XU, zU, cU;
+        return null !== (XU = null === (zU = (cU = this.deps).hasPackModel) || void 0 === zU ? void 0 : zU.call(cU, UU)) && void 0 !== XU && XU
       }
       disposeGameOutput() {
-        const MM = MM => {
+        const UU = UU => {
           try {
-            MM()
-          } catch (rM) {
-            console.error("Error freeing client game output", rM)
+            UU()
+          } catch (XU) {
+            console.error("Error freeing client game output", XU)
           }
         };
-        for (const rM of [...this.liveMeshes]) MM((() => {
-          this.disposeGameMesh(rM)
+        for (const XU of [...this.liveMeshes]) UU((() => {
+          this.disposeGameMesh(XU)
         }));
-        for (const rM of [...this.livePools]) MM((() => {
-          rM.dispose()
+        for (const XU of [...this.livePools]) UU((() => {
+          XU.dispose()
         }));
-        MM((() => {
+        UU((() => {
           this.mobModels.disposeAll()
-        })), MM((() => {
+        })), UU((() => {
           this.setGroundArrowStyle(null)
-        })), MM((() => {
+        })), UU((() => {
           this.setRouteChevrons(null), this.routeOffset = 0, this.routeLook = ""
-        })), MM((() => {
+        })), UU((() => {
           this.setCrosshairShown(null)
-        })), MM((() => {
+        })), UU((() => {
           this.cameraTurn.dispose()
-        })), MM((() => {
+        })), UU((() => {
           this.farSet && (this.farSet = !1, this.setCameraFar(null))
         }))
       }
-      createInstancePool(MM, rM) {
-        const iM = this.tables.idOf(MM.item);
-        if (void 0 === iM) return null;
-        const OM = new Kr(++this.poolKeys, {
-          item: iM,
-          scale: MM.scale,
-          yaw: MM.yaw
-        }, rM, this.poolHost);
-        return this.livePools.add(OM), OM
+      createInstancePool(UU, XU) {
+        const zU = this.tables.idOf(UU.item);
+        if (void 0 === zU) return null;
+        const cU = new jX(++this.poolKeys, {
+          item: zU,
+          scale: UU.scale,
+          yaw: UU.yaw
+        }, XU, this.poolHost);
+        return this.livePools.add(cU), cU
       }
-      createMobModel(MM, rM) {
-        return this.mobModels.create(MM, rM)
+      createMobModel(UU, XU) {
+        return this.mobModels.create(UU, XU)
       }
-      createCosmeticModel(MM, rM) {
-        return this.mobModels.createCosmetic(MM, rM)
+      createCosmeticModel(UU, XU) {
+        return this.mobModels.createCosmetic(UU, XU)
       }
-      setRouteChevrons(MM) {
-        if (0 !== this.routeMesh && (this.disposeGameMesh(this.routeMesh), this.routeMesh = 0), !MM || 0 === MM.cells.length) return;
-        const rM = `${MM.colour} ${MM.alpha}`;
-        rM !== this.routeLook && (this.routeLook = rM, this.routeOffset = 0), this.routeMesh = this.createGameMesh(function(MM) {
-          const [rM, iM, OM] = MM[0].pos, SM = [], jM = [], aM = [];
-          return MM.forEach(((MM, PM) => {
+      setRouteChevrons(UU) {
+        if (0 !== this.routeMesh && (this.disposeGameMesh(this.routeMesh), this.routeMesh = 0), !UU || 0 === UU.cells.length) return;
+        const XU = `${UU.colour} ${UU.alpha}`;
+        XU !== this.routeLook && (this.routeLook = XU, this.routeOffset = 0), this.routeMesh = this.createGameMesh(function(UU) {
+          const [XU, zU, cU] = UU[0].pos, yU = [], QU = [], AU = [];
+          return UU.forEach(((UU, FU) => {
             let {
-              pos: nM,
-              way: [QM, zM]
-            } = MM;
-            const LM = nM[0] - rM + .5,
-              mM = nM[1] - iM + .04,
-              HM = nM[2] - OM + .5,
-              [hM, JM] = [.35 * -zM, .35 * QM],
-              [dM, yM] = [PM * yi, (PM + 1) * yi],
-              lM = SM.length / 3;
-            SM.push(LM - .5 * QM + hM, mM, HM - .5 * zM + JM), SM.push(LM - .5 * QM - hM, mM, HM - .5 * zM - JM), SM.push(LM + .5 * QM + hM, mM, HM + .5 * zM + JM), SM.push(LM + .5 * QM - hM, mM, HM + .5 * zM - JM), jM.push(0, dM, 1, dM, 0, yM, 1, yM), aM.push(lM, lM + 1, lM + 2, lM + 1, lM + 3, lM + 2)
+              pos: oU,
+              way: [DU, EU]
+            } = UU;
+            const YU = oU[0] - XU + .5,
+              NU = oU[1] - zU + .04,
+              IU = oU[2] - cU + .5,
+              [pU, aU] = [.35 * -EU, .35 * DU],
+              [tU, gU] = [FU * tz, (FU + 1) * tz],
+              kU = yU.length / 3;
+            yU.push(YU - .5 * DU + pU, NU, IU - .5 * EU + aU), yU.push(YU - .5 * DU - pU, NU, IU - .5 * EU - aU), yU.push(YU + .5 * DU + pU, NU, IU + .5 * EU + aU), yU.push(YU + .5 * DU - pU, NU, IU + .5 * EU - aU), QU.push(0, tU, 1, tU, 0, gU, 1, gU), AU.push(kU, kU + 1, kU + 2, kU + 1, kU + 3, kU + 2)
           })), {
-            positions: SM,
-            uvs: jM,
-            indices: aM
+            positions: yU,
+            uvs: QU,
+            indices: AU
           }
-        }(MM.cells), {
+        }(UU.cells), {
           kind: "chevronPath",
-          colour: MM.colour,
-          alpha: MM.alpha
-        }, MM.cells[0].pos), this.setRouteSlide()
+          colour: UU.colour,
+          alpha: UU.alpha
+        }, UU.cells[0].pos), this.setRouteSlide()
       }
-      slideRoute(MM) {
-        0 !== this.routeMesh && (this.routeOffset = (this.routeOffset + Math.min(MM, 250) / 1e3 * 1.2 * yi) % 1, this.setRouteSlide())
+      slideRoute(UU) {
+        0 !== this.routeMesh && (this.routeOffset = (this.routeOffset + Math.min(UU, 250) / 1e3 * 1.2 * tz) % 1, this.setRouteSlide())
       }
       setRouteSlide() {
         this.routeSlide.uvOffset[1] = -this.routeOffset, this.setGameMesh(this.routeMesh, this.routeSlide)
       }
-      setGroundArrowStyle(MM) {
-        this.pendingStyle = MM, this.flushOwed()
+      setGroundArrowStyle(UU) {
+        this.pendingStyle = UU, this.flushOwed()
       }
       flushOwed() {
         this.mobModels.flush();
-        const MM = this.owedFrees;
-        if (0 === MM.length && void 0 === this.pendingStyle && void 0 === this.pendingFar) return;
-        const rM = this.deps.cmd();
-        if (!rM) return MM.length = 0, void(this.pendingFar = void 0);
-        let iM = 0;
-        for (; iM < MM.length && (0, hM.Qe)(rM, 0, MM[iM]);) iM++;
-        MM.splice(0, iM);
-        const OM = this.pendingStyle;
-        if (void 0 !== OM) {
-          (OM ? (0, hM.Vf)(rM, 0, OM.width, OM.alpha, 1, OM.endAtSolidFace ? 1 : 0) : (0, hM.Vf)(rM, 0, 0, 0, 0, 0)) && (this.pendingStyle = void 0)
+        const UU = this.owedFrees;
+        if (0 === UU.length && void 0 === this.pendingStyle && void 0 === this.pendingFar) return;
+        const XU = this.deps.cmd();
+        if (!XU) return UU.length = 0, void(this.pendingFar = void 0);
+        let zU = 0;
+        for (; zU < UU.length && (0, pU.Ye)(XU, 0, UU[zU]);) zU++;
+        UU.splice(0, zU);
+        const cU = this.pendingStyle;
+        if (void 0 !== cU) {
+          (cU ? (0, pU.Xf)(XU, 0, cU.width, cU.alpha, 1, cU.endAtSolidFace ? 1 : 0) : (0, pU.Xf)(XU, 0, 0, 0, 0, 0)) && (this.pendingStyle = void 0)
         }
-        const SM = this.pendingFar;
-        void 0 !== SM && (0, hM.Qf)(rM, 0, null !== SM && void 0 !== SM ? SM : 0, null === SM ? 1 : 0) && (this.pendingFar = void 0)
+        const yU = this.pendingFar;
+        void 0 !== yU && (0, pU.Uf)(XU, 0, null !== yU && void 0 !== yU ? yU : 0, null === yU ? 1 : 0) && (this.pendingFar = void 0)
       }
-      setNametagOffset(MM, rM) {
-        const iM = this.deps.cmd(),
-          OM = Ui(MM);
-        iM && OM !== hM.Nc && (0, hM.bg)(iM, 0, OM, rM)
+      setNametagOffset(UU, XU) {
+        const zU = this.deps.cmd(),
+          cU = Gz(UU);
+        zU && cU !== pU.ad && (0, pU.$f)(zU, 0, cU, XU)
       }
-      setFacingTolerance(MM, rM) {
-        const iM = this.deps.cmd(),
-          OM = Ui(MM);
-        iM && OM !== hM.Nc && Gi(iM, OM, rM)
+      setFacingTolerance(UU, XU) {
+        const zU = this.deps.cmd(),
+          cU = Gz(UU);
+        zU && cU !== pU.ad && Bz(zU, cU, XU)
       }
-      forEachEntity(MM) {
+      forEachEntity(UU) {
         const {
-          api: rM
+          api: XU
         } = this;
-        for (let iM = 0; iM < rM.idStr.length; iM++) {
-          const OM = rM.idStr[iM];
-          null === OM || GM(rM.kinds[iM]) || MM(OM)
+        for (let zU = 0; zU < XU.idStr.length; zU++) {
+          const cU = XU.idStr[zU];
+          null === cU || ZU(XU.kinds[zU]) || UU(cU)
         }
       }
-      getEntityInfo(MM) {
-        return this.deps.entityInfo.get(MM)
+      getEntityInfo(UU) {
+        return this.deps.entityInfo.get(UU)
       }
-      isEntityInteractable(MM) {
-        const rM = Ui(MM);
-        return rM !== hM.Nc && 1 === this.api.queries.entityInteractable(rM)
+      isEntityInteractable(UU) {
+        const XU = Gz(UU);
+        return XU !== pU.ad && 1 === this.api.queries.entityInteractable(XU)
       }
-      isLocalPlayer(MM) {
-        return this.isLocal(MM)
+      isLocalPlayer(UU) {
+        return this.isLocal(UU)
       }
-      getLineOwner(MM) {
-        var rM;
-        const iM = null === (rM = this.deps.entityInfo.get(MM)) || void 0 === rM ? void 0 : rM.meshOpts;
-        if (!iM) return null;
+      getLineOwner(UU) {
+        var XU;
+        const zU = null === (XU = this.deps.entityInfo.get(UU)) || void 0 === XU ? void 0 : XU.meshOpts;
+        if (!zU) return null;
         try {
           const {
-            lineToEId: MM
-          } = JSON.parse(iM);
-          return null !== MM && void 0 !== MM ? MM : null
+            lineToEId: UU
+          } = JSON.parse(zU);
+          return null !== UU && void 0 !== UU ? UU : null
         } catch {
           return null
         }
       }
       getCameraPosition() {
-        const MM = this.api.apiView;
-        return Li[0] = hM.v.eye(MM, 0, 0), Li[1] = hM.v.eye(MM, 0, 1), Li[2] = hM.v.eye(MM, 0, 2), Li
+        const UU = this.api.apiView;
+        return Yz[0] = pU.w.eye(UU, 0, 0), Yz[1] = pU.w.eye(UU, 0, 1), Yz[2] = pU.w.eye(UU, 0, 2), Yz
       }
       getCameraFar() {
-        return hM.v.cameraFar(this.api.apiView, 0)
+        return pU.w.cameraFar(this.api.apiView, 0)
       }
-      setCameraFar(MM) {
-        null !== MM && (this.farSet = !0), this.pendingFar = MM, this.flushOwed()
+      setCameraFar(UU) {
+        null !== UU && (this.farSet = !0), this.pendingFar = UU, this.flushOwed()
       }
-      turnCamera(MM, rM) {
-        this.cameraTurn.turn(MM, rM)
+      turnCamera(UU, XU) {
+        this.cameraTurn.turn(UU, XU)
       }
-      clearPickupDelay(MM) {
-        const rM = this.deps.cmd(),
-          iM = Ui(MM);
-        rM && iM !== hM.Nc && (0, hM.me)(rM, 0, iM)
+      clearPickupDelay(UU) {
+        const XU = this.deps.cmd(),
+          zU = Gz(UU);
+        XU && zU !== pU.ad && (0, pU.we)(XU, 0, zU)
       }
-      sendChat(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const iM = this.deps.sendCmd();
-        iM && Si(iM, 0, ai.d.Chat, (0, fM.f)((0, ai.k)({
-          Kz: MM,
-          qz: rM
+      sendChat(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const zU = this.deps.sendCmd();
+        return null !== zU && yz(zU, 0, Az.b.Chat, (0, HU.e)((0, Az.i)({
+          TE: UU,
+          hE: XU
         })))
       }
-      sendCommand(MM) {
-        MM.length <= 119 && this.sendChat(`/${MM}`)
+      sendCommand(UU) {
+        UU.length <= 119 && this.sendChat(`/${UU}`)
       }
-      predictedCells(MM, rM, iM, OM) {
-        const SM = this.chunks,
-          jM = [],
-          aM = (MM, rM, iM, OM, SM) => {
-            jM.push(MM, rM, iM, OM, this.tables.blockRootId(SM) === this.tables.blockRootId(OM) ? 0 : 1)
+      predictedCells(UU, XU, zU, cU) {
+        const yU = this.chunks,
+          QU = [],
+          AU = (UU, XU, zU, cU, yU) => {
+            QU.push(UU, XU, zU, cU, this.tables.blockRootId(yU) === this.tables.blockRootId(cU) ? 0 : 1)
           },
-          PM = SM.jP(MM, rM, iM),
-          nM = Ei(PM);
-        if (nM) {
-          const [OM, jM, QM] = [MM - nM.x, rM - nM.y, iM - nM.z], zM = li[SM.jP(OM, jM, QM)], LM = null === zM || void 0 === zM ? void 0 : zM.positions.some((MM => MM.id === PM && MM.x === nM.x && MM.y === nM.y && MM.z === nM.z));
-          for (const MM of (LM && zM ? zM : nM.main).positions) SM.jP(OM + MM.x, jM + MM.y, QM + MM.z) === MM.id && aM(OM + MM.x, jM + MM.y, QM + MM.z, 0, MM.id)
+          FU = yU.yF(UU, XU, zU),
+          oU = kz(FU);
+        if (oU) {
+          const [cU, QU, DU] = [UU - oU.x, XU - oU.y, zU - oU.z], EU = gz[yU.yF(cU, QU, DU)], YU = null === EU || void 0 === EU ? void 0 : EU.positions.some((UU => UU.id === FU && UU.x === oU.x && UU.y === oU.y && UU.z === oU.z));
+          for (const UU of (YU && EU ? EU : oU.main).positions) yU.yF(cU + UU.x, QU + UU.y, DU + UU.z) === UU.id && AU(cU + UU.x, QU + UU.y, DU + UU.z, 0, UU.id)
         }
-        const QM = Ei(OM);
-        if (QM)
-          for (const LM of QM.main.positions) {
-            const [OM, jM, PM] = [MM + LM.x - QM.x, rM + LM.y - QM.y, iM + LM.z - QM.z];
-            aM(OM, jM, PM, LM.id, SM.jP(OM, jM, PM))
-          } else aM(MM, rM, iM, OM, PM);
-        const zM = this.tables;
-        if ((0 !== zM.attachedTopOf(PM) || 0 !== zM.attachedTopOf(OM)) && SM.isLoaded(MM, rM + 1, iM)) {
-          let nM = SM.jP(MM, rM + 1, iM);
-          for (let OM = 0; OM < jM.length; OM += 5) jM[OM] === MM && jM[OM + 1] === rM + 1 && jM[OM + 2] === iM && (nM = jM[OM + 3]);
-          const QM = this.attachedTopWrite(PM, OM, nM);
-          void 0 !== QM && aM(MM, rM + 1, iM, QM, nM)
+        const DU = kz(cU);
+        if (DU)
+          for (const YU of DU.main.positions) {
+            const [cU, QU, FU] = [UU + YU.x - DU.x, XU + YU.y - DU.y, zU + YU.z - DU.z];
+            AU(cU, QU, FU, YU.id, yU.yF(cU, QU, FU))
+          } else AU(UU, XU, zU, cU, FU);
+        const EU = this.tables;
+        if ((0 !== EU.attachedTopOf(FU) || 0 !== EU.attachedTopOf(cU)) && yU.isLoaded(UU, XU + 1, zU)) {
+          let oU = yU.yF(UU, XU + 1, zU);
+          for (let cU = 0; cU < QU.length; cU += 5) QU[cU] === UU && QU[cU + 1] === XU + 1 && QU[cU + 2] === zU && (oU = QU[cU + 3]);
+          const DU = this.attachedTopWrite(FU, cU, oU);
+          void 0 !== DU && AU(UU, XU + 1, zU, DU, oU)
         }
-        return jM
+        return QU
       }
-      attachedTopWrite(MM, rM, iM) {
-        const OM = this.tables,
-          SM = OM.attachedTopOf(MM),
-          jM = OM.attachedTopOf(rM),
-          aM = 0 !== SM && 0 !== iM && OM.blockRootId(iM) === OM.blockRootId(SM);
-        return 0 !== SM && 0 !== jM && OM.blockRootId(MM) === OM.blockRootId(rM) ? aM && iM !== jM ? jM : void 0 : 0 === jM || !aM && 0 !== iM ? aM ? 0 : void 0 : jM
+      attachedTopWrite(UU, XU, zU) {
+        const cU = this.tables,
+          yU = cU.attachedTopOf(UU),
+          QU = cU.attachedTopOf(XU),
+          AU = 0 !== yU && 0 !== zU && cU.blockRootId(zU) === cU.blockRootId(yU);
+        return 0 !== yU && 0 !== QU && cU.blockRootId(UU) === cU.blockRootId(XU) ? AU && zU !== QU ? QU : void 0 : 0 === QU || !AU && 0 !== zU ? AU ? 0 : void 0 : QU
       }
     }
-    const ei = hM.bc + hM.fc * hM.jc.BYTES,
-      bi = 2147483647,
-      wi = new TextDecoder,
-      ti = new TextEncoder,
-      gi = Object.freeze({
-        Ha: 0,
-        Pz: null,
+    const Rz = pU.sc + pU.wc * pU.Bc.BYTES,
+      Pz = 2147483647,
+      Wz = new TextDecoder,
+      dz = new TextEncoder,
+      Lz = Object.freeze({
+        NA: 0,
+        DE: null,
         amountAddedToSlot: 0
       }),
-      ui = new Proxy({}, {
-        get: () => () => hM.Yc
+      ez = new Proxy({}, {
+        get: () => () => pU.nd
       });
 
-    function Ri(MM) {
-      return Number.isInteger(MM) && MM >= 0 && MM <= 65535
+    function Cz(UU) {
+      return Number.isInteger(UU) && UU >= 0 && UU <= 65535
     }
 
-    function Wi(MM) {
-      return Number.isInteger(MM) && MM >= 0 && MM <= 4294967295
+    function wz(UU) {
+      return Number.isInteger(UU) && UU >= 0 && UU <= 4294967295
     }
-    class si {
-      constructor(MM) {
-        this.deps = MM, this.ti = [0, 0, 0], this.inaccuracy = 0, this.version = 0, this.notified = 0, this.iconChanged = !1, this.facades = new Array(hM.fc), this.ids = new Uint16Array(hM.fc), this.amounts = new Uint16Array(hM.fc), this.attrRead = new Float64Array(hM.fc).fill(-1), this.stale = new Uint16Array(hM.fc), this.staleVersion = new Uint32Array(hM.fc), this.instances = new Uint32Array(hM.fc), this.viewPtr = 0, this.viewVersion = -1, this.len = 0, this.selected = 0, this.slotIconId = 0, this.stopped = !1, this.listeners = new Set
+    class qz {
+      constructor(UU) {
+        this.deps = UU, this.jU = [0, 0, 0], this.inaccuracy = 0, this.version = 0, this.notified = 0, this.iconChanged = !1, this.facades = new Array(pU.wc), this.ids = new Uint16Array(pU.wc), this.amounts = new Uint16Array(pU.wc), this.attrRead = new Float64Array(pU.wc).fill(-1), this.stale = new Uint16Array(pU.wc), this.staleVersion = new Uint32Array(pU.wc), this.instances = new Uint32Array(pU.wc), this.viewPtr = 0, this.viewVersion = -1, this.len = 0, this.selected = 0, this.slotIconId = 0, this.stopped = !1, this.listeners = new Set
       }
       get length() {
         return this.len
@@ -2839,261 +2660,261 @@ export const modules = {
       get changes() {
         return this.version
       }
-      slot(MM) {
-        var rM;
-        return Number.isInteger(MM) && MM >= 0 && MM < this.len && 0 !== this.ids[MM] && null !== (rM = this.facades[MM]) && void 0 !== rM ? rM : null
+      slot(UU) {
+        var XU;
+        return Number.isInteger(UU) && UU >= 0 && UU < this.len && 0 !== this.ids[UU] && null !== (XU = this.facades[UU]) && void 0 !== XU ? XU : null
       }
-      sQ() {
+      uD() {
         return this.slot(this.selected)
       }
       playerItems() {
-        const MM = [];
-        for (let rM = 0; rM < Math.min(hM.gd, this.len); rM++) MM.push(this.slot(rM));
-        return MM
+        const UU = [];
+        for (let XU = 0; XU < Math.min(pU.yd, this.len); XU++) UU.push(this.slot(XU));
+        return UU
       }
       freeSlots() {
-        let MM = 0;
-        for (let rM = 0; rM < Math.min(hM.gd - hM.i, this.len); rM++) 0 === this.ids[rM] && MM++;
-        return MM
+        let UU = 0;
+        for (let XU = 0; XU < Math.min(pU.yd - pU.g, this.len); XU++) 0 === this.ids[XU] && UU++;
+        return UU
       }
-      amountOf(MM) {
-        let rM = 0;
-        for (let OM = 0; OM < Math.min(hM.gd, this.len); OM++) {
-          const SM = this.slot(OM);
-          var iM;
-          if ((null === SM || void 0 === SM ? void 0 : SM.name) === MM) rM += null !== (iM = SM.amount) && void 0 !== iM ? iM : 1
+      amountOf(UU) {
+        let XU = 0;
+        for (let cU = 0; cU < Math.min(pU.yd, this.len); cU++) {
+          const yU = this.slot(cU);
+          var zU;
+          if ((null === yU || void 0 === yU ? void 0 : yU.name) === UU) XU += null !== (zU = yU.amount) && void 0 !== zU ? zU : 1
         }
-        return rM
+        return XU
       }
-      instance(MM) {
-        var rM;
-        return null !== (rM = this.instances[MM]) && void 0 !== rM ? rM : 0
+      instance(UU) {
+        var XU;
+        return null !== (XU = this.instances[UU]) && void 0 !== XU ? XU : 0
       }
-      watch(MM) {
-        return this.listeners.add(MM), () => {
-          this.listeners.delete(MM)
+      watch(UU) {
+        return this.listeners.add(UU), () => {
+          this.listeners.delete(UU)
         }
       }
       touch() {
         this.version++
       }
-      flush(MM) {
+      flush(UU) {
         if (this.version !== this.notified || this.iconChanged) {
           this.notified = this.version, this.iconChanged = !1;
-          for (const iM of [...this.listeners]) try {
-            iM()
-          } catch (rM) {
-            MM(rM)
+          for (const zU of [...this.listeners]) try {
+            zU()
+          } catch (XU) {
+            UU(XU)
           }
         }
       }
-      chestOpened(MM, rM, iM) {
-        this.ti[0] = MM, this.ti[1] = rM, this.ti[2] = iM, this.version++
+      chestOpened(UU, XU, zU) {
+        this.jU[0] = UU, this.jU[1] = XU, this.jU[2] = zU, this.version++
       }
       refresh() {
-        const MM = this.deps.api.apiView,
-          rM = hM.v.inventoryViewPtr(MM, 0),
-          iM = hM.v.inventoryVersion(MM, 0),
-          OM = hM.v.selectedSlot(MM, 0);
-        OM !== this.selected && (this.selected = OM, this.version++);
-        const SM = hM.v.slotIcon(MM, 0);
-        if (SM !== this.slotIconId && (this.slotIconId = SM, this.iconChanged = !0), rM === this.viewPtr && iM === this.viewVersion) return;
-        this.viewPtr = rM, this.viewVersion = iM;
-        const jM = this.deps.api.memoryData(rM, ei, 4, "the inventory view"),
-          aM = jM ? Math.min(jM.getUint32(0, !0), hM.fc) : 0;
-        aM !== this.len && (this.len = aM, this.version++);
-        let PM = 0;
-        for (let nM = 0; nM < hM.fc; nM++) {
-          const MM = hM.bc + nM * hM.jc.BYTES,
-            rM = null !== jM && nM < aM ? hM.jc.item(jM, MM) : 0;
-          if (0 === rM || null === jM) {
-            0 !== this.ids[nM] && (this.ids[nM] = 0, this.attrRead[nM] = -1, this.instances[nM]++, this.version++);
+        const UU = this.deps.api.apiView,
+          XU = pU.w.inventoryViewPtr(UU, 0),
+          zU = pU.w.inventoryVersion(UU, 0),
+          cU = pU.w.selectedSlot(UU, 0);
+        cU !== this.selected && (this.selected = cU, this.version++);
+        const yU = pU.w.slotIcon(UU, 0);
+        if (yU !== this.slotIconId && (this.slotIconId = yU, this.iconChanged = !0), XU === this.viewPtr && zU === this.viewVersion) return;
+        this.viewPtr = XU, this.viewVersion = zU;
+        const QU = this.deps.api.memoryData(XU, Rz, 4, "the inventory view"),
+          AU = QU ? Math.min(QU.getUint32(0, !0), pU.wc) : 0;
+        AU !== this.len && (this.len = AU, this.version++);
+        let FU = 0;
+        for (let oU = 0; oU < pU.wc; oU++) {
+          const UU = pU.sc + oU * pU.Bc.BYTES,
+            XU = null !== QU && oU < AU ? pU.Bc.item(QU, UU) : 0;
+          if (0 === XU || null === QU) {
+            0 !== this.ids[oU] && (this.ids[oU] = 0, this.attrRead[oU] = -1, this.instances[oU]++, this.version++);
             continue
           }
-          const iM = hM.jc.amount(jM, MM),
-            OM = hM.jc.attrVersion(jM, MM);
-          rM === this.ids[nM] && iM === this.amounts[nM] || this.fill(nM, rM, iM), OM !== this.attrRead[nM] && (this.stale[PM] = nM, this.staleVersion[PM] = OM, PM++)
+          const zU = pU.Bc.amount(QU, UU),
+            cU = pU.Bc.attrVersion(QU, UU);
+          XU === this.ids[oU] && zU === this.amounts[oU] || this.fill(oU, XU, zU), cU !== this.attrRead[oU] && (this.stale[FU] = oU, this.staleVersion[FU] = cU, FU++)
         }
-        PM > 0 && this.fetchAttributes(PM)
+        FU > 0 && this.fetchAttributes(FU)
       }
-      fill(MM, rM, iM) {
+      fill(UU, XU, zU) {
         const {
-          tables: OM
-        } = this.deps, SM = rM !== this.ids[MM];
-        let jM = this.facades[MM];
-        jM || (jM = {
+          tables: cU
+        } = this.deps, yU = XU !== this.ids[UU];
+        let QU = this.facades[UU];
+        QU || (QU = {
           name: "",
           amount: null,
           attributes: {
             customAttributes: {}
           },
           typeObj: null
-        }, this.facades[MM] = jM), SM && (jM.name = OM.nameOfId(rM), jM.typeObj = OM.itemType(rM), jM.attributes = {
+        }, this.facades[UU] = QU), yU && (QU.name = cU.nameOfId(XU), QU.typeObj = cU.itemType(XU), QU.attributes = {
           customAttributes: {}
-        }, this.attrRead[MM] = -1, this.instances[MM]++), jM.amount = 0 === iM ? null : iM, this.ids[MM] = rM, this.amounts[MM] = iM, this.version++
+        }, this.attrRead[UU] = -1, this.instances[UU]++), QU.amount = 0 === zU ? null : zU, this.ids[UU] = XU, this.amounts[UU] = zU, this.version++
       }
-      fetchAttributes(MM) {
+      fetchAttributes(UU) {
         const {
-          api: rM,
-          onError: iM
-        } = this.deps, OM = rM.memoryView(Uint16Array, rM.scratch(), MM, "item_attributes_batch's slots");
-        if (!OM) return void this.markRead(MM);
-        OM.set(this.stale.subarray(0, MM));
-        const SM = rM.queries.itemAttributesBatch(MM),
-          jM = 4294967295 === SM ? null : rM.memoryData(rM.scratch(), SM, 4, "item_attributes_batch's answer");
-        if (!jM) return void this.markRead(MM);
-        const aM = new Uint8Array(jM.buffer, jM.byteOffset, SM);
-        for (let nM = 0; nM + 8 <= SM;) {
-          const MM = jM.getUint16(nM, !0),
-            rM = jM.getUint32(nM + 4, !0),
-            OM = aM.subarray(nM + 8, nM + 8 + rM);
-          nM += 8 + (0, mM.oe)(rM);
-          const SM = this.facades[MM];
-          if (SM && 0 !== this.ids[MM] && 0 !== rM) {
+          api: XU,
+          onError: zU
+        } = this.deps, cU = XU.memoryView(Uint16Array, XU.scratch(), UU, "item_attributes_batch's slots");
+        if (!cU) return void this.markRead(UU);
+        cU.set(this.stale.subarray(0, UU));
+        const yU = XU.queries.itemAttributesBatch(UU),
+          QU = 4294967295 === yU ? null : XU.memoryData(XU.scratch(), yU, 4, "item_attributes_batch's answer");
+        if (!QU) return void this.markRead(UU);
+        const AU = new Uint8Array(QU.buffer, QU.byteOffset, yU);
+        for (let oU = 0; oU + 8 <= yU;) {
+          const UU = QU.getUint16(oU, !0),
+            XU = QU.getUint32(oU + 4, !0),
+            cU = AU.subarray(oU + 8, oU + 8 + XU);
+          oU += 8 + (0, NU.De)(XU);
+          const yU = this.facades[UU];
+          if (yU && 0 !== this.ids[UU] && 0 !== XU) {
             try {
-              SM.attributes = JSON.parse(wi.decode(OM))
-            } catch (PM) {
-              iM(PM)
+              yU.attributes = JSON.parse(Wz.decode(cU))
+            } catch (FU) {
+              zU(FU)
             }
             this.version++
           }
         }
-        this.markRead(MM)
+        this.markRead(UU)
       }
-      markRead(MM) {
-        for (let rM = 0; rM < MM; rM++) this.attrRead[this.stale[rM]] = this.staleVersion[rM]
+      markRead(UU) {
+        for (let XU = 0; XU < UU; XU++) this.attrRead[this.stale[XU]] = this.staleVersion[XU]
       }
-      swap(MM, rM) {
-        return Ri(MM) && Ri(rM) && this.settle(this.queries().invSwap(MM, rM))
+      swap(UU, XU) {
+        return Cz(UU) && Cz(XU) && this.settle(this.queries().invSwap(UU, XU))
       }
-      move(MM, rM, iM) {
-        return Ri(MM) && Ri(rM) && Wi(iM) && this.settle(this.queries().invMove(MM, rM, iM))
+      move(UU, XU, zU) {
+        return Cz(UU) && Cz(XU) && wz(zU) && this.settle(this.queries().invMove(UU, XU, zU))
       }
-      quickMove(MM, rM, iM, OM) {
-        var SM, jM;
-        if (!Ri(MM) || !Ri(rM) || !Ri(iM) || null !== OM && !Wi(OM)) return null;
-        const aM = this.queries().invQuickMove(MM, rM, iM, null === OM ? -1 : Math.min(OM, bi)),
-          PM = aM === hM.Yc ? hM.Gb : null !== (SM = null === (jM = this.extras()) || void 0 === jM ? void 0 : jM[1]) && void 0 !== SM ? SM : hM.Gb;
-        return this.settle(aM), PM === hM.Gb ? null : PM
+      quickMove(UU, XU, zU, cU) {
+        var yU, QU;
+        if (!Cz(UU) || !Cz(XU) || !Cz(zU) || null !== cU && !wz(cU)) return null;
+        const AU = this.queries().invQuickMove(UU, XU, zU, null === cU ? -1 : Math.min(cU, Pz)),
+          FU = AU === pU.nd ? pU.Nb : null !== (yU = null === (QU = this.extras()) || void 0 === QU ? void 0 : QU[1]) && void 0 !== yU ? yU : pU.Nb;
+        return this.settle(AU), FU === pU.Nb ? null : FU
       }
-      remove(MM, rM, iM) {
-        return Ri(MM) && Wi(rM) && this.settle(this.queries().invRemove(MM, rM, iM ? 1 : 0))
+      remove(UU, XU, zU) {
+        return Cz(UU) && wz(XU) && this.settle(this.queries().invRemove(UU, XU, zU ? 1 : 0))
       }
-      selectSlot(MM) {
-        return Ri(MM) && this.settle(this.queries().selectSlot(MM))
+      selectSlot(UU) {
+        return Cz(UU) && this.settle(this.queries().selectSlot(UU))
       }
       closeChest() {
         return this.settle(this.queries().closeChest())
       }
-      enchant(MM, rM, iM) {
-        if (!Ri(MM) || !Number.isInteger(rM)) return !1;
-        const [OM, SM, jM] = iM;
-        return this.settle(this.queries().invEnchant(MM, rM, Math.floor(OM), Math.floor(SM), Math.floor(jM)))
+      enchant(UU, XU, zU) {
+        if (!Cz(UU) || !Number.isInteger(XU)) return !1;
+        const [cU, yU, QU] = zU;
+        return this.settle(this.queries().invEnchant(UU, XU, Math.floor(cU), Math.floor(yU), Math.floor(QU)))
       }
-      craft(MM, rM, iM) {
-        let OM;
+      craft(UU, XU, zU) {
+        let cU;
         try {
-          OM = this.deps.tables.getItemId(MM)
+          cU = this.deps.tables.getItemId(UU)
         } catch {
-          return gi
+          return Lz
         }
-        if (!Ri(rM) || null !== iM && (Number.isNaN(iM) || iM < 0)) return gi;
-        const SM = null === iM || iM > bi ? -1 : Math.floor(iM),
-          jM = this.queries().craft(OM, rM, SM);
-        let aM = gi;
-        const PM = jM === hM.Yc ? null : this.extras();
-        if (PM) {
-          const [MM, rM, iM] = PM;
-          aM = {
-            Ha: MM,
-            Pz: rM === hM.Gb ? null : rM,
-            amountAddedToSlot: iM
+        if (!Cz(XU) || null !== zU && (Number.isNaN(zU) || zU < 0)) return Lz;
+        const yU = null === zU || zU > Pz ? -1 : Math.floor(zU),
+          QU = this.queries().craft(cU, XU, yU);
+        let AU = Lz;
+        const FU = QU === pU.nd ? null : this.extras();
+        if (FU) {
+          const [UU, XU, zU] = FU;
+          AU = {
+            NA: UU,
+            DE: XU === pU.Nb ? null : XU,
+            amountAddedToSlot: zU
           }
         }
-        return this.settle(jM), aM
+        return this.settle(QU), AU
       }
-      salvage(MM, rM, iM) {
-        let OM;
+      salvage(UU, XU, zU) {
+        let cU;
         try {
-          OM = this.deps.tables.getItemId(rM)
+          cU = this.deps.tables.getItemId(XU)
         } catch {
           return !1
         }
-        return Ri(MM) && Number.isInteger(iM) && this.settle(this.queries().salvage(MM, OM, Math.max(Math.min(iM, bi), -bi)))
+        return Cz(UU) && Number.isInteger(zU) && this.settle(this.queries().salvage(UU, cU, Math.max(Math.min(zU, Pz), -Pz)))
       }
-      craftingView(MM, rM, iM) {
-        var OM;
+      craftingView(UU, XU, zU) {
+        var cU;
         if (this.stopped) return null;
         const {
-          api: SM,
-          onError: jM
-        } = this.deps, aM = MM ? ti.encode(MM) : null;
-        if (null !== aM) {
-          if (aM.length > 1024) return jM(new Error(`The crafting station ${MM}'s name is over 1024 bytes`)), null;
-          const rM = SM.memoryView(Uint8Array, SM.scratch(), aM.length, "crafting_view's station");
-          if (!rM) return null;
-          rM.set(aM)
+          api: yU,
+          onError: QU
+        } = this.deps, AU = UU ? dz.encode(UU) : null;
+        if (null !== AU) {
+          if (AU.length > 1024) return QU(new Error(`The crafting station ${UU}'s name is over 1024 bytes`)), null;
+          const XU = yU.memoryView(Uint8Array, yU.scratch(), AU.length, "crafting_view's station");
+          if (!XU) return null;
+          XU.set(AU)
         }
-        const PM = Ri(rM) && Ri(iM),
-          nM = SM.queries.craftingView(null !== (OM = null === aM || void 0 === aM ? void 0 : aM.length) && void 0 !== OM ? OM : 0, PM ? rM : 0, PM ? iM : 0);
-        return nM < hM.gb.BYTES ? (SM.reportCorruption(`crafting_view's answer of ${nM} bytes`), null) : SM.memoryData(SM.scratch(), nM, 1, "crafting_view's answer")
+        const FU = Cz(XU) && Cz(zU),
+          oU = yU.queries.craftingView(null !== (cU = null === AU || void 0 === AU ? void 0 : AU.length) && void 0 !== cU ? cU : 0, FU ? XU : 0, FU ? zU : 0);
+        return oU < pU.mb.BYTES ? (yU.reportCorruption(`crafting_view's answer of ${oU} bytes`), null) : yU.memoryData(yU.scratch(), oU, 1, "crafting_view's answer")
       }
       queries() {
-        var MM, rM;
-        return !1 === (null === (MM = (rM = this.deps).beforeOp) || void 0 === MM ? void 0 : MM.call(rM)) ? (this.stopped = !0, ui) : this.deps.api.queries
+        var UU, XU;
+        return !1 === (null === (UU = (XU = this.deps).beforeOp) || void 0 === UU ? void 0 : UU.call(XU)) ? (this.stopped = !0, ez) : this.deps.api.queries
       }
       extras() {
         const {
-          api: MM
+          api: UU
         } = this.deps;
-        return MM.memoryView(Uint32Array, MM.scratch(), 3, "a sync query's extra words")
+        return UU.memoryView(Uint32Array, UU.scratch(), 3, "a sync query's extra words")
       }
-      settle(MM) {
-        if (MM === hM.Uc)(0, Oi.e)();
-        else if (MM !== hM.Yc) {
-          const rM = this.deps.cmd();
-          rM && function(MM, rM, iM) {
-            return (0, Oi.e)(), (0, hM.qg)(MM, rM, iM)
-          }(rM, 0, MM) || this.deps.onError(new Error(`Sync op ${MM}'s marker didn't fit the command ring: its send goes after the next frame's commands`))
+      settle(UU) {
+        if (UU === pU.kd)(0, cz.e)();
+        else if (UU !== pU.nd) {
+          const XU = this.deps.cmd();
+          XU && function(UU, XU, zU) {
+            return (0, cz.e)(), (0, pU.jg)(UU, XU, zU)
+          }(XU, 0, UU) || this.deps.onError(new Error(`Sync op ${UU}'s marker didn't fit the command ring: its send goes after the next frame's commands`))
         }
-        return this.stopped || this.refresh(), MM !== hM.Yc
+        return this.stopped || this.refresh(), UU !== pU.nd
       }
     }
-    const Di = 1 / .6,
-      ki = [0, 1, 0],
-      Zi = [0, 0, 0],
-      oi = new Uint8Array(0),
-      fi = 1.2 * lr.f.Sy,
-      Yi = new TextEncoder,
-      Ni = [0, 0, 0],
-      Ai = [0, 0, 0],
-      xi = new Map;
+    const Oz = 1 / .6,
+      Sz = [0, 1, 0],
+      rz = [0, 0, 0],
+      uz = new Uint8Array(0),
+      fz = 1.2 * kX.f.zg,
+      iz = new TextEncoder,
+      Hz = [0, 0, 0],
+      Mz = [0, 0, 0],
+      vz = new Map;
 
-    function vi(MM) {
-      let rM = xi.get(MM);
-      return rM || (xi.size >= 64 && xi.clear(), rM = Yi.encode(`{"emitRate":${MM}}`), xi.set(MM, rM)), rM
+    function Vz(UU) {
+      let XU = vz.get(UU);
+      return XU || (vz.size >= 64 && vz.clear(), XU = iz.encode(`{"emitRate":${UU}}`), vz.set(UU, XU)), XU
     }
 
-    function Fi(MM) {
-      return Number.isFinite(MM) && MM > 0 ? MM : 0
+    function sz(UU) {
+      return Number.isFinite(UU) && UU > 0 ? UU : 0
     }
 
-    function Bi(MM, rM) {
-      for (let iM = 0; iM < 3; iM++) {
-        const OM = Math.abs(rM[iM]);
-        Ni[iM] = MM[iM] - OM, Ai[iM] = 2 * OM
+    function nz(UU, XU) {
+      for (let zU = 0; zU < 3; zU++) {
+        const cU = Math.abs(XU[zU]);
+        Hz[zU] = UU[zU] - cU, Mz[zU] = 2 * cU
       }
-      return Number.isFinite(Ni[0] + Ni[1] + Ni[2] + Ai[0] + Ai[1] + Ai[2])
+      return Number.isFinite(Hz[0] + Hz[1] + Hz[2] + Mz[0] + Mz[1] + Mz[2])
     }
 
-    function Xi(MM, rM) {
-      return "pos1" === MM || "pos2" === MM ? void 0 : rM
+    function mz(UU, XU) {
+      return "pos1" === UU || "pos2" === UU ? void 0 : XU
     }
 
-    function Ii(MM, rM, iM) {
-      return MM.length > hM.ud.MaxOpts ? (iM(new Error(`${rM}'s particle opts are over ${hM.ud.MaxOpts} bytes of JSON`)), null) : MM
+    function lz(UU, XU, zU) {
+      return UU.length > pU.Ld.MaxOpts ? (zU(new Error(`${XU}'s particle opts are over ${pU.Ld.MaxOpts} bytes of JSON`)), null) : UU
     }
-    const Ki = {
+    const xz = {
       moveTo() {},
       setEmitRate() {},
       emit() {},
@@ -3102,9 +2923,9 @@ export const modules = {
       stop() {},
       dispose() {}
     };
-    class qi {
-      constructor(MM) {
-        this.deps = MM, this.session = 0, this.nextKey = 1, this.live = 0, this.started = !1
+    class Jz {
+      constructor(UU) {
+        this.deps = UU, this.session = 0, this.nextKey = 1, this.live = 0, this.started = !1
       }
       enabled() {
         return null !== this.sink()
@@ -3112,113 +2933,113 @@ export const modules = {
       sink() {
         return this.deps.isSessionLive() ? this.deps.cmd() : null
       }
-      create(MM, rM) {
-        var iM;
-        const OM = this.sink(),
-          SM = null !== (iM = rM.half) && void 0 !== iM ? iM : Zi;
-        if (!OM || this.live >= hM.ud.MaxLiveKeys || this.nextKey > hM.ud.MaxKey || !Bi(rM.pos, SM)) return Ki;
-        const jM = this.nextKey,
-          aM = Ii(function(MM) {
-            var rM, iM, OM;
-            const SM = JSON.stringify({
-              texture: "string" === typeof MM.texture ? MM.texture : "smokePuff",
-              vL: MM.vL,
-              minLifeTime: MM.minLifeTime,
-              maxLifeTime: MM.maxLifeTime,
-              minSize: MM.minSize,
-              maxSize: MM.maxSize,
-              minEmitPower: MM.minEmitPower,
-              maxEmitPower: MM.maxEmitPower,
-              emitRate: Fi(MM.emitRate),
-              gravity: null !== (rM = MM.gravity) && void 0 !== rM ? rM : Zi,
-              dir1: null !== (iM = MM.dir1) && void 0 !== iM ? iM : ki,
-              dir2: null !== (OM = MM.dir2) && void 0 !== OM ? OM : ki,
-              colorGradients: MM.colorGradients,
-              blendMode: MM.blendMode
+      create(UU, XU) {
+        var zU;
+        const cU = this.sink(),
+          yU = null !== (zU = XU.half) && void 0 !== zU ? zU : rz;
+        if (!cU || this.live >= pU.Ld.MaxLiveKeys || this.nextKey > pU.Ld.MaxKey || !nz(XU.pos, yU)) return xz;
+        const QU = this.nextKey,
+          AU = lz(function(UU) {
+            var XU, zU, cU;
+            const yU = JSON.stringify({
+              texture: "string" === typeof UU.texture ? UU.texture : "smokePuff",
+              xY: UU.xY,
+              minLifeTime: UU.minLifeTime,
+              maxLifeTime: UU.maxLifeTime,
+              minSize: UU.minSize,
+              maxSize: UU.maxSize,
+              minEmitPower: UU.minEmitPower,
+              maxEmitPower: UU.maxEmitPower,
+              emitRate: sz(UU.emitRate),
+              gravity: null !== (XU = UU.gravity) && void 0 !== XU ? XU : rz,
+              dir1: null !== (zU = UU.dir1) && void 0 !== zU ? zU : Sz,
+              dir2: null !== (cU = UU.dir2) && void 0 !== cU ? cU : Sz,
+              colorGradients: UU.colorGradients,
+              blendMode: UU.blendMode
             });
-            return Yi.encode(SM)
-          }(MM), "createParticles", this.deps.onError);
-        return aM && (0, hM.jf)(OM, 0, jM, 0, hM.ud.PresetNone, 0, Ni, Ai, aM) ? (this.nextKey++, this.live++, this.started = !0, new Ti(this, this.session, jM, MM, SM)) : Ki
+            return iz.encode(yU)
+          }(UU), "createParticles", this.deps.onError);
+        return AU && (0, pU.nf)(cU, 0, QU, 0, pU.Ld.PresetNone, 0, Hz, Mz, AU) ? (this.nextKey++, this.live++, this.started = !0, new jz(this, this.session, QU, UU, yU)) : xz
       }
-      playEffect(MM) {
-        const rM = this.sink(),
+      playEffect(UU) {
+        const XU = this.sink(),
           {
-            pos1: iM,
-            pos2: OM
-          } = MM;
-        if (!rM || !iM || !OM) return;
-        for (let jM = 0; jM < 3; jM++) Ni[jM] = Math.min(iM[jM], OM[jM]), Ai[jM] = Math.abs(OM[jM] - iM[jM]);
-        if (!Number.isFinite(Ni[0] + Ni[1] + Ni[2] + Ai[0] + Ai[1] + Ai[2])) return;
-        const SM = Ii(Yi.encode(JSON.stringify(MM, Xi)), "playParticleEffect", this.deps.onError);
-        SM && (0, hM.hf)(rM, 0, 0, hM.ud.PresetNone, hM.ud.HasBox, 0, Ni, Ai, SM)
+            pos1: zU,
+            pos2: cU
+          } = UU;
+        if (!XU || !zU || !cU) return;
+        for (let QU = 0; QU < 3; QU++) Hz[QU] = Math.min(zU[QU], cU[QU]), Mz[QU] = Math.abs(cU[QU] - zU[QU]);
+        if (!Number.isFinite(Hz[0] + Hz[1] + Hz[2] + Mz[0] + Mz[1] + Mz[2])) return;
+        const yU = lz(iz.encode(JSON.stringify(UU, mz)), "playParticleEffect", this.deps.onError);
+        yU && (0, pU.kf)(XU, 0, 0, pU.Ld.PresetNone, pU.Ld.HasBox, 0, Hz, Mz, yU)
       }
-      burstPreset(MM, rM, iM) {
-        const OM = this.sink(),
-          SM = Math.min(Math.floor(iM), hM.ud.MaxBurst);
-        if (!OM || !Object.hasOwn(hM.Vb, MM) || !(SM > 0)) return;
-        const jM = fi;
-        for (let aM = 0; aM < 3; aM++) Ni[aM] = rM[aM] - jM / 2, Ai[aM] = jM;
-        Number.isFinite(Ni[0] + Ni[1] + Ni[2]) && (0, hM.hf)(OM, 0, 0, hM.Vb[MM], hM.ud.HasBox, SM, Ni, Ai, oi)
+      burstPreset(UU, XU, zU) {
+        const cU = this.sink(),
+          yU = Math.min(Math.floor(zU), pU.Ld.MaxBurst);
+        if (!cU || !Object.hasOwn(pU.ic, UU) || !(yU > 0)) return;
+        const QU = fz;
+        for (let AU = 0; AU < 3; AU++) Hz[AU] = XU[AU] - QU / 2, Mz[AU] = QU;
+        Number.isFinite(Hz[0] + Hz[1] + Hz[2]) && (0, pU.kf)(cU, 0, 0, pU.ic[UU], pU.Ld.HasBox, yU, Hz, Mz, uz)
       }
       sessionEnded() {
         this.session++;
-        const MM = this.started ? this.deps.cmd() : null;
-        return this.started = !1, this.nextKey = 1, this.live = 0, !MM || (0, hM.lf)(MM, 0)
+        const UU = this.started ? this.deps.cmd() : null;
+        return this.started = !1, this.nextKey = 1, this.live = 0, !UU || (0, pU.qf)(UU, 0)
       }
-      sinkFor(MM) {
-        return MM === this.session ? this.deps.cmd() : null
+      sinkFor(UU) {
+        return UU === this.session ? this.deps.cmd() : null
       }
-      stop(MM, rM) {
-        const iM = this.sinkFor(MM);
-        iM && (0, hM.nf)(iM, 0, rM) && this.live--
+      stop(UU, XU) {
+        const zU = this.sinkFor(UU);
+        zU && (0, pU.uf)(zU, 0, XU) && this.live--
       }
     }
-    class Ti {
-      constructor(MM, rM, iM, OM, SM) {
-        this.owner = MM, this.session = rM, this.key = iM, this.half = void 0, this.rate = void 0, this.stopDelayMs = void 0, this.emitted = void 0, this.stopped = !1, this.freed = !1, this.half = [Math.abs(SM[0]), Math.abs(SM[1]), Math.abs(SM[2])], this.rate = Fi(OM.emitRate), this.emitted = this.rate > 0;
-        const jM = OM.maxLifeTime * Di * 1e3 + 250;
-        this.stopDelayMs = jM >= 0 ? Math.min(jM, 2147483647) : 250
+    class jz {
+      constructor(UU, XU, zU, cU, yU) {
+        this.owner = UU, this.session = XU, this.key = zU, this.half = void 0, this.rate = void 0, this.stopDelayMs = void 0, this.emitted = void 0, this.stopped = !1, this.freed = !1, this.half = [Math.abs(yU[0]), Math.abs(yU[1]), Math.abs(yU[2])], this.rate = sz(cU.emitRate), this.emitted = this.rate > 0;
+        const QU = cU.maxLifeTime * Oz * 1e3 + 250;
+        this.stopDelayMs = QU >= 0 ? Math.min(QU, 2147483647) : 250
       }
       sink() {
         return this.stopped ? null : this.owner.sinkFor(this.session)
       }
-      moveTo(MM, rM) {
-        const iM = this.sink();
-        if (iM) {
-          if (rM)
-            for (let MM = 0; MM < 3; MM++) this.half[MM] = Math.abs(rM[MM]);
-          Bi(MM, this.half) && (0, hM.rf)(iM, 0, this.key, hM.ud.HasBox, Ni, Ai, oi)
+      moveTo(UU, XU) {
+        const zU = this.sink();
+        if (zU) {
+          if (XU)
+            for (let UU = 0; UU < 3; UU++) this.half[UU] = Math.abs(XU[UU]);
+          nz(UU, this.half) && (0, pU.vf)(zU, 0, this.key, pU.Ld.HasBox, Hz, Mz, uz)
         }
       }
-      setEmitRate(MM) {
-        const rM = this.sink(),
-          iM = Fi(MM);
-        rM && iM !== this.rate && (0, hM.rf)(rM, 0, this.key, 0, Zi, Zi, vi(iM)) && (this.rate = iM, this.emitted ||= iM > 0)
+      setEmitRate(UU) {
+        const XU = this.sink(),
+          zU = sz(UU);
+        XU && zU !== this.rate && (0, pU.vf)(XU, 0, this.key, 0, rz, rz, Vz(zU)) && (this.rate = zU, this.emitted ||= zU > 0)
       }
-      emit(MM) {
-        const rM = this.sink(),
-          iM = Math.min(Math.floor(MM), hM.ud.MaxBurst);
-        rM && iM > 0 && (0, hM.hf)(rM, 0, this.key, hM.ud.PresetNone, 0, iM, Zi, Zi, oi) && (this.emitted = !0)
+      emit(UU) {
+        const XU = this.sink(),
+          zU = Math.min(Math.floor(UU), pU.Ld.MaxBurst);
+        XU && zU > 0 && (0, pU.kf)(XU, 0, this.key, pU.Ld.PresetNone, 0, zU, rz, rz, uz) && (this.emitted = !0)
       }
-      emitPoints(MM, rM, iM) {
-        const OM = this.sink(),
-          SM = Math.min(Math.floor(iM), hM.ud.MaxPoints, Math.floor(rM.length / 4));
-        if (!OM || !(SM > 0) || !Number.isFinite(MM[0] + MM[1] + MM[2])) return;
-        const jM = new Uint8Array(rM.buffer, rM.byteOffset, SM * hM.ud.PointBytes);
-        (0, hM.if)(OM, 0, this.key, SM, MM, jM) && (this.emitted = !0)
+      emitPoints(UU, XU, zU) {
+        const cU = this.sink(),
+          yU = Math.min(Math.floor(zU), pU.Ld.MaxPoints, Math.floor(XU.length / 4));
+        if (!cU || !(yU > 0) || !Number.isFinite(UU[0] + UU[1] + UU[2])) return;
+        const QU = new Uint8Array(XU.buffer, XU.byteOffset, yU * pU.Ld.PointBytes);
+        (0, pU.mf)(cU, 0, this.key, yU, UU, QU) && (this.emitted = !0)
       }
-      setDirections(MM, rM) {
-        const iM = this.sink();
-        if (!iM || !Number.isFinite(MM[0] + MM[1] + MM[2] + rM[0] + rM[1] + rM[2])) return;
-        const OM = Yi.encode(JSON.stringify({
-          dir1: [MM[0], MM[1], MM[2]],
-          dir2: [rM[0], rM[1], rM[2]]
+      setDirections(UU, XU) {
+        const zU = this.sink();
+        if (!zU || !Number.isFinite(UU[0] + UU[1] + UU[2] + XU[0] + XU[1] + XU[2])) return;
+        const cU = iz.encode(JSON.stringify({
+          dir1: [UU[0], UU[1], UU[2]],
+          dir2: [XU[0], XU[1], XU[2]]
         }));
-        (0, hM.rf)(iM, 0, this.key, 0, Zi, Zi, OM)
+        (0, pU.vf)(zU, 0, this.key, 0, rz, rz, cU)
       }
       stop() {
-        const MM = this.sink();
-        this.stopped = !0, MM && (this.emitted ? (this.rate > 0 && (0, hM.rf)(MM, 0, this.key, 0, Zi, Zi, vi(0)), setTimeout((() => {
+        const UU = this.sink();
+        this.stopped = !0, UU && (this.emitted ? (this.rate > 0 && (0, pU.vf)(UU, 0, this.key, 0, rz, rz, Vz(0)), setTimeout((() => {
           this.free()
         }), this.stopDelayMs)) : this.free())
       }
@@ -3229,266 +3050,266 @@ export const modules = {
         this.freed || (this.freed = !0, this.owner.stop(this.session, this.key))
       }
     }
-    const Vi = qr.q,
-      ci = new TextDecoder;
+    const Kz = KX.q,
+      bz = new TextDecoder;
 
-    function MO(MM, rM) {
+    function Tz(UU, XU) {
       const {
-        serverIds: iM,
-        kinds: OM
-      } = MM;
-      let SM = 0;
-      for (let jM = 0; jM < iM.length; jM++) {
-        const MM = iM[jM];
-        if (MM !== hM.Nc && !GM(OM[jM])) {
-          if (SM === rM.length) {
-            const MM = new Int32Array(Math.max(64, 2 * SM));
-            MM.set(rM), rM = MM
+        serverIds: zU,
+        kinds: cU
+      } = UU;
+      let yU = 0;
+      for (let QU = 0; QU < zU.length; QU++) {
+        const UU = zU[QU];
+        if (UU !== pU.ad && !ZU(cU[QU])) {
+          if (yU === XU.length) {
+            const UU = new Int32Array(Math.max(64, 2 * yU));
+            UU.set(XU), XU = UU
           }
-          rM[SM++] = MM
+          XU[yU++] = UU
         }
       }
       return {
-        ids: rM,
-        count: SM
+        ids: XU,
+        count: yU
       }
     }
 
-    function rO(MM, rM) {
-      return MM.length >= rM ? MM : new Int32Array(Math.max(rM, 2 * MM.length))
+    function hz(UU, XU) {
+      return UU.length >= XU ? UU : new Int32Array(Math.max(XU, 2 * UU.length))
     }
 
-    function iO(MM, rM, iM, OM) {
-      for (let SM = 0; SM < iM; SM += 4096) {
-        const jM = Math.min(4096, iM - SM),
-          aM = MM.memoryView(Int32Array, MM.scratch(), jM, "entity_info_batch's ids");
-        if (!aM) return !1;
-        aM.set(rM.subarray(SM, SM + jM));
-        const PM = MM.queries.entityInfoBatch(jM),
-          nM = 4294967295 === PM ? null : MM.memoryData(MM.scratch(), PM, 4, "entity_info_batch's records");
-        if (!nM) return !1;
-        for (let MM = 0; MM + hM.Jb.BYTES <= PM;) {
-          const rM = hM.Jb.len(nM, MM);
-          OM(hM.Jb.serverId(nM, MM), OO(nM, MM, rM)), MM += hM.Jb.BYTES + (0, mM.oe)(rM)
+    function Uc(UU, XU, zU, cU) {
+      for (let yU = 0; yU < zU; yU += 4096) {
+        const QU = Math.min(4096, zU - yU),
+          AU = UU.memoryView(Int32Array, UU.scratch(), QU, "entity_info_batch's ids");
+        if (!AU) return !1;
+        AU.set(XU.subarray(yU, yU + QU));
+        const FU = UU.queries.entityInfoBatch(QU),
+          oU = 4294967295 === FU ? null : UU.memoryData(UU.scratch(), FU, 4, "entity_info_batch's records");
+        if (!oU) return !1;
+        for (let UU = 0; UU + pU.Yb.BYTES <= FU;) {
+          const XU = pU.Yb.len(oU, UU);
+          cU(pU.Yb.serverId(oU, UU), Xc(oU, UU, XU)), UU += pU.Yb.BYTES + (0, NU.De)(XU)
         }
       }
       return !0
     }
 
-    function OO(MM, rM, iM) {
-      var OM, SM, jM;
-      const aM = hM.Jb.kind(MM, rM),
-        PM = 0 === aM ? null : CM(aM);
-      if (null === PM) return null;
-      const nM = hM.Jb.variation(MM, rM),
-        QM = hM.Jb.pose(MM, rM),
-        zM = hM.Jb.meta(MM, rM),
-        LM = hM.Jb.mesh(MM, rM),
-        mM = 0 !== (hM.Jb.flags(MM, rM) & hM.Ib.HasOpts),
-        HM = Vi[PM];
+    function Xc(UU, XU, zU) {
+      var cU, yU, QU;
+      const AU = pU.Yb.kind(UU, XU),
+        FU = 0 === AU ? null : RU(AU);
+      if (null === FU) return null;
+      const oU = pU.Yb.variation(UU, XU),
+        DU = pU.Yb.pose(UU, XU),
+        EU = pU.Yb.meta(UU, XU),
+        YU = pU.Yb.mesh(UU, XU),
+        NU = 0 !== (pU.Yb.flags(UU, XU) & pU.Vb.HasOpts),
+        IU = Kz[FU];
       return Object.freeze({
-        type: PM,
-        variation: nM === hM.Tc ? void 0 : null !== (OM = null !== (SM = null === HM || void 0 === HM ? void 0 : HM[nM]) && void 0 !== SM ? SM : null === HM || void 0 === HM ? void 0 : HM[0]) && void 0 !== OM ? OM : "default",
-        pose: QM === hM.$b ? void 0 : null !== (jM = hM.Bb[QM]) && void 0 !== jM ? jM : hM.Bb[0],
-        metaInfo: zM === hM.$b ? void 0 : hM.Fc[zM],
-        meshKind: LM === hM.$b ? void 0 : hM.Bc[LM],
-        meshOpts: mM ? ci.decode(new Uint8Array(MM.buffer, MM.byteOffset + rM + hM.Jb.BYTES, iM)) : void 0
+        type: FU,
+        variation: oU === pU.gd ? void 0 : null !== (cU = null !== (yU = null === IU || void 0 === IU ? void 0 : IU[oU]) && void 0 !== yU ? yU : null === IU || void 0 === IU ? void 0 : IU[0]) && void 0 !== cU ? cU : "default",
+        pose: DU === pU.qc ? void 0 : null !== (QU = pU.Kb[DU]) && void 0 !== QU ? QU : pU.Kb[0],
+        metaInfo: EU === pU.qc ? void 0 : pU.Sc[EU],
+        meshKind: YU === pU.qc ? void 0 : pU.Rc[YU],
+        meshOpts: NU ? bz.decode(new Uint8Array(UU.buffer, UU.byteOffset + XU + pU.Yb.BYTES, zU)) : void 0
       })
     }
-    const SO = 1,
-      jO = 2;
-    class aO {
-      constructor(MM) {
-        this.deps = MM, this.wanted = 0, this.sQ = !1, this.refused = !1
+    const zc = 1,
+      cc = 2;
+    class yc {
+      constructor(UU) {
+        this.deps = UU, this.wanted = 0, this.uD = !1, this.refused = !1
       }
       get on() {
-        return this.sQ
+        return this.uD
       }
-      want(MM, rM) {
-        this.wanted = rM ? this.wanted | MM : this.wanted & ~MM;
-        const iM = 0 !== this.wanted;
-        if (iM === this.sQ) return;
-        const OM = this.deps.cmd();
-        null !== OM ? (0, hM.ug)(OM, 0, iM ? 1 : 0) ? (this.sQ = iM, this.refused = !1) : this.refused || (this.refused = !0, this.deps.onError(new Error("WatchEntityInfo didn't fit the command ring"))) : this.sQ = !1
+      want(UU, XU) {
+        this.wanted = XU ? this.wanted | UU : this.wanted & ~UU;
+        const zU = 0 !== this.wanted;
+        if (zU === this.uD) return;
+        const cU = this.deps.cmd();
+        null !== cU ? (0, pU.lg)(cU, 0, zU ? 1 : 0) ? (this.uD = zU, this.refused = !1) : this.refused || (this.refused = !0, this.deps.onError(new Error("WatchEntityInfo didn't fit the command ring"))) : this.uD = !1
       }
     }
-    class PO {
-      constructor(MM) {
-        this.deps = MM, this.entries = new Map, this.complete = !1, this.refill = !1, this.midFrame = !1, this.pending = new Int32Array(64), this.pendingCount = 0, this.ids = new Int32Array(64)
+    class Qc {
+      constructor(UU) {
+        this.deps = UU, this.entries = new Map, this.complete = !1, this.refill = !1, this.midFrame = !1, this.pending = new Int32Array(64), this.pendingCount = 0, this.ids = new Int32Array(64)
       }
-      get(MM) {
-        var rM;
-        return this.complete || this.fill(), null !== (rM = this.entries.get("string" === typeof MM ? MM : String(MM))) && void 0 !== rM ? rM : null
+      get(UU) {
+        var XU;
+        return this.complete || this.fill(), null !== (XU = this.entries.get("string" === typeof UU ? UU : String(UU))) && void 0 !== XU ? XU : null
       }
       inCoreCall() {
         this.midFrame = !0
       }
-      stale(MM) {
+      stale(UU) {
         if (this.complete) {
           if (this.pendingCount === this.pending.length) {
-            const MM = new Int32Array(2 * this.pending.length);
-            MM.set(this.pending), this.pending = MM
+            const UU = new Int32Array(2 * this.pending.length);
+            UU.set(this.pending), this.pending = UU
           }
-          this.pending[this.pendingCount++] = MM
+          this.pending[this.pendingCount++] = UU
         }
       }
-      removed(MM) {
-        this.entries.size > 0 && this.entries.delete(String(MM))
+      removed(UU) {
+        this.entries.size > 0 && this.entries.delete(String(UU))
       }
       refresh() {
-        const MM = this.pendingCount;
+        const UU = this.pendingCount;
         if (this.pendingCount = 0, this.midFrame = !1, !this.deps.watch.on || this.refill) return this.complete = !1, void(this.refill = !1);
-        if (MM > 0 && this.complete) {
+        if (UU > 0 && this.complete) {
           const {
-            api: rM
+            api: XU
           } = this.deps;
-          let iM = 0;
-          const OM = this.ids = rO(this.ids, MM);
-          for (let SM = 0; SM < MM; SM++) {
-            const MM = this.pending[SM],
-              jM = rM.indexById.get(MM);
-            void 0 === jM || GM(rM.kinds[jM]) ? this.entries.delete(String(MM)) : OM[iM++] = MM
+          let zU = 0;
+          const cU = this.ids = hz(this.ids, UU);
+          for (let yU = 0; yU < UU; yU++) {
+            const UU = this.pending[yU],
+              QU = XU.indexById.get(UU);
+            void 0 === QU || ZU(XU.kinds[QU]) ? this.entries.delete(String(UU)) : cU[zU++] = UU
           }
-          iM > 0 && !this.batch(OM, iM) && (this.complete = !1)
+          zU > 0 && !this.batch(cU, zU) && (this.complete = !1)
         }
       }
       sessionEnded() {
-        this.entries.clear(), this.complete = !1, this.refill = !1, this.midFrame = !1, this.pendingCount = 0, this.deps.watch.want(SO, !1)
+        this.entries.clear(), this.complete = !1, this.refill = !1, this.midFrame = !1, this.pendingCount = 0, this.deps.watch.want(zc, !1)
       }
       fill() {
         const {
-          api: MM
+          api: UU
         } = this.deps;
         if (this.complete = !0, this.pendingCount = 0, this.entries.clear(), this.deps.isSessionLive()) {
           const {
-            watch: MM
-          } = this.deps, rM = MM.on;
-          MM.want(SO, !0), !rM && MM.on && (this.refill = this.midFrame)
+            watch: UU
+          } = this.deps, XU = UU.on;
+          UU.want(zc, !0), !XU && UU.on && (this.refill = this.midFrame)
         }
         const {
-          ids: rM,
-          count: iM
-        } = MO(MM, this.ids);
-        this.ids = rM, iM > 0 && !this.batch(rM, iM) && (this.refill = !0)
+          ids: XU,
+          count: zU
+        } = Tz(UU, this.ids);
+        this.ids = XU, zU > 0 && !this.batch(XU, zU) && (this.refill = !0)
       }
-      batch(MM, rM) {
-        return iO(this.deps.api, MM, rM, ((MM, rM) => {
-          null === rM ? this.entries.delete(String(MM)) : this.entries.set(String(MM), rM)
+      batch(UU, XU) {
+        return Uc(this.deps.api, UU, XU, ((UU, XU) => {
+          null === XU ? this.entries.delete(String(UU)) : this.entries.set(String(UU), XU)
         }))
       }
     }
-    var nO = iM(5200);
+    var Ac = zU(5326);
 
-    function QO(MM) {
-      if ("message" !== MM.type || MM.Kz !== nO.hc.NewClientOptions || MM.payloadKind !== mM.hc.Msgpack) return null;
-      const rM = (0, fM.c)(MM.payload);
-      if (null === rM || "object" !== typeof rM || Array.isArray(rM)) throw new Error("NewClientOptions whose body isn't an object of options");
-      return rM
+    function Fc(UU) {
+      if ("message" !== UU.type || UU.TE !== Ac.oc.NewClientOptions || UU.payloadKind !== NU.jc.Msgpack) return null;
+      const XU = (0, HU.d)(UU.payload);
+      if (null === XU || "object" !== typeof XU || Array.isArray(XU)) throw new Error("NewClientOptions whose body isn't an object of options");
+      return XU
     }
-    var zO = iM(1242),
-      LO = iM(37559);
+    var oc = zU(1258),
+      Dc = zU(37354);
 
-    function mO(MM, rM, iM, OM, SM, jM, PM) {
-      var nM, QM, zM;
-      switch (MM) {
-        case hM._d.ToggleMenu: {
-          const MM = hM.H[rM];
-          aM.i.Tz("toggleMenu", void 0 === MM ? "inventory" : `inventory|${MM}`);
+    function Ec(UU, XU, zU, cU, yU, QU, FU) {
+      var oU, DU, EU;
+      switch (UU) {
+        case pU.ke.ToggleMenu: {
+          const UU = pU.L[XU];
+          AU.k.UY("toggleMenu", void 0 === UU ? "inventory" : `inventory|${UU}`);
           break
         }
-        case hM._d.EditBoard:
-          aM.i.Tz("EditBoard", {
-            pos: 0 === rM ? null : iM
+        case pU.ke.EditBoard:
+          AU.k.UY("EditBoard", {
+            pos: 0 === XU ? null : zU
           });
           break;
-        case hM._d.EditCodeBlock:
-        case hM._d.ViewCodeBlock:
-          aM.i.Tz("EditCodeBlock", {
-            pos: iM,
-            canChangePos: MM === hM._d.EditCodeBlock
+        case pU.ke.EditCodeBlock:
+        case pU.ke.ViewCodeBlock:
+          AU.k.UY("EditCodeBlock", {
+            pos: zU,
+            canChangePos: UU === pU.ke.EditCodeBlock
           });
           break;
-        case hM._d.EditCustomLobbyBlock:
-          aM.i.Tz("EditCustomLobbyBlock", {
-            pos: iM
+        case pU.ke.EditCustomLobbyBlock:
+          AU.k.UY("EditCustomLobbyBlock", {
+            pos: zU
           });
           break;
-        case hM._d.OpenIronChest:
-          aM.i.Tz("OpenIronChest", {
-            pos: iM
+        case pU.ke.OpenIronChest:
+          AU.k.UY("OpenIronChest", {
+            pos: zU
           });
           break;
-        case hM._d.EditNameTag:
-          aM.i.Tz("EditNameTag", null !== (nM = null === (QM = SM.sQ()) || void 0 === QM || null === (zM = QM.attributes.customAttributes) || void 0 === zM ? void 0 : zM.text) && void 0 !== nM ? nM : "");
+        case pU.ke.EditNameTag:
+          AU.k.UY("EditNameTag", null !== (oU = null === (DU = yU.uD()) || void 0 === DU || null === (EU = DU.attributes.customAttributes) || void 0 === EU ? void 0 : EU.text) && void 0 !== oU ? oU : "");
           break;
-        case hM._d.EditBook: {
-          var LM, mM, JM;
-          const MM = null === (LM = SM.sQ()) || void 0 === LM ? void 0 : LM.attributes;
-          aM.i.Tz("EditBook", {
-            pages: (0, zO.S)(null === MM || void 0 === MM || null === (mM = MM.customAttributes) || void 0 === mM ? void 0 : mM.pages),
-            title: null !== (JM = null === MM || void 0 === MM ? void 0 : MM.customDisplayName) && void 0 !== JM ? JM : "Title",
-            isPublished: !(null === MM || void 0 === MM || !MM.customDescription)
+        case pU.ke.EditBook: {
+          var YU, NU, aU;
+          const UU = null === (YU = yU.uD()) || void 0 === YU ? void 0 : YU.attributes;
+          AU.k.UY("EditBook", {
+            pages: (0, oc.N)(null === UU || void 0 === UU || null === (NU = UU.customAttributes) || void 0 === NU ? void 0 : NU.pages),
+            title: null !== (aU = null === UU || void 0 === UU ? void 0 : UU.customDisplayName) && void 0 !== aU ? aU : "Title",
+            isPublished: !(null === UU || void 0 === UU || !UU.customDescription)
           });
           break
         }
-        case hM._d.CantChangeBlock:
-          ! function(MM, rM) {
-            const iM = rM.getClientOption("cantChangeError"),
-              OM = rM.getClientOption(MM ? "cantBuildError" : "cantBreakError"),
-              SM = MM ? iM : OM;
-            (rM.getClientOption("canChange") || SM || "You cannot modify this block" !== iM) && aM.i.Tz("showBottomMessage", {
-              message: OM || iM,
+        case pU.ke.CantChangeBlock:
+          ! function(UU, XU) {
+            const zU = XU.getClientOption("cantChangeError"),
+              cU = XU.getClientOption(UU ? "cantBuildError" : "cantBreakError"),
+              yU = UU ? zU : cU;
+            (XU.getClientOption("canChange") || yU || "You cannot modify this block" !== zU) && AU.k.UY("showBottomMessage", {
+              message: cU || zU,
               type: "Error"
             })
-          }(1 === rM, jM);
+          }(1 === XU, QU);
           break;
-        case hM._d.MiddleBarStart:
-          aM.i.Tz("middleScreenBarInitiate", {
-            duration: OM,
-            zO: 1 === iM[0],
-            horizBarRemOffset: rM
+        case pU.ke.MiddleBarStart:
+          AU.k.UY("middleScreenBarInitiate", {
+            duration: cU,
+            vc: 1 === zU[0],
+            horizBarRemOffset: XU
           });
           break;
-        case hM._d.MiddleBarStop:
-          aM.i.Tz("middleScreenBarRemove");
+        case pU.ke.MiddleBarStop:
+          AU.k.UY("middleScreenBarRemove");
           break;
-        case hM._d.Hitmarker:
-          aM.i.Tz("localGunHitmarker", {
-            mO: 1 === rM
+        case pU.ke.Hitmarker:
+          AU.k.UY("localGunHitmarker", {
+            yX: 1 === XU
           });
           break;
-        case hM._d.ShotsLeft:
-          aM.i.Tz("localPlayerNewShotsLeft", OM);
+        case pU.ke.ShotsLeft:
+          AU.k.UY("localPlayerNewShotsLeft", cU);
           break;
-        case hM._d.AimingOverlay:
-          aM.i.Tz("aimingOverlay", 3 === (3 & rM) ? "sniper" : "none");
+        case pU.ke.AimingOverlay:
+          AU.k.UY("aimingOverlay", 3 === (3 & XU) ? "sniper" : "none");
           break;
-        case hM._d.BottomMessage:
-          aM.i.Tz("showBottomMessage", JSON.parse(PM()));
+        case pU.ke.BottomMessage:
+          AU.k.UY("showBottomMessage", JSON.parse(FU()));
           break;
-        case hM._d.Crosshair:
-          SM.inaccuracy = (0, YM.h)(OM), (0, LO.e)().crosshairAccuracy(SM.inaccuracy);
+        case pU.ke.Crosshair:
+          yU.inaccuracy = (0, MU.f)(cU), (0, Dc.c)().crosshairAccuracy(yU.inaccuracy);
           break;
-        case hM._d.ChargeStage:
+        case pU.ke.ChargeStage:
           break;
-        case hM._d.EmoteWheelClose:
-          aM.i.Tz("requestEmoteWheelClose");
+        case pU.ke.EmoteWheelClose:
+          AU.k.UY("requestEmoteWheelClose");
           break;
-        case hM._d.BlockMined:
-          aM.i.Tz("localBlockMined");
+        case pU.ke.BlockMined:
+          AU.k.UY("localBlockMined");
           break;
         default:
-          throw new HM.d(`UiEvent of no kind: what ${MM}`)
+          throw new IU.c(`UiEvent of no kind: what ${UU}`)
       }
     }
-    var HO = iM(38973),
-      hO = iM(35029),
-      JO = iM(2078),
-      dO = iM(37764),
-      yO = iM(35037),
-      lO = iM(5188);
-    const EO = 10,
-      UO = {
+    var Yc = zU(38743),
+      Nc = zU(34875),
+      Ic = zU(2044),
+      pc = zU(37535),
+      ac = zU(34884),
+      tc = zU(5312);
+    const gc = 10,
+      kc = {
         player: [],
         chestOrCreative: [],
         chest: null,
@@ -3496,680 +3317,680 @@ export const modules = {
         selectedSlot: 0,
         freeSlots: 0
       },
-      GO = {
+      Gc = {
         items: [],
         ammo: 0,
         selectedSlot: 0
       },
-      CO = {
+      Bc = {
         gun: !1,
         aimable: !1,
         chargeName: null
       };
 
-    function eO(MM, rM) {
-      let iM, OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      const jM = () => (iM = (0, JO.r)(iM, rM()), iM);
+    function Zc(UU, XU) {
+      let zU, cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        yU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      const QU = () => (zU = (0, Ic.q)(zU, XU()), zU);
       return {
-        current: jM,
-        watch(rM) {
-          const iM = () => {
-              rM(jM())
+        current: QU,
+        watch(XU) {
+          const zU = () => {
+              XU(QU())
             },
-            aM = [MM.watch(iM)];
-          return null !== OM && aM.push((0, JO.u)((MM => {
-            MM.some(OM) && iM()
-          }))), null !== SM && aM.push(SM(iM)), () => {
-            for (const MM of aM) MM()
+            AU = [UU.watch(zU)];
+          return null !== cU && AU.push((0, Ic.s)((UU => {
+            UU.some(cU) && zU()
+          }))), null !== yU && AU.push(yU(zU)), () => {
+            for (const UU of AU) UU()
           }
         }
       }
     }
 
-    function bO(MM) {
-      return MM && {
-        name: MM.name,
-        amount: MM.amount,
-        attributes: MM.attributes
+    function Rc(UU) {
+      return UU && {
+        name: UU.name,
+        amount: UU.amount,
+        attributes: UU.attributes
       }
     }
-    const wO = new WeakMap;
+    const Pc = new WeakMap;
 
-    function tO(MM) {
-      let rM = wO.get(MM);
-      return void 0 === rM && (rM = (0, yO.creativeItemIds)().map((rM => ({
-        name: MM.nameOfId(rM),
-        amount: MM.isStackableId(rM) ? 1 : null,
-        attributes: (0, HO.b)("Gun" === (0, yO.itemTypeOf)(rM) ? {
+    function Wc(UU) {
+      let XU = Pc.get(UU);
+      return void 0 === XU && (XU = (0, ac.creativeItemIds)().map((XU => ({
+        name: UU.nameOfId(XU),
+        amount: UU.isStackableId(XU) ? 1 : null,
+        attributes: (0, Yc.e)("Gun" === (0, ac.itemTypeOf)(XU) ? {
           type: "Gun",
-          clipSize: (0, yO.clipSizeOf)(rM)
+          clipSize: (0, ac.clipSizeOf)(XU)
         } : void 0)
-      }))), wO.set(MM, rM)), rM
+      }))), Pc.set(UU, XU)), XU
     }
 
-    function gO(MM, rM, iM, OM) {
-      const SM = rM => (MM.flush(OM), rM),
-        jM = iM => {
-          var OM, SM, jM, aM, PM, nM, QM;
-          const zM = MM.slot(iM);
-          if (!zM) return null;
+    function dc(UU, XU, zU, cU) {
+      const yU = XU => (UU.flush(cU), XU),
+        QU = zU => {
+          var cU, yU, QU, AU, FU, oU, DU;
+          const EU = UU.slot(zU);
+          if (!EU) return null;
           const {
-            rootName: LM,
-            metaStr: mM
-          } = rM.getMetaInfo(zM.name);
+            rootName: YU,
+            metaStr: NU
+          } = XU.getMetaInfo(EU.name);
           return {
-            name: zM.name,
-            amount: zM.amount,
-            attributes: zM.attributes,
-            instance: MM.instance(iM),
-            displayName: null !== (OM = zM.attributes.customDisplayName) && void 0 !== OM ? OM : rM.getDisplayName(LM),
-            requiresAmmo: "RequiresAmmo" === mM,
-            clipSize: null !== (SM = null !== (jM = null === (aM = zM.attributes.customAttributes) || void 0 === aM || null === (PM = aM.gunStats) || void 0 === PM ? void 0 : PM.clipSize) && void 0 !== jM ? jM : null === (nM = rM.getGunStats(LM)) || void 0 === nM ? void 0 : nM.clipSize) && void 0 !== SM ? SM : null === (QM = zM.typeObj) || void 0 === QM ? void 0 : QM.clipSize
+            name: EU.name,
+            amount: EU.amount,
+            attributes: EU.attributes,
+            instance: UU.instance(zU),
+            displayName: null !== (cU = EU.attributes.customDisplayName) && void 0 !== cU ? cU : XU.getDisplayName(YU),
+            requiresAmmo: "RequiresAmmo" === NU,
+            clipSize: null !== (yU = null !== (QU = null === (AU = EU.attributes.customAttributes) || void 0 === AU || null === (FU = AU.gunStats) || void 0 === FU ? void 0 : FU.clipSize) && void 0 !== QU ? QU : null === (oU = XU.getGunStats(YU)) || void 0 === oU ? void 0 : oU.clipSize) && void 0 !== yU ? yU : null === (DU = EU.typeObj) || void 0 === DU ? void 0 : DU.clipSize
           }
         },
-        PM = function(MM, rM) {
-          let iM = null,
-            OM = {
+        FU = function(UU, XU) {
+          let zU = null,
+            cU = {
               focus: null,
               recipes: [],
               detail: null
             },
-            SM = -1;
-          const jM = new Set;
+            yU = -1;
+          const QU = new Set;
           return {
             read() {
-              var jM, aM;
-              if (null === iM) return null !== OM.focus && (OM = {
-                ...OM,
+              var QU, AU;
+              if (null === zU) return null !== cU.focus && (cU = {
+                ...cU,
                 focus: null
-              }), OM;
-              if (OM.focus === iM && SM === MM.changes) return OM;
-              if (SM = MM.changes, 0 === MM.length) return OM = {
-                focus: iM,
+              }), cU;
+              if (cU.focus === zU && yU === UU.changes) return cU;
+              if (yU = UU.changes, 0 === UU.length) return cU = {
+                focus: zU,
                 recipes: [],
                 detail: null
-              }, OM;
-              let PM = 0;
-              if (null !== iM.recipe) try {
-                PM = rM.getItemId(iM.recipe.name)
+              }, cU;
+              let FU = 0;
+              if (null !== zU.recipe) try {
+                FU = XU.getItemId(zU.recipe.name)
               } catch {}
-              const nM = MM.craftingView(iM.station, PM, null !== (jM = null === (aM = iM.recipe) || void 0 === aM ? void 0 : aM.ma) && void 0 !== jM ? jM : 0);
-              return OM = null === nM ? {
-                focus: iM,
+              const oU = UU.craftingView(zU.station, FU, null !== (QU = null === (AU = zU.recipe) || void 0 === AU ? void 0 : AU.YA) && void 0 !== QU ? QU : 0);
+              return cU = null === oU ? {
+                focus: zU,
                 recipes: [],
                 detail: null
-              } : function(MM, rM, iM) {
-                let OM = hM.gb.BYTES;
-                const SM = [];
-                for (let zM = hM.gb.recipes(MM, 0); zM > 0; zM--) {
-                  const iM = hM.$.flags(MM, OM),
-                    jM = {
-                      name: rM.nameOfId(hM.$.item(MM, OM)),
-                      ma: hM.$.recipe(MM, OM),
+              } : function(UU, XU, zU) {
+                let cU = pU.mb.BYTES;
+                const yU = [];
+                for (let EU = pU.mb.recipes(UU, 0); EU > 0; EU--) {
+                  const zU = pU.eb.flags(UU, cU),
+                    QU = {
+                      name: XU.nameOfId(pU.eb.item(UU, cU)),
+                      YA: pU.eb.recipe(UU, cU),
                       requires: [],
-                      produces: hM.$.produces(MM, OM),
-                      haveIngredients: 0 !== (iM & hM._.HaveIngredients),
-                      listed: 0 !== (iM & hM._.Listed)
+                      produces: pU.eb.produces(UU, cU),
+                      haveIngredients: 0 !== (zU & pU.db.HaveIngredients),
+                      listed: 0 !== (zU & pU.db.Listed)
                     };
-                  let aM = hM.$.requires(MM, OM);
-                  for (OM += hM.$.BYTES; aM > 0; aM--) {
-                    const iM = hM.cb.items(MM, OM);
-                    jM.requires.push({
-                      items: pO(MM, OM + hM.cb.BYTES, iM, rM),
-                      amt: hM.cb.amount(MM, OM)
-                    }), OM += hM.cb.BYTES + 2 * iM
+                  let AU = pU.eb.requires(UU, cU);
+                  for (cU += pU.eb.BYTES; AU > 0; AU--) {
+                    const zU = pU.ib.items(UU, cU);
+                    QU.requires.push({
+                      items: Cc(UU, cU + pU.ib.BYTES, zU, XU),
+                      amt: pU.ib.amount(UU, cU)
+                    }), cU += pU.ib.BYTES + 2 * zU
                   }
-                  SM.push(jM)
+                  yU.push(QU)
                 }
-                const jM = hM.gb.flags(MM, 0);
-                if (null === iM.recipe || 0 === (jM & hM.eb.Detail)) return {
-                  focus: iM,
-                  recipes: SM,
+                const QU = pU.mb.flags(UU, 0);
+                if (null === zU.recipe || 0 === (QU & pU.jb.Detail)) return {
+                  focus: zU,
+                  recipes: yU,
                   detail: null
                 };
-                const aM = {},
-                  PM = {};
-                for (let zM = hM.gb.ingredients(MM, 0); zM > 0; zM--) {
-                  const iM = hM.Y.item(MM, OM),
-                    SM = hM.Y.from(MM, OM),
-                    jM = hM.Y.amount(MM, OM);
-                  OM += hM.Y.BYTES;
-                  const nM = SM === hM.E ? null : pO(MM, OM, SM, rM);
-                  if (null !== nM && (OM += 2 * SM), 0 === iM) continue;
-                  const QM = rM.nameOfId(iM);
-                  aM[QM] = jM, null !== nM && (PM[QM] = nM)
+                const AU = {},
+                  FU = {};
+                for (let EU = pU.mb.ingredients(UU, 0); EU > 0; EU--) {
+                  const zU = pU.ab.item(UU, cU),
+                    yU = pU.ab.from(UU, cU),
+                    QU = pU.ab.amount(UU, cU);
+                  cU += pU.ab.BYTES;
+                  const oU = yU === pU.H ? null : Cc(UU, cU, yU, XU);
+                  if (null !== oU && (cU += 2 * yU), 0 === zU) continue;
+                  const DU = XU.nameOfId(zU);
+                  AU[DU] = QU, null !== oU && (FU[DU] = oU)
                 }
                 const {
-                  name: nM,
-                  ma: QM
-                } = iM.recipe;
+                  name: oU,
+                  YA: DU
+                } = zU.recipe;
                 return {
-                  focus: iM,
-                  recipes: SM,
+                  focus: zU,
+                  recipes: yU,
                   detail: {
-                    name: nM,
-                    ma: QM,
-                    craftAllTimes: hM.gb.craftAllTimes(MM, 0),
-                    roomForOne: 0 !== (jM & hM.eb.RoomForOne),
-                    resultStackable: Boolean(rM.getItemStat(nM, "stackable")),
-                    amounts: aM,
-                    ingredientsCraftedFrom: PM
+                    name: oU,
+                    YA: DU,
+                    craftAllTimes: pU.mb.craftAllTimes(UU, 0),
+                    roomForOne: 0 !== (QU & pU.jb.RoomForOne),
+                    resultStackable: Boolean(XU.getItemStat(oU, "stackable")),
+                    amounts: AU,
+                    ingredientsCraftedFrom: FU
                   }
                 }
-              }(nM, rM, iM), OM
+              }(oU, XU, zU), cU
             },
-            setFocus(MM) {
-              iM = MM;
-              for (const rM of [...jM]) rM()
+            setFocus(UU) {
+              zU = UU;
+              for (const XU of [...QU]) XU()
             },
-            watchFocus: MM => (jM.add(MM), () => {
-              jM.delete(MM)
+            watchFocus: UU => (QU.add(UU), () => {
+              QU.delete(UU)
             })
           }
-        }(MM, rM);
+        }(UU, XU);
       return {
         states: {
-          inventory: eO(MM, (() => {
-            const iM = MM.length;
-            if (0 === iM) return UO;
-            const OM = [];
-            for (let rM = 0; rM < hM.gd; rM++) OM.push(bO(MM.slot(rM)));
-            const SM = MM.slotIcon,
-              jM = OM[MM.selectedSlot];
-            0 !== SM && jM && (OM[MM.selectedSlot] = {
-              ...jM,
-              icon: rM.nameOfId(SM)
+          inventory: Zc(UU, (() => {
+            const zU = UU.length;
+            if (0 === zU) return kc;
+            const cU = [];
+            for (let XU = 0; XU < pU.yd; XU++) cU.push(Rc(UU.slot(XU)));
+            const yU = UU.slotIcon,
+              QU = cU[UU.selectedSlot];
+            0 !== yU && QU && (cU[UU.selectedSlot] = {
+              ...QU,
+              icon: XU.nameOfId(yU)
             });
-            const aM = !0 === rM.getClientOption("creative");
-            let PM = [],
-              nM = null;
-            if (iM > hM.gd) {
-              for (let rM = hM.gd; rM < iM; rM++) PM.push(bO(MM.slot(rM)));
-              nM = {
+            const AU = !0 === XU.getClientOption("creative");
+            let FU = [],
+              oU = null;
+            if (zU > pU.yd) {
+              for (let XU = pU.yd; XU < zU; XU++) FU.push(Rc(UU.slot(XU)));
+              oU = {
                 type: null,
-                pos: [...MM.ti],
-                numSlots: iM - hM.gd,
+                pos: [...UU.jU],
+                numSlots: zU - pU.yd,
                 ironChest: null
               }
-            } else aM && (PM = tO(rM));
+            } else AU && (FU = Wc(XU));
             return {
-              player: OM,
-              chestOrCreative: PM,
-              chest: nM,
-              creative: aM,
-              selectedSlot: MM.selectedSlot,
-              freeSlots: MM.freeSlots()
+              player: cU,
+              chestOrCreative: FU,
+              chest: oU,
+              creative: AU,
+              selectedSlot: UU.selectedSlot,
+              freeSlots: UU.freeSlots()
             }
-          }), (0, JO.p)("creative")),
-          hotbar: eO(MM, (() => {
-            if (0 === MM.length) return GO;
-            const rM = [];
-            for (let MM = 0; MM < EO; MM++) rM.push(jM(MM));
+          }), (0, Ic.o)("creative")),
+          hotbar: Zc(UU, (() => {
+            if (0 === UU.length) return Gc;
+            const XU = [];
+            for (let UU = 0; UU < gc; UU++) XU.push(QU(UU));
             return {
-              items: rM,
-              ammo: MM.amountOf("Ammo"),
-              selectedSlot: MM.selectedSlot
+              items: XU,
+              ammo: UU.amountOf("Ammo"),
+              selectedSlot: UU.selectedSlot
             }
-          }), (0, JO.l)("DisplayName", "GunStats")),
-          crafting: eO(MM, PM.read, null, PM.watchFocus),
-          heldItemAim: eO(MM, (() => {
-            var rM;
-            if (!iM()) return CO;
-            const OM = null === (rM = MM.sQ()) || void 0 === rM ? void 0 : rM.typeObj,
-              SM = "Gun" === (null === OM || void 0 === OM ? void 0 : OM.type);
+          }), (0, Ic.m)("DisplayName", "GunStats")),
+          crafting: Zc(UU, FU.read, null, FU.watchFocus),
+          heldItemAim: Zc(UU, (() => {
+            var XU;
+            if (!zU()) return Bc;
+            const cU = null === (XU = UU.uD()) || void 0 === XU ? void 0 : XU.typeObj,
+              yU = "Gun" === (null === cU || void 0 === cU ? void 0 : cU.type);
             return {
-              gun: SM,
-              aimable: SM || !0 === (null === OM || void 0 === OM ? void 0 : OM.showsAimingUi),
-              chargeName: "Chargeable" === (null === OM || void 0 === OM ? void 0 : OM.type) ? OM.name : null
+              gun: yU,
+              aimable: yU || !0 === (null === cU || void 0 === cU ? void 0 : cU.showsAimingUi),
+              chargeName: "Chargeable" === (null === cU || void 0 === cU ? void 0 : cU.type) ? cU.name : null
             }
-          }), null, (MM => function(MM, rM) {
-            let iM = MM();
-            return (0, lO.y)((() => {
-              const OM = MM();
-              OM !== iM && (iM = OM, rM(OM))
+          }), null, (UU => function(UU, XU) {
+            let zU = UU();
+            return (0, tc.t)((() => {
+              const cU = UU();
+              cU !== zU && (zU = cU, XU(cU))
             }))
-          }(iM, MM)))
+          }(zU, UU)))
         },
         events: {
-          hotbarSlotRequested: (0, JO.d)("setSelectedInventorySlotI"),
-          hotbarScrolled: (0, JO.d)("ScrollInventorySlot"),
-          numberKeyPressed: (0, JO.d)("numkeyPressed"),
-          inventoryDropRequested: (0, JO.d)("DropInvenItem"),
-          chestToggled: (0, JO.d)("chestToggleFromServer"),
-          chestRefreshed: (0, JO.d)("chestRefreshedFromServer", RO),
-          inventorySynced: (0, JO.d)("syncedInvenFromServer", RO),
-          enchantingTableOpened: (0, JO.d)("enchantingTable", (MM => {
+          hotbarSlotRequested: (0, Ic.e)("setSelectedInventorySlotI"),
+          hotbarScrolled: (0, Ic.e)("ScrollInventorySlot"),
+          numberKeyPressed: (0, Ic.e)("numkeyPressed"),
+          inventoryDropRequested: (0, Ic.e)("DropInvenItem"),
+          chestToggled: (0, Ic.e)("chestToggleFromServer"),
+          chestRefreshed: (0, Ic.e)("chestRefreshedFromServer", ec),
+          inventorySynced: (0, Ic.e)("syncedInvenFromServer", ec),
+          enchantingTableOpened: (0, Ic.e)("enchantingTable", (UU => {
             let {
-              position: iM,
-              jP: OM
-            } = MM;
+              position: zU,
+              yF: cU
+            } = UU;
             return {
-              position: [...iM],
-              blockName: rM.getMetaInfo(OM).rootName
+              position: [...zU],
+              blockName: XU.getMetaInfo(cU).rootName
             }
           }))
         },
         commands: {
-          selectHotbarSlot(rM) {
-            MM.selectSlot(rM), MM.flush(OM)
+          selectHotbarSlot(XU) {
+            UU.selectSlot(XU), UU.flush(cU)
           },
-          removeInventoryItem(rM) {
+          removeInventoryItem(XU) {
             let {
-              slot: iM,
-              amount: OM,
-              drop: jM
-            } = rM;
-            return SM(MM.remove(iM, OM, jM))
+              slot: zU,
+              amount: cU,
+              drop: QU
+            } = XU;
+            return yU(UU.remove(zU, cU, QU))
           },
-          swapInventorySlots(rM) {
+          swapInventorySlots(XU) {
             let {
-              a: iM,
-              b: OM
-            } = rM;
-            return SM(MM.swap(iM, OM))
+              a: zU,
+              b: cU
+            } = XU;
+            return yU(UU.swap(zU, cU))
           },
-          moveInventoryItem(rM) {
+          moveInventoryItem(XU) {
             let {
-              from: iM,
-              to: OM,
-              amount: jM
-            } = rM;
-            return SM(MM.move(iM, OM, jM))
+              from: zU,
+              to: cU,
+              amount: QU
+            } = XU;
+            return yU(UU.move(zU, cU, QU))
           },
-          quickMoveInventoryItem(rM) {
+          quickMoveInventoryItem(XU) {
             let {
-              slot: iM,
-              start: OM,
-              end: jM,
-              amount: aM
-            } = rM;
-            return SM(MM.quickMove(iM, OM, jM, aM))
+              slot: zU,
+              start: cU,
+              end: QU,
+              amount: AU
+            } = XU;
+            return yU(UU.quickMove(zU, cU, QU, AU))
           },
           closeChest() {
-            MM.closeChest(), MM.flush(OM), aM.i.Tz("chestClosedByPlayer")
+            UU.closeChest(), UU.flush(cU), AU.k.UY("chestClosedByPlayer")
           },
-          focusCrafting(MM) {
-            PM.setFocus(MM)
+          focusCrafting(UU) {
+            FU.setFocus(UU)
           },
-          craftRecipe(rM) {
+          craftRecipe(XU) {
             let {
-              name: iM,
-              ma: OM,
-              times: jM
-            } = rM;
-            return SM(MM.craft(iM, OM, jM))
+              name: zU,
+              YA: cU,
+              times: QU
+            } = XU;
+            return yU(UU.craft(zU, cU, QU))
           },
-          salvageItem(rM) {
+          salvageItem(XU) {
             let {
-              slot: iM,
-              name: OM,
-              amount: jM
-            } = rM;
-            return SM(MM.salvage(iM, OM, jM))
+              slot: zU,
+              name: cU,
+              amount: QU
+            } = XU;
+            return yU(UU.salvage(zU, cU, QU))
           },
-          enchantItem(rM) {
+          enchantItem(XU) {
             let {
-              slot: iM,
-              level: OM,
-              tablePos: SM
-            } = rM;
-            MM.enchant(iM, OM, SM)
+              slot: zU,
+              level: cU,
+              tablePos: yU
+            } = XU;
+            UU.enchant(zU, cU, yU)
           }
         },
         queries: {
-          enchantingOffer(iM) {
+          enchantingOffer(zU) {
             let {
-              slot: OM,
-              blockName: SM
-            } = iM;
-            return function(MM, rM, iM, OM) {
-              const SM = MM.slot(iM);
-              if (!SM || !rM.getClientOption("canCraft") || !(0, hO.p)(OM) || (0, hO.o)(SM.attributes)) return uO;
-              const jM = (0, yO.enchantmentPerksOf)(rM.getItemId(SM.name));
-              if (0 === jM.length) return uO;
-              const aM = [];
-              for (let PM = 0; PM < dO.d; PM++) {
+              slot: cU,
+              blockName: yU
+            } = zU;
+            return function(UU, XU, zU, cU) {
+              const yU = UU.slot(zU);
+              if (!yU || !XU.getClientOption("canCraft") || !(0, Nc.s)(cU) || (0, Nc.q)(yU.attributes)) return Lc;
+              const QU = (0, ac.enchantmentPerksOf)(XU.getItemId(yU.name));
+              if (0 === QU.length) return Lc;
+              const AU = [];
+              for (let FU = 0; FU < pc.f; FU++) {
                 const {
-                  commonProb: MM,
-                  uncommonProb: rM,
-                  rareProb: iM,
-                  epicProb: SM,
-                  legendaryProb: jM,
-                  level: nM
-                } = (0, hO.f)(OM, PM);
-                aM.push({
-                  level: nM,
-                  odds: [MM, rM, iM, SM, jM].map((MM => 100 * MM))
+                  commonProb: UU,
+                  uncommonProb: XU,
+                  rareProb: zU,
+                  epicProb: yU,
+                  legendaryProb: QU,
+                  level: oU
+                } = (0, Nc.g)(cU, FU);
+                AU.push({
+                  level: oU,
+                  odds: [UU, XU, zU, yU, QU].map((UU => 100 * UU))
                 })
               }
               return {
-                perks: [...jM],
-                options: aM
+                perks: [...QU],
+                options: AU
               }
-            }(MM, rM, OM, SM)
+            }(UU, XU, cU, yU)
           }
         }
       }
     }
-    const uO = Object.freeze({
+    const Lc = Object.freeze({
       perks: [],
       options: []
     });
 
-    function RO() {
+    function ec() {
       return null
     }
 
-    function pO(MM, rM, iM, OM) {
-      const SM = [];
-      for (let jM = 0; jM < iM; jM++) {
-        const iM = MM.getUint16(rM + 2 * jM, !0);
-        0 !== iM && SM.push(OM.nameOfId(iM))
+    function Cc(UU, XU, zU, cU) {
+      const yU = [];
+      for (let QU = 0; QU < zU; QU++) {
+        const zU = UU.getUint16(XU + 2 * QU, !0);
+        0 !== zU && yU.push(cU.nameOfId(zU))
       }
-      return SM
+      return yU
     }
-    class WO {
-      constructor(MM) {
-        this.api = MM, this.positions = new Map, this.targeted = {
-          VV: 0,
+    class wc {
+      constructor(UU) {
+        this.api = UU, this.positions = new Map, this.targeted = {
+          O4: 0,
           position: [0, 0, 0],
           normal: [0, 0, 0],
-          zd: [0, 0, 0]
+          yt: [0, 0, 0]
         }, this.hasTarget = !1, this.breaking = [0, 0, 0], this.isBreaking = !1
       }
-      position(MM) {
-        let rM = this.positions.get(MM);
-        return rM || (this.api.checkValid(MM) || this.api.isLocal(MM) ? (rM = [NaN, NaN, NaN], this.api.readPosition(MM, rM), this.positions.set(MM, rM), rM) : null)
+      position(UU) {
+        let XU = this.positions.get(UU);
+        return XU || (this.api.checkValid(UU) || this.api.isLocal(UU) ? (XU = [NaN, NaN, NaN], this.api.readPosition(UU, XU), this.positions.set(UU, XU), XU) : null)
       }
-      pMM() {
+      gXU() {
         return this.hasTarget ? this.targeted : null
       }
       breakingPosition() {
         return this.isBreaking ? this.breaking : null
       }
       refresh() {
-        for (const [rM, iM] of this.positions) this.api.readPosition(rM, iM) || this.api.checkValid(rM) || this.api.isLocal(rM) || this.positions.delete(rM);
-        const MM = this.api.apiView;
-        if (this.refreshTarget(), this.isBreaking = 0 !== (hM.v.playerFlags(MM, 0) & hM.yd.Breaking) && hM.v.breakingProgress(MM, 0) >= 0, this.isBreaking)
-          for (let rM = 0; rM < 3; rM++) this.breaking[rM] = hM.v.breakingPos(MM, 0, rM)
+        for (const [XU, zU] of this.positions) this.api.readPosition(XU, zU) || this.api.checkValid(XU) || this.api.isLocal(XU) || this.positions.delete(XU);
+        const UU = this.api.apiView;
+        if (this.refreshTarget(), this.isBreaking = 0 !== (pU.w.playerFlags(UU, 0) & pU.Od.Breaking) && pU.w.breakingProgress(UU, 0) >= 0, this.isBreaking)
+          for (let XU = 0; XU < 3; XU++) this.breaking[XU] = pU.w.breakingPos(UU, 0, XU)
       }
       refreshTarget() {
-        const MM = this.api.apiView,
-          rM = hM.v.targetBlockId(MM, 0);
-        if (this.hasTarget = rM !== hM.Pc, this.hasTarget) {
-          const iM = this.targeted;
-          iM.VV = rM;
-          for (let rM = 0; rM < 3; rM++) iM.position[rM] = hM.v.targetBlock(MM, 0, rM), iM.normal[rM] = hM.v.targetNormal(MM, 0, rM), iM.zd[rM] = hM.v.targetAdjacent(MM, 0, rM)
+        const UU = this.api.apiView,
+          XU = pU.w.targetBlockId(UU, 0);
+        if (this.hasTarget = XU !== pU.cd, this.hasTarget) {
+          const zU = this.targeted;
+          zU.O4 = XU;
+          for (let XU = 0; XU < 3; XU++) zU.position[XU] = pU.w.targetBlock(UU, 0, XU), zU.normal[XU] = pU.w.targetNormal(UU, 0, XU), zU.yt[XU] = pU.w.targetAdjacent(UU, 0, XU)
         }
       }
-      despawned(MM) {
-        const rM = this.positions.get(MM);
-        rM && !this.api.isLocal(MM) && (rM.fill(NaN), this.positions.delete(MM))
+      despawned(UU) {
+        const XU = this.positions.get(UU);
+        XU && !this.api.isLocal(UU) && (XU.fill(NaN), this.positions.delete(UU))
       }
     }
-    var sO = iM(41710),
-      DO = iM(41697),
-      kO = iM(37316),
-      ZO = iM(37761);
-    const oO = 1,
-      fO = 2;
-    class YO {
+    var qc = zU(41692),
+      Oc = zU(41676),
+      Sc = zU(37083),
+      rc = zU(37532);
+    const uc = 1,
+      fc = 2;
+    class ic {
       constructor() {
-        this.game = new ZO.g, this.client = new ZO.g, this.sQ = 0, this.movesFly = null
+        this.game = new rc.g, this.client = new rc.g, this.uD = 0, this.movesFly = null
       }
-      setGame(MM) {
-        if (null === MM || "object" !== typeof MM) return !1;
+      setGame(UU) {
+        if (null === UU || "object" !== typeof UU) return !1;
         const {
-          key: rM,
-          value: iM
-        } = MM;
-        return "string" === typeof rM && (this.game.setBooleanType(rM, Boolean(iM)), !0)
+          key: XU,
+          value: zU
+        } = UU;
+        return "string" === typeof XU && (this.game.setBooleanType(XU, Boolean(zU)), !0)
       }
-      setClient(MM, rM) {
-        this.client.setBooleanType(MM, rM)
+      setClient(UU, XU) {
+        this.client.setBooleanType(UU, XU)
       }
       clearGame() {
-        this.game = new ZO.g, this.movesFly = null
+        this.game = new rc.g, this.movesFly = null
       }
-      setMovesFly(MM) {
-        this.movesFly = MM
+      setMovesFly(UU) {
+        this.movesFly = UU
       }
       perms() {
-        return (this.game._getTotalBooleanVal() ? oO : 0) | (this.client._getTotalBooleanVal() ? fO : 0)
+        return (this.game._getTotalBooleanVal() ? uc : 0) | (this.client._getTotalBooleanVal() ? fc : 0)
       }
-      write(MM) {
-        const rM = this.perms(),
+      write(UU) {
+        const XU = this.perms(),
           {
-            movesFly: iM
+            movesFly: zU
           } = this;
-        if (rM === this.sQ && null === iM) return !0;
-        let OM = hM.Lb.Keep;
-        return null !== iM && (OM = iM ? hM.Lb.On : hM.Lb.Off), !(!MM || !(0, hM.xe)(MM, 0, OM, rM, iM ? 1 : 0)) && (this.sQ = rM, this.movesFly = null, !0)
+        if (XU === this.uD && null === zU) return !0;
+        let cU = pU.$b.Keep;
+        return null !== zU && (cU = zU ? pU.$b.On : pU.$b.Off), !(!UU || !(0, pU.Ie)(UU, 0, cU, XU, zU ? 1 : 0)) && (this.uD = XU, this.movesFly = null, !0)
       }
     }
-    class NO {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 35;
-        this.api = MM, this.screenBandPct = void 0, this.clipX = 0, this.clipY = 0, this.clipW = 0, this.eye = [0, 0, 0], this.forward = [0, 0, 1], this.along = [0, 0, 0], this.screenBandPct = {
-          x: PM.e,
+    class Hc {
+      constructor(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 35;
+        this.api = UU, this.screenBandPct = void 0, this.clipX = 0, this.clipY = 0, this.clipW = 0, this.eye = [0, 0, 0], this.forward = [0, 0, 1], this.along = [0, 0, 0], this.screenBandPct = {
+          x: FU.d,
           get y() {
-            return rM()
+            return XU()
           }
         }
       }
       get hasView() {
-        const MM = this.api.apiView,
-          rM = hM.v.viewProj;
-        return 0 !== rM(MM, 0, 3) || 0 !== rM(MM, 0, 7) || 0 !== rM(MM, 0, 11) || 0 !== rM(MM, 0, 15)
+        const UU = this.api.apiView,
+          XU = pU.w.viewProj;
+        return 0 !== XU(UU, 0, 3) || 0 !== XU(UU, 0, 7) || 0 !== XU(UU, 0, 11) || 0 !== XU(UU, 0, 15)
       }
       get cameraPosition() {
-        const MM = this.api.apiView,
+        const UU = this.api.apiView,
           {
-            eye: rM
+            eye: XU
           } = this;
-        for (let iM = 0; iM < 3; iM++) rM[iM] = hM.v.eye(MM, 0, iM);
-        return rM
+        for (let zU = 0; zU < 3; zU++) XU[zU] = pU.w.eye(UU, 0, zU);
+        return XU
       }
       get cameraDirection() {
-        const MM = this.api.apiView,
-          rM = hM.v.viewProj,
-          iM = rM(MM, 0, 3),
-          OM = rM(MM, 0, 7),
-          SM = rM(MM, 0, 11),
-          jM = Math.hypot(iM, OM, SM),
+        const UU = this.api.apiView,
+          XU = pU.w.viewProj,
+          zU = XU(UU, 0, 3),
+          cU = XU(UU, 0, 7),
+          yU = XU(UU, 0, 11),
+          QU = Math.hypot(zU, cU, yU),
           {
-            forward: aM
+            forward: AU
           } = this;
-        return jM > 0 && (aM[0] = iM / jM, aM[1] = OM / jM, aM[2] = SM / jM), aM
+        return QU > 0 && (AU[0] = zU / QU, AU[1] = cU / QU, AU[2] = yU / QU), AU
       }
       get cameraHeading() {
-        return hM.v.heading(this.api.apiView, 0)
+        return pU.w.heading(this.api.apiView, 0)
       }
       get cameraPitch() {
-        return hM.v.pitch(this.api.apiView, 0)
+        return pU.w.pitch(this.api.apiView, 0)
       }
       get tanHalfFovX() {
-        return hM.v.tanHalfFovX(this.api.apiView, 0)
+        return pU.w.tanHalfFovX(this.api.apiView, 0)
       }
       get tanHalfFovY() {
-        return hM.v.tanHalfFovY(this.api.apiView, 0)
+        return pU.w.tanHalfFovY(this.api.apiView, 0)
       }
-      projectWorldPosToScreenPos(MM) {
-        this.clip(MM);
+      projectWorldPosToScreenPos(UU) {
+        this.clip(UU);
         const {
-          clipX: rM,
-          clipY: iM,
-          clipW: OM
+          clipX: XU,
+          clipY: zU,
+          clipW: cU
         } = this;
-        if (OM > 0) {
-          const MM = rM / OM * 50,
-            SM = -iM / OM * 50;
-          return Math.abs(MM) <= this.screenBandPct.x && Math.abs(SM) <= this.screenBandPct.y ? {
-            x: 50 + MM,
-            y: 50 + SM
-          } : this.clampToBand(MM, SM)
+        if (cU > 0) {
+          const UU = XU / cU * 50,
+            yU = -zU / cU * 50;
+          return Math.abs(UU) <= this.screenBandPct.x && Math.abs(yU) <= this.screenBandPct.y ? {
+            x: 50 + UU,
+            y: 50 + yU
+          } : this.clampToBand(UU, yU)
         }
-        const SM = this.cameraPosition,
-          jM = Math.hypot(MM[0] - SM[0], MM[1] - SM[1], MM[2] - SM[2]),
-          aM = this.api.apiView,
-          PM = hM.v.viewProj,
-          nM = jM > 0 ? rM / jM : 0,
-          QM = jM > 0 ? -iM / jM : 0,
-          zM = Math.hypot(PM(aM, 0, 1), PM(aM, 0, 5), PM(aM, 0, 9)),
-          LM = nM / Math.hypot(PM(aM, 0, 0), PM(aM, 0, 4), PM(aM, 0, 8)),
-          mM = QM / zM,
-          HM = !(Math.abs(LM) >= .001 || Math.abs(mM) >= .001);
-        return this.clampToBand(nM, HM ? -(zM || 1) : QM)
+        const yU = this.cameraPosition,
+          QU = Math.hypot(UU[0] - yU[0], UU[1] - yU[1], UU[2] - yU[2]),
+          AU = this.api.apiView,
+          FU = pU.w.viewProj,
+          oU = QU > 0 ? XU / QU : 0,
+          DU = QU > 0 ? -zU / QU : 0,
+          EU = Math.hypot(FU(AU, 0, 1), FU(AU, 0, 5), FU(AU, 0, 9)),
+          YU = oU / Math.hypot(FU(AU, 0, 0), FU(AU, 0, 4), FU(AU, 0, 8)),
+          NU = DU / EU,
+          IU = !(Math.abs(YU) >= .001 || Math.abs(NU) >= .001);
+        return this.clampToBand(oU, IU ? -(EU || 1) : DU)
       }
-      projectDirectionToScreenPos(MM) {
+      projectDirectionToScreenPos(UU) {
         if (!this.hasView) return;
-        const rM = this.cameraPosition,
-          iM = this.along;
-        for (let OM = 0; OM < 3; OM++) iM[OM] = rM[OM] + 10 * MM[OM];
-        return this.projectWorldPosToScreenPos(iM)
+        const XU = this.cameraPosition,
+          zU = this.along;
+        for (let cU = 0; cU < 3; cU++) zU[cU] = XU[cU] + 10 * UU[cU];
+        return this.projectWorldPosToScreenPos(zU)
       }
-      projectWorldPosToViewport(MM) {
-        this.clip(MM);
+      projectWorldPosToViewport(UU) {
+        this.clip(UU);
         const {
-          clipX: rM,
-          clipY: iM,
-          clipW: OM
+          clipX: XU,
+          clipY: zU,
+          clipW: cU
         } = this;
-        return OM > 0 ? {
-          x: 50 + rM / OM * 50,
-          y: 50 - iM / OM * 50
+        return cU > 0 ? {
+          x: 50 + XU / cU * 50,
+          y: 50 - zU / cU * 50
         } : null
       }
-      clip(MM) {
-        const rM = this.api.apiView,
-          iM = MM[0] - hM.v.origin(rM, 0, 0),
-          OM = MM[1] - hM.v.origin(rM, 0, 1),
-          SM = MM[2] - hM.v.origin(rM, 0, 2),
-          jM = hM.v.viewProj;
-        this.clipX = jM(rM, 0, 0) * iM + jM(rM, 0, 4) * OM + jM(rM, 0, 8) * SM + jM(rM, 0, 12), this.clipY = jM(rM, 0, 1) * iM + jM(rM, 0, 5) * OM + jM(rM, 0, 9) * SM + jM(rM, 0, 13), this.clipW = jM(rM, 0, 3) * iM + jM(rM, 0, 7) * OM + jM(rM, 0, 11) * SM + jM(rM, 0, 15)
+      clip(UU) {
+        const XU = this.api.apiView,
+          zU = UU[0] - pU.w.origin(XU, 0, 0),
+          cU = UU[1] - pU.w.origin(XU, 0, 1),
+          yU = UU[2] - pU.w.origin(XU, 0, 2),
+          QU = pU.w.viewProj;
+        this.clipX = QU(XU, 0, 0) * zU + QU(XU, 0, 4) * cU + QU(XU, 0, 8) * yU + QU(XU, 0, 12), this.clipY = QU(XU, 0, 1) * zU + QU(XU, 0, 5) * cU + QU(XU, 0, 9) * yU + QU(XU, 0, 13), this.clipW = QU(XU, 0, 3) * zU + QU(XU, 0, 7) * cU + QU(XU, 0, 11) * yU + QU(XU, 0, 15)
       }
-      clampToBand(MM, rM) {
-        return (0, PM.g)(MM, rM, this.screenBandPct.x, this.screenBandPct.y)
+      clampToBand(UU, XU) {
+        return (0, FU.f)(UU, XU, this.screenBandPct.x, this.screenBandPct.y)
       }
     }
-    var AO = iM(5207);
-    const xO = new TextEncoder,
-      vO = new Uint8Array(hM.L * hM.I);
-    class FO {
+    var Mc = zU(5336);
+    const vc = new TextEncoder,
+      Vc = new Uint8Array(pU.R * pU.O);
+    class sc {
       constructor() {
-        this.buttons = [], this.sQ = !0
+        this.buttons = [], this.uD = !0
       }
-      set(MM) {
-        this.buttons = MM, this.sQ = !1
+      set(UU) {
+        this.buttons = UU, this.uD = !1
       }
       attached() {
-        this.sQ = 0 === this.buttons.length
+        this.uD = 0 === this.buttons.length
       }
-      write(MM) {
-        if (this.sQ) return;
-        const rM = new Uint8Array(hM.L),
-          iM = new Uint8Array(hM.L);
-        let OM = 0,
-          SM = 0;
+      write(UU) {
+        if (this.uD) return;
+        const XU = new Uint8Array(pU.R),
+          zU = new Uint8Array(pU.R);
+        let cU = 0,
+          yU = 0;
         for (const {
-            id: jM,
-            keycode: aM
+            id: QU,
+            keycode: AU
           }
           of this.buttons) {
-          if (OM === hM.L) break;
+          if (cU === pU.R) break;
           const {
-            read: MM,
-            written: PM
-          } = xO.encodeInto(jM, vO.subarray(SM, SM + hM.I));
-          if (MM < jM.length) continue;
-          const nM = AO.n[aM];
-          rM[OM] = "number" === typeof nM ? nM : 0, iM[OM] = PM, OM++, SM += PM
+            read: UU,
+            written: FU
+          } = vc.encodeInto(QU, Vc.subarray(yU, yU + pU.O));
+          if (UU < QU.length) continue;
+          const oU = Mc.j[AU];
+          XU[cU] = "number" === typeof oU ? oU : 0, zU[cU] = FU, cU++, yU += FU
         }
-        this.sQ = (0, hM.je)(MM, 0, OM, rM, iM, vO.subarray(0, SM))
+        this.uD = (0, pU.se)(UU, 0, cU, XU, zU, Vc.subarray(0, yU))
       }
     }
 
-    function BO(MM, rM, iM) {
-      const OM = xO.encode(rM);
-      return OM.length <= hM.I && function(MM, rM, iM, OM) {
-        return (0, Oi.e)(), (0, hM.sf)(MM, rM, iM, OM)
-      }(MM, 0, iM ? 1 : 0, OM)
+    function nc(UU, XU, zU) {
+      const cU = vc.encode(XU);
+      return cU.length <= pU.O && function(UU, XU, zU, cU) {
+        return (0, cz.e)(), (0, pU.xf)(UU, XU, zU, cU)
+      }(UU, 0, zU ? 1 : 0, cU)
     }
-    var XO = iM(40312);
-    const IO = new TextDecoder,
-      KO = new TextEncoder,
-      qO = new Uint8Array(0),
-      TO = [0, 0, 0],
-      VO = {
-        off: hM.Cd.Off,
-        key: hM.Cd.Key,
-        touch: hM.Cd.Touch
+    var mc = zU(40081);
+    const lc = new TextDecoder,
+      xc = new TextEncoder,
+      Jc = new Uint8Array(0),
+      jc = [0, 0, 0],
+      Kc = {
+        off: pU.Rd.Off,
+        key: pU.Rd.Key,
+        touch: pU.Rd.Touch
       };
-    class cO {
-      constructor(MM) {
-        var rM;
-        this.options = MM, this.renderFrame = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.entityInfo = void 0, this.entityInfoWatch = void 0, this.particles = void 0, this.clientApi = void 0, this.scriptedCamera = void 0, this.owners = [], this.tickers = [], this.renderers = [], this.receivers = [], this.failures = [], this.vetoSet = !1, this.hooksSet = !1, this.writtenPublicLobby = !1, this.promptWatch = "off", this.promptWatchSent = "off", this.customButtons = new FO, this.generation = 0, this.sessionLive = !1, this.boundId = 0, this.session = null, this.activeConn = 0, this.closedThrough = 0, this.openSocket = 0, this.socketLeftSinceAttach = !1, this.ticks = 0, this.zoomUnshown = !1, this.zoomHeld = !1, this.overflowGen = 0, this.resyncOwed = !1, this.zoom = 0, this.localPhysicsType = tM.n.DEFAULT, this.pendingZoom = null, this.highlight = null, this.highlightOwed = !1, this.cmd = null, this.freeCam = new YO, this.stopped = () => !1, this.onError = void 0, this.api = void 0, this.tables = void 0, this.itemSources = null, this.fault = void 0, this.aL = MM => {
-          if ((0, HM.h)(MM)) throw MM;
-          this.onError(MM)
-        }, this.api = MM.api, this.tables = MM.tables, this.onError = null !== (rM = MM.onError) && void 0 !== rM ? rM : MM => {
-          console.error("Error in client game callback", MM)
-        }, this.renderFrame = new NO(this.api, MM.screenBandY), this.live = new WO(this.api), this.chunks = new zr(this.api.memory, (() => this.api.apiView)), this.items = new si({
+    class bc {
+      constructor(UU) {
+        var XU;
+        this.options = UU, this.renderFrame = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.entityInfo = void 0, this.entityInfoWatch = void 0, this.particles = void 0, this.clientApi = void 0, this.scriptedCamera = void 0, this.owners = [], this.tickers = [], this.renderers = [], this.receivers = [], this.failures = [], this.vetoSet = !1, this.hooksSet = !1, this.writtenPublicLobby = !1, this.promptWatch = "off", this.promptWatchSent = "off", this.customButtons = new sc, this.generation = 0, this.sessionLive = !1, this.boundId = 0, this.session = null, this.activeConn = 0, this.closedThrough = 0, this.openSocket = 0, this.socketLeftSinceAttach = !1, this.ticks = 0, this.zoomUnshown = !1, this.zoomHeld = !1, this.overflowGen = 0, this.resyncOwed = !1, this.zoom = 0, this.localPhysicsType = LU.o.DEFAULT, this.pendingZoom = null, this.highlight = null, this.highlightOwed = !1, this.cmd = null, this.freeCam = new ic, this.stopped = () => !1, this.onError = void 0, this.api = void 0, this.tables = void 0, this.itemSources = null, this.fault = void 0, this.oY = UU => {
+          if ((0, IU.h)(UU)) throw UU;
+          this.onError(UU)
+        }, this.api = UU.api, this.tables = UU.tables, this.onError = null !== (XU = UU.onError) && void 0 !== XU ? XU : UU => {
+          console.error("Error in client game callback", UU)
+        }, this.renderFrame = new Hc(this.api, UU.screenBandY), this.live = new wc(this.api), this.chunks = new EX(this.api.memory, (() => this.api.apiView)), this.items = new qz({
           api: this.api,
-          tables: MM.tables,
+          tables: UU.tables,
           cmd: () => this.cmd,
           onError: this.onError,
-          beforeOp: MM.beforeOp
+          beforeOp: UU.beforeOp
         });
-        const iM = () => this.stopped() ? null : this.cmd,
-          OM = () => this.sessionLive;
-        this.entityInfoWatch = new aO({
-          cmd: iM,
+        const zU = () => this.stopped() ? null : this.cmd,
+          cU = () => this.sessionLive;
+        this.entityInfoWatch = new yc({
+          cmd: zU,
           onError: this.onError
-        }), this.entityInfo = new PO({
+        }), this.entityInfo = new Qc({
           api: this.api,
           watch: this.entityInfoWatch,
-          isSessionLive: OM
-        }), this.particles = new qi({
-          cmd: iM,
-          isSessionLive: OM,
+          isSessionLive: cU
+        }), this.particles = new Jz({
+          cmd: zU,
+          isSessionLive: cU,
           onError: this.onError
-        }), this.clientApi = new Ci({
+        }), this.clientApi = new Zz({
           api: this.api,
           live: this.live,
           chunks: this.chunks,
           items: this.items,
           entityInfo: this.entityInfo,
           particles: this.particles,
-          tables: MM.tables,
-          cmd: iM,
+          tables: UU.tables,
+          cmd: zU,
           sendCmd: () => this.sendCmd(),
-          isSessionLive: OM,
+          isSessionLive: cU,
           beforeWrite: () => {
-            var rM;
+            var XU;
             if (this.stopped()) return !1;
-            const iM = this.generation;
-            return !1 !== (null === (rM = MM.beforeWrite) || void 0 === rM ? void 0 : rM.call(MM)) && iM === this.generation
+            const zU = this.generation;
+            return !1 !== (null === (XU = UU.beforeWrite) || void 0 === XU ? void 0 : XU.call(UU)) && zU === this.generation
           },
           playerDbId: () => {
-            const MM = this.session;
-            if (null === MM) throw new Error("No game session has started, so the local player has no DB id");
-            return MM.playerDbId
+            const UU = this.session;
+            if (null === UU) throw new Error("No game session has started, so the local player has no DB id");
+            return UU.playerDbId
           },
-          playSound: MM.playSound,
-          preloadSounds: MM.preloadSounds,
-          setLocalOptions: MM.setLocalOptions,
-          hasPackModel: MM.hasPackModel,
+          playSound: UU.playSound,
+          preloadSounds: UU.preloadSounds,
+          setLocalOptions: UU.setLocalOptions,
+          hasPackModel: UU.hasPackModel,
           localPhysicsType: () => this.localPhysicsType
-        }), this.scriptedCamera = new IM({
+        }), this.scriptedCamera = new JU({
           api: this.api,
           cmd: () => this.stopped() ? null : this.cmd,
-          screen: MM.cameraScreen,
-          showFacing: MM.showCameraFacing
+          screen: UU.cameraScreen,
+          showFacing: UU.showCameraFacing
         })
       }
       get itemBridgeSources() {
-        return this.itemSources ??= gO(this.items, this.tables, (() => this.localPlayerAlive()), this.aL), this.itemSources
+        return this.itemSources ??= dc(this.items, this.tables, (() => this.localPlayerAlive()), this.oY), this.itemSources
       }
       get isSessionLive() {
         return this.sessionLive
@@ -4183,52 +4004,52 @@ export const modules = {
       localDeaths() {
         return this.isCoreRunning ? this.api.localDeaths() : null
       }
-      clickCodeBlock(MM) {
-        const rM = this.sessionLive ? this.sendCmd() : null;
-        return null !== rM && (iM = rM, OM = 0, SM = MM[0], jM = MM[1], aM = MM[2], (0, Oi.e)(), (0, hM.pe)(iM, OM, SM, jM, aM));
-        var iM, OM, SM, jM, aM
+      clickCodeBlock(UU) {
+        const XU = this.sessionLive ? this.sendCmd() : null;
+        return null !== XU && (zU = XU, cU = 0, yU = UU[0], QU = UU[1], AU = UU[2], (0, cz.e)(), (0, pU.xe)(zU, cU, yU, QU, AU));
+        var zU, cU, yU, QU, AU
       }
       cameraZoom() {
         return this.zoom
       }
-      setCameraZoom(MM) {
-        const rM = this.liveCmd();
-        return null === rM ? (this.pendingZoom = MM, !1) : (this.pendingZoom = null, (0, hM.mg)(rM, 0, MM, 1))
+      setCameraZoom(UU) {
+        const XU = this.liveCmd();
+        return null === XU ? (this.pendingZoom = UU, !1) : (this.pendingZoom = null, (0, pU.hg)(XU, 0, UU, 1))
       }
-      OW(MM) {
-        const rM = this.stopped() ? null : this.cmd;
-        return null !== rM && (0, hM.eg)(rM, 0, MM ? 1 : 0)
+      nC(UU) {
+        const XU = this.stopped() ? null : this.cmd;
+        return null !== XU && (0, pU.ag)(XU, 0, UU ? 1 : 0)
       }
       respawn() {
-        const MM = this.sessionLive ? this.sendCmd() : null;
-        return null !== MM && (rM = MM, iM = 0, (0, Oi.e)(), (0, hM.Hf)(rM, iM));
-        var rM, iM
+        const UU = this.sessionLive ? this.sendCmd() : null;
+        return null !== UU && (XU = UU, zU = 0, (0, cz.e)(), (0, pU.Jf)(XU, zU));
+        var XU, zU
       }
-      bindCustomButtonKeys(MM) {
-        this.customButtons.set(MM)
+      bindCustomButtonKeys(UU) {
+        this.customButtons.set(UU)
       }
-      pressCustomButton(MM, rM) {
-        const iM = this.sessionLive ? this.sendCmd() : null;
-        return null !== iM && BO(iM, MM, rM)
+      pressCustomButton(UU, XU) {
+        const zU = this.sessionLive ? this.sendCmd() : null;
+        return null !== zU && nc(zU, UU, XU)
       }
-      padMove(MM, rM, iM, OM, SM, jM) {
-        const aM = this.liveCmd();
-        return null !== aM && (0, hM.df)(aM, 0, MM, rM, iM, OM, SM, jM)
+      padMove(UU, XU, zU, cU, yU, QU) {
+        const AU = this.liveCmd();
+        return null !== AU && (0, pU.hf)(AU, 0, UU, XU, zU, cU, yU, QU)
       }
-      thirdPersonFor(MM) {
-        const rM = this.liveCmd();
-        return null !== rM && (0, hM.tg)(rM, 0, null !== MM && void 0 !== MM ? MM : 1 / 0)
+      thirdPersonFor(UU) {
+        const XU = this.liveCmd();
+        return null !== XU && (0, pU.kg)(XU, 0, null !== UU && void 0 !== UU ? UU : 1 / 0)
       }
-      send(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const OM = 0 !== this.openSocket || this.sessionLive ? this.sendCmd() : null;
-        return null !== OM && Si(OM, iM ? mM.ld : 0, MM, (0, fM.f)(rM))
+      send(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const cU = 0 !== this.openSocket || this.sessionLive ? this.sendCmd() : null;
+        return null !== cU && yz(cU, zU ? NU.ud : 0, UU, (0, HU.e)(XU))
       }
-      socketAttached(MM) {
-        this.openSocket = MM, this.socketLeftSinceAttach = !1
+      socketAttached(UU) {
+        this.openSocket = UU, this.socketLeftSinceAttach = !1
       }
-      socketDetached(MM) {
-        this.openSocket === MM && (this.openSocket = 0)
+      socketDetached(UU) {
+        this.openSocket === UU && (this.openSocket = 0)
       }
       socketLeft() {
         this.openSocket = 0, this.socketLeftSinceAttach = !0
@@ -4239,455 +4060,455 @@ export const modules = {
       liveCmd() {
         return this.isCoreRunning ? this.cmd : null
       }
-      attach(MM) {
-        const rM = () => MM.isStopped;
-        this.stopped = rM, this.cmd = MM.rings.cmd, this.promptWatchSent = "off", this.writePromptWatch(), this.customButtons.attached(), this.writeCustomButtons();
-        const iM = this.api.apiView;
-        this.overflowGen = hM.v.eventOverflowGen(iM, 0), this.resyncOwed = 0 !== hM.v.eventOverflowMask(iM, 0), MM.setGameHost(this), MM.setEventWalker((MM => {
-          this.api.walk(MM, this, rM)
+      attach(UU) {
+        const XU = () => UU.isStopped;
+        this.stopped = XU, this.cmd = UU.rings.cmd, this.promptWatchSent = "off", this.writePromptWatch(), this.customButtons.attached(), this.writeCustomButtons();
+        const zU = this.api.apiView;
+        this.overflowGen = pU.w.eventOverflowGen(zU, 0), this.resyncOwed = 0 !== pU.w.eventOverflowMask(zU, 0), UU.setGameHost(this), UU.setEventWalker((UU => {
+          this.api.walk(UU, this, XU)
         }))
       }
-      watchPromptPick(MM) {
-        this.promptWatch = MM, this.writePromptWatch()
+      watchPromptPick(UU) {
+        this.promptWatch = UU, this.writePromptWatch()
       }
       get promptEntity() {
-        return "off" === this.promptWatch || this.stopped() ? null : MS(hM.v.promptEntity(this.api.apiView, 0))
+        return "off" === this.promptWatch || this.stopped() ? null : Tc(pU.w.promptEntity(this.api.apiView, 0))
       }
       get interactLabel() {
-        return "touch" !== this.promptWatch || this.stopped() ? hM.ic.None : hM.v.interactLabel(this.api.apiView, 0)
+        return "touch" !== this.promptWatch || this.stopped() ? pU.zc.None : pU.w.interactLabel(this.api.apiView, 0)
       }
       get interactIcon() {
-        return "touch" !== this.promptWatch || this.stopped() ? 0 : hM.v.interactIcon(this.api.apiView, 0)
+        return "touch" !== this.promptWatch || this.stopped() ? 0 : pU.w.interactIcon(this.api.apiView, 0)
       }
       closeGame() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        (0 === MM || MM >= this.openSocket) && (this.openSocket = 0), this.closedThrough = Math.max(this.closedThrough, MM, this.activeConn), this.activeConn = 0, this.endSession(), this.endGameGrants(), this.dropGameCamera()
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        (0 === UU || UU >= this.openSocket) && (this.openSocket = 0), this.closedThrough = Math.max(this.closedThrough, UU, this.activeConn), this.activeConn = 0, this.endSession(), this.endGameGrants(), this.dropGameCamera()
       }
-      gameCamera(MM) {
-        0 !== this.activeConn && this.scriptedCamera.settingsChanged(MM)
+      gameCamera(UU) {
+        0 !== this.activeConn && this.scriptedCamera.settingsChanged(UU)
       }
-      netEvent(MM) {
-        "connection" === MM.type ? MM.phase === mM.F.Activated && MM.conn !== this.activeConn && MM.conn > this.closedThrough ? (this.endSession(), this.activeConn = MM.conn, this.endGameGrants(), this.dropGameCamera()) : MM.phase !== mM.F.Left && MM.phase !== mM.F.Closed || MM.conn !== this.activeConn ? MM.phase === mM.F.Resumed && 0 !== this.activeConn && MM.conn > this.closedThrough && (this.activeConn = MM.conn) : this.closeGame() : MM.conn === this.activeConn && 0 !== MM.conn && (MM.Kz === DO.u ? this.gunHit(MM.payload) : MM.Kz === nO.hc.EditItemCraftingRecipes || MM.Kz === DO.R ? this.items.touch() : (this.serverOptions(MM), this.gameMessage(MM)));
-        const rM = this.options.onNetEvent;
-        rM && this.guard((() => {
-          rM(MM)
+      netEvent(UU) {
+        "connection" === UU.type ? UU.phase === NU.E.Activated && UU.conn !== this.activeConn && UU.conn > this.closedThrough ? (this.endSession(), this.activeConn = UU.conn, this.endGameGrants(), this.dropGameCamera()) : UU.phase !== NU.E.Left && UU.phase !== NU.E.Closed || UU.conn !== this.activeConn ? UU.phase === NU.E.Resumed && 0 !== this.activeConn && UU.conn > this.closedThrough && (this.activeConn = UU.conn) : this.closeGame() : UU.conn === this.activeConn && 0 !== UU.conn && (UU.TE === Oc.w ? this.gunHit(UU.payload) : UU.TE === Ac.oc.EditItemCraftingRecipes || UU.TE === Oc.S ? this.items.touch() : (this.serverOptions(UU), this.gameMessage(UU)));
+        const XU = this.options.onNetEvent;
+        XU && this.guard((() => {
+          XU(UU)
         }))
       }
-      serverOptions(MM) {
-        const rM = this.options.serverOptions,
-          iM = rM ? this.decoded(QO, MM) : null;
-        rM && iM && this.guard((() => {
-          rM.applyNewClientOptions(iM)
+      serverOptions(UU) {
+        const XU = this.options.serverOptions,
+          zU = XU ? this.decoded(Fc, UU) : null;
+        XU && zU && this.guard((() => {
+          XU.applyNewClientOptions(zU)
         }))
       }
-      gameMessage(MM) {
-        let rM = null;
+      gameMessage(UU) {
+        let XU = null;
         try {
-          rM = function(MM) {
-            if ("message" !== MM.type || MM.Kz !== nO.hc.GameCodeMessage || MM.payloadKind !== mM.hc.Msgpack) return null;
-            const rM = (0, fM.c)(MM.payload);
-            if (null === rM || "object" !== typeof rM || "string" !== typeof rM.messageType) throw new Error("GameCodeMessage without a messageType");
-            return rM
-          }(MM)
-        } catch (iM) {
-          this.sessionLive && this.onError(iM)
+          XU = function(UU) {
+            if ("message" !== UU.type || UU.TE !== Ac.oc.GameCodeMessage || UU.payloadKind !== NU.jc.Msgpack) return null;
+            const XU = (0, HU.d)(UU.payload);
+            if (null === XU || "object" !== typeof XU || "string" !== typeof XU.messageType) throw new Error("GameCodeMessage without a messageType");
+            return XU
+          }(UU)
+        } catch (zU) {
+          this.sessionLive && this.onError(zU)
         }
-        if (rM) {
+        if (XU) {
           const {
-            messageType: MM,
-            data: iM
-          } = rM;
-          if ((0, pM.d)(MM)) return void this.guard((() => {
-            (0, pM.b)(MM, iM)
+            messageType: UU,
+            data: zU
+          } = XU;
+          if ((0, qU.h)(UU)) return void this.guard((() => {
+            (0, qU.d)(UU, zU)
           }));
-          "freeCamPerms" === MM && this.freeCam.setGame(iM) && this.writeFreeCam(), this.sessionLive && this.round(this.receivers, (rM => {
-            rM.onReceivedMessageFromServer(MM, iM)
+          "freeCamPerms" === UU && this.freeCam.setGame(zU) && this.writeFreeCam(), this.sessionLive && this.round(this.receivers, (XU => {
+            XU.onReceivedMessageFromServer(UU, zU)
           }))
         }
       }
-      decoded(MM, rM) {
+      decoded(UU, XU) {
         try {
-          return MM(rM)
-        } catch (iM) {
-          return this.onError(iM), null
+          return UU(XU)
+        } catch (zU) {
+          return this.onError(zU), null
         }
       }
-      setClientFreeCameraGrant(MM, rM) {
-        this.freeCam.setClient(MM, rM), this.writeFreeCam()
+      setClientFreeCameraGrant(UU, XU) {
+        this.freeCam.setClient(UU, XU), this.writeFreeCam()
       }
       freeCameraAllowed() {
         return 0 !== this.freeCam.perms()
       }
-      setFreeCameraMovesFly(MM) {
-        this.freeCam.setMovesFly(MM), this.writeFreeCam()
+      setFreeCameraMovesFly(UU) {
+        this.freeCam.setMovesFly(UU), this.writeFreeCam()
       }
-      setBlockHighlight(MM) {
-        this.highlight = MM, this.highlightOwed = !0, this.writeOwedHighlight()
+      setBlockHighlight(UU) {
+        this.highlight = UU, this.highlightOwed = !0, this.writeOwedHighlight()
       }
       writeOwedHighlight() {
-        const MM = this.liveCmd();
-        if (null === MM || !this.highlightOwed) return;
-        const rM = this.highlight;
-        this.highlightOwed = null === rM ? !(0, hM.Me)(MM, 0, TO, TO, 0) : !(0, hM.Me)(MM, 0, rM.pos, rM.normal, 1)
+        const UU = this.liveCmd();
+        if (null === UU || !this.highlightOwed) return;
+        const XU = this.highlight;
+        this.highlightOwed = null === XU ? !(0, pU.Ue)(UU, 0, jc, jc, 0) : !(0, pU.Ue)(UU, 0, XU.pos, XU.normal, 1)
       }
-      localPlayerBound(MM) {
-        var rM, iM;
-        if (0 === this.activeConn || this.sessionLive && MM === this.boundId) return;
-        const OM = this.sessionLive;
-        let SM, jM, aM, PM;
-        this.endSession(), OM && this.restartGameCamera();
+      localPlayerBound(UU) {
+        var XU, zU;
+        if (0 === this.activeConn || this.sessionLive && UU === this.boundId) return;
+        const cU = this.sessionLive;
+        let yU, QU, AU, FU;
+        this.endSession(), cU && this.restartGameCamera();
         try {
-          var nM;
+          var oU;
           this.session = null;
-          const MM = this.options.sessionInfo(this.activeConn);
-          if (this.session = MM, !MM) return;
-          SM = MM.gameNameWithVariation, jM = null !== (nM = (0, gM.Jb)(SM)) && void 0 !== nM ? nM : void 0, aM = (0, uM.w)(MM.lobbyName), PM = (0, uM.P)(MM.lobbyName)
-        } catch (lM) {
-          return void this.onError(lM)
+          const UU = this.options.sessionInfo(this.activeConn);
+          if (this.session = UU, !UU) return;
+          yU = UU.gameNameWithVariation, QU = null !== (oU = (0, eU.Nb)(yU)) && void 0 !== oU ? oU : void 0, AU = (0, CU.s)(UU.lobbyName), FU = (0, CU.G)(UU.lobbyName)
+        } catch (kU) {
+          return void this.onError(kU)
         }
-        const QM = {
-          localPlayerId: String(MM)
+        const DU = {
+          localPlayerId: String(UU)
         };
-        let zM = {},
-          LM = [];
+        let EU = {},
+          YU = [];
         try {
-          var mM, HM;
-          zM = null !== (mM = null === (HM = this.options.gameFactory((0, gM.Mb)(SM))) || void 0 === HM ? void 0 : HM(PM, aM, jM, QM)) && void 0 !== mM ? mM : {}
-        } catch (lM) {
-          this.aL(lM)
+          var NU, IU;
+          EU = null !== (NU = null === (IU = this.options.gameFactory((0, eU.Tb)(yU))) || void 0 === IU ? void 0 : IU(FU, AU, QU, DU)) && void 0 !== NU ? NU : {}
+        } catch (kU) {
+          this.oY(kU)
         }
         try {
-          var hM, JM;
-          LM = (0, RM.c)(null === (hM = (JM = this.options).defaultPlugins) || void 0 === hM ? void 0 : hM.call(JM, PM, aM, jM, QM), zM.plugins)
-        } catch (lM) {
-          this.aL(lM)
+          var pU, aU;
+          YU = (0, wU.e)(null === (pU = (aU = this.options).defaultPlugins) || void 0 === pU ? void 0 : pU.call(aU, FU, AU, QU, DU), EU.plugins)
+        } catch (kU) {
+          this.oY(kU)
         }
-        const dM = [zM, ...LM];
-        this.owners = dM, this.tickers = dM.filter((MM => void 0 !== MM.bL)), this.renderers = dM.filter((MM => void 0 !== MM.onAfterRender)), this.receivers = dM.filter((MM => void 0 !== MM.onReceivedMessageFromServer)), this.writeAltVeto(dM), this.writeHooks(dM), this.writePublicLobby(PM), this.writeLocalDbId(null !== (rM = null === (iM = this.session) || void 0 === iM ? void 0 : iM.playerDbId) && void 0 !== rM ? rM : null), this.boundId = MM, this.sessionLive = !0, this.generation++, null !== this.pendingZoom && this.setCameraZoom(this.pendingZoom), this.highlightOwed ||= null !== this.highlight, this.writeOwedHighlight(), this.round(dM, (MM => {
-          var rM;
-          null === (rM = MM.onCreate) || void 0 === rM || rM.call(MM, this.clientApi)
+        const tU = [EU, ...YU];
+        this.owners = tU, this.tickers = tU.filter((UU => void 0 !== UU.LY)), this.renderers = tU.filter((UU => void 0 !== UU.onAfterRender)), this.receivers = tU.filter((UU => void 0 !== UU.onReceivedMessageFromServer)), this.writeAltVeto(tU), this.writeHooks(tU), this.writePublicLobby(FU), this.writeLocalDbId(null !== (XU = null === (zU = this.session) || void 0 === zU ? void 0 : zU.playerDbId) && void 0 !== XU ? XU : null), this.boundId = UU, this.sessionLive = !0, this.generation++, null !== this.pendingZoom && this.setCameraZoom(this.pendingZoom), this.highlightOwed ||= null !== this.highlight, this.writeOwedHighlight(), this.round(tU, (UU => {
+          var XU;
+          null === (XU = UU.onCreate) || void 0 === XU || XU.call(UU, this.clientApi)
         }));
-        const yM = this.generation;
+        const gU = this.generation;
         setTimeout((() => {
-          yM === this.generation && !0 === this.tables.getClientOption("creative") && tO(this.tables)
+          gU === this.generation && !0 === this.tables.getClientOption("creative") && Wc(this.tables)
         }), 0)
       }
-      chunkSlot(MM, rM, iM, OM, SM, jM) {
-        this.chunks.apply(MM, rM, iM, OM, SM, jM)
+      chunkSlot(UU, XU, zU, cU, yU, QU) {
+        this.chunks.apply(UU, XU, zU, cU, yU, QU)
       }
-      entityAdded(MM) {
-        var rM;
-        this.entityInfo.stale(MM), null === (rM = this.options.replayEntities) || void 0 === rM || rM.entityAdded(MM)
+      entityAdded(UU) {
+        var XU;
+        this.entityInfo.stale(UU), null === (XU = this.options.replayEntities) || void 0 === XU || XU.entityAdded(UU)
       }
-      entityInfoChanged(MM) {
-        var rM;
-        this.entityInfo.stale(MM), null === (rM = this.options.replayEntities) || void 0 === rM || rM.entityInfoChanged(MM)
+      entityInfoChanged(UU) {
+        var XU;
+        this.entityInfo.stale(UU), null === (XU = this.options.replayEntities) || void 0 === XU || XU.entityInfoChanged(UU)
       }
       afterPrescan() {
         this.items.refresh(), this.entityInfo.refresh(), this.api.rereadDirectory(), this.chunks.refresh(), this.live.refresh()
       }
       tickEnd() {
         if (this.ticks++, this.tickers.length > 0) {
-          const MM = performance.now();
-          this.round(this.tickers, rS), (0, lO.e)(performance.now() - MM)
+          const UU = performance.now();
+          this.round(this.tickers, hc), (0, tc.b)(performance.now() - UU)
         }
       }
-      afterWalk(MM) {
+      afterWalk(UU) {
         this.ackEventOverflow(), this.clientApi.flushOwed(), this.writeOwedHighlight();
-        const rM = this.options.replayEntities;
-        rM && this.guard((() => {
-          this.entityInfoWatch.want(jO, rM.wantsWatch), rM.flush(this.entityInfoWatch.on)
+        const XU = this.options.replayEntities;
+        XU && this.guard((() => {
+          this.entityInfoWatch.want(cc, XU.wantsWatch), XU.flush(this.entityInfoWatch.on)
         }));
-        const iM = this.api.apiView,
-          OM = hM.v.frameMs(iM, 0);
-        kO.l.frame(OM, hM.v.heading(iM, 0), hM.v.pitch(iM, 0), kO.i[MM]);
-        const SM = (0, lO.k)(MM, OM);
-        if (null !== SM) {
-          const MM = this.renderFrame;
+        const zU = this.api.apiView,
+          cU = pU.w.frameMs(zU, 0);
+        Sc.q.frame(cU, pU.w.heading(zU, 0), pU.w.pitch(zU, 0), Sc.l[UU]);
+        const yU = (0, tc.h)(UU, cU);
+        if (null !== yU) {
+          const UU = this.renderFrame;
           this.guard((() => {
-            (0, LO.e)().turnDamageIndicators(MM.cameraHeading)
+            (0, Dc.c)().turnDamageIndicators(UU.cameraHeading)
           })), this.guard((() => {
-            this.clientApi.slideRoute(SM)
-          })), this.round(this.renderers, (rM => {
-            rM.onAfterRender(SM, MM)
+            this.clientApi.slideRoute(yU)
+          })), this.round(this.renderers, (XU => {
+            XU.onAfterRender(yU, UU)
           }))
         }
         this.writeFreeCam();
         try {
-          this.scriptedCamera.afterFrame(null !== SM)
-        } catch (aM) {
-          this.aL(aM)
+          this.scriptedCamera.afterFrame(null !== yU)
+        } catch (AU) {
+          this.oY(AU)
         }
-        this.showZoom(), this.items.flush(this.aL), this.writePromptWatch(), this.writeCustomButtons();
-        const jM = this.ticks;
-        this.ticks = 0, (0, lO.i)(jM, MM, SM, this.aL)
+        this.showZoom(), this.items.flush(this.oY), this.writePromptWatch(), this.writeCustomButtons();
+        const QU = this.ticks;
+        this.ticks = 0, (0, tc.f)(QU, UU, yU, this.oY)
       }
-      entityRemoved(MM) {
-        this.live.despawned(MM), this.entityInfo.removed(MM)
+      entityRemoved(UU) {
+        this.live.despawned(UU), this.entityInfo.removed(UU)
       }
       ackEventOverflow() {
-        const MM = this.api.apiView,
-          rM = hM.v.eventOverflowGen(MM, 0),
-          iM = rM - this.overflowGen >>> 0;
-        if (0 === iM && !this.resyncOwed) return;
-        this.overflowGen = rM;
-        const OM = hM.v.eventOverflowMask(MM, 0),
-          SM = this.cmd;
-        0 === OM || null === SM || this.stopped() ? this.resyncOwed = !1 : this.resyncOwed = !(0, hM.ve)(SM, 0, OM);
-        const jM = this.options.onEventOverflow;
-        0 !== iM && jM && this.guard((() => {
-          jM(OM, iM)
+        const UU = this.api.apiView,
+          XU = pU.w.eventOverflowGen(UU, 0),
+          zU = XU - this.overflowGen >>> 0;
+        if (0 === zU && !this.resyncOwed) return;
+        this.overflowGen = XU;
+        const cU = pU.w.eventOverflowMask(UU, 0),
+          yU = this.cmd;
+        0 === cU || null === yU || this.stopped() ? this.resyncOwed = !1 : this.resyncOwed = !(0, pU.Fe)(yU, 0, cU);
+        const QU = this.options.onEventOverflow;
+        0 !== zU && QU && this.guard((() => {
+          QU(cU, zU)
         }))
       }
-      gameCall(MM, rM, iM, OM, SM, jM, aM, PM, nM) {
-        if (MM === hM._b.Director) try {
-          return this.scriptedCamera.call(rM, iM, OM, SM, jM, aM)
-        } catch (QM) {
-          return this.aL(QM), hM.kb.None
+      gameCall(UU, XU, zU, cU, yU, QU, AU, FU, oU) {
+        if (UU === pU.oc.Director) try {
+          return this.scriptedCamera.call(XU, zU, cU, yU, QU, AU)
+        } catch (DU) {
+          return this.oY(DU), pU.qb.None
         }
-        if (!this.sessionLive || void 0 !== this.fault) return MM === hM._b.AltVeto ? hM.j.Allow : 0;
+        if (!this.sessionLive || void 0 !== this.fault) return UU === pU.oc.AltVeto ? pU.j.Allow : 0;
         try {
-          return this.callGames(MM, rM, iM, OM, SM, jM, aM, PM)
-        } catch (QM) {
-          throw (0, HM.h)(QM) && (this.fault = QM), QM
+          return this.callGames(UU, XU, zU, cU, yU, QU, AU, FU)
+        } catch (DU) {
+          throw (0, IU.h)(DU) && (this.fault = DU), DU
         }
       }
       takeFault() {
-        const MM = this.fault;
-        return this.fault = void 0, MM
+        const UU = this.fault;
+        return this.fault = void 0, UU
       }
-      callGames(MM, rM, iM, OM, SM, jM, aM, PM) {
+      callGames(UU, XU, zU, cU, yU, QU, AU, FU) {
         this.api.rereadDirectory(), this.chunks.touch(), this.items.refresh(), this.live.refresh(), this.entityInfo.inCoreCall();
         const {
-          tables: nM
-        } = this.options, QM = String(this.boundId);
-        switch (MM) {
-          case hM._b.AltVeto:
-          case hM._b.AltAction: {
-            const PM = 0 !== aM,
-              [zM, LM, mM] = PM ? [rM, iM, OM] : [void 0, void 0, void 0],
-              HM = PM ? nM.nameOfId(SM) : "Air",
-              JM = MS(jM);
-            if (MM === hM._b.AltAction) return this.first((MM => {
-              var rM;
-              return null === (rM = MM.onPlayerAltAction) || void 0 === rM ? void 0 : rM.call(MM, QM, zM, LM, mM, HM, JM)
+          tables: oU
+        } = this.options, DU = String(this.boundId);
+        switch (UU) {
+          case pU.oc.AltVeto:
+          case pU.oc.AltAction: {
+            const FU = 0 !== AU,
+              [EU, YU, NU] = FU ? [XU, zU, cU] : [void 0, void 0, void 0],
+              IU = FU ? oU.nameOfId(yU) : "Air",
+              aU = Tc(QU);
+            if (UU === pU.oc.AltAction) return this.first((UU => {
+              var XU;
+              return null === (XU = UU.onPlayerAltAction) || void 0 === XU ? void 0 : XU.call(UU, DU, EU, YU, NU, IU, aU)
             })), 0;
-            const dM = this.first((MM => {
-              var rM;
-              return null === (rM = MM.onPlayerAttemptAltAction) || void 0 === rM ? void 0 : rM.call(MM, QM, zM, LM, mM, HM, JM)
+            const tU = this.first((UU => {
+              var XU;
+              return null === (XU = UU.onPlayerAttemptAltAction) || void 0 === XU ? void 0 : XU.call(UU, DU, EU, YU, NU, IU, aU)
             }));
-            return "preventAction" === dM ? hM.j.Prevent : "preventPlacement" === dM ? hM.j.PreventPlacement : hM.j.Allow
+            return "preventAction" === tU ? pU.j.Prevent : "preventPlacement" === tU ? pU.j.PreventPlacement : pU.j.Allow
           }
-          case hM._b.Click: {
-            const MM = PM,
-              zM = 0 !== (MM & hM.S.Alt),
-              LM = 0 !== (MM & hM.S.HasPos),
-              mM = LM ? nM.nameOfId(SM) : "Air",
-              [HM, JM, dM] = LM ? [rM, iM, OM] : [null, null, null],
-              yM = MS(jM),
-              lM = 0 !== (MM & hM.S.Up),
-              EM = MS(aM);
-            if (0 === (MM & hM.S.AttackOnly) && this.first((MM => {
-                var rM, iM;
-                return lM ? null === (rM = MM.onPlayerClickUp) || void 0 === rM ? void 0 : rM.call(MM, QM, zM, HM, JM, dM, mM, yM) : null === (iM = MM.onPlayerClick) || void 0 === iM ? void 0 : iM.call(MM, QM, zM, HM, JM, dM, mM, yM)
-              })), !lM && !zM && null !== EM) {
-              const MM = this.clientApi.getPositionView(EM),
-                rM = MM ? [MM[0], MM[1], MM[2]] : [0, 0, 0];
-              this.first((MM => {
-                var iM;
-                return null === (iM = MM.onPlayerAttackEntity) || void 0 === iM ? void 0 : iM.call(MM, QM, EM, rM)
+          case pU.oc.Click: {
+            const UU = FU,
+              EU = 0 !== (UU & pU._.Alt),
+              YU = 0 !== (UU & pU._.HasPos),
+              NU = YU ? oU.nameOfId(yU) : "Air",
+              [IU, aU, tU] = YU ? [XU, zU, cU] : [null, null, null],
+              gU = Tc(QU),
+              kU = 0 !== (UU & pU._.Up),
+              GU = Tc(AU);
+            if (0 === (UU & pU._.AttackOnly) && this.first((UU => {
+                var XU, zU;
+                return kU ? null === (XU = UU.onPlayerClickUp) || void 0 === XU ? void 0 : XU.call(UU, DU, EU, IU, aU, tU, NU, gU) : null === (zU = UU.onPlayerClick) || void 0 === zU ? void 0 : zU.call(UU, DU, EU, IU, aU, tU, NU, gU)
+              })), !kU && !EU && null !== GU) {
+              const UU = this.clientApi.getPositionView(GU),
+                XU = UU ? [UU[0], UU[1], UU[2]] : [0, 0, 0];
+              this.first((UU => {
+                var zU;
+                return null === (zU = UU.onPlayerAttackEntity) || void 0 === zU ? void 0 : zU.call(UU, DU, GU, XU)
               }))
             }
             return 0
           }
-          case hM._b.ChangeBlock: {
-            const MM = nM.nameOfId(SM),
-              aM = nM.nameOfId(jM);
-            return this.first((SM => {
-              var jM;
-              return null === (jM = SM.onPlayerChangeBlock) || void 0 === jM ? void 0 : jM.call(SM, QM, rM, iM, OM, MM, aM)
+          case pU.oc.ChangeBlock: {
+            const UU = oU.nameOfId(yU),
+              AU = oU.nameOfId(QU);
+            return this.first((yU => {
+              var QU;
+              return null === (QU = yU.onPlayerChangeBlock) || void 0 === QU ? void 0 : QU.call(yU, DU, XU, zU, cU, UU, AU)
             })), 0
           }
-          case hM._b.DropItem: {
-            const MM = nM.nameOfId(rM);
-            return this.first((rM => {
-              var SM;
-              return null === (SM = rM.onPlayerDropItem) || void 0 === SM ? void 0 : SM.call(rM, QM, MM, iM, OM)
+          case pU.oc.DropItem: {
+            const UU = oU.nameOfId(XU);
+            return this.first((XU => {
+              var yU;
+              return null === (yU = XU.onPlayerDropItem) || void 0 === yU ? void 0 : yU.call(XU, DU, UU, zU, cU)
             })), 0
           }
           default:
-            return this.onError(new Error(`Unknown game call kind ${MM}`)), 0
+            return this.onError(new Error(`Unknown game call kind ${UU}`)), 0
         }
       }
-      changeBlockFail(MM, rM, iM, OM, SM, jM, aM) {
-        const PM = SM === hM.Jc ? null : IO.decode(this.api.eventBytes(jM, Math.min(SM, aM)));
+      changeBlockFail(UU, XU, zU, cU, yU, QU, AU) {
+        const FU = yU === pU.Vc ? null : lc.decode(this.api.eventBytes(QU, Math.min(yU, AU)));
         this.failures.push({
-          GO: [MM, rM, iM],
-          CO: OM,
-          eO: PM
+          wc: [UU, XU, zU],
+          qc: cU,
+          Oc: FU
         })
       }
       changeBlockFailEnd() {
-        const MM = this.failures;
-        this.failures = [], this.sessionLive && this.round(this.owners, (rM => {
-          var iM;
-          null === (iM = rM.onChangeBlockFail) || void 0 === iM || iM.call(rM, MM)
-        })), this.Tz("EditBoard", {
+        const UU = this.failures;
+        this.failures = [], this.sessionLive && this.round(this.owners, (XU => {
+          var zU;
+          null === (zU = XU.onChangeBlockFail) || void 0 === zU || zU.call(XU, UU)
+        })), this.UY("blockChangeRefused", null), this.UY("EditBoard", {
           pos: null
-        }), this.Tz("EditCodeBlock", {
+        }), this.UY("EditCodeBlock", {
           pos: null,
           canChangePos: null
         })
       }
-      inventoryEvent(MM, rM, iM, OM, SM, jM) {
-        MM === hM.lc.ChestOpened ? this.items.chestOpened(iM, OM, SM) : MM !== hM.lc.Synced && MM !== hM.lc.ChestClosed && MM !== hM.lc.ChestRefreshed || this.items.touch(), this.guard((() => {
-          ! function(MM, rM, iM, OM) {
-            switch (MM) {
-              case hM.lc.Synced:
-                aM.i.Tz("syncedInvenFromServer");
+      inventoryEvent(UU, XU, zU, cU, yU, QU) {
+        UU === pU.Cc.ChestOpened ? this.items.chestOpened(zU, cU, yU) : UU !== pU.Cc.Synced && UU !== pU.Cc.ChestClosed && UU !== pU.Cc.ChestRefreshed || this.items.touch(), this.guard((() => {
+          ! function(UU, XU, zU, cU) {
+            switch (UU) {
+              case pU.Cc.Synced:
+                AU.k.UY("syncedInvenFromServer");
                 break;
-              case hM.lc.ChestOpened:
-              case hM.lc.ChestClosed:
-                aM.i.Tz("chestToggleFromServer", MM === hM.lc.ChestOpened, !0);
+              case pU.Cc.ChestOpened:
+              case pU.Cc.ChestClosed:
+                AU.k.UY("chestToggleFromServer", UU === pU.Cc.ChestOpened, !0);
                 break;
-              case hM.lc.ChestRefreshed:
-                aM.i.Tz("chestRefreshedFromServer");
+              case pU.Cc.ChestRefreshed:
+                AU.k.UY("chestRefreshedFromServer");
                 break;
-              case hM.lc.EnchantingTable:
-                aM.i.Tz("enchantingTable", {
-                  jP: OM,
-                  position: iM
+              case pU.Cc.EnchantingTable:
+                AU.k.UY("enchantingTable", {
+                  yF: cU,
+                  position: zU
                 });
                 break;
-              case hM.lc.HotbarRequest:
-                aM.i.Tz("setSelectedInventorySlotI", rM, !0);
+              case pU.Cc.HotbarRequest:
+                AU.k.UY("setSelectedInventorySlotI", XU, !0);
                 break;
-              case hM.lc.Scrolled:
-                aM.i.Tz("ScrollInventorySlot", rM);
+              case pU.Cc.Scrolled:
+                AU.k.UY("ScrollInventorySlot", XU);
                 break;
-              case hM.lc.NumberKey:
-                aM.i.Tz("numkeyPressed", rM + 1);
+              case pU.Cc.NumberKey:
+                AU.k.UY("numkeyPressed", XU + 1);
                 break;
-              case hM.lc.DropRequested:
-                aM.i.Tz("DropInvenItem", 0 !== rM);
+              case pU.Cc.DropRequested:
+                AU.k.UY("DropInvenItem", 0 !== XU);
                 break;
               default:
-                throw new HM.d(`InventoryEvent of no kind: what ${MM}`)
+                throw new IU.c(`InventoryEvent of no kind: what ${UU}`)
             }
-          }(MM, rM, [iM, OM, SM], jM)
+          }(UU, XU, [zU, cU, yU], QU)
         }))
       }
       heldItemChanged() {
         this.items.touch()
       }
-      shotDamage(MM, rM, iM, OM) {
-        this.Tz("shotPlayer", {
-          playerId: String(MM),
-          damage: rM,
-          wasCrit: 0 !== OM,
-          distance: iM
+      shotDamage(UU, XU, zU, cU) {
+        this.UY("shotPlayer", {
+          playerId: String(UU),
+          damage: XU,
+          wasCrit: 0 !== cU,
+          distance: zU
         })
       }
-      localHurt(MM, rM) {
-        this.Tz("closeShopOnDamaged", null), this.guard((() => {
-          aM.i.Tz("damagedByOtherPlayer", {
-            xj: null,
-            direction: Number.isNaN(rM) ? null : rM,
-            Zj: MM
+      localHurt(UU, XU) {
+        this.UY("closeShopOnDamaged", null), this.guard((() => {
+          AU.k.UY("damagedByOtherPlayer", {
+            fQ: null,
+            direction: Number.isNaN(XU) ? null : XU,
+            vU: UU
           })
         }))
       }
-      attackHit(MM, rM, iM, OM, SM) {
+      attackHit(UU, XU, zU, cU, yU) {
         this.guard((() => {
-          aM.i.Tz("yourAttackHit", {
-            mO: OM,
-            screenPos: this.renderFrame.projectDirectionToScreenPos([MM, rM, iM]),
-            hitSelf: SM
+          AU.k.UY("yourAttackHit", {
+            yX: cU,
+            screenPos: this.renderFrame.projectDirectionToScreenPos([UU, XU, zU]),
+            hitSelf: yU
           })
         }))
       }
-      physicsType(MM) {
-        this.localPhysicsType = MM, this.Tz("PlayerPhysicsTypeUpdate", MM)
+      physicsType(UU) {
+        this.localPhysicsType = UU, this.UY("PlayerPhysicsTypeUpdate", UU)
       }
-      vehicleEffect(MM, rM, iM, OM, SM) {
+      vehicleEffect(UU, XU, zU, cU, yU) {
         this.guard((() => {
-          MM === mM.Cd.UPDATE ? (0, sM.f)(rM, {
-            icon: iM,
-            level: OM,
+          UU === NU.Jd.UPDATE ? (0, SU.j)(XU, {
+            icon: zU,
+            level: cU,
             displayName: null,
-            durationMs: SM
-          }) : WM.d.remove(rM)
+            durationMs: yU
+          }) : OU.b.remove(XU)
         }))
       }
-      zoomChanged(MM) {
-        this.zoom = MM, this.zoomUnshown = !0
+      zoomChanged(UU) {
+        this.zoom = UU, this.zoomUnshown = !0
       }
       zoomDisabled() {
-        this.Tz("showBottomMessage", {
+        this.UY("showBottomMessage", {
           message: "Zoom is disabled",
           timeoutLength: 2e3,
           type: "Error"
         })
       }
       bhopDisabled() {
-        this.Tz("showBottomMessage", XO.c)
+        this.UY("showBottomMessage", mc.b)
       }
       showZoom() {
-        const MM = this.scriptedCamera.holdsView();
-        !this.zoomUnshown || MM && this.zoomHeld || (this.zoomUnshown = !1, this.Tz("cameraZoomSet", this.zoom)), this.zoomHeld = MM
+        const UU = this.scriptedCamera.holdsView();
+        !this.zoomUnshown || UU && this.zoomHeld || (this.zoomUnshown = !1, this.UY("cameraZoomSet", this.zoom)), this.zoomHeld = UU
       }
-      gunHit(MM) {
+      gunHit(UU) {
         this.guard((() => {
           const {
-            xj: rM,
-            vj: iM
-          } = (0, sO.d)(DO.u, MM);
-          aM.i.Tz("damagedByOtherPlayer", {
-            xj: rM,
-            direction: iM
+            fQ: XU,
+            iQ: zU
+          } = (0, qc.d)(Oc.w, UU);
+          AU.k.UY("damagedByOtherPlayer", {
+            fQ: XU,
+            direction: zU
           })
         }))
       }
-      uiEvent(MM, rM, iM, OM, SM, jM, aM, PM) {
+      uiEvent(UU, XU, zU, cU, yU, QU, AU, FU) {
         this.guard((() => {
-          mO(MM, rM, [iM, OM, SM], jM, this.items, this.options.tables, (() => IO.decode(this.api.eventBytes(aM, PM))))
+          Ec(UU, XU, [zU, cU, yU], QU, this.items, this.options.tables, (() => lc.decode(this.api.eventBytes(AU, FU))))
         }))
       }
-      writeAltVeto(MM) {
-        const rM = this.cmd;
-        if (!rM) return;
-        let iM;
+      writeAltVeto(UU) {
+        const XU = this.cmd;
+        if (!XU) return;
+        let zU;
         try {
-          iM = function(MM, rM) {
-            const iM = new Set;
-            let OM = !1;
-            for (const SM of MM)
-              if (SM.onPlayerAttemptAltAction) {
-                if (OM = !0, !SM.altVetoBlocks) return {
-                  mode: hM.$d.All,
+          zU = function(UU, XU) {
+            const zU = new Set;
+            let cU = !1;
+            for (const yU of UU)
+              if (yU.onPlayerAttemptAltAction) {
+                if (cU = !0, !yU.altVetoBlocks) return {
+                  mode: pU.le.All,
                   roots: []
                 };
-                for (const MM of SM.altVetoBlocks) iM.add(rM.getMetaInfo(MM).rootId)
-              } return OM ? iM.size > hM.yc ? {
-              mode: hM.$d.All,
+                for (const UU of yU.altVetoBlocks) zU.add(XU.getMetaInfo(UU).rootId)
+              } return cU ? zU.size > pU.Oc ? {
+              mode: pU.le.All,
               roots: []
             } : {
-              mode: hM.$d.Filter,
-              roots: [...iM]
+              mode: pU.le.Filter,
+              roots: [...zU]
             } : {
-              mode: hM.$d.Off,
+              mode: pU.le.Off,
               roots: []
             }
-          }(MM, this.options.tables)
-        } catch (SM) {
-          this.onError(SM), iM = {
-            mode: hM.$d.All,
+          }(UU, this.options.tables)
+        } catch (yU) {
+          this.onError(yU), zU = {
+            mode: pU.le.All,
             roots: []
           }
         }
-        if (iM.mode === hM.$d.Off && !this.vetoSet) return;
-        const OM = new Uint8Array(new Uint32Array(iM.roots).buffer);
-        (0, hM.Mf)(rM, 0, iM.mode, iM.roots.length, OM) ? this.vetoSet = iM.mode !== hM.$d.Off: this.onError(new Error("SetAltVeto didn't fit the command ring"))
+        if (zU.mode === pU.le.Off && !this.vetoSet) return;
+        const cU = new Uint8Array(new Uint32Array(zU.roots).buffer);
+        (0, pU.Qf)(XU, 0, zU.mode, zU.roots.length, cU) ? this.vetoSet = zU.mode !== pU.le.Off: this.onError(new Error("SetAltVeto didn't fit the command ring"))
       }
       endGameGrants() {
         this.freeCam.clearGame(), this.writeFreeCam()
@@ -4695,472 +4516,472 @@ export const modules = {
       writeFreeCam() {
         this.stopped() || this.freeCam.write(this.cmd)
       }
-      writeHooks(MM) {
-        const rM = this.cmd;
-        if (!rM) return;
-        const iM = function(MM) {
-          let rM = 0;
-          for (const iM of MM) iM.onPlayerAltAction && (rM |= 1 << hM._b.AltAction), (iM.onPlayerClick || iM.onPlayerClickUp || iM.onPlayerAttackEntity) && (rM |= 1 << hM._b.Click), iM.onPlayerChangeBlock && (rM |= 1 << hM._b.ChangeBlock), iM.onPlayerDropItem && (rM |= 1 << hM._b.DropItem);
-          return rM
-        }(MM);
-        (0 !== iM || this.hooksSet) && ((0, hM.Zf)(rM, 0, iM) ? this.hooksSet = 0 !== iM : this.onError(new Error("SetHooks didn't fit the command ring")))
+      writeHooks(UU) {
+        const XU = this.cmd;
+        if (!XU) return;
+        const zU = function(UU) {
+          let XU = 0;
+          for (const zU of UU) zU.onPlayerAltAction && (XU |= 1 << pU.oc.AltAction), (zU.onPlayerClick || zU.onPlayerClickUp || zU.onPlayerAttackEntity) && (XU |= 1 << pU.oc.Click), zU.onPlayerChangeBlock && (XU |= 1 << pU.oc.ChangeBlock), zU.onPlayerDropItem && (XU |= 1 << pU.oc.DropItem);
+          return XU
+        }(UU);
+        (0 !== zU || this.hooksSet) && ((0, pU.Zf)(XU, 0, zU) ? this.hooksSet = 0 !== zU : this.onError(new Error("SetHooks didn't fit the command ring")))
       }
       writeCustomButtons() {
-        const MM = this.cmd;
-        MM && !this.stopped() && this.customButtons.write(MM)
+        const UU = this.cmd;
+        UU && !this.stopped() && this.customButtons.write(UU)
       }
       writePromptWatch() {
-        const MM = this.cmd,
-          rM = this.promptWatch;
-        rM !== this.promptWatchSent && MM && !this.stopped() && (0, hM.xg)(MM, 0, VO[rM]) && (this.promptWatchSent = rM)
+        const UU = this.cmd,
+          XU = this.promptWatch;
+        XU !== this.promptWatchSent && UU && !this.stopped() && (0, pU.mg)(UU, 0, Kc[XU]) && (this.promptWatchSent = XU)
       }
-      writePublicLobby(MM) {
-        const rM = this.cmd;
-        rM && MM !== this.writtenPublicLobby && ((0, hM.ig)(rM, 0, MM ? 1 : 0) ? this.writtenPublicLobby = MM : this.onError(new Error("SetPublicLobby didn't fit the command ring")))
+      writePublicLobby(UU) {
+        const XU = this.cmd;
+        XU && UU !== this.writtenPublicLobby && ((0, pU.eg)(XU, 0, UU ? 1 : 0) ? this.writtenPublicLobby = UU : this.onError(new Error("SetPublicLobby didn't fit the command ring")))
       }
-      writeLocalDbId(MM) {
-        const rM = this.cmd;
-        rM && ((0, hM.$f)(rM, 0, null === MM ? 0 : 1, null === MM ? qO : KO.encode(MM)) || this.onError(new Error("SetLocalDbId didn't fit the command ring")))
+      writeLocalDbId(UU) {
+        const XU = this.cmd;
+        XU && ((0, pU._f)(XU, 0, null === UU ? 0 : 1, null === UU ? Jc : xc.encode(UU)) || this.onError(new Error("SetLocalDbId didn't fit the command ring")))
       }
-      first(MM) {
-        const rM = this.generation;
-        for (const OM of this.owners) {
-          if (rM !== this.generation) break;
+      first(UU) {
+        const XU = this.generation;
+        for (const cU of this.owners) {
+          if (XU !== this.generation) break;
           try {
-            const rM = MM(OM);
-            if (void 0 !== rM) return rM
-          } catch (iM) {
-            this.aL(iM)
+            const XU = UU(cU);
+            if (void 0 !== XU) return XU
+          } catch (zU) {
+            this.oY(zU)
           }
         }
       }
-      Tz(MM, rM) {
+      UY(UU, XU) {
         this.guard((() => {
-          aM.i.Tz(MM, rM)
+          AU.k.UY(UU, XU)
         }))
       }
       dropGameCamera() {
         try {
           this.scriptedCamera.reset()
-        } catch (MM) {
-          this.aL(MM)
+        } catch (UU) {
+          this.oY(UU)
         }
       }
       restartGameCamera() {
         try {
           this.scriptedCamera.restart()
-        } catch (MM) {
-          this.aL(MM)
+        } catch (UU) {
+          this.oY(UU)
         }
       }
       endSession() {
         if (!this.sessionLive) return;
-        this.sessionLive = !1, this.localPhysicsType = tM.n.DEFAULT;
-        const MM = this.owners;
-        let rM;
+        this.sessionLive = !1, this.localPhysicsType = LU.o.DEFAULT;
+        const UU = this.owners;
+        let XU;
         if (this.owners = this.tickers = this.renderers = this.receivers = [], this.generation++, !this.stopped()) try {
           this.writeAltVeto([]), this.writeHooks([]), this.writePublicLobby(!1), this.writeLocalDbId(null)
-        } catch (OM) {
-          rM = OM
+        } catch (cU) {
+          XU = cU
         }
         try {
           this.entityInfo.sessionEnded()
-        } catch (OM) {
-          rM ??= OM
+        } catch (cU) {
+          XU ??= cU
         }
-        this.round(MM, iS, !0);
+        this.round(UU, Uy, !0);
         try {
           this.particles.sessionEnded() || this.onError(new Error("ParticleStopAll didn't fit the command ring"))
-        } catch (OM) {
-          rM ??= OM
+        } catch (cU) {
+          XU ??= cU
         }
         try {
           this.clientApi.disposeGameOutput()
-        } catch (OM) {
-          rM ??= OM
+        } catch (cU) {
+          XU ??= cU
         }
-        const iM = this.options.onSessionEnd;
-        if (iM) try {
-          iM()
-        } catch (OM) {
-          this.onError(OM)
+        const zU = this.options.onSessionEnd;
+        if (zU) try {
+          zU()
+        } catch (cU) {
+          this.onError(cU)
         }
-        void 0 !== rM && this.aL(rM)
+        void 0 !== XU && this.oY(XU)
       }
-      round(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const OM = this.generation;
-        for (const jM of MM) {
-          if (OM !== this.generation) break;
+      round(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const cU = this.generation;
+        for (const QU of UU) {
+          if (cU !== this.generation) break;
           try {
-            rM(jM)
-          } catch (SM) {
-            iM ? this.onError(SM) : this.aL(SM)
+            XU(QU)
+          } catch (yU) {
+            zU ? this.onError(yU) : this.oY(yU)
           }
         }
       }
-      guard(MM) {
+      guard(UU) {
         try {
-          MM()
-        } catch (rM) {
-          this.aL(rM)
+          UU()
+        } catch (XU) {
+          this.oY(XU)
         }
       }
     }
 
-    function MS(MM) {
-      return MM === hM.Lc ? null : String(MM)
+    function Tc(UU) {
+      return UU === pU.Zc ? null : String(UU)
     }
 
-    function rS(MM) {
-      MM.bL(mM.td)
+    function hc(UU) {
+      UU.LY(NU.yd)
     }
 
-    function iS(MM) {
-      var rM;
-      null === (rM = MM.onClose) || void 0 === rM || rM.call(MM)
+    function Uy(UU) {
+      var XU;
+      null === (XU = UU.onClose) || void 0 === XU || XU.call(UU)
     }
 
-    function OS(MM, rM) {
-      MM.watch((() => {
-        const iM = function(MM) {
-          const rM = [],
-            iM = Math.min(EO, MM.length);
-          for (let SM = 0; SM < iM; SM++) {
-            var OM;
-            const iM = null === (OM = MM.slot(SM)) || void 0 === OM ? void 0 : OM.typeObj,
-              jM = iM ? (0, yO.gunTypeOf)(iM.id) : void 0;
-            void 0 !== jM && rM.push(er[jM])
+    function Xy(UU, XU) {
+      UU.watch((() => {
+        const zU = function(UU) {
+          const XU = [],
+            zU = Math.min(gc, UU.length);
+          for (let yU = 0; yU < zU; yU++) {
+            var cU;
+            const zU = null === (cU = UU.slot(yU)) || void 0 === cU ? void 0 : cU.typeObj,
+              QU = zU ? (0, ac.gunTypeOf)(zU.id) : void 0;
+            void 0 !== QU && XU.push(PX[QU])
           }
-          return rM
-        }(MM);
-        iM.length > 0 && (rM.preload(iM.flatMap((MM => Zr(MM)))), rM.preload(Zr(br)))
+          return XU
+        }(UU);
+        zU.length > 0 && (XU.preload(zU.flatMap((UU => fX(UU)))), XU.preload(fX(WX)))
       }))
     }
-    var SS = iM(37390),
-      jS = iM(5265),
-      aS = iM(37705),
-      PS = iM(37744);
+    var zy = zU(37148),
+      cy = zU(5378),
+      yy = zU(37480),
+      Qy = zU(37507);
 
-    function nS(MM) {
-      const rM = (0, SS.countDecodesAs)(new jS.Howl({
-          src: [...(0, aS.r)(MM).src],
+    function Ay(UU) {
+      const XU = (0, zy.countDecodesAs)(new cy.Howl({
+          src: [...(0, yy.y)(UU).src],
           pool: 15,
           preload: !1
         }), "sound"),
-        iM = rM.load.bind(rM);
-      return rM.load = () => (rM._preload = !0, (0, PS.c)(MM), iM()), rM
+        zU = XU.load.bind(XU);
+      return XU.load = () => (XU._preload = !0, (0, Qy.e)(UU), zU()), XU
     }
 
-    function QS(MM, rM, iM) {
-      const OM = MM.listener;
-      if (OM.positionX) zS(OM.positionX, rM, iM, 0), zS(OM.positionY, rM, iM, 1), zS(OM.positionZ, rM, iM, 2), zS(OM.forwardX, rM, iM, 3), zS(OM.forwardY, rM, iM, 4), zS(OM.forwardZ, rM, iM, 5), zS(OM.upX, rM, iM, 6), zS(OM.upY, rM, iM, 7), zS(OM.upZ, rM, iM, 8);
+    function Fy(UU, XU, zU) {
+      const cU = UU.listener;
+      if (cU.positionX) oy(cU.positionX, XU, zU, 0), oy(cU.positionY, XU, zU, 1), oy(cU.positionZ, XU, zU, 2), oy(cU.forwardX, XU, zU, 3), oy(cU.forwardY, XU, zU, 4), oy(cU.forwardZ, XU, zU, 5), oy(cU.upX, XU, zU, 6), oy(cU.upY, XU, zU, 7), oy(cU.upZ, XU, zU, 8);
       else {
-        let MM = !1;
-        for (let OM = 0; OM < 9; OM++) MM ||= rM[OM] !== iM[OM];
-        MM && (OM.setPosition(rM[0], rM[1], rM[2]), OM.setOrientation(rM[3], rM[4], rM[5], rM[6], rM[7], rM[8]), iM.set(rM))
+        let UU = !1;
+        for (let cU = 0; cU < 9; cU++) UU ||= XU[cU] !== zU[cU];
+        UU && (cU.setPosition(XU[0], XU[1], XU[2]), cU.setOrientation(XU[3], XU[4], XU[5], XU[6], XU[7], XU[8]), zU.set(XU))
       }
     }
 
-    function zS(MM, rM, iM, OM) {
-      rM[OM] !== iM[OM] && (MM.value = rM[OM], iM[OM] = rM[OM])
+    function oy(UU, XU, zU, cU) {
+      XU[cU] !== zU[cU] && (UU.value = XU[cU], zU[cU] = XU[cU])
     }
-    class LS {
+    class Dy {
       constructor() {
         this.pose = new Float64Array(9), this.written = new Float64Array(9).fill(Number.NaN), this.watchedCtx = void 0
       }
-      apply(MM) {
-        this.pose.set(MM);
-        const rM = jS.Howler.ctx;
-        return !!rM && (rM !== this.watchedCtx && (this.watchedCtx = rM, this.written.fill(Number.NaN), rM.addEventListener("statechange", (() => {
-          "running" === rM.state && QS(rM, this.pose, this.written)
-        }))), "running" === rM.state && QS(rM, MM, this.written), !0)
+      apply(UU) {
+        this.pose.set(UU);
+        const XU = cy.Howler.ctx;
+        return !!XU && (XU !== this.watchedCtx && (this.watchedCtx = XU, this.written.fill(Number.NaN), XU.addEventListener("statechange", (() => {
+          "running" === XU.state && Fy(XU, this.pose, this.written)
+        }))), "running" === XU.state && Fy(XU, UU, this.written), !0)
       }
     }
-    var mS = iM(37501),
-      HS = iM(40291);
-    let hS = null,
-      JS = null;
+    var Ey = zU(37281),
+      Yy = zU(40063);
+    let Ny = null,
+      Iy = null;
 
-    function dS() {
-      return null === hS && (hS = document.createElement("div"), hS.className = "WasmCameraLayer", hS.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none", document.body.append(hS)), hS
+    function py() {
+      return null === Ny && (Ny = document.createElement("div"), Ny.className = "WasmCameraLayer", Ny.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none", document.body.append(Ny)), Ny
     }
 
-    function yS() {
-      return JS ??= new HS.e(new mS.f(dS)), JS
+    function ay() {
+      return Iy ??= new Yy.c(new Ey.i(py)), Iy
     }
 
-    function lS() {
-      var MM;
-      null === (MM = JS) || void 0 === MM || MM.clear(), ES(null)
+    function ty() {
+      var UU;
+      null === (UU = Iy) || void 0 === UU || UU.clear(), gy(null)
     }
 
-    function ES(MM) {
-      OM.d.get("scriptedCameraFacing") !== MM && OM.d.set({
-        scriptedCameraFacing: MM
+    function gy(UU) {
+      cU.e.get("scriptedCameraFacing") !== UU && cU.e.set({
+        scriptedCameraFacing: UU
       })
     }
-    var US = iM(9918),
-      GS = iM(9863),
-      CS = iM(40325),
-      eS = iM(42144),
-      bS = iM(3693);
-    const wS = Object.entries(hM.Wb).reduce(((MM, rM) => {
-      let [iM, OM] = rM;
-      return MM[OM] = iM, MM
+    var ky = zU(9894),
+      Gy = zU(9834),
+      By = zU(40101),
+      Zy = zU(42138),
+      Ry = zU(3660);
+    const Py = Object.entries(pU.lc).reduce(((UU, XU) => {
+      let [zU, cU] = XU;
+      return UU[cU] = zU, UU
     }), []);
 
-    function tS(MM, rM) {
-      var iM;
-      return 0 !== ((null !== (iM = MM.itemFlags[rM]) && void 0 !== iM ? iM : 0) & hM.pc.Stackable)
+    function Wy(UU, XU) {
+      var zU;
+      return 0 !== ((null !== (zU = UU.itemFlags[XU]) && void 0 !== zU ? zU : 0) & pU.Gc.Stackable)
     }
-    const gS = /^(0|[1-9][0-9]*)$/,
-      uS = {
-        displayName: (MM, rM) => (0, yO.displayNameOf)(rM),
-        description: (MM, rM) => (0, yO.descriptionOf)(rM),
-        type: (MM, rM) => (0, yO.itemTypeOf)(rM),
-        clipSize: (MM, rM) => (0, yO.clipSizeOf)(rM),
-        armourReduction: (MM, rM) => (0, yO.armourReductionOf)(rM),
-        scopeType: (MM, rM) => (0, yO.scopeTypeOf)(rM),
-        stackable: tS,
-        harvestType: (MM, rM) => wS[MM.blockHarvestTypes[rM]],
-        harvestLevel: (MM, rM) => {
-          const iM = MM.blockHarvestLevels[rM];
-          return iM === hM.tc ? void 0 : iM
+    const dy = /^(0|[1-9][0-9]*)$/,
+      Ly = {
+        displayName: (UU, XU) => (0, ac.displayNameOf)(XU),
+        description: (UU, XU) => (0, ac.descriptionOf)(XU),
+        type: (UU, XU) => (0, ac.itemTypeOf)(XU),
+        clipSize: (UU, XU) => (0, ac.clipSizeOf)(XU),
+        armourReduction: (UU, XU) => (0, ac.armourReductionOf)(XU),
+        scopeType: (UU, XU) => (0, ac.scopeTypeOf)(XU),
+        stackable: Wy,
+        harvestType: (UU, XU) => Py[UU.blockHarvestTypes[XU]],
+        harvestLevel: (UU, XU) => {
+          const zU = UU.blockHarvestLevels[XU];
+          return zU === pU.Kc ? void 0 : zU
         },
-        harvests: (MM, rM) => {
-          var iM;
-          const OM = null !== (iM = MM.itemHarvests[rM]) && void 0 !== iM ? iM : 0;
-          return 0 !== OM ? wS[OM] : void 0 === (0, yO.harvestsNullLevelOf)(rM) ? void 0 : null
+        harvests: (UU, XU) => {
+          var zU;
+          const cU = null !== (zU = UU.itemHarvests[XU]) && void 0 !== zU ? zU : 0;
+          return 0 !== cU ? Py[cU] : void 0 === (0, ac.harvestsNullLevelOf)(XU) ? void 0 : null
         },
-        level: (MM, rM) => {
-          var iM, OM;
-          const SM = null !== (iM = MM.itemLevels[rM]) && void 0 !== iM ? iM : hM.tc;
-          return SM !== hM.tc ? SM : null !== (OM = (0, yO.harvestsNullLevelOf)(rM)) && void 0 !== OM ? OM : void 0
+        level: (UU, XU) => {
+          var zU, cU;
+          const yU = null !== (zU = UU.itemLevels[XU]) && void 0 !== zU ? zU : pU.Kc;
+          return yU !== pU.Kc ? yU : null !== (cU = (0, ac.harvestsNullLevelOf)(XU)) && void 0 !== cU ? cU : void 0
         }
       };
 
-    function RS(MM, rM, iM) {
-      return WS(new Uint8Array(Math.floor(MM.length / rM)), MM, rM, iM)
+    function ey(UU, XU, zU) {
+      return wy(new Uint8Array(Math.floor(UU.length / XU)), UU, XU, zU)
     }
 
-    function pS(MM, rM, iM) {
-      return WS(new Uint16Array(Math.floor(MM.length / rM)), MM, rM, iM)
+    function Cy(UU, XU, zU) {
+      return wy(new Uint16Array(Math.floor(UU.length / XU)), UU, XU, zU)
     }
 
-    function WS(MM, rM, iM, OM) {
-      const SM = new DataView(rM.buffer, rM.byteOffset, rM.byteLength);
-      for (let jM = 0; jM < MM.length; jM++) MM[jM] = OM(SM, jM * iM);
-      return MM
+    function wy(UU, XU, zU, cU) {
+      const yU = new DataView(XU.buffer, XU.byteOffset, XU.byteLength);
+      for (let QU = 0; QU < UU.length; QU++) UU[QU] = cU(yU, QU * zU);
+      return UU
     }
-    class sS {
-      constructor(MM, rM) {
-        this.options = rM, this.metas = [], this.types = new Map, this.props = void 0, this.rootIdOf = MM => {
-          const rM = this.idOf(MM);
-          if (void 0 === rM) throw new Error(`No item is named ${MM}, an item's root`);
-          return rM
+    class qy {
+      constructor(UU, XU) {
+        this.options = XU, this.metas = [], this.types = new Map, this.props = void 0, this.rootIdOf = UU => {
+          const XU = this.idOf(UU);
+          if (void 0 === XU) throw new Error(`No item is named ${UU}, an item's root`);
+          return XU
         };
-        const iM = rM => {
-            const iM = rM();
-            return new Uint8Array(MM.memory().buffer, MM.scratch(), iM).slice()
+        const zU = XU => {
+            const zU = XU();
+            return new Uint8Array(UU.memory().buffer, UU.scratch(), zU).slice()
           },
-          OM = (new TextDecoder).decode(iM((() => MM.queries.itemNames()))).split("\n"),
-          SM = iM((() => MM.queries.blockProps())),
-          jM = iM((() => MM.queries.itemProps()));
+          cU = (new TextDecoder).decode(zU((() => UU.queries.itemNames()))).split("\n"),
+          yU = zU((() => UU.queries.blockProps())),
+          QU = zU((() => UU.queries.itemProps()));
         this.props = {
-          blockFlags: RS(SM, hM.z.BYTES, hM.z.flags),
-          blockHarvestTypes: RS(SM, hM.z.BYTES, hM.z.harvestType),
-          blockHarvestLevels: RS(SM, hM.z.BYTES, hM.z.harvestLevel),
-          blockAttachedTops: pS(SM, hM.z.BYTES, hM.z.attachedTop),
-          itemFlags: RS(jM, hM.qc.BYTES, hM.qc.flags),
-          itemHarvests: RS(jM, hM.qc.BYTES, hM.qc.harvests),
-          itemLevels: RS(jM, hM.qc.BYTES, hM.qc.level)
-        }, (0, bS.j)(Object.freeze(OM)), (0, eS.h)()
+          blockFlags: ey(yU, pU.D.BYTES, pU.D.flags),
+          blockHarvestTypes: ey(yU, pU.D.BYTES, pU.D.harvestType),
+          blockHarvestLevels: ey(yU, pU.D.BYTES, pU.D.harvestLevel),
+          blockAttachedTops: Cy(yU, pU.D.BYTES, pU.D.attachedTop),
+          itemFlags: ey(QU, pU.Ic.BYTES, pU.Ic.flags),
+          itemHarvests: ey(QU, pU.Ic.BYTES, pU.Ic.harvests),
+          itemLevels: ey(QU, pU.Ic.BYTES, pU.Ic.level)
+        }, (0, Ry.k)(Object.freeze(cU)), (0, Zy.f)()
       }
-      idOf(MM) {
-        if ("number" === typeof MM) return void 0 === (0, bS.g)(MM) ? void 0 : MM;
-        const rM = (0, bS.d)(MM);
-        return void 0 === rM && gS.test(MM) ? void 0 === (0, bS.g)(+MM) ? void 0 : +MM : rM
+      idOf(UU) {
+        if ("number" === typeof UU) return void 0 === (0, Ry.f)(UU) ? void 0 : UU;
+        const XU = (0, Ry.c)(UU);
+        return void 0 === XU && dy.test(UU) ? void 0 === (0, Ry.f)(+UU) ? void 0 : +UU : XU
       }
-      getMetaInfo(MM) {
-        if (!MM || MM === US.c) return US.e;
-        const rM = this.idOf(MM);
-        if (void 0 === rM) throw new Error(`Item ${MM} not found in registry`);
-        return this.metaOf(rM)
+      getMetaInfo(UU) {
+        if (!UU || UU === ky.c) return ky.f;
+        const XU = this.idOf(UU);
+        if (void 0 === XU) throw new Error(`Item ${UU} not found in registry`);
+        return this.metaOf(XU)
       }
-      blockRootId(MM) {
-        return 0 !== MM && void 0 !== (0, bS.g)(MM) ? this.metaOf(MM).rootId : MM
+      blockRootId(UU) {
+        return 0 !== UU && void 0 !== (0, Ry.f)(UU) ? this.metaOf(UU).rootId : UU
       }
-      metaOf(MM) {
-        return this.metas[MM] ??= (0, GS.i)((0, bS.g)(MM), MM, this.rootIdOf, (0, yO.rootMetaDescOf)(MM))
+      metaOf(UU) {
+        return this.metas[UU] ??= (0, Gy.l)((0, Ry.f)(UU), UU, this.rootIdOf, (0, ac.rootMetaDescOf)(UU))
       }
-      getItemId(MM) {
-        if (!MM || MM === US.c) return 0;
-        const rM = this.idOf(MM);
-        if (void 0 === rM) throw new Error(`Invalid block name. You sent ${MM}. The only valid item names are 'Air' and those contained within the blockMetadata/itemMetadata files`);
-        return rM
+      getItemId(UU) {
+        if (!UU || UU === ky.c) return 0;
+        const XU = this.idOf(UU);
+        if (void 0 === XU) throw new Error(`Invalid block name. You sent ${UU}. The only valid item names are 'Air' and those contained within the blockMetadata/itemMetadata files`);
+        return XU
       }
-      getItemName(MM) {
-        if (!MM || MM === US.c) return US.c;
-        const rM = this.idOf(MM);
-        if (void 0 === rM) throw new Error(`Item ${MM} not found in registry`);
-        return (0, bS.g)(rM)
+      getItemName(UU) {
+        if (!UU || UU === ky.c) return ky.c;
+        const XU = this.idOf(UU);
+        if (void 0 === XU) throw new Error(`Item ${UU} not found in registry`);
+        return (0, Ry.f)(XU)
       }
-      blockNameToBlockId(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (MM === US.c) return 0;
-        let iM = this.idOf(MM);
-        if (void 0 === iM || !this.isBlockId(iM)) {
-          const rM = MM.indexOf("|"),
-            OM = rM > 0 ? (0, bS.d)(MM.slice(0, rM)) : void 0;
-          iM = void 0 !== OM && this.isBlockId(OM) && (0, yO.rootMetaDescOf)(OM) === MM ? OM : void 0
+      blockNameToBlockId(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (UU === ky.c) return 0;
+        let zU = this.idOf(UU);
+        if (void 0 === zU || !this.isBlockId(zU)) {
+          const XU = UU.indexOf("|"),
+            cU = XU > 0 ? (0, Ry.c)(UU.slice(0, XU)) : void 0;
+          zU = void 0 !== cU && this.isBlockId(cU) && (0, ac.rootMetaDescOf)(cU) === UU ? cU : void 0
         }
-        if (void 0 !== iM) return iM;
-        if (!rM) throw new Error(`Invalid block name. You sent ${MM}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
+        if (void 0 !== zU) return zU;
+        if (!XU) throw new Error(`Invalid block name. You sent ${UU}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
         return null
       }
-      isBlockId(MM) {
-        return MM > 0 && MM < this.props.blockFlags.length
+      isBlockId(UU) {
+        return UU > 0 && UU < this.props.blockFlags.length
       }
-      nameOfId(MM) {
-        return 0 !== MM && (0, bS.g)(MM) || US.c
+      nameOfId(UU) {
+        return 0 !== UU && (0, Ry.f)(UU) || ky.c
       }
-      itemType(MM) {
-        const rM = MM ? this.idOf(MM) : void 0;
-        if (!rM) return null;
-        let iM = this.types.get(rM);
-        return void 0 === iM && (iM = Object.freeze({
-          id: rM,
-          name: (0, bS.g)(rM),
-          meta: this.getMetaInfo(rM),
-          stackable: tS(this.props, rM),
-          type: (0, yO.itemTypeNameOf)(rM),
-          clipSize: (0, yO.clipSizeOf)(rM),
-          scopeType: (0, yO.scopeTypeOf)(rM),
-          showsAimingUi: (0, yO.showsAimingUi)(rM)
-        }), this.types.set(rM, iM)), iM
+      itemType(UU) {
+        const XU = UU ? this.idOf(UU) : void 0;
+        if (!XU) return null;
+        let zU = this.types.get(XU);
+        return void 0 === zU && (zU = Object.freeze({
+          id: XU,
+          name: (0, Ry.f)(XU),
+          meta: this.getMetaInfo(XU),
+          stackable: Wy(this.props, XU),
+          type: (0, ac.itemTypeNameOf)(XU),
+          clipSize: (0, ac.clipSizeOf)(XU),
+          scopeType: (0, ac.scopeTypeOf)(XU),
+          showsAimingUi: (0, ac.showsAimingUi)(XU)
+        }), this.types.set(XU, zU)), zU
       }
-      getItemStat(MM, rM) {
-        if (CS.d.has(rM)) {
-          const iM = "minChargeStateToUse" === rM ? this.getMetaInfo(MM).rootName : this.getItemName(MM),
-            OM = this.options.get((0, CS.g)(iM, rM));
-          if (null !== OM && void 0 !== OM) return OM
+      getItemStat(UU, XU) {
+        if (By.b.has(XU)) {
+          const zU = "minChargeStateToUse" === XU ? this.getMetaInfo(UU).rootName : this.getItemName(UU),
+            cU = this.options.get((0, By.e)(zU, XU));
+          if (null !== cU && void 0 !== cU) return cU
         }
-        return this.defaultStat(MM, rM, this.statOf(rM))
+        return this.defaultStat(UU, XU, this.statOf(XU))
       }
-      getDisplayName(MM) {
-        return this.getItemStat(MM, "displayName")
+      getDisplayName(UU) {
+        return this.getItemStat(UU, "displayName")
       }
-      getDefaultItemStat(MM, rM) {
-        return this.defaultStat(MM, rM, this.statOf(rM))
+      getDefaultItemStat(UU, XU) {
+        return this.defaultStat(UU, XU, this.statOf(XU))
       }
-      statOf(MM) {
-        const rM = uS[MM];
-        return void 0 === rM && function(MM, rM) {
-          throw new Error(`ClientApi.${MM} is not available yet in the wasm client (${rM})`)
-        }(`getItemStat("${MM}")`, `a table of the stat: the wasm client answers ${Object.keys(uS).join(", ")}`), rM
+      statOf(UU) {
+        const XU = Ly[UU];
+        return void 0 === XU && function(UU, XU) {
+          throw new Error(`ClientApi.${UU} is not available yet in the wasm client (${XU})`)
+        }(`getItemStat("${UU}")`, `a table of the stat: the wasm client answers ${Object.keys(Ly).join(", ")}`), XU
       }
-      defaultStat(MM, rM, iM) {
-        const OM = this.idOf(MM),
-          SM = void 0 === OM ? void 0 : iM(this.props, OM);
-        return null !== SM && void 0 !== SM || "displayName" !== rM ? SM : this.getItemName(MM)
+      defaultStat(UU, XU, zU) {
+        const cU = this.idOf(UU),
+          yU = void 0 === cU ? void 0 : zU(this.props, cU);
+        return null !== yU && void 0 !== yU || "displayName" !== XU ? yU : this.getItemName(UU)
       }
-      getClientOption(MM) {
-        return this.options.get(MM)
+      getClientOption(UU) {
+        return this.options.get(UU)
       }
-      getGunStats(MM) {
-        return this.getClientOption(`${MM}GunStats`)
+      getGunStats(UU) {
+        return this.getClientOption(`${UU}GunStats`)
       }
-      watchClientOption(MM, rM) {
-        return this.options.subscribe(MM, rM)
+      watchClientOption(UU, XU) {
+        return this.options.subscribe(UU, XU)
       }
-      isSolidBlockId(MM) {
-        var rM;
-        return 0 !== ((null !== (rM = this.props.blockFlags[MM]) && void 0 !== rM ? rM : 0) & hM.x.Solid)
+      isSolidBlockId(UU) {
+        var XU;
+        return 0 !== ((null !== (XU = this.props.blockFlags[UU]) && void 0 !== XU ? XU : 0) & pU.A.Solid)
       }
-      isStackableId(MM) {
-        return tS(this.props, MM)
+      isStackableId(UU) {
+        return Wy(this.props, UU)
       }
-      isFluidBlockId(MM) {
-        var rM;
-        return 0 !== ((null !== (rM = this.props.blockFlags[MM]) && void 0 !== rM ? rM : 0) & hM.x.Fluid)
+      isFluidBlockId(UU) {
+        var XU;
+        return 0 !== ((null !== (XU = this.props.blockFlags[UU]) && void 0 !== XU ? XU : 0) & pU.A.Fluid)
       }
-      canPlaceOverBlockId(MM) {
-        var rM;
-        return 0 !== ((null !== (rM = this.props.blockFlags[MM]) && void 0 !== rM ? rM : 0) & hM.x.PlaceOver)
+      canPlaceOverBlockId(UU) {
+        var XU;
+        return 0 !== ((null !== (XU = this.props.blockFlags[UU]) && void 0 !== XU ? XU : 0) & pU.A.PlaceOver)
       }
-      attachedTopOf(MM) {
-        var rM;
-        return null !== (rM = this.props.blockAttachedTops[MM]) && void 0 !== rM ? rM : 0
+      attachedTopOf(UU) {
+        var XU;
+        return null !== (XU = this.props.blockAttachedTops[UU]) && void 0 !== XU ? XU : 0
       }
-      isDroplessBlockId(MM) {
-        return (0, yO.dropsNothing)(MM)
+      isDroplessBlockId(UU) {
+        return (0, ac.dropsNothing)(UU)
       }
     }
 
-    function DS(MM, rM) {
-      const iM = new Map;
-      return (OM, SM) => {
-        const jM = rM.idOf(OM),
-          aM = void 0 === jM ? null : (OM => {
-            let SM = iM.get(OM);
-            if (void 0 === SM) {
-              const jM = MM.queries.salvageRecipe(OM),
-                aM = new DataView(MM.memory().buffer, MM.scratch(), jM),
-                PM = [];
-              for (let MM = 0; MM + hM.Pd.BYTES <= jM; MM += hM.Pd.BYTES) PM.push(Object.freeze({
-                item: rM.nameOfId(hM.Pd.item(aM, MM)),
-                amt: hM.Pd.amount(aM, MM)
+    function Oy(UU, XU) {
+      const zU = new Map;
+      return (cU, yU) => {
+        const QU = XU.idOf(cU),
+          AU = void 0 === QU ? null : (cU => {
+            let yU = zU.get(cU);
+            if (void 0 === yU) {
+              const QU = UU.queries.salvageRecipe(cU),
+                AU = new DataView(UU.memory().buffer, UU.scratch(), QU),
+                FU = [];
+              for (let UU = 0; UU + pU.ae.BYTES <= QU; UU += pU.ae.BYTES) FU.push(Object.freeze({
+                item: XU.nameOfId(pU.ae.item(AU, UU)),
+                amt: pU.ae.amount(AU, UU)
               }));
-              SM = 0 === PM.length ? null : Object.freeze(PM), iM.set(OM, SM)
+              yU = 0 === FU.length ? null : Object.freeze(FU), zU.set(cU, yU)
             }
-            return SM
-          })(jM);
-        if (null === aM || void 0 === SM) return aM;
-        const PM = SM <= 0 ? 1 : SM;
-        return aM.map((MM => {
+            return yU
+          })(QU);
+        if (null === AU || void 0 === yU) return AU;
+        const FU = yU <= 0 ? 1 : yU;
+        return AU.map((UU => {
           let {
-            item: rM,
-            amt: iM
-          } = MM;
+            item: XU,
+            amt: zU
+          } = UU;
           return {
-            item: rM,
-            amt: iM * PM
+            item: XU,
+            amt: zU * FU
           }
         }))
       }
     }
-    var kS = iM(41858),
-      ZS = iM(37885),
-      oS = iM(37864),
-      fS = iM(37872),
-      YS = iM(34822),
-      NS = iM(41761),
-      AS = iM(53658);
-    const xS = -1,
-      vS = new Uint8Array(0),
-      FS = new TextEncoder;
+    var Sy = zU(41863),
+      ry = zU(37685),
+      uy = zU(37669),
+      fy = zU(37674),
+      iy = zU(37211),
+      Hy = zU(41742),
+      My = zU(53645);
+    const vy = -1,
+      Vy = new Uint8Array(0),
+      sy = new TextEncoder;
 
-    function BS(MM) {
-      if (null === MM) return null;
-      const rM = FS.encode(MM);
-      return rM.byteLength < mM.Fc ? rM : rM.subarray(0, mM.Fc - 1)
+    function ny(UU) {
+      if (null === UU) return null;
+      const XU = sy.encode(UU);
+      return XU.byteLength < NU.Cc ? XU : XU.subarray(0, NU.Cc - 1)
     }
-    class XS {
-      constructor(MM) {
-        this.deps = MM, this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = xS, this.keyframesSettled = !1, this.reloadFrom = xS
+    class my {
+      constructor(UU) {
+        this.deps = UU, this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = vy, this.keyframesSettled = !1, this.reloadFrom = vy
       }
       reloadKeyframes() {
-        var MM, rM;
-        this.keyframesVersion = xS, this.reloadFrom = null !== (MM = null === (rM = this.view()) || void 0 === rM ? void 0 : rM.version) && void 0 !== MM ? MM : xS
+        var UU, XU;
+        this.keyframesVersion = vy, this.reloadFrom = null !== (UU = null === (XU = this.view()) || void 0 === XU ? void 0 : XU.version) && void 0 !== UU ? UU : vy
       }
-      setPlayback(MM) {
-        const rM = 1 === this.deps.core.YSM(MM);
-        return rM && (this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = xS, this.reloadFrom = xS), rM
+      setPlayback(UU) {
+        const XU = 1 === this.deps.core.PQU(UU);
+        return XU && (this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = vy, this.reloadFrom = vy), XU
       }
-      async open(MM, rM) {
-        const iM = await this.deps.replay.open(MM, rM);
-        return "opening" === iM && (this.reloadKeyframes(), this.deps.recorder.prefetch()), iM
+      async open(UU, XU) {
+        const zU = await this.deps.replay.open(UU, XU);
+        return "opening" === zU && (this.reloadKeyframes(), this.deps.recorder.prefetch()), zU
       }
       play() {
         this.deps.replay.play()
@@ -5168,282 +4989,280 @@ export const modules = {
       pause() {
         this.deps.replay.pause()
       }
-      seek(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.deps.replay.seek(Math.max(0, Math.floor(MM)), rM)
+      seek(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.deps.replay.seek(Math.max(0, Math.floor(UU)), XU)
       }
-      setSpeed(MM) {
-        this.deps.replay.setSpeed(MM)
+      setSpeed(UU) {
+        this.deps.replay.setSpeed(UU)
       }
-      setCameraMode(MM) {
-        this.deps.replay.setCameraMode(AS.c.indexOf(MM))
+      setCameraMode(UU) {
+        this.deps.replay.setCameraMode(My.d.indexOf(UU))
       }
       view() {
-        var MM;
-        const rM = hM.v.replayViewPtr(this.deps.apiView(), 0);
-        if (0 === rM) return this.lastView = null, null;
-        const iM = new DataView(this.deps.buffer(), rM, hM.Id.BYTES),
-          OM = hM.Id.version(iM, 0),
-          SM = this.lastView;
-        if (null !== SM && SM.version === OM) return SM;
-        const jM = hM.Id.markIn(iM, 0),
-          aM = {
-            version: OM,
-            state: hM.Id.state(iM, 0),
-            cameraMode: null !== (MM = AS.c[hM.Id.cameraMode(iM, 0)]) && void 0 !== MM ? MM : "recording",
-            bL: hM.Id.bL(iM, 0),
-            totalTicks: hM.Id.totalTicks(iM, 0),
-            speed: hM.Id.speed(iM, 0),
-            mark: jM === hM.Ed ? null : {
-              inTick: jM,
-              outTick: hM.Id.markOut(iM, 0)
+        var UU;
+        const XU = pU.w.replayViewPtr(this.deps.apiView(), 0);
+        if (0 === XU) return this.lastView = null, null;
+        const zU = new DataView(this.deps.buffer(), XU, pU.Ud.BYTES),
+          cU = pU.Ud.version(zU, 0),
+          yU = this.lastView;
+        if (null !== yU && yU.version === cU) return yU;
+        const QU = pU.Ud.markIn(zU, 0),
+          AU = {
+            version: cU,
+            state: pU.Ud.state(zU, 0),
+            cameraMode: null !== (UU = My.d[pU.Ud.cameraMode(zU, 0)]) && void 0 !== UU ? UU : "recording",
+            LY: pU.Ud.LY(zU, 0),
+            totalTicks: pU.Ud.totalTicks(zU, 0),
+            speed: pU.Ud.speed(zU, 0),
+            mark: QU === pU.Sd ? null : {
+              inTick: QU,
+              outTick: pU.Ud.markOut(zU, 0)
             },
-            editVersion: hM.Id.editVersion(iM, 0)
+            editVersion: pU.Ud.editVersion(zU, 0)
           };
-        return this.lastView = aM, aM
+        return this.lastView = AU, AU
       }
       keyframes() {
-        const MM = this.view();
-        if (null === MM) return [];
-        MM.version !== this.reloadFrom && (this.reloadFrom = xS);
-        const rM = this.reloadFrom === xS && MM.state !== mM.hd.Cropping && MM.state !== mM.hd.None,
-          iM = rM ? MM.editVersion : MM.version;
-        if (iM === this.keyframesVersion && rM === this.keyframesSettled) return this.lastKeyframes;
+        const UU = this.view();
+        if (null === UU) return [];
+        UU.version !== this.reloadFrom && (this.reloadFrom = vy);
+        const XU = this.reloadFrom === vy && UU.state !== NU.od.Cropping && UU.state !== NU.od.None,
+          zU = XU ? UU.editVersion : UU.version;
+        if (zU === this.keyframesVersion && XU === this.keyframesSettled) return this.lastKeyframes;
         const {
-          core: OM
-        } = this.deps, SM = OM.ASM(), jM = OM.qd(), aM = [];
-        if (0 !== jM && SM > 0) {
-          const MM = new DataView(this.deps.buffer(), jM, SM * mM.uc);
-          for (let rM = 0; rM < SM; rM++) {
-            const iM = rM * mM.uc,
-              OM = rM => MM.getFloat64(iM + rM, !0);
-            aM.push({
-              bL: MM.getUint32(iM + mM.Ec, !0),
-              position: [OM(mM.Cc), OM(mM.Cc + 8), OM(mM.Cc + 16)],
-              direction: [OM(mM.vc), OM(mM.vc + 8), OM(mM.vc + 16)],
-              easing: [OM(mM.zc), OM(mM.zc + 8), OM(mM.zc + 16), OM(mM.zc + 24)]
+          core: cU
+        } = this.deps, yU = cU.WQU(), QU = cU.Kt(), AU = [];
+        if (0 !== QU && yU > 0) {
+          const UU = new DataView(this.deps.buffer(), QU, yU * NU.sc);
+          for (let XU = 0; XU < yU; XU++) {
+            const zU = XU * NU.sc,
+              cU = XU => UU.getFloat64(zU + XU, !0);
+            AU.push({
+              LY: UU.getUint32(zU + NU.Bc, !0),
+              position: [cU(NU.Ac), cU(NU.Ac + 8), cU(NU.Ac + 16)],
+              direction: [cU(NU.uc), cU(NU.uc + 8), cU(NU.uc + 16)],
+              easing: [cU(NU.wc), cU(NU.wc + 8), cU(NU.wc + 16), cU(NU.wc + 24)]
             })
           }
         }
-        return this.keyframesVersion = iM, this.keyframesSettled = rM, this.lastKeyframes = aM, aM
+        return this.keyframesVersion = zU, this.keyframesSettled = XU, this.lastKeyframes = AU, AU
       }
       addKeyframe() {
-        const MM = this.deps.apiView(),
-          rM = [hM.v.eye(MM, 0, 0), hM.v.eye(MM, 0, 1), hM.v.eye(MM, 0, 2)];
-        return this.deps.replay.addKeyframe(rM, function(MM, rM) {
-          const iM = Math.cos(rM);
-          return [iM * Math.sin(MM), -Math.sin(rM), iM * Math.cos(MM)]
-        }(hM.v.heading(MM, 0), hM.v.pitch(MM, 0)))
+        const UU = this.deps.apiView(),
+          XU = [pU.w.eye(UU, 0, 0), pU.w.eye(UU, 0, 1), pU.w.eye(UU, 0, 2)];
+        return this.deps.replay.addKeyframe(XU, function(UU, XU) {
+          const zU = Math.cos(XU);
+          return [zU * Math.sin(UU), -Math.sin(XU), zU * Math.cos(UU)]
+        }(pU.w.heading(UU, 0), pU.w.pitch(UU, 0)))
       }
-      setKeyframe(MM) {
-        return this.deps.replay.setKeyframe(MM.bL, Float64Array.from([...MM.position, ...MM.direction, ...MM.easing]))
+      setKeyframe(UU) {
+        return this.deps.replay.setKeyframe(UU.LY, Float64Array.from([...UU.position, ...UU.direction, ...UU.easing]))
       }
-      moveKeyframe(MM, rM) {
-        return this.deps.replay.moveKeyframe(MM, rM)
+      moveKeyframe(UU, XU) {
+        return this.deps.replay.moveKeyframe(UU, XU)
       }
-      deleteKeyframes(MM, rM) {
-        return this.deps.replay.deleteKeyframes(MM, rM)
+      deleteKeyframes(UU, XU) {
+        return this.deps.replay.deleteKeyframes(UU, XU)
       }
-      setMark(MM) {
-        var rM, iM;
-        return this.deps.replay.setMark(null !== (rM = null === MM || void 0 === MM ? void 0 : MM.inTick) && void 0 !== rM ? rM : -1, null !== (iM = null === MM || void 0 === MM ? void 0 : MM.outTick) && void 0 !== iM ? iM : -1)
+      setMark(UU) {
+        var XU, zU;
+        return this.deps.replay.setMark(null !== (XU = null === UU || void 0 === UU ? void 0 : UU.inTick) && void 0 !== XU ? XU : -1, null !== (zU = null === UU || void 0 === UU ? void 0 : UU.outTick) && void 0 !== zU ? zU : -1)
       }
-      crop(MM, rM) {
-        const iM = this.deps.replay.crop(MM, rM);
-        return iM && this.reloadKeyframes(), iM
+      crop(UU, XU) {
+        const zU = this.deps.replay.crop(UU, XU);
+        return zU && this.reloadKeyframes(), zU
       }
-      save(MM) {
-        return this.deps.replay.askSave(), this.deps.recorder.saveEdited(MM)
+      save(UU) {
+        return this.deps.replay.askSave(), this.deps.recorder.saveEdited(UU)
       }
-      recorderControl(MM) {
-        this.deps.recorder.control(MM)
+      recorderControl(UU) {
+        this.deps.recorder.control(UU)
       }
-      recorderPrefs(MM, rM) {
-        this.deps.recorder.prefs(MM, rM)
+      recorderPrefs(UU, XU) {
+        this.deps.recorder.prefs(UU, XU)
       }
-      recorderOption(MM, rM) {
-        const iM = this.deps.cmd();
-        return null !== iM && (0, hM.Ef)(iM, 0, MM, null === rM ? vS : FS.encode(rM))
+      recorderOption(UU, XU) {
+        const zU = this.deps.cmd();
+        return null !== zU && (0, pU.Cf)(zU, 0, UU, null === XU ? Vy : sy.encode(XU))
       }
-      recordFlyingText(MM, rM, iM, OM) {
-        const SM = this.deps.cmd(),
-          jM = Math.max(0, Math.min(4294967295, Math.round(OM)));
-        return null !== SM && (0, hM.wf)(SM, 0, rM, iM, jM, FS.encode(MM))
+      recordFlyingText(UU, XU, zU, cU) {
+        const yU = this.deps.cmd(),
+          QU = Math.max(0, Math.min(4294967295, Math.round(cU)));
+        return null !== yU && (0, pU.yf)(yU, 0, XU, zU, QU, sy.encode(UU))
       }
-      recordPlayerKilled(MM, rM, iM, OM) {
-        const SM = this.deps.cmd();
-        return null !== SM && (0, hM.Gf)(SM, 0, MM, rM, Math.max(0, iM), FS.encode(OM))
+      recordPlayerKilled(UU, XU, zU, cU) {
+        const yU = this.deps.cmd();
+        return null !== yU && (0, pU.Gf)(yU, 0, UU, XU, Math.max(0, zU), sy.encode(cU))
       }
-      recordKillfeed(MM, rM, iM) {
-        var OM, SM;
-        const jM = this.deps.cmd(),
-          aM = function(MM) {
-            const rM = MM.reduce(((MM, rM) => {
-                var iM;
-                return MM + nO.tb + (null !== (iM = null === rM || void 0 === rM ? void 0 : rM.byteLength) && void 0 !== iM ? iM : 0)
+      recordKillfeed(UU, XU, zU) {
+        var cU, yU;
+        const QU = this.deps.cmd(),
+          AU = function(UU) {
+            const XU = UU.reduce(((UU, XU) => {
+                var zU;
+                return UU + Ac.zb + (null !== (zU = null === XU || void 0 === XU ? void 0 : XU.byteLength) && void 0 !== zU ? zU : 0)
               }), 0),
-              iM = new Uint8Array(rM),
-              OM = new DataView(iM.buffer);
-            let SM = 0;
-            for (const aM of MM) {
-              var jM;
-              OM.setUint16(SM, null !== (jM = null === aM || void 0 === aM ? void 0 : aM.byteLength) && void 0 !== jM ? jM : mM.Fc, !0), SM += nO.tb, null !== aM && (iM.set(aM, SM), SM += aM.byteLength)
+              zU = new Uint8Array(XU),
+              cU = new DataView(zU.buffer);
+            let yU = 0;
+            for (const AU of UU) {
+              var QU;
+              cU.setUint16(yU, null !== (QU = null === AU || void 0 === AU ? void 0 : AU.byteLength) && void 0 !== QU ? QU : NU.Cc, !0), yU += Ac.zb, null !== AU && (zU.set(AU, yU), yU += AU.byteLength)
             }
-            return iM
-          }([BS(MM.name), BS(MM.colour), BS(rM.name), BS(rM.colour), BS(iM)]);
-        return null !== jM && (0, hM.Af)(jM, 0, null !== (OM = MM.id) && void 0 !== OM ? OM : hM.Nc, null !== (SM = rM.id) && void 0 !== SM ? SM : hM.Nc, aM)
+            return zU
+          }([ny(UU.name), ny(UU.colour), ny(XU.name), ny(XU.colour), ny(zU)]);
+        return null !== QU && (0, pU.Af)(QU, 0, null !== (cU = UU.id) && void 0 !== cU ? cU : pU.ad, null !== (yU = XU.id) && void 0 !== yU ? yU : pU.ad, AU)
       }
-      recorderSession(MM, rM) {
+      recorderSession(UU, XU) {
         this.deps.recorder.session({
-          session: rM,
-          lobbyType: MM.lobbyType,
-          game: MM.gameNameWithVariation,
-          lobby: MM.lobbyName
+          session: XU,
+          lobbyType: UU.lobbyType,
+          game: UU.gameNameWithVariation,
+          lobby: UU.lobbyName
         })
       }
       recorderClose() {
-        this.deps.core.xSM()
+        this.deps.core.dQU()
       }
-      filePartDone(MM, rM) {
-        this.deps.recorder.filePartDone(MM, rM)
+      filePartDone(UU, XU) {
+        this.deps.recorder.filePartDone(UU, XU)
       }
-      fileDone(MM) {
-        this.deps.recorder.fileDone(MM)
+      fileDone(UU) {
+        this.deps.recorder.fileDone(UU)
       }
     }
-    const IS = -2147483648;
-    class KS {
-      constructor(MM) {
-        var rM;
-        this.deps = MM, this.state = {
-          recording: !1,
-          clipping: !1,
-          hasClipBuffer: !1,
-          seconds: 0
-        }, this.recordingSince = null, this.clipTickPending = !1, this.now = void 0, this.now = null !== (rM = MM.now) && void 0 !== rM ? rM : () => performance.now()
+    const ly = -2147483648;
+    class xy {
+      constructor(UU) {
+        var XU;
+        this.deps = UU, this.state = pc.e, this.recordingSince = null, this.clipTickPending = !1, this.now = void 0, this.now = null !== (XU = UU.now) && void 0 !== XU ? XU : () => performance.now()
       }
       get current() {
         return this.state
       }
       get live() {
-        var MM, rM, iM;
-        return null === (MM = null === (rM = (iM = this.deps).live) || void 0 === rM ? void 0 : rM.call(iM)) || void 0 === MM || MM
+        var UU, XU, zU;
+        return null === (UU = null === (XU = (zU = this.deps).live) || void 0 === XU ? void 0 : XU.call(zU)) || void 0 === UU || UU
       }
-      activated(MM) {
-        var rM, iM;
-        this.live && (this.viewerShown(!0 === (null === (rM = (iM = this.deps).viewerOpen) || void 0 === rM ? void 0 : rM.call(iM))), this.deps.client.recorderSession(MM, (0, AS.e)()))
+      activated(UU) {
+        var XU, zU;
+        this.live && (this.viewerShown(!0 === (null === (XU = (zU = this.deps).viewerOpen) || void 0 === XU ? void 0 : XU.call(zU))), this.deps.client.recorderSession(UU, (0, My.f)()))
       }
       closed() {
         this.deps.client.recorderClose()
       }
       toggleRecording() {
-        var MM, rM;
-        this.live && (this.state.recording || !0 !== (null === (MM = (rM = this.deps).viewerOpen) || void 0 === MM ? void 0 : MM.call(rM))) ? this.deps.client.recorderControl(mM.Sc.ToggleRecording) : this.deps.notify(fS.c.closeViewerFirst)
+        var UU, XU;
+        this.live && (this.state.recording || !0 !== (null === (UU = (XU = this.deps).viewerOpen) || void 0 === UU ? void 0 : UU.call(XU))) ? this.deps.client.recorderControl(NU.Xc.ToggleRecording) : this.deps.notify(fy.e.closeViewerFirst)
       }
       saveClip() {
-        this.live ? this.deps.client.recorderControl(mM.Sc.SaveClip) : this.deps.notify(fS.c.clippingNotOn)
+        this.live ? this.deps.client.recorderControl(NU.Xc.SaveClip) : this.deps.notify(fy.e.clippingNotOn)
       }
-      viewerShown(MM) {
-        this.live && this.deps.client.recorderControl(MM ? mM.Sc.ViewerOpened : mM.Sc.ViewerClosed)
+      viewerShown(UU) {
+        this.live && this.deps.client.recorderControl(UU ? NU.Xc.ViewerOpened : NU.Xc.ViewerClosed)
       }
-      setPrefs(MM, rM) {
-        this.live && this.deps.client.recorderPrefs(MM, rM)
+      setPrefs(UU, XU) {
+        this.live && this.deps.client.recorderPrefs(UU, XU)
       }
-      setOption(MM, rM) {
-        this.live && this.deps.client.recorderOption(MM, rM)
+      setOption(UU, XU) {
+        this.live && this.deps.client.recorderOption(UU, XU)
       }
-      recordFlyingText(MM, rM, iM, OM) {
-        this.live && this.deps.client.recordFlyingText(MM, rM, iM, OM)
+      recordFlyingText(UU, XU, zU, cU) {
+        this.live && this.deps.client.recordFlyingText(UU, XU, zU, cU)
       }
-      recordPlayerKilled(MM, rM, iM, OM) {
-        this.live && this.deps.client.recordPlayerKilled(MM, rM, iM, OM)
+      recordPlayerKilled(UU, XU, zU, cU) {
+        this.live && this.deps.client.recordPlayerKilled(UU, XU, zU, cU)
       }
-      recordKillfeed(MM, rM, iM) {
-        this.live && this.deps.client.recordKillfeed(MM, rM, iM)
+      recordKillfeed(UU, XU, zU) {
+        this.live && this.deps.client.recordKillfeed(UU, XU, zU)
       }
-      bL() {
-        let MM = this.state;
-        if (this.clipTickPending && (this.clipTickPending = !1, MM = {
-            ...MM,
+      LY() {
+        let UU = this.state;
+        if (this.clipTickPending && (this.clipTickPending = !1, UU = {
+            ...UU,
             hasClipBuffer: !0
           }), null !== this.recordingSince) {
-          const rM = Math.floor((this.now() - this.recordingSince) / 1e3);
-          rM !== MM.seconds && (MM = {
-            ...MM,
-            seconds: rM
+          const XU = Math.floor((this.now() - this.recordingSince) / 1e3);
+          XU !== UU.seconds && (UU = {
+            ...UU,
+            seconds: XU
           })
         }
-        this.set(MM)
+        this.set(UU)
       }
-      onEvent(MM) {
-        var rM, iM;
+      onEvent(UU) {
+        var XU, zU;
         const {
-          notify: OM
-        } = this.deps, SM = fS.c;
-        switch (MM.what) {
-          case mM.Qc.RecordingStarted:
+          notify: cU
+        } = this.deps, yU = fy.e;
+        switch (UU.what) {
+          case NU.Tc.RecordingStarted:
             this.recordingSince = this.now(), this.set({
               ...this.state,
               recording: !0,
               seconds: 0
-            }), OM(SM.recordingStarted);
+            }), cU(yU.recordingStarted);
             break;
-          case mM.Qc.RecordingStopped:
-            this.stopRecording(), OM(SM.recordingStopped), this.saveState(mM._c.Recording, "saving");
+          case NU.Tc.RecordingStopped:
+            this.stopRecording(), cU(yU.recordingStopped), this.saveState(NU.ed.Recording, "saving");
             break;
-          case mM.Qc.RecordingDiscarded:
-            this.stopRecording(), OM(SM.recordingDiscarded);
+          case NU.Tc.RecordingDiscarded:
+            this.stopRecording(), cU(yU.recordingDiscarded);
             break;
-          case mM.Qc.RecordingTurnedOff:
-            this.stopRecording(), OM(SM.recordingTurnedOff);
+          case NU.Tc.RecordingTurnedOff:
+            this.stopRecording(), cU(yU.recordingTurnedOff);
             break;
-          case mM.Qc.LimitReached:
-            OM(SM.limitReached);
+          case NU.Tc.LimitReached:
+            cU(yU.limitReached);
             break;
-          case mM.Qc.ClipSaved:
-            this.saveState(mM._c.Clip, "saving");
+          case NU.Tc.ClipSaved:
+            this.saveState(NU.ed.Clip, "saving");
             break;
-          case mM.Qc.ClipEmpty:
-            OM(SM.clipEmpty);
+          case NU.Tc.ClipEmpty:
+            cU(yU.clipEmpty);
             break;
-          case mM.Qc.ClippingNotOn:
-            OM(SM.clippingNotOn);
+          case NU.Tc.ClippingNotOn:
+            cU(yU.clippingNotOn);
             break;
-          case mM.Qc.Disallowed:
-            OM(SM.disallowed);
+          case NU.Tc.Disallowed:
+            cU(yU.disallowed);
             break;
-          case mM.Qc.ClippingOn:
+          case NU.Tc.ClippingOn:
             this.clipTickPending = !0, this.set({
               ...this.state,
               clipping: !0,
               hasClipBuffer: !1
             });
             break;
-          case mM.Qc.ClippingOff:
+          case NU.Tc.ClippingOff:
             this.clipTickPending = !1, this.set({
               ...this.state,
               clipping: !1,
               hasClipBuffer: !1
             });
             break;
-          case mM.Qc.ClipSettingsChanged:
+          case NU.Tc.ClipSettingsChanged:
             this.clipTickPending = this.state.clipping, this.set({
               ...this.state,
               hasClipBuffer: !1
             });
             break;
-          case mM.Qc.SaveBusy:
-            null === (rM = (iM = this.deps).onSaveState) || void 0 === rM || rM.call(iM, MM.kind, "busy"), OM(SM.saveBusy);
+          case NU.Tc.SaveBusy:
+            null === (XU = (zU = this.deps).onSaveState) || void 0 === XU || XU.call(zU, UU.kind, "busy"), cU(yU.saveBusy);
             break;
-          case mM.Qc.CloseViewerFirst:
-            OM(SM.closeViewerFirst)
+          case NU.Tc.CloseViewerFirst:
+            cU(yU.closeViewerFirst)
         }
       }
-      fileReady(MM, rM) {
-        this.deps.download(rM), this.saveState(MM, "done"), this.deps.notify(MM === mM._c.Clip ? fS.c.clipSaved : fS.c.recordingSaved)
+      fileReady(UU, XU) {
+        this.deps.download(XU), this.saveState(UU, "done"), this.deps.notify(UU === NU.ed.Clip ? fy.e.clipSaved : fy.e.recordingSaved)
       }
-      failed(MM) {
-        this.saveState(MM, "failed"), this.deps.notify(MM === mM._c.Clip ? fS.c.clipFailed : fS.c.recordingFailed)
+      failed(UU) {
+        this.saveState(UU, "failed"), this.deps.notify(UU === NU.ed.Clip ? fy.e.clipFailed : fy.e.recordingFailed)
+      }
+      stopped() {
+        this.recordingSince = null, this.clipTickPending = !1, this.set(pc.e)
       }
       stopRecording() {
         this.recordingSince = null, this.set({
@@ -5452,2330 +5271,2335 @@ export const modules = {
           seconds: 0
         })
       }
-      saveState(MM, rM) {
-        var iM, OM;
-        null === (iM = (OM = this.deps).onSaveState) || void 0 === iM || iM.call(OM, MM, rM)
+      saveState(UU, XU) {
+        var zU, cU;
+        null === (zU = (cU = this.deps).onSaveState) || void 0 === zU || zU.call(cU, UU, XU)
       }
-      set(MM) {
-        MM !== this.state && (this.state = MM, this.deps.onState(MM))
+      set(UU) {
+        UU !== this.state && (this.state = UU, this.deps.onState(UU))
       }
     }
-    const qS = new TextDecoder;
+    const Jy = new TextDecoder;
 
-    function TS(MM, rM, iM, OM) {
-      const SM = [];
-      for (let jM = 0; jM < OM; jM++) {
-        if (rM + nO.tb > iM) return null;
-        const OM = MM.getUint16(rM, !0);
-        if (rM += nO.tb, OM !== mM.Fc) {
-          if (rM + OM > iM) return null;
-          SM.push(qS.decode(new Uint8Array(MM.buffer, MM.byteOffset + rM, OM))), rM += OM
-        } else SM.push(null)
+    function jy(UU, XU, zU, cU) {
+      const yU = [];
+      for (let QU = 0; QU < cU; QU++) {
+        if (XU + Ac.zb > zU) return null;
+        const cU = UU.getUint16(XU, !0);
+        if (XU += Ac.zb, cU !== NU.Cc) {
+          if (XU + cU > zU) return null;
+          yU.push(Jy.decode(new Uint8Array(UU.buffer, UU.byteOffset + XU, cU))), XU += cU
+        } else yU.push(null)
       }
-      return rM === iM ? SM : null
+      return XU === zU ? yU : null
     }
 
-    function VS(MM, rM) {
-      let iM = new DataView(new ArrayBuffer(0)),
-        OM = !0;
-      const SM = {
-        replayFailed: (rM, iM, OM) => {
-          MM.replayFailed({
-            reason: rM,
-            code: iM,
-            version: OM
+    function Ky(UU, XU) {
+      let zU = new DataView(new ArrayBuffer(0)),
+        cU = !0;
+      const yU = {
+        replayFailed: (XU, zU, cU) => {
+          UU.replayFailed({
+            reason: XU,
+            code: zU,
+            version: cU
           })
         },
-        replayOption: (rM, SM, jM, aM) => {
-          const PM = function(MM, rM, iM, OM) {
-            switch (rM) {
-              case mM.cd.Cleared:
-                return 0 === OM ? null : void 0;
-              case mM.cd.Text:
-                return qS.decode(new Uint8Array(MM.buffer, MM.byteOffset + iM, OM));
-              case mM.cd.Int:
-                return OM === Int32Array.BYTES_PER_ELEMENT ? MM.getInt32(iM, !0) : void 0;
-              case mM.cd.Double:
-                return OM === Float64Array.BYTES_PER_ELEMENT ? MM.getFloat64(iM, !0) : void 0;
+        replayOption: (XU, yU, QU, AU) => {
+          const FU = function(UU, XU, zU, cU) {
+            switch (XU) {
+              case NU.id.Cleared:
+                return 0 === cU ? null : void 0;
+              case NU.id.Text:
+                return Jy.decode(new Uint8Array(UU.buffer, UU.byteOffset + zU, cU));
+              case NU.id.Int:
+                return cU === Int32Array.BYTES_PER_ELEMENT ? UU.getInt32(zU, !0) : void 0;
+              case NU.id.Double:
+                return cU === Float64Array.BYTES_PER_ELEMENT ? UU.getFloat64(zU, !0) : void 0;
               default:
                 return
             }
-          }(iM, SM, jM, aM);
-          void 0 !== PM ? MM.replayOption({
-            key: rM,
-            value: PM
-          }) : OM = !1
+          }(zU, yU, QU, AU);
+          void 0 !== FU ? UU.replayOption({
+            key: XU,
+            value: FU
+          }) : cU = !1
         },
-        replayUiEvent: (rM, SM, jM, aM, PM, nM) => {
-          const QM = function(MM, rM, iM, OM, SM, jM, aM) {
-            const PM = jM + aM;
-            switch (rM) {
-              case mM.fd.FlyingText: {
-                const aM = TS(MM, jM, PM, 1);
-                return null !== aM && null !== aM[0] ? {
-                  what: rM,
-                  Yi: iM,
-                  oi: OM,
-                  angle: SM,
-                  contentJson: aM[0]
+        replayUiEvent: (XU, yU, QU, AU, FU, oU) => {
+          const DU = function(UU, XU, zU, cU, yU, QU, AU) {
+            const FU = QU + AU;
+            switch (XU) {
+              case NU.md.FlyingText: {
+                const AU = jy(UU, QU, FU, 1);
+                return null !== AU && null !== AU[0] ? {
+                  what: XU,
+                  mX: zU,
+                  nX: cU,
+                  angle: yU,
+                  contentJson: AU[0]
                 } : null
               }
-              case mM.fd.PlayerKilled: {
-                const OM = TS(MM, jM, PM, 3);
-                return OM ? {
-                  what: rM,
-                  killstreak: iM,
-                  dead: OM[0],
-                  killer: OM[1],
-                  withItem: OM[2]
+              case NU.md.PlayerKilled: {
+                const cU = jy(UU, QU, FU, 3);
+                return cU ? {
+                  what: XU,
+                  killstreak: zU,
+                  dead: cU[0],
+                  killer: cU[1],
+                  withItem: cU[2]
                 } : null
               }
-              case mM.fd.Killfeed: {
-                const iM = TS(MM, jM, PM, 7);
-                return iM ? {
-                  what: rM,
-                  killerId: iM[0],
-                  killerName: iM[1],
-                  killerColour: iM[2],
-                  victimId: iM[3],
-                  victimName: iM[4],
-                  victimColour: iM[5],
-                  withItem: iM[6]
+              case NU.md.Killfeed: {
+                const zU = jy(UU, QU, FU, 7);
+                return zU ? {
+                  what: XU,
+                  killerId: zU[0],
+                  killerName: zU[1],
+                  killerColour: zU[2],
+                  victimId: zU[3],
+                  victimName: zU[4],
+                  victimColour: zU[5],
+                  withItem: zU[6]
                 } : null
               }
               default:
                 return null
             }
-          }(iM, rM, SM, jM, aM, PM, nM);
-          null !== QM ? MM.replayUiEvent(QM) : OM = !1
+          }(zU, XU, yU, QU, AU, FU, oU);
+          null !== DU ? UU.replayUiEvent(DU) : cU = !1
         },
-        replayFilePart: (iM, SM, jM, aM) => {
-          const PM = rM();
-          jM + aM > PM.byteLength ? OM = !1 : MM.filePart(iM, SM, new Uint8Array(PM, jM, aM).slice())
+        replayFilePart: (zU, yU, QU, AU) => {
+          const FU = XU();
+          QU + AU > FU.byteLength ? cU = !1 : UU.filePart(zU, yU, new Uint8Array(FU, QU, AU).slice())
         },
-        replayFileReady: (rM, iM, OM, SM) => {
-          MM.fileReady({
-            save: rM,
-            kind: iM,
-            parts: OM,
-            bytes: SM
+        replayFileReady: (XU, zU, cU, yU) => {
+          UU.fileReady({
+            save: XU,
+            kind: zU,
+            parts: cU,
+            bytes: yU
           })
         },
-        recorderEvent: (rM, iM, OM) => {
-          MM.recorderEvent({
-            what: rM,
-            kind: iM,
-            save: OM
+        recorderEvent: (XU, zU, cU) => {
+          UU.recorderEvent({
+            what: XU,
+            kind: zU,
+            save: cU
           })
         },
-        replayOpened: (rM, OM, SM) => {
-          MM.replayOpened(qS.decode(new Uint8Array(iM.buffer, iM.byteOffset + OM, SM)))
+        replayOpened: (XU, cU, yU) => {
+          UU.replayOpened(Jy.decode(new Uint8Array(zU.buffer, zU.byteOffset + cU, yU)))
         }
       };
-      return (MM, rM, jM, aM) => !(MM < mM.Y.ReplayFailed || MM > mM.Y.RecorderEvent) && (iM = rM, OM = !0, (0, hM.ge)(MM, rM, jM, aM, SM) && OM)
+      return (UU, XU, QU, AU) => !(UU < NU.W.ReplayFailed || UU > NU.W.RecorderEvent) && (zU = XU, cU = !0, (0, pU.pe)(UU, XU, QU, AU, yU) && cU)
     }
 
-    function cS(MM) {
-      let rM = null;
-      const iM = VS(MM, (() => {
-        if (null === rM) throw new Error("a recorder event read outside recorderEventReader's call");
-        return rM.buffer
+    function by(UU) {
+      let XU = null;
+      const zU = Ky(UU, (() => {
+        if (null === XU) throw new Error("a recorder event read outside recorderEventReader's call");
+        return XU.buffer
       }));
-      return (MM, OM) => {
-        rM = OM;
+      return (UU, cU) => {
+        XU = cU;
         try {
-          ! function(MM, rM) {
-            const iM = MM.slice(),
-              OM = new DataView(iM.buffer);
-            for (let SM = 0; SM < iM.byteLength;) {
-              if (SM + mM.U > iM.byteLength) throw new Error(`the recorder module's events end mid-head at ${SM}`);
-              const MM = OM.getUint32(SM, !0),
-                jM = 65535 & MM,
-                aM = MM >>> 16,
-                PM = SM + mM.U;
-              if (PM + aM > iM.byteLength || !rM(jM, OM, PM, aM)) throw new Error(`the recorder module wrote a malformed event ${jM} (${aM} bytes) at ${SM}`);
-              SM = PM + (0, mM.oe)(aM)
+          ! function(UU, XU) {
+            const zU = UU.slice(),
+              cU = new DataView(zU.buffer);
+            for (let yU = 0; yU < zU.byteLength;) {
+              if (yU + NU.V > zU.byteLength) throw new Error(`the recorder module's events end mid-head at ${yU}`);
+              const UU = cU.getUint32(yU, !0),
+                QU = 65535 & UU,
+                AU = UU >>> 16,
+                FU = yU + NU.V;
+              if (FU + AU > zU.byteLength || !XU(QU, cU, FU, AU)) throw new Error(`the recorder module wrote a malformed event ${QU} (${AU} bytes) at ${yU}`);
+              yU = FU + (0, NU.De)(AU)
             }
-          }(MM, iM)
+          }(UU, zU)
         } finally {
-          rM = null
+          XU = null
         }
       }
     }
-    class Mj {
-      constructor(MM, rM) {
-        this.acks = MM, this.handlers = rM, this.parts = new Map
+    class Ty {
+      constructor(UU, XU) {
+        this.acks = UU, this.handlers = XU, this.parts = new Map
       }
-      onPart(MM, rM, iM) {
-        let OM = this.parts.get(MM);
-        OM || (OM = [], this.parts.set(MM, OM)), OM[rM] = iM, this.acks.filePartDone(MM, rM)
+      onPart(UU, XU, zU) {
+        let cU = this.parts.get(UU);
+        cU || (cU = [], this.parts.set(UU, cU)), cU[XU] = zU, this.acks.filePartDone(UU, XU)
       }
-      onReady(MM) {
-        var rM;
-        const iM = null !== (rM = this.parts.get(MM.save)) && void 0 !== rM ? rM : [];
-        this.parts.delete(MM.save);
-        const OM = function(MM, rM, iM) {
-          if (MM.length !== rM) return null;
-          let OM = 0;
-          for (let aM = 0; aM < rM; aM++) {
-            if (void 0 === MM[aM]) return null;
-            OM += MM[aM].byteLength
+      onReady(UU) {
+        var XU;
+        const zU = null !== (XU = this.parts.get(UU.save)) && void 0 !== XU ? XU : [];
+        this.parts.delete(UU.save);
+        const cU = function(UU, XU, zU) {
+          if (UU.length !== XU) return null;
+          let cU = 0;
+          for (let AU = 0; AU < XU; AU++) {
+            if (void 0 === UU[AU]) return null;
+            cU += UU[AU].byteLength
           }
-          if (OM !== iM) return null;
-          if (1 === rM) return MM[0];
-          const SM = new Uint8Array(iM);
-          let jM = 0;
-          for (const aM of MM) SM.set(aM, jM), jM += aM.byteLength;
-          return SM
-        }(iM, MM.parts, MM.bytes);
-        this.acks.fileDone(MM.save), null === OM ? this.handlers.fileIncomplete(MM.save, MM.kind) : this.handlers.fileReady(MM.save, MM.kind, OM)
+          if (cU !== zU) return null;
+          if (1 === XU) return UU[0];
+          const yU = new Uint8Array(zU);
+          let QU = 0;
+          for (const AU of UU) yU.set(AU, QU), QU += AU.byteLength;
+          return yU
+        }(zU, UU.parts, UU.bytes);
+        this.acks.fileDone(UU.save), null === cU ? this.handlers.fileIncomplete(UU.save, UU.kind) : this.handlers.fileReady(UU.save, UU.kind, cU)
       }
-      onDiscarded(MM) {
-        this.parts.delete(MM)
+      onDiscarded(UU) {
+        this.parts.delete(UU)
       }
     }
 
-    function rj() {
-      return iM.e(72).then((() => iM(63239)))
+    function hy() {
+      return zU.e(72).then((() => zU(63283)))
     }
-    class ij {
-      constructor(MM) {
-        this.deps = MM, this.sink = void 0, this.recorder = void 0, this.recorderEvents = void 0, this.parts = void 0, this.viewerChunk = null, this.viewer = null;
+    class UQ {
+      constructor(UU) {
+        this.deps = UU, this.sink = void 0, this.recorder = void 0, this.recorderEvents = void 0, this.parts = void 0, this.viewerChunk = null, this.viewer = null;
         const {
-          client: rM
-        } = MM;
-        this.recorder = new KS({
-          client: rM,
+          client: XU
+        } = UU;
+        this.recorder = new xy({
+          client: XU,
           live: () => {
-            var MM;
-            return !0 !== (null === (MM = this.viewer) || void 0 === MM ? void 0 : MM.inPlayback)
+            var UU;
+            return !0 !== (null === (UU = this.viewer) || void 0 === UU ? void 0 : UU.inPlayback)
           },
-          viewerOpen: MM.viewerOpen,
-          notify: MM.notify,
-          download: rM => {
-            var iM;
-            null === (iM = MM.download) || void 0 === iM || iM.call(MM, rM)
+          viewerOpen: UU.viewerOpen,
+          notify: UU.notify,
+          download: XU => {
+            var zU;
+            null === (zU = UU.download) || void 0 === zU || zU.call(UU, XU)
           },
-          onState: MM.onRecorderState,
-          onSaveState: MM.onSaveState
-        }), this.parts = new Mj(rM, {
-          fileReady: (MM, rM, iM) => {
-            var OM;
-            rM === mM._c.Edited ? null === (OM = this.viewer) || void 0 === OM || OM.saveDone(iM) : this.recorder.fileReady(rM, iM)
+          onState: UU.onRecorderState,
+          onSaveState: UU.onSaveState
+        }), this.parts = new Ty(XU, {
+          fileReady: (UU, XU, zU) => {
+            var cU;
+            XU === NU.ed.Edited ? null === (cU = this.viewer) || void 0 === cU || cU.saveDone(zU) : this.recorder.fileReady(XU, zU)
           },
-          fileIncomplete: (MM, rM) => {
-            this.saveFailed(rM)
+          fileIncomplete: (UU, XU) => {
+            this.saveFailed(XU)
           }
         });
-        const iM = {
-          replayFailed: MM => {
-            var rM;
-            null === (rM = this.viewer) || void 0 === rM || rM.onFailed(MM)
+        const zU = {
+          replayFailed: UU => {
+            var XU;
+            null === (XU = this.viewer) || void 0 === XU || XU.onFailed(UU)
           },
-          replayOption: rM => {
-            var iM;
-            null === (iM = MM.onReplayOption) || void 0 === iM || iM.call(MM, rM)
+          replayOption: XU => {
+            var zU;
+            null === (zU = UU.onReplayOption) || void 0 === zU || zU.call(UU, XU)
           },
-          replayUiEvent: rM => {
-            var iM;
-            null === (iM = MM.onReplayUiEvent) || void 0 === iM || iM.call(MM, rM)
+          replayUiEvent: XU => {
+            var zU;
+            null === (zU = UU.onReplayUiEvent) || void 0 === zU || zU.call(UU, XU)
           },
-          filePart: (MM, rM, iM) => {
-            this.parts.onPart(MM, rM, iM)
+          filePart: (UU, XU, zU) => {
+            this.parts.onPart(UU, XU, zU)
           },
-          fileReady: MM => {
-            this.parts.onReady(MM)
+          fileReady: UU => {
+            this.parts.onReady(UU)
           },
-          replayOpened: rM => {
-            var iM;
-            null === (iM = MM.onReplayOpened) || void 0 === iM || iM.call(MM, rM)
+          replayOpened: XU => {
+            var zU;
+            null === (zU = UU.onReplayOpened) || void 0 === zU || zU.call(UU, XU)
           },
-          recorderEvent: MM => {
-            var rM;
-            switch (MM.what) {
-              case mM.Qc.FileDiscarded:
-                this.parts.onDiscarded(MM.save);
+          recorderEvent: UU => {
+            var XU;
+            switch (UU.what) {
+              case NU.Tc.FileDiscarded:
+                this.parts.onDiscarded(UU.save);
                 break;
-              case mM.Qc.SaveFailed:
-                this.saveFailed(MM.kind);
+              case NU.Tc.SaveFailed:
+                this.saveFailed(UU.kind);
                 break;
-              case mM.Qc.SaveBusy:
-                if (null !== (rM = this.viewer) && void 0 !== rM && rM.savePending) {
+              case NU.Tc.SaveBusy:
+                if (null !== (XU = this.viewer) && void 0 !== XU && XU.savePending) {
                   this.viewer.saveFailed(!0);
                   break
                 }
-                this.recorder.onEvent(MM);
+                this.recorder.onEvent(UU);
                 break;
               default:
-                this.recorder.onEvent(MM)
+                this.recorder.onEvent(UU)
             }
           }
         };
-        this.sink = function(MM, rM) {
+        this.sink = function(UU, XU) {
           return {
-            onReplayEvent: VS(MM, rM)
+            onReplayEvent: Ky(UU, XU)
           }
-        }(iM, MM.buffer), this.recorderEvents = cS(iM)
+        }(zU, UU.buffer), this.recorderEvents = by(zU)
       }
       get currentViewer() {
         return this.viewer
       }
       loadViewer() {
-        var MM;
-        return this.viewer ? Promise.resolve(this.viewer) : (this.viewerChunk ??= (null !== (MM = this.deps.loadViewer) && void 0 !== MM ? MM : rj)().catch((MM => {
-          throw this.viewerChunk = null, MM
-        })), this.viewerChunk.then((MM => (this.viewer ??= new MM.ReplayViewer({
+        var UU;
+        return this.viewer ? Promise.resolve(this.viewer) : (this.viewerChunk ??= (null !== (UU = this.deps.loadViewer) && void 0 !== UU ? UU : hy)().catch((UU => {
+          throw this.viewerChunk = null, UU
+        })), this.viewerChunk.then((UU => (this.viewer ??= new UU.ReplayViewer({
           client: this.deps.client,
           setHoldDraws: this.deps.setHoldDraws,
           meshPending: this.deps.meshPending,
           notify: this.deps.notify,
           onChange: () => {
-            var MM, rM;
-            null === (MM = (rM = this.deps).onViewerChange) || void 0 === MM || MM.call(rM)
+            var UU, XU;
+            null === (UU = (XU = this.deps).onViewerChange) || void 0 === UU || UU.call(XU)
           }
         }), this.viewer))))
       }
-      activated(MM) {
-        this.recorder.activated(MM)
+      activated(UU) {
+        this.recorder.activated(UU)
       }
-      afterFrame(MM) {
+      afterFrame(UU) {
         try {
-          MM > 0 && this.recorder.bL()
+          UU > 0 && this.recorder.LY()
         } finally {
-          var rM;
-          null === (rM = this.viewer) || void 0 === rM || rM.afterFrame()
+          var XU;
+          null === (XU = this.viewer) || void 0 === XU || XU.afterFrame()
         }
       }
       end() {
-        var MM;
-        null === (MM = this.viewer) || void 0 === MM || MM.end()
+        var UU;
+        null === (UU = this.viewer) || void 0 === UU || UU.end()
       }
-      saveFailed(MM) {
-        var rM;
-        MM === mM._c.Edited ? null === (rM = this.viewer) || void 0 === rM || rM.saveFailed(!1) : this.recorder.failed(MM)
+      saveFailed(UU) {
+        var XU;
+        UU === NU.ed.Edited ? null === (XU = this.viewer) || void 0 === XU || XU.saveFailed(!1) : this.recorder.failed(UU)
       }
     }
-    var Oj = iM(41704),
-      Sj = iM(41712),
-      jj = iM(5204),
-      aj = iM(42022);
-    class Pj {
-      constructor(MM) {
-        this.deps = MM, this.analogue = [0, 0], this.keys = 0, this.unsent = !1
+    var XQ = zU(41680),
+      zQ = zU(41695),
+      cQ = zU(5329),
+      yQ = zU(42018);
+    class QQ {
+      constructor(UU) {
+        this.deps = UU, this.analogue = [0, 0], this.keys = 0, this.unsent = !1
       }
-      drag(MM, rM) {
-        if (!this.deps.live() || 0 === MM && 0 === rM) return;
-        const iM = (0, YM.u)(0, performance.now()),
-          OM = this.deps.dragScale();
-        (0, aj.j)((() => {
-          (0, YM.z)(mM.tb.MouseDown, 0, 0, 0, iM), (0, YM.z)(mM.tb.MouseMove, 0, MM * OM, rM * OM, 0), (0, YM.z)(mM.tb.MouseUp, 0, 0, 0, iM)
+      drag(UU, XU) {
+        if (!this.deps.live() || 0 === UU && 0 === XU) return;
+        const zU = (0, MU.v)(0, performance.now()),
+          cU = this.deps.dragScale();
+        (0, yQ.g)((() => {
+          (0, MU.C)(NU.tb.MouseDown, 0, 0, 0, zU), (0, MU.C)(NU.tb.MouseMove, 0, UU * cU, XU * cU, 0), (0, MU.C)(NU.tb.MouseUp, 0, 0, 0, zU)
         }))
       }
-      move(MM) {
-        var rM, iM;
-        this.analogue[0] = null !== (rM = null === MM || void 0 === MM ? void 0 : MM.x) && void 0 !== rM ? rM : 0, this.analogue[1] = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.y) && void 0 !== iM ? iM : 0, this.send()
+      move(UU) {
+        var XU, zU;
+        this.analogue[0] = null !== (XU = null === UU || void 0 === UU ? void 0 : UU.x) && void 0 !== XU ? XU : 0, this.analogue[1] = null !== (zU = null === UU || void 0 === UU ? void 0 : UU.y) && void 0 !== zU ? zU : 0, this.send()
       }
-      holdVertical(MM, rM) {
-        const iM = "freeCamUp" === MM ? hM.Nb.Up : hM.Nb.Down;
-        this.keys = rM ? this.keys | iM : this.keys & ~iM, this.send()
+      holdVertical(UU, XU) {
+        const zU = "freeCamUp" === UU ? pU.bc.Up : pU.bc.Down;
+        this.keys = XU ? this.keys | zU : this.keys & ~zU, this.send()
       }
       flush() {
         this.unsent && this.send()
       }
       send() {
-        const MM = this.deps.live() ? this.deps.cmd() : null;
-        this.unsent = null !== MM && !(0, hM.Ae)(MM, 0, this.analogue, this.keys)
+        const UU = this.deps.live() ? this.deps.cmd() : null;
+        this.unsent = null !== UU && !(0, pU.Ke)(UU, 0, this.analogue, this.keys)
       }
     }
-    var nj = iM(3961),
-      Qj = iM(766),
-      zj = iM(255),
-      Lj = iM(83),
-      mj = iM(34956),
-      Hj = iM(746),
-      hj = iM(37529);
+    var AQ = zU(3958),
+      FQ = zU(781),
+      oQ = zU(287),
+      DQ = zU(97),
+      EQ = zU(34791),
+      YQ = zU(762),
+      NQ = zU(37311);
 
-    function Jj() {
-      const MM = OM.d.get("clientEscMenuOptions"),
-        rM = (0, Qj.t)(MM);
+    function IQ() {
+      const UU = cU.e.get("clientEscMenuOptions"),
+        XU = (0, FQ.s)(UU);
       return {
-        mouse: (0, Lj.isMobile)() ? rM : MM.mouseSensitivity,
-        touch: rM,
-        fovPercent: MM.cameraFOV
+        mouse: (0, DQ.isMobile)() ? XU : UU.mouseSensitivity,
+        touch: XU,
+        fovPercent: UU.cameraFOV
       }
     }
 
-    function dj() {
-      const MM = OM.d.get("clientEscMenuOptions"),
-        rM = OM.d.get("isTouchScreen") ? (0, Qj.t)(MM) : MM.mouseSensitivity,
-        iM = Jj().mouse;
-      return iM > 0 ? rM / iM : 1
+    function pQ() {
+      const UU = cU.e.get("clientEscMenuOptions"),
+        XU = cU.e.get("isTouchScreen") ? (0, FQ.s)(UU) : UU.mouseSensitivity,
+        zU = IQ().mouse;
+      return zU > 0 ? XU / zU : 1
     }
 
-    function yj(MM) {
-      const rM = () => {
-        MM.setSoundPrefs(OM.d.get("soundVolume"), OM.d.get("soundOnFromAd"))
+    function aQ(UU) {
+      const XU = () => {
+        UU.setSoundPrefs(cU.e.get("soundVolume"), cU.e.get("soundOnFromAd"))
       };
-      let iM = null;
-      const SM = () => {
+      let zU = null;
+      const yU = () => {
         const {
-          showFog: rM,
-          enableLighting: SM,
-          fogChunkDistance: jM,
-          chunkFadeIn: aM
-        } = OM.d.get("clientEscMenuOptions"), PM = {
-          showFog: rM,
-          lighting: SM,
-          fogChunks: jM,
-          chunkFade: aM,
-          cellLight: (0, nj.i)("cellLight") ? (0, nj.i)("cellLightUnlit") ? "all" : "lit" : "off"
+          showFog: XU,
+          enableLighting: yU,
+          fogChunkDistance: QU,
+          chunkFadeIn: AU
+        } = cU.e.get("clientEscMenuOptions"), FU = {
+          showFog: XU,
+          lighting: yU,
+          fogChunks: QU,
+          chunkFade: AU,
+          cellLight: (0, AQ.j)("cellLight") ? (0, AQ.j)("cellLightUnlit") ? "all" : "lit" : "off"
         };
-        iM && (0, mM.ae)(iM) === (0, mM.ae)(PM) && iM.fogChunks === jM || (iM = PM, MM.setEnvPrefs(iM))
+        zU && (0, NU.le)(zU) === (0, NU.le)(FU) && zU.fogChunks === QU || (zU = FU, UU.setEnvPrefs(zU))
       };
-      let jM = null;
-      const PM = () => {
-        const rM = function() {
-          const MM = OM.d.get("clientEscMenuOptions");
+      let QU = null;
+      const FU = () => {
+        const XU = function() {
+          const UU = cU.e.get("clientEscMenuOptions");
           return {
-            nametagsHidden: OM.d.get("areNametagsHidden"),
-            crouchToggle: MM.crouchIsToggle,
-            bhopDisabled: MM.disableBunnyHopping,
-            disableBobbing: MM.disableBobbing,
-            ezTowering: MM.ezTowering ? (0, zj.f)() : null,
-            ezBridging: MM.ezBridging,
-            showChunkBorders: MM.showChunkBorders,
-            touchWalk: !(0, hj.e)(),
-            edgeGuard: MM.touchEdgeGuard,
-            edgeGuardLong: (0, Hj.b)(),
-            nametagCutDistance: (0, mj.f)()
+            nametagsHidden: cU.e.get("areNametagsHidden"),
+            crouchToggle: UU.crouchIsToggle,
+            bhopDisabled: UU.disableBunnyHopping,
+            disableBobbing: UU.disableBobbing,
+            ezTowering: UU.ezTowering ? (0, oQ.f)() : null,
+            ezBridging: UU.ezBridging,
+            showChunkBorders: UU.showChunkBorders,
+            touchWalk: !(0, NQ.g)(),
+            edgeGuard: UU.touchEdgeGuard,
+            edgeGuardLong: (0, YQ.d)(),
+            nametagCutDistance: (0, EQ.h)()
           }
         }();
-        (0, gM.Td)(jM, rM) || (jM = rM, MM.setUiPrefs(rM))
+        (0, eU.oe)(QU, XU) || (QU = XU, UU.setUiPrefs(XU))
       };
-      let nM = null;
-      const QM = () => {
-        const rM = Jj();
-        (0, gM.Td)(nM, rM) || (nM = rM, MM.setLookPrefs(rM))
+      let oU = null;
+      const DU = () => {
+        const XU = IQ();
+        (0, eU.oe)(oU, XU) || (oU = XU, UU.setLookPrefs(XU))
       };
-      rM(), SM(), PM(), QM();
-      const zM = [(0, aM.j)("appManagerUpdated|soundVolume", rM), (0, aM.j)("appManagerUpdated|soundOnFromAd", rM), (0, aM.j)("appManagerUpdated|clientEscMenuOptions", (() => {
-        SM(), PM(), QM()
-      })), (0, aM.j)(hj.c, PM), (0, aM.j)("appManagerUpdated|enabledDebugFeatures", SM), (0, aM.j)("appManagerUpdated|areNametagsHidden", PM), (0, aM.j)("appManagerUpdated|showDistantNametags", PM)];
+      XU(), yU(), FU(), DU();
+      const EU = [(0, AU.n)("appManagerUpdated|soundVolume", XU), (0, AU.n)("appManagerUpdated|soundOnFromAd", XU), (0, AU.n)("appManagerUpdated|clientEscMenuOptions", (() => {
+        yU(), FU(), DU()
+      })), (0, AU.n)(NQ.c, FU), (0, AU.n)("appManagerUpdated|enabledDebugFeatures", yU), (0, AU.n)("appManagerUpdated|areNametagsHidden", FU), (0, AU.n)("appManagerUpdated|showDistantNametags", FU)];
       return () => {
-        for (const MM of zM) MM()
+        for (const UU of EU) UU()
       }
     }
-    var lj = iM(41998),
-      Ej = iM(42006);
-    var Uj = (0, Ej.e)("lend"),
-      Gj = (0, Ej.e)("starting"),
-      Cj = (0, Ej.e)("generation"),
-      ej = (0, Ej.e)("end");
-    class bj {
-      constructor(MM) {
-        this.deps = MM, Object.defineProperty(this, ej, {
-          value: wj
-        }), Object.defineProperty(this, Uj, {
+    var tQ = zU(41990),
+      gQ = zU(41999);
+    var kQ = (0, gQ.e)("lend"),
+      GQ = (0, gQ.e)("starting"),
+      BQ = (0, gQ.e)("generation"),
+      ZQ = (0, gQ.e)("end");
+    class RQ {
+      constructor(UU) {
+        this.deps = UU, Object.defineProperty(this, ZQ, {
+          value: PQ
+        }), Object.defineProperty(this, kQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Gj, {
+        }), Object.defineProperty(this, GQ, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, Cj, {
+        }), Object.defineProperty(this, BQ, {
           writable: !0,
           value: 0
         })
       }
       get active() {
-        return null !== (0, lj.d)(this, Uj)[Uj] || (0, lj.d)(this, Gj)[Gj]
+        return null !== (0, tQ.d)(this, kQ)[kQ] || (0, tQ.d)(this, GQ)[GQ]
       }
-      async start(MM) {
+      async start(UU) {
         if (this.active) return "busy";
-        const rM = (0, lj.d)(this, Cj)[Cj];
-        (0, lj.d)(this, Gj)[Gj] = !0;
+        const XU = (0, tQ.d)(this, BQ)[BQ];
+        (0, tQ.d)(this, GQ)[GQ] = !0;
         try {
           if (!await this.deps.ensureLoaded()) return "refused"
         } finally {
-          (0, lj.d)(this, Gj)[Gj] = !1
+          (0, tQ.d)(this, GQ)[GQ] = !1
         }
-        if (rM !== (0, lj.d)(this, Cj)[Cj]) return "refused";
-        const iM = this.deps.beginSave();
-        if (!iM) return "refused";
-        const OM = Number(BigInt.asUintN(32, MM)),
-          SM = Number(BigInt.asUintN(32, MM >> 32n));
-        let jM = "refused";
-        return this.deps.recorderCall(((MM, rM) => {
-          const aM = iM.editState,
-            PM = MM.stage(aM.length);
-          0 !== PM ? (new Uint8Array(rM.buffer, PM, aM.length).set(aM), MM.vSM(iM.headLen, OM, SM) && (jM = "sealing")) : jM = "tooLarge"
-        }), !0), "sealing" !== jM ? (iM.end(), jM) : ((0, lj.d)(this, Uj)[Uj] = iM, "sealing")
+        if (XU !== (0, tQ.d)(this, BQ)[BQ]) return "refused";
+        const zU = this.deps.beginSave();
+        if (!zU) return "refused";
+        const cU = Number(BigInt.asUintN(32, UU)),
+          yU = Number(BigInt.asUintN(32, UU >> 32n));
+        let QU = "refused";
+        return this.deps.recorderCall(((UU, XU) => {
+          const AU = zU.editState,
+            FU = UU.stage(AU.length);
+          0 !== FU ? (new Uint8Array(XU.buffer, FU, AU.length).set(AU), UU.LQU(zU.headLen, cU, yU) && (QU = "sealing")) : QU = "tooLarge"
+        }), !0), "sealing" !== QU ? (zU.end(), QU) : ((0, tQ.d)(this, kQ)[kQ] = zU, "sealing")
       }
       beforeRecorderStep() {
-        const MM = (0, lj.d)(this, Uj)[Uj];
-        if (!MM) return null;
-        let rM = -1,
-          iM = 0;
-        if (!this.deps.recorderCall((MM => {
-            rM = MM.FSM(), rM > 0 && (iM = MM.BSM())
-          }))) return (0, lj.d)(this, ej)[ej](MM, "stopped");
-        if (rM < 0) return (0, lj.d)(this, ej)[ej](MM, "read");
-        if (0 === rM) return null;
-        const OM = MM.head(iM, rM);
-        let SM = !1;
-        if (OM && this.deps.recorderCall(((MM, iM) => {
-            const jM = MM.stage(rM);
-            0 !== jM && (new Uint8Array(iM.buffer, jM, rM).set(OM), SM = !0)
-          }), !0), SM) return null;
-        const jM = MM.givenUp();
-        this.deps.recorderCall((MM => {
-          MM.XSM()
+        const UU = (0, tQ.d)(this, kQ)[kQ];
+        if (!UU) return null;
+        let XU = -1,
+          zU = 0;
+        if (!this.deps.recorderCall((UU => {
+            XU = UU.eQU(), XU > 0 && (zU = UU.CQU())
+          }))) return (0, tQ.d)(this, ZQ)[ZQ](UU, "stopped");
+        if (XU < 0) return (0, tQ.d)(this, ZQ)[ZQ](UU, "read");
+        if (0 === XU) return null;
+        const cU = UU.head(zU, XU);
+        let yU = !1;
+        if (cU && this.deps.recorderCall(((UU, zU) => {
+            const QU = UU.stage(XU);
+            0 !== QU && (new Uint8Array(zU.buffer, QU, XU).set(cU), yU = !0)
+          }), !0), yU) return null;
+        const QU = UU.givenUp();
+        this.deps.recorderCall((UU => {
+          UU.wQU()
         }));
-        const aM = (0, lj.d)(this, ej)[ej](MM, jM ? "givenUp" : "stopped");
-        return jM && this.deps.givenUp("Reopen the replay you were editing to make your edits again, as they weren't saved when another replay opened."), aM
+        const AU = (0, tQ.d)(this, ZQ)[ZQ](UU, QU ? "givenUp" : "stopped");
+        return QU && this.deps.givenUp("Reopen the replay you were editing to make your edits again, as they weren't saved when another replay opened."), AU
       }
       stop() {
-        (0, lj.d)(this, Cj)[Cj]++;
-        const MM = (0, lj.d)(this, Uj)[Uj];
-        MM && (this.deps.recorderCall((MM => {
-          MM.XSM()
-        })), (0, lj.d)(this, ej)[ej](MM, "stopped"))
+        (0, tQ.d)(this, BQ)[BQ]++;
+        const UU = (0, tQ.d)(this, kQ)[kQ];
+        UU && (this.deps.recorderCall((UU => {
+          UU.wQU()
+        })), (0, tQ.d)(this, ZQ)[ZQ](UU, "stopped"))
       }
     }
 
-    function wj(MM, rM) {
-      return (0, lj.d)(this, Uj)[Uj] = null, MM.end(), rM
+    function PQ(UU, XU) {
+      return (0, tQ.d)(this, kQ)[kQ] = null, UU.end(), XU
     }
 
-    function tj(MM, rM) {
-      const iM = new Uint8Array(4),
-        OM = new DataView(iM.buffer);
-      return OM.setUint8(0, MM ? 1 : 0), OM.setUint16(2, Math.max(0, Math.min(65535, Math.round(rM))), !0), iM
+    function WQ(UU, XU) {
+      const zU = new Uint8Array(4),
+        cU = new DataView(zU.buffer);
+      return cU.setUint8(0, UU ? 1 : 0), cU.setUint16(2, Math.max(0, Math.min(65535, Math.round(XU))), !0), zU
     }
 
-    function gj(MM, rM) {
-      return MM > function(MM) {
-        return 16777216 + 314572.8 * Math.max(0, MM)
-      }(rM) + 33554432
+    function dQ(UU, XU) {
+      return UU > function(UU) {
+        return 16777216 + 314572.8 * Math.max(0, UU)
+      }(XU) + 33554432
     }
-    let uj = null;
+    let LQ = null;
 
-    function Rj(MM) {
-      return uj ??= async function(MM) {
-        const rM = MM.loadInFlight();
-        rM && await rM.catch((() => {}));
-        if (MM.trapped()) return "trapped";
-        if (MM.busy() || !gj(MM.memoryBytes(), MM.clipSeconds())) return "ML";
-        MM.unload();
-        let iM = !1;
+    function eQ(UU) {
+      return LQ ??= async function(UU) {
+        const XU = UU.loadInFlight();
+        XU && await XU.catch((() => {}));
+        if (UU.trapped()) return "trapped";
+        if (UU.busy() || !dQ(UU.memoryBytes(), UU.clipSeconds())) return "cY";
+        UU.unload();
+        let zU = !1;
         try {
-          iM = await MM.load()
+          zU = await UU.load()
         } catch {
-          iM = !1
+          zU = !1
         }
-        if (!iM) return MM.trapped() ? "trapped" : MM.dh() ? "dh" : "failed";
+        if (!zU) return UU.trapped() ? "trapped" : UU.kp() ? "kp" : "failed";
         return "recycled"
-      }(MM).finally((() => {
-        uj = null
-      })), uj
+      }(UU).finally((() => {
+        LQ = null
+      })), LQ
     }
-    const pj = "Replay recording couldn't load, so try again.",
-      Wj = new Set([mM.Sc.ToggleRecording, mM.Sc.SaveClip]);
-    var sj = (0, Ej.e)("bindings"),
-      Dj = (0, Ej.e)("module"),
-      kj = (0, Ej.e)("memory"),
-      Zj = (0, Ej.e)("trapped"),
-      oj = (0, Ej.e)("dh"),
-      fj = (0, Ej.e)("recycleDue"),
-      Yj = (0, Ej.e)("loading"),
-      Nj = (0, Ej.e)("generation"),
-      Aj = (0, Ej.e)("viewDrawn"),
-      xj = (0, Ej.e)("clip"),
-      vj = (0, Ej.e)("session"),
-      Fj = (0, Ej.e)("control"),
-      Bj = (0, Ej.e)("deferred"),
-      Xj = (0, Ej.e)("coreU8"),
-      Ij = (0, Ej.e)("coreU32"),
-      Kj = (0, Ej.e)("moduleU8"),
-      qj = (0, Ej.e)("edited"),
-      Tj = (0, Ej.e)("sendSession"),
-      Vj = (0, Ej.e)("checkNotInEvents"),
-      cj = (0, Ej.e)("clipping"),
-      Ma = (0, Ej.e)("busy"),
-      ra = (0, Ej.e)("use"),
-      ia = (0, Ej.e)("ensureLoaded"),
-      Oa = (0, Ej.e)("loadOnce"),
-      Sa = (0, Ej.e)("recycleAfterStep"),
-      ja = (0, Ej.e)("settleRecycle"),
-      aa = (0, Ej.e)("load"),
-      Pa = (0, Ej.e)("attach"),
-      na = (0, Ej.e)("resendHeld"),
-      Qa = (0, Ej.e)("recycle"),
-      za = (0, Ej.e)("send"),
-      La = (0, Ej.e)("unload"),
-      ma = (0, Ej.e)("dropModule"),
-      Ha = (0, Ej.e)("coreBytes"),
-      ha = (0, Ej.e)("coreWords"),
-      Ja = (0, Ej.e)("moduleBytes"),
-      da = (0, Ej.e)("loadFailed"),
-      ya = (0, Ej.e)("call"),
-      la = (0, Ej.e)("guard"),
-      Ea = (0, Ej.e)("trapOn");
-    class Ua {
-      constructor(MM) {
-        this.deps = MM, Object.defineProperty(this, Ea, {
-          value: Fa
-        }), Object.defineProperty(this, la, {
-          value: va
-        }), Object.defineProperty(this, ya, {
-          value: xa
-        }), Object.defineProperty(this, da, {
-          value: Aa
-        }), Object.defineProperty(this, Ja, {
-          value: Na
-        }), Object.defineProperty(this, ha, {
-          value: Ya
-        }), Object.defineProperty(this, Ha, {
-          value: fa
-        }), Object.defineProperty(this, ma, {
-          value: oa
-        }), Object.defineProperty(this, La, {
-          value: Za
-        }), Object.defineProperty(this, za, {
-          value: ka
-        }), Object.defineProperty(this, Qa, {
-          value: Da
-        }), Object.defineProperty(this, na, {
-          value: sa
-        }), Object.defineProperty(this, Pa, {
-          value: Wa
-        }), Object.defineProperty(this, aa, {
-          value: pa
-        }), Object.defineProperty(this, ja, {
-          value: Ra
-        }), Object.defineProperty(this, Sa, {
-          value: ua
-        }), Object.defineProperty(this, Oa, {
-          value: ga
-        }), Object.defineProperty(this, ia, {
-          value: ta
-        }), Object.defineProperty(this, ra, {
-          value: wa
-        }), Object.defineProperty(this, Ma, {
-          value: ba
-        }), Object.defineProperty(this, cj, {
-          value: ea
-        }), Object.defineProperty(this, Vj, {
-          value: Ca
-        }), Object.defineProperty(this, Tj, {
-          value: Ga
-        }), Object.defineProperty(this, sj, {
+    const CQ = "Replay recording couldn't load, so try again.",
+      wQ = "Replay recording stopped working, so reload the page to record replays again.",
+      qQ = new Set([NU.Xc.ToggleRecording, NU.Xc.SaveClip]);
+    var OQ = (0, gQ.e)("bindings"),
+      SQ = (0, gQ.e)("module"),
+      rQ = (0, gQ.e)("memory"),
+      uQ = (0, gQ.e)("trapped"),
+      fQ = (0, gQ.e)("kp"),
+      iQ = (0, gQ.e)("recycleDue"),
+      HQ = (0, gQ.e)("loading"),
+      MQ = (0, gQ.e)("generation"),
+      vQ = (0, gQ.e)("viewDrawn"),
+      VQ = (0, gQ.e)("clip"),
+      sQ = (0, gQ.e)("session"),
+      nQ = (0, gQ.e)("control"),
+      mQ = (0, gQ.e)("deferred"),
+      lQ = (0, gQ.e)("coreU8"),
+      xQ = (0, gQ.e)("coreU32"),
+      JQ = (0, gQ.e)("moduleU8"),
+      jQ = (0, gQ.e)("edited"),
+      KQ = (0, gQ.e)("sendSession"),
+      bQ = (0, gQ.e)("checkNotInEvents"),
+      TQ = (0, gQ.e)("clipping"),
+      hQ = (0, gQ.e)("busy"),
+      UA = (0, gQ.e)("use"),
+      XA = (0, gQ.e)("ensureLoaded"),
+      zA = (0, gQ.e)("loadOnce"),
+      cA = (0, gQ.e)("recycleAfterStep"),
+      yA = (0, gQ.e)("settleRecycle"),
+      QA = (0, gQ.e)("load"),
+      AA = (0, gQ.e)("attach"),
+      FA = (0, gQ.e)("resendHeld"),
+      oA = (0, gQ.e)("recycle"),
+      DA = (0, gQ.e)("send"),
+      EA = (0, gQ.e)("unload"),
+      YA = (0, gQ.e)("dropModule"),
+      NA = (0, gQ.e)("coreBytes"),
+      IA = (0, gQ.e)("coreWords"),
+      pA = (0, gQ.e)("moduleBytes"),
+      aA = (0, gQ.e)("loadFailed"),
+      tA = (0, gQ.e)("call"),
+      gA = (0, gQ.e)("guard"),
+      kA = (0, gQ.e)("trapOn");
+    class GA {
+      constructor(UU) {
+        this.deps = UU, Object.defineProperty(this, kA, {
+          value: nA
+        }), Object.defineProperty(this, gA, {
+          value: sA
+        }), Object.defineProperty(this, tA, {
+          value: VA
+        }), Object.defineProperty(this, aA, {
+          value: vA
+        }), Object.defineProperty(this, pA, {
+          value: MA
+        }), Object.defineProperty(this, IA, {
+          value: HA
+        }), Object.defineProperty(this, NA, {
+          value: iA
+        }), Object.defineProperty(this, YA, {
+          value: fA
+        }), Object.defineProperty(this, EA, {
+          value: uA
+        }), Object.defineProperty(this, DA, {
+          value: rA
+        }), Object.defineProperty(this, oA, {
+          value: SA
+        }), Object.defineProperty(this, FA, {
+          value: OA
+        }), Object.defineProperty(this, AA, {
+          value: qA
+        }), Object.defineProperty(this, QA, {
+          value: wA
+        }), Object.defineProperty(this, yA, {
+          value: CA
+        }), Object.defineProperty(this, cA, {
+          value: eA
+        }), Object.defineProperty(this, zA, {
+          value: LA
+        }), Object.defineProperty(this, XA, {
+          value: dA
+        }), Object.defineProperty(this, UA, {
+          value: WA
+        }), Object.defineProperty(this, hQ, {
+          value: PA
+        }), Object.defineProperty(this, TQ, {
+          value: RA
+        }), Object.defineProperty(this, bQ, {
+          value: ZA
+        }), Object.defineProperty(this, KQ, {
+          value: BA
+        }), Object.defineProperty(this, OQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Dj, {
+        }), Object.defineProperty(this, SQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, kj, {
+        }), Object.defineProperty(this, rQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Zj, {
+        }), Object.defineProperty(this, uQ, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, oj, {
+        }), Object.defineProperty(this, fQ, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, fj, {
+        }), Object.defineProperty(this, iQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Yj, {
+        }), Object.defineProperty(this, HQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Nj, {
+        }), Object.defineProperty(this, MQ, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, Aj, {
+        }), Object.defineProperty(this, vQ, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, xj, {
+        }), Object.defineProperty(this, VQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, vj, {
+        }), Object.defineProperty(this, sQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Fj, {
+        }), Object.defineProperty(this, nQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Bj, {
+        }), Object.defineProperty(this, mQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Xj, {
+        }), Object.defineProperty(this, lQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Ij, {
+        }), Object.defineProperty(this, xQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Kj, {
+        }), Object.defineProperty(this, JQ, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, qj, {
+        }), Object.defineProperty(this, jQ, {
           writable: !0,
           value: void 0
-        }), (0, lj.d)(this, qj)[qj] = new bj({
-          ensureLoaded: () => (0, lj.d)(this, ia)[ia](),
-          recorderCall: (MM, rM) => {
-            rM && (0, lj.d)(this, Vj)[Vj]("an edited save's stage");
-            const iM = (0, lj.d)(this, ya)[ya](((rM, iM) => (MM(rM, iM), !0)));
-            return null !== iM && void 0 !== iM && iM
+        }), (0, tQ.d)(this, jQ)[jQ] = new RQ({
+          ensureLoaded: () => (0, tQ.d)(this, XA)[XA](),
+          recorderCall: (UU, XU) => {
+            XU && (0, tQ.d)(this, bQ)[bQ]("an edited save's stage");
+            const zU = (0, tQ.d)(this, tA)[tA](((XU, zU) => (UU(XU, zU), !0)));
+            return null !== zU && void 0 !== zU && zU
           },
-          beginSave: MM.beginSave,
-          givenUp: MM.givenUp
+          beginSave: UU.beginSave,
+          givenUp: UU.givenUp
         })
       }
       get active() {
-        return null !== (0, lj.d)(this, Dj)[Dj]
+        return null !== (0, tQ.d)(this, SQ)[SQ]
       }
       get trapped() {
-        return (0, lj.d)(this, Zj)[Zj]
+        return (0, tQ.d)(this, uQ)[uQ]
       }
       get loading() {
-        return null !== (0, lj.d)(this, Yj)[Yj]
+        return null !== (0, tQ.d)(this, HQ)[HQ]
       }
       prefetch() {
-        (0, lj.d)(this, oj)[oj] || (0, lj.d)(this, Zj)[Zj] || (0, lj.d)(this, Dj)[Dj] || (0, lj.d)(this, Yj)[Yj] || this.deps.prefetch()
+        (0, tQ.d)(this, fQ)[fQ] || (0, tQ.d)(this, uQ)[uQ] || (0, tQ.d)(this, SQ)[SQ] || (0, tQ.d)(this, HQ)[HQ] || this.deps.prefetch()
       }
       viewDrawn() {
-        (0, lj.d)(this, Aj)[Aj] = !0, (0, lj.d)(this, cj)[cj]() && (0, lj.d)(this, ra)[ra]()
+        (0, tQ.d)(this, vQ)[vQ] = !0, (0, tQ.d)(this, TQ)[TQ]() && (0, tQ.d)(this, UA)[UA]()
       }
-      prefs(MM, rM) {
-        (0, lj.d)(this, xj)[xj] = {
-          on: MM,
-          seconds: rM
-        }, (0, lj.d)(this, za)[za](mM.Oc.Prefs, tj(MM, rM)), MM && (0, lj.d)(this, Aj)[Aj] && (0, lj.d)(this, ra)[ra]()
+      prefs(UU, XU) {
+        (0, tQ.d)(this, VQ)[VQ] = {
+          on: UU,
+          seconds: XU
+        }, (0, tQ.d)(this, DA)[DA](NU.Rc.Prefs, WQ(UU, XU)), UU && (0, tQ.d)(this, vQ)[vQ] && (0, tQ.d)(this, UA)[UA]()
       }
-      control(MM) {
-        const rM = function(MM) {
-          return new Uint8Array([MM, 0, 0, 0])
-        }(MM);
-        if (Wj.has(MM)) return (0, lj.d)(this, Dj)[Dj] ? void(0, lj.d)(this, za)[za](mM.Oc.Control, rM) : ((0, lj.d)(this, Fj)[Fj] = rM, void(0, lj.d)(this, ra)[ra]());
-        (0, lj.d)(this, oj)[oj] || this.deps.coreCommand(mM.Oc.Control, rM)
+      control(UU) {
+        const XU = function(UU) {
+          return new Uint8Array([UU, 0, 0, 0])
+        }(UU);
+        if (qQ.has(UU)) {
+          if (!(0, tQ.d)(this, uQ)[uQ]) return (0, tQ.d)(this, SQ)[SQ] ? void(0, tQ.d)(this, DA)[DA](NU.Rc.Control, XU) : ((0, tQ.d)(this, nQ)[nQ] = XU, void(0, tQ.d)(this, UA)[UA]());
+          this.deps.failed(wQ)
+        } else(0, tQ.d)(this, fQ)[fQ] || this.deps.coreCommand(NU.Rc.Control, XU)
       }
-      session(MM) {
-        (0, lj.d)(this, vj)[vj] = MM, (0, lj.d)(this, Tj)[Tj](MM)
+      session(UU) {
+        (0, tQ.d)(this, sQ)[sQ] = UU, (0, tQ.d)(this, KQ)[KQ](UU)
       }
-      filePartDone(MM, rM) {
-        (0, lj.d)(this, za)[za](mM.Oc.FilePartDone, function(MM, rM) {
-          const iM = new Uint8Array(8),
-            OM = new DataView(iM.buffer);
-          return OM.setUint32(0, MM, !0), OM.setUint32(4, rM, !0), iM
-        }(MM, rM))
+      filePartDone(UU, XU) {
+        (0, tQ.d)(this, DA)[DA](NU.Rc.FilePartDone, function(UU, XU) {
+          const zU = new Uint8Array(8),
+            cU = new DataView(zU.buffer);
+          return cU.setUint32(0, UU, !0), cU.setUint32(4, XU, !0), zU
+        }(UU, XU))
       }
-      fileDone(MM) {
-        return (0, lj.d)(this, za)[za](mM.Oc.FileDone, function(MM) {
-          const rM = new Uint8Array(4);
-          return new DataView(rM.buffer).setUint32(0, MM, !0), rM
-        }(MM)), (0, lj.d)(this, Sa)[Sa]()
+      fileDone(UU) {
+        return (0, tQ.d)(this, DA)[DA](NU.Rc.FileDone, function(UU) {
+          const XU = new Uint8Array(4);
+          return new DataView(XU.buffer).setUint32(0, UU, !0), XU
+        }(UU)), (0, tQ.d)(this, cA)[cA]()
       }
-      saveEdited(MM) {
-        return (0, lj.d)(this, Vj)[Vj]("saveEdited"), (0, lj.d)(this, qj)[qj].start(MM)
+      saveEdited(UU) {
+        return (0, tQ.d)(this, bQ)[bQ]("saveEdited"), (0, tQ.d)(this, jQ)[jQ].start(UU)
       }
       afterFrame() {
-        if (!(0, lj.d)(this, Dj)[Dj]) return;
-        "read" === (0, lj.d)(this, qj)[qj].beforeRecorderStep() && (0, lj.d)(this, Sa)[Sa]();
-        const MM = (0, lj.d)(this, fj)[fj];
-        (0, lj.d)(this, fj)[fj] = null;
-        const rM = (0, lj.d)(this, Dj)[Dj],
-          iM = (0, lj.d)(this, kj)[kj];
-        if (!rM || !iM) return void(null === MM || void 0 === MM || MM.resolve((0, lj.d)(this, Zj)[Zj] ? "trapped" : "ML"));
+        if (!(0, tQ.d)(this, SQ)[SQ]) return;
+        "read" === (0, tQ.d)(this, jQ)[jQ].beforeRecorderStep() && (0, tQ.d)(this, cA)[cA]();
+        const UU = (0, tQ.d)(this, iQ)[iQ];
+        (0, tQ.d)(this, iQ)[iQ] = null;
+        const XU = (0, tQ.d)(this, SQ)[SQ],
+          zU = (0, tQ.d)(this, rQ)[rQ];
+        if (!XU || !zU) return void(null === UU || void 0 === UU || UU.resolve((0, tQ.d)(this, uQ)[uQ] ? "trapped" : "cY"));
         const {
-          core: OM
-        } = this.deps, SM = OM.qSM(2);
-        let jM, aM, PM, nM, QM = 0,
-          zM = 0;
-        if (0 !== SM) {
-          var LM, mM;
-          const MM = (0, lj.d)(this, ha)[ha]();
-          QM = null !== (LM = MM[SM >>> 2]) && void 0 !== LM ? LM : 0, zM = null !== (mM = MM[1 + (SM >>> 2)]) && void 0 !== mM ? mM : 0
+          core: cU
+        } = this.deps, yU = cU.SQU(2);
+        let QU, AU, FU, oU, DU = 0,
+          EU = 0;
+        if (0 !== yU) {
+          var YU, NU;
+          const UU = (0, tQ.d)(this, IA)[IA]();
+          DU = null !== (YU = UU[yU >>> 2]) && void 0 !== YU ? YU : 0, EU = null !== (NU = UU[1 + (yU >>> 2)]) && void 0 !== NU ? NU : 0
         }
         try {
-          if (zM > 0) {
-            const MM = rM.feed(zM);
-            0 !== MM && (0, lj.d)(this, Ja)[Ja](iM).set((0, lj.d)(this, Ha)[Ha]().subarray(QM, QM + zM), MM)
+          if (EU > 0) {
+            const UU = XU.feed(EU);
+            0 !== UU && (0, tQ.d)(this, pA)[pA](zU).set((0, tQ.d)(this, NA)[NA]().subarray(DU, DU + EU), UU)
           }
-          jM = rM.step(), aM = rM.TSM(), PM = rM.VSM(), nM = rM.cSM()
-        } catch (HM) {
-          if (!(0, lj.d)(this, Ea)[Ea](HM)) throw null === MM || void 0 === MM || MM.resolve("ML"), HM;
-          return void(null === MM || void 0 === MM || MM.resolve("trapped"))
+          QU = XU.step(), AU = XU.rQU(), FU = XU.uQU(), oU = XU.fQU()
+        } catch (IU) {
+          if (!(0, tQ.d)(this, kA)[kA](IU)) throw null === UU || void 0 === UU || UU.resolve("cY"), IU;
+          return void(null === UU || void 0 === UU || UU.resolve("trapped"))
         }
-        if (jM > 0) {
-          const MM = OM.MjM(2, jM);
-          0 !== MM && (0, lj.d)(this, Ha)[Ha]().set((0, lj.d)(this, Ja)[Ja](iM).subarray(aM, aM + jM), MM)
+        if (QU > 0) {
+          const UU = cU.iQU(2, QU);
+          0 !== UU && (0, tQ.d)(this, NA)[NA]().set((0, tQ.d)(this, pA)[pA](zU).subarray(AU, AU + QU), UU)
         }
-        if (PM > 0) {
-          (0, lj.d)(this, Bj)[Bj] = [];
+        if (FU > 0) {
+          (0, tQ.d)(this, mQ)[mQ] = [];
           try {
-            this.deps.events(new Uint8Array(iM.buffer, nM, PM), iM)
-          } catch (HM) {
-            throw null === MM || void 0 === MM || MM.resolve("ML"), HM
+            this.deps.events(new Uint8Array(zU.buffer, oU, FU), zU)
+          } catch (IU) {
+            throw null === UU || void 0 === UU || UU.resolve("cY"), IU
           } finally {
-            const MM = (0, lj.d)(this, Bj)[Bj];
-            (0, lj.d)(this, Bj)[Bj] = null;
-            for (const [rM, iM] of MM)(0, lj.d)(this, za)[za](rM, iM)
+            const UU = (0, tQ.d)(this, mQ)[mQ];
+            (0, tQ.d)(this, mQ)[mQ] = null;
+            for (const [XU, zU] of UU)(0, tQ.d)(this, DA)[DA](XU, zU)
           }
         }
-        if (!(0, lj.d)(this, cj)[cj]() && !(0, lj.d)(this, Ma)[Ma]()) return (0, lj.d)(this, La)[La](), void(null === MM || void 0 === MM || MM.resolve("ML"));
-        null === MM || void 0 === MM || MM.resolve((0, lj.d)(this, Qa)[Qa]())
+        if (!(0, tQ.d)(this, TQ)[TQ]() && !(0, tQ.d)(this, hQ)[hQ]()) return (0, tQ.d)(this, EA)[EA](), void(null === UU || void 0 === UU || UU.resolve("cY"));
+        null === UU || void 0 === UU || UU.resolve((0, tQ.d)(this, oA)[oA]())
       }
       dispose() {
-        (0, lj.d)(this, oj)[oj] = !0, (0, lj.d)(this, La)[La]()
+        (0, tQ.d)(this, fQ)[fQ] = !0, (0, tQ.d)(this, EA)[EA]()
       }
     }
 
-    function Ga(MM) {
-      (0, lj.d)(this, za)[za](mM.Oc.Session, function(MM) {
-        const rM = new TextEncoder,
-          iM = rM.encode(MM.game).subarray(0, 65535),
-          OM = rM.encode(MM.lobby).subarray(0, 65535),
-          SM = new Uint8Array(22 + iM.length + 2 + OM.length),
-          jM = new DataView(SM.buffer);
-        jM.setFloat64(0, MM.unixMs, !0), jM.setBigUint64(8, BigInt.asUintN(64, MM.session), !0), jM.setUint8(16, MM.lobbyType);
-        let aM = 20;
-        for (const PM of [iM, OM]) jM.setUint16(aM, PM.length, !0), SM.set(PM, aM + 2), aM += 2 + PM.length;
-        return SM
+    function BA(UU) {
+      (0, tQ.d)(this, DA)[DA](NU.Rc.Session, function(UU) {
+        const XU = new TextEncoder,
+          zU = XU.encode(UU.game).subarray(0, 65535),
+          cU = XU.encode(UU.lobby).subarray(0, 65535),
+          yU = new Uint8Array(22 + zU.length + 2 + cU.length),
+          QU = new DataView(yU.buffer);
+        QU.setFloat64(0, UU.unixMs, !0), QU.setBigUint64(8, BigInt.asUintN(64, UU.session), !0), QU.setUint8(16, UU.lobbyType);
+        let AU = 20;
+        for (const FU of [zU, cU]) QU.setUint16(AU, FU.length, !0), yU.set(FU, AU + 2), AU += 2 + FU.length;
+        return yU
       }({
-        ...MM,
+        ...UU,
         unixMs: this.deps.unixNow()
       }))
     }
 
-    function Ca(MM) {
+    function ZA(UU) {
       false
     }
 
-    function ea() {
-      var MM, rM;
-      return null !== (MM = null === (rM = (0, lj.d)(this, xj)[xj]) || void 0 === rM ? void 0 : rM.on) && void 0 !== MM && MM
+    function RA() {
+      var UU, XU;
+      return null !== (UU = null === (XU = (0, tQ.d)(this, VQ)[VQ]) || void 0 === XU ? void 0 : XU.on) && void 0 !== UU && UU
     }
 
-    function ba() {
-      const MM = (0, lj.d)(this, Dj)[Dj];
-      let rM = !0;
-      if (MM) try {
-        rM = MM.busy()
-      } catch (iM) {
-        if (!(0, lj.d)(this, Ea)[Ea](iM)) throw iM
+    function PA() {
+      const UU = (0, tQ.d)(this, SQ)[SQ];
+      let XU = !0;
+      if (UU) try {
+        XU = UU.busy()
+      } catch (zU) {
+        if (!(0, tQ.d)(this, kA)[kA](zU)) throw zU
       }
-      return rM || (0, lj.d)(this, qj)[qj].active
+      return XU || (0, tQ.d)(this, jQ)[jQ].active
     }
-    async function wa() {
-      !(0, lj.d)(this, oj)[oj] && this.deps.allowed() ? await (0, lj.d)(this, ia)[ia]() : (0, lj.d)(this, Fj)[Fj] = null
+    async function WA() {
+      !(0, tQ.d)(this, fQ)[fQ] && this.deps.allowed() ? await (0, tQ.d)(this, XA)[XA]() : (0, tQ.d)(this, nQ)[nQ] = null
     }
 
-    function ta() {
-      return (0, lj.d)(this, Zj)[Zj] || (0, lj.d)(this, oj)[oj] ? Promise.resolve(!1) : (0, lj.d)(this, Dj)[Dj] ? Promise.resolve(!0) : ((0, lj.d)(this, Yj)[Yj] ??= (0, lj.d)(this, Oa)[Oa](), (0, lj.d)(this, Yj)[Yj])
+    function dA() {
+      return (0, tQ.d)(this, uQ)[uQ] || (0, tQ.d)(this, fQ)[fQ] ? Promise.resolve(!1) : (0, tQ.d)(this, SQ)[SQ] ? Promise.resolve(!0) : ((0, tQ.d)(this, HQ)[HQ] ??= (0, tQ.d)(this, zA)[zA](), (0, tQ.d)(this, HQ)[HQ])
     }
-    async function ga() {
-      let MM = !1;
+    async function LA() {
+      let UU = !1;
       try {
-        return MM = await (0, lj.d)(this, aa)[aa](), MM
+        return UU = await (0, tQ.d)(this, QA)[QA](), UU
       } finally {
-        MM || ((0, lj.d)(this, Fj)[Fj] = null), (0, lj.d)(this, Yj)[Yj] = null
+        UU || ((0, tQ.d)(this, nQ)[nQ] = null), (0, tQ.d)(this, HQ)[HQ] = null
       }
     }
 
-    function ua() {
-      if (!(0, lj.d)(this, Dj)[Dj]) return Promise.resolve((0, lj.d)(this, Zj)[Zj] ? "trapped" : "ML");
-      if (!(0, lj.d)(this, fj)[fj]) {
-        let MM = () => {};
-        const rM = new Promise((rM => {
-          MM = rM
+    function eA() {
+      if (!(0, tQ.d)(this, SQ)[SQ]) return Promise.resolve((0, tQ.d)(this, uQ)[uQ] ? "trapped" : "cY");
+      if (!(0, tQ.d)(this, iQ)[iQ]) {
+        let UU = () => {};
+        const XU = new Promise((XU => {
+          UU = XU
         }));
-        (0, lj.d)(this, fj)[fj] = {
-          promise: rM,
-          resolve: MM
+        (0, tQ.d)(this, iQ)[iQ] = {
+          promise: XU,
+          resolve: UU
         }
       }
-      return (0, lj.d)(this, fj)[fj].promise
+      return (0, tQ.d)(this, iQ)[iQ].promise
     }
 
-    function Ra(MM) {
-      const rM = (0, lj.d)(this, fj)[fj];
-      (0, lj.d)(this, fj)[fj] = null, null === rM || void 0 === rM || rM.resolve(MM)
+    function CA(UU) {
+      const XU = (0, tQ.d)(this, iQ)[iQ];
+      (0, tQ.d)(this, iQ)[iQ] = null, null === XU || void 0 === XU || XU.resolve(UU)
     }
-    async function pa() {
-      let MM = (0, lj.d)(this, sj)[sj];
-      if (!MM) {
-        const rM = (0, lj.d)(this, Nj)[Nj];
+    async function wA() {
+      let UU = (0, tQ.d)(this, OQ)[OQ];
+      if (!UU) {
+        const XU = (0, tQ.d)(this, MQ)[MQ];
         try {
-          MM = await this.deps.load()
-        } catch (iM) {
-          return rM === (0, lj.d)(this, Nj)[Nj] && await (0, lj.d)(this, da)[da](iM), !1
+          UU = await this.deps.load()
+        } catch (zU) {
+          return XU === (0, tQ.d)(this, MQ)[MQ] && await (0, tQ.d)(this, aA)[aA](zU), !1
         }
-        if (rM !== (0, lj.d)(this, Nj)[Nj]) return this.deps.unload(), !1;
-        const OM = MM,
-          SM = (0, lj.d)(this, la)[la]((() => OM.rjM()));
-        if (void 0 === SM) return !1;
-        const jM = this.deps.core.ijM();
-        if (SM !== jM) return await (0, lj.d)(this, da)[da](new Error(`recorder port version ${SM}, the core's ${jM}`)), !1;
-        (0, lj.d)(this, sj)[sj] = MM
+        if (XU !== (0, tQ.d)(this, MQ)[MQ]) return this.deps.unload(), !1;
+        const cU = UU,
+          yU = (0, tQ.d)(this, gA)[gA]((() => cU.HQU()));
+        if (void 0 === yU) return !1;
+        const QU = this.deps.core.MQU();
+        if (yU !== QU) return await (0, tQ.d)(this, aA)[aA](new Error(`recorder port version ${yU}, the core's ${QU}`)), !1;
+        (0, tQ.d)(this, OQ)[OQ] = UU
       }
-      const rM = MM;
+      const XU = UU;
       try {
-        if (!(0, lj.d)(this, la)[la]((() => ((0, lj.d)(this, Dj)[Dj] = new rM.OjM, (0, lj.d)(this, kj)[kj] = rM.ISM(), !0)))) return !1;
-        (0, lj.d)(this, na)[na]();
-        const MM = (0, lj.d)(this, Fj)[Fj];
-        return (0, lj.d)(this, Fj)[Fj] = null, MM && (0, lj.d)(this, za)[za](mM.Oc.Control, MM), (0, lj.d)(this, Pa)[Pa]()
-      } catch (iM) {
-        return (0, lj.d)(this, La)[La](), await (0, lj.d)(this, da)[da](iM), !1
+        if (!(0, tQ.d)(this, gA)[gA]((() => ((0, tQ.d)(this, SQ)[SQ] = new XU.vQU, (0, tQ.d)(this, rQ)[rQ] = XU.qQU(), !0)))) return !1;
+        (0, tQ.d)(this, FA)[FA]();
+        const UU = (0, tQ.d)(this, nQ)[nQ];
+        return (0, tQ.d)(this, nQ)[nQ] = null, UU && (0, tQ.d)(this, DA)[DA](NU.Rc.Control, UU), (0, tQ.d)(this, AA)[AA]()
+      } catch (zU) {
+        return (0, tQ.d)(this, EA)[EA](), await (0, tQ.d)(this, aA)[aA](zU), !1
       }
     }
 
-    function Wa() {
-      return this.deps.core.SjM(0), 1 === this.deps.core.SjM(1) || ((0, lj.d)(this, La)[La](), this.deps.failed(pj), !1)
+    function qA() {
+      return this.deps.core.VQU(0), 1 === this.deps.core.VQU(1) || ((0, tQ.d)(this, EA)[EA](), this.deps.failed(CQ), !1)
     }
 
-    function sa() {
-      (0, lj.d)(this, xj)[xj] && (0, lj.d)(this, za)[za](mM.Oc.Prefs, tj((0, lj.d)(this, xj)[xj].on, (0, lj.d)(this, xj)[xj].seconds)), (0, lj.d)(this, vj)[vj] && (0, lj.d)(this, Tj)[Tj]((0, lj.d)(this, vj)[vj])
+    function OA() {
+      (0, tQ.d)(this, VQ)[VQ] && (0, tQ.d)(this, DA)[DA](NU.Rc.Prefs, WQ((0, tQ.d)(this, VQ)[VQ].on, (0, tQ.d)(this, VQ)[VQ].seconds)), (0, tQ.d)(this, sQ)[sQ] && (0, tQ.d)(this, KQ)[KQ]((0, tQ.d)(this, sQ)[sQ])
     }
 
-    function Da() {
-      return Rj({
+    function SA() {
+      return eQ({
         memoryBytes: this.deps.memoryBytes,
         clipSeconds: () => {
-          var MM, rM;
-          return null !== (MM = null === (rM = (0, lj.d)(this, xj)[xj]) || void 0 === rM ? void 0 : rM.seconds) && void 0 !== MM ? MM : 0
+          var UU, XU;
+          return null !== (UU = null === (XU = (0, tQ.d)(this, VQ)[VQ]) || void 0 === XU ? void 0 : XU.seconds) && void 0 !== UU ? UU : 0
         },
-        trapped: () => (0, lj.d)(this, Zj)[Zj],
-        busy: () => (0, lj.d)(this, Ma)[Ma](),
-        loadInFlight: () => (0, lj.d)(this, Yj)[Yj],
-        dh: () => (0, lj.d)(this, oj)[oj],
+        trapped: () => (0, tQ.d)(this, uQ)[uQ],
+        busy: () => (0, tQ.d)(this, hQ)[hQ](),
+        loadInFlight: () => (0, tQ.d)(this, HQ)[HQ],
+        kp: () => (0, tQ.d)(this, fQ)[fQ],
         unload: () => {
-          (0, lj.d)(this, La)[La]()
+          (0, tQ.d)(this, EA)[EA]()
         },
-        load: () => (0, lj.d)(this, ia)[ia]()
+        load: () => (0, tQ.d)(this, XA)[XA]()
       })
     }
 
-    function ka(MM, rM) {
-      (0, lj.d)(this, Bj)[Bj] ? (0, lj.d)(this, Bj)[Bj].push([MM, rM]): (0, lj.d)(this, ya)[ya](((iM, OM) => {
-        const SM = iM.KSM(rM.length);
-        0 !== SM && (new Uint8Array(OM.buffer, SM, rM.length).set(rM), iM.command(MM, rM.length))
+    function rA(UU, XU) {
+      (0, tQ.d)(this, mQ)[mQ] ? (0, tQ.d)(this, mQ)[mQ].push([UU, XU]): (0, tQ.d)(this, tA)[tA](((zU, cU) => {
+        const yU = zU.OQU(XU.length);
+        0 !== yU && (new Uint8Array(cU.buffer, yU, XU.length).set(XU), zU.command(UU, XU.length))
       }))
     }
 
-    function Za() {
-      (0, lj.d)(this, Nj)[Nj]++, (0, lj.d)(this, ja)[ja]("ML"), (0, lj.d)(this, qj)[qj].stop(), this.deps.core.SjM(0), (0, lj.d)(this, ma)[ma](), (0, lj.d)(this, Zj)[Zj] || ((0, lj.d)(this, sj)[sj] = null, this.deps.unload())
+    function uA() {
+      (0, tQ.d)(this, MQ)[MQ]++, (0, tQ.d)(this, yA)[yA]("cY"), (0, tQ.d)(this, jQ)[jQ].stop(), this.deps.core.VQU(0), (0, tQ.d)(this, YA)[YA](), (0, tQ.d)(this, uQ)[uQ] || ((0, tQ.d)(this, OQ)[OQ] = null, this.deps.unload())
     }
 
-    function oa() {
-      (0, lj.d)(this, ya)[ya]((MM => {
-        MM.free()
-      })), (0, lj.d)(this, Dj)[Dj] = null, (0, lj.d)(this, kj)[kj] = null, (0, lj.d)(this, Kj)[Kj] = null
+    function fA() {
+      (0, tQ.d)(this, tA)[tA]((UU => {
+        UU.free()
+      })), (0, tQ.d)(this, SQ)[SQ] = null, (0, tQ.d)(this, rQ)[rQ] = null, (0, tQ.d)(this, JQ)[JQ] = null
     }
 
-    function fa() {
-      var MM;
-      const rM = this.deps.coreBuffer();
-      return (null === (MM = (0, lj.d)(this, Xj)[Xj]) || void 0 === MM ? void 0 : MM.buffer) !== rM && ((0, lj.d)(this, Xj)[Xj] = new Uint8Array(rM)), (0, lj.d)(this, Xj)[Xj]
+    function iA() {
+      var UU;
+      const XU = this.deps.coreBuffer();
+      return (null === (UU = (0, tQ.d)(this, lQ)[lQ]) || void 0 === UU ? void 0 : UU.buffer) !== XU && ((0, tQ.d)(this, lQ)[lQ] = new Uint8Array(XU)), (0, tQ.d)(this, lQ)[lQ]
     }
 
-    function Ya() {
-      var MM;
-      const rM = this.deps.coreBuffer();
-      return (null === (MM = (0, lj.d)(this, Ij)[Ij]) || void 0 === MM ? void 0 : MM.buffer) !== rM && ((0, lj.d)(this, Ij)[Ij] = new Uint32Array(rM, 0, rM.byteLength >>> 2)), (0, lj.d)(this, Ij)[Ij]
+    function HA() {
+      var UU;
+      const XU = this.deps.coreBuffer();
+      return (null === (UU = (0, tQ.d)(this, xQ)[xQ]) || void 0 === UU ? void 0 : UU.buffer) !== XU && ((0, tQ.d)(this, xQ)[xQ] = new Uint32Array(XU, 0, XU.byteLength >>> 2)), (0, tQ.d)(this, xQ)[xQ]
     }
 
-    function Na(MM) {
-      var rM;
-      const iM = MM.buffer;
-      return (null === (rM = (0, lj.d)(this, Kj)[Kj]) || void 0 === rM ? void 0 : rM.buffer) !== iM && ((0, lj.d)(this, Kj)[Kj] = new Uint8Array(iM)), (0, lj.d)(this, Kj)[Kj]
+    function MA(UU) {
+      var XU;
+      const zU = UU.buffer;
+      return (null === (XU = (0, tQ.d)(this, JQ)[JQ]) || void 0 === XU ? void 0 : XU.buffer) !== zU && ((0, tQ.d)(this, JQ)[JQ] = new Uint8Array(zU)), (0, tQ.d)(this, JQ)[JQ]
     }
-    async function Aa(MM) {
-      await this.deps.staleOr(MM, (() => {
-        this.deps.failed(pj)
+    async function vA(UU) {
+      await this.deps.staleOr(UU, (() => {
+        this.deps.failed(CQ)
       }))
     }
 
-    function xa(MM) {
-      const rM = (0, lj.d)(this, Dj)[Dj],
-        iM = (0, lj.d)(this, kj)[kj];
-      if (rM && iM) return (0, lj.d)(this, la)[la]((() => MM(rM, iM)))
+    function VA(UU) {
+      const XU = (0, tQ.d)(this, SQ)[SQ],
+        zU = (0, tQ.d)(this, rQ)[rQ];
+      if (XU && zU) return (0, tQ.d)(this, gA)[gA]((() => UU(XU, zU)))
     }
 
-    function va(MM) {
-      if (!(0, lj.d)(this, Zj)[Zj]) try {
-        return MM()
-      } catch (rM) {
-        if (!(0, lj.d)(this, Ea)[Ea](rM)) throw rM;
+    function sA(UU) {
+      if (!(0, tQ.d)(this, uQ)[uQ]) try {
+        return UU()
+      } catch (XU) {
+        if (!(0, tQ.d)(this, kA)[kA](XU)) throw XU;
         return
       }
     }
 
-    function Fa(MM) {
-      return MM instanceof WebAssembly.RuntimeError && ((0, lj.d)(this, Zj)[Zj] = !0, (0, lj.d)(this, Dj)[Dj] = null, (0, lj.d)(this, kj)[kj] = null, (0, lj.d)(this, Kj)[Kj] = null, (0, lj.d)(this, sj)[sj] = null, (0, lj.d)(this, Fj)[Fj] = null, (0, lj.d)(this, ja)[ja]("trapped"), this.deps.core.SjM(0), (0, lj.d)(this, qj)[qj].stop(), this.deps.crash(this.deps.markTrapped(MM)), this.deps.failed("Replay recording stopped working, so reload the page to record replays again."), !0)
+    function nA(UU) {
+      return UU instanceof WebAssembly.RuntimeError && ((0, tQ.d)(this, uQ)[uQ] = !0, (0, tQ.d)(this, SQ)[SQ] = null, (0, tQ.d)(this, rQ)[rQ] = null, (0, tQ.d)(this, JQ)[JQ] = null, (0, tQ.d)(this, OQ)[OQ] = null, (0, tQ.d)(this, nQ)[nQ] = null, (0, tQ.d)(this, yA)[yA]("trapped"), this.deps.core.VQU(0), (0, tQ.d)(this, jQ)[jQ].stop(), this.deps.crash(this.deps.markTrapped(UU)), this.deps.failed(wQ), !0)
     }
-    var Ba = iM(39678);
-    const Xa = new Map([
-      ["skyblock", () => iM.e(58).then((() => iM(39676)))]
+    var mA = zU(39462);
+    const lA = new Map([
+      ["skyblock", () => zU.e(59).then((() => zU(39455)))]
     ]);
 
-    function Ia(MM) {
-      const rM = Xa.get(MM);
-      return rM ? rM().then((() => {
-        const rM = (0, Ba.c)(MM);
-        if (!rM) throw new Error(`${MM}'s replay hook module registered no hook`);
-        return rM
+    function xA(UU) {
+      const XU = lA.get(UU);
+      return XU ? XU().then((() => {
+        const XU = (0, mA.e)(UU);
+        if (!XU) throw new Error(`${UU}'s replay hook module registered no hook`);
+        return XU
       })) : null
     }
-    class Ka {
-      constructor(MM) {
-        this.deps = MM, this.game = null, this.hook = null, this.generation = 0, this.all = !1, this.pending = new Map, this.ids = new Int32Array(64)
+    class JA {
+      constructor(UU) {
+        this.deps = UU, this.game = null, this.hook = null, this.generation = 0, this.all = !1, this.pending = new Map, this.ids = new Int32Array(64)
       }
       get wantsWatch() {
         return null !== this.hook
       }
-      opened(MM) {
-        if (this.pending.clear(), MM === this.game && null !== this.hook) return void(this.all = !0);
-        const rM = ++this.generation;
-        this.game = MM, this.hook = null, this.all = !1;
-        const iM = this.deps.loadHook(MM);
-        null === iM || void 0 === iM || iM.then((MM => {
-          rM === this.generation && (this.hook = MM, this.all = !0)
-        }), (MM => {
-          rM === this.generation && this.deps.onError(MM)
+      opened(UU) {
+        if (this.pending.clear(), UU === this.game && null !== this.hook) return void(this.all = !0);
+        const XU = ++this.generation;
+        this.game = UU, this.hook = null, this.all = !1;
+        const zU = this.deps.loadHook(UU);
+        null === zU || void 0 === zU || zU.then((UU => {
+          XU === this.generation && (this.hook = UU, this.all = !0)
+        }), (UU => {
+          XU === this.generation && this.deps.onError(UU)
         }))
       }
       ended() {
         this.generation++, this.game = null, this.hook = null, this.all = !1, this.pending.clear()
       }
-      entityAdded(MM) {
-        null === this.hook || this.all || this.pending.set(MM, !0)
+      entityAdded(UU) {
+        null === this.hook || this.all || this.pending.set(UU, !0)
       }
-      entityInfoChanged(MM) {
-        null === this.hook || this.all || this.pending.has(MM) || this.pending.set(MM, !1)
+      entityInfoChanged(UU) {
+        null === this.hook || this.all || this.pending.has(UU) || this.pending.set(UU, !1)
       }
-      flush(MM) {
+      flush(UU) {
         const {
-          hook: rM
+          hook: XU
         } = this;
-        if (null === rM || !MM || !this.all && 0 === this.pending.size) return;
-        const iM = this.deps.cmd();
-        if (null === iM) return;
+        if (null === XU || !UU || !this.all && 0 === this.pending.size) return;
+        const zU = this.deps.cmd();
+        if (null === zU) return;
         const {
-          api: OM
+          api: cU
         } = this.deps;
         if (this.all) {
           this.all = !1, this.pending.clear();
           const {
-            ids: MM,
-            count: rM
-          } = MO(OM, this.ids);
-          this.ids = MM;
-          for (let iM = 0; iM < rM; iM++) this.pending.set(MM[iM], !0)
+            ids: UU,
+            count: XU
+          } = Tz(cU, this.ids);
+          this.ids = UU;
+          for (let zU = 0; zU < XU; zU++) this.pending.set(UU[zU], !0)
         }
-        const SM = this.ids = rO(this.ids, this.pending.size);
-        let jM = 0;
-        for (const QM of this.pending.keys()) SM[jM++] = QM;
-        const aM = [],
-          PM = iO(OM, SM, jM, ((MM, rM) => {
-            null !== rM && aM.push({
-              serverId: MM,
-              info: rM,
-              spawned: !0 === this.pending.get(MM)
+        const yU = this.ids = hz(this.ids, this.pending.size);
+        let QU = 0;
+        for (const DU of this.pending.keys()) yU[QU++] = DU;
+        const AU = [],
+          FU = Uc(cU, yU, QU, ((UU, XU) => {
+            null !== XU && AU.push({
+              serverId: UU,
+              info: XU,
+              spawned: !0 === this.pending.get(UU)
             })
           }));
-        if (PM) {
+        if (FU) {
           this.pending.clear();
           for (const {
-              serverId: MM,
-              info: OM,
-              spawned: SM
+              serverId: UU,
+              info: cU,
+              spawned: yU
             }
-            of aM) try {
-            rM(OM, {
-              setFacingTolerance: rM => {
-                null === rM && SM || Gi(iM, MM, rM) || this.pending.set(MM, SM)
+            of AU) try {
+            XU(cU, {
+              setFacingTolerance: XU => {
+                null === XU && yU || Bz(zU, UU, XU) || this.pending.set(UU, yU)
               }
             })
-          } catch (nM) {
-            this.deps.onError(nM)
+          } catch (oU) {
+            this.deps.onError(oU)
           }
         }
       }
     }
-    var qa = (0, Ej.e)("bindings"),
-      Ta = (0, Ej.e)("module"),
-      Va = (0, Ej.e)("memory"),
-      ca = (0, Ej.e)("trapped"),
-      MP = (0, Ej.e)("generation"),
-      rP = (0, Ej.e)("loading"),
-      iP = (0, Ej.e)("lend"),
-      OP = (0, Ej.e)("givenUp"),
-      SP = (0, Ej.e)("afterSave"),
-      jP = (0, Ej.e)("opens"),
-      aP = (0, Ej.e)("saveAskedAt"),
-      PP = (0, Ej.e)("unload"),
-      nP = (0, Ej.e)("dropModule"),
-      QP = (0, Ej.e)("loadFailed"),
-      zP = (0, Ej.e)("saveReadsBody"),
-      LP = (0, Ej.e)("command"),
-      mP = (0, Ej.e)("call"),
-      HP = (0, Ej.e)("guard"),
-      hP = (0, Ej.e)("trapOn");
-    class JP {
-      constructor(MM) {
-        this.deps = MM, Object.defineProperty(this, hP, {
-          value: eP
-        }), Object.defineProperty(this, HP, {
-          value: CP
-        }), Object.defineProperty(this, mP, {
-          value: GP
-        }), Object.defineProperty(this, LP, {
-          value: UP
-        }), Object.defineProperty(this, zP, {
-          get: EP,
+    var jA = (0, gQ.e)("bindings"),
+      KA = (0, gQ.e)("module"),
+      bA = (0, gQ.e)("memory"),
+      TA = (0, gQ.e)("trapped"),
+      hA = (0, gQ.e)("generation"),
+      UF = (0, gQ.e)("loading"),
+      XF = (0, gQ.e)("lend"),
+      zF = (0, gQ.e)("givenUp"),
+      cF = (0, gQ.e)("afterSave"),
+      yF = (0, gQ.e)("opens"),
+      QF = (0, gQ.e)("saveAskedAt"),
+      AF = (0, gQ.e)("unload"),
+      FF = (0, gQ.e)("dropModule"),
+      oF = (0, gQ.e)("loadFailed"),
+      DF = (0, gQ.e)("saveReadsBody"),
+      EF = (0, gQ.e)("command"),
+      YF = (0, gQ.e)("call"),
+      NF = (0, gQ.e)("guard"),
+      IF = (0, gQ.e)("trapOn");
+    class pF {
+      constructor(UU) {
+        this.deps = UU, Object.defineProperty(this, IF, {
+          value: RF
+        }), Object.defineProperty(this, NF, {
+          value: ZF
+        }), Object.defineProperty(this, YF, {
+          value: BF
+        }), Object.defineProperty(this, EF, {
+          value: GF
+        }), Object.defineProperty(this, DF, {
+          get: kF,
           set: void 0
-        }), Object.defineProperty(this, QP, {
-          value: lP
-        }), Object.defineProperty(this, nP, {
-          value: yP
-        }), Object.defineProperty(this, PP, {
-          value: dP
-        }), Object.defineProperty(this, qa, {
+        }), Object.defineProperty(this, oF, {
+          value: gF
+        }), Object.defineProperty(this, FF, {
+          value: tF
+        }), Object.defineProperty(this, AF, {
+          value: aF
+        }), Object.defineProperty(this, jA, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Ta, {
+        }), Object.defineProperty(this, KA, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, Va, {
+        }), Object.defineProperty(this, bA, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, ca, {
+        }), Object.defineProperty(this, TA, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, MP, {
+        }), Object.defineProperty(this, hA, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, rP, {
+        }), Object.defineProperty(this, UF, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, iP, {
+        }), Object.defineProperty(this, XF, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, OP, {
+        }), Object.defineProperty(this, zF, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, SP, {
+        }), Object.defineProperty(this, cF, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, jP, {
+        }), Object.defineProperty(this, yF, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, aP, {
+        }), Object.defineProperty(this, QF, {
           writable: !0,
           value: null
         })
       }
       get active() {
-        return null !== (0, lj.d)(this, Ta)[Ta] && null === (0, lj.d)(this, SP)[SP]
+        return null !== (0, tQ.d)(this, KA)[KA] && null === (0, tQ.d)(this, cF)[cF]
       }
-      async open(MM, rM) {
-        if ((0, lj.d)(this, ca)[ca]) return mM.Zc.ModuleTrap;
-        let iM = (0, lj.d)(this, qa)[qa];
-        if (!iM) {
-          const MM = (0, lj.d)(this, MP)[MP];
-          (0, lj.d)(this, rP)[rP]++;
+      async open(UU, XU) {
+        if ((0, tQ.d)(this, TA)[TA]) return NU.bd.ModuleTrap;
+        let zU = (0, tQ.d)(this, jA)[jA];
+        if (!zU) {
+          const UU = (0, tQ.d)(this, hA)[hA];
+          (0, tQ.d)(this, UF)[UF]++;
           try {
-            iM = await this.deps.load()
-          } catch (SM) {
-            return (0, lj.d)(this, rP)[rP]--, MM !== (0, lj.d)(this, MP)[MP] ? "stopped" : (0, lj.d)(this, QP)[QP](SM, rM)
+            zU = await this.deps.load()
+          } catch (yU) {
+            return (0, tQ.d)(this, UF)[UF]--, UU !== (0, tQ.d)(this, hA)[hA] ? "stopped" : (0, tQ.d)(this, oF)[oF](yU, XU)
           }
-          if ((0, lj.d)(this, rP)[rP]--, MM !== (0, lj.d)(this, MP)[MP]) return (0, lj.d)(this, qa)[qa] || 0 !== (0, lj.d)(this, rP)[rP] || (0, lj.d)(this, ca)[ca] || this.deps.unload(), "stopped";
-          if ((0, lj.d)(this, ca)[ca]) return mM.Zc.ModuleTrap;
-          const OM = iM.rjM(),
-            jM = this.deps.core.ijM();
-          if (OM !== jM) return (0, lj.d)(this, QP)[QP](new Error(`replay port version ${OM}, the core's ${jM}`), rM);
-          (0, lj.d)(this, qa)[qa] = iM
+          if ((0, tQ.d)(this, UF)[UF]--, UU !== (0, tQ.d)(this, hA)[hA]) return (0, tQ.d)(this, jA)[jA] || 0 !== (0, tQ.d)(this, UF)[UF] || (0, tQ.d)(this, TA)[TA] || this.deps.unload(), "stopped";
+          if ((0, tQ.d)(this, TA)[TA]) return NU.bd.ModuleTrap;
+          const cU = zU.HQU(),
+            QU = this.deps.core.MQU();
+          if (cU !== QU) return (0, tQ.d)(this, oF)[oF](new Error(`replay port version ${cU}, the core's ${QU}`), XU);
+          (0, tQ.d)(this, jA)[jA] = zU
         }
-        if (!(0, lj.d)(this, Ta)[Ta]) {
-          const MM = iM;
-          if (!(0, lj.d)(this, HP)[HP]((() => {
-              (0, lj.d)(this, Ta)[Ta] = new MM.jjM, (0, lj.d)(this, Va)[Va] = MM.ajM()
-            }))) return mM.Zc.ModuleTrap
+        if (!(0, tQ.d)(this, KA)[KA]) {
+          const UU = zU;
+          if (!(0, tQ.d)(this, NF)[NF]((() => {
+              (0, tQ.d)(this, KA)[KA] = new UU.sQU, (0, tQ.d)(this, bA)[bA] = UU.nQU()
+            }))) return NU.bd.ModuleTrap
         }
-        let OM = !1;
-        return (0, lj.d)(this, mP)[mP](((rM, iM) => {
-          null !== (0, lj.d)(this, SP)[SP] && rM.step(0, 0);
-          const SM = rM.stage(MM.length);
-          0 !== SM && (new Uint8Array(iM.buffer, SM, MM.length).set(MM), rM.open(), (0, lj.d)(this, OP)[OP] = (0, lj.d)(this, iP)[iP], (0, lj.d)(this, SP)[SP] = null, (0, lj.d)(this, jP)[jP]++, OM = !0)
-        })) ? OM ? "opening" : mM.Zc.TooLarge : mM.Zc.ModuleTrap
+        let cU = !1;
+        return (0, tQ.d)(this, YF)[YF](((XU, zU) => {
+          null !== (0, tQ.d)(this, cF)[cF] && XU.step(0, 0);
+          const yU = XU.stage(UU.length);
+          0 !== yU && (new Uint8Array(zU.buffer, yU, UU.length).set(UU), XU.open(), (0, tQ.d)(this, zF)[zF] = (0, tQ.d)(this, XF)[XF], (0, tQ.d)(this, cF)[cF] = null, (0, tQ.d)(this, yF)[yF]++, cU = !0)
+        })) ? cU ? "opening" : NU.bd.TooLarge : NU.bd.ModuleTrap
       }
-      beforeFrame(MM) {
-        const rM = (0, lj.d)(this, Ta)[Ta],
-          iM = (0, lj.d)(this, Va)[Va];
-        if (!rM || !iM || null !== (0, lj.d)(this, SP)[SP]) return;
+      beforeFrame(UU) {
+        const XU = (0, tQ.d)(this, KA)[KA],
+          zU = (0, tQ.d)(this, bA)[bA];
+        if (!XU || !zU || null !== (0, tQ.d)(this, cF)[cF]) return;
         const {
-          core: OM
-        } = this.deps, SM = OM.PjM(MM);
-        if (SM < 0) return;
-        const jM = Math.floor(SM);
-        let aM, PM;
+          core: cU
+        } = this.deps, yU = cU.mQU(UU);
+        if (yU < 0) return;
+        const QU = Math.floor(yU);
+        let AU, FU;
         try {
-          aM = rM.step(jM, SM - jM), PM = rM.TSM()
-        } catch (QM) {
-          return void(0, lj.d)(this, hP)[hP](QM)
+          AU = XU.step(QU, yU - QU), FU = XU.rQU()
+        } catch (DU) {
+          return void(0, tQ.d)(this, IF)[IF](DU)
         }
-        const nM = OM.MjM(1, aM);
-        if (0 === nM) {
-          const MM = (0, lj.d)(this, mP)[mP]((MM => {
-            MM.close()
+        const oU = cU.iQU(1, AU);
+        if (0 === oU) {
+          const UU = (0, tQ.d)(this, YF)[YF]((UU => {
+            UU.close()
           }));
-          if (!MM) return;
-          return (0, lj.d)(this, zP)[zP] ? (0, lj.d)(this, SP)[SP] = "drop" : (0, lj.d)(this, nP)[nP](), void OM.njM(mM.Zc.Port)
+          if (!UU) return;
+          return (0, tQ.d)(this, DF)[DF] ? (0, tQ.d)(this, cF)[cF] = "drop" : (0, tQ.d)(this, FF)[FF](), void cU.lQU(NU.bd.Port)
         }
-        new Uint8Array(this.deps.coreBuffer(), nM, aM).set(new Uint8Array(iM.buffer, PM, aM))
+        new Uint8Array(this.deps.coreBuffer(), oU, AU).set(new Uint8Array(zU.buffer, FU, AU))
       }
       play() {
-        (0, lj.d)(this, LP)[LP]((MM => {
-          MM.play()
+        (0, tQ.d)(this, EF)[EF]((UU => {
+          UU.play()
         }))
       }
       pause() {
-        (0, lj.d)(this, LP)[LP]((MM => {
-          MM.pause()
+        (0, tQ.d)(this, EF)[EF]((UU => {
+          UU.pause()
         }))
       }
-      seek(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (0, lj.d)(this, LP)[LP]((iM => {
-          iM.seek(MM, rM)
+      seek(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (0, tQ.d)(this, EF)[EF]((zU => {
+          zU.seek(UU, XU)
         }))
       }
-      setMark(MM, rM) {
-        return (0, lj.d)(this, LP)[LP]((iM => {
-          iM.QjM(MM, rM)
+      setMark(UU, XU) {
+        return (0, tQ.d)(this, EF)[EF]((zU => {
+          zU.xQU(UU, XU)
         }))
       }
-      addKeyframe(MM, rM) {
-        return (0, lj.d)(this, LP)[LP]((iM => {
-          iM.zjM(MM[0], MM[1], MM[2], rM[0], rM[1], rM[2])
+      addKeyframe(UU, XU) {
+        return (0, tQ.d)(this, EF)[EF]((zU => {
+          zU.JQU(UU[0], UU[1], UU[2], XU[0], XU[1], XU[2])
         }))
       }
-      setKeyframe(MM, rM) {
-        return (0, lj.d)(this, LP)[LP]((iM => {
-          iM.LjM(MM, rM)
+      setKeyframe(UU, XU) {
+        return (0, tQ.d)(this, EF)[EF]((zU => {
+          zU.KQU(UU, XU)
         }))
       }
-      moveKeyframe(MM, rM) {
-        return (0, lj.d)(this, LP)[LP]((iM => {
-          iM.mjM(MM, rM)
+      moveKeyframe(UU, XU) {
+        return (0, tQ.d)(this, EF)[EF]((zU => {
+          zU.bQU(UU, XU)
         }))
       }
-      deleteKeyframes(MM, rM) {
-        return (0, lj.d)(this, LP)[LP]((iM => {
-          iM.HjM(MM, rM)
+      deleteKeyframes(UU, XU) {
+        return (0, tQ.d)(this, EF)[EF]((zU => {
+          zU.TQU(UU, XU)
         }))
       }
-      crop(MM, rM) {
-        return null === (0, lj.d)(this, iP)[iP] && (0, lj.d)(this, LP)[LP]((iM => {
-          iM.crop(MM, rM)
+      crop(UU, XU) {
+        return null === (0, tQ.d)(this, XF)[XF] && (0, tQ.d)(this, EF)[EF]((zU => {
+          zU.crop(UU, XU)
         }))
       }
       beginSave() {
-        const MM = (0, lj.d)(this, aP)[aP];
-        if ((0, lj.d)(this, aP)[aP] = null, null !== MM && MM !== (0, lj.d)(this, jP)[jP]) return null;
-        let rM = 0,
-          iM = null;
-        if ((0, lj.d)(this, mP)[mP](((MM, OM) => {
-            rM = MM.save(), 0 !== rM && (iM = new Uint8Array(OM.buffer, MM.hjM(), MM.JjM()).slice())
-          })), 0 === rM || !iM) return null;
-        const OM = {
-          headLen: rM,
-          editState: iM,
-          givenUp: () => (0, lj.d)(this, OP)[OP] === OM,
-          head: (MM, rM) => {
-            if ((0, lj.d)(this, iP)[iP] !== OM || !(0, lj.d)(this, zP)[zP]) return null;
-            let iM = null;
-            return (0, lj.d)(this, mP)[mP](((OM, SM) => {
-              const jM = OM.djM();
-              0 !== jM && MM >= 0 && rM >= 0 && MM + rM <= jM && (iM = new Uint8Array(SM.buffer, OM.yjM() + MM, rM))
-            })), iM
+        const UU = (0, tQ.d)(this, QF)[QF];
+        if ((0, tQ.d)(this, QF)[QF] = null, null !== UU && UU !== (0, tQ.d)(this, yF)[yF]) return null;
+        let XU = 0,
+          zU = null;
+        if ((0, tQ.d)(this, YF)[YF](((UU, cU) => {
+            XU = UU.save(), 0 !== XU && (zU = new Uint8Array(cU.buffer, UU.hQU(), UU.UAU()).slice())
+          })), 0 === XU || !zU) return null;
+        const cU = {
+          headLen: XU,
+          editState: zU,
+          givenUp: () => (0, tQ.d)(this, zF)[zF] === cU,
+          head: (UU, XU) => {
+            if ((0, tQ.d)(this, XF)[XF] !== cU || !(0, tQ.d)(this, DF)[DF]) return null;
+            let zU = null;
+            return (0, tQ.d)(this, YF)[YF](((cU, yU) => {
+              const QU = cU.zAU();
+              0 !== QU && UU >= 0 && XU >= 0 && UU + XU <= QU && (zU = new Uint8Array(yU.buffer, cU.cAU() + UU, XU))
+            })), zU
           },
           end: () => {
-            if ((0, lj.d)(this, iP)[iP] !== OM) return;
-            (0, lj.d)(this, iP)[iP] = null, (0, lj.d)(this, OP)[OP] = null, (0, lj.d)(this, mP)[mP]((MM => {
-              MM.ljM()
+            if ((0, tQ.d)(this, XF)[XF] !== cU) return;
+            (0, tQ.d)(this, XF)[XF] = null, (0, tQ.d)(this, zF)[zF] = null, (0, tQ.d)(this, YF)[YF]((UU => {
+              UU.yAU()
             }));
-            const MM = (0, lj.d)(this, SP)[SP];
-            (0, lj.d)(this, SP)[SP] = null, "unload" === MM ? (0, lj.d)(this, PP)[PP]() : "drop" === MM && (0, lj.d)(this, nP)[nP]()
+            const UU = (0, tQ.d)(this, cF)[cF];
+            (0, tQ.d)(this, cF)[cF] = null, "unload" === UU ? (0, tQ.d)(this, AF)[AF]() : "drop" === UU && (0, tQ.d)(this, FF)[FF]()
           }
         };
-        return (0, lj.d)(this, iP)[iP] = OM, OM
+        return (0, tQ.d)(this, XF)[XF] = cU, cU
       }
       askSave() {
-        (0, lj.d)(this, aP)[aP] = (0, lj.d)(this, jP)[jP]
+        (0, tQ.d)(this, QF)[QF] = (0, tQ.d)(this, yF)[yF]
       }
-      setSpeed(MM) {
-        (0, lj.d)(this, LP)[LP]((rM => {
-          rM.EjM(MM)
+      setSpeed(UU) {
+        (0, tQ.d)(this, EF)[EF]((XU => {
+          XU.QAU(UU)
         }))
       }
-      setCameraMode(MM) {
-        (0, lj.d)(this, LP)[LP]((rM => {
-          rM.UjM(MM)
+      setCameraMode(UU) {
+        (0, tQ.d)(this, EF)[EF]((XU => {
+          XU.AAU(UU)
         }))
       }
       close() {
-        (0, lj.d)(this, LP)[LP]((MM => {
-          MM.close()
+        (0, tQ.d)(this, EF)[EF]((UU => {
+          UU.close()
         }))
       }
       stop() {
-        (0, lj.d)(this, MP)[MP]++, (0, lj.d)(this, zP)[zP] && ((0, lj.d)(this, mP)[mP]((MM => {
-          MM.close()
-        })), (0, lj.d)(this, Ta)[Ta]) ? (0, lj.d)(this, SP)[SP] = "unload" : (0, lj.d)(this, PP)[PP]()
+        (0, tQ.d)(this, hA)[hA]++, (0, tQ.d)(this, DF)[DF] && ((0, tQ.d)(this, YF)[YF]((UU => {
+          UU.close()
+        })), (0, tQ.d)(this, KA)[KA]) ? (0, tQ.d)(this, cF)[cF] = "unload" : (0, tQ.d)(this, AF)[AF]()
       }
     }
 
-    function dP() {
-      (0, lj.d)(this, nP)[nP](), (0, lj.d)(this, ca)[ca] || ((0, lj.d)(this, qa)[qa] = null, this.deps.unload())
+    function aF() {
+      (0, tQ.d)(this, FF)[FF](), (0, tQ.d)(this, TA)[TA] || ((0, tQ.d)(this, jA)[jA] = null, this.deps.unload())
     }
 
-    function yP() {
-      (0, lj.d)(this, mP)[mP]((MM => {
-        MM.free()
-      })), (0, lj.d)(this, Ta)[Ta] = null, (0, lj.d)(this, Va)[Va] = null
+    function tF() {
+      (0, tQ.d)(this, YF)[YF]((UU => {
+        UU.free()
+      })), (0, tQ.d)(this, KA)[KA] = null, (0, tQ.d)(this, bA)[bA] = null
     }
-    async function lP(MM, rM) {
-      return await this.deps.staleOr(MM, (() => {}), {
-        beforeReload: rM
-      }) ? "reloading" : mM.Zc.ModuleLoad
-    }
-
-    function EP() {
-      return null !== (0, lj.d)(this, iP)[iP] && (0, lj.d)(this, OP)[OP] !== (0, lj.d)(this, iP)[iP]
+    async function gF(UU, XU) {
+      return await this.deps.staleOr(UU, (() => {}), {
+        beforeReload: XU
+      }) ? "reloading" : NU.bd.ModuleLoad
     }
 
-    function UP(MM) {
-      return null === (0, lj.d)(this, SP)[SP] && (0, lj.d)(this, mP)[mP](MM)
+    function kF() {
+      return null !== (0, tQ.d)(this, XF)[XF] && (0, tQ.d)(this, zF)[zF] !== (0, tQ.d)(this, XF)[XF]
     }
 
-    function GP(MM) {
-      const rM = (0, lj.d)(this, Ta)[Ta],
-        iM = (0, lj.d)(this, Va)[Va];
-      return !(!rM || !iM) && (0, lj.d)(this, HP)[HP]((() => {
-        MM(rM, iM)
+    function GF(UU) {
+      return null === (0, tQ.d)(this, cF)[cF] && (0, tQ.d)(this, YF)[YF](UU)
+    }
+
+    function BF(UU) {
+      const XU = (0, tQ.d)(this, KA)[KA],
+        zU = (0, tQ.d)(this, bA)[bA];
+      return !(!XU || !zU) && (0, tQ.d)(this, NF)[NF]((() => {
+        UU(XU, zU)
       }))
     }
 
-    function CP(MM) {
-      if ((0, lj.d)(this, ca)[ca]) return !1;
+    function ZF(UU) {
+      if ((0, tQ.d)(this, TA)[TA]) return !1;
       try {
-        return MM(), !0
-      } catch (rM) {
-        return (0, lj.d)(this, hP)[hP](rM), !1
+        return UU(), !0
+      } catch (XU) {
+        return (0, tQ.d)(this, IF)[IF](XU), !1
       }
     }
 
-    function eP(MM) {
-      if (!(MM instanceof WebAssembly.RuntimeError)) throw MM;
-      (0, lj.d)(this, ca)[ca] = !0, (0, lj.d)(this, Ta)[Ta] = null, (0, lj.d)(this, Va)[Va] = null, (0, lj.d)(this, qa)[qa] = null, this.deps.crash(this.deps.markTrapped(MM)), this.deps.core.njM(mM.Zc.ModuleTrap)
+    function RF(UU) {
+      if (!(UU instanceof WebAssembly.RuntimeError)) throw UU;
+      (0, tQ.d)(this, TA)[TA] = !0, (0, tQ.d)(this, KA)[KA] = null, (0, tQ.d)(this, bA)[bA] = null, (0, tQ.d)(this, jA)[jA] = null, this.deps.crash(this.deps.markTrapped(UU)), this.deps.core.lQU(NU.bd.ModuleTrap)
     }
-    var bP = iM(6950),
-      wP = iM(42126);
-    const tP = "[bloxd-wasm-client]";
-    const gP = String(IS);
+    var PF = zU(7062),
+      WF = zU(42127);
+    const dF = "[bloxd-wasm-client]";
+    const LF = String(ly);
 
-    function uP(MM) {
-      return null === MM || MM === gP ? void 0 : MM
+    function eF(UU) {
+      return null === UU || UU === LF ? void 0 : UU
     }
 
-    function RP(MM) {
-      var rM, iM, OM, SM, jM, PM, nM;
-      switch (MM.what) {
-        case mM.fd.FlyingText: {
-          let rM;
+    function CF(UU) {
+      var XU, zU, cU, yU, QU, FU, oU;
+      switch (UU.what) {
+        case NU.md.FlyingText: {
+          let XU;
           try {
-            rM = JSON.parse(MM.contentJson)
-          } catch (QM) {
-            return void console.warn(`${tP} a replay's flying text isn't JSON`, QM)
+            XU = JSON.parse(UU.contentJson)
+          } catch (DU) {
+            return void console.warn(`${dF} a replay's flying text isn't JSON`, DU)
           }
-          aM.i.Tz("forceFlyingMiddleMessage", {
-            content: rM,
-            oi: MM.oi,
-            angle: MM.angle,
-            Yi: MM.Yi
+          AU.k.UY("forceFlyingMiddleMessage", {
+            content: XU,
+            nX: UU.nX,
+            angle: UU.angle,
+            mX: UU.mX
           });
           break
         }
-        case mM.fd.PlayerKilled:
-          (0, wP.d)({
+        case NU.md.PlayerKilled:
+          (0, WF.c)({
             kind: "killed",
             body: {
-              deadEId: null !== (rM = uP(MM.dead)) && void 0 !== rM ? rM : "",
-              killerEId: uP(MM.killer),
-              withItem: null !== (iM = MM.withItem) && void 0 !== iM ? iM : "",
-              killstreak: MM.killstreak
+              deadEId: null !== (XU = eF(UU.dead)) && void 0 !== XU ? XU : "",
+              killerEId: eF(UU.killer),
+              withItem: null !== (zU = UU.withItem) && void 0 !== zU ? zU : "",
+              killstreak: UU.killstreak
             }
           });
           break;
-        case mM.fd.Killfeed:
-          (0, wP.d)({
+        case NU.md.Killfeed:
+          (0, WF.c)({
             kind: "custom",
             body: {
               killer: {
-                eId: uP(MM.killerId),
-                name: null !== (OM = MM.killerName) && void 0 !== OM ? OM : void 0,
-                colour: null !== (SM = MM.killerColour) && void 0 !== SM ? SM : void 0
+                eId: eF(UU.killerId),
+                name: null !== (cU = UU.killerName) && void 0 !== cU ? cU : void 0,
+                colour: null !== (yU = UU.killerColour) && void 0 !== yU ? yU : void 0
               },
               victim: {
-                eId: uP(MM.victimId),
-                name: null !== (jM = MM.victimName) && void 0 !== jM ? jM : void 0,
-                colour: null !== (PM = MM.victimColour) && void 0 !== PM ? PM : void 0
+                eId: eF(UU.victimId),
+                name: null !== (QU = UU.victimName) && void 0 !== QU ? QU : void 0,
+                colour: null !== (FU = UU.victimColour) && void 0 !== FU ? FU : void 0
               },
-              withItem: null !== (nM = MM.withItem) && void 0 !== nM ? nM : ""
+              withItem: null !== (oU = UU.withItem) && void 0 !== oU ? oU : ""
             }
           })
       }
     }
-    const pP = "[bloxd-wasm-client]";
+    const wF = "[bloxd-wasm-client]";
 
-    function WP(MM) {
-      if (void 0 === MM || null === MM || "" === MM) return null;
-      const rM = Number(MM);
-      return Number.isInteger(rM) && rM > IS && rM <= 2147483647 ? rM : null
+    function qF(UU) {
+      if (void 0 === UU || null === UU || "" === UU) return null;
+      const XU = Number(UU);
+      return Number.isInteger(XU) && XU > ly && XU <= 2147483647 ? XU : null
     }
 
-    function sP(MM) {
+    function OF(UU) {
       return {
-        id: WP(MM.eId),
-        name: "string" === typeof MM.name ? MM.name : null,
-        colour: "string" === typeof MM.colour ? MM.colour : null
+        id: qF(UU.eId),
+        name: "string" === typeof UU.name ? UU.name : null,
+        colour: "string" === typeof UU.colour ? UU.colour : null
       }
     }
 
-    function DP(MM) {
-      const rM = (0, Sj.h)(nO.hc.PlayerKilled, (rM => {
-          var iM, OM;
-          const SM = (0, Oj.f)(rM);
-          if (!(0, Oj.c)(SM)) return;
+    function SF(UU) {
+      const XU = (0, zQ.m)(Ac.oc.PlayerKilled, (XU => {
+          var zU, cU;
+          const yU = (0, XQ.f)(XU);
+          if (!(0, XQ.b)(yU)) return;
           const {
-            deadEId: jM,
-            killerEId: aM,
-            withItem: PM,
-            killstreak: nM
-          } = SM;
-          MM.recordPlayerKilled(null !== (iM = WP(jM)) && void 0 !== iM ? iM : IS, null !== (OM = WP(aM)) && void 0 !== OM ? OM : IS, "number" === typeof nM ? nM : 0, "string" === typeof PM ? PM : "")
+            deadEId: QU,
+            killerEId: AU,
+            withItem: FU,
+            killstreak: oU
+          } = yU;
+          UU.recordPlayerKilled(null !== (zU = qF(QU)) && void 0 !== zU ? zU : ly, null !== (cU = qF(AU)) && void 0 !== cU ? cU : ly, "number" === typeof oU ? oU : 0, "string" === typeof FU ? FU : "")
         })),
-        iM = (0, Sj.h)(nO.hc.CustomKillfeed, (rM => {
-          const iM = (0, Oj.f)(rM);
-          if (!(0, Oj.c)(iM) || !(0, Oj.c)(iM.killer) || !(0, Oj.c)(iM.victim)) return;
+        zU = (0, zQ.m)(Ac.oc.CustomKillfeed, (XU => {
+          const zU = (0, XQ.f)(XU);
+          if (!(0, XQ.b)(zU) || !(0, XQ.b)(zU.killer) || !(0, XQ.b)(zU.victim)) return;
           const {
-            killer: OM,
-            victim: SM,
-            withItem: jM
-          } = iM;
-          MM.recordKillfeed(sP(OM), sP(SM), "string" === typeof jM ? jM : null)
+            killer: cU,
+            victim: yU,
+            withItem: QU
+          } = zU;
+          UU.recordKillfeed(OF(cU), OF(yU), "string" === typeof QU ? QU : null)
         }));
       return () => {
-        rM(), iM()
+        XU(), zU()
       }
     }
 
-    function kP(MM) {
-      var rM;
-      return void 0 === MM || null === MM ? null : null !== (rM = JSON.stringify(MM)) && void 0 !== rM ? rM : null
+    function rF(UU) {
+      var XU;
+      return void 0 === UU || null === UU ? null : null !== (XU = JSON.stringify(UU)) && void 0 !== XU ? XU : null
     }
 
-    function ZP(MM) {
-      let rM = null;
-      const iM = () => {
+    function uF(UU) {
+      let XU = null;
+      const zU = () => {
         const {
-          enableClipping: iM,
-          clipDurationSeconds: SM
-        } = OM.d.get("clientEscMenuOptions"), jM = `${iM}:${SM}`;
-        jM !== rM && (rM = jM, MM.recorder.setPrefs(iM, SM))
+          enableClipping: zU,
+          clipDurationSeconds: yU
+        } = cU.e.get("clientEscMenuOptions"), QU = `${zU}:${yU}`;
+        QU !== XU && (XU = QU, UU.recorder.setPrefs(zU, yU))
       };
-      return iM(), (0, aM.j)("appManagerUpdated|clientEscMenuOptions", iM)
+      return zU(), (0, AU.n)("appManagerUpdated|clientEscMenuOptions", zU)
     }
-    const oP = "replayModule",
-      fP = "recorderModule";
+    const fF = "replayModule",
+      iF = "recorderModule";
 
-    function YP(MM, rM, iM) {
+    function HF(UU, XU, zU) {
       return function() {
-        return MM.isStopped ? iM : rM(...arguments)
+        return UU.isStopped ? zU : XU(...arguments)
       }
     }
-    const NP = {
-      open: () => Promise.reject(new Error(fS.c.coreStopped.text)),
+    const MF = {
+      open: () => Promise.reject(new Error(fy.e.coreStopped.text)),
       replayKey: () => null,
       encode: () => Promise.resolve(null),
       fileHandle: () => null,
       markSaved: () => {}
     };
 
-    function AP() {
-      return iM.e(76).then((() => iM(64109)))
+    function vF() {
+      return zU.e(76).then((() => zU(64133)))
     }
 
-    function xP(MM) {
-      (0, fS.d)({
-        text: MM,
+    function VF(UU) {
+      (0, fy.i)({
+        text: UU,
         type: "Error"
       })
     }
-    class vP {
-      constructor(MM) {
-        this.deps = MM, this.runtime = void 0, this.entityHooks = void 0, this.recordedOptions = void 0, this.stops = void 0, this.activeConn = 0, this.stopped = !1, this.bench = null, this.replay = void 0, this.recorder = void 0, this.freecam = void 0, this.drawn = !1;
+    class sF {
+      constructor(UU) {
+        this.deps = UU, this.runtime = void 0, this.entityHooks = void 0, this.recordedOptions = void 0, this.stops = void 0, this.activeConn = 0, this.stopped = !1, this.bench = null, this.replay = void 0, this.recorder = void 0, this.freecam = void 0, this.drawn = !1;
         const {
-          running: rM,
-          api: OM,
-          core: SM
-        } = MM, jM = () => MM.memory().buffer, aM = () => rM.isStopped ? null : rM.rings.cmd, PM = YP(rM, ((MM, rM) => SM.MjM(MM, rM)), 0), nM = () => SM.ijM();
-        let QM = null;
-        this.replay = new JP({
+          running: XU,
+          api: cU,
+          core: yU
+        } = UU, QU = () => UU.memory().buffer, AU = () => XU.isStopped ? null : XU.rings.cmd, FU = HF(XU, ((UU, XU) => yU.iQU(UU, XU)), 0), oU = () => yU.MQU();
+        let DU = null;
+        this.replay = new pF({
           core: {
-            PjM: YP(rM, (MM => SM.PjM(MM)), -1),
-            MjM: PM,
-            ijM: nM,
-            njM: YP(rM, (MM => {
-              SM.njM(MM)
+            mQU: HF(XU, (UU => yU.mQU(UU)), -1),
+            iQU: FU,
+            MQU: oU,
+            lQU: HF(XU, (UU => {
+              yU.lQU(UU)
             }), void 0)
           },
-          coreBuffer: jM,
-          load: async () => (QM = await iM.e(77).then((() => iM(64121))), QM.loadReplayModule()),
+          coreBuffer: QU,
+          load: async () => (DU = await zU.e(77).then((() => zU(64142))), DU.loadReplayModule()),
           unload: () => {
-            var MM;
-            null === (MM = QM) || void 0 === MM || MM.unloadReplayModule()
+            var UU;
+            null === (UU = DU) || void 0 === UU || UU.unloadReplayModule()
           },
-          markTrapped: MM => QM ? QM.markReplayTrapped(MM) : new Error(String(MM)),
-          staleOr: (rM, iM, OM) => MM.staleOr(oP, rM, iM, OM),
-          crash: rM => {
-            MM.reportFault(oP, rM)
+          markTrapped: UU => DU ? DU.markReplayTrapped(UU) : new Error(String(UU)),
+          staleOr: (XU, zU, cU) => UU.staleOr(fF, XU, zU, cU),
+          crash: XU => {
+            UU.reportFault(fF, XU)
           }
         });
-        let zM = null;
-        this.recorder = new Ua({
+        let EU = null;
+        this.recorder = new GA({
           core: {
-            SjM: YP(rM, (MM => SM.SjM(MM)), 0),
-            qSM: YP(rM, (MM => SM.qSM(MM)), 0),
-            MjM: PM,
-            ijM: nM
+            VQU: HF(XU, (UU => yU.VQU(UU)), 0),
+            SQU: HF(XU, (UU => yU.SQU(UU)), 0),
+            iQU: FU,
+            MQU: oU
           },
-          coreCommand: (MM, rM) => {
-            var iM, OM;
-            return null !== (iM = null === (OM = aM()) || void 0 === OM ? void 0 : OM.writeCmd(MM, 0, rM)) && void 0 !== iM && iM
+          coreCommand: (UU, XU) => {
+            var zU, cU;
+            return null !== (zU = null === (cU = AU()) || void 0 === cU ? void 0 : cU.writeCmd(UU, 0, XU)) && void 0 !== zU && zU
           },
-          coreBuffer: jM,
-          load: async () => (zM = await AP(), zM.loadRecorderModule()),
+          coreBuffer: QU,
+          load: async () => (EU = await vF(), EU.loadRecorderModule()),
           prefetch: () => {
-            AP().then((MM => MM.prefetchRecorderModule())).catch((MM => {
-              console.warn(`${pP} the recorder module didn't prefetch, so a save loads it:`, MM)
+            vF().then((UU => UU.prefetchRecorderModule())).catch((UU => {
+              console.warn(`${wF} the recorder module didn't prefetch, so a save loads it:`, UU)
             }))
           },
           unload: () => {
-            var MM;
-            null === (MM = zM) || void 0 === MM || MM.unloadRecorderModule()
+            var UU;
+            null === (UU = EU) || void 0 === UU || UU.unloadRecorderModule()
           },
-          markTrapped: MM => zM ? zM.markRecorderTrapped(MM) : new Error(String(MM)),
+          markTrapped: UU => EU ? EU.markRecorderTrapped(UU) : new Error(String(UU)),
           memoryBytes: () => {
-            var MM, rM;
-            return null !== (MM = null === (rM = zM) || void 0 === rM ? void 0 : rM.recorderMemoryBytes()) && void 0 !== MM ? MM : 0
+            var UU, XU;
+            return null !== (UU = null === (XU = EU) || void 0 === XU ? void 0 : XU.recorderMemoryBytes()) && void 0 !== UU ? UU : 0
           },
-          staleOr: (rM, iM) => MM.staleOr(fP, rM, iM),
-          crash: rM => {
-            MM.reportFault(fP, rM)
+          staleOr: (XU, zU) => UU.staleOr(iF, XU, zU),
+          crash: XU => {
+            UU.reportFault(iF, XU)
           },
-          allowed: () => !0 === MM.options.get("canRecordReplays"),
-          failed: xP,
-          events: (MM, rM) => {
-            this.runtime.recorderEvents(MM, rM)
+          allowed: () => !0 === UU.options.get("canRecordReplays"),
+          failed: UU => {
+            this.runtime.recorder.stopped(), VF(UU)
+          },
+          events: (UU, XU) => {
+            this.runtime.recorderEvents(UU, XU)
           },
           beginSave: () => this.replay.beginSave(),
-          givenUp: xP,
+          givenUp: VF,
           unixNow: () => Date.now()
         });
-        const LM = new XS({
+        const YU = new my({
           core: {
-            YSM: YP(rM, (MM => SM.YSM(MM)), 0),
-            xSM: YP(rM, (() => {
-              SM.xSM()
+            PQU: HF(XU, (UU => yU.PQU(UU)), 0),
+            dQU: HF(XU, (() => {
+              yU.dQU()
             }), void 0),
-            qd: YP(rM, (() => SM.qd()), 0),
-            ASM: YP(rM, (() => SM.ASM()), 0)
+            Kt: HF(XU, (() => yU.Kt()), 0),
+            WQU: HF(XU, (() => yU.WQU()), 0)
           },
-          buffer: jM,
-          apiView: () => OM.apiView,
-          cmd: aM,
+          buffer: QU,
+          apiView: () => cU.apiView,
+          cmd: AU,
           replay: this.replay,
           recorder: this.recorder
         });
-        this.entityHooks = new Ka({
-          api: OM,
-          cmd: aM,
-          loadHook: Ia,
-          onError: MM => {
-            console.warn(`${pP} the recorded game's replay hooks:`, MM)
+        this.entityHooks = new JA({
+          api: cU,
+          cmd: AU,
+          loadHook: xA,
+          onError: UU => {
+            console.warn(`${wF} the recorded game's replay hooks:`, UU)
           }
         });
-        const mM = new ij({
-          client: LM,
-          buffer: jM,
-          setHoldDraws: MM => {
-            rM.setHoldDraws(MM)
+        const NU = new UQ({
+          client: YU,
+          buffer: QU,
+          setHoldDraws: UU => {
+            XU.setHoldDraws(UU)
           },
-          notify: fS.d,
+          notify: fy.i,
           onRecorderState: () => {
-            var MM;
-            null === (MM = (0, NS.f)()) || void 0 === MM || MM.recorderChanged()
+            var UU;
+            null === (UU = (0, Hy.f)()) || void 0 === UU || UU.recorderChanged()
           },
           onViewerChange: () => {
-            var MM;
-            null === (MM = (0, NS.f)()) || void 0 === MM || MM.viewerChanged()
+            var UU;
+            null === (UU = (0, Hy.f)()) || void 0 === UU || UU.viewerChanged()
           },
-          onReplayOption: rM => {
-            ! function(MM, rM) {
-              var iM, OM;
-              const SM = nO.pb[rM.key];
-              if (void 0 === SM) return;
-              let jM = null !== (iM = rM.value) && void 0 !== iM ? iM : JSON.parse(JSON.stringify(null !== (OM = bP.e[SM]) && void 0 !== OM ? OM : null));
-              if (null !== rM.value && rM.key < nO.Qb.Environment && "string" === typeof jM) try {
-                jM = JSON.parse(jM)
-              } catch (aM) {
-                return void console.warn(`${tP} a replay's ${SM} isn't JSON`, aM)
+          onReplayOption: XU => {
+            ! function(UU, XU) {
+              var zU, cU;
+              const yU = Ac.yb[XU.key];
+              if (void 0 === yU) return;
+              let QU = null !== (zU = XU.value) && void 0 !== zU ? zU : JSON.parse(JSON.stringify(null !== (cU = PF.b[yU]) && void 0 !== cU ? cU : null));
+              if (null !== XU.value && XU.key < Ac.Xb.Environment && "string" === typeof QU) try {
+                QU = JSON.parse(QU)
+              } catch (AU) {
+                return void console.warn(`${dF} a replay's ${yU} isn't JSON`, AU)
               }
-              MM.applyNewClientOptions({
-                [SM]: jM
+              UU.applyNewClientOptions({
+                [yU]: QU
               })
-            }(MM.options, rM)
+            }(UU.options, XU)
           },
-          onReplayUiEvent: RP,
-          onReplayOpened: rM => {
-            this.entityHooks.opened((0, gM.Mb)(rM)), MM.replayShaderPack(rM)
+          onReplayUiEvent: CF,
+          onReplayOpened: XU => {
+            this.entityHooks.opened((0, eU.Tb)(XU)), UU.replayShaderPack(XU)
           },
           meshPending: () => {
-            var MM, iM;
-            return null !== (MM = null === (iM = rM.lastHeader) || void 0 === iM ? void 0 : iM.renderPending) && void 0 !== MM ? MM : 0
+            var UU, zU;
+            return null !== (UU = null === (zU = XU.lastHeader) || void 0 === zU ? void 0 : zU.renderPending) && void 0 !== UU ? UU : 0
           },
-          viewerOpen: YS.b,
-          download: MM => {
-            (0, ZS.j)(MM)
+          viewerOpen: iy.e,
+          download: UU => {
+            (0, ry.d)(UU)
           }
         });
-        this.runtime = mM, OM.replay = mM.sink, (0, NS.v)(mM);
-        const HM = new Pj({
+        this.runtime = NU, cU.replay = NU.sink, (0, Hy.r)(NU);
+        const IU = new QQ({
           live: () => {
-            var MM;
-            return !rM.isStopped && !0 === (null === (MM = mM.currentViewer) || void 0 === MM ? void 0 : MM.inPlayback)
+            var UU;
+            return !XU.isStopped && !0 === (null === (UU = NU.currentViewer) || void 0 === UU ? void 0 : UU.inPlayback)
           },
-          cmd: aM,
-          dragScale: dj
+          cmd: AU,
+          dragScale: pQ
         });
-        this.freecam = HM, (0, NS.s)(HM), this.recordedOptions = function(MM, rM) {
-          const iM = nO.pb,
-            OM = iM.map(((iM, OM) => rM.subscribe(iM, (rM => {
-              MM.setOption(OM, kP(rM))
+        this.freecam = IU, (0, Hy.o)(IU), this.recordedOptions = function(UU, XU) {
+          const zU = Ac.yb,
+            cU = zU.map(((zU, cU) => XU.subscribe(zU, (XU => {
+              UU.setOption(cU, rF(XU))
             }))));
           return {
             sendAll() {
-              iM.forEach(((iM, OM) => {
-                MM.setOption(OM, kP(rM.get(iM)))
+              zU.forEach(((zU, cU) => {
+                UU.setOption(cU, rF(XU.get(zU)))
               }))
             },
             stop() {
-              for (const MM of OM) MM()
+              for (const UU of cU) UU()
             }
           }
-        }(mM.recorder, MM.options), this.stops = [(0, lO.n)((MM => {
-          HM.flush();
+        }(NU.recorder, UU.options), this.stops = [(0, tc.j)((UU => {
+          IU.flush();
           try {
-            this.replay.beforeFrame(MM)
-          } catch (rM) {
-            this.deps.reportFault("replayFrame", rM)
+            this.replay.beforeFrame(UU)
+          } catch (XU) {
+            this.deps.reportFault("replayFrame", XU)
           }
-        })), (0, lO.A)(((MM, rM) => {
+        })), (0, tc.x)(((UU, XU) => {
           try {
-            this.recorder.afterFrame(), rM && !this.drawn && (this.drawn = !0, this.recorder.viewDrawn())
-          } catch (iM) {
-            this.deps.reportFault("recorderFrame", iM)
+            this.recorder.afterFrame(), XU && !this.drawn && (this.drawn = !0, this.recorder.viewDrawn())
+          } catch (zU) {
+            this.deps.reportFault("recorderFrame", zU)
           }
           try {
-            mM.afterFrame(MM)
-          } catch (iM) {
-            this.deps.reportFault("replayRuntime", iM)
+            NU.afterFrame(UU)
+          } catch (zU) {
+            this.deps.reportFault("replayRuntime", zU)
           }
-        })), ZP(mM), () => {
+        })), uF(NU), () => {
           this.recordedOptions.stop()
-        }, DP(mM.recorder), (0, jj.f)((MM => {
+        }, SF(NU.recorder), (0, cQ.k)((UU => {
           let {
-            action: rM,
-            down: iM
-          } = MM;
-          var OM;
-          iM && (null === (OM = (0, NS.f)()) || void 0 === OM || OM.keyDown(rM))
+            action: XU,
+            down: zU
+          } = UU;
+          var cU;
+          zU && (null === (cU = (0, Hy.f)()) || void 0 === cU || cU.keyDown(XU))
         }))];
-        const hM = () => {
-          const MM = mM.currentViewer;
-          return !0 === (null === MM || void 0 === MM ? void 0 : MM.isOpen) ? MM : null
+        const pU = () => {
+          const UU = NU.currentViewer;
+          return !0 === (null === UU || void 0 === UU ? void 0 : UU.isOpen) ? UU : null
         };
-        (0, oS.i)({
-          open: (MM, rM) => this.open(MM, rM),
+        (0, uy.h)({
+          open: (UU, XU) => this.open(UU, XU),
           replayKey: () => {
-            var MM, rM;
-            return null !== (MM = null === (rM = hM()) || void 0 === rM ? void 0 : rM.id) && void 0 !== MM ? MM : null
+            var UU, XU;
+            return null !== (UU = null === (XU = pU()) || void 0 === XU ? void 0 : XU.id) && void 0 !== UU ? UU : null
           },
           saveRefusal: () => {
-            var MM, rM;
-            return null !== (MM = null === (rM = hM()) || void 0 === rM ? void 0 : rM.saveRefusal) && void 0 !== MM ? MM : null
+            var UU, XU;
+            return null !== (UU = null === (XU = pU()) || void 0 === XU ? void 0 : XU.saveRefusal) && void 0 !== UU ? UU : null
           },
           encode: () => {
-            var MM, rM;
-            return null !== (MM = null === (rM = hM()) || void 0 === rM ? void 0 : rM.save()) && void 0 !== MM ? MM : Promise.resolve(null)
+            var UU, XU;
+            return null !== (UU = null === (XU = pU()) || void 0 === XU ? void 0 : XU.save()) && void 0 !== UU ? UU : Promise.resolve(null)
           },
           fileHandle: () => {
-            var MM, rM;
-            return null !== (MM = null === (rM = mM.currentViewer) || void 0 === rM ? void 0 : rM.fileHandle) && void 0 !== MM ? MM : null
+            var UU, XU;
+            return null !== (UU = null === (XU = NU.currentViewer) || void 0 === XU ? void 0 : XU.fileHandle) && void 0 !== UU ? UU : null
           },
-          markSaved: (MM, rM) => {
-            var iM;
-            null === (iM = mM.currentViewer) || void 0 === iM || iM.markSaved(MM, rM)
+          markSaved: (UU, XU) => {
+            var zU;
+            null === (zU = NU.currentViewer) || void 0 === zU || zU.markSaved(UU, XU)
           }
         })
       }
-      netEvent(MM) {
-        if ("connection" === MM.type)
-          if (MM.phase === mM.F.Activated) {
-            this.activeConn = MM.conn;
-            const rM = this.deps.sessionInfo(MM.conn);
-            null !== rM && (this.runtime.activated({
-              lobbyType: (0, uM.w)(rM.lobbyName),
-              gameNameWithVariation: rM.gameNameWithVariation,
-              lobbyName: rM.lobbyName
+      netEvent(UU) {
+        if ("connection" === UU.type)
+          if (UU.phase === NU.E.Activated) {
+            this.activeConn = UU.conn;
+            const XU = this.deps.sessionInfo(UU.conn);
+            null !== XU && (this.runtime.activated({
+              lobbyType: (0, CU.s)(XU.lobbyName),
+              gameNameWithVariation: XU.gameNameWithVariation,
+              lobbyName: XU.lobbyName
             }), this.recordedOptions.sendAll())
-          } else MM.phase !== mM.F.Left && MM.phase !== mM.F.Closed || MM.conn !== this.activeConn || (this.activeConn = 0, this.runtime.recorder.closed())
+          } else UU.phase !== NU.E.Left && UU.phase !== NU.E.Closed || UU.conn !== this.activeConn || (this.activeConn = 0, this.runtime.recorder.closed())
       }
       stop() {
         if (!this.stopped) {
           this.stopped = !0;
-          for (const MM of this.stops) MM();
-          this.runtime.end(), this.entityHooks.ended(), this.replay.stop(), this.recorder.dispose(), (0, NS.n)() === this.runtime && (0, NS.v)(null), (0, NS.j)() === this.freecam && (0, NS.s)(null), (0, oS.i)(NP), null !== this.bench && window.wasmReplayBench === this.bench && (window.wasmReplayBench = void 0)
+          for (const UU of this.stops) UU();
+          this.runtime.end(), this.entityHooks.ended(), this.replay.stop(), this.recorder.dispose(), (0, Hy.l)() === this.runtime && (0, Hy.r)(null), (0, Hy.h)() === this.freecam && (0, Hy.o)(null), (0, uy.h)(MF), null !== this.bench && window.wasmReplayBench === this.bench && (window.wasmReplayBench = void 0)
         }
       }
-      async open(MM, rM) {
+      async open(UU, XU) {
         const {
-          running: iM
+          running: zU
         } = this.deps;
-        if (iM.isStopped) throw new Error(fS.c.coreStopped.text);
-        if (MM.byteLength > 67108864) throw new Error(fS.c.cantOpen.text);
-        let OM;
+        if (zU.isStopped) throw new Error(fy.e.coreStopped.text);
+        if (UU.byteLength > 67108864) throw new Error(fy.e.cantOpen.text);
+        let cU;
         try {
-          OM = await async function(MM) {
-            const rM = await MM.loadViewer();
-            return rM.inPlayback || (0, lO.I)().leaveGame(null), rM
+          cU = await async function(UU) {
+            const XU = await UU.loadViewer();
+            return XU.inPlayback || (0, tc.H)().leaveGame(null), XU
           }(this.runtime)
-        } catch (SM) {
-          throw console.warn(`${pP} the replay viewer didn't load`, SM), new Error(fS.c.viewerLoadFailed.text)
+        } catch (yU) {
+          throw console.warn(`${wF} the replay viewer didn't load`, yU), new Error(fy.e.viewerLoadFailed.text)
         }
-        if (iM.isStopped) throw new Error(fS.c.coreStopped.text);
-        await OM.open(MM, rM)
+        if (zU.isStopped) throw new Error(fy.e.coreStopped.text);
+        await cU.open(UU, XU)
       }
     }
-    var FP = iM(2067);
+    var nF = zU(2032);
 
-    function BP(MM, rM) {
+    function mF(UU, XU) {
       const {
-        aux: iM,
-        payload: OM
-      } = function(MM) {
+        aux: zU,
+        payload: cU
+      } = function(UU) {
         return {
-          aux: MM.reset ? mM.$b.ResetFirst : 0,
-          payload: IP(MM.changes)
+          aux: UU.reset ? NU.dc.ResetFirst : 0,
+          payload: xF(UU.changes)
         }
-      }(rM);
-      MM.queueOptions(iM, OM) && (rM.reset && FP.d.reset(), FP.d.apply(rM.changes))
+      }(XU);
+      UU.queueOptions(zU, cU) && (XU.reset && nF.d.reset(), nF.d.apply(XU.changes))
     }
-    const XP = new TextEncoder;
+    const lF = new TextEncoder;
 
-    function IP(MM) {
-      const rM = new KP;
-      return TP(rM, MM), rM.bytes()
+    function xF(UU) {
+      const XU = new JF;
+      return KF(XU, UU), XU.bytes()
     }
-    class KP {
+    class JF {
       constructor() {
         this.buf = new Uint8Array(256), this.view = new DataView(this.buf.buffer), this.len = 0
       }
-      room(MM) {
-        if (this.len + MM <= this.buf.length) return;
-        const rM = new Uint8Array(Math.max(2 * this.buf.length, this.len + MM));
-        rM.set(this.buf.subarray(0, this.len)), this.buf = rM, this.view = new DataView(rM.buffer)
+      room(UU) {
+        if (this.len + UU <= this.buf.length) return;
+        const XU = new Uint8Array(Math.max(2 * this.buf.length, this.len + UU));
+        XU.set(this.buf.subarray(0, this.len)), this.buf = XU, this.view = new DataView(XU.buffer)
       }
-      u8(MM) {
-        this.room(1), this.buf[this.len++] = MM
+      u8(UU) {
+        this.room(1), this.buf[this.len++] = UU
       }
-      tagged(MM, rM, iM) {
-        this.room(1 + rM), this.buf[this.len++] = MM, 1 === rM ? this.view.setUint8(this.len, iM) : 2 === rM ? this.view.setUint16(this.len, iM) : this.view.setUint32(this.len, iM), this.len += rM
+      tagged(UU, XU, zU) {
+        this.room(1 + XU), this.buf[this.len++] = UU, 1 === XU ? this.view.setUint8(this.len, zU) : 2 === XU ? this.view.setUint16(this.len, zU) : this.view.setUint32(this.len, zU), this.len += XU
       }
-      signed(MM, rM, iM) {
-        this.room(1 + rM), this.buf[this.len++] = MM, 1 === rM ? this.view.setInt8(this.len, iM) : 2 === rM ? this.view.setInt16(this.len, iM) : this.view.setInt32(this.len, iM), this.len += rM
+      signed(UU, XU, zU) {
+        this.room(1 + XU), this.buf[this.len++] = UU, 1 === XU ? this.view.setInt8(this.len, zU) : 2 === XU ? this.view.setInt16(this.len, zU) : this.view.setInt32(this.len, zU), this.len += XU
       }
-      f64(MM) {
-        this.room(9), this.buf[this.len++] = 203, this.view.setFloat64(this.len, MM), this.len += 8
+      f64(UU) {
+        this.room(9), this.buf[this.len++] = 203, this.view.setFloat64(this.len, UU), this.len += 8
       }
-      raw(MM) {
-        this.room(MM.length), this.buf.set(MM, this.len), this.len += MM.length
+      raw(UU) {
+        this.room(UU.length), this.buf.set(UU, this.len), this.len += UU.length
       }
       bytes() {
         return this.buf.slice(0, this.len)
       }
     }
 
-    function qP(MM, rM, iM, OM, SM, jM, aM) {
-      rM < OM ? MM.u8(iM | rM) : null !== SM && rM < 256 ? MM.tagged(SM, 1, rM) : rM < 65536 ? MM.tagged(jM, 2, rM) : MM.tagged(aM, 4, rM)
+    function jF(UU, XU, zU, cU, yU, QU, AU) {
+      XU < cU ? UU.u8(zU | XU) : null !== yU && XU < 256 ? UU.tagged(yU, 1, XU) : XU < 65536 ? UU.tagged(QU, 2, XU) : UU.tagged(AU, 4, XU)
     }
 
-    function TP(MM, rM) {
-      switch (typeof rM) {
+    function KF(UU, XU) {
+      switch (typeof XU) {
         case "undefined":
-          return void MM.raw(VP);
+          return void UU.raw(bF);
         case "boolean":
-          return void MM.u8(rM ? 195 : 194);
+          return void UU.u8(XU ? 195 : 194);
         case "number":
           return void
-          function(MM, rM) {
-            rM >>> 0 === rM ? rM < 128 ? MM.u8(rM) : rM < 256 ? MM.tagged(204, 1, rM) : rM < 65536 ? MM.tagged(205, 2, rM) : MM.tagged(206, 4, rM) : (rM | 0) === rM ? rM >= -32 ? MM.u8(255 & rM) : rM >= -128 ? MM.signed(208, 1, rM) : rM >= -32768 ? MM.signed(209, 2, rM) : MM.signed(210, 4, rM) : MM.f64(rM)
-          }(MM, rM);
+          function(UU, XU) {
+            XU >>> 0 === XU ? XU < 128 ? UU.u8(XU) : XU < 256 ? UU.tagged(204, 1, XU) : XU < 65536 ? UU.tagged(205, 2, XU) : UU.tagged(206, 4, XU) : (XU | 0) === XU ? XU >= -32 ? UU.u8(255 & XU) : XU >= -128 ? UU.signed(208, 1, XU) : XU >= -32768 ? UU.signed(209, 2, XU) : UU.signed(210, 4, XU) : UU.f64(XU)
+          }(UU, XU);
         case "string": {
-          const iM = XP.encode(rM);
-          return qP(MM, iM.length, 160, 32, 217, 218, 219), void MM.raw(iM)
+          const zU = lF.encode(XU);
+          return jF(UU, zU.length, 160, 32, 217, 218, 219), void UU.raw(zU)
         }
         case "object":
           break;
         default:
-          return void MM.u8(192)
+          return void UU.u8(192)
       }
-      if (null === rM) MM.u8(192);
-      else if (Array.isArray(rM)) {
-        qP(MM, rM.length, 144, 16, null, 220, 221);
-        for (const iM of rM) TP(MM, iM)
-      } else if (rM instanceof Uint8Array) qP(MM, rM.length, 0, 0, 196, 197, 198), MM.raw(rM);
+      if (null === XU) UU.u8(192);
+      else if (Array.isArray(XU)) {
+        jF(UU, XU.length, 144, 16, null, 220, 221);
+        for (const zU of XU) KF(UU, zU)
+      } else if (XU instanceof Uint8Array) jF(UU, XU.length, 0, 0, 196, 197, 198), UU.raw(XU);
       else {
-        const iM = Object.keys(rM);
-        qP(MM, iM.length, 128, 0, null, 222, 223);
-        for (const OM of iM) TP(MM, OM), TP(MM, rM[OM])
+        const zU = Object.keys(XU);
+        jF(UU, zU.length, 128, 0, null, 222, 223);
+        for (const cU of zU) KF(UU, cU), KF(UU, XU[cU])
       }
     }
-    const VP = new Uint8Array([212, 0, 0]);
-    var cP = iM(53661),
-      Mn = iM(53668),
-      rn = iM(42045),
-      On = iM(42090),
-      Sn = iM(3188);
-    const jn = [1e3, 3e3, 9e3];
-    class an {
-      constructor(MM) {
-        this.host = MM, this.sets = new Map, this.table = [], this.generation = 0, this.dh = !1
+    const bF = new Uint8Array([212, 0, 0]);
+    var TF = zU(53654),
+      hF = zU(53661),
+      Uo = zU(42053),
+      Xo = zU(42098),
+      zo = zU(3176);
+    const co = [1e3, 3e3, 9e3];
+    class yo {
+      constructor(UU) {
+        this.host = UU, this.sets = new Map, this.table = [], this.generation = 0, this.kp = !1
       }
-      onEvent(MM) {
-        const rM = function(MM) {
-          if (MM.byteLength !== mM.nd) return null;
-          const rM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
+      onEvent(UU) {
+        const XU = function(UU) {
+          if (UU.byteLength !== NU.vd) return null;
+          const XU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength);
           return {
-            want: rM.getUint16(0, !0),
-            release: rM.getUint16(2, !0)
+            want: XU.getUint16(0, !0),
+            release: XU.getUint16(2, !0)
           }
-        }(MM);
-        rM && !this.dh && (rM.release !== mM.pd && this.release(rM.release), rM.want !== mM.pd && this.want(rM.want))
+        }(UU);
+        XU && !this.kp && (XU.release !== NU.wd && this.release(XU.release), XU.want !== NU.wd && this.want(XU.want))
       }
-      reset(MM) {
-        if (!this.dh) {
-          for (const [MM, rM] of this.sets) "ready" === rM.state && this.releaseAll(rM.distinct), this.sets.delete(MM);
-          this.table = MM, this.generation++
+      reset(UU) {
+        if (!this.kp) {
+          for (const [UU, XU] of this.sets) "ready" === XU.state && this.releaseAll(XU.distinct), this.sets.delete(UU);
+          this.table = UU, this.generation++
         }
       }
       dispose() {
-        if (this.dh) return;
-        this.dh = !0, this.generation++, this.table = [];
-        const MM = [...this.sets.values()];
+        if (this.kp) return;
+        this.kp = !0, this.generation++, this.table = [];
+        const UU = [...this.sets.values()];
         this.sets.clear();
-        let rM = null;
-        for (const OM of MM)
-          for (const MM of "ready" === OM.state ? OM.distinct : []) try {
-            this.host.SOM(MM)
-          } catch (iM) {
-            rM ??= {
-              error: iM
+        let XU = null;
+        for (const cU of UU)
+          for (const UU of "ready" === cU.state ? cU.distinct : []) try {
+            this.host.xcU(UU)
+          } catch (zU) {
+            XU ??= {
+              error: zU
             }
           }
-        if (rM) throw rM.error
+        if (XU) throw XU.error
       }
-      isReady(MM) {
-        var rM;
-        return "ready" === (null === (rM = this.sets.get(MM)) || void 0 === rM ? void 0 : rM.state)
+      isReady(UU) {
+        var XU;
+        return "ready" === (null === (XU = this.sets.get(UU)) || void 0 === XU ? void 0 : XU.state)
       }
-      want(MM) {
-        const rM = this.sets.get(MM);
-        if ("loading" === (null === rM || void 0 === rM ? void 0 : rM.state)) return rM.wanted = !0, void this.capAnswer(MM, rM);
-        if ("ready" === (null === rM || void 0 === rM ? void 0 : rM.state)) return void this.host.sendReady(nn(MM, rM.images, rM.size));
-        const iM = this.table[MM];
-        if (!iM || 1 !== iM.urls.length && iM.urls.length !== nO.dc.CubeFaces) return this.host.sendReady(Qn(MM)), void this.host.onLoadFailed(MM, "", new Error(`no image set ${MM}`));
-        const OM = {
+      want(UU) {
+        const XU = this.sets.get(UU);
+        if ("loading" === (null === XU || void 0 === XU ? void 0 : XU.state)) return XU.wanted = !0, void this.capAnswer(UU, XU);
+        if ("ready" === (null === XU || void 0 === XU ? void 0 : XU.state)) return void this.host.sendReady(Ao(UU, XU.images, XU.size));
+        const zU = this.table[UU];
+        if (!zU || 1 !== zU.urls.length && zU.urls.length !== Ac.ic.CubeFaces) return this.host.sendReady(Fo(UU)), void this.host.onLoadFailed(UU, "", new Error(`no image set ${UU}`));
+        const cU = {
           state: "loading",
           wanted: !0
         };
-        this.sets.set(MM, OM), this.load(MM, iM, OM, this.generation, 0), this.capAnswer(MM, OM)
+        this.sets.set(UU, cU), this.load(UU, zU, cU, this.generation, 0), this.capAnswer(UU, cU)
       }
-      capAnswer(MM, rM) {
+      capAnswer(UU, XU) {
         this.host.wait(4e3, (() => {
-          this.sets.get(MM) === rM && rM.wanted && this.host.sendReady(Qn(MM))
+          this.sets.get(UU) === XU && XU.wanted && this.host.sendReady(Fo(UU))
         }))
       }
-      load(MM, rM, iM, OM, SM) {
-        const jM = [...new Set(rM.urls)];
-        Promise.allSettled(jM.map((MM => this.host.loadImage(MM, rM.orientation)))).then((aM => {
-          const PM = aM.flatMap((MM => "fulfilled" === MM.status ? [MM.value] : [])),
-            nM = OM === this.generation && this.sets.get(MM) === iM,
-            QM = aM.findIndex((MM => "rejected" === MM.status));
-          if (!nM || !iM.wanted) return this.dh ? void this.releaseAfterDispose(PM.map(Pn)) : (this.releaseAll(PM.map(Pn)), void(nM && this.sets.delete(MM)));
-          QM < 0 ? this.loaded(MM, rM, jM, PM) : (this.releaseAll(PM.map(Pn)), this.host.sendReady(Qn(MM)), SM < jn.length ? this.host.wait(jn[SM], (() => {
-            OM === this.generation && this.sets.get(MM) === iM && (iM.wanted ? this.load(MM, rM, iM, OM, SM + 1) : this.sets.delete(MM))
-          })) : (this.sets.delete(MM), this.host.onLoadFailed(MM, jM[QM], aM[QM].reason)))
+      load(UU, XU, zU, cU, yU) {
+        const QU = [...new Set(XU.urls)];
+        Promise.allSettled(QU.map((UU => this.host.loadImage(UU, XU.orientation)))).then((AU => {
+          const FU = AU.flatMap((UU => "fulfilled" === UU.status ? [UU.value] : [])),
+            oU = cU === this.generation && this.sets.get(UU) === zU,
+            DU = AU.findIndex((UU => "rejected" === UU.status));
+          if (!oU || !zU.wanted) return this.kp ? void this.releaseAfterDispose(FU.map(Qo)) : (this.releaseAll(FU.map(Qo)), void(oU && this.sets.delete(UU)));
+          DU < 0 ? this.loaded(UU, XU, QU, FU) : (this.releaseAll(FU.map(Qo)), this.host.sendReady(Fo(UU)), yU < co.length ? this.host.wait(co[yU], (() => {
+            cU === this.generation && this.sets.get(UU) === zU && (zU.wanted ? this.load(UU, XU, zU, cU, yU + 1) : this.sets.delete(UU))
+          })) : (this.sets.delete(UU), this.host.onLoadFailed(UU, QU[DU], AU[DU].reason)))
         }))
       }
-      loaded(MM, rM, iM, OM) {
-        const [SM] = OM, jM = [SM.width, SM.height], aM = OM.every((MM => MM.width === jM[0] && MM.height === jM[1])), PM = rM.urls.length === nO.dc.CubeFaces;
-        if (!aM || jM[0] <= 0 || jM[1] <= 0 || jM[0] > 65535 || jM[1] > 65535 || PM && jM[0] !== jM[1]) {
-          this.releaseAll(OM.map(Pn)), this.sets.delete(MM), this.host.sendReady(Qn(MM));
-          const iM = OM.map((MM => `${MM.width}x${MM.height}`));
-          return void this.host.onLoadFailed(MM, rM.urls[0], new Error(`set ${MM}'s images can't make its texture: ${iM.join(", ")}`))
+      loaded(UU, XU, zU, cU) {
+        const [yU] = cU, QU = [yU.width, yU.height], AU = cU.every((UU => UU.width === QU[0] && UU.height === QU[1])), FU = XU.urls.length === Ac.ic.CubeFaces;
+        if (!AU || QU[0] <= 0 || QU[1] <= 0 || QU[0] > 65535 || QU[1] > 65535 || FU && QU[0] !== QU[1]) {
+          this.releaseAll(cU.map(Qo)), this.sets.delete(UU), this.host.sendReady(Fo(UU));
+          const zU = cU.map((UU => `${UU.width}x${UU.height}`));
+          return void this.host.onLoadFailed(UU, XU.urls[0], new Error(`set ${UU}'s images can't make its texture: ${zU.join(", ")}`))
         }
-        const nM = rM.urls.map((MM => OM[iM.indexOf(MM)].id)),
-          QM = OM.map(Pn);
-        this.sets.set(MM, {
+        const oU = XU.urls.map((UU => cU[zU.indexOf(UU)].id)),
+          DU = cU.map(Qo);
+        this.sets.set(UU, {
           state: "ready",
-          images: nM,
-          distinct: QM,
-          size: jM
-        }), this.host.sendReady(nn(MM, nM, jM))
+          images: oU,
+          distinct: DU,
+          size: QU
+        }), this.host.sendReady(Ao(UU, oU, QU))
       }
-      release(MM) {
-        const rM = this.sets.get(MM);
-        "loading" === (null === rM || void 0 === rM ? void 0 : rM.state) ? rM.wanted = !1: "ready" === (null === rM || void 0 === rM ? void 0 : rM.state) && (this.releaseAll(rM.distinct), this.sets.delete(MM))
+      release(UU) {
+        const XU = this.sets.get(UU);
+        "loading" === (null === XU || void 0 === XU ? void 0 : XU.state) ? XU.wanted = !1: "ready" === (null === XU || void 0 === XU ? void 0 : XU.state) && (this.releaseAll(XU.distinct), this.sets.delete(UU))
       }
-      releaseAll(MM) {
-        for (const rM of MM) this.host.SOM(rM)
+      releaseAll(UU) {
+        for (const XU of UU) this.host.xcU(XU)
       }
-      releaseAfterDispose(MM) {
-        for (const rM of MM) try {
-          this.host.SOM(rM)
+      releaseAfterDispose(UU) {
+        for (const XU of UU) try {
+          this.host.xcU(XU)
         } catch {}
       }
     }
 
-    function Pn(MM) {
-      return MM.id
+    function Qo(UU) {
+      return UU.id
     }
 
-    function nn(MM, rM, iM) {
-      const OM = new Uint8Array(nO.dc.SkyImagesReadyBytes),
-        SM = new DataView(OM.buffer);
-      return SM.setUint16(0, MM, !0), SM.setUint16(2, rM.length, !0), SM.setUint16(4, iM[0], !0), SM.setUint16(6, iM[1], !0), rM.slice(0, nO.dc.CubeFaces).forEach(((MM, rM) => {
-        SM.setUint32(8 + 4 * rM, MM, !0)
-      })), OM
+    function Ao(UU, XU, zU) {
+      const cU = new Uint8Array(Ac.ic.SkyImagesReadyBytes),
+        yU = new DataView(cU.buffer);
+      return yU.setUint16(0, UU, !0), yU.setUint16(2, XU.length, !0), yU.setUint16(4, zU[0], !0), yU.setUint16(6, zU[1], !0), XU.slice(0, Ac.ic.CubeFaces).forEach(((UU, XU) => {
+        yU.setUint32(8 + 4 * XU, UU, !0)
+      })), cU
     }
 
-    function Qn(MM) {
-      const rM = new Uint8Array(nO.dc.SkyImagesReadyBytes),
-        iM = new DataView(rM.buffer);
-      return iM.setUint16(0, MM, !0), iM.setUint16(2, nO.dc.Failed, !0), rM
+    function Fo(UU) {
+      const XU = new Uint8Array(Ac.ic.SkyImagesReadyBytes),
+        zU = new DataView(XU.buffer);
+      return zU.setUint16(0, UU, !0), zU.setUint16(2, Ac.ic.Failed, !0), XU
     }
-    let zn = Promise.resolve();
-    async function Ln(MM, rM) {
-      let iM;
+    let oo = Promise.resolve();
+    async function Do(UU, XU) {
+      let zU;
       try {
-        iM = await (0, Sn.F)(MM)
-      } catch (jM) {
-        throw new rn.d("fetch", MM, {
-          cause: jM
+        zU = await (0, zo.Q)(UU)
+      } catch (QU) {
+        throw new Uo.e("fetch", UU, {
+          cause: QU
         })
       }
-      const OM = zn.then((() => async function(MM, rM) {
-        const iM = new Blob([MM.slice()]);
-        let OM = await createImageBitmap(iM, {
+      const cU = oo.then((() => async function(UU, XU) {
+        const zU = new Blob([UU.slice()]);
+        let cU = await createImageBitmap(zU, {
           premultiplyAlpha: "none",
           colorSpaceConversion: "none",
-          imageOrientation: rM
+          imageOrientation: XU
         });
-        const SM = 1024 / Math.max(OM.width, OM.height);
-        if (SM < 1) {
-          const MM = OM;
+        const yU = 1024 / Math.max(cU.width, cU.height);
+        if (yU < 1) {
+          const UU = cU;
           try {
-            OM = await createImageBitmap(MM, {
-              resizeWidth: Math.max(1, Math.round(MM.width * SM)),
-              resizeHeight: Math.max(1, Math.round(MM.height * SM)),
+            cU = await createImageBitmap(UU, {
+              resizeWidth: Math.max(1, Math.round(UU.width * yU)),
+              resizeHeight: Math.max(1, Math.round(UU.height * yU)),
               resizeQuality: "high",
               premultiplyAlpha: "none",
               colorSpaceConversion: "none"
             })
           } finally {
-            MM.close()
+            UU.close()
           }
         }
-        return OM
-      }(iM, rM)));
-      let SM;
-      zn = OM.catch((() => {}));
+        return cU
+      }(zU, XU)));
+      let yU;
+      oo = cU.catch((() => {}));
       try {
-        SM = await OM
-      } catch (jM) {
-        throw new rn.d("decode", MM, {
-          cause: jM
+        yU = await cU
+      } catch (QU) {
+        throw new Uo.e("decode", UU, {
+          cause: QU
         })
       }
       return {
-        id: (0, rn.n)(SM),
-        width: SM.width,
-        height: SM.height
+        id: (0, Uo.r)(yU),
+        width: yU.width,
+        height: yU.height
       }
     }
-    var mn = iM(2263),
-      Hn = iM(34611),
-      hn = iM(40305);
-    const Jn = mn.e.length,
-      dn = new Set([...mn.e, "earth"]);
+    var Eo = zU(2219),
+      Yo = zU(34686),
+      No = zU(40074);
+    const Io = Eo.d.length,
+      po = new Set([...Eo.d, "earth"]);
 
-    function yn(MM) {
-      const rM = [],
-        iM = [],
-        OM = (MM, OM) => {
-          if ("custom" === OM.type) {
-            iM.push({
-              id: MM,
-              kind: nO.dc.KindCustom,
-              set: rM.length,
+    function ao(UU) {
+      const XU = [],
+        zU = [],
+        cU = (UU, cU) => {
+          if ("custom" === cU.type) {
+            zU.push({
+              id: UU,
+              kind: Ac.ic.KindCustom,
+              set: XU.length,
               earth: null
             });
-            const SM = [OM.px, OM.py, OM.pz, OM.nx, OM.ny, OM.nz];
-            rM.push({
-              urls: (0, hn.g)(SM),
+            const yU = [cU.px, cU.py, cU.pz, cU.nx, cU.ny, cU.nz];
+            XU.push({
+              urls: (0, No.i)(yU),
               orientation: "none"
             })
-          } else iM.push({
-            id: MM,
-            kind: nO.dc.KindEarth,
+          } else zU.push({
+            id: UU,
+            kind: Ac.ic.KindEarth,
             set: 0,
-            earth: OM
+            earth: cU
           })
         };
-      mn.e.forEach(((rM, iM) => {
-        var SM;
-        OM(iM, null !== (SM = En(MM[rM])) && void 0 !== SM ? SM : Hn.j[rM])
+      Eo.d.forEach(((XU, zU) => {
+        var yU;
+        cU(zU, null !== (yU = to(UU[XU])) && void 0 !== yU ? yU : Yo.o[XU])
       }));
-      const SM = En(MM.earth);
-      "earth" === (null === SM || void 0 === SM ? void 0 : SM.type) && OM(Jn, SM);
-      const jM = new TextEncoder,
-        aM = [],
-        PM = [];
-      for (const [HM, hM] of Object.entries(MM)) {
-        const MM = dn.has(HM) ? null : En(hM);
-        if (null === MM) continue;
-        const rM = jM.encode(HM);
-        rM.length > 255 ? PM.push(`Ignoring texture pack skybox ${HM}, whose name is over 255 bytes`) : aM.length === nO.dc.MaxAdded ? PM.push(`Ignoring texture pack skybox ${HM}, past the ${nO.dc.MaxAdded} skies a pack can add`) : (aM.push(rM), OM(nO.dc.AddedId, MM))
+      const yU = to(UU.earth);
+      "earth" === (null === yU || void 0 === yU ? void 0 : yU.type) && cU(Io, yU);
+      const QU = new TextEncoder,
+        AU = [],
+        FU = [];
+      for (const [IU, pU] of Object.entries(UU)) {
+        const UU = po.has(IU) ? null : to(pU);
+        if (null === UU) continue;
+        const XU = QU.encode(IU);
+        XU.length > 255 ? FU.push(`Ignoring texture pack skybox ${IU}, whose name is over 255 bytes`) : AU.length === Ac.ic.MaxAdded ? FU.push(`Ignoring texture pack skybox ${IU}, past the ${Ac.ic.MaxAdded} skies a pack can add`) : (AU.push(XU), cU(Ac.ic.AddedId, UU))
       }
-      const nM = rM.length;
-      rM.push({
-        urls: Hn.d.map((MM => Hn.g + MM)),
+      const oU = XU.length;
+      XU.push({
+        urls: Yo.g.map((UU => Yo.k + UU)),
         orientation: "none"
-      }), rM.push({
-        urls: [Hn.h],
+      }), XU.push({
+        urls: [Yo.n],
         orientation: "flipY"
-      }), rM.push({
-        urls: [Hn.c],
+      }), XU.push({
+        urls: [Yo.e],
         orientation: "flipY"
       });
-      const QM = nO.dc.SkyTableHeaderBytes + iM.length * nO.dc.SkyTableEntryBytes,
-        zM = new Uint8Array(QM + aM.reduce(((MM, rM) => MM + 1 + rM.length), 0)),
-        LM = new DataView(zM.buffer);
-      LM.setUint16(0, nM, !0), LM.setUint16(2, nM + 1, !0), LM.setUint16(4, nM + 2, !0), LM.setUint16(6, iM.length, !0), iM.forEach(((MM, rM) => {
-        const iM = nO.dc.SkyTableHeaderBytes + rM * nO.dc.SkyTableEntryBytes;
-        LM.setUint16(iM, MM.id, !0), LM.setUint8(iM + 2, MM.kind);
-        const OM = iM + 4;
-        MM.earth ? function(MM, rM, iM) {
-          const OM = MM;
-          let SM = 0,
-            jM = 0;
-          for (const [aM, PM] of Un) {
-            const MM = OM[aM];
-            "number" === typeof MM && Number.isFinite(MM) && (rM.setFloat32(iM + 4 * PM, MM, !0), SM |= 1 << PM)
+      const DU = Ac.ic.SkyTableHeaderBytes + zU.length * Ac.ic.SkyTableEntryBytes,
+        EU = new Uint8Array(DU + AU.reduce(((UU, XU) => UU + 1 + XU.length), 0)),
+        YU = new DataView(EU.buffer);
+      YU.setUint16(0, oU, !0), YU.setUint16(2, oU + 1, !0), YU.setUint16(4, oU + 2, !0), YU.setUint16(6, zU.length, !0), zU.forEach(((UU, XU) => {
+        const zU = Ac.ic.SkyTableHeaderBytes + XU * Ac.ic.SkyTableEntryBytes;
+        YU.setUint16(zU, UU.id, !0), YU.setUint8(zU + 2, UU.kind);
+        const cU = zU + 4;
+        UU.earth ? function(UU, XU, zU) {
+          const cU = UU;
+          let yU = 0,
+            QU = 0;
+          for (const [AU, FU] of go) {
+            const UU = cU[AU];
+            "number" === typeof UU && Number.isFinite(UU) && (XU.setFloat32(zU + 4 * FU, UU, !0), yU |= 1 << FU)
           }
-          for (const [aM, PM, nM] of Gn) {
-            const MM = OM[aM];
-            Array.isArray(MM) && 3 === MM.length && MM.every((MM => "number" === typeof MM && Number.isFinite(MM))) && (MM.forEach(((MM, OM) => {
-              rM.setFloat32(iM + nM + 4 * OM, MM, !0)
-            })), SM |= PM)
+          for (const [AU, FU, oU] of ko) {
+            const UU = cU[AU];
+            Array.isArray(UU) && 3 === UU.length && UU.every((UU => "number" === typeof UU && Number.isFinite(UU))) && (UU.forEach(((UU, cU) => {
+              XU.setFloat32(zU + oU + 4 * cU, UU, !0)
+            })), yU |= FU)
           }
-          Cn.forEach(((MM, jM) => {
-            let [aM, PM] = MM;
-            const nM = OM[aM];
-            "number" === typeof nM && Number.isFinite(nM) && (rM.setFloat32(iM + nO.t.CameraOffsetAt + 4 * jM, nM, !0), SM |= PM)
+          Go.forEach(((UU, QU) => {
+            let [AU, FU] = UU;
+            const oU = cU[AU];
+            "number" === typeof oU && Number.isFinite(oU) && (XU.setFloat32(zU + Ac.s.CameraOffsetAt + 4 * QU, oU, !0), yU |= FU)
           }));
-          for (const [aM, PM] of en) {
-            const MM = OM[aM];
-            null !== MM && void 0 !== MM && (SM |= PM, MM && (jM |= PM >>> 14))
+          for (const [AU, FU] of Bo) {
+            const UU = cU[AU];
+            null !== UU && void 0 !== UU && (yU |= FU, UU && (QU |= FU >>> 14))
           }
-          rM.setUint32(iM + nO.t.PresentAt, SM, !0), rM.setUint8(iM + nO.t.FlagsAt, jM)
-        }(MM.earth, LM, OM) : LM.setUint16(OM, MM.set, !0)
+          XU.setUint32(zU + Ac.s.PresentAt, yU, !0), XU.setUint8(zU + Ac.s.FlagsAt, QU)
+        }(UU.earth, YU, cU) : YU.setUint16(cU, UU.set, !0)
       }));
-      let mM = QM;
-      for (const HM of aM) zM[mM] = HM.length, zM.set(HM, mM + 1), mM += 1 + HM.length;
+      let NU = DU;
+      for (const IU of AU) EU[NU] = IU.length, EU.set(IU, NU + 1), NU += 1 + IU.length;
       return {
-        payload: zM,
-        sets: rM,
-        leftOut: PM
+        payload: EU,
+        sets: XU,
+        leftOut: FU
       }
     }
 
-    function En(MM) {
-      if ("object" !== typeof MM || null === MM) return null;
-      const rM = MM;
-      if ("earth" === rM.type) return MM;
-      return "custom" === rM.type && ["px", "py", "pz", "nx", "ny", "nz"].every((MM => {
-        const iM = rM[MM];
-        return "string" === typeof iM && iM.length > 0
-      })) ? MM : null
+    function to(UU) {
+      if ("object" !== typeof UU || null === UU) return null;
+      const XU = UU;
+      if ("earth" === XU.type) return UU;
+      return "custom" === XU.type && ["px", "py", "pz", "nx", "ny", "nz"].every((UU => {
+        const zU = XU[UU];
+        return "string" === typeof zU && zU.length > 0
+      })) ? UU : null
     }
-    const Un = [
-        ["inclination", nO.t.Inclination],
-        ["turbidity", nO.t.Turbidity],
-        ["luminance", nO.t.Luminance],
-        ["rayleigh", nO.t.Rayleigh],
-        ["mieCoefficient", nO.t.MieCoefficient],
-        ["mieDirectionalG", nO.t.MieDirectionalG],
-        ["distance", nO.t.Distance],
-        ["azimuth", nO.t.Azimuth]
+    const go = [
+        ["inclination", Ac.s.Inclination],
+        ["turbidity", Ac.s.Turbidity],
+        ["luminance", Ac.s.Luminance],
+        ["rayleigh", Ac.s.Rayleigh],
+        ["mieCoefficient", Ac.s.MieCoefficient],
+        ["mieDirectionalG", Ac.s.MieDirectionalG],
+        ["distance", Ac.s.Distance],
+        ["azimuth", Ac.s.Azimuth]
       ],
-      Gn = [
-        ["sunPosition", nO.t.SunPosition, nO.t.SunPositionAt],
-        ["up", nO.t.Up, nO.t.UpAt],
-        ["vertexTint", nO.t.VertexTint, nO.t.VertexTintAt]
+      ko = [
+        ["sunPosition", Ac.s.SunPosition, Ac.s.SunPositionAt],
+        ["up", Ac.s.Up, Ac.s.UpAt],
+        ["vertexTint", Ac.s.VertexTint, Ac.s.VertexTintAt]
       ],
-      Cn = [
-        ["xCameraOffset", nO.t.CameraOffsetX],
-        ["yCameraOffset", nO.t.CameraOffsetY],
-        ["zCameraOffset", nO.t.CameraOffsetZ]
+      Go = [
+        ["xCameraOffset", Ac.s.CameraOffsetX],
+        ["yCameraOffset", Ac.s.CameraOffsetY],
+        ["zCameraOffset", Ac.s.CameraOffsetZ]
       ],
-      en = [
-        ["useSunPosition", nO.t.UseSunPosition],
-        ["dithering", nO.t.Dithering],
-        ["infiniteDistance", nO.t.InfiniteDistance]
+      Bo = [
+        ["useSunPosition", Ac.s.UseSunPosition],
+        ["dithering", Ac.s.Dithering],
+        ["infiniteDistance", Ac.s.InfiniteDistance]
       ];
 
-    function bn(MM, rM, iM) {
-      const OM = new tn({
-        writeCmd: MM,
-        warn: rM,
-        followPack: wn(iM, rM)
+    function Zo(UU, XU, zU) {
+      const cU = new Po({
+        writeCmd: UU,
+        warn: XU,
+        followPack: Ro(zU, XU)
       });
-      return OM.start(), OM
+      return cU.start(), cU
     }
 
-    function wn(MM, rM) {
-      return iM => {
-        let OM = () => {};
-        const SM = MM((MM => {
-          OM(), OM = () => {}, null !== MM ? OM = MM.subscribe((MM => {
-            iM(function(MM, rM, iM) {
-              if ("object" !== typeof MM || null === MM) return null;
-              const OM = MM.skyBoxes;
-              if ("object" !== typeof OM || null === OM) return null;
-              if ("player" === rM) return OM;
-              return Object.fromEntries(Object.entries(OM).filter((MM => {
-                let [rM, OM] = MM;
-                return !! function(MM) {
-                  if ("object" !== typeof MM || null === MM) return !1;
-                  return "earth" === MM.type || Object.entries(MM).every((MM => {
-                    let [rM, iM] = MM;
-                    return "type" === rM || ("" === (OM = iM) || null !== function(MM) {
-                      var rM, iM, OM;
-                      return "string" !== typeof MM ? null : null !== (rM = null === (iM = gn.exec(MM)) || void 0 === iM || null === (OM = iM.groups) || void 0 === OM ? void 0 : OM.base64) && void 0 !== rM ? rM : null
-                    }(OM));
-                    var OM
+    function Ro(UU, XU) {
+      return zU => {
+        let cU = () => {};
+        const yU = UU((UU => {
+          cU(), cU = () => {}, null !== UU ? cU = UU.subscribe((UU => {
+            zU(function(UU, XU, zU) {
+              if ("object" !== typeof UU || null === UU) return null;
+              const cU = UU.skyBoxes;
+              if ("object" !== typeof cU || null === cU) return null;
+              if ("player" === XU) return cU;
+              return Object.fromEntries(Object.entries(cU).filter((UU => {
+                let [XU, cU] = UU;
+                return !! function(UU) {
+                  if ("object" !== typeof UU || null === UU) return !1;
+                  return "earth" === UU.type || Object.entries(UU).every((UU => {
+                    let [XU, zU] = UU;
+                    return "type" === XU || ("" === (cU = zU) || null !== function(UU) {
+                      var XU, zU, cU;
+                      return "string" !== typeof UU ? null : null !== (XU = null === (zU = Wo.exec(UU)) || void 0 === zU || null === (cU = zU.groups) || void 0 === cU ? void 0 : cU.base64) && void 0 !== XU ? XU : null
+                    }(cU));
+                    var cU
                   }))
-                }(OM) || (iM(`Ignoring texture pack skybox ${rM}, whose faces are not all data URLs`, null), !1)
+                }(cU) || (zU(`Ignoring texture pack skybox ${XU}, whose faces are not all data URLs`, null), !1)
               })))
-            }(MM.pack, null === MM.gameSource ? "player" : "customGame", rM))
-          })) : iM(null)
+            }(UU.pack, null === UU.gameSource ? "player" : "customGame", XU))
+          })) : zU(null)
         }));
         return () => {
-          SM(), OM()
+          yU(), cU()
         }
       }
     }
-    class tn {
-      constructor(MM) {
-        var rM, iM, OM;
-        this.host = MM, this.loader = void 0, this.wait = void 0, this.queue = [], this.written = null, this.stopFollowing = () => {}, this.dh = !1, this.wait = null !== (rM = MM.wait) && void 0 !== rM ? rM : (MM, rM) => {
-          setTimeout(rM, MM)
-        }, this.loader = new an({
-          loadImage: null !== (iM = MM.loadImage) && void 0 !== iM ? iM : Ln,
-          SOM: null !== (OM = MM.SOM) && void 0 !== OM ? OM : rn.o,
-          sendReady: MM => {
+    class Po {
+      constructor(UU) {
+        var XU, zU, cU;
+        this.host = UU, this.loader = void 0, this.wait = void 0, this.queue = [], this.written = null, this.stopFollowing = () => {}, this.kp = !1, this.wait = null !== (XU = UU.wait) && void 0 !== XU ? XU : (UU, XU) => {
+          setTimeout(XU, UU)
+        }, this.loader = new yo({
+          loadImage: null !== (zU = UU.loadImage) && void 0 !== zU ? zU : Do,
+          xcU: null !== (cU = UU.xcU) && void 0 !== cU ? cU : Uo.v,
+          sendReady: UU => {
             this.queue.push({
-              kind: nO.dc.SkyImagesReady,
-              payload: MM
+              kind: Ac.ic.SkyImagesReady,
+              payload: UU
             })
           },
-          onLoadFailed: (rM, iM, OM) => {
-            MM.warn(`sky image set ${rM} (${iM}) didn't load: the last sky stays`, OM)
+          onLoadFailed: (XU, zU, cU) => {
+            UU.warn(`sky image set ${XU} (${zU}) didn't load: the last sky stays`, cU)
           },
           wait: this.wait
         })
       }
       start() {
-        this.wait(On.d, (() => {
+        this.wait(Xo.c, (() => {
           null === this.written && this.write({})
-        })), this.stopFollowing = this.host.followPack((MM => {
-          this.write(null !== MM && void 0 !== MM ? MM : {})
+        })), this.stopFollowing = this.host.followPack((UU => {
+          this.write(null !== UU && void 0 !== UU ? UU : {})
         }))
       }
-      onEvent(MM) {
-        this.loader.onEvent(MM)
+      onEvent(UU) {
+        this.loader.onEvent(UU)
       }
       drain() {
         if (0 === this.queue.length) return;
-        let MM = 0;
-        for (; MM < this.queue.length && this.host.writeCmd(this.queue[MM].kind, 0, this.queue[MM].payload);) MM++;
-        MM > 0 && this.queue.splice(0, MM)
+        let UU = 0;
+        for (; UU < this.queue.length && this.host.writeCmd(this.queue[UU].kind, 0, this.queue[UU].payload);) UU++;
+        UU > 0 && this.queue.splice(0, UU)
       }
       dispose() {
-        this.dh = !0, this.stopFollowing(), this.queue = [], this.loader.dispose()
+        this.kp = !0, this.stopFollowing(), this.queue = [], this.loader.dispose()
       }
-      write(MM) {
-        if (this.dh) return;
-        const rM = yn(MM);
-        if (!(this.written && (iM = this.written, OM = rM, iM.payload.length === OM.payload.length && iM.payload.every(((MM, rM) => MM === OM.payload[rM])) && iM.sets.length === OM.sets.length && iM.sets.every(((MM, rM) => {
-            const iM = OM.sets[rM];
-            return MM.orientation === iM.orientation && MM.urls.length === iM.urls.length && MM.urls.every(((MM, rM) => MM === iM.urls[rM]))
+      write(UU) {
+        if (this.kp) return;
+        const XU = ao(UU);
+        if (!(this.written && (zU = this.written, cU = XU, zU.payload.length === cU.payload.length && zU.payload.every(((UU, XU) => UU === cU.payload[XU])) && zU.sets.length === cU.sets.length && zU.sets.every(((UU, XU) => {
+            const zU = cU.sets[XU];
+            return UU.orientation === zU.orientation && UU.urls.length === zU.urls.length && UU.urls.every(((UU, XU) => UU === zU.urls[XU]))
           }))))) {
-          var iM, OM;
-          for (const MM of rM.leftOut) this.host.warn(MM, null);
-          this.written = rM, this.loader.reset(rM.sets), this.queue = this.queue.filter((MM => MM.kind !== nO.dc.SkyImagesReady)), this.queue.push({
-            kind: nO.dc.SkyTable,
-            payload: rM.payload
+          var zU, cU;
+          for (const UU of XU.leftOut) this.host.warn(UU, null);
+          this.written = XU, this.loader.reset(XU.sets), this.queue = this.queue.filter((UU => UU.kind !== Ac.ic.SkyImagesReady)), this.queue.push({
+            kind: Ac.ic.SkyTable,
+            payload: XU.payload
           })
         }
       }
     }
-    const gn = /^data:[\w.+/-]*;base64,(?<base64>[A-Za-z0-9+/]*={0,2})$/;
-    var un = iM(3096),
-      Rn = iM(3349),
-      pn = iM(267),
-      Wn = iM(166),
-      sn = iM(3100),
-      Dn = iM(3109),
-      kn = iM(236),
-      Zn = iM(243),
-      fn = iM(3227),
-      Yn = iM(3245),
-      Nn = iM(3251),
-      An = iM(103),
-      xn = iM(3317),
-      vn = iM(2602),
-      Fn = iM(308),
-      Bn = iM(41922);
-    class Xn {
+    const Wo = /^data:[\w.+/-]*;base64,(?<base64>[A-Za-z0-9+/]*={0,2})$/;
+    var Lo = zU(3076),
+      eo = zU(3318),
+      Co = zU(295),
+      wo = zU(193),
+      qo = zU(3080),
+      Oo = zU(3094),
+      So = zU(274),
+      ro = zU(281),
+      uo = zU(3198),
+      fo = zU(3231),
+      io = zU(3242),
+      Ho = zU(114),
+      Mo = zU(3286),
+      vo = zU(3280),
+      Vo = zU(316),
+      so = zU(41927);
+    class no {
       constructor() {
-        this.id = null, this.sentMs = null, this.roundTripMs = null, this.stopReplies = void 0, this.stopReplies = (0, Sj.h)(DO.M, (MM => {
-          this.onReply((0, Oj.d)(DO.M, MM), performance.now())
+        this.id = null, this.sentMs = null, this.roundTripMs = null, this.stopReplies = void 0, this.stopReplies = (0, zQ.m)(Oc.L, (UU => {
+          this.onReply((0, XQ.d)(Oc.L, UU), performance.now())
         }))
       }
-      onFrame(MM, rM) {
-        null === this.id ? this.id = MM : MM !== this.id && (this.id = MM, this.sentMs = document.hidden ? null : rM)
+      onFrame(UU, XU) {
+        null === this.id ? this.id = UU : UU !== this.id && (this.id = UU, this.sentMs = document.hidden ? null : XU)
       }
       onVisibilityChange() {
         this.sentMs = null
       }
-      onReply(MM, rM) {
-        MM === this.id && null !== this.sentMs && (this.roundTripMs = Math.round(rM - this.sentMs), this.sentMs = null)
+      onReply(UU, XU) {
+        UU === this.id && null !== this.sentMs && (this.roundTripMs = Math.round(XU - this.sentMs), this.sentMs = null)
       }
       take() {
-        const MM = this.roundTripMs;
-        return this.roundTripMs = null, MM
+        const UU = this.roundTripMs;
+        return this.roundTripMs = null, UU
       }
       stop() {
         this.stopReplies()
       }
     }
-    class In {
+    class mo {
       constructor() {
         this.sampled = 0, this.timed = 0, this.frameUs = 0, this.primed = !1, this.windowTimed = 0, this.windowUs = 0
       }
-      onFrame(MM, rM, iM, OM) {
-        const SM = MM - this.sampled >>> 0,
-          jM = rM - this.timed >>> 0,
-          aM = iM - this.frameUs >>> 0,
-          PM = this.primed;
-        return this.sampled = MM, this.timed = rM, this.frameUs = iM, this.primed = !0, !(!PM || SM > 64 || jM > 64) && (OM && aM <= 1e6 * jM && (this.windowTimed += jM, this.windowUs += aM), OM && SM > 0)
+      onFrame(UU, XU, zU, cU) {
+        const yU = UU - this.sampled >>> 0,
+          QU = XU - this.timed >>> 0,
+          AU = zU - this.frameUs >>> 0,
+          FU = this.primed;
+        return this.sampled = UU, this.timed = XU, this.frameUs = zU, this.primed = !0, !(!FU || yU > 64 || QU > 64) && (cU && AU <= 1e6 * QU && (this.windowTimed += QU, this.windowUs += AU), cU && yU > 0)
       }
       reset() {}
       snapshotAndReset() {
-        const MM = this.windowTimed > 0 ? this.windowUs / this.windowTimed / 1e3 : null;
+        const UU = this.windowTimed > 0 ? this.windowUs / this.windowTimed / 1e3 : null;
         return this.windowTimed = 0, this.windowUs = 0, {
-          passMs: MM,
+          passMs: UU,
           submitToDoneMs: null
         }
       }
     }
-    const Kn = {
+    const xo = {
       lagP50Ms: null,
       lagP90Ms: null
     };
-    class qn {
+    class Jo {
       constructor() {
         this.samples = new Float64Array(4096), this.count = 0
       }
-      add(MM, rM) {
-        const iM = Math.min(4096, this.count + rM);
-        this.samples.fill(MM, this.count, iM), this.count = iM
+      add(UU, XU) {
+        const zU = Math.min(4096, this.count + XU);
+        this.samples.fill(UU, this.count, zU), this.count = zU
       }
       clear() {
         this.count = 0
       }
       take() {
-        const MM = this.count;
-        if (this.count = 0, MM < 30) return Kn;
-        const rM = this.samples.subarray(0, MM).sort(),
-          iM = iM => rM[Math.min(MM - 1, Math.floor(iM * MM))];
+        const UU = this.count;
+        if (this.count = 0, UU < 30) return xo;
+        const XU = this.samples.subarray(0, UU).sort(),
+          zU = zU => XU[Math.min(UU - 1, Math.floor(zU * UU))];
         return {
-          lagP50Ms: iM(.5),
-          lagP90Ms: iM(.9)
+          lagP50Ms: zU(.5),
+          lagP90Ms: zU(.9)
         }
       }
     }
-    class Tn {
+    class jo {
       constructor() {
-        this.word = 0, this.lagUs = 0, this.primed = !1, this.lags = new qn
+        this.word = 0, this.lagUs = 0, this.primed = !1, this.lags = new Jo
       }
-      onFrame(MM, rM) {
-        const iM = MM.headerWord(nO.K.Pacing),
-          OM = MM.headerWord(nO.K.PacingLagUs),
-          SM = (iM >>> nO._.LagsShift) - (this.word >>> nO._.LagsShift) & nO._.CountMask,
-          jM = SM > 0 ? (OM - this.lagUs >>> 0) / SM / 1e3 : 0,
-          aM = this.primed && SM <= 64 && jM <= 6e4;
-        this.word = iM, this.lagUs = OM, this.primed = !0, aM && rM && SM > 0 && 0 !== (iM & nO._.Defaulted) && this.lags.add(jM, SM)
+      onFrame(UU, XU) {
+        const zU = UU.headerWord(Ac.I.Pacing),
+          cU = UU.headerWord(Ac.I.PacingLagUs),
+          yU = (zU >>> Ac.cb.LagsShift) - (this.word >>> Ac.cb.LagsShift) & Ac.cb.CountMask,
+          QU = yU > 0 ? (cU - this.lagUs >>> 0) / yU / 1e3 : 0,
+          AU = this.primed && yU <= 64 && QU <= 6e4;
+        this.word = zU, this.lagUs = cU, this.primed = !0, AU && XU && yU > 0 && 0 !== (zU & Ac.cb.Defaulted) && this.lags.add(QU, yU)
       }
       onJoin() {
         this.lags.clear()
       }
-      snapshotAndReset(MM) {
-        return MM ? this.lags.take() : (this.lags.clear(), Kn)
+      snapshotAndReset(UU) {
+        return UU ? this.lags.take() : (this.lags.clear(), xo)
       }
     }
-    var Vn = iM(3219),
-      cn = iM(34962),
-      MQ = iM(3230),
-      rQ = iM(41984),
-      iQ = iM(34959),
-      OQ = iM(3118),
-      SQ = iM(3235);
-    const jQ = {
+    var Ko = zU(3194),
+      bo = zU(34807),
+      To = zU(3203),
+      ho = zU(41979),
+      UD = zU(34798),
+      XD = zU(3096),
+      zD = zU(3212);
+    const cD = {
       none: !0,
       compatibility_mode: !0,
       not_requested: !1,
@@ -7798,456 +7622,456 @@ export const modules = {
       _unloaded: null
     };
 
-    function aQ(MM) {
-      return new PQ(MM)
+    function yD(UU) {
+      return new QD(UU)
     }
-    class PQ {
-      constructor(MM) {
-        this.shell = MM, this.tracker = new Dn.e, this.gpu = new In, this.pacing = new Tn, this.timers = [], this.inGameAtLastFlush = !1, this.hasFlushedSinceConnect = !1, this.sendsDropped = 0, this.pendingLightFailures = 0, this.unsentPage = null, this.game = null, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.fpsOverTime = null, this.firstSpanFps = null, this.initialFps = null, this.ping = new Xn, this.pacedCpuMs = 0, this.sendsStartMs = -1, this.sendsEndMs = -1, this.frameDebug = null, this.mainStall = new Vn.c(this.tracker, ((MM, rM, iM, OM) => {
-          this.shell.mainStalled(MM, rM, iM, OM)
-        })), this.onVisibility = () => {
+    class QD {
+      constructor(UU) {
+        this.shell = UU, this.tracker = new Oo.c, this.gpu = new mo, this.pacing = new jo, this.timers = [], this.inGameAtLastFlush = !1, this.hasFlushedSinceConnect = !1, this.sendsDropped = 0, this.pendingLightFailures = 0, this.unsentPage = null, this.game = null, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.fpsOverTime = null, this.firstSpanFps = null, this.initialFps = null, this.ping = new no, this.pacedCpuMs = 0, this.sendsStartMs = -1, this.sendsEndMs = -1, this.frameDebug = null, this.mainStall = new Ko.c(this.tracker, ((UU, XU, zU, cU) => {
+          this.shell.mainStalled(UU, XU, zU, cU)
+        }), (UU => this.shell.RL(UU))), this.onVisibility = () => {
           this.tracker.onVisibilityChange(), this.ping.onVisibilityChange(), this.mainStall.reset(), !document.hidden && this.fpsSpanStartMs >= 0 && (this.fpsFrames = 0, this.fpsSpanStartMs = performance.now())
         }, this.onBeforeUnload = () => {
           this.mainStall.unloading()
-        }, (0, cn.c)(MM.backend, MM.canvas, MM.adapterVendor), this.tracker.start((() => !MM.inGame()), this.gpu, "wasm"), document.addEventListener("visibilitychange", this.onVisibility), window.addEventListener("beforeunload", this.onBeforeUnload), (0, OQ.c)("wasm", (() => {
+        }, (0, bo.c)(UU.backend, UU.canvas, UU.adapterVendor), this.tracker.start((() => !UU.inGame()), this.gpu, "wasm"), document.addEventListener("visibilitychange", this.onVisibility), window.addEventListener("beforeunload", this.onBeforeUnload), (0, XD.d)("wasm", (() => {
           const {
-            n: rM,
-            sampleCount: iM
-          } = (0, rQ.g)();
-          return `${MM.backend}, quality steps aim at up to ${SQ.c.target.maxFps} fps, pixel n ${rM}, msaa ${iM}`
-        }), (rM => {
-          rM.setLoadCounts(MM.readLoadCounts), this.frameDebug = rM
+            n: XU,
+            sampleCount: zU
+          } = (0, ho.d)();
+          return `${UU.backend}, quality steps aim at up to ${zD.b.target.maxFps} fps, pixel n ${XU}, msaa ${zU}`
+        }), (XU => {
+          XU.setLoadCounts(UU.readLoadCounts), this.frameDebug = XU
         })), this.timers.push(setInterval((() => {
           this.flush(), this.fpsOverTime = null, this.initialFps = null
         }), 1e4), setInterval((() => {
           this.followGame() && this.shell.canSend() && (this.hasFlushedSinceConnect || (this.flush(), this.hasFlushedSinceConnect = !0))
         }), 250))
       }
-      animationFrame(MM) {
-        var rM;
-        this.mainStall.animationFrame(), this.tracker.onAnimationFrame(MM), null === (rM = this.frameDebug) || void 0 === rM || rM.animationFrame()
+      animationFrame(UU) {
+        var XU;
+        this.mainStall.animationFrame(), this.tracker.onAnimationFrame(UU), null === (XU = this.frameDebug) || void 0 === XU || XU.animationFrame()
       }
-      sendsWent(MM, rM, iM) {
-        this.ping.onFrame(MM.headerWord(nO.K.PingSent), rM), this.sendsStartMs = rM, this.sendsEndMs = iM
+      sendsWent(UU, XU, zU) {
+        this.ping.onFrame(UU.headerWord(Ac.I.PingSent), XU), this.sendsStartMs = XU, this.sendsEndMs = zU
       }
-      frameRan(MM, rM, iM, OM) {
-        var SM;
-        this.ping.onFrame(MM.headerWord(nO.K.PingSent), iM);
-        const jM = this.tracker;
-        this.pacing.onFrame(MM, jM.isSampling());
-        const aM = MM.headerWord(nO.K.TickUs) / 1e3 + (0, lO.K)();
-        var PM;
-        (jM.kE(aM), null === (SM = this.frameDebug) || void 0 === SM || SM.wasmFrame(MM, rM, iM, OM, jM.isSampling(), aM), null !== this.game) && (null === (PM = this.frameDebug) || void 0 === PM || PM.inGame());
-        const nM = this.sendsStartMs >= rM ? this.sendsEndMs - this.sendsStartMs : 0,
-          QM = Math.max(0, iM - rM - aM - nM);
-        if ("drawn" !== OM) return void("paced" === OM ? (this.pacedCpuMs += QM, this.mainStall.paced()) : "skipped" === OM && this.mainStall.reset());
-        this.followGame(), this.mainStall.drawn(rM), jM.onFrameStart(rM);
-        this.gpu.onFrame(MM.headerWord(nO.K.GpuSampled), MM.headerWord(nO.K.GpuTimed), MM.headerWord(nO.K.GpuFrameUs), jM.isSampling()) && jM.onGpuSampleStarted(), jM.onFrameCpu(QM + this.pacedCpuMs), this.pacedCpuMs = 0, this.countFpsFrame(rM)
+      frameRan(UU, XU, zU, cU) {
+        var yU;
+        this.ping.onFrame(UU.headerWord(Ac.I.PingSent), zU);
+        const QU = this.tracker;
+        this.pacing.onFrame(UU, QU.isSampling());
+        const AU = UU.headerWord(Ac.I.TickUs) / 1e3 + (0, tc.L)();
+        var FU;
+        (QU.aG(AU), null === (yU = this.frameDebug) || void 0 === yU || yU.wasmFrame(UU, XU, zU, cU, QU.isSampling(), AU), null !== this.game) && (null === (FU = this.frameDebug) || void 0 === FU || FU.inGame());
+        const oU = this.sendsStartMs >= XU ? this.sendsEndMs - this.sendsStartMs : 0,
+          DU = Math.max(0, zU - XU - AU - oU);
+        if ("drawn" !== cU) return void("paced" === cU ? (this.pacedCpuMs += DU, this.mainStall.paced()) : "skipped" === cU && this.mainStall.reset());
+        this.followGame(), this.mainStall.drawn(XU), QU.onFrameStart(XU);
+        this.gpu.onFrame(UU.headerWord(Ac.I.GpuSampled), UU.headerWord(Ac.I.GpuTimed), UU.headerWord(Ac.I.GpuFrameUs), QU.isSampling()) && QU.onGpuSampleStarted(), QU.onFrameCpu(DU + this.pacedCpuMs), this.pacedCpuMs = 0, this.countFpsFrame(XU)
       }
       framePaced() {
-        var MM;
-        this.mainStall.paced(), null === (MM = this.frameDebug) || void 0 === MM || MM.wasmPeekPaced(this.tracker.isSampling())
+        var UU;
+        this.mainStall.paced(), null === (UU = this.frameDebug) || void 0 === UU || UU.wasmPeekPaced(this.tracker.isSampling())
       }
       stop() {
-        for (const MM of this.timers) clearInterval(MM);
+        for (const UU of this.timers) clearInterval(UU);
         this.timers.length = 0, document.removeEventListener("visibilitychange", this.onVisibility), window.removeEventListener("beforeunload", this.onBeforeUnload), this.mainStall.stop(), this.ping.stop(), this.tracker.limiterTelemetry.stop()
       }
       followGame() {
-        const MM = this.shell.joinedGame();
-        if (MM !== this.game) {
-          var rM;
-          if (this.game = MM, null !== MM) null === (rM = this.frameDebug) || void 0 === rM || rM.joined();
+        const UU = this.shell.joinedGame();
+        if (UU !== this.game) {
+          var XU;
+          if (this.game = UU, null !== UU) null === (XU = this.frameDebug) || void 0 === XU || XU.joined();
           this.tracker.snapshotAndReset(), this.pacing.onJoin(), this.hasFlushedSinceConnect = !1, this.inGameAtLastFlush = !1, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.pacedCpuMs = 0, this.firstSpanFps = null, this.fpsOverTime = null, this.initialFps = null, this.mainStall.reset()
         }
-        return null !== MM
+        return null !== UU
       }
-      countFpsFrame(MM) {
+      countFpsFrame(UU) {
         if (this.fpsSpanStartMs < 0) {
           if (!this.shell.inGame()) return;
-          this.fpsSpanStartMs = MM
+          this.fpsSpanStartMs = UU
         }
         this.fpsFrames++;
-        const rM = MM - this.fpsSpanStartMs;
-        if (!(rM < Nn.b)) {
+        const XU = UU - this.fpsSpanStartMs;
+        if (!(XU < io.c)) {
           if (!document.hidden) {
-            const MM = 1e3 * this.fpsFrames / rM;
-            this.firstSpanFps ??= MM, this.initialFps = this.firstSpanFps, this.fpsOverTime = MM
+            const UU = 1e3 * this.fpsFrames / XU;
+            this.firstSpanFps ??= UU, this.initialFps = this.firstSpanFps, this.fpsOverTime = UU
           }
-          this.fpsFrames = 0, this.fpsSpanStartMs = MM
+          this.fpsFrames = 0, this.fpsSpanStartMs = UU
         }
       }
       flush() {
-        const MM = this.followGame(),
+        const UU = this.followGame(),
           {
-            cpuFrameMs: rM,
-            refreshHz: iM,
-            cpuBottleneck: SM,
-            frameIntervalCv: jM,
-            ...aM
+            cpuFrameMs: XU,
+            refreshHz: zU,
+            cpuBottleneck: yU,
+            frameIntervalCv: QU,
+            ...AU
           } = this.tracker.snapshotAndReset(),
-          PM = this.shell.inGame(),
-          nM = PM && this.inGameAtLastFlush,
-          QM = nM ? aM : (0, sn.h)(aM),
-          zM = this.pacing.snapshotAndReset(nM);
-        if (this.inGameAtLastFlush = PM, this.pendingLightFailures += this.shell.takeFailedMeshJobs(), !MM || !this.shell.canSend()) return;
-        const LM = performance.now(),
-          HM = (0, Yn.x)((0, Yn.v)(LM), this.unsentPage),
-          JM = function(MM, rM, iM, SM, jM, aM, PM, nM) {
-            var QM, zM, LM, mM, HM;
-            const hM = {},
+          FU = this.shell.inGame(),
+          oU = FU && this.inGameAtLastFlush,
+          DU = oU ? AU : (0, qo.e)(AU),
+          EU = this.pacing.snapshotAndReset(oU);
+        if (this.inGameAtLastFlush = FU, this.pendingLightFailures += this.shell.takeFailedMeshJobs(), !UU || !this.shell.canSend()) return;
+        const YU = performance.now(),
+          IU = (0, fo.r)((0, fo.n)(YU), this.unsentPage),
+          aU = function(UU, XU, zU, yU, QU, AU, FU, oU) {
+            var DU, EU, YU, NU, IU;
+            const pU = {},
               {
-                canvas: JM
-              } = MM,
-              dM = (0, fn.g)({
-                refreshHz: rM.refreshHz,
-                msaa: MM.msaa(),
-                autoMsaaOff: (0, iQ.e)()
+                canvas: aU
+              } = UU,
+              tU = (0, uo.i)({
+                refreshHz: XU.refreshHz,
+                msaa: UU.msaa(),
+                autoMsaaOff: (0, UD.e)()
               });
-            for (const yM of (0, Rn.f)()) {
-              const lM = yM.name;
-              let EM;
-              if ((0, pn.u)(lM)) EM = (0, Yn.d)(lM);
-              else if ((0, Yn.j)(lM)) EM = nM[lM];
-              else if ((0, fn.j)(lM)) EM = dM[lM];
-              else switch (lM) {
+            for (const gU of (0, eo.d)()) {
+              const kU = gU.name;
+              let GU;
+              if ((0, Co.B)(kU)) GU = (0, fo.b)(kU);
+              else if ((0, fo.f)(kU)) GU = oU[kU];
+              else if ((0, uo.j)(kU)) GU = tU[kU];
+              else switch (kU) {
                 case "fps":
-                  EM = SM;
+                  GU = yU;
                   break;
-                case "aP":
-                  EM = jM;
+                case "QF":
+                  GU = QU;
                   break;
-                case "LP":
-                  EM = (0, MQ.F)((0, rQ.g)().n);
+                case "EF":
+                  GU = (0, To.z)((0, ho.d)().n);
                   break;
-                case "mP":
-                  EM = Math.max(JM.width, JM.height);
+                case "YF":
+                  GU = Math.max(aU.width, aU.height);
                   break;
-                case "HP":
-                  EM = Math.min(JM.width, JM.height);
+                case "NF":
+                  GU = Math.min(aU.width, aU.height);
                   break;
-                case "hP":
-                  EM = navigator.hardwareConcurrency || null;
+                case "IF":
+                  GU = navigator.hardwareConcurrency || null;
                   break;
-                case "JP":
-                  EM = (0, Lj.getWebGpuSupported)();
+                case "pF":
+                  GU = (0, DQ.getWebGpuSupported)();
                   break;
-                case "dP":
-                  EM = null === MM.fallbackReason ? null : jQ[MM.fallbackReason];
+                case "aF":
+                  GU = null === UU.fallbackReason ? null : cD[UU.fallbackReason];
                   break;
-                case "yP":
-                  EM = rM.cpuFrameMs;
+                case "tF":
+                  GU = XU.cpuFrameMs;
                   break;
-                case "lP":
-                  EM = rM.refreshHz;
+                case "gF":
+                  GU = XU.refreshHz;
                   break;
-                case "EP":
-                  EM = rM.cpuBottleneck;
+                case "kF":
+                  GU = XU.cpuBottleneck;
                   break;
-                case "UP":
-                  EM = rM.frameIntervalCv;
+                case "GF":
+                  GU = XU.frameIntervalCv;
                   break;
-                case "GP":
-                  EM = rM.frameMs;
+                case "BF":
+                  GU = XU.frameMs;
                   break;
-                case "CP":
-                  EM = rM.tickMs;
+                case "ZF":
+                  GU = XU.tickMs;
                   break;
-                case "tP":
-                  EM = rM.mainBusyShare;
+                case "dF":
+                  GU = XU.mainBusyShare;
                   break;
-                case "gP":
-                  EM = rM.mainProbeDelayMs;
+                case "LF":
+                  GU = XU.mainProbeDelayMs;
                   break;
-                case "eP":
-                  EM = rM.longAnimationFramesPerMin;
+                case "RF":
+                  GU = XU.longAnimationFramesPerMin;
                   break;
-                case "bP":
-                  EM = rM.longAnimationFrameTimeShare;
+                case "PF":
+                  GU = XU.longAnimationFrameTimeShare;
                   break;
-                case "wP":
-                  EM = rM.longAnimationFrameScriptShare;
+                case "WF":
+                  GU = XU.longAnimationFrameScriptShare;
                   break;
-                case "uP":
-                  EM = rM.gpuPassMs;
+                case "eF":
+                  GU = XU.gpuPassMs;
                   break;
-                case "RP":
-                  EM = rM.gpuSubmitToDoneMs;
+                case "CF":
+                  GU = XU.gpuSubmitToDoneMs;
                   break;
-                case "pP":
-                  EM = iM.lagP50Ms;
+                case "wF":
+                  GU = zU.lagP50Ms;
                   break;
-                case "WP":
-                  EM = iM.lagP90Ms;
+                case "qF":
+                  GU = zU.lagP90Ms;
                   break;
-                case "FP":
-                  EM = (0, un.j)(aM);
+                case "mF":
+                  GU = (0, Lo.j)(AU);
                   break;
-                case "zP":
-                  EM = PM;
+                case "DF":
+                  GU = FU;
                   break;
-                case "sP":
-                case "DP":
-                case "kP":
-                case "ZP":
-                case "oP":
-                case "fP":
-                case "YP":
-                case "NP":
-                case "AP":
-                case "xP":
-                case "vP":
-                case "BP":
-                case "XP":
-                case "IP":
-                case "KP":
-                  EM = null;
+                case "SF":
+                case "rF":
+                case "uF":
+                case "fF":
+                case "iF":
+                case "HF":
+                case "MF":
+                case "vF":
+                case "VF":
+                case "sF":
+                case "nF":
+                case "lF":
+                case "xF":
+                case "JF":
+                case "jF":
+                  GU = null;
                   break;
-                case "Hn":
-                  EM = (0, Lj.getPlatformType)();
+                case "Eo":
+                  GU = (0, DQ.getPlatformType)();
                   break;
-                case "hn":
-                  EM = (0, Lj.getGpuVendor)();
+                case "Yo":
+                  GU = (0, DQ.getGpuVendor)();
                   break;
-                case "Jn":
-                  EM = Bn.b[MM.backend];
+                case "Io":
+                  GU = so.e[UU.backend];
                   break;
-                case "dn":
-                  EM = (0, An.c)();
+                case "po":
+                  GU = (0, Ho.c)();
                   break;
-                case "yn":
-                  EM = (0, Lj.getOperatingSystem)();
+                case "ao":
+                  GU = (0, DQ.getOperatingSystem)();
                   break;
-                case "En":
-                  EM = (0, Lj.getTrafficSource)();
+                case "ko":
+                  GU = (0, DQ.getTrafficSource)();
                   break;
-                case "Un":
-                  EM = null !== (QM = OM.d.get("gameEntrySource")) && void 0 !== QM ? QM : Wn.e;
+                case "Go":
+                  GU = null !== (DU = cU.e.get("gameEntrySource")) && void 0 !== DU ? DU : wo.h;
                   break;
-                case "Gn":
-                  EM = null !== (zM = rM.frameLimiter) && void 0 !== zM ? zM : Wn.e;
+                case "Bo":
+                  GU = null !== (EU = XU.frameLimiter) && void 0 !== EU ? EU : wo.h;
                   break;
-                case "Cn":
-                  EM = (0, kn.j)();
+                case "Zo":
+                  GU = (0, So.i)();
                   break;
-                case "bn":
-                  EM = null !== (LM = (0, Zn.e)()) && void 0 !== LM ? LM : Wn.e;
+                case "Ro":
+                  GU = null !== (YU = (0, ro.b)()) && void 0 !== YU ? YU : wo.h;
                   break;
-                case "wn":
-                  EM = (0, kn.d)(JM.width, JM.height);
+                case "Po":
+                  GU = (0, So.b)(aU.width, aU.height);
                   break;
-                case "tn":
-                  EM = (0, Rn.j)(-(new Date).getTimezoneOffset());
+                case "Wo":
+                  GU = (0, eo.g)(-(new Date).getTimezoneOffset());
                   break;
-                case "sn":
-                  EM = null !== (mM = MM.fallbackReason) && void 0 !== mM ? mM : Wn.e;
+                case "ro":
+                  GU = null !== (NU = UU.fallbackReason) && void 0 !== NU ? NU : wo.h;
                   break;
-                case "Zn":
-                  EM = "ready";
+                case "Ho":
+                  GU = "ready";
                   break;
-                case "fn":
-                  EM = (0, Lj.getSoftwareRenderer)();
+                case "Mo":
+                  GU = (0, DQ.getSoftwareRenderer)();
                   break;
-                case "un":
-                  EM = (0, xn.c)();
+                case "Co":
+                  GU = (0, Mo.e)();
                   break;
-                case "Rn":
-                  EM = (0, vn.d)().replayState;
+                case "wo":
+                  GU = (0, vo.g)().replayState;
                   break;
-                case "pn":
-                  EM = (0, vn.d)().replaySelection;
+                case "qo":
+                  GU = (0, vo.g)().replaySelection;
                   break;
-                case "Wn":
-                  EM = null !== MM.shaderPackReach() ? "true" : "false";
+                case "Oo":
+                  GU = null !== UU.shaderPackReach() ? "true" : "false";
                   break;
-                case "Yn":
-                  EM = null !== (HM = MM.shaderPackReach()) && void 0 !== HM && HM.sceneDepth ? "true" : "false";
+                case "vo":
+                  GU = null !== (IU = UU.shaderPackReach()) && void 0 !== IU && IU.sceneDepth ? "true" : "false";
                   break;
-                case "Nn": {
-                  const rM = MM.shaderPackReach();
-                  EM = null !== rM && void 0 !== rM && rM.sunShadow ? "all" : null !== rM && void 0 !== rM && rM.airShadow ? "air" : "none";
+                case "Vo": {
+                  const XU = UU.shaderPackReach();
+                  GU = null !== XU && void 0 !== XU && XU.sunShadow ? "all" : null !== XU && void 0 !== XU && XU.airShadow ? "air" : "none";
                   break
                 }
-                case "xn":
-                  EM = Fn.A;
+                case "mo":
+                  GU = Vo.F;
                   break;
-                case "Tn":
-                  EM = (0, Yn.m)();
+                case "UD":
+                  GU = (0, fo.i)();
                   break;
-                case "gn": {
-                  const rM = MM.DJ();
-                  EM = null === rM ? Wn.e : String(rM);
+                case "eo": {
+                  const XU = UU.ia();
+                  GU = null === XU ? wo.h : String(XU);
                   break
                 }
-                case "Dn":
-                case "kn":
-                  EM = Wn.e;
+                case "uo":
+                case "fo":
+                  GU = wo.h;
                   break;
                 default:
-                  throw new Error(`Unhandled field name: ${lM}`)
+                  throw new Error(`Unhandled field name: ${kU}`)
               }
-              if (void 0 === EM) throw new Error(`Metric ${lM} has no value`);
-              hM[lM] = EM
+              if (void 0 === GU) throw new Error(`Metric ${kU} has no value`);
+              pU[kU] = GU
             }
-            return hM
+            return pU
           }(this.shell, {
-            cpuFrameMs: rM,
-            refreshHz: iM,
-            cpuBottleneck: SM,
-            frameIntervalCv: jM,
-            ...QM
-          }, zM, this.fpsOverTime, this.initialFps, this.pendingLightFailures, this.ping.take(), HM);
-        if (! function(MM, rM, iM) {
-            return (0, Oi.e)(), MM(hM.n.Send, rM, iM)
-          }(this.shell.writeCmd, mM.ld, function(MM) {
-            const rM = (0, fM.f)((0, ai.h)(MM)),
-              iM = new Uint8Array(hM.Qd.BYTES + rM.length);
-            return new DataView(iM.buffer).setUint16(0, ai.d.AnalyticsUpdate, !0), iM.set(rM, hM.Qd.BYTES), iM
-          }(JM))) return this.unsentPage = HM, void(0 === this.sendsDropped++ && console.warn("[wasm-client] an analytics update found the cmd ring full: dropped"));
-        this.unsentPage = null, this.pendingLightFailures -= Math.min(this.pendingLightFailures, un.g), (0, Yn.s)(JM, "wasm", LM)
+            cpuFrameMs: XU,
+            refreshHz: zU,
+            cpuBottleneck: yU,
+            frameIntervalCv: QU,
+            ...DU
+          }, EU, this.fpsOverTime, this.initialFps, this.pendingLightFailures, this.ping.take(), IU);
+        if (! function(UU, XU, zU) {
+            return (0, cz.e)(), UU(pU.l.Send, XU, zU)
+          }(this.shell.writeCmd, NU.ud, function(UU) {
+            const XU = (0, HU.e)((0, Az.c)(UU)),
+              zU = new Uint8Array(pU.be.BYTES + XU.length);
+            return new DataView(zU.buffer).setUint16(0, Az.b.AnalyticsUpdate, !0), zU.set(XU, pU.be.BYTES), zU
+          }(aU))) return this.unsentPage = IU, void(0 === this.sendsDropped++ && console.warn("[wasm-client] an analytics update found the cmd ring full: dropped"));
+        this.unsentPage = null, this.pendingLightFailures -= Math.min(this.pendingLightFailures, Lo.g), (0, fo.m)(aU, "wasm", YU)
       }
     }
-    var nQ = iM(40731);
+    var AD = zU(40504);
 
-    function QQ(MM, rM, iM) {
-      const OM = new Map;
-      return (0, nQ.e)(((MM, iM, OM) => rM.jP(MM, iM, OM)), ((rM, iM, SM) => {
-        const jM = `${rM},${iM},${SM}`;
-        return OM.has(jM) || OM.set(jM, (0, Xr.e)(MM, rM, iM, SM)), OM.get(jM)
-      }), iM)
+    function FD(UU, XU, zU) {
+      const cU = new Map;
+      return (0, AD.c)(((UU, zU, cU) => XU.yF(UU, zU, cU)), ((XU, zU, yU) => {
+        const QU = `${XU},${zU},${yU}`;
+        return cU.has(QU) || cU.set(QU, (0, xX.c)(UU, XU, zU, yU)), cU.get(QU)
+      }), zU)
     }
-    var zQ = iM(40739),
-      LQ = iM(41975);
+    var oD = zU(40510),
+      DD = zU(41976);
 
-    function mQ(MM) {
-      const rM = null !== MM && 0 !== (hM.v.playerFlags(MM.api.apiView, 0) & hM.yd.CursorAim);
-      rM !== (0, LQ.n)() && (0, LQ.F)(rM, null !== MM)
-    }
-
-    function HQ(MM) {
-      return (0, sO.d)(DO.D, MM)
-    }
-    var hQ = iM(42135);
-    const JQ = new jM.h((MM => iM(53677)(`./${MM}/${MM}Client`)));
-    let dQ = null,
-      yQ = null;
-    async function lQ(MM) {
-      dQ ??= iM.e(32).then((() => iM(40209))).then((MM => {
-        yQ = MM.createDefaultClientPlugins
-      }), (MM => {
-        throw dQ = null, MM
-      })), await Promise.all([JQ.load(MM), dQ])
+    function ED(UU) {
+      const XU = null !== UU && 0 !== (pU.w.playerFlags(UU.api.apiView, 0) & pU.Od.CursorAim);
+      XU !== (0, DD.k)() && (0, DD.F)(XU, null !== UU)
     }
 
-    function EQ(MM) {
-      MM.load(new vr(nS, new LS))
+    function YD(UU) {
+      return (0, qc.d)(Oc.G, UU)
     }
-    let UQ = !1;
-    const GQ = new WeakMap;
+    var ND = zU(42133);
+    const ID = new QU.f((UU => zU(53669)(`./${UU}/${UU}Client`)));
+    let pD = null,
+      aD = null;
+    async function tD(UU) {
+      pD ??= zU.e(32).then((() => zU(39983))).then((UU => {
+        aD = UU.createDefaultClientPlugins
+      }), (UU => {
+        throw pD = null, UU
+      })), await Promise.all([ID.load(UU), pD])
+    }
 
-    function CQ(MM) {
+    function gD(UU) {
+      UU.load(new nX(Ay, new Dy))
+    }
+    let kD = !1;
+    const GD = new WeakMap;
+
+    function BD(UU) {
       try {
-        MM()
-      } catch (rM) {
-        console.error("[bloxd-wasm-client] a session-end step failed", rM)
+        UU()
+      } catch (XU) {
+        console.error("[bloxd-wasm-client] a session-end step failed", XU)
       }
     }
 
-    function eQ(MM, rM) {
+    function ZD(UU, XU) {
       ! function() {
-        var MM, rM;
-        jS.Howler.volume();
-        const iM = jS.Howler;
-        null === (MM = iM._autoResume) || void 0 === MM || MM.call(iM), null === (rM = iM._autoSuspend) || void 0 === rM || rM.call(iM)
+        var UU, XU;
+        cy.Howler.volume();
+        const zU = cy.Howler;
+        null === (UU = zU._autoResume) || void 0 === UU || UU.call(zU), null === (XU = zU._autoSuspend) || void 0 === XU || XU.call(zU)
       }();
-      const iM = new UM(rM.core, rM.memory, rM.audio);
-      let jM;
+      const zU = new BU(XU.core, XU.memory, XU.audio);
+      let QU;
       try {
-        jM = new sS(iM, rM.options)
-      } catch (mM) {
-        return MM.crash(kS.F, mM), null
-      }(0, nM.f)(DS(iM, jM));
-      const zM = new vP({
-        running: MM,
-        api: iM,
-        core: rM.core,
-        memory: rM.memory,
-        staleOr: rM.staleOr,
-        reportFault: rM.reportReplayFault,
-        options: rM.options,
-        sessionInfo: rM.sessionInfo,
-        replayShaderPack: rM.replayShaderPack
+        QU = new qy(zU, XU.options)
+      } catch (NU) {
+        return UU.crash(Sy.C, NU), null
+      }(0, oU.f)(Oy(zU, QU));
+      const EU = new sF({
+        running: UU,
+        api: zU,
+        core: XU.core,
+        memory: XU.memory,
+        staleOr: XU.staleOr,
+        reportFault: XU.reportReplayFault,
+        options: XU.options,
+        sessionInfo: XU.sessionInfo,
+        replayShaderPack: XU.replayShaderPack
       });
-      (0, lO.B)();
-      const LM = new cO({
-        api: iM,
-        tables: jM,
-        sessionInfo: rM.sessionInfo,
-        gameFactory: MM => JQ.loadedFactory(MM),
-        defaultPlugins: (MM, rM, iM, OM) => {
-          if (null === yQ) throw new Error("The default plugins started before they loaded");
-          return yQ(MM, rM, iM, OM)
+      (0, tc.y)();
+      const YU = new bc({
+        api: zU,
+        tables: QU,
+        sessionInfo: XU.sessionInfo,
+        gameFactory: UU => ID.loadedFactory(UU),
+        defaultPlugins: (UU, XU, zU, cU) => {
+          if (null === aD) throw new Error("The default plugins started before they loaded");
+          return aD(UU, XU, zU, cU)
         },
-        serverOptions: rM.options,
-        onNetEvent: MM => {
-          zM.netEvent(MM), rM.onNetEvent(MM)
+        serverOptions: XU.options,
+        onNetEvent: UU => {
+          EU.netEvent(UU), XU.onNetEvent(UU)
         },
-        setLocalOptions: rM => {
-          BP(MM, {
-            changes: rM,
+        setLocalOptions: XU => {
+          mF(UU, {
+            changes: XU,
             reset: !1
           })
         },
-        playSound: (MM, iM, OM, SM, jM, aM, PM) => rM.audio.playGame(MM, iM, OM, SM, jM, aM, PM),
-        preloadSounds: MM => {
-          rM.audio.preload(function(MM) {
-            const rM = [];
-            for (const iM of MM) {
-              const MM = sr(iM);
-              if (null !== MM)
-                for (let iM = MM[0]; iM < MM[0] + MM[1]; iM++) rM.push(iM)
+        playSound: (UU, zU, cU, yU, QU, AU, FU) => XU.audio.playGame(UU, zU, cU, yU, QU, AU, FU),
+        preloadSounds: UU => {
+          XU.audio.preload(function(UU) {
+            const XU = [];
+            for (const zU of UU) {
+              const UU = SX(zU);
+              if (null !== UU)
+                for (let zU = UU[0]; zU < UU[0] + UU[1]; zU++) XU.push(zU)
             }
-            return rM
-          }(MM))
+            return XU
+          }(UU))
         },
         onSessionEnd: () => {
-          CQ(SM.n), CQ(lS), CQ((() => {
-            OM.d.set({
+          BD(yU.m), BD(ty), BD((() => {
+            cU.e.set({
               openInGameMenuName: null
             })
-          })), CQ((() => {
-            rM.audio.endSession()
+          })), BD((() => {
+            XU.audio.endSession()
           }))
         },
-        beforeWrite: rM.beforeWrite,
-        beforeOp: rM.beforeOp,
-        cameraScreen: yS,
-        showCameraFacing: ES,
-        onEventOverflow: rM.onEventOverflow,
-        screenBandY: PM.k,
-        replayEntities: zM.entityHooks,
-        hasPackModel: rM.hasPackModel
+        beforeWrite: XU.beforeWrite,
+        beforeOp: XU.beforeOp,
+        cameraScreen: ay,
+        showCameraFacing: gy,
+        onEventOverflow: XU.onEventOverflow,
+        screenBandY: FU.l,
+        replayEntities: EU.entityHooks,
+        hasPackModel: XU.hasPackModel
       });
-      return LM.attach(MM), GQ.set(LM, zM), OS(LM.items, rM.audio),
-        function(MM) {
-          MM.setClientFreeCameraGrant("isDev", !1);
-          const rM = rM => {
-            MM.setClientFreeCameraGrant("hasDeveloperRank", rM.playerHasRank("developer"))
+      return YU.attach(UU), GD.set(YU, EU), Xy(YU.items, XU.audio),
+        function(UU) {
+          UU.setClientFreeCameraGrant("isDev", !1);
+          const XU = XU => {
+            UU.setClientFreeCameraGrant("hasDeveloperRank", XU.playerHasRank("developer"))
           };
-          (0, aM.j)("userContextUpdated", rM)
-        }(LM), UQ || (UQ = !0, (0, aM.j)("appManagerUpdated|openInGameMenuName", (MM => {
-          !MM && (0, QM.u)().includes(QM.e) && (0, QM.v)(QM.e)
-        }))), LM
+          (0, AU.n)("userContextUpdated", XU)
+        }(YU), kD || (kD = !0, (0, AU.n)("appManagerUpdated|openInGameMenuName", (UU => {
+          !UU && (0, DU.p)().includes(DU.c) && (0, DU.s)(DU.c)
+        }))), YU
     }
 
-    function bQ(MM) {
+    function RD(UU) {
       try {
-        MM.closeGame()
+        UU.closeGame()
       } finally {
-        var rM;
-        null === (rM = GQ.get(MM)) || void 0 === rM || rM.stop(), GQ.delete(MM)
+        var XU;
+        null === (XU = GD.get(UU)) || void 0 === XU || XU.stop(), GD.delete(UU)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

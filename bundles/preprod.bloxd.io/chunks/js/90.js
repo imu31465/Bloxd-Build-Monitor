@@ -1,411 +1,391 @@
 export const id = 90;
 export const ids = [90];
 export const modules = {
-  34915: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      EverythingMenu: () => MQ
+  34740: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      EverythingMenu: () => UD
     });
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1188),
-      PM = iM(1398),
-      nM = iM(2190),
-      QM = iM(1520),
-      zM = iM(1130),
-      LM = iM(1303);
+    var cU = zU(61),
+      yU = zU(1106),
+      QU = zU.n(yU),
+      AU = zU(1193),
+      FU = zU(1390),
+      oU = zU(2136),
+      DU = zU(1494),
+      EU = zU(1115),
+      YU = zU(1305);
 
-    function mM(MM) {
+    function NU(UU) {
       let {
-        items: rM,
-        link: iM,
-        onClick: OM,
-        selectedItemId: SM,
-        className: mM,
-        padStartsOnTab: HM = !0
-      } = MM;
+        items: XU,
+        link: zU,
+        onClick: cU,
+        selectedItemId: yU,
+        className: NU,
+        padStartsOnTab: IU = !0
+      } = UU;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = (0, zM.i)(), dM = [];
-      for (const jM of rM) {
-        var yM;
-        const MM = dM[dM.length - 1];
-        var lM;
-        if (MM && MM.title === (null !== (yM = jM.section) && void 0 !== yM ? yM : null)) MM.items.push(jM);
-        else dM.push({
-          title: null !== (lM = jM.section) && void 0 !== lM ? lM : null,
-          items: [jM]
+        t: pU
+      } = (0, AU.I)(), aU = (0, EU.h)(), tU = [];
+      for (const QU of XU) {
+        var gU;
+        const UU = tU[tU.length - 1];
+        var kU;
+        if (UU && UU.title === (null !== (gU = QU.section) && void 0 !== gU ? gU : null)) UU.items.push(QU);
+        else tU.push({
+          title: null !== (kU = QU.section) && void 0 !== kU ? kU : null,
+          items: [QU]
         })
       }
-      return (0, LM.jsxs)("div", {
-        className: jM()("MenuSideBarBody", mM),
+      return (0, YU.jsxs)("div", {
+        className: QU()("MenuSideBarBody", NU),
         "data-pad-tabs": "2",
-        children: [dM.map(((MM, rM) => {
-          var iM;
-          return (0, LM.jsxs)("div", {
+        children: [tU.map(((UU, XU) => {
+          var zU;
+          return (0, YU.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [MM.title && (0, LM.jsx)("div", {
+            children: [UU.title && (0, YU.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: hM(MM.title)
-            }), MM.items.map((MM => {
-              var rM;
-              const iM = !!MM.iconElement || !!MM.faIcon;
-              return (0, LM.jsxs)("div", {
+              children: pU(UU.title)
+            }), UU.items.map((UU => {
+              var XU;
+              const zU = !!UU.iconElement || !!UU.faIcon;
+              return (0, YU.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": SM === MM.id ? "true" : void 0,
-                "data-pad-default-focus": HM && SM === MM.id || void 0,
-                className: jM()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: SM === MM.id
+                "data-pad-selected": yU === UU.id ? "true" : void 0,
+                "data-pad-default-focus": IU && yU === UU.id || void 0,
+                className: QU()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: yU === UU.id
                 }),
                 onClick: () => {
-                  OM(MM.id)
+                  cU(UU.id)
                 },
-                children: [iM && (0, LM.jsx)("div", {
+                children: [zU && (0, YU.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (rM = MM.iconElement) && void 0 !== rM ? rM : (0, LM.jsx)(PM.b, {
-                    name: MM.faIcon
+                  children: null !== (XU = UU.iconElement) && void 0 !== XU ? XU : (0, YU.jsx)(FU.d, {
+                    name: UU.faIcon
                   })
-                }), (!JM || !iM) && (0, LM.jsx)("div", {
-                  children: hM(MM.title)
-                }), MM.redDot && (0, LM.jsx)(nM.d, {
+                }), (!aU || !zU) && (0, YU.jsx)("div", {
+                  children: pU(UU.title)
+                }), UU.redDot && (0, YU.jsx)(oU.c, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, MM.id)
+              }, UU.id)
             }))]
-          }, null !== (iM = MM.title) && void 0 !== iM ? iM : rM)
-        })), iM && (0, LM.jsxs)("div", {
-          ...(0, QM.fb)(),
+          }, null !== (zU = UU.title) && void 0 !== zU ? zU : XU)
+        })), zU && (0, YU.jsxs)("div", {
+          ...(0, DU.W)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: iM.onClick,
-          children: [(0, LM.jsx)("div", {
+          onClick: zU.onClick,
+          children: [(0, YU.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, LM.jsx)(PM.b, {
-              name: iM.faIcon
+            children: (0, YU.jsx)(FU.d, {
+              name: zU.faIcon
             })
-          }), (0, LM.jsx)("div", {
-            children: hM(iM.title)
-          }), (0, LM.jsx)(PM.b, {
+          }), (0, YU.jsx)("div", {
+            children: pU(zU.title)
+          }), (0, YU.jsx)(FU.d, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var HM = iM(2798),
-      hM = iM(1142),
-      JM = iM(2640),
-      dM = iM(3508),
-      yM = iM(83),
-      lM = iM(2039),
-      EM = iM(2385),
-      UM = iM(2389),
-      GM = iM(1763),
-      CM = iM(1396),
-      eM = iM(5401),
-      bM = iM(19),
-      wM = iM(34920);
+    var IU = zU(2818),
+      pU = zU(1129),
+      aU = zU(2616),
+      tU = zU(3478),
+      gU = zU(97),
+      kU = zU(2005),
+      GU = zU(2365),
+      BU = zU(2372),
+      ZU = zU(1726),
+      RU = zU(1384),
+      PU = zU(5540),
+      WU = zU(27),
+      dU = zU(34748);
 
-    function tM(MM) {
+    function LU(UU) {
       let {
-        setApplySettingsCallback: rM
-      } = MM;
+        setApplySettingsCallback: XU
+      } = UU;
       const {
-        clientEscMenuOptions: iM
-      } = (0, bM.m)(["clientEscMenuOptions"]), [SM, jM] = (0, OM.useState)(!1), [aM, PM] = (0, OM.useState)(!1), [nM, zM] = (0, OM.useState)(6400), [mM, HM] = (0, OM.useState)(3600), [hM, JM] = (0, OM.useState)(!1), [dM, yM] = (0, OM.useState)(!1);
+        clientEscMenuOptions: zU
+      } = (0, WU.q)(["clientEscMenuOptions"]), [yU, QU] = (0, cU.useState)(!1), [AU, FU] = (0, cU.useState)(!1), [oU, EU] = (0, cU.useState)(6400), [NU, IU] = (0, cU.useState)(3600), [pU, aU] = (0, cU.useState)(!1), [tU, gU] = (0, cU.useState)(!1);
 
-      function lM(MM) {
-        const rM = "screenshot" === MM ? PM : jM;
-        rM(!0);
-        const iM = hM ? "normals" : dM ? "depth" : null;
-        wM.devTools.downloadScene(MM, {
-          width: nM,
-          height: mM,
-          colouring: iM
-        }).catch((MM => {
-          console.error("Couldn't download the scene", MM)
+      function kU(UU) {
+        const XU = "screenshot" === UU ? FU : QU;
+        XU(!0);
+        const zU = pU ? "normals" : tU ? "depth" : null;
+        dU.devTools.downloadScene(UU, {
+          width: oU,
+          height: NU,
+          colouring: zU
+        }).catch((UU => {
+          console.error("Couldn't download the scene", UU)
         })).finally((() => {
-          rM(!1)
+          XU(!1)
         }))
       }
-      return (0, LM.jsxs)("div", {
+      return (0, YU.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, LM.jsx)(eM.c, {
+        children: [(0, YU.jsx)(PU.e, {
           label: "Disable Ambient Occlusion",
-          checked: iM.disableAmbientOcclusion,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              disableAmbientOcclusion: MM
-            }), rM((() => eM.j))
+          checked: zU.disableAmbientOcclusion,
+          onClick: UU => {
+            WU.e.setClientEscMenuOptions({
+              disableAmbientOcclusion: UU
+            }), XU((() => PU.k))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), wM.devTools.supports("ambientLight") && (0, LM.jsx)(eM.h, {
+        }), dU.devTools.supports("ambientLight") && (0, YU.jsx)(PU.j, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: iM.ambientLightIntensity,
-          onChange: MM => {
-            wM.devTools.setAmbientLightIntensity(MM).then((() => {
-              bM.d.setClientEscMenuOptions({
-                ambientLightIntensity: MM
+          initValue: zU.ambientLightIntensity,
+          onChange: UU => {
+            dU.devTools.setAmbientLightIntensity(UU).then((() => {
+              WU.e.setClientEscMenuOptions({
+                ambientLightIntensity: UU
               })
-            })).catch((MM => {
-              console.error("Couldn't set the ambient light", MM)
+            })).catch((UU => {
+              console.error("Couldn't set the ambient light", UU)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), wM.devTools.supports("weaponRaycasts") && (0, LM.jsx)(eM.c, {
+        }), dU.devTools.supports("weaponRaycasts") && (0, YU.jsx)(PU.e, {
           label: "Show Weapon Raycasts",
-          checked: iM.showWeaponRaycasts,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              showWeaponRaycasts: MM
+          checked: zU.showWeaponRaycasts,
+          onClick: UU => {
+            WU.e.setClientEscMenuOptions({
+              showWeaponRaycasts: UU
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), wM.devTools.supports("sceneDownload") && (0, LM.jsxs)("div", {
+        }), dU.devTools.supports("sceneDownload") && (0, YU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, LM.jsx)(eM.c, {
+            children: [(0, YU.jsx)(PU.e, {
               label: "Apply normal-based coloring",
-              checked: hM,
-              onClick: MM => {
-                JM(MM), MM && yM(!1)
+              checked: pU,
+              onClick: UU => {
+                aU(UU), UU && gU(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, LM.jsx)(eM.c, {
+            }), (0, YU.jsx)(PU.e, {
               label: "Apply depth-based coloring",
-              checked: dM,
-              onClick: MM => {
-                yM(MM), MM && JM(!1)
+              checked: tU,
+              onClick: UU => {
+                gU(UU), UU && aU(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, LM.jsxs)("div", {
+            }), (0, YU.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, LM.jsx)("div", {
+              children: [(0, YU.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, LM.jsx)(GM.b, {
+              }), (0, YU.jsx)(ZU.e, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (MM, rM) => {
-                  const iM = parseInt(MM) || 6400;
-                  zM(iM)
+                onValueChange: (UU, XU) => {
+                  const zU = parseInt(UU) || 6400;
+                  EU(zU)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: nM.toString()
-              }), (0, LM.jsx)("span", {
+                defaultValue: oU.toString()
+              }), (0, YU.jsx)("span", {
                 children: "X"
-              }), (0, LM.jsx)(GM.b, {
+              }), (0, YU.jsx)(ZU.e, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (MM, rM) => {
-                  const iM = parseInt(MM) || 3600;
-                  HM(iM)
+                onValueChange: (UU, XU) => {
+                  const zU = parseInt(UU) || 3600;
+                  IU(zU)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: mM.toString()
+                defaultValue: NU.toString()
               })]
-            }), (0, LM.jsxs)("div", {
+            }), (0, YU.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, LM.jsxs)(QM.e, {
+              children: [(0, YU.jsxs)(DU.f, {
                 onClick: () => {
-                  lM("screenshot")
+                  kU("screenshot")
                 },
-                disabled: aM,
-                children: [aM && (0, LM.jsx)(CM.d, {}), "Download Screenshot"]
-              }), (0, LM.jsxs)(QM.e, {
+                disabled: AU,
+                children: [AU && (0, YU.jsx)(RU.b, {}), "Download Screenshot"]
+              }), (0, YU.jsxs)(DU.f, {
                 onClick: () => {
-                  lM("glb")
+                  kU("glb")
                 },
-                disabled: SM,
-                children: [SM && (0, LM.jsx)(CM.d, {}), "Download GLB"]
+                disabled: yU,
+                children: [yU && (0, YU.jsx)(RU.b, {}), "Download GLB"]
               })]
             })]
-          }), (0, LM.jsx)("div", {
+          }), (0, YU.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var gM = iM(119),
-      uM = iM(1144),
-      RM = iM(34929),
-      pM = iM(3366),
-      WM = iM(1591),
-      sM = iM(1279),
-      DM = iM(1240),
-      kM = iM(3461),
-      ZM = iM(2150),
-      oM = iM(1573),
-      fM = iM(332),
-      YM = iM(2397),
-      NM = iM(2401),
-      AM = iM(3394),
-      xM = iM(2919),
-      vM = iM(1722),
-      FM = iM(3427),
-      BM = iM(3463),
-      XM = iM(187);
-    var IM = iM(1899),
-      KM = iM(3385);
-    async function qM() {
+    var eU = zU(142),
+      CU = zU(1131),
+      wU = zU(34762),
+      qU = zU(3335),
+      OU = zU(1568),
+      SU = zU(1280),
+      rU = zU(1250),
+      uU = zU(3433),
+      fU = zU(2109),
+      iU = zU(1545),
+      HU = zU(344),
+      MU = zU(2381),
+      vU = zU(2387),
+      VU = zU(3363),
+      sU = zU(2923),
+      nU = zU(1685),
+      mU = zU(3379),
+      lU = zU(3435),
+      xU = zU(220);
+    var JU = zU(1877),
+      jU = zU(3354);
+    async function KU() {
       try {
-        return function(MM) {
-          const rM = new Map;
+        return function(UU) {
+          const XU = new Map;
           for (const {
-              store: iM,
-              status: OM,
-              autoRenewStatus: SM,
-              managementUrl: jM
+              store: zU,
+              status: cU,
+              autoRenewStatus: yU,
+              managementUrl: QU
             }
-            of Object.values(MM.subscriptions)) !(0, AM.k)(iM) || (0, AM.o)(OM) || "willNotRenew" === SM || rM.has(iM) || rM.set(iM, null !== jM && void 0 !== jM ? jM : AM.r[iM]);
-          return Array.from(rM, (MM => {
-            let [rM, iM] = MM;
+            of Object.values(UU.subscriptions)) !(0, VU.k)(zU) || (0, VU.o)(cU) || "willNotRenew" === yU || XU.has(zU) || XU.set(zU, null !== QU && void 0 !== QU ? QU : VU.p[zU]);
+          return Array.from(XU, (UU => {
+            let [XU, zU] = UU;
             return {
-              store: rM,
-              managementUrl: iM
+              store: XU,
+              managementUrl: zU
             }
           }))
-        }(await (0, IM.n)((0, KM.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (MM) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", MM), null
+        }(await (0, JU.l)((0, jU.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (UU) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", UU), null
       }
     }
 
-    function TM(MM) {
+    function bU(UU) {
       const {
-        t: rM,
-        selectedLanguage: iM
-      } = (0, aM.A)(), {
-        userContext: SM
-      } = (0, hM.b)(), {
-        superRankInfo: jM
-      } = SM, PM = (0, NM.usePurchasesAllowed)(), nM = MM && ((0, fM.zc)(jM) || SM.ranksMayChange) && PM, {
-        accountId: QM,
-        data: zM
-      } = (0, xM.g)(FM.d, nM);
-      if ((0, OM.useEffect)((() => {
-          if (nM) return FM.d.watchAccount(), vM.e.addRefetchListener("billing", (MM => {
-            "reconnected" === MM ? FM.d.refreshAfterReconnect() : FM.d.refresh()
+        t: XU,
+        selectedLanguage: zU
+      } = (0, AU.I)(), {
+        userContext: yU
+      } = (0, pU.d)(), {
+        superRankInfo: QU
+      } = yU, FU = (0, vU.usePurchasesAllowed)(), oU = UU && ((0, HU.Gc)(QU) || yU.ranksMayChange) && FU, {
+        accountId: DU,
+        data: EU
+      } = (0, sU.k)(mU.e, oU);
+      if ((0, cU.useEffect)((() => {
+          if (oU) return mU.e.watchAccount(), nU.d.addRefetchListener("billing", (UU => {
+            "reconnected" === UU ? mU.e.refreshAfterReconnect() : mU.e.refresh()
           }))
-        }), [nM]), !nM || !(0, fM.zc)(jM) || null === zM || QM !== SM.whamm) return null;
-      const LM = function(MM, rM, iM) {
-        const OM = BM.i[(0, BM.d)(BM.i, rM)],
-          SM = void 0 === OM ? void 0 : (0, XM.d)(MM.entitlements, OM.entitlementId);
-        return void 0 === SM || null === SM.expiresAt || (0, AM.g)(SM) <= iM ? null : SM.willRenew && null === SM.billingIssueDetectedAt ? {
+        }), [oU]), !oU || !(0, HU.Gc)(QU) || null === EU || DU !== yU.whamm) return null;
+      const YU = function(UU, XU, zU) {
+        const cU = lU.d[(0, lU.b)(lU.d, XU)],
+          yU = void 0 === cU ? void 0 : (0, xU.b)(UU.entitlements, cU.entitlementId);
+        return void 0 === yU || null === yU.expiresAt || (0, VU.h)(yU) <= zU ? null : yU.willRenew && null === yU.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(SM.expiresAt, iM)
+          at: Math.max(yU.expiresAt, zU)
         } : {
           renews: !1,
-          at: (0, AM.g)(SM)
+          at: (0, VU.h)(yU)
         }
-      }(zM, jM.tier, Date.now());
-      if (null === LM) return null;
-      const mM = LM.renews ? "store:renewsOn" : "store:endsOn",
-        HM = new Date(LM.at).toLocaleDateString((0, aM.n)(iM.code, mM), {
+      }(EU, QU.tier, Date.now());
+      if (null === YU) return null;
+      const NU = YU.renews ? "store:renewsOn" : "store:endsOn",
+        IU = (0, AU.f)(zU.code, NU, YU.at, {
           year: "numeric",
           month: "short",
           day: "numeric"
         }),
-        JM = (0, NM.getBillingStore)(),
-        dM = null !== JM && (0, AM.k)(JM) ? function(MM, rM) {
-          var iM;
-          const OM = Object.values(MM.subscriptions).find((MM => MM.store === rM && !(0, AM.o)(MM.status)));
-          return void 0 === OM ? null : null !== (iM = OM.managementUrl) && void 0 !== iM ? iM : AM.r[rM]
-        }(zM, JM) : null;
+        aU = (0, vU.getBillingStore)(),
+        tU = null !== aU && (0, VU.k)(aU) ? function(UU, XU) {
+          var zU;
+          const cU = Object.values(UU.subscriptions).find((UU => UU.store === XU && !(0, VU.o)(UU.status)));
+          return void 0 === cU ? null : null !== (zU = cU.managementUrl) && void 0 !== zU ? zU : VU.p[XU]
+        }(EU, aU) : null;
       return {
-        text: rM(mM, {
-          date: HM
+        text: XU(NU, {
+          date: IU
         }),
-        manageUrl: dM
+        manageUrl: tU
       }
     }
-    var VM = iM(2616),
-      cM = iM(2546);
+    var TU = zU(1420),
+      hU = zU(1224),
+      UX = zU(5401),
+      XX = zU(1521),
+      zX = zU(4049),
+      cX = zU(2552);
 
-    function Mr(MM) {
+    function yX(UU) {
       let {
-        loggedIn: rM,
-        playerDbId: iM
-      } = MM;
+        showing: XU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)(), SM = (0, VM.e)(), jM = (0, VM.c)(SM, iM);
-      return cM.f.isAvailable && (rM || jM) && "notEligible" !== (null === SM || void 0 === SM ? void 0 : SM.answer) ? (0, LM.jsx)(eM.c, {
-        label: OM("sessionReplayConsent:setting"),
-        note: OM("sessionReplayConsent:settingNote"),
-        checked: jM,
-        onClick: MM => {
-          MM ? cM.f.askConsent(!1) : cM.f.withdrawConsent()
-        }
-      }) : null
-    }
-    var rr = iM(1440),
-      ir = iM(1217),
-      Or = iM(5282),
-      Sr = iM(1548),
-      jr = iM(4052),
-      ar = iM(2378);
-
-    function Pr(MM) {
-      let {
-        showing: rM
-      } = MM;
-      const {
-        t: iM
-      } = (0, aM.A)(), {
-        data: OM,
-        failed: SM
-      } = (0, xM.g)(jr.d, rM);
-      return 0 === (null === OM || void 0 === OM ? void 0 : OM.length) || null === OM && !SM ? null : (0, LM.jsxs)("div", {
+        t: zU
+      } = (0, AU.I)(), {
+        data: cU,
+        failed: yU
+      } = (0, sU.k)(zX.f, XU);
+      return 0 === (null === cU || void 0 === cU ? void 0 : cU.length) || null === cU && !yU ? null : (0, YU.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: iM("paymentHistory:title")
-        }), null === OM && SM && (0, LM.jsx)("div", {
+          children: zU("paymentHistory:title")
+        }), null === cU && yU && (0, YU.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: iM("paymentHistory:loadFailed")
-        }), null !== OM && (0, LM.jsx)("ul", {
+          children: zU("paymentHistory:loadFailed")
+        }), null !== cU && (0, YU.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: OM.map((MM => (0, LM.jsxs)("li", {
+          children: cU.map((UU => (0, YU.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, LM.jsx)(ar.c, {
-              entry: MM
-            }), (0, LM.jsxs)("div", {
+            children: [(0, YU.jsx)(cX.c, {
+              entry: UU
+            }), (0, YU.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, LM.jsx)("div", {
-                children: (0, ar.h)(iM, MM)
-              }), (0, LM.jsxs)("div", {
+              children: [(0, YU.jsx)("div", {
+                children: (0, cX.j)(zU, UU)
+              }), (0, YU.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(MM.at).toLocaleDateString(), "number" === typeof MM.orderId && ` \xb7 ${iM("paymentHistory:order",{orderId:MM.orderId})}`]
+                children: [new Date(UU.at).toLocaleDateString(), "number" === typeof UU.orderId && ` \xb7 ${zU("paymentHistory:order",{orderId:UU.orderId})}`]
               })]
             })]
-          }, (0, jr.b)(MM))))
+          }, (0, zX.d)(UU))))
         })]
       })
     }
-    var nr = iM(3403),
-      Qr = iM(2408),
-      zr = iM(2248);
+    var QX = zU(3371),
+      AX = zU(2396),
+      FX = zU(2203);
 
-    function Lr() {
-      (0, zr.d)({
+    function oX() {
+      (0, FX.b)({
         titleKey: "payments:logInToRestore"
       })
     }
 
-    function mr(MM) {
+    function DX(UU) {
       let {
-        status: rM
-      } = MM;
-      switch (rM) {
+        status: XU
+      } = UU;
+      switch (XU) {
         case "restored":
-          return (0, FM.g)(), {
+          return (0, mU.i)(), {
             key: "payments:purchasesRestored",
             failed: !1
           };
@@ -418,914 +398,916 @@ export const modules = {
       }
     }
 
-    function Hr() {
-      const MM = (0, KM.usePageBillingClient)(),
+    function EX() {
+      const UU = (0, jU.usePageBillingClient)(),
         {
-          userContext: rM
-        } = (0, hM.b)(),
-        [iM, SM] = (0, OM.useState)(!1),
-        [jM, aM] = (0, OM.useState)(null);
+          userContext: XU
+        } = (0, pU.d)(),
+        [zU, yU] = (0, cU.useState)(!1),
+        [QU, AU] = (0, cU.useState)(null);
       return {
-        restoring: iM,
-        notice: jM,
+        restoring: zU,
+        notice: QU,
         restore: () => {
-          rM.isLoggedIn() ? (SM(!0), aM(null), MM.restorePurchases().then(mr, (MM => MM instanceof nr.c && "loginRequired" === MM.code ? (Lr(), null) : function(MM) {
-            return MM instanceof nr.c && "storeBusy" === MM.code ? {
+          XU.isLoggedIn() ? (yU(!0), AU(null), UU.restorePurchases().then(DX, (UU => UU instanceof QX.d && "loginRequired" === UU.code ? (oX(), null) : function(UU) {
+            return UU instanceof QX.d && "storeBusy" === UU.code ? {
               key: "payments:storeBusy",
               failed: !0
-            } : (console.error("Billing: restoring purchases failed:", MM), (0, FM.g)(), {
+            } : (console.error("Billing: restoring purchases failed:", UU), (0, mU.i)(), {
               key: "payments:restoreFailed",
               failed: !0
             })
-          }(MM))).then(aM).finally((() => {
-            SM(!1)
-          }))) : Lr()
+          }(UU))).then(AU).finally((() => {
+            yU(!1)
+          }))) : oX()
         }
       }
     }
 
-    function hr(MM) {
+    function YX(UU) {
       let {
-        restoring: rM,
-        notice: iM,
-        restore: SM
-      } = MM;
+        restoring: XU,
+        notice: zU,
+        restore: yU
+      } = UU;
       const {
-        t: PM
-      } = (0, aM.A)(), nM = (0, NM.usePurchasesAllowed)(), zM = (0, NM.getBillingStore)(), mM = (0, OM.useRef)(null);
-      return (0, OM.useEffect)((() => {
-        var MM;
-        null === (MM = mM.current) || void 0 === MM || MM.scrollIntoView({
+        t: FU
+      } = (0, AU.I)(), oU = (0, vU.usePurchasesAllowed)(), EU = (0, vU.getBillingStore)(), NU = (0, cU.useRef)(null);
+      return (0, cU.useEffect)((() => {
+        var UU;
+        null === (UU = NU.current) || void 0 === UU || UU.scrollIntoView({
           block: "nearest"
         })
-      }), [iM]), nM && (0, Qr.e)(zM) ? (0, LM.jsxs)("div", {
+      }), [zU]), oU && (0, AX.e)(EU) ? (0, YU.jsxs)("div", {
         className: "AccountSettingsRestorePurchases",
-        children: [(0, LM.jsx)(QM.i, {
+        children: [(0, YU.jsx)(DU.j, {
           className: "AccountSettingsRestorePurchasesButton",
-          loading: rM,
-          onClick: SM,
-          children: PM("payments:restorePurchases")
-        }), null !== iM && (0, LM.jsx)("div", {
-          ref: mM,
-          className: jM()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
-            AccountSettingsRestorePurchasesFailed: iM.failed
+          loading: XU,
+          onClick: yU,
+          children: FU("payments:restorePurchases")
+        }), null !== zU && (0, YU.jsx)("div", {
+          ref: NU,
+          className: QU()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
+            AccountSettingsRestorePurchasesFailed: zU.failed
           }),
-          children: PM(iM.key)
+          children: FU(zU.key)
         })]
       }) : null
     }
-    var Jr = iM(1996),
-      dr = iM(1251),
-      yr = iM(1429),
-      lr = iM(1202),
-      Er = iM(1360),
-      Ur = iM(313),
-      Gr = iM(2702);
-    const Cr = {
+    var NX = zU(1970),
+      IX = zU(1262),
+      pX = zU(1410),
+      aX = zU(1203),
+      tX = zU(1349),
+      gX = zU(320),
+      kX = zU(2686);
+    const GX = {
       appStore: {
         name: "App Store",
-        ...Ur.Sb.appStore
+        ...gX.dc.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...Ur.Sb.googlePlay
+        ...gX.dc.googlePlay
       },
       discord: {
         name: "Discord",
-        ...Ur.Sb.discord
+        ...gX.dc.discord
       }
     };
 
-    function er(MM) {
+    function BX(UU) {
       let {
-        warning: rM,
-        subscriptions: iM
-      } = MM;
+        warning: XU,
+        subscriptions: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)();
-      return null !== iM && 0 === iM.length ? (0, LM.jsx)(LM.Fragment, {
-        children: OM(rM)
-      }) : (0, LM.jsxs)("div", {
+        t: cU
+      } = (0, AU.I)();
+      return null !== zU && 0 === zU.length ? (0, YU.jsx)(YU.Fragment, {
+        children: cU(XU)
+      }) : (0, YU.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [OM(rM), null === iM && (0, LM.jsx)("div", {
+        children: [cU(XU), null === zU && (0, YU.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: OM("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== iM && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)("div", {
+          children: cU("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== zU && (0, YU.jsxs)(YU.Fragment, {
+          children: [(0, YU.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: OM("auth:deleteAccountStoreSubscriptions")
-          }), (0, LM.jsx)(Gr.c, {
+            children: cU("auth:deleteAccountStoreSubscriptions")
+          }), (0, YU.jsx)(kX.d, {
             className: "DeleteAccountSubtitleLinks",
-            links: iM.map((MM => {
+            links: zU.map((UU => {
               let {
-                store: rM,
-                managementUrl: iM
-              } = MM;
+                store: XU,
+                managementUrl: zU
+              } = UU;
               return {
-                ...Cr[rM],
-                url: iM
+                ...GX[XU],
+                url: zU
               }
             }))
           })]
         })]
       })
     }
-    var br = iM(2548);
+    var ZX = zU(5113);
 
-    function wr(MM) {
+    function RX(UU) {
       let {
-        showing: rM
-      } = MM;
+        showing: XU
+      } = UU;
       const {
-        userContext: iM,
-        isUserContextUpdating: SM
-      } = (0, hM.b)(), {
-        t: jM
-      } = (0, aM.A)(), [PM, nM] = (0, OM.useState)(!1), [zM, mM] = (0, OM.useState)(null), HM = (0, OM.useRef)(rM);
-      (0, OM.useEffect)((() => (HM.current = rM, () => {
-        HM.current = !1
-      })), [rM]);
-      const JM = SM || PM;
-      return (0, LM.jsxs)("div", {
+        userContext: zU,
+        isUserContextUpdating: yU
+      } = (0, pU.d)(), {
+        t: QU
+      } = (0, AU.I)(), [FU, oU] = (0, cU.useState)(!1), [EU, NU] = (0, cU.useState)(null), IU = (0, cU.useRef)(XU);
+      (0, cU.useEffect)((() => (IU.current = XU, () => {
+        IU.current = !1
+      })), [XU]);
+      const aU = yU || FU;
+      return (0, YU.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, LM.jsxs)(QM.J, {
+        children: [(0, YU.jsxs)(DU.G, {
           onClick: async function() {
-            if (!PM) {
-              nM(!0);
+            if (!FU) {
+              oU(!0);
               try {
-                const MM = await async function() {
-                  const [MM, rM] = await Promise.all([(0, Jr.e)(iM.availableUserContextTypes) ? qM() : [], gr(iM)]);
-                  if (!HM.current) return dr.b.ok();
-                  const OM = (0, sM.e)(iM.getPlayerName(), !yM.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await yr.NotificationProvider.showPromptPopup({
+                const UU = await async function() {
+                  const [UU, XU] = await Promise.all([(0, NX.c)(zU.availableUserContextTypes) ? KU() : [], WX(zU)]);
+                  if (!IU.current) return IX.c.ok();
+                  const cU = (0, SU.b)(zU.getPlayerName(), !gU.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await pX.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: OM
+                          playerName: cU
                         }
                       },
-                      subtitle: (0, LM.jsx)(er, {
-                        warning: tr(iM.isLoggedIn(), rM),
-                        subscriptions: MM
+                      subtitle: (0, YU.jsx)(BX, {
+                        warning: PX(zU.isLoggedIn(), XU),
+                        subscriptions: UU
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: rM ? jM("auth:deleteAccountTypedConfirm", {
-                        playerName: OM
+                      typedConfirm: XU ? QU("auth:deleteAccountTypedConfirm", {
+                        playerName: cU
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return dr.b.ok();
-                  const SM = await (0, uM.postJsonWithMetricsCookiesAndJsonResponse)(`${lr.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: bM.d.get("gameState")
+                    }).getResult()) return IX.c.ok();
+                  const yU = await (0, CU.postJsonWithMetricsCookiesAndJsonResponse)(`${aX.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: WU.e.get("gameState")
                   }, {
                     retries: 3
-                  }, iM.getMetricsCookies());
-                  if (SM.error) return dr.b.error(SM.error);
-                  (0, gM.isDiscordClient)() && (await Er.l.discordActivity()).exit("User deleted their account");
-                  return null !== (0, br.b)() && await cM.f.withdrawConsent(), (0, uM.forgetStoredGuestAccount)(iM.whamm), (0, uM.forceGlobalSignOut)(!0), dr.b.ok()
-                }(), rM = MM.isError() ? MM.asError().message : null;
-                mM(rM)
-              } catch (MM) {
-                console.error("Failed to delete account:", MM), mM(jM("auth:genericDeleteAccountError"))
+                  }, zU.getMetricsCookies());
+                  if (yU.error) return IX.c.error(yU.error);
+                  (0, eU.isDiscordClient)() && (await tX.l.discordActivity()).exit("User deleted their account");
+                  return ZX.e.stopRecordingHere("the player deleted their account", {
+                    forget: !0
+                  }), (0, CU.forgetStoredGuestAccount)(zU.whamm), (0, CU.forceGlobalSignOut)(!0), IX.c.ok()
+                }(), XU = UU.isError() ? UU.asError().message : null;
+                NU(XU)
+              } catch (UU) {
+                console.error("Failed to delete account:", UU), NU(QU("auth:genericDeleteAccountError"))
               }
-              nM(!1)
+              oU(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: JM,
-          children: [JM && (0, LM.jsx)("div", {
+          disabled: aU,
+          children: [aU && (0, YU.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, LM.jsx)(CM.d, {})
-          }), jM("auth:deleteAccount")]
-        }), zM && (0, LM.jsx)("div", {
+            children: (0, YU.jsx)(RU.b, {})
+          }), QU("auth:deleteAccount")]
+        }), EU && (0, YU.jsx)("div", {
           className: "DeleteAccountError",
-          children: zM
+          children: EU
         })]
       })
     }
 
-    function tr(MM, rM) {
-      return (0, gM.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : MM ? "auth:deleteAccountLossWarning" : rM ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function PX(UU, XU) {
+      return (0, eU.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : UU ? "auth:deleteAccountLossWarning" : XU ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function gr(MM) {
+    async function WX(UU) {
       try {
         const {
-          accountCreatedAt: rM
-        } = await (0, IM.n)(oM.c.getPlayerProfile(MM, {
-          lowerCaseName: MM.getPlayerName().toLowerCase()
+          accountCreatedAt: XU
+        } = await (0, JU.l)(iU.c.getPlayerProfile(UU, {
+          lowerCaseName: UU.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== rM && Date.now() - rM >= 7 * fM.i
-      } catch (rM) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", rM), !0
+        return null !== XU && Date.now() - XU >= 7 * HU.h
+      } catch (XU) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", XU), !0
       }
     }
-    var ur = iM(3977),
-      Rr = iM(3989),
-      pr = iM(3983);
+    var dX = zU(3972),
+      LX = zU(3982),
+      eX = zU(3976);
 
-    function Wr(MM) {
+    function CX(UU) {
       let {
-        showing: rM
-      } = MM;
+        showing: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        data: OM,
-        failed: SM
-      } = (0, xM.g)(ur.c, rM), jM = null === OM ? null : (0, ur.d)(OM);
-      return (0, LM.jsxs)("div", {
+        t: zU
+      } = (0, AU.I)(), {
+        data: cU,
+        failed: yU
+      } = (0, sU.k)(dX.d, XU), QU = null === cU ? null : (0, dX.h)(cU);
+      return (0, YU.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: iM("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === jM && !SM && (0, LM.jsx)(CM.d, {}), null === jM && SM && (0, LM.jsxs)("div", {
+          children: zU("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === QU && !yU && (0, YU.jsx)(RU.b, {}), null === QU && yU && (0, YU.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [iM("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, LM.jsx)(QM.e, {
+          children: [zU("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, YU.jsx)(DU.f, {
             className: "SmallTextLight",
             onClick: () => {
-              ur.c.refresh()
+              dX.d.refresh()
             },
-            children: iM("general:tryAgain")
+            children: zU("general:tryAgain")
           })]
-        }), 0 === (null === jM || void 0 === jM ? void 0 : jM.length) && (0, LM.jsx)("div", {
+        }), 0 === (null === QU || void 0 === QU ? void 0 : QU.length) && (0, YU.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: iM("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== jM && jM.length > 0 && (0, LM.jsx)("ul", {
+          children: zU("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== QU && QU.length > 0 && (0, YU.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: jM.map((MM => {
+          children: QU.map((UU => {
             let {
-              name: rM,
-              exclusion: OM
-            } = MM;
-            const SM = pr.h[OM];
-            return (0, LM.jsxs)("li", {
+              name: XU,
+              exclusion: cU
+            } = UU;
+            const yU = eX.g[cU];
+            return (0, YU.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, LM.jsx)("div", {
+              children: [(0, YU.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: rM
-              }), (0, LM.jsx)(QM.i, {
+                children: XU
+              }), (0, YU.jsx)(DU.j, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, Rr.d)(SM, rM, {
+                  (0, LX.g)(yU, XU, {
                     chatMessage: null
                   })
                 },
-                children: iM(pr.l[SM].text)
+                children: zU(eX.i[yU].text)
               })]
-            }, rM)
+            }, XU)
           }))
         })]
       })
     }
-    var sr = iM(1963);
+    var wX = zU(3779),
+      qX = zU(5127),
+      OX = zU(1936);
 
-    function Dr(MM) {
+    function SX(UU) {
       let {
-        userContext: rM
-      } = MM;
+        userContext: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        replayChatObjectedAtMs: SM
-      } = (0, bM.m)(["replayChatObjectedAtMs"]), [jM, PM] = (0, OM.useState)(!1);
-      return cM.h ? (0, LM.jsx)(eM.c, {
-        label: iM("sessionReplayChatObjection:setting"),
-        note: iM("sessionReplayChatObjection:settingNote"),
-        checked: null !== SM,
-        disabled: jM,
-        onClick: MM => {
-          PM(!0), oM.c.setReplayChatObjection(rM, MM).then((MM => {
-            let {
-              replayChatObjectedAtMs: rM
-            } = MM;
-            bM.d.set({
-              replayChatObjectedAtMs: rM
-            })
-          })).catch((MM => {
-            console.error("Couldn't save the session replay chat objection", MM), sr.k.showMessage({
-              translationKey: "sessionReplayChatObjection:failed"
+        t: zU
+      } = (0, AU.I)(), [yU, QU] = (0, cU.useState)(wX.f), [FU, oU] = (0, cU.useState)(!1);
+      return (0, cU.useEffect)((() => (0, wX.p)((() => {
+        QU((0, wX.f)())
+      }))), []), (0, qX.t)() ? (0, YU.jsx)(PU.e, {
+        label: zU("sessionReplayNotice:setting"),
+        note: zU("sessionReplayNotice:settingNote"),
+        checked: yU,
+        disabled: FU,
+        onClick: UU => {
+          const zU = XU.isLoggedIn();
+          if (UU && zU || (0, wX.m)(UU), !zU) return;
+          oU(!0);
+          const cU = {
+            record: UU
+          };
+          (0, qX.r)("/index/replay/recording-choice", cU, XU.getMetricsCookies()).then((() => {
+            UU && (0, wX.m)(!0)
+          })).catch((UU => {
+            console.error("Couldn't save the session replay recording choice", UU), OX.f.showMessage({
+              translationKey: "sessionReplayNotice:settingFailed"
             })
           })).finally((() => {
-            PM(!1)
+            oU(!1)
           }))
         }
       }) : null
     }
-    const kr = (0, OM.memo)((function(MM) {
-      var rM, iM;
+    const rX = (0, cU.memo)((function(UU) {
+      var XU, zU;
       let {
-        showing: SM,
-        inGame: nM
-      } = MM;
+        showing: yU,
+        inGame: oU
+      } = UU;
       const {
-        t: zM,
-        selectedLanguage: mM
-      } = (0, aM.A)(), {
-        hideSocialLocationFrom: JM
-      } = (0, bM.m)(["hideSocialLocationFrom"]), dM = (0, NM.usePurchasesAllowed)(), lM = Hr(), EM = (0, HM.b)(), {
-        userContext: UM,
-        isUserContextUpdating: wM
-      } = (0, hM.b)(), [tM, AM] = (0, OM.useState)(null !== (rM = UM.getPlayerName()) && void 0 !== rM ? rM : ""), [xM, vM] = (0, OM.useState)(null), {
-        purchasing: FM,
-        outcome: BM,
-        purchase: XM
-      } = (0, pM.e)("/super-rank-welcome"), IM = (0, fM.hc)((0, aM.n)(mM.code, "general:timeLeft"), UM.superRankInfo), KM = null === (iM = TM(SM)) || void 0 === iM ? void 0 : iM.text, qM = IM ? zM("general:timeLeft", {
-        time: IM
-      }) : KM, [VM, cM] = (0, OM.useState)(!1), [jr, ar] = (0, OM.useState)(!1), nr = (0, OM.useRef)(null), Qr = (0, OM.useRef)(null), zr = (0, ZM.g)({
+        t: EU,
+        selectedLanguage: NU
+      } = (0, AU.I)(), {
+        hideSocialLocationFrom: aU
+      } = (0, WU.q)(["hideSocialLocationFrom"]), tU = (0, vU.usePurchasesAllowed)(), kU = EX(), GU = (0, IU.c)(), {
+        userContext: BU,
+        isUserContextUpdating: dU
+      } = (0, pU.d)(), [LU, VU] = (0, cU.useState)(null !== (XU = BU.getPlayerName()) && void 0 !== XU ? XU : ""), [sU, nU] = (0, cU.useState)(null), {
+        purchasing: mU,
+        outcome: lU,
+        purchase: xU
+      } = (0, qU.d)("/super-rank-welcome"), JU = (0, HU.mc)((0, AU.l)(NU.code, "general:timeLeft"), BU.superRankInfo), jU = null === (zU = bU(yU)) || void 0 === zU ? void 0 : zU.text, KU = JU ? EU("general:timeLeft", {
+        time: JU
+      }) : jU, [zX, cX] = (0, cU.useState)(!1), [QX, AX] = (0, cU.useState)(!1), FX = (0, cU.useRef)(null), oX = (0, cU.useRef)(null), DX = (0, fU.f)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), Lr = null === zr, mr = null !== zr && void 0 !== zr ? zr : [], Jr = UM !== uM.NULL_USER_CONTEXT && !UM.isLoggedIn(), dr = Jr && 0 !== (null === zr || void 0 === zr ? void 0 : zr.length), [yr, lr] = (0, OM.useState)([]), [Er, Ur] = (0, OM.useState)(!1), Gr = UM.playerHasRank("youtuber"), Cr = (0, OM.useCallback)((() => oM.c.getPlayerProfile(UM, {
-        lowerCaseName: UM.getPlayerName().toLowerCase()
-      }).then((MM => {
-        lr(MM.socialLinks)
-      })).catch((MM => {
-        console.error("Failed to refresh social links", MM)
-      }))), [UM]);
+      }), NX = null === DX, IX = null !== DX && void 0 !== DX ? DX : [], pX = BU !== CU.NULL_USER_CONTEXT && !BU.isLoggedIn(), aX = pX && 0 !== (null === DX || void 0 === DX ? void 0 : DX.length), [tX, gX] = (0, cU.useState)([]), [kX, GX] = (0, cU.useState)(!1), BX = BU.playerHasRank("youtuber"), ZX = (0, cU.useCallback)((() => iU.c.getPlayerProfile(BU, {
+        lowerCaseName: BU.getPlayerName().toLowerCase()
+      }).then((UU => {
+        gX(UU.socialLinks)
+      })).catch((UU => {
+        console.error("Failed to refresh social links", UU)
+      }))), [BU]);
 
-      function er(MM) {
-        MM !== tM && ((0, sM.j)(MM) ? (MM = (0, sM.l)(MM), vM(zM("homePage:nameCharacters"))) : vM(null), nr.current && (nr.current.value = MM), AM(MM))
+      function PX(UU) {
+        UU !== LU && ((0, SU.m)(UU) ? (UU = (0, SU.o)(UU), nU(EU("homePage:nameCharacters"))) : nU(null), FX.current && (FX.current.value = UU), VU(UU))
       }
-      return (0, OM.useEffect)((() => (!0 === SM ? (clearInterval(Qr.current), Qr.current = setInterval(EM, 1e3)) : clearInterval(Qr.current), () => {
-        clearInterval(Qr.current)
-      })), [SM, EM]), (0, OM.useEffect)((() => {
-        var MM;
-        AM(null !== (MM = UM.getPlayerName()) && void 0 !== MM ? MM : "")
-      }), [UM]), (0, OM.useEffect)((() => {
-        if (!SM || !Gr || wM) return;
-        let MM = !1;
-        return Ur(!0), lr([]), oM.c.getPlayerProfile(UM, {
-          lowerCaseName: UM.getPlayerName().toLowerCase()
-        }).then((rM => {
-          MM || lr(rM.socialLinks)
-        })).catch((MM => {
-          console.error("Failed to load social links", MM)
+      return (0, cU.useEffect)((() => (!0 === yU ? (clearInterval(oX.current), oX.current = setInterval(GU, 1e3)) : clearInterval(oX.current), () => {
+        clearInterval(oX.current)
+      })), [yU, GU]), (0, cU.useEffect)((() => {
+        var UU;
+        VU(null !== (UU = BU.getPlayerName()) && void 0 !== UU ? UU : "")
+      }), [BU]), (0, cU.useEffect)((() => {
+        if (!yU || !BX || dU) return;
+        let UU = !1;
+        return GX(!0), gX([]), iU.c.getPlayerProfile(BU, {
+          lowerCaseName: BU.getPlayerName().toLowerCase()
+        }).then((XU => {
+          UU || gX(XU.socialLinks)
+        })).catch((UU => {
+          console.error("Failed to load social links", UU)
         })).finally((() => {
-          MM || Ur(!1)
+          UU || GX(!1)
         })), () => {
-          MM = !0
+          UU = !0
         }
-      }), [SM, Gr, wM, UM]), (0, LM.jsxs)("div", {
-        className: jM()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: nM
+      }), [yU, BX, dU, BU]), (0, YU.jsxs)("div", {
+        className: QU()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: oU
         }),
-        children: [nM && (0, LM.jsx)("div", {
+        children: [oU && (0, YU.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: zM("settingsMenu:accountSettingsInGameWarning")
-        }), (0, LM.jsxs)("div", {
+          children: EU("settingsMenu:accountSettingsInGameWarning")
+        }), (0, YU.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [zM("homePage:discordNamePopupTitle"), (0, LM.jsxs)(WM.LinkPreserveSearch, {
+            children: [EU("homePage:discordNamePopupTitle"), (0, YU.jsxs)(OU.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, DM.f)({
-                name: UM.getPlayerName()
+              to: (0, rU.j)({
+                name: BU.getPlayerName()
               }),
               onClick: () => {
-                bM.d.set({
+                WU.e.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "arrow-up-right-from-square"
-              }), " ", zM("profileCard:viewProfile")]
+              }), " ", EU("profileCard:viewProfile")]
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, YU.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, LM.jsxs)("div", {
+            children: [(0, YU.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [yM.featureFlags.canChangeName && (0, LM.jsx)(GM.b, {
+              children: [gU.featureFlags.canChangeName && (0, YU.jsx)(ZU.e, {
                 className: "EnterName",
-                placeholderText: zM("homePage:enterName"),
-                maxLength: sM.g,
-                defaultValue: tM,
-                onValueChange: MM => {
-                  er(MM)
+                placeholderText: EU("homePage:enterName"),
+                maxLength: SU.h,
+                defaultValue: LU,
+                onValueChange: UU => {
+                  PX(UU)
                 },
-                forcedText: VM || !yM.featureFlags.canChangeName ? tM : null,
+                forcedText: zX || !gU.featureFlags.canChangeName ? LU : null,
                 blurOnEnter: !0,
-                domRef: nr
-              }), (0, LM.jsx)(QM.e, {
+                domRef: FX
+              }), (0, YU.jsx)(DU.f, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  er((0, sM.f)())
+                  PX((0, SU.f)())
                 },
-                children: (0, LM.jsx)(PM.b, {
+                children: (0, YU.jsx)(FU.d, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !yM.featureFlags.canChangeName && (0, LM.jsx)("div", {
+              }), !gU.featureFlags.canChangeName && (0, YU.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, sM.e)(tM, !yM.featureFlags.canSeeRealPlayerNames)
+                children: (0, SU.b)(LU, !gU.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, LM.jsx)(QM.e, {
+            }), (0, YU.jsx)(DU.f, {
               className: "ChooseNameButton",
-              disabled: VM || tM === UM.getPlayerName(),
+              disabled: zX || LU === BU.getPlayerName(),
               onClick: () => {
-                tM.length < sM.i ? vM(zM("homePage:changeNameMinLengthError", {
-                  length: sM.i
-                })) : tM.length > sM.g ? vM(zM("homePage:changeNameMaxLengthError", {
-                  length: sM.g
-                })) : (cM(!0), vM(null), (0, RM.j)(UM, tM).then((MM => {
-                  cM(!1), "taken" === MM.outcome ? vM(zM("homePage:nameTaken")) : "refused" === MM.outcome ? vM(MM.message) : "failed" === MM.outcome && vM(zM((0, RM.i)(MM.failure)))
+                LU.length < SU.j ? nU(EU("homePage:changeNameMinLengthError", {
+                  length: SU.j
+                })) : LU.length > SU.h ? nU(EU("homePage:changeNameMaxLengthError", {
+                  length: SU.h
+                })) : (cX(!0), nU(null), (0, wU.h)(BU, LU).then((UU => {
+                  cX(!1), "taken" === UU.outcome ? nU(EU("homePage:nameTaken")) : "refused" === UU.outcome ? nU(UU.message) : "failed" === UU.outcome && nU(EU((0, wU.f)(UU.failure)))
                 })))
               },
-              children: zM("general:choose")
+              children: EU("general:choose")
             })]
-          }), xM && (0, LM.jsx)("div", {
+          }), sU && (0, YU.jsx)("div", {
             className: "ChooseAccNameError",
-            children: xM
+            children: sU
           })]
-        }), (0, LM.jsx)(Dr, {
-          userContext: UM
-        }), (0, LM.jsx)(eM.c, {
+        }), (0, YU.jsx)(SX, {
+          userContext: BU
+        }), (0, YU.jsx)(PU.e, {
           label: (() => {
-            if ((0, ir.m)(JM)) {
-              const MM = (0, aM.n)(mM.code, "general:timeLeft"),
-                rM = (0, fM.db)(MM, Date.now(), JM + ir.i);
-              return `${zM("settingsMenu:hideSocialLocation")} (${zM("general:timeLeft",{time:rM})})`
+            if ((0, hU.k)(aU)) {
+              const UU = (0, AU.l)(NU.code, "general:timeLeft"),
+                XU = (0, HU.eb)(UU, Date.now(), aU + hU.i);
+              return `${EU("settingsMenu:hideSocialLocation")} (${EU("general:timeLeft",{time:XU})})`
             }
-            return zM("settingsMenu:hideSocialLocation")
+            return EU("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const MM = !(0, ir.m)(JM);
-            (0, Sr.reportAnalyticsClick)({
+            const UU = !(0, hU.k)(aU);
+            (0, XX.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: MM ? "on" : "off"
-            }), ar(!0), oM.c.setHideSocialLocation(UM, MM).then((() => {
-              bM.d.set({
-                hideSocialLocationFrom: MM ? Date.now() : null
+              value: UU ? "on" : "off"
+            }), AX(!0), iU.c.setHideSocialLocation(BU, UU).then((() => {
+              WU.e.set({
+                hideSocialLocationFrom: UU ? Date.now() : null
               })
             })).finally((() => {
-              ar(!1)
+              AX(!1)
             }))
           },
-          checked: (0, ir.m)(JM),
-          disabled: jr
-        }), (0, LM.jsx)(Mr, {
-          loggedIn: UM.isLoggedIn(),
-          playerDbId: UM.whamm
-        }), Gr && (0, LM.jsxs)("div", {
+          checked: (0, hU.k)(aU),
+          disabled: QX
+        }), BX && (0, YU.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, YU.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: zM("settingsMenu:socialLinks")
-          }), Er && (0, LM.jsx)(CM.d, {}), !Er && (0, LM.jsx)(Or.b, {
-            socialLinks: yr,
+            children: EU("settingsMenu:socialLinks")
+          }), kX && (0, YU.jsx)(RU.b, {}), !kX && (0, YU.jsx)(UX.e, {
+            socialLinks: tX,
             editable: !0,
-            userContext: UM,
-            onLinksUpdated: Cr
+            userContext: BU,
+            onLinksUpdated: ZX
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, YU.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: zM(dr ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), Lr && (0, LM.jsx)(CM.d, {}), !Lr && 0 === mr.length && (0, LM.jsx)("div", {
+            children: EU(aX ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), NX && (0, YU.jsx)(RU.b, {}), !NX && 0 === IX.length && (0, YU.jsx)("div", {
             className: "NoLoginOptions",
-            children: zM("auth:noLoginOptions")
-          }), !Lr && mr.length > 0 && "crazygames" !== gM.siteUsed && (0, LM.jsx)("div", {
+            children: EU("auth:noLoginOptions")
+          }), !NX && IX.length > 0 && "crazygames" !== eU.siteUsed && (0, YU.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: mr
-          }), !Lr && mr.length > 0 && "crazygames" === gM.siteUsed && (0, LM.jsxs)("div", {
+            children: IX
+          }), !NX && IX.length > 0 && "crazygames" === eU.siteUsed && (0, YU.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [mr[0], mr.length > 1 && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsxs)("div", {
+            children: [IX[0], IX.length > 1 && (0, YU.jsxs)(YU.Fragment, {
+              children: [(0, YU.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, LM.jsx)("span", {
+                children: [(0, YU.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: zM("auth:legacyLoginOptions")
-                }), (0, LM.jsx)(rr.e, {
+                  children: EU("auth:legacyLoginOptions")
+                }), (0, YU.jsx)(TU.c, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: zM("auth:legacyLoginOptionsInfo")
+                  hoverInfo: EU("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, LM.jsx)("div", {
+              }), (0, YU.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: mr.slice(1)
+                children: IX.slice(1)
               })]
             })]
-          }), yM.featureFlags.useLogin && (null !== UM.loggedInInfo || UM.isLoggedIn()) && (0, LM.jsxs)(LM.Fragment, {
-            children: [(0, LM.jsx)("div", {
+          }), gU.featureFlags.useLogin && (null !== BU.loggedInInfo || BU.isLoggedIn()) && (0, YU.jsxs)(YU.Fragment, {
+            children: [(0, YU.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, LM.jsxs)(QM.J, {
+            }), (0, YU.jsxs)(DU.G, {
               onClick: () => {
-                (0, uM.forceGlobalSignOut)()
+                (0, CU.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "right-from-bracket"
-              }), zM("auth:signOut")]
+              }), EU("auth:signOut")]
             })]
           })]
-        }), !UM.playerHasRank("super") && dM && (0, LM.jsxs)("div", {
+        }), !BU.playerHasRank("super") && tU && (0, YU.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, YU.jsx)(FU.d, {
               name: "bolt"
-            }), zM("homePage:superRank")]
-          }), (0, LM.jsxs)("div", {
+            }), EU("homePage:superRank")]
+          }), (0, YU.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, LM.jsxs)(QM.p, {
+            children: [(0, YU.jsxs)(DU.l, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, YM.n)({
+                (0, MU.l)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "bolt"
-              }), zM("homePage:getSuperRank")]
-            }), (0, LM.jsxs)(QM.p, {
+              }), EU("homePage:getSuperRank")]
+            }), (0, YU.jsxs)(DU.l, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, YM.n)({
+                (0, MU.l)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "bolt"
-              }), zM("homePage:giftSuperRank")]
+              }), EU("homePage:giftSuperRank")]
             })]
-          }), (0, LM.jsx)(hr, {
-            ...lM
+          }), (0, YU.jsx)(YX, {
+            ...kU
           })]
-        }), UM.playerHasRank("super") && (0, LM.jsxs)("div", {
+        }), BU.playerHasRank("super") && (0, YU.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, YU.jsx)(FU.d, {
               name: "bolt"
-            }), zM("homePage:superRank"), qM && (0, LM.jsxs)("div", {
+            }), EU("homePage:superRank"), KU && (0, YU.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", qM, ")"]
+              children: ["(", KU, ")"]
             })]
-          }), dM && (0, LM.jsxs)("div", {
+          }), tU && (0, YU.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, fM.zc)(UM.superRankInfo) && (0, LM.jsxs)(QM.p, {
+            children: [!(0, HU.Gc)(BU.superRankInfo) && (0, YU.jsxs)(DU.l, {
               className: "AccountSettingsSuperRankProlong",
-              loading: FM,
+              loading: mU,
               onClick: () => {
-                XM(kM.k.id, null)
+                xU(uU.n.id, null)
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "bolt"
-              }), zM("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: kM.k.product.days,
-                price: kM.k.price
+              }), EU("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: uU.n.product.days,
+                price: uU.n.price
               })]
-            }), (0, LM.jsxs)(QM.p, {
+            }), (0, YU.jsxs)(DU.l, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, YM.n)({
+                (0, MU.l)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "bolt"
-              }), zM("homePage:giftSuperRank")]
+              }), EU("homePage:giftSuperRank")]
             })]
-          }), BM && (0, LM.jsx)("div", {
+          }), lU && (0, YU.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: zM(BM.translationKey)
-          }), (0, LM.jsx)(hr, {
-            ...lM
+            children: EU(lU.translationKey)
+          }), (0, YU.jsx)(YX, {
+            ...kU
           })]
-        }), (0, LM.jsx)(Pr, {
-          showing: SM
-        }), yM.featureFlags.useSocialFeatures && (0, LM.jsx)(Wr, {
-          showing: SM
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsx)(yX, {
+          showing: yU
+        }), gU.featureFlags.useSocialFeatures && (0, YU.jsx)(CX, {
+          showing: yU
+        }), (0, YU.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: zM(Zr(Jr, dr))
-            }), (0, gM.isDiscordClient)() && (0, LM.jsx)("div", {
+              children: EU(uX(pX, aX))
+            }), (0, eU.isDiscordClient)() && (0, YU.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: zM("auth:discordActivityKickWarning")
-            }), (0, LM.jsx)(wr, {
-              showing: SM
+              children: EU("auth:discordActivityKickWarning")
+            }), (0, YU.jsx)(RX, {
+              showing: yU
             })]
-          }), (0, LM.jsx)("div", {
+          }), (0, YU.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: zM(Jr ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: EU(pX ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function Zr(MM, rM) {
-      return MM ? rM ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function uX(UU, XU) {
+      return UU ? XU ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var or = iM(34938),
-      fr = iM(3530),
-      Yr = iM(1258),
-      Nr = iM(1503),
-      Ar = iM(2084),
-      xr = iM(9472),
-      vr = iM(34940);
+    var fX = zU(34767),
+      iX = zU(3490),
+      HX = zU(1266),
+      MX = zU(1482),
+      vX = zU(2047),
+      VX = zU(9457),
+      sX = zU(34771);
 
-    function Fr() {
+    function nX() {
       const {
-        t: MM
-      } = (0, aM.A)();
-      return (0, Ar.j)("localPlayerAlive") ? (0, LM.jsx)(xr.c, {
+        t: UU
+      } = (0, AU.I)();
+      return (0, vX.i)("localPlayerAlive") ? (0, YU.jsx)(VX.c, {
         icon: "camera-alt",
-        title: MM("screenshotMode:title"),
-        sub: MM("screenshotMode:entrySub"),
-        onClick: vr.b
+        title: UU("screenshotMode:title"),
+        sub: UU("screenshotMode:entrySub"),
+        onClick: sX.d
       }) : null
     }
-    var Br = iM(34952);
-    const Xr = (0, OM.memo)((function(MM) {
+    var mX = zU(34782);
+    const lX = (0, cU.memo)((function(UU) {
         let {
-          inGame: rM
-        } = MM;
+          inGame: XU
+        } = UU;
         const {
-          t: iM,
-          selectedLanguage: OM
-        } = (0, aM.A)(), {
-          clientEscMenuOptions: SM,
-          showDebugOverlay: jM,
-          isTouchScreen: PM
-        } = (0, bM.m)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), nM = (0, JM.f)("hideCoordinates");
-        let QM = "settingsMenu:showCoordinates",
-          zM = "settingsMenu:showChunkCoordinates";
+          t: zU,
+          selectedLanguage: cU
+        } = (0, AU.I)(), {
+          clientEscMenuOptions: yU,
+          showDebugOverlay: QU,
+          isTouchScreen: FU
+        } = (0, WU.q)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), oU = (0, aU.f)("hideCoordinates");
+        let DU = "settingsMenu:showCoordinates",
+          EU = "settingsMenu:showChunkCoordinates";
 
-        function mM(MM) {
-          const rM = new Intl.DisplayNames([MM], {
+        function NU(UU) {
+          const XU = new Intl.DisplayNames([UU], {
             type: "language"
-          }).of(MM);
-          return rM.charAt(0).toUpperCase() + rM.slice(1)
+          }).of(UU);
+          return XU.charAt(0).toUpperCase() + XU.slice(1)
         }
-        return nM && (QM = "settingsMenu:showCoordinatesHidden", zM = "settingsMenu:showChunkCoordinatesHidden"), (0, LM.jsxs)("div", {
+        return oU && (DU = "settingsMenu:showCoordinatesHidden", EU = "settingsMenu:showChunkCoordinatesHidden"), (0, YU.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [rM && yM.featureFlags.canUseInviteLinks && (0, LM.jsxs)("div", {
+          children: [XU && gU.featureFlags.canUseInviteLinks && (0, YU.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: iM("settingsMenu:inviteLink")
-            }), (0, LM.jsx)(or.e, {})]
-          }), (0, LM.jsxs)("div", {
+              children: zU("settingsMenu:inviteLink")
+            }), (0, YU.jsx)(fX.i, {})]
+          }), (0, YU.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: iM("settingsMenu:language")
-            }), (0, LM.jsx)(fr.e, {
-              options: Object.entries(aM.g).map((MM => {
-                let [rM, iM] = MM;
+              children: zU("settingsMenu:language")
+            }), (0, YU.jsx)(iX.d, {
+              options: Object.entries(AU.i).map((UU => {
+                let [XU, zU] = UU;
                 return {
-                  label: (0, LM.jsxs)("div", {
+                  label: (0, YU.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, LM.jsx)("img", {
-                      src: iM.flagImg,
+                    children: [(0, YU.jsx)("img", {
+                      src: zU.flagImg,
                       alt: "flag"
-                    }), (0, LM.jsxs)("span", {
-                      children: [mM(rM), " ", (0, LM.jsxs)("span", {
+                    }), (0, YU.jsxs)("span", {
+                      children: [NU(XU), " ", (0, YU.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", rM, ")"]
+                        children: ["(", XU, ")"]
                       })]
                     })]
                   }),
-                  value: rM
+                  value: XU
                 }
               })),
-              value: OM.code,
-              onChange: MM => {
-                Yr.e.get().setCurrentLanguage(MM.value)
+              value: cU.code,
+              onChange: UU => {
+                HX.h.get().setCurrentLanguage(UU.value)
               }
             })]
-          }), rM && PM && (0, Br.e)() && (0, LM.jsx)(Fr, {}), !(0, yM.isMobileApp)() && (0, Nr.j)() && yM.featureFlags.useForceRotateForceFullscreenOverlay && (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:disableFullscreenMode"),
-            checked: SM.disableFullscreen,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                disableFullscreen: MM
+          }), XU && FU && (0, mX.e)() && (0, YU.jsx)(nX, {}), !(0, gU.isMobileApp)() && (0, MX.e)() && gU.featureFlags.useForceRotateForceFullscreenOverlay && (0, YU.jsx)(PU.e, {
+            label: zU("settingsMenu:disableFullscreenMode"),
+            checked: yU.disableFullscreen,
+            onClick: UU => {
+              WU.e.setClientEscMenuOptions({
+                disableFullscreen: UU
               })
             }
-          }), (0, LM.jsx)(eM.c, {
-            label: iM(QM),
-            checked: SM.showCoordinates,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showCoordinates: MM
+          }), (0, YU.jsx)(PU.e, {
+            label: zU(DU),
+            checked: yU.showCoordinates,
+            onClick: UU => {
+              WU.e.setClientEscMenuOptions({
+                showCoordinates: UU
               })
             },
-            disabled: nM
-          }), (0, LM.jsx)(eM.c, {
-            label: iM(zM),
-            checked: SM.showChunkCoordinates,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showChunkCoordinates: MM
+            disabled: oU
+          }), (0, YU.jsx)(PU.e, {
+            label: zU(EU),
+            checked: yU.showChunkCoordinates,
+            onClick: UU => {
+              WU.e.setClientEscMenuOptions({
+                showChunkCoordinates: UU
               })
             },
-            disabled: nM
-          }), (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showFps"),
-            checked: SM.showFPS,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showFPS: MM
+            disabled: oU
+          }), (0, YU.jsx)(PU.e, {
+            label: zU("settingsMenu:showFps"),
+            checked: yU.showFPS,
+            onClick: UU => {
+              WU.e.setClientEscMenuOptions({
+                showFPS: UU
               })
             }
-          }), (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:disableBunnyHopping"),
-            checked: SM.disableBunnyHopping,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                disableBunnyHopping: MM
+          }), (0, YU.jsx)(PU.e, {
+            label: zU("settingsMenu:disableBunnyHopping"),
+            checked: yU.disableBunnyHopping,
+            onClick: UU => {
+              WU.e.setClientEscMenuOptions({
+                disableBunnyHopping: UU
               })
             }
-          }), (0, Er.u)() && (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showChat"),
-            checked: SM.showChat,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showChat: MM
+          }), (0, tX.t)() && (0, YU.jsx)(PU.e, {
+            label: zU("settingsMenu:showChat"),
+            checked: yU.showChat,
+            onClick: UU => {
+              WU.e.setClientEscMenuOptions({
+                showChat: UU
               })
             }
-          }), (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showDebugOverlay"),
-            checked: jM,
-            onClick: MM => {
-              bM.d.set({
-                showDebugOverlay: MM
+          }), (0, YU.jsx)(PU.e, {
+            label: zU("settingsMenu:showDebugOverlay"),
+            checked: QU,
+            onClick: UU => {
+              WU.e.set({
+                showDebugOverlay: UU
               })
             }
-          }), yM.featureFlags.useSocialFeatures && (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showFriendOnlineToasts"),
-            checked: SM.showFriendOnlineToasts,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showFriendOnlineToasts: MM
+          }), gU.featureFlags.useSocialFeatures && (0, YU.jsx)(PU.e, {
+            label: zU("settingsMenu:showFriendOnlineToasts"),
+            checked: yU.showFriendOnlineToasts,
+            onClick: UU => {
+              WU.e.setClientEscMenuOptions({
+                showFriendOnlineToasts: UU
               })
             }
-          }), (0, LM.jsx)(eM.c, {
-            label: iM("settingsMenu:showNewItemIndicator"),
-            checked: SM.showNewItemIndicator,
-            onClick: MM => {
-              bM.d.setClientEscMenuOptions({
-                showNewItemIndicator: MM
+          }), (0, YU.jsx)(PU.e, {
+            label: zU("settingsMenu:showNewItemIndicator"),
+            checked: yU.showNewItemIndicator,
+            onClick: UU => {
+              WU.e.setClientEscMenuOptions({
+                showNewItemIndicator: UU
               })
             }
           })]
         })
       })),
-      Ir = (0, OM.memo)((function() {
+      xX = (0, cU.memo)((function() {
         const {
-          t: MM
-        } = (0, aM.A)(), {
-          soundVolume: rM,
-          musicVolume: iM
-        } = (0, bM.m)(["soundVolume", "musicVolume"]);
-        return (0, LM.jsxs)("div", {
+          t: UU
+        } = (0, AU.I)(), {
+          soundVolume: XU,
+          musicVolume: zU
+        } = (0, WU.q)(["soundVolume", "musicVolume"]);
+        return (0, YU.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, LM.jsx)(eM.h, {
-            name: MM("settingsMenu:musicVolume"),
+          children: [(0, YU.jsx)(PU.j, {
+            name: UU("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: iM,
-            onChange: MM => {
-              bM.d.set({
-                musicVolume: Math.round(100 * MM) / 100
+            initValue: zU,
+            onChange: UU => {
+              WU.e.set({
+                musicVolume: Math.round(100 * UU) / 100
               })
             },
-            format: MM => MM.toFixed(2)
-          }), (0, LM.jsx)(eM.h, {
-            name: MM("settingsMenu:soundEffectsVolume"),
+            format: UU => UU.toFixed(2)
+          }), (0, YU.jsx)(PU.j, {
+            name: UU("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: rM,
-            onChange: MM => {
-              bM.d.set({
-                soundVolume: Math.round(100 * MM) / 100
+            initValue: XU,
+            onChange: UU => {
+              WU.e.set({
+                soundVolume: Math.round(100 * UU) / 100
               })
             },
-            format: MM => MM.toFixed(2)
+            format: UU => UU.toFixed(2)
           })]
         })
       }));
-    var Kr = iM(730),
-      qr = iM(1516),
-      Tr = iM(2531),
-      Vr = iM(2516),
-      cr = iM(3881);
-    const Mi = {
+    var JX = zU(755),
+      jX = zU(1492),
+      KX = zU(2548),
+      bX = zU(2535),
+      TX = zU(3873);
+    const hX = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function ri() {
+    function Uz() {
       const {
-        t: MM
-      } = (0, aM.A)(), rM = (0, cr.b)(), {
-        mobilePushNotificationsCanAsk: iM
-      } = (0, bM.m)(["mobilePushNotificationsCanAsk"]), [SM, jM] = (0, OM.useState)(null), [PM, nM] = (0, OM.useState)(!1), [zM, mM] = (0, OM.useState)(null), [HM, hM] = (0, OM.useState)(!1), JM = (0, OM.useCallback)((() => {
-        (0, Tr.d)().then((MM => {
-          rM.current && (jM(MM), nM(!1))
-        })).catch((MM => {
-          console.error("Failed to load push notification targets:", MM), rM.current && nM(!0)
+        t: UU
+      } = (0, AU.I)(), XU = (0, TX.b)(), {
+        mobilePushNotificationsCanAsk: zU
+      } = (0, WU.q)(["mobilePushNotificationsCanAsk"]), [yU, QU] = (0, cU.useState)(null), [FU, oU] = (0, cU.useState)(!1), [EU, NU] = (0, cU.useState)(null), [IU, pU] = (0, cU.useState)(!1), aU = (0, cU.useCallback)((() => {
+        (0, KX.c)().then((UU => {
+          XU.current && (QU(UU), oU(!1))
+        })).catch((UU => {
+          console.error("Failed to load push notification targets:", UU), XU.current && oU(!0)
         }))
-      }), [rM]), dM = (0, OM.useCallback)((() => {
-        (0, Vr.g)().then((MM => {
-          rM.current && mM((() => MM))
+      }), [XU]), tU = (0, cU.useCallback)((() => {
+        (0, bX.g)().then((UU => {
+          XU.current && NU((() => UU))
         }))
-      }), [rM]);
-      (0, OM.useEffect)((() => {
-        JM()
-      }), [JM]), (0, OM.useEffect)((() => {
-        dM()
-      }), [dM, iM]), (0, qr.d)(Tr.i, JM);
-      const yM = null === SM ? [] : Object.keys(Mi).filter((MM => SM[MM] > 0));
-      return (0, LM.jsxs)("div", {
+      }), [XU]);
+      (0, cU.useEffect)((() => {
+        aU()
+      }), [aU]), (0, cU.useEffect)((() => {
+        tU()
+      }), [tU, zU]), (0, jX.f)(KX.i, aU);
+      const gU = null === yU ? [] : Object.keys(hX).filter((UU => yU[UU] > 0));
+      return (0, YU.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "SliderText",
-          children: MM("notificationSettings:pushNotifications")
-        }), null === SM && PM && (0, LM.jsx)("div", {
+          children: UU("notificationSettings:pushNotifications")
+        }), null === yU && FU && (0, YU.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: MM("notificationSettings:pushTargetsLoadFailed")
-        }), null !== SM && 0 === yM.length && (0, LM.jsx)("div", {
+          children: UU("notificationSettings:pushTargetsLoadFailed")
+        }), null !== yU && 0 === gU.length && (0, YU.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: MM("notificationSettings:pushTargetsNone")
-        }), yM.length > 0 && (0, LM.jsx)("ul", {
+          children: UU("notificationSettings:pushTargetsNone")
+        }), gU.length > 0 && (0, YU.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: yM.map((rM => {
-            var iM;
-            return (0, LM.jsx)("li", {
-              children: MM(Mi[rM], {
-                count: null !== (iM = null === SM || void 0 === SM ? void 0 : SM[rM]) && void 0 !== iM ? iM : 0
+          children: gU.map((XU => {
+            var zU;
+            return (0, YU.jsx)("li", {
+              children: UU(hX[XU], {
+                count: null !== (zU = null === yU || void 0 === yU ? void 0 : yU[XU]) && void 0 !== zU ? zU : 0
               })
-            }, rM)
+            }, XU)
           }))
-        }), null !== zM && (0, LM.jsx)(QM.e, {
+        }), null !== EU && (0, YU.jsx)(DU.f, {
           className: "PushNotificationSettingsButton",
-          loading: HM,
+          loading: IU,
           onClick: () => {
-            hM(!0), zM().catch((MM => {
-              console.error("Failed to turn on push notifications:", MM)
+            pU(!0), EU().catch((UU => {
+              console.error("Failed to turn on push notifications:", UU)
             })).finally((() => {
-              rM.current && (hM(!1), dM())
+              XU.current && (pU(!1), tU())
             }))
           },
-          children: MM("notificationSettings:pushTurnOn")
+          children: UU("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var ii = iM(2746),
-      Oi = iM(2500),
-      Si = iM(30);
-    async function ji() {
-      return "dailyDropReminderAsked_" + (await uM.userContextManager.getCurrentUserContext()).whamm
+    var Xz = zU(2747),
+      zz = zU(2523),
+      cz = zU(42);
+    async function yz() {
+      return "dailyDropReminderAsked_" + (await CU.userContextManager.getCurrentUserContext()).whamm
     }
 
-    function ai(MM) {
-      return async function(MM) {
-        if (MM.remindersOn || (0, bM.h)(bM.d.get("gameState"))) return null;
-        const rM = await ji();
-        if (null !== Si.g.getItem(rM)) return null;
-        const [iM, OM] = await Promise.all([(0, Vr.g)().catch((MM => (console.error("Couldn't tell whether this device can take push notifications:", MM), null))), Pi()]);
-        if (null === iM && !OM) return null;
-        if (null !== iM && ((0, Oi.c)() || (0, Vr.k)())) return null;
+    function Qz(UU) {
+      return async function(UU) {
+        if (UU.remindersOn || (0, WU.h)(WU.e.get("gameState"))) return null;
+        const XU = await yz();
+        if (null !== cz.k.getItem(XU)) return null;
+        const [zU, cU] = await Promise.all([(0, bX.g)().catch((UU => (console.error("Couldn't tell whether this device can take push notifications:", UU), null))), Az()]);
+        if (null === zU && !cU) return null;
+        if (null !== zU && ((0, zz.e)() || (0, bX.k)())) return null;
         return {
-          askedKey: rM,
-          requester: iM
+          askedKey: XU,
+          requester: zU
         }
-      }(MM).catch((MM => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", MM), null)))
+      }(UU).catch((UU => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", UU), null)))
     }
 
-    function Pi() {
-      return (0, Tr.d)().then((MM => MM.app + MM.browser + MM.msnPlay > 0), (MM => (console.error("Couldn't tell where push notifications reach this account:", MM), !0)))
+    function Az() {
+      return (0, KX.c)().then((UU => UU.app + UU.browser + UU.msnPlay > 0), (UU => (console.error("Couldn't tell where push notifications reach this account:", UU), !0)))
     }
-    async function ni(MM) {
-      const rM = (0, ii.A)({
+    async function Fz(UU) {
+      const XU = (0, Xz.n)({
           remindersOn: !0
         }),
-        iM = null === MM ? Promise.resolve() : MM(),
-        [OM, SM] = await Promise.allSettled([rM, iM]);
-      "rejected" === OM.status && console.error("Failed to turn on Lucky Skin Block reminders:", OM.reason), "rejected" === SM.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", SM.reason), "rejected" !== OM.status && "rejected" !== SM.status || sr.k.showMessage({
+        zU = null === UU ? Promise.resolve() : UU(),
+        [cU, yU] = await Promise.allSettled([XU, zU]);
+      "rejected" === cU.status && console.error("Failed to turn on Lucky Skin Block reminders:", cU.reason), "rejected" === yU.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", yU.reason), "rejected" !== cU.status && "rejected" !== yU.status || OX.f.showMessage({
         translationKey: "dailyDrop:remindFailed"
       })
     }
-    const Qi = {
+    const oz = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1339,7 +1321,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      zi = {
+      Dz = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1350,390 +1332,400 @@ export const modules = {
         }
       };
 
-    function Li(MM) {
+    function Ez(UU) {
       let {
-        setting: rM,
-        value: iM
-      } = MM;
+        setting: XU,
+        value: zU
+      } = UU;
       const {
-        t: SM
-      } = (0, aM.A)(), PM = (0, cr.b)(), [nM, QM] = (0, OM.useState)(null), [zM, mM] = (0, OM.useState)(!1), [HM, hM] = (0, OM.useState)(null);
-      return (0, OM.useEffect)((() => {
-        "remindersOn" === rM && (0, Vr.g)().then((MM => {
-          PM.current && hM((() => MM))
-        }), (MM => {
-          console.error("Couldn't tell whether this device can take push notifications:", MM)
+        t: yU
+      } = (0, AU.I)(), FU = (0, TX.b)(), [oU, DU] = (0, cU.useState)(null), [EU, NU] = (0, cU.useState)(!1), [IU, pU] = (0, cU.useState)(null);
+      return (0, cU.useEffect)((() => {
+        "remindersOn" === XU && (0, bX.g)().then((UU => {
+          FU.current && pU((() => UU))
+        }), (UU => {
+          console.error("Couldn't tell whether this device can take push notifications:", UU)
         }))
-      }), [rM, PM]), (0, LM.jsx)(eM.c, {
-        className: jM()({
-          DailyDropSettingFailed: zM
+      }), [XU, FU]), (0, YU.jsx)(PU.e, {
+        className: QU()({
+          DailyDropSettingFailed: EU
         }),
-        label: SM(zi[rM].label),
-        checked: null !== nM && void 0 !== nM ? nM : iM,
-        note: zM ? SM("dailyDrop:settingFailed") : void 0,
-        onClick: MM => {
-          null === nM && (QM(MM), mM(!1), MM && null !== HM && HM().catch((MM => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", MM)
-          })), (0, ii.w)("daily_drop.setting", `${zi[rM].reportAs}_${MM?"on":"off"}`), "remindersOn" === rM && ji().then((MM => {
-            Si.g.setItem(MM, !0)
-          }), (MM => {
-            console.error("Failed to keep the Lucky Skin Block reminders choice:", MM)
-          })), (0, ii.A)("hidden" === rM ? {
-            hidden: MM
+        label: yU(Dz[XU].label),
+        checked: null !== oU && void 0 !== oU ? oU : zU,
+        note: EU ? yU("dailyDrop:settingFailed") : void 0,
+        onClick: UU => {
+          null === oU && (DU(UU), NU(!1), UU && null !== IU && IU().catch((UU => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", UU)
+          })), (0, Xz.m)("daily_drop.setting", `${Dz[XU].reportAs}_${UU?"on":"off"}`), "remindersOn" === XU && yz().then((UU => {
+            cz.k.setItem(UU, !0)
+          }), (UU => {
+            console.error("Failed to keep the Lucky Skin Block reminders choice:", UU)
+          })), (0, Xz.n)("hidden" === XU ? {
+            hidden: UU
           } : {
-            remindersOn: MM
-          }).catch((MM => {
-            console.error(`Failed to save the Lucky Skin Block's ${rM} setting:`, MM), PM.current && mM(!0)
+            remindersOn: UU
+          }).catch((UU => {
+            console.error(`Failed to save the Lucky Skin Block's ${XU} setting:`, UU), FU.current && NU(!0)
           })).finally((() => {
-            PM.current && QM(null)
+            FU.current && DU(null)
           })))
         }
       })
     }
-    const mi = (0, OM.memo)((function() {
+    const Yz = (0, cU.memo)((function() {
       const {
-        t: MM
-      } = (0, aM.A)(), {
-        clientEscMenuOptions: rM
-      } = (0, bM.m)(["clientEscMenuOptions"]), {
-        userContext: iM
-      } = (0, hM.b)(), OM = iM.dailyDrop;
-      return (0, LM.jsxs)("div", {
+        t: UU
+      } = (0, AU.I)(), {
+        clientEscMenuOptions: XU
+      } = (0, WU.q)(["clientEscMenuOptions"]), {
+        userContext: zU
+      } = (0, pU.d)(), cU = zU.dailyDrop;
+      return (0, YU.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [yM.featureFlags.useSocialFeatures && (0, LM.jsx)(eM.f, {
-          label: MM("notificationSettings:friendRequests"),
-          options: Kr.c.map((rM => ({
-            value: rM,
-            label: MM(Qi[rM].label)
+        children: [gU.featureFlags.useSocialFeatures && (0, YU.jsx)(PU.i, {
+          label: UU("notificationSettings:friendRequests"),
+          options: JX.e.map((XU => ({
+            value: XU,
+            label: UU(oz[XU].label)
           }))),
-          value: rM.friendRequestNotifications,
-          onChange: MM => {
-            bM.d.setClientEscMenuOptions({
-              friendRequestNotifications: MM
+          value: XU.friendRequestNotifications,
+          onChange: UU => {
+            WU.e.setClientEscMenuOptions({
+              friendRequestNotifications: UU
             })
           },
-          circleInfoText: (0, LM.jsx)("div", {
+          circleInfoText: (0, YU.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: Kr.c.map((rM => (0, LM.jsxs)("div", {
-              children: [(0, LM.jsx)("b", {
-                children: MM(Qi[rM].label)
-              }), ": ", MM(Qi[rM].info)]
-            }, rM)))
+            children: JX.e.map((XU => (0, YU.jsxs)("div", {
+              children: [(0, YU.jsx)("b", {
+                children: UU(oz[XU].label)
+              }), ": ", UU(oz[XU].info)]
+            }, XU)))
           })
-        }), null !== OM && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)(Li, {
+        }), null !== cU && (0, YU.jsxs)(YU.Fragment, {
+          children: [(0, YU.jsx)(Ez, {
             setting: "remindersOn",
-            value: OM.remindersOn
-          }), (0, LM.jsx)(Li, {
+            value: cU.remindersOn
+          }), (0, YU.jsx)(Ez, {
             setting: "hidden",
-            value: OM.hidden
+            value: cU.hidden
           })]
-        }), (0, LM.jsx)(ri, {})]
+        }), (0, YU.jsx)(Uz, {})]
       })
     }));
-    var Hi = iM(4887),
-      Ji = iM(181),
-      di = iM(308),
-      yi = iM(7148),
-      li = iM(3855),
-      Ei = iM(34954),
-      Ui = iM(625),
-      Gi = iM(22);
-    var Ci = iM(656),
-      ei = iM(4727);
-    const bi = new Map([
+    var Nz = zU(4941),
+      Iz = zU(212),
+      pz = zU(316),
+      az = zU(7253),
+      tz = zU(3849),
+      gz = zU(34784),
+      kz = zU(646),
+      Gz = zU(31);
+    var Bz = zU(687),
+      Zz = zU(4783);
+    const Rz = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function wi(MM) {
-      return bi.has(MM) ? lM.gameBridge.lookup("jU", null) : null
+    function Pz(UU) {
+      return Rz.has(UU) ? kU.gameBridge.lookup("nG", null) : null
     }
 
-    function ti(MM) {
-      if (!(0, Ui.J)(bM.d.get("clientEscMenuOptions")[MM])) return bM.d.get("clientEscMenuOptions")[MM];
-      const rM = wi(MM);
-      return null !== rM ? rM[bi.get(MM)] : Si.g.getItem(MM)
+    function Wz(UU) {
+      if (!(0, kz.P)(WU.e.get("clientEscMenuOptions")[UU])) return WU.e.get("clientEscMenuOptions")[UU];
+      const XU = Pz(UU);
+      return null !== XU ? XU[Rz.get(UU)] : cz.k.getItem(UU)
     }
 
-    function gi(MM, rM) {
-      if ("useTouchControls" === MM) return void(0, ei.d)(rM);
-      MM in bM.d.get("clientEscMenuOptions") && bM.d.setClientEscMenuOptions({
-        [MM]: rM
+    function dz(UU, XU) {
+      if ("useTouchControls" === UU) return void(0, Zz.c)(XU);
+      UU in WU.e.get("clientEscMenuOptions") && WU.e.setClientEscMenuOptions({
+        [UU]: XU
       });
-      const iM = wi(MM);
-      null !== iM && lM.gameBridge.send("setChunkAddDistance", {
-        ...iM,
-        [bi.get(MM)]: rM
-      }), Si.g.setItem(MM, rM)
+      const zU = Pz(UU);
+      null !== zU && kU.gameBridge.send("setChunkAddDistance", {
+        ...zU,
+        [Rz.get(UU)]: XU
+      }), cz.k.setItem(UU, XU)
     }
-    var ui = iM(4809),
-      Ri = iM(34956),
-      Wi = iM(34959),
-      si = iM(4882),
-      Di = iM(34980);
+    var Lz = zU(4848),
+      ez = zU(34791),
+      Cz = zU(34798),
+      wz = zU(4938),
+      qz = zU(34816);
 
-    function ki(MM) {
-      var rM, SM, PM, nM;
+    function Oz(UU) {
+      var XU, yU, FU, oU;
       let {
-        minChunkAddDist: QM,
-        getValue: zM,
-        onChange: mM,
-        setApplySettingsCallback: HM
-      } = MM;
+        minChunkAddDist: DU,
+        getValue: EU,
+        onChange: NU,
+        setApplySettingsCallback: IU
+      } = UU;
       const {
-        t: hM
-      } = (0, aM.A)(), {
-        clientEscMenuOptions: dM
-      } = (0, bM.m)(["clientEscMenuOptions", "showDistantNametags"]), lM = (0, OM.useRef)(zM("showFog")), EM = (0, OM.useRef)(dM.antiAliasing), UM = (0, OM.useRef)(dM.useWebGpu), [GM, CM] = (0, OM.useState)(null), [tM, gM] = (0, OM.useState)(!1), [uM, RM] = (0, OM.useState)((() => (0, li.d)(yM.featureFlags.settings.canUseShaderPacks))), [pM] = (0, OM.useState)((() => bM.d.isWebGpuDefaultOff())), [WM] = (0, OM.useState)(di.k), [sM] = (0, OM.useState)((() => !0 === Si.g.getItem(Ur.fc))), [DM] = (0, OM.useState)((() => bM.d.isWebGpuOnStored()));
-      (0, OM.useEffect)((() => {
-        let MM = !1;
-        return (0, yM.hasUsableWebGpuAdapter)().then((async rM => {
-          const iM = sM || DM,
-            OM = !rM && Ci.H && await (0, Di.d)(iM);
-          MM || (CM(rM || OM), gM(OM))
-        })), (0, li.i)(yM.featureFlags.settings.canUseShaderPacks) && (0, yi.d)().then((async rM => {
-          const OM = null !== rM && await async function(MM) {
+        t: pU
+      } = (0, AU.I)(), {
+        clientEscMenuOptions: tU
+      } = (0, WU.q)(["clientEscMenuOptions", "showDistantNametags"]), kU = (0, cU.useRef)(EU("showFog")), GU = (0, cU.useRef)(tU.antiAliasing), BU = (0, cU.useRef)(tU.useWebGpu), [ZU, RU] = (0, cU.useState)(null), [LU, eU] = (0, cU.useState)(!1), [CU, wU] = (0, cU.useState)((() => (0, tz.d)(gU.featureFlags.settings.canUseShaderPacks))), [qU] = (0, cU.useState)((() => WU.e.isWebGpuDefaultOff())), [OU] = (0, cU.useState)(pz.l), [SU, rU] = (0, cU.useState)(!1);
+      (0, cU.useEffect)((() => {
+        const UU = () => {
+          rU((0, Cz.q)())
+        };
+        return UU(), (0, Cz.w)(UU)
+      }), []), (0, jX.f)("appManagerUpdated|clientEscMenuOptions", (() => {
+        rU((0, Cz.q)())
+      }));
+      const [uU] = (0, cU.useState)((() => !0 === cz.k.getItem(gX.vc))), [fU] = (0, cU.useState)((() => WU.e.isWebGpuOnStored()));
+      (0, cU.useEffect)((() => {
+        let UU = !1;
+        return (0, gU.hasUsableWebGpuAdapter)().then((async XU => {
+          const zU = uU || fU,
+            cU = !XU && Bz.H && await (0, qz.c)(zU);
+          UU || (RU(XU || cU), eU(cU))
+        })), (0, tz.k)(gU.featureFlags.settings.canUseShaderPacks) && (0, az.f)().then((async XU => {
+          const cU = null !== XU && await async function(UU) {
             const [{
-              isShaderPackActive: rM
+              isShaderPackActive: XU
             }, {
-              loadPageShaderPackCompiler: OM
-            }] = await Promise.all([iM.e(152).then((() => iM(7142))), Promise.all([iM.e(89), iM.e(149), iM.e(151)]).then((() => iM(7111)))]);
-            return rM(MM, await OM())
-          }(rM);
-          MM || RM(OM)
+              loadPageShaderPackCompiler: cU
+            }] = await Promise.all([zU.e(151).then((() => zU(7251))), Promise.all([zU.e(89), zU.e(147), zU.e(150)]).then((() => zU(7209)))]);
+            return XU(UU, await cU())
+          }(XU);
+          UU || wU(cU)
         })), () => {
-          MM = !0
+          UU = !0
         }
-      }), [sM, DM]);
-      const kM = (!(uM && !sM) || !tM) && GM,
-        ZM = function(MM, rM, iM, OM, SM) {
-          return (0, Ei.e)(iM, OM) && !0 === rM ? {
+      }), [uU, fU]);
+      const iU = (!(CU && !uU) || !LU) && ZU,
+        HU = function(UU, XU, zU, cU, yU) {
+          return (0, gz.d)(zU, cU) && !0 === XU ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== rM ? "settingsMenu:newWebGpu" : SM ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: MM && !1 !== rM,
-            disabled: !0 !== rM
+            translationKey: !1 !== XU ? "settingsMenu:newWebGpu" : yU ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: UU && !1 !== XU,
+            disabled: !0 !== XU
           }
-        }(dM.useWebGpu, kM, uM, pM, WM),
-        oM = (dM.useWebGpu || (0, Ei.e)(uM, pM)) && uM && !0 === kM,
-        fM = (0, JM.f)("lightingOverride"),
-        YM = !(0, Ui.J)(fM);
-      let NM = "settingsMenu:enableLighting";
-      YM && (NM = fM ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const AM = MM => {
-          var rM, iM, OM;
-          const SM = null !== (rM = MM.showFog) && void 0 !== rM ? rM : zM("showFog"),
-            jM = null !== (iM = MM.antiAliasing) && void 0 !== iM ? iM : dM.antiAliasing,
-            aM = null !== (OM = MM.useWebGpu) && void 0 !== OM ? OM : dM.useWebGpu,
-            PM = !Ci.H && SM !== lM.current || jM !== EM.current || aM !== UM.current;
-          HM(PM ? () => eM.j : null)
+        }(tU.useWebGpu, iU, CU, qU, OU),
+        MU = (tU.useWebGpu || (0, gz.d)(CU, qU)) && CU && !0 === iU,
+        vU = (0, aU.f)("lightingOverride"),
+        VU = !(0, kz.P)(vU);
+      let sU = "settingsMenu:enableLighting";
+      VU && (sU = vU ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const nU = UU => {
+          var XU, zU, cU;
+          const yU = null !== (XU = UU.showFog) && void 0 !== XU ? XU : EU("showFog"),
+            QU = null !== (zU = UU.antiAliasing) && void 0 !== zU ? zU : tU.antiAliasing,
+            AU = null !== (cU = UU.useWebGpu) && void 0 !== cU ? cU : tU.useWebGpu,
+            FU = !Bz.H && yU !== kU.current || QU !== GU.current || AU !== BU.current;
+          IU(FU ? () => PU.k : null)
         },
-        xM = (0, JM.f)("fogChunkDistanceOverride"),
-        vM = (0, JM.f)("fogBlockDistanceOverride"),
-        FM = !(0, Ui.J)(xM) || !(0, Ui.J)(vM),
-        BM = FM ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [XM, IM] = (0, Hi.h)(QM),
-        [KM, qM] = (0, si.e)(QM),
-        TM = hM("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        VM = KM < XM,
-        cM = Math.min(null !== (rM = zM("chunkHorizAddDist")) && void 0 !== rM ? rM : QM[0], KM),
-        Mr = !FM && function(MM, rM) {
-          return !0 === MM.showFog && MM.fogChunkDistance > rM
-        }(dM, cM);
-      return (0, LM.jsxs)("div", {
+        mU = (0, aU.f)("fogChunkDistanceOverride"),
+        lU = (0, aU.f)("fogBlockDistanceOverride"),
+        xU = !(0, kz.P)(mU) || !(0, kz.P)(lU),
+        JU = xU ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [jU, KU] = (0, Nz.h)(DU),
+        [bU, TU] = (0, wz.i)(DU),
+        hU = pU("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        UX = bU < jU,
+        XX = Math.min(null !== (XU = EU("chunkHorizAddDist")) && void 0 !== XU ? XU : DU[0], bU),
+        zX = !xU && function(UU, XU) {
+          return !0 === UU.showFog && UU.fogChunkDistance > XU
+        }(tU, XX);
+      return (0, YU.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, LM.jsx)(eM.h, {
-          name: hM("settingsMenu:horizontalChunkLoadDistance"),
-          min: QM[0],
-          max: XM,
-          selectableMax: KM,
-          cappedNote: TM,
+        children: [(0, YU.jsx)(PU.j, {
+          name: pU("settingsMenu:horizontalChunkLoadDistance"),
+          min: DU[0],
+          max: jU,
+          selectableMax: bU,
+          cappedNote: hU,
           step: 1,
-          initValue: cM,
-          onChange: MM => {
-            !0 === zM("showFog") && MM < zM("fogChunkDistance") && mM("fogChunkDistance", MM), mM("chunkHorizAddDist", MM), Gi.i.Tz("updatedChunkLoadDist")
+          initValue: XX,
+          onChange: UU => {
+            !0 === EU("showFog") && UU < EU("fogChunkDistance") && NU("fogChunkDistance", UU), NU("chunkHorizAddDist", UU), Gz.k.UY("updatedChunkLoadDist")
           },
-          circleInfoText: hM("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, LM.jsx)(eM.h, {
-          name: hM("settingsMenu:verticalChunkLoadDistance"),
-          min: QM[1],
-          max: IM,
-          selectableMax: qM,
-          cappedNote: VM ? void 0 : TM,
+          circleInfoText: pU("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, YU.jsx)(PU.j, {
+          name: pU("settingsMenu:verticalChunkLoadDistance"),
+          min: DU[1],
+          max: KU,
+          selectableMax: TU,
+          cappedNote: UX ? void 0 : hU,
           step: 1,
-          initValue: Math.min(null !== (SM = zM("chunkVertAddDist")) && void 0 !== SM ? SM : QM[1], qM),
-          onChange: MM => {
-            mM("chunkVertAddDist", MM), Gi.i.Tz("updatedChunkLoadDist")
+          initValue: Math.min(null !== (yU = EU("chunkVertAddDist")) && void 0 !== yU ? yU : DU[1], TU),
+          onChange: UU => {
+            NU("chunkVertAddDist", UU), Gz.k.UY("updatedChunkLoadDist")
           },
-          circleInfoText: hM("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: pU("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:chunkFadeIn"),
-          checked: dM.chunkFadeIn,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              chunkFadeIn: MM
+        }), (0, YU.jsx)(PU.e, {
+          label: pU("settingsMenu:chunkFadeIn"),
+          checked: tU.chunkFadeIn,
+          onClick: UU => {
+            WU.e.setClientEscMenuOptions({
+              chunkFadeIn: UU
             })
           },
-          circleInfoText: hM("settingsMenu:chunkFadeInInfo")
-        }), wM.devTools.supports("chunkBorders") && (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:showChunkBorders"),
-          checked: dM.showChunkBorders,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              showChunkBorders: MM
+          circleInfoText: pU("settingsMenu:chunkFadeInInfo")
+        }), dU.devTools.supports("chunkBorders") && (0, YU.jsx)(PU.e, {
+          label: pU("settingsMenu:showChunkBorders"),
+          checked: tU.showChunkBorders,
+          onClick: UU => {
+            WU.e.setClientEscMenuOptions({
+              showChunkBorders: UU
             })
           },
-          circleInfoText: hM("settingsMenu:showChunkBordersInfo")
-        }), (0, LM.jsx)(eM.c, {
-          label: hM(NM),
-          checked: dM.enableLighting,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              enableLighting: MM
+          circleInfoText: pU("settingsMenu:showChunkBordersInfo")
+        }), (0, YU.jsx)(PU.e, {
+          label: pU(sU),
+          checked: tU.enableLighting,
+          onClick: UU => {
+            WU.e.setClientEscMenuOptions({
+              enableLighting: UU
             })
           },
-          disabled: YM
-        }), (0, LM.jsxs)("div", {
+          disabled: VU
+        }), (0, YU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, LM.jsx)(eM.c, {
-            label: hM(BM),
-            checked: dM.showFog,
-            onClick: MM => {
-              AM({
-                showFog: MM
-              }), bM.d.setClientEscMenuOptions({
-                showFog: MM
+          children: [(0, YU.jsx)(PU.e, {
+            label: pU(JU),
+            checked: tU.showFog,
+            onClick: UU => {
+              nU({
+                showFog: UU
+              }), WU.e.setClientEscMenuOptions({
+                showFog: UU
               })
             },
-            disabled: FM,
-            className: jM()({
-              SettingBoxWarning: Mr
+            disabled: xU,
+            className: QU()({
+              SettingBoxWarning: zX
             })
-          }), (0, LM.jsx)(eM.h, {
-            name: hM("settingsMenu:fogChunkDistance"),
-            min: QM[0],
-            max: Ji.f.maxChunkHorizAddDistance,
+          }), (0, YU.jsx)(PU.j, {
+            name: pU("settingsMenu:fogChunkDistance"),
+            min: DU[0],
+            max: Iz.f.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (PM = dM.fogChunkDistance) && void 0 !== PM ? PM : QM[0],
-            onChange: MM => {
-              bM.d.setClientEscMenuOptions({
-                fogChunkDistance: MM
-              }), Gi.i.Tz("fogChunkDistanceChanged", MM)
+            initValue: null !== (FU = tU.fogChunkDistance) && void 0 !== FU ? FU : DU[0],
+            onChange: UU => {
+              WU.e.setClientEscMenuOptions({
+                fogChunkDistance: UU
+              }), Gz.k.UY("fogChunkDistanceChanged", UU)
             },
-            circleInfoText: hM("settingsMenu:fogChunkDistanceInfo"),
-            disabled: FM || !1 === zM("showFog"),
-            className: jM()({
-              SettingBoxWarning: Mr
+            circleInfoText: pU("settingsMenu:fogChunkDistanceInfo"),
+            disabled: xU || !1 === EU("showFog"),
+            className: QU()({
+              SettingBoxWarning: zX
             })
-          }), Mr && (0, LM.jsx)("div", {
+          }), zX && (0, YU.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: hM("settingsMenu:fogChunkDistanceInfo")
+            children: pU("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !Ci.H && (0, LM.jsx)(eM.c, {
-          label: hM(oM ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !oM && dM.disableTexAtlas,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              disableTexAtlas: MM
+        }), !Bz.H && (0, YU.jsx)(PU.e, {
+          label: pU(MU ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !MU && tU.disableTexAtlas,
+          onClick: UU => {
+            WU.e.setClientEscMenuOptions({
+              disableTexAtlas: UU
             })
           },
-          circleInfoText: hM("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: oM
-        }), (0, LM.jsx)(eM.h, {
-          name: hM("settingsMenu:fieldOfView"),
+          circleInfoText: pU("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: MU
+        }), (0, YU.jsx)(PU.j, {
+          name: pU("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: dM.cameraFOV,
-          onChange: MM => {
-            bM.d.setClientEscMenuOptions({
-              cameraFOV: MM
+          initValue: tU.cameraFOV,
+          onChange: UU => {
+            WU.e.setClientEscMenuOptions({
+              cameraFOV: UU
             })
           }
-        }), (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:disableViewBobbing"),
-          checked: dM.disableBobbing,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              disableBobbing: MM
+        }), (0, YU.jsx)(PU.e, {
+          label: pU("settingsMenu:disableViewBobbing"),
+          checked: tU.disableBobbing,
+          onClick: UU => {
+            WU.e.setClientEscMenuOptions({
+              disableBobbing: UU
             })
           },
-          circleInfoText: hM("settingsMenu:disableViewBobbingInfo")
-        }), (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:antiAliasing"),
-          checked: dM.antiAliasing,
-          onClick: MM => {
-            AM({
-              antiAliasing: MM
-            }), (0, ui.g)("antiAliasing"), bM.d.setClientEscMenuOptions({
-              antiAliasing: MM
+          circleInfoText: pU("settingsMenu:disableViewBobbingInfo")
+        }), (0, YU.jsx)(PU.e, {
+          label: pU("settingsMenu:antiAliasing"),
+          checked: tU.antiAliasing,
+          onClick: UU => {
+            nU({
+              antiAliasing: UU
+            }), (0, Lz.f)("antiAliasing"), WU.e.setClientEscMenuOptions({
+              antiAliasing: UU
             })
           },
-          circleInfoText: hM("settingsMenu:antiAliasingInfo")
-        }), (0, LM.jsx)(eM.h, {
-          name: hM("settingsMenu:pixelScale"),
+          circleInfoText: pU("settingsMenu:antiAliasingInfo")
+        }), (0, YU.jsx)(PU.j, {
+          name: pU("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (nM = dM.pixelScale) && void 0 !== nM ? nM : 1,
-          onChange: MM => {
-            (MM !== bM.d.get("clientEscMenuOptions").pixelScale || (0, Wi.q)()) && (0, ui.g)("pixelScale"), bM.d.setClientEscMenuOptions({
-              pixelScale: MM
+          initValue: null !== (oU = tU.pixelScale) && void 0 !== oU ? oU : 1,
+          onChange: UU => {
+            (UU !== WU.e.get("clientEscMenuOptions").pixelScale || (0, Cz.m)()) && (0, Lz.f)("pixelScale"), WU.e.setClientEscMenuOptions({
+              pixelScale: UU
             })
           },
-          circleInfoText: hM("settingsMenu:pixelScaleInfo"),
-          format: MM => `${MM}x`
-        }), (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:pixelSmoothing"),
-          checked: dM.pixelSmoothing,
-          onClick: MM => {
-            bM.d.setClientEscMenuOptions({
-              pixelSmoothing: MM
+          circleInfoText: pU("settingsMenu:pixelScaleInfo"),
+          note: SU ? pU("settingsMenu:pixelScaleLowered") : void 0,
+          format: UU => `${UU}x`
+        }), (0, YU.jsx)(PU.e, {
+          label: pU("settingsMenu:pixelSmoothing"),
+          checked: tU.pixelSmoothing,
+          onClick: UU => {
+            WU.e.setClientEscMenuOptions({
+              pixelSmoothing: UU
             })
           },
-          circleInfoText: hM("settingsMenu:pixelSmoothingInfo")
-        }), Ci.H && (0, LM.jsx)(eM.c, {
-          label: hM("settingsMenu:distantNametags"),
-          checked: (0, Ri.d)(),
-          onClick: MM => {
-            bM.d.set({
-              showDistantNametags: MM
+          circleInfoText: pU("settingsMenu:pixelSmoothingInfo")
+        }), Bz.H && (0, YU.jsx)(PU.e, {
+          label: pU("settingsMenu:distantNametags"),
+          checked: (0, ez.e)(),
+          onClick: UU => {
+            WU.e.set({
+              showDistantNametags: UU
             })
           },
-          circleInfoText: hM("settingsMenu:distantNametagsInfo")
-        }), (0, LM.jsx)(eM.c, {
-          label: hM(ZM.translationKey),
-          checked: ZM.checked,
-          onClick: MM => {
-            AM({
-              useWebGpu: MM
-            }), bM.d.setClientEscMenuOptions({
-              useWebGpu: MM
+          circleInfoText: pU("settingsMenu:distantNametagsInfo")
+        }), (0, YU.jsx)(PU.e, {
+          label: pU(HU.translationKey),
+          checked: HU.checked,
+          onClick: UU => {
+            nU({
+              useWebGpu: UU
+            }), WU.e.setClientEscMenuOptions({
+              useWebGpu: UU
             })
           },
-          circleInfoText: hM("settingsMenu:newWebGpuInfo"),
-          disabled: ZM.disabled
+          circleInfoText: pU("settingsMenu:newWebGpuInfo"),
+          disabled: HU.disabled
         })]
       })
     }
-    var Zi = iM(4801),
-      oi = iM(9459),
-      fi = iM(34985),
-      Yi = iM(9463),
-      Ni = iM(34989);
-    const Ai = {
+    var Sz = zU(4841),
+      rz = zU(9441),
+      uz = zU(34824),
+      fz = zU(9447),
+      iz = zU(34827);
+    const Hz = {
         color: 16777215,
         name: "white"
       },
-      xi = {
+      Mz = {
         color: 0,
         name: "black"
       },
-      vi = [Ai, {
+      vz = [Hz, {
         color: 5046092,
         name: "green"
       }, {
@@ -1748,73 +1740,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, xi],
-      Fi = [xi, Ai];
+      }, Mz],
+      Vz = [Mz, Hz];
 
-    function Bi(MM) {
-      return `${MM} px`
+    function sz(UU) {
+      return `${UU} px`
     }
 
-    function Xi(MM) {
-      return `${MM}%`
+    function nz(UU) {
+      return `${UU}%`
     }
 
-    function Ii(MM) {
+    function mz(UU) {
       let {
-        label: rM,
-        value: iM,
-        swatches: OM,
-        onChange: SM
-      } = MM;
+        label: XU,
+        value: zU,
+        swatches: cU,
+        onChange: yU
+      } = UU;
       const {
-        t: PM
-      } = (0, aM.A)(), nM = !OM.some((MM => MM.color === iM));
-      return (0, LM.jsxs)("div", {
+        t: FU
+      } = (0, AU.I)(), oU = !cU.some((UU => UU.color === zU));
+      return (0, YU.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "SliderText",
-          children: rM
-        }), (0, LM.jsxs)("div", {
+          children: XU
+        }), (0, YU.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": rM,
-          children: [OM.map((MM => {
+          "aria-label": XU,
+          children: [cU.map((UU => {
             let {
-              color: rM,
-              name: OM
-            } = MM;
-            return (0, LM.jsx)("button", {
+              color: XU,
+              name: cU
+            } = UU;
+            return (0, YU.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": rM === iM,
-              "aria-label": PM(`crosshairSettings:color_${OM}`),
+              "aria-checked": XU === zU,
+              "aria-label": FU(`crosshairSettings:color_${cU}`),
               "data-pad-focusable": !0,
-              className: jM()("CrosshairSwatch", {
-                Selected: rM === iM
+              className: QU()("CrosshairSwatch", {
+                Selected: XU === zU
               }),
               style: {
-                background: (0, Ni.i)(rM)
+                background: (0, iz.i)(XU)
               },
               onClick: () => {
-                SM(rM)
+                yU(XU)
               }
-            }, rM)
-          })), (0, LM.jsx)("label", {
-            className: jM()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: nM
+            }, XU)
+          })), (0, YU.jsx)("label", {
+            className: QU()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: oU
             }),
-            style: nM ? {
-              background: (0, Ni.i)(iM)
+            style: oU ? {
+              background: (0, iz.i)(zU)
             } : void 0,
-            title: PM("crosshairSettings:customColor"),
+            title: FU("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, LM.jsx)("input", {
+            children: (0, YU.jsx)("input", {
               type: "color",
-              "aria-label": PM("crosshairSettings:customColor"),
-              value: (0, Ni.i)(iM),
-              onChange: MM => {
-                const rM = (0, Ni.m)(MM.target.value);
-                null !== rM && SM(rM)
+              "aria-label": FU("crosshairSettings:customColor"),
+              value: (0, iz.i)(zU),
+              onChange: UU => {
+                const XU = (0, iz.p)(UU.target.value);
+                null !== XU && yU(XU)
               }
             })
           })]
@@ -1822,119 +1814,119 @@ export const modules = {
       })
     }
 
-    function Ki(MM) {
+    function lz(UU) {
       let {
-        settings: rM,
-        onChange: iM
-      } = MM;
+        settings: XU,
+        onChange: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)(), SM = (MM, OM) => {
-        iM((0, Ni.t)(rM, MM, OM))
-      }, jM = function(MM, iM) {
-        let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Bi;
+        t: cU
+      } = (0, AU.I)(), yU = (UU, cU) => {
+        zU((0, iz.s)(XU, UU, cU))
+      }, QU = function(UU, zU) {
+        let cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : sz;
         const {
-          min: jM,
-          max: aM,
-          step: PM
-        } = Ni.d[MM];
-        return (0, LM.jsx)(eM.h, {
-          name: iM,
-          min: jM,
-          max: aM,
-          step: PM,
-          initValue: rM[MM],
-          format: OM,
-          onChange: rM => {
-            SM(MM, rM)
+          min: QU,
+          max: AU,
+          step: FU
+        } = iz.e[UU];
+        return (0, YU.jsx)(PU.j, {
+          name: zU,
+          min: QU,
+          max: AU,
+          step: FU,
+          initValue: XU[UU],
+          format: cU,
+          onChange: XU => {
+            yU(UU, XU)
           }
-        }, MM)
-      }, PM = ["lines", "dot", "circle"].filter((MM => rM[MM])), nM = (MM, iM, OM) => (0, LM.jsx)(eM.c, {
-        label: iM,
-        checked: rM[MM],
-        disabled: 1 === PM.length && PM[0] === MM,
-        circleInfoText: OM,
-        onClick: rM => {
-          SM(MM, rM)
+        }, UU)
+      }, FU = ["lines", "dot", "circle"].filter((UU => XU[UU])), oU = (UU, zU, cU) => (0, YU.jsx)(PU.e, {
+        label: zU,
+        checked: XU[UU],
+        disabled: 1 === FU.length && FU[0] === UU,
+        circleInfoText: cU,
+        onClick: XU => {
+          yU(UU, XU)
         }
-      }, MM), QM = "shapes" === rM.style;
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [(0, LM.jsx)(eM.f, {
-          label: OM("crosshairSettings:style"),
+      }, UU), DU = "shapes" === XU.style;
+      return (0, YU.jsxs)(YU.Fragment, {
+        children: [(0, YU.jsx)(PU.i, {
+          label: cU("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: OM("crosshairSettings:styleClassic")
+            label: cU("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: OM("crosshairSettings:styleShapes")
+            label: cU("crosshairSettings:styleShapes")
           }],
-          value: rM.style,
-          onChange: MM => {
-            SM("style", MM)
+          value: XU.style,
+          onChange: UU => {
+            yU("style", UU)
           }
-        }), (0, LM.jsx)(Ii, {
-          label: OM("crosshairSettings:color"),
-          value: rM.color,
-          swatches: vi,
-          onChange: MM => {
-            SM("color", MM)
+        }), (0, YU.jsx)(mz, {
+          label: cU("crosshairSettings:color"),
+          value: XU.color,
+          swatches: vz,
+          onChange: UU => {
+            yU("color", UU)
           }
-        }), jM("opacity", OM("crosshairSettings:opacity"), Xi), !QM && jM("size", OM("crosshairSettings:size"), Xi), QM && (0, LM.jsxs)("div", {
+        }), QU("opacity", cU("crosshairSettings:opacity"), nz), !DU && QU("size", cU("crosshairSettings:size"), nz), DU && (0, YU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [nM("lines", OM("crosshairSettings:lines")), rM.lines && jM("lineLength", OM("crosshairSettings:lineLength")), rM.lines && jM("lineThickness", OM("crosshairSettings:lineThickness")), rM.lines && jM("gap", OM("crosshairSettings:gap")), rM.lines && nM("tStyle", OM("crosshairSettings:tStyle"))]
-        }), QM && (0, LM.jsxs)("div", {
+          children: [oU("lines", cU("crosshairSettings:lines")), XU.lines && QU("lineLength", cU("crosshairSettings:lineLength")), XU.lines && QU("lineThickness", cU("crosshairSettings:lineThickness")), XU.lines && QU("gap", cU("crosshairSettings:gap")), XU.lines && oU("tStyle", cU("crosshairSettings:tStyle"))]
+        }), DU && (0, YU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [nM("dot", OM("crosshairSettings:dot")), rM.dot && jM("dotSize", OM("crosshairSettings:dotSize"))]
-        }), QM && (0, LM.jsxs)("div", {
+          children: [oU("dot", cU("crosshairSettings:dot")), XU.dot && QU("dotSize", cU("crosshairSettings:dotSize"))]
+        }), DU && (0, YU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [nM("circle", OM("crosshairSettings:circle")), rM.circle && jM("circleRadius", OM("crosshairSettings:circleRadius")), rM.circle && jM("circleThickness", OM("crosshairSettings:circleThickness"))]
-        }), (0, LM.jsxs)("div", {
+          children: [oU("circle", cU("crosshairSettings:circle")), XU.circle && QU("circleRadius", cU("crosshairSettings:circleRadius")), XU.circle && QU("circleThickness", cU("crosshairSettings:circleThickness"))]
+        }), (0, YU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [jM("outline", OM("crosshairSettings:outline"), (MM => MM > 0 ? Bi(MM) : OM("crosshairSettings:off"))), rM.outline > 0 && (0, LM.jsx)(Ii, {
-            label: OM("crosshairSettings:outlineColor"),
-            value: rM.outlineColor,
-            swatches: Fi,
-            onChange: MM => {
-              SM("outlineColor", MM)
+          children: [QU("outline", cU("crosshairSettings:outline"), (UU => UU > 0 ? sz(UU) : cU("crosshairSettings:off"))), XU.outline > 0 && (0, YU.jsx)(mz, {
+            label: cU("crosshairSettings:outlineColor"),
+            value: XU.outlineColor,
+            swatches: Vz,
+            onChange: UU => {
+              yU("outlineColor", UU)
             }
           })]
-        }), nM("growOnClick", OM("crosshairSettings:growOnClick")), QM && nM("forGuns", OM("crosshairSettings:forGuns"), OM("crosshairSettings:forGunsInfo"))]
+        }), oU("growOnClick", cU("crosshairSettings:growOnClick")), DU && oU("forGuns", cU("crosshairSettings:forGuns"), cU("crosshairSettings:forGunsInfo"))]
       })
     }
-    var qi = iM(65),
-      Ti = iM(1287),
-      Vi = iM(13457),
-      ci = iM(14650),
-      MO = iM(16014),
-      rO = iM(16502);
-    const iO = ["sky", "grass", "stone", "sand", "snow", "night"],
-      OO = "4rem";
+    var xz = zU(73),
+      Jz = zU(1294),
+      jz = zU(13576),
+      Kz = zU(14713),
+      bz = zU(16190),
+      Tz = zU(16681);
+    const hz = ["sky", "grass", "stone", "sand", "snow", "night"],
+      Uc = "4rem";
 
-    function SO(MM) {
+    function Xc(UU) {
       return {
-        backgroundImage: `url(${MM})`,
-        backgroundSize: `${OO} ${OO}`,
+        backgroundImage: `url(${UU})`,
+        backgroundSize: `${Uc} ${Uc}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function jO(MM) {
+    function zc(UU) {
       return {
         ...(() => {
-          switch (MM) {
+          switch (UU) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return SO(Vi);
+              return Xc(jz);
             case "stone":
-              return SO(ci);
+              return Xc(Kz);
             case "sand":
-              return SO(MO);
+              return Xc(bz);
             case "snow":
-              return SO(rO);
+              return Xc(Tz);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1945,21 +1937,21 @@ export const modules = {
       }
     }
 
-    function aO(MM) {
+    function cc(UU) {
       return Object.freeze({
-        ...Ni.e,
+        ...iz.g,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...MM
+        ...UU
       })
     }
-    const PO = [{
+    const yc = [{
         id: "default",
-        settings: Ni.e
+        settings: iz.g
       }, {
         id: "cross",
-        settings: aO({
+        settings: cc({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1968,7 +1960,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: aO({
+        settings: cc({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1979,13 +1971,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: aO({
+        settings: cc({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: aO({
+        settings: cc({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1994,7 +1986,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: aO({
+        settings: cc({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -2004,7 +1996,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: aO({
+        settings: cc({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -2013,7 +2005,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: aO({
+        settings: cc({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -2021,570 +2013,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      nO = ["growOnClick", "forGuns"];
-    var QO = iM(34997);
+      Qc = ["growOnClick", "forGuns"];
+    var Ac = zU(34835);
 
-    function zO(MM) {
+    function Fc(UU) {
       let {
-        label: rM,
-        selected: iM,
-        onClick: OM,
-        className: SM,
-        style: aM,
-        children: PM
-      } = MM;
-      return (0, LM.jsx)("button", {
+        label: XU,
+        selected: zU,
+        onClick: cU,
+        className: yU,
+        style: AU,
+        children: FU
+      } = UU;
+      return (0, YU.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": iM,
-        title: rM,
-        "aria-label": rM,
+        "aria-checked": zU,
+        title: XU,
+        "aria-label": XU,
         "data-pad-focusable": !0,
-        className: jM()("CrosshairBackdropSwatch", SM, {
-          Selected: iM
+        className: QU()("CrosshairBackdropSwatch", yU, {
+          Selected: zU
         }),
-        style: aM,
-        onClick: OM,
-        children: PM
+        style: AU,
+        onClick: cU,
+        children: FU
       })
     }
 
-    function LO(MM) {
+    function oc(UU) {
       let {
-        backdrop: rM,
-        onChange: iM,
-        game: OM
-      } = MM;
+        backdrop: XU,
+        onChange: zU,
+        game: cU
+      } = UU;
       const {
-        t: SM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: yU
+      } = (0, AU.I)();
+      return (0, YU.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": SM("crosshairSettings:background"),
-        children: [OM && (0, LM.jsx)(zO, {
-          label: SM("crosshairSettings:bg_game"),
-          selected: OM.selected,
-          onClick: OM.onSelect,
+        "aria-label": yU("crosshairSettings:background"),
+        children: [cU && (0, YU.jsx)(Fc, {
+          label: yU("crosshairSettings:bg_game"),
+          selected: cU.selected,
+          onClick: cU.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, LM.jsx)(PM.b, {
+          children: (0, YU.jsx)(FU.d, {
             name: "cube"
           })
-        }), iO.map((MM => (0, LM.jsx)(zO, {
-          label: SM(`crosshairSettings:bg_${MM}`),
-          selected: !(null !== OM && void 0 !== OM && OM.selected) && MM === rM,
-          style: jO(MM),
+        }), hz.map((UU => (0, YU.jsx)(Fc, {
+          label: yU(`crosshairSettings:bg_${UU}`),
+          selected: !(null !== cU && void 0 !== cU && cU.selected) && UU === XU,
+          style: zc(UU),
           onClick: () => {
-            iM(MM)
+            zU(UU)
           }
-        }, MM)))]
+        }, UU)))]
       })
     }
 
-    function mO(MM) {
+    function Dc(UU) {
       let {
-        settings: rM,
-        touch: iM,
-        backdrop: OM,
-        onChange: SM
-      } = MM;
+        settings: XU,
+        touch: zU,
+        backdrop: cU,
+        onChange: yU
+      } = UU;
       const {
-        t: PM
-      } = (0, aM.A)(), nM = function(MM) {
-        var rM;
-        return null !== (rM = PO.find((rM => (0, Ni.p)(rM.settings, MM, nO)))) && void 0 !== rM ? rM : null
-      }(rM);
-      return (0, LM.jsx)("div", {
+        t: FU
+      } = (0, AU.I)(), oU = function(UU) {
+        var XU;
+        return null !== (XU = yc.find((XU => (0, iz.q)(XU.settings, UU, Qc)))) && void 0 !== XU ? XU : null
+      }(XU);
+      return (0, YU.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": PM("crosshairSettings:presets"),
-        children: PO.map((MM => {
-          const aM = (null === nM || void 0 === nM ? void 0 : nM.id) === MM.id;
-          return (0, LM.jsxs)("button", {
+        "aria-label": FU("crosshairSettings:presets"),
+        children: yc.map((UU => {
+          const AU = (null === oU || void 0 === oU ? void 0 : oU.id) === UU.id;
+          return (0, YU.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": aM,
+            "aria-checked": AU,
             "data-pad-focusable": !0,
-            className: jM()("CrosshairPreset", {
-              Selected: aM
+            className: QU()("CrosshairPreset", {
+              Selected: AU
             }),
             onClick: () => {
-              SM(function(MM, rM) {
+              yU(function(UU, XU) {
                 return {
-                  ...rM.settings,
-                  growOnClick: MM.growOnClick,
-                  forGuns: MM.forGuns
+                  ...XU.settings,
+                  growOnClick: UU.growOnClick,
+                  forGuns: UU.forGuns
                 }
-              }(rM, MM))
+              }(XU, UU))
             },
-            children: [(0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: jO(OM),
-              children: (0, LM.jsx)(QO.c, {
-                settings: MM.settings,
-                touch: iM,
+              style: zc(cU),
+              children: (0, YU.jsx)(Ac.e, {
+                settings: UU.settings,
+                touch: zU,
                 inPreview: !0
               })
-            }), (0, LM.jsx)("div", {
+            }), (0, YU.jsx)("div", {
               className: "CrosshairPresetName",
-              children: PM(`crosshairSettings:preset_${MM.id}`)
+              children: FU(`crosshairSettings:preset_${UU.id}`)
             })]
-          }, MM.id)
+          }, UU.id)
         }))
       })
     }
-    var HO = iM(1754);
+    var Ec = zU(1720);
 
-    function hO(MM, rM) {
-      const [iM, SM] = (0, OM.useState)(!1), jM = () => {
-        SM(!1)
-      }, [aM, PM] = (0, OM.useState)(!1), nM = (0, OM.useRef)({
-        growOnClick: MM.growOnClick,
-        forGuns: MM.forGuns
+    function Yc(UU, XU) {
+      const [zU, yU] = (0, cU.useState)(!1), QU = () => {
+        yU(!1)
+      }, [AU, FU] = (0, cU.useState)(!1), oU = (0, cU.useRef)({
+        growOnClick: UU.growOnClick,
+        forGuns: UU.forGuns
       });
-      (0, OM.useEffect)((() => {
-        const rM = nM.current;
-        nM.current = {
-          growOnClick: MM.growOnClick,
-          forGuns: MM.forGuns
-        }, (MM.growOnClick && !rM.growOnClick || MM.forGuns && !rM.forGuns) && PM(!0)
-      }), [MM.growOnClick, MM.forGuns]), (0, OM.useEffect)((() => {
-        if (!aM) return;
-        const MM = setTimeout((() => {
-          PM(!1)
+      (0, cU.useEffect)((() => {
+        const XU = oU.current;
+        oU.current = {
+          growOnClick: UU.growOnClick,
+          forGuns: UU.forGuns
+        }, (UU.growOnClick && !XU.growOnClick || UU.forGuns && !XU.forGuns) && FU(!0)
+      }), [UU.growOnClick, UU.forGuns]), (0, cU.useEffect)((() => {
+        if (!AU) return;
+        const UU = setTimeout((() => {
+          FU(!1)
         }), 600);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(UU)
         }
-      }), [aM]);
-      const QM = iM || aM;
+      }), [AU]);
+      const DU = zU || AU;
       return {
         view: {
-          pressed: QM,
-          spread: QM && MM.forGuns && !MM.growOnClick ? 6 : 0
+          pressed: DU,
+          spread: DU && UU.forGuns && !UU.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: MM => {
-            !MM.target.closest(rM) && (0, HO.c)(MM.currentTarget, MM.pointerId) && SM(!0)
+          onPointerDown: UU => {
+            !UU.target.closest(XU) && (0, Ec.b)(UU.currentTarget, UU.pointerId) && yU(!0)
           },
-          onPointerUp: jM,
-          onPointerCancel: jM,
-          onLostPointerCapture: jM
+          onPointerUp: QU,
+          onPointerCancel: QU,
+          onLostPointerCapture: QU
         }
       }
     }
 
-    function JO(MM) {
+    function Nc(UU) {
       let {
-        settings: rM,
-        touch: iM,
-        backdrop: OM,
-        className: SM,
-        children: aM,
-        label: PM
-      } = MM;
-      const nM = hO(rM, ".CrosshairStageControls");
-      return (0, LM.jsxs)("div", {
-        className: jM()("CrosshairStage", SM),
-        style: jO(OM),
-        ...nM.handlers,
-        children: [(0, LM.jsx)("div", {
+        settings: XU,
+        touch: zU,
+        backdrop: cU,
+        className: yU,
+        children: AU,
+        label: FU
+      } = UU;
+      const oU = Yc(XU, ".CrosshairStageControls");
+      return (0, YU.jsxs)("div", {
+        className: QU()("CrosshairStage", yU),
+        style: zc(cU),
+        ...oU.handlers,
+        children: [(0, YU.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": PM,
-          children: (0, LM.jsx)(QO.c, {
-            settings: rM,
-            touch: iM,
+          "aria-label": FU,
+          children: (0, YU.jsx)(Ac.e, {
+            settings: XU,
+            touch: zU,
             inPreview: !0,
-            ...nM.view
+            ...oU.view
           })
-        }), aM]
+        }), AU]
       })
     }
-    const dO = "crosshairFullScreen";
+    const Ic = "crosshairFullScreen";
 
-    function yO(MM) {
+    function pc(UU) {
       let {
-        settings: rM,
-        touch: iM,
-        backdrop: SM,
-        onBackdrop: nM,
-        inGame: zM,
-        onChange: mM,
-        onClose: HM
-      } = MM;
+        settings: XU,
+        touch: zU,
+        backdrop: yU,
+        onBackdrop: oU,
+        inGame: EU,
+        onChange: NU,
+        onClose: IU
+      } = UU;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = (0, OM.useRef)(null);
-      (0, Ti.v)("popup", JM, HM),
-      function(MM) {
-        const rM = (0, OM.useRef)(MM);
-        rM.current = MM, (0, OM.useEffect)((() => {
+        t: pU
+      } = (0, AU.I)(), aU = (0, cU.useRef)(null);
+      (0, Jz.t)("popup", aU, IU),
+      function(UU) {
+        const XU = (0, cU.useRef)(UU);
+        XU.current = UU, (0, cU.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [dO]: !0
+            [Ic]: !0
           }, "");
-          let MM = !1;
-          const iM = () => {
-            MM = !0, rM.current()
+          let UU = !1;
+          const zU = () => {
+            UU = !0, XU.current()
           };
-          return window.addEventListener("popstate", iM), () => {
-            var rM;
-            window.removeEventListener("popstate", iM), !MM && null !== (rM = window.history.state) && void 0 !== rM && rM[dO] && window.history.back()
+          return window.addEventListener("popstate", zU), () => {
+            var XU;
+            window.removeEventListener("popstate", zU), !UU && null !== (XU = window.history.state) && void 0 !== XU && XU[Ic] && window.history.back()
           }
         }), [])
-      }(HM);
-      const dM = (0, OM.useRef)(HM);
-      dM.current = HM, (0, OM.useEffect)((() => {
-        function MM(MM) {
-          "Escape" === MM.key && (MM.stopPropagation(), dM.current())
+      }(IU);
+      const tU = (0, cU.useRef)(IU);
+      tU.current = IU, (0, cU.useEffect)((() => {
+        function UU(UU) {
+          "Escape" === UU.key && (UU.stopPropagation(), tU.current())
         }
-        return window.addEventListener("keydown", MM, !0), () => {
-          window.removeEventListener("keydown", MM, !0)
+        return window.addEventListener("keydown", UU, !0), () => {
+          window.removeEventListener("keydown", UU, !0)
         }
       }), []);
-      const yM = hO(rM, ".CrosshairFullScreenPanel"),
-        [lM, EM] = (0, OM.useState)(!0),
-        UM = lM && zM;
-      (0, OM.useEffect)((() => {
-        if (UM) return bM.d.set({
+      const gU = Yc(XU, ".CrosshairFullScreenPanel"),
+        [kU, GU] = (0, cU.useState)(!0),
+        BU = kU && EU;
+      (0, cU.useEffect)((() => {
+        if (BU) return WU.e.set({
           crosshairGameView: !0
         }), () => {
-          bM.d.set({
+          WU.e.set({
             crosshairGameView: !1
           })
         }
-      }), [UM]);
-      const [GM, CM] = (0, OM.useState)(!0);
-      return (0, qi.createPortal)((0, LM.jsxs)("div", {
-        ref: JM,
+      }), [BU]);
+      const [ZU, RU] = (0, cU.useState)(!0);
+      return (0, xz.createPortal)((0, YU.jsxs)("div", {
+        ref: aU,
         className: "CrosshairFullScreen",
-        style: UM ? void 0 : jO(SM),
-        ...yM.handlers,
-        children: [(0, LM.jsx)(QO.c, {
-          settings: rM,
-          touch: iM,
+        style: BU ? void 0 : zc(yU),
+        ...gU.handlers,
+        children: [(0, YU.jsx)(Ac.e, {
+          settings: XU,
+          touch: zU,
           inEditor: !0,
-          ...yM.view
-        }), (0, LM.jsxs)("div", {
-          className: jM()("CrosshairFullScreenPanel", {
-            Collapsed: !GM
+          ...gU.view
+        }), (0, YU.jsxs)("div", {
+          className: QU()("CrosshairFullScreenPanel", {
+            Collapsed: !ZU
           }),
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, LM.jsx)(LO, {
-              backdrop: SM,
-              onChange: MM => {
-                EM(!1), nM(MM)
+            children: [(0, YU.jsx)(oc, {
+              backdrop: yU,
+              onChange: UU => {
+                GU(!1), oU(UU)
               },
-              game: zM ? {
-                selected: UM,
+              game: EU ? {
+                selected: BU,
                 onSelect: () => {
-                  EM(!0)
+                  GU(!0)
                 }
               } : void 0
-            }), (0, LM.jsx)(QM.V, {
+            }), (0, YU.jsx)(DU.O, {
               className: "CrosshairPanelToggle",
-              ariaLabel: hM(GM ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: pU(ZU ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                CM(!GM)
+                RU(!ZU)
               },
-              children: (0, LM.jsx)(PM.b, {
-                name: GM ? "caret-up" : "pen"
+              children: (0, YU.jsx)(FU.d, {
+                name: ZU ? "caret-up" : "pen"
               })
-            }), (0, LM.jsx)(QM.e, {
+            }), (0, YU.jsx)(DU.f, {
               className: "CrosshairFullScreenDone",
-              onClick: HM,
+              onClick: IU,
               padDefaultFocus: !0,
-              children: hM("crosshairSettings:done")
+              children: pU("crosshairSettings:done")
             })]
-          }), GM && (0, LM.jsxs)("div", {
+          }), ZU && (0, YU.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, LM.jsx)(mO, {
-              settings: rM,
-              touch: iM,
-              backdrop: SM,
-              onChange: mM
-            }), (0, LM.jsx)(Ki, {
-              settings: rM,
-              onChange: mM
+            children: [(0, YU.jsx)(Dc, {
+              settings: XU,
+              touch: zU,
+              backdrop: yU,
+              onChange: NU
+            }), (0, YU.jsx)(lz, {
+              settings: XU,
+              onChange: NU
             })]
           })]
         })]
       }), document.body)
     }
-    var lO = iM(2901),
-      EO = iM(35003);
+    var ac = zU(2903),
+      tc = zU(34845);
 
-    function UO(MM) {
+    function gc(UU) {
       let {
-        settings: rM,
-        onChange: iM
-      } = MM;
+        settings: XU,
+        onChange: zU
+      } = UU;
       const {
-        t: SM
-      } = (0, aM.A)(), nM = (0, EO.i)(rM), [zM, mM] = (0, lO.g)(), [HM, hM] = (0, OM.useState)(!1), JM = (0, OM.useRef)(null), [dM, yM] = (0, lO.g)(), [lM, EM] = (0, OM.useState)(!1);
-      return (0, LM.jsxs)("div", {
+        t: yU
+      } = (0, AU.I)(), oU = (0, tc.i)(XU), [EU, NU] = (0, ac.h)(), [IU, pU] = (0, cU.useState)(!1), aU = (0, cU.useRef)(null), [tU, gU] = (0, ac.h)(), [kU, GU] = (0, cU.useState)(!1);
+      return (0, YU.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, YU.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, LM.jsxs)(QM.V, {
-            className: jM()("CrosshairCopy", {
-              ActiveSecondaryButton: zM
+          children: [(0, YU.jsxs)(DU.O, {
+            className: QU()("CrosshairCopy", {
+              ActiveSecondaryButton: EU
             }),
             onClick: () => {
-              (0, lO.f)(nM, {
+              (0, ac.e)(oU, {
                 useShareSheet: !1,
-                onOutcome: MM => {
-                  hM("failed" === MM), "copied" === MM && mM()
+                onOutcome: UU => {
+                  pU("failed" === UU), "copied" === UU && NU()
                 }
               })
             },
-            children: [(0, LM.jsx)(PM.b, {
-              name: zM ? "check" : "copy"
-            }), " ", SM(zM ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, LM.jsx)(GM.b, {
+            children: [(0, YU.jsx)(FU.d, {
+              name: EU ? "check" : "copy"
+            }), " ", yU(EU ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, YU.jsx)(ZU.e, {
             className: "CrosshairPaste",
-            domRef: JM,
-            ariaLabel: SM("crosshairSettings:paste"),
-            placeholderText: SM("crosshairSettings:paste"),
-            onValueChange: MM => {
-              const rM = (0, EO.f)(MM);
-              EM(!rM && MM.trim().length >= EO.b), rM && (iM(rM), JM.current.value = "", yM())
+            domRef: aU,
+            ariaLabel: yU("crosshairSettings:paste"),
+            placeholderText: yU("crosshairSettings:paste"),
+            onValueChange: UU => {
+              const XU = (0, tc.g)(UU);
+              GU(!XU && UU.trim().length >= tc.c), XU && (zU(XU), aU.current.value = "", gU())
             }
           })]
-        }), HM && (0, LM.jsx)("input", {
+        }), IU && (0, YU.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: nM,
-          "aria-label": SM("crosshairSettings:copy"),
-          onFocus: MM => {
-            MM.currentTarget.select()
+          value: oU,
+          "aria-label": yU("crosshairSettings:copy"),
+          onFocus: UU => {
+            UU.currentTarget.select()
           }
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           "aria-live": "polite",
-          children: [lM && (0, LM.jsx)("div", {
+          children: [kU && (0, YU.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: SM("crosshairSettings:pasteInvalid")
-          }), dM && !lM && (0, LM.jsx)("div", {
+            children: yU("crosshairSettings:pasteInvalid")
+          }), tU && !kU && (0, YU.jsx)("div", {
             className: "CrosshairShareNote",
-            children: SM("crosshairSettings:applied")
+            children: yU("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var GO = iM(35006);
-    let CO = "sky";
+    var kc = zU(34853);
+    let Gc = "sky";
 
-    function eO(MM) {
+    function Bc(UU) {
       let {
-        showing: rM
-      } = MM;
+        showing: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        isTouchScreen: SM,
-        gameState: jM,
-        clientEscMenuOptions: nM
-      } = (0, bM.m)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), zM = (0, GO.f)(), [mM, HM] = (0, OM.useState)(CO), hM = MM => {
-        CO = MM, HM(MM)
-      }, [JM, dM] = (0, OM.useState)(!1);
-      return (0, OM.useEffect)((() => {
-        rM || dM(!1)
-      }), [rM]), (0, LM.jsxs)("div", {
+        t: zU
+      } = (0, AU.I)(), {
+        isTouchScreen: yU,
+        gameState: QU,
+        clientEscMenuOptions: oU
+      } = (0, WU.q)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), EU = (0, kc.f)(), [NU, IU] = (0, cU.useState)(Gc), pU = UU => {
+        Gc = UU, IU(UU)
+      }, [aU, tU] = (0, cU.useState)(!1);
+      return (0, cU.useEffect)((() => {
+        XU || tU(!1)
+      }), [XU]), (0, YU.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, LM.jsx)(JO, {
+          children: (0, YU.jsx)(Nc, {
             className: "CrosshairPreviewStage",
-            settings: zM,
-            touch: SM,
-            backdrop: mM,
-            label: iM("crosshairSettings:preview"),
-            children: (0, LM.jsxs)("div", {
+            settings: EU,
+            touch: yU,
+            backdrop: NU,
+            label: zU("crosshairSettings:preview"),
+            children: (0, YU.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, LM.jsx)(LO, {
-                backdrop: mM,
-                onChange: hM
-              }), (0, LM.jsxs)(QM.V, {
+              children: [(0, YU.jsx)(oc, {
+                backdrop: NU,
+                onChange: pU
+              }), (0, YU.jsxs)(DU.O, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  dM(!0)
+                  tU(!0)
                 },
-                children: [(0, LM.jsx)(PM.b, {
+                children: [(0, YU.jsx)(FU.d, {
                   name: "expand"
-                }), " ", iM("crosshairSettings:fullScreen")]
+                }), " ", zU("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "SettingBox",
-          children: (0, LM.jsx)(mO, {
-            settings: zM,
-            touch: SM,
-            backdrop: mM,
-            onChange: GO.b
+          children: (0, YU.jsx)(Dc, {
+            settings: EU,
+            touch: yU,
+            backdrop: NU,
+            onChange: kc.d
           })
-        }), (0, LM.jsx)(UO, {
-          settings: zM,
-          onChange: GO.b
-        }), SM && (0, LM.jsx)(Yi.c, {
-          note: (0, fi.c)(SM, nM.touchActionButtons) ? iM("crosshairSettings:touchNote") : void 0
-        }), (0, LM.jsx)(Ki, {
-          settings: zM,
-          onChange: GO.b
-        }), JM && (0, LM.jsx)(yO, {
-          settings: zM,
-          touch: SM,
-          backdrop: mM,
-          onBackdrop: hM,
-          inGame: "inGame" === jM,
-          onChange: GO.b,
+        }), (0, YU.jsx)(gc, {
+          settings: EU,
+          onChange: kc.d
+        }), yU && (0, YU.jsx)(fz.b, {
+          note: (0, uz.g)(yU, oU.touchActionButtons) ? zU("crosshairSettings:touchNote") : void 0
+        }), (0, YU.jsx)(lz, {
+          settings: EU,
+          onChange: kc.d
+        }), aU && (0, YU.jsx)(pc, {
+          settings: EU,
+          touch: yU,
+          backdrop: NU,
+          onBackdrop: pU,
+          inGame: "inGame" === QU,
+          onChange: kc.d,
           onClose: () => {
-            dM(!1)
+            tU(!1)
           }
         })]
       })
     }
-    var bO = iM(9461),
-      wO = iM(1472),
-      tO = iM(5393),
-      gO = iM(35014),
-      uO = iM(4613),
-      RO = iM(2088),
-      pO = iM(738);
-    const WO = (0, OM.memo)((function() {
+    var Zc = zU(9443),
+      Rc = zU(1454),
+      Pc = zU(5536),
+      Wc = zU(34856),
+      dc = zU(4651),
+      Lc = zU(2053),
+      ec = zU(760);
+    const Cc = (0, cU.memo)((function() {
       const {
-        clientEscMenuOptions: MM
-      } = (0, bM.m)(["clientEscMenuOptions"]), {
-        recording: rM,
-        clipping: iM,
-        hasClipBuffer: SM
-      } = (0, Ar.j)("replayRecorder"), aM = (0, Ar.f)("connectedGame", (MM => MM.replay)), PM = (0, uO.m)(), nM = !1 === (0, JM.f)("canRecordReplays");
-      (0, OM.useEffect)((() => {
-        lM.gameBridge.send("setRecorderPrefs", {
-          clipping: MM.enableClipping,
-          clipSeconds: MM.clipDurationSeconds
+        clientEscMenuOptions: UU
+      } = (0, WU.q)(["clientEscMenuOptions"]), {
+        recording: XU,
+        clipping: zU,
+        hasClipBuffer: yU
+      } = (0, vX.i)("replayRecorder"), AU = (0, vX.e)("connectedGame", (UU => UU.replay)), FU = (0, dc.m)(), oU = !1 === (0, aU.f)("canRecordReplays");
+      (0, cU.useEffect)((() => {
+        kU.gameBridge.send("setRecorderPrefs", {
+          clipping: UU.enableClipping,
+          clipSeconds: UU.clipDurationSeconds
         })
-      }), [MM.enableClipping, MM.clipDurationSeconds]);
-      const zM = PM || aM,
-        mM = !zM && !nM,
-        HM = rM || mM,
-        hM = mM,
-        dM = hM && iM && !rM;
+      }), [UU.enableClipping, UU.clipDurationSeconds]);
+      const EU = FU || AU,
+        NU = !EU && !oU,
+        IU = XU || NU,
+        pU = NU,
+        tU = pU && zU && !XU;
 
-      function yM() {
-        HM && lM.gameBridge.send("toggleRecording", null)
+      function gU() {
+        IU && kU.gameBridge.send("toggleRecording", null)
       }
-      return (0, LM.jsxs)("div", {
+      return (0, YU.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, YU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, YU.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: rM ? (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsxs)(QM.J, {
+            children: XU ? (0, YU.jsxs)(YU.Fragment, {
+              children: [(0, YU.jsxs)(DU.G, {
                 className: "ReplayViewerCategoryButton",
-                onClick: yM,
-                disabled: !HM,
-                children: [(0, LM.jsx)("span", {
+                onClick: gU,
+                disabled: !IU,
+                children: [(0, YU.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, LM.jsx)(RO.d, {
+                }), (0, YU.jsx)(Lc.c, {
                   noaAction: "recordGame"
                 })]
-              }), (0, LM.jsx)(gO.e, {
+              }), (0, YU.jsx)(Wc.c, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, LM.jsxs)(QM.e, {
+            }) : (0, YU.jsxs)(DU.f, {
               className: "ReplayViewerCategoryButton",
-              onClick: yM,
-              disabled: !HM,
-              children: [(0, LM.jsx)("span", {
+              onClick: gU,
+              disabled: !IU,
+              children: [(0, YU.jsx)("span", {
                 children: "Start Recording"
-              }), (0, LM.jsx)(RO.d, {
+              }), (0, YU.jsx)(Lc.c, {
                 noaAction: "recordGame"
               })]
             })
-          }), nM && (0, LM.jsx)("div", {
+          }), oU && (0, YU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), zM && !rM && (0, LM.jsx)("div", {
+          }), EU && !XU && (0, YU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, LM.jsx)(eM.c, {
+          children: [(0, YU.jsx)(PU.e, {
             label: "Enable clipping",
-            checked: MM.enableClipping,
-            disabled: !hM,
-            onClick: function(MM) {
-              hM && bM.d.setClientEscMenuOptions({
-                enableClipping: MM
+            checked: UU.enableClipping,
+            disabled: !pU,
+            onClick: function(UU) {
+              pU && WU.e.setClientEscMenuOptions({
+                enableClipping: UU
               })
             },
-            className: jM()({
-              SettingBoxDisabled: !hM
+            className: QU()({
+              SettingBoxDisabled: !pU
             })
-          }), (0, LM.jsx)(eM.h, {
+          }), (0, YU.jsx)(PU.j, {
             name: "Clip duration (seconds)",
-            min: pO.k,
-            max: pO.g,
-            step: pO.c,
-            initValue: MM.clipDurationSeconds,
-            onChange: function(MM) {
-              bM.d.setClientEscMenuOptions({
-                clipDurationSeconds: MM
+            min: ec.m,
+            max: ec.i,
+            step: ec.d,
+            initValue: UU.clipDurationSeconds,
+            onChange: function(UU) {
+              WU.e.setClientEscMenuOptions({
+                clipDurationSeconds: UU
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !hM || !MM.enableClipping
+            disabled: !pU || !UU.enableClipping
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsxs)(QM.e, {
+          children: [(0, YU.jsxs)(DU.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              dM && lM.gameBridge.send("saveClip", null)
+              tU && kU.gameBridge.send("saveClip", null)
             },
-            disabled: !dM,
-            children: [(0, LM.jsx)("span", {
+            disabled: !tU,
+            children: [(0, YU.jsx)("span", {
               children: "Record clip"
-            }), (0, LM.jsx)(RO.d, {
+            }), (0, YU.jsx)(Lc.c, {
               noaAction: "recordClip"
             })]
-          }), MM.enableClipping && !SM && hM && !rM && (0, LM.jsx)("div", {
+          }), UU.enableClipping && !yU && pU && !XU && (0, YU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), rM && (0, LM.jsx)("div", {
+          }), XU && (0, YU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsxs)(QM.e, {
+          children: [(0, YU.jsxs)(DU.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, uO.i)(!0), bM.d.set({
+              (0, dc.i)(!0), WU.e.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: PM,
-            children: [(0, LM.jsx)("span", {
+            disabled: FU,
+            children: [(0, YU.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, LM.jsx)(RO.d, {
+            }), (0, YU.jsx)(Lc.c, {
               noaAction: "replayViewerOpen"
             })]
-          }), PM && (0, LM.jsx)("div", {
+          }), FU && (0, YU.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, YU.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, LM.jsx)("iframe", {
+          }), (0, YU.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2595,8 +2587,8 @@ export const modules = {
         })]
       })
     }));
-    var sO = iM(2e3);
-    const DO = {
+    var wc = zU(1974);
+    const qc = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2618,11 +2610,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, LM.jsx)("svg", {
+        icon: () => (0, YU.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, LM.jsx)("path", {
+          children: (0, YU.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2641,7 +2633,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      nh: {
+      Fp: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2667,371 +2659,377 @@ export const modules = {
       }
     };
 
-    function kO() {
-      return Promise.all([iM.e(89), iM.e(149), iM.e(148), iM.e(144)]).then((() => iM(42177))).then((MM => ({
-        default: MM.ShaderPackCategory
-      })), (MM => (console.error("Failed to load the shader pack settings", MM), {
-        default: ZO
+    function Oc() {
+      return Promise.all([zU.e(89), zU.e(147), zU.e(146), zU.e(142)]).then((() => zU(42172))).then((UU => ({
+        default: UU.ShaderPackCategory
+      })), (UU => (console.error("Failed to load the shader pack settings", UU), {
+        default: Sc
       })))
     }
 
-    function ZO() {
+    function Sc() {
       const {
-        t: MM
-      } = (0, aM.A)();
-      return (0, LM.jsx)("div", {
+        t: UU
+      } = (0, AU.I)();
+      return (0, YU.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: MM("shaderPack:tabLoadFailed")
+        children: UU("shaderPack:tabLoadFailed")
       })
     }
-    var oO = iM(1464),
-      fO = iM(170);
-    const YO = /party\s*voice/i;
-    let NO = !1;
+    var rc = zU(1444),
+      uc = zU(195);
+    const fc = /party\s*voice/i;
+    let ic = !1;
 
-    function AO(MM) {
-      return Object.keys(MM).some((MM => MM.startsWith("__reactFiber$")))
+    function Hc(UU) {
+      return Object.keys(UU).some((UU => UU.startsWith("__reactFiber$")))
     }
-    const xO = ".MenuSideBarBody, .MenuSideBarSection";
+    const Mc = ".MenuSideBarBody, .MenuSideBarSection";
 
-    function vO(MM) {
-      var rM;
-      return (null !== (rM = MM.textContent) && void 0 !== rM ? rM : "").replace(/\s+/g, " ").trim()
+    function vc(UU) {
+      var XU;
+      return (null !== (XU = UU.textContent) && void 0 !== XU ? XU : "").replace(/\s+/g, " ").trim()
     }
 
-    function FO(MM) {
-      for (const rM of function(MM) {
-          const rM = new Set;
-          for (const iM of MM.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) rM.add(iM);
-          for (const iM of [MM, ...MM.querySelectorAll(xO)])
-            for (const MM of iM.children) rM.add(MM);
-          return [...rM]
-        }(MM))
-        if (!AO(rM) || !rM.matches(xO) && YO.test(vO(rM))) return rM;
+    function Vc(UU) {
+      for (const XU of function(UU) {
+          const XU = new Set;
+          for (const zU of UU.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) XU.add(zU);
+          for (const zU of [UU, ...UU.querySelectorAll(Mc)])
+            for (const UU of zU.children) XU.add(UU);
+          return [...XU]
+        }(UU))
+        if (!Hc(XU) || !XU.matches(Mc) && fc.test(vc(XU))) return XU;
       return null
     }
 
-    function BO(MM) {
-      return MM.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
+    function sc(UU) {
+      return UU.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
     }
-    const XO = new Set(["STYLE", "SCRIPT", "TITLE"]);
+    const nc = new Set(["STYLE", "SCRIPT", "TITLE"]);
 
-    function IO(MM) {
-      const rM = document.createTreeWalker(MM, NodeFilter.SHOW_TEXT, {
-        acceptNode: MM => {
-          var rM, iM;
-          return XO.has(null !== (rM = null === (iM = MM.parentElement) || void 0 === iM ? void 0 : iM.tagName.toUpperCase()) && void 0 !== rM ? rM : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    function mc(UU) {
+      const XU = document.createTreeWalker(UU, NodeFilter.SHOW_TEXT, {
+        acceptNode: UU => {
+          var XU, zU;
+          return nc.has(null !== (XU = null === (zU = UU.parentElement) || void 0 === zU ? void 0 : zU.tagName.toUpperCase()) && void 0 !== XU ? XU : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
         }
       });
-      for (let jM = rM.nextNode(); null !== jM; jM = rM.nextNode()) {
-        var iM;
-        const MM = (null !== (iM = jM.textContent) && void 0 !== iM ? iM : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
-        if ("" !== MM) {
-          var OM, SM;
-          return (null !== (OM = null === (SM = MM.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === SM ? void 0 : SM[0]) && void 0 !== OM ? OM : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
+      for (let QU = XU.nextNode(); null !== QU; QU = XU.nextNode()) {
+        var zU;
+        const UU = (null !== (zU = QU.textContent) && void 0 !== zU ? zU : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
+        if ("" !== UU) {
+          var cU, yU;
+          return (null !== (cU = null === (yU = UU.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === yU ? void 0 : yU[0]) && void 0 !== cU ? cU : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
         }
       }
       return ""
     }
 
-    function KO(MM, rM) {
-      const iM = BO(rM).slice(0, 40) || "blank";
-      return `${(BO(MM.toLowerCase())||"none").slice(0,Math.max(23,fO.R-1-iM.length))}:${iM}`.slice(0, fO.R)
+    function lc(UU, XU) {
+      const zU = sc(XU).slice(0, 40) || "blank";
+      return `${(sc(UU.toLowerCase())||"none").slice(0,Math.max(23,uc.M-1-zU.length))}:${zU}`.slice(0, uc.M)
     }
-    const qO = (0, OM.lazy)((() => iM.e(301).then((() => iM(42170))).then((MM => ({
-        default: MM.BloxdInformation
+    const xc = (0, cU.lazy)((() => zU.e(298).then((() => zU(42162))).then((UU => ({
+        default: UU.BloxdInformation
       }))))),
-      TO = (0, OM.lazy)(kO);
+      Jc = (0, cU.lazy)(Oc);
 
-    function VO(MM) {
-      return MM ? "general" : "account"
+    function jc(UU) {
+      return UU ? "general" : "account"
     }
-    const cO = new Map,
-      MS = (0, OM.memo)((function(MM) {
+    const Kc = new Map,
+      bc = (0, cU.memo)((function(UU) {
         let {
-          show: rM,
-          setBeforeResumeCallback: iM
-        } = MM;
-        (0, dM.d)();
+          show: XU,
+          setBeforeResumeCallback: zU
+        } = UU;
+        (0, tU.e)();
         const {
-          gameState: SM,
-          openSettingsCategory: jM
-        } = (0, bM.m)(["gameState", "openSettingsCategory"]), {
-          userContext: nM
-        } = (0, hM.b)(), {
-          t: zM
-        } = (0, aM.A)(), GM = (0, HM.b)(), CM = (0, JM.f)("minChunkAddDist"), eM = "inGame" === SM, [wM, uM] = (0, OM.useState)(VO(eM)), [RM, pM] = (0, OM.useState)(null), [WM, sM] = (0, OM.useState)([]), DM = (0, OM.useRef)(function() {
-          const MM = new Date,
-            rM = 6 * (MM.getMonth() + MM.getDate()) % Ur.t.length;
-          return [...Ur.t, ...Ur.t].slice(rM, rM + 6)
-        }()), kM = (0, OM.useRef)(null), ZM = (0, OM.useRef)(null), oM = (0, qr.e)(wO.h, (0, wO.d)()), fM = Object.keys(DO).filter((MM => {
-          switch (MM) {
+          gameState: yU,
+          openSettingsCategory: QU
+        } = (0, WU.q)(["gameState", "openSettingsCategory"]), {
+          userContext: oU
+        } = (0, pU.d)(), {
+          t: EU
+        } = (0, AU.I)(), ZU = (0, IU.c)(), RU = (0, aU.f)("minChunkAddDist"), PU = "inGame" === yU, [dU, CU] = (0, cU.useState)(jc(PU)), [wU, qU] = (0, cU.useState)(null), [OU, SU] = (0, cU.useState)([]), rU = (0, cU.useRef)(function() {
+          const UU = new Date,
+            XU = 6 * (UU.getMonth() + UU.getDate()) % gX.z.length;
+          return [...gX.z, ...gX.z].slice(XU, XU + 6)
+        }()), uU = (0, cU.useRef)(null), fU = (0, cU.useRef)(null), iU = (0, jX.j)(Rc.h, (0, Rc.c)()), HU = Object.keys(qc).filter((UU => {
+          switch (UU) {
             case "replayViewer":
-              return eM;
+              return PU;
             case "developerTools":
-              return nM.playerHasRank("developer") || !1;
+              return oU.playerHasRank("developer") || !1;
             case "texturePack":
-              return yM.featureFlags.settings.canChangeTexturePack;
-            case "nh":
-              return yM.featureFlags.settings.canUseShaderPacks;
+              return gU.featureFlags.settings.canChangeTexturePack;
+            case "Fp":
+              return gU.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return yM.featureFlags.useSocialFeatures || null !== nM.dailyDrop;
+              return gU.featureFlags.useSocialFeatures || null !== oU.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== gM.siteUsed;
+              return "crazygames" !== eU.siteUsed;
             case "controller":
-              return yM.featureFlags.useControllerSupport && (oM || "controller" === wM);
+              return gU.featureFlags.useControllerSupport && (iU || "controller" === dU);
             default:
               return !0
           }
         }));
-        (0, qr.d)("toggleFullCoordinateOverlay", (() => {
-          const MM = ti("showCoordinates") && ti("showChunkCoordinates") && ti("showFPS");
-          gi("showCoordinates", !MM), gi("showChunkCoordinates", !MM), gi("showFPS", !MM), GM()
-        })), (0, qr.d)("updatedChunkLoadDist", (() => {
-          GM()
-        })), (0, OM.useEffect)((() => {
-          if (pM(null), null === bM.d.get("openSettingsCategory")) {
-            const MM = (0, oO.l)() ? cO.get(eM) : void 0;
-            uM(MM && fM.includes(MM) ? MM : VO(eM))
+        (0, jX.f)("toggleFullCoordinateOverlay", (() => {
+          const UU = Wz("showCoordinates") && Wz("showChunkCoordinates") && Wz("showFPS");
+          dz("showCoordinates", !UU), dz("showChunkCoordinates", !UU), dz("showFPS", !UU), ZU()
+        })), (0, jX.f)("updatedChunkLoadDist", (() => {
+          ZU()
+        })), (0, cU.useEffect)((() => {
+          if (qU(null), null === WU.e.get("openSettingsCategory")) {
+            const UU = (0, rc.n)() ? Kc.get(PU) : void 0;
+            CU(UU && HU.includes(UU) ? UU : jc(PU))
           }
-        }), [rM]), (0, OM.useEffect)((() => {
-          if (rM && ZM.current) return function(MM) {
-            if (NO) return () => {};
-            let rM = null,
-              iM = null;
-            const OM = () => {
-                var MM;
-                null !== iM && (clearTimeout(iM), iM = null), null === (MM = rM) || void 0 === MM || MM.disconnect(), rM = null
+        }), [XU]), (0, cU.useEffect)((() => {
+          if (XU && fU.current) return function(UU) {
+            if (ic) return () => {};
+            let XU = null,
+              zU = null;
+            const cU = () => {
+                var UU;
+                null !== zU && (clearTimeout(zU), zU = null), null === (UU = XU) || void 0 === UU || UU.disconnect(), XU = null
               },
-              SM = () => {
-                const rM = FO(MM);
-                null !== rM && (NO = !0, OM(), (0, Sr.reportAnalyticsClick)({
+              yU = () => {
+                const XU = Vc(UU);
+                null !== XU && (ic = !0, cU(), (0, XX.reportAnalyticsClick)({
                   id: "settings.unknown_tab_seen",
-                  value: KO(window.location.hostname, IO(rM))
+                  value: lc(window.location.hostname, mc(XU))
                 }))
               };
-            return iM = setTimeout((() => {
-              iM = null, SM(), NO || (rM = new MutationObserver(SM), rM.observe(MM, {
+            return zU = setTimeout((() => {
+              zU = null, yU(), ic || (XU = new MutationObserver(yU), XU.observe(UU, {
                 childList: !0,
                 subtree: !0
               }))
-            }), 2e3), OM
-          }(ZM.current)
-        }), [rM]), (0, OM.useEffect)((() => {
-          null !== jM && (uM(jM), cO.set(eM, jM), bM.d.set({
+            }), 2e3), cU
+          }(fU.current)
+        }), [XU]), (0, cU.useEffect)((() => {
+          null !== QU && (CU(QU), Kc.set(PU, QU), WU.e.set({
             openSettingsCategory: null
           }))
-        }), [jM, eM]), (0, OM.useLayoutEffect)((() => {
-          kM.current && (kM.current.scrollTop = 0)
-        }), [wM, rM]), (0, OM.useEffect)((() => {
-          "updateLog" === wM && (0, UM.e)().then(sM)
-        }), [wM]), (0, OM.useEffect)((() => {
-          if ((0, Ui.J)(CM)) return;
-          const [MM, rM] = (0, Zi.e)(), [iM, OM] = (0, Hi.h)(CM), SM = (0, sO.f)(CM[0], MM, iM), jM = (0, sO.f)(CM[1], rM, OM);
-          lM.gameBridge.send("setChunkAddDistance", {
-            horizontal: SM,
-            vertical: jM
+        }), [QU, PU]), (0, cU.useLayoutEffect)((() => {
+          uU.current && (uU.current.scrollTop = 0)
+        }), [dU, XU]), (0, cU.useEffect)((() => {
+          "updateLog" === dU && (0, BU.b)().then(SU)
+        }), [dU]), (0, cU.useEffect)((() => {
+          if ((0, kz.P)(RU)) return;
+          const [UU, XU] = (0, Sz.d)(), [zU, cU] = (0, Nz.h)(RU), yU = (0, wc.f)(RU[0], UU, zU), QU = (0, wc.f)(RU[1], XU, cU);
+          kU.gameBridge.send("setChunkAddDistance", {
+            horizontal: yU,
+            vertical: QU
           })
-        }), [CM]);
-        const YM = (0, OM.useCallback)((async () => {
-          RM && (await RM(), pM(null))
-        }), [RM]);
+        }), [RU]);
+        const MU = (0, cU.useCallback)((async () => {
+          wU && (await wU(), qU(null))
+        }), [wU]);
 
-        function NM() {
-          bM.d.set({
+        function vU() {
+          WU.e.set({
             openEverythingMenuName: null
           })
         }
-        return (0, OM.useEffect)((() => {
-          iM((() => YM))
-        }), [YM, iM]), (0, LM.jsxs)("div", {
+        return (0, cU.useEffect)((() => {
+          zU((() => MU))
+        }), [MU, zU]), (0, YU.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: rM ? {} : {
+          style: XU ? {} : {
             display: "none"
           },
-          children: [(0, LM.jsx)("div", {
-            ref: ZM,
+          children: [(0, YU.jsx)("div", {
+            ref: fU,
             className: "MenuSideBar",
-            children: (0, LM.jsx)("div", {
+            children: (0, YU.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, LM.jsx)(mM, {
-                items: fM.map((MM => {
-                  const rM = DO[MM].icon;
+              children: (0, YU.jsx)(NU, {
+                items: HU.map((UU => {
+                  const XU = qc[UU].icon;
                   return {
-                    id: MM,
-                    faIcon: "string" === typeof rM ? rM : void 0,
-                    iconElement: "string" === typeof rM ? void 0 : (0, LM.jsx)(rM, {}),
-                    title: zM(DO[MM].displayName),
+                    id: UU,
+                    faIcon: "string" === typeof XU ? XU : void 0,
+                    iconElement: "string" === typeof XU ? void 0 : (0, YU.jsx)(XU, {}),
+                    title: EU(qc[UU].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: wM,
-                onClick: MM => {
-                  !async function(MM) {
-                    await YM(), uM(MM), cO.set(eM, MM)
-                  }(MM)
+                selectedItemId: dU,
+                onClick: UU => {
+                  !async function(UU) {
+                    await MU(), CU(UU), Kc.set(PU, UU)
+                  }(UU)
                 }
               })
             })
-          }), (0, LM.jsxs)("div", {
-            ref: kM,
+          }), (0, YU.jsxs)("div", {
+            ref: uU,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === wM && (0, LM.jsx)(kr, {
-              showing: rM,
-              inGame: eM
-            }), "general" === wM && (0, LM.jsx)(Xr, {
-              inGame: eM
-            }), "audio" === wM && (0, LM.jsx)(Ir, {}), "notifications" === wM && (0, LM.jsx)(mi, {}), "graphics" === wM && (0, LM.jsx)(ki, {
-              minChunkAddDist: null !== CM && void 0 !== CM ? CM : [2, 2],
-              getValue: ti,
-              onChange: gi,
-              setApplySettingsCallback: pM
-            }), "controls" === wM && (0, LM.jsx)(oi.f, {}), "crosshair" === wM && (0, LM.jsx)(eO, {
-              showing: rM
-            }), "controller" === wM && yM.featureFlags.useControllerSupport && (0, LM.jsx)(bO.d, {}), yM.featureFlags.settings.canChangeTexturePack && "texturePack" === wM && (0, LM.jsx)(tO.c, {
-              setApplySettingsCallback: pM
-            }), yM.featureFlags.settings.canUseShaderPacks && "nh" === wM && (0, LM.jsx)(OM.Suspense, {
+            children: ["account" === dU && (0, YU.jsx)(rX, {
+              showing: XU,
+              inGame: PU
+            }), "general" === dU && (0, YU.jsx)(lX, {
+              inGame: PU
+            }), "audio" === dU && (0, YU.jsx)(xX, {}), "notifications" === dU && (0, YU.jsx)(Yz, {}), "graphics" === dU && (0, YU.jsx)(Oz, {
+              minChunkAddDist: null !== RU && void 0 !== RU ? RU : [2, 2],
+              getValue: Wz,
+              onChange: dz,
+              setApplySettingsCallback: qU
+            }), "controls" === dU && (0, YU.jsx)(rz.f, {}), "crosshair" === dU && (0, YU.jsx)(Bc, {
+              showing: XU
+            }), "controller" === dU && gU.featureFlags.useControllerSupport && (0, YU.jsx)(Zc.e, {}), gU.featureFlags.settings.canChangeTexturePack && "texturePack" === dU && (0, YU.jsx)(Pc.e, {
+              setApplySettingsCallback: qU
+            }), gU.featureFlags.settings.canUseShaderPacks && "Fp" === dU && (0, YU.jsx)(cU.Suspense, {
               fallback: null,
-              children: (0, LM.jsx)(TO, {
-                setApplySettingsCallback: pM
+              children: (0, YU.jsx)(Jc, {
+                setApplySettingsCallback: qU
               })
-            }), "updateLog" === wM && (0, LM.jsx)("div", {
+            }), "updateLog" === dU && (0, YU.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, LM.jsx)("div", {
+              children: (0, YU.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: WM.map(((MM, rM) => (0, LM.jsx)(EM.d, {
-                  updateLog: MM,
-                  index: rM,
-                  close: NM
-                }, rM)))
+                children: OU.map(((UU, XU) => (0, YU.jsx)(GU.d, {
+                  updateLog: UU,
+                  index: XU,
+                  close: vU
+                }, XU)))
               })
-            }), "information" === wM && (0, LM.jsx)("div", {
+            }), "information" === dU && (0, YU.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, LM.jsx)(OM.Suspense, {
+              children: (0, YU.jsx)(cU.Suspense, {
                 fallback: null,
-                children: (0, LM.jsx)(qO, {})
+                children: (0, YU.jsx)(xc, {})
               })
-            }), "alternativeDomains" === wM && (0, LM.jsxs)("div", {
+            }), "alternativeDomains" === dU && (0, YU.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, LM.jsx)("div", {
+              children: [(0, YU.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: zM("settingsMenu:unblockedDomainsDescription")
-              }), (0, LM.jsx)("div", {
+                children: EU("settingsMenu:unblockedDomainsDescription")
+              }), (0, YU.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: DM.current.map((MM => (0, LM.jsxs)(QM.e, {
+                children: rU.current.map((UU => (0, YU.jsxs)(DU.f, {
                   onClick: () => {
-                    window.open(`https://${MM}`)
+                    window.open(`https://${UU}`)
                   },
-                  children: [(0, LM.jsx)(PM.b, {
+                  children: [(0, YU.jsx)(FU.d, {
                     name: "arrow-up-right-from-square"
-                  }), " ", MM]
-                }, MM)))
+                  }), " ", UU]
+                }, UU)))
               })]
-            }), "replayViewer" === wM && (0, LM.jsx)(WO, {}), "developerTools" === wM && (0, LM.jsx)("div", {
+            }), "replayViewer" === dU && (0, YU.jsx)(Cc, {}), "developerTools" === dU && (0, YU.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, LM.jsx)(tM, {
-                setApplySettingsCallback: pM
+              children: (0, YU.jsx)(LU, {
+                setApplySettingsCallback: qU
               })
-            }), null !== RM && (0, LM.jsx)("div", {
+            }), null !== wU && (0, YU.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, LM.jsx)(QM.e, {
+              children: (0, YU.jsx)(DU.f, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: YM,
-                children: zM("general:apply")
+                onClick: MU,
+                children: EU("general:apply")
               })
             })]
           })]
         })
       }));
-    var rS = iM(2843),
-      iS = iM(4035),
-      OS = iM(2446);
-    const SS = (0, OM.lazy)((() => Promise.resolve().then((() => iM(5035))).then((MM => {
-        MM.needGameClientAfterPaint();
-        const rM = MM.matchmakingLibrariesPromise.then((MM => (0, rS.e)(MM.loadCharacterCustomisationUI(), (MM => MM.CharacterCustomisationUI))));
-        return Promise.all([MM.ensureGameSetup(), rM]).then((MM => {
-          let [, rM] = MM;
-          return rM
-        }))
-      })))),
-      jS = "openCustomisationTab";
+    var Tc = zU(2855),
+      hc = zU(4031),
+      Uy = zU(2443),
+      Xy = zU(4762);
+    const zy = (0, cU.lazy)((() => Promise.resolve().then((() => zU(5101))).then((UU => (UU.needGameClientAfterPaint(), (0, Tc.c)((UU => UU.loadCharacterCustomisationUI()), (UU => UU.CharacterCustomisationUI))))))),
+      cy = "openCustomisationTab";
 
-    function aS(MM) {
-      var rM, iM, SM;
+    function yy(UU) {
+      var XU, zU, yU;
       let {
-        show: jM
-      } = MM;
+        show: QU
+      } = UU;
       const {
-        userContext: aM
-      } = (0, hM.b)(), PM = (0, NM.usePurchasesAllowed)(), nM = (0, OM.useRef)(null);
-      var QM, zM;
-      aM !== uM.NULL_USER_CONTEXT && (null === (rM = nM.current) || void 0 === rM ? void 0 : rM.whamm) !== aM.whamm && (nM.current = {
-        whamm: aM.whamm,
-        mountKey: (null !== (QM = null === (zM = nM.current) || void 0 === zM ? void 0 : zM.mountKey) && void 0 !== QM ? QM : -1) + 1
+        userContext: AU
+      } = (0, pU.d)(), FU = (0, vU.usePurchasesAllowed)(), oU = (0, cU.useRef)(null);
+      var DU, EU;
+      AU !== CU.NULL_USER_CONTEXT && (null === (XU = oU.current) || void 0 === XU ? void 0 : XU.whamm) !== AU.whamm && (oU.current = {
+        whamm: AU.whamm,
+        mountKey: (null !== (DU = null === (EU = oU.current) || void 0 === EU ? void 0 : EU.mountKey) && void 0 !== DU ? DU : -1) + 1
       });
-      const [HM, JM] = (0, OM.useState)("characters");
-      if ((0, qr.d)(jS, JM), !jM) return null;
-      const dM = null !== (0, iS.k)(Date.now()),
-        yM = aM.getOwnedCosmeticPacks(),
-        lM = Ur.Lb.filter((MM => "pet" === MM || "aura" === MM ? dM || (0, OS.o)(MM).some((rM => rM !== `${MM}_none` && (0, OS.z)(MM, rM, yM))) : "cape" !== MM && "nameColour" !== MM || aM.getPlayerRanks().includes("super") || PM)).map((MM => ({
-          id: MM,
-          faIcon: Ur.C[MM],
-          title: Ur.F[MM],
+      const [IU, aU] = (0, cU.useState)("characters");
+      if ((0, jX.f)(cy, aU), !QU) return null;
+      const tU = null !== (0, hc.f)(Date.now()),
+        gU = AU.getOwnedCosmeticPacks(),
+        kU = gX.Yb.filter((UU => "pet" === UU || "aura" === UU ? tU || (0, Uy.l)(UU).some((XU => XU !== `${UU}_none` && (0, Uy.B)(UU, XU, gU))) : "cape" !== UU && "nameColour" !== UU || AU.getPlayerRanks().includes("super") || FU)).map((UU => ({
+          id: UU,
+          faIcon: gX.G[UU],
+          title: gX.H[UU],
           redDot: !1
         })));
-      return (0, LM.jsxs)("div", {
+      return (0, YU.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, LM.jsx)(mM, {
-            items: lM,
-            selectedItemId: HM,
-            onClick: MM => {
-              JM(MM)
+          children: (0, YU.jsx)(NU, {
+            items: kU,
+            selectedItemId: IU,
+            onClick: UU => {
+              aU(UU)
             }
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "MenuBody",
-          children: (0, LM.jsx)(OM.Suspense, {
-            fallback: (0, LM.jsx)("div", {
+          children: (0, YU.jsx)(cU.Suspense, {
+            fallback: (0, YU.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, LM.jsx)(CM.d, {})
+              children: (0, YU.jsx)(RU.b, {})
             }),
-            children: (0, LM.jsx)(SS, {
-              selectedTab: HM
-            }, null !== (iM = null === (SM = nM.current) || void 0 === SM ? void 0 : SM.mountKey) && void 0 !== iM ? iM : 0)
+            children: (0, YU.jsx)(zy, {
+              selectedTab: IU,
+              noWebGlFallback: Ay
+            }, null !== (zU = null === (yU = oU.current) || void 0 === yU ? void 0 : yU.mountKey) && void 0 !== zU ? zU : 0)
           })
         })]
       })
     }
-    var PS = iM(1533),
-      nS = iM(1541),
-      QS = iM(35017),
-      zS = iM(4917),
-      LS = iM(3827),
-      mS = iM(3868),
-      HS = iM(35040),
-      hS = iM(9374),
-      JS = iM(35026),
-      dS = iM(35035),
-      yS = iM(2026),
-      lS = iM(2006),
-      ES = iM(5306),
-      US = iM(1270),
-      GS = iM(1229),
-      CS = iM(1750),
-      eS = iM(9442),
-      bS = iM(2647),
-      wS = iM(2653);
 
-    function tS(MM) {
-      return MM ? Object.keys(MM).sort(((rM, iM) => {
-        var OM, SM, jM, aM;
-        const PM = (null !== (OM = null === (SM = MM[iM]) || void 0 === SM ? void 0 : SM.sortPriority) && void 0 !== OM ? OM : 0) - (null !== (jM = null === (aM = MM[rM]) || void 0 === aM ? void 0 : aM.sortPriority) && void 0 !== jM ? jM : 0);
-        return 0 !== PM ? PM : rM.localeCompare(iM)
+    function Qy() {
+      const {
+        t: UU
+      } = (0, AU.I)();
+      return (0, YU.jsx)("div", {
+        className: "CharacterCustomisationNoWebGl SmallTextBold",
+        children: UU((0, Xy.f)((0, Xy.d)()))
+      })
+    }
+    const Ay = (0, YU.jsx)(Qy, {});
+    var Fy = zU(1511),
+      oy = zU(1515),
+      Dy = zU(34859),
+      Ey = zU(4968),
+      Yy = zU(3813),
+      Ny = zU(3861),
+      Iy = zU(34891),
+      py = zU(9348),
+      ay = zU(34868),
+      ty = zU(34878),
+      gy = zU(1993),
+      ky = zU(1978),
+      Gy = zU(5424),
+      By = zU(1274),
+      Zy = zU(1236),
+      Ry = zU(1715),
+      Py = zU(9422),
+      Wy = zU(2623),
+      dy = zU(2627);
+
+    function Ly(UU) {
+      return UU ? Object.keys(UU).sort(((XU, zU) => {
+        var cU, yU, QU, AU;
+        const FU = (null !== (cU = null === (yU = UU[zU]) || void 0 === yU ? void 0 : yU.sortPriority) && void 0 !== cU ? cU : 0) - (null !== (QU = null === (AU = UU[XU]) || void 0 === AU ? void 0 : AU.sortPriority) && void 0 !== QU ? QU : 0);
+        return 0 !== FU ? FU : XU.localeCompare(zU)
       })) : []
     }
-    const gS = [{
+    const ey = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -3045,241 +3043,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function uS(MM) {
+    function Cy(UU) {
       for (const {
-          threshold: rM,
-          suffix: iM
+          threshold: XU,
+          suffix: zU
         }
-        of gS)
-        if (MM >= rM) {
-          const OM = MM / rM;
-          return OM >= 100 ? `${Math.floor(OM)}${iM}` : OM >= 10 ? `${OM.toFixed(1).replace(/\.0$/,"")}${iM}` : `${OM.toFixed(2).replace(/\.?0+$/,"")}${iM}`
-        } return String(MM)
+        of ey)
+        if (UU >= XU) {
+          const cU = UU / XU;
+          return cU >= 100 ? `${Math.floor(cU)}${zU}` : cU >= 10 ? `${cU.toFixed(1).replace(/\.0$/,"")}${zU}` : `${cU.toFixed(2).replace(/\.?0+$/,"")}${zU}`
+        } return String(UU)
     }
-    var RS = iM(5417);
-    const pS = {
+    var wy = zU(5581);
+    const qy = {
         normal: "0.8em",
         big: "1em"
       },
-      WS = (0, OM.memo)((function(MM) {
+      Oy = (0, cU.memo)((function(UU) {
         let {
-          item: rM,
-          amount: iM = 0,
-          size: OM = "normal",
-          tier: SM = null
-        } = MM;
-        return (0, LM.jsx)("div", {
-          className: jM()("SmpSlot", `SmpSlot-${OM}`),
-          children: rM && (0, LM.jsx)(yS.b, {
-            itemName: rM,
-            amount: iM > 1 ? iM : 0,
-            amountFontSize: pS[OM],
-            enchantmentTier: SM
+          item: XU,
+          amount: zU = 0,
+          size: cU = "normal",
+          tier: yU = null
+        } = UU;
+        return (0, YU.jsx)("div", {
+          className: QU()("SmpSlot", `SmpSlot-${cU}`),
+          children: XU && (0, YU.jsx)(gy.c, {
+            itemName: XU,
+            amount: zU > 1 ? zU : 0,
+            amountFontSize: qy[cU],
+            enchantmentTier: yU
           })
         })
       }));
 
-    function sS(MM) {
+    function Sy(UU) {
       let {
-        amount: rM,
-        exact: iM = !1,
-        className: OM
-      } = MM;
-      return (0, LM.jsxs)("span", {
-        className: jM()("SmpGold", OM),
-        children: [(0, LM.jsx)("span", {
+        amount: XU,
+        exact: zU = !1,
+        className: cU
+      } = UU;
+      return (0, YU.jsxs)("span", {
+        className: QU()("SmpGold", cU),
+        children: [(0, YU.jsx)("span", {
           className: "SmpCoin",
-          children: (0, LM.jsx)(yS.b, {
+          children: (0, YU.jsx)(gy.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), iM ? rM.toLocaleString("en-US") : uS(rM)]
+        }), zU ? XU.toLocaleString("en-US") : Cy(XU)]
       })
     }
 
-    function DS(MM) {
+    function ry(UU) {
       let {
-        count: rM = 5,
-        grid: iM = !1
-      } = MM;
-      return (0, LM.jsx)("div", {
-        className: iM ? "SmpCardGrid" : "SmpList",
+        count: XU = 5,
+        grid: zU = !1
+      } = UU;
+      return (0, YU.jsx)("div", {
+        className: zU ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: rM
-        }, ((MM, rM) => (0, LM.jsxs)("div", {
-          className: jM()(iM ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, LM.jsx)("div", {
-            className: jM()("SmpSlot", iM ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, LM.jsxs)("div", {
+          length: XU
+        }, ((UU, XU) => (0, YU.jsxs)("div", {
+          className: QU()(zU ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, YU.jsx)("div", {
+            className: QU()("SmpSlot", zU ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, YU.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, LM.jsx)("b", {}), (0, LM.jsx)("small", {})]
-          }), (0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("b", {}), (0, YU.jsx)("small", {})]
+          }), (0, YU.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, rM)))
+        }, XU)))
       })
     }
 
-    function kS(MM) {
+    function uy(UU) {
       let {
-        title: rM,
-        children: iM
-      } = MM;
-      return (0, LM.jsxs)("div", {
+        title: XU,
+        children: zU
+      } = UU;
+      return (0, YU.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, LM.jsx)("b", {
-          children: rM
-        }), iM && (0, LM.jsx)("small", {
-          children: iM
+        children: [(0, YU.jsx)("b", {
+          children: XU
+        }), zU && (0, YU.jsx)("small", {
+          children: zU
         })]
       })
     }
 
-    function ZS(MM) {
+    function fy(UU) {
       let {
-        entry: rM
-      } = MM;
-      return (0, LM.jsx)(kS, {
-        title: (0, LM.jsx)(lS.b, {
-          text: rM.item.customTitle
+        entry: XU
+      } = UU;
+      return (0, YU.jsx)(uy, {
+        title: (0, YU.jsx)(ky.d, {
+          text: XU.item.customTitle
         }),
-        children: (0, LM.jsx)(lS.b, {
-          text: rM.item.description
+        children: (0, YU.jsx)(ky.d, {
+          text: XU.item.description
         })
       })
     }
 
-    function oS(MM) {
-      return (0, LM.jsx)(RS.e, {
-        ...MM,
-        className: jM()("SmpChoice", MM.className),
+    function iy(UU) {
+      return (0, YU.jsx)(wy.d, {
+        ...UU,
+        className: QU()("SmpChoice", UU.className),
         reselectable: !0
       })
     }
 
-    function fS() {
-      return (0, LM.jsx)("span", {
+    function Hy() {
+      return (0, YU.jsx)("span", {
         className: "SmpLoader",
-        children: (0, LM.jsx)(CM.d, {})
+        children: (0, YU.jsx)(RU.b, {})
       })
     }
 
-    function YS(MM) {
+    function My(UU) {
       let {
-        value: rM,
-        onChange: iM,
-        min: SM = 1,
-        max: jM,
-        step: aM = 1,
-        label: PM
-      } = MM;
-      const nM = (0, OM.useRef)(null),
-        QM = (0, OM.useRef)(rM);
-      QM.current = rM;
-      const [zM, mM] = (0, OM.useState)(null), HM = MM => Math.max(SM, Math.min(jM, Math.floor(MM))), hM = MM => {
-        const rM = QM.current,
-          OM = "function" === typeof aM ? aM(rM, MM) : aM,
-          SM = HM(rM + OM * MM);
-        QM.current = SM, iM(SM)
+        value: XU,
+        onChange: zU,
+        min: yU = 1,
+        max: QU,
+        step: AU = 1,
+        label: FU
+      } = UU;
+      const oU = (0, cU.useRef)(null),
+        DU = (0, cU.useRef)(XU);
+      DU.current = XU;
+      const [EU, NU] = (0, cU.useState)(null), IU = UU => Math.max(yU, Math.min(QU, Math.floor(UU))), pU = UU => {
+        const XU = DU.current,
+          cU = "function" === typeof AU ? AU(XU, UU) : AU,
+          yU = IU(XU + cU * UU);
+        DU.current = yU, zU(yU)
       };
-      (0, OM.useEffect)((() => {
-        if (null === zM) return;
-        let MM;
-        const rM = () => {
-            mM(null)
+      (0, cU.useEffect)((() => {
+        if (null === EU) return;
+        let UU;
+        const XU = () => {
+            NU(null)
           },
-          iM = setTimeout((() => {
-            MM = setInterval((() => {
-              hM(zM);
-              const MM = QM.current;
-              (zM > 0 ? MM >= jM : MM <= SM) && rM()
+          zU = setTimeout((() => {
+            UU = setInterval((() => {
+              pU(EU);
+              const UU = DU.current;
+              (EU > 0 ? UU >= QU : UU <= yU) && XU()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", rM), window.addEventListener("pointercancel", rM), window.addEventListener("blur", rM), () => {
-          clearTimeout(iM), clearInterval(MM), window.removeEventListener("pointerup", rM), window.removeEventListener("pointercancel", rM), window.removeEventListener("blur", rM)
+        return window.addEventListener("pointerup", XU), window.addEventListener("pointercancel", XU), window.addEventListener("blur", XU), () => {
+          clearTimeout(zU), clearInterval(UU), window.removeEventListener("pointerup", XU), window.removeEventListener("pointercancel", XU), window.removeEventListener("blur", XU)
         }
-      }), [zM]), (0, OM.useEffect)((() => {
-        const MM = nM.current;
-        MM && document.activeElement !== MM && MM.value !== String(rM) && (MM.value = String(rM))
-      }), [rM]), (0, OM.useEffect)((() => {
-        const MM = nM.current;
-        if (!MM) return;
-        const rM = () => {
-          MM.value = String(QM.current)
+      }), [EU]), (0, cU.useEffect)((() => {
+        const UU = oU.current;
+        UU && document.activeElement !== UU && UU.value !== String(XU) && (UU.value = String(XU))
+      }), [XU]), (0, cU.useEffect)((() => {
+        const UU = oU.current;
+        if (!UU) return;
+        const XU = () => {
+          UU.value = String(DU.current)
         };
-        return MM.addEventListener("blur", rM), () => {
-          MM.removeEventListener("blur", rM)
+        return UU.addEventListener("blur", XU), () => {
+          UU.removeEventListener("blur", XU)
         }
       }), []);
-      const JM = MM => (0, LM.jsx)("button", {
+      const aU = UU => (0, YU.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${MM>0?"More":"Less"} ${PM}`,
-        disabled: MM > 0 ? rM >= jM : rM <= SM,
-        onPointerDown: rM => {
-          0 === rM.button && (hM(MM), mM(MM))
+        "aria-label": `${UU>0?"More":"Less"} ${FU}`,
+        disabled: UU > 0 ? XU >= QU : XU <= yU,
+        onPointerDown: XU => {
+          0 === XU.button && (pU(UU), NU(UU))
         },
-        onKeyDown: rM => {
-          "Enter" !== rM.key && " " !== rM.key || hM(MM)
+        onKeyDown: XU => {
+          "Enter" !== XU.key && " " !== XU.key || pU(UU)
         },
-        onContextMenu: MM => {
-          MM.preventDefault()
+        onContextMenu: UU => {
+          UU.preventDefault()
         },
-        children: MM > 0 ? "+" : "\u2212"
+        children: UU > 0 ? "+" : "\u2212"
       });
-      return (0, LM.jsxs)("div", {
+      return (0, YU.jsxs)("div", {
         className: "SmpStepper",
-        children: [JM(-1), (0, LM.jsx)(GM.b, {
+        children: [aU(-1), (0, YU.jsx)(ZU.e, {
           className: "SmpStepperInput",
-          domRef: nM,
-          defaultValue: String(rM),
-          ariaLabel: PM,
+          domRef: oU,
+          defaultValue: String(XU),
+          ariaLabel: FU,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: MM => {
-            const rM = MM.replace(/[^\d]/g, "");
-            nM.current && rM !== MM && (nM.current.value = rM), "" !== rM && iM(HM(Number(rM)))
+          onValueChange: UU => {
+            const XU = UU.replace(/[^\d]/g, "");
+            oU.current && XU !== UU && (oU.current.value = XU), "" !== XU && zU(IU(Number(XU)))
           }
-        }), JM(1)]
+        }), aU(1)]
       })
     }
 
-    function NS(MM) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, MM))) - 1))
+    function vy(UU) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, UU))) - 1))
     }
-    var AS = iM(35037),
-      xS = iM(1242);
-    const vS = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    xS.v, fM.Ec.length;
+    var Vy = zU(34884),
+      sy = zU(1258);
+    const ny = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    sy.z, HU.Oc.length;
     new Map;
-    var FS = iM(3693);
+    var my = zU(3660);
 
-    function BS(MM, rM) {
-      var iM;
-      return rM && (null === (iM = MM[rM]) || void 0 === iM ? void 0 : iM.smp) || null
+    function ly(UU, XU) {
+      var zU;
+      return XU && (null === (zU = UU[XU]) || void 0 === zU ? void 0 : zU.smp) || null
     }
 
-    function XS(MM, rM) {
-      const iM = [];
-      for (const SM of tS(MM)) {
-        var OM;
-        const jM = MM[SM];
-        (null === (OM = jM.smp) || void 0 === OM ? void 0 : OM.kind) === rM && iM.push({
-          key: SM,
-          item: jM,
-          meta: jM.smp
+    function xy(UU, XU) {
+      const zU = [];
+      for (const yU of Ly(UU)) {
+        var cU;
+        const QU = UU[yU];
+        (null === (cU = QU.smp) || void 0 === cU ? void 0 : cU.kind) === XU && zU.push({
+          key: yU,
+          item: QU,
+          meta: QU.smp
         })
       }
-      return iM
+      return zU
     }
 
-    function IS(MM, rM) {
-      var iM;
-      return null !== (iM = XS(MM, rM)[0]) && void 0 !== iM ? iM : null
+    function Jy(UU, XU) {
+      var zU;
+      return null !== (zU = xy(UU, XU)[0]) && void 0 !== zU ? zU : null
     }
-    const KS = "50% 0% 50% 0%",
-      qS = [{
+    const jy = "50% 0% 50% 0%",
+      Ky = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3293,746 +3291,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function TS(MM) {
-      const rM = MM - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function by(UU) {
+      const XU = UU - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: iM,
-          suffix: OM
+          divisor: zU,
+          suffix: cU
         }
-        of qS)
-        if (rM >= iM) return `${Math.floor(rM/iM)}${OM}`;
+        of Ky)
+        if (XU >= zU) return `${Math.floor(XU/zU)}${cU}`;
       return "<1s"
     }
 
-    function VS(MM) {
-      const rM = MM.map(hS.d),
-        iM = [];
-      return rM.forEach(((MM, OM) => {
-        const SM = function(MM) {
-            const rM = MM.match(/\d+/);
-            return rM ? Number(rM[0]) : 0
-          }(MM),
-          jM = OM === rM.length - 1;
-        (jM || 1 === SM || 10 === SM || 100 === SM) && iM.push({
-          label: MM,
-          quantity: SM,
-          isAll: jM
+    function Ty(UU) {
+      const XU = UU.map(py.h),
+        zU = [];
+      return XU.forEach(((UU, cU) => {
+        const yU = function(UU) {
+            const XU = UU.match(/\d+/);
+            return XU ? Number(XU[0]) : 0
+          }(UU),
+          QU = cU === XU.length - 1;
+        (QU || 1 === yU || 10 === yU || 100 === yU) && zU.push({
+          label: UU,
+          quantity: yU,
+          isAll: QU
         })
-      })), iM
+      })), zU
     }
-    let cS = null;
+    let hy = null;
 
-    function Mj(MM, rM) {
-      const iM = rM.trim().toLowerCase();
-      if (!iM) return [];
-      const OM = MM => {
-          if (MM === iM) return 0;
-          if (MM.startsWith(iM)) return 1;
-          const rM = MM.indexOf(iM);
-          return -1 === rM ? -1 : 2 + rM
+    function UQ(UU, XU) {
+      const zU = XU.trim().toLowerCase();
+      if (!zU) return [];
+      const cU = UU => {
+          if (UU === zU) return 0;
+          if (UU.startsWith(zU)) return 1;
+          const XU = UU.indexOf(zU);
+          return -1 === XU ? -1 : 2 + XU
         },
-        SM = [];
-      for (const PM of MM) {
-        const MM = [OM(PM.lowerLabel), OM(PM.lowerName)].filter((MM => -1 !== MM));
-        MM.length && SM.push({
-          item: PM,
-          rank: Math.min(...MM)
+        yU = [];
+      for (const FU of UU) {
+        const UU = [cU(FU.lowerLabel), cU(FU.lowerName)].filter((UU => -1 !== UU));
+        UU.length && yU.push({
+          item: FU,
+          rank: Math.min(...UU)
         })
       }
-      if (SM.length > 0) return SM.sort(((MM, rM) => MM.rank - rM.rank)).map((MM => MM.item));
-      const jM = [...iM],
-        aM = MM => {
-          let rM = 0;
-          for (const iM of jM) {
-            if (rM = MM.indexOf(iM, rM), -1 === rM) return !1;
-            rM++
+      if (yU.length > 0) return yU.sort(((UU, XU) => UU.rank - XU.rank)).map((UU => UU.item));
+      const QU = [...zU],
+        AU = UU => {
+          let XU = 0;
+          for (const zU of QU) {
+            if (XU = UU.indexOf(zU, XU), -1 === XU) return !1;
+            XU++
           }
           return !0
         };
-      return MM.filter((MM => aM(MM.lowerLabel) || aM(MM.lowerName)))
+      return UU.filter((UU => AU(UU.lowerLabel) || AU(UU.lowerName)))
     }
 
-    function rj(MM, rM) {
-      var iM;
-      return null !== (iM = null === MM || void 0 === MM ? void 0 : MM[rM]) && void 0 !== iM ? iM : rM
+    function XQ(UU, XU) {
+      var zU;
+      return null !== (zU = null === UU || void 0 === UU ? void 0 : UU[XU]) && void 0 !== zU ? zU : XU
     }
 
-    function ij(MM, rM) {
-      const iM = MM.userInput;
-      return void 0 !== rM && "dropdown" === (null === iM || void 0 === iM ? void 0 : iM.type) && iM.dropdownOptions.map(hS.d).includes(rM) ? rM : function(MM) {
-        const rM = MM.userInput;
-        if ("dropdown" !== (null === rM || void 0 === rM ? void 0 : rM.type) || 0 === rM.dropdownOptions.length) return null;
-        const iM = rM.dropdownOptions.map(hS.d);
-        return rM.initialValue && iM.includes(rM.initialValue) ? rM.initialValue : iM[iM.length - 1]
-      }(MM)
+    function zQ(UU, XU) {
+      const zU = UU.userInput;
+      return void 0 !== XU && "dropdown" === (null === zU || void 0 === zU ? void 0 : zU.type) && zU.dropdownOptions.map(py.h).includes(XU) ? XU : function(UU) {
+        const XU = UU.userInput;
+        if ("dropdown" !== (null === XU || void 0 === XU ? void 0 : XU.type) || 0 === XU.dropdownOptions.length) return null;
+        const zU = XU.dropdownOptions.map(py.h);
+        return XU.initialValue && zU.includes(XU.initialValue) ? XU.initialValue : zU[zU.length - 1]
+      }(UU)
     }
 
-    function Oj(MM) {
-      return void 0 === MM ? "" : JSON.stringify(MM)
+    function cQ(UU) {
+      return void 0 === UU ? "" : JSON.stringify(UU)
     }
-    const Sj = (0, OM.createContext)(null);
+    const yQ = (0, cU.createContext)(null);
 
-    function jj() {
-      return (0, OM.useContext)(Sj)
+    function QQ() {
+      return (0, cU.useContext)(yQ)
     }
-    var aj = iM(2932);
-    const Pj = (0, OM.memo)((function(MM) {
+    var AQ = zU(2933);
+    const FQ = (0, cU.memo)((function(UU) {
         let {
-          name: rM,
-          label: iM,
-          onPick: OM
-        } = MM;
-        return (0, LM.jsxs)("button", {
+          name: XU,
+          label: zU,
+          onPick: cU
+        } = UU;
+        return (0, YU.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: iM,
+          title: zU,
           onClick: () => {
-            OM(rM)
+            cU(XU)
           },
-          children: [(0, LM.jsx)(WS, {
-            item: rM,
+          children: [(0, YU.jsx)(Oy, {
+            item: XU,
             size: "big"
-          }), (0, LM.jsx)("span", {
-            children: iM
+          }), (0, YU.jsx)("span", {
+            children: zU
           })]
         })
       })),
-      nj = (0, OM.memo)((function(MM) {
+      oQ = (0, cU.memo)((function(UU) {
         let {
-          items: rM,
-          query: iM,
-          onPick: SM
-        } = MM;
+          items: XU,
+          query: zU,
+          onPick: yU
+        } = UU;
         const {
-          t: jM
-        } = (0, aM.A)(), [PM, nM] = (0, OM.useState)(new Set), QM = (0, OM.useMemo)((() => function(MM) {
-          const rM = new Map;
-          for (const iM of MM) {
-            let MM = rM.get(iM.category);
-            MM || (MM = [], rM.set(iM.category, MM)), MM.push(iM)
+          t: QU
+        } = (0, AU.I)(), [FU, oU] = (0, cU.useState)(new Set), DU = (0, cU.useMemo)((() => function(UU) {
+          const XU = new Map;
+          for (const zU of UU) {
+            let UU = XU.get(zU.category);
+            UU || (UU = [], XU.set(zU.category, UU)), UU.push(zU)
           }
-          return [...vS, "other"].filter((MM => rM.has(MM))).map((MM => ({
-            category: MM,
-            items: rM.get(MM)
+          return [...ny, "other"].filter((UU => XU.has(UU))).map((UU => ({
+            category: UU,
+            items: XU.get(UU)
           })))
-        }(rM)), [rM]), zM = (0, OM.useMemo)((() => Mj(rM, iM).slice(0, 60)), [rM, iM]);
-        return iM.trim() ? 0 === zM.length ? (0, LM.jsx)(kS, {
-          title: jM("smpShop:noItemsFound", {
-            query: iM.trim()
+        }(XU)), [XU]), EU = (0, cU.useMemo)((() => UQ(XU, zU).slice(0, 60)), [XU, zU]);
+        return zU.trim() ? 0 === EU.length ? (0, YU.jsx)(uy, {
+          title: QU("smpShop:noItemsFound", {
+            query: zU.trim()
           }),
-          children: jM("smpShop:tryShorterName")
-        }) : (0, LM.jsx)(aj.e, {
+          children: QU("smpShop:tryShorterName")
+        }) : (0, YU.jsx)(AQ.d, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: KS,
-          observerUpdateDeps: [iM],
-          children: zM.map((MM => (0, LM.jsx)(Pj, {
-            name: MM.name,
-            label: MM.label,
-            onPick: SM
-          }, MM.name)))
-        }) : (0, LM.jsx)(LM.Fragment, {
-          children: QM.map((MM => {
+          rootMargin: jy,
+          observerUpdateDeps: [zU],
+          children: EU.map((UU => (0, YU.jsx)(FQ, {
+            name: UU.name,
+            label: UU.label,
+            onPick: yU
+          }, UU.name)))
+        }) : (0, YU.jsx)(YU.Fragment, {
+          children: DU.map((UU => {
             let {
-              category: rM,
-              items: iM
-            } = MM;
-            const OM = PM.has(rM) || iM.length <= 48,
-              aM = OM ? iM : iM.slice(0, 48);
-            return (0, LM.jsxs)("section", {
+              category: XU,
+              items: zU
+            } = UU;
+            const cU = FU.has(XU) || zU.length <= 48,
+              AU = cU ? zU : zU.slice(0, 48);
+            return (0, YU.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, LM.jsxs)("h4", {
-                children: [jM("other" === rM ? "smpShop:otherItems" : `creativeInventory:${rM}`), !OM && (0, LM.jsx)("button", {
+              children: [(0, YU.jsxs)("h4", {
+                children: [QU("other" === XU ? "smpShop:otherItems" : `creativeInventory:${XU}`), !cU && (0, YU.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    nM(new Set([...PM, rM]))
+                    oU(new Set([...FU, XU]))
                   },
-                  children: jM("smpShop:showAll", {
-                    count: iM.length
+                  children: QU("smpShop:showAll", {
+                    count: zU.length
                   })
                 })]
-              }), (0, LM.jsx)(aj.e, {
+              }), (0, YU.jsx)(AQ.d, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: KS,
-                observerUpdateDeps: [OM],
-                children: aM.map((MM => (0, LM.jsx)(Pj, {
-                  name: MM.name,
-                  label: MM.label,
-                  onPick: SM
-                }, MM.name)))
+                rootMargin: jy,
+                observerUpdateDeps: [cU],
+                children: AU.map((UU => (0, YU.jsx)(FQ, {
+                  name: UU.name,
+                  label: UU.label,
+                  onPick: yU
+                }, UU.name)))
               })]
-            }, rM)
+            }, XU)
           }))
         })
       }));
 
-    function Qj(MM, rM) {
+    function DQ(UU, XU) {
       const {
-        searched: iM,
-        shown: SM,
-        searchFor: jM,
-        loading: aM
-      } = function(MM, rM) {
-        var iM;
-        const SM = jj(),
-          [jM, aM] = (0, OM.useState)(void 0),
-          PM = (0, OM.useRef)(void 0),
-          nM = (0, OM.useRef)(0),
-          QM = (0, OM.useRef)(void 0),
-          zM = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.meta.item) && void 0 !== iM ? iM : null,
-          LM = !!MM && SM.isPending(MM.key);
-        (0, OM.useEffect)((() => {
-          if (!MM || LM || !rM || void 0 === jM || jM === zM) return;
-          const iM = jM === PM.current && SM.gaveUpAt(MM.key) > nM.current && QM.current !== jM;
-          (jM !== PM.current || iM) && SM.act(MM.key, null !== jM && void 0 !== jM ? jM : "*", iM) && (iM && (QM.current = jM), PM.current = jM, nM.current = Date.now())
-        }), [MM, LM, rM, jM, zM, SM]);
-        const mM = (0, OM.useCallback)((MM => {
-            PM.current = void 0, QM.current = void 0, aM(MM)
+        searched: zU,
+        shown: yU,
+        searchFor: QU,
+        loading: AU
+      } = function(UU, XU) {
+        var zU;
+        const yU = QQ(),
+          [QU, AU] = (0, cU.useState)(void 0),
+          FU = (0, cU.useRef)(void 0),
+          oU = (0, cU.useRef)(0),
+          DU = (0, cU.useRef)(void 0),
+          EU = null !== (zU = null === UU || void 0 === UU ? void 0 : UU.meta.item) && void 0 !== zU ? zU : null,
+          YU = !!UU && yU.isPending(UU.key);
+        (0, cU.useEffect)((() => {
+          if (!UU || YU || !XU || void 0 === QU || QU === EU) return;
+          const zU = QU === FU.current && yU.gaveUpAt(UU.key) > oU.current && DU.current !== QU;
+          (QU !== FU.current || zU) && yU.act(UU.key, null !== QU && void 0 !== QU ? QU : "*", zU) && (zU && (DU.current = QU), FU.current = QU, oU.current = Date.now())
+        }), [UU, YU, XU, QU, EU, yU]);
+        const NU = (0, cU.useCallback)((UU => {
+            FU.current = void 0, DU.current = void 0, AU(UU)
           }), []),
-          HM = void 0 !== jM && jM !== zM && (LM || PM.current !== jM);
+          IU = void 0 !== QU && QU !== EU && (YU || FU.current !== QU);
         return {
-          searched: zM,
-          shown: HM ? jM : zM,
-          searchFor: mM,
-          loading: HM || LM || null !== zM && !rM
+          searched: EU,
+          shown: IU ? QU : EU,
+          searchFor: NU,
+          loading: IU || YU || null !== EU && !XU
         }
-      }(MM, rM), PM = (0, OM.useMemo)((() => function() {
-        var MM;
-        let rM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const SM = `${(0,FS.h)()}\x1f${rM.join("\x1e")}\x1f${iM.join("\x1e")}\x1f${JSON.stringify(OM)}`;
-        if ((null === (MM = cS) || void 0 === MM ? void 0 : MM.key) === SM) return cS.items;
-        const jM = new Set(iM),
-          aM = new Set,
-          PM = [],
-          nM = (MM, rM) => {
-            var iM;
-            if (!MM || aM.has(MM) || jM.has(MM)) return;
-            aM.add(MM);
-            const SM = null !== (iM = OM[MM]) && void 0 !== iM ? iM : MM;
-            PM.push({
-              name: MM,
-              label: SM,
-              lowerLabel: SM.toLowerCase(),
-              lowerName: MM.toLowerCase(),
-              category: rM
+      }(UU, XU), FU = (0, cU.useMemo)((() => function() {
+        var UU;
+        let XU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          cU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const yU = `${(0,my.i)()}\x1f${XU.join("\x1e")}\x1f${zU.join("\x1e")}\x1f${JSON.stringify(cU)}`;
+        if ((null === (UU = hy) || void 0 === UU ? void 0 : UU.key) === yU) return hy.items;
+        const QU = new Set(zU),
+          AU = new Set,
+          FU = [],
+          oU = (UU, XU) => {
+            var zU;
+            if (!UU || AU.has(UU) || QU.has(UU)) return;
+            AU.add(UU);
+            const yU = null !== (zU = cU[UU]) && void 0 !== zU ? zU : UU;
+            FU.push({
+              name: UU,
+              label: yU,
+              lowerLabel: yU.toLowerCase(),
+              lowerName: UU.toLowerCase(),
+              category: XU
             })
           };
-        for (const zM of (0, AS.creativeItemIds)()) {
-          var QM;
-          (0, AS.itemIsDisabled)(zM, !0, !0, !1) || (0, AS.showOnlyInCreativeSearch)(zM) || nM((0, FS.g)(zM), null !== (QM = (0, AS.creativeCategoryOf)(zM)) && void 0 !== QM ? QM : "other")
+        for (const EU of (0, Vy.creativeItemIds)()) {
+          var DU;
+          (0, Vy.itemIsDisabled)(EU, !0, !0, !1) || (0, Vy.showOnlyInCreativeSearch)(EU) || oU((0, my.f)(EU), null !== (DU = (0, Vy.creativeCategoryOf)(EU)) && void 0 !== DU ? DU : "other")
         }
-        for (const zM of rM) nM(zM, "other");
-        return cS = {
-          key: SM,
-          items: PM
-        }, PM
-      }(null === MM || void 0 === MM ? void 0 : MM.meta.extra, null === MM || void 0 === MM ? void 0 : MM.meta.excluded, null === MM || void 0 === MM ? void 0 : MM.meta.names)), [null === MM || void 0 === MM ? void 0 : MM.meta.extra, null === MM || void 0 === MM ? void 0 : MM.meta.excluded, null === MM || void 0 === MM ? void 0 : MM.meta.names]), [nM, QM] = (0, OM.useState)(""), [zM, LM] = (0, OM.useState)(0), [mM, HM] = (0, OM.useState)("recent"), hM = (0, OM.useCallback)((MM => {
-        QM(""), LM((MM => MM + 1)), jM(MM)
-      }), [jM]), JM = "browse" === mM || "" !== nM.trim();
+        for (const EU of XU) oU(EU, "other");
+        return hy = {
+          key: yU,
+          items: FU
+        }, FU
+      }(null === UU || void 0 === UU ? void 0 : UU.meta.extra, null === UU || void 0 === UU ? void 0 : UU.meta.excluded, null === UU || void 0 === UU ? void 0 : UU.meta.names)), [null === UU || void 0 === UU ? void 0 : UU.meta.extra, null === UU || void 0 === UU ? void 0 : UU.meta.excluded, null === UU || void 0 === UU ? void 0 : UU.meta.names]), [oU, DU] = (0, cU.useState)(""), [EU, YU] = (0, cU.useState)(0), [NU, IU] = (0, cU.useState)("recent"), pU = (0, cU.useCallback)((UU => {
+        DU(""), YU((UU => UU + 1)), QU(UU)
+      }), [QU]), aU = "browse" === NU || "" !== oU.trim();
       return {
-        searched: iM,
-        shown: SM,
-        searchFor: jM,
-        loading: aM,
-        catalogue: PM,
-        names: null === MM || void 0 === MM ? void 0 : MM.meta.names,
-        query: nM,
-        setQuery: QM,
-        searchBoxKey: zM,
-        pickItem: hM,
-        setView: HM,
-        browsing: JM
+        searched: zU,
+        shown: yU,
+        searchFor: QU,
+        loading: AU,
+        catalogue: FU,
+        names: null === UU || void 0 === UU ? void 0 : UU.meta.names,
+        query: oU,
+        setQuery: DU,
+        searchBoxKey: EU,
+        pickItem: pU,
+        setView: IU,
+        browsing: aU
       }
     }
 
-    function zj(MM) {
+    function EQ(UU) {
       let {
-        browser: rM,
-        children: iM
-      } = MM;
+        browser: XU,
+        children: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)(), SM = jj();
-      return (0, LM.jsxs)("div", {
+        t: cU
+      } = (0, AU.I)(), yU = QQ();
+      return (0, YU.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "SmpSearch",
-          children: (0, LM.jsx)(GM.b, {
+          children: (0, YU.jsx)(ZU.e, {
             className: "SmpSearchInput",
-            placeholderText: OM("smpShop:searchPlaceholder"),
-            defaultValue: rM.query,
-            onValueChange: MM => {
-              rM.setQuery(MM), rM.searched && MM.trim() && rM.searchFor(null)
+            placeholderText: cU("smpShop:searchPlaceholder"),
+            defaultValue: XU.query,
+            onValueChange: UU => {
+              XU.setQuery(UU), XU.searched && UU.trim() && XU.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const MM = Mj(rM.catalogue, rM.query)[0];
-              MM ? rM.pickItem(MM.name) : rM.query.trim() && SM.notify(OM("smpShop:noItemsFound", {
-                query: rM.query.trim()
+              const UU = UQ(XU.catalogue, XU.query)[0];
+              UU ? XU.pickItem(UU.name) : XU.query.trim() && yU.notify(cU("smpShop:noItemsFound", {
+                query: XU.query.trim()
               }))
             }
-          }, rM.searchBoxKey)
-        }), iM]
+          }, XU.searchBoxKey)
+        }), zU]
       })
     }
 
-    function Lj(MM) {
+    function YQ(UU) {
       let {
-        browser: rM,
-        recentLabel: iM,
-        children: OM
-      } = MM;
+        browser: XU,
+        recentLabel: zU,
+        children: cU
+      } = UU;
       const {
-        t: SM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: yU
+      } = (0, AU.I)();
+      return (0, YU.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, LM.jsx)(oS, {
+        children: [(0, YU.jsx)(iy, {
           options: [{
             value: "recent",
-            label: iM
+            label: zU
           }, {
             value: "browse",
-            label: SM("smpShop:browseItems")
+            label: yU("smpShop:browseItems")
           }],
-          value: rM.browsing ? "browse" : "recent",
-          onChange: rM.setView,
-          ariaLabel: SM("smpShop:show")
-        }), !rM.browsing && OM]
+          value: XU.browsing ? "browse" : "recent",
+          onChange: XU.setView,
+          ariaLabel: yU("smpShop:show")
+        }), !XU.browsing && cU]
       })
     }
 
-    function mj(MM) {
+    function NQ(UU) {
       let {
-        item: rM,
-        names: iM,
-        summary: OM,
-        onBack: SM,
-        children: jM
-      } = MM;
+        item: XU,
+        names: zU,
+        summary: cU,
+        onBack: yU,
+        children: QU
+      } = UU;
       const {
-        t: PM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: FU
+      } = (0, AU.I)();
+      return (0, YU.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, LM.jsx)(QM.c, {
+        children: [(0, YU.jsx)(DU.e, {
           className: "SmpBackButton",
-          onClick: SM,
-          children: PM("general:back")
-        }), (0, LM.jsx)(WS, {
-          item: rM,
+          onClick: yU,
+          children: FU("general:back")
+        }), (0, YU.jsx)(Oy, {
+          item: XU,
           size: "big"
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, LM.jsx)("b", {
-            children: rj(iM, rM)
-          }), OM && (0, LM.jsx)("small", {
-            children: OM
+          children: [(0, YU.jsx)("b", {
+            children: XQ(zU, XU)
+          }), cU && (0, YU.jsx)("small", {
+            children: cU
           })]
-        }), jM]
+        }), QU]
       })
     }
 
-    function Hj(MM) {
+    function IQ(UU) {
       let {
-        browser: rM,
-        className: iM,
-        action: OM,
-        above: SM,
-        list: aM,
-        summary: PM,
-        recentLabel: nM,
-        listControls: QM,
-        onBack: zM
-      } = MM;
-      return (0, LM.jsxs)("div", {
-        className: jM()("SmpScreen", iM),
-        children: [(0, LM.jsx)(zj, {
-          browser: rM,
-          children: OM
-        }), rM.shown && (0, LM.jsx)(mj, {
-          item: rM.shown,
-          names: rM.names,
-          summary: !rM.loading && PM,
+        browser: XU,
+        className: zU,
+        action: cU,
+        above: yU,
+        list: AU,
+        summary: FU,
+        recentLabel: oU,
+        listControls: DU,
+        onBack: EU
+      } = UU;
+      return (0, YU.jsxs)("div", {
+        className: QU()("SmpScreen", zU),
+        children: [(0, YU.jsx)(EQ, {
+          browser: XU,
+          children: cU
+        }), XU.shown && (0, YU.jsx)(NQ, {
+          item: XU.shown,
+          names: XU.names,
+          summary: !XU.loading && FU,
           onBack: () => {
-            null === zM || void 0 === zM || zM(), rM.searchFor(null)
+            null === EU || void 0 === EU || EU(), XU.searchFor(null)
           },
-          children: QM
-        }), SM, rM.shown ? aM : (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)(Lj, {
-            browser: rM,
-            recentLabel: nM,
-            children: QM
-          }), rM.browsing ? (0, LM.jsx)(nj, {
-            items: rM.catalogue,
-            query: rM.query,
-            onPick: rM.pickItem
-          }) : aM]
+          children: DU
+        }), yU, XU.shown ? AU : (0, YU.jsxs)(YU.Fragment, {
+          children: [(0, YU.jsx)(YQ, {
+            browser: XU,
+            recentLabel: oU,
+            children: DU
+          }), XU.browsing ? (0, YU.jsx)(oQ, {
+            items: XU.catalogue,
+            query: XU.query,
+            onPick: XU.pickItem
+          }) : AU]
         })]
       })
     }
 
-    function hj(MM, rM) {
-      const iM = MM.map((MM => {
+    function pQ(UU, XU) {
+      const zU = UU.map((UU => {
         let {
-          meta: rM
-        } = MM;
-        return rM.pricePerItem
+          meta: XU
+        } = UU;
+        return XU.pricePerItem
       }));
-      return "min" === rM ? Math.min(...iM) : Math.max(...iM)
+      return "min" === XU ? Math.min(...zU) : Math.max(...zU)
     }
-    var Jj = iM(7077);
-    const dj = (0, OM.memo)((function(MM) {
-      var rM;
+    var aQ = zU(7176);
+    const tQ = (0, cU.memo)((function(UU) {
+      var XU;
       const {
-        t: iM
-      } = (0, aM.A)(), OM = null === MM.seller, SM = MM.quantity * MM.pricePerItem;
-      return (0, LM.jsxs)("div", {
-        className: MM.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, LM.jsx)(WS, {
-          item: MM.item,
-          amount: MM.quantity,
-          size: MM.grid ? "big" : "normal",
-          tier: MM.tier
-        }), (0, LM.jsxs)("div", {
+        t: zU
+      } = (0, AU.I)(), cU = null === UU.seller, yU = UU.quantity * UU.pricePerItem;
+      return (0, YU.jsxs)("div", {
+        className: UU.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, YU.jsx)(Oy, {
+          item: UU.item,
+          amount: UU.quantity,
+          size: UU.grid ? "big" : "normal",
+          tier: UU.tier
+        }), (0, YU.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, LM.jsx)("b", {
-            children: (0, LM.jsx)(lS.b, {
-              text: null !== (rM = MM.title) && void 0 !== rM ? rM : `${MM.quantity}x ${MM.item}`
+          children: [(0, YU.jsx)("b", {
+            children: (0, YU.jsx)(ky.d, {
+              text: null !== (XU = UU.title) && void 0 !== XU ? XU : `${UU.quantity}x ${UU.item}`
             })
-          }), (0, LM.jsxs)("small", {
+          }), (0, YU.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, LM.jsx)("span", {
-              children: OM ? iM("smpShop:you") : (0, LM.jsx)(lS.b, {
+            children: [(0, YU.jsx)("span", {
+              children: cU ? zU("smpShop:you") : (0, YU.jsx)(ky.d, {
                 text: [{
-                  entityName: MM.seller
+                  entityName: UU.seller
                 }]
               })
-            }), (0, LM.jsx)("span", {
-              children: iM("smpShop:timeLeft", {
-                time: TS(MM.expiresAt)
+            }), (0, YU.jsx)("span", {
+              children: zU("smpShop:timeLeft", {
+                time: by(UU.expiresAt)
               })
             })]
           })]
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, LM.jsx)(sS, {
-            amount: MM.pricePerItem
-          }), (0, LM.jsx)("small", {
-            children: iM("smpShop:each")
+          children: [(0, YU.jsx)(Sy, {
+            amount: UU.pricePerItem
+          }), (0, YU.jsx)("small", {
+            children: zU("smpShop:each")
           })]
-        }), (0, LM.jsx)(QM.e, {
+        }), (0, YU.jsx)(DU.f, {
           className: "SmpBuyButton",
-          disabled: OM || !MM.canAfford && !MM.busy,
-          loading: MM.busy,
+          disabled: cU || !UU.canAfford && !UU.busy,
+          loading: UU.busy,
           onClick: () => {
-            MM.onBuy(MM.itemKey)
+            UU.onBuy(UU.itemKey)
           },
-          children: OM ? iM("smpShop:yours") : (0, LM.jsx)(sS, {
-            amount: SM
+          children: cU ? zU("smpShop:yours") : (0, YU.jsx)(Sy, {
+            amount: yU
           })
         })]
       })
     }));
 
-    function yj(MM) {
+    function gQ(UU) {
       let {
-        view: rM,
-        onChange: iM
-      } = MM;
+        view: XU,
+        onChange: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)();
-      return (0, LM.jsx)(RS.e, {
+        t: cU
+      } = (0, AU.I)();
+      return (0, YU.jsx)(wy.d, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: OM("smpShop:layout"),
+        ariaLabel: cU("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, LM.jsx)(PM.b, {
+          label: (0, YU.jsx)(FU.d, {
             name: "list"
           }),
-          ariaLabel: OM("smpShop:listView")
+          ariaLabel: cU("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, LM.jsx)(PM.b, {
+          label: (0, YU.jsx)(FU.d, {
             name: "grid-2"
           }),
-          ariaLabel: OM("smpShop:gridView")
+          ariaLabel: cU("smpShop:gridView")
         }],
-        value: rM,
-        onChange: iM
+        value: XU,
+        onChange: zU
       })
     }
 
-    function lj(MM) {
+    function kQ(UU) {
       let {
-        entries: rM,
-        view: iM
-      } = MM;
+        entries: XU,
+        view: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)(), SM = jj(), jM = "grid" === iM;
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [!jM && (0, LM.jsxs)("div", {
+        t: cU
+      } = (0, AU.I)(), yU = QQ(), QU = "grid" === zU;
+      return (0, YU.jsxs)(YU.Fragment, {
+        children: [!QU && (0, YU.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, LM.jsx)("span", {}), (0, LM.jsx)("span", {
-            children: OM("smpShop:columnItem")
-          }), (0, LM.jsx)("span", {
-            children: OM("smpShop:columnPriceEach")
-          }), (0, LM.jsx)("span", {
-            children: OM("smpShop:columnTotal")
+          children: [(0, YU.jsx)("span", {}), (0, YU.jsx)("span", {
+            children: cU("smpShop:columnItem")
+          }), (0, YU.jsx)("span", {
+            children: cU("smpShop:columnPriceEach")
+          }), (0, YU.jsx)("span", {
+            children: cU("smpShop:columnTotal")
           })]
-        }), (0, LM.jsx)(aj.e, {
-          lazyLoadedClassName: jM ? "SmpCardGrid" : "SmpList",
+        }), (0, YU.jsx)(AQ.d, {
+          lazyLoadedClassName: QU ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: KS,
-          observerUpdateDeps: [rM.length],
-          children: rM.map((MM => {
-            var rM, iM;
+          rootMargin: jy,
+          observerUpdateDeps: [XU.length],
+          children: XU.map((UU => {
+            var XU, zU;
             let {
-              key: OM,
-              item: aM,
-              meta: PM
-            } = MM;
-            const nM = PM.quantity * PM.pricePerItem;
-            return (0, LM.jsx)(dj, {
-              itemKey: OM,
-              item: PM.item,
-              title: aM.customTitle,
-              quantity: PM.quantity,
-              pricePerItem: PM.pricePerItem,
-              seller: PM.seller,
-              expiresAt: PM.expiresAt,
-              tier: null !== (rM = null === (iM = aM.enchant) || void 0 === iM ? void 0 : iM.tier) && void 0 !== rM ? rM : null,
-              busy: SM.isPending(OM) || null !== PM.seller && !1 === aM.canBuy,
-              canAfford: SM.canAfford(aM, nM),
-              grid: jM,
-              onBuy: SM.act
-            }, OM)
+              key: cU,
+              item: AU,
+              meta: FU
+            } = UU;
+            const oU = FU.quantity * FU.pricePerItem;
+            return (0, YU.jsx)(tQ, {
+              itemKey: cU,
+              item: FU.item,
+              title: AU.customTitle,
+              quantity: FU.quantity,
+              pricePerItem: FU.pricePerItem,
+              seller: FU.seller,
+              expiresAt: FU.expiresAt,
+              tier: null !== (XU = null === (zU = AU.enchant) || void 0 === zU ? void 0 : zU.tier) && void 0 !== XU ? XU : null,
+              busy: yU.isPending(cU) || null !== FU.seller && !1 === AU.canBuy,
+              canAfford: yU.canAfford(AU, oU),
+              grid: QU,
+              onBuy: yU.act
+            }, cU)
           }))
-        }, iM)]
+        }, zU)]
       })
     }
-    const Ej = [1, 10, 100],
-      Uj = [1, 10, 100, 999];
+    const GQ = [1, 10, 100],
+      BQ = [1, 10, 100, 999];
 
-    function Gj(MM) {
-      var rM, iM, SM, nM, zM, mM, HM, hM, JM, dM;
+    function ZQ(UU) {
+      var XU, zU, yU, oU, EU, NU, IU, pU, aU, tU;
       const {
-        t: yM
-      } = (0, aM.A)(), lM = jj(), {
-        creator: EM,
-        mode: UM
-      } = MM, [CM, eM] = (0, OM.useState)(null !== (rM = null === EM || void 0 === EM ? void 0 : EM.meta.item) && void 0 !== rM ? rM : null), [bM, wM] = (0, OM.useState)(1), [tM, gM] = (0, OM.useState)(0), [uM, RM] = (0, OM.useState)(""), [pM, WM] = (0, OM.useState)(0), sM = (0, OM.useRef)(CM), DM = (0, OM.useRef)(!1), [kM, ZM] = (0, OM.useState)(!1), oM = null !== (iM = null === EM || void 0 === EM ? void 0 : EM.meta.item) && void 0 !== iM ? iM : null, fM = null !== (SM = null === EM || void 0 === EM ? void 0 : EM.meta.owned) && void 0 !== SM ? SM : 0;
-      (0, OM.useEffect)((() => {
-        MM.searching || null === oM || oM === sM.current || (sM.current = oM, DM.current = !1, eM(oM), gM(0), wM("list" === UM ? Math.max(1, fM) : 1))
-      }), [oM, MM.searching]);
-      const YM = !!EM && !!CM && EM.meta.item === CM,
-        NM = YM ? EM.meta.owned : null !== (nM = null === (zM = MM.inventory) || void 0 === zM || null === (mM = zM.find((MM => MM.item === CM))) || void 0 === mM ? void 0 : mM.quantity) && void 0 !== nM ? nM : 0,
-        AM = "list" === UM ? Math.max(1, NM) : 45954,
-        xM = null !== (HM = MM.prices[0]) && void 0 !== HM ? HM : null,
-        vM = MM.prices.length ? Math.round(MM.prices.reduce(((MM, rM) => MM + rM), 0) / MM.prices.length) : null,
-        FM = null === (hM = MM.inventory) || void 0 === hM || null === (JM = hM.find((MM => MM.item === CM))) || void 0 === JM ? void 0 : JM.sellPrice;
-      (0, OM.useEffect)((() => {
-        var MM;
-        YM && (wM((MM => "list" === UM ? Math.min(Math.max(1, MM), Math.max(1, NM)) : MM)), DM.current || gM(null !== (MM = null !== xM && void 0 !== xM ? xM : vM) && void 0 !== MM ? MM : Math.max(1, null !== FM && void 0 !== FM ? FM : 1)))
-      }), [YM, NM, CM, xM, vM]);
-      const BM = MM => {
-          DM.current = !0, gM(MM)
+        t: gU
+      } = (0, AU.I)(), kU = QQ(), {
+        creator: GU,
+        mode: BU
+      } = UU, [RU, PU] = (0, cU.useState)(null !== (XU = null === GU || void 0 === GU ? void 0 : GU.meta.item) && void 0 !== XU ? XU : null), [WU, dU] = (0, cU.useState)(1), [LU, eU] = (0, cU.useState)(0), [CU, wU] = (0, cU.useState)(""), [qU, OU] = (0, cU.useState)(0), SU = (0, cU.useRef)(RU), rU = (0, cU.useRef)(!1), [uU, fU] = (0, cU.useState)(!1), iU = null !== (zU = null === GU || void 0 === GU ? void 0 : GU.meta.item) && void 0 !== zU ? zU : null, HU = null !== (yU = null === GU || void 0 === GU ? void 0 : GU.meta.owned) && void 0 !== yU ? yU : 0;
+      (0, cU.useEffect)((() => {
+        UU.searching || null === iU || iU === SU.current || (SU.current = iU, rU.current = !1, PU(iU), eU(0), dU("list" === BU ? Math.max(1, HU) : 1))
+      }), [iU, UU.searching]);
+      const MU = !!GU && !!RU && GU.meta.item === RU,
+        vU = MU ? GU.meta.owned : null !== (oU = null === (EU = UU.inventory) || void 0 === EU || null === (NU = EU.find((UU => UU.item === RU))) || void 0 === NU ? void 0 : NU.quantity) && void 0 !== oU ? oU : 0,
+        VU = "list" === BU ? Math.max(1, vU) : 45954,
+        sU = null !== (IU = UU.prices[0]) && void 0 !== IU ? IU : null,
+        nU = UU.prices.length ? Math.round(UU.prices.reduce(((UU, XU) => UU + XU), 0) / UU.prices.length) : null,
+        mU = null === (pU = UU.inventory) || void 0 === pU || null === (aU = pU.find((UU => UU.item === RU))) || void 0 === aU ? void 0 : aU.sellPrice;
+      (0, cU.useEffect)((() => {
+        var UU;
+        MU && (dU((UU => "list" === BU ? Math.min(Math.max(1, UU), Math.max(1, vU)) : UU)), rU.current || eU(null !== (UU = null !== sU && void 0 !== sU ? sU : nU) && void 0 !== UU ? UU : Math.max(1, null !== mU && void 0 !== mU ? mU : 1)))
+      }), [MU, vU, RU, sU, nU]);
+      const lU = UU => {
+          rU.current = !0, eU(UU)
         },
-        XM = rM => {
-          var iM, OM, SM;
-          sM.current = rM, DM.current = !1, ZM(!1), RM(""), WM((MM => MM + 1)), eM(rM), gM(0), wM("list" === UM && null !== (iM = null === (OM = MM.inventory) || void 0 === OM || null === (SM = OM.find((MM => MM.item === rM))) || void 0 === SM ? void 0 : SM.quantity) && void 0 !== iM ? iM : 1), (null === EM || void 0 === EM ? void 0 : EM.meta.item) !== rM && MM.onPickItem(rM)
+        xU = XU => {
+          var zU, cU, yU;
+          SU.current = XU, rU.current = !1, fU(!1), wU(""), OU((UU => UU + 1)), PU(XU), eU(0), dU("list" === BU && null !== (zU = null === (cU = UU.inventory) || void 0 === cU || null === (yU = cU.find((UU => UU.item === XU))) || void 0 === yU ? void 0 : yU.quantity) && void 0 !== zU ? zU : 1), (null === GU || void 0 === GU ? void 0 : GU.meta.item) !== XU && UU.onPickItem(XU)
         },
-        IM = bM * tM,
-        KM = "list" === UM && null !== EM && void 0 !== EM && EM.meta.fee ? function(MM, rM) {
-          const iM = Math.max(0, rM - MM.taxFreeAllowance);
-          return Math.ceil(Math.round(iM * MM.rate * 1e6) / 1e6)
-        }(EM.meta.fee, IM) : 0,
-        qM = !!EM && lM.isPending(EM.key),
-        TM = YM && !MM.searching && bM >= 1 && tM >= 1 && ("order" === UM || NM >= bM) && !qM,
-        VM = !!CM && !YM && !MM.searching && bM >= 1 && tM >= 1,
-        cM = () => {
-          TM ? lM.act(EM.key, `${bM}|${tM}`) : VM && (MM.onPickItem(CM), ZM(!0))
+        JU = WU * LU,
+        jU = "list" === BU && null !== GU && void 0 !== GU && GU.meta.fee ? function(UU, XU) {
+          const zU = Math.max(0, XU - UU.taxFreeAllowance);
+          return Math.ceil(Math.round(zU * UU.rate * 1e6) / 1e6)
+        }(GU.meta.fee, JU) : 0,
+        KU = !!GU && kU.isPending(GU.key),
+        bU = MU && !UU.searching && WU >= 1 && LU >= 1 && ("order" === BU || vU >= WU) && !KU,
+        TU = !!RU && !MU && !UU.searching && WU >= 1 && LU >= 1,
+        hU = () => {
+          bU ? kU.act(GU.key, `${WU}|${LU}`) : TU && (UU.onPickItem(RU), fU(!0))
         };
-      (0, OM.useEffect)((() => {
-        kM && YM && !MM.searching && (ZM(!1), cM())
-      }), [kM, YM, MM.searching]);
-      const Mr = !!CM && !YM && (MM.searching || kM),
-        rr = CM ? rj(MM.names, CM) : "",
-        ir = (0, OM.useMemo)((() => Mj(MM.catalogue, uM).slice(0, 8)), [MM.catalogue, uM]),
-        Or = ("list" === UM ? Ej.filter((MM => MM < NM)) : Uj).map((MM => ({
-          value: MM,
-          label: String(MM)
+      (0, cU.useEffect)((() => {
+        uU && MU && !UU.searching && (fU(!1), hU())
+      }), [uU, MU, UU.searching]);
+      const UX = !!RU && !MU && (UU.searching || uU),
+        XX = RU ? XQ(UU.names, RU) : "",
+        zX = (0, cU.useMemo)((() => UQ(UU.catalogue, CU).slice(0, 8)), [UU.catalogue, CU]),
+        cX = ("list" === BU ? GQ.filter((UU => UU < vU)) : BQ).map((UU => ({
+          value: UU,
+          label: String(UU)
         })));
-      "list" === UM && NM > 0 && Or.push({
-        value: NM,
-        label: yM("smpShop:all", {
-          count: NM
+      "list" === BU && vU > 0 && cX.push({
+        value: vU,
+        label: gU("smpShop:all", {
+          count: vU
         })
       });
-      const Sr = [];
-      return null !== xM && (xM > 1 && Sr.push({
-        value: xM - 1,
-        label: yM("smpShop:undercut", {
-          price: uS(xM - 1)
+      const yX = [];
+      return null !== sU && (sU > 1 && yX.push({
+        value: sU - 1,
+        label: gU("smpShop:undercut", {
+          price: Cy(sU - 1)
         })
-      }), Sr.push({
-        value: xM,
-        label: yM("smpShop:lowest", {
-          price: uS(xM)
+      }), yX.push({
+        value: sU,
+        label: gU("smpShop:lowest", {
+          price: Cy(sU)
         })
-      })), null !== vM && vM !== xM && Sr.push({
-        value: vM,
-        label: yM("smpShop:average", {
-          price: uS(vM)
+      })), null !== nU && nU !== sU && yX.push({
+        value: nU,
+        label: gU("smpShop:average", {
+          price: Cy(nU)
         })
-      }), (0, LM.jsxs)("div", {
+      }), (0, YU.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, YU.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, LM.jsx)("b", {
-            children: yM("list" === UM ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, LM.jsx)("button", {
+          children: [(0, YU.jsx)("b", {
+            children: gU("list" === BU ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, YU.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": yM("smpShop:close"),
-            onClick: MM.onClose,
-            children: (0, LM.jsx)(PM.b, {
+            "aria-label": gU("smpShop:close"),
+            onClick: UU.onClose,
+            children: (0, YU.jsx)(FU.d, {
               name: "xmark"
             })
           })]
-        }), "list" === UM && (0, LM.jsx)("div", {
+        }), "list" === BU && (0, YU.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (dM = MM.inventory) && void 0 !== dM && dM.length ? MM.inventory.map((MM => {
+          children: null !== (tU = UU.inventory) && void 0 !== tU && tU.length ? UU.inventory.map((UU => {
             let {
-              item: rM,
-              quantity: iM
-            } = MM;
-            return (0, LM.jsx)("button", {
+              item: XU,
+              quantity: zU
+            } = UU;
+            return (0, YU.jsx)("button", {
               type: "button",
-              title: rM,
-              className: jM()("SmpPickerSlot", {
-                SmpPickerSlotOn: rM === CM
+              title: XU,
+              className: QU()("SmpPickerSlot", {
+                SmpPickerSlotOn: XU === RU
               }),
               onClick: () => {
-                XM(rM)
+                xU(XU)
               },
-              children: (0, LM.jsx)(WS, {
-                item: rM,
-                amount: iM
+              children: (0, YU.jsx)(Oy, {
+                item: XU,
+                amount: zU
               })
-            }, rM)
-          })) : (0, LM.jsx)("span", {
+            }, XU)
+          })) : (0, YU.jsx)("span", {
             className: "SmpMuted",
-            children: yM("smpShop:nothingToList")
+            children: gU("smpShop:nothingToList")
           })
-        }), ("list" === UM || !CM) && (0, LM.jsxs)("div", {
+        }), ("list" === BU || !RU) && (0, YU.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, LM.jsx)(GM.b, {
+          children: [(0, YU.jsx)(ZU.e, {
             className: "SmpSearchInput",
-            placeholderText: yM("list" === UM ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: uM,
-            onValueChange: RM,
+            placeholderText: gU("list" === BU ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: CU,
+            onValueChange: wU,
             blurOnEnter: !0,
             onEnter: () => {
-              ir[0] && XM(ir[0].name)
+              zX[0] && xU(zX[0].name)
             }
-          }, pM), ir.length > 0 && (0, LM.jsx)("div", {
+          }, qU), zX.length > 0 && (0, YU.jsx)("div", {
             className: "SmpPicker",
-            children: ir.map((MM => {
+            children: zX.map((UU => {
               let {
-                name: rM
-              } = MM;
-              return (0, LM.jsx)("button", {
+                name: XU
+              } = UU;
+              return (0, YU.jsx)("button", {
                 type: "button",
-                title: rM,
-                className: jM()("SmpPickerSlot", {
-                  SmpPickerSlotOn: rM === CM
+                title: XU,
+                className: QU()("SmpPickerSlot", {
+                  SmpPickerSlotOn: XU === RU
                 }),
                 onClick: () => {
-                  XM(rM)
+                  xU(XU)
                 },
-                children: (0, LM.jsx)(WS, {
-                  item: rM
+                children: (0, YU.jsx)(Oy, {
+                  item: XU
                 })
-              }, rM)
+              }, XU)
             }))
           })]
-        }), CM && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsxs)("div", {
+        }), RU && (0, YU.jsxs)(YU.Fragment, {
+          children: [(0, YU.jsxs)("div", {
             className: "SmpPickedName",
-            children: [rr, Mr && (0, LM.jsx)(fS, {})]
-          }), (0, LM.jsxs)("div", {
+            children: [XX, UX && (0, YU.jsx)(Hy, {})]
+          }), (0, YU.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, LM.jsxs)("div", {
+            children: [(0, YU.jsxs)("div", {
               className: "SmpField",
-              children: [(0, LM.jsxs)("span", {
-                children: [yM("smpShop:quantity"), "list" === UM && YM && (0, LM.jsx)("small", {
-                  children: yM("smpShop:youHave", {
-                    count: NM
+              children: [(0, YU.jsxs)("span", {
+                children: [gU("smpShop:quantity"), "list" === BU && MU && (0, YU.jsx)("small", {
+                  children: gU("smpShop:youHave", {
+                    count: vU
                   })
                 })]
-              }), (0, LM.jsx)(YS, {
-                value: bM,
-                onChange: wM,
-                max: AM,
-                label: yM("smpShop:quantity")
-              }), (0, LM.jsx)(oS, {
-                options: Or,
-                value: bM,
-                onChange: wM,
-                ariaLabel: yM("smpShop:quantity")
+              }), (0, YU.jsx)(My, {
+                value: WU,
+                onChange: dU,
+                max: VU,
+                label: gU("smpShop:quantity")
+              }), (0, YU.jsx)(iy, {
+                options: cX,
+                value: WU,
+                onChange: dU,
+                ariaLabel: gU("smpShop:quantity")
               })]
-            }), (0, LM.jsxs)("div", {
+            }), (0, YU.jsxs)("div", {
               className: "SmpField",
-              children: [(0, LM.jsx)("span", {
-                children: yM("smpShop:pricePerItem")
-              }), (0, LM.jsx)(YS, {
-                value: Math.max(1, tM),
-                onChange: BM,
+              children: [(0, YU.jsx)("span", {
+                children: gU("smpShop:pricePerItem")
+              }), (0, YU.jsx)(My, {
+                value: Math.max(1, LU),
+                onChange: lU,
                 max: 9999999,
-                step: NS,
-                label: yM("smpShop:pricePerItem")
-              }), (0, LM.jsx)(oS, {
-                options: Sr,
-                value: tM,
-                onChange: BM,
-                ariaLabel: yM("smpShop:pricePerItem")
+                step: vy,
+                label: gU("smpShop:pricePerItem")
+              }), (0, YU.jsx)(iy, {
+                options: yX,
+                value: LU,
+                onChange: lU,
+                ariaLabel: gU("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === UM && (0, LM.jsxs)("div", {
+          }), "list" === BU && (0, YU.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, LM.jsxs)("span", {
-              children: [yM("smpShop:youGet"), " ", (0, LM.jsx)(sS, {
-                amount: Math.max(0, IM - KM),
+            children: [(0, YU.jsxs)("span", {
+              children: [gU("smpShop:youGet"), " ", (0, YU.jsx)(Sy, {
+                amount: Math.max(0, JU - jU),
                 exact: !0
               })]
-            }), (0, LM.jsx)("small", {
-              children: KM > 0 ? yM("smpShop:listingFee", {
-                fee: KM.toLocaleString("en-US")
-              }) : yM("smpShop:listingRules")
+            }), (0, YU.jsx)("small", {
+              children: jU > 0 ? gU("smpShop:listingFee", {
+                fee: jU.toLocaleString("en-US")
+              }) : gU("smpShop:listingRules")
             })]
-          }), (0, LM.jsx)(QM.u, {
+          }), (0, YU.jsx)(DU.n, {
             className: "SmpSubmit",
-            disabled: !TM && !VM && !qM,
-            loading: qM || Mr || YM && MM.searching,
-            onClick: cM,
-            children: "list" === UM ? yM("smpShop:listButton", {
-              count: bM,
-              item: rr
-            }) : (0, LM.jsxs)(LM.Fragment, {
-              children: [yM("smpShop:orderButton", {
-                count: bM,
-                item: rr
-              }), " ", tM >= 1 && (0, LM.jsx)(sS, {
-                amount: IM
+            disabled: !bU && !TU && !KU,
+            loading: KU || UX || MU && UU.searching,
+            onClick: hU,
+            children: "list" === BU ? gU("smpShop:listButton", {
+              count: WU,
+              item: XX
+            }) : (0, YU.jsxs)(YU.Fragment, {
+              children: [gU("smpShop:orderButton", {
+                count: WU,
+                item: XX
+              }), " ", LU >= 1 && (0, YU.jsx)(Sy, {
+                amount: JU
               })]
             })
           })]
@@ -4040,627 +4038,627 @@ export const modules = {
       })
     }
 
-    function Cj() {
-      var MM;
+    function RQ() {
+      var UU;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), SM = null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, jM = IS(SM, "search"), PM = IS(SM, "creator"), nM = XS(SM, "enchantedCreator"), zM = XS(SM, "listing"), mM = IS(SM, "empty"), HM = Qj(jM, zM.length > 0 || null !== mM), {
-        searched: hM,
-        shown: JM,
-        loading: dM
-      } = HM, [yM, lM] = (0, OM.useState)(!1), [EM, UM] = function() {
-        const [MM, rM] = (0, Jj.e)("smpMarketView", "list");
-        return ["grid" === MM ? "grid" : "list", rM]
-      }(), GM = "grid" === EM, CM = (0, OM.useMemo)((() => zM.filter((MM => {
+        t: XU
+      } = (0, AU.I)(), zU = QQ(), yU = null === (UU = zU.shopInfo[zU.categoryKey]) || void 0 === UU ? void 0 : UU.items, QU = Jy(yU, "search"), FU = Jy(yU, "creator"), oU = xy(yU, "enchantedCreator"), EU = xy(yU, "listing"), NU = Jy(yU, "empty"), IU = DQ(QU, EU.length > 0 || null !== NU), {
+        searched: pU,
+        shown: aU,
+        loading: tU
+      } = IU, [gU, kU] = (0, cU.useState)(!1), [GU, BU] = function() {
+        const [UU, XU] = (0, aQ.d)("smpMarketView", "list");
+        return ["grid" === UU ? "grid" : "list", XU]
+      }(), ZU = "grid" === GU, RU = (0, cU.useMemo)((() => EU.filter((UU => {
         let {
-          meta: rM
-        } = MM;
-        return null !== rM.seller && rM.item === hM
-      })).map((MM => {
+          meta: XU
+        } = UU;
+        return null !== XU.seller && XU.item === pU
+      })).map((UU => {
         let {
-          meta: rM
-        } = MM;
-        return rM.pricePerItem
-      })).sort(((MM, rM) => MM - rM))), [zM, hM]), eM = (0, OM.useMemo)((() => {
-        const MM = new Set(HM.catalogue.map((MM => {
+          meta: XU
+        } = UU;
+        return XU.pricePerItem
+      })).sort(((UU, XU) => UU - XU))), [EU, pU]), PU = (0, cU.useMemo)((() => {
+        const UU = new Set(IU.catalogue.map((UU => {
           let {
-            name: rM
-          } = MM;
-          return rM
+            name: XU
+          } = UU;
+          return XU
         })));
-        return function(MM) {
-          for (const rM in MM)
-            if ("sell" === MM[rM].smp) return XS(MM[rM].items, "sell").filter((MM => {
+        return function(UU) {
+          for (const XU in UU)
+            if ("sell" === UU[XU].smp) return xy(UU[XU].items, "sell").filter((UU => {
               let {
-                item: rM
-              } = MM;
-              return !rM.enchant
-            })).map((MM => {
+                item: XU
+              } = UU;
+              return !XU.enchant
+            })).map((UU => {
               let {
-                meta: rM
-              } = MM;
+                meta: XU
+              } = UU;
               return {
-                item: rM.item,
-                quantity: rM.quantity,
-                sellPrice: rM.pricePerItem
+                item: XU.item,
+                quantity: XU.quantity,
+                sellPrice: XU.pricePerItem
               }
             }));
           return []
-        }(iM.shopInfo).filter((rM => {
+        }(zU.shopInfo).filter((XU => {
           let {
-            item: iM
-          } = rM;
-          return MM.has(iM)
+            item: zU
+          } = XU;
+          return UU.has(zU)
         }))
-      }), [iM.shopInfo, HM.catalogue]);
-      return (0, LM.jsx)(Hj, {
-        browser: HM,
+      }), [zU.shopInfo, IU.catalogue]);
+      return (0, YU.jsx)(IQ, {
+        browser: IU,
         className: "SmpMarketTab",
-        recentLabel: rM("smpShop:recentlyListed"),
-        action: (0, LM.jsx)(QM.u, {
+        recentLabel: XU("smpShop:recentlyListed"),
+        action: (0, YU.jsx)(DU.n, {
           className: "SmpSellButton",
           onClick: () => {
-            lM((MM => !MM))
+            kU((UU => !UU))
           },
-          children: rM("smpShop:sell")
+          children: XU("smpShop:sell")
         }),
-        above: yM && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)(Gj, {
+        above: gU && (0, YU.jsxs)(YU.Fragment, {
+          children: [(0, YU.jsx)(ZQ, {
             mode: "list",
-            creator: PM,
-            inventory: eM,
-            catalogue: HM.catalogue,
-            names: HM.names,
-            searching: dM,
-            prices: CM,
-            onPickItem: HM.searchFor,
+            creator: FU,
+            inventory: PU,
+            catalogue: IU.catalogue,
+            names: IU.names,
+            searching: tU,
+            prices: RU,
+            onPickItem: IU.searchFor,
             onClose: () => {
-              lM(!1)
+              kU(!1)
             }
-          }), nM.length > 0 && (0, LM.jsx)(ej, {
-            entries: nM
+          }), oU.length > 0 && (0, YU.jsx)(PQ, {
+            entries: oU
           })]
         }),
-        listControls: (0, LM.jsx)(yj, {
-          view: EM,
-          onChange: UM
+        listControls: (0, YU.jsx)(gQ, {
+          view: GU,
+          onChange: BU
         }),
-        summary: JM && (zM.length > 0 ? rM(1 === zM.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: zM.length,
-          price: uS(hj(zM, "min"))
-        }) : rM("smpShop:noOneSelling", {
-          item: rj(HM.names, JM)
+        summary: aU && (EU.length > 0 ? XU(1 === EU.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: EU.length,
+          price: Cy(pQ(EU, "min"))
+        }) : XU("smpShop:noOneSelling", {
+          item: XQ(IU.names, aU)
         })),
-        list: dM ? (0, LM.jsx)(DS, {
-          grid: GM
-        }) : zM.length > 0 ? (0, LM.jsx)(lj, {
-          entries: zM,
-          view: EM
-        }) : mM ? (0, LM.jsx)(ZS, {
-          entry: mM
-        }) : (0, LM.jsx)(DS, {
+        list: tU ? (0, YU.jsx)(ry, {
+          grid: ZU
+        }) : EU.length > 0 ? (0, YU.jsx)(kQ, {
+          entries: EU,
+          view: GU
+        }) : NU ? (0, YU.jsx)(fy, {
+          entry: NU
+        }) : (0, YU.jsx)(ry, {
           count: 3,
-          grid: GM
+          grid: ZU
         })
       })
     }
 
-    function ej(MM) {
+    function PQ(UU) {
       let {
-        entries: rM
-      } = MM;
+        entries: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, aM.A)(), SM = jj(), [jM, PM] = (0, OM.useState)({});
-      return (0, LM.jsx)("div", {
+        t: zU
+      } = (0, AU.I)(), yU = QQ(), [QU, FU] = (0, cU.useState)({});
+      return (0, YU.jsx)("div", {
         className: "SmpList",
-        children: rM.map((MM => {
-          var rM, OM, aM;
+        children: XU.map((UU => {
+          var XU, cU, AU;
           let {
-            key: nM,
-            item: zM,
-            meta: mM
-          } = MM;
-          const HM = null !== (rM = jM[nM]) && void 0 !== rM ? rM : 1;
-          return (0, LM.jsxs)("div", {
+            key: oU,
+            item: EU,
+            meta: NU
+          } = UU;
+          const IU = null !== (XU = QU[oU]) && void 0 !== XU ? XU : 1;
+          return (0, YU.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, LM.jsx)(WS, {
-              item: mM.item,
-              amount: mM.quantity,
-              tier: null !== (OM = null === (aM = zM.enchant) || void 0 === aM ? void 0 : aM.tier) && void 0 !== OM ? OM : null
-            }), (0, LM.jsxs)("div", {
+            children: [(0, YU.jsx)(Oy, {
+              item: NU.item,
+              amount: NU.quantity,
+              tier: null !== (cU = null === (AU = EU.enchant) || void 0 === AU ? void 0 : AU.tier) && void 0 !== cU ? cU : null
+            }), (0, YU.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, LM.jsx)("b", {
-                children: (0, LM.jsx)(lS.b, {
-                  text: zM.customTitle
+              children: [(0, YU.jsx)("b", {
+                children: (0, YU.jsx)(ky.d, {
+                  text: EU.customTitle
                 })
-              }), (0, LM.jsx)("small", {
-                children: iM("smpShop:enchantedListing")
+              }), (0, YU.jsx)("small", {
+                children: zU("smpShop:enchantedListing")
               })]
-            }), (0, LM.jsx)(YS, {
-              value: HM,
-              onChange: MM => {
-                PM({
-                  ...jM,
-                  [nM]: MM
+            }), (0, YU.jsx)(My, {
+              value: IU,
+              onChange: UU => {
+                FU({
+                  ...QU,
+                  [oU]: UU
                 })
               },
               max: 9999999,
-              step: NS,
-              label: iM("smpShop:pricePerItem")
-            }), (0, LM.jsxs)(QM.u, {
-              loading: SM.isPending(nM),
+              step: vy,
+              label: zU("smpShop:pricePerItem")
+            }), (0, YU.jsxs)(DU.n, {
+              loading: yU.isPending(oU),
               onClick: () => {
-                SM.act(nM, String(HM))
+                yU.act(oU, String(IU))
               },
-              children: [iM("smpShop:list"), " ", (0, LM.jsx)(sS, {
-                amount: HM
+              children: [zU("smpShop:list"), " ", (0, YU.jsx)(Sy, {
+                amount: IU
               })]
             })]
-          }, nM)
+          }, oU)
         }))
       })
     }
-    const bj = (0, OM.memo)((function(MM) {
+    const WQ = (0, cU.memo)((function(UU) {
       let {
-        itemKey: rM,
-        item: iM,
-        quantity: OM,
-        pricePerItem: SM,
-        tier: aM,
-        selected: PM,
-        onSelect: nM
-      } = MM;
-      return (0, LM.jsxs)("button", {
+        itemKey: XU,
+        item: zU,
+        quantity: cU,
+        pricePerItem: yU,
+        tier: AU,
+        selected: FU,
+        onSelect: oU
+      } = UU;
+      return (0, YU.jsxs)("button", {
         type: "button",
-        className: jM()("SmpInventorySlot", {
-          SmpInventorySlotOn: PM
+        className: QU()("SmpInventorySlot", {
+          SmpInventorySlotOn: FU
         }),
-        title: iM,
+        title: zU,
         onClick: () => {
-          nM(rM)
+          oU(XU)
         },
-        children: [(0, LM.jsx)(WS, {
-          item: iM,
-          amount: OM,
-          tier: aM
-        }), (0, LM.jsx)(sS, {
-          amount: SM
+        children: [(0, YU.jsx)(Oy, {
+          item: zU,
+          amount: cU,
+          tier: AU
+        }), (0, YU.jsx)(Sy, {
+          amount: yU
         })]
       })
     }));
 
-    function wj() {
-      var MM;
+    function dQ() {
+      var UU;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), SM = null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, PM = XS(SM, "sell"), nM = IS(SM, "empty"), [QM, zM] = (0, OM.useState)(null), [mM, HM] = (0, OM.useState)({}), hM = PM.find((MM => {
+        t: XU
+      } = (0, AU.I)(), zU = QQ(), yU = null === (UU = zU.shopInfo[zU.categoryKey]) || void 0 === UU ? void 0 : UU.items, FU = xy(yU, "sell"), oU = Jy(yU, "empty"), [DU, EU] = (0, cU.useState)(null), [NU, IU] = (0, cU.useState)({}), pU = FU.find((UU => {
         let {
-          key: rM
-        } = MM;
-        return rM === QM
+          key: XU
+        } = UU;
+        return XU === DU
       }));
-      return 0 === PM.length ? (0, LM.jsx)("div", {
+      return 0 === FU.length ? (0, YU.jsx)("div", {
         className: "SmpScreen",
-        children: (0, LM.jsx)(kS, {
-          title: nM ? (0, LM.jsx)(lS.b, {
-            text: nM.item.customTitle
-          }) : rM("smpShop:nothingToSell"),
-          children: nM && (0, LM.jsx)(lS.b, {
-            text: nM.item.description
+        children: (0, YU.jsx)(uy, {
+          title: oU ? (0, YU.jsx)(ky.d, {
+            text: oU.item.customTitle
+          }) : XU("smpShop:nothingToSell"),
+          children: oU && (0, YU.jsx)(ky.d, {
+            text: oU.item.description
           })
         })
-      }) : (0, LM.jsxs)("div", {
+      }) : (0, YU.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: PM.map((MM => {
-            var rM, iM;
+          children: FU.map((UU => {
+            var XU, zU;
             let {
-              key: OM,
-              item: SM,
-              meta: jM
-            } = MM;
-            return (0, LM.jsx)(bj, {
-              itemKey: OM,
-              item: jM.item,
-              quantity: jM.quantity,
-              pricePerItem: jM.pricePerItem,
-              tier: null !== (rM = null === (iM = SM.enchant) || void 0 === iM ? void 0 : iM.tier) && void 0 !== rM ? rM : null,
-              selected: OM === QM,
-              onSelect: zM
-            }, OM)
+              key: cU,
+              item: yU,
+              meta: QU
+            } = UU;
+            return (0, YU.jsx)(WQ, {
+              itemKey: cU,
+              item: QU.item,
+              quantity: QU.quantity,
+              pricePerItem: QU.pricePerItem,
+              tier: null !== (XU = null === (zU = yU.enchant) || void 0 === zU ? void 0 : zU.tier) && void 0 !== XU ? XU : null,
+              selected: cU === DU,
+              onSelect: EU
+            }, cU)
           }))
-        }), (0, LM.jsx)("div", {
-          className: jM()("SmpSellBar", {
-            SmpSellBarIdle: !hM
+        }), (0, YU.jsx)("div", {
+          className: QU()("SmpSellBar", {
+            SmpSellBarIdle: !pU
           }),
-          children: hM ? (0, LM.jsx)(tj, {
-            entry: hM,
-            choice: ij(hM.item, mM[hM.key]),
-            onChoose: MM => {
-              HM({
-                ...mM,
-                [hM.key]: MM
+          children: pU ? (0, YU.jsx)(LQ, {
+            entry: pU,
+            choice: zQ(pU.item, NU[pU.key]),
+            onChoose: UU => {
+              IU({
+                ...NU,
+                [pU.key]: UU
               })
             }
-          }) : (0, LM.jsx)("span", {
+          }) : (0, YU.jsx)("span", {
             className: "SmpMuted",
-            children: rM("smpShop:tapToSell")
+            children: XU("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function tj(MM) {
-      var rM, iM, OM, SM;
+    function LQ(UU) {
+      var XU, zU, cU, yU;
       let {
-        entry: jM,
-        choice: PM,
-        onChoose: nM
-      } = MM;
+        entry: QU,
+        choice: FU,
+        onChoose: oU
+      } = UU;
       const {
-        t: zM
-      } = (0, aM.A)(), mM = jj(), {
-        key: HM,
-        item: hM,
-        meta: JM
-      } = jM, dM = VS("dropdown" === (null === (rM = hM.userInput) || void 0 === rM ? void 0 : rM.type) ? hM.userInput.dropdownOptions : []), yM = null === PM ? 0 : -(0, hS.c)(hM, PM);
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [(0, LM.jsx)(WS, {
-          item: JM.item,
-          amount: JM.quantity,
-          tier: null !== (iM = null === (OM = hM.enchant) || void 0 === OM ? void 0 : OM.tier) && void 0 !== iM ? iM : null
-        }), (0, LM.jsxs)("div", {
+        t: EU
+      } = (0, AU.I)(), NU = QQ(), {
+        key: IU,
+        item: pU,
+        meta: aU
+      } = QU, tU = Ty("dropdown" === (null === (XU = pU.userInput) || void 0 === XU ? void 0 : XU.type) ? pU.userInput.dropdownOptions : []), gU = null === FU ? 0 : -(0, py.d)(pU, FU);
+      return (0, YU.jsxs)(YU.Fragment, {
+        children: [(0, YU.jsx)(Oy, {
+          item: aU.item,
+          amount: aU.quantity,
+          tier: null !== (zU = null === (cU = pU.enchant) || void 0 === cU ? void 0 : cU.tier) && void 0 !== zU ? zU : null
+        }), (0, YU.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, LM.jsx)("b", {
-            children: (0, LM.jsx)(lS.b, {
-              text: null !== (SM = hM.customTitle) && void 0 !== SM ? SM : JM.item
+          children: [(0, YU.jsx)("b", {
+            children: (0, YU.jsx)(ky.d, {
+              text: null !== (yU = pU.customTitle) && void 0 !== yU ? yU : aU.item
             })
-          }), (0, LM.jsx)("small", {
-            children: zM("smpShop:sellEach", {
-              count: JM.quantity
+          }), (0, YU.jsx)("small", {
+            children: EU("smpShop:sellEach", {
+              count: aU.quantity
             })
           })]
-        }), (0, LM.jsx)(oS, {
-          options: dM.map((MM => {
+        }), (0, YU.jsx)(iy, {
+          options: tU.map((UU => {
             let {
-              label: rM,
-              quantity: iM,
-              isAll: OM
-            } = MM;
+              label: XU,
+              quantity: zU,
+              isAll: cU
+            } = UU;
             return {
-              value: rM,
-              label: OM ? zM("smpShop:all", {
-                count: iM
-              }) : String(iM)
+              value: XU,
+              label: cU ? EU("smpShop:all", {
+                count: zU
+              }) : String(zU)
             }
           })),
-          value: PM,
-          onChange: nM,
-          ariaLabel: zM("smpShop:quantity")
-        }), (0, LM.jsxs)(QM.u, {
-          loading: mM.isPending(HM),
-          disabled: null === PM,
+          value: FU,
+          onChange: oU,
+          ariaLabel: EU("smpShop:quantity")
+        }), (0, YU.jsxs)(DU.n, {
+          loading: NU.isPending(IU),
+          disabled: null === FU,
           onClick: () => {
-            mM.act(HM, PM)
+            NU.act(IU, FU)
           },
-          children: [zM("smpShop:sellButton"), " ", (0, LM.jsx)(sS, {
-            amount: yM
+          children: [EU("smpShop:sellButton"), " ", (0, YU.jsx)(Sy, {
+            amount: gU
           })]
         })]
       })
     }
 
-    function gj() {
-      var MM;
+    function eQ() {
+      var UU;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), OM = null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, SM = XS(OM, "collect"), jM = XS(OM, "myListing"), PM = (MM, rM) => iM.isPending(MM) || !1 === rM.canBuy;
-      return (0, LM.jsxs)("div", {
+        t: XU
+      } = (0, AU.I)(), zU = QQ(), cU = null === (UU = zU.shopInfo[zU.categoryKey]) || void 0 === UU ? void 0 : UU.items, yU = xy(cU, "collect"), QU = xy(cU, "myListing"), FU = (UU, XU) => zU.isPending(UU) || !1 === XU.canBuy;
+      return (0, YU.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, LM.jsx)("h3", {
+        children: [(0, YU.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: rM("smpShop:readyToCollect")
-        }), SM.length > 0 ? (0, LM.jsx)("div", {
+          children: XU("smpShop:readyToCollect")
+        }), yU.length > 0 ? (0, YU.jsx)("div", {
           className: "SmpList",
-          children: SM.map((MM => {
-            var OM, SM;
+          children: yU.map((UU => {
+            var cU, yU;
             let {
-              key: jM,
-              item: aM,
-              meta: nM
-            } = MM;
-            return (0, LM.jsxs)("div", {
+              key: QU,
+              item: AU,
+              meta: oU
+            } = UU;
+            return (0, YU.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, LM.jsx)(WS, {
-                item: "sold" === nM.type ? "Gold Coin" : nM.item,
-                amount: "sold" === nM.type ? 0 : nM.quantity,
-                tier: null !== (OM = null === (SM = aM.enchant) || void 0 === SM ? void 0 : SM.tier) && void 0 !== OM ? OM : null
-              }), (0, LM.jsxs)("div", {
+              children: [(0, YU.jsx)(Oy, {
+                item: "sold" === oU.type ? "Gold Coin" : oU.item,
+                amount: "sold" === oU.type ? 0 : oU.quantity,
+                tier: null !== (cU = null === (yU = AU.enchant) || void 0 === yU ? void 0 : yU.tier) && void 0 !== cU ? cU : null
+              }), (0, YU.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, LM.jsx)("b", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: aM.customTitle
+                children: [(0, YU.jsx)("b", {
+                  children: (0, YU.jsx)(ky.d, {
+                    text: AU.customTitle
                   })
-                }), (0, LM.jsx)("small", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: aM.description
+                }), (0, YU.jsx)("small", {
+                  children: (0, YU.jsx)(ky.d, {
+                    text: AU.description
                   })
                 })]
-              }), (0, LM.jsx)(QM.p, {
-                loading: PM(jM, aM),
+              }), (0, YU.jsx)(DU.l, {
+                loading: FU(QU, AU),
                 onClick: () => {
-                  iM.act(jM)
+                  zU.act(QU)
                 },
-                children: rM("smpShop:collect")
+                children: XU("smpShop:collect")
               })]
-            }, jM)
+            }, QU)
           }))
-        }) : (0, LM.jsx)(kS, {
-          title: rM("smpShop:nothingToCollect"),
-          children: rM("smpShop:nothingToCollectHint")
-        }), (0, LM.jsx)("h3", {
+        }) : (0, YU.jsx)(uy, {
+          title: XU("smpShop:nothingToCollect"),
+          children: XU("smpShop:nothingToCollectHint")
+        }), (0, YU.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: rM("smpShop:activeListings", {
-            count: jM.length
+          children: XU("smpShop:activeListings", {
+            count: QU.length
           })
-        }), jM.length > 0 ? (0, LM.jsx)("div", {
+        }), QU.length > 0 ? (0, YU.jsx)("div", {
           className: "SmpList",
-          children: jM.map((MM => {
-            var OM, SM;
+          children: QU.map((UU => {
+            var cU, yU;
             let {
-              key: jM,
-              item: aM,
-              meta: nM
-            } = MM;
-            return (0, LM.jsxs)("div", {
+              key: QU,
+              item: AU,
+              meta: oU
+            } = UU;
+            return (0, YU.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, LM.jsx)(WS, {
-                item: nM.item,
-                amount: nM.quantity,
-                tier: null !== (OM = null === (SM = aM.enchant) || void 0 === SM ? void 0 : SM.tier) && void 0 !== OM ? OM : null
-              }), (0, LM.jsxs)("div", {
+              children: [(0, YU.jsx)(Oy, {
+                item: oU.item,
+                amount: oU.quantity,
+                tier: null !== (cU = null === (yU = AU.enchant) || void 0 === yU ? void 0 : yU.tier) && void 0 !== cU ? cU : null
+              }), (0, YU.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, LM.jsx)("b", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: aM.customTitle
+                children: [(0, YU.jsx)("b", {
+                  children: (0, YU.jsx)(ky.d, {
+                    text: AU.customTitle
                   })
-                }), (0, LM.jsx)("small", {
-                  children: rM("smpShop:timeLeft", {
-                    time: TS(nM.expiresAt)
+                }), (0, YU.jsx)("small", {
+                  children: XU("smpShop:timeLeft", {
+                    time: by(oU.expiresAt)
                   })
                 })]
-              }), (0, LM.jsxs)("div", {
+              }), (0, YU.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, LM.jsx)(sS, {
-                  amount: nM.pricePerItem
-                }), (0, LM.jsx)("small", {
-                  children: rM("smpShop:each")
+                children: [(0, YU.jsx)(Sy, {
+                  amount: oU.pricePerItem
+                }), (0, YU.jsx)("small", {
+                  children: XU("smpShop:each")
                 })]
-              }), (0, LM.jsx)(QM.J, {
-                loading: PM(jM, aM),
+              }), (0, YU.jsx)(DU.G, {
+                loading: FU(QU, AU),
                 onClick: () => {
-                  iM.act(jM)
+                  zU.act(QU)
                 },
-                children: rM("smpShop:cancel")
+                children: XU("smpShop:cancel")
               })]
-            }, jM)
+            }, QU)
           }))
-        }) : (0, LM.jsx)(kS, {
-          title: rM("smpShop:noActiveListings"),
-          children: rM("smpShop:noActiveListingsHint")
+        }) : (0, YU.jsx)(uy, {
+          title: XU("smpShop:noActiveListings"),
+          children: XU("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function uj(MM) {
+    function CQ(UU) {
       let {
-        done: rM,
-        of: iM
-      } = MM;
-      return (0, LM.jsx)("span", {
+        done: XU,
+        of: zU
+      } = UU;
+      return (0, YU.jsx)("span", {
         className: "SmpProgress",
-        children: (0, LM.jsx)("i", {
+        children: (0, YU.jsx)("i", {
           style: {
-            width: `${Math.min(100,rM/Math.max(1,iM)*100)}%`
+            width: `${Math.min(100,XU/Math.max(1,zU)*100)}%`
           }
         })
       })
     }
 
-    function Rj(MM) {
-      var rM, iM, OM;
+    function wQ(UU) {
+      var XU, zU, cU;
       let {
-        entry: SM,
-        choice: jM,
-        onChoose: PM
-      } = MM;
+        entry: yU,
+        choice: QU,
+        onChoose: FU
+      } = UU;
       const {
-        t: nM
-      } = (0, aM.A)(), zM = jj(), {
-        key: mM,
-        item: HM,
-        meta: hM
-      } = SM, JM = "dropdown" === (null === (rM = HM.userInput) || void 0 === rM ? void 0 : rM.type) ? HM.userInput.dropdownOptions : [], dM = !0 === hM.processing, yM = null !== hM.creator && (hM.owned > 0 || dM), lM = yM && hM.owned > 0 ? VS(JM) : [], EM = null === jM ? 0 : null !== (iM = null === (OM = lM.find((MM => MM.label === jM))) || void 0 === OM ? void 0 : OM.quantity) && void 0 !== iM ? iM : 0;
-      return (0, LM.jsxs)("div", {
+        t: oU
+      } = (0, AU.I)(), EU = QQ(), {
+        key: NU,
+        item: IU,
+        meta: pU
+      } = yU, aU = "dropdown" === (null === (XU = IU.userInput) || void 0 === XU ? void 0 : XU.type) ? IU.userInput.dropdownOptions : [], tU = !0 === pU.processing, gU = null !== pU.creator && (pU.owned > 0 || tU), kU = gU && pU.owned > 0 ? Ty(aU) : [], GU = null === QU ? 0 : null !== (zU = null === (cU = kU.find((UU => UU.label === QU))) || void 0 === cU ? void 0 : cU.quantity) && void 0 !== zU ? zU : 0;
+      return (0, YU.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, LM.jsx)(WS, {
-          item: hM.item
-        }), (0, LM.jsxs)("div", {
+        children: [(0, YU.jsx)(Oy, {
+          item: pU.item
+        }), (0, YU.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, LM.jsx)("b", {
-            children: (0, LM.jsx)(lS.b, {
-              text: HM.customTitle
+          children: [(0, YU.jsx)("b", {
+            children: (0, YU.jsx)(ky.d, {
+              text: IU.customTitle
             })
-          }), (0, LM.jsxs)("small", {
-            children: [(0, LM.jsx)(sS, {
-              amount: hM.pricePerItem
-            }), " ", nM("smpShop:each"), " \xb7", " ", null === hM.creator ? nM("smpShop:you") : (0, LM.jsx)(lS.b, {
+          }), (0, YU.jsxs)("small", {
+            children: [(0, YU.jsx)(Sy, {
+              amount: pU.pricePerItem
+            }), " ", oU("smpShop:each"), " \xb7", " ", null === pU.creator ? oU("smpShop:you") : (0, YU.jsx)(ky.d, {
               text: [{
-                entityName: hM.creator
+                entityName: pU.creator
               }]
             })]
-          }), (0, LM.jsx)(uj, {
-            done: hM.delivered,
-            of: hM.wanted
+          }), (0, YU.jsx)(CQ, {
+            done: pU.delivered,
+            of: pU.wanted
           })]
-        }), yM ? (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsx)(oS, {
-            options: lM.map((MM => {
+        }), gU ? (0, YU.jsxs)(YU.Fragment, {
+          children: [(0, YU.jsx)(iy, {
+            options: kU.map((UU => {
               let {
-                label: rM,
-                quantity: iM,
-                isAll: OM
-              } = MM;
+                label: XU,
+                quantity: zU,
+                isAll: cU
+              } = UU;
               return {
-                value: rM,
-                label: OM ? nM("smpShop:max", {
-                  count: iM
-                }) : String(iM)
+                value: XU,
+                label: cU ? oU("smpShop:max", {
+                  count: zU
+                }) : String(zU)
               }
             })),
-            value: jM,
-            onChange: PM,
-            ariaLabel: nM("smpShop:quantity")
-          }), (0, LM.jsxs)(QM.u, {
-            loading: zM.isPending(mM) || dM,
-            disabled: null === jM,
+            value: QU,
+            onChange: FU,
+            ariaLabel: oU("smpShop:quantity")
+          }), (0, YU.jsxs)(DU.n, {
+            loading: EU.isPending(NU) || tU,
+            disabled: null === QU,
             onClick: () => {
-              zM.act(mM, jM)
+              EU.act(NU, QU)
             },
-            children: [nM("smpShop:deliver"), " ", (0, LM.jsx)(sS, {
-              amount: EM * hM.pricePerItem
+            children: [oU("smpShop:deliver"), " ", (0, YU.jsx)(Sy, {
+              amount: GU * pU.pricePerItem
             })]
           })]
-        }) : (0, LM.jsx)("span", {
+        }) : (0, YU.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === hM.creator ? nM("smpShop:yourOrder") : nM("smpShop:youHave", {
+          children: null === pU.creator ? oU("smpShop:yourOrder") : oU("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function pj() {
-      var MM;
+    function qQ() {
+      var UU;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), SM = null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, jM = IS(SM, "search"), PM = IS(SM, "creator"), nM = XS(SM, "order"), zM = IS(SM, "empty"), mM = Qj(jM, nM.length > 0 || null !== zM), [HM, hM] = (0, OM.useState)(!1), [JM, dM] = (0, OM.useState)({});
-      return (0, LM.jsx)(Hj, {
-        browser: mM,
-        recentLabel: rM("smpShop:recentOrders"),
-        action: (0, LM.jsx)(QM.u, {
+        t: XU
+      } = (0, AU.I)(), zU = QQ(), yU = null === (UU = zU.shopInfo[zU.categoryKey]) || void 0 === UU ? void 0 : UU.items, QU = Jy(yU, "search"), FU = Jy(yU, "creator"), oU = xy(yU, "order"), EU = Jy(yU, "empty"), NU = DQ(QU, oU.length > 0 || null !== EU), [IU, pU] = (0, cU.useState)(!1), [aU, tU] = (0, cU.useState)({});
+      return (0, YU.jsx)(IQ, {
+        browser: NU,
+        recentLabel: XU("smpShop:recentOrders"),
+        action: (0, YU.jsx)(DU.n, {
           onClick: () => {
-            hM((MM => !MM))
+            pU((UU => !UU))
           },
-          children: rM("smpShop:createOrder")
+          children: XU("smpShop:createOrder")
         }),
-        above: HM && (0, LM.jsx)(Gj, {
+        above: IU && (0, YU.jsx)(ZQ, {
           mode: "order",
-          creator: PM,
-          catalogue: mM.catalogue,
-          names: mM.names,
-          searching: mM.loading,
+          creator: FU,
+          catalogue: NU.catalogue,
+          names: NU.names,
+          searching: NU.loading,
           prices: [],
-          onPickItem: mM.searchFor,
+          onPickItem: NU.searchFor,
           onClose: () => {
-            hM(!1)
+            pU(!1)
           }
         }),
         onBack: () => {
-          hM(!1)
+          pU(!1)
         },
-        summary: nM.length > 0 && rM(1 === nM.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: nM.length,
-          price: uS(hj(nM, "max"))
+        summary: oU.length > 0 && XU(1 === oU.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: oU.length,
+          price: Cy(pQ(oU, "max"))
         }),
-        list: mM.loading ? (0, LM.jsx)(DS, {}) : nM.length > 0 ? (0, LM.jsx)(aj.e, {
+        list: NU.loading ? (0, YU.jsx)(ry, {}) : oU.length > 0 ? (0, YU.jsx)(AQ.d, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: KS,
-          observerUpdateDeps: [nM.length],
-          children: nM.map((MM => (0, LM.jsx)(Rj, {
-            entry: MM,
-            choice: ij(MM.item, JM[MM.key]),
-            onChoose: rM => {
-              dM({
-                ...JM,
-                [MM.key]: rM
+          rootMargin: jy,
+          observerUpdateDeps: [oU.length],
+          children: oU.map((UU => (0, YU.jsx)(wQ, {
+            entry: UU,
+            choice: zQ(UU.item, aU[UU.key]),
+            onChoose: XU => {
+              tU({
+                ...aU,
+                [UU.key]: XU
               })
             }
-          }, MM.key)))
-        }) : zM ? (0, LM.jsx)(ZS, {
-          entry: zM
-        }) : (0, LM.jsx)(DS, {
+          }, UU.key)))
+        }) : EU ? (0, YU.jsx)(fy, {
+          entry: EU
+        }) : (0, YU.jsx)(ry, {
           count: 3
         })
       })
     }
 
-    function Wj() {
-      var MM;
+    function OQ() {
+      var UU;
       const {
-        t: rM
-      } = (0, aM.A)(), iM = jj(), OM = XS(null === (MM = iM.shopInfo[iM.categoryKey]) || void 0 === MM ? void 0 : MM.items, "myOrder");
-      return 0 === OM.length ? (0, LM.jsx)("div", {
+        t: XU
+      } = (0, AU.I)(), zU = QQ(), cU = xy(null === (UU = zU.shopInfo[zU.categoryKey]) || void 0 === UU ? void 0 : UU.items, "myOrder");
+      return 0 === cU.length ? (0, YU.jsx)("div", {
         className: "SmpScreen",
-        children: (0, LM.jsx)(kS, {
-          title: rM("smpShop:noOrders"),
-          children: rM("smpShop:noOrdersHint")
+        children: (0, YU.jsx)(uy, {
+          title: XU("smpShop:noOrders"),
+          children: XU("smpShop:noOrdersHint")
         })
-      }) : (0, LM.jsx)("div", {
+      }) : (0, YU.jsx)("div", {
         className: "SmpScreen",
-        children: (0, LM.jsx)("div", {
+        children: (0, YU.jsx)("div", {
           className: "SmpList",
-          children: OM.map((MM => {
+          children: cU.map((UU => {
             let {
-              key: OM,
-              item: SM,
-              meta: jM
-            } = MM;
-            const aM = iM.isPending(OM) || !1 === SM.canBuy;
-            return (0, LM.jsxs)("div", {
+              key: cU,
+              item: yU,
+              meta: QU
+            } = UU;
+            const AU = zU.isPending(cU) || !1 === yU.canBuy;
+            return (0, YU.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, LM.jsx)(WS, {
-                item: jM.item,
-                amount: jM.collectable
-              }), (0, LM.jsxs)("div", {
+              children: [(0, YU.jsx)(Oy, {
+                item: QU.item,
+                amount: QU.collectable
+              }), (0, YU.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, LM.jsx)("b", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: SM.customTitle
+                children: [(0, YU.jsx)("b", {
+                  children: (0, YU.jsx)(ky.d, {
+                    text: yU.customTitle
                   })
-                }), (0, LM.jsxs)("small", {
-                  children: [(0, LM.jsx)(sS, {
-                    amount: jM.pricePerItem
-                  }), " ", rM("smpShop:each"), jM.collectable > 0 && ` \xb7 ${rM("smpShop:readyCount",{count:jM.collectable})}`]
-                }), (0, LM.jsx)(uj, {
-                  done: jM.delivered,
-                  of: jM.wanted
+                }), (0, YU.jsxs)("small", {
+                  children: [(0, YU.jsx)(Sy, {
+                    amount: QU.pricePerItem
+                  }), " ", XU("smpShop:each"), QU.collectable > 0 && ` \xb7 ${XU("smpShop:readyCount",{count:QU.collectable})}`]
+                }), (0, YU.jsx)(CQ, {
+                  done: QU.delivered,
+                  of: QU.wanted
                 })]
-              }), jM.collectable > 0 ? (0, LM.jsx)(QM.p, {
-                loading: aM,
+              }), QU.collectable > 0 ? (0, YU.jsx)(DU.l, {
+                loading: AU,
                 onClick: () => {
-                  iM.act(OM)
+                  zU.act(cU)
                 },
-                children: rM("smpShop:collectCount", {
-                  count: jM.collectable
+                children: XU("smpShop:collectCount", {
+                  count: QU.collectable
                 })
-              }) : (0, LM.jsx)(QM.J, {
-                loading: aM,
+              }) : (0, YU.jsx)(DU.G, {
+                loading: AU,
                 onClick: () => {
-                  iM.act(OM)
+                  zU.act(cU)
                 },
-                children: rM("smpShop:cancel")
+                children: XU("smpShop:cancel")
               })]
-            }, OM)
+            }, cU)
           }))
         })
       })
     }
-    const sj = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      Dj = {
+    const SQ = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      rQ = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4668,775 +4666,775 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function kj(MM, rM) {
-      let iM = !1;
-      const OM = {};
-      for (const SM in MM) rM(SM, MM[SM]) ? OM[SM] = MM[SM] : iM = !0;
-      return iM ? OM : MM
+    function uQ(UU, XU) {
+      let zU = !1;
+      const cU = {};
+      for (const yU in UU) XU(yU, UU[yU]) ? cU[yU] = UU[yU] : zU = !0;
+      return zU ? cU : UU
     }
 
-    function Zj(MM) {
-      var rM, iM, SM, nM;
+    function fQ(UU) {
+      var XU, zU, yU, oU;
       const {
-        show: QM,
-        shopInfo: zM,
-        selectedCategoryKey: mM
-      } = MM, {
-        t: HM
-      } = (0, aM.A)(), hM = null !== mM && void 0 !== mM ? mM : "", JM = BS(zM, hM), dM = null === (rM = zM[hM]) || void 0 === rM ? void 0 : rM.items, yM = null !== JM, [lM, EM] = (0, OM.useState)({}), [UM, GM] = (0, OM.useState)([]), [CM, eM] = (0, OM.useState)(!1), [bM, wM] = (0, OM.useState)(null), [, tM] = (0, OM.useState)(0), gM = (0, OM.useRef)(0), uM = (0, OM.useRef)({}), RM = (0, OM.useRef)({
-        items: dM,
-        pending: lM,
-        shopInfo: zM,
-        active: yM,
-        canAfford: MM.canAfford,
-        buy: MM.buy
+        show: DU,
+        shopInfo: EU,
+        selectedCategoryKey: NU
+      } = UU, {
+        t: IU
+      } = (0, AU.I)(), pU = null !== NU && void 0 !== NU ? NU : "", aU = ly(EU, pU), tU = null === (XU = EU[pU]) || void 0 === XU ? void 0 : XU.items, gU = null !== aU, [kU, GU] = (0, cU.useState)({}), [BU, ZU] = (0, cU.useState)([]), [RU, PU] = (0, cU.useState)(!1), [WU, dU] = (0, cU.useState)(null), [, LU] = (0, cU.useState)(0), eU = (0, cU.useRef)(0), CU = (0, cU.useRef)({}), wU = (0, cU.useRef)({
+        items: tU,
+        pending: kU,
+        shopInfo: EU,
+        active: gU,
+        canAfford: UU.canAfford,
+        buy: UU.buy
       });
-      RM.current = {
-        items: dM,
-        pending: lM,
-        shopInfo: zM,
-        active: yM,
-        canAfford: MM.canAfford,
-        buy: MM.buy
+      wU.current = {
+        items: tU,
+        pending: kU,
+        shopInfo: EU,
+        active: gU,
+        canAfford: UU.canAfford,
+        buy: UU.buy
       };
-      const pM = (0, OM.useCallback)((MM => {
-        gM.current++;
-        const rM = gM.current;
-        GM((iM => [{
-          id: rM,
-          text: MM
-        }, ...iM].slice(0, 8))), wM(rM)
+      const qU = (0, cU.useCallback)((UU => {
+        eU.current++;
+        const XU = eU.current;
+        ZU((zU => [{
+          id: XU,
+          text: UU
+        }, ...zU].slice(0, 8))), dU(XU)
       }), []);
-      (0, OM.useEffect)((() => {
-        if (null === bM) return;
-        const MM = setTimeout((() => {
-          wM(null)
+      (0, cU.useEffect)((() => {
+        if (null === WU) return;
+        const UU = setTimeout((() => {
+          dU(null)
         }), 3e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(UU)
         }
-      }), [bM]), (0, OM.useEffect)((() => {
-        const rM = MM.message;
-        if (!rM) return;
+      }), [WU]), (0, cU.useEffect)((() => {
+        const XU = UU.message;
+        if (!XU) return;
         const {
-          shopInfo: iM,
-          active: OM,
-          items: SM
-        } = RM.current, jM = null !== rM.categoryKey ? null !== BS(iM, rM.categoryKey) : OM;
-        (jM || OM) && pM(rM.text), jM && EM((MM => kj(MM, (MM => {
-          var rM, iM;
-          return !sj.has(null === SM || void 0 === SM || null === (rM = SM[MM]) || void 0 === rM || null === (iM = rM.smp) || void 0 === iM ? void 0 : iM.kind)
+          shopInfo: zU,
+          active: cU,
+          items: yU
+        } = wU.current, QU = null !== XU.categoryKey ? null !== ly(zU, XU.categoryKey) : cU;
+        (QU || cU) && qU(XU.text), QU && GU((UU => uQ(UU, (UU => {
+          var XU, zU;
+          return !SQ.has(null === yU || void 0 === yU || null === (XU = yU[UU]) || void 0 === XU || null === (zU = XU.smp) || void 0 === zU ? void 0 : zU.kind)
         }))))
-      }), [MM.message, pM]), (0, OM.useEffect)((() => {
-        EM((MM => kj(MM, ((MM, rM) => Oj(null === dM || void 0 === dM ? void 0 : dM[MM]) === rM.snapshot))))
-      }), [zM, dM]);
-      const WM = Object.keys(lM).length > 0;
-      (0, OM.useEffect)((() => {
-        if (!WM) return;
-        const MM = setInterval((() => {
-          tM((MM => MM + 1));
-          const MM = Date.now(),
+      }), [UU.message, qU]), (0, cU.useEffect)((() => {
+        GU((UU => uQ(UU, ((UU, XU) => cQ(null === tU || void 0 === tU ? void 0 : tU[UU]) === XU.snapshot))))
+      }), [EU, tU]);
+      const OU = Object.keys(kU).length > 0;
+      (0, cU.useEffect)((() => {
+        if (!OU) return;
+        const UU = setInterval((() => {
+          LU((UU => UU + 1));
+          const UU = Date.now(),
             {
-              pending: rM,
-              items: iM
-            } = RM.current,
-            OM = Object.keys(rM).filter((iM => MM - rM[iM].at >= 12e3));
-          if (0 === OM.length) return;
-          const SM = OM.some((MM => {
-            var OM, SM;
-            return "search" !== (null === iM || void 0 === iM || null === (OM = iM[MM]) || void 0 === OM || null === (SM = OM.smp) || void 0 === SM ? void 0 : SM.kind) || rM[MM].resend
+              pending: XU,
+              items: zU
+            } = wU.current,
+            cU = Object.keys(XU).filter((zU => UU - XU[zU].at >= 12e3));
+          if (0 === cU.length) return;
+          const yU = cU.some((UU => {
+            var cU, yU;
+            return "search" !== (null === zU || void 0 === zU || null === (cU = zU[UU]) || void 0 === cU || null === (yU = cU.smp) || void 0 === yU ? void 0 : yU.kind) || XU[UU].resend
           }));
-          for (const jM of OM) uM.current[jM] = MM;
-          EM((MM => kj(MM, (MM => !OM.includes(MM))))), SM && pM(HM("smpShop:noAnswer"))
+          for (const QU of cU) CU.current[QU] = UU;
+          GU((UU => uQ(UU, (UU => !cU.includes(UU))))), yU && qU(IU("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(MM)
+          clearInterval(UU)
         }
-      }), [WM]), (0, OM.useEffect)((() => {
-        EM({})
-      }), [hM]), (0, OM.useEffect)((() => {
-        QM || eM(!1)
-      }), [QM]);
-      const sM = (0, OM.useCallback)((function(MM, rM) {
-          let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [OU]), (0, cU.useEffect)((() => {
+        GU({})
+      }), [pU]), (0, cU.useEffect)((() => {
+        DU || PU(!1)
+      }), [DU]);
+      const SU = (0, cU.useCallback)((function(UU, XU) {
+          let zU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: OM,
-            pending: SM,
-            canAfford: jM,
-            buy: aM
-          } = RM.current, PM = null === OM || void 0 === OM ? void 0 : OM[MM];
-          if (!PM || MM in SM || !1 === PM.canBuy) return !1;
-          if (!jM(PM, (0, hS.c)(PM, rM))) return !1;
-          aM(MM, PM, rM);
-          const nM = {
-            snapshot: Oj(PM),
+            items: cU,
+            pending: yU,
+            canAfford: QU,
+            buy: AU
+          } = wU.current, FU = null === cU || void 0 === cU ? void 0 : cU[UU];
+          if (!FU || UU in yU || !1 === FU.canBuy) return !1;
+          if (!QU(FU, (0, py.d)(FU, XU))) return !1;
+          AU(UU, FU, XU);
+          const oU = {
+            snapshot: cQ(FU),
             at: Date.now(),
-            resend: iM
+            resend: zU
           };
-          return RM.current.pending = {
-            ...RM.current.pending,
-            [MM]: nM
-          }, EM((rM => ({
-            ...rM,
-            [MM]: nM
+          return wU.current.pending = {
+            ...wU.current.pending,
+            [UU]: oU
+          }, GU((XU => ({
+            ...XU,
+            [UU]: oU
           }))), !0
         }), []),
-        DM = (0, OM.useMemo)((() => ({
-          shopInfo: zM,
-          categoryKey: hM,
-          canAfford: MM.canAfford,
-          isPending: MM => MM in lM,
-          gaveUpAt: MM => {
-            var rM;
-            return null !== (rM = uM.current[MM]) && void 0 !== rM ? rM : 0
+        rU = (0, cU.useMemo)((() => ({
+          shopInfo: EU,
+          categoryKey: pU,
+          canAfford: UU.canAfford,
+          isPending: UU => UU in kU,
+          gaveUpAt: UU => {
+            var XU;
+            return null !== (XU = CU.current[UU]) && void 0 !== XU ? XU : 0
           },
-          act: sM,
-          notify: pM
-        })), [zM, hM, MM.canAfford, lM, sM, pM]),
-        kM = Math.min(...Object.values(lM).map((MM => MM.at))),
-        ZM = WM && Date.now() - kM > 1500,
-        oM = UM.length > 1,
-        fM = null !== (iM = null === (SM = zM[hM]) || void 0 === SM ? void 0 : SM.customTitle) && void 0 !== iM ? iM : hM,
-        YM = null === (nM = zM[hM]) || void 0 === nM ? void 0 : nM.description;
-      let NM = null;
-      return "market" === JM ? NM = (0, LM.jsx)(Cj, {}) : "sell" === JM ? NM = (0, LM.jsx)(wj, {}) : "collect" === JM ? NM = (0, LM.jsx)(gj, {}) : "orders" === JM ? NM = (0, LM.jsx)(pj, {}) : "myOrders" === JM && (NM = (0, LM.jsx)(Wj, {})), (0, LM.jsx)(Sj.Provider, {
-        value: DM,
-        children: (0, LM.jsx)("div", {
+          act: SU,
+          notify: qU
+        })), [EU, pU, UU.canAfford, kU, SU, qU]),
+        uU = Math.min(...Object.values(kU).map((UU => UU.at))),
+        fU = OU && Date.now() - uU > 1500,
+        iU = BU.length > 1,
+        HU = null !== (zU = null === (yU = EU[pU]) || void 0 === yU ? void 0 : yU.customTitle) && void 0 !== zU ? zU : pU,
+        MU = null === (oU = EU[pU]) || void 0 === oU ? void 0 : oU.description;
+      let vU = null;
+      return "market" === aU ? vU = (0, YU.jsx)(RQ, {}) : "sell" === aU ? vU = (0, YU.jsx)(dQ, {}) : "collect" === aU ? vU = (0, YU.jsx)(eQ, {}) : "orders" === aU ? vU = (0, YU.jsx)(qQ, {}) : "myOrders" === aU && (vU = (0, YU.jsx)(OQ, {})), (0, YU.jsx)(yQ.Provider, {
+        value: rU,
+        children: (0, YU.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !yM,
-          children: (0, LM.jsxs)("div", {
+          hidden: !gU,
+          children: (0, YU.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, LM.jsx)("header", {
+            children: [(0, YU.jsx)("header", {
               className: "SmpHeader",
-              children: (0, LM.jsxs)("div", {
+              children: (0, YU.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, LM.jsxs)("h2", {
-                  children: [JM && (0, LM.jsx)(PM.b, {
-                    name: Dj[JM]
-                  }), HM(fM)]
-                }), YM && (0, LM.jsx)("p", {
-                  children: (0, LM.jsx)(lS.b, {
-                    text: YM
+                children: [(0, YU.jsxs)("h2", {
+                  children: [aU && (0, YU.jsx)(FU.d, {
+                    name: rQ[aU]
+                  }), IU(HU)]
+                }), MU && (0, YU.jsx)("p", {
+                  children: (0, YU.jsx)(ky.d, {
+                    text: MU
                   })
                 })]
               })
-            }), (0, LM.jsx)("main", {
+            }), (0, YU.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: QM && NM
-            }), (0, LM.jsxs)("button", {
+              children: DU && vU
+            }), (0, YU.jsxs)("button", {
               type: "button",
-              className: jM()("SmpStatus", {
-                SmpStatusWaiting: WM,
-                SmpStatusFresh: !WM && null !== bM,
-                SmpStatusHasHistory: oM
+              className: QU()("SmpStatus", {
+                SmpStatusWaiting: OU,
+                SmpStatusFresh: !OU && null !== WU,
+                SmpStatusHasHistory: iU
               }),
               "aria-live": "polite",
-              "aria-expanded": oM ? CM : void 0,
+              "aria-expanded": iU ? RU : void 0,
               onClick: () => {
-                oM && eM((MM => !MM))
+                iU && PU((UU => !UU))
               },
-              children: [WM ? (0, LM.jsxs)("span", {
+              children: [OU ? (0, YU.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, LM.jsx)(fS, {}), HM(ZM ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : UM[0] ? (0, LM.jsx)("span", {
+                children: [(0, YU.jsx)(Hy, {}), IU(fU ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : BU[0] ? (0, YU.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, LM.jsx)(lS.b, {
-                  text: UM[0].text
+                children: (0, YU.jsx)(ky.d, {
+                  text: BU[0].text
                 })
-              }, UM[0].id) : (0, LM.jsx)("span", {
+              }, BU[0].id) : (0, YU.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: HM("smpShop:ready")
-              }), oM && (0, LM.jsx)("small", {
-                children: HM("smpShop:recentMessages", {
-                  count: UM.length
+                children: IU("smpShop:ready")
+              }), iU && (0, YU.jsx)("small", {
+                children: IU("smpShop:recentMessages", {
+                  count: BU.length
                 })
               })]
-            }), CM && oM && (0, LM.jsx)("div", {
+            }), RU && iU && (0, YU.jsx)("div", {
               className: "SmpStatusHistory",
-              children: UM.map((MM => (0, LM.jsx)("div", {
-                children: (0, LM.jsx)(lS.b, {
-                  text: MM.text
+              children: BU.map((UU => (0, YU.jsx)("div", {
+                children: (0, YU.jsx)(ky.d, {
+                  text: UU.text
                 })
-              }, MM.id)))
+              }, UU.id)))
             })]
           })
         })
       })
     }
-    class oj {
-      constructor(MM) {
-        this.info = MM
+    class iQ {
+      constructor(UU) {
+        this.info = UU
       }
-      static fromShopInfo(MM) {
-        const rM = {};
-        for (const iM in MM) {
-          const OM = !0 === MM[iM].redDot && !0 !== MM[iM].forceRemoveRedDot;
-          rM[iM] = {
-            redDot: OM,
+      static fromShopInfo(UU) {
+        const XU = {};
+        for (const zU in UU) {
+          const cU = !0 === UU[zU].redDot && !0 !== UU[zU].forceRemoveRedDot;
+          XU[zU] = {
+            redDot: cU,
             items: {}
           };
-          for (const SM in MM[iM].items) {
-            const OM = MM[iM].items[SM],
-              jM = !0 === OM.redDot && !0 !== OM.forceRemoveRedDot;
-            rM[iM].items[SM] = {
-              redDot: jM
+          for (const yU in UU[zU].items) {
+            const cU = UU[zU].items[yU],
+              QU = !0 === cU.redDot && !0 !== cU.forceRemoveRedDot;
+            XU[zU].items[yU] = {
+              redDot: QU
             }
           }
         }
-        return new oj(rM)
+        return new iQ(XU)
       }
       anyCategoryHasRedDots() {
-        for (const MM in this.info)
-          if (this.categoryHasRedDot(MM)) return !0;
+        for (const UU in this.info)
+          if (this.categoryHasRedDot(UU)) return !0;
         return !1
       }
-      doesCategoryExist(MM) {
-        return !(0, Ui.J)(this.info[MM])
+      doesCategoryExist(UU) {
+        return !(0, kz.P)(this.info[UU])
       }
-      categoryHasRedDot(MM) {
-        return !0 === this.info[MM].redDot
+      categoryHasRedDot(UU) {
+        return !0 === this.info[UU].redDot
       }
-      updateCategoryRedDot(MM, rM) {
-        this.info[MM].redDot = rM
+      updateCategoryRedDot(UU, XU) {
+        this.info[UU].redDot = XU
       }
-      doesItemExist(MM, rM) {
-        return this.doesCategoryExist(MM) && !(0, Ui.J)(this.info[MM].items[rM])
+      doesItemExist(UU, XU) {
+        return this.doesCategoryExist(UU) && !(0, kz.P)(this.info[UU].items[XU])
       }
-      itemHasRedDot(MM, rM) {
-        return !0 === this.info[MM].items[rM].redDot
+      itemHasRedDot(UU, XU) {
+        return !0 === this.info[UU].items[XU].redDot
       }
-      updateItemRedDot(MM, rM, iM) {
-        this.info[MM].items[rM].redDot = iM
+      updateItemRedDot(UU, XU, zU) {
+        this.info[UU].items[XU].redDot = zU
       }
       shallowCopy() {
-        return new oj(this.info)
+        return new iQ(this.info)
       }
     }
 
-    function fj(MM, rM) {
-      return `${MM}\x1f${rM}`
+    function HQ(UU, XU) {
+      return `${UU}\x1f${XU}`
     }
 
-    function Yj(MM, rM) {
-      return !(0, Ui.J)(rM) && !(0, Ui.J)(MM) && rM in MM
+    function MQ(UU, XU) {
+      return !(0, kz.P)(XU) && !(0, kz.P)(UU) && XU in UU
     }
-    const Nj = (0, OM.memo)((function(MM) {
-      var rM, iM;
+    const vQ = (0, cU.memo)((function(UU) {
+      var XU, zU;
       let {
-        show: SM
-      } = MM;
-      const aM = (0, Ar.f)("players", Xj),
-        PM = (0, Ar.f)("players", Ij),
-        zM = (0, bS.d)(),
-        [HM, hM] = (0, OM.useState)({
+        show: yU
+      } = UU;
+      const AU = (0, vX.e)("players", xQ),
+        FU = (0, vX.e)("players", JQ),
+        EU = (0, Wy.b)(),
+        [IU, pU] = (0, cU.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: oj.fromShopInfo({}),
+          redDotInfo: iQ.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        dM = (0, OM.useRef)(""),
-        yM = (0, OM.useRef)(null),
-        EM = (0, OM.useRef)(null),
-        UM = (0, OM.useRef)(0),
-        GM = (0, OM.useRef)(void 0),
-        CM = (0, OM.useRef)(null),
-        eM = (0, OM.useRef)(HM),
-        wM = HM.redDotInfo.anyCategoryHasRedDots(),
-        [tM, uM] = (0, OM.useState)(null),
-        RM = (0, OM.useRef)(!1);
-      let pM = !1,
-        WM = 0,
-        sM = 0;
-      if (HM.currencyAmounts) {
-        for (const MM in HM.currencyAmounts) {
-          var DM;
-          const rM = HM.currencyAmounts[MM];
-          rM.hidden || (WM++, (null === (DM = rM.subtext) || void 0 === DM ? void 0 : DM.length) > 0 && sM++)
+        tU = (0, cU.useRef)(""),
+        gU = (0, cU.useRef)(null),
+        GU = (0, cU.useRef)(null),
+        BU = (0, cU.useRef)(0),
+        ZU = (0, cU.useRef)(void 0),
+        RU = (0, cU.useRef)(null),
+        PU = (0, cU.useRef)(IU),
+        dU = IU.redDotInfo.anyCategoryHasRedDots(),
+        [LU, CU] = (0, cU.useState)(null),
+        wU = (0, cU.useRef)(!1);
+      let qU = !1,
+        OU = 0,
+        SU = 0;
+      if (IU.currencyAmounts) {
+        for (const UU in IU.currencyAmounts) {
+          var rU;
+          const XU = IU.currencyAmounts[UU];
+          XU.hidden || (OU++, (null === (rU = XU.subtext) || void 0 === rU ? void 0 : rU.length) > 0 && SU++)
         }
-        pM = WM + sM > 4
-      }(0, OM.useEffect)((() => {
-        Gi.i.Tz("showShopIconRedDot", wM, !0)
-      }), [wM]), (0, OM.useEffect)((() => {
-        lM.gameBridge.send("setShopOpen", SM), SM || (clearTimeout(GM.current), hM((MM => MM.awaitingPurchase ? {
-          ...MM,
+        qU = OU + SU > 4
+      }(0, cU.useEffect)((() => {
+        Gz.k.UY("showShopIconRedDot", dU, !0)
+      }), [dU]), (0, cU.useEffect)((() => {
+        kU.gameBridge.send("setShopOpen", yU), yU || (clearTimeout(ZU.current), pU((UU => UU.awaitingPurchase ? {
+          ...UU,
           awaitingPurchase: !1
-        } : MM)))
-      }), [SM]), (0, OM.useEffect)((() => () => {
-        lM.gameBridge.send("setShopOpen", !1), clearTimeout(GM.current)
-      }), []), (0, OM.useEffect)((() => {
-        eM.current = HM
-      }), [HM]), (0, OM.useEffect)((() => {
-        if (null === tM) return;
-        return (0, CS.b)("pointerdown", (MM => {
-          const rM = MM.target;
-          null !== rM && void 0 !== rM && rM.closest(".ShopItem") || uM(null)
+        } : UU)))
+      }), [yU]), (0, cU.useEffect)((() => () => {
+        kU.gameBridge.send("setShopOpen", !1), clearTimeout(ZU.current)
+      }), []), (0, cU.useEffect)((() => {
+        PU.current = IU
+      }), [IU]), (0, cU.useEffect)((() => {
+        if (null === LU) return;
+        return (0, Ry.d)("pointerdown", (UU => {
+          const XU = UU.target;
+          null !== XU && void 0 !== XU && XU.closest(".ShopItem") || CU(null)
         }))
-      }), [tM]);
-      const kM = MM => {
-          hM((rM => ({
-            ...rM,
-            ...MM
+      }), [LU]);
+      const uU = UU => {
+          pU((XU => ({
+            ...XU,
+            ...UU
           })))
         },
-        ZM = MM => {
-          var rM;
-          clearTimeout(null === (rM = HM.onBoughtInfo) || void 0 === rM ? void 0 : rM.timeout);
-          const iM = setTimeout((() => {
-            kM({
+        fU = UU => {
+          var XU;
+          clearTimeout(null === (XU = IU.onBoughtInfo) || void 0 === XU ? void 0 : XU.timeout);
+          const zU = setTimeout((() => {
+            uU({
               onBoughtInfo: null
             })
           }), 3e3);
-          dM.current = MM, kM({
+          tU.current = UU, uU({
             onBoughtInfo: {
-              text: MM,
-              timeout: iM,
-              categoryKey: yM.current
+              text: UU,
+              timeout: zU,
+              categoryKey: gU.current
             }
           })
         },
-        oM = MM => {
+        iU = UU => {
           const {
-            shopInfo: rM,
-            userInputsPerItem: iM,
-            redDotInfo: OM,
-            autoSelectCategory: jM
-          } = function(MM, rM, iM, OM, SM, jM) {
-            if ((0, Ui.J)(MM) || 0 === Object.keys(MM).length) return {
+            shopInfo: XU,
+            userInputsPerItem: zU,
+            redDotInfo: cU,
+            autoSelectCategory: QU
+          } = function(UU, XU, zU, cU, yU, QU) {
+            if ((0, kz.P)(UU) || 0 === Object.keys(UU).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: oj.fromShopInfo({}),
+              redDotInfo: iQ.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const aM = gM.siteUsedData[gM.siteUsed].adConfig.showRewardedAds,
-              PM = {};
-            let nM = null;
-            for (const dM in MM) {
-              const rM = MM[dM],
-                iM = {};
-              let OM = !1;
-              for (const MM in rM.items) {
-                const SM = rM.items[MM];
-                (0, hS.i)(SM, aM) && (iM[MM] = SM, OM = !0)
+            const AU = eU.siteUsedData[eU.siteUsed].adConfig.showRewardedAds,
+              FU = {};
+            let oU = null;
+            for (const tU in UU) {
+              const XU = UU[tU],
+                zU = {};
+              let cU = !1;
+              for (const UU in XU.items) {
+                const yU = XU.items[UU];
+                (0, py.o)(yU, AU) && (zU[UU] = yU, cU = !0)
               }
-              OM && (PM[dM] = {
-                ...rM,
-                items: iM
-              }, !0 === rM.autoSelectCategory && (nM = dM))
+              cU && (FU[tU] = {
+                ...XU,
+                items: zU
+              }, !0 === XU.autoSelectCategory && (oU = tU))
             }
-            const QM = {},
-              zM = (MM, rM, OM, aM) => {
-                var PM, nM;
-                const zM = fj(MM, rM),
-                  LM = null !== (PM = iM[zM]) && void 0 !== PM ? PM : iM[rM];
-                if (null !== (nM = aM.userInput) && void 0 !== nM && nM.type) switch (aM.userInput.type) {
+            const DU = {},
+              EU = (UU, XU, cU, AU) => {
+                var FU, oU;
+                const EU = HQ(UU, XU),
+                  YU = null !== (FU = zU[EU]) && void 0 !== FU ? FU : zU[XU];
+                if (null !== (oU = AU.userInput) && void 0 !== oU && oU.type) switch (AU.userInput.type) {
                   case "dropdown": {
-                    var mM;
-                    const MM = !LM || !aM.userInput.dropdownOptions.some((MM => (0, hS.d)(MM) === LM)),
-                      rM = aM.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === OM || void 0 === OM || null === (mM = OM.userInput) || void 0 === mM ? void 0 : mM.type) || JSON.stringify(OM.userInput.dropdownOptions) !== JSON.stringify(aM.userInput.dropdownOptions)),
-                      iM = aM.userInput,
-                      SM = !(0, Ui.J)(iM.initialValue) && iM.dropdownOptions.some((MM => (0, hS.d)(MM) === iM.initialValue));
-                    var HM;
-                    return void(MM || rM ? SM ? QM[zM] = null !== (HM = aM.userInput.initialValue) && void 0 !== HM ? HM : null : aM.userInput.dropdownOptions.length > 0 ? QM[zM] = (0, hS.d)(aM.userInput.dropdownOptions[0]) : QM[zM] = null : QM[zM] = LM)
+                    var NU;
+                    const UU = !YU || !AU.userInput.dropdownOptions.some((UU => (0, py.h)(UU) === YU)),
+                      XU = AU.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === cU || void 0 === cU || null === (NU = cU.userInput) || void 0 === NU ? void 0 : NU.type) || JSON.stringify(cU.userInput.dropdownOptions) !== JSON.stringify(AU.userInput.dropdownOptions)),
+                      zU = AU.userInput,
+                      yU = !(0, kz.P)(zU.initialValue) && zU.dropdownOptions.some((UU => (0, py.h)(UU) === zU.initialValue));
+                    var IU;
+                    return void(UU || XU ? yU ? DU[EU] = null !== (IU = AU.userInput.initialValue) && void 0 !== IU ? IU : null : AU.userInput.dropdownOptions.length > 0 ? DU[EU] = (0, py.h)(AU.userInput.dropdownOptions[0]) : DU[EU] = null : DU[EU] = YU)
                   }
                   case "text":
                   case "number":
-                    var hM, JM, dM;
-                    return void((null === OM || void 0 === OM ? void 0 : OM.userInput) !== aM.userInput ? QM[zM] = null !== (hM = null !== (JM = aM.userInput.initialValue) && void 0 !== JM ? JM : LM) && void 0 !== hM ? hM : "" : QM[zM] = null !== (dM = null !== LM && void 0 !== LM ? LM : aM.userInput.initialValue) && void 0 !== dM ? dM : "");
+                    var pU, aU, tU;
+                    return void((null === cU || void 0 === cU ? void 0 : cU.userInput) !== AU.userInput ? DU[EU] = null !== (pU = null !== (aU = AU.userInput.initialValue) && void 0 !== aU ? aU : YU) && void 0 !== pU ? pU : "" : DU[EU] = null !== (tU = null !== YU && void 0 !== YU ? YU : AU.userInput.initialValue) && void 0 !== tU ? tU : "");
                   case "color":
-                    var yM, lM, EM;
-                    return void((null === OM || void 0 === OM ? void 0 : OM.userInput) !== aM.userInput ? QM[zM] = null !== (yM = null !== (lM = aM.userInput.initialValue) && void 0 !== lM ? lM : LM) && void 0 !== yM ? yM : "#000000" : QM[zM] = null !== (EM = null !== LM && void 0 !== LM ? LM : aM.userInput.initialValue) && void 0 !== EM ? EM : "#000000");
+                    var gU, kU, GU;
+                    return void((null === cU || void 0 === cU ? void 0 : cU.userInput) !== AU.userInput ? DU[EU] = null !== (gU = null !== (kU = AU.userInput.initialValue) && void 0 !== kU ? kU : YU) && void 0 !== gU ? gU : "#000000" : DU[EU] = null !== (GU = null !== YU && void 0 !== YU ? YU : AU.userInput.initialValue) && void 0 !== GU ? GU : "#000000");
                   case "player": {
-                    const MM = (0, hS.g)(SM, jM, aM.userInput);
-                    return void(LM && MM.includes(LM) ? QM[zM] = LM : QM[zM] = MM.length > 0 ? MM[0] : null)
+                    const UU = (0, py.l)(yU, QU, AU.userInput);
+                    return void(YU && UU.includes(YU) ? DU[EU] = YU : DU[EU] = UU.length > 0 ? UU[0] : null)
                   }
                 }
               };
-            for (const dM in PM)
-              for (const MM in PM[dM].items) {
-                var LM;
-                const iM = PM[dM].items[MM];
-                zM(dM, MM, null === (LM = rM[dM]) || void 0 === LM ? void 0 : LM.items[MM], iM)
+            for (const tU in FU)
+              for (const UU in FU[tU].items) {
+                var YU;
+                const zU = FU[tU].items[UU];
+                EU(tU, UU, null === (YU = XU[tU]) || void 0 === YU ? void 0 : YU.items[UU], zU)
               }
-            const mM = oj.fromShopInfo(PM);
-            for (const dM in PM) {
-              var HM;
-              if (OM.doesCategoryExist(dM)) {
-                (null === (HM = rM[dM]) || void 0 === HM ? void 0 : HM.redDot) === PM[dM].redDot && mM.updateCategoryRedDot(dM, OM.categoryHasRedDot(dM));
-                for (const MM in PM[dM].items) {
-                  var hM, JM;
-                  OM.doesItemExist(dM, MM) && (null === (hM = rM[dM]) || void 0 === hM || null === (JM = hM.items[MM]) || void 0 === JM ? void 0 : JM.redDot) === PM[dM].items[MM].redDot && mM.updateItemRedDot(dM, MM, OM.itemHasRedDot(dM, MM))
+            const NU = iQ.fromShopInfo(FU);
+            for (const tU in FU) {
+              var IU;
+              if (cU.doesCategoryExist(tU)) {
+                (null === (IU = XU[tU]) || void 0 === IU ? void 0 : IU.redDot) === FU[tU].redDot && NU.updateCategoryRedDot(tU, cU.categoryHasRedDot(tU));
+                for (const UU in FU[tU].items) {
+                  var pU, aU;
+                  cU.doesItemExist(tU, UU) && (null === (pU = XU[tU]) || void 0 === pU || null === (aU = pU.items[UU]) || void 0 === aU ? void 0 : aU.redDot) === FU[tU].items[UU].redDot && NU.updateItemRedDot(tU, UU, cU.itemHasRedDot(tU, UU))
                 }
               }
             }
             return {
-              shopInfo: PM,
-              userInputsPerItem: QM,
-              redDotInfo: mM,
-              autoSelectCategory: nM
+              shopInfo: FU,
+              userInputsPerItem: DU,
+              redDotInfo: NU,
+              autoSelectCategory: oU
             }
-          }(MM, HM.shopInfo, HM.userInputsPerItem, HM.redDotInfo, aM, PM), nM = {
-            shopInfo: rM,
-            userInputsPerItem: iM,
-            redDotInfo: OM
+          }(UU, IU.shopInfo, IU.userInputsPerItem, IU.redDotInfo, AU, FU), oU = {
+            shopInfo: XU,
+            userInputsPerItem: zU,
+            redDotInfo: cU
           };
-          if (null === jM || SM)
-            if (rM[HM.selectedCategoryKey]) nM.selectedCategoryKey = HM.selectedCategoryKey;
+          if (null === QU || yU)
+            if (XU[IU.selectedCategoryKey]) oU.selectedCategoryKey = IU.selectedCategoryKey;
             else {
-              const MM = tS(rM);
-              nM.selectedCategoryKey = MM.length > 0 ? MM[0] : null
+              const UU = Ly(XU);
+              oU.selectedCategoryKey = UU.length > 0 ? UU[0] : null
             }
-          else nM.selectedCategoryKey = jM;
-          return 0 === Object.keys(rM).length && SM && bM.d.set({
+          else oU.selectedCategoryKey = QU;
+          return 0 === Object.keys(XU).length && yU && WU.e.set({
             openEverythingMenuName: null
-          }), nM
+          }), oU
         },
-        YM = (MM, rM, iM) => {
-          const OM = HM.selectedCategoryKey,
-            SM = fj(OM, MM),
-            jM = null !== iM && void 0 !== iM ? iM : HM.userInputsPerItem[SM],
-            aM = {
-              categoryKey: OM,
-              itemKey: MM,
-              userInput: jM
+        MU = (UU, XU, zU) => {
+          const cU = IU.selectedCategoryKey,
+            yU = HQ(cU, UU),
+            QU = null !== zU && void 0 !== zU ? zU : IU.userInputsPerItem[yU],
+            AU = {
+              categoryKey: cU,
+              itemKey: UU,
+              userInput: QU
             };
-          if (yM.current = OM, rM.isRewardedAd) {
-            if (Date.now() - UM.current < 5e3) return;
-            (0, Er.Z)((() => {
-              var iM, OM, jM;
+          if (gU.current = cU, XU.isRewardedAd) {
+            if (Date.now() - BU.current < 5e3) return;
+            (0, tX.Z)((() => {
+              var zU, cU, QU;
               console.log("bought rewarded ad");
-              const PM = aM.categoryKey ? null === (iM = eM.current.shopInfo[aM.categoryKey]) || void 0 === iM ? void 0 : iM.items[MM] : null;
-              if (!PM || !PM.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (OM = rM.userInput) || void 0 === OM ? void 0 : OM.type) === (null === PM || void 0 === PM || null === (jM = PM.userInput) || void 0 === jM ? void 0 : jM.type) ? (aM.userInput = eM.current.userInputsPerItem[SM], lM.gameBridge.send("buyShopItem", aM), rM.onBoughtMessage && ZM(rM.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), UM.current = Date.now()
+              const FU = AU.categoryKey ? null === (zU = PU.current.shopInfo[AU.categoryKey]) || void 0 === zU ? void 0 : zU.items[UU] : null;
+              if (!FU || !FU.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (cU = XU.userInput) || void 0 === cU ? void 0 : cU.type) === (null === FU || void 0 === FU || null === (QU = FU.userInput) || void 0 === QU ? void 0 : QU.type) ? (AU.userInput = PU.current.userInputsPerItem[yU], kU.gameBridge.send("buyShopItem", AU), XU.onBoughtMessage && fU(XU.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), BU.current = Date.now()
           } else {
-            lM.gameBridge.send("buyShopItem", aM), kM({
+            kU.gameBridge.send("buyShopItem", AU), uU({
               awaitingPurchase: !0
-            }), clearTimeout(GM.current), GM.current = setTimeout((() => {
-              CM.current = null, kM({
+            }), clearTimeout(ZU.current), ZU.current = setTimeout((() => {
+              RU.current = null, uU({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const MM = (0, hS.c)(rM, jM);
-            if (CM.current = null, !isNaN(MM) && Yj(HM.currencyAmounts, rM.currency)) {
-              0 !== MM && (CM.current = {
-                currency: rM.currency,
-                amountBefore: HM.currencyAmounts[rM.currency].amount
+            const UU = (0, py.d)(XU, QU);
+            if (RU.current = null, !isNaN(UU) && MQ(IU.currencyAmounts, XU.currency)) {
+              0 !== UU && (RU.current = {
+                currency: XU.currency,
+                amountBefore: IU.currencyAmounts[XU.currency].amount
               });
-              const iM = {
-                ...HM.currencyAmounts
+              const zU = {
+                ...IU.currencyAmounts
               };
-              iM[rM.currency].amount -= MM, kM({
-                currencyAmounts: iM
+              zU[XU.currency].amount -= UU, uU({
+                currencyAmounts: zU
               })
             }
-            rM.onBoughtMessage && ZM(rM.onBoughtMessage)
+            XU.onBoughtMessage && fU(XU.onBoughtMessage)
           }
         },
-        NM = (MM, rM) => {
-          if (null === rM || !MM.shopInfo[rM]) return MM;
-          let iM = MM.redDotInfo;
-          return iM.categoryHasRedDot(rM) && (iM.updateCategoryRedDot(rM, !1), iM = iM.shallowCopy()), {
-            ...MM,
-            selectedCategoryKey: rM,
-            redDotInfo: iM
+        vU = (UU, XU) => {
+          if (null === XU || !UU.shopInfo[XU]) return UU;
+          let zU = UU.redDotInfo;
+          return zU.categoryHasRedDot(XU) && (zU.updateCategoryRedDot(XU, !1), zU = zU.shallowCopy()), {
+            ...UU,
+            selectedCategoryKey: XU,
+            redDotInfo: zU
           }
         },
-        AM = MM => {
-          hM((rM => NM(rM, MM)))
+        VU = UU => {
+          pU((XU => vU(XU, UU)))
         };
-      (0, qr.d)(eS.n, (() => {
-        hM((MM => {
-          const rM = (0, eS.p)(tS(MM.shopInfo), MM.selectedCategoryKey, (rM => (0, eS.k)(MM.shopInfo[rM].items)));
-          return rM === MM.selectedCategoryKey ? MM : NM(MM, rM)
+      (0, jX.f)(Py.k, (() => {
+        pU((UU => {
+          const XU = (0, Py.n)(Ly(UU.shopInfo), UU.selectedCategoryKey, (XU => (0, Py.g)(UU.shopInfo[XU].items)));
+          return XU === UU.selectedCategoryKey ? UU : vU(UU, XU)
         }))
-      })), (0, qr.d)("showShopFromServer", (MM => {
+      })), (0, jX.f)("showShopFromServer", (UU => {
         let {
-          toggle: rM,
-          SS: iM
-        } = MM;
-        iM && AM(iM), 0 === Object.keys(HM.shopInfo).length || rM && SM ? bM.d.set({
+          toggle: XU,
+          Hc: zU
+        } = UU;
+        zU && VU(zU), 0 === Object.keys(IU.shopInfo).length || XU && yU ? WU.e.set({
           openEverythingMenuName: null
-        }) : bM.d.set({
-          openEverythingMenuName: Ur.m.SHOP
+        }) : WU.e.set({
+          openEverythingMenuName: gX.s.SHOP
         })
-      })), (0, qr.d)("closeShopOnDamaged", (() => {
-        SM && bM.d.set({
+      })), (0, jX.f)("closeShopOnDamaged", (() => {
+        yU && WU.e.set({
           openEverythingMenuName: null
         })
-      })), (0, qr.d)("overShopInfo", (MM => {
-        ZM(MM)
-      })), (0, JM.c)("currencyAmounts", (MM => {
-        var rM;
-        const iM = CM.current;
-        iM && (null === MM || void 0 === MM || null === (rM = MM[iM.currency]) || void 0 === rM ? void 0 : rM.amount) === iM.amountBefore ? kM({
-          currencyAmounts: MM
-        }) : (CM.current = null, kM({
-          currencyAmounts: MM,
+      })), (0, jX.f)("overShopInfo", (UU => {
+        fU(UU)
+      })), (0, aU.e)("currencyAmounts", (UU => {
+        var XU;
+        const zU = RU.current;
+        zU && (null === UU || void 0 === UU || null === (XU = UU[zU.currency]) || void 0 === XU ? void 0 : XU.amount) === zU.amountBefore ? uU({
+          currencyAmounts: UU
+        }) : (RU.current = null, uU({
+          currencyAmounts: UU,
           awaitingPurchase: !1
         }))
-      })), (0, JM.c)("shopInfo", (MM => {
-        kM({
-          ...oM(MM),
+      })), (0, aU.e)("shopInfo", (UU => {
+        uU({
+          ...iU(UU),
           awaitingPurchase: !1
         })
       }));
-      const xM = (0, OM.useRef)({
-        playerIds: aM,
-        localPlayerId: PM
+      const sU = (0, cU.useRef)({
+        playerIds: AU,
+        localPlayerId: FU
       });
-      (0, OM.useEffect)((() => {
-        xM.current.playerIds === aM && xM.current.localPlayerId === PM || (xM.current = {
-          playerIds: aM,
-          localPlayerId: PM
-        }, hM((MM => {
-          const rM = oM(MM.shopInfo);
+      (0, cU.useEffect)((() => {
+        sU.current.playerIds === AU && sU.current.localPlayerId === FU || (sU.current = {
+          playerIds: AU,
+          localPlayerId: FU
+        }, pU((UU => {
+          const XU = iU(UU.shopInfo);
           return {
-            ...MM,
-            ...rM
+            ...UU,
+            ...XU
           }
         })))
-      }), [aM, PM]);
-      const vM = HM.selectedCategoryKey,
-        FM = (MM, rM) => {
-          var iM, OM;
-          return (isNaN(rM) || (0, Ui.J)(MM.currency) || Yj(HM.currencyAmounts, MM.currency) && rM <= HM.currencyAmounts[MM.currency].amount) && (null === (iM = MM.canBuy) || void 0 === iM || iM) && !(null !== (OM = MM.hidden) && void 0 !== OM && OM)
+      }), [AU, FU]);
+      const nU = IU.selectedCategoryKey,
+        mU = (UU, XU) => {
+          var zU, cU;
+          return (isNaN(XU) || (0, kz.P)(UU.currency) || MQ(IU.currencyAmounts, UU.currency) && XU <= IU.currencyAmounts[UU.currency].amount) && (null === (zU = UU.canBuy) || void 0 === zU || zU) && !(null !== (cU = UU.hidden) && void 0 !== cU && cU)
         },
-        BM = (MM, rM) => {
-          var iM, OM, SM;
-          const aM = fj(vM, MM),
-            PM = HM.shopInfo[vM].items[MM],
-            zM = HM.userInputsPerItem[aM],
-            mM = (0, hS.c)(PM, zM),
-            hM = FM(PM, mM),
-            JM = PM.enchant,
-            dM = JM ? (0, fM.ob)(null !== (iM = PM.customTitle) && void 0 !== iM ? iM : MM, {
-              colour: fM.kb[JM.tier]
-            }) : null !== (OM = PM.customTitle) && void 0 !== OM ? OM : MM,
-            yM = rM => {
-              const iM = null !== rM && void 0 !== rM ? rM : zM,
-                OM = void 0 !== rM ? (0, hS.c)(PM, rM) : mM;
-              FM(PM, OM) && null !== iM && YM(MM, PM, rM);
-              let SM = HM.redDotInfo;
-              SM.itemHasRedDot(vM, MM) && (SM.updateItemRedDot(vM, MM, !1), SM = SM.shallowCopy()), kM({
-                redDotInfo: SM
+        lU = (UU, XU) => {
+          var zU, cU, yU;
+          const AU = HQ(nU, UU),
+            FU = IU.shopInfo[nU].items[UU],
+            EU = IU.userInputsPerItem[AU],
+            NU = (0, py.d)(FU, EU),
+            pU = mU(FU, NU),
+            aU = FU.enchant,
+            tU = aU ? (0, HU.tb)(null !== (zU = FU.customTitle) && void 0 !== zU ? zU : UU, {
+              colour: HU.pb[aU.tier]
+            }) : null !== (cU = FU.customTitle) && void 0 !== cU ? cU : UU,
+            gU = XU => {
+              const zU = null !== XU && void 0 !== XU ? XU : EU,
+                cU = void 0 !== XU ? (0, py.d)(FU, XU) : NU;
+              mU(FU, cU) && null !== zU && MU(UU, FU, XU);
+              let yU = IU.redDotInfo;
+              yU.itemHasRedDot(nU, UU) && (yU.updateItemRedDot(nU, UU, !1), yU = yU.shallowCopy()), uU({
+                redDotInfo: yU
               })
             };
-          return (0, LM.jsxs)("div", {
-            className: jM()("ShopItem", {
-              ShopItemNoInput: !PM.userInput,
-              ShopItemNoInputCanBuy: !PM.userInput && hM,
-              ShopItemNoInputSelected: PM.isSelected,
-              ShopItemEnchant: !!JM
+          return (0, YU.jsxs)("div", {
+            className: QU()("ShopItem", {
+              ShopItemNoInput: !FU.userInput,
+              ShopItemNoInputCanBuy: !FU.userInput && pU,
+              ShopItemNoInputSelected: FU.isSelected,
+              ShopItemEnchant: !!aU
             }),
-            "data-pad-focusable": !PM.userInput || void 0,
-            "data-pad-unavailable": !PM.userInput && !hM || void 0,
-            "data-pad-repeat": null !== (SM = (0, eS.c)(PM)) && void 0 !== SM ? SM : void 0,
-            "data-pad-repeat-wait": HM.awaitingPurchase || void 0,
+            "data-pad-focusable": !FU.userInput || void 0,
+            "data-pad-unavailable": !FU.userInput && !pU || void 0,
+            "data-pad-repeat": null !== (yU = (0, Py.c)(FU)) && void 0 !== yU ? yU : void 0,
+            "data-pad-repeat-wait": IU.awaitingPurchase || void 0,
             onClick: () => {
-              if (JM && RM.current) {
-                if (tM !== aM) return void uM(aM);
-                uM(null)
+              if (aU && wU.current) {
+                if (LU !== AU) return void CU(AU);
+                CU(null)
               }
-              PM.userInput || yM()
+              FU.userInput || gU()
             },
-            onPointerDown: MM => {
-              JM && (RM.current = (0, dS.q)(MM))
+            onPointerDown: UU => {
+              aU && (wU.current = (0, ty.t)(UU))
             },
-            onPointerEnter: MM => {
-              JM && !(0, dS.q)(MM) && uM(aM)
+            onPointerEnter: UU => {
+              aU && !(0, ty.t)(UU) && CU(AU)
             },
-            onPointerLeave: MM => {
-              JM && !(0, dS.q)(MM) && uM((MM => MM === aM ? null : MM))
+            onPointerLeave: UU => {
+              aU && !(0, ty.t)(UU) && CU((UU => UU === AU ? null : UU))
             },
             style: {
-              zIndex: Object.keys(HM.shopInfo[vM].items).length - rM
+              zIndex: Object.keys(IU.shopInfo[nU].items).length - XU
             },
-            children: [HM.redDotInfo.itemHasRedDot(vM, MM) && (0, LM.jsx)(nM.d, {
+            children: [IU.redDotInfo.itemHasRedDot(nU, UU) && (0, YU.jsx)(oU.c, {
               top: "-6px",
               right: "-6px"
-            }), PM.badge && (0, LM.jsx)("div", {
+            }), FU.badge && (0, YU.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, LM.jsx)("div", {
-                className: jM()("ShopBadgeMain", PM.badge.type),
-                children: (0, LM.jsx)(lS.b, {
-                  text: PM.badge.text
+              children: (0, YU.jsx)("div", {
+                className: QU()("ShopBadgeMain", FU.badge.type),
+                children: (0, YU.jsx)(ky.d, {
+                  text: FU.badge.text
                 })
               })
-            }), (0, LM.jsx)("div", {
+            }), (0, YU.jsx)("div", {
               className: "ShopItemLeft",
-              children: PM.image && (0, LM.jsx)(Aj, {
-                item: PM,
+              children: FU.image && (0, YU.jsx)(VQ, {
+                item: FU,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, LM.jsxs)("div", {
+            }), (0, YU.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, LM.jsxs)("div", {
+              children: [(0, YU.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, LM.jsx)("div", {
+                children: [(0, YU.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, LM.jsx)(lS.b, {
-                    text: dM
+                  children: (0, YU.jsx)(ky.d, {
+                    text: tU
                   })
-                }), (0, LM.jsx)("div", {
+                }), (0, YU.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, LM.jsx)(lS.b, {
-                    text: PM.description
+                  children: (0, YU.jsx)(ky.d, {
+                    text: FU.description
                   })
                 })]
-              }), PM.userInput && (0, LM.jsxs)("div", {
+              }), FU.userInput && (0, YU.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: MM => {
-                  MM.stopPropagation()
+                onClick: UU => {
+                  UU.stopPropagation()
                 },
-                children: [(0, LM.jsx)(Fj, {
-                  item: PM,
-                  currInput: zM,
-                  updateInput: rM => {
-                    ((MM, rM, iM) => {
-                      const OM = fj(MM, rM),
-                        SM = {
-                          ...HM.userInputsPerItem
+                children: [(0, YU.jsx)(mQ, {
+                  item: FU,
+                  currInput: EU,
+                  updateInput: XU => {
+                    ((UU, XU, zU) => {
+                      const cU = HQ(UU, XU),
+                        yU = {
+                          ...IU.userInputsPerItem
                         };
-                      SM[OM] = iM, kM({
-                        userInputsPerItem: SM
+                      yU[cU] = zU, uU({
+                        userInputsPerItem: yU
                       })
-                    })(vM, MM, rM)
+                    })(nU, UU, XU)
                   },
-                  onSubmit: MM => {
-                    yM(MM)
+                  onSubmit: UU => {
+                    gU(UU)
                   }
-                }), ("dropdown" !== PM.userInput.type || !PM.userInput.autoSubmit) && (0, LM.jsx)(QM.e, {
+                }), ("dropdown" !== FU.userInput.type || !FU.userInput.autoSubmit) && (0, YU.jsx)(DU.f, {
                   className: "ItemCostButton",
-                  disabled: !hM && null !== zM,
+                  disabled: !pU && null !== EU,
                   onClick: () => {
-                    yM()
+                    gU()
                   },
-                  children: (0, LM.jsx)(vj, {
-                    item: PM,
-                    cost: mM,
-                    currencyAmounts: HM.currencyAmounts
+                  children: (0, YU.jsx)(nQ, {
+                    item: FU,
+                    cost: NU,
+                    currencyAmounts: IU.currencyAmounts
                   })
                 })]
               })]
-            }), !PM.userInput && (0, LM.jsx)("div", {
+            }), !FU.userInput && (0, YU.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, LM.jsx)(vj, {
-                item: PM,
-                cost: mM,
-                currencyAmounts: HM.currencyAmounts
+              children: (0, YU.jsx)(nQ, {
+                item: FU,
+                cost: NU,
+                currencyAmounts: IU.currencyAmounts
               })
-            }), JM && tM === aM && (0, LM.jsxs)("div", {
+            }), aU && LU === AU && (0, YU.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, LM.jsx)(lS.b, {
-                text: dM
-              }), (0, LM.jsx)("div", {
+              children: [(0, YU.jsx)(ky.d, {
+                text: tU
+              }), (0, YU.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, LM.jsx)(lS.b, {
-                  text: (0, JS.e)("", JM.enchantments, JM.enchantmentData)
+                children: (0, YU.jsx)(ky.d, {
+                  text: (0, ay.c)("", aU.enchantments, aU.enchantmentData)
                 })
               })]
             })]
-          }, aM)
+          }, AU)
         },
-        XM = function(MM) {
-          for (const rM in MM)
-            if (MM[rM].smp) return !0;
+        xU = function(UU) {
+          for (const XU in UU)
+            if (UU[XU].smp) return !0;
           return !1
-        }(HM.shopInfo),
-        IM = BS(HM.shopInfo, vM);
-      return (0, LM.jsx)(LS.d, {
+        }(IU.shopInfo),
+        JU = ly(IU.shopInfo, nU);
+      return (0, YU.jsx)(Yy.b, {
         className: "Menu ShopBody",
-        show: SM,
-        children: 0 !== Object.keys(HM.shopInfo).length && (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsxs)("div", {
+        show: yU,
+        children: 0 !== Object.keys(IU.shopInfo).length && (0, YU.jsxs)(YU.Fragment, {
+          children: [(0, YU.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, LM.jsx)(mM, {
-              items: tS(HM.shopInfo).map((MM => {
-                var rM;
+            children: [(0, YU.jsx)(NU, {
+              items: Ly(IU.shopInfo).map((UU => {
+                var XU;
                 return {
-                  id: MM,
-                  title: null !== (rM = HM.shopInfo[MM].customTitle) && void 0 !== rM ? rM : MM,
-                  redDot: HM.redDotInfo.categoryHasRedDot(MM)
+                  id: UU,
+                  title: null !== (XU = IU.shopInfo[UU].customTitle) && void 0 !== XU ? XU : UU,
+                  redDot: IU.redDotInfo.categoryHasRedDot(UU)
                 }
               })),
-              link: zM ? {
+              link: EU ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, wS.h)({
-                    page: (0, wS.d)(),
+                  (0, dy.f)({
+                    page: (0, dy.c)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: vM,
-              onClick: AM,
-              padStartsOnTab: (0, eS.g)(vM)
-            }), (0, LM.jsx)("div", {
+              selectedItemId: nU,
+              onClick: VU,
+              padStartsOnTab: (0, Py.f)(nU)
+            }), (0, YU.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: HM.currencyAmounts && Object.keys(HM.currencyAmounts).map((MM => {
-                var rM;
-                const iM = HM.currencyAmounts[MM];
-                return iM.hidden ? null : (0, LM.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (pM ? "SmallText" : ""),
-                  children: [(0, LM.jsxs)("div", {
+              children: IU.currencyAmounts && Object.keys(IU.currencyAmounts).map((UU => {
+                var XU;
+                const zU = IU.currencyAmounts[UU];
+                return zU.hidden ? null : (0, YU.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (qU ? "SmallText" : ""),
+                  children: [(0, YU.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, LM.jsx)("div", {
+                    children: [(0, YU.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: iM.iconColour
+                        color: zU.iconColour
                       },
-                      children: (0, LM.jsx)(Kj, {
-                        iconName: iM.icon
+                      children: (0, YU.jsx)(jQ, {
+                        iconName: zU.icon
                       })
-                    }), "\xa0", (0, HS.e)(iM.amount, 6)]
-                  }), (null === (rM = iM.subtext) || void 0 === rM ? void 0 : rM.length) > 0 && (0, LM.jsx)("div", {
+                    }), "\xa0", (0, Iy.e)(zU.amount, 6)]
+                  }), (null === (XU = zU.subtext) || void 0 === XU ? void 0 : XU.length) > 0 && (0, YU.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, LM.jsx)(lS.b, {
-                      text: iM.subtext
+                    children: (0, YU.jsx)(ky.d, {
+                      text: zU.subtext
                     })
                   })]
-                }, MM)
+                }, UU)
               }))
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, YU.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [XM && (0, LM.jsx)(Zj, {
-              show: SM,
-              shopInfo: HM.shopInfo,
-              selectedCategoryKey: vM,
-              buy: (MM, rM, iM) => {
-                YM(MM, rM, iM)
+            children: [xU && (0, YU.jsx)(fQ, {
+              show: yU,
+              shopInfo: IU.shopInfo,
+              selectedCategoryKey: nU,
+              buy: (UU, XU, zU) => {
+                MU(UU, XU, zU)
               },
-              canAfford: FM,
-              message: HM.onBoughtInfo
-            }), null === IM && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsx)("div", {
-                className: jM()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== HM.onBoughtInfo
+              canAfford: mU,
+              message: IU.onBoughtInfo
+            }), null === JU && (0, YU.jsxs)(YU.Fragment, {
+              children: [(0, YU.jsx)("div", {
+                className: QU()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== IU.onBoughtInfo
                 }),
-                children: (0, LM.jsx)(lS.b, {
-                  text: dM.current
+                children: (0, YU.jsx)(ky.d, {
+                  text: tU.current
                 })
-              }), (0, LM.jsx)("div", {
+              }), (0, YU.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, LM.jsxs)("div", {
+                children: (0, YU.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (rM = HM.shopInfo[vM]) || void 0 === rM ? void 0 : rM.description) && (0, LM.jsx)("div", {
+                  children: [(null === (XU = IU.shopInfo[nU]) || void 0 === XU ? void 0 : XU.description) && (0, YU.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, LM.jsx)(lS.b, {
-                      text: HM.shopInfo[vM].description
+                    children: (0, YU.jsx)(ky.d, {
+                      text: IU.shopInfo[nU].description
                     })
-                  }), SM && (0, LM.jsx)("div", {
+                  }), yU && (0, YU.jsx)("div", {
                     className: "ShopItems",
-                    ref: EM,
+                    ref: GU,
                     "data-pad-initial-area": !0,
-                    children: tS(null === (iM = HM.shopInfo[vM]) || void 0 === iM ? void 0 : iM.items).map(((MM, rM) => BM(MM, rM)))
+                    children: Ly(null === (zU = IU.shopInfo[nU]) || void 0 === zU ? void 0 : zU.items).map(((UU, XU) => lU(UU, XU)))
                   })]
                 })
               })]
@@ -5446,788 +5444,788 @@ export const modules = {
       })
     }));
 
-    function Aj(MM) {
+    function VQ(UU) {
       let {
-        item: rM,
-        minWidth: iM,
-        minHeight: OM
-      } = MM;
+        item: XU,
+        minWidth: zU,
+        minHeight: cU
+      } = UU;
       const {
-        image: SM,
-        schematicId: jM,
-        imageColour: aM
-      } = rM;
-      if (jM) return (0, LM.jsx)("div", {
+        image: yU,
+        schematicId: QU,
+        imageColour: AU
+      } = XU;
+      if (QU) return (0, YU.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${iM}rem`,
-          height: `${OM}rem`
+          width: `${zU}rem`,
+          height: `${cU}rem`
         },
-        children: (0, LM.jsx)(ES.b, {
+        children: (0, YU.jsx)(Gy.d, {
           game: {
-            schematicId: jM
+            schematicId: QU
           }
         })
       });
-      var nM, QM;
-      if ((0, yS.d)(SM)) return (0, LM.jsx)("div", {
+      var oU, DU;
+      if ((0, gy.g)(yU)) return (0, YU.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${iM}rem`,
+          minWidth: `${zU}rem`,
           height: "0",
-          minHeight: `${OM}rem`
+          minHeight: `${cU}rem`
         },
-        children: (0, LM.jsx)(yS.b, {
-          itemName: SM,
-          amount: null !== (nM = rM.amount) && void 0 !== nM ? nM : 0,
-          amountFontSize: OM / 4 + "rem",
-          enchantmentTier: null === (QM = rM.enchant) || void 0 === QM ? void 0 : QM.tier
+        children: (0, YU.jsx)(gy.c, {
+          itemName: yU,
+          amount: null !== (oU = XU.amount) && void 0 !== oU ? oU : 0,
+          amountFontSize: cU / 4 + "rem",
+          enchantmentTier: null === (DU = XU.enchant) || void 0 === DU ? void 0 : DU.tier
         })
       });
-      const zM = SM.slice(-4);
-      return ".jpg" === zM || ".png" === zM ? (0, LM.jsx)(xj, {
-        image: SM,
-        minWidth: iM
-      }) : (0, LM.jsx)(PM.b, {
-        name: SM,
+      const EU = yU.slice(-4);
+      return ".jpg" === EU || ".png" === EU ? (0, YU.jsx)(sQ, {
+        image: yU,
+        minWidth: zU
+      }) : (0, YU.jsx)(FU.d, {
+        name: yU,
         className: "SelectedItemImage",
         style: {
-          color: aM
+          color: AU
         }
       })
     }
 
-    function xj(MM) {
+    function sQ(UU) {
       let {
-        image: rM,
-        minWidth: iM
-      } = MM;
+        image: XU,
+        minWidth: zU
+      } = UU;
       const {
-        gameNameWithVariation: OM
-      } = (0, Ar.j)("connectedGame"), SM = rM.endsWith(".jpg");
-      return (0, LM.jsx)("img", {
-        className: jM()({
-          ShopPixelImage: !SM
+        gameNameWithVariation: cU
+      } = (0, vX.i)("connectedGame"), yU = XU.endsWith(".jpg");
+      return (0, YU.jsx)("img", {
+        className: QU()({
+          ShopPixelImage: !yU
         }),
         style: {
-          width: `${SM?1.6*iM:iM}rem`,
+          width: `${yU?1.6*zU:zU}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,fM.Mb)(OM)}/${rM}`,
-        alt: rM,
+        src: `/textures/games/${(0,HU.Tb)(cU)}/${XU}`,
+        alt: XU,
         draggable: !1
       })
     }
 
-    function vj(MM) {
+    function nQ(UU) {
       let {
-        item: rM,
-        cost: iM,
-        currencyAmounts: OM
-      } = MM;
-      const SM = !isNaN(iM) && 0 !== iM && Yj(OM, rM.currency);
-      let jM = null;
-      return rM.buyButtonText ? jM = rM.buyButtonText : SM ? (jM = iM, rM.sell && (jM = -1 * iM), jM = jM.toString()) : 0 === iM ? jM = "Free" : rM.isRewardedAd && (jM = "Watch ad"), (0, Ui.J)(jM) || " " === jM ? null : (0, LM.jsxs)("div", {
+        item: XU,
+        cost: zU,
+        currencyAmounts: cU
+      } = UU;
+      const yU = !isNaN(zU) && 0 !== zU && MQ(cU, XU.currency);
+      let QU = null;
+      return XU.buyButtonText ? QU = XU.buyButtonText : yU ? (QU = zU, XU.sell && (QU = -1 * zU), QU = QU.toString()) : 0 === zU ? QU = "Free" : XU.isRewardedAd && (QU = "Watch ad"), (0, kz.P)(QU) || " " === QU ? null : (0, YU.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [SM && (0, LM.jsx)("div", {
+        children: [yU && (0, YU.jsx)("div", {
           style: {
-            color: OM[rM.currency].iconColour
+            color: cU[XU.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, LM.jsx)(Kj, {
-            iconName: OM[rM.currency].icon
+          children: (0, YU.jsx)(jQ, {
+            iconName: cU[XU.currency].icon
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, LM.jsx)(lS.b, {
-            text: jM
+          children: (0, YU.jsx)(ky.d, {
+            text: QU
           })
         })]
       })
     }
 
-    function Fj(MM) {
+    function mQ(UU) {
       let {
-        item: rM,
-        currInput: iM,
-        updateInput: SM,
-        onSubmit: jM
-      } = MM;
+        item: XU,
+        currInput: zU,
+        updateInput: yU,
+        onSubmit: QU
+      } = UU;
       const {
-        t: PM
-      } = (0, aM.A)(), nM = (0, OM.useRef)(null);
-      if ((0, OM.useEffect)((() => {
-          const MM = nM.current;
-          MM && MM.value !== iM && document.activeElement !== MM && (MM.value = null !== iM && void 0 !== iM ? iM : "")
-        }), [iM]), !rM.userInput) return null;
-      let QM = rM.userInput;
-      if (yM.featureFlags.sanitizeShopInput && "text" === rM.userInput.type && (QM = {
+        t: FU
+      } = (0, AU.I)(), oU = (0, cU.useRef)(null);
+      if ((0, cU.useEffect)((() => {
+          const UU = oU.current;
+          UU && UU.value !== zU && document.activeElement !== UU && (UU.value = null !== zU && void 0 !== zU ? zU : "")
+        }), [zU]), !XU.userInput) return null;
+      let DU = XU.userInput;
+      if (gU.featureFlags.sanitizeShopInput && "text" === XU.userInput.type && (DU = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === QM.type || "number" === QM.type) {
-        var zM, mM;
-        console.assert(void 0 !== iM, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(rM)}`);
-        const MM = "text" === QM.type && QM.wordCharsOnly;
-        return (0, LM.jsx)("div", {
+        }), "text" === DU.type || "number" === DU.type) {
+        var EU, NU;
+        console.assert(void 0 !== zU, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(XU)}`);
+        const UU = "text" === DU.type && DU.wordCharsOnly;
+        return (0, YU.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, LM.jsx)(GM.b, {
+          children: (0, YU.jsx)(ZU.e, {
             className: "ShopItemUserInputText",
-            placeholderText: PM(QM.placeholderText),
-            defaultValue: iM,
-            domRef: nM,
-            onValueChange: (rM, iM) => {
-              !0 === MM && (rM = (0, GS.lb)(rM)), nM.current.value = rM, SM(rM)
+            placeholderText: FU(DU.placeholderText),
+            defaultValue: zU,
+            domRef: oU,
+            onValueChange: (XU, zU) => {
+              !0 === UU && (XU = (0, Zy.$)(XU)), oU.current.value = XU, yU(XU)
             },
-            onEnter: jM,
-            type: QM.type
-          }, (null !== (zM = QM.initialValue) && void 0 !== zM ? zM : "") + (null !== (mM = QM.placeholderText) && void 0 !== mM ? mM : ""))
+            onEnter: QU,
+            type: DU.type
+          }, (null !== (EU = DU.initialValue) && void 0 !== EU ? EU : "") + (null !== (NU = DU.placeholderText) && void 0 !== NU ? NU : ""))
         })
       }
-      if ("dropdown" === QM.type) {
-        console.assert(void 0 !== iM, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(rM)}`);
-        const MM = QM.autoSubmit;
-        return (0, LM.jsx)("div", {
+      if ("dropdown" === DU.type) {
+        console.assert(void 0 !== zU, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(XU)}`);
+        const UU = DU.autoSubmit;
+        return (0, YU.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, LM.jsx)(fr.e, {
-            options: QM.dropdownOptions.map((MM => (0, hS.d)(MM))),
-            value: iM,
-            onChange: rM => {
+          children: (0, YU.jsx)(iX.d, {
+            options: DU.dropdownOptions.map((UU => (0, py.h)(UU))),
+            value: zU,
+            onChange: XU => {
               let {
-                value: iM
-              } = rM;
-              SM(iM), MM && jM(iM)
+                value: zU
+              } = XU;
+              yU(zU), UU && QU(zU)
             }
           })
         })
       }
-      return "player" === QM.type ? (0, LM.jsx)(Bj, {
-        userInput: QM,
-        currInput: iM,
-        updateInput: SM
-      }) : "color" === QM.type ? (0, LM.jsx)("div", {
+      return "player" === DU.type ? (0, YU.jsx)(lQ, {
+        userInput: DU,
+        currInput: zU,
+        updateInput: yU
+      }) : "color" === DU.type ? (0, YU.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, LM.jsx)("input", {
+        children: (0, YU.jsx)("input", {
           type: "color",
-          value: iM,
-          onChange: MM => {
-            SM(MM.target.value)
+          value: zU,
+          onChange: UU => {
+            yU(UU.target.value)
           }
         })
       }) : null
     }
 
-    function Bj(MM) {
+    function lQ(UU) {
       let {
-        userInput: rM,
-        currInput: iM,
-        updateInput: OM
-      } = MM;
-      const SM = (0, Ar.j)("players"),
-        jM = (0, Ar.j)("hiddenPlayerNames"),
-        aM = (0, hS.g)(SM.ids, SM.localId, rM);
-      return (0, LM.jsx)("div", {
+        userInput: XU,
+        currInput: zU,
+        updateInput: cU
+      } = UU;
+      const yU = (0, vX.i)("players"),
+        QU = (0, vX.i)("hiddenPlayerNames"),
+        AU = (0, py.l)(yU.ids, yU.localId, XU);
+      return (0, YU.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, LM.jsx)(fr.e, {
-          options: aM.map((MM => {
+        children: (0, YU.jsx)(iX.d, {
+          options: AU.map((UU => {
             const {
-              name: rM
-            } = SM.byId[MM];
+              name: XU
+            } = yU.byId[UU];
             return {
-              value: MM,
-              label: null === rM ? "" : (0, US.d)(rM, jM)
+              value: UU,
+              label: null === XU ? "" : (0, By.c)(XU, QU)
             }
           })),
-          value: iM,
-          onChange: MM => {
+          value: zU,
+          onChange: UU => {
             let {
-              value: rM
-            } = MM;
-            OM(rM)
+              value: XU
+            } = UU;
+            cU(XU)
           }
         })
       })
     }
 
-    function Xj(MM) {
+    function xQ(UU) {
       let {
-        ids: rM
-      } = MM;
-      return rM
+        ids: XU
+      } = UU;
+      return XU
     }
 
-    function Ij(MM) {
+    function JQ(UU) {
       let {
-        localId: rM
-      } = MM;
-      return rM
+        localId: XU
+      } = UU;
+      return XU
     }
 
-    function Kj(MM) {
+    function jQ(UU) {
       let {
-        iconName: rM
-      } = MM;
-      return lM.gameBridge.lookup("isItemName", rM) ? (0, LM.jsx)(yS.b, {
-        itemName: rM,
+        iconName: XU
+      } = UU;
+      return kU.gameBridge.lookup("isItemName", XU) ? (0, YU.jsx)(gy.c, {
+        itemName: XU,
         amount: 1
-      }) : (0, LM.jsx)(PM.b, {
-        name: rM,
+      }) : (0, YU.jsx)(FU.d, {
+        name: XU,
         className: "2x"
       })
     }
-    var qj = iM(1717);
-    const Tj = (0, iM(1474).g)((MM => MM.PadLobbyShortcuts)),
-      Vj = (0, OM.lazy)((() => Promise.resolve().then((() => iM(5035))).then((MM => ({
-        default: MM.Lobbyleaderboard
+    var KQ = zU(1680);
+    const bQ = (0, zU(1457).g)((UU => UU.PadLobbyShortcuts)),
+      TQ = (0, cU.lazy)((() => Promise.resolve().then((() => zU(5101))).then((UU => ({
+        default: UU.Lobbyleaderboard
       }))))),
-      cj = (0, OM.lazy)((() => iM.e(242).then((() => iM(42181))).then((MM => ({
-        default: MM.LobbyManageView
+      hQ = (0, cU.lazy)((() => zU.e(238).then((() => zU(42174))).then((UU => ({
+        default: UU.LobbyManageView
       })))));
 
-    function Ma(MM) {
+    function UA(UU) {
       let {
-        show: rM
-      } = MM;
-      return rM ? (0, LM.jsx)(ra, {}) : null
+        show: XU
+      } = UU;
+      return XU ? (0, YU.jsx)(XA, {}) : null
     }
 
-    function ra() {
-      const MM = (0, bS.d)();
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [(0, LM.jsx)(Tj, {}), (0, LM.jsxs)(OM.Suspense, {
-          fallback: (0, LM.jsx)("div", {
+    function XA() {
+      const UU = (0, Wy.b)();
+      return (0, YU.jsxs)(YU.Fragment, {
+        children: [(0, YU.jsx)(bQ, {}), (0, YU.jsxs)(cU.Suspense, {
+          fallback: (0, YU.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, LM.jsx)(CM.d, {})
+            children: (0, YU.jsx)(RU.b, {})
           }),
-          children: [MM && (0, LM.jsx)(cj, {
-            leaderboard: (0, LM.jsx)(Vj, {})
-          }), !MM && (0, LM.jsx)(Vj, {})]
+          children: [UU && (0, YU.jsx)(hQ, {
+            leaderboard: (0, YU.jsx)(TQ, {})
+          }), !UU && (0, YU.jsx)(TQ, {})]
         })]
       })
     }
-    var ia = iM(1641),
-      Oa = iM(3381),
-      Sa = iM(1830),
-      ja = iM(3432),
-      aa = iM(2910),
-      Pa = iM(1568),
-      na = iM(1522),
-      Qa = iM(3358),
-      za = iM(3370),
-      La = iM(2455);
-    const ma = "storeRecentGiftRecipients",
-      Ha = new Map;
+    var zA = zU(1605),
+      cA = zU(3350),
+      yA = zU(1800),
+      QA = zU(3390),
+      AA = zU(2916),
+      FA = zU(1537),
+      oA = zU(1498),
+      DA = zU(3329),
+      EA = zU(3342),
+      YA = zU(2455);
+    const NA = "storeRecentGiftRecipients",
+      IA = new Map;
 
-    function ha() {
+    function pA() {
       try {
-        const MM = Si.g.getItem(ma);
-        return Array.isArray(MM) ? MM.filter((MM => "string" === typeof(null === MM || void 0 === MM ? void 0 : MM.name) && MM.name.length > 0)).map((MM => ({
-          name: MM.name,
-          cosmetics: MM.cosmetics && "object" === typeof MM.cosmetics ? MM.cosmetics : null
+        const UU = cz.k.getItem(NA);
+        return Array.isArray(UU) ? UU.filter((UU => "string" === typeof(null === UU || void 0 === UU ? void 0 : UU.name) && UU.name.length > 0)).map((UU => ({
+          name: UU.name,
+          cosmetics: UU.cosmetics && "object" === typeof UU.cosmetics ? UU.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function Ja(MM, rM) {
-      var iM;
-      const [SM, jM] = (0, OM.useState)(""), [aM, PM] = (0, OM.useState)("search"), [nM, QM] = (0, OM.useState)(null), [zM, LM] = (0, OM.useState)(null), mM = (0, OM.useRef)(null), HM = (0, OM.useRef)(null);
-      (0, OM.useEffect)((() => () => {
-        mM.current && clearTimeout(mM.current)
-      }), []), (0, OM.useEffect)((() => {
-        rM || dM()
-      }), [rM]);
-      const hM = null !== (iM = null === nM || void 0 === nM ? void 0 : nM.name) && void 0 !== iM ? iM : null;
+    function aA(UU, XU) {
+      var zU;
+      const [yU, QU] = (0, cU.useState)(""), [AU, FU] = (0, cU.useState)("search"), [oU, DU] = (0, cU.useState)(null), [EU, YU] = (0, cU.useState)(null), NU = (0, cU.useRef)(null), IU = (0, cU.useRef)(null);
+      (0, cU.useEffect)((() => () => {
+        NU.current && clearTimeout(NU.current)
+      }), []), (0, cU.useEffect)((() => {
+        XU || tU()
+      }), [XU]);
+      const pU = null !== (zU = null === oU || void 0 === oU ? void 0 : oU.name) && void 0 !== zU ? zU : null;
 
-      function JM() {
-        mM.current && (clearTimeout(mM.current), mM.current = null)
+      function aU() {
+        NU.current && (clearTimeout(NU.current), NU.current = null)
       }
 
-      function dM() {
-        JM(), jM(""), PM("search"), QM(null)
-      }(0, OM.useEffect)((() => {
-        if (null === hM || MM === uM.NULL_USER_CONTEXT) return;
-        const rM = hM.toLowerCase();
-        if (rM === MM.getPlayerName().toLowerCase()) return void LM({
-          name: hM,
+      function tU() {
+        aU(), QU(""), FU("search"), DU(null)
+      }(0, cU.useEffect)((() => {
+        if (null === pU || UU === CU.NULL_USER_CONTEXT) return;
+        const XU = pU.toLowerCase();
+        if (XU === UU.getPlayerName().toLowerCase()) return void YU({
+          name: pU,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const iM = Ha.get(rM);
-        if (iM) return void LM({
-          name: hM,
-          result: iM
+        const zU = IA.get(XU);
+        if (zU) return void YU({
+          name: pU,
+          result: zU
         });
-        let OM = !1;
-        return async function(MM, rM) {
+        let cU = !1;
+        return async function(UU, XU) {
           try {
-            const iM = await (0, uM.postJsonWithMetricsCookiesAndJsonResponse)(`${lr.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: rM
+            const zU = await (0, CU.postJsonWithMetricsCookiesAndJsonResponse)(`${aX.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: XU
             }, {
               retries: 1
-            }, MM.getMetricsCookies());
-            if ("boolean" !== typeof(null === iM || void 0 === iM ? void 0 : iM.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(iM)}`);
-            return iM
-          } catch (iM) {
-            return console.error("Failed to look up gift recipient:", iM), {
+            }, UU.getMetricsCookies());
+            if ("boolean" !== typeof(null === zU || void 0 === zU ? void 0 : zU.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(zU)}`);
+            return zU
+          } catch (zU) {
+            return console.error("Failed to look up gift recipient:", zU), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(MM, hM).catch((MM => (console.error("Gift recipient lookup failed:", MM), {
+        }(UU, pU).catch((UU => (console.error("Gift recipient lookup failed:", UU), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((MM => {
-          !0 !== MM.giftRecipientFound && "store:giftRecipientLookupFailed" === MM.giftRecipientError || Ha.set(rM, MM), OM || LM({
-            name: hM,
-            result: MM
+        }))).then((UU => {
+          !0 !== UU.giftRecipientFound && "store:giftRecipientLookupFailed" === UU.giftRecipientError || IA.set(XU, UU), cU || YU({
+            name: pU,
+            result: UU
           })
         })), () => {
-          OM = !0
+          cU = !0
         }
-      }), [hM, MM]);
-      const yM = (0, OM.useMemo)((() => {
-        const MM = SM.trim();
-        if (!MM) return {
+      }), [pU, UU]);
+      const gU = (0, cU.useMemo)((() => {
+        const UU = yU.trim();
+        if (!UU) return {
           status: "none"
         };
-        if (!nM || nM.name !== MM || (null === zM || void 0 === zM ? void 0 : zM.name) !== nM.name) return {
+        if (!oU || oU.name !== UU || (null === EU || void 0 === EU ? void 0 : EU.name) !== oU.name) return {
           status: "pending",
-          name: MM
+          name: UU
         };
-        const rM = zM.result;
-        return !1 === rM.giftRecipientFound ? {
+        const XU = EU.result;
+        return !1 === XU.giftRecipientFound ? {
           status: "error",
-          name: nM.name,
-          error: rM.giftRecipientError
+          name: oU.name,
+          error: XU.giftRecipientError
         } : {
           status: "found",
-          name: rM.giftRecipientName,
-          ownedPacks: rM.giftRecipientOwnedPacks,
-          hasSuperRank: rM.giftRecipientHasSuperRank,
-          isSubscriber: rM.giftRecipientIsSubscriber
+          name: XU.giftRecipientName,
+          ownedPacks: XU.giftRecipientOwnedPacks,
+          hasSuperRank: XU.giftRecipientHasSuperRank,
+          isSubscriber: XU.giftRecipientIsSubscriber
         }
-      }), [SM, nM, zM]);
-      (0, OM.useEffect)((() => {
-        "found" === yM.status && "typed" === (null === nM || void 0 === nM ? void 0 : nM.source) && HM.current !== yM.name && (HM.current = yM.name, (0, Sr.reportAnalyticsClick)({
+      }), [yU, oU, EU]);
+      (0, cU.useEffect)((() => {
+        "found" === gU.status && "typed" === (null === oU || void 0 === oU ? void 0 : oU.source) && IU.current !== gU.name && (IU.current = gU.name, (0, XX.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [yM, nM]);
-      const lM = (null === zM || void 0 === zM ? void 0 : zM.name) === (null === nM || void 0 === nM ? void 0 : nM.name) ? null === zM || void 0 === zM ? void 0 : zM.result : null,
-        EM = !0 === (null === lM || void 0 === lM ? void 0 : lM.giftRecipientFound) ? lM.giftRecipientCosmetics : null;
+      }), [gU, oU]);
+      const kU = (null === EU || void 0 === EU ? void 0 : EU.name) === (null === oU || void 0 === oU ? void 0 : oU.name) ? null === EU || void 0 === EU ? void 0 : EU.result : null,
+        GU = !0 === (null === kU || void 0 === kU ? void 0 : kU.giftRecipientFound) ? kU.giftRecipientCosmetics : null;
       return {
-        query: SM,
-        via: aM,
-        recipient: yM,
-        recipientCosmetics: EM,
-        type: function(MM) {
-          jM(MM), PM("search"), JM();
-          const rM = MM.trim();
-          rM ? mM.current = setTimeout((() => {
-            QM({
-              name: rM,
+        query: yU,
+        via: AU,
+        recipient: gU,
+        recipientCosmetics: GU,
+        type: function(UU) {
+          QU(UU), FU("search"), aU();
+          const XU = UU.trim();
+          XU ? NU.current = setTimeout((() => {
+            DU({
+              name: XU,
               source: "typed"
             })
-          }), 400) : QM(null)
+          }), 400) : DU(null)
         },
-        choose: function(MM, rM) {
-          JM(), jM(MM), PM("typed" === rM ? "search" : "prefilled" === rM ? "prefilled" : "suggestion"), QM({
-            name: MM,
-            source: rM
-          }), "typed" !== rM && "prefilled" !== rM && (0, Sr.reportAnalyticsClick)({
+        choose: function(UU, XU) {
+          aU(), QU(UU), FU("typed" === XU ? "search" : "prefilled" === XU ? "prefilled" : "suggestion"), DU({
+            name: UU,
+            source: XU
+          }), "typed" !== XU && "prefilled" !== XU && (0, XX.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: rM
+            value: XU
           })
         },
-        clear: dM,
-        recordGift: function(MM, rM) {
-          ! function(MM) {
-            Ha.delete(MM.toLowerCase())
-          }(MM), LM((iM => {
-            if (!iM || iM.name.toLowerCase() !== MM.toLowerCase() || !0 !== iM.result.giftRecipientFound || "superRank" === rM) return iM;
-            const OM = iM.result.giftRecipientOwnedPacks;
+        clear: tU,
+        recordGift: function(UU, XU) {
+          ! function(UU) {
+            IA.delete(UU.toLowerCase())
+          }(UU), YU((zU => {
+            if (!zU || zU.name.toLowerCase() !== UU.toLowerCase() || !0 !== zU.result.giftRecipientFound || "superRank" === XU) return zU;
+            const cU = zU.result.giftRecipientOwnedPacks;
             return {
-              ...iM,
+              ...zU,
               result: {
-                ...iM.result,
-                giftRecipientOwnedPacks: OM.includes(rM) ? OM : [...OM, rM]
+                ...zU.result,
+                giftRecipientOwnedPacks: cU.includes(XU) ? cU : [...cU, XU]
               }
             }
           }))
         }
       }
     }
-    var da = iM(2449),
-      ya = iM(5041),
-      la = iM(222),
-      Ea = iM(3511);
-    const Ua = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var Ga = iM(2412),
-      Ca = iM(605),
-      ea = iM(2488),
-      ba = iM(2818);
+    var tA = zU(2450),
+      gA = zU(5108),
+      kA = zU(264),
+      GA = zU(3217);
+    const BA = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var ZA = zU(2401),
+      RA = zU(625),
+      PA = zU(2500),
+      WA = zU(2841);
 
-    function wa(MM) {
+    function dA(UU) {
       let {
-        cosmetics: rM
-      } = MM;
-      return (0, LM.jsx)("span", {
+        cosmetics: XU
+      } = UU;
+      return (0, YU.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, LM.jsx)(ea.c, {
-          cosmetics: rM
+        children: (0, YU.jsx)(PA.b, {
+          cosmetics: XU
         })
       })
     }
 
-    function ta(MM, rM) {
-      var iM, OM;
-      const SM = null !== (iM = MM.friend) && void 0 !== iM ? iM : {
+    function LA(UU, XU) {
+      var zU, cU;
+      const yU = null !== (zU = UU.friend) && void 0 !== zU ? zU : {
         isError: !1,
-        name: MM.name,
+        name: UU.name,
         ranks: [],
-        cosmetics: null !== (OM = MM.cosmetics) && void 0 !== OM ? OM : {},
-        nameColour: Ca.d,
+        cosmetics: null !== (cU = UU.cosmetics) && void 0 !== cU ? cU : {},
+        nameColour: RA.e,
         location: {
           status: "noGamePlayed"
         }
       };
-      return rM ? {
-        ...SM,
-        cosmetics: rM
-      } : SM
+      return XU ? {
+        ...yU,
+        cosmetics: XU
+      } : yU
     }
 
-    function ga(MM) {
+    function eA(UU) {
       let {
-        pending: rM
-      } = MM;
-      return (0, LM.jsx)("span", {
+        pending: XU
+      } = UU;
+      return (0, YU.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: rM && (0, LM.jsx)(CM.d, {})
+        children: XU && (0, YU.jsx)(RU.b, {})
       })
     }
 
-    function ua(MM) {
-      var rM;
+    function CA(UU) {
+      var XU;
       let {
-        selfName: iM,
-        giftRecipient: SM,
-        suggestionsVersion: nM,
-        pulseSignal: zM,
-        disabled: mM
-      } = MM;
+        selfName: zU,
+        giftRecipient: yU,
+        suggestionsVersion: oU,
+        pulseSignal: EU,
+        disabled: NU
+      } = UU;
       const {
-        t: HM
-      } = (0, aM.A)(), hM = (0, vM.m)(), JM = (0, OM.useRef)(null), dM = (0, OM.useRef)(null), {
-        query: lM,
-        via: EM,
-        recipient: UM,
-        recipientCosmetics: CM
-      } = SM, eM = (0, La.o)(lM), bM = (0, OM.useMemo)((() => {
-        const MM = yM.featureFlags.useSocialFeatures ? hM.friends.filter((MM => !MM.isError)) : [];
-        return (0, La.i)({
-          onlineFriends: (0, vM.h)(MM),
-          recentRecipients: ha(),
-          friends: MM,
-          selfName: iM,
+        t: IU
+      } = (0, AU.I)(), pU = (0, nU.o)(), aU = (0, cU.useRef)(null), tU = (0, cU.useRef)(null), {
+        query: kU,
+        via: GU,
+        recipient: BU,
+        recipientCosmetics: RU
+      } = yU, PU = (0, YA.o)(kU), WU = (0, cU.useMemo)((() => {
+        const UU = gU.featureFlags.useSocialFeatures ? pU.friends.filter((UU => !UU.isError)) : [];
+        return (0, YA.j)({
+          onlineFriends: (0, nU.h)(UU),
+          recentRecipients: pA(),
+          friends: UU,
+          selfName: zU,
           max: 8
         })
-      }), [hM.friends, iM, nM]), wM = lM.trim().toLowerCase(), tM = "search" !== EM && wM ? bM.find((MM => MM.name.toLowerCase() === wM)) : void 0, gM = tM && "prefilled" === EM ? [tM, ...bM.filter((MM => MM !== tM))] : bM, uM = "" !== wM && !tM, RM = uM ? lM : "", pM = gM.length > 0;
-      (0, OM.useEffect)((() => {
-        JM.current && JM.current.value !== RM && (JM.current.value = RM)
-      }), [RM]), (0, OM.useEffect)((() => {
-        JM.current && (JM.current.disabled = mM)
-      }), [mM, zM]);
-      const WM = (0, OM.useRef)(0);
+      }), [pU.friends, zU, oU]), dU = kU.trim().toLowerCase(), LU = "search" !== GU && dU ? WU.find((UU => UU.name.toLowerCase() === dU)) : void 0, eU = LU && "prefilled" === GU ? [LU, ...WU.filter((UU => UU !== LU))] : WU, CU = "" !== dU && !LU, wU = CU ? kU : "", qU = eU.length > 0;
+      (0, cU.useEffect)((() => {
+        aU.current && aU.current.value !== wU && (aU.current.value = wU)
+      }), [wU]), (0, cU.useEffect)((() => {
+        aU.current && (aU.current.disabled = NU)
+      }), [NU, EU]);
+      const OU = (0, cU.useRef)(0);
 
-      function DM() {
-        "self" !== eM && (0, Sr.reportAnalyticsClick)({
+      function rU() {
+        "self" !== PU && (0, XX.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), SM.clear()
+        }), yU.clear()
       }
 
-      function kM(MM) {
-        var rM, iM;
-        if (mM) return;
-        if (" " === MM.key || "Enter" === MM.key) return MM.preventDefault(), void MM.currentTarget.click();
-        const OM = Array.from(null !== (rM = null === (iM = dM.current) || void 0 === iM ? void 0 : iM.querySelectorAll("[role=radio]")) && void 0 !== rM ? rM : []),
-          SM = OM.indexOf(MM.currentTarget);
-        let jM;
-        "ArrowRight" === MM.key || "ArrowDown" === MM.key ? jM = OM[(SM + 1) % OM.length] : "ArrowLeft" === MM.key || "ArrowUp" === MM.key ? jM = OM[(SM - 1 + OM.length) % OM.length] : "Home" === MM.key ? jM = OM[0] : "End" === MM.key && (jM = OM[OM.length - 1]), jM && (MM.preventDefault(), jM.focus(), jM.click())
-      }(0, OM.useEffect)((() => {
-        var MM;
-        zM > WM.current && !mM && (WM.current = zM, null === (MM = JM.current) || void 0 === MM || MM.focus())
-      }), [zM, mM]);
-      const ZM = "self" === eM,
-        oM = null !== (rM = null === tM || void 0 === tM ? void 0 : tM.name) && void 0 !== rM ? rM : null,
-        fM = "error" === UM.status ? UM.error : null,
-        YM = "store:giftRecipientLookupFailed" === fM;
-      return (0, LM.jsxs)("div", {
-        className: jM()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: mM,
-          StoreRecipientStripNoChips: !pM
+      function uU(UU) {
+        var XU, zU;
+        if (NU) return;
+        if (" " === UU.key || "Enter" === UU.key) return UU.preventDefault(), void UU.currentTarget.click();
+        const cU = Array.from(null !== (XU = null === (zU = tU.current) || void 0 === zU ? void 0 : zU.querySelectorAll("[role=radio]")) && void 0 !== XU ? XU : []),
+          yU = cU.indexOf(UU.currentTarget);
+        let QU;
+        "ArrowRight" === UU.key || "ArrowDown" === UU.key ? QU = cU[(yU + 1) % cU.length] : "ArrowLeft" === UU.key || "ArrowUp" === UU.key ? QU = cU[(yU - 1 + cU.length) % cU.length] : "Home" === UU.key ? QU = cU[0] : "End" === UU.key && (QU = cU[cU.length - 1]), QU && (UU.preventDefault(), QU.focus(), QU.click())
+      }(0, cU.useEffect)((() => {
+        var UU;
+        EU > OU.current && !NU && (OU.current = EU, null === (UU = aU.current) || void 0 === UU || UU.focus())
+      }), [EU, NU]);
+      const fU = "self" === PU,
+        iU = null !== (XU = null === LU || void 0 === LU ? void 0 : LU.name) && void 0 !== XU ? XU : null,
+        HU = "error" === BU.status ? BU.error : null,
+        MU = "store:giftRecipientLookupFailed" === HU;
+      return (0, YU.jsxs)("div", {
+        className: QU()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: NU,
+          StoreRecipientStripNoChips: !qU
         }),
-        children: [(0, LM.jsx)("span", {
+        children: [(0, YU.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: HM("store:buyingFor")
-        }), (0, LM.jsxs)("div", {
-          ref: dM,
+          children: IU("store:buyingFor")
+        }), (0, YU.jsxs)("div", {
+          ref: tU,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": HM("store:whoIsItFor"),
-          children: [(0, LM.jsxs)("div", {
+          "aria-label": IU("store:whoIsItFor"),
+          children: [(0, YU.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": ZM,
-            tabIndex: mM || !ZM && null !== oM ? -1 : 0,
-            className: jM()("StoreRecipientMe", {
-              StoreRecipientChecked: ZM
+            "aria-checked": fU,
+            tabIndex: NU || !fU && null !== iU ? -1 : 0,
+            className: QU()("StoreRecipientMe", {
+              StoreRecipientChecked: fU
             }),
             onClick: () => {
-              mM || DM()
+              NU || rU()
             },
-            onKeyDown: kM,
-            children: [(0, LM.jsx)(PM.b, {
+            onKeyDown: uU,
+            children: [(0, YU.jsx)(FU.d, {
               name: "user"
-            }), " ", HM("store:me")]
-          }), pM && (0, LM.jsx)("div", {
+            }), " ", IU("store:me")]
+          }), qU && (0, YU.jsx)("div", {
             className: "StoreRecipientChips",
-            children: gM.map((MM => {
-              const rM = MM === tM;
-              return (0, LM.jsx)("div", {
+            children: eU.map((UU => {
+              const XU = UU === LU;
+              return (0, YU.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": rM,
-                tabIndex: !mM && rM ? 0 : -1,
-                title: MM.name,
-                className: jM()("StoreRecipientChip", {
-                  StoreRecipientChecked: rM
+                "aria-checked": XU,
+                tabIndex: !NU && XU ? 0 : -1,
+                title: UU.name,
+                className: QU()("StoreRecipientChip", {
+                  StoreRecipientChecked: XU
                 }),
                 onClick: () => {
-                  mM || function(MM) {
-                    "gift" !== eM && (0, Sr.reportAnalyticsClick)({
+                  NU || function(UU) {
+                    "gift" !== PU && (0, XX.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), SM.choose(MM.name, MM.kind)
-                  }(MM)
+                    }), yU.choose(UU.name, UU.kind)
+                  }(UU)
                 },
-                onKeyDown: kM,
-                children: (0, LM.jsx)(ba.f, {
-                  playerSocialPreview: ta(MM, rM ? CM : null),
+                onKeyDown: uU,
+                children: (0, YU.jsx)(WA.f, {
+                  playerSocialPreview: LA(UU, XU ? RU : null),
                   opensProfileCard: !1,
-                  isFriend: null !== MM.friend,
+                  isFriend: null !== UU.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== MM.friend,
-                  status: null === MM.friend ? null : void 0,
-                  trailing: rM ? (0, LM.jsx)(ga, {
-                    pending: "pending" === UM.status
+                  showLocation: null !== UU.friend,
+                  status: null === UU.friend ? null : void 0,
+                  trailing: XU ? (0, YU.jsx)(eA, {
+                    pending: "pending" === BU.status
                   }) : void 0
                 })
-              }, MM.name)
+              }, UU.name)
             }))
           })]
-        }), (0, LM.jsxs)("div", {
-          className: jM()("StoreRecipientSearch", {
-            StoreRecipientChecked: uM,
-            StoreRecipientSearchPulse: zM > 0 && !uM,
-            StoreRecipientSearchError: null !== fM && !YM
+        }), (0, YU.jsxs)("div", {
+          className: QU()("StoreRecipientSearch", {
+            StoreRecipientChecked: CU,
+            StoreRecipientSearchPulse: EU > 0 && !CU,
+            StoreRecipientSearchError: null !== HU && !MU
           }),
           onClick: () => {
-            var MM;
-            null === (MM = JM.current) || void 0 === MM || MM.focus()
+            var UU;
+            null === (UU = aU.current) || void 0 === UU || UU.focus()
           },
-          children: [uM && "found" === UM.status && CM && (0, LM.jsx)(wa, {
-            cosmetics: CM
-          }), !(uM && "found" === UM.status && CM) && (0, LM.jsx)(PM.b, {
+          children: [CU && "found" === BU.status && RU && (0, YU.jsx)(dA, {
+            cosmetics: RU
+          }), !(CU && "found" === BU.status && RU) && (0, YU.jsx)(FU.d, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, LM.jsx)(GM.b, {
+          }), (0, YU.jsx)(ZU.e, {
             className: "StoreRecipientSearchInput",
-            domRef: JM,
-            placeholderText: HM("store:searchName"),
-            defaultValue: RM,
-            maxLength: sM.g,
-            onValueChange: function(MM) {
-              "gift" !== eM && MM.trim() && (0, Sr.reportAnalyticsClick)({
+            domRef: aU,
+            placeholderText: IU("store:searchName"),
+            defaultValue: wU,
+            maxLength: SU.h,
+            onValueChange: function(UU) {
+              "gift" !== PU && UU.trim() && (0, XX.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), SM.type(MM)
+              }), yU.type(UU)
             },
             onEnter: () => {
-              var MM;
-              const rM = null === (MM = JM.current) || void 0 === MM ? void 0 : MM.value.trim();
-              rM && SM.choose(rM, "typed")
+              var UU;
+              const XU = null === (UU = aU.current) || void 0 === UU ? void 0 : UU.value.trim();
+              XU && yU.choose(XU, "typed")
             },
             blurOnEnter: !0
-          }), uM && (0, LM.jsx)(ga, {
-            pending: "pending" === UM.status
-          }), uM && (0, LM.jsx)("div", {
-            ...(0, QM.fb)({
-              disabled: mM
+          }), CU && (0, YU.jsx)(eA, {
+            pending: "pending" === BU.status
+          }), CU && (0, YU.jsx)("div", {
+            ...(0, DU.W)({
+              disabled: NU
             }),
-            "aria-label": HM("store:clearRecipient"),
-            title: HM("store:clearRecipient"),
+            "aria-label": IU("store:clearRecipient"),
+            title: IU("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: MM => {
-              MM.stopPropagation(), mM || DM()
+            onClick: UU => {
+              UU.stopPropagation(), NU || rU()
             },
-            children: (0, LM.jsx)(PM.b, {
+            children: (0, YU.jsx)(FU.d, {
               name: "xmark"
             })
           })]
-        }, zM), fM && (0, LM.jsx)("div", {
-          className: jM()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: YM
+        }, EU), HU && (0, YU.jsx)("div", {
+          className: QU()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: MU
           }),
           role: "status",
-          children: HM(fM)
+          children: IU(HU)
         })]
       })
     }
-    var Ra = iM(2382),
-      pa = iM(3972),
-      Wa = iM(3520),
-      sa = iM(2414);
-    const Da = iM.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var wA = zU(2559),
+      qA = zU(3966),
+      OA = zU(3482),
+      SA = zU(2410);
+    const rA = zU.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function ka() {
-      (0, sa.g)(Da, {
+    function uA() {
+      (0, SA.i)(rA, {
         lowPriority: !1
       })
     }
 
-    function Za(MM) {
+    function fA(UU) {
       let {
-        onBack: rM,
-        cta: iM,
-        recipient: SM,
-        afterCta: jM
-      } = MM;
+        onBack: XU,
+        cta: zU,
+        recipient: yU,
+        afterCta: QU
+      } = UU;
       const {
-        t: nM
-      } = (0, aM.A)(), [zM, mM] = (0, OM.useState)("starting"), HM = (0, OM.useRef)(null), hM = (0, cr.b)(), JM = (0, OM.useRef)(null), dM = (0, OM.useCallback)((() => {
-        const MM = HM.current;
-        null !== MM.error && MM.load();
-        const rM = MM.play();
-        JM.current = rM, rM.catch((MM => {
-          (0, pa.e)("Failed to play Super Rank video", MM), hM.current && JM.current === rM && mM("failed")
+        t: oU
+      } = (0, AU.I)(), [EU, NU] = (0, cU.useState)("starting"), IU = (0, cU.useRef)(null), pU = (0, TX.b)(), aU = (0, cU.useRef)(null), tU = (0, cU.useCallback)((() => {
+        const UU = IU.current;
+        null !== UU.error && UU.load();
+        const XU = UU.play();
+        aU.current = XU, XU.catch((UU => {
+          (0, qA.e)("Failed to play Super Rank video", UU), pU.current && aU.current === XU && NU("failed")
         }))
-      }), [hM]);
-      return (0, OM.useEffect)((() => {
-        const MM = HM.current;
-        let rM;
+      }), [pU]);
+      return (0, cU.useEffect)((() => {
+        const UU = IU.current;
+        let XU;
 
-        function iM() {
-          clearTimeout(rM), rM = setTimeout(dM, 3e3)
+        function zU() {
+          clearTimeout(XU), XU = setTimeout(tU, 3e3)
         }
-        return dM(), MM.addEventListener("ended", iM), () => {
-          clearTimeout(rM), MM.removeEventListener("ended", iM)
+        return tU(), UU.addEventListener("ended", zU), () => {
+          clearTimeout(XU), UU.removeEventListener("ended", zU)
         }
-      }), [dM]), (0, LM.jsxs)("div", {
+      }), [tU]), (0, YU.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, YU.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, LM.jsx)(QM.c, {
+          children: [(0, YU.jsx)(DU.e, {
             className: "StoreDetailBackButton",
-            onClick: rM,
+            onClick: XU,
             padBack: !0,
-            children: nM("general:back")
-          }), (0, LM.jsxs)("div", {
+            children: oU("general:back")
+          }), (0, YU.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, YU.jsx)(FU.d, {
               name: "bolt"
-            }), " ", nM("homePage:superRank")]
-          }), SM]
-        }), (0, LM.jsxs)("div", {
+            }), " ", oU("homePage:superRank")]
+          }), yU]
+        }), (0, YU.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, LM.jsx)("video", {
-              ref: HM,
-              src: `${lr.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: Da,
+            children: [(0, YU.jsx)("video", {
+              ref: IU,
+              src: `${aX.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: rA,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === zM,
+              controls: "playing" === EU,
               onPlaying: () => {
-                mM("playing")
+                NU("playing")
               },
               onError: () => {
-                mM("failed")
+                NU("failed")
               }
-            }), ("failed" === zM || "loading" === zM) && (0, LM.jsx)("div", {
+            }), ("failed" === EU || "loading" === EU) && (0, YU.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, LM.jsx)(QM.e, {
-                ariaLabel: nM("general:play"),
-                loading: "loading" === zM,
+              children: (0, YU.jsx)(DU.f, {
+                ariaLabel: oU("general:play"),
+                loading: "loading" === EU,
                 onClick: () => {
-                  mM("loading"), dM()
+                  NU("loading"), tU()
                 },
                 touchPressOn: "pointerup",
-                children: (0, LM.jsx)(PM.b, {
+                children: (0, YU.jsx)(FU.d, {
                   name: "play"
                 })
               })
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, YU.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, LM.jsx)(Wa.d, {})
-            }), (0, LM.jsxs)("div", {
+              children: (0, YU.jsx)(OA.d, {})
+            }), (0, YU.jsxs)("div", {
               className: "StoreTileActions",
-              children: [iM, jM]
+              children: [zU, QU]
             })]
           })]
         })]
       })
     }
-    var oa = iM(2834),
-      fa = iM(3938),
-      Ya = iM(3488),
-      Na = iM(3493),
-      Aa = iM(3459);
-    const xa = [Ca.x.yellow, Ca.x.green, Ca.x.aqua, Ca.x.blue, Ca.x.purple, Ca.x.red];
+    var iA = zU(2852),
+      HA = zU(3920),
+      MA = zU(3452),
+      vA = zU(3455),
+      VA = zU(3426);
+    const sA = [RA.u.yellow, RA.u.green, RA.u.aqua, RA.u.blue, RA.u.purple, RA.u.red];
 
-    function va(MM) {
-      return "needsRecipient" === MM || "lookingUp" === MM || "gift" === MM || "recipientOwns" === MM || "recipientSharesOwned" === MM || "recipientSubscribed" === MM
+    function nA(UU) {
+      return "needsRecipient" === UU || "lookingUp" === UU || "gift" === UU || "recipientOwns" === UU || "recipientSharesOwned" === UU || "recipientSubscribed" === UU
     }
 
-    function Fa(MM) {
+    function mA(UU) {
       const {
-        onKeyDown: rM,
-        ...iM
-      } = (0, QM.fb)();
+        onKeyDown: XU,
+        ...zU
+      } = (0, DU.W)();
       return {
-        ...iM,
-        "aria-label": MM,
-        onKeyDown: MM => {
-          MM.target === MM.currentTarget && (null === rM || void 0 === rM || rM(MM))
+        ...zU,
+        "aria-label": UU,
+        onKeyDown: UU => {
+          UU.target === UU.currentTarget && (null === XU || void 0 === XU || XU(UU))
         }
       }
     }
 
-    function Ba(MM) {
+    function lA(UU) {
       let {
-        text: rM
-      } = MM;
-      return (0, LM.jsx)("span", {
+        text: XU
+      } = UU;
+      return (0, YU.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(rM).map(((MM, rM) => (0, LM.jsx)("span", {
+        children: Array.from(XU).map(((UU, XU) => (0, YU.jsx)("span", {
           style: {
-            color: xa[rM % xa.length]
+            color: sA[XU % sA.length]
           },
-          children: MM
-        }, rM)))
+          children: UU
+        }, XU)))
       })
     }
-    const Xa = {
+    const xA = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -6235,82 +6233,82 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function Ia(MM) {
+    function JA(UU) {
       let {
-        state: rM,
-        item: iM,
-        price: OM,
-        busy: SM,
-        highlight: nM = !1,
-        onAct: zM,
-        onNeedRecipient: mM,
-        onLogin: HM
-      } = MM;
+        state: XU,
+        item: zU,
+        price: cU,
+        busy: yU,
+        highlight: oU = !1,
+        onAct: EU,
+        onNeedRecipient: NU,
+        onLogin: IU
+      } = UU;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = "superRank" === iM ? kM.k.product.days : null, dM = MM => null === JM ? hM(MM ? "general:gift" : "general:buy") : hM(MM ? "store:giftDays" : "store:buyDays", {
-        days: JM
-      }), yM = (MM, rM) => {
-        const iM = (0, LM.jsxs)(LM.Fragment, {
-          children: [null === MM && (0, LM.jsx)("span", {
+        t: pU
+      } = (0, AU.I)(), aU = "superRank" === zU ? uU.n.product.days : null, tU = UU => null === aU ? pU(UU ? "general:gift" : "general:buy") : pU(UU ? "store:giftDays" : "store:buyDays", {
+        days: aU
+      }), gU = (UU, XU) => {
+        const zU = (0, YU.jsxs)(YU.Fragment, {
+          children: [null === UU && (0, YU.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== MM && (0, LM.jsx)("span", {
+          }), null !== UU && (0, YU.jsx)("span", {
             className: "StoreCtaLabel",
-            title: MM,
-            children: MM
+            title: UU,
+            children: UU
           })]
         });
-        return null !== JM ? (0, LM.jsxs)(LM.Fragment, {
-          children: [rM && (0, LM.jsx)("span", {
+        return null !== aU ? (0, YU.jsxs)(YU.Fragment, {
+          children: [XU && (0, YU.jsx)("span", {
             className: "StoreCtaIcon",
-            children: rM
-          }), iM, (0, LM.jsxs)("span", {
+            children: XU
+          }), zU, (0, YU.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, LM.jsx)(Ra.b, {
-              amount: OM
+            children: ["\xb7", (0, YU.jsx)(wA.c, {
+              amount: cU
             })]
           })]
-        }) : (0, LM.jsxs)(LM.Fragment, {
-          children: [(0, LM.jsxs)("span", {
+        }) : (0, YU.jsxs)(YU.Fragment, {
+          children: [(0, YU.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [iM, "\xb7"]
-          }), (0, LM.jsxs)("span", {
+            children: [zU, "\xb7"]
+          }), (0, YU.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [rM, (0, LM.jsx)(Ra.b, {
-              amount: OM
+            children: [XU, (0, YU.jsx)(wA.c, {
+              amount: cU
             })]
           })]
         })
       };
-      let lM;
-      switch (rM) {
+      let kU;
+      switch (XU) {
         case "pending":
-          lM = (0, LM.jsx)(QM.p, {
+          kU = (0, YU.jsx)(DU.l, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: yM(null)
+            children: gU(null)
           });
           break;
         case "login":
-          lM = (0, LM.jsx)(QM.p, {
+          kU = (0, YU.jsx)(DU.l, {
             className: "StoreCtaButton",
-            onClick: HM,
-            children: yM(dM(!1))
+            onClick: IU,
+            children: gU(tU(!1))
           });
           break;
         case "owned":
-          lM = (0, LM.jsx)(QM.i, {
+          kU = (0, YU.jsx)(DU.j, {
             className: "StoreCtaButton",
             onClick: () => {
-              bM.d.set({
-                openEverythingMenuName: Ur.m.CUSTOMISATION
+              WU.e.set({
+                openEverythingMenuName: gX.s.CUSTOMISATION
               })
             },
-            children: (0, LM.jsxs)("span", {
+            children: (0, YU.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "shirt"
-              }), " ", hM("store:equip")]
+              }), " ", pU("store:equip")]
             })
           });
           break;
@@ -6319,207 +6317,207 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          lM = (0, LM.jsx)(QM.p, {
+          kU = (0, YU.jsx)(DU.l, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, LM.jsx)("span", {
+            children: (0, YU.jsx)("span", {
               className: "StoreCtaLabel",
-              children: hM(Xa[rM])
+              children: pU(xA[XU])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          lM = (0, LM.jsx)(QM.p, {
+          kU = (0, YU.jsx)(DU.l, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === rM || null === OM,
-            loading: "lookingUp" === rM || SM,
-            onClick: zM,
+            disabled: "needsRecipient" === XU || null === cU,
+            loading: "lookingUp" === XU || yU,
+            onClick: EU,
             analyticsClick: {
               id: "store.gift",
-              value: iM
+              value: zU
             },
-            children: yM(dM(!0), La.e)
+            children: gU(tU(!0), YA.d)
           });
           break;
         case "buy":
         case "recharge":
-          lM = (0, LM.jsx)(QM.p, {
+          kU = (0, YU.jsx)(DU.l, {
             className: "StoreCtaButton",
-            loading: SM,
-            disabled: null === OM,
-            onClick: zM,
+            loading: yU,
+            disabled: null === cU,
+            onClick: EU,
             analyticsClick: {
               id: "store.buy",
-              value: iM
+              value: zU
             },
-            children: yM(dM(!1))
+            children: gU(tU(!1))
           })
       }
-      return (0, LM.jsx)("div", {
-        className: jM()("StoreCta", {
-          StoreCtaHighlight: nM,
-          StoreCtaLabelFirst: null !== JM
+      return (0, YU.jsx)("div", {
+        className: QU()("StoreCta", {
+          StoreCtaHighlight: oU,
+          StoreCtaLabelFirst: null !== aU
         }),
-        onClick: MM => {
-          MM.stopPropagation(), "needsRecipient" === rM && mM()
+        onClick: UU => {
+          UU.stopPropagation(), "needsRecipient" === XU && NU()
         },
-        children: lM
+        children: kU
       })
     }
 
-    function Ka() {
+    function jA() {
       const {
-        t: MM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("ul", {
+        t: UU
+      } = (0, AU.I)();
+      return (0, YU.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, LM.jsxs)("li", {
-          children: [(0, LM.jsx)(PM.b, {
+        children: [(0, YU.jsxs)("li", {
+          children: [(0, YU.jsx)(FU.d, {
             name: "check"
-          }), (0, LM.jsx)(Ba, {
-            text: MM("store:colourfulNames")
+          }), (0, YU.jsx)(lA, {
+            text: UU("store:colourfulNames")
           })]
-        }), (0, LM.jsxs)("li", {
-          children: [(0, LM.jsx)(PM.b, {
+        }), (0, YU.jsxs)("li", {
+          children: [(0, YU.jsx)(FU.d, {
             name: "check"
-          }), MM("store:perkCapes")]
-        }), (0, LM.jsxs)("li", {
-          children: [(0, LM.jsx)(PM.b, {
+          }), UU("store:perkCapes")]
+        }), (0, YU.jsxs)("li", {
+          children: [(0, YU.jsx)(FU.d, {
             name: "check"
-          }), MM("store:perkNoAdverts")]
-        }), (0, LM.jsxs)("li", {
-          children: [(0, LM.jsx)(PM.b, {
+          }), UU("store:perkNoAdverts")]
+        }), (0, YU.jsxs)("li", {
+          children: [(0, YU.jsx)(FU.d, {
             name: "check"
-          }), MM("store:perkFriends", {
-            count: (0, ir.c)(["super"])
+          }), UU("store:perkFriends", {
+            count: (0, hU.d)(["super"])
           })]
         })]
       })
     }
 
-    function qa(MM) {
+    function KA(UU) {
       let {
-        daysLeft: rM,
-        totalDays: iM,
-        urgent: OM
-      } = MM;
+        daysLeft: XU,
+        totalDays: zU,
+        urgent: cU
+      } = UU;
       const {
-        t: SM
-      } = (0, aM.A)(), PM = iM > 0 ? Math.min(1, Math.max(.03, rM / iM)) : 1;
-      return (0, LM.jsxs)("div", {
-        className: jM()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: OM
+        t: yU
+      } = (0, AU.I)(), FU = zU > 0 ? Math.min(1, Math.max(.03, XU / zU)) : 1;
+      return (0, YU.jsxs)("div", {
+        className: QU()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: cU
         }),
-        children: [(0, LM.jsx)("span", {
+        children: [(0, YU.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === rM ? SM("store:oneDayLeft") : SM("store:daysLeft", {
-            days: rM
+          children: 1 === XU ? yU("store:oneDayLeft") : yU("store:daysLeft", {
+            days: XU
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, LM.jsx)("i", {
+          children: (0, YU.jsx)("i", {
             style: {
-              width: 100 * PM + "%"
+              width: 100 * FU + "%"
             }
           })
         })]
       })
     }
 
-    function Ta(MM) {
-      var rM;
+    function bA(UU) {
+      var XU;
       let {
-        state: iM,
-        urgent: OM,
-        daysLeft: SM,
-        totalDays: nM,
-        recipientHasSuperRank: QM,
-        busy: zM,
-        highlight: mM,
-        onOpen: HM,
-        onAct: hM,
-        onNeedRecipient: JM,
-        onLogin: dM
-      } = MM;
+        state: zU,
+        urgent: cU,
+        daysLeft: yU,
+        totalDays: oU,
+        recipientHasSuperRank: DU,
+        busy: EU,
+        highlight: NU,
+        onOpen: IU,
+        onAct: pU,
+        onNeedRecipient: aU,
+        onLogin: tU
+      } = UU;
       const {
-        t: yM
-      } = (0, aM.A)(), lM = va(iM), {
-        days: EM
-      } = kM.k.product, UM = yM("store:recipientHasSuperRank", {
-        giftDays: EM
-      }), GM = null === (rM = TM("subscribed" === iM)) || void 0 === rM ? void 0 : rM.text;
-      return (0, LM.jsxs)("div", {
-        className: jM()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: lM,
-          StoreSuperRankTileUrgent: "recharge" === iM && OM,
-          StoreSuperRankTileWithChip: QM,
-          StoreSuperRankTileGiftReady: "gift" === iM
+        t: gU
+      } = (0, AU.I)(), kU = nA(zU), {
+        days: GU
+      } = uU.n.product, BU = gU("store:recipientHasSuperRank", {
+        giftDays: GU
+      }), ZU = null === (XU = bU("subscribed" === zU)) || void 0 === XU ? void 0 : XU.text;
+      return (0, YU.jsxs)("div", {
+        className: QU()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: kU,
+          StoreSuperRankTileUrgent: "recharge" === zU && cU,
+          StoreSuperRankTileWithChip: DU,
+          StoreSuperRankTileGiftReady: "gift" === zU
         }),
-        ...Fa(yM("homePage:superRank")),
+        ...mA(gU("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: ka,
-        onFocus: ka,
-        onClick: HM,
-        children: [(0, LM.jsx)("div", {
+        onPointerEnter: uA,
+        onFocus: uA,
+        onClick: IU,
+        children: [(0, YU.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${Ga.e})`
+            backgroundImage: `url(${ZA.g})`
           }
-        }), lM && (0, LM.jsx)("div", {
+        }), kU && (0, YU.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "StoreTileContent",
-          children: [QM && (0, LM.jsx)("span", {
+          children: [DU && (0, YU.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: UM,
-            children: UM
-          }), (0, LM.jsxs)("div", {
+            title: BU,
+            children: BU
+          }), (0, YU.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, YU.jsx)(FU.d, {
               name: "bolt"
-            }), " ", yM("homePage:superRank")]
-          }), lM && (0, LM.jsx)("div", {
+            }), " ", gU("homePage:superRank")]
+          }), kU && (0, YU.jsx)("div", {
             className: "StoreTilePitch",
-            children: yM("store:giftPitch", {
-              days: EM
+            children: gU("store:giftPitch", {
+              days: GU
             })
-          }), "recharge" === iM && (0, LM.jsx)(qa, {
-            daysLeft: SM,
-            totalDays: nM,
-            urgent: OM
-          }), GM && (0, LM.jsx)("div", {
+          }), "recharge" === zU && (0, YU.jsx)(KA, {
+            daysLeft: yU,
+            totalDays: oU,
+            urgent: cU
+          }), ZU && (0, YU.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, LM.jsx)("span", {
+            children: (0, YU.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: GM
+              children: ZU
             })
-          }), (0, LM.jsx)(Ka, {}), (0, LM.jsxs)("div", {
+          }), (0, YU.jsx)(jA, {}), (0, YU.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, LM.jsx)(Ia, {
-              state: iM,
+            children: [(0, YU.jsx)(JA, {
+              state: zU,
               item: "superRank",
-              price: kM.k.price,
-              busy: zM,
-              highlight: mM,
-              onAct: hM,
-              onNeedRecipient: JM,
-              onLogin: dM
-            }), "needsRecipient" === iM && (0, LM.jsx)("span", {
+              price: uU.n.price,
+              busy: EU,
+              highlight: NU,
+              onAct: pU,
+              onNeedRecipient: aU,
+              onLogin: tU
+            }), "needsRecipient" === zU && (0, YU.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: yM("store:pickRecipientFirst")
-            }), "recharge" === iM && OM && (0, LM.jsx)("span", {
+              children: gU("store:pickRecipientFirst")
+            }), "recharge" === zU && cU && (0, YU.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === SM ? yM("store:endsInOneDay") : yM("store:endsInDays", {
-                days: SM
+              children: 1 === yU ? gU("store:endsInOneDay") : gU("store:endsInDays", {
+                days: yU
               })
             })]
           })]
         })]
       })
     }
-    const Va = {
+    const TA = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6527,418 +6525,420 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function ca(MM) {
-      var rM;
+    function hA(UU) {
+      var XU;
       let {
-        pack: iM,
-        state: SM,
-        busy: nM,
-        onOpen: QM,
-        onAct: zM,
-        onNeedRecipient: mM,
-        onLogin: HM
-      } = MM;
+        pack: zU,
+        state: yU,
+        busy: oU,
+        onOpen: DU,
+        onAct: EU,
+        onNeedRecipient: NU,
+        onLogin: IU
+      } = UU;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = ia.d[iM], dM = Qa.k[iM], yM = (0, Ga.m)(iM), lM = (0, OM.useRef)(null);
-      (0, Ya.h)(iM, lM);
-      const EM = va(SM),
-        UM = null !== (rM = JM.displayName) && void 0 !== rM ? rM : iM,
-        GM = (0, fa.d)((() => {
-          (0, oa.e)();
-          const MM = (0, Ya.f)(iM);
-          void 0 !== MM && (0, sa.g)((0, Ya.e)(MM))
+        t: pU
+      } = (0, AU.I)(), aU = zA.c[zU], tU = DA.p[zU], gU = (0, ZA.o)(zU), kU = (0, cU.useRef)(null);
+      (0, MA.q)(zU, kU);
+      const GU = nA(yU),
+        BU = null !== (XU = aU.displayName) && void 0 !== XU ? XU : zU,
+        ZU = (0, HA.c)((() => {
+          (0, iA.f)();
+          const UU = (0, MA.i)(zU);
+          void 0 !== UU && (0, SA.i)((0, MA.e)(UU))
         })),
-        [CM] = (0, OM.useState)(Ea.f);
-      return (0, LM.jsxs)("div", {
-        className: jM()("StoreTile StorePackTile", Va[JM.tier], {
-          StorePackTileOwned: "owned" === SM,
-          StorePackTileRecipientOwns: "recipientOwns" === SM,
-          StoreTileGift: EM
+        [RU] = (0, cU.useState)(GA.i);
+      return (0, YU.jsxs)("div", {
+        className: QU()("StoreTile StorePackTile", TA[aU.tier], {
+          StorePackTileOwned: "owned" === yU,
+          StorePackTileRecipientOwns: "recipientOwns" === yU,
+          StoreTileGift: GU
         }),
-        ...Fa(UM),
-        ref: lM,
-        "data-store-item": iM,
-        onClick: QM,
-        onPointerMove: MM => {
-          "mouse" !== MM.pointerType || 0 === MM.movementX && 0 === MM.movementY || CM || GM.start()
+        ...mA(BU),
+        ref: kU,
+        "data-store-item": zU,
+        onClick: DU,
+        onPointerMove: UU => {
+          "mouse" !== UU.pointerType || 0 === UU.movementX && 0 === UU.movementY || RU || ZU.start()
         },
-        onPointerLeave: GM.cancel,
-        children: [dM && (0, LM.jsx)(dM, {}), (0, LM.jsx)("div", {
+        onPointerLeave: ZU.cancel,
+        children: [tU && (0, YU.jsx)(tU, {
+          simple: !0
+        }), (0, YU.jsx)("div", {
           className: "StorePackCharacters",
-          children: yM.map((MM => (0, LM.jsx)("div", {
+          children: gU.map((UU => (0, YU.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,Ga.g)(MM)})`
+              backgroundImage: `url(${(0,ZA.i)(UU)})`
             }
-          }, MM)))
-        }), (0, LM.jsx)("div", {
+          }, UU)))
+        }), (0, YU.jsx)("div", {
           className: "StoreTileScrim"
-        }), EM && (0, LM.jsx)("div", {
+        }), GU && (0, YU.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, LM.jsx)(Aa.e, {
-          pack: iM,
-          className: jM()({
-            PackAnimatedBadgeBesideRibbon: EM
+        }), (0, YU.jsx)(VA.d, {
+          pack: zU,
+          className: QU()({
+            PackAnimatedBadgeBesideRibbon: GU
           })
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, YU.jsx)("div", {
             className: "StoreTileTitle",
-            children: UM
-          }), (0, LM.jsxs)("div", {
+            children: BU
+          }), (0, YU.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, LM.jsx)(Na.d, {
-              tier: JM.tier
-            }), " \xb7 ", hM("store:itemCount", {
-              count: (0, OS.h)(iM)
-            }), "owned" === SM && (0, LM.jsxs)("span", {
+            children: [(0, YU.jsx)(vA.c, {
+              tier: aU.tier
+            }), " \xb7 ", pU("store:itemCount", {
+              count: (0, Uy.g)(zU)
+            }), "owned" === yU && (0, YU.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, LM.jsx)(PM.b, {
+              children: [" \xb7 ", (0, YU.jsx)(FU.d, {
                 name: "check"
-              }), " ", hM("general:owned")]
+              }), " ", pU("general:owned")]
             })]
-          }), (0, LM.jsx)(Ia, {
-            state: SM,
-            item: iM,
-            price: (0, kM.e)(iM),
-            busy: nM,
-            onAct: zM,
-            onNeedRecipient: mM,
-            onLogin: HM
+          }), (0, YU.jsx)(JA, {
+            state: yU,
+            item: zU,
+            price: (0, uU.i)(zU),
+            busy: oU,
+            onAct: EU,
+            onNeedRecipient: NU,
+            onLogin: IU
           })]
         })]
       })
     }
-    var MP = iM(3449),
-      rP = iM(1636),
-      iP = iM(1530),
-      OP = iM(3961);
+    var UF = zU(3409),
+      XF = zU(1603),
+      zF = zU(1507),
+      cF = zU(3958);
 
-    function SP() {
-      return (0, LM.jsx)("span", {
+    function yF() {
+      return (0, YU.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var jP = iM(1424),
-      aP = iM(1645),
-      PP = iM(35051);
+    var QF = zU(1408),
+      AF = zU(1613),
+      FF = zU(34900);
 
-    function nP(MM) {
+    function oF(UU) {
       let {
-        character: rM,
-        drawn: iM,
-        onDrawn: SM
-      } = MM;
-      const aM = (0, OM.useRef)(null),
-        PM = (0, PP.h)(rM);
-      return (0, LM.jsx)("div", {
-        className: jM()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: iM
+        character: XU,
+        drawn: zU,
+        onDrawn: yU
+      } = UU;
+      const AU = (0, cU.useRef)(null),
+        FU = (0, FF.d)(XU);
+      return (0, YU.jsx)("div", {
+        className: QU()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: zU
         }),
-        children: (0, LM.jsx)(OM.Suspense, {
+        children: (0, YU.jsx)(cU.Suspense, {
           fallback: null,
-          children: (0, LM.jsx)(oa.c, {
-            ref: aM,
+          children: (0, YU.jsx)(iA.d, {
+            ref: AU,
             framing: "store",
-            turntableFromYaw: iM ? PM.yaw : null,
+            turntableFromYaw: zU ? FU.yaw : null,
             onReady: () => {
-              var MM, iM;
-              null === (MM = aM.current) || void 0 === MM || MM.setOrbit(PM), null === (iM = aM.current) || void 0 === iM || iM.setAllCosmetics(aP.d[rM].cosmetics)
+              var UU, zU;
+              null === (UU = AU.current) || void 0 === UU || UU.setOrbit(FU), null === (zU = AU.current) || void 0 === zU || zU.setAllCosmetics(AF.d[XU].cosmetics)
             },
-            onDrawn: SM
+            onDrawn: yU
           })
         })
       })
     }
-    const QP = {
+    const DF = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      zP = new Set(["wildSpirits"]);
+      EF = new Set(["wildSpirits"]);
 
-    function LP(MM) {
-      var rM;
+    function YF(UU) {
+      var XU;
       let {
-        tile: iM,
-        design: SM,
-        canGoLive: nM,
-        live: QM,
-        busy: zM,
-        highlight: mM,
-        onLiveStart: HM,
-        onLiveEnd: hM,
-        onOpen: JM,
-        onAct: dM,
-        onNeedRecipient: yM,
-        onLogin: lM
-      } = MM;
+        tile: zU,
+        design: yU,
+        canGoLive: oU,
+        live: DU,
+        busy: EU,
+        highlight: NU,
+        onLiveStart: IU,
+        onLiveEnd: pU,
+        onOpen: aU,
+        onAct: tU,
+        onNeedRecipient: gU,
+        onLogin: kU
+      } = UU;
       const {
-        t: EM
-      } = (0, aM.A)(), {
-        pack: UM,
-        state: GM
-      } = iM, CM = ia.d[UM], eM = (0, ia.h)(UM), bM = (0, Ga.j)(UM), wM = Qa.k[bM], tM = zP.has(bM), {
-        tier: gM
-      } = CM, uM = "legendary" === gM || "mythic" === gM, RM = (0, OM.useRef)(null);
-      (0, jP.e)(RM, "epic" === gM || uM || tM);
-      const [pM, sM] = (0, OM.useState)(!1);
-      return !QM && pM && sM(!1), (0, LM.jsxs)("div", {
-        ref: RM,
-        className: jM()("StoreCharacterCard", `StoreCharacterCard${SM}`, QP[gM], {
-          StoreCharacterCardOwned: "owned" === GM || "recipientOwns" === GM,
-          StoreCharacterCardGift: va(GM),
-          StoreCharacterCardItem: void 0 === eM
+        t: GU
+      } = (0, AU.I)(), {
+        pack: BU,
+        state: ZU
+      } = zU, RU = zA.c[BU], PU = (0, zA.d)(BU), WU = (0, ZA.m)(BU), dU = DA.p[WU], LU = EF.has(WU), {
+        tier: eU
+      } = RU, CU = "legendary" === eU || "mythic" === eU, wU = (0, cU.useRef)(null);
+      (0, QF.b)(wU, "epic" === eU || CU || LU);
+      const [qU, SU] = (0, cU.useState)(!1);
+      return !DU && qU && SU(!1), (0, YU.jsxs)("div", {
+        ref: wU,
+        className: QU()("StoreCharacterCard", `StoreCharacterCard${yU}`, DF[eU], {
+          StoreCharacterCardOwned: "owned" === ZU || "recipientOwns" === ZU,
+          StoreCharacterCardGift: nA(ZU),
+          StoreCharacterCardItem: void 0 === PU
         }),
-        onPointerMove: MM => {
-          "mouse" !== MM.pointerType || 0 === MM.movementX && 0 === MM.movementY || !nM || QM || void 0 === eM || HM()
+        onPointerMove: UU => {
+          "mouse" !== UU.pointerType || 0 === UU.movementX && 0 === UU.movementY || !oU || DU || void 0 === PU || IU()
         },
-        onPointerLeave: hM,
-        children: [(0, LM.jsx)("div", {
+        onPointerLeave: pU,
+        children: [(0, YU.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: wM && (0, LM.jsx)(wM, {
+          children: dU && (0, YU.jsx)(dU, {
             simple: !0
           })
-        }), uM && (0, LM.jsx)("div", {
+        }), CU && (0, YU.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, LM.jsxs)(WM.LinkPreserveSearch, {
+        }), (0, YU.jsxs)(OU.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, rP.f)({
+          to: (0, XF.f)({
             kind: "pack",
-            pack: UM
+            pack: BU
           }),
-          "data-store-item": UM,
-          onClick: MM => {
-            (0, iP.d)(MM) && (MM.preventDefault(), JM())
+          "data-store-item": BU,
+          onClick: UU => {
+            (0, zF.c)(UU) && (UU.preventDefault(), aU())
           },
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, LM.jsx)("div", {
-              className: jM()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: pM
+            }), (0, YU.jsx)("div", {
+              className: QU()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: qU
               }),
               style: {
-                backgroundImage: `url(${(0,Ga.q)(UM)})`
+                backgroundImage: `url(${(0,ZA.v)(BU)})`
               }
-            }), QM && void 0 !== eM && (0, LM.jsx)(nP, {
-              character: eM,
-              drawn: pM,
+            }), DU && void 0 !== PU && (0, YU.jsx)(oF, {
+              character: PU,
+              drawn: qU,
               onDrawn: () => {
-                sM(!0)
+                SU(!0)
               }
             })]
-          }), (0, LM.jsx)("div", {
+          }), (0, YU.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (rM = CM.displayName) && void 0 !== rM ? rM : UM
-          }), (0, LM.jsx)(Na.d, {
-            tier: gM,
+            children: null !== (XU = RU.displayName) && void 0 !== XU ? XU : BU
+          }), (0, YU.jsx)(vA.c, {
+            tier: eU,
             className: "StoreCharacterTier"
           })]
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), tM && (0, LM.jsx)("span", {
+        }), LU && (0, YU.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, LM.jsx)(SP, {})
-        }), (0, LM.jsx)(Aa.e, {
-          pack: UM,
+          children: (0, YU.jsx)(yF, {})
+        }), (0, YU.jsx)(VA.d, {
+          pack: BU,
           iconOnly: !0,
-          className: jM()({
-            PackAnimatedBadgeBelowOwned: "owned" === GM
+          className: QU()({
+            PackAnimatedBadgeBelowOwned: "owned" === ZU
           })
-        }), "owned" === GM && (0, LM.jsx)("span", {
+        }), "owned" === ZU && (0, YU.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: EM("general:owned"),
-          "aria-label": EM("general:owned"),
-          children: (0, LM.jsx)(PM.b, {
+          title: GU("general:owned"),
+          "aria-label": GU("general:owned"),
+          children: (0, YU.jsx)(FU.d, {
             name: "check"
           })
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, LM.jsx)(Ia, {
-            state: GM,
-            item: UM,
-            price: (0, kM.e)(UM),
-            busy: zM,
-            highlight: mM,
-            onAct: dM,
-            onNeedRecipient: yM,
-            onLogin: lM
+          children: (0, YU.jsx)(JA, {
+            state: ZU,
+            item: BU,
+            price: (0, uU.i)(BU),
+            busy: EU,
+            highlight: NU,
+            onAct: tU,
+            onNeedRecipient: gU,
+            onLogin: kU
           })
         })]
       })
     }
 
-    function mP(MM) {
+    function NF(UU) {
       let {
-        tiles: rM,
-        busy: iM,
-        highlightItem: SM,
-        onOpen: jM,
-        onAct: aM,
-        onNeedRecipient: PM,
-        onLogin: nM
-      } = MM;
-      const QM = (0, OP.n)("storeCharacterCardFoil"),
-        zM = (0, OP.n)("storeCharacterCardSpotlight"),
-        mM = QM ? "Foil" : zM ? "Spotlight" : "Showcase",
-        [HM] = (0, OM.useState)(Ea.f),
-        [hM, JM] = (0, OM.useState)(null);
-      return (0, LM.jsx)("div", {
+        tiles: XU,
+        busy: zU,
+        highlightItem: yU,
+        onOpen: QU,
+        onAct: AU,
+        onNeedRecipient: FU,
+        onLogin: oU
+      } = UU;
+      const DU = (0, cF.u)("storeCharacterCardFoil"),
+        EU = (0, cF.u)("storeCharacterCardSpotlight"),
+        NU = DU ? "Foil" : EU ? "Spotlight" : "Showcase",
+        [IU] = (0, cU.useState)(GA.i),
+        [pU, aU] = (0, cU.useState)(null);
+      return (0, YU.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: rM.map((MM => (0, LM.jsx)(LP, {
-          tile: MM,
-          design: mM,
-          canGoLive: !HM,
-          live: hM === MM.pack,
-          busy: iM,
-          highlight: SM === MM.pack,
+        children: XU.map((UU => (0, YU.jsx)(YF, {
+          tile: UU,
+          design: NU,
+          canGoLive: !IU,
+          live: pU === UU.pack,
+          busy: zU,
+          highlight: yU === UU.pack,
           onLiveStart: () => {
-            JM(MM.pack)
+            aU(UU.pack)
           },
           onLiveEnd: () => {
-            JM((rM => rM === MM.pack ? null : rM))
+            aU((XU => XU === UU.pack ? null : XU))
           },
           onOpen: () => {
-            jM(MM.pack)
+            QU(UU.pack)
           },
           onAct: () => {
-            aM(MM.pack)
+            AU(UU.pack)
           },
-          onNeedRecipient: PM,
+          onNeedRecipient: FU,
           onLogin: () => {
-            nM(MM.pack)
+            oU(UU.pack)
           }
-        }, MM.pack)))
+        }, UU.pack)))
       })
     }
-    var HP = iM(35064);
+    var IF = zU(34909);
 
-    function hP(MM) {
+    function pF(UU) {
       let {
-        title: rM
-      } = MM;
-      return (0, LM.jsx)("h2", {
+        title: XU
+      } = UU;
+      return (0, YU.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, LM.jsx)("span", {
+        children: (0, YU.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: rM
+          children: XU
         })
       })
     }
 
-    function JP(MM) {
+    function aF(UU) {
       let {
-        mountAtOnce: rM,
-        children: iM
-      } = MM;
-      const SM = (0, OM.useRef)(null),
-        [jM, aM] = (0, OM.useState)(rM),
-        PM = (0, HP.d)();
-      return (0, OM.useLayoutEffect)((() => {
-        const MM = SM.current;
-        MM && MM.getBoundingClientRect().top < MM.parentElement.getBoundingClientRect().bottom && aM(!0)
-      }), []), jM || PM ? (0, LM.jsx)(LM.Fragment, {
-        children: iM
-      }) : (0, LM.jsx)("div", {
-        ref: SM
+        mountAtOnce: XU,
+        children: zU
+      } = UU;
+      const yU = (0, cU.useRef)(null),
+        [QU, AU] = (0, cU.useState)(XU),
+        FU = (0, IF.b)();
+      return (0, cU.useLayoutEffect)((() => {
+        const UU = yU.current;
+        UU && UU.getBoundingClientRect().top < UU.parentElement.getBoundingClientRect().bottom && AU(!0)
+      }), []), QU || FU ? (0, YU.jsx)(YU.Fragment, {
+        children: zU
+      }) : (0, YU.jsx)("div", {
+        ref: yU
       })
     }
 
-    function dP(MM) {
+    function tF(UU) {
       let {
-        layout: rM,
-        mountAtOnce: iM,
-        bundleGift: OM,
-        superRankTotalDays: SM,
-        busy: jM,
-        highlightItem: PM,
-        onOpen: nM,
-        onAct: QM,
-        onNeedRecipient: zM,
-        onLogin: mM,
-        dailyDropTile: HM,
-        dealBanner: hM
-      } = MM;
+        layout: XU,
+        mountAtOnce: zU,
+        bundleGift: cU,
+        superRankTotalDays: yU,
+        busy: QU,
+        highlightItem: FU,
+        onOpen: oU,
+        onAct: DU,
+        onNeedRecipient: EU,
+        onLogin: NU,
+        dailyDropTile: IU,
+        dealBanner: pU
+      } = UU;
       const {
-        t: JM
-      } = (0, aM.A)(), dM = rM.packs.filter((MM => void 0 === (0, ia.h)(MM.pack) && !(0, ia.p)(MM.pack))), yM = rM.packs.filter((MM => void 0 !== (0, ia.h)(MM.pack))), lM = rM.packs.filter((MM => (0, ia.p)(MM.pack)));
-      return (0, LM.jsxs)(LM.Fragment, {
-        children: [(0, LM.jsx)(MP.b, {
+        t: aU
+      } = (0, AU.I)(), tU = XU.packs.filter((UU => void 0 === (0, zA.d)(UU.pack) && !(0, zA.k)(UU.pack))), gU = XU.packs.filter((UU => void 0 !== (0, zA.d)(UU.pack))), kU = XU.packs.filter((UU => (0, zA.k)(UU.pack)));
+      return (0, YU.jsxs)(YU.Fragment, {
+        children: [(0, YU.jsx)(UF.e, {
           className: "StoreSuperGems",
-          gift: OM,
-          highlightSku: PM,
-          leadingTile: HM,
-          afterLeadingTile: hM
-        }), (0, LM.jsx)(hP, {
-          title: JM("store:rank")
-        }), (0, LM.jsx)(Ta, {
-          state: rM.superRank.state,
-          urgent: rM.superRank.urgent,
-          daysLeft: rM.superRankDaysLeft,
-          totalDays: SM,
-          recipientHasSuperRank: rM.recipientHasSuperRank,
-          busy: jM,
-          highlight: "superRank" === PM,
+          gift: cU,
+          highlightSku: FU,
+          leadingTile: IU,
+          afterLeadingTile: pU
+        }), (0, YU.jsx)(pF, {
+          title: aU("store:rank")
+        }), (0, YU.jsx)(bA, {
+          state: XU.superRank.state,
+          urgent: XU.superRank.urgent,
+          daysLeft: XU.superRankDaysLeft,
+          totalDays: yU,
+          recipientHasSuperRank: XU.recipientHasSuperRank,
+          busy: QU,
+          highlight: "superRank" === FU,
           onOpen: () => {
-            nM("superRank")
+            oU("superRank")
           },
           onAct: () => {
-            QM("superRank")
+            DU("superRank")
           },
-          onNeedRecipient: zM,
+          onNeedRecipient: EU,
           onLogin: () => {
-            mM("superRank")
+            NU("superRank")
           }
-        }), (0, LM.jsxs)(JP, {
-          mountAtOnce: iM,
-          children: [(0, LM.jsx)(hP, {
-            title: JM("store:bundles")
-          }), (0, LM.jsx)("div", {
+        }), (0, YU.jsxs)(aF, {
+          mountAtOnce: zU,
+          children: [(0, YU.jsx)(pF, {
+            title: aU("store:bundles")
+          }), (0, YU.jsx)("div", {
             className: "StorePackGrid",
-            children: dM.map((MM => (0, LM.jsx)(ca, {
-              pack: MM.pack,
-              state: MM.state,
-              busy: jM,
+            children: tU.map((UU => (0, YU.jsx)(hA, {
+              pack: UU.pack,
+              state: UU.state,
+              busy: QU,
               onOpen: () => {
-                nM(MM.pack)
+                oU(UU.pack)
               },
               onAct: () => {
-                QM(MM.pack)
+                DU(UU.pack)
               },
-              onNeedRecipient: zM,
+              onNeedRecipient: EU,
               onLogin: () => {
-                mM(MM.pack)
+                NU(UU.pack)
               }
-            }, MM.pack)))
-          }), (0, LM.jsxs)(JP, {
-            mountAtOnce: iM,
-            children: [(0, LM.jsx)(hP, {
-              title: JM("store:characters")
-            }), (0, LM.jsx)(mP, {
-              tiles: yM,
-              busy: jM,
-              highlightItem: PM,
-              onOpen: nM,
-              onAct: QM,
-              onNeedRecipient: zM,
-              onLogin: mM
-            }), lM.length > 0 && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsx)(hP, {
-                title: JM("store:premiumItems")
-              }), (0, LM.jsx)(mP, {
-                tiles: lM,
-                busy: jM,
-                highlightItem: PM,
-                onOpen: nM,
-                onAct: QM,
-                onNeedRecipient: zM,
-                onLogin: mM
+            }, UU.pack)))
+          }), (0, YU.jsxs)(aF, {
+            mountAtOnce: zU,
+            children: [(0, YU.jsx)(pF, {
+              title: aU("store:characters")
+            }), (0, YU.jsx)(NF, {
+              tiles: gU,
+              busy: QU,
+              highlightItem: FU,
+              onOpen: oU,
+              onAct: DU,
+              onNeedRecipient: EU,
+              onLogin: NU
+            }), kU.length > 0 && (0, YU.jsxs)(YU.Fragment, {
+              children: [(0, YU.jsx)(pF, {
+                title: aU("store:premiumItems")
+              }), (0, YU.jsx)(NF, {
+                tiles: kU,
+                busy: QU,
+                highlightItem: FU,
+                onOpen: oU,
+                onAct: DU,
+                onNeedRecipient: EU,
+                onLogin: NU
               })]
             })]
           })]
@@ -6946,512 +6946,535 @@ export const modules = {
       })
     }
 
-    function yP(MM) {
+    function gF(UU) {
       let {
-        state: rM,
-        mode: iM,
-        giftName: OM,
-        busy: SM,
-        highlight: jM,
-        purchaseError: PM,
-        onBack: nM,
-        onChooseRecipient: zM,
-        onAct: mM,
-        onLogin: HM
-      } = MM;
+        state: XU,
+        mode: zU,
+        giftName: cU,
+        busy: yU,
+        highlight: QU,
+        purchaseError: FU,
+        onBack: oU,
+        onChooseRecipient: EU,
+        onAct: NU,
+        onLogin: IU
+      } = UU;
       const {
-        t: hM
-      } = (0, aM.A)(), JM = TM("gift" !== iM);
-      return (0, LM.jsx)(Za, {
-        onBack: nM,
-        recipient: "gift" === iM && (0, LM.jsxs)(LM.Fragment, {
-          children: [OM && (0, LM.jsxs)("span", {
+        t: pU
+      } = (0, AU.I)(), aU = bU("gift" !== zU);
+      return (0, YU.jsx)(fA, {
+        onBack: oU,
+        recipient: "gift" === zU && (0, YU.jsxs)(YU.Fragment, {
+          children: [cU && (0, YU.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: hM("store:giftFor", {
-              name: OM
+            title: pU("store:giftFor", {
+              name: cU
             }),
-            children: [La.e, " ", hM("store:giftFor", {
-              name: OM
+            children: [YA.d, " ", pU("store:giftFor", {
+              name: cU
             })]
-          }), !OM && (0, LM.jsxs)("div", {
-            ...(0, QM.fb)(),
+          }), !cU && (0, YU.jsxs)("div", {
+            ...(0, DU.W)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: zM,
-            children: [La.e, " ", hM("store:chooseRecipient")]
+            onClick: EU,
+            children: [YA.d, " ", pU("store:chooseRecipient")]
           })]
         }),
-        cta: (0, LM.jsx)(Ia, {
-          state: rM,
+        cta: (0, YU.jsx)(JA, {
+          state: XU,
           item: "superRank",
-          price: kM.k.price,
-          busy: SM,
-          highlight: jM,
-          onAct: mM,
-          onNeedRecipient: zM,
-          onLogin: HM
+          price: uU.n.price,
+          busy: yU,
+          highlight: QU,
+          onAct: NU,
+          onNeedRecipient: EU,
+          onLogin: IU
         }),
-        afterCta: (0, LM.jsxs)(LM.Fragment, {
-          children: [JM && (0, LM.jsx)("span", {
+        afterCta: (0, YU.jsxs)(YU.Fragment, {
+          children: [aU && (0, YU.jsx)("span", {
             className: "StoreTileNote",
-            children: JM.text
-          }), (null === JM || void 0 === JM ? void 0 : JM.manageUrl) && (0, LM.jsx)("a", {
+            children: aU.text
+          }), (null === aU || void 0 === aU ? void 0 : aU.manageUrl) && (0, YU.jsx)("a", {
             className: "StoreTileNote StoreManageSubscription",
-            href: JM.manageUrl,
+            href: aU.manageUrl,
             target: "_blank",
             rel: "noreferrer",
-            children: hM("payments:manageSubscription")
-          }), PM && (0, LM.jsx)("span", {
+            children: pU("payments:manageSubscription")
+          }), FU && (0, YU.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: hM(PM)
+            children: pU(FU)
           })]
         })
       })
     }
-    var lP = iM(125);
-    const EP = lP.k("kind", [lP.F({
-      kind: lP.s("refused"),
-      heldTierId: lP._(),
-      until: lP.C()
-    }), lP.F({
-      kind: lP.s("refund"),
-      tierId: lP._(),
-      refundedMs: lP.C(),
-      forfeitedMs: lP.C(),
-      premiumCurrency: lP.C()
-    }), lP.F({
-      kind: lP.s("none")
+    var kF = zU(153);
+    const GF = kF.m("kind", [kF.F({
+      kind: kF.t("refused"),
+      heldTierId: kF.V(),
+      until: kF.D()
+    }), kF.F({
+      kind: kF.t("refund"),
+      tierId: kF.V(),
+      refundedMs: kF.D(),
+      forfeitedMs: kF.D(),
+      premiumCurrency: kF.D()
+    }), kF.F({
+      kind: kF.t("none")
     })]);
-    async function UP(MM) {
-      const rM = await (0, uM.postJsonWithMetricsCookiesAndJsonResponse)(`${lr.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: MM
+    async function BF(UU) {
+      const XU = await (0, CU.postJsonWithMetricsCookiesAndJsonResponse)(`${aX.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: UU
       }, {
         retries: 1
       });
-      return EP.parse(rM)
+      return GF.parse(XU)
     }
-    var GP = iM(3411),
-      CP = iM(3452);
+    var ZF = zU(3374),
+      RF = zU(3417);
 
-    function eP(MM, rM) {
-      const iM = Math.max(1, Math.round(rM / fM.i));
-      return [1 === iM ? `${MM}OneDay` : MM, {
-        days: iM.toLocaleString()
+    function PF(UU, XU) {
+      const zU = Math.max(1, Math.round(XU / HU.h));
+      return [1 === zU ? `${UU}OneDay` : UU, {
+        days: zU.toLocaleString()
       }]
     }
 
-    function bP(MM) {
+    function WF(UU) {
       let {
-        price: rM
-      } = MM;
+        price: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: zU
+      } = (0, AU.I)();
+      return (0, YU.jsxs)("div", {
         className: "StoreSubscriptionTerms",
-        children: [(0, LM.jsx)(Ka, {}), (0, LM.jsx)("div", {
+        children: [(0, YU.jsx)(jA, {}), (0, YU.jsx)("div", {
           className: "SmallTextLight",
-          children: iM("payments:subscriptionRenewsMonthly", {
-            price: rM
+          children: zU("payments:subscriptionRenewsMonthly", {
+            price: XU
           })
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "StoreSubscriptionTermsLinks SmallTextLight",
-          children: [(0, LM.jsx)("a", {
+          children: [(0, YU.jsx)("a", {
             href: "/terms-of-service",
             target: "_blank",
             rel: "noreferrer",
-            children: iM("homePage:termsOfService")
-          }), (0, LM.jsx)("a", {
+            children: zU("homePage:termsOfService")
+          }), (0, YU.jsx)("a", {
             href: "/privacy-policy",
             target: "_blank",
             rel: "noreferrer",
-            children: iM("homePage:privacyPolicy")
+            children: zU("homePage:privacyPolicy")
           })]
         })]
       })
     }
 
-    function wP() {
-      const MM = (0, NM.usePurchasesAllowed)();
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && MM && (0, NM.subscriptionsSold)() ? (0, LM.jsx)(tP, {}) : null
+    function dF() {
+      const UU = (0, vU.usePurchasesAllowed)();
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && UU && (0, vU.subscriptionsSold)() ? (0, YU.jsx)(LF, {}) : null
     }
 
-    function tP() {
+    function LF() {
       const {
-        t: MM
-      } = (0, aM.A)(), {
-        userContext: rM
-      } = (0, hM.b)(), {
-        purchaseUnderWay: iM,
-        notice: SM,
-        subscribe: jM
-      } = (0, GP.d)(), [PM, nM] = (0, OM.useState)(null), [zM, mM] = (0, OM.useState)(0), [HM, JM] = (0, OM.useState)(!1), dM = (0, OM.useRef)(!0), lM = rM !== uM.NULL_USER_CONTEXT, EM = null !== PM && PM.loadedFor === rM ? PM.offer : null, UM = null === SM || void 0 === SM ? void 0 : SM.pendingIntentId, GM = (0, OM.useRef)(UM);
+        t: UU
+      } = (0, AU.I)(), {
+        userContext: XU
+      } = (0, pU.d)(), {
+        purchaseUnderWay: zU,
+        notice: yU,
+        subscribe: QU
+      } = (0, ZF.b)(), [FU, oU] = (0, cU.useState)(null), [EU, NU] = (0, cU.useState)(0), [IU, aU] = (0, cU.useState)(!1), tU = (0, cU.useRef)(!0), kU = XU !== CU.NULL_USER_CONTEXT, GU = null !== FU && FU.loadedFor === XU ? FU.offer : null, BU = null === yU || void 0 === yU ? void 0 : yU.pendingIntentId, ZU = (0, cU.useRef)(BU);
 
-      function CM() {
-        mM((MM => MM + 1))
+      function RU() {
+        NU((UU => UU + 1))
       }
-      async function eM(MM) {
-        JM(!1), await jM(MM), dM.current && CM()
+      async function PU(UU) {
+        aU(!1), await QU(UU), tU.current && RU()
       }
-      if ((0, OM.useEffect)((() => (dM.current = !0, () => {
-          dM.current = !1
-        })), []), (0, OM.useEffect)((() => {
-          void 0 !== GM.current && void 0 === UM && CM(), GM.current = UM
-        }), [UM]), (0, OM.useEffect)((() => {
-          if (!lM) return;
-          let MM = !1;
-          return JM(!1), async function() {
+      if ((0, cU.useEffect)((() => (tU.current = !0, () => {
+          tU.current = !1
+        })), []), (0, cU.useEffect)((() => {
+          void 0 !== ZU.current && void 0 === BU && RU(), ZU.current = BU
+        }), [BU]), (0, cU.useEffect)((() => {
+          if (!kU) return;
+          let UU = !1;
+          return aU(!1), async function() {
             const {
-              offering: MM
-            } = await (0, KM.getBillingClient)().getOfferings("superRankPage"), rM = null === MM || void 0 === MM ? void 0 : MM.packages.find(Oa.isPricedPackage);
-            return void 0 === rM ? {
+              offering: UU
+            } = await (0, jU.getBillingClient)().getOfferings("superRankPage"), XU = null === UU || void 0 === UU ? void 0 : UU.packages.find(cA.isPricedPackage);
+            return void 0 === XU ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: rM,
-              preview: await UP(rM.productId)
+              pkg: XU,
+              preview: await BF(XU.productId)
             }
-          }().catch((MM => (console.error("Billing: loading the Super Rank subscription or its preview failed:", MM), {
+          }().catch((UU => (console.error("Billing: loading the Super Rank subscription or its preview failed:", UU), {
             kind: "loadFailed"
-          }))).then((iM => {
-            MM || nM((MM => "loadFailed" === iM.kind && (null === MM || void 0 === MM ? void 0 : MM.loadedFor) === rM ? MM : {
-              loadedFor: rM,
-              offer: iM
+          }))).then((zU => {
+            UU || oU((UU => "loadFailed" === zU.kind && (null === UU || void 0 === UU ? void 0 : UU.loadedFor) === XU ? UU : {
+              loadedFor: XU,
+              offer: zU
             }))
           })), () => {
-            MM = !0
+            UU = !0
           }
-        }), [rM, lM, zM]), null === EM) return null;
-      if ("loaded" !== EM.kind) return (0, LM.jsx)(CP.i, {
+        }), [XU, kU, EU]), null === GU) return null;
+      if ("loaded" !== GU.kind) return (0, YU.jsx)(RF.h, {
         notice: {
           kind: "error",
-          key: "unavailable" === EM.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === GU.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: bM,
-        preview: wM
-      } = EM;
-      if ("refused" === wM.kind) return (0, LM.jsx)(CP.i, {
+        pkg: WU,
+        preview: dU
+      } = GU;
+      if ("refused" === dU.kind) return (0, YU.jsx)(RF.h, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(wM.until).toLocaleDateString()
+            date: new Date(dU.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const tM = (0, MP.c)(bM),
-        gM = (0, yM.isMobileApp)() && (0, LM.jsx)(bP, {
-          price: tM
+      const LU = (0, UF.g)(WU),
+        eU = (0, gU.isMobileApp)() && (0, YU.jsx)(WF, {
+          price: LU
         });
-      if (HM && "refund" === wM.kind) {
+      if (IU && "refund" === dU.kind) {
         const {
-          refundedMs: rM,
-          forfeitedMs: OM,
-          premiumCurrency: SM
-        } = wM, jM = OM + (0 === SM ? rM : 0), [aM, PM] = eP("payments:subscribeRefundsGemRank", rM), [nM, zM] = eP("payments:subscribeForfeitsGemRank", jM);
-        return (0, LM.jsxs)("div", {
+          refundedMs: XU,
+          forfeitedMs: cU,
+          premiumCurrency: yU
+        } = dU, QU = cU + (0 === yU ? XU : 0), [AU, FU] = PF("payments:subscribeRefundsGemRank", XU), [oU, EU] = PF("payments:subscribeForfeitsGemRank", QU);
+        return (0, YU.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, LM.jsx)("div", {
-            children: MM("payments:subscribeEndsGemRank")
-          }), SM > 0 && (0, LM.jsx)("div", {
-            children: MM(aM, {
-              ...PM,
-              amount: SM.toLocaleString()
+          children: [(0, YU.jsx)("div", {
+            children: UU("payments:subscribeEndsGemRank")
+          }), yU > 0 && (0, YU.jsx)("div", {
+            children: UU(AU, {
+              ...FU,
+              amount: yU.toLocaleString()
             })
-          }), jM > 0 && (0, LM.jsx)("div", {
-            children: MM(nM, zM)
-          }), (0, LM.jsxs)("div", {
+          }), QU > 0 && (0, YU.jsx)("div", {
+            children: UU(oU, EU)
+          }), (0, YU.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, LM.jsx)(QM.i, {
+            children: [(0, YU.jsx)(DU.j, {
               onClick: () => {
-                JM(!1)
+                aU(!1)
               },
-              children: MM("general:cancel")
-            }), (0, LM.jsx)(QM.p, {
+              children: UU("general:cancel")
+            }), (0, YU.jsx)(DU.l, {
               onClick: () => {
-                eM(bM)
+                PU(WU)
               },
-              loading: iM,
-              children: MM("payments:subscribeContinue", {
-                price: tM
+              loading: zU,
+              children: UU("payments:subscribeContinue", {
+                price: LU
               })
             })]
-          }), gM]
+          }), eU]
         })
       }
-      return (0, LM.jsxs)("div", {
+      return (0, YU.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, LM.jsx)(CP.i, {
-          notice: SM,
+        children: [(0, YU.jsx)(RF.h, {
+          notice: yU,
           className: "SmallTextBold"
-        }), (0, LM.jsx)(CP.b, {
+        }), (0, YU.jsx)(RF.b, {
           className: "SmallTextBold"
-        }), (0, LM.jsx)(QM.p, {
+        }), (0, YU.jsx)(DU.l, {
           onClick: () => {
-            "refund" === wM.kind ? JM(!0) : eM(bM)
+            "refund" === dU.kind ? aU(!0) : PU(WU)
           },
-          disabled: void 0 !== UM,
-          loading: iM,
-          children: MM("payments:subscribeToSuperRank", {
-            price: tM
+          disabled: void 0 !== BU,
+          loading: zU,
+          children: UU("payments:subscribeToSuperRank", {
+            price: LU
           })
-        }), gM]
+        }), eU]
       })
     }
-    var gP = iM(2768);
+    var eF = zU(2776);
 
-    function uP(MM) {
+    function CF(UU) {
       let {
-        state: rM,
-        view: iM,
-        claiming: SM,
-        onOpen: PM
-      } = MM;
+        state: XU,
+        view: zU,
+        claiming: yU,
+        onOpen: FU
+      } = UU;
       const {
-        t: zM
-      } = (0, aM.A)(), mM = (0, OM.useRef)(null), HM = "ready" === iM.kind;
-      return (0, jP.e)(mM, HM), (0, LM.jsxs)("div", {
-        ref: mM,
-        className: jM()("DailyDropTile", {
-          DailyDropTileReady: HM
+        t: EU
+      } = (0, AU.I)(), NU = (0, cU.useRef)(null), IU = "ready" === zU.kind;
+      return (0, QF.b)(NU, IU), (0, YU.jsxs)("div", {
+        ref: NU,
+        className: QU()("DailyDropTile", {
+          DailyDropTileReady: IU
         }),
-        children: [HM && (0, LM.jsx)(nM.d, {
+        children: [IU && (0, YU.jsx)(oU.c, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: zM("dailyDrop:name")
-        }), (0, LM.jsxs)("div", {
+          children: EU("dailyDrop:name")
+        }), (0, YU.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, LM.jsx)(gP.c, {
+          children: [(0, YU.jsx)(eF.d, {
             className: "DailyDropTileBlock"
-          }), (0, LM.jsx)("div", {
+          }), (0, YU.jsx)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: zM("dailyDrop:collected", {
-              count: rM.collected.length,
-              total: rM.total
+            children: EU("dailyDrop:collected", {
+              count: XU.collected.length,
+              total: XU.total
             })
           })]
-        }), "ready" === iM.kind && (0, LM.jsx)(QM.p, {
+        }), "ready" === zU.kind && (0, YU.jsx)(DU.l, {
           className: "DailyDropTileOpen",
-          onClick: PM,
-          loading: SM,
-          children: zM("dailyDrop:open")
-        }), "waiting" === iM.kind && (0, LM.jsx)("div", {
+          onClick: FU,
+          loading: yU,
+          children: EU("dailyDrop:open")
+        }), "waiting" === zU.kind && (0, YU.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: zM("dailyDrop:nextIn", {
-            count: iM.hours
+          children: EU("dailyDrop:nextIn", {
+            count: zU.hours
           })
         })]
       })
     }
-    var RP = iM(2362);
-    const pP = Math.PI / 180;
+    var wF = zU(2334);
+    const qF = Math.PI / 180;
 
-    function WP(MM) {
-      return MM / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
+    function OF(UU) {
+      return UU / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
     }
 
-    function sP(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const OM = (MM / (2 * Math.PI / iM) % iM + iM) % iM;
-      let SM = null,
-        jM = 1 / 0;
-      for (let aM = 0; aM < iM; aM++) {
-        if (!rM[aM]) continue;
-        const MM = Math.abs(aM - OM),
-          PM = Math.min(MM, iM - MM);
-        PM < jM && (SM = aM, jM = PM)
+    function SF(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const cU = (UU / (2 * Math.PI / zU) % zU + zU) % zU;
+      let yU = null,
+        QU = 1 / 0;
+      for (let AU = 0; AU < zU; AU++) {
+        if (!XU[AU]) continue;
+        const UU = Math.abs(AU - cU),
+          FU = Math.min(UU, zU - UU);
+        FU < QU && (yU = AU, QU = FU)
       }
-      return SM
+      return yU
     }
 
-    function DP(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const OM = sP(MM, rM, iM);
-      if (null === OM) return MM;
-      const SM = WP(OM, iM) - MM;
-      return MM + SM - 2 * Math.PI * Math.round(SM / (2 * Math.PI))
+    function rF(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const cU = SF(UU, XU, zU);
+      if (null === cU) return UU;
+      const yU = OF(cU, zU) - UU;
+      return UU + yU - 2 * Math.PI * Math.round(yU / (2 * Math.PI))
     }
-    const kP = 32;
+    const uF = 32;
 
-    function ZP(MM) {
-      if (0 === MM.width || 0 === MM.height) return !0;
-      const rM = document.createElement("canvas");
-      rM.width = kP, rM.height = kP;
-      const iM = rM.getContext("2d", {
+    function fF(UU) {
+      if (0 === UU.width || 0 === UU.height) return !0;
+      const XU = document.createElement("canvas");
+      XU.width = uF, XU.height = uF;
+      const zU = XU.getContext("2d", {
         willReadFrequently: !0
       });
-      if (!iM) return !0;
-      iM.drawImage(MM, 0, 0, kP, kP);
+      if (!zU) return !0;
+      zU.drawImage(UU, 0, 0, uF, uF);
       const {
-        data: OM
-      } = iM.getImageData(0, 0, kP, kP);
-      for (let SM = 3; SM < OM.length; SM += 4)
-        if (OM[SM] > 0) return !1;
+        data: cU
+      } = zU.getImageData(0, 0, uF, uF);
+      for (let yU = 3; yU < cU.length; yU += 4)
+        if (cU[yU] > 0) return !1;
       return !0
     }
 
-    function oP(MM) {
-      const rM = document.createElement("canvas");
-      rM.width = MM.width, rM.height = MM.height;
-      const iM = rM.getContext("2d");
-      return iM ? (iM.drawImage(MM, 0, 0), rM) : null
+    function iF(UU) {
+      const XU = document.createElement("canvas");
+      XU.width = UU.width, XU.height = UU.height;
+      const zU = XU.getContext("2d");
+      return zU ? (zU.drawImage(UU, 0, 0), XU) : null
     }
 
-    function fP(MM) {
+    function HF(UU) {
       let {
-        worn: rM,
-        Ii: iM,
-        Ki: SM,
-        prompting: nM,
-        className: QM
-      } = MM;
+        cosmetics: XU
+      } = UU;
+      return (0, YU.jsx)("div", {
+        className: "DailyDropRevealHead",
+        children: (0, YU.jsx)(PA.b, {
+          cosmetics: XU
+        })
+      })
+    }
+
+    function MF(UU) {
+      let {
+        worn: XU,
+        FU: zU,
+        oU: yU,
+        prompting: oU,
+        className: DU
+      } = UU;
       const {
-        t: zM
-      } = (0, aM.A)(), mM = (0, OM.useRef)(null), [HM, hM] = (0, OM.useState)(null), [JM, dM] = (0, OM.useState)(!1), yM = (0, OM.useRef)([]), lM = (0, OM.useRef)(null), EM = (0, OM.useRef)(0), UM = (0, OM.useRef)(null), GM = (0, OM.useRef)(!0), eM = (0, OM.useCallback)((() => {
-        const MM = lM.current,
-          rM = yM.current,
-          iM = sP(EM.current, rM),
-          OM = null === iM ? null : rM[iM],
-          SM = null === MM || void 0 === MM ? void 0 : MM.getContext("2d");
-        MM && OM && SM && (MM.width === OM.width && MM.height === OM.height || (MM.width = OM.width, MM.height = OM.height), SM.clearRect(0, 0, MM.width, MM.height), SM.drawImage(OM, 0, 0))
+        t: EU
+      } = (0, AU.I)(), NU = (0, cU.useRef)(null), [IU, pU] = (0, cU.useState)(null), [aU, tU] = (0, cU.useState)(!1), [gU, kU] = (0, cU.useState)(!1), GU = (0, cU.useRef)([]), BU = (0, cU.useRef)(null), ZU = (0, cU.useRef)(0), PU = (0, cU.useRef)(null), WU = (0, cU.useRef)(!0), dU = (0, cU.useCallback)((() => {
+        const UU = BU.current,
+          XU = GU.current,
+          zU = SF(ZU.current, XU),
+          cU = null === zU ? null : XU[zU],
+          yU = null === UU || void 0 === UU ? void 0 : UU.getContext("2d");
+        UU && cU && yU && (UU.width === cU.width && UU.height === cU.height || (UU.width = cU.width, UU.height = cU.height), yU.clearRect(0, 0, UU.width, UU.height), yU.drawImage(cU, 0, 0))
       }), []);
-      async function bM(MM, rM) {
-        const iM = performance.now();
-        let OM = 0;
-        for (const SM of function() {
-            let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
-            const rM = [],
-              iM = new Set;
-            for (let OM = MM / 2; OM >= 1 && Number.isInteger(OM); OM /= 2)
-              for (let SM = 0; SM < MM; SM += OM) iM.has(SM) || (iM.add(SM), rM.push(SM));
-            for (let OM = 0; OM < MM; OM++) iM.has(OM) || rM.push(OM);
-            return rM
+      async function LU(UU, XU) {
+        const zU = performance.now();
+        let cU = 0;
+        for (const yU of function() {
+            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
+            const XU = [],
+              zU = new Set;
+            for (let cU = UU / 2; cU >= 1 && Number.isInteger(cU); cU /= 2)
+              for (let yU = 0; yU < UU; yU += cU) zU.has(yU) || (zU.add(yU), XU.push(yU));
+            for (let cU = 0; cU < UU; cU++) zU.has(cU) || XU.push(cU);
+            return XU
           }()) {
-          if (mM.current !== MM) break;
-          if (0 !== SM && (MM.turnCamera(WP(SM)), await new Promise((MM => {
+          if (NU.current !== UU) break;
+          if (0 !== yU && (UU.turnCamera(OF(yU)), await new Promise((UU => {
               requestAnimationFrame((() => {
                 requestAnimationFrame((() => {
-                  MM()
+                  UU()
                 }))
               }))
-            })), mM.current !== MM)) break;
-          const iM = ZP(rM) ? null : oP(rM);
-          if (null !== iM) yM.current[SM] = iM, OM++, 0 === SM && hM("stills");
-          else if (0 === SM) break
+            })), NU.current !== UU)) break;
+          const zU = fF(XU) ? null : iF(XU);
+          if (null !== zU) GU.current[yU] = zU, cU++, 0 === yU && pU("stills");
+          else if (0 === yU) break
         }
-        OM > 0 && console.info(`Lucky Skin Block's Before: ${OM} stills in ${Math.round(performance.now()-iM)} ms`)
+        cU > 0 && console.info(`Lucky Skin Block's Before: ${cU} stills in ${Math.round(performance.now()-zU)} ms`)
       }
 
-      function wM(MM) {
-        var rM, iM;
-        (null === (rM = UM.current) || void 0 === rM ? void 0 : rM.pointerId) === MM.pointerId && (UM.current = null, GM.current || (EM.current = DP(EM.current, yM.current), eM(), null === (iM = mM.current) || void 0 === iM || iM.turnCamera(EM.current)))
-      }(0, OM.useEffect)((() => {
-        "stills" === HM && eM()
-      }), [HM, eM]), (0, OM.useEffect)((() => () => {
-        for (const MM of yM.current) MM && (MM.width = 0, MM.height = 0);
-        yM.current = []
+      function eU(UU) {
+        var XU, zU;
+        (null === (XU = PU.current) || void 0 === XU ? void 0 : XU.pointerId) === UU.pointerId && (PU.current = null, WU.current || (ZU.current = rF(ZU.current, GU.current), dU(), null === (zU = NU.current) || void 0 === zU || zU.turnCamera(ZU.current)))
+      }(0, cU.useEffect)((() => {
+        "stills" === IU && dU()
+      }), [IU, dU]), (0, cU.useEffect)((() => () => {
+        for (const UU of GU.current) UU && (UU.width = 0, UU.height = 0);
+        GU.current = []
       }), []);
-      const tM = nM ? {
-        onPointerDown: MM => {
-          null === UM.current && (MM.currentTarget.setPointerCapture(MM.pointerId), UM.current = {
-            pointerId: MM.pointerId,
-            startX: MM.clientX,
-            startTurn: EM.current
-          })
-        },
-        onPointerMove: MM => {
-          const rM = UM.current;
-          var iM;
-          null !== rM && rM.pointerId === MM.pointerId && (EM.current = rM.startTurn - (MM.clientX - rM.startX) * pP, eM(), GM.current || null === (iM = mM.current) || void 0 === iM || iM.turnCamera(EM.current))
-        },
-        onPointerUp: wM,
-        onPointerCancel: wM
-      } : {};
-      return (0, LM.jsxs)("div", {
-        className: jM()("DailyDropRevealFigures", {
-          DailyDropRevealFiguresTurnable: nM
-        }, QM),
-        children: [(0, LM.jsxs)("div", {
+      const CU = oU && !gU,
+        wU = CU ? {
+          onPointerDown: UU => {
+            null === PU.current && (UU.currentTarget.setPointerCapture(UU.pointerId), PU.current = {
+              pointerId: UU.pointerId,
+              startX: UU.clientX,
+              startTurn: ZU.current
+            })
+          },
+          onPointerMove: UU => {
+            const XU = PU.current;
+            var zU;
+            null !== XU && XU.pointerId === UU.pointerId && (ZU.current = XU.startTurn - (UU.clientX - XU.startX) * qF, dU(), WU.current || null === (zU = NU.current) || void 0 === zU || zU.turnCamera(ZU.current))
+          },
+          onPointerUp: eU,
+          onPointerCancel: eU
+        } : {};
+      return (0, YU.jsxs)("div", {
+        className: QU()("DailyDropRevealFigures", {
+          DailyDropRevealFiguresTurnable: CU
+        }, DU),
+        children: [(0, YU.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            ...tM,
-            children: ["stills" === HM && (0, LM.jsx)("canvas", {
-              ref: lM,
+            ...wU,
+            children: ["stills" === IU && (0, YU.jsx)("canvas", {
+              ref: BU,
               className: "DailyDropRevealBeforeStill"
-            }), "head" === HM && (0, LM.jsx)("div", {
-              className: "DailyDropRevealBeforeHead",
-              children: (0, LM.jsx)(ea.c, {
-                cosmetics: rM
-              })
-            }), null === HM && (0, LM.jsx)(CM.d, {})]
-          }), (0, LM.jsx)("span", {
+            }), "head" === IU && (0, YU.jsx)(HF, {
+              cosmetics: XU
+            }), null === IU && (0, YU.jsx)(RU.b, {})]
+          }), (0, YU.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: zM("dailyDrop:before")
+            children: EU("dailyDrop:before")
           })]
-        }), (0, LM.jsx)(PM.b, {
+        }), (0, YU.jsx)(FU.d, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, LM.jsx)("div", {
-              className: jM()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: JM
+            children: [(0, YU.jsx)("div", {
+              className: QU()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: aU
               }),
-              children: (0, LM.jsx)(OM.Suspense, {
+              children: (0, YU.jsx)(cU.Suspense, {
                 fallback: null,
-                children: (0, LM.jsx)(oa.c, {
-                  ref: mM,
+                children: (0, YU.jsx)(iA.d, {
+                  onNoWebGl: () => {
+                    pU("head"), kU(!0)
+                  },
+                  ref: NU,
                   onReady: () => {
-                    var MM, iM;
-                    null === (MM = mM.current) || void 0 === MM || MM.resetCamera(), null === (iM = mM.current) || void 0 === iM || iM.setAllCosmetics(rM)
+                    var UU, zU;
+                    null === (UU = NU.current) || void 0 === UU || UU.resetCamera(), null === (zU = NU.current) || void 0 === zU || zU.setAllCosmetics(XU)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
                       !async function() {
-                        var MM;
-                        const rM = mM.current;
-                        if (!rM) return;
-                        const OM = null === (MM = rM.getDevTools()) || void 0 === MM ? void 0 : MM.canvas();
+                        var UU;
+                        const XU = NU.current;
+                        if (!XU) return;
+                        const cU = null === (UU = XU.getDevTools()) || void 0 === UU ? void 0 : UU.canvas();
                         try {
-                          OM && await bM(rM, OM)
-                        } catch (aM) {
-                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", aM)
+                          cU && await LU(XU, cU)
+                        } catch (AU) {
+                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", AU)
                         } finally {
-                          GM.current = !1
+                          WU.current = !1
                         }
-                        if (mM.current !== rM) return;
-                        yM.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), hM("head")), null === UM.current && (EM.current = DP(EM.current, yM.current)), rM.turnCamera(EM.current), eM(), rM.updateCosmetic(iM, SM);
-                        const jM = new Promise((MM => {
-                          setTimeout(MM, 1e4)
+                        if (NU.current !== XU) return;
+                        GU.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), pU("head")), null === PU.current && (ZU.current = rF(ZU.current, GU.current)), XU.turnCamera(ZU.current), dU(), XU.updateCosmetic(zU, yU);
+                        const QU = new Promise((UU => {
+                          setTimeout(UU, 1e4)
                         }));
-                        await Promise.race([rM.ensureReadyForCapture(iM), jM]).catch((MM => {
-                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", MM)
-                        })), mM.current === rM && dM(!0)
+                        await Promise.race([XU.ensureReadyForCapture(zU), QU]).catch((UU => {
+                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", UU)
+                        })), NU.current === XU && tU(!0)
                       }()
                     }))
                   }
                 })
               })
-            }), !JM && (0, LM.jsx)(CM.d, {}), (0, LM.jsx)("div", {
+            }), gU && (sy.K.includes(zU) ? (0, YU.jsx)(HF, {
+              cosmetics: {
+                ...XU,
+                [zU]: yU
+              }
+            }) : (0, YU.jsx)("img", {
+              className: "DailyDropRevealAfterPiece",
+              src: `/textures/charSkins/previews/${(0,wF.g)(zU,yU).previewTex}.png`,
+              alt: "",
+              draggable: !1
+            })), !aU && !gU && (0, YU.jsx)(RU.b, {}), (0, YU.jsx)("div", {
               className: "DailyDropRevealTurn",
-              ...tM
+              ...wU
             })]
-          }), (0, LM.jsx)("span", {
+          }), (0, YU.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: zM("dailyDrop:after")
+            children: EU("dailyDrop:after")
           })]
         })]
       })
     }
-    const YP = {
+    const vF = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -7459,209 +7482,211 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      NP = {
+      VF = {
         opening: 900,
         shrinking: 700
       };
 
-    function AP(MM) {
+    function sF(UU) {
       let {
-        drop: rM,
-        onClose: iM
-      } = MM;
+        drop: XU,
+        onClose: zU
+      } = UU;
       const {
-        t: SM
-      } = (0, aM.A)(), {
-        userContext: nM
-      } = (0, hM.b)(), {
-        state: zM,
-        view: mM
-      } = (0, ii.E)(), [HM, JM] = (0, OM.useState)("closed"), [dM] = (0, OM.useState)((() => ({
-        ...nM.getPlayerCosmetics()
-      }))), [yM] = (0, OM.useState)((() => (0, ii.l)(rM, dM))), [lM, EM] = (0, OM.useState)(!1), [UM, GM] = (0, OM.useState)(!1), [CM] = (0, OM.useState)((() => null === zM ? Promise.resolve(null) : ai(zM))), [eM, wM] = (0, OM.useState)(null), tM = (0, cr.b)(), {
-        gameState: gM
-      } = (0, bM.m)(["gameState"]);
-      async function uM() {
-        const MM = await CM;
-        tM.current && (null === MM ? (iM(), async function(MM) {
-          let rM = null;
+        t: yU
+      } = (0, AU.I)(), {
+        userContext: oU
+      } = (0, pU.d)(), {
+        state: EU,
+        view: NU
+      } = (0, Xz.q)(), [IU, aU] = (0, cU.useState)("closed"), [tU] = (0, cU.useState)((() => ({
+        ...oU.getPlayerCosmetics()
+      }))), [gU] = (0, cU.useState)((() => (0, Xz.g)(XU, tU))), [kU, GU] = (0, cU.useState)(!1), [BU, ZU] = (0, cU.useState)(!1), [RU] = (0, cU.useState)((() => null === EU ? Promise.resolve(null) : Qz(EU))), [PU, dU] = (0, cU.useState)(null), LU = (0, TX.b)(), {
+        gameState: eU
+      } = (0, WU.q)(["gameState"]);
+      async function CU() {
+        const UU = await RU;
+        LU.current && (null === UU ? (zU(), async function(UU) {
+          let XU = null;
           try {
-            const iM = await ji();
-            null === MM || MM.remindersOn || null !== Si.g.getItem(iM) || (rM = iM)
-          } catch (OM) {
-            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", OM)
+            const zU = await yz();
+            null === UU || UU.remindersOn || null !== cz.k.getItem(zU) || (XU = zU)
+          } catch (cU) {
+            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", cU)
           }
-          if (null === rM) return void await (0, Oi.n)("dailyDrop");
-          const iM = rM;
-          await (0, Oi.n)("dailyDrop", {
+          if (null === XU) return void await (0, zz.k)("dailyDrop");
+          const zU = XU;
+          await (0, zz.k)("dailyDrop", {
             copy: {
               title: "mobilePushNotifications:optInTitle",
               subtitle: "mobilePushNotifications:offerSubtitleDailyDrop"
             },
             onAllow: () => {
-              Si.g.setItem(iM, !0), ni(null)
+              cz.k.setItem(zU, !0), Fz(null)
             }
           })
-        }(zM)) : ((0, Oi.g)(), wM(MM), JM("remind")))
+        }(EU)) : ((0, zz.h)(), dU(UU), aU("remind")))
       }
 
-      function RM(MM) {
-        null !== eM && function(MM, rM) {
-          Si.g.setItem(MM.askedKey, !0), (0, Vr.m)(), (0, ii.w)("daily_drop.remind", rM ? "yes" : "no"), rM && ni(MM.requester)
-        }(eM, MM), iM()
-      }(0, OM.useEffect)((() => {
-        const MM = NP[HM];
-        if (void 0 === MM) return;
-        const rM = setTimeout((() => {
-          JM(YP[HM])
-        }), MM);
+      function wU(UU) {
+        null !== PU && function(UU, XU) {
+          cz.k.setItem(UU.askedKey, !0), (0, bX.o)(), (0, Xz.m)("daily_drop.remind", XU ? "yes" : "no"), XU && Fz(UU.requester)
+        }(PU, UU), zU()
+      }(0, cU.useEffect)((() => {
+        (0, Xz.m)("daily_drop.reveal_step", IU)
+      }), [IU]), (0, cU.useEffect)((() => {
+        const UU = VF[IU];
+        if (void 0 === UU) return;
+        const XU = setTimeout((() => {
+          aU(vF[IU])
+        }), UU);
         return () => {
-          clearTimeout(rM)
+          clearTimeout(XU)
         }
-      }), [HM]);
-      const pM = SM(`dailyDrop:kind_${yM.Ii}`),
-        WM = zM && SM("dailyDrop:collected", {
-          count: zM.collected.length,
-          total: zM.total
+      }), [IU]);
+      const qU = yU(`dailyDrop:kind_${gU.FU}`),
+        OU = EU && yU("dailyDrop:collected", {
+          count: EU.collected.length,
+          total: EU.total
         }),
-        sM = "revealed" === HM || "shrinking" === HM,
-        DM = "equip" !== HM && "remind" !== HM;
-      return (0, LM.jsx)(zS.e, {
+        SU = "revealed" === IU || "shrinking" === IU,
+        rU = "equip" !== IU && "remind" !== IU;
+      return (0, YU.jsx)(Ey.c, {
         className: "DailyDropRevealScreen",
-        close: "remind" === HM ? () => {
-          RM(!1)
-        } : iM,
+        close: "remind" === IU ? () => {
+          wU(!1)
+        } : zU,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, LM.jsxs)("div", {
-          className: jM()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === HM,
-            DailyDropRevealShrinking: "shrinking" === HM,
-            DailyDropRevealFiguresShown: "shrinking" === HM || "equip" === HM || "remind" === HM
+        children: (0, YU.jsxs)("div", {
+          className: QU()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === IU,
+            DailyDropRevealShrinking: "shrinking" === IU,
+            DailyDropRevealFiguresShown: "shrinking" === IU || "equip" === IU || "remind" === IU
           }),
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, LM.jsx)(fP, {
+            children: [(0, YU.jsx)(MF, {
               className: "DailyDropRevealStageFigures",
-              worn: dM,
-              Ii: yM.Ii,
-              Ki: yM.Ki,
-              prompting: !DM
-            }), ("closed" === HM || "opening" === HM) && (0, LM.jsx)(gP.c, {
+              worn: tU,
+              FU: gU.FU,
+              oU: gU.oU,
+              prompting: !rU
+            }), ("closed" === IU || "opening" === IU) && (0, YU.jsx)(eF.d, {
               className: "DailyDropRevealBlock",
-              open: "opening" === HM
-            }), sM && (0, LM.jsx)("div", {
+              open: "opening" === IU
+            }), SU && (0, YU.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, LM.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,RP.m)(yM.Ii,yM.Ki).previewTex}.png`,
-                alt: pM,
+              children: (0, YU.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,wF.g)(gU.FU,gU.oU).previewTex}.png`,
+                alt: qU,
                 draggable: !1
               })
             })]
-          }), DM && (0, LM.jsxs)(LM.Fragment, {
-            children: [(0, LM.jsxs)("div", {
+          }), rU && (0, YU.jsxs)(YU.Fragment, {
+            children: [(0, YU.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, LM.jsx)("div", {
+              children: [(0, YU.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: sM ? pM : SM("dailyDrop:name")
-              }), "closed" === HM && (0, LM.jsx)("div", {
+                children: SU ? qU : yU("dailyDrop:name")
+              }), "closed" === IU && (0, YU.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: SM("dailyDrop:tapToOpen")
-              }), "revealed" === HM && (0, LM.jsx)("div", {
+                children: yU("dailyDrop:tapToOpen")
+              }), "revealed" === IU && (0, YU.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: SM("dailyDrop:tapToContinue")
+                children: yU("dailyDrop:tapToContinue")
               })]
-            }), (0, LM.jsx)("button", {
+            }), (0, YU.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": SM("closed" === HM ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": yU("closed" === IU ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                JM(YP[HM])
+                aU(vF[IU])
               }
             })]
-          }), "equip" === HM && (0, LM.jsxs)("div", {
+          }), "equip" === IU && (0, YU.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: pM
-            }), (0, LM.jsx)("div", {
+              children: qU
+            }), (0, YU.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: SM("dailyDrop:equipQuestion")
-            }), (0, LM.jsxs)("div", {
+              children: yU("dailyDrop:equipQuestion")
+            }), (0, YU.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, LM.jsx)(QM.e, {
+              children: [(0, YU.jsx)(DU.f, {
                 className: "DailyDropRevealButton",
-                disabled: lM,
+                disabled: kU,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, ii.w)("daily_drop.not_now", rM), uM()
+                  (0, Xz.m)("daily_drop.not_now", XU), CU()
                 },
-                children: SM("dailyDrop:notNow")
-              }), (0, LM.jsx)(QM.e, {
+                children: yU("dailyDrop:notNow")
+              }), (0, YU.jsx)(DU.f, {
                 className: "DailyDropRevealButton",
-                loading: lM,
+                loading: kU,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, ii.w)("daily_drop.equip", rM), EM(!0), GM(!1);
+                    (0, Xz.m)("daily_drop.equip", XU), GU(!0), ZU(!1);
                     try {
-                      await (0, ii.h)(nM, yM.Ii, yM.Ki)
-                    } catch (MM) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", MM), EM(!1), void GM(!0)
+                      await (0, Xz.e)(oU, gU.FU, gU.oU)
+                    } catch (UU) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", UU), GU(!1), void ZU(!0)
                     }
-                    await uM()
+                    await CU()
                   }()
                 },
-                children: SM("dailyDrop:equip")
+                children: yU("dailyDrop:equip")
               })]
-            }), UM && (0, LM.jsx)("div", {
+            }), BU && (0, YU.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: SM("dailyDrop:equipFailed")
-            }), !(0, bM.h)(gM) && (0, LM.jsxs)("button", {
+              children: yU("dailyDrop:equipFailed")
+            }), !(0, WU.h)(eU) && (0, YU.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: lM,
+              disabled: kU,
               onClick: () => {
-                var MM;
-                (0, ii.w)("daily_drop.customise", rM), MM = yM.Ii, Gi.i.Tz(jS, MM), bM.d.set({
-                  openEverythingMenuName: Ur.m.CUSTOMISATION
-                }), iM()
+                var UU;
+                (0, Xz.m)("daily_drop.customise", XU), UU = gU.FU, Gz.k.UY(cy, UU), WU.e.set({
+                  openEverythingMenuName: gX.s.CUSTOMISATION
+                }), zU()
               },
-              children: [SM("dailyDrop:customise"), " ", (0, LM.jsx)(PM.b, {
+              children: [yU("dailyDrop:customise"), " ", (0, YU.jsx)(FU.d, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), WM && (0, LM.jsxs)("div", {
+            }), OU && (0, YU.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [WM, "waiting" === (null === mM || void 0 === mM ? void 0 : mM.kind) && ` \xb7 ${SM("dailyDrop:nextInInline",{count:mM.hours})}`]
+              children: [OU, "waiting" === (null === NU || void 0 === NU ? void 0 : NU.kind) && ` \xb7 ${yU("dailyDrop:nextInInline",{count:NU.hours})}`]
             })]
-          }), "remind" === HM && (0, LM.jsxs)("div", {
+          }), "remind" === IU && (0, YU.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, LM.jsx)("div", {
+            children: [(0, YU.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: SM("dailyDrop:remindTitle")
-            }), (0, LM.jsx)("div", {
+              children: yU("dailyDrop:remindTitle")
+            }), (0, YU.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: SM("dailyDrop:remindSubtitle")
-            }), (0, LM.jsxs)("div", {
+              children: yU("dailyDrop:remindSubtitle")
+            }), (0, YU.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, LM.jsx)(QM.e, {
+              children: [(0, YU.jsx)(DU.f, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  RM(!1)
+                  wU(!1)
                 },
-                children: SM("dailyDrop:remindNo")
-              }), (0, LM.jsx)(QM.e, {
+                children: yU("dailyDrop:remindNo")
+              }), (0, YU.jsx)(DU.f, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  RM(!0)
+                  wU(!0)
                 },
-                children: SM("dailyDrop:remindYes")
+                children: yU("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -7669,791 +7694,792 @@ export const modules = {
       })
     }
 
-    function xP(MM, rM) {
+    function nF(UU, XU) {
       const {
-        t: iM
-      } = (0, aM.A)(), SM = function(MM, rM) {
+        t: zU
+      } = (0, AU.I)(), yU = function(UU, XU) {
         const {
-          state: iM,
-          view: SM
-        } = (0, ii.E)(), [jM, aM] = (0, OM.useState)(!1), [PM, nM] = (0, OM.useState)(!1), [QM, zM] = (0, OM.useState)(null), LM = (0, OM.useRef)(null), mM = (0, OM.useRef)(!1), HM = rM && "ready" === (null === SM || void 0 === SM ? void 0 : SM.kind);
-        (0, OM.useEffect)((() => {
-          MM ? HM && !mM.current && (mM.current = !0, (0, ii.w)("daily_drop.shown", "tile")) : mM.current = !1
-        }), [MM, HM]), (0, OM.useEffect)((() => {
-          MM || (yM(), nM(!1))
-        }), [MM]);
-        const hM = MM && null === QM && !(0, ii.u)(SM);
-        (0, OM.useEffect)((() => {
-          hM && bM.d.set({
-            openEverythingMenuName: Ur.m.CUSTOMISATION
+          state: zU,
+          view: yU
+        } = (0, Xz.q)(), [QU, AU] = (0, cU.useState)(!1), [FU, oU] = (0, cU.useState)(!1), [DU, EU] = (0, cU.useState)(null), YU = (0, cU.useRef)(null), NU = (0, cU.useRef)(!1), IU = XU && "ready" === (null === yU || void 0 === yU ? void 0 : yU.kind);
+        (0, cU.useEffect)((() => {
+          UU ? IU && !NU.current && (NU.current = !0, (0, Xz.m)("daily_drop.shown", "tile")) : NU.current = !1
+        }), [UU, IU]), (0, cU.useEffect)((() => {
+          UU || (gU(), oU(!1))
+        }), [UU]);
+        const pU = UU && null === DU && !(0, Xz.l)(yU);
+        (0, cU.useEffect)((() => {
+          pU && WU.e.set({
+            openEverythingMenuName: gX.s.CUSTOMISATION
           })
-        }), [hM]);
-        const JM = (0, OM.useRef)(!1),
-          dM = (0, OM.useRef)(MM);
+        }), [pU]);
+        const aU = (0, cU.useRef)(!1),
+          tU = (0, cU.useRef)(UU);
 
-        function yM() {
-          null !== LM.current && (LM.current = null, zM(null))
+        function gU() {
+          null !== YU.current && (YU.current = null, EU(null))
         }
-        return dM.current = MM, {
-          state: iM,
-          view: SM,
-          claiming: jM,
-          claimFailed: PM,
-          reveal: QM,
+        return tU.current = UU, {
+          state: zU,
+          view: yU,
+          claiming: QU,
+          claimFailed: FU,
+          reveal: DU,
           open: async function() {
-            if (!JM.current) {
-              JM.current = !0, aM(!0), nM(!1);
+            if (!aU.current) {
+              aU.current = !0, AU(!0), oU(!1);
               try {
                 const {
-                  state: MM,
-                  drop: rM
-                } = await (0, ii.e)();
-                if (null === MM || null === rM) return;
-                if (!dM.current) return;
-                (0, ii.w)("daily_drop.open", rM), LM.current = {
-                  state: MM,
-                  drop: rM
-                }, zM(LM.current)
-              } catch (MM) {
-                console.error("Failed to claim the Lucky Skin Block", MM), dM.current && nM(!0)
+                  state: UU,
+                  drop: XU
+                } = await (0, Xz.b)();
+                if (null === UU || null === XU) return;
+                if (!tU.current) return;
+                (0, Xz.m)("daily_drop.open", XU), YU.current = {
+                  state: UU,
+                  drop: XU
+                }, EU(YU.current)
+              } catch (UU) {
+                console.error("Failed to claim the Lucky Skin Block", UU), tU.current && oU(!0)
               } finally {
-                JM.current = !1, aM(!1)
+                aU.current = !1, AU(!1)
               }
             }
           },
-          closeReveal: yM
+          closeReveal: gU
         }
-      }(MM, rM);
+      }(UU, XU);
       return {
-        shown: (0, ii.u)(SM.view) || null !== SM.reveal,
-        tile: SM.state && SM.view && (0, LM.jsx)(uP, {
-          state: SM.state,
-          view: SM.view,
-          claiming: SM.claiming,
-          onOpen: SM.open
+        shown: (0, Xz.l)(yU.view) || null !== yU.reveal,
+        tile: yU.state && yU.view && (0, YU.jsx)(CF, {
+          state: yU.state,
+          view: yU.view,
+          claiming: yU.claiming,
+          onOpen: yU.open
         }),
-        claimFailed: SM.claimFailed && (0, LM.jsx)("div", {
+        claimFailed: yU.claimFailed && (0, YU.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: iM("dailyDrop:claimFailed")
+          children: zU("dailyDrop:claimFailed")
         }),
-        reveal: SM.reveal && (0, LM.jsx)(AP, {
-          drop: SM.reveal.drop,
-          onClose: SM.closeReveal
+        reveal: yU.reveal && (0, YU.jsx)(sF, {
+          drop: yU.reveal.drop,
+          onClose: yU.closeReveal
         })
       }
     }
 
-    function vP(MM) {
+    function mF(UU) {
       let {
-        show: rM
-      } = MM;
-      const iM = xP(rM, rM);
-      return rM && iM.shown ? (0, LM.jsxs)("div", {
+        show: XU
+      } = UU;
+      const zU = nF(XU, XU);
+      return (0, MU.A)(XU && zU.shown, (0, MU.B)(), (UU => {
+        (0, Xz.m)("daily_drop.store_only_open", UU)
+      })), XU && zU.shown ? (0, YU.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [iM.claimFailed, iM.tile && (0, LM.jsx)("div", {
+        children: [zU.claimFailed, zU.tile && (0, YU.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: iM.tile
-        }), iM.reveal]
+          children: zU.tile
+        }), zU.reveal]
       }) : null
     }
-    var FP = iM(2779),
-      BP = iM(35070),
-      XP = iM(35077);
+    var lF = zU(2787),
+      xF = zU(34915),
+      JF = zU(34925);
 
-    function IP(MM) {
+    function jF(UU) {
       let {
-        view: rM,
-        highlight: iM,
-        scrollSignal: SM,
-        onScrolledIntoView: jM
-      } = MM;
+        view: XU,
+        highlight: zU,
+        scrollSignal: yU,
+        onScrolledIntoView: QU
+      } = UU;
       const {
-        t: PM
-      } = (0, aM.A)(), {
-        purchaseUnderWay: nM,
-        notice: QM,
-        needsLogin: zM,
-        buyPack: mM
-      } = (0, XP.e)("banner");
-      (0, FP.U)(rM.arm, "banner");
-      const HM = (0, OM.useRef)(null);
-      return (0, OM.useEffect)((() => {
-        var MM;
-        SM > 0 && (null === (MM = HM.current) || void 0 === MM || MM.scrollIntoView({
+        t: FU
+      } = (0, AU.I)(), {
+        purchaseUnderWay: oU,
+        notice: DU,
+        needsLogin: EU,
+        buyPack: NU
+      } = (0, JF.g)("banner");
+      (0, lF.N)(XU.arm, "banner");
+      const IU = (0, cU.useRef)(null);
+      return (0, cU.useEffect)((() => {
+        var UU;
+        yU > 0 && (null === (UU = IU.current) || void 0 === UU || UU.scrollIntoView({
           block: "nearest"
-        }), jM())
-      }), [SM]), (0, LM.jsxs)("div", {
-        ref: HM,
+        }), QU())
+      }), [yU]), (0, YU.jsxs)("div", {
+        ref: IU,
         className: "NewPlayerDealBanner",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, YU.jsxs)("div", {
           className: "NewPlayerDealBannerHead",
-          children: [(0, LM.jsx)("div", {
+          children: [(0, YU.jsx)("div", {
             className: "NewPlayerDealBannerTitle",
-            children: PM("newPlayerDeal:title")
-          }), (0, LM.jsx)(BP.e, {
-            endsAt: rM.endsAt
+            children: FU("newPlayerDeal:title")
+          }), (0, YU.jsx)(xF.d, {
+            endsAt: XU.endsAt
           })]
-        }), (0, LM.jsx)(BP.i, {
-          view: rM,
-          needsLogin: zM,
-          busy: nM,
-          highlight: iM,
-          onBuy: MM => {
-            mM(rM, MM)
+        }), (0, YU.jsx)(xF.g, {
+          view: XU,
+          needsLogin: EU,
+          busy: oU,
+          highlight: zU,
+          onBuy: UU => {
+            NU(XU, UU)
           }
-        }), (0, LM.jsx)(CP.i, {
-          notice: QM,
+        }), (0, YU.jsx)(RF.h, {
+          notice: DU,
           className: "SmallTextBold NewPlayerDealNotice"
         })]
       })
     }
-    iM(35072);
-    var KP = iM(2782);
+    zU(34922);
+    var KF = zU(2794);
 
-    function qP(MM) {
+    function bF(UU) {
       let {
-        wallet: rM,
-        close: iM
-      } = MM;
+        wallet: XU,
+        close: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)();
-      return (0, LM.jsxs)("div", {
+        t: cU
+      } = (0, AU.I)();
+      return (0, YU.jsxs)("div", {
         className: "NewPlayerDealGiftNotice",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, YU.jsxs)("div", {
           className: "NewPlayerDealGiftNoticeRows",
-          children: [(0, LM.jsx)("span", {
-            children: OM("newPlayerDeal:giftable")
-          }), (0, LM.jsx)(Ra.b, {
-            amount: (0, aa.b)(rM)
-          }), (0, LM.jsx)("span", {
-            children: OM("newPlayerDeal:ungiftable")
-          }), (0, LM.jsx)(Ra.b, {
-            amount: rM.ungiftable
+          children: [(0, YU.jsx)("span", {
+            children: cU("newPlayerDeal:giftable")
+          }), (0, YU.jsx)(wA.c, {
+            amount: (0, AA.e)(XU)
+          }), (0, YU.jsx)("span", {
+            children: cU("newPlayerDeal:ungiftable")
+          }), (0, YU.jsx)(wA.c, {
+            amount: XU.ungiftable
           })]
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "NewPlayerDealGiftNoticeWhy",
-          children: OM("newPlayerDeal:ungiftableWhy")
-        }), (0, LM.jsx)(QM.p, {
+          children: cU("newPlayerDeal:ungiftableWhy")
+        }), (0, YU.jsx)(DU.l, {
           className: "NewPlayerDealGiftNoticeOk",
-          onClick: iM,
-          children: OM("general:ok")
+          onClick: zU,
+          children: cU("general:ok")
         })]
       })
     }
 
-    function TP(MM) {
-      yr.NotificationProvider.showCustomPopup({
-        body: rM => (0, LM.jsx)(qP, {
-          wallet: MM,
-          close: rM
+    function TF(UU) {
+      pX.NotificationProvider.showCustomPopup({
+        body: XU => (0, YU.jsx)(bF, {
+          wallet: UU,
+          close: XU
         }),
         middleScreenPopupClassName: "NewPlayerDealGiftNoticePopup",
         disableExitButton: !0
       })
     }
-    const VP = {
+    const hF = {
       kind: "board"
     };
-    let cP = !1;
+    let Uo = !1;
 
-    function Mn(MM) {
-      return "found" === MM.status || "error" === MM.status && "store:giftRecipientLookupFailed" === MM.error ? MM.name : null
-    }(0, YM.r)(Oa.prefetchBillingOfferings);
-    const rn = (0, OM.memo)((function(MM) {
-      var rM;
+    function Xo(UU) {
+      return "found" === UU.status || "error" === UU.status && "store:giftRecipientLookupFailed" === UU.error ? UU.name : null
+    }(0, MU.s)(cA.prefetchBillingOfferings);
+    const zo = (0, cU.memo)((function(UU) {
+      var XU;
       let {
-        show: SM
-      } = MM;
+        show: yU
+      } = UU;
       const {
-        t: PM
-      } = (0, aM.A)(), {
-        userContext: nM
-      } = (0, hM.b)(), QM = (0, NM.usePurchasesAllowed)(), zM = nM !== uM.NULL_USER_CONTEXT, mM = Ja(nM, SM), [HM, JM] = (0, dM.d)(), {
-        page: yM,
-        urlMode: lM,
-        goTo: EM
-      } = (0, da.d)(), UM = function(MM) {
-        return "superRank" === MM.kind ? "superRank" : "pack" === MM.kind ? MM.pack : null
-      }(yM), {
-        openEverythingMenuName: GM,
-        gameState: CM
-      } = (0, bM.m)(["openEverythingMenuName", "gameState"]), eM = null !== GM;
-      ! function(MM, rM) {
-        const [SM] = (0, OM.useState)(Ea.f), [jM, aM] = (0, OM.useState)(!1);
-        SM && rM && !jM && aM(!0);
-        const PM = (0, oO.y)(),
-          nM = SM && jM && MM && !PM;
-        (0, OM.useEffect)((() => {
-          if (!nM) return;
-          let MM = null,
-            rM = null,
-            OM = null;
-          const SM = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, KM.getBillingClient)().purchaseUnderWay,
-            jM = () => {
-              var iM;
-              null === (iM = OM) || void 0 === iM || iM(), OM = null, null !== MM && (clearTimeout(MM), MM = null), null !== rM && (clearTimeout(rM), rM = null)
+        t: FU
+      } = (0, AU.I)(), {
+        userContext: oU
+      } = (0, pU.d)(), DU = (0, vU.usePurchasesAllowed)(), EU = oU !== CU.NULL_USER_CONTEXT, NU = aA(oU, yU), [IU, aU] = (0, tU.e)(), {
+        page: gU,
+        urlMode: kU,
+        goTo: GU
+      } = (0, tA.f)(), BU = function(UU) {
+        return "superRank" === UU.kind ? "superRank" : "pack" === UU.kind ? UU.pack : null
+      }(gU), {
+        openEverythingMenuName: ZU,
+        gameState: RU
+      } = (0, WU.q)(["openEverythingMenuName", "gameState"]), PU = null !== ZU;
+      ! function(UU, XU) {
+        const [yU] = (0, cU.useState)(GA.i), [QU, AU] = (0, cU.useState)(!1);
+        yU && XU && !QU && AU(!0);
+        const FU = (0, rc.F)(),
+          oU = yU && QU && UU && !FU;
+        (0, cU.useEffect)((() => {
+          if (!oU) return;
+          let UU = null,
+            XU = null,
+            cU = null;
+          const yU = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, jU.getBillingClient)().purchaseUnderWay,
+            QU = () => {
+              var zU;
+              null === (zU = cU) || void 0 === zU || zU(), cU = null, null !== UU && (clearTimeout(UU), UU = null), null !== XU && (clearTimeout(XU), XU = null)
             },
-            aM = () => {
-              (0, ya.s)(!1), (0, ya.p)(!1), jM(), MM = setTimeout((() => {
-                MM = null, OM = (0, la.d)((() => {
-                  OM = null, SM() ? aM() : ((0, ya.s)(!0), rM = setTimeout((() => {
-                    rM = null, OM = (0, la.d)((() => {
-                      OM = null, SM() ? aM() : (0, ya.p)(!0)
+            AU = () => {
+              (0, gA.k)(!1), (0, gA.i)(!1), QU(), UU = setTimeout((() => {
+                UU = null, cU = (0, kA.b)((() => {
+                  cU = null, yU() ? AU() : ((0, gA.k)(!0), XU = setTimeout((() => {
+                    XU = null, cU = (0, kA.b)((() => {
+                      cU = null, yU() ? AU() : (0, gA.i)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => iM(5035))).then((MM => {
-                    MM.startBackgroundGameSetup()
-                  }), (MM => {
-                    console.warn("Background game setup: its chunk failed to load", MM)
+                  }), 3e3), Promise.resolve().then((() => zU(5101))).then((UU => {
+                    UU.startBackgroundGameSetup()
+                  }), (UU => {
+                    console.warn("Background game setup: its chunk failed to load", UU)
                   })))
                 }))
               }), 2e3)
             };
-          for (const iM of Ua) window.addEventListener(iM, aM, {
+          for (const zU of BA) window.addEventListener(zU, AU, {
             capture: !0,
             passive: !0
           });
-          return aM(), () => {
-            for (const MM of Ua) window.removeEventListener(MM, aM, {
+          return AU(), () => {
+            for (const UU of BA) window.removeEventListener(UU, AU, {
               capture: !0
             });
-            jM(), (0, ya.s)(!1), (0, ya.p)(!1)
+            QU(), (0, gA.k)(!1), (0, gA.i)(!1)
           }
-        }), [nM])
-      }(SM && eM, "pack" === yM.kind);
-      const wM = "landingPage" === CM;
-      (0, OM.useEffect)((() => {
-        eM && (0, Oa.prefetchBillingOfferings)()
-      }), [eM]), (0, OM.useEffect)((() => {
-        eM && !SM && wM && (0, Ga.r)()
-      }), [eM, SM, wM]);
-      const [tM, gM] = (0, OM.useState)(0), [RM, pM] = (0, OM.useState)(null), [WM, sM] = (0, OM.useState)(null), [DM, ZM] = (0, OM.useState)(null), [oM, fM] = (0, OM.useState)(null), [AM, xM] = (0, OM.useState)(0), vM = (0, OM.useRef)(null), FM = (0, OM.useRef)(null), BM = (0, OM.useRef)(null), XM = (0, OM.useRef)(!1), IM = (0, YM.x)(), qM = (0, OM.useRef)(0), TM = (0, OM.useRef)(!1);
+        }), [oU])
+      }(yU && PU, "pack" === gU.kind);
+      const dU = "landingPage" === RU;
+      (0, cU.useEffect)((() => {
+        PU && (0, cA.prefetchBillingOfferings)()
+      }), [PU]), (0, cU.useEffect)((() => {
+        PU && !yU && dU && (0, ZA.w)()
+      }), [PU, yU, dU]);
+      const [LU, eU] = (0, cU.useState)(0), [wU, qU] = (0, cU.useState)(null), [OU, SU] = (0, cU.useState)(null), [rU, fU] = (0, cU.useState)(null), [iU, HU] = (0, cU.useState)(null), [VU, sU] = (0, cU.useState)(0), nU = (0, cU.useRef)(null), mU = (0, cU.useRef)(null), lU = (0, cU.useRef)(null), xU = (0, cU.useRef)(!1), JU = (0, MU.B)(), KU = (0, cU.useRef)(0);
 
-      function VM() {
-        gM((MM => MM + 1))
-      }(0, OM.useEffect)((() => {
-        if (!SM) return TM.current = !1, void xM(0);
-        if (cP = !0, (0, YM.k)(), IM && IM.seq !== qM.current) {
-          var MM;
-          qM.current = IM.seq, "loginResume" !== IM.source && (0, YM.u)();
-          const rM = (0, YM.b)(IM);
-          lM || EM(rM), fM(null !== (MM = IM.highlight) && void 0 !== MM ? MM : null);
-          const iM = "newPlayerDeal" === IM.source || "loginResume" === IM.source && void 0 !== IM.highlight && (0, FP.g)(nM).includes(IM.highlight);
-          xM((MM => iM ? MM + 1 : 0)), sM(null), "gift" === IM.mode && IM.giftRecipientName ? mM.choose(IM.giftRecipientName, "prefilled") : mM.clear(), "gift" !== IM.mode || IM.giftRecipientName || VM(), (0, Sr.reportAnalyticsClick)({
-            id: "store.open",
-            value: IM.source
-          })
-        } else TM.current || (0, Sr.reportAnalyticsClick)({
+      function bU() {
+        eU((UU => UU + 1))
+      }(0, cU.useEffect)((() => {
+        if (yU) {
+          if (Uo = !0, (0, MU.k)(), JU && JU.seq !== KU.current) {
+            var UU;
+            KU.current = JU.seq, "loginResume" !== JU.source && (0, MU.x)();
+            const XU = (0, MU.c)(JU);
+            kU || GU(XU), HU(null !== (UU = JU.highlight) && void 0 !== UU ? UU : null);
+            const zU = "newPlayerDeal" === JU.source || "loginResume" === JU.source && void 0 !== JU.highlight && (0, lF.f)(oU).includes(JU.highlight);
+            sU((UU => zU ? UU + 1 : 0)), SU(null), "gift" === JU.mode && JU.giftRecipientName ? NU.choose(JU.giftRecipientName, "prefilled") : NU.clear(), "gift" !== JU.mode || JU.giftRecipientName || bU()
+          }
+        } else sU(0)
+      }), [yU, JU]), (0, MU.A)(yU, JU, (UU => {
+        (0, XX.reportAnalyticsClick)({
           id: "store.open",
-          value: "menuTab"
-        });
-        TM.current = !0
-      }), [SM, IM]);
-      const cM = (0, FP.S)(),
-        Mr = null !== oM && null === cM && null === (0, FP.j)((0, FP.d)(nM)) && (0, FP.g)(nM).includes(oM);
-      (0, OM.useEffect)((() => {
-        if (!oM) return;
-        const MM = setTimeout((() => {
-          fM(null)
-        }), Mr ? 15e3 : 4e3);
+          value: UU
+        })
+      }));
+      const TU = (0, lF.M)(),
+        hU = null !== iU && null === TU && null === (0, lF.i)((0, lF.d)(oU)) && (0, lF.f)(oU).includes(iU);
+      (0, cU.useEffect)((() => {
+        if (!iU) return;
+        const UU = setTimeout((() => {
+          HU(null)
+        }), hU ? 15e3 : 4e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(UU)
         }
-      }), [oM, Mr]), (0, OM.useLayoutEffect)((() => {
-        const MM = vM.current;
-        if (!SM || !MM) return FM.current = null, void(BM.current = null);
-        var rM;
-        if (UM) FM.current = UM, null === (rM = MM.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === rM || rM.focus();
-        else if (FM.current) {
-          const rM = BM.current;
-          null !== rM && (MM.scrollTop = rM);
-          const iM = MM.querySelector(`[data-store-item="${FM.current}"]`);
-          if (iM) {
-            const OM = iM.getBoundingClientRect(),
-              SM = MM.getBoundingClientRect();
-            iM.focus({
-              preventScroll: null !== rM && OM.bottom > SM.top && OM.top < SM.bottom
+      }), [iU, hU]), (0, cU.useLayoutEffect)((() => {
+        const UU = nU.current;
+        if (!yU || !UU) return mU.current = null, void(lU.current = null);
+        var XU;
+        if (BU) mU.current = BU, null === (XU = UU.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === XU || XU.focus();
+        else if (mU.current) {
+          const XU = lU.current;
+          null !== XU && (UU.scrollTop = XU);
+          const zU = UU.querySelector(`[data-store-item="${mU.current}"]`);
+          if (zU) {
+            const cU = zU.getBoundingClientRect(),
+              yU = UU.getBoundingClientRect();
+            zU.focus({
+              preventScroll: null !== XU && cU.bottom > yU.top && cU.top < yU.bottom
             })
           }
-          FM.current = null
+          mU.current = null
         }
-      }), [UM, SM]), (0, OM.useEffect)((() => {
-        sM(null)
-      }), [mM.query]), (0, OM.useEffect)((() => {
-        if (!DM) return;
-        const MM = setTimeout((() => {
-          ZM(null)
+      }), [BU, yU]), (0, cU.useEffect)((() => {
+        SU(null)
+      }), [NU.query]), (0, cU.useEffect)((() => {
+        if (!rU) return;
+        const UU = setTimeout((() => {
+          fU(null)
         }), 8e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(UU)
         }
-      }), [DM]);
-      const rr = nM.superRankInfo,
-        ir = nM.isLoggedIn() || (0, NM.guestsMayBuy)(),
-        Or = nM.getOwnedCosmeticPacks(),
-        jr = (0, La.o)(mM.query),
-        ar = (0, La.g)({
-          mode: jr,
-          loggedIn: zM ? ir : null,
-          superRankInfo: rr,
+      }), [rU]);
+      const UX = oU.superRankInfo,
+        zX = oU.isLoggedIn() || (0, vU.guestsMayBuy)(),
+        cX = oU.getOwnedCosmeticPacks(),
+        yX = (0, YA.o)(NU.query),
+        QX = (0, YA.g)({
+          mode: yX,
+          loggedIn: EU ? zX : null,
+          superRankInfo: UX,
           now: Date.now(),
-          ownedPacks: Or,
-          packs: ia.w,
-          recipient: mM.recipient
+          ownedPacks: cX,
+          packs: zA.q,
+          recipient: NU.recipient
         });
-      (0, OM.useEffect)((() => {
-        if (!ir || !SM) return;
-        const MM = (0, FP.g)(nM),
-          rM = (0, YM.u)((rM => !MM.includes(rM.item))),
-          iM = rM && (0, La.m)(rM, ia.w);
-        rM && iM && ((0, Sr.reportAnalyticsClick)({
+      (0, cU.useEffect)((() => {
+        if (!zX || !yU) return;
+        const UU = (0, lF.f)(oU),
+          XU = (0, MU.x)((XU => !UU.includes(XU.item))),
+          zU = XU && (0, YA.m)(XU, zA.q);
+        XU && zU && ((0, XX.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: rM.item
-        }), (0, YM.n)(iM))
-      }), [ir, SM]);
-      const Pr = SM && "gift" === jr,
-        nr = (0, OM.useRef)(Pr);
-      nr.current = Pr;
-      const Qr = "none" !== mM.recipient.status,
-        zr = (0, OM.useRef)(!1);
-      (0, OM.useEffect)((() => {
-        Pr ? Qr && !zr.current && (zr.current = !0, async function(MM) {
-          var rM;
-          if ("gift" === (null === (rM = (0, KP.m)()) || void 0 === rM ? void 0 : rM.show)) return void TP(KP.e);
-          const iM = await (0, aa.e)();
-          null !== iM && iM.ungiftable > 0 && MM() && TP(iM)
-        }((() => nr.current))) : zr.current = !1
-      }), [Pr, Qr]);
-      const Lr = (0, La.s)({
-        superRankDaysLeft: ar.superRankDaysLeft,
-        openedThisSession: cP || SM,
-        seenNewItems: (0, YM.h)()
+          value: XU.item
+        }), (0, MU.l)(zU))
+      }), [zX, yU]);
+      const AX = yU && "gift" === yX,
+        FX = (0, cU.useRef)(AX);
+      FX.current = AX;
+      const oX = "none" !== NU.recipient.status,
+        DX = (0, cU.useRef)(!1);
+      (0, cU.useEffect)((() => {
+        AX ? oX && !DX.current && (DX.current = !0, async function(UU) {
+          var XU;
+          if ("gift" === (null === (XU = (0, KF.i)()) || void 0 === XU ? void 0 : XU.show)) return void TF(KF.c);
+          const zU = await (0, AA.h)();
+          null !== zU && zU.ungiftable > 0 && UU() && TF(zU)
+        }((() => FX.current))) : DX.current = !1
+      }), [AX, oX]);
+      const EX = (0, YA.r)({
+        superRankDaysLeft: QX.superRankDaysLeft,
+        openedThisSession: Uo || yU,
+        seenNewItems: (0, MU.h)()
       });
-      (0, OM.useEffect)((() => {
-        (0, YM.t)(Lr)
-      }), [Lr]);
-      const mr = "self" === jr,
-        Hr = xP(SM, SM && mr && "board" === yM.kind);
-      if (!SM || !QM) return null;
-      const hr = JM > HM && HM <= 700,
-        Jr = !hr && JM <= 420,
-        dr = "gift" === jr ? Mn(mM.recipient) : null,
-        yr = null !== RM;
+      (0, cU.useEffect)((() => {
+        (0, MU.t)(EX)
+      }), [EX]);
+      const YX = "self" === yX,
+        NX = nF(yU, yU && YX && "board" === gU.kind);
+      if (!yU || !DU) return null;
+      const IX = aU > IU && IU <= 700,
+        pX = !IX && aU <= 420,
+        aX = "gift" === yX ? Xo(NU.recipient) : null,
+        tX = null !== wU;
 
-      function lr(MM) {
-        (0, ja.e)(MM, "gift" === jr ? mM.query.trim() : null)
+      function gX(UU) {
+        (0, QA.c)(UU, "gift" === yX ? NU.query.trim() : null)
       }
 
-      function Er(MM, rM) {
-        (0, Sr.reportAnalyticsClick)({
+      function kX(UU, XU) {
+        (0, XX.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${rM?"gift":"self"}:${MM}`
-        }), rM && (mM.recordGift(rM.name, MM), Ur(rM))
+          value: `${XU?"gift":"self"}:${UU}`
+        }), XU && (NU.recordGift(XU.name, UU), GX(XU))
       }
 
-      function Ur(MM) {
-        ! function(MM) {
+      function GX(UU) {
+        ! function(UU) {
           try {
-            Si.g.setItem(ma, (0, La.z)(ha(), MM))
+            cz.k.setItem(NA, (0, YA.B)(pA(), UU))
           } catch {}
         }({
-          name: MM.name,
-          cosmetics: MM.cosmetics
-        }), EM(VP), ZM((rM => {
-          var iM;
+          name: UU.name,
+          cosmetics: UU.cosmetics
+        }), GU(hF), fU((XU => {
+          var zU;
           return {
-            name: MM.name,
-            seq: (null !== (iM = null === rM || void 0 === rM ? void 0 : rM.seq) && void 0 !== iM ? iM : 0) + 1
+            name: UU.name,
+            seq: (null !== (zU = null === XU || void 0 === XU ? void 0 : XU.seq) && void 0 !== zU ? zU : 0) + 1
           }
         }))
       }
-      async function Gr(MM) {
-        var rM, iM;
-        if (XM.current) return;
-        if (!ir) return void lr(MM);
-        sM(null), fM(null);
-        const OM = "gift" === jr ? {
-          name: Mn(mM.recipient),
-          cosmetics: mM.recipientCosmetics
+      async function BX(UU) {
+        var XU, zU;
+        if (xU.current) return;
+        if (!zX) return void gX(UU);
+        SU(null), HU(null);
+        const cU = "gift" === yX ? {
+          name: Xo(NU.recipient),
+          cosmetics: NU.recipientCosmetics
         } : null;
-        if (OM && !OM.name) return void VM();
-        const SM = "superRank" === MM ? kM.k.id : (0, kM.c)(MM);
-        XM.current = !0;
-        const jM = await (0, za.d)(SM, null !== (rM = null === OM || void 0 === OM ? void 0 : OM.name) && void 0 !== rM ? rM : null);
-        if (XM.current = !1, !jM) return;
-        pM(MM);
-        const aM = await aa.i.purchase(SM, null !== (iM = null === OM || void 0 === OM ? void 0 : OM.name) && void 0 !== iM ? iM : null);
-        pM(null), aM ? sM(aM) : (Er(MM, OM), OM || (await (0, Pa.flushClientAnalyticsEvents)(), (0, Sa.refreshWithoutConfirmation)("superRank" === MM ? "/super-rank-welcome" : `/pack-welcome/${MM}`)))
+        if (cU && !cU.name) return void bU();
+        const yU = "superRank" === UU ? uU.n.id : (0, uU.e)(UU);
+        xU.current = !0;
+        const QU = await (0, EA.c)(yU, null !== (XU = null === cU || void 0 === cU ? void 0 : cU.name) && void 0 !== XU ? XU : null);
+        if (xU.current = !1, !QU) return;
+        qU(UU);
+        const AU = await AA.i.purchase(yU, null !== (zU = null === cU || void 0 === cU ? void 0 : cU.name) && void 0 !== zU ? zU : null);
+        qU(null), AU ? SU(AU) : (kX(UU, cU), cU || (await (0, FA.flushClientAnalyticsEvents)(), (0, yA.refreshWithoutConfirmation)("superRank" === UU ? "/super-rank-welcome" : `/pack-welcome/${UU}`)))
       }
-      const Cr = jM()("Store", {
-        StoreGift: "gift" === jr,
-        StorePortrait: hr,
-        StoreCompact: Jr
+      const ZX = QU()("Store", {
+        StoreGift: "gift" === yX,
+        StorePortrait: IX,
+        StoreCompact: pX
       });
-      if ("pack" === yM.kind) {
-        const MM = yM.pack,
-          rM = ar.packs.find((rM => rM.pack === MM));
-        return (0, LM.jsx)("div", {
-          ref: vM,
+      if ("pack" === gU.kind) {
+        const UU = gU.pack,
+          XU = QX.packs.find((XU => XU.pack === UU));
+        return (0, YU.jsx)("div", {
+          ref: nU,
           className: "CosmeticShopContainer",
-          children: (0, LM.jsx)(Qa.e, {
-            pack: MM,
+          children: (0, YU.jsx)(DA.h, {
+            pack: UU,
             onBack: () => {
-              EM(VP)
+              GU(hF)
             },
-            onPurchased: rM => {
-              Er(MM, rM ? {
-                name: rM,
+            onPurchased: XU => {
+              kX(UU, XU ? {
+                name: XU,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === jr && dr && rM && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsx)(Ia, {
-                state: rM.state,
-                item: MM,
-                price: (er = MM, "superRank" === er ? kM.k.price : (0, kM.e)(er)),
-                busy: yr,
+            giftCta: "gift" === yX && aX && XU && (0, YU.jsxs)(YU.Fragment, {
+              children: [(0, YU.jsx)(JA, {
+                state: XU.state,
+                item: UU,
+                price: (RX = UU, "superRank" === RX ? uU.n.price : (0, uU.i)(RX)),
+                busy: tX,
                 onAct: () => {
-                  Gr(MM)
+                  BX(UU)
                 },
                 onNeedRecipient: () => {
-                  EM(VP), VM()
+                  GU(hF), bU()
                 },
                 onLogin: () => {
-                  lr(MM)
+                  gX(UU)
                 },
-                highlight: oM === MM
-              }), WM && (0, LM.jsx)("span", {
+                highlight: iU === UU
+              }), OU && (0, YU.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: PM(WM)
+                children: FU(OU)
               })]
             }),
-            ownedPacks: Or,
-            startAsGift: "gift" === jr,
-            initialGiftRecipient: "gift" === jr ? null !== dr && void 0 !== dr ? dr : mM.query.trim() : "",
-            highlightCta: oM === MM
-          }, MM)
+            ownedPacks: cX,
+            startAsGift: "gift" === yX,
+            initialGiftRecipient: "gift" === yX ? null !== aX && void 0 !== aX ? aX : NU.query.trim() : "",
+            highlightCta: iU === UU
+          }, UU)
         })
       }
-      var er;
-      return "superRank" === yM.kind ? (0, LM.jsx)("div", {
-        ref: vM,
-        className: jM()(Cr, "StoreDetailView"),
-        children: (0, LM.jsx)(yP, {
-          state: ar.superRank.state,
-          mode: jr,
-          giftName: dr,
-          busy: yr,
-          highlight: "superRank" === oM,
-          purchaseError: WM,
+      var RX;
+      return "superRank" === gU.kind ? (0, YU.jsx)("div", {
+        ref: nU,
+        className: QU()(ZX, "StoreDetailView"),
+        children: (0, YU.jsx)(gF, {
+          state: QX.superRank.state,
+          mode: yX,
+          giftName: aX,
+          busy: tX,
+          highlight: "superRank" === iU,
+          purchaseError: OU,
           onBack: () => {
-            EM(VP)
+            GU(hF)
           },
           onChooseRecipient: () => {
-            EM(VP), VM()
+            GU(hF), bU()
           },
           onAct: () => {
-            Gr("superRank")
+            BX("superRank")
           },
           onLogin: () => {
-            lr("superRank")
+            gX("superRank")
           }
         })
-      }) : (0, LM.jsxs)("div", {
-        ref: vM,
-        className: Cr,
-        onScroll: MM => {
-          BM.current = MM.currentTarget.scrollTop
+      }) : (0, YU.jsxs)("div", {
+        ref: nU,
+        className: ZX,
+        onScroll: UU => {
+          lU.current = UU.currentTarget.scrollTop
         },
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, LM.jsx)(ua, {
-            selfName: zM ? nM.getPlayerName() : "",
-            giftRecipient: mM,
-            suggestionsVersion: null !== (rM = null === DM || void 0 === DM ? void 0 : DM.seq) && void 0 !== rM ? rM : 0,
-            pulseSignal: tM,
-            disabled: yr || !zM
+          children: (0, YU.jsx)(CA, {
+            selfName: EU ? oU.getPlayerName() : "",
+            giftRecipient: NU,
+            suggestionsVersion: null !== (XU = null === rU || void 0 === rU ? void 0 : rU.seq) && void 0 !== XU ? XU : 0,
+            pulseSignal: LU,
+            disabled: tX || !EU
           })
-        }), DM && (0, LM.jsxs)("div", {
+        }), rU && (0, YU.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            ZM(null)
+            fU(null)
           },
-          children: [(0, LM.jsx)(na.d, {
-            showSignal: DM.seq
-          }), La.e, " ", PM("store:giftSent", {
-            name: DM.name
+          children: [(0, YU.jsx)(oA.e, {
+            showSignal: rU.seq
+          }), YA.d, " ", FU("store:giftSent", {
+            name: rU.name
           })]
-        }, DM.seq), !DM && WM && (0, LM.jsx)("div", {
+        }, rU.seq), !rU && OU && (0, YU.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: PM(WM)
-        }), mr && Hr.claimFailed, (0, LM.jsx)(dP, {
-          layout: ar,
-          mountAtOnce: null !== FM.current,
-          bundleGift: "gift" === jr ? {
-            recipientName: dr,
-            lookingUp: "pending" === mM.recipient.status,
-            busy: yr,
-            onNeedRecipient: VM,
-            onSent: MM => {
-              (0, Sr.reportAnalyticsClick)({
+          children: FU(OU)
+        }), YX && NX.claimFailed, (0, YU.jsx)(tF, {
+          layout: QX,
+          mountAtOnce: null !== mU.current,
+          bundleGift: "gift" === yX ? {
+            recipientName: aX,
+            lookingUp: "pending" === NU.recipient.status,
+            busy: tX,
+            onNeedRecipient: bU,
+            onSent: UU => {
+              (0, XX.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), Ur({
-                name: MM,
-                cosmetics: mM.recipientCosmetics
+              }), GX({
+                name: UU,
+                cosmetics: NU.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, La.u)(rr),
-          busy: yr,
-          highlightItem: oM,
-          onOpen: function(MM) {
-            (0, Sr.reportAnalyticsClick)({
+          superRankTotalDays: (0, YA.v)(UX),
+          busy: tX,
+          highlightItem: iU,
+          onOpen: function(UU) {
+            (0, XX.reportAnalyticsClick)({
               id: "store.item_open",
-              value: MM
-            }), EM((0, YM.f)(MM))
+              value: UU
+            }), GU((0, MU.g)(UU))
           },
-          onAct: Gr,
-          onNeedRecipient: VM,
-          onLogin: lr,
-          dailyDropTile: mr && Hr.tile,
-          dealBanner: "self" === jr && null !== cM && (0, LM.jsx)(IP, {
-            view: cM,
-            highlight: oM,
-            scrollSignal: AM,
+          onAct: BX,
+          onNeedRecipient: bU,
+          onLogin: gX,
+          dailyDropTile: YX && NX.tile,
+          dealBanner: "self" === yX && null !== TU && (0, YU.jsx)(jF, {
+            view: TU,
+            highlight: iU,
+            scrollSignal: VU,
             onScrolledIntoView: () => {
-              xM(0)
+              sU(0)
             }
           })
-        }), "gift" !== jr && (0, LM.jsx)(wP, {}), Hr.reveal]
+        }), "gift" !== yX && (0, YU.jsx)(dF, {}), NX.reveal]
       })
     }));
-    var On = iM(2905),
-      Sn = iM(9438),
-      jn = iM(9271),
-      an = iM(3038),
-      Pn = iM(2813),
-      nn = iM(2862),
-      Qn = iM(2875),
-      zn = iM(2880),
-      Ln = iM(2963),
-      mn = iM(2950),
-      Hn = iM(2470),
-      hn = iM(2533),
-      Jn = iM(2494),
-      dn = iM(2148),
-      yn = iM(2882),
-      En = iM(2540);
+    var co = zU(2907),
+      yo = zU(9417),
+      Qo = zU(9237),
+      Ao = zU(3016),
+      Fo = zU(2833),
+      oo = zU(2870),
+      Do = zU(2880),
+      Eo = zU(2884),
+      Yo = zU(2963),
+      No = zU(2943),
+      Io = zU(2478),
+      po = zU(2563),
+      ao = zU(2509),
+      to = zU(2106),
+      go = zU(2891),
+      ko = zU(2572);
 
-    function Un(MM) {
+    function Go(UU) {
       let {
-        show: rM
-      } = MM;
-      return rM ? (0, LM.jsx)(Gn, {}) : null
+        show: XU
+      } = UU;
+      return XU ? (0, YU.jsx)(Bo, {}) : null
     }
 
-    function Gn() {
+    function Bo() {
       const {
-        t: MM
-      } = (0, aM.A)(), {
-        followsLeader: rM
-      } = (0, Pn.c)(), {
-        loading: iM,
-        friends: SM,
-        requests: nM,
-        invites: zM
-      } = (0, vM.m)(), {
-        userContext: mM
-      } = (0, hM.b)(), [HM, JM] = (0, OM.useState)(En.h);
-      (0, OM.useEffect)((() => {
-        (0, En.b)()
+        t: UU
+      } = (0, AU.I)(), {
+        followsLeader: XU
+      } = (0, Fo.g)(), {
+        loading: zU,
+        friends: yU,
+        requests: oU,
+        invites: EU
+      } = (0, nU.o)(), {
+        userContext: NU
+      } = (0, pU.d)(), [IU, aU] = (0, cU.useState)(ko.h);
+      (0, cU.useEffect)((() => {
+        (0, ko.b)()
       }), []);
-      const dM = nM.map((MM => MM.name)),
+      const tU = oU.map((UU => UU.name)),
         {
-          state: yM,
-          recentRequesters: lM
-        } = (0, mn.p)(),
-        EM = new Map([...("loaded" === yM.status ? yM.recentPlayers : []).map((MM => [MM.preview.name, MM])), ...lM.map((MM => [MM.name, MM]))]),
-        UM = (0, OM.useRef)(null),
-        [eM, bM] = (0, OM.useState)(""),
-        [wM, tM] = (0, OM.useState)("Enter"),
-        [gM, uM] = (0, OM.useState)(null);
+          state: gU,
+          recentRequesters: kU
+        } = (0, No.o)(),
+        GU = new Map([...("loaded" === gU.status ? gU.recentPlayers : []).map((UU => [UU.preview.name, UU])), ...kU.map((UU => [UU.name, UU]))]),
+        BU = (0, cU.useRef)(null),
+        [PU, WU] = (0, cU.useState)(""),
+        [dU, LU] = (0, cU.useState)("Enter"),
+        [eU, CU] = (0, cU.useState)(null);
 
-      function RM() {
-        eM && (tM("Loading"), (0, Jn.h)(eM, "social_menu").then((MM => {
-          if (UM.current) switch (MM.kind) {
+      function wU() {
+        PU && (LU("Loading"), (0, ao.g)(PU, "social_menu").then((UU => {
+          if (BU.current) switch (UU.kind) {
             case "sent":
-              tM("Success");
+              LU("Success");
               break;
             case "becameFriends":
-              tM("BecameFriends");
+              LU("BecameFriends");
               break;
             case "failed":
-              uM(MM.message), tM("Error")
+              CU(UU.message), LU("Error")
           }
         })))
       }
-      return (0, OM.useEffect)((() => {
-        if ("Enter" === wM || "Loading" === wM) return;
-        const MM = setTimeout((() => {
-          UM.current.value = "", bM(""), tM("Enter")
-        }), "Success" === wM ? 1e3 : 4e3);
+      return (0, cU.useEffect)((() => {
+        if ("Enter" === dU || "Loading" === dU) return;
+        const UU = setTimeout((() => {
+          BU.current.value = "", WU(""), LU("Enter")
+        }), "Success" === dU ? 1e3 : 4e3);
         return () => {
-          clearTimeout(MM)
+          clearTimeout(UU)
         }
-      }), [wM]), (0, LM.jsx)("div", {
+      }), [dU]), (0, YU.jsx)("div", {
         className: "SocialMenu",
-        children: (0, LM.jsxs)("div", {
+        children: (0, YU.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, LM.jsxs)("div", {
+            children: [(0, YU.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, LM.jsx)(zn.d, {
-                label: MM("socialBar:addFriend")
-              }), (0, LM.jsxs)("div", {
+              children: [(0, YU.jsx)(Eo.b, {
+                label: UU("socialBar:addFriend")
+              }), (0, YU.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, LM.jsxs)("div", {
-                  className: jM()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${wM}`]: !0
+                children: [(0, YU.jsxs)("div", {
+                  className: QU()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${dU}`]: !0
                   }),
-                  children: ["Loading" === wM && (0, LM.jsx)(CM.d, {}), "Success" === wM && (0, LM.jsx)(PM.b, {
+                  children: ["Loading" === dU && (0, YU.jsx)(RU.b, {}), "Success" === dU && (0, YU.jsx)(FU.d, {
                     name: "check"
-                  }), "BecameFriends" === wM && (0, LM.jsx)(LM.Fragment, {
-                    children: MM("socialBar:nowFriends", {
-                      playerName: eM
+                  }), "BecameFriends" === dU && (0, YU.jsx)(YU.Fragment, {
+                    children: UU("socialBar:nowFriends", {
+                      playerName: PU
                     })
-                  }), "Error" === wM && gM && (0, LM.jsx)(LM.Fragment, {
-                    children: MM(gM.translationKey, gM.params)
+                  }), "Error" === dU && eU && (0, YU.jsx)(YU.Fragment, {
+                    children: UU(eU.translationKey, eU.params)
                   })]
-                }), (0, LM.jsxs)("div", {
+                }), (0, YU.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, LM.jsx)(GM.b, {
+                  children: [(0, YU.jsx)(ZU.e, {
                     className: "PlayerSearchInput",
-                    placeholderText: MM("socialBar:enterPlayerName"),
-                    domRef: UM,
-                    onValueChange: MM => {
-                      bM((0, sM.l)(MM)), UM.current.value = (0, sM.l)(MM)
+                    placeholderText: UU("socialBar:enterPlayerName"),
+                    domRef: BU,
+                    onValueChange: UU => {
+                      WU((0, SU.o)(UU)), BU.current.value = (0, SU.o)(UU)
                     },
                     onEnter: () => {
-                      eM && (0, Sr.reportAnalyticsClick)({
+                      PU && (0, XX.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), RM()
+                      }), wU()
                     }
-                  }), (0, LM.jsxs)(QM.e, {
+                  }), (0, YU.jsxs)(DU.f, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      RM()
+                      wU()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, LM.jsx)(PM.b, {
+                    children: [(0, YU.jsx)(FU.d, {
                       name: "user-plus"
-                    }), " ", MM("socialBar:sendRequest")]
+                    }), " ", UU("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, LM.jsx)(yn.e, {
+              }), (0, YU.jsx)(go.c, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), zM.length > 0 && (0, LM.jsxs)("div", {
+            }), EU.length > 0 && (0, YU.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, LM.jsx)(zn.d, {
-                label: MM("socialBar:invites"),
-                meta: zM.length
-              }), zM.map((rM => (0, LM.jsxs)("div", {
+              children: [(0, YU.jsx)(Eo.b, {
+                label: UU("socialBar:invites"),
+                meta: EU.length
+              }), EU.map((XU => (0, YU.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, LM.jsx)("div", {
+                children: [(0, YU.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, LM.jsx)(Hn.d, {
-                    invite: rM
+                  children: (0, YU.jsx)(Io.c, {
+                    invite: XU
                   })
-                }), (0, LM.jsx)("div", {
+                }), (0, YU.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, LM.jsx)(Hn.e, {
-                    invite: rM
+                  children: (0, YU.jsx)(Io.f, {
+                    invite: XU
                   })
-                }), (0, LM.jsx)(QM.p, {
+                }), (0, YU.jsx)(DU.l, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, hn.e)(rM)
+                    (0, po.c)(XU)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${rM.destination.kind}`
+                    value: `social_menu:${XU.destination.kind}`
                   },
-                  children: MM("general:join")
-                }), (0, LM.jsx)(rr.i, {
-                  tooltipInner: (0, LM.jsx)(LM.Fragment, {
-                    children: MM("general:decline")
+                  children: UU("general:join")
+                }), (0, YU.jsx)(TU.d, {
+                  tooltipInner: (0, YU.jsx)(YU.Fragment, {
+                    children: UU("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, LM.jsx)(QM.i, {
+                  children: (0, YU.jsx)(DU.j, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === HM || void 0 === HM ? void 0 : HM.kind) && HM.inviteId === rM.id,
+                    padDefaultFocus: "invite" === (null === IU || void 0 === IU ? void 0 : IU.kind) && IU.inviteId === XU.id,
                     onClick: () => {
-                      vM.e.declineInvite(rM.id)
+                      nU.d.declineInvite(XU.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${rM.destination.kind}`
+                      value: `social_menu:${XU.destination.kind}`
                     },
-                    children: (0, LM.jsx)(PM.b, {
+                    children: (0, YU.jsx)(FU.d, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, rM.id)))]
-            }), (0, LM.jsxs)("div", {
-              className: jM()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !iM && 0 === nM.length
+              }, XU.id)))]
+            }), (0, YU.jsxs)("div", {
+              className: QU()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !zU && 0 === oU.length
               }),
-              children: [(0, LM.jsx)(zn.d, {
-                label: (0, LM.jsxs)(LM.Fragment, {
-                  children: [(0, LM.jsx)(PM.b, {
-                    name: dn.g
-                  }), " ", MM("socialBar:requests")]
+              children: [(0, YU.jsx)(Eo.b, {
+                label: (0, YU.jsxs)(YU.Fragment, {
+                  children: [(0, YU.jsx)(FU.d, {
+                    name: to.e
+                  }), " ", UU("socialBar:requests")]
                 }),
-                meta: (0, LM.jsxs)(LM.Fragment, {
-                  children: [nM.length, nM.length === ir.q && (0, LM.jsx)("span", {
+                meta: (0, YU.jsxs)(YU.Fragment, {
+                  children: [oU.length, oU.length === hU.n && (0, YU.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: MM("socialBar:limitReached")
+                    children: UU("socialBar:limitReached")
                   })]
                 })
-              }), iM && (0, LM.jsx)("div", {
+              }), zU && (0, YU.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, LM.jsx)(CM.d, {})
-              }), !iM && 0 === nM.length && (0, LM.jsx)("div", {
+                children: (0, YU.jsx)(RU.b, {})
+              }), !zU && 0 === oU.length && (0, YU.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: MM("socialBar:noFriendRequests")
-              }), !iM && nM.length > 0 && (0, LM.jsx)("div", {
+                children: UU("socialBar:noFriendRequests")
+              }), !zU && oU.length > 0 && (0, YU.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, LM.jsx)(aj.e, {
+                children: (0, YU.jsx)(AQ.d, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [nM],
-                  children: nM.map(((rM, iM) => {
-                    const OM = EM.get(rM.name);
-                    return (0, LM.jsxs)(Qn.h, {
-                      playerSocialPreview: rM,
-                      zIndex: nM.length - iM,
-                      padDefaultFocus: (0, En.f)(HM, rM.name, iM),
-                      status: OM && (0, LM.jsx)(Ln.d, {
-                        gameNameWithVariation: OM.gameNameWithVariation,
-                        isPrivateLobby: OM.isPrivateLobby
+                  observerUpdateDeps: [oU],
+                  children: oU.map(((XU, zU) => {
+                    const cU = GU.get(XU.name);
+                    return (0, YU.jsxs)(Do.f, {
+                      playerSocialPreview: XU,
+                      zIndex: oU.length - zU,
+                      padDefaultFocus: (0, ko.g)(IU, XU.name, zU),
+                      status: cU && (0, YU.jsx)(Yo.d, {
+                        gameNameWithVariation: cU.gameNameWithVariation,
+                        isPrivateLobby: cU.isPrivateLobby
                       }),
-                      children: [(0, LM.jsx)(rr.i, {
-                        tooltipInner: (0, LM.jsx)(LM.Fragment, {
-                          children: MM("general:accept")
+                      children: [(0, YU.jsx)(TU.d, {
+                        tooltipInner: (0, YU.jsx)(YU.Fragment, {
+                          children: UU("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, LM.jsx)(QM.e, {
+                        children: (0, YU.jsx)(DU.f, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            JM((0, En.c)(dM, iM)), (0, Jn.e)(rM.name, !0, {
+                            aU((0, ko.c)(tU, zU)), (0, ao.f)(XU.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -8462,19 +8488,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, LM.jsx)(PM.b, {
+                          children: (0, YU.jsx)(FU.d, {
                             name: "check"
                           })
                         })
-                      }), (0, LM.jsx)(rr.i, {
-                        tooltipInner: (0, LM.jsx)(LM.Fragment, {
-                          children: MM("general:decline")
+                      }), (0, YU.jsx)(TU.d, {
+                        tooltipInner: (0, YU.jsx)(YU.Fragment, {
+                          children: UU("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, LM.jsx)(QM.i, {
+                        children: (0, YU.jsx)(DU.j, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            JM((0, En.c)(dM, iM)), (0, Jn.e)(rM.name, !1, {
+                            aU((0, ko.c)(tU, zU)), (0, ao.f)(XU.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -8482,62 +8508,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, LM.jsx)(PM.b, {
+                          children: (0, YU.jsx)(FU.d, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${rM.name}_${rM.isError}`)
+                    }, `${XU.name}_${XU.isError}`)
                   }))
                 })
               })]
-            }), (0, LM.jsx)(Ln.j, {})]
-          }), (0, LM.jsxs)("div", {
+            }), (0, YU.jsx)(Yo.h, {})]
+          }), (0, YU.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, LM.jsxs)("div", {
+            children: [(0, YU.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, LM.jsx)(zn.d, {
-                label: MM("socialBar:party")
-              }), (0, LM.jsx)(nn.e, {})]
-            }), (0, LM.jsxs)("div", {
+              children: [(0, YU.jsx)(Eo.b, {
+                label: UU("socialBar:party")
+              }), (0, YU.jsx)(oo.d, {})]
+            }), (0, YU.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, LM.jsx)(zn.d, {
-                label: (0, LM.jsxs)(LM.Fragment, {
-                  children: [(0, LM.jsx)(PM.b, {
-                    name: dn.e
-                  }), " ", MM("socialBar:friends")]
+              children: [(0, YU.jsx)(Eo.b, {
+                label: (0, YU.jsxs)(YU.Fragment, {
+                  children: [(0, YU.jsx)(FU.d, {
+                    name: to.c
+                  }), " ", UU("socialBar:friends")]
                 }),
-                meta: (0, LM.jsxs)(LM.Fragment, {
-                  children: [SM.length, SM.length >= (0, ir.c)(mM.getPlayerRanks()) && (0, LM.jsx)("span", {
+                meta: (0, YU.jsxs)(YU.Fragment, {
+                  children: [yU.length, yU.length >= (0, hU.d)(NU.getPlayerRanks()) && (0, YU.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: MM("socialBar:limitReached")
+                    children: UU("socialBar:limitReached")
                   })]
                 })
-              }), iM && (0, LM.jsx)("div", {
+              }), zU && (0, YU.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, LM.jsx)(CM.d, {})
-              }), !iM && 0 === SM.length && (0, LM.jsx)("div", {
+                children: (0, YU.jsx)(RU.b, {})
+              }), !zU && 0 === yU.length && (0, YU.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: MM("socialBar:noFriends")
-              }), !iM && SM.length > 0 && (0, LM.jsx)("div", {
+                children: UU("socialBar:noFriends")
+              }), !zU && yU.length > 0 && (0, YU.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, LM.jsx)(aj.e, {
+                children: (0, YU.jsx)(AQ.d, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [SM],
-                  children: SM.map(((MM, iM) => (0, LM.jsx)(Qn.h, {
-                    playerSocialPreview: MM,
+                  observerUpdateDeps: [yU],
+                  children: yU.map(((UU, zU) => (0, YU.jsx)(Do.f, {
+                    playerSocialPreview: UU,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: MM => {
-                      vM.e.removeFriendFromState(MM)
+                    onFriendRemoved: UU => {
+                      nU.d.removeFriendFromState(UU)
                     },
-                    zIndex: SM.length - iM,
-                    children: (0, LM.jsx)(Qn.e, {
-                      friend: MM,
-                      followsLeader: rM,
+                    zIndex: yU.length - zU,
+                    children: (0, YU.jsx)(Do.d, {
+                      friend: UU,
+                      followsLeader: XU,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${MM.name}_${MM.isError}`)))
+                  }, `${UU.name}_${UU.isError}`)))
                 })
               })]
             })]
@@ -8545,793 +8571,802 @@ export const modules = {
         })
       })
     }
-    var Cn = iM(2735),
-      en = iM(4007),
-      bn = iM(4628),
-      wn = iM(1940),
-      tn = iM(4004),
-      gn = iM(4011);
+    var Zo = zU(2723),
+      Ro = zU(4005),
+      Po = zU(4658),
+      Wo = zU(1919),
+      Lo = zU(3998),
+      eo = zU(4007);
 
-    function un(MM) {
+    function Co(UU) {
       let {
-        count: rM,
-        claiming: iM
-      } = MM;
+        count: XU,
+        claiming: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)();
-      return 0 === rM ? null : (0, LM.jsx)(QM.p, {
+        t: cU
+      } = (0, AU.I)();
+      return 0 === XU ? null : (0, YU.jsx)(DU.l, {
         className: "SeasonPassClaimAllButton",
-        loading: iM,
+        loading: zU,
         onClick: () => {
-          en.e.claimAll().catch((MM => {
-            console.error("Failed to claim all season pass rewards", MM)
+          Ro.c.claimAll().catch((UU => {
+            console.error("Failed to claim all season pass rewards", UU)
           }))
         },
-        children: OM("seasonPass:claimAll", {
-          count: rM
+        children: cU("seasonPass:claimAll", {
+          count: XU
         })
       })
     }
 
-    function Rn(MM) {
+    function wo(UU) {
       let {
-        view: rM,
-        claiming: iM
-      } = MM;
+        view: XU,
+        claiming: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, aM.A)(), {
-        userContext: SM
-      } = (0, hM.b)(), {
-        config: jM,
-        state: nM,
-        tier: QM,
-        xpIntoTier: zM,
-        xpForNextTier: mM
-      } = rM, HM = Date.now(), JM = (0, gn.k)(rM, HM), dM = QM >= jM.tierCount, yM = JM && !dM && mM > 0, lM = mM > 0 && !dM ? Math.min(100, zM / mM * 100) : 100, EM = nM.xpToday >= jM.maxXpPerDay, UM = null !== rM.xpBoost && rM.xpBoost.endsAtMs > HM && !EM ? rM.xpBoost : null;
-      return (0, LM.jsxs)("header", {
+        t: cU
+      } = (0, AU.I)(), {
+        userContext: yU
+      } = (0, pU.d)(), {
+        config: QU,
+        state: oU,
+        tier: DU,
+        xpIntoTier: EU,
+        xpForNextTier: NU
+      } = XU, IU = Date.now(), aU = (0, eo.i)(XU, IU), tU = DU >= QU.tierCount, gU = aU && !tU && NU > 0, kU = NU > 0 && !tU ? Math.min(100, EU / NU * 100) : 100, GU = oU.xpToday >= QU.maxXpPerDay, BU = null !== XU.xpBoost && XU.xpBoost.endsAtMs > IU && !GU ? XU.xpBoost : null;
+      return (0, YU.jsxs)("header", {
         className: "SeasonPassHeader",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "SeasonPassHeaderTitleBlock",
-          children: (0, LM.jsx)("h1", {
+          children: (0, YU.jsx)("h1", {
             className: "SeasonPassHeaderTitle",
-            children: OM("seasonPass:title", {
-              season: nM.seasonNumber
+            children: cU("seasonPass:title", {
+              season: oU.seasonNumber
             })
           })
-        }), (0, LM.jsxs)("div", {
+        }), (0, YU.jsxs)("div", {
           className: "SeasonPassHeaderProgress",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "SeasonPassHeaderProgressRow",
-            children: [(0, LM.jsx)("span", {
+            children: [(0, YU.jsx)("span", {
               className: "SeasonPassHeaderTierBadge",
-              title: OM("seasonPass:tier"),
-              "aria-label": `${OM("seasonPass:tier")} ${QM}`,
-              children: QM
-            }), (0, LM.jsxs)("div", {
+              title: cU("seasonPass:tier"),
+              "aria-label": `${cU("seasonPass:tier")} ${DU}`,
+              children: DU
+            }), (0, YU.jsxs)("div", {
               className: "SeasonPassHeaderBar",
               role: "progressbar",
               "aria-valuemin": 0,
               "aria-valuemax": 100,
-              "aria-valuenow": Math.round(lM),
-              children: [(0, LM.jsx)("div", {
+              "aria-valuenow": Math.round(kU),
+              children: [(0, YU.jsx)("div", {
                 className: "SeasonPassHeaderBarFill",
                 style: {
-                  width: `${lM}%`
+                  width: `${kU}%`
                 }
-              }), (0, LM.jsxs)("span", {
+              }), (0, YU.jsxs)("span", {
                 className: "SeasonPassHeaderBarText SmallTextBold",
-                children: [dM && OM("seasonPass:passComplete"), yM && OM("seasonPass:xpProgress", {
-                  xp: zM,
-                  xpForNextTier: mM
+                children: [tU && cU("seasonPass:passComplete"), gU && cU("seasonPass:xpProgress", {
+                  xp: EU,
+                  xpForNextTier: NU
                 })]
               })]
-            }), yM && (0, LM.jsxs)(LM.Fragment, {
-              children: [(0, LM.jsx)(PM.b, {
+            }), gU && (0, YU.jsxs)(YU.Fragment, {
+              children: [(0, YU.jsx)(FU.d, {
                 className: "SeasonPassHeaderNextArrow",
                 name: "caret-right"
-              }), (0, LM.jsx)("span", {
+              }), (0, YU.jsx)("span", {
                 className: "SeasonPassHeaderNextTier",
-                children: QM + 1
+                children: DU + 1
               })]
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, YU.jsxs)("div", {
             className: "SeasonPassHeaderFootnotes",
-            children: [(0, LM.jsxs)("span", {
+            children: [(0, YU.jsxs)("span", {
               className: "SeasonPassHeaderTimeLeft",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "hourglass"
-              }), " ", JM ? OM("seasonPass:endsIn", {
-                time: (0, tn.b)((rM.endsAtMs - HM) / 6e4)
-              }) : (0, bn.c)(rM.claimEndsAtMs, OM, HM)]
-            }), JM && !dM && (0, LM.jsx)("span", {
-              className: EM ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
-              children: EM ? OM("seasonPass:dailyCapReached") : OM("seasonPass:dailyXp", {
-                xp: nM.xpToday,
-                cap: jM.maxXpPerDay
+              }), " ", aU ? cU("seasonPass:endsIn", {
+                time: (0, Lo.e)((XU.endsAtMs - IU) / 6e4)
+              }) : (0, Po.d)(XU.claimEndsAtMs, cU, IU)]
+            }), aU && !tU && (0, YU.jsx)("span", {
+              className: GU ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
+              children: GU ? cU("seasonPass:dailyCapReached") : cU("seasonPass:dailyXp", {
+                xp: oU.xpToday,
+                cap: QU.maxXpPerDay
               })
-            }), JM && !dM && UM && (0, LM.jsxs)("span", {
+            }), aU && !tU && BU && (0, YU.jsxs)("span", {
               className: "SeasonPassHeaderBoost",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "angles-up"
-              }), " ", OM("seasonPass:xpBoostActive", {
-                multiplier: UM.multiplier,
-                time: (0, tn.b)(Math.ceil((UM.endsAtMs - HM) / 6e4))
+              }), " ", cU("seasonPass:xpBoostActive", {
+                multiplier: BU.multiplier,
+                time: (0, Lo.e)(Math.ceil((BU.endsAtMs - IU) / 6e4))
               })]
-            }), JM && !dM && !EM && !UM && (0, LM.jsx)("span", {
+            }), aU && !tU && !GU && !BU && (0, YU.jsx)("span", {
               className: "SeasonPassHeaderHint",
-              children: OM("seasonPass:playToEarn")
-            }), SM.type === wn.d.ANONYMOUS && (0, LM.jsx)("span", {
+              children: cU("seasonPass:playToEarn")
+            }), yU.type === Wo.d.ANONYMOUS && (0, YU.jsx)("span", {
               className: "SeasonPassHeaderGuest",
-              children: OM("seasonPass:logInToKeep")
+              children: cU("seasonPass:logInToKeep")
             })]
           })]
-        }), (0, LM.jsx)(un, {
-          count: rM.claimable.length,
-          claiming: iM
+        }), (0, YU.jsx)(Co, {
+          count: XU.claimable.length,
+          claiming: zU
         })]
       })
     }
-    var pn = iM(4630),
-      Wn = iM(3471),
-      sn = iM(3479);
+    var qo = zU(4666),
+      Oo = zU(3438),
+      So = zU(3443);
 
-    function Dn(MM) {
-      return null !== (0, bn.s)(MM) || null !== (0, bn.l)(MM)
+    function ro(UU) {
+      return null !== (0, Po.v)(UU) || null !== (0, Po.q)(UU)
     }
-    let kn = null;
+    let uo = null;
 
-    function Zn() {
-      var MM;
-      null === (MM = kn) || void 0 === MM || MM.tearDownNotification()
+    function fo() {
+      var UU;
+      null === (UU = uo) || void 0 === UU || UU.tearDownNotification()
     }
 
-    function fn(MM) {
+    function io(UU) {
       let {
-        reward: rM
-      } = MM;
+        reward: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, aM.A)(), {
-        userContext: OM
-      } = (0, hM.b)(), SM = (0, bn.s)(rM);
-      return (0, LM.jsxs)("div", {
+        t: zU
+      } = (0, AU.I)(), {
+        userContext: cU
+      } = (0, pU.d)(), yU = (0, Po.v)(XU);
+      return (0, YU.jsxs)("div", {
         className: "PromptGenericPopup SeasonPassRewardPreview",
-        children: [(0, LM.jsx)("div", {
+        children: [(0, YU.jsx)("div", {
           className: "PromptGenericPopupTitle SmallTextBold",
-          children: (0, bn.h)(rM, iM)
-        }), null !== SM && (0, LM.jsx)("div", {
+          children: (0, Po.i)(XU, zU)
+        }), null !== yU && (0, YU.jsx)("div", {
           className: "SeasonPassRewardPreviewProfileEffect",
-          children: (0, LM.jsx)(Wn.e, {
-            profileEffect: SM,
-            name: OM.getPlayerName(),
-            cosmetics: OM.getPlayerCosmetics()
+          children: (0, YU.jsx)(Oo.d, {
+            profileEffect: yU,
+            name: cU.getPlayerName(),
+            cosmetics: cU.getPlayerCosmetics()
           })
-        }), null === SM && (0, LM.jsx)(Yn, {
-          reward: rM
+        }), null === yU && (0, YU.jsx)(Ho, {
+          reward: XU
         })]
       })
     }
 
-    function Yn(MM) {
+    function Ho(UU) {
       let {
-        reward: rM
-      } = MM;
+        reward: XU
+      } = UU;
       const {
-        userContext: iM
-      } = (0, hM.b)(), SM = (0, OM.useRef)(null), {
-        previewEmote: jM,
-        playEmote: aM
-      } = (0, sn.e)(), PM = (0, OM.useMemo)((() => (0, bn.l)(rM)), [rM]), nM = PM.emote;
-      return (0, LM.jsx)("div", {
+        userContext: zU
+      } = (0, pU.d)(), yU = (0, cU.useRef)(null), {
+        previewEmote: QU,
+        playEmote: AU
+      } = (0, So.d)(), FU = (0, cU.useMemo)((() => (0, Po.q)(XU)), [XU]), oU = FU.emote;
+      return (0, YU.jsx)("div", {
         className: "SeasonPassRewardPreviewCharacter",
-        children: (0, LM.jsx)(OM.Suspense, {
-          fallback: (0, LM.jsx)(CM.d, {}),
-          children: (0, LM.jsx)(oa.c, {
-            ref: SM,
+        children: (0, YU.jsx)(cU.Suspense, {
+          fallback: (0, YU.jsx)(RU.b, {}),
+          children: (0, YU.jsx)(iA.d, {
+            ref: yU,
             framing: "store",
-            forcedCosmetics: PM.cosmetics,
-            Ua: jM.id,
-            emotePlaySeq: jM.seq,
+            forcedCosmetics: FU.cosmetics,
+            GA: QU.id,
+            emotePlaySeq: QU.seq,
             onReady: () => {
-              var MM, rM;
-              null === (MM = SM.current) || void 0 === MM || MM.resetCamera(), null === (rM = SM.current) || void 0 === rM || rM.setAllCosmetics(iM.getPlayerCosmetics())
+              var UU, XU;
+              null === (UU = yU.current) || void 0 === UU || UU.resetCamera(), null === (XU = yU.current) || void 0 === XU || XU.setAllCosmetics(zU.getPlayerCosmetics())
             },
             onDrawn: () => {
-              null !== nM && aM(nM)
+              null !== oU && AU(oU)
             }
           })
         })
       })
     }
 
-    function Nn(MM) {
+    function Mo(UU) {
       let {
-        waitingCount: rM
-      } = MM;
+        waitingCount: XU
+      } = UU;
       const {
-        t: iM
-      } = (0, aM.A)();
-      return (0, NM.usePurchasesAllowed)() ? (0, LM.jsxs)("div", {
+        t: zU
+      } = (0, AU.I)();
+      return (0, vU.usePurchasesAllowed)() ? (0, YU.jsxs)("div", {
         className: "SeasonPassSuperUpsell",
-        children: [rM > 0 && (0, LM.jsx)("span", {
+        children: [XU > 0 && (0, YU.jsx)("span", {
           className: "SeasonPassSuperUpsellText",
-          children: 1 === rM ? iM("seasonPass:superRewardWaiting") : iM("seasonPass:superRewardsWaiting", {
-            count: rM
+          children: 1 === XU ? zU("seasonPass:superRewardWaiting") : zU("seasonPass:superRewardsWaiting", {
+            count: XU
           })
-        }), (0, LM.jsxs)("span", {
+        }), (0, YU.jsxs)("span", {
           className: "SeasonPassSuperUpsellButtonWrapper",
-          children: [(0, LM.jsxs)(QM.p, {
+          children: [(0, YU.jsxs)(DU.l, {
             className: "SeasonPassSuperUpsellButton",
             onClick: () => {
-              (0, YM.n)({
+              (0, MU.l)({
                 mode: "self",
                 source: "seasonPass",
                 openItem: "superRank"
               })
             },
-            children: [(0, LM.jsx)(PM.b, {
+            children: [(0, YU.jsx)(FU.d, {
               name: "bolt"
-            }), " ", iM("homePage:getSuperRank")]
-          }), rM > 0 && (0, LM.jsx)("span", {
+            }), " ", zU("homePage:getSuperRank")]
+          }), XU > 0 && (0, YU.jsx)("span", {
             className: "SeasonPassSuperUpsellCount",
-            children: rM
+            children: XU
           })]
         })]
       }) : null
     }
-    var An = iM(35086);
+    var vo = zU(34933);
 
-    function xn(MM) {
-      var rM, iM;
+    function Vo(UU) {
+      var XU, zU;
       let {
-        view: SM,
-        claimingKeys: jM,
-        superWaitingCount: nM,
-        onClaim: QM
-      } = MM;
+        view: yU,
+        claimingKeys: QU,
+        superWaitingCount: oU,
+        onClaim: DU
+      } = UU;
       const {
-        t: zM
-      } = (0, aM.A)(), mM = (0, OM.useRef)(null), {
-        config: HM,
-        tier: hM,
-        xpIntoTier: JM,
-        xpForNextTier: dM,
-        state: yM
-      } = SM, lM = (0, gn.k)(SM), EM = (0, OM.useRef)(!1), UM = null !== (rM = null === (iM = SM.claimable[0]) || void 0 === iM ? void 0 : iM.tier) && void 0 !== rM ? rM : Math.min(hM + 1, HM.tierCount);
-      (0, OM.useLayoutEffect)((() => {
-        if (EM.current) return;
-        const MM = mM.current,
-          rM = MM.querySelector(`[data-tier="${UM}"]`).getBoundingClientRect(),
-          iM = MM.getBoundingClientRect();
-        MM.scrollLeft += rM.left - iM.left - .3 * MM.clientWidth, MM.scrollTop += rM.top - iM.top - .3 * MM.clientHeight
-      }), [UM]), (0, OM.useEffect)((() => {
-        const MM = mM.current;
+        t: EU
+      } = (0, AU.I)(), NU = (0, cU.useRef)(null), {
+        config: IU,
+        tier: pU,
+        xpIntoTier: aU,
+        xpForNextTier: tU,
+        state: gU
+      } = yU, kU = (0, eo.i)(yU), GU = (0, cU.useRef)(!1), BU = null !== (XU = null === (zU = yU.claimable[0]) || void 0 === zU ? void 0 : zU.tier) && void 0 !== XU ? XU : Math.min(pU + 1, IU.tierCount);
+      (0, cU.useLayoutEffect)((() => {
+        if (GU.current) return;
+        const UU = NU.current,
+          XU = UU.querySelector(`[data-tier="${BU}"]`).getBoundingClientRect(),
+          zU = UU.getBoundingClientRect();
+        UU.scrollLeft += XU.left - zU.left - .3 * UU.clientWidth, UU.scrollTop += XU.top - zU.top - .3 * UU.clientHeight
+      }), [BU]), (0, cU.useEffect)((() => {
+        const UU = NU.current;
 
-        function rM(rM) {
-          EM.current = !0, Math.abs(rM.deltaY) <= Math.abs(rM.deltaX) || MM.scrollWidth <= MM.clientWidth || (rM.preventDefault(), MM.scrollLeft += rM.deltaY)
+        function XU(XU) {
+          GU.current = !0, Math.abs(XU.deltaY) <= Math.abs(XU.deltaX) || UU.scrollWidth <= UU.clientWidth || (XU.preventDefault(), UU.scrollLeft += XU.deltaY)
         }
-        return MM.addEventListener("wheel", rM, {
+        return UU.addEventListener("wheel", XU, {
           passive: !1
         }), () => {
-          MM.removeEventListener("wheel", rM)
+          UU.removeEventListener("wheel", XU)
         }
       }), []);
-      const GM = dM > 0 ? JM / dM : 1;
-      return (0, LM.jsxs)("div", {
+      const ZU = tU > 0 ? aU / tU : 1;
+      return (0, YU.jsxs)("div", {
         className: "SeasonPassTrack",
-        children: [(0, LM.jsxs)("div", {
+        children: [(0, YU.jsxs)("div", {
           className: "SeasonPassTrackLabels",
-          children: [(0, LM.jsxs)("div", {
+          children: [(0, YU.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelSuper",
-            children: [(0, LM.jsxs)("span", {
+            children: [(0, YU.jsxs)("span", {
               className: "SeasonPassTrackLabelName",
-              children: [(0, LM.jsx)(PM.b, {
+              children: [(0, YU.jsx)(FU.d, {
                 name: "bolt"
-              }), zM("seasonPass:superTrack")]
-            }), !yM.hasSuperRank && (0, LM.jsx)(Nn, {
-              waitingCount: nM
+              }), EU("seasonPass:superTrack")]
+            }), !gU.hasSuperRank && (0, YU.jsx)(Mo, {
+              waitingCount: oU
             })]
-          }), (0, LM.jsxs)("div", {
+          }), (0, YU.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelFree",
-            children: [(0, LM.jsx)("span", {
+            children: [(0, YU.jsx)("span", {
               className: "SeasonPassTrackLabelName",
-              children: zM("seasonPass:freeTrack")
-            }), (0, LM.jsx)("span", {
+              children: EU("seasonPass:freeTrack")
+            }), (0, YU.jsx)("span", {
               className: "SeasonPassTrackLabelHint",
-              children: zM("seasonPass:freeTrackHint")
+              children: EU("seasonPass:freeTrackHint")
             })]
           })]
-        }), (0, LM.jsx)("div", {
+        }), (0, YU.jsx)("div", {
           className: "SeasonPassTrackScroller",
-          ref: mM,
+          ref: NU,
           onPointerDown: () => {
-            EM.current = !0
+            GU.current = !0
           },
-          children: (0, LM.jsx)("div", {
+          children: (0, YU.jsx)("div", {
             className: "SeasonPassTrackRow",
-            children: HM.tiers.map((MM => {
-              const rM = MM.tier,
-                iM = function(MM, rM, iM) {
-                  if (MM <= rM) return "reached";
-                  return iM && MM === rM + 1 ? "earning" : "locked"
-                }(rM, hM, lM),
-                OM = "earning" === iM;
-              return (0, LM.jsx)(vn, {
-                tierRewards: MM,
-                nodeState: iM,
-                progress: OM ? GM : 0,
-                freeState: SM.tileState({
-                  tier: rM,
+            children: IU.tiers.map((UU => {
+              const XU = UU.tier,
+                zU = function(UU, XU, zU) {
+                  if (UU <= XU) return "reached";
+                  return zU && UU === XU + 1 ? "earning" : "locked"
+                }(XU, pU, kU),
+                cU = "earning" === zU;
+              return (0, YU.jsx)(so, {
+                tierRewards: UU,
+                nodeState: zU,
+                progress: cU ? ZU : 0,
+                freeState: yU.tileState({
+                  tier: XU,
                   track: "free"
                 }),
-                superState: SM.tileState({
-                  tier: rM,
+                superState: yU.tileState({
+                  tier: XU,
                   track: "super"
                 }),
-                freeClaiming: jM.has((0, gn.o)({
-                  tier: rM,
+                freeClaiming: QU.has((0, eo.j)({
+                  tier: XU,
                   track: "free"
                 })),
-                superClaiming: jM.has((0, gn.o)({
-                  tier: rM,
+                superClaiming: QU.has((0, eo.j)({
+                  tier: XU,
                   track: "super"
                 })),
-                hasSuperRank: yM.hasSuperRank,
-                onClaim: QM
-              }, rM)
+                hasSuperRank: gU.hasSuperRank,
+                onClaim: DU
+              }, XU)
             }))
           })
         })]
       })
     }
-    const vn = (0, OM.memo)((function(MM) {
+    const so = (0, cU.memo)((function(UU) {
       let {
-        tierRewards: rM,
-        nodeState: iM,
-        progress: OM,
-        freeState: SM,
-        superState: aM,
-        freeClaiming: PM,
-        superClaiming: nM,
-        hasSuperRank: QM,
-        onClaim: zM
-      } = MM;
+        tierRewards: XU,
+        nodeState: zU,
+        progress: cU,
+        freeState: yU,
+        superState: AU,
+        freeClaiming: FU,
+        superClaiming: oU,
+        hasSuperRank: DU,
+        onClaim: EU
+      } = UU;
       const {
-        tier: mM
-      } = rM;
-      return (0, LM.jsxs)("div", {
-        className: jM()("SeasonPassTrackColumn", {
-          SeasonPassTrackColumnLocked: "reached" !== iM
+        tier: NU
+      } = XU;
+      return (0, YU.jsxs)("div", {
+        className: QU()("SeasonPassTrackColumn", {
+          SeasonPassTrackColumnLocked: "reached" !== zU
         }),
-        "data-tier": mM,
-        children: [(0, LM.jsx)(Fn, {
-          tier: mM,
+        "data-tier": NU,
+        children: [(0, YU.jsx)(no, {
+          tier: NU,
           track: "super",
-          reward: rM.super,
-          tileState: aM,
-          claiming: nM,
-          padlock: !QM && "claimed" !== aM,
-          onClaim: zM
-        }), (0, LM.jsxs)("div", {
+          reward: XU.super,
+          tileState: AU,
+          claiming: oU,
+          padlock: !DU && "claimed" !== AU,
+          onClaim: EU
+        }), (0, YU.jsxs)("div", {
           className: "SeasonPassTrackRoad",
-          children: [(0, LM.jsx)("span", {
-            className: jM()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
-              SeasonPassTrackRoadFilled: "reached" === iM
+          children: [(0, YU.jsx)("span", {
+            className: QU()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
+              SeasonPassTrackRoadFilled: "reached" === zU
             }),
-            children: "earning" === iM && (0, LM.jsx)("span", {
+            children: "earning" === zU && (0, YU.jsx)("span", {
               className: "SeasonPassTrackRoadProgress",
               style: {
-                "--seasonPassRoadProgress": 100 * OM + "%"
+                "--seasonPassRoadProgress": 100 * cU + "%"
               }
             })
-          }), (0, LM.jsx)("span", {
-            className: jM()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
-              SeasonPassTrackRoadFilled: "reached" === iM
+          }), (0, YU.jsx)("span", {
+            className: QU()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
+              SeasonPassTrackRoadFilled: "reached" === zU
             })
-          }), (0, LM.jsx)(An.d, {
-            tier: mM,
-            state: iM,
-            progress: OM
+          }), (0, YU.jsx)(vo.c, {
+            tier: NU,
+            state: zU,
+            progress: cU
           })]
-        }), (0, LM.jsx)(Fn, {
-          tier: mM,
+        }), (0, YU.jsx)(no, {
+          tier: NU,
           track: "free",
-          reward: rM.free,
-          tileState: SM,
-          claiming: PM,
+          reward: XU.free,
+          tileState: yU,
+          claiming: FU,
           padlock: !1,
-          onClaim: zM
+          onClaim: EU
         })]
       })
     }));
 
-    function Fn(MM) {
+    function no(UU) {
       let {
-        tier: rM,
-        track: iM,
-        reward: OM,
-        tileState: SM,
-        claiming: jM,
-        padlock: aM,
-        onClaim: PM
-      } = MM;
-      return OM ? (0, LM.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${iM}`,
-        children: (0, LM.jsx)(pn.d, {
-          reward: OM,
-          tileState: SM,
-          track: iM,
+        tier: XU,
+        track: zU,
+        reward: cU,
+        tileState: yU,
+        claiming: QU,
+        padlock: AU,
+        onClaim: FU
+      } = UU;
+      return cU ? (0, YU.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${zU}`,
+        children: (0, YU.jsx)(qo.e, {
+          reward: cU,
+          tileState: yU,
+          track: zU,
           size: "large",
           onClaim: () => {
-            PM({
-              tier: rM,
-              track: iM
+            FU({
+              tier: XU,
+              track: zU
             })
           },
-          claiming: jM,
-          padlock: aM,
-          onPreview: Dn(OM) ? () => {
-            ! function(MM) {
-              const rM = yr.NotificationProvider.showCustomPopup({
-                body: (0, LM.jsx)(fn, {
-                  reward: MM
+          claiming: QU,
+          padlock: AU,
+          onPreview: ro(cU) ? () => {
+            ! function(UU) {
+              const XU = pX.NotificationProvider.showCustomPopup({
+                body: (0, YU.jsx)(io, {
+                  reward: UU
                 })
               });
-              kn = rM, rM.getResult().finally((() => {
-                kn === rM && (kn = null)
+              uo = XU, XU.getResult().finally((() => {
+                uo === XU && (uo = null)
               }))
-            }(OM)
+            }(cU)
           } : void 0
         })
-      }) : (0, LM.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${iM}`
+      }) : (0, YU.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${zU}`
       })
     }
-    var Bn = iM(5016);
+    var mo = zU(5073);
 
-    function Xn(MM) {
+    function xo(UU) {
       let {
-        show: rM
-      } = MM;
-      return rM ? (0, LM.jsx)(In, {}) : null
+        show: XU
+      } = UU;
+      return XU ? (0, YU.jsx)(Jo, {}) : null
     }
 
-    function In() {
+    function Jo() {
       const {
-        t: MM
-      } = (0, aM.A)(), rM = (0, en.g)();
-      return (0, OM.useEffect)((() => Zn), []), (0, LM.jsxs)("div", {
+        t: UU
+      } = (0, AU.I)(), XU = (0, Ro.e)();
+      return (0, cU.useEffect)((() => fo), []), (0, YU.jsxs)("div", {
         className: "SeasonPassScreen",
-        children: ["loading" === rM.status && (0, LM.jsx)(CM.d, {}), "error" === rM.status && (0, LM.jsxs)("div", {
+        children: ["loading" === XU.status && (0, YU.jsx)(RU.b, {}), "error" === XU.status && (0, YU.jsxs)("div", {
           className: "SeasonPassScreenNotice",
-          children: [(0, LM.jsx)("p", {
+          children: [(0, YU.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: MM("seasonPass:errorLoad")
-          }), (0, LM.jsx)(QM.e, {
+            children: UU("seasonPass:errorLoad")
+          }), (0, YU.jsx)(DU.f, {
             className: "SeasonPassScreenRetry",
             onClick: () => {
-              en.e.retry()
+              Ro.c.retry()
             },
-            children: MM("seasonPass:retry")
+            children: UU("seasonPass:retry")
           })]
-        }), "noSeason" === rM.status && (0, LM.jsx)("div", {
+        }), "noSeason" === XU.status && (0, YU.jsx)("div", {
           className: "SeasonPassScreenNotice",
-          children: (0, LM.jsx)("p", {
+          children: (0, YU.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: (0, bn.g)(MM)
+            children: (0, Po.g)(UU)
           })
-        }), "loaded" === rM.status && (0, LM.jsx)(Kn, {
-          view: rM.view,
-          claimingKeys: rM.claimingKeys
+        }), "loaded" === XU.status && (0, YU.jsx)(jo, {
+          view: XU.view,
+          claimingKeys: XU.claimingKeys
         })]
       })
     }
 
-    function Kn(MM) {
+    function jo(UU) {
       let {
-        view: rM,
-        claimingKeys: iM
-      } = MM;
-      const OM = rM.config.tiers.filter((MM => "needsSuper" === rM.tileState({
-          tier: MM.tier,
+        view: XU,
+        claimingKeys: zU
+      } = UU;
+      const cU = XU.config.tiers.filter((UU => "needsSuper" === XU.tileState({
+          tier: UU.tier,
           track: "super"
         }))).length,
-        SM = iM.size > 0;
-      return (0, LM.jsxs)("div", {
+        yU = zU.size > 0;
+      return (0, YU.jsxs)("div", {
         className: "SeasonPassScreenLoaded",
-        children: [(0, LM.jsx)(Bn.b, {}), (0, LM.jsx)(Rn, {
-          view: rM,
-          claiming: SM
-        }), (0, LM.jsx)(xn, {
-          view: rM,
-          claimingKeys: iM,
-          superWaitingCount: OM,
-          onClaim: qn
-        }), (0, LM.jsxs)("div", {
+        children: [(0, YU.jsx)(mo.e, {}), (0, YU.jsx)(wo, {
+          view: XU,
+          claiming: yU
+        }), (0, YU.jsx)(Vo, {
+          view: XU,
+          claimingKeys: zU,
+          superWaitingCount: cU,
+          onClaim: Ko
+        }), (0, YU.jsxs)("div", {
           className: "SeasonPassScreenActions",
-          children: [(0, LM.jsx)(un, {
-            count: rM.claimable.length,
-            claiming: SM
-          }), !rM.state.hasSuperRank && (0, LM.jsx)(Nn, {
-            waitingCount: OM
+          children: [(0, YU.jsx)(Co, {
+            count: XU.claimable.length,
+            claiming: yU
+          }), !XU.state.hasSuperRank && (0, YU.jsx)(Mo, {
+            waitingCount: cU
           })]
         })]
       })
     }
 
-    function qn(MM) {
-      en.e.claim(MM).catch((MM => {
-        console.error("Failed to claim season pass reward", MM)
+    function Ko(UU) {
+      Ro.c.claim(UU).catch((UU => {
+        console.error("Failed to claim season pass reward", UU)
       }))
     }
-    var Tn = iM(2542),
-      Vn = iM(5096);
-    const cn = MM => {
+    var bo = zU(5204);
+    var To = zU(3251);
+    const ho = UU => {
         let {
-          action: rM,
-          padAction: iM
-        } = MM;
+          action: XU,
+          padAction: zU
+        } = UU;
         const {
-          isTouchScreen: OM
-        } = (0, bM.m)(["isTouchScreen"]), SM = (0, oO.y)();
-        return OM && !SM ? null : (0, LM.jsx)(RO.d, {
+          isTouchScreen: cU
+        } = (0, WU.q)(["isTouchScreen"]), yU = (0, rc.F)();
+        return cU && !yU ? null : (0, YU.jsx)(Lc.c, {
           className: "EverythingMenuTabKey",
-          noaAction: rM,
+          noaAction: XU,
           padHidesKey: !0,
-          padMenuShortcut: iM
+          padMenuShortcut: zU
         })
       },
-      MQ = (0, OM.memo)((function() {
+      UD = (0, cU.memo)((function() {
         const {
-          t: MM
-        } = (0, aM.A)(), {
-          gameState: rM,
-          openEverythingMenuName: iM,
-          crosshairGameView: SM
-        } = (0, bM.m)(["gameState", "openEverythingMenuName", "crosshairGameView"]), {
-          userContext: PM
-        } = (0, hM.b)(), nM = (0, iS.k)(Date.now()), zM = (0, NM.usePurchasesAllowed)(), mM = (0, YM.y)(), {
-          view: HM
-        } = (0, ii.E)(), JM = "dot" === mM || null === mM && "ready" === (null === HM || void 0 === HM ? void 0 : HM.kind), dM = (MM, rM) => (0, LM.jsx)(cn, {
-          action: MM,
-          padAction: rM
-        }), [lM, EM] = (0, OM.useState)(null), UM = (0, OM.useRef)(null), GM = (0, OM.useRef)(null);
-        (0, OM.useEffect)((() => {
-          var MM;
-          const rM = null === (MM = GM.current) || void 0 === MM ? void 0 : MM.querySelector(".EverythingMenuTabActive");
-          null === rM || void 0 === rM || rM.scrollIntoView({
+          t: UU
+        } = (0, AU.I)(), {
+          gameState: XU,
+          openEverythingMenuName: zU,
+          crosshairGameView: yU
+        } = (0, WU.q)(["gameState", "openEverythingMenuName", "crosshairGameView"]), {
+          userContext: FU
+        } = (0, pU.d)(), oU = (0, hc.f)(Date.now()), EU = (0, vU.usePurchasesAllowed)(), NU = (0, MU.C)(), {
+          view: IU
+        } = (0, Xz.q)(), aU = "dot" === NU || null === NU && "ready" === (null === IU || void 0 === IU ? void 0 : IU.kind), tU = (UU, XU) => (0, YU.jsx)(ho, {
+          action: UU,
+          padAction: XU
+        }), [kU, GU] = (0, cU.useState)(null), BU = (0, cU.useRef)(null), ZU = (0, cU.useRef)(null);
+        (0, cU.useEffect)((() => {
+          var UU;
+          const XU = null === (UU = ZU.current) || void 0 === UU ? void 0 : UU.querySelector(".EverythingMenuTabActive");
+          null === XU || void 0 === XU || XU.scrollIntoView({
             block: "nearest",
             inline: "nearest"
           })
-        }), [iM]);
-        const CM = {
-            ..."inGame" === rM ? {} : (0, QM.fb)({
+        }), [zU]);
+        const RU = {
+            ..."inGame" === XU ? {} : (0, DU.W)({
               focusOnClick: !1
             }),
-            ...PS.c
+            ...Fy.g
           },
-          eM = MM => {
-            const rM = (0, nS.g)((rM => {
-              (0, QM.db)(rM.currentTarget), bM.d.set({
-                openEverythingMenuName: MM
+          PU = UU => {
+            const XU = (0, oy.f)((XU => {
+              (0, DU.T)(XU.currentTarget), WU.e.set({
+                openEverythingMenuName: UU
               })
             }), "pointerup");
             return {
-              ...CM,
-              onPointerDown: MM => {
-                CM.onPointerDown(MM), rM.onPointerDown(MM)
+              ...RU,
+              onPointerDown: UU => {
+                RU.onPointerDown(UU), XU.onPointerDown(UU)
               },
-              onPointerUp: MM => {
-                CM.onPointerUp(MM), rM.onPointerUp(MM)
+              onPointerUp: UU => {
+                RU.onPointerUp(UU), XU.onPointerUp(UU)
               },
-              onClick: rM.onClick
+              onClick: XU.onClick
             }
           },
-          wM = null !== iM,
-          tM = iM !== Ur.m.COSMETIC_SHOP && !SM;
-        async function uM() {
+          dU = null !== zU,
+          LU = zU !== gX.s.COSMETIC_SHOP && !yU;
+        async function CU() {
           await async function() {
-            if (!lM) return;
-            await lM(), EM(null)
-          }(), bM.d.set({
+            if (!kU) return;
+            await kU(), GU(null)
+          }(), WU.e.set({
             openEverythingMenuName: null
           })
         }
-        const RM = (0, OM.useRef)(null),
-          pM = (0, OM.useCallback)((() => null !== RM.current && (0, jn.g)(RM.current)), []);
+        const wU = (0, cU.useRef)(null),
+          qU = (0, cU.useCallback)((() => null !== wU.current && (0, Qo.c)(wU.current)), []);
 
-        function WM() {
-          pM() || uM()
-        }(0, OM.useEffect)((() => (0, qj.y)(pM)), [pM]);
-        const sM = (0, OM.useMemo)((() => "inGame" === rM ? {
-            text: MM("settingsMenu:exitGame"),
+        function OU() {
+          qU() || CU()
+        }(0, cU.useEffect)((() => (0, KQ.t)(qU)), [qU]);
+        const SU = (0, cU.useMemo)((() => "inGame" === XU ? {
+            text: UU("settingsMenu:exitGame"),
             onClick: () => {
-              (0, Sn.e)()
+              (0, yo.e)()
             }
-          } : (0, gM.isDiscordClient)() ? {
-            text: MM("settingsMenu:exitGame"),
+          } : (0, eU.isDiscordClient)() ? {
+            text: UU("settingsMenu:exitGame"),
             onClick: () => {
-              Er.l.discordActivity().then((MM => {
-                MM.exit("User exited the game")
+              tX.l.discordActivity().then((UU => {
+                UU.exit("User exited the game")
               }))
             }
-          } : null), [rM, MM]),
-          DM = wM && !SM,
-          kM = (0, OM.useRef)(null);
-        ! function(MM, rM) {
-          (0, OM.useEffect)((() => {
-            var iM;
-            const OM = (0, Vn.e)();
-            if (!rM || null === OM || !(0, Vn.c)({
-                site: gM.siteUsed,
-                isMobileApp: (0, yM.isMobileApp)(),
-                isTouchScreen: bM.d.get("isTouchScreen")
+          } : null), [XU, UU]),
+          rU = dU && !yU,
+          uU = "inGame" !== XU,
+          fU = rU && uU;
+        (0, cU.useLayoutEffect)((() => {
+          if (fU) return WU.e.set({
+            menuCoversPage: !0
+          }), () => {
+            WU.e.set({
+              menuCoversPage: !1
+            })
+          }
+        }), [fU]);
+        const iU = (0, cU.useRef)(null);
+        ! function(UU, XU) {
+          (0, cU.useEffect)((() => {
+            var zU;
+            const cU = (0, bo.e)();
+            if (!XU || null === cU || !(0, bo.d)({
+                site: eU.siteUsed,
+                isMobileApp: (0, gU.isMobileApp)(),
+                isTouchScreen: WU.e.get("isTouchScreen")
               })) return;
-            const SM = null === (iM = MM.current) || void 0 === iM ? void 0 : iM.querySelector(".EverythingMenuBackButton");
-            return SM ? OM(SM) : void 0
-          }), [MM, rM])
-        }(kM, DM && !(0, qj.m)(iM) && "inGame" === rM);
-        const ZM = (0, LM.jsx)("div", {
+            const yU = null === (zU = UU.current) || void 0 === zU ? void 0 : zU.querySelector(".EverythingMenuBackButton");
+            return yU ? cU(yU) : void 0
+          }), [UU, XU])
+        }(iU, rU && !(0, KQ.i)(zU) && "inGame" === XU);
+        const HU = (0, YU.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: WM,
-          children: (0, LM.jsx)(QM.l, {
+          onClick: OU,
+          children: (0, YU.jsx)(DU.k, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, LM.jsx)(QS.e, {
-          showing: wM,
+        return (0, YU.jsx)(Dy.e, {
+          showing: dU,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: iM === Ur.m.SHOP,
-          doGameplayStartStopOnShow: "inGame" === rM,
-          children: (0, LM.jsx)(LS.d, {
+          keepsMovement: zU === gX.s.SHOP,
+          doGameplayStartStopOnShow: "inGame" === XU,
+          children: (0, YU.jsx)(Yy.b, {
             className: "EverythingMenuContainer",
-            show: DM,
-            children: (0, LM.jsx)(zS.e, {
-              close: WM,
+            show: rU,
+            children: (0, YU.jsx)(Ey.c, {
+              close: OU,
               togglePointerLock: !1,
-              children: (0, LM.jsxs)("div", {
+              children: (0, YU.jsxs)("div", {
                 className: "EverythingMenu",
-                ref: kM,
-                children: [!(0, qj.m)(iM) && (0, LM.jsxs)("div", {
+                ref: iU,
+                children: [!(0, KQ.i)(zU) && (0, YU.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, LM.jsxs)("div", {
+                  children: [(0, YU.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [sM && (0, LM.jsx)(QM.c, {
+                    children: [SU && (0, YU.jsx)(DU.e, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        sM.onClick()
+                        SU.onClick()
                       },
-                      children: sM.text
-                    }), "inGame" === rM && (0, LM.jsx)(Tn.b, {
-                      className: "EverythingMenuStopRecording"
-                    }), wM && zM && (0, LM.jsx)("div", {
-                      ...CM,
+                      children: SU.text
+                    }), dU && EU && (0, YU.jsx)("div", {
+                      ...RU,
                       className: "EverythingMenuWallet",
-                      title: MM("homePage:getPremiumCurrency"),
+                      title: UU("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, YM.n)({
+                        (0, MU.l)({
                           mode: "self",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, LM.jsx)(On.f, {})
+                      children: (0, YU.jsx)(co.g, {})
                     })]
-                  }), (0, LM.jsxs)("div", {
+                  }), (0, YU.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
-                    ref: GM,
+                    ref: ZU,
                     "data-pad-tabs": "1",
-                    children: [(0, LM.jsxs)("div", {
-                      ...eM(Ur.m.SETTINGS),
+                    children: [(0, YU.jsxs)("div", {
+                      ...PU(gX.s.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.SETTINGS ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.SETTINGS
+                      "data-pad-selected": zU === gX.s.SETTINGS ? "true" : void 0,
+                      className: QU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: zU === gX.s.SETTINGS
                       }),
-                      children: [MM("general:settings"), dM("OpenSettings", "pause")]
-                    }), (0, LM.jsxs)("div", {
-                      ...eM(Ur.m.CUSTOMISATION),
+                      children: [UU("general:settings"), tU("OpenSettings", "pause")]
+                    }), (0, YU.jsxs)("div", {
+                      ...PU(gX.s.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.CUSTOMISATION ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.CUSTOMISATION
+                      "data-pad-selected": zU === gX.s.CUSTOMISATION ? "true" : void 0,
+                      className: QU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: zU === gX.s.CUSTOMISATION
                       }),
-                      children: [MM("general:player"), dM("OpenCharacterCustomization")]
-                    }), yM.featureFlags.useSocialFeatures && (0, LM.jsxs)("div", {
-                      ...eM(Ur.m.SOCIAL),
+                      children: [UU("general:player"), tU("OpenCharacterCustomization")]
+                    }), gU.featureFlags.useSocialFeatures && (0, YU.jsxs)("div", {
+                      ...PU(gX.s.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.SOCIAL ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.SOCIAL
+                      "data-pad-selected": zU === gX.s.SOCIAL ? "true" : void 0,
+                      className: QU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: zU === gX.s.SOCIAL
                       }),
-                      ...(0, Sr.getAnalyticsClickAttributes)({
+                      ...(0, XX.getAnalyticsClickAttributes)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, iM === Ur.m.SOCIAL),
-                      children: [MM("socialBar:social"), (0, LM.jsx)(Cn.c, {})]
-                    }), nM && (0, LM.jsx)("div", {
-                      ...eM(Ur.m.SEASON_PASS),
+                      }, zU === gX.s.SOCIAL),
+                      children: [UU("socialBar:social"), (0, YU.jsx)(Zo.d, {})]
+                    }), oU && (0, YU.jsx)("div", {
+                      ...PU(gX.s.SEASON_PASS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.SEASON_PASS ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.SEASON_PASS
+                      "data-pad-selected": zU === gX.s.SEASON_PASS ? "true" : void 0,
+                      className: QU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: zU === gX.s.SEASON_PASS
                       }),
-                      children: MM("seasonPass:title", {
-                        season: nM.seasonNumber
+                      children: UU("seasonPass:title", {
+                        season: oU.seasonNumber
                       })
-                    }), (0, ii.u)(HM) && (0, LM.jsxs)("div", {
-                      ...eM(Ur.m.COSMETIC_SHOP),
+                    }), (0, Xz.l)(IU) && (0, YU.jsxs)("div", {
+                      ...PU(gX.s.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.COSMETIC_SHOP ? "true" : void 0,
-                      className: jM()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: iM === Ur.m.COSMETIC_SHOP
+                      "data-pad-selected": zU === gX.s.COSMETIC_SHOP ? "true" : void 0,
+                      className: QU()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: zU === gX.s.COSMETIC_SHOP
                       }),
-                      children: [(0, LM.jsx)("span", {
+                      children: [(0, YU.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: MM("store:title")
-                      }), "new" === mM && (0, LM.jsx)(SP, {}), JM && (0, LM.jsx)("span", {
+                        children: UU("store:title")
+                      }), "new" === NU && (0, YU.jsx)(yF, {}), aU && (0, YU.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === rM && (0, LM.jsxs)("div", {
-                      ...eM(Ur.m.LOBBY_LEADERBOARD),
+                    }), "inGame" === XU && (0, YU.jsxs)("div", {
+                      ...PU(gX.s.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": iM === Ur.m.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: jM()("EverythingMenuTab", {
-                        EverythingMenuTabActive: iM === Ur.m.LOBBY_LEADERBOARD
+                      "data-pad-selected": zU === gX.s.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: QU()("EverythingMenuTab", {
+                        EverythingMenuTabActive: zU === gX.s.LOBBY_LEADERBOARD
                       }),
-                      children: [MM("general:lobby"), dM("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [UU("general:lobby"), tU("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, LM.jsx)("div", {
+                  }), (0, YU.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: ZM
+                    children: HU
                   })]
-                }), (0, qj.m)(iM) && ZM, (0, LM.jsxs)("div", {
-                  ref: RM,
+                }), (0, KQ.i)(zU) && HU, (0, YU.jsxs)("div", {
+                  ref: wU,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === rM ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": uU ? "1" : "0.85"
                   },
-                  children: [(0, LM.jsx)(MS, {
-                    show: iM === Ur.m.SETTINGS,
-                    setBeforeResumeCallback: EM
-                  }), (0, LM.jsx)(aS, {
-                    show: iM === Ur.m.CUSTOMISATION
-                  }), (0, LM.jsx)(OM.Suspense, {
+                  children: [(0, YU.jsx)(bc, {
+                    show: zU === gX.s.SETTINGS,
+                    setBeforeResumeCallback: GU
+                  }), (0, YU.jsx)(yy, {
+                    show: zU === gX.s.CUSTOMISATION
+                  }), (0, YU.jsx)(cU.Suspense, {
                     fallback: null,
-                    children: (0, LM.jsx)(Nj, {
-                      show: iM === Ur.m.SHOP
+                    children: (0, YU.jsx)(vQ, {
+                      show: zU === gX.s.SHOP
                     })
-                  }), (0, LM.jsx)(Ma, {
-                    show: iM === Ur.m.LOBBY_LEADERBOARD
-                  }), zM && (0, LM.jsx)(rn, {
-                    show: iM === Ur.m.COSMETIC_SHOP
-                  }), !zM && (0, LM.jsx)(vP, {
-                    show: iM === Ur.m.COSMETIC_SHOP
-                  }), (0, LM.jsx)(Un, {
-                    show: iM === Ur.m.SOCIAL
-                  }), (0, LM.jsx)(Xn, {
-                    show: iM === Ur.m.SEASON_PASS
+                  }), (0, YU.jsx)(UA, {
+                    show: zU === gX.s.LOBBY_LEADERBOARD
+                  }), EU && (0, YU.jsx)(zo, {
+                    show: zU === gX.s.COSMETIC_SHOP
+                  }), !EU && (0, YU.jsx)(mF, {
+                    show: zU === gX.s.COSMETIC_SHOP
+                  }), (0, YU.jsx)(Go, {
+                    show: zU === gX.s.SOCIAL
+                  }), (0, YU.jsx)(xo, {
+                    show: zU === gX.s.SEASON_PASS
                   })]
-                }), !(0, yM.isMobileApp)() && (0, mS.f)(PM.getPlayerRanks()) && (0, LM.jsx)(LS.d, {
-                  ref: UM,
+                }), !(0, gU.isMobileApp)() && (0, To.l)() && (0, Ny.g)(FU.getPlayerRanks()) && (0, YU.jsx)(Yy.b, {
+                  ref: BU,
                   className: "EverythingMenuBannerDiv",
-                  show: tM,
+                  show: LU,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, LM.jsx)(an.e, {
+                  children: (0, YU.jsx)(Ao.b, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: UM
+                      parentRef: BU
                     },
-                    showing: wM && tM,
+                    showing: dU && LU,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -9343,262 +9378,262 @@ export const modules = {
         })
       }))
   },
-  35070: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => hM,
-      i: () => dM
+  34915: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => pU,
+      g: () => tU
     });
-    iM(35072);
-    var OM = iM(44),
-      SM = iM(1116),
-      jM = iM.n(SM),
-      aM = iM(1188),
-      PM = iM(1520),
-      nM = iM(2796),
-      QM = iM(1398),
-      zM = iM(2382),
-      LM = iM(3449),
-      mM = iM(2412),
-      HM = iM(1303);
+    zU(34922);
+    var cU = zU(61),
+      yU = zU(1106),
+      QU = zU.n(yU),
+      AU = zU(1193),
+      FU = zU(1494),
+      oU = zU(2812),
+      DU = zU(1390),
+      EU = zU(2559),
+      YU = zU(3409),
+      NU = zU(2401),
+      IU = zU(1305);
 
-    function hM(MM) {
+    function pU(UU) {
       let {
-        endsAt: rM,
-        className: iM
-      } = MM;
-      return (0, HM.jsxs)("span", {
-        className: jM()("NewPlayerDealClock", iM),
-        children: [(0, HM.jsx)(QM.b, {
+        endsAt: XU,
+        className: zU
+      } = UU;
+      return (0, IU.jsxs)("span", {
+        className: QU()("NewPlayerDealClock", zU),
+        children: [(0, IU.jsx)(DU.d, {
           name: "hourglass"
-        }), (0, HM.jsx)(nM.f, {
-          toTime: rM
+        }), (0, IU.jsx)(oU.e, {
+          toTime: XU
         })]
       })
     }
 
-    function JM(MM) {
+    function aU(UU) {
       let {
-        offered: rM,
-        needsLogin: iM,
-        busy: OM,
-        highlight: SM,
-        onBuy: nM
-      } = MM;
+        offered: XU,
+        needsLogin: zU,
+        busy: cU,
+        highlight: yU,
+        onBuy: oU
+      } = UU;
       const {
-        t: QM
-      } = (0, aM.A)(), {
-        pack: hM
-      } = rM, JM = (0, LM.c)(rM.package);
-      return (0, HM.jsxs)("div", {
-        className: jM()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: SM
+        t: DU
+      } = (0, AU.I)(), {
+        pack: pU
+      } = XU, aU = (0, YU.g)(XU.package);
+      return (0, IU.jsxs)("div", {
+        className: QU()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: yU
         }),
-        children: [(0, HM.jsxs)("div", {
+        children: [(0, IU.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, HM.jsx)("img", {
-            src: mM.c[rM.tier],
+          children: [(0, IU.jsx)("img", {
+            src: NU.c[XU.tier],
             alt: "",
             draggable: !1
-          }), (0, HM.jsx)("span", {
+          }), (0, IU.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: QM("newPlayerDeal:tag")
+            children: DU("newPlayerDeal:tag")
           })]
-        }), (0, HM.jsx)("div", {
+        }), (0, IU.jsx)("div", {
           className: "NewPlayerDealPackText",
-          children: (0, HM.jsx)(zM.b, {
+          children: (0, IU.jsx)(EU.c, {
             className: "NewPlayerDealPackAmount",
-            amount: hM.gems
+            amount: pU.gems
           })
-        }), (0, HM.jsx)(PM.p, {
+        }), (0, IU.jsx)(FU.l, {
           className: "NewPlayerDealBuy",
-          loading: OM,
-          onClick: nM,
-          ariaLabel: QM("newPlayerDeal:buyLabel", {
-            amount: hM.gems.toLocaleString(),
-            price: JM
+          loading: cU,
+          onClick: oU,
+          ariaLabel: DU("newPlayerDeal:buyLabel", {
+            amount: pU.gems.toLocaleString(),
+            price: aU
           }),
-          children: QM(iM ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: JM
+          children: DU(zU ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: aU
           })
         })]
       })
     }
 
-    function dM(MM) {
+    function tU(UU) {
       let {
-        view: rM,
-        needsLogin: iM,
-        busy: SM,
-        highlight: PM,
-        onBuy: nM
-      } = MM;
+        view: XU,
+        needsLogin: zU,
+        busy: yU,
+        highlight: FU,
+        onBuy: oU
+      } = UU;
       const {
-        t: QM
-      } = (0, aM.A)();
-      return (0, HM.jsxs)("div", {
-        className: jM()("NewPlayerDealPacks", rM.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [rM.packs.map(((MM, rM) => (0, HM.jsxs)(OM.Fragment, {
-          children: [rM > 0 && (0, HM.jsx)("div", {
+        t: DU
+      } = (0, AU.I)();
+      return (0, IU.jsxs)("div", {
+        className: QU()("NewPlayerDealPacks", XU.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [XU.packs.map(((UU, XU) => (0, IU.jsxs)(cU.Fragment, {
+          children: [XU > 0 && (0, IU.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, HM.jsx)("i", {})
-          }), (0, HM.jsx)(JM, {
-            offered: MM,
-            needsLogin: iM,
-            busy: SM,
-            highlight: PM === MM.pack.packageId,
+            children: (0, IU.jsx)("i", {})
+          }), (0, IU.jsx)(aU, {
+            offered: UU,
+            needsLogin: zU,
+            busy: yU,
+            highlight: FU === UU.pack.packageId,
             onBuy: () => {
-              nM(MM)
+              oU(UU)
             }
           })]
-        }, MM.pack.packageId))), (0, HM.jsx)("div", {
+        }, UU.pack.packageId))), (0, IU.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, HM.jsx)("span", {
+          children: (0, IU.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: QM("newPlayerDeal:limit")
+            children: DU("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35077: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => wM,
-      e: () => gM
+  34925: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => dU,
+      g: () => eU
     });
-    iM(35072);
-    var OM = iM(3442),
-      SM = iM(1548),
-      jM = iM(2401),
-      aM = iM(3432),
-      PM = iM(3411),
-      nM = iM(3439),
-      QM = iM(3385),
-      zM = iM(1188),
-      LM = iM(1429),
-      mM = iM(1142),
-      HM = iM(1520),
-      hM = iM(1398),
-      JM = iM(2382),
-      dM = iM(2910),
-      yM = iM(2779),
-      lM = iM(2782),
-      EM = iM(2787),
-      UM = iM(1303);
-    const GM = new nM.c(QM.getBillingClient, QM.addPurchaseRecordListener);
-    let CM = !1;
+    zU(34922);
+    var cU = zU(3403),
+      yU = zU(1521),
+      QU = zU(2387),
+      AU = zU(3390),
+      FU = zU(3374),
+      oU = zU(3395),
+      DU = zU(3354),
+      EU = zU(1193),
+      YU = zU(1410),
+      NU = zU(1129),
+      IU = zU(1494),
+      pU = zU(1390),
+      aU = zU(2559),
+      tU = zU(2916),
+      gU = zU(2787),
+      kU = zU(2794),
+      GU = zU(2803),
+      BU = zU(1305);
+    const ZU = new oU.d(DU.getBillingClient, DU.addPurchaseRecordListener);
+    let RU = !1;
 
-    function eM(MM, rM) {
-      null !== MM && (0, yM.u)(MM) || ((0, SM.reportAnalyticsClick)({
+    function PU(UU, XU) {
+      null !== UU && (0, gU.p)(UU) || ((0, yU.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${rM.pack.packageId}`
-      }), null !== MM && (0, yM.z)(MM), wM(rM.pack.gems))
+        value: `self:${XU.pack.packageId}`
+      }), null !== UU && (0, gU.u)(UU), dU(XU.pack.gems))
     }
 
-    function bM(MM, rM, iM) {
-      const SM = (0, yM.d)(rM);
-      switch (MM.kind) {
+    function WU(UU, XU, zU) {
+      const yU = (0, gU.d)(XU);
+      switch (UU.kind) {
         case "completed":
-          eM(SM, iM);
+          PU(yU, zU);
           break;
         case "pending":
-          jM = MM.intentId, aM = () => {
-            dM.i.refresh(), eM(SM, iM)
-          }, CM || (CM = !0, GM.listen()), GM.follow(jM, aM);
+          QU = UU.intentId, AU = () => {
+            tU.i.refresh(), PU(yU, zU)
+          }, RU || (RU = !0, ZU.listen()), ZU.follow(QU, AU);
           break;
         case "unknownPackage":
-          (0, yM.N)(rM, null);
+          (0, gU.I)(XU, null);
           break;
         case "failed":
-          MM.errorKey === OM.d.newPlayerDealUnavailable && (0, yM.N)(rM, null)
+          UU.errorKey === cU.e.newPlayerDealUnavailable && (0, gU.I)(XU, null)
       }
-      var jM, aM
+      var QU, AU
     }
 
-    function wM(MM) {
-      LM.NotificationProvider.showCustomPopup({
-        body: rM => (0, UM.jsx)(tM, {
-          gems: MM,
-          close: rM
+    function dU(UU) {
+      YU.NotificationProvider.showCustomPopup({
+        body: XU => (0, BU.jsx)(LU, {
+          gems: UU,
+          close: XU
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function tM(MM) {
+    function LU(UU) {
       let {
-        gems: rM,
-        close: iM
-      } = MM;
+        gems: XU,
+        close: zU
+      } = UU;
       const {
-        t: OM
-      } = (0, zM.A)();
-      return (0, UM.jsxs)("div", {
+        t: cU
+      } = (0, EU.I)();
+      return (0, BU.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, UM.jsxs)("div", {
+        children: [(0, BU.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, UM.jsx)(hM.b, {
+          children: [(0, BU.jsx)(pU.d, {
             name: "circle-check"
-          }), (0, UM.jsx)(JM.b, {
-            amount: rM
-          }), (0, UM.jsx)("span", {
-            children: OM("newPlayerDeal:added")
+          }), (0, BU.jsx)(aU.c, {
+            amount: XU
+          }), (0, BU.jsx)("span", {
+            children: cU("newPlayerDeal:added")
           })]
-        }), (0, UM.jsx)(HM.p, {
+        }), (0, BU.jsx)(IU.l, {
           className: "NewPlayerDealAddedOk",
-          onClick: iM,
-          children: OM("general:ok")
+          onClick: zU,
+          children: cU("general:ok")
         })]
       })
     }
 
-    function gM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.e;
+    function eU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AU.c;
       const {
-        userContext: iM
-      } = (0, mM.b)(), {
-        purchaseUnderWay: OM,
-        notice: SM,
-        buy: nM
-      } = (0, PM.d)(rM), QM = (0, lM.m)(), zM = iM.mayBuy() || (0, jM.guestsMayBuy)(), LM = null === QM ? !zM : QM.guest && !iM.isLoggedIn();
+        userContext: zU
+      } = (0, NU.d)(), {
+        purchaseUnderWay: cU,
+        notice: yU,
+        buy: oU
+      } = (0, FU.b)(XU), DU = (0, kU.i)(), EU = zU.mayBuy() || (0, QU.guestsMayBuy)(), YU = null === DU ? !EU : DU.guest && !zU.isLoggedIn();
       return {
-        purchaseUnderWay: OM,
-        notice: SM,
-        needsLogin: LM,
-        buyPack: function(OM, SM) {
-          (0, yM.G)("new_player_deal.buy", (0, EM.b)(OM.arm, MM, SM.pack.packageId)), null === QM ? nM(function(MM) {
+        purchaseUnderWay: cU,
+        notice: yU,
+        needsLogin: YU,
+        buyPack: function(cU, yU) {
+          (0, gU.B)("new_player_deal.buy", (0, GU.b)(cU.arm, UU, yU.pack.packageId)), null === DU ? oU(function(UU) {
             return {
-              sku: MM.pack.packageId,
-              tier: MM.tier,
-              amount: MM.pack.gems,
+              sku: UU.pack.packageId,
+              tier: UU.tier,
+              amount: UU.pack.gems,
               bonusPercent: 0,
-              package: MM.package
+              package: UU.package
             }
-          }(SM), null, {
+          }(yU), null, {
             followPending: !1
-          }).then((MM => {
-            bM(MM, iM, SM)
-          })) : LM ? rM(SM.pack.packageId, null) : eM((0, yM.d)(iM), SM)
+          }).then((UU => {
+            WU(UU, zU, yU)
+          })) : YU ? XU(yU.pack.packageId, null) : PU((0, gU.d)(zU), yU)
         }
       }
     }
   },
-  5282: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => dM
+  5401: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => tU
     });
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(5011),
-      aM = iM(1188),
-      PM = iM(1398),
-      nM = iM(1520),
-      QM = iM(1573),
-      zM = iM(1429),
-      LM = iM(2709),
-      mM = iM(1303);
-    const HM = {
+    var cU = zU(1106),
+      yU = zU.n(cU),
+      QU = zU(5071),
+      AU = zU(1193),
+      FU = zU(1390),
+      oU = zU(1494),
+      DU = zU(1545),
+      EU = zU(1410),
+      YU = zU(2692),
+      NU = zU(1305);
+    const IU = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -9626,406 +9661,406 @@ export const modules = {
       }
     };
 
-    function hM(MM) {
+    function pU(UU) {
       let {
-        platform: rM
-      } = MM;
-      const iM = "youtube" === rM;
-      return (0, mM.jsxs)("span", {
-        className: SM()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: iM
+        platform: XU
+      } = UU;
+      const zU = "youtube" === XU;
+      return (0, NU.jsxs)("span", {
+        className: yU()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: zU
         }),
-        children: [iM && (0, mM.jsx)(LM.d, {
+        children: [zU && (0, NU.jsx)(YU.d, {
           variant: "white"
-        }), !iM && (0, mM.jsx)(PM.b, {
-          name: HM[rM].icon,
+        }), !zU && (0, NU.jsx)(FU.d, {
+          name: IU[XU].icon,
           kit: "brands"
         })]
       })
     }
 
-    function JM(MM) {
+    function aU(UU) {
       let {
-        platform: rM,
-        link: iM,
-        editable: OM,
-        userContext: SM,
-        onLinksUpdated: LM
-      } = MM;
+        platform: XU,
+        link: zU,
+        editable: cU,
+        userContext: yU,
+        onLinksUpdated: YU
+      } = UU;
       const {
-        t: JM
-      } = (0, aM.A)(), dM = HM[rM];
-      if (!iM && !OM) return null;
+        t: aU
+      } = (0, AU.I)(), tU = IU[XU];
+      if (!zU && !cU) return null;
 
-      function yM() {
-        var MM;
-        if (!SM || !LM) return;
-        zM.NotificationProvider.showInputPopup({
+      function gU() {
+        var UU;
+        if (!yU || !YU) return;
+        EU.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: dM.name
+              platform: tU.name
             }
           },
-          prefixText: jM.t[rM],
+          prefixText: QU.q[XU],
           placeholderText: "playBloxd",
-          initialValue: null !== (MM = null === iM || void 0 === iM ? void 0 : iM.handle) && void 0 !== MM ? MM : "",
+          initialValue: null !== (UU = null === zU || void 0 === zU ? void 0 : zU.handle) && void 0 !== UU ? UU : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: iM ? "general:remove" : void 0
-        }).getResult().then((async MM => {
-          if ("notificationTornDown" !== MM && null !== MM) try {
-            "submit" === MM.type ? await QM.c.setSocialLink(SM, rM, MM.value) : await QM.c.clearSocialLink(SM, rM), LM()
-          } catch (iM) {
-            console.error("Failed to update social link", iM), zM.NotificationProvider.showAlertPopup({
-              title: iM.errorMessageForUser,
+          secondaryButtonText: zU ? "general:remove" : void 0
+        }).getResult().then((async UU => {
+          if ("notificationTornDown" !== UU && null !== UU) try {
+            "submit" === UU.type ? await DU.c.setSocialLink(yU, XU, UU.value) : await DU.c.clearSocialLink(yU, XU), YU()
+          } catch (zU) {
+            console.error("Failed to update social link", zU), EU.NotificationProvider.showAlertPopup({
+              title: zU.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (iM) {
-        const MM = `@${iM.handle}`;
-        return (0, mM.jsxs)("a", {
+      if (zU) {
+        const UU = `@${zU.handle}`;
+        return (0, NU.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: dM.color
+            background: tU.color
           },
-          href: iM.profileUrl,
+          href: zU.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, mM.jsxs)("div", {
+          children: [(0, NU.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, mM.jsx)(hM, {
-              platform: rM
-            }), (0, mM.jsx)("span", {
+            children: [(0, NU.jsx)(pU, {
+              platform: XU
+            }), (0, NU.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, mM.jsx)("span", {
+              children: (0, NU.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: MM
+                children: UU
               })
             })]
-          }), OM && (0, mM.jsx)("button", {
+          }), cU && (0, NU.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, nM.fb)({
+            ...(0, oU.W)({
               stopPropagation: !0
             }),
-            onClick: MM => {
-              MM.stopPropagation(), MM.preventDefault(), yM()
+            onClick: UU => {
+              UU.stopPropagation(), UU.preventDefault(), gU()
             },
-            children: (0, mM.jsx)(PM.b, {
+            children: (0, NU.jsx)(FU.d, {
               name: "pen-to-square"
             })
-          }), !OM && (0, mM.jsx)("span", {
+          }), !cU && (0, NU.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, mM.jsx)(PM.b, {
+            children: (0, NU.jsx)(FU.d, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, mM.jsxs)("button", {
+      return (0, NU.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: dM.color
+          background: tU.color
         },
-        ...(0, nM.fb)(),
+        ...(0, oU.W)(),
         onClick: () => {
-          yM()
+          gU()
         },
-        children: [(0, mM.jsx)(hM, {
-          platform: rM
-        }), (0, mM.jsxs)("span", {
+        children: [(0, NU.jsx)(pU, {
+          platform: XU
+        }), (0, NU.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, mM.jsx)("span", {
+          children: [(0, NU.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: dM.name
-          }), (0, mM.jsx)("span", {
+            children: tU.name
+          }), (0, NU.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: JM("homePage:profileSocialLinkAdd")
+            children: aU("homePage:profileSocialLinkAdd")
           })]
-        }), (0, mM.jsx)("span", {
+        }), (0, NU.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, mM.jsx)(PM.b, {
+          children: (0, NU.jsx)(FU.d, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function dM(MM) {
+    function tU(UU) {
       let {
-        socialLinks: rM,
-        editable: iM = !1,
-        userContext: OM,
-        onLinksUpdated: SM
-      } = MM;
-      if (!iM && 0 === rM.length) return null;
-      const aM = new Map(rM.map((MM => [MM.platform, MM]))),
-        PM = iM ? jM.s : rM.map((MM => MM.platform));
-      return (0, mM.jsx)("div", {
+        socialLinks: XU,
+        editable: zU = !1,
+        userContext: cU,
+        onLinksUpdated: yU
+      } = UU;
+      if (!zU && 0 === XU.length) return null;
+      const AU = new Map(XU.map((UU => [UU.platform, UU]))),
+        FU = zU ? QU.m : XU.map((UU => UU.platform));
+      return (0, NU.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, mM.jsx)("div", {
+        children: (0, NU.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: PM.map((MM => (0, mM.jsx)(JM, {
-            platform: MM,
-            link: aM.get(MM),
-            editable: iM,
-            userContext: OM,
-            onLinksUpdated: SM
-          }, MM)))
+          children: FU.map((UU => (0, NU.jsx)(aU, {
+            platform: UU,
+            link: AU.get(UU),
+            editable: zU,
+            userContext: cU,
+            onLinksUpdated: yU
+          }, UU)))
         })
       })
     }
   },
-  35064: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM
+  34909: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => QU
     });
-    var OM = iM(44),
-      SM = iM(3839);
+    var cU = zU(61),
+      yU = zU(3837);
 
-    function jM() {
-      const [MM, rM] = (0, OM.useState)(!1);
-      return (0, OM.useLayoutEffect)((() => {
-        let MM = !0;
-        return (0, SM.e)().then((() => {
-          MM && rM(!0)
+    function QU() {
+      const [UU, XU] = (0, cU.useState)(!1);
+      return (0, cU.useLayoutEffect)((() => {
+        let UU = !0;
+        return (0, yU.g)().then((() => {
+          UU && XU(!0)
         })), () => {
-          MM = !1
+          UU = !1
         }
-      }), []), MM
+      }), []), UU
     }
   },
-  34997: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => JM,
-      e: () => hM
+  34835: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => aU,
+      f: () => pU
     });
-    iM(34999);
-    var OM = iM(1116),
-      SM = iM.n(OM),
-      jM = iM(44),
-      aM = iM(34989);
+    zU(34837);
+    var cU = zU(1106),
+      yU = zU.n(cU),
+      QU = zU(61),
+      AU = zU(34827);
 
-    function PM(MM, rM) {
-      return Math.max(1, Math.round(MM * rM))
+    function FU(UU, XU) {
+      return Math.max(1, Math.round(UU * XU))
     }
 
-    function nM(MM, rM) {
-      const iM = rM * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        OM = function(MM, rM) {
-          if (MM.lines) return PM(MM.lineThickness, rM) % 2;
-          if (MM.dot) return PM(MM.dotSize, rM) % 2;
-          return QM(MM, rM) % 2
-        }(MM, rM),
-        SM = zM(MM.lineThickness * iM, OM),
-        jM = PM(MM.lineLength, iM),
-        aM = Math.round(MM.gap * iM),
-        nM = MM.outline > 0 ? PM(MM.outline, iM) : 0,
-        mM = [];
-      if (MM.lines && (mM.push({
-          x: SM + aM,
+    function oU(UU, XU) {
+      const zU = XU * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        cU = function(UU, XU) {
+          if (UU.lines) return FU(UU.lineThickness, XU) % 2;
+          if (UU.dot) return FU(UU.dotSize, XU) % 2;
+          return DU(UU, XU) % 2
+        }(UU, XU),
+        yU = EU(UU.lineThickness * zU, cU),
+        QU = FU(UU.lineLength, zU),
+        AU = Math.round(UU.gap * zU),
+        oU = UU.outline > 0 ? FU(UU.outline, zU) : 0,
+        NU = [];
+      if (UU.lines && (NU.push({
+          x: yU + AU,
           y: 0,
-          w: jM,
-          h: SM,
+          w: QU,
+          h: yU,
           arm: "right"
-        }), mM.push({
-          x: -aM - jM,
+        }), NU.push({
+          x: -AU - QU,
           y: 0,
-          w: jM,
-          h: SM,
+          w: QU,
+          h: yU,
           arm: "left"
-        }), mM.push({
+        }), NU.push({
           x: 0,
-          y: SM + aM,
-          w: SM,
-          h: jM,
+          y: yU + AU,
+          w: yU,
+          h: QU,
           arm: "down"
-        }), MM.tStyle || mM.push({
+        }), UU.tStyle || NU.push({
           x: 0,
-          y: -aM - jM,
-          w: SM,
-          h: jM,
+          y: -AU - QU,
+          w: yU,
+          h: QU,
           arm: "up"
-        }), 0 === aM && mM.push({
+        }), 0 === AU && NU.push({
           x: 0,
           y: 0,
-          w: SM,
-          h: SM
-        })), MM.dot) {
-        const rM = zM(MM.dotSize * iM, OM),
-          jM = MM.lines && 0 === aM && MM.dotSize > MM.lineThickness ? Math.max(rM, SM + 2) : rM,
-          PM = (SM - jM) / 2;
-        mM.push({
-          x: PM,
-          y: PM,
-          w: jM,
-          h: jM
+          w: yU,
+          h: yU
+        })), UU.dot) {
+        const XU = EU(UU.dotSize * zU, cU),
+          QU = UU.lines && 0 === AU && UU.dotSize > UU.lineThickness ? Math.max(XU, yU + 2) : XU,
+          FU = (yU - QU) / 2;
+        NU.push({
+          x: FU,
+          y: FU,
+          w: QU,
+          h: QU
         })
       }
-      const HM = mM.map((MM => ({
-        ...MM,
-        x: MM.x - nM,
-        y: MM.y - nM,
-        w: MM.w + 2 * nM,
-        h: MM.h + 2 * nM
+      const IU = NU.map((UU => ({
+        ...UU,
+        x: UU.x - oU,
+        y: UU.y - oU,
+        w: UU.w + 2 * oU,
+        h: UU.h + 2 * oU
       })));
-      let hM = null,
-        JM = null;
-      if (MM.circle) {
-        const rM = PM(MM.circleThickness, iM),
-          jM = function(MM, rM) {
-            return MM + (MM % 2 === rM ? 0 : 1)
-          }(QM(MM, iM), OM),
-          aM = (SM - jM) / 2;
-        hM = LM(aM, jM, rM), nM > 0 && (JM = LM(aM - nM, jM + 2 * nM, rM + 2 * nM))
+      let pU = null,
+        aU = null;
+      if (UU.circle) {
+        const XU = FU(UU.circleThickness, zU),
+          QU = function(UU, XU) {
+            return UU + (UU % 2 === XU ? 0 : 1)
+          }(DU(UU, zU), cU),
+          AU = (yU - QU) / 2;
+        pU = YU(AU, QU, XU), oU > 0 && (aU = YU(AU - oU, QU + 2 * oU, XU + 2 * oU))
       }
       return {
-        cell: SM,
-        fills: mM,
-        outlines: nM > 0 ? HM : [],
-        ring: hM,
-        ringOutline: JM
+        cell: yU,
+        fills: NU,
+        outlines: oU > 0 ? IU : [],
+        ring: pU,
+        ringOutline: aU
       }
     }
 
-    function QM(MM, rM) {
-      return Math.round(MM.circleRadius * rM * 2 + PM(MM.circleThickness, rM))
+    function DU(UU, XU) {
+      return Math.round(UU.circleRadius * XU * 2 + FU(UU.circleThickness, XU))
     }
 
-    function zM(MM, rM) {
-      return Math.max(2 - rM, 2 * Math.round((MM - rM) / 2) + rM)
+    function EU(UU, XU) {
+      return Math.max(2 - XU, 2 * Math.round((UU - XU) / 2) + XU)
     }
 
-    function LM(MM, rM, iM) {
-      const OM = 2 * iM >= rM - 1;
+    function YU(UU, XU, zU) {
+      const cU = 2 * zU >= XU - 1;
       return {
-        x: MM,
-        y: MM,
-        size: rM,
-        border: Math.min(iM, Math.floor(rM / 2)),
-        filled: OM
+        x: UU,
+        y: UU,
+        size: XU,
+        border: Math.min(zU, Math.floor(XU / 2)),
+        filled: cU
       }
     }
-    var mM = iM(1303);
-    const HM = 1.4;
+    var NU = zU(1305);
+    const IU = 1.4;
 
-    function hM(MM, rM) {
-      return MM && rM ? `scale(${HM})` : "scale(1)"
+    function pU(UU, XU) {
+      return UU && XU ? `scale(${IU})` : "scale(1)"
     }
 
-    function JM(MM) {
-      return "classic" === MM.settings.style ? (0, mM.jsx)(lM, {
-        ...MM
-      }) : (0, mM.jsx)(wM, {
-        ...MM
+    function aU(UU) {
+      return "classic" === UU.settings.style ? (0, NU.jsx)(kU, {
+        ...UU
+      }) : (0, NU.jsx)(dU, {
+        ...UU
       })
     }
-    const dM = .125;
+    const tU = .125;
 
-    function yM(MM, rM) {
-      const iM = {};
-      if (MM.color !== aM.e.color && (iM.color = (0, aM.i)(MM.color)), MM.opacity !== aM.e.opacity && (iM.opacity = MM.opacity / 100), MM.outline !== aM.e.outline || MM.outlineColor !== aM.e.outlineColor) {
-        const rM = MM.outline,
-          OM = (0, aM.i)(MM.outlineColor);
-        iM.textShadow = rM > 0 ? `-${rM}px 0 ${OM}, 0 ${rM}px ${OM}, ${rM}px 0 ${OM}, 0 -${rM}px ${OM}` : "none"
+    function gU(UU, XU) {
+      const zU = {};
+      if (UU.color !== AU.g.color && (zU.color = (0, AU.i)(UU.color)), UU.opacity !== AU.g.opacity && (zU.opacity = UU.opacity / 100), UU.outline !== AU.g.outline || UU.outlineColor !== AU.g.outlineColor) {
+        const XU = UU.outline,
+          cU = (0, AU.i)(UU.outlineColor);
+        zU.textShadow = XU > 0 ? `-${XU}px 0 ${cU}, 0 ${XU}px ${cU}, ${XU}px 0 ${cU}, 0 -${XU}px ${cU}` : "none"
       }
-      if (MM.size !== aM.e.size) {
-        const OM = MM.size / 100;
-        iM.fontSize = rM ? `calc(max(1.3rem, 18px) * ${OM})` : `calc(1.3rem * ${OM})`, iM.marginTop = `-${dM}em`, iM.transformOrigin = `50% calc(50% + ${dM}em)`
+      if (UU.size !== AU.g.size) {
+        const cU = UU.size / 100;
+        zU.fontSize = XU ? `calc(max(1.3rem, 18px) * ${cU})` : `calc(1.3rem * ${cU})`, zU.marginTop = `-${tU}em`, zU.transformOrigin = `50% calc(50% + ${tU}em)`
       }
-      return iM
+      return zU
     }
 
-    function lM(MM) {
+    function kU(UU) {
       let {
-        settings: rM,
-        touch: iM,
-        inPreview: OM,
-        inEditor: jM,
-        pressed: aM = !1,
-        pressRef: PM
-      } = MM;
-      return (0, mM.jsx)("div", {
-        className: SM()("Crosshair", {
-          Touch: iM,
-          CrosshairInPreview: OM,
-          CrosshairInEditor: jM || OM
+        settings: XU,
+        touch: zU,
+        inPreview: cU,
+        inEditor: QU,
+        pressed: AU = !1,
+        pressRef: FU
+      } = UU;
+      return (0, NU.jsx)("div", {
+        className: yU()("Crosshair", {
+          Touch: zU,
+          CrosshairInPreview: cU,
+          CrosshairInEditor: QU || cU
         }),
-        ref: PM,
+        ref: FU,
         style: {
-          transform: hM(aM, rM.growOnClick),
-          ...yM(rM, iM)
+          transform: pU(AU, XU.growOnClick),
+          ...gU(XU, zU)
         },
         children: "+"
       })
     }
 
-    function EM(MM, rM) {
-      return MM / rM + "px"
+    function GU(UU, XU) {
+      return UU / XU + "px"
     }
 
-    function UM(MM, rM, iM, OM) {
+    function BU(UU, XU, zU, cU) {
       return {
-        ...eM(MM, rM, iM),
-        width: EM(MM.w, iM),
-        height: EM(MM.h, iM),
-        background: OM
+        ...PU(UU, XU, zU),
+        width: GU(UU.w, zU),
+        height: GU(UU.h, zU),
+        background: cU
       }
     }
 
-    function GM(MM, rM, iM) {
+    function ZU(UU, XU, zU) {
       return {
-        left: EM(MM.x, rM),
-        top: EM(MM.y, rM),
-        width: EM(MM.size, rM),
-        height: EM(MM.size, rM),
-        borderWidth: EM(MM.border, rM),
-        borderColor: iM,
-        background: MM.filled ? iM : void 0
+        left: GU(UU.x, XU),
+        top: GU(UU.y, XU),
+        width: GU(UU.size, XU),
+        height: GU(UU.size, XU),
+        borderWidth: GU(UU.border, XU),
+        borderColor: zU,
+        background: UU.filled ? zU : void 0
       }
     }
-    const CM = {
+    const RU = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function eM(MM, rM, iM) {
-      const [OM, SM] = MM.arm ? CM[MM.arm] : [0, 0], jM = Math.round(rM * iM);
+    function PU(UU, XU, zU) {
+      const [cU, yU] = UU.arm ? RU[UU.arm] : [0, 0], QU = Math.round(XU * zU);
       return {
-        left: EM(MM.x + OM * jM, iM),
-        top: EM(MM.y + SM * jM, iM)
+        left: GU(UU.x + cU * QU, zU),
+        top: GU(UU.y + yU * QU, zU)
       }
     }
 
-    function bM(MM) {
-      return MM.arm ? {
-        "data-arm": MM.arm,
-        "data-x": MM.x,
-        "data-y": MM.y
+    function WU(UU) {
+      return UU.arm ? {
+        "data-arm": UU.arm,
+        "data-x": UU.x,
+        "data-y": UU.y
       } : {}
     }
 
-    function wM(MM) {
+    function dU(UU) {
       let {
-        settings: rM,
-        inPreview: iM,
-        inEditor: OM,
-        pressed: PM = !1,
-        spread: QM,
-        spreadRef: zM
-      } = MM;
-      const LM = (0, jM.useRef)(null),
+        settings: XU,
+        inPreview: zU,
+        inEditor: cU,
+        pressed: FU = !1,
+        spread: DU,
+        spreadRef: EU
+      } = UU;
+      const YU = (0, QU.useRef)(null),
         {
-          box: hM,
-          dpr: JM
-        } = function(MM) {
-          const [rM, iM] = (0, jM.useState)({
+          box: pU,
+          dpr: aU
+        } = function(UU) {
+          const [XU, zU] = (0, QU.useState)({
             box: {
               left: 0,
               top: 0,
@@ -10034,200 +10069,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, jM.useLayoutEffect)((() => {
-            const rM = MM.current;
-            if (!rM) return;
-            const OM = () => {
-              const MM = rM.getBoundingClientRect(),
-                OM = window.devicePixelRatio || 1;
-              iM((rM => rM.dpr === OM && rM.box.left === MM.left && rM.box.top === MM.top && rM.box.width === MM.width && rM.box.height === MM.height ? rM : {
+          return (0, QU.useLayoutEffect)((() => {
+            const XU = UU.current;
+            if (!XU) return;
+            const cU = () => {
+              const UU = XU.getBoundingClientRect(),
+                cU = window.devicePixelRatio || 1;
+              zU((XU => XU.dpr === cU && XU.box.left === UU.left && XU.box.top === UU.top && XU.box.width === UU.width && XU.box.height === UU.height ? XU : {
                 box: {
-                  left: MM.left,
-                  top: MM.top,
-                  width: MM.width,
-                  height: MM.height
+                  left: UU.left,
+                  top: UU.top,
+                  width: UU.width,
+                  height: UU.height
                 },
-                dpr: OM
+                dpr: cU
               }))
             };
-            OM();
-            const SM = new ResizeObserver(OM);
-            return SM.observe(rM), window.addEventListener("resize", OM), window.addEventListener("scroll", OM, !0), () => {
-              SM.disconnect(), window.removeEventListener("resize", OM), window.removeEventListener("scroll", OM, !0)
+            cU();
+            const yU = new ResizeObserver(cU);
+            return yU.observe(XU), window.addEventListener("resize", cU), window.addEventListener("scroll", cU, !0), () => {
+              yU.disconnect(), window.removeEventListener("resize", cU), window.removeEventListener("scroll", cU, !0)
             }
-          }), [MM]), rM
-        }(LM),
-        dM = (0, jM.useRef)(JM);
-      dM.current = JM;
-      const yM = nM(rM, JM, PM && rM.growOnClick ? HM : 1),
-        lM = function(MM, rM, iM) {
-          const OM = Math.round((MM.left + MM.width / 2) * iM - rM / 2),
-            SM = Math.round((MM.top + MM.height / 2) * iM - rM / 2);
+          }), [UU]), XU
+        }(YU),
+        tU = (0, QU.useRef)(aU);
+      tU.current = aU;
+      const gU = oU(XU, aU, FU && XU.growOnClick ? IU : 1),
+        kU = function(UU, XU, zU) {
+          const cU = Math.round((UU.left + UU.width / 2) * zU - XU / 2),
+            yU = Math.round((UU.top + UU.height / 2) * zU - XU / 2);
           return {
-            x: OM / iM - MM.left,
-            y: SM / iM - MM.top
+            x: cU / zU - UU.left,
+            y: yU / zU - UU.top
           }
-        }(hM, yM.cell, JM),
-        EM = (0, aM.i)(rM.color),
-        CM = (0, aM.i)(rM.outlineColor),
-        wM = (0, jM.useRef)(0);
-      (0, jM.useLayoutEffect)((() => {
-        if (zM) return zM.current = MM => {
-          var rM;
-          wM.current = MM, null === (rM = LM.current) || void 0 === rM || rM.querySelectorAll("[data-arm]").forEach((rM => {
-            Object.assign(rM.style, eM(function(MM) {
+        }(pU, gU.cell, aU),
+        GU = (0, AU.i)(XU.color),
+        RU = (0, AU.i)(XU.outlineColor),
+        dU = (0, QU.useRef)(0);
+      (0, QU.useLayoutEffect)((() => {
+        if (EU) return EU.current = UU => {
+          var XU;
+          dU.current = UU, null === (XU = YU.current) || void 0 === XU || XU.querySelectorAll("[data-arm]").forEach((XU => {
+            Object.assign(XU.style, PU(function(UU) {
               return {
-                x: Number(MM.dataset.x),
-                y: Number(MM.dataset.y),
-                arm: MM.dataset.arm
+                x: Number(UU.dataset.x),
+                y: Number(UU.dataset.y),
+                arm: UU.dataset.arm
               }
-            }(rM), MM, dM.current))
+            }(XU), UU, tU.current))
           }))
         }, () => {
-          zM.current = null
+          EU.current = null
         }
-      }), [zM]);
-      const tM = null !== QM && void 0 !== QM ? QM : wM.current;
-      return (0, mM.jsx)("div", {
-        ref: LM,
-        className: SM()("CrosshairShapes", {
-          CrosshairInPreview: iM,
-          CrosshairInEditor: OM || iM,
-          CrosshairSpreads: void 0 !== zM
+      }), [EU]);
+      const LU = null !== DU && void 0 !== DU ? DU : dU.current;
+      return (0, NU.jsx)("div", {
+        ref: YU,
+        className: yU()("CrosshairShapes", {
+          CrosshairInPreview: zU,
+          CrosshairInEditor: cU || zU,
+          CrosshairSpreads: void 0 !== EU
         }),
-        children: (0, mM.jsx)("div", {
+        children: (0, NU.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: lM.x,
-            top: lM.y,
-            opacity: rM.opacity / 100
+            left: kU.x,
+            top: kU.y,
+            opacity: XU.opacity / 100
           },
-          children: (0, mM.jsxs)("div", {
+          children: (0, NU.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [yM.ringOutline && (0, mM.jsx)("div", {
+            children: [gU.ringOutline && (0, NU.jsx)("div", {
               className: "CrosshairRing",
-              style: GM(yM.ringOutline, JM, CM)
-            }), yM.outlines.map(((MM, rM) => (0, mM.jsx)("div", {
+              style: ZU(gU.ringOutline, aU, RU)
+            }), gU.outlines.map(((UU, XU) => (0, NU.jsx)("div", {
               className: "CrosshairPart",
-              ...bM(MM),
-              style: UM(MM, tM, JM, CM)
-            }, `o${rM}`))), yM.ring && (0, mM.jsx)("div", {
+              ...WU(UU),
+              style: BU(UU, LU, aU, RU)
+            }, `o${XU}`))), gU.ring && (0, NU.jsx)("div", {
               className: "CrosshairRing",
-              style: GM(yM.ring, JM, EM)
-            }), yM.fills.map(((MM, rM) => (0, mM.jsx)("div", {
+              style: ZU(gU.ring, aU, GU)
+            }), gU.fills.map(((UU, XU) => (0, NU.jsx)("div", {
               className: "CrosshairPart",
-              ...bM(MM),
-              style: UM(MM, tM, JM, EM)
-            }, `f${rM}`)))]
+              ...WU(UU),
+              style: BU(UU, LU, aU, GU)
+            }, `f${XU}`)))]
           })
         })
       })
     }
   },
-  35003: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => zM,
-      f: () => dM,
-      i: () => JM
+  34845: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => EU,
+      g: () => tU,
+      i: () => aU
     });
-    var OM = iM(34989);
-    const SM = "XH1-",
-      jM = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      aM = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      PM = ["color", "outlineColor"],
-      nM = 1 + 3 * PM.length + aM.length + 1,
-      QM = Math.ceil(8 * nM / Math.log2(62)),
-      zM = SM.length + QM;
+    var cU = zU(34827);
+    const yU = "XH1-",
+      QU = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      AU = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      FU = ["color", "outlineColor"],
+      oU = 1 + 3 * FU.length + AU.length + 1,
+      DU = Math.ceil(8 * oU / Math.log2(62)),
+      EU = yU.length + DU;
 
-    function LM(MM) {
-      let rM = 90;
-      for (const iM of MM) rM = 31 * rM + iM & 255;
-      return rM
+    function YU(UU) {
+      let XU = 90;
+      for (const zU of UU) XU = 31 * XU + zU & 255;
+      return XU
     }
-    const mM = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      HM = BigInt(mM.length);
+    const NU = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      IU = BigInt(NU.length);
 
-    function hM(MM, rM) {
-      let iM = 0n;
-      for (const SM of MM) {
-        const MM = mM.indexOf(SM);
-        if (MM < 0) return null;
-        iM = iM * HM + BigInt(MM)
+    function pU(UU, XU) {
+      let zU = 0n;
+      for (const yU of UU) {
+        const UU = NU.indexOf(yU);
+        if (UU < 0) return null;
+        zU = zU * IU + BigInt(UU)
       }
-      if (iM >> BigInt(8 * rM) !== 0n) return null;
-      const OM = [];
-      for (let SM = 0; SM < rM; SM++) OM.unshift(Number(0xffn & iM)), iM >>= 8n;
-      return OM
+      if (zU >> BigInt(8 * XU) !== 0n) return null;
+      const cU = [];
+      for (let yU = 0; yU < XU; yU++) cU.unshift(Number(0xffn & zU)), zU >>= 8n;
+      return cU
     }
 
-    function JM(MM) {
-      let rM = "shapes" === MM.style ? 1 : 0;
-      jM.forEach(((iM, OM) => {
-        MM[iM] && (rM |= 1 << OM + 1)
+    function aU(UU) {
+      let XU = "shapes" === UU.style ? 1 : 0;
+      QU.forEach(((zU, cU) => {
+        UU[zU] && (XU |= 1 << cU + 1)
       }));
-      const iM = [rM];
-      for (const SM of PM) {
-        const rM = (0, OM.f)(SM, MM[SM]);
-        iM.push(rM >> 16 & 255, rM >> 8 & 255, 255 & rM)
+      const zU = [XU];
+      for (const yU of FU) {
+        const XU = (0, cU.h)(yU, UU[yU]);
+        zU.push(XU >> 16 & 255, XU >> 8 & 255, 255 & XU)
       }
-      for (const SM of aM) {
+      for (const yU of AU) {
         const {
-          min: rM,
-          step: jM
-        } = OM.d[SM];
-        iM.push(Math.round(((0, OM.f)(SM, MM[SM]) - rM) / jM))
+          min: XU,
+          step: QU
+        } = cU.e[yU];
+        zU.push(Math.round(((0, cU.h)(yU, UU[yU]) - XU) / QU))
       }
-      return iM.push(LM(iM)), SM + function(MM, rM) {
-        let iM = 0n;
-        for (const SM of MM) iM = iM << 8n | BigInt(SM);
-        let OM = "";
-        for (let SM = 0; SM < rM; SM++) OM = mM[Number(iM % HM)] + OM, iM /= HM;
-        return OM
-      }(iM, QM)
+      return zU.push(YU(zU)), yU + function(UU, XU) {
+        let zU = 0n;
+        for (const yU of UU) zU = zU << 8n | BigInt(yU);
+        let cU = "";
+        for (let yU = 0; yU < XU; yU++) cU = NU[Number(zU % IU)] + cU, zU /= IU;
+        return cU
+      }(zU, DU)
     }
 
-    function dM(MM) {
-      for (const rM of MM.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${QM}})`, "gi"))) {
-        const MM = yM(hM(rM[1], nM));
-        if (MM) return MM
+    function tU(UU) {
+      for (const XU of UU.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${DU}})`, "gi"))) {
+        const UU = gU(pU(XU[1], oU));
+        if (UU) return UU
       }
       return null
     }
 
-    function yM(MM) {
-      if (!MM || MM.length !== nM || LM(MM.slice(0, -1)) !== MM[MM.length - 1]) return null;
-      const rM = MM[0],
-        iM = {
-          ...OM.e,
-          style: 1 & rM ? "shapes" : "classic"
+    function gU(UU) {
+      if (!UU || UU.length !== oU || YU(UU.slice(0, -1)) !== UU[UU.length - 1]) return null;
+      const XU = UU[0],
+        zU = {
+          ...cU.g,
+          style: 1 & XU ? "shapes" : "classic"
         };
-      jM.forEach(((MM, OM) => {
-        iM[MM] = 0 !== (rM & 1 << OM + 1)
+      QU.forEach(((UU, cU) => {
+        zU[UU] = 0 !== (XU & 1 << cU + 1)
       }));
-      let SM = 1;
-      for (const OM of PM) iM[OM] = MM[SM] << 16 | MM[SM + 1] << 8 | MM[SM + 2], SM += 3;
-      for (const jM of aM) {
+      let yU = 1;
+      for (const cU of FU) zU[cU] = UU[yU] << 16 | UU[yU + 1] << 8 | UU[yU + 2], yU += 3;
+      for (const QU of AU) {
         const {
-          min: rM,
-          step: aM
-        } = OM.d[jM];
-        iM[jM] = (0, OM.f)(jM, rM + MM[SM] * aM), SM++
+          min: XU,
+          step: AU
+        } = cU.e[QU];
+        zU[QU] = (0, cU.h)(QU, XU + UU[yU] * AU), yU++
       }
-      return iM
+      return zU
     }
   },
-  34989: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM,
-      e: () => SM,
-      f: () => jM,
-      i: () => QM,
-      j: () => nM,
-      m: () => zM,
-      p: () => PM,
-      t: () => aM
+  34827: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => cU,
+      g: () => yU,
+      h: () => QU,
+      i: () => DU,
+      l: () => oU,
+      p: () => EU,
+      q: () => FU,
+      s: () => AU
     });
-    const OM = {
+    const cU = {
         opacity: {
           min: 5,
           max: 100,
@@ -10284,7 +10319,7 @@ export const modules = {
           step: 1
         }
       },
-      SM = Object.freeze({
+      yU = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -10305,150 +10340,150 @@ export const modules = {
         forGuns: !1
       });
 
-    function jM(MM, rM) {
-      var iM;
+    function QU(UU, XU) {
+      var zU;
       const {
-        min: jM,
-        max: aM,
-        step: PM
-      } = OM[MM];
-      if (!Number.isFinite(rM)) return SM[MM];
-      const nM = (null !== (iM = String(PM).split(".")[1]) && void 0 !== iM ? iM : "").length,
-        QM = Number((Math.round(rM / PM) * PM).toFixed(nM));
-      return Math.min(aM, Math.max(jM, QM))
+        min: QU,
+        max: AU,
+        step: FU
+      } = cU[UU];
+      if (!Number.isFinite(XU)) return yU[UU];
+      const oU = (null !== (zU = String(FU).split(".")[1]) && void 0 !== zU ? zU : "").length,
+        DU = Number((Math.round(XU / FU) * FU).toFixed(oU));
+      return Math.min(AU, Math.max(QU, DU))
     }
 
-    function aM(MM, rM, iM) {
-      const OM = "number" === typeof iM ? jM(rM, iM) : iM;
+    function AU(UU, XU, zU) {
+      const cU = "number" === typeof zU ? QU(XU, zU) : zU;
       return {
-        ...MM,
-        [rM]: OM
+        ...UU,
+        [XU]: cU
       }
     }
 
-    function PM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(SM).every((OM => iM.includes(OM) || MM[OM] === rM[OM]))
+    function FU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(yU).every((cU => zU.includes(cU) || UU[cU] === XU[cU]))
     }
 
-    function nM(MM) {
-      return PM(MM, SM)
+    function oU(UU) {
+      return FU(UU, yU)
     }
 
-    function QM(MM) {
-      return `#${MM.toString(16).padStart(6,"0")}`
+    function DU(UU) {
+      return `#${UU.toString(16).padStart(6,"0")}`
     }
 
-    function zM(MM) {
-      const rM = /^#?([0-9a-f]{6})$/i.exec(MM.trim());
-      return rM ? parseInt(rM[1], 16) : null
+    function EU(UU) {
+      const XU = /^#?([0-9a-f]{6})$/i.exec(UU.trim());
+      return XU ? parseInt(XU[1], 16) : null
     }
   },
-  35006: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => LM,
-      f: () => mM
+  34853: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => YU,
+      f: () => NU
     });
-    var OM = iM(44),
-      SM = iM(30),
-      jM = iM(35003),
-      aM = iM(34989);
-    const PM = "crosshairCode";
-    let nM = null;
-    const QM = new Set;
+    var cU = zU(61),
+      yU = zU(42),
+      QU = zU(34845),
+      AU = zU(34827);
+    const FU = "crosshairCode";
+    let oU = null;
+    const DU = new Set;
 
-    function zM() {
-      if (null === nM) {
-        var MM;
-        const rM = SM.g.getItem(PM);
-        nM = null !== (MM = "string" === typeof rM ? (0, jM.f)(rM) : null) && void 0 !== MM ? MM : aM.e
+    function EU() {
+      if (null === oU) {
+        var UU;
+        const XU = yU.k.getItem(FU);
+        oU = null !== (UU = "string" === typeof XU ? (0, QU.g)(XU) : null) && void 0 !== UU ? UU : AU.g
       }
-      return nM
+      return oU
     }
 
-    function LM(MM) {
-      nM = MM, (0, aM.j)(MM) ? SM.g.removeItem(PM) : SM.g.setItem(PM, (0, jM.i)(MM));
-      for (const rM of QM) rM()
+    function YU(UU) {
+      oU = UU, (0, AU.l)(UU) ? yU.k.removeItem(FU) : yU.k.setItem(FU, (0, QU.i)(UU));
+      for (const XU of DU) XU()
     }
 
-    function mM() {
-      const [MM, rM] = (0, OM.useState)(zM);
-      return (0, OM.useEffect)((() => {
-        const MM = () => {
-          rM(zM())
+    function NU() {
+      const [UU, XU] = (0, cU.useState)(EU);
+      return (0, cU.useEffect)((() => {
+        const UU = () => {
+          XU(EU())
         };
-        return MM(), iM = MM, QM.add(iM), () => {
-          QM.delete(iM)
+        return UU(), zU = UU, DU.add(zU), () => {
+          DU.delete(zU)
         };
-        var iM
-      }), []), MM
+        var zU
+      }), []), UU
     }
   },
-  34985: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      c: () => SM
+  34824: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU,
+      g: () => yU
     });
-    var OM = iM(19);
+    var cU = zU(27);
 
-    function SM(MM, rM) {
-      return MM && !rM
+    function yU(UU, XU) {
+      return UU && !XU
     }
 
-    function jM() {
-      return SM(OM.d.get("isTouchScreen"), OM.d.get("clientEscMenuOptions").touchActionButtons)
+    function QU() {
+      return yU(cU.e.get("isTouchScreen"), cU.e.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  5096: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      e: () => jM,
-      i: () => SM
+  5204: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => AU,
+      e: () => QU,
+      h: () => yU
     });
-    let OM = null;
+    let cU = null;
 
-    function SM(MM) {
-      OM = MM
+    function yU(UU) {
+      cU = UU
     }
 
-    function jM() {
-      return OM
+    function QU() {
+      return cU
     }
 
-    function aM(MM) {
-      return "bloxd" === MM.site && !MM.isMobileApp && !MM.isTouchScreen
+    function AU(UU) {
+      return "bloxd" === UU.site && !UU.isMobileApp && !UU.isTouchScreen
     }
   },
-  34954: (MM, rM, iM) => {
-    function OM(MM, rM) {
-      return MM && !rM
+  34784: (UU, XU, zU) => {
+    function cU(UU, XU) {
+      return UU && !XU
     }
-    iM.d(rM, {
-      e: () => OM
+    zU.d(XU, {
+      d: () => cU
     })
   },
-  34971: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => jM
+  34809: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU
     });
-    var OM = iM(1329);
+    var cU = zU(1325);
 
-    function SM() {
-      var MM, rM;
-      return null !== (MM = null === (rM = screen.orientation) || void 0 === rM ? void 0 : rM.type) && void 0 !== MM ? MM : innerWidth > innerHeight ? "landscape" : "portrait"
+    function yU() {
+      var UU, XU;
+      return null !== (UU = null === (XU = screen.orientation) || void 0 === XU ? void 0 : XU.type) && void 0 !== UU ? UU : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const jM = new class {
+    const QU = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && SM() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && yU() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = SM(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, OM.CJ)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = yU(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, cU.Wa)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -10456,181 +10491,181 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const MM of this.resizers) MM()
+            for (const UU of this.resizers) UU()
           }
         }), 1e3)
       }
-      heldSizer(MM) {
-        let rM = !1;
+      heldSizer(UU) {
+        let XU = !1;
         return () => {
-          if (rM && this.isHeld()) return null;
-          const iM = MM();
-          return rM ||= null !== iM, iM
+          if (XU && this.isHeld()) return null;
+          const zU = UU();
+          return XU ||= null !== zU, zU
         }
       }
-      onRelease(MM) {
-        return this.resizers.add(MM), () => {
-          this.resizers.delete(MM)
+      onRelease(UU) {
+        return this.resizers.add(UU), () => {
+          this.resizers.delete(UU)
         }
       }
     }
   },
-  34929: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => lM,
-      i: () => QM,
-      j: () => JM,
-      n: () => hM
+  34762: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => kU,
+      f: () => DU,
+      h: () => aU,
+      l: () => pU
     });
-    var OM = iM(143),
-      SM = iM(1279),
-      jM = iM(1202),
-      aM = iM(1144),
-      PM = iM(1826);
-    const nM = {
+    var cU = zU(173),
+      yU = zU(1280),
+      QU = zU(1203),
+      AU = zU(1131),
+      FU = zU(1791);
+    const oU = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function QM(MM) {
-      return nM[MM]
+    function DU(UU) {
+      return oU[UU]
     }
 
-    function zM(MM) {
-      return (0, PM.c)(MM) ? "outdated" : MM instanceof OM.e ? 429 === MM.httpCode ? "busy" : "server" : "offline"
+    function EU(UU) {
+      return (0, FU.b)(UU) ? "outdated" : UU instanceof cU.e ? 429 === UU.httpCode ? "busy" : "server" : "offline"
     }
 
-    function LM(MM, rM, iM) {
-      return (0, aM.postJsonWithMetricsCookiesAndJsonResponse)(`${jM.clientSideServerUrls.indexUrl}${rM}`, iM, {
+    function YU(UU, XU, zU) {
+      return (0, AU.postJsonWithMetricsCookiesAndJsonResponse)(`${QU.clientSideServerUrls.indexUrl}${XU}`, zU, {
         retries: 3
-      }, MM.getMetricsCookies()).catch((MM => (console.error("Bad response from the server when trying to change name:", rM, MM), {
+      }, UU.getMetricsCookies()).catch((UU => (console.error("Bad response from the server when trying to change name:", XU, UU), {
         outcome: "failed",
-        failure: zM(MM)
+        failure: EU(UU)
       })))
     }
 
-    function mM(MM) {
-      return "outcome" in MM && "failed" === MM.outcome
+    function NU(UU) {
+      return "outcome" in UU && "failed" === UU.outcome
     }
 
-    function HM(MM) {
-      return console.error("Error when trying to get with new name from DB", MM), {
+    function IU(UU) {
+      return console.error("Error when trying to get with new name from DB", UU), {
         outcome: "refused",
-        message: MM
+        message: UU
       }
     }
-    async function hM(MM) {
-      const rM = await LM(MM, "/index/name/random", {});
-      return mM(rM) ? rM : "err" in rM ? HM(rM.err) : (MM.setPlayerName(rM.name), {
+    async function pU(UU) {
+      const XU = await YU(UU, "/index/name/random", {});
+      return NU(XU) ? XU : "err" in XU ? IU(XU.err) : (UU.setPlayerName(XU.name), {
         outcome: "changed",
-        name: rM.name
+        name: XU.name
       })
     }
-    async function JM(MM, rM) {
-      const iM = await LM(MM, "/index/name/update", {
-        name: rM
+    async function aU(UU, XU) {
+      const zU = await YU(UU, "/index/name/update", {
+        name: XU
       });
-      return mM(iM) ? iM : "err" in iM ? HM(iM.err) : iM.nameExists ? {
+      return NU(zU) ? zU : "err" in zU ? IU(zU.err) : zU.nameExists ? {
         outcome: "taken"
-      } : (MM.setPlayerName(rM), {
+      } : (UU.setPlayerName(XU), {
         outcome: "changed",
-        name: rM
+        name: XU
       })
     }
 
-    function dM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const OM = 1 === rM ? 1 : 10 ** (rM - 1),
-        jM = String(OM + Math.floor(iM() * (10 ** rM - OM)));
-      return `${MM.slice(0,SM.g-rM)}${jM}`
+    function tU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const cU = 1 === XU ? 1 : 10 ** (XU - 1),
+        QU = String(cU + Math.floor(zU() * (10 ** XU - cU)));
+      return `${UU.slice(0,yU.h-XU)}${QU}`
     }
-    const yM = [1, 2, 3, 4];
-    async function lM(MM, rM) {
-      const iM = await JM(MM, rM);
-      if ("taken" !== iM.outcome) return iM;
-      for (const OM of yM) {
-        const iM = dM(rM, OM),
-          SM = await JM(MM, iM);
-        if ("taken" !== SM.outcome) return SM
+    const gU = [1, 2, 3, 4];
+    async function kU(UU, XU) {
+      const zU = await aU(UU, XU);
+      if ("taken" !== zU.outcome) return zU;
+      for (const cU of gU) {
+        const zU = tU(XU, cU),
+          yU = await aU(UU, zU);
+        if ("taken" !== yU.outcome) return yU
       }
       return {
         outcome: "taken"
       }
     }
   },
-  34956: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      f: () => nM
+  34791: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => FU,
+      h: () => oU
     });
-    var OM = iM(19);
-    const SM = 24,
-      jM = "farNametags",
-      aM = 1e5;
+    var cU = zU(27);
+    const yU = 24,
+      QU = "farNametags",
+      AU = 1e5;
 
-    function PM() {
-      var MM;
-      return null === (MM = OM.d.get("showDistantNametags")) || void 0 === MM || MM
+    function FU() {
+      var UU;
+      return null === (UU = cU.e.get("showDistantNametags")) || void 0 === UU || UU
     }
 
-    function nM() {
-      var MM;
-      return null !== (MM = function() {
-        const MM = new URLSearchParams(window.location.search).get(jM),
-          rM = null === MM || "" === MM ? NaN : Number(MM);
-        return Number.isFinite(rM) && rM >= 0 ? Math.min(rM, aM) : null
-      }()) && void 0 !== MM ? MM : PM() ? 0 : SM
+    function oU() {
+      var UU;
+      return null !== (UU = function() {
+        const UU = new URLSearchParams(window.location.search).get(QU),
+          XU = null === UU || "" === UU ? NaN : Number(UU);
+        return Number.isFinite(XU) && XU >= 0 ? Math.min(XU, AU) : null
+      }()) && void 0 !== UU ? UU : FU() ? 0 : yU
     }
   },
-  34980: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      d: () => LM,
-      g: () => zM
+  34816: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => DU,
+      c: () => YU,
+      g: () => EU
     });
-    var OM = iM(243),
-      SM = iM(83),
-      jM = iM(114),
-      aM = iM(110),
-      PM = iM(650);
-    const nM = new Set(["mali_bifrost"]);
+    var cU = zU(281),
+      yU = zU(97),
+      QU = zU(134),
+      AU = zU(127),
+      FU = zU(678);
+    const oU = new Set(["mali_bifrost"]);
 
-    function QM() {
-      if (PM.i) return;
-      const MM = (0, SM.pageOperatingSystem)();
-      if ("android" !== MM && "windows" !== MM || (0, PM.e)("webgl_default")) return;
-      if ("windows" === MM) return MM => "qualcomm" === (0, SM.normaliseGpuVendor)((0, aM.d)(MM).vendor);
-      const rM = (0, jM.o)(),
-        iM = null === rM ? (0, OM.w)() : (0, OM.l)(rM.vendor, rM.renderer);
-      return null !== iM && nM.has(iM) ? MM => (0, OM.q)((0, aM.d)(MM).vendor, iM) : void 0
+    function DU() {
+      if (FU.h) return;
+      const UU = (0, yU.pageOperatingSystem)();
+      if ("android" !== UU && "windows" !== UU || (0, FU.e)("webgl_default")) return;
+      if ("windows" === UU) return UU => "qualcomm" === (0, yU.normaliseGpuVendor)((0, AU.d)(UU).vendor);
+      const XU = (0, QU.o)(),
+        zU = null === XU ? (0, cU.q)() : (0, cU.h)(XU.vendor, XU.renderer);
+      return null !== zU && oU.has(zU) ? UU => (0, cU.l)((0, AU.d)(UU).vendor, zU) : void 0
     }
 
-    function zM(MM, rM) {
-      return MM ? () => !0 : rM()
+    function EU(UU, XU) {
+      return UU ? () => !0 : XU()
     }
-    async function LM(MM) {
+    async function YU(UU) {
       try {
-        const rM = zM(MM, QM),
-          iM = navigator.gpu;
-        if (void 0 === rM || void 0 === iM) return !1;
-        const OM = await (0, aM.o)(iM, {
+        const XU = EU(UU, DU),
+          zU = navigator.gpu;
+        if (void 0 === XU || void 0 === zU) return !1;
+        const cU = await (0, AU.m)(zU, {
           seed: !1,
-          compatibility: rM
+          compatibility: XU
         });
-        return "string" !== typeof OM && OM.compatibility && !(0, aM.j)(OM.adapter)
-      } catch (rM) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", rM), !1
+        return "string" !== typeof cU && cU.compatibility && !(0, AU.i)(cU.adapter)
+      } catch (XU) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", XU), !1
       }
     }
   },
-  35040: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM,
-      g: () => aM
+  34891: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => yU,
+      f: () => AU
     });
-    const OM = [{
+    const cU = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -10812,79 +10847,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function SM(MM) {
-      let rM, iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof MM) {
-        if (!Number.isFinite(MM)) return "0";
-        if (Math.abs(MM) < 100) {
-          const rM = MM < 0 ? "-" : "",
-            iM = Math.abs(MM);
-          return iM >= 10 ? `${rM}${iM.toFixed(1).replace(/\.0$/,"")}` : `${rM}${iM.toFixed(2).replace(/\.?0+$/,"")}`
+    function yU(UU) {
+      let XU, zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof UU) {
+        if (!Number.isFinite(UU)) return "0";
+        if (Math.abs(UU) < 100) {
+          const XU = UU < 0 ? "-" : "",
+            zU = Math.abs(UU);
+          return zU >= 10 ? `${XU}${zU.toFixed(1).replace(/\.0$/,"")}` : `${XU}${zU.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        rM = BigInt(Math.floor(MM))
-      } else rM = MM;
-      const SM = rM < 0n ? -rM : rM,
-        jM = rM < 0n ? "-" : "",
-        aM = SM.toString();
-      if (aM.length <= iM) return `${jM}${aM}`;
-      const PM = 3 * Math.floor((aM.length - 1) / 3);
-      if (PM < 3) return `${jM}${aM}`;
-      if (PM > 3 * OM.length) {
-        const MM = aM[0],
-          rM = aM.slice(1, 3).replace(/0+$/, "");
-        return `${jM}${rM?`${MM}.${rM}`:MM}e${aM.length-1}`
+        XU = BigInt(Math.floor(UU))
+      } else XU = UU;
+      const yU = XU < 0n ? -XU : XU,
+        QU = XU < 0n ? "-" : "",
+        AU = yU.toString();
+      if (AU.length <= zU) return `${QU}${AU}`;
+      const FU = 3 * Math.floor((AU.length - 1) / 3);
+      if (FU < 3) return `${QU}${AU}`;
+      if (FU > 3 * cU.length) {
+        const UU = AU[0],
+          XU = AU.slice(1, 3).replace(/0+$/, "");
+        return `${QU}${XU?`${UU}.${XU}`:UU}e${AU.length-1}`
       }
       const {
-        threshold: nM,
-        suffix: QM
-      } = OM[OM.length - PM / 3], zM = SM / nM, LM = Number(1000n * (SM % nM) / nM), mM = Number(zM) + LM / 1e3;
-      let HM;
-      return HM = mM >= 100 ? Math.floor(mM).toString() : mM >= 10 ? mM.toFixed(1).replace(/\.0$/, "") : mM.toFixed(2).replace(/\.?0+$/, ""), `${jM}${HM}${QM}`
+        threshold: oU,
+        suffix: DU
+      } = cU[cU.length - FU / 3], EU = yU / oU, YU = Number(1000n * (yU % oU) / oU), NU = Number(EU) + YU / 1e3;
+      let IU;
+      return IU = NU >= 100 ? Math.floor(NU).toString() : NU >= 10 ? NU.toFixed(1).replace(/\.0$/, "") : NU.toFixed(2).replace(/\.?0+$/, ""), `${QU}${IU}${DU}`
     }
-    const jM = OM.map((MM => {
+    const QU = cU.map((UU => {
       let {
-        threshold: rM,
-        suffix: iM
-      } = MM;
+        threshold: XU,
+        suffix: zU
+      } = UU;
       return {
-        threshold: Number(rM),
-        suffix: iM
+        threshold: Number(XU),
+        suffix: zU
       }
-    })).filter((MM => {
+    })).filter((UU => {
       let {
-        threshold: rM
-      } = MM;
-      return Number.isFinite(rM)
+        threshold: XU
+      } = UU;
+      return Number.isFinite(XU)
     }));
 
-    function aM(MM) {
-      const rM = Math.abs(MM),
-        iM = MM < 0 ? "-" : "";
+    function AU(UU) {
+      const XU = Math.abs(UU),
+        zU = UU < 0 ? "-" : "";
       for (const {
-          threshold: OM,
-          suffix: SM
+          threshold: cU,
+          suffix: yU
         }
-        of jM)
-        if (rM >= OM) {
-          const MM = rM / OM;
-          if (MM >= 1e3) return `${iM}${rM.toExponential(2).replace("e+","e")}`;
-          let jM;
-          return jM = MM >= 100 ? Math.floor(MM).toString() : MM >= 10 ? MM.toFixed(1).replace(/\.0$/, "") : MM.toFixed(2).replace(/\.?0+$/, ""), `${iM}${jM}${SM}`
-        } return `${iM}${rM}`
+        of QU)
+        if (XU >= cU) {
+          const UU = XU / cU;
+          if (UU >= 1e3) return `${zU}${XU.toExponential(2).replace("e+","e")}`;
+          let QU;
+          return QU = UU >= 100 ? Math.floor(UU).toString() : UU >= 10 ? UU.toFixed(1).replace(/\.0$/, "") : UU.toFixed(2).replace(/\.?0+$/, ""), `${zU}${QU}${yU}`
+        } return `${zU}${XU}`
     }
   },
-  35029: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => zM,
-      f: () => mM,
-      g: () => LM,
-      k: () => aM,
-      o: () => QM,
-      p: () => nM
+  34875: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => EU,
+      g: () => NU,
+      k: () => YU,
+      o: () => AU,
+      q: () => DU,
+      s: () => oU
     });
-    var OM = iM(332);
-    const SM = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      jM = {
+    var cU = zU(344);
+    const yU = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      QU = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -10959,13 +10994,13 @@ export const modules = {
         }
       };
 
-    function aM(MM) {
-      var rM;
-      return null !== (rM = jM[MM]) && void 0 !== rM ? rM : {
+    function AU(UU) {
+      var XU;
+      return null !== (XU = QU[UU]) && void 0 !== XU ? XU : {
         translationKey: ""
       }
     }
-    const PM = {
+    const FU = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -11018,77 +11053,77 @@ export const modules = {
       }]
     };
 
-    function nM(MM) {
-      return SM.includes(MM)
+    function oU(UU) {
+      return yU.includes(UU)
     }
 
-    function QM(MM) {
-      var rM;
-      return !0 === (null === MM || void 0 === MM || null === (rM = MM.customAttributes) || void 0 === rM ? void 0 : rM.cannotEnchant)
+    function DU(UU) {
+      var XU;
+      return !0 === (null === UU || void 0 === UU || null === (XU = UU.customAttributes) || void 0 === XU ? void 0 : XU.cannotEnchant)
     }
 
-    function zM(MM, rM) {
+    function EU(UU, XU) {
       const {
-        max: iM
-      } = PM[MM].at(-1);
-      return rM <= iM
+        max: zU
+      } = FU[UU].at(-1);
+      return XU <= zU
     }
 
-    function LM(MM) {
-      const rM = Math.sin(MM / 80),
-        iM = MM => {
-          if (MM <= 0) return 0;
-          if (MM > 1) return 1;
-          let rM = 0;
-          const iM = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let OM = 0; OM < iM.length; OM++) {
-            rM += (OM % 2 === 0 ? 1 : -1) * iM[OM] * Math.pow(MM, 2 + OM) / (2 + OM)
+    function YU(UU) {
+      const XU = Math.sin(UU / 80),
+        zU = UU => {
+          if (UU <= 0) return 0;
+          if (UU > 1) return 1;
+          let XU = 0;
+          const zU = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let cU = 0; cU < zU.length; cU++) {
+            XU += (cU % 2 === 0 ? 1 : -1) * zU[cU] * Math.pow(UU, 2 + cU) / (2 + cU)
           }
-          return 72 * rM
+          return 72 * XU
         },
-        OM = .3 - .78 * rM,
-        SM = .5 - .78 * rM,
-        jM = .6 - .7 * rM,
-        aM = .8 - .6 * rM;
-      let PM = iM(OM),
-        nM = iM(SM) - PM,
-        QM = iM(jM) - nM - PM,
-        zM = iM(aM) - QM - nM - PM;
-      OM < .041 && (nM /= 1 - PM, QM /= 1 - PM, zM /= 1 - PM, PM = 0), SM < .041 && (PM /= 1 - nM, QM /= 1 - nM, zM /= 1 - nM, nM = 0), jM < .041 && (PM /= 1 - QM, nM /= 1 - QM, zM /= 1 - QM, QM = 0), aM < .041 && (PM /= 1 - zM, nM /= 1 - zM, QM /= 1 - zM, zM = 0);
+        cU = .3 - .78 * XU,
+        yU = .5 - .78 * XU,
+        QU = .6 - .7 * XU,
+        AU = .8 - .6 * XU;
+      let FU = zU(cU),
+        oU = zU(yU) - FU,
+        DU = zU(QU) - oU - FU,
+        EU = zU(AU) - DU - oU - FU;
+      cU < .041 && (oU /= 1 - FU, DU /= 1 - FU, EU /= 1 - FU, FU = 0), yU < .041 && (FU /= 1 - oU, DU /= 1 - oU, EU /= 1 - oU, oU = 0), QU < .041 && (FU /= 1 - DU, oU /= 1 - DU, EU /= 1 - DU, DU = 0), AU < .041 && (FU /= 1 - EU, oU /= 1 - EU, DU /= 1 - EU, EU = 0);
       return {
-        commonProb: PM,
-        uncommonProb: nM,
-        rareProb: QM,
-        epicProb: zM,
-        legendaryProb: 1 - (zM + QM + nM + PM)
+        commonProb: FU,
+        uncommonProb: oU,
+        rareProb: DU,
+        epicProb: EU,
+        legendaryProb: 1 - (EU + DU + oU + FU)
       }
     }
 
-    function mM(MM, rM) {
+    function NU(UU, XU) {
       const {
-        min: iM,
-        max: SM
-      } = PM[MM][rM], jM = OM.d.sampleUniformIntDistribution(iM, SM, "includeMax");
+        min: zU,
+        max: yU
+      } = FU[UU][XU], QU = cU.d.sampleUniformIntDistribution(zU, yU, "includeMax");
       return {
-        ...LM(jM),
-        level: jM
+        ...YU(QU),
+        level: QU
       }
     }
   },
-  34999: () => {},
-  35072: () => {},
-  13457: MM => {
-    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  34837: () => {},
+  34922: () => {},
+  13576: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  14650: MM => {
-    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  14713: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  16014: MM => {
-    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  16190: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  16502: MM => {
-    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  16681: UU => {
+    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,442 +1,620 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  35103: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      e: () => jM
+  37201: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => AU,
+      c: () => yU,
+      e: () => QU
     });
-    var OM = iM(3657);
-
-    function SM() {
-      if ("undefined" === typeof BroadcastChannel) return null;
-      const MM = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
-      try {
-        const rM = new BroadcastChannel(OM.i);
-        rM.postMessage({
-          stored: MM
-        }), rM.close()
-      } catch {
-        return null
+    var cU = zU(1877);
+    class yU extends Error {
+      constructor(UU) {
+        super("The game server didn't answer in time"), this.leg = UU, this.name = "SeatRequestTimedOut"
       }
-      return MM
     }
-
-    function jM(MM) {
-      const rM = "object" === typeof MM && null !== MM ? MM.stored : null;
-      return "string" === typeof rM ? rM : null
-    }
-  },
-  35100: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => aM,
-      f: () => SM,
-      g: () => jM
-    });
-    var OM = iM(3657);
-    async function SM(MM, rM, iM) {
-      let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const jM = aM(await MM.getItem(OM.e, rM));
-      if (null === jM || SM()) return null;
-      const PM = await MM.getItem(OM.f, rM);
-      return SM() ? null : (await async function(MM) {
-        await Promise.all([MM.removeItem(OM.e), MM.removeItem(OM.f)])
-      }(MM).catch(iM), {
-        pack: jM,
-        source: "string" === typeof PM ? PM : null
-      })
-    }
-
-    function jM(MM) {
-      return (0, OM.n)() ? Promise.resolve(null) : SM(MM, !1, (MM => {
-        console.error("Error removing temporary texture pack: ", MM)
-      }), OM.n)
-    }
-
-    function aM(MM) {
-      if ("object" !== typeof MM || null === MM) return null;
-      const rM = MM.metaData;
-      return "object" !== typeof rM || null === rM || "string" !== typeof rM.id ? null : MM
-    }
-  },
-  53774: (MM, rM, iM) => {
-    function OM(MM) {
-      return null === MM.gameSource ? "player" : "customGame"
-    }
-    iM.d(rM, {
-      c: () => jM,
-      g: () => JM,
-      h: () => hM,
-      j: () => OM
-    });
-    const SM = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
-
-    function jM(MM) {
-      return "" === MM || "string" === typeof MM && SM.test(MM)
-    }
-
-    function aM(MM) {
-      return "object" === typeof MM && null !== MM && ("earth" === MM.type || Object.entries(MM).every((MM => {
-        let [rM, iM] = MM;
-        return "type" === rM || jM(iM)
-      })))
-    }
-    const PM = /(?:src|image|image-set|cross-fade)\(/i,
-      nM = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
-      QM = /url\(/gi,
-      zM = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
-      LM = new Set([...zM.map((MM => new URL(MM).origin)), "https://fonts.gstatic.com"]),
-      mM = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
-
-    function HM(MM) {
-      var rM, iM;
-      if (MM.includes("\\") || PM.test(MM)) return !0;
-      const OM = [...MM.matchAll(nM)];
-      return OM.length !== (null !== (rM = null === (iM = MM.match(QM)) || void 0 === iM ? void 0 : iM.length) && void 0 !== rM ? rM : 0) || !OM.every((MM => {
-        var rM, iM, OM;
-        let {
-          groups: SM
-        } = MM;
-        return function(MM) {
-          try {
-            return zM.every((rM => {
-              const iM = new URL(MM, rM);
-              return "data:" === iM.protocol || LM.has(iM.origin) || mM.has(iM.href)
-            }))
-          } catch {
-            return !1
-          }
-        }(null !== (rM = null !== (iM = null !== (OM = null === SM || void 0 === SM ? void 0 : SM.doubleQuoted) && void 0 !== OM ? OM : null === SM || void 0 === SM ? void 0 : SM.singleQuoted) && void 0 !== iM ? iM : null === SM || void 0 === SM ? void 0 : SM.unquoted) && void 0 !== rM ? rM : "")
-      }))
-    }
-
-    function hM(MM) {
-      var rM, iM, OM, SM, PM, nM, QM;
-      const zM = [...Object.values(null !== (rM = MM.textureOverrides) && void 0 !== rM ? rM : {}), ...Object.values(null !== (iM = MM.modelOverrides) && void 0 !== iM ? iM : {})],
-        LM = [...Object.values(null !== (OM = null === (SM = MM.customCss) || void 0 === SM ? void 0 : SM.fontFaces) && void 0 !== OM ? OM : {}), ...Object.values(null !== (PM = null === (nM = MM.customCss) || void 0 === nM ? void 0 : nM.classStyles) && void 0 !== PM ? PM : {})].flatMap((MM => Object.values(null !== MM && void 0 !== MM ? MM : {})));
-      return !zM.every(jM) || !Object.values(null !== (QM = MM.skyBoxes) && void 0 !== QM ? QM : {}).every(aM) || LM.some((MM => "string" === typeof MM && HM(MM)))
-    }
-
-    function JM(MM, rM) {
-      if (null === MM || "player" === rM || !hM(MM)) return MM;
-      const iM = {
-        ...MM
-      };
-      return MM.textureOverrides && (iM.textureOverrides = yM(MM.textureOverrides, jM, "texture")), MM.modelOverrides && (iM.modelOverrides = yM(MM.modelOverrides, jM, "model")), MM.skyBoxes && (iM.skyBoxes = yM(MM.skyBoxes, aM, "sky")), MM.customCss && (iM.customCss = function(MM) {
-        const rM = MM => yM(MM, (MM => "string" === typeof MM && !HM(MM)), "CSS"),
-          {
-            fontFaces: iM,
-            classStyles: OM
-          } = dM(MM) ? MM : {},
-          SM = {};
-        for (const [jM, aM] of Object.entries(dM(OM) ? OM : {})) SM[jM] = rM(aM);
-        return {
-          fontFaces: (Array.isArray(iM) ? iM : []).map(rM),
-          classStyles: SM
-        }
-      }(MM.customCss)), iM
-    }
-
-    function dM(MM) {
-      return "object" === typeof MM && null !== MM && !Array.isArray(MM)
-    }
-
-    function yM(MM, rM, iM) {
-      const OM = Object.entries(dM(MM) ? MM : {}),
-        SM = OM.filter((MM => {
-          let [, iM] = MM;
-          return !rM(iM)
-        }));
-      if (SM.length > 0) {
-        const MM = SM.map((MM => {
-          let [rM] = MM;
-          return rM
-        }));
-        console.warn(`Ignoring a custom game texture pack's ${iM} files that name another site: ${MM.join(", ")}`)
+    const QU = new class {
+      constructor() {
+        this.count = 0, this.answers = 0, this.waiting = new Set
       }
-      return Object.fromEntries(OM.filter((MM => {
-        let [, iM] = MM;
-        return rM(iM)
-      })))
-    }
-  },
-  53778: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => hM,
-      f: () => EM,
-      i: () => lM
-    });
-    var OM = iM(1073),
-      SM = iM(2263),
-      jM = iM(3647),
-      aM = iM(3657),
-      PM = iM(35103),
-      nM = iM(35100),
-      QM = iM(53774),
-      zM = iM(42090),
-      LM = iM(42065),
-      mM = iM(5463);
-    const HM = {
-      pack: null,
-      gameSource: null
-    };
-    class hM {
-      constructor(MM) {
-        this.host = MM, this.ready = void 0, this.state = HM, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.dh = !1, (0, aM.j)(), this.ready = this.readStored()
+      get answered() {
+        return this.answers
       }
-      readyWithin(MM) {
-        return Promise.race([this.ready, new Promise((rM => {
-          setTimeout(rM, MM)
-        }))])
+      answer() {
+        this.answers++
       }
-      current() {
-        return this.state
+      add() {
+        this.count++;
+        for (const UU of this.waiting) UU()
       }
-      playerState() {
-        return {
-          pack: this.playerPack,
-          gameSource: null
-        }
+      remove() {
+        this.count--
       }
-      onPlayerPackChange(MM) {
-        return this.ownListeners.add(MM), () => {
-          this.ownListeners.delete(MM)
-        }
-      }
-      isUsingCustomGameTexturePack(MM) {
-        return (0, LM.c)(this.state, MM)
-      }
-      setGamePackConfirm(MM) {
-        this.confirmGamePack = MM
-      }
-      subscribe(MM) {
-        return this.listeners.set(MM, null), this.ready.then((() => {
-          this.deliver(MM)
-        })), () => {
-          this.listeners.delete(MM)
-        }
-      }
-      async setPlayerPack(MM) {
-        const rM = dM(MM) ? null : MM;
-        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(rM), this.change({
-          pack: rM,
-          gameSource: null
-        }, !1);
-        const iM = await this.storePlayerPack(rM);
-        return iM && this.announce(), iM
-      }
-      async packForGame(MM, rM, iM) {
-        await this.readyWithin(Math.max(0, (null !== iM && void 0 !== iM ? iM : performance.now() + zM.d) - performance.now()));
-        const SM = ++this.picks,
-          jM = (0, OM.m)(MM) ? (0, OM.p)(MM) : null;
-        if (null === jM) return void this.usePlayerPack();
-        let aM;
-        const PM = function(MM) {
-          let rM;
-          const iM = new Promise(((iM, OM) => {
-            rM = setTimeout((() => {
-              OM(new Error(`no answer in ${MM} ms`))
-            }), MM)
-          }));
-          return iM.catch((() => {})), {
-            passed: iM,
-            clear: () => {
-              clearTimeout(rM)
-            }
-          }
-        }(2e4);
-        try {
-          const MM = await Promise.race([rM.packKey(jM), PM.passed]);
-          if (null !== MM && this.onGamePack && this.state.gameSource === MM) return;
-          if (null !== MM && MM === this.skippedKey) return void(this.dh || this.picks !== SM || this.usePlayerPack());
-          aM = null === MM ? null : await Promise.race([JM(jM, MM, rM), PM.passed])
-        } catch (LM) {
-          const MM = !this.dh && this.picks === SM && this.holdsOtherGamePack(jM);
-          return this.host.warn(`the texture pack of ${jM} didn't load: ${MM?"the player's own shows":"the pack in play stays"}`, LM), void(MM && this.usePlayerPack())
-        } finally {
-          PM.clear()
-        }
-        if (this.dh || this.picks !== SM) return;
-        null !== aM && (0, QM.h)(aM.pack) && (this.host.warn(`the texture pack of ${jM} names files on other sites: the player's own shows`, null), aM = null);
-        const nM = null === aM || await this.confirmed(aM.pack, jM) ? null : aM.key;
-        this.dh || this.picks !== SM || (null !== nM && (this.skippedKey = nM, aM = null), null === aM ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
-          pack: aM.pack,
-          gameSource: aM.key
-        }, !0)))
-      }
-      endGamePack() {
-        this.picks++, this.usePlayerPack()
-      }
-      holdsOtherGamePack(MM) {
-        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(MM)
-      }
-      async confirmed(MM, rM) {
-        const iM = this.confirmGamePack;
-        if (null === iM) return !0;
-        try {
-          return await iM(MM, rM)
-        } catch (OM) {
-          return this.host.warn(`the texture pack prompt of ${rM} failed: the pack is skipped`, OM), !1
-        }
-      }
-      async readPlayerPack() {
-        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        if (null !== MM && this.ownAnnouncements.delete(MM)) return;
-        await this.ready;
-        const rM = this.ownChanges;
-        let iM;
-        try {
-          iM = await this.host.store.getItem(aM.b, !0)
-        } catch (SM) {
-          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", SM)
-        }
-        if (this.dh || this.ownChanges !== rM) return;
-        const OM = yM(iM);
-        (0, mM.d)(OM, this.playerPack) || (this.ownChanges++, this.setOwn(OM), this.onGamePack || this.change({
-          pack: OM,
-          gameSource: null
-        }, !1))
-      }
-      joinedWithout() {
-        this.picks++
-      }
-      dispose() {
-        this.dh = !0, this.listeners.clear()
-      }
-      async readStored() {
-        const {
-          store: MM,
-          warn: rM
-        } = this.host;
-        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, nM.f)(MM, !0, (MM => {
-          rM("the custom game's texture pack wasn't removed from storage", MM)
-        })).then((MM => {
-          this.takeOneShot(MM)
-        }), (MM => {
-          rM("the custom game's texture pack didn't read: the player's own shows", MM)
-        })), MM.getItem(aM.b, !0).then((MM => {
-          this.takeStoredOwn(MM)
-        }), (MM => {
-          rM("the stored texture pack didn't read: the default pack shows", MM), this.takeStoredOwn(null)
-        }))]), this.update()
-      }
-      takeOneShot(MM) {
-        var rM;
-        null === MM || this.dh || this.changes > 0 || this.picks > 0 || ((0, QM.h)(MM.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
-          pack: MM.pack,
-          gameSource: null !== (rM = MM.source) && void 0 !== rM ? rM : ""
+      whenSlow(UU) {
+        return this.count > 0 || UU.aborted ? Promise.resolve(!UU.aborted) : new Promise((XU => {
+          const zU = () => {
+            this.waiting.delete(zU), XU(!UU.aborted)
+          };
+          this.waiting.add(zU), UU.addEventListener("abort", zU, {
+            once: !0
+          })
         }))
       }
-      takeStoredOwn(MM) {
-        if (this.playerPicked || this.dh) return;
-        if (this.ownChanges++, this.setOwn(yM(MM)), this.onGamePack) return;
-        const rM = {
-          pack: this.playerPack,
-          gameSource: null
-        };
-        0 === this.changes ? this.state = rM : this.change(rM, !1)
+    };
+    class AU {
+      constructor(UU) {
+        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new cU.d(45e3, UU), this.slow = new cU.d(8e3, (() => {
+          this.countedSlow = !0, QU.add()
+        }))
       }
-      async update() {
-        const MM = this.playerPack,
-          rM = null === MM || void 0 === MM ? void 0 : MM.metaData.id;
-        if (!MM || !rM || !this.host.fetchLatest || rM === SM.b || rM === SM.o.CUSTOM) return;
-        const iM = SM.s[rM];
-        if (void 0 === iM || MM.metaData.version >= iM) return;
-        let OM;
-        try {
-          OM = yM(await this.host.fetchLatest(rM))
-        } catch (jM) {
-          return void this.host.warn(`texture pack ${rM} didn't update to version ${iM}`, jM)
-        }
-        null === OM || this.dh || this.playerPack !== MM || (this.ownChanges++, this.setOwn(OM), this.onGamePack || this.change({
-          pack: OM,
-          gameSource: null
-        }, !1), await this.storePlayerPack(OM) && this.announce())
+      restart() {
+        QU.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
       }
-      announce() {
-        const MM = (0, PM.d)();
-        null !== MM && this.ownAnnouncements.add(MM)
+      stop() {
+        this.timeout.stop(), this.slow.stop(), this.uncountSlow()
       }
-      setOwn(MM) {
-        this.playerPack = MM;
-        for (const iM of [...this.ownListeners]) try {
-          iM()
-        } catch (rM) {
-          this.host.warn("a texture pack listener threw", rM)
-        }
+      answered() {
+        this.stop(), QU.answer()
       }
-      usePlayerPack() {
-        this.onGamePack && this.change({
-          pack: this.playerPack,
-          gameSource: null
-        }, !1)
+      socketOpened() {
+        this.slow.stop(), this.uncountSlow(), QU.answer()
       }
-      async storePlayerPack(MM) {
-        try {
-          return null === MM ? (await this.host.store.removeItem(aM.b), !0) : await this.host.store.setItem(aM.b, MM)
-        } catch (rM) {
-          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", rM), !1
-        }
-      }
-      change(MM, rM) {
-        if (!this.dh) {
-          this.changes++, this.onGamePack = rM, this.state = MM;
-          for (const MM of [...this.listeners.keys()]) this.deliver(MM)
-        }
-      }
-      deliver(MM) {
-        if (!this.dh && this.listeners.has(MM) && this.listeners.get(MM) !== this.state) {
-          this.listeners.set(MM, this.state);
-          try {
-            MM(this.state)
-          } catch (rM) {
-            this.host.warn("a texture pack listener threw", rM)
-          }
-        }
+      uncountSlow() {
+        this.countedSlow && (this.countedSlow = !1, QU.remove())
       }
     }
-    async function JM(MM, rM, iM) {
-      const OM = (0, nM.d)(await iM.fetchPack(rM));
-      if (null !== OM) return {
-        pack: OM,
-        key: rM
-      };
-      const SM = await iM.packKey(MM);
-      if (null === SM) return null;
-      const jM = (0, nM.d)(await iM.fetchPack(SM));
-      if (null === jM) throw new Error(`no texture pack at ${SM}`);
+  },
+  36977: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => cU,
+      f: () => yU,
+      g: () => QU,
+      i: () => AU
+    });
+    const cU = 1024,
+      yU = 1024 * cU;
+
+    function QU(UU) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, UU / yU)))
+    }
+
+    function AU(UU) {
+      return (UU / yU).toFixed(1)
+    }
+  },
+  37188: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => QU,
+      g: () => oU,
+      j: () => FU,
+      m: () => AU,
+      p: () => DU,
+      s: () => EU,
+      t: () => NU
+    });
+    var cU = zU(212);
+    const yU = 32 * zU(36977).f,
+      QU = 6144,
+      AU = 4608,
+      FU = 512,
+      oU = function() {
+        const UU = NU(cU.f.maxChunkHorizAddDistance + 1, cU.f.maxChunkVertAddDistance + 1);
+        let XU = UU;
+        for (; YU(XU) < UU;) XU++;
+        return XU
+      }();
+
+    function DU(UU) {
+      return Math.floor(yU * UU / QU)
+    }
+
+    function EU(UU) {
+      const XU = YU(UU);
+      let zU = cU.f.maxChunkHorizAddDistance,
+        yU = cU.f.maxChunkVertAddDistance;
+      if (NU(zU + 1, yU + 1) <= XU) return null;
+      for (; NU(zU + 1, yU + 1) > XU && (zU > 0 || yU > 0);) zU > yU ? zU-- : yU--;
       return {
-        pack: jM,
-        key: SM
+        horizontal: zU,
+        vertical: yU
       }
     }
 
-    function dM(MM) {
-      return null === MM || MM.metaData.id === SM.b
+    function YU(UU) {
+      return UU - Math.floor(UU / 6)
     }
 
-    function yM(MM) {
-      const rM = (0, nM.d)(MM);
-      return dM(rM) ? null : rM
+    function NU(UU, XU) {
+      const zU = Math.max(UU, XU);
+      let cU = 0;
+      for (let yU = -zU; yU <= zU; yU++)
+        for (let QU = -zU; QU <= zU; QU++)
+          for (let AU = -zU; AU <= zU; AU++) IU(UU, XU, yU, QU, AU) && cU++;
+      return cU
     }
-    async function lM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jM.c;
-      if (null === MM.pack) return null;
+
+    function IU(UU, XU, zU, cU, yU) {
+      const QU = zU * zU + yU * yU;
+      return UU === XU ? QU + cU * cU <= UU * UU : UU > XU ? Math.abs(cU) <= XU && QU + cU * cU <= UU * UU : QU <= UU * UU && QU + cU * cU <= XU * XU
+    }
+  },
+  37186: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => WU,
+      d: () => sU,
+      h: () => VU,
+      j: () => vU,
+      k: () => SU,
+      l: () => MU,
+      n: () => iU
+    });
+    var cU = zU(212),
+      yU = zU(97),
+      QU = zU(142),
+      AU = zU(298),
+      FU = zU(4796),
+      oU = zU(691),
+      DU = zU(722),
+      EU = zU(4800),
+      YU = zU(4809),
+      NU = zU(37188),
+      IU = zU(37197);
+    const pU = 1048576,
+      aU = 1024 * pU,
+      tU = 400 * pU,
+      gU = 147456,
+      kU = .5,
+      GU = 2048,
+      BU = 1.5 * aU,
+      ZU = 768 * pU;
+
+    function RU(UU) {
       const {
-        packAssets: OM
-      } = await Promise.all([iM.e(230), iM.e(51)]).then((() => iM(64133)));
-      return OM(MM, rM)
+        os: XU,
+        deviceMemory: zU
+      } = UU;
+      if ("ios" === XU) switch ((0, AU.c)(UU)) {
+        case "ipad_m":
+          return {
+            footprintBytes: PU(NU.d), basis: "ipad-m", namesLimit: !1
+          };
+        case "ipad":
+          return {
+            footprintBytes: ZU, basis: "ipad", namesLimit: !0
+          };
+        case "iphone_6gb":
+          return {
+            footprintBytes: BU, basis: "iphone-6gb", namesLimit: !0
+          };
+        case "iphone":
+          return {
+            footprintBytes: ZU, basis: "iphone", namesLimit: !0
+          }
+      }
+      return "number" === typeof zU && Number.isFinite(zU) && zU > 0 ? {
+        footprintBytes: zU * aU * kU,
+        basis: `memory-${zU}`,
+        namesLimit: !0
+      } : "android" === XU ? {
+        footprintBytes: ZU,
+        basis: "android",
+        namesLimit: !0
+      } : {
+        footprintBytes: PU(NU.m),
+        basis: "unreported",
+        namesLimit: !1
+      }
     }
 
-    function EM(MM) {
-      const rM = (0, aM.o)();
-      return null === rM ? () => {} : (rM.onmessage = rM => {
-        MM.readPlayerPack((0, PM.e)(rM.data))
-      }, () => {
-        rM.close()
-      })
+    function PU(UU) {
+      return tU + UU * gU
+    }
+
+    function WU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : qU(),
+        XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QU.siteUsed;
+      if ("android" !== UU.os || "mobileAndroid" === XU) return !0;
+      const {
+        footprintBytes: zU,
+        basis: cU
+      } = RU(UU);
+      return "android" === cU || zU > 2 * aU
+    }
+
+    function dU(UU) {
+      const XU = Math.min(UU, PU(NU.d));
+      return tU + Math.max(0, XU - tU) / 2
+    }
+
+    function LU(UU, XU, zU) {
+      var yU, QU, AU, FU;
+      let oU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        {
+          footprintBytes: DU,
+          basis: IU,
+          namesLimit: pU
+        } = RU(UU);
+      zU && (DU = dU(DU), IU += "+killed", pU = !0), null !== XU && PU(XU) < DU && (DU = PU(XU), IU += "+learned", pU = !0), IU += (0, YU.F)(null !== (yU = UU.x32) && void 0 !== yU ? yU : null) + (0, EU.h)(null !== (QU = UU.lowRam) && void 0 !== QU ? QU : null), "fix" === UU.x32 && PU(GU) < DU && (DU = PU(GU), pU = !0), oU && (DU = dU(DU), IU += "+refused", pU = !0);
+      const aU = function(UU) {
+          const XU = Math.floor((UU - tU) / gU);
+          return Math.min(NU.d, Math.max(NU.j, XU))
+        }(DU),
+        kU = pU && aU < NU.d ? Math.min(aU, NU.g) : aU,
+        BU = (0, NU.s)(kU);
+      return {
+        footprintBytes: DU,
+        shedFootprintBytes: pU ? Math.max(DU, PU(kU)) : null,
+        chunkCap: kU,
+        maxHorizDistance: null !== (AU = null === BU || void 0 === BU ? void 0 : BU.horizontal) && void 0 !== AU ? AU : cU.f.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (FU = null === BU || void 0 === BU ? void 0 : BU.vertical) && void 0 !== FU ? FU : cU.f.maxChunkVertAddDistance,
+        basis: IU
+      }
+    }
+    let eU = null,
+      CU = null,
+      wU = null;
+
+    function qU() {
+      var UU, XU;
+      return eU ??= {
+        os: (0, yU.getOperatingSystem)(),
+        deviceMemory: navigator.deviceMemory,
+        ...(0, AU.f)()
+      }, {
+        ...eU,
+        x32: null !== (UU = (0, YU.B)()) && void 0 !== UU ? UU : void 0,
+        lowRam: null !== (XU = (0, EU.e)()) && void 0 !== XU ? XU : void 0
+      }
+    }
+
+    function OU() {
+      return LU(qU(), (0, FU.f)(), (0, oU.V)("wasm").length > 0, iU())
+    }
+
+    function SU() {
+      return wU ??= (0, IU.r)(LU(qU(), null, !1, iU()).chunkCap), wU
+    }
+    const rU = "wasmMemoryRecord",
+      uU = {
+        halvedAt: null,
+        reloadSpent: !1
+      };
+
+    function fU() {
+      let UU = null;
+      try {
+        var XU;
+        UU = JSON.parse(null !== (XU = (0, DU.p)((0, DU.w)(), rU)) && void 0 !== XU ? XU : "null")
+      } catch {
+        return uU
+      }
+      if ("object" !== typeof UU || null === UU) return uU;
+      const {
+        halvedAt: zU,
+        reloadSpent: cU
+      } = UU;
+      return {
+        halvedAt: "number" === typeof zU && Number.isFinite(zU) ? zU : null,
+        reloadSpent: !0 === cU
+      }
+    }
+
+    function iU() {
+      return null !== fU().halvedAt
+    }
+
+    function HU(UU) {
+      const XU = (0, DU.w)(),
+        zU = JSON.stringify(UU);
+      try {
+        null === XU || void 0 === XU || XU.setItem(rU, zU)
+      } catch {
+        return !1
+      }
+      return (0, DU.p)(XU, rU) === zU
+    }
+
+    function MU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now(),
+        XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const zU = fU();
+      return null === zU.halvedAt ? HU({
+        halvedAt: UU,
+        reloadSpent: XU
+      }) ? (wU = null, CU = null, "halve") : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: on as the JS client"), "js") : zU.reloadSpent ? "js" : HU({
+        ...zU,
+        reloadSpent: !0
+      }) ? "reload" : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: on as the JS client"), "js")
+    }
+
+    function vU() {
+      return CU ??= OU(), CU
+    }
+
+    function VU() {
+      var UU;
+      return (null !== (UU = CU) && void 0 !== UU ? UU : OU()).basis
+    }
+
+    function sU(UU, XU) {
+      return UU.setChunkCap(XU.chunkCap)
+    }
+  },
+  37197: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => LU,
+      j: () => ZU,
+      k: () => YU,
+      o: () => RU,
+      r: () => kU,
+      t: () => WU,
+      x: () => dU,
+      z: () => NU
+    });
+    var cU = zU(36977),
+      yU = zU(37188);
+    const QU = 64 * cU.e,
+      AU = 40 * cU.f,
+      FU = 36 * cU.f,
+      oU = 20 * cU.f,
+      DU = 2 * cU.f,
+      EU = 5 * cU.f;
+
+    function YU(UU) {
+      return "footprint" !== UU && "gcPressure" !== UU
+    }
+
+    function NU(UU) {
+      return YU(UU) ? "wasm memory was refused" : "gcPressure" === UU ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
+    }
+    const IU = 2 * cU.f,
+      pU = 4 * cU.f,
+      aU = 35 * cU.f + IU + pU,
+      tU = 6.5 * cU.f,
+      gU = 132.5 * cU.e;
+
+    function kU(UU) {
+      const XU = tU + (0, yU.p)(UU) + UU * gU;
+      return Math.ceil((2 * aU + XU) / QU) * QU
+    }
+    kU(yU.d), cU.f, cU.f, cU.f;
+    const GU = {
+        targetBytes: AU,
+        leastBytes: oU
+      },
+      BU = {
+        targetBytes: FU,
+        leastBytes: oU
+      };
+
+    function ZU(UU) {
+      return {
+        targetBytes: UU,
+        leastBytes: 0
+      }
+    }
+
+    function RU(UU) {
+      return UU >= yU.d ? GU : BU
+    }
+    const PU = 2 * QU;
+
+    function WU(UU, XU, zU) {
+      return UU + XU + PU > zU
+    }
+    const dU = {
+      now: () => performance.now(),
+      requestIdle: "function" === typeof requestIdleCallback ? UU => {
+        requestIdleCallback(UU)
+      } : null
+    };
+    class LU {
+      constructor(UU, XU, zU) {
+        let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dU;
+        this.memory = UU, this.readPeakStoredChunks = XU, this.onError = zU, this.clock = cU, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+          reserves: 0,
+          allocations: 0
+        }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null, this.gcPressure = null
+      }
+      setShed(UU, XU, zU) {
+        this.shedding = {
+          shed: UU,
+          oY: XU,
+          readDistanceInUse: zU
+        }
+      }
+      shedDistanceInUse() {
+        return this.distanceInUse
+      }
+      setFootprint(UU) {
+        this.footprint = UU
+      }
+      setGcPressure(UU) {
+        this.gcPressure = {
+          highEpisode: UU,
+          shedEpisode: null,
+          nextAt: null
+        }
+      }
+      setCeiling(UU) {
+        this.ceilingBytes = UU, this.call((() => {
+          this.memory.setCeiling(UU)
+        }), void 0)
+      }
+      ceilingMayRefuse(UU, XU) {
+        var zU;
+        return WU(this.memory.memoryBytes(), UU, null !== (zU = this.ceilingBytes) && void 0 !== zU ? zU : XU)
+      }
+      reserveAtJoin(UU) {
+        let {
+          targetBytes: XU,
+          leastBytes: zU
+        } = UU;
+        const cU = this.memory.memoryBytes(),
+          yU = cU + zU,
+          QU = Math.max(XU + (this.ballastOn() ? EU : 0), yU),
+          AU = this.call((() => this.memory.reserveUpFront(QU) ? "target" : QU > yU && this.memory.reserveUpFront(yU) ? "least" : "none"), "none");
+        if (this.stopped) return !1;
+        if ("target" !== AU) {
+          const UU = "least" === AU ? `took ${yU} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${QU} bytes was refused at ${cU} bytes; ${UU}`)
+        }
+        return this.joinReserveTaken = AU, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== AU && this.shedFor("joinReserve"), "none" !== AU
+      }
+      afterFrame() {
+        if (this.stopped) return;
+        const UU = this.clock.now(),
+          XU = null !== this.stepsHeldUntil && UU >= this.stepsHeldUntil;
+        if (XU && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && UU >= this.ballastCheckAt && (this.takeBallast(UU), this.stopped)) return;
+        const zU = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          cU = XU && "now" === zU ? "none" : zU,
+          {
+            requestIdle: yU
+          } = this.clock;
+        "now" === cU || null !== this.pendingSince && UU - this.pendingSince >= 500 ? this.step() : "idle" === cU && null === this.pendingSince && (null === yU ? this.step() : (this.pendingSince = UU, yU((() => {
+          null !== this.pendingSince && this.step()
+        })))), UU - this.statsAt >= 1e3 && (this.statsAt = UU, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(UU))
+      }
+      refreshStats() {
+        this.call((() => {
+          var UU, XU;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (XU = this.shedding.readDistanceInUse()) && void 0 !== XU ? XU : this.distanceInUse);
+          null === (UU = this.footprint) || void 0 === UU || UU.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+        }), void 0)
+      }
+      stop() {
+        this.stopped = !0, this.pendingSince = null
+      }
+      noteMeshWorker(UU, XU) {
+        this.noteWorker(`Mesh${UU}`, XU)
+      }
+      meshWorkerGone(UU) {
+        this.workerGone(`Mesh${UU}`)
+      }
+      noteWorldgen(UU) {
+        this.noteWorker("Worldgen", UU)
+      }
+      worldgenGone() {
+        this.workerGone("Worldgen")
+      }
+      noteWorker(UU, XU) {
+        const zU = this.workers.get(UU);
+        null !== zU && void 0 !== zU && zU.gone && (this.replacedRefusals.reserves += zU.stats.reservesRefused, this.replacedRefusals.allocations += zU.stats.allocationsRefused), this.workers.set(UU, {
+          stats: XU,
+          gone: !1
+        })
+      }
+      workerGone(UU) {
+        const XU = this.workers.get(UU);
+        XU && (XU.gone = !0)
+      }
+      details() {
+        var UU, XU;
+        const zU = this.memory.memoryBytes(),
+          yU = {
+            wasmMemoryNow: `${(0,cU.i)(zU)} MiB`,
+            wasmMemoryMiB: String(Math.floor(zU / cU.f))
+          };
+        null !== this.joinReserveTaken && (yU.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (yU.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const QU = this.main;
+        if (QU) {
+          yU.wasmMemoryMain = eU(QU);
+          const UU = Math.max(0, QU.peakLiveBytes - this.ballastPeakBytes),
+            XU = 0 === this.peakStoredChunks ? "-" : (UU / this.peakStoredChunks / cU.e).toFixed(1);
+          yU.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${XU} KiB`
+        }
+        for (const [cU, {
+            stats: FU,
+            gone: oU
+          }] of this.workers) yU[`wasmMemory${cU}`] = eU(FU) + (oU ? " (gone)" : "");
+        const AU = null !== (UU = null === (XU = this.footprint) || void 0 === XU ? void 0 : XU.describe()) && void 0 !== UU ? UU : null;
+        return null !== AU && (yU.wasmMemoryFootprint = AU), yU
+      }
+      pageKillSnapshot() {
+        var UU, XU, zU, yU, QU;
+        let AU = (null !== (UU = null === (XU = this.main) || void 0 === XU ? void 0 : XU.reservesRefused) && void 0 !== UU ? UU : 0) + this.replacedRefusals.reserves,
+          FU = (null !== (zU = null === (yU = this.main) || void 0 === yU ? void 0 : yU.allocationsRefused) && void 0 !== zU ? zU : 0) + this.replacedRefusals.allocations;
+        for (const {
+            stats: cU
+          }
+          of this.workers.values()) AU += cU.reservesRefused, FU += cU.allocationsRefused;
+        return {
+          wasmMainMiB: Number((0, cU.i)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, cU.i)(this.workersMemoryBytes())),
+          peakStoredChunks: this.peakStoredChunks,
+          refusedReserves: AU,
+          refusedAllocations: FU,
+          sheds: this.sheds,
+          ...null === (QU = this.footprint) || void 0 === QU ? void 0 : QU.snapshot()
+        }
+      }
+      workersMemoryBytes() {
+        let UU = 0;
+        for (const {
+            stats: XU,
+            gone: zU
+          }
+          of this.workers.values()) UU += zU ? 0 : XU.memoryBytes;
+        return UU
+      }
+      checkFootprint() {
+        null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
+      }
+      checkGcPressure(UU) {
+        const XU = this.gcPressure;
+        if (null === XU) return;
+        if (null !== XU.nextAt || "undefined" !== typeof document && document.hidden || (XU.nextAt = UU + 6e4), null === XU.nextAt || UU < XU.nextAt) return;
+        if (this.stopped || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil) return;
+        const zU = XU.highEpisode();
+        null !== zU && zU !== XU.shedEpisode && (XU.shedEpisode = zU, XU.nextAt = UU + 3e4, this.shedFor("gcPressure"))
+      }
+      step() {
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(DU)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+      }
+      ballastOn() {
+        return null !== this.shedding
+      }
+      takeBallast(UU) {
+        if (!this.ballastOn() || null === this.joinReserveTaken) return;
+        this.ballastCheckAt = UU + 1e3;
+        const XU = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, XU)
+      }
+      takePressure() {
+        return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
+      }
+      stopSteps(UU) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${UU}: frames grow on demand from here`)
+      }
+      shedFor(UU) {
+        const {
+          shedding: XU
+        } = this;
+        if (null === XU) return;
+        this.pendingSince = null;
+        const zU = this.call((() => XU.shed(UU)), null);
+        if (this.stopped) return;
+        if (null === zU) return void(YU(UU) && this.stopSteps("nothing is left to shed"));
+        this.sheds++, this.shedCap = zU, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
+        const cU = "gcPressure" === UU ? ++this.gcSheds : this.sheds - this.gcSheds;
+        XU.oY(UU, cU, this.details())
+      }
+      call(UU, XU) {
+        if (this.stopped) return XU;
+        try {
+          return UU()
+        } catch (zU) {
+          return this.stop(), this.onError(zU), XU
+        }
+      }
+    }
+
+    function eU(UU) {
+      const XU = (UU, XU) => `${UU}/${(0,cU.i)(XU)}`;
+      return `memory ${(0,cU.i)(UU.memoryBytes)} live ${(0,cU.i)(UU.liveBytes)} peak ${(0,cU.i)(UU.peakLiveBytes)} unused ${(0,cU.i)(UU.unusedBytes)} ceiling ${(0,cU.i)(UU.ceilingBytes)} MiB; grows upFront ${XU(UU.grows.upFront,UU.grownBytes.upFront)} ahead ${XU(UU.grows.ahead,UU.grownBytes.ahead)} inFrame ${XU(UU.grows.onDemandInFrame,UU.grownBytes.onDemandInFrame)} other ${XU(UU.grows.onDemand,UU.grownBytes.onDemand)}; refused reserves ${UU.reservesRefused} allocations ${UU.allocationsRefused}`
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

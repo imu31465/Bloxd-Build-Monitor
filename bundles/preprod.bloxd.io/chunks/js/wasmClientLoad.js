@@ -1,263 +1,139 @@
 export const id = 70;
 export const ids = [70];
 export const modules = {
-  37750: (MM, rM, iM) => {
-    async function OM(MM) {
-      const rM = await fetch(MM, {
+  37514: (UU, XU, zU) => {
+    async function cU(UU) {
+      const XU = await fetch(UU, {
         priority: "low"
       });
-      if (!rM.ok) throw new Error(`Fetching ${MM} failed: HTTP ${rM.status}`);
-      const iM = rM.body.getReader();
-      for (; !(await iM.read()).done;);
+      if (!XU.ok) throw new Error(`Fetching ${UU} failed: HTTP ${XU.status}`);
+      const zU = XU.body.getReader();
+      for (; !(await zU.read()).done;);
     }
-    iM.d(rM, {
-      b: () => OM
+    zU.d(XU, {
+      c: () => cU
     })
   },
-  40094: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => nM
+  42151: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      prefetchWasmClient: () => PU,
+      probeWebgl2AheadOfJoin: () => EU.R,
+      startJoinLoad: () => GU,
+      startLoadAheadOfJoin: () => ZU
     });
-    var OM = iM(9510),
-      SM = iM(37437),
-      jM = iM(40100);
-    const aM = {
-        seat: "seat_timeout",
-        socket_unopened: "socket_timeout_unopened",
-        socket: "socket_timeout"
-      },
-      PM = {
-        seat: "seat_lost",
-        socket_unopened: "socket_unopened",
-        socket: "socket_closed"
-      };
+    var cU = zU(3169),
+      yU = zU(37014),
+      QU = zU(41959),
+      AU = zU(1325),
+      FU = zU(41795),
+      oU = (zU(41865), zU(37514)),
+      DU = zU(2217),
+      EU = zU(41786),
+      YU = zU(42084),
+      NU = zU(41947);
+    const IU = "[bloxd-wasm-client]";
+    let pU = null,
+      aU = null,
+      tU = null,
+      gU = null,
+      kU = null;
 
-    function nM(MM, rM) {
-      if (MM instanceof SM.i) return {
-        at: aM[rM],
-        code: 0
-      };
-      const iM = (0, OM.f)(MM),
-        nM = "number" === typeof iM ? iM : 0;
-      return null !== (0, jM.m)(nM).name ? {
-        at: "refused",
-        code: nM
-      } : {
-        at: PM[rM],
-        code: nM
-      }
-    }
-  },
-  9510: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => jM,
-      f: () => aM,
-      h: () => PM,
-      l: () => QM,
-      p: () => nM
-    });
-    var OM = iM(181),
-      SM = iM(5003);
-
-    function jM(MM) {
-      return aM(MM) === OM.d.gameOrPluginOnPlayerAuthRejected.code
-    }
-
-    function aM(MM) {
-      return "object" === typeof MM && null !== MM ? MM.code : void 0
-    }
-
-    function PM(MM) {
-      var rM;
-      return null !== (rM = Object.keys(SM.e).find((rM => SM.e[rM] === MM))) && void 0 !== rM ? rM : null
-    }
-
-    function nM(MM) {
-      return "notWhitelisted" === MM ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
-    }
-    const QM = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    }
-  },
-  42162: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      prefetchWasmClient: () => CM,
-      probeWebgl2AheadOfJoin: () => QM.W,
-      startJoinLoad: () => lM,
-      startLoadAheadOfJoin: () => UM
-    });
-    var OM = iM(3185),
-      SM = iM(37257),
-      jM = iM(41961),
-      aM = iM(1329),
-      PM = iM(41798),
-      nM = (iM(41862), iM(37750)),
-      QM = iM(41793),
-      zM = iM(42076),
-      LM = iM(41939);
-    const mM = "[bloxd-wasm-client]";
-    let HM = null,
-      hM = null,
-      JM = null,
-      dM = null,
-      yM = null;
-
-    function lM() {
-      return dM ??= (async () => {
+    function GU() {
+      return gU ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const MM = await (0, QM.U)();
-        if (null === MM) return;
-        if ((0, PM.l)(MM)) return (0, QM.Y)("none"), void EM("none");
-        (0, QM.Y)(MM.backend);
-        const rM = await MM.load();
-        EM(rM.name);
-        const iM = "unloaded" === (0, OM.B)();
-        if (iM && (0, QM.r)(), !await (0, zM.b)(rM)) return void console.warn(`${mM} the join's early wasm load failed: the boot loads the client itself`);
-        if (!iM) return;
-        const jM = (0, SM.j)(rM.name);
-        void 0 !== jM ? (0, aM.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(jM.ms)
+        const UU = await (0, EU.N)();
+        if (null === UU) return;
+        if ((0, FU.r)(UU)) return (0, EU.T)("none"), void BU("none");
+        (0, EU.T)(UU.backend);
+        const XU = await UU.load();
+        BU(XU.name);
+        const zU = "unloaded" === (0, cU.A)();
+        if (zU && (0, EU.l)(), !await (0, YU.e)(XU)) return void console.warn(`${IU} the join's early wasm load failed: the boot loads the client itself`);
+        if (!zU) return;
+        const QU = (0, yU.k)(XU.name);
+        void 0 !== QU ? (0, AU.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(QU.ms)
         }, {
-          path: jM.path,
-          build: rM.name
-        }) : console.warn(`${mM} the join's wasm load left no record of how it compiled ${rM.name}`)
-      })().catch((MM => {
-        console.warn(`${mM} the join's early wasm load did not start: the boot loads the client itself`, MM)
-      })), dM
+          path: QU.path,
+          build: XU.name
+        }) : console.warn(`${IU} the join's wasm load left no record of how it compiled ${XU.name}`)
+      })().catch((UU => {
+        console.warn(`${IU} the join's early wasm load did not start: the boot loads the client itself`, UU)
+      })), gU
     }
 
-    function EM(MM) {
-      null !== yM && (0, aM.logClientMeasurement)("wasm_compile_ahead", {
-        hit: yM === MM ? 1 : 0
+    function BU(UU) {
+      null !== kU && (0, AU.logClientMeasurement)("wasm_compile_ahead", {
+        hit: kU === UU ? 1 : 0
       }, {
-        guessed: yM,
-        loaded: MM
+        guessed: kU,
+        loaded: UU
       })
     }
 
-    function UM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === JM) {
-        var rM;
-        const iM = null !== (rM = MM.joinStarted) && void 0 !== rM ? rM : () => !1;
-        JM = Promise.all([CM(MM), GM(iM)]).then((() => {}))
+    function ZU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === tU) {
+        var XU;
+        const zU = null !== (XU = UU.joinStarted) && void 0 !== XU ? XU : () => !1;
+        tU = Promise.all([PU(UU), RU(zU)]).then((() => {}))
       }
-      return JM
+      return tU
     }
 
-    function GM(MM) {
-      return hM ??= (async () => {
+    function RU(UU) {
+      return aU ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const rM = await (0, QM.k)();
-        null === rM || MM() || "unloaded" !== (0, OM.B)() || (yM = rM.name, await (0, SM.d)([rM, jM.f], "low"))
-      })().catch((MM => {
-        console.warn(`${mM} the compile ahead of the join did not start: the join loads the client itself`, MM)
-      })), hM
+        const XU = await (0, EU.i)();
+        null === XU || UU() || "unloaded" !== (0, cU.A)() || (kU = XU.name, await (0, yU.e)([XU, QU.g], "low"))
+      })().catch((UU => {
+        console.warn(`${IU} the compile ahead of the join did not start: the join loads the client itself`, UU)
+      })), aU
     }
 
-    function CM() {
+    function PU() {
       let {
-        joinStarted: MM = () => !1,
-        language: rM = ""
+        joinStarted: UU = () => !1,
+        language: XU = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return HM ??= async function(MM, rM) {
-        if (!await async function(MM) {
-            if (MM()) return !1;
-            let rM;
+      return pU ??= async function(UU, XU) {
+        if (!await async function(UU) {
+            if (UU()) return !1;
+            let XU;
             try {
-              var OM;
-              const MM = await fetch(`${iM.p}static/js/fo1voe.wasmJoinFiles.json`, {
-                priority: "low",
-                cache: "no-cache"
+              var zU;
+              const UU = await fetch((0, DU.f)("static/js/fecih8.wasmJoinFiles.json"), {
+                ...DU.d,
+                priority: "low"
               });
-              if (!MM.ok) throw new Error(`HTTP ${MM.status}`);
-              if (/\bno-store\b/.test(null !== (OM = MM.headers.get("Cache-Control")) && void 0 !== OM ? OM : "")) return !1;
-              const SM = await MM.json();
-              if (!Array.isArray(SM)) throw new Error("not a list");
-              rM = SM
-            } catch (jM) {
-              return console.warn(`${mM} the join's chunk list did not load: the join downloads its chunks itself`, jM), !MM()
+              if (UU.ok && /\bno-store\b/.test(null !== (zU = UU.headers.get("Cache-Control")) && void 0 !== zU ? zU : "")) return !1;
+              XU = await (0, DU.g)(UU)
+            } catch (yU) {
+              return console.warn(`${IU} the join's chunk list did not load: the join downloads its chunks itself`, yU), !UU()
             }
-            if (MM()) return !1;
-            const SM = document.createElement("link").relList.supports("prefetch");
-            for (const aM of rM) {
-              const MM = `${iM.p}${aM}`;
-              SM ? eM(MM) : (0, nM.b)(MM).catch((rM => {
-                console.warn(`${mM} prefetching ${MM} failed`, rM)
+            if (UU()) return !1;
+            const cU = document.createElement("link").relList.supports("prefetch");
+            for (const QU of XU) {
+              const UU = (0, DU.f)(QU);
+              cU ? WU(UU) : (0, oU.c)(UU).catch((XU => {
+                console.warn(`${IU} prefetching ${UU} failed`, XU)
               }))
             }
             return !0
-          }(MM)) return;
-        const OM = [(0, nM.b)((0, LM.f)())];
-        (0, LM.d)(rM) && OM.push((0, nM.b)((0, LM.g)()));
-        await Promise.all(OM)
-      }(MM, rM).catch((MM => {
-        console.warn(`${mM} the prefetch failed: the join downloads the client itself`, MM)
-      })), HM
+          }(UU)) return;
+        const zU = [(0, oU.c)((0, NU.e)())];
+        (0, NU.d)(XU) && zU.push((0, oU.c)((0, NU.f)()));
+        await Promise.all(zU)
+      }(UU, XU).catch((UU => {
+        console.warn(`${IU} the prefetch failed: the join downloads the client itself`, UU)
+      })), pU
     }
 
-    function eM(MM) {
-      const rM = document.createElement("link");
-      rM.rel = "prefetch", rM.href = MM, MM.endsWith(".js") && (rM.crossOrigin = "anonymous"), document.head.appendChild(rM)
-    }
-  },
-  40100: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM,
-      f: () => jM,
-      j: () => PM,
-      m: () => zM,
-      p: () => nM,
-      t: () => aM
-    });
-    var OM = iM(181);
-    const SM = 3e3,
-      jM = 15e3;
-
-    function aM(MM) {
-      const rM = MM.endsWith(OM.k);
-      return {
-        text: (rM ? MM.slice(0, -OM.k.length) : MM) || null,
-        dropsCache: rM
-      }
-    }
-    const PM = "Either your internet isn't working or this is a bug.";
-
-    function nM(MM, rM) {
-      const iM = zM(MM);
-      return null !== iM.name && "" === OM.d[iM.name].text && null !== rM ? rM : iM.reason
-    }
-    const QM = "You were removed from the game.";
-
-    function zM(MM) {
-      var rM;
-      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const SM = null !== (rM = Object.keys(OM.d).find((rM => OM.d[rM].code === MM))) && void 0 !== rM ? rM : null;
-      if (null === SM) return {
-        code: MM,
-        name: SM,
-        reason: null !== iM && void 0 !== iM ? iM : `${PM}\nCode: ${MM}`,
-        canReconnect: !1,
-        automaticallyReconnect: !1,
-        requiresRefresh: !1
-      };
-      const {
-        text: jM,
-        canReconnect: aM = !1
-      } = OM.d[SM], nM = MM === OM.d.outdatedVersion.code || MM === OM.d.loadRecaptchaError.code;
-      return {
-        code: MM,
-        name: SM,
-        reason: "" !== jM ? jM : null !== iM && void 0 !== iM ? iM : MM === OM.d.gameOrPluginKick.code ? QM : `Code: ${MM}`,
-        canReconnect: aM,
-        automaticallyReconnect: MM === OM.d.customGameUpdated.code || MM === OM.d.duplicateLobbyNameError.code,
-        requiresRefresh: nM
-      }
+    function WU(UU) {
+      const XU = document.createElement("link");
+      XU.rel = "prefetch", XU.href = UU, UU.endsWith(".js") && (XU.crossOrigin = "anonymous"), document.head.appendChild(XU)
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

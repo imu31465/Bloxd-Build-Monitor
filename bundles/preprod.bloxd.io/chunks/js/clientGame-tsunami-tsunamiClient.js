@@ -1,116 +1,116 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  40668: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => PM
+  40435: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => FU
     });
-    var OM = iM(35040);
-    const SM = 1e3 / 3;
+    var cU = zU(34891);
+    const yU = 1e3 / 3;
 
-    function jM(MM, rM, iM) {
-      if ("parenthetical-seconds" === rM) return ` (${MM}s)`;
-      const OM = `${Math.floor(MM/60)}:${(MM%60).toString().padStart(2,"0")}`;
-      return iM ? `${iM}${OM}` : OM
+    function QU(UU, XU, zU) {
+      if ("parenthetical-seconds" === XU) return ` (${UU}s)`;
+      const cU = `${Math.floor(UU/60)}:${(UU%60).toString().padStart(2,"0")}`;
+      return zU ? `${zU}${cU}` : cU
     }
 
-    function aM(MM, rM, iM, SM, jM) {
-      var aM;
-      const PM = {
-        ...SM.baseNametag
+    function AU(UU, XU, zU, yU, QU) {
+      var AU;
+      const FU = {
+        ...yU.baseNametag
       };
-      PM.content = [...null !== (aM = SM.baseNametag.content) && void 0 !== aM ? aM : [], {
+      FU.content = [...null !== (AU = yU.baseNametag.content) && void 0 !== AU ? AU : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,OM.e)(jM)}`
-      }], MM.setOtherEntitySetting(rM, iM, "nameTagInfo", PM)
+        str: `: ${(0,cU.e)(QU)}`
+      }], UU.setOtherEntitySetting(XU, zU, "nameTagInfo", FU)
     }
-    const PM = function(MM, rM, iM, OM) {
-      let PM, {
-        localPlayerId: nM
-      } = OM;
-      const QM = new Map,
-        zM = new Map;
-      let LM = 0,
-        mM = 0;
+    const FU = function(UU, XU, zU, cU) {
+      let FU, {
+        localPlayerId: oU
+      } = cU;
+      const DU = new Map,
+        EU = new Map;
+      let YU = 0,
+        NU = 0;
       return {
-        onCreate: MM => {
-          PM = MM
+        onCreate: UU => {
+          FU = UU
         },
-        bL: MM => {
-          const rM = Date.now();
-          for (const [OM, SM] of QM) {
-            const MM = Math.floor((rM - SM.startTime) / 1e3),
-              aM = Math.max(0, SM.remainingSeconds - MM);
-            if (aM === SM.lastRenderedSecond) continue;
-            SM.lastRenderedSecond = aM;
-            const zM = {
-                str: jM(aM, SM.format, SM.prefix),
-                style: SM.style
+        LY: UU => {
+          const XU = Date.now();
+          for (const [cU, yU] of DU) {
+            const UU = Math.floor((XU - yU.startTime) / 1e3),
+              AU = Math.max(0, yU.remainingSeconds - UU);
+            if (AU === yU.lastRenderedSecond) continue;
+            yU.lastRenderedSecond = AU;
+            const EU = {
+                str: QU(AU, yU.format, yU.prefix),
+                style: yU.style
               },
-              LM = {
-                ...SM.baseNametag
+              YU = {
+                ...yU.baseNametag
               };
-            var iM;
-            if ("content" === SM.location) LM.content = [...null !== (iM = SM.baseNametag.content) && void 0 !== iM ? iM : [], zM];
-            else LM.subtitle = [zM];
-            PM.setOtherEntitySetting(nM, OM, "nameTagInfo", LM), aM <= 0 && QM.delete(OM)
+            var zU;
+            if ("content" === yU.location) YU.content = [...null !== (zU = yU.baseNametag.content) && void 0 !== zU ? zU : [], EU];
+            else YU.subtitle = [EU];
+            FU.setOtherEntitySetting(oU, cU, "nameTagInfo", YU), AU <= 0 && DU.delete(cU)
           }
-          if (zM.size > 0 && rM - LM >= SM) {
-            LM = rM, mM = (mM + 1) % 3;
-            let MM = 0;
-            for (const [iM, OM] of zM) {
-              if (MM++ % 3 !== mM) continue;
-              const SM = Math.floor((rM - OM.startTime) / 1e3);
-              if (SM === OM.lastRenderedSecond) continue;
-              OM.lastRenderedSecond = SM;
-              const jM = OM.accumulatedIncome + OM.incomePerSecond * BigInt(SM);
-              aM(PM, nM, iM, OM, jM)
+          if (EU.size > 0 && XU - YU >= yU) {
+            YU = XU, NU = (NU + 1) % 3;
+            let UU = 0;
+            for (const [zU, cU] of EU) {
+              if (UU++ % 3 !== NU) continue;
+              const yU = Math.floor((XU - cU.startTime) / 1e3);
+              if (yU === cU.lastRenderedSecond) continue;
+              cU.lastRenderedSecond = yU;
+              const QU = cU.accumulatedIncome + cU.incomePerSecond * BigInt(yU);
+              AU(FU, oU, zU, cU, QU)
             }
           }
         },
-        onReceivedMessageFromServer: (MM, rM) => {
-          if ("startCountdown" === MM) QM.set(rM.eId, {
-            baseNametag: rM.baseNametag,
-            remainingSeconds: rM.remainingSeconds,
+        onReceivedMessageFromServer: (UU, XU) => {
+          if ("startCountdown" === UU) DU.set(XU.eId, {
+            baseNametag: XU.baseNametag,
+            remainingSeconds: XU.remainingSeconds,
             startTime: Date.now(),
-            format: rM.format,
-            location: rM.location,
-            prefix: rM.prefix,
-            style: rM.style,
+            format: XU.format,
+            location: XU.location,
+            prefix: XU.prefix,
+            style: XU.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === MM) QM.delete(rM.eId);
-          else if ("startIncomeTicking" === MM) {
-            const MM = {
-              baseNametag: rM.baseNametag,
-              accumulatedIncome: BigInt(rM.accumulatedIncome),
-              incomePerSecond: BigInt(rM.incomePerSecond),
+          else if ("stopCountdown" === UU) DU.delete(XU.eId);
+          else if ("startIncomeTicking" === UU) {
+            const UU = {
+              baseNametag: XU.baseNametag,
+              accumulatedIncome: BigInt(XU.accumulatedIncome),
+              incomePerSecond: BigInt(XU.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            zM.set(rM.eId, MM), aM(PM, nM, rM.eId, MM, MM.accumulatedIncome)
-          } else "stopIncomeTicking" === MM && zM.delete(rM.eId) && PM.setOtherEntitySetting(nM, rM.eId, "nameTagInfo", {
+            EU.set(XU.eId, UU), AU(FU, oU, XU.eId, UU, UU.accumulatedIncome)
+          } else "stopIncomeTicking" === UU && EU.delete(XU.eId) && FU.setOtherEntitySetting(oU, XU.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (MM, rM, iM, OM, SM, jM) => {
-          if (jM && "Mesh" === PM.getEntityType(jM)) {
-            const rM = PM.getEntityName(jM);
-            "Upgrades" === rM ? PM.openShop(MM, !1, "Upgrades") : "Items" === rM ? PM.openShop(MM, !1, "Items") : "Prestige" === rM ? PM.openShop(MM, !1, "Prestige") : "Collections" === rM ? PM.openShop(MM, !1, "Collections") : "Base Skins" === rM ? PM.openShop(MM, !1, "Base Skins") : "Gauntlet" === rM ? PM.openShop(MM, !1, "Gauntlet") : "Diamond Shop" === rM && PM.openShop(MM, !1, "Diamond Shop")
+        onPlayerAltAction: (UU, XU, zU, cU, yU, QU) => {
+          if (QU && "Mesh" === FU.getEntityType(QU)) {
+            const XU = FU.getEntityName(QU);
+            "Upgrades" === XU ? FU.openShop(UU, !1, "Upgrades") : "Items" === XU ? FU.openShop(UU, !1, "Items") : "Prestige" === XU ? FU.openShop(UU, !1, "Prestige") : "Collections" === XU ? FU.openShop(UU, !1, "Collections") : "Base Skins" === XU ? FU.openShop(UU, !1, "Base Skins") : "Gauntlet" === XU ? FU.openShop(UU, !1, "Gauntlet") : "Diamond Shop" === XU && FU.openShop(UU, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  35040: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM,
-      g: () => aM
+  34891: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => yU,
+      f: () => AU
     });
-    const OM = [{
+    const cU = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function SM(MM) {
-      let rM, iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof MM) {
-        if (!Number.isFinite(MM)) return "0";
-        if (Math.abs(MM) < 100) {
-          const rM = MM < 0 ? "-" : "",
-            iM = Math.abs(MM);
-          return iM >= 10 ? `${rM}${iM.toFixed(1).replace(/\.0$/,"")}` : `${rM}${iM.toFixed(2).replace(/\.?0+$/,"")}`
+    function yU(UU) {
+      let XU, zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof UU) {
+        if (!Number.isFinite(UU)) return "0";
+        if (Math.abs(UU) < 100) {
+          const XU = UU < 0 ? "-" : "",
+            zU = Math.abs(UU);
+          return zU >= 10 ? `${XU}${zU.toFixed(1).replace(/\.0$/,"")}` : `${XU}${zU.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        rM = BigInt(Math.floor(MM))
-      } else rM = MM;
-      const SM = rM < 0n ? -rM : rM,
-        jM = rM < 0n ? "-" : "",
-        aM = SM.toString();
-      if (aM.length <= iM) return `${jM}${aM}`;
-      const PM = 3 * Math.floor((aM.length - 1) / 3);
-      if (PM < 3) return `${jM}${aM}`;
-      if (PM > 3 * OM.length) {
-        const MM = aM[0],
-          rM = aM.slice(1, 3).replace(/0+$/, "");
-        return `${jM}${rM?`${MM}.${rM}`:MM}e${aM.length-1}`
+        XU = BigInt(Math.floor(UU))
+      } else XU = UU;
+      const yU = XU < 0n ? -XU : XU,
+        QU = XU < 0n ? "-" : "",
+        AU = yU.toString();
+      if (AU.length <= zU) return `${QU}${AU}`;
+      const FU = 3 * Math.floor((AU.length - 1) / 3);
+      if (FU < 3) return `${QU}${AU}`;
+      if (FU > 3 * cU.length) {
+        const UU = AU[0],
+          XU = AU.slice(1, 3).replace(/0+$/, "");
+        return `${QU}${XU?`${UU}.${XU}`:UU}e${AU.length-1}`
       }
       const {
-        threshold: nM,
-        suffix: QM
-      } = OM[OM.length - PM / 3], zM = SM / nM, LM = Number(1000n * (SM % nM) / nM), mM = Number(zM) + LM / 1e3;
-      let HM;
-      return HM = mM >= 100 ? Math.floor(mM).toString() : mM >= 10 ? mM.toFixed(1).replace(/\.0$/, "") : mM.toFixed(2).replace(/\.?0+$/, ""), `${jM}${HM}${QM}`
+        threshold: oU,
+        suffix: DU
+      } = cU[cU.length - FU / 3], EU = yU / oU, YU = Number(1000n * (yU % oU) / oU), NU = Number(EU) + YU / 1e3;
+      let IU;
+      return IU = NU >= 100 ? Math.floor(NU).toString() : NU >= 10 ? NU.toFixed(1).replace(/\.0$/, "") : NU.toFixed(2).replace(/\.?0+$/, ""), `${QU}${IU}${DU}`
     }
-    const jM = OM.map((MM => {
+    const QU = cU.map((UU => {
       let {
-        threshold: rM,
-        suffix: iM
-      } = MM;
+        threshold: XU,
+        suffix: zU
+      } = UU;
       return {
-        threshold: Number(rM),
-        suffix: iM
+        threshold: Number(XU),
+        suffix: zU
       }
-    })).filter((MM => {
+    })).filter((UU => {
       let {
-        threshold: rM
-      } = MM;
-      return Number.isFinite(rM)
+        threshold: XU
+      } = UU;
+      return Number.isFinite(XU)
     }));
 
-    function aM(MM) {
-      const rM = Math.abs(MM),
-        iM = MM < 0 ? "-" : "";
+    function AU(UU) {
+      const XU = Math.abs(UU),
+        zU = UU < 0 ? "-" : "";
       for (const {
-          threshold: OM,
-          suffix: SM
+          threshold: cU,
+          suffix: yU
         }
-        of jM)
-        if (rM >= OM) {
-          const MM = rM / OM;
-          if (MM >= 1e3) return `${iM}${rM.toExponential(2).replace("e+","e")}`;
-          let jM;
-          return jM = MM >= 100 ? Math.floor(MM).toString() : MM >= 10 ? MM.toFixed(1).replace(/\.0$/, "") : MM.toFixed(2).replace(/\.?0+$/, ""), `${iM}${jM}${SM}`
-        } return `${iM}${rM}`
+        of QU)
+        if (XU >= cU) {
+          const UU = XU / cU;
+          if (UU >= 1e3) return `${zU}${XU.toExponential(2).replace("e+","e")}`;
+          let QU;
+          return QU = UU >= 100 ? Math.floor(UU).toString() : UU >= 10 ? UU.toFixed(1).replace(/\.0$/, "") : UU.toFixed(2).replace(/\.?0+$/, ""), `${zU}${QU}${yU}`
+        } return `${zU}${XU}`
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

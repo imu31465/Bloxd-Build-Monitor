@@ -1,658 +1,572 @@
 export const id = 153;
 export const ids = [153];
 export const modules = {
-  34880: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      e: () => aM
+  34715: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => FU,
+      g: () => AU
     });
-    var OM = iM(243),
-      SM = iM(114),
-      jM = iM(34885);
+    var cU = zU(281),
+      yU = zU(134),
+      QU = zU(34719);
 
-    function aM() {
-      var MM, rM, iM;
-      return null !== (MM = (0, OM.p)(null !== (rM = null === (iM = (0, SM.o)()) || void 0 === iM ? void 0 : iM.renderer) && void 0 !== rM ? rM : null, (0, SM.k)())) && void 0 !== MM ? MM : "unknown"
+    function AU() {
+      var UU, XU, zU;
+      return null !== (UU = (0, cU.k)(null !== (XU = null === (zU = (0, yU.o)()) || void 0 === zU ? void 0 : zU.renderer) && void 0 !== XU ? XU : null, (0, yU.l)())) && void 0 !== UU ? UU : "unknown"
     }
 
-    function PM(MM, rM, iM, OM, SM) {
-      const aM = null === rM ? "untimed" : `${Math.round(rM)} ms`;
-      return `frames stalled, ${iM}, gpu ${(0,jM.b)(SM)}, blocking ${aM}, drawn ${Math.round(MM)} ms apart, timers ${OM.timers}, timer gap ${Math.round(OM.longestGapMs)} ms`
+    function FU(UU, XU, zU, cU, yU) {
+      const AU = null === XU ? "untimed" : `${Math.round(XU)} ms`;
+      return `frames stalled, ${zU}, gpu ${(0,QU.b)(yU)}, blocking ${AU}, drawn ${Math.round(UU)} ms apart, timers ${cU.timers}, timer gap ${Math.round(cU.longestGapMs)} ms`
     }
   },
-  39814: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      e: () => mM,
-      i: () => HM,
-      l: () => dM,
-      o: () => LM,
-      s: () => zM,
-      t: () => aM,
-      w: () => hM
-    });
-    var OM = iM(310),
-      SM = iM(1818);
-    const jM = "A valid external Instance reference no longer exists.";
-
-    function aM(MM) {
-      return MM.includes(jM)
+  34719: (UU, XU, zU) => {
+    function cU(UU) {
+      return String(UU).replace(/\d/g, (UU => String.fromCharCode(97 + Number(UU))))
     }
-    const PM = [
-        [1e4, "<10s", "lt10s"],
-        [6e4, "<1m", "lt1m"],
-        [3e5, "<5m", "lt5m"],
-        [18e5, "<30m", "lt30m"],
-        [1 / 0, "30m+", "ge30m"]
-      ],
-      nM = [
-        [1e3, "lt1s"],
-        [2e3, "lt2s"],
-        [5e3, "lt5s"],
-        [1e4, "lt10s"],
-        [3e4, "lt30s"],
-        [1 / 0, "ge30s"]
-      ];
-    const QM = {
-      WebGPU: "WebGPU device lost",
-      WebGL2: "WebGL2 context lost"
-    };
-
-    function zM(MM, rM) {
-      return MM ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(MM) {
-        var rM;
-        const iM = null !== (rM = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(MM)) && void 0 !== rM ? rM : /failed with ([A-Z][A-Z0-9_]+)/.exec(MM);
-        return iM ? iM[1] : aM(MM) ? "gpu_process_lost" : "other"
-      }(rM)
-    }
-
-    function LM(MM) {
-      return `${(null===MM||void 0===MM?void 0:MM.vendor)||"unknown vendor"} ${(null===MM||void 0===MM?void 0:MM.architecture)||"unknown architecture"}`
-    }
-
-    function mM(MM) {
-      return yM(MM)[1]
-    }
-
-    function HM(MM) {
-      return yM(MM)[2]
-    }
-
-    function hM(MM, rM, iM) {
-      const SM = (0, OM.e)(),
-        jM = null !== SM && SM >= rM,
-        aM = document.hidden ? "hidden" : jM ? "shown" : "visible",
-        PM = jM ? iM - SM : null;
-      return {
-        page: null === PM ? aM : `${aM}${mM(PM)}`,
-        code: `${MM}_${null===PM?aM:`${aM}_${HM(PM)}`}_${JM(iM)}`
-      }
-    }
-
-    function JM(MM) {
-      if ((0, SM.e)()) return "ad_open";
-      const rM = (0, SM.d)();
-      return null === rM ? "ad_none" : `ad_${HM(MM-rM.endedAt)}_${rM.pageHid?"h":"v"}`
-    }
-
-    function dM(MM) {
-      return lM(nM, MM)[1]
-    }
-
-    function yM(MM) {
-      return lM(PM, MM)
-    }
-
-    function lM(MM, rM) {
-      var iM;
-      return null !== (iM = MM.find((MM => {
-        let [iM] = MM;
-        return rM < iM
-      }))) && void 0 !== iM ? iM : MM[MM.length - 1]
-    }
-  },
-  34885: (MM, rM, iM) => {
-    function OM(MM) {
-      return String(MM).replace(/\d/g, (MM => String.fromCharCode(97 + Number(MM))))
-    }
-    iM.d(rM, {
-      b: () => OM
+    zU.d(XU, {
+      b: () => cU
     })
   },
-  41714: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => OM,
-      g: () => zM,
-      h: () => aM,
-      i: () => SM,
-      k: () => PM,
-      l: () => QM
+  41699: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => cU,
+      e: () => EU,
+      h: () => AU,
+      l: () => yU,
+      p: () => FU,
+      t: () => DU
     });
-    class OM extends Error {
+    class cU extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function SM(MM) {
-      return MM instanceof RangeError && /call stack/i.test(MM.message) || MM instanceof Error && "InternalError" === MM.name && /recursion/i.test(MM.message)
+    function yU(UU) {
+      return UU instanceof RangeError && /call stack/i.test(UU.message) || UU instanceof Error && "InternalError" === UU.name && /recursion/i.test(UU.message)
     }
-    const jM = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const QU = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function aM(MM) {
-      var rM;
-      return MM instanceof WebAssembly.RuntimeError || MM instanceof OM || SM(MM) && jM.test(null !== (rM = MM.stack) && void 0 !== rM ? rM : "")
-    }
-
-    function PM(MM, rM) {
-      if (aM(MM)) throw MM;
-      console.error(rM, MM)
+    function AU(UU) {
+      var XU;
+      return UU instanceof WebAssembly.RuntimeError || UU instanceof cU || yU(UU) && QU.test(null !== (XU = UU.stack) && void 0 !== XU ? XU : "")
     }
 
-    function nM(MM, rM, iM, SM, jM) {
-      if (rM % SM !== 0 || rM + iM > MM.byteLength) throw new OM(`${jM}: ${iM} bytes at ${rM}, ${SM}-aligned, outside ${MM.byteLength} bytes of memory`)
+    function FU(UU, XU) {
+      if (AU(UU)) throw UU;
+      console.error(XU, UU)
     }
 
-    function QM(MM, rM, iM, OM, SM) {
-      return 0 === iM ? null : (nM(rM, iM, OM * MM.BYTES_PER_ELEMENT, MM.BYTES_PER_ELEMENT, SM), new MM(rM, iM, OM))
+    function oU(UU, XU, zU, yU, QU) {
+      if (XU % yU !== 0 || XU + zU > UU.byteLength) throw new cU(`${QU}: ${zU} bytes at ${XU}, ${yU}-aligned, outside ${UU.byteLength} bytes of memory`)
     }
 
-    function zM(MM, rM, iM, OM, SM) {
-      return 0 === rM ? null : (nM(MM, rM, iM, OM, SM), new DataView(MM, rM, iM))
+    function DU(UU, XU, zU, cU, yU) {
+      return 0 === zU ? null : (oU(XU, zU, cU * UU.BYTES_PER_ELEMENT, UU.BYTES_PER_ELEMENT, yU), new UU(XU, zU, cU))
+    }
+
+    function EU(UU, XU, zU, cU, yU) {
+      return 0 === XU ? null : (oU(UU, XU, zU, cU, yU), new DataView(UU, XU, zU))
     }
   },
-  41798: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => TM,
-      D: () => FM,
-      G: () => rr,
-      K: () => Mr,
-      L: () => VM,
-      M: () => Or,
-      P: () => Jr,
-      S: () => ir,
-      U: () => cM,
-      V: () => Sr,
-      X: () => nr,
-      _: () => Lr,
-      cb: () => WM,
-      e: () => RM,
-      g: () => dr,
-      h: () => Ur,
-      j: () => zr,
-      k: () => hr,
-      l: () => Pr,
-      p: () => Hr,
-      t: () => mr,
-      w: () => Er,
-      z: () => KM
+  41795: (UU, XU, zU) => {
+    zU.d(XU, {
+      B: () => BX,
+      D: () => KU,
+      F: () => TU,
+      I: () => lU,
+      K: () => zX,
+      O: () => XX,
+      R: () => hU,
+      V: () => yX,
+      Y: () => tX,
+      ab: () => cX,
+      d: () => qU,
+      eb: () => UX,
+      h: () => gX,
+      hb: () => QX,
+      j: () => ZX,
+      lb: () => DX,
+      m: () => YX,
+      nb: () => NX,
+      p: () => aX,
+      pb: () => SU,
+      r: () => oX,
+      t: () => pX,
+      x: () => IX
     });
-    var OM = iM(313),
-      SM = iM(236),
-      jM = iM(243),
-      aM = iM(19),
-      PM = iM(3122),
-      nM = iM(694),
-      QM = iM(4903),
-      zM = iM(3090),
-      LM = iM(3855),
-      mM = iM(83),
-      HM = iM(119),
-      hM = iM(310),
-      JM = iM(30),
-      dM = iM(308),
-      yM = iM(106),
-      lM = iM(650),
-      EM = iM(114),
-      UM = iM(110),
-      GM = iM(5200),
-      CM = iM(41800),
-      eM = iM(1899),
-      bM = iM(41809),
-      wM = iM(34980),
-      tM = iM(41812),
-      gM = iM(41819);
-    const uM = "bloxd-webgpuOffAfterLoss",
-      RM = "context:webgl",
-      pM = "probe:threw";
+    var cU = zU(320),
+      yU = zU(274),
+      QU = zU(281),
+      AU = zU(27),
+      FU = zU(3099),
+      oU = zU(730),
+      DU = zU(4953),
+      EU = zU(3073),
+      YU = zU(3849),
+      NU = zU(97),
+      IU = zU(142),
+      pU = zU(318),
+      aU = zU(42),
+      tU = zU(316),
+      gU = zU(123),
+      kU = zU(678),
+      GU = zU(134),
+      BU = zU(127),
+      ZU = zU(5326),
+      RU = zU(41799),
+      PU = zU(1877),
+      WU = zU(41808),
+      dU = zU(41814),
+      LU = zU(34816),
+      eU = zU(41820),
+      CU = zU(41823);
+    const wU = "bloxd-webgpuOffAfterLoss",
+      qU = "context:webgl",
+      OU = "probe:threw";
 
-    function WM(MM) {
-      let rM;
+    function SU(UU) {
+      let XU;
       try {
-        rM = MM.getContext("webgl", {
-          powerPreference: EM.c
+        XU = UU.getContext("webgl", {
+          powerPreference: GU.c
         })
       } catch {
-        rM = null
+        XU = null
       }
-      if (null === rM) return null;
-      let iM = null;
+      if (null === XU) return null;
+      let zU = null;
       try {
-        const MM = rM.getParameter(rM.MAX_TEXTURE_SIZE);
-        iM = "number" === typeof MM && MM > 0 ? MM : null
+        const UU = XU.getParameter(XU.MAX_TEXTURE_SIZE);
+        zU = "number" === typeof UU && UU > 0 ? UU : null
       } catch {
-        iM = null
+        zU = null
       }
       try {
-        var OM;
-        null === (OM = rM.getExtension("WEBGL_lose_context")) || void 0 === OM || OM.loseContext()
+        var cU;
+        null === (cU = XU.getExtension("WEBGL_lose_context")) || void 0 === cU || cU.loseContext()
       } catch {}
-      return iM
+      return zU
     }
-    const sM = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
+    const rU = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
 
-    function DM() {
-      return "ios" === (0, mM.getOperatingSystem)() ? "ios" : "other"
+    function uU() {
+      return "ios" === (0, NU.getOperatingSystem)() ? "ios" : "other"
     }
-    const kM = "mali_valhall",
-      ZM = new Set(["nvidia_pre_turing"]),
-      oM = new Set(["intel_gen7_8"]);
+    const fU = "mali_valhall",
+      iU = new Set(["nvidia_pre_turing"]),
+      HU = new Set(["intel_gen7_8"]);
 
-    function fM(MM, rM, iM) {
-      return sM.has(MM) ? "android_arm" === MM && rM === kM && "mobileAndroid" !== iM ? "webgpu_default" : "webgl_default" : null
+    function MU(UU, XU, zU) {
+      return rU.has(UU) ? "android_arm" === UU && XU === fU && "mobileAndroid" !== zU ? "webgpu_default" : "webgl_default" : null
     }
 
-    function YM(MM) {
-      return function(MM) {
+    function vU(UU) {
+      return function(UU) {
         try {
-          return MM()
+          return UU()
         } catch {
           return null
         }
       }((() => {
-        var rM, iM, OM, aM;
-        const PM = null !== (rM = null === (iM = MM.info) || void 0 === iM ? void 0 : iM.vendor) && void 0 !== rM ? rM : "";
-        return "windows" === (0, mM.getOperatingSystem)() && "" !== PM && "intel" !== (0, mM.normaliseGpuVendor)(PM) ? null : ((0, mM.seedGpuVendor)(PM), fM((0, SM.j)(), (0, jM.i)(PM, null !== (OM = null === (aM = MM.info) || void 0 === aM ? void 0 : aM.architecture) && void 0 !== OM ? OM : ""), HM.siteUsed))
+        var XU, zU, cU, AU;
+        const FU = null !== (XU = null === (zU = UU.info) || void 0 === zU ? void 0 : zU.vendor) && void 0 !== XU ? XU : "";
+        return "windows" === (0, NU.getOperatingSystem)() && "" !== FU && "intel" !== (0, NU.normaliseGpuVendor)(FU) ? null : ((0, NU.seedGpuVendor)(FU), MU((0, yU.i)(), (0, QU.d)(FU, null !== (cU = null === (AU = UU.info) || void 0 === AU ? void 0 : AU.architecture) && void 0 !== cU ? cU : ""), IU.siteUsed))
       }))
     }
 
-    function NM() {
-      var MM;
+    function VU() {
+      var UU;
       return {
-        gpu: null !== (MM = navigator.gpu) && void 0 !== MM ? MM : null,
-        webgl2: tM.g,
-        webgl1: () => function(MM) {
-          let rM, iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : CM.b;
+        gpu: null !== (UU = navigator.gpu) && void 0 !== UU ? UU : null,
+        webgl2: eU.e,
+        webgl1: () => function(UU) {
+          let XU, zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RU.d;
           try {
-            rM = MM.getContext("webgl")
+            XU = UU.getContext("webgl")
           } catch {
-            rM = null
+            XU = null
           }
-          if (null === rM) return [RM];
-          const OM = [];
+          if (null === XU) return [qU];
+          const cU = [];
           try {
-            for (const SM of iM.extensions) null === rM.getExtension(SM) && OM.push(SM);
-            for (const [SM, jM] of Object.entries(iM.limits)) {
-              const MM = rM[SM],
-                iM = "number" === typeof MM ? rM.getParameter(MM) : null;
-              ("number" !== typeof iM || iM < jM) && OM.push(`limit:${SM}`)
+            for (const yU of zU.extensions) null === XU.getExtension(yU) && cU.push(yU);
+            for (const [yU, QU] of Object.entries(zU.limits)) {
+              const UU = XU[yU],
+                zU = "number" === typeof UU ? XU.getParameter(UU) : null;
+              ("number" !== typeof zU || zU < QU) && cU.push(`limit:${yU}`)
             }
-            const MM = rM.getShaderPrecisionFormat(rM.VERTEX_SHADER, rM.HIGH_FLOAT);
-            (null === MM || MM.precision < iM.vertexHighFloatBits) && OM.push("precision:vertex_high_float")
+            const UU = XU.getShaderPrecisionFormat(XU.VERTEX_SHADER, XU.HIGH_FLOAT);
+            (null === UU || UU.precision < zU.vertexHighFloatBits) && cU.push("precision:vertex_high_float")
           } catch {
-            OM.push(pM)
+            cU.push(OU)
           }
           try {
-            var SM;
-            null === (SM = rM.getExtension("WEBGL_lose_context")) || void 0 === SM || SM.loseContext()
+            var yU;
+            null === (yU = XU.getExtension("WEBGL_lose_context")) || void 0 === yU || yU.loseContext()
           } catch {}
-          return OM
+          return cU
         }(document.createElement("canvas")),
-        offAfterLoss: MM => xM((() => MM ? (0, dM.D)() : aM.d.isWebGpuOffAfterLoss())),
-        oldIntelDriver: MM => xM((() => (0, yM.i)(MM))),
-        intelGen9: MM => xM((() => (0, yM.r)(MM))),
-        storeIntelGen9Verdict: MM => {
-          JM.g.setItem(yM.J, MM)
+        offAfterLoss: UU => nU((() => UU ? (0, tU.M)() : AU.e.isWebGpuOffAfterLoss())),
+        oldIntelDriver: UU => nU((() => (0, gU.e)(UU))),
+        intelGen9: UU => nU((() => (0, gU.m)(UU))),
+        storeIntelGen9Verdict: UU => {
+          aU.k.setItem(gU.A, UU)
         },
-        gpuClassWebGlArm: YM,
-        storeGpuClassVerdict: MM => {
-          JM.g.setItem(yM.H, MM)
+        gpuClassWebGlArm: vU,
+        storeGpuClassVerdict: UU => {
+          aU.k.setItem(gU.x, UU)
         },
-        gpuClassOnWebGl: MM => (0, lM.e)(MM),
-        webGlDefaultFamily: MM => oM.has((0, jM.i)(MM.vendor, MM.architecture)),
-        storeWebGlDefaultFamilyVerdict: MM => {
-          JM.g.setItem(yM.R, MM)
+        gpuClassOnWebGl: UU => (0, kU.e)(UU),
+        webGlDefaultFamily: UU => HU.has((0, QU.d)(UU.vendor, UU.architecture)),
+        storeWebGlDefaultFamilyVerdict: UU => {
+          aU.k.setItem(gU.I, UU)
         },
-        override: () => AM(),
-        claimed: () => vM((0, nM.i)()),
+        override: () => sU(),
+        claimed: () => mU((0, oU.j)()),
         webGpuSetting: () => {
-          const MM = JM.g.getItem(OM.fc);
-          return "boolean" === typeof MM ? MM : null
+          const UU = aU.k.getItem(cU.vc);
+          return "boolean" === typeof UU ? UU : null
         },
-        heldBack: () => lM.i,
-        storeHoldbackSpared: MM => {
-          JM.g.setItem(yM.E, MM)
+        heldBack: () => kU.h,
+        storeHoldbackSpared: UU => {
+          aU.k.setItem(gU.v, UU)
         },
-        intelGen9OnWebGl: () => lM.k,
-        nh: () => xM((() => (0, LM.d)(mM.featureFlags.settings.canUseShaderPacks))),
-        windows: () => xM((() => "windows" === (0, mM.getOperatingSystem)())),
-        defaultCompatibility: wM.b
+        intelGen9OnWebGl: () => kU.j,
+        Fp: () => nU((() => (0, YU.d)(NU.featureFlags.settings.canUseShaderPacks))),
+        windows: () => nU((() => "windows" === (0, NU.getOperatingSystem)())),
+        defaultCompatibility: LU.b
       }
     }
 
-    function AM() {
-      let MM = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      if ((0, PM.p)("render") && "webgl1" === (0, PM.o)("renderer")) return "webgl1";
-      const rM = [() => new URLSearchParams(window.location.search).get(zM.d), () => JM.g.getItem(zM.h), () => {
-        const rM = localStorage.getItem(uM);
-        return null !== rM && MM && localStorage.removeItem(uM), "1" === rM ? "webgl2" : null
+    function sU() {
+      let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      if ((0, FU.q)("render") && "webgl1" === (0, FU.p)("renderer")) return "webgl1";
+      const XU = [() => new URLSearchParams(window.location.search).get(EU.c), () => aU.k.getItem(EU.g), () => {
+        const XU = localStorage.getItem(wU);
+        return null !== XU && UU && localStorage.removeItem(wU), "1" === XU ? "webgl2" : null
       }];
-      for (const iM of rM) {
-        let MM = null;
+      for (const zU of XU) {
+        let UU = null;
         try {
-          MM = vM(iM())
+          UU = mU(zU())
         } catch {}
-        if (null !== MM) return MM
+        if (null !== UU) return UU
       }
       return null
     }
 
-    function xM(MM) {
+    function nU(UU) {
       try {
-        return MM()
+        return UU()
       } catch {
         return !1
       }
     }
 
-    function vM(MM) {
-      return "lite" === MM ? "webgpu" : "webgl2" === MM || "babylon" === MM ? "webgl" : null
+    function mU(UU) {
+      return "lite" === UU ? "webgpu" : "webgl2" === UU || "babylon" === UU ? "webgl" : null
     }
 
-    function FM(MM) {
-      return "none" === MM || "compatibility_mode" === MM
+    function lU(UU) {
+      return "none" === UU || "compatibility_mode" === UU
     }
-    async function BM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : NM();
-      const rM = await async function(MM) {
-        const rM = IM(MM),
+    async function xU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : VU();
+      const XU = await async function(UU) {
+        const XU = jU(UU),
           {
-            source: iM
-          } = rM,
-          OM = !rM.asked,
-          SM = "gpu" in rM && rM.heldBack,
-          aM = function(MM) {
-            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            return SM && !FM(MM) ? {
+            source: zU
+          } = XU,
+          cU = !XU.asked,
+          yU = "gpu" in XU && XU.heldBack,
+          AU = function(UU) {
+            let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            return yU && !lU(UU) ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: iM
+              source: zU
             } : {
-              reason: MM,
-              adapter: rM,
-              source: iM
+              reason: UU,
+              adapter: XU,
+              source: zU
             }
           };
-        if (!("gpu" in rM)) return aM(rM.refused);
-        let PM;
+        if (!("gpu" in XU)) return AU(XU.refused);
+        let FU;
         try {
-          PM = await (0, eM.n)((0, UM.o)(rM.gpu, {
-            compatibility: XM(MM, rM)
-          }), yr, `requestAdapter didn't settle in ${yr/1e3} s`)
+          FU = await (0, PU.l)((0, BU.m)(XU.gpu, {
+            compatibility: JU(UU, XU)
+          }), kX, `requestAdapter didn't settle in ${kX/1e3} s`)
         } catch {
-          return aM("adapter_error")
+          return AU("adapter_error")
         }
-        if ("string" === typeof PM) return aM(PM);
+        if ("string" === typeof FU) return AU(FU);
         const {
-          adapter: nM,
-          compatibility: QM
-        } = PM, zM = (0, UM.d)(nM);
-        if ((0, UM.j)(nM)) return aM("software_adapter", zM);
-        const LM = MM.windows() && function(MM) {
-          return ZM.has((0, jM.i)(MM.vendor, MM.architecture))
-        }(zM);
-        if (MM.storeHoldbackSpared(LM), SM && !LM) return aM("webgl_holdback");
-        const mM = MM.intelGen9(nM);
-        MM.storeIntelGen9Verdict(mM);
-        const HM = mM ? null : MM.gpuClassWebGlArm(nM);
-        MM.storeGpuClassVerdict(null !== HM && void 0 !== HM && HM);
-        const hM = MM.webGlDefaultFamily(zM);
-        if (MM.storeWebGlDefaultFamilyVerdict(hM), OM && MM.oldIntelDriver(nM)) return aM("old_intel_driver", zM);
-        if ("default" === iM && mM && MM.intelGen9OnWebGl()) return aM("intel_gen9", zM);
-        if ("default" === iM && null !== HM && MM.gpuClassOnWebGl(HM)) return aM("gpu_class_webgl", zM);
-        if ("default" === iM && hM) return aM("gpu_wasm_arm", zM);
-        return aM(QM ? "compatibility_mode" : "none", zM)
-      }(MM);
-      if (FM(rM.reason)) return {
+          adapter: oU,
+          compatibility: DU
+        } = FU, EU = (0, BU.d)(oU);
+        if ((0, BU.i)(oU)) return AU("software_adapter", EU);
+        const YU = UU.windows() && function(UU) {
+          return iU.has((0, QU.d)(UU.vendor, UU.architecture))
+        }(EU);
+        if (UU.storeHoldbackSpared(YU), yU && !YU) return AU("webgl_holdback");
+        const NU = UU.intelGen9(oU);
+        UU.storeIntelGen9Verdict(NU);
+        const IU = NU ? null : UU.gpuClassWebGlArm(oU);
+        UU.storeGpuClassVerdict(null !== IU && void 0 !== IU && IU);
+        const pU = UU.webGlDefaultFamily(EU);
+        if (UU.storeWebGlDefaultFamilyVerdict(pU), cU && UU.oldIntelDriver(oU)) return AU("old_intel_driver", EU);
+        if ("default" === zU && NU && UU.intelGen9OnWebGl()) return AU("intel_gen9", EU);
+        if ("default" === zU && null !== IU && UU.gpuClassOnWebGl(IU)) return AU("gpu_class_webgl", EU);
+        if ("default" === zU && pU) return AU("gpu_wasm_arm", EU);
+        return AU(DU ? "compatibility_mode" : "none", EU)
+      }(UU);
+      if (lU(XU.reason)) return {
         backend: "webgpu",
-        ...rM
+        ...XU
       };
-      if ("webgl1" !== MM.override() && MM.webgl2()) return {
+      if ("webgl1" !== UU.override() && UU.webgl2()) return {
         backend: "webgl",
-        ...rM
+        ...XU
       };
-      const iM = MM.webgl1();
-      return 0 === iM.length ? {
+      const zU = UU.webgl1();
+      return 0 === zU.length ? {
         backend: "webgl1",
-        ...rM
+        ...XU
       } : {
-        missing: iM
+        missing: zU
       }
     }
 
-    function XM(MM, rM) {
+    function JU(UU, XU) {
       let {
-        source: iM,
-        asked: OM
-      } = rM;
-      return OM || "default" === iM ? (0, wM.g)(OM, MM.defaultCompatibility) : void 0
+        source: zU,
+        asked: cU
+      } = XU;
+      return cU || "default" === zU ? (0, LU.g)(cU, UU.defaultCompatibility) : void 0
     }
 
-    function IM(MM) {
-      const rM = MM.override(),
-        iM = MM.webGpuSetting(),
-        OM = null === rM && !0 !== iM && MM.nh(),
-        SM = null !== rM || null !== iM || OM ? null : MM.claimed(),
-        jM = null !== rM ? "override" : !0 === iM ? "setting" : OM ? "pack" : !1 === iM ? "setting" : null !== SM ? "claim" : "default",
-        aM = function(MM) {
-          return "override" === MM || "setting" === MM
-        }(jM);
-      if ("webgl" === rM || "webgl1" === rM || "webgl" === SM || "setting" === jM && !1 === iM) return {
-        source: jM,
-        asked: aM,
+    function jU(UU) {
+      const XU = UU.override(),
+        zU = UU.webGpuSetting(),
+        cU = null === XU && !0 !== zU && UU.Fp(),
+        yU = null !== XU || null !== zU || cU ? null : UU.claimed(),
+        QU = null !== XU ? "override" : !0 === zU ? "setting" : cU ? "pack" : !1 === zU ? "setting" : null !== yU ? "claim" : "default",
+        AU = function(UU) {
+          return "override" === UU || "setting" === UU
+        }(QU);
+      if ("webgl" === XU || "webgl1" === XU || "webgl" === yU || "setting" === QU && !1 === zU) return {
+        source: QU,
+        asked: AU,
         refused: "not_requested"
       };
-      if (!MM.gpu) return {
-        source: jM,
-        asked: aM,
+      if (!UU.gpu) return {
+        source: QU,
+        asked: AU,
         refused: "no_webgpu_api"
       };
-      const PM = "default" === jM && MM.heldBack();
-      return PM && !MM.windows() ? {
-        source: jM,
-        asked: aM,
+      const FU = "default" === QU && UU.heldBack();
+      return FU && !UU.windows() ? {
+        source: QU,
+        asked: AU,
         refused: "webgl_holdback"
-      } : !aM && MM.offAfterLoss("pack" === jM) ? {
-        source: jM,
-        asked: aM,
-        refused: PM ? "webgl_holdback" : "off_after_loss"
+      } : !AU && UU.offAfterLoss("pack" === QU) ? {
+        source: QU,
+        asked: AU,
+        refused: FU ? "webgl_holdback" : "off_after_loss"
       } : {
-        source: jM,
-        asked: aM,
-        heldBack: PM,
-        gpu: MM.gpu
+        source: QU,
+        asked: AU,
+        heldBack: FU,
+        gpu: UU.gpu
       }
     }
 
-    function KM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
-          ...NM(),
-          override: () => AM(!1)
+    function KU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+          ...VU(),
+          override: () => sU(!1)
         },
-        rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mM.isWebKit,
-        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DM;
+        XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NU.isWebKit,
+        zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uU;
       try {
-        if (!rM()) return !1;
-        const OM = IM(MM);
-        if (!("gpu" in OM) || OM.heldBack) return !1;
-        const SM = "default" === OM.source ? fM(iM(), "apple", HM.siteUsed) : null;
-        return null === SM || !MM.gpuClassOnWebGl(SM)
-      } catch (OM) {
-        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", OM), !1
+        if (!XU()) return !1;
+        const cU = jU(UU);
+        if (!("gpu" in cU) || cU.heldBack) return !1;
+        const yU = "default" === cU.source ? MU(zU(), "apple", IU.siteUsed) : null;
+        return null === yU || !UU.gpuClassOnWebGl(yU)
+      } catch (cU) {
+        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", cU), !1
       }
     }
-    let qM = !1;
-    async function TM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NM();
-      if (null === MM) return null;
-      const iM = await BM(rM);
-      return qM = !("missing" in iM) && "webgpu" === iM.backend && "claim" === iM.source, "missing" in iM ? iM : {
-        ...iM,
-        load: MM[iM.backend]
+    let bU = !1;
+    async function TU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VU();
+      if (null === UU) return null;
+      const zU = await xU(XU);
+      return bU = !("missing" in zU) && "webgpu" === zU.backend && "claim" === zU.source, "missing" in zU ? zU : {
+        ...zU,
+        load: UU[zU.backend]
       }
     }
-    async function VM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : NM().gpu,
-        OM = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== MM.backend) return !1;
-      const SM = ar(MM, rM, "indirectDraws", "off", "on");
-      if (null !== SM) return SM;
-      if (null !== MM.adapter && (0, yM.s)(MM.adapter, OM)) return !0;
-      if (null === iM) return !1;
+    async function hU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VU().gpu,
+        cU = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== UU.backend) return !1;
+      const yU = FX(UU, XU, "indirectDraws", "off", "on");
+      if (null !== yU) return yU;
+      if (null !== UU.adapter && (0, gU.n)(UU.adapter, cU)) return !0;
+      if (null === zU) return !1;
       try {
-        var jM;
-        const MM = await (0, eM.n)(iM.requestAdapter({
+        var QU;
+        const UU = await (0, PU.l)(zU.requestAdapter({
           powerPreference: "low-power"
-        }).then((async MM => (null !== MM && await (0, UM.h)(MM), MM))), yr, `the low-power requestAdapter didn't settle in ${yr/1e3} s`);
-        return (0, yM.s)(null !== (jM = null === MM || void 0 === MM ? void 0 : MM.info) && void 0 !== jM ? jM : {}, OM)
-      } catch (aM) {
-        return aM instanceof eM.h
+        }).then((async UU => (null !== UU && await (0, BU.h)(UU), UU))), kX, `the low-power requestAdapter didn't settle in ${kX/1e3} s`);
+        return (0, gU.n)(null !== (QU = null === UU || void 0 === UU ? void 0 : UU.info) && void 0 !== QU ? QU : {}, cU)
+      } catch (AU) {
+        return AU instanceof PU.g
       }
     }
 
-    function cM(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, mM.pageOperatingSystem)();
-      if ("webgpu" !== MM.backend) return !1;
-      const SM = ar(MM, rM, "terrainFetch", "texture", "storage");
-      return null !== SM ? SM : null !== MM.adapter && ((0, yM.k)(MM.adapter, iM) || (0, yM.j)(MM.adapter, OM))
+    function UX(UU, XU, zU) {
+      let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, NU.pageOperatingSystem)();
+      if ("webgpu" !== UU.backend) return !1;
+      const yU = FX(UU, XU, "terrainFetch", "texture", "storage");
+      return null !== yU ? yU : null !== UU.adapter && ((0, gU.h)(UU.adapter, zU) || (0, gU.g)(UU.adapter, cU))
     }
 
-    function Mr(MM, rM) {
-      if ("webgpu" !== MM.backend) return !1;
-      const iM = ar(MM, rM, "skyOrder", "early", "last");
-      return null !== iM ? iM : null !== MM.adapter && (0, jM.i)(MM.adapter.vendor, MM.adapter.architecture) === kM
+    function XX(UU, XU) {
+      if ("webgpu" !== UU.backend) return !1;
+      const zU = FX(UU, XU, "skyOrder", "early", "last");
+      return null !== zU ? zU : null !== UU.adapter && (0, QU.d)(UU.adapter.vendor, UU.adapter.architecture) === fU
     }
 
-    function rr(MM, rM) {
-      if ("webgpu" !== MM.backend) return !1;
-      const iM = ar(MM, rM, "uploadCopies", "off", "on");
-      return null !== iM ? iM : null !== MM.adapter && "powervr_rogue" === (0, jM.i)(MM.adapter.vendor, MM.adapter.architecture)
+    function zX(UU, XU) {
+      if ("webgpu" !== UU.backend) return !1;
+      const zU = FX(UU, XU, "uploadCopies", "off", "on");
+      return null !== zU ? zU : null !== UU.adapter && "powervr_rogue" === (0, QU.d)(UU.adapter.vendor, UU.adapter.architecture)
     }
 
-    function ir(MM, rM, iM) {
-      if ("webgpu" !== MM.backend) return !1;
-      const OM = ar(MM, rM, "sceneDepth", "off", "on");
-      return null !== OM ? OM : null !== MM.adapter && (0, yM.n)(MM.adapter, iM)
+    function cX(UU, XU, zU) {
+      if ("webgpu" !== UU.backend) return !1;
+      const cU = FX(UU, XU, "sceneDepth", "off", "on");
+      return null !== cU ? cU : null !== UU.adapter && (0, gU.l)(UU.adapter, zU)
     }
 
-    function Or(MM, rM) {
-      return "webgl" === MM.backend ? ar(MM, rM, "instancedTerrain", "1", "0") : null
+    function yX(UU, XU) {
+      return "webgl" === UU.backend ? FX(UU, XU, "instancedTerrain", "1", "0") : null
     }
 
-    function Sr(MM, rM) {
-      return "webgpu" !== MM.backend || rM && (null === MM.adapter || !(0, dM.H)(MM.adapter))
+    function QX(UU, XU) {
+      return "webgpu" !== UU.backend || XU && (null === UU.adapter || !(0, tU.P)(UU.adapter))
     }
 
-    function jr(MM, rM, iM, OM) {
-      const SM = new URLSearchParams(rM).get(iM),
-        jM = null !== SM && void 0 !== SM ? SM : null === MM ? null : (0, nM.d)(iM);
-      return null !== jM && OM(jM) ? (qM ||= null === SM && "webgpu" === (null === MM || void 0 === MM ? void 0 : MM.backend), jM) : null
+    function AX(UU, XU, zU, cU) {
+      const yU = new URLSearchParams(XU).get(zU),
+        QU = null !== yU && void 0 !== yU ? yU : null === UU ? null : (0, oU.g)(zU);
+      return null !== QU && cU(QU) ? (bU ||= null === yU && "webgpu" === (null === UU || void 0 === UU ? void 0 : UU.backend), QU) : null
     }
 
-    function ar(MM, rM, iM, OM, SM) {
-      const jM = jr(MM, rM, iM, (MM => MM === OM || MM === SM));
-      return null === jM ? null : jM === OM
+    function FX(UU, XU, zU, cU, yU) {
+      const QU = AX(UU, XU, zU, (UU => UU === cU || UU === yU));
+      return null === QU ? null : QU === cU
     }
 
-    function Pr(MM) {
-      return null !== MM && "missing" in MM
+    function oX(UU) {
+      return null !== UU && "missing" in UU
     }
 
-    function nr(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !Lr(),
-        iM = arguments.length > 2 ? arguments[2] : void 0;
-      return rM ? function(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.d,
-          iM = arguments.length > 2 ? arguments[2] : void 0;
+    function DX(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !NX(),
+        zU = arguments.length > 2 ? arguments[2] : void 0;
+      return XU ? function(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AU.e,
+          zU = arguments.length > 2 ? arguments[2] : void 0;
         try {
-          const OM = "start_failed" === MM || "pipeline_failed" === MM,
-            SM = (0, gM.k)(MM, iM),
-            jM = rM.turnOffWebGpuAfterDeviceLoss(OM ? "visible" : (0, dM.l)((0, hM.h)()), OM, SM);
-          return qM && (0, nM.q)("webgpuLoss"), rM.isWebGpuOffAfterLoss() && "webgpu" === vM(JM.g.getItem(zM.h)) && JM.g.removeItem(zM.h), (0, PM.p)("webgpuloss") && (0, QM.d)((rM => {
-            var iM;
-            rM.noteWebGpuLoss("wasm", jM ? MM : `${MM}, which storage didn't keep`, null !== (iM = SM.message) && void 0 !== iM ? iM : null)
-          })), jM
+          const cU = "start_failed" === UU || "pipeline_failed" === UU,
+            yU = (0, CU.h)(UU, zU),
+            QU = XU.turnOffWebGpuAfterDeviceLoss(cU ? "visible" : (0, tU.n)((0, pU.i)()), cU, yU);
+          return bU && (0, oU.s)("webgpuLoss"), XU.isWebGpuOffAfterLoss() && "webgpu" === mU(aU.k.getItem(EU.g)) && aU.k.removeItem(EU.g), (0, FU.q)("webgpuloss") && (0, DU.b)((XU => {
+            var zU;
+            XU.noteWebGpuLoss("wasm", QU ? UU : `${UU}, which storage didn't keep`, null !== (zU = yU.message) && void 0 !== zU ? zU : null)
+          })), QU
         } catch {
           return !1
         }
-      }(MM, aM.d, iM) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+      }(UU, AU.e, zU) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const Qr = "framePacing";
+    const EX = "framePacing";
 
-    function zr(MM, rM) {
-      const iM = jr("webgpu" === (null === rM || void 0 === rM ? void 0 : rM.backend) ? rM : null, MM, Qr, (MM => /^\d{1,9}$/.test(MM)));
-      return null === iM ? void 0 : Number(iM)
+    function YX(UU, XU) {
+      const zU = AX("webgpu" === (null === XU || void 0 === XU ? void 0 : XU.backend) ? XU : null, UU, EX, (UU => /^\d{1,9}$/.test(UU)));
+      return null === zU ? void 0 : Number(zU)
     }
 
-    function Lr() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function NX() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === vM(new URLSearchParams(MM).get(zM.d))
+        return "webgpu" === mU(new URLSearchParams(UU).get(EU.c))
       } catch {
         return !1
       }
     }
 
-    function mr(MM) {
-      return !!Hr(MM) || MM instanceof Error && !(MM instanceof WebAssembly.RuntimeError) && MM.message.startsWith(`${GM.n.RenderSurfaceUnusable}:`)
+    function IX(UU) {
+      return !!pX(UU) || UU instanceof Error && !(UU instanceof WebAssembly.RuntimeError) && UU.message.startsWith(`${ZU.h.RenderSurfaceUnusable}:`)
     }
 
-    function Hr(MM) {
+    function pX(UU) {
       const {
-        name: rM,
-        message: iM
-      } = null !== MM && void 0 !== MM ? MM : {};
-      return "InvalidStateError" === rM && "string" === typeof iM && iM.startsWith("GPUDevice.")
+        name: XU,
+        message: zU
+      } = null !== UU && void 0 !== UU ? UU : {};
+      return "InvalidStateError" === XU && "string" === typeof zU && zU.startsWith("GPUDevice.")
     }
 
-    function hr(MM) {
-      const rM = MM;
-      return "function" === typeof rM.iOM && "function" === typeof rM.SOM ? rM : null
+    function aX(UU) {
+      const XU = UU;
+      return "function" === typeof XU.lcU && "function" === typeof XU.xcU ? XU : null
     }
 
-    function Jr(MM) {
-      return "function" === typeof MM.Oy ? MM : null
+    function tX(UU) {
+      return "function" === typeof UU.Xg ? UU : null
     }
-    const dr = "openRenderer";
-    const yr = 5e3,
-      lr = 15e3;
+    const gX = "openRenderer";
+    const kX = 5e3,
+      GX = 15e3;
 
-    function Er(MM, rM, iM, OM, SM, jM) {
-      return (0, eM.n)(function(MM, rM, iM, OM, SM, jM) {
-        return (0, bM.i)(MM, rM, (() => MM.Oy(iM, OM, SM, jM.indirectHangs, jM.storagePullBreaks, jM.splitPassBreaks, jM.earlySky, jM.instancedTerrain, jM.cellLight, jM.framesAhead, jM.webGpuRestores, jM.bufferCopiesCrash)))
-      }(MM, rM, iM, OM, SM, jM), lr, `${GM.n.RenderSurfaceUnusable}: the renderer didn't open in ${lr/1e3} s`, Gr)
+    function BX(UU, XU, zU, cU, yU, QU) {
+      return (0, PU.l)(function(UU, XU, zU, cU, yU, QU) {
+        const AU = (0, WU.g)(UU, XU, (() => UU.Xg(zU, cU, yU, QU.indirectHangs, QU.storagePullBreaks, QU.splitPassBreaks, QU.earlySky, QU.instancedTerrain, QU.cellLight, QU.framesAhead, QU.webGpuRestores, QU.bufferCopiesCrash))),
+          {
+            firstVertex: FU
+          } = QU;
+        return void 0 === FU ? AU : AU.then((UU => ((0, dU.c)(zU, FU), UU)))
+      }(UU, XU, zU, cU, yU, QU), GX, `${ZU.h.RenderSurfaceUnusable}: the renderer didn't open in ${GX/1e3} s`, RX)
     }
-    async function Ur(MM, rM, iM, OM, SM, jM) {
-      if ("function" !== typeof MM.HaM) throw new Error("this core has no set_renderer");
-      const aM = await Er(rM, dr, iM, SM, OM, jM);
+    async function ZX(UU, XU, zU, cU, yU, QU) {
+      if ("function" !== typeof UU.hAU) throw new Error("this core has no set_renderer");
+      const AU = await BX(XU, gX, zU, yU, cU, QU);
       try {
-        MM.HaM(aM)
-      } catch (PM) {
-        throw Gr(aM), PM
+        UU.hAU(AU)
+      } catch (FU) {
+        throw RX(AU), FU
       }
     }
 
-    function Gr(MM) {
+    function RX(UU) {
       try {
-        MM.free()
+        UU.free()
       } catch {}
     }
   },
-  41913: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM
+  41919: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => cU
     });
-    const OM = {
+    const cU = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -665,284 +579,285 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  41840: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => hM,
-      f: () => JM,
-      j: () => mM,
-      n: () => LM
+  41848: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => pU,
+      c: () => aU,
+      e: () => NU,
+      i: () => YU
     });
-    const OM = 2e3,
-      SM = "unavailable";
-    let jM = () => Promise.resolve().then((() => iM(3262))),
-      aM = null,
-      PM = null,
-      nM = QM();
+    const cU = 2e3,
+      yU = "unavailable";
+    let QU = () => Promise.resolve().then((() => zU(1842))),
+      AU = null,
+      FU = null,
+      oU = DU();
 
-    function QM() {
-      let MM = () => {};
+    function DU() {
+      let UU = () => {};
       return {
-        promise: new Promise((rM => {
-          MM = () => {
-            rM(null)
+        promise: new Promise((XU => {
+          UU = () => {
+            XU(null)
           }
         })),
-        resolve: MM
+        resolve: UU
       }
     }
 
-    function zM() {
-      if (null === aM) {
-        const MM = jM();
-        aM = MM, MM.then((rM => {
-          aM === MM && (PM = rM)
+    function EU() {
+      if (null === AU) {
+        const UU = QU();
+        AU = UU, UU.then((XU => {
+          AU === UU && (FU = XU)
         }), (() => {
-          aM === MM && (aM = null)
+          AU === UU && (AU = null)
         }))
       }
-      return aM
+      return AU
     }
 
-    function LM() {
-      zM().catch((() => {}))
+    function YU() {
+      EU().catch((() => {}))
     }
 
-    function mM() {
-      nM.resolve()
+    function NU() {
+      oU.resolve()
     }
 
-    function HM(MM, rM, iM, OM) {
-      if (null === MM) return {
-        errorKind: rM,
-        fingerprint: SM,
-        dedupe: `${rM}|${OM}`
+    function IU(UU, XU, zU, cU) {
+      if (null === UU) return {
+        errorKind: XU,
+        fingerprint: yU,
+        dedupe: `${XU}|${cU}`
       };
       const {
-        fingerprint: jM
-      } = MM.clientErrorKey(rM, iM, OM);
+        fingerprint: QU
+      } = UU.clientErrorKey(XU, zU, cU);
       return {
-        errorKind: rM,
-        fingerprint: jM,
-        dedupe: jM
+        errorKind: XU,
+        fingerprint: QU,
+        dedupe: QU
       }
     }
 
-    function hM(MM, rM, iM, OM) {
-      return null === PM ? OM ? (LM(), HM(null, MM, rM, iM)) : null : HM(PM, MM, rM, iM)
+    function pU(UU, XU, zU, cU) {
+      return null === FU ? cU ? (YU(), IU(null, UU, XU, zU)) : null : IU(FU, UU, XU, zU)
     }
-    async function JM(MM, rM, iM) {
-      let SM;
-      const jM = new Promise((MM => {
-        SM = setTimeout((() => {
-          MM(null)
-        }), OM)
+    async function aU(UU, XU, zU) {
+      let yU;
+      const QU = new Promise((UU => {
+        yU = setTimeout((() => {
+          UU(null)
+        }), cU)
       }));
       try {
-        return HM(await Promise.race([zM(), jM, nM.promise]), MM, rM, iM)
+        return IU(await Promise.race([EU(), QU, oU.promise]), UU, XU, zU)
       } catch {
-        return HM(null, MM, rM, iM)
+        return IU(null, UU, XU, zU)
       } finally {
-        clearTimeout(SM)
+        clearTimeout(yU)
       }
     }
   },
-  41833: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      BUILT_IN_ANIMATIONS_SITE: () => TM,
-      CORE_ERRORS_SITE: () => NM,
-      EVENT_OVERFLOW_SITE: () => qM,
-      FIRST_VIEW_SITE: () => Mr,
-      JOIN_SITE: () => xM,
-      LEAVE_SITE: () => vM,
-      MAIN_THREAD_SITE: () => rr,
-      MODEL_FEED_SITE: () => FM,
-      MODEL_POOL_SITE: () => BM,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => jr,
-      NON_FATAL_REPORTS_PER_SESSION: () => er,
-      PREVIEW_ANIMATIONS_SITE: () => KM,
-      RENDER_RELOAD_SITE: () => IM,
-      REQUEST_DEVICE_SITE: () => ir,
-      TEXTURE_NAMES_SITE: () => XM,
-      TEXTURE_PACK_FEED_SITE: () => VM,
-      TEXTURE_PACK_SWAP_SITE: () => cM,
-      TurnstilePageError: () => ni,
-      WASM_LOAD_SITE: () => AM,
-      countRenderLost: () => Fi,
-      crashError: () => Rr,
-      crashReportsSettled: () => Yr,
-      deviceLossFields: () => Fr,
-      deviceLossWords: () => Ni,
-      flushCrashReports: () => or,
-      joinFailureCode: () => Qi,
-      lokiTransport: () => nr,
-      modelFailureCode: () => yi,
-      readTrap: () => Ir,
-      renderLoss: () => vi,
-      renderReloadMessage: () => Ai,
-      reportCoreErrors: () => xr,
-      reportCountedLoadFallback: () => ai,
-      reportCrash: () => pr,
-      reportDataLoadFailure: () => Ti,
-      reportDisconnect: () => Ji,
-      reportDracoDecoderFailure: () => Gi,
-      reportDroppedRequiredLimits: () => Si,
-      reportEventOverflow: () => wi,
-      reportFirstViewNoTerrain: () => si,
-      reportLightFault: () => ui,
-      reportMainStall: () => Di,
-      reportMemoryShed: () => Wi,
-      reportModelFailure: () => li,
-      reportModelPoolFailure: () => Ei,
-      reportModelsModuleRetry: () => Ui,
-      reportNoBackendRetry: () => Oi,
-      reportPageJoinFailure: () => Li,
-      reportReconnectGaveUp: () => di,
-      reportRenderRecovery: () => Dr,
-      reportRenderReload: () => Ii,
-      reportReplayFault: () => Zi,
-      reportStaleBuildReload: () => ci,
-      reportStoppedCore: () => Vr,
-      reportTerrainTextureFailure: () => Ki,
-      reportTexturePackFeedLoadFailure: () => ei,
-      reportTexturePackKeptOut: () => bi,
-      reportUnstreamedCoreLoad: () => Pi,
-      reportUnsupportedFallback: () => ii,
-      reportUnusedSeat: () => Hi,
-      reportWorkerLost: () => ti,
-      reportWorkerStartTimeout: () => ki,
-      reportWorldgenGaveUp: () => Ri,
-      reportWorldgenLoadFailure: () => Ci,
-      reportWorldgenWorkerLost: () => gi,
-      resetCrashReports: () => Nr,
-      setCrashAdPreload: () => yr,
-      setCrashBackend: () => dr,
-      setCrashScreen: () => Hr,
-      setCrashTransport: () => Lr,
-      showCrash: () => Tr,
-      showJoinFailure: () => zi,
-      showUnsupported: () => Mi,
-      unknownSkyWords: () => Ar
+  41840: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      BUILT_IN_ANIMATIONS_SITE: () => bU,
+      CORE_ERRORS_SITE: () => vU,
+      EVENT_OVERFLOW_SITE: () => KU,
+      FIRST_VIEW_SITE: () => UX,
+      JOIN_SITE: () => sU,
+      LEAVE_SITE: () => nU,
+      MAIN_THREAD_SITE: () => XX,
+      MODEL_FEED_SITE: () => mU,
+      MODEL_POOL_SITE: () => lU,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => QX,
+      NON_FATAL_REPORTS_PER_SESSION: () => PX,
+      PREVIEW_ANIMATIONS_SITE: () => jU,
+      RENDER_RELOAD_SITE: () => JU,
+      REQUEST_DEVICE_SITE: () => zX,
+      TEXTURE_NAMES_SITE: () => xU,
+      TEXTURE_PACK_FEED_SITE: () => TU,
+      TEXTURE_PACK_SWAP_SITE: () => hU,
+      TurnstilePageError: () => Yz,
+      WASM_LOAD_SITE: () => VU,
+      countRenderLost: () => mz,
+      crashError: () => wX,
+      crashReportsSettled: () => MX,
+      deviceLossFields: () => mX,
+      deviceLossWords: () => vz,
+      flushCrashReports: () => iX,
+      joinFailureCode: () => Nz,
+      loadRecoveryCode: () => Qz,
+      lokiTransport: () => oX,
+      modelFailureCode: () => Gz,
+      readTrap: () => JX,
+      renderLoss: () => nz,
+      renderReloadMessage: () => Vz,
+      reportCoreErrors: () => sX,
+      reportCountedLoadFallback: () => Dz,
+      reportCrash: () => qX,
+      reportDataLoadFailure: () => bz,
+      reportDisconnect: () => gz,
+      reportDroppedRequiredLimits: () => Fz,
+      reportEventOverflow: () => Lz,
+      reportFirstViewNoTerrain: () => Sz,
+      reportLightFault: () => wz,
+      reportLoadRecovery: () => Az,
+      reportMainStall: () => rz,
+      reportMemoryShed: () => Oz,
+      reportModelFailure: () => Bz,
+      reportModelPoolFailure: () => Zz,
+      reportModelsModuleRetry: () => Rz,
+      reportNoBackendRetry: () => cz,
+      reportPageJoinFailure: () => pz,
+      reportReconnectGaveUp: () => kz,
+      reportRenderRecovery: () => rX,
+      reportRenderReload: () => Jz,
+      reportReplayFault: () => fz,
+      reportStaleBuildReload: () => hz,
+      reportStoppedCore: () => TX,
+      reportTerrainTextureFailure: () => jz,
+      reportTexturePackFeedLoadFailure: () => Wz,
+      reportTexturePackKeptOut: () => dz,
+      reportUnstreamedCoreLoad: () => Ez,
+      reportUnsupportedFallback: () => zz,
+      reportUnusedSeat: () => tz,
+      reportWorkerLost: () => ez,
+      reportWorkerStartTimeout: () => uz,
+      reportWorldgenGaveUp: () => qz,
+      reportWorldgenLoadFailure: () => Pz,
+      reportWorldgenWorkerLost: () => Cz,
+      resetCrashReports: () => vX,
+      setCrashAdPreload: () => gX,
+      setCrashBackend: () => tX,
+      setCrashScreen: () => IX,
+      setCrashTransport: () => YX,
+      showCrash: () => bX,
+      showJoinFailure: () => Iz,
+      showUnsupported: () => Uz,
+      unknownSkyWords: () => VX
     });
-    var OM = iM(1073),
-      SM = iM(1382),
-      jM = iM(1373),
-      aM = iM(1329),
-      PM = iM(243),
-      nM = iM(3270),
-      QM = iM(4654),
-      zM = iM(41840),
-      LM = iM(5198),
-      mM = iM(41846),
-      HM = iM(34885),
-      hM = iM(3324),
-      JM = iM(34880),
-      dM = iM(39814),
-      yM = iM(119),
-      lM = iM(114),
-      EM = iM(3333),
-      UM = iM(37437),
-      GM = iM(1899),
-      CM = iM(41858),
-      eM = iM(41677),
-      bM = iM(41764),
-      wM = iM(41767),
-      tM = iM(37428),
-      gM = iM(3185),
-      uM = iM(3188),
-      RM = iM(41882),
-      pM = iM(41895),
-      WM = iM(41900),
-      sM = iM(37790),
-      DM = iM(3632),
-      kM = iM(37218),
-      ZM = iM(41809),
-      oM = iM(37229),
-      fM = iM(41922);
-    const YM = "[bloxd-wasm-client]",
-      NM = "coreErrors",
-      AM = "wasmLoad",
-      xM = "join",
-      vM = "leave",
-      FM = "modelFeed",
-      BM = "modelWorkerPool",
-      XM = "textureNames",
-      IM = "renderReload",
-      KM = "previewAnimations",
-      qM = "eventOverflow",
-      TM = "builtInAnimations",
-      VM = "texturePackFeed",
-      cM = "texturePackSwap",
-      Mr = "firstView",
-      rr = "mainThread",
-      ir = "requestDevice",
-      Or = 300,
-      Sr = 64,
-      jr = 8;
-    let ar = 0;
-    const Pr = new Set,
-      nr = (MM, rM) => {
-        const iM = lr[MM.kind],
-          OM = {
-            backend: hr,
-            adPreload: Jr
+    var cU = zU(1079),
+      yU = zU(1376),
+      QU = zU(1360),
+      AU = zU(1325),
+      FU = zU(281),
+      oU = zU(1850),
+      DU = zU(4704),
+      EU = zU(41848),
+      YU = zU(5318),
+      NU = zU(41857),
+      IU = zU(34719),
+      pU = zU(3295),
+      aU = zU(34715),
+      tU = zU(39586),
+      gU = zU(142),
+      kU = zU(134),
+      GU = zU(3304),
+      BU = zU(37201),
+      ZU = zU(1877),
+      RU = zU(41863),
+      PU = zU(41660),
+      WU = zU(41750),
+      dU = zU(41752),
+      LU = zU(37197),
+      eU = zU(3169),
+      CU = zU(3176),
+      wU = zU(41877),
+      qU = zU(41894),
+      OU = zU(41902),
+      SU = zU(37564),
+      rU = zU(3596),
+      uU = zU(36972),
+      fU = zU(41808),
+      iU = zU(36981),
+      HU = zU(41927);
+    const MU = "[bloxd-wasm-client]",
+      vU = "coreErrors",
+      VU = "wasmLoad",
+      sU = "join",
+      nU = "leave",
+      mU = "modelFeed",
+      lU = "modelWorkerPool",
+      xU = "textureNames",
+      JU = "renderReload",
+      jU = "previewAnimations",
+      KU = "eventOverflow",
+      bU = "builtInAnimations",
+      TU = "texturePackFeed",
+      hU = "texturePackSwap",
+      UX = "firstView",
+      XX = "mainThread",
+      zX = "requestDevice",
+      cX = 300,
+      yX = 64,
+      QX = 8;
+    let AX = 0;
+    const FX = new Set,
+      oX = (UU, XU) => {
+        const zU = kX[UU.kind],
+          cU = {
+            backend: pX,
+            adPreload: aX
           };
-        if (null === iM) return void Qr(MM, rM, OM, null);
-        const SM = (0, zM.d)(iM, MM.message, MM.code, MM.fatal);
-        null === SM ? Zr("Loki", (async () => {
-          Qr(MM, rM, OM, await (0, zM.f)(iM, MM.message, MM.code))
-        })) : Qr(MM, rM, OM, SM)
+        if (null === zU) return void DX(UU, XU, cU, null);
+        const yU = (0, EU.b)(zU, UU.message, UU.code, UU.fatal);
+        null === yU ? fX("Loki", (async () => {
+          DX(UU, XU, cU, await (0, EU.c)(zU, UU.message, UU.code))
+        })) : DX(UU, XU, cU, yU)
       };
 
-    function Qr(MM, rM, iM, OM) {
+    function DX(UU, XU, zU, cU) {
       let {
-        backend: SM,
-        adPreload: jM
-      } = iM;
+        backend: yU,
+        adPreload: QU
+      } = zU;
       const {
-        kind: PM,
-        code: QM,
-        site: zM,
-        fatal: LM,
-        details: mM
-      } = MM;
-      if (!LM)
-        if (null === OM || (0, nM.c)(OM.errorKind) || Pr.has(OM.dedupe)) {
-          if (ar >= jr) return;
-          ar++
-        } else Pr.add(OM.dedupe);
-      const HM = {
-        ...mM,
-        kind: PM,
-        code: QM,
-        site: zM,
-        fatal: String(LM),
-        backend: SM
+        kind: FU,
+        code: DU,
+        site: EU,
+        fatal: YU,
+        details: NU
+      } = UU;
+      if (!YU)
+        if (null === cU || (0, oU.e)(cU.errorKind) || FX.has(cU.dedupe)) {
+          if (AX >= QX) return;
+          AX++
+        } else FX.add(cU.dedupe);
+      const IU = {
+        ...NU,
+        kind: FU,
+        code: DU,
+        site: EU,
+        fatal: String(YU),
+        backend: yU
       };
-      jM && (HM.adPreload = "true"), null !== OM && (HM.errorKind = OM.errorKind, HM.fingerprint = OM.fingerprint), rM instanceof Error && "string" === typeof rM.stack && (HM.causeStack = rM.stack.slice(0, 2e3)), (0, aM.CJ)(Rr(MM, rM), HM)
+      QU && (IU.adPreload = "true"), null !== cU && (IU.errorKind = cU.errorKind, IU.fingerprint = cU.fingerprint), XU instanceof Error && "string" === typeof XU.stack && (IU.causeStack = XU.stack.slice(0, 2e3)), (0, AU.Wa)(wX(UU, XU), IU)
     }
-    let zr = nr;
+    let EX = oX;
 
-    function Lr(MM) {
-      const rM = zr;
-      return zr = MM, rM
+    function YX(UU) {
+      const XU = EX;
+      return EX = UU, XU
     }
-    let mr = () => {};
+    let NX = () => {};
 
-    function Hr(MM) {
-      const rM = mr;
-      return mr = MM, rM
+    function IX(UU) {
+      const XU = NX;
+      return NX = UU, XU
     }
-    let hr = "unpicked",
-      Jr = !1;
+    let pX = "unpicked",
+      aX = !1;
 
-    function dr(MM) {
-      hr = MM
+    function tX(UU) {
+      pX = UU
     }
 
-    function yr(MM) {
-      Jr = MM
+    function gX(UU) {
+      aX = UU
     }
-    const lr = {
+    const kX = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -968,7 +883,7 @@ export const modules = {
         linkCensus: "wasm_load",
         linksReadAfterView: "wasm_load"
       },
-      Er = {
+      GX = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
@@ -976,255 +891,255 @@ export const modules = {
         mainStall: "wasm_load",
         texturePackKeptOut: "texture_pack"
       },
-      Ur = new Set(["unstreamedLoad"]),
-      Gr = new Set(["linkCensus", "linksReadAfterView"]);
-    let Cr = !1;
-    const er = 20,
-      br = new Map;
-    let wr = 0,
-      tr = 0;
-    const gr = new Set,
-      ur = new Set;
+      BX = new Set(["unstreamedLoad"]),
+      ZX = new Set(["linkCensus", "linksReadAfterView"]);
+    let RX = !1;
+    const PX = 20,
+      WX = new Map;
+    let dX = 0,
+      LX = 0;
+    const eX = new Set,
+      CX = new Set;
 
-    function Rr(MM, rM) {
-      const iM = Object.assign(new Error(`${MM.code}: ${MM.message}`), {
+    function wX(UU, XU) {
+      const zU = Object.assign(new Error(`${UU.code}: ${UU.message}`), {
         name: "WasmClientCrash",
-        cause: null !== rM && void 0 !== rM ? rM : void 0
+        cause: null !== XU && void 0 !== XU ? XU : void 0
       });
-      return rM instanceof Error && rM.stack && (iM.stack = rM.stack), iM
+      return XU instanceof Error && XU.stack && (zU.stack = XU.stack), zU
     }
 
-    function pr(MM) {
-      var rM, OM;
+    function qX(UU) {
+      var XU, cU;
       const {
-        kind: SM,
-        code: jM,
-        site: aM,
-        fatal: PM,
-        message: nM,
-        error: QM
-      } = MM, zM = !1 !== MM.toTransport && !Ur.has(SM), LM = !PM && zM && !Gr.has(SM), mM = {
-        kind: SM,
-        code: jM,
-        site: aM,
-        fatal: PM,
-        message: nM,
-        details: null !== (rM = MM.details) && void 0 !== rM ? rM : {}
-      }, HM = `${jM}@${aM}${void 0===MM.instance?"":`#${MM.instance}`}${PM?"!":""}`, hM = (null !== (OM = br.get(HM)) && void 0 !== OM ? OM : 0) + 1;
-      if (br.set(HM, hM), void 0 !== MM.countAs && 1 === hM && sr(MM.countAs), hM > 1 ? 0 === (hM & hM - 1) && kr((() => {
-          console.warn(`${YM} ${jM} at ${aM} reported ${hM} times`)
-        })) : LM && wr >= er ? kr((() => {
-          console.warn(`${YM} ${SM} ${jM} at ${aM}: ${nM} (not sent: the session's ${er} went)`, mM.details, null !== QM && void 0 !== QM ? QM : "")
-        })) : (LM && wr++, function(MM, rM, OM, SM) {
-          var jM, aM;
+        kind: yU,
+        code: QU,
+        site: AU,
+        fatal: FU,
+        message: oU,
+        error: DU
+      } = UU, EU = !1 !== UU.toTransport && !BX.has(yU), YU = !FU && EU && !ZX.has(yU), NU = {
+        kind: yU,
+        code: QU,
+        site: AU,
+        fatal: FU,
+        message: oU,
+        details: null !== (XU = UU.details) && void 0 !== XU ? XU : {}
+      }, IU = `${QU}@${AU}${void 0===UU.instance?"":`#${UU.instance}`}${FU?"!":""}`, pU = (null !== (cU = WX.get(IU)) && void 0 !== cU ? cU : 0) + 1;
+      if (WX.set(IU, pU), void 0 !== UU.countAs && 1 === pU && SX(UU.countAs), pU > 1 ? 0 === (pU & pU - 1) && uX((() => {
+          console.warn(`${MU} ${QU} at ${AU} reported ${pU} times`)
+        })) : YU && dX >= PX ? uX((() => {
+          console.warn(`${MU} ${yU} ${QU} at ${AU}: ${oU} (not sent: the session's ${PX} went)`, NU.details, null !== DU && void 0 !== DU ? DU : "")
+        })) : (YU && dX++, function(UU, XU, cU, yU) {
+          var QU, AU;
           const {
-            kind: PM,
-            code: nM,
-            site: QM,
-            fatal: zM,
-            message: LM,
-            details: mM
-          } = MM;
-          kr((() => {
-            (zM ? console.error : console.warn)(`${YM} ${PM} ${nM} at ${QM}: ${LM}`, mM, null !== rM && void 0 !== rM ? rM : "")
+            kind: FU,
+            code: oU,
+            site: DU,
+            fatal: EU,
+            message: YU,
+            details: NU
+          } = UU;
+          uX((() => {
+            (EU ? console.error : console.warn)(`${MU} ${FU} ${oU} at ${DU}: ${YU}`, NU, null !== XU && void 0 !== XU ? XU : "")
           }));
-          const HM = Er[PM],
-            hM = null !== (jM = null !== (aM = lr[PM]) && void 0 !== aM ? aM : HM) && void 0 !== jM ? jM : null;
-          SM || null === hM || Wr((async () => {
+          const IU = GX[FU],
+            pU = null !== (QU = null !== (AU = kX[FU]) && void 0 !== AU ? AU : IU) && void 0 !== QU ? QU : null;
+          yU || null === pU || OX((async () => {
             const {
-              reportCappedWasmFailure: rM,
-              reportUncappedWasmFailure: OM,
-              reportWasmFailure: SM
-            } = await iM.e(218).then((() => iM(34877))), jM = Gr.has(PM) ? OM : void 0 === HM ? SM : rM, aM = function(MM) {
+              reportCappedWasmFailure: XU,
+              reportUncappedWasmFailure: cU,
+              reportWasmFailure: yU
+            } = await zU.e(208).then((() => zU(34708))), QU = ZX.has(FU) ? cU : void 0 === IU ? yU : XU, AU = function(UU) {
               let {
-                kind: rM,
-                site: iM,
-                fatal: OM,
-                details: SM
-              } = MM;
-              if ("crash" !== rM) return;
+                kind: XU,
+                site: zU,
+                fatal: cU,
+                details: yU
+              } = UU;
+              if ("crash" !== XU) return;
               return {
-                ...SM,
-                site: iM,
-                fatal: String(OM)
+                ...yU,
+                site: zU,
+                fatal: String(cU)
               }
-            }(MM);
-            void 0 === aM ? jM(hM, LM, nM) : jM(hM, LM, nM, aM)
+            }(UU);
+            void 0 === AU ? QU(pU, YU, oU) : QU(pU, YU, oU, AU)
           }));
-          OM && kr((() => {
-            zr(MM, rM)
+          cU && uX((() => {
+            EX(UU, XU)
           }))
-        }(mM, QM, zM, void 0 !== MM.countAs)), PM) {
-        var JM;
-        const rM = null !== (JM = MM.screen) && void 0 !== JM ? JM : {
-          text: (0, sM.f)(mM, !0),
+        }(NU, DU, EU, void 0 !== UU.countAs)), FU) {
+        var aU;
+        const XU = null !== (aU = UU.screen) && void 0 !== aU ? aU : {
+          text: (0, SU.i)(NU, !0),
           reload: !0
         };
-        kr((() => {
-          mr(rM)
+        uX((() => {
+          NX(XU)
         }))
       }
-      return mM
+      return NU
     }
 
-    function Wr(MM) {
-      Zr("counts", (async () => {
+    function OX(UU) {
+      fX("counts", (async () => {
         const {
-          peekVisitSessionId: rM
-        } = await Promise.resolve().then((() => iM(673)));
-        null !== rM() && (await MM(), Cr = !0)
+          peekVisitSessionId: XU
+        } = await Promise.resolve().then((() => zU(702)));
+        null !== XU() && (await UU(), RX = !0)
       }))
     }
 
-    function sr(MM) {
-      gr.has(MM.errorKind) || (gr.add(MM.errorKind), Wr((async () => {
+    function SX(UU) {
+      eX.has(UU.errorKind) || (eX.add(UU.errorKind), OX((async () => {
         const {
-          reportClientError: rM
-        } = await Promise.resolve().then((() => iM(3258)));
-        rM(MM.errorKind, MM.error, MM.code, !0, void 0, MM.fields)
+          reportClientError: XU
+        } = await Promise.resolve().then((() => zU(1835)));
+        XU(UU.errorKind, UU.error, UU.code, !0, void 0, UU.fields)
       })))
     }
 
-    function Dr(MM, rM) {
-      Zr("render_lost", (async () => {
+    function rX(UU, XU) {
+      fX("render_lost", (async () => {
         const [{
-          reportClientError: OM
+          reportClientError: cU
         }, {
-          CAPPED_COUNTS_VISIT_CAP: SM
-        }] = await Promise.all([Promise.resolve().then((() => iM(3258))), iM.e(218).then((() => iM(34877)))]);
-        OM("render_lost", rM, MM, !0, SM)
+          CAPPED_COUNTS_VISIT_CAP: yU
+        }] = await Promise.all([Promise.resolve().then((() => zU(1835))), zU.e(208).then((() => zU(34708)))]);
+        cU("render_lost", XU, UU, !0, yU)
       }))
     }
 
-    function kr(MM) {
+    function uX(UU) {
       try {
-        MM()
-      } catch (rM) {
+        UU()
+      } catch (XU) {
         try {
-          console.warn(`${YM} could not send a report`, rM)
+          console.warn(`${MU} could not send a report`, XU)
         } catch {}
       }
     }
 
-    function Zr(MM, rM) {
+    function fX(UU, XU) {
       try {
-        const iM = rM().catch((rM => {
-          console.warn(`${YM} could not send the report to ${MM}`, rM)
+        const zU = XU().catch((XU => {
+          console.warn(`${MU} could not send the report to ${UU}`, XU)
         })).finally((() => {
-          ur.delete(iM)
+          CX.delete(zU)
         }));
-        ur.add(iM)
-      } catch (iM) {
-        console.warn(`${YM} could not send the report to ${MM}`, iM)
+        CX.add(zU)
+      } catch (zU) {
+        console.warn(`${MU} could not send the report to ${UU}`, zU)
       }
     }
-    async function or(MM) {
-      let rM;
-      (0, zM.j)();
-      const iM = new Promise((iM => {
-        rM = setTimeout(iM, MM)
+    async function iX(UU) {
+      let XU;
+      (0, EU.e)();
+      const zU = new Promise((zU => {
+        XU = setTimeout(zU, UU)
       }));
-      await Promise.race([fr(), iM]), clearTimeout(rM)
+      await Promise.race([HX(), zU]), clearTimeout(XU)
     }
-    async function fr() {
-      if (await Promise.allSettled([...ur]), Cr) try {
+    async function HX() {
+      if (await Promise.allSettled([...CX]), RX) try {
         const {
-          flushClientAnalyticsEvents: MM
-        } = await Promise.resolve().then((() => iM(1568)));
-        await MM()
-      } catch (MM) {
-        console.warn(`${YM} could not send the counts`, MM)
+          flushClientAnalyticsEvents: UU
+        } = await Promise.resolve().then((() => zU(1537)));
+        await UU()
+      } catch (UU) {
+        console.warn(`${MU} could not send the counts`, UU)
       }
     }
-    async function Yr() {
-      for (; ur.size > 0;) await Promise.allSettled([...ur])
+    async function MX() {
+      for (; CX.size > 0;) await Promise.allSettled([...CX])
     }
 
-    function Nr() {
-      br.clear(), wr = 0, Cr = !1, ar = 0, Pr.clear(), tr = 0, gr.clear(), (0, mM.v)()
+    function vX() {
+      WX.clear(), dX = 0, RX = !1, AX = 0, FX.clear(), LX = 0, eX.clear(), (0, NU.w)()
     }
 
-    function Ar(MM) {
-      const rM = "object" === typeof MM && null !== MM ? MM.type : MM;
-      return "string" !== typeof rM ? "sky not named" : `sky ${JSON.stringify(Array.from(rM).slice(0,Sr).join(""))}`
+    function VX(UU) {
+      const XU = "object" === typeof UU && null !== UU ? UU.type : UU;
+      return "string" !== typeof XU ? "sky not named" : `sky ${JSON.stringify(Array.from(XU).slice(0,yX).join(""))}`
     }
 
-    function xr(MM, rM, iM, OM) {
-      tr += rM;
+    function sX(UU, XU, zU, cU) {
+      LX += XU;
       for (const {
-          code: PM,
-          detail: nM
+          code: FU,
+          detail: oU
         }
-        of MM) {
-        var SM, jM, aM;
-        const MM = (0, LM.Yd)(PM),
-          rM = (0, mM.e)(PM, nM),
-          QM = null === OM || void 0 === OM ? void 0 : OM(PM, nM),
-          zM = void 0 !== (null === rM || void 0 === rM ? void 0 : rM.gpuDetails),
-          hM = zM ? null === (SM = (0, lM.y)()) || void 0 === SM ? void 0 : SM.renderer : void 0,
-          JM = zM ? ` ${(0,mM.q)()}` : "",
-          dM = Array.from([hM && `gpu ${(0,HM.b)(hM)}`, QM].filter(Boolean).join("; ")).slice(0, Or).join(""),
-          yM = `core error ${MM}${null!==(jM=null===rM||void 0===rM?void 0:rM.words)&&void 0!==jM?jM:""}${JM}${dM?`: ${dM}`:""}`,
-          EM = {
-            errorCode: String(PM),
-            detail: String(nM),
-            droppedBefore: String(tr),
-            wasmBuild: iM.wasm,
-            clientVersion: iM.client,
-            ...null === rM || void 0 === rM ? void 0 : rM.gpuDetails,
-            ...Fr(PM, nM)
+        of UU) {
+        var yU, QU, AU;
+        const UU = (0, YU.ke)(FU),
+          XU = (0, NU.d)(FU, oU),
+          DU = null === cU || void 0 === cU ? void 0 : cU(FU, oU),
+          EU = void 0 !== (null === XU || void 0 === XU ? void 0 : XU.gpuDetails),
+          pU = EU ? null === (yU = (0, kU.A)()) || void 0 === yU ? void 0 : yU.renderer : void 0,
+          aU = EU ? ` ${(0,NU.n)()}` : "",
+          tU = Array.from([pU && `gpu ${(0,IU.b)(pU)}`, DU].filter(Boolean).join("; ")).slice(0, cX).join(""),
+          gU = `core error ${UU}${null!==(QU=null===XU||void 0===XU?void 0:XU.words)&&void 0!==QU?QU:""}${aU}${tU?`: ${tU}`:""}`,
+          GU = {
+            errorCode: String(FU),
+            detail: String(oU),
+            droppedBefore: String(LX),
+            wasmBuild: zU.wasm,
+            clientVersion: zU.client,
+            ...null === XU || void 0 === XU ? void 0 : XU.gpuDetails,
+            ...mX(FU, oU)
           };
-        null !== rM && (0, mM.u)(rM) ? kr((() => {
-          console.warn(`${YM} coreError CORE-${MM}: ${yM} (not sent: the session's render warnings of its kind went)`, EM)
-        })) : vr(PM) ? kr((() => {
-          console.warn(`${YM} coreError CORE-${MM}: ${yM} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, EM)
-        })) : pr({
-          kind: Xr(PM, nM),
-          code: `CORE-${MM}`,
-          site: NM,
+        null !== XU && (0, NU.s)(XU) ? uX((() => {
+          console.warn(`${MU} coreError CORE-${UU}: ${gU} (not sent: the session's render warnings of its kind went)`, GU)
+        })) : nX(FU) ? uX((() => {
+          console.warn(`${MU} coreError CORE-${UU}: ${gU} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, GU)
+        })) : qX({
+          kind: xX(FU, oU),
+          code: `CORE-${UU}`,
+          site: vU,
           fatal: !1,
-          message: yM,
-          details: EM,
-          instance: null !== (aM = null === rM || void 0 === rM ? void 0 : rM.instance) && void 0 !== aM ? aM : Br(PM, nM)
+          message: gU,
+          details: GU,
+          instance: null !== (AU = null === XU || void 0 === XU ? void 0 : XU.instance) && void 0 !== AU ? AU : lX(FU, oU)
         })
       }
     }
 
-    function vr(MM) {
-      if (MM !== LM.H.AudioUnknownSound && MM !== LM.H.PresentationClipUnplayable) return !1;
+    function nX(UU) {
+      if (UU !== YU.K.AudioUnknownSound && UU !== YU.K.PresentationClipUnplayable) return !1;
       const {
-        gameNameWithVariation: rM,
-        lobbyName: iM
-      } = (0, jM.e)();
-      return null !== rM && (!!(0, OM.m)(rM) || MM === LM.H.AudioUnknownSound && (0, SM.f)(rM, iM))
+        gameNameWithVariation: XU,
+        lobbyName: zU
+      } = (0, QU.b)();
+      return null !== XU && (!!(0, cU.l)(XU) || UU === YU.K.AudioUnknownSound && (0, yU.g)(XU, zU))
     }
 
-    function Fr(MM, rM) {
-      if (MM !== LM.H.RenderDeviceLost) return;
-      const iM = rM >>> LM.P.LINKS_IN_FLIGHT_SHIFT & LM.P.LINKS_IN_FLIGHT_MAX,
-        OM = rM >>> LM.P.OLDEST_LINK_SHIFT & LM.P.OLDEST_LINK_MAX;
+    function mX(UU, XU) {
+      if (UU !== YU.K.RenderDeviceLost) return;
+      const zU = XU >>> YU.Q.LINKS_IN_FLIGHT_SHIFT & YU.Q.LINKS_IN_FLIGHT_MAX,
+        cU = XU >>> YU.Q.OLDEST_LINK_SHIFT & YU.Q.OLDEST_LINK_MAX;
       return {
-        linksInFlight: String(iM),
-        oldestLinkMs: String(OM * LM.P.OLDEST_LINK_UNIT_MS)
+        linksInFlight: String(zU),
+        oldestLinkMs: String(cU * YU.Q.OLDEST_LINK_UNIT_MS)
       }
     }
 
-    function Br(MM, rM) {
-      return MM === LM.H.RenderDeviceLost && 0 !== (rM & LM.P.RESTORE_UNHELD) ? "restoreUnheld" : void 0
+    function lX(UU, XU) {
+      return UU === YU.K.RenderDeviceLost && 0 !== (XU & YU.Q.RESTORE_UNHELD) ? "restoreUnheld" : void 0
     }
 
-    function Xr(MM, rM) {
-      return MM === LM.H.JobsHeapGaveUp ? "meshHeap" : (0, mM.m)(MM, rM) ? "linksReadAfterView" : (0, mM.i)(MM, rM) ? "linkCensus" : "coreError"
+    function xX(UU, XU) {
+      return UU === YU.K.JobsHeapGaveUp ? "meshHeap" : (0, NU.j)(UU, XU) ? "linksReadAfterView" : (0, NU.f)(UU, XU) ? "linkCensus" : "coreError"
     }
 
-    function Ir(MM) {
-      return (0, kM.k)(MM instanceof ZM.e ? MM.trap : MM, gM.I, gM.ab)
+    function JX(UU) {
+      return (0, uU.i)(UU instanceof fU.c ? UU.trap : UU, eU.G, eU.jb)
     }
-    const Kr = "declined=js";
+    const jX = "declined=js";
 
-    function qr(MM) {
-      return MM ? {
-        labels: [Kr],
+    function KX(UU) {
+      return UU ? {
+        labels: [jX],
         details: {
           declined: "js"
         }
@@ -1234,203 +1149,243 @@ export const modules = {
       }
     }
 
-    function Tr(MM, rM, iM) {
-      return cr(MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function bX(UU, XU, zU) {
+      return hX(UU, XU, zU, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function Vr(MM, rM, iM) {
-      return cr(MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function TX(UU, XU, zU) {
+      return hX(UU, XU, zU, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function cr(MM, rM, iM, OM, SM) {
+    function hX(UU, XU, zU, cU, yU) {
       let {
-        memoryDetails: jM = {},
-        declined: aM = !1
-      } = OM;
+        memoryDetails: QU = {},
+        declined: AU = !1,
+        memoryStep: FU
+      } = cU;
       const {
-        code: PM,
-        details: nM,
-        message: QM
-      } = (0, CM.O)(MM, rM), zM = [];
-      Object.assign(nM, (0, oM.f)(MM.error)), null !== iM && (nM.trapKind = iM.kind, null !== iM.panic && (nM.panic = (0, kM.i)(iM.panic)), iM.refusedBytes > 0 && (nM.refusedAllocation = String(iM.refusedBytes)), zM.push((0, kM.o)(iM.kind, iM.refusedBytes)));
-      const LM = qr(aM);
-      return pr({
+        code: oU,
+        details: DU,
+        message: EU
+      } = (0, RU.L)(UU, XU), YU = [];
+      Object.assign(DU, (0, iU.h)(UU.error)), null !== zU && (DU.trapKind = zU.kind, null !== zU.panic && (DU.panic = (0, uU.e)(zU.panic)), zU.refusedBytes > 0 && (DU.refusedAllocation = String(zU.refusedBytes)), YU.push((0, uU.l)(zU.kind, zU.refusedBytes))), void 0 !== FU && YU.push(`memory=${FU}`);
+      const NU = KX(AU);
+      return qX({
         kind: "crash",
-        code: PM,
-        site: MM.site,
-        fatal: SM,
-        message: [...zM, ...LM.labels, QM].join("; "),
+        code: oU,
+        site: UU.site,
+        fatal: yU,
+        message: [...YU, ...NU.labels, EU].join("; "),
         details: {
-          ...nM,
-          ...LM.details,
-          ...jM
+          ...DU,
+          ...NU.details,
+          ...QU,
+          ...void 0 === FU ? {} : {
+            memoryStep: FU
+          }
         },
-        error: MM.error
+        error: UU.error
       })
     }
 
-    function Mi(MM, rM, iM) {
-      return pr({
+    function Uz(UU, XU, zU) {
+      return qX({
         kind: "unsupported",
-        code: rM,
-        site: AM,
+        code: XU,
+        site: VU,
         fatal: !0,
-        message: iM,
+        message: zU,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          cause: MM,
-          status: rM
+          cause: UU,
+          status: XU
         },
         screen: {
-          text: (0, sM.p)(MM),
-          reload: "download" === MM
+          text: (0, SU.v)(UU),
+          reload: "download" === UU
         }
       })
     }
-    const ri = {
+    const Xz = {
       unsupported: "unsupported_js_fallback",
       blockedAfterLoss: "blocked_after_loss",
       noContext: "no_context_js_fallback"
     };
 
-    function ii(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      return pr({
+    function zz(UU, XU, zU) {
+      let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      return qX({
         kind: "unsupportedFallback",
-        code: ri[rM],
-        site: AM,
+        code: Xz[XU],
+        site: VU,
         fatal: !1,
-        message: iM,
+        message: zU,
         details: {
-          ...OM,
-          cause: MM,
+          ...cU,
+          cause: UU,
           status: "unsupported",
-          decline: rM,
+          decline: XU,
           fallback: "js"
         }
       })
     }
 
-    function Oi(MM, rM, iM) {
-      return pr({
+    function cz(UU, XU, zU) {
+      return qX({
         kind: "recovered",
-        code: "reprobed" === MM ? "no_backend_reprobed" : "no_backend_wasm_reload",
-        site: AM,
+        code: "reprobed" === UU ? "no_backend_reprobed" : "no_backend_wasm_reload",
+        site: VU,
         fatal: !1,
-        message: iM,
+        message: zU,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          decline: rM,
-          step: MM
+          decline: XU,
+          step: UU
+        }
+      })
+    }
+    const yz = 9;
+
+    function Qz(UU) {
+      const XU = "recovered" === UU.outcome ? "recovered" : "gave_up",
+        zU = "load" === UU.step ? `wasm_load_${XU}${UU.oom?"_oom":""}` : `no_context_${XU}`;
+      return "recovered" === UU.outcome ? `${zU}_t${Math.min(UU.tries,yz)}` : "load" === UU.step ? `${zU}_${UU.stage}` : zU
+    }
+
+    function Az(UU) {
+      const {
+        step: XU,
+        outcome: zU,
+        tries: cU,
+        detail: yU,
+        details: QU = {}
+      } = UU, AU = "load" === UU.step ? {
+        stage: UU.stage,
+        ...UU.oom ? {
+          oom: "true"
+        } : {}
+      } : {};
+      return qX({
+        kind: "recovered",
+        code: Qz(UU),
+        site: VU,
+        fatal: !1,
+        message: yU,
+        details: {
+          ...QU,
+          step: XU,
+          outcome: zU,
+          tries: String(cU),
+          ...AU
         }
       })
     }
 
-    function Si(MM) {
-      return pr({
+    function Fz(UU) {
+      return qX({
         kind: "recovered",
         code: "WEBGPU-unknownLimits",
-        site: ir,
+        site: zX,
         fatal: !1,
         message: "WebGPU dropped required limits the browser doesn't name",
         details: {
-          limits: MM.join(",")
+          limits: UU.join(",")
         }
       })
     }
-    const ji = "reload=wasm";
+    const oz = "reload=wasm";
 
-    function ai(MM, rM, iM, OM) {
-      const SM = qr("declined" === OM),
-        jM = "wasmReload" === OM ? [ji] : SM.labels;
-      return pr({
+    function Dz(UU, XU, zU, cU) {
+      const yU = KX("declined" === cU),
+        QU = "wasmReload" === cU ? [oz] : yU.labels;
+      return qX({
         kind: "unsupported",
-        code: rM,
-        site: AM,
+        code: XU,
+        site: VU,
         fatal: !1,
-        message: [...jM, iM].join("; "),
+        message: [...QU, zU].join("; "),
         details: {
-          cause: MM,
-          status: rM,
-          fallback: "wasmReload" === OM ? "wasmReload" : "js",
-          ...SM.details
+          cause: UU,
+          status: XU,
+          fallback: "wasmReload" === cU ? "wasmReload" : "js",
+          ...yU.details
         }
       })
     }
 
-    function Pi() {
+    function Ez() {
       const {
-        code: MM,
-        message: rM
-      } = DM.d;
-      return pr({
+        code: UU,
+        message: XU
+      } = rU.b;
+      return qX({
         kind: "unstreamedLoad",
-        code: MM,
-        site: AM,
+        code: UU,
+        site: VU,
         fatal: !1,
-        message: rM
+        message: XU
       })
     }
-    class ni extends Error {
+    class Yz extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function Qi(MM) {
-      return MM instanceof bM.n ? 0 === MM.code ? "JOIN-matchmake" : `JOIN-${MM.code}` : MM instanceof bM.d ? 0 === MM.code ? `JOIN-${MM.stage}` : `JOIN-${MM.stage}-${MM.code}` : MM instanceof eM.b ? "JOIN-gameCode" : MM instanceof ni ? "JOIN-turnstilePage" : MM instanceof bM.w ? "JOIN-trafficCheck" : MM instanceof UM.i ? "JOIN-timeout" : "JOIN-network"
+    function Nz(UU) {
+      return UU instanceof WU.m ? 0 === UU.code ? "JOIN-matchmake" : `JOIN-${UU.code}` : UU instanceof WU.c ? 0 === UU.code ? `JOIN-${UU.stage}` : `JOIN-${UU.stage}-${UU.code}` : UU instanceof PU.b ? "JOIN-gameCode" : UU instanceof Yz ? "JOIN-turnstilePage" : UU instanceof WU.s ? "JOIN-trafficCheck" : UU instanceof BU.c ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function zi(MM, rM) {
-      const iM = (0, oM.k)(MM),
-        OM = {
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function Iz(UU, XU) {
+      const zU = (0, iU.l)(UU),
+        cU = {
+          wasmBuild: XU.wasm,
+          clientVersion: XU.client
         },
-        SM = MM instanceof ni ? {
-          text: (0, sM.j)(),
+        yU = UU instanceof Yz ? {
+          text: (0, SU.r)(),
           reload: !1
         } : void 0,
-        jM = (0, wM.e)(MM),
-        aM = "expected" !== jM;
-      return pr({
+        QU = (0, dU.d)(UU),
+        AU = "expected" !== QU;
+      return qX({
         kind: "join",
-        code: Qi(MM),
-        site: xM,
+        code: Nz(UU),
+        site: sU,
         fatal: !0,
-        message: iM,
-        details: OM,
-        error: MM,
-        screen: SM,
-        toTransport: aM,
-        instance: jM
+        message: zU,
+        details: cU,
+        error: UU,
+        screen: yU,
+        toTransport: AU,
+        instance: QU
       })
     }
 
-    function Li(MM, rM, iM) {
-      var OM;
-      const SM = (0, wM.e)(MM),
-        jM = {
-          cause: (MM instanceof bM.d || MM instanceof bM.n) && null !== (OM = MM.serverText) && void 0 !== OM ? OM : "",
-          sinceJoinStart: (0, EM.c)(iM.sinceJoinStartMs),
-          game: iM.game,
-          ...(0, EM.h)(),
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function pz(UU, XU, zU) {
+      var cU;
+      const yU = (0, dU.d)(UU),
+        QU = {
+          cause: (UU instanceof WU.c || UU instanceof WU.m) && null !== (cU = UU.serverText) && void 0 !== cU ? cU : "",
+          sinceJoinStart: (0, GU.b)(zU.sinceJoinStartMs),
+          game: zU.game,
+          ...(0, GU.j)(),
+          wasmBuild: XU.wasm,
+          clientVersion: XU.client
         };
-      return pr({
+      return qX({
         kind: "pageJoin",
-        code: Qi(MM),
-        site: xM,
+        code: Nz(UU),
+        site: sU,
         fatal: !1,
-        message: (0, oM.k)(MM),
-        details: jM,
-        error: MM,
-        toTransport: "unrecognised" === SM,
-        instance: SM
+        message: (0, iU.l)(UU),
+        details: QU,
+        error: UU,
+        toTransport: "unrecognised" === yU,
+        instance: yU
       })
     }
-    const mi = {
+    const az = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1449,699 +1404,683 @@ export const modules = {
       }
     };
 
-    function Hi(MM, rM) {
+    function tz(UU, XU) {
       let {
-        unused: iM,
-        answered: OM,
-        heldMs: SM
-      } = MM;
+        unused: zU,
+        answered: cU,
+        heldMs: yU
+      } = UU;
       const {
-        code: jM,
-        message: aM
-      } = mi[iM], PM = {
-        unused: iM,
-        answered: String(OM),
-        heldMs: String(SM),
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+        code: QU,
+        message: AU
+      } = az[zU], FU = {
+        unused: zU,
+        answered: String(cU),
+        heldMs: String(yU),
+        wasmBuild: XU.wasm,
+        clientVersion: XU.client
       };
-      return pr({
+      return qX({
         kind: "seat",
-        code: jM,
-        site: xM,
+        code: QU,
+        site: sU,
         fatal: !1,
-        message: aM,
-        details: PM
+        message: AU,
+        details: FU
       })
     }
 
-    function Ji(MM, rM, iM) {
-      var OM;
-      let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (OM = MM.name) && void 0 !== OM ? OM : String(MM.code);
-      const jM = {
-          closeCode: String(MM.code),
-          recognised: String(null !== MM.name),
-          closeReason: iM.closeReason,
-          sinceJoined: (0, EM.c)(iM.sinceJoinedMs),
-          game: iM.game,
-          ...(0, EM.h)(),
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function gz(UU, XU, zU) {
+      var cU;
+      let yU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (cU = UU.name) && void 0 !== cU ? cU : String(UU.code);
+      const QU = {
+          closeCode: String(UU.code),
+          recognised: String(null !== UU.name),
+          closeReason: zU.closeReason,
+          sinceJoined: (0, GU.b)(zU.sinceJoinedMs),
+          game: zU.game,
+          ...(0, GU.j)(),
+          wasmBuild: XU.wasm,
+          clientVersion: XU.client
         },
-        aM = null === MM.name && !(0, EM.d)(MM.code);
-      return pr({
+        AU = null === UU.name && !(0, GU.c)(UU.code);
+      return qX({
         kind: "disconnect",
-        code: SM,
-        site: vM,
+        code: yU,
+        site: nU,
         fatal: !1,
         message: "Left room",
-        details: jM,
-        toTransport: aM
+        details: QU,
+        toTransport: AU
       })
     }
 
-    function di(MM, rM) {
-      const iM = {
-        ...(0, hM.i)(MM),
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function kz(UU, XU) {
+      const zU = {
+        ...(0, pU.m)(UU),
+        wasmBuild: XU.wasm,
+        clientVersion: XU.client
       };
-      return pr({
+      return qX({
         kind: "disconnect",
-        code: `reconnect-${MM.reason}`,
-        site: xM,
+        code: `reconnect-${UU.reason}`,
+        site: sU,
         fatal: !1,
         message: "Reconnect failed",
-        details: iM
+        details: zU
       })
     }
 
-    function yi(MM) {
-      return MM.error instanceof uM.e ? `MODEL-${MM.error.status}` : MM.error instanceof RM.h ? "MODEL-ring" : "MODEL-network"
+    function Gz(UU) {
+      return UU.error instanceof CU.f ? `MODEL-${UU.error.status}` : UU.error instanceof wU.l ? "MODEL-ring" : "MODEL-network"
     }
 
-    function li(MM, rM) {
-      const iM = yi(MM),
-        OM = `model file ${MM.file} ${MM.startup?"(startup) ":""}could not load`,
-        SM = {
-          file: String(MM.file),
-          url: MM.url,
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function Bz(UU, XU) {
+      const zU = Gz(UU),
+        cU = `model file ${UU.file} ${UU.startup?"(startup) ":""}could not load`,
+        yU = {
+          file: String(UU.file),
+          url: UU.url,
+          wasmBuild: XU.wasm,
+          clientVersion: XU.client
         };
-      return pr({
-        kind: MM.startup ? "model" : "modelLate",
-        code: iM,
-        site: FM,
-        fatal: MM.startup,
-        message: OM,
-        details: SM,
-        error: MM.error
+      return qX({
+        kind: UU.startup ? "model" : "modelLate",
+        code: zU,
+        site: mU,
+        fatal: UU.startup,
+        message: cU,
+        details: yU,
+        error: UU.error
       })
     }
 
-    function Ei(MM, rM) {
-      const iM = {
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function Zz(UU, XU) {
+      const zU = {
+        wasmBuild: XU.wasm,
+        clientVersion: XU.client
       };
-      return pr({
+      return qX({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: BM,
+        site: lU,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: iM,
-        error: MM
+        details: zU,
+        error: UU
       })
     }
 
-    function Ui(MM, rM, iM) {
-      const OM = {
-        delayMs: String(rM),
-        wasmBuild: iM.wasm,
-        clientVersion: iM.client
+    function Rz(UU, XU, zU) {
+      const cU = {
+        delayMs: String(XU),
+        wasmBuild: zU.wasm,
+        clientVersion: zU.client
       };
-      MM instanceof uM.e && (OM.status = String(MM.status));
-      return pr({
+      UU instanceof CU.f && (cU.status = String(UU.status));
+      return qX({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: BM,
+        site: lU,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: OM,
-        error: MM
+        details: cU,
+        error: UU
       })
     }
 
-    function Gi(MM, rM) {
-      const iM = {
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function Pz(UU, XU) {
+      const zU = {
+        wasmBuild: XU.wasm,
+        clientVersion: XU.client
       };
-      return pr({
-        kind: "recovered",
-        code: "CORE-dracoDecoder",
-        site: BM,
-        fatal: !1,
-        message: "the Draco decoder did not load: the Draco files waiting on it failed",
-        details: iM,
-        error: MM
-      })
-    }
-
-    function Ci(MM, rM) {
-      const iM = {
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
-      };
-      return pr({
+      return qX({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: CM.I,
+        site: RU.J,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: iM,
-        error: MM
+        details: zU,
+        error: UU
       })
     }
 
-    function ei(MM, rM) {
-      const iM = {
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function Wz(UU, XU) {
+      const zU = {
+        wasmBuild: XU.wasm,
+        clientVersion: XU.client
       };
-      return pr({
+      return qX({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: VM,
+        site: TU,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: iM,
-        error: MM
+        details: zU,
+        error: UU
       })
     }
 
-    function bi(MM, rM, iM, OM) {
-      const SM = {
-        wasmBuild: OM.wasm,
-        clientVersion: OM.client
+    function dz(UU, XU, zU, cU) {
+      const yU = {
+        wasmBuild: cU.wasm,
+        clientVersion: cU.client
       };
-      return pr({
+      return qX({
         kind: "texturePackKeptOut",
-        code: (0, QM.e)("wasm", MM, rM),
-        site: cM,
+        code: (0, DU.d)("wasm", UU, XU),
+        site: hU,
         fatal: !1,
-        message: rM.detail,
-        details: SM,
-        error: iM
+        message: XU.detail,
+        details: yU,
+        error: zU
       })
     }
 
-    function wi(MM, rM) {
+    function Lz(UU, XU) {
       const {
-        frames: iM,
-        acks: OM,
-        mask: SM,
-        outcome: jM
-      } = MM, aM = {
-        frames: String(iM),
-        acks: String(OM),
-        mask: String(SM),
-        outcome: null !== jM && void 0 !== jM ? jM : "resynced",
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+        frames: zU,
+        acks: cU,
+        mask: yU,
+        outcome: QU
+      } = UU, AU = {
+        frames: String(zU),
+        acks: String(cU),
+        mask: String(yU),
+        outcome: null !== QU && void 0 !== QU ? QU : "resynced",
+        wasmBuild: XU.wasm,
+        clientVersion: XU.client
       };
-      return pr({
+      return qX({
         kind: "recovered",
-        code: "rejoined" === jM ? "CORE-eventOverflowRejoin" : "failed" === jM ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: qM,
+        code: "rejoined" === QU ? "CORE-eventOverflowRejoin" : "failed" === QU ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: KU,
         fatal: !1,
-        message: `the event buffer refused records in ${iM} frames`,
-        details: aM
+        message: `the event buffer refused records in ${zU} frames`,
+        details: AU
       })
     }
 
-    function ti(MM, rM, iM) {
-      return pr({
+    function ez(UU, XU, zU) {
+      return qX({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: MM,
+        site: UU,
         fatal: !1,
-        message: `a ${MM} worker was lost`,
+        message: `a ${UU} worker was lost`,
         details: {
-          reason: rM,
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+          reason: XU,
+          wasmBuild: zU.wasm,
+          clientVersion: zU.client
         }
       })
     }
 
-    function gi(MM, rM, iM, OM) {
-      const SM = {
-          reason: MM,
-          pageBuild: OM.build,
-          pageAgeMin: String(Math.floor(OM.ageMs / 6e4)),
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+    function Cz(UU, XU, zU, cU) {
+      const yU = {
+          reason: UU,
+          pageBuild: cU.build,
+          pageAgeMin: String(Math.floor(cU.ageMs / 6e4)),
+          wasmBuild: zU.wasm,
+          clientVersion: zU.client
         },
-        jM = rM ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
-      return pr({
+        QU = XU ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
+      return qX({
         kind: "recovered",
         code: "CORE-worldgenWorkerLost",
-        site: CM.I,
+        site: RU.J,
         fatal: !1,
-        message: jM,
-        details: SM
+        message: QU,
+        details: yU
       })
     }
 
-    function ui(MM, rM, iM) {
-      const OM = {
-        wasmBuild: iM.wasm,
-        clientVersion: iM.client
+    function wz(UU, XU, zU) {
+      const cU = {
+        wasmBuild: zU.wasm,
+        clientVersion: zU.client
       };
-      return pr({
+      return qX({
         kind: "recovered",
-        code: MM,
-        site: CM.t,
+        code: UU,
+        site: RU.r,
         fatal: !1,
-        message: rM,
-        details: OM
+        message: XU,
+        details: cU
       })
     }
 
-    function Ri(MM, rM) {
-      const iM = {
-        lastReason: MM,
-        wasmBuild: rM.wasm,
-        clientVersion: rM.client
+    function qz(UU, XU) {
+      const zU = {
+        lastReason: UU,
+        wasmBuild: XU.wasm,
+        clientVersion: XU.client
       };
-      return pr({
+      return qX({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: CM.I,
+        site: RU.J,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: iM
+        details: zU
       })
     }
 
-    function Wi(MM, rM, iM) {
-      return pr({
+    function Oz(UU, XU, zU) {
+      return qX({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: CM.p,
+        site: RU.o,
         fatal: !1,
-        message: `${(0,tM.E)(MM)}: the session shed load`,
+        message: `${(0,LU.z)(UU)}: the session shed load`,
         details: {
-          cause: MM,
-          ...rM,
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+          cause: UU,
+          ...XU,
+          wasmBuild: zU.wasm,
+          clientVersion: zU.client
         }
       })
     }
 
-    function si(MM, rM, iM, OM) {
-      var SM, jM;
-      const aM = (0, mM.r)(),
-        PM = {
-          game: MM,
-          cause: rM,
-          census: null === iM ? "none" : JSON.stringify(iM),
-          gpu: null !== (SM = null === (jM = (0, lM.y)()) || void 0 === jM ? void 0 : jM.renderer) && void 0 !== SM ? SM : "",
-          renderWarned: String(aM),
-          browser: (0, mM.q)(),
-          wasmBuild: OM.wasm,
-          clientVersion: OM.client
+    function Sz(UU, XU, zU, cU) {
+      var yU, QU;
+      const AU = (0, NU.q)(),
+        FU = {
+          game: UU,
+          cause: XU,
+          census: null === zU ? "none" : JSON.stringify(zU),
+          gpu: null !== (yU = null === (QU = (0, kU.A)()) || void 0 === QU ? void 0 : QU.renderer) && void 0 !== yU ? yU : "",
+          renderWarned: String(AU),
+          browser: (0, NU.n)(),
+          wasmBuild: cU.wasm,
+          clientVersion: cU.client
         },
-        nM = `first view drew no whole terrain in ${pM.c/1e3} s, ${rM}${aM?", render warned":""}`;
-      return pr({
+        oU = `first view drew no whole terrain in ${qU.d/1e3} s, ${XU}${AU?", render warned":""}`;
+      return qX({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: Mr,
+        site: UX,
         fatal: !1,
-        message: nM,
-        details: PM
+        message: oU,
+        details: FU
       })
     }
 
-    function Di(MM, rM, iM, OM, SM) {
-      const jM = (0, JM.e)(),
-        aM = (0, JM.d)(MM, rM, iM, OM, jM),
-        PM = {
-          gpuModel: jM,
-          wasmBuild: SM.wasm,
-          clientVersion: SM.client
+    function rz(UU, XU, zU, cU, yU) {
+      const QU = (0, aU.g)(),
+        AU = (0, aU.e)(UU, XU, zU, cU, QU),
+        FU = {
+          gpuModel: QU,
+          wasmBuild: yU.wasm,
+          clientVersion: yU.client
         };
-      return pr({
+      return qX({
         kind: "mainStall",
         code: "CORE-mainStall",
-        site: rr,
+        site: XX,
         fatal: !1,
-        message: aM,
-        details: PM
+        message: AU,
+        details: FU
       })
     }
 
-    function ki(MM, rM, iM) {
-      return pr({
+    function uz(UU, XU, zU) {
+      return qX({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: MM,
+        site: UU,
         fatal: !1,
-        message: `a ${MM} worker did not start`,
+        message: `a ${UU} worker did not start`,
         details: {
-          waitedMs: String(Math.round(rM)),
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+          waitedMs: String(Math.round(XU)),
+          wasmBuild: zU.wasm,
+          clientVersion: zU.client
         }
       })
     }
 
-    function Zi(MM, rM, iM) {
-      return pr({
+    function fz(UU, XU, zU) {
+      return qX({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: MM,
+        site: UU,
         fatal: !1,
-        message: `the replay's ${MM} failed`,
+        message: `the replay's ${UU} failed`,
         details: {
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+          wasmBuild: zU.wasm,
+          clientVersion: zU.client
         },
-        error: rM
+        error: XU
       })
     }
-    const oi = {
+    const iz = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function fi(MM) {
-      if (0 === MM) return "none";
-      const rM = [60, 600, 3600].find((rM => MM < rM));
-      return void 0 === rM ? "ge3600" : `lt${rM}`
+    function Hz(UU) {
+      if (0 === UU) return "none";
+      const XU = [60, 600, 3600].find((XU => UU < XU));
+      return void 0 === XU ? "ge3600" : `lt${XU}`
     }
 
-    function Yi(MM, rM) {
-      return null === MM ? "unbound" : (0, dM.i)(rM - MM)
+    function Mz(UU, XU) {
+      return null === UU ? "unbound" : (0, tU.k)(XU - UU)
     }
 
-    function Ni(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
-      return [0 !== (MM & LM.P.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (MM & LM.P.LINKS_RUNNING) ? "links running" : "", `frames ${(0,HM.b)(fi(MM&LM.P.FRAMES))}`, `up ${(0,HM.b)(Yi(rM,iM))}`].filter(Boolean).join(", ")
+    function vz(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
+      return [0 !== (UU & YU.Q.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (UU & YU.Q.LINKS_RUNNING) ? "links running" : "", `frames ${(0,IU.b)(Hz(UU&YU.Q.FRAMES))}`, `up ${(0,IU.b)(Mz(XU,zU))}`].filter(Boolean).join(", ")
     }
 
-    function Ai(MM, rM, iM) {
-      const OM = "lost" === rM && void 0 !== iM ? ` (${iM})` : "";
-      return `the ${MM} ${oi[rM]}${OM}`
+    function Vz(UU, XU, zU) {
+      const cU = "lost" === XU && void 0 !== zU ? ` (${zU})` : "";
+      return `the ${UU} ${iz[XU]}${cU}`
     }
-    const xi = {
+    const sz = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
 
-    function vi(MM, rM, iM, OM) {
-      var SM;
+    function nz(UU, XU, zU, cU) {
+      var yU;
       let {
-        restoreLost: jM = !1,
-        adapterRemembered: aM = !1
-      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, PM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
-      const nM = null === iM || void 0 === iM ? void 0 : iM.message,
-        QM = "pipeline_failed" === rM ? rM : iM instanceof GM.h ? "timeout" : (0, dM.s)("frames_refused" === rM, "string" === typeof nM ? nM : ""),
-        zM = null === OM.boundAtMs ? "unbound" : `up${(0,dM.e)(PM-OM.boundAtMs)}`,
-        LM = null === OM.adapter ? "no adapter" : (0, dM.o)(OM.adapter),
-        mM = `${!0===OM.indirectHangs?" ih":""}${!0===OM.restoresSkipped?" nr":""}${jM?" rl":""}${aM?" ar":""}`,
-        HM = `${QM} ${(0,GM.k)()?"hidden":"visible"} ${zM}${mM} ${LM}`;
-      if ("webgpu" !== MM || "lost" !== rM && "frames_refused" !== rM) return {
-        detail: HM,
+        restoreLost: QU = !1,
+        adapterRemembered: AU = !1
+      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, FU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
+      const oU = null === zU || void 0 === zU ? void 0 : zU.message,
+        DU = "pipeline_failed" === XU ? XU : zU instanceof ZU.g ? "timeout" : (0, tU.r)("frames_refused" === XU, "string" === typeof oU ? oU : ""),
+        EU = null === cU.boundAtMs ? "unbound" : `up${(0,tU.h)(FU-cU.boundAtMs)}`,
+        YU = null === cU.adapter ? "no adapter" : (0, tU.q)(cU.adapter),
+        NU = `${!0===cU.indirectHangs?" ih":""}${!0===cU.restoresSkipped?" nr":""}${QU?" rl":""}${AU?" ar":""}`,
+        IU = `${DU} ${(0,ZU.j)()?"hidden":"visible"} ${EU}${NU} ${YU}`;
+      if ("webgpu" !== UU || "lost" !== XU && "frames_refused" !== XU) return {
+        detail: IU,
         count: void 0
       };
       return {
-        detail: HM,
+        detail: IU,
         count: {
           errorKind: "render_lost",
-          error: new Error(HM),
-          code: (0, dM.w)(QM, null !== (SM = OM.boundAtMs) && void 0 !== SM ? SM : PM, PM).code,
+          error: new Error(IU),
+          code: (0, tU.v)(DU, null !== (yU = cU.boundAtMs) && void 0 !== yU ? yU : FU, FU).code,
           fields: {
-            renderBackend: fM.b.webgpu
+            renderBackend: HU.e.webgpu
           }
         }
       }
     }
 
-    function Fi(MM, rM, iM) {
+    function mz(UU, XU, zU) {
       const {
-        count: OM
-      } = vi("webgpu", MM, rM, iM);
-      void 0 !== OM && sr(OM)
+        count: cU
+      } = nz("webgpu", UU, XU, zU);
+      void 0 !== cU && SX(cU)
     }
-    const Bi = {
+    const lz = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function Xi(MM) {
-      var rM;
-      return null !== (rM = MM instanceof Error ? MM.reason : void 0) && void 0 !== rM ? rM : ""
+    function xz(UU) {
+      var XU;
+      return null !== (XU = UU instanceof Error ? UU.reason : void 0) && void 0 !== XU ? XU : ""
     }
 
-    function Ii(MM, rM, OM) {
-      var SM, jM, aM, nM, QM;
+    function Jz(UU, XU, cU) {
+      var yU, QU, AU, oU, DU;
       let {
-        from: zM,
-        cause: LM = "lost",
-        restoreLost: hM = !1,
-        adapterRemembered: JM = !1,
-        error: lM,
-        context: EM = xi,
-        session: UM = Bi
-      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, GM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
+        from: EU,
+        cause: YU = "lost",
+        restoreLost: pU = !1,
+        adapterRemembered: aU = !1,
+        error: kU,
+        context: GU = sz,
+        session: BU = lz
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, ZU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
       const {
-        detail: CM,
-        count: eM
-      } = vi(MM, LM, lM, EM, {
-        restoreLost: hM,
-        adapterRemembered: JM
-      }, GM), bM = {
-        reloadFrom: null !== zM && void 0 !== zM ? zM : "",
-        losses: String(rM),
-        cause: LM,
-        detail: CM,
-        vendor: null !== (SM = null === (jM = EM.adapter) || void 0 === jM ? void 0 : jM.vendor) && void 0 !== SM ? SM : "",
-        architecture: null !== (aM = null === (nM = EM.adapter) || void 0 === nM ? void 0 : nM.architecture) && void 0 !== aM ? aM : "",
-        indirectHangs: String(EM.indirectHangs),
-        restoresSkipped: String(EM.restoresSkipped),
-        restoreLost: String(hM),
-        adapterRemembered: String(JM),
-        lossReason: Xi(lM),
-        samples: String(UM.samples),
-        sunShadows: String(UM.sunShadows),
-        renderDistance: String(UM.renderDistance),
-        gpuFamily: null !== (QM = (0, PM.e)()) && void 0 !== QM ? QM : "",
-        browser: (0, mM.q)(),
-        siteUsed: yM.siteUsed,
-        wasmBuild: OM.wasm,
-        clientVersion: OM.client
-      }, wM = "webgpu" !== MM && void 0 !== zM ? function(MM, rM, iM, OM) {
-        return `: ${MM}, ${rM?"restore lost":"not restored"}, up ${(0,HM.b)(Yi(iM,OM))}`
-      }(zM, hM, EM.boundAtMs, GM) : "", tM = `${Ai(MM,LM)}${wM}`, gM = pr({
+        detail: RU,
+        count: PU
+      } = nz(UU, YU, kU, GU, {
+        restoreLost: pU,
+        adapterRemembered: aU
+      }, ZU), WU = {
+        reloadFrom: null !== EU && void 0 !== EU ? EU : "",
+        losses: String(XU),
+        cause: YU,
+        detail: RU,
+        vendor: null !== (yU = null === (QU = GU.adapter) || void 0 === QU ? void 0 : QU.vendor) && void 0 !== yU ? yU : "",
+        architecture: null !== (AU = null === (oU = GU.adapter) || void 0 === oU ? void 0 : oU.architecture) && void 0 !== AU ? AU : "",
+        indirectHangs: String(GU.indirectHangs),
+        restoresSkipped: String(GU.restoresSkipped),
+        restoreLost: String(pU),
+        adapterRemembered: String(aU),
+        lossReason: xz(kU),
+        samples: String(BU.samples),
+        sunShadows: String(BU.sunShadows),
+        renderDistance: String(BU.renderDistance),
+        gpuFamily: null !== (DU = (0, FU.b)()) && void 0 !== DU ? DU : "",
+        browser: (0, NU.n)(),
+        siteUsed: gU.siteUsed,
+        wasmBuild: cU.wasm,
+        clientVersion: cU.client
+      }, dU = "webgpu" !== UU && void 0 !== EU ? function(UU, XU, zU, cU) {
+        return `: ${UU}, ${XU?"restore lost":"not restored"}, up ${(0,IU.b)(Mz(zU,cU))}`
+      }(EU, pU, GU.boundAtMs, ZU) : "", LU = `${Vz(UU,YU)}${dU}`, eU = qX({
         kind: "recovered",
         code: "CORE-renderLost",
-        site: IM,
+        site: JU,
         fatal: !1,
-        message: tM,
-        details: bM,
-        error: lM,
-        countAs: eM
+        message: LU,
+        details: WU,
+        error: kU,
+        countAs: PU
       });
-      return Zr("ga", (async () => {
+      return fX("ga", (async () => {
         const {
-          logError: rM
-        } = await Promise.resolve().then((() => iM(3241))), OM = `${dM.b["webgpu"===MM?"WebGPU":"WebGL2"]}\n Error: ${CM}`;
-        rM("warning", OM), rM("error", OM)
-      })), gM
+          logError: XU
+        } = await Promise.resolve().then((() => zU(3221))), cU = `${tU.e["webgpu"===UU?"WebGPU":"WebGL2"]}\n Error: ${RU}`;
+        XU("warning", cU), XU("error", cU)
+      })), eU
     }
 
-    function Ki(MM, rM) {
-      var iM, OM;
-      const SM = null === MM.name ? "TEXTURE-sources" : null === MM.url ? "TEXTURE-nourl" : MM.error instanceof WM.d ? `TEXTURE-${MM.error.status}` : "TEXTURE-network",
-        jM = null === MM.name ? "terrain textures could not load" : `terrain texture ${MM.name} could not load`,
-        aM = {
-          texture: null !== (iM = MM.name) && void 0 !== iM ? iM : "",
-          url: null !== (OM = MM.url) && void 0 !== OM ? OM : "",
-          wasmBuild: rM.wasm,
-          clientVersion: rM.client
+    function jz(UU, XU) {
+      var zU, cU;
+      const yU = null === UU.name ? "TEXTURE-sources" : null === UU.url ? "TEXTURE-nourl" : UU.error instanceof OU.b ? `TEXTURE-${UU.error.status}` : "TEXTURE-network",
+        QU = null === UU.name ? "terrain textures could not load" : `terrain texture ${UU.name} could not load`,
+        AU = {
+          texture: null !== (zU = UU.name) && void 0 !== zU ? zU : "",
+          url: null !== (cU = UU.url) && void 0 !== cU ? cU : "",
+          wasmBuild: XU.wasm,
+          clientVersion: XU.client
         };
-      return pr({
+      return qX({
         kind: "terrainTexture",
-        code: SM,
-        site: CM.H,
+        code: yU,
+        site: RU.F,
         fatal: !1,
-        message: jM,
-        details: aM,
-        error: MM.error
+        message: QU,
+        details: AU,
+        error: UU.error
       })
     }
-    const qi = {
+    const Kz = {
       previewAnimations: {
-        site: KM,
+        site: jU,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: TM,
+        site: bU,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function Ti(MM, rM, iM, OM) {
+    function bz(UU, XU, zU, cU) {
       const {
-        site: SM,
-        prefix: jM,
-        name: aM
-      } = qi[MM], {
-        stage: PM,
-        error: nM
-      } = iM;
-      return pr({
-        kind: MM,
-        code: "decode" === PM ? null === nM ? `${jM}-decode` : `${jM}-trap` : nM instanceof uM.e ? `${jM}-${nM.status}` : `${jM}-network`,
-        site: SM,
+        site: yU,
+        prefix: QU,
+        name: AU
+      } = Kz[UU], {
+        stage: FU,
+        error: oU
+      } = zU;
+      return qX({
+        kind: UU,
+        code: "decode" === FU ? null === oU ? `${QU}-decode` : `${QU}-trap` : oU instanceof CU.f ? `${QU}-${oU.status}` : `${QU}-network`,
+        site: yU,
         fatal: !1,
-        message: "decode" === PM ? `${aM} did not decode` : `${aM} could not load`,
+        message: "decode" === FU ? `${AU} did not decode` : `${AU} could not load`,
         details: {
-          url: rM,
-          wasmBuild: OM.wasm,
-          clientVersion: OM.client
+          url: XU,
+          wasmBuild: cU.wasm,
+          clientVersion: cU.client
         },
-        error: nM
+        error: oU
       })
     }
-    const Vi = "staleBuild";
+    const Tz = "staleBuild";
 
-    function ci(MM, rM, iM) {
-      const OM = {
-          failedSite: MM.site,
-          url: MM.url,
-          from: MM.from,
-          sameBuild: String(MM.from === rM),
-          reloadMs: String(Math.max(0, Date.now() - MM.at)),
-          wasmBuild: iM.wasm,
-          clientVersion: iM.client
+    function hz(UU, XU, zU) {
+      const cU = {
+          failedSite: UU.site,
+          url: UU.url,
+          from: UU.from,
+          sameBuild: String(UU.from === XU),
+          reloadMs: String(Math.max(0, Date.now() - UU.at)),
+          wasmBuild: zU.wasm,
+          clientVersion: zU.client
         },
-        SM = `reloaded into a newer build after ${MM.site} failed to load: ${MM.error}`;
-      return pr({
+        yU = `reloaded into a newer build after ${UU.site} failed to load: ${UU.error}`;
+      return qX({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: Vi,
+        site: Tz,
         fatal: !1,
-        message: SM,
-        details: OM
+        message: yU,
+        details: cU
       })
     }
   },
-  41895: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => jM,
-      c: () => SM,
-      g: () => aM
+  41894: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU,
+      d: () => yU,
+      g: () => AU
     });
-    var OM = iM(5200);
-    const SM = 3e4;
-    class jM {
-      constructor(MM) {
-        this.aL = MM, this.waitedMs = 0, this.lastMs = null
+    var cU = zU(5326);
+    const yU = 3e4;
+    class QU {
+      constructor(UU) {
+        this.oY = UU, this.waitedMs = 0, this.lastMs = null
       }
-      frame(MM, rM) {
-        if (rM) return !0;
-        const iM = null === this.lastMs ? 0 : MM - this.lastMs;
-        return this.lastMs = MM, iM <= 900 && (this.waitedMs += iM), !(this.waitedMs < SM) && (this.aL(), !0)
+      frame(UU, XU) {
+        if (XU) return !0;
+        const zU = null === this.lastMs ? 0 : UU - this.lastMs;
+        return this.lastMs = UU, zU <= 900 && (this.waitedMs += zU), !(this.waitedMs < yU) && (this.oY(), !0)
       }
     }
 
-    function aM(MM, rM) {
-      return 0 === (MM & OM.T.ChunkRequested) ? "no_chunk_request" : 0 === (MM & OM.T.ChunkStored) ? "chunk_not_stored" : 0 === (MM & OM.T.MeshLanded) ? "not_meshed" : null === rM ? "no_frame_drawn" : 0 === rM.terrainParts ? "no_terrain_parts" : rM.terrainCompiling > 0 ? "terrain_compiling" : rM.terrainOpaque + rM.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
+    function AU(UU, XU) {
+      return 0 === (UU & cU.Y.ChunkRequested) ? "no_chunk_request" : 0 === (UU & cU.Y.ChunkStored) ? "chunk_not_stored" : 0 === (UU & cU.Y.MeshLanded) ? "not_meshed" : null === XU ? "no_frame_drawn" : 0 === XU.terrainParts ? "no_terrain_parts" : XU.terrainCompiling > 0 ? "terrain_compiling" : XU.terrainOpaque + XU.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
     }
   },
-  41677: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM,
-      c: () => yM,
-      e: () => JM,
-      h: () => dM,
-      i: () => mM,
-      m: () => HM,
-      p: () => zM,
-      r: () => LM,
-      t: () => hM
+  41660: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => cU,
+      d: () => gU,
+      f: () => aU,
+      j: () => tU,
+      l: () => NU,
+      n: () => IU,
+      o: () => EU,
+      s: () => YU,
+      u: () => pU
     });
-    class OM extends Error {
-      constructor(MM) {
-        super(`the join's code did not load: ${MM instanceof Error?MM.message:String(MM)}`, {
-          cause: MM
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === MM || void 0 === MM ? void 0 : MM.request
+    class cU extends Error {
+      constructor(UU) {
+        super(`the join's code did not load: ${UU instanceof Error?UU.message:String(UU)}`, {
+          cause: UU
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === UU || void 0 === UU ? void 0 : UU.request
       }
     }
-    let SM = null,
-      jM = null,
-      aM = null;
-    const PM = [];
-    let nM = null;
+    let yU = null,
+      QU = null,
+      AU = null;
+    const FU = [];
+    let oU = null;
 
-    function QM(MM, rM) {
+    function DU(UU, XU) {
       try {
-        MM(rM)
-      } catch (iM) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", iM)
+        UU(XU)
+      } catch (zU) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", zU)
       }
     }
 
-    function zM() {
-      return nM
+    function EU() {
+      return oU
     }
 
-    function LM(MM) {
-      PM.push(MM), null !== nM && QM(MM, nM)
+    function YU(UU) {
+      FU.push(UU), null !== oU && DU(UU, oU)
     }
 
-    function mM(MM) {
-      return SM ??= Promise.all([iM.e(84), iM.e(111), iM.e(86), iM.e(244), iM.e(89), iM.e(245), iM.e(224), iM.e(109), iM.e(264), iM.e(296), iM.e(48), iM.e(213), iM.e(232), iM.e(222), iM.e(205), iM.e(206), iM.e(170), iM.e(101), iM.e(134), iM.e(272), iM.e(68)]).then((() => iM(45248))).then((rM => {
-        rM.loadAudio(MM), nM = rM;
-        for (const MM of PM) QM(MM, rM);
-        return rM
-      })).catch((MM => {
-        throw SM = null, MM
-      })), SM
+    function NU(UU) {
+      return yU ??= Promise.all([zU.e(84), zU.e(111), zU.e(86), zU.e(240), zU.e(89), zU.e(241), zU.e(215), zU.e(109), zU.e(260), zU.e(294), zU.e(49), zU.e(213), zU.e(227), zU.e(212), zU.e(203), zU.e(204), zU.e(168), zU.e(101), zU.e(132), zU.e(268), zU.e(68)]).then((() => zU(45247))).then((XU => {
+        XU.loadAudio(UU), oU = XU;
+        for (const UU of FU) DU(UU, XU);
+        return XU
+      })).catch((UU => {
+        throw yU = null, UU
+      })), yU
     }
-    async function HM(MM, rM) {
+    async function IU(UU, XU) {
       try {
-        const iM = await mM(MM);
-        await iM.loadClientGame(rM)
-      } catch (iM) {
-        throw new OM(iM)
+        const zU = await NU(UU);
+        await zU.loadClientGame(XU)
+      } catch (zU) {
+        throw new cU(zU)
       }
     }
 
-    function hM(MM, rM) {
-      jM = {
-        running: MM,
-        shell: rM
+    function pU(UU, XU) {
+      QU = {
+        running: UU,
+        shell: XU
       }
     }
 
-    function JM() {
-      return aM
+    function aU() {
+      return AU
     }
-    async function dM(MM) {
-      const rM = jM;
-      if ((null === rM || void 0 === rM ? void 0 : rM.running) !== MM) throw new Error("the core's session has ended");
-      const iM = await mM(rM.shell.audio).catch((MM => {
-        throw new OM(MM)
+    async function tU(UU) {
+      const XU = QU;
+      if ((null === XU || void 0 === XU ? void 0 : XU.running) !== UU) throw new Error("the core's session has ended");
+      const zU = await NU(XU.shell.audio).catch((UU => {
+        throw new cU(UU)
       }));
-      if (null !== aM) return aM;
-      if (jM !== rM || MM.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (aM = iM.startGameHost(MM, rM.shell), null === aM) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return aM
+      if (null !== AU) return AU;
+      if (QU !== XU || UU.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (AU = zU.startGameHost(UU, XU.shell), null === AU) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return AU
     }
 
-    function yM() {
-      null !== aM && (null !== nM ? nM.endGameHost(aM) : aM.closeGame()), aM = null, jM = null
+    function gU() {
+      null !== AU && (null !== oU ? oU.endGameHost(AU) : AU.closeGame()), AU = null, QU = null
     }
   },
-  41800: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM
+  41799: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => cU
     });
-    const OM = {
+    const cU = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -2154,136 +2093,136 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  41764: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => QM,
-      h: () => jM,
-      j: () => aM,
-      k: () => SM,
-      n: () => HM,
-      p: () => zM,
-      t: () => nM,
-      v: () => mM,
-      w: () => LM,
-      z: () => PM
+  41750: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => DU,
+      g: () => QU,
+      h: () => AU,
+      k: () => yU,
+      m: () => IU,
+      o: () => EU,
+      q: () => oU,
+      r: () => NU,
+      s: () => YU,
+      u: () => FU
     });
-    var OM = iM(1906);
-    const SM = new Uint8Array([12]),
-      jM = 2e3,
-      aM = 257;
+    var cU = zU(1885);
+    const yU = new Uint8Array([12]),
+      QU = 2e3,
+      AU = 257;
 
-    function PM(MM) {
-      const rM = new Uint8Array(4);
-      return new DataView(rM.buffer).setUint32(0, MM, !0), rM
+    function FU(UU) {
+      const XU = new Uint8Array(4);
+      return new DataView(XU.buffer).setUint32(0, UU, !0), XU
     }
-    class nM extends Error {
+    class oU extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class QM extends Error {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        super(MM), this.stage = rM, this.code = iM, this.serverText = OM, this.socketOpened = SM, this.name = "JoinError"
+    class DU extends Error {
+      constructor(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        super(UU), this.stage = XU, this.code = zU, this.serverText = cU, this.socketOpened = yU, this.name = "JoinError"
       }
     }
-    class zM extends Error {
-      constructor(MM) {
-        super(MM), this.final = !0, this.name = "ResumeRefusedError"
+    class EU extends Error {
+      constructor(UU) {
+        super(UU), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class LM extends Error {
-      constructor(MM) {
-        super((0, OM.e)(MM), {
-          cause: MM
+    class YU extends Error {
+      constructor(UU) {
+        super((0, cU.h)(UU), {
+          cause: UU
         }), this.name = "TrafficCheckError"
       }
     }
-    class mM extends Error {
-      constructor(MM, rM, iM) {
-        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        super(MM, {
-          cause: iM
-        }), this.networkLost = rM, this.httpStatus = OM, this.name = "SeatRequestError"
+    class NU extends Error {
+      constructor(UU, XU, zU) {
+        let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        super(UU, {
+          cause: zU
+        }), this.networkLost = XU, this.httpStatus = cU, this.name = "SeatRequestError"
       }
     }
-    class HM extends Error {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(MM), this.code = rM, this.serverText = iM, this.name = "MatchmakeError"
+    class IU extends Error {
+      constructor(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(UU), this.code = XU, this.serverText = zU, this.name = "MatchmakeError"
       }
     }
   },
-  41767: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => HM,
-      e: () => mM,
-      h: () => hM
+  41752: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => IU,
+      d: () => NU,
+      g: () => pU
     });
-    var OM = iM(2843),
-      SM = iM(3333),
-      jM = iM(40094),
-      aM = iM(37437),
-      PM = iM(40100),
-      nM = iM(41764),
-      QM = iM(41776);
-    const zM = "seat reservation expired.",
-      LM = "early_leave";
+    var cU = zU(2858),
+      yU = zU(3304),
+      QU = zU(39876),
+      AU = zU(37201),
+      FU = zU(39882),
+      oU = zU(41750),
+      DU = zU(41761);
+    const EU = "seat reservation expired.",
+      YU = "early_leave";
 
-    function mM(MM) {
-      if (MM instanceof aM.i) return "expected";
-      if (MM instanceof nM.v) return MM.networkLost ? "expected" : "unrecognised";
-      if (MM instanceof nM.d) {
-        if ("closed" === MM.stage && (0 === MM.code || (0, SM.d)(MM.code))) return "expected";
-        if ("roomError" === MM.stage && (MM.serverText === zM || MM.serverText === LM)) return "expected"
+    function NU(UU) {
+      if (UU instanceof AU.c) return "expected";
+      if (UU instanceof oU.r) return UU.networkLost ? "expected" : "unrecognised";
+      if (UU instanceof oU.c) {
+        if ("closed" === UU.stage && (0 === UU.code || (0, yU.c)(UU.code))) return "expected";
+        if ("roomError" === UU.stage && (UU.serverText === EU || UU.serverText === YU)) return "expected"
       }
-      return MM instanceof nM.d || MM instanceof nM.n ? null === (0, PM.m)(MM.code).name ? "unrecognised" : "known" : (0, OM.i)(MM) ? "expected" : MM instanceof nM.w || MM instanceof QM.e ? "known" : "unrecognised"
+      return UU instanceof oU.c || UU instanceof oU.m ? null === (0, FU.l)(UU.code).name ? "unrecognised" : "known" : (0, cU.f)(UU) ? "expected" : UU instanceof oU.s || UU instanceof DU.b ? "known" : "unrecognised"
     }
 
-    function HM(MM) {
-      return MM instanceof aM.i ? "timedOut" : "expected" !== mM(MM) || (0, OM.i)(MM) || MM instanceof nM.d && 1001 === MM.code ? void 0 : "failed"
+    function IU(UU) {
+      return UU instanceof AU.c ? "timedOut" : "expected" !== NU(UU) || (0, cU.f)(UU) || UU instanceof oU.c && 1001 === UU.code ? void 0 : "failed"
     }
 
-    function hM(MM) {
-      return MM instanceof nM.d && "attach" !== MM.stage ? (0, jM.e)(MM, "closed" !== MM.stage || MM.socketOpened ? "socket" : "socket_unopened") : MM instanceof nM.v ? {
+    function pU(UU) {
+      return UU instanceof oU.c && "attach" !== UU.stage ? (0, QU.e)(UU, "closed" !== UU.stage || UU.socketOpened ? "socket" : "socket_unopened") : UU instanceof oU.r ? {
         at: "seat_lost",
-        code: MM.httpStatus
-      } : MM instanceof nM.n || MM instanceof aM.i ? (0, jM.e)(MM, MM instanceof aM.i ? MM.leg : "seat") : void 0
+        code: UU.httpStatus
+      } : UU instanceof oU.m || UU instanceof AU.c ? (0, QU.e)(UU, UU instanceof AU.c ? UU.leg : "seat") : void 0
     }
   },
-  41882: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => nM,
-      e: () => QM,
-      f: () => HM,
-      h: () => LM
+  41877: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => oU,
+      h: () => DU,
+      i: () => IU,
+      l: () => YU
     });
-    var OM = iM(3188),
-      SM = iM(5198),
-      jM = iM(41884),
-      aM = iM(41888),
-      PM = iM(37229);
-    const nM = 395,
-      QM = 2147483648,
-      zM = new Uint8Array(0);
-    class LM extends Error {
+    var cU = zU(3176),
+      yU = zU(5318),
+      QU = zU(41886),
+      AU = zU(41889),
+      FU = zU(36981);
+    const oU = 395,
+      DU = 2147483648,
+      EU = new Uint8Array(0);
+    class YU extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class mM extends Error {
+    class NU extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class HM {
-      constructor(MM, rM, iM) {
-        var OM, SM, aM, PM;
-        let nM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = MM, this.build = rM, this.onFailure = iM, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.ML = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (OM = nM.fetchFile) && void 0 !== OM ? OM : MM => (0, jM.j)(MM), this.onWritten = null !== (SM = nM.onWritten) && void 0 !== SM ? SM : null, this.onTaken = null !== (aM = nM.onTaken) && void 0 !== aM ? aM : null, this.onPackFileFailed = null !== (PM = nM.onPackFileFailed) && void 0 !== PM ? PM : null, this.startupLeft = new Set(MM.startup);
-        for (const jM of MM.startup) this.request(jM)
+    class IU {
+      constructor(UU, XU, zU) {
+        var cU, yU, AU, FU;
+        let oU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = UU, this.build = XU, this.onFailure = zU, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.cY = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (cU = oU.fetchFile) && void 0 !== cU ? cU : UU => (0, QU.f)(UU), this.onWritten = null !== (yU = oU.onWritten) && void 0 !== yU ? yU : null, this.onTaken = null !== (AU = oU.onTaken) && void 0 !== AU ? AU : null, this.onPackFileFailed = null !== (FU = oU.onPackFileFailed) && void 0 !== FU ? FU : null, this.startupLeft = new Set(UU.startup);
+        for (const QU of UU.startup) this.request(QU)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2303,649 +2242,689 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(MM) {
-        return this.drawn.get(MM)
+      drawnUrl(UU) {
+        return this.drawn.get(UU)
       }
-      request(MM) {
-        const rM = this.pending.get(MM);
-        if (!0 === (null === rM || void 0 === rM ? void 0 : rM.ask)) return;
-        const iM = this.JL(MM, !0);
-        iM.recheck = void 0 !== rM;
-        const OM = this.drawn.get(MM);
-        if (void 0 !== OM) return iM.sQ = !0, iM.recheck = !0, void this.fetch(MM, iM, OM);
-        this.fetchWanted(MM, iM)
+      request(UU) {
+        const XU = this.pending.get(UU);
+        if (!0 === (null === XU || void 0 === XU ? void 0 : XU.ask)) return;
+        const zU = this.gY(UU, !0);
+        zU.recheck = void 0 !== XU;
+        const cU = this.drawn.get(UU);
+        if (void 0 !== cU) return zU.uD = !0, zU.recheck = !0, void this.fetch(UU, zU, cU);
+        this.fetchWanted(UU, zU)
       }
       async refresh() {
-        const MM = ++this.refreshes,
-          rM = new Set;
-        for (const aM of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const MM of aM) 0 === (MM & jM.f) && rM.add(MM);
-        const iM = [...rM];
-        let OM;
+        const UU = ++this.refreshes,
+          XU = new Set;
+        for (const AU of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const UU of AU) 0 === (UU & QU.e) && XU.add(UU);
+        const zU = [...XU];
+        let cU;
         try {
-          OM = await Promise.all(iM.map((MM => this.wanted(MM))))
+          cU = await Promise.all(zU.map((UU => this.wanted(UU))))
         } catch {
           return null
         }
-        if (MM !== this.refreshes) return null;
-        const SM = {
+        if (UU !== this.refreshes) return null;
+        const yU = {
           resent: 0,
           refetched: 0,
-          delivered: iM.filter((MM => this.drawn.has(MM))).length
+          delivered: zU.filter((UU => this.drawn.has(UU))).length
         };
-        return iM.forEach(((MM, rM) => {
+        return zU.forEach(((UU, XU) => {
           const {
-            url: iM,
-            inPlaceOf: jM
-          } = OM[rM], aM = this.pending.get(MM);
-          if (void 0 !== aM) {
-            if (aM.sQ || void 0 === aM.url) return void(aM.recheck = !0);
-            if (aM.url === iM) return;
-            SM.refetched++;
-            const rM = this.JL(MM, aM.ask);
-            return rM.recheck = aM.recheck, void this.fetch(MM, rM, iM, jM)
+            url: zU,
+            inPlaceOf: QU
+          } = cU[XU], AU = this.pending.get(UU);
+          if (void 0 !== AU) {
+            if (AU.uD || void 0 === AU.url) return void(AU.recheck = !0);
+            if (AU.url === zU) return;
+            yU.refetched++;
+            const XU = this.gY(UU, AU.ask);
+            return XU.recheck = AU.recheck, void this.fetch(UU, XU, zU, QU)
           }
-          const PM = this.written.get(MM);
-          void 0 === PM ? this.drawn.get(MM) !== (null !== iM && void 0 !== iM ? iM : void 0) && (SM.resent++, this.fetch(MM, this.JL(MM, !1), iM, jM)) : PM.url !== (null !== iM && void 0 !== iM ? iM : "") && (PM.attempt.recheck = !0)
-        })), SM
+          const FU = this.written.get(UU);
+          void 0 === FU ? this.drawn.get(UU) !== (null !== zU && void 0 !== zU ? zU : void 0) && (yU.resent++, this.fetch(UU, this.gY(UU, !1), zU, QU)) : FU.url !== (null !== zU && void 0 !== zU ? zU : "") && (FU.attempt.recheck = !0)
+        })), yU
       }
-      taken(MM, rM) {
-        const iM = new Set,
-          OM = new Set;
-        for (const SM of Array.from(rM)) 0 === (SM & QM) ? iM.add(SM) : OM.add((SM & ~QM) >>> 0);
-        for (const [SM, jM] of this.written) jM.seq > MM || (this.written.delete(SM), iM.has(jM.seq) ? this.refusedFile(SM, jM) : this.takenFile(SM, jM, !jM.empty && !OM.has(jM.seq)))
+      taken(UU, XU) {
+        const zU = new Set,
+          cU = new Set;
+        for (const yU of Array.from(XU)) 0 === (yU & DU) ? zU.add(yU) : cU.add((yU & ~DU) >>> 0);
+        for (const [yU, QU] of this.written) QU.seq > UU || (this.written.delete(yU), zU.has(QU.seq) ? this.refusedFile(yU, QU) : this.takenFile(yU, QU, !QU.empty && !cU.has(QU.seq)))
       }
-      takenFile(MM, rM, iM) {
+      takenFile(UU, XU, zU) {
         const {
-          attempt: OM
-        } = rM;
-        if (iM) {
-          var SM;
-          this.drawn.set(MM, rM.url), this.undrawn.delete(MM), void 0 !== OM.inPlaceOf ? this.refusedPack.set(MM, OM.inPlaceOf) : OM.sQ || this.refusedPack.delete(MM), null === (SM = this.onTaken) || void 0 === SM || SM.call(this, MM, !0);
-          const iM = this.pending.get(MM);
-          if (!0 === (null === iM || void 0 === iM ? void 0 : iM.sQ) && iM.url !== rM.url) {
-            const iM = this.JL(MM, !0);
-            iM.sQ = !0, iM.recheck = !0, this.fetch(MM, iM, rM.url)
+          attempt: cU
+        } = XU;
+        if (zU) {
+          var yU;
+          this.drawn.set(UU, XU.url), this.undrawn.delete(UU), void 0 !== cU.inPlaceOf ? this.refusedPack.set(UU, cU.inPlaceOf) : cU.uD || this.refusedPack.delete(UU), null === (yU = this.onTaken) || void 0 === yU || yU.call(this, UU, !0);
+          const zU = this.pending.get(UU);
+          if (!0 === (null === zU || void 0 === zU ? void 0 : zU.uD) && zU.url !== XU.url) {
+            const zU = this.gY(UU, !0);
+            zU.uD = !0, zU.recheck = !0, this.fetch(UU, zU, XU.url)
           }
         } else {
-          var jM;
-          this.drawn.has(MM) || this.undrawn.add(MM), null === (jM = this.onTaken) || void 0 === jM || jM.call(this, MM, !1)
+          var QU;
+          this.drawn.has(UU) || this.undrawn.add(UU), null === (QU = this.onTaken) || void 0 === QU || QU.call(this, UU, !1)
         }
-        OM.recheck && this.resendIfChanged(MM)
+        cU.recheck && this.resendIfChanged(UU)
       }
-      refusedFile(MM, rM) {
-        var iM, OM;
-        if (null === (iM = this.onTaken) || void 0 === iM || iM.call(this, MM, !1), this.refusedPack.set(MM, rM.url), this.pending.has(MM)) return void(null === (OM = this.onPackFileFailed) || void 0 === OM || OM.call(this, MM, hM(rM.url)));
-        const SM = this.JL(MM, rM.attempt.ask);
-        SM.recheck = rM.attempt.recheck, this.afterRefusal(MM, SM, rM.url)
+      refusedFile(UU, XU) {
+        var zU, cU;
+        if (null === (zU = this.onTaken) || void 0 === zU || zU.call(this, UU, !1), this.refusedPack.set(UU, XU.url), this.pending.has(UU)) return void(null === (cU = this.onPackFileFailed) || void 0 === cU || cU.call(this, UU, pU(XU.url)));
+        const yU = this.gY(UU, XU.attempt.ask);
+        yU.recheck = XU.attempt.recheck, this.afterRefusal(UU, yU, XU.url)
       }
-      async afterRefusal(MM, rM, iM) {
-        var OM;
-        let SM;
+      async afterRefusal(UU, XU, zU) {
+        var cU;
+        let yU;
         try {
-          SM = await this.wanted(MM)
-        } catch (jM) {
-          return void(this.pending.get(MM) === rM && this.giveUp(MM, rM, iM, jM))
+          yU = await this.wanted(UU)
+        } catch (QU) {
+          return void(this.pending.get(UU) === XU && this.giveUp(UU, XU, zU, QU))
         }
-        this.pending.get(MM) === rM && (SM.inPlaceOf !== iM ? rM.ask || (null !== (OM = SM.url) && void 0 !== OM ? OM : void 0) !== this.drawn.get(MM) ? this.fetch(MM, rM, SM.url, SM.inPlaceOf) : this.pending.delete(MM) : this.fallBack(MM, rM, iM, hM(iM)))
+        this.pending.get(UU) === XU && (yU.inPlaceOf !== zU ? XU.ask || (null !== (cU = yU.url) && void 0 !== cU ? cU : void 0) !== this.drawn.get(UU) ? this.fetch(UU, XU, yU.url, yU.inPlaceOf) : this.pending.delete(UU) : this.fallBack(UU, XU, zU, pU(zU)))
       }
-      JL(MM, rM) {
-        const iM = {
+      gY(UU, XU) {
+        const zU = {
           url: void 0,
-          ask: rM,
-          sQ: !1,
+          ask: XU,
+          uD: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(MM, iM);
-        for (let OM = this.ready.length - 1; OM >= 0; OM--) this.ready[OM].file === MM && this.ready.splice(OM, 1);
-        return iM
+        this.pending.set(UU, zU);
+        for (let cU = this.ready.length - 1; cU >= 0; cU--) this.ready[cU].file === UU && this.ready.splice(cU, 1);
+        return zU
       }
-      async wanted(MM) {
-        const rM = await this.files.url(MM);
-        return null !== rM && this.refusedPack.get(MM) === rM ? {
-          url: await this.files.shippedUrl(MM),
-          inPlaceOf: rM
+      async wanted(UU) {
+        const XU = await this.files.url(UU);
+        return null !== XU && this.refusedPack.get(UU) === XU ? {
+          url: await this.files.shippedUrl(UU),
+          inPlaceOf: XU
         } : {
-          url: rM,
+          url: XU,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(MM, rM) {
-        const iM = this.files.url(MM);
-        iM instanceof Promise ? iM.then((iM => {
-          this.fetchFound(MM, rM, iM)
-        }), (iM => {
-          this.pending.get(MM) === rM && this.giveUp(MM, rM, "", iM)
-        })) : this.fetchFound(MM, rM, iM)
+      fetchWanted(UU, XU) {
+        const zU = this.files.url(UU);
+        zU instanceof Promise ? zU.then((zU => {
+          this.fetchFound(UU, XU, zU)
+        }), (zU => {
+          this.pending.get(UU) === XU && this.giveUp(UU, XU, "", zU)
+        })) : this.fetchFound(UU, XU, zU)
       }
-      fetchFound(MM, rM, iM) {
-        null !== iM && this.refusedPack.get(MM) === iM ? Promise.resolve(this.files.shippedUrl(MM)).then((OM => {
-          this.fetch(MM, rM, OM, iM)
-        }), (OM => {
-          this.pending.get(MM) === rM && this.giveUp(MM, rM, iM, OM)
-        })) : this.fetch(MM, rM, iM)
+      fetchFound(UU, XU, zU) {
+        null !== zU && this.refusedPack.get(UU) === zU ? Promise.resolve(this.files.shippedUrl(UU)).then((cU => {
+          this.fetch(UU, XU, cU, zU)
+        }), (cU => {
+          this.pending.get(UU) === XU && this.giveUp(UU, XU, zU, cU)
+        })) : this.fetch(UU, XU, zU)
       }
-      fetch(MM, rM, iM, OM) {
-        this.pending.get(MM) === rM && (rM.url = iM, rM.inPlaceOf = OM, null !== iM ? this.load(MM, rM, iM) : this.buildFile(MM, rM, "", zM))
+      fetch(UU, XU, zU, cU) {
+        this.pending.get(UU) === XU && (XU.url = zU, XU.inPlaceOf = cU, null !== zU ? this.load(UU, XU, zU) : this.buildFile(UU, XU, "", EU))
       }
-      load(MM, rM, iM) {
-        const OM = this.ML.get(MM);
-        (null === OM || void 0 === OM ? void 0 : OM.url) !== iM ? this.fetchFile(iM).then((OM => {
-          var SM, jM;
-          this.pending.get(MM) === rM && (this.keptTotal += OM.byteLength - (null !== (SM = null === (jM = this.ML.get(MM)) || void 0 === jM ? void 0 : jM.glb.byteLength) && void 0 !== SM ? SM : 0), this.ML.set(MM, {
-            url: iM,
-            glb: OM
-          }), this.buildFile(MM, rM, iM, OM))
-        }), (OM => {
-          this.pending.get(MM) === rM && this.fallBack(MM, rM, iM, OM)
-        })) : this.buildFile(MM, rM, iM, OM.glb)
+      load(UU, XU, zU) {
+        const cU = this.cY.get(UU);
+        (null === cU || void 0 === cU ? void 0 : cU.url) !== zU ? this.fetchFile(zU).then((cU => {
+          var yU, QU;
+          this.pending.get(UU) === XU && (this.keptTotal += cU.byteLength - (null !== (yU = null === (QU = this.cY.get(UU)) || void 0 === QU ? void 0 : QU.glb.byteLength) && void 0 !== yU ? yU : 0), this.cY.set(UU, {
+            url: zU,
+            glb: cU
+          }), this.buildFile(UU, XU, zU, cU))
+        }), (cU => {
+          this.pending.get(UU) === XU && this.fallBack(UU, XU, zU, cU)
+        })) : this.buildFile(UU, XU, zU, cU.glb)
       }
-      buildFile(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const aM = OM.byteLength > 0 && (0, jM.l)(iM) ? (MM | jM.e) >>> 0 : MM;
-        this.queueRecord(MM, rM, iM, OM, this.build(aM, OM), SM)
+      buildFile(UU, XU, zU, cU) {
+        let yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const AU = cU.byteLength > 0 && (0, QU.j)(zU) ? (UU | QU.d) >>> 0 : UU;
+        this.queueRecord(UU, XU, zU, cU, this.build(AU, cU), yU)
       }
-      queueRecord(MM, rM, iM, OM, jM, PM) {
-        jM.then((jM => {
-          if (this.pending.get(MM) !== rM) return;
-          if (SM.s + (0, SM.oe)(jM.byteLength) > SM.Gc) return void this.ringRefused(MM, rM, iM, new LM(`${JM(iM)}'s record is ${jM.byteLength-aM.b} bytes, past the cmd ring's ${SM.Gc}`), PM);
-          const nM = {
-            file: MM,
-            url: iM,
-            payload: jM,
-            glb: OM,
-            attempt: rM
+      queueRecord(UU, XU, zU, cU, QU, FU) {
+        QU.then((QU => {
+          if (this.pending.get(UU) !== XU) return;
+          if (yU.q + (0, yU.De)(QU.byteLength) > yU.Gc) return void this.ringRefused(UU, XU, zU, new YU(`${aU(zU)}'s record is ${QU.byteLength-AU.c} bytes, past the cmd ring's ${yU.Gc}`), FU);
+          const oU = {
+            file: UU,
+            url: zU,
+            payload: QU,
+            glb: cU,
+            attempt: XU
           };
-          PM ? this.ready.unshift(nM) : this.ready.push(nM)
+          FU ? this.ready.unshift(oU) : this.ready.push(oU)
         }))
       }
-      async fallBack(MM, rM, iM, OM) {
-        var SM;
-        let jM = null,
-          aM = OM;
+      async fallBack(UU, XU, zU, cU) {
+        var yU;
+        let QU = null,
+          AU = cU;
         try {
-          jM = await this.files.shippedUrl(MM)
-        } catch (PM) {
-          aM = PM
+          QU = await this.files.shippedUrl(UU)
+        } catch (FU) {
+          AU = FU
         }
-        this.pending.get(MM) === rM && (null !== jM && jM !== iM ? (null === (SM = this.onPackFileFailed) || void 0 === SM || SM.call(this, MM, OM), rM.ask || this.drawn.get(MM) !== jM ? (rM.url = jM, rM.inPlaceOf = iM, this.load(MM, rM, jM)) : this.pending.delete(MM)) : this.giveUp(MM, rM, iM, aM))
+        this.pending.get(UU) === XU && (null !== QU && QU !== zU ? (null === (yU = this.onPackFileFailed) || void 0 === yU || yU.call(this, UU, cU), XU.ask || this.drawn.get(UU) !== QU ? (XU.url = QU, XU.inPlaceOf = zU, this.load(UU, XU, QU)) : this.pending.delete(UU)) : this.giveUp(UU, XU, zU, AU))
       }
-      ringRefused(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, jM.l)(iM) ? this.fallBack(MM, rM, iM, OM): this.giveUp(MM, rM, iM, OM, SM)
+      ringRefused(UU, XU, zU, cU) {
+        let yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, QU.j)(zU) ? this.fallBack(UU, XU, zU, cU): this.giveUp(UU, XU, zU, cU, yU)
       }
-      giveUp(MM, rM, iM, SM) {
-        let jM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(UU, XU, zU, yU) {
+        let QU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: MM,
-          url: JM(iM),
-          error: SM,
-          startup: this.startupLeft.has(MM)
-        }), rM.ask || !this.drawn.has(MM) ? (0, OM.R)(SM) ? this.queueRecord(MM, rM, iM, zM, Promise.resolve((0, aM.m)(MM, (0, PM.k)(SM))), jM) : this.buildFile(MM, rM, iM, zM, jM) : this.pending.delete(MM)
+          file: UU,
+          url: aU(zU),
+          error: yU,
+          startup: this.startupLeft.has(UU)
+        }), XU.ask || !this.drawn.has(UU) ? (0, cU.ab)(yU) ? this.queueRecord(UU, XU, zU, EU, Promise.resolve((0, AU.k)(UU, (0, FU.l)(yU))), QU) : this.buildFile(UU, XU, zU, EU, QU) : this.pending.delete(UU)
       }
-      async resendIfChanged(MM) {
-        var rM;
-        if (0 !== (MM & jM.f)) return;
-        let iM;
+      async resendIfChanged(UU) {
+        var XU;
+        if (0 !== (UU & QU.e)) return;
+        let zU;
         try {
-          iM = await this.wanted(MM)
+          zU = await this.wanted(UU)
         } catch {
           return
-        }(null !== (rM = iM.url) && void 0 !== rM ? rM : void 0) === this.drawn.get(MM) || this.pending.has(MM) || this.written.has(MM) || this.fetch(MM, this.JL(MM, !1), iM.url, iM.inPlaceOf)
+        }(null !== (XU = zU.url) && void 0 !== XU ? XU : void 0) === this.drawn.get(UU) || this.pending.has(UU) || this.written.has(UU) || this.fetch(UU, this.gY(UU, !1), zU.url, zU.inPlaceOf)
       }
-      drain(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === MM) return;
-        let iM = 0,
-          OM = 0;
-        for (; OM < this.ready.length && iM < 262144;) {
-          const PM = this.ready[OM];
-          if (this.written.has(PM.file)) {
-            OM++;
+      drain(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === UU) return;
+        let zU = 0,
+          cU = 0;
+        for (; cU < this.ready.length && zU < 262144;) {
+          const FU = this.ready[cU];
+          if (this.written.has(FU.file)) {
+            cU++;
             continue
           }
-          const zM = this.nextSeq;
-          new DataView(PM.payload.buffer, PM.payload.byteOffset, PM.payload.byteLength).setUint32(aM.d, zM, !0);
-          const mM = PM.attempt.sQ && PM.glb.byteLength > 0 && this.drawn.get(PM.file) === PM.url;
-          if (MM(nM, mM ? 1 : 0, PM.payload)) {
-            if (this.nextSeq = zM >= QM - 1 ? 1 : zM + 1, this.ready.splice(OM, 1), iM += PM.payload.byteLength, this.pending.delete(PM.file), this.startupLeft.delete(PM.file), this.written.set(PM.file, {
-                seq: zM,
-                url: PM.url,
-                empty: 0 === PM.glb.byteLength,
-                attempt: PM.attempt
-              }), PM.glb.byteLength > 0) try {
-              var SM;
-              null === (SM = this.onWritten) || void 0 === SM || SM.call(this, PM.file, PM.glb)
-            } catch (jM) {
-              console.warn("ModelFeed: reading the file's images failed", jM)
+          const EU = this.nextSeq;
+          new DataView(FU.payload.buffer, FU.payload.byteOffset, FU.payload.byteLength).setUint32(AU.f, EU, !0);
+          const NU = FU.attempt.uD && FU.glb.byteLength > 0 && this.drawn.get(FU.file) === FU.url;
+          if (UU(oU, NU ? 1 : 0, FU.payload)) {
+            if (this.nextSeq = EU >= DU - 1 ? 1 : EU + 1, this.ready.splice(cU, 1), zU += FU.payload.byteLength, this.pending.delete(FU.file), this.startupLeft.delete(FU.file), this.written.set(FU.file, {
+                seq: EU,
+                url: FU.url,
+                empty: 0 === FU.glb.byteLength,
+                attempt: FU.attempt
+              }), FU.glb.byteLength > 0) try {
+              var yU;
+              null === (yU = this.onWritten) || void 0 === yU || yU.call(this, FU.file, FU.glb)
+            } catch (QU) {
+              console.warn("ModelFeed: reading the file's images failed", QU)
             }
           } else {
-            if (null === rM || 0 === PM.glb.byteLength || rM(PM.payload.byteLength)) return;
-            this.ready.splice(OM, 1);
-            const MM = new LM(`${JM(PM.url)}'s record is ${PM.payload.byteLength-aM.b} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(PM.file, PM.attempt, PM.url, MM, !0)
+            if (null === XU || 0 === FU.glb.byteLength || XU(FU.payload.byteLength)) return;
+            this.ready.splice(cU, 1);
+            const UU = new YU(`${aU(FU.url)}'s record is ${FU.payload.byteLength-AU.c} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(FU.file, FU.attempt, FU.url, UU, !0)
           }
         }
       }
     }
 
-    function hM(MM) {
-      return new mM(`presentation refused ${JM(MM)}`)
+    function pU(UU) {
+      return new NU(`presentation refused ${aU(UU)}`)
     }
 
-    function JM(MM) {
-      return MM.startsWith("data:") ? `${MM.slice(0,Math.min(Math.max(MM.indexOf(","),5),64))},...` : MM
+    function aU(UU) {
+      return UU.startsWith("data:") ? `${UU.slice(0,Math.min(Math.max(UU.indexOf(","),5),64))},...` : UU
     }
   },
-  41884: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => aM,
-      f: () => jM,
-      j: () => zM,
-      l: () => PM,
-      o: () => QM,
-      r: () => nM
+  41886: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => AU,
+      e: () => QU,
+      f: () => EU,
+      j: () => FU,
+      n: () => DU,
+      p: () => oU
     });
-    var OM = iM(3188),
-      SM = iM(3614);
-    const jM = 2147483648,
-      aM = 1073741824;
+    var cU = zU(3176),
+      yU = zU(3572);
+    const QU = 2147483648,
+      AU = 1073741824;
 
-    function PM(MM) {
-      return MM.startsWith("data:")
+    function FU(UU) {
+      return UU.startsWith("data:")
     }
 
-    function nM(MM) {
+    function oU(UU) {
       let {
-        onTableFailed: rM,
-        packUrl: iM
+        onTableFailed: XU,
+        packUrl: zU
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const OM = QM();
-      OM.catch((MM => {
-        null === rM || void 0 === rM || rM(MM)
+      const cU = DU();
+      cU.catch((UU => {
+        null === XU || void 0 === XU || XU(UU)
       }));
-      const SM = async rM => (await OM).fileUrl((rM & ~jM) >>> 0, MM);
+      const yU = async XU => (await cU).fileUrl((XU & ~QU) >>> 0, UU);
       return {
         startup: [],
-        url: async MM => {
-          if (iM && 0 === (MM & jM)) {
-            const rM = await OM,
-              SM = rM.filePackName(MM),
-              jM = null === SM || "lifeform" === rM.fileSource(MM) ? null : iM(SM);
-            if (null !== jM) return jM
+        url: async UU => {
+          if (zU && 0 === (UU & QU)) {
+            const XU = await cU,
+              yU = XU.filePackName(UU),
+              QU = null === yU || "lifeform" === XU.fileSource(UU) ? null : zU(yU);
+            if (null !== QU) return QU
           }
-          return SM(MM)
+          return yU(UU)
         },
-        shippedUrl: SM
+        shippedUrl: yU
       }
     }
 
-    function QM() {
-      return iM.e(48).then((() => iM(45251)))
+    function DU() {
+      return zU.e(49).then((() => zU(45253)))
     }
-    async function zM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return MM.startsWith("data:") ? (0, SM.e)(MM.slice(MM.indexOf(",") + 1), rM) : (0, OM.F)(MM, {
-        spare: rM
+    async function EU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return UU.startsWith("data:") ? (0, yU.e)(UU.slice(UU.indexOf(",") + 1), XU) : (0, cU.Q)(UU, {
+        spare: XU
       })
     }
   },
-  41888: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      d: () => zM,
-      f: () => HM,
-      i: () => dM,
-      m: () => hM,
-      p: () => mM,
-      q: () => JM
+  41889: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => oU,
+      f: () => DU,
+      j: () => pU,
+      k: () => NU,
+      o: () => YU,
+      s: () => IU
     });
-    const OM = 826427981,
-      SM = 1,
-      jM = 2,
-      aM = 44,
-      PM = 46,
-      nM = 58,
-      QM = 8,
-      zM = 4;
+    const cU = 826427981,
+      yU = 1,
+      QU = 2,
+      AU = 44,
+      FU = 58,
+      oU = 8,
+      DU = 4;
 
-    function LM(MM, rM, iM) {
-      const SM = (new TextEncoder).encode(iM),
-        jM = QM + 4 * (rM.length + 2),
-        aM = new Uint8Array(jM + (SM.byteLength + 3 & -4)),
-        PM = new DataView(aM.buffer);
-      return PM.setUint32(0, MM, !0), PM.setUint32(QM, OM, !0), rM.forEach(((MM, rM) => {
-        PM.setUint32(QM + 4 * (rM + 1), MM, !0)
-      })), PM.setUint32(jM - 4, SM.byteLength, !0), aM.set(SM, jM), aM
+    function EU(UU, XU, zU) {
+      const yU = (new TextEncoder).encode(zU),
+        QU = oU + 4 * (XU.length + 2),
+        AU = new Uint8Array(QU + (yU.byteLength + 3 & -4)),
+        FU = new DataView(AU.buffer);
+      return FU.setUint32(0, UU, !0), FU.setUint32(oU, cU, !0), XU.forEach(((UU, XU) => {
+        FU.setUint32(oU + 4 * (XU + 1), UU, !0)
+      })), FU.setUint32(QU - 4, yU.byteLength, !0), AU.set(yU, QU), AU
     }
 
-    function mM(MM, rM) {
-      return LM(MM, [jM], rM)
+    function YU(UU, XU) {
+      return EU(UU, [QU], XU)
     }
 
-    function HM(MM, rM) {
-      return LM(MM, [SM, PM], rM)
+    function NU(UU, XU) {
+      return EU(UU, [yU, FU], XU)
     }
 
-    function hM(MM, rM) {
-      return LM(MM, [SM, nM], rM)
+    function IU(UU, XU) {
+      return EU(UU, [yU, AU], XU)
     }
 
-    function JM(MM, rM) {
-      return LM(MM, [SM, aM], rM)
-    }
-
-    function dM(MM) {
-      const rM = QM;
-      if (MM.byteLength < rM + 12) return !1;
-      const iM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
-      return iM.getUint32(rM, !0) === OM && iM.getUint32(rM + 4, !0) === SM && iM.getUint32(rM + 8, !0) === aM
+    function pU(UU) {
+      const XU = oU;
+      if (UU.byteLength < XU + 12) return !1;
+      const zU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength);
+      return zU.getUint32(XU, !0) === cU && zU.getUint32(XU + 4, !0) === yU && zU.getUint32(XU + 8, !0) === AU
     }
   },
-  41809: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => SM,
-      i: () => zM,
-      m: () => aM,
-      q: () => nM
+  41808: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => yU,
+      g: () => EU,
+      i: () => AU,
+      k: () => oU
     });
-    var OM = iM(37229);
-    class SM extends Error {
-      constructor(MM, rM) {
-        let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${MM}: the module trapped${iM?" in an earlier call":""}: ${String(rM)}`, {
-          cause: rM
-        }), this.site = MM, this.trap = rM, this.earlier = iM, this.name = "ModuleTrapError", rM instanceof Error && void 0 !== rM.stack && (this.stack = `${this.name}: ${this.message}\n${rM.stack}`)
+    var cU = zU(36981);
+    class yU extends Error {
+      constructor(UU, XU) {
+        let zU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${UU}: the module trapped${zU?" in an earlier call":""}: ${String(XU)}`, {
+          cause: XU
+        }), this.site = UU, this.trap = XU, this.earlier = zU, this.name = "ModuleTrapError", XU instanceof Error && void 0 !== XU.stack && (this.stack = `${this.name}: ${this.message}\n${XU.stack}`)
       }
     }
-    const jM = new WeakMap;
+    const QU = new WeakMap;
 
-    function aM(MM) {
-      return jM.has(MM)
+    function AU(UU) {
+      return QU.has(UU)
     }
 
-    function PM(MM, rM) {
-      jM.has(MM) || jM.set(MM, rM)
+    function FU(UU, XU) {
+      QU.has(UU) || QU.set(UU, XU)
     }
 
-    function nM(MM, rM) {
-      return !!(0, OM.j)(rM) && (PM(MM, rM), !0)
+    function oU(UU, XU) {
+      return !!(0, cU.j)(XU) && (FU(UU, XU), !0)
     }
-    const QM = [
-      ["error", MM => MM.error],
-      ["unhandledrejection", MM => MM.reason]
+    const DU = [
+      ["error", UU => UU.error],
+      ["unhandledrejection", UU => UU.reason]
     ];
 
-    function zM(MM, rM, iM) {
-      let aM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return jM.has(MM) ? Promise.reject(new SM(rM, jM.get(MM), !0)) : new Promise(((jM, nM) => {
-        const zM = iM => {
-            PM(MM, iM), HM(), nM(new SM(rM, iM))
+    function EU(UU, XU, zU) {
+      let AU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return QU.has(UU) ? Promise.reject(new yU(XU, QU.get(UU), !0)) : new Promise(((QU, oU) => {
+        const EU = zU => {
+            FU(UU, zU), IU(), oU(new yU(XU, zU))
           },
-          LM = MM => {
-            MM instanceof WebAssembly.RuntimeError ? zM(MM) : (HM(), nM(MM))
+          YU = UU => {
+            UU instanceof WebAssembly.RuntimeError ? EU(UU) : (IU(), oU(UU))
           },
-          mM = QM.map((MM => {
-            let [rM, iM] = MM;
-            return [rM, MM => {
-              const rM = iM(MM);
-              (0, OM.j)(rM) && zM(rM)
+          NU = DU.map((UU => {
+            let [XU, zU] = UU;
+            return [XU, UU => {
+              const XU = zU(UU);
+              (0, cU.j)(XU) && EU(XU)
             }]
           })),
-          HM = () => {
-            for (const [MM, rM] of mM) null === aM || void 0 === aM || aM.removeEventListener(MM, rM)
+          IU = () => {
+            for (const [UU, XU] of NU) null === AU || void 0 === AU || AU.removeEventListener(UU, XU)
           };
-        for (const [MM, rM] of mM) null === aM || void 0 === aM || aM.addEventListener(MM, rM);
-        let hM;
+        for (const [UU, XU] of NU) null === AU || void 0 === AU || AU.addEventListener(UU, XU);
+        let pU;
         try {
-          hM = iM()
-        } catch (JM) {
-          return void LM(JM)
+          pU = zU()
+        } catch (aU) {
+          return void YU(aU)
         }
-        hM.then((MM => {
-          HM(), jM(MM)
-        }), LM)
+        pU.then((UU => {
+          IU(), QU(UU)
+        }), YU)
       }))
     }
   },
-  41793: (MM, rM, iM) => {
-    iM.d(rM, {
-      $: () => WM,
-      C: () => BM,
-      F: () => FM,
-      G: () => kM,
-      K: () => tM,
-      O: () => sM,
-      R: () => XM,
-      U: () => DM,
-      W: () => NM,
-      Y: () => oM,
-      cb: () => IM,
-      e: () => wM,
-      g: () => CM,
-      k: () => YM,
-      o: () => ZM,
-      r: () => GM,
-      s: () => bM,
-      u: () => EM,
-      v: () => uM,
-      y: () => pM
+  41786: (UU, XU, zU) => {
+    zU.d(XU, {
+      B: () => fU,
+      F: () => eU,
+      I: () => rU,
+      M: () => JU,
+      N: () => uU,
+      R: () => VU,
+      T: () => HU,
+      V: () => SU,
+      X: () => jU,
+      c: () => LU,
+      f: () => PU,
+      i: () => vU,
+      k: () => iU,
+      l: () => RU,
+      n: () => dU,
+      p: () => BU,
+      t: () => wU,
+      u: () => OU,
+      v: () => xU,
+      x: () => lU
     });
-    var OM = iM(187),
-      SM = iM(19),
-      jM = iM(3961),
-      aM = iM(114),
-      PM = iM(310),
-      nM = iM(30),
-      QM = iM(41798),
-      zM = iM(37422),
-      LM = iM(41826),
-      mM = (iM(41862), iM(41922)),
-      HM = iM(41855),
-      hM = iM(41812);
-    const JM = "wasmJoinBuild";
-    let dM = null,
-      yM = null,
-      lM = null;
+    var cU = zU(220),
+      yU = zU(27),
+      QU = zU(3958),
+      AU = zU(134),
+      FU = zU(318),
+      oU = zU(42),
+      DU = zU(41795),
+      EU = zU(41814),
+      YU = zU(37186),
+      NU = zU(41831),
+      IU = (zU(41865), zU(41927)),
+      pU = zU(41861),
+      aU = zU(41820);
+    const tU = "wasmJoinBuild";
+    let gU = null,
+      kU = null,
+      GU = null;
 
-    function EM(MM) {
-      lM = MM
+    function BU(UU) {
+      GU = UU
     }
-    let UM = !1;
+    let ZU = !1;
 
-    function GM() {
-      UM = !0
-    }
-
-    function CM() {
-      return UM
-    }
-    let eM = !1;
-
-    function bM() {
-      eM = !0
+    function RU() {
+      ZU = !0
     }
 
-    function wM() {
-      return eM
+    function PU() {
+      return ZU
+    }
+    let WU = !1;
+
+    function dU() {
+      WU = !0
     }
 
-    function tM() {
-      return lM
-    }
-    let gM = null;
-
-    function uM(MM) {
-      gM = MM, (0, PM.d)(MM)
-    }
-    const RM = "wasmClientRenderLost";
-
-    function pM() {
-      nM.k.setItem(RM, !0)
+    function LU() {
+      return WU
     }
 
-    function WM() {
-      return !0 === nM.k.getItem(RM)
+    function eU() {
+      return GU
+    }
+    let CU = null;
+
+    function wU(UU) {
+      CU = UU, (0, FU.b)(UU)
+    }
+    const qU = "wasmClientRenderLost";
+
+    function OU() {
+      oU.n.setItem(qU, !0)
     }
 
-    function sM() {
-      return gM
+    function SU() {
+      return !0 === oU.n.getItem(qU)
     }
 
-    function DM() {
-      if (null === dM) {
-        nM.g.removeItem("wasmLastPick"), nM.g.removeItem("wasmGuessVerdict");
+    function rU() {
+      return CU
+    }
+
+    function uU() {
+      if (null === gU) {
+        oU.k.removeItem("wasmLastPick"), oU.k.removeItem("wasmGuessVerdict");
         try {
           localStorage.removeItem("wasmClientMisdrawnGpu"), localStorage.removeItem("wasmClientGameGpu")
-        } catch {}(0, PM.l)(), dM = (0, QM.C)(LM.f).then((MM => (null === MM || (0, QM.l)(MM) || (yM = mM.b[MM.backend], SM.d.followGameGpu("webgpu" === MM.backend ? MM.adapter : null), "webgpu" === MM.backend && (0, HM.h)()), MM)))
+        } catch {}(0, FU.m)(), gU = (0, DU.F)(NU.g).then((UU => (null === UU || (0, DU.r)(UU) || (kU = IU.e[UU.backend], yU.e.followGameGpu("webgpu" === UU.backend ? UU.adapter : null), "webgpu" === UU.backend && (0, pU.f)()), UU)))
       }
-      return dM
+      return gU
     }
 
-    function kM() {
-      return yM
+    function fU() {
+      return kU
     }
 
-    function ZM(MM) {
-      return MM ? MM.load() : Promise.resolve().then((function() {
-        var MM = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw MM.code = "MODULE_NOT_FOUND", MM
-      })).then((MM => MM.bloxdWasmClient))
+    function iU(UU) {
+      return UU ? UU.load() : Promise.resolve().then((function() {
+        var UU = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw UU.code = "MODULE_NOT_FOUND", UU
+      })).then((UU => UU.bloxdWasmClient))
     }
 
-    function oM(MM) {
-      nM.g.setItem(JM, MM)
+    function HU(UU) {
+      oU.k.setItem(tU, UU)
     }
 
-    function fM(MM, rM) {
-      const iM = nM.g.getItem(JM);
-      return null === iM ? function(MM) {
-        if (void 0 !== (0, OM.d)(MM, "webgpu") && (0, QM.z)()) return "webgpu";
-        return !1 === (0, aM.u)() ? "webgl1" : "webgl"
-      }(MM) : "none" === iM ? null : "string" === typeof iM && void 0 !== (0, OM.d)(MM, iM) ? iM : (rM && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(iM)}, is none of this client's: guessing WebGL2's`), "webgl")
+    function MU(UU, XU) {
+      const zU = oU.k.getItem(tU);
+      return null === zU ? function(UU) {
+        if (void 0 !== (0, cU.b)(UU, "webgpu") && (0, DU.D)()) return "webgpu";
+        return !1 === (0, AU.t)() ? "webgl1" : "webgl"
+      }(UU) : "none" === zU ? null : "string" === typeof zU && void 0 !== (0, cU.b)(UU, zU) ? zU : (XU && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(zU)}, is none of this client's: guessing WebGL2's`), "webgl")
     }
-    async function YM() {
-      if (null === LM.f) return ZM(null);
-      const MM = fM(LM.f, !0);
-      return null === MM ? null : LM.f[MM]()
+    async function vU() {
+      if (null === NU.g) return iU(null);
+      const UU = MU(NU.g, !0);
+      return null === UU ? null : NU.g[UU]()
     }
 
-    function NM() {
-      null === dM && null !== LM.f && "webgl" === fM(LM.f, !1) && (0, hM.e)()
+    function VU() {
+      null === gU && null !== NU.g && "webgl" === MU(NU.g, !1) && (0, aU.b)()
     }
-    let AM = null,
-      xM = null,
-      vM = null;
+    let sU = null,
+      nU = null,
+      mU = null;
 
-    function FM() {
-      return AM ??= DM().then((async MM => {
-        const rM = null !== MM && !(0, QM.l)(MM),
-          iM = {
-            indirectHangs: rM && await (0, QM.L)(MM, window.location.search),
-            storagePullBreaks: rM && (0, QM.U)(MM, window.location.search),
-            splitPassBreaks: rM && (0, QM.S)(MM, window.location.search),
-            earlySky: rM && (0, QM.K)(MM, window.location.search),
-            instancedTerrain: rM ? (0, QM.M)(MM, window.location.search) : null,
-            cellLight: rM && await (0, jM.h)("cellLight"),
-            framesAhead: (0, QM.j)(window.location.search, rM ? MM : null),
-            webGpuRestores: !rM || (0, QM.V)(MM, (0, zM.b)()),
-            bufferCopiesCrash: rM && (0, QM.G)(MM, window.location.search)
+    function lU() {
+      return sU ??= uU().then((async UU => {
+        const XU = null !== UU && !(0, DU.r)(UU),
+          zU = {
+            indirectHangs: XU && await (0, DU.R)(UU, window.location.search),
+            storagePullBreaks: XU && (0, DU.eb)(UU, window.location.search),
+            splitPassBreaks: XU && (0, DU.ab)(UU, window.location.search),
+            earlySky: XU && (0, DU.O)(UU, window.location.search),
+            instancedTerrain: XU ? (0, DU.V)(UU, window.location.search) : null,
+            cellLight: XU && await (0, QU.g)("cellLight"),
+            framesAhead: (0, DU.m)(window.location.search, XU ? UU : null),
+            webGpuRestores: !XU || (0, DU.hb)(UU, (0, YU.c)()),
+            bufferCopiesCrash: XU && (0, DU.K)(UU, window.location.search),
+            firstVertex: XU ? (0, EU.f)(UU.backend, window.location.search) : void 0
           };
-        return xM = iM.indirectHangs, vM = !iM.webGpuRestores, iM
-      })), AM
+        return nU = zU.indirectHangs, mU = !zU.webGpuRestores, zU
+      })), sU
     }
 
-    function BM() {
-      return xM
+    function xU() {
+      return nU
     }
 
-    function XM() {
-      return vM
+    function JU() {
+      return mU
     }
-    async function IM() {
-      const MM = null === dM ? null : await dM;
-      return null !== MM && (0, QM.l)(MM) && (dM = null, AM = null, xM = null, vM = null), DM()
+    async function jU() {
+      const UU = null === gU ? null : await gU;
+      return null !== UU && (0, DU.r)(UU) && (gU = null, sU = null, nU = null, mU = null), uU()
     }
   },
-  42076: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => PM
+  42084: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => oU,
+      i: () => DU
     });
-    var OM = iM(37257),
-      SM = iM(41961),
-      jM = iM(4765),
-      aM = iM(37422);
-    async function PM(MM, rM) {
-      return await (0, jM.b)(void 0, !0), (0, OM.k)(MM, SM.f, {
-        ...rM,
-        memoryMaximumBytes: (0, aM.j)()
+    var cU = zU(37014),
+      yU = zU(41959),
+      QU = zU(4809),
+      AU = zU(3604),
+      FU = zU(37186);
+    async function oU(UU, XU) {
+      return await Promise.all([(0, QU.h)(void 0, !0), (0, AU.j)()]), (0, cU.n)(UU, yU.g, {
+        ...XU,
+        memoryMaximumBytes: (0, FU.k)()
       })
     }
+    async function DU() {
+      return await (0, QU.h)(void 0, !0), (0, cU.q)((0, FU.k)())
+    }
   },
-  41819: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => QM,
-      g: () => PM,
-      k: () => zM,
-      o: () => aM
+  41814: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => FU,
+      f: () => QU
     });
-    var OM = iM(327),
-      SM = iM(643);
-    let jM;
+    var cU = zU(281);
+    const yU = "provokingVertex";
 
-    function aM(MM) {
-      var rM;
-      const iM = jM;
-      return jM = void 0, null !== (rM = nM(MM)) && void 0 !== rM ? rM : iM
+    function QU(UU, XU) {
+      if ("webgl" !== UU) return;
+      const zU = new URLSearchParams(XU).get(yU);
+      return "first" === zU || "last" !== zU && null
+    }
+    const AU = new WeakSet;
+
+    function FU(UU, XU) {
+      var zU, yU;
+      let QU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (zU = null === (yU = globalThis.navigator) || void 0 === yU ? void 0 : yU.userAgent) && void 0 !== zU ? zU : "";
+      try {
+        !1 === XU || AU.has(UU) || (AU.add(UU), UU.addEventListener("webglcontextrestored", (() => {
+          FU(UU, XU, QU)
+        })));
+        const zU = UU.getContext("webgl2");
+        if (null === zU || zU.isContextLost()) return !1;
+        if (!(null !== XU && void 0 !== XU ? XU : function(UU, XU) {
+            var zU, yU;
+            const QU = UU.getExtension("WEBGL_debug_renderer_info");
+            if (null === QU) return !1;
+            return function(UU, XU, zU) {
+              return zU.includes("Windows") && "adreno_6" === (0, cU.h)(UU, XU)
+            }(String(null !== (zU = UU.getParameter(QU.UNMASKED_VENDOR_WEBGL)) && void 0 !== zU ? zU : ""), String(null !== (yU = UU.getParameter(QU.UNMASKED_RENDERER_WEBGL)) && void 0 !== yU ? yU : ""), XU)
+          }(zU, QU))) return !1;
+        const yU = zU.getExtension("WEBGL_provoking_vertex");
+        return null !== yU && (yU.provokingVertexWEBGL(yU.FIRST_VERTEX_CONVENTION_WEBGL), console.info("WebGL2 draws flat varyings from the first vertex (WEBGL_provoking_vertex)"), !0)
+      } catch (oU) {
+        return console.warn("WebGL2's provoking vertex couldn't be set: flat varyings draw from the last vertex", oU), !1
+      }
+    }
+  },
+  41823: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => DU,
+      f: () => FU,
+      h: () => EU,
+      j: () => AU
+    });
+    var cU = zU(337),
+      yU = zU(670);
+    let QU;
+
+    function AU(UU) {
+      var XU;
+      const zU = QU;
+      return QU = void 0, null !== (XU = oU(UU)) && void 0 !== XU ? XU : zU
     }
 
-    function PM(MM) {
+    function FU(UU) {
       try {
-        const rM = nM(MM);
-        void 0 !== rM && (jM = rM, (0, SM.e)((0, OM.h)(rM.reason, rM.message)))
-      } catch (rM) {
-        console.warn("Couldn't keep the WebGPU loss's cause", rM)
+        const XU = oU(UU);
+        void 0 !== XU && (QU = XU, (0, yU.e)((0, cU.n)(XU.reason, XU.message)))
+      } catch (XU) {
+        console.warn("Couldn't keep the WebGPU loss's cause", XU)
       }
     }
 
-    function nM(MM) {
-      var rM;
-      const iM = null === MM || void 0 === MM || null === (rM = MM.tjM) || void 0 === rM ? void 0 : rM.call(MM),
-        OM = null === MM || void 0 === MM ? void 0 : MM.wjM();
-      if (void 0 === OM) return;
-      const SM = new Error(OM);
-      return void 0 !== iM && (SM.reason = iM), SM
+    function oU(UU) {
+      var XU;
+      const zU = null === UU || void 0 === UU || null === (XU = UU.NAU) || void 0 === XU ? void 0 : XU.call(UU),
+        cU = null === UU || void 0 === UU ? void 0 : UU.YAU();
+      if (void 0 === cU) return;
+      const yU = new Error(cU);
+      return void 0 !== zU && (yU.reason = zU), yU
     }
 
-    function QM(MM) {
-      return MM instanceof Error ? MM : void 0
+    function DU(UU) {
+      return UU instanceof Error ? UU : void 0
     }
 
-    function zM(MM, rM) {
-      return "lost" !== MM && "frames_refused" !== MM ? {} : (0, OM.h)("frames_refused" === MM ? MM : null === rM || void 0 === rM ? void 0 : rM.reason, null === rM || void 0 === rM ? void 0 : rM.message)
+    function EU(UU, XU) {
+      return "lost" !== UU && "frames_refused" !== UU ? {} : (0, cU.n)("frames_refused" === UU ? UU : null === XU || void 0 === XU ? void 0 : XU.reason, null === XU || void 0 === XU ? void 0 : XU.message)
     }
   },
-  41846: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => bM,
-      i: () => UM,
-      m: () => EM,
-      q: () => eM,
-      r: () => uM,
-      u: () => gM,
-      v: () => RM
+  41857: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => WU,
+      f: () => BU,
+      j: () => GU,
+      n: () => PU,
+      q: () => CU,
+      s: () => eU,
+      w: () => wU
     });
-    var OM = iM(5200),
-      SM = iM(41855),
-      jM = iM(34885);
-    const aM = 1,
-      PM = 18,
-      nM = 19,
-      QM = 20,
-      zM = 21,
-      LM = {
-        [aM]: "link",
+    var cU = zU(5326),
+      yU = zU(41861),
+      QU = zU(34719);
+    const AU = 1,
+      FU = 18,
+      oU = 19,
+      DU = 20,
+      EU = 21,
+      YU = {
+        [AU]: "link",
         2: "draw",
         3: "draw base vertex",
         4: "draw no index buffer",
@@ -2958,26 +2937,26 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [PM]: "retry linked",
-        [nM]: "fallback linked",
-        [QM]: "fallback failed",
-        [zM]: "link stalled",
+        [FU]: "retry linked",
+        [oU]: "fallback linked",
+        [DU]: "fallback failed",
+        [EU]: "link stalled",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function mM(MM, rM, iM) {
-      return MM === PM ? "program retry" : MM === aM ? "program link" : MM === zM ? "program link stall" : MM === nM || MM === QM ? `program ${rM} ${iM}` : "program"
+    function NU(UU, XU, zU) {
+      return UU === FU ? "program retry" : UU === AU ? "program link" : UU === EU ? "program link stall" : UU === oU || UU === DU ? `program ${XU} ${zU}` : "program"
     }
-    const HM = {
+    const IU = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain",
         5: "scene warm stuck"
       },
-      hM = {
+      pU = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -2990,18 +2969,18 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      JM = {
+      aU = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      dM = {
+      tU = {
         11: "none read after view",
         12: "some read after view"
       },
-      yM = {
+      gU = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -3009,22 +2988,22 @@ export const modules = {
         5: "no wait no clock",
         6: "no wait parallel links",
         7: "view shown unheld",
-        ...dM
+        ...tU
       },
-      lM = {
+      kU = {
         8: "view",
         9: "minute",
         10: "loss"
       };
 
-    function EM(MM, rM) {
-      return MM === OM.n.RenderSerialLinks && void 0 !== dM[rM]
+    function GU(UU, XU) {
+      return UU === cU.h.RenderSerialLinks && void 0 !== tU[XU]
     }
 
-    function UM(MM, rM) {
-      return MM === OM.n.RenderSerialLinks && void 0 !== lM[15 & rM]
+    function BU(UU, XU) {
+      return UU === cU.h.RenderSerialLinks && void 0 !== kU[15 & XU]
     }
-    const GM = {
+    const ZU = {
       1280: "invalid enum",
       1281: "invalid value",
       1282: "invalid operation",
@@ -3033,89 +3012,89 @@ export const modules = {
       37442: "context lost"
     };
 
-    function CM(MM, rM) {
-      var iM;
-      return null !== (iM = MM[rM]) && void 0 !== iM ? iM : (0, jM.b)(rM)
+    function RU(UU, XU) {
+      var zU;
+      return null !== (zU = UU[XU]) && void 0 !== zU ? zU : (0, QU.b)(XU)
     }
 
-    function eM() {
-      return (0, jM.b)((0, SM.d)())
+    function PU() {
+      return (0, QU.b)((0, yU.d)())
     }
 
-    function bM(MM, rM) {
-      switch (MM) {
-        case OM.n.RenderSceneRowNotDrawn:
+    function WU(UU, XU) {
+      switch (UU) {
+        case cU.h.RenderSceneRowNotDrawn:
           return {
-            words: ` ${CM(hM,rM)}`, instance: String(rM), group: String(MM)
+            words: ` ${RU(pU,XU)}`, instance: String(XU), group: String(UU)
           };
-        case OM.n.RenderChunkMeshNotDrawn: {
-          const iM = 0 === (128 & rM) ? "" : " shortage",
-            OM = rM >>> 8;
+        case cU.h.RenderChunkMeshNotDrawn: {
+          const zU = 0 === (128 & XU) ? "" : " shortage",
+            cU = XU >>> 8;
           return {
-            words: ` ${CM(JM,127&rM)}${iM}${0===OM?"":` kind ${(0,jM.b)(OM)}`}`,
-            instance: String(rM),
-            group: String(MM)
+            words: ` ${RU(aU,127&XU)}${zU}${0===cU?"":` kind ${(0,QU.b)(cU)}`}`,
+            instance: String(XU),
+            group: String(UU)
           }
         }
-        case OM.n.RenderInternal: {
-          const iM = CM(HM, 255 & rM),
-            OM = rM >>> 8 & 255;
-          if (0 === OM) return {
-            words: ` ${iM}`,
-            instance: String(rM),
-            group: String(MM)
+        case cU.h.RenderInternal: {
+          const zU = RU(IU, 255 & XU),
+            cU = XU >>> 8 & 255;
+          if (0 === cU) return {
+            words: ` ${zU}`,
+            instance: String(XU),
+            group: String(UU)
           };
-          const SM = CM(LM, OM),
-            aM = rM >>> 16;
+          const yU = RU(YU, cU),
+            AU = XU >>> 16;
           return {
-            words: ` ${iM} ${SM} program ${(0,jM.b)(aM)}`,
-            instance: `${iM} ${SM} ${aM}`,
-            group: mM(OM, SM, iM),
+            words: ` ${zU} ${yU} program ${(0,QU.b)(AU)}`,
+            instance: `${zU} ${yU} ${AU}`,
+            group: NU(cU, yU, zU),
             gpuDetails: {
-              programFailure: SM,
-              program: String(aM)
+              programFailure: yU,
+              program: String(AU)
             }
           }
         }
-        case OM.n.RenderSerialLinks: {
-          if (UM(MM, rM)) {
-            const MM = function(MM) {
-              const rM = (rM, iM) => (0, jM.b)(MM >>> rM & (1 << iM) - 1),
-                iM = MM >>> 30 & 1 ? " restored" : "";
-              return `link census ${lM[15&MM]} linked ${rM(22,8)} failed ${rM(4,6)} retried ${rM(10,6)} fallback ${rM(16,6)}${iM}`
-            }(rM);
+        case cU.h.RenderSerialLinks: {
+          if (BU(UU, XU)) {
+            const UU = function(UU) {
+              const XU = (XU, zU) => (0, QU.b)(UU >>> XU & (1 << zU) - 1),
+                zU = UU >>> 30 & 1 ? " restored" : "";
+              return `link census ${kU[15&UU]} linked ${XU(22,8)} failed ${XU(4,6)} retried ${XU(10,6)} fallback ${XU(16,6)}${zU}`
+            }(XU);
             return {
-              words: ` ${MM}`,
-              instance: String(15 & rM),
+              words: ` ${UU}`,
+              instance: String(15 & XU),
               group: "link census",
               gpuDetails: {
-                linkCensus: MM
+                linkCensus: UU
               }
             }
           }
-          const iM = CM(yM, rM);
+          const zU = RU(gU, XU);
           return {
-            words: ` ${iM}`,
-            instance: String(rM),
-            group: String(MM),
+            words: ` ${zU}`,
+            instance: String(XU),
+            group: String(UU),
             gpuDetails: {
-              serialLinks: iM
+              serialLinks: zU
             }
           }
         }
-        case OM.n.RenderGlErrorAfterRestore: {
-          const iM = CM(GM, 65535 & rM),
-            OM = rM >>> 16,
-            SM = 65535 !== OM;
+        case cU.h.RenderGlErrorAfterRestore: {
+          const zU = RU(ZU, 65535 & XU),
+            cU = XU >>> 16,
+            yU = 65535 !== cU;
           return {
-            words: ` ${iM}${SM?` program ${(0,jM.b)(OM)}`:""}`,
-            instance: String(rM),
-            group: String(MM),
-            gpuDetails: SM ? {
-              glError: iM,
-              program: String(OM)
+            words: ` ${zU}${yU?` program ${(0,QU.b)(cU)}`:""}`,
+            instance: String(XU),
+            group: String(UU),
+            gpuDetails: yU ? {
+              glError: zU,
+              program: String(cU)
             } : {
-              glError: iM
+              glError: zU
             }
           }
         }
@@ -3123,914 +3102,840 @@ export const modules = {
           return null
       }
     }
-    const wM = 2,
-      tM = new Map;
+    const dU = 2,
+      LU = new Map;
 
-    function gM(MM) {
+    function eU(UU) {
       let {
-        group: rM,
-        instance: iM
-      } = MM, OM = tM.get(rM);
-      return void 0 === OM && (OM = [], tM.set(rM, OM)), !OM.includes(iM) && (OM.length >= wM || (OM.push(iM), !1))
+        group: XU,
+        instance: zU
+      } = UU, cU = LU.get(XU);
+      return void 0 === cU && (cU = [], LU.set(XU, cU)), !cU.includes(zU) && (cU.length >= dU || (cU.push(zU), !1))
     }
 
-    function uM() {
-      return tM.size > 0
+    function CU() {
+      return LU.size > 0
     }
 
-    function RM() {
-      tM.clear()
+    function wU() {
+      LU.clear()
     }
   },
-  41826: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => aM,
-      f: () => jM
+  41831: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => AU,
+      g: () => QU
     });
-    var OM = iM(41833);
-    const SM = new WeakSet;
-    const jM = {
+    var cU = zU(41840);
+    const yU = new WeakSet;
+    const QU = {
         webgpu: async () => (function() {
-          let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
-          if (void 0 === MM || SM.has(MM.prototype)) return;
-          SM.add(MM.prototype);
-          const rM = MM.prototype.requestDevice;
-          MM.prototype.requestDevice = function(MM) {
-            var iM;
-            const SM = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.requiredLimits) && void 0 !== iM ? iM : {},
-              jM = Object.keys(SM).filter((MM => !(MM in this.limits)));
-            if (0 === jM.length) return rM.call(this, MM);
-            const aM = Object.fromEntries(Object.entries(SM).filter((MM => {
-              let [rM] = MM;
-              return rM in this.limits
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
+          if (void 0 === UU || yU.has(UU.prototype)) return;
+          yU.add(UU.prototype);
+          const XU = UU.prototype.requestDevice;
+          UU.prototype.requestDevice = function(UU) {
+            var zU;
+            const yU = null !== (zU = null === UU || void 0 === UU ? void 0 : UU.requiredLimits) && void 0 !== zU ? zU : {},
+              QU = Object.keys(yU).filter((UU => !(UU in this.limits)));
+            if (0 === QU.length) return XU.call(this, UU);
+            const AU = Object.fromEntries(Object.entries(yU).filter((UU => {
+              let [XU] = UU;
+              return XU in this.limits
             })));
-            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${jM.join(", ")}`), (0, OM.reportDroppedRequiredLimits)(jM), rM.call(this, {
-              ...MM,
-              requiredLimits: aM
+            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${QU.join(", ")}`), (0, cU.reportDroppedRequiredLimits)(QU), XU.call(this, {
+              ...UU,
+              requiredLimits: AU
             })
           }
-        }(), (await iM.e(8).then((() => iM(53685)))).bloxdWasmWebgpu),
-        webgl: async () => (await iM.e(6).then((() => iM(53702)))).bloxdWasmWebgl,
-        webgl1: async () => (await iM.e(7).then((() => iM(53713)))).bloxdWasmWebgl1
+        }(), (await zU.e(8).then((() => zU(53674)))).bloxdWasmWebgpu),
+        webgl: async () => (await zU.e(6).then((() => zU(53683)))).bloxdWasmWebgl,
+        webgl1: async () => (await zU.e(7).then((() => zU(53696)))).bloxdWasmWebgl1
       },
-      aM = async () => (await iM.e(5).then((() => iM(53722)))).compileAnimationPackInWasm
+      AU = async () => (await zU.e(5).then((() => zU(53713)))).compileAnimationPackInWasm
   },
-  41776: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => yM,
-      g: () => dM,
-      k: () => GM
+  41761: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => gU,
+      c: () => tU,
+      g: () => ZU
     });
-    var OM = iM(7131),
-      SM = iM(22),
-      jM = iM(4641),
-      aM = iM(5200),
-      PM = iM(7124),
-      nM = iM(41782);
+    var cU = zU(7233),
+      yU = zU(31),
+      QU = zU(4692),
+      AU = zU(5326),
+      FU = zU(7226),
+      oU = zU(41770);
 
-    function QM(MM, rM) {
-      const iM = (0, PM.b)(rM.variants);
-      return MM.setShaderPack(iM.variantFlags, iM.hooks, iM.moduleCodes, (0, nM.s)(rM.layers), nM.l[rM.lQ], rM.keepCircleShadows)
+    function DU(UU, XU) {
+      const zU = (0, FU.e)(XU.variants);
+      return UU.setShaderPack(zU.variantFlags, zU.hooks, zU.moduleCodes, (0, oU.D)(XU.layers), oU.o[XU.policy], XU.keepCircleShadows)
     }
-    const zM = 0,
-      LM = 1,
-      mM = 2,
-      HM = "shaderPack:failedToCompile",
-      hM = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
-      JM = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
+    const EU = 0,
+      YU = 1,
+      NU = 2,
+      IU = "shaderPack:failedToCompile",
+      pU = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
+      aU = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
 
-    function dM(MM, rM) {
-      var iM;
-      const OM = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.reason) && void 0 !== iM ? iM : "none";
-      return hM.has(OM) ? {
-        messageKey: rM ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function tU(UU, XU) {
+      var zU;
+      const cU = null !== (zU = null === UU || void 0 === UU ? void 0 : UU.reason) && void 0 !== zU ? zU : "none";
+      return pU.has(cU) ? {
+        messageKey: XU ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === OM && "override" === (null === MM || void 0 === MM ? void 0 : MM.source) ? {
+      } : "not_requested" === cU && "override" === (null === UU || void 0 === UU ? void 0 : UU.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: JM.has(OM) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: aU.has(cU) ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    class yM extends Error {
-      constructor(MM) {
-        super(`the shader pack can't run in this game: ${MM}`), this.messageKey = MM, this.name = "ShaderPackJoinError"
+    class gU extends Error {
+      constructor(UU) {
+        super(`the shader pack can't run in this game: ${UU}`), this.messageKey = UU, this.name = "ShaderPackJoinError"
       }
     }
-    const lM = "strict";
-    class EM {
-      constructor(MM) {
-        this.deps = MM, this.pagePack = void 0, this.loaded = null, this.lQ = lM, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = MM.load().catch((rM => (MM.warn("the shader pack could not load: the game draws without it", rM), {
+    const kU = "strict";
+    class GU {
+      constructor(UU) {
+        this.deps = UU, this.pagePack = void 0, this.loaded = null, this.policy = kU, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = UU.load().catch((XU => (UU.warn("the shader pack could not load: the game draws without it", XU), {
           status: "none"
-        }))).then((MM => (this.loaded = MM, "active" === MM.status && (this.handOverToPreviews(MM), null !== MM.harnessPolicy && (this.lQ = MM.harnessPolicy, this.handOver())), MM)))
+        }))).then((UU => (this.loaded = UU, "active" === UU.status && (this.handOverToPreviews(UU), null !== UU.harnessPolicy && (this.policy = UU.harnessPolicy, this.handOver())), UU)))
       }
-      async join(MM) {
+      async join(UU) {
         this.leave();
-        const rM = this.game,
-          [iM, SM] = await Promise.all([this.pagePack, this.policyOf(MM)]);
-        if (rM !== this.game || "none" === iM.status) return null;
-        const jM = "active" === iM.status ? iM.pack.variants : iM.variants,
-          aM = (0, OM.l)(jM, SM);
-        if (aM && "active" === iM.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (aM) {
-          const MM = this.cantRun(iM, SM);
-          if (null !== MM) return MM
-        } else if ("blocked" === iM.status || null === this.deps.core) return null;
-        return this.lQ = SM, this.handOver(), aM && this.refused ? HM : (this.joined = !0, this.offInThisGame = !aM, null)
+        const XU = this.game,
+          [zU, yU] = await Promise.all([this.pagePack, this.policyOf(UU)]);
+        if (XU !== this.game || "none" === zU.status) return null;
+        const QU = "active" === zU.status ? zU.pack.variants : zU.variants,
+          AU = (0, cU.j)(QU, yU);
+        if (AU && "active" === zU.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (AU) {
+          const UU = this.cantRun(zU, yU);
+          if (null !== UU) return UU
+        } else if ("blocked" === zU.status || null === this.deps.core) return null;
+        return this.policy = yU, this.handOver(), AU && this.refused ? IU : (this.joined = !0, this.offInThisGame = !AU, null)
       }
-      async replay(MM) {
-        const rM = await this.join(MM);
-        null === rM ? this.playable() : this.deps.failInGame(rM)
+      async replay(UU) {
+        const XU = await this.join(UU);
+        null === XU ? this.playable() : this.deps.failInGame(XU)
       }
-      cantRun(MM, rM) {
+      cantRun(UU, XU) {
         const {
-          core: iM,
-          noWebGpu: OM
+          core: zU,
+          noWebGpu: cU
         } = this.deps;
-        if ("blocked" === MM.status) {
-          return "shaderPack:failedUnchecked" === MM.messageKey && null === iM && OM.noAdapter ? OM.messageKey : MM.messageKey
+        if ("blocked" === UU.status) {
+          return "shaderPack:failedUnchecked" === UU.messageKey && null === zU && cU.noAdapter ? cU.messageKey : UU.messageKey
         }
-        return this.refused || this.failedPolicies.has(rM) ? HM : null
+        return this.refused || this.failedPolicies.has(XU) ? IU : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var MM;
-        return this.runsInJoinedGame() && "active" === (null === (MM = this.loaded) || void 0 === MM ? void 0 : MM.status) ? function(MM, rM) {
-          const iM = MM.filter((MM => (0, OM.l)([MM], rM))),
-            SM = MM => iM.some((rM => rM[MM]));
+        var UU;
+        return this.runsInJoinedGame() && "active" === (null === (UU = this.loaded) || void 0 === UU ? void 0 : UU.status) ? function(UU, XU) {
+          const zU = UU.filter((UU => (0, cU.j)([UU], XU))),
+            yU = UU => zU.some((XU => XU[UU]));
           return {
-            sceneDepth: SM("sceneDepth"),
-            sunShadow: SM("sunShadow"),
-            airShadow: SM("airShadow")
+            sceneDepth: yU("sceneDepth"),
+            sunShadow: yU("sunShadow"),
+            airShadow: yU("airShadow")
           }
-        }(this.loaded.pack.variants, this.lQ) : null
+        }(this.loaded.pack.variants, this.policy) : null
       }
       couldntRunInJoinedGame() {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(HM) : (null !== this.couldntRun ? this.notify(jM.b, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.lQ) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(IU) : (null !== this.couldntRun ? this.notify(QU.c, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.policy) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(MM) {
+      coreErrors(UU) {
         for (const {
-            code: rM,
-            detail: iM
+            code: XU,
+            detail: zU
           }
-          of MM)
-          if (rM === aM.n.RenderShaderPackNotRun) switch (255 & iM) {
-            case zM:
+          of UU)
+          if (XU === AU.h.RenderShaderPackNotRun) switch (255 & zU) {
+            case EU:
               this.refused = !0, this.failed();
               break;
-            case LM:
-              this.failedPolicies.add(this.lQ), this.failed();
+            case YU:
+              this.failedPolicies.add(this.policy), this.failed();
               break;
-            case mM:
-              this.failedModelPolicies.add(this.lQ), this.playing && this.notifyModelFallback()
+            case NU:
+              this.failedModelPolicies.add(this.policy), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(HM) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(IU) : this.failedWhileJoining = !0)
       }
-      fail(MM) {
-        this.leave(), this.deps.failInGame(MM)
+      fail(UU) {
+        this.leave(), this.deps.failInGame(UU)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(MM, rM) {
-        const iM = this.game;
-        this.deps.notify(MM, (() => iM === this.game && this.joined), rM)
+      notify(UU, XU) {
+        const zU = this.game;
+        this.deps.notify(UU, (() => zU === this.game && this.joined), XU)
       }
       handOver() {
-        var MM;
+        var UU;
         const {
-          core: rM
+          core: XU
         } = this.deps;
-        null !== rM && "active" === (null === (MM = this.loaded) || void 0 === MM ? void 0 : MM.status) && (QM(rM, {
+        null !== XU && "active" === (null === (UU = this.loaded) || void 0 === UU ? void 0 : UU.status) && (DU(XU, {
           ...this.loaded.pack,
-          lQ: this.lQ
+          policy: this.policy
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(MM) {
+      handOverToPreviews(UU) {
         let {
-          pack: rM,
-          harnessPolicy: iM
-        } = MM;
+          pack: XU,
+          harnessPolicy: zU
+        } = UU;
         const {
-          previews: OM
+          previews: cU
         } = this.deps;
-        null !== OM && QM(OM, {
-          ...rM,
-          lQ: null !== iM && void 0 !== iM ? iM : lM
+        null !== cU && DU(cU, {
+          ...XU,
+          policy: null !== zU && void 0 !== zU ? zU : kU
         })
       }
-      policyOf(MM) {
-        return this.deps.policyOf(MM).catch((MM => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", MM), lM)))
+      policyOf(UU) {
+        return this.deps.policyOf(UU).catch((UU => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", UU), kU)))
       }
     }
-    const UM = "wasmShaderPackNotice";
+    const BU = "wasmShaderPackNotice";
 
-    function GM(MM, rM, iM, OM) {
-      return SM.i.subscribe(UM, (MM => {
+    function ZU(UU, XU, zU, cU) {
+      return yU.k.subscribe(BU, (UU => {
         let {
-          translationKey: rM,
-          stillCurrent: iM,
-          reasonKey: OM
-        } = MM;
-        iM() && SM.i.Tz("chat", (0, jM.f)(rM, OM))
-      })), new EM({
-        load: CM,
-        policyOf: eM,
-        core: MM,
-        previews: rM,
-        noWebGpu: iM,
-        notify: (MM, rM, iM) => {
-          const OM = {
-            translationKey: MM,
-            stillCurrent: rM,
-            reasonKey: iM
+          translationKey: XU,
+          stillCurrent: zU,
+          reasonKey: cU
+        } = UU;
+        zU() && yU.k.UY("chat", (0, QU.h)(XU, cU))
+      })), new GU({
+        load: RU,
+        policyOf: PU,
+        core: UU,
+        previews: XU,
+        noWebGpu: zU,
+        notify: (UU, XU, zU) => {
+          const cU = {
+            translationKey: UU,
+            stillCurrent: XU,
+            reasonKey: zU
           };
-          SM.i.Tz(UM, OM, !0)
+          yU.k.UY(BU, cU, !0)
         },
-        failInGame: MM => {
-          SM.i.Tz(jM.e, MM)
+        failInGame: UU => {
+          yU.k.UY(QU.g, UU)
         },
-        warn: OM
+        warn: cU
       })
     }
-    async function CM() {
+    async function RU() {
       const [{
-        shaderPackPage: MM,
-        harnessShaderPackMode: rM
+        shaderPackPage: UU,
+        harnessShaderPackMode: XU
       }, {
-        shaderPackTextures: OM
-      }] = await Promise.all([iM.e(129).then((() => iM(40300))), iM.e(130).then((() => iM(7120)))]), SM = await MM.load();
-      return "active" !== SM.status ? SM : {
+        shaderPackTextures: cU
+      }] = await Promise.all([zU.e(128).then((() => zU(40071))), zU.e(129).then((() => zU(7219)))]), yU = await UU.load();
+      return "active" !== yU.status ? yU : {
         status: "active",
         pack: {
-          variants: SM.pack.variants,
-          layers: OM().layers,
-          keepCircleShadows: SM.pack.keepCircleShadows
+          variants: yU.pack.variants,
+          layers: cU().layers,
+          keepCircleShadows: yU.pack.keepCircleShadows
         },
-        harnessPolicy: rM()
+        harnessPolicy: XU()
       }
     }
-    async function eM(MM) {
-      var rM;
+    async function PU(UU) {
+      var XU;
       const [{
-        shaderPackPage: OM,
-        harnessShaderPackMode: SM
+        shaderPackPage: cU,
+        harnessShaderPackMode: yU
       }, {
-        getShaderPackPolicy: jM
-      }] = await Promise.all([iM.e(129).then((() => iM(40300))), iM.e(106).then((() => iM(43937)))]);
-      return await OM.load(), null !== (rM = SM()) && void 0 !== rM ? rM : jM(MM)
+        getShaderPackPolicy: QU
+      }] = await Promise.all([zU.e(128).then((() => zU(40071))), zU.e(106).then((() => zU(43968)))]);
+      return await cU.load(), null !== (XU = yU()) && void 0 !== XU ? XU : QU(UU)
     }
   },
-  41900: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      g: () => dM,
-      i: () => nM,
-      k: () => QM,
-      o: () => zM,
-      p: () => mM
+  41902: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => FU,
+      d: () => tU,
+      e: () => oU,
+      i: () => DU,
+      j: () => EU,
+      m: () => NU
     });
-    var OM = iM(41906),
-      SM = iM(41913);
-    const jM = "atlas:",
-      aM = 3e4;
-    class PM extends Error {
-      constructor(MM, rM) {
-        super(`fetching ${MM} answered HTTP ${rM}`), this.url = MM, this.status = rM, this.name = "TerrainTextureFetchError"
+    var cU = zU(41910),
+      yU = zU(41919);
+    const QU = "atlas:",
+      AU = 3e4;
+    class FU extends Error {
+      constructor(UU, XU) {
+        super(`fetching ${UU} answered HTTP ${XU}`), this.url = UU, this.status = XU, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function nM(MM) {
-      if (!MM.startsWith(jM)) return null;
-      const rM = Number(MM.slice(jM.length));
-      return Number.isInteger(rM) && rM >= 0 ? rM : null
+    function oU(UU) {
+      if (!UU.startsWith(QU)) return null;
+      const XU = Number(UU.slice(QU.length));
+      return Number.isInteger(XU) && XU >= 0 ? XU : null
     }
-    async function QM() {
-      const MM = await iM.e(231).then((() => iM(35131)));
+    async function DU() {
+      const UU = await zU.e(222).then((() => zU(34975)));
       return {
-        atlasSheets: MM.blockAtlasUrls,
-        texture: rM => {
-          var iM, OM, jM;
-          return null !== (iM = null !== (OM = null !== (jM = MM.animatedBlockTextures[rM]) && void 0 !== jM ? jM : MM.rotatedBlockTextures[rM]) && void 0 !== OM ? OM : SM.c[rM]) && void 0 !== iM ? iM : null
+        atlasSheets: UU.blockAtlasUrls,
+        texture: XU => {
+          var zU, cU, QU;
+          return null !== (zU = null !== (cU = null !== (QU = UU.animatedBlockTextures[XU]) && void 0 !== QU ? QU : UU.rotatedBlockTextures[XU]) && void 0 !== cU ? cU : yU.c[XU]) && void 0 !== zU ? zU : null
         }
       }
     }
-    async function zM(MM) {
-      const rM = new AbortController,
-        iM = setTimeout((() => {
-          rM.abort(new DOMException(`${MM} took over ${aM} ms`, "TimeoutError"))
-        }), aM);
-      let OM;
+    async function EU(UU) {
+      const XU = new AbortController,
+        zU = setTimeout((() => {
+          XU.abort(new DOMException(`${UU} took over ${AU} ms`, "TimeoutError"))
+        }), AU);
+      let cU;
       try {
-        const iM = await fetch(MM, {
-          signal: rM.signal
+        const zU = await fetch(UU, {
+          signal: XU.signal
         });
-        if (!iM.ok) throw new PM(MM, iM.status);
-        OM = await iM.blob()
+        if (!zU.ok) throw new FU(UU, zU.status);
+        cU = await zU.blob()
       } finally {
-        clearTimeout(iM)
+        clearTimeout(zU)
       }
-      const SM = await createImageBitmap(OM, {
+      const yU = await createImageBitmap(cU, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return mM(SM)
+        return NU(yU)
       } finally {
-        SM.close()
+        yU.close()
       }
     }
-    const LM = 8192;
+    const YU = 8192;
 
-    function mM(MM) {
+    function NU(UU) {
       const {
-        width: rM,
-        height: iM
-      } = MM, SM = Math.max(1, Math.min(iM, LM)), jM = (0, OM.d)(rM, SM, {
+        width: XU,
+        height: zU
+      } = UU, yU = Math.max(1, Math.min(zU, YU)), QU = (0, cU.d)(XU, yU, {
         willReadFrequently: !0
       });
-      if (!jM) throw new Error("no 2D context to read the texture back");
-      jM.globalCompositeOperation = "copy";
-      const aM = new Uint8Array(rM * iM * 4);
-      for (let OM = 0; OM < iM; OM += SM) {
-        const PM = Math.min(SM, iM - OM);
-        jM.drawImage(MM, 0, OM, rM, PM, 0, 0, rM, PM), aM.set(jM.getImageData(0, 0, rM, PM).data, OM * rM * 4)
+      if (!QU) throw new Error("no 2D context to read the texture back");
+      QU.globalCompositeOperation = "copy";
+      const AU = new Uint8Array(XU * zU * 4);
+      for (let cU = 0; cU < zU; cU += yU) {
+        const FU = Math.min(yU, zU - cU);
+        QU.drawImage(UU, 0, cU, XU, FU, 0, 0, XU, FU), AU.set(QU.getImageData(0, 0, XU, FU).data, cU * XU * 4)
       }
       return {
-        width: rM,
-        height: iM,
-        pixels: aM
+        width: XU,
+        height: zU,
+        pixels: AU
       }
     }
-    async function HM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zM;
-      const OM = [],
-        SM = await Promise.all(MM.map((async MM => {
-          var SM, aM;
-          const PM = null !== (SM = null === (aM = rM.decoded) || void 0 === aM ? void 0 : aM.call(rM, MM)) && void 0 !== SM ? SM : null,
-            QM = null === PM ? function(MM, rM) {
-              if (MM.startsWith(jM)) {
-                var iM;
-                const OM = nM(MM);
-                return null === OM ? null : null !== (iM = rM.atlasSheets[OM]) && void 0 !== iM ? iM : null
+    async function IU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : EU;
+      const cU = [],
+        yU = await Promise.all(UU.map((async UU => {
+          var yU, AU;
+          const FU = null !== (yU = null === (AU = XU.decoded) || void 0 === AU ? void 0 : AU.call(XU, UU)) && void 0 !== yU ? yU : null,
+            DU = null === FU ? function(UU, XU) {
+              if (UU.startsWith(QU)) {
+                var zU;
+                const cU = oU(UU);
+                return null === cU ? null : null !== (zU = XU.atlasSheets[cU]) && void 0 !== zU ? zU : null
               }
-              return rM.texture(MM)
-            }(MM, rM) : null,
-            zM = null !== PM && void 0 !== PM ? PM : null === QM ? null : iM(QM);
-          if (null === zM) return OM.push({
-            name: MM,
-            url: QM,
-            error: new Error(`no URL for terrain texture ${MM}`)
+              return XU.texture(UU)
+            }(UU, XU) : null,
+            EU = null !== FU && void 0 !== FU ? FU : null === DU ? null : zU(DU);
+          if (null === EU) return cU.push({
+            name: UU,
+            url: DU,
+            error: new Error(`no URL for terrain texture ${UU}`)
           }), null;
           try {
-            const rM = await zM;
-            if (rM.pixels.byteLength !== rM.width * rM.height * 4) throw new Error(`decoded ${rM.pixels.byteLength} bytes for ${rM.width}x${rM.height} texels`);
+            const XU = await EU;
+            if (XU.pixels.byteLength !== XU.width * XU.height * 4) throw new Error(`decoded ${XU.pixels.byteLength} bytes for ${XU.width}x${XU.height} texels`);
             return {
-              name: MM,
-              texture: rM
+              name: UU,
+              texture: XU
             }
-          } catch (LM) {
-            return OM.push({
-              name: MM,
-              url: QM,
-              error: LM
+          } catch (YU) {
+            return cU.push({
+              name: UU,
+              url: DU,
+              error: YU
             }), null
           }
         }))),
-        aM = SM.filter((MM => null !== MM)),
-        PM = new Uint32Array(2 * aM.length);
-      aM.forEach(((MM, rM) => {
+        AU = yU.filter((UU => null !== UU)),
+        FU = new Uint32Array(2 * AU.length);
+      AU.forEach(((UU, XU) => {
         let {
-          texture: iM
-        } = MM;
-        PM[2 * rM] = iM.width, PM[2 * rM + 1] = iM.height
+          texture: zU
+        } = UU;
+        FU[2 * XU] = zU.width, FU[2 * XU + 1] = zU.height
       }));
       return {
         handOver: {
-          names: aM.map((MM => {
+          names: AU.map((UU => {
             let {
-              name: rM
-            } = MM;
-            return rM
+              name: XU
+            } = UU;
+            return XU
           })),
-          textures: aM.map((MM => {
+          textures: AU.map((UU => {
             let {
-              texture: rM
-            } = MM;
-            return rM.pixels
+              texture: XU
+            } = UU;
+            return XU.pixels
           })),
-          sizes: PM
+          sizes: FU
         },
-        failures: OM
+        failures: cU
       }
     }
-    const hM = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const pU = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function JM() {}
-    class dM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hM,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = MM, this.retryMs = rM, this.keepBelow = iM, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function aU() {}
+    class tU {
+      constructor(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pU,
+          zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = UU, this.retryMs = XU, this.keepBelow = zU, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QM,
-          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const OM = ++this.started,
-          SM = {
-            decode: iM.decode,
-            wholeAtlas: iM.wholeAtlas
+      async swap(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DU,
+          zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const cU = ++this.started,
+          yU = {
+            decode: zU.decode,
+            wholeAtlas: zU.wholeAtlas
           };
-        return this.loadAndHandOver(rM, SM, MM, (() => {
-          var MM;
-          return OM < this.landed || !1 === (null === (MM = iM.wanted) || void 0 === MM ? void 0 : MM.call(iM))
+        return this.loadAndHandOver(XU, yU, UU, (() => {
+          var UU;
+          return cU < this.landed || !1 === (null === (UU = zU.wanted) || void 0 === UU ? void 0 : UU.call(zU))
         }), {
-          onTaken: (MM, iM) => {
-            this.landed = OM, this.current = {
-              mine: OM,
-              sources: rM,
-              load: SM,
-              ML: MM,
-              failed: iM
+          onTaken: (UU, zU) => {
+            this.landed = cU, this.current = {
+              mine: cU,
+              sources: XU,
+              load: yU,
+              cY: UU,
+              failed: zU
             }
           }
         })
       }
-      restore(MM) {
-        var rM;
-        const iM = this.current;
-        if (null === iM) return Promise.resolve(null);
-        if ((null === (rM = this.restoring) || void 0 === rM ? void 0 : rM.mine) === iM.mine) return this.restoring.done;
-        const OM = {
-          mine: iM.mine,
-          done: this.restoreLanded(iM, MM).finally((() => {
-            this.restoring === OM && (this.restoring = null)
+      restore(UU) {
+        var XU;
+        const zU = this.current;
+        if (null === zU) return Promise.resolve(null);
+        if ((null === (XU = this.restoring) || void 0 === XU ? void 0 : XU.mine) === zU.mine) return this.restoring.done;
+        const cU = {
+          mine: zU.mine,
+          done: this.restoreLanded(zU, UU).finally((() => {
+            this.restoring === cU && (this.restoring = null)
           }))
         };
-        return this.restoring = OM, OM.done
+        return this.restoring = cU, cU.done
       }
-      async restoreLanded(MM, rM) {
-        const iM = () => this.landed !== MM.mine,
+      async restoreLanded(UU, XU) {
+        const zU = () => this.landed !== UU.mine,
           {
-            ML: OM
-          } = MM;
-        if (null !== OM) return this.stopped() ? null : this.core.setTerrainTextures(OM.names, OM.textures, OM.sizes);
-        let SM = rM;
-        for (let jM = 0;; jM++) {
-          const rM = this.retryMs.at(jM),
-            OM = {
-              allOrNothingExcept: void 0 === rM ? void 0 : MM.failed
+            cY: cU
+          } = UU;
+        if (null !== cU) return this.stopped() ? null : this.core.setTerrainTextures(cU.names, cU.textures, cU.sizes);
+        let yU = XU;
+        for (let QU = 0;; QU++) {
+          const XU = this.retryMs.at(QU),
+            cU = {
+              allOrNothingExcept: void 0 === XU ? void 0 : UU.failed
             },
-            aM = await this.loadAndHandOver(MM.sources, MM.load, SM, iM, OM);
-          if (!1 !== aM || void 0 === rM || this.stopped()) return aM;
-          if (SM = JM, await new Promise((MM => {
-              setTimeout(MM, rM)
-            })), iM()) return null
+            AU = await this.loadAndHandOver(UU.sources, UU.load, yU, zU, cU);
+          if (!1 !== AU || void 0 === XU || this.stopped()) return AU;
+          if (yU = aU, await new Promise((UU => {
+              setTimeout(UU, XU)
+            })), zU()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(MM, rM, iM, OM) {
-        let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(UU, XU, zU, cU) {
+        let yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const jM = this.core.terrainTextureNames();
-        var aM;
-        if (0 === jM.length) return null === (aM = SM.onTaken) || void 0 === aM || aM.call(SM, null, new Set), !0;
-        let PM, QM;
+        const QU = this.core.terrainTextureNames();
+        var AU;
+        if (0 === QU.length) return null === (AU = yU.onTaken) || void 0 === AU || AU.call(yU, null, new Set), !0;
+        let FU, DU;
         try {
-          PM = await MM(), QM = await HM(jM, PM, rM.decode)
-        } catch (dM) {
-          return OM() ? null : (iM({
+          FU = await UU(), DU = await IU(QU, FU, XU.decode)
+        } catch (tU) {
+          return cU() ? null : (zU({
             name: null,
             url: null,
-            error: dM
+            error: tU
           }), !1)
         }
-        if (OM() || this.stopped()) return null;
-        for (const nM of QM.failures) iM(nM);
-        const zM = SM.allOrNothingExcept;
-        if (void 0 !== zM && QM.failures.some((MM => {
+        if (cU() || this.stopped()) return null;
+        for (const oU of DU.failures) zU(oU);
+        const EU = yU.allOrNothingExcept;
+        if (void 0 !== EU && DU.failures.some((UU => {
             let {
-              name: rM
-            } = MM;
-            return null === rM || !zM.has(rM)
-          })) || !0 === rM.wholeAtlas && QM.failures.some((MM => {
+              name: XU
+            } = UU;
+            return null === XU || !EU.has(XU)
+          })) || !0 === XU.wholeAtlas && DU.failures.some((UU => {
             let {
-              name: rM
-            } = MM;
-            return null === rM || null !== nM(rM)
+              name: XU
+            } = UU;
+            return null === XU || null !== oU(XU)
           }))) return !1;
         const {
-          handOver: LM
-        } = QM, mM = function(MM) {
-          return MM.textures.reduce(((MM, rM) => MM + rM.byteLength), 0)
-        }(LM) < this.keepBelow, hM = this.core.setTerrainTextures(LM.names, LM.textures, LM.sizes, mM ? void 0 : () => {
-          !async function(MM, rM) {
-            await rM;
+          handOver: YU
+        } = DU, NU = function(UU) {
+          return UU.textures.reduce(((UU, XU) => UU + XU.byteLength), 0)
+        }(YU) < this.keepBelow, pU = this.core.setTerrainTextures(YU.names, YU.textures, YU.sizes, NU ? void 0 : () => {
+          !async function(UU, XU) {
+            await XU;
             for (const {
-                buffer: OM
+                buffer: cU
               }
-              of MM) {
-              const MM = OM;
-              var iM;
-              if (!MM.detached) null === (iM = MM.transfer) || void 0 === iM || iM.call(MM, 0)
+              of UU) {
+              const UU = cU;
+              var zU;
+              if (!UU.detached) null === (zU = UU.transfer) || void 0 === zU || zU.call(UU, 0)
             }
-          }(LM.textures, PM.heldUntil)
+          }(YU.textures, FU.heldUntil)
         });
-        if (hM) {
-          var JM;
-          const MM = new Set(QM.failures.flatMap((MM => {
+        if (pU) {
+          var aU;
+          const UU = new Set(DU.failures.flatMap((UU => {
             let {
-              name: rM
-            } = MM;
-            return null === rM ? [] : [rM]
+              name: XU
+            } = UU;
+            return null === XU ? [] : [XU]
           })));
-          null === (JM = SM.onTaken) || void 0 === JM || JM.call(SM, mM ? LM : null, MM)
+          null === (aU = yU.onTaken) || void 0 === aU || aU.call(yU, NU ? YU : null, UU)
         }
-        return hM
+        return pU
       }
     }
   },
-  37790: (MM, rM, iM) => {
-    function OM(MM) {
-      return "fetch" === MM || "timeout" === MM || "integrity" === MM ? "download" : "browser"
-    }
-    iM.d(rM, {
-      d: () => SM,
-      f: () => aM,
-      g: () => nM,
-      j: () => PM,
-      n: () => OM,
-      p: () => jM
+  34816: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => DU,
+      c: () => YU,
+      g: () => EU
     });
-    const SM = "https://discord.gg/playbloxd";
+    var cU = zU(281),
+      yU = zU(97),
+      QU = zU(134),
+      AU = zU(127),
+      FU = zU(678);
+    const oU = new Set(["mali_bifrost"]);
 
-    function jM(MM) {
-      return "download" === MM ? {
-        icon: "wifi",
-        title: "wasmScreens:downloadFailedTitle",
-        help: "wasmScreens:downloadFailedHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:tryAgain",
-        cancel: "general:back"
-      } : {
-        icon: "face-dizzy",
-        title: "wasmScreens:unsupportedTitle",
-        help: "wasmScreens:unsupportedHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:ok",
-        cancel: null
-      }
+    function DU() {
+      if (FU.h) return;
+      const UU = (0, yU.pageOperatingSystem)();
+      if ("android" !== UU && "windows" !== UU || (0, FU.e)("webgl_default")) return;
+      if ("windows" === UU) return UU => "qualcomm" === (0, yU.normaliseGpuVendor)((0, AU.d)(UU).vendor);
+      const XU = (0, QU.o)(),
+        zU = null === XU ? (0, cU.q)() : (0, cU.h)(XU.vendor, XU.renderer);
+      return null !== zU && oU.has(zU) ? UU => (0, cU.l)((0, AU.d)(UU).vendor, zU) : void 0
     }
 
-    function aM(MM, rM) {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:crashTitle",
-        help: rM ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
-        helpValues: {
-          code: MM.code
-        },
-        discordLink: rM,
-        confirm: "general:reload",
-        cancel: "general:back"
-      }
+    function EU(UU, XU) {
+      return UU ? () => !0 : XU()
     }
-
-    function PM() {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:turnstilePageTitle",
-        help: "wasmScreens:turnstilePageHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:ok",
-        cancel: null
-      }
-    }
-
-    function nM(MM, rM, iM) {
-      return {
-        icon: "wifi",
-        title: "wasmScreens:disconnectedTitle",
-        help: iM ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
-        helpValues: {
-          reason: MM.reason
-        },
-        discordLink: null === MM.name,
-        confirm: rM ? "general:reconnect" : MM.requiresRefresh ? "general:reload" : "general:ok",
-        cancel: null
-      }
-    }
-  },
-  34980: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => QM,
-      d: () => LM,
-      g: () => zM
-    });
-    var OM = iM(243),
-      SM = iM(83),
-      jM = iM(114),
-      aM = iM(110),
-      PM = iM(650);
-    const nM = new Set(["mali_bifrost"]);
-
-    function QM() {
-      if (PM.i) return;
-      const MM = (0, SM.pageOperatingSystem)();
-      if ("android" !== MM && "windows" !== MM || (0, PM.e)("webgl_default")) return;
-      if ("windows" === MM) return MM => "qualcomm" === (0, SM.normaliseGpuVendor)((0, aM.d)(MM).vendor);
-      const rM = (0, jM.o)(),
-        iM = null === rM ? (0, OM.w)() : (0, OM.l)(rM.vendor, rM.renderer);
-      return null !== iM && nM.has(iM) ? MM => (0, OM.q)((0, aM.d)(MM).vendor, iM) : void 0
-    }
-
-    function zM(MM, rM) {
-      return MM ? () => !0 : rM()
-    }
-    async function LM(MM) {
+    async function YU(UU) {
       try {
-        const rM = zM(MM, QM),
-          iM = navigator.gpu;
-        if (void 0 === rM || void 0 === iM) return !1;
-        const OM = await (0, aM.o)(iM, {
+        const XU = EU(UU, DU),
+          zU = navigator.gpu;
+        if (void 0 === XU || void 0 === zU) return !1;
+        const cU = await (0, AU.m)(zU, {
           seed: !1,
-          compatibility: rM
+          compatibility: XU
         });
-        return "string" !== typeof OM && OM.compatibility && !(0, aM.j)(OM.adapter)
-      } catch (rM) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", rM), !1
+        return "string" !== typeof cU && cU.compatibility && !(0, AU.i)(cU.adapter)
+      } catch (XU) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", XU), !1
       }
     }
   },
-  41855: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => nM,
-      h: () => QM
+  41861: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => oU,
+      f: () => DU
     });
-    var OM = iM(83),
-      SM = iM(39814);
-    const jM = "webgpuPipeline";
+    var cU = zU(97),
+      yU = zU(39586);
+    const QU = "webgpuPipeline";
 
-    function aM(MM) {
-      return MM.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function AU(UU) {
+      return UU.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let PM = null;
+    let FU = null;
 
-    function nM() {
-      if (null === PM) try {
-        MM = (0, OM.getBrowserName)(), rM = (0, OM.getBrowserVersion)(), iM = (0, OM.getOperatingSystem)(), SM = (0, OM.getOperatingSystemVersion)(), PM = `${MM.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===rM?"unknown":aM(rM)}-${iM}${void 0===SM?"":`_${aM(SM)}`}`
-      } catch (jM) {
-        console.warn("The user agent couldn't be read for its browser code", jM), PM = "unknown"
+    function oU() {
+      if (null === FU) try {
+        UU = (0, cU.getBrowserName)(), XU = (0, cU.getBrowserVersion)(), zU = (0, cU.getOperatingSystem)(), yU = (0, cU.getOperatingSystemVersion)(), FU = `${UU.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===XU?"unknown":AU(XU)}-${zU}${void 0===yU?"":`_${AU(yU)}`}`
+      } catch (QU) {
+        console.warn("The user agent couldn't be read for its browser code", QU), FU = "unknown"
       }
-      var MM, rM, iM, SM;
-      return PM
+      var UU, XU, zU, yU;
+      return FU
     }
 
-    function QM() {
-      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const rM = `WGPU-${nM()}`,
-        OM = (MM, OM) => {
+    function DU() {
+      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const XU = `WGPU-${oU()}`,
+        cU = (UU, cU) => {
           const {
-            reason: aM,
-            message: PM
-          } = OM;
-          if ((0, SM.t)(String(PM))) return;
-          const nM = {
-            pipeline: null !== MM && void 0 !== MM ? MM : "",
-            reason: String(aM),
-            browserMessage: String(PM)
+            reason: AU,
+            message: FU
+          } = cU;
+          if ((0, yU.s)(String(FU))) return;
+          const oU = {
+            pipeline: null !== UU && void 0 !== UU ? UU : "",
+            reason: String(AU),
+            browserMessage: String(FU)
           };
-          Promise.resolve().then((() => iM(41833))).then((MM => {
+          Promise.resolve().then((() => zU(41840))).then((UU => {
             let {
-              reportCrash: iM
-            } = MM;
-            iM({
+              reportCrash: zU
+            } = UU;
+            zU({
               kind: "coreError",
-              code: rM,
-              site: jM,
+              code: XU,
+              site: QU,
               fatal: !1,
-              message: `${nM.pipeline} ${nM.reason}: ${nM.browserMessage}`,
-              details: nM,
-              error: OM
+              message: `${oU.pipeline} ${oU.reason}: ${oU.browserMessage}`,
+              details: oU,
+              error: cU
             })
-          })).catch((MM => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", MM)
+          })).catch((UU => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", UU)
           }))
         },
-        aM = MM.createRenderPipelineAsync;
-      MM.createRenderPipelineAsync = function(MM) {
-        return aM.call(this, MM).catch((rM => {
-          throw OM(MM.label, rM), rM
+        AU = UU.createRenderPipelineAsync;
+      UU.createRenderPipelineAsync = function(UU) {
+        return AU.call(this, UU).catch((XU => {
+          throw cU(UU.label, XU), XU
         }))
       };
-      const PM = MM.createComputePipelineAsync;
-      MM.createComputePipelineAsync = function(MM) {
-        return PM.call(this, MM).catch((rM => {
-          throw OM(MM.label, rM), rM
+      const FU = UU.createComputePipelineAsync;
+      UU.createComputePipelineAsync = function(UU) {
+        return FU.call(this, UU).catch((XU => {
+          throw cU(UU.label, XU), XU
         }))
       }
     }
   },
-  41812: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => PM,
-      g: () => nM
+  41820: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => FU,
+      e: () => oU
     });
-    var OM = iM(114);
-    let SM = !1;
+    var cU = zU(134);
+    let yU = !1;
 
-    function jM() {
-      let MM = null;
+    function QU() {
+      let UU = null;
       try {
-        return MM = document.createElement("canvas").getContext("webgl2"), null !== MM
+        return UU = document.createElement("canvas").getContext("webgl2"), null !== UU
       } catch {
         return !1
       } finally {
         try {
-          var rM, iM;
-          null === (rM = MM) || void 0 === rM || null === (iM = rM.getExtension("WEBGL_lose_context")) || void 0 === iM || iM.loseContext()
+          var XU, zU;
+          null === (XU = UU) || void 0 === XU || null === (zU = XU.getExtension("WEBGL_lose_context")) || void 0 === zU || zU.loseContext()
         } catch {}
       }
     }
 
-    function aM() {
-      "hidden" === document.visibilityState && (SM = !1, document.removeEventListener("visibilitychange", aM))
+    function AU() {
+      "hidden" === document.visibilityState && (yU = !1, document.removeEventListener("visibilitychange", AU))
     }
 
-    function PM() {
-      SM || "visible" !== document.visibilityState || !(0, OM.q)() && !jM() || (SM = !0, document.addEventListener("visibilitychange", aM))
+    function FU() {
+      yU || "visible" !== document.visibilityState || !(0, cU.q)() && !QU() || (yU = !0, document.addEventListener("visibilitychange", AU))
     }
 
-    function nM() {
-      return SM || jM()
+    function oU() {
+      return yU || QU()
     }
   },
-  41971: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/bloxd_wasm_models_bg.20cde5d06eea3961364a.wasm"
+  41974: (UU, XU, zU) => {
+    UU.exports = zU.p + "static/media/bloxd_wasm_models_bg.2bf764b975051a969c78.wasm"
   },
-  41968: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/bloxd_wasm_workers_bg.a748c387a816d887f35c.wasm"
+  41967: (UU, XU, zU) => {
+    UU.exports = zU.p + "static/media/bloxd_wasm_workers_bg.8d69bfc9c0063cf52d1d.wasm"
   },
-  41961: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      f: () => OM
+  41959: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => yU,
+      g: () => cU
     });
-    const OM = {
+    const cU = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new iM.U(iM(41968))
+        return new zU.U(zU(41967))
       }
     };
-    const SM = {
+    const yU = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new iM.U(iM(41971))
+        return new zU.U(zU(41974))
       }
     }
   },
-  7124: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => UM,
-      c: () => GM,
-      f: () => lM,
-      g: () => yM
+  7226: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => BU,
+      f: () => ZU,
+      g: () => kU,
+      h: () => gU
     });
-    var OM = iM(7131);
-    const SM = 6,
-      jM = 3,
-      aM = 1,
-      PM = 2,
-      nM = 4,
-      QM = 8,
-      zM = 16,
-      LM = 32,
-      mM = 64,
-      HM = 128,
-      hM = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var cU = zU(7233);
+    const yU = 6,
+      QU = 3,
+      AU = 1,
+      FU = 2,
+      oU = 4,
+      DU = 8,
+      EU = 16,
+      YU = 32,
+      NU = 64,
+      IU = 128,
+      pU = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function JM(MM) {
-      if (!MM) return 0;
-      const rM = hM.indexOf(MM);
-      if (rM <= 0) throw new Error(`"${MM}" is not a shader pack hook function`);
-      return rM
+    function aU(UU) {
+      if (!UU) return 0;
+      const XU = pU.indexOf(UU);
+      if (XU <= 0) throw new Error(`"${UU}" is not a shader pack hook function`);
+      return XU
     }
 
-    function dM(MM) {
-      if (0 === MM) return null;
-      const rM = hM[MM];
-      if (void 0 === rM) throw new Error(`${MM} is not a shader pack hook function id`);
-      return rM
+    function tU(UU) {
+      if (0 === UU) return null;
+      const XU = pU[UU];
+      if (void 0 === XU) throw new Error(`${UU} is not a shader pack hook function id`);
+      return XU
     }
 
-    function yM(MM) {
-      const rM = OM.e.length;
+    function gU(UU) {
+      const XU = cU.e.length;
       return {
-        strict: MM >= rM,
-        program: OM.e[MM % rM]
+        strict: UU >= XU,
+        program: cU.e[UU % XU]
       }
     }
 
-    function lM(MM) {
-      return Number(MM.strict) * OM.e.length + OM.e.indexOf(MM.program)
+    function kU(UU) {
+      return Number(UU.strict) * cU.e.length + cU.e.indexOf(UU.program)
     }
 
-    function EM(MM) {
-      return "" === MM ? [] : MM.split(" ")
+    function GU(UU) {
+      return "" === UU ? [] : UU.split(" ")
     }
 
-    function UM(MM) {
-      const rM = {
-        variantFlags: new Uint8Array(SM),
-        hooks: new Uint8Array(SM * jM),
-        moduleCodes: Array(SM).fill(""),
-        reads: Array(2 * SM).fill("")
+    function BU(UU) {
+      const XU = {
+        variantFlags: new Uint8Array(yU),
+        hooks: new Uint8Array(yU * QU),
+        moduleCodes: Array(yU).fill(""),
+        reads: Array(2 * yU).fill("")
       };
-      for (const iM of MM) {
-        const MM = lM(iM.key),
-          OM = (MM, rM) => null === iM.hooks.surface || iM.reads.fragment.includes(MM) ? 0 : rM;
-        rM.variantFlags[MM] = (iM.sceneDepth ? aM : 0) | (iM.movesVertices ? PM : 0) | (iM.sunShadow ? nM : 0) | (iM.airShadow ? QM : 0) | (iM.discards ? zM : 0) | OM("localPosition", LM) | OM("enchantSpeed", mM) | OM("enchantTier", HM), rM.hooks[MM * jM] = JM(iM.hooks.vertex), rM.hooks[MM * jM + 1] = JM(iM.hooks.surface), rM.hooks[MM * jM + 2] = JM(iM.hooks.light), rM.moduleCodes[MM] = iM.moduleCode, rM.reads[2 * MM] = iM.reads.vertex.join(" "), rM.reads[2 * MM + 1] = iM.reads.fragment.join(" ")
+      for (const zU of UU) {
+        const UU = kU(zU.key),
+          cU = (UU, XU) => null === zU.hooks.surface || zU.reads.fragment.includes(UU) ? 0 : XU;
+        XU.variantFlags[UU] = (zU.sceneDepth ? AU : 0) | (zU.movesVertices ? FU : 0) | (zU.sunShadow ? oU : 0) | (zU.airShadow ? DU : 0) | (zU.discards ? EU : 0) | cU("localPosition", YU) | cU("enchantSpeed", NU) | cU("enchantTier", IU), XU.hooks[UU * QU] = aU(zU.hooks.vertex), XU.hooks[UU * QU + 1] = aU(zU.hooks.surface), XU.hooks[UU * QU + 2] = aU(zU.hooks.light), XU.moduleCodes[UU] = zU.moduleCode, XU.reads[2 * UU] = zU.reads.vertex.join(" "), XU.reads[2 * UU + 1] = zU.reads.fragment.join(" ")
       }
-      return rM
+      return XU
     }
 
-    function GM(MM) {
+    function ZU(UU) {
       const {
-        hooks: rM,
-        moduleCodes: iM,
-        reads: OM
-      } = MM;
-      return Array.from(MM.variantFlags, ((MM, SM) => {
-        const LM = SM * jM;
+        hooks: XU,
+        moduleCodes: zU,
+        reads: cU
+      } = UU;
+      return Array.from(UU.variantFlags, ((UU, yU) => {
+        const YU = yU * QU;
         return {
-          key: yM(SM),
+          key: gU(yU),
           hooks: {
-            vertex: dM(rM[LM]),
-            surface: dM(rM[LM + 1]),
-            light: dM(rM[LM + 2])
+            vertex: tU(XU[YU]),
+            surface: tU(XU[YU + 1]),
+            light: tU(XU[YU + 2])
           },
-          moduleCode: iM[SM],
-          sceneDepth: 0 !== (MM & aM),
-          sunShadow: 0 !== (MM & nM),
-          airShadow: 0 !== (MM & QM),
-          movesVertices: 0 !== (MM & PM),
-          discards: 0 !== (MM & zM),
+          moduleCode: zU[yU],
+          sceneDepth: 0 !== (UU & AU),
+          sunShadow: 0 !== (UU & oU),
+          airShadow: 0 !== (UU & DU),
+          movesVertices: 0 !== (UU & FU),
+          discards: 0 !== (UU & EU),
           reads: {
-            vertex: EM(OM[2 * SM]),
-            fragment: EM(OM[2 * SM + 1])
+            vertex: GU(cU[2 * yU]),
+            fragment: GU(cU[2 * yU + 1])
           }
         }
       }))
     }
   },
-  41782: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => SM,
-      f: () => OM,
-      h: () => mM,
-      i: () => zM,
-      l: () => dM,
-      n: () => jM,
-      p: () => PM,
-      q: () => nM,
-      r: () => aM,
-      s: () => JM,
-      w: () => HM,
-      x: () => hM
+  41770: (UU, XU, zU) => {
+    zU.d(XU, {
+      D: () => aU,
+      E: () => IU,
+      I: () => pU,
+      d: () => yU,
+      h: () => cU,
+      l: () => NU,
+      m: () => EU,
+      o: () => tU,
+      r: () => QU,
+      u: () => FU,
+      y: () => oU,
+      z: () => AU
     });
-    const OM = 3,
-      SM = 0,
-      jM = 1,
-      aM = 2,
-      PM = {
+    const cU = 3,
+      yU = 0,
+      QU = 1,
+      AU = 2,
+      FU = {
         uniform: 3,
-        Xm: 4,
+        lN: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      nM = 10,
-      QM = "BloxdPackInputs",
-      zM = "bloxdPackInputs",
-      LM = [{
+      oU = 10,
+      DU = "BloxdPackInputs",
+      EU = "bloxdPackInputs",
+      YU = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -4055,74 +3960,42 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      mM = 80;
+      NU = 80;
 
-    function HM() {
-      const MM = LM.map((MM => {
+    function IU() {
+      const UU = YU.map((UU => {
         let {
-          name: rM,
-          type: iM
-        } = MM;
-        return `    ${rM}: ${iM},\n`
+          name: XU,
+          type: zU
+        } = UU;
+        return `    ${XU}: ${zU},\n`
       })).join("");
-      return `struct ${QM} {\n${MM}}\n@group(${OM}) @binding(${SM}) var<uniform> ${zM}: ${QM};\n`
+      return `struct ${DU} {\n${UU}}\n@group(${cU}) @binding(${yU}) var<uniform> ${EU}: ${DU};\n`
     }
 
-    function hM(MM, rM) {
-      const iM = new DataView(MM, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, mM),
-        [OM, SM, jM, aM, PM, nM] = LM;
-      iM.setFloat32(OM.offset, rM.seconds, !0), iM.setUint32(SM.offset, rM.lit ? 1 : 0, !0);
-      for (let QM = 0; QM < 3; QM++) iM.setInt32(jM.offset + 4 * QM, rM.renderOffset[QM], !0), iM.setFloat32(aM.offset + 4 * QM, rM.mMM[QM], !0), iM.setFloat32(PM.offset + 4 * QM, rM.eyePosition[QM], !0), iM.setFloat32(nM.offset + 4 * QM, rM.shadowDirection[QM], !0)
+    function pU(UU, XU) {
+      const zU = new DataView(UU, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, NU),
+        [cU, yU, QU, AU, FU, oU] = YU;
+      zU.setFloat32(cU.offset, XU.seconds, !0), zU.setUint32(yU.offset, XU.lit ? 1 : 0, !0);
+      for (let DU = 0; DU < 3; DU++) zU.setInt32(QU.offset + 4 * DU, XU.renderOffset[DU], !0), zU.setFloat32(AU.offset + 4 * DU, XU.hUU[DU], !0), zU.setFloat32(FU.offset + 4 * DU, XU.eyePosition[DU], !0), zU.setFloat32(oU.offset + 4 * DU, XU.shadowDirection[DU], !0)
     }
 
-    function JM(MM) {
-      const rM = new Uint32Array(Math.max(1, MM.length));
-      return MM.forEach(((MM, iM) => {
+    function aU(UU) {
+      const XU = new Uint32Array(Math.max(1, UU.length));
+      return UU.forEach(((UU, zU) => {
         let {
-          id: OM,
-          rotation: SM
-        } = MM;
-        rM[iM] = 65535 & OM | (3 & SM) << 16
-      })), rM
+          id: cU,
+          rotation: yU
+        } = UU;
+        XU[zU] = 65535 & cU | (3 & yU) << 16
+      })), XU
     }
-    const dM = {
+    const tU = {
       off: 0,
       strict: 1,
       allow: 2
     }
-  },
-  7131: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM,
-      h: () => aM,
-      l: () => PM,
-      m: () => SM,
-      o: () => jM
-    });
-    const OM = ["terrain", "liquid", "model"];
-
-    function SM() {
-      const MM = [];
-      for (const rM of [!1, !0])
-        for (const iM of OM) MM.push({
-          strict: rM,
-          program: iM
-        });
-      return MM
-    }
-
-    function jM(MM) {
-      return `${MM.strict?"strict":"allow"}.${MM.program}`
-    }
-
-    function aM(MM) {
-      return !MM.hooks.vertex && !MM.hooks.surface && !MM.hooks.light
-    }
-
-    function PM(MM, rM) {
-      return "off" !== rM && (null === MM || MM.some((MM => MM.key.strict === ("strict" === rM) && !aM(MM))))
-    }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

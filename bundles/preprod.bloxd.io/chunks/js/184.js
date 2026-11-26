@@ -1,40 +1,43 @@
 export const id = 184;
 export const ids = [184];
 export const modules = {
-  9595: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      pageBody: () => OM
+  9577: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      pageBody: () => cU
     });
-    const OM = {
-      whatIs: ["Infinite blocks, custom tools and no limits on what you build. Bloxd Creative is the free building mode where you can get creating straight away. Build in a shared world with players from all over, or set up your own free build server and create with your friends online. There's no health bar and nobody can attack you, so all you have to think about is your build."],
-      howToPlay: ["Open the creative menu and grab any block or item you want. It's all sorted into categories like Building Blocks, Coloured Blocks, Nature, Decoration, Utility, Tools and Vehicles, and World Tools. Place as many as you like, fly around your build and make anything from a tiny cottage to an entire city.", "Want a completely blank canvas? Try Superflat, a world of endless flat grass that's great for big projects. In the normal Creative world, use Teleport To Fresh Land to jump to a random empty spot so nobody gets in your way. Place a Protector and other players can't change blocks or open chests in that area. If you'd like a plot of your own that's saved for good, Plots is the one to try."],
-      features: ["Infinite Blocks and Items from the Creative Menu", "Fly Freely Around Your Builds", "Superflat Worlds for Big Builds", "Teleport To Fresh Land for Uninterrupted Building", "Free Private Build Servers to Create with Friends", "Extra Tools for Server Owners, Including WorldBuilder and Code Editing", "Protectors to Keep Your Builds Safe", "No Health Bar and No Attacks from Other Players"],
-      tips: ["Teleport To Fresh Land is the quickest way to find some empty space", "In public lobbies, build away from spawn, because blocks near spawn reset every few hours", "Put down a Protector so other players can't change your build or open your chests", "Use /tp to get around fast, and type /help to see all the commands", "Saplings are limited in Creative, so plan your trees carefully", "Free cam lets you check your build from every angle", "If you want your build to stay exactly as you left it, start a private build server"],
-      similarGames: ["classic", "classic_survival", "plots", "skyblock", "oneBlock"],
+    const cU = {
+      whatIs: ["It all starts on one tiny island floating high in the sky. In Bloxd Skyblock, that little island becomes a full RPG. You'll level up skills, take on quests, beat dungeon bosses and trade at the auction house, and bit by bit your island turns into something special. There's nothing to install, so you can be standing on it in seconds. Fancy starting from a single block instead? Try One Block. After island PvP? That's Sky Islands."],
+      howToPlay: ["Your first quest is an easy one. Gather logs on your island, craft a bridge and cross to the portal to get to the Hub. That's where everyone hangs out. Up Dog the auctioneer runs the Open Market, so you can buy and sell items with other players there. The Banker looks after your Gold Coins, and the quest givers always have something for you to do. From the Hub, portals take you to Manor Farm, the Dungeons and Cragrock Mines (a meteor has just crashed there).", "You've got five skills to level: Foraging, Combat, Mining, Farming and Fishing. Each one goes up by doing the thing. Chop wood and pick flowers for Foraging. Beat creatures for Combat. Break ores for Mining, harvest fully grown crops for Farming and catch fish for Fishing. Every skill has a starter quest that hands you a tool to speed things up, and each Combat level adds a bit more damage. Got Gold Coins to spare? Spend them on decorative blocks in the Instant Buy shop and make your island look exactly how you want."],
+      features: ["Your Own Private Sky Island to Grow and Decorate", "5 Skills to Level Up: Foraging, Combat, Mining, Farming and Fishing", "Quests That Give You an Axe, Sword, Pickaxe, Hoe and Fishing Rod", "Explore the Hub, Manor Farm, Cragrock Mines and the Dungeons", "Timed Dungeons with Boss Fights on Easy, Medium, Hard and Insane", "Buy and Sell Items with Other Players at the Auction House", "Visit Other Players' Islands", "Daily Rewards, Streaks and Leaderboards"],
+      tips: ["Do the skill starter quests early. The tools they give you make everything faster", "Level up Combat before you go into the Dungeons, since every level adds extra damage", "Start each dungeon on Easy and work your way up to Insane", "You can only trade in the Hub, so pop over to Up Dog to sell stuff you don't need", "Play every day to keep your daily reward streak going", "Type /home to get back to your island from anywhere"],
+      similarGames: ["classic_survival", "oneBlock", "skyIslands", "survivalFactory"],
       faq: [{
-        question: "What is Bloxd Creative?",
-        answer: "Bloxd Creative is the creative building mode in Bloxd.io. You get infinite blocks and custom tools to build whatever you like, on your own or with friends."
+        question: "What is Bloxd Skyblock?",
+        answer: "It's a Skyblock RPG. You grow your own private sky island, level up skills, do quests, trade at the auction house and fight dungeon bosses."
       }, {
-        question: "Can you fly in Bloxd Creative?",
-        answer: "Yes, you can fly in Creative, so you can reach every bit of your build."
+        question: "How do you play Bloxd Skyblock?",
+        answer: "Gather some logs, craft a bridge and cross to the portal to reach the Hub. After that, follow the quests, level your skills and go exploring in Manor Farm, Cragrock Mines and the Dungeons."
       }, {
-        question: "What is Superflat in Bloxd?",
-        answer: "A Creative world made of endless flat grass. It gives you a clean canvas for your biggest projects."
+        question: "What skills are in Bloxd Skyblock?",
+        answer: "Five of them: Foraging, Combat, Mining, Farming and Fishing. You level each one just by doing it, so breaking ores levels Mining and catching fish levels Fishing."
       }, {
-        question: "How do I make a free build server in Bloxd?",
-        answer: "Start your own private lobby for free and invite your friends. As the owner you also get extra tools like WorldBuilder."
+        question: "What are the Dungeons in Bloxd Skyblock?",
+        answer: "Timed challenges like the Crumbling Crypt and the Frozen Hollow. You fight through the rooms and then face a boss, such as the Gravewarden or the Frostbound Knight. You can play each dungeon on Easy, Medium, Hard or Insane, and your best times are saved."
       }, {
-        question: "Can you use TNT in Bloxd Creative?",
-        answer: "Not in public Creative worlds. You can't take explosives from the menu or craft them, so nobody can blow up other people's builds."
+        question: "How do I trade in Bloxd Skyblock?",
+        answer: "Find Up Dog the auctioneer in the Hub and open the Open Market. That's where you buy and sell items with other players, and it only works in the Hub."
       }, {
-        question: "Why did my build disappear in Bloxd Creative?",
-        answer: "In public lobbies, blocks near spawn reset every few hours; a message shows when you cross the edge of that area. Build further away, use Teleport To Fresh Land, or start a private build server, where nothing resets unless its owner turns on Enable Spawn Reset."
+        question: "Can I visit other players' islands?",
+        answer: "You can. Type /visit and a player's name, as long as they're in the same game and their island is open. Owners pick who's allowed in, and /home brings you back to your own island."
       }, {
-        question: "What's the difference between Creative and Plots?",
-        answer: "Creative is an open shared world. You build wherever you want and guard areas with Protectors. In Plots you claim your own 91\xd791 plot that only you and the players you add can change, and it's saved for good once you've changed 500 blocks."
+        question: "What happened at Cragrock Mines?",
+        answer: "A huge meteor crashed into it, and the dwarves who live there need your help. Take the portal from the Hub, explore the mines and dig for ores."
+      }, {
+        question: "Does my island save between sessions?",
+        answer: "Yep. Your island, skills, Gold Coins, quests and dungeon progress all save. Log in to an account so nothing gets lost if your browser data is cleared."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

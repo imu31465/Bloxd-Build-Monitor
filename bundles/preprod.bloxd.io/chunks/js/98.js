@@ -1,11 +1,11 @@
 export const id = 98;
 export const ids = [98];
 export const modules = {
-  5169: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => OM
+  5290: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => cU
     });
-    const OM = String.raw`export interface GameApi {
+    const cU = String.raw`export interface GameApi {
 		/** The ID of the player running the code.
 		 *
 		 * Lobby code usually has nobody running it, so this is null.
@@ -1756,6 +1756,7 @@ getVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId,
 setVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId, setting: TSetting, value: SettableVehicleSettingValue<TSetting>): void
 /**
  * Try to spawn a rideable vehicle, which players can mount with an alt action.
+ * A player breaking it removes it without giving them an item: only a vehicle placed from an item gives that item back.
  * There is a limit to the number of mesh entities with physics that can be created.
  * WARNING: Either the "onPlayerAttemptSpawnVehicle" or the "onWorldAttemptSpawnVehicle" game callback will be called
  * depending on whether "spawnerId" is provided. Calling this function inside those callbacks risks infinite recursion.
@@ -2897,9 +2898,11 @@ export type BlockId = number
 
 export type WorldBlockChangedInfo = {
 	cause: WorldBlockChangedCause | null
+	/** Cause FluidFlow: the cell the fluid flows in from, so a claim can let its own water flow within it */
+	flowFrom?: readonly [number, number, number]
 }
 
-export type WorldBlockChangedCause = "Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion" | "AutoShape"
+export type WorldBlockChangedCause = "Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion" | "AutoShape" | "FluidFlow"
 
 export type GameChunk = {
 	blockData: any
@@ -4502,4 +4505,4 @@ export type OtherEntitySettings = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

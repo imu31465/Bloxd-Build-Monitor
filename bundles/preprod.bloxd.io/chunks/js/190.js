@@ -1,37 +1,37 @@
 export const id = 190;
 export const ids = [190];
 export const modules = {
-  9634: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      pageBody: () => OM
+  9603: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      pageBody: () => cU
     });
-    const OM = {
-      whatIs: ["Build machines on your own floating island and watch them work! That's Bloxd Build a Factory 2 in one line. You mine ore, link your machines up with conveyor belts and turn a couple of drills into a massive, fully automated factory. Never played a factory game before? Don't worry, it's easy to pick up. The original Build a Factory is a race to launch a rocket before a shared world resets. This one's about growing your own island."],
-      howToPlay: ["Use your Workbench to make a Machine Bench. Build a Burner Drill, stick it on an ore Deposit and give it fuel, and it starts mining by itself. Belt the ore into a Crusher to turn it into Grit (that's crushed ore), then into a Smelter to make bars. From there you can press bars into plates, spin Copper Bars into wire and make parts like Motors at the Parts Bench. Give your Core the parts it asks for and it moves up a tier, which unlocks better machines.", "For power you've got Generators, Solar Panels and Volt Engines. Drop down into the Wilds below your island to find rare ore, open ruin chests for Salvage and break fallen comets, then head home and build bigger. When you log off, your island pauses and picks up right where it left off when you're back."],
-      features: ["Your Own Floating Factory Island", "Conveyor Belts, Fast Belts, Splitters, Sorting Gates, Belt Lifts and Tunnels", "Drills, Crushers, Smelters, Presses, Wire Mills, Assemblers and More", "Tier Up Your Core to Unlock New Machines, Then Build the Star Spire", "Power from Generators, Solar Panels and Volt Engines", "Explore the Wilds for Rare Ore, Ruin Chests and Comets", "Fill Star Forge Orders for Deposit Seeds and Comet Cores", "Build Several Islands, Play Co-op with Friends or Visit Theirs"],
-      tips: ["Use Deposit Seeds to grow Deposits that never run out", "Crush ore into Grit before you smelt it and you'll get twice the bars", "Teach a Sorting Gate an item and it'll send that item down its own belt", "A Power Coupler makes Crushers, Smelters and Alloy Kilns twice as fast", "Belt spare items into a Storage Silo so your belts don't jam", "Carry an Ore Lens in the Wilds and it'll point you to the nearest rare ore"],
-      similarGames: ["survivalFactory", "skyblock", "oneBlock", "classic_survival"],
+    const cU = {
+      whatIs: ["A string of unique islands, a mysterious land and 114 fish just waiting to be caught. Bloxd Fishing is a relaxing fishing simulator where you explore, catch fish and slowly uncover the secrets of the islands. Take it at your own pace. It's free, there's nothing to install, and you can be fishing in seconds."],
+      howToPlay: ["Cast your line and wait for a bite. When something bites, a catch minigame kicks in. Some fish need a well-timed click, while others use a progress bar or a gravity bar. Win the minigame and the fish is yours. Every fish has its own weight and rarity, going from Common all the way up to Mythic. Sell your catches for coins and spend them on better rods, boats and potions.", "There are 5 islands to explore: Sunhaven, Gloomtide, Eldermire, Embertide and Frostfell. Each one has its own fishing spots, like the Moonpool, Draugr Bay, The Abyss and Embertide Volcano. Unlock new islands with your coins and use the shop to hop between them. Every fish you catch goes in your Bestiary, and you can show off your favourite on your nametag. Keep an eye out for luck events too. They boost your chances of a rare catch for a while."],
+      features: ["5 Islands and Lots of Fishing Spots to Explore", "114 Fish Species to Catch", "7 Rarities, from Common to Mythic", "3 Different Catch Minigames", "16 Fishing Rods, from the Rusty Rod to the Mythic Rod", "Boats, plus Luck Potions in Four Strengths", "A Bestiary to Complete", "Show Off Your Best Fish on Your Nametag", "Random Luck Events"],
+      tips: ["Sell your early catches and save up for a better rod", "Check the rod shops on each island for new rods", "Some spots don't allow every rod, so check before you cast", "Drink a Luck Potion before you fish if you're after rare catches", "Wait untill a luck event to give yourself the best shot at a Mythic", "Your Bestiary shows you which fish you're still missing", "Get a boat if you want to head out on the water"],
+      similarGames: ["greenville", "skyblock", "oneBlock", "classic"],
       faq: [{
-        question: "What is Build a Factory 2 on Bloxd?",
-        answer: "An idle factory builder. You build machines on your own floating island, connect them with conveyor belts and let them make everything for you."
+        question: "What is Bloxd Fishing?",
+        answer: "A relaxing fishing game. You explore 5 islands, win catch minigames to reel in fish and fill your Bestiary with rare species."
       }, {
-        question: "Is Build a Factory 2 an idle factory game?",
-        answer: "Partly. Once it's set up, your factory runs by itself while you explore the Wilds or plan your next build. It pauses while you're offline and carries on where it stopped when you come back."
+        question: "How many fish are in Bloxd Fishing?",
+        answer: "114 fish species, spread across 5 islands, in 7 rarities from Common to Mythic."
       }, {
-        question: "How do I unlock new machines in Build a Factory 2?",
-        answer: "Tier up your Core by giving it the parts it asks for, like Motors and, later on, Logic Boards. Every new tier unlocks more machines and items."
+        question: "How do I catch Mythic fish in Bloxd Fishing?",
+        answer: "Use a better rod, drink a Luck Potion and fish during luck events. Then cross your fingers!"
       }, {
-        question: "What's the best way to power my factory?",
-        answer: "You've got a few options. Burn Coal or Charcoal in a Generator, build Solar Panels (they keep running at night at half power), or run Volt Engines on Voltite Cells for loads of power. Add Charge Vaults to store more."
+        question: "Where can I get better rods?",
+        answer: "Sell your fish for coins, then buy new rods from the rod shops on the islands."
       }, {
-        question: "What are the Wilds?",
-        answer: "The land below your island. Drop down to mine rare ore, loot ruin chests for Salvage, explore the Old Works and break fallen comets for Comet Cores."
+        question: "How do I travel between islands?",
+        answer: "You start on Sunhaven. Spend coins to unlock Gloomtide, Eldermire, Embertide and Frostfell, and once an island's unlocked, use the shop to travel there."
       }, {
-        question: "Can friends help build my factory?",
-        answer: "Definitely. Invite friends to a shared co-op island, or use /visit to have a look around other players' islands."
+        question: "What are the catch minigames?",
+        answer: "There are three: a timed click, a progress bar and a gravity bar. Each fish uses one of them."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,230 +1,1093 @@
 export const id = 224;
 export const ids = [224];
 export const modules = {
-  35037: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      MAX_BLOCK_ID: () => OM,
-      armourReductionOf: () => AM,
-      clipSizeOf: () => NM,
-      creativeAltNames: () => ar,
-      creativeCategoryOf: () => VM,
-      creativeItemCategories: () => PM,
-      creativeItemCategoryIcons: () => nM,
-      creativeItemIds: () => TM,
-      descriptionOf: () => oM,
-      displayNameOf: () => ZM,
-      dropsNothing: () => FM,
-      enchantmentPerksOf: () => KM,
-      gunTypeOf: () => vM,
-      harvestsNullLevelOf: () => BM,
-      isDevOnlyItem: () => ir,
-      itemIsDisabled: () => Sr,
-      itemTypeNameOf: () => YM,
-      itemTypeOf: () => fM,
-      rootMetaDescOf: () => IM,
-      scopeTypeOf: () => xM,
-      showInCreativeInvenOf: () => Or,
-      showOnlyInCreativeCategory: () => rr,
-      showOnlyInCreativeSearch: () => Mr,
-      showsAimingUi: () => XM
+  44182: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      loadGlbAsset: () => dX,
+      loadGlbTree: () => WX
     });
-    const OM = 8558,
-      SM = "''WL&M3GT%cM)MK$YE1aM2'I+F+O_*c^*=%'%%%%%%%K>F>%%)K=H=%%[*W5_5['[R$ZW$S%[X&NH&L5C$W$5,KS&%]]&I%^Z&NM&b7TK$Y6G,Y>%M%M7P6$WD%Vc$LZ$OY$%+Q[&;S$/G$N&W%F$W%F$S$N&G'.F$c%`'1+%)41(1(+49$(2=b$/`N,RN,K/c_&Q0EC$O(''P`&O$%-%%^R2-*)&%;NV/ZT%IT%3XM$%%%%%_U$%b73.%%`-T-%%%%%%L9$M8X7/$``3/Fa3T+%%%%SAQ<U6W<^7V]&&)*'OAO<Y6W<^7X]&+&)*'CG%%`)W<^7VW&C[&Tc%Wc%Tc%P;'O;Uc%PH%SH%]T$`T$J;^7S&ZX%S]%VX$ZF$U5W^/TF$aU/C$C$C$C$C$O7E7K<^7RX%33333`4E7K<^7_`$++++++O1K<^7_B$aR%%D'%b_$CH$%%%G3'Y*R?SH&]I&I>RO&KM&DC%L$/Q+C.Q0QH$''_b$TS$J-%%%%%%%%%)I%)$','G6b=E7K<^7NQ&%%%%%%%%%%%%%%%CW&S$S$S$S$S$S$S$S$S$S$S$S$S$S$S$G:+++++++++++++++S+%%%%Va$*$(50)2+,7:%)5>Q?^1S$]T$XG&333333333333333U[$333333333333333CN%)@G$))))X$`$))))P%W%]H(<3$3('<)%+.3$2+YJ2HH2*$&52)6%+/2%7&6MD%S$/G$N&W%F$W%F$S$N&G'.F$c%`'O['C%3S$R'S&R$S&R$C%R'S(2R$c&S)Xc&'+%)41(1(+49$(2=Q$S$/G$N&W%F$W%F$S$N&G'.F$c%`'C]&C%3S$R'S&R$S&R$C%R'S(2R$c&S)TI'+%)41(1(+49$(2=Q)S$/G$N&W%F$W%F$S$N&G'.F$c%`'C_&C%3S$R'S&R$S&R$C%R'S(2R$c&S)JW*34$*'9(-0,+.9('CZ$34$*'9(-0,+.9('M%%%%%%%%%%%%%%%%MM'cJ)%%%%%%%%%%%%%%%G-+++++++++++++++UZ(X-%%M.DE(//////G2E7K<^7_S%/Wa$M3MT%_b'//////QY$DY$///////////////////////`Y'3333333333MD*C&C&C&C&C&C&C&C&C&C&M.C$C$C$C$C$C$C$C$C$C$FW+333333333333333333333333333333M`,'cF2%CG2%%%%%%%%%'E8N7%%%''''''-+%)41(1(+49$(2=E$)$'%%/_%E+'%)%%)&)&)%'%%%%%%cI2)%G`12^,T,%%%[-%%%%%%%%%%%VD1+WD1(%%)$b<T%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%aD2%%E>WO%b`+%%%ab.EC&HC&U6UA%%%%LU$'5[5H<%%'%%3`;%QH$M&%UD$W$/%%%^L*cR-OK1%RN2+S$^L2%M$@%.%5%+%O$)%H$%5%.%M$%+%+%+%+)))%+N%L$%5%.%3+%)%T%%.%5%-$S%%.%5%+%)))+%)c&D$-7S%,R%Q$,=F$O$4F$W%-)))-)]0'%'%+['$W.+%)41(1(+49$(2=M<%'+%)41(1(+49$(2=%%'+%)41(1(+49$(2=V_$%%%%%%%%%%%%'%%%%%%%%%%%%%%%HL1%%%%%[Y1+++++++++5UU$%%%%'%%%%3%%%%'%%%%'%%%%N$%%%%RV$EY$3JJ%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Y6)&[$&3Z$&[$>.'/'>3?.Z1'%*W2%'F3%%M0W%RJ/--L+W+-D,%K*^3-VT(C[$G<G'+J'%%%%%%%%%%%%%%%U&%%%%%%%5%%6+1%%%%%%E'++++MI2%%%%%%aG2IU$C$C$C$SO$RN$C$C$KZ0%%%H$'-.c)55&Y$*V%%%'%%%%%%%'%%%%%''%%%%%%%%%%%%%%%%%%%'%%'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%M$%%%%%%%%%%%%%U(Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$F(Y$Y$Y$V'Y$Y$Y$]'Y$Y$Y$Z'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$J(Y$Y$Y$D)Y$Y$Y$c'Y$Y$Y$_'Y$Y$Y$H(Y$Y$Y$c'Y$Y$Y$E$%%%%%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%%%aI6QX(%%%%%%%%%%%%%%%%",
-      jM = "S-$SW$$R&$SG2$)$'$)$4$)$X*$I6$-$%$%$cC1$WD1$%%%$]5$b7$RH4$%$%$%$%$%$%$%$%$%$)$N+$EG&$ZT%$IT%$3$XM$$%$%$%$%$%$Z1$Y[$$O`0$'$'$'$-&+&%&)&4&1&(&1*(*+&4&9&$&(&2&=&E$&'&%&%&%&1%_%$TV3$%$D.$$$Uc&$S$$S$$S$$S$$S$$S$$S$&S$&S$$S$$S$$S$$S$$S$$S$$S$$^1$S$$]I($%$M/$+$N-$%$Z$$%$I6$3$Uc$$3$WR%$X$$T`%$F$$CC($R$$P_&$($I$$($W'$F$$WC'$R$$cZ&$F$$WE'$R$$Cc,$($[<$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$%$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$ZX$$%$%$%$%$%$%$%$%$%$cb0$MK2'T%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$aD2$%$%$E>$WO%$b`+$%$%$%$ab.$EC&$HC&$U6$UA$%$%$%$%$LU$$'$5$[5$H<$%$%$'$%$%$3$`;$%$QH$$M&$%$UD$$W$$/$%$%$%$^L*$FP0$QX($%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$L]%$OP1%%%S@&%'%'%'%'%%ZU0$C$$C$$C$$SO$$RN$$C$$C$$OZ0%/%",
-      aM = "Crafting Table|Cauldron|Sign|Iron Nugget|Gold Nugget|Diamond Nugget|Moonstone Nugget|Iron Ingot|Gold Ingot|Draugr Knight Sword|Cooked Potato|Cooked Beef|Raw Lamb|Cooked Lamb|Gold Watermelon Stag Antlers|Bear Fur|Cave Golem Eye|Frost Golem Eye|Draugr Knight Heart|Fur Boots|Milk Bottle|Yellow Flower|Red Flower|Red Flower|Pink Flower|White Flower|Orange Flower|White Yellow Flower|Blue Flower|Blue Flower|Purple Flower|Black Flower|Cobblestone|Carved Cobblestone|Mossy Cobblestone|Snowy Cobblestone|Compressed Snow|Compressed Cobblestone|Extra Compressed Cobblestone|Super Compressed Cobblestone|Hyper Compressed Cobblestone|Ultra Compressed Cobblestone|Mega Compressed Cobblestone|Cobblestone Slab|Snowy Cobblestone Slab|Wood Hand Glider|Iron Hand Glider|Gold Hand Glider|Diamond Hand Glider|White Go Kart|White Cart|White Go Cart|Orange Go Kart|Orange Cart|Orange Go Cart|Magenta Go Kart|Magenta Cart|Magenta Go Cart|Light Blue Go Kart|Light Blue Cart|Light Blue Go Cart|Yellow Go Kart|Yellow Cart|Yellow Go Cart|Lime Go Kart|Lime Cart|Lime Go Cart|Pink Go Kart|Pink Cart|Pink Go Cart|Gray Go Kart|Gray Cart|Gray Go Cart|Grey Kart|Grey Go Kart|Grey Cart|Grey Go Cart|Light Gray Go Kart|Light Gray Cart|Light Gray Go Cart|Light Grey Kart|Light Grey Go Kart|Light Grey Cart|Light Grey Go Cart|Cyan Go Kart|Cyan Cart|Cyan Go Cart|Purple Go Kart|Purple Cart|Purple Go Cart|Blue Go Kart|Blue Cart|Blue Go Cart|Brown Go Kart|Brown Cart|Brown Go Cart|Green Go Kart|Green Cart|Green Go Cart|Red Go Kart|Red Cart|Red Go Cart|Black Go Kart|Black Cart|Black Go Cart|Off Road Jeep|Off Road Truck|Off Road Car|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Light Blue Car|Light Blue Sedan|Hoverboat|Grey Planks|Light Grey Planks|Light Grey Wool|Grey Wool|White Flag|Orange Flag|Magenta Flag|Light Blue Flag|Yellow Flag|Lime Flag|Pink Flag|Gray Flag|Grey Banner|Grey Flag|Light Gray Flag|Light Grey Banner|Light Grey Flag|Cyan Flag|Purple Flag|Blue Flag|Brown Flag|Green Flag|Red Flag|Black Flag|Draugr Flag|Skull Flag|Rainbow Flag|Grey Baked Clay|Light Grey Baked Clay|Grey Ceramic|Light Grey Ceramic|Grey Glass|Light Grey Glass|Grey Concrete|Light Grey Concrete|Grey Bed|Light Grey Bed|Grey Strongbed|Light Grey Strongbed|Small Grey Pod|Small Light Grey Pod|Grey Concrete Slab|Light Grey Concrete Slab|Grey Concrete Stairs|Light Grey Concrete Stairs|Grey Chalk|Light Grey Chalk|Grey Chalk Bricks|Light Grey Chalk Bricks|Grey Chalk Slab|Light Grey Chalk Slab|Grey Chalk Stairs|Light Grey Chalk Stairs|Grey Chalk Bricks Slab|Light Grey Chalk Bricks Slab|Grey Chalk Bricks Stairs|Light Grey Chalk Bricks Stairs|Grey Balloon|Light Grey Balloon|Firework|Rainbow Firework|White Firework|Orange Firework|Magenta Firework|Light Blue Firework|Yellow Firework|Lime Firework|Pink Firework|Gray Firework|Grey Firework|Grey Firecracker|Light Gray Firework|Light Grey Firework|Light Grey Firecracker|Cyan Firework|Purple Firework|Blue Firework|Brown Firework|Green Firework|Red Firework|Black Firework|Firework Pebble|Rainbow Firework Pebble|White Firework Pebble|Orange Firework Pebble|Magenta Firework Pebble|Light Blue Firework Pebble|Yellow Firework Pebble|Lime Firework Pebble|Pink Firework Pebble|Gray Firework Pebble|Grey Firework Pebble|Grey Firecracker Pebble|Light Gray Firework Pebble|Light Grey Firework Pebble|Light Grey Firecracker Pebble|Cyan Firework Pebble|Purple Firework Pebble|Blue Firework Pebble|Brown Firework Pebble|Green Firework Pebble|Red Firework Pebble|Black Firework Pebble|Grey Wood Helmet|Grey Wood Chestplate|Grey Wood Leggings|Grey Wood Boots|Grey Wood Gauntlets|Light Grey Wood Helmet|Light Grey Wood Chestplate|Light Grey Wood Leggings|Light Grey Wood Boots|Light Grey Wood Gauntlets|Command Block|Mob Net|Catcher Net|Pet Net|Pet Catcher|Mob Pig Spawn Egg|Mob Cow Spawn Egg|Mob Sheep Spawn Egg|Mob Horse Spawn Egg|Mob Camel Spawn Egg|Mob Iron Goofy Golem Spawn Egg|Mob Gold Goofy Golem Spawn Egg|Mob Diamond Goofy Golem Spawn Egg|Mob Moonstone Goofy Golem Spawn Egg|Mob Deer Spawn Egg|Mob Slime Spawn Egg|Mob Wolf Spawn Egg|Mob Wildcat Spawn Egg|Mob Spirit Golem Spawn Egg|Mob Spirit Wolf Spawn Egg|Mob Spirit Bear Spawn Egg|Mob Spirit Stag Spawn Egg|Mob Spirit Gorilla Spawn Egg|Mob Bear Spawn Egg|Mob Stag Spawn Egg|Mob Gold Watermelon Stag Spawn Egg|Mob Gorilla Spawn Egg|Mob Cave Golem Spawn Egg|Mob Draugr Zombie Spawn Egg|Mob Draugr Skeleton Spawn Egg|Mob Frost Golem Spawn Egg|Mob Frost Zombie Spawn Egg|Mob Frost Skeleton Spawn Egg|Mob Draugr Knight Spawn Egg|Mob Draugr Huntress Spawn Egg|Mob Magma Golem Spawn Egg|Mob Draugr Warper Spawn Egg|Mob Frost Wraith Spawn Egg|Mob Draugr Reaver Spawn Egg|Mob Stalker Spawn Egg|Mob Crone Spawn Egg|Mob Iron Guardian Spawn Egg|Mob Gold Guardian Spawn Egg|Mob Diamond Guardian Spawn Egg|Mob Moonstone Guardian Spawn Egg|Mob Tiki Terror Spawn Egg|Pig Mob Spawner Block|Cow Mob Spawner Block|Sheep Mob Spawner Block|Horse Mob Spawner Block|Camel Mob Spawner Block|Iron Goofy Golem Mob Spawner Block|Gold Goofy Golem Mob Spawner Block|Diamond Goofy Golem Mob Spawner Block|Moonstone Goofy Golem Mob Spawner Block|Deer Mob Spawner Block|Slime Mob Spawner Block|Wolf Mob Spawner Block|Wildcat Mob Spawner Block|Spirit Golem Mob Spawner Block|Spirit Wolf Mob Spawner Block|Spirit Bear Mob Spawner Block|Spirit Stag Mob Spawner Block|Spirit Gorilla Mob Spawner Block|Bear Mob Spawner Block|Stag Mob Spawner Block|Gold Watermelon Stag Mob Spawner Block|Gorilla Mob Spawner Block|Cave Golem Mob Spawner Block|Draugr Zombie Mob Spawner Block|Draugr Skeleton Mob Spawner Block|Frost Golem Mob Spawner Block|Frost Zombie Mob Spawner Block|Frost Skeleton Mob Spawner Block|Draugr Knight Mob Spawner Block|Draugr Huntress Mob Spawner Block|Magma Golem Mob Spawner Block|Draugr Warper Mob Spawner Block|Frost Wraith Mob Spawner Block|Draugr Reaver Mob Spawner Block|Stalker Mob Spawner Block|Crone Mob Spawner Block|Iron Guardian Mob Spawner Block|Gold Guardian Mob Spawner Block|Diamond Guardian Mob Spawner Block|Moonstone Guardian Mob Spawner Block|Tiki Terror Mob Spawner Block|Barrier|Yellow Light Block|White Light Block|Red Light Block|Purple Light Block|Pink Light Block|Orange Light Block|Magenta Light Block|Lime Light Block|Light Gray Light Block|Light Blue Light Block|Green Light Block|Gray Light Block|Cyan Light Block|Brown Light Block|Blue Light Block|Black Light Block|Sky Light Block|Empty Mob Spawner Block|XRay Vision Potion|X Ray Vision Potion|Splash XRay Vision Potion|Splash X Ray Vision Potion|Experience Orb|EXP Orb|Enchanting Orb|Experience Potion|Enchanting Potion|Bottle of Enchanting|EXP Potion|Experience Potion II|Enchanting Potion II|Bottle of Enchanting II|EXP Potion II|Splash Experience Potion|Splash Enchanting Potion|Splash Bottle of Enchanting|Splash EXP Potion|Splash Experience Potion II|Splash Enchanting Potion II|Splash Bottle of Enchanting II|Splash EXP Potion II|Enchanting Arrow|EXP Arrow|Sheep Painting|Cow Painting|Pig Painting|Horse Painting|Camel Painting|Wolf Painting|Deer Painting|Wildcat Painting|Cow Milk|Cows Milk|Sheep Milk|Sheeps Milk",
-      PM = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"],
-      nM = {
-        building: "Stone Bricks",
-        colours: "Magenta Wool",
-        nature: "Grass Block",
-        decoration: "Lantern",
-        utility: "Workbench",
-        tools: "Iron Pickaxe",
-        combat: "Iron Sword",
-        food: "Apple",
-        mobs: "Pig Spawn Orb",
-        materials: "Iron Bar",
-        worldTools: "Code Block"
-      };
-    var QM = iM(3693),
-      zM = iM(3698);
-    const LM = Object.freeze([]);
+    var cU = zU(38649),
+      yU = zU(142),
+      QU = zU(1211);
 
-    function mM(MM) {
-      let rM = null;
-      return iM => {
-        var OM;
-        return rM ??= (0, zM.y)(MM, 10096), null !== (OM = rM[iM]) && void 0 !== OM ? OM : 0
-      }
+    function AU(UU) {
+      return (0, yU.isDiscordClient)() ? `https://${QU.d.discordDomain}/${UU.href}` : UU.href
     }
+    const FU = {
+      scriptUrl: AU(new zU.U(zU(44184))),
+      wasmBinaryUrl: AU(new zU.U(zU(44191)))
+    };
+    var oU = zU(36961),
+      DU = zU.n(oU);
 
-    function HM(MM, rM, iM) {
-      const OM = mM(MM);
-      let SM = null,
-        jM = [];
-      return MM => {
-        const aM = OM(MM);
-        if (0 !== aM) return null === SM && (SM = rM.split(zM.s), jM = new Array(SM.length)), jM[aM - 1] ??= iM(SM[aM - 1])
-      }
+    function EU() {
+      return DU()('(()=>{class UU extends Error{}function XU(XU,zU){const cU=XU._malloc(zU);if(0===cU)throw new UU(`Draco: the decoder\'s heap refused ${zU} bytes`);return cU}function zU(zU,cU,yU,QU){let AU=null,FU=null,oU=null;try{AU=new zU.Decoder,FU=new zU.DecoderBuffer,FU.Init(cU,cU.byteLength);let DU=0;const EU=AU.GetEncodedGeometryType(FU);if(EU===zU.TRIANGULAR_MESH){const XU=new zU.Mesh;oU=XU;const cU=AU.DecodeBufferToMesh(FU,XU);if(!cU.ok()||0===XU.ptr)throw new UU(cU.error_msg());DU=3*XU.num_faces()}else{if(EU!==zU.POINT_CLOUD)throw new UU(`Draco: Cannot decode invalid geometry type ${EU}`);{const XU=new zU.PointCloud;oU=XU;const cU=AU.DecodeBufferToPointCloud(FU,XU);if(!cU.ok()||!XU.ptr)throw new UU(cU.error_msg())}}const YU=oU.num_points();if(YU!==QU.vertices||DU!==QU.indices)throw new UU(`Draco: decoded ${YU} vertices and ${DU} indices, the accessors declare ${QU.vertices} and ${QU.indices}`);const NU=function(UU){return{[UU.DT_FLOAT32]:Float32Array,[UU.DT_INT8]:Int8Array,[UU.DT_INT16]:Int16Array,[UU.DT_INT32]:Int32Array,[UU.DT_UINT8]:Uint8Array,[UU.DT_UINT16]:Uint16Array,[UU.DT_UINT32]:Uint32Array}}(zU),IU=[];for(const XU of Object.keys(yU)){const zU=yU[XU],cU=QU.components[XU],FU=AU.GetAttributeByUniqueId(oU,zU);if(!FU||0===FU.ptr)throw new UU(`Draco: no attribute with id ${zU} (${XU})`);const DU=FU.data_type();if(!NU[DU])throw new UU(`Draco: Cannot decode invalid data type ${DU}`);if(FU.num_components()!==cU)throw new UU(`Draco: ${XU} decodes to ${FU.num_components()} components, its accessor declares ${cU}`);IU.push([XU,FU,NU[DU]])}let pU=null;if(EU===zU.TRIANGULAR_MESH){const UU=4*DU,cU=XU(zU,UU);try{AU.GetTrianglesUInt32Array(oU,UU,cU),pU=new Uint32Array(DU),pU.set(new Uint32Array(zU.HEAPF32.buffer,cU,DU))}finally{zU._free(cU)}}const aU=[];for(const[UU,cU,yU]of IU){const QU=cU.num_components(),FU=YU*QU,DU=FU*yU.BYTES_PER_ELEMENT,EU=XU(zU,DU);try{AU.GetAttributeDataArrayForAllPoints(oU,cU,cU.data_type(),DU,EU),aU.push({kind:UU,data:new yU(zU.HEAPF32.buffer,EU,FU).slice(),size:QU,byteOffset:cU.byte_offset(),byteStride:cU.byte_stride(),normalized:cU.normalized()})}finally{zU._free(EU)}}return{indices:pU,attributes:aU,totalVertices:YU}}finally{oU&&zU.destroy(oU),FU&&zU.destroy(FU),AU&&zU.destroy(AU)}}const cU=self;let yU=null;self.onmessage=UU=>{let{data:XU}=UU;if("init"===XU.id){try{importScripts(XU.url),yU=DracoDecoderModule({wasmBinary:XU.wasmBinary}),cU.postMessage({id:"initDone"})}catch(DU){cU.postMessage({id:"initError",message:DU instanceof Error?DU.message:String(DU)})}return}const{seq:QU,data:AU,attributeIds:FU,expected:oU}=XU;yU?yU.then((UU=>{try{const XU=zU(UU,AU,FU,oU),yU=XU.attributes.map((UU=>UU.data.buffer));XU.indices&&yU.push(XU.indices.buffer),cU.postMessage({id:"decoded",seq:QU,...XU},yU)}catch(DU){cU.postMessage({id:"decodeError",seq:QU,message:DU instanceof Error?DU.message:String(DU)})}}),(UU=>{cU.postMessage({id:"decodeError",seq:QU,message:UU instanceof Error?UU.message:String(UU)})})):cU.postMessage({id:"decodeError",seq:QU,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, zU.p + "dracoDecode.worker.99b6d39b.worker.js")
     }
+    var YU = zU(97),
+      NU = zU(4809),
+      IU = zU(3604);
+    const pU = 2;
+    const aU = 1e3;
+    let tU = null,
+      gU = null;
+    const kU = [],
+      GU = [];
+    let BU = 0;
+    const ZU = {
+      decodes: 0,
+      workersStarted: 0,
+      mostWorkers: 0
+    };
+    let RU = null;
 
-    function hM(MM) {
-      return MM
-    }
-
-    function JM(MM) {
-      return MM === zM.g ? null : (0, zM.z)(MM)
-    }
-    const dM = HM("T$$#&#$T'#$F$#$$%$B#$>#$##=$$1$.)$*#$(&$)#)$N$#$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$+##$&#$$%$*/$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$T$&$($$$*$(#$$1$$1$$1$$1$$1$$1$$)$$)$$)$$)$$)$*)$N2#$.($$1$$)$T$$$,#$4#$)##$V'#$)#[$$+#$#$($$'#%$&$$N)*$4#$$1$$)$:$$##1$##.$#*####*C%$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$,($$($&)$################################2R$$################1$##########-$####################/$##+$(#$$1$$)$T%$$########1$##+$################################################################-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#)$2&$(#$(#$$1$$)$<$$.#$####/$####/$####3$##)#'#'#'#)#'#'#'#'#'#'#'##$B#$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#1$###########$$R&$##)$**$**$0*$%##$%##$%#$#####$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%#)$9#9$9#1$$.$*)$*#$*#$*#$*#$*3#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#,F'$$5$$&$(2$##U$$&2$*5$X$#$H%.$##-$(2$####$&#######'$@#$##$2#######################################b?$1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#IW&$b$I*b$J*b$K*b$L*b$M*b$N*b$O*b$P*b$Q*b$R*b$S*b$T*b$U*b$V*b$W*b$X*b$Y*b$Z*b$[*b$]*b$^*b$_*b$`*b$a*b$b*b$c*b$C+b$D+b$E+b$F+b$G+b$H+Z'&$##b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b&$b&#;$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#########)$J&6$)#;$%#b$$)E,U&$##U&$$#$c&($I$#Y$$1#O%$####-$)I,Q'$b&#)$b&#G($<,$##[+$'#5$$#$$#$$#$$#$$#$$#$$#$B#$$2$,#$$'$$#$##%$##3$##'$########`%$7###S%$##################+$###$##%$###$##%$###$##%$###$##+$###$##%$###$##%$###$##+$###$##'$##%$###$##%$###$##%$###$##%$###$##/$#######$###$##/$$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##S$$c&2$################################################################################################################################U)$2P'$###$##K%$##5$##O&$##C'$##+$##^&$##########A$####################################################)#)#######################################)#)#######################################)#)#######################################)#)###############Y)$##G$$############W'$##W$$", '*|forget-Me-Not|ladder|wheat|jackO\'Lantern|bookshelf|rice|cotton|rocket|cornSeeds|corn|chest|ice|yellowSpawnBlock|whiteSpawnBlock|redSpawnBlock|purpleSpawnBlock|pinkSpawnBlock|orangeSpawnBlock|magentaSpawnBlock|limeSpawnBlock|lightGraySpawnBlock|lightBlueSpawnBlock|greenSpawnBlock|graySpawnBlock|cyanSpawnBlock|brownSpawnBlock|blueSpawnBlock|blackSpawnBlock|redGeneratorSpawnBlock|blueGeneratorSpawnBlock|limeGeneratorSpawnBlock|yellowGeneratorSpawnBlock|cyanGeneratorSpawnBlock|whiteGeneratorSpawnBlock|pinkGeneratorSpawnBlock|grayGeneratorSpawnBlock|diamondGeneratorSpawnBlock|moonstoneGeneratorSpawnBlock|oreGeneratorSpawnBlock|redGoalBlock|blueGoalBlock|pigMobSpawnerBlock|cowMobSpawnerBlock|sheepMobSpawnerBlock|caveGolemMobSpawnerBlock|draugrZombieMobSpawnerBlock|draugrSkeletonMobSpawnerBlock|emptyMobSpawnerBlock|frostGolemMobSpawnerBlock|frostZombieMobSpawnerBlock|frostSkeletonMobSpawnerBlock|draugrKnightMobSpawnerBlock|wolfMobSpawnerBlock|bearMobSpawnerBlock|deerMobSpawnerBlock|stagMobSpawnerBlock|goldWatermelonStagMobSpawnerBlock|colouredChalk^colour=$t(colour:yellow)|colouredChalk^colour=$t(colour:white)|colouredChalk^colour=$t(colour:red)|colouredChalk^colour=$t(colour:purple)|colouredChalk^colour=$t(colour:pink)|colouredChalk^colour=$t(colour:orange)|colouredChalk^colour=$t(colour:magenta)|colouredChalk^colour=$t(colour:lime)|colouredChalk^colour=$t(colour:light_gray)|colouredChalk^colour=$t(colour:light_blue)|colouredChalk^colour=$t(colour:green)|colouredChalk^colour=$t(colour:gray)|colouredChalk^colour=$t(colour:cyan)|colouredChalk^colour=$t(colour:brown)|colouredChalk^colour=$t(colour:blue)|colouredChalk^colour=$t(colour:black)|colouredChalkBricks^colour=$t(colour:yellow)|colouredChalkBricks^colour=$t(colour:white)|colouredChalkBricks^colour=$t(colour:red)|colouredChalkBricks^colour=$t(colour:purple)|colouredChalkBricks^colour=$t(colour:pink)|colouredChalkBricks^colour=$t(colour:orange)|colouredChalkBricks^colour=$t(colour:magenta)|colouredChalkBricks^colour=$t(colour:lime)|colouredChalkBricks^colour=$t(colour:light_gray)|colouredChalkBricks^colour=$t(colour:light_blue)|colouredChalkBricks^colour=$t(colour:green)|colouredChalkBricks^colour=$t(colour:gray)|colouredChalkBricks^colour=$t(colour:cyan)|colouredChalkBricks^colour=$t(colour:brown)|colouredChalkBricks^colour=$t(colour:blue)|colouredChalkBricks^colour=$t(colour:black)|colouredChalkSlab^colour=$t(colour:yellow)|colouredChalkSlab^colour=$t(colour:white)|colouredChalkSlab^colour=$t(colour:red)|colouredChalkSlab^colour=$t(colour:purple)|colouredChalkSlab^colour=$t(colour:pink)|colouredChalkSlab^colour=$t(colour:orange)|colouredChalkSlab^colour=$t(colour:magenta)|colouredChalkSlab^colour=$t(colour:lime)|colouredChalkSlab^colour=$t(colour:light_gray)|colouredChalkSlab^colour=$t(colour:light_blue)|colouredChalkSlab^colour=$t(colour:green)|colouredChalkSlab^colour=$t(colour:gray)|colouredChalkSlab^colour=$t(colour:cyan)|colouredChalkSlab^colour=$t(colour:brown)|colouredChalkSlab^colour=$t(colour:blue)|colouredChalkSlab^colour=$t(colour:black)|colouredChalkBricksSlab^colour=$t(colour:yellow)|colouredChalkBricksSlab^colour=$t(colour:white)|colouredChalkBricksSlab^colour=$t(colour:red)|colouredChalkBricksSlab^colour=$t(colour:purple)|colouredChalkBricksSlab^colour=$t(colour:pink)|colouredChalkBricksSlab^colour=$t(colour:orange)|colouredChalkBricksSlab^colour=$t(colour:magenta)|colouredChalkBricksSlab^colour=$t(colour:lime)|colouredChalkBricksSlab^colour=$t(colour:light_gray)|colouredChalkBricksSlab^colour=$t(colour:light_blue)|colouredChalkBricksSlab^colour=$t(colour:green)|colouredChalkBricksSlab^colour=$t(colour:gray)|colouredChalkBricksSlab^colour=$t(colour:cyan)|colouredChalkBricksSlab^colour=$t(colour:brown)|colouredChalkBricksSlab^colour=$t(colour:blue)|colouredChalkBricksSlab^colour=$t(colour:black)|gorillaMobSpawnerBlock|wildcatMobSpawnerBlock|draugrHuntressMobSpawnerBlock|magmaGolemMobSpawnerBlock|lightbluePortal|lightgrayPortal|horseMobSpawnerBlock|tomato|carrotSeeds|potatoSeeds|strawberries|sugarCane|lettuce|coffeeBean|cauliflower|parsnip|blueberries|redCabbage|beetrootSeeds|whiteBanner|orangeBanner|magentaBanner|lightBlueBanner|yellowBanner|limeBanner|pinkBanner|grayBanner|lightGrayBanner|cyanBanner|purpleBanner|blueBanner|brownBanner|greenBanner|redBanner|blackBanner|draugrBanner|spiritGolemMobSpawnerBlock|spiritWolfMobSpawnerBlock|spiritBearMobSpawnerBlock|spiritStagMobSpawnerBlock|spiritGorillaMobSpawnerBlock|draugrWarperMobSpawnerBlock|smallMagentaPod|smallLightGrayPod|smallRedPod|frostWraithMobSpawnerBlock|draugrReaverMobSpawnerBlock|smallWhitePod|smallOrangePod|smallLightBluePod|smallYellowPod|smallLimePod|smallPinkPod|smallGrayPod|smallCyanPod|smallPurplePod|smallBluePod|smallBrownPod|smallGreenPod|smallBlackPod|skullBanner|rainbowBanner|directionalArrow^colour=$t(colour:white)|directionalArrow^colour=$t(colour:orange)|directionalArrow^colour=$t(colour:magenta)|directionalArrow^colour=$t(colour:light_blue)|directionalArrow^colour=$t(colour:yellow)|directionalArrow^colour=$t(colour:lime)|directionalArrow^colour=$t(colour:pink)|directionalArrow^colour=$t(colour:gray)|directionalArrow^colour=$t(colour:light_gray)|directionalArrow^colour=$t(colour:cyan)|directionalArrow^colour=$t(colour:purple)|directionalArrow^colour=$t(colour:blue)|directionalArrow^colour=$t(colour:brown)|directionalArrow^colour=$t(colour:green)|directionalArrow^colour=$t(colour:red)|directionalArrow^colour=$t(colour:black)|=Smoke Block|stalkerMobSpawnerBlock|croneMobSpawnerBlock|slimeMobSpawnerBlock|ironGuardianMobSpawnerBlock|goldGuardianMobSpawnerBlock|diamondGuardianMobSpawnerBlock|moonstoneGuardianMobSpawnerBlock|camelMobSpawnerBlock|=Rare Lucky Block|=Super Lucky Block|=Rare Weapon Lucky Block|=Super Weapon Lucky Block|=Building Lucky Block|=Rare Building Lucky Block|=Super Building Lucky Block|=Armour Lucky Block|=Rare Armour Lucky Block|=Super Armour Lucky Block|=Tools Lucky Block|=Rare Tools Lucky Block|=Super Tools Lucky Block|=Food Lucky Block|=Rare Food Lucky Block|=Super Food Lucky Block|=Potion Lucky Block|=Rare Potion Lucky Block|=Super Potion Lucky Block|=Block Destroyer TNT|colouredChalkStairs^colour=$t(colour:yellow)|colouredChalkStairs^colour=$t(colour:white)|colouredChalkStairs^colour=$t(colour:red)|colouredChalkStairs^colour=$t(colour:purple)|colouredChalkStairs^colour=$t(colour:pink)|colouredChalkStairs^colour=$t(colour:orange)|colouredChalkStairs^colour=$t(colour:magenta)|colouredChalkStairs^colour=$t(colour:lime)|colouredChalkStairs^colour=$t(colour:light_gray)|colouredChalkStairs^colour=$t(colour:light_blue)|colouredChalkStairs^colour=$t(colour:green)|colouredChalkStairs^colour=$t(colour:gray)|colouredChalkStairs^colour=$t(colour:cyan)|colouredChalkStairs^colour=$t(colour:brown)|colouredChalkStairs^colour=$t(colour:blue)|colouredChalkStairs^colour=$t(colour:black)|colouredChalkBricksStairs^colour=$t(colour:yellow)|colouredChalkBricksStairs^colour=$t(colour:white)|colouredChalkBricksStairs^colour=$t(colour:red)|colouredChalkBricksStairs^colour=$t(colour:purple)|colouredChalkBricksStairs^colour=$t(colour:pink)|colouredChalkBricksStairs^colour=$t(colour:orange)|colouredChalkBricksStairs^colour=$t(colour:magenta)|colouredChalkBricksStairs^colour=$t(colour:lime)|colouredChalkBricksStairs^colour=$t(colour:light_gray)|colouredChalkBricksStairs^colour=$t(colour:light_blue)|colouredChalkBricksStairs^colour=$t(colour:green)|colouredChalkBricksStairs^colour=$t(colour:gray)|colouredChalkBricksStairs^colour=$t(colour:cyan)|colouredChalkBricksStairs^colour=$t(colour:brown)|colouredChalkBricksStairs^colour=$t(colour:blue)|colouredChalkBricksStairs^colour=$t(colour:black)|tikiTerrorMobSpawnerBlock|mapleFence|pineFence|plumFence|cedarFence|aspenFence|jungleFence|palmFence|pearFence|cherryFence|spectralFence|mangoFence|noticeboard|mapleFenceGate|pineFenceGate|plumFenceGate|cedarFenceGate|aspenFenceGate|jungleFenceGate|palmFenceGate|pearFenceGate|cherryFenceGate|spectralFenceGate|mangoFenceGate|ironGoofyGolemMobSpawnerBlock|goldGoofyGolemMobSpawnerBlock|diamondGoofyGolemMobSpawnerBlock|moonstoneGoofyGolemMobSpawnerBlock|autoBench|homesteadCore|starframe|reactorFrame|collider|jetChestplate|atomicSpire|fluidPipe|waterPipe|=Artisan Axe|bowlOfCranberries|=Snowball Launcher|=Bullet|rpg|=67 Base Projectile|=67 Boosted Projectile|=Capitano Grenade|=Scatter Pellet|=Compass|=Chunk Map|=Teleport Heart|=Frost Shard|=Molten Cog|=Choir Bell|=Siege Core|=Flywheel|=Radiant Spark|=Brood Sac|=Bandolier|slownessPotionII|splashSlownessPotionII|poisonPotionII|splashPoisonPotionII|weaknessPotionII|splashWeaknessPotionII|instantDamagePotionII|splashInstantDamagePotionII|speedPotionII|splashSpeedPotionII|defensePotionII|splashDefensePotionII|strengthPotionII|splashStrengthPotionII|jumpPotionII|splashJumpPotionII|splashKnockbackPotionII|regenerationPotionII|splashRegenerationPotionII|instantHealingPotionII|splashInstantHealingPotionII|hastePotionII|splashHastePotionII|shieldPotionII|splashShieldPotionII|xRayVisionPotion|splashXRayVisionPotion|arrowOfXRayVision|miningYieldPotionII|splashMiningYieldPotionII|=AK-47|=M16|=MP40|=TAR-21|=M1911|=One Shot Pistol|=Double Barrel|=AWP|=Deagle|=Striker-12|=VSR|=DMR|=Minigun|=FMR|=SKAR|=Block-19|=Mini Izu|=GPMG|yellowPaintballExplosive|whitePaintballExplosive|redPaintballExplosive|purplePaintballExplosive|pinkPaintballExplosive|orangePaintballExplosive|magentaPaintballExplosive|limePaintballExplosive|lightGrayPaintballExplosive|lightBluePaintballExplosive|greenPaintballExplosive|grayPaintballExplosive|cyanPaintballExplosive|brownPaintballExplosive|bluePaintballExplosive|blackPaintballExplosive|yellowStickyPaintballExplosive|whiteStickyPaintballExplosive|redStickyPaintballExplosive|purpleStickyPaintballExplosive|pinkStickyPaintballExplosive|orangeStickyPaintballExplosive|magentaStickyPaintballExplosive|limeStickyPaintballExplosive|lightGrayStickyPaintballExplosive|lightBlueStickyPaintballExplosive|greenStickyPaintballExplosive|grayStickyPaintballExplosive|cyanStickyPaintballExplosive|brownStickyPaintballExplosive|blueStickyPaintballExplosive|blackStickyPaintballExplosive|yellowSeekingPaintballExplosive|whiteSeekingPaintballExplosive|redSeekingPaintballExplosive|purpleSeekingPaintballExplosive|pinkSeekingPaintballExplosive|orangeSeekingPaintballExplosive|magentaSeekingPaintballExplosive|limeSeekingPaintballExplosive|lightGraySeekingPaintballExplosive|lightBlueSeekingPaintballExplosive|greenSeekingPaintballExplosive|graySeekingPaintballExplosive|cyanSeekingPaintballExplosive|brownSeekingPaintballExplosive|blueSeekingPaintballExplosive|blackSeekingPaintballExplosive|yellowQuickPaintballExplosive|whiteQuickPaintballExplosive|redQuickPaintballExplosive|purpleQuickPaintballExplosive|pinkQuickPaintballExplosive|orangeQuickPaintballExplosive|magentaQuickPaintballExplosive|limeQuickPaintballExplosive|lightGrayQuickPaintballExplosive|lightBlueQuickPaintballExplosive|greenQuickPaintballExplosive|grayQuickPaintballExplosive|cyanQuickPaintballExplosive|brownQuickPaintballExplosive|blueQuickPaintballExplosive|blackQuickPaintballExplosive|auraXpPotionII|splashAuraXpPotionII|worldBuilderWand|barnacleJaw|triPointedNeedlefish|cowsMilk|sheepsMilk|[{"str":"Common Lottery Ticket","style":{"color":"#4d4d4d"}}]|[{"str":"Uncommon Lottery Ticket","style":{"color":"#A9FF21"}}]|[{"str":"Rare Lottery Ticket","style":{"color":"#84E0FF"}}]|[{"str":"Epic Lottery Ticket","style":{"color":"#800080"}}]|[{"str":"Legendary Lottery Ticket","style":{"color":"#ffa500"}}]|=Sword Upgrade|=Armour Upgrade|=Tools Upgrade|=Clovers|=Void Wings|=Lucky Bomb|=Unlucky Bomb|=Swap Orb|=Golden Clover|=Sticky Bomb Launcher|=Impact Grenade Launcher|=Sticky Charge Launcher|=Cluster Bomb Launcher|=Rocket Launcher|=Amethite|=Amethite Fragment|=Amethite Pickaxe|=Amethite Axe|=Amethite Spade|=Amethite Sword|=Amethite Hoe|=Amethite Helmet|=Amethite Chestplate|=Amethite Leggings|=Amethite Boots|=Amethite Gauntlets|=Amethite Bow|=Amethite Crossbow|=Amethite Crossbow Charged|=Amethite Spear|=Amethite Dagger|=Amethite Boomerang|=Amethite Club|=Amethite Mace|=Amethite Whip|=Magmasteel|=Magmasteel Fragment|=Magmasteel Pickaxe|=Magmasteel Axe|=Magmasteel Spade|=Magmasteel Sword|=Magmasteel Hoe|=Magmasteel Helmet|=Magmasteel Chestplate|=Magmasteel Leggings|=Magmasteel Boots|=Magmasteel Gauntlets|=Magmasteel Bow|=Magmasteel Crossbow|=Magmasteel Crossbow Charged|=Magmasteel Spear|=Magmasteel Dagger|=Magmasteel Boomerang|=Magmasteel Club|=Magmasteel Mace|=Magmasteel Whip|=Rubellite|=Rubellite Fragment|=Rubellite Pickaxe|=Rubellite Axe|=Rubellite Spade|=Rubellite Sword|=Rubellite Hoe|=Rubellite Helmet|=Rubellite Chestplate|=Rubellite Leggings|=Rubellite Boots|=Rubellite Gauntlets|=Rubellite Bow|=Rubellite Crossbow|=Rubellite Crossbow Charged|=Rubellite Spear|=Rubellite Dagger|=Rubellite Boomerang|=Rubellite Club|=Rubellite Mace|=Rubellite Whip|=Serpentite|=Serpentite Fragment|=Serpentite Pickaxe|=Serpentite Axe|=Serpentite Spade|=Serpentite Sword|=Serpentite Hoe|=Serpentite Helmet|=Serpentite Chestplate|=Serpentite Leggings|=Serpentite Boots|=Serpentite Gauntlets|=Serpentite Bow|=Serpentite Crossbow|=Serpentite Crossbow Charged|=Serpentite Spear|=Serpentite Dagger|=Serpentite Boomerang|=Serpentite Club|=Serpentite Mace|=Serpentite Whip|=Cracked Rubellite Pickaxe|depositSeedCopper|depositSeedGold|depositSeedVoltite|depositSeedCoal|depositSeedIron|depositSeedStone|depositSeedUranium', JM),
-      yM = HM("$J$#$&$$F&$23$$J$$$A$$c$$,^'$&H2$$'$$'$$0$*9$$R$#49$$($$&$$%$$$#,C(##$$#$&U)#$#$$($B+#2R$$1#7$%#+$6#$$)$J$O$#*-$1#M1$$a$$&'#%$&)$$4$.&$(;$*%$$$$$#$$#$,Z/$$T&$&V$$$Z-$###$%/V$O$$&2$*5#X$#$V%.$&2$&#$*&$$5$$E$#c2R1$&$$cc$c]$$$R%$*G=$]/=$2:$J5-$b*#G$$,,#%$+##$#4+#+##$+#%$$*$$*$$^%$$#$&#$$#$$#$&#$*#$&#$$#$$'$$^$###%8<#$########[%#$#$7###'#/$###$##/$##%$#D$#A#D$#A#D$#A#D$#A%$$#$*$$##################+$###$##$#$###$##$#$###$##$#$###$##$#$##$#$###$##$#$###$##$#$###$##&#$$#$###$##&#$##$#$###$##$#$###$##$#$###$##$#$###$##&#$&#$&#$$#$###$##&#$&#$2H$$A#B2#A#A#AL%A#A#A#A#b&####################################################################################$2P'$###$##$#$C$##$C$##$$%$$*$$($$#$$6$$%$(E%$$&$F$*$.##-#-#-#-#-#A$+#A#############################$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#V'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#V'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$1W'#63>#a&#b&#C'#D'#E'#C'$'V'#63>#a&#b&#C'#D'#E'#C'$'V'#63>#a&#b&#C'#D'#E'#C'$'W'#63>#a&#b&#C'#D'#E'#C'$,#W&$#######Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#6b$$+#)$", "*|emptyBookshelfDescription|=Prevents other factions from changing blocks and\nopening chests in the placed chunk|spikesDescription|fatMushroomDescription|spawnBlockDescription|teamGeneratorSpawnBlockDescription|goalBlockDescription|enchantingTableDescription|antlersDescription|ceilingClimbableDescription|jumpPadDescription|rocketShipDescription|=Place it to start a 30 second fuse. When it goes off, every placed block on the map is removed. Lucky blocks survive.|fluidPipeDescription|pickaxeDescription|axeDescription|spadeDescription|swordDescription|hoeDescription|throwableItemDescription|=Rapidly fires snowballs!|=The base projectile for the 67 character in Heroes v Brainrots|=The boosted projectile for the 67 character in Heroes v Brainrots|=A small explosive grenade thrown by Capitano Explovissimo in Heroes v Brainrots|=Primary spread shot from Scatter in Heroes v Brainrots|bowDescription|compassDescription|=Drop into any locked chunk to instantly unlock it.|foodDescription|watermelonSliceDescription|melonSliceDescription|rawFoodDescription|=The still-beating core of a Blink. Salvaged from a Warp Stalker.|=A splinter of cryogenic shell that never melts. Salvaged from a Frost Revenant.|=A gear from an overload mechanism, seized mid-cycle. Salvaged from a Magma Warden.|=The toll that calls the dead. Salvaged from a Hollow Choir.|=The firing heart of a barrage. Salvaged from a Siege Engine.|=The wheel a room-mill spins around. Salvaged from a Carousel.|=A mote of the failure state itself. Salvaged from Breach Zero.|=A sac filled with an acidic bile. Still full. Salvaged from a Broodfather.|=Her charge belt. Three still on it, and nobody has volunteered to count again. Salvaged from a Deadlock.|slownessPotionDescription|splashSlownessPotionDescription|poisonPotionDescription|splashPoisonPotionDescription|weaknessPotionDescription|splashWeaknessPotionDescription|instantDamagePotionDescription|splashInstantDamagePotionDescription|milkPotionDescription|speedPotionDescription|splashSpeedPotionDescription|defensePotionDescription|splashDefensePotionDescription|strengthPotionDescription|splashStrengthPotionDescription|jumpPotionDescription|splashJumpPotionDescription|splashKnockbackPotionDescription|regenerationPotionDescription|splashRegenerationPotionDescription|instantHealingPotionDescription|splashInstantHealingPotionDescription|hastePotionDescription|splashHastePotionDescription|shieldPotionDescription|splashShieldPotionDescription|miningYieldPotionDescription|splashMiningYieldPotionDescription|balloonDescription|popupTowerDescription|paintballGunDescription|paintballDescription|paintballExplosiveDescription|stickyPaintballExplosiveDescription|seekingPaintballExplosiveDescription|quickPaintballExplosiveDescription|paintBowDescription|pigSpawnOrbDescription^mob=Pig|cowSpawnOrbDescription^mob=Cow|sheepSpawnOrbDescription^mob=Sheep|horseSpawnOrbDescription^mob=Horse|camelSpawnOrbDescription^mob=Camel|ironGoofyGolemSpawnOrbDescription^mob=Iron Goofy Golem|goldGoofyGolemSpawnOrbDescription^mob=Gold Goofy Golem|diamondGoofyGolemSpawnOrbDescription^mob=Diamond Goofy Golem|moonstoneGoofyGolemSpawnOrbDescription^mob=Moonstone Goofy Golem|deerSpawnOrbDescription^mob=Deer|slimeSpawnOrbDescription^mob=Slime|wolfSpawnOrbDescription^mob=Wolf|wildcatSpawnOrbDescription^mob=Wildcat|spiritGolemSpawnOrbDescription^mob=Spirit Golem|spiritWolfSpawnOrbDescription^mob=Spirit Wolf|spiritBearSpawnOrbDescription^mob=Spirit Bear|spiritStagSpawnOrbDescription^mob=Spirit Stag|spiritGorillaSpawnOrbDescription^mob=Spirit Gorilla|bearSpawnOrbDescription^mob=Bear|stagSpawnOrbDescription^mob=Stag|goldWatermelonStagSpawnOrbDescription^mob=Gold Watermelon Stag|gorillaSpawnOrbDescription^mob=Gorilla|caveGolemSpawnOrbDescription^mob=Cave Golem|draugrZombieSpawnOrbDescription^mob=Draugr Zombie|draugrSkeletonSpawnOrbDescription^mob=Draugr Skeleton|frostGolemSpawnOrbDescription^mob=Frost Golem|frostZombieSpawnOrbDescription^mob=Frost Zombie|frostSkeletonSpawnOrbDescription^mob=Frost Skeleton|draugrKnightSpawnOrbDescription^mob=Draugr Knight|draugrHuntressSpawnOrbDescription^mob=Draugr Huntress|magmaGolemSpawnOrbDescription^mob=Magma Golem|draugrWarperSpawnOrbDescription^mob=Draugr Warper|frostWraithSpawnOrbDescription^mob=Frost Wraith|draugrReaverSpawnOrbDescription^mob=Draugr Reaver|stalkerSpawnOrbDescription^mob=Stalker|croneSpawnOrbDescription^mob=Crone|ironGuardianSpawnOrbDescription^mob=Iron Guardian|goldGuardianSpawnOrbDescription^mob=Gold Guardian|diamondGuardianSpawnOrbDescription^mob=Diamond Guardian|moonstoneGuardianSpawnOrbDescription^mob=Moonstone Guardian|tikiTerrorSpawnOrbDescription^mob=Tiki Terror|auraXpPotionDescription|splashAuraXpPotionDescription|firecrackerDescription|firecrackerPebbleDescription|spearDescription|daggerDescription|boomerangDescription|clubDescription|maceDescription|whipDescription|=Take it to the Lottery stall in the spawn hub to redeem it for a reward.|clockDescription|=Use to permanently advance your Sword tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Armour tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Pickaxe and Axe tier for this match. Share spare upgrades with your team.|=Earned from lucky blocks, kills and beds. Spend them at your base's Lucky Trader and Lucky Upgrades.|=Keep one in your inventory. Falling into the void uses it up and puts you back on solid ground.|=A random lucky effect for everyone it splashes, you included. Usually good!|=A random unlucky effect for everyone it splashes, you included. Usually bad!|=Throw near an enemy or mob to swap places with them.|=A shiny golden four-leaf clover.|=Sticks where it lands and goes off by itself.|=Bursts on the first thing it hits.|=Sticks where it lands. Set them all off with Attack.|=Splits into five bomblets.|=Flies straight and bursts on impact.|elementalShardDescription|forgeFragmentDescription|=Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.|swordBladeDescription|swordGuardDescription|swordHandleDescription|cagedMobDescription", JM),
-      lM = new Map,
-      EM = new Map;
-    let UM = -1;
-
-    function GM(MM, rM, iM) {
-      UM !== (0, QM.h)() && (UM = (0, QM.h)(), lM.clear(), EM.clear());
-      let OM = MM.get(rM);
-      return void 0 === OM && (OM = iM(), void 0 !== OM && MM.set(rM, OM)), OM
-    }
-    const CM = HM("_$QN+###Y$#b'#%$=%/#I'%##7%))+%[%(#%9##%)(#%9(#%?(I$%'('%%('%%('%%('%#(%%%('%%('%%('%#(%%%('%#('%%('%%('%%('%%('%#(%%#(%%#(%%%('%#(%%%(#%I%##%%)M&%A)A%A)b&%b&(Q.%)(#%)(W%%#(1%#(-%#(#%#(Q$%#(G(%/(#%1('%I%$K&%+$+&3(-$%%+$+&3(-$%%+$+&3(-$%%+$+&3(-$?&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&+%#$;%#$I$%#$1%#$5%+&W$%#$O$%/&#$-%#$'%", "Tool|Item|Armour|GrayscaleArmour|Chargeable|FullAuto|Directional|Gun", hM),
-      eM = HM("J,##O$##$#%/$#%/$#%/$-%9$1%#$)%A$#%b&$1%-$[+%S%$%%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%9$M2#+%-$#%/$#%/$#%/$#%%$-&/$-%+$9%3$-%E$$b%%I%$A%#$%%=$b(&-$-&#%/$#%/$#%/$#%%$-&)%'$-%#$7%M'$E+%#$%%#$?%K)$5%#$-&#%%$#%+$#%/$#%/$#%/$#%%$-&Q$%#$-&'%#$C$%C%$b.&1%#$-&'%+$#%/$#%/$#%/$#%%$-&)%%$5%/$%%E$$O%%%$#%-$#%#$#%#$^<%#$b)%#$+%)$1%)$1%)$)%%$G*%#$I1%A$+%O$$#%#$A%)$U%%#$b%%A$E%%#$#%%$I$%'$5%%$#%#$-&U$%I$$bO$#)$bV('CQ$%+$Y/%G%$1&;$1&I($)&=$A&U%$#%#$-%1$7%^)$Y$&=$b&%1$b&%)$b*%5$)%+$5%^$###Y$#b'#%(=)/#I')##7))-+)[%,#)9##)),#)9,#)?,I$)',')%,')%,')%,')#,%)%,')%,')%,')#,%)%,')#,')%,')%,')%,')%,')#,%)#,%)#,%)%,')#,%)%,#)I%##)%-M&)A-A)A-b&)b&,Q.)),#)),W%)#,1)#,-)#,#)#,Q$)#,G()/,#)1,')I%(K&)+(+*3,-(%)+(+*3,-(%)+(+*3,-(%)+(+*3,-(?*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*+)#(;)#(I$)#(1)#(5)+*W$)#(O$)/*#(-)#(')", "CubeBlock|TwoDBlock|SlabBlock|StairsBlock|TwoDTool|TwoDItem|TwoDArmour|GrayscaleTwoDArmour|Chargeable|FullAuto|Directional|Gun", hM),
-      bM = HM(".W]+#%#%#%#%#%#%#%#%%%#%#%#%%%#%#%#", "30|20|16|1|2|5|7|12|8|100|21|24|22|75", Number),
-      wM = HM("&PO+#####%####################$#%#,#%#####,%&#)#,#.#%#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1$FD$'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$1'#*#&#/#,#'#*#&#/#,#'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$_$-#######&$U$######7#'#)#4", "0.07|0.09|0.11|0.13|0.18|0.21|0.24|0.22|0.1|0.14|0.16|0.19|0.05|0.06|0.08|0.25|0.12|0.2|0|0.27|0.15", Number),
-      tM = HM(">W]+#%#)$)%9$", "none|sniper", hM),
-      gM = HM("*W]+#%#%#%#%$%#)&%(%%%$%%)$)'%&", "semi_automatic|submachine|rifle|pistol|shotgun", hM),
-      uM = mM("]%LV+#c&M.$4C2$44$44$44$49$4/$4/$4/$"),
-      RM = mM("$a&#$9$Z$K?$&;$$[($(c($6Y&$$)$$$$&G%$*$$$*$(V*$Z$V$$$#$$#$&+$$#$$%$$$$$$$$$$&$$$#$$($,E0$$T&$&V$$D$`-$(%$6*$$%$T$M$$$L%$6;$$$$$2$$W:$*D^%$$N%$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$2O'$2*$2*$2*$2*$2*$2*$2*$2*$2*$:*$0=$&^$$$N$$(Q$$$]$$.#$&6$$K%$:.$*I$$*&$*S+$6,$"),
-      pM = HM("$DO+#######%#$ZD$$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%($Z$(.1($'(.1($'(.1($'(.1($2(.+($((.+($((.+($((.+($C&($@$", "1|2|3|4|5", (MM => "" === MM ? null : Number(MM))),
-      WM = HM("$F(#$%$$&#$)%$)%$0$$,$$%$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$@$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$I$%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$.#$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$2%$)%$)%$,&$.$$.$$'$$&$$%$$'$$7$$%$$%$$%$$%$$%$$%$$%$$5#$%#$9#$J$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$-&$'%$)%$)%$,&$'$$:$$G%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$B<$$R$$$%$$-$$%$$;&$0%$)%$)%$,&$'$$%$$%$$%$$%$$%$$&&$/$$%$$&$$F$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'$$%$$&&$/%$)%$)%$,&$'$$)$$N%$$,&$%#$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$;$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$%$$%$$%$$%$$%$$%$$%$$%$$'$$X$&$%*$5&$%*$I$$$&$$&$$&$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$&$$%$$*&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$U$&$'&$'$$)#$7$$%$$%$$%$$%$$?+$8$$%$$%$$%$$%+$7#$'#$+$$%$$%$$%$$%$$6&$'&$&$$&$$%$$%$$%$$9&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$Q^%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$V3$$b$$$F%%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$-$$%$$%$$%$$%$$%$$0$$%$$%$$%$$%$$%$$%$$%$$&$$%$$%$$%$$%$$P$$$*$$)$$)$$)$$)$$&$$>$$+$$)$$A$$8$$)$$)$$)$$)$$*$$B$$,$$%$$%$$%$$%$$&$$-$$?+$b$$$)+$O)$0O(#$[%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$+#*..:#.@#.,6.*#.&#.&%.$%.($.&$.&%.$%.&$.$%.&%.&%.&%.&%.$%.$$.$$.&$.$%.&$.$P).$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$^(.*&.$M$.$*.$(.$#.$:.0U%.2#.$H&.$%.$8.$%.$8.$%.$8.$%.$=.$%.$3.$%.$3.$%.$3.$%.", "meta,rot1|meta,rot1,closed|meta,rot1,bot|meta,rot1,books6|meta,rot1,books0|meta,rot1,empty|meta,rot1,top|meta,conn,none|meta,input,none|meta,output,none|meta,charging1|meta,dir1", (MM => MM.split(zM.m).join(zM.s))),
-      sM = HM(",QN+####$/#+#+###+#4####1+##S(+$$#2A#$H%#$%0$%0$%0$%0$%0$%0$%0$%0$%0$U.0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0:C/(:.($W$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$(?+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$'$,X$+$=(09+", "Break Speed,Momentum,Mining Yield,Mining Aura|Break Speed,Momentum|Break Speed,Momentum,Lumber Aura|Break Speed,Momentum,Digging Aura|Damage,Attack Speed,Critical Damage|Damage,Attack Speed,Critical Damage,Horizontal Knockback|Break Speed,Momentum,Farming Yield,Farming Aura|Protection,Health,Health Regen|Protection,Health,Health Regen,Knockback Resist|Protection,Health,Health Regen,Stomp Damage|Horizontal Knockback,Vertical Knockback,Damage|Firecracker Cooldown,Firecracker Boost,Gliding Speed|Arrow Speed,Arrow Damage,Quick Charge", (MM => Object.freeze(MM.split(",")))),
-      DM = HM(",$#0#$-#-$&#%2#%(#$$$$'%B$##%b$&)$$#$#%A&$&#)%,$%#$#%$&%###%:#$$$$##$%)$%%#)$1).)$$#)$))%$#)$%$$&)B%&#)#&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%$$'$&#$$%%$/)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))&)$#)$%%#$,#%2%%($$$*$$#%#$#)$1)$1)$1)$1)$1)$1)$))$))$))$))$))$)$#%%$$#$$'%$'%$'%$'%$'%$'%$'%$'$$'$$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%(-$#%#$#)$1)$)$$$%$'$-%##*%$$%$$'$$'$#%$%%$%$$'$B#&#)$%)$%)$%)$%)$%)$%)$%)B%*#)$%)$9)$)$$($($$$%)#$&$$$-&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&&($$#%%$$')$1)$)$$$%$')$%$.$)%$$R%)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))*,$$0'B#'$R$)$%'4%'$%'6%'#%5#%%$'+#$#%'$$#%#$#)$1)$)$$$%$')$%)$%)$%)$%)$%)&%$*'$)+#*$%*$%+#)$%%C%&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$')&)$$'$(#$$#%#$#)$1)$)$$$%$')(%$$'*#$%+/$%+-)6#)#%#+$H$$$#$#).&$#*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*,9+$+*$1*$1*$1*$1*$1*$1*$*+&F$)#*$%*$$*$$*&%+#*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$9*$E$)$)*$&*$&*$&*$&*$6*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$3*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*B'&+)C$'$$)$&)#$$'$$'*(%$$Q'+$:%%+*&+'$$#$$'*$&$$%+$**$=%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$+$$K_%*$I$+#*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$F'*$1*$1*$1*$1*$1*$1*$1*$1*$1*$1**1+&:%#$.Q)%$+%<]1#,#,-(-,Y)(#,8##&#-*%##-*#,$#,$#,$#,$#,$#,$#,$#,B#,$2,,#,$',$#(&#(4#((#($&($%($%($%($%($%($%($%($%($%($*(#,@..D$#.'-%+'-$++%-+.#().#().#().#(%.#().#().#().#(%.#().#('.#().#().#().#().#(%.#(%.#(%.#().#(%.#(#.&#($#($#($#($#($%($#($#($#($#($#($#($#($#($#($#($#($#-%(#,#(B&,V%R)+.U'.K%((#-#.1-#.--#.#-#.Q$-#.G'-',$&,0*.#(1.#(#-,#(,#(,#(,#(,#(,#($8,$),&7-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(L$&(#-%($%(8&(#-%($%(8&(#-%($%(8&(#-%($%(8&(+-", "nature|building|colours|worldTools|combat|utility|decoration|mobs|tools|materials|food", hM),
-      kM = HM("$b&#$R)#$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$_7%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$a$#$T%%$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$>#B#'$V$&4%'$%'6%'$)#$b%#$%)$G$%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$`'%$9%$9%$9%$9%$Q$%$9%$9%$9%$9%$9%$9%$9%$9%$9%$9%&U(&$&%$$%$$%$'%$$%$$%$$%$'%$$%$$%$$%$$%$$%$$%$$%$$%$9%$E$&D$[*$$$&$&&$P5%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%*CZ&)c'Q;%&N$%<#%(G$&$%&&#&&Q)&$#&$#&$#&$#&$%&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&&,%<#%*W))$-)BS(%B$%", "6|2|8|10|17|9", Number);
-
-    function ZM(MM) {
-      const rM = dM(MM);
-      return null !== rM ? rM : GM(lM, MM, (() => {
-        const rM = (0, QM.g)(MM);
-        return void 0 === rM ? void 0 : (0, zM.F)(rM)
+    function PU() {
+      if (!tU) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+      const {
+        scriptUrl: UU,
+        wasmBinaryUrl: XU
+      } = tU;
+      return gU ??= fetch(XU).then((UU => {
+        if (!UU.ok) throw new Error(`Draco: fetching ${XU} failed: ${UU.status}`);
+        return UU.arrayBuffer()
+      })), gU.catch((() => {
+        gU = null
+      })), ZU.workersStarted++, Promise.all([gU, (0, IU.j)()]).then((XU => {
+        let [zU] = XU;
+        return new Promise(((XU, cU) => {
+          const yU = new EU;
+          yU.onerror = UU => {
+            yU.onmessage = null, yU.onerror = null, yU.terminate(), cU(new Error("Draco: the decode worker failed to start" + (UU.message ? `: ${UU.message}` : " (its script did not load)")))
+          }, yU.onmessage = UU => {
+            let {
+              data: zU
+            } = UU;
+            yU.onmessage = null, yU.onerror = null, "initDone" === zU.id ? XU(yU) : (yU.terminate(), cU(new Error(`Draco: ${"initError"===zU.id?zU.message:"the worker did not start"}`)))
+          };
+          const QU = zU.slice(0),
+            AU = {
+              id: "init",
+              url: UU,
+              wasmBinary: QU
+            };
+          yU.postMessage(AU, [QU])
+        }))
       }))
     }
 
-    function oM(MM) {
-      const rM = yM(MM);
-      return null !== rM ? rM : GM(EM, MM, (() => {
-        var rM;
-        return null !== (rM = (0, zM.D)(ZM(MM))) && void 0 !== rM ? rM : void 0
+    function WU(UU) {
+      const XU = kU.indexOf(UU); - 1 !== XU && kU.splice(XU, 1);
+      const zU = GU.shift();
+      zU && LU(zU)
+    }
+
+    function dU(UU, XU) {
+      UU.busy = !0, UU.releaseTimer && (clearTimeout(UU.releaseTimer), UU.releaseTimer = null);
+      UU.worker.then((zU => {
+        const cU = BU++;
+        zU.onmessage = yU => {
+          let {
+            data: QU
+          } = yU;
+          if (("decoded" === QU.id || "decodeError" === QU.id) && QU.seq === cU) {
+            if (zU.onmessage = null, zU.onerror = null, "decoded" === QU.id) return ZU.decodes++, XU.resolve({
+              indices: QU.indices,
+              attributes: QU.attributes,
+              totalVertices: QU.totalVertices
+            }), void(() => {
+              const XU = GU.shift();
+              XU ? dU(UU, XU) : (UU.busy = !1, UU.releaseTimer = setTimeout((() => {
+                const XU = kU.indexOf(UU); - 1 !== XU && kU.splice(XU, 1), UU.worker.then((UU => {
+                  UU.terminate()
+                }))
+              }), aU))
+            })();
+            zU.terminate(), XU.reject(new Error(QU.message)), WU(UU)
+          }
+        }, zU.onerror = cU => {
+          zU.onmessage = null, zU.onerror = null, zU.terminate(), XU.reject(new Error(`Draco: the decode worker failed: ${cU.message}`)), WU(UU)
+        };
+        const yU = {
+          id: "decode",
+          seq: cU,
+          data: XU.data,
+          attributeIds: XU.attributeIds,
+          expected: XU.expected
+        };
+        zU.postMessage(yU, [XU.data.buffer])
+      }), (zU => {
+        XU.reject(zU instanceof Error ? zU : new Error(String(zU))), WU(UU)
       }))
     }
 
-    function fM(MM) {
-      return CM(MM)
-    }
-
-    function YM(MM) {
-      return eM(MM)
-    }
-
-    function NM(MM) {
-      return bM(MM)
-    }
-
-    function AM(MM) {
-      return wM(MM)
-    }
-
-    function xM(MM) {
-      return tM(MM)
-    }
-
-    function vM(MM) {
-      return gM(MM)
-    }
-
-    function FM(MM) {
-      return 0 !== RM(MM)
-    }
-
-    function BM(MM) {
-      return pM(MM)
-    }
-
-    function XM(MM) {
-      return 0 !== uM(MM)
-    }
-
-    function IM(MM) {
-      const rM = WM(MM);
-      if (void 0 === rM || rM.startsWith(zM.o)) return null === rM || void 0 === rM ? void 0 : rM.slice(zM.o.length);
-      const iM = (0, QM.g)(MM);
-      return void 0 === iM ? void 0 : `${iM}${zM.s}${rM}`
-    }
-
-    function KM(MM) {
-      var rM;
-      return null !== (rM = sM(MM)) && void 0 !== rM ? rM : LM
-    }
-    let qM = null;
-
-    function TM() {
-      if (null === qM) {
-        const MM = [],
-          rM = new zM.t(SM);
-        let iM = 0;
-        for (; !rM.done;) iM += (0, zM.I)(rM.next()), MM.push(iM);
-        qM = Object.freeze(MM)
-      }
-      return qM
-    }
-
-    function VM(MM) {
-      return DM(MM)
-    }
-
-    function cM(MM, rM) {
-      var iM;
-      return 0 !== ((null !== (iM = kM(MM)) && void 0 !== iM ? iM : 0) & rM)
-    }
-
-    function Mr(MM) {
-      return cM(MM, zM.d.OnlyInSearch)
-    }
-
-    function rr(MM) {
-      return cM(MM, zM.d.OnlyInCategory)
-    }
-
-    function ir(MM) {
-      return cM(MM, zM.d.DevOnly)
-    }
-
-    function Or(MM) {
-      return !cM(MM, zM.d.HiddenByDefault) && void 0
-    }
-
-    function Sr(MM, rM, iM, OM) {
-      var SM;
-      const jM = null !== (SM = kM(MM)) && void 0 !== SM ? SM : 0;
-      return 0 !== (jM & zM.d.DisabledInPublicLobbies) && rM || 0 !== (jM & zM.d.DisabledInProduction) && !0 || !iM || !OM && 0 !== (jM & zM.d.DevOnly)
-    }
-    let jr = null;
-
-    function ar() {
-      if (null === jr) {
-        const MM = aM.split(zM.s),
-          rM = new Map,
-          iM = new zM.t(jM);
-        let OM = 0,
-          SM = 0;
-        for (; !iM.done;) {
-          OM += (0, zM.I)(iM.next());
-          const jM = iM.next();
-          rM.set(OM, Object.freeze(MM.slice(SM, SM + jM))), SM += jM
+    function LU(UU) {
+      const XU = kU.find((UU => !UU.busy));
+      if (XU) dU(XU, UU);
+      else {
+        if (RU ??= (0, NU.d)() ? 1 : function(UU, XU) {
+            const zU = UU ? Math.max(1, Math.min(Math.floor(.5 * UU), 4)) : 1;
+            return XU ? Math.min(zU, pU) : zU
+          }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, YU.isMobile)()), kU.length < RU) {
+          const XU = {
+            worker: PU(),
+            busy: !0,
+            releaseTimer: null
+          };
+          return kU.push(XU), ZU.mostWorkers = Math.max(ZU.mostWorkers, kU.length), void dU(XU, UU)
         }
-        jr = rM
+        GU.push(UU)
       }
-      return jr
     }
+
+    function eU(UU, XU, zU) {
+      return new Promise(((cU, yU) => {
+        LU({
+          data: new Int8Array(UU.buffer, UU.byteOffset, UU.byteLength).slice(),
+          attributeIds: XU,
+          expected: zU,
+          resolve: cU,
+          reject: yU
+        })
+      }))
+    }
+    var CU = zU(38106),
+      wU = zU(38121),
+      qU = zU(34968),
+      OU = zU(34959);
+    const SU = {
+      index: -1,
+      magFilter: void 0,
+      minFilter: void 0,
+      wrapS: void 0,
+      wrapT: void 0
+    };
+
+    function rU(UU) {
+      const XU = (0, OU.i)(UU.byteLength);
+      if (XU) throw new qU.n(XU);
+      const {
+        json: zU,
+        bin: cU
+      } = (0, qU.w)(UU), yU = (0, OU.g)(zU, cU);
+      if (yU) throw new qU.n(yU);
+      try {
+        return function(UU, XU) {
+          var zU, cU, yU, QU, AU, FU, oU, DU, EU, YU, NU, IU, pU, aU, tU;
+          const gU = new Map,
+            kU = zU => {
+              let cU = gU.get(zU);
+              if (!cU) {
+                var yU;
+                const QU = UU.bufferViews[zU],
+                  AU = null !== (yU = QU.byteOffset) && void 0 !== yU ? yU : 0;
+                cU = {
+                  index: zU,
+                  bytes: XU.subarray(AU, AU + QU.byteLength),
+                  byteStride: QU.byteStride
+                }, gU.set(zU, cU)
+              }
+              return cU
+            },
+            GU = new Map,
+            BU = XU => {
+              let zU = GU.get(XU);
+              if (!zU) {
+                var cU;
+                const yU = UU.accessors[XU];
+                zU = {
+                  index: XU,
+                  count: yU.count,
+                  type: yU.type,
+                  numComponents: qU.o[yU.type],
+                  componentType: yU.componentType,
+                  normalized: null !== (cU = yU.normalized) && void 0 !== cU && cU,
+                  byteOffset: yU.byteOffset,
+                  bufferView: void 0 === yU.bufferView ? null : kU(yU.bufferView),
+                  min: yU.min,
+                  max: yU.max
+                }, GU.set(XU, zU)
+              }
+              return zU
+            },
+            ZU = null !== (zU = null === (cU = UU.extensionsUsed) || void 0 === cU ? void 0 : cU.includes("KHR_draco_mesh_compression")) && void 0 !== zU && zU,
+            RU = (null !== (yU = UU.meshes) && void 0 !== yU ? yU : []).map(((XU, zU) => {
+              const cU = XU.primitives.map(((XU, zU) => {
+                var cU, yU, QU;
+                const AU = ZU ? null === (cU = XU.extensions) || void 0 === cU ? void 0 : cU.KHR_draco_mesh_compression : void 0;
+                let FU = null;
+                const oU = [];
+                if (AU) {
+                  const zU = {
+                    vertices: UU.accessors[XU.attributes.POSITION].count,
+                    indices: void 0 === XU.indices ? 0 : UU.accessors[XU.indices].count,
+                    components: {}
+                  };
+                  FU = {
+                    bufferView: kU(AU.bufferView),
+                    attributeIds: {},
+                    normalized: {},
+                    expected: zU
+                  };
+                  for (const [cU, yU] of qU.i) {
+                    const QU = AU.attributes[cU];
+                    if (void 0 === QU) continue;
+                    FU.attributeIds[yU] = QU;
+                    const oU = XU.attributes[cU];
+                    var DU;
+                    if (void 0 !== oU) FU.normalized[yU] = null !== (DU = UU.accessors[oU].normalized) && void 0 !== DU && DU, zU.components[yU] = qU.o[UU.accessors[oU].type]
+                  }
+                } else
+                  for (const [UU, EU] of qU.i) {
+                    const zU = XU.attributes[UU];
+                    void 0 !== zU && oU.push({
+                      semantic: UU,
+                      kind: EU,
+                      accessor: BU(zU)
+                    })
+                  }
+                return {
+                  index: zU,
+                  mode: null !== (yU = XU.mode) && void 0 !== yU ? yU : 4,
+                  attributes: oU,
+                  indices: AU || void 0 === XU.indices ? null : BU(XU.indices),
+                  position: void 0 === XU.attributes.POSITION ? null : BU(XU.attributes.POSITION),
+                  material: null !== (QU = XU.material) && void 0 !== QU ? QU : null,
+                  draco: FU
+                }
+              }));
+              return {
+                index: zU,
+                name: XU.name,
+                primitives: cU,
+                extras: XU.extras
+              }
+            })),
+            PU = (null !== (QU = UU.nodes) && void 0 !== QU ? QU : []).map(((UU, XU) => {
+              var zU, cU;
+              return {
+                index: XU,
+                name: UU.name,
+                children: null !== (zU = UU.children) && void 0 !== zU ? zU : [],
+                mesh: null !== (cU = UU.mesh) && void 0 !== cU ? cU : null,
+                translation: UU.translation,
+                rotation: UU.rotation,
+                scale: UU.scale,
+                hasCamera: void 0 !== UU.camera,
+                extras: UU.extras
+              }
+            })),
+            WU = null !== (AU = null === (FU = UU.extensionsUsed) || void 0 === FU ? void 0 : FU.includes("KHR_materials_unlit")) && void 0 !== AU && AU,
+            dU = null !== (oU = null === (DU = UU.extensionsUsed) || void 0 === DU ? void 0 : DU.includes("KHR_texture_transform")) && void 0 !== oU && oU,
+            LU = (null !== (EU = UU.materials) && void 0 !== EU ? EU : []).map(((UU, XU) => {
+              var zU, cU, yU, QU;
+              const AU = UU.pbrMetallicRoughness,
+                FU = null === AU || void 0 === AU ? void 0 : AU.baseColorTexture;
+              return {
+                index: XU,
+                name: UU.name,
+                extras: UU.extras,
+                unlit: WU && void 0 !== (null === (zU = UU.extensions) || void 0 === zU ? void 0 : zU.KHR_materials_unlit),
+                pbr: AU ? {
+                  baseColorFactor: AU.baseColorFactor,
+                  metallicFactor: AU.metallicFactor,
+                  roughnessFactor: AU.roughnessFactor
+                } : null,
+                baseColorTexture: FU ? {
+                  texture: FU.index,
+                  transform: dU && (null === (cU = FU.extensions) || void 0 === cU ? void 0 : cU.KHR_texture_transform) || null
+                } : null,
+                emissiveFactor: UU.emissiveFactor,
+                alphaMode: null !== (yU = UU.alphaMode) && void 0 !== yU ? yU : "OPAQUE",
+                alphaCutoff: UU.alphaCutoff,
+                doubleSided: null !== (QU = UU.doubleSided) && void 0 !== QU && QU
+              }
+            })),
+            eU = (null !== (YU = UU.textures) && void 0 !== YU ? YU : []).map(((XU, zU) => {
+              var cU, yU;
+              const QU = void 0 === XU.sampler ? SU : {
+                index: XU.sampler,
+                ...null === (cU = UU.samplers) || void 0 === cU ? void 0 : cU[XU.sampler]
+              };
+              return {
+                index: zU,
+                sampler: {
+                  index: QU.index,
+                  magFilter: QU.magFilter,
+                  minFilter: QU.minFilter,
+                  wrapS: QU.wrapS,
+                  wrapT: QU.wrapT
+                },
+                image: null !== (yU = XU.source) && void 0 !== yU ? yU : -1
+              }
+            })),
+            CU = (null !== (NU = UU.images) && void 0 !== NU ? NU : []).map(((UU, XU) => ({
+              index: XU,
+              name: UU.name,
+              mimeType: UU.mimeType,
+              bufferView: kU(UU.bufferView)
+            }))),
+            wU = null !== (IU = (0, qU.u)(UU)) && void 0 !== IU ? IU : 0;
+          return {
+            json: UU,
+            rootNodes: null !== (pU = null === (aU = UU.scenes) || void 0 === aU || null === (tU = aU[wU]) || void 0 === tU ? void 0 : tU.nodes) && void 0 !== pU ? pU : [],
+            nodes: PU,
+            meshes: RU,
+            materials: LU,
+            textures: eU,
+            images: CU
+          }
+        }(zU, cU)
+      } catch (QU) {
+        throw QU instanceof qU.m ? QU : new qU.m(`reading the GLB failed: ${QU instanceof Error?QU.message:String(QU)}`)
+      }
+    }
+    async function uU(UU, XU) {
+      var zU, cU;
+      const yU = UU.draco;
+      if (!yU) throw new qU.m("not a Draco primitive");
+      let QU;
+      try {
+        QU = await XU(yU.bufferView.bytes, yU.attributeIds, yU.expected)
+      } catch (DU) {
+        throw new qU.m(`Draco decoding failed: ${DU instanceof Error?DU.message:String(DU)}`)
+      }
+      const {
+        vertices: AU,
+        indices: FU,
+        components: oU
+      } = yU.expected;
+      if (QU.totalVertices !== AU || (null !== (zU = null === (cU = QU.indices) || void 0 === cU ? void 0 : cU.length) && void 0 !== zU ? zU : 0) !== FU || QU.attributes.some((UU => UU.size !== oU[UU.kind] || UU.data.length !== AU * UU.size))) throw new qU.m("Draco decoding gave other counts than the accessors declare");
+      for (const EU of QU.attributes) {
+        const UU = yU.normalized[EU.kind];
+        void 0 !== UU && (EU.normalized = UU)
+      }
+      return QU
+    }
+    const fU = new WeakMap;
+
+    function iU(UU, XU) {
+      var zU;
+      const cU = null !== (zU = fU.get(UU)) && void 0 !== zU ? zU : XU(UU);
+      return fU.set(UU, cU), cU
+    }
+
+    function HU(UU) {
+      const XU = UU.bufferView,
+        zU = 5125 === UU.componentType ? Uint32Array : Uint16Array,
+        cU = XU.bytes.buffer,
+        yU = XU.bytes.byteOffset + (UU.byteOffset || 0);
+      return yU % zU.BYTES_PER_ELEMENT !== 0 ? new zU(cU.slice(yU, yU + UU.count * zU.BYTES_PER_ELEMENT), 0) : new zU(cU, yU, UU.count)
+    }
+
+    function MU(UU, XU) {
+      if (UU.min && UU.max) return [new Float64Array(UU.min), new Float64Array(UU.max)];
+      const zU = XU.find((UU => {
+          let {
+            kind: XU
+          } = UU;
+          return "position" === XU
+        })),
+        cU = zU ? (0, wU.k)(zU, UU.count) : new Float32Array(0);
+      return (0, wU.u)(cU.length / 3, ((UU, XU) => cU[3 * UU + XU]))
+    }
+
+    function vU(UU) {
+      const XU = UU.attributes.map((UU => {
+          var XU, zU;
+          let {
+            kind: cU,
+            accessor: yU
+          } = UU;
+          const {
+            bufferView: QU,
+            numComponents: AU
+          } = yU;
+          if (!QU) {
+            return {
+              kind: cU,
+              data: iU(yU, (() => new Float32Array(AU * yU.count))),
+              offset: 0,
+              stride: 4 * AU,
+              components: AU,
+              glType: 5126,
+              isNormalized: !1
+            }
+          }
+          const FU = null !== (XU = QU.byteStride) && void 0 !== XU ? XU : AU * qU.d[yU.componentType];
+          return {
+            kind: cU,
+            data: QU.bytes,
+            offset: null !== (zU = yU.byteOffset) && void 0 !== zU ? zU : 0,
+            stride: FU,
+            components: AU,
+            glType: yU.componentType,
+            isNormalized: yU.normalized
+          }
+        })),
+        zU = UU.indices,
+        cU = zU && iU(zU, HU),
+        yU = UU.position;
+      return new wU.h(XU, cU, yU.count, ...MU(yU, XU))
+    }
+    const VU = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+
+    function sU(UU, XU) {
+      const zU = XU.attributes.map((UU => {
+        let {
+          kind: XU,
+          data: zU,
+          size: cU,
+          byteOffset: yU,
+          byteStride: QU,
+          normalized: AU
+        } = UU;
+        return {
+          kind: XU,
+          data: zU,
+          offset: yU,
+          stride: QU,
+          components: cU,
+          glType: 5120 + VU.indexOf(zU.constructor),
+          isNormalized: AU
+        }
+      }));
+      return new wU.h(zU, XU.indices, XU.totalVertices, ...MU(UU.position, zU))
+    }
+
+    function nU(UU) {
+      const XU = UU.lastIndexOf("/");
+      return XU < 0 ? UU : UU.substring(XU + 1)
+    }
+
+    function mU(UU) {
+      const XU = UU.lastIndexOf("/");
+      return XU < 0 ? "" : UU.substring(0, XU + 1)
+    }
+
+    function lU(UU) {
+      return UU.name || `node${UU.index}`
+    }
+    const xU = {
+        rotation: [0, 1, 0, 0],
+        scale: [1, 1, -1]
+      },
+      JU = {
+        9728: 12,
+        9729: 2,
+        9984: 9,
+        9985: 11,
+        9986: 10
+      },
+      jU = {
+        9728: 1,
+        9729: 7,
+        9984: 4,
+        9985: 5,
+        9986: 8,
+        9987: 6
+      };
+
+    function KU(UU) {
+      var XU, zU, cU, yU;
+      const QU = null !== (XU = UU.minFilter) && void 0 !== XU ? XU : 9987;
+      return 9729 === (null !== (zU = UU.magFilter) && void 0 !== zU ? zU : 9729) ? null !== (cU = JU[QU]) && void 0 !== cU ? cU : 3 : null !== (yU = jU[QU]) && void 0 !== yU ? yU : 4
+    }
+    const bU = {
+      33071: 0,
+      33648: 2
+    };
+
+    function TU(UU) {
+      var XU;
+      return null !== (XU = bU[null !== UU && void 0 !== UU ? UU : 10497]) && void 0 !== XU ? XU : 1
+    }
+
+    function hU(UU) {
+      return 9728 === UU.minFilter || 9729 === UU.minFilter
+    }
+
+    function UX(UU) {
+      var XU, zU, cU;
+      const yU = Float64Array.from(null !== (XU = UU.scale) && void 0 !== XU ? XU : [1, 1, 1]);
+      return UU.hasCamera && (yU[0] = -1), {
+        translation: Float64Array.from(null !== (zU = UU.translation) && void 0 !== zU ? zU : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (cU = UU.rotation) && void 0 !== cU ? cU : [0, 0, 0, 1]),
+        scale: yU
+      }
+    }
+
+    function XX(UU, XU) {
+      let {
+        translation: zU,
+        rotation: cU,
+        scale: yU
+      } = UU;
+      const QU = new Float32Array(16);
+      return (0, CU.e)(yU, 0, cU, 0, zU, 0, QU), XU && (0, CU.q)(QU, XU, 0, QU), QU
+    }
+    class zX {
+      constructor(UU, XU, zU, cU) {
+        this.model = UU, this.decode = XU, this.fileInfo = zU, this.uniqueRootUrl = cU, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const yU = new Set,
+          QU = (XU, zU) => {
+            const cU = UU.nodes[XU];
+            if (this.parents.has(cU)) throw new qU.m(`/nodes/${XU}: Invalid recursive node hierarchy`);
+            this.parents.set(cU, zU);
+            const AU = null === cU.mesh ? [] : UU.meshes[cU.mesh].primitives,
+              FU = AU.map((UU => {
+                const XU = AU.length > 1;
+                return {
+                  name: XU ? `${lU(cU)}_primitive${UU.index}` : lU(cU),
+                  node: cU,
+                  primitive: UU,
+                  part: XU,
+                  geometry: null
+                }
+              }));
+            this.uses.set(cU, FU);
+            const oU = null !== cU.mesh && yU.has(cU.mesh);
+            yU.add(cU.mesh), this.own.set(cU, oU ? [] : FU);
+            for (const UU of cU.children) QU(UU, cU)
+          };
+        for (const AU of UU.rootNodes) QU(AU, null);
+        this.primitives = UU.nodes.flatMap((UU => {
+          var XU;
+          return null !== (XU = this.own.get(UU)) && void 0 !== XU ? XU : []
+        }))
+      }
+      decodeGeometries() {
+        const UU = new Map;
+        return Promise.all(this.primitives.map((async XU => {
+          const {
+            primitive: zU
+          } = XU, cU = zU.draco;
+          let yU = cU ? UU.get(cU.bufferView.index) : Promise.resolve(vU(zU));
+          yU || (yU = uU(zU, this.decode).then((UU => sU(zU, UU))), UU.set(cU.bufferView.index, yU)), XU.geometry = await yU
+        })))
+      }
+      parentOf(UU) {
+        var XU;
+        return null !== (XU = this.parents.get(UU)) && void 0 !== XU ? XU : null
+      }
+      meshesUnder(UU) {
+        const XU = this.model.nodes.filter((UU => this.uses.has(UU)));
+        for (const cU of XU) {
+          const XU = this.uses.get(cU),
+            zU = XU.find((XU => XU.name === UU));
+          if (zU) return 1 === XU.length ? this.subtree(cU) : this.own.get(cU).includes(zU) ? [zU] : []
+        }
+        const zU = XU.find((XU => 1 !== this.uses.get(XU).length && lU(XU) === UU));
+        return zU ? this.subtree(zU) : null
+      }
+      subtree(UU) {
+        return [...this.own.get(UU), ...UU.children.flatMap((UU => this.subtree(this.model.nodes[UU])))]
+      }
+      worldMatrix(UU, XU, zU) {
+        let cU = XX(UX(XU ? xU : {}), null);
+        const yU = [];
+        for (let AU = UU.part ? UU.node : this.parentOf(UU.node); AU; AU = this.parentOf(AU)) yU.unshift(AU);
+        for (const AU of yU) cU = XX(UX(AU), cU);
+        const QU = UX(UU.part ? {} : UU.node);
+        return void 0 !== zU && QU.scale.fill(zU), XX(QU, cU)
+      }
+      floats(UU) {
+        const {
+          vertexAttributes: XU,
+          vertexCount: zU
+        } = UU.geometry;
+        return new Map(XU.map((UU => [UU.kind, (0, wU.k)(UU, zU)])))
+      }
+      imageUrl(UU) {
+        return function(UU, XU, zU) {
+          let {
+            name: cU
+          } = XU;
+          return `data:${UU}${cU}#image${zU}`
+        }(this.uniqueRootUrl, this.fileInfo, UU)
+      }
+      textureDesc(UU, XU) {
+        var zU;
+        let {
+          texture: cU,
+          transform: yU
+        } = UU;
+        const {
+          sampler: QU,
+          image: AU
+        } = this.model.textures[cU], {
+          bufferView: FU,
+          mimeType: oU,
+          name: DU
+        } = this.model.images[AU], EU = yU && {
+          ...yU.offset ? {
+            uOffset: yU.offset[0],
+            vOffset: yU.offset[1]
+          } : {},
+          uRotationCenter: 0,
+          vRotationCenter: 0,
+          ...yU.rotation ? {
+            wAng: -yU.rotation
+          } : {},
+          ...yU.scale ? {
+            uScale: yU.scale[0],
+            vScale: yU.scale[1]
+          } : {}
+        };
+        return {
+          url: this.imageUrl(AU),
+          noMipmap: hU(QU),
+          invertY: !1,
+          samplingMode: KU(QU),
+          data: {
+            bytes: FU.bytes,
+            mimeType: oU,
+            label: DU,
+            context: `/textures/${cU}`
+          },
+          sets: {
+            wrapU: TU(QU.wrapS),
+            wrapV: TU(QU.wrapT),
+            ...EU,
+            coordinatesIndex: null !== (zU = null === yU || void 0 === yU ? void 0 : yU.texCoord) && void 0 !== zU ? zU : 0,
+            hasAlpha: XU
+          }
+        }
+      }
+    }
+    async function cX(UU, XU, zU, cU, yU, QU) {
+      let AU = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const FU = function(UU, XU, zU) {
+          return "string" !== typeof XU ? {
+            url: "",
+            rootUrl: UU,
+            name: zU()
+          } : XU ? XU.startsWith("data:") ? {
+            url: XU,
+            rootUrl: UU,
+            name: ""
+          } : UU ? {
+            url: UU + XU,
+            rootUrl: UU,
+            name: XU
+          } : {
+            url: XU,
+            rootUrl: mU(XU),
+            name: nU(XU)
+          } : {
+            url: UU,
+            rootUrl: mU(UU),
+            name: nU(UU)
+          }
+        }(zU, UU, yU),
+        oU = {};
+      XU.addPendingData(oU);
+      try {
+        const zU = rU(await async function(UU, XU) {
+            return "string" !== typeof XU ? XU : UU.url.startsWith("data:") ? (0, qU.p)(UU.url) : await (0, qU.t)(UU.url)
+          }(FU, UU)),
+          oU = new zX(zU, cU, FU, function(UU, XU) {
+            let {
+              rootUrl: zU,
+              name: cU
+            } = UU;
+            return !zU.startsWith("file:") && cU ? zU : `${zU}${XU()}/`
+          }(FU, yU));
+        return await QU(oU), XU.importedMeshesFiles && (XU.loadingPluginName = "oq", AU && XU.importedMeshesFiles.push(FU.url)), oU
+      } finally {
+        XU.removePendingData(oU)
+      }
+    }
+    var yX = zU(38236),
+      QX = zU(38083),
+      AX = zU(38634);
+
+    function FX(UU) {
+      if (null === UU || void 0 === UU || !UU.min || !UU.max) return null;
+      const [XU, zU, cU] = UU.min, [yU, QU, AU] = UU.max, {
+        BoundingInfo: FU,
+        Sp: oU
+      } = (0, yX.c)();
+      return new FU(new oU(XU, zU, cU), new oU(yU, QU, AU))
+    }
+
+    function oX(UU) {
+      (0, QX.e)(UU) || (UU.geometry && UU.geometry.useBoundingInfoFromGeometry ? UU._updateBoundingInfo() : UU.refreshBoundingInfo(!0, !0))
+    }
+    class DX {
+      constructor(UU, XU) {
+        this.sa = UU, this.decode = XU, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+      }
+      viewBytes(UU) {
+        let XU = this.viewData.get(UU.index);
+        return XU || (XU = this.bufferData.then((() => UU.bytes)), this.viewData.set(UU.index, XU)), XU
+      }
+      viewBuffer(UU) {
+        let XU = this.viewBuffers.get(UU.index);
+        return XU || (XU = this.viewBytes(UU).then((UU => new((0, yX.c)().XY)(this.sa.qp(), UU, !1))), this.viewBuffers.set(UU.index, XU)), XU
+      }
+      vertexBuffer(UU, XU) {
+        const {
+          kind: zU,
+          data: cU
+        } = XU, yU = `${UU.index}:${zU}`;
+        let QU = this.vertexBuffers.get(yU);
+        if (!QU) {
+          const AU = UU.bufferView;
+          QU = AU ? this.viewBuffer(AU).then((UU => this.layoutVertexBuffer(UU, XU))) : Promise.resolve(cU).then((UU => new((0, yX.c)().VertexBuffer)(this.sa.qp(), UU, zU, !1))), this.vertexBuffers.set(yU, QU)
+        }
+        return QU
+      }
+      layoutVertexBuffer(UU, XU) {
+        let {
+          kind: zU,
+          offset: cU,
+          stride: yU,
+          components: QU,
+          glType: AU,
+          isNormalized: FU
+        } = XU;
+        const oU = this.sa.qp();
+        return new((0, yX.c)().VertexBuffer)(oU, UU, zU, !1, void 0, yU, void 0, cU, QU, AU, FU, !0, void 0, !0)
+      }
+      load(UU, XU, zU) {
+        const cU = (0, QX.e)(zU),
+          yU = UU => {
+            cU || (zU._delayInfo = zU._delayInfo || [], -1 === zU._delayInfo.indexOf(UU) && zU._delayInfo.push(UU))
+          },
+          QU = XU.draco;
+        if (QU) {
+          for (const UU in QU.attributeIds) yU(UU);
+          let AU = this.dracoGeometry.get(QU.bufferView.index);
+          return AU || (AU = this.viewBytes(QU.bufferView).then((async () => {
+            let yU;
+            try {
+              yU = await uU(XU, this.decode)
+            } catch (oU) {
+              throw new qU.m(`${UU}: ${oU instanceof Error?oU.message:String(oU)}`)
+            }
+            const QU = sU(XU, yU);
+            if (cU) return QU;
+            const AU = FX(XU.position),
+              FU = new((0, yX.c)().MirroredGeometry)(zU.name, this.sa);
+            AU && (FU._boundingInfo = AU, FU.useBoundingInfoFromGeometry = !0), QU.indexData && FU.setIndices(QU.indexData);
+            for (const UU of QU.vertexAttributes) FU.setVerticesBuffer(this.layoutVertexBuffer(UU.data, UU), QU.vertexCount);
+            return FU.link(QU), FU
+          })), this.dracoGeometry.set(QU.bufferView.index, AU)), AU
+        }
+        const AU = [],
+          FU = vU(XU);
+        if (cU) return zU.isUnIndexed = !FU.indexData, zU.hasVertexAlpha = (0, AX.e)(XU), Promise.resolve(FU);
+        const oU = new((0, yX.c)().MirroredGeometry)(zU.name, this.sa),
+          {
+            indexData: DU
+          } = FU;
+        DU ? AU.push(this.viewBytes(XU.indices.bufferView).then((() => {
+          oU.setIndices(DU)
+        }))) : zU.isUnIndexed = !0;
+        for (const [EU, {
+            kind: YU,
+            accessor: NU
+          }] of XU.attributes.entries()) yU(YU), AU.push(this.vertexBuffer(NU, FU.vertexAttributes[EU]).then((UU => {
+          if ("position" === UU.getKind()) {
+            const UU = FX(NU);
+            UU && (oU._boundingInfo = UU, oU.useBoundingInfoFromGeometry = !0)
+          }
+          oU.setVerticesBuffer(UU, FU.vertexCount)
+        })));
+        return (0, AX.e)(XU) && (zU.hasVertexAlpha = !0), Promise.all(AU).then((() => (oU.link(FU), oU)))
+      }
+    }
+    var EX, YX = zU(38026),
+      NX = zU(37814),
+      IX = zU(38647),
+      pX = zU(37915),
+      aX = zU(38007),
+      tX = zU(3043),
+      gX = zU(37968);
+
+    function kX(UU, XU) {
+      UU.metadata = UU.metadata || {};
+      const zU = UU._internalMetadata = UU._internalMetadata || {},
+        cU = zU.oq = zU.oq || {};
+      (cU.pointers = cU.pointers || []).push(XU)
+    }
+
+    function GX(UU, XU) {
+      if (XU && Object.keys(XU).length > 0) {
+        const zU = UU.metadata = UU.metadata || {};
+        (zU.oq = zU.oq || {}).extras = XU
+      }
+    }
+
+    function BX(UU, XU) {
+      XU.position = UU.translation ? NX.Sp.FromArray(UU.translation) : NX.Sp.Zero(), XU.rotationQuaternion = UU.rotation ? NX.Quaternion.FromArray(UU.rotation) : NX.Quaternion.Identity(), XU.RY = UU.scale ? NX.Sp.FromArray(UU.scale) : NX.Sp.One()
+    }
+    class ZX {
+      constructor(UU, XU) {
+        if (this.sa = UU, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, XU) {
+          const XU = UU.qp(),
+            zU = UU.bS.add((() => {
+              this.dispose()
+            })),
+            cU = XU.wp.add((() => {
+              for (const UU of [...this.geometries, ...this.meshes, ...this.textures]) UU._rebuild()
+            }));
+          this.release = () => {
+            UU.bS.remove(zU), XU.wp.remove(cU)
+          }
+        }
+      }
+      getNodes() {
+        return [...this.meshes, ...this.transformNodes]
+      }
+      addAllToScene() {
+        if (this.release) {
+          this.release(), this.release = null;
+          for (const UU of this.meshes) this.sa.UyU(UU);
+          for (const UU of this.materials) this.sa.addMaterial(UU);
+          for (const UU of this.geometries) this.sa.addGeometry(UU);
+          for (const UU of this.transformNodes) this.sa.addTransformNode(UU);
+          for (const UU of this.textures) this.sa.addTexture(UU)
+        }
+      }
+      dispose() {
+        var UU;
+        for (const XU of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const UU of XU.slice()) UU.dispose();
+          XU.length = 0
+        }
+        null === (UU = this.release) || void 0 === UU || UU.call(this), this.release = null
+      }
+    }
+    class RX {
+      constructor(UU, XU, zU, cU, yU, QU, AU) {
+        this.asset = UU, this.sa = XU, this.tree = zU, this.geometryData = yU, this.materials = QU, this.lite = AU, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = cU ? zU : null
+      }
+      create(UU) {
+        if (this.lite) return UU();
+        const XU = this.sa;
+        XU._blockEntityCollection = !!this.container;
+        try {
+          const XU = UU();
+          return this.container && (XU._parentContainer = this.container), XU
+        } finally {
+          XU._blockEntityCollection = !1
+        }
+      }
+      node(UU, XU) {
+        return this.create((() => this.lite ? XU ? (0, IX.e)(this.lite, UU) : (0, IX.q)(this.lite, UU) : XU ? new((0, yX.c)().Mesh)(UU, this.sa) : new((0, yX.c)().TransformNode)(UU, this.sa)))
+      }
+      async load() {
+        var UU;
+        this.asset.model.json.nodes && this.createRoot();
+        const XU = this.lite ? null : this.sa,
+          zU = null !== (UU = null === XU || void 0 === XU ? void 0 : XU.blockMaterialDirtyMechanism) && void 0 !== UU && UU;
+        let cU;
+        XU && (XU.blockMaterialDirtyMechanism = !0);
+        try {
+          cU = this.loadScene()
+        } finally {
+          null === XU || void 0 === XU || XU._forceBlockMaterialDirtyMechanism(zU)
+        }
+        await cU;
+        const {
+          root: yU,
+          tree: QU
+        } = this;
+        yU && (yU.YC(!0), QU.meshes.push(yU), QU.rootNodes.push(yU));
+        for (const FU of this.asset.model.nodes) {
+          const UU = this.nodeObjects.get(FU.index);
+          UU && ["TransformNode", "LiteNode"].includes(UU.getClassName()) && QU.transformNodes.push(UU);
+          for (const XU of null !== (AU = this.nodePrimitives.get(FU.index)) && void 0 !== AU ? AU : []) {
+            var AU;
+            QU.meshes.push(XU);
+            const UU = XU.geometry;
+            UU && !QU.geometries.includes(UU) && QU.geometries.push(UU)
+          }
+        }
+      }
+      createRoot() {
+        const UU = this.node("__root__", !0);
+        this.root = UU, UU.YC(!1), this.sa.useRightHandedSystem || BX(xU, UU)
+      }
+      loadScene() {
+        const UU = [];
+        for (const XU of this.asset.model.rootNodes) UU.push(this.loadNode(this.asset.model.nodes[XU], (UU => {
+          UU.parent = this.root
+        })));
+        return UU.push(Promise.resolve()), Promise.all(UU).then((() => {}))
+      }
+      loadNode(UU, XU) {
+        const zU = `/nodes/${UU.index}`,
+          cU = [],
+          yU = yU => {
+            if (kX(yU, zU), BX(UU, yU), UU.hasCamera && !this.sa.useRightHandedSystem) {
+              const {
+                RY: UU
+              } = yU;
+              UU.set(-1, UU.y, UU.z)
+            }
+            for (const XU of UU.children) cU.push(this.loadNode(this.asset.model.nodes[XU], (UU => {
+              UU.parent = yU
+            })));
+            (zU => {
+              GX(zU, UU.extras), XU(zU)
+            })(yU)
+          };
+        if (null === UU.mesh) {
+          const XU = this.node(lU(UU), !1);
+          this.nodeObjects.set(UU.index, XU), yU(XU)
+        } else {
+          const XU = this.asset.model.meshes[UU.mesh];
+          cU.push(this.loadMesh(`/meshes/${XU.index}`, UU, XU, yU))
+        }
+        return Promise.all(cU).then((() => {
+          for (const zU of null !== (XU = this.nodePrimitives.get(UU.index)) && void 0 !== XU ? XU : []) {
+            var XU;
+            oX(zU)
+          }
+          return this.nodeObjects.get(UU.index)
+        }))
+      }
+      loadMesh(UU, XU, zU, cU) {
+        const yU = [],
+          QU = lU(XU);
+        if (1 === zU.primitives.length) {
+          const cU = zU.primitives[0];
+          yU.push(this.loadPrimitive(`${UU}/primitives/${cU.index}`, QU, cU, (UU => {
+            this.nodeObjects.set(XU.index, UU), this.nodePrimitives.set(XU.index, [UU])
+          })))
+        } else {
+          const cU = this.node(QU, !1);
+          this.nodeObjects.set(XU.index, cU);
+          const AU = [];
+          this.nodePrimitives.set(XU.index, AU);
+          for (const XU of zU.primitives) yU.push(this.loadPrimitive(`${UU}/primitives/${XU.index}`, `${QU}_primitive${XU.index}`, XU, (UU => {
+            UU.parent = cU, AU.push(UU)
+          })))
+        }
+        const AU = this.nodeObjects.get(XU.index);
+        return cU(AU), Promise.all(yU).then((() => AU))
+      }
+      loadPrimitive(UU, XU, zU, cU) {
+        const yU = [],
+          QU = this.node(XU, !0);
+        if (QU.sideOrientation = this.sa.useRightHandedSystem ? pX.d.CounterClockWiseSideOrientation : pX.d.ClockWiseSideOrientation, yU.push(this.geometryData.load(UU, zU, QU).then((UU => {
+            if ((0, QX.e)(QU)) {
+              var XU, zU;
+              const cU = UU;
+              QU.replaceModel(cU, Int32Array.of(0, null !== (XU = null === (zU = cU.indexData) || void 0 === zU ? void 0 : zU.length) && void 0 !== XU ? XU : cU.vertexCount, 0, cU.vertexCount))
+            } else this.create((() => (UU.applyToMesh(QU), UU)))
+          }))), this.materials) {
+          const UU = 0 === zU.mode ? pX.d.PointListDrawMode : pX.d.TriangleFillMode,
+            XU = null === zU.material ? null : this.asset.model.materials[zU.material];
+          yU.push(this.loadMaterial(XU, UU, (UU => {
+            QU.material = UU
+          })))
+        }
+        return kX(QU, UU), cU(QU), Promise.all(yU).then((() => QU))
+      }
+      loadMaterial(UU, XU, zU) {
+        var cU;
+        const yU = `${null!==(cU=null===UU||void 0===UU?void 0:UU.index)&&void 0!==cU?cU:"default"}:${XU}`;
+        let QU = this.materialData.get(yU);
+        return QU || (QU = this.createMaterial(UU, XU), this.materialData.set(yU, QU)), zU(QU.material), QU.promise
+      }
+      createMaterial(UU, XU) {
+        const zU = UU ? UU.name || `material${UU.index}` : "__GLTFLoader._default",
+          {
+            style: cU,
+            unlit: yU
+          } = this.materials;
+        let QU;
+        const AU = this.create((() => {
+          const AU = (0, gX.b)({
+            name: zU,
+            sa: this.sa,
+            sets: {
+              ...(0, AX.b)(this.asset, UU, cU, yU),
+              fillMode: XU
+            },
+            unrendered: !0
+          });
+          return QU = AU.model, AU.mirror
+        }));
+        let FU = Promise.resolve();
+        if (UU) {
+          const XU = `/materials/${UU.index}`,
+            cU = QU.diffuseTexture;
+          if (cU && !cU.mirror) FU = new Promise((UU => setTimeout(UU)));
+          else if (cU) {
+            const yU = cU.mirror;
+            yU._parentContainer = this.container, yU.name = `${zU} (Base Color)`, kX(yU, `${XU}${UU.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(yU), FU = (0, aX.o)(cU)
+          }
+          GX(AU, UU.extras), kX(AU, XU)
+        }
+        return this.tree.materials.push(AU), {
+          material: AU,
+          promise: FU
+        }
+      }
+    }
+
+    function PX() {
+      YX.g.dracoDecodes = ZU.decodes, YX.g.dracoWorkersStarted = ZU.workersStarted, YX.g.dracoMostWorkers = ZU.mostWorkers
+    }
+    async function WX(UU, XU, zU, yU, QU) {
+      try {
+        return await async function(UU, XU, zU, yU, QU, AU) {
+          var FU;
+          let oU;
+          const DU = null === (FU = (0, tX.e)()) || void 0 === FU ? void 0 : FU.WY,
+            EU = null !== DU && void 0 !== DU && DU.Ua && XU === DU.nS() ? DU : null,
+            YU = QU && !EU;
+          return await cX(UU, XU, zU, yU, cU.d, (UU => (oU = new ZX(XU, YU), new RX(UU, XU, oU, YU, new DX(XU, yU), AU, EU).load())), !QU), oU
+        }(UU, XU, zU, eU, yU, QU)
+      } finally {
+        PX()
+      }
+    }
+    async function dX(UU, XU, zU, yU) {
+      try {
+        return await cX(UU, XU, zU, eU, cU.d, (UU => yU(UU, new DX(XU, eU))))
+      } finally {
+        PX()
+      }
+    }
+    EX = FU, tU || (tU = {
+      scriptUrl: new URL(EX.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(EX.wasmBinaryUrl, location.href).href
+    })
+  },
+  36961: UU => {
+    UU.exports = function(UU, XU, zU, cU) {
+      var yU = self || window;
+      try {
+        try {
+          var QU;
+          try {
+            QU = new yU.Blob([UU])
+          } catch (DU) {
+            (QU = new(yU.BlobBuilder || yU.WebKitBlobBuilder || yU.MozBlobBuilder || yU.MSBlobBuilder)).append(UU), QU = QU.getBlob()
+          }
+          var AU = yU.URL || yU.webkitURL,
+            FU = AU.createObjectURL(QU),
+            oU = new yU[XU](FU, zU);
+          return AU.revokeObjectURL(FU), oU
+        } catch (DU) {
+          return new yU[XU]("data:application/javascript,".concat(encodeURIComponent(UU)), zU)
+        }
+      } catch (DU) {
+        if (!cU) throw Error("Inline worker is not supported");
+        return new yU[XU](cU, zU)
+      }
+    }
+  },
+  44191: (UU, XU, zU) => {
+    UU.exports = zU.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  },
+  44184: (UU, XU, zU) => {
+    UU.exports = zU.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

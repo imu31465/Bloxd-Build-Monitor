@@ -1,649 +1,412 @@
 export const id = 265;
 export const ids = [265];
 export const modules = {
-  39040: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => QM,
-      g: () => OM,
-      i: () => PM,
-      k: () => SM,
-      l: () => aM,
-      m: () => jM
+  42190: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => AU,
+      f: () => EU,
+      g: () => DU
     });
-    const OM = 1.001,
-      SM = .501,
-      jM = .025,
-      aM = .75,
-      PM = .08,
-      nM = 4;
-
-    function QM() {
-      const MM = SM,
-        rM = jM,
-        iM = MM - rM / 2,
-        OM = (2 * MM - 2 * rM) / (2 * nM - 1),
-        aM = [];
-      for (const SM of [-iM, iM])
-        for (const jM of [-iM, iM])
-          for (let iM = 0; iM < nM; iM++) {
-            const PM = -MM + rM + OM * (2 * iM + .5);
-            aM.push([OM, rM, rM, PM, SM, jM]), aM.push([rM, OM, rM, SM, PM, jM]), aM.push([rM, rM, OM, SM, jM, PM])
+    var cU, yU = zU(37855),
+      QU = zU(37819);
+    ! function(UU) {
+      UU[UU.CW = 0] = "CW", UU[UU.CCW = 1] = "CCW"
+    }(cU || (cU = {}));
+    class AU {
+      static Interpolate(UU, XU, zU, cU, yU) {
+        if (0 === UU) return 0;
+        const QU = 1 - 3 * cU + 3 * XU,
+          AU = 3 * cU - 6 * XU,
+          FU = 3 * XU;
+        let oU = UU;
+        for (let DU = 0; DU < 5; DU++) {
+          const XU = oU * oU;
+          oU -= (QU * (XU * oU) + AU * XU + FU * oU - UU) * (1 / (3 * QU * XU + 2 * AU * oU + FU)), oU = Math.min(1, Math.max(0, oU))
+        }
+        return 3 * Math.pow(1 - oU, 2) * oU * zU + 3 * (1 - oU) * Math.pow(oU, 2) * yU + Math.pow(oU, 3)
+      }
+    }
+    class FU {
+      constructor(UU) {
+        this._radians = UU, this._radians < 0 && (this._radians += 2 * Math.PI)
+      }
+      degrees() {
+        return 180 * this._radians / Math.PI
+      }
+      radians() {
+        return this._radians
+      }
+      static BetweenTwoPoints(UU, XU) {
+        const zU = XU.subtract(UU),
+          cU = Math.atan2(zU.y, zU.x);
+        return new FU(cU)
+      }
+      static BetweenTwoVectors(UU, XU) {
+        let zU = UU.lengthSquared() * XU.lengthSquared();
+        if (0 === zU) return new FU(Math.PI / 2);
+        zU = Math.sqrt(zU);
+        let cU = UU.dot(XU) / zU;
+        cU = (0, yU.Clamp)(cU, -1, 1);
+        const QU = Math.acos(cU);
+        return new FU(QU)
+      }
+      static FromRadians(UU) {
+        return new FU(UU)
+      }
+      static FromDegrees(UU) {
+        return new FU(UU * Math.PI / 180)
+      }
+    }
+    class oU {
+      constructor(UU, XU, zU) {
+        this.startPoint = UU, this.midPoint = XU, this.endPoint = zU;
+        const cU = Math.pow(XU.x, 2) + Math.pow(XU.y, 2),
+          yU = (Math.pow(UU.x, 2) + Math.pow(UU.y, 2) - cU) / 2,
+          AU = (cU - Math.pow(zU.x, 2) - Math.pow(zU.y, 2)) / 2,
+          oU = (UU.x - XU.x) * (XU.y - zU.y) - (XU.x - zU.x) * (UU.y - XU.y);
+        this.centerPoint = new QU.m((yU * (XU.y - zU.y) - AU * (UU.y - XU.y)) / oU, ((UU.x - XU.x) * AU - (XU.x - zU.x) * yU) / oU), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = FU.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const DU = this.startAngle.degrees();
+        let EU = FU.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          YU = FU.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        EU - DU > 180 && (EU -= 360), EU - DU < -180 && (EU += 360), YU - EU > 180 && (YU -= 360), YU - EU < -180 && (YU += 360), this.orientation = EU - DU < 0 ? 0 : 1, this.angle = FU.FromDegrees(0 === this.orientation ? DU - YU : YU - DU)
+      }
+    }
+    class DU {
+      constructor(UU, XU) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new QU.m(UU, XU))
+      }
+      addLineTo(UU, XU) {
+        if (this.closed) return this;
+        const zU = new QU.m(UU, XU),
+          cU = this._points[this._points.length - 1];
+        return this._points.push(zU), this._length += zU.subtract(cU).length(), this
+      }
+      addArcTo(UU, XU, zU, cU) {
+        let yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const AU = this._points[this._points.length - 1],
+          FU = new QU.m(UU, XU),
+          DU = new QU.m(zU, cU),
+          EU = new oU(AU, FU, DU);
+        let YU = EU.angle.radians() / yU;
+        0 === EU.orientation && (YU *= -1);
+        let NU = EU.startAngle.radians() + YU;
+        for (let QU = 0; QU < yU; QU++) {
+          const UU = Math.cos(NU) * EU.radius + EU.centerPoint.x,
+            XU = Math.sin(NU) * EU.radius + EU.centerPoint.y;
+          this.addLineTo(UU, XU), NU += YU
+        }
+        return this
+      }
+      addQuadraticCurveTo(UU, XU, zU, cU) {
+        let yU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const QU = (UU, XU, zU, cU) => (1 - UU) * (1 - UU) * XU + 2 * UU * (1 - UU) * zU + UU * UU * cU,
+          AU = this._points[this._points.length - 1];
+        for (let FU = 0; FU <= yU; FU++) {
+          const oU = FU / yU,
+            DU = QU(oU, AU.x, UU, zU),
+            EU = QU(oU, AU.y, XU, cU);
+          this.addLineTo(DU, EU)
+        }
+        return this
+      }
+      addBezierCurveTo(UU, XU, zU, cU, yU, QU) {
+        let AU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+        if (this.closed) return this;
+        const FU = (UU, XU, zU, cU, yU) => (1 - UU) * (1 - UU) * (1 - UU) * XU + 3 * UU * (1 - UU) * (1 - UU) * zU + 3 * UU * UU * (1 - UU) * cU + UU * UU * UU * yU,
+          oU = this._points[this._points.length - 1];
+        for (let DU = 0; DU <= AU; DU++) {
+          const EU = DU / AU,
+            YU = FU(EU, oU.x, UU, zU, yU),
+            NU = FU(EU, oU.y, XU, cU, QU);
+          this.addLineTo(YU, NU)
+        }
+        return this
+      }
+      isPointInside(UU) {
+        let XU = !1;
+        const zU = this._points.length;
+        for (let cU = zU - 1, yU = 0; yU < zU; cU = yU++) {
+          let zU = this._points[cU],
+            QU = this._points[yU],
+            AU = QU.x - zU.x,
+            FU = QU.y - zU.y;
+          if (Math.abs(FU) > Number.EPSILON) {
+            if (FU < 0 && (zU = this._points[yU], AU = -AU, QU = this._points[cU], FU = -FU), UU.y < zU.y || UU.y > QU.y) continue;
+            if (UU.y === zU.y && UU.x === zU.x) return !0;
+            {
+              const cU = FU * (UU.x - zU.x) - AU * (UU.y - zU.y);
+              if (0 === cU) return !0;
+              if (cU < 0) continue;
+              XU = !XU
+            }
+          } else {
+            if (UU.y !== zU.y) continue;
+            if (QU.x <= UU.x && UU.x <= zU.x || zU.x <= UU.x && UU.x <= QU.x) return !0
           }
-      for (const SM of [-iM, iM])
-        for (const MM of [-iM, iM])
-          for (const OM of [-iM, iM]) aM.push([rM, rM, rM, SM, MM, OM]);
-      return aM
-    }
-  },
-  39426: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => eM,
-      D: () => HM,
-      F: () => CM,
-      J: () => bM,
-      L: () => GM,
-      P: () => UM,
-      Q: () => mM,
-      S: () => JM,
-      V: () => yM,
-      X: () => SM,
-      d: () => zM,
-      h: () => nM,
-      k: () => EM,
-      o: () => QM,
-      s: () => PM,
-      u: () => aM,
-      y: () => jM
-    });
-    var OM = iM(9904);
-
-    function SM(MM) {
-      return Math.floor(MM).toLocaleString("en-US")
-    }
-    const jM = 2e3,
-      aM = .005,
-      PM = .001,
-      nM = 2,
-      QM = "Fluid Tank",
-      zM = "Coolant Mixer",
-      LM = 144;
-
-    function mM(MM) {
-      const rM = MM.split("|")[0];
-      return (0, OM.p)(rM) ? rM === OM.e ? "cryo" : "water" : null
-    }
-    const HM = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 1, 0],
-        [0, -1, 0],
-        [0, 0, 1],
-        [0, 0, -1]
-      ],
-      hM = 63;
-
-    function JM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const iM = rM ? function(MM, rM, iM) {
-        const OM = HM.findIndex((OM => {
-          let [SM, jM, aM] = OM;
-          return SM === MM && jM === rM && aM === iM
-        }));
-        return OM < 0 ? 0 : 1 << OM
-      }(rM[0], rM[1], rM[2]) : 0;
-      return "maker" === MM ? {
-        kind: MM,
-        faces: iM
-      } : "user" === MM ? {
-        kind: MM,
-        faces: hM & ~iM
-      } : {
-        kind: MM,
-        faces: hM
-      }
-    }
-
-    function dM(MM) {
-      return "pipe" === MM || "tank" === MM || "maker" === MM
-    }
-
-    function yM(MM, rM, iM) {
-      return 0 !== (MM.faces & 1 << iM) && 0 !== (rM.faces & 1 << (1 ^ iM)) && (dM(MM.kind) || dM(rM.kind))
-    }
-    const lM = (MM, rM, iM, OM) => ({
-        input: MM,
-        inputAmount: OM,
-        output: rM,
-        outputAmount: iM
-      }),
-      EM = {
-        Condenser: {
-          kind: "Condenser",
-          opMs: 2e3,
-          inputSlot: null,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [],
-          powerPerOp: 60,
-          fluidMade: 12,
-          couplable: !0,
-          couplerSlot: 0
-        },
-        Centrifuge: {
-          kind: "Centrifuge",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [lM("Uranium Grit", "Uranium Pellet", 1, 12), lM("Spent Pellet", "Plutonium Pellet", 1, 4)],
-          powerPerOp: 600,
-          waterPerOp: 24
-        },
-        Synthesizer: {
-          kind: "Synthesizer",
-          opMs: 6e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [],
-          powerPerOp: 120,
-          waterPerOp: 12,
-          synth: !0
-        },
-        "Coolant Mixer": {
-          kind: "Coolant Mixer",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [lM("Biomass", "", 0, 1)],
-          powerPerOp: 720,
-          waterPerOp: 144,
-          cryoMade: LM,
-          couplable: !0,
-          couplerSlot: 1
         }
-      };
-
-    function UM(MM, rM) {
-      return 1e3 * (null !== rM && void 0 !== rM ? rM : 0) / MM.opMs
-    }
-
-    function GM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const iM = UM(EM["Coolant Mixer"], LM) * rM;
-      return MM <= 0 ? 0 : Math.ceil(MM / iM - 1e-9)
-    }
-    const CM = "baf2Water",
-      eM = "baf2waterclose",
-      bM = "baf2wateropen"
-  },
-  39414: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => sM,
-      h: () => DM
-    });
-    var OM = iM(9816),
-      SM = iM(9852);
-    const jM = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1],
-      [0, 1, 0],
-      [0, -1, 0]
-    ];
-    var aM = iM(9866),
-      PM = iM(39224),
-      nM = iM(9863);
-    const QM = {
-      1: [0, -1],
-      2: [-1, 0],
-      3: [0, 1],
-      4: [1, 0]
-    };
-
-    function zM(MM) {
-      let [rM, iM] = MM;
-      return [-iM, rM]
-    }
-
-    function LM(MM, rM) {
-      return MM[0] === rM[0] && MM[1] === rM[1]
-    }
-
-    function mM(MM, rM) {
-      return MM[0] * rM[0] + MM[1] * rM[1] === 0
-    }
-    const HM = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-    var hM = iM(9895);
-
-    function JM(MM, rM, iM, OM, SM) {
-      return rM < hM.q || rM >= hM.q + hM.t || Math.floor(MM / hM.y) === Math.floor(OM / hM.y) && Math.floor(iM / hM.y) === Math.floor(SM / hM.y)
-    }
-    const dM = "Splitter",
-      yM = "Sorting Gate",
-      lM = new Set(hM.M),
-      EM = new Set([...hM.M, "Belt Loader", "Fast Loader", yM]),
-      UM = new Set(hM.x),
-      GM = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 0, 1],
-        [0, 0, -1],
-        [0, 1, 0],
-        [0, -1, 0]
-      ];
-
-    function CM(MM) {
-      var rM, iM;
-      return null !== (rM = null === (iM = OM.k[MM]) || void 0 === iM ? void 0 : iM.meta.rootName) && void 0 !== rM ? rM : ""
-    }
-
-    function eM(MM) {
-      return CM(MM) === hM.j && (0, hM.V)(OM.k[MM].name)
-    }
-    var bM = iM(9855),
-      wM = iM(9877);
-    const tM = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-
-    function gM(MM) {
-      var rM, iM;
-      const SM = null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.meta;
-      return (null === SM || void 0 === SM ? void 0 : SM.rootName) !== wM.g ? null : {
-        rot: null !== (iM = SM.rot) && void 0 !== iM ? iM : 1,
-        half: (0, wM.c)(SM.rootName, SM.metaStr)
+        return XU
       }
-    }
-
-    function uM(MM, rM, iM, OM) {
-      return gM(MM(rM, iM, OM))
-    }
-
-    function RM(MM, rM, iM, OM, SM) {
-      let {
-        rot: jM,
-        half: aM
-      } = SM;
-      const [PM, nM] = (0, wM.e)(jM, aM), QM = uM(MM, rM + PM, iM, OM + nM);
-      return null !== QM && QM.rot === jM && QM.half === wM.i[aM]
-    }
-    var pM = iM(39420);
-    const WM = [new class {
-      constructor() {
-        this.reshapeOffsets = HM
+      close() {
+        return this.closed = !0, this
       }
-      handles(MM) {
-        var rM;
-        return "Stairs" === (null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.model)
-      }
-      affects(MM) {
-        return this.handles(MM)
-      }
-      shape(MM, rM, iM, SM, jM) {
-        const aM = this.stairsOf(jM),
-          PM = this.cornerAt(MM, rM, iM, SM, aM),
-          QM = aM.half === nM.b.top ? "top" : "bot";
-        return (0, OM.l)(`${OM.k[jM].meta.rootName}|meta|rot${aM.rot}|${QM}${null===PM?"":`|${PM}`}`)
-      }
-      stairsOf(MM) {
-        const {
-          rot: rM,
-          halfblockPlacement: iM
-        } = OM.k[MM].meta;
-        return {
-          rot: rM,
-          half: iM
+      length() {
+        let UU = this._length;
+        if (this.closed) {
+          const XU = this._points[this._points.length - 1];
+          UU += this._points[0].subtract(XU).length()
         }
+        return UU
       }
-      stairsAt(MM, rM, iM, OM) {
-        const SM = MM(rM, iM, OM);
-        return this.handles(SM) ? this.stairsOf(SM) : null
+      area() {
+        const UU = this._points.length;
+        let XU = 0;
+        for (let zU = UU - 1, cU = 0; cU < UU; zU = cU++) XU += this._points[zU].x * this._points[cU].y - this._points[cU].x * this._points[zU].y;
+        return .5 * XU
       }
-      cornerAt(MM, rM, iM, OM, SM) {
-        let {
-          rot: jM,
-          half: aM
-        } = SM;
-        const PM = QM[jM],
-          nM = SM => {
-            let [PM, nM] = SM;
-            const QM = this.stairsAt(MM, rM + PM, iM, OM + nM);
-            return null !== QM && QM.rot === jM && QM.half === aM
-          },
-          HM = this.stairsAt(MM, rM + PM[0], iM, OM + PM[1]);
-        if (null !== HM && HM.half === aM) {
-          const MM = QM[HM.rot];
-          if (mM(PM, MM) && !nM([-MM[0], -MM[1]])) return LM(MM, zM(PM)) ? "outerLeft" : "outerRight"
-        }
-        const hM = this.stairsAt(MM, rM - PM[0], iM, OM - PM[1]);
-        if (null !== hM && hM.half === aM) {
-          const MM = QM[hM.rot];
-          if (mM(PM, MM) && !nM(MM)) return LM(MM, zM(PM)) ? "innerLeft" : "innerRight"
-        }
-        return null
+      getPoints() {
+        return this._points
       }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = jM, this.rootIds = new Set(SM.h.map((MM => (0, OM.l)(MM))))
-      }
-      handles(MM) {
-        var rM;
-        const iM = null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.meta;
-        return void 0 !== iM && this.rootIds.has(iM.rootId)
-      }
-      affects(MM) {
-        return this.handles(MM)
-      }
-      placedBy(MM) {
-        return OM.k[MM].meta.rootName === SM.t ? null : SM.t
-      }
-      shape(MM, rM, iM, jM, aM) {
-        const {
-          rootId: PM,
-          rootName: nM,
-          rot: QM
-        } = OM.k[aM].meta;
-        let zM = 0;
-        return SM.C[QM].forEach(((SM, aM) => {
-          var nM;
-          let [LM, mM, HM] = SM;
-          const hM = null === (nM = OM.k[MM(rM + LM, iM + mM, jM + HM)]) || void 0 === nM ? void 0 : nM.meta;
-          (null === hM || void 0 === hM ? void 0 : hM.rootId) === PM && hM.rot === QM && (zM |= 1 << aM)
-        })), (0, OM.l)((0, SM.e)(nM, QM, zM))
-      }
-    }, ...aM.b.map((MM => new PM.e(MM))), new class {
-      constructor() {
-        this.reshapeOffsets = GM
-      }
-      handles(MM) {
-        const rM = CM(MM);
-        return lM.has(rM) || rM === hM.j
-      }
-      affects(MM) {
-        const rM = CM(MM);
-        return EM.has(rM) || UM.has(rM) || rM === dM || rM === hM.j || void 0 !== hM.e[rM]
-      }
-      shape(MM, rM, iM, SM, jM, aM) {
-        const {
-          rootName: PM,
-          rot: nM
-        } = OM.k[jM].meta;
-        return PM === hM.j ? aM ? jM : function(MM, rM, iM, SM, jM) {
-          const [aM, PM] = hM.i[jM - 1];
-          for (let nM = 1; nM <= hM.J; nM++) {
-            const [QM, zM] = [rM - aM * nM, SM - PM * nM], LM = MM(QM, iM, zM);
-            if (CM(LM) === hM.j && OM.k[LM].meta.rot === jM && JM(rM, iM, SM, QM, zM)) return (0, OM.l)((0, hM.bb)(jM, !eM(LM)))
+      getPointAtLengthPosition(UU) {
+        if (UU < 0 || UU > 1) return QU.m.Zero();
+        const XU = UU * this.length();
+        let zU = 0;
+        for (let cU = 0; cU < this._points.length; cU++) {
+          const UU = (cU + 1) % this._points.length,
+            yU = this._points[cU],
+            AU = this._points[UU].subtract(yU),
+            FU = AU.length() + zU;
+          if (XU >= zU && XU <= FU) {
+            const UU = AU.normalize(),
+              cU = XU - zU;
+            return new QU.m(yU.x + UU.x * cU, yU.y + UU.y * cU)
           }
-          return (0, OM.l)((0, hM.bb)(jM, !1))
-        }(MM, rM, iM, SM, nM) : (0, OM.l)((0, hM.O)(PM, nM, function(MM, rM, iM, SM, jM) {
-          const [aM, PM] = hM.i[jM - 1], nM = (jM, aM) => function(MM, rM, iM) {
-            var SM;
-            const jM = null === (SM = OM.k[MM]) || void 0 === SM ? void 0 : SM.meta;
-            if (!jM) return !1;
-            const aM = jM.rootName,
-              PM = EM.has(aM) || eM(MM);
-            if (!PM && !UM.has(aM) && aM !== dM) return !1;
-            const [nM, QM] = hM.i[jM.rot - 1];
-            if (PM && nM === -rM && QM === -iM) return !0;
-            if (UM.has(aM)) return nM === rM && QM === iM;
-            const zM = OM.k[MM].name;
-            return (aM === dM ? (0, hM.ab)(zM, nM, QM) : aM === yM ? [(0, hM.P)(zM, nM, QM)] : []).some((MM => {
-              let [OM, SM] = MM;
-              return OM === -rM && SM === -iM
-            }))
-          }(MM(rM + jM, iM, SM + aM), jM, aM), QM = MM(rM - aM, iM, SM - PM), zM = CM(QM) === dM && OM.k[QM].meta.rot === jM, LM = 1 === hM.e[CM(MM(rM, iM - 1, SM))] || -1 === hM.e[CM(MM(rM, iM + 1, SM))];
-          if (LM || zM || nM(-aM, -PM)) return null;
-          const mM = nM(-PM, aM),
-            HM = nM(PM, -aM);
-          if (mM === HM) return null;
-          return mM ? "turnLeft" : "turnRight"
-        }(MM, rM, iM, SM, nM)))
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = tM, this.rootId = (0, OM.l)(wM.g)
-      }
-      handles(MM) {
-        var rM;
-        return (null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.meta.rootId) === this.rootId
-      }
-      affects(MM) {
-        return this.handles(MM)
-      }
-      shape(MM, rM, iM, SM, jM, aM) {
-        const PM = gM(jM);
-        return (0, OM.l)((nM = PM.rot, null !== (QM = aM ? this.reshapedHalf(MM, rM, iM, SM, PM) : this.placedHalf(MM, rM, iM, SM, PM.rot)) ? (0, wM.b)(wM.g, nM, QM) : 1 === nM ? wM.g : `${wM.g}|meta|rot${nM}`));
-        var nM, QM
-      }
-      placedHalf(MM, rM, iM, OM, SM) {
-        const [jM, aM] = bM.c[SM];
-        for (const [PM, nM] of [
-            ["right", 1],
-            ["left", -1]
-          ]) {
-          const QM = rM + nM * jM,
-            zM = OM + nM * aM,
-            LM = uM(MM, QM, iM, zM);
-          if (null !== LM && LM.rot === SM && (null === LM.half || !RM(MM, QM, iM, zM, LM))) return PM
+          zU = FU
         }
-        return null
+        return QU.m.Zero()
       }
-      reshapedHalf(MM, rM, iM, OM, SM) {
-        if (null !== SM.half && RM(MM, rM, iM, OM, SM)) return SM.half;
-        for (const jM of ["right", "left"]) {
-          const [aM, PM] = (0, wM.e)(SM.rot, jM), nM = uM(MM, rM + aM, iM, OM + PM);
-          if (null !== nM && nM.rot === SM.rot && nM.half === wM.i[jM]) return jM
+      static StartingAt(UU, XU) {
+        return new DU(UU, XU)
+      }
+    }
+    class EU {
+      static CreateQuadraticBezier(UU, XU, zU, cU) {
+        cU = cU > 2 ? cU : 3;
+        const yU = [],
+          AU = (UU, XU, zU, cU) => (1 - UU) * (1 - UU) * XU + 2 * UU * (1 - UU) * zU + UU * UU * cU;
+        for (let FU = 0; FU <= cU; FU++) yU.push(new QU.q(AU(FU / cU, UU.x, XU.x, zU.x), AU(FU / cU, UU.y, XU.y, zU.y), AU(FU / cU, UU.z, XU.z, zU.z)));
+        return new EU(yU)
+      }
+      static CreateCubicBezier(UU, XU, zU, cU, yU) {
+        yU = yU > 3 ? yU : 4;
+        const AU = [],
+          FU = (UU, XU, zU, cU, yU) => (1 - UU) * (1 - UU) * (1 - UU) * XU + 3 * UU * (1 - UU) * (1 - UU) * zU + 3 * UU * UU * (1 - UU) * cU + UU * UU * UU * yU;
+        for (let oU = 0; oU <= yU; oU++) AU.push(new QU.q(FU(oU / yU, UU.x, XU.x, zU.x, cU.x), FU(oU / yU, UU.y, XU.y, zU.y, cU.y), FU(oU / yU, UU.z, XU.z, zU.z, cU.z)));
+        return new EU(AU)
+      }
+      static CreateHermiteSpline(UU, XU, zU, cU, yU) {
+        const AU = [],
+          FU = 1 / yU;
+        for (let oU = 0; oU <= yU; oU++) AU.push(QU.q.Hermite(UU, XU, zU, cU, oU * FU));
+        return new EU(AU)
+      }
+      static CreateCatmullRomSpline(UU, XU, zU) {
+        const cU = [],
+          yU = 1 / XU;
+        let AU = 0;
+        if (zU) {
+          const zU = UU.length;
+          for (let FU = 0; FU < zU; FU++) {
+            AU = 0;
+            for (let oU = 0; oU < XU; oU++) cU.push(QU.q.CatmullRom(UU[FU % zU], UU[(FU + 1) % zU], UU[(FU + 2) % zU], UU[(FU + 3) % zU], AU)), AU += yU
+          }
+          cU.push(cU[0])
+        } else {
+          const zU = [];
+          zU.push(UU[0].clone()), zU.push(...UU), zU.push(UU[UU.length - 1].clone());
+          let FU = 0;
+          for (; FU < zU.length - 3; FU++) {
+            AU = 0;
+            for (let UU = 0; UU < XU; UU++) cU.push(QU.q.CatmullRom(zU[FU], zU[FU + 1], zU[FU + 2], zU[FU + 3], AU)), AU += yU
+          }
+          FU--, cU.push(QU.q.CatmullRom(zU[FU], zU[FU + 1], zU[FU + 2], zU[FU + 3], AU))
         }
-        return null
+        return new EU(cU)
       }
-    }, new pM.e];
-
-    function sM(MM, rM, iM, OM, SM) {
-      let jM = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const aM of WM)
-        if (aM.handles(SM)) return aM.shape(MM, rM, iM, OM, SM, jM);
-      return SM
-    }
-
-    function DM(MM) {
-      for (const OM of WM) {
-        var rM, iM;
-        if (OM.handles(MM)) return null !== (rM = null === (iM = OM.placedBy) || void 0 === iM ? void 0 : iM.call(OM, MM)) && void 0 !== rM ? rM : null
+      static ArcThru3Points(UU, XU, zU) {
+        let cU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          AU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const FU = [],
+          oU = XU.subtract(UU),
+          DU = zU.subtract(XU),
+          YU = UU.subtract(zU),
+          NU = QU.q.Cross(oU, DU),
+          IU = NU.length();
+        if (IU < Math.pow(10, -8)) return new EU(FU);
+        const pU = oU.lengthSquared(),
+          aU = DU.lengthSquared(),
+          tU = YU.lengthSquared(),
+          gU = NU.lengthSquared(),
+          kU = .5 * oU.length() * DU.length() * YU.length() / IU,
+          GU = -.5 * aU * QU.q.Dot(oU, YU) / gU,
+          BU = -.5 * tU * QU.q.Dot(oU, DU) / gU,
+          ZU = -.5 * pU * QU.q.Dot(DU, YU) / gU,
+          RU = UU.scale(GU).add(XU.scale(BU)).add(zU.scale(ZU)),
+          PU = UU.subtract(RU).normalize(),
+          WU = QU.q.Cross(NU, PU).normalize();
+        if (AU) {
+          const XU = 2 * Math.PI / cU;
+          for (let UU = 0; UU <= 2 * Math.PI; UU += XU) FU.push(RU.add(PU.scale(kU * Math.cos(UU)).add(WU.scale(kU * Math.sin(UU)))));
+          FU.push(UU)
+        } else {
+          const XU = 1 / cU;
+          let QU, AU = 0;
+          do {
+            QU = RU.add(PU.scale(kU * Math.cos(AU)).add(WU.scale(kU * Math.sin(AU)))), FU.push(QU), AU += XU
+          } while (!QU.equalsWithEpsilon(zU, kU * XU * 1.1));
+          FU.push(zU), yU && FU.push(UU)
+        }
+        return new EU(FU)
       }
-      return null
-    }
-  },
-  39420: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => wM,
-      i: () => UM,
-      m: () => EM
-    });
-    var OM = iM(9816),
-      SM = iM(9839),
-      jM = iM(9904),
-      aM = iM(39426),
-      PM = iM(9895);
-    const nM = (0, aM.S)("pipe"),
-      QM = (0, aM.S)("tank"),
-      zM = (0, aM.S)("port"),
-      LM = "Reactor Port";
-
-    function mM(MM, rM, iM) {
-      const OM = new Set([jM.h, jM.e, LM, ...rM, ...iM, ...MM ? [aM.o] : []]);
-      return {
-        makers: new Set(rM),
-        roots: OM
+      constructor(UU) {
+        this._length = 0, this._points = UU, this._length = this._computeLength(UU)
       }
-    }
-    const HM = {
-        water: mM(!0, ["Condenser"], ["Centrifuge", "Synthesizer", aM.d]),
-        cryo: mM(!1, [aM.d], [])
-      },
-      hM = new Set([...HM.water.roots, ...HM.cryo.roots]),
-      JM = {
-        nx: [-1, 0, 0],
-        ny: [0, -1, 0],
-        nz: [0, 0, -1],
-        px: [1, 0, 0],
-        py: [0, 1, 0],
-        pz: [0, 0, 1]
-      },
-      dM = SM.h.map((MM => JM[MM])),
-      yM = dM.map((MM => {
-        let [rM, iM, OM] = MM;
-        return aM.D.findIndex((MM => {
-          let [SM, jM, aM] = MM;
-          return SM === rM && jM === iM && aM === OM
-        }))
-      }));
-
-    function lM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const iM = OM.k[MM],
-        SM = null === iM || void 0 === iM ? void 0 : iM.meta.rootName,
-        mM = HM[rM];
-      if (!SM || !mM.roots.has(SM)) return null;
-      if ((0, jM.p)(SM)) return (0, aM.Q)(iM.name) === rM ? nM : null;
-      if (SM === aM.o) return QM;
-      if (SM === LM) return iM.name.endsWith("|Water") ? zM : null;
-      const [hM, JM] = PM.i[(iM.meta.rot || 1) - 1];
-      return (0, aM.S)(mM.makers.has(SM) ? "maker" : "user", [-hM, 0, -JM])
-    }
-
-    function EM(MM, rM, iM, SM) {
-      let jM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
-      const {
-        makers: PM
-      } = HM[jM];
-      return dM.some(((QM, zM) => {
-        var LM, mM;
-        let [HM, hM, JM] = QM;
-        const dM = MM(rM + HM, iM + hM, SM + JM),
-          EM = lM(dM, jM);
-        return null !== EM && PM.has(null !== (LM = null === (mM = OM.k[dM]) || void 0 === mM ? void 0 : mM.meta.rootName) && void 0 !== LM ? LM : "") && !(0, aM.V)(nM, EM, yM[zM])
-      }))
-    }
-
-    function UM(MM) {
-      const rM = OM.k[MM];
-      return rM ? (0, aM.Q)(rM.name) : null
-    }
-    let GM = null;
-
-    function CM(MM) {
-      if (!GM) {
-        GM = new Map;
-        for (const MM of ["water", "cryo"])
-          for (let rM = 0; rM < 64; rM++)
-            for (const iM of [!1, !0]) GM.set((0, jM.t)(MM, rM, iM), {
-              CH: MM,
-              mask: rM,
-              full: iM
-            })
+      getPoints() {
+        return this._points
       }
-      return GM.get(MM)
-    }
-    const eM = new Map(Array.from({
-      length: jM.l + 1
-    }, ((MM, rM) => [(0, jM.u)(rM), rM])));
-
-    function bM(MM, rM, iM, SM, jM, aM) {
-      return dM.some(((PM, nM) => {
-        var QM, zM, LM;
-        let [mM, HM, hM] = PM;
-        if (0 === (aM >> nM & 1)) return !1;
-        const JM = null !== (QM = null === (zM = OM.k[MM(rM + mM, iM + HM, SM + hM)]) || void 0 === zM ? void 0 : zM.name) && void 0 !== QM ? QM : "",
-          dM = CM(JM);
-        return dM ? dM.CH === jM && dM.full : (null !== (LM = function(MM) {
-          var rM;
-          return null !== (rM = eM.get(MM)) && void 0 !== rM ? rM : null
-        }(JM)) && void 0 !== LM ? LM : 0) > 0
-      }))
-    }
-    class wM {
-      constructor() {
-        this.reshapeOffsets = dM
+      length() {
+        return this._length
       }
-      handles(MM) {
-        return null !== UM(MM)
+      continue (UU) {
+        const XU = this._points[this._points.length - 1],
+          zU = this._points.slice(),
+          cU = UU.getPoints();
+        for (let yU = 1; yU < cU.length; yU++) zU.push(cU[yU].subtract(cU[0]).add(XU));
+        return new EU(zU)
       }
-      affects(MM) {
-        var rM, iM;
-        return hM.has(null !== (rM = null === (iM = OM.k[MM]) || void 0 === iM ? void 0 : iM.meta.rootName) && void 0 !== rM ? rM : "")
-      }
-      placedBy(MM) {
-        var rM;
-        return (null === (rM = OM.k[MM]) || void 0 === rM ? void 0 : rM.meta.rootName) === jM.e ? jM.h : null
-      }
-      shape(MM, rM, iM, SM, PM, QM) {
-        var zM, LM, mM;
-        const HM = null !== (zM = null === (LM = OM.k[PM]) || void 0 === LM ? void 0 : LM.name) && void 0 !== zM ? zM : "",
-          hM = QM || HM !== jM.h ? null !== (mM = (0, aM.Q)(HM)) && void 0 !== mM ? mM : "water" : function(MM, rM, iM, OM) {
-            return dM.some(((SM, jM) => {
-              let [PM, QM, zM] = SM;
-              const LM = lM(MM(rM + PM, iM + QM, OM + zM), "cryo");
-              return null !== LM && "port" !== LM.kind && (0, aM.V)(nM, LM, yM[jM])
-            })) ? "cryo" : "water"
-          }(MM, rM, iM, SM),
-          JM = function(MM, rM, iM, OM) {
-            let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              jM = 0;
-            return dM.forEach(((PM, QM) => {
-              let [zM, LM, mM] = PM;
-              const HM = lM(MM(rM + zM, iM + LM, OM + mM), SM);
-              HM && (0, aM.V)(nM, HM, yM[QM]) && (jM |= 1 << QM)
-            })), jM
-          }(MM, rM, iM, SM, hM),
-          EM = QM ? function(MM) {
-            var rM;
-            return !0 === (null === (rM = CM(MM)) || void 0 === rM ? void 0 : rM.full)
-          }(HM) : bM(MM, rM, iM, SM, hM, JM);
-        return (0, OM.l)((0, jM.t)(hM, JM, EM))
+      _computeLength(UU) {
+        let XU = 0;
+        for (let zU = 1; zU < UU.length; zU++) XU += UU[zU].subtract(UU[zU - 1]).length();
+        return XU
       }
     }
   },
-  39168: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => OM,
-      f: () => jM
+  39486: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU
     });
-    const OM = ["Chest", "Loot Chest", "Moonstone Chest"],
-      SM = [{
-        name: "Workbench",
-        exactMatch: !0
-      }, {
-        name: "Furnace",
-        exactMatch: !0
-      }, {
-        name: "Artisan Bench",
-        exactMatch: !0
-      }, {
-        name: "Potion Table",
-        exactMatch: !0
-      }, {
-        name: "Salvaging Table",
-        exactMatch: !0
-      }, {
-        name: "Enchanting Table",
-        exactMatch: !1
-      }];
-
-    function jM(MM) {
-      return SM.find((rM => rM.exactMatch ? MM === rM.name : MM.includes(rM.name)))
+    var cU = zU(39493);
+    const yU = (UU, XU, zU) => UU ? UU.getClassName && "Mesh" === UU.getClassName() ? null : !UU.getClassName || "SubMesh" !== UU.getClassName() && "PhysicsBody" !== UU.getClassName() ? UU.clone ? UU.clone() : Array.isArray(UU) ? UU.slice() : zU && "object" === typeof UU ? {
+      ...UU
+    } : null : UU.clone(XU) : null;
+    class QU {
+      static DeepCopy(UU, XU, zU, QU) {
+        let AU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const FU = function(UU) {
+          const XU = [];
+          do {
+            const zU = Object.getOwnPropertyNames(UU);
+            for (const UU of zU) - 1 === XU.indexOf(UU) && XU.push(UU)
+          } while (UU = Object.getPrototypeOf(UU));
+          return XU
+        }(UU);
+        for (const DU of FU) {
+          if ("_" === DU[0] && (!QU || -1 === QU.indexOf(DU))) continue;
+          if (DU.endsWith("Observable")) continue;
+          if (zU && -1 !== zU.indexOf(DU)) continue;
+          const FU = UU[DU],
+            EU = typeof FU;
+          if ("function" !== EU) try {
+            if ("object" === EU)
+              if (FU instanceof Uint8Array) XU[DU] = Uint8Array.from(FU);
+              else if (FU instanceof Array) {
+              if (XU[DU] = [], FU.length > 0)
+                if ("object" == typeof FU[0])
+                  for (let UU = 0; UU < FU.length; UU++) {
+                    const zU = yU(FU[UU], XU, AU); - 1 === XU[DU].indexOf(zU) && XU[DU].push(zU)
+                  } else XU[DU] = FU.slice(0)
+            } else XU[DU] = yU(FU, XU, AU);
+            else XU[DU] = FU
+          } catch (oU) {
+            cU.b.Warn(oU.message)
+          }
+        }
+      }
     }
+  },
+  39493: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => cU
+    });
+    class cU {
+      static _CheckLimit(UU, XU) {
+        let zU = cU._LogLimitOutputs[UU];
+        return zU ? zU.current++ : (zU = {
+          limit: XU,
+          current: 1
+        }, cU._LogLimitOutputs[UU] = zU), zU.current <= zU.limit
+      }
+      static _GenerateLimitMessage(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const zU = cU._LogLimitOutputs[UU];
+        if (!zU || !cU.MessageLimitReached) return;
+        const yU = this._Levels[XU];
+        zU.current === zU.limit && cU[yU.name](cU.MessageLimitReached.replace(/%LIMIT%/g, "" + zU.limit).replace(/%TYPE%/g, yU.name ?? ""))
+      }
+      static _AddLogEntry(UU) {
+        cU._LogCache = UU + cU._LogCache, cU.OnNewCacheEntry && cU.OnNewCacheEntry(UU)
+      }
+      static _FormatMessage(UU) {
+        const XU = UU => UU < 10 ? "0" + UU : "" + UU,
+          zU = new Date;
+        return "[" + XU(zU.getHours()) + ":" + XU(zU.getMinutes()) + ":" + XU(zU.getSeconds()) + "]: " + UU
+      }
+      static _LogDisabled(UU, XU) {}
+      static _LogEnabled() {
+        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          XU = arguments.length > 1 ? arguments[1] : void 0,
+          zU = arguments.length > 2 ? arguments[2] : void 0;
+        const yU = Array.isArray(XU) ? XU[0] : XU;
+        if (void 0 !== zU && !cU._CheckLimit(yU, zU)) return;
+        const QU = cU._FormatMessage(yU),
+          AU = this._Levels[UU],
+          FU = Array.isArray(XU) ? XU.slice(1) : [];
+        AU.logFunc && AU.logFunc("BJS - " + QU, ...FU);
+        const oU = `<div style='color:${AU.color}'>${QU}</div><br>`;
+        cU._AddLogEntry(oU), cU._GenerateLimitMessage(yU, UU)
+      }
+      static get LogCache() {
+        return cU._LogCache
+      }
+      static ClearLogCache() {
+        cU._LogCache = "", cU._LogLimitOutputs = {}, cU.errorsCount = 0
+      }
+      static set LogLevels(UU) {
+        cU.Log = cU._LogDisabled, cU.Warn = cU._LogDisabled, cU.Error = cU._LogDisabled;
+        const XU = [cU.MessageLogLevel, cU.WarningLogLevel, cU.ErrorLogLevel];
+        for (const zU of XU)
+          if ((UU & zU) === zU) {
+            const UU = this._Levels[zU];
+            cU[UU.name] = cU._LogEnabled.bind(cU, zU)
+          }
+      }
+    }
+    cU.NoneLogLevel = 0, cU.MessageLogLevel = 1, cU.WarningLogLevel = 2, cU.ErrorLogLevel = 4, cU.AllLogLevel = 7, cU.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", cU._LogCache = "", cU._LogLimitOutputs = {}, cU._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], cU.errorsCount = 0, cU.Log = cU._LogEnabled.bind(cU, cU.MessageLogLevel), cU.Warn = cU._LogEnabled.bind(cU, cU.WarningLogLevel), cU.Error = cU._LogEnabled.bind(cU, cU.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

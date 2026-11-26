@@ -1,559 +1,708 @@
 export const id = 230;
 export const ids = [230];
 export const modules = {
-  35113: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => WM,
-      g: () => pM,
-      j: () => RM
+  37036: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      CreateCustomLobby: () => wU
     });
-    var OM = iM(35120);
-    const SM = {
-        fileBytes: 4194304,
-        vertices: 65535,
-        indices: 196608,
-        accessorElements: 196608,
-        primitives: 64,
-        nodes: 128,
-        meshes: 64,
-        materials: 8,
-        images: 8,
-        imageSide: 1024
-      },
-      jM = {
-        items: 1024,
-        perFile: 1024,
-        surfaces: 256,
-        few: 64,
-        bounds: 16,
-        attributeMembers: 32
-      },
-      aM = 1048576,
-      PM = "is not a binary glTF 2.0 file",
-      nM = "loads data from outside the file",
-      QM = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      zM = {
-        POSITION: "VEC3",
-        NORMAL: "VEC3",
-        TEXCOORD_0: "VEC2",
-        COLOR_0: "VEC4"
-      },
-      LM = {
-        type: "VEC2",
-        componentTypes: [5126, 5121, 5123]
-      },
-      mM = {
-        TANGENT: {
-          type: "VEC4",
-          componentTypes: [5126]
+    zU(37039);
+    var cU = zU(5057),
+      yU = zU(61),
+      QU = zU(1726),
+      AU = zU(1106),
+      FU = zU.n(AU),
+      oU = zU(3490),
+      DU = zU(1131),
+      EU = zU(1203),
+      YU = zU(5026),
+      NU = zU(1494),
+      IU = zU(37046),
+      pU = zU(1193),
+      aU = zU(1376),
+      tU = zU(1568),
+      gU = zU(27),
+      kU = zU(1498),
+      GU = zU(646),
+      BU = zU(5458),
+      ZU = zU(825),
+      RU = zU(1258),
+      PU = zU(1236),
+      WU = zU(5471),
+      dU = zU(1390),
+      LU = zU(37055),
+      eU = zU(37060),
+      CU = zU(1305);
+
+    function wU(UU) {
+      var XU, zU, AU, wU;
+      let {
+        gameNameWithVariation: qU,
+        close: OU,
+        initialDefaultGamemode: SU
+      } = UU;
+      const {
+        t: rU
+      } = (0, pU.I)(), uU = (0, tU.useNavigatePreserveSearch)(), [fU, iU] = (0, yU.useState)("Enter"), [HU, MU] = (0, yU.useState)(""), vU = yU.useRef(null), VU = null === (XU = ZU.d[qU]) || void 0 === XU ? void 0 : XU.showWorldsInsteadOfCustomLobbies, sU = VU ? 1 : null === (zU = ZU.d[qU]) || void 0 === zU ? void 0 : zU.customLobbyCustomSchematicLimit, [nU, mU] = (0, yU.useState)(!VU);
+      SU || (SU = "classic_creative" === qU || "classic_creativeFlat" === qU ? "creative" : "classic" === qU ? "peaceful" : "survival");
+      const lU = {
+        baseOptions: {
+          gameNameWithVariation: VU ? "classic" : qU,
+          name: "",
+          visibility: "unlisted"
         },
-        TEXCOORD_1: LM,
-        TEXCOORD_2: LM,
-        TEXCOORD_3: LM,
-        TEXCOORD_4: LM,
-        TEXCOORD_5: LM
-      },
-      HM = new Set(OM.h.map((MM => {
-        let [rM] = MM;
-        return rM
-      }))),
-      hM = {
-        1: "line",
-        2: "line loop",
-        3: "line strip",
-        5: "triangle strip",
-        6: "triangle fan"
-      },
-      JM = 5126;
-
-    function dM(MM) {
-      return MM.toLocaleString("en-US")
-    }
-
-    function yM(MM, rM, iM) {
-      return MM > rM ? `has ${dM(MM)} ${iM} (the limit is ${dM(rM)})` : null
-    }
-
-    function lM(MM, rM) {
-      return Number.isInteger(MM) && MM >= 0 && MM < (null !== rM && void 0 !== rM ? rM : 0)
-    }
-
-    function EM(MM) {
-      return Number.isInteger(MM) && MM >= 0
-    }
-
-    function UM(MM, rM) {
-      return void 0 !== MM && (!Array.isArray(MM) || MM.length > rM)
-    }
-
-    function GM(MM, rM) {
-      return "object" === typeof MM && null !== MM && Object.keys(MM).length > rM
-    }
-
-    function CM(MM) {
-      var rM;
-      return `${MM.normalized?"normalized ":""}${null!==(rM=OM.e[MM.componentType])&&void 0!==rM?rM:MM.componentType} ${MM.type}`
-    }
-
-    function eM(MM) {
-      const rM = rM => {
-        var iM;
-        return null !== (iM = MM[rM]) && void 0 !== iM ? iM : -1
+        listedOptions: {
+          description: "",
+          color: "",
+          emojis: ""
+        },
+        mapOptions: {
+          mapType: "classic_creativeFlat" === qU ? "flat" : "default",
+          schematicIdList: []
+        },
+        worldOptions: null
       };
-      return 255 === rM(0) && 216 === rM(1) ? "JPEG" : 82 === rM(0) && 73 === rM(1) && 87 === rM(8) && 69 === rM(9) ? "WebP" : 171 === rM(0) && 75 === rM(1) && 84 === rM(2) && 88 === rM(3) ? "KTX2" : "non-PNG"
-    }
+      VU && (lU.worldOptions = {
+        defaultGamemode: SU,
+        disableProtectors: !1,
+        spawnProtection: !0,
+        disableTpRequests: !1,
+        disableTribeCreation: !1,
+        disableLobbySpawn: !1,
+        voidDeathHeight: -1e4,
+        worldBorder: null,
+        disableFallDamage: !0,
+        disableMobs: !1,
+        worldGenSeed: "",
+        enableSmpMarketplace: !1,
+        enableSurvivalGuns: !1,
+        enableSpawnReset: !1,
+        enableDayNight: !0
+      });
+      const [xU, JU] = (0, yU.useState)(lU), [jU, KU] = (0, yU.useState)(null);
 
-    function bM(MM) {
-      return MM.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((rM, iM) => MM[iM] === rM)) && 73 === MM[12] && 72 === MM[13] && 68 === MM[14] && 82 === MM[15]
-    }
-
-    function wM(MM) {
-      return /^[aeiou]/i.test(MM) ? `an ${MM}` : `a ${MM}`
-    }
-
-    function tM(MM) {
-      const rM = MM.byteStride;
-      return void 0 === rM || Number.isInteger(rM) && rM >= 4 && rM <= 252 && rM % 4 === 0
-    }
-
-    function gM(MM, rM, iM) {
-      var OM, SM;
-      const jM = null === (OM = MM.bufferViews) || void 0 === OM ? void 0 : OM[iM];
-      if (!jM || !rM || 0 !== jM.buffer) return null;
-      const aM = null !== (SM = jM.byteOffset) && void 0 !== SM ? SM : 0;
-      return !EM(aM) || !EM(jM.byteLength) || aM + jM.byteLength > rM.byteLength ? null : rM.subarray(aM, aM + jM.byteLength)
-    }
-
-    function uM(MM, rM) {
-      var iM, SM, jM;
-      const aM = OM.s[rM.type],
-        PM = OM.c[rM.componentType];
-      if (!aM || !PM || !Number.isInteger(rM.count) || rM.count < 0) return !1;
-      if (void 0 === rM.bufferView) return !0;
-      const nM = null === (iM = MM.bufferViews) || void 0 === iM ? void 0 : iM[rM.bufferView],
-        QM = null !== (SM = rM.byteOffset) && void 0 !== SM ? SM : 0;
-      if (!nM || !EM(QM) || QM % PM !== 0) return !1;
-      const zM = aM * PM,
-        LM = null !== (jM = nM.byteStride) && void 0 !== jM ? jM : zM;
-      if (LM < zM) return !1;
-      return (0 === rM.count ? 0 : QM + LM * (rM.count - 1) + zM) <= nM.byteLength
-    }
-
-    function RM(MM) {
-      return MM > SM.fileBytes ? `is ${(MM/aM).toFixed(1)} MiB (the limit is ${SM.fileBytes/aM} MiB)` : null
-    }
-
-    function pM(MM, rM) {
-      try {
-        return function(MM, rM) {
-          var iM, aM, LM, dM, EM, RM, pM, WM, sM, DM, kM, ZM, oM, fM, YM, NM, AM;
-          const xM = Array.isArray(MM.extensionsUsed) && MM.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(MM, rM) {
-              var iM, OM;
-              const {
-                items: SM,
-                perFile: aM,
-                surfaces: PM,
-                few: nM,
-                bounds: QM,
-                attributeMembers: zM
-              } = jM;
-              if (UM(MM.extensionsRequired, nM) || UM(MM.animations, 1 / 0) || UM(MM.skins, 1 / 0)) return !0;
-              if (null !== (iM = MM.animations) && void 0 !== iM && iM.length || null !== (OM = MM.skins) && void 0 !== OM && OM.length) return !1;
-              if ([
-                  [MM.buffers, nM],
-                  [MM.scenes, nM],
-                  [MM.bufferViews, SM],
-                  [MM.accessors, SM],
-                  [MM.nodes, SM],
-                  [MM.meshes, SM],
-                  [MM.materials, PM],
-                  [MM.textures, PM],
-                  [MM.samplers, PM],
-                  [MM.images, PM]
-                ].some((MM => {
-                  let [rM, iM] = MM;
-                  return UM(rM, iM)
-                }))) return !0;
-              for (const jM of null !== (LM = MM.accessors) && void 0 !== LM ? LM : []) {
-                var LM, mM, HM;
-                if (Number.isInteger(jM.count) && (!Number.isSafeInteger(jM.count) || Object.is(jM.count, -0)) || UM(null !== (mM = jM.min) && void 0 !== mM ? mM : void 0, QM) || UM(null !== (HM = jM.max) && void 0 !== HM ? HM : void 0, QM)) return !0
-              }
-              for (const jM of null !== (hM = MM.scenes) && void 0 !== hM ? hM : []) {
-                var hM;
-                if (UM(jM.nodes, SM)) return !0
-              }
-              let JM = 0;
-              for (const jM of null !== (dM = MM.nodes) && void 0 !== dM ? dM : []) {
-                var dM, yM, lM;
-                if (UM(jM.children, aM)) return !0;
-                JM += null !== (yM = null === (lM = jM.children) || void 0 === lM ? void 0 : lM.length) && void 0 !== yM ? yM : 0
-              }
-              if (JM > aM) return !0;
-              let EM = 0;
-              for (const jM of null !== (CM = MM.meshes) && void 0 !== CM ? CM : []) {
-                var CM;
-                if (!Array.isArray(jM.primitives)) return !0;
-                if (EM += jM.primitives.length, EM > aM) return !0;
-                for (const MM of jM.primitives) {
-                  var eM;
-                  const iM = rM ? null === (eM = MM.extensions) || void 0 === eM ? void 0 : eM.KHR_draco_mesh_compression : void 0;
-                  if (GM(MM.attributes, zM) || GM(null === iM || void 0 === iM ? void 0 : iM.attributes, zM)) return !0
-                }
-              }
-              return !1
-            }(MM, xM)) return PM;
-          const vM = null === (iM = MM.asset) || void 0 === iM ? void 0 : iM.version;
-          if ("string" !== typeof vM || !/^2\.\d+/.test(vM)) return `uses glTF version ${null!==vM&&void 0!==vM?vM:"(none)"}`;
-          const FM = null === (aM = MM.asset) || void 0 === aM ? void 0 : aM.minVersion;
-          if (void 0 !== FM && "2.0" !== FM) return `uses glTF version ${FM}`;
-          for (const OM of null !== (BM = MM.extensionsRequired) && void 0 !== BM ? BM : []) {
-            var BM;
-            if (!QM.has(OM)) return `requires the glTF extension ${OM}`
+      function bU(UU, XU) {
+        JU({
+          ...xU,
+          baseOptions: {
+            ...xU.baseOptions,
+            [UU]: XU
           }
-          if (null !== (LM = MM.animations) && void 0 !== LM && LM.length) return "has animations";
-          if (null !== (dM = MM.skins) && void 0 !== dM && dM.length) return "uses skins";
-          const XM = null !== (EM = MM.buffers) && void 0 !== EM ? EM : [];
-          for (const [OM, SM] of XM.entries()) {
-            if (void 0 !== SM.uri) return nM;
-            if (OM > 0 || !rM) return PM
+        })
+      }
+
+      function TU(UU, XU) {
+        JU({
+          ...xU,
+          listedOptions: {
+            ...xU.listedOptions,
+            [UU]: XU
           }
-          for (const [OM, SM] of(null !== (IM = MM.bufferViews) && void 0 !== IM ? IM : []).entries()) {
-            var IM;
-            if (!gM(MM, rM, OM) || !tM(SM)) return PM
+        })
+      }
+
+      function hU(UU, XU) {
+        JU({
+          ...xU,
+          worldOptions: {
+            ...xU.worldOptions,
+            [UU]: XU
           }
-          const KM = null !== (RM = MM.accessors) && void 0 !== RM ? RM : [];
-          for (const OM of KM) {
-            if (void 0 !== OM.sparse) return "uses sparse accessors";
-            const rM = Number.isInteger(OM.count) ? yM(OM.count, SM.accessorElements, "elements in an accessor") : null;
-            if (rM) return rM;
-            if (!uM(MM, OM)) return PM
+        })
+      }
+
+      function UX(UU) {
+        JU({
+          ...xU,
+          mapOptions: {
+            ...xU.mapOptions,
+            ...UU
           }
-          const qM = null !== (pM = MM.scenes) && void 0 !== pM ? pM : [];
-          if (1 !== qM.length) return `has ${qM.length} scenes`;
-          const TM = (0, OM.B)(MM);
-          if (void 0 !== TM && 0 !== TM) return PM;
-          const VM = null !== (WM = MM.nodes) && void 0 !== WM ? WM : [],
-            cM = null !== (sM = MM.meshes) && void 0 !== sM ? sM : [],
-            Mr = null !== (DM = MM.materials) && void 0 !== DM ? DM : [],
-            rr = null !== (kM = MM.textures) && void 0 !== kM ? kM : [],
-            ir = null !== (ZM = MM.images) && void 0 !== ZM ? ZM : [],
-            Or = null !== (oM = null !== (fM = null !== (YM = yM(VM.length, SM.nodes, "nodes")) && void 0 !== YM ? YM : yM(cM.length, SM.meshes, "meshes")) && void 0 !== fM ? fM : yM(Mr.length, SM.materials, "materials")) && void 0 !== oM ? oM : yM(ir.length, SM.images, "images");
-          if (Or) return Or;
-          const Sr = new Set;
-          for (const OM of VM)
-            for (const MM of null !== (jr = OM.children) && void 0 !== jr ? jr : []) {
-              var jr;
-              if (!lM(MM, VM.length) || Sr.has(MM)) return PM;
-              Sr.add(MM)
+        })
+      }(0, yU.useEffect)((() => {
+        YU.d.getNewStarterName().then((UU => {
+          JU((XU => "" !== XU.baseOptions.name ? XU : {
+            ...XU,
+            baseOptions: {
+              ...XU.baseOptions,
+              name: UU
             }
-          const ar = new Set,
-            Pr = MM => {
-              var rM;
-              return !ar.has(MM) && (ar.add(MM), (null !== (rM = VM[MM].children) && void 0 !== rM ? rM : []).every(Pr))
-            };
-          for (const OM of null !== (nr = qM[0].nodes) && void 0 !== nr ? nr : []) {
-            var nr;
-            if (!lM(OM, VM.length) || Sr.has(OM) || !Pr(OM)) return PM
-          }
-          for (const OM of VM) {
-            if (void 0 !== OM.matrix) return "uses node matrices";
-            if (void 0 !== OM.skin) return "uses skins";
-            if (void 0 !== OM.weights) return "uses morph targets";
-            if (void 0 !== OM.mesh && !lM(OM.mesh, cM.length)) return PM;
-            const MM = [
-              [OM.translation, 3],
-              [OM.rotation, 4],
-              [OM.scale, 3]
-            ];
-            for (const [rM, iM] of MM)
-              if (void 0 !== rM && (!Array.isArray(rM) || rM.length !== iM || !rM.every((MM => Number.isFinite(MM))))) return PM
-          }
-          let Qr = -1,
-            zr = 0,
-            Lr = 0,
-            mr = null;
-          for (const SM of cM) {
-            if (void 0 !== SM.weights) return "uses morph targets";
-            if (0 === SM.primitives.length) return PM;
-            for (const iM of SM.primitives) {
-              var Hr, hr;
-              const SM = null !== (Hr = iM.mode) && void 0 !== Hr ? Hr : 4;
-              var Jr;
-              if (4 !== SM && 0 !== SM) return `uses ${null!==(Jr=hM[SM])&&void 0!==Jr?Jr:`mode ${SM}`} primitives`;
-              if (void 0 !== iM.targets) return "uses morph targets";
-              if (void 0 !== iM.material && !lM(iM.material, Mr.length)) return PM;
-              const jM = xM ? null === (hr = iM.extensions) || void 0 === hr ? void 0 : hr.KHR_draco_mesh_compression : void 0;
-              if (jM) {
-                if (4 !== SM) return "uses Draco-compressed points";
-                if (!gM(MM, rM, jM.bufferView) || "object" !== typeof jM.attributes) return PM
-              }
-              const aM = iM.attributes;
-              if ("object" !== typeof aM || null === aM) return PM;
-              if (void 0 === aM.POSITION) return "has a primitive with no positions";
-              if (!lM(aM.POSITION, KM.length)) return PM;
-              const nM = KM[aM.POSITION].count;
-              for (const [MM, rM] of Object.entries(aM)) {
-                if (!lM(rM, KM.length)) return PM;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(MM)) return "uses skins";
-                const iM = KM[rM],
-                  OM = zM[MM];
-                if (OM && (iM.componentType !== JM || iM.normalized || iM.type !== OM)) return `stores ${MM} as ${CM(iM)}`;
-                const SM = mM[MM];
-                if (SM && (iM.type !== SM.type || !SM.componentTypes.includes(iM.componentType) || iM.componentType === JM === !!iM.normalized)) return `stores ${MM} as ${CM(iM)}`;
-                if (HM.has(MM) && iM.count !== nM) return "has vertex attributes of different lengths"
-              }
-              if (jM) {
-                if (void 0 === iM.indices) return PM;
-                for (const rM in jM.attributes)
-                  if (HM.has(rM) && void 0 === aM[rM]) return PM;
-                if (void 0 === jM.attributes.POSITION) return PM;
-                const MM = lM(iM.indices, KM.length) ? KM[iM.indices].count : -1;
-                if (0 === MM) return PM;
-                if (-1 === Qr) Qr = jM.bufferView, zr = nM, Lr = MM;
-                else {
-                  mr ??= new Map([
-                    [Qr, [zr, Lr]]
-                  ]);
-                  const rM = mr.get(jM.bufferView);
-                  if (rM && (rM[0] !== nM || rM[1] !== MM)) return PM;
-                  mr.set(jM.bufferView, null !== rM && void 0 !== rM ? rM : [nM, MM])
-                }
-              }
-              let QM = nM;
-              if (void 0 !== iM.indices) {
-                if (!lM(iM.indices, KM.length)) return PM;
-                const MM = KM[iM.indices];
-                if ("SCALAR" !== MM.type) return PM;
-                if (5121 === MM.componentType) return "uses 8-bit indices";
-                var dr;
-                if (5123 !== MM.componentType && 5125 !== MM.componentType) return `stores indices as ${null!==(dr=OM.e[MM.componentType])&&void 0!==dr?dr:MM.componentType}`;
-                if (!jM && void 0 === MM.bufferView) return PM;
-                QM = MM.count
-              }
-              if (4 === SM && QM % 3 !== 0) return PM
-            }
-          }
-          let yr = 0,
-            lr = 0,
-            Er = 0;
-          for (let OM = 0; OM < VM.length; OM++) {
-            const MM = VM[OM].mesh;
-            if (void 0 !== MM && ar.has(OM))
-              for (const rM of cM[MM].primitives) Er++, yr += KM[rM.attributes.POSITION].count, void 0 !== rM.indices && (lr += KM[rM.indices].count)
-          }
-          const Ur = null !== (NM = null !== (AM = yM(yr, SM.vertices, "vertices")) && void 0 !== AM ? AM : yM(lr, SM.indices, "indices")) && void 0 !== NM ? NM : yM(Er, SM.primitives, "primitives");
-          if (Ur) return Ur;
-          for (const OM of Mr) {
-            var Gr, Cr;
-            if (void 0 !== OM.emissiveTexture) return "uses an emissive texture";
-            const rM = null !== (Gr = OM.alphaMode) && void 0 !== Gr ? Gr : "OPAQUE";
-            if ("OPAQUE" !== rM && "MASK" !== rM && "BLEND" !== rM) return PM;
-            const iM = null === (Cr = OM.pbrMetallicRoughness) || void 0 === Cr ? void 0 : Cr.baseColorTexture;
-            if (iM) {
-              var er, br, wr, tr, gr;
-              const rM = null !== (er = MM.extensionsUsed) && void 0 !== er && er.includes("KHR_texture_transform") ? null === (br = iM.extensions) || void 0 === br ? void 0 : br.KHR_texture_transform : void 0;
-              if (0 !== (null !== (wr = iM.texCoord) && void 0 !== wr ? wr : 0) || 0 !== (null !== (tr = null === rM || void 0 === rM ? void 0 : rM.texCoord) && void 0 !== tr ? tr : 0)) return "uses a second UV set";
-              const OM = rr[iM.index];
-              if (!OM || !lM(OM.source, ir.length) || void 0 !== OM.sampler && !lM(OM.sampler, null === (gr = MM.samplers) || void 0 === gr ? void 0 : gr.length)) return PM
-            }
-          }
-          for (const OM of ir) {
-            if (void 0 !== OM.uri) return nM;
-            if (void 0 === OM.bufferView) return PM;
-            const iM = gM(MM, rM, OM.bufferView);
-            if (!iM) return PM;
-            if ("image/png" !== OM.mimeType) {
-              var ur, Rr, pr;
-              return `has ${wM(null!==(ur=null!==(Rr={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(pr=OM.mimeType)&&void 0!==pr?pr:""])&&void 0!==Rr?Rr:OM.mimeType)&&void 0!==ur?ur:"untyped")} image`
-            }
-            if (!bM(iM)) return `has ${wM(eM(iM))} image`;
-            const jM = new DataView(iM.buffer, iM.byteOffset, iM.byteLength),
-              aM = jM.getUint32(16),
-              QM = jM.getUint32(20);
-            if (aM > SM.imageSide || QM > SM.imageSide) return `has a ${aM} \xd7 ${QM} image (the limit is ${SM.imageSide})`
-          }
-          return null
-        }(MM, rM)
-      } catch {
-        return PM
-      }
-    }
-
-    function WM(MM) {
-      const rM = RM(MM.byteLength);
-      if (rM) return rM;
-      try {
-        const {
-          json: rM,
-          bin: iM
-        } = (0, OM.E)(MM);
-        return pM(rM, iM)
-      } catch (iM) {
-        if (iM instanceof OM.p) return iM.reason;
-        throw iM
-      }
-    }
-  },
-  35120: (MM, rM, iM) => {
-    iM.d(rM, {
-      B: () => aM,
-      E: () => QM,
-      c: () => HM,
-      e: () => mM,
-      h: () => JM,
-      l: () => jM,
-      p: () => SM,
-      s: () => hM,
-      v: () => zM,
-      x: () => LM
-    });
-    var OM = iM(35126);
-    class SM extends Error {
-      constructor(MM) {
-        super(`GLB refused: it ${MM}`), this.reason = MM, this.name = "GlbRefused"
-      }
-    }
-    class jM extends Error {
-      constructor(MM) {
-        super(MM), this.name = "GlbError"
-      }
-    }
-
-    function aM(MM) {
-      return Reflect.get(MM, "scene")
-    }
-    const PM = 5130562,
-      nM = "is not a binary glTF 2.0 file";
-
-    function QM(MM) {
-      var rM;
-      const iM = MM instanceof Uint8Array ? MM : new Uint8Array(MM),
-        jM = (0, OM.g)(iM);
-      if (null === jM) throw new SM(nM);
-      const aM = jM.json,
-        {
-          jsonEnd: QM,
-          length: zM
-        } = jM,
-        LM = new DataView(iM.buffer, iM.byteOffset, iM.byteLength);
-      let mM = -1,
-        HM = 0;
-      for (let dM = QM; dM < zM;) {
-        if (dM + 8 > zM) throw new SM(nM);
-        const MM = LM.getUint32(dM, !0),
-          rM = LM.getUint32(dM + 4, !0);
-        if (dM + 8 + MM > zM || rM === OM.d || rM === PM && -1 !== mM) throw new SM(nM);
-        rM === PM && (mM = dM + 8, HM = MM), dM += 8 + MM
-      }
-      let hM = null;
-      const JM = null === (rM = aM.buffers) || void 0 === rM ? void 0 : rM[0];
-      if (-1 !== mM && JM && void 0 === JM.uri) {
-        if (!(JM.byteLength >= 0) || JM.byteLength > HM) throw new SM(nM);
-        hM = new Uint8Array(iM.buffer, iM.byteOffset + mM, JM.byteLength)
-      }
-      return {
-        json: aM,
-        bin: hM,
-        fileBytes: iM.byteLength
-      }
-    }
-
-    function zM(MM) {
-      const rM = MM.slice(MM.indexOf(",") + 1),
-        iM = Uint8Array.fromBase64;
-      if (iM) return iM(rM).buffer;
-      const OM = atob(rM),
-        SM = new Uint8Array(OM.length);
-      for (let jM = 0; jM < OM.length; jM++) SM[jM] = OM.charCodeAt(jM);
-      return SM.buffer
-    }
-    async function LM(MM) {
-      if (MM.startsWith("data:")) return zM(MM);
-      const rM = await fetch(MM);
-      if (!rM.ok) throw new jM(`fetching ${MM} failed: ${rM.status} ${rM.statusText}`);
-      return await rM.arrayBuffer()
-    }
-    const mM = {
-        5120: "i8",
-        5121: "u8",
-        5122: "i16",
-        5123: "u16",
-        5125: "u32",
-        5126: "f32"
-      },
-      HM = {
-        5120: 1,
-        5121: 1,
-        5122: 2,
-        5123: 2,
-        5125: 4,
-        5126: 4
-      },
-      hM = {
-        SCALAR: 1,
-        VEC2: 2,
-        VEC3: 3,
-        VEC4: 4,
-        MAT2: 4,
-        MAT3: 9,
-        MAT4: 16
-      },
-      JM = [
-        ["POSITION", "position"],
-        ["NORMAL", "normal"],
-        ["TANGENT", "tangent"],
-        ["TEXCOORD_0", "uv"],
-        ["TEXCOORD_1", "uv2"],
-        ["TEXCOORD_2", "uv3"],
-        ["TEXCOORD_3", "uv4"],
-        ["TEXCOORD_4", "uv5"],
-        ["TEXCOORD_5", "uv6"],
-        ["COLOR_0", "color"]
-      ]
-  },
-  35126: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      g: () => jM,
-      j: () => aM
-    });
-    const OM = 1179937895,
-      SM = 1313821514;
-
-    function jM(MM) {
-      const rM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
-      if (MM.byteLength < 20 || rM.getUint32(0, !0) !== OM || 2 !== rM.getUint32(4, !0)) return null;
-      const iM = Math.min(rM.getUint32(8, !0), MM.byteLength),
-        jM = rM.getUint32(12, !0);
-      if (rM.getUint32(16, !0) !== SM || 20 + jM > iM) return null;
-      let aM;
-      try {
-        aM = JSON.parse((new TextDecoder).decode(MM.subarray(20, 20 + jM)))
-      } catch {
-        return null
-      }
-      return "object" === typeof aM && null !== aM ? {
-        json: aM,
-        jsonEnd: 20 + jM,
-        length: iM
-      } : null
-    }
-
-    function aM(MM) {
-      var rM;
-      const iM = null === (rM = jM(MM)) || void 0 === rM ? void 0 : rM.json;
-      if (void 0 === iM || !Array.isArray(iM.extensionsUsed) || !iM.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const OM = iM.meshes;
-      return Array.isArray(OM) && OM.some((MM => {
-        const rM = null === MM || void 0 === MM ? void 0 : MM.primitives;
-        return Array.isArray(rM) && rM.some((MM => {
-          const rM = null === MM || void 0 === MM ? void 0 : MM.extensions;
-          return null != (null === rM || void 0 === rM ? void 0 : rM.KHR_draco_mesh_compression)
+          }))
+        })).catch((UU => {
+          console.error("Error getting new starter name:", UU)
         }))
-      }))
+      }), []), (0, yU.useEffect)((() => {
+        "customSchematic" === xU.mapOptions.mapType && null === jU && (0, DU.postJsonWithMetricsCookiesAndJsonResponse)(`${EU.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+          retries: 0,
+          minTimeout: 3e3
+        }).then((UU => {
+          KU(UU)
+        }))
+      }), [xU.mapOptions.mapType, jU]);
+      const XX = {
+          tpRequests: {
+            isEnabled: () => !xU.worldOptions.disableTpRequests,
+            YC: UU => {
+              hU("disableTpRequests", !UU)
+            }
+          },
+          spawnProtection: {
+            isEnabled: () => xU.worldOptions.spawnProtection,
+            YC: UU => {
+              hU("spawnProtection", UU)
+            }
+          },
+          spawnReset: {
+            isEnabled: () => xU.worldOptions.enableSpawnReset,
+            YC: UU => {
+              hU("enableSpawnReset", UU)
+            }
+          },
+          smpMarketplace: {
+            isEnabled: () => xU.worldOptions.enableSmpMarketplace,
+            YC: UU => {
+              hU("enableSmpMarketplace", UU)
+            }
+          },
+          survivalGuns: {
+            isEnabled: () => xU.worldOptions.enableSurvivalGuns,
+            YC: UU => {
+              hU("enableSurvivalGuns", UU)
+            }
+          },
+          fallDamage: {
+            isEnabled: () => !xU.worldOptions.disableFallDamage,
+            YC: UU => {
+              hU("disableFallDamage", !UU)
+            }
+          },
+          dayNight: {
+            isEnabled: () => xU.worldOptions.enableDayNight,
+            YC: UU => {
+              hU("enableDayNight", UU)
+            }
+          }
+        },
+        zX = "Enter" !== fU,
+        cX = (0, CU.jsx)(BU.g, {
+          className: "NameInput",
+          label: "general:name",
+          disabled: "Enter" !== fU,
+          children: (0, CU.jsx)(QU.e, {
+            domRef: vU,
+            onValueChange: (UU, XU) => {
+              const zU = (0, PU.ib)(UU);
+              bU("name", zU), vU.current.value = zU
+            },
+            maxLength: PU.H,
+            defaultValue: xU.baseOptions.name
+          })
+        });
+      return (0, CU.jsxs)("div", {
+        className: FU()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === fU,
+          AdvancedMode: nU
+        }),
+        children: ["Success" === fU && (0, CU.jsxs)("div", {
+          className: "CreateCustomLobbySuccessOverlay",
+          children: [(0, CU.jsxs)("div", {
+            className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
+            children: [(0, CU.jsx)(dU.d, {
+              name: "check"
+            }), (0, CU.jsx)(kU.e, {})]
+          }), (0, CU.jsx)("div", {
+            className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
+            children: (0, CU.jsx)(NU.l, {
+              padDefaultFocus: !0,
+              onClick: () => {
+                (0, gU.n)("worldCreation"), uU((0, aU.b)(qU, xU.baseOptions.name))
+              },
+              children: rU("homePage:joinLobbyName", {
+                lobbyName: xU.baseOptions.name
+              })
+            })
+          })]
+        }), (0, CU.jsx)("div", {
+          className: "CreateCustomLobbyTitleContainer",
+          children: (0, CU.jsx)("div", {
+            className: "CreateCustomLobbyTitle",
+            children: rU(VU ? "homePage:createWorld" : "homePage:createCustomLobby")
+          })
+        }), (0, CU.jsx)(eU.e, {
+          locked: zX,
+          children: (0, CU.jsxs)("div", {
+            className: "CreateCustomLobbyFields",
+            children: [!nU && cX, nU && (0, CU.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, CU.jsx)("div", {
+                className: "SectionTitle",
+                children: rU("customLobby:generalOptions")
+              }), (0, CU.jsxs)("div", {
+                className: "SectionBody",
+                children: [cX, (0, CU.jsx)(BU.g, {
+                  label: "customLobby:visibility",
+                  circleInfoText: rU("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)(oU.d, {
+                    options: cU.q.map((UU => ({
+                      value: UU,
+                      label: cU.e[UU]
+                    }))),
+                    value: xU.baseOptions.visibility,
+                    onChange: UU => {
+                      bU("visibility", UU.value)
+                    }
+                  })
+                })]
+              })]
+            }), VU && (0, CU.jsx)(LU.c, {
+              value: xU.worldOptions.defaultGamemode,
+              onChange: UU => {
+                hU("defaultGamemode", UU)
+              },
+              showAll: nU,
+              disabled: zX
+            }), (VU || !(0, GU.P)(sU) && sU > 0) && (0, CU.jsx)(LU.g, {
+              mapTypes: VU ? cU.F : cU.o,
+              value: xU.mapOptions.mapType,
+              onChange: UU => {
+                const XU = {
+                  mapType: UU
+                };
+                "customSchematic" !== UU && (XU.schematicIdList = []), UX(XU)
+              },
+              showAll: nU,
+              disabled: zX,
+              children: "customSchematic" === xU.mapOptions.mapType && (0, CU.jsxs)(CU.Fragment, {
+                children: [(0, CU.jsxs)("div", {
+                  className: "SchematicListTitle AnimFadeIn",
+                  children: [VU && rU("customLobby:selectWorldSchematic"), !VU && rU("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: sU
+                  })]
+                }), (0, CU.jsx)("div", {
+                  className: FU()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== fU
+                  }),
+                  children: (0, CU.jsx)(IU.d, {
+                    loading: null === jU,
+                    schematics: null !== jU && void 0 !== jU ? jU : [],
+                    onSchematicPicked: function(UU) {
+                      const XU = xU.mapOptions.schematicIdList;
+                      if (XU.includes(UU.schematicId)) UX({
+                        schematicIdList: XU.filter((XU => XU !== UU.schematicId))
+                      });
+                      else {
+                        if (sU && xU.mapOptions.schematicIdList.length >= sU) return;
+                        UX({
+                          schematicIdList: [...xU.mapOptions.schematicIdList, UU.schematicId]
+                        })
+                      }
+                    },
+                    selectedSchematicIdList: xU.mapOptions.schematicIdList,
+                    disableAutoExport: !0
+                  })
+                })]
+              })
+            }), nU && (0, CU.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, CU.jsx)("div", {
+                className: "SectionTitle",
+                children: rU("customLobby:listedOptions")
+              }), (0, CU.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, CU.jsx)(BU.g, {
+                  label: "general:description",
+                  className: "CustomLobbyDescription",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)(QU.e, {
+                    onValueChange: (UU, XU) => {
+                      TU("description", UU)
+                    },
+                    maxLength: 100,
+                    defaultValue: xU.listedOptions.description
+                  })
+                }), (0, CU.jsx)(BU.g, {
+                  label: "general:color",
+                  circleInfoText: "customLobby:lobbyColorDescription",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)("div", {
+                    className: "OtherInput",
+                    children: (0, CU.jsx)("input", {
+                      type: "color",
+                      value: xU.listedOptions.color,
+                      onChange: UU => {
+                        TU("color", UU.target.value)
+                      }
+                    })
+                  })
+                }), (0, CU.jsx)(BU.g, {
+                  label: "general:emojis",
+                  circleInfoText: "customLobby:lobbyEmojisDescription",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)(QU.e, {
+                    onValueChange: (UU, XU) => {
+                      TU("emojis", UU)
+                    },
+                    maxLength: 6,
+                    defaultValue: xU.listedOptions.emojis
+                  })
+                })]
+              })]
+            }), nU && VU && (0, CU.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, CU.jsx)("div", {
+                className: "SectionTitle",
+                children: rU("customLobby:advancedOptions")
+              }), (0, CU.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, CU.jsx)(BU.g, {
+                  label: "classic:worldGenSeed",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)(QU.e, {
+                    onValueChange: (UU, XU) => {
+                      hU("worldGenSeed", UU)
+                    },
+                    maxLength: PU.H
+                  })
+                }), (0, CU.jsx)(BU.g, {
+                  label: "classic:disableProtectors",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)(BU.e, {
+                    checked: xU.worldOptions.disableProtectors,
+                    setChecked: UU => {
+                      hU("disableProtectors", UU)
+                    }
+                  })
+                }), (0, CU.jsx)(BU.g, {
+                  label: "classic:disableTribeCreation",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)(BU.e, {
+                    checked: xU.worldOptions.disableTribeCreation,
+                    setChecked: UU => {
+                      hU("disableTribeCreation", UU)
+                    }
+                  })
+                }), (0, CU.jsx)(BU.g, {
+                  label: "classic:voidDeathHeight",
+                  circleInfoText: "classic:voidDeathHeightDescription",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)("input", {
+                    type: "number",
+                    max: RU.D,
+                    value: null !== (AU = xU.worldOptions.voidDeathHeight) && void 0 !== AU ? AU : "",
+                    onChange: UU => {
+                      const XU = parseInt(UU.target.value);
+                      hU("voidDeathHeight", isNaN(XU) ? null : XU)
+                    }
+                  })
+                }), (0, CU.jsx)(BU.g, {
+                  label: "classic:disableLobbySpawn",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)(BU.e, {
+                    checked: xU.worldOptions.disableLobbySpawn,
+                    setChecked: UU => {
+                      hU("disableLobbySpawn", UU)
+                    }
+                  })
+                }), (0, CU.jsx)(BU.g, {
+                  label: "classic:worldBorder",
+                  circleInfoText: "classic:worldBorderDescription",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)("input", {
+                    type: "number",
+                    min: RU.J,
+                    max: RU.F,
+                    value: null !== (wU = xU.worldOptions.worldBorder) && void 0 !== wU ? wU : "",
+                    onChange: UU => {
+                      const XU = parseInt(UU.target.value);
+                      hU("worldBorder", isNaN(XU) ? null : XU)
+                    }
+                  })
+                }), (0, CU.jsx)(BU.g, {
+                  label: "classic:disableMobs",
+                  disabled: "Enter" !== fU,
+                  children: (0, CU.jsx)(BU.e, {
+                    checked: xU.worldOptions.disableMobs,
+                    setChecked: UU => {
+                      hU("disableMobs", UU)
+                    }
+                  })
+                })]
+              })]
+            }), VU && (0, CU.jsx)(WU.b, {
+              callbacks: XX,
+              disabled: "Enter" !== fU,
+              advancedMode: nU
+            })]
+          })
+        }), (0, CU.jsxs)("div", {
+          className: "CreateCustomLobbyFooter",
+          children: [(0, CU.jsx)(NU.l, {
+            className: "CreateCustomLobbyButton",
+            padDefaultFocus: !0,
+            loading: "Enter" !== fU,
+            onClick: () => {
+              !async function() {
+                if ("Enter" === fU) {
+                  iU("Loading"), MU("");
+                  try {
+                    await YU.d.createCustomLobby(xU), iU("Success")
+                  } catch (UU) {
+                    MU(UU.message), console.error(UU.message), iU("Enter")
+                  }
+                }
+              }()
+            },
+            children: rU("general:create")
+          }), VU && (0, CU.jsx)("div", {
+            className: "CreateCustomLobbyAdvancedToggle",
+            "data-pad-ignore": zX || void 0,
+            children: (0, CU.jsx)(BU.g, {
+              label: "customLobby:showAdvancedOptions",
+              disabled: zX,
+              onLabelClick: () => {
+                mU(!nU)
+              },
+              children: (0, CU.jsx)(BU.e, {
+                checked: nU,
+                setChecked: mU
+              })
+            })
+          }), HU && (0, CU.jsx)("div", {
+            className: "CreateCustomLobbyError AnimFadeInScaleUp",
+            children: HU
+          })]
+        })]
+      })
     }
-  }
+  },
+  37060: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => oU
+    });
+    var cU = zU(1106),
+      yU = zU.n(cU),
+      QU = zU(61),
+      AU = zU(5014),
+      FU = zU(1305);
+
+    function oU(UU) {
+      let {
+        locked: XU,
+        children: zU
+      } = UU;
+      const cU = (0, QU.useRef)(null),
+        oU = (0, AU.b)(cU, "y");
+      return (0, FU.jsx)("div", {
+        ref: cU,
+        className: yU()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: oU.before,
+          CreateCustomLobbyBodyMoreBelow: oU.after
+        }),
+        "data-pad-ignore": XU || void 0,
+        children: zU
+      })
+    }
+  },
+  37046: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => EU,
+      f: () => NU
+    });
+    var cU = zU(61),
+      yU = zU(1410),
+      QU = zU(1193),
+      AU = zU(1384),
+      FU = zU(3869),
+      oU = zU(5454),
+      DU = zU(1305);
+
+    function EU(UU) {
+      let {
+        loading: XU,
+        schematics: zU,
+        onSchematicPicked: cU,
+        selectedSchematicIdList: yU = [],
+        disableAutoExport: oU
+      } = UU;
+      const {
+        t: EU
+      } = (0, QU.I)();
+      return (0, DU.jsxs)("div", {
+        className: "SchematicList",
+        children: [XU && (0, DU.jsx)(AU.b, {}), !XU && 0 === zU.length && (0, DU.jsx)("div", {
+          className: "NoSchematicsText",
+          children: EU("worldBuilder:noSavedSchematic")
+        }), !XU && zU.map((UU => (0, DU.jsx)(FU.g, {
+          source: {
+            type: "schematic",
+            schematic: UU
+          },
+          gameWidth: "25%",
+          useLongRatio: !0,
+          onClick: () => {
+            cU(UU)
+          },
+          isSelected: yU.includes(UU.schematicId),
+          hideCcu: !0,
+          hideFavourites: !0,
+          showPublishedChip: !0,
+          hideUnpublishedChip: !0,
+          disabled: UU.isAutoExported && oU,
+          disabledReason: "worldBuilder:autoExportDisabled"
+        }, UU.schematicId)))]
+      })
+    }
+
+    function YU(UU) {
+      let {
+        ownedSchematics: XU,
+        currentWorldSchematicId: zU,
+        onClose: yU
+      } = UU;
+      const {
+        t: AU
+      } = (0, QU.I)(), [FU, YU] = (0, cU.useState)(null);
+      return (0, DU.jsxs)("div", {
+        className: "SchematicListWindow",
+        children: [null === FU && (0, DU.jsxs)(DU.Fragment, {
+          children: [(0, DU.jsx)("h1", {
+            className: "SchematicPopupTitle",
+            children: AU("worldBuilder:schematicList")
+          }), (0, DU.jsx)("h2", {
+            className: "SchematicPopupSubtitle",
+            children: AU("worldBuilder:clickSchematicForOptions")
+          }), (0, DU.jsx)("div", {
+            className: "SchematicPopupSchematicListContainer",
+            children: (0, DU.jsx)(EU, {
+              loading: !1,
+              schematics: XU,
+              onSchematicPicked: UU => {
+                YU(UU)
+              },
+              disableAutoExport: !1
+            })
+          })]
+        }), null !== FU && (0, DU.jsx)(oU.e, {
+          schematic: FU,
+          inSourceWorld: FU.schematicId === zU,
+          onSchematicUpdate: UU => {
+            YU(UU)
+          },
+          onClose: () => {
+            YU(null), yU()
+          }
+        })]
+      })
+    }
+
+    function NU(UU) {
+      let {
+        ownedSchematics: XU,
+        currentWorldSchematicId: zU,
+        onClose: cU
+      } = UU;
+      yU.NotificationProvider.showCustomPopup({
+        body: UU => (0, DU.jsx)(YU, {
+          ownedSchematics: XU,
+          currentWorldSchematicId: zU,
+          onClose: UU
+        }),
+        middleScreenPopupClassName: "SchematicPopup",
+        onClose: cU,
+        unlockPointerKey: "schematicListPopup"
+      })
+    }
+  },
+  37055: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => DU,
+      g: () => EU
+    });
+    zU(61);
+    var cU = zU(1106),
+      yU = zU.n(cU),
+      QU = zU(5057),
+      AU = zU(320),
+      FU = zU(1193),
+      oU = zU(1305);
+
+    function DU(UU) {
+      let {
+        value: XU,
+        onChange: zU,
+        showAll: cU,
+        disabled: DU = !1
+      } = UU;
+      const {
+        t: EU
+      } = (0, FU.I)();
+      return (0, oU.jsxs)("div", {
+        className: yU()("BloxdForm GamemodeForm", {
+          BasicOptions: !cU
+        }),
+        children: [(0, oU.jsx)("div", {
+          className: "SectionTitle",
+          children: EU("classic:defaultGamemode")
+        }), (0, oU.jsx)("div", {
+          className: "SectionBody",
+          children: QU.E.map((UU => cU || (0, QU.t)(UU) ? (0, oU.jsx)("button", {
+            type: "button",
+            className: yU()("WorldGamemode", {
+              Selected: XU === UU
+            }),
+            disabled: DU,
+            onClick: () => {
+              zU(UU)
+            },
+            style: {
+              "--background-image": `url(${AU.w[UU]})`
+            },
+            children: AU.u[UU]
+          }, UU) : null))
+        })]
+      })
+    }
+
+    function EU(UU) {
+      let {
+        mapTypes: XU,
+        value: zU,
+        onChange: cU,
+        showAll: DU,
+        disabled: EU = !1,
+        children: YU
+      } = UU;
+      const {
+        t: NU
+      } = (0, FU.I)();
+      return (0, oU.jsxs)("div", {
+        className: yU()("BloxdForm MapTypeForm", {
+          BasicOptions: !DU
+        }),
+        children: [(0, oU.jsx)("div", {
+          className: "SectionTitle",
+          children: NU("customLobby:mapType")
+        }), (0, oU.jsx)("div", {
+          className: "SectionBody",
+          children: XU.map((UU => DU || (0, QU.x)(UU) ? (0, oU.jsx)("button", {
+            type: "button",
+            className: yU()("MapType", {
+              Selected: zU === UU
+            }),
+            disabled: EU,
+            onClick: () => {
+              cU(UU)
+            },
+            style: {
+              "--background-image": `url(${AU.q[UU]})`
+            },
+            children: AU.m[UU]
+          }, UU) : null))
+        }), YU]
+      })
+    }
+  },
+  37039: () => {}
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

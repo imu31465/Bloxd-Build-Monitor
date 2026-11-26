@@ -1,11 +1,11 @@
 export const id = 23;
 export const ids = [23];
 export const modules = {
-  40569: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      default: () => OM
+  40333: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      default: () => cU
     });
-    const OM = () => ({
+    const cU = () => ({
       plugins: {
         cosmeticCompanions: null
       }
@@ -13,4 +13,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

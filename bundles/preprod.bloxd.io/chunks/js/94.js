@@ -1,377 +1,377 @@
 export const id = 94;
 export const ids = [94];
 export const modules = {
-  5142: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => mM,
-      d: () => OM,
-      h: () => aM,
-      j: () => dM,
-      l: () => JM,
-      n: () => PM,
-      q: () => SM,
-      r: () => jM,
-      v: () => hM,
-      z: () => HM
+  5262: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => cU,
+      e: () => AU,
+      i: () => tU,
+      k: () => aU,
+      l: () => FU,
+      n: () => yU,
+      r: () => QU,
+      u: () => pU,
+      w: () => IU,
+      y: () => NU
     });
-    const OM = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const cU = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function SM(MM) {
+    function yU(UU) {
       try {
-        return decodeURIComponent(MM.slice(1))
+        return decodeURIComponent(UU.slice(1))
       } catch {
-        return MM.slice(1)
+        return UU.slice(1)
       }
     }
 
-    function jM(MM) {
-      return MM.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function QU(UU) {
+      return UU.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const aM = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${OM.source}`, "g");
+    const AU = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${cU.source}`, "g");
 
-    function PM(MM, rM) {
-      return 2 === MM.length ? rM.replace(/^ (.*) $/, "$1") : rM
-    }
-
-    function nM(MM) {
-      return "" === MM.trim()
+    function FU(UU, XU) {
+      return 2 === UU.length ? XU.replace(/^ (.*) $/, "$1") : XU
     }
 
-    function QM(MM) {
-      const rM = [];
-      for (const iM of MM.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) rM.length > 0 && rM[rM.length - 1].endsWith("\\") ? rM[rM.length - 1] += `|${iM}` : rM.push(iM);
-      return rM.map((MM => MM.trim().replaceAll("\\|", "|")))
+    function oU(UU) {
+      return "" === UU.trim()
     }
-    const zM = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function LM(MM) {
-      const rM = [],
-        iM = [{
+    function DU(UU) {
+      const XU = [];
+      for (const zU of UU.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) XU.length > 0 && XU[XU.length - 1].endsWith("\\") ? XU[XU.length - 1] += `|${zU}` : XU.push(zU);
+      return XU.map((UU => UU.trim().replaceAll("\\|", "|")))
+    }
+    const EU = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function YU(UU) {
+      const XU = [],
+        zU = [{
           indent: -1,
-          items: rM
+          items: XU
         }];
-      let OM = null;
-      for (const SM of MM) {
-        const MM = SM.match(zM);
-        if (!MM) {
-          OM && (OM.text += ` ${SM.trim()}`);
+      let cU = null;
+      for (const yU of UU) {
+        const UU = yU.match(EU);
+        if (!UU) {
+          cU && (cU.text += ` ${yU.trim()}`);
           continue
         }
-        const rM = MM[1].replace(/\t/g, "  ").length;
-        for (; rM <= iM[iM.length - 1].indent;) iM.pop();
-        OM = {
-          text: MM[3].trim(),
+        const XU = UU[1].replace(/\t/g, "  ").length;
+        for (; XU <= zU[zU.length - 1].indent;) zU.pop();
+        cU = {
+          text: UU[3].trim(),
           children: []
-        }, iM[iM.length - 1].items.push(OM), iM.push({
-          indent: rM,
-          items: OM.children
+        }, zU[zU.length - 1].items.push(cU), zU.push({
+          indent: XU,
+          items: cU.children
         })
       }
-      return rM
+      return XU
     }
 
-    function mM(MM) {
-      const rM = MM.replace(/\r\n/g, "\n").split("\n"),
-        iM = [];
-      let OM = 0;
-      for (; OM < rM.length;) {
-        const MM = rM[OM];
-        if (nM(MM)) {
-          OM++;
+    function NU(UU) {
+      const XU = UU.replace(/\r\n/g, "\n").split("\n"),
+        zU = [];
+      let cU = 0;
+      for (; cU < XU.length;) {
+        const UU = XU[cU];
+        if (oU(UU)) {
+          cU++;
           continue
         }
-        const SM = MM.match(/^\s*```\s*(\w*)\s*$/);
-        if (SM) {
-          const MM = [];
-          for (OM++; OM < rM.length && !/^\s*```\s*$/.test(rM[OM]);) MM.push(rM[OM]), OM++;
-          OM++, iM.push({
+        const yU = UU.match(/^\s*```\s*(\w*)\s*$/);
+        if (yU) {
+          const UU = [];
+          for (cU++; cU < XU.length && !/^\s*```\s*$/.test(XU[cU]);) UU.push(XU[cU]), cU++;
+          cU++, zU.push({
             kind: "code",
-            lang: SM[1] || "text",
-            code: MM.join("\n").replace(/\s+$/, "")
+            lang: yU[1] || "text",
+            code: UU.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const aM = MM.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (aM) {
-          const MM = aM[2].trim();
-          iM.push({
+        const AU = UU.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (AU) {
+          const UU = AU[2].trim();
+          zU.push({
             kind: "heading",
-            level: aM[1].length,
-            text: MM,
-            anchor: jM(MM)
-          }), OM++;
+            level: AU[1].length,
+            text: UU,
+            anchor: QU(UU)
+          }), cU++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(MM)) {
-          iM.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(UU)) {
+          zU.push({
             kind: "rule"
-          }), OM++;
+          }), cU++;
           continue
         }
-        if (MM.trim().startsWith("|") && OM + 1 < rM.length && /^\s*\|[\s:|-]+\|\s*$/.test(rM[OM + 1])) {
-          const SM = QM(MM),
-            jM = [];
-          for (OM += 2; OM < rM.length && rM[OM].trim().startsWith("|");) jM.push(QM(rM[OM])), OM++;
-          iM.push({
+        if (UU.trim().startsWith("|") && cU + 1 < XU.length && /^\s*\|[\s:|-]+\|\s*$/.test(XU[cU + 1])) {
+          const yU = DU(UU),
+            QU = [];
+          for (cU += 2; cU < XU.length && XU[cU].trim().startsWith("|");) QU.push(DU(XU[cU])), cU++;
+          zU.push({
             kind: "table",
-            header: SM,
-            rows: jM
+            header: yU,
+            rows: QU
           });
           continue
         }
-        if (MM.startsWith(">")) {
-          const MM = [];
-          for (; OM < rM.length && rM[OM].startsWith(">");) MM.push(rM[OM].replace(/^>\s?/, "")), OM++;
-          iM.push({
+        if (UU.startsWith(">")) {
+          const UU = [];
+          for (; cU < XU.length && XU[cU].startsWith(">");) UU.push(XU[cU].replace(/^>\s?/, "")), cU++;
+          zU.push({
             kind: "quote",
-            blocks: mM(MM.join("\n"))
+            blocks: NU(UU.join("\n"))
           });
           continue
         }
-        if (zM.test(MM)) {
-          const SM = [],
-            jM = /^\s*\d+\./.test(MM);
-          for (; OM < rM.length && !nM(rM[OM]) && (zM.test(rM[OM]) || /^\s+\S/.test(rM[OM]));) SM.push(rM[OM]), OM++;
-          iM.push({
+        if (EU.test(UU)) {
+          const yU = [],
+            QU = /^\s*\d+\./.test(UU);
+          for (; cU < XU.length && !oU(XU[cU]) && (EU.test(XU[cU]) || /^\s+\S/.test(XU[cU]));) yU.push(XU[cU]), cU++;
+          zU.push({
             kind: "list",
-            ordered: jM,
-            items: LM(SM)
+            ordered: QU,
+            items: YU(yU)
           });
           continue
         }
-        const PM = [];
-        for (; OM < rM.length && !nM(rM[OM]) && !/^\s*```/.test(rM[OM]) && !/^#{1,6}\s/.test(rM[OM]) && !rM[OM].startsWith(">") && !zM.test(rM[OM]) && (!rM[OM].trim().startsWith("|") || 0 !== PM.length);) PM.push(rM[OM].trim()), OM++;
-        0 === PM.length && (PM.push(rM[OM].trim()), OM++), iM.push({
+        const FU = [];
+        for (; cU < XU.length && !oU(XU[cU]) && !/^\s*```/.test(XU[cU]) && !/^#{1,6}\s/.test(XU[cU]) && !XU[cU].startsWith(">") && !EU.test(XU[cU]) && (!XU[cU].trim().startsWith("|") || 0 !== FU.length);) FU.push(XU[cU].trim()), cU++;
+        0 === FU.length && (FU.push(XU[cU].trim()), cU++), zU.push({
           kind: "paragraph",
-          text: PM.join(" ")
+          text: FU.join(" ")
         })
       }
-      return iM
+      return zU
     }
 
-    function HM(MM) {
-      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const iM = mM(MM);
-      let OM = "";
-      const SM = [],
-        jM = [],
-        aM = new Map;
-      for (const QM of iM) {
-        if ("heading" === QM.kind) {
-          var PM;
-          const MM = (null !== (PM = aM.get(QM.anchor)) && void 0 !== PM ? PM : 0) + 1;
-          aM.set(QM.anchor, MM), MM > 1 && (QM.anchor = `${QM.anchor}-${MM}`)
+    function IU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const zU = NU(UU);
+      let cU = "";
+      const yU = [],
+        QU = [],
+        AU = new Map;
+      for (const DU of zU) {
+        if ("heading" === DU.kind) {
+          var FU;
+          const UU = (null !== (FU = AU.get(DU.anchor)) && void 0 !== FU ? FU : 0) + 1;
+          AU.set(DU.anchor, UU), UU > 1 && (DU.anchor = `${DU.anchor}-${UU}`)
         }
-        if ("heading" === QM.kind && 1 === QM.level && !OM) {
-          OM = QM.text;
+        if ("heading" === DU.kind && 1 === DU.level && !cU) {
+          cU = DU.text;
           continue
         }
-        if ("heading" === QM.kind && QM.level <= rM) {
-          jM.push({
-            heading: QM,
+        if ("heading" === DU.kind && DU.level <= XU) {
+          QU.push({
+            heading: DU,
             blocks: []
           });
           continue
         }
-        const MM = jM.at(-1);
-        MM ? MM.blocks.push(QM) : SM.push(QM)
+        const UU = QU.at(-1);
+        UU ? UU.blocks.push(DU) : yU.push(DU)
       }
-      const nM = MM => {
+      const oU = UU => {
         for (;
-          "rule" === (null === (rM = MM.at(-1)) || void 0 === rM ? void 0 : rM.kind);) {
-          var rM;
-          MM.pop()
+          "rule" === (null === (XU = UU.at(-1)) || void 0 === XU ? void 0 : XU.kind);) {
+          var XU;
+          UU.pop()
         }
       };
-      nM(SM);
-      for (const QM of jM) nM(QM.blocks);
+      oU(yU);
+      for (const DU of QU) oU(DU.blocks);
       return {
-        title: OM,
-        intro: SM,
-        sections: jM
+        title: cU,
+        intro: yU,
+        sections: QU
       }
     }
 
-    function hM(MM) {
+    function pU(UU) {
       return [{
         heading: null,
-        blocks: MM.intro
-      }, ...MM.sections.map((MM => ({
-        heading: MM.heading,
-        blocks: MM.blocks
+        blocks: UU.intro
+      }, ...UU.sections.map((UU => ({
+        heading: UU.heading,
+        blocks: UU.blocks
       })))]
     }
 
-    function JM(MM) {
-      return MM.flatMap((MM => "code" === MM.kind ? [MM] : "quote" === MM.kind ? JM(MM.blocks) : []))
+    function aU(UU) {
+      return UU.flatMap((UU => "code" === UU.kind ? [UU] : "quote" === UU.kind ? aU(UU.blocks) : []))
     }
 
-    function dM(MM) {
-      switch (MM.kind) {
+    function tU(UU) {
+      switch (UU.kind) {
         case "heading":
         case "paragraph":
-          return MM.text;
+          return UU.text;
         case "code":
-          return MM.code;
+          return UU.code;
         case "table":
-          return [MM.header, ...MM.rows].map((MM => MM.join(" "))).join(" ");
+          return [UU.header, ...UU.rows].map((UU => UU.join(" "))).join(" ");
         case "list": {
-          const rM = MM => MM.map((MM => `${MM.text} ${rM(MM.children)}`)).join(" ");
-          return rM(MM.items)
+          const XU = UU => UU.map((UU => `${UU.text} ${XU(UU.children)}`)).join(" ");
+          return XU(UU.items)
         }
         case "quote":
-          return MM.blocks.map(dM).join(" ");
+          return UU.blocks.map(tU).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  6966: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => LM,
-      f: () => aM,
-      h: () => PM
+  7082: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => YU,
+      g: () => AU,
+      j: () => FU
     });
-    iM(6963);
-    var OM = iM(44),
-      SM = iM(5142),
-      jM = iM(1303);
-    const aM = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    zU(7079);
+    var cU = zU(61),
+      yU = zU(5262),
+      QU = zU(1305);
+    const AU = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function PM(MM, rM) {
-      return MM === rM ? MM : `${MM} (${rM})`
+    function FU(UU, XU) {
+      return UU === XU ? UU : `${UU} (${XU})`
     }
 
-    function nM(MM) {
-      const rM = [];
-      let iM = 0;
-      for (const OM of MM.matchAll(aM)) {
-        OM.index > iM && rM.push(MM.slice(iM, OM.index));
-        const [, SM, aM, nM, QM, zM, LM] = OM;
-        void 0 !== SM ? rM.push(PM(SM, aM)) : void 0 !== nM || void 0 !== QM ? rM.push((0, jM.jsx)("strong", {
-          children: null !== nM && void 0 !== nM ? nM : QM
-        }, OM.index)) : void 0 !== zM ? rM.push((0, jM.jsx)("em", {
-          children: zM
-        }, OM.index)) : rM.push((0, jM.jsx)("code", {
-          children: LM
-        }, OM.index)), iM = OM.index + OM[0].length
+    function oU(UU) {
+      const XU = [];
+      let zU = 0;
+      for (const cU of UU.matchAll(AU)) {
+        cU.index > zU && XU.push(UU.slice(zU, cU.index));
+        const [, yU, AU, oU, DU, EU, YU] = cU;
+        void 0 !== yU ? XU.push(FU(yU, AU)) : void 0 !== oU || void 0 !== DU ? XU.push((0, QU.jsx)("strong", {
+          children: null !== oU && void 0 !== oU ? oU : DU
+        }, cU.index)) : void 0 !== EU ? XU.push((0, QU.jsx)("em", {
+          children: EU
+        }, cU.index)) : XU.push((0, QU.jsx)("code", {
+          children: YU
+        }, cU.index)), zU = cU.index + cU[0].length
       }
-      return iM < MM.length && rM.push(MM.slice(iM)), rM
+      return zU < UU.length && XU.push(UU.slice(zU)), XU
     }
 
-    function QM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const OM = MM.map(((MM, rM) => (0, jM.jsxs)("li", {
-        children: [nM(MM.text), MM.children.length > 0 && QM(MM.children, !1)]
-      }, rM)));
-      return rM ? (0, jM.jsx)("ol", {
-        start: iM,
-        children: OM
-      }) : (0, jM.jsx)("ul", {
-        children: OM
+    function DU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const cU = UU.map(((UU, XU) => (0, QU.jsxs)("li", {
+        children: [oU(UU.text), UU.children.length > 0 && DU(UU.children, !1)]
+      }, XU)));
+      return XU ? (0, QU.jsx)("ol", {
+        start: zU,
+        children: cU
+      }) : (0, QU.jsx)("ul", {
+        children: cU
       })
     }
 
-    function zM(MM, rM) {
-      switch (MM.kind) {
+    function EU(UU, XU) {
+      switch (UU.kind) {
         case "heading":
-          return MM.level <= 2 ? (0, jM.jsx)("h3", {
-            children: nM(MM.text)
-          }, rM) : (0, jM.jsx)("h4", {
-            children: nM(MM.text)
-          }, rM);
+          return UU.level <= 2 ? (0, QU.jsx)("h3", {
+            children: oU(UU.text)
+          }, XU) : (0, QU.jsx)("h4", {
+            children: oU(UU.text)
+          }, XU);
         case "paragraph":
-          return (0, jM.jsx)("p", {
-            children: nM(MM.text)
-          }, rM);
+          return (0, QU.jsx)("p", {
+            children: oU(UU.text)
+          }, XU);
         case "list":
-          return (0, jM.jsx)(OM.Fragment, {
-            children: QM(MM.items, MM.ordered)
-          }, rM);
+          return (0, QU.jsx)(cU.Fragment, {
+            children: DU(UU.items, UU.ordered)
+          }, XU);
         case "quote":
-          return (0, jM.jsx)("blockquote", {
-            children: MM.blocks.map(((MM, rM) => zM(MM, rM)))
-          }, rM);
+          return (0, QU.jsx)("blockquote", {
+            children: UU.blocks.map(((UU, XU) => EU(UU, XU)))
+          }, XU);
         case "code":
-          return (0, jM.jsx)("pre", {
-            children: (0, jM.jsx)("code", {
-              children: MM.code
+          return (0, QU.jsx)("pre", {
+            children: (0, QU.jsx)("code", {
+              children: UU.code
             })
-          }, rM);
+          }, XU);
         case "table":
-          return (0, jM.jsxs)("table", {
-            children: [(0, jM.jsx)("thead", {
-              children: (0, jM.jsx)("tr", {
-                children: MM.header.map(((MM, rM) => (0, jM.jsx)("th", {
-                  children: nM(MM)
-                }, rM)))
+          return (0, QU.jsxs)("table", {
+            children: [(0, QU.jsx)("thead", {
+              children: (0, QU.jsx)("tr", {
+                children: UU.header.map(((UU, XU) => (0, QU.jsx)("th", {
+                  children: oU(UU)
+                }, XU)))
               })
-            }), (0, jM.jsx)("tbody", {
-              children: MM.rows.map(((MM, rM) => (0, jM.jsx)("tr", {
-                children: MM.map(((MM, rM) => (0, jM.jsx)("td", {
-                  children: nM(MM)
-                }, rM)))
-              }, rM)))
+            }), (0, QU.jsx)("tbody", {
+              children: UU.rows.map(((UU, XU) => (0, QU.jsx)("tr", {
+                children: UU.map(((UU, XU) => (0, QU.jsx)("td", {
+                  children: oU(UU)
+                }, XU)))
+              }, XU)))
             })]
-          }, rM);
+          }, XU);
         case "rule":
-          return (0, jM.jsx)("hr", {}, rM)
+          return (0, QU.jsx)("hr", {}, XU)
       }
     }
 
-    function LM(MM) {
+    function YU(UU) {
       let {
-        markdown: rM
-      } = MM, iM = 0;
-      return (0, jM.jsx)("div", {
+        markdown: XU
+      } = UU, zU = 0;
+      return (0, QU.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, SM.C)(rM).map(((MM, rM) => {
-          if ("list" !== MM.kind || !MM.ordered) return iM = 0, zM(MM, rM);
-          const SM = iM + 1;
-          return iM += MM.items.length, (0, jM.jsx)(OM.Fragment, {
-            children: QM(MM.items, !0, SM)
-          }, rM)
+        children: (0, yU.y)(XU).map(((UU, XU) => {
+          if ("list" !== UU.kind || !UU.ordered) return zU = 0, EU(UU, XU);
+          const yU = zU + 1;
+          return zU += UU.items.length, (0, QU.jsx)(cU.Fragment, {
+            children: DU(UU.items, !0, yU)
+          }, XU)
         }))
       })
     }
   },
-  6956: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => lM,
-      g: () => EM,
-      c: () => GM,
-      k: () => hM
+  7070: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => kU,
+      h: () => GU,
+      e: () => ZU,
+      k: () => pU
     });
-    var OM = iM(1215),
-      SM = iM(6905),
-      jM = iM(5273);
-    const aM = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var cU = zU(1220),
+      yU = zU(7031),
+      QU = zU(5387);
+    const AU = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function PM(MM) {
-      return (0, jM.e)(MM, aM, (rM => !/^my/i.test(rM[0]) || !/follow $/i.test(MM.slice(0, rM.index)))).length > 0
+    function FU(UU) {
+      return (0, QU.e)(UU, AU, (XU => !/^my/i.test(XU[0]) || !/follow $/i.test(UU.slice(0, XU.index)))).length > 0
     }
-    const nM = /\byou(?:r|'re|'ll)?\b/i,
-      QM = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      zM = 2;
+    const oU = /\byou(?:r|'re|'ll)?\b/i,
+      DU = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      EU = 2;
 
-    function LM(MM) {
-      return function(MM) {
-        const rM = [];
-        let iM = !1;
-        for (const OM of MM.split("\n")) {
-          if (/^\s*(```|~~~)/.test(OM)) {
-            iM = !iM;
+    function YU(UU) {
+      return function(UU) {
+        const XU = [];
+        let zU = !1;
+        for (const cU of UU.split("\n")) {
+          if (/^\s*(```|~~~)/.test(cU)) {
+            zU = !zU;
             continue
           }
-          if (iM || /^\s*>/.test(OM)) continue;
-          const MM = OM.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          rM.push(...(0, SM.u)(MM))
+          if (zU || /^\s*>/.test(cU)) continue;
+          const UU = cU.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          XU.push(...(0, yU.p)(UU))
         }
-        return rM
-      }(MM).filter((MM => PM(MM) || QM.test(MM) && !nM.test(MM)))
+        return XU
+      }(UU).filter((UU => FU(UU) || DU.test(UU) && !oU.test(UU)))
     }
-    const mM = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      HM = [{
+    const NU = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      IU = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function hM(MM) {
-      const rM = HM.findIndex((rM => rM.name === MM));
-      return -1 === rM ? HM.length : rM
+    function pU(UU) {
+      const XU = IU.findIndex((XU => XU.name === UU));
+      return -1 === XU ? IU.length : XU
     }
-    const JM = 2500,
-      dM = 12e4;
-    class yM extends Error {
-      constructor(MM) {
-        super(`Studio AI chat ${MM}`), this.reason = MM
+    const aU = 2500,
+      tU = 12e4;
+    class gU extends Error {
+      constructor(UU) {
+        super(`Studio AI chat ${UU}`), this.reason = UU
       }
     }
 
-    function lM(MM, rM) {
-      const iM = new AbortController,
-        OM = () => {
-          iM.abort()
+    function kU(UU, XU) {
+      const zU = new AbortController,
+        cU = () => {
+          zU.abort()
         },
-        SM = setTimeout(OM, MM);
-      return null !== rM && void 0 !== rM && rM.aborted && OM(), null === rM || void 0 === rM || rM.addEventListener("abort", OM, {
+        yU = setTimeout(cU, UU);
+      return null !== XU && void 0 !== XU && XU.aborted && cU(), null === XU || void 0 === XU || XU.addEventListener("abort", cU, {
         once: !0
       }), {
-        signal: iM.signal,
+        signal: zU.signal,
         clear: () => {
-          clearTimeout(SM), null === rM || void 0 === rM || rM.removeEventListener("abort", OM)
+          clearTimeout(yU), null === XU || void 0 === XU || XU.removeEventListener("abort", cU)
         }
       }
     }
 
-    function EM(MM, rM, iM) {
-      return new Promise(((SM, jM) => {
-        const aM = new AbortController,
-          PM = () => {
-            aM.abort(), jM((0, OM.f)(iM))
+    function GU(UU, XU, zU) {
+      return new Promise(((yU, QU) => {
+        const AU = new AbortController,
+          FU = () => {
+            AU.abort(), QU((0, cU.e)(zU))
           };
-        if (null !== iM && void 0 !== iM && iM.aborted) return void PM();
-        null === iM || void 0 === iM || iM.addEventListener("abort", PM, {
+        if (null !== zU && void 0 !== zU && zU.aborted) return void FU();
+        null === zU || void 0 === zU || zU.addEventListener("abort", FU, {
           once: !0
         });
-        const nM = HM.map((() => !1));
-        let QM = null;
-        const zM = HM.map((() => !1)),
-          LM = HM.map((() => !1));
-        HM.forEach(((OM, mM) => {
-          const hM = lM(dM, aM.signal);
-          CM(OM, [{
+        const oU = IU.map((() => !1));
+        let DU = null;
+        const EU = IU.map((() => !1)),
+          YU = IU.map((() => !1));
+        IU.forEach(((cU, NU) => {
+          const pU = kU(tU, AU.signal);
+          RU(cU, [{
             role: "user",
-            content: MM
-          }], hM.signal).then((MM => {
-            aM.signal.aborted || ("busy" === MM || "failed" === MM ? (zM[mM] = "busy" === MM, LM[mM] = !0) : null !== MM && (null === QM || mM < QM.rank) && (QM = {
-              rank: mM,
+            content: UU
+          }], pU.signal).then((UU => {
+            AU.signal.aborted || ("busy" === UU || "failed" === UU ? (EU[NU] = "busy" === UU, YU[NU] = !0) : null !== UU && (null === DU || NU < DU.rank) && (DU = {
+              rank: NU,
               answer: {
-                text: MM.text,
-                model: OM.name
+                text: UU.text,
+                model: cU.name
               }
-            }, rM(QM.answer)))
-          }), (MM => {
-            aM.signal.aborted || (LM[mM] = !0, console.warn(`Studio AI: ${OM.name} couldn't be reached`, MM))
+            }, XU(DU.answer)))
+          }), (UU => {
+            AU.signal.aborted || (YU[NU] = !0, console.warn(`Studio AI: ${cU.name} couldn't be reached`, UU))
           })).finally((() => {
-            hM.clear(), nM[mM] = !0, aM.signal.aborted || (() => {
-              var MM, rM;
-              const OM = null !== (MM = null === (rM = QM) || void 0 === rM ? void 0 : rM.rank) && void 0 !== MM ? MM : HM.length;
-              nM.slice(0, OM).includes(!1) || (null === iM || void 0 === iM || iM.removeEventListener("abort", PM), aM.abort(), null !== QM ? SM({
-                ...QM.answer,
-                isFinal: !LM.slice(0, QM.rank).includes(!0)
-              }) : jM(new yM(zM.includes(!0) ? "busy" : "failed")))
+            pU.clear(), oU[NU] = !0, AU.signal.aborted || (() => {
+              var UU, XU;
+              const cU = null !== (UU = null === (XU = DU) || void 0 === XU ? void 0 : XU.rank) && void 0 !== UU ? UU : IU.length;
+              oU.slice(0, cU).includes(!1) || (null === zU || void 0 === zU || zU.removeEventListener("abort", FU), AU.abort(), null !== DU ? yU({
+                ...DU.answer,
+                isFinal: !YU.slice(0, DU.rank).includes(!0)
+              }) : QU(new gU(EU.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((MM => {
-            console.error("Studio AI: showing an answer failed", MM)
+          })).catch((UU => {
+            console.error("Studio AI: showing an answer failed", UU)
           }))
         }))
       }))
     }
 
-    function UM(MM) {
-      var rM, iM;
-      return "length" === (null === MM || void 0 === MM || null === (rM = MM.choices) || void 0 === rM || null === (iM = rM[0]) || void 0 === iM ? void 0 : iM.finish_reason)
+    function BU(UU) {
+      var XU, zU;
+      return "length" === (null === UU || void 0 === UU || null === (XU = UU.choices) || void 0 === XU || null === (zU = XU[0]) || void 0 === zU ? void 0 : zU.finish_reason)
     }
-    async function GM(MM, rM, iM) {
-      const OM = HM.find((rM => rM.name === MM));
-      if (void 0 === OM) return "failed";
-      const SM = lM(dM, iM);
+    async function ZU(UU, XU, zU) {
+      const cU = IU.find((XU => XU.name === UU));
+      if (void 0 === cU) return "failed";
+      const yU = kU(tU, zU);
       try {
-        const MM = await CM(OM, rM, SM.signal);
-        return null !== MM && "object" === typeof MM ? MM.isCutOff ? (console.warn(`Studio AI: ${OM.name}'s answer was cut off at the token limit`), null) : {
-          text: MM.text
-        } : MM
+        const UU = await RU(cU, XU, yU.signal);
+        return null !== UU && "object" === typeof UU ? UU.isCutOff ? (console.warn(`Studio AI: ${cU.name}'s answer was cut off at the token limit`), null) : {
+          text: UU.text
+        } : UU
       } finally {
-        SM.clear()
+        yU.clear()
       }
     }
-    async function CM(MM, rM, iM) {
-      const OM = await fetch(mM, {
+    async function RU(UU, XU, zU) {
+      const cU = await fetch(NU, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: MM.name,
-          messages: rM,
-          max_tokens: JM,
-          temperature: MM.temperature,
-          reasoning_effort: MM.reasoningEffort
+          model: UU.name,
+          messages: XU,
+          max_tokens: aU,
+          temperature: UU.temperature,
+          reasoning_effort: UU.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: iM
+        signal: zU
       });
-      if (429 === OM.status) return "busy";
-      if (!OM.ok) return console.warn(`Studio AI: ${MM.name} answered ${OM.status}`), "failed";
-      const SM = await OM.json().catch((() => null)),
-        jM = function(MM) {
-          var rM, iM, OM;
-          const SM = null === MM || void 0 === MM || null === (rM = MM.choices) || void 0 === rM || null === (iM = rM[0]) || void 0 === iM || null === (OM = iM.message) || void 0 === OM ? void 0 : OM.content;
-          if ("string" !== typeof SM) return null;
-          const jM = SM.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === jM ? null : jM
-        }(SM);
-      return null !== jM && function(MM) {
-        const rM = LM(MM);
-        return rM.length >= zM || rM.some((MM => PM(MM)))
-      }(jM) ? (console.warn(`Studio AI: ${MM.name} thought out loud instead of answering`), "failed") : null === jM ? null : {
-        text: jM,
-        isCutOff: UM(SM)
+      if (429 === cU.status) return "busy";
+      if (!cU.ok) return console.warn(`Studio AI: ${UU.name} answered ${cU.status}`), "failed";
+      const yU = await cU.json().catch((() => null)),
+        QU = function(UU) {
+          var XU, zU, cU;
+          const yU = null === UU || void 0 === UU || null === (XU = UU.choices) || void 0 === XU || null === (zU = XU[0]) || void 0 === zU || null === (cU = zU.message) || void 0 === cU ? void 0 : cU.content;
+          if ("string" !== typeof yU) return null;
+          const QU = yU.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === QU ? null : QU
+        }(yU);
+      return null !== QU && function(UU) {
+        const XU = YU(UU);
+        return XU.length >= EU || XU.some((UU => FU(UU)))
+      }(QU) ? (console.warn(`Studio AI: ${UU.name} thought out loud instead of answering`), "failed") : null === QU ? null : {
+        text: QU,
+        isCutOff: BU(yU)
       }
     }
   },
-  6905: (MM, rM, iM) => {
-    iM.d(rM, {
-      B: () => UM,
-      E: () => CM,
-      H: () => dM,
-      I: () => EM,
-      M: () => GM,
-      Q: () => lM,
-      S: () => LM,
-      U: () => QM,
-      W: () => HM,
-      e: () => hM,
-      i: () => PM,
-      l: () => aM,
-      p: () => JM,
-      t: () => mM,
-      u: () => zM,
-      x: () => jM,
-      z: () => SM
+  7031: (UU, XU, zU) => {
+    zU.d(XU, {
+      A: () => RU,
+      E: () => tU,
+      G: () => GU,
+      K: () => ZU,
+      O: () => kU,
+      R: () => YU,
+      U: () => DU,
+      W: () => IU,
+      b: () => pU,
+      f: () => FU,
+      h: () => AU,
+      l: () => aU,
+      n: () => NU,
+      p: () => EU,
+      t: () => QU,
+      x: () => yU,
+      z: () => BU
     });
-    var OM = iM(5273);
-    const SM = 2e3,
-      jM = 2e4;
+    var cU = zU(5387);
+    const yU = 2e3,
+      QU = 2e4;
 
-    function aM(MM) {
-      return MM.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function AU(UU) {
+      return UU.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function PM(MM) {
-      return MM.replace(/\$/g, "\\$")
+    function FU(UU) {
+      return UU.replace(/\$/g, "\\$")
     }
-    const nM = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const oU = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function QM(MM, rM) {
-      nM.lastIndex = rM;
-      const iM = nM.exec(MM);
-      return iM.index + iM[0].length
-    }
-
-    function zM(MM) {
-      return (0, OM.r)(MM, /\s+/g, (0, OM.n)(".!?")).flatMap((MM => MM.split("\n")))
+    function DU(UU, XU) {
+      oU.lastIndex = XU;
+      const zU = oU.exec(UU);
+      return zU.index + zU[0].length
     }
 
-    function LM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : rM;
-      const OM = [...MM.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((MM => MM.index)),
-        SM = OM.filter((MM => MM < rM)),
-        jM = OM.find((MM => MM >= iM));
-      return [0 === SM.length ? 0 : SM.at(-1) + 1, void 0 === jM ? MM.length : jM + 1]
+    function EU(UU) {
+      return (0, cU.C)(UU, /\s+/g, (0, cU.v)(".!?")).flatMap((UU => UU.split("\n")))
     }
 
-    function mM(MM, rM) {
-      const iM = MM.charCodeAt(rM - 1);
-      return MM.slice(0, rM > 0 && rM < MM.length && iM >= 55296 && iM <= 56319 ? rM - 1 : rM)
+    function YU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : XU;
+      const cU = [...UU.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((UU => UU.index)),
+        yU = cU.filter((UU => UU < XU)),
+        QU = cU.find((UU => UU >= zU));
+      return [0 === yU.length ? 0 : yU.at(-1) + 1, void 0 === QU ? UU.length : QU + 1]
     }
 
-    function HM(MM, rM) {
-      return `${rM}${MM.replace(/\\/g,"\\\\").split(rM).join(`\\${rM}`)}${rM}`
+    function NU(UU, XU) {
+      const zU = UU.charCodeAt(XU - 1);
+      return UU.slice(0, XU > 0 && XU < UU.length && zU >= 55296 && zU <= 56319 ? XU - 1 : XU)
     }
 
-    function hM(MM) {
-      return MM.charAt(0).toUpperCase() + MM.slice(1)
+    function IU(UU, XU) {
+      return `${XU}${UU.replace(/\\/g,"\\\\").split(XU).join(`\\${XU}`)}${XU}`
     }
 
-    function JM(MM) {
-      return Math.round(MM).toLocaleString("en-US")
+    function pU(UU) {
+      return UU.charAt(0).toUpperCase() + UU.slice(1)
     }
 
-    function dM(MM) {
-      return MM.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((MM => "" !== MM))
-    }
-    const yM = 3;
-
-    function lM(MM, rM) {
-      return dM(MM).filter((MM => MM.length >= yM && !/\d/.test(MM))).map((MM => `${MM} ${rM}`))
+    function aU(UU) {
+      return Math.round(UU).toLocaleString("en-US")
     }
 
-    function EM(MM) {
-      return MM.split(/[\s:_]+/).filter((MM => "" !== MM)).map(aM).join("[`:_\\s]+")
+    function tU(UU) {
+      return UU.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((UU => "" !== UU))
+    }
+    const gU = 3;
+
+    function kU(UU, XU) {
+      return tU(UU).filter((UU => UU.length >= gU && !/\d/.test(UU))).map((UU => `${UU} ${XU}`))
     }
 
-    function UM(MM) {
-      return dM(MM.split(".").pop())
+    function GU(UU) {
+      return UU.split(/[\s:_]+/).filter((UU => "" !== UU)).map(AU).join("[`:_\\s]+")
     }
 
-    function GM(MM) {
-      return MM.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function BU(UU) {
+      return tU(UU.split(".").pop())
     }
 
-    function CM(MM) {
-      let rM = null;
+    function ZU(UU) {
+      return UU.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function RU(UU) {
+      let XU = null;
       return () => {
-        const iM = rM ??= MM();
-        return iM.catch((() => {
-          rM === iM && (rM = null)
-        })), iM
+        const zU = XU ??= UU();
+        return zU.catch((() => {
+          XU === zU && (XU = null)
+        })), zU
       }
     }
   },
-  5273: (MM, rM, iM) => {
-    function OM(MM) {
+  5387: (UU, XU, zU) => {
+    function cU(UU) {
       return {
-        notAfter: MM
+        notAfter: UU
       }
     }
-    iM.d(rM, {
-      c: () => nM,
-      e: () => QM,
-      f: () => PM,
-      g: () => OM,
-      h: () => SM,
-      j: () => jM,
-      n: () => aM,
-      p: () => zM,
-      r: () => LM
+    zU.d(XU, {
+      C: () => YU,
+      d: () => oU,
+      e: () => DU,
+      i: () => FU,
+      j: () => cU,
+      n: () => yU,
+      r: () => QU,
+      v: () => AU,
+      z: () => EU
     });
-    const SM = OM("\\w$."),
-      jM = OM("\\w.,");
+    const yU = cU("\\w$."),
+      QU = cU("\\w.,");
 
-    function aM(MM) {
-      return rM => nM(rM, MM)
+    function AU(UU) {
+      return XU => oU(XU, UU)
     }
 
-    function PM(MM) {
-      return rM => !MM.test(rM.input.slice(0, rM.index))
+    function FU(UU) {
+      return XU => !UU.test(XU.input.slice(0, XU.index))
     }
 
-    function nM(MM, rM) {
-      return MM.index > 0 && new RegExp(`[${rM}]`).test(MM.input[MM.index - 1])
+    function oU(UU, XU) {
+      return UU.index > 0 && new RegExp(`[${XU}]`).test(UU.input[UU.index - 1])
     }
 
-    function QM(MM, rM, iM) {
-      return function(MM) {
-        return void 0 !== MM && "function" !== typeof MM
-      }(iM) ? function(MM, rM, iM) {
-        const OM = rM.flags.replace(/[gy]/g, ""),
-          SM = new RegExp(`[^${iM}](?:${rM.source})`, `${OM}g`),
-          jM = [],
-          aM = iM => {
-            const OM = iM.index + iM[0].length;
-            return ("" === iM[0] ? mM(MM, rM, OM) : OM) - 1
+    function DU(UU, XU, zU) {
+      return function(UU) {
+        return void 0 !== UU && "function" !== typeof UU
+      }(zU) ? function(UU, XU, zU) {
+        const cU = XU.flags.replace(/[gy]/g, ""),
+          yU = new RegExp(`[^${zU}](?:${XU.source})`, `${cU}g`),
+          QU = [],
+          AU = zU => {
+            const cU = zU.index + zU[0].length;
+            return ("" === zU[0] ? NU(UU, XU, cU) : cU) - 1
           },
-          PM = new RegExp(`(?:${rM.source})`, `${OM}y`).exec(MM);
-        if (PM) {
-          if (jM.push(PM), !rM.global) return jM;
-          SM.lastIndex = aM(PM)
+          FU = new RegExp(`(?:${XU.source})`, `${cU}y`).exec(UU);
+        if (FU) {
+          if (QU.push(FU), !XU.global) return QU;
+          yU.lastIndex = AU(FU)
         }
-        for (let nM = SM.exec(MM); nM; nM = SM.exec(MM)) {
-          const iM = mM(MM, rM, nM.index) - nM.index;
-          if (nM[0] = nM[0].slice(iM), nM.index += iM, jM.push(nM), !rM.global) break;
-          SM.lastIndex = aM(nM)
+        for (let oU = yU.exec(UU); oU; oU = yU.exec(UU)) {
+          const zU = NU(UU, XU, oU.index) - oU.index;
+          if (oU[0] = oU[0].slice(zU), oU.index += zU, QU.push(oU), !XU.global) break;
+          yU.lastIndex = AU(oU)
         }
-        return jM
-      }(MM, rM, iM.notAfter) : function(MM, rM, iM) {
-        const OM = new RegExp(rM.source, `${rM.flags.replace(/[gy]/g,"")}g`),
-          SM = [];
-        for (let jM = OM.exec(MM); jM; jM = OM.exec(MM))
-          if (!iM || iM(jM)) {
-            if (SM.push(jM), !rM.global) break;
-            "" === jM[0] && (OM.lastIndex = mM(MM, rM, OM.lastIndex))
-          } else OM.lastIndex = mM(MM, rM, jM.index);
-        return SM
-      }(MM, rM, iM)
+        return QU
+      }(UU, XU, zU.notAfter) : function(UU, XU, zU) {
+        const cU = new RegExp(XU.source, `${XU.flags.replace(/[gy]/g,"")}g`),
+          yU = [];
+        for (let QU = cU.exec(UU); QU; QU = cU.exec(UU))
+          if (!zU || zU(QU)) {
+            if (yU.push(QU), !XU.global) break;
+            "" === QU[0] && (cU.lastIndex = NU(UU, XU, cU.lastIndex))
+          } else cU.lastIndex = NU(UU, XU, QU.index);
+        return yU
+      }(UU, XU, zU)
     }
 
-    function zM(MM, rM, iM, OM) {
-      let SM = "",
-        jM = 0;
-      for (const aM of QM(MM, rM, iM)) SM += MM.slice(jM, aM.index) + OM(aM), jM = aM.index + aM[0].length;
-      return SM + MM.slice(jM)
+    function EU(UU, XU, zU, cU) {
+      let yU = "",
+        QU = 0;
+      for (const AU of DU(UU, XU, zU)) yU += UU.slice(QU, AU.index) + cU(AU), QU = AU.index + AU[0].length;
+      return yU + UU.slice(QU)
     }
 
-    function LM(MM, rM, iM) {
-      const OM = [];
-      let SM = 0;
-      for (const jM of QM(MM, rM, iM)) OM.push(MM.slice(SM, jM.index)), SM = jM.index + jM[0].length;
-      return [...OM, MM.slice(SM)]
+    function YU(UU, XU, zU) {
+      const cU = [];
+      let yU = 0;
+      for (const QU of DU(UU, XU, zU)) cU.push(UU.slice(yU, QU.index)), yU = QU.index + QU[0].length;
+      return [...cU, UU.slice(yU)]
     }
 
-    function mM(MM, rM, iM) {
-      var OM;
-      return iM + (rM.unicode && (null !== (OM = MM.codePointAt(iM)) && void 0 !== OM ? OM : 0) > 65535 ? 2 : 1)
+    function NU(UU, XU, zU) {
+      var cU;
+      return zU + (XU.unicode && (null !== (cU = UU.codePointAt(zU)) && void 0 !== cU ? cU : 0) > 65535 ? 2 : 1)
     }
   },
-  6963: () => {}
+  7079: () => {}
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

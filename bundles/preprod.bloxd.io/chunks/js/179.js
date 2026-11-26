@@ -1,40 +1,46 @@
 export const id = 179;
 export const ids = [179];
 export const modules = {
-  9562: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      pageBody: () => OM
+  9549: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      pageBody: () => cU
     });
-    const OM = {
-      whatIs: ["Smash Lucky Blocks for random loot, funny surprises and some genuinely wild outcomes, then take on everyone else in a chaotic multiplayer PvP arena. In Bloxd Lucky Blocks Battlegrounds, whoever has the most kills when the arena resets wins the round. Lucky Bedwars is all about beds and Lucky Towers is about surviving on a pillar. This one's just a big arena where the Lucky Blocks never stop coming."],
-      howToPlay: ["You start in your own safe base, and nobody else can get in. Step out into the arena and a free Lucky Block lands with you every 15 seconds. Crack them open for weapons, armour, pets and surprises, then go and fight.", "Lucky Blocks, Weapon Lucky Blocks and Pet Lucky Blocks spawn on pads around the arena and come back every minute. Every 90 seconds an Ultra Lucky Block appears in the centre, and whoever grabs it first keeps it. You also get your own Ultra Lucky Block in your base every 5 minutes, and only you can see it. The arena resets every 15 minutes, and the player with the most kills wins the round. You keep your items through a reset, so you're ready to go straight away."],
-      features: ["Multiplayer Lucky Block PvP Arena", "A Free Lucky Block Every 15 Seconds", "Weapon and Pet Lucky Blocks on Pads Around the Map", "Ultra Lucky Block in the Centre Every 90 Seconds", "Your Own Ultra Lucky Block Every 5 Minutes", "Safe Personal Base Nobody Else Can Enter", "Kills Leaderboard and a New Round Every 15 Minutes"],
-      tips: ["Stay out in the arena. You don't get free Lucky Blocks while you're in your base", "The second the Ultra Lucky Block appears, head for the centre", "Open Pet Lucky Blocks for a pet that'll defend you from anyone who attacks you", "Need a breather? Go back to your base, because nobody can follow you in", "Inventory getting messy? Press F to clear it. You'll keep your armour, hotbar, arrows and firecrackers", "Pop home every 5 minutes to grab your own Ultra Lucky Block", "Watch the leaderboard on the right so you know who you need to beat"],
-      similarGames: ["luckyBedwars", "luckyTowers", "skywars", "bedwars"],
+    const cU = {
+      whatIs: ["All the fun of survival with none of the stress. Bloxd Peaceful Survival is a calm sandbox where you explore a shared block world with other players. You mine, gather, craft and build, and there are no hostile mobs, no PvP and no health bar. Basically it's Survival with the danger turned off."],
+      howToPlay: ["Spawn into the shared world and start collecting resources. Chop some trees, mine for ores, craft better tools and get building on your dream base. Only passive animals spawn, and they've got so little health you can beat them with your fist. Health is switched off for everyone, so nothing can hurt you. Not even other players.", "Build well away from spawn, because the blocks near it reset every few hours. Craft Protectors from diamonds so other players can't break your builds or open your chests. New to Bloxd? Peaceful's a great place to learn mining, crafting and building before you try Survival."],
+      features: ["No Hostile Mobs, No PvP and No Health Bar", "Shared Multiplayer World to Explore with Friends", "Mining, Crafting and Base Building", "Protect Your Land and Chests with Protectors", "Relaxing and Great for New Players and Builders"],
+      tips: ["Pick a spot to build 200+ blocks out, where blocks don't reset every few hours", "Craft a Protector from diamonds to keep your builds and chests safe", "Don't bother with a sword. Passive animals are weak enough to beat with your fist", "Just starting out? Practise mining, crafting and building here before you try Survival", "Fancy some danger and a health bar? Give Survival a go"],
+      similarGames: ["classic_survival", "classic_survivalDayNight", "classic_creative", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Lucky Blocks Battlegrounds?",
-        answer: "A multiplayer lucky block PvP arena. You open Lucky Blocks for random loot, fight other players and try to end each 15-minute round with the most kills."
+        question: "What is Bloxd Peaceful?",
+        answer: "It's Bloxd's no-danger survival mode. You explore, build and gather in a shared block world, with no hostile mobs and no health bar."
       }, {
-        question: "How do you win Lucky Blocks Battlegrounds?",
-        answer: "Get the most kills before the arena resets. That happens every 15 minutes, and the top player wins the round."
+        question: "Can you die in Bloxd Peaceful?",
+        answer: "No. There's no health bar, so mobs and other players can't hurt you."
       }, {
-        question: "How do I get Lucky Blocks?",
-        answer: "You get a free one every 15 seconds while you're out in the arena. More spawn on pads around the map, and there's an Ultra Lucky Block in the centre every 90 seconds."
+        question: "Is there PvP in Bloxd Peaceful?",
+        answer: "There isn't. Players can't attack each other in Peaceful."
       }, {
-        question: "What is the Ultra Lucky Block?",
-        answer: "An extra-special Lucky Block. One shows up in the middle of the arena every 90 seconds for everyone to race for, and you get your own in your base every 5 minutes as well."
+        question: "Are there mobs in Bloxd Peaceful?",
+        answer: "Only passive animals. None of them can attack you, and you can beat them with your fist."
       }, {
-        question: "What's inside Bloxd lucky blocks?",
-        answer: "Pretty much anything, from weapons and armour to pets and funny surprises. Weapon Lucky Blocks and Pet Lucky Blocks give you a better chance of a weapon or a pet."
+        question: "What's the difference between Peaceful and Survival in Bloxd?",
+        answer: "The world works the same way, with the same mining, crafting and building. Survival has hostile mobs, PvP and a health bar. Peaceful takes all of that away so you can explore and build without worrying."
       }, {
-        question: "Can other players attack me in my base?",
-        answer: "Nope. Other players can't get into your base, break its blocks or open its chests."
+        question: "Is Bloxd Peaceful good for beginners?",
+        answer: "Definitely. It's a safe place to learn the basics. If you die early on in Survival, the game will even offer to move you over to Peaceful."
       }, {
-        question: "Do I lose my items when the Lucky Block Battlegrounds arena resets?",
-        answer: "No, your inventory stays with you. Everyone's kills go back to zero for the new round, though."
+        question: "Can I play Bloxd Peaceful with friends?",
+        answer: "Yes. Everyone's in the same shared world, so you can meet up and build together."
+      }, {
+        question: "How do I keep my builds safe in Peaceful?",
+        answer: "Blocks near spawn reset every few hours, so build outside that area (a message shows when you cross its edge). Then put down a Protector and other players won't be able to break your builds or open your chests."
+      }, {
+        question: "How do I save my progress in Bloxd Peaceful?",
+        answer: "Sign in to an account. If you don't, your progress can be lost when your browser's cookies get cleared."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

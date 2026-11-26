@@ -1,27 +1,79 @@
 export const id = 667;
 export const ids = [667];
 export const modules = {
-  63990: (MM, rM, iM) => {
-    function OM(MM, rM, iM, OM, SM, jM, aM) {
-      const PM = rM,
-        nM = OM,
-        QM = iM;
-      MM[QM + 0] = PM[nM + 0], MM[QM + 1] = PM[nM + 1], MM[QM + 2] = PM[nM + 2], MM[QM + 3] = PM[nM + 3], MM[QM + 4] = PM[nM + 4], MM[QM + 5] = PM[nM + 5], MM[QM + 6] = PM[nM + 6], MM[QM + 7] = PM[nM + 7], MM[QM + 8] = PM[nM + 8], MM[QM + 9] = PM[nM + 9], MM[QM + 10] = PM[nM + 10], MM[QM + 11] = PM[nM + 11], MM[QM + 12] = PM[nM + 12] - SM, MM[QM + 13] = PM[nM + 13] - jM, MM[QM + 14] = PM[nM + 14] - aM, MM[QM + 15] = PM[nM + 15]
+  64039: (UU, XU, zU) => {
+    zU.d(XU, {
+      createShadowTask: () => QU
+    });
+    var cU = null;
+
+    function yU(UU) {
+      return cU?.get(UU)
     }
 
-    function SM(MM) {
-      return (rM, iM, SM, jM) => {
-        const aM = MM.camera;
-        if (!aM) return void OM(rM, iM, SM, jM, 0, 0, 0);
-        const PM = aM.worldMatrix;
-        OM(rM, iM, SM, jM, PM[12], PM[13], PM[14])
-      }
+    function QU(UU, XU) {
+      const zU = new Set;
+      0;
+      const cU = {
+        name: "CY",
+        engine: UU,
+        sa: XU,
+        _passes: [],
+        async _preload() {
+          const UU = [];
+          for (const zU of XU.lights) {
+            const XU = zU.shadowGenerator,
+              cU = XU ? yU(XU) : null;
+            XU?._preloadShadowTask && cU && UU.push(AU(XU, cU))
+          }
+          await Promise.all(UU)
+        },
+        record() {
+          cU._passes.length = 0;
+          for (const cU of XU.lights) {
+            const QU = cU.shadowGenerator,
+              AU = QU ? yU(QU) : null;
+            if (QU?._ensureShadowTaskState && AU && !QU._preloadPending) {
+              zU.add(QU);
+              const cU = QU._ensureShadowTaskState(UU, XU, AU),
+                yU = XU._renderableVersion;
+              cU._task.record(), cU._recordedVersion = yU
+            }
+          }
+        },
+        execute() {
+          let cU = 0;
+          for (const QU of XU.lights) {
+            const AU = QU.shadowGenerator,
+              FU = AU ? yU(AU) : null;
+            if (AU?._ensureShadowTaskState && AU._renderShadowMap && FU && !AU._preloadPending) {
+              zU.add(AU);
+              const yU = AU._shadowTaskState ?? null,
+                QU = AU._ensureShadowTaskState(UU, XU, FU);
+              if (QU !== yU || QU._recordedVersion !== XU._renderableVersion) {
+                const UU = XU._renderableVersion;
+                QU._task.record(), QU._recordedVersion = UU
+              }
+              cU += AU._renderShadowMap(UU, QU)
+            }
+          }
+          return cU
+        },
+        dispose() {
+          cU._passes.length = 0;
+          for (const UU of zU) {
+            const XU = UU._shadowTaskState;
+            XU && (XU._task.dispose(), UU._shadowTaskState = void 0)
+          }
+          zU.clear()
+        }
+      };
+      return cU
     }
-    iM.r(rM), iM.d(rM, {
-      makePackMeshWorld: () => SM,
-      packMat4IntoF32WithOffset: () => OM
-    })
+    async function AU(UU, XU) {
+      UU._preloadPending = XU, await (UU._preloadShadowTask?.(XU)), UU._preloadPending === XU && (UU._preloadPending = void 0)
+    }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

@@ -1,93 +1,93 @@
 export const id = 71;
 export const ids = [71];
 export const modules = {
-  40219: (MM, rM, iM) => {
-    function OM(MM) {
-      return void 0 === MM ? void 0 : [MM[0], MM[1], MM[2]]
+  39994: (UU, XU, zU) => {
+    function cU(UU) {
+      return void 0 === UU ? void 0 : [UU[0], UU[1], UU[2]]
     }
 
-    function SM(MM) {
-      const rM = MM.particles;
+    function yU(UU) {
+      const XU = UU.particles;
       return {
         opts: {
-          texture: rM.texture,
-          vL: rM.vL,
-          minLifeTime: rM.minLifeTime,
-          maxLifeTime: rM.maxLifeTime,
-          minSize: rM.minSize,
-          maxSize: rM.maxSize,
-          minEmitPower: rM.minEmitPower,
-          maxEmitPower: rM.maxEmitPower,
-          emitRate: rM.emitRate,
-          gravity: OM(rM.gravity),
-          dir1: OM(rM.dir1),
-          dir2: OM(rM.dir2),
-          colorGradients: rM.colorGradients,
-          blendMode: rM.blendMode
+          texture: XU.texture,
+          xY: XU.xY,
+          minLifeTime: XU.minLifeTime,
+          maxLifeTime: XU.maxLifeTime,
+          minSize: XU.minSize,
+          maxSize: XU.maxSize,
+          minEmitPower: XU.minEmitPower,
+          maxEmitPower: XU.maxEmitPower,
+          emitRate: XU.emitRate,
+          gravity: cU(XU.gravity),
+          dir1: cU(XU.dir1),
+          dir2: cU(XU.dir2),
+          colorGradients: XU.colorGradients,
+          blendMode: XU.blendMode
         },
-        half: [rM.width / 2, rM.height / 2, rM.depth / 2]
+        half: [XU.width / 2, XU.height / 2, XU.depth / 2]
       }
     }
-    iM.d(rM, {
-      b: () => SM
+    zU.d(XU, {
+      c: () => yU
     })
   },
-  40186: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      h: () => QM,
-      k: () => nM,
-      m: () => aM
+  39954: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => QU,
+      g: () => DU,
+      k: () => oU,
+      m: () => AU
     });
-    var OM = iM(187);
-    const SM = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      jM = "PetRoot";
-    let aM = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      PM = SM;
+    var cU = zU(220);
+    const yU = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      QU = "PetRoot";
+    let AU = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      FU = yU;
     new Map, new Map;
 
-    function nM(MM) {
-      var rM;
-      return null !== (rM = (0, OM.d)(aM, MM)) && void 0 !== rM ? rM : null
+    function oU(UU) {
+      var XU;
+      return null !== (XU = (0, cU.b)(AU, UU)) && void 0 !== XU ? XU : null
     }
 
-    function QM(MM) {
-      var rM;
-      return null !== (rM = (0, OM.d)(PM, MM)) && void 0 !== rM ? rM : null
+    function DU(UU) {
+      var XU;
+      return null !== (XU = (0, cU.b)(FU, UU)) && void 0 !== XU ? XU : null
     }
   },
-  39673: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      g: () => jM
+  39453: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => yU,
+      g: () => QU
     });
-    const OM = new WeakMap;
+    const cU = new WeakMap;
 
-    function SM(MM, rM) {
-      return OM.set(MM, rM), MM
+    function yU(UU, XU) {
+      return cU.set(UU, XU), UU
     }
 
-    function jM(MM) {
-      var rM;
-      return null !== (rM = OM.get(MM)) && void 0 !== rM ? rM : null
+    function QU(UU) {
+      var XU;
+      return null !== (XU = cU.get(UU)) && void 0 !== XU ? XU : null
     }
   },
-  39689: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM
+  39472: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => FU
     });
-    var OM = iM(1229);
+    var cU = zU(1236);
 
-    function SM(MM) {
-      const rM = /(\d*\.?\d+)px/.exec(MM);
-      return rM ? Number(rM[1]) : null
+    function yU(UU) {
+      const XU = /(\d*\.?\d+)px/.exec(UU);
+      return XU ? Number(XU[1]) : null
     }
 
-    function jM(MM) {
-      return MM.split(/[\s,]+/).pop()
+    function QU(UU) {
+      return UU.split(/[\s,]+/).pop()
     }
-    let aM = !1;
-    const PM = {
+    let AU = !1;
+    const FU = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -98,612 +98,612 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(MM, rM, OM, PM, nM, QM) {
-        if (nM <= 0 || QM <= 0 || this.fontSize <= 0) return {
+      drawText: function(UU, XU, cU, FU, oU, DU) {
+        if (oU <= 0 || DU <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: zM,
-          fontVariant: LM,
-          fontWeight: mM,
-          fontSize: HM,
-          font: hM
-        } = this, JM = [zM, LM, mM, `${HM}px`, hM].filter(Boolean).join(" "), dM = [
-          [mM, `${HM}px`, jM(hM)].filter(Boolean).join(" "), `${HM}px sans-serif`
-        ], yM = MM.font, lM = function(MM, rM, iM) {
-          for (const OM of rM) {
-            MM.font = OM;
-            const rM = SM(MM.font),
-              aM = jM(OM);
-            if (null !== rM && Math.abs(rM - iM) <= .5 && MM.font.toLowerCase().includes(aM.toLowerCase())) return OM
+          fontStyle: EU,
+          fontVariant: YU,
+          fontWeight: NU,
+          fontSize: IU,
+          font: pU
+        } = this, aU = [EU, YU, NU, `${IU}px`, pU].filter(Boolean).join(" "), tU = [
+          [NU, `${IU}px`, QU(pU)].filter(Boolean).join(" "), `${IU}px sans-serif`
+        ], gU = UU.font, kU = function(UU, XU, zU) {
+          for (const cU of XU) {
+            UU.font = cU;
+            const XU = yU(UU.font),
+              AU = QU(cU);
+            if (null !== XU && Math.abs(XU - zU) <= .5 && UU.font.toLowerCase().includes(AU.toLowerCase())) return cU
           }
           return null
-        }(MM, [JM, ...dM], HM);
-        lM !== JM && function(MM, rM, OM) {
-          aM || (aM = !0, Promise.resolve().then((() => iM(1329))).then((iM => {
+        }(UU, [aU, ...tU], IU);
+        kU !== aU && function(UU, XU, cU) {
+          AU || (AU = !0, Promise.resolve().then((() => zU(1325))).then((zU => {
             let {
-              CJ: SM
-            } = iM;
-            SM(new Error("A canvas didn't take canvasTxt's font"), {
-              font: MM,
-              ML: rM,
-              drawnWith: null !== OM && void 0 !== OM ? OM : "the kept font, scaled"
+              Wa: yU
+            } = zU;
+            yU(new Error("A canvas didn't take canvasTxt's font"), {
+              font: UU,
+              cY: XU,
+              drawnWith: null !== cU && void 0 !== cU ? cU : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(JM, yM, lM);
-        const EM = SM(MM.font);
-        if (null === lM && null !== EM && EM > 0) {
-          const iM = HM / EM;
-          MM.save();
+        }(aU, gU, kU);
+        const GU = yU(UU.font);
+        if (null === kU && null !== GU && GU > 0) {
+          const zU = IU / GU;
+          UU.save();
           try {
-            return MM.scale(iM, iM), {
-              height: this.drawLines(MM, rM, OM / iM, PM / iM, nM / iM, QM / iM, EM).height * iM
+            return UU.scale(zU, zU), {
+              height: this.drawLines(UU, XU, cU / zU, FU / zU, oU / zU, DU / zU, GU).height * zU
             }
           } finally {
-            MM.restore()
+            UU.restore()
           }
         }
-        return this.drawLines(MM, rM, OM, PM, nM, QM, HM)
+        return this.drawLines(UU, XU, cU, FU, oU, DU, IU)
       },
-      drawLines: function(MM, rM, iM, SM, jM, aM, PM) {
-        const nM = iM + jM,
-          QM = SM + aM;
-        let zM, LM = SM + aM / 2 + PM / 2;
-        "right" === this.align ? (zM = nM, MM.textAlign = "right") : "left" === this.align ? (zM = iM, MM.textAlign = "left") : (zM = iM + jM / 2, MM.textAlign = "center");
-        for (const OM of rM) {
-          MM.measureText(OM).width >= jM && (rM = rM.replace(OM, ""))
+      drawLines: function(UU, XU, zU, yU, QU, AU, FU) {
+        const oU = zU + QU,
+          DU = yU + AU;
+        let EU, YU = yU + AU / 2 + FU / 2;
+        "right" === this.align ? (EU = oU, UU.textAlign = "right") : "left" === this.align ? (EU = zU, UU.textAlign = "left") : (EU = zU + QU / 2, UU.textAlign = "center");
+        for (const cU of XU) {
+          UU.measureText(cU).width >= QU && (XU = XU.replace(cU, ""))
         }
-        rM = (0, OM.U)(rM);
-        const mM = [],
-          HM = rM.split("\n"),
-          hM = this.justify ? MM.measureText("\u200a").width : 0;
-        HM.forEach((rM => {
-          let iM = MM.measureText(rM).width;
-          if (iM <= jM) mM.push(rM);
+        XU = (0, cU.L)(XU);
+        const NU = [],
+          IU = XU.split("\n"),
+          pU = this.justify ? UU.measureText("\u200a").width : 0;
+        IU.forEach((XU => {
+          let zU = UU.measureText(XU).width;
+          if (zU <= QU) NU.push(XU);
           else {
-            let OM = rM;
-            const SM = jM;
-            let aM, PM, nM;
-            for (iM = MM.measureText(OM).width; iM > SM;) {
-              for (aM = 0, PM = 0, nM = ""; PM < SM;) aM++, nM = OM.substr(0, aM), PM = MM.measureText(nM).width;
-              aM--, nM = nM.substr(0, aM);
-              const rM = aM;
-              if (" " !== OM.substr(aM, 1)) {
+            let cU = XU;
+            const yU = QU;
+            let AU, FU, oU;
+            for (zU = UU.measureText(cU).width; zU > yU;) {
+              for (AU = 0, FU = 0, oU = ""; FU < yU;) AU++, oU = cU.substr(0, AU), FU = UU.measureText(oU).width;
+              AU--, oU = oU.substr(0, AU);
+              const XU = AU;
+              if (" " !== cU.substr(AU, 1)) {
                 for (;
-                  " " !== OM.substr(aM, 1) && 0 !== aM;) aM--;
-                0 === aM && (aM = rM), nM = OM.substr(0, aM)
+                  " " !== cU.substr(AU, 1) && 0 !== AU;) AU--;
+                0 === AU && (AU = XU), oU = cU.substr(0, AU)
               }
-              nM = this.justify ? this.justifyLine(MM, nM, hM, "\u200a", jM) : nM, OM = OM.substr(aM), iM = MM.measureText(OM).width, mM.push(nM)
+              oU = this.justify ? this.justifyLine(UU, oU, pU, "\u200a", QU) : oU, cU = cU.substr(AU), zU = UU.measureText(cU).width, NU.push(oU)
             }
-            iM > 0 && mM.push(OM)
+            zU > 0 && NU.push(cU)
           }
         }));
-        const JM = this.lineHeight ? this.lineHeight : this.getTextHeight(MM, rM),
-          dM = JM * (mM.length - 1),
-          yM = dM / 2;
-        let lM = SM;
-        "top" === this.vAlign ? LM = SM + PM : "bottom" === this.vAlign ? (LM = QM - dM, lM = QM) : (lM = SM + aM / 2, LM -= yM), mM.forEach((rM => {
-          rM = rM.trim(), MM.fillText(rM, zM, LM), LM += JM
-        })), this.debug && (MM.lineWidth = 3, MM.strokeStyle = "#00909e", MM.strokeRect(iM, SM, jM, aM), MM.lineWidth = 2, MM.strokeStyle = "#f6d743", MM.beginPath(), MM.moveTo(zM, SM), MM.lineTo(zM, QM), MM.stroke(), MM.strokeStyle = "#ff6363", MM.beginPath(), MM.moveTo(iM, lM), MM.lineTo(nM, lM), MM.stroke());
+        const aU = this.lineHeight ? this.lineHeight : this.getTextHeight(UU, XU),
+          tU = aU * (NU.length - 1),
+          gU = tU / 2;
+        let kU = yU;
+        "top" === this.vAlign ? YU = yU + FU : "bottom" === this.vAlign ? (YU = DU - tU, kU = DU) : (kU = yU + AU / 2, YU -= gU), NU.forEach((XU => {
+          XU = XU.trim(), UU.fillText(XU, EU, YU), YU += aU
+        })), this.debug && (UU.lineWidth = 3, UU.strokeStyle = "#00909e", UU.strokeRect(zU, yU, QU, AU), UU.lineWidth = 2, UU.strokeStyle = "#f6d743", UU.beginPath(), UU.moveTo(EU, yU), UU.lineTo(EU, DU), UU.stroke(), UU.strokeStyle = "#ff6363", UU.beginPath(), UU.moveTo(zU, kU), UU.lineTo(oU, kU), UU.stroke());
         return {
-          height: dM + JM
+          height: tU + aU
         }
       },
-      getTextHeight: function(MM, rM) {
-        const iM = MM.textBaseline;
-        MM.textBaseline = "bottom";
+      getTextHeight: function(UU, XU) {
+        const zU = UU.textBaseline;
+        UU.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: OM
-        } = MM.measureText(rM);
-        return MM.textBaseline = iM, OM
+          actualBoundingBoxAscent: cU
+        } = UU.measureText(XU);
+        return UU.textBaseline = zU, cU
       },
-      justifyLine: function(MM, rM, iM, OM, SM) {
-        const jM = rM.trim(),
-          aM = MM.measureText(jM).width,
-          PM = jM.split(/\s+/).length - 1,
-          nM = Math.floor((SM - aM) / iM);
-        if (PM <= 0 || nM <= 0) return jM;
-        const QM = Math.floor(nM / PM);
-        let zM = nM - PM * QM,
-          LM = [];
-        for (let mM = 0; mM < QM; mM++) LM.push(OM);
-        LM = LM.join("");
-        return jM.replace(/\s+/g, (MM => {
-          const rM = zM > 0 ? LM + OM : LM;
-          return zM--, MM + rM
+      justifyLine: function(UU, XU, zU, cU, yU) {
+        const QU = XU.trim(),
+          AU = UU.measureText(QU).width,
+          FU = QU.split(/\s+/).length - 1,
+          oU = Math.floor((yU - AU) / zU);
+        if (FU <= 0 || oU <= 0) return QU;
+        const DU = Math.floor(oU / FU);
+        let EU = oU - FU * DU,
+          YU = [];
+        for (let NU = 0; NU < DU; NU++) YU.push(cU);
+        YU = YU.join("");
+        return QU.replace(/\s+/g, (UU => {
+          const XU = EU > 0 ? YU + cU : YU;
+          return EU--, UU + XU
         }))
       }
     }
   },
-  39691: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => JM,
-      d: () => hM,
-      f: () => mM,
-      j: () => zM,
-      k: () => LM
+  39481: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => aU,
+      g: () => pU,
+      j: () => NU,
+      k: () => EU,
+      l: () => YU
     });
-    var OM = iM(4577),
-      SM = iM(332);
-    const jM = 1024,
-      aM = 1536,
-      PM = 2 * OM.j + 1,
-      nM = new Intl.NumberFormat("en", {
+    var cU = zU(4608),
+      yU = zU(344);
+    const QU = 1024,
+      AU = 1536,
+      FU = 2 * cU.j + 1,
+      oU = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      QM = 1.5;
+      DU = 1.5;
 
-    function zM(MM, rM, iM) {
-      if ("string" !== typeof MM) return rM;
+    function EU(UU, XU, zU) {
+      if ("string" !== typeof UU) return XU;
       try {
-        const iM = JSON.parse(MM);
-        return iM && "object" === typeof iM ? iM : rM
-      } catch (OM) {
-        return void 0 !== iM && console.error(`Couldn't parse ${iM}`, OM), rM
+        const zU = JSON.parse(UU);
+        return zU && "object" === typeof zU ? zU : XU
+      } catch (cU) {
+        return void 0 !== zU && console.error(`Couldn't parse ${zU}`, cU), XU
       }
     }
 
-    function LM(MM) {
-      return zM(MM, null, "a leaderboard's rows")
+    function YU(UU) {
+      return EU(UU, null, "a leaderboard's rows")
     }
 
-    function mM(MM, rM) {
-      var iM, OM;
-      return null !== rM && void 0 !== rM ? rM : {
-        status: null !== (iM = MM.status) && void 0 !== iM ? iM : "loading",
-        entries: null !== (OM = MM.entries) && void 0 !== OM ? OM : []
+    function NU(UU, XU) {
+      var zU, cU;
+      return null !== XU && void 0 !== XU ? XU : {
+        status: null !== (zU = UU.status) && void 0 !== zU ? zU : "loading",
+        entries: null !== (cU = UU.entries) && void 0 !== cU ? cU : []
       }
     }
 
-    function HM(MM, rM) {
-      return "number" === typeof MM && Number.isFinite(MM) && MM > 0 ? MM : rM
+    function IU(UU, XU) {
+      return "number" === typeof UU && Number.isFinite(UU) && UU > 0 ? UU : XU
     }
 
-    function hM(MM, rM) {
-      const iM = HM(MM.size, 1);
-      let OM = HM(MM.width, HM(2.5 * iM, 2.5)),
-        SM = HM(MM.height, HM(3.75 * iM, 3.75));
-      Number.isFinite(jM * SM / OM) && Number.isFinite(aM * OM / SM) || (OM = 2.5, SM = 3.75);
-      const PM = SM / OM,
-        nM = Math.max(1, Math.min(jM, rM / PM));
+    function pU(UU, XU) {
+      const zU = IU(UU.size, 1);
+      let cU = IU(UU.width, IU(2.5 * zU, 2.5)),
+        yU = IU(UU.height, IU(3.75 * zU, 3.75));
+      Number.isFinite(QU * yU / cU) && Number.isFinite(AU * cU / yU) || (cU = 2.5, yU = 3.75);
+      const FU = yU / cU,
+        oU = Math.max(1, Math.min(QU, XU / FU));
       return {
-        width: OM,
-        height: SM,
-        layoutWidth: Math.max(jM, aM / PM),
-        layoutHeight: Math.max(aM, jM * PM),
-        pixelWidth: Math.round(nM),
-        pixelHeight: Math.round(Math.max(1, Math.min(rM, nM * PM)))
+        width: cU,
+        height: yU,
+        layoutWidth: Math.max(QU, AU / FU),
+        layoutHeight: Math.max(AU, QU * FU),
+        pixelWidth: Math.round(oU),
+        pixelHeight: Math.round(Math.max(1, Math.min(XU, oU * FU)))
       }
     }
 
-    function JM(MM, rM, iM, aM, zM, LM) {
-      MM.setTransform(1, 0, 0, 1, 0, 0), MM.fillStyle = SM.L.defaultNameTagBackground, MM.fillRect(0, 0, rM, iM), MM.scale(rM / aM.layoutWidth, iM / aM.layoutHeight), MM.translate((aM.layoutWidth - jM) / 2, 0),
-        function(MM, rM, iM, jM) {
-          var aM, zM, LM, mM;
+    function aU(UU, XU, zU, AU, EU, YU) {
+      UU.setTransform(1, 0, 0, 1, 0, 0), UU.fillStyle = yU.H.defaultNameTagBackground, UU.fillRect(0, 0, XU, zU), UU.scale(XU / AU.layoutWidth, zU / AU.layoutHeight), UU.translate((AU.layoutWidth - QU) / 2, 0),
+        function(UU, XU, zU, QU) {
+          var AU, EU, YU, NU;
           const {
-            top: HM,
-            around: hM,
-            showPlayerText: JM,
-            localPlayerDbId: lM
-          } = iM, {
-            whiteUiText: EM,
-            grayUiText: UM,
-            yellowUiText: GM
-          } = SM.L;
-          MM.textBaseline = "middle";
-          const CM = function(rM, iM, OM, SM, jM, aM) {
-              let PM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              MM.font = `bold ${SM}px 'Jetbrains Mono', monospace`, MM.fillStyle = jM, MM.textAlign = PM;
-              let nM = rM.replace(/[\r\n\t]/g, " ");
-              if (MM.measureText(nM).width > aM) {
-                for (; nM.length > 0 && MM.measureText(`${nM}\u2026`).width > aM;) nM = nM.slice(0, -1);
-                nM += "\u2026"
+            top: IU,
+            around: pU,
+            showPlayerText: aU,
+            localPlayerDbId: kU
+          } = zU, {
+            whiteUiText: GU,
+            grayUiText: BU,
+            yellowUiText: ZU
+          } = yU.H;
+          UU.textBaseline = "middle";
+          const RU = function(XU, zU, cU, yU, QU, AU) {
+              let FU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              UU.font = `bold ${yU}px 'Jetbrains Mono', monospace`, UU.fillStyle = QU, UU.textAlign = FU;
+              let oU = XU.replace(/[\r\n\t]/g, " ");
+              if (UU.measureText(oU).width > AU) {
+                for (; oU.length > 0 && UU.measureText(`${oU}\u2026`).width > AU;) oU = oU.slice(0, -1);
+                oU += "\u2026"
               }
-              MM.fillText(nM, iM, OM)
+              UU.fillText(oU, zU, cU)
             },
-            eM = rM => {
-              MM.fillStyle = EM, MM.globalAlpha = .15, MM.fillRect(24, rM, 976, 2), MM.globalAlpha = 1
+            PU = XU => {
+              UU.fillStyle = GU, UU.globalAlpha = .15, UU.fillRect(24, XU, 976, 2), UU.globalAlpha = 1
             },
-            bM = null === lM ? null : (0, SM.qc)(lM),
-            wM = MM => null !== bM && MM.playerHash === bM,
-            tM = dM(HM.entries, OM.l),
-            gM = "ready" === HM.status && tM.length > 0,
-            uM = null === hM ? [] : dM(hM.entries, PM),
-            RM = tM.some(wM),
-            pM = null === hM ? null : function(MM) {
-              const rM = MM;
-              if (!rM || !Number.isFinite(rM.rank) || !Number.isFinite(rM.tied) || !Number.isFinite(rM.total)) return null;
-              return rM
-            }(hM.standing),
-            WM = uM.find(wM),
-            sM = tM.find(wM),
-            DM = null === pM || void 0 === WM ? null : {
-              value: WM.value,
-              rank: pM.rank
+            WU = null === kU ? null : (0, yU.qc)(kU),
+            dU = UU => null !== WU && UU.playerHash === WU,
+            LU = tU(IU.entries, cU.l),
+            eU = "ready" === IU.status && LU.length > 0,
+            CU = null === pU ? [] : tU(pU.entries, FU),
+            wU = LU.some(dU),
+            qU = null === pU ? null : function(UU) {
+              const XU = UU;
+              if (!XU || !Number.isFinite(XU.rank) || !Number.isFinite(XU.tied) || !Number.isFinite(XU.total)) return null;
+              return XU
+            }(pU.standing),
+            OU = CU.find(dU),
+            SU = LU.find(dU),
+            rU = null === qU || void 0 === OU ? null : {
+              value: OU.value,
+              rank: qU.rank
             },
-            kM = yM(tM, void 0 === sM || sM.value === (null === DM || void 0 === DM ? void 0 : DM.value) ? DM : null),
-            ZM = yM(uM, DM),
-            oM = (MM, rM) => {
-              const iM = MM.findIndex(wM);
-              return iM >= 0 ? rM[iM] : null
+            uU = gU(LU, void 0 === SU || SU.value === (null === rU || void 0 === rU ? void 0 : rU.value) ? rU : null),
+            fU = gU(CU, rU),
+            iU = (UU, XU) => {
+              const zU = UU.findIndex(dU);
+              return zU >= 0 ? XU[zU] : null
             },
-            fM = null !== (aM = null !== (zM = null === pM || void 0 === pM ? void 0 : pM.rank) && void 0 !== zM ? zM : oM(uM, ZM)) && void 0 !== aM ? aM : oM(tM, kM);
-          MM.font = "bold 34px 'Jetbrains Mono', monospace";
-          const YM = [...gM ? kM : [], ...RM ? [] : ZM],
-            NM = Math.min(280, Math.max(0, ...YM.map((rM => MM.measureText(nM.format(rM)).width)))),
-            AM = NM <= 80,
-            xM = AM ? 80 : 32 + NM,
-            vM = AM ? 148 : xM + 28,
-            FM = 660 - vM;
-          CM(`TOP ${OM.l}  /  ALL TIME`, 24, 52, 28, UM, 976), CM(JM ? String(null !== (LM = rM.title) && void 0 !== LM ? LM : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, EM, 976), CM("RANK", 32, 174, 28, UM, vM - 40), CM("PLAYER", vM, 174, 28, UM, FM), CM(JM ? String(null !== (mM = rM.scoreLabel) && void 0 !== mM ? mM : "Score").slice(0, 24) : "Score", 992, 174, 28, UM, 304, "right"), eM(202);
-          const BM = (jM - 232) / (OM.l + QM + PM),
-            XM = 208 + OM.l * BM,
-            IM = XM + QM * BM,
-            KM = (rM, iM, OM, SM) => {
-              const jM = wM(rM);
-              MM.fillStyle = jM ? GM : EM, MM.globalAlpha = jM ? .15 : SM ? .035 : 0, MM.fillRect(24, OM - BM / 2 + 1, 976, BM - 2), MM.globalAlpha = 1;
-              const aM = jM ? GM : EM;
-              CM(nM.format(iM), xM, OM, 34, aM, AM ? 80 : NM, AM ? "center" : "right"), CM(JM ? String(rM.name).slice(0, 64) : "Player", vM, OM, 34, aM, FM);
-              const PM = nM.format(rM.value);
-              CM(MM.measureText(PM).width > 304 ? rM.value.toExponential(6) : PM, 992, OM, 34, aM, 304, "right")
+            HU = null !== (AU = null !== (EU = null === qU || void 0 === qU ? void 0 : qU.rank) && void 0 !== EU ? EU : iU(CU, fU)) && void 0 !== AU ? AU : iU(LU, uU);
+          UU.font = "bold 34px 'Jetbrains Mono', monospace";
+          const MU = [...eU ? uU : [], ...wU ? [] : fU],
+            vU = Math.min(280, Math.max(0, ...MU.map((XU => UU.measureText(oU.format(XU)).width)))),
+            VU = vU <= 80,
+            sU = VU ? 80 : 32 + vU,
+            nU = VU ? 148 : sU + 28,
+            mU = 660 - nU;
+          RU(`TOP ${cU.l}  /  ALL TIME`, 24, 52, 28, BU, 976), RU(aU ? String(null !== (YU = XU.title) && void 0 !== YU ? YU : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, GU, 976), RU("RANK", 32, 174, 28, BU, nU - 40), RU("PLAYER", nU, 174, 28, BU, mU), RU(aU ? String(null !== (NU = XU.scoreLabel) && void 0 !== NU ? NU : "Score").slice(0, 24) : "Score", 992, 174, 28, BU, 304, "right"), PU(202);
+          const lU = (QU - 232) / (cU.l + DU + FU),
+            xU = 208 + cU.l * lU,
+            JU = xU + DU * lU,
+            jU = (XU, zU, cU, yU) => {
+              const QU = dU(XU);
+              UU.fillStyle = QU ? ZU : GU, UU.globalAlpha = QU ? .15 : yU ? .035 : 0, UU.fillRect(24, cU - lU / 2 + 1, 976, lU - 2), UU.globalAlpha = 1;
+              const AU = QU ? ZU : GU;
+              RU(oU.format(zU), sU, cU, 34, AU, VU ? 80 : vU, VU ? "center" : "right"), RU(aU ? String(XU.name).slice(0, 64) : "Player", nU, cU, 34, AU, mU);
+              const FU = oU.format(XU.value);
+              RU(UU.measureText(FU).width > 304 ? XU.value.toExponential(6) : FU, 992, cU, 34, AU, 304, "right")
             };
-          if (gM)
-            for (const [OM, SM] of tM.entries()) KM(SM, kM[OM], 208 + (OM + .5) * BM, OM % 2 === 0);
+          if (eU)
+            for (const [cU, yU] of LU.entries()) jU(yU, uU[cU], 208 + (cU + .5) * lU, cU % 2 === 0);
           else {
-            const MM = "error" === HM.status,
-              rM = MM ? "Couldn't load leaderboard" : "ready" === HM.status ? "No scores yet" : "Loading leaderboard\u2026",
-              iM = MM ? "Trying again shortly" : "ready" === HM.status ? "Be the first on the board!" : "Fetching the top players",
-              OM = (208 + XM) / 2;
-            CM(rM, 512, OM - 28, 40, MM ? SM.L.redUiText : EM, 960, "center"), CM(iM, 512, OM + 27, 30, UM, 960, "center")
+            const UU = "error" === IU.status,
+              XU = UU ? "Couldn't load leaderboard" : "ready" === IU.status ? "No scores yet" : "Loading leaderboard\u2026",
+              zU = UU ? "Trying again shortly" : "ready" === IU.status ? "Be the first on the board!" : "Fetching the top players",
+              cU = (208 + xU) / 2;
+            RU(XU, 512, cU - 28, 40, UU ? yU.H.redUiText : GU, 960, "center"), RU(zU, 512, cU + 27, 30, BU, 960, "center")
           }
-          const qM = XM + QM * BM / 2;
-          if (null === fM) eM(qM);
+          const KU = xU + DU * lU / 2;
+          if (null === HU) PU(KU);
           else {
-            const rM = null === pM ? 0 : pM.tied - 1,
-              iM = `YOUR RANK #${nM.format(fM)}${null===pM?"":` of ${nM.format(pM.total)}`}`;
-            MM.font = "bold 36px 'Jetbrains Mono', monospace";
-            const OM = Math.max(20, Math.min(36, Math.floor(34560 / MM.measureText(iM).width)));
-            CM(iM, 512, qM - (rM > 0 ? 15 : 0), OM, GM, 960, "center"), rM > 0 && CM(`Tied with ${nM.format(rM)} other${1===rM?"":"s"}`, 512, qM + 24, 24, UM, 960, "center")
+            const XU = null === qU ? 0 : qU.tied - 1,
+              zU = `YOUR RANK #${oU.format(HU)}${null===qU?"":` of ${oU.format(qU.total)}`}`;
+            UU.font = "bold 36px 'Jetbrains Mono', monospace";
+            const cU = Math.max(20, Math.min(36, Math.floor(34560 / UU.measureText(zU).width)));
+            RU(zU, 512, KU - (XU > 0 ? 15 : 0), cU, ZU, 960, "center"), XU > 0 && RU(`Tied with ${oU.format(XU)} other${1===XU?"":"s"}`, 512, KU + 24, 24, BU, 960, "center")
           }
-          if (null === hM) return;
-          const TM = IM + PM * BM / 2;
-          if (RM) CM(`You're in the top ${OM.l}!`, 512, TM, 40, GM, 960, "center");
-          else if (0 === uM.length) CM("You're not on this board yet", 512, TM, 34, UM, 960, "center");
+          if (null === pU) return;
+          const bU = JU + FU * lU / 2;
+          if (wU) RU(`You're in the top ${cU.l}!`, 512, bU, 40, ZU, 960, "center");
+          else if (0 === CU.length) RU("You're not on this board yet", 512, bU, 34, BU, 960, "center");
           else
-            for (const [OM, SM] of uM.entries()) KM(SM, ZM[OM], IM + (OM + .5) * BM, OM % 2 === 0)
-        }(MM, zM, LM, aM.layoutHeight)
+            for (const [cU, yU] of CU.entries()) jU(yU, fU[cU], JU + (cU + .5) * lU, cU % 2 === 0)
+        }(UU, EU, YU, AU.layoutHeight)
     }
 
-    function dM(MM, rM) {
-      return Array.isArray(MM) ? MM.slice(0, rM).filter((MM => MM && Number.isFinite(MM.rank) && Number.isFinite(MM.value))) : []
+    function tU(UU, XU) {
+      return Array.isArray(UU) ? UU.slice(0, XU).filter((UU => UU && Number.isFinite(UU.rank) && Number.isFinite(UU.value))) : []
     }
 
-    function yM(MM, rM) {
-      const iM = [];
-      let OM = !1;
-      return MM.forEach(((SM, jM) => {
-        if (null !== rM && SM.value === rM.value) return void iM.push(rM.rank);
-        const aM = jM > 0 && SM.value === MM[jM - 1].value;
-        aM || (OM = 0 === jM && 1 !== SM.rank), iM.push(aM && !OM ? iM[jM - 1] : SM.rank)
-      })), iM
+    function gU(UU, XU) {
+      const zU = [];
+      let cU = !1;
+      return UU.forEach(((yU, QU) => {
+        if (null !== XU && yU.value === XU.value) return void zU.push(XU.rank);
+        const AU = QU > 0 && yU.value === UU[QU - 1].value;
+        AU || (cU = 0 === QU && 1 !== yU.rank), zU.push(AU && !cU ? zU[QU - 1] : yU.rank)
+      })), zU
     }
   },
-  39922: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => SM,
-      g: () => jM
+  39697: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => yU,
+      d: () => QU
     });
-    const OM = 32;
+    const cU = 32;
 
-    function SM(MM) {
-      return Array.from(MM).length
+    function yU(UU) {
+      return Array.from(UU).length
     }
 
-    function jM(MM) {
-      const rM = [""];
-      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        SM = "";
-      const jM = () => {
-        rM.push(""), iM = 0, SM = ""
+    function QU(UU) {
+      const XU = [""];
+      let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        yU = "";
+      const QU = () => {
+        XU.push(""), zU = 0, yU = ""
       };
-      for (const aM of MM.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(aM)) jM();
-        else if (/^\s+$/.test(aM)) SM += aM;
-      else if (aM.length > 0) {
-        const MM = Array.from(aM);
-        iM > 0 && iM + SM.length + MM.length > OM && jM(), rM[rM.length - 1] += SM, iM += SM.length, SM = "";
-        for (const SM of MM) iM >= OM && jM(), rM[rM.length - 1] += SM, iM++
+      for (const AU of UU.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(AU)) QU();
+        else if (/^\s+$/.test(AU)) yU += AU;
+      else if (AU.length > 0) {
+        const UU = Array.from(AU);
+        zU > 0 && zU + yU.length + UU.length > cU && QU(), XU[XU.length - 1] += yU, zU += yU.length, yU = "";
+        for (const yU of UU) zU >= cU && QU(), XU[XU.length - 1] += yU, zU++
       }
-      return rM[rM.length - 1] += SM, rM
+      return XU[XU.length - 1] += yU, XU
     }
   },
-  42291: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM
+  42292: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => QU
     });
-    const OM = 4e5,
-      SM = 2;
+    const cU = 4e5,
+      yU = 2;
 
-    function jM(MM, rM, iM) {
-      let [jM, aM] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [MM, rM], PM = Math.min(Number.isFinite(iM) && iM > 0 ? iM : 1, SM);
-      const nM = Math.max(0, jM, MM) * Math.max(0, aM, rM) * PM * PM;
-      return nM > OM && (PM *= Math.sqrt(OM / nM)), [Math.max(1, Math.floor(Math.max(0, MM) * PM)), Math.max(1, Math.floor(Math.max(0, rM) * PM))]
+    function QU(UU, XU, zU) {
+      let [QU, AU] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [UU, XU], FU = Math.min(Number.isFinite(zU) && zU > 0 ? zU : 1, yU);
+      const oU = Math.max(0, QU, UU) * Math.max(0, AU, XU) * FU * FU;
+      return oU > cU && (FU *= Math.sqrt(cU / oU)), [Math.max(1, Math.floor(Math.max(0, UU) * FU)), Math.max(1, Math.floor(Math.max(0, XU) * FU))]
     }
   },
-  53732: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      WasmPreviewHost: () => sr,
-      pageBuiltInAnimationPack: () => mM,
-      pagePreviews: () => jr,
-      previewModule: () => TM
+  53727: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      WasmPreviewHost: () => SX,
+      pageBuiltInAnimationPack: () => NU,
+      pagePreviews: () => QX,
+      previewModule: () => bU
     });
-    var OM = iM(3188),
-      SM = iM(632);
-    const jM = "[bloxd-wasm-client]";
+    var cU = zU(3176),
+      yU = zU(654);
+    const QU = "[bloxd-wasm-client]";
 
-    function aM(MM) {
-      const rM = {
+    function AU(UU) {
+      const XU = {
         wasm: "unknown",
-        client: String(SM.c)
+        client: String(yU.d)
       };
       try {
-        var iM;
-        rM.wasm = null !== (iM = null === MM || void 0 === MM ? void 0 : MM.NL()) && void 0 !== iM ? iM : rM.wasm
+        var zU;
+        XU.wasm = null !== (zU = null === UU || void 0 === UU ? void 0 : UU.sY()) && void 0 !== zU ? zU : XU.wasm
       } catch {}
-      return rM
+      return XU
     }
-    async function PM(MM) {
-      if (MM.length < 2 || 31 !== MM[0] || 139 !== MM[1]) return MM;
+    async function FU(UU) {
+      if (UU.length < 2 || 31 !== UU[0] || 139 !== UU[1]) return UU;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: rM
-        } = await Promise.resolve().then((() => iM(3139)));
-        return rM(MM)
+          ungzip: XU
+        } = await Promise.resolve().then((() => zU(3116)));
+        return XU(UU)
       }
-      const rM = new Blob([MM]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(rM).arrayBuffer())
+      const XU = new Blob([UU]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(XU).arrayBuffer())
     }
 
-    function nM(MM, rM, OM, SM) {
-      Promise.resolve().then((() => iM(41833))).then((iM => {
+    function oU(UU, XU, cU, yU) {
+      Promise.resolve().then((() => zU(41840))).then((zU => {
         let {
-          reportDataLoadFailure: jM
-        } = iM;
-        jM(MM, rM, OM, SM)
-      }), (rM => {
-        console.warn(`${jM} ${MM} didn't load, and the report couldn't be sent`, OM.error, rM)
+          reportDataLoadFailure: QU
+        } = zU;
+        QU(UU, XU, cU, yU)
+      }), (XU => {
+        console.warn(`${QU} ${UU} didn't load, and the report couldn't be sent`, cU.error, XU)
       }))
     }
-    const QM = [3e4, 12e4, 3e5];
-    class zM {
-      constructor(MM) {
-        this.deps = MM, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((MM => {
-          this.resolveSet = MM
+    const DU = [3e4, 12e4, 3e5];
+    class EU {
+      constructor(UU) {
+        this.deps = UU, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((UU => {
+          this.resolveSet = UU
         }))
       }
-      provide(MM) {
-        return this.loading ??= this.load(MM), this.loading
+      provide(UU) {
+        return this.loading ??= this.load(UU), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(MM) {
-        const rM = aM(MM),
-          iM = await async function(MM, rM) {
-            let iM;
+      async load(UU) {
+        const XU = AU(UU),
+          zU = await async function(UU, XU) {
+            let zU;
             try {
-              iM = await MM()
-            } catch (OM) {
+              zU = await UU()
+            } catch (cU) {
               return {
                 stage: "fetch",
-                error: OM
+                error: cU
               }
             }
             try {
-              return rM(iM) ? null : {
+              return XU(zU) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (OM) {
+            } catch (cU) {
               return {
                 stage: "decode",
-                error: OM
+                error: cU
               }
             }
-          }((() => this.deps.fetch()), (rM => {
-            const iM = MM.bjM(rM);
-            return iM && this.resolveSet(rM), iM
+          }((() => this.deps.fetch()), (XU => {
+            const zU = UU.EAU(XU);
+            return zU && this.resolveSet(XU), zU
           }));
-        if (null !== iM) {
-          if ("fetch" === iM.stage) {
+        if (null !== zU) {
+          if ("fetch" === zU.stage) {
             this.loading = null;
-            const rM = QM[this.retries++];
-            void 0 !== rM && this.deps.later((() => {
-              this.provide(MM)
-            }), rM)
+            const XU = DU[this.retries++];
+            void 0 !== XU && this.deps.later((() => {
+              this.provide(UU)
+            }), XU)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(iM, rM))
+          this.reported || (this.reported = !0, this.deps.onFailed(zU, XU))
         }
       }
     }
-    let LM = null;
+    let YU = null;
 
-    function mM() {
-      return LM ??= new zM({
-        fetch: async () => PM(await (0, OM.F)(HM(), {
+    function NU() {
+      return YU ??= new EU({
+        fetch: async () => FU(await (0, cU.Q)(IU(), {
           priority: "low"
         })),
-        onFailed: (MM, rM) => {
-          nM("builtInAnimations", HM(), MM, rM)
+        onFailed: (UU, XU) => {
+          oU("builtInAnimations", IU(), UU, XU)
         },
-        later: (MM, rM) => {
-          setTimeout(MM, rM)
+        later: (UU, XU) => {
+          setTimeout(UU, XU)
         }
-      }), LM
+      }), YU
     }
 
-    function HM() {
-      return iM(53739)
+    function IU() {
+      return zU(53736)
     }
-    var hM = iM(3185),
-      JM = iM(1202),
-      dM = iM(310),
-      yM = iM(308),
-      lM = iM(656),
-      EM = iM(5198),
-      UM = iM(41798),
-      GM = iM(41819),
-      CM = iM(42039),
-      eM = (iM(41862), iM(41882)),
-      bM = iM(41884),
-      wM = iM(41888),
-      tM = iM(41809),
-      gM = iM(42055),
-      uM = iM(42061),
-      RM = iM(41793),
-      pM = iM(42076),
-      WM = iM(41932),
-      sM = iM(41922),
-      DM = iM(41984),
-      kM = iM(42045),
-      ZM = iM(53661),
-      oM = iM(37229),
-      fM = iM(4088),
-      YM = iM(42291);
-    const NM = "[bloxd-previews]",
-      AM = 0,
-      xM = 1,
-      vM = 2,
-      FM = 1,
-      BM = 2,
-      XM = 3,
-      IM = 0,
-      KM = 1,
-      qM = 2;
+    var pU = zU(3169),
+      aU = zU(1203),
+      tU = zU(318),
+      gU = zU(316),
+      kU = zU(687),
+      GU = zU(5318),
+      BU = zU(41795),
+      ZU = zU(41823),
+      RU = zU(42038),
+      PU = (zU(41865), zU(41877)),
+      WU = zU(41886),
+      dU = zU(41889),
+      LU = zU(41808),
+      eU = zU(42068),
+      CU = zU(42070),
+      wU = zU(41786),
+      qU = zU(42084),
+      OU = zU(41938),
+      SU = zU(41927),
+      rU = zU(41979),
+      uU = zU(42053),
+      fU = zU(53654),
+      iU = zU(36981),
+      HU = zU(4091),
+      MU = zU(42292);
+    const vU = "[bloxd-previews]",
+      VU = 0,
+      sU = 1,
+      nU = 2,
+      mU = 1,
+      lU = 2,
+      xU = 3,
+      JU = 0,
+      jU = 1,
+      KU = 2;
 
-    function TM(MM) {
-      const rM = MM,
-        iM = (0, UM.P)(MM),
-        OM = (0, UM.k)(MM);
-      return null !== iM && null !== OM && "function" === typeof rM.GjM && "function" === typeof rM.CjM && "function" === typeof rM.ejM ? rM : null
+    function bU(UU) {
+      const XU = UU,
+        zU = (0, BU.Y)(UU),
+        cU = (0, BU.p)(UU);
+      return null !== zU && null !== cU && "function" === typeof XU.FAU && "function" === typeof XU.oAU && "function" === typeof XU.DAU ? XU : null
     }
 
-    function VM() {
-      return iM(53745)
+    function TU() {
+      return zU(53738)
     }
-    async function cM(MM, rM, OM) {
-      var SM;
-      let jM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === MM && (0, RM.y)();
-      const PM = await (0, RM.U)();
-      if (null === PM || (0, UM.l)(PM) || (0, RM.e)()) return;
-      const nM = "webgpu" === PM.backend;
-      if (!nM && "lost" !== MM) return;
-      const QM = nM && (0, yM.m)(PM.adapter, null !== OM && void 0 !== OM ? OM : null, "lost" === MM, jM),
-        zM = null !== (SM = "lost" === MM ? (0, GM.o)((0, hM.R)() ? (0, UM.P)((0, hM.E)()) : null) : void 0) && void 0 !== SM ? SM : rM,
-        LM = nM ? (0, UM.X)(MM, void 0, (0, GM.c)(zM)) : null;
-      if (null === LM) {
-        nM || (0, lM.C)(), (0, RM.s)();
+    async function hU(UU, XU, cU) {
+      var yU;
+      let QU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === UU && (0, wU.u)();
+      const FU = await (0, wU.N)();
+      if (null === FU || (0, BU.r)(FU) || (0, wU.c)()) return;
+      const oU = "webgpu" === FU.backend;
+      if (!oU && "lost" !== UU) return;
+      const DU = oU && (0, gU.o)(FU.adapter, null !== cU && void 0 !== cU ? cU : null, "lost" === UU, QU),
+        EU = null !== (yU = "lost" === UU ? (0, ZU.j)((0, pU.T)() ? (0, BU.Y)((0, pU.E)()) : null) : void 0) && void 0 !== yU ? yU : XU,
+        YU = oU ? (0, BU.lb)(UU, void 0, (0, ZU.c)(EU)) : null;
+      if (null === YU) {
+        oU || (0, kU.y)(), (0, wU.n)();
         try {
-          await async function(MM, rM, OM, SM, jM) {
+          await async function(UU, XU, cU, yU, QU) {
             let {
-              restoreLost: PM,
-              adapterRemembered: nM
-            } = jM;
-            const QM = (0, hM.R)(),
+              restoreLost: FU,
+              adapterRemembered: oU
+            } = QU;
+            const DU = (0, pU.T)(),
               {
-                flushCrashReports: zM,
-                reportRenderReload: LM
-              } = await Promise.resolve().then((() => iM(41833)));
-            LM(MM.backend, SM, aM(QM ? (0, hM.E)() : null), {
+                flushCrashReports: EU,
+                reportRenderReload: YU
+              } = await Promise.resolve().then((() => zU(41840)));
+            YU(UU.backend, yU, AU(DU ? (0, pU.E)() : null), {
               from: "home",
-              cause: rM,
-              restoreLost: PM,
-              adapterRemembered: nM,
-              ...Mr(MM, rM, OM)
-            }), await zM(WM.c)
-          }(PM, MM, zM, null !== OM && void 0 !== OM ? OM : "start_failed" === MM ? 0 : 1, {
-            restoreLost: jM,
-            adapterRemembered: QM
+              cause: XU,
+              restoreLost: FU,
+              adapterRemembered: oU,
+              ...UX(UU, XU, cU)
+            }), await EU(OU.b)
+          }(FU, UU, EU, null !== cU && void 0 !== cU ? cU : "start_failed" === UU ? 0 : 1, {
+            restoreLost: QU,
+            adapterRemembered: DU
           })
-        } catch (HM) {
-          console.warn(`${NM} ${PM.backend} failed at home (${MM}), and its report couldn't be sent`, HM)
-        }(0, WM.k)()
+        } catch (IU) {
+          console.warn(`${vU} ${FU.backend} failed at home (${UU}), and its report couldn't be sent`, IU)
+        }(0, OU.l)()
       } else {
-        var mM;
-        const rM = Mr(PM, MM, zM),
-          OM = `WebGPU failed at home (${MM}${void 0===rM.error?"":`: ${rM.error instanceof Error?rM.error.message:(0,oM.k)(rM.error)}`}) and ${LM}`;
-        console.warn(`${NM} ${OM}: the previews stop`, null !== (mM = rM.error) && void 0 !== mM ? mM : ""), (0, RM.u)(OM);
+        var NU;
+        const XU = UX(FU, UU, EU),
+          cU = `WebGPU failed at home (${UU}${void 0===XU.error?"":`: ${XU.error instanceof Error?XU.error.message:(0,iU.l)(XU.error)}`}) and ${YU}`;
+        console.warn(`${vU} ${cU}: the previews stop`, null !== (NU = XU.error) && void 0 !== NU ? NU : ""), (0, wU.p)(cU);
         try {
           const {
-            countRenderLost: OM
-          } = await Promise.resolve().then((() => iM(41833)));
-          OM(MM, rM.error, rM.context)
-        } catch (JM) {
-          console.warn(`${NM} WebGPU failed at home (${MM}), and its count couldn't be sent`, JM)
+            countRenderLost: cU
+          } = await Promise.resolve().then((() => zU(41840)));
+          cU(UU, XU.error, XU.context)
+        } catch (aU) {
+          console.warn(`${vU} WebGPU failed at home (${UU}), and its count couldn't be sent`, aU)
         }
       }
     }
 
-    function Mr(MM, rM, iM) {
+    function UX(UU, XU, zU) {
       let {
-        adapter: OM
-      } = MM;
+        adapter: cU
+      } = UU;
       return {
-        error: iM,
+        error: zU,
         context: {
-          adapter: OM,
-          boundAtMs: "start_failed" === rM ? null : (0, RM.O)(),
-          indirectHangs: (0, RM.C)(),
-          restoresSkipped: (0, RM.R)()
+          adapter: cU,
+          boundAtMs: "start_failed" === XU ? null : (0, wU.I)(),
+          indirectHangs: (0, wU.v)(),
+          restoresSkipped: (0, wU.M)()
         }
       }
     }
-    async function rr() {
-      if (!(0, hM.R)()) {
-        const MM = await (0, RM.U)();
-        if (null === MM || (0, UM.l)(MM)) return null;
-        if (await (0, pM.b)(await MM.load()), !(0, hM.R)()) return null
+    async function XX() {
+      if (!(0, pU.T)()) {
+        const UU = await (0, wU.N)();
+        if (null === UU || (0, BU.r)(UU)) return null;
+        if (await (0, qU.e)(await UU.load()), !(0, pU.T)()) return null
       }
-      return TM((0, hM.E)())
+      return bU((0, pU.E)())
     }
-    class ir {
-      constructor(MM, rM, iM, OM, SM, jM) {
-        this.page = MM, this.host = rM, this.id = iM, this.canvas = OM, this.size = SM, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const aM = {
-            ...jM.images,
-            glbUrl: MM => {
-              var rM;
-              return null !== (rM = this.models.drawnUrl(MM)) && void 0 !== rM ? rM : jM.images.glbUrl(MM)
+    class zX {
+      constructor(UU, XU, zU, cU, yU, QU) {
+        this.page = UU, this.host = XU, this.id = zU, this.canvas = cU, this.size = yU, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const AU = {
+            ...QU.images,
+            glbUrl: UU => {
+              var XU;
+              return null !== (XU = this.models.drawnUrl(UU)) && void 0 !== XU ? XU : QU.images.glbUrl(UU)
             }
           },
-          PM = rM => MM.modelFile(rM);
-        this.images = new CM.d(aM, (MM => {
-          console.warn(`${NM} image ${MM.key.kind}:${MM.key.index}:${MM.key.word} failed`, MM.error)
+          FU = XU => UU.modelFile(XU);
+        this.images = new RU.g(AU, (UU => {
+          console.warn(`${vU} image ${UU.key.kind}:${UU.key.index}:${UU.key.word} failed`, UU.error)
         }), {
-          fetchFile: PM,
-          fetchImage: rM => MM.imageFile(rM)
-        }), MM.startModels(), this.models = new eM.f(jM.files, ((rM, iM) => MM.buildModel(rM, iM)), (MM => {
-          console.warn(`${NM} model file ${MM.file} (${MM.url}) failed`, MM.error)
+          fetchFile: FU,
+          fetchImage: XU => UU.imageFile(XU)
+        }), UU.startModels(), this.models = new PU.i(QU.files, ((XU, zU) => UU.buildModel(XU, zU)), (UU => {
+          console.warn(`${vU} model file ${UU.file} (${UU.url}) failed`, UU.error)
         }), {
-          fetchFile: PM,
-          onWritten: (MM, rM) => {
-            this.images.glbWritten(MM, rM)
+          fetchFile: FU,
+          onWritten: (UU, XU) => {
+            this.images.glbWritten(UU, XU)
           },
-          onTaken: (MM, rM) => {
-            this.images.glbTaken(MM, rM)
+          onTaken: (UU, XU) => {
+            this.images.glbTaken(UU, XU)
           }
-        }), this.write = (MM, rM, iM) => {
+        }), this.write = (UU, XU, zU) => {
           if (this.closed) return !0;
-          if (MM === eM.d) {
-            const MM = new DataView(iM.buffer, iM.byteOffset, wM.b),
-              OM = MM.getUint32(0, !0),
-              SM = MM.getUint32(wM.d, !0),
-              jM = this.page.hostCall(qM, (() => this.host.uaM(this.id, OM, rM, iM.subarray(wM.b))));
-            return this.outcomes.push([SM, jM]), !0
+          if (UU === PU.e) {
+            const UU = new DataView(zU.buffer, zU.byteOffset, dU.c),
+              cU = UU.getUint32(0, !0),
+              yU = UU.getUint32(dU.f, !0),
+              QU = this.page.hostCall(KU, (() => this.host.aFU(this.id, cU, XU, zU.subarray(dU.c))));
+            return this.outcomes.push([yU, QU]), !0
           }
-          return MM === CM.b && (this.page.hostCall(void 0, (() => {
-            this.host.paM(this.id, iM)
+          return UU === RU.d && (this.page.hostCall(void 0, (() => {
+            this.host.gFU(this.id, zU)
           })), !0)
         }
       }
@@ -713,89 +713,89 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(MM, rM, iM) {
+      resize(UU, XU, zU) {
         if (this.closed) return;
-        const [OM, SM] = (0, YM.d)(MM, rM, this.page.dpr(), iM);
-        OM === this.size[0] && SM === this.size[1] || (this.size = [OM, SM], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, OM, SM)
+        const [cU, yU] = (0, MU.e)(UU, XU, this.page.dpr(), zU);
+        cU === this.size[0] && yU === this.size[1] || (this.size = [cU, yU], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, cU, yU)
         })))
       }
-      setMob(MM, rM, iM, OM) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.oaM(this.id, MM, rM, iM, OM))))
+      setMob(UU, XU, zU, cU) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.PFU(this.id, UU, XU, zU, cU))))
       }
-      setPet(MM, rM, iM, OM) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.NaM(this.id, MM, rM, iM, OM))))
+      setPet(UU, XU, zU, cU) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.dFU(this.id, UU, XU, zU, cU))))
       }
-      setPlayer(MM, rM, iM) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.DaM(this.id, MM, rM, iM))))
+      setPlayer(UU, XU, zU) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.BFU(this.id, UU, XU, zU))))
       }
-      setCompanions(MM) {
-        var rM;
+      setCompanions(UU) {
+        var XU;
         let {
-          pet: iM,
-          aura: OM
-        } = MM;
+          pet: zU,
+          aura: cU
+        } = UU;
         if (this.closed) return;
-        const SM = null !== (rM = null === iM || void 0 === iM ? void 0 : iM.model) && void 0 !== rM ? rM : -1,
-          jM = new Float64Array(iM ? [iM.scale, ...iM.offset, iM.yawOffset, iM.bobAmplitude, iM.bobHz] : []),
-          aM = new Float64Array(OM ? [...OM.offset, ...OM.half] : []);
+        const yU = null !== (XU = null === zU || void 0 === zU ? void 0 : zU.model) && void 0 !== XU ? XU : -1,
+          QU = new Float64Array(zU ? [zU.scale, ...zU.offset, zU.yawOffset, zU.bobAmplitude, zU.bobHz] : []),
+          AU = new Float64Array(cU ? [...cU.offset, ...cU.half] : []);
         this.page.hostCall(void 0, (() => {
-          var MM, rM;
-          this.host.saM(this.id, SM, jM, null !== (MM = null === iM || void 0 === iM ? void 0 : iM.flyClip) && void 0 !== MM ? MM : "", null !== (rM = null === OM || void 0 === OM ? void 0 : OM.opts) && void 0 !== rM ? rM : "", aM)
+          var UU, XU;
+          this.host.GFU(this.id, yU, QU, null !== (UU = null === zU || void 0 === zU ? void 0 : zU.flyClip) && void 0 !== UU ? UU : "", null !== (XU = null === cU || void 0 === cU ? void 0 : cU.opts) && void 0 !== XU ? XU : "", AU)
         }))
       }
-      setFigure(MM, rM, iM, OM) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.kaM(this.id, MM, rM, iM, OM))))
+      setFigure(UU, XU, zU, cU) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ZFU(this.id, UU, XU, zU, cU))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const MM = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === MM || MM.length < 3 ? null : {
-          alpha: MM[0],
-          beta: MM[1],
-          radius: MM[2]
+        const UU = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === UU || UU.length < 3 ? null : {
+          alpha: UU[0],
+          beta: UU[1],
+          radius: UU[2]
         }
       }
-      setOrbit(MM) {
+      setOrbit(UU) {
         let {
-          alpha: rM,
-          beta: iM,
-          radius: OM
-        } = MM;
+          alpha: XU,
+          beta: zU,
+          radius: cU
+        } = UU;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.YaM(this.id, rM, iM, OM)
+          this.host.WFU(this.id, XU, zU, cU)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((MM => {
-          this.settled.push(MM)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((UU => {
+          this.settled.push(UU)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, gM.j)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, eU.e)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [MM, rM] of this.outcomes) {
-          const iM = rM === IM ? [] : [rM === KM ? MM : (MM | eM.e) >>> 0];
-          this.models.taken(MM, iM)
+        for (const [UU, XU] of this.outcomes) {
+          const zU = XU === JU ? [] : [XU === jU ? UU : (UU | PU.h) >>> 0];
+          this.models.taken(UU, zU)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(MM) {
-        let rM = !1;
-        if (MM) {
-          const MM = this.host.vaM(this.id);
-          for (const rM of MM) this.models.request(rM);
-          const iM = this.host.xaM(this.id);
-          iM.length > 0 && this.images.onEvent(iM), rM = MM.length > 0 || iM.length > 0
+      collect(UU) {
+        let XU = !1;
+        if (UU) {
+          const UU = this.host.CFU(this.id);
+          for (const XU of UU) this.models.request(XU);
+          const zU = this.host.eFU(this.id);
+          zU.length > 0 && this.images.onEvent(zU), XU = UU.length > 0 || zU.length > 0
         }
-        const iM = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          OM = rM || iM > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = OM ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const zU = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          cU = XU || zU > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = cU ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -803,314 +803,311 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(MM) {
+      dispose(UU) {
         this.page.hostCall(void 0, (() => {
-          const rM = this.host.close(this.id);
-          rM.length > 0 && this.images.onEvent(rM), this.page.isTrapped || MM.ejM(this.id)
+          const XU = this.host.close(this.id);
+          XU.length > 0 && this.images.onEvent(XU), this.page.isTrapped || UU.DAU(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const MM = this.settled;
+        const UU = this.settled;
         this.settled = [];
-        for (const rM of MM) rM()
+        for (const XU of UU) XU()
       }
     }
-    class Or {
-      constructor(MM) {
-        this.deps = MM, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: MM => {
-            this.modelsFailed(MM)
+    class cX {
+      constructor(UU) {
+        this.deps = UU, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: UU => {
+            this.modelsFailed(UU)
           },
-          onDecoderFailed: MM => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${NM} the Draco decoder didn't load: models waiting on it won't draw`, MM))
-          },
-          onWorkerLost: MM => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${NM} a model worker was lost: ${MM}`))
+          onWorkerLost: UU => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${vU} a model worker was lost: ${UU}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.nh = {
-          setShaderPack: (MM, rM, iM, OM, SM) => (this.shaderPackArgs = [MM, rM, iM, OM, SM], this.handOverShaderPack(), !0)
-        }, this.frame = MM => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Fp = {
+          setShaderPack: (UU, XU, zU, cU, yU) => (this.shaderPackArgs = [UU, XU, zU, cU, yU], this.handOverShaderPack(), !0)
+        }, this.frame = UU => {
           this.frameId = null;
-          const rM = this.host;
-          if (null !== rM && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(rM, MM)
-          } catch (iM) {
-            if (!this.stopIfTrapped(iM) && (this.stop(), (0, UM.p)(iM))) return void this.deps.onRenderFailed("frames_refused", iM);
-            console.warn(`${NM} the previews stopped: their frame threw`, iM)
+          const XU = this.host;
+          if (null !== XU && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(XU, UU)
+          } catch (zU) {
+            if (!this.stopIfTrapped(zU) && (this.stop(), (0, BU.t)(zU))) return void this.deps.onRenderFailed("frames_refused", zU);
+            console.warn(`${vU} the previews stopped: their frame threw`, zU)
           }
-        }, MM.pack.onChange((() => {
+        }, UU.pack.onChange((() => {
           this.packChanged()
-        })), MM.game.onGameChange((() => {
+        })), UU.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const MM of this.previews.values()) MM.packChanged()
+          for (const UU of this.previews.values()) UU.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var MM, rM;
-        return null !== (MM = null === (rM = this.host) || void 0 === rM ? void 0 : rM.attached()) && void 0 !== MM && MM
+        var UU, XU;
+        return null !== (UU = null === (XU = this.host) || void 0 === XU ? void 0 : XU.attached()) && void 0 !== UU && UU
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((MM, rM) => MM + rM), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((UU, XU) => UU + XU), 0) / this.costs.length
       }
-      async bindSession(MM, rM, iM) {
-        const OM = this.binding,
-          SM = this.sessionEnds;
+      async bindSession(UU, XU, zU) {
+        const cU = this.binding,
+          yU = this.sessionEnds;
         try {
-          const jM = this.hostOf(MM);
-          if (!jM.RaM()) {
-            const rM = (0, DM.g)().sampleCount,
-              aM = await iM(rM);
-            if (this.sessionEnds !== SM) return this.keepRendererOfEndedSession(MM, jM, aM, rM, OM), rM;
-            if (!jM.HaM(aM)) throw new Error("the page has a renderer already");
-            (0, RM.v)(performance.now()), this.samples = rM, (0, kM.f)((0, UM.k)(MM))
+          const QU = this.hostOf(UU);
+          if (!QU.tFU()) {
+            const XU = (0, rU.d)().sampleCount,
+              AU = await zU(XU);
+            if (this.sessionEnds !== yU) return this.keepRendererOfEndedSession(UU, QU, AU, XU, cU), XU;
+            if (!QU.hAU(AU)) throw new Error("the page has a renderer already");
+            (0, wU.t)(performance.now()), this.samples = XU, (0, uU.i)((0, BU.p)(UU))
           }
-          if (!jM.attach(rM)) throw new Error("the page's renderer is lent to another session");
+          if (!QU.attach(XU)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === OM && this.endBinding()
+          this.binding === cU && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(MM, rM, iM, OM, SM) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== SM) try {
-          iM.free()
-        } catch (jM) {
-          console.warn(`${NM} an ended session's renderer didn't free`, jM)
-        } else rM.HaM(iM) && ((0, RM.v)(performance.now()), this.samples = OM, (0, kM.f)(this.registryOf(MM)))
+      keepRendererOfEndedSession(UU, XU, zU, cU, yU) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== yU) try {
+          zU.free()
+        } catch (QU) {
+          console.warn(`${vU} an ended session's renderer didn't free`, QU)
+        } else XU.hAU(zU) && ((0, wU.t)(performance.now()), this.samples = cU, (0, uU.i)(this.registryOf(UU)))
       }
       async beginSession() {
-        var MM;
-        let rM = () => {};
-        const iM = new Promise((MM => {
-          rM = MM
+        var UU;
+        let XU = () => {};
+        const zU = new Promise((UU => {
+          XU = UU
         }));
         this.binding = {
-          done: iM,
-          release: rM
-        }, await (null === (MM = this.opening) || void 0 === MM ? void 0 : MM.catch((() => null)));
-        const OM = this.pageCanvas;
-        return this.pageCanvas = null, OM
+          done: zU,
+          release: XU
+        }, await (null === (UU = this.opening) || void 0 === UU ? void 0 : UU.catch((() => null)));
+        const cU = this.pageCanvas;
+        return this.pageCanvas = null, cU
       }
-      endSession(MM) {
-        var rM, iM;
-        if (this.sessionEnds++, this.lastEndReturned = MM, this.endBinding(), MM) {
+      endSession(UU) {
+        var XU, zU;
+        if (this.sessionEnds++, this.lastEndReturned = UU, this.endBinding(), UU) {
           try {
-            var OM;
-            null === (OM = this.host) || void 0 === OM || OM.detach()
-          } catch (SM) {
-            return void console.warn(`${NM} the session's core kept the page's renderer`, SM)
-          }!0 === (null === (rM = this.host) || void 0 === rM ? void 0 : rM.attached()) && console.warn(`${NM} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (iM = this.host) || void 0 === iM ? void 0 : iM.RaM()) && (0, kM.f)(this.registryOf(this.module))
+            var cU;
+            null === (cU = this.host) || void 0 === cU || cU.detach()
+          } catch (yU) {
+            return void console.warn(`${vU} the session's core kept the page's renderer`, yU)
+          }!0 === (null === (XU = this.host) || void 0 === XU ? void 0 : XU.attached()) && console.warn(`${vU} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (zU = this.host) || void 0 === zU ? void 0 : zU.tFU()) && (0, uU.i)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var MM;
-        null === (MM = this.binding) || void 0 === MM || MM.release(), this.binding = null
+        var UU;
+        null === (UU = this.binding) || void 0 === UU || UU.release(), this.binding = null
       }
-      async openPreview(MM, rM, iM, OM) {
-        const SM = await this.renderingHost(),
-          jM = this.module;
-        if (null === SM || null === jM) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(SM), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(UU, XU, zU, cU) {
+        const yU = await this.renderingHost(),
+          QU = this.module;
+        if (null === yU || null === QU) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(yU), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(jM)
+          this.deps.provideBuiltInAnimationPack(QU)
         }));
-        const aM = this.nextId++,
-          PM = this.deps.createCanvas(),
-          [nM, QM] = (0, YM.d)(rM, iM, this.deps.dpr(), OM);
-        PM.width = nM, PM.height = QM;
-        if (!this.guarded((() => (jM.CjM(aM, PM), SM.open(aM, nM, QM, MM))))) throw this.hostCall(void 0, (() => {
-          jM.ejM(aM)
+        const AU = this.nextId++,
+          FU = this.deps.createCanvas(),
+          [oU, DU] = (0, MU.e)(XU, zU, this.deps.dpr(), cU);
+        FU.width = oU, FU.height = DU;
+        if (!this.guarded((() => (QU.oAU(AU, FU), yU.open(AU, oU, DU, UU))))) throw this.hostCall(void 0, (() => {
+          QU.DAU(AU)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const zM = new ir(this, SM, aM, PM, [nM, QM], this.deps);
-        return this.previews.set(aM, zM), this.startFrames(), zM
+        const EU = new zX(this, yU, AU, FU, [oU, DU], this.deps);
+        return this.previews.set(AU, EU), this.startFrames(), EU
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, RM.e)() || null !== (0, RM.K)()) return;
+        if (this.prefetched || this.isStopped || (0, wU.c)() || null !== (0, wU.F)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((MM => {
-          null === MM || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((UU => {
+          null === UU || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(MM) {
-        return this.prefetchedOr(MM, this.deps.fetchModel)
+      modelFile(UU) {
+        return this.prefetchedOr(UU, this.deps.fetchModel)
       }
-      imageFile(MM) {
-        return this.prefetchedOr(MM, OM.F)
+      imageFile(UU) {
+        return this.prefetchedOr(UU, cU.Q)
       }
-      prefetchedOr(MM, rM) {
-        const iM = this.prefetchedFiles.get(MM);
-        return void 0 === iM ? rM(MM) : iM.catch((() => rM(MM)))
+      prefetchedOr(UU, XU) {
+        const zU = this.prefetchedFiles.get(UU);
+        return void 0 === zU ? XU(UU) : zU.catch((() => XU(UU)))
       }
       async prefetchPlayerFiles() {
-        const MM = this.deps.playerFile().then((MM => this.deps.files.url(MM))),
-          rM = await Promise.all([MM, this.deps.images.lifeformAtlasUrl(gM.c)]).catch((() => null));
-        if (null === rM) return;
-        const [iM, OM] = rM, SM = (MM, rM) => {
-          if (null === MM) return;
-          const iM = rM(MM);
-          this.prefetchedFiles.set(MM, iM), iM.catch((() => {
-            this.prefetchedFiles.delete(MM)
+        const UU = this.deps.playerFile().then((UU => this.deps.files.url(UU))),
+          XU = await Promise.all([UU, this.deps.images.lifeformAtlasUrl(eU.b)]).catch((() => null));
+        if (null === XU) return;
+        const [zU, cU] = XU, yU = (UU, XU) => {
+          if (null === UU) return;
+          const zU = XU(UU);
+          this.prefetchedFiles.set(UU, zU), zU.catch((() => {
+            this.prefetchedFiles.delete(UU)
           }))
         };
-        SM(iM, (MM => this.modelFile(MM))), SM(OM, (MM => this.imageFile(MM)))
+        yU(zU, (UU => this.modelFile(UU))), yU(cU, (UU => this.imageFile(UU)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((MM => (null === MM && (this.moduleLoad = null), MM)), (MM => {
-          throw this.moduleLoad = null, MM
+        return this.moduleLoad ??= this.deps.loadModule().then((UU => (null === UU && (this.moduleLoad = null), UU)), (UU => {
+          throw this.moduleLoad = null, UU
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((MM => {
-          throw this.animationTable = null, MM
+        return this.animationTable ??= this.deps.fetchAnimations().catch((UU => {
+          throw this.animationTable = null, UU
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((MM => (this.modelsFailed(MM), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((UU => (this.modelsFailed(UU), () => new Promise((() => {})))))
       }
-      buildModel(MM, rM) {
-        return this.startModels(), this.models.then((iM => iM(MM, rM))).then((MM => this.unavailable ? new Promise((() => {})) : MM))
+      buildModel(UU, XU) {
+        return this.startModels(), this.models.then((zU => zU(UU, XU))).then((UU => this.unavailable ? new Promise((() => {})) : UU))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(MM) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${NM} the model workers didn't start: models won't draw in the previews`, MM))
+      modelsFailed(UU) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${vU} the model workers didn't start: models won't draw in the previews`, UU))
       }
-      called(MM) {
-        return 0 !== MM && this.logError(MM, 0), MM
+      called(UU) {
+        return 0 !== UU && this.logError(UU, 0), UU
       }
-      closePreview(MM) {
-        this.previews.delete(MM.id), null !== this.module && MM.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(UU) {
+        this.previews.delete(UU.id), null !== this.module && UU.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(MM) {
-        if (null !== this.module && this.module !== MM) throw new Error("a second renderer module on one page");
-        return this.module = MM, null === this.host && (this.host = this.guarded((() => new MM.GjM)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(UU) {
+        if (null !== this.module && this.module !== UU) throw new Error("a second renderer module on one page");
+        return this.module = UU, null === this.host && (this.host = this.guarded((() => new UU.FAU)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: MM
+          host: UU
         } = this;
-        null !== MM && this.outsideCall("the game's start or end", (() => {
-          MM.ZaM(this.deps.game.inGame())
+        null !== UU && this.outsideCall("the game's start or end", (() => {
+          UU.RFU(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: MM,
-          shaderPackArgs: rM
+          host: UU,
+          shaderPackArgs: XU
         } = this;
-        null !== MM && null !== rM && this.outsideCall("the shader pack's hand-over", (() => {
-          MM.dOM(...rM) || console.warn(`${NM} the host refused the shader pack: previews draw without it at home`)
+        null !== UU && null !== XU && this.outsideCall("the shader pack's hand-over", (() => {
+          UU.QyU(...XU) || console.warn(`${vU} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(MM, rM) {
+      outsideCall(UU, XU) {
         try {
-          this.hostCall(void 0, rM)
-        } catch (iM) {
-          this.stop(), console.warn(`${NM} the previews stopped: ${MM} threw`, iM)
+          this.hostCall(void 0, XU)
+        } catch (zU) {
+          this.stop(), console.warn(`${vU} the previews stopped: ${UU} threw`, zU)
         }
       }
-      async loadAnimations(MM) {
-        const rM = aM(null),
-          iM = this.module;
+      async loadAnimations(UU) {
+        const XU = AU(null),
+          zU = this.module;
         try {
-          rM.wasm = null === iM ? rM.wasm : this.hostCall(rM.wasm, (() => iM.NL()))
+          XU.wasm = null === zU ? XU.wasm : this.hostCall(XU.wasm, (() => zU.sY()))
         } catch {}
-        let OM, SM;
+        let cU, yU;
         try {
-          OM = await this.fetchAnimationTable()
-        } catch (jM) {
+          cU = await this.fetchAnimationTable()
+        } catch (QU) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: jM
-          }, rM)
+            error: QU
+          }, XU)
         }
         if (!this.settleIfTrapped()) {
           try {
-            SM = MM.WaM(OM)
-          } catch (jM) {
-            if (this.stopIfTrapped(jM)) return;
+            yU = UU.kFU(cU)
+          } catch (QU) {
+            if (this.stopIfTrapped(QU)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: jM
-            }, rM)
+              error: QU
+            }, XU)
           }
-          SM || this.deps.onAnimationsFailed({
+          yU || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, rM)
+          }, XU)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const MM = this.host;
-        return null !== MM && this.guarded((() => MM.RaM())) ? MM : (this.opening ??= this.openAtHome().finally((() => {
+        const UU = this.host;
+        return null !== UU && this.guarded((() => UU.tFU())) ? UU : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var MM;
-        const rM = null !== (MM = this.module) && void 0 !== MM ? MM : await this.loadModule();
-        if (null === rM) return null;
-        const iM = this.hostOf(rM),
-          OM = () => this.guarded((() => iM.RaM()));
-        if (OM()) return iM;
-        if (null !== (0, RM.K)() || (0, RM.e)()) return null;
-        const SM = this.deps.createCanvas();
-        SM.width = 1, SM.height = 1;
-        const jM = await this.deps.openExtras();
+        var UU;
+        const XU = null !== (UU = this.module) && void 0 !== UU ? UU : await this.loadModule();
+        if (null === XU) return null;
+        const zU = this.hostOf(XU),
+          cU = () => this.guarded((() => zU.tFU()));
+        if (cU()) return zU;
+        if (null !== (0, wU.F)() || (0, wU.c)()) return null;
+        const yU = this.deps.createCanvas();
+        yU.width = 1, yU.height = 1;
+        const QU = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const aM = (0, DM.g)().sampleCount;
-        let PM;
+        const AU = (0, rU.d)().sampleCount;
+        let FU;
         try {
-          PM = await (0, UM.w)(rM, "previewRenderer", SM, aM, ZM.e, jM)
-        } catch (nM) {
-          throw nM instanceof tM.e ? this.stopForTrap(nM) : (0, UM.t)(nM) && await this.deps.onRenderFailed("start_failed", nM), nM
+          FU = await (0, BU.B)(XU, "previewRenderer", yU, AU, fU.e, QU)
+        } catch (oU) {
+          throw oU instanceof LU.c ? this.stopForTrap(oU) : (0, BU.x)(oU) && await this.deps.onRenderFailed("start_failed", oU), oU
         }
-        return this.guarded((() => iM.HaM(PM))) ? ((0, RM.v)(performance.now()), this.samples = aM, this.pageCanvas = SM, (0, kM.f)(this.registryOf(rM)), iM) : OM() ? iM : null
+        return this.guarded((() => zU.hAU(FU))) ? ((0, wU.t)(performance.now()), this.samples = AU, this.pageCanvas = yU, (0, uU.i)(this.registryOf(XU)), zU) : cU() ? zU : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(MM, rM) {
-        for (const aM of this.previews.values()) aM.feed();
+      drawFrame(UU, XU) {
+        for (const AU of this.previews.values()) AU.feed();
         if (this.stopped) return;
-        const iM = this.deps.now(),
-          OM = MM.frame(rM);
-        this.costs.push(this.deps.now() - iM), this.costs.length > 120 && this.costs.shift();
-        const SM = 0 !== (256 & OM),
-          jM = 255 & OM;
-        for (const aM of this.previews.values()) {
+        const zU = this.deps.now(),
+          cU = UU.frame(XU);
+        this.costs.push(this.deps.now() - zU), this.costs.length > 120 && this.costs.shift();
+        const yU = 0 !== (256 & cU),
+          QU = 255 & cU;
+        for (const AU of this.previews.values()) {
           if (this.stopped) return;
-          aM.collect(SM)
+          AU.collect(yU)
         }
         if (!this.stopped) {
-          if (0 !== (512 & OM) && this.deps.onDrew(), SM) {
-            const rM = MM.AaM();
-            for (let MM = 0; MM + 1 < rM.length; MM += 2) rM[MM] === EM.H.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(rM[MM], rM[MM + 1])
+          if (0 !== (512 & cU) && this.deps.onDrew(), yU) {
+            const XU = UU.LFU();
+            for (let UU = 0; UU + 1 < XU.length; UU += 2) XU[UU] === GU.K.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(XU[UU], XU[UU + 1])
           }
-          if (jM !== FM) {
-            if (jM === BM) return this.stop(), void this.deps.onFatal(MM.waM(), MM.taM());
-            if (jM === XM) return this.stop(), void console.warn(`${NM} the previews stopped: the page's renderer went with its session`);
-            (0, dM.d)(rM), this.startFrames()
+          if (QU !== mU) {
+            if (QU === lU) return this.stop(), void this.deps.onFatal(UU.NFU(), UU.IFU());
+            if (QU === xU) return this.stop(), void console.warn(`${vU} the previews stopped: the page's renderer went with its session`);
+            (0, tU.b)(XU), this.startFrames()
           } else {
-            const rM = MM.gaM();
+            const XU = UU.pFU();
             this.stop();
-            const iM = rM[2] === EM.Tc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(iM, void 0, rM[1], rM[2] === EM.Tc.RESTORE_LOST)
+            const zU = XU[2] === GU.Yc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(zU, void 0, XU[1], XU[2] === GU.Yc.RESTORE_LOST)
           }
         }
       }
@@ -1118,115 +1115,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, tM.m)(this.module) || "failed" === (0, hM.B)())
+        return null !== this.module && ((0, LU.i)(this.module) || "failed" === (0, pU.A)())
       }
-      hostCall(MM, rM) {
-        if (this.settleIfTrapped()) return MM;
+      hostCall(UU, XU) {
+        if (this.settleIfTrapped()) return UU;
         try {
-          return rM()
-        } catch (iM) {
-          if (this.stopIfTrapped(iM)) return MM;
-          throw iM
+          return XU()
+        } catch (zU) {
+          if (this.stopIfTrapped(zU)) return UU;
+          throw zU
         }
       }
-      guarded(MM) {
+      guarded(UU) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return MM()
-        } catch (rM) {
-          throw this.stopIfTrapped(rM), rM
+          return UU()
+        } catch (XU) {
+          throw this.stopIfTrapped(XU), XU
         }
       }
-      registryOf(MM) {
+      registryOf(UU) {
         return {
-          iOM: (rM, iM) => {
+          lcU: (XU, zU) => {
             this.hostCall(void 0, (() => {
-              MM.iOM(rM, iM)
+              UU.lcU(XU, zU)
             }))
           },
-          SOM: rM => {
+          xcU: XU => {
             this.hostCall(void 0, (() => {
-              MM.SOM(rM)
+              UU.xcU(XU)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, kM.f)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, uU.i)(null)), !0)
       }
-      stopIfTrapped(MM) {
-        return !(null === this.module || !(0, tM.q)(this.module, MM)) && (this.stopForTrap(MM), !0)
+      stopIfTrapped(UU) {
+        return !(null === this.module || !(0, LU.k)(this.module, UU)) && (this.stopForTrap(UU), !0)
       }
-      stopForTrap(MM) {
-        this.stop(), (0, kM.f)(null), (0, fM.g)("previews", MM)
+      stopForTrap(UU) {
+        this.stop(), (0, uU.i)(null), (0, HU.e)("previews", UU)
       }
       stop() {
         this.stopped = !0;
-        for (const MM of this.previews.values()) MM.abandon()
+        for (const UU of this.previews.values()) UU.abandon()
       }
-      logError(MM, rM) {
-        const iM = `${MM}:${rM}`;
-        this.loggedErrors.has(iM) || (this.loggedErrors.add(iM), console.warn(`${NM} error ${MM} (detail ${rM})`))
+      logError(UU, XU) {
+        const zU = `${UU}:${XU}`;
+        this.loggedErrors.has(zU) || (this.loggedErrors.add(zU), console.warn(`${vU} error ${UU} (detail ${XU})`))
       }
     }
-    let Sr = null;
+    let yX = null;
 
-    function jr() {
-      return Sr ??= new Or(function() {
-        const MM = (0, bM.r)(JM.clientSideServerUrls.staticUrl, {
-          packUrl: MM => {
-            var rM, iM;
-            return null !== (rM = null === (iM = gM.g.current) || void 0 === iM ? void 0 : iM.modelUrl(MM)) && void 0 !== rM ? rM : null
+    function QX() {
+      return yX ??= new cX(function() {
+        const UU = (0, WU.p)(aU.clientSideServerUrls.staticUrl, {
+          packUrl: UU => {
+            var XU, zU;
+            return null !== (XU = null === (zU = eU.d.current) || void 0 === zU ? void 0 : zU.modelUrl(UU)) && void 0 !== XU ? XU : null
           }
         });
         return {
-          loadModule: rr,
-          startModels: async MM => {
+          loadModule: XX,
+          startModels: async UU => {
             const {
-              pageModelPool: rM
-            } = await iM.e(49).then((() => iM(53807))), {
-              pool: OM
-            } = rM(MM);
-            return (MM, rM) => OM.build(MM, rM)
+              pageModelPool: XU
+            } = await zU.e(50).then((() => zU(53818))), {
+              pool: cU
+            } = XU(UU);
+            return (UU, XU) => cU.build(UU, XU)
           },
-          fetchAnimations: async () => PM(await (0, OM.F)(VM())),
-          playerFile: async () => (await (0, bM.o)()).PLAYER_FILE,
-          onAnimationsFailed: (MM, rM) => {
-            nM("previewAnimations", VM(), MM, rM)
+          fetchAnimations: async () => FU(await (0, cU.Q)(TU())),
+          playerFile: async () => (await (0, WU.n)()).PLAYER_FILE,
+          onAnimationsFailed: (UU, XU) => {
+            oU("previewAnimations", TU(), UU, XU)
           },
-          provideBuiltInAnimationPack: MM => {
-            mM().provide(MM)
+          provideBuiltInAnimationPack: UU => {
+            NU().provide(UU)
           },
-          openExtras: RM.F,
-          files: MM,
-          images: (0, gM.n)((0, CM.m)(MM.url), (() => gM.g.current)),
-          pack: gM.g,
-          game: uM.e,
-          fetchModel: MM => (0, bM.j)(MM),
+          openExtras: wU.x,
+          files: UU,
+          images: (0, eU.f)((0, RU.p)(UU.url), (() => eU.d.current)),
+          pack: eU.d,
+          game: CU.b,
+          fetchModel: UU => (0, WU.f)(UU),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: MM => requestAnimationFrame(MM),
-          cancelFrame: MM => {
-            cancelAnimationFrame(MM)
+          requestFrame: UU => requestAnimationFrame(UU),
+          cancelFrame: UU => {
+            cancelAnimationFrame(UU)
           },
-          onRenderFailed: cM,
-          onFatal: (MM, rM) => {
-            console.error(`${NM} the previews stopped: renderer error ${MM} (detail ${rM})`)
+          onRenderFailed: hU,
+          onFatal: (UU, XU) => {
+            console.error(`${vU} the previews stopped: renderer error ${UU} (detail ${XU})`)
           },
           onDeviceLost: () => {
-            (0, RM.G)() === sM.b.webgpu && ((0, GM.g)((0, hM.R)() ? (0, UM.P)((0, hM.E)()) : null), yM.B.lost())
+            (0, wU.B)() === SU.e.webgpu && ((0, ZU.f)((0, pU.T)() ? (0, BU.Y)((0, pU.E)()) : null), gU.J.lost())
           },
           onDrew: () => {
-            yM.B.drew()
+            gU.J.drew()
           }
         }
-      }()), Sr
+      }()), yX
     }
-    var ar = iM(613),
-      Pr = iM(39673),
-      nr = iM(3693);
-    const Qr = {
+    var AX = zU(633),
+      FX = zU(39453),
+      oX = zU(3660);
+    const DX = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1246,379 +1243,380 @@ export const modules = {
       gunReady: 16,
       gunAimed: 17
     };
-    var zr = iM(40219),
-      Lr = iM(40186),
-      mr = iM(45251);
-    class Hr {
+    var EX = zU(39994),
+      YX = zU(39954),
+      NX = zU(45253);
+    class IX {
       constructor() {
         this.pet = null, this.aura = null, this.companions = {
           pet: null,
           aura: null
         }
       }
-      of(MM, rM) {
-        const iM = void 0 === MM ? null : (0, Lr.k)(MM),
-          OM = void 0 === rM ? null : (0, Lr.h)(rM);
-        return iM === this.pet && OM === this.aura || (this.pet = iM, this.aura = OM, this.companions = {
-          pet: iM && hr(iM),
-          aura: OM && Jr(OM)
+      of(UU, XU) {
+        const zU = void 0 === UU ? null : (0, YX.k)(UU),
+          cU = void 0 === XU ? null : (0, YX.g)(XU);
+        return zU === this.pet && cU === this.aura || (this.pet = zU, this.aura = cU, this.companions = {
+          pet: zU && pX(zU),
+          aura: cU && aX(cU)
         }), this.companions
       }
     }
 
-    function hr(MM) {
-      var rM;
-      const iM = mr.COSMETIC_MODEL_KEYS.get(MM.model);
-      if (void 0 === iM) return console.warn(`[bloxd-previews] pet model ${MM.model} isn't a Player attachment model`), null;
+    function pX(UU) {
+      var XU;
+      const zU = NX.COSMETIC_MODEL_KEYS.get(UU.model);
+      if (void 0 === zU) return console.warn(`[bloxd-previews] pet model ${UU.model} isn't a Player attachment model`), null;
       const {
-        scale: OM,
-        followOffset: SM,
-        yawOffset: jM,
-        bobAmplitude: aM,
-        bobHz: PM,
-        clips: nM
-      } = MM;
+        scale: cU,
+        followOffset: yU,
+        yawOffset: QU,
+        bobAmplitude: AU,
+        bobHz: FU,
+        clips: oU
+      } = UU;
       return {
-        model: iM,
-        scale: OM,
-        offset: SM,
-        yawOffset: jM,
-        bobAmplitude: aM,
-        bobHz: PM,
-        flyClip: null !== (rM = null === nM || void 0 === nM ? void 0 : nM.fly) && void 0 !== rM ? rM : null
+        model: zU,
+        scale: cU,
+        offset: yU,
+        yawOffset: QU,
+        bobAmplitude: AU,
+        bobHz: FU,
+        flyClip: null !== (XU = null === oU || void 0 === oU ? void 0 : oU.fly) && void 0 !== XU ? XU : null
       }
     }
 
-    function Jr(MM) {
+    function aX(UU) {
       const {
-        opts: rM,
-        half: iM
-      } = (0, zr.b)(MM);
+        opts: XU,
+        half: zU
+      } = (0, EX.c)(UU);
       return {
-        opts: JSON.stringify(rM),
-        offset: MM.offset,
-        half: iM
+        opts: JSON.stringify(XU),
+        offset: UU.offset,
+        half: zU
       }
     }
-    const dr = "[bloxd-previews]",
-      yr = new Uint32Array(5);
+    const tX = "[bloxd-previews]",
+      gX = new Uint32Array(5);
 
-    function lr(MM) {
-      return ar.j.indexOf(MM)
+    function kX(UU) {
+      return AX.h.indexOf(UU)
     }
-    const Er = new WeakSet;
+    const GX = new WeakSet;
 
-    function Ur(MM) {
-      const rM = (0, Pr.g)(MM),
-        iM = null === rM ? -1 : Gr(rM);
-      return -1 !== iM ? iM : (Er.has(MM) || (Er.add(MM), console.warn(`${dr} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function Gr(MM) {
-      var rM;
-      return null !== (rM = Qr[MM]) && void 0 !== rM ? rM : -1
+    function BX(UU) {
+      const XU = (0, FX.g)(UU),
+        zU = null === XU ? -1 : ZX(XU);
+      return -1 !== zU ? zU : (GX.has(UU) || (GX.add(UU), console.warn(`${tX} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function Cr(MM, rM) {
+    function ZX(UU) {
+      var XU;
+      return null !== (XU = DX[UU]) && void 0 !== XU ? XU : -1
+    }
+
+    function RX(UU, XU) {
       const {
-        canvas: iM
-      } = rM;
-      iM.style.width = "100%", iM.style.height = "100%", iM.style.display = "block", MM.appendChild(iM)
+        canvas: zU
+      } = XU;
+      zU.style.width = "100%", zU.style.height = "100%", zU.style.display = "block", UU.appendChild(zU)
     }
 
-    function er(MM) {
-      const rM = MM.getBoundingClientRect();
-      return [rM.width, rM.height]
+    function PX(UU) {
+      const XU = UU.getBoundingClientRect();
+      return [XU.width, XU.height]
     }
-    class br {
-      constructor(MM, rM) {
-        this.preview = MM, this.showView = rM
+    class WX {
+      constructor(UU, XU) {
+        this.preview = UU, this.showView = XU
       }
-      show(MM) {
-        this.showView(this.preview, MM)
+      show(UU) {
+        this.showView(this.preview, UU)
       }
-      resize(MM, rM) {
-        this.preview.resize(MM, rM)
+      resize(UU, XU) {
+        this.preview.resize(UU, XU)
       }
       close() {
         this.preview.close()
       }
     }
-    class wr {
-      constructor(MM) {
-        this.preview = MM, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new Hr, this.companions = null, this.detachControls = void 0, this.detachControls = function(MM) {
+    class dX {
+      constructor(UU) {
+        this.preview = UU, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new IX, this.companions = null, this.detachControls = void 0, this.detachControls = function(UU) {
           const {
-            canvas: rM
-          } = MM;
-          let iM = null;
-          const OM = MM => {
-              var OM;
-              iM = {
-                pointer: MM.pointerId,
-                x: MM.clientX,
-                y: MM.clientY
-              }, null === (OM = rM.setPointerCapture) || void 0 === OM || OM.call(rM, MM.pointerId)
+            canvas: XU
+          } = UU;
+          let zU = null;
+          const cU = UU => {
+              var cU;
+              zU = {
+                pointer: UU.pointerId,
+                x: UU.clientX,
+                y: UU.clientY
+              }, null === (cU = XU.setPointerCapture) || void 0 === cU || cU.call(XU, UU.pointerId)
             },
-            SM = rM => {
-              var OM;
-              const SM = MM.orbit;
-              if ((null === (OM = iM) || void 0 === OM ? void 0 : OM.pointer) !== rM.pointerId || null === SM) return;
-              const jM = rM.clientX - iM.x,
-                aM = rM.clientY - iM.y;
-              iM = {
-                ...iM,
-                x: rM.clientX,
-                y: rM.clientY
-              }, MM.setOrbit({
-                alpha: SM.alpha - .01 * jM,
-                beta: Math.min(Math.PI - .01, Math.max(.01, SM.beta - .01 * aM)),
-                radius: SM.radius
+            yU = XU => {
+              var cU;
+              const yU = UU.orbit;
+              if ((null === (cU = zU) || void 0 === cU ? void 0 : cU.pointer) !== XU.pointerId || null === yU) return;
+              const QU = XU.clientX - zU.x,
+                AU = XU.clientY - zU.y;
+              zU = {
+                ...zU,
+                x: XU.clientX,
+                y: XU.clientY
+              }, UU.setOrbit({
+                alpha: yU.alpha - .01 * QU,
+                beta: Math.min(Math.PI - .01, Math.max(.01, yU.beta - .01 * AU)),
+                radius: yU.radius
               })
             },
-            jM = MM => {
-              var rM;
-              (null === (rM = iM) || void 0 === rM ? void 0 : rM.pointer) === MM.pointerId && (iM = null)
+            QU = UU => {
+              var XU;
+              (null === (XU = zU) || void 0 === XU ? void 0 : XU.pointer) === UU.pointerId && (zU = null)
             },
-            aM = rM => {
-              const iM = MM.orbit;
-              if (null === iM) return;
-              rM.preventDefault();
-              const OM = rM.deltaY * (rM.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : rM.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                SM = Math.min(100, Math.max(5, iM.radius + .08 * OM));
-              MM.setOrbit({
-                ...iM,
-                radius: SM
+            AU = XU => {
+              const zU = UU.orbit;
+              if (null === zU) return;
+              XU.preventDefault();
+              const cU = XU.deltaY * (XU.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : XU.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                yU = Math.min(100, Math.max(5, zU.radius + .08 * cU));
+              UU.setOrbit({
+                ...zU,
+                radius: yU
               })
             };
-          return rM.style.touchAction = "none", rM.addEventListener("pointerdown", OM), rM.addEventListener("pointermove", SM), rM.addEventListener("pointerup", jM), rM.addEventListener("pointercancel", jM), rM.addEventListener("wheel", aM, {
+          return XU.style.touchAction = "none", XU.addEventListener("pointerdown", cU), XU.addEventListener("pointermove", yU), XU.addEventListener("pointerup", QU), XU.addEventListener("pointercancel", QU), XU.addEventListener("wheel", AU, {
             passive: !1
           }), () => {
-            rM.removeEventListener("pointerdown", OM), rM.removeEventListener("pointermove", SM), rM.removeEventListener("pointerup", jM), rM.removeEventListener("pointercancel", jM), rM.removeEventListener("wheel", aM)
+            XU.removeEventListener("pointerdown", cU), XU.removeEventListener("pointermove", yU), XU.removeEventListener("pointerup", QU), XU.removeEventListener("pointercancel", QU), XU.removeEventListener("wheel", AU)
           }
-        }(MM), this.dev = {
-          canvas: () => MM.canvas,
+        }(UU), this.dev = {
+          canvas: () => UU.canvas,
           isolateHead: () => {
-            console.warn(`${dr} isolateHead: noa's character preview only`)
+            console.warn(`${tX} isolateHead: noa's character preview only`)
           },
           isolatePet: () => {
-            console.warn(`${dr} isolatePet: noa's character preview only`)
+            console.warn(`${tX} isolatePet: noa's character preview only`)
           }
-        }, this.apply(), this.ready = MM.untilSettled().then((() => {
-          if (MM.isStopped) throw new Error(`${dr} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = UU.untilSettled().then((() => {
+          if (UU.isStopped) throw new Error(`${tX} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(MM, rM) {
-        this.cosmetics[MM] = rM, this.apply()
+      setCosmetic(UU, XU) {
+        this.cosmetics[UU] = XU, this.apply()
       }
-      playEmote(MM) {
-        null === MM || MM !== this.emote ? (this.emote = MM, this.apply()) : this.preview.replay()
+      playEmote(UU) {
+        null === UU || UU !== this.emote ? (this.emote = UU, this.apply()) : this.preview.replay()
       }
-      untilDrawn(MM) {
+      untilDrawn(UU) {
         return this.preview.untilSettled()
       }
-      setOrbit(MM) {
+      setOrbit(UU) {
         let {
-          yaw: rM,
-          pitch: iM,
-          radius: OM
-        } = MM;
-        const SM = this.preview.orbit;
-        null !== SM && this.preview.setOrbit({
-          alpha: rM,
-          beta: iM,
-          radius: null !== OM && void 0 !== OM ? OM : SM.radius
+          yaw: XU,
+          pitch: zU,
+          radius: cU
+        } = UU;
+        const yU = this.preview.orbit;
+        null !== yU && this.preview.setOrbit({
+          alpha: XU,
+          beta: zU,
+          radius: null !== cU && void 0 !== cU ? cU : yU.radius
         })
       }
       resetCamera() {}
-      resize(MM, rM) {
-        this.preview.resize(MM, rM)
+      resize(UU, XU) {
+        this.preview.resize(UU, XU)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var MM;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), yr, null === (MM = this.emote) ? -1 : Gr(MM));
-        const rM = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
-        rM !== this.companions && (this.companions = rM, this.preview.setCompanions(rM))
+        var UU;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), gX, null === (UU = this.emote) ? -1 : ZX(UU));
+        const XU = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
+        XU !== this.companions && (this.companions = XU, this.preview.setCompanions(XU))
       }
     }
 
-    function tr(MM, rM) {
+    function LX(UU, XU) {
       let {
-        mobType: iM,
-        variation: OM,
-        animation: SM
-      } = rM;
-      MM.setMob(lr(iM), null !== OM && void 0 !== OM ? OM : "", 1, Ur(SM))
+        mobType: zU,
+        variation: cU,
+        animation: yU
+      } = XU;
+      UU.setMob(kX(zU), null !== cU && void 0 !== cU ? cU : "", 1, BX(yU))
     }
 
-    function gr(MM, rM) {
+    function eX(UU, XU) {
       let {
-        mobType: iM,
-        variation: OM,
-        metaInfo: SM,
-        tamed: jM
-      } = rM;
-      MM.setPet(lr(iM), OM, SM, jM)
+        mobType: zU,
+        variation: cU,
+        metaInfo: yU,
+        tamed: QU
+      } = XU;
+      UU.setPet(kX(zU), cU, yU, QU)
     }
-    const ur = {
+    const CX = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Rr {
-      constructor(MM, rM, iM, OM) {
+    class wX {
+      constructor(UU, XU, zU, cU) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, MM(iM.width, OM[1], OM).then((MM => {
-          if (this.closed) return void MM.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, UU(zU.width, cU[1], cU).then((UU => {
+          if (this.closed) return void UU.close();
           const {
-            style: iM
-          } = MM.canvas;
-          iM.position = "absolute", iM.top = "0", iM.visibility = "hidden", Cr(rM, MM), this.preview = MM, this.apply()
-        })).catch((MM => {
-          console.error(`${dr} couldn't open a lineup figure`, MM)
+            style: zU
+          } = UU.canvas;
+          zU.position = "absolute", zU.top = "0", zU.visibility = "hidden", RX(XU, UU), this.preview = UU, this.apply()
+        })).catch((UU => {
+          console.error(`${tX} couldn't open a lineup figure`, UU)
         }))
       }
-      update(MM, rM, iM, OM, SM) {
-        this.figure = MM, this.shown = rM, this.order = iM, this.span = OM, this.lineup = SM, this.apply()
+      update(UU, XU, zU, cU, yU) {
+        this.figure = UU, this.shown = XU, this.order = zU, this.span = cU, this.lineup = yU, this.apply()
       }
       close() {
-        var MM;
-        this.closed = !0, null === (MM = this.preview) || void 0 === MM || MM.close(), this.preview = null
+        var UU;
+        this.closed = !0, null === (UU = this.preview) || void 0 === UU || UU.close(), this.preview = null
       }
       apply() {
         const {
-          preview: MM,
-          figure: rM,
-          lineup: iM
+          preview: UU,
+          figure: XU,
+          lineup: zU
         } = this;
-        if (null === MM || null === rM) return;
-        if (this.given !== rM) {
-          var OM;
-          this.given = rM, this.loaded = !1;
-          const iM = null === rM.QG ? 0 : null !== (OM = (0, nr.d)(rM.QG)) && void 0 !== OM ? OM : 0;
-          MM.setFigure(function(MM) {
-            return JSON.stringify(Object.fromEntries(MM.cosmetics))
-          }(rM), iM, Ur(rM.animation), rM.size), MM.untilSettled().then((() => {
-            this.given === rM && (this.loaded = !0, this.apply())
+        if (null === UU || null === XU) return;
+        if (this.given !== XU) {
+          var cU;
+          this.given = XU, this.loaded = !1;
+          const zU = null === XU.jB ? 0 : null !== (cU = (0, oX.c)(XU.jB)) && void 0 !== cU ? cU : 0;
+          UU.setFigure(function(UU) {
+            return JSON.stringify(Object.fromEntries(UU.cosmetics))
+          }(XU), zU, BX(XU.animation), XU.size), UU.untilSettled().then((() => {
+            this.given === XU && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: SM,
-          width: jM
+          left: yU,
+          width: QU
         } = this.span;
-        MM.resize(jM, iM[1], iM);
+        UU.resize(QU, zU[1], zU);
         const {
-          style: aM
-        } = MM.canvas;
-        aM.left = `${SM}px`, aM.width = `${jM}px`, aM.zIndex = this.order, aM.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: AU
+        } = UU.canvas;
+        AU.left = `${yU}px`, AU.width = `${QU}px`, AU.zIndex = this.order, AU.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class pr {
-      constructor(MM, rM) {
-        this.open = rM, this.layer = void 0, this.figures = [], this.view = {
+    class qX {
+      constructor(UU, XU) {
+        this.open = XU, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = er(MM), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = PX(UU), this.layer = document.createElement("div");
         const {
-          style: iM
+          style: zU
         } = this.layer;
-        iM.position = "relative", iM.isolation = "isolate", iM.overflow = "hidden", iM.width = "100%", iM.height = "100%", iM.pointerEvents = "none", MM.appendChild(this.layer)
+        zU.position = "relative", zU.isolation = "isolate", zU.overflow = "hidden", zU.width = "100%", zU.height = "100%", zU.pointerEvents = "none", UU.appendChild(this.layer)
       }
-      show(MM) {
-        this.view = MM, this.place()
+      show(UU) {
+        this.view = UU, this.place()
       }
-      resize(MM, rM) {
-        this.size = [MM, rM], this.place()
+      resize(UU, XU) {
+        this.size = [UU, XU], this.place()
       }
       close() {
-        for (const MM of this.figures) MM.close();
+        for (const UU of this.figures) UU.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: MM,
-          shown: rM
+          figures: UU,
+          shown: XU
         } = this.view;
-        for (const OM of this.figures.splice(MM.length)) OM.close();
+        for (const cU of this.figures.splice(UU.length)) cU.close();
         const {
-          size: iM
+          size: zU
         } = this;
-        MM.forEach(((OM, SM) => {
-          var jM;
-          const aM = function(MM, rM, iM, OM) {
-            let [SM, jM] = OM;
-            const aM = (MM + .5) * SM / rM,
-              PM = Math.min(Math.max(SM / rM, 2 * iM * jM), 2 * Math.max(aM, SM - aM));
+        UU.forEach(((cU, yU) => {
+          var QU;
+          const AU = function(UU, XU, zU, cU) {
+            let [yU, QU] = cU;
+            const AU = (UU + .5) * yU / XU,
+              FU = Math.min(Math.max(yU / XU, 2 * zU * QU), 2 * Math.max(AU, yU - AU));
             return {
-              left: aM - PM / 2,
-              width: PM
+              left: AU - FU / 2,
+              width: FU
             }
-          }(SM, MM.length, function(MM) {
+          }(yU, UU.length, function(UU) {
             let {
-              animation: rM,
-              size: iM
-            } = MM;
+              animation: XU,
+              size: zU
+            } = UU;
             const {
-              aimed: OM,
-              ready: SM
-            } = ur;
-            return (Ur(rM) === Qr.gunAimed ? OM : SM) * iM
-          }(OM), iM);
-          this.figures[SM] ??= new Rr(this.open, this.layer, aM, iM), this.figures[SM].update(OM, null !== (jM = rM[SM]) && void 0 !== jM && jM, function(MM, rM) {
-            return String(Math.round(1e3 * MM) + rM)
-          }(OM.size, SM), aM, iM)
+              aimed: cU,
+              ready: yU
+            } = CX;
+            return (BX(XU) === DX.gunAimed ? cU : yU) * zU
+          }(cU), zU);
+          this.figures[yU] ??= new wX(this.open, this.layer, AU, zU), this.figures[yU].update(cU, null !== (QU = XU[yU]) && void 0 !== QU && QU, function(UU, XU) {
+            return String(Math.round(1e3 * UU) + XU)
+          }(cU.size, yU), AU, zU)
         }))
       }
     }
-    const Wr = {
-      player: xM,
-      store: vM
+    const OX = {
+      player: sU,
+      store: nU
     };
-    class sr {
-      constructor(MM) {
-        this.page = MM
+    class SX {
+      constructor(UU) {
+        this.page = UU
       }
-      async openMob(MM) {
-        return new br(await this.open(MM, AM), tr)
+      async openMob(UU) {
+        return new WX(await this.open(UU, VU), LX)
       }
-      async openPet(MM) {
-        return new br(await this.open(MM, AM), gr)
+      async openPet(UU) {
+        return new WX(await this.open(UU, VU), eX)
       }
-      openMobLineup(MM) {
-        return new pr(MM, ((MM, rM, iM) => this.page.openPreview(AM, MM, rM, iM)))
+      openMobLineup(UU) {
+        return new qX(UU, ((UU, XU, zU) => this.page.openPreview(VU, UU, XU, zU)))
       }
-      async openCharacter(MM, rM) {
-        return new wr(await this.open(MM, Wr[rM]))
+      async openCharacter(UU, XU) {
+        return new dX(await this.open(UU, OX[XU]))
       }
-      async open(MM, rM) {
-        const [iM, OM] = er(MM), SM = await this.page.openPreview(rM, iM, OM);
-        return Cr(MM, SM), SM
+      async open(UU, XU) {
+        const [zU, cU] = PX(UU), yU = await this.page.openPreview(XU, zU, cU);
+        return RX(UU, yU), yU
       }
     }
   },
-  37696: (MM, rM, iM) => {
-    iM.d(rM, {
-      C: () => yM,
-      e: () => OM,
-      g: () => SM,
-      h: () => mM,
-      j: () => dM,
-      l: () => zM,
-      o: () => lM,
-      p: () => nM,
-      r: () => QM,
-      s: () => HM,
-      u: () => hM,
-      y: () => JM
+  37471: (UU, XU, zU) => {
+    zU.d(XU, {
+      A: () => pU,
+      D: () => aU,
+      F: () => gU,
+      c: () => cU,
+      e: () => YU,
+      f: () => yU,
+      h: () => NU,
+      j: () => tU,
+      n: () => EU,
+      p: () => kU,
+      s: () => oU,
+      v: () => DU,
+      z: () => IU
     });
-    const OM = [{
+    const cU = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1635,64 +1633,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function SM(MM, rM) {
+    function yU(UU, XU) {
       const {
-        numLines: iM,
-        charsPerLine: SM
-      } = OM[rM];
-      return EM(MM, iM, SM, !1)
+        numLines: zU,
+        charsPerLine: yU
+      } = cU[XU];
+      return GU(UU, zU, yU, !1)
     }
-    const jM = 7 / 8,
-      aM = .25,
-      PM = 8;
+    const QU = 7 / 8,
+      AU = .25,
+      FU = 8;
 
-    function nM(MM, rM) {
+    function oU(UU, XU) {
       return {
-        width: Math.min(MM, PM) - 2 * aM,
-        height: Math.min(rM, PM) - 2 * aM
+        width: Math.min(UU, FU) - 2 * AU,
+        height: Math.min(XU, FU) - 2 * AU
       }
     }
 
-    function QM(MM, rM, iM) {
-      const SM = nM(MM, rM),
+    function DU(UU, XU, zU) {
+      const yU = oU(UU, XU),
         {
-          numLines: aM,
-          charsPerLine: PM
-        } = OM[iM];
+          numLines: AU,
+          charsPerLine: FU
+        } = cU[zU];
       return {
-        numLines: Math.max(1, Math.floor(aM / jM * SM.height)),
-        charsPerLine: Math.max(1, Math.floor(PM * SM.width))
+        numLines: Math.max(1, Math.floor(AU / QU * yU.height)),
+        charsPerLine: Math.max(1, Math.floor(FU * yU.width))
       }
     }
 
-    function zM(MM, rM, iM, OM) {
+    function EU(UU, XU, zU, cU) {
       const {
-        numLines: SM,
-        charsPerLine: jM
-      } = QM(iM, OM, rM);
-      return EM(MM, SM, jM, !1)
+        numLines: yU,
+        charsPerLine: QU
+      } = DU(zU, cU, XU);
+      return GU(UU, yU, QU, !1)
     }
-    const LM = 32e3;
+    const YU = 32e3;
 
-    function mM(MM) {
-      return MM.slice(0, LM)
+    function NU(UU) {
+      return UU.slice(0, YU)
     }
-    const HM = 512e3,
-      hM = 64,
-      JM = HM;
+    const IU = 512e3,
+      pU = 64,
+      aU = IU;
 
-    function dM(MM, rM) {
-      const iM = Math.max(0, JM - rM),
-        OM = Math.min(HM, iM);
-      return MM.slice(0, OM)
+    function tU(UU, XU) {
+      const zU = Math.max(0, aU - XU),
+        cU = Math.min(IU, zU);
+      return UU.slice(0, cU)
     }
-    const yM = {
+    const gU = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      nQ: {
+      YD: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1704,31 +1702,31 @@ export const modules = {
       }
     };
 
-    function lM(MM, rM) {
+    function kU(UU, XU) {
       const {
-        numLines: iM,
-        charsPerLine: OM
-      } = yM[rM];
-      return EM(MM, iM, OM, !1)
+        numLines: zU,
+        charsPerLine: cU
+      } = gU[XU];
+      return GU(UU, zU, cU, !1)
     }
 
-    function EM(MM, rM, iM, OM, SM) {
-      (SM || OM) && (MM = MM.slice(0, null !== SM && void 0 !== SM ? SM : rM * iM));
-      const jM = MM.split("\n");
-      if (jM.length > rM && jM.splice(rM, jM.length - rM), !OM)
-        for (let aM = 0; aM < jM.length; aM++) {
-          const MM = jM[aM];
-          MM.length > iM && (jM[aM] = MM.substring(0, iM), jM.length < rM && jM.splice(aM + 1, 0, MM.substring(iM)))
+    function GU(UU, XU, zU, cU, yU) {
+      (yU || cU) && (UU = UU.slice(0, null !== yU && void 0 !== yU ? yU : XU * zU));
+      const QU = UU.split("\n");
+      if (QU.length > XU && QU.splice(XU, QU.length - XU), !cU)
+        for (let AU = 0; AU < QU.length; AU++) {
+          const UU = QU[AU];
+          UU.length > zU && (QU[AU] = UU.substring(0, zU), QU.length < XU && QU.splice(AU + 1, 0, UU.substring(zU)))
         }
-      return jM.join("\n")
+      return QU.join("\n")
     }
   },
-  53739: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
+  53736: (UU, XU, zU) => {
+    UU.exports = zU.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
   },
-  53745: (MM, rM, iM) => {
-    MM.exports = iM.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
+  53738: (UU, XU, zU) => {
+    UU.exports = zU.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

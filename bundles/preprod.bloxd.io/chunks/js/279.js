@@ -1,1512 +1,1294 @@
 export const id = 279;
 export const ids = [279];
 export const modules = {
-  41167: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => mM,
-      f: () => LM,
-      h: () => nM,
-      i: () => HM,
-      m: () => QM,
-      n: () => PM,
-      r: () => zM
+  41508: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => cU
     });
-    var OM = iM(39711),
-      SM = iM(41176);
-
-    function jM(MM, rM, iM, OM) {
-      switch (rM) {
-        case 5120: {
-          let rM = MM.getInt8(iM);
-          return OM && (rM = Math.max(rM / 127, -1)), rM
+    let cU = !1
+  },
+  41108: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => pU
+    });
+    var cU = zU(41113),
+      yU = zU(41121),
+      QU = zU(37846),
+      AU = zU(37819),
+      FU = zU(37841),
+      oU = zU(38649),
+      DU = zU(41125);
+    class EU {
+      get wrapU() {
+        return this._wrapU
+      }
+      set wrapU(UU) {
+        this._wrapU = UU
+      }
+      get wrapV() {
+        return this._wrapV
+      }
+      set wrapV(UU) {
+        this._wrapV = UU
+      }
+      get coordinatesMode() {
+        return 0
+      }
+      get isCube() {
+        return !!this._texture && this._texture.isCube
+      }
+      set isCube(UU) {
+        this._texture && (this._texture.isCube = UU)
+      }
+      get is3D() {
+        return !!this._texture && this._texture.is3D
+      }
+      set is3D(UU) {
+        this._texture && (this._texture.is3D = UU)
+      }
+      get is2DArray() {
+        return !!this._texture && this._texture.is2DArray
+      }
+      set is2DArray(UU) {
+        this._texture && (this._texture.is2DArray = UU)
+      }
+      getClassName() {
+        return "ThinTexture"
+      }
+      static _IsRenderTargetWrapper(UU) {
+        return void 0 !== UU?.shareDepth
+      }
+      constructor(UU) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = DU.d.Zero(), this._cachedBaseSize = DU.d.Zero(), this._initialSamplingMode = 2, this._texture = EU._IsRenderTargetWrapper(UU) ? UU.texture : UU, this._texture && (this._engine = this._texture.qp(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
+      }
+      isReady() {
+        return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
+      }
+      delayLoad() {}
+      getInternalTexture() {
+        return this._texture
+      }
+      getSize() {
+        if (this._texture) {
+          if (this._texture.width) return this._cachedSize.width = this._texture.width, this._cachedSize.height = this._texture.height, this._cachedSize;
+          if (this._texture._size) return this._cachedSize.width = this._texture._size, this._cachedSize.height = this._texture._size, this._cachedSize
         }
-        case 5121: {
-          let rM = MM.getUint8(iM);
-          return OM && (rM /= 255), rM
-        }
-        case 5122: {
-          let rM = MM.getInt16(iM, !0);
-          return OM && (rM = Math.max(rM / 32767, -1)), rM
-        }
-        case 5123: {
-          let rM = MM.getUint16(iM, !0);
-          return OM && (rM /= 65535), rM
-        }
-        case 5131:
-          return (0, SM.c)(MM.getUint16(iM, !0));
-        case 5124:
-          return MM.getInt32(iM, !0);
-        case 5125:
-          return MM.getUint32(iM, !0);
-        case 5126:
-          return MM.getFloat32(iM, !0);
-        default:
-          throw new Error(`Invalid component type ${rM}`)
+        return this._cachedSize
+      }
+      getBaseSize() {
+        return this.isReady() && this._texture ? this._texture._size ? (this._cachedBaseSize.width = this._texture._size, this._cachedBaseSize.height = this._texture._size, this._cachedBaseSize) : (this._cachedBaseSize.width = this._texture.baseWidth, this._cachedBaseSize.height = this._texture.baseHeight, this._cachedBaseSize) : (this._cachedBaseSize.width = 0, this._cachedBaseSize.height = 0, this._cachedBaseSize)
+      }
+      get samplingMode() {
+        return this._texture ? this._texture.samplingMode : this._initialSamplingMode
+      }
+      updateSamplingMode(UU) {
+        let XU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(UU, this._texture, this._texture.generateMipMaps && XU)
+      }
+      releaseInternalTexture() {
+        this._texture && (this._texture.dispose(), this._texture = null)
+      }
+      dispose() {
+        this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
     }
-
-    function aM(MM, rM, iM, OM, jM) {
-      switch (rM) {
-        case 5120:
-          OM && (jM = Math.round(127 * jM)), MM.setInt8(iM, jM);
-          break;
-        case 5121:
-          OM && (jM = Math.round(255 * jM)), MM.setUint8(iM, jM);
-          break;
-        case 5122:
-          OM && (jM = Math.round(32767 * jM)), MM.setInt16(iM, jM, !0);
-          break;
-        case 5123:
-          OM && (jM = Math.round(65535 * jM)), MM.setUint16(iM, jM, !0);
-          break;
-        case 5131:
-          MM.setUint16(iM, (0, SM.g)(jM), !0);
-          break;
-        case 5124:
-          MM.setInt32(iM, jM, !0);
-          break;
-        case 5125:
-          MM.setUint32(iM, jM, !0);
-          break;
-        case 5126:
-          MM.setFloat32(iM, jM, !0);
-          break;
-        default:
-          throw new Error(`Invalid component type ${rM}`)
-      }
-    }
-
-    function PM(MM) {
-      switch (MM) {
-        case 5120:
-        case 5121:
-          return 1;
-        case 5122:
-        case 5123:
-        case 5131:
-          return 2;
-        case 5124:
-        case 5125:
-        case 5126:
-          return 4;
-        default:
-          throw new Error(`Invalid type '${MM}'`)
-      }
-    }
-
-    function nM(MM, rM, iM, OM, SM, nM, QM, zM) {
-      const LM = new Array(OM),
-        mM = new Array(OM);
-      if (MM instanceof Array) {
-        let SM = rM / 4;
-        const jM = iM / 4;
-        for (let rM = 0; rM < nM; rM += OM) {
-          for (let rM = 0; rM < OM; rM++) LM[rM] = mM[rM] = MM[SM + rM];
-          zM(mM, rM);
-          for (let rM = 0; rM < OM; rM++) LM[rM] !== mM[rM] && (MM[SM + rM] = mM[rM]);
-          SM += jM
+    var YU, NU = zU(41134),
+      IU = zU(40989);
+    let pU = (() => {
+      var UU;
+      let XU, zU, DU, YU, IU, pU, aU, tU, gU, kU, GU, BU, ZU, RU, PU, WU, dU, LU, eU, CU, wU, qU, OU, SU, rU, uU = EU,
+        fU = [],
+        iU = [],
+        HU = [],
+        MU = [],
+        vU = [],
+        VU = [],
+        sU = [],
+        nU = [],
+        mU = [],
+        lU = [],
+        xU = [],
+        JU = [],
+        jU = [],
+        KU = [],
+        bU = [],
+        TU = [],
+        hU = [],
+        UX = [],
+        XX = [],
+        zX = [],
+        cX = [],
+        yX = [],
+        QX = [],
+        AX = [],
+        FX = [],
+        oX = [],
+        DX = [],
+        EX = [],
+        YX = [],
+        NX = [],
+        IX = [];
+      return UU = class extends uU {
+        set hasAlpha(UU) {
+          this._hasAlpha = UU
         }
-      } else {
-        const HM = ArrayBuffer.isView(MM) ? new DataView(MM.buffer, MM.byteOffset, MM.byteLength) : new DataView(MM),
-          hM = PM(SM);
-        for (let MM = 0; MM < nM; MM += OM) {
-          for (let MM = 0, iM = rM; MM < OM; MM++, iM += hM) LM[MM] = mM[MM] = jM(HM, SM, iM, QM);
-          zM(mM, MM);
-          for (let MM = 0, iM = rM; MM < OM; MM++, iM += hM) LM[MM] !== mM[MM] && aM(HM, SM, iM, QM, mM[MM]);
-          rM += iM
+        get hasAlpha() {
+          return this._hasAlpha
         }
-      }
-    }
-
-    function QM(MM, rM, iM, SM, jM, aM, QM, zM) {
-      const LM = rM * PM(iM),
-        mM = QM * rM;
-      if (5126 !== iM || jM !== LM) {
-        const OM = new Float32Array(mM);
-        return nM(MM, SM, jM, rM, iM, mM, aM, ((MM, iM) => {
-          for (let SM = 0; SM < rM; SM++) OM[iM + SM] = MM[SM]
-        })), OM
-      }
-      if (!(MM instanceof Array || MM instanceof Float32Array) || 0 !== SM || MM.length !== mM) {
-        if (MM instanceof Array) {
-          const rM = SM / 4;
-          return MM.slice(rM, rM + mM)
+        set getAlphaFromRGB(UU) {
+          this._getAlphaFromRGB !== UU && (this._getAlphaFromRGB = UU, this._scene && this._scene.markAllMaterialsAsDirty(1, (UU => UU.hasTexture(this))))
         }
-        if (ArrayBuffer.isView(MM)) {
-          const rM = MM.byteOffset + SM;
-          return 0 !== (3 & rM) && (OM.e.Warn("Float array must be aligned to 4-bytes border"), zM = !0), zM ? new Float32Array(MM.buffer.slice(rM, rM + mM * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(MM.buffer, rM, mM)
+        get getAlphaFromRGB() {
+          return this._getAlphaFromRGB
         }
-        return new Float32Array(MM, SM, mM)
-      }
-      return zM ? MM.slice() : MM
-    }
-
-    function zM(MM, rM, iM, SM, jM, aM, QM) {
-      const zM = PM(iM),
-        LM = function(MM) {
-          switch (MM) {
-            case 5120:
-              return Int8Array;
-            case 5121:
-              return Uint8Array;
-            case 5122:
-              return Int16Array;
-            case 5123:
-            case 5131:
-              return Uint16Array;
-            case 5124:
-              return Int32Array;
-            case 5125:
-              return Uint32Array;
-            case 5126:
-              return Float32Array;
-            default:
-              throw new Error(`Invalid component type '${MM}'`)
+        set coordinatesIndex(UU) {
+          this._coordinatesIndex !== UU && (this._coordinatesIndex = UU, this._scene && this._scene.markAllMaterialsAsDirty(1, (UU => UU.hasTexture(this))))
+        }
+        get coordinatesIndex() {
+          return this._coordinatesIndex
+        }
+        set coordinatesMode(UU) {
+          this._coordinatesMode !== UU && (this._coordinatesMode = UU, this._scene && this._scene.markAllMaterialsAsDirty(1, (UU => UU.hasTexture(this))))
+        }
+        get coordinatesMode() {
+          return this._coordinatesMode
+        }
+        get wrapU() {
+          return this._wrapU
+        }
+        set wrapU(UU) {
+          this._wrapU = UU
+        }
+        get wrapV() {
+          return this._wrapV
+        }
+        set wrapV(UU) {
+          this._wrapV = UU
+        }
+        get isCube() {
+          return this._texture ? this._texture.isCube : this._isCube
+        }
+        set isCube(UU) {
+          this._texture ? this._texture.isCube = UU : this._isCube = UU
+        }
+        get is3D() {
+          return !!this._texture && this._texture.is3D
+        }
+        set is3D(UU) {
+          this._texture && (this._texture.is3D = UU)
+        }
+        get is2DArray() {
+          return !!this._texture && this._texture.is2DArray
+        }
+        set is2DArray(UU) {
+          this._texture && (this._texture.is2DArray = UU)
+        }
+        get gammaSpace() {
+          return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
+        }
+        set gammaSpace(UU) {
+          if (this._texture) {
+            if (this._texture._gammaSpace === UU) return;
+            this._texture._gammaSpace = UU
+          } else {
+            if (this._gammaSpace === UU) return;
+            this._gammaSpace = UU
           }
-        }(iM),
-        mM = aM * rM;
-      if (Array.isArray(MM)) {
-        if (0 !== (3 & SM) || 0 !== (3 & jM)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const OM = SM / 4,
-          PM = jM / 4;
-        if (OM + (aM - 1) * PM + rM > MM.length) throw new Error("Last accessed index is out of bounds.");
-        if (PM < rM) throw new Error("Data stride cannot be smaller than the component size.");
-        if (PM !== rM) {
-          const OM = new LM(mM);
-          return nM(MM, SM, jM, rM, iM, mM, !1, ((MM, iM) => {
-            for (let SM = 0; SM < rM; SM++) OM[iM + SM] = MM[SM]
-          })), OM
+          this.nS()?.markAllMaterialsAsDirty(1, (UU => UU.hasTexture(this)))
         }
-        return new LM(MM.slice(OM, OM + mM))
+        get isRGBD() {
+          return null != this._texture && this._texture._isRGBD
+        }
+        set isRGBD(UU) {
+          UU !== this.isRGBD && (this._texture && (this._texture._isRGBD = UU), this.nS()?.markAllMaterialsAsDirty(1, (UU => UU.hasTexture(this))))
+        }
+        get noMipmap() {
+          return !1
+        }
+        get lodGenerationOffset() {
+          return this._texture ? this._texture._lodGenerationOffset : 0
+        }
+        set lodGenerationOffset(UU) {
+          this._texture && (this._texture._lodGenerationOffset = UU)
+        }
+        get lodGenerationScale() {
+          return this._texture ? this._texture._lodGenerationScale : 0
+        }
+        set lodGenerationScale(UU) {
+          this._texture && (this._texture._lodGenerationScale = UU)
+        }
+        get linearSpecularLOD() {
+          return !!this._texture && this._texture._linearSpecularLOD
+        }
+        set linearSpecularLOD(UU) {
+          this._texture && (this._texture._linearSpecularLOD = UU)
+        }
+        get irradianceTexture() {
+          return this._texture ? this._texture._irradianceTexture : null
+        }
+        set irradianceTexture(UU) {
+          this._texture && (this._texture._irradianceTexture = UU)
+        }
+        get uid() {
+          return this._uid || (this._uid = (0, oU.d)()), this._uid
+        }
+        toString() {
+          return this.name
+        }
+        getClassName() {
+          return "BaseTexture"
+        }
+        set onDispose(UU) {
+          this._onDisposeObserver && this.bS.remove(this._onDisposeObserver), this._onDisposeObserver = this.bS.add(UU)
+        }
+        get isBlocking() {
+          return !0
+        }
+        get loadingError() {
+          return this._loadingError
+        }
+        get errorObject() {
+          return this._errorObject
+        }
+        constructor(XU) {
+          let zU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, cU.n)(this, fU), (0, cU.n)(this, iU, void 0)), this.name = ((0, cU.n)(this, HU), (0, cU.n)(this, MU, void 0)), this.displayName = ((0, cU.n)(this, vU), (0, cU.n)(this, VU, void 0)), this.metadata = ((0, cU.n)(this, sU), (0, cU.n)(this, nU, null)), this._internalMetadata = (0, cU.n)(this, mU), this.reservedDataStore = null, this._hasAlpha = (0, cU.n)(this, lU, !1), this._getAlphaFromRGB = ((0, cU.n)(this, xU), (0, cU.n)(this, JU, !1)), this.level = ((0, cU.n)(this, jU), (0, cU.n)(this, KU, 1)), this._coordinatesIndex = ((0, cU.n)(this, bU), (0, cU.n)(this, TU, 0)), this.optimizeUVAllocation = ((0, cU.n)(this, hU), (0, cU.n)(this, UX, !0)), this._coordinatesMode = ((0, cU.n)(this, XX), (0, cU.n)(this, zX, 0)), this.wrapR = ((0, cU.n)(this, cX), (0, cU.n)(this, yX, 1)), this.anisotropicFilteringLevel = ((0, cU.n)(this, QX), (0, cU.n)(this, AX, UU.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, cU.n)(this, FX), !1), this._gammaSpace = !0, this.invertZ = (0, cU.n)(this, oX, !1), this.lodLevelInAlpha = ((0, cU.n)(this, DX), (0, cU.n)(this, EX, !1)), this._dominantDirection = ((0, cU.n)(this, YX), null), this.isRenderTarget = (0, cU.n)(this, NX, !1), this._prefiltered = ((0, cU.n)(this, IX), !1), this._forceSerialize = !1, this.animations = [], this.bS = new QU.e, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, XU ? UU._IsScene(XU) ? this._scene = XU : this._engine = XU : this._scene = FU.b.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.qp()), this._texture = zU, this._uid = null
+        }
+        nS() {
+          return this._scene
+        }
+        _getEngine() {
+          return this._engine
+        }
+        getTextureMatrix() {
+          return AU.e.IdentityReadOnly
+        }
+        getReflectionTextureMatrix() {
+          return AU.e.IdentityReadOnly
+        }
+        getRefractionTextureMatrix() {
+          return this.getReflectionTextureMatrix()
+        }
+        isReadyOrNotBlocking() {
+          return !this.isBlocking || this.isReady() || this.loadingError
+        }
+        scale(UU) {}
+        get canRescale() {
+          return !1
+        }
+        _getFromCache(UU, XU, zU, cU, yU, QU) {
+          const AU = this._getEngine();
+          if (!AU) return null;
+          const FU = AU._getUseSRGBBuffer(!!yU, XU),
+            oU = AU.getLoadedTexturesCache();
+          for (let DU = 0; DU < oU.length; DU++) {
+            const AU = oU[DU];
+            if ((void 0 === yU || FU === AU._useSRGBBuffer) && (void 0 === cU || cU === AU.invertY) && AU.url === UU && AU.generateMipMaps === !XU && (!zU || zU === AU.samplingMode) && (void 0 === QU || QU === AU.isCube)) return AU.incrementReferences(), AU
+          }
+          return null
+        }
+        _rebuild() {}
+        clone() {
+          return null
+        }
+        get textureType() {
+          return this._texture && void 0 !== this._texture.type ? this._texture.type : 0
+        }
+        get textureFormat() {
+          return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
+        }
+        _markAllSubMeshesAsTexturesDirty() {
+          const UU = this.nS();
+          UU && UU.markAllMaterialsAsDirty(1)
+        }
+        readPixels() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            cU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            QU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            AU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            FU = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            oU = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          if (!this._texture) return null;
+          const DU = this._getEngine();
+          if (!DU) return null;
+          const EU = this.getSize();
+          let YU = EU.width,
+            NU = EU.height;
+          0 !== XU && (YU /= Math.pow(2, XU), NU /= Math.pow(2, XU), YU = Math.round(YU), NU = Math.round(NU)), FU = Math.min(YU, FU), oU = Math.min(NU, oU);
+          try {
+            return this._texture.isCube || this._texture.is2DArray ? DU._readTexturePixels(this._texture, FU, oU, UU, XU, zU, cU, yU, QU, AU) : DU._readTexturePixels(this._texture, FU, oU, -1, XU, zU, cU, yU, QU, AU)
+          } catch (IU) {
+            return null
+          }
+        }
+        _readPixelsSync() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            cU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            yU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          if (!this._texture) return null;
+          const QU = this.getSize();
+          let AU = QU.width,
+            FU = QU.height;
+          const oU = this._getEngine();
+          if (!oU) return null;
+          0 != XU && (AU /= Math.pow(2, XU), FU /= Math.pow(2, XU), AU = Math.round(AU), FU = Math.round(FU));
+          try {
+            return this._texture.isCube ? oU._readTexturePixelsSync(this._texture, AU, FU, UU, XU, zU, cU, yU) : oU._readTexturePixelsSync(this._texture, AU, FU, -1, XU, zU, cU, yU)
+          } catch (DU) {
+            return null
+          }
+        }
+        get _lodTextureHigh() {
+          return this._texture ? this._texture._lodTextureHigh : null
+        }
+        get _lodTextureMid() {
+          return this._texture ? this._texture._lodTextureMid : null
+        }
+        get _lodTextureLow() {
+          return this._texture ? this._texture._lodTextureLow : null
+        }
+        dispose() {
+          if (this._scene) {
+            this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
+            const UU = this._scene.textures.indexOf(this);
+            if (UU >= 0 && this._scene.textures.splice(UU, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const UU = this._parentContainer.textures.indexOf(this);
+              UU > -1 && this._parentContainer.textures.splice(UU, 1), this._parentContainer = null
+            }
+          }
+          this.bS.notifyObservers(this), this.bS.clear(), this.metadata = null, super.dispose()
+        }
+        serialize() {
+          let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !UU) return null;
+          const XU = NU.b.Serialize(this);
+          return NU.b.AppendSerializedAnimations(this, XU), XU
+        }
+        static WhenAllReady(UU, XU) {
+          let zU = UU.length;
+          if (0 !== zU)
+            for (let cU = 0; cU < UU.length; cU++) {
+              const yU = UU[cU];
+              if (yU.isReady()) 0 === --zU && XU();
+              else {
+                const UU = yU.onLoadObservable;
+                UU ? UU.addOnce((() => {
+                  0 === --zU && XU()
+                })) : 0 === --zU && XU()
+              }
+            } else XU()
+        }
+        static _IsScene(UU) {
+          return "Scene" === UU.getClassName()
+        }
+      }, (() => {
+        const QU = "function" === typeof Symbol && Symbol.metadata ? Object.create(uU[Symbol.metadata] ?? null) : void 0;
+        XU = [(0, yU.I)()], zU = [(0, yU.I)()], DU = [(0, yU.I)()], YU = [(0, yU.I)()], IU = [(0, yU.I)("hasAlpha")], pU = [(0, yU.I)("getAlphaFromRGB")], aU = [(0, yU.I)()], tU = [(0, yU.I)("coordinatesIndex")], gU = [(0, yU.I)()], kU = [(0, yU.I)("coordinatesMode")], GU = [(0, yU.I)()], BU = [(0, yU.I)()], ZU = [(0, yU.I)()], RU = [(0, yU.I)()], PU = [(0, yU.I)()], WU = [(0, yU.I)()], dU = [(0, yU.I)()], LU = [(0, yU.I)()], eU = [(0, yU.I)()], CU = [(0, yU.I)()], wU = [(0, yU.I)()], qU = [(0, yU.I)()], OU = [(0, yU.I)()], SU = [(0, yU.x)()], rU = [(0, yU.I)()], (0, cU.j)(UU, null, GU, {
+          kind: "getter",
+          name: "wrapU",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "wrapU" in UU,
+            get: UU => UU.wrapU
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, BU, {
+          kind: "getter",
+          name: "wrapV",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "wrapV" in UU,
+            get: UU => UU.wrapV
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, PU, {
+          kind: "getter",
+          name: "isCube",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "isCube" in UU,
+            get: UU => UU.isCube
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, WU, {
+          kind: "getter",
+          name: "is3D",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "is3D" in UU,
+            get: UU => UU.is3D
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, dU, {
+          kind: "getter",
+          name: "is2DArray",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "is2DArray" in UU,
+            get: UU => UU.is2DArray
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, LU, {
+          kind: "getter",
+          name: "gammaSpace",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "gammaSpace" in UU,
+            get: UU => UU.gammaSpace
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, wU, {
+          kind: "getter",
+          name: "lodGenerationOffset",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "lodGenerationOffset" in UU,
+            get: UU => UU.lodGenerationOffset
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, qU, {
+          kind: "getter",
+          name: "lodGenerationScale",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "lodGenerationScale" in UU,
+            get: UU => UU.lodGenerationScale
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, OU, {
+          kind: "getter",
+          name: "linearSpecularLOD",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "linearSpecularLOD" in UU,
+            get: UU => UU.linearSpecularLOD
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(UU, null, SU, {
+          kind: "getter",
+          name: "irradianceTexture",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "irradianceTexture" in UU,
+            get: UU => UU.irradianceTexture
+          },
+          metadata: QU
+        }, null, fU), (0, cU.j)(null, null, XU, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "uniqueId" in UU,
+            get: UU => UU.uniqueId,
+            set: (UU, XU) => {
+              UU.uniqueId = XU
+            }
+          },
+          metadata: QU
+        }, iU, HU), (0, cU.j)(null, null, zU, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "name" in UU,
+            get: UU => UU.name,
+            set: (UU, XU) => {
+              UU.name = XU
+            }
+          },
+          metadata: QU
+        }, MU, vU), (0, cU.j)(null, null, DU, {
+          kind: "field",
+          name: "displayName",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "displayName" in UU,
+            get: UU => UU.displayName,
+            set: (UU, XU) => {
+              UU.displayName = XU
+            }
+          },
+          metadata: QU
+        }, VU, sU), (0, cU.j)(null, null, YU, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "metadata" in UU,
+            get: UU => UU.metadata,
+            set: (UU, XU) => {
+              UU.metadata = XU
+            }
+          },
+          metadata: QU
+        }, nU, mU), (0, cU.j)(null, null, IU, {
+          kind: "field",
+          name: "_hasAlpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_hasAlpha" in UU,
+            get: UU => UU._hasAlpha,
+            set: (UU, XU) => {
+              UU._hasAlpha = XU
+            }
+          },
+          metadata: QU
+        }, lU, xU), (0, cU.j)(null, null, pU, {
+          kind: "field",
+          name: "_getAlphaFromRGB",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_getAlphaFromRGB" in UU,
+            get: UU => UU._getAlphaFromRGB,
+            set: (UU, XU) => {
+              UU._getAlphaFromRGB = XU
+            }
+          },
+          metadata: QU
+        }, JU, jU), (0, cU.j)(null, null, aU, {
+          kind: "field",
+          name: "level",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "level" in UU,
+            get: UU => UU.level,
+            set: (UU, XU) => {
+              UU.level = XU
+            }
+          },
+          metadata: QU
+        }, KU, bU), (0, cU.j)(null, null, tU, {
+          kind: "field",
+          name: "_coordinatesIndex",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_coordinatesIndex" in UU,
+            get: UU => UU._coordinatesIndex,
+            set: (UU, XU) => {
+              UU._coordinatesIndex = XU
+            }
+          },
+          metadata: QU
+        }, TU, hU), (0, cU.j)(null, null, gU, {
+          kind: "field",
+          name: "optimizeUVAllocation",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "optimizeUVAllocation" in UU,
+            get: UU => UU.optimizeUVAllocation,
+            set: (UU, XU) => {
+              UU.optimizeUVAllocation = XU
+            }
+          },
+          metadata: QU
+        }, UX, XX), (0, cU.j)(null, null, kU, {
+          kind: "field",
+          name: "_coordinatesMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "_coordinatesMode" in UU,
+            get: UU => UU._coordinatesMode,
+            set: (UU, XU) => {
+              UU._coordinatesMode = XU
+            }
+          },
+          metadata: QU
+        }, zX, cX), (0, cU.j)(null, null, ZU, {
+          kind: "field",
+          name: "wrapR",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "wrapR" in UU,
+            get: UU => UU.wrapR,
+            set: (UU, XU) => {
+              UU.wrapR = XU
+            }
+          },
+          metadata: QU
+        }, yX, QX), (0, cU.j)(null, null, RU, {
+          kind: "field",
+          name: "anisotropicFilteringLevel",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "anisotropicFilteringLevel" in UU,
+            get: UU => UU.anisotropicFilteringLevel,
+            set: (UU, XU) => {
+              UU.anisotropicFilteringLevel = XU
+            }
+          },
+          metadata: QU
+        }, AX, FX), (0, cU.j)(null, null, eU, {
+          kind: "field",
+          name: "invertZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "invertZ" in UU,
+            get: UU => UU.invertZ,
+            set: (UU, XU) => {
+              UU.invertZ = XU
+            }
+          },
+          metadata: QU
+        }, oX, DX), (0, cU.j)(null, null, CU, {
+          kind: "field",
+          name: "lodLevelInAlpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "lodLevelInAlpha" in UU,
+            get: UU => UU.lodLevelInAlpha,
+            set: (UU, XU) => {
+              UU.lodLevelInAlpha = XU
+            }
+          },
+          metadata: QU
+        }, EX, YX), (0, cU.j)(null, null, rU, {
+          kind: "field",
+          name: "isRenderTarget",
+          static: !1,
+          private: !1,
+          access: {
+            has: UU => "isRenderTarget" in UU,
+            get: UU => UU.isRenderTarget,
+            set: (UU, XU) => {
+              UU.isRenderTarget = XU
+            }
+          },
+          metadata: QU
+        }, NX, IX), QU && Object.defineProperty(UU, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: QU
+        })
+      })(), UU.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, UU
+    })();
+    (YU = pU.prototype).forceSphericalPolynomialsRecompute ?? (YU.forceSphericalPolynomialsRecompute = (0, IU.k)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(pU.prototype, "sphericalPolynomial") || Object.defineProperty(pU.prototype, "sphericalPolynomial", (0, IU.i)("BaseTexture", "sphericalPolynomial"))
+  },
+  41557: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => ZU,
+      e: () => GU
+    });
+    var cU = zU(41113),
+      yU = zU(41121),
+      QU = zU(37846),
+      AU = zU(37819),
+      FU = zU(41108),
+      oU = zU(37863),
+      DU = zU(40989),
+      EU = zU(40999),
+      YU = zU(41207),
+      NU = zU(38505),
+      IU = zU(41171);
+
+    function pU(UU, XU) {
+      let zU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const cU = XU.width,
+        yU = XU.height;
+      if (UU instanceof Float32Array) {
+        let XU = UU.byteLength / UU.BYTES_PER_ELEMENT;
+        const zU = new Uint8Array(XU);
+        for (; --XU >= 0;) {
+          let cU = UU[XU];
+          cU < 0 ? cU = 0 : cU > 1 && (cU = 1), zU[XU] = 255 * cU
+        }
+        UU = zU
       }
-      let HM, hM = SM;
-      ArrayBuffer.isView(MM) ? (HM = MM.buffer, hM += MM.byteOffset) : HM = MM;
-      if (hM + (aM - 1) * jM + rM * zM > HM.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const JM = rM * zM;
-      if (jM < JM) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (jM !== JM) {
-        const MM = new LM(mM),
-          iM = new Uint8Array(HM, hM),
-          OM = new Uint8Array(MM.buffer),
-          SM = rM * zM;
-        for (let rM = 0, PM = 0, nM = 0; rM < aM; rM++, PM += jM, nM += SM) OM.set(iM.subarray(PM, PM + SM), nM);
-        return MM
+      const QU = document.createElement("canvas");
+      QU.width = cU, QU.height = yU;
+      const AU = QU.getContext("2d");
+      if (!AU) return null;
+      const FU = AU.createImageData(cU, yU);
+      if (FU.data.set(UU), AU.putImageData(FU, 0, 0), zU) {
+        const UU = document.createElement("canvas");
+        UU.width = cU, UU.height = yU;
+        const XU = UU.getContext("2d");
+        return XU ? (XU.translate(0, yU), XU.scale(1, -1), XU.drawImage(QU, 0, 0), UU.toDataURL("image/png")) : null
       }
-      return 1 !== zM && 0 !== (hM & zM - 1) && (OM.e.Warn("Array must be aligned to border of element size. Data will be copied."), QM = !0), QM ? new LM(HM.slice(hM, hM + mM * zM)) : new LM(HM, hM, mM)
+      return QU.toDataURL("image/png")
     }
 
-    function LM(MM, rM, iM, SM, jM, aM, QM, zM) {
-      const LM = rM * PM(iM),
-        mM = QM * rM;
-      if (zM.length !== mM) throw new Error("Output length is not valid");
-      if (5126 === iM && jM === LM)
-        if (MM instanceof Array) {
-          const rM = SM / 4;
-          zM.set(MM, rM)
-        } else if (ArrayBuffer.isView(MM)) {
-        const rM = MM.byteOffset + SM;
-        if (0 !== (3 & rM)) return OM.e.Warn("Float array must be aligned to 4-bytes border"), void zM.set(new Float32Array(MM.buffer.slice(rM, rM + mM * Float32Array.BYTES_PER_ELEMENT)));
-        const iM = new Float32Array(MM.buffer, rM, mM);
-        zM.set(iM)
-      } else {
-        const rM = new Float32Array(MM, SM, mM);
-        zM.set(rM)
-      } else nM(MM, SM, jM, rM, iM, mM, aM, ((MM, iM) => {
-        for (let OM = 0; OM < rM; OM++) zM[iM + OM] = MM[OM]
-      }))
+    function aU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const cU = UU.getInternalTexture();
+      if (!cU) return null;
+      const yU = UU._readPixelsSync(XU, zU);
+      return yU ? pU(yU, UU.getSize(), cU.invertY) : null
     }
-
-    function mM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(MM)) {
-        for (let SM = 0; SM < rM; SM++)
-          if (MM[iM + SM] - OM > 65535) return !0;
-        return !1
-      }
-      return 4 === MM.BYTES_PER_ELEMENT
+    async function tU(UU) {
+      let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        zU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const cU = UU.getInternalTexture();
+      if (!cU) return null;
+      const yU = await UU.readPixels(XU, zU);
+      return yU ? pU(yU, UU.getSize(), cU.invertY) : null
     }
+    var gU = zU(41508),
+      kU = zU(41134);
+    let GU = (() => {
+        var UU;
+        let XU, zU, pU, GU, BU, ZU, RU, PU, WU, dU, LU, eU, CU, wU = FU.e,
+          qU = [],
+          OU = [],
+          SU = [],
+          rU = [],
+          uU = [],
+          fU = [],
+          iU = [],
+          HU = [],
+          MU = [],
+          vU = [],
+          VU = [],
+          sU = [],
+          nU = [],
+          mU = [],
+          lU = [],
+          xU = [],
+          JU = [],
+          jU = [],
+          KU = [],
+          bU = [],
+          TU = [],
+          hU = [],
+          UX = [],
+          XX = [],
+          zX = [];
+        return UU = class extends wU {
+          static _CreateVideoTexture(XU, zU, cU) {
+            arguments.length > 5 && void 0 !== arguments[5] || UU.TRILINEAR_SAMPLINGMODE;
+            throw (0, DU.m)("VideoTexture")
+          }
+          get noMipmap() {
+            return this._noMipmap
+          }
+          get mimeType() {
+            return this._mimeType
+          }
+          set isBlocking(UU) {
+            this._isBlocking = UU
+          }
+          get isBlocking() {
+            return this._isBlocking
+          }
+          get invertY() {
+            return this._invertY
+          }
+          constructor(XU, zU, yU, AU) {
+            let FU, oU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : UU.TRILINEAR_SAMPLINGMODE,
+              DU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              YU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              NU = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              IU = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              pU = arguments.length > 9 ? arguments[9] : void 0,
+              aU = arguments.length > 10 ? arguments[10] : void 0,
+              tU = arguments.length > 11 ? arguments[11] : void 0,
+              kU = arguments.length > 12 ? arguments[12] : void 0,
+              GU = arguments.length > 13 ? arguments[13] : void 0;
+            super(zU), this.url = ((0, cU.n)(this, qU), (0, cU.n)(this, OU, null)), this.uOffset = ((0, cU.n)(this, SU), (0, cU.n)(this, rU, 0)), this.vOffset = ((0, cU.n)(this, uU), (0, cU.n)(this, fU, 0)), this.uScale = ((0, cU.n)(this, iU), (0, cU.n)(this, HU, 1)), this.vScale = ((0, cU.n)(this, MU), (0, cU.n)(this, vU, 1)), this.uAng = ((0, cU.n)(this, VU), (0, cU.n)(this, sU, 0)), this.vAng = ((0, cU.n)(this, nU), (0, cU.n)(this, mU, 0)), this.wAng = ((0, cU.n)(this, lU), (0, cU.n)(this, xU, 0)), this.uRotationCenter = ((0, cU.n)(this, JU), (0, cU.n)(this, jU, .5)), this.vRotationCenter = ((0, cU.n)(this, KU), (0, cU.n)(this, bU, .5)), this.wRotationCenter = ((0, cU.n)(this, TU), (0, cU.n)(this, hU, .5)), this.homogeneousRotationInUVTransform = ((0, cU.n)(this, UX), (0, cU.n)(this, XX, !1)), this.inspectableCustomProperties = ((0, cU.n)(this, zX), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new QU.e, this._isBlocking = !0, this.name = XU || "", this.url = XU;
+            let BU = !1,
+              ZU = null,
+              RU = !0;
+            "object" === typeof yU && null !== yU ? (FU = yU.noMipmap ?? !1, AU = yU.invertY ?? !gU.c, oU = yU.samplingMode ?? UU.TRILINEAR_SAMPLINGMODE, DU = yU.onLoad ?? null, YU = yU.onError ?? null, NU = yU.buffer ?? null, IU = yU.deleteBuffer ?? !1, pU = yU.format, aU = yU.mimeType, tU = yU.loaderOptions, kU = yU.creationFlags, BU = yU.useSRGBBuffer ?? !1, ZU = yU.internalTexture ?? null, RU = yU.gammaSpace ?? RU, GU = yU.forcedExtension ?? GU) : FU = !!yU, this._gammaSpace = RU, this._noMipmap = FU, this._invertY = void 0 === AU ? !gU.c : AU, this._initialSamplingMode = oU, this._buffer = NU, this._deleteBuffer = IU, this._mimeType = aU, this._loaderOptions = tU, this._creationFlags = kU, this._useSRGBBuffer = BU, this._forcedExtension = GU, void 0 !== pU && (this._format = pU);
+            const PU = this.nS(),
+              WU = this._getEngine();
+            if (!WU) return;
+            WU.onBeforeTextureInitObservable.notifyObservers(this);
+            const dU = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), DU && DU(), !this.isBlocking && PU && PU.resetCachedMaterial()
+              },
+              LU = (XU, zU) => {
+                this._loadingError = !0, this._errorObject = {
+                  message: XU,
+                  exception: zU
+                }, YU && YU(XU, zU), UU.OnTextureLoadErrorObservable.notifyObservers(this)
+              };
+            if (!this.url && !ZU) return this._delayedOnLoad = dU, void(this._delayedOnError = LU);
+            if (this._texture = ZU ?? this._getFromCache(this.url, FU, oU, this._invertY, BU, this.isCube), this._texture)
+              if (this._texture.isReady) EU.e.SetImmediate((() => dU()));
+              else {
+                const UU = this._texture.onLoadedObservable.add(dU);
+                this._texture.onErrorObservable.add((XU => {
+                  LU(XU.message, XU.exception), this._texture?.onLoadedObservable.remove(UU)
+                }))
+              }
+            else if (PU && PU.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = dU, this._delayedOnError = LU;
+            else {
+              try {
+                this._texture = WU.createTexture(this.url, FU, this._invertY, PU, oU, dU, LU, this._buffer, void 0, this._format, this._forcedExtension, aU, tU, kU, BU)
+              } catch (eU) {
+                throw LU("error loading", eU), eU
+              }
+              IU && (this._buffer = null)
+            }
+          }
+          updateURL(UU) {
+            let XU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              zU = arguments.length > 2 ? arguments[2] : void 0,
+              cU = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.nS().markAllMaterialsAsDirty(1, (UU => UU.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = UU), this.url = UU, this._buffer = XU, this._forcedExtension = cU, this.delayLoadState = 4;
+            const yU = this._delayedOnLoad;
+            this._delayedOnLoad = () => {
+              yU ? yU() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), zU && zU()
+            }, this.delayLoad()
+          }
+          delayLoad() {
+            if (4 !== this.delayLoadState) return;
+            const UU = this.nS();
+            if (!UU) return;
+            let XU = this.url;
+            !XU && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (XU = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(XU, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? EU.e.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = UU.qp().createTexture(XU, this._noMipmap, this._invertY, UU, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+          }
+          _prepareRowForTextureGeneration(UU, XU, zU, cU) {
+            UU *= this._cachedUScale, XU *= this._cachedVScale, UU -= this.uRotationCenter * this._cachedUScale, XU -= this.vRotationCenter * this._cachedVScale, zU -= this.wRotationCenter, AU.q.TransformCoordinatesFromFloatsToRef(UU, XU, zU, this._rowGenerationMatrix, cU), cU.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, cU.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, cU.z += this.wRotationCenter
+          }
+          getTextureMatrix() {
+            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * UU === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * UU, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = AU.e.Zero(), this._rowGenerationMatrix = new AU.e, this._t0 = AU.q.Zero(), this._t1 = AU.q.Zero(), this._t2 = AU.q.Zero()), AU.e.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (AU.e.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, AU.l.Matrix[0]), AU.e.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, AU.l.Matrix[1]), AU.e.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, AU.l.Matrix[2]), AU.e.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, AU.l.Matrix[3]), AU.l.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(AU.l.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(AU.l.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(AU.l.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.ZyU(this._t0), this._t2.ZyU(this._t0), AU.e.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const XU = this.nS();
+            if (!XU) return this._cachedTextureMatrix;
+            const zU = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && zU !== this._cachedIdentity3x2 && XU.markAllMaterialsAsDirty(1, (UU => UU.hasTexture(this))), this._cachedTextureMatrix
+          }
+          getReflectionTextureMatrix() {
+            const XU = this.nS();
+            if (!XU) return this._cachedReflectionTextureMatrix;
+            if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
+              if (this.coordinatesMode !== UU.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === XU.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+            }
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = AU.e.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = AU.e.Zero());
+            const zU = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
+              case UU.PLANAR_MODE:
+                AU.e.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+                break;
+              case UU.PROJECTION_MODE: {
+                AU.e.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const UU = XU.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = UU.updateFlag, UU.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+                break
+              }
+              default:
+                AU.e.IdentityToRef(this._cachedReflectionTextureMatrix)
+            }
+            return zU && XU.markAllMaterialsAsDirty(1, (UU => UU.hasTexture(this))), this._cachedReflectionTextureMatrix
+          }
+          clone() {
+            const XU = {
+              noMipmap: this._noMipmap,
+              invertY: this._invertY,
+              samplingMode: this.samplingMode,
+              onLoad: void 0,
+              onError: void 0,
+              buffer: this._texture ? this._texture._buffer : void 0,
+              deleteBuffer: this._deleteBuffer,
+              format: this.textureFormat,
+              mimeType: this.mimeType,
+              loaderOptions: this._loaderOptions,
+              creationFlags: this._creationFlags,
+              useSRGBBuffer: this._useSRGBBuffer
+            };
+            return kU.b.Clone((() => new UU(this._texture ? this._texture.url : null, this.nS(), XU)), this)
+          }
+          serialize() {
+            const XU = this.name;
+            UU.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const zU = super.serialize(UU._SerializeInternalTextureUniqueId);
+            if (!zU) return null;
+            if (UU.SerializeBuffers || UU.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) zU.base64String = this._buffer, zU.name = zU.name.replace("data:", "");
+              else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
+              const UU = this.mimeType || "image/png";
+              zU.base64String = `data:${UU};base64,${(0,IU.f)(this._buffer)}`
+            } else(UU.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (zU.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? aU(this) : tU(this));
+            return zU.invertY = this._invertY, zU.samplingMode = this.samplingMode, zU._creationFlags = this._creationFlags, zU._useSRGBBuffer = this._useSRGBBuffer, UU._SerializeInternalTextureUniqueId && (zU.internalTextureUniqueId = this._texture?.uniqueId), zU.internalTextureLabel = this._texture?.label, zU.noMipmap = this._noMipmap, this.name = XU, zU
+          }
+          getClassName() {
+            return "Texture"
+          }
+          dispose() {
+            super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
+          }
+          static Parse(XU, zU, cU) {
+            if (XU.customType) {
+              const UU = YU.c.Instantiate(XU.customType).Parse(XU, zU, cU);
+              return XU.samplingMode && UU.updateSamplingMode && UU._samplingMode && UU._samplingMode !== XU.samplingMode && UU.updateSamplingMode(XU.samplingMode), UU
+            }
+            if (XU.isCube && !XU.isRenderTarget) return UU._CubeTextureParser(XU, zU, cU);
+            const yU = void 0 !== XU.internalTextureUniqueId;
+            if (!XU.name && !XU.isRenderTarget && !yU) return null;
+            let QU;
+            if (yU) {
+              const UU = zU.qp().getLoadedTexturesCache();
+              for (const zU of UU)
+                if (zU.uniqueId === XU.internalTextureUniqueId) {
+                  QU = zU;
+                  break
+                }
+            }
+            const AU = UU => {
+              if (UU && UU._texture && (UU._texture._cachedWrapU = null, UU._texture._cachedWrapV = null, UU._texture._cachedWrapR = null), XU.samplingMode) {
+                const zU = XU.samplingMode;
+                UU && UU.samplingMode !== zU && UU.updateSamplingMode(zU)
+              }
+              if (UU && XU.animations)
+                for (let zU = 0; zU < XU.animations.length; zU++) {
+                  const cU = XU.animations[zU],
+                    yU = (0, oU.e)("BABYLON.Animation");
+                  yU && UU.animations.push(yU.Parse(cU))
+                }
+              UU && UU._texture && (yU && !QU && UU._texture._setUniqueId(XU.internalTextureUniqueId), UU._texture.label = XU.internalTextureLabel)
+            };
+            return kU.b.Parse((() => {
+              let yU = !0;
+              if (XU.noMipmap && (yU = !1), XU.mirrorPlane) {
+                const cU = UU._CreateMirror(XU.name, XU.renderTargetSize, zU, yU);
+                return cU._waitingRenderList = XU.renderList, cU.mirrorPlane = NU.d.FromArray(XU.mirrorPlane), AU(cU), cU
+              }
+              if (XU.isRenderTarget && !XU.base64String) {
+                let cU = null;
+                if (XU.isCube) {
+                  if (zU.reflectionProbes)
+                    for (let UU = 0; UU < zU.reflectionProbes.length; UU++) {
+                      const cU = zU.reflectionProbes[UU];
+                      if (cU.name === XU.name) return cU.cubeTexture
+                    }
+                } else cU = UU._CreateRenderTargetTexture(XU.name, XU.renderTargetSize, zU, yU, XU._creationFlags ?? 0), cU._waitingRenderList = XU.renderList;
+                return AU(cU), cU
+              }
+              if (XU.isVideo) {
+                const QU = UU._CreateVideoTexture(cU + (XU.url || XU.name), cU + (XU.src || XU.url), zU, yU, XU.invertY, XU.samplingMode, XU.settings || {});
+                return AU(QU), QU
+              } {
+                let FU;
+                if ("string" === typeof XU.base64String && XU.base64String && !QU) {
+                  const cU = {
+                      buffer: XU.base64String,
+                      noMipmap: !yU,
+                      invertY: XU.invertY,
+                      samplingMode: XU.samplingMode,
+                      useSRGBBuffer: XU._useSRGBBuffer ?? !1,
+                      creationFlags: XU._creationFlags ?? 0,
+                      onLoad: () => {
+                        AU(FU)
+                      }
+                    },
+                    QU = XU.base64String,
+                    oU = QU.startsWith("data:") ? QU.substring(5) : QU;
+                  FU = UU.CreateFromBase64String("", oU, zU, cU), FU.name = XU.name
+                } else {
+                  let oU;
+                  oU = XU.name && (XU.name.indexOf("://") > 0 || XU.name.startsWith("data:")) ? XU.name : cU + XU.name, XU.url && (XU.url.startsWith("data:") || UU.UseSerializedUrlIfAny) && (oU = XU.url);
+                  const DU = {
+                    noMipmap: !yU,
+                    invertY: XU.invertY,
+                    samplingMode: XU.samplingMode,
+                    useSRGBBuffer: XU._useSRGBBuffer ?? !1,
+                    creationFlags: XU._creationFlags ?? 0,
+                    onLoad: () => {
+                      AU(FU)
+                    },
+                    internalTexture: QU
+                  };
+                  FU = new UU(oU, zU, DU)
+                }
+                return FU
+              }
+            }), XU, zU)
+          }
+          static CreateFromBase64String(XU, zU, cU, yU, QU) {
+            let AU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : UU.TRILINEAR_SAMPLINGMODE;
+            return new UU("data:" + zU, cU, yU, QU, AU, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, XU, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
+          }
+          static LoadFromDataString(XU, zU, cU) {
+            let yU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              QU = arguments.length > 4 ? arguments[4] : void 0,
+              AU = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              FU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : UU.TRILINEAR_SAMPLINGMODE,
+              oU = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              DU = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              EU = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              YU = arguments.length > 10 ? arguments[10] : void 0,
+              NU = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== XU.substring(0, 5) && (XU = "data:" + XU), new UU(XU, cU, QU, AU, FU, oU, DU, zU, yU, EU, void 0, void 0, YU, NU)
+          }
+        }, (() => {
+          const QU = "function" === typeof Symbol && Symbol.metadata ? Object.create(wU[Symbol.metadata] ?? null) : void 0;
+          XU = [(0, yU.I)()], zU = [(0, yU.I)()], pU = [(0, yU.I)()], GU = [(0, yU.I)()], BU = [(0, yU.I)()], ZU = [(0, yU.I)()], RU = [(0, yU.I)()], PU = [(0, yU.I)()], WU = [(0, yU.I)()], dU = [(0, yU.I)()], LU = [(0, yU.I)()], eU = [(0, yU.I)()], CU = [(0, yU.I)()], (0, cU.j)(UU, null, CU, {
+            kind: "getter",
+            name: "isBlocking",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "isBlocking" in UU,
+              get: UU => UU.isBlocking
+            },
+            metadata: QU
+          }, null, qU), (0, cU.j)(null, null, XU, {
+            kind: "field",
+            name: "url",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "url" in UU,
+              get: UU => UU.url,
+              set: (UU, XU) => {
+                UU.url = XU
+              }
+            },
+            metadata: QU
+          }, OU, SU), (0, cU.j)(null, null, zU, {
+            kind: "field",
+            name: "uOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "uOffset" in UU,
+              get: UU => UU.uOffset,
+              set: (UU, XU) => {
+                UU.uOffset = XU
+              }
+            },
+            metadata: QU
+          }, rU, uU), (0, cU.j)(null, null, pU, {
+            kind: "field",
+            name: "vOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "vOffset" in UU,
+              get: UU => UU.vOffset,
+              set: (UU, XU) => {
+                UU.vOffset = XU
+              }
+            },
+            metadata: QU
+          }, fU, iU), (0, cU.j)(null, null, GU, {
+            kind: "field",
+            name: "uScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "uScale" in UU,
+              get: UU => UU.uScale,
+              set: (UU, XU) => {
+                UU.uScale = XU
+              }
+            },
+            metadata: QU
+          }, HU, MU), (0, cU.j)(null, null, BU, {
+            kind: "field",
+            name: "vScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "vScale" in UU,
+              get: UU => UU.vScale,
+              set: (UU, XU) => {
+                UU.vScale = XU
+              }
+            },
+            metadata: QU
+          }, vU, VU), (0, cU.j)(null, null, ZU, {
+            kind: "field",
+            name: "uAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "uAng" in UU,
+              get: UU => UU.uAng,
+              set: (UU, XU) => {
+                UU.uAng = XU
+              }
+            },
+            metadata: QU
+          }, sU, nU), (0, cU.j)(null, null, RU, {
+            kind: "field",
+            name: "vAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "vAng" in UU,
+              get: UU => UU.vAng,
+              set: (UU, XU) => {
+                UU.vAng = XU
+              }
+            },
+            metadata: QU
+          }, mU, lU), (0, cU.j)(null, null, PU, {
+            kind: "field",
+            name: "wAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "wAng" in UU,
+              get: UU => UU.wAng,
+              set: (UU, XU) => {
+                UU.wAng = XU
+              }
+            },
+            metadata: QU
+          }, xU, JU), (0, cU.j)(null, null, WU, {
+            kind: "field",
+            name: "uRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "uRotationCenter" in UU,
+              get: UU => UU.uRotationCenter,
+              set: (UU, XU) => {
+                UU.uRotationCenter = XU
+              }
+            },
+            metadata: QU
+          }, jU, KU), (0, cU.j)(null, null, dU, {
+            kind: "field",
+            name: "vRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "vRotationCenter" in UU,
+              get: UU => UU.vRotationCenter,
+              set: (UU, XU) => {
+                UU.vRotationCenter = XU
+              }
+            },
+            metadata: QU
+          }, bU, TU), (0, cU.j)(null, null, LU, {
+            kind: "field",
+            name: "wRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "wRotationCenter" in UU,
+              get: UU => UU.wRotationCenter,
+              set: (UU, XU) => {
+                UU.wRotationCenter = XU
+              }
+            },
+            metadata: QU
+          }, hU, UX), (0, cU.j)(null, null, eU, {
+            kind: "field",
+            name: "homogeneousRotationInUVTransform",
+            static: !1,
+            private: !1,
+            access: {
+              has: UU => "homogeneousRotationInUVTransform" in UU,
+              get: UU => UU.homogeneousRotationInUVTransform,
+              set: (UU, XU) => {
+                UU.homogeneousRotationInUVTransform = XU
+              }
+            },
+            metadata: QU
+          }, XX, zX), QU && Object.defineProperty(UU, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: QU
+          })
+        })(), UU.SerializeBuffers = !0, UU.ForceSerializeBuffers = !1, UU.OnTextureLoadErrorObservable = new QU.e, UU._SerializeInternalTextureUniqueId = !1, UU._CubeTextureParser = (UU, XU, zU) => {
+          throw (0, DU.m)("CubeTexture")
+        }, UU._CreateMirror = (UU, XU, zU, cU) => {
+          throw (0, DU.m)("MirrorTexture")
+        }, UU._CreateRenderTargetTexture = (UU, XU, zU, cU, yU) => {
+          throw (0, DU.m)("RenderTargetTexture")
+        }, UU.NEAREST_SAMPLINGMODE = 1, UU.NEAREST_NEAREST_MIPLINEAR = 8, UU.BILINEAR_SAMPLINGMODE = 2, UU.LINEAR_LINEAR_MIPNEAREST = 11, UU.TRILINEAR_SAMPLINGMODE = 3, UU.LINEAR_LINEAR_MIPLINEAR = 3, UU.NEAREST_NEAREST_MIPNEAREST = 4, UU.NEAREST_LINEAR_MIPNEAREST = 5, UU.NEAREST_LINEAR_MIPLINEAR = 6, UU.NEAREST_LINEAR = 7, UU.NEAREST_NEAREST = 1, UU.LINEAR_NEAREST_MIPNEAREST = 9, UU.LINEAR_NEAREST_MIPLINEAR = 10, UU.LINEAR_LINEAR = 2, UU.LINEAR_NEAREST = 12, UU.EXPLICIT_MODE = 0, UU.SPHERICAL_MODE = 1, UU.PLANAR_MODE = 2, UU.CUBIC_MODE = 3, UU.PROJECTION_MODE = 4, UU.SKYBOX_MODE = 5, UU.INVCUBIC_MODE = 6, UU.EQUIRECTANGULAR_MODE = 7, UU.FIXED_EQUIRECTANGULAR_MODE = 8, UU.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, UU.CLAMP_ADDRESSMODE = 0, UU.WRAP_ADDRESSMODE = 1, UU.MIRROR_ADDRESSMODE = 2, UU.UseSerializedUrlIfAny = !1, UU
+      })(),
+      BU = !1;
 
-    function HM(MM) {
-      const rM = MM.buffer;
-      if (rM instanceof ArrayBuffer) return MM;
-      const iM = new ArrayBuffer(MM.byteLength);
-      return new Uint8Array(iM).set(new Uint8Array(rM, MM.byteOffset, MM.byteLength)), iM
+    function ZU() {
+      BU || (BU = !0, (0, oU.h)("BABYLON.Texture", GU), kU.b._TextureParser = GU.Parse)
     }
   },
-  40998: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => bM,
-      c: () => CM,
-      h: () => eM,
-      e: () => WM,
-      i: () => sM
+  41125: (UU, XU, zU) => {
+    zU.d(XU, {
+      d: () => cU
     });
-    class OM {
-      constructor() {
-        this.children = []
-      }
-      isValid(MM) {
-        return !0
-      }
-      process(MM, rM, iM) {
-        let OM = "";
-        if (this.line) {
-          let iM = this.line;
-          const SM = rM.processor;
-          if (SM) {
-            SM.lineProcessor && (iM = SM.lineProcessor(iM, rM.isFragment, rM.processingContext));
-            const OM = rM.processor?.attributeKeywordName ?? "attribute",
-              jM = rM.isFragment && rM.processor?.varyingFragmentKeywordName ? rM.processor?.varyingFragmentKeywordName : !rM.isFragment && rM.processor?.varyingVertexKeywordName ? rM.processor?.varyingVertexKeywordName : "varying";
-            if (!rM.isFragment && SM.attributeProcessor && this.line.startsWith(OM)) iM = SM.attributeProcessor(this.line, MM, rM.processingContext);
-            else if (SM.varyingProcessor && (SM.varyingCheck?.(this.line, rM.isFragment) || !SM.varyingCheck && this.line.startsWith(jM))) iM = SM.varyingProcessor(this.line, rM.isFragment, MM, rM.processingContext);
-            else if (SM.uniformProcessor && SM.uniformRegexp && SM.uniformRegexp.test(this.line)) rM.lookForClosingBracketForUniformBuffer || (iM = SM.uniformProcessor(this.line, rM.isFragment, MM, rM.processingContext));
-            else if (SM.uniformBufferProcessor && SM.uniformBufferRegexp && SM.uniformBufferRegexp.test(this.line)) rM.lookForClosingBracketForUniformBuffer || (iM = SM.uniformBufferProcessor(this.line, rM.isFragment, rM.processingContext), rM.lookForClosingBracketForUniformBuffer = !0);
-            else if (SM.textureProcessor && SM.textureRegexp && SM.textureRegexp.test(this.line)) iM = SM.textureProcessor(this.line, rM.isFragment, MM, rM.processingContext);
-            else if ((SM.uniformProcessor || SM.uniformBufferProcessor) && this.line.startsWith("uniform") && !rM.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? SM.uniformProcessor && (iM = SM.uniformProcessor(this.line, rM.isFragment, MM, rM.processingContext)) : SM.uniformBufferProcessor && (iM = SM.uniformBufferProcessor(this.line, rM.isFragment, rM.processingContext), rM.lookForClosingBracketForUniformBuffer = !0)
-            }
-            rM.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (rM.lookForClosingBracketForUniformBuffer = !1, SM.endOfUniformBufferProcessor && (iM = SM.endOfUniformBufferProcessor(this.line, rM.isFragment, rM.processingContext)))
-          }
-          OM += iM + "\n"
-        }
-        for (const SM of this.children) OM += SM.process(MM, rM, iM);
-        return this.additionalDefineKey && (MM[this.additionalDefineKey] = this.additionalDefineValue || "true", iM[this.additionalDefineKey] = MM[this.additionalDefineKey]), OM
-      }
-    }
-    class SM {
-      constructor() {
-        this._lines = []
-      }
-      get currentLine() {
-        return this._lines[this.lineIndex]
-      }
-      get canRead() {
-        return this.lineIndex < this._lines.length - 1
-      }
-      set lines(MM) {
-        this._lines.length = 0;
-        for (const rM of MM) {
-          if (!rM || "\r" === rM) continue;
-          if ("#" === rM[0]) {
-            this._lines.push(rM);
-            continue
-          }
-          const MM = rM.trim();
-          if (!MM) continue;
-          if (MM.startsWith("//")) {
-            this._lines.push(rM);
-            continue
-          }
-          const iM = MM.indexOf(";");
-          if (-1 === iM) this._lines.push(MM);
-          else if (iM === MM.length - 1) MM.length > 1 && this._lines.push(MM);
-          else {
-            const MM = rM.split(";");
-            for (let rM = 0; rM < MM.length; rM++) {
-              let iM = MM[rM];
-              iM && (iM = iM.trim(), iM && this._lines.push(iM + (rM !== MM.length - 1 ? ";" : "")))
-            }
-          }
-        }
-      }
-    }
-    class jM extends OM {
-      process(MM, rM, iM) {
-        for (let OM = 0; OM < this.children.length; OM++) {
-          const SM = this.children[OM];
-          if (SM.isValid(MM)) return SM.process(MM, rM, iM)
-        }
-        return ""
-      }
-    }
-    class aM extends OM {
-      isValid(MM) {
-        return this.testExpression.isTrue(MM)
-      }
-    }
-    class PM {
-      isTrue(MM) {
-        return !0
-      }
-      static postfixToInfix(MM) {
-        const rM = [];
-        for (const iM of MM)
-          if (void 0 === PM._OperatorPriority[iM]) rM.push(iM);
-          else {
-            const MM = rM[rM.length - 1],
-              OM = rM[rM.length - 2];
-            rM.length -= 2, rM.push(`(${OM}${iM}${MM})`)
-          } return rM[rM.length - 1]
-      }
-      static infixToPostfix(MM) {
-        const rM = PM._InfixToPostfixCache.get(MM);
-        if (rM) return rM.accessTime = Date.now(), rM.result;
-        if (!MM.includes("&&") && !MM.includes("||") && !MM.includes(")") && !MM.includes("(")) return [MM];
-        const iM = [];
-        let OM = -1;
-        const SM = () => {
-            zM = zM.trim(), "" !== zM && (iM.push(zM), zM = "")
-          },
-          jM = MM => {
-            OM < PM._Stack.length - 1 && (PM._Stack[++OM] = MM)
-          },
-          aM = () => PM._Stack[OM],
-          nM = () => -1 === OM ? "!!INVALID EXPRESSION!!" : PM._Stack[OM--];
-        let QM = 0,
-          zM = "";
-        for (; QM < MM.length;) {
-          const rM = MM.charAt(QM),
-            LM = QM < MM.length - 1 ? MM.substring(QM, 2 + QM) : "";
-          if ("(" === rM) zM = "", jM(rM);
-          else if (")" === rM) {
-            for (SM(); - 1 !== OM && "(" !== aM();) iM.push(nM());
-            nM()
-          } else if (PM._OperatorPriority[LM] > 1) {
-            for (SM(); - 1 !== OM && PM._OperatorPriority[aM()] >= PM._OperatorPriority[LM];) iM.push(nM());
-            jM(LM), QM++
-          } else zM += rM;
-          QM++
-        }
-        for (SM(); - 1 !== OM;) "(" === aM() ? nM() : iM.push(nM());
-        return PM._InfixToPostfixCache.size >= PM.InfixToPostfixCacheLimitSize && PM.ClearCache(), PM._InfixToPostfixCache.set(MM, {
-          result: iM,
-          accessTime: Date.now()
-        }), iM
-      }
-      static ClearCache() {
-        const MM = Array.from(PM._InfixToPostfixCache.entries()).sort(((MM, rM) => MM[1].accessTime - rM[1].accessTime));
-        for (let rM = 0; rM < PM.InfixToPostfixCacheCleanupSize; rM++) PM._InfixToPostfixCache.delete(MM[rM][0])
-      }
-    }
-    PM.InfixToPostfixCacheLimitSize = 5e4, PM.InfixToPostfixCacheCleanupSize = 25e3, PM._InfixToPostfixCache = new Map, PM._OperatorPriority = {
-      ")": 0,
-      "(": 1,
-      "||": 2,
-      "&&": 3
-    }, PM._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class nM extends PM {
-      constructor(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = MM, this.not = rM
-      }
-      isTrue(MM) {
-        let rM = void 0 !== MM[this.define];
-        return this.not && (rM = !rM), rM
-      }
-    }
-    class QM extends PM {
-      isTrue(MM) {
-        return this.leftOperand.isTrue(MM) || this.rightOperand.isTrue(MM)
-      }
-    }
-    class zM extends PM {
-      isTrue(MM) {
-        return this.leftOperand.isTrue(MM) && this.rightOperand.isTrue(MM)
-      }
-    }
-    class LM extends PM {
-      constructor(MM, rM, iM) {
-        super(), this.define = MM, this.operand = rM, this.testValue = iM
+    class cU {
+      constructor(UU, XU) {
+        this.width = UU, this.height = XU
       }
       toString() {
-        return `${this.define} ${this.operand} ${this.testValue}`
+        return `{W: ${this.width}, H: ${this.height}}`
       }
-      isTrue(MM) {
-        let rM = !1;
-        const iM = parseInt(void 0 != MM[this.define] ? MM[this.define] : this.define),
-          OM = parseInt(void 0 != MM[this.testValue] ? MM[this.testValue] : this.testValue);
-        if (isNaN(iM) || isNaN(OM)) return !1;
-        switch (this.operand) {
-          case ">":
-            rM = iM > OM;
-            break;
-          case "<":
-            rM = iM < OM;
-            break;
-          case "<=":
-            rM = iM <= OM;
-            break;
-          case ">=":
-            rM = iM >= OM;
-            break;
-          case "==":
-            rM = iM === OM;
-            break;
-          case "!=":
-            rM = iM !== OM
-        }
-        return rM
+      getClassName() {
+        return "Size"
       }
-    }
-    var mM = iM(40990),
-      HM = iM(40981);
-    const hM = /defined\s*?\((.+?)\)/g,
-      JM = /defined\s*?\[(.+?)\]/g,
-      dM = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      yM = /__decl__/,
-      lM = /light\{X\}.(\w*)/g,
-      EM = /\{X\}/g,
-      UM = [],
-      GM = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
-
-    function CM(MM) {
-      MM.processor && MM.processor.initializeShaders && MM.processor.initializeShaders(MM.processingContext)
-    }
-
-    function eM(MM, rM, iM, OM) {
-      rM.processor?.preProcessShaderCode && (MM = rM.processor.preProcessShaderCode(MM, rM.isFragment)), WM(MM, rM, (MM => {
-        rM.processCodeAfterIncludes && (MM = rM.processCodeAfterIncludes(rM.isFragment ? "fragment" : "vertex", MM, rM.defines));
-        const SM = function(MM, rM, iM) {
-          let OM = function(MM, rM) {
-            if (rM.processor?.noPrecision) return MM;
-            const iM = rM.shouldUseHighPrecisionShader; - 1 === MM.indexOf("precision highp float") ? MM = iM ? "precision highp float;\n" + MM : "precision mediump float;\n" + MM : iM || (MM = MM.replace("precision highp float", "precision mediump float"));
-            return MM
-          }(MM, rM);
-          if (!rM.processor) return OM;
-          if (0 === rM.processor.shaderLanguage && -1 !== OM.indexOf("#version 3") && (OM = OM.replace("#version 300 es", ""), !rM.processor.parseGLES3)) return OM;
-          const SM = rM.defines,
-            jM = pM(rM, iM);
-          rM.processor.preProcessor && (OM = rM.processor.preProcessor(OM, SM, jM, rM.isFragment, rM.processingContext));
-          const aM = {};
-          OM = RM(OM, jM, rM, aM), rM.processor.postProcessor && (OM = rM.processor.postProcessor(OM, SM, rM.isFragment, rM.processingContext, iM ? {
-            drawBuffersExtensionDisabled: !iM.getCaps().drawBuffersExtension
-          } : {}, jM, aM));
-          iM?._features.needShaderCodeInlining && (OM = iM.inlineShaderCode(OM));
-          return OM
-        }(MM, rM, OM);
-        iM(SM, MM)
-      }))
-    }
-
-    function bM(MM, rM, iM) {
-      return iM.processor && iM.processor.finalizeShaders ? iM.processor.finalizeShaders(MM, rM, iM.processingContext) : {
-        vertexCode: MM,
-        fragmentCode: rM
+      getHashCode() {
+        let UU = 0 | this.width;
+        return UU = 397 * UU ^ this.height, UU
+      }
+      YL(UU) {
+        this.width = UU.width, this.height = UU.height
+      }
+      sUU(UU, XU) {
+        return this.width = UU, this.height = XU, this
+      }
+      set(UU, XU) {
+        return this.sUU(UU, XU)
+      }
+      multiplyByFloats(UU, XU) {
+        return new cU(this.width * UU, this.height * XU)
+      }
+      clone() {
+        return new cU(this.width, this.height)
+      }
+      equals(UU) {
+        return !!UU && (this.width === UU.width && this.height === UU.height)
+      }
+      get surface() {
+        return this.width * this.height
+      }
+      static Zero() {
+        return new cU(0, 0)
+      }
+      add(UU) {
+        return new cU(this.width + UU.width, this.height + UU.height)
+      }
+      subtract(UU) {
+        return new cU(this.width - UU.width, this.height - UU.height)
+      }
+      scale(UU) {
+        return new cU(this.width * UU, this.height * UU)
+      }
+      static Lerp(UU, XU, zU) {
+        const yU = UU.width + (XU.width - UU.width) * zU,
+          QU = UU.height + (XU.height - UU.height) * zU;
+        return new cU(yU, QU)
       }
     }
-
-    function wM(MM) {
-      const rM = /defined\((.+)\)/.exec(MM);
-      if (rM && rM.length) return new nM(rM[1].trim(), "!" === MM[0]);
-      const iM = ["==", "!=", ">=", "<=", "<", ">"];
-      let OM = "",
-        SM = 0;
-      for (OM of iM)
-        if (SM = MM.indexOf(OM), SM > -1) break;
-      if (-1 === SM) return new nM(MM);
-      const jM = MM.substring(0, SM).trim(),
-        aM = MM.substring(SM + OM.length).trim();
-      return new LM(jM, OM, aM)
-    }
-
-    function tM(MM, rM) {
-      const iM = new aM,
-        OM = MM.substring(0, rM);
-      let SM = MM.substring(rM);
-      return SM = SM.substring(0, (SM.indexOf("//") + 1 || SM.length + 1) - 1).trim(), iM.testExpression = "#ifdef" === OM ? new nM(SM) : "#ifndef" === OM ? new nM(SM, !0) : function(MM) {
-        MM = MM.replace(hM, "defined[$1]");
-        const rM = PM.infixToPostfix(MM),
-          iM = [];
-        for (const SM of rM)
-          if ("||" !== SM && "&&" !== SM) iM.push(SM);
-          else if (iM.length >= 2) {
-          let MM = iM[iM.length - 1],
-            rM = iM[iM.length - 2];
-          iM.length -= 2;
-          const OM = "&&" == SM ? new zM : new QM;
-          "string" === typeof MM && (MM = MM.replace(JM, "defined($1)")), "string" === typeof rM && (rM = rM.replace(JM, "defined($1)")), OM.leftOperand = "string" === typeof rM ? wM(rM) : rM, OM.rightOperand = "string" === typeof MM ? wM(MM) : MM, iM.push(OM)
-        }
-        let OM = iM[iM.length - 1];
-        return "string" === typeof OM && (OM = OM.replace(JM, "defined($1)")), "string" === typeof OM ? wM(OM) : OM
-      }(SM), iM
-    }
-
-    function gM(MM, rM, iM, SM) {
-      let jM;
-      for (; uM(MM, iM, SM);) {
-        jM = MM.currentLine;
-        const aM = jM.substring(0, 5).toLowerCase();
-        if ("#else" === aM) {
-          const iM = new OM;
-          return rM.children.push(iM), void uM(MM, iM, SM)
-        }
-        if ("#elif" === aM) {
-          const MM = tM(jM, 5);
-          rM.children.push(MM), iM = MM
-        }
-      }
-    }
-
-    function uM(MM, rM, iM) {
-      for (; MM.canRead;) {
-        MM.lineIndex++;
-        const SM = MM.currentLine;
-        if (SM.indexOf("#") >= 0) {
-          const OM = GM.exec(SM);
-          if (OM && OM.length) {
-            switch (OM[0]) {
-              case "#ifdef": {
-                const OM = new jM;
-                rM.children.push(OM);
-                const aM = tM(SM, 6);
-                OM.children.push(aM), gM(MM, OM, aM, iM);
-                break
-              }
-              case "#else":
-              case "#elif":
-                return !0;
-              case "#endif":
-                return !1;
-              case "#ifndef": {
-                const OM = new jM;
-                rM.children.push(OM);
-                const aM = tM(SM, 7);
-                OM.children.push(aM), gM(MM, OM, aM, iM);
-                break
-              }
-              case "#if": {
-                const OM = new jM,
-                  aM = tM(SM, 3);
-                rM.children.push(OM), OM.children.push(aM), gM(MM, OM, aM, iM);
-                break
-              }
-            }
-            continue
-          }
-        }
-        const aM = new OM;
-        if (aM.line = SM, rM.children.push(aM), "#" === SM[0] && "d" === SM[1]) {
-          const MM = SM.replace(";", "").split(" ");
-          aM.additionalDefineKey = MM[1], 3 === MM.length && (aM.additionalDefineValue = MM[2])
-        }
-      }
-      return !1
-    }
-
-    function RM(MM, rM, iM, jM) {
-      const aM = new OM,
-        PM = new SM;
-      return PM.lineIndex = -1, PM.lines = MM.split("\n"), uM(PM, aM, jM), aM.process(rM, iM, jM)
-    }
-
-    function pM(MM, rM) {
-      const iM = MM.defines,
-        OM = {};
-      for (const SM of iM) {
-        const MM = SM.replace("#define", "").replace(";", "").trim().split(" ");
-        OM[MM[0]] = MM.length > 1 ? MM[1] : ""
-      }
-      return 0 === MM.processor?.shaderLanguage && (OM.GL_ES = "true"), OM.__VERSION__ = MM.version, OM[MM.platformName] = "true", (0, HM.f)(OM, rM?.isNDCHalfZRange, rM?.LOM, rM?.useExactSrgbConversions), OM
-    }
-
-    function WM(MM, rM, iM) {
-      let OM;
-      for (UM.length = 0; null !== (OM = dM.exec(MM));) UM.push(OM);
-      let SM = [MM],
-        jM = !1;
-      for (const PM of UM) {
-        let MM = PM[1];
-        if (-1 !== MM.indexOf("__decl__") && (MM = MM.replace(yM, ""), rM.supportsUniformBuffers && (MM = MM.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), MM += "Declaration"), !rM.includesShadersStore[MM]) {
-          const OM = rM.shadersRepository + "ShadersInclude/" + MM + ".fx";
-          return void sM.loadFile(OM, (OM => {
-            rM.includesShadersStore[MM] = OM, WM(SM.join(""), rM, iM)
-          }))
-        } {
-          let iM = rM.includesShadersStore[MM];
-          if (PM[2]) {
-            const MM = PM[3].split(",");
-            for (let rM = 0; rM < MM.length; rM += 2) {
-              const OM = new RegExp(MM[rM], "g"),
-                SM = MM[rM + 1];
-              iM = iM.replace(OM, SM)
-            }
-          }
-          if (PM[4]) {
-            const MM = PM[5];
-            if (-1 !== MM.indexOf("..")) {
-              const OM = MM.split(".."),
-                SM = parseInt(OM[0]);
-              let jM = parseInt(OM[1]),
-                aM = iM.slice(0);
-              iM = "", isNaN(jM) && (jM = rM.indexParameters[OM[1]]);
-              for (let MM = SM; MM < jM; MM++) rM.supportsUniformBuffers || (aM = aM.replace(lM, ((MM, rM) => rM + "{X}"))), iM += aM.replace(EM, MM.toString()) + "\n"
-            } else rM.supportsUniformBuffers || (iM = iM.replace(lM, ((MM, rM) => rM + "{X}"))), iM = iM.replace(EM, MM)
-          }
-          const OM = [];
-          for (const MM of SM) {
-            const rM = MM.split(PM[0]);
-            for (let MM = 0; MM < rM.length - 1; MM++) OM.push(rM[MM]), OM.push(iM);
-            OM.push(rM[rM.length - 1])
-          }
-          SM = OM, jM = jM || iM.indexOf("#include<") >= 0 || iM.indexOf("#include <") >= 0
-        }
-      }
-      UM.length = 0;
-      const aM = SM.join("");
-      jM ? WM(aM.toString(), rM, iM) : iM(aM)
-    }
-    const sM = {
-      loadFile: (MM, rM, iM, OM, SM, jM) => {
-        throw (0, mM.n)("FileTools")
-      }
-    }
-  },
-  40981: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      e: () => jM,
-      f: () => PM,
-      i: () => aM,
-      k: () => nM
-    });
-    var OM = iM(40990);
-    const SM = {};
-
-    function jM(MM, rM) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (rM ? rM + "\n" : "") + MM
-    }
-
-    function aM(MM, rM, iM, jM, aM, PM, nM) {
-      const QM = nM || SM.loadFile;
-      if (!QM) throw (0, OM.n)("FileTools");
-      return QM(MM, rM, iM, jM, aM, PM)
-    }
-
-    function PM(MM, rM, iM, OM) {
-      if (MM) return rM ? MM.IS_NDC_HALF_ZRANGE = "" : delete MM.IS_NDC_HALF_ZRANGE, iM ? MM.USE_REVERSE_DEPTHBUFFER = "" : delete MM.USE_REVERSE_DEPTHBUFFER, void(OM ? MM.USE_EXACT_SRGB_CONVERSIONS = "" : delete MM.USE_EXACT_SRGB_CONVERSIONS);
-      {
-        let MM = "";
-        return rM && (MM += "#define IS_NDC_HALF_ZRANGE"), iM && (MM && (MM += "\n"), MM += "#define USE_REVERSE_DEPTHBUFFER"), OM && (MM && (MM += "\n"), MM += "#define USE_EXACT_SRGB_CONVERSIONS"), MM
-      }
-    }
-
-    function nM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        OM = arguments.length > 3 ? arguments[3] : void 0;
-      switch (MM) {
-        case 3: {
-          const MM = new Int8Array(rM);
-          return OM && MM.set(new Int8Array(OM)), MM
-        }
-        case 0: {
-          const MM = new Uint8Array(rM);
-          return OM && MM.set(new Uint8Array(OM)), MM
-        }
-        case 4: {
-          const MM = "number" !== typeof rM ? new Int16Array(rM) : new Int16Array(iM ? rM / 2 : rM);
-          return OM && MM.set(new Int16Array(OM)), MM
-        }
-        case 5:
-        case 8:
-        case 9:
-        case 10:
-        case 2: {
-          const MM = "number" !== typeof rM ? new Uint16Array(rM) : new Uint16Array(iM ? rM / 2 : rM);
-          return OM && MM.set(new Uint16Array(OM)), MM
-        }
-        case 6: {
-          const MM = "number" !== typeof rM ? new Int32Array(rM) : new Int32Array(iM ? rM / 4 : rM);
-          return OM && MM.set(new Int32Array(OM)), MM
-        }
-        case 7:
-        case 11:
-        case 12:
-        case 13:
-        case 14:
-        case 15: {
-          const MM = "number" !== typeof rM ? new Uint32Array(rM) : new Uint32Array(iM ? rM / 4 : rM);
-          return OM && MM.set(new Uint32Array(OM)), MM
-        }
-        case 1: {
-          const MM = "number" !== typeof rM ? new Float32Array(rM) : new Float32Array(iM ? rM / 4 : rM);
-          return OM && MM.set(new Float32Array(OM)), MM
-        }
-      }
-      const SM = new Uint8Array(rM);
-      return OM && SM.set(new Uint8Array(OM)), SM
-    }
-  },
-  40990: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => QM,
-      g: () => zM,
-      j: () => nM,
-      n: () => SM
-    });
-    const OM = {};
-
-    function SM(MM) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !OM[MM]) return OM[MM] = !0, `${MM} needs to be imported before as it contains a side-effect required by your code.`
-    }
-    const jM = {};
-    let aM = !1,
-      PM = 0;
-
-    function nM(MM, rM) {
-      let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const OM = function() {
-        if ((iM || aM) && 0 === PM) {
-          const iM = `${MM}.${rM}`;
-          jM[iM] || (jM[iM] = !0, console.warn(`[Babylon.js] ${iM}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
-        }
-      };
-      return OM.__isSideEffectStub = !0, OM
-    }
-
-    function QM(MM) {
-      return !!MM && !MM.__isSideEffectStub
-    }
-
-    function zM(MM, rM) {
-      return {
-        get() {},
-        set(MM) {
-          Object.defineProperty(this, rM, {
-            value: MM,
-            writable: !0,
-            configurable: !0,
-            enumerable: !0
-          })
-        },
-        configurable: !0,
-        enumerable: !0
-      }
-    }
-  },
-  40972: (MM, rM, iM) => {
-    function OM() {
-      return "undefined" !== typeof window
-    }
-
-    function SM() {
-      return "undefined" !== typeof navigator
-    }
-
-    function jM() {
-      return "undefined" !== typeof document
-    }
-
-    function aM(MM) {
-      let rM = "",
-        iM = MM.firstChild;
-      for (; iM;) 3 === iM.nodeType && (rM += iM.textContent), iM = iM.nextSibling;
-      return rM
-    }
-    iM.d(rM, {
-      c: () => aM,
-      g: () => jM,
-      k: () => SM,
-      l: () => OM
-    })
-  },
-  41156: (MM, rM, iM) => {
-    iM.d(rM, {
-      b: () => OM,
-      e: () => SM,
-      i: () => jM
-    });
-    class OM extends Error {}
-    OM._setPrototypeOf = Object.setPrototypeOf || ((MM, rM) => (MM.__proto__ = rM, MM));
-    const SM = {
-      MeshInvalidPositionsError: 0,
-      UnsupportedTextureError: 1e3,
-      GLTFLoaderUnexpectedMagicError: 2e3,
-      SceneLoaderError: 3e3,
-      LoadFileError: 4e3,
-      RequestFileError: 4001,
-      ReadFileError: 4002
-    };
-    class jM extends OM {
-      constructor(MM, rM, iM) {
-        super(MM), this.errorCode = rM, this.innerError = iM, this.name = "RuntimeError", OM._setPrototypeOf(this, jM.prototype)
-      }
-    }
-  },
-  41145: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => pM,
-      f: () => EM,
-      j: () => tM,
-      k: () => uM,
-      n: () => bM,
-      p: () => CM,
-      s: () => eM,
-      u: () => ZM,
-      w: () => wM,
-      x: () => UM
-    });
-    var OM = iM(41148),
-      SM = iM(40972),
-      jM = iM(38068);
-    class aM {}
-    aM.FilesToLoad = {};
-    var PM = iM(41156),
-      nM = iM(41160),
-      QM = iM(38064),
-      zM = iM(40981),
-      LM = iM(40998),
-      mM = iM(39711),
-      HM = iM(41003),
-      hM = iM(41167);
-    const JM = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class dM extends PM.i {
-      constructor(MM, rM) {
-        super(MM, PM.e.LoadFileError), this.name = "LoadFileError", PM.b._setPrototypeOf(this, dM.prototype), rM instanceof OM.e ? this.request = rM : this.file = rM
-      }
-    }
-    class yM extends PM.i {
-      constructor(MM, rM) {
-        super(MM, PM.e.RequestFileError), this.request = rM, this.name = "RequestFileError", PM.b._setPrototypeOf(this, yM.prototype)
-      }
-    }
-    class lM extends PM.i {
-      constructor(MM, rM) {
-        super(MM, PM.e.ReadFileError), this.file = rM, this.name = "ReadFileError", PM.b._setPrototypeOf(this, lM.prototype)
-      }
-    }
-    const EM = {
-        DefaultRetryStrategy: class {
-          static ExponentialBackoff() {
-            let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (iM, OM, SM) => 0 !== OM.status || SM >= MM || -1 !== iM.indexOf("file:") ? -1 : Math.pow(2, SM) * rM
-          }
-        }.ExponentialBackoff(),
-        BaseUrl: "",
-        CorsBehavior: "anonymous",
-        PreprocessUrl: MM => MM,
-        ScriptBaseUrl: "",
-        ScriptPreprocessUrl: MM => MM,
-        CleanUrl: MM => MM = MM.replace(/#/gm, "%23")
-      },
-      UM = (MM, rM) => {
-        if ((!MM || 0 !== MM.indexOf("data:")) && EM.CorsBehavior)
-          if ("string" === typeof EM.CorsBehavior || EM.CorsBehavior instanceof String) rM.crossOrigin = EM.CorsBehavior;
-          else {
-            const iM = EM.CorsBehavior(MM);
-            iM && (rM.crossOrigin = iM)
-          }
-      },
-      GM = {
-        getRequiredSize: null
-      },
-      CM = function(MM, rM, iM, SM) {
-        let jM, PM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          zM = arguments.length > 5 ? arguments[5] : void 0,
-          LM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : QM.c.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !LM?._features.forceBitmapOverHTMLImageElement) return iM("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (LM?._features.forceBitmapOverHTMLImageElement && "string" !== typeof MM && "undefined" !== typeof Blob) {
-          let OM;
-          if (MM instanceof Blob) OM = MM;
-          else {
-            const rM = MM instanceof ArrayBuffer ? MM : (0, hM.i)(MM);
-            OM = new Blob([rM], {
-              type: PM
-            })
-          }
-          return LM.createImageBitmap(OM, {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none",
-            ...zM
-          }).then(rM).catch((rM => {
-            iM && iM("Error while trying to load image: " + MM, rM)
-          })), null
-        }
-        let mM = !1;
-        if (MM instanceof ArrayBuffer || ArrayBuffer.isView(MM))
-          if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let rM;
-            rM = MM instanceof ArrayBuffer ? MM : (0, hM.i)(MM), jM = URL.createObjectURL(new Blob([rM], {
-              type: PM
-            })), mM = !0
-          } else jM = `data:${PM};base64,` + (0, nM.j)(MM);
-        else MM instanceof Blob ? (jM = URL.createObjectURL(MM), mM = !0) : (jM = EM.CleanUrl(MM), jM = EM.PreprocessUrl(jM));
-        const HM = rM => {
-          if (iM) {
-            const OM = jM || MM.toString();
-            iM(`Error while trying to load image: ${0===OM.indexOf("http")||OM.length<=128?OM:OM.slice(0,128)+"..."}`, rM)
-          }
-        };
-        if (LM?._features.forceBitmapOverHTMLImageElement) return bM(jM, (OM => {
-          LM.createImageBitmap(new Blob([OM], {
-            type: PM
-          }), {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none",
-            ...zM
-          }).then((MM => {
-            rM(MM), mM && URL.revokeObjectURL(jM)
-          })).catch((rM => {
-            iM && iM("Error while trying to load image: " + MM, rM)
-          }))
-        }), void 0, SM || void 0, !0, ((MM, rM) => {
-          HM(rM)
-        })), null;
-        const JM = new Image;
-        if (GM.getRequiredSize) {
-          const rM = GM.getRequiredSize(MM);
-          rM.width && (JM.width = rM.width), rM.height && (JM.height = rM.height)
-        }
-        UM(jM, JM);
-        const dM = [],
-          yM = () => {
-            for (const MM of dM) MM.target.removeEventListener(MM.name, MM.handler);
-            dM.length = 0
-          };
-        dM.push({
-          target: JM,
-          name: "load",
-          handler: () => {
-            yM(), rM(JM), mM && JM.src && URL.revokeObjectURL(JM.src)
-          }
-        }), dM.push({
-          target: JM,
-          name: "error",
-          handler: MM => {
-            yM(), HM(MM), mM && JM.src && URL.revokeObjectURL(JM.src)
-          }
-        }), dM.push({
-          target: document,
-          name: "securitypolicyviolation",
-          handler: MM => {
-            if (MM.blockedURI !== JM.src || "aL" === MM.disposition) return;
-            yM();
-            const rM = new Error(`CSP violation of policy ${MM.effectiveDirective} ${MM.blockedURI}. Current policy is ${MM.originalPolicy}`);
-            QM.c.UseFallbackTexture = !1, HM(rM), mM && JM.src && URL.revokeObjectURL(JM.src), JM.src = ""
-          }
-        }), (() => {
-          for (const MM of dM) MM.target.addEventListener(MM.name, MM.handler)
-        })();
-        const lM = "blob:" === jM.substring(0, 5),
-          CM = "data:" === jM.substring(0, 5),
-          eM = () => {
-            lM || CM || !OM.e.IsCustomRequestAvailable ? JM.src = jM : bM(jM, ((MM, rM, iM) => {
-              const OM = new Blob([MM], {
-                  type: !PM && iM ? iM : PM
-                }),
-                SM = URL.createObjectURL(OM);
-              mM = !0, JM.src = SM
-            }), void 0, SM || void 0, !0, ((MM, rM) => {
-              HM(rM)
-            }))
-          },
-          wM = () => {
-            SM && SM.loadImage(jM, JM)
-          };
-        if (!lM && !CM && SM && SM.enableTexturesOffline) SM.open(wM, eM);
-        else {
-          if (-1 !== jM.indexOf("file:")) {
-            const MM = decodeURIComponent(jM.substring(5).toLowerCase());
-            if (aM.FilesToLoad[MM] && "undefined" !== typeof URL) {
-              try {
-                let rM;
-                try {
-                  rM = URL.createObjectURL(aM.FilesToLoad[MM])
-                } catch (tM) {
-                  rM = URL.createObjectURL(aM.FilesToLoad[MM])
-                }
-                JM.src = rM, mM = !0
-              } catch (gM) {
-                JM.src = ""
-              }
-              return JM
-            }
-          }
-          eM()
-        }
-        return JM
-      },
-      eM = (MM, rM, iM, OM, SM) => {
-        const aM = new FileReader,
-          PM = {
-            onCompleteObservable: new jM.d,
-            abort: () => aM.abort()
-          };
-        return aM.onloadend = () => PM.onCompleteObservable.notifyObservers(PM), SM && (aM.onerror = () => {
-          SM(new lM(`Unable to read ${MM.name}`, MM))
-        }), aM.onload = MM => {
-          rM(MM.target.result)
-        }, iM && (aM.onprogress = iM), OM ? aM.readAsArrayBuffer(MM) : aM.readAsText(MM), PM
-      },
-      bM = (MM, rM, iM, OM, SM, nM, QM) => {
-        if (MM.name) return eM(MM, rM, iM, SM, nM ? MM => {
-          nM(void 0, MM)
-        } : void 0);
-        const zM = MM;
-        if (-1 !== zM.indexOf("file:")) {
-          let MM = decodeURIComponent(zM.substring(5).toLowerCase());
-          0 === MM.indexOf("./") && (MM = MM.substring(2));
-          const OM = aM.FilesToLoad[MM];
-          if (OM) return eM(OM, rM, iM, SM, nM ? MM => nM(void 0, new dM(MM.message, MM.file)) : void 0)
-        }
-        const {
-          match: LM,
-          type: hM
-        } = RM(zM);
-        if (LM) {
-          const MM = {
-            onCompleteObservable: new jM.d,
-            abort: () => () => {}
-          };
-          try {
-            const MM = SM ? pM(zM) : WM(zM);
-            rM(MM, void 0, hM)
-          } catch (PM) {
-            nM ? nM(void 0, PM) : mM.e.Error(PM.message || "Failed to parse the Data URL")
-          }
-          return HM.c.SetImmediate((() => {
-            MM.onCompleteObservable.notifyObservers(MM)
-          })), MM
-        }
-        return wM(zM, ((MM, iM) => {
-          rM(MM, iM?.responseURL, iM?.getResponseHeader("content-type"))
-        }), iM, OM, SM, nM ? MM => {
-          nM(MM.request, new dM(MM.message, MM.request))
-        } : void 0, QM)
-      },
-      wM = (MM, rM, iM, aM, PM, nM, zM) => {
-        null !== aM && (aM ?? (aM = QM.c.LastCreatedScene?.offlineProvider)), MM = EM.CleanUrl(MM), MM = EM.PreprocessUrl(MM);
-        const LM = EM.BaseUrl + MM;
-        let HM = !1;
-        const hM = {
-            onCompleteObservable: new jM.d,
-            abort: () => HM = !0
-          },
-          JM = () => {
-            let MM, jM = new OM.e,
-              aM = null;
-            const QM = () => {
-              jM && (iM && jM.removeEventListener("progress", iM), MM && jM.removeEventListener("readystatechange", MM), jM.removeEventListener("loadend", JM))
-            };
-            let JM = () => {
-              QM(), hM.onCompleteObservable.notifyObservers(hM), hM.onCompleteObservable.clear(), iM = void 0, MM = null, JM = null, nM = void 0, zM = void 0, rM = void 0
-            };
-            hM.abort = () => {
-              HM = !0, JM && JM(), jM && jM.readyState !== (XMLHttpRequest.DONE || 4) && jM.abort(), null !== aM && (clearTimeout(aM), aM = null), jM = null
-            };
-            const dM = MM => {
-                const rM = MM.message || "Unknown error";
-                nM && jM ? nM(new yM(rM, jM)) : mM.e.Error(rM)
-              },
-              lM = mM => {
-                if (jM) {
-                  if (jM.open("GET", LM), zM) try {
-                    zM(jM)
-                  } catch (hM) {
-                    return void dM(hM)
-                  }
-                  PM && (jM.responseType = "arraybuffer"), iM && jM.addEventListener("progress", iM), JM && jM.addEventListener("loadend", JM), MM = () => {
-                    if (!HM && jM && jM.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (MM && jM.removeEventListener("readystatechange", MM), jM.status >= 200 && jM.status < 300 || 0 === jM.status && (!(0, SM.l)() || gM())) {
-                        const MM = PM ? jM.response : jM.responseText;
-                        if (null !== MM) {
-                          try {
-                            rM && rM(MM, jM)
-                          } catch (hM) {
-                            dM(hM)
-                          }
-                          return
-                        }
-                      }
-                      const iM = EM.DefaultRetryStrategy;
-                      if (iM) {
-                        const MM = iM(LM, jM, mM);
-                        if (-1 !== MM) return QM(), jM = new OM.e, void(aM = setTimeout((() => lM(mM + 1)), MM))
-                      }
-                      const zM = new yM("Error status: " + jM.status + " " + jM.statusText + " - Unable to load " + LM, jM);
-                      nM && nM(zM)
-                    }
-                  }, jM.addEventListener("readystatechange", MM), jM.send()
-                }
-              };
-            lM(0)
-          };
-        if (aM && aM.enableSceneOffline && !MM.startsWith("blob:")) {
-          const OM = MM => {
-              MM && MM.status > 400 ? nM && nM(MM) : JM()
-            },
-            SM = () => {
-              aM && aM.loadFile(EM.BaseUrl + MM, (MM => {
-                !HM && rM && rM(MM), hM.onCompleteObservable.notifyObservers(hM)
-              }), iM ? MM => {
-                !HM && iM && iM(MM)
-              } : void 0, OM, PM)
-            };
-          aM.open(SM, OM)
-        } else JM();
-        return hM
-      },
-      tM = MM => {
-        const {
-          match: rM,
-          type: iM
-        } = RM(MM);
-        if (rM) return iM || void 0;
-        const OM = MM.lastIndexOf(".");
-        switch (MM.substring(OM + 1).toLowerCase()) {
-          case "glb":
-            return "model/gltf-binary";
-          case "bin":
-            return "application/octet-stream";
-          case "dD":
-            return "model/gltf+json";
-          case "jpg":
-          case "jpeg":
-            return "image/jpeg";
-          case "png":
-            return "image/png";
-          case "webp":
-            return "image/webp";
-          case "ktx":
-            return "image/ktx";
-          case "ktx2":
-            return "image/ktx2";
-          case "avif":
-            return "image/avif";
-          default:
-            return
-        }
-      },
-      gM = () => "undefined" !== typeof location && "file:" === location.protocol,
-      uM = MM => JM.test(MM),
-      RM = MM => {
-        const rM = JM.exec(MM);
-        if (null === rM || 0 === rM.length) return {
-          match: !1,
-          type: ""
-        };
-        return {
-          match: !0,
-          type: rM[0].replace("data:", "").replace(";base64,", "")
-        }
-      };
-
-    function pM(MM) {
-      return (0, nM.d)(MM.split(",")[1])
-    }
-    const WM = MM => (0, nM.f)(MM.split(",")[1]);
-    let sM;
-    const DM = (MM, rM, iM, OM, SM, jM, aM, PM, nM, QM) => {
-      sM = {
-        DecodeBase64UrlToBinary: MM,
-        DecodeBase64UrlToString: rM,
-        DefaultRetryStrategy: iM.DefaultRetryStrategy,
-        BaseUrl: iM.BaseUrl,
-        CorsBehavior: iM.CorsBehavior,
-        PreprocessUrl: iM.PreprocessUrl,
-        IsBase64DataUrl: OM,
-        IsFileURL: SM,
-        LoadFile: jM,
-        LoadImage: aM,
-        ReadFile: PM,
-        RequestFile: nM,
-        SetCorsBehavior: QM
-      }, Object.defineProperty(sM, "DefaultRetryStrategy", {
-        get: function() {
-          return iM.DefaultRetryStrategy
-        },
-        set: function(MM) {
-          iM.DefaultRetryStrategy = MM
-        }
-      }), Object.defineProperty(sM, "BaseUrl", {
-        get: function() {
-          return iM.BaseUrl
-        },
-        set: function(MM) {
-          iM.BaseUrl = MM
-        }
-      }), Object.defineProperty(sM, "PreprocessUrl", {
-        get: function() {
-          return iM.PreprocessUrl
-        },
-        set: function(MM) {
-          iM.PreprocessUrl = MM
-        }
-      }), Object.defineProperty(sM, "CorsBehavior", {
-        get: function() {
-          return iM.CorsBehavior
-        },
-        set: function(MM) {
-          iM.CorsBehavior = MM
-        }
-      })
-    };
-    let kM = !1;
-
-    function ZM() {
-      kM || (kM = !0, DM(pM, WM, EM, uM, gM, bM, CM, eM, wM, UM), zM.c.loadFile = bM, zM.c.loadImage = CM, LM.i.loadFile = bM)
-    }
-  },
-  41176: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => PM,
-      e: () => jM,
-      g: () => aM
-    });
-    let OM = null;
-
-    function SM() {
-      if (OM) return OM;
-      const MM = new ArrayBuffer(4),
-        rM = new Float32Array(MM),
-        iM = new Uint32Array(MM),
-        SM = new Uint32Array(512),
-        jM = new Uint32Array(512);
-      for (let OM = 0; OM < 256; ++OM) {
-        const MM = OM - 127;
-        MM < -24 ? (SM[OM] = 0, SM[256 | OM] = 32768, jM[OM] = 24, jM[256 | OM] = 24) : MM < -14 ? (SM[OM] = 1024 >> -MM - 14, SM[256 | OM] = 1024 >> -MM - 14 | 32768, jM[OM] = -MM - 1, jM[256 | OM] = -MM - 1) : MM <= 15 ? (SM[OM] = MM + 15 << 10, SM[256 | OM] = MM + 15 << 10 | 32768, jM[OM] = 13, jM[256 | OM] = 13) : MM < 128 ? (SM[OM] = 31744, SM[256 | OM] = 64512, jM[OM] = 24, jM[256 | OM] = 24) : (SM[OM] = 31744, SM[256 | OM] = 64512, jM[OM] = 13, jM[256 | OM] = 13)
-      }
-      const aM = new Uint32Array(2048),
-        PM = new Uint32Array(64),
-        nM = new Uint32Array(64);
-      for (let OM = 1; OM < 1024; ++OM) {
-        let MM = OM << 13,
-          rM = 0;
-        for (; 0 === (8388608 & MM);) MM <<= 1, rM -= 8388608;
-        MM &= -8388609, rM += 947912704, aM[OM] = MM | rM
-      }
-      for (let OM = 1024; OM < 2048; ++OM) aM[OM] = 939524096 + (OM - 1024 << 13);
-      for (let OM = 1; OM < 31; ++OM) PM[OM] = OM << 23;
-      PM[31] = 1199570944, PM[32] = 2147483648;
-      for (let OM = 33; OM < 63; ++OM) PM[OM] = 2147483648 + (OM - 32 << 23);
-      PM[63] = 3347054592;
-      for (let OM = 1; OM < 64; ++OM) 32 !== OM && (nM[OM] = 1024);
-      return OM = {
-        floatView: rM,
-        uint32View: iM,
-        baseTable: SM,
-        shiftTable: jM,
-        mantissaTable: aM,
-        exponentTable: PM,
-        offsetTable: nM
-      }, OM
-    }
-    const jM = 65504;
-
-    function aM(MM) {
-      const rM = SM();
-      rM.floatView[0] = MM;
-      const iM = rM.uint32View[0],
-        OM = iM >> 23 & 511;
-      return rM.baseTable[OM] + ((8388607 & iM) >> rM.shiftTable[OM])
-    }
-
-    function PM(MM) {
-      const rM = SM();
-      return rM.uint32View[0] = rM.mantissaTable[rM.offsetTable[MM >> 10] + (1023 & MM)] + rM.exponentTable[MM >> 10], rM.floatView[0]
-    }
-  },
-  41160: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => jM,
-      f: () => SM,
-      j: () => OM
-    });
-    const OM = MM => {
-        const rM = ArrayBuffer.isView(MM) ? new Uint8Array(MM.buffer, MM.byteOffset, MM.byteLength) : new Uint8Array(MM);
-        return "function" === typeof rM.toBase64 ? rM.toBase64() : function(MM) {
-          const rM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let iM, OM, SM, jM, aM, PM, nM, QM = "",
-            zM = 0;
-          for (; zM < MM.length;) iM = MM[zM++], OM = zM < MM.length ? MM[zM++] : Number.NaN, SM = zM < MM.length ? MM[zM++] : Number.NaN, jM = iM >> 2, aM = (3 & iM) << 4 | OM >> 4, PM = (15 & OM) << 2 | SM >> 6, nM = 63 & SM, isNaN(OM) ? PM = nM = 64 : isNaN(SM) && (nM = 64), QM += rM.charAt(jM) + rM.charAt(aM) + rM.charAt(PM) + rM.charAt(nM);
-          return QM
-        }(rM)
-      },
-      SM = MM => atob(MM),
-      jM = MM => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(MM).buffer : function(MM) {
-        const rM = SM(MM),
-          iM = rM.length,
-          OM = new Uint8Array(new ArrayBuffer(iM));
-        for (let SM = 0; SM < iM; SM++) OM[SM] = rM.charCodeAt(SM);
-        return OM.buffer
-      }(MM)
-  },
-  41003: (MM, rM, iM) => {
-    iM.d(rM, {
-      c: () => SM,
-      d: () => aM
-    });
-    let OM = [];
-    class SM {
-      static SetImmediate(MM) {
-        0 === OM.length && setTimeout((() => {
-          const MM = OM;
-          OM = [];
-          for (const rM of MM) rM()
-        }), 1), OM.push(MM)
-      }
-    }
-
-    function jM(MM, rM, iM) {
-      try {
-        if (MM()) return rM(), !0
-      } catch (OM) {
-        return iM?.(OM), !0
-      }
-      return !1
-    }
-    const aM = function(MM, rM, iM) {
-      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        aM = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && jM(MM, rM, iM)) return null;
-      const PM = setInterval((() => {
-        jM(MM, rM, iM) ? clearInterval(PM) : (SM -= OM, SM < 0 && (clearInterval(PM), iM?.(new Error("Operation timed out after maximum retries. " + (aM || "")), !0)))
-      }), OM);
-      return () => clearInterval(PM)
-    }
-  },
-  41148: (MM, rM, iM) => {
-    iM.d(rM, {
-      e: () => OM
-    });
-    class OM {
-      constructor() {
-        this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
-      }
-      static get IsCustomRequestAvailable() {
-        return Object.keys(OM.CustomRequestHeaders).length > 0 || OM.CustomRequestModifiers.length > 0
-      }
-      static _CleanUrl(MM) {
-        return MM = (MM = MM.replace("file:http:", "http:")).replace("file:https:", "https:")
-      }
-      static _ShouldSkipRequestModifications(MM) {
-        return OM.SkipRequestModificationForBabylonCDN && (MM.includes("preview.babylonjs.com") || MM.includes("cdn.babylonjs.com"))
-      }
-      static _CollectCustomizations(MM) {
-        const rM = {
-          ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
-        };
-        if (OM._ShouldSkipRequestModifications(MM)) return {
-          url: MM,
-          headers: rM
-        };
-        for (const SM in OM.CustomRequestHeaders) {
-          const MM = OM.CustomRequestHeaders[SM];
-          MM && (rM[SM] = MM)
-        }
-        const iM = {
-          setRequestHeader: (MM, iM) => {
-            rM[MM] = iM
-          }
-        };
-        for (const SM of OM.CustomRequestModifiers) {
-          if (OM._ShouldSkipRequestModifications(MM)) break;
-          const rM = SM(iM, MM);
-          "string" === typeof rM && (MM = rM)
-        }
-        return {
-          url: MM,
-          headers: rM
-        }
-      }
-      static async FetchAsync(MM) {
-        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const iM = rM.method ?? "GET";
-        if ("undefined" !== typeof fetch) {
-          const {
-            url: SM,
-            headers: jM
-          } = OM._CollectCustomizations(OM._CleanUrl(MM), rM.headers ?? {});
-          return await fetch(SM, {
-            method: iM,
-            headers: jM,
-            body: rM.body ?? void 0
-          })
-        }
-        return await new Promise(((SM, jM) => {
-          const aM = new OM;
-          aM.responseType = "arraybuffer", aM.addEventListener("readystatechange", (() => {
-            if (4 === aM.readyState)
-              if (aM.status >= 200 && aM.status < 300) {
-                const MM = "undefined" !== typeof Headers ? new Headers : void 0,
-                  rM = aM.getResponseHeader("Content-Type");
-                rM && MM && MM.set("Content-Type", rM), "undefined" !== typeof Response ? SM(new Response(aM.response, {
-                  status: aM.status,
-                  statusText: aM.statusText,
-                  headers: MM
-                })) : SM({
-                  ok: !0,
-                  status: aM.status,
-                  statusText: aM.statusText,
-                  headers: {
-                    get: MM => aM.getResponseHeader(MM)
-                  },
-                  arrayBuffer: async () => await Promise.resolve(aM.response)
-                })
-              } else jM(new Error(`HTTP ${aM.status} loading '${aM.requestURL}': ${aM.statusText}`))
-          })), aM.open(iM, MM, rM.headers), aM.send(rM.body ?? null)
-        }))
-      }
-      get requestURL() {
-        return this._requestURL
-      }
-      get onprogress() {
-        return this._xhr.onprogress
-      }
-      set onprogress(MM) {
-        this._xhr.onprogress = MM
-      }
-      get readyState() {
-        return this._xhr.readyState
-      }
-      get status() {
-        return this._xhr.status
-      }
-      get statusText() {
-        return this._xhr.statusText
-      }
-      get response() {
-        return this._xhr.response
-      }
-      get responseURL() {
-        return this._xhr.responseURL
-      }
-      get responseText() {
-        return this._xhr.responseText
-      }
-      get responseType() {
-        return this._xhr.responseType
-      }
-      set responseType(MM) {
-        this._xhr.responseType = MM
-      }
-      get timeout() {
-        return this._xhr.timeout
-      }
-      set timeout(MM) {
-        this._xhr.timeout = MM
-      }
-      addEventListener(MM, rM, iM) {
-        this._xhr.addEventListener(MM, rM, iM)
-      }
-      removeEventListener(MM, rM, iM) {
-        this._xhr.removeEventListener(MM, rM, iM)
-      }
-      abort() {
-        this._xhr.abort()
-      }
-      send(MM) {
-        this._xhr.send(MM)
-      }
-      open(MM, rM, iM) {
-        const {
-          url: SM,
-          headers: jM
-        } = OM._CollectCustomizations(rM, iM);
-        this._requestURL = OM._CleanUrl(SM), this._xhr.open(MM, this._requestURL, !0);
-        for (const OM in jM) this._xhr.setRequestHeader(OM, jM[OM])
-      }
-      setRequestHeader(MM, rM) {
-        this._xhr.setRequestHeader(MM, rM)
-      }
-      getResponseHeader(MM) {
-        return this._xhr.getResponseHeader(MM)
-      }
-    }
-    OM.CustomRequestHeaders = {}, OM.CustomRequestModifiers = new Array, OM.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

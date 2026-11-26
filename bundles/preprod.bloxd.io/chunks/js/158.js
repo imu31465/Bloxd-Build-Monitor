@@ -1,166 +1,276 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  7173: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      BloxdFirebaseSdk: () => mM
+  7307: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      BloxdDiscordActivitySdk: () => GU
     });
-    var OM = iM(1940),
-      SM = iM(3241),
-      jM = iM(94),
-      aM = iM(83),
-      PM = iM(1771),
-      nM = iM(2157);
-    const QM = {
-      apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
-      authDomain: "bloxd-ee1aa.firebaseapp.com",
-      projectId: "bloxd-ee1aa",
-      storageBucket: "bloxd-ee1aa.appspot.com",
-      messagingSenderId: "758847442742",
-      appId: "1:758847442742:web:7bb74eb261641e30f02d97"
-    };
-    var zM = iM(3258),
-      LM = iM(1810);
-    class mM {
-      constructor() {}
+    var cU = zU(7310),
+      yU = zU(1241),
+      QU = zU(1193),
+      AU = zU(646),
+      FU = zU(1266),
+      oU = zU(1800),
+      DU = zU(1360),
+      EU = zU(825),
+      YU = zU(27),
+      NU = zU(1211),
+      IU = zU(2494),
+      pU = function(UU) {
+        return UU.APPLICATION_COMMANDS = "applications.commands", UU.IDENTIFY = "identify", UU.EMAIL = "email", UU.GUILDS = "guilds", UU.READ_DM_CHANNELS = "dm_channels.read", UU.WRITE_ACTIVITIES = "rpc.activities.write", UU
+      }(pU || {}),
+      aU = function(UU) {
+        return UU[UU.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", UU[UU.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", UU[UU.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", UU[UU.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", UU[UU.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", UU[UU.RATELIMITED = 4002] = "RATELIMITED", UU[UU.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", UU[UU.INVALID_VERSION = 4004] = "INVALID_VERSION", UU[UU.INVALID_ENCODING = 4005] = "INVALID_ENCODING", UU
+      }(aU || {}),
+      tU = function(UU) {
+        return UU[UU.PLAYING = 0] = "PLAYING", UU[UU.STREAMING = 1] = "STREAMING", UU[UU.LISTENING = 2] = "LISTENING", UU[UU.WATCHING = 3] = "WATCHING", UU[UU.CUSTOM = 4] = "CUSTOM", UU[UU.COMPETING = 5] = "COMPETING", UU
+      }(tU || {});
+    const gU = {
+        Minigames: "Playing",
+        Puzzle: "Solving",
+        Escape: "Escaping",
+        Parkour: "Parkouring",
+        "Cool Parkour": "Parkouring",
+        "Two Player Parkour": "Parkouring",
+        "Clutch Parkour": "Parkouring",
+        "Challenging Parkour": "Parkouring",
+        "Progressive Parkour": "Parkouring",
+        "Themed Parkour": "Parkouring",
+        Obby: "Parkouring",
+        Tower: "Climbing",
+        Roleplay: "Roleplaying",
+        Arena: "Battling",
+        Duels: "Duelling",
+        Shooting: "Shooting",
+        Survival: "Surviving",
+        Simulator: "Grinding",
+        Tycoon: "Building",
+        Clicker: "Clicking",
+        PvE: "Battling",
+        Building: "Building",
+        Horror: "Surviving",
+        "Lucky Block": "Battling",
+        Racing: "Racing",
+        Driving: "Driving",
+        "Cool Build": "Building",
+        Adventure: "Adventuring",
+        Other: "Being mischievous"
+      },
+      kU = {
+        goalRush: "Playing",
+        heroesvbrainrots: "Battling",
+        hideseek: "Playing",
+        bingo: "Playing"
+      };
+    class GU {
+      constructor(UU) {
+        this.discordSdk = UU, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null, this.activityUpdateId = 0
+      }
       static async setup() {
+        console.log("Setting up Discord SDK with client id", NU.d.discordClientID);
+        const UU = new cU.e(NU.d.discordClientID);
+        let XU = !1;
+        setTimeout((() => {
+          XU || (console.warn("Discord SDK took too long to initialize"), (0, oU.reloadBloxd)())
+        }), 15e3), await UU.ready(), XU = !0;
         try {
-          return await mM.setupInternal()
-        } catch (MM) {
-          return console.error("Failed to setup Firebase SDK:", MM), null
+          const {
+            enabled: XU
+          } = await UU.commands.encourageHardwareAcceleration();
+          XU || console.warn("Hardware acceleration not enabled in the Discord client")
+        } catch (yU) {
+          console.error("Failed to encourage hardware acceleration in the Discord client", yU)
+        }
+        const zU = new GU(UU);
+        return zU.isMobilePlatform() && (zU.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
+          zU.applyDiscordSafeAreaNotch()
+        }))), zU
+      }
+      async updateActivityDescription(UU) {
+        const XU = ++this.activityUpdateId;
+        let zU, cU;
+        switch (UU) {
+          case "homePage":
+            zU = "Chilling in the Main Menu";
+            break;
+          case "inGame": {
+            const UU = await this.getInGameDescriptions();
+            zU = UU.primary, cU = UU.secondary;
+            break
+          }
+        }
+        XU === this.activityUpdateId && await this.discordSdk.commands.setActivity({
+          activity: {
+            type: tU.PLAYING,
+            details: zU,
+            state: cU,
+            assets: {
+              large_image: "icon",
+              large_text: zU
+            },
+            timestamps: {
+              start: this.startTime
+            }
+          }
+        }).catch((UU => {
+          console.error(`Failed to update Discord activity rich presence with description="${zU}":`, UU)
+        }))
+      }
+      async getInGameDescriptions() {
+        const UU = (0, DU.b)(),
+          {
+            verb: XU,
+            title: zU
+          } = await this.getGameVerbAndTitle(UU.requestedGameNameWithVariation);
+        if ((0, DU.f)(UU)) return {
+          primary: `${XU} in a Discord World`
+        };
+        const cU = `${XU} in ${zU}`;
+        return (0, AU.P)(UU.lobbyName) ? {
+          primary: cU
+        } : {
+          primary: cU,
+          secondary: `Lobby ${UU.lobbyName}`
         }
       }
-      static async setupInternal() {
-        const MM = await Promise.all([iM.e(293), iM.e(292)]).then((() => iM(41593))),
-          rM = await Promise.all([iM.e(293), iM.e(294)]).then((() => iM(41619))),
-          HM = await Promise.all([iM.e(293), iM.e(295)]).then((() => iM(41628))),
-          hM = MM.initializeApp({
-            ...QM,
-            measurementId: SM.bloxdGa4MeasurementId
-          });
-        (0, SM.setUpGtag)(), window.gtag("config", SM.bloxdGa4MeasurementId), (0, SM.markBloxdGa4Configured)(), window.gtag("config", "AW-16469618203");
-        const JM = rM.getAnalytics(hM),
-          dM = {
-            portal: jM.currentUrl.getSearchParam("portal") || "root",
-            loggedIn: !1
-          };
-        rM.setUserProperties(JM, dM);
-        const yM = HM.initializeAuth(hM, {
-          persistence: [HM.indexedDBLocalPersistence, HM.browserLocalPersistence, HM.browserSessionPersistence],
-          popupRedirectResolver: (0, aM.isMobileApp)() ? void 0 : HM.browserPopupRedirectResolver
-        });
-        HM.useDeviceLanguage(yM);
-        const lM = new HM.GoogleAuthProvider;
-        lM.setCustomParameters({
-          prompt: "select_account"
-        });
-        const EM = new HM.OAuthProvider(OM.j[OM.d.APPLE]),
-          UM = new HM.OAuthProvider(OM.j[OM.d.MICROSOFT]);
-        UM.setCustomParameters({
-          prompt: "select_account",
-          tenant: "consumers"
-        });
-        const GM = {
-          [OM.d.GOOGLE]: lM,
-          [OM.d.APPLE]: EM,
-          [OM.d.MICROSOFT]: UM
+      async getGameVerbAndTitle(UU) {
+        var XU;
+        const zU = "Playing";
+        if ((0, AU.P)(UU)) return {
+          verb: zU,
+          title: "Bloxd"
         };
-        window.gtag("set", {
-          cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((MM => {
-          const rM = HM.onIdTokenChanged(yM, (iM => {
-            rM(), MM()
-          }))
-        }));
-        class CM extends mM {
-          setUserProperties(MM) {
-            rM.setUserProperties(JM, MM)
-          }
-          onIdTokenChanged(MM) {
-            HM.onIdTokenChanged(yM, MM)
-          }
-          canSignIn() {
-            return !0
-          }
-          async signInWithPopup(MM) {
-            var rM;
-            const iM = await HM.signInWithPopup(yM, GM[MM]);
-            return null !== (rM = null === iM || void 0 === iM ? void 0 : iM.user) && void 0 !== rM ? rM : null
-          }
-          async getCurrentUser(MM) {
-            const rM = yM.currentUser;
-            if (!rM) return null;
-            const {
-              signInProvider: iM
-            } = await rM.getIdTokenResult(!1);
-            return iM === OM.j[MM] ? rM : null
-          }
-          async signOut(MM) {
-            null !== await this.getCurrentUser(MM) && await HM.signOut(yM)
-          }
+        const cU = (0, EU.m)(UU);
+        var yU;
+        if (null !== cU) return {
+          verb: null !== (yU = kU[UU]) && void 0 !== yU ? yU : gU[cU.type],
+          title: await (0, QU.E)(FU.d.ENGLISH, cU.title)
+        };
+        const oU = await (0, IU.c)(UU);
+        return {
+          verb: null !== (XU = oU && gU[oU.gameCategory]) && void 0 !== XU ? XU : zU,
+          title: (null === oU || void 0 === oU ? void 0 : oU.name) || "a Custom World"
         }
-        async function eM(MM, rM) {
-          const iM = await PM.e.request(`${MM}.${rM}`, {});
-          if (null === iM) return null;
-          const OM = "google" === MM ? HM.GoogleAuthProvider.credential(iM.idToken) : EM.credential({
-            idToken: iM.idToken
+      }
+      getCurrentChannelType() {
+        const {
+          channelId: UU,
+          guildId: XU
+        } = this.getCurrentChannelAndGuild();
+        return null !== XU ? yU.d.GUILD : null !== UU ? yU.d.DM : null
+      }
+      getRequiredScopeForCurrentChannel() {
+        const UU = this.getCurrentChannelType(),
+          XU = [pU.APPLICATION_COMMANDS, pU.IDENTIFY, pU.EMAIL, pU.GUILDS, pU.WRITE_ACTIVITIES];
+        switch (UU) {
+          case yU.d.DM:
+          case yU.d.GUILD:
+            return [...XU];
+          default:
+            throw new Error(`Unknown Discord channel type: ${UU}`)
+        }
+      }
+      getCurrentChannelAndGuild() {
+        const {
+          channelId: UU,
+          guildId: XU
+        } = this.discordSdk;
+        return {
+          channelId: null !== UU && void 0 !== UU ? UU : null,
+          guildId: null !== XU && void 0 !== XU ? XU : null
+        }
+      }
+      getInstanceId() {
+        return this.discordSdk.instanceId
+      }
+      async askDiscordUserForAuthorization() {
+        const UU = this.getRequiredScopeForCurrentChannel(),
+          {
+            code: XU
+          } = await this.discordSdk.commands.authorize({
+            client_id: NU.d.discordClientID,
+            response_type: "code",
+            state: "",
+            prompt: "none",
+            scope: UU
           });
-          return (await HM.signInWithCredential(yM, OM)).user
+        return XU
+      }
+      getCachedAccessToken() {
+        return this.cachedAccessToken
+      }
+      setCachedAccessToken(UU) {
+        this.cachedAccessToken = UU
+      }
+      registerGuild(UU, XU) {
+        this.guildNameCache[UU] = XU
+      }
+      async authenticate(UU) {
+        return this.discordSdk.commands.authenticate({
+          access_token: UU
+        }).then((UU => null !== UU))
+      }
+      async getUserLocale() {
+        try {
+          const {
+            locale: UU
+          } = await this.discordSdk.commands.userSettingsGetLocale();
+          return UU
+        } catch (UU) {
+          return console.error("Failed to get user locale from Discord:", UU.stack), null
         }
-        class bM extends mM {
-          setUserProperties(MM) {
-            rM.setUserProperties(JM, MM)
+      }
+      async getChannelName(UU) {
+        return this.discordSdk.commands.getChannel({
+          channel_id: UU
+        }).then((UU => UU.name)).catch((UU => "Your Current Discord Chat"))
+      }
+      async getDiscordContextFromChannelId(UU) {
+        const XU = await this.getChannelName(UU);
+        return yU.i.from({
+          type: yU.d.DM,
+          channelId: UU,
+          channelName: XU
+        })
+      }
+      getDiscordContextFromGuildId(UU) {
+        const XU = this.guildNameCache[UU];
+        return (0, AU.P)(XU) ? null : yU.f.from({
+          type: yU.d.GUILD,
+          guildId: UU,
+          guildName: XU
+        })
+      }
+      async getCurrentDiscordContext() {
+        const {
+          channelId: UU,
+          guildId: XU
+        } = this.getCurrentChannelAndGuild();
+        return null !== XU ? this.getDiscordContextFromGuildId(XU) : null !== UU ? this.getDiscordContextFromChannelId(UU) : null
+      }
+      exit(UU) {
+        console.log("Exiting Discord Activity:", UU), this.discordSdk.close(aU.CLOSE_NORMAL, UU)
+      }
+      isMobilePlatform() {
+        return this.discordSdk.platform === cU.i.MOBILE
+      }
+      applyDiscordSafeAreaNotch() {
+        const UU = getComputedStyle(document.documentElement),
+          XU = (XU, zU) => {
+            const cU = parseFloat(UU.getPropertyValue(`--discord-safe-area-inset-${XU}`));
+            return isNaN(cU) || 0 === zU ? 0 : cU / zU * 100
+          };
+        YU.e.set({
+          notchSize: {
+            top: XU("top", window.innerHeight),
+            right: Math.max(XU("right", window.innerWidth), 7),
+            bottom: 0,
+            left: XU("left", window.innerWidth)
           }
-          onIdTokenChanged(MM) {
-            HM.onIdTokenChanged(yM, MM)
-          }
-          canSignIn(MM) {
-            return null !== (0, nM.d)(MM)
-          }
-          async signInWithPopup(MM) {
-            const rM = (0, nM.d)(MM);
-            if (null === rM) return console.warn(`The app can't sign in with ${MM}; check canSignIn first`), null;
-            try {
-              return await eM(rM, "signIn")
-            } catch (iM) {
-              if (iM instanceof LM.e && "timeout" === iM.code) return null;
-              throw (0, zM.reportClientError)("login_failed", iM, `app_${rM}`), iM
-            }
-          }
-          async getCurrentUser(MM) {
-            const rM = yM.currentUser;
-            if (rM) {
-              const {
-                signInProvider: iM
-              } = await rM.getIdTokenResult(!1);
-              if (iM === OM.j[MM]) return rM
-            }
-            const iM = (0, nM.d)(MM);
-            if (null === iM) return null;
-            try {
-              return await eM(iM, "getCurrentUser")
-            } catch (SM) {
-              return console.error(`Failed to get the current ${MM} user from the app:`, SM), null
-            }
-          }
-          async signOut(MM) {
-            const rM = (0, nM.d)(MM);
-            null !== rM && PM.e.request(`${rM}.signOut`, {}).catch((rM => {
-              console.error(`Failed to sign out of ${MM} in the app:`, rM)
-            }));
-            const iM = yM.currentUser;
-            if (iM) {
-              const {
-                signInProvider: rM
-              } = await iM.getIdTokenResult(!1);
-              rM === OM.j[MM] && await HM.signOut(yM)
-            }
-          }
-        }
-        return (0, aM.isMobileApp)() ? (await PM.e.ready, new bM) : new CM
+        })
       }
     }
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);

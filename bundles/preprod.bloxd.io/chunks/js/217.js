@@ -1,84 +1,293 @@
 export const id = 217;
-export const ids = [217, 218];
+export const ids = [217];
 export const modules = {
-  34868: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      reportJsMainStall: () => PM,
-      resetJsMainStallReport: () => nM
+  44200: (UU, XU, zU) => {
+    zU.r(XU), zU.d(XU, {
+      MobPreview: () => YU
     });
-    var OM = iM(34877),
-      SM = iM(3258),
-      jM = iM(34880);
-    let aM = !1;
+    var cU = zU(61),
+      yU = zU(1106),
+      QU = zU.n(yU),
+      AU = zU(44209),
+      FU = zU(34900),
+      oU = zU(44212),
+      DU = zU(1305);
 
-    function PM(MM, rM, iM, PM) {
-      aM || (aM = !0, (0, SM.reportClientError)("wasm_load", (0, jM.d)(MM, rM, iM, PM, (0, jM.e)()), "JS-mainStall", !0, OM.CAPPED_COUNTS_VISIT_CAP))
+    function EU(UU) {
+      return FU.h.openMob(UU)
     }
+    const YU = (0, cU.memo)((function(UU) {
+      let {
+        mobType: XU,
+        variation: zU = null,
+        animation: yU = oU.j,
+        className: FU
+      } = UU;
+      const YU = (0, cU.useRef)(null),
+        NU = (0, cU.useMemo)((() => ({
+          mobType: XU,
+          variation: zU,
+          animation: yU
+        })), [XU, zU, yU]);
+      return (0, AU.b)(YU, EU, NU), (0, DU.jsx)("div", {
+        className: QU()("MobPreview", FU),
+        ref: YU
+      })
+    }))
+  },
+  44209: (UU, XU, zU) => {
+    zU.d(XU, {
+      b: () => QU
+    });
+    var cU = zU(61),
+      yU = zU(3021);
 
-    function nM() {
-      aM = !1
+    function QU(UU, XU, zU) {
+      const QU = (0, cU.useRef)(null),
+        {
+          width: AU,
+          height: FU
+        } = (0, yU.d)(UU);
+      (0, cU.useEffect)((() => {
+        const zU = XU(UU.current);
+        return QU.current = zU, () => {
+          zU.close(), QU.current = null
+        }
+      }), [UU, XU]), (0, cU.useEffect)((() => {
+        AU <= 0 || FU <= 0 || QU.current.resize(AU, FU)
+      }), [AU, FU]), (0, cU.useEffect)((() => {
+        QU.current.show(zU)
+      }), [zU])
     }
   },
-  34880: (MM, rM, iM) => {
-    iM.d(rM, {
-      d: () => PM,
-      e: () => aM
+  44212: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => NU,
+      f: () => YU,
+      j: () => oU
     });
-    var OM = iM(243),
-      SM = iM(114),
-      jM = iM(34885);
+    var cU = zU(37876),
+      yU = zU(39453);
 
-    function aM() {
-      var MM, rM, iM;
-      return null !== (MM = (0, OM.p)(null !== (rM = null === (iM = (0, SM.o)()) || void 0 === iM ? void 0 : iM.renderer) && void 0 !== rM ? rM : null, (0, SM.k)())) && void 0 !== MM ? MM : "unknown"
+    function QU(UU, XU) {
+      let [zU, cU, yU] = UU;
+      return [0, .5, 1].map((UU => ({
+        timeFraction: UU,
+        rotation: {
+          GX: "catmull-rom-spline",
+          point: [zU, cU, yU + (.5 === UU ? XU : 0)]
+        }
+      })))
     }
 
-    function PM(MM, rM, iM, OM, SM) {
-      const aM = null === rM ? "untimed" : `${Math.round(rM)} ms`;
-      return `frames stalled, ${iM}, gpu ${(0,jM.b)(SM)}, blocking ${aM}, drawn ${Math.round(MM)} ms apart, timers ${OM.timers}, timer gap ${Math.round(OM.longestGapMs)} ms`
+    function AU(UU, XU, zU) {
+      return {
+        pX: 3200,
+        loop: !0,
+        tX: {
+          Root: {
+            timeline: [0, .5, 1].map((UU => ({
+              timeFraction: UU,
+              position: {
+                GX: "catmull-rom-spline",
+                point: [0, .5 === UU ? .18 : 0, 0]
+              }
+            })))
+          },
+          HeadMesh: {
+            timeline: [0, .25, .75, 1].map((UU => ({
+              timeFraction: UU,
+              rotation: {
+                GX: "catmull-rom-spline",
+                point: [0, .25 === UU ? .12 : .75 === UU ? -.12 : 0, 0]
+              }
+            })))
+          },
+          ArmLeftMesh: {
+            timeline: QU(UU, zU)
+          },
+          ArmRightMesh: {
+            timeline: QU(XU, -zU)
+          }
+        }
+      }
+    }
+    const FU = AU([0, 0, 0], [0, 0, 0], .07),
+      oU = (0, yU.d)((0, cU.g)(FU), "mobIdle"),
+      DU = AU([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      EU = AU([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      YU = (0, yU.d)((0, cU.g)(DU), "gunReady"),
+      NU = (0, yU.d)((0, cU.g)(EU), "gunAimed")
+  },
+  34904: (UU, XU, zU) => {
+    zU.d(XU, {
+      e: () => AU,
+      h: () => yU,
+      i: () => EU
+    });
+    var cU = zU(1613);
+
+    function yU(UU) {
+      var XU;
+      return {
+        ...AU.store,
+        yaw: AU.store.yaw + (null !== (XU = cU.d[UU].previewYaw) && void 0 !== XU ? XU : 0)
+      }
+    }
+    const QU = {
+        yaw: .61 * Math.PI,
+        pitch: Math.PI / 2.05,
+        radius: 30,
+        target: [0, 0, 0]
+      },
+      AU = {
+        player: QU,
+        store: {
+          ...QU,
+          radius: 33,
+          target: [0, 3.9, 0]
+        }
+      };
+
+    function FU(UU, XU) {
+      UU instanceof Promise ? UU.then(XU).catch((UU => {
+        console.error("Couldn't open the preview", UU)
+      })) : XU(UU)
+    }
+    class oU {
+      constructor(UU) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, FU(UU, (UU => {
+          this.closed ? UU.close() : (this.opened = UU, null !== this.size && UU.resize(this.size.width, this.size.height), null !== this.view && UU.show(this.view))
+        }))
+      }
+      show(UU) {
+        var XU;
+        this.view = UU, null === (XU = this.opened) || void 0 === XU || XU.show(UU)
+      }
+      resize(UU, XU) {
+        var zU;
+        this.size = {
+          width: UU,
+          height: XU
+        }, null === (zU = this.opened) || void 0 === zU || zU.resize(UU, XU)
+      }
+      close() {
+        var UU;
+        this.closed = !0, null === (UU = this.opened) || void 0 === UU || UU.close(), this.opened = null
+      }
+    }
+    class DU {
+      constructor(UU) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(UU).then((UU => UU.ready)), FU(UU, (UU => {
+          this.closed ? UU.close() : (this.opened = UU, null !== this.size && UU.resize(this.size.width, this.size.height))
+        }))
+      }
+      get dev() {
+        return this.opened.dev
+      }
+      isReady() {
+        var UU, XU;
+        return null !== (UU = null === (XU = this.opened) || void 0 === XU ? void 0 : XU.isReady()) && void 0 !== UU && UU
+      }
+      setCosmetic(UU, XU) {
+        var zU;
+        null === (zU = this.opened) || void 0 === zU || zU.setCosmetic(UU, XU)
+      }
+      playEmote(UU) {
+        var XU;
+        null === (XU = this.opened) || void 0 === XU || XU.playEmote(UU)
+      }
+      setOrbit(UU) {
+        var XU;
+        null === (XU = this.opened) || void 0 === XU || XU.setOrbit(UU)
+      }
+      resetCamera() {
+        var UU;
+        null === (UU = this.opened) || void 0 === UU || UU.resetCamera()
+      }
+      async untilDrawn(UU) {
+        var XU;
+        await this.ready, await (null === (XU = this.opened) || void 0 === XU ? void 0 : XU.untilDrawn(UU))
+      }
+      resize(UU, XU) {
+        var zU;
+        this.size = {
+          width: UU,
+          height: XU
+        }, null === (zU = this.opened) || void 0 === zU || zU.resize(UU, XU)
+      }
+      close() {
+        var UU;
+        this.closed = !0, null === (UU = this.opened) || void 0 === UU || UU.close(), this.opened = null
+      }
+    }
+    const EU = new class {
+      constructor() {
+        this.host = null, this.makeDefault = null
+      }
+      setHost(UU) {
+        this.host = UU
+      }
+      setDefaultHost(UU) {
+        this.makeDefault = UU
+      }
+      current() {
+        if (null === this.host) {
+          if (null === this.makeDefault) throw new Error("no preview host");
+          this.host = this.makeDefault()
+        }
+        return this.host
+      }
+      openMob(UU) {
+        return new oU(this.current().openMob(UU))
+      }
+      openPet(UU) {
+        return new oU(this.current().openPet(UU))
+      }
+      openMobLineup(UU) {
+        return new oU(this.current().openMobLineup(UU))
+      }
+      openCharacter(UU, XU) {
+        return new DU(this.current().openCharacter(UU, XU))
+      }
     }
   },
-  34877: (MM, rM, iM) => {
-    iM.r(rM), iM.d(rM, {
-      CAPPED_COUNTS_VISIT_CAP: () => jM,
-      reportCappedWasmFailure: () => nM,
-      reportUncappedWasmFailure: () => PM,
-      reportWasmCrash: () => SM,
-      reportWasmFailure: () => aM
+  34900: (UU, XU, zU) => {
+    zU.d(XU, {
+      c: () => cU.e,
+      d: () => cU.h,
+      h: () => cU.i
     });
-    var OM = iM(3258);
-
-    function SM(MM) {
-      (0, OM.reportClientError)("wasm_load", MM.message, MM.code)
+    var cU = zU(34904);
+    class yU {
+      constructor(UU) {
+        this.load = UU, this.loaded = null, this.loading = null
+      }
+      run(UU) {
+        return null !== this.loaded ? UU(this.loaded) : (this.loading ??= this.load().then((UU => (this.loaded = UU, UU)), (UU => {
+          throw this.loading = null, UU
+        })), this.loading.then(UU))
+      }
     }
-    const jM = OM.MAX_ERRORS_PER_VISIT - 4;
-
-    function aM(MM, rM, iM, SM) {
-      (0, OM.reportClientError)(MM, rM, iM, !1, OM.MAX_ERRORS_PER_VISIT, {
-        context: SM
-      })
+    class QU {
+      constructor() {
+        this.mobScene = new yU((() => Promise.all([zU.e(84), zU.e(251), zU.e(250), zU.e(277), zU.e(111), zU.e(278), zU.e(87), zU.e(275), zU.e(85), zU.e(86), zU.e(285), zU.e(279), zU.e(284), zU.e(282), zU.e(274), zU.e(299), zU.e(247), zU.e(265), zU.e(280), zU.e(283), zU.e(89), zU.e(241), zU.e(200), zU.e(109), zU.e(253), zU.e(244), zU.e(260), zU.e(214), zU.e(261), zU.e(88), zU.e(267)]).then((() => zU(42180))))), this.characterScene = new yU((() => Promise.all([zU.e(84), zU.e(251), zU.e(250), zU.e(277), zU.e(111), zU.e(278), zU.e(87), zU.e(275), zU.e(85), zU.e(86), zU.e(285), zU.e(279), zU.e(284), zU.e(282), zU.e(274), zU.e(299), zU.e(247), zU.e(265), zU.e(280), zU.e(283), zU.e(89), zU.e(241), zU.e(200), zU.e(109), zU.e(253), zU.e(244), zU.e(260), zU.e(214), zU.e(261), zU.e(88), zU.e(266)]).then((() => zU(42288)))))
+      }
+      openMob(UU) {
+        return this.mobScene.run((XU => XU.openMobPreview(UU)))
+      }
+      openPet(UU) {
+        return this.mobScene.run((XU => XU.openPetPreview(UU)))
+      }
+      openMobLineup(UU) {
+        return this.mobScene.run((XU => XU.openMobLineupPreview(UU)))
+      }
+      openCharacter(UU, XU) {
+        return this.characterScene.run((zU => zU.openCharacterPreview(UU, XU)))
+      }
     }
-
-    function PM(MM, rM, iM, SM) {
-      (0, OM.reportClientError)(MM, rM, iM, !1, 1 / 0, {
-        context: SM
-      })
-    }
-
-    function nM(MM, rM, iM, SM) {
-      (0, OM.reportClientError)(MM, rM, iM, !1, jM, {
-        context: SM
-      })
-    }
-  },
-  34885: (MM, rM, iM) => {
-    function OM(MM) {
-      return String(MM).replace(/\d/g, (MM => String.fromCharCode(97 + Number(MM))))
-    }
-    iM.d(rM, {
-      b: () => OM
-    })
+    cU.i.setDefaultHost((() => new QU))
   }
 };
 Object.freeze(modules);
-for (const MM in modules) Object.freeze(modules[MM]);
+for (const UU in modules) Object.freeze(modules[UU]);
