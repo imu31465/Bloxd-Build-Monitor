@@ -338,12 +338,12 @@ class MonitorTests(unittest.TestCase):
                 mock.patch.object(monitor.time, "sleep") as sleep,
             ):
                 digest, size = monitor.fetch_bundle(url, destination)
-        self.assertEqual(urlopen.call_count, 2)
-        sleep.assert_called_once_with(7.0)
-        self.assertEqual(size, len(body))
-        self.assertEqual(digest, hashlib.sha256(body).hexdigest())
-        self.assertEqual(destination.read_bytes(), body)
-        self.assertFalse(destination.with_name(destination.name + ".tmp").exists())
+            self.assertEqual(urlopen.call_count, 2)
+            sleep.assert_called_once_with(7.0)
+            self.assertEqual(size, len(body))
+            self.assertEqual(digest, hashlib.sha256(body).hexdigest())
+            self.assertEqual(destination.read_bytes(), body)
+            self.assertFalse(destination.with_name(destination.name + ".tmp").exists())
 
     def test_fetch_bundle_rejects_html_payload(self):
         with tempfile.TemporaryDirectory() as tmp:
