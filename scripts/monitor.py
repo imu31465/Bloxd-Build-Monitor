@@ -25,7 +25,8 @@ import tempfile
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -65,7 +66,7 @@ SITES = {
     "preprod.bloxd.io": "https://preprod.bloxd.io/",
     "staging.bloxd.io": "https://staging.bloxd.io/",
 }
-WORKERS = 8
+WORKERS = 4  # Limit concurrent CDN requests to reduce 429 responses.
 BEAUTIFY = True
 UA = (
     "Mozilla/5.0 (compatible; bloxd-build-monitor/2.2; "
@@ -205,8 +206,28 @@ def _fetch_once(url: str, destination: Path) -> tuple[str, int]:
     return digest.hexdigest(), size
 
 
-def fetch_bundle(url: str, destination: Path, attempts: int = 3) -> tuple[str, int]:
-    """Download a build file, retrying transient CDN errors."""
+def _retry_delay_seconds(exc: Exception, attempt: int) -> float:
+    """Use the CDN Retry-After hint when present, otherwise exponential backoff."""
+    headers = getattr(exc, "headers", None)
+    retry_after = headers.get("Retry-After") if headers else None
+    if retry_after is not None:
+        value = str(retry_after).strip()
+        try:
+            return max(0.0, float(value))
+        except ValueError:
+            try:
+                retry_at = parsedate_to_datetime(value)
+                if retry_at.tzinfo is None:
+                    retry_at = retry_at.replace(tzinfo=timezone.utc)
+                return max(0.0, (retry_at - datetime.now(timezone.utc)).total_seconds())
+            except (TypeError, ValueError, OverflowError):
+                pass
+    return min(60.0, 2.0 ** (attempt + 1))
+
+
+def fetch_bundle(url: str, destination: Path, attempts: int = 5) -> tuple[str, int]:
+    """Download a build file, honoring Retry-After and backing off on transient CDN errors."""
+    attempts = max(1, attempts)
     last_error: Exception | None = None
     for attempt in range(attempts):
         try:
@@ -217,9 +238,15 @@ def fetch_bundle(url: str, destination: Path, attempts: int = 3) -> tuple[str, i
             retryable = code is None or code in (429, 500, 502, 503, 504)
             if not retryable or attempt == attempts - 1:
                 break
-            time.sleep(1 + attempt)
+            delay = _retry_delay_seconds(exc, attempt)
+            print(
+                f"WARNING: bundle download received HTTP {code or 'network error'}; "
+                f"retrying in {delay:.1f}s ({attempt + 1}/{attempts - 1}): {url}",
+                file=sys.stderr,
+            )
+            time.sleep(delay)
     code = getattr(last_error, "code", None)
-    raise RuntimeError(f"bundle download failed (HTTP {code or last_error}): {url}")
+    raise RuntimeError(f"bundle download failed after {attempts} attempts (HTTP {code or last_error}): {url}")
 
 
 def beautify_file(path_str: str) -> str:
