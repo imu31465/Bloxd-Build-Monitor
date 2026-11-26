@@ -1,39 +1,39 @@
 export const id = 212;
 export const ids = [212];
 export const modules = {
-  34821: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      CAPPED_COUNTS_VISIT_CAP: () => SH,
-      reportCappedWasmFailure: () => zH,
-      reportUncappedWasmFailure: () => tH,
-      reportWasmCrash: () => rH,
-      reportWasmFailure: () => hH
+  34626: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      CAPPED_COUNTS_VISIT_CAP: () => QB,
+      reportCappedWasmFailure: () => yB,
+      reportUncappedWasmFailure: () => jB,
+      reportWasmCrash: () => DB,
+      reportWasmFailure: () => oB
     });
-    var AH = LH(1826);
+    var YB = GB(1856);
 
-    function rH(HH) {
-      (0, AH.reportClientError)("wasm_load", HH.message, HH.code)
+    function DB(BB) {
+      (0, YB.reportClientError)("wasm_load", BB.message, BB.code)
     }
-    const SH = AH.MAX_ERRORS_PER_VISIT - 4;
+    const QB = YB.MAX_ERRORS_PER_VISIT - 4;
 
-    function hH(HH, BH, LH, rH) {
-      (0, AH.reportClientError)(HH, BH, LH, !1, AH.MAX_ERRORS_PER_VISIT, {
-        context: rH
+    function oB(BB, OB, GB, DB) {
+      (0, YB.reportClientError)(BB, OB, GB, !1, YB.MAX_ERRORS_PER_VISIT, {
+        context: DB
       })
     }
 
-    function tH(HH, BH, LH, rH) {
-      (0, AH.reportClientError)(HH, BH, LH, !1, 1 / 0, {
-        context: rH
+    function jB(BB, OB, GB, DB) {
+      (0, YB.reportClientError)(BB, OB, GB, !1, 1 / 0, {
+        context: DB
       })
     }
 
-    function zH(HH, BH, LH, rH) {
-      (0, AH.reportClientError)(HH, BH, LH, !1, SH, {
-        context: rH
+    function yB(BB, OB, GB, DB) {
+      (0, YB.reportClientError)(BB, OB, GB, !1, QB, {
+        context: DB
       })
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

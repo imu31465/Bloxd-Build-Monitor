@@ -1,582 +1,582 @@
 export const id = 624;
 export const ids = [624];
 export const modules = {
-  45326: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      ReadExrDataAsync: () => XB,
-      _ExrTextureLoader: () => EB
+  45008: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      ReadExrDataAsync: () => PO,
+      _ExrTextureLoader: () => MO
     });
-    var AH = LH(39595),
-      rH = LH(38002),
-      SH = LH(41364);
-    const hH = 4,
-      tH = 4,
-      zH = 1,
-      CH = 2,
-      EH = 8,
-      XH = 65536,
-      GH = XH >> 3,
-      YH = 14,
-      uH = 65537,
-      QH = 1 << YH,
-      WH = QH - 1,
-      MH = 59,
-      xH = 63,
-      vH = 2 + xH - MH;
-    var PH, TH;
+    var YB = GB(39366),
+      DB = GB(37807),
+      QB = GB(41071);
+    const oB = 4,
+      jB = 4,
+      yB = 1,
+      JB = 2,
+      MB = 8,
+      PB = 65536,
+      zB = PB >> 3,
+      lB = 14,
+      pB = 65537,
+      qB = 1 << lB,
+      ZB = qB - 1,
+      NB = 59,
+      RB = 63,
+      WB = 2 + RB - NB;
+    var AB, VB;
 
-    function UH(HH, BH) {
-      const LH = new Uint8Array(HH);
-      let AH = 0;
-      for (; 0 != LH[BH.value + AH];) AH += 1;
-      const rH = (new TextDecoder).decode(LH.slice(BH.value, BH.value + AH));
-      return BH.value = BH.value + AH + 1, rH
+    function SB(BB, OB) {
+      const GB = new Uint8Array(BB);
+      let YB = 0;
+      for (; 0 != GB[OB.value + YB];) YB += 1;
+      const DB = (new TextDecoder).decode(GB.slice(OB.value, OB.value + YB));
+      return OB.value = OB.value + YB + 1, DB
     }
 
-    function VH(HH, BH) {
-      const LH = HH.getInt32(BH.value, !0);
-      return BH.value += hH, LH
+    function nB(BB, OB) {
+      const GB = BB.getInt32(OB.value, !0);
+      return OB.value += oB, GB
     }
 
-    function OH(HH, BH) {
-      const LH = HH.getUint32(BH.value, !0);
-      return BH.value += hH, LH
+    function UB(BB, OB) {
+      const GB = BB.getUint32(OB.value, !0);
+      return OB.value += oB, GB
     }
 
-    function bH(HH, BH) {
-      const LH = HH.getUint8(BH.value);
-      return BH.value += zH, LH
+    function fB(BB, OB) {
+      const GB = BB.getUint8(OB.value);
+      return OB.value += yB, GB
     }
 
-    function kH(HH, BH) {
-      const LH = HH.getUint16(BH.value, !0);
-      return BH.value += CH, LH
+    function kB(BB, OB) {
+      const GB = BB.getUint16(OB.value, !0);
+      return OB.value += JB, GB
     }
 
-    function mH(HH, BH) {
-      const LH = HH[BH.value];
-      return BH.value += zH, LH
+    function dB(BB, OB) {
+      const GB = BB[OB.value];
+      return OB.value += yB, GB
     }
 
-    function oH(HH, BH) {
-      let LH;
-      return LH = "getBigInt64" in DataView.prototype ? Number(HH.getBigInt64(BH.value, !0)) : HH.getUint32(BH.value + 4, !0) + Number(HH.getUint32(BH.value, !0) << 32), BH.value += EH, LH
+    function KB(BB, OB) {
+      let GB;
+      return GB = "getBigInt64" in DataView.prototype ? Number(BB.getBigInt64(OB.value, !0)) : BB.getUint32(OB.value + 4, !0) + Number(BB.getUint32(OB.value, !0) << 32), OB.value += MB, GB
     }
 
-    function IH(HH, BH) {
-      const LH = HH.getFloat32(BH.value, !0);
-      return BH.value += tH, LH
+    function uB(BB, OB) {
+      const GB = BB.getFloat32(OB.value, !0);
+      return OB.value += jB, GB
     }
 
-    function fH(HH, BH) {
-      return (0, SH.d)(kH(HH, BH))
+    function mB(BB, OB) {
+      return (0, QB.e)(kB(BB, OB))
     }
 
-    function lH(HH, BH) {
-      return (0, SH.f)((0, rH.Clamp)(IH(HH, BH), -SH.e, SH.e))
+    function IB(BB, OB) {
+      return (0, QB.l)((0, DB.Clamp)(uB(BB, OB), -QB.h, QB.h))
     }
 
-    function KH(HH, BH, LH, AH) {
-      switch (LH) {
+    function FB(BB, OB, GB, YB) {
+      switch (GB) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(HH, BH, LH) {
-            const AH = (new TextDecoder).decode(new Uint8Array(HH).slice(BH.value, BH.value + LH));
-            return BH.value = BH.value + LH, AH
-          }(HH.buffer, BH, AH);
+          return function(BB, OB, GB) {
+            const YB = (new TextDecoder).decode(new Uint8Array(BB).slice(OB.value, OB.value + GB));
+            return OB.value = OB.value + GB, YB
+          }(BB.buffer, OB, YB);
         case "chlist":
-          return function(HH, BH, LH) {
-            const AH = BH.value,
-              rH = [];
-            for (; BH.value < AH + LH - 1;) {
-              const LH = UH(HH.buffer, BH),
-                AH = VH(HH, BH),
-                SH = bH(HH, BH);
-              BH.value += 3;
-              const hH = VH(HH, BH),
-                tH = VH(HH, BH);
-              rH.push({
-                name: LH,
-                pixelType: AH,
-                pLinear: SH,
-                xSampling: hH,
-                ySampling: tH
+          return function(BB, OB, GB) {
+            const YB = OB.value,
+              DB = [];
+            for (; OB.value < YB + GB - 1;) {
+              const GB = SB(BB.buffer, OB),
+                YB = nB(BB, OB),
+                QB = fB(BB, OB);
+              OB.value += 3;
+              const oB = nB(BB, OB),
+                jB = nB(BB, OB);
+              DB.push({
+                name: GB,
+                pixelType: YB,
+                pLinear: QB,
+                xSampling: oB,
+                ySampling: jB
               })
             }
-            return BH.value += 1, rH
-          }(HH, BH, AH);
+            return OB.value += 1, DB
+          }(BB, OB, YB);
         case "chromaticities":
-          return function(HH, BH) {
+          return function(BB, OB) {
             return {
-              redX: IH(HH, BH),
-              redY: IH(HH, BH),
-              greenX: IH(HH, BH),
-              greenY: IH(HH, BH),
-              blueX: IH(HH, BH),
-              blueY: IH(HH, BH),
-              whiteX: IH(HH, BH),
-              whiteY: IH(HH, BH)
+              redX: uB(BB, OB),
+              redY: uB(BB, OB),
+              greenX: uB(BB, OB),
+              greenY: uB(BB, OB),
+              blueX: uB(BB, OB),
+              blueY: uB(BB, OB),
+              whiteX: uB(BB, OB),
+              whiteY: uB(BB, OB)
             }
-          }(HH, BH);
+          }(BB, OB);
         case "compression":
-          return function(HH, BH) {
-            return bH(HH, BH)
-          }(HH, BH);
+          return function(BB, OB) {
+            return fB(BB, OB)
+          }(BB, OB);
         case "box2i":
-          return function(HH, BH) {
+          return function(BB, OB) {
             return {
-              xMin: VH(HH, BH),
-              yMin: VH(HH, BH),
-              xMax: VH(HH, BH),
-              yMax: VH(HH, BH)
+              xMin: nB(BB, OB),
+              yMin: nB(BB, OB),
+              xMax: nB(BB, OB),
+              yMax: nB(BB, OB)
             }
-          }(HH, BH);
+          }(BB, OB);
         case "lineOrder":
-          return function(HH, BH) {
-            const LH = bH(HH, BH);
-            return TH[LH]
-          }(HH, BH);
+          return function(BB, OB) {
+            const GB = fB(BB, OB);
+            return VB[GB]
+          }(BB, OB);
         case "float":
-          return IH(HH, BH);
+          return uB(BB, OB);
         case "v2f":
-          return function(HH, BH) {
-            return [IH(HH, BH), IH(HH, BH)]
-          }(HH, BH);
+          return function(BB, OB) {
+            return [uB(BB, OB), uB(BB, OB)]
+          }(BB, OB);
         case "v3f":
-          return function(HH, BH) {
-            return [IH(HH, BH), IH(HH, BH), IH(HH, BH)]
-          }(HH, BH);
+          return function(BB, OB) {
+            return [uB(BB, OB), uB(BB, OB), uB(BB, OB)]
+          }(BB, OB);
         case "int":
-          return VH(HH, BH);
+          return nB(BB, OB);
         case "rational":
-          return function(HH, BH) {
-            return [VH(HH, BH), OH(HH, BH)]
-          }(HH, BH);
+          return function(BB, OB) {
+            return [nB(BB, OB), UB(BB, OB)]
+          }(BB, OB);
         case "timecode":
-          return function(HH, BH) {
-            return [OH(HH, BH), OH(HH, BH)]
-          }(HH, BH);
+          return function(BB, OB) {
+            return [UB(BB, OB), UB(BB, OB)]
+          }(BB, OB);
         case "preview":
-          return BH.value += AH, "skipped";
+          return OB.value += YB, "skipped";
         default:
-          return void(BH.value += AH)
+          return void(OB.value += YB)
       }
     }
 
-    function cH(HH) {
-      for (let BH = 1; BH < HH.length; BH++) {
-        const LH = HH[BH - 1] + HH[BH] - 128;
-        HH[BH] = LH
+    function iB(BB) {
+      for (let OB = 1; OB < BB.length; OB++) {
+        const GB = BB[OB - 1] + BB[OB] - 128;
+        BB[OB] = GB
       }
     }
 
-    function eH(HH, BH) {
-      let LH = 0,
-        AH = Math.floor((HH.length + 1) / 2),
-        rH = 0;
-      const SH = HH.length - 1;
-      for (; !(rH > SH) && (BH[rH++] = HH[LH++], !(rH > SH));) BH[rH++] = HH[AH++]
-    }! function(HH) {
-      HH[HH.NO_COMPRESSION = 0] = "NO_COMPRESSION", HH[HH.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", HH[HH.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", HH[HH.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", HH[HH.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", HH[HH.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(PH || (PH = {})),
-    function(HH) {
-      HH[HH.INCREASING_Y = 0] = "INCREASING_Y", HH[HH.DECREASING_Y = 1] = "DECREASING_Y"
-    }(TH || (TH = {}));
-    const qH = 20000630;
+    function LB(BB, OB) {
+      let GB = 0,
+        YB = Math.floor((BB.length + 1) / 2),
+        DB = 0;
+      const QB = BB.length - 1;
+      for (; !(DB > QB) && (OB[DB++] = BB[GB++], !(DB > QB));) OB[DB++] = BB[YB++]
+    }! function(BB) {
+      BB[BB.NO_COMPRESSION = 0] = "NO_COMPRESSION", BB[BB.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", BB[BB.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", BB[BB.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", BB[BB.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", BB[BB.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(AB || (AB = {})),
+    function(BB) {
+      BB[BB.INCREASING_Y = 0] = "INCREASING_Y", BB[BB.DECREASING_Y = 1] = "DECREASING_Y"
+    }(VB || (VB = {}));
+    const gB = 20000630;
 
-    function gH(HH, BH) {
-      if (HH.getUint32(0, !0) != qH) throw new Error("Incorrect OpenEXR format");
-      const LH = HH.getUint8(4),
-        rH = HH.getUint8(5),
-        SH = {
-          singleTile: !!(2 & rH),
-          longName: !!(4 & rH),
-          deepFormat: !!(8 & rH),
-          multiPart: !!(16 & rH)
+    function rB(BB, OB) {
+      if (BB.getUint32(0, !0) != gB) throw new Error("Incorrect OpenEXR format");
+      const GB = BB.getUint8(4),
+        DB = BB.getUint8(5),
+        QB = {
+          singleTile: !!(2 & DB),
+          longName: !!(4 & DB),
+          deepFormat: !!(8 & DB),
+          multiPart: !!(16 & DB)
         };
-      BH.value = 8;
-      const hH = {};
-      let tH = !0;
-      for (; tH;) {
-        const LH = UH(HH.buffer, BH);
-        if (LH) {
-          const rH = UH(HH.buffer, BH),
-            SH = KH(HH, BH, rH, OH(HH, BH));
-          void 0 === SH ? AH.e.Warn(`Unknown header attribute type ${rH}'.`) : hH[LH] = SH
-        } else tH = !1
+      OB.value = 8;
+      const oB = {};
+      let jB = !0;
+      for (; jB;) {
+        const GB = SB(BB.buffer, OB);
+        if (GB) {
+          const DB = SB(BB.buffer, OB),
+            QB = FB(BB, OB, DB, UB(BB, OB));
+          void 0 === QB ? YB.b.Warn(`Unknown header attribute type ${DB}'.`) : oB[GB] = QB
+        } else jB = !1
       }
-      if (0 != (-5 & rH)) throw new Error("Unsupported file format");
+      if (0 != (-5 & DB)) throw new Error("Unsupported file format");
       return {
-        version: LH,
-        spec: SH,
-        ...hH
-      }
-    }
-    const NH = 32768,
-      RH = 65535;
-
-    function jH(HH, BH, LH, AH, rH) {
-      for (; LH < HH;) BH = BH << 8 | mH(AH, rH), LH += 8;
-      return {
-        l: BH >> (LH -= HH) & (1 << HH) - 1,
-        c: BH,
-        lc: LH
+        version: GB,
+        spec: QB,
+        ...oB
       }
     }
+    const XB = 32768,
+      wB = 65535;
 
-    function nH(HH, BH, LH, AH) {
+    function EB(BB, OB, GB, YB, DB) {
+      for (; GB < BB;) OB = OB << 8 | dB(YB, DB), GB += 8;
       return {
-        c: HH = HH << 8 | mH(LH, AH),
-        lc: BH += 8
+        l: OB >> (GB -= BB) & (1 << BB) - 1,
+        c: OB,
+        lc: GB
       }
     }
 
-    function FH(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
-      if (HH == BH) {
-        if (AH < 8) {
-          const HH = nH(LH, AH, rH, SH);
-          LH = HH.c, AH = HH.lc
+    function cB(BB, OB, GB, YB) {
+      return {
+        c: BB = BB << 8 | dB(GB, YB),
+        lc: OB += 8
+      }
+    }
+
+    function hB(BB, OB, GB, YB, DB, QB, oB, jB, yB) {
+      if (BB == OB) {
+        if (YB < 8) {
+          const BB = cB(GB, YB, DB, QB);
+          GB = BB.c, YB = BB.lc
         }
-        let HH = LH >> (AH -= 8);
-        if (HH = new Uint8Array([HH])[0], tH.value + HH > zH) return null;
-        const BH = hH[tH.value - 1];
-        for (; HH-- > 0;) hH[tH.value++] = BH
+        let BB = GB >> (YB -= 8);
+        if (BB = new Uint8Array([BB])[0], jB.value + BB > yB) return null;
+        const OB = oB[jB.value - 1];
+        for (; BB-- > 0;) oB[jB.value++] = OB
       } else {
-        if (!(tH.value < zH)) return null;
-        hH[tH.value++] = HH
+        if (!(jB.value < yB)) return null;
+        oB[jB.value++] = BB
       }
       return {
-        c: LH,
-        lc: AH
+        c: GB,
+        lc: YB
       }
     }
-    const DH = new Array(59);
+    const aB = new Array(59);
 
-    function wH(HH, BH, LH, AH, rH, SH) {
-      const hH = BH;
-      let tH = 0,
-        zH = 0;
-      for (; AH <= rH; AH++) {
-        if (hH.value - BH.value > LH) return;
-        let CH = jH(6, tH, zH, HH, hH);
-        const EH = CH.l;
-        if (tH = CH.c, zH = CH.lc, SH[AH] = EH, EH == xH) {
-          if (hH.value - BH.value > LH) throw new Error("Error in HufUnpackEncTable");
-          CH = jH(8, tH, zH, HH, hH);
-          let EH = CH.l + vH;
-          if (tH = CH.c, zH = CH.lc, AH + EH > rH + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; EH--;) SH[AH++] = 0;
-          AH--
-        } else if (EH >= MH) {
-          let HH = EH - MH + 2;
-          if (AH + HH > rH + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; HH--;) SH[AH++] = 0;
-          AH--
+    function eB(BB, OB, GB, YB, DB, QB) {
+      const oB = OB;
+      let jB = 0,
+        yB = 0;
+      for (; YB <= DB; YB++) {
+        if (oB.value - OB.value > GB) return;
+        let JB = EB(6, jB, yB, BB, oB);
+        const MB = JB.l;
+        if (jB = JB.c, yB = JB.lc, QB[YB] = MB, MB == RB) {
+          if (oB.value - OB.value > GB) throw new Error("Error in HufUnpackEncTable");
+          JB = EB(8, jB, yB, BB, oB);
+          let MB = JB.l + WB;
+          if (jB = JB.c, yB = JB.lc, YB + MB > DB + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; MB--;) QB[YB++] = 0;
+          YB--
+        } else if (MB >= NB) {
+          let BB = MB - NB + 2;
+          if (YB + BB > DB + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; BB--;) QB[YB++] = 0;
+          YB--
         }
-      }! function(HH) {
-        for (let LH = 0; LH <= 58; ++LH) DH[LH] = 0;
-        for (let LH = 0; LH < uH; ++LH) DH[HH[LH]] += 1;
-        let BH = 0;
-        for (let LH = 58; LH > 0; --LH) {
-          const HH = BH + DH[LH] >> 1;
-          DH[LH] = BH, BH = HH
+      }! function(BB) {
+        for (let GB = 0; GB <= 58; ++GB) aB[GB] = 0;
+        for (let GB = 0; GB < pB; ++GB) aB[BB[GB]] += 1;
+        let OB = 0;
+        for (let GB = 58; GB > 0; --GB) {
+          const BB = OB + aB[GB] >> 1;
+          aB[GB] = OB, OB = BB
         }
-        for (let LH = 0; LH < uH; ++LH) {
-          const BH = HH[LH];
-          BH > 0 && (HH[LH] = BH | DH[BH]++ << 6)
+        for (let GB = 0; GB < pB; ++GB) {
+          const OB = BB[GB];
+          OB > 0 && (BB[GB] = OB | aB[OB]++ << 6)
         }
-      }(SH)
+      }(QB)
     }
 
-    function ZH(HH) {
-      return 63 & HH
+    function TB(BB) {
+      return 63 & BB
     }
 
-    function dH(HH) {
-      return HH >> 6
+    function bB(BB) {
+      return BB >> 6
     }
 
-    function aH(HH, BH, LH, AH, rH, SH) {
-      const hH = LH.value,
-        tH = OH(BH, LH),
-        zH = OH(BH, LH);
-      LH.value += 4;
-      const CH = OH(BH, LH);
-      if (LH.value += 4, tH < 0 || tH >= uH || zH < 0 || zH >= uH) throw new Error("Wrong HUF_ENCSIZE");
-      const EH = new Array(uH),
-        XH = new Array(QH);
-      ! function(HH) {
-        for (let BH = 0; BH < QH; BH++) HH[BH] = {}, HH[BH].len = 0, HH[BH].lit = 0, HH[BH].p = null
-      }(XH);
-      if (wH(HH, LH, AH - (LH.value - hH), tH, zH, EH), CH > 8 * (AH - (LH.value - hH))) throw new Error("Wrong hufUncompress");
-      ! function(HH, BH, LH, AH) {
-        for (; BH <= LH; BH++) {
-          const LH = dH(HH[BH]),
-            rH = ZH(HH[BH]);
-          if (LH >> rH) throw new Error("Invalid table entry");
-          if (rH > YH) {
-            const HH = AH[LH >> rH - YH];
-            if (HH.len) throw new Error("Invalid table entry");
-            if (HH.lit++, HH.p) {
-              const BH = HH.p;
-              HH.p = new Array(HH.lit);
-              for (let LH = 0; LH < HH.lit - 1; ++LH) HH.p[LH] = BH[LH]
-            } else HH.p = new Array(1);
-            HH.p[HH.lit - 1] = BH
-          } else if (rH) {
-            let HH = 0;
-            for (let SH = 1 << YH - rH; SH > 0; SH--) {
-              const SH = AH[(LH << YH - rH) + HH];
-              if (SH.len || SH.p) throw new Error("Invalid table entry");
-              SH.len = rH, SH.lit = BH, HH++
+    function CB(BB, OB, GB, YB, DB, QB) {
+      const oB = GB.value,
+        jB = UB(OB, GB),
+        yB = UB(OB, GB);
+      GB.value += 4;
+      const JB = UB(OB, GB);
+      if (GB.value += 4, jB < 0 || jB >= pB || yB < 0 || yB >= pB) throw new Error("Wrong HUF_ENCSIZE");
+      const MB = new Array(pB),
+        PB = new Array(qB);
+      ! function(BB) {
+        for (let OB = 0; OB < qB; OB++) BB[OB] = {}, BB[OB].len = 0, BB[OB].lit = 0, BB[OB].p = null
+      }(PB);
+      if (eB(BB, GB, YB - (GB.value - oB), jB, yB, MB), JB > 8 * (YB - (GB.value - oB))) throw new Error("Wrong hufUncompress");
+      ! function(BB, OB, GB, YB) {
+        for (; OB <= GB; OB++) {
+          const GB = bB(BB[OB]),
+            DB = TB(BB[OB]);
+          if (GB >> DB) throw new Error("Invalid table entry");
+          if (DB > lB) {
+            const BB = YB[GB >> DB - lB];
+            if (BB.len) throw new Error("Invalid table entry");
+            if (BB.lit++, BB.p) {
+              const OB = BB.p;
+              BB.p = new Array(BB.lit);
+              for (let GB = 0; GB < BB.lit - 1; ++GB) BB.p[GB] = OB[GB]
+            } else BB.p = new Array(1);
+            BB.p[BB.lit - 1] = OB
+          } else if (DB) {
+            let BB = 0;
+            for (let QB = 1 << lB - DB; QB > 0; QB--) {
+              const QB = YB[(GB << lB - DB) + BB];
+              if (QB.len || QB.p) throw new Error("Invalid table entry");
+              QB.len = DB, QB.lit = OB, BB++
             }
           }
         }
-      }(EH, tH, zH, XH),
-      function(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
-        let CH = 0,
-          EH = 0;
-        const XH = hH,
-          GH = Math.trunc(AH.value + (rH + 7) / 8);
-        for (; AH.value < GH;) {
-          let rH = nH(CH, EH, LH, AH);
-          for (CH = rH.c, EH = rH.lc; EH >= YH;) {
-            const hH = BH[CH >> EH - YH & WH];
-            if (hH.len) {
-              EH -= hH.len;
-              const HH = FH(hH.lit, SH, CH, EH, LH, AH, tH, zH, XH);
-              HH && (CH = HH.c, EH = HH.lc)
+      }(MB, jB, yB, PB),
+      function(BB, OB, GB, YB, DB, QB, oB, jB, yB) {
+        let JB = 0,
+          MB = 0;
+        const PB = oB,
+          zB = Math.trunc(YB.value + (DB + 7) / 8);
+        for (; YB.value < zB;) {
+          let DB = cB(JB, MB, GB, YB);
+          for (JB = DB.c, MB = DB.lc; MB >= lB;) {
+            const oB = OB[JB >> MB - lB & ZB];
+            if (oB.len) {
+              MB -= oB.len;
+              const BB = hB(oB.lit, QB, JB, MB, GB, YB, jB, yB, PB);
+              BB && (JB = BB.c, MB = BB.lc)
             } else {
-              if (!hH.p) throw new Error("hufDecode issues");
-              let BH;
-              for (BH = 0; BH < hH.lit; BH++) {
-                const YH = ZH(HH[hH.p[BH]]);
-                for (; EH < YH && AH.value < GH;) rH = nH(CH, EH, LH, AH), CH = rH.c, EH = rH.lc;
-                if (EH >= YH && dH(HH[hH.p[BH]]) == (CH >> EH - YH & (1 << YH) - 1)) {
-                  EH -= YH;
-                  const HH = FH(hH.p[BH], SH, CH, EH, LH, AH, tH, zH, XH);
-                  HH && (CH = HH.c, EH = HH.lc);
+              if (!oB.p) throw new Error("hufDecode issues");
+              let OB;
+              for (OB = 0; OB < oB.lit; OB++) {
+                const lB = TB(BB[oB.p[OB]]);
+                for (; MB < lB && YB.value < zB;) DB = cB(JB, MB, GB, YB), JB = DB.c, MB = DB.lc;
+                if (MB >= lB && bB(BB[oB.p[OB]]) == (JB >> MB - lB & (1 << lB) - 1)) {
+                  MB -= lB;
+                  const BB = hB(oB.p[OB], QB, JB, MB, GB, YB, jB, yB, PB);
+                  BB && (JB = BB.c, MB = BB.lc);
                   break
                 }
               }
-              if (BH == hH.lit) throw new Error("HufDecode issues")
+              if (OB == oB.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const uH = 8 - rH & 7;
-        for (CH >>= uH, EH -= uH; EH > 0;) {
-          const HH = BH[CH << YH - EH & WH];
-          if (!HH.len) throw new Error("HufDecode issues");
+        const pB = 8 - DB & 7;
+        for (JB >>= pB, MB -= pB; MB > 0;) {
+          const BB = OB[JB << lB - MB & ZB];
+          if (!BB.len) throw new Error("HufDecode issues");
           {
-            EH -= HH.len;
-            const BH = FH(HH.lit, SH, CH, EH, LH, AH, tH, zH, XH);
-            BH && (CH = BH.c, EH = BH.lc)
+            MB -= BB.len;
+            const OB = hB(BB.lit, QB, JB, MB, GB, YB, jB, yB, PB);
+            OB && (JB = OB.c, MB = OB.lc)
           }
         }
-      }(EH, XH, HH, LH, CH, zH, SH, rH, {
+      }(MB, PB, BB, GB, JB, yB, QB, DB, {
         value: 0
       })
     }
 
-    function sH(HH) {
-      return 65535 & HH
+    function HB(BB) {
+      return 65535 & BB
     }
 
-    function JH(HH) {
-      const BH = sH(HH);
-      return BH > 32767 ? BH - 65536 : BH
+    function vB(BB) {
+      const OB = HB(BB);
+      return OB > 32767 ? OB - 65536 : OB
     }
 
-    function iH(HH, BH) {
-      const LH = JH(HH),
-        AH = JH(BH),
-        rH = LH + (1 & AH) + (AH >> 1);
+    function sB(BB, OB) {
+      const GB = vB(BB),
+        YB = vB(OB),
+        DB = GB + (1 & YB) + (YB >> 1);
       return {
-        a: rH,
-        b: rH - AH
+        a: DB,
+        b: DB - YB
       }
     }
 
-    function pH(HH, BH) {
-      const LH = sH(HH),
-        AH = sH(BH),
-        rH = LH - (AH >> 1) & RH;
+    function xB(BB, OB) {
+      const GB = HB(BB),
+        YB = HB(OB),
+        DB = GB - (YB >> 1) & wB;
       return {
-        a: AH + rH - NH & RH,
-        b: rH
+        a: YB + DB - XB & wB,
+        b: DB
       }
     }
 
-    function yH(HH, BH, LH, AH, rH, SH, hH) {
-      const tH = hH < 16384,
-        zH = LH > rH ? rH : LH;
-      let CH, EH, XH = 1;
-      for (; XH <= zH;) XH <<= 1;
-      for (XH >>= 1, CH = XH, XH >>= 1; XH >= 1;) {
-        EH = 0;
-        const hH = EH + SH * (rH - CH),
-          zH = SH * XH,
-          GH = SH * CH,
-          YH = AH * XH,
-          uH = AH * CH;
-        let QH, WH, MH, xH;
-        for (; EH <= hH; EH += GH) {
-          let rH = EH;
-          const SH = EH + AH * (LH - CH);
-          for (; rH <= SH; rH += uH) {
-            const LH = rH + YH,
-              AH = rH + zH,
-              SH = AH + YH;
-            if (tH) {
-              let hH = iH(HH[rH + BH], HH[AH + BH]);
-              QH = hH.a, MH = hH.b, hH = iH(HH[LH + BH], HH[SH + BH]), WH = hH.a, xH = hH.b, hH = iH(QH, WH), HH[rH + BH] = hH.a, HH[LH + BH] = hH.b, hH = iH(MH, xH), HH[AH + BH] = hH.a, HH[SH + BH] = hH.b
+    function tB(BB, OB, GB, YB, DB, QB, oB) {
+      const jB = oB < 16384,
+        yB = GB > DB ? DB : GB;
+      let JB, MB, PB = 1;
+      for (; PB <= yB;) PB <<= 1;
+      for (PB >>= 1, JB = PB, PB >>= 1; PB >= 1;) {
+        MB = 0;
+        const oB = MB + QB * (DB - JB),
+          yB = QB * PB,
+          zB = QB * JB,
+          lB = YB * PB,
+          pB = YB * JB;
+        let qB, ZB, NB, RB;
+        for (; MB <= oB; MB += zB) {
+          let DB = MB;
+          const QB = MB + YB * (GB - JB);
+          for (; DB <= QB; DB += pB) {
+            const GB = DB + lB,
+              YB = DB + yB,
+              QB = YB + lB;
+            if (jB) {
+              let oB = sB(BB[DB + OB], BB[YB + OB]);
+              qB = oB.a, NB = oB.b, oB = sB(BB[GB + OB], BB[QB + OB]), ZB = oB.a, RB = oB.b, oB = sB(qB, ZB), BB[DB + OB] = oB.a, BB[GB + OB] = oB.b, oB = sB(NB, RB), BB[YB + OB] = oB.a, BB[QB + OB] = oB.b
             } else {
-              let hH = pH(HH[rH + BH], HH[AH + BH]);
-              QH = hH.a, MH = hH.b, hH = pH(HH[LH + BH], HH[SH + BH]), WH = hH.a, xH = hH.b, hH = pH(QH, WH), HH[rH + BH] = hH.a, HH[LH + BH] = hH.b, hH = pH(MH, xH), HH[AH + BH] = hH.a, HH[SH + BH] = hH.b
+              let oB = xB(BB[DB + OB], BB[YB + OB]);
+              qB = oB.a, NB = oB.b, oB = xB(BB[GB + OB], BB[QB + OB]), ZB = oB.a, RB = oB.b, oB = xB(qB, ZB), BB[DB + OB] = oB.a, BB[GB + OB] = oB.b, oB = xB(NB, RB), BB[YB + OB] = oB.a, BB[QB + OB] = oB.b
             }
           }
-          if (LH & XH) {
-            const LH = rH + zH;
-            let AH;
-            AH = tH ? iH(HH[rH + BH], HH[LH + BH]) : pH(HH[rH + BH], HH[LH + BH]), QH = AH.a, HH[LH + BH] = AH.b, HH[rH + BH] = QH
+          if (GB & PB) {
+            const GB = DB + yB;
+            let YB;
+            YB = jB ? sB(BB[DB + OB], BB[GB + OB]) : xB(BB[DB + OB], BB[GB + OB]), qB = YB.a, BB[GB + OB] = YB.b, BB[DB + OB] = qB
           }
         }
-        if (rH & XH) {
-          let rH = EH;
-          const SH = EH + AH * (LH - CH);
-          for (; rH <= SH; rH += uH) {
-            const LH = rH + YH;
-            let AH;
-            AH = tH ? iH(HH[rH + BH], HH[LH + BH]) : pH(HH[rH + BH], HH[LH + BH]), QH = AH.a, HH[LH + BH] = AH.b, HH[rH + BH] = QH
+        if (DB & PB) {
+          let DB = MB;
+          const QB = MB + YB * (GB - JB);
+          for (; DB <= QB; DB += pB) {
+            const GB = DB + lB;
+            let YB;
+            YB = jB ? sB(BB[DB + OB], BB[GB + OB]) : xB(BB[DB + OB], BB[GB + OB]), qB = YB.a, BB[GB + OB] = YB.b, BB[DB + OB] = qB
           }
         }
-        CH = XH, XH >>= 1
+        JB = PB, PB >>= 1
       }
-      return EH
+      return MB
     }
 
-    function HB(HH) {
-      return new DataView(HH.array.buffer, HH.offset.value, HH.size)
+    function BO(BB) {
+      return new DataView(BB.array.buffer, BB.offset.value, BB.size)
     }
 
-    function BB(HH) {
-      const BH = HH.viewer.buffer.slice(HH.offset.value, HH.offset.value + HH.size),
-        LH = new Uint8Array(function(HH) {
-          let BH = HH.byteLength;
-          const LH = [];
-          let AH = 0;
-          const rH = new DataView(HH);
-          for (; BH > 0;) {
-            const HH = rH.getInt8(AH++);
-            if (HH < 0) {
-              const SH = -HH;
-              BH -= SH + 1;
-              for (let HH = 0; HH < SH; HH++) LH.push(rH.getUint8(AH++))
+    function OO(BB) {
+      const OB = BB.viewer.buffer.slice(BB.offset.value, BB.offset.value + BB.size),
+        GB = new Uint8Array(function(BB) {
+          let OB = BB.byteLength;
+          const GB = [];
+          let YB = 0;
+          const DB = new DataView(BB);
+          for (; OB > 0;) {
+            const BB = DB.getInt8(YB++);
+            if (BB < 0) {
+              const QB = -BB;
+              OB -= QB + 1;
+              for (let BB = 0; BB < QB; BB++) GB.push(DB.getUint8(YB++))
             } else {
-              const SH = HH;
-              BH -= 2;
-              const hH = rH.getUint8(AH++);
-              for (let HH = 0; HH < SH + 1; HH++) LH.push(hH)
+              const QB = BB;
+              OB -= 2;
+              const oB = DB.getUint8(YB++);
+              for (let BB = 0; BB < QB + 1; BB++) GB.push(oB)
             }
           }
-          return LH
-        }(BH)),
-        AH = new Uint8Array(LH.length);
-      return cH(LH), eH(LH, AH), new DataView(AH.buffer)
+          return GB
+        }(OB)),
+        YB = new Uint8Array(GB.length);
+      return iB(GB), LB(GB, YB), new DataView(YB.buffer)
     }
 
-    function LB(HH) {
-      const BH = HH.array.slice(HH.offset.value, HH.offset.value + HH.size),
-        LH = fflate.unzlibSync(BH),
-        AH = new Uint8Array(LH.length);
-      return cH(LH), eH(LH, AH), new DataView(AH.buffer)
+    function GO(BB) {
+      const OB = BB.array.slice(BB.offset.value, BB.offset.value + BB.size),
+        GB = fflate.unzlibSync(OB),
+        YB = new Uint8Array(GB.length);
+      return iB(GB), LB(GB, YB), new DataView(YB.buffer)
     }
 
-    function AB(HH) {
-      const BH = HH.array.slice(HH.offset.value, HH.offset.value + HH.size),
-        LH = fflate.unzlibSync(BH),
-        AH = HH.lines * HH.channels * HH.width,
-        rH = 1 == HH.type ? new Uint16Array(AH) : new Uint32Array(AH);
-      let SH = 0,
-        hH = 0;
-      const tH = new Array(4);
-      for (let zH = 0; zH < HH.lines; zH++)
-        for (let BH = 0; BH < HH.channels; BH++) {
-          let BH = 0;
-          switch (HH.type) {
+    function YO(BB) {
+      const OB = BB.array.slice(BB.offset.value, BB.offset.value + BB.size),
+        GB = fflate.unzlibSync(OB),
+        YB = BB.lines * BB.channels * BB.width,
+        DB = 1 == BB.type ? new Uint16Array(YB) : new Uint32Array(YB);
+      let QB = 0,
+        oB = 0;
+      const jB = new Array(4);
+      for (let yB = 0; yB < BB.lines; yB++)
+        for (let OB = 0; OB < BB.channels; OB++) {
+          let OB = 0;
+          switch (BB.type) {
             case 1:
-              tH[0] = SH, tH[1] = tH[0] + HH.width, SH = tH[1] + HH.width;
-              for (let AH = 0; AH < HH.width; ++AH) {
-                BH += LH[tH[0]++] << 8 | LH[tH[1]++], rH[hH] = BH, hH++
+              jB[0] = QB, jB[1] = jB[0] + BB.width, QB = jB[1] + BB.width;
+              for (let YB = 0; YB < BB.width; ++YB) {
+                OB += GB[jB[0]++] << 8 | GB[jB[1]++], DB[oB] = OB, oB++
               }
               break;
             case 2:
-              tH[0] = SH, tH[1] = tH[0] + HH.width, tH[2] = tH[1] + HH.width, SH = tH[2] + HH.width;
-              for (let AH = 0; AH < HH.width; ++AH) {
-                BH += LH[tH[0]++] << 24 | LH[tH[1]++] << 16 | LH[tH[2]++] << 8, rH[hH] = BH, hH++
+              jB[0] = QB, jB[1] = jB[0] + BB.width, jB[2] = jB[1] + BB.width, QB = jB[2] + BB.width;
+              for (let YB = 0; YB < BB.width; ++YB) {
+                OB += GB[jB[0]++] << 24 | GB[jB[1]++] << 16 | GB[jB[2]++] << 8, DB[oB] = OB, oB++
               }
           }
         }
-      return new DataView(rH.buffer)
+      return new DataView(DB.buffer)
     }
 
-    function rB(HH) {
-      const BH = HH.viewer,
-        LH = {
-          value: HH.offset.value
+    function DO(BB) {
+      const OB = BB.viewer,
+        GB = {
+          value: BB.offset.value
         },
-        AH = new Uint16Array(HH.width * HH.scanlineBlockSize * (HH.channels * HH.type)),
-        rH = new Uint8Array(GH);
-      let SH = 0;
-      const hH = new Array(HH.channels);
-      for (let CH = 0; CH < HH.channels; CH++) hH[CH] = {}, hH[CH].start = SH, hH[CH].end = hH[CH].start, hH[CH].nx = HH.width, hH[CH].ny = HH.lines, hH[CH].size = HH.type, SH += hH[CH].nx * hH[CH].ny * hH[CH].size;
-      const tH = kH(BH, LH),
-        zH = kH(BH, LH);
-      if (zH >= GH) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (tH <= zH)
-        for (let CH = 0; CH < zH - tH + 1; CH++) rH[CH + tH] = bH(BH, LH);
-      const EH = new Uint16Array(XH),
-        YH = function(HH, BH) {
-          let LH = 0;
-          for (let rH = 0; rH < XH; ++rH)(0 == rH || HH[rH >> 3] & 1 << (7 & rH)) && (BH[LH++] = rH);
-          const AH = LH - 1;
-          for (; LH < XH;) BH[LH++] = 0;
-          return AH
-        }(rH, EH),
-        uH = OH(BH, LH);
-      aH(HH.array, BH, LH, uH, AH, SH);
-      for (let CH = 0; CH < HH.channels; ++CH) {
-        const HH = hH[CH];
-        for (let BH = 0; BH < hH[CH].size; ++BH) yH(AH, HH.start + BH, HH.nx, HH.size, HH.ny, HH.nx * HH.size, YH)
-      }! function(HH, BH, LH) {
-        for (let AH = 0; AH < LH; ++AH) BH[AH] = HH[BH[AH]]
-      }(EH, AH, SH);
-      let QH = 0;
-      const WH = new Uint8Array(AH.buffer.byteLength);
-      for (let XH = 0; XH < HH.lines; XH++)
-        for (let BH = 0; BH < HH.channels; BH++) {
-          const HH = hH[BH],
-            LH = HH.nx * HH.size,
-            rH = new Uint8Array(AH.buffer, HH.end * CH, LH * CH);
-          WH.set(rH, QH), QH += LH * CH, HH.end += LH
+        YB = new Uint16Array(BB.width * BB.scanlineBlockSize * (BB.channels * BB.type)),
+        DB = new Uint8Array(zB);
+      let QB = 0;
+      const oB = new Array(BB.channels);
+      for (let JB = 0; JB < BB.channels; JB++) oB[JB] = {}, oB[JB].start = QB, oB[JB].end = oB[JB].start, oB[JB].nx = BB.width, oB[JB].ny = BB.lines, oB[JB].size = BB.type, QB += oB[JB].nx * oB[JB].ny * oB[JB].size;
+      const jB = kB(OB, GB),
+        yB = kB(OB, GB);
+      if (yB >= zB) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (jB <= yB)
+        for (let JB = 0; JB < yB - jB + 1; JB++) DB[JB + jB] = fB(OB, GB);
+      const MB = new Uint16Array(PB),
+        lB = function(BB, OB) {
+          let GB = 0;
+          for (let DB = 0; DB < PB; ++DB)(0 == DB || BB[DB >> 3] & 1 << (7 & DB)) && (OB[GB++] = DB);
+          const YB = GB - 1;
+          for (; GB < PB;) OB[GB++] = 0;
+          return YB
+        }(DB, MB),
+        pB = UB(OB, GB);
+      CB(BB.array, OB, GB, pB, YB, QB);
+      for (let JB = 0; JB < BB.channels; ++JB) {
+        const BB = oB[JB];
+        for (let OB = 0; OB < oB[JB].size; ++OB) tB(YB, BB.start + OB, BB.nx, BB.size, BB.ny, BB.nx * BB.size, lB)
+      }! function(BB, OB, GB) {
+        for (let YB = 0; YB < GB; ++YB) OB[YB] = BB[OB[YB]]
+      }(MB, YB, QB);
+      let qB = 0;
+      const ZB = new Uint8Array(YB.buffer.byteLength);
+      for (let PB = 0; PB < BB.lines; PB++)
+        for (let OB = 0; OB < BB.channels; OB++) {
+          const BB = oB[OB],
+            GB = BB.nx * BB.size,
+            DB = new Uint8Array(YB.buffer, BB.end * JB, GB * JB);
+          ZB.set(DB, qB), qB += GB * JB, BB.end += GB
         }
-      return new DataView(WH.buffer)
+      return new DataView(ZB.buffer)
     }
-    var SB, hB = LH(41387);
-    ! function(HH) {
-      HH[HH.Float = 0] = "Float", HH[HH.HalfFloat = 1] = "HalfFloat"
-    }(SB || (SB = {}));
-    class tB {}
-    async function zB(HH, BH, LH, AH) {
-      const rH = {
+    var QO, oO = GB(41097);
+    ! function(BB) {
+      BB[BB.Float = 0] = "Float", BB[BB.HalfFloat = 1] = "HalfFloat"
+    }(QO || (QO = {}));
+    class jO {}
+    async function yO(BB, OB, GB, YB) {
+      const DB = {
         size: 0,
-        viewer: BH,
-        array: new Uint8Array(BH.buffer),
-        offset: LH,
-        width: HH.dataWindow.xMax - HH.dataWindow.xMin + 1,
-        height: HH.dataWindow.yMax - HH.dataWindow.yMin + 1,
-        channels: HH.channels.length,
+        viewer: OB,
+        array: new Uint8Array(OB.buffer),
+        offset: GB,
+        width: BB.dataWindow.xMax - BB.dataWindow.xMin + 1,
+        height: BB.dataWindow.yMax - BB.dataWindow.yMin + 1,
+        channels: BB.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (HH.compression) {
-        case PH.NO_COMPRESSION:
-          rH.lines = 1, rH.uncompress = HB;
+      switch (BB.compression) {
+        case AB.NO_COMPRESSION:
+          DB.lines = 1, DB.uncompress = BO;
           break;
-        case PH.RLE_COMPRESSION:
-          rH.lines = 1, rH.uncompress = BB;
+        case AB.RLE_COMPRESSION:
+          DB.lines = 1, DB.uncompress = OO;
           break;
-        case PH.ZIPS_COMPRESSION:
-          rH.lines = 1, rH.uncompress = LB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
+        case AB.ZIPS_COMPRESSION:
+          DB.lines = 1, DB.uncompress = GO, await oO.j.LoadScriptAsync(jO.FFLATEUrl);
           break;
-        case PH.ZIP_COMPRESSION:
-          rH.lines = 16, rH.uncompress = LB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
+        case AB.ZIP_COMPRESSION:
+          DB.lines = 16, DB.uncompress = GO, await oO.j.LoadScriptAsync(jO.FFLATEUrl);
           break;
-        case PH.PIZ_COMPRESSION:
-          rH.lines = 32, rH.uncompress = rB;
+        case AB.PIZ_COMPRESSION:
+          DB.lines = 32, DB.uncompress = DO;
           break;
-        case PH.PXR24_COMPRESSION:
-          rH.lines = 16, rH.uncompress = AB, await hB.i.LoadScriptAsync(tB.FFLATEUrl);
+        case AB.PXR24_COMPRESSION:
+          DB.lines = 16, DB.uncompress = YO, await oO.j.LoadScriptAsync(jO.FFLATEUrl);
           break;
         default:
-          throw new Error(PH[HH.compression] + " is unsupported")
+          throw new Error(AB[BB.compression] + " is unsupported")
       }
-      rH.scanlineBlockSize = rH.lines;
-      const SH = {};
-      for (const tH of HH.channels) switch (tH.name) {
+      DB.scanlineBlockSize = DB.lines;
+      const QB = {};
+      for (const jB of BB.channels) switch (jB.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          SH[tH.name] = !0, rH.type = tH.pixelType
+          QB[jB.name] = !0, DB.type = jB.pixelType
       }
-      let hH = !1;
-      if (SH.R && SH.G && SH.B && SH.A) rH.outputChannels = 4, rH.decodeChannels = {
+      let oB = !1;
+      if (QB.R && QB.G && QB.B && QB.A) DB.outputChannels = 4, DB.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (SH.R && SH.G && SH.B) hH = !0, rH.outputChannels = 4, rH.decodeChannels = {
+      else if (QB.R && QB.G && QB.B) oB = !0, DB.outputChannels = 4, DB.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (SH.R && SH.G) rH.outputChannels = 2, rH.decodeChannels = {
+      else if (QB.R && QB.G) DB.outputChannels = 2, DB.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (SH.R) rH.outputChannels = 1, rH.decodeChannels = {
+      else if (QB.R) DB.outputChannels = 1, DB.decodeChannels = {
         R: 0
       };
       else {
-        if (!SH.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        rH.outputChannels = 1, rH.decodeChannels = {
+        if (!QB.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        DB.outputChannels = 1, DB.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === rH.type) switch (AH) {
-        case SB.Float:
-          rH.getter = fH, rH.inputSize = CH;
+      if (1 === DB.type) switch (YB) {
+        case QO.Float:
+          DB.getter = mB, DB.inputSize = JB;
           break;
-        case SB.HalfFloat:
-          rH.getter = kH, rH.inputSize = CH
+        case QO.HalfFloat:
+          DB.getter = kB, DB.inputSize = JB
       } else {
-        if (2 !== rH.type) throw new Error("Unsupported pixelType " + rH.type + " for " + HH.compression);
-        switch (AH) {
-          case SB.Float:
-            rH.getter = IH, rH.inputSize = tH;
+        if (2 !== DB.type) throw new Error("Unsupported pixelType " + DB.type + " for " + BB.compression);
+        switch (YB) {
+          case QO.Float:
+            DB.getter = uB, DB.inputSize = jB;
             break;
-          case SB.HalfFloat:
-            rH.getter = lH, rH.inputSize = tH
+          case QO.HalfFloat:
+            DB.getter = IB, DB.inputSize = jB
         }
       }
-      rH.blockCount = rH.height / rH.scanlineBlockSize;
-      for (let tH = 0; tH < rH.blockCount; tH++) oH(BH, LH);
-      const zH = rH.width * rH.height * rH.outputChannels;
-      switch (AH) {
-        case SB.Float:
-          rH.byteArray = new Float32Array(zH), rH.textureType = 1, hH && rH.byteArray.fill(1, 0, zH);
+      DB.blockCount = DB.height / DB.scanlineBlockSize;
+      for (let jB = 0; jB < DB.blockCount; jB++) KB(OB, GB);
+      const yB = DB.width * DB.height * DB.outputChannels;
+      switch (YB) {
+        case QO.Float:
+          DB.byteArray = new Float32Array(yB), DB.textureType = 1, oB && DB.byteArray.fill(1, 0, yB);
           break;
-        case SB.HalfFloat:
-          rH.byteArray = new Uint16Array(zH), rH.textureType = 2, hH && rH.byteArray.fill(15360, 0, zH);
+        case QO.HalfFloat:
+          DB.byteArray = new Uint16Array(yB), DB.textureType = 2, oB && DB.byteArray.fill(15360, 0, yB);
           break;
         default:
-          throw new Error("Unsupported type: " + AH)
+          throw new Error("Unsupported type: " + YB)
       }
-      let EH = 0;
-      for (const tH of HH.channels) void 0 !== rH.decodeChannels[tH.name] && (rH.channelLineOffsets[tH.name] = EH * rH.width), EH += 2 * tH.pixelType;
-      return rH.bytesPerLine = rH.width * EH, rH.outLineWidth = rH.width * rH.outputChannels, "INCREASING_Y" === HH.lineOrder ? rH.scanOrder = HH => HH : rH.scanOrder = HH => rH.height - 1 - HH, 4 == rH.outputChannels ? (rH.format = 5, rH.linearSpace = !0) : (rH.format = 6, rH.linearSpace = !1), rH
+      let MB = 0;
+      for (const jB of BB.channels) void 0 !== DB.decodeChannels[jB.name] && (DB.channelLineOffsets[jB.name] = MB * DB.width), MB += 2 * jB.pixelType;
+      return DB.bytesPerLine = DB.width * MB, DB.outLineWidth = DB.width * DB.outputChannels, "INCREASING_Y" === BB.lineOrder ? DB.scanOrder = BB => BB : DB.scanOrder = BB => DB.height - 1 - BB, 4 == DB.outputChannels ? (DB.format = 5, DB.linearSpace = !0) : (DB.format = 6, DB.linearSpace = !1), DB
     }
 
-    function CB(HH, BH, LH, AH) {
-      const rH = {
+    function JO(BB, OB, GB, YB) {
+      const DB = {
         value: 0
       };
-      for (let SH = 0; SH < HH.height / HH.scanlineBlockSize; SH++) {
-        const hH = VH(LH, AH) - BH.dataWindow.yMin;
-        HH.size = OH(LH, AH), HH.lines = hH + HH.scanlineBlockSize > HH.height ? HH.height - hH : HH.scanlineBlockSize;
-        const tH = HH.size < HH.lines * HH.bytesPerLine && HH.uncompress ? HH.uncompress(HH) : HB(HH);
-        AH.value += HH.size;
-        for (let LH = 0; LH < HH.scanlineBlockSize; LH++) {
-          const AH = SH * HH.scanlineBlockSize,
-            hH = LH + HH.scanOrder(AH);
-          if (hH >= HH.height) continue;
-          const zH = LH * HH.bytesPerLine,
-            CH = (HH.height - 1 - hH) * HH.outLineWidth;
-          for (let LH = 0; LH < HH.channels; LH++) {
-            const AH = BH.channels[LH].name,
-              SH = HH.channelLineOffsets[AH],
-              hH = HH.decodeChannels[AH];
-            if (void 0 !== hH) {
-              rH.value = zH + SH;
-              for (let BH = 0; BH < HH.width; BH++) {
-                const LH = CH + BH * HH.outputChannels + hH;
-                HH.byteArray && (HH.byteArray[LH] = HH.getter(tH, rH))
+      for (let QB = 0; QB < BB.height / BB.scanlineBlockSize; QB++) {
+        const oB = nB(GB, YB) - OB.dataWindow.yMin;
+        BB.size = UB(GB, YB), BB.lines = oB + BB.scanlineBlockSize > BB.height ? BB.height - oB : BB.scanlineBlockSize;
+        const jB = BB.size < BB.lines * BB.bytesPerLine && BB.uncompress ? BB.uncompress(BB) : BO(BB);
+        YB.value += BB.size;
+        for (let GB = 0; GB < BB.scanlineBlockSize; GB++) {
+          const YB = QB * BB.scanlineBlockSize,
+            oB = GB + BB.scanOrder(YB);
+          if (oB >= BB.height) continue;
+          const yB = GB * BB.bytesPerLine,
+            JB = (BB.height - 1 - oB) * BB.outLineWidth;
+          for (let GB = 0; GB < BB.channels; GB++) {
+            const YB = OB.channels[GB].name,
+              QB = BB.channelLineOffsets[YB],
+              oB = BB.decodeChannels[YB];
+            if (void 0 !== oB) {
+              DB.value = yB + QB;
+              for (let OB = 0; OB < BB.width; OB++) {
+                const GB = JB + OB * BB.outputChannels + oB;
+                BB.byteArray && (BB.byteArray[GB] = BB.getter(jB, DB))
               }
             }
           }
         }
       }
     }
-    tB.DefaultOutputType = SB.HalfFloat, tB.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class EB {
+    jO.DefaultOutputType = QO.HalfFloat, jO.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class MO {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(HH, BH, LH, AH, rH) {
+      loadCubeData(BB, OB, GB, YB, DB) {
         throw ".exr not supported in Cube."
       }
-      loadData(HH, BH, LH) {
-        const rH = new DataView(HH.buffer),
-          SH = {
+      loadData(BB, OB, GB) {
+        const DB = new DataView(BB.buffer),
+          QB = {
             value: 0
           },
-          hH = gH(rH, SH);
-        zB(hH, rH, SH, tB.DefaultOutputType).then((HH => {
-          CB(HH, hH, rH, SH);
-          const AH = hH.dataWindow.xMax - hH.dataWindow.xMin + 1,
-            tH = hH.dataWindow.yMax - hH.dataWindow.yMin + 1;
-          LH(AH, tH, BH.generateMipMaps, !1, (() => {
-            const LH = BH.Iu();
-            BH.format = hH.format, BH.type = HH.textureType, BH.invertY = !1, BH._gammaSpace = !hH.linearSpace, HH.byteArray && LH._uploadDataToTextureDirectly(BH, HH.byteArray, 0, 0, void 0, !0)
+          oB = rB(DB, QB);
+        yO(oB, DB, QB, jO.DefaultOutputType).then((BB => {
+          JO(BB, oB, DB, QB);
+          const YB = oB.dataWindow.xMax - oB.dataWindow.xMin + 1,
+            jB = oB.dataWindow.yMax - oB.dataWindow.yMin + 1;
+          GB(YB, jB, OB.generateMipMaps, !1, (() => {
+            const GB = OB.Lp();
+            OB.format = oB.format, OB.type = BB.textureType, OB.invertY = !1, OB._gammaSpace = !oB.linearSpace, BB.byteArray && GB._uploadDataToTextureDirectly(OB, BB.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((HH => {
-          AH.e.Error("Failed to load EXR texture: ", HH)
+        })).catch((BB => {
+          YB.b.Error("Failed to load EXR texture: ", BB)
         }))
       }
     }
-    async function XB(HH) {
-      const BH = new DataView(HH),
-        LH = {
+    async function PO(BB) {
+      const OB = new DataView(BB),
+        GB = {
           value: 0
         },
-        rH = gH(BH, LH);
+        DB = rB(OB, GB);
       try {
-        const HH = await zB(rH, BH, LH, SB.Float);
-        return CB(HH, rH, BH, LH), HH.byteArray ? {
-          width: rH.dataWindow.xMax - rH.dataWindow.xMin + 1,
-          height: rH.dataWindow.yMax - rH.dataWindow.yMin + 1,
-          data: new Float32Array(HH.byteArray)
-        } : (AH.e.Error("Failed to decode EXR data: No byte array available."), {
+        const BB = await yO(DB, OB, GB, QO.Float);
+        return JO(BB, DB, OB, GB), BB.byteArray ? {
+          width: DB.dataWindow.xMax - DB.dataWindow.xMin + 1,
+          height: DB.dataWindow.yMax - DB.dataWindow.yMin + 1,
+          data: new Float32Array(BB.byteArray)
+        } : (YB.b.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (SH) {
-        AH.e.Error("Failed to load EXR data: ", SH)
+      } catch (QB) {
+        YB.b.Error("Failed to load EXR data: ", QB)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

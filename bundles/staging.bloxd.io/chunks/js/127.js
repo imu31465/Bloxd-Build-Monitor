@@ -1,530 +1,530 @@
 export const id = 127;
 export const ids = [127];
 export const modules = {
-  5539: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => EH,
-      d: () => CH
+  5549: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => MB,
+      d: () => JB
     });
-    var AH = LH(45),
-      rH = LH(1455),
-      SH = LH(1123),
-      hH = LH(81),
-      tH = LH(3484),
-      zH = LH(1225);
+    var YB = GB(56),
+      DB = GB(1485),
+      QB = GB(1175),
+      oB = GB(92),
+      jB = GB(3558),
+      yB = GB(1282);
 
-    function CH() {
-      return !(0, hH.isMobile)()
+    function JB() {
+      return !(0, oB.isMobile)()
     }
 
-    function EH(HH) {
+    function MB(BB) {
       let {
-        disabled: BH,
-        openFolderPicker: LH,
-        onFiles: hH
-      } = HH;
+        disabled: OB,
+        openFolderPicker: GB,
+        onFiles: oB
+      } = BB;
       const {
-        t: EH
-      } = (0, SH.B)(), XH = (0, AH.useRef)(null);
-      return (0, zH.jsxs)("div", {
+        t: MB
+      } = (0, QB.H)(), PB = (0, YB.useRef)(null);
+      return (0, yB.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, zH.jsx)("input", {
-          ref: XH,
+        children: [(0, yB.jsx)("input", {
+          ref: PB,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(HH) {
-            const BH = Array.from(HH.target.files);
-            HH.target.value = "", hH(BH)
+          onChange: function(BB) {
+            const OB = Array.from(BB.target.files);
+            BB.target.value = "", oB(OB)
           }
-        }), CH() && (0, zH.jsx)(rH.i, {
-          disabled: BH,
-          onClick: LH,
-          children: EH("general:chooseFolder")
-        }), (0, zH.jsx)(rH.i, {
-          disabled: BH,
+        }), JB() && (0, yB.jsx)(DB.f, {
+          disabled: OB,
+          onClick: GB,
+          children: MB("general:chooseFolder")
+        }), (0, yB.jsx)(DB.f, {
+          disabled: OB,
           onClick: () => {
-            (0, tH.g)(XH.current)
+            (0, jB.e)(PB.current)
           },
-          children: EH("general:chooseZip")
+          children: MB("general:chooseZip")
         })]
       })
     }
   },
-  5520: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => tH,
-      f: () => hH,
-      i: () => SH
+  5531: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => jB,
+      g: () => oB,
+      j: () => QB
     });
-    var AH = LH(5523);
-    const rH = [HH => HH.strict ? "strict" : "nonStrict", HH => HH.program];
+    var YB = GB(5538);
+    const DB = [BB => BB.strict ? "strict" : "nonStrict", BB => BB.program];
 
-    function SH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const AH = {};
-      for (const rH in LH) AH[rH] = `\0${rH}\0`;
-      return HH(BH, AH).replace(/\0(\w+)\0/g, ((HH, BH) => LH[BH]))
+    function QB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const YB = {};
+      for (const DB in GB) YB[DB] = `\0${DB}\0`;
+      return BB(OB, YB).replace(/\0(\w+)\0/g, ((BB, OB) => GB[OB]))
     }
 
-    function hH(HH) {
-      return null === HH.file ? null : HH.line > 0 ? `${HH.file}:${HH.line}` : HH.file
+    function oB(BB) {
+      return null === BB.file ? null : BB.line > 0 ? `${BB.file}:${BB.line}` : BB.file
     }
 
-    function tH(HH) {
-      const BH = new Map(HH.map((HH => [zH(HH).join("."), HH])));
-      if (0 === BH.size) return [];
-      const LH = EH([...BH.values()]);
-      return 0 === LH[0].length ? [] : LH
+    function jB(BB) {
+      const OB = new Map(BB.map((BB => [yB(BB).join("."), BB])));
+      if (0 === OB.size) return [];
+      const GB = MB([...OB.values()]);
+      return 0 === GB[0].length ? [] : GB
     }
 
-    function zH(HH) {
-      return rH.map((BH => BH(HH)))
+    function yB(BB) {
+      return DB.map((OB => OB(BB)))
     }
-    const CH = rH.map((HH => new Set(AH.e.map(HH)).size));
+    const JB = DB.map((BB => new Set(YB.c.map(BB)).size));
 
-    function EH(HH) {
-      const BH = rH.map((BH => new Set(HH.map(BH)))),
-        LH = BH.reduce(((HH, BH) => HH * BH.size), 1),
-        AH = BH.every(((HH, BH) => 1 === HH.size || HH.size === CH[BH]));
-      if (LH === HH.length && AH) return [rH.filter(((HH, LH) => 1 === BH[LH].size)).map((BH => BH(HH[0])))];
-      let SH = null;
-      for (let hH = 0; hH < rH.length; hH++) {
-        if (1 === BH[hH].size) continue;
-        const LH = XH(HH, rH[hH]).flatMap(EH);
-        (null === SH || LH.length < SH.length) && (SH = LH)
+    function MB(BB) {
+      const OB = DB.map((OB => new Set(BB.map(OB)))),
+        GB = OB.reduce(((BB, OB) => BB * OB.size), 1),
+        YB = OB.every(((BB, OB) => 1 === BB.size || BB.size === JB[OB]));
+      if (GB === BB.length && YB) return [DB.filter(((BB, GB) => 1 === OB[GB].size)).map((OB => OB(BB[0])))];
+      let QB = null;
+      for (let oB = 0; oB < DB.length; oB++) {
+        if (1 === OB[oB].size) continue;
+        const GB = PB(BB, DB[oB]).flatMap(MB);
+        (null === QB || GB.length < QB.length) && (QB = GB)
       }
-      return SH
+      return QB
     }
 
-    function XH(HH, BH) {
-      const LH = new Map;
-      for (const rH of HH) {
-        var AH;
-        const HH = BH(rH);
-        LH.set(HH, [...null !== (AH = LH.get(HH)) && void 0 !== AH ? AH : [], rH])
+    function PB(BB, OB) {
+      const GB = new Map;
+      for (const DB of BB) {
+        var YB;
+        const BB = OB(DB);
+        GB.set(BB, [...null !== (YB = GB.get(BB)) && void 0 !== YB ? YB : [], DB])
       }
-      return [...LH.values()]
+      return [...GB.values()]
     }
   },
-  7149: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      ShaderPackPublishForm: () => vH
+  7139: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      ShaderPackPublishForm: () => WB
     });
-    var AH = LH(45),
-      rH = LH(7114),
-      SH = LH(180),
-      hH = LH(5531),
-      tH = LH(1315),
-      zH = LH(1455),
-      CH = LH(1706),
-      EH = LH(1061),
-      XH = LH(7155),
-      GH = LH(7161),
-      YH = LH(1502),
-      uH = LH(1123),
-      QH = LH(7165),
-      WH = LH(7196),
-      MH = LH(7111),
-      xH = LH(1225);
+    var YB = GB(56),
+      DB = GB(7107),
+      QB = GB(200),
+      oB = GB(5546),
+      jB = GB(1383),
+      yB = GB(1485),
+      JB = GB(1735),
+      MB = GB(1112),
+      PB = GB(7147),
+      zB = GB(7152),
+      lB = GB(1540),
+      pB = GB(1175),
+      qB = GB(7159),
+      ZB = GB(7186),
+      NB = GB(7099),
+      RB = GB(1282);
 
-    function vH(HH) {
-      var BH, LH, XH;
+    function WB(BB) {
+      var OB, GB, PB;
       let {
-        existing: vH,
-        onPublished: TH
-      } = HH;
+        existing: WB,
+        onPublished: VB
+      } = BB;
       const {
-        t: VH
-      } = (0, uH.B)(), {
-        userContext: OH,
-        isUserContextUpdating: bH
-      } = (0, EH.e)(), [kH, mH] = (0, AH.useState)(null), [oH, IH] = (0, AH.useState)(0), [fH, lH] = (0, AH.useState)(null !== (BH = null === vH || void 0 === vH ? void 0 : vH.name) && void 0 !== BH ? BH : ""), KH = (0, AH.useRef)(fH), cH = (0, AH.useRef)(""), eH = HH => {
-        KH.current = HH, lH(HH)
-      }, [qH, gH] = (0, AH.useState)(null !== (LH = null === vH || void 0 === vH ? void 0 : vH.description) && void 0 !== LH ? LH : ""), NH = (0, AH.useRef)(qH), RH = (0, AH.useRef)(""), jH = HH => {
-        NH.current = HH, gH(HH)
-      }, [nH, FH] = (0, AH.useState)(!1), {
-        loading: DH,
-        error: wH,
-        setError: ZH,
-        onFiles: dH
-      } = (0, GH.f)((async HH => {
-        const BH = await (0, QH.loadPageShaderPackCompiler)();
-        if (!BH) return void ZH(VH("shaderPack:compilerUnavailable"));
-        const LH = await (0, WH.d)(BH, HH.files);
-        if (mH({
-            pack: HH,
-            validation: LH,
-            sourceBytes: (0, hH.u)(HH.files)
-          }), !vH) {
-          var AH;
-          if ("" !== KH.current.trim() && KH.current !== cH.current || (cH.current = (0, rH.V)(HH.manifest.name.trim(), rH.F), eH(cH.current)), "" === NH.current.trim() || NH.current === RH.current) RH.current = (0, rH.V)((null !== (AH = HH.manifest.description) && void 0 !== AH ? AH : "").trim(), rH.v), jH(RH.current);
-          IH((HH => HH + 1))
+        t: nB
+      } = (0, pB.H)(), {
+        userContext: UB,
+        isUserContextUpdating: fB
+      } = (0, MB.d)(), [kB, dB] = (0, YB.useState)(null), [KB, uB] = (0, YB.useState)(0), [mB, IB] = (0, YB.useState)(null !== (OB = null === WB || void 0 === WB ? void 0 : WB.name) && void 0 !== OB ? OB : ""), FB = (0, YB.useRef)(mB), iB = (0, YB.useRef)(""), LB = BB => {
+        FB.current = BB, IB(BB)
+      }, [gB, rB] = (0, YB.useState)(null !== (GB = null === WB || void 0 === WB ? void 0 : WB.description) && void 0 !== GB ? GB : ""), XB = (0, YB.useRef)(gB), wB = (0, YB.useRef)(""), EB = BB => {
+        XB.current = BB, rB(BB)
+      }, [cB, hB] = (0, YB.useState)(!1), {
+        loading: aB,
+        error: eB,
+        setError: TB,
+        onFiles: bB
+      } = (0, zB.e)((async BB => {
+        const OB = await (0, qB.loadPageShaderPackCompiler)();
+        if (!OB) return void TB(nB("shaderPack:compilerUnavailable"));
+        const GB = await (0, ZB.f)(OB, BB.files);
+        if (dB({
+            pack: BB,
+            validation: GB,
+            sourceBytes: (0, oB.B)(BB.files)
+          }), !WB) {
+          var YB;
+          if ("" !== FB.current.trim() && FB.current !== iB.current || (iB.current = (0, DB.X)(BB.manifest.name.trim(), DB.B), LB(iB.current)), "" === XB.current.trim() || XB.current === wB.current) wB.current = (0, DB.X)((null !== (YB = BB.manifest.description) && void 0 !== YB ? YB : "").trim(), DB.r), EB(wB.current);
+          uB((BB => BB + 1))
         }
-      })), aH = !bH && !OH.isLoggedIn() && !SH.e.offlineMode, sH = fH.trim(), JH = sH.length < rH.H, iH = null !== kH && !1 !== (null === (XH = kH.validation) || void 0 === XH ? void 0 : XH.ok) && !DH && !JH && !aH && !bH;
-      return (0, xH.jsxs)("div", {
+      })), CB = !fB && !UB.isLoggedIn() && !QB.c.offlineMode, HB = mB.trim(), vB = HB.length < DB.E, sB = null !== kB && !1 !== (null === (PB = kB.validation) || void 0 === PB ? void 0 : PB.ok) && !aB && !vB && !CB && !fB;
+      return (0, RB.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, xH.jsx)("p", {
+        children: [(0, RB.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: vH ? VH("shaderPackListing:uploadIntro", {
-            minutes: String(rH.M / 6e4)
-          }) : VH("shaderPackListing:publishIntro")
-        }), (0, xH.jsx)(UH, {}), aH && (0, xH.jsx)("div", {
+          children: WB ? nB("shaderPackListing:uploadIntro", {
+            minutes: String(DB.I / 6e4)
+          }) : nB("shaderPackListing:publishIntro")
+        }), (0, RB.jsx)(SB, {}), CB && (0, RB.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: VH("shaderPackListing:publishNeedsLogin")
-        }), (0, xH.jsx)(GH.b, {
-          busy: DH,
-          disabled: DH || nH,
-          onFiles: HH => {
-            mH(null), dH(HH)
+          children: nB("shaderPackListing:publishNeedsLogin")
+        }), (0, RB.jsx)(zB.b, {
+          busy: aB,
+          disabled: aB || cB,
+          onFiles: BB => {
+            dB(null), bB(BB)
           }
-        }), kH && (0, xH.jsxs)("div", {
+        }), kB && (0, RB.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, xH.jsx)("div", {
+          children: [(0, RB.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: kH.pack.manifest.name
-          }), (0, xH.jsxs)("div", {
+            children: kB.pack.manifest.name
+          }), (0, RB.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [VH("shaderPackListing:sizeValue", {
-              kilobytes: String((0, MH.M)(kH.sourceBytes))
-            }), " \xb7", " ", VH("shaderPackListing:filesValue", {
-              files: String(kH.pack.files.length)
+            children: [nB("shaderPackListing:sizeValue", {
+              kilobytes: String((0, NB.P)(kB.sourceBytes))
+            }), " \xb7", " ", nB("shaderPackListing:filesValue", {
+              files: String(kB.pack.files.length)
             })]
-          }), (0, xH.jsx)(PH, {
-            picked: kH
+          }), (0, RB.jsx)(AB, {
+            picked: kB
           })]
-        }), !vH && (0, xH.jsxs)(xH.Fragment, {
-          children: [(0, xH.jsxs)("label", {
+        }), !WB && (0, RB.jsxs)(RB.Fragment, {
+          children: [(0, RB.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, xH.jsx)("span", {
-              children: VH("general:name")
-            }), (0, xH.jsx)(CH.e, {
+            children: [(0, RB.jsx)("span", {
+              children: nB("general:name")
+            }), (0, RB.jsx)(JB.b, {
               className: "ShaderPackPublishInput",
-              defaultValue: fH,
-              maxLength: rH.F,
-              onValueChange: eH
-            }, oH), kH && JH && (0, xH.jsx)("span", {
+              defaultValue: mB,
+              maxLength: DB.B,
+              onValueChange: LB
+            }, KB), kB && vB && (0, RB.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: VH("shaderPackListing:nameTooShort", {
-                min: String(rH.H)
+              children: nB("shaderPackListing:nameTooShort", {
+                min: String(DB.E)
               })
             })]
-          }), (0, xH.jsxs)("label", {
+          }), (0, RB.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, xH.jsx)("span", {
-              children: VH("general:description")
-            }), (0, xH.jsx)(CH.e, {
+            children: [(0, RB.jsx)("span", {
+              children: nB("general:description")
+            }), (0, RB.jsx)(JB.b, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: qH,
-              maxLength: rH.v,
-              onValueChange: jH,
+              defaultValue: gB,
+              maxLength: DB.r,
+              onValueChange: EB,
               useTextarea: !0
-            }, oH)]
+            }, KB)]
           })]
-        }), wH && (0, xH.jsx)("div", {
+        }), eB && (0, RB.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: wH
-        }), (0, xH.jsxs)(zH.u, {
+          children: eB
+        }), (0, RB.jsxs)(yB.q, {
           className: "ShaderPackPublishButton",
-          disabled: !iH,
-          loading: nH,
+          disabled: !sB,
+          loading: cB,
           onClick: () => {
             !async function() {
-              var HH;
-              if (!kH) return;
+              var BB;
+              if (!kB) return;
               const {
-                name: BH,
-                description: LH
-              } = null !== vH && void 0 !== vH ? vH : {
-                name: sH,
-                description: qH.trim()
-              }, AH = {
-                packId: null !== (HH = null === vH || void 0 === vH ? void 0 : vH.packId) && void 0 !== HH ? HH : null,
-                name: BH,
-                description: LH,
-                apiVersion: kH.pack.manifest.apiVersion,
-                files: (0, hH.t)(kH.pack.files),
-                keepCircleShadows: !0 === kH.pack.manifest.keepCircleShadows
+                name: OB,
+                description: GB
+              } = null !== WB && void 0 !== WB ? WB : {
+                name: HB,
+                description: gB.trim()
+              }, YB = {
+                packId: null !== (BB = null === WB || void 0 === WB ? void 0 : WB.packId) && void 0 !== BB ? BB : null,
+                name: OB,
+                description: GB,
+                apiVersion: kB.pack.manifest.apiVersion,
+                files: (0, oB.y)(kB.pack.files),
+                keepCircleShadows: !0 === kB.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(AH)).byteLength > 1024 * rH.R) ZH(VH("shaderPackListing:publishTooBig", {
-                kilobytes: String(rH.R)
+              if ((new TextEncoder).encode(JSON.stringify(YB)).byteLength > 1024 * DB.U) TB(nB("shaderPackListing:publishTooBig", {
+                kilobytes: String(DB.U)
               }));
               else {
-                FH(!0), ZH(null);
+                hB(!0), TB(null);
                 try {
-                  TH(await YH.d.publishShaderPack(OH, AH))
-                } catch (SH) {
-                  console.error("Failed to publish the shader pack", SH), ZH((0, MH.s)(SH, VH, "shaderPackListing:publishFailed"))
+                  VB(await lB.b.publishShaderPack(UB, YB))
+                } catch (QB) {
+                  console.error("Failed to publish the shader pack", QB), TB((0, NB.u)(QB, nB, "shaderPackListing:publishFailed"))
                 } finally {
-                  FH(!1)
+                  hB(!1)
                 }
               }
             }()
           },
-          children: [(0, xH.jsx)(tH.c, {
+          children: [(0, RB.jsx)(jB.b, {
             name: "upload"
-          }), " ", VH(vH ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", nB(WB ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function PH(HH) {
+    function AB(BB) {
       let {
-        picked: BH
-      } = HH;
+        picked: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, uH.B)(), {
-        validation: AH
-      } = BH;
-      return null === AH ? (0, xH.jsx)("div", {
+        t: GB
+      } = (0, pB.H)(), {
+        validation: YB
+      } = OB;
+      return null === YB ? (0, RB.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: LH("shaderPackListing:publishUnchecked")
-      }) : AH.ok ? (0, xH.jsxs)(xH.Fragment, {
-        children: [(0, xH.jsxs)("div", {
+        children: GB("shaderPackListing:publishUnchecked")
+      }) : YB.ok ? (0, RB.jsxs)(RB.Fragment, {
+        children: [(0, RB.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, xH.jsx)(tH.c, {
+          children: [(0, RB.jsx)(jB.b, {
             name: "circle-check"
-          }), " ", LH("shaderPackListing:publishReady")]
-        }), AH.offInStrict.length > 0 && (0, xH.jsxs)(xH.Fragment, {
-          children: [(0, xH.jsxs)("div", {
+          }), " ", GB("shaderPackListing:publishReady")]
+        }), YB.offInStrict.length > 0 && (0, RB.jsxs)(RB.Fragment, {
+          children: [(0, RB.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, xH.jsx)(tH.c, {
+            children: [(0, RB.jsx)(jB.b, {
               name: "triangle-exclamation"
-            }), " ", LH("shaderPack:offInStrict")]
-          }), (0, xH.jsx)(XH.d, {
-            diagnostics: AH.offInStrict,
-            t: LH
+            }), " ", GB("shaderPack:offInStrict")]
+          }), (0, RB.jsx)(PB.c, {
+            diagnostics: YB.offInStrict,
+            t: GB
           })]
         })]
-      }) : (0, xH.jsxs)(xH.Fragment, {
-        children: [(0, xH.jsxs)("div", {
+      }) : (0, RB.jsxs)(RB.Fragment, {
+        children: [(0, RB.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, xH.jsx)(tH.c, {
+          children: [(0, RB.jsx)(jB.b, {
             name: "triangle-exclamation"
-          }), " ", LH("shaderPackListing:publishHasErrors")]
-        }), (0, xH.jsx)(XH.d, {
-          diagnostics: AH.errors,
-          more: AH.moreErrors,
-          t: LH
+          }), " ", GB("shaderPackListing:publishHasErrors")]
+        }), (0, RB.jsx)(PB.c, {
+          diagnostics: YB.errors,
+          more: YB.moreErrors,
+          t: GB
         })]
       })
     }
-    const TH = "\0";
+    const VB = "\0";
 
-    function UH() {
+    function SB() {
       const {
-        t: HH
-      } = (0, uH.B)(), [BH, LH] = HH("shaderPackListing:bloxdhubHelp", {
-        site: TH
-      }).split(TH);
-      return (0, xH.jsxs)("p", {
+        t: BB
+      } = (0, pB.H)(), [OB, GB] = BB("shaderPackListing:bloxdhubHelp", {
+        site: VB
+      }).split(VB);
+      return (0, RB.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [BH, (0, xH.jsx)("a", {
+        children: [OB, (0, RB.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: rH.i,
+          href: DB.i,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: rH.d
-        }), LH]
+          children: DB.e
+        }), GB]
       })
     }
   },
-  5523: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH.e,
-      e: () => rH,
-      g: () => AH.l
+  5538: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB.k,
+      c: () => DB,
+      g: () => YB.r
     });
-    var AH = LH(5531);
-    const rH = [!1, !0].flatMap((HH => ["terrain", "liquid", "model"].map((BH => ({
-      strict: HH,
-      program: BH
+    var YB = GB(5546);
+    const DB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((OB => ({
+      strict: BB,
+      program: OB
     })))))
   },
-  5531: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => tH,
-      d: () => hH,
-      e: () => AH,
-      f: () => QH,
-      j: () => XH,
-      l: () => rH,
-      n: () => SH,
-      q: () => CH,
-      t: () => EH,
-      u: () => GH
+  5546: (BB, OB, GB) => {
+    GB.d(OB, {
+      B: () => zB,
+      e: () => jB,
+      h: () => oB,
+      k: () => YB,
+      o: () => qB,
+      p: () => PB,
+      r: () => DB,
+      u: () => QB,
+      v: () => JB,
+      y: () => MB
     });
-    const AH = 5;
+    const YB = 5;
 
-    function rH(HH) {
-      return HH === AH
+    function DB(BB) {
+      return BB === YB
     }
 
-    function SH(HH) {
-      return [...HH.features]
+    function QB(BB) {
+      return [...BB.features]
     }
-    const hH = 262144,
-      tH = 256,
-      zH = 256;
+    const oB = 262144,
+      jB = 256,
+      yB = 256;
 
-    function CH(HH) {
-      if ("object" !== typeof HH || null === HH || Array.isArray(HH)) return "The pack has no files.";
-      const BH = [];
-      for (const [LH, AH] of Object.entries(HH)) {
-        if ("string" !== typeof AH) return `${LH} isn't text.`;
-        BH.push({
-          path: LH,
-          source: AH
+    function JB(BB) {
+      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
+      const OB = [];
+      for (const [GB, YB] of Object.entries(BB)) {
+        if ("string" !== typeof YB) return `${GB} isn't text.`;
+        OB.push({
+          path: GB,
+          source: YB
         })
       }
-      return BH.sort(((HH, BH) => XH(HH.path, BH.path))),
-        function(HH) {
-          if (0 === HH.length) return "The pack has no .wgsl files.";
-          if (HH.length > tH) return `The pack has more than ${tH} .wgsl files.`;
-          const BH = new Set;
+      return OB.sort(((BB, OB) => PB(BB.path, OB.path))),
+        function(BB) {
+          if (0 === BB.length) return "The pack has no .wgsl files.";
+          if (BB.length > jB) return `The pack has more than ${jB} .wgsl files.`;
+          const OB = new Set;
           for (const {
-              path: LH
+              path: GB
             }
-            of HH) {
-            const HH = YH(LH);
-            if (null !== HH) return HH;
-            if (BH.has(LH)) return `The pack has two files at ${LH}.`;
-            BH.add(LH)
+            of BB) {
+            const BB = lB(GB);
+            if (null !== BB) return BB;
+            if (OB.has(GB)) return `The pack has two files at ${GB}.`;
+            OB.add(GB)
           }
-          return GH(HH) > hH ? `The pack's .wgsl files are over ${hH/1024} KB in total.` : null
-        }(BH) ?? BH
+          return zB(BB) > oB ? `The pack's .wgsl files are over ${oB/1024} KB in total.` : null
+        }(OB) ?? OB
     }
 
-    function EH(HH) {
-      const BH = {};
-      for (const LH of HH) BH[LH.path] = LH.source;
-      return BH
+    function MB(BB) {
+      const OB = {};
+      for (const GB of BB) OB[GB.path] = GB.source;
+      return OB
     }
 
-    function XH(HH, BH) {
-      return HH < BH ? -1 : HH > BH ? 1 : 0
+    function PB(BB, OB) {
+      return BB < OB ? -1 : BB > OB ? 1 : 0
     }
 
-    function GH(HH) {
-      const BH = new TextEncoder;
-      let LH = 0;
+    function zB(BB) {
+      const OB = new TextEncoder;
+      let GB = 0;
       for (const {
-          source: AH
+          source: YB
         }
-        of HH) LH += BH.encode(AH).byteLength;
-      return LH
+        of BB) GB += OB.encode(YB).byteLength;
+      return GB
     }
 
-    function YH(HH) {
-      if (!HH.toLowerCase().endsWith(".wgsl")) return `${HH} isn't a .wgsl file.`;
-      if (HH.length > zH) return `A file path is over ${zH} characters.`;
-      if (HH.includes("\\") || /[\u0000-\u001f]/.test(HH)) return `${HH} isn't a valid file path.`;
-      return HH.split("/").some((HH => "" === HH || "." === HH || ".." === HH)) ? `${HH} isn't a valid file path.` : null
+    function lB(BB) {
+      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
+      if (BB.length > yB) return `A file path is over ${yB} characters.`;
+      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
+      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
     }
-    const uH = /^(.*)\[rot\[([1-4])$/;
+    const pB = /^(.*)\[rot\[([1-4])$/;
 
-    function QH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const AH = new Map;
-      BH.forEach(((HH, BH) => {
+    function qB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const YB = new Map;
+      OB.forEach(((BB, OB) => {
         let {
-          numAnimStates: LH,
-          animStartIdx: rH
-        } = HH;
-        for (let SH = 1; SH < LH; SH++) AH.set(rH + SH - 1, BH)
+          numAnimStates: GB,
+          animStartIdx: DB
+        } = BB;
+        for (let QB = 1; QB < GB; QB++) YB.set(DB + QB - 1, OB)
       }));
-      const rH = Object.entries(HH),
-        SH = new Map;
-      for (const [QH, WH] of rH) {
-        const HH = uH.exec(QH);
-        "1" === HH?.[2] && SH.set(HH[1], WH + 1)
+      const DB = Object.entries(BB),
+        QB = new Map;
+      for (const [qB, ZB] of DB) {
+        const BB = pB.exec(qB);
+        "1" === BB?.[2] && QB.set(BB[1], ZB + 1)
       }
-      const hH = HH => {
-          const BH = uH.exec(HH);
-          return BH && SH.has(BH[1]) ? {
-            root: BH[1],
-            rotation: Number(BH[2]) - 1
+      const oB = BB => {
+          const OB = pB.exec(BB);
+          return OB && QB.has(OB[1]) ? {
+            root: OB[1],
+            rotation: Number(OB[2]) - 1
           } : null
         },
-        tH = new Set(rH.map((HH => {
-          let [BH] = HH;
-          return hH(BH)?.root ?? BH
+        jB = new Set(DB.map((BB => {
+          let [OB] = BB;
+          return oB(OB)?.root ?? OB
         }))),
-        zH = (HH, LH) => {
-          const AH = HH.replace(/_?0$/, "");
-          return (BH[LH]?.numAnimStates ?? 0) > 1 && !tH.has(AH) ? AH : HH
+        yB = (BB, GB) => {
+          const YB = BB.replace(/_?0$/, "");
+          return (OB[GB]?.numAnimStates ?? 0) > 1 && !jB.has(YB) ? YB : BB
         },
-        CH = new Map;
-      for (const [uH, QH] of rH) CH.set(QH, zH(hH(uH)?.root ?? uH, QH));
-      const EH = rH.reduce(((HH, BH) => {
-          let [, LH] = BH;
-          return Math.max(HH, LH + 1)
+        JB = new Map;
+      for (const [pB, qB] of DB) JB.set(qB, yB(oB(pB)?.root ?? pB, qB));
+      const MB = DB.reduce(((BB, OB) => {
+          let [, GB] = OB;
+          return Math.max(BB, GB + 1)
         }), 0),
-        XH = Array.from({
-          length: EH
-        }, ((HH, BH) => ({
-          id: BH + 1,
+        PB = Array.from({
+          length: MB
+        }, ((BB, OB) => ({
+          id: OB + 1,
           rotation: 0
         }))),
-        GH = new Map,
-        YH = new Map;
-      for (const [uH, QH] of rH) {
-        const HH = hH(uH),
-          BH = AH.get(QH);
-        if (void 0 !== BH) {
-          const LH = CH.get(BH);
-          YH.set(uH, {
-            name: uH,
-            texture: LH,
+        zB = new Map,
+        lB = new Map;
+      for (const [pB, qB] of DB) {
+        const BB = oB(pB),
+          OB = YB.get(qB);
+        if (void 0 !== OB) {
+          const GB = JB.get(OB);
+          lB.set(pB, {
+            name: pB,
+            texture: GB,
             kind: "frame"
-          }), HH && !YH.has(HH.root) && YH.set(HH.root, {
-            name: HH.root,
-            texture: LH,
+          }), BB && !lB.has(BB.root) && lB.set(BB.root, {
+            name: BB.root,
+            texture: GB,
             kind: "frame"
           });
           continue
         }
-        const LH = CH.get(QH),
-          rH = HH?.root ?? uH;
-        if (LH !== rH && YH.set(rH, {
-            name: rH,
-            texture: LH,
+        const GB = JB.get(qB),
+          DB = BB?.root ?? pB;
+        if (GB !== DB && lB.set(DB, {
+            name: DB,
+            texture: GB,
             kind: "frame"
-          }), HH) {
-          const BH = SH.get(HH.root);
-          XH[QH] = {
-            id: BH,
-            rotation: HH.rotation
-          }, GH.set(LH, BH), YH.set(uH, {
-            name: uH,
-            texture: LH,
+          }), BB) {
+          const OB = QB.get(BB.root);
+          PB[qB] = {
+            id: OB,
+            rotation: BB.rotation
+          }, zB.set(GB, OB), lB.set(pB, {
+            name: pB,
+            texture: GB,
             kind: "rotation"
           })
-        } else GH.set(LH, QH + 1)
+        } else zB.set(GB, qB + 1)
       }
-      for (const uH of GH.keys()) YH.delete(uH);
-      for (const [uH, QH] of LH) {
-        const HH = GH.get(QH);
-        void 0 === HH || GH.has(uH) || (GH.set(uH, HH), YH.delete(uH))
+      for (const pB of zB.keys()) lB.delete(pB);
+      for (const [pB, qB] of GB) {
+        const BB = zB.get(qB);
+        void 0 === BB || zB.has(pB) || (zB.set(pB, BB), lB.delete(pB))
       }
       return {
-        named: [...GH].sort(((HH, BH) => {
-          let [LH] = HH, [AH] = BH;
-          return LH < AH ? -1 : LH > AH ? 1 : 0
-        })).map((HH => {
-          let [BH, LH] = HH;
+        named: [...zB].sort(((BB, OB) => {
+          let [GB] = BB, [YB] = OB;
+          return GB < YB ? -1 : GB > YB ? 1 : 0
+        })).map((BB => {
+          let [OB, GB] = BB;
           return {
-            name: BH,
-            id: LH
+            name: OB,
+            id: GB
           }
         })),
-        aliases: [...YH.values()],
-        layers: XH
+        aliases: [...lB.values()],
+        layers: PB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

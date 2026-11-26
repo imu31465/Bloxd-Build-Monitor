@@ -1,485 +1,485 @@
 export const id = 90;
 export const ids = [90];
 export const modules = {
-  34849: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      EverythingMenu: () => cC
+  34660: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      EverythingMenu: () => gJ
     });
-    var AH = LH(45),
-      rH = LH(1038),
-      SH = LH.n(rH),
-      hH = LH(1123),
-      tH = LH(1315),
-      zH = LH(2143),
-      CH = LH(1455),
-      EH = LH(1049),
-      XH = LH(1225);
+    var YB = GB(56),
+      DB = GB(1090),
+      QB = GB.n(DB),
+      oB = GB(1175),
+      jB = GB(1383),
+      yB = GB(2167),
+      JB = GB(1485),
+      MB = GB(1106),
+      PB = GB(1282);
 
-    function GH(HH) {
+    function zB(BB) {
       let {
-        items: BH,
-        link: LH,
-        onClick: AH,
-        selectedItemId: rH,
-        className: GH,
-        padStartsOnTab: YH = !0
-      } = HH;
+        items: OB,
+        link: GB,
+        onClick: YB,
+        selectedItemId: DB,
+        className: zB,
+        padStartsOnTab: lB = !0
+      } = BB;
       const {
-        t: uH
-      } = (0, hH.B)(), QH = (0, EH.k)(), WH = [];
-      for (const SH of BH) {
-        var MH;
-        const HH = WH[WH.length - 1];
-        var xH;
-        if (HH && HH.title === (null !== (MH = SH.section) && void 0 !== MH ? MH : null)) HH.items.push(SH);
-        else WH.push({
-          title: null !== (xH = SH.section) && void 0 !== xH ? xH : null,
-          items: [SH]
+        t: pB
+      } = (0, oB.H)(), qB = (0, MB.g)(), ZB = [];
+      for (const QB of OB) {
+        var NB;
+        const BB = ZB[ZB.length - 1];
+        var RB;
+        if (BB && BB.title === (null !== (NB = QB.section) && void 0 !== NB ? NB : null)) BB.items.push(QB);
+        else ZB.push({
+          title: null !== (RB = QB.section) && void 0 !== RB ? RB : null,
+          items: [QB]
         })
       }
-      return (0, XH.jsxs)("div", {
-        className: SH()("MenuSideBarBody", GH),
+      return (0, PB.jsxs)("div", {
+        className: QB()("MenuSideBarBody", zB),
         "data-pad-tabs": "2",
-        children: [WH.map(((HH, BH) => {
-          var LH;
-          return (0, XH.jsxs)("div", {
+        children: [ZB.map(((BB, OB) => {
+          var GB;
+          return (0, PB.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [HH.title && (0, XH.jsx)("div", {
+            children: [BB.title && (0, PB.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: uH(HH.title)
-            }), HH.items.map((HH => {
-              var BH;
-              const LH = !!HH.iconElement || !!HH.faIcon;
-              return (0, XH.jsxs)("div", {
+              children: pB(BB.title)
+            }), BB.items.map((BB => {
+              var OB;
+              const GB = !!BB.iconElement || !!BB.faIcon;
+              return (0, PB.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": rH === HH.id ? "true" : void 0,
-                "data-pad-default-focus": YH && rH === HH.id || void 0,
-                className: SH()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: rH === HH.id
+                "data-pad-selected": DB === BB.id ? "true" : void 0,
+                "data-pad-default-focus": lB && DB === BB.id || void 0,
+                className: QB()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: DB === BB.id
                 }),
                 onClick: () => {
-                  AH(HH.id)
+                  YB(BB.id)
                 },
-                children: [LH && (0, XH.jsx)("div", {
+                children: [GB && (0, PB.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (BH = HH.iconElement) && void 0 !== BH ? BH : (0, XH.jsx)(tH.c, {
-                    name: HH.faIcon
+                  children: null !== (OB = BB.iconElement) && void 0 !== OB ? OB : (0, PB.jsx)(jB.b, {
+                    name: BB.faIcon
                   })
-                }), (!QH || !LH) && (0, XH.jsx)("div", {
-                  children: uH(HH.title)
-                }), HH.redDot && (0, XH.jsx)(zH.b, {
+                }), (!qB || !GB) && (0, PB.jsx)("div", {
+                  children: pB(BB.title)
+                }), BB.redDot && (0, PB.jsx)(yB.c, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, HH.id)
+              }, BB.id)
             }))]
-          }, null !== (LH = HH.title) && void 0 !== LH ? LH : BH)
-        })), LH && (0, XH.jsxs)("div", {
-          ...(0, CH.db)(),
+          }, null !== (GB = BB.title) && void 0 !== GB ? GB : OB)
+        })), GB && (0, PB.jsxs)("div", {
+          ...(0, JB.db)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: LH.onClick,
-          children: [(0, XH.jsx)("div", {
+          onClick: GB.onClick,
+          children: [(0, PB.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, XH.jsx)(tH.c, {
-              name: LH.faIcon
+            children: (0, PB.jsx)(jB.b, {
+              name: GB.faIcon
             })
-          }), (0, XH.jsx)("div", {
-            children: uH(LH.title)
-          }), (0, XH.jsx)(tH.c, {
+          }), (0, PB.jsx)("div", {
+            children: pB(GB.title)
+          }), (0, PB.jsx)(jB.b, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var YH = LH(2800),
-      uH = LH(1061),
-      QH = LH(2628),
-      WH = LH(3465),
-      MH = LH(81),
-      xH = LH(1998),
-      vH = LH(2372),
-      PH = LH(2381),
-      TH = LH(1706),
-      UH = LH(1313),
-      VH = LH(5478),
-      OH = LH(15),
-      bH = LH(34856);
+    var lB = GB(2839),
+      pB = GB(1112),
+      qB = GB(2653),
+      ZB = GB(3528),
+      NB = GB(92),
+      RB = GB(2023),
+      WB = GB(2420),
+      AB = GB(2429),
+      VB = GB(1735),
+      SB = GB(1375),
+      nB = GB(5480),
+      UB = GB(16),
+      fB = GB(34668);
 
-    function kH(HH) {
+    function kB(BB) {
       let {
-        setApplySettingsCallback: BH
-      } = HH;
+        setApplySettingsCallback: OB
+      } = BB;
       const {
-        clientEscMenuOptions: LH
-      } = (0, OH.m)(["clientEscMenuOptions"]), [rH, SH] = (0, AH.useState)(!1), [hH, tH] = (0, AH.useState)(!1), [zH, EH] = (0, AH.useState)(6400), [GH, YH] = (0, AH.useState)(3600), [uH, QH] = (0, AH.useState)(!1), [WH, MH] = (0, AH.useState)(!1);
+        clientEscMenuOptions: GB
+      } = (0, UB.o)(["clientEscMenuOptions"]), [DB, QB] = (0, YB.useState)(!1), [oB, jB] = (0, YB.useState)(!1), [yB, MB] = (0, YB.useState)(6400), [zB, lB] = (0, YB.useState)(3600), [pB, qB] = (0, YB.useState)(!1), [ZB, NB] = (0, YB.useState)(!1);
 
-      function xH(HH) {
-        const BH = "screenshot" === HH ? tH : SH;
-        BH(!0);
-        const LH = uH ? "normals" : WH ? "depth" : null;
-        bH.devTools.downloadScene(HH, {
-          width: zH,
-          height: GH,
-          colouring: LH
-        }).catch((HH => {
-          console.error("Couldn't download the scene", HH)
+      function RB(BB) {
+        const OB = "screenshot" === BB ? jB : QB;
+        OB(!0);
+        const GB = pB ? "normals" : ZB ? "depth" : null;
+        fB.devTools.downloadScene(BB, {
+          width: yB,
+          height: zB,
+          colouring: GB
+        }).catch((BB => {
+          console.error("Couldn't download the scene", BB)
         })).finally((() => {
-          BH(!1)
+          OB(!1)
         }))
       }
-      return (0, XH.jsxs)("div", {
+      return (0, PB.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, XH.jsx)(VH.c, {
+        children: [(0, PB.jsx)(nB.c, {
           label: "Disable Ambient Occlusion",
-          checked: LH.disableAmbientOcclusion,
-          onClick: HH => {
-            OH.c.setClientEscMenuOptions({
-              disableAmbientOcclusion: HH
-            }), BH((() => VH.i))
+          checked: GB.disableAmbientOcclusion,
+          onClick: BB => {
+            UB.c.setClientEscMenuOptions({
+              disableAmbientOcclusion: BB
+            }), OB((() => nB.g))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), bH.devTools.supports("ambientLight") && (0, XH.jsx)(VH.f, {
+        }), fB.devTools.supports("ambientLight") && (0, PB.jsx)(nB.f, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: LH.ambientLightIntensity,
-          onChange: HH => {
-            bH.devTools.setAmbientLightIntensity(HH).then((() => {
-              OH.c.setClientEscMenuOptions({
-                ambientLightIntensity: HH
+          initValue: GB.ambientLightIntensity,
+          onChange: BB => {
+            fB.devTools.setAmbientLightIntensity(BB).then((() => {
+              UB.c.setClientEscMenuOptions({
+                ambientLightIntensity: BB
               })
-            })).catch((HH => {
-              console.error("Couldn't set the ambient light", HH)
+            })).catch((BB => {
+              console.error("Couldn't set the ambient light", BB)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), bH.devTools.supports("weaponRaycasts") && (0, XH.jsx)(VH.c, {
+        }), fB.devTools.supports("weaponRaycasts") && (0, PB.jsx)(nB.c, {
           label: "Show Weapon Raycasts",
-          checked: LH.showWeaponRaycasts,
-          onClick: HH => {
-            OH.c.setClientEscMenuOptions({
-              showWeaponRaycasts: HH
+          checked: GB.showWeaponRaycasts,
+          onClick: BB => {
+            UB.c.setClientEscMenuOptions({
+              showWeaponRaycasts: BB
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), bH.devTools.supports("sceneDownload") && (0, XH.jsxs)("div", {
+        }), fB.devTools.supports("sceneDownload") && (0, PB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, XH.jsx)(VH.c, {
+            children: [(0, PB.jsx)(nB.c, {
               label: "Apply normal-based coloring",
-              checked: uH,
-              onClick: HH => {
-                QH(HH), HH && MH(!1)
+              checked: pB,
+              onClick: BB => {
+                qB(BB), BB && NB(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, XH.jsx)(VH.c, {
+            }), (0, PB.jsx)(nB.c, {
               label: "Apply depth-based coloring",
-              checked: WH,
-              onClick: HH => {
-                MH(HH), HH && QH(!1)
+              checked: ZB,
+              onClick: BB => {
+                NB(BB), BB && qB(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, XH.jsxs)("div", {
+            }), (0, PB.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, XH.jsx)("div", {
+              children: [(0, PB.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, XH.jsx)(TH.e, {
+              }), (0, PB.jsx)(VB.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (HH, BH) => {
-                  const LH = parseInt(HH) || 6400;
-                  EH(LH)
+                onValueChange: (BB, OB) => {
+                  const GB = parseInt(BB) || 6400;
+                  MB(GB)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: zH.toString()
-              }), (0, XH.jsx)("span", {
+                defaultValue: yB.toString()
+              }), (0, PB.jsx)("span", {
                 children: "X"
-              }), (0, XH.jsx)(TH.e, {
+              }), (0, PB.jsx)(VB.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (HH, BH) => {
-                  const LH = parseInt(HH) || 3600;
-                  YH(LH)
+                onValueChange: (BB, OB) => {
+                  const GB = parseInt(BB) || 3600;
+                  lB(GB)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: GH.toString()
+                defaultValue: zB.toString()
               })]
-            }), (0, XH.jsxs)("div", {
+            }), (0, PB.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, XH.jsxs)(CH.i, {
+              children: [(0, PB.jsxs)(JB.f, {
                 onClick: () => {
-                  xH("screenshot")
+                  RB("screenshot")
                 },
-                disabled: hH,
-                children: [hH && (0, XH.jsx)(UH.d, {}), "Download Screenshot"]
-              }), (0, XH.jsxs)(CH.i, {
+                disabled: oB,
+                children: [oB && (0, PB.jsx)(SB.b, {}), "Download Screenshot"]
+              }), (0, PB.jsxs)(JB.f, {
                 onClick: () => {
-                  xH("glb")
+                  RB("glb")
                 },
-                disabled: rH,
-                children: [rH && (0, XH.jsx)(UH.d, {}), "Download GLB"]
+                disabled: DB,
+                children: [DB && (0, PB.jsx)(SB.b, {}), "Download GLB"]
               })]
             })]
-          }), (0, XH.jsx)("div", {
+          }), (0, PB.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var mH = LH(120),
-      oH = LH(1070),
-      IH = LH(34867),
-      fH = LH(3323),
-      lH = LH(1509),
-      KH = LH(1206),
-      cH = LH(1179),
-      eH = LH(2112),
-      qH = LH(1502),
-      gH = LH(317),
-      NH = LH(1574),
-      RH = LH(597),
-      jH = LH(2486);
-    const nH = "store:retiredRankEnds";
+    var dB = GB(120),
+      KB = GB(1121),
+      uB = GB(34683),
+      mB = GB(3376),
+      IB = GB(1560),
+      FB = GB(1262),
+      iB = GB(1234),
+      LB = GB(2141),
+      gB = GB(1540),
+      rB = GB(353),
+      XB = GB(1620),
+      wB = GB(615),
+      EB = GB(2516);
+    const cB = "store:retiredRankEnds";
 
-    function FH(HH) {
+    function hB(BB) {
       let {
-        until: BH,
-        className: LH
-      } = HH;
+        until: OB,
+        className: GB
+      } = BB;
       const {
-        t: AH,
-        selectedLanguage: rH
-      } = (0, hH.B)(), SH = new Date(BH).toLocaleDateString((0, hH.n)(rH.code, nH), {
+        t: YB,
+        selectedLanguage: DB
+      } = (0, oB.H)(), QB = new Date(OB).toLocaleDateString((0, oB.s)(DB.code, cB), {
         year: "numeric",
         month: "short",
         day: "numeric"
       });
-      return (0, XH.jsx)("span", {
-        className: LH,
-        children: AH(nH, {
-          date: SH
+      return (0, PB.jsx)("span", {
+        className: GB,
+        children: YB(cB, {
+          date: QB
         })
       })
     }
-    var DH = LH(2397),
-      wH = LH(3353),
-      ZH = LH(3346),
-      dH = LH(186),
-      aH = LH(1664),
-      sH = LH(1194),
-      JH = LH(3366);
+    var aB = GB(2444),
+      eB = GB(3403),
+      TB = GB(3400),
+      bB = GB(204),
+      CB = GB(1705),
+      HB = GB(1253),
+      vB = GB(3421);
 
-    function iH(HH, BH, LH) {
-      const AH = RH.m[(0, RH.f)(RH.m, BH)],
-        rH = void 0 === AH ? void 0 : (0, dH.d)(HH.entitlements, AH.entitlementId);
-      return void 0 === rH || null === rH.expiresAt || (0, ZH.e)(rH) <= LH ? null : rH.willRenew && null === rH.billingIssueDetectedAt ? {
+    function sB(BB, OB, GB) {
+      const YB = wB.p[(0, wB.i)(wB.p, OB)],
+        DB = void 0 === YB ? void 0 : (0, bB.c)(BB.entitlements, YB.entitlementId);
+      return void 0 === DB || null === DB.expiresAt || (0, TB.e)(DB) <= GB ? null : DB.willRenew && null === DB.billingIssueDetectedAt ? {
         renews: !0,
-        at: Math.max(rH.expiresAt, LH)
+        at: Math.max(DB.expiresAt, GB)
       } : {
         renews: !1,
-        at: (0, ZH.e)(rH)
+        at: (0, TB.e)(DB)
       }
     }
-    var pH = LH(3337),
-      yH = LH(3340);
-    const HB = {
+    var xB = GB(3393),
+      tB = GB(3396);
+    const BO = {
       cancel: !1,
       resume: !1,
       manage: !1
     };
 
-    function BB(HH) {
-      return HH instanceof wH.c && "storeUnavailable" === HH.code ? (console.warn("Billing: the store didn't take a subscription change:", HH), "store:subscriptionStoreUnavailable") : HH instanceof wH.c && "subscriptionActionUnavailable" === HH.code ? (console.warn("Billing: a subscription action billing no longer offers:", HH), "store:subscriptionActionUnavailable") : (console.error("Billing: changing a subscription failed:", HH), "store:subscriptionChangeFailed")
+    function OO(BB) {
+      return BB instanceof eB.c && "storeUnavailable" === BB.code ? (console.warn("Billing: the store didn't take a subscription change:", BB), "store:subscriptionStoreUnavailable") : BB instanceof eB.c && "subscriptionActionUnavailable" === BB.code ? (console.warn("Billing: a subscription action billing no longer offers:", BB), "store:subscriptionActionUnavailable") : (console.error("Billing: changing a subscription failed:", BB), "store:subscriptionChangeFailed")
     }
-    async function LB() {
+    async function GO() {
       try {
-        var HH;
+        var BB;
         const {
-          offering: BH
-        } = await (0, yH.getBillingClient)().getOfferings((0, jH.u)(Date.now()).placementId);
-        return null !== (HH = null === BH || void 0 === BH ? void 0 : BH.packages.find(pH.isPricedPackage)) && void 0 !== HH ? HH : null
-      } catch (BH) {
-        return console.warn("Billing: loading the rank plan's price failed:", BH), null
+          offering: OB
+        } = await (0, tB.getBillingClient)().getOfferings((0, EB.u)(Date.now()).placementId);
+        return null !== (BB = null === OB || void 0 === OB ? void 0 : OB.packages.find(xB.isPricedPackage)) && void 0 !== BB ? BB : null
+      } catch (OB) {
+        return console.warn("Billing: loading the rank plan's price failed:", OB), null
       }
     }
 
-    function AB(HH) {
+    function YO(BB) {
       const {
-        userContext: BH
-      } = (0, uH.e)(), {
-        superRankInfo: LH
-      } = BH, rH = (0, DH.usePurchasesAllowed)(), SH = (0, gH.Ec)(LH), hH = HH && rH && (SH || BH.ranksMayChange), [tH, zH] = (0, AH.useState)(null), [CH, EH] = (0, AH.useState)(!1), [XH, GH] = (0, AH.useState)(!1), [YH, QH] = (0, AH.useState)(null);
-      (0, AH.useEffect)((() => {
-        if (!hH) return;
-        let HH = !1;
-        const LH = () => {
-          Promise.all([(0, yH.getBillingClient)().getSubscriptions(), LB()]).then((LH => {
-            let [AH, rH] = LH;
-            HH || (zH({
-              for: BH,
-              answer: AH,
-              pkg: rH
-            }), EH(!1))
-          }), (BH => {
-            console.error("Billing: loading the player's subscriptions failed:", BH), HH || EH(!0)
+        userContext: OB
+      } = (0, pB.d)(), {
+        superRankInfo: GB
+      } = OB, DB = (0, aB.usePurchasesAllowed)(), QB = (0, rB.Oc)(GB), oB = BB && DB && (QB || OB.ranksMayChange), [jB, yB] = (0, YB.useState)(null), [JB, MB] = (0, YB.useState)(!1), [PB, zB] = (0, YB.useState)(!1), [lB, qB] = (0, YB.useState)(null);
+      (0, YB.useEffect)((() => {
+        if (!oB) return;
+        let BB = !1;
+        const GB = () => {
+          Promise.all([(0, tB.getBillingClient)().getSubscriptions(), GO()]).then((GB => {
+            let [YB, DB] = GB;
+            BB || (yB({
+              for: OB,
+              answer: YB,
+              pkg: DB
+            }), MB(!1))
+          }), (OB => {
+            console.error("Billing: loading the player's subscriptions failed:", OB), BB || MB(!0)
           }))
         };
-        LH();
-        const AH = aH.d.addRefetchListener("billing", LH);
+        GB();
+        const YB = CB.b.addRefetchListener("billing", GB);
         return () => {
-          HH = !0, AH()
+          BB = !0, YB()
         }
-      }), [hH, BH]);
-      const WH = hH && SH && null !== tH && tH.for === BH ? function(HH, BH, LH, AH) {
-        var rH;
+      }), [oB, OB]);
+      const ZB = oB && QB && null !== jB && jB.for === OB ? function(BB, OB, GB, YB) {
+        var DB;
         const {
-          customerInfo: SH,
-          actions: hH
-        } = HH, tH = RH.m[(0, RH.f)(RH.m, BH)], zH = void 0 === tH ? void 0 : (0, dH.d)(SH.entitlements, tH.entitlementId), CH = iH(SH, BH, AH);
-        if (void 0 === zH || null === CH) return null;
-        const EH = Object.entries(SH.subscriptions).find((HH => {
-          let [, BH] = HH;
-          return BH.productId === zH.productId && BH.store === zH.store && !(0, ZH.k)(BH.status)
+          customerInfo: QB,
+          actions: oB
+        } = BB, jB = wB.p[(0, wB.i)(wB.p, OB)], yB = void 0 === jB ? void 0 : (0, bB.c)(QB.entitlements, jB.entitlementId), JB = sB(QB, OB, YB);
+        if (void 0 === yB || null === JB) return null;
+        const MB = Object.entries(QB.subscriptions).find((BB => {
+          let [, OB] = BB;
+          return OB.productId === yB.productId && OB.store === yB.store && !(0, TB.i)(OB.status)
         }));
-        if (void 0 === EH) return null;
-        const [XH, GH] = EH;
+        if (void 0 === MB) return null;
+        const [PB, zB] = MB;
         return {
-          key: XH,
-          tierId: BH,
-          info: GH,
-          actions: null !== (rH = (0, dH.d)(hH, XH)) && void 0 !== rH ? rH : HB,
-          date: CH,
-          pkg: (null === LH || void 0 === LH ? void 0 : LH.productId) === GH.productId ? LH : null
+          key: PB,
+          tierId: OB,
+          info: zB,
+          actions: null !== (DB = (0, bB.c)(oB, PB)) && void 0 !== DB ? DB : BO,
+          date: JB,
+          pkg: (null === GB || void 0 === GB ? void 0 : GB.productId) === zB.productId ? GB : null
         }
-      }(tH.answer, LH.tier, tH.pkg, Date.now()) : null;
+      }(jB.answer, GB.tier, jB.pkg, Date.now()) : null;
       return {
-        subscription: WH,
-        loadFailed: hH && SH && CH,
-        busy: XH,
-        errorKey: YH,
-        change: async function(HH) {
-          if (null === WH || XH) return;
-          GH(!0), QH(null);
-          const LH = (0, yH.getBillingClient)();
+        subscription: ZB,
+        loadFailed: oB && QB && JB,
+        busy: PB,
+        errorKey: lB,
+        change: async function(BB) {
+          if (null === ZB || PB) return;
+          zB(!0), qB(null);
+          const GB = (0, tB.getBillingClient)();
           try {
-            const AH = await ("cancel" === HH ? LH.cancelSubscription(WH.key) : LH.resumeSubscription(WH.key));
-            zH({
-              for: BH,
-              answer: AH,
-              pkg: WH.pkg
-            }), (0, JH.d)()
-          } catch (AH) {
-            QH(BB(AH))
+            const YB = await ("cancel" === BB ? GB.cancelSubscription(ZB.key) : GB.resumeSubscription(ZB.key));
+            yB({
+              for: OB,
+              answer: YB,
+              pkg: ZB.pkg
+            }), (0, vB.g)()
+          } catch (YB) {
+            qB(OO(YB))
           } finally {
-            GH(!1)
+            zB(!1)
           }
         },
         openManagePage: async function() {
-          if (null === WH || XH) return;
-          const HH = window.open("", "_blank");
-          GH(!0), QH(null);
+          if (null === ZB || PB) return;
+          const BB = window.open("", "_blank");
+          zB(!0), qB(null);
           try {
-            const BH = await (0, yH.getBillingClient)().subscriptionManagementUrl(WH.key, sH.g.get().getCurrentLanguageCode());
-            null === HH ? window.open(BH, "_blank", "noopener") : (HH.opener = null, HH.location.href = BH)
-          } catch (BH) {
-            null === HH || void 0 === HH || HH.close(), QH(BB(BH))
+            const OB = await (0, tB.getBillingClient)().subscriptionManagementUrl(ZB.key, HB.e.get().getCurrentLanguageCode());
+            null === BB ? window.open(OB, "_blank", "noopener") : (BB.opener = null, BB.location.href = OB)
+          } catch (OB) {
+            null === BB || void 0 === BB || BB.close(), qB(OO(OB))
           } finally {
-            GH(!1)
+            zB(!1)
           }
         }
       }
     }
-    var rB = LH(1352),
-      SB = LH(3392);
+    var DO = GB(1400),
+      QO = GB(3451);
 
-    function hB(HH, BH) {
-      return new Date(HH).toLocaleDateString(BH, {
+    function oO(BB, OB) {
+      return new Date(BB).toLocaleDateString(OB, {
         year: "numeric",
         month: "short",
         day: "numeric"
       })
     }
 
-    function tB(HH) {
+    function jO(BB) {
       let {
-        showing: BH,
-        className: LH
-      } = HH;
+        showing: OB,
+        className: GB
+      } = BB;
       const {
-        t: AH,
-        selectedLanguage: rH
-      } = (0, hH.B)(), {
-        subscription: zH,
-        loadFailed: EH,
-        busy: GH,
-        errorKey: YH,
-        change: uH,
-        openManagePage: QH
-      } = AB(BH);
-      if (EH) return (0, XH.jsx)("div", {
-        className: SH()("RankSubscriptionManage SmallTextBold RankSubscriptionManageError", LH),
-        children: AH("store:subscriptionLoadFailed")
+        t: YB,
+        selectedLanguage: DB
+      } = (0, oB.H)(), {
+        subscription: yB,
+        loadFailed: MB,
+        busy: zB,
+        errorKey: lB,
+        change: pB,
+        openManagePage: qB
+      } = YO(OB);
+      if (MB) return (0, PB.jsx)("div", {
+        className: QB()("RankSubscriptionManage SmallTextBold RankSubscriptionManageError", GB),
+        children: YB("store:subscriptionLoadFailed")
       });
-      if (null === zH) return null;
+      if (null === yB) return null;
       const {
-        date: WH,
-        info: MH,
-        actions: xH,
-        pkg: vH
-      } = zH, PH = WH.renews ? "store:renewsOn" : "store:endsOn", TH = hB(WH.at, (0, hH.n)(rH.code, PH)), UH = AH((0, jH.o)(zH.tierId).nameKey), VH = null !== MH.billingIssueDetectedAt;
-      return (0, XH.jsxs)("div", {
-        className: SH()("RankSubscriptionManage", LH),
-        children: [(0, XH.jsxs)("div", {
+        date: ZB,
+        info: NB,
+        actions: RB,
+        pkg: WB
+      } = yB, AB = ZB.renews ? "store:renewsOn" : "store:endsOn", VB = oO(ZB.at, (0, oB.s)(DB.code, AB)), SB = YB((0, EB.m)(yB.tierId).nameKey), nB = null !== NB.billingIssueDetectedAt;
+      return (0, PB.jsxs)("div", {
+        className: QB()("RankSubscriptionManage", GB),
+        children: [(0, PB.jsxs)("div", {
           className: "RankSubscriptionManageStatus SmallTextBold",
-          children: [AH(PH, {
-            date: TH
-          }), WH.renews && null !== vH && (0, DH.subscriptionsSold)() && (0, XH.jsxs)(XH.Fragment, {
-            children: [" \xb7 ", AH("store:pricePerMonth", {
-              price: (0, SB.f)(vH)
+          children: [YB(AB, {
+            date: VB
+          }), ZB.renews && null !== WB && (0, aB.subscriptionsSold)() && (0, PB.jsxs)(PB.Fragment, {
+            children: [" \xb7 ", YB("store:pricePerMonth", {
+              price: (0, QO.g)(WB)
             })]
           })]
-        }), VH && (0, XH.jsxs)("div", {
+        }), nB && (0, PB.jsxs)("div", {
           className: "RankSubscriptionManageWarning SmallTextBold",
-          children: [(0, XH.jsx)(tH.c, {
+          children: [(0, PB.jsx)(jB.b, {
             name: "triangle-exclamation"
-          }), " ", AH("store:paymentFailing", {
-            rank: UH
+          }), " ", YB("store:paymentFailing", {
+            rank: SB
           })]
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "RankSubscriptionManageActions",
-          children: [xH.manage && (0, XH.jsx)(CH.m, {
-            disabled: GH,
+          children: [RB.manage && (0, PB.jsx)(JB.j, {
+            disabled: zB,
             onClick: () => {
-              QH()
+              qB()
             },
-            children: AH(VH ? "store:updatePayment" : "payments:manageSubscription")
-          }), xH.resume && (0, XH.jsx)(CH.i, {
-            loading: GH,
+            children: YB(nB ? "store:updatePayment" : "payments:manageSubscription")
+          }), RB.resume && (0, PB.jsx)(JB.f, {
+            loading: zB,
             onClick: () => {
-              uH("resume")
+              pB("resume")
             },
-            children: AH("store:resumeSubscription")
-          }), xH.cancel && (0, XH.jsx)(CH.O, {
-            loading: GH,
+            children: YB("store:resumeSubscription")
+          }), RB.cancel && (0, PB.jsx)(JB.Q, {
+            loading: zB,
             onClick: () => {
-              (async function(HH, BH, LH) {
-                const AH = Date.now() >= HH.info.currentPeriodEnd;
-                return !0 === await rB.NotificationProvider.showPromptPopup({
+              (async function(BB, OB, GB) {
+                const YB = Date.now() >= BB.info.currentPeriodEnd;
+                return !0 === await DO.NotificationProvider.showPromptPopup({
                   title: "store:cancelSubscriptionTitle",
-                  subtitle: AH ? "store:cancelEndsNow" : "store:cancelKeepsUntil",
+                  subtitle: YB ? "store:cancelEndsNow" : "store:cancelKeepsUntil",
                   textOpts: {
                     title: {
-                      rank: BH
+                      rank: OB
                     },
                     subtitle: {
-                      rank: BH,
-                      date: LH
+                      rank: OB,
+                      date: GB
                     }
                   },
                   confirmText: "store:cancelSubscription",
@@ -489,143 +489,143 @@ export const modules = {
                   destructive: !0,
                   unlockPointerKey: "rankSubscriptionCancel"
                 }).getResult()
-              })(zH, UH, hB(MH.currentPeriodEnd, (0, hH.n)(rH.code, "store:cancelKeepsUntil"))).then((HH => {
-                HH && uH("cancel")
+              })(yB, SB, oO(NB.currentPeriodEnd, (0, oB.s)(DB.code, "store:cancelKeepsUntil"))).then((BB => {
+                BB && pB("cancel")
               }))
             },
-            children: AH("store:cancelSubscription")
+            children: YB("store:cancelSubscription")
           })]
-        }), null !== YH && (0, XH.jsx)("div", {
+        }), null !== lB && (0, PB.jsx)("div", {
           className: "RankSubscriptionManageError SmallTextBold",
-          children: AH(YH)
+          children: YB(lB)
         })]
       })
     }
-    var zB = LH(2388),
-      CB = LH(2936),
-      EB = LH(1863);
-    async function XB() {
+    var yO = GB(2437),
+      JO = GB(2974),
+      MO = GB(1896);
+    async function PO() {
       try {
-        return function(HH) {
-          const BH = new Map;
+        return function(BB) {
+          const OB = new Map;
           for (const {
-              store: LH,
-              status: AH,
-              autoRenewStatus: rH,
-              managementUrl: SH
+              store: GB,
+              status: YB,
+              autoRenewStatus: DB,
+              managementUrl: QB
             }
-            of Object.values(HH.subscriptions)) !(0, ZH.g)(LH) || (0, ZH.k)(AH) || "willNotRenew" === rH || BH.has(LH) || BH.set(LH, null !== SH && void 0 !== SH ? SH : ZH.l[LH]);
-          return Array.from(BH, (HH => {
-            let [BH, LH] = HH;
+            of Object.values(BB.subscriptions)) !(0, TB.h)(GB) || (0, TB.i)(YB) || "willNotRenew" === DB || OB.has(GB) || OB.set(GB, null !== QB && void 0 !== QB ? QB : TB.m[GB]);
+          return Array.from(OB, (BB => {
+            let [OB, GB] = BB;
             return {
-              store: BH,
-              managementUrl: LH
+              store: OB,
+              managementUrl: GB
             }
           }))
-        }(await (0, EB.j)((0, yH.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (HH) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", HH), null
+        }(await (0, MO.h)((0, tB.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (BB) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", BB), null
       }
     }
 
-    function GB(HH) {
+    function zO(BB) {
       const {
-        t: BH,
-        selectedLanguage: LH
-      } = (0, hH.B)(), {
-        userContext: rH
-      } = (0, uH.e)(), {
-        superRankInfo: SH
-      } = rH, tH = (0, DH.usePurchasesAllowed)(), zH = HH && ((0, gH.Ec)(SH) || rH.ranksMayChange) && tH, {
-        accountId: CH,
-        data: EH
-      } = (0, CB.h)(JH.b, zH);
-      if ((0, AH.useEffect)((() => {
-          if (zH) return JH.b.watchAccount(), aH.d.addRefetchListener("billing", (HH => {
-            "reconnected" === HH ? JH.b.refreshAfterReconnect() : JH.b.refresh()
+        t: OB,
+        selectedLanguage: GB
+      } = (0, oB.H)(), {
+        userContext: DB
+      } = (0, pB.d)(), {
+        superRankInfo: QB
+      } = DB, jB = (0, aB.usePurchasesAllowed)(), yB = BB && ((0, rB.Oc)(QB) || DB.ranksMayChange) && jB, {
+        accountId: JB,
+        data: MB
+      } = (0, JO.h)(vB.c, yB);
+      if ((0, YB.useEffect)((() => {
+          if (yB) return vB.c.watchAccount(), CB.b.addRefetchListener("billing", (BB => {
+            "reconnected" === BB ? vB.c.refreshAfterReconnect() : vB.c.refresh()
           }))
-        }), [zH]), !zH || !(0, gH.Ec)(SH) || null === EH || CH !== rH.whamm) return null;
-      const XH = iH(EH, SH.tier, Date.now());
-      if (null === XH) return null;
-      const GH = XH.renews ? "store:renewsOn" : "store:endsOn",
-        YH = (0, hH.h)(LH.code, GH, XH.at, {
+        }), [yB]), !yB || !(0, rB.Oc)(QB) || null === MB || JB !== DB.whamm) return null;
+      const PB = sB(MB, QB.tier, Date.now());
+      if (null === PB) return null;
+      const zB = PB.renews ? "store:renewsOn" : "store:endsOn",
+        lB = (0, oB.f)(GB.code, zB, PB.at, {
           year: "numeric",
           month: "short",
           day: "numeric"
         }),
-        QH = (0, DH.getBillingStore)(),
-        WH = null !== QH && (0, ZH.g)(QH) ? function(HH, BH) {
-          var LH;
-          const AH = Object.values(HH.subscriptions).find((HH => HH.store === BH && !(0, ZH.k)(HH.status)));
-          return void 0 === AH ? null : null !== (LH = AH.managementUrl) && void 0 !== LH ? LH : ZH.l[BH]
-        }(EH, QH) : null;
+        qB = (0, aB.getBillingStore)(),
+        ZB = null !== qB && (0, TB.h)(qB) ? function(BB, OB) {
+          var GB;
+          const YB = Object.values(BB.subscriptions).find((BB => BB.store === OB && !(0, TB.i)(BB.status)));
+          return void 0 === YB ? null : null !== (GB = YB.managementUrl) && void 0 !== GB ? GB : TB.m[OB]
+        }(MB, qB) : null;
       return {
-        text: BH(GH, {
-          date: YH
+        text: OB(zB, {
+          date: lB
         }),
-        manageUrl: WH
+        manageUrl: ZB
       }
     }
-    var YB = LH(1365),
-      uB = LH(1152),
-      QB = LH(5367),
-      WB = LH(1475),
-      MB = LH(4044),
-      xB = LH(2573);
+    var lO = GB(1405),
+      pO = GB(1204),
+      qO = GB(5377),
+      ZO = GB(1516),
+      NO = GB(4096),
+      RO = GB(2590);
 
-    function vB(HH) {
+    function WO(BB) {
       let {
-        showing: BH
-      } = HH;
+        showing: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)(), {
-        data: AH,
-        failed: rH
-      } = (0, CB.h)(MB.h, BH);
-      return 0 === (null === AH || void 0 === AH ? void 0 : AH.length) || null === AH && !rH ? null : (0, XH.jsxs)("div", {
+        t: GB
+      } = (0, oB.H)(), {
+        data: YB,
+        failed: DB
+      } = (0, JO.h)(NO.h, OB);
+      return 0 === (null === YB || void 0 === YB ? void 0 : YB.length) || null === YB && !DB ? null : (0, PB.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: LH("paymentHistory:title")
-        }), null === AH && rH && (0, XH.jsx)("div", {
+          children: GB("paymentHistory:title")
+        }), null === YB && DB && (0, PB.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: LH("paymentHistory:loadFailed")
-        }), null !== AH && (0, XH.jsx)("ul", {
+          children: GB("paymentHistory:loadFailed")
+        }), null !== YB && (0, PB.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: AH.map((HH => (0, XH.jsxs)("li", {
+          children: YB.map((BB => (0, PB.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, XH.jsx)(xB.e, {
-              entry: HH
-            }), (0, XH.jsxs)("div", {
+            children: [(0, PB.jsx)(RO.c, {
+              entry: BB
+            }), (0, PB.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, XH.jsx)("div", {
-                children: (0, xB.m)(LH, HH)
-              }), (0, XH.jsxs)("div", {
+              children: [(0, PB.jsx)("div", {
+                children: (0, RO.h)(GB, BB)
+              }), (0, PB.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(HH.at).toLocaleDateString(), "number" === typeof HH.orderId && ` \xb7 ${LH("paymentHistory:order",{orderId:HH.orderId})}`]
+                children: [new Date(BB.at).toLocaleDateString(), "number" === typeof BB.orderId && ` \xb7 ${GB("paymentHistory:order",{orderId:BB.orderId})}`]
               })]
             })]
-          }, (0, MB.d)(HH))))
+          }, (0, NO.e)(BB))))
         })]
       })
     }
-    var PB = LH(2401),
-      TB = LH(2208);
+    var AO = GB(2448),
+      VO = GB(2241);
 
-    function UB() {
-      (0, TB.b)({
+    function SO() {
+      (0, VO.b)({
         titleKey: "payments:logInToRestore"
       })
     }
 
-    function VB(HH) {
+    function nO(BB) {
       let {
-        status: BH
-      } = HH;
-      switch (BH) {
+        status: OB
+      } = BB;
+      switch (OB) {
         case "restored":
-          return (0, JH.d)(), {
+          return (0, vB.g)(), {
             key: "payments:purchasesRestored",
             failed: !1
           };
@@ -638,914 +638,914 @@ export const modules = {
       }
     }
 
-    function OB() {
-      const HH = (0, yH.usePageBillingClient)(),
+    function UO() {
+      const BB = (0, tB.usePageBillingClient)(),
         {
-          userContext: BH
-        } = (0, uH.e)(),
-        [LH, rH] = (0, AH.useState)(!1),
-        [SH, hH] = (0, AH.useState)(null);
+          userContext: OB
+        } = (0, pB.d)(),
+        [GB, DB] = (0, YB.useState)(!1),
+        [QB, oB] = (0, YB.useState)(null);
       return {
-        restoring: LH,
-        notice: SH,
+        restoring: GB,
+        notice: QB,
         restore: () => {
-          BH.isLoggedIn() ? (rH(!0), hH(null), HH.restorePurchases().then(VB, (HH => HH instanceof wH.c && "loginRequired" === HH.code ? (UB(), null) : function(HH) {
-            return HH instanceof wH.c && "storeBusy" === HH.code ? {
+          OB.isLoggedIn() ? (DB(!0), oB(null), BB.restorePurchases().then(nO, (BB => BB instanceof eB.c && "loginRequired" === BB.code ? (SO(), null) : function(BB) {
+            return BB instanceof eB.c && "storeBusy" === BB.code ? {
               key: "payments:storeBusy",
               failed: !0
-            } : (console.error("Billing: restoring purchases failed:", HH), (0, JH.d)(), {
+            } : (console.error("Billing: restoring purchases failed:", BB), (0, vB.g)(), {
               key: "payments:restoreFailed",
               failed: !0
             })
-          }(HH))).then(hH).finally((() => {
-            rH(!1)
-          }))) : UB()
+          }(BB))).then(oB).finally((() => {
+            DB(!1)
+          }))) : SO()
         }
       }
     }
 
-    function bB(HH) {
+    function fO(BB) {
       let {
-        restoring: BH,
-        notice: LH,
-        restore: rH
-      } = HH;
+        restoring: OB,
+        notice: GB,
+        restore: DB
+      } = BB;
       const {
-        t: tH
-      } = (0, hH.B)(), zH = (0, DH.usePurchasesAllowed)(), EH = (0, DH.getBillingStore)(), GH = (0, AH.useRef)(null);
-      return (0, AH.useEffect)((() => {
-        var HH;
-        null === (HH = GH.current) || void 0 === HH || HH.scrollIntoView({
+        t: jB
+      } = (0, oB.H)(), yB = (0, aB.usePurchasesAllowed)(), MB = (0, aB.getBillingStore)(), zB = (0, YB.useRef)(null);
+      return (0, YB.useEffect)((() => {
+        var BB;
+        null === (BB = zB.current) || void 0 === BB || BB.scrollIntoView({
           block: "nearest"
         })
-      }), [LH]), zH && (0, PB.d)(EH) ? (0, XH.jsxs)("div", {
+      }), [GB]), yB && (0, AO.d)(MB) ? (0, PB.jsxs)("div", {
         className: "AccountSettingsRestorePurchases",
-        children: [(0, XH.jsx)(CH.m, {
+        children: [(0, PB.jsx)(JB.j, {
           className: "AccountSettingsRestorePurchasesButton",
-          loading: BH,
-          onClick: rH,
-          children: tH("payments:restorePurchases")
-        }), null !== LH && (0, XH.jsx)("div", {
-          ref: GH,
-          className: SH()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
-            AccountSettingsRestorePurchasesFailed: LH.failed
+          loading: OB,
+          onClick: DB,
+          children: jB("payments:restorePurchases")
+        }), null !== GB && (0, PB.jsx)("div", {
+          ref: zB,
+          className: QB()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
+            AccountSettingsRestorePurchasesFailed: GB.failed
           }),
-          children: tH(LH.key)
+          children: jB(GB.key)
         })]
       }) : null
     }
-    var kB = LH(1958),
-      mB = LH(1188),
-      oB = LH(1131),
-      IB = LH(1287),
-      fB = LH(304),
-      lB = LH(2698);
-    const KB = {
+    var kO = GB(1991),
+      dO = GB(1246),
+      KO = GB(1186),
+      uO = GB(1338),
+      mO = GB(331),
+      IO = GB(2712);
+    const FO = {
       appStore: {
         name: "App Store",
-        ...fB.hc.appStore
+        ...mO.bc.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...fB.hc.googlePlay
+        ...mO.bc.googlePlay
       },
       discord: {
         name: "Discord",
-        ...fB.hc.discord
+        ...mO.bc.discord
       }
     };
 
-    function cB(HH) {
+    function iO(BB) {
       let {
-        warning: BH,
-        subscriptions: LH
-      } = HH;
+        warning: OB,
+        subscriptions: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)();
-      return null !== LH && 0 === LH.length ? (0, XH.jsx)(XH.Fragment, {
-        children: AH(BH)
-      }) : (0, XH.jsxs)("div", {
+        t: YB
+      } = (0, oB.H)();
+      return null !== GB && 0 === GB.length ? (0, PB.jsx)(PB.Fragment, {
+        children: YB(OB)
+      }) : (0, PB.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [AH(BH), null === LH && (0, XH.jsx)("div", {
+        children: [YB(OB), null === GB && (0, PB.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: AH("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== LH && (0, XH.jsxs)(XH.Fragment, {
-          children: [(0, XH.jsx)("div", {
+          children: YB("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== GB && (0, PB.jsxs)(PB.Fragment, {
+          children: [(0, PB.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: AH("auth:deleteAccountStoreSubscriptions")
-          }), (0, XH.jsx)(lB.e, {
+            children: YB("auth:deleteAccountStoreSubscriptions")
+          }), (0, PB.jsx)(IO.b, {
             className: "DeleteAccountSubtitleLinks",
-            links: LH.map((HH => {
+            links: GB.map((BB => {
               let {
-                store: BH,
-                managementUrl: LH
-              } = HH;
+                store: OB,
+                managementUrl: GB
+              } = BB;
               return {
-                ...KB[BH],
-                url: LH
+                ...FO[OB],
+                url: GB
               }
             }))
           })]
         })]
       })
     }
-    var eB = LH(5083);
+    var LO = GB(5090);
 
-    function qB(HH) {
+    function gO(BB) {
       let {
-        showing: BH
-      } = HH;
+        showing: OB
+      } = BB;
       const {
-        userContext: LH,
-        isUserContextUpdating: rH
-      } = (0, uH.e)(), {
-        t: SH
-      } = (0, hH.B)(), [tH, zH] = (0, AH.useState)(!1), [EH, GH] = (0, AH.useState)(null), YH = (0, AH.useRef)(BH);
-      (0, AH.useEffect)((() => (YH.current = BH, () => {
-        YH.current = !1
-      })), [BH]);
-      const QH = rH || tH;
-      return (0, XH.jsxs)("div", {
+        userContext: GB,
+        isUserContextUpdating: DB
+      } = (0, pB.d)(), {
+        t: QB
+      } = (0, oB.H)(), [jB, yB] = (0, YB.useState)(!1), [MB, zB] = (0, YB.useState)(null), lB = (0, YB.useRef)(OB);
+      (0, YB.useEffect)((() => (lB.current = OB, () => {
+        lB.current = !1
+      })), [OB]);
+      const qB = DB || jB;
+      return (0, PB.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, XH.jsxs)(CH.O, {
+        children: [(0, PB.jsxs)(JB.Q, {
           onClick: async function() {
-            if (!tH) {
-              zH(!0);
+            if (!jB) {
+              yB(!0);
               try {
-                const HH = await async function() {
-                  const [HH, BH] = await Promise.all([(0, kB.d)(LH.availableUserContextTypes) ? XB() : [], NB(LH)]);
-                  if (!YH.current) return mB.e.ok();
-                  const AH = (0, KH.b)(LH.getPlayerName(), !MH.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await rB.NotificationProvider.showPromptPopup({
+                const BB = await async function() {
+                  const [BB, OB] = await Promise.all([(0, kO.e)(GB.availableUserContextTypes) ? PO() : [], XO(GB)]);
+                  if (!lB.current) return dO.c.ok();
+                  const YB = (0, FB.e)(GB.getPlayerName(), !NB.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await DO.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: AH
+                          playerName: YB
                         }
                       },
-                      subtitle: (0, XH.jsx)(cB, {
-                        warning: gB(LH.isLoggedIn(), BH),
-                        subscriptions: HH
+                      subtitle: (0, PB.jsx)(iO, {
+                        warning: rO(GB.isLoggedIn(), OB),
+                        subscriptions: BB
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: BH ? SH("auth:deleteAccountTypedConfirm", {
-                        playerName: AH
+                      typedConfirm: OB ? QB("auth:deleteAccountTypedConfirm", {
+                        playerName: YB
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return mB.e.ok();
-                  const rH = await (0, oH.postJsonWithMetricsCookiesAndJsonResponse)(`${oB.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: OH.c.get("gameState")
+                    }).getResult()) return dO.c.ok();
+                  const DB = await (0, KB.postJsonWithMetricsCookiesAndJsonResponse)(`${KO.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: UB.c.get("gameState")
                   }, {
                     retries: 3
-                  }, LH.getMetricsCookies());
-                  if (rH.error) return mB.e.error(rH.error);
-                  (0, mH.isDiscordClient)() && (await IB.k.discordActivity()).exit("User deleted their account");
-                  return eB.b.stopRecordingHere("the player deleted their account", {
+                  }, GB.getMetricsCookies());
+                  if (DB.error) return dO.c.error(DB.error);
+                  (0, dB.isDiscordClient)() && (await uO.i.discordActivity()).exit("User deleted their account");
+                  return LO.b.stopRecordingHere("the player deleted their account", {
                     forget: !0
-                  }), (0, oH.forgetStoredGuestAccount)(LH.whamm), (0, oH.forceGlobalSignOut)(!0), mB.e.ok()
-                }(), BH = HH.isError() ? HH.asError().message : null;
-                GH(BH)
-              } catch (HH) {
-                console.error("Failed to delete account:", HH), GH(SH("auth:genericDeleteAccountError"))
+                  }), (0, KB.forgetStoredGuestAccount)(GB.whamm), (0, KB.forceGlobalSignOut)(!0), dO.c.ok()
+                }(), OB = BB.isError() ? BB.asError().message : null;
+                zB(OB)
+              } catch (BB) {
+                console.error("Failed to delete account:", BB), zB(QB("auth:genericDeleteAccountError"))
               }
-              zH(!1)
+              yB(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: QH,
-          children: [QH && (0, XH.jsx)("div", {
+          disabled: qB,
+          children: [qB && (0, PB.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, XH.jsx)(UH.d, {})
-          }), SH("auth:deleteAccount")]
-        }), EH && (0, XH.jsx)("div", {
+            children: (0, PB.jsx)(SB.b, {})
+          }), QB("auth:deleteAccount")]
+        }), MB && (0, PB.jsx)("div", {
           className: "DeleteAccountError",
-          children: EH
+          children: MB
         })]
       })
     }
 
-    function gB(HH, BH) {
-      return (0, mH.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : HH ? "auth:deleteAccountLossWarning" : BH ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function rO(BB, OB) {
+      return (0, dB.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : BB ? "auth:deleteAccountLossWarning" : OB ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function NB(HH) {
+    async function XO(BB) {
       try {
         const {
-          accountCreatedAt: BH
-        } = await (0, EB.j)(qH.d.getPlayerProfile(HH, {
-          lowerCaseName: HH.getPlayerName().toLowerCase()
+          accountCreatedAt: OB
+        } = await (0, MO.h)(gB.b.getPlayerProfile(BB, {
+          lowerCaseName: BB.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== BH && Date.now() - BH >= 7 * gH.j
-      } catch (BH) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", BH), !0
+        return null !== OB && Date.now() - OB >= 7 * rB.g
+      } catch (OB) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", OB), !0
       }
     }
-    var RB = LH(3970),
-      jB = LH(3988),
-      nB = LH(3985);
+    var wO = GB(4031),
+      EO = GB(4050),
+      cO = GB(4041);
 
-    function FB(HH) {
+    function hO(BB) {
       let {
-        showing: BH
-      } = HH;
+        showing: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)(), {
-        data: AH,
-        failed: rH
-      } = (0, CB.h)(RB.d, BH), SH = null === AH ? null : (0, RB.e)(AH);
-      return (0, XH.jsxs)("div", {
+        t: GB
+      } = (0, oB.H)(), {
+        data: YB,
+        failed: DB
+      } = (0, JO.h)(wO.d, OB), QB = null === YB ? null : (0, wO.f)(YB);
+      return (0, PB.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: LH("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === SH && !rH && (0, XH.jsx)(UH.d, {}), null === SH && rH && (0, XH.jsxs)("div", {
+          children: GB("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === QB && !DB && (0, PB.jsx)(SB.b, {}), null === QB && DB && (0, PB.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [LH("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, XH.jsx)(CH.i, {
+          children: [GB("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, PB.jsx)(JB.f, {
             className: "SmallTextLight",
             onClick: () => {
-              RB.d.refresh()
+              wO.d.refresh()
             },
-            children: LH("general:tryAgain")
+            children: GB("general:tryAgain")
           })]
-        }), 0 === (null === SH || void 0 === SH ? void 0 : SH.length) && (0, XH.jsx)("div", {
+        }), 0 === (null === QB || void 0 === QB ? void 0 : QB.length) && (0, PB.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: LH("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== SH && SH.length > 0 && (0, XH.jsx)("ul", {
+          children: GB("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== QB && QB.length > 0 && (0, PB.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: SH.map((HH => {
+          children: QB.map((BB => {
             let {
-              name: BH,
-              exclusion: AH
-            } = HH;
-            const rH = nB.f[AH];
-            return (0, XH.jsxs)("li", {
+              name: OB,
+              exclusion: YB
+            } = BB;
+            const DB = cO.f[YB];
+            return (0, PB.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, XH.jsx)("div", {
+              children: [(0, PB.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: BH
-              }), (0, XH.jsx)(CH.m, {
+                children: OB
+              }), (0, PB.jsx)(JB.j, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, jB.c)(rH, BH, {
+                  (0, EO.c)(DB, OB, {
                     chatMessage: null
                   })
                 },
-                children: LH(nB.j[rH].text)
+                children: GB(cO.g[DB].text)
               })]
-            }, BH)
+            }, OB)
           }))
         })]
       })
     }
-    var DB = LH(5099),
-      wB = LH(3751),
-      ZB = LH(34870);
+    var aO = GB(5107),
+      eO = GB(3799),
+      TO = GB(34688);
 
-    function dB(HH) {
+    function bO(BB) {
       let {
-        userContext: BH
-      } = HH;
+        userContext: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)();
-      return wB.d && (0, DB.m)() && BH !== oH.NULL_USER_CONTEXT ? (0, XH.jsxs)("div", {
+        t: GB
+      } = (0, oB.H)();
+      return eO.d && (0, aO.i)() && OB !== KB.NULL_USER_CONTEXT ? (0, PB.jsxs)("div", {
         className: "SettingBox",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: LH("settingsMenu:playerId")
-        }), (0, XH.jsx)(ZB.e, {
-          text: (0, DB.j)(BH)
+          children: GB("settingsMenu:playerId")
+        }), (0, PB.jsx)(TO.c, {
+          text: (0, aO.f)(OB)
         })]
       }) : null
     }
-    const aB = (0, AH.memo)((function(HH) {
-      var BH, LH;
+    const CO = (0, YB.memo)((function(BB) {
+      var OB, GB;
       let {
-        showing: rH,
-        inGame: zH
-      } = HH;
+        showing: DB,
+        inGame: yB
+      } = BB;
       const {
-        t: EH,
-        selectedLanguage: GH
-      } = (0, hH.B)(), {
-        hideSocialLocationFrom: QH
-      } = (0, OH.m)(["hideSocialLocationFrom"]), WH = (0, DH.usePurchasesAllowed)(), xH = OB(), vH = (0, YH.e)(), {
-        userContext: PH,
-        isUserContextUpdating: bH
-      } = (0, uH.e)(), [kH, nH] = (0, AH.useState)(null !== (BH = PH.getPlayerName()) && void 0 !== BH ? BH : ""), [wH, ZH] = (0, AH.useState)(null), {
-        purchasing: dH,
-        outcome: aH,
-        purchase: sH
-      } = (0, fH.e)("/super-rank-welcome"), JH = (0, gH.nc)((0, hH.n)(GH.code, "general:timeLeft"), PH.superRankInfo), iH = null === (LH = GB(rH)) || void 0 === LH ? void 0 : LH.text, pH = Date.now(), yH = (0, NH.g)(pH), HB = (0, jH.v)(pH), BB = (0, jH.o)(yH.id), LB = (0, jH.k)(PH.getPlayerRanks(), pH), AB = (0, jH.q)(PH.superRankInfo, pH), rB = yH.id !== RH.n.id, SB = rB && !LB && (0, gH.Ec)(PH.superRankInfo) ? PH.superRankInfo : null, hB = JH ? EH("general:timeLeft", {
-        time: JH
-      }) : !(rB && WH) && iH, [CB, EB] = (0, AH.useState)(!1), [XB, MB] = (0, AH.useState)(!1), xB = (0, AH.useRef)(null), PB = (0, AH.useRef)(null), TB = (0, eH.f)({
+        t: MB,
+        selectedLanguage: zB
+      } = (0, oB.H)(), {
+        hideSocialLocationFrom: qB
+      } = (0, UB.o)(["hideSocialLocationFrom"]), ZB = (0, aB.usePurchasesAllowed)(), RB = UO(), WB = (0, lB.c)(), {
+        userContext: AB,
+        isUserContextUpdating: fB
+      } = (0, pB.d)(), [kB, cB] = (0, YB.useState)(null !== (OB = AB.getPlayerName()) && void 0 !== OB ? OB : ""), [eB, TB] = (0, YB.useState)(null), {
+        purchasing: bB,
+        outcome: CB,
+        purchase: HB
+      } = (0, mB.d)("/super-rank-welcome"), vB = (0, rB.rc)((0, oB.s)(zB.code, "general:timeLeft"), AB.superRankInfo), sB = null === (GB = zO(DB)) || void 0 === GB ? void 0 : GB.text, xB = Date.now(), tB = (0, XB.e)(xB), BO = (0, EB.x)(xB), OO = (0, EB.m)(tB.id), GO = (0, EB.k)(AB.getPlayerRanks(), xB), YO = (0, EB.q)(AB.superRankInfo, xB), DO = tB.id !== wB.s.id, QO = DO && !GO && (0, rB.Oc)(AB.superRankInfo) ? AB.superRankInfo : null, oO = vB ? MB("general:timeLeft", {
+        time: vB
+      }) : !(DO && ZB) && sB, [JO, MO] = (0, YB.useState)(!1), [PO, NO] = (0, YB.useState)(!1), RO = (0, YB.useRef)(null), AO = (0, YB.useRef)(null), VO = (0, LB.c)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), UB = null === TB, VB = null !== TB && void 0 !== TB ? TB : [], kB = PH !== oH.NULL_USER_CONTEXT && !PH.isLoggedIn(), mB = kB && 0 !== (null === TB || void 0 === TB ? void 0 : TB.length), [oB, IB] = (0, AH.useState)([]), [fB, lB] = (0, AH.useState)(!1), KB = PH.playerHasRank("youtuber"), cB = (0, AH.useCallback)((() => qH.d.getPlayerProfile(PH, {
-        lowerCaseName: PH.getPlayerName().toLowerCase()
-      }).then((HH => {
-        IB(HH.socialLinks)
-      })).catch((HH => {
-        console.error("Failed to refresh social links", HH)
-      }))), [PH]);
+      }), SO = null === VO, nO = null !== VO && void 0 !== VO ? VO : [], kO = AB !== KB.NULL_USER_CONTEXT && !AB.isLoggedIn(), dO = kO && 0 !== (null === VO || void 0 === VO ? void 0 : VO.length), [KO, uO] = (0, YB.useState)([]), [mO, IO] = (0, YB.useState)(!1), FO = AB.playerHasRank("youtuber"), iO = (0, YB.useCallback)((() => gB.b.getPlayerProfile(AB, {
+        lowerCaseName: AB.getPlayerName().toLowerCase()
+      }).then((BB => {
+        uO(BB.socialLinks)
+      })).catch((BB => {
+        console.error("Failed to refresh social links", BB)
+      }))), [AB]);
 
-      function eB(HH) {
-        HH !== kH && ((0, KH.k)(HH) ? (HH = (0, KH.n)(HH), ZH(EH("homePage:nameCharacters"))) : ZH(null), xB.current && (xB.current.value = HH), nH(HH))
+      function LO(BB) {
+        BB !== kB && ((0, FB.s)(BB) ? (BB = (0, FB.u)(BB), TB(MB("homePage:nameCharacters"))) : TB(null), RO.current && (RO.current.value = BB), cB(BB))
       }
-      return (0, AH.useEffect)((() => (!0 === rH ? (clearInterval(PB.current), PB.current = setInterval(vH, 1e3)) : clearInterval(PB.current), () => {
-        clearInterval(PB.current)
-      })), [rH, vH]), (0, AH.useEffect)((() => {
-        var HH;
-        nH(null !== (HH = PH.getPlayerName()) && void 0 !== HH ? HH : "")
-      }), [PH]), (0, AH.useEffect)((() => {
-        if (!rH || !KB || bH) return;
-        let HH = !1;
-        return lB(!0), IB([]), qH.d.getPlayerProfile(PH, {
-          lowerCaseName: PH.getPlayerName().toLowerCase()
-        }).then((BH => {
-          HH || IB(BH.socialLinks)
-        })).catch((HH => {
-          console.error("Failed to load social links", HH)
+      return (0, YB.useEffect)((() => (!0 === DB ? (clearInterval(AO.current), AO.current = setInterval(WB, 1e3)) : clearInterval(AO.current), () => {
+        clearInterval(AO.current)
+      })), [DB, WB]), (0, YB.useEffect)((() => {
+        var BB;
+        cB(null !== (BB = AB.getPlayerName()) && void 0 !== BB ? BB : "")
+      }), [AB]), (0, YB.useEffect)((() => {
+        if (!DB || !FO || fB) return;
+        let BB = !1;
+        return IO(!0), uO([]), gB.b.getPlayerProfile(AB, {
+          lowerCaseName: AB.getPlayerName().toLowerCase()
+        }).then((OB => {
+          BB || uO(OB.socialLinks)
+        })).catch((BB => {
+          console.error("Failed to load social links", BB)
         })).finally((() => {
-          HH || lB(!1)
+          BB || IO(!1)
         })), () => {
-          HH = !0
+          BB = !0
         }
-      }), [rH, KB, bH, PH]), (0, XH.jsxs)("div", {
-        className: SH()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: zH
+      }), [DB, FO, fB, AB]), (0, PB.jsxs)("div", {
+        className: QB()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: yB
         }),
-        children: [zH && (0, XH.jsx)("div", {
+        children: [yB && (0, PB.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: EH("settingsMenu:accountSettingsInGameWarning")
-        }), (0, XH.jsxs)("div", {
+          children: MB("settingsMenu:accountSettingsInGameWarning")
+        }), (0, PB.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [EH("homePage:discordNamePopupTitle"), (0, XH.jsxs)(lH.LinkPreserveSearch, {
+            children: [MB("homePage:discordNamePopupTitle"), (0, PB.jsxs)(IB.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, cH.k)({
-                name: PH.getPlayerName()
+              to: (0, iB.j)({
+                name: AB.getPlayerName()
               }),
               onClick: () => {
-                OH.c.set({
+                UB.c.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "arrow-up-right-from-square"
-              }), " ", EH("profileCard:viewProfile")]
+              }), " ", MB("profileCard:viewProfile")]
             })]
-          }), (0, XH.jsxs)("div", {
+          }), (0, PB.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, XH.jsxs)("div", {
+            children: [(0, PB.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [MH.featureFlags.canChangeName && (0, XH.jsx)(TH.e, {
+              children: [NB.featureFlags.canChangeName && (0, PB.jsx)(VB.b, {
                 className: "EnterName",
-                placeholderText: EH("homePage:enterName"),
-                maxLength: KH.e,
-                defaultValue: kH,
-                onValueChange: HH => {
-                  eB(HH)
+                placeholderText: MB("homePage:enterName"),
+                maxLength: FB.l,
+                defaultValue: kB,
+                onValueChange: BB => {
+                  LO(BB)
                 },
-                forcedText: CB || !MH.featureFlags.canChangeName ? kH : null,
+                forcedText: JO || !NB.featureFlags.canChangeName ? kB : null,
                 blurOnEnter: !0,
-                domRef: xB
-              }), (0, XH.jsx)(CH.i, {
+                domRef: RO
+              }), (0, PB.jsx)(JB.f, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  eB((0, KH.c)())
+                  LO((0, FB.h)())
                 },
-                children: (0, XH.jsx)(tH.c, {
+                children: (0, PB.jsx)(jB.b, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !MH.featureFlags.canChangeName && (0, XH.jsx)("div", {
+              }), !NB.featureFlags.canChangeName && (0, PB.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, KH.b)(kH, !MH.featureFlags.canSeeRealPlayerNames)
+                children: (0, FB.e)(kB, !NB.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, XH.jsx)(CH.i, {
+            }), (0, PB.jsx)(JB.f, {
               className: "ChooseNameButton",
-              disabled: CB || kH === PH.getPlayerName(),
+              disabled: JO || kB === AB.getPlayerName(),
               onClick: () => {
-                kH.length < KH.h ? ZH(EH("homePage:changeNameMinLengthError", {
-                  length: KH.h
-                })) : kH.length > KH.e ? ZH(EH("homePage:changeNameMaxLengthError", {
-                  length: KH.e
-                })) : (EB(!0), ZH(null), (0, IH.i)(PH, kH).then((HH => {
-                  EB(!1), "taken" === HH.outcome ? ZH(EH("homePage:nameTaken")) : "refused" === HH.outcome ? ZH(HH.message) : "failed" === HH.outcome && ZH(EH((0, IH.e)(HH.failure)))
+                kB.length < FB.o ? TB(MB("homePage:changeNameMinLengthError", {
+                  length: FB.o
+                })) : kB.length > FB.l ? TB(MB("homePage:changeNameMaxLengthError", {
+                  length: FB.l
+                })) : (MO(!0), TB(null), (0, uB.f)(AB, kB).then((BB => {
+                  MO(!1), "taken" === BB.outcome ? TB(MB("homePage:nameTaken")) : "refused" === BB.outcome ? TB(BB.message) : "failed" === BB.outcome && TB(MB((0, uB.e)(BB.failure)))
                 })))
               },
-              children: EH("general:choose")
+              children: MB("general:choose")
             })]
-          }), wH && (0, XH.jsx)("div", {
+          }), eB && (0, PB.jsx)("div", {
             className: "ChooseAccNameError",
-            children: wH
+            children: eB
           })]
-        }), (0, XH.jsx)(dB, {
-          userContext: PH
-        }), (0, XH.jsx)(VH.c, {
+        }), (0, PB.jsx)(bO, {
+          userContext: AB
+        }), (0, PB.jsx)(nB.c, {
           label: (() => {
-            if ((0, uB.j)(QH)) {
-              const HH = (0, hH.n)(GH.code, "general:timeLeft"),
-                BH = (0, gH._)(HH, Date.now(), QH + uB.h);
-              return `${EH("settingsMenu:hideSocialLocation")} (${EH("general:timeLeft",{time:BH})})`
+            if ((0, pO.n)(qB)) {
+              const BB = (0, oB.s)(zB.code, "general:timeLeft"),
+                OB = (0, rB.eb)(BB, Date.now(), qB + pO.k);
+              return `${MB("settingsMenu:hideSocialLocation")} (${MB("general:timeLeft",{time:OB})})`
             }
-            return EH("settingsMenu:hideSocialLocation")
+            return MB("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const HH = !(0, uB.j)(QH);
-            (0, WB.reportAnalyticsClick)({
+            const BB = !(0, pO.n)(qB);
+            (0, ZO.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: HH ? "on" : "off"
-            }), MB(!0), qH.d.setHideSocialLocation(PH, HH).then((() => {
-              OH.c.set({
-                hideSocialLocationFrom: HH ? Date.now() : null
+              value: BB ? "on" : "off"
+            }), NO(!0), gB.b.setHideSocialLocation(AB, BB).then((() => {
+              UB.c.set({
+                hideSocialLocationFrom: BB ? Date.now() : null
               })
             })).finally((() => {
-              MB(!1)
+              NO(!1)
             }))
           },
-          checked: (0, uB.j)(QH),
-          disabled: XB
-        }), KB && (0, XH.jsxs)("div", {
+          checked: (0, pO.n)(qB),
+          disabled: PO
+        }), FO && (0, PB.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: EH("settingsMenu:socialLinks")
-          }), fB && (0, XH.jsx)(UH.d, {}), !fB && (0, XH.jsx)(QB.b, {
-            socialLinks: oB,
+            children: MB("settingsMenu:socialLinks")
+          }), mO && (0, PB.jsx)(SB.b, {}), !mO && (0, PB.jsx)(qO.b, {
+            socialLinks: KO,
             editable: !0,
-            userContext: PH,
-            onLinksUpdated: cB
+            userContext: AB,
+            onLinksUpdated: iO
           })]
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: EH(mB ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), UB && (0, XH.jsx)(UH.d, {}), !UB && 0 === VB.length && (0, XH.jsx)("div", {
+            children: MB(dO ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), SO && (0, PB.jsx)(SB.b, {}), !SO && 0 === nO.length && (0, PB.jsx)("div", {
             className: "NoLoginOptions",
-            children: EH("auth:noLoginOptions")
-          }), !UB && VB.length > 0 && "crazygames" !== mH.siteUsed && (0, XH.jsx)("div", {
+            children: MB("auth:noLoginOptions")
+          }), !SO && nO.length > 0 && "crazygames" !== dB.siteUsed && (0, PB.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: VB
-          }), !UB && VB.length > 0 && "crazygames" === mH.siteUsed && (0, XH.jsxs)("div", {
+            children: nO
+          }), !SO && nO.length > 0 && "crazygames" === dB.siteUsed && (0, PB.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [VB[0], VB.length > 1 && (0, XH.jsxs)(XH.Fragment, {
-              children: [(0, XH.jsxs)("div", {
+            children: [nO[0], nO.length > 1 && (0, PB.jsxs)(PB.Fragment, {
+              children: [(0, PB.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, XH.jsx)("span", {
+                children: [(0, PB.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: EH("auth:legacyLoginOptions")
-                }), (0, XH.jsx)(YB.e, {
+                  children: MB("auth:legacyLoginOptions")
+                }), (0, PB.jsx)(lO.c, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: EH("auth:legacyLoginOptionsInfo")
+                  hoverInfo: MB("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, XH.jsx)("div", {
+              }), (0, PB.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: VB.slice(1)
+                children: nO.slice(1)
               })]
             })]
-          }), MH.featureFlags.useLogin && (null !== PH.loggedInInfo || PH.isLoggedIn()) && (0, XH.jsxs)(XH.Fragment, {
-            children: [(0, XH.jsx)("div", {
+          }), NB.featureFlags.useLogin && (null !== AB.loggedInInfo || AB.isLoggedIn()) && (0, PB.jsxs)(PB.Fragment, {
+            children: [(0, PB.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, XH.jsxs)(CH.O, {
+            }), (0, PB.jsxs)(JB.Q, {
               onClick: () => {
-                (0, oH.forceGlobalSignOut)()
+                (0, KB.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "right-from-bracket"
-              }), EH("auth:signOut")]
+              }), MB("auth:signOut")]
             })]
           })]
-        }), null !== SB && (0, XH.jsxs)("div", {
+        }), null !== QO && (0, PB.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: (0, XH.jsx)(jH.i, {
-              tierId: SB.tier
+            children: (0, PB.jsx)(EB.h, {
+              tierId: QO.tier
             })
-          }), (0, XH.jsx)(tB, {
-            showing: rH
+          }), (0, PB.jsx)(jO, {
+            showing: DB
           })]
-        }), !LB && WH && (0, XH.jsxs)("div", {
+        }), !GO && ZB && (0, PB.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: (0, XH.jsx)(jH.i, {
-              tierId: yH.id
+            children: (0, PB.jsx)(EB.h, {
+              tierId: tB.id
             })
-          }), null !== AB && (0, XH.jsx)(FH, {
+          }), null !== YO && (0, PB.jsx)(hB, {
             className: "AccountSettingsSuperRankRetired SmallTextBold",
-            until: AB
-          }), (0, XH.jsxs)("div", {
+            until: YO
+          }), (0, PB.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, XH.jsxs)(CH.u, {
+            children: [(0, PB.jsxs)(JB.q, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zB.k)({
+                (0, yO.p)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "bolt"
-              }), EH(null !== AB ? "store:upgradeToHyperRank" : BB.getKey)]
-            }), (0, XH.jsxs)(CH.u, {
+              }), MB(null !== YO ? "store:upgradeToHyperRank" : OO.getKey)]
+            }), (0, PB.jsxs)(JB.q, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zB.k)({
+                (0, yO.p)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "bolt"
-              }), EH(BB.giftKey)]
+              }), MB(OO.giftKey)]
             })]
-          }), (0, XH.jsx)(bB, {
-            ...xH
+          }), (0, PB.jsx)(fO, {
+            ...RB
           })]
-        }), LB && (0, XH.jsxs)("div", {
+        }), GO && (0, PB.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, XH.jsx)(jH.i, {
-              tierId: yH.id
-            }), hB && (0, XH.jsxs)("div", {
+            children: [(0, PB.jsx)(EB.h, {
+              tierId: tB.id
+            }), oO && (0, PB.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", hB, ")"]
+              children: ["(", oO, ")"]
             })]
-          }), rB && (0, XH.jsx)(tB, {
-            showing: rH
-          }), WH && (0, XH.jsxs)("div", {
+          }), DO && (0, PB.jsx)(jO, {
+            showing: DB
+          }), ZB && (0, PB.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, gH.Ec)(PH.superRankInfo) && (0, XH.jsxs)(CH.u, {
+            children: [!(0, rB.Oc)(AB.superRankInfo) && (0, PB.jsxs)(JB.q, {
               className: "AccountSettingsSuperRankProlong",
-              loading: dH,
+              loading: bB,
               onClick: () => {
-                sH(HB.id, null)
+                HB(BO.id, null)
               },
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "bolt"
-              }), EH("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: HB.product.days,
-                price: HB.price
+              }), MB("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: BO.product.days,
+                price: BO.price
               })]
-            }), (0, XH.jsxs)(CH.u, {
+            }), (0, PB.jsxs)(JB.q, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zB.k)({
+                (0, yO.p)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "bolt"
-              }), EH(BB.giftKey)]
+              }), MB(OO.giftKey)]
             })]
-          }), aH && (0, XH.jsx)("div", {
+          }), CB && (0, PB.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: EH(aH.translationKey)
-          }), (0, XH.jsx)(bB, {
-            ...xH
+            children: MB(CB.translationKey)
+          }), (0, PB.jsx)(fO, {
+            ...RB
           })]
-        }), (0, XH.jsx)(vB, {
-          showing: rH
-        }), MH.featureFlags.useSocialFeatures && (0, XH.jsx)(FB, {
-          showing: rH
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsx)(WO, {
+          showing: DB
+        }), NB.featureFlags.useSocialFeatures && (0, PB.jsx)(hO, {
+          showing: DB
+        }), (0, PB.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: EH(sB(kB, mB))
-            }), (0, mH.isDiscordClient)() && (0, XH.jsx)("div", {
+              children: MB(HO(kO, dO))
+            }), (0, dB.isDiscordClient)() && (0, PB.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: EH("auth:discordActivityKickWarning")
-            }), (0, XH.jsx)(qB, {
-              showing: rH
+              children: MB("auth:discordActivityKickWarning")
+            }), (0, PB.jsx)(gO, {
+              showing: DB
             })]
-          }), (0, XH.jsx)("div", {
+          }), (0, PB.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: EH(kB ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: MB(kO ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function sB(HH, BH) {
-      return HH ? BH ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function HO(BB, OB) {
+      return BB ? OB ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var JB = LH(34877),
-      iB = LH(3473),
-      pB = LH(1440),
-      yB = LH(2051),
-      HL = LH(9584),
-      BL = LH(34883);
+    var vO = GB(34693),
+      sO = GB(3544),
+      xO = GB(1468),
+      tO = GB(2063),
+      BG = GB(9547),
+      OG = GB(34702);
 
-    function LL() {
+    function GG() {
       const {
-        t: HH
-      } = (0, hH.B)();
-      return (0, yB.e)("localPlayerAlive") ? (0, XH.jsx)(HL.c, {
+        t: BB
+      } = (0, oB.H)();
+      return (0, tO.g)("localPlayerAlive") ? (0, PB.jsx)(BG.d, {
         icon: "camera-alt",
-        title: HH("screenshotMode:title"),
-        sub: HH("screenshotMode:entrySub"),
-        onClick: BL.e
+        title: BB("screenshotMode:title"),
+        sub: BB("screenshotMode:entrySub"),
+        onClick: OG.d
       }) : null
     }
-    var AL = LH(34898);
-    const rL = (0, AH.memo)((function(HH) {
+    var YG = GB(34713);
+    const DG = (0, YB.memo)((function(BB) {
         let {
-          inGame: BH
-        } = HH;
+          inGame: OB
+        } = BB;
         const {
-          t: LH,
-          selectedLanguage: AH
-        } = (0, hH.B)(), {
-          clientEscMenuOptions: rH,
-          showDebugOverlay: SH,
-          isTouchScreen: tH
-        } = (0, OH.m)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), zH = (0, QH.j)("hideCoordinates");
-        let CH = "settingsMenu:showCoordinates",
-          EH = "settingsMenu:showChunkCoordinates";
+          t: GB,
+          selectedLanguage: YB
+        } = (0, oB.H)(), {
+          clientEscMenuOptions: DB,
+          showDebugOverlay: QB,
+          isTouchScreen: jB
+        } = (0, UB.o)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), yB = (0, qB.g)("hideCoordinates");
+        let JB = "settingsMenu:showCoordinates",
+          MB = "settingsMenu:showChunkCoordinates";
 
-        function GH(HH) {
-          const BH = new Intl.DisplayNames([HH], {
+        function zB(BB) {
+          const OB = new Intl.DisplayNames([BB], {
             type: "language"
-          }).of(HH);
-          return BH.charAt(0).toUpperCase() + BH.slice(1)
+          }).of(BB);
+          return OB.charAt(0).toUpperCase() + OB.slice(1)
         }
-        return zH && (CH = "settingsMenu:showCoordinatesHidden", EH = "settingsMenu:showChunkCoordinatesHidden"), (0, XH.jsxs)("div", {
+        return yB && (JB = "settingsMenu:showCoordinatesHidden", MB = "settingsMenu:showChunkCoordinatesHidden"), (0, PB.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [BH && MH.featureFlags.canUseInviteLinks && (0, XH.jsxs)("div", {
+          children: [OB && NB.featureFlags.canUseInviteLinks && (0, PB.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: LH("settingsMenu:inviteLink")
-            }), (0, XH.jsx)(JB.g, {})]
-          }), (0, XH.jsxs)("div", {
+              children: GB("settingsMenu:inviteLink")
+            }), (0, PB.jsx)(vO.e, {})]
+          }), (0, PB.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: LH("settingsMenu:language")
-            }), (0, XH.jsx)(iB.b, {
-              options: Object.entries(hH.j).map((HH => {
-                let [BH, LH] = HH;
+              children: GB("settingsMenu:language")
+            }), (0, PB.jsx)(sO.c, {
+              options: Object.entries(oB.l).map((BB => {
+                let [OB, GB] = BB;
                 return {
-                  label: (0, XH.jsxs)("div", {
+                  label: (0, PB.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, XH.jsx)("img", {
-                      src: LH.flagImg,
+                    children: [(0, PB.jsx)("img", {
+                      src: GB.flagImg,
                       alt: "flag"
-                    }), (0, XH.jsxs)("span", {
-                      children: [GH(BH), " ", (0, XH.jsxs)("span", {
+                    }), (0, PB.jsxs)("span", {
+                      children: [zB(OB), " ", (0, PB.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", BH, ")"]
+                        children: ["(", OB, ")"]
                       })]
                     })]
                   }),
-                  value: BH
+                  value: OB
                 }
               })),
-              value: AH.code,
-              onChange: HH => {
-                sH.g.get().setCurrentLanguage(HH.value)
+              value: YB.code,
+              onChange: BB => {
+                HB.e.get().setCurrentLanguage(BB.value)
               }
             })]
-          }), BH && tH && (0, AL.c)() && (0, XH.jsx)(LL, {}), !(0, MH.isMobileApp)() && (0, pB.k)() && MH.featureFlags.useForceRotateForceFullscreenOverlay && (0, XH.jsx)(VH.c, {
-            label: LH("settingsMenu:disableFullscreenMode"),
-            checked: rH.disableFullscreen,
-            onClick: HH => {
-              OH.c.setClientEscMenuOptions({
-                disableFullscreen: HH
+          }), OB && jB && (0, YG.d)() && (0, PB.jsx)(GG, {}), !(0, NB.isMobileApp)() && (0, xO.h)() && NB.featureFlags.useForceRotateForceFullscreenOverlay && (0, PB.jsx)(nB.c, {
+            label: GB("settingsMenu:disableFullscreenMode"),
+            checked: DB.disableFullscreen,
+            onClick: BB => {
+              UB.c.setClientEscMenuOptions({
+                disableFullscreen: BB
               })
             }
-          }), (0, XH.jsx)(VH.c, {
-            label: LH(CH),
-            checked: rH.showCoordinates,
-            onClick: HH => {
-              OH.c.setClientEscMenuOptions({
-                showCoordinates: HH
+          }), (0, PB.jsx)(nB.c, {
+            label: GB(JB),
+            checked: DB.showCoordinates,
+            onClick: BB => {
+              UB.c.setClientEscMenuOptions({
+                showCoordinates: BB
               })
             },
-            disabled: zH
-          }), (0, XH.jsx)(VH.c, {
-            label: LH(EH),
-            checked: rH.showChunkCoordinates,
-            onClick: HH => {
-              OH.c.setClientEscMenuOptions({
-                showChunkCoordinates: HH
+            disabled: yB
+          }), (0, PB.jsx)(nB.c, {
+            label: GB(MB),
+            checked: DB.showChunkCoordinates,
+            onClick: BB => {
+              UB.c.setClientEscMenuOptions({
+                showChunkCoordinates: BB
               })
             },
-            disabled: zH
-          }), (0, XH.jsx)(VH.c, {
-            label: LH("settingsMenu:showFps"),
-            checked: rH.showFPS,
-            onClick: HH => {
-              OH.c.setClientEscMenuOptions({
-                showFPS: HH
+            disabled: yB
+          }), (0, PB.jsx)(nB.c, {
+            label: GB("settingsMenu:showFps"),
+            checked: DB.showFPS,
+            onClick: BB => {
+              UB.c.setClientEscMenuOptions({
+                showFPS: BB
               })
             }
-          }), (0, XH.jsx)(VH.c, {
-            label: LH("settingsMenu:disableBunnyHopping"),
-            checked: rH.disableBunnyHopping,
-            onClick: HH => {
-              OH.c.setClientEscMenuOptions({
-                disableBunnyHopping: HH
+          }), (0, PB.jsx)(nB.c, {
+            label: GB("settingsMenu:disableBunnyHopping"),
+            checked: DB.disableBunnyHopping,
+            onClick: BB => {
+              UB.c.setClientEscMenuOptions({
+                disableBunnyHopping: BB
               })
             }
-          }), (0, IB.t)() && (0, XH.jsx)(VH.c, {
-            label: LH("settingsMenu:showChat"),
-            checked: rH.showChat,
-            onClick: HH => {
-              OH.c.setClientEscMenuOptions({
-                showChat: HH
+          }), (0, uO.s)() && (0, PB.jsx)(nB.c, {
+            label: GB("settingsMenu:showChat"),
+            checked: DB.showChat,
+            onClick: BB => {
+              UB.c.setClientEscMenuOptions({
+                showChat: BB
               })
             }
-          }), (0, XH.jsx)(VH.c, {
-            label: LH("settingsMenu:showDebugOverlay"),
-            checked: SH,
-            onClick: HH => {
-              OH.c.set({
-                showDebugOverlay: HH
+          }), (0, PB.jsx)(nB.c, {
+            label: GB("settingsMenu:showDebugOverlay"),
+            checked: QB,
+            onClick: BB => {
+              UB.c.set({
+                showDebugOverlay: BB
               })
             }
-          }), MH.featureFlags.useSocialFeatures && (0, XH.jsx)(VH.c, {
-            label: LH("settingsMenu:showFriendOnlineToasts"),
-            checked: rH.showFriendOnlineToasts,
-            onClick: HH => {
-              OH.c.setClientEscMenuOptions({
-                showFriendOnlineToasts: HH
+          }), NB.featureFlags.useSocialFeatures && (0, PB.jsx)(nB.c, {
+            label: GB("settingsMenu:showFriendOnlineToasts"),
+            checked: DB.showFriendOnlineToasts,
+            onClick: BB => {
+              UB.c.setClientEscMenuOptions({
+                showFriendOnlineToasts: BB
               })
             }
-          }), (0, XH.jsx)(VH.c, {
-            label: LH("settingsMenu:showNewItemIndicator"),
-            checked: rH.showNewItemIndicator,
-            onClick: HH => {
-              OH.c.setClientEscMenuOptions({
-                showNewItemIndicator: HH
+          }), (0, PB.jsx)(nB.c, {
+            label: GB("settingsMenu:showNewItemIndicator"),
+            checked: DB.showNewItemIndicator,
+            onClick: BB => {
+              UB.c.setClientEscMenuOptions({
+                showNewItemIndicator: BB
               })
             }
           })]
         })
       })),
-      SL = (0, AH.memo)((function() {
+      QG = (0, YB.memo)((function() {
         const {
-          t: HH
-        } = (0, hH.B)(), {
-          soundVolume: BH,
-          musicVolume: LH
-        } = (0, OH.m)(["soundVolume", "musicVolume"]);
-        return (0, XH.jsxs)("div", {
+          t: BB
+        } = (0, oB.H)(), {
+          soundVolume: OB,
+          musicVolume: GB
+        } = (0, UB.o)(["soundVolume", "musicVolume"]);
+        return (0, PB.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, XH.jsx)(VH.f, {
-            name: HH("settingsMenu:musicVolume"),
+          children: [(0, PB.jsx)(nB.f, {
+            name: BB("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: LH,
-            onChange: HH => {
-              OH.c.set({
-                musicVolume: Math.round(100 * HH) / 100
+            initValue: GB,
+            onChange: BB => {
+              UB.c.set({
+                musicVolume: Math.round(100 * BB) / 100
               })
             },
-            format: HH => HH.toFixed(2)
-          }), (0, XH.jsx)(VH.f, {
-            name: HH("settingsMenu:soundEffectsVolume"),
+            format: BB => BB.toFixed(2)
+          }), (0, PB.jsx)(nB.f, {
+            name: BB("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: BH,
-            onChange: HH => {
-              OH.c.set({
-                soundVolume: Math.round(100 * HH) / 100
+            initValue: OB,
+            onChange: BB => {
+              UB.c.set({
+                soundVolume: Math.round(100 * BB) / 100
               })
             },
-            format: HH => HH.toFixed(2)
+            format: BB => BB.toFixed(2)
           })]
         })
       }));
-    var hL = LH(692),
-      tL = LH(1450),
-      zL = LH(2565),
-      CL = LH(2556),
-      EL = LH(3879);
-    const XL = {
+    var oG = GB(729),
+      jG = GB(1480),
+      yG = GB(2586),
+      JG = GB(2578),
+      MG = GB(3928);
+    const PG = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function GL() {
+    function zG() {
       const {
-        t: HH
-      } = (0, hH.B)(), BH = (0, EL.c)(), {
-        mobilePushNotificationsCanAsk: LH
-      } = (0, OH.m)(["mobilePushNotificationsCanAsk"]), [rH, SH] = (0, AH.useState)(null), [tH, zH] = (0, AH.useState)(!1), [EH, GH] = (0, AH.useState)(null), [YH, uH] = (0, AH.useState)(!1), QH = (0, AH.useCallback)((() => {
-        (0, zL.d)().then((HH => {
-          BH.current && (SH(HH), zH(!1))
-        })).catch((HH => {
-          console.error("Failed to load push notification targets:", HH), BH.current && zH(!0)
+        t: BB
+      } = (0, oB.H)(), OB = (0, MG.c)(), {
+        mobilePushNotificationsCanAsk: GB
+      } = (0, UB.o)(["mobilePushNotificationsCanAsk"]), [DB, QB] = (0, YB.useState)(null), [jB, yB] = (0, YB.useState)(!1), [MB, zB] = (0, YB.useState)(null), [lB, pB] = (0, YB.useState)(!1), qB = (0, YB.useCallback)((() => {
+        (0, yG.c)().then((BB => {
+          OB.current && (QB(BB), yB(!1))
+        })).catch((BB => {
+          console.error("Failed to load push notification targets:", BB), OB.current && yB(!0)
         }))
-      }), [BH]), WH = (0, AH.useCallback)((() => {
-        (0, CL.c)().then((HH => {
-          BH.current && GH((() => HH))
+      }), [OB]), ZB = (0, YB.useCallback)((() => {
+        (0, JG.c)().then((BB => {
+          OB.current && zB((() => BB))
         }))
-      }), [BH]);
-      (0, AH.useEffect)((() => {
-        QH()
-      }), [QH]), (0, AH.useEffect)((() => {
-        WH()
-      }), [WH, LH]), (0, tL.d)(zL.g, QH);
-      const MH = null === rH ? [] : Object.keys(XL).filter((HH => rH[HH] > 0));
-      return (0, XH.jsxs)("div", {
+      }), [OB]);
+      (0, YB.useEffect)((() => {
+        qB()
+      }), [qB]), (0, YB.useEffect)((() => {
+        ZB()
+      }), [ZB, GB]), (0, jG.f)(yG.k, qB);
+      const NB = null === DB ? [] : Object.keys(PG).filter((BB => DB[BB] > 0));
+      return (0, PB.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "SliderText",
-          children: HH("notificationSettings:pushNotifications")
-        }), null === rH && tH && (0, XH.jsx)("div", {
+          children: BB("notificationSettings:pushNotifications")
+        }), null === DB && jB && (0, PB.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: HH("notificationSettings:pushTargetsLoadFailed")
-        }), null !== rH && 0 === MH.length && (0, XH.jsx)("div", {
+          children: BB("notificationSettings:pushTargetsLoadFailed")
+        }), null !== DB && 0 === NB.length && (0, PB.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: HH("notificationSettings:pushTargetsNone")
-        }), MH.length > 0 && (0, XH.jsx)("ul", {
+          children: BB("notificationSettings:pushTargetsNone")
+        }), NB.length > 0 && (0, PB.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: MH.map((BH => {
-            var LH;
-            return (0, XH.jsx)("li", {
-              children: HH(XL[BH], {
-                count: null !== (LH = null === rH || void 0 === rH ? void 0 : rH[BH]) && void 0 !== LH ? LH : 0
+          children: NB.map((OB => {
+            var GB;
+            return (0, PB.jsx)("li", {
+              children: BB(PG[OB], {
+                count: null !== (GB = null === DB || void 0 === DB ? void 0 : DB[OB]) && void 0 !== GB ? GB : 0
               })
-            }, BH)
+            }, OB)
           }))
-        }), null !== EH && (0, XH.jsx)(CH.i, {
+        }), null !== MB && (0, PB.jsx)(JB.f, {
           className: "PushNotificationSettingsButton",
-          loading: YH,
+          loading: lB,
           onClick: () => {
-            uH(!0), EH().catch((HH => {
-              console.error("Failed to turn on push notifications:", HH)
+            pB(!0), MB().catch((BB => {
+              console.error("Failed to turn on push notifications:", BB)
             })).finally((() => {
-              BH.current && (uH(!1), WH())
+              OB.current && (pB(!1), ZB())
             }))
           },
-          children: HH("notificationSettings:pushTurnOn")
+          children: BB("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var YL = LH(2738),
-      uL = LH(2543),
-      QL = LH(1922),
-      WL = LH(30);
-    async function ML() {
-      return "dailyDropReminderAsked_" + (await oH.userContextManager.getCurrentUserContext()).whamm
+    var lG = GB(2771),
+      pG = GB(2572),
+      qG = GB(1964),
+      ZG = GB(31);
+    async function NG() {
+      return "dailyDropReminderAsked_" + (await KB.userContextManager.getCurrentUserContext()).whamm
     }
 
-    function xL(HH) {
-      return async function(HH) {
-        if (HH.remindersOn || (0, OH.g)(OH.c.get("gameState"))) return null;
-        const BH = await ML();
-        if (null !== WL.e.getItem(BH)) return null;
-        const [LH, AH] = await Promise.all([(0, CL.c)().catch((HH => (console.error("Couldn't tell whether this device can take push notifications:", HH), null))), vL()]);
-        if (null === LH && !AH) return null;
-        if (null !== LH && ((0, uL.b)() || (0, CL.f)())) return null;
+    function RG(BB) {
+      return async function(BB) {
+        if (BB.remindersOn || (0, UB.g)(UB.c.get("gameState"))) return null;
+        const OB = await NG();
+        if (null !== ZG.g.getItem(OB)) return null;
+        const [GB, YB] = await Promise.all([(0, JG.c)().catch((BB => (console.error("Couldn't tell whether this device can take push notifications:", BB), null))), WG()]);
+        if (null === GB && !YB) return null;
+        if (null !== GB && ((0, pG.e)() || (0, JG.d)())) return null;
         return {
-          askedKey: BH,
-          requester: LH
+          askedKey: OB,
+          requester: GB
         }
-      }(HH).catch((HH => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", HH), null)))
+      }(BB).catch((BB => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", BB), null)))
     }
 
-    function vL() {
-      return (0, zL.d)().then((HH => HH.app + HH.browser + HH.msnPlay > 0), (HH => (console.error("Couldn't tell where push notifications reach this account:", HH), !0)))
+    function WG() {
+      return (0, yG.c)().then((BB => BB.app + BB.browser + BB.msnPlay > 0), (BB => (console.error("Couldn't tell where push notifications reach this account:", BB), !0)))
     }
-    async function PL(HH) {
-      const BH = (0, YL.t)({
+    async function AG(BB) {
+      const OB = (0, lG.y)({
           remindersOn: !0
         }),
-        LH = null === HH ? Promise.resolve() : HH(),
-        [AH, rH] = await Promise.allSettled([BH, LH]);
-      "rejected" === AH.status && console.error("Failed to turn on Lucky Skin Block reminders:", AH.reason), "rejected" === rH.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", rH.reason), "rejected" !== AH.status && "rejected" !== rH.status || QL.h.showMessage({
+        GB = null === BB ? Promise.resolve() : BB(),
+        [YB, DB] = await Promise.allSettled([OB, GB]);
+      "rejected" === YB.status && console.error("Failed to turn on Lucky Skin Block reminders:", YB.reason), "rejected" === DB.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", DB.reason), "rejected" !== YB.status && "rejected" !== DB.status || qG.d.showMessage({
         translationKey: "dailyDrop:remindFailed"
       })
     }
-    const TL = {
+    const VG = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1559,7 +1559,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      UL = {
+      SG = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1570,400 +1570,400 @@ export const modules = {
         }
       };
 
-    function VL(HH) {
+    function nG(BB) {
       let {
-        setting: BH,
-        value: LH
-      } = HH;
+        setting: OB,
+        value: GB
+      } = BB;
       const {
-        t: rH
-      } = (0, hH.B)(), tH = (0, EL.c)(), [zH, CH] = (0, AH.useState)(null), [EH, GH] = (0, AH.useState)(!1), [YH, uH] = (0, AH.useState)(null);
-      return (0, AH.useEffect)((() => {
-        "remindersOn" === BH && (0, CL.c)().then((HH => {
-          tH.current && uH((() => HH))
-        }), (HH => {
-          console.error("Couldn't tell whether this device can take push notifications:", HH)
+        t: DB
+      } = (0, oB.H)(), jB = (0, MG.c)(), [yB, JB] = (0, YB.useState)(null), [MB, zB] = (0, YB.useState)(!1), [lB, pB] = (0, YB.useState)(null);
+      return (0, YB.useEffect)((() => {
+        "remindersOn" === OB && (0, JG.c)().then((BB => {
+          jB.current && pB((() => BB))
+        }), (BB => {
+          console.error("Couldn't tell whether this device can take push notifications:", BB)
         }))
-      }), [BH, tH]), (0, XH.jsx)(VH.c, {
-        className: SH()({
-          DailyDropSettingFailed: EH
+      }), [OB, jB]), (0, PB.jsx)(nB.c, {
+        className: QB()({
+          DailyDropSettingFailed: MB
         }),
-        label: rH(UL[BH].label),
-        checked: null !== zH && void 0 !== zH ? zH : LH,
-        note: EH ? rH("dailyDrop:settingFailed") : void 0,
-        onClick: HH => {
-          null === zH && (CH(HH), GH(!1), HH && null !== YH && YH().catch((HH => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", HH)
-          })), (0, YL.q)("daily_drop.setting", `${UL[BH].reportAs}_${HH?"on":"off"}`), "remindersOn" === BH && ML().then((HH => {
-            WL.e.setItem(HH, !0)
-          }), (HH => {
-            console.error("Failed to keep the Lucky Skin Block reminders choice:", HH)
-          })), (0, YL.t)("hidden" === BH ? {
-            hidden: HH
+        label: DB(SG[OB].label),
+        checked: null !== yB && void 0 !== yB ? yB : GB,
+        note: MB ? DB("dailyDrop:settingFailed") : void 0,
+        onClick: BB => {
+          null === yB && (JB(BB), zB(!1), BB && null !== lB && lB().catch((BB => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", BB)
+          })), (0, lG.v)("daily_drop.setting", `${SG[OB].reportAs}_${BB?"on":"off"}`), "remindersOn" === OB && NG().then((BB => {
+            ZG.g.setItem(BB, !0)
+          }), (BB => {
+            console.error("Failed to keep the Lucky Skin Block reminders choice:", BB)
+          })), (0, lG.y)("hidden" === OB ? {
+            hidden: BB
           } : {
-            remindersOn: HH
-          }).catch((HH => {
-            console.error(`Failed to save the Lucky Skin Block's ${BH} setting:`, HH), tH.current && GH(!0)
+            remindersOn: BB
+          }).catch((BB => {
+            console.error(`Failed to save the Lucky Skin Block's ${OB} setting:`, BB), jB.current && zB(!0)
           })).finally((() => {
-            tH.current && CH(null)
+            jB.current && JB(null)
           })))
         }
       })
     }
-    const OL = (0, AH.memo)((function() {
+    const UG = (0, YB.memo)((function() {
       const {
-        t: HH
-      } = (0, hH.B)(), {
-        clientEscMenuOptions: BH
-      } = (0, OH.m)(["clientEscMenuOptions"]), {
-        userContext: LH
-      } = (0, uH.e)(), AH = LH.dailyDrop;
-      return (0, XH.jsxs)("div", {
+        t: BB
+      } = (0, oB.H)(), {
+        clientEscMenuOptions: OB
+      } = (0, UB.o)(["clientEscMenuOptions"]), {
+        userContext: GB
+      } = (0, pB.d)(), YB = GB.dailyDrop;
+      return (0, PB.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [MH.featureFlags.useSocialFeatures && (0, XH.jsx)(VH.e, {
-          label: HH("notificationSettings:friendRequests"),
-          options: hL.b.map((BH => ({
-            value: BH,
-            label: HH(TL[BH].label)
+        children: [NB.featureFlags.useSocialFeatures && (0, PB.jsx)(nB.d, {
+          label: BB("notificationSettings:friendRequests"),
+          options: oG.d.map((OB => ({
+            value: OB,
+            label: BB(VG[OB].label)
           }))),
-          value: BH.friendRequestNotifications,
-          onChange: HH => {
-            OH.c.setClientEscMenuOptions({
-              friendRequestNotifications: HH
+          value: OB.friendRequestNotifications,
+          onChange: BB => {
+            UB.c.setClientEscMenuOptions({
+              friendRequestNotifications: BB
             })
           },
-          circleInfoText: (0, XH.jsx)("div", {
+          circleInfoText: (0, PB.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: hL.b.map((BH => (0, XH.jsxs)("div", {
-              children: [(0, XH.jsx)("b", {
-                children: HH(TL[BH].label)
-              }), ": ", HH(TL[BH].info)]
-            }, BH)))
+            children: oG.d.map((OB => (0, PB.jsxs)("div", {
+              children: [(0, PB.jsx)("b", {
+                children: BB(VG[OB].label)
+              }), ": ", BB(VG[OB].info)]
+            }, OB)))
           })
-        }), null !== AH && (0, XH.jsxs)(XH.Fragment, {
-          children: [(0, XH.jsx)(VL, {
+        }), null !== YB && (0, PB.jsxs)(PB.Fragment, {
+          children: [(0, PB.jsx)(nG, {
             setting: "remindersOn",
-            value: AH.remindersOn
-          }), (0, XH.jsx)(VL, {
+            value: YB.remindersOn
+          }), (0, PB.jsx)(nG, {
             setting: "hidden",
-            value: AH.hidden
+            value: YB.hidden
           })]
-        }), (0, XH.jsx)(GL, {})]
+        }), (0, PB.jsx)(zG, {})]
       })
     }));
-    var bL = LH(4912),
-      kL = LH(176),
-      mL = LH(293),
-      oL = LH(7209),
-      IL = LH(3831),
-      fL = LH(34901),
-      lL = LH(619),
-      KL = LH(18);
-    var cL = LH(642),
-      eL = LH(4753);
-    const qL = new Map([
+    var fG = GB(4914),
+      kG = GB(192),
+      dG = GB(320),
+      KG = GB(7198),
+      uG = GB(3885),
+      mG = GB(34717),
+      IG = GB(641),
+      FG = GB(25);
+    var iG = GB(662),
+      LG = GB(4785);
+    const gG = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function gL(HH) {
-      return qL.has(HH) ? xH.gameBridge.lookup("jT", null) : null
+    function rG(BB) {
+      return gG.has(BB) ? RB.gameBridge.lookup("bR", null) : null
     }
 
-    function NL(HH) {
-      if (!(0, lL.M)(OH.c.get("clientEscMenuOptions")[HH])) return OH.c.get("clientEscMenuOptions")[HH];
-      const BH = gL(HH);
-      return null !== BH ? BH[qL.get(HH)] : WL.e.getItem(HH)
+    function XG(BB) {
+      if (!(0, IG.Q)(UB.c.get("clientEscMenuOptions")[BB])) return UB.c.get("clientEscMenuOptions")[BB];
+      const OB = rG(BB);
+      return null !== OB ? OB[gG.get(BB)] : ZG.g.getItem(BB)
     }
 
-    function RL(HH, BH) {
-      if ("useTouchControls" === HH) return void(0, eL.d)(BH);
-      HH in OH.c.get("clientEscMenuOptions") && OH.c.setClientEscMenuOptions({
-        [HH]: BH
+    function wG(BB, OB) {
+      if ("useTouchControls" === BB) return void(0, LG.d)(OB);
+      BB in UB.c.get("clientEscMenuOptions") && UB.c.setClientEscMenuOptions({
+        [BB]: OB
       });
-      const LH = gL(HH);
-      null !== LH && xH.gameBridge.send("setChunkAddDistance", {
-        ...LH,
-        [qL.get(HH)]: BH
-      }), WL.e.setItem(HH, BH)
+      const GB = rG(BB);
+      null !== GB && RB.gameBridge.send("setChunkAddDistance", {
+        ...GB,
+        [gG.get(BB)]: OB
+      }), ZG.g.setItem(BB, OB)
     }
-    var jL = LH(4835),
-      nL = LH(34908),
-      FL = LH(34915),
-      DL = LH(4904),
-      wL = LH(34936);
+    var EG = GB(4851),
+      cG = GB(34722),
+      hG = GB(34725),
+      aG = GB(4912),
+      eG = GB(34746);
 
-    function ZL(HH) {
-      var BH, rH, tH, zH;
+    function TG(BB) {
+      var OB, DB, jB, yB;
       let {
-        minChunkAddDist: CH,
-        getValue: EH,
-        onChange: GH,
-        setApplySettingsCallback: YH
-      } = HH;
+        minChunkAddDist: JB,
+        getValue: MB,
+        onChange: zB,
+        setApplySettingsCallback: lB
+      } = BB;
       const {
-        t: uH
-      } = (0, hH.B)(), {
-        clientEscMenuOptions: WH
-      } = (0, OH.m)(["clientEscMenuOptions", "showDistantNametags"]), xH = (0, AH.useRef)(EH("showFog")), vH = (0, AH.useRef)(WH.antiAliasing), PH = (0, AH.useRef)(WH.useWebGpu), [TH, UH] = (0, AH.useState)(null), [kH, mH] = (0, AH.useState)(!1), [oH, IH] = (0, AH.useState)((() => (0, IL.h)(MH.featureFlags.settings.canUseShaderPacks))), [fH] = (0, AH.useState)((() => OH.c.isWebGpuDefaultOff())), [lH] = (0, AH.useState)(mL.l), [KH, cH] = (0, AH.useState)(!1);
-      (0, AH.useEffect)((() => {
-        const HH = () => {
-          cH((0, FL.s)())
+        t: pB
+      } = (0, oB.H)(), {
+        clientEscMenuOptions: ZB
+      } = (0, UB.o)(["clientEscMenuOptions", "showDistantNametags"]), RB = (0, YB.useRef)(MB("showFog")), WB = (0, YB.useRef)(ZB.antiAliasing), AB = (0, YB.useRef)(ZB.useWebGpu), [VB, SB] = (0, YB.useState)(null), [kB, dB] = (0, YB.useState)(!1), [KB, uB] = (0, YB.useState)((() => (0, uG.f)(NB.featureFlags.settings.canUseShaderPacks))), [mB] = (0, YB.useState)((() => UB.c.isWebGpuDefaultOff())), [IB] = (0, YB.useState)(dG.l), [FB, iB] = (0, YB.useState)(!1);
+      (0, YB.useEffect)((() => {
+        const BB = () => {
+          iB((0, hG.s)())
         };
-        return HH(), (0, FL.z)(HH)
-      }), []), (0, tL.d)("appManagerUpdated|clientEscMenuOptions", (() => {
-        cH((0, FL.s)())
+        return BB(), (0, hG.A)(BB)
+      }), []), (0, jG.f)("appManagerUpdated|clientEscMenuOptions", (() => {
+        iB((0, hG.s)())
       }));
-      const [eH] = (0, AH.useState)((() => !0 === WL.e.getItem(fB.zc))), [qH] = (0, AH.useState)((() => OH.c.isWebGpuOnStored()));
-      (0, AH.useEffect)((() => {
-        let HH = !1;
-        return (0, MH.hasUsableWebGpuAdapter)().then((async BH => {
-          const LH = eH || qH,
-            AH = !BH && cL.K && await (0, wL.f)(LH);
-          HH || (UH(BH || AH), mH(AH))
-        })), (0, IL.m)(MH.featureFlags.settings.canUseShaderPacks) && (0, oL.e)().then((async BH => {
-          const AH = null !== BH && await async function(HH) {
+      const [LB] = (0, YB.useState)((() => !0 === ZG.g.getItem(mO.nc))), [gB] = (0, YB.useState)((() => UB.c.isWebGpuOnStored()));
+      (0, YB.useEffect)((() => {
+        let BB = !1;
+        return (0, NB.hasUsableWebGpuAdapter)().then((async OB => {
+          const GB = LB || gB,
+            YB = !OB && iG.D && await (0, eG.e)(GB);
+          BB || (SB(OB || YB), dB(YB))
+        })), (0, uG.n)(NB.featureFlags.settings.canUseShaderPacks) && (0, KG.e)().then((async OB => {
+          const YB = null !== OB && await async function(BB) {
             const [{
-              isShaderPackActive: BH
+              isShaderPackActive: OB
             }, {
-              loadPageShaderPackCompiler: AH
-            }] = await Promise.all([LH.e(153).then((() => LH(7201))), Promise.all([LH.e(89), LH.e(149), LH.e(152)]).then((() => LH(7165)))]);
-            return BH(HH, await AH())
-          }(BH);
-          HH || IH(AH)
+              loadPageShaderPackCompiler: YB
+            }] = await Promise.all([GB.e(153).then((() => GB(7193))), Promise.all([GB.e(89), GB.e(149), GB.e(152)]).then((() => GB(7159)))]);
+            return OB(BB, await YB())
+          }(OB);
+          BB || uB(YB)
         })), () => {
-          HH = !0
+          BB = !0
         }
-      }), [eH, qH]);
-      const gH = (!(oH && !eH) || !kH) && TH,
-        NH = function(HH, BH, LH, AH, rH) {
-          return (0, fL.c)(LH, AH) && !0 === BH ? {
+      }), [LB, gB]);
+      const rB = (!(KB && !LB) || !kB) && VB,
+        XB = function(BB, OB, GB, YB, DB) {
+          return (0, mG.b)(GB, YB) && !0 === OB ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== BH ? "settingsMenu:newWebGpu" : rH ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: HH && !1 !== BH,
-            disabled: !0 !== BH
+            translationKey: !1 !== OB ? "settingsMenu:newWebGpu" : DB ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: BB && !1 !== OB,
+            disabled: !0 !== OB
           }
-        }(WH.useWebGpu, gH, oH, fH, lH),
-        RH = (WH.useWebGpu || (0, fL.c)(oH, fH)) && oH && !0 === gH,
-        jH = (0, QH.j)("lightingOverride"),
-        nH = !(0, lL.M)(jH);
-      let FH = "settingsMenu:enableLighting";
-      nH && (FH = jH ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const DH = HH => {
-          var BH, LH, AH;
-          const rH = null !== (BH = HH.showFog) && void 0 !== BH ? BH : EH("showFog"),
-            SH = null !== (LH = HH.antiAliasing) && void 0 !== LH ? LH : WH.antiAliasing,
-            hH = null !== (AH = HH.useWebGpu) && void 0 !== AH ? AH : WH.useWebGpu,
-            tH = !cL.K && rH !== xH.current || SH !== vH.current || hH !== PH.current;
-          YH(tH ? () => VH.i : null)
+        }(ZB.useWebGpu, rB, KB, mB, IB),
+        wB = (ZB.useWebGpu || (0, mG.b)(KB, mB)) && KB && !0 === rB,
+        EB = (0, qB.g)("lightingOverride"),
+        cB = !(0, IG.Q)(EB);
+      let hB = "settingsMenu:enableLighting";
+      cB && (hB = EB ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const aB = BB => {
+          var OB, GB, YB;
+          const DB = null !== (OB = BB.showFog) && void 0 !== OB ? OB : MB("showFog"),
+            QB = null !== (GB = BB.antiAliasing) && void 0 !== GB ? GB : ZB.antiAliasing,
+            oB = null !== (YB = BB.useWebGpu) && void 0 !== YB ? YB : ZB.useWebGpu,
+            jB = !iG.D && DB !== RB.current || QB !== WB.current || oB !== AB.current;
+          lB(jB ? () => nB.g : null)
         },
-        wH = (0, QH.j)("fogChunkDistanceOverride"),
-        ZH = (0, QH.j)("fogBlockDistanceOverride"),
-        dH = !(0, lL.M)(wH) || !(0, lL.M)(ZH),
-        aH = dH ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [sH, JH] = (0, bL.g)(CH),
-        [iH, pH] = (0, DL.g)(CH),
-        yH = uH("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        HB = iH < sH,
-        BB = Math.min(null !== (BH = EH("chunkHorizAddDist")) && void 0 !== BH ? BH : CH[0], iH),
-        LB = !dH && function(HH, BH) {
-          return !0 === HH.showFog && HH.fogChunkDistance > BH
-        }(WH, BB);
-      return (0, XH.jsxs)("div", {
+        eB = (0, qB.g)("fogChunkDistanceOverride"),
+        TB = (0, qB.g)("fogBlockDistanceOverride"),
+        bB = !(0, IG.Q)(eB) || !(0, IG.Q)(TB),
+        CB = bB ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [HB, vB] = (0, fG.g)(JB),
+        [sB, xB] = (0, aG.d)(JB),
+        tB = pB("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        BO = sB < HB,
+        OO = Math.min(null !== (OB = MB("chunkHorizAddDist")) && void 0 !== OB ? OB : JB[0], sB),
+        GO = !bB && function(BB, OB) {
+          return !0 === BB.showFog && BB.fogChunkDistance > OB
+        }(ZB, OO);
+      return (0, PB.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, XH.jsx)(VH.f, {
-          name: uH("settingsMenu:horizontalChunkLoadDistance"),
-          min: CH[0],
-          max: sH,
-          selectableMax: iH,
-          cappedNote: yH,
+        children: [(0, PB.jsx)(nB.f, {
+          name: pB("settingsMenu:horizontalChunkLoadDistance"),
+          min: JB[0],
+          max: HB,
+          selectableMax: sB,
+          cappedNote: tB,
           step: 1,
-          initValue: BB,
-          onChange: HH => {
-            !0 === EH("showFog") && HH < EH("fogChunkDistance") && GH("fogChunkDistance", HH), GH("chunkHorizAddDist", HH), KL.k.AX("updatedChunkLoadDist")
+          initValue: OO,
+          onChange: BB => {
+            !0 === MB("showFog") && BB < MB("fogChunkDistance") && zB("fogChunkDistance", BB), zB("chunkHorizAddDist", BB), FG.o.tM("updatedChunkLoadDist")
           },
-          circleInfoText: uH("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, XH.jsx)(VH.f, {
-          name: uH("settingsMenu:verticalChunkLoadDistance"),
-          min: CH[1],
-          max: JH,
-          selectableMax: pH,
-          cappedNote: HB ? void 0 : yH,
+          circleInfoText: pB("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, PB.jsx)(nB.f, {
+          name: pB("settingsMenu:verticalChunkLoadDistance"),
+          min: JB[1],
+          max: vB,
+          selectableMax: xB,
+          cappedNote: BO ? void 0 : tB,
           step: 1,
-          initValue: Math.min(null !== (rH = EH("chunkVertAddDist")) && void 0 !== rH ? rH : CH[1], pH),
-          onChange: HH => {
-            GH("chunkVertAddDist", HH), KL.k.AX("updatedChunkLoadDist")
+          initValue: Math.min(null !== (DB = MB("chunkVertAddDist")) && void 0 !== DB ? DB : JB[1], xB),
+          onChange: BB => {
+            zB("chunkVertAddDist", BB), FG.o.tM("updatedChunkLoadDist")
           },
-          circleInfoText: uH("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: pB("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, XH.jsx)(VH.c, {
-          label: uH("settingsMenu:chunkFadeIn"),
-          checked: WH.chunkFadeIn,
-          onClick: HH => {
-            OH.c.setClientEscMenuOptions({
-              chunkFadeIn: HH
+        }), (0, PB.jsx)(nB.c, {
+          label: pB("settingsMenu:chunkFadeIn"),
+          checked: ZB.chunkFadeIn,
+          onClick: BB => {
+            UB.c.setClientEscMenuOptions({
+              chunkFadeIn: BB
             })
           },
-          circleInfoText: uH("settingsMenu:chunkFadeInInfo")
-        }), bH.devTools.supports("chunkBorders") && (0, XH.jsx)(VH.c, {
-          label: uH("settingsMenu:showChunkBorders"),
-          checked: WH.showChunkBorders,
-          onClick: HH => {
-            OH.c.setClientEscMenuOptions({
-              showChunkBorders: HH
+          circleInfoText: pB("settingsMenu:chunkFadeInInfo")
+        }), fB.devTools.supports("chunkBorders") && (0, PB.jsx)(nB.c, {
+          label: pB("settingsMenu:showChunkBorders"),
+          checked: ZB.showChunkBorders,
+          onClick: BB => {
+            UB.c.setClientEscMenuOptions({
+              showChunkBorders: BB
             })
           },
-          circleInfoText: uH("settingsMenu:showChunkBordersInfo")
-        }), (0, XH.jsx)(VH.c, {
-          label: uH(FH),
-          checked: WH.enableLighting,
-          onClick: HH => {
-            OH.c.setClientEscMenuOptions({
-              enableLighting: HH
+          circleInfoText: pB("settingsMenu:showChunkBordersInfo")
+        }), (0, PB.jsx)(nB.c, {
+          label: pB(hB),
+          checked: ZB.enableLighting,
+          onClick: BB => {
+            UB.c.setClientEscMenuOptions({
+              enableLighting: BB
             })
           },
-          disabled: nH
-        }), (0, XH.jsxs)("div", {
+          disabled: cB
+        }), (0, PB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, XH.jsx)(VH.c, {
-            label: uH(aH),
-            checked: WH.showFog,
-            onClick: HH => {
-              DH({
-                showFog: HH
-              }), OH.c.setClientEscMenuOptions({
-                showFog: HH
+          children: [(0, PB.jsx)(nB.c, {
+            label: pB(CB),
+            checked: ZB.showFog,
+            onClick: BB => {
+              aB({
+                showFog: BB
+              }), UB.c.setClientEscMenuOptions({
+                showFog: BB
               })
             },
-            disabled: dH,
-            className: SH()({
-              SettingBoxWarning: LB
+            disabled: bB,
+            className: QB()({
+              SettingBoxWarning: GO
             })
-          }), (0, XH.jsx)(VH.f, {
-            name: uH("settingsMenu:fogChunkDistance"),
-            min: CH[0],
-            max: kL.g.maxChunkHorizAddDistance,
+          }), (0, PB.jsx)(nB.f, {
+            name: pB("settingsMenu:fogChunkDistance"),
+            min: JB[0],
+            max: kG.f.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (tH = WH.fogChunkDistance) && void 0 !== tH ? tH : CH[0],
-            onChange: HH => {
-              OH.c.setClientEscMenuOptions({
-                fogChunkDistance: HH
-              }), KL.k.AX("fogChunkDistanceChanged", HH)
+            initValue: null !== (jB = ZB.fogChunkDistance) && void 0 !== jB ? jB : JB[0],
+            onChange: BB => {
+              UB.c.setClientEscMenuOptions({
+                fogChunkDistance: BB
+              }), FG.o.tM("fogChunkDistanceChanged", BB)
             },
-            circleInfoText: uH("settingsMenu:fogChunkDistanceInfo"),
-            disabled: dH || !1 === EH("showFog"),
-            className: SH()({
-              SettingBoxWarning: LB
+            circleInfoText: pB("settingsMenu:fogChunkDistanceInfo"),
+            disabled: bB || !1 === MB("showFog"),
+            className: QB()({
+              SettingBoxWarning: GO
             })
-          }), LB && (0, XH.jsx)("div", {
+          }), GO && (0, PB.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: uH("settingsMenu:fogChunkDistanceInfo")
+            children: pB("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !cL.K && (0, XH.jsx)(VH.c, {
-          label: uH(RH ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !RH && WH.disableTexAtlas,
-          onClick: HH => {
-            OH.c.setClientEscMenuOptions({
-              disableTexAtlas: HH
+        }), !iG.D && (0, PB.jsx)(nB.c, {
+          label: pB(wB ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !wB && ZB.disableTexAtlas,
+          onClick: BB => {
+            UB.c.setClientEscMenuOptions({
+              disableTexAtlas: BB
             })
           },
-          circleInfoText: uH("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: RH
-        }), (0, XH.jsx)(VH.f, {
-          name: uH("settingsMenu:fieldOfView"),
+          circleInfoText: pB("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: wB
+        }), (0, PB.jsx)(nB.f, {
+          name: pB("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: WH.cameraFOV,
-          onChange: HH => {
-            OH.c.setClientEscMenuOptions({
-              cameraFOV: HH
+          initValue: ZB.cameraFOV,
+          onChange: BB => {
+            UB.c.setClientEscMenuOptions({
+              cameraFOV: BB
             })
           }
-        }), (0, XH.jsx)(VH.c, {
-          label: uH("settingsMenu:disableViewBobbing"),
-          checked: WH.disableBobbing,
-          onClick: HH => {
-            OH.c.setClientEscMenuOptions({
-              disableBobbing: HH
+        }), (0, PB.jsx)(nB.c, {
+          label: pB("settingsMenu:disableViewBobbing"),
+          checked: ZB.disableBobbing,
+          onClick: BB => {
+            UB.c.setClientEscMenuOptions({
+              disableBobbing: BB
             })
           },
-          circleInfoText: uH("settingsMenu:disableViewBobbingInfo")
-        }), (0, XH.jsx)(VH.c, {
-          label: uH("settingsMenu:antiAliasing"),
-          checked: WH.antiAliasing,
-          onClick: HH => {
-            DH({
-              antiAliasing: HH
-            }), (0, jL.i)("antiAliasing"), OH.c.setClientEscMenuOptions({
-              antiAliasing: HH
+          circleInfoText: pB("settingsMenu:disableViewBobbingInfo")
+        }), (0, PB.jsx)(nB.c, {
+          label: pB("settingsMenu:antiAliasing"),
+          checked: ZB.antiAliasing,
+          onClick: BB => {
+            aB({
+              antiAliasing: BB
+            }), (0, EG.i)("antiAliasing"), UB.c.setClientEscMenuOptions({
+              antiAliasing: BB
             })
           },
-          circleInfoText: uH("settingsMenu:antiAliasingInfo")
-        }), (0, XH.jsx)(VH.f, {
-          name: uH("settingsMenu:pixelScale"),
+          circleInfoText: pB("settingsMenu:antiAliasingInfo")
+        }), (0, PB.jsx)(nB.f, {
+          name: pB("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (zH = WH.pixelScale) && void 0 !== zH ? zH : 1,
-          onChange: HH => {
-            (HH !== OH.c.get("clientEscMenuOptions").pixelScale || (0, FL.q)()) && (0, jL.i)("pixelScale"), OH.c.setClientEscMenuOptions({
-              pixelScale: HH
+          initValue: null !== (yB = ZB.pixelScale) && void 0 !== yB ? yB : 1,
+          onChange: BB => {
+            (BB !== UB.c.get("clientEscMenuOptions").pixelScale || (0, hG.r)()) && (0, EG.i)("pixelScale"), UB.c.setClientEscMenuOptions({
+              pixelScale: BB
             })
           },
-          circleInfoText: uH("settingsMenu:pixelScaleInfo"),
-          note: KH ? uH("settingsMenu:pixelScaleLowered") : void 0,
-          format: HH => `${HH}x`
-        }), (0, XH.jsx)(VH.c, {
-          label: uH("settingsMenu:pixelSmoothing"),
-          checked: WH.pixelSmoothing,
-          onClick: HH => {
-            OH.c.setClientEscMenuOptions({
-              pixelSmoothing: HH
+          circleInfoText: pB("settingsMenu:pixelScaleInfo"),
+          note: FB ? pB("settingsMenu:pixelScaleLowered") : void 0,
+          format: BB => `${BB}x`
+        }), (0, PB.jsx)(nB.c, {
+          label: pB("settingsMenu:pixelSmoothing"),
+          checked: ZB.pixelSmoothing,
+          onClick: BB => {
+            UB.c.setClientEscMenuOptions({
+              pixelSmoothing: BB
             })
           },
-          circleInfoText: uH("settingsMenu:pixelSmoothingInfo")
-        }), cL.K && (0, XH.jsx)(VH.c, {
-          label: uH("settingsMenu:distantNametags"),
-          checked: (0, nL.e)(),
-          onClick: HH => {
-            OH.c.set({
-              showDistantNametags: HH
+          circleInfoText: pB("settingsMenu:pixelSmoothingInfo")
+        }), iG.D && (0, PB.jsx)(nB.c, {
+          label: pB("settingsMenu:distantNametags"),
+          checked: (0, cG.c)(),
+          onClick: BB => {
+            UB.c.set({
+              showDistantNametags: BB
             })
           },
-          circleInfoText: uH("settingsMenu:distantNametagsInfo")
-        }), (0, XH.jsx)(VH.c, {
-          label: uH(NH.translationKey),
-          checked: NH.checked,
-          onClick: HH => {
-            DH({
-              useWebGpu: HH
-            }), OH.c.setClientEscMenuOptions({
-              useWebGpu: HH
+          circleInfoText: pB("settingsMenu:distantNametagsInfo")
+        }), (0, PB.jsx)(nB.c, {
+          label: pB(XB.translationKey),
+          checked: XB.checked,
+          onClick: BB => {
+            aB({
+              useWebGpu: BB
+            }), UB.c.setClientEscMenuOptions({
+              useWebGpu: BB
             })
           },
-          circleInfoText: uH("settingsMenu:newWebGpuInfo"),
-          disabled: NH.disabled
+          circleInfoText: pB("settingsMenu:newWebGpuInfo"),
+          disabled: XB.disabled
         })]
       })
     }
-    var dL = LH(4832),
-      aL = LH(9552),
-      sL = LH(34942),
-      JL = LH(9568),
-      iL = LH(34946);
-    const pL = {
+    var bG = GB(4848),
+      CG = GB(9529),
+      HG = GB(34755),
+      vG = GB(9540),
+      sG = GB(34757);
+    const xG = {
         color: 16777215,
         name: "white"
       },
-      yL = {
+      tG = {
         color: 0,
         name: "black"
       },
-      HA = [pL, {
+      BY = [xG, {
         color: 5046092,
         name: "green"
       }, {
@@ -1978,73 +1978,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, yL],
-      BA = [yL, pL];
+      }, tG],
+      OY = [tG, xG];
 
-    function LA(HH) {
-      return `${HH} px`
+    function GY(BB) {
+      return `${BB} px`
     }
 
-    function AA(HH) {
-      return `${HH}%`
+    function YY(BB) {
+      return `${BB}%`
     }
 
-    function rA(HH) {
+    function DY(BB) {
       let {
-        label: BH,
-        value: LH,
-        swatches: AH,
-        onChange: rH
-      } = HH;
+        label: OB,
+        value: GB,
+        swatches: YB,
+        onChange: DB
+      } = BB;
       const {
-        t: tH
-      } = (0, hH.B)(), zH = !AH.some((HH => HH.color === LH));
-      return (0, XH.jsxs)("div", {
+        t: jB
+      } = (0, oB.H)(), yB = !YB.some((BB => BB.color === GB));
+      return (0, PB.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "SliderText",
-          children: BH
-        }), (0, XH.jsxs)("div", {
+          children: OB
+        }), (0, PB.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": BH,
-          children: [AH.map((HH => {
+          "aria-label": OB,
+          children: [YB.map((BB => {
             let {
-              color: BH,
-              name: AH
-            } = HH;
-            return (0, XH.jsx)("button", {
+              color: OB,
+              name: YB
+            } = BB;
+            return (0, PB.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": BH === LH,
-              "aria-label": tH(`crosshairSettings:color_${AH}`),
+              "aria-checked": OB === GB,
+              "aria-label": jB(`crosshairSettings:color_${YB}`),
               "data-pad-focusable": !0,
-              className: SH()("CrosshairSwatch", {
-                Selected: BH === LH
+              className: QB()("CrosshairSwatch", {
+                Selected: OB === GB
               }),
               style: {
-                background: (0, iL.e)(BH)
+                background: (0, sG.l)(OB)
               },
               onClick: () => {
-                rH(BH)
+                DB(OB)
               }
-            }, BH)
-          })), (0, XH.jsx)("label", {
-            className: SH()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: zH
+            }, OB)
+          })), (0, PB.jsx)("label", {
+            className: QB()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: yB
             }),
-            style: zH ? {
-              background: (0, iL.e)(LH)
+            style: yB ? {
+              background: (0, sG.l)(GB)
             } : void 0,
-            title: tH("crosshairSettings:customColor"),
+            title: jB("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, XH.jsx)("input", {
+            children: (0, PB.jsx)("input", {
               type: "color",
-              "aria-label": tH("crosshairSettings:customColor"),
-              value: (0, iL.e)(LH),
-              onChange: HH => {
-                const BH = (0, iL.i)(HH.target.value);
-                null !== BH && rH(BH)
+              "aria-label": jB("crosshairSettings:customColor"),
+              value: (0, sG.l)(GB),
+              onChange: BB => {
+                const OB = (0, sG.t)(BB.target.value);
+                null !== OB && DB(OB)
               }
             })
           })]
@@ -2052,119 +2052,119 @@ export const modules = {
       })
     }
 
-    function SA(HH) {
+    function QY(BB) {
       let {
-        settings: BH,
-        onChange: LH
-      } = HH;
+        settings: OB,
+        onChange: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)(), rH = (HH, AH) => {
-        LH((0, iL.k)(BH, HH, AH))
-      }, SH = function(HH, LH) {
-        let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : LA;
+        t: YB
+      } = (0, oB.H)(), DB = (BB, YB) => {
+        GB((0, sG.w)(OB, BB, YB))
+      }, QB = function(BB, GB) {
+        let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : GY;
         const {
-          min: SH,
-          max: hH,
-          step: tH
-        } = iL.b[HH];
-        return (0, XH.jsx)(VH.f, {
-          name: LH,
-          min: SH,
-          max: hH,
-          step: tH,
-          initValue: BH[HH],
-          format: AH,
-          onChange: BH => {
-            rH(HH, BH)
+          min: QB,
+          max: oB,
+          step: jB
+        } = sG.c[BB];
+        return (0, PB.jsx)(nB.f, {
+          name: GB,
+          min: QB,
+          max: oB,
+          step: jB,
+          initValue: OB[BB],
+          format: YB,
+          onChange: OB => {
+            DB(BB, OB)
           }
-        }, HH)
-      }, tH = ["lines", "dot", "circle"].filter((HH => BH[HH])), zH = (HH, LH, AH) => (0, XH.jsx)(VH.c, {
-        label: LH,
-        checked: BH[HH],
-        disabled: 1 === tH.length && tH[0] === HH,
-        circleInfoText: AH,
-        onClick: BH => {
-          rH(HH, BH)
+        }, BB)
+      }, jB = ["lines", "dot", "circle"].filter((BB => OB[BB])), yB = (BB, GB, YB) => (0, PB.jsx)(nB.c, {
+        label: GB,
+        checked: OB[BB],
+        disabled: 1 === jB.length && jB[0] === BB,
+        circleInfoText: YB,
+        onClick: OB => {
+          DB(BB, OB)
         }
-      }, HH), CH = "shapes" === BH.style;
-      return (0, XH.jsxs)(XH.Fragment, {
-        children: [(0, XH.jsx)(VH.e, {
-          label: AH("crosshairSettings:style"),
+      }, BB), JB = "shapes" === OB.style;
+      return (0, PB.jsxs)(PB.Fragment, {
+        children: [(0, PB.jsx)(nB.d, {
+          label: YB("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: AH("crosshairSettings:styleClassic")
+            label: YB("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: AH("crosshairSettings:styleShapes")
+            label: YB("crosshairSettings:styleShapes")
           }],
-          value: BH.style,
-          onChange: HH => {
-            rH("style", HH)
+          value: OB.style,
+          onChange: BB => {
+            DB("style", BB)
           }
-        }), (0, XH.jsx)(rA, {
-          label: AH("crosshairSettings:color"),
-          value: BH.color,
-          swatches: HA,
-          onChange: HH => {
-            rH("color", HH)
+        }), (0, PB.jsx)(DY, {
+          label: YB("crosshairSettings:color"),
+          value: OB.color,
+          swatches: BY,
+          onChange: BB => {
+            DB("color", BB)
           }
-        }), SH("opacity", AH("crosshairSettings:opacity"), AA), !CH && SH("size", AH("crosshairSettings:size"), AA), CH && (0, XH.jsxs)("div", {
+        }), QB("opacity", YB("crosshairSettings:opacity"), YY), !JB && QB("size", YB("crosshairSettings:size"), YY), JB && (0, PB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [zH("lines", AH("crosshairSettings:lines")), BH.lines && SH("lineLength", AH("crosshairSettings:lineLength")), BH.lines && SH("lineThickness", AH("crosshairSettings:lineThickness")), BH.lines && SH("gap", AH("crosshairSettings:gap")), BH.lines && zH("tStyle", AH("crosshairSettings:tStyle"))]
-        }), CH && (0, XH.jsxs)("div", {
+          children: [yB("lines", YB("crosshairSettings:lines")), OB.lines && QB("lineLength", YB("crosshairSettings:lineLength")), OB.lines && QB("lineThickness", YB("crosshairSettings:lineThickness")), OB.lines && QB("gap", YB("crosshairSettings:gap")), OB.lines && yB("tStyle", YB("crosshairSettings:tStyle"))]
+        }), JB && (0, PB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [zH("dot", AH("crosshairSettings:dot")), BH.dot && SH("dotSize", AH("crosshairSettings:dotSize"))]
-        }), CH && (0, XH.jsxs)("div", {
+          children: [yB("dot", YB("crosshairSettings:dot")), OB.dot && QB("dotSize", YB("crosshairSettings:dotSize"))]
+        }), JB && (0, PB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [zH("circle", AH("crosshairSettings:circle")), BH.circle && SH("circleRadius", AH("crosshairSettings:circleRadius")), BH.circle && SH("circleThickness", AH("crosshairSettings:circleThickness"))]
-        }), (0, XH.jsxs)("div", {
+          children: [yB("circle", YB("crosshairSettings:circle")), OB.circle && QB("circleRadius", YB("crosshairSettings:circleRadius")), OB.circle && QB("circleThickness", YB("crosshairSettings:circleThickness"))]
+        }), (0, PB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [SH("outline", AH("crosshairSettings:outline"), (HH => HH > 0 ? LA(HH) : AH("crosshairSettings:off"))), BH.outline > 0 && (0, XH.jsx)(rA, {
-            label: AH("crosshairSettings:outlineColor"),
-            value: BH.outlineColor,
-            swatches: BA,
-            onChange: HH => {
-              rH("outlineColor", HH)
+          children: [QB("outline", YB("crosshairSettings:outline"), (BB => BB > 0 ? GY(BB) : YB("crosshairSettings:off"))), OB.outline > 0 && (0, PB.jsx)(DY, {
+            label: YB("crosshairSettings:outlineColor"),
+            value: OB.outlineColor,
+            swatches: OY,
+            onChange: BB => {
+              DB("outlineColor", BB)
             }
           })]
-        }), zH("growOnClick", AH("crosshairSettings:growOnClick")), CH && zH("forGuns", AH("crosshairSettings:forGuns"), AH("crosshairSettings:forGunsInfo"))]
+        }), yB("growOnClick", YB("crosshairSettings:growOnClick")), JB && yB("forGuns", YB("crosshairSettings:forGuns"), YB("crosshairSettings:forGunsInfo"))]
       })
     }
-    var hA = LH(69),
-      tA = LH(1214),
-      zA = LH(13616),
-      CA = LH(14791),
-      EA = LH(16178),
-      XA = LH(16699);
-    const GA = ["sky", "grass", "stone", "sand", "snow", "night"],
-      YA = "4rem";
+    var oY = GB(70),
+      jY = GB(1268),
+      yY = GB(13542),
+      JY = GB(14703),
+      MY = GB(16057),
+      PY = GB(16603);
+    const zY = ["sky", "grass", "stone", "sand", "snow", "night"],
+      lY = "4rem";
 
-    function uA(HH) {
+    function pY(BB) {
       return {
-        backgroundImage: `url(${HH})`,
-        backgroundSize: `${YA} ${YA}`,
+        backgroundImage: `url(${BB})`,
+        backgroundSize: `${lY} ${lY}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function QA(HH) {
+    function qY(BB) {
       return {
         ...(() => {
-          switch (HH) {
+          switch (BB) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return uA(zA);
+              return pY(yY);
             case "stone":
-              return uA(CA);
+              return pY(JY);
             case "sand":
-              return uA(EA);
+              return pY(MY);
             case "snow":
-              return uA(XA);
+              return pY(PY);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -2175,21 +2175,21 @@ export const modules = {
       }
     }
 
-    function WA(HH) {
+    function ZY(BB) {
       return Object.freeze({
-        ...iL.c,
+        ...sG.d,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...HH
+        ...BB
       })
     }
-    const MA = [{
+    const NY = [{
         id: "default",
-        settings: iL.c
+        settings: sG.d
       }, {
         id: "cross",
-        settings: WA({
+        settings: ZY({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -2198,7 +2198,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: WA({
+        settings: ZY({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -2209,13 +2209,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: WA({
+        settings: ZY({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: WA({
+        settings: ZY({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -2224,7 +2224,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: WA({
+        settings: ZY({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -2234,7 +2234,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: WA({
+        settings: ZY({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -2243,7 +2243,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: WA({
+        settings: ZY({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -2251,570 +2251,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      xA = ["growOnClick", "forGuns"];
-    var vA = LH(34951);
+      RY = ["growOnClick", "forGuns"];
+    var WY = GB(34765);
 
-    function PA(HH) {
+    function AY(BB) {
       let {
-        label: BH,
-        selected: LH,
-        onClick: AH,
-        className: rH,
-        style: hH,
-        children: tH
-      } = HH;
-      return (0, XH.jsx)("button", {
+        label: OB,
+        selected: GB,
+        onClick: YB,
+        className: DB,
+        style: oB,
+        children: jB
+      } = BB;
+      return (0, PB.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": LH,
-        title: BH,
-        "aria-label": BH,
+        "aria-checked": GB,
+        title: OB,
+        "aria-label": OB,
         "data-pad-focusable": !0,
-        className: SH()("CrosshairBackdropSwatch", rH, {
-          Selected: LH
+        className: QB()("CrosshairBackdropSwatch", DB, {
+          Selected: GB
         }),
-        style: hH,
-        onClick: AH,
-        children: tH
+        style: oB,
+        onClick: YB,
+        children: jB
       })
     }
 
-    function TA(HH) {
+    function VY(BB) {
       let {
-        backdrop: BH,
-        onChange: LH,
-        game: AH
-      } = HH;
+        backdrop: OB,
+        onChange: GB,
+        game: YB
+      } = BB;
       const {
-        t: rH
-      } = (0, hH.B)();
-      return (0, XH.jsxs)("div", {
+        t: DB
+      } = (0, oB.H)();
+      return (0, PB.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": rH("crosshairSettings:background"),
-        children: [AH && (0, XH.jsx)(PA, {
-          label: rH("crosshairSettings:bg_game"),
-          selected: AH.selected,
-          onClick: AH.onSelect,
+        "aria-label": DB("crosshairSettings:background"),
+        children: [YB && (0, PB.jsx)(AY, {
+          label: DB("crosshairSettings:bg_game"),
+          selected: YB.selected,
+          onClick: YB.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, XH.jsx)(tH.c, {
+          children: (0, PB.jsx)(jB.b, {
             name: "cube"
           })
-        }), GA.map((HH => (0, XH.jsx)(PA, {
-          label: rH(`crosshairSettings:bg_${HH}`),
-          selected: !(null !== AH && void 0 !== AH && AH.selected) && HH === BH,
-          style: QA(HH),
+        }), zY.map((BB => (0, PB.jsx)(AY, {
+          label: DB(`crosshairSettings:bg_${BB}`),
+          selected: !(null !== YB && void 0 !== YB && YB.selected) && BB === OB,
+          style: qY(BB),
           onClick: () => {
-            LH(HH)
+            GB(BB)
           }
-        }, HH)))]
+        }, BB)))]
       })
     }
 
-    function UA(HH) {
+    function SY(BB) {
       let {
-        settings: BH,
-        touch: LH,
-        backdrop: AH,
-        onChange: rH
-      } = HH;
+        settings: OB,
+        touch: GB,
+        backdrop: YB,
+        onChange: DB
+      } = BB;
       const {
-        t: tH
-      } = (0, hH.B)(), zH = function(HH) {
-        var BH;
-        return null !== (BH = MA.find((BH => (0, iL.j)(BH.settings, HH, xA)))) && void 0 !== BH ? BH : null
-      }(BH);
-      return (0, XH.jsx)("div", {
+        t: jB
+      } = (0, oB.H)(), yB = function(BB) {
+        var OB;
+        return null !== (OB = NY.find((OB => (0, sG.v)(OB.settings, BB, RY)))) && void 0 !== OB ? OB : null
+      }(OB);
+      return (0, PB.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": tH("crosshairSettings:presets"),
-        children: MA.map((HH => {
-          const hH = (null === zH || void 0 === zH ? void 0 : zH.id) === HH.id;
-          return (0, XH.jsxs)("button", {
+        "aria-label": jB("crosshairSettings:presets"),
+        children: NY.map((BB => {
+          const oB = (null === yB || void 0 === yB ? void 0 : yB.id) === BB.id;
+          return (0, PB.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": hH,
+            "aria-checked": oB,
             "data-pad-focusable": !0,
-            className: SH()("CrosshairPreset", {
-              Selected: hH
+            className: QB()("CrosshairPreset", {
+              Selected: oB
             }),
             onClick: () => {
-              rH(function(HH, BH) {
+              DB(function(BB, OB) {
                 return {
-                  ...BH.settings,
-                  growOnClick: HH.growOnClick,
-                  forGuns: HH.forGuns
+                  ...OB.settings,
+                  growOnClick: BB.growOnClick,
+                  forGuns: BB.forGuns
                 }
-              }(BH, HH))
+              }(OB, BB))
             },
-            children: [(0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: QA(AH),
-              children: (0, XH.jsx)(vA.b, {
-                settings: HH.settings,
-                touch: LH,
+              style: qY(YB),
+              children: (0, PB.jsx)(WY.c, {
+                settings: BB.settings,
+                touch: GB,
                 inPreview: !0
               })
-            }), (0, XH.jsx)("div", {
+            }), (0, PB.jsx)("div", {
               className: "CrosshairPresetName",
-              children: tH(`crosshairSettings:preset_${HH.id}`)
+              children: jB(`crosshairSettings:preset_${BB.id}`)
             })]
-          }, HH.id)
+          }, BB.id)
         }))
       })
     }
-    var VA = LH(1701);
+    var nY = GB(1733);
 
-    function OA(HH, BH) {
-      const [LH, rH] = (0, AH.useState)(!1), SH = () => {
-        rH(!1)
-      }, [hH, tH] = (0, AH.useState)(!1), zH = (0, AH.useRef)({
-        growOnClick: HH.growOnClick,
-        forGuns: HH.forGuns
+    function UY(BB, OB) {
+      const [GB, DB] = (0, YB.useState)(!1), QB = () => {
+        DB(!1)
+      }, [oB, jB] = (0, YB.useState)(!1), yB = (0, YB.useRef)({
+        growOnClick: BB.growOnClick,
+        forGuns: BB.forGuns
       });
-      (0, AH.useEffect)((() => {
-        const BH = zH.current;
-        zH.current = {
-          growOnClick: HH.growOnClick,
-          forGuns: HH.forGuns
-        }, (HH.growOnClick && !BH.growOnClick || HH.forGuns && !BH.forGuns) && tH(!0)
-      }), [HH.growOnClick, HH.forGuns]), (0, AH.useEffect)((() => {
-        if (!hH) return;
-        const HH = setTimeout((() => {
-          tH(!1)
+      (0, YB.useEffect)((() => {
+        const OB = yB.current;
+        yB.current = {
+          growOnClick: BB.growOnClick,
+          forGuns: BB.forGuns
+        }, (BB.growOnClick && !OB.growOnClick || BB.forGuns && !OB.forGuns) && jB(!0)
+      }), [BB.growOnClick, BB.forGuns]), (0, YB.useEffect)((() => {
+        if (!oB) return;
+        const BB = setTimeout((() => {
+          jB(!1)
         }), 600);
         return () => {
-          clearTimeout(HH)
+          clearTimeout(BB)
         }
-      }), [hH]);
-      const CH = LH || hH;
+      }), [oB]);
+      const JB = GB || oB;
       return {
         view: {
-          pressed: CH,
-          spread: CH && HH.forGuns && !HH.growOnClick ? 6 : 0
+          pressed: JB,
+          spread: JB && BB.forGuns && !BB.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: HH => {
-            !HH.target.closest(BH) && (0, VA.b)(HH.currentTarget, HH.pointerId) && rH(!0)
+          onPointerDown: BB => {
+            !BB.target.closest(OB) && (0, nY.c)(BB.currentTarget, BB.pointerId) && DB(!0)
           },
-          onPointerUp: SH,
-          onPointerCancel: SH,
-          onLostPointerCapture: SH
+          onPointerUp: QB,
+          onPointerCancel: QB,
+          onLostPointerCapture: QB
         }
       }
     }
 
-    function bA(HH) {
+    function fY(BB) {
       let {
-        settings: BH,
-        touch: LH,
-        backdrop: AH,
-        className: rH,
-        children: hH,
-        label: tH
-      } = HH;
-      const zH = OA(BH, ".CrosshairStageControls");
-      return (0, XH.jsxs)("div", {
-        className: SH()("CrosshairStage", rH),
-        style: QA(AH),
-        ...zH.handlers,
-        children: [(0, XH.jsx)("div", {
+        settings: OB,
+        touch: GB,
+        backdrop: YB,
+        className: DB,
+        children: oB,
+        label: jB
+      } = BB;
+      const yB = UY(OB, ".CrosshairStageControls");
+      return (0, PB.jsxs)("div", {
+        className: QB()("CrosshairStage", DB),
+        style: qY(YB),
+        ...yB.handlers,
+        children: [(0, PB.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": tH,
-          children: (0, XH.jsx)(vA.b, {
-            settings: BH,
-            touch: LH,
+          "aria-label": jB,
+          children: (0, PB.jsx)(WY.c, {
+            settings: OB,
+            touch: GB,
             inPreview: !0,
-            ...zH.view
+            ...yB.view
           })
-        }), hH]
+        }), oB]
       })
     }
-    const kA = "crosshairFullScreen";
+    const kY = "crosshairFullScreen";
 
-    function mA(HH) {
+    function dY(BB) {
       let {
-        settings: BH,
-        touch: LH,
-        backdrop: rH,
-        onBackdrop: zH,
-        inGame: EH,
-        onChange: GH,
-        onClose: YH
-      } = HH;
+        settings: OB,
+        touch: GB,
+        backdrop: DB,
+        onBackdrop: yB,
+        inGame: MB,
+        onChange: zB,
+        onClose: lB
+      } = BB;
       const {
-        t: uH
-      } = (0, hH.B)(), QH = (0, AH.useRef)(null);
-      (0, tA.r)("popup", QH, YH),
-      function(HH) {
-        const BH = (0, AH.useRef)(HH);
-        BH.current = HH, (0, AH.useEffect)((() => {
+        t: pB
+      } = (0, oB.H)(), qB = (0, YB.useRef)(null);
+      (0, jY.v)("popup", qB, lB),
+      function(BB) {
+        const OB = (0, YB.useRef)(BB);
+        OB.current = BB, (0, YB.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [kA]: !0
+            [kY]: !0
           }, "");
-          let HH = !1;
-          const LH = () => {
-            HH = !0, BH.current()
+          let BB = !1;
+          const GB = () => {
+            BB = !0, OB.current()
           };
-          return window.addEventListener("popstate", LH), () => {
-            var BH;
-            window.removeEventListener("popstate", LH), !HH && null !== (BH = window.history.state) && void 0 !== BH && BH[kA] && window.history.back()
+          return window.addEventListener("popstate", GB), () => {
+            var OB;
+            window.removeEventListener("popstate", GB), !BB && null !== (OB = window.history.state) && void 0 !== OB && OB[kY] && window.history.back()
           }
         }), [])
-      }(YH);
-      const WH = (0, AH.useRef)(YH);
-      WH.current = YH, (0, AH.useEffect)((() => {
-        function HH(HH) {
-          "Escape" === HH.key && (HH.stopPropagation(), WH.current())
+      }(lB);
+      const ZB = (0, YB.useRef)(lB);
+      ZB.current = lB, (0, YB.useEffect)((() => {
+        function BB(BB) {
+          "Escape" === BB.key && (BB.stopPropagation(), ZB.current())
         }
-        return window.addEventListener("keydown", HH, !0), () => {
-          window.removeEventListener("keydown", HH, !0)
+        return window.addEventListener("keydown", BB, !0), () => {
+          window.removeEventListener("keydown", BB, !0)
         }
       }), []);
-      const MH = OA(BH, ".CrosshairFullScreenPanel"),
-        [xH, vH] = (0, AH.useState)(!0),
-        PH = xH && EH;
-      (0, AH.useEffect)((() => {
-        if (PH) return OH.c.set({
+      const NB = UY(OB, ".CrosshairFullScreenPanel"),
+        [RB, WB] = (0, YB.useState)(!0),
+        AB = RB && MB;
+      (0, YB.useEffect)((() => {
+        if (AB) return UB.c.set({
           crosshairGameView: !0
         }), () => {
-          OH.c.set({
+          UB.c.set({
             crosshairGameView: !1
           })
         }
-      }), [PH]);
-      const [TH, UH] = (0, AH.useState)(!0);
-      return (0, hA.createPortal)((0, XH.jsxs)("div", {
-        ref: QH,
+      }), [AB]);
+      const [VB, SB] = (0, YB.useState)(!0);
+      return (0, oY.createPortal)((0, PB.jsxs)("div", {
+        ref: qB,
         className: "CrosshairFullScreen",
-        style: PH ? void 0 : QA(rH),
-        ...MH.handlers,
-        children: [(0, XH.jsx)(vA.b, {
-          settings: BH,
-          touch: LH,
+        style: AB ? void 0 : qY(DB),
+        ...NB.handlers,
+        children: [(0, PB.jsx)(WY.c, {
+          settings: OB,
+          touch: GB,
           inEditor: !0,
-          ...MH.view
-        }), (0, XH.jsxs)("div", {
-          className: SH()("CrosshairFullScreenPanel", {
-            Collapsed: !TH
+          ...NB.view
+        }), (0, PB.jsxs)("div", {
+          className: QB()("CrosshairFullScreenPanel", {
+            Collapsed: !VB
           }),
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, XH.jsx)(TA, {
-              backdrop: rH,
-              onChange: HH => {
-                vH(!1), zH(HH)
+            children: [(0, PB.jsx)(VY, {
+              backdrop: DB,
+              onChange: BB => {
+                WB(!1), yB(BB)
               },
-              game: EH ? {
-                selected: PH,
+              game: MB ? {
+                selected: AB,
                 onSelect: () => {
-                  vH(!0)
+                  WB(!0)
                 }
               } : void 0
-            }), (0, XH.jsx)(CH.W, {
+            }), (0, PB.jsx)(JB.Z, {
               className: "CrosshairPanelToggle",
-              ariaLabel: uH(TH ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: pB(VB ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                UH(!TH)
+                SB(!VB)
               },
-              children: (0, XH.jsx)(tH.c, {
-                name: TH ? "caret-up" : "pen"
+              children: (0, PB.jsx)(jB.b, {
+                name: VB ? "caret-up" : "pen"
               })
-            }), (0, XH.jsx)(CH.i, {
+            }), (0, PB.jsx)(JB.f, {
               className: "CrosshairFullScreenDone",
-              onClick: YH,
+              onClick: lB,
               padDefaultFocus: !0,
-              children: uH("crosshairSettings:done")
+              children: pB("crosshairSettings:done")
             })]
-          }), TH && (0, XH.jsxs)("div", {
+          }), VB && (0, PB.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, XH.jsx)(UA, {
-              settings: BH,
-              touch: LH,
-              backdrop: rH,
-              onChange: GH
-            }), (0, XH.jsx)(SA, {
-              settings: BH,
-              onChange: GH
+            children: [(0, PB.jsx)(SY, {
+              settings: OB,
+              touch: GB,
+              backdrop: DB,
+              onChange: zB
+            }), (0, PB.jsx)(QY, {
+              settings: OB,
+              onChange: zB
             })]
           })]
         })]
       }), document.body)
     }
-    var oA = LH(2924),
-      IA = LH(34962);
+    var KY = GB(2953),
+      uY = GB(34773);
 
-    function fA(HH) {
+    function mY(BB) {
       let {
-        settings: BH,
-        onChange: LH
-      } = HH;
+        settings: OB,
+        onChange: GB
+      } = BB;
       const {
-        t: rH
-      } = (0, hH.B)(), zH = (0, IA.g)(BH), [EH, GH] = (0, oA.j)(), [YH, uH] = (0, AH.useState)(!1), QH = (0, AH.useRef)(null), [WH, MH] = (0, oA.j)(), [xH, vH] = (0, AH.useState)(!1);
-      return (0, XH.jsxs)("div", {
+        t: DB
+      } = (0, oB.H)(), yB = (0, uY.g)(OB), [MB, zB] = (0, KY.j)(), [lB, pB] = (0, YB.useState)(!1), qB = (0, YB.useRef)(null), [ZB, NB] = (0, KY.j)(), [RB, WB] = (0, YB.useState)(!1);
+      return (0, PB.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, XH.jsxs)("div", {
+        children: [(0, PB.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, XH.jsxs)(CH.W, {
-            className: SH()("CrosshairCopy", {
-              ActiveSecondaryButton: EH
+          children: [(0, PB.jsxs)(JB.Z, {
+            className: QB()("CrosshairCopy", {
+              ActiveSecondaryButton: MB
             }),
             onClick: () => {
-              (0, oA.f)(zH, {
+              (0, KY.h)(yB, {
                 useShareSheet: !1,
-                onOutcome: HH => {
-                  uH("failed" === HH), "copied" === HH && GH()
+                onOutcome: BB => {
+                  pB("failed" === BB), "copied" === BB && zB()
                 }
               })
             },
-            children: [(0, XH.jsx)(tH.c, {
-              name: EH ? "check" : "copy"
-            }), " ", rH(EH ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, XH.jsx)(TH.e, {
+            children: [(0, PB.jsx)(jB.b, {
+              name: MB ? "check" : "copy"
+            }), " ", DB(MB ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, PB.jsx)(VB.b, {
             className: "CrosshairPaste",
-            domRef: QH,
-            ariaLabel: rH("crosshairSettings:paste"),
-            placeholderText: rH("crosshairSettings:paste"),
-            onValueChange: HH => {
-              const BH = (0, IA.f)(HH);
-              vH(!BH && HH.trim().length >= IA.b), BH && (LH(BH), QH.current.value = "", MH())
+            domRef: qB,
+            ariaLabel: DB("crosshairSettings:paste"),
+            placeholderText: DB("crosshairSettings:paste"),
+            onValueChange: BB => {
+              const OB = (0, uY.d)(BB);
+              WB(!OB && BB.trim().length >= uY.b), OB && (GB(OB), qB.current.value = "", NB())
             }
           })]
-        }), YH && (0, XH.jsx)("input", {
+        }), lB && (0, PB.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: zH,
-          "aria-label": rH("crosshairSettings:copy"),
-          onFocus: HH => {
-            HH.currentTarget.select()
+          value: yB,
+          "aria-label": DB("crosshairSettings:copy"),
+          onFocus: BB => {
+            BB.currentTarget.select()
           }
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           "aria-live": "polite",
-          children: [xH && (0, XH.jsx)("div", {
+          children: [RB && (0, PB.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: rH("crosshairSettings:pasteInvalid")
-          }), WH && !xH && (0, XH.jsx)("div", {
+            children: DB("crosshairSettings:pasteInvalid")
+          }), ZB && !RB && (0, PB.jsx)("div", {
             className: "CrosshairShareNote",
-            children: rH("crosshairSettings:applied")
+            children: DB("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var lA = LH(34969);
-    let KA = "sky";
+    var IY = GB(34777);
+    let FY = "sky";
 
-    function cA(HH) {
+    function iY(BB) {
       let {
-        showing: BH
-      } = HH;
+        showing: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)(), {
-        isTouchScreen: rH,
-        gameState: SH,
-        clientEscMenuOptions: zH
-      } = (0, OH.m)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), EH = (0, lA.g)(), [GH, YH] = (0, AH.useState)(KA), uH = HH => {
-        KA = HH, YH(HH)
-      }, [QH, WH] = (0, AH.useState)(!1);
-      return (0, AH.useEffect)((() => {
-        BH || WH(!1)
-      }), [BH]), (0, XH.jsxs)("div", {
+        t: GB
+      } = (0, oB.H)(), {
+        isTouchScreen: DB,
+        gameState: QB,
+        clientEscMenuOptions: yB
+      } = (0, UB.o)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), MB = (0, IY.f)(), [zB, lB] = (0, YB.useState)(FY), pB = BB => {
+        FY = BB, lB(BB)
+      }, [qB, ZB] = (0, YB.useState)(!1);
+      return (0, YB.useEffect)((() => {
+        OB || ZB(!1)
+      }), [OB]), (0, PB.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, XH.jsx)(bA, {
+          children: (0, PB.jsx)(fY, {
             className: "CrosshairPreviewStage",
-            settings: EH,
-            touch: rH,
-            backdrop: GH,
-            label: LH("crosshairSettings:preview"),
-            children: (0, XH.jsxs)("div", {
+            settings: MB,
+            touch: DB,
+            backdrop: zB,
+            label: GB("crosshairSettings:preview"),
+            children: (0, PB.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, XH.jsx)(TA, {
-                backdrop: GH,
-                onChange: uH
-              }), (0, XH.jsxs)(CH.W, {
+              children: [(0, PB.jsx)(VY, {
+                backdrop: zB,
+                onChange: pB
+              }), (0, PB.jsxs)(JB.Z, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  WH(!0)
+                  ZB(!0)
                 },
-                children: [(0, XH.jsx)(tH.c, {
+                children: [(0, PB.jsx)(jB.b, {
                   name: "expand"
-                }), " ", LH("crosshairSettings:fullScreen")]
+                }), " ", GB("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "SettingBox",
-          children: (0, XH.jsx)(UA, {
-            settings: EH,
-            touch: rH,
-            backdrop: GH,
-            onChange: lA.c
+          children: (0, PB.jsx)(SY, {
+            settings: MB,
+            touch: DB,
+            backdrop: zB,
+            onChange: IY.b
           })
-        }), (0, XH.jsx)(fA, {
-          settings: EH,
-          onChange: lA.c
-        }), rH && (0, XH.jsx)(JL.e, {
-          note: (0, sL.g)(rH, zH.touchActionButtons) ? LH("crosshairSettings:touchNote") : void 0
-        }), (0, XH.jsx)(SA, {
-          settings: EH,
-          onChange: lA.c
-        }), QH && (0, XH.jsx)(mA, {
-          settings: EH,
-          touch: rH,
-          backdrop: GH,
-          onBackdrop: uH,
-          inGame: "inGame" === SH,
-          onChange: lA.c,
+        }), (0, PB.jsx)(mY, {
+          settings: MB,
+          onChange: IY.b
+        }), DB && (0, PB.jsx)(vG.d, {
+          note: (0, HG.h)(DB, yB.touchActionButtons) ? GB("crosshairSettings:touchNote") : void 0
+        }), (0, PB.jsx)(QY, {
+          settings: MB,
+          onChange: IY.b
+        }), qB && (0, PB.jsx)(dY, {
+          settings: MB,
+          touch: DB,
+          backdrop: zB,
+          onBackdrop: pB,
+          inGame: "inGame" === QB,
+          onChange: IY.b,
           onClose: () => {
-            WH(!1)
+            ZB(!1)
           }
         })]
       })
     }
-    var eA = LH(9561),
-      qA = LH(1401),
-      gA = LH(5476),
-      NA = LH(34977),
-      RA = LH(4657),
-      jA = LH(2059),
-      nA = LH(701);
-    const FA = (0, AH.memo)((function() {
+    var LY = GB(9535),
+      gY = GB(1443),
+      rY = GB(5478),
+      XY = GB(34785),
+      wY = GB(4678),
+      EY = GB(2076),
+      cY = GB(738);
+    const hY = (0, YB.memo)((function() {
       const {
-        clientEscMenuOptions: HH
-      } = (0, OH.m)(["clientEscMenuOptions"]), {
-        recording: BH,
-        clipping: LH,
-        hasClipBuffer: rH
-      } = (0, yB.e)("replayRecorder"), hH = (0, yB.c)("connectedGame", (HH => HH.replay)), tH = (0, RA.k)(), zH = !1 === (0, QH.j)("canRecordReplays");
-      (0, AH.useEffect)((() => {
-        xH.gameBridge.send("setRecorderPrefs", {
-          clipping: HH.enableClipping,
-          clipSeconds: HH.clipDurationSeconds
+        clientEscMenuOptions: BB
+      } = (0, UB.o)(["clientEscMenuOptions"]), {
+        recording: OB,
+        clipping: GB,
+        hasClipBuffer: DB
+      } = (0, tO.g)("replayRecorder"), oB = (0, tO.f)("connectedGame", (BB => BB.replay)), jB = (0, wY.k)(), yB = !1 === (0, qB.g)("canRecordReplays");
+      (0, YB.useEffect)((() => {
+        RB.gameBridge.send("setRecorderPrefs", {
+          clipping: BB.enableClipping,
+          clipSeconds: BB.clipDurationSeconds
         })
-      }), [HH.enableClipping, HH.clipDurationSeconds]);
-      const EH = tH || hH,
-        GH = !EH && !zH,
-        YH = BH || GH,
-        uH = GH,
-        WH = uH && LH && !BH;
+      }), [BB.enableClipping, BB.clipDurationSeconds]);
+      const MB = jB || oB,
+        zB = !MB && !yB,
+        lB = OB || zB,
+        pB = zB,
+        ZB = pB && GB && !OB;
 
-      function MH() {
-        YH && xH.gameBridge.send("toggleRecording", null)
+      function NB() {
+        lB && RB.gameBridge.send("toggleRecording", null)
       }
-      return (0, XH.jsxs)("div", {
+      return (0, PB.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, XH.jsxs)("div", {
+        children: [(0, PB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: BH ? (0, XH.jsxs)(XH.Fragment, {
-              children: [(0, XH.jsxs)(CH.O, {
+            children: OB ? (0, PB.jsxs)(PB.Fragment, {
+              children: [(0, PB.jsxs)(JB.Q, {
                 className: "ReplayViewerCategoryButton",
-                onClick: MH,
-                disabled: !YH,
-                children: [(0, XH.jsx)("span", {
+                onClick: NB,
+                disabled: !lB,
+                children: [(0, PB.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, XH.jsx)(jA.b, {
+                }), (0, PB.jsx)(EY.c, {
                   noaAction: "recordGame"
                 })]
-              }), (0, XH.jsx)(NA.e, {
+              }), (0, PB.jsx)(XY.d, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, XH.jsxs)(CH.i, {
+            }) : (0, PB.jsxs)(JB.f, {
               className: "ReplayViewerCategoryButton",
-              onClick: MH,
-              disabled: !YH,
-              children: [(0, XH.jsx)("span", {
+              onClick: NB,
+              disabled: !lB,
+              children: [(0, PB.jsx)("span", {
                 children: "Start Recording"
-              }), (0, XH.jsx)(jA.b, {
+              }), (0, PB.jsx)(EY.c, {
                 noaAction: "recordGame"
               })]
             })
-          }), zH && (0, XH.jsx)("div", {
+          }), yB && (0, PB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), EH && !BH && (0, XH.jsx)("div", {
+          }), MB && !OB && (0, PB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, XH.jsx)(VH.c, {
+          children: [(0, PB.jsx)(nB.c, {
             label: "Enable clipping",
-            checked: HH.enableClipping,
-            disabled: !uH,
-            onClick: function(HH) {
-              uH && OH.c.setClientEscMenuOptions({
-                enableClipping: HH
+            checked: BB.enableClipping,
+            disabled: !pB,
+            onClick: function(BB) {
+              pB && UB.c.setClientEscMenuOptions({
+                enableClipping: BB
               })
             },
-            className: SH()({
-              SettingBoxDisabled: !uH
+            className: QB()({
+              SettingBoxDisabled: !pB
             })
-          }), (0, XH.jsx)(VH.f, {
+          }), (0, PB.jsx)(nB.f, {
             name: "Clip duration (seconds)",
-            min: nA.n,
-            max: nA.k,
-            step: nA.c,
-            initValue: HH.clipDurationSeconds,
-            onChange: function(HH) {
-              OH.c.setClientEscMenuOptions({
-                clipDurationSeconds: HH
+            min: cY.f,
+            max: cY.e,
+            step: cY.b,
+            initValue: BB.clipDurationSeconds,
+            onChange: function(BB) {
+              UB.c.setClientEscMenuOptions({
+                clipDurationSeconds: BB
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !uH || !HH.enableClipping
+            disabled: !pB || !BB.enableClipping
           })]
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, XH.jsxs)(CH.i, {
+          children: [(0, PB.jsxs)(JB.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              WH && xH.gameBridge.send("saveClip", null)
+              ZB && RB.gameBridge.send("saveClip", null)
             },
-            disabled: !WH,
-            children: [(0, XH.jsx)("span", {
+            disabled: !ZB,
+            children: [(0, PB.jsx)("span", {
               children: "Record clip"
-            }), (0, XH.jsx)(jA.b, {
+            }), (0, PB.jsx)(EY.c, {
               noaAction: "recordClip"
             })]
-          }), HH.enableClipping && !rH && uH && !BH && (0, XH.jsx)("div", {
+          }), BB.enableClipping && !DB && pB && !OB && (0, PB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), BH && (0, XH.jsx)("div", {
+          }), OB && (0, PB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, XH.jsxs)(CH.i, {
+          children: [(0, PB.jsxs)(JB.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, RA.g)(!0), OH.c.set({
+              (0, wY.j)(!0), UB.c.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: tH,
-            children: [(0, XH.jsx)("span", {
+            disabled: jB,
+            children: [(0, PB.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, XH.jsx)(jA.b, {
+            }), (0, PB.jsx)(EY.c, {
               noaAction: "replayViewerOpen"
             })]
-          }), tH && (0, XH.jsx)("div", {
+          }), jB && (0, PB.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, XH.jsx)("iframe", {
+          }), (0, PB.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2825,8 +2825,8 @@ export const modules = {
         })]
       })
     }));
-    var DA = LH(1962);
-    const wA = {
+    var aY = GB(1998);
+    const eY = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2848,11 +2848,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, XH.jsx)("svg", {
+        icon: () => (0, PB.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, XH.jsx)("path", {
+          children: (0, PB.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2871,7 +2871,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      Cu: {
+      zp: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2897,377 +2897,377 @@ export const modules = {
       }
     };
 
-    function ZA() {
-      return Promise.all([LH.e(89), LH.e(149), LH.e(148), LH.e(144)]).then((() => LH(42378))).then((HH => ({
-        default: HH.ShaderPackCategory
-      })), (HH => (console.error("Failed to load the shader pack settings", HH), {
-        default: dA
+    function TY() {
+      return Promise.all([GB.e(89), GB.e(149), GB.e(148), GB.e(144)]).then((() => GB(42069))).then((BB => ({
+        default: BB.ShaderPackCategory
+      })), (BB => (console.error("Failed to load the shader pack settings", BB), {
+        default: bY
       })))
     }
 
-    function dA() {
+    function bY() {
       const {
-        t: HH
-      } = (0, hH.B)();
-      return (0, XH.jsx)("div", {
+        t: BB
+      } = (0, oB.H)();
+      return (0, PB.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: HH("shaderPack:tabLoadFailed")
+        children: BB("shaderPack:tabLoadFailed")
       })
     }
-    var aA = LH(1390),
-      sA = LH(171);
-    const JA = /party\s*voice/i;
-    let iA = !1;
+    var CY = GB(1434),
+      HY = GB(186);
+    const vY = /party\s*voice/i;
+    let sY = !1;
 
-    function pA(HH) {
-      return Object.keys(HH).some((HH => HH.startsWith("__reactFiber$")))
+    function xY(BB) {
+      return Object.keys(BB).some((BB => BB.startsWith("__reactFiber$")))
     }
-    const yA = ".MenuSideBarBody, .MenuSideBarSection";
+    const tY = ".MenuSideBarBody, .MenuSideBarSection";
 
-    function Hr(HH) {
-      var BH;
-      return (null !== (BH = HH.textContent) && void 0 !== BH ? BH : "").replace(/\s+/g, " ").trim()
+    function BD(BB) {
+      var OB;
+      return (null !== (OB = BB.textContent) && void 0 !== OB ? OB : "").replace(/\s+/g, " ").trim()
     }
 
-    function Br(HH) {
-      for (const BH of function(HH) {
-          const BH = new Set;
-          for (const LH of HH.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) BH.add(LH);
-          for (const LH of [HH, ...HH.querySelectorAll(yA)])
-            for (const HH of LH.children) BH.add(HH);
-          return [...BH]
-        }(HH))
-        if (!pA(BH) || !BH.matches(yA) && JA.test(Hr(BH))) return BH;
+    function OD(BB) {
+      for (const OB of function(BB) {
+          const OB = new Set;
+          for (const GB of BB.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) OB.add(GB);
+          for (const GB of [BB, ...BB.querySelectorAll(tY)])
+            for (const BB of GB.children) OB.add(BB);
+          return [...OB]
+        }(BB))
+        if (!xY(OB) || !OB.matches(tY) && vY.test(BD(OB))) return OB;
       return null
     }
 
-    function Lr(HH) {
-      return HH.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
+    function GD(BB) {
+      return BB.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
     }
-    const Ar = new Set(["STYLE", "SCRIPT", "TITLE"]);
+    const YD = new Set(["STYLE", "SCRIPT", "TITLE"]);
 
-    function rr(HH) {
-      const BH = document.createTreeWalker(HH, NodeFilter.SHOW_TEXT, {
-        acceptNode: HH => {
-          var BH, LH;
-          return Ar.has(null !== (BH = null === (LH = HH.parentElement) || void 0 === LH ? void 0 : LH.tagName.toUpperCase()) && void 0 !== BH ? BH : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    function DD(BB) {
+      const OB = document.createTreeWalker(BB, NodeFilter.SHOW_TEXT, {
+        acceptNode: BB => {
+          var OB, GB;
+          return YD.has(null !== (OB = null === (GB = BB.parentElement) || void 0 === GB ? void 0 : GB.tagName.toUpperCase()) && void 0 !== OB ? OB : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
         }
       });
-      for (let SH = BH.nextNode(); null !== SH; SH = BH.nextNode()) {
-        var LH;
-        const HH = (null !== (LH = SH.textContent) && void 0 !== LH ? LH : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
-        if ("" !== HH) {
-          var AH, rH;
-          return (null !== (AH = null === (rH = HH.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === rH ? void 0 : rH[0]) && void 0 !== AH ? AH : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
+      for (let QB = OB.nextNode(); null !== QB; QB = OB.nextNode()) {
+        var GB;
+        const BB = (null !== (GB = QB.textContent) && void 0 !== GB ? GB : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
+        if ("" !== BB) {
+          var YB, DB;
+          return (null !== (YB = null === (DB = BB.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === DB ? void 0 : DB[0]) && void 0 !== YB ? YB : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
         }
       }
       return ""
     }
 
-    function Sr(HH, BH) {
-      const LH = Lr(BH).slice(0, 40) || "blank";
-      return `${(Lr(HH.toLowerCase())||"none").slice(0,Math.max(23,sA.T-1-LH.length))}:${LH}`.slice(0, sA.T)
+    function QD(BB, OB) {
+      const GB = GD(OB).slice(0, 40) || "blank";
+      return `${(GD(BB.toLowerCase())||"none").slice(0,Math.max(23,HY.X-1-GB.length))}:${GB}`.slice(0, HY.X)
     }
-    const hr = (0, AH.lazy)((() => LH.e(302).then((() => LH(42364))).then((HH => ({
-        default: HH.BloxdInformation
+    const oD = (0, YB.lazy)((() => GB.e(302).then((() => GB(42060))).then((BB => ({
+        default: BB.BloxdInformation
       }))))),
-      tr = (0, AH.lazy)(ZA);
+      jD = (0, YB.lazy)(TY);
 
-    function zr(HH) {
-      return HH ? "general" : "account"
+    function yD(BB) {
+      return BB ? "general" : "account"
     }
-    const Cr = new Map,
-      Er = (0, AH.memo)((function(HH) {
+    const JD = new Map,
+      MD = (0, YB.memo)((function(BB) {
         let {
-          show: BH,
-          setBeforeResumeCallback: LH
-        } = HH;
-        (0, WH.b)();
+          show: OB,
+          setBeforeResumeCallback: GB
+        } = BB;
+        (0, ZB.e)();
         const {
-          gameState: rH,
-          openSettingsCategory: SH
-        } = (0, OH.m)(["gameState", "openSettingsCategory"]), {
-          userContext: zH
-        } = (0, uH.e)(), {
-          t: EH
-        } = (0, hH.B)(), TH = (0, YH.e)(), UH = (0, QH.j)("minChunkAddDist"), VH = "inGame" === rH, [bH, oH] = (0, AH.useState)(zr(VH)), [IH, fH] = (0, AH.useState)(null), [lH, KH] = (0, AH.useState)([]), cH = (0, AH.useRef)(function() {
-          const HH = new Date,
-            BH = 6 * (HH.getMonth() + HH.getDate()) % fB.z.length;
-          return [...fB.z, ...fB.z].slice(BH, BH + 6)
-        }()), eH = (0, AH.useRef)(null), qH = (0, AH.useRef)(null), gH = (0, tL.e)(qA.i, (0, qA.e)()), NH = Object.keys(wA).filter((HH => {
-          switch (HH) {
+          gameState: DB,
+          openSettingsCategory: QB
+        } = (0, UB.o)(["gameState", "openSettingsCategory"]), {
+          userContext: yB
+        } = (0, pB.d)(), {
+          t: MB
+        } = (0, oB.H)(), VB = (0, lB.c)(), SB = (0, qB.g)("minChunkAddDist"), nB = "inGame" === DB, [fB, KB] = (0, YB.useState)(yD(nB)), [uB, mB] = (0, YB.useState)(null), [IB, FB] = (0, YB.useState)([]), iB = (0, YB.useRef)(function() {
+          const BB = new Date,
+            OB = 6 * (BB.getMonth() + BB.getDate()) % mO.z.length;
+          return [...mO.z, ...mO.z].slice(OB, OB + 6)
+        }()), LB = (0, YB.useRef)(null), gB = (0, YB.useRef)(null), rB = (0, jG.i)(gY.g, (0, gY.b)()), XB = Object.keys(eY).filter((BB => {
+          switch (BB) {
             case "replayViewer":
-              return VH;
+              return nB;
             case "developerTools":
-              return zH.playerHasRank("developer") || !1;
+              return yB.playerHasRank("developer") || !1;
             case "texturePack":
-              return MH.featureFlags.settings.canChangeTexturePack;
-            case "Cu":
-              return MH.featureFlags.settings.canUseShaderPacks;
+              return NB.featureFlags.settings.canChangeTexturePack;
+            case "zp":
+              return NB.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return MH.featureFlags.useSocialFeatures || null !== zH.dailyDrop;
+              return NB.featureFlags.useSocialFeatures || null !== yB.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== mH.siteUsed;
+              return "crazygames" !== dB.siteUsed;
             case "controller":
-              return MH.featureFlags.useControllerSupport && (gH || "controller" === bH);
+              return NB.featureFlags.useControllerSupport && (rB || "controller" === fB);
             default:
               return !0
           }
         }));
-        (0, tL.d)("toggleFullCoordinateOverlay", (() => {
-          const HH = NL("showCoordinates") && NL("showChunkCoordinates") && NL("showFPS");
-          RL("showCoordinates", !HH), RL("showChunkCoordinates", !HH), RL("showFPS", !HH), TH()
-        })), (0, tL.d)("updatedChunkLoadDist", (() => {
-          TH()
-        })), (0, AH.useEffect)((() => {
-          if (fH(null), null === OH.c.get("openSettingsCategory")) {
-            const HH = (0, aA.m)() ? Cr.get(VH) : void 0;
-            oH(HH && NH.includes(HH) ? HH : zr(VH))
+        (0, jG.f)("toggleFullCoordinateOverlay", (() => {
+          const BB = XG("showCoordinates") && XG("showChunkCoordinates") && XG("showFPS");
+          wG("showCoordinates", !BB), wG("showChunkCoordinates", !BB), wG("showFPS", !BB), VB()
+        })), (0, jG.f)("updatedChunkLoadDist", (() => {
+          VB()
+        })), (0, YB.useEffect)((() => {
+          if (mB(null), null === UB.c.get("openSettingsCategory")) {
+            const BB = (0, CY.j)() ? JD.get(nB) : void 0;
+            KB(BB && XB.includes(BB) ? BB : yD(nB))
           }
-        }), [BH]), (0, AH.useEffect)((() => {
-          if (BH && qH.current) return function(HH) {
-            if (iA) return () => {};
-            let BH = null,
-              LH = null;
-            const AH = () => {
-                var HH;
-                null !== LH && (clearTimeout(LH), LH = null), null === (HH = BH) || void 0 === HH || HH.disconnect(), BH = null
+        }), [OB]), (0, YB.useEffect)((() => {
+          if (OB && gB.current) return function(BB) {
+            if (sY) return () => {};
+            let OB = null,
+              GB = null;
+            const YB = () => {
+                var BB;
+                null !== GB && (clearTimeout(GB), GB = null), null === (BB = OB) || void 0 === BB || BB.disconnect(), OB = null
               },
-              rH = () => {
-                const BH = Br(HH);
-                null !== BH && (iA = !0, AH(), (0, WB.reportAnalyticsClick)({
+              DB = () => {
+                const OB = OD(BB);
+                null !== OB && (sY = !0, YB(), (0, ZO.reportAnalyticsClick)({
                   id: "settings.unknown_tab_seen",
-                  value: Sr(window.location.hostname, rr(BH))
+                  value: QD(window.location.hostname, DD(OB))
                 }))
               };
-            return LH = setTimeout((() => {
-              LH = null, rH(), iA || (BH = new MutationObserver(rH), BH.observe(HH, {
+            return GB = setTimeout((() => {
+              GB = null, DB(), sY || (OB = new MutationObserver(DB), OB.observe(BB, {
                 childList: !0,
                 subtree: !0
               }))
-            }), 2e3), AH
-          }(qH.current)
-        }), [BH]), (0, AH.useEffect)((() => {
-          null !== SH && (oH(SH), Cr.set(VH, SH), OH.c.set({
+            }), 2e3), YB
+          }(gB.current)
+        }), [OB]), (0, YB.useEffect)((() => {
+          null !== QB && (KB(QB), JD.set(nB, QB), UB.c.set({
             openSettingsCategory: null
           }))
-        }), [SH, VH]), (0, AH.useLayoutEffect)((() => {
-          eH.current && (eH.current.scrollTop = 0)
-        }), [bH, BH]), (0, AH.useEffect)((() => {
-          "updateLog" === bH && (0, PH.c)().then(KH)
-        }), [bH]), (0, AH.useEffect)((() => {
-          if ((0, lL.M)(UH)) return;
-          const [HH, BH] = (0, dL.g)(), [LH, AH] = (0, bL.g)(UH), rH = (0, DA.f)(UH[0], HH, LH), SH = (0, DA.f)(UH[1], BH, AH);
-          xH.gameBridge.send("setChunkAddDistance", {
-            horizontal: rH,
-            vertical: SH
+        }), [QB, nB]), (0, YB.useLayoutEffect)((() => {
+          LB.current && (LB.current.scrollTop = 0)
+        }), [fB, OB]), (0, YB.useEffect)((() => {
+          "updateLog" === fB && (0, AB.c)().then(FB)
+        }), [fB]), (0, YB.useEffect)((() => {
+          if ((0, IG.Q)(SB)) return;
+          const [BB, OB] = (0, bG.h)(), [GB, YB] = (0, fG.g)(SB), DB = (0, aY.f)(SB[0], BB, GB), QB = (0, aY.f)(SB[1], OB, YB);
+          RB.gameBridge.send("setChunkAddDistance", {
+            horizontal: DB,
+            vertical: QB
           })
-        }), [UH]);
-        const RH = (0, AH.useCallback)((async () => {
-          IH && (await IH(), fH(null))
-        }), [IH]);
+        }), [SB]);
+        const wB = (0, YB.useCallback)((async () => {
+          uB && (await uB(), mB(null))
+        }), [uB]);
 
-        function jH() {
-          OH.c.set({
+        function EB() {
+          UB.c.set({
             openEverythingMenuName: null
           })
         }
-        return (0, AH.useEffect)((() => {
-          LH((() => RH))
-        }), [RH, LH]), (0, XH.jsxs)("div", {
+        return (0, YB.useEffect)((() => {
+          GB((() => wB))
+        }), [wB, GB]), (0, PB.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: BH ? {} : {
+          style: OB ? {} : {
             display: "none"
           },
-          children: [(0, XH.jsx)("div", {
-            ref: qH,
+          children: [(0, PB.jsx)("div", {
+            ref: gB,
             className: "MenuSideBar",
-            children: (0, XH.jsx)("div", {
+            children: (0, PB.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, XH.jsx)(GH, {
-                items: NH.map((HH => {
-                  const BH = wA[HH].icon;
+              children: (0, PB.jsx)(zB, {
+                items: XB.map((BB => {
+                  const OB = eY[BB].icon;
                   return {
-                    id: HH,
-                    faIcon: "string" === typeof BH ? BH : void 0,
-                    iconElement: "string" === typeof BH ? void 0 : (0, XH.jsx)(BH, {}),
-                    title: EH(wA[HH].displayName),
+                    id: BB,
+                    faIcon: "string" === typeof OB ? OB : void 0,
+                    iconElement: "string" === typeof OB ? void 0 : (0, PB.jsx)(OB, {}),
+                    title: MB(eY[BB].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: bH,
-                onClick: HH => {
-                  !async function(HH) {
-                    await RH(), oH(HH), Cr.set(VH, HH)
-                  }(HH)
+                selectedItemId: fB,
+                onClick: BB => {
+                  !async function(BB) {
+                    await wB(), KB(BB), JD.set(nB, BB)
+                  }(BB)
                 }
               })
             })
-          }), (0, XH.jsxs)("div", {
-            ref: eH,
+          }), (0, PB.jsxs)("div", {
+            ref: LB,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === bH && (0, XH.jsx)(aB, {
-              showing: BH,
-              inGame: VH
-            }), "general" === bH && (0, XH.jsx)(rL, {
-              inGame: VH
-            }), "audio" === bH && (0, XH.jsx)(SL, {}), "notifications" === bH && (0, XH.jsx)(OL, {}), "graphics" === bH && (0, XH.jsx)(ZL, {
-              minChunkAddDist: null !== UH && void 0 !== UH ? UH : [2, 2],
-              getValue: NL,
-              onChange: RL,
-              setApplySettingsCallback: fH
-            }), "controls" === bH && (0, XH.jsx)(aL.h, {}), "crosshair" === bH && (0, XH.jsx)(cA, {
-              showing: BH
-            }), "controller" === bH && MH.featureFlags.useControllerSupport && (0, XH.jsx)(eA.c, {}), MH.featureFlags.settings.canChangeTexturePack && "texturePack" === bH && (0, XH.jsx)(gA.c, {
-              setApplySettingsCallback: fH
-            }), MH.featureFlags.settings.canUseShaderPacks && "Cu" === bH && (0, XH.jsx)(AH.Suspense, {
+            children: ["account" === fB && (0, PB.jsx)(CO, {
+              showing: OB,
+              inGame: nB
+            }), "general" === fB && (0, PB.jsx)(DG, {
+              inGame: nB
+            }), "audio" === fB && (0, PB.jsx)(QG, {}), "notifications" === fB && (0, PB.jsx)(UG, {}), "graphics" === fB && (0, PB.jsx)(TG, {
+              minChunkAddDist: null !== SB && void 0 !== SB ? SB : [2, 2],
+              getValue: XG,
+              onChange: wG,
+              setApplySettingsCallback: mB
+            }), "controls" === fB && (0, PB.jsx)(CG.f, {}), "crosshair" === fB && (0, PB.jsx)(iY, {
+              showing: OB
+            }), "controller" === fB && NB.featureFlags.useControllerSupport && (0, PB.jsx)(LY.d, {}), NB.featureFlags.settings.canChangeTexturePack && "texturePack" === fB && (0, PB.jsx)(rY.e, {
+              setApplySettingsCallback: mB
+            }), NB.featureFlags.settings.canUseShaderPacks && "zp" === fB && (0, PB.jsx)(YB.Suspense, {
               fallback: null,
-              children: (0, XH.jsx)(tr, {
-                setApplySettingsCallback: fH
+              children: (0, PB.jsx)(jD, {
+                setApplySettingsCallback: mB
               })
-            }), "updateLog" === bH && (0, XH.jsx)("div", {
+            }), "updateLog" === fB && (0, PB.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, XH.jsx)("div", {
+              children: (0, PB.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: lH.map(((HH, BH) => (0, XH.jsx)(vH.b, {
-                  updateLog: HH,
-                  index: BH,
-                  close: jH
-                }, BH)))
+                children: IB.map(((BB, OB) => (0, PB.jsx)(WB.d, {
+                  updateLog: BB,
+                  index: OB,
+                  close: EB
+                }, OB)))
               })
-            }), "information" === bH && (0, XH.jsx)("div", {
+            }), "information" === fB && (0, PB.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, XH.jsx)(AH.Suspense, {
+              children: (0, PB.jsx)(YB.Suspense, {
                 fallback: null,
-                children: (0, XH.jsx)(hr, {})
+                children: (0, PB.jsx)(oD, {})
               })
-            }), "alternativeDomains" === bH && (0, XH.jsxs)("div", {
+            }), "alternativeDomains" === fB && (0, PB.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, XH.jsx)("div", {
+              children: [(0, PB.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: EH("settingsMenu:unblockedDomainsDescription")
-              }), (0, XH.jsx)("div", {
+                children: MB("settingsMenu:unblockedDomainsDescription")
+              }), (0, PB.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: cH.current.map((HH => (0, XH.jsxs)(CH.i, {
+                children: iB.current.map((BB => (0, PB.jsxs)(JB.f, {
                   onClick: () => {
-                    window.open(`https://${HH}`)
+                    window.open(`https://${BB}`)
                   },
-                  children: [(0, XH.jsx)(tH.c, {
+                  children: [(0, PB.jsx)(jB.b, {
                     name: "arrow-up-right-from-square"
-                  }), " ", HH]
-                }, HH)))
+                  }), " ", BB]
+                }, BB)))
               })]
-            }), "replayViewer" === bH && (0, XH.jsx)(FA, {}), "developerTools" === bH && (0, XH.jsx)("div", {
+            }), "replayViewer" === fB && (0, PB.jsx)(hY, {}), "developerTools" === fB && (0, PB.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, XH.jsx)(kH, {
-                setApplySettingsCallback: fH
+              children: (0, PB.jsx)(kB, {
+                setApplySettingsCallback: mB
               })
-            }), null !== IH && (0, XH.jsx)("div", {
+            }), null !== uB && (0, PB.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, XH.jsx)(CH.i, {
+              children: (0, PB.jsx)(JB.f, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: RH,
-                children: EH("general:apply")
+                onClick: wB,
+                children: MB("general:apply")
               })
             })]
           })]
         })
       }));
-    var Xr = LH(2859),
-      Gr = LH(1580),
-      Yr = LH(2464),
-      ur = LH(4738);
-    const Qr = (0, AH.lazy)((() => Promise.resolve().then((() => LH(5069))).then((HH => (HH.needGameClientAfterPaint(), (0, Xr.c)((HH => HH.loadCharacterCustomisationUI()), (HH => HH.CharacterCustomisationUI))))))),
-      Wr = "openCustomisationTab";
+    var PD = GB(2895),
+      zD = GB(1624),
+      lD = GB(2496),
+      pD = GB(4764);
+    const qD = (0, YB.lazy)((() => Promise.resolve().then((() => GB(5082))).then((BB => (BB.needGameClientAfterPaint(), (0, PD.c)((BB => BB.loadCharacterCustomisationUI()), (BB => BB.CharacterCustomisationUI))))))),
+      ZD = "openCustomisationTab";
 
-    function Mr(HH) {
-      var BH, LH, rH;
+    function ND(BB) {
+      var OB, GB, DB;
       let {
-        show: SH
-      } = HH;
+        show: QB
+      } = BB;
       const {
-        userContext: hH
-      } = (0, uH.e)(), tH = (0, DH.usePurchasesAllowed)(), zH = (0, AH.useRef)(null);
-      var CH, EH;
-      hH !== oH.NULL_USER_CONTEXT && (null === (BH = zH.current) || void 0 === BH ? void 0 : BH.whamm) !== hH.whamm && (zH.current = {
-        whamm: hH.whamm,
-        mountKey: (null !== (CH = null === (EH = zH.current) || void 0 === EH ? void 0 : EH.mountKey) && void 0 !== CH ? CH : -1) + 1
+        userContext: oB
+      } = (0, pB.d)(), jB = (0, aB.usePurchasesAllowed)(), yB = (0, YB.useRef)(null);
+      var JB, MB;
+      oB !== KB.NULL_USER_CONTEXT && (null === (OB = yB.current) || void 0 === OB ? void 0 : OB.whamm) !== oB.whamm && (yB.current = {
+        whamm: oB.whamm,
+        mountKey: (null !== (JB = null === (MB = yB.current) || void 0 === MB ? void 0 : MB.mountKey) && void 0 !== JB ? JB : -1) + 1
       });
-      const [YH, QH] = (0, AH.useState)("characters");
-      if ((0, tL.d)(Wr, QH), !SH) return null;
-      const WH = null !== (0, Gr.k)(Date.now()),
-        MH = hH.getOwnedCosmeticPacks(),
-        xH = fB.Yb.filter((HH => "pet" === HH || "aura" === HH ? WH || (0, Yr.o)(HH).some((BH => BH !== `${HH}_none` && (0, Yr.y)(HH, BH, MH))) : "cape" !== HH && "nameColour" !== HH || (0, RH.b)(hH.getPlayerRanks()) || tH)).map((HH => ({
-          id: HH,
-          faIcon: fB.H[HH],
-          title: fB.L[HH],
+      const [lB, qB] = (0, YB.useState)("characters");
+      if ((0, jG.f)(ZD, qB), !QB) return null;
+      const ZB = null !== (0, zD.h)(Date.now()),
+        NB = oB.getOwnedCosmeticPacks(),
+        RB = mO.Ub.filter((BB => "pet" === BB || "aura" === BB ? ZB || (0, lD.n)(BB).some((OB => OB !== `${BB}_none` && (0, lD.x)(BB, OB, NB))) : "cape" !== BB && "nameColour" !== BB || (0, wB.e)(oB.getPlayerRanks()) || jB)).map((BB => ({
+          id: BB,
+          faIcon: mO.G[BB],
+          title: mO.I[BB],
           redDot: !1
         })));
-      return (0, XH.jsxs)("div", {
+      return (0, PB.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, XH.jsx)(GH, {
-            items: xH,
-            selectedItemId: YH,
-            onClick: HH => {
-              QH(HH)
+          children: (0, PB.jsx)(zB, {
+            items: RB,
+            selectedItemId: lB,
+            onClick: BB => {
+              qB(BB)
             }
           })
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "MenuBody",
-          children: (0, XH.jsx)(AH.Suspense, {
-            fallback: (0, XH.jsx)("div", {
+          children: (0, PB.jsx)(YB.Suspense, {
+            fallback: (0, PB.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, XH.jsx)(UH.d, {})
+              children: (0, PB.jsx)(SB.b, {})
             }),
-            children: (0, XH.jsx)(Qr, {
-              selectedTab: YH,
-              noWebGlFallback: vr
-            }, null !== (LH = null === (rH = zH.current) || void 0 === rH ? void 0 : rH.mountKey) && void 0 !== LH ? LH : 0)
+            children: (0, PB.jsx)(qD, {
+              selectedTab: lB,
+              noWebGlFallback: WD
+            }, null !== (GB = null === (DB = yB.current) || void 0 === DB ? void 0 : DB.mountKey) && void 0 !== GB ? GB : 0)
           })
         })]
       })
     }
 
-    function xr() {
+    function RD() {
       const {
-        t: HH
-      } = (0, hH.B)();
-      return (0, XH.jsx)("div", {
+        t: BB
+      } = (0, oB.H)();
+      return (0, PB.jsx)("div", {
         className: "CharacterCustomisationNoWebGl SmallTextBold",
-        children: HH((0, ur.h)((0, ur.e)()))
+        children: BB((0, pD.f)((0, pD.d)()))
       })
     }
-    const vr = (0, XH.jsx)(xr, {});
-    var Pr = LH(1464),
-      Tr = LH(1471),
-      Ur = LH(34986),
-      Vr = LH(4941),
-      Or = LH(3788),
-      br = LH(3870),
-      kr = LH(35008),
-      mr = LH(9475),
-      or = LH(34993),
-      Ir = LH(34999),
-      fr = LH(1986),
-      lr = LH(1967),
-      Kr = LH(5383),
-      cr = LH(1204),
-      er = LH(1168),
-      qr = LH(1696),
-      gr = LH(9540),
-      Nr = LH(2638),
-      Rr = LH(2642);
+    const WD = (0, PB.jsx)(RD, {});
+    var AD = GB(1508),
+      VD = GB(1510),
+      SD = GB(34790),
+      nD = GB(4946),
+      UD = GB(3843),
+      fD = GB(3922),
+      kD = GB(34815),
+      dD = GB(9448),
+      KD = GB(34794),
+      uD = GB(34807),
+      mD = GB(2012),
+      ID = GB(2e3),
+      FD = GB(5392),
+      iD = GB(1260),
+      LD = GB(1217),
+      gD = GB(1730),
+      rD = GB(9513),
+      XD = GB(2663),
+      wD = GB(2666);
 
-    function jr(HH) {
-      return HH ? Object.keys(HH).sort(((BH, LH) => {
-        var AH, rH, SH, hH;
-        const tH = (null !== (AH = null === (rH = HH[LH]) || void 0 === rH ? void 0 : rH.sortPriority) && void 0 !== AH ? AH : 0) - (null !== (SH = null === (hH = HH[BH]) || void 0 === hH ? void 0 : hH.sortPriority) && void 0 !== SH ? SH : 0);
-        return 0 !== tH ? tH : BH.localeCompare(LH)
+    function ED(BB) {
+      return BB ? Object.keys(BB).sort(((OB, GB) => {
+        var YB, DB, QB, oB;
+        const jB = (null !== (YB = null === (DB = BB[GB]) || void 0 === DB ? void 0 : DB.sortPriority) && void 0 !== YB ? YB : 0) - (null !== (QB = null === (oB = BB[OB]) || void 0 === oB ? void 0 : oB.sortPriority) && void 0 !== QB ? QB : 0);
+        return 0 !== jB ? jB : OB.localeCompare(GB)
       })) : []
     }
-    const nr = [{
+    const cD = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -3281,241 +3281,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Fr(HH) {
+    function hD(BB) {
       for (const {
-          threshold: BH,
-          suffix: LH
+          threshold: OB,
+          suffix: GB
         }
-        of nr)
-        if (HH >= BH) {
-          const AH = HH / BH;
-          return AH >= 100 ? `${Math.floor(AH)}${LH}` : AH >= 10 ? `${AH.toFixed(1).replace(/\.0$/,"")}${LH}` : `${AH.toFixed(2).replace(/\.?0+$/,"")}${LH}`
-        } return String(HH)
+        of cD)
+        if (BB >= OB) {
+          const YB = BB / OB;
+          return YB >= 100 ? `${Math.floor(YB)}${GB}` : YB >= 10 ? `${YB.toFixed(1).replace(/\.0$/,"")}${GB}` : `${YB.toFixed(2).replace(/\.?0+$/,"")}${GB}`
+        } return String(BB)
     }
-    var Dr = LH(5506);
-    const wr = {
+    var aD = GB(5512);
+    const eD = {
         normal: "0.8em",
         big: "1em"
       },
-      Zr = (0, AH.memo)((function(HH) {
+      TD = (0, YB.memo)((function(BB) {
         let {
-          item: BH,
-          amount: LH = 0,
-          size: AH = "normal",
-          tier: rH = null
-        } = HH;
-        return (0, XH.jsx)("div", {
-          className: SH()("SmpSlot", `SmpSlot-${AH}`),
-          children: BH && (0, XH.jsx)(fr.e, {
-            itemName: BH,
-            amount: LH > 1 ? LH : 0,
-            amountFontSize: wr[AH],
-            enchantmentTier: rH
+          item: OB,
+          amount: GB = 0,
+          size: YB = "normal",
+          tier: DB = null
+        } = BB;
+        return (0, PB.jsx)("div", {
+          className: QB()("SmpSlot", `SmpSlot-${YB}`),
+          children: OB && (0, PB.jsx)(mD.c, {
+            itemName: OB,
+            amount: GB > 1 ? GB : 0,
+            amountFontSize: eD[YB],
+            enchantmentTier: DB
           })
         })
       }));
 
-    function dr(HH) {
+    function bD(BB) {
       let {
-        amount: BH,
-        exact: LH = !1,
-        className: AH
-      } = HH;
-      return (0, XH.jsxs)("span", {
-        className: SH()("SmpGold", AH),
-        children: [(0, XH.jsx)("span", {
+        amount: OB,
+        exact: GB = !1,
+        className: YB
+      } = BB;
+      return (0, PB.jsxs)("span", {
+        className: QB()("SmpGold", YB),
+        children: [(0, PB.jsx)("span", {
           className: "SmpCoin",
-          children: (0, XH.jsx)(fr.e, {
+          children: (0, PB.jsx)(mD.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), LH ? BH.toLocaleString("en-US") : Fr(BH)]
+        }), GB ? OB.toLocaleString("en-US") : hD(OB)]
       })
     }
 
-    function ar(HH) {
+    function CD(BB) {
       let {
-        count: BH = 5,
-        grid: LH = !1
-      } = HH;
-      return (0, XH.jsx)("div", {
-        className: LH ? "SmpCardGrid" : "SmpList",
+        count: OB = 5,
+        grid: GB = !1
+      } = BB;
+      return (0, PB.jsx)("div", {
+        className: GB ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: BH
-        }, ((HH, BH) => (0, XH.jsxs)("div", {
-          className: SH()(LH ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, XH.jsx)("div", {
-            className: SH()("SmpSlot", LH ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, XH.jsxs)("div", {
+          length: OB
+        }, ((BB, OB) => (0, PB.jsxs)("div", {
+          className: QB()(GB ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, PB.jsx)("div", {
+            className: QB()("SmpSlot", GB ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, PB.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, XH.jsx)("b", {}), (0, XH.jsx)("small", {})]
-          }), (0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("b", {}), (0, PB.jsx)("small", {})]
+          }), (0, PB.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, BH)))
+        }, OB)))
       })
     }
 
-    function sr(HH) {
+    function HD(BB) {
       let {
-        title: BH,
-        children: LH
-      } = HH;
-      return (0, XH.jsxs)("div", {
+        title: OB,
+        children: GB
+      } = BB;
+      return (0, PB.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, XH.jsx)("b", {
-          children: BH
-        }), LH && (0, XH.jsx)("small", {
-          children: LH
+        children: [(0, PB.jsx)("b", {
+          children: OB
+        }), GB && (0, PB.jsx)("small", {
+          children: GB
         })]
       })
     }
 
-    function Jr(HH) {
+    function vD(BB) {
       let {
-        entry: BH
-      } = HH;
-      return (0, XH.jsx)(sr, {
-        title: (0, XH.jsx)(lr.b, {
-          text: BH.item.customTitle
+        entry: OB
+      } = BB;
+      return (0, PB.jsx)(HD, {
+        title: (0, PB.jsx)(ID.b, {
+          text: OB.item.customTitle
         }),
-        children: (0, XH.jsx)(lr.b, {
-          text: BH.item.description
+        children: (0, PB.jsx)(ID.b, {
+          text: OB.item.description
         })
       })
     }
 
-    function ir(HH) {
-      return (0, XH.jsx)(Dr.b, {
-        ...HH,
-        className: SH()("SmpChoice", HH.className),
+    function sD(BB) {
+      return (0, PB.jsx)(aD.c, {
+        ...BB,
+        className: QB()("SmpChoice", BB.className),
         reselectable: !0
       })
     }
 
-    function pr() {
-      return (0, XH.jsx)("span", {
+    function xD() {
+      return (0, PB.jsx)("span", {
         className: "SmpLoader",
-        children: (0, XH.jsx)(UH.d, {})
+        children: (0, PB.jsx)(SB.b, {})
       })
     }
 
-    function yr(HH) {
+    function tD(BB) {
       let {
-        value: BH,
-        onChange: LH,
-        min: rH = 1,
-        max: SH,
-        step: hH = 1,
-        label: tH
-      } = HH;
-      const zH = (0, AH.useRef)(null),
-        CH = (0, AH.useRef)(BH);
-      CH.current = BH;
-      const [EH, GH] = (0, AH.useState)(null), YH = HH => Math.max(rH, Math.min(SH, Math.floor(HH))), uH = HH => {
-        const BH = CH.current,
-          AH = "function" === typeof hH ? hH(BH, HH) : hH,
-          rH = YH(BH + AH * HH);
-        CH.current = rH, LH(rH)
+        value: OB,
+        onChange: GB,
+        min: DB = 1,
+        max: QB,
+        step: oB = 1,
+        label: jB
+      } = BB;
+      const yB = (0, YB.useRef)(null),
+        JB = (0, YB.useRef)(OB);
+      JB.current = OB;
+      const [MB, zB] = (0, YB.useState)(null), lB = BB => Math.max(DB, Math.min(QB, Math.floor(BB))), pB = BB => {
+        const OB = JB.current,
+          YB = "function" === typeof oB ? oB(OB, BB) : oB,
+          DB = lB(OB + YB * BB);
+        JB.current = DB, GB(DB)
       };
-      (0, AH.useEffect)((() => {
-        if (null === EH) return;
-        let HH;
-        const BH = () => {
-            GH(null)
+      (0, YB.useEffect)((() => {
+        if (null === MB) return;
+        let BB;
+        const OB = () => {
+            zB(null)
           },
-          LH = setTimeout((() => {
-            HH = setInterval((() => {
-              uH(EH);
-              const HH = CH.current;
-              (EH > 0 ? HH >= SH : HH <= rH) && BH()
+          GB = setTimeout((() => {
+            BB = setInterval((() => {
+              pB(MB);
+              const BB = JB.current;
+              (MB > 0 ? BB >= QB : BB <= DB) && OB()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", BH), window.addEventListener("pointercancel", BH), window.addEventListener("blur", BH), () => {
-          clearTimeout(LH), clearInterval(HH), window.removeEventListener("pointerup", BH), window.removeEventListener("pointercancel", BH), window.removeEventListener("blur", BH)
+        return window.addEventListener("pointerup", OB), window.addEventListener("pointercancel", OB), window.addEventListener("blur", OB), () => {
+          clearTimeout(GB), clearInterval(BB), window.removeEventListener("pointerup", OB), window.removeEventListener("pointercancel", OB), window.removeEventListener("blur", OB)
         }
-      }), [EH]), (0, AH.useEffect)((() => {
-        const HH = zH.current;
-        HH && document.activeElement !== HH && HH.value !== String(BH) && (HH.value = String(BH))
-      }), [BH]), (0, AH.useEffect)((() => {
-        const HH = zH.current;
-        if (!HH) return;
-        const BH = () => {
-          HH.value = String(CH.current)
+      }), [MB]), (0, YB.useEffect)((() => {
+        const BB = yB.current;
+        BB && document.activeElement !== BB && BB.value !== String(OB) && (BB.value = String(OB))
+      }), [OB]), (0, YB.useEffect)((() => {
+        const BB = yB.current;
+        if (!BB) return;
+        const OB = () => {
+          BB.value = String(JB.current)
         };
-        return HH.addEventListener("blur", BH), () => {
-          HH.removeEventListener("blur", BH)
+        return BB.addEventListener("blur", OB), () => {
+          BB.removeEventListener("blur", OB)
         }
       }), []);
-      const QH = HH => (0, XH.jsx)("button", {
+      const qB = BB => (0, PB.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${HH>0?"More":"Less"} ${tH}`,
-        disabled: HH > 0 ? BH >= SH : BH <= rH,
-        onPointerDown: BH => {
-          0 === BH.button && (uH(HH), GH(HH))
+        "aria-label": `${BB>0?"More":"Less"} ${jB}`,
+        disabled: BB > 0 ? OB >= QB : OB <= DB,
+        onPointerDown: OB => {
+          0 === OB.button && (pB(BB), zB(BB))
         },
-        onKeyDown: BH => {
-          "Enter" !== BH.key && " " !== BH.key || uH(HH)
+        onKeyDown: OB => {
+          "Enter" !== OB.key && " " !== OB.key || pB(BB)
         },
-        onContextMenu: HH => {
-          HH.preventDefault()
+        onContextMenu: BB => {
+          BB.preventDefault()
         },
-        children: HH > 0 ? "+" : "\u2212"
+        children: BB > 0 ? "+" : "\u2212"
       });
-      return (0, XH.jsxs)("div", {
+      return (0, PB.jsxs)("div", {
         className: "SmpStepper",
-        children: [QH(-1), (0, XH.jsx)(TH.e, {
+        children: [qB(-1), (0, PB.jsx)(VB.b, {
           className: "SmpStepperInput",
-          domRef: zH,
-          defaultValue: String(BH),
-          ariaLabel: tH,
+          domRef: yB,
+          defaultValue: String(OB),
+          ariaLabel: jB,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: HH => {
-            const BH = HH.replace(/[^\d]/g, "");
-            zH.current && BH !== HH && (zH.current.value = BH), "" !== BH && LH(YH(Number(BH)))
+          onValueChange: BB => {
+            const OB = BB.replace(/[^\d]/g, "");
+            yB.current && OB !== BB && (yB.current.value = OB), "" !== OB && GB(lB(Number(OB)))
           }
-        }), QH(1)]
+        }), qB(1)]
       })
     }
 
-    function HS(HH) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, HH))) - 1))
+    function BQ(BB) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, BB))) - 1))
     }
-    var BS = LH(35006),
-      LS = LH(1182);
-    const AS = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    LS.v, gH.Mc.length;
+    var OQ = GB(34813),
+      GQ = GB(1238);
+    const YQ = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    GQ.x, rB.Vc.length;
     new Map;
-    var rS = LH(3639);
+    var DQ = GB(3708);
 
-    function SS(HH, BH) {
-      var LH;
-      return BH && (null === (LH = HH[BH]) || void 0 === LH ? void 0 : LH.smp) || null
+    function QQ(BB, OB) {
+      var GB;
+      return OB && (null === (GB = BB[OB]) || void 0 === GB ? void 0 : GB.smp) || null
     }
 
-    function hS(HH, BH) {
-      const LH = [];
-      for (const rH of jr(HH)) {
-        var AH;
-        const SH = HH[rH];
-        (null === (AH = SH.smp) || void 0 === AH ? void 0 : AH.kind) === BH && LH.push({
-          key: rH,
-          item: SH,
-          meta: SH.smp
+    function oQ(BB, OB) {
+      const GB = [];
+      for (const DB of ED(BB)) {
+        var YB;
+        const QB = BB[DB];
+        (null === (YB = QB.smp) || void 0 === YB ? void 0 : YB.kind) === OB && GB.push({
+          key: DB,
+          item: QB,
+          meta: QB.smp
         })
       }
-      return LH
+      return GB
     }
 
-    function tS(HH, BH) {
-      var LH;
-      return null !== (LH = hS(HH, BH)[0]) && void 0 !== LH ? LH : null
+    function jQ(BB, OB) {
+      var GB;
+      return null !== (GB = oQ(BB, OB)[0]) && void 0 !== GB ? GB : null
     }
-    const zS = "50% 0% 50% 0%",
-      CS = [{
+    const yQ = "50% 0% 50% 0%",
+      JQ = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3529,746 +3529,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function ES(HH) {
-      const BH = HH - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function MQ(BB) {
+      const OB = BB - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: LH,
-          suffix: AH
+          divisor: GB,
+          suffix: YB
         }
-        of CS)
-        if (BH >= LH) return `${Math.floor(BH/LH)}${AH}`;
+        of JQ)
+        if (OB >= GB) return `${Math.floor(OB/GB)}${YB}`;
       return "<1s"
     }
 
-    function XS(HH) {
-      const BH = HH.map(mr.f),
-        LH = [];
-      return BH.forEach(((HH, AH) => {
-        const rH = function(HH) {
-            const BH = HH.match(/\d+/);
-            return BH ? Number(BH[0]) : 0
-          }(HH),
-          SH = AH === BH.length - 1;
-        (SH || 1 === rH || 10 === rH || 100 === rH) && LH.push({
-          label: HH,
-          quantity: rH,
-          isAll: SH
+    function PQ(BB) {
+      const OB = BB.map(dD.f),
+        GB = [];
+      return OB.forEach(((BB, YB) => {
+        const DB = function(BB) {
+            const OB = BB.match(/\d+/);
+            return OB ? Number(OB[0]) : 0
+          }(BB),
+          QB = YB === OB.length - 1;
+        (QB || 1 === DB || 10 === DB || 100 === DB) && GB.push({
+          label: BB,
+          quantity: DB,
+          isAll: QB
         })
-      })), LH
+      })), GB
     }
-    let GS = null;
+    let zQ = null;
 
-    function YS(HH, BH) {
-      const LH = BH.trim().toLowerCase();
-      if (!LH) return [];
-      const AH = HH => {
-          if (HH === LH) return 0;
-          if (HH.startsWith(LH)) return 1;
-          const BH = HH.indexOf(LH);
-          return -1 === BH ? -1 : 2 + BH
+    function lQ(BB, OB) {
+      const GB = OB.trim().toLowerCase();
+      if (!GB) return [];
+      const YB = BB => {
+          if (BB === GB) return 0;
+          if (BB.startsWith(GB)) return 1;
+          const OB = BB.indexOf(GB);
+          return -1 === OB ? -1 : 2 + OB
         },
-        rH = [];
-      for (const tH of HH) {
-        const HH = [AH(tH.lowerLabel), AH(tH.lowerName)].filter((HH => -1 !== HH));
-        HH.length && rH.push({
-          item: tH,
-          rank: Math.min(...HH)
+        DB = [];
+      for (const jB of BB) {
+        const BB = [YB(jB.lowerLabel), YB(jB.lowerName)].filter((BB => -1 !== BB));
+        BB.length && DB.push({
+          item: jB,
+          rank: Math.min(...BB)
         })
       }
-      if (rH.length > 0) return rH.sort(((HH, BH) => HH.rank - BH.rank)).map((HH => HH.item));
-      const SH = [...LH],
-        hH = HH => {
-          let BH = 0;
-          for (const LH of SH) {
-            if (BH = HH.indexOf(LH, BH), -1 === BH) return !1;
-            BH++
+      if (DB.length > 0) return DB.sort(((BB, OB) => BB.rank - OB.rank)).map((BB => BB.item));
+      const QB = [...GB],
+        oB = BB => {
+          let OB = 0;
+          for (const GB of QB) {
+            if (OB = BB.indexOf(GB, OB), -1 === OB) return !1;
+            OB++
           }
           return !0
         };
-      return HH.filter((HH => hH(HH.lowerLabel) || hH(HH.lowerName)))
+      return BB.filter((BB => oB(BB.lowerLabel) || oB(BB.lowerName)))
     }
 
-    function uS(HH, BH) {
-      var LH;
-      return null !== (LH = null === HH || void 0 === HH ? void 0 : HH[BH]) && void 0 !== LH ? LH : BH
+    function pQ(BB, OB) {
+      var GB;
+      return null !== (GB = null === BB || void 0 === BB ? void 0 : BB[OB]) && void 0 !== GB ? GB : OB
     }
 
-    function QS(HH, BH) {
-      const LH = HH.userInput;
-      return void 0 !== BH && "dropdown" === (null === LH || void 0 === LH ? void 0 : LH.type) && LH.dropdownOptions.map(mr.f).includes(BH) ? BH : function(HH) {
-        const BH = HH.userInput;
-        if ("dropdown" !== (null === BH || void 0 === BH ? void 0 : BH.type) || 0 === BH.dropdownOptions.length) return null;
-        const LH = BH.dropdownOptions.map(mr.f);
-        return BH.initialValue && LH.includes(BH.initialValue) ? BH.initialValue : LH[LH.length - 1]
-      }(HH)
+    function qQ(BB, OB) {
+      const GB = BB.userInput;
+      return void 0 !== OB && "dropdown" === (null === GB || void 0 === GB ? void 0 : GB.type) && GB.dropdownOptions.map(dD.f).includes(OB) ? OB : function(BB) {
+        const OB = BB.userInput;
+        if ("dropdown" !== (null === OB || void 0 === OB ? void 0 : OB.type) || 0 === OB.dropdownOptions.length) return null;
+        const GB = OB.dropdownOptions.map(dD.f);
+        return OB.initialValue && GB.includes(OB.initialValue) ? OB.initialValue : GB[GB.length - 1]
+      }(BB)
     }
 
-    function WS(HH) {
-      return void 0 === HH ? "" : JSON.stringify(HH)
+    function ZQ(BB) {
+      return void 0 === BB ? "" : JSON.stringify(BB)
     }
-    const MS = (0, AH.createContext)(null);
+    const NQ = (0, YB.createContext)(null);
 
-    function xS() {
-      return (0, AH.useContext)(MS)
+    function RQ() {
+      return (0, YB.useContext)(NQ)
     }
-    var vS = LH(2946);
-    const PS = (0, AH.memo)((function(HH) {
+    var WQ = GB(2987);
+    const AQ = (0, YB.memo)((function(BB) {
         let {
-          name: BH,
-          label: LH,
-          onPick: AH
-        } = HH;
-        return (0, XH.jsxs)("button", {
+          name: OB,
+          label: GB,
+          onPick: YB
+        } = BB;
+        return (0, PB.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: LH,
+          title: GB,
           onClick: () => {
-            AH(BH)
+            YB(OB)
           },
-          children: [(0, XH.jsx)(Zr, {
-            item: BH,
+          children: [(0, PB.jsx)(TD, {
+            item: OB,
             size: "big"
-          }), (0, XH.jsx)("span", {
-            children: LH
+          }), (0, PB.jsx)("span", {
+            children: GB
           })]
         })
       })),
-      TS = (0, AH.memo)((function(HH) {
+      VQ = (0, YB.memo)((function(BB) {
         let {
-          items: BH,
-          query: LH,
-          onPick: rH
-        } = HH;
+          items: OB,
+          query: GB,
+          onPick: DB
+        } = BB;
         const {
-          t: SH
-        } = (0, hH.B)(), [tH, zH] = (0, AH.useState)(new Set), CH = (0, AH.useMemo)((() => function(HH) {
-          const BH = new Map;
-          for (const LH of HH) {
-            let HH = BH.get(LH.category);
-            HH || (HH = [], BH.set(LH.category, HH)), HH.push(LH)
+          t: QB
+        } = (0, oB.H)(), [jB, yB] = (0, YB.useState)(new Set), JB = (0, YB.useMemo)((() => function(BB) {
+          const OB = new Map;
+          for (const GB of BB) {
+            let BB = OB.get(GB.category);
+            BB || (BB = [], OB.set(GB.category, BB)), BB.push(GB)
           }
-          return [...AS, "other"].filter((HH => BH.has(HH))).map((HH => ({
-            category: HH,
-            items: BH.get(HH)
+          return [...YQ, "other"].filter((BB => OB.has(BB))).map((BB => ({
+            category: BB,
+            items: OB.get(BB)
           })))
-        }(BH)), [BH]), EH = (0, AH.useMemo)((() => YS(BH, LH).slice(0, 60)), [BH, LH]);
-        return LH.trim() ? 0 === EH.length ? (0, XH.jsx)(sr, {
-          title: SH("smpShop:noItemsFound", {
-            query: LH.trim()
+        }(OB)), [OB]), MB = (0, YB.useMemo)((() => lQ(OB, GB).slice(0, 60)), [OB, GB]);
+        return GB.trim() ? 0 === MB.length ? (0, PB.jsx)(HD, {
+          title: QB("smpShop:noItemsFound", {
+            query: GB.trim()
           }),
-          children: SH("smpShop:tryShorterName")
-        }) : (0, XH.jsx)(vS.e, {
+          children: QB("smpShop:tryShorterName")
+        }) : (0, PB.jsx)(WQ.b, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: zS,
-          observerUpdateDeps: [LH],
-          children: EH.map((HH => (0, XH.jsx)(PS, {
-            name: HH.name,
-            label: HH.label,
-            onPick: rH
-          }, HH.name)))
-        }) : (0, XH.jsx)(XH.Fragment, {
-          children: CH.map((HH => {
+          rootMargin: yQ,
+          observerUpdateDeps: [GB],
+          children: MB.map((BB => (0, PB.jsx)(AQ, {
+            name: BB.name,
+            label: BB.label,
+            onPick: DB
+          }, BB.name)))
+        }) : (0, PB.jsx)(PB.Fragment, {
+          children: JB.map((BB => {
             let {
-              category: BH,
-              items: LH
-            } = HH;
-            const AH = tH.has(BH) || LH.length <= 48,
-              hH = AH ? LH : LH.slice(0, 48);
-            return (0, XH.jsxs)("section", {
+              category: OB,
+              items: GB
+            } = BB;
+            const YB = jB.has(OB) || GB.length <= 48,
+              oB = YB ? GB : GB.slice(0, 48);
+            return (0, PB.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, XH.jsxs)("h4", {
-                children: [SH("other" === BH ? "smpShop:otherItems" : `creativeInventory:${BH}`), !AH && (0, XH.jsx)("button", {
+              children: [(0, PB.jsxs)("h4", {
+                children: [QB("other" === OB ? "smpShop:otherItems" : `creativeInventory:${OB}`), !YB && (0, PB.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    zH(new Set([...tH, BH]))
+                    yB(new Set([...jB, OB]))
                   },
-                  children: SH("smpShop:showAll", {
-                    count: LH.length
+                  children: QB("smpShop:showAll", {
+                    count: GB.length
                   })
                 })]
-              }), (0, XH.jsx)(vS.e, {
+              }), (0, PB.jsx)(WQ.b, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: zS,
-                observerUpdateDeps: [AH],
-                children: hH.map((HH => (0, XH.jsx)(PS, {
-                  name: HH.name,
-                  label: HH.label,
-                  onPick: rH
-                }, HH.name)))
+                rootMargin: yQ,
+                observerUpdateDeps: [YB],
+                children: oB.map((BB => (0, PB.jsx)(AQ, {
+                  name: BB.name,
+                  label: BB.label,
+                  onPick: DB
+                }, BB.name)))
               })]
-            }, BH)
+            }, OB)
           }))
         })
       }));
 
-    function US(HH, BH) {
+    function SQ(BB, OB) {
       const {
-        searched: LH,
-        shown: rH,
-        searchFor: SH,
-        loading: hH
-      } = function(HH, BH) {
-        var LH;
-        const rH = xS(),
-          [SH, hH] = (0, AH.useState)(void 0),
-          tH = (0, AH.useRef)(void 0),
-          zH = (0, AH.useRef)(0),
-          CH = (0, AH.useRef)(void 0),
-          EH = null !== (LH = null === HH || void 0 === HH ? void 0 : HH.meta.item) && void 0 !== LH ? LH : null,
-          XH = !!HH && rH.isPending(HH.key);
-        (0, AH.useEffect)((() => {
-          if (!HH || XH || !BH || void 0 === SH || SH === EH) return;
-          const LH = SH === tH.current && rH.gaveUpAt(HH.key) > zH.current && CH.current !== SH;
-          (SH !== tH.current || LH) && rH.act(HH.key, null !== SH && void 0 !== SH ? SH : "*", LH) && (LH && (CH.current = SH), tH.current = SH, zH.current = Date.now())
-        }), [HH, XH, BH, SH, EH, rH]);
-        const GH = (0, AH.useCallback)((HH => {
-            tH.current = void 0, CH.current = void 0, hH(HH)
+        searched: GB,
+        shown: DB,
+        searchFor: QB,
+        loading: oB
+      } = function(BB, OB) {
+        var GB;
+        const DB = RQ(),
+          [QB, oB] = (0, YB.useState)(void 0),
+          jB = (0, YB.useRef)(void 0),
+          yB = (0, YB.useRef)(0),
+          JB = (0, YB.useRef)(void 0),
+          MB = null !== (GB = null === BB || void 0 === BB ? void 0 : BB.meta.item) && void 0 !== GB ? GB : null,
+          PB = !!BB && DB.isPending(BB.key);
+        (0, YB.useEffect)((() => {
+          if (!BB || PB || !OB || void 0 === QB || QB === MB) return;
+          const GB = QB === jB.current && DB.gaveUpAt(BB.key) > yB.current && JB.current !== QB;
+          (QB !== jB.current || GB) && DB.act(BB.key, null !== QB && void 0 !== QB ? QB : "*", GB) && (GB && (JB.current = QB), jB.current = QB, yB.current = Date.now())
+        }), [BB, PB, OB, QB, MB, DB]);
+        const zB = (0, YB.useCallback)((BB => {
+            jB.current = void 0, JB.current = void 0, oB(BB)
           }), []),
-          YH = void 0 !== SH && SH !== EH && (XH || tH.current !== SH);
+          lB = void 0 !== QB && QB !== MB && (PB || jB.current !== QB);
         return {
-          searched: EH,
-          shown: YH ? SH : EH,
-          searchFor: GH,
-          loading: YH || XH || null !== EH && !BH
+          searched: MB,
+          shown: lB ? QB : MB,
+          searchFor: zB,
+          loading: lB || PB || null !== MB && !OB
         }
-      }(HH, BH), tH = (0, AH.useMemo)((() => function() {
-        var HH;
-        let BH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const rH = `${(0,rS.j)()}\x1f${BH.join("\x1e")}\x1f${LH.join("\x1e")}\x1f${JSON.stringify(AH)}`;
-        if ((null === (HH = GS) || void 0 === HH ? void 0 : HH.key) === rH) return GS.items;
-        const SH = new Set(LH),
-          hH = new Set,
-          tH = [],
-          zH = (HH, BH) => {
-            var LH;
-            if (!HH || hH.has(HH) || SH.has(HH)) return;
-            hH.add(HH);
-            const rH = null !== (LH = AH[HH]) && void 0 !== LH ? LH : HH;
-            tH.push({
-              name: HH,
-              label: rH,
-              lowerLabel: rH.toLowerCase(),
-              lowerName: HH.toLowerCase(),
-              category: BH
+      }(BB, OB), jB = (0, YB.useMemo)((() => function() {
+        var BB;
+        let OB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const DB = `${(0,DQ.k)()}\x1f${OB.join("\x1e")}\x1f${GB.join("\x1e")}\x1f${JSON.stringify(YB)}`;
+        if ((null === (BB = zQ) || void 0 === BB ? void 0 : BB.key) === DB) return zQ.items;
+        const QB = new Set(GB),
+          oB = new Set,
+          jB = [],
+          yB = (BB, OB) => {
+            var GB;
+            if (!BB || oB.has(BB) || QB.has(BB)) return;
+            oB.add(BB);
+            const DB = null !== (GB = YB[BB]) && void 0 !== GB ? GB : BB;
+            jB.push({
+              name: BB,
+              label: DB,
+              lowerLabel: DB.toLowerCase(),
+              lowerName: BB.toLowerCase(),
+              category: OB
             })
           };
-        for (const EH of (0, BS.creativeItemIds)()) {
-          var CH;
-          (0, BS.itemIsDisabled)(EH, !0, !0, !1) || (0, BS.showOnlyInCreativeSearch)(EH) || zH((0, rS.h)(EH), null !== (CH = (0, BS.creativeCategoryOf)(EH)) && void 0 !== CH ? CH : "other")
+        for (const MB of (0, OQ.creativeItemIds)()) {
+          var JB;
+          (0, OQ.itemIsDisabled)(MB, !0, !0, !1) || (0, OQ.showOnlyInCreativeSearch)(MB) || yB((0, DQ.g)(MB), null !== (JB = (0, OQ.creativeCategoryOf)(MB)) && void 0 !== JB ? JB : "other")
         }
-        for (const EH of BH) zH(EH, "other");
-        return GS = {
-          key: rH,
-          items: tH
-        }, tH
-      }(null === HH || void 0 === HH ? void 0 : HH.meta.extra, null === HH || void 0 === HH ? void 0 : HH.meta.excluded, null === HH || void 0 === HH ? void 0 : HH.meta.names)), [null === HH || void 0 === HH ? void 0 : HH.meta.extra, null === HH || void 0 === HH ? void 0 : HH.meta.excluded, null === HH || void 0 === HH ? void 0 : HH.meta.names]), [zH, CH] = (0, AH.useState)(""), [EH, XH] = (0, AH.useState)(0), [GH, YH] = (0, AH.useState)("recent"), uH = (0, AH.useCallback)((HH => {
-        CH(""), XH((HH => HH + 1)), SH(HH)
-      }), [SH]), QH = "browse" === GH || "" !== zH.trim();
+        for (const MB of OB) yB(MB, "other");
+        return zQ = {
+          key: DB,
+          items: jB
+        }, jB
+      }(null === BB || void 0 === BB ? void 0 : BB.meta.extra, null === BB || void 0 === BB ? void 0 : BB.meta.excluded, null === BB || void 0 === BB ? void 0 : BB.meta.names)), [null === BB || void 0 === BB ? void 0 : BB.meta.extra, null === BB || void 0 === BB ? void 0 : BB.meta.excluded, null === BB || void 0 === BB ? void 0 : BB.meta.names]), [yB, JB] = (0, YB.useState)(""), [MB, PB] = (0, YB.useState)(0), [zB, lB] = (0, YB.useState)("recent"), pB = (0, YB.useCallback)((BB => {
+        JB(""), PB((BB => BB + 1)), QB(BB)
+      }), [QB]), qB = "browse" === zB || "" !== yB.trim();
       return {
-        searched: LH,
-        shown: rH,
-        searchFor: SH,
-        loading: hH,
-        catalogue: tH,
-        names: null === HH || void 0 === HH ? void 0 : HH.meta.names,
-        query: zH,
-        setQuery: CH,
-        searchBoxKey: EH,
-        pickItem: uH,
-        setView: YH,
-        browsing: QH
+        searched: GB,
+        shown: DB,
+        searchFor: QB,
+        loading: oB,
+        catalogue: jB,
+        names: null === BB || void 0 === BB ? void 0 : BB.meta.names,
+        query: yB,
+        setQuery: JB,
+        searchBoxKey: MB,
+        pickItem: pB,
+        setView: lB,
+        browsing: qB
       }
     }
 
-    function VS(HH) {
+    function nQ(BB) {
       let {
-        browser: BH,
-        children: LH
-      } = HH;
+        browser: OB,
+        children: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)(), rH = xS();
-      return (0, XH.jsxs)("div", {
+        t: YB
+      } = (0, oB.H)(), DB = RQ();
+      return (0, PB.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "SmpSearch",
-          children: (0, XH.jsx)(TH.e, {
+          children: (0, PB.jsx)(VB.b, {
             className: "SmpSearchInput",
-            placeholderText: AH("smpShop:searchPlaceholder"),
-            defaultValue: BH.query,
-            onValueChange: HH => {
-              BH.setQuery(HH), BH.searched && HH.trim() && BH.searchFor(null)
+            placeholderText: YB("smpShop:searchPlaceholder"),
+            defaultValue: OB.query,
+            onValueChange: BB => {
+              OB.setQuery(BB), OB.searched && BB.trim() && OB.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const HH = YS(BH.catalogue, BH.query)[0];
-              HH ? BH.pickItem(HH.name) : BH.query.trim() && rH.notify(AH("smpShop:noItemsFound", {
-                query: BH.query.trim()
+              const BB = lQ(OB.catalogue, OB.query)[0];
+              BB ? OB.pickItem(BB.name) : OB.query.trim() && DB.notify(YB("smpShop:noItemsFound", {
+                query: OB.query.trim()
               }))
             }
-          }, BH.searchBoxKey)
-        }), LH]
+          }, OB.searchBoxKey)
+        }), GB]
       })
     }
 
-    function OS(HH) {
+    function UQ(BB) {
       let {
-        browser: BH,
-        recentLabel: LH,
-        children: AH
-      } = HH;
+        browser: OB,
+        recentLabel: GB,
+        children: YB
+      } = BB;
       const {
-        t: rH
-      } = (0, hH.B)();
-      return (0, XH.jsxs)("div", {
+        t: DB
+      } = (0, oB.H)();
+      return (0, PB.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, XH.jsx)(ir, {
+        children: [(0, PB.jsx)(sD, {
           options: [{
             value: "recent",
-            label: LH
+            label: GB
           }, {
             value: "browse",
-            label: rH("smpShop:browseItems")
+            label: DB("smpShop:browseItems")
           }],
-          value: BH.browsing ? "browse" : "recent",
-          onChange: BH.setView,
-          ariaLabel: rH("smpShop:show")
-        }), !BH.browsing && AH]
+          value: OB.browsing ? "browse" : "recent",
+          onChange: OB.setView,
+          ariaLabel: DB("smpShop:show")
+        }), !OB.browsing && YB]
       })
     }
 
-    function bS(HH) {
+    function fQ(BB) {
       let {
-        item: BH,
-        names: LH,
-        summary: AH,
-        onBack: rH,
-        children: SH
-      } = HH;
+        item: OB,
+        names: GB,
+        summary: YB,
+        onBack: DB,
+        children: QB
+      } = BB;
       const {
-        t: tH
-      } = (0, hH.B)();
-      return (0, XH.jsxs)("div", {
+        t: jB
+      } = (0, oB.H)();
+      return (0, PB.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, XH.jsx)(CH.e, {
+        children: [(0, PB.jsx)(JB.c, {
           className: "SmpBackButton",
-          onClick: rH,
-          children: tH("general:back")
-        }), (0, XH.jsx)(Zr, {
-          item: BH,
+          onClick: DB,
+          children: jB("general:back")
+        }), (0, PB.jsx)(TD, {
+          item: OB,
           size: "big"
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, XH.jsx)("b", {
-            children: uS(LH, BH)
-          }), AH && (0, XH.jsx)("small", {
-            children: AH
+          children: [(0, PB.jsx)("b", {
+            children: pQ(GB, OB)
+          }), YB && (0, PB.jsx)("small", {
+            children: YB
           })]
-        }), SH]
+        }), QB]
       })
     }
 
-    function kS(HH) {
+    function kQ(BB) {
       let {
-        browser: BH,
-        className: LH,
-        action: AH,
-        above: rH,
-        list: hH,
-        summary: tH,
-        recentLabel: zH,
-        listControls: CH,
-        onBack: EH
-      } = HH;
-      return (0, XH.jsxs)("div", {
-        className: SH()("SmpScreen", LH),
-        children: [(0, XH.jsx)(VS, {
-          browser: BH,
-          children: AH
-        }), BH.shown && (0, XH.jsx)(bS, {
-          item: BH.shown,
-          names: BH.names,
-          summary: !BH.loading && tH,
+        browser: OB,
+        className: GB,
+        action: YB,
+        above: DB,
+        list: oB,
+        summary: jB,
+        recentLabel: yB,
+        listControls: JB,
+        onBack: MB
+      } = BB;
+      return (0, PB.jsxs)("div", {
+        className: QB()("SmpScreen", GB),
+        children: [(0, PB.jsx)(nQ, {
+          browser: OB,
+          children: YB
+        }), OB.shown && (0, PB.jsx)(fQ, {
+          item: OB.shown,
+          names: OB.names,
+          summary: !OB.loading && jB,
           onBack: () => {
-            null === EH || void 0 === EH || EH(), BH.searchFor(null)
+            null === MB || void 0 === MB || MB(), OB.searchFor(null)
           },
-          children: CH
-        }), rH, BH.shown ? hH : (0, XH.jsxs)(XH.Fragment, {
-          children: [(0, XH.jsx)(OS, {
-            browser: BH,
-            recentLabel: zH,
-            children: CH
-          }), BH.browsing ? (0, XH.jsx)(TS, {
-            items: BH.catalogue,
-            query: BH.query,
-            onPick: BH.pickItem
-          }) : hH]
+          children: JB
+        }), DB, OB.shown ? oB : (0, PB.jsxs)(PB.Fragment, {
+          children: [(0, PB.jsx)(UQ, {
+            browser: OB,
+            recentLabel: yB,
+            children: JB
+          }), OB.browsing ? (0, PB.jsx)(VQ, {
+            items: OB.catalogue,
+            query: OB.query,
+            onPick: OB.pickItem
+          }) : oB]
         })]
       })
     }
 
-    function mS(HH, BH) {
-      const LH = HH.map((HH => {
+    function dQ(BB, OB) {
+      const GB = BB.map((BB => {
         let {
-          meta: BH
-        } = HH;
-        return BH.pricePerItem
+          meta: OB
+        } = BB;
+        return OB.pricePerItem
       }));
-      return "min" === BH ? Math.min(...LH) : Math.max(...LH)
+      return "min" === OB ? Math.min(...GB) : Math.max(...GB)
     }
-    var oS = LH(7138);
-    const IS = (0, AH.memo)((function(HH) {
-      var BH;
+    var KQ = GB(7122);
+    const uQ = (0, YB.memo)((function(BB) {
+      var OB;
       const {
-        t: LH
-      } = (0, hH.B)(), AH = null === HH.seller, rH = HH.quantity * HH.pricePerItem;
-      return (0, XH.jsxs)("div", {
-        className: HH.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, XH.jsx)(Zr, {
-          item: HH.item,
-          amount: HH.quantity,
-          size: HH.grid ? "big" : "normal",
-          tier: HH.tier
-        }), (0, XH.jsxs)("div", {
+        t: GB
+      } = (0, oB.H)(), YB = null === BB.seller, DB = BB.quantity * BB.pricePerItem;
+      return (0, PB.jsxs)("div", {
+        className: BB.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, PB.jsx)(TD, {
+          item: BB.item,
+          amount: BB.quantity,
+          size: BB.grid ? "big" : "normal",
+          tier: BB.tier
+        }), (0, PB.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, XH.jsx)("b", {
-            children: (0, XH.jsx)(lr.b, {
-              text: null !== (BH = HH.title) && void 0 !== BH ? BH : `${HH.quantity}x ${HH.item}`
+          children: [(0, PB.jsx)("b", {
+            children: (0, PB.jsx)(ID.b, {
+              text: null !== (OB = BB.title) && void 0 !== OB ? OB : `${BB.quantity}x ${BB.item}`
             })
-          }), (0, XH.jsxs)("small", {
+          }), (0, PB.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, XH.jsx)("span", {
-              children: AH ? LH("smpShop:you") : (0, XH.jsx)(lr.b, {
+            children: [(0, PB.jsx)("span", {
+              children: YB ? GB("smpShop:you") : (0, PB.jsx)(ID.b, {
                 text: [{
-                  entityName: HH.seller
+                  entityName: BB.seller
                 }]
               })
-            }), (0, XH.jsx)("span", {
-              children: LH("smpShop:timeLeft", {
-                time: ES(HH.expiresAt)
+            }), (0, PB.jsx)("span", {
+              children: GB("smpShop:timeLeft", {
+                time: MQ(BB.expiresAt)
               })
             })]
           })]
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, XH.jsx)(dr, {
-            amount: HH.pricePerItem
-          }), (0, XH.jsx)("small", {
-            children: LH("smpShop:each")
+          children: [(0, PB.jsx)(bD, {
+            amount: BB.pricePerItem
+          }), (0, PB.jsx)("small", {
+            children: GB("smpShop:each")
           })]
-        }), (0, XH.jsx)(CH.i, {
+        }), (0, PB.jsx)(JB.f, {
           className: "SmpBuyButton",
-          disabled: AH || !HH.canAfford && !HH.busy,
-          loading: HH.busy,
+          disabled: YB || !BB.canAfford && !BB.busy,
+          loading: BB.busy,
           onClick: () => {
-            HH.onBuy(HH.itemKey)
+            BB.onBuy(BB.itemKey)
           },
-          children: AH ? LH("smpShop:yours") : (0, XH.jsx)(dr, {
-            amount: rH
+          children: YB ? GB("smpShop:yours") : (0, PB.jsx)(bD, {
+            amount: DB
           })
         })]
       })
     }));
 
-    function fS(HH) {
+    function mQ(BB) {
       let {
-        view: BH,
-        onChange: LH
-      } = HH;
+        view: OB,
+        onChange: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)();
-      return (0, XH.jsx)(Dr.b, {
+        t: YB
+      } = (0, oB.H)();
+      return (0, PB.jsx)(aD.c, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: AH("smpShop:layout"),
+        ariaLabel: YB("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, XH.jsx)(tH.c, {
+          label: (0, PB.jsx)(jB.b, {
             name: "list"
           }),
-          ariaLabel: AH("smpShop:listView")
+          ariaLabel: YB("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, XH.jsx)(tH.c, {
+          label: (0, PB.jsx)(jB.b, {
             name: "grid-2"
           }),
-          ariaLabel: AH("smpShop:gridView")
+          ariaLabel: YB("smpShop:gridView")
         }],
-        value: BH,
-        onChange: LH
+        value: OB,
+        onChange: GB
       })
     }
 
-    function lS(HH) {
+    function IQ(BB) {
       let {
-        entries: BH,
-        view: LH
-      } = HH;
+        entries: OB,
+        view: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)(), rH = xS(), SH = "grid" === LH;
-      return (0, XH.jsxs)(XH.Fragment, {
-        children: [!SH && (0, XH.jsxs)("div", {
+        t: YB
+      } = (0, oB.H)(), DB = RQ(), QB = "grid" === GB;
+      return (0, PB.jsxs)(PB.Fragment, {
+        children: [!QB && (0, PB.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, XH.jsx)("span", {}), (0, XH.jsx)("span", {
-            children: AH("smpShop:columnItem")
-          }), (0, XH.jsx)("span", {
-            children: AH("smpShop:columnPriceEach")
-          }), (0, XH.jsx)("span", {
-            children: AH("smpShop:columnTotal")
+          children: [(0, PB.jsx)("span", {}), (0, PB.jsx)("span", {
+            children: YB("smpShop:columnItem")
+          }), (0, PB.jsx)("span", {
+            children: YB("smpShop:columnPriceEach")
+          }), (0, PB.jsx)("span", {
+            children: YB("smpShop:columnTotal")
           })]
-        }), (0, XH.jsx)(vS.e, {
-          lazyLoadedClassName: SH ? "SmpCardGrid" : "SmpList",
+        }), (0, PB.jsx)(WQ.b, {
+          lazyLoadedClassName: QB ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: zS,
-          observerUpdateDeps: [BH.length],
-          children: BH.map((HH => {
-            var BH, LH;
+          rootMargin: yQ,
+          observerUpdateDeps: [OB.length],
+          children: OB.map((BB => {
+            var OB, GB;
             let {
-              key: AH,
-              item: hH,
-              meta: tH
-            } = HH;
-            const zH = tH.quantity * tH.pricePerItem;
-            return (0, XH.jsx)(IS, {
-              itemKey: AH,
-              item: tH.item,
-              title: hH.customTitle,
-              quantity: tH.quantity,
-              pricePerItem: tH.pricePerItem,
-              seller: tH.seller,
-              expiresAt: tH.expiresAt,
-              tier: null !== (BH = null === (LH = hH.enchant) || void 0 === LH ? void 0 : LH.tier) && void 0 !== BH ? BH : null,
-              busy: rH.isPending(AH) || null !== tH.seller && !1 === hH.canBuy,
-              canAfford: rH.canAfford(hH, zH),
-              grid: SH,
-              onBuy: rH.act
-            }, AH)
+              key: YB,
+              item: oB,
+              meta: jB
+            } = BB;
+            const yB = jB.quantity * jB.pricePerItem;
+            return (0, PB.jsx)(uQ, {
+              itemKey: YB,
+              item: jB.item,
+              title: oB.customTitle,
+              quantity: jB.quantity,
+              pricePerItem: jB.pricePerItem,
+              seller: jB.seller,
+              expiresAt: jB.expiresAt,
+              tier: null !== (OB = null === (GB = oB.enchant) || void 0 === GB ? void 0 : GB.tier) && void 0 !== OB ? OB : null,
+              busy: DB.isPending(YB) || null !== jB.seller && !1 === oB.canBuy,
+              canAfford: DB.canAfford(oB, yB),
+              grid: QB,
+              onBuy: DB.act
+            }, YB)
           }))
-        }, LH)]
+        }, GB)]
       })
     }
-    const KS = [1, 10, 100],
-      cS = [1, 10, 100, 999];
+    const FQ = [1, 10, 100],
+      iQ = [1, 10, 100, 999];
 
-    function eS(HH) {
-      var BH, LH, rH, zH, EH, GH, YH, uH, QH, WH;
+    function LQ(BB) {
+      var OB, GB, DB, yB, MB, zB, lB, pB, qB, ZB;
       const {
-        t: MH
-      } = (0, hH.B)(), xH = xS(), {
-        creator: vH,
-        mode: PH
-      } = HH, [UH, VH] = (0, AH.useState)(null !== (BH = null === vH || void 0 === vH ? void 0 : vH.meta.item) && void 0 !== BH ? BH : null), [OH, bH] = (0, AH.useState)(1), [kH, mH] = (0, AH.useState)(0), [oH, IH] = (0, AH.useState)(""), [fH, lH] = (0, AH.useState)(0), KH = (0, AH.useRef)(UH), cH = (0, AH.useRef)(!1), [eH, qH] = (0, AH.useState)(!1), gH = null !== (LH = null === vH || void 0 === vH ? void 0 : vH.meta.item) && void 0 !== LH ? LH : null, NH = null !== (rH = null === vH || void 0 === vH ? void 0 : vH.meta.owned) && void 0 !== rH ? rH : 0;
-      (0, AH.useEffect)((() => {
-        HH.searching || null === gH || gH === KH.current || (KH.current = gH, cH.current = !1, VH(gH), mH(0), bH("list" === PH ? Math.max(1, NH) : 1))
-      }), [gH, HH.searching]);
-      const RH = !!vH && !!UH && vH.meta.item === UH,
-        jH = RH ? vH.meta.owned : null !== (zH = null === (EH = HH.inventory) || void 0 === EH || null === (GH = EH.find((HH => HH.item === UH))) || void 0 === GH ? void 0 : GH.quantity) && void 0 !== zH ? zH : 0,
-        nH = "list" === PH ? Math.max(1, jH) : 45954,
-        FH = null !== (YH = HH.prices[0]) && void 0 !== YH ? YH : null,
-        DH = HH.prices.length ? Math.round(HH.prices.reduce(((HH, BH) => HH + BH), 0) / HH.prices.length) : null,
-        wH = null === (uH = HH.inventory) || void 0 === uH || null === (QH = uH.find((HH => HH.item === UH))) || void 0 === QH ? void 0 : QH.sellPrice;
-      (0, AH.useEffect)((() => {
-        var HH;
-        RH && (bH((HH => "list" === PH ? Math.min(Math.max(1, HH), Math.max(1, jH)) : HH)), cH.current || mH(null !== (HH = null !== FH && void 0 !== FH ? FH : DH) && void 0 !== HH ? HH : Math.max(1, null !== wH && void 0 !== wH ? wH : 1)))
-      }), [RH, jH, UH, FH, DH]);
-      const ZH = HH => {
-          cH.current = !0, mH(HH)
+        t: NB
+      } = (0, oB.H)(), RB = RQ(), {
+        creator: WB,
+        mode: AB
+      } = BB, [SB, nB] = (0, YB.useState)(null !== (OB = null === WB || void 0 === WB ? void 0 : WB.meta.item) && void 0 !== OB ? OB : null), [UB, fB] = (0, YB.useState)(1), [kB, dB] = (0, YB.useState)(0), [KB, uB] = (0, YB.useState)(""), [mB, IB] = (0, YB.useState)(0), FB = (0, YB.useRef)(SB), iB = (0, YB.useRef)(!1), [LB, gB] = (0, YB.useState)(!1), rB = null !== (GB = null === WB || void 0 === WB ? void 0 : WB.meta.item) && void 0 !== GB ? GB : null, XB = null !== (DB = null === WB || void 0 === WB ? void 0 : WB.meta.owned) && void 0 !== DB ? DB : 0;
+      (0, YB.useEffect)((() => {
+        BB.searching || null === rB || rB === FB.current || (FB.current = rB, iB.current = !1, nB(rB), dB(0), fB("list" === AB ? Math.max(1, XB) : 1))
+      }), [rB, BB.searching]);
+      const wB = !!WB && !!SB && WB.meta.item === SB,
+        EB = wB ? WB.meta.owned : null !== (yB = null === (MB = BB.inventory) || void 0 === MB || null === (zB = MB.find((BB => BB.item === SB))) || void 0 === zB ? void 0 : zB.quantity) && void 0 !== yB ? yB : 0,
+        cB = "list" === AB ? Math.max(1, EB) : 45954,
+        hB = null !== (lB = BB.prices[0]) && void 0 !== lB ? lB : null,
+        aB = BB.prices.length ? Math.round(BB.prices.reduce(((BB, OB) => BB + OB), 0) / BB.prices.length) : null,
+        eB = null === (pB = BB.inventory) || void 0 === pB || null === (qB = pB.find((BB => BB.item === SB))) || void 0 === qB ? void 0 : qB.sellPrice;
+      (0, YB.useEffect)((() => {
+        var BB;
+        wB && (fB((BB => "list" === AB ? Math.min(Math.max(1, BB), Math.max(1, EB)) : BB)), iB.current || dB(null !== (BB = null !== hB && void 0 !== hB ? hB : aB) && void 0 !== BB ? BB : Math.max(1, null !== eB && void 0 !== eB ? eB : 1)))
+      }), [wB, EB, SB, hB, aB]);
+      const TB = BB => {
+          iB.current = !0, dB(BB)
         },
-        dH = BH => {
-          var LH, AH, rH;
-          KH.current = BH, cH.current = !1, qH(!1), IH(""), lH((HH => HH + 1)), VH(BH), mH(0), bH("list" === PH && null !== (LH = null === (AH = HH.inventory) || void 0 === AH || null === (rH = AH.find((HH => HH.item === BH))) || void 0 === rH ? void 0 : rH.quantity) && void 0 !== LH ? LH : 1), (null === vH || void 0 === vH ? void 0 : vH.meta.item) !== BH && HH.onPickItem(BH)
+        bB = OB => {
+          var GB, YB, DB;
+          FB.current = OB, iB.current = !1, gB(!1), uB(""), IB((BB => BB + 1)), nB(OB), dB(0), fB("list" === AB && null !== (GB = null === (YB = BB.inventory) || void 0 === YB || null === (DB = YB.find((BB => BB.item === OB))) || void 0 === DB ? void 0 : DB.quantity) && void 0 !== GB ? GB : 1), (null === WB || void 0 === WB ? void 0 : WB.meta.item) !== OB && BB.onPickItem(OB)
         },
-        aH = OH * kH,
-        sH = "list" === PH && null !== vH && void 0 !== vH && vH.meta.fee ? function(HH, BH) {
-          const LH = Math.max(0, BH - HH.taxFreeAllowance);
-          return Math.ceil(Math.round(LH * HH.rate * 1e6) / 1e6)
-        }(vH.meta.fee, aH) : 0,
-        JH = !!vH && xH.isPending(vH.key),
-        iH = RH && !HH.searching && OH >= 1 && kH >= 1 && ("order" === PH || jH >= OH) && !JH,
-        pH = !!UH && !RH && !HH.searching && OH >= 1 && kH >= 1,
-        yH = () => {
-          iH ? xH.act(vH.key, `${OH}|${kH}`) : pH && (HH.onPickItem(UH), qH(!0))
+        CB = UB * kB,
+        HB = "list" === AB && null !== WB && void 0 !== WB && WB.meta.fee ? function(BB, OB) {
+          const GB = Math.max(0, OB - BB.taxFreeAllowance);
+          return Math.ceil(Math.round(GB * BB.rate * 1e6) / 1e6)
+        }(WB.meta.fee, CB) : 0,
+        vB = !!WB && RB.isPending(WB.key),
+        sB = wB && !BB.searching && UB >= 1 && kB >= 1 && ("order" === AB || EB >= UB) && !vB,
+        xB = !!SB && !wB && !BB.searching && UB >= 1 && kB >= 1,
+        tB = () => {
+          sB ? RB.act(WB.key, `${UB}|${kB}`) : xB && (BB.onPickItem(SB), gB(!0))
         };
-      (0, AH.useEffect)((() => {
-        eH && RH && !HH.searching && (qH(!1), yH())
-      }), [eH, RH, HH.searching]);
-      const HB = !!UH && !RH && (HH.searching || eH),
-        BB = UH ? uS(HH.names, UH) : "",
-        LB = (0, AH.useMemo)((() => YS(HH.catalogue, oH).slice(0, 8)), [HH.catalogue, oH]),
-        AB = ("list" === PH ? KS.filter((HH => HH < jH)) : cS).map((HH => ({
-          value: HH,
-          label: String(HH)
+      (0, YB.useEffect)((() => {
+        LB && wB && !BB.searching && (gB(!1), tB())
+      }), [LB, wB, BB.searching]);
+      const BO = !!SB && !wB && (BB.searching || LB),
+        OO = SB ? pQ(BB.names, SB) : "",
+        GO = (0, YB.useMemo)((() => lQ(BB.catalogue, KB).slice(0, 8)), [BB.catalogue, KB]),
+        YO = ("list" === AB ? FQ.filter((BB => BB < EB)) : iQ).map((BB => ({
+          value: BB,
+          label: String(BB)
         })));
-      "list" === PH && jH > 0 && AB.push({
-        value: jH,
-        label: MH("smpShop:all", {
-          count: jH
+      "list" === AB && EB > 0 && YO.push({
+        value: EB,
+        label: NB("smpShop:all", {
+          count: EB
         })
       });
-      const rB = [];
-      return null !== FH && (FH > 1 && rB.push({
-        value: FH - 1,
-        label: MH("smpShop:undercut", {
-          price: Fr(FH - 1)
+      const DO = [];
+      return null !== hB && (hB > 1 && DO.push({
+        value: hB - 1,
+        label: NB("smpShop:undercut", {
+          price: hD(hB - 1)
         })
-      }), rB.push({
-        value: FH,
-        label: MH("smpShop:lowest", {
-          price: Fr(FH)
+      }), DO.push({
+        value: hB,
+        label: NB("smpShop:lowest", {
+          price: hD(hB)
         })
-      })), null !== DH && DH !== FH && rB.push({
-        value: DH,
-        label: MH("smpShop:average", {
-          price: Fr(DH)
+      })), null !== aB && aB !== hB && DO.push({
+        value: aB,
+        label: NB("smpShop:average", {
+          price: hD(aB)
         })
-      }), (0, XH.jsxs)("div", {
+      }), (0, PB.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, XH.jsxs)("div", {
+        children: [(0, PB.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, XH.jsx)("b", {
-            children: MH("list" === PH ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, XH.jsx)("button", {
+          children: [(0, PB.jsx)("b", {
+            children: NB("list" === AB ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, PB.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": MH("smpShop:close"),
-            onClick: HH.onClose,
-            children: (0, XH.jsx)(tH.c, {
+            "aria-label": NB("smpShop:close"),
+            onClick: BB.onClose,
+            children: (0, PB.jsx)(jB.b, {
               name: "xmark"
             })
           })]
-        }), "list" === PH && (0, XH.jsx)("div", {
+        }), "list" === AB && (0, PB.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (WH = HH.inventory) && void 0 !== WH && WH.length ? HH.inventory.map((HH => {
+          children: null !== (ZB = BB.inventory) && void 0 !== ZB && ZB.length ? BB.inventory.map((BB => {
             let {
-              item: BH,
-              quantity: LH
-            } = HH;
-            return (0, XH.jsx)("button", {
+              item: OB,
+              quantity: GB
+            } = BB;
+            return (0, PB.jsx)("button", {
               type: "button",
-              title: BH,
-              className: SH()("SmpPickerSlot", {
-                SmpPickerSlotOn: BH === UH
+              title: OB,
+              className: QB()("SmpPickerSlot", {
+                SmpPickerSlotOn: OB === SB
               }),
               onClick: () => {
-                dH(BH)
+                bB(OB)
               },
-              children: (0, XH.jsx)(Zr, {
-                item: BH,
-                amount: LH
+              children: (0, PB.jsx)(TD, {
+                item: OB,
+                amount: GB
               })
-            }, BH)
-          })) : (0, XH.jsx)("span", {
+            }, OB)
+          })) : (0, PB.jsx)("span", {
             className: "SmpMuted",
-            children: MH("smpShop:nothingToList")
+            children: NB("smpShop:nothingToList")
           })
-        }), ("list" === PH || !UH) && (0, XH.jsxs)("div", {
+        }), ("list" === AB || !SB) && (0, PB.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, XH.jsx)(TH.e, {
+          children: [(0, PB.jsx)(VB.b, {
             className: "SmpSearchInput",
-            placeholderText: MH("list" === PH ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: oH,
-            onValueChange: IH,
+            placeholderText: NB("list" === AB ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: KB,
+            onValueChange: uB,
             blurOnEnter: !0,
             onEnter: () => {
-              LB[0] && dH(LB[0].name)
+              GO[0] && bB(GO[0].name)
             }
-          }, fH), LB.length > 0 && (0, XH.jsx)("div", {
+          }, mB), GO.length > 0 && (0, PB.jsx)("div", {
             className: "SmpPicker",
-            children: LB.map((HH => {
+            children: GO.map((BB => {
               let {
-                name: BH
-              } = HH;
-              return (0, XH.jsx)("button", {
+                name: OB
+              } = BB;
+              return (0, PB.jsx)("button", {
                 type: "button",
-                title: BH,
-                className: SH()("SmpPickerSlot", {
-                  SmpPickerSlotOn: BH === UH
+                title: OB,
+                className: QB()("SmpPickerSlot", {
+                  SmpPickerSlotOn: OB === SB
                 }),
                 onClick: () => {
-                  dH(BH)
+                  bB(OB)
                 },
-                children: (0, XH.jsx)(Zr, {
-                  item: BH
+                children: (0, PB.jsx)(TD, {
+                  item: OB
                 })
-              }, BH)
+              }, OB)
             }))
           })]
-        }), UH && (0, XH.jsxs)(XH.Fragment, {
-          children: [(0, XH.jsxs)("div", {
+        }), SB && (0, PB.jsxs)(PB.Fragment, {
+          children: [(0, PB.jsxs)("div", {
             className: "SmpPickedName",
-            children: [BB, HB && (0, XH.jsx)(pr, {})]
-          }), (0, XH.jsxs)("div", {
+            children: [OO, BO && (0, PB.jsx)(xD, {})]
+          }), (0, PB.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, XH.jsxs)("div", {
+            children: [(0, PB.jsxs)("div", {
               className: "SmpField",
-              children: [(0, XH.jsxs)("span", {
-                children: [MH("smpShop:quantity"), "list" === PH && RH && (0, XH.jsx)("small", {
-                  children: MH("smpShop:youHave", {
-                    count: jH
+              children: [(0, PB.jsxs)("span", {
+                children: [NB("smpShop:quantity"), "list" === AB && wB && (0, PB.jsx)("small", {
+                  children: NB("smpShop:youHave", {
+                    count: EB
                   })
                 })]
-              }), (0, XH.jsx)(yr, {
-                value: OH,
-                onChange: bH,
-                max: nH,
-                label: MH("smpShop:quantity")
-              }), (0, XH.jsx)(ir, {
-                options: AB,
-                value: OH,
-                onChange: bH,
-                ariaLabel: MH("smpShop:quantity")
+              }), (0, PB.jsx)(tD, {
+                value: UB,
+                onChange: fB,
+                max: cB,
+                label: NB("smpShop:quantity")
+              }), (0, PB.jsx)(sD, {
+                options: YO,
+                value: UB,
+                onChange: fB,
+                ariaLabel: NB("smpShop:quantity")
               })]
-            }), (0, XH.jsxs)("div", {
+            }), (0, PB.jsxs)("div", {
               className: "SmpField",
-              children: [(0, XH.jsx)("span", {
-                children: MH("smpShop:pricePerItem")
-              }), (0, XH.jsx)(yr, {
-                value: Math.max(1, kH),
-                onChange: ZH,
+              children: [(0, PB.jsx)("span", {
+                children: NB("smpShop:pricePerItem")
+              }), (0, PB.jsx)(tD, {
+                value: Math.max(1, kB),
+                onChange: TB,
                 max: 9999999,
-                step: HS,
-                label: MH("smpShop:pricePerItem")
-              }), (0, XH.jsx)(ir, {
-                options: rB,
-                value: kH,
-                onChange: ZH,
-                ariaLabel: MH("smpShop:pricePerItem")
+                step: BQ,
+                label: NB("smpShop:pricePerItem")
+              }), (0, PB.jsx)(sD, {
+                options: DO,
+                value: kB,
+                onChange: TB,
+                ariaLabel: NB("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === PH && (0, XH.jsxs)("div", {
+          }), "list" === AB && (0, PB.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, XH.jsxs)("span", {
-              children: [MH("smpShop:youGet"), " ", (0, XH.jsx)(dr, {
-                amount: Math.max(0, aH - sH),
+            children: [(0, PB.jsxs)("span", {
+              children: [NB("smpShop:youGet"), " ", (0, PB.jsx)(bD, {
+                amount: Math.max(0, CB - HB),
                 exact: !0
               })]
-            }), (0, XH.jsx)("small", {
-              children: sH > 0 ? MH("smpShop:listingFee", {
-                fee: sH.toLocaleString("en-US")
-              }) : MH("smpShop:listingRules")
+            }), (0, PB.jsx)("small", {
+              children: HB > 0 ? NB("smpShop:listingFee", {
+                fee: HB.toLocaleString("en-US")
+              }) : NB("smpShop:listingRules")
             })]
-          }), (0, XH.jsx)(CH.x, {
+          }), (0, PB.jsx)(JB.v, {
             className: "SmpSubmit",
-            disabled: !iH && !pH && !JH,
-            loading: JH || HB || RH && HH.searching,
-            onClick: yH,
-            children: "list" === PH ? MH("smpShop:listButton", {
-              count: OH,
-              item: BB
-            }) : (0, XH.jsxs)(XH.Fragment, {
-              children: [MH("smpShop:orderButton", {
-                count: OH,
-                item: BB
-              }), " ", kH >= 1 && (0, XH.jsx)(dr, {
-                amount: aH
+            disabled: !sB && !xB && !vB,
+            loading: vB || BO || wB && BB.searching,
+            onClick: tB,
+            children: "list" === AB ? NB("smpShop:listButton", {
+              count: UB,
+              item: OO
+            }) : (0, PB.jsxs)(PB.Fragment, {
+              children: [NB("smpShop:orderButton", {
+                count: UB,
+                item: OO
+              }), " ", kB >= 1 && (0, PB.jsx)(bD, {
+                amount: CB
               })]
             })
           })]
@@ -4276,627 +4276,627 @@ export const modules = {
       })
     }
 
-    function qS() {
-      var HH;
+    function gQ() {
+      var BB;
       const {
-        t: BH
-      } = (0, hH.B)(), LH = xS(), rH = null === (HH = LH.shopInfo[LH.categoryKey]) || void 0 === HH ? void 0 : HH.items, SH = tS(rH, "search"), tH = tS(rH, "creator"), zH = hS(rH, "enchantedCreator"), EH = hS(rH, "listing"), GH = tS(rH, "empty"), YH = US(SH, EH.length > 0 || null !== GH), {
-        searched: uH,
-        shown: QH,
-        loading: WH
-      } = YH, [MH, xH] = (0, AH.useState)(!1), [vH, PH] = function() {
-        const [HH, BH] = (0, oS.b)("smpMarketView", "list");
-        return ["grid" === HH ? "grid" : "list", BH]
-      }(), TH = "grid" === vH, UH = (0, AH.useMemo)((() => EH.filter((HH => {
+        t: OB
+      } = (0, oB.H)(), GB = RQ(), DB = null === (BB = GB.shopInfo[GB.categoryKey]) || void 0 === BB ? void 0 : BB.items, QB = jQ(DB, "search"), jB = jQ(DB, "creator"), yB = oQ(DB, "enchantedCreator"), MB = oQ(DB, "listing"), zB = jQ(DB, "empty"), lB = SQ(QB, MB.length > 0 || null !== zB), {
+        searched: pB,
+        shown: qB,
+        loading: ZB
+      } = lB, [NB, RB] = (0, YB.useState)(!1), [WB, AB] = function() {
+        const [BB, OB] = (0, KQ.e)("smpMarketView", "list");
+        return ["grid" === BB ? "grid" : "list", OB]
+      }(), VB = "grid" === WB, SB = (0, YB.useMemo)((() => MB.filter((BB => {
         let {
-          meta: BH
-        } = HH;
-        return null !== BH.seller && BH.item === uH
-      })).map((HH => {
+          meta: OB
+        } = BB;
+        return null !== OB.seller && OB.item === pB
+      })).map((BB => {
         let {
-          meta: BH
-        } = HH;
-        return BH.pricePerItem
-      })).sort(((HH, BH) => HH - BH))), [EH, uH]), VH = (0, AH.useMemo)((() => {
-        const HH = new Set(YH.catalogue.map((HH => {
+          meta: OB
+        } = BB;
+        return OB.pricePerItem
+      })).sort(((BB, OB) => BB - OB))), [MB, pB]), nB = (0, YB.useMemo)((() => {
+        const BB = new Set(lB.catalogue.map((BB => {
           let {
-            name: BH
-          } = HH;
-          return BH
+            name: OB
+          } = BB;
+          return OB
         })));
-        return function(HH) {
-          for (const BH in HH)
-            if ("sell" === HH[BH].smp) return hS(HH[BH].items, "sell").filter((HH => {
+        return function(BB) {
+          for (const OB in BB)
+            if ("sell" === BB[OB].smp) return oQ(BB[OB].items, "sell").filter((BB => {
               let {
-                item: BH
-              } = HH;
-              return !BH.enchant
-            })).map((HH => {
+                item: OB
+              } = BB;
+              return !OB.enchant
+            })).map((BB => {
               let {
-                meta: BH
-              } = HH;
+                meta: OB
+              } = BB;
               return {
-                item: BH.item,
-                quantity: BH.quantity,
-                sellPrice: BH.pricePerItem
+                item: OB.item,
+                quantity: OB.quantity,
+                sellPrice: OB.pricePerItem
               }
             }));
           return []
-        }(LH.shopInfo).filter((BH => {
+        }(GB.shopInfo).filter((OB => {
           let {
-            item: LH
-          } = BH;
-          return HH.has(LH)
+            item: GB
+          } = OB;
+          return BB.has(GB)
         }))
-      }), [LH.shopInfo, YH.catalogue]);
-      return (0, XH.jsx)(kS, {
-        browser: YH,
+      }), [GB.shopInfo, lB.catalogue]);
+      return (0, PB.jsx)(kQ, {
+        browser: lB,
         className: "SmpMarketTab",
-        recentLabel: BH("smpShop:recentlyListed"),
-        action: (0, XH.jsx)(CH.x, {
+        recentLabel: OB("smpShop:recentlyListed"),
+        action: (0, PB.jsx)(JB.v, {
           className: "SmpSellButton",
           onClick: () => {
-            xH((HH => !HH))
+            RB((BB => !BB))
           },
-          children: BH("smpShop:sell")
+          children: OB("smpShop:sell")
         }),
-        above: MH && (0, XH.jsxs)(XH.Fragment, {
-          children: [(0, XH.jsx)(eS, {
+        above: NB && (0, PB.jsxs)(PB.Fragment, {
+          children: [(0, PB.jsx)(LQ, {
             mode: "list",
-            creator: tH,
-            inventory: VH,
-            catalogue: YH.catalogue,
-            names: YH.names,
-            searching: WH,
-            prices: UH,
-            onPickItem: YH.searchFor,
+            creator: jB,
+            inventory: nB,
+            catalogue: lB.catalogue,
+            names: lB.names,
+            searching: ZB,
+            prices: SB,
+            onPickItem: lB.searchFor,
             onClose: () => {
-              xH(!1)
+              RB(!1)
             }
-          }), zH.length > 0 && (0, XH.jsx)(gS, {
-            entries: zH
+          }), yB.length > 0 && (0, PB.jsx)(rQ, {
+            entries: yB
           })]
         }),
-        listControls: (0, XH.jsx)(fS, {
-          view: vH,
-          onChange: PH
+        listControls: (0, PB.jsx)(mQ, {
+          view: WB,
+          onChange: AB
         }),
-        summary: QH && (EH.length > 0 ? BH(1 === EH.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: EH.length,
-          price: Fr(mS(EH, "min"))
-        }) : BH("smpShop:noOneSelling", {
-          item: uS(YH.names, QH)
+        summary: qB && (MB.length > 0 ? OB(1 === MB.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: MB.length,
+          price: hD(dQ(MB, "min"))
+        }) : OB("smpShop:noOneSelling", {
+          item: pQ(lB.names, qB)
         })),
-        list: WH ? (0, XH.jsx)(ar, {
-          grid: TH
-        }) : EH.length > 0 ? (0, XH.jsx)(lS, {
-          entries: EH,
-          view: vH
-        }) : GH ? (0, XH.jsx)(Jr, {
-          entry: GH
-        }) : (0, XH.jsx)(ar, {
+        list: ZB ? (0, PB.jsx)(CD, {
+          grid: VB
+        }) : MB.length > 0 ? (0, PB.jsx)(IQ, {
+          entries: MB,
+          view: WB
+        }) : zB ? (0, PB.jsx)(vD, {
+          entry: zB
+        }) : (0, PB.jsx)(CD, {
           count: 3,
-          grid: TH
+          grid: VB
         })
       })
     }
 
-    function gS(HH) {
+    function rQ(BB) {
       let {
-        entries: BH
-      } = HH;
+        entries: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)(), rH = xS(), [SH, tH] = (0, AH.useState)({});
-      return (0, XH.jsx)("div", {
+        t: GB
+      } = (0, oB.H)(), DB = RQ(), [QB, jB] = (0, YB.useState)({});
+      return (0, PB.jsx)("div", {
         className: "SmpList",
-        children: BH.map((HH => {
-          var BH, AH, hH;
+        children: OB.map((BB => {
+          var OB, YB, oB;
           let {
-            key: zH,
-            item: EH,
-            meta: GH
-          } = HH;
-          const YH = null !== (BH = SH[zH]) && void 0 !== BH ? BH : 1;
-          return (0, XH.jsxs)("div", {
+            key: yB,
+            item: MB,
+            meta: zB
+          } = BB;
+          const lB = null !== (OB = QB[yB]) && void 0 !== OB ? OB : 1;
+          return (0, PB.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, XH.jsx)(Zr, {
-              item: GH.item,
-              amount: GH.quantity,
-              tier: null !== (AH = null === (hH = EH.enchant) || void 0 === hH ? void 0 : hH.tier) && void 0 !== AH ? AH : null
-            }), (0, XH.jsxs)("div", {
+            children: [(0, PB.jsx)(TD, {
+              item: zB.item,
+              amount: zB.quantity,
+              tier: null !== (YB = null === (oB = MB.enchant) || void 0 === oB ? void 0 : oB.tier) && void 0 !== YB ? YB : null
+            }), (0, PB.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, XH.jsx)("b", {
-                children: (0, XH.jsx)(lr.b, {
-                  text: EH.customTitle
+              children: [(0, PB.jsx)("b", {
+                children: (0, PB.jsx)(ID.b, {
+                  text: MB.customTitle
                 })
-              }), (0, XH.jsx)("small", {
-                children: LH("smpShop:enchantedListing")
+              }), (0, PB.jsx)("small", {
+                children: GB("smpShop:enchantedListing")
               })]
-            }), (0, XH.jsx)(yr, {
-              value: YH,
-              onChange: HH => {
-                tH({
-                  ...SH,
-                  [zH]: HH
+            }), (0, PB.jsx)(tD, {
+              value: lB,
+              onChange: BB => {
+                jB({
+                  ...QB,
+                  [yB]: BB
                 })
               },
               max: 9999999,
-              step: HS,
-              label: LH("smpShop:pricePerItem")
-            }), (0, XH.jsxs)(CH.x, {
-              loading: rH.isPending(zH),
+              step: BQ,
+              label: GB("smpShop:pricePerItem")
+            }), (0, PB.jsxs)(JB.v, {
+              loading: DB.isPending(yB),
               onClick: () => {
-                rH.act(zH, String(YH))
+                DB.act(yB, String(lB))
               },
-              children: [LH("smpShop:list"), " ", (0, XH.jsx)(dr, {
-                amount: YH
+              children: [GB("smpShop:list"), " ", (0, PB.jsx)(bD, {
+                amount: lB
               })]
             })]
-          }, zH)
+          }, yB)
         }))
       })
     }
-    const NS = (0, AH.memo)((function(HH) {
+    const XQ = (0, YB.memo)((function(BB) {
       let {
-        itemKey: BH,
-        item: LH,
-        quantity: AH,
-        pricePerItem: rH,
-        tier: hH,
-        selected: tH,
-        onSelect: zH
-      } = HH;
-      return (0, XH.jsxs)("button", {
+        itemKey: OB,
+        item: GB,
+        quantity: YB,
+        pricePerItem: DB,
+        tier: oB,
+        selected: jB,
+        onSelect: yB
+      } = BB;
+      return (0, PB.jsxs)("button", {
         type: "button",
-        className: SH()("SmpInventorySlot", {
-          SmpInventorySlotOn: tH
+        className: QB()("SmpInventorySlot", {
+          SmpInventorySlotOn: jB
         }),
-        title: LH,
+        title: GB,
         onClick: () => {
-          zH(BH)
+          yB(OB)
         },
-        children: [(0, XH.jsx)(Zr, {
-          item: LH,
-          amount: AH,
-          tier: hH
-        }), (0, XH.jsx)(dr, {
-          amount: rH
+        children: [(0, PB.jsx)(TD, {
+          item: GB,
+          amount: YB,
+          tier: oB
+        }), (0, PB.jsx)(bD, {
+          amount: DB
         })]
       })
     }));
 
-    function RS() {
-      var HH;
+    function wQ() {
+      var BB;
       const {
-        t: BH
-      } = (0, hH.B)(), LH = xS(), rH = null === (HH = LH.shopInfo[LH.categoryKey]) || void 0 === HH ? void 0 : HH.items, tH = hS(rH, "sell"), zH = tS(rH, "empty"), [CH, EH] = (0, AH.useState)(null), [GH, YH] = (0, AH.useState)({}), uH = tH.find((HH => {
+        t: OB
+      } = (0, oB.H)(), GB = RQ(), DB = null === (BB = GB.shopInfo[GB.categoryKey]) || void 0 === BB ? void 0 : BB.items, jB = oQ(DB, "sell"), yB = jQ(DB, "empty"), [JB, MB] = (0, YB.useState)(null), [zB, lB] = (0, YB.useState)({}), pB = jB.find((BB => {
         let {
-          key: BH
-        } = HH;
-        return BH === CH
+          key: OB
+        } = BB;
+        return OB === JB
       }));
-      return 0 === tH.length ? (0, XH.jsx)("div", {
+      return 0 === jB.length ? (0, PB.jsx)("div", {
         className: "SmpScreen",
-        children: (0, XH.jsx)(sr, {
-          title: zH ? (0, XH.jsx)(lr.b, {
-            text: zH.item.customTitle
-          }) : BH("smpShop:nothingToSell"),
-          children: zH && (0, XH.jsx)(lr.b, {
-            text: zH.item.description
+        children: (0, PB.jsx)(HD, {
+          title: yB ? (0, PB.jsx)(ID.b, {
+            text: yB.item.customTitle
+          }) : OB("smpShop:nothingToSell"),
+          children: yB && (0, PB.jsx)(ID.b, {
+            text: yB.item.description
           })
         })
-      }) : (0, XH.jsxs)("div", {
+      }) : (0, PB.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: tH.map((HH => {
-            var BH, LH;
+          children: jB.map((BB => {
+            var OB, GB;
             let {
-              key: AH,
-              item: rH,
-              meta: SH
-            } = HH;
-            return (0, XH.jsx)(NS, {
-              itemKey: AH,
-              item: SH.item,
-              quantity: SH.quantity,
-              pricePerItem: SH.pricePerItem,
-              tier: null !== (BH = null === (LH = rH.enchant) || void 0 === LH ? void 0 : LH.tier) && void 0 !== BH ? BH : null,
-              selected: AH === CH,
-              onSelect: EH
-            }, AH)
+              key: YB,
+              item: DB,
+              meta: QB
+            } = BB;
+            return (0, PB.jsx)(XQ, {
+              itemKey: YB,
+              item: QB.item,
+              quantity: QB.quantity,
+              pricePerItem: QB.pricePerItem,
+              tier: null !== (OB = null === (GB = DB.enchant) || void 0 === GB ? void 0 : GB.tier) && void 0 !== OB ? OB : null,
+              selected: YB === JB,
+              onSelect: MB
+            }, YB)
           }))
-        }), (0, XH.jsx)("div", {
-          className: SH()("SmpSellBar", {
-            SmpSellBarIdle: !uH
+        }), (0, PB.jsx)("div", {
+          className: QB()("SmpSellBar", {
+            SmpSellBarIdle: !pB
           }),
-          children: uH ? (0, XH.jsx)(jS, {
-            entry: uH,
-            choice: QS(uH.item, GH[uH.key]),
-            onChoose: HH => {
-              YH({
-                ...GH,
-                [uH.key]: HH
+          children: pB ? (0, PB.jsx)(EQ, {
+            entry: pB,
+            choice: qQ(pB.item, zB[pB.key]),
+            onChoose: BB => {
+              lB({
+                ...zB,
+                [pB.key]: BB
               })
             }
-          }) : (0, XH.jsx)("span", {
+          }) : (0, PB.jsx)("span", {
             className: "SmpMuted",
-            children: BH("smpShop:tapToSell")
+            children: OB("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function jS(HH) {
-      var BH, LH, AH, rH;
+    function EQ(BB) {
+      var OB, GB, YB, DB;
       let {
-        entry: SH,
-        choice: tH,
-        onChoose: zH
-      } = HH;
+        entry: QB,
+        choice: jB,
+        onChoose: yB
+      } = BB;
       const {
-        t: EH
-      } = (0, hH.B)(), GH = xS(), {
-        key: YH,
-        item: uH,
-        meta: QH
-      } = SH, WH = XS("dropdown" === (null === (BH = uH.userInput) || void 0 === BH ? void 0 : BH.type) ? uH.userInput.dropdownOptions : []), MH = null === tH ? 0 : -(0, mr.c)(uH, tH);
-      return (0, XH.jsxs)(XH.Fragment, {
-        children: [(0, XH.jsx)(Zr, {
-          item: QH.item,
-          amount: QH.quantity,
-          tier: null !== (LH = null === (AH = uH.enchant) || void 0 === AH ? void 0 : AH.tier) && void 0 !== LH ? LH : null
-        }), (0, XH.jsxs)("div", {
+        t: MB
+      } = (0, oB.H)(), zB = RQ(), {
+        key: lB,
+        item: pB,
+        meta: qB
+      } = QB, ZB = PQ("dropdown" === (null === (OB = pB.userInput) || void 0 === OB ? void 0 : OB.type) ? pB.userInput.dropdownOptions : []), NB = null === jB ? 0 : -(0, dD.b)(pB, jB);
+      return (0, PB.jsxs)(PB.Fragment, {
+        children: [(0, PB.jsx)(TD, {
+          item: qB.item,
+          amount: qB.quantity,
+          tier: null !== (GB = null === (YB = pB.enchant) || void 0 === YB ? void 0 : YB.tier) && void 0 !== GB ? GB : null
+        }), (0, PB.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, XH.jsx)("b", {
-            children: (0, XH.jsx)(lr.b, {
-              text: null !== (rH = uH.customTitle) && void 0 !== rH ? rH : QH.item
+          children: [(0, PB.jsx)("b", {
+            children: (0, PB.jsx)(ID.b, {
+              text: null !== (DB = pB.customTitle) && void 0 !== DB ? DB : qB.item
             })
-          }), (0, XH.jsx)("small", {
-            children: EH("smpShop:sellEach", {
-              count: QH.quantity
+          }), (0, PB.jsx)("small", {
+            children: MB("smpShop:sellEach", {
+              count: qB.quantity
             })
           })]
-        }), (0, XH.jsx)(ir, {
-          options: WH.map((HH => {
+        }), (0, PB.jsx)(sD, {
+          options: ZB.map((BB => {
             let {
-              label: BH,
-              quantity: LH,
-              isAll: AH
-            } = HH;
+              label: OB,
+              quantity: GB,
+              isAll: YB
+            } = BB;
             return {
-              value: BH,
-              label: AH ? EH("smpShop:all", {
-                count: LH
-              }) : String(LH)
+              value: OB,
+              label: YB ? MB("smpShop:all", {
+                count: GB
+              }) : String(GB)
             }
           })),
-          value: tH,
-          onChange: zH,
-          ariaLabel: EH("smpShop:quantity")
-        }), (0, XH.jsxs)(CH.x, {
-          loading: GH.isPending(YH),
-          disabled: null === tH,
+          value: jB,
+          onChange: yB,
+          ariaLabel: MB("smpShop:quantity")
+        }), (0, PB.jsxs)(JB.v, {
+          loading: zB.isPending(lB),
+          disabled: null === jB,
           onClick: () => {
-            GH.act(YH, tH)
+            zB.act(lB, jB)
           },
-          children: [EH("smpShop:sellButton"), " ", (0, XH.jsx)(dr, {
-            amount: MH
+          children: [MB("smpShop:sellButton"), " ", (0, PB.jsx)(bD, {
+            amount: NB
           })]
         })]
       })
     }
 
-    function nS() {
-      var HH;
+    function cQ() {
+      var BB;
       const {
-        t: BH
-      } = (0, hH.B)(), LH = xS(), AH = null === (HH = LH.shopInfo[LH.categoryKey]) || void 0 === HH ? void 0 : HH.items, rH = hS(AH, "collect"), SH = hS(AH, "myListing"), tH = (HH, BH) => LH.isPending(HH) || !1 === BH.canBuy;
-      return (0, XH.jsxs)("div", {
+        t: OB
+      } = (0, oB.H)(), GB = RQ(), YB = null === (BB = GB.shopInfo[GB.categoryKey]) || void 0 === BB ? void 0 : BB.items, DB = oQ(YB, "collect"), QB = oQ(YB, "myListing"), jB = (BB, OB) => GB.isPending(BB) || !1 === OB.canBuy;
+      return (0, PB.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, XH.jsx)("h3", {
+        children: [(0, PB.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: BH("smpShop:readyToCollect")
-        }), rH.length > 0 ? (0, XH.jsx)("div", {
+          children: OB("smpShop:readyToCollect")
+        }), DB.length > 0 ? (0, PB.jsx)("div", {
           className: "SmpList",
-          children: rH.map((HH => {
-            var AH, rH;
+          children: DB.map((BB => {
+            var YB, DB;
             let {
-              key: SH,
-              item: hH,
-              meta: zH
-            } = HH;
-            return (0, XH.jsxs)("div", {
+              key: QB,
+              item: oB,
+              meta: yB
+            } = BB;
+            return (0, PB.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, XH.jsx)(Zr, {
-                item: "sold" === zH.type ? "Gold Coin" : zH.item,
-                amount: "sold" === zH.type ? 0 : zH.quantity,
-                tier: null !== (AH = null === (rH = hH.enchant) || void 0 === rH ? void 0 : rH.tier) && void 0 !== AH ? AH : null
-              }), (0, XH.jsxs)("div", {
+              children: [(0, PB.jsx)(TD, {
+                item: "sold" === yB.type ? "Gold Coin" : yB.item,
+                amount: "sold" === yB.type ? 0 : yB.quantity,
+                tier: null !== (YB = null === (DB = oB.enchant) || void 0 === DB ? void 0 : DB.tier) && void 0 !== YB ? YB : null
+              }), (0, PB.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, XH.jsx)("b", {
-                  children: (0, XH.jsx)(lr.b, {
-                    text: hH.customTitle
+                children: [(0, PB.jsx)("b", {
+                  children: (0, PB.jsx)(ID.b, {
+                    text: oB.customTitle
                   })
-                }), (0, XH.jsx)("small", {
-                  children: (0, XH.jsx)(lr.b, {
-                    text: hH.description
+                }), (0, PB.jsx)("small", {
+                  children: (0, PB.jsx)(ID.b, {
+                    text: oB.description
                   })
                 })]
-              }), (0, XH.jsx)(CH.u, {
-                loading: tH(SH, hH),
+              }), (0, PB.jsx)(JB.q, {
+                loading: jB(QB, oB),
                 onClick: () => {
-                  LH.act(SH)
+                  GB.act(QB)
                 },
-                children: BH("smpShop:collect")
+                children: OB("smpShop:collect")
               })]
-            }, SH)
+            }, QB)
           }))
-        }) : (0, XH.jsx)(sr, {
-          title: BH("smpShop:nothingToCollect"),
-          children: BH("smpShop:nothingToCollectHint")
-        }), (0, XH.jsx)("h3", {
+        }) : (0, PB.jsx)(HD, {
+          title: OB("smpShop:nothingToCollect"),
+          children: OB("smpShop:nothingToCollectHint")
+        }), (0, PB.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: BH("smpShop:activeListings", {
-            count: SH.length
+          children: OB("smpShop:activeListings", {
+            count: QB.length
           })
-        }), SH.length > 0 ? (0, XH.jsx)("div", {
+        }), QB.length > 0 ? (0, PB.jsx)("div", {
           className: "SmpList",
-          children: SH.map((HH => {
-            var AH, rH;
+          children: QB.map((BB => {
+            var YB, DB;
             let {
-              key: SH,
-              item: hH,
-              meta: zH
-            } = HH;
-            return (0, XH.jsxs)("div", {
+              key: QB,
+              item: oB,
+              meta: yB
+            } = BB;
+            return (0, PB.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, XH.jsx)(Zr, {
-                item: zH.item,
-                amount: zH.quantity,
-                tier: null !== (AH = null === (rH = hH.enchant) || void 0 === rH ? void 0 : rH.tier) && void 0 !== AH ? AH : null
-              }), (0, XH.jsxs)("div", {
+              children: [(0, PB.jsx)(TD, {
+                item: yB.item,
+                amount: yB.quantity,
+                tier: null !== (YB = null === (DB = oB.enchant) || void 0 === DB ? void 0 : DB.tier) && void 0 !== YB ? YB : null
+              }), (0, PB.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, XH.jsx)("b", {
-                  children: (0, XH.jsx)(lr.b, {
-                    text: hH.customTitle
+                children: [(0, PB.jsx)("b", {
+                  children: (0, PB.jsx)(ID.b, {
+                    text: oB.customTitle
                   })
-                }), (0, XH.jsx)("small", {
-                  children: BH("smpShop:timeLeft", {
-                    time: ES(zH.expiresAt)
+                }), (0, PB.jsx)("small", {
+                  children: OB("smpShop:timeLeft", {
+                    time: MQ(yB.expiresAt)
                   })
                 })]
-              }), (0, XH.jsxs)("div", {
+              }), (0, PB.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, XH.jsx)(dr, {
-                  amount: zH.pricePerItem
-                }), (0, XH.jsx)("small", {
-                  children: BH("smpShop:each")
+                children: [(0, PB.jsx)(bD, {
+                  amount: yB.pricePerItem
+                }), (0, PB.jsx)("small", {
+                  children: OB("smpShop:each")
                 })]
-              }), (0, XH.jsx)(CH.O, {
-                loading: tH(SH, hH),
+              }), (0, PB.jsx)(JB.Q, {
+                loading: jB(QB, oB),
                 onClick: () => {
-                  LH.act(SH)
+                  GB.act(QB)
                 },
-                children: BH("smpShop:cancel")
+                children: OB("smpShop:cancel")
               })]
-            }, SH)
+            }, QB)
           }))
-        }) : (0, XH.jsx)(sr, {
-          title: BH("smpShop:noActiveListings"),
-          children: BH("smpShop:noActiveListingsHint")
+        }) : (0, PB.jsx)(HD, {
+          title: OB("smpShop:noActiveListings"),
+          children: OB("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function FS(HH) {
+    function hQ(BB) {
       let {
-        done: BH,
-        of: LH
-      } = HH;
-      return (0, XH.jsx)("span", {
+        done: OB,
+        of: GB
+      } = BB;
+      return (0, PB.jsx)("span", {
         className: "SmpProgress",
-        children: (0, XH.jsx)("i", {
+        children: (0, PB.jsx)("i", {
           style: {
-            width: `${Math.min(100,BH/Math.max(1,LH)*100)}%`
+            width: `${Math.min(100,OB/Math.max(1,GB)*100)}%`
           }
         })
       })
     }
 
-    function DS(HH) {
-      var BH, LH, AH;
+    function aQ(BB) {
+      var OB, GB, YB;
       let {
-        entry: rH,
-        choice: SH,
-        onChoose: tH
-      } = HH;
+        entry: DB,
+        choice: QB,
+        onChoose: jB
+      } = BB;
       const {
-        t: zH
-      } = (0, hH.B)(), EH = xS(), {
-        key: GH,
-        item: YH,
-        meta: uH
-      } = rH, QH = "dropdown" === (null === (BH = YH.userInput) || void 0 === BH ? void 0 : BH.type) ? YH.userInput.dropdownOptions : [], WH = !0 === uH.processing, MH = null !== uH.creator && (uH.owned > 0 || WH), xH = MH && uH.owned > 0 ? XS(QH) : [], vH = null === SH ? 0 : null !== (LH = null === (AH = xH.find((HH => HH.label === SH))) || void 0 === AH ? void 0 : AH.quantity) && void 0 !== LH ? LH : 0;
-      return (0, XH.jsxs)("div", {
+        t: yB
+      } = (0, oB.H)(), MB = RQ(), {
+        key: zB,
+        item: lB,
+        meta: pB
+      } = DB, qB = "dropdown" === (null === (OB = lB.userInput) || void 0 === OB ? void 0 : OB.type) ? lB.userInput.dropdownOptions : [], ZB = !0 === pB.processing, NB = null !== pB.creator && (pB.owned > 0 || ZB), RB = NB && pB.owned > 0 ? PQ(qB) : [], WB = null === QB ? 0 : null !== (GB = null === (YB = RB.find((BB => BB.label === QB))) || void 0 === YB ? void 0 : YB.quantity) && void 0 !== GB ? GB : 0;
+      return (0, PB.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, XH.jsx)(Zr, {
-          item: uH.item
-        }), (0, XH.jsxs)("div", {
+        children: [(0, PB.jsx)(TD, {
+          item: pB.item
+        }), (0, PB.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, XH.jsx)("b", {
-            children: (0, XH.jsx)(lr.b, {
-              text: YH.customTitle
+          children: [(0, PB.jsx)("b", {
+            children: (0, PB.jsx)(ID.b, {
+              text: lB.customTitle
             })
-          }), (0, XH.jsxs)("small", {
-            children: [(0, XH.jsx)(dr, {
-              amount: uH.pricePerItem
-            }), " ", zH("smpShop:each"), " \xb7", " ", null === uH.creator ? zH("smpShop:you") : (0, XH.jsx)(lr.b, {
+          }), (0, PB.jsxs)("small", {
+            children: [(0, PB.jsx)(bD, {
+              amount: pB.pricePerItem
+            }), " ", yB("smpShop:each"), " \xb7", " ", null === pB.creator ? yB("smpShop:you") : (0, PB.jsx)(ID.b, {
               text: [{
-                entityName: uH.creator
+                entityName: pB.creator
               }]
             })]
-          }), (0, XH.jsx)(FS, {
-            done: uH.delivered,
-            of: uH.wanted
+          }), (0, PB.jsx)(hQ, {
+            done: pB.delivered,
+            of: pB.wanted
           })]
-        }), MH ? (0, XH.jsxs)(XH.Fragment, {
-          children: [(0, XH.jsx)(ir, {
-            options: xH.map((HH => {
+        }), NB ? (0, PB.jsxs)(PB.Fragment, {
+          children: [(0, PB.jsx)(sD, {
+            options: RB.map((BB => {
               let {
-                label: BH,
-                quantity: LH,
-                isAll: AH
-              } = HH;
+                label: OB,
+                quantity: GB,
+                isAll: YB
+              } = BB;
               return {
-                value: BH,
-                label: AH ? zH("smpShop:max", {
-                  count: LH
-                }) : String(LH)
+                value: OB,
+                label: YB ? yB("smpShop:max", {
+                  count: GB
+                }) : String(GB)
               }
             })),
-            value: SH,
-            onChange: tH,
-            ariaLabel: zH("smpShop:quantity")
-          }), (0, XH.jsxs)(CH.x, {
-            loading: EH.isPending(GH) || WH,
-            disabled: null === SH,
+            value: QB,
+            onChange: jB,
+            ariaLabel: yB("smpShop:quantity")
+          }), (0, PB.jsxs)(JB.v, {
+            loading: MB.isPending(zB) || ZB,
+            disabled: null === QB,
             onClick: () => {
-              EH.act(GH, SH)
+              MB.act(zB, QB)
             },
-            children: [zH("smpShop:deliver"), " ", (0, XH.jsx)(dr, {
-              amount: vH * uH.pricePerItem
+            children: [yB("smpShop:deliver"), " ", (0, PB.jsx)(bD, {
+              amount: WB * pB.pricePerItem
             })]
           })]
-        }) : (0, XH.jsx)("span", {
+        }) : (0, PB.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === uH.creator ? zH("smpShop:yourOrder") : zH("smpShop:youHave", {
+          children: null === pB.creator ? yB("smpShop:yourOrder") : yB("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function wS() {
-      var HH;
+    function eQ() {
+      var BB;
       const {
-        t: BH
-      } = (0, hH.B)(), LH = xS(), rH = null === (HH = LH.shopInfo[LH.categoryKey]) || void 0 === HH ? void 0 : HH.items, SH = tS(rH, "search"), tH = tS(rH, "creator"), zH = hS(rH, "order"), EH = tS(rH, "empty"), GH = US(SH, zH.length > 0 || null !== EH), [YH, uH] = (0, AH.useState)(!1), [QH, WH] = (0, AH.useState)({});
-      return (0, XH.jsx)(kS, {
-        browser: GH,
-        recentLabel: BH("smpShop:recentOrders"),
-        action: (0, XH.jsx)(CH.x, {
+        t: OB
+      } = (0, oB.H)(), GB = RQ(), DB = null === (BB = GB.shopInfo[GB.categoryKey]) || void 0 === BB ? void 0 : BB.items, QB = jQ(DB, "search"), jB = jQ(DB, "creator"), yB = oQ(DB, "order"), MB = jQ(DB, "empty"), zB = SQ(QB, yB.length > 0 || null !== MB), [lB, pB] = (0, YB.useState)(!1), [qB, ZB] = (0, YB.useState)({});
+      return (0, PB.jsx)(kQ, {
+        browser: zB,
+        recentLabel: OB("smpShop:recentOrders"),
+        action: (0, PB.jsx)(JB.v, {
           onClick: () => {
-            uH((HH => !HH))
+            pB((BB => !BB))
           },
-          children: BH("smpShop:createOrder")
+          children: OB("smpShop:createOrder")
         }),
-        above: YH && (0, XH.jsx)(eS, {
+        above: lB && (0, PB.jsx)(LQ, {
           mode: "order",
-          creator: tH,
-          catalogue: GH.catalogue,
-          names: GH.names,
-          searching: GH.loading,
+          creator: jB,
+          catalogue: zB.catalogue,
+          names: zB.names,
+          searching: zB.loading,
           prices: [],
-          onPickItem: GH.searchFor,
+          onPickItem: zB.searchFor,
           onClose: () => {
-            uH(!1)
+            pB(!1)
           }
         }),
         onBack: () => {
-          uH(!1)
+          pB(!1)
         },
-        summary: zH.length > 0 && BH(1 === zH.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: zH.length,
-          price: Fr(mS(zH, "max"))
+        summary: yB.length > 0 && OB(1 === yB.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: yB.length,
+          price: hD(dQ(yB, "max"))
         }),
-        list: GH.loading ? (0, XH.jsx)(ar, {}) : zH.length > 0 ? (0, XH.jsx)(vS.e, {
+        list: zB.loading ? (0, PB.jsx)(CD, {}) : yB.length > 0 ? (0, PB.jsx)(WQ.b, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: zS,
-          observerUpdateDeps: [zH.length],
-          children: zH.map((HH => (0, XH.jsx)(DS, {
-            entry: HH,
-            choice: QS(HH.item, QH[HH.key]),
-            onChoose: BH => {
-              WH({
-                ...QH,
-                [HH.key]: BH
+          rootMargin: yQ,
+          observerUpdateDeps: [yB.length],
+          children: yB.map((BB => (0, PB.jsx)(aQ, {
+            entry: BB,
+            choice: qQ(BB.item, qB[BB.key]),
+            onChoose: OB => {
+              ZB({
+                ...qB,
+                [BB.key]: OB
               })
             }
-          }, HH.key)))
-        }) : EH ? (0, XH.jsx)(Jr, {
-          entry: EH
-        }) : (0, XH.jsx)(ar, {
+          }, BB.key)))
+        }) : MB ? (0, PB.jsx)(vD, {
+          entry: MB
+        }) : (0, PB.jsx)(CD, {
           count: 3
         })
       })
     }
 
-    function ZS() {
-      var HH;
+    function TQ() {
+      var BB;
       const {
-        t: BH
-      } = (0, hH.B)(), LH = xS(), AH = hS(null === (HH = LH.shopInfo[LH.categoryKey]) || void 0 === HH ? void 0 : HH.items, "myOrder");
-      return 0 === AH.length ? (0, XH.jsx)("div", {
+        t: OB
+      } = (0, oB.H)(), GB = RQ(), YB = oQ(null === (BB = GB.shopInfo[GB.categoryKey]) || void 0 === BB ? void 0 : BB.items, "myOrder");
+      return 0 === YB.length ? (0, PB.jsx)("div", {
         className: "SmpScreen",
-        children: (0, XH.jsx)(sr, {
-          title: BH("smpShop:noOrders"),
-          children: BH("smpShop:noOrdersHint")
+        children: (0, PB.jsx)(HD, {
+          title: OB("smpShop:noOrders"),
+          children: OB("smpShop:noOrdersHint")
         })
-      }) : (0, XH.jsx)("div", {
+      }) : (0, PB.jsx)("div", {
         className: "SmpScreen",
-        children: (0, XH.jsx)("div", {
+        children: (0, PB.jsx)("div", {
           className: "SmpList",
-          children: AH.map((HH => {
+          children: YB.map((BB => {
             let {
-              key: AH,
-              item: rH,
-              meta: SH
-            } = HH;
-            const hH = LH.isPending(AH) || !1 === rH.canBuy;
-            return (0, XH.jsxs)("div", {
+              key: YB,
+              item: DB,
+              meta: QB
+            } = BB;
+            const oB = GB.isPending(YB) || !1 === DB.canBuy;
+            return (0, PB.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, XH.jsx)(Zr, {
-                item: SH.item,
-                amount: SH.collectable
-              }), (0, XH.jsxs)("div", {
+              children: [(0, PB.jsx)(TD, {
+                item: QB.item,
+                amount: QB.collectable
+              }), (0, PB.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, XH.jsx)("b", {
-                  children: (0, XH.jsx)(lr.b, {
-                    text: rH.customTitle
+                children: [(0, PB.jsx)("b", {
+                  children: (0, PB.jsx)(ID.b, {
+                    text: DB.customTitle
                   })
-                }), (0, XH.jsxs)("small", {
-                  children: [(0, XH.jsx)(dr, {
-                    amount: SH.pricePerItem
-                  }), " ", BH("smpShop:each"), SH.collectable > 0 && ` \xb7 ${BH("smpShop:readyCount",{count:SH.collectable})}`]
-                }), (0, XH.jsx)(FS, {
-                  done: SH.delivered,
-                  of: SH.wanted
+                }), (0, PB.jsxs)("small", {
+                  children: [(0, PB.jsx)(bD, {
+                    amount: QB.pricePerItem
+                  }), " ", OB("smpShop:each"), QB.collectable > 0 && ` \xb7 ${OB("smpShop:readyCount",{count:QB.collectable})}`]
+                }), (0, PB.jsx)(hQ, {
+                  done: QB.delivered,
+                  of: QB.wanted
                 })]
-              }), SH.collectable > 0 ? (0, XH.jsx)(CH.u, {
-                loading: hH,
+              }), QB.collectable > 0 ? (0, PB.jsx)(JB.q, {
+                loading: oB,
                 onClick: () => {
-                  LH.act(AH)
+                  GB.act(YB)
                 },
-                children: BH("smpShop:collectCount", {
-                  count: SH.collectable
+                children: OB("smpShop:collectCount", {
+                  count: QB.collectable
                 })
-              }) : (0, XH.jsx)(CH.O, {
-                loading: hH,
+              }) : (0, PB.jsx)(JB.Q, {
+                loading: oB,
                 onClick: () => {
-                  LH.act(AH)
+                  GB.act(YB)
                 },
-                children: BH("smpShop:cancel")
+                children: OB("smpShop:cancel")
               })]
-            }, AH)
+            }, YB)
           }))
         })
       })
     }
-    const dS = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      aS = {
+    const bQ = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      CQ = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4904,775 +4904,775 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function sS(HH, BH) {
-      let LH = !1;
-      const AH = {};
-      for (const rH in HH) BH(rH, HH[rH]) ? AH[rH] = HH[rH] : LH = !0;
-      return LH ? AH : HH
+    function HQ(BB, OB) {
+      let GB = !1;
+      const YB = {};
+      for (const DB in BB) OB(DB, BB[DB]) ? YB[DB] = BB[DB] : GB = !0;
+      return GB ? YB : BB
     }
 
-    function JS(HH) {
-      var BH, LH, rH, zH;
+    function vQ(BB) {
+      var OB, GB, DB, yB;
       const {
-        show: CH,
-        shopInfo: EH,
-        selectedCategoryKey: GH
-      } = HH, {
-        t: YH
-      } = (0, hH.B)(), uH = null !== GH && void 0 !== GH ? GH : "", QH = SS(EH, uH), WH = null === (BH = EH[uH]) || void 0 === BH ? void 0 : BH.items, MH = null !== QH, [xH, vH] = (0, AH.useState)({}), [PH, TH] = (0, AH.useState)([]), [UH, VH] = (0, AH.useState)(!1), [OH, bH] = (0, AH.useState)(null), [, kH] = (0, AH.useState)(0), mH = (0, AH.useRef)(0), oH = (0, AH.useRef)({}), IH = (0, AH.useRef)({
-        items: WH,
-        pending: xH,
-        shopInfo: EH,
-        active: MH,
-        canAfford: HH.canAfford,
-        buy: HH.buy
+        show: JB,
+        shopInfo: MB,
+        selectedCategoryKey: zB
+      } = BB, {
+        t: lB
+      } = (0, oB.H)(), pB = null !== zB && void 0 !== zB ? zB : "", qB = QQ(MB, pB), ZB = null === (OB = MB[pB]) || void 0 === OB ? void 0 : OB.items, NB = null !== qB, [RB, WB] = (0, YB.useState)({}), [AB, VB] = (0, YB.useState)([]), [SB, nB] = (0, YB.useState)(!1), [UB, fB] = (0, YB.useState)(null), [, kB] = (0, YB.useState)(0), dB = (0, YB.useRef)(0), KB = (0, YB.useRef)({}), uB = (0, YB.useRef)({
+        items: ZB,
+        pending: RB,
+        shopInfo: MB,
+        active: NB,
+        canAfford: BB.canAfford,
+        buy: BB.buy
       });
-      IH.current = {
-        items: WH,
-        pending: xH,
-        shopInfo: EH,
-        active: MH,
-        canAfford: HH.canAfford,
-        buy: HH.buy
+      uB.current = {
+        items: ZB,
+        pending: RB,
+        shopInfo: MB,
+        active: NB,
+        canAfford: BB.canAfford,
+        buy: BB.buy
       };
-      const fH = (0, AH.useCallback)((HH => {
-        mH.current++;
-        const BH = mH.current;
-        TH((LH => [{
-          id: BH,
-          text: HH
-        }, ...LH].slice(0, 8))), bH(BH)
+      const mB = (0, YB.useCallback)((BB => {
+        dB.current++;
+        const OB = dB.current;
+        VB((GB => [{
+          id: OB,
+          text: BB
+        }, ...GB].slice(0, 8))), fB(OB)
       }), []);
-      (0, AH.useEffect)((() => {
-        if (null === OH) return;
-        const HH = setTimeout((() => {
-          bH(null)
+      (0, YB.useEffect)((() => {
+        if (null === UB) return;
+        const BB = setTimeout((() => {
+          fB(null)
         }), 3e3);
         return () => {
-          clearTimeout(HH)
+          clearTimeout(BB)
         }
-      }), [OH]), (0, AH.useEffect)((() => {
-        const BH = HH.message;
-        if (!BH) return;
+      }), [UB]), (0, YB.useEffect)((() => {
+        const OB = BB.message;
+        if (!OB) return;
         const {
-          shopInfo: LH,
-          active: AH,
-          items: rH
-        } = IH.current, SH = null !== BH.categoryKey ? null !== SS(LH, BH.categoryKey) : AH;
-        (SH || AH) && fH(BH.text), SH && vH((HH => sS(HH, (HH => {
-          var BH, LH;
-          return !dS.has(null === rH || void 0 === rH || null === (BH = rH[HH]) || void 0 === BH || null === (LH = BH.smp) || void 0 === LH ? void 0 : LH.kind)
+          shopInfo: GB,
+          active: YB,
+          items: DB
+        } = uB.current, QB = null !== OB.categoryKey ? null !== QQ(GB, OB.categoryKey) : YB;
+        (QB || YB) && mB(OB.text), QB && WB((BB => HQ(BB, (BB => {
+          var OB, GB;
+          return !bQ.has(null === DB || void 0 === DB || null === (OB = DB[BB]) || void 0 === OB || null === (GB = OB.smp) || void 0 === GB ? void 0 : GB.kind)
         }))))
-      }), [HH.message, fH]), (0, AH.useEffect)((() => {
-        vH((HH => sS(HH, ((HH, BH) => WS(null === WH || void 0 === WH ? void 0 : WH[HH]) === BH.snapshot))))
-      }), [EH, WH]);
-      const lH = Object.keys(xH).length > 0;
-      (0, AH.useEffect)((() => {
-        if (!lH) return;
-        const HH = setInterval((() => {
-          kH((HH => HH + 1));
-          const HH = Date.now(),
+      }), [BB.message, mB]), (0, YB.useEffect)((() => {
+        WB((BB => HQ(BB, ((BB, OB) => ZQ(null === ZB || void 0 === ZB ? void 0 : ZB[BB]) === OB.snapshot))))
+      }), [MB, ZB]);
+      const IB = Object.keys(RB).length > 0;
+      (0, YB.useEffect)((() => {
+        if (!IB) return;
+        const BB = setInterval((() => {
+          kB((BB => BB + 1));
+          const BB = Date.now(),
             {
-              pending: BH,
-              items: LH
-            } = IH.current,
-            AH = Object.keys(BH).filter((LH => HH - BH[LH].at >= 12e3));
-          if (0 === AH.length) return;
-          const rH = AH.some((HH => {
-            var AH, rH;
-            return "search" !== (null === LH || void 0 === LH || null === (AH = LH[HH]) || void 0 === AH || null === (rH = AH.smp) || void 0 === rH ? void 0 : rH.kind) || BH[HH].resend
+              pending: OB,
+              items: GB
+            } = uB.current,
+            YB = Object.keys(OB).filter((GB => BB - OB[GB].at >= 12e3));
+          if (0 === YB.length) return;
+          const DB = YB.some((BB => {
+            var YB, DB;
+            return "search" !== (null === GB || void 0 === GB || null === (YB = GB[BB]) || void 0 === YB || null === (DB = YB.smp) || void 0 === DB ? void 0 : DB.kind) || OB[BB].resend
           }));
-          for (const SH of AH) oH.current[SH] = HH;
-          vH((HH => sS(HH, (HH => !AH.includes(HH))))), rH && fH(YH("smpShop:noAnswer"))
+          for (const QB of YB) KB.current[QB] = BB;
+          WB((BB => HQ(BB, (BB => !YB.includes(BB))))), DB && mB(lB("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(HH)
+          clearInterval(BB)
         }
-      }), [lH]), (0, AH.useEffect)((() => {
-        vH({})
-      }), [uH]), (0, AH.useEffect)((() => {
-        CH || VH(!1)
-      }), [CH]);
-      const KH = (0, AH.useCallback)((function(HH, BH) {
-          let LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [IB]), (0, YB.useEffect)((() => {
+        WB({})
+      }), [pB]), (0, YB.useEffect)((() => {
+        JB || nB(!1)
+      }), [JB]);
+      const FB = (0, YB.useCallback)((function(BB, OB) {
+          let GB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: AH,
-            pending: rH,
-            canAfford: SH,
-            buy: hH
-          } = IH.current, tH = null === AH || void 0 === AH ? void 0 : AH[HH];
-          if (!tH || HH in rH || !1 === tH.canBuy) return !1;
-          if (!SH(tH, (0, mr.c)(tH, BH))) return !1;
-          hH(HH, tH, BH);
-          const zH = {
-            snapshot: WS(tH),
+            items: YB,
+            pending: DB,
+            canAfford: QB,
+            buy: oB
+          } = uB.current, jB = null === YB || void 0 === YB ? void 0 : YB[BB];
+          if (!jB || BB in DB || !1 === jB.canBuy) return !1;
+          if (!QB(jB, (0, dD.b)(jB, OB))) return !1;
+          oB(BB, jB, OB);
+          const yB = {
+            snapshot: ZQ(jB),
             at: Date.now(),
-            resend: LH
+            resend: GB
           };
-          return IH.current.pending = {
-            ...IH.current.pending,
-            [HH]: zH
-          }, vH((BH => ({
-            ...BH,
-            [HH]: zH
+          return uB.current.pending = {
+            ...uB.current.pending,
+            [BB]: yB
+          }, WB((OB => ({
+            ...OB,
+            [BB]: yB
           }))), !0
         }), []),
-        cH = (0, AH.useMemo)((() => ({
-          shopInfo: EH,
-          categoryKey: uH,
-          canAfford: HH.canAfford,
-          isPending: HH => HH in xH,
-          gaveUpAt: HH => {
-            var BH;
-            return null !== (BH = oH.current[HH]) && void 0 !== BH ? BH : 0
+        iB = (0, YB.useMemo)((() => ({
+          shopInfo: MB,
+          categoryKey: pB,
+          canAfford: BB.canAfford,
+          isPending: BB => BB in RB,
+          gaveUpAt: BB => {
+            var OB;
+            return null !== (OB = KB.current[BB]) && void 0 !== OB ? OB : 0
           },
-          act: KH,
-          notify: fH
-        })), [EH, uH, HH.canAfford, xH, KH, fH]),
-        eH = Math.min(...Object.values(xH).map((HH => HH.at))),
-        qH = lH && Date.now() - eH > 1500,
-        gH = PH.length > 1,
-        NH = null !== (LH = null === (rH = EH[uH]) || void 0 === rH ? void 0 : rH.customTitle) && void 0 !== LH ? LH : uH,
-        RH = null === (zH = EH[uH]) || void 0 === zH ? void 0 : zH.description;
-      let jH = null;
-      return "market" === QH ? jH = (0, XH.jsx)(qS, {}) : "sell" === QH ? jH = (0, XH.jsx)(RS, {}) : "collect" === QH ? jH = (0, XH.jsx)(nS, {}) : "orders" === QH ? jH = (0, XH.jsx)(wS, {}) : "myOrders" === QH && (jH = (0, XH.jsx)(ZS, {})), (0, XH.jsx)(MS.Provider, {
-        value: cH,
-        children: (0, XH.jsx)("div", {
+          act: FB,
+          notify: mB
+        })), [MB, pB, BB.canAfford, RB, FB, mB]),
+        LB = Math.min(...Object.values(RB).map((BB => BB.at))),
+        gB = IB && Date.now() - LB > 1500,
+        rB = AB.length > 1,
+        XB = null !== (GB = null === (DB = MB[pB]) || void 0 === DB ? void 0 : DB.customTitle) && void 0 !== GB ? GB : pB,
+        wB = null === (yB = MB[pB]) || void 0 === yB ? void 0 : yB.description;
+      let EB = null;
+      return "market" === qB ? EB = (0, PB.jsx)(gQ, {}) : "sell" === qB ? EB = (0, PB.jsx)(wQ, {}) : "collect" === qB ? EB = (0, PB.jsx)(cQ, {}) : "orders" === qB ? EB = (0, PB.jsx)(eQ, {}) : "myOrders" === qB && (EB = (0, PB.jsx)(TQ, {})), (0, PB.jsx)(NQ.Provider, {
+        value: iB,
+        children: (0, PB.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !MH,
-          children: (0, XH.jsxs)("div", {
+          hidden: !NB,
+          children: (0, PB.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, XH.jsx)("header", {
+            children: [(0, PB.jsx)("header", {
               className: "SmpHeader",
-              children: (0, XH.jsxs)("div", {
+              children: (0, PB.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, XH.jsxs)("h2", {
-                  children: [QH && (0, XH.jsx)(tH.c, {
-                    name: aS[QH]
-                  }), YH(NH)]
-                }), RH && (0, XH.jsx)("p", {
-                  children: (0, XH.jsx)(lr.b, {
-                    text: RH
+                children: [(0, PB.jsxs)("h2", {
+                  children: [qB && (0, PB.jsx)(jB.b, {
+                    name: CQ[qB]
+                  }), lB(XB)]
+                }), wB && (0, PB.jsx)("p", {
+                  children: (0, PB.jsx)(ID.b, {
+                    text: wB
                   })
                 })]
               })
-            }), (0, XH.jsx)("main", {
+            }), (0, PB.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: CH && jH
-            }), (0, XH.jsxs)("button", {
+              children: JB && EB
+            }), (0, PB.jsxs)("button", {
               type: "button",
-              className: SH()("SmpStatus", {
-                SmpStatusWaiting: lH,
-                SmpStatusFresh: !lH && null !== OH,
-                SmpStatusHasHistory: gH
+              className: QB()("SmpStatus", {
+                SmpStatusWaiting: IB,
+                SmpStatusFresh: !IB && null !== UB,
+                SmpStatusHasHistory: rB
               }),
               "aria-live": "polite",
-              "aria-expanded": gH ? UH : void 0,
+              "aria-expanded": rB ? SB : void 0,
               onClick: () => {
-                gH && VH((HH => !HH))
+                rB && nB((BB => !BB))
               },
-              children: [lH ? (0, XH.jsxs)("span", {
+              children: [IB ? (0, PB.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, XH.jsx)(pr, {}), YH(qH ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : PH[0] ? (0, XH.jsx)("span", {
+                children: [(0, PB.jsx)(xD, {}), lB(gB ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : AB[0] ? (0, PB.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, XH.jsx)(lr.b, {
-                  text: PH[0].text
+                children: (0, PB.jsx)(ID.b, {
+                  text: AB[0].text
                 })
-              }, PH[0].id) : (0, XH.jsx)("span", {
+              }, AB[0].id) : (0, PB.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: YH("smpShop:ready")
-              }), gH && (0, XH.jsx)("small", {
-                children: YH("smpShop:recentMessages", {
-                  count: PH.length
+                children: lB("smpShop:ready")
+              }), rB && (0, PB.jsx)("small", {
+                children: lB("smpShop:recentMessages", {
+                  count: AB.length
                 })
               })]
-            }), UH && gH && (0, XH.jsx)("div", {
+            }), SB && rB && (0, PB.jsx)("div", {
               className: "SmpStatusHistory",
-              children: PH.map((HH => (0, XH.jsx)("div", {
-                children: (0, XH.jsx)(lr.b, {
-                  text: HH.text
+              children: AB.map((BB => (0, PB.jsx)("div", {
+                children: (0, PB.jsx)(ID.b, {
+                  text: BB.text
                 })
-              }, HH.id)))
+              }, BB.id)))
             })]
           })
         })
       })
     }
-    class iS {
-      constructor(HH) {
-        this.info = HH
+    class sQ {
+      constructor(BB) {
+        this.info = BB
       }
-      static fromShopInfo(HH) {
-        const BH = {};
-        for (const LH in HH) {
-          const AH = !0 === HH[LH].redDot && !0 !== HH[LH].forceRemoveRedDot;
-          BH[LH] = {
-            redDot: AH,
+      static fromShopInfo(BB) {
+        const OB = {};
+        for (const GB in BB) {
+          const YB = !0 === BB[GB].redDot && !0 !== BB[GB].forceRemoveRedDot;
+          OB[GB] = {
+            redDot: YB,
             items: {}
           };
-          for (const rH in HH[LH].items) {
-            const AH = HH[LH].items[rH],
-              SH = !0 === AH.redDot && !0 !== AH.forceRemoveRedDot;
-            BH[LH].items[rH] = {
-              redDot: SH
+          for (const DB in BB[GB].items) {
+            const YB = BB[GB].items[DB],
+              QB = !0 === YB.redDot && !0 !== YB.forceRemoveRedDot;
+            OB[GB].items[DB] = {
+              redDot: QB
             }
           }
         }
-        return new iS(BH)
+        return new sQ(OB)
       }
       anyCategoryHasRedDots() {
-        for (const HH in this.info)
-          if (this.categoryHasRedDot(HH)) return !0;
+        for (const BB in this.info)
+          if (this.categoryHasRedDot(BB)) return !0;
         return !1
       }
-      doesCategoryExist(HH) {
-        return !(0, lL.M)(this.info[HH])
+      doesCategoryExist(BB) {
+        return !(0, IG.Q)(this.info[BB])
       }
-      categoryHasRedDot(HH) {
-        return !0 === this.info[HH].redDot
+      categoryHasRedDot(BB) {
+        return !0 === this.info[BB].redDot
       }
-      updateCategoryRedDot(HH, BH) {
-        this.info[HH].redDot = BH
+      updateCategoryRedDot(BB, OB) {
+        this.info[BB].redDot = OB
       }
-      doesItemExist(HH, BH) {
-        return this.doesCategoryExist(HH) && !(0, lL.M)(this.info[HH].items[BH])
+      doesItemExist(BB, OB) {
+        return this.doesCategoryExist(BB) && !(0, IG.Q)(this.info[BB].items[OB])
       }
-      itemHasRedDot(HH, BH) {
-        return !0 === this.info[HH].items[BH].redDot
+      itemHasRedDot(BB, OB) {
+        return !0 === this.info[BB].items[OB].redDot
       }
-      updateItemRedDot(HH, BH, LH) {
-        this.info[HH].items[BH].redDot = LH
+      updateItemRedDot(BB, OB, GB) {
+        this.info[BB].items[OB].redDot = GB
       }
       shallowCopy() {
-        return new iS(this.info)
+        return new sQ(this.info)
       }
     }
 
-    function pS(HH, BH) {
-      return `${HH}\x1f${BH}`
+    function xQ(BB, OB) {
+      return `${BB}\x1f${OB}`
     }
 
-    function yS(HH, BH) {
-      return !(0, lL.M)(BH) && !(0, lL.M)(HH) && BH in HH
+    function tQ(BB, OB) {
+      return !(0, IG.Q)(OB) && !(0, IG.Q)(BB) && OB in BB
     }
-    const Hh = (0, AH.memo)((function(HH) {
-      var BH, LH;
+    const Bo = (0, YB.memo)((function(BB) {
+      var OB, GB;
       let {
-        show: rH
-      } = HH;
-      const hH = (0, yB.c)("players", hh),
-        tH = (0, yB.c)("players", th),
-        EH = (0, Nr.e)(),
-        [YH, uH] = (0, AH.useState)({
+        show: DB
+      } = BB;
+      const oB = (0, tO.f)("players", oo),
+        jB = (0, tO.f)("players", jo),
+        MB = (0, XD.b)(),
+        [lB, pB] = (0, YB.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: iS.fromShopInfo({}),
+          redDotInfo: sQ.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        WH = (0, AH.useRef)(""),
-        MH = (0, AH.useRef)(null),
-        vH = (0, AH.useRef)(null),
-        PH = (0, AH.useRef)(0),
-        TH = (0, AH.useRef)(void 0),
-        UH = (0, AH.useRef)(null),
-        VH = (0, AH.useRef)(YH),
-        bH = YH.redDotInfo.anyCategoryHasRedDots(),
-        [kH, oH] = (0, AH.useState)(null),
-        IH = (0, AH.useRef)(!1);
-      let fH = !1,
-        lH = 0,
-        KH = 0;
-      if (YH.currencyAmounts) {
-        for (const HH in YH.currencyAmounts) {
-          var cH;
-          const BH = YH.currencyAmounts[HH];
-          BH.hidden || (lH++, (null === (cH = BH.subtext) || void 0 === cH ? void 0 : cH.length) > 0 && KH++)
+        ZB = (0, YB.useRef)(""),
+        NB = (0, YB.useRef)(null),
+        WB = (0, YB.useRef)(null),
+        AB = (0, YB.useRef)(0),
+        VB = (0, YB.useRef)(void 0),
+        SB = (0, YB.useRef)(null),
+        nB = (0, YB.useRef)(lB),
+        fB = lB.redDotInfo.anyCategoryHasRedDots(),
+        [kB, KB] = (0, YB.useState)(null),
+        uB = (0, YB.useRef)(!1);
+      let mB = !1,
+        IB = 0,
+        FB = 0;
+      if (lB.currencyAmounts) {
+        for (const BB in lB.currencyAmounts) {
+          var iB;
+          const OB = lB.currencyAmounts[BB];
+          OB.hidden || (IB++, (null === (iB = OB.subtext) || void 0 === iB ? void 0 : iB.length) > 0 && FB++)
         }
-        fH = lH + KH > 4
-      }(0, AH.useEffect)((() => {
-        KL.k.AX("showShopIconRedDot", bH, !0)
-      }), [bH]), (0, AH.useEffect)((() => {
-        xH.gameBridge.send("setShopOpen", rH), rH || (clearTimeout(TH.current), uH((HH => HH.awaitingPurchase ? {
-          ...HH,
+        mB = IB + FB > 4
+      }(0, YB.useEffect)((() => {
+        FG.o.tM("showShopIconRedDot", fB, !0)
+      }), [fB]), (0, YB.useEffect)((() => {
+        RB.gameBridge.send("setShopOpen", DB), DB || (clearTimeout(VB.current), pB((BB => BB.awaitingPurchase ? {
+          ...BB,
           awaitingPurchase: !1
-        } : HH)))
-      }), [rH]), (0, AH.useEffect)((() => () => {
-        xH.gameBridge.send("setShopOpen", !1), clearTimeout(TH.current)
-      }), []), (0, AH.useEffect)((() => {
-        VH.current = YH
-      }), [YH]), (0, AH.useEffect)((() => {
-        if (null === kH) return;
-        return (0, qr.e)("pointerdown", (HH => {
-          const BH = HH.target;
-          null !== BH && void 0 !== BH && BH.closest(".ShopItem") || oH(null)
+        } : BB)))
+      }), [DB]), (0, YB.useEffect)((() => () => {
+        RB.gameBridge.send("setShopOpen", !1), clearTimeout(VB.current)
+      }), []), (0, YB.useEffect)((() => {
+        nB.current = lB
+      }), [lB]), (0, YB.useEffect)((() => {
+        if (null === kB) return;
+        return (0, gD.c)("pointerdown", (BB => {
+          const OB = BB.target;
+          null !== OB && void 0 !== OB && OB.closest(".ShopItem") || KB(null)
         }))
-      }), [kH]);
-      const eH = HH => {
-          uH((BH => ({
-            ...BH,
-            ...HH
+      }), [kB]);
+      const LB = BB => {
+          pB((OB => ({
+            ...OB,
+            ...BB
           })))
         },
-        qH = HH => {
-          var BH;
-          clearTimeout(null === (BH = YH.onBoughtInfo) || void 0 === BH ? void 0 : BH.timeout);
-          const LH = setTimeout((() => {
-            eH({
+        gB = BB => {
+          var OB;
+          clearTimeout(null === (OB = lB.onBoughtInfo) || void 0 === OB ? void 0 : OB.timeout);
+          const GB = setTimeout((() => {
+            LB({
               onBoughtInfo: null
             })
           }), 3e3);
-          WH.current = HH, eH({
+          ZB.current = BB, LB({
             onBoughtInfo: {
-              text: HH,
-              timeout: LH,
-              categoryKey: MH.current
+              text: BB,
+              timeout: GB,
+              categoryKey: NB.current
             }
           })
         },
-        NH = HH => {
+        XB = BB => {
           const {
-            shopInfo: BH,
-            userInputsPerItem: LH,
-            redDotInfo: AH,
-            autoSelectCategory: SH
-          } = function(HH, BH, LH, AH, rH, SH) {
-            if ((0, lL.M)(HH) || 0 === Object.keys(HH).length) return {
+            shopInfo: OB,
+            userInputsPerItem: GB,
+            redDotInfo: YB,
+            autoSelectCategory: QB
+          } = function(BB, OB, GB, YB, DB, QB) {
+            if ((0, IG.Q)(BB) || 0 === Object.keys(BB).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: iS.fromShopInfo({}),
+              redDotInfo: sQ.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const hH = mH.siteUsedData[mH.siteUsed].adConfig.showRewardedAds,
-              tH = {};
-            let zH = null;
-            for (const WH in HH) {
-              const BH = HH[WH],
-                LH = {};
-              let AH = !1;
-              for (const HH in BH.items) {
-                const rH = BH.items[HH];
-                (0, mr.i)(rH, hH) && (LH[HH] = rH, AH = !0)
+            const oB = dB.siteUsedData[dB.siteUsed].adConfig.showRewardedAds,
+              jB = {};
+            let yB = null;
+            for (const ZB in BB) {
+              const OB = BB[ZB],
+                GB = {};
+              let YB = !1;
+              for (const BB in OB.items) {
+                const DB = OB.items[BB];
+                (0, dD.h)(DB, oB) && (GB[BB] = DB, YB = !0)
               }
-              AH && (tH[WH] = {
-                ...BH,
-                items: LH
-              }, !0 === BH.autoSelectCategory && (zH = WH))
+              YB && (jB[ZB] = {
+                ...OB,
+                items: GB
+              }, !0 === OB.autoSelectCategory && (yB = ZB))
             }
-            const CH = {},
-              EH = (HH, BH, AH, hH) => {
-                var tH, zH;
-                const EH = pS(HH, BH),
-                  XH = null !== (tH = LH[EH]) && void 0 !== tH ? tH : LH[BH];
-                if (null !== (zH = hH.userInput) && void 0 !== zH && zH.type) switch (hH.userInput.type) {
+            const JB = {},
+              MB = (BB, OB, YB, oB) => {
+                var jB, yB;
+                const MB = xQ(BB, OB),
+                  PB = null !== (jB = GB[MB]) && void 0 !== jB ? jB : GB[OB];
+                if (null !== (yB = oB.userInput) && void 0 !== yB && yB.type) switch (oB.userInput.type) {
                   case "dropdown": {
-                    var GH;
-                    const HH = !XH || !hH.userInput.dropdownOptions.some((HH => (0, mr.f)(HH) === XH)),
-                      BH = hH.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === AH || void 0 === AH || null === (GH = AH.userInput) || void 0 === GH ? void 0 : GH.type) || JSON.stringify(AH.userInput.dropdownOptions) !== JSON.stringify(hH.userInput.dropdownOptions)),
-                      LH = hH.userInput,
-                      rH = !(0, lL.M)(LH.initialValue) && LH.dropdownOptions.some((HH => (0, mr.f)(HH) === LH.initialValue));
-                    var YH;
-                    return void(HH || BH ? rH ? CH[EH] = null !== (YH = hH.userInput.initialValue) && void 0 !== YH ? YH : null : hH.userInput.dropdownOptions.length > 0 ? CH[EH] = (0, mr.f)(hH.userInput.dropdownOptions[0]) : CH[EH] = null : CH[EH] = XH)
+                    var zB;
+                    const BB = !PB || !oB.userInput.dropdownOptions.some((BB => (0, dD.f)(BB) === PB)),
+                      OB = oB.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === YB || void 0 === YB || null === (zB = YB.userInput) || void 0 === zB ? void 0 : zB.type) || JSON.stringify(YB.userInput.dropdownOptions) !== JSON.stringify(oB.userInput.dropdownOptions)),
+                      GB = oB.userInput,
+                      DB = !(0, IG.Q)(GB.initialValue) && GB.dropdownOptions.some((BB => (0, dD.f)(BB) === GB.initialValue));
+                    var lB;
+                    return void(BB || OB ? DB ? JB[MB] = null !== (lB = oB.userInput.initialValue) && void 0 !== lB ? lB : null : oB.userInput.dropdownOptions.length > 0 ? JB[MB] = (0, dD.f)(oB.userInput.dropdownOptions[0]) : JB[MB] = null : JB[MB] = PB)
                   }
                   case "text":
                   case "number":
-                    var uH, QH, WH;
-                    return void((null === AH || void 0 === AH ? void 0 : AH.userInput) !== hH.userInput ? CH[EH] = null !== (uH = null !== (QH = hH.userInput.initialValue) && void 0 !== QH ? QH : XH) && void 0 !== uH ? uH : "" : CH[EH] = null !== (WH = null !== XH && void 0 !== XH ? XH : hH.userInput.initialValue) && void 0 !== WH ? WH : "");
+                    var pB, qB, ZB;
+                    return void((null === YB || void 0 === YB ? void 0 : YB.userInput) !== oB.userInput ? JB[MB] = null !== (pB = null !== (qB = oB.userInput.initialValue) && void 0 !== qB ? qB : PB) && void 0 !== pB ? pB : "" : JB[MB] = null !== (ZB = null !== PB && void 0 !== PB ? PB : oB.userInput.initialValue) && void 0 !== ZB ? ZB : "");
                   case "color":
-                    var MH, xH, vH;
-                    return void((null === AH || void 0 === AH ? void 0 : AH.userInput) !== hH.userInput ? CH[EH] = null !== (MH = null !== (xH = hH.userInput.initialValue) && void 0 !== xH ? xH : XH) && void 0 !== MH ? MH : "#000000" : CH[EH] = null !== (vH = null !== XH && void 0 !== XH ? XH : hH.userInput.initialValue) && void 0 !== vH ? vH : "#000000");
+                    var NB, RB, WB;
+                    return void((null === YB || void 0 === YB ? void 0 : YB.userInput) !== oB.userInput ? JB[MB] = null !== (NB = null !== (RB = oB.userInput.initialValue) && void 0 !== RB ? RB : PB) && void 0 !== NB ? NB : "#000000" : JB[MB] = null !== (WB = null !== PB && void 0 !== PB ? PB : oB.userInput.initialValue) && void 0 !== WB ? WB : "#000000");
                   case "player": {
-                    const HH = (0, mr.g)(rH, SH, hH.userInput);
-                    return void(XH && HH.includes(XH) ? CH[EH] = XH : CH[EH] = HH.length > 0 ? HH[0] : null)
+                    const BB = (0, dD.g)(DB, QB, oB.userInput);
+                    return void(PB && BB.includes(PB) ? JB[MB] = PB : JB[MB] = BB.length > 0 ? BB[0] : null)
                   }
                 }
               };
-            for (const WH in tH)
-              for (const HH in tH[WH].items) {
-                var XH;
-                const LH = tH[WH].items[HH];
-                EH(WH, HH, null === (XH = BH[WH]) || void 0 === XH ? void 0 : XH.items[HH], LH)
+            for (const ZB in jB)
+              for (const BB in jB[ZB].items) {
+                var PB;
+                const GB = jB[ZB].items[BB];
+                MB(ZB, BB, null === (PB = OB[ZB]) || void 0 === PB ? void 0 : PB.items[BB], GB)
               }
-            const GH = iS.fromShopInfo(tH);
-            for (const WH in tH) {
-              var YH;
-              if (AH.doesCategoryExist(WH)) {
-                (null === (YH = BH[WH]) || void 0 === YH ? void 0 : YH.redDot) === tH[WH].redDot && GH.updateCategoryRedDot(WH, AH.categoryHasRedDot(WH));
-                for (const HH in tH[WH].items) {
-                  var uH, QH;
-                  AH.doesItemExist(WH, HH) && (null === (uH = BH[WH]) || void 0 === uH || null === (QH = uH.items[HH]) || void 0 === QH ? void 0 : QH.redDot) === tH[WH].items[HH].redDot && GH.updateItemRedDot(WH, HH, AH.itemHasRedDot(WH, HH))
+            const zB = sQ.fromShopInfo(jB);
+            for (const ZB in jB) {
+              var lB;
+              if (YB.doesCategoryExist(ZB)) {
+                (null === (lB = OB[ZB]) || void 0 === lB ? void 0 : lB.redDot) === jB[ZB].redDot && zB.updateCategoryRedDot(ZB, YB.categoryHasRedDot(ZB));
+                for (const BB in jB[ZB].items) {
+                  var pB, qB;
+                  YB.doesItemExist(ZB, BB) && (null === (pB = OB[ZB]) || void 0 === pB || null === (qB = pB.items[BB]) || void 0 === qB ? void 0 : qB.redDot) === jB[ZB].items[BB].redDot && zB.updateItemRedDot(ZB, BB, YB.itemHasRedDot(ZB, BB))
                 }
               }
             }
             return {
-              shopInfo: tH,
-              userInputsPerItem: CH,
-              redDotInfo: GH,
-              autoSelectCategory: zH
+              shopInfo: jB,
+              userInputsPerItem: JB,
+              redDotInfo: zB,
+              autoSelectCategory: yB
             }
-          }(HH, YH.shopInfo, YH.userInputsPerItem, YH.redDotInfo, hH, tH), zH = {
-            shopInfo: BH,
-            userInputsPerItem: LH,
-            redDotInfo: AH
+          }(BB, lB.shopInfo, lB.userInputsPerItem, lB.redDotInfo, oB, jB), yB = {
+            shopInfo: OB,
+            userInputsPerItem: GB,
+            redDotInfo: YB
           };
-          if (null === SH || rH)
-            if (BH[YH.selectedCategoryKey]) zH.selectedCategoryKey = YH.selectedCategoryKey;
+          if (null === QB || DB)
+            if (OB[lB.selectedCategoryKey]) yB.selectedCategoryKey = lB.selectedCategoryKey;
             else {
-              const HH = jr(BH);
-              zH.selectedCategoryKey = HH.length > 0 ? HH[0] : null
+              const BB = ED(OB);
+              yB.selectedCategoryKey = BB.length > 0 ? BB[0] : null
             }
-          else zH.selectedCategoryKey = SH;
-          return 0 === Object.keys(BH).length && rH && OH.c.set({
+          else yB.selectedCategoryKey = QB;
+          return 0 === Object.keys(OB).length && DB && UB.c.set({
             openEverythingMenuName: null
-          }), zH
+          }), yB
         },
-        RH = (HH, BH, LH) => {
-          const AH = YH.selectedCategoryKey,
-            rH = pS(AH, HH),
-            SH = null !== LH && void 0 !== LH ? LH : YH.userInputsPerItem[rH],
-            hH = {
-              categoryKey: AH,
-              itemKey: HH,
-              userInput: SH
+        wB = (BB, OB, GB) => {
+          const YB = lB.selectedCategoryKey,
+            DB = xQ(YB, BB),
+            QB = null !== GB && void 0 !== GB ? GB : lB.userInputsPerItem[DB],
+            oB = {
+              categoryKey: YB,
+              itemKey: BB,
+              userInput: QB
             };
-          if (MH.current = AH, BH.isRewardedAd) {
-            if (Date.now() - PH.current < 5e3) return;
-            (0, IB.$)((() => {
-              var LH, AH, SH;
+          if (NB.current = YB, OB.isRewardedAd) {
+            if (Date.now() - AB.current < 5e3) return;
+            (0, uO.V)((() => {
+              var GB, YB, QB;
               console.log("bought rewarded ad");
-              const tH = hH.categoryKey ? null === (LH = VH.current.shopInfo[hH.categoryKey]) || void 0 === LH ? void 0 : LH.items[HH] : null;
-              if (!tH || !tH.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (AH = BH.userInput) || void 0 === AH ? void 0 : AH.type) === (null === tH || void 0 === tH || null === (SH = tH.userInput) || void 0 === SH ? void 0 : SH.type) ? (hH.userInput = VH.current.userInputsPerItem[rH], xH.gameBridge.send("buyShopItem", hH), BH.onBoughtMessage && qH(BH.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), PH.current = Date.now()
+              const jB = oB.categoryKey ? null === (GB = nB.current.shopInfo[oB.categoryKey]) || void 0 === GB ? void 0 : GB.items[BB] : null;
+              if (!jB || !jB.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (YB = OB.userInput) || void 0 === YB ? void 0 : YB.type) === (null === jB || void 0 === jB || null === (QB = jB.userInput) || void 0 === QB ? void 0 : QB.type) ? (oB.userInput = nB.current.userInputsPerItem[DB], RB.gameBridge.send("buyShopItem", oB), OB.onBoughtMessage && gB(OB.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), AB.current = Date.now()
           } else {
-            xH.gameBridge.send("buyShopItem", hH), eH({
+            RB.gameBridge.send("buyShopItem", oB), LB({
               awaitingPurchase: !0
-            }), clearTimeout(TH.current), TH.current = setTimeout((() => {
-              UH.current = null, eH({
+            }), clearTimeout(VB.current), VB.current = setTimeout((() => {
+              SB.current = null, LB({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const HH = (0, mr.c)(BH, SH);
-            if (UH.current = null, !isNaN(HH) && yS(YH.currencyAmounts, BH.currency)) {
-              0 !== HH && (UH.current = {
-                currency: BH.currency,
-                amountBefore: YH.currencyAmounts[BH.currency].amount
+            const BB = (0, dD.b)(OB, QB);
+            if (SB.current = null, !isNaN(BB) && tQ(lB.currencyAmounts, OB.currency)) {
+              0 !== BB && (SB.current = {
+                currency: OB.currency,
+                amountBefore: lB.currencyAmounts[OB.currency].amount
               });
-              const LH = {
-                ...YH.currencyAmounts
+              const GB = {
+                ...lB.currencyAmounts
               };
-              LH[BH.currency].amount -= HH, eH({
-                currencyAmounts: LH
+              GB[OB.currency].amount -= BB, LB({
+                currencyAmounts: GB
               })
             }
-            BH.onBoughtMessage && qH(BH.onBoughtMessage)
+            OB.onBoughtMessage && gB(OB.onBoughtMessage)
           }
         },
-        jH = (HH, BH) => {
-          if (null === BH || !HH.shopInfo[BH]) return HH;
-          let LH = HH.redDotInfo;
-          return LH.categoryHasRedDot(BH) && (LH.updateCategoryRedDot(BH, !1), LH = LH.shallowCopy()), {
-            ...HH,
-            selectedCategoryKey: BH,
-            redDotInfo: LH
+        EB = (BB, OB) => {
+          if (null === OB || !BB.shopInfo[OB]) return BB;
+          let GB = BB.redDotInfo;
+          return GB.categoryHasRedDot(OB) && (GB.updateCategoryRedDot(OB, !1), GB = GB.shallowCopy()), {
+            ...BB,
+            selectedCategoryKey: OB,
+            redDotInfo: GB
           }
         },
-        nH = HH => {
-          uH((BH => jH(BH, HH)))
+        cB = BB => {
+          pB((OB => EB(OB, BB)))
         };
-      (0, tL.d)(gr.n, (() => {
-        uH((HH => {
-          const BH = (0, gr.p)(jr(HH.shopInfo), HH.selectedCategoryKey, (BH => (0, gr.l)(HH.shopInfo[BH].items)));
-          return BH === HH.selectedCategoryKey ? HH : jH(HH, BH)
+      (0, jG.f)(rD.k, (() => {
+        pB((BB => {
+          const OB = (0, rD.o)(ED(BB.shopInfo), BB.selectedCategoryKey, (OB => (0, rD.j)(BB.shopInfo[OB].items)));
+          return OB === BB.selectedCategoryKey ? BB : EB(BB, OB)
         }))
-      })), (0, tL.d)("showShopFromServer", (HH => {
+      })), (0, jG.f)("showShopFromServer", (BB => {
         let {
-          toggle: BH,
-          qS: LH
-        } = HH;
-        LH && nH(LH), 0 === Object.keys(YH.shopInfo).length || BH && rH ? OH.c.set({
+          toggle: OB,
+          kO: GB
+        } = BB;
+        GB && cB(GB), 0 === Object.keys(lB.shopInfo).length || OB && DB ? UB.c.set({
           openEverythingMenuName: null
-        }) : OH.c.set({
-          openEverythingMenuName: fB.o.SHOP
+        }) : UB.c.set({
+          openEverythingMenuName: mO.p.SHOP
         })
-      })), (0, tL.d)("closeShopOnDamaged", (() => {
-        rH && OH.c.set({
+      })), (0, jG.f)("closeShopOnDamaged", (() => {
+        DB && UB.c.set({
           openEverythingMenuName: null
         })
-      })), (0, tL.d)("overShopInfo", (HH => {
-        qH(HH)
-      })), (0, QH.f)("currencyAmounts", (HH => {
-        var BH;
-        const LH = UH.current;
-        LH && (null === HH || void 0 === HH || null === (BH = HH[LH.currency]) || void 0 === BH ? void 0 : BH.amount) === LH.amountBefore ? eH({
-          currencyAmounts: HH
-        }) : (UH.current = null, eH({
-          currencyAmounts: HH,
+      })), (0, jG.f)("overShopInfo", (BB => {
+        gB(BB)
+      })), (0, qB.f)("currencyAmounts", (BB => {
+        var OB;
+        const GB = SB.current;
+        GB && (null === BB || void 0 === BB || null === (OB = BB[GB.currency]) || void 0 === OB ? void 0 : OB.amount) === GB.amountBefore ? LB({
+          currencyAmounts: BB
+        }) : (SB.current = null, LB({
+          currencyAmounts: BB,
           awaitingPurchase: !1
         }))
-      })), (0, QH.f)("shopInfo", (HH => {
-        eH({
-          ...NH(HH),
+      })), (0, qB.f)("shopInfo", (BB => {
+        LB({
+          ...XB(BB),
           awaitingPurchase: !1
         })
       }));
-      const FH = (0, AH.useRef)({
-        playerIds: hH,
-        localPlayerId: tH
+      const hB = (0, YB.useRef)({
+        playerIds: oB,
+        localPlayerId: jB
       });
-      (0, AH.useEffect)((() => {
-        FH.current.playerIds === hH && FH.current.localPlayerId === tH || (FH.current = {
-          playerIds: hH,
-          localPlayerId: tH
-        }, uH((HH => {
-          const BH = NH(HH.shopInfo);
+      (0, YB.useEffect)((() => {
+        hB.current.playerIds === oB && hB.current.localPlayerId === jB || (hB.current = {
+          playerIds: oB,
+          localPlayerId: jB
+        }, pB((BB => {
+          const OB = XB(BB.shopInfo);
           return {
-            ...HH,
-            ...BH
+            ...BB,
+            ...OB
           }
         })))
-      }), [hH, tH]);
-      const DH = YH.selectedCategoryKey,
-        wH = (HH, BH) => {
-          var LH, AH;
-          return (isNaN(BH) || (0, lL.M)(HH.currency) || yS(YH.currencyAmounts, HH.currency) && BH <= YH.currencyAmounts[HH.currency].amount) && (null === (LH = HH.canBuy) || void 0 === LH || LH) && !(null !== (AH = HH.hidden) && void 0 !== AH && AH)
+      }), [oB, jB]);
+      const aB = lB.selectedCategoryKey,
+        eB = (BB, OB) => {
+          var GB, YB;
+          return (isNaN(OB) || (0, IG.Q)(BB.currency) || tQ(lB.currencyAmounts, BB.currency) && OB <= lB.currencyAmounts[BB.currency].amount) && (null === (GB = BB.canBuy) || void 0 === GB || GB) && !(null !== (YB = BB.hidden) && void 0 !== YB && YB)
         },
-        ZH = (HH, BH) => {
-          var LH, AH, rH;
-          const hH = pS(DH, HH),
-            tH = YH.shopInfo[DH].items[HH],
-            EH = YH.userInputsPerItem[hH],
-            GH = (0, mr.c)(tH, EH),
-            uH = wH(tH, GH),
-            QH = tH.enchant,
-            WH = QH ? (0, gH.pb)(null !== (LH = tH.customTitle) && void 0 !== LH ? LH : HH, {
-              colour: gH.lb[QH.tier]
-            }) : null !== (AH = tH.customTitle) && void 0 !== AH ? AH : HH,
-            MH = BH => {
-              const LH = null !== BH && void 0 !== BH ? BH : EH,
-                AH = void 0 !== BH ? (0, mr.c)(tH, BH) : GH;
-              wH(tH, AH) && null !== LH && RH(HH, tH, BH);
-              let rH = YH.redDotInfo;
-              rH.itemHasRedDot(DH, HH) && (rH.updateItemRedDot(DH, HH, !1), rH = rH.shallowCopy()), eH({
-                redDotInfo: rH
+        TB = (BB, OB) => {
+          var GB, YB, DB;
+          const oB = xQ(aB, BB),
+            jB = lB.shopInfo[aB].items[BB],
+            MB = lB.userInputsPerItem[oB],
+            zB = (0, dD.b)(jB, MB),
+            pB = eB(jB, zB),
+            qB = jB.enchant,
+            ZB = qB ? (0, rB.zb)(null !== (GB = jB.customTitle) && void 0 !== GB ? GB : BB, {
+              colour: rB.ub[qB.tier]
+            }) : null !== (YB = jB.customTitle) && void 0 !== YB ? YB : BB,
+            NB = OB => {
+              const GB = null !== OB && void 0 !== OB ? OB : MB,
+                YB = void 0 !== OB ? (0, dD.b)(jB, OB) : zB;
+              eB(jB, YB) && null !== GB && wB(BB, jB, OB);
+              let DB = lB.redDotInfo;
+              DB.itemHasRedDot(aB, BB) && (DB.updateItemRedDot(aB, BB, !1), DB = DB.shallowCopy()), LB({
+                redDotInfo: DB
               })
             };
-          return (0, XH.jsxs)("div", {
-            className: SH()("ShopItem", {
-              ShopItemNoInput: !tH.userInput,
-              ShopItemNoInputCanBuy: !tH.userInput && uH,
-              ShopItemNoInputSelected: tH.isSelected,
-              ShopItemEnchant: !!QH
+          return (0, PB.jsxs)("div", {
+            className: QB()("ShopItem", {
+              ShopItemNoInput: !jB.userInput,
+              ShopItemNoInputCanBuy: !jB.userInput && pB,
+              ShopItemNoInputSelected: jB.isSelected,
+              ShopItemEnchant: !!qB
             }),
-            "data-pad-focusable": !tH.userInput || void 0,
-            "data-pad-unavailable": !tH.userInput && !uH || void 0,
-            "data-pad-repeat": null !== (rH = (0, gr.e)(tH)) && void 0 !== rH ? rH : void 0,
-            "data-pad-repeat-wait": YH.awaitingPurchase || void 0,
+            "data-pad-focusable": !jB.userInput || void 0,
+            "data-pad-unavailable": !jB.userInput && !pB || void 0,
+            "data-pad-repeat": null !== (DB = (0, rD.d)(jB)) && void 0 !== DB ? DB : void 0,
+            "data-pad-repeat-wait": lB.awaitingPurchase || void 0,
             onClick: () => {
-              if (QH && IH.current) {
-                if (kH !== hH) return void oH(hH);
-                oH(null)
+              if (qB && uB.current) {
+                if (kB !== oB) return void KB(oB);
+                KB(null)
               }
-              tH.userInput || MH()
+              jB.userInput || NB()
             },
-            onPointerDown: HH => {
-              QH && (IH.current = (0, Ir.p)(HH))
+            onPointerDown: BB => {
+              qB && (uB.current = (0, uD.t)(BB))
             },
-            onPointerEnter: HH => {
-              QH && !(0, Ir.p)(HH) && oH(hH)
+            onPointerEnter: BB => {
+              qB && !(0, uD.t)(BB) && KB(oB)
             },
-            onPointerLeave: HH => {
-              QH && !(0, Ir.p)(HH) && oH((HH => HH === hH ? null : HH))
+            onPointerLeave: BB => {
+              qB && !(0, uD.t)(BB) && KB((BB => BB === oB ? null : BB))
             },
             style: {
-              zIndex: Object.keys(YH.shopInfo[DH].items).length - BH
+              zIndex: Object.keys(lB.shopInfo[aB].items).length - OB
             },
-            children: [YH.redDotInfo.itemHasRedDot(DH, HH) && (0, XH.jsx)(zH.b, {
+            children: [lB.redDotInfo.itemHasRedDot(aB, BB) && (0, PB.jsx)(yB.c, {
               top: "-6px",
               right: "-6px"
-            }), tH.badge && (0, XH.jsx)("div", {
+            }), jB.badge && (0, PB.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, XH.jsx)("div", {
-                className: SH()("ShopBadgeMain", tH.badge.type),
-                children: (0, XH.jsx)(lr.b, {
-                  text: tH.badge.text
+              children: (0, PB.jsx)("div", {
+                className: QB()("ShopBadgeMain", jB.badge.type),
+                children: (0, PB.jsx)(ID.b, {
+                  text: jB.badge.text
                 })
               })
-            }), (0, XH.jsx)("div", {
+            }), (0, PB.jsx)("div", {
               className: "ShopItemLeft",
-              children: tH.image && (0, XH.jsx)(Bh, {
-                item: tH,
+              children: jB.image && (0, PB.jsx)(Oo, {
+                item: jB,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, XH.jsxs)("div", {
+            }), (0, PB.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, XH.jsxs)("div", {
+              children: [(0, PB.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, XH.jsx)("div", {
+                children: [(0, PB.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, XH.jsx)(lr.b, {
-                    text: WH
+                  children: (0, PB.jsx)(ID.b, {
+                    text: ZB
                   })
-                }), (0, XH.jsx)("div", {
+                }), (0, PB.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, XH.jsx)(lr.b, {
-                    text: tH.description
+                  children: (0, PB.jsx)(ID.b, {
+                    text: jB.description
                   })
                 })]
-              }), tH.userInput && (0, XH.jsxs)("div", {
+              }), jB.userInput && (0, PB.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: HH => {
-                  HH.stopPropagation()
+                onClick: BB => {
+                  BB.stopPropagation()
                 },
-                children: [(0, XH.jsx)(rh, {
-                  item: tH,
-                  currInput: EH,
-                  updateInput: BH => {
-                    ((HH, BH, LH) => {
-                      const AH = pS(HH, BH),
-                        rH = {
-                          ...YH.userInputsPerItem
+                children: [(0, PB.jsx)(Do, {
+                  item: jB,
+                  currInput: MB,
+                  updateInput: OB => {
+                    ((BB, OB, GB) => {
+                      const YB = xQ(BB, OB),
+                        DB = {
+                          ...lB.userInputsPerItem
                         };
-                      rH[AH] = LH, eH({
-                        userInputsPerItem: rH
+                      DB[YB] = GB, LB({
+                        userInputsPerItem: DB
                       })
-                    })(DH, HH, BH)
+                    })(aB, BB, OB)
                   },
-                  onSubmit: HH => {
-                    MH(HH)
+                  onSubmit: BB => {
+                    NB(BB)
                   }
-                }), ("dropdown" !== tH.userInput.type || !tH.userInput.autoSubmit) && (0, XH.jsx)(CH.i, {
+                }), ("dropdown" !== jB.userInput.type || !jB.userInput.autoSubmit) && (0, PB.jsx)(JB.f, {
                   className: "ItemCostButton",
-                  disabled: !uH && null !== EH,
+                  disabled: !pB && null !== MB,
                   onClick: () => {
-                    MH()
+                    NB()
                   },
-                  children: (0, XH.jsx)(Ah, {
-                    item: tH,
-                    cost: GH,
-                    currencyAmounts: YH.currencyAmounts
+                  children: (0, PB.jsx)(Yo, {
+                    item: jB,
+                    cost: zB,
+                    currencyAmounts: lB.currencyAmounts
                   })
                 })]
               })]
-            }), !tH.userInput && (0, XH.jsx)("div", {
+            }), !jB.userInput && (0, PB.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, XH.jsx)(Ah, {
-                item: tH,
-                cost: GH,
-                currencyAmounts: YH.currencyAmounts
+              children: (0, PB.jsx)(Yo, {
+                item: jB,
+                cost: zB,
+                currencyAmounts: lB.currencyAmounts
               })
-            }), QH && kH === hH && (0, XH.jsxs)("div", {
+            }), qB && kB === oB && (0, PB.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, XH.jsx)(lr.b, {
-                text: WH
-              }), (0, XH.jsx)("div", {
+              children: [(0, PB.jsx)(ID.b, {
+                text: ZB
+              }), (0, PB.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, XH.jsx)(lr.b, {
-                  text: (0, or.d)("", QH.enchantments, QH.enchantmentData)
+                children: (0, PB.jsx)(ID.b, {
+                  text: (0, KD.d)("", qB.enchantments, qB.enchantmentData)
                 })
               })]
             })]
-          }, hH)
+          }, oB)
         },
-        dH = function(HH) {
-          for (const BH in HH)
-            if (HH[BH].smp) return !0;
+        bB = function(BB) {
+          for (const OB in BB)
+            if (BB[OB].smp) return !0;
           return !1
-        }(YH.shopInfo),
-        aH = SS(YH.shopInfo, DH);
-      return (0, XH.jsx)(Or.d, {
+        }(lB.shopInfo),
+        CB = QQ(lB.shopInfo, aB);
+      return (0, PB.jsx)(UD.b, {
         className: "Menu ShopBody",
-        show: rH,
-        children: 0 !== Object.keys(YH.shopInfo).length && (0, XH.jsxs)(XH.Fragment, {
-          children: [(0, XH.jsxs)("div", {
+        show: DB,
+        children: 0 !== Object.keys(lB.shopInfo).length && (0, PB.jsxs)(PB.Fragment, {
+          children: [(0, PB.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, XH.jsx)(GH, {
-              items: jr(YH.shopInfo).map((HH => {
-                var BH;
+            children: [(0, PB.jsx)(zB, {
+              items: ED(lB.shopInfo).map((BB => {
+                var OB;
                 return {
-                  id: HH,
-                  title: null !== (BH = YH.shopInfo[HH].customTitle) && void 0 !== BH ? BH : HH,
-                  redDot: YH.redDotInfo.categoryHasRedDot(HH)
+                  id: BB,
+                  title: null !== (OB = lB.shopInfo[BB].customTitle) && void 0 !== OB ? OB : BB,
+                  redDot: lB.redDotInfo.categoryHasRedDot(BB)
                 }
               })),
-              link: EH ? {
+              link: MB ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, Rr.f)({
-                    page: (0, Rr.b)(),
+                  (0, wD.f)({
+                    page: (0, wD.c)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: DH,
-              onClick: nH,
-              padStartsOnTab: (0, gr.i)(DH)
-            }), (0, XH.jsx)("div", {
+              selectedItemId: aB,
+              onClick: cB,
+              padStartsOnTab: (0, rD.g)(aB)
+            }), (0, PB.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: YH.currencyAmounts && Object.keys(YH.currencyAmounts).map((HH => {
-                var BH;
-                const LH = YH.currencyAmounts[HH];
-                return LH.hidden ? null : (0, XH.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (fH ? "SmallText" : ""),
-                  children: [(0, XH.jsxs)("div", {
+              children: lB.currencyAmounts && Object.keys(lB.currencyAmounts).map((BB => {
+                var OB;
+                const GB = lB.currencyAmounts[BB];
+                return GB.hidden ? null : (0, PB.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (mB ? "SmallText" : ""),
+                  children: [(0, PB.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, XH.jsx)("div", {
+                    children: [(0, PB.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: LH.iconColour
+                        color: GB.iconColour
                       },
-                      children: (0, XH.jsx)(zh, {
-                        iconName: LH.icon
+                      children: (0, PB.jsx)(yo, {
+                        iconName: GB.icon
                       })
-                    }), "\xa0", (0, kr.c)(LH.amount, 6)]
-                  }), (null === (BH = LH.subtext) || void 0 === BH ? void 0 : BH.length) > 0 && (0, XH.jsx)("div", {
+                    }), "\xa0", (0, kD.d)(GB.amount, 6)]
+                  }), (null === (OB = GB.subtext) || void 0 === OB ? void 0 : OB.length) > 0 && (0, PB.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, XH.jsx)(lr.b, {
-                      text: LH.subtext
+                    children: (0, PB.jsx)(ID.b, {
+                      text: GB.subtext
                     })
                   })]
-                }, HH)
+                }, BB)
               }))
             })]
-          }), (0, XH.jsxs)("div", {
+          }), (0, PB.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [dH && (0, XH.jsx)(JS, {
-              show: rH,
-              shopInfo: YH.shopInfo,
-              selectedCategoryKey: DH,
-              buy: (HH, BH, LH) => {
-                RH(HH, BH, LH)
+            children: [bB && (0, PB.jsx)(vQ, {
+              show: DB,
+              shopInfo: lB.shopInfo,
+              selectedCategoryKey: aB,
+              buy: (BB, OB, GB) => {
+                wB(BB, OB, GB)
               },
-              canAfford: wH,
-              message: YH.onBoughtInfo
-            }), null === aH && (0, XH.jsxs)(XH.Fragment, {
-              children: [(0, XH.jsx)("div", {
-                className: SH()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== YH.onBoughtInfo
+              canAfford: eB,
+              message: lB.onBoughtInfo
+            }), null === CB && (0, PB.jsxs)(PB.Fragment, {
+              children: [(0, PB.jsx)("div", {
+                className: QB()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== lB.onBoughtInfo
                 }),
-                children: (0, XH.jsx)(lr.b, {
-                  text: WH.current
+                children: (0, PB.jsx)(ID.b, {
+                  text: ZB.current
                 })
-              }), (0, XH.jsx)("div", {
+              }), (0, PB.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, XH.jsxs)("div", {
+                children: (0, PB.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (BH = YH.shopInfo[DH]) || void 0 === BH ? void 0 : BH.description) && (0, XH.jsx)("div", {
+                  children: [(null === (OB = lB.shopInfo[aB]) || void 0 === OB ? void 0 : OB.description) && (0, PB.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, XH.jsx)(lr.b, {
-                      text: YH.shopInfo[DH].description
+                    children: (0, PB.jsx)(ID.b, {
+                      text: lB.shopInfo[aB].description
                     })
-                  }), rH && (0, XH.jsx)("div", {
+                  }), DB && (0, PB.jsx)("div", {
                     className: "ShopItems",
-                    ref: vH,
+                    ref: WB,
                     "data-pad-initial-area": !0,
-                    children: jr(null === (LH = YH.shopInfo[DH]) || void 0 === LH ? void 0 : LH.items).map(((HH, BH) => ZH(HH, BH)))
+                    children: ED(null === (GB = lB.shopInfo[aB]) || void 0 === GB ? void 0 : GB.items).map(((BB, OB) => TB(BB, OB)))
                   })]
                 })
               })]
@@ -5682,693 +5682,693 @@ export const modules = {
       })
     }));
 
-    function Bh(HH) {
+    function Oo(BB) {
       let {
-        item: BH,
-        minWidth: LH,
-        minHeight: AH
-      } = HH;
+        item: OB,
+        minWidth: GB,
+        minHeight: YB
+      } = BB;
       const {
-        image: rH,
-        schematicId: SH,
-        imageColour: hH
-      } = BH;
-      if (SH) return (0, XH.jsx)("div", {
+        image: DB,
+        schematicId: QB,
+        imageColour: oB
+      } = OB;
+      if (QB) return (0, PB.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${LH}rem`,
-          height: `${AH}rem`
+          width: `${GB}rem`,
+          height: `${YB}rem`
         },
-        children: (0, XH.jsx)(Kr.b, {
+        children: (0, PB.jsx)(FD.d, {
           game: {
-            schematicId: SH
+            schematicId: QB
           }
         })
       });
-      var zH, CH;
-      if ((0, fr.f)(rH)) return (0, XH.jsx)("div", {
+      var yB, JB;
+      if ((0, mD.d)(DB)) return (0, PB.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${LH}rem`,
+          minWidth: `${GB}rem`,
           height: "0",
-          minHeight: `${AH}rem`
+          minHeight: `${YB}rem`
         },
-        children: (0, XH.jsx)(fr.e, {
-          itemName: rH,
-          amount: null !== (zH = BH.amount) && void 0 !== zH ? zH : 0,
-          amountFontSize: AH / 4 + "rem",
-          enchantmentTier: null === (CH = BH.enchant) || void 0 === CH ? void 0 : CH.tier
+        children: (0, PB.jsx)(mD.c, {
+          itemName: DB,
+          amount: null !== (yB = OB.amount) && void 0 !== yB ? yB : 0,
+          amountFontSize: YB / 4 + "rem",
+          enchantmentTier: null === (JB = OB.enchant) || void 0 === JB ? void 0 : JB.tier
         })
       });
-      const EH = rH.slice(-4);
-      return ".jpg" === EH || ".png" === EH ? (0, XH.jsx)(Lh, {
-        image: rH,
-        minWidth: LH
-      }) : (0, XH.jsx)(tH.c, {
-        name: rH,
+      const MB = DB.slice(-4);
+      return ".jpg" === MB || ".png" === MB ? (0, PB.jsx)(Go, {
+        image: DB,
+        minWidth: GB
+      }) : (0, PB.jsx)(jB.b, {
+        name: DB,
         className: "SelectedItemImage",
         style: {
-          color: hH
+          color: oB
         }
       })
     }
 
-    function Lh(HH) {
+    function Go(BB) {
       let {
-        image: BH,
-        minWidth: LH
-      } = HH;
+        image: OB,
+        minWidth: GB
+      } = BB;
       const {
-        gameNameWithVariation: AH
-      } = (0, yB.e)("connectedGame"), rH = BH.endsWith(".jpg");
-      return (0, XH.jsx)("img", {
-        className: SH()({
-          ShopPixelImage: !rH
+        gameNameWithVariation: YB
+      } = (0, tO.g)("connectedGame"), DB = OB.endsWith(".jpg");
+      return (0, PB.jsx)("img", {
+        className: QB()({
+          ShopPixelImage: !DB
         }),
         style: {
-          width: `${rH?1.6*LH:LH}rem`,
+          width: `${DB?1.6*GB:GB}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,gH.Wb)(AH)}/${BH}`,
-        alt: BH,
+        src: `/textures/games/${(0,rB.ac)(YB)}/${OB}`,
+        alt: OB,
         draggable: !1
       })
     }
 
-    function Ah(HH) {
+    function Yo(BB) {
       let {
-        item: BH,
-        cost: LH,
-        currencyAmounts: AH
-      } = HH;
-      const rH = !isNaN(LH) && 0 !== LH && yS(AH, BH.currency);
-      let SH = null;
-      return BH.buyButtonText ? SH = BH.buyButtonText : rH ? (SH = LH, BH.sell && (SH = -1 * LH), SH = SH.toString()) : 0 === LH ? SH = "Free" : BH.isRewardedAd && (SH = "Watch ad"), (0, lL.M)(SH) || " " === SH ? null : (0, XH.jsxs)("div", {
+        item: OB,
+        cost: GB,
+        currencyAmounts: YB
+      } = BB;
+      const DB = !isNaN(GB) && 0 !== GB && tQ(YB, OB.currency);
+      let QB = null;
+      return OB.buyButtonText ? QB = OB.buyButtonText : DB ? (QB = GB, OB.sell && (QB = -1 * GB), QB = QB.toString()) : 0 === GB ? QB = "Free" : OB.isRewardedAd && (QB = "Watch ad"), (0, IG.Q)(QB) || " " === QB ? null : (0, PB.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [rH && (0, XH.jsx)("div", {
+        children: [DB && (0, PB.jsx)("div", {
           style: {
-            color: AH[BH.currency].iconColour
+            color: YB[OB.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, XH.jsx)(zh, {
-            iconName: AH[BH.currency].icon
+          children: (0, PB.jsx)(yo, {
+            iconName: YB[OB.currency].icon
           })
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, XH.jsx)(lr.b, {
-            text: SH
+          children: (0, PB.jsx)(ID.b, {
+            text: QB
           })
         })]
       })
     }
 
-    function rh(HH) {
+    function Do(BB) {
       let {
-        item: BH,
-        currInput: LH,
-        updateInput: rH,
-        onSubmit: SH
-      } = HH;
+        item: OB,
+        currInput: GB,
+        updateInput: DB,
+        onSubmit: QB
+      } = BB;
       const {
-        t: tH
-      } = (0, hH.B)(), zH = (0, AH.useRef)(null);
-      if ((0, AH.useEffect)((() => {
-          const HH = zH.current;
-          HH && HH.value !== LH && document.activeElement !== HH && (HH.value = null !== LH && void 0 !== LH ? LH : "")
-        }), [LH]), !BH.userInput) return null;
-      let CH = BH.userInput;
-      if (MH.featureFlags.sanitizeShopInput && "text" === BH.userInput.type && (CH = {
+        t: jB
+      } = (0, oB.H)(), yB = (0, YB.useRef)(null);
+      if ((0, YB.useEffect)((() => {
+          const BB = yB.current;
+          BB && BB.value !== GB && document.activeElement !== BB && (BB.value = null !== GB && void 0 !== GB ? GB : "")
+        }), [GB]), !OB.userInput) return null;
+      let JB = OB.userInput;
+      if (NB.featureFlags.sanitizeShopInput && "text" === OB.userInput.type && (JB = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === CH.type || "number" === CH.type) {
-        var EH, GH;
-        console.assert(void 0 !== LH, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(BH)}`);
-        const HH = "text" === CH.type && CH.wordCharsOnly;
-        return (0, XH.jsx)("div", {
+        }), "text" === JB.type || "number" === JB.type) {
+        var MB, zB;
+        console.assert(void 0 !== GB, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(OB)}`);
+        const BB = "text" === JB.type && JB.wordCharsOnly;
+        return (0, PB.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, XH.jsx)(TH.e, {
+          children: (0, PB.jsx)(VB.b, {
             className: "ShopItemUserInputText",
-            placeholderText: tH(CH.placeholderText),
-            defaultValue: LH,
-            domRef: zH,
-            onValueChange: (BH, LH) => {
-              !0 === HH && (BH = (0, er.hb)(BH)), zH.current.value = BH, rH(BH)
+            placeholderText: jB(JB.placeholderText),
+            defaultValue: GB,
+            domRef: yB,
+            onValueChange: (OB, GB) => {
+              !0 === BB && (OB = (0, LD.nb)(OB)), yB.current.value = OB, DB(OB)
             },
-            onEnter: SH,
-            type: CH.type
-          }, (null !== (EH = CH.initialValue) && void 0 !== EH ? EH : "") + (null !== (GH = CH.placeholderText) && void 0 !== GH ? GH : ""))
+            onEnter: QB,
+            type: JB.type
+          }, (null !== (MB = JB.initialValue) && void 0 !== MB ? MB : "") + (null !== (zB = JB.placeholderText) && void 0 !== zB ? zB : ""))
         })
       }
-      if ("dropdown" === CH.type) {
-        console.assert(void 0 !== LH, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(BH)}`);
-        const HH = CH.autoSubmit;
-        return (0, XH.jsx)("div", {
+      if ("dropdown" === JB.type) {
+        console.assert(void 0 !== GB, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(OB)}`);
+        const BB = JB.autoSubmit;
+        return (0, PB.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, XH.jsx)(iB.b, {
-            options: CH.dropdownOptions.map((HH => (0, mr.f)(HH))),
-            value: LH,
-            onChange: BH => {
+          children: (0, PB.jsx)(sO.c, {
+            options: JB.dropdownOptions.map((BB => (0, dD.f)(BB))),
+            value: GB,
+            onChange: OB => {
               let {
-                value: LH
-              } = BH;
-              rH(LH), HH && SH(LH)
+                value: GB
+              } = OB;
+              DB(GB), BB && QB(GB)
             }
           })
         })
       }
-      return "player" === CH.type ? (0, XH.jsx)(Sh, {
-        userInput: CH,
-        currInput: LH,
-        updateInput: rH
-      }) : "color" === CH.type ? (0, XH.jsx)("div", {
+      return "player" === JB.type ? (0, PB.jsx)(Qo, {
+        userInput: JB,
+        currInput: GB,
+        updateInput: DB
+      }) : "color" === JB.type ? (0, PB.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, XH.jsx)("input", {
+        children: (0, PB.jsx)("input", {
           type: "color",
-          value: LH,
-          onChange: HH => {
-            rH(HH.target.value)
+          value: GB,
+          onChange: BB => {
+            DB(BB.target.value)
           }
         })
       }) : null
     }
 
-    function Sh(HH) {
+    function Qo(BB) {
       let {
-        userInput: BH,
-        currInput: LH,
-        updateInput: AH
-      } = HH;
-      const rH = (0, yB.e)("players"),
-        SH = (0, yB.e)("hiddenPlayerNames"),
-        hH = (0, mr.g)(rH.ids, rH.localId, BH);
-      return (0, XH.jsx)("div", {
+        userInput: OB,
+        currInput: GB,
+        updateInput: YB
+      } = BB;
+      const DB = (0, tO.g)("players"),
+        QB = (0, tO.g)("hiddenPlayerNames"),
+        oB = (0, dD.g)(DB.ids, DB.localId, OB);
+      return (0, PB.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, XH.jsx)(iB.b, {
-          options: hH.map((HH => {
+        children: (0, PB.jsx)(sO.c, {
+          options: oB.map((BB => {
             const {
-              name: BH
-            } = rH.byId[HH];
+              name: OB
+            } = DB.byId[BB];
             return {
-              value: HH,
-              label: null === BH ? "" : (0, cr.f)(BH, SH)
+              value: BB,
+              label: null === OB ? "" : (0, iD.g)(OB, QB)
             }
           })),
-          value: LH,
-          onChange: HH => {
+          value: GB,
+          onChange: BB => {
             let {
-              value: BH
-            } = HH;
-            AH(BH)
+              value: OB
+            } = BB;
+            YB(OB)
           }
         })
       })
     }
 
-    function hh(HH) {
+    function oo(BB) {
       let {
-        ids: BH
-      } = HH;
-      return BH
+        ids: OB
+      } = BB;
+      return OB
     }
 
-    function th(HH) {
+    function jo(BB) {
       let {
-        localId: BH
-      } = HH;
-      return BH
+        localId: OB
+      } = BB;
+      return OB
     }
 
-    function zh(HH) {
+    function yo(BB) {
       let {
-        iconName: BH
-      } = HH;
-      return xH.gameBridge.lookup("isItemName", BH) ? (0, XH.jsx)(fr.e, {
-        itemName: BH,
+        iconName: OB
+      } = BB;
+      return RB.gameBridge.lookup("isItemName", OB) ? (0, PB.jsx)(mD.c, {
+        itemName: OB,
         amount: 1
-      }) : (0, XH.jsx)(tH.c, {
-        name: BH,
+      }) : (0, PB.jsx)(jB.b, {
+        name: OB,
         className: "2x"
       })
     }
-    var Ch = LH(1659);
-    const Eh = (0, LH(1405).e)((HH => HH.PadLobbyShortcuts)),
-      Xh = (0, AH.lazy)((() => Promise.resolve().then((() => LH(5069))).then((HH => ({
-        default: HH.Lobbyleaderboard
+    var Jo = GB(1699);
+    const Mo = (0, GB(1450).h)((BB => BB.PadLobbyShortcuts)),
+      Po = (0, YB.lazy)((() => Promise.resolve().then((() => GB(5082))).then((BB => ({
+        default: BB.Lobbyleaderboard
       }))))),
-      Gh = (0, AH.lazy)((() => LH.e(246).then((() => LH(42383))).then((HH => ({
-        default: HH.LobbyManageView
+      zo = (0, YB.lazy)((() => GB.e(246).then((() => GB(42073))).then((BB => ({
+        default: BB.LobbyManageView
       })))));
 
-    function Yh(HH) {
+    function po(BB) {
       let {
-        show: BH
-      } = HH;
-      return BH ? (0, XH.jsx)(uh, {}) : null
+        show: OB
+      } = BB;
+      return OB ? (0, PB.jsx)(qo, {}) : null
     }
 
-    function uh() {
-      const HH = (0, Nr.e)();
-      return (0, XH.jsxs)(XH.Fragment, {
-        children: [(0, XH.jsx)(Eh, {}), (0, XH.jsxs)(AH.Suspense, {
-          fallback: (0, XH.jsx)("div", {
+    function qo() {
+      const BB = (0, XD.b)();
+      return (0, PB.jsxs)(PB.Fragment, {
+        children: [(0, PB.jsx)(Mo, {}), (0, PB.jsxs)(YB.Suspense, {
+          fallback: (0, PB.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, XH.jsx)(UH.d, {})
+            children: (0, PB.jsx)(SB.b, {})
           }),
-          children: [HH && (0, XH.jsx)(Gh, {
-            leaderboard: (0, XH.jsx)(Xh, {})
-          }), !HH && (0, XH.jsx)(Xh, {})]
+          children: [BB && (0, PB.jsx)(zo, {
+            leaderboard: (0, PB.jsx)(Po, {})
+          }), !BB && (0, PB.jsx)(Po, {})]
         })]
       })
     }
-    var Qh = LH(1556),
-      Wh = LH(2495),
-      Mh = LH(1789),
-      xh = LH(3376),
-      vh = LH(2930),
-      Ph = LH(1497),
-      Th = LH(1457),
-      Uh = LH(3319),
-      Vh = LH(3331),
-      Oh = LH(2476);
-    const bh = "storeRecentGiftRecipients",
-      kh = new Map;
+    var Zo = GB(1606),
+      No = GB(2524),
+      Ro = GB(1822),
+      Wo = GB(3435),
+      Ao = GB(2965),
+      Vo = GB(1535),
+      So = GB(1493),
+      no = GB(3370),
+      Uo = GB(3380),
+      fo = GB(2505);
+    const ko = "storeRecentGiftRecipients",
+      Ko = new Map;
 
-    function mh() {
+    function uo() {
       try {
-        const HH = WL.e.getItem(bh);
-        return Array.isArray(HH) ? HH.filter((HH => "string" === typeof(null === HH || void 0 === HH ? void 0 : HH.name) && HH.name.length > 0)).map((HH => ({
-          name: HH.name,
-          cosmetics: HH.cosmetics && "object" === typeof HH.cosmetics ? HH.cosmetics : null
+        const BB = ZG.g.getItem(ko);
+        return Array.isArray(BB) ? BB.filter((BB => "string" === typeof(null === BB || void 0 === BB ? void 0 : BB.name) && BB.name.length > 0)).map((BB => ({
+          name: BB.name,
+          cosmetics: BB.cosmetics && "object" === typeof BB.cosmetics ? BB.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function oh(HH, BH) {
-      var LH;
-      const [rH, SH] = (0, AH.useState)(""), [hH, tH] = (0, AH.useState)("search"), [zH, CH] = (0, AH.useState)(null), [EH, XH] = (0, AH.useState)(null), GH = (0, AH.useRef)(null), YH = (0, AH.useRef)(null);
-      (0, AH.useEffect)((() => () => {
-        GH.current && clearTimeout(GH.current)
-      }), []), (0, AH.useEffect)((() => {
-        BH || WH()
-      }), [BH]);
-      const uH = null !== (LH = null === zH || void 0 === zH ? void 0 : zH.name) && void 0 !== LH ? LH : null;
+    function mo(BB, OB) {
+      var GB;
+      const [DB, QB] = (0, YB.useState)(""), [oB, jB] = (0, YB.useState)("search"), [yB, JB] = (0, YB.useState)(null), [MB, PB] = (0, YB.useState)(null), zB = (0, YB.useRef)(null), lB = (0, YB.useRef)(null);
+      (0, YB.useEffect)((() => () => {
+        zB.current && clearTimeout(zB.current)
+      }), []), (0, YB.useEffect)((() => {
+        OB || ZB()
+      }), [OB]);
+      const pB = null !== (GB = null === yB || void 0 === yB ? void 0 : yB.name) && void 0 !== GB ? GB : null;
 
-      function QH() {
-        GH.current && (clearTimeout(GH.current), GH.current = null)
+      function qB() {
+        zB.current && (clearTimeout(zB.current), zB.current = null)
       }
 
-      function WH() {
-        QH(), SH(""), tH("search"), CH(null)
-      }(0, AH.useEffect)((() => {
-        if (null === uH || HH === oH.NULL_USER_CONTEXT) return;
-        const BH = uH.toLowerCase();
-        if (BH === HH.getPlayerName().toLowerCase()) return void XH({
-          name: uH,
+      function ZB() {
+        qB(), QB(""), jB("search"), JB(null)
+      }(0, YB.useEffect)((() => {
+        if (null === pB || BB === KB.NULL_USER_CONTEXT) return;
+        const OB = pB.toLowerCase();
+        if (OB === BB.getPlayerName().toLowerCase()) return void PB({
+          name: pB,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const LH = kh.get(BH);
-        if (LH) return void XH({
-          name: uH,
-          result: LH
+        const GB = Ko.get(OB);
+        if (GB) return void PB({
+          name: pB,
+          result: GB
         });
-        let AH = !1;
-        return async function(HH, BH) {
+        let YB = !1;
+        return async function(BB, OB) {
           try {
-            const LH = await (0, oH.postJsonWithMetricsCookiesAndJsonResponse)(`${oB.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: BH
+            const GB = await (0, KB.postJsonWithMetricsCookiesAndJsonResponse)(`${KO.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: OB
             }, {
               retries: 1
-            }, HH.getMetricsCookies());
-            if ("boolean" !== typeof(null === LH || void 0 === LH ? void 0 : LH.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(LH)}`);
-            return LH
-          } catch (LH) {
-            return console.error("Failed to look up gift recipient:", LH), {
+            }, BB.getMetricsCookies());
+            if ("boolean" !== typeof(null === GB || void 0 === GB ? void 0 : GB.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(GB)}`);
+            return GB
+          } catch (GB) {
+            return console.error("Failed to look up gift recipient:", GB), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(HH, uH).catch((HH => (console.error("Gift recipient lookup failed:", HH), {
+        }(BB, pB).catch((BB => (console.error("Gift recipient lookup failed:", BB), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((HH => {
-          !0 !== HH.giftRecipientFound && "store:giftRecipientLookupFailed" === HH.giftRecipientError || kh.set(BH, HH), AH || XH({
-            name: uH,
-            result: HH
+        }))).then((BB => {
+          !0 !== BB.giftRecipientFound && "store:giftRecipientLookupFailed" === BB.giftRecipientError || Ko.set(OB, BB), YB || PB({
+            name: pB,
+            result: BB
           })
         })), () => {
-          AH = !0
+          YB = !0
         }
-      }), [uH, HH]);
-      const MH = (0, AH.useMemo)((() => {
-        const HH = rH.trim();
-        if (!HH) return {
+      }), [pB, BB]);
+      const NB = (0, YB.useMemo)((() => {
+        const BB = DB.trim();
+        if (!BB) return {
           status: "none"
         };
-        if (!zH || zH.name !== HH || (null === EH || void 0 === EH ? void 0 : EH.name) !== zH.name) return {
+        if (!yB || yB.name !== BB || (null === MB || void 0 === MB ? void 0 : MB.name) !== yB.name) return {
           status: "pending",
-          name: HH
+          name: BB
         };
-        const BH = EH.result;
-        return !1 === BH.giftRecipientFound ? {
+        const OB = MB.result;
+        return !1 === OB.giftRecipientFound ? {
           status: "error",
-          name: zH.name,
-          error: BH.giftRecipientError
+          name: yB.name,
+          error: OB.giftRecipientError
         } : {
           status: "found",
-          name: BH.giftRecipientName,
-          ownedPacks: BH.giftRecipientOwnedPacks,
-          hasSuperRank: BH.giftRecipientHasSuperRank,
-          isSubscriber: BH.giftRecipientIsSubscriber
+          name: OB.giftRecipientName,
+          ownedPacks: OB.giftRecipientOwnedPacks,
+          hasSuperRank: OB.giftRecipientHasSuperRank,
+          isSubscriber: OB.giftRecipientIsSubscriber
         }
-      }), [rH, zH, EH]);
-      (0, AH.useEffect)((() => {
-        "found" === MH.status && "typed" === (null === zH || void 0 === zH ? void 0 : zH.source) && YH.current !== MH.name && (YH.current = MH.name, (0, WB.reportAnalyticsClick)({
+      }), [DB, yB, MB]);
+      (0, YB.useEffect)((() => {
+        "found" === NB.status && "typed" === (null === yB || void 0 === yB ? void 0 : yB.source) && lB.current !== NB.name && (lB.current = NB.name, (0, ZO.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [MH, zH]);
-      const xH = (null === EH || void 0 === EH ? void 0 : EH.name) === (null === zH || void 0 === zH ? void 0 : zH.name) ? null === EH || void 0 === EH ? void 0 : EH.result : null,
-        vH = !0 === (null === xH || void 0 === xH ? void 0 : xH.giftRecipientFound) ? xH.giftRecipientCosmetics : null;
+      }), [NB, yB]);
+      const RB = (null === MB || void 0 === MB ? void 0 : MB.name) === (null === yB || void 0 === yB ? void 0 : yB.name) ? null === MB || void 0 === MB ? void 0 : MB.result : null,
+        WB = !0 === (null === RB || void 0 === RB ? void 0 : RB.giftRecipientFound) ? RB.giftRecipientCosmetics : null;
       return {
-        query: rH,
-        via: hH,
-        recipient: MH,
-        recipientCosmetics: vH,
-        type: function(HH) {
-          SH(HH), tH("search"), QH();
-          const BH = HH.trim();
-          BH ? GH.current = setTimeout((() => {
-            CH({
-              name: BH,
+        query: DB,
+        via: oB,
+        recipient: NB,
+        recipientCosmetics: WB,
+        type: function(BB) {
+          QB(BB), jB("search"), qB();
+          const OB = BB.trim();
+          OB ? zB.current = setTimeout((() => {
+            JB({
+              name: OB,
               source: "typed"
             })
-          }), 400) : CH(null)
+          }), 400) : JB(null)
         },
-        choose: function(HH, BH) {
-          QH(), SH(HH), tH("typed" === BH ? "search" : "prefilled" === BH ? "prefilled" : "suggestion"), CH({
-            name: HH,
-            source: BH
-          }), "typed" !== BH && "prefilled" !== BH && (0, WB.reportAnalyticsClick)({
+        choose: function(BB, OB) {
+          qB(), QB(BB), jB("typed" === OB ? "search" : "prefilled" === OB ? "prefilled" : "suggestion"), JB({
+            name: BB,
+            source: OB
+          }), "typed" !== OB && "prefilled" !== OB && (0, ZO.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: BH
+            value: OB
           })
         },
-        clear: WH,
-        recordGift: function(HH, BH) {
-          ! function(HH) {
-            kh.delete(HH.toLowerCase())
-          }(HH), XH((LH => {
-            if (!LH || LH.name.toLowerCase() !== HH.toLowerCase() || !0 !== LH.result.giftRecipientFound || "superRank" === BH) return LH;
-            const AH = LH.result.giftRecipientOwnedPacks;
+        clear: ZB,
+        recordGift: function(BB, OB) {
+          ! function(BB) {
+            Ko.delete(BB.toLowerCase())
+          }(BB), PB((GB => {
+            if (!GB || GB.name.toLowerCase() !== BB.toLowerCase() || !0 !== GB.result.giftRecipientFound || "superRank" === OB) return GB;
+            const YB = GB.result.giftRecipientOwnedPacks;
             return {
-              ...LH,
+              ...GB,
               result: {
-                ...LH.result,
-                giftRecipientOwnedPacks: AH.includes(BH) ? AH : [...AH, BH]
+                ...GB.result,
+                giftRecipientOwnedPacks: YB.includes(OB) ? YB : [...YB, OB]
               }
             }
           }))
         }
       }
     }
-    var Ih = LH(2469),
-      fh = LH(5077),
-      lh = LH(225),
-      Kh = LH(3206);
-    const ch = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var eh = LH(2406),
-      qh = LH(602),
-      gh = LH(2530),
-      Nh = LH(2833);
+    var Io = GB(2498),
+      Fo = GB(5088),
+      io = GB(244),
+      Lo = GB(3257);
+    const go = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var ro = GB(2454),
+      Xo = GB(627),
+      wo = GB(2554),
+      Eo = GB(2874);
 
-    function Rh(HH) {
+    function co(BB) {
       let {
-        cosmetics: BH
-      } = HH;
-      return (0, XH.jsx)("span", {
+        cosmetics: OB
+      } = BB;
+      return (0, PB.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, XH.jsx)(gh.c, {
-          cosmetics: BH
+        children: (0, PB.jsx)(wo.b, {
+          cosmetics: OB
         })
       })
     }
 
-    function jh(HH, BH) {
-      var LH, AH;
-      const rH = null !== (LH = HH.friend) && void 0 !== LH ? LH : {
+    function ho(BB, OB) {
+      var GB, YB;
+      const DB = null !== (GB = BB.friend) && void 0 !== GB ? GB : {
         isError: !1,
-        name: HH.name,
+        name: BB.name,
         ranks: [],
-        cosmetics: null !== (AH = HH.cosmetics) && void 0 !== AH ? AH : {},
-        nameColour: qh.c,
+        cosmetics: null !== (YB = BB.cosmetics) && void 0 !== YB ? YB : {},
+        nameColour: Xo.b,
         location: {
           status: "noGamePlayed"
         }
       };
-      return BH ? {
-        ...rH,
-        cosmetics: BH
-      } : rH
+      return OB ? {
+        ...DB,
+        cosmetics: OB
+      } : DB
     }
 
-    function nh(HH) {
+    function ao(BB) {
       let {
-        pending: BH
-      } = HH;
-      return (0, XH.jsx)("span", {
+        pending: OB
+      } = BB;
+      return (0, PB.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: BH && (0, XH.jsx)(UH.d, {})
+        children: OB && (0, PB.jsx)(SB.b, {})
       })
     }
 
-    function Fh(HH) {
-      var BH;
+    function eo(BB) {
+      var OB;
       let {
-        selfName: LH,
-        giftRecipient: rH,
-        suggestionsVersion: zH,
-        pulseSignal: EH,
-        disabled: GH
-      } = HH;
+        selfName: GB,
+        giftRecipient: DB,
+        suggestionsVersion: yB,
+        pulseSignal: MB,
+        disabled: zB
+      } = BB;
       const {
-        t: YH
-      } = (0, hH.B)(), uH = (0, aH.l)(), QH = (0, AH.useRef)(null), WH = (0, AH.useRef)(null), {
-        query: xH,
-        via: vH,
-        recipient: PH,
-        recipientCosmetics: UH
-      } = rH, VH = (0, Oh.p)(xH), OH = (0, AH.useMemo)((() => {
-        const HH = MH.featureFlags.useSocialFeatures ? uH.friends.filter((HH => !HH.isError)) : [];
-        return (0, Oh.i)({
-          onlineFriends: (0, aH.e)(HH),
-          recentRecipients: mh(),
-          friends: HH,
-          selfName: LH,
+        t: lB
+      } = (0, oB.H)(), pB = (0, CB.h)(), qB = (0, YB.useRef)(null), ZB = (0, YB.useRef)(null), {
+        query: RB,
+        via: WB,
+        recipient: AB,
+        recipientCosmetics: SB
+      } = DB, nB = (0, fo.q)(RB), UB = (0, YB.useMemo)((() => {
+        const BB = NB.featureFlags.useSocialFeatures ? pB.friends.filter((BB => !BB.isError)) : [];
+        return (0, fo.l)({
+          onlineFriends: (0, CB.c)(BB),
+          recentRecipients: uo(),
+          friends: BB,
+          selfName: GB,
           max: 8
         })
-      }), [uH.friends, LH, zH]), bH = xH.trim().toLowerCase(), kH = "search" !== vH && bH ? OH.find((HH => HH.name.toLowerCase() === bH)) : void 0, mH = kH && "prefilled" === vH ? [kH, ...OH.filter((HH => HH !== kH))] : OH, oH = "" !== bH && !kH, IH = oH ? xH : "", fH = mH.length > 0;
-      (0, AH.useEffect)((() => {
-        QH.current && QH.current.value !== IH && (QH.current.value = IH)
-      }), [IH]), (0, AH.useEffect)((() => {
-        QH.current && (QH.current.disabled = GH)
-      }), [GH, EH]);
-      const lH = (0, AH.useRef)(0);
+      }), [pB.friends, GB, yB]), fB = RB.trim().toLowerCase(), kB = "search" !== WB && fB ? UB.find((BB => BB.name.toLowerCase() === fB)) : void 0, dB = kB && "prefilled" === WB ? [kB, ...UB.filter((BB => BB !== kB))] : UB, KB = "" !== fB && !kB, uB = KB ? RB : "", mB = dB.length > 0;
+      (0, YB.useEffect)((() => {
+        qB.current && qB.current.value !== uB && (qB.current.value = uB)
+      }), [uB]), (0, YB.useEffect)((() => {
+        qB.current && (qB.current.disabled = zB)
+      }), [zB, MB]);
+      const IB = (0, YB.useRef)(0);
 
-      function cH() {
-        "self" !== VH && (0, WB.reportAnalyticsClick)({
+      function iB() {
+        "self" !== nB && (0, ZO.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), rH.clear()
+        }), DB.clear()
       }
 
-      function eH(HH) {
-        var BH, LH;
-        if (GH) return;
-        if (" " === HH.key || "Enter" === HH.key) return HH.preventDefault(), void HH.currentTarget.click();
-        const AH = Array.from(null !== (BH = null === (LH = WH.current) || void 0 === LH ? void 0 : LH.querySelectorAll("[role=radio]")) && void 0 !== BH ? BH : []),
-          rH = AH.indexOf(HH.currentTarget);
-        let SH;
-        "ArrowRight" === HH.key || "ArrowDown" === HH.key ? SH = AH[(rH + 1) % AH.length] : "ArrowLeft" === HH.key || "ArrowUp" === HH.key ? SH = AH[(rH - 1 + AH.length) % AH.length] : "Home" === HH.key ? SH = AH[0] : "End" === HH.key && (SH = AH[AH.length - 1]), SH && (HH.preventDefault(), SH.focus(), SH.click())
-      }(0, AH.useEffect)((() => {
-        var HH;
-        EH > lH.current && !GH && (lH.current = EH, null === (HH = QH.current) || void 0 === HH || HH.focus())
-      }), [EH, GH]);
-      const qH = "self" === VH,
-        gH = null !== (BH = null === kH || void 0 === kH ? void 0 : kH.name) && void 0 !== BH ? BH : null,
-        NH = "error" === PH.status ? PH.error : null,
-        RH = "store:giftRecipientLookupFailed" === NH;
-      return (0, XH.jsxs)("div", {
-        className: SH()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: GH,
-          StoreRecipientStripNoChips: !fH
+      function LB(BB) {
+        var OB, GB;
+        if (zB) return;
+        if (" " === BB.key || "Enter" === BB.key) return BB.preventDefault(), void BB.currentTarget.click();
+        const YB = Array.from(null !== (OB = null === (GB = ZB.current) || void 0 === GB ? void 0 : GB.querySelectorAll("[role=radio]")) && void 0 !== OB ? OB : []),
+          DB = YB.indexOf(BB.currentTarget);
+        let QB;
+        "ArrowRight" === BB.key || "ArrowDown" === BB.key ? QB = YB[(DB + 1) % YB.length] : "ArrowLeft" === BB.key || "ArrowUp" === BB.key ? QB = YB[(DB - 1 + YB.length) % YB.length] : "Home" === BB.key ? QB = YB[0] : "End" === BB.key && (QB = YB[YB.length - 1]), QB && (BB.preventDefault(), QB.focus(), QB.click())
+      }(0, YB.useEffect)((() => {
+        var BB;
+        MB > IB.current && !zB && (IB.current = MB, null === (BB = qB.current) || void 0 === BB || BB.focus())
+      }), [MB, zB]);
+      const gB = "self" === nB,
+        rB = null !== (OB = null === kB || void 0 === kB ? void 0 : kB.name) && void 0 !== OB ? OB : null,
+        XB = "error" === AB.status ? AB.error : null,
+        wB = "store:giftRecipientLookupFailed" === XB;
+      return (0, PB.jsxs)("div", {
+        className: QB()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: zB,
+          StoreRecipientStripNoChips: !mB
         }),
-        children: [(0, XH.jsx)("span", {
+        children: [(0, PB.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: YH("store:buyingFor")
-        }), (0, XH.jsxs)("div", {
-          ref: WH,
+          children: lB("store:buyingFor")
+        }), (0, PB.jsxs)("div", {
+          ref: ZB,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": YH("store:whoIsItFor"),
-          children: [(0, XH.jsxs)("div", {
+          "aria-label": lB("store:whoIsItFor"),
+          children: [(0, PB.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": qH,
-            tabIndex: GH || !qH && null !== gH ? -1 : 0,
-            className: SH()("StoreRecipientMe", {
-              StoreRecipientChecked: qH
+            "aria-checked": gB,
+            tabIndex: zB || !gB && null !== rB ? -1 : 0,
+            className: QB()("StoreRecipientMe", {
+              StoreRecipientChecked: gB
             }),
             onClick: () => {
-              GH || cH()
+              zB || iB()
             },
-            onKeyDown: eH,
-            children: [(0, XH.jsx)(tH.c, {
+            onKeyDown: LB,
+            children: [(0, PB.jsx)(jB.b, {
               name: "user"
-            }), " ", YH("store:me")]
-          }), fH && (0, XH.jsx)("div", {
+            }), " ", lB("store:me")]
+          }), mB && (0, PB.jsx)("div", {
             className: "StoreRecipientChips",
-            children: mH.map((HH => {
-              const BH = HH === kH;
-              return (0, XH.jsx)("div", {
+            children: dB.map((BB => {
+              const OB = BB === kB;
+              return (0, PB.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": BH,
-                tabIndex: !GH && BH ? 0 : -1,
-                title: HH.name,
-                className: SH()("StoreRecipientChip", {
-                  StoreRecipientChecked: BH
+                "aria-checked": OB,
+                tabIndex: !zB && OB ? 0 : -1,
+                title: BB.name,
+                className: QB()("StoreRecipientChip", {
+                  StoreRecipientChecked: OB
                 }),
                 onClick: () => {
-                  GH || function(HH) {
-                    "gift" !== VH && (0, WB.reportAnalyticsClick)({
+                  zB || function(BB) {
+                    "gift" !== nB && (0, ZO.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), rH.choose(HH.name, HH.kind)
-                  }(HH)
+                    }), DB.choose(BB.name, BB.kind)
+                  }(BB)
                 },
-                onKeyDown: eH,
-                children: (0, XH.jsx)(Nh.g, {
-                  playerSocialPreview: jh(HH, BH ? UH : null),
+                onKeyDown: LB,
+                children: (0, PB.jsx)(Eo.g, {
+                  playerSocialPreview: ho(BB, OB ? SB : null),
                   opensProfileCard: !1,
-                  isFriend: null !== HH.friend,
+                  isFriend: null !== BB.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== HH.friend,
-                  status: null === HH.friend ? null : void 0,
-                  trailing: BH ? (0, XH.jsx)(nh, {
-                    pending: "pending" === PH.status
+                  showLocation: null !== BB.friend,
+                  status: null === BB.friend ? null : void 0,
+                  trailing: OB ? (0, PB.jsx)(ao, {
+                    pending: "pending" === AB.status
                   }) : void 0
                 })
-              }, HH.name)
+              }, BB.name)
             }))
           })]
-        }), (0, XH.jsxs)("div", {
-          className: SH()("StoreRecipientSearch", {
-            StoreRecipientChecked: oH,
-            StoreRecipientSearchPulse: EH > 0 && !oH,
-            StoreRecipientSearchError: null !== NH && !RH
+        }), (0, PB.jsxs)("div", {
+          className: QB()("StoreRecipientSearch", {
+            StoreRecipientChecked: KB,
+            StoreRecipientSearchPulse: MB > 0 && !KB,
+            StoreRecipientSearchError: null !== XB && !wB
           }),
           onClick: () => {
-            var HH;
-            null === (HH = QH.current) || void 0 === HH || HH.focus()
+            var BB;
+            null === (BB = qB.current) || void 0 === BB || BB.focus()
           },
-          children: [oH && "found" === PH.status && UH && (0, XH.jsx)(Rh, {
-            cosmetics: UH
-          }), !(oH && "found" === PH.status && UH) && (0, XH.jsx)(tH.c, {
+          children: [KB && "found" === AB.status && SB && (0, PB.jsx)(co, {
+            cosmetics: SB
+          }), !(KB && "found" === AB.status && SB) && (0, PB.jsx)(jB.b, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, XH.jsx)(TH.e, {
+          }), (0, PB.jsx)(VB.b, {
             className: "StoreRecipientSearchInput",
-            domRef: QH,
-            placeholderText: YH("store:searchName"),
-            defaultValue: IH,
-            maxLength: KH.e,
-            onValueChange: function(HH) {
-              "gift" !== VH && HH.trim() && (0, WB.reportAnalyticsClick)({
+            domRef: qB,
+            placeholderText: lB("store:searchName"),
+            defaultValue: uB,
+            maxLength: FB.l,
+            onValueChange: function(BB) {
+              "gift" !== nB && BB.trim() && (0, ZO.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), rH.type(HH)
+              }), DB.type(BB)
             },
             onEnter: () => {
-              var HH;
-              const BH = null === (HH = QH.current) || void 0 === HH ? void 0 : HH.value.trim();
-              BH && rH.choose(BH, "typed")
+              var BB;
+              const OB = null === (BB = qB.current) || void 0 === BB ? void 0 : BB.value.trim();
+              OB && DB.choose(OB, "typed")
             },
             blurOnEnter: !0
-          }), oH && (0, XH.jsx)(nh, {
-            pending: "pending" === PH.status
-          }), oH && (0, XH.jsx)("div", {
-            ...(0, CH.db)({
-              disabled: GH
+          }), KB && (0, PB.jsx)(ao, {
+            pending: "pending" === AB.status
+          }), KB && (0, PB.jsx)("div", {
+            ...(0, JB.db)({
+              disabled: zB
             }),
-            "aria-label": YH("store:clearRecipient"),
-            title: YH("store:clearRecipient"),
+            "aria-label": lB("store:clearRecipient"),
+            title: lB("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: HH => {
-              HH.stopPropagation(), GH || cH()
+            onClick: BB => {
+              BB.stopPropagation(), zB || iB()
             },
-            children: (0, XH.jsx)(tH.c, {
+            children: (0, PB.jsx)(jB.b, {
               name: "xmark"
             })
           })]
-        }, EH), NH && (0, XH.jsx)("div", {
-          className: SH()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: RH
+        }, MB), XB && (0, PB.jsx)("div", {
+          className: QB()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: wB
           }),
           role: "status",
-          children: YH(NH)
+          children: lB(XB)
         })]
       })
     }
-    var Dh = LH(2337),
-      wh = LH(2580),
-      Zh = LH(2851),
-      dh = LH(3919),
-      ah = LH(2413),
-      sh = LH(3442),
-      Jh = LH(3450),
-      ih = LH(3414);
-    const ph = [qh.s.yellow, qh.s.green, qh.s.aqua, qh.s.blue, qh.s.purple, qh.s.red];
+    var To = GB(2386),
+      bo = GB(2598),
+      Co = GB(2893),
+      Ho = GB(3976),
+      vo = GB(2457),
+      so = GB(3506),
+      xo = GB(3508),
+      to = GB(3470);
+    const Bj = [Xo.v.yellow, Xo.v.green, Xo.v.aqua, Xo.v.blue, Xo.v.purple, Xo.v.red];
 
-    function yh(HH) {
-      return "needsRecipient" === HH || "lookingUp" === HH || "gift" === HH || "recipientOwns" === HH || "recipientSharesOwned" === HH || "recipientSubscribed" === HH
+    function Oj(BB) {
+      return "needsRecipient" === BB || "lookingUp" === BB || "gift" === BB || "recipientOwns" === BB || "recipientSharesOwned" === BB || "recipientSubscribed" === BB
     }
 
-    function Ht(HH) {
+    function Gj(BB) {
       const {
-        onKeyDown: BH,
-        ...LH
-      } = (0, CH.db)();
+        onKeyDown: OB,
+        ...GB
+      } = (0, JB.db)();
       return {
-        ...LH,
-        "aria-label": HH,
-        onKeyDown: HH => {
-          HH.target === HH.currentTarget && (null === BH || void 0 === BH || BH(HH))
+        ...GB,
+        "aria-label": BB,
+        onKeyDown: BB => {
+          BB.target === BB.currentTarget && (null === OB || void 0 === OB || OB(BB))
         }
       }
     }
 
-    function Bt(HH) {
+    function Yj(BB) {
       let {
-        text: BH
-      } = HH;
-      return (0, XH.jsx)("span", {
+        text: OB
+      } = BB;
+      return (0, PB.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(BH).map(((HH, BH) => (0, XH.jsx)("span", {
+        children: Array.from(OB).map(((BB, OB) => (0, PB.jsx)("span", {
           style: {
-            color: ph[BH % ph.length]
+            color: Bj[OB % Bj.length]
           },
-          children: HH
-        }, BH)))
+          children: BB
+        }, OB)))
       })
     }
-    const Lt = {
+    const Dj = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -6376,81 +6376,81 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function At(HH) {
+    function Qj(BB) {
       let {
-        state: BH,
-        item: LH,
-        price: AH,
-        busy: rH,
-        highlight: zH = !1,
-        secondary: EH = !1,
-        onAct: GH,
-        onNeedRecipient: YH,
-        onLogin: uH
-      } = HH;
+        state: OB,
+        item: GB,
+        price: YB,
+        busy: DB,
+        highlight: yB = !1,
+        secondary: MB = !1,
+        onAct: zB,
+        onNeedRecipient: lB,
+        onLogin: pB
+      } = BB;
       const {
-        t: QH
-      } = (0, hH.B)(), WH = "superRank" === LH ? (0, jH.v)(Date.now()).product.days : null, MH = "superRank" === LH && "hyper" === (0, jH.u)(Date.now()).look ? CH.B : CH.u, xH = EH ? CH.m : MH, vH = HH => null === WH ? QH(HH ? "general:gift" : "general:buy") : QH(HH ? "store:giftDays" : "store:buyDays", {
-        days: WH
-      }), PH = (HH, BH) => {
-        const LH = (0, XH.jsxs)(XH.Fragment, {
-          children: [null === HH && (0, XH.jsx)("span", {
+        t: qB
+      } = (0, oB.H)(), ZB = "superRank" === GB ? (0, EB.x)(Date.now()).product.days : null, NB = "superRank" === GB && "hyper" === (0, EB.u)(Date.now()).look ? JB.w : JB.q, RB = MB ? JB.j : NB, WB = BB => null === ZB ? qB(BB ? "general:gift" : "general:buy") : qB(BB ? "store:giftDays" : "store:buyDays", {
+        days: ZB
+      }), AB = (BB, OB) => {
+        const GB = (0, PB.jsxs)(PB.Fragment, {
+          children: [null === BB && (0, PB.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== HH && (0, XH.jsx)("span", {
+          }), null !== BB && (0, PB.jsx)("span", {
             className: "StoreCtaLabel",
-            title: HH,
-            children: HH
+            title: BB,
+            children: BB
           })]
         });
-        return null !== WH ? (0, XH.jsxs)(XH.Fragment, {
-          children: [BH && (0, XH.jsx)("span", {
+        return null !== ZB ? (0, PB.jsxs)(PB.Fragment, {
+          children: [OB && (0, PB.jsx)("span", {
             className: "StoreCtaIcon",
-            children: BH
-          }), LH, (0, XH.jsxs)("span", {
+            children: OB
+          }), GB, (0, PB.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, XH.jsx)(wh.e, {
-              amount: AH
+            children: ["\xb7", (0, PB.jsx)(bo.b, {
+              amount: YB
             })]
           })]
-        }) : (0, XH.jsxs)(XH.Fragment, {
-          children: [(0, XH.jsxs)("span", {
+        }) : (0, PB.jsxs)(PB.Fragment, {
+          children: [(0, PB.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [LH, "\xb7"]
-          }), (0, XH.jsxs)("span", {
+            children: [GB, "\xb7"]
+          }), (0, PB.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [BH, (0, XH.jsx)(wh.e, {
-              amount: AH
+            children: [OB, (0, PB.jsx)(bo.b, {
+              amount: YB
             })]
           })]
         })
       };
-      let TH;
-      switch (BH) {
+      let VB;
+      switch (OB) {
         case "pending":
-          TH = (0, XH.jsx)(MH, {
+          VB = (0, PB.jsx)(NB, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: PH(null)
+            children: AB(null)
           });
           break;
         case "login":
-          TH = (0, XH.jsx)(xH, {
+          VB = (0, PB.jsx)(RB, {
             className: "StoreCtaButton",
-            onClick: uH,
-            children: PH(vH(!1))
+            onClick: pB,
+            children: AB(WB(!1))
           });
           break;
         case "owned":
-          TH = (0, XH.jsx)(CH.m, {
+          VB = (0, PB.jsx)(JB.j, {
             className: "StoreCtaButton",
             onClick: () => {
-              (0, Dh.e)("store")
+              (0, To.e)("store")
             },
-            children: (0, XH.jsxs)("span", {
+            children: (0, PB.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "shirt"
-              }), " ", QH("store:equip")]
+              }), " ", qB("store:equip")]
             })
           });
           break;
@@ -6459,56 +6459,56 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          TH = (0, XH.jsx)(MH, {
+          VB = (0, PB.jsx)(NB, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, XH.jsx)("span", {
+            children: (0, PB.jsx)("span", {
               className: "StoreCtaLabel",
-              children: QH(Lt[BH])
+              children: qB(Dj[OB])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          TH = (0, XH.jsx)(MH, {
+          VB = (0, PB.jsx)(NB, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === BH || null === AH,
-            loading: "lookingUp" === BH || rH,
-            onClick: GH,
+            disabled: "needsRecipient" === OB || null === YB,
+            loading: "lookingUp" === OB || DB,
+            onClick: zB,
             analyticsClick: {
               id: "store.gift",
-              value: LH
+              value: GB
             },
-            children: PH(vH(!0), Oh.d)
+            children: AB(WB(!0), fo.e)
           });
           break;
         case "buy":
         case "recharge":
-          TH = (0, XH.jsx)(xH, {
+          VB = (0, PB.jsx)(RB, {
             className: "StoreCtaButton",
-            loading: rH,
-            disabled: null === AH,
-            onClick: GH,
+            loading: DB,
+            disabled: null === YB,
+            onClick: zB,
             analyticsClick: {
               id: "store.buy",
-              value: LH
+              value: GB
             },
-            children: PH(vH(!1))
+            children: AB(WB(!1))
           })
       }
-      return (0, XH.jsx)("div", {
-        className: SH()("StoreCta", {
-          StoreCtaHighlight: zH,
-          StoreCtaLabelFirst: null !== WH
+      return (0, PB.jsx)("div", {
+        className: QB()("StoreCta", {
+          StoreCtaHighlight: yB,
+          StoreCtaLabelFirst: null !== ZB
         }),
-        onClick: HH => {
-          HH.stopPropagation(), "needsRecipient" === BH && YH()
+        onClick: BB => {
+          BB.stopPropagation(), "needsRecipient" === OB && lB()
         },
-        children: TH
+        children: VB
       })
     }
-    const rt = {
+    const oj = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6516,483 +6516,483 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function St(HH) {
-      var BH;
+    function jj(BB) {
+      var OB;
       let {
-        pack: LH,
-        state: rH,
-        busy: zH,
-        onOpen: CH,
-        onAct: EH,
-        onNeedRecipient: GH,
-        onLogin: YH
-      } = HH;
+        pack: GB,
+        state: DB,
+        busy: yB,
+        onOpen: JB,
+        onAct: MB,
+        onNeedRecipient: zB,
+        onLogin: lB
+      } = BB;
       const {
-        t: uH
-      } = (0, hH.B)(), QH = Qh.b[LH], WH = Uh.j[LH], MH = (0, eh.m)(LH), xH = (0, AH.useRef)(null);
-      (0, sh.m)(LH, xH);
-      const vH = yh(rH),
-        PH = null !== (BH = QH.displayName) && void 0 !== BH ? BH : LH,
-        TH = (0, dh.c)((() => {
-          (0, Zh.f)();
-          const HH = (0, sh.g)(LH);
-          void 0 !== HH && (0, ah.g)((0, sh.e)(HH))
+        t: pB
+      } = (0, oB.H)(), qB = Zo.d[GB], ZB = no.k[GB], NB = (0, ro.o)(GB), RB = (0, YB.useRef)(null);
+      (0, so.i)(GB, RB);
+      const WB = Oj(DB),
+        AB = null !== (OB = qB.displayName) && void 0 !== OB ? OB : GB,
+        VB = (0, Ho.e)((() => {
+          (0, Co.f)();
+          const BB = (0, so.e)(GB);
+          void 0 !== BB && (0, vo.l)((0, so.c)(BB))
         })),
-        [UH] = (0, AH.useState)(Kh.l);
-      return (0, XH.jsxs)("div", {
-        className: SH()("StoreTile StorePackTile", rt[QH.tier], {
-          StorePackTileOwned: "owned" === rH,
-          StorePackTileRecipientOwns: "recipientOwns" === rH,
-          StoreTileGift: vH
+        [SB] = (0, YB.useState)(Lo.h);
+      return (0, PB.jsxs)("div", {
+        className: QB()("StoreTile StorePackTile", oj[qB.tier], {
+          StorePackTileOwned: "owned" === DB,
+          StorePackTileRecipientOwns: "recipientOwns" === DB,
+          StoreTileGift: WB
         }),
-        ...Ht(PH),
-        ref: xH,
-        "data-store-item": LH,
-        onClick: CH,
-        onPointerMove: HH => {
-          "mouse" !== HH.pointerType || 0 === HH.movementX && 0 === HH.movementY || UH || TH.start()
+        ...Gj(AB),
+        ref: RB,
+        "data-store-item": GB,
+        onClick: JB,
+        onPointerMove: BB => {
+          "mouse" !== BB.pointerType || 0 === BB.movementX && 0 === BB.movementY || SB || VB.start()
         },
-        onPointerLeave: TH.cancel,
-        children: [WH && (0, XH.jsx)(WH, {
+        onPointerLeave: VB.cancel,
+        children: [ZB && (0, PB.jsx)(ZB, {
           simple: !0
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "StorePackCharacters",
-          children: MH.map((HH => (0, XH.jsx)("div", {
+          children: NB.map((BB => (0, PB.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,eh.i)(HH)})`
+              backgroundImage: `url(${(0,ro.j)(BB)})`
             }
-          }, HH)))
-        }), (0, XH.jsx)("div", {
+          }, BB)))
+        }), (0, PB.jsx)("div", {
           className: "StoreTileScrim"
-        }), vH && (0, XH.jsx)("div", {
+        }), WB && (0, PB.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, XH.jsx)(ih.b, {
-          pack: LH,
-          className: SH()({
-            PackAnimatedBadgeBesideRibbon: vH
+        }), (0, PB.jsx)(to.c, {
+          pack: GB,
+          className: QB()({
+            PackAnimatedBadgeBesideRibbon: WB
           })
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "StoreTileTitle",
-            children: PH
-          }), (0, XH.jsxs)("div", {
+            children: AB
+          }), (0, PB.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, XH.jsx)(Jh.c, {
-              tier: QH.tier
-            }), " \xb7 ", uH("store:itemCount", {
-              count: (0, Yr.i)(LH)
-            }), "owned" === rH && (0, XH.jsxs)("span", {
+            children: [(0, PB.jsx)(xo.e, {
+              tier: qB.tier
+            }), " \xb7 ", pB("store:itemCount", {
+              count: (0, lD.i)(GB)
+            }), "owned" === DB && (0, PB.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, XH.jsx)(tH.c, {
+              children: [" \xb7 ", (0, PB.jsx)(jB.b, {
                 name: "check"
-              }), " ", uH("general:owned")]
+              }), " ", pB("general:owned")]
             })]
-          }), (0, XH.jsx)(At, {
-            state: rH,
-            item: LH,
-            price: (0, Wh.f)(LH),
-            busy: zH,
-            onAct: EH,
-            onNeedRecipient: GH,
-            onLogin: YH
+          }), (0, PB.jsx)(Qj, {
+            state: DB,
+            item: GB,
+            price: (0, No.c)(GB),
+            busy: yB,
+            onAct: MB,
+            onNeedRecipient: zB,
+            onLogin: lB
           })]
         })]
       })
     }
-    var ht = LH(3966),
-      tt = LH(3467),
-      zt = LH(4674),
-      Ct = LH(3991);
-    const Et = {
-      cape: RH.e.cape
+    var yj = GB(4024),
+      Jj = GB(3534),
+      Mj = GB(4684),
+      Pj = GB(4056);
+    const zj = {
+      cape: wB.f.cape
     };
 
-    function Xt(HH) {
-      var BH, LH;
+    function lj(BB) {
+      var OB, GB;
       let {
-        wearer: rH,
-        active: tH,
-        tryOn: zH = Et,
-        className: CH
-      } = HH;
+        wearer: DB,
+        active: jB,
+        tryOn: yB = zj,
+        className: JB
+      } = BB;
       const {
-        t: EH
-      } = (0, hH.B)(), GH = (0, AH.useRef)(null), [YH] = (0, AH.useState)(Kh.l), uH = function(HH) {
-        const [BH, LH] = (0, AH.useState)(!1);
-        return (0, AH.useEffect)((() => {
-          const BH = new IntersectionObserver((HH => {
-            LH(HH[HH.length - 1].isIntersecting)
+        t: MB
+      } = (0, oB.H)(), zB = (0, YB.useRef)(null), [lB] = (0, YB.useState)(Lo.h), pB = function(BB) {
+        const [OB, GB] = (0, YB.useState)(!1);
+        return (0, YB.useEffect)((() => {
+          const OB = new IntersectionObserver((BB => {
+            GB(BB[BB.length - 1].isIntersecting)
           }));
-          return BH.observe(HH.current), () => {
-            BH.disconnect()
+          return OB.observe(BB.current), () => {
+            OB.disconnect()
           }
-        }), [HH]), BH
-      }(GH), QH = (0, Ct.f)("storeRank"), WH = null !== (BH = rH.name) && void 0 !== BH ? BH : EH(rH.gift ? "store:hyperWearerFriend" : "store:hyperWearerYou"), MH = null !== (LH = rH.cosmetics) && void 0 !== LH ? LH : {}, xH = `${WH}|${JSON.stringify(MH)}`, vH = tH && uH && !YH && !QH, [PH, TH] = (0, AH.useState)(null);
-      vH || null === PH || TH(null);
-      const UH = vH && PH === xH;
-      return (0, XH.jsxs)("div", {
-        ref: GH,
-        className: SH()("HyperRankStage", CH, {
-          HyperRankStageDrawn: UH
+        }), [BB]), OB
+      }(zB), qB = (0, Pj.e)("storeRank"), ZB = null !== (OB = DB.name) && void 0 !== OB ? OB : MB(DB.gift ? "store:hyperWearerFriend" : "store:hyperWearerYou"), NB = null !== (GB = DB.cosmetics) && void 0 !== GB ? GB : {}, RB = `${ZB}|${JSON.stringify(NB)}`, WB = jB && pB && !lB && !qB, [AB, VB] = (0, YB.useState)(null);
+      WB || null === AB || VB(null);
+      const SB = WB && AB === RB;
+      return (0, PB.jsxs)("div", {
+        ref: zB,
+        className: QB()("HyperRankStage", JB, {
+          HyperRankStageDrawn: SB
         }),
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "HyperRankStageGlow"
-        }), (0, XH.jsx)(jH.b, {
+        }), (0, PB.jsx)(EB.c, {
           className: "HyperRankStageStandIn"
-        }), vH && (0, XH.jsx)(Gt, {
-          name: WH,
-          cosmetics: MH,
-          tryOn: zH,
+        }), WB && (0, PB.jsx)(pj, {
+          name: ZB,
+          cosmetics: NB,
+          tryOn: yB,
           onDrawn: () => {
-            TH(xH)
+            VB(RB)
           }
-        }, xH), (0, XH.jsx)("div", {
+        }, RB), (0, PB.jsx)("div", {
           className: "HyperRankStageFloor"
         })]
       })
     }
 
-    function Gt(HH) {
+    function pj(BB) {
       let {
-        name: BH,
-        cosmetics: LH,
-        tryOn: rH,
-        onDrawn: SH
-      } = HH;
-      const hH = (0, AH.useRef)(null),
-        tH = (0, AH.useMemo)((() => {
-          var HH;
+        name: OB,
+        cosmetics: GB,
+        tryOn: DB,
+        onDrawn: QB
+      } = BB;
+      const oB = (0, YB.useRef)(null),
+        jB = (0, YB.useMemo)((() => {
+          var BB;
           return {
-            name: BH,
-            ranks: [RH.e.rank],
-            nameColour: null !== (HH = LH.nameColour) && void 0 !== HH ? HH : qh.c
+            name: OB,
+            ranks: [wB.f.rank],
+            nameColour: null !== (BB = GB.nameColour) && void 0 !== BB ? BB : Xo.b
           }
-        }), [BH, LH.nameColour]);
-      return (0, XH.jsx)("div", {
+        }), [OB, GB.nameColour]);
+      return (0, PB.jsx)("div", {
         className: "HyperRankStageLive",
-        children: (0, XH.jsx)(AH.Suspense, {
+        children: (0, PB.jsx)(YB.Suspense, {
           fallback: null,
-          children: (0, XH.jsx)(Zh.b, {
-            ref: hH,
+          children: (0, PB.jsx)(Co.b, {
+            ref: oB,
             owner: "storeRank",
             framing: "store",
-            forcedCosmetics: rH,
-            nametag: tH,
+            forcedCosmetics: DB,
+            nametag: jB,
             onReady: () => {
-              var HH;
-              null === (HH = hH.current) || void 0 === HH || HH.setAllCosmetics(LH)
+              var BB;
+              null === (BB = oB.current) || void 0 === BB || BB.setAllCosmetics(GB)
             },
-            onDrawn: SH
+            onDrawn: QB
           })
         })
       })
     }
-    var Yt = LH(4683);
+    var qj = GB(4688);
 
-    function ut(HH) {
-      var BH;
-      return null !== (BH = (0, Gr.k)(HH)) && void 0 !== BH ? BH : Gr.o[Gr.o.length - 1]
+    function Zj(BB) {
+      var OB;
+      return null !== (OB = (0, zD.h)(BB)) && void 0 !== OB ? OB : zD.m[zD.m.length - 1]
     }
 
-    function Qt(HH, BH) {
-      return HH.tiers.flatMap((HH => {
-        var LH;
-        return null !== (LH = HH[BH]) && void 0 !== LH ? LH : []
+    function Nj(BB, OB) {
+      return BB.tiers.flatMap((BB => {
+        var GB;
+        return null !== (GB = BB[OB]) && void 0 !== GB ? GB : []
       }))
     }
 
-    function Wt(HH) {
-      return Qt(HH, "hyper").filter((HH => "cosmetic" === HH.kind))
+    function Rj(BB) {
+      return Nj(BB, "hyper").filter((BB => "cosmetic" === BB.kind))
     }
 
-    function Mt(HH, BH) {
-      const LH = Qt(HH, BH).find((HH => "xpBoost" === HH.kind));
-      return "xpBoost" === (null === LH || void 0 === LH ? void 0 : LH.kind) ? LH : null
+    function Wj(BB, OB) {
+      const GB = Nj(BB, OB).find((BB => "xpBoost" === BB.kind));
+      return "xpBoost" === (null === GB || void 0 === GB ? void 0 : GB.kind) ? GB : null
     }
 
-    function xt(HH) {
+    function Aj(BB) {
       return [{
         id: "colourfulNames",
         icon: "palette",
-        title: (0, XH.jsx)(Bt, {
-          text: HH("store:colourfulNames")
+        title: (0, PB.jsx)(Yj, {
+          text: BB("store:colourfulNames")
         }),
-        detail: HH("store:perkColourfulNamesDetail")
+        detail: BB("store:perkColourfulNamesDetail")
       }, {
         id: "capes",
         icon: "shirt",
-        title: HH("store:perkCapes"),
-        detail: HH("store:perkCapesDetail")
+        title: BB("store:perkCapes"),
+        detail: BB("store:perkCapesDetail")
       }, {
         id: "nametag",
         icon: "user",
-        title: HH("store:perkNametag", {
-          rank: HH((0, jH.o)(RH.e.id).nameKey)
+        title: BB("store:perkNametag", {
+          rank: BB((0, EB.m)(wB.f.id).nameKey)
         }),
-        detail: HH("store:perkNametagDetail")
+        detail: BB("store:perkNametagDetail")
       }, {
         id: "noAdverts",
         icon: "eye-slash",
-        title: HH("store:perkNoAdverts"),
-        detail: HH("store:perkNoAdvertsDetail")
+        title: BB("store:perkNoAdverts"),
+        detail: BB("store:perkNoAdvertsDetail")
       }, {
         id: "friends",
         icon: "user-group",
-        title: HH("store:perkFriends", {
-          count: (0, uB.b)([RH.e.rank])
+        title: BB("store:perkFriends", {
+          count: (0, pO.e)([wB.f.rank])
         }),
-        detail: HH("store:perkFriendsDetail", {
-          count: (0, uB.b)([])
+        detail: BB("store:perkFriendsDetail", {
+          count: (0, pO.e)([])
         })
       }]
     }
 
-    function vt() {
+    function Vj() {
       const {
-        t: HH
-      } = (0, hH.B)(), BH = [{
+        t: BB
+      } = (0, oB.H)(), OB = [{
         id: "battlePass",
         icon: "crown",
-        title: HH("store:perkBattlePassTrack")
-      }, ...xt(HH)];
-      return (0, XH.jsx)("ul", {
+        title: BB("store:perkBattlePassTrack")
+      }, ...Aj(BB)];
+      return (0, PB.jsx)("ul", {
         className: "HyperRankTilePerks",
-        children: BH.map((HH => (0, XH.jsxs)("li", {
-          children: [(0, XH.jsx)("span", {
+        children: OB.map((BB => (0, PB.jsxs)("li", {
+          children: [(0, PB.jsx)("span", {
             className: "HyperRankPerkIcon",
-            children: (0, XH.jsx)(tH.c, {
-              name: HH.icon
+            children: (0, PB.jsx)(jB.b, {
+              name: BB.icon
             })
-          }), HH.title]
-        }, HH.id)))
+          }), BB.title]
+        }, BB.id)))
       })
     }
 
-    function Pt() {
+    function Sj() {
       const {
-        t: HH
-      } = (0, hH.B)();
-      return (0, XH.jsxs)("div", {
+        t: BB
+      } = (0, oB.H)();
+      return (0, PB.jsxs)("div", {
         className: "HyperRankPerkTiles",
-        children: [(0, XH.jsx)(Tt, {}), xt(HH).map((HH => (0, XH.jsxs)("div", {
+        children: [(0, PB.jsx)(nj, {}), Aj(BB).map((BB => (0, PB.jsxs)("div", {
           className: "HyperRankPerkTile",
-          children: [(0, XH.jsx)("span", {
+          children: [(0, PB.jsx)("span", {
             className: "HyperRankPerkIcon",
-            children: (0, XH.jsx)(tH.c, {
-              name: HH.icon
+            children: (0, PB.jsx)(jB.b, {
+              name: BB.icon
             })
-          }), (0, XH.jsxs)("div", {
+          }), (0, PB.jsxs)("div", {
             className: "HyperRankPerkText",
-            children: [(0, XH.jsx)("b", {
-              children: HH.title
-            }), (0, XH.jsx)("small", {
-              children: HH.detail
+            children: [(0, PB.jsx)("b", {
+              children: BB.title
+            }), (0, PB.jsx)("small", {
+              children: BB.detail
             })]
           })]
-        }, HH.id)))]
+        }, BB.id)))]
       })
     }
 
-    function Tt() {
+    function nj() {
       const {
-        t: HH,
-        selectedLanguage: BH
-      } = (0, hH.B)(), LH = ut(Date.now()), AH = Wt(LH), rH = function(HH) {
-        return Wt(HH).filter((HH => null !== (0, zt.r)(HH) || null !== (0, zt.t)(HH))).reverse()
-      }(LH).slice(0, 4), SH = Mt(LH, "hyper"), zH = Mt(LH, "free"), CH = (0, hH.h)(BH.code, "store:battlePassTiersEnds", LH.endsAtMs, {
+        t: BB,
+        selectedLanguage: OB
+      } = (0, oB.H)(), GB = Zj(Date.now()), YB = Rj(GB), DB = function(BB) {
+        return Rj(BB).filter((BB => null !== (0, Mj.o)(BB) || null !== (0, Mj.s)(BB))).reverse()
+      }(GB).slice(0, 4), QB = Wj(GB, "hyper"), yB = Wj(GB, "free"), JB = (0, oB.f)(OB.code, "store:battlePassTiersEnds", GB.endsAtMs, {
         month: "long",
         day: "numeric"
       });
-      return (0, XH.jsxs)("div", {
+      return (0, PB.jsxs)("div", {
         className: "HyperRankPerkTile HyperRankBattlePassPerk",
-        children: [(0, XH.jsx)("span", {
+        children: [(0, PB.jsx)("span", {
           className: "HyperRankPerkIcon",
-          children: (0, XH.jsx)(tH.c, {
+          children: (0, PB.jsx)(jB.b, {
             name: "crown"
           })
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "HyperRankPerkText",
-          children: [(0, XH.jsx)("b", {
-            children: HH("store:battlePassSeason", {
-              season: LH.seasonNumber
+          children: [(0, PB.jsx)("b", {
+            children: BB("store:battlePassSeason", {
+              season: GB.seasonNumber
             })
-          }), (0, XH.jsx)("small", {
-            children: HH("store:battlePassTiersEnds", {
-              tiers: LH.tierCount,
-              date: CH
+          }), (0, PB.jsx)("small", {
+            children: BB("store:battlePassTiersEnds", {
+              tiers: GB.tierCount,
+              date: JB
             })
           })]
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "HyperRankBattlePassRewards",
-          children: [(0, XH.jsx)("span", {
+          children: [(0, PB.jsx)("span", {
             className: "HyperRankBattlePassCount",
-            children: 1 === AH.length ? HH("store:battlePassOneCosmetic") : HH("store:battlePassCosmetics", {
-              count: AH.length
+            children: 1 === YB.length ? BB("store:battlePassOneCosmetic") : BB("store:battlePassCosmetics", {
+              count: YB.length
             })
-          }), (0, XH.jsxs)("div", {
+          }), (0, PB.jsxs)("div", {
             className: "HyperRankBattlePassFeatured",
-            children: [rH.map((BH => (0, XH.jsx)("span", {
+            children: [DB.map((OB => (0, PB.jsx)("span", {
               className: "HyperRankBattlePassReward",
-              title: (0, zt.k)(BH, HH),
-              children: (0, XH.jsx)(Yt.b, {
-                reward: BH
+              title: (0, Mj.g)(OB, BB),
+              children: (0, PB.jsx)(qj.c, {
+                reward: OB
               })
-            }, BH.id))), AH.length > rH.length && (0, XH.jsx)("span", {
+            }, OB.id))), YB.length > DB.length && (0, PB.jsx)("span", {
               className: "HyperRankBattlePassReward HyperRankBattlePassMore",
-              children: HH("store:battlePassMore", {
-                count: AH.length - rH.length
+              children: BB("store:battlePassMore", {
+                count: YB.length - DB.length
               })
             })]
           })]
-        }), (0, XH.jsxs)("ul", {
+        }), (0, PB.jsxs)("ul", {
           className: "HyperRankBattlePassFacts",
-          children: [SH && zH && (0, XH.jsxs)("li", {
-            children: [(0, XH.jsx)(tH.c, {
+          children: [QB && yB && (0, PB.jsxs)("li", {
+            children: [(0, PB.jsx)(jB.b, {
               name: "angles-up"
-            }), HH("store:battlePassXp", {
-              multiplier: SH.multiplier,
-              minutes: SH.minutes,
-              freeMinutes: zH.minutes
+            }), BB("store:battlePassXp", {
+              multiplier: QB.multiplier,
+              minutes: QB.minutes,
+              freeMinutes: yB.minutes
             })]
-          }), (0, XH.jsxs)("li", {
-            children: [(0, XH.jsx)(tH.c, {
+          }), (0, PB.jsxs)("li", {
+            children: [(0, PB.jsx)(jB.b, {
               name: "lock-open"
-            }), HH("store:battlePassUnlockAtOnce")]
+            }), BB("store:battlePassUnlockAtOnce")]
           })]
         })]
       })
     }
 
-    function Ut(HH, BH) {
-      return Object.keys(HH.cosmetics).some((HH => HH in BH.cosmetics))
+    function Uj(BB, OB) {
+      return Object.keys(BB.cosmetics).some((BB => BB in OB.cosmetics))
     }
 
-    function Vt(HH) {
+    function fj(BB) {
       let {
-        wearer: BH
-      } = HH;
+        wearer: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)(), rH = (0, AH.useMemo)((() => function(HH) {
-        const BH = ut(Date.now()).tiers.flatMap((BH => {
-          const LH = BH.hyper;
-          if ("cosmetic" !== (null === LH || void 0 === LH ? void 0 : LH.kind) || "profileEffect" === LH.cosmeticKind || "pet" === LH.cosmeticKind || null === (0, zt.r)(LH)) return [];
-          const AH = (0, zt.q)(LH);
-          return null !== AH && Object.keys(AH.cosmetics).length > 0 ? [{
-            id: LH.id,
-            label: (0, zt.k)(LH, HH),
-            cosmetics: AH.cosmetics
+        t: GB
+      } = (0, oB.H)(), DB = (0, YB.useMemo)((() => function(BB) {
+        const OB = Zj(Date.now()).tiers.flatMap((OB => {
+          const GB = OB.hyper;
+          if ("cosmetic" !== (null === GB || void 0 === GB ? void 0 : GB.kind) || "profileEffect" === GB.cosmeticKind || "pet" === GB.cosmeticKind || null === (0, Mj.o)(GB)) return [];
+          const YB = (0, Mj.l)(GB);
+          return null !== YB && Object.keys(YB.cosmetics).length > 0 ? [{
+            id: GB.id,
+            label: (0, Mj.g)(GB, BB),
+            cosmetics: YB.cosmetics
           }] : []
         }));
         return [{
           id: "cape",
-          label: HH("store:tryOnCape"),
+          label: BB("store:tryOnCape"),
           cosmetics: {
-            cape: RH.e.cape
+            cape: wB.f.cape
           }
-        }, ...BH.reverse().slice(0, 3)]
-      }(LH)), [LH]), [tH, zH] = (0, AH.useState)((() => {
-        const [HH, ...BH] = rH, LH = BH.find((BH => !Ut(BH, HH)));
-        return new Set([HH.id, ...LH ? [LH.id] : []])
-      })), CH = (0, AH.useMemo)((() => {
-        const HH = {};
-        for (const BH of rH) tH.has(BH.id) && Object.assign(HH, BH.cosmetics);
-        return HH
-      }), [rH, tH]);
-      return (0, XH.jsxs)("div", {
+        }, ...OB.reverse().slice(0, 3)]
+      }(GB)), [GB]), [jB, yB] = (0, YB.useState)((() => {
+        const [BB, ...OB] = DB, GB = OB.find((OB => !Uj(OB, BB)));
+        return new Set([BB.id, ...GB ? [GB.id] : []])
+      })), JB = (0, YB.useMemo)((() => {
+        const BB = {};
+        for (const OB of DB) jB.has(OB.id) && Object.assign(BB, OB.cosmetics);
+        return BB
+      }), [DB, jB]);
+      return (0, PB.jsxs)("div", {
         className: "HyperRankShowcase",
-        children: [(0, XH.jsx)(Xt, {
+        children: [(0, PB.jsx)(lj, {
           className: "HyperRankShowcaseStage",
-          wearer: BH,
+          wearer: OB,
           active: !0,
-          tryOn: CH
-        }), (0, XH.jsx)("div", {
+          tryOn: JB
+        }), (0, PB.jsx)("div", {
           className: "HyperRankTryOn",
-          children: rH.map((HH => {
-            const BH = tH.has(HH.id);
-            return (0, XH.jsx)("button", {
+          children: DB.map((BB => {
+            const OB = jB.has(BB.id);
+            return (0, PB.jsx)("button", {
               type: "button",
-              className: SH()("HyperRankTryOnChip", {
-                HyperRankTryOnChipOn: BH
+              className: QB()("HyperRankTryOnChip", {
+                HyperRankTryOnChipOn: OB
               }),
-              title: HH.label,
-              "aria-pressed": BH,
-              "data-pad-key": `tryOn:${HH.id}`,
-              ...(0, WB.getAnalyticsClickAttributes)({
+              title: BB.label,
+              "aria-pressed": OB,
+              "data-pad-key": `tryOn:${BB.id}`,
+              ...(0, ZO.getAnalyticsClickAttributes)({
                 id: "store.try_on",
-                value: `${BH?"off":"on"}:${HH.id}`
+                value: `${OB?"off":"on"}:${BB.id}`
               }),
               onClick: () => {
-                zH((BH => {
-                  if (BH.has(HH.id)) {
-                    const LH = new Set(BH);
-                    return LH.delete(HH.id), LH
+                yB((OB => {
+                  if (OB.has(BB.id)) {
+                    const GB = new Set(OB);
+                    return GB.delete(BB.id), GB
                   }
-                  return new Set([HH.id, ...rH.filter((LH => BH.has(LH.id) && !Ut(LH, HH))).map((HH => HH.id))])
+                  return new Set([BB.id, ...DB.filter((GB => OB.has(GB.id) && !Uj(GB, BB))).map((BB => BB.id))])
                 }))
               },
-              children: HH.label
-            }, HH.id)
+              children: BB.label
+            }, BB.id)
           }))
         })]
       })
     }
-    const Ot = LH.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    const kj = GB.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function bt() {
-      (0, ah.g)(Ot, {
+    function dj() {
+      (0, vo.l)(kj, {
         lowPriority: !1
       })
     }
 
-    function kt() {
+    function Kj() {
       const {
-        t: HH
-      } = (0, hH.B)(), [BH, LH] = (0, AH.useState)("starting"), rH = (0, AH.useRef)(null), SH = (0, EL.c)(), zH = (0, AH.useRef)(null), EH = (0, AH.useCallback)((() => {
-        const HH = rH.current;
-        null !== HH.error && HH.load();
-        const BH = HH.play();
-        zH.current = BH, BH.catch((HH => {
-          (0, ht.b)("Failed to play Super Rank video", HH), SH.current && zH.current === BH && LH("failed")
+        t: BB
+      } = (0, oB.H)(), [OB, GB] = (0, YB.useState)("starting"), DB = (0, YB.useRef)(null), QB = (0, MG.c)(), yB = (0, YB.useRef)(null), MB = (0, YB.useCallback)((() => {
+        const BB = DB.current;
+        null !== BB.error && BB.load();
+        const OB = BB.play();
+        yB.current = OB, OB.catch((BB => {
+          (0, yj.d)("Failed to play Super Rank video", BB), QB.current && yB.current === OB && GB("failed")
         }))
-      }), [SH]);
-      return (0, AH.useEffect)((() => {
-        const HH = rH.current;
-        let BH;
+      }), [QB]);
+      return (0, YB.useEffect)((() => {
+        const BB = DB.current;
+        let OB;
 
-        function LH() {
-          clearTimeout(BH), BH = setTimeout(EH, 3e3)
+        function GB() {
+          clearTimeout(OB), OB = setTimeout(MB, 3e3)
         }
-        return EH(), HH.addEventListener("ended", LH), () => {
-          clearTimeout(BH), HH.removeEventListener("ended", LH)
+        return MB(), BB.addEventListener("ended", GB), () => {
+          clearTimeout(OB), BB.removeEventListener("ended", GB)
         }
-      }), [EH]), (0, XH.jsxs)("div", {
+      }), [MB]), (0, PB.jsxs)("div", {
         className: "StoreSuperRankVideo",
-        children: [(0, XH.jsx)("video", {
-          ref: rH,
-          src: `${oB.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-          poster: Ot,
+        children: [(0, PB.jsx)("video", {
+          ref: DB,
+          src: `${KO.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+          poster: kj,
           muted: !0,
           playsInline: !0,
-          controls: "playing" === BH,
+          controls: "playing" === OB,
           onPlaying: () => {
-            LH("playing")
+            GB("playing")
           },
           onError: () => {
-            LH("failed")
+            GB("failed")
           }
-        }), ("failed" === BH || "loading" === BH) && (0, XH.jsx)("div", {
+        }), ("failed" === OB || "loading" === OB) && (0, PB.jsx)("div", {
           className: "StoreSuperRankPlay",
-          children: (0, XH.jsx)(CH.i, {
-            ariaLabel: HH("general:play"),
-            loading: "loading" === BH,
+          children: (0, PB.jsx)(JB.f, {
+            ariaLabel: BB("general:play"),
+            loading: "loading" === OB,
             onClick: () => {
-              LH("loading"), EH()
+              GB("loading"), MB()
             },
             touchPressOn: "pointerup",
-            children: (0, XH.jsx)(tH.c, {
+            children: (0, PB.jsx)(jB.b, {
               name: "play"
             })
           })
@@ -7000,118 +7000,118 @@ export const modules = {
       })
     }
 
-    function mt(HH) {
+    function uj(BB) {
       let {
-        tierId: BH,
-        wearer: LH,
-        onBack: AH,
-        cta: rH,
-        recipient: tH,
-        afterCta: zH
-      } = HH;
+        tierId: OB,
+        wearer: GB,
+        onBack: YB,
+        cta: DB,
+        recipient: jB,
+        afterCta: yB
+      } = BB;
       const {
-        t: EH
-      } = (0, hH.B)(), GH = "hyper" === (0, jH.o)(BH).look;
-      return (0, XH.jsxs)("div", {
-        className: SH()("StoreSuperRankDetail", {
-          StoreHyperRankDetail: GH
+        t: MB
+      } = (0, oB.H)(), zB = "hyper" === (0, EB.m)(OB).look;
+      return (0, PB.jsxs)("div", {
+        className: QB()("StoreSuperRankDetail", {
+          StoreHyperRankDetail: zB
         }),
-        children: [(0, XH.jsxs)("div", {
+        children: [(0, PB.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, XH.jsx)(CH.e, {
+          children: [(0, PB.jsx)(JB.c, {
             className: "StoreDetailBackButton",
-            onClick: AH,
+            onClick: YB,
             padBack: !0,
-            children: EH("general:back")
-          }), (0, XH.jsx)("div", {
+            children: MB("general:back")
+          }), (0, PB.jsx)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: (0, XH.jsx)(jH.i, {
-              tierId: BH
+            children: (0, PB.jsx)(EB.h, {
+              tierId: OB
             })
-          }), tH]
-        }), (0, XH.jsxs)("div", {
+          }), jB]
+        }), (0, PB.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [GH && (0, XH.jsx)(Vt, {
-            wearer: LH
-          }), !GH && (0, XH.jsx)(kt, {}), (0, XH.jsxs)("div", {
+          children: [zB && (0, PB.jsx)(fj, {
+            wearer: GB
+          }), !zB && (0, PB.jsx)(Kj, {}), (0, PB.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [GH && (0, XH.jsx)(Pt, {}), !GH && (0, XH.jsx)("div", {
+            children: [zB && (0, PB.jsx)(Sj, {}), !zB && (0, PB.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, XH.jsx)(tt.e, {
-                tierId: BH
+              children: (0, PB.jsx)(Jj.b, {
+                tierId: OB
               })
-            }), (0, XH.jsxs)("div", {
+            }), (0, PB.jsxs)("div", {
               className: "StoreTileActions",
-              children: [rH, zH]
+              children: [DB, yB]
             })]
           })]
         })]
       })
     }
-    var ot = LH(3401);
+    var mj = GB(3458);
 
-    function It(HH) {
+    function Ij(BB) {
       let {
-        price: BH,
-        perks: LH
-      } = HH;
+        price: OB,
+        perks: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)();
-      return (0, XH.jsxs)("div", {
+        t: YB
+      } = (0, oB.H)();
+      return (0, PB.jsxs)("div", {
         className: "StoreSubscriptionTerms",
-        children: [LH, (0, XH.jsx)("div", {
+        children: [GB, (0, PB.jsx)("div", {
           className: "SmallTextLight",
-          children: AH("payments:subscriptionRenewsMonthly", {
-            price: BH
+          children: YB("payments:subscriptionRenewsMonthly", {
+            price: OB
           })
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "StoreSubscriptionTermsLinks SmallTextLight",
-          children: [(0, XH.jsx)("a", {
+          children: [(0, PB.jsx)("a", {
             href: "/terms-of-service",
             target: "_blank",
             rel: "noreferrer",
-            children: AH("homePage:termsOfService")
-          }), (0, XH.jsx)("a", {
+            children: YB("homePage:termsOfService")
+          }), (0, PB.jsx)("a", {
             href: "/privacy-policy",
             target: "_blank",
             rel: "noreferrer",
-            children: AH("homePage:privacyPolicy")
+            children: YB("homePage:privacyPolicy")
           })]
         })]
       })
     }
-    var ft = LH(3422),
-      lt = LH(3426),
-      Kt = LH(3356);
+    var Fj = GB(3483),
+      ij = GB(3488),
+      Lj = GB(3409);
 
-    function ct(HH) {
+    function gj(BB) {
       const {
-        userContext: BH
-      } = (0, uH.e)(), {
-        purchaseUnderWay: LH,
-        notice: rH,
-        subscribe: SH
-      } = (0, Kt.c)(), [hH, tH] = (0, AH.useState)(null), [zH, CH] = (0, AH.useState)(0), EH = (0, EL.c)(), XH = BH !== oH.NULL_USER_CONTEXT, GH = XH && (BH.mayBuy() || (0, DH.guestsMayBuy)()), YH = null !== hH && hH.loadedFor === BH ? hH.offer : null, QH = null === rH || void 0 === rH ? void 0 : rH.pendingIntentId, WH = (0, AH.useRef)(QH);
+        userContext: OB
+      } = (0, pB.d)(), {
+        purchaseUnderWay: GB,
+        notice: DB,
+        subscribe: QB
+      } = (0, Lj.c)(), [oB, jB] = (0, YB.useState)(null), [yB, JB] = (0, YB.useState)(0), MB = (0, MG.c)(), PB = OB !== KB.NULL_USER_CONTEXT, zB = PB && (OB.mayBuy() || (0, aB.guestsMayBuy)()), lB = null !== oB && oB.loadedFor === OB ? oB.offer : null, qB = null === DB || void 0 === DB ? void 0 : DB.pendingIntentId, ZB = (0, YB.useRef)(qB);
 
-      function MH() {
-        CH((HH => HH + 1))
+      function NB() {
+        JB((BB => BB + 1))
       }
-      return (0, AH.useEffect)((() => {
-        void 0 !== WH.current && void 0 === QH && MH(), WH.current = QH
-      }), [QH]), (0, AH.useEffect)((() => {
-        if (!XH) return;
-        let LH = !1;
-        return async function(HH, BH) {
+      return (0, YB.useEffect)((() => {
+        void 0 !== ZB.current && void 0 === qB && NB(), ZB.current = qB
+      }), [qB]), (0, YB.useEffect)((() => {
+        if (!PB) return;
+        let GB = !1;
+        return async function(BB, OB) {
           const {
-            offering: LH
-          } = await (0, yH.getBillingClient)().getOfferings(HH), AH = null === LH || void 0 === LH ? void 0 : LH.packages.find(pH.isPricedPackage);
-          if (void 0 === AH) return {
+            offering: GB
+          } = await (0, tB.getBillingClient)().getOfferings(BB), YB = null === GB || void 0 === GB ? void 0 : GB.packages.find(xB.isPricedPackage);
+          if (void 0 === YB) return {
             kind: "unavailable"
           };
-          if (!BH) return {
+          if (!OB) return {
             kind: "loaded",
-            pkg: AH,
+            pkg: YB,
             preview: {
               kind: "none"
             }
@@ -7119,70 +7119,70 @@ export const modules = {
           try {
             return {
               kind: "loaded",
-              pkg: AH,
-              preview: await (0, lt.f)(AH.productId)
+              pkg: YB,
+              preview: await (0, ij.c)(YB.productId)
             }
-          } catch (rH) {
-            if ((0, lt.j)(rH)) return {
+          } catch (DB) {
+            if ((0, ij.e)(DB)) return {
               kind: "unavailable"
             };
-            throw rH
+            throw DB
           }
-        }(HH, GH).catch((BH => (console.error(`Billing: loading the ${HH} subscription or its preview failed:`, BH), {
+        }(BB, zB).catch((OB => (console.error(`Billing: loading the ${BB} subscription or its preview failed:`, OB), {
           kind: "loadFailed"
-        }))).then((HH => {
-          LH || tH((LH => "loadFailed" === HH.kind && (null === LH || void 0 === LH ? void 0 : LH.loadedFor) === BH ? LH : {
-            loadedFor: BH,
-            offer: HH
+        }))).then((BB => {
+          GB || jB((GB => "loadFailed" === BB.kind && (null === GB || void 0 === GB ? void 0 : GB.loadedFor) === OB ? GB : {
+            loadedFor: OB,
+            offer: BB
           }))
         })), () => {
-          LH = !0
+          GB = !0
         }
-      }), [HH, BH, XH, GH, zH]), {
-        offer: YH,
-        purchaseUnderWay: LH,
-        notice: rH,
-        pendingIntentId: QH,
-        mountedRef: EH,
-        checkOut: async function(HH) {
-          const LH = await SH(HH);
-          EH.current && ("unknownPackage" === LH.kind && tH({
-            loadedFor: BH,
+      }), [BB, OB, PB, zB, yB]), {
+        offer: lB,
+        purchaseUnderWay: GB,
+        notice: DB,
+        pendingIntentId: qB,
+        mountedRef: MB,
+        checkOut: async function(BB) {
+          const GB = await QB(BB);
+          MB.current && ("unknownPackage" === GB.kind && jB({
+            loadedFor: OB,
             offer: {
               kind: "unavailable"
             }
-          }), MH())
+          }), NB())
         }
       }
     }
 
-    function et(HH) {
+    function rj(BB) {
       let {
-        onOfferedChange: BH
-      } = HH;
-      return (0, DH.usePurchasesAllowed)() && (0, DH.subscriptionsSold)() ? (0, XH.jsx)(qt, {
-        onOfferedChange: BH
+        onOfferedChange: OB
+      } = BB;
+      return (0, aB.usePurchasesAllowed)() && (0, aB.subscriptionsSold)() ? (0, PB.jsx)(Xj, {
+        onOfferedChange: OB
       }) : null
     }
 
-    function qt(HH) {
+    function Xj(BB) {
       let {
-        onOfferedChange: BH
-      } = HH;
+        onOfferedChange: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)(), {
-        offer: rH,
-        purchaseUnderWay: SH,
-        notice: tH,
-        pendingIntentId: zH,
-        mountedRef: EH,
-        checkOut: GH
-      } = ct((0, jH.o)(RH.e.id).placementId), [YH, uH] = (0, AH.useState)(!1), QH = null === rH || "loaded" === rH.kind && "refused" !== rH.preview.kind;
-      if ((0, AH.useEffect)((() => {
-          BH(QH)
-        }), [QH]), null === rH || "unavailable" === rH.kind) return null;
-      if ("loadFailed" === rH.kind) return (0, XH.jsx)(ot.e, {
+        t: GB
+      } = (0, oB.H)(), {
+        offer: DB,
+        purchaseUnderWay: QB,
+        notice: jB,
+        pendingIntentId: yB,
+        mountedRef: MB,
+        checkOut: zB
+      } = gj((0, EB.m)(wB.f.id).placementId), [lB, pB] = (0, YB.useState)(!1), qB = null === DB || "loaded" === DB.kind && "refused" !== DB.preview.kind;
+      if ((0, YB.useEffect)((() => {
+          OB(qB)
+        }), [qB]), null === DB || "unavailable" === DB.kind) return null;
+      if ("loadFailed" === DB.kind) return (0, PB.jsx)(mj.i, {
         notice: {
           kind: "error",
           key: "payments:subscriptionLoadFailed"
@@ -7190,585 +7190,593 @@ export const modules = {
         className: "StoreSubscribe SmallTextBold"
       });
       const {
-        pkg: WH,
-        preview: xH
-      } = rH;
-      if ("refused" === xH.kind) return (0, XH.jsx)(ot.e, {
+        pkg: ZB,
+        preview: RB
+      } = DB;
+      if ("refused" === RB.kind) return (0, PB.jsx)(mj.i, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(xH.until).toLocaleDateString()
+            date: new Date(RB.until).toLocaleDateString()
           }
         },
         className: "StoreSubscribe SmallTextBold"
       });
-      const vH = (0, SB.f)(WH);
-      return (0, XH.jsxs)("div", {
+      const WB = (0, QO.g)(ZB);
+      return (0, PB.jsxs)("div", {
         className: "StoreSubscribe",
-        onClick: HH => {
-          HH.stopPropagation()
+        onClick: BB => {
+          BB.stopPropagation()
         },
-        children: [(0, XH.jsx)(ot.e, {
-          notice: tH,
+        children: [(0, PB.jsx)(mj.i, {
+          notice: jB,
           className: "SmallTextBold"
-        }), (0, XH.jsx)(ot.b, {
+        }), (0, PB.jsx)(mj.d, {
           className: "SmallTextBold"
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "StoreCta",
-          children: (0, XH.jsx)(CH.B, {
+          children: (0, PB.jsx)(JB.w, {
             className: "StoreSubscribeButton",
             onClick: () => {
-              !async function(HH, BH) {
-                if ("refund" === BH.kind) {
-                  uH(!0);
-                  const HH = await (0, ft.d)(BH, null);
-                  if (!EH.current) return;
-                  if (uH(!1), !HH) return
+              !async function(BB, OB) {
+                if ("refund" === OB.kind) {
+                  pB(!0);
+                  const BB = await (0, Fj.c)(OB, null);
+                  if (!MB.current) return;
+                  if (pB(!1), !BB) return
                 }
-                await GH(HH)
-              }(WH, xH)
+                await zB(BB)
+              }(ZB, RB)
             },
-            disabled: void 0 !== zH,
-            loading: SH || YH,
+            disabled: void 0 !== yB,
+            loading: QB || lB,
             analyticsClick: {
               id: "store.buy",
               value: "subscription"
             },
-            children: (0, XH.jsx)("span", {
+            children: (0, PB.jsx)("span", {
               className: "StoreCtaLabel",
-              children: LH("payments:subscribeContinue", {
-                price: vH
+              children: GB("payments:subscribeContinue", {
+                price: WB
               })
             })
           })
-        }), (0, MH.isMobileApp)() && (0, XH.jsx)(It, {
-          price: vH,
-          perks: (0, XH.jsx)(vt, {})
+        }), (0, NB.isMobileApp)() && (0, PB.jsx)(Ij, {
+          price: WB,
+          perks: (0, PB.jsx)(Vj, {})
         })]
       })
     }
 
-    function gt() {
+    function wj() {
       const {
-        t: HH
-      } = (0, hH.B)();
-      return (0, XH.jsxs)("ul", {
+        t: BB
+      } = (0, oB.H)();
+      return (0, PB.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, XH.jsxs)("li", {
-          children: [(0, XH.jsx)(tH.c, {
+        children: [(0, PB.jsxs)("li", {
+          children: [(0, PB.jsx)(jB.b, {
             name: "check"
-          }), (0, XH.jsx)(Bt, {
-            text: HH("store:colourfulNames")
+          }), (0, PB.jsx)(Yj, {
+            text: BB("store:colourfulNames")
           })]
-        }), (0, XH.jsxs)("li", {
-          children: [(0, XH.jsx)(tH.c, {
+        }), (0, PB.jsxs)("li", {
+          children: [(0, PB.jsx)(jB.b, {
             name: "check"
-          }), HH("store:perkCapes")]
-        }), (0, XH.jsxs)("li", {
-          children: [(0, XH.jsx)(tH.c, {
+          }), BB("store:perkCapes")]
+        }), (0, PB.jsxs)("li", {
+          children: [(0, PB.jsx)(jB.b, {
             name: "check"
-          }), HH("store:perkNoAdverts")]
-        }), (0, XH.jsxs)("li", {
-          children: [(0, XH.jsx)(tH.c, {
+          }), BB("store:perkNoAdverts")]
+        }), (0, PB.jsxs)("li", {
+          children: [(0, PB.jsx)(jB.b, {
             name: "check"
-          }), HH("store:perkFriends", {
-            count: (0, uB.b)(["super"])
+          }), BB("store:perkFriends", {
+            count: (0, pO.e)(["super"])
           })]
         })]
       })
     }
 
-    function Nt(HH, BH) {
-      return 1 === BH ? HH("store:oneDayLeft") : HH("store:daysLeft", {
-        days: BH
+    function Ej(BB, OB) {
+      return 1 === OB ? BB("store:oneDayLeft") : BB("store:daysLeft", {
+        days: OB
       })
     }
 
-    function Rt(HH) {
+    function cj(BB) {
       let {
-        daysLeft: BH,
-        totalDays: LH,
-        urgent: AH
-      } = HH;
+        daysLeft: OB,
+        totalDays: GB,
+        urgent: YB
+      } = BB;
       const {
-        t: rH
-      } = (0, hH.B)(), tH = LH > 0 ? Math.min(1, Math.max(.03, BH / LH)) : 1;
-      return (0, XH.jsxs)("div", {
-        className: SH()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: AH
+        t: DB
+      } = (0, oB.H)(), jB = GB > 0 ? Math.min(1, Math.max(.03, OB / GB)) : 1;
+      return (0, PB.jsxs)("div", {
+        className: QB()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: YB
         }),
-        children: [(0, XH.jsx)("span", {
+        children: [(0, PB.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: Nt(rH, BH)
-        }), (0, XH.jsx)("div", {
+          children: Ej(DB, OB)
+        }), (0, PB.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, XH.jsx)("i", {
+          children: (0, PB.jsx)("i", {
             style: {
-              width: 100 * tH + "%"
+              width: 100 * jB + "%"
             }
           })
         })]
       })
     }
 
-    function jt(HH) {
-      var BH;
+    function hj(BB) {
+      var OB;
       let {
-        state: LH,
-        urgent: rH,
-        daysLeft: tH,
-        totalDays: zH,
-        recipientHasSuperRank: CH,
-        busy: EH,
-        highlight: GH,
-        onOpen: YH,
-        onAct: QH,
-        onNeedRecipient: WH,
-        onLogin: xH,
-        wearer: vH,
-        live: PH,
-        onWake: TH
-      } = HH;
+        state: GB,
+        urgent: DB,
+        daysLeft: jB,
+        totalDays: yB,
+        recipientHasSuperRank: JB,
+        busy: MB,
+        highlight: zB,
+        onOpen: lB,
+        onAct: qB,
+        onNeedRecipient: ZB,
+        onLogin: RB,
+        wearer: WB,
+        live: AB,
+        onWake: VB
+      } = BB;
       const {
-        t: UH
-      } = (0, hH.B)(), {
-        userContext: VH
-      } = (0, uH.e)(), OH = Date.now(), bH = (0, jH.u)(OH), kH = "hyper" === bH.look, mH = kH ? void 0 : bt, oH = yh(LH), IH = (0, jH.v)(OH), {
-        days: fH
-      } = IH.product, lH = UH("store:recipientHasSuperRank", {
-        giftDays: fH
-      }), KH = null === (BH = GB("subscribed" === LH)) || void 0 === BH ? void 0 : BH.text, cH = oH ? null : (0, jH.q)(VH.superRankInfo, OH), eH = kH && !oH && "subscribed" !== LH && "pending" !== LH && (0, DH.subscriptionsSold)() && !(0, MH.isMobileApp)(), [qH, gH] = (0, AH.useState)(!0);
-      return (0, XH.jsxs)("div", {
-        className: SH()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: oH,
-          StoreSuperRankTileUrgent: "recharge" === LH && rH,
-          StoreSuperRankTileWithChip: CH,
-          StoreSuperRankTileGiftReady: "gift" === LH,
-          StoreHyperRankTile: kH
+        t: SB
+      } = (0, oB.H)(), {
+        userContext: nB
+      } = (0, pB.d)(), UB = Date.now(), fB = (0, EB.u)(UB), kB = "hyper" === fB.look, dB = kB ? void 0 : dj, KB = Oj(GB), uB = (0, EB.x)(UB), {
+        days: mB
+      } = uB.product, IB = SB("store:recipientHasSuperRank", {
+        giftDays: mB
+      }), FB = null === (OB = zO("subscribed" === GB)) || void 0 === OB ? void 0 : OB.text, iB = KB ? null : (0, EB.q)(nB.superRankInfo, UB), LB = kB && !KB && "subscribed" !== GB && "pending" !== GB && (0, aB.subscriptionsSold)() && !(0, NB.isMobileApp)(), [gB, rB] = (0, YB.useState)(!0);
+      return (0, PB.jsxs)("div", {
+        className: QB()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: KB,
+          StoreSuperRankTileUrgent: "recharge" === GB && DB,
+          StoreSuperRankTileWithChip: JB,
+          StoreSuperRankTileGiftReady: "gift" === GB,
+          StoreHyperRankTile: kB
         }),
-        ...Ht(UH(bH.nameKey)),
+        ...Gj(SB(fB.nameKey)),
         "data-store-item": "superRank",
-        onPointerEnter: mH,
-        onFocus: mH,
-        onPointerMove: HH => {
-          !kH || PH || "mouse" !== HH.pointerType || 0 === HH.movementX && 0 === HH.movementY || TH()
+        onPointerEnter: dB,
+        onFocus: dB,
+        onPointerMove: BB => {
+          !kB || AB || "mouse" !== BB.pointerType || 0 === BB.movementX && 0 === BB.movementY || VB()
         },
-        onClick: YH,
-        children: [kH && (0, XH.jsx)(Xt, {
+        onClick: lB,
+        children: [kB && (0, PB.jsx)(lj, {
           className: "StoreHyperRankTileStage",
-          wearer: vH,
-          active: PH
-        }), !kH && (0, XH.jsx)("div", {
+          wearer: WB,
+          active: AB
+        }), !kB && (0, PB.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${bH.artUrl})`
+            backgroundImage: `url(${fB.artUrl})`
           }
-        }), oH && (0, XH.jsx)("div", {
+        }), KB && (0, PB.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "StoreTileContent",
-          children: [CH && (0, XH.jsx)("span", {
+          children: [JB && (0, PB.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: lH,
-            children: lH
-          }), (0, XH.jsx)("div", {
+            title: IB,
+            children: IB
+          }), (0, PB.jsx)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: (0, XH.jsx)(jH.i, {
-              tierId: (0, NH.g)(OH).id
+            children: (0, PB.jsx)(EB.h, {
+              tierId: (0, XB.e)(UB).id
             })
-          }), oH && (0, XH.jsx)("div", {
+          }), KB && (0, PB.jsx)("div", {
             className: "StoreTilePitch",
-            children: UH("store:giftPitch", {
-              days: fH
+            children: SB("store:giftPitch", {
+              days: mB
             })
-          }), kH && ("buy" === LH || "login" === LH) && null === cH && (0, XH.jsx)("div", {
+          }), kB && ("buy" === GB || "login" === GB) && null === iB && (0, PB.jsx)("div", {
             className: "StoreTilePitch",
-            children: UH("store:hyperHook")
-          }), "recharge" === LH && (0, XH.jsx)(Rt, {
-            daysLeft: tH,
-            totalDays: zH,
-            urgent: rH
-          }), KH && (0, XH.jsx)("div", {
+            children: SB("store:hyperHook")
+          }), "recharge" === GB && (0, PB.jsx)(cj, {
+            daysLeft: jB,
+            totalDays: yB,
+            urgent: DB
+          }), FB && (0, PB.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, XH.jsx)("span", {
+            children: (0, PB.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: KH
+              children: FB
             })
-          }), null !== cH && (0, XH.jsx)("div", {
+          }), null !== iB && (0, PB.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, XH.jsx)(FH, {
+            children: (0, PB.jsx)(hB, {
               className: "StoreSuperRankDaysLeft",
-              until: cH
+              until: iB
             })
-          }), kH && (0, XH.jsx)(vt, {}), !kH && (0, XH.jsx)(gt, {}), (0, XH.jsxs)("div", {
+          }), kB && (0, PB.jsx)(Vj, {}), !kB && (0, PB.jsx)(wj, {}), (0, PB.jsxs)("div", {
             className: "StoreTileActions",
-            children: [eH && (0, XH.jsx)(et, {
-              onOfferedChange: gH
-            }), (0, XH.jsx)(At, {
-              state: LH,
+            children: [LB && (0, PB.jsx)(rj, {
+              onOfferedChange: rB
+            }), (0, PB.jsx)(Qj, {
+              state: GB,
               item: "superRank",
-              price: IH.price,
-              busy: EH,
-              highlight: GH,
-              secondary: eH && qH,
-              onAct: QH,
-              onNeedRecipient: WH,
-              onLogin: xH
-            }), "needsRecipient" === LH && (0, XH.jsx)("span", {
+              price: uB.price,
+              busy: MB,
+              highlight: zB,
+              secondary: LB && gB,
+              onAct: qB,
+              onNeedRecipient: ZB,
+              onLogin: RB
+            }), "needsRecipient" === GB && (0, PB.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: UH("store:pickRecipientFirst")
-            }), "recharge" === LH && rH && (0, XH.jsx)("span", {
+              children: SB("store:pickRecipientFirst")
+            }), "recharge" === GB && DB && (0, PB.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === tH ? UH("store:endsInOneDay") : UH("store:endsInDays", {
-                days: tH
+              children: 1 === jB ? SB("store:endsInOneDay") : SB("store:endsInDays", {
+                days: jB
               })
             })]
           })]
         })]
       })
     }
-    var nt = LH(1551),
-      Ft = LH(1460),
-      Dt = LH(3950);
+    var aj = GB(1598),
+      ej = GB(1499),
+      Tj = GB(4004);
 
-    function wt() {
-      return (0, XH.jsx)("span", {
+    function bj() {
+      return (0, PB.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var Zt = LH(1344),
-      dt = LH(1565),
-      st = LH(35016);
+    var Cj = GB(1398),
+      Hj = GB(1611),
+      vj = GB(34828);
 
-    function Jt(HH) {
+    function sj(BB) {
       let {
-        character: BH,
-        drawn: LH,
-        onDrawn: rH
-      } = HH;
-      const hH = (0, AH.useRef)(null),
-        tH = (0, st.g)(BH);
-      return (0, XH.jsx)("div", {
-        className: SH()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: LH
+        character: OB,
+        drawn: GB,
+        onDrawn: DB
+      } = BB;
+      const oB = (0, YB.useRef)(null),
+        jB = (0, vj.e)(OB);
+      return (0, PB.jsx)("div", {
+        className: QB()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: GB
         }),
-        children: (0, XH.jsx)(AH.Suspense, {
+        children: (0, PB.jsx)(YB.Suspense, {
           fallback: null,
-          children: (0, XH.jsx)(Zh.b, {
-            ref: hH,
+          children: (0, PB.jsx)(Co.b, {
+            ref: oB,
             framing: "store",
-            turntableFromYaw: LH ? tH.yaw : null,
+            turntableFromYaw: GB ? jB.yaw : null,
             onReady: () => {
-              var HH, LH;
-              null === (HH = hH.current) || void 0 === HH || HH.setOrbit(tH), null === (LH = hH.current) || void 0 === LH || LH.setAllCosmetics(dt.c[BH].cosmetics)
+              var BB, GB;
+              null === (BB = oB.current) || void 0 === BB || BB.setOrbit(jB), null === (GB = oB.current) || void 0 === GB || GB.setAllCosmetics(Hj.d[OB].cosmetics)
             },
-            onDrawn: rH
+            onDrawn: DB
           })
         })
       })
     }
-    const it = {
+    var xj = GB(3479);
+    const tj = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      pt = new Set(["wildSpirits"]);
+      By = new Set(["wildSpirits"]);
 
-    function yt(HH) {
-      var BH;
+    function Oy(BB) {
+      var OB;
       let {
-        tile: LH,
-        design: rH,
-        canGoLive: zH,
-        live: CH,
-        busy: EH,
-        highlight: GH,
-        onLiveStart: YH,
-        onLiveEnd: uH,
-        onOpen: QH,
-        onAct: WH,
-        onNeedRecipient: MH,
-        onLogin: xH
-      } = HH;
+        tile: GB,
+        design: DB,
+        canGoLive: yB,
+        live: JB,
+        busy: MB,
+        highlight: zB,
+        onLiveStart: lB,
+        onLiveEnd: pB,
+        onOpen: qB,
+        onAct: ZB,
+        onNeedRecipient: NB,
+        onLogin: RB
+      } = BB;
       const {
-        t: vH
-      } = (0, hH.B)(), {
-        pack: PH,
-        state: TH
-      } = LH, UH = Qh.b[PH], VH = (0, Qh.c)(PH), OH = (0, eh.j)(PH), bH = Uh.j[OH], kH = pt.has(OH), {
-        tier: mH
-      } = UH, oH = "legendary" === mH || "mythic" === mH, IH = (0, AH.useRef)(null);
-      (0, Zt.d)(IH, "epic" === mH || oH || kH);
-      const [fH, KH] = (0, AH.useState)(!1);
-      return !CH && fH && KH(!1), (0, XH.jsxs)("div", {
-        ref: IH,
-        className: SH()("StoreCharacterCard", `StoreCharacterCard${rH}`, it[mH], {
-          StoreCharacterCardOwned: "owned" === TH || "recipientOwns" === TH,
-          StoreCharacterCardGift: yh(TH),
-          StoreCharacterCardItem: void 0 === VH
+        t: WB
+      } = (0, oB.H)(), {
+        pack: AB,
+        state: VB
+      } = GB, SB = Zo.d[AB], nB = (0, Zo.h)(AB), UB = (0, ro.l)(AB), fB = no.k[UB], kB = By.has(UB), {
+        tier: dB
+      } = SB, KB = (0, xj.h)(AB), uB = "legendary" === dB || "mythic" === dB, mB = (0, YB.useRef)(null);
+      (0, Cj.b)(mB, "epic" === dB || uB || kB);
+      const [FB, iB] = (0, YB.useState)(!1);
+      return !JB && FB && iB(!1), (0, PB.jsxs)("div", {
+        ref: mB,
+        className: QB()("StoreCharacterCard", `StoreCharacterCard${DB}`, tj[dB], {
+          StoreCharacterCardOwned: "owned" === VB || "recipientOwns" === VB,
+          StoreCharacterCardGift: Oj(VB),
+          StoreCharacterCardItem: void 0 === nB
         }),
-        onPointerMove: HH => {
-          "mouse" !== HH.pointerType || 0 === HH.movementX && 0 === HH.movementY || !zH || CH || void 0 === VH || YH()
+        onPointerMove: BB => {
+          "mouse" !== BB.pointerType || 0 === BB.movementX && 0 === BB.movementY || !yB || JB || void 0 === nB || lB()
         },
-        onPointerLeave: uH,
-        children: [(0, XH.jsx)("div", {
+        onPointerLeave: pB,
+        children: [(0, PB.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: bH && (0, XH.jsx)(bH, {
+          children: fB && (0, PB.jsx)(fB, {
             simple: !0
           })
-        }), oH && (0, XH.jsx)("div", {
+        }), uB && (0, PB.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, XH.jsxs)(lH.LinkPreserveSearch, {
+        }), (0, PB.jsxs)(IB.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, nt.g)({
+          to: (0, aj.h)({
             kind: "pack",
-            pack: PH
+            pack: AB
           }, Date.now()),
-          "data-store-item": PH,
-          onClick: HH => {
-            (0, Ft.c)(HH) && (HH.preventDefault(), QH())
+          "data-store-item": AB,
+          onClick: BB => {
+            (0, ej.d)(BB) && (BB.preventDefault(), qB())
           },
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, XH.jsx)("div", {
-              className: SH()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: fH
+            }), (0, PB.jsx)("div", {
+              className: QB()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: FB
               }),
               style: {
-                backgroundImage: `url(${(0,eh.q)(PH)})`
+                backgroundImage: `url(${(0,ro.r)(AB)})`
               }
-            }), CH && void 0 !== VH && (0, XH.jsx)(Jt, {
-              character: VH,
-              drawn: fH,
+            }), JB && void 0 !== nB && (0, PB.jsx)(sj, {
+              character: nB,
+              drawn: FB,
               onDrawn: () => {
-                KH(!0)
+                iB(!0)
               }
             })]
-          }), (0, XH.jsx)("div", {
+          }), (0, PB.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (BH = UH.displayName) && void 0 !== BH ? BH : PH
-          }), (0, XH.jsx)(Jh.c, {
-            tier: mH,
-            className: "StoreCharacterTier"
+            children: null !== (OB = SB.displayName) && void 0 !== OB ? OB : AB
+          }), (0, PB.jsxs)("div", {
+            className: "StoreCharacterTierLine",
+            children: [(0, PB.jsx)(xo.e, {
+              tier: dB
+            }), KB && (0, PB.jsxs)("span", {
+              className: "StoreTierLabel StoreCharacterAnimated",
+              children: [(0, PB.jsx)(jB.b, {
+                name: "film"
+              }), WB("packPerks:badgeAnimated")]
+            })]
           })]
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), kH && (0, XH.jsx)("span", {
+        }), kB && (0, PB.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, XH.jsx)(wt, {})
-        }), (0, XH.jsx)(ih.b, {
-          pack: PH,
+          children: (0, PB.jsx)(bj, {})
+        }), (0, PB.jsx)(to.c, {
+          pack: AB,
           iconOnly: !0,
-          className: SH()({
-            PackAnimatedBadgeBelowOwned: "owned" === TH
+          className: QB()({
+            PackAnimatedBadgeBelowOwned: "owned" === VB
           })
-        }), "owned" === TH && (0, XH.jsx)("span", {
+        }), "owned" === VB && (0, PB.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: vH("general:owned"),
-          "aria-label": vH("general:owned"),
-          children: (0, XH.jsx)(tH.c, {
+          title: WB("general:owned"),
+          "aria-label": WB("general:owned"),
+          children: (0, PB.jsx)(jB.b, {
             name: "check"
           })
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, XH.jsx)(At, {
-            state: TH,
-            item: PH,
-            price: (0, Wh.f)(PH),
-            busy: EH,
-            highlight: GH,
-            onAct: WH,
-            onNeedRecipient: MH,
-            onLogin: xH
+          children: (0, PB.jsx)(Qj, {
+            state: VB,
+            item: AB,
+            price: (0, No.c)(AB),
+            busy: MB,
+            highlight: zB,
+            onAct: ZB,
+            onNeedRecipient: NB,
+            onLogin: RB
           })
         })]
       })
     }
 
-    function Hz(HH) {
+    function Gy(BB) {
       let {
-        tiles: BH,
-        busy: LH,
-        highlightItem: rH,
-        onOpen: SH,
-        onAct: hH,
-        onNeedRecipient: tH,
-        onLogin: zH,
-        livePack: CH,
-        setLivePack: EH
-      } = HH;
-      const GH = (0, Dt.w)("storeCharacterCardFoil"),
-        YH = (0, Dt.w)("storeCharacterCardSpotlight"),
-        uH = GH ? "Foil" : YH ? "Spotlight" : "Showcase",
-        [QH] = (0, AH.useState)(Kh.l);
-      return (0, XH.jsx)("div", {
+        tiles: OB,
+        busy: GB,
+        highlightItem: DB,
+        onOpen: QB,
+        onAct: oB,
+        onNeedRecipient: jB,
+        onLogin: yB,
+        livePack: JB,
+        setLivePack: MB
+      } = BB;
+      const zB = (0, Tj.q)("storeCharacterCardFoil"),
+        lB = (0, Tj.q)("storeCharacterCardSpotlight"),
+        pB = zB ? "Foil" : lB ? "Spotlight" : "Showcase",
+        [qB] = (0, YB.useState)(Lo.h);
+      return (0, PB.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: BH.map((HH => (0, XH.jsx)(yt, {
-          tile: HH,
-          design: uH,
-          canGoLive: !QH,
-          live: CH === HH.pack,
-          busy: LH,
-          highlight: rH === HH.pack,
+        children: OB.map((BB => (0, PB.jsx)(Oy, {
+          tile: BB,
+          design: pB,
+          canGoLive: !qB,
+          live: JB === BB.pack,
+          busy: GB,
+          highlight: DB === BB.pack,
           onLiveStart: () => {
-            EH(HH.pack)
+            MB(BB.pack)
           },
           onLiveEnd: () => {
-            EH((BH => BH === HH.pack ? null : BH))
+            MB((OB => OB === BB.pack ? null : OB))
           },
           onOpen: () => {
-            SH(HH.pack)
+            QB(BB.pack)
           },
           onAct: () => {
-            hH(HH.pack)
+            oB(BB.pack)
           },
-          onNeedRecipient: tH,
+          onNeedRecipient: jB,
           onLogin: () => {
-            zH(HH.pack)
+            yB(BB.pack)
           }
-        }, HH.pack)))
+        }, BB.pack)))
       })
     }
-    var Bz = LH(35020);
+    var Yy = GB(34834);
 
-    function Lz(HH) {
+    function Dy(BB) {
       let {
-        title: BH
-      } = HH;
-      return (0, XH.jsx)("h2", {
+        title: OB
+      } = BB;
+      return (0, PB.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, XH.jsx)("span", {
+        children: (0, PB.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: BH
+          children: OB
         })
       })
     }
 
-    function Az(HH) {
+    function Qy(BB) {
       let {
-        mountAtOnce: BH,
-        children: LH
-      } = HH;
-      const rH = (0, AH.useRef)(null),
-        [SH, hH] = (0, AH.useState)(BH),
-        tH = (0, Bz.c)();
-      return (0, AH.useLayoutEffect)((() => {
-        const HH = rH.current;
-        HH && HH.getBoundingClientRect().top < HH.parentElement.getBoundingClientRect().bottom && hH(!0)
-      }), []), SH || tH ? (0, XH.jsx)(XH.Fragment, {
-        children: LH
-      }) : (0, XH.jsx)("div", {
-        ref: rH
+        mountAtOnce: OB,
+        children: GB
+      } = BB;
+      const DB = (0, YB.useRef)(null),
+        [QB, oB] = (0, YB.useState)(OB),
+        jB = (0, Yy.d)();
+      return (0, YB.useLayoutEffect)((() => {
+        const BB = DB.current;
+        BB && BB.getBoundingClientRect().top < BB.parentElement.getBoundingClientRect().bottom && oB(!0)
+      }), []), QB || jB ? (0, PB.jsx)(PB.Fragment, {
+        children: GB
+      }) : (0, PB.jsx)("div", {
+        ref: DB
       })
     }
 
-    function rz(HH) {
+    function oy(BB) {
       let {
-        layout: BH,
-        mountAtOnce: LH,
-        bundleGift: rH,
-        superRankTotalDays: SH,
-        busy: tH,
-        highlightItem: zH,
-        onOpen: CH,
-        onAct: EH,
-        onNeedRecipient: GH,
-        onLogin: YH,
-        dailyDropTile: uH,
-        dealBanner: QH,
-        rankWearer: WH
-      } = HH;
+        layout: OB,
+        mountAtOnce: GB,
+        bundleGift: DB,
+        superRankTotalDays: QB,
+        busy: jB,
+        highlightItem: yB,
+        onOpen: JB,
+        onAct: MB,
+        onNeedRecipient: zB,
+        onLogin: lB,
+        dailyDropTile: pB,
+        dealBanner: qB,
+        rankWearer: ZB
+      } = BB;
       const {
-        t: MH
-      } = (0, hH.B)(), xH = BH.packs.filter((HH => void 0 === (0, Qh.c)(HH.pack) && !(0, Qh.e)(HH.pack))), vH = BH.packs.filter((HH => void 0 !== (0, Qh.c)(HH.pack))), PH = BH.packs.filter((HH => (0, Qh.e)(HH.pack))), [TH, UH] = (0, AH.useState)(null), [VH, bH] = (0, AH.useState)(!1), {
-        gameState: kH
-      } = (0, OH.m)(["gameState"]), mH = null === TH && (VH || "inGame" === kH);
-      return (0, XH.jsxs)(XH.Fragment, {
-        children: [(0, XH.jsx)(SB.e, {
+        t: NB
+      } = (0, oB.H)(), RB = OB.packs.filter((BB => void 0 === (0, Zo.h)(BB.pack) && !(0, Zo.m)(BB.pack))), WB = OB.packs.filter((BB => void 0 !== (0, Zo.h)(BB.pack))), AB = OB.packs.filter((BB => (0, Zo.m)(BB.pack))), [VB, SB] = (0, YB.useState)(null), [nB, fB] = (0, YB.useState)(!1), {
+        gameState: kB
+      } = (0, UB.o)(["gameState"]), dB = null === VB && (nB || "inGame" === kB);
+      return (0, PB.jsxs)(PB.Fragment, {
+        children: [(0, PB.jsx)(QO.d, {
           className: "StoreSuperGems",
-          gift: rH,
-          highlightSku: zH,
-          leadingTile: uH,
-          afterLeadingTile: QH
-        }), (0, XH.jsx)(Lz, {
-          title: MH("store:rank")
-        }), (0, XH.jsx)(jt, {
-          state: BH.superRank.state,
-          urgent: BH.superRank.urgent,
-          daysLeft: BH.superRankDaysLeft,
-          totalDays: SH,
-          recipientHasSuperRank: BH.recipientHasSuperRank,
-          wearer: WH,
-          live: mH,
+          gift: DB,
+          highlightSku: yB,
+          leadingTile: pB,
+          afterLeadingTile: qB
+        }), (0, PB.jsx)(Dy, {
+          title: NB("store:rank")
+        }), (0, PB.jsx)(hj, {
+          state: OB.superRank.state,
+          urgent: OB.superRank.urgent,
+          daysLeft: OB.superRankDaysLeft,
+          totalDays: QB,
+          recipientHasSuperRank: OB.recipientHasSuperRank,
+          wearer: ZB,
+          live: dB,
           onWake: () => {
-            bH(!0)
+            fB(!0)
           },
-          busy: tH,
-          highlight: "superRank" === zH,
+          busy: jB,
+          highlight: "superRank" === yB,
           onOpen: () => {
-            CH("superRank")
+            JB("superRank")
           },
           onAct: () => {
-            EH("superRank")
+            MB("superRank")
           },
-          onNeedRecipient: GH,
+          onNeedRecipient: zB,
           onLogin: () => {
-            YH("superRank")
+            lB("superRank")
           }
-        }), (0, XH.jsxs)(Az, {
-          mountAtOnce: LH,
-          children: [(0, XH.jsx)(Lz, {
-            title: MH("store:bundles")
-          }), (0, XH.jsx)("div", {
+        }), (0, PB.jsxs)(Qy, {
+          mountAtOnce: GB,
+          children: [(0, PB.jsx)(Dy, {
+            title: NB("store:bundles")
+          }), (0, PB.jsx)("div", {
             className: "StorePackGrid",
-            children: xH.map((HH => (0, XH.jsx)(St, {
-              pack: HH.pack,
-              state: HH.state,
-              busy: tH,
+            children: RB.map((BB => (0, PB.jsx)(jj, {
+              pack: BB.pack,
+              state: BB.state,
+              busy: jB,
               onOpen: () => {
-                CH(HH.pack)
+                JB(BB.pack)
               },
               onAct: () => {
-                EH(HH.pack)
+                MB(BB.pack)
               },
-              onNeedRecipient: GH,
+              onNeedRecipient: zB,
               onLogin: () => {
-                YH(HH.pack)
+                lB(BB.pack)
               }
-            }, HH.pack)))
-          }), (0, XH.jsxs)(Az, {
-            mountAtOnce: LH,
-            children: [(0, XH.jsx)(Lz, {
-              title: MH("store:characters")
-            }), (0, XH.jsx)(Hz, {
-              tiles: vH,
-              busy: tH,
-              highlightItem: zH,
-              onOpen: CH,
-              onAct: EH,
-              onNeedRecipient: GH,
-              onLogin: YH,
-              livePack: TH,
-              setLivePack: UH
-            }), PH.length > 0 && (0, XH.jsxs)(XH.Fragment, {
-              children: [(0, XH.jsx)(Lz, {
-                title: MH("store:premiumItems")
-              }), (0, XH.jsx)(Hz, {
-                tiles: PH,
-                busy: tH,
-                highlightItem: zH,
-                onOpen: CH,
-                onAct: EH,
-                onNeedRecipient: GH,
-                onLogin: YH,
-                livePack: TH,
-                setLivePack: UH
+            }, BB.pack)))
+          }), (0, PB.jsxs)(Qy, {
+            mountAtOnce: GB,
+            children: [(0, PB.jsx)(Dy, {
+              title: NB("store:characters")
+            }), (0, PB.jsx)(Gy, {
+              tiles: WB,
+              busy: jB,
+              highlightItem: yB,
+              onOpen: JB,
+              onAct: MB,
+              onNeedRecipient: zB,
+              onLogin: lB,
+              livePack: VB,
+              setLivePack: SB
+            }), AB.length > 0 && (0, PB.jsxs)(PB.Fragment, {
+              children: [(0, PB.jsx)(Dy, {
+                title: NB("store:premiumItems")
+              }), (0, PB.jsx)(Gy, {
+                tiles: AB,
+                busy: jB,
+                highlightItem: yB,
+                onOpen: JB,
+                onAct: MB,
+                onNeedRecipient: zB,
+                onLogin: lB,
+                livePack: VB,
+                setLivePack: SB
               })]
             })]
           })]
@@ -7776,529 +7784,529 @@ export const modules = {
       })
     }
 
-    function Sz(HH) {
+    function jy(BB) {
       let {
-        giftName: BH,
-        onChooseRecipient: LH
-      } = HH;
+        giftName: OB,
+        onChooseRecipient: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)();
-      return BH ? (0, XH.jsxs)("span", {
+        t: YB
+      } = (0, oB.H)();
+      return OB ? (0, PB.jsxs)("span", {
         className: "StoreDetailRecipient",
-        title: AH("store:giftFor", {
-          name: BH
+        title: YB("store:giftFor", {
+          name: OB
         }),
-        children: [Oh.d, " ", AH("store:giftFor", {
-          name: BH
+        children: [fo.e, " ", YB("store:giftFor", {
+          name: OB
         })]
-      }) : (0, XH.jsxs)("div", {
-        ...(0, CH.db)(),
+      }) : (0, PB.jsxs)("div", {
+        ...(0, JB.db)(),
         className: "StoreDetailRecipient StoreDetailRecipientChoose",
-        onClick: LH,
-        children: [Oh.d, " ", AH("store:chooseRecipient")]
+        onClick: GB,
+        children: [fo.e, " ", YB("store:chooseRecipient")]
       })
     }
 
-    function hz(HH) {
-      return (0, NH.c)(Date.now()) ? (0, XH.jsx)(zz, {
-        ...HH
-      }) : (0, XH.jsx)(tz, {
-        ...HH
+    function yy(BB) {
+      return (0, XB.c)(Date.now()) ? (0, PB.jsx)(My, {
+        ...BB
+      }) : (0, PB.jsx)(Jy, {
+        ...BB
       })
     }
 
-    function tz(HH) {
+    function Jy(BB) {
       let {
-        state: BH,
-        wearer: LH,
-        mode: AH,
-        giftName: rH,
-        busy: SH,
-        highlight: tH,
-        purchaseError: zH,
-        onBack: CH,
-        onChooseRecipient: EH,
-        onAct: GH,
-        onLogin: YH
-      } = HH;
+        state: OB,
+        wearer: GB,
+        mode: YB,
+        giftName: DB,
+        busy: QB,
+        highlight: jB,
+        purchaseError: yB,
+        onBack: JB,
+        onChooseRecipient: MB,
+        onAct: zB,
+        onLogin: lB
+      } = BB;
       const {
-        t: uH
-      } = (0, hH.B)(), QH = GB("gift" !== AH);
-      return (0, XH.jsx)(mt, {
-        tierId: RH.n.id,
-        wearer: LH,
-        onBack: CH,
-        recipient: "gift" === AH && (0, XH.jsx)(Sz, {
-          giftName: rH,
-          onChooseRecipient: EH
+        t: pB
+      } = (0, oB.H)(), qB = zO("gift" !== YB);
+      return (0, PB.jsx)(uj, {
+        tierId: wB.s.id,
+        wearer: GB,
+        onBack: JB,
+        recipient: "gift" === YB && (0, PB.jsx)(jy, {
+          giftName: DB,
+          onChooseRecipient: MB
         }),
-        cta: (0, XH.jsx)(At, {
-          state: BH,
+        cta: (0, PB.jsx)(Qj, {
+          state: OB,
           item: "superRank",
-          price: (0, jH.v)(Date.now()).price,
-          busy: SH,
-          highlight: tH,
-          onAct: GH,
-          onNeedRecipient: EH,
-          onLogin: YH
+          price: (0, EB.x)(Date.now()).price,
+          busy: QB,
+          highlight: jB,
+          onAct: zB,
+          onNeedRecipient: MB,
+          onLogin: lB
         }),
-        afterCta: (0, XH.jsxs)(XH.Fragment, {
-          children: [QH && (0, XH.jsx)("span", {
+        afterCta: (0, PB.jsxs)(PB.Fragment, {
+          children: [qB && (0, PB.jsx)("span", {
             className: "StoreTileNote",
-            children: QH.text
-          }), (null === QH || void 0 === QH ? void 0 : QH.manageUrl) && (0, XH.jsx)("a", {
+            children: qB.text
+          }), (null === qB || void 0 === qB ? void 0 : qB.manageUrl) && (0, PB.jsx)("a", {
             className: "StoreTileNote StoreManageSubscription",
-            href: QH.manageUrl,
+            href: qB.manageUrl,
             target: "_blank",
             rel: "noreferrer",
-            children: uH("payments:manageSubscription")
-          }), zH && (0, XH.jsx)("span", {
+            children: pB("payments:manageSubscription")
+          }), yB && (0, PB.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: uH(zH)
+            children: pB(yB)
           })]
         })
       })
     }
 
-    function zz(HH) {
+    function My(BB) {
       let {
-        state: BH,
-        daysLeft: LH,
-        wearer: rH,
-        mode: SH,
-        giftName: tH,
-        busy: zH,
-        highlight: CH,
-        purchaseError: EH,
-        onBack: GH,
-        onChooseRecipient: YH,
-        onAct: QH,
-        onLogin: WH
-      } = HH;
+        state: OB,
+        daysLeft: GB,
+        wearer: DB,
+        mode: QB,
+        giftName: jB,
+        busy: yB,
+        highlight: JB,
+        purchaseError: MB,
+        onBack: zB,
+        onChooseRecipient: lB,
+        onAct: qB,
+        onLogin: ZB
+      } = BB;
       const {
-        t: MH
-      } = (0, hH.B)(), {
-        userContext: xH
-      } = (0, uH.e)(), vH = Date.now(), PH = "gift" !== SH, TH = PH && "subscribed" === BH, UH = PH ? (0, jH.q)(xH.superRankInfo, vH) : null, VH = PH && !TH && "pending" !== BH && (0, DH.subscriptionsSold)(), [OH, bH] = (0, AH.useState)(!0);
-      return (0, XH.jsx)(mt, {
-        tierId: RH.e.id,
-        wearer: rH,
-        onBack: GH,
-        recipient: !PH && (0, XH.jsx)(Sz, {
-          giftName: tH,
-          onChooseRecipient: YH
+        t: NB
+      } = (0, oB.H)(), {
+        userContext: RB
+      } = (0, pB.d)(), WB = Date.now(), AB = "gift" !== QB, VB = AB && "subscribed" === OB, SB = AB ? (0, EB.q)(RB.superRankInfo, WB) : null, nB = AB && !VB && "pending" !== OB && (0, aB.subscriptionsSold)(), [UB, fB] = (0, YB.useState)(!0);
+      return (0, PB.jsx)(uj, {
+        tierId: wB.f.id,
+        wearer: DB,
+        onBack: zB,
+        recipient: !AB && (0, PB.jsx)(jy, {
+          giftName: jB,
+          onChooseRecipient: lB
         }),
-        cta: (0, XH.jsxs)(XH.Fragment, {
-          children: [null !== UH && (0, XH.jsx)(FH, {
+        cta: (0, PB.jsxs)(PB.Fragment, {
+          children: [null !== SB && (0, PB.jsx)(hB, {
             className: "StoreTileNote StoreDetailNote",
-            until: UH
-          }), "recharge" === BH && LH > 0 && (0, XH.jsx)("span", {
+            until: SB
+          }), "recharge" === OB && GB > 0 && (0, PB.jsx)("span", {
             className: "StoreTileNote StoreDetailNote",
-            children: Nt(MH, LH)
-          }), VH && (0, XH.jsx)(et, {
-            onOfferedChange: bH
-          }), PH && (0, XH.jsx)(tB, {
+            children: Ej(NB, GB)
+          }), nB && (0, PB.jsx)(rj, {
+            onOfferedChange: fB
+          }), AB && (0, PB.jsx)(jO, {
             showing: !0
-          }), !TH && (0, XH.jsx)(At, {
-            state: BH,
+          }), !VB && (0, PB.jsx)(Qj, {
+            state: OB,
             item: "superRank",
-            price: (0, jH.v)(vH).price,
-            busy: zH,
-            highlight: CH,
-            secondary: VH && OH,
-            onAct: QH,
-            onNeedRecipient: YH,
-            onLogin: WH
+            price: (0, EB.x)(WB).price,
+            busy: yB,
+            highlight: JB,
+            secondary: nB && UB,
+            onAct: qB,
+            onNeedRecipient: lB,
+            onLogin: ZB
           })]
         }),
-        afterCta: EH && (0, XH.jsx)("span", {
+        afterCta: MB && (0, PB.jsx)("span", {
           className: "StoreTileNote StoreDetailNote StoreTileNoteError",
-          children: MH(EH)
+          children: NB(MB)
         })
       })
     }
 
-    function Cz(HH, BH) {
-      const LH = Math.max(1, Math.round(BH / gH.j));
-      return [1 === LH ? `${HH}OneDay` : HH, {
-        days: LH.toLocaleString()
+    function Py(BB, OB) {
+      const GB = Math.max(1, Math.round(OB / rB.g));
+      return [1 === GB ? `${BB}OneDay` : BB, {
+        days: GB.toLocaleString()
       }]
     }
 
-    function Ez() {
-      const HH = (0, DH.usePurchasesAllowed)();
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && HH && (0, DH.subscriptionsSold)() ? (0, XH.jsx)(Xz, {}) : null
+    function zy() {
+      const BB = (0, aB.usePurchasesAllowed)();
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && BB && (0, aB.subscriptionsSold)() ? (0, PB.jsx)(ly, {}) : null
     }
 
-    function Xz() {
+    function ly() {
       const {
-        t: HH
-      } = (0, hH.B)(), {
-        offer: BH,
-        purchaseUnderWay: LH,
-        notice: rH,
-        pendingIntentId: SH,
-        checkOut: tH
-      } = ct((0, jH.o)(RH.n.id).placementId), [zH, EH] = (0, AH.useState)(!1);
-      if ((0, AH.useEffect)((() => {
-          EH(!1)
-        }), [BH]), null === BH) return null;
-      if ("loaded" !== BH.kind) return (0, XH.jsx)(ot.e, {
+        t: BB
+      } = (0, oB.H)(), {
+        offer: OB,
+        purchaseUnderWay: GB,
+        notice: DB,
+        pendingIntentId: QB,
+        checkOut: jB
+      } = gj((0, EB.m)(wB.s.id).placementId), [yB, MB] = (0, YB.useState)(!1);
+      if ((0, YB.useEffect)((() => {
+          MB(!1)
+        }), [OB]), null === OB) return null;
+      if ("loaded" !== OB.kind) return (0, PB.jsx)(mj.i, {
         notice: {
           kind: "error",
-          key: "unavailable" === BH.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === OB.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: GH,
-        preview: YH
-      } = BH;
-      if ("refused" === YH.kind) return (0, XH.jsx)(ot.e, {
+        pkg: zB,
+        preview: lB
+      } = OB;
+      if ("refused" === lB.kind) return (0, PB.jsx)(mj.i, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(YH.until).toLocaleDateString()
+            date: new Date(lB.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const uH = (0, SB.f)(GH),
-        QH = (0, MH.isMobileApp)() && (0, XH.jsx)(It, {
-          price: uH,
-          perks: (0, XH.jsx)(gt, {})
+      const pB = (0, QO.g)(zB),
+        qB = (0, NB.isMobileApp)() && (0, PB.jsx)(Ij, {
+          price: pB,
+          perks: (0, PB.jsx)(wj, {})
         });
-      if (zH && "refund" === YH.kind) {
+      if (yB && "refund" === lB.kind) {
         const {
-          refundedMs: BH,
-          forfeitedMs: AH,
-          premiumCurrency: rH
-        } = YH, SH = AH + (0 === rH ? BH : 0), [hH, zH] = Cz("payments:subscribeRefundsGemRank", BH), [WH, MH] = Cz("payments:subscribeForfeitsGemRank", SH);
-        return (0, XH.jsxs)("div", {
+          refundedMs: OB,
+          forfeitedMs: YB,
+          premiumCurrency: DB
+        } = lB, QB = YB + (0 === DB ? OB : 0), [oB, yB] = Py("payments:subscribeRefundsGemRank", OB), [ZB, NB] = Py("payments:subscribeForfeitsGemRank", QB);
+        return (0, PB.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, XH.jsx)("div", {
-            children: HH("payments:subscribeEndsGemRank")
-          }), rH > 0 && (0, XH.jsx)("div", {
-            children: HH(hH, {
-              ...zH,
-              amount: rH.toLocaleString()
+          children: [(0, PB.jsx)("div", {
+            children: BB("payments:subscribeEndsGemRank")
+          }), DB > 0 && (0, PB.jsx)("div", {
+            children: BB(oB, {
+              ...yB,
+              amount: DB.toLocaleString()
             })
-          }), SH > 0 && (0, XH.jsx)("div", {
-            children: HH(WH, MH)
-          }), (0, XH.jsxs)("div", {
+          }), QB > 0 && (0, PB.jsx)("div", {
+            children: BB(ZB, NB)
+          }), (0, PB.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, XH.jsx)(CH.m, {
+            children: [(0, PB.jsx)(JB.j, {
               onClick: () => {
-                EH(!1)
+                MB(!1)
               },
-              children: HH("general:cancel")
-            }), (0, XH.jsx)(CH.u, {
+              children: BB("general:cancel")
+            }), (0, PB.jsx)(JB.q, {
               onClick: () => {
-                EH(!1), tH(GH)
+                MB(!1), jB(zB)
               },
-              loading: LH,
-              children: HH("payments:subscribeContinue", {
-                price: uH
+              loading: GB,
+              children: BB("payments:subscribeContinue", {
+                price: pB
               })
             })]
-          }), QH]
+          }), qB]
         })
       }
-      return (0, XH.jsxs)("div", {
+      return (0, PB.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, XH.jsx)(ot.e, {
-          notice: rH,
+        children: [(0, PB.jsx)(mj.i, {
+          notice: DB,
           className: "SmallTextBold"
-        }), (0, XH.jsx)(ot.b, {
+        }), (0, PB.jsx)(mj.d, {
           className: "SmallTextBold"
-        }), (0, XH.jsx)(CH.u, {
+        }), (0, PB.jsx)(JB.q, {
           onClick: () => {
-            "refund" === YH.kind ? EH(!0) : tH(GH)
+            "refund" === lB.kind ? MB(!0) : jB(zB)
           },
-          disabled: void 0 !== SH,
-          loading: LH,
-          children: HH("payments:subscribeToSuperRank", {
-            price: uH
+          disabled: void 0 !== QB,
+          loading: GB,
+          children: BB("payments:subscribeToSuperRank", {
+            price: pB
           })
-        }), QH]
+        }), qB]
       })
     }
-    var Gz = LH(2762);
+    var py = GB(2795);
 
-    function Yz(HH) {
+    function qy(BB) {
       let {
-        state: BH,
-        view: LH,
-        claiming: rH,
-        onOpen: tH
-      } = HH;
+        state: OB,
+        view: GB,
+        claiming: DB,
+        onOpen: jB
+      } = BB;
       const {
-        t: EH
-      } = (0, hH.B)(), GH = (0, AH.useRef)(null), YH = "ready" === LH.kind;
-      return (0, Zt.d)(GH, YH), (0, XH.jsxs)("div", {
-        ref: GH,
-        className: SH()("DailyDropTile", {
-          DailyDropTileReady: YH
+        t: MB
+      } = (0, oB.H)(), zB = (0, YB.useRef)(null), lB = "ready" === GB.kind;
+      return (0, Cj.b)(zB, lB), (0, PB.jsxs)("div", {
+        ref: zB,
+        className: QB()("DailyDropTile", {
+          DailyDropTileReady: lB
         }),
-        children: [YH && (0, XH.jsx)(zH.b, {
+        children: [lB && (0, PB.jsx)(yB.c, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: EH("dailyDrop:name")
-        }), (0, XH.jsxs)("div", {
+          children: MB("dailyDrop:name")
+        }), (0, PB.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, XH.jsx)(Gz.e, {
+          children: [(0, PB.jsx)(py.c, {
             className: "DailyDropTileBlock"
-          }), (0, XH.jsx)("div", {
+          }), (0, PB.jsx)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: EH("dailyDrop:collected", {
-              count: BH.collected.length,
-              total: BH.total
+            children: MB("dailyDrop:collected", {
+              count: OB.collected.length,
+              total: OB.total
             })
           })]
-        }), "ready" === LH.kind && (0, XH.jsx)(CH.u, {
+        }), "ready" === GB.kind && (0, PB.jsx)(JB.q, {
           className: "DailyDropTileOpen",
-          onClick: tH,
-          loading: rH,
-          children: EH("dailyDrop:open")
-        }), "waiting" === LH.kind && (0, XH.jsx)("div", {
+          onClick: jB,
+          loading: DB,
+          children: MB("dailyDrop:open")
+        }), "waiting" === GB.kind && (0, PB.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: EH("dailyDrop:nextIn", {
-            count: LH.hours
+          children: MB("dailyDrop:nextIn", {
+            count: GB.hours
           })
         })]
       })
     }
-    var uz = LH(2339);
-    const Qz = Math.PI / 180;
+    var Zy = GB(2392);
+    const Ny = Math.PI / 180;
 
-    function Wz(HH) {
-      return HH / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
+    function Ry(BB) {
+      return BB / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
     }
 
-    function Mz(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const AH = (HH / (2 * Math.PI / LH) % LH + LH) % LH;
-      let rH = null,
-        SH = 1 / 0;
-      for (let hH = 0; hH < LH; hH++) {
-        if (!BH[hH]) continue;
-        const HH = Math.abs(hH - AH),
-          tH = Math.min(HH, LH - HH);
-        tH < SH && (rH = hH, SH = tH)
+    function Wy(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const YB = (BB / (2 * Math.PI / GB) % GB + GB) % GB;
+      let DB = null,
+        QB = 1 / 0;
+      for (let oB = 0; oB < GB; oB++) {
+        if (!OB[oB]) continue;
+        const BB = Math.abs(oB - YB),
+          jB = Math.min(BB, GB - BB);
+        jB < QB && (DB = oB, QB = jB)
       }
-      return rH
+      return DB
     }
 
-    function xz(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const AH = Mz(HH, BH, LH);
-      if (null === AH) return HH;
-      const rH = Wz(AH, LH) - HH;
-      return HH + rH - 2 * Math.PI * Math.round(rH / (2 * Math.PI))
+    function Ay(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const YB = Wy(BB, OB, GB);
+      if (null === YB) return BB;
+      const DB = Ry(YB, GB) - BB;
+      return BB + DB - 2 * Math.PI * Math.round(DB / (2 * Math.PI))
     }
-    const vz = 32;
+    const Vy = 32;
 
-    function Pz(HH) {
-      if (0 === HH.width || 0 === HH.height) return !0;
-      const BH = document.createElement("canvas");
-      BH.width = vz, BH.height = vz;
-      const LH = BH.getContext("2d", {
+    function Sy(BB) {
+      if (0 === BB.width || 0 === BB.height) return !0;
+      const OB = document.createElement("canvas");
+      OB.width = Vy, OB.height = Vy;
+      const GB = OB.getContext("2d", {
         willReadFrequently: !0
       });
-      if (!LH) return !0;
-      LH.drawImage(HH, 0, 0, vz, vz);
+      if (!GB) return !0;
+      GB.drawImage(BB, 0, 0, Vy, Vy);
       const {
-        data: AH
-      } = LH.getImageData(0, 0, vz, vz);
-      for (let rH = 3; rH < AH.length; rH += 4)
-        if (AH[rH] > 0) return !1;
+        data: YB
+      } = GB.getImageData(0, 0, Vy, Vy);
+      for (let DB = 3; DB < YB.length; DB += 4)
+        if (YB[DB] > 0) return !1;
       return !0
     }
 
-    function Tz(HH) {
-      const BH = document.createElement("canvas");
-      BH.width = HH.width, BH.height = HH.height;
-      const LH = BH.getContext("2d");
-      return LH ? (LH.drawImage(HH, 0, 0), BH) : null
+    function ny(BB) {
+      const OB = document.createElement("canvas");
+      OB.width = BB.width, OB.height = BB.height;
+      const GB = OB.getContext("2d");
+      return GB ? (GB.drawImage(BB, 0, 0), OB) : null
     }
 
-    function Uz(HH) {
+    function Uy(BB) {
       let {
-        cosmetics: BH
-      } = HH;
-      return (0, XH.jsx)("div", {
+        cosmetics: OB
+      } = BB;
+      return (0, PB.jsx)("div", {
         className: "DailyDropRevealHead",
-        children: (0, XH.jsx)(gh.c, {
-          cosmetics: BH
+        children: (0, PB.jsx)(wo.b, {
+          cosmetics: OB
         })
       })
     }
 
-    function Vz(HH) {
+    function fy(BB) {
       let {
-        worn: BH,
-        rh: LH,
-        Sh: rH,
-        prompting: zH,
-        className: CH
-      } = HH;
+        worn: OB,
+        UB: GB,
+        fB: DB,
+        prompting: yB,
+        className: JB
+      } = BB;
       const {
-        t: EH
-      } = (0, hH.B)(), GH = (0, AH.useRef)(null), [YH, uH] = (0, AH.useState)(null), [QH, WH] = (0, AH.useState)(!1), [MH, xH] = (0, AH.useState)(!1), vH = (0, AH.useRef)([]), PH = (0, AH.useRef)(null), TH = (0, AH.useRef)(0), VH = (0, AH.useRef)(null), OH = (0, AH.useRef)(!0), bH = (0, AH.useCallback)((() => {
-        const HH = PH.current,
-          BH = vH.current,
-          LH = Mz(TH.current, BH),
-          AH = null === LH ? null : BH[LH],
-          rH = null === HH || void 0 === HH ? void 0 : HH.getContext("2d");
-        HH && AH && rH && (HH.width === AH.width && HH.height === AH.height || (HH.width = AH.width, HH.height = AH.height), rH.clearRect(0, 0, HH.width, HH.height), rH.drawImage(AH, 0, 0))
+        t: MB
+      } = (0, oB.H)(), zB = (0, YB.useRef)(null), [lB, pB] = (0, YB.useState)(null), [qB, ZB] = (0, YB.useState)(!1), [NB, RB] = (0, YB.useState)(!1), WB = (0, YB.useRef)([]), AB = (0, YB.useRef)(null), VB = (0, YB.useRef)(0), nB = (0, YB.useRef)(null), UB = (0, YB.useRef)(!0), fB = (0, YB.useCallback)((() => {
+        const BB = AB.current,
+          OB = WB.current,
+          GB = Wy(VB.current, OB),
+          YB = null === GB ? null : OB[GB],
+          DB = null === BB || void 0 === BB ? void 0 : BB.getContext("2d");
+        BB && YB && DB && (BB.width === YB.width && BB.height === YB.height || (BB.width = YB.width, BB.height = YB.height), DB.clearRect(0, 0, BB.width, BB.height), DB.drawImage(YB, 0, 0))
       }), []);
-      async function kH(HH, BH) {
-        const LH = performance.now();
-        let AH = 0;
-        for (const rH of function() {
-            let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
-            const BH = [],
-              LH = new Set;
-            for (let AH = HH / 2; AH >= 1 && Number.isInteger(AH); AH /= 2)
-              for (let rH = 0; rH < HH; rH += AH) LH.has(rH) || (LH.add(rH), BH.push(rH));
-            for (let AH = 0; AH < HH; AH++) LH.has(AH) || BH.push(AH);
-            return BH
+      async function kB(BB, OB) {
+        const GB = performance.now();
+        let YB = 0;
+        for (const DB of function() {
+            let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
+            const OB = [],
+              GB = new Set;
+            for (let YB = BB / 2; YB >= 1 && Number.isInteger(YB); YB /= 2)
+              for (let DB = 0; DB < BB; DB += YB) GB.has(DB) || (GB.add(DB), OB.push(DB));
+            for (let YB = 0; YB < BB; YB++) GB.has(YB) || OB.push(YB);
+            return OB
           }()) {
-          if (GH.current !== HH) break;
-          if (0 !== rH && (HH.turnCamera(Wz(rH)), await new Promise((HH => {
+          if (zB.current !== BB) break;
+          if (0 !== DB && (BB.turnCamera(Ry(DB)), await new Promise((BB => {
               requestAnimationFrame((() => {
                 requestAnimationFrame((() => {
-                  HH()
+                  BB()
                 }))
               }))
-            })), GH.current !== HH)) break;
-          const LH = Pz(BH) ? null : Tz(BH);
-          if (null !== LH) vH.current[rH] = LH, AH++, 0 === rH && uH("stills");
-          else if (0 === rH) break
+            })), zB.current !== BB)) break;
+          const GB = Sy(OB) ? null : ny(OB);
+          if (null !== GB) WB.current[DB] = GB, YB++, 0 === DB && pB("stills");
+          else if (0 === DB) break
         }
-        AH > 0 && console.info(`Lucky Skin Block's Before: ${AH} stills in ${Math.round(performance.now()-LH)} ms`)
+        YB > 0 && console.info(`Lucky Skin Block's Before: ${YB} stills in ${Math.round(performance.now()-GB)} ms`)
       }
 
-      function mH(HH) {
-        var BH, LH;
-        (null === (BH = VH.current) || void 0 === BH ? void 0 : BH.pointerId) === HH.pointerId && (VH.current = null, OH.current || (TH.current = xz(TH.current, vH.current), bH(), null === (LH = GH.current) || void 0 === LH || LH.turnCamera(TH.current)))
-      }(0, AH.useEffect)((() => {
-        "stills" === YH && bH()
-      }), [YH, bH]), (0, AH.useEffect)((() => () => {
-        for (const HH of vH.current) HH && (HH.width = 0, HH.height = 0);
-        vH.current = []
+      function dB(BB) {
+        var OB, GB;
+        (null === (OB = nB.current) || void 0 === OB ? void 0 : OB.pointerId) === BB.pointerId && (nB.current = null, UB.current || (VB.current = Ay(VB.current, WB.current), fB(), null === (GB = zB.current) || void 0 === GB || GB.turnCamera(VB.current)))
+      }(0, YB.useEffect)((() => {
+        "stills" === lB && fB()
+      }), [lB, fB]), (0, YB.useEffect)((() => () => {
+        for (const BB of WB.current) BB && (BB.width = 0, BB.height = 0);
+        WB.current = []
       }), []);
-      const oH = zH && !MH,
-        IH = oH ? {
-          onPointerDown: HH => {
-            null === VH.current && (HH.currentTarget.setPointerCapture(HH.pointerId), VH.current = {
-              pointerId: HH.pointerId,
-              startX: HH.clientX,
-              startTurn: TH.current
+      const KB = yB && !NB,
+        uB = KB ? {
+          onPointerDown: BB => {
+            null === nB.current && (BB.currentTarget.setPointerCapture(BB.pointerId), nB.current = {
+              pointerId: BB.pointerId,
+              startX: BB.clientX,
+              startTurn: VB.current
             })
           },
-          onPointerMove: HH => {
-            const BH = VH.current;
-            var LH;
-            null !== BH && BH.pointerId === HH.pointerId && (TH.current = BH.startTurn - (HH.clientX - BH.startX) * Qz, bH(), OH.current || null === (LH = GH.current) || void 0 === LH || LH.turnCamera(TH.current))
+          onPointerMove: BB => {
+            const OB = nB.current;
+            var GB;
+            null !== OB && OB.pointerId === BB.pointerId && (VB.current = OB.startTurn - (BB.clientX - OB.startX) * Ny, fB(), UB.current || null === (GB = zB.current) || void 0 === GB || GB.turnCamera(VB.current))
           },
-          onPointerUp: mH,
-          onPointerCancel: mH
+          onPointerUp: dB,
+          onPointerCancel: dB
         } : {};
-      return (0, XH.jsxs)("div", {
-        className: SH()("DailyDropRevealFigures", {
-          DailyDropRevealFiguresTurnable: oH
-        }, CH),
-        children: [(0, XH.jsxs)("div", {
+      return (0, PB.jsxs)("div", {
+        className: QB()("DailyDropRevealFigures", {
+          DailyDropRevealFiguresTurnable: KB
+        }, JB),
+        children: [(0, PB.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            ...IH,
-            children: ["stills" === YH && (0, XH.jsx)("canvas", {
-              ref: PH,
+            ...uB,
+            children: ["stills" === lB && (0, PB.jsx)("canvas", {
+              ref: AB,
               className: "DailyDropRevealBeforeStill"
-            }), "head" === YH && (0, XH.jsx)(Uz, {
-              cosmetics: BH
-            }), null === YH && (0, XH.jsx)(UH.d, {})]
-          }), (0, XH.jsx)("span", {
+            }), "head" === lB && (0, PB.jsx)(Uy, {
+              cosmetics: OB
+            }), null === lB && (0, PB.jsx)(SB.b, {})]
+          }), (0, PB.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: EH("dailyDrop:before")
+            children: MB("dailyDrop:before")
           })]
-        }), (0, XH.jsx)(tH.c, {
+        }), (0, PB.jsx)(jB.b, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, XH.jsx)("div", {
-              className: SH()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: QH
+            children: [(0, PB.jsx)("div", {
+              className: QB()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: qB
               }),
-              children: (0, XH.jsx)(AH.Suspense, {
+              children: (0, PB.jsx)(YB.Suspense, {
                 fallback: null,
-                children: (0, XH.jsx)(Zh.b, {
+                children: (0, PB.jsx)(Co.b, {
                   onNoWebGl: () => {
-                    uH("head"), xH(!0)
+                    pB("head"), RB(!0)
                   },
-                  ref: GH,
+                  ref: zB,
                   onReady: () => {
-                    var HH, LH;
-                    null === (HH = GH.current) || void 0 === HH || HH.resetCamera(), null === (LH = GH.current) || void 0 === LH || LH.setAllCosmetics(BH)
+                    var BB, GB;
+                    null === (BB = zB.current) || void 0 === BB || BB.resetCamera(), null === (GB = zB.current) || void 0 === GB || GB.setAllCosmetics(OB)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
                       !async function() {
-                        var HH;
-                        const BH = GH.current;
-                        if (!BH) return;
-                        const AH = null === (HH = BH.getDevTools()) || void 0 === HH ? void 0 : HH.canvas();
+                        var BB;
+                        const OB = zB.current;
+                        if (!OB) return;
+                        const YB = null === (BB = OB.getDevTools()) || void 0 === BB ? void 0 : BB.canvas();
                         try {
-                          AH && await kH(BH, AH)
-                        } catch (hH) {
-                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", hH)
+                          YB && await kB(OB, YB)
+                        } catch (oB) {
+                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", oB)
                         } finally {
-                          OH.current = !1
+                          UB.current = !1
                         }
-                        if (GH.current !== BH) return;
-                        vH.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), uH("head")), null === VH.current && (TH.current = xz(TH.current, vH.current)), BH.turnCamera(TH.current), bH(), BH.updateCosmetic(LH, rH);
-                        const SH = new Promise((HH => {
-                          setTimeout(HH, 1e4)
+                        if (zB.current !== OB) return;
+                        WB.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), pB("head")), null === nB.current && (VB.current = Ay(VB.current, WB.current)), OB.turnCamera(VB.current), fB(), OB.updateCosmetic(GB, DB);
+                        const QB = new Promise((BB => {
+                          setTimeout(BB, 1e4)
                         }));
-                        await Promise.race([BH.ensureReadyForCapture(LH), SH]).catch((HH => {
-                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", HH)
-                        })), GH.current === BH && WH(!0)
+                        await Promise.race([OB.ensureReadyForCapture(GB), QB]).catch((BB => {
+                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", BB)
+                        })), zB.current === OB && ZB(!0)
                       }()
                     }))
                   }
                 })
               })
-            }), MH && (LS.M.includes(LH) ? (0, XH.jsx)(Uz, {
+            }), NB && (GQ.O.includes(GB) ? (0, PB.jsx)(Uy, {
               cosmetics: {
-                ...BH,
-                [LH]: rH
+                ...OB,
+                [GB]: DB
               }
-            }) : (0, XH.jsx)("img", {
+            }) : (0, PB.jsx)("img", {
               className: "DailyDropRevealAfterPiece",
-              src: `/textures/charSkins/previews/${(0,uz.h)(LH,rH).previewTex}.png`,
+              src: `/textures/charSkins/previews/${(0,Zy.n)(GB,DB).previewTex}.png`,
               alt: "",
               draggable: !1
-            })), !QH && !MH && (0, XH.jsx)(UH.d, {}), (0, XH.jsx)("div", {
+            })), !qB && !NB && (0, PB.jsx)(SB.b, {}), (0, PB.jsx)("div", {
               className: "DailyDropRevealTurn",
-              ...IH
+              ...uB
             })]
-          }), (0, XH.jsx)("span", {
+          }), (0, PB.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: EH("dailyDrop:after")
+            children: MB("dailyDrop:after")
           })]
         })]
       })
     }
-    const Oz = {
+    const ky = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -8306,211 +8314,211 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      bz = {
+      dy = {
         opening: 900,
         shrinking: 700
       };
 
-    function kz(HH) {
+    function Ky(BB) {
       let {
-        drop: BH,
-        onClose: LH
-      } = HH;
+        drop: OB,
+        onClose: GB
+      } = BB;
       const {
-        t: rH
-      } = (0, hH.B)(), {
-        userContext: zH
-      } = (0, uH.e)(), {
-        state: EH,
-        view: GH
-      } = (0, YL.w)(), [YH, QH] = (0, AH.useState)("closed"), [WH] = (0, AH.useState)((() => ({
-        ...zH.getPlayerCosmetics()
-      }))), [MH] = (0, AH.useState)((() => (0, YL.h)(BH, WH))), [xH, vH] = (0, AH.useState)(!1), [PH, TH] = (0, AH.useState)(!1), [UH] = (0, AH.useState)((() => null === EH ? Promise.resolve(null) : xL(EH))), [VH, bH] = (0, AH.useState)(null), kH = (0, EL.c)(), {
-        gameState: mH
-      } = (0, OH.m)(["gameState"]);
-      async function oH() {
-        const HH = await UH;
-        kH.current && (null === HH ? (LH(), async function(HH) {
-          let BH = null;
+        t: DB
+      } = (0, oB.H)(), {
+        userContext: yB
+      } = (0, pB.d)(), {
+        state: MB,
+        view: zB
+      } = (0, lG.B)(), [lB, qB] = (0, YB.useState)("closed"), [ZB] = (0, YB.useState)((() => ({
+        ...yB.getPlayerCosmetics()
+      }))), [NB] = (0, YB.useState)((() => (0, lG.k)(OB, ZB))), [RB, WB] = (0, YB.useState)(!1), [AB, VB] = (0, YB.useState)(!1), [SB] = (0, YB.useState)((() => null === MB ? Promise.resolve(null) : RG(MB))), [nB, fB] = (0, YB.useState)(null), kB = (0, MG.c)(), {
+        gameState: dB
+      } = (0, UB.o)(["gameState"]);
+      async function KB() {
+        const BB = await SB;
+        kB.current && (null === BB ? (GB(), async function(BB) {
+          let OB = null;
           try {
-            const LH = await ML();
-            null === HH || HH.remindersOn || null !== WL.e.getItem(LH) || (BH = LH)
-          } catch (AH) {
-            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", AH)
+            const GB = await NG();
+            null === BB || BB.remindersOn || null !== ZG.g.getItem(GB) || (OB = GB)
+          } catch (YB) {
+            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", YB)
           }
-          if (null === BH) return void await (0, uL.j)("dailyDrop");
-          const LH = BH;
-          await (0, uL.j)("dailyDrop", {
+          if (null === OB) return void await (0, pG.k)("dailyDrop");
+          const GB = OB;
+          await (0, pG.k)("dailyDrop", {
             copy: {
               title: "mobilePushNotifications:optInTitle",
               subtitle: "mobilePushNotifications:offerSubtitleDailyDrop"
             },
             onAllow: () => {
-              WL.e.setItem(LH, !0), PL(null)
+              ZG.g.setItem(GB, !0), AG(null)
             }
           })
-        }(EH)) : ((0, uL.f)(), bH(HH), QH("remind")))
+        }(MB)) : ((0, pG.g)(), fB(BB), qB("remind")))
       }
 
-      function IH(HH) {
-        null !== VH && function(HH, BH) {
-          WL.e.setItem(HH.askedKey, !0), (0, CL.g)(), (0, YL.q)("daily_drop.remind", BH ? "yes" : "no"), BH && PL(HH.requester)
-        }(VH, HH), LH()
-      }(0, AH.useEffect)((() => {
-        (0, YL.q)("daily_drop.reveal_step", YH)
-      }), [YH]), (0, AH.useEffect)((() => {
-        const HH = bz[YH];
-        if (void 0 === HH) return;
-        const BH = setTimeout((() => {
-          QH(Oz[YH])
-        }), HH);
+      function uB(BB) {
+        null !== nB && function(BB, OB) {
+          ZG.g.setItem(BB.askedKey, !0), (0, JG.g)(), (0, lG.v)("daily_drop.remind", OB ? "yes" : "no"), OB && AG(BB.requester)
+        }(nB, BB), GB()
+      }(0, YB.useEffect)((() => {
+        (0, lG.v)("daily_drop.reveal_step", lB)
+      }), [lB]), (0, YB.useEffect)((() => {
+        const BB = dy[lB];
+        if (void 0 === BB) return;
+        const OB = setTimeout((() => {
+          qB(ky[lB])
+        }), BB);
         return () => {
-          clearTimeout(BH)
+          clearTimeout(OB)
         }
-      }), [YH]);
-      const fH = rH(`dailyDrop:kind_${MH.rh}`),
-        lH = EH && rH("dailyDrop:collected", {
-          count: EH.collected.length,
-          total: EH.total
+      }), [lB]);
+      const mB = DB(`dailyDrop:kind_${NB.UB}`),
+        IB = MB && DB("dailyDrop:collected", {
+          count: MB.collected.length,
+          total: MB.total
         }),
-        KH = "revealed" === YH || "shrinking" === YH,
-        cH = "equip" !== YH && "remind" !== YH;
-      return (0, XH.jsx)(Vr.b, {
+        FB = "revealed" === lB || "shrinking" === lB,
+        iB = "equip" !== lB && "remind" !== lB;
+      return (0, PB.jsx)(nD.d, {
         className: "DailyDropRevealScreen",
-        close: "remind" === YH ? () => {
-          IH(!1)
-        } : LH,
+        close: "remind" === lB ? () => {
+          uB(!1)
+        } : GB,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, XH.jsxs)("div", {
-          className: SH()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === YH,
-            DailyDropRevealShrinking: "shrinking" === YH,
-            DailyDropRevealFiguresShown: "shrinking" === YH || "equip" === YH || "remind" === YH
+        children: (0, PB.jsxs)("div", {
+          className: QB()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === lB,
+            DailyDropRevealShrinking: "shrinking" === lB,
+            DailyDropRevealFiguresShown: "shrinking" === lB || "equip" === lB || "remind" === lB
           }),
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, XH.jsx)(Vz, {
+            children: [(0, PB.jsx)(fy, {
               className: "DailyDropRevealStageFigures",
-              worn: WH,
-              rh: MH.rh,
-              Sh: MH.Sh,
-              prompting: !cH
-            }), ("closed" === YH || "opening" === YH) && (0, XH.jsx)(Gz.e, {
+              worn: ZB,
+              UB: NB.UB,
+              fB: NB.fB,
+              prompting: !iB
+            }), ("closed" === lB || "opening" === lB) && (0, PB.jsx)(py.c, {
               className: "DailyDropRevealBlock",
-              open: "opening" === YH
-            }), KH && (0, XH.jsx)("div", {
+              open: "opening" === lB
+            }), FB && (0, PB.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, XH.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,uz.h)(MH.rh,MH.Sh).previewTex}.png`,
-                alt: fH,
+              children: (0, PB.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,Zy.n)(NB.UB,NB.fB).previewTex}.png`,
+                alt: mB,
                 draggable: !1
               })
             })]
-          }), cH && (0, XH.jsxs)(XH.Fragment, {
-            children: [(0, XH.jsxs)("div", {
+          }), iB && (0, PB.jsxs)(PB.Fragment, {
+            children: [(0, PB.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, XH.jsx)("div", {
+              children: [(0, PB.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: KH ? fH : rH("dailyDrop:name")
-              }), "closed" === YH && (0, XH.jsx)("div", {
+                children: FB ? mB : DB("dailyDrop:name")
+              }), "closed" === lB && (0, PB.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: rH("dailyDrop:tapToOpen")
-              }), "revealed" === YH && (0, XH.jsx)("div", {
+                children: DB("dailyDrop:tapToOpen")
+              }), "revealed" === lB && (0, PB.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: rH("dailyDrop:tapToContinue")
+                children: DB("dailyDrop:tapToContinue")
               })]
-            }), (0, XH.jsx)("button", {
+            }), (0, PB.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": rH("closed" === YH ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": DB("closed" === lB ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                QH(Oz[YH])
+                qB(ky[lB])
               }
             })]
-          }), "equip" === YH && (0, XH.jsxs)("div", {
+          }), "equip" === lB && (0, PB.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: fH
-            }), (0, XH.jsx)("div", {
+              children: mB
+            }), (0, PB.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: rH("dailyDrop:equipQuestion")
-            }), (0, XH.jsxs)("div", {
+              children: DB("dailyDrop:equipQuestion")
+            }), (0, PB.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, XH.jsx)(CH.i, {
+              children: [(0, PB.jsx)(JB.f, {
                 className: "DailyDropRevealButton",
-                disabled: xH,
+                disabled: RB,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, YL.q)("daily_drop.not_now", BH), oH()
+                  (0, lG.v)("daily_drop.not_now", OB), KB()
                 },
-                children: rH("dailyDrop:notNow")
-              }), (0, XH.jsx)(CH.i, {
+                children: DB("dailyDrop:notNow")
+              }), (0, PB.jsx)(JB.f, {
                 className: "DailyDropRevealButton",
-                loading: xH,
+                loading: RB,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, YL.q)("daily_drop.equip", BH), vH(!0), TH(!1);
+                    (0, lG.v)("daily_drop.equip", OB), WB(!0), VB(!1);
                     try {
-                      await (0, YL.g)(zH, MH.rh, MH.Sh)
-                    } catch (HH) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", HH), vH(!1), void TH(!0)
+                      await (0, lG.h)(yB, NB.UB, NB.fB)
+                    } catch (BB) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", BB), WB(!1), void VB(!0)
                     }
-                    await oH()
+                    await KB()
                   }()
                 },
-                children: rH("dailyDrop:equip")
+                children: DB("dailyDrop:equip")
               })]
-            }), PH && (0, XH.jsx)("div", {
+            }), AB && (0, PB.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: rH("dailyDrop:equipFailed")
-            }), !(0, OH.g)(mH) && (0, XH.jsxs)("button", {
+              children: DB("dailyDrop:equipFailed")
+            }), !(0, UB.g)(dB) && (0, PB.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: xH,
+              disabled: RB,
               onClick: () => {
-                var HH;
-                (0, YL.q)("daily_drop.customise", BH), HH = MH.rh, KL.k.AX(Wr, HH), OH.c.set({
-                  openEverythingMenuName: fB.o.CUSTOMISATION
-                }), LH()
+                var BB;
+                (0, lG.v)("daily_drop.customise", OB), BB = NB.UB, FG.o.tM(ZD, BB), UB.c.set({
+                  openEverythingMenuName: mO.p.CUSTOMISATION
+                }), GB()
               },
-              children: [rH("dailyDrop:customise"), " ", (0, XH.jsx)(tH.c, {
+              children: [DB("dailyDrop:customise"), " ", (0, PB.jsx)(jB.b, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), lH && (0, XH.jsxs)("div", {
+            }), IB && (0, PB.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [lH, "waiting" === (null === GH || void 0 === GH ? void 0 : GH.kind) && ` \xb7 ${rH("dailyDrop:nextInInline",{count:GH.hours})}`]
+              children: [IB, "waiting" === (null === zB || void 0 === zB ? void 0 : zB.kind) && ` \xb7 ${DB("dailyDrop:nextInInline",{count:zB.hours})}`]
             })]
-          }), "remind" === YH && (0, XH.jsxs)("div", {
+          }), "remind" === lB && (0, PB.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, XH.jsx)("div", {
+            children: [(0, PB.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: rH("dailyDrop:remindTitle")
-            }), (0, XH.jsx)("div", {
+              children: DB("dailyDrop:remindTitle")
+            }), (0, PB.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: rH("dailyDrop:remindSubtitle")
-            }), (0, XH.jsxs)("div", {
+              children: DB("dailyDrop:remindSubtitle")
+            }), (0, PB.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, XH.jsx)(CH.i, {
+              children: [(0, PB.jsx)(JB.f, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  IH(!1)
+                  uB(!1)
                 },
-                children: rH("dailyDrop:remindNo")
-              }), (0, XH.jsx)(CH.i, {
+                children: DB("dailyDrop:remindNo")
+              }), (0, PB.jsx)(JB.f, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  IH(!0)
+                  uB(!0)
                 },
-                children: rH("dailyDrop:remindYes")
+                children: DB("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -8518,805 +8526,805 @@ export const modules = {
       })
     }
 
-    function mz(HH, BH) {
+    function uy(BB, OB) {
       const {
-        t: LH
-      } = (0, hH.B)(), rH = function(HH, BH) {
+        t: GB
+      } = (0, oB.H)(), DB = function(BB, OB) {
         const {
-          state: LH,
-          view: rH
-        } = (0, YL.w)(), [SH, hH] = (0, AH.useState)(!1), [tH, zH] = (0, AH.useState)(!1), [CH, EH] = (0, AH.useState)(null), XH = (0, AH.useRef)(null), GH = (0, AH.useRef)(!1), YH = BH && "ready" === (null === rH || void 0 === rH ? void 0 : rH.kind);
-        (0, AH.useEffect)((() => {
-          HH ? YH && !GH.current && (GH.current = !0, (0, YL.q)("daily_drop.shown", "tile")) : GH.current = !1
-        }), [HH, YH]), (0, AH.useEffect)((() => {
-          HH || (MH(), zH(!1))
-        }), [HH]);
-        const uH = HH && null === CH && !(0, YL.o)(rH);
-        (0, AH.useEffect)((() => {
-          uH && OH.c.set({
-            openEverythingMenuName: fB.o.CUSTOMISATION
+          state: GB,
+          view: DB
+        } = (0, lG.B)(), [QB, oB] = (0, YB.useState)(!1), [jB, yB] = (0, YB.useState)(!1), [JB, MB] = (0, YB.useState)(null), PB = (0, YB.useRef)(null), zB = (0, YB.useRef)(!1), lB = OB && "ready" === (null === DB || void 0 === DB ? void 0 : DB.kind);
+        (0, YB.useEffect)((() => {
+          BB ? lB && !zB.current && (zB.current = !0, (0, lG.v)("daily_drop.shown", "tile")) : zB.current = !1
+        }), [BB, lB]), (0, YB.useEffect)((() => {
+          BB || (NB(), yB(!1))
+        }), [BB]);
+        const pB = BB && null === JB && !(0, lG.t)(DB);
+        (0, YB.useEffect)((() => {
+          pB && UB.c.set({
+            openEverythingMenuName: mO.p.CUSTOMISATION
           })
-        }), [uH]);
-        const QH = (0, AH.useRef)(!1),
-          WH = (0, AH.useRef)(HH);
+        }), [pB]);
+        const qB = (0, YB.useRef)(!1),
+          ZB = (0, YB.useRef)(BB);
 
-        function MH() {
-          null !== XH.current && (XH.current = null, EH(null))
+        function NB() {
+          null !== PB.current && (PB.current = null, MB(null))
         }
-        return WH.current = HH, {
-          state: LH,
-          view: rH,
-          claiming: SH,
-          claimFailed: tH,
-          reveal: CH,
+        return ZB.current = BB, {
+          state: GB,
+          view: DB,
+          claiming: QB,
+          claimFailed: jB,
+          reveal: JB,
           open: async function() {
-            if (!QH.current) {
-              QH.current = !0, hH(!0), zH(!1);
+            if (!qB.current) {
+              qB.current = !0, oB(!0), yB(!1);
               try {
                 const {
-                  state: HH,
-                  drop: BH
-                } = await (0, YL.c)();
-                if (null === HH || null === BH) return;
-                if (!WH.current) return;
-                (0, YL.q)("daily_drop.open", BH), XH.current = {
-                  state: HH,
-                  drop: BH
-                }, EH(XH.current)
-              } catch (HH) {
-                console.error("Failed to claim the Lucky Skin Block", HH), WH.current && zH(!0)
+                  state: BB,
+                  drop: OB
+                } = await (0, lG.d)();
+                if (null === BB || null === OB) return;
+                if (!ZB.current) return;
+                (0, lG.v)("daily_drop.open", OB), PB.current = {
+                  state: BB,
+                  drop: OB
+                }, MB(PB.current)
+              } catch (BB) {
+                console.error("Failed to claim the Lucky Skin Block", BB), ZB.current && yB(!0)
               } finally {
-                QH.current = !1, hH(!1)
+                qB.current = !1, oB(!1)
               }
             }
           },
-          closeReveal: MH
+          closeReveal: NB
         }
-      }(HH, BH);
+      }(BB, OB);
       return {
-        shown: (0, YL.o)(rH.view) || null !== rH.reveal,
-        tile: rH.state && rH.view && (0, XH.jsx)(Yz, {
-          state: rH.state,
-          view: rH.view,
-          claiming: rH.claiming,
-          onOpen: rH.open
+        shown: (0, lG.t)(DB.view) || null !== DB.reveal,
+        tile: DB.state && DB.view && (0, PB.jsx)(qy, {
+          state: DB.state,
+          view: DB.view,
+          claiming: DB.claiming,
+          onOpen: DB.open
         }),
-        claimFailed: rH.claimFailed && (0, XH.jsx)("div", {
+        claimFailed: DB.claimFailed && (0, PB.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: LH("dailyDrop:claimFailed")
+          children: GB("dailyDrop:claimFailed")
         }),
-        reveal: rH.reveal && (0, XH.jsx)(kz, {
-          drop: rH.reveal.drop,
-          onClose: rH.closeReveal
+        reveal: DB.reveal && (0, PB.jsx)(Ky, {
+          drop: DB.reveal.drop,
+          onClose: DB.closeReveal
         })
       }
     }
 
-    function oz(HH) {
+    function my(BB) {
       let {
-        show: BH
-      } = HH;
-      const LH = mz(BH, BH);
-      return (0, zB.C)(BH && LH.shown, (0, zB.G)(), (HH => {
-        (0, YL.q)("daily_drop.store_only_open", HH)
-      })), BH && LH.shown ? (0, XH.jsxs)("div", {
+        show: OB
+      } = BB;
+      const GB = uy(OB, OB);
+      return (0, yO.E)(OB && GB.shown, (0, yO.G)(), (BB => {
+        (0, lG.v)("daily_drop.store_only_open", BB)
+      })), OB && GB.shown ? (0, PB.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [LH.claimFailed, LH.tile && (0, XH.jsx)("div", {
+        children: [GB.claimFailed, GB.tile && (0, PB.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: LH.tile
-        }), LH.reveal]
+          children: GB.tile
+        }), GB.reveal]
       }) : null
     }
-    var Iz = LH(2771),
-      fz = LH(35028),
-      lz = LH(35037);
+    var Iy = GB(2807),
+      Fy = GB(34838),
+      iy = GB(34845);
 
-    function Kz(HH) {
+    function Ly(BB) {
       let {
-        view: BH,
-        highlight: LH,
-        scrollSignal: rH,
-        onScrolledIntoView: SH
-      } = HH;
+        view: OB,
+        highlight: GB,
+        scrollSignal: DB,
+        onScrolledIntoView: QB
+      } = BB;
       const {
-        t: tH
-      } = (0, hH.B)(), {
-        purchaseUnderWay: zH,
-        notice: CH,
-        needsLogin: EH,
-        buyPack: GH
-      } = (0, lz.e)("banner");
-      (0, Iz.V)(BH.arm, "banner");
-      const YH = (0, AH.useRef)(null);
-      return (0, AH.useEffect)((() => {
-        var HH;
-        rH > 0 && (null === (HH = YH.current) || void 0 === HH || HH.scrollIntoView({
+        t: jB
+      } = (0, oB.H)(), {
+        purchaseUnderWay: yB,
+        notice: JB,
+        needsLogin: MB,
+        buyPack: zB
+      } = (0, iy.c)("banner");
+      (0, Iy.T)(OB.arm, "banner");
+      const lB = (0, YB.useRef)(null);
+      return (0, YB.useEffect)((() => {
+        var BB;
+        DB > 0 && (null === (BB = lB.current) || void 0 === BB || BB.scrollIntoView({
           block: "nearest"
-        }), SH())
-      }), [rH]), (0, XH.jsxs)("div", {
-        ref: YH,
+        }), QB())
+      }), [DB]), (0, PB.jsxs)("div", {
+        ref: lB,
         className: "NewPlayerDealBanner",
-        children: [(0, XH.jsxs)("div", {
+        children: [(0, PB.jsxs)("div", {
           className: "NewPlayerDealBannerHead",
-          children: [(0, XH.jsx)("div", {
+          children: [(0, PB.jsx)("div", {
             className: "NewPlayerDealBannerTitle",
-            children: tH("newPlayerDeal:title")
-          }), (0, XH.jsx)(fz.b, {
-            endsAt: BH.endsAt
+            children: jB("newPlayerDeal:title")
+          }), (0, PB.jsx)(Fy.d, {
+            endsAt: OB.endsAt
           })]
-        }), (0, XH.jsx)(fz.c, {
-          view: BH,
-          needsLogin: EH,
-          busy: zH,
-          highlight: LH,
-          onBuy: HH => {
-            GH(BH, HH)
+        }), (0, PB.jsx)(Fy.g, {
+          view: OB,
+          needsLogin: MB,
+          busy: yB,
+          highlight: GB,
+          onBuy: BB => {
+            zB(OB, BB)
           }
-        }), (0, XH.jsx)(ot.e, {
-          notice: CH,
+        }), (0, PB.jsx)(mj.i, {
+          notice: JB,
           className: "SmallTextBold NewPlayerDealNotice"
         })]
       })
     }
-    LH(35030);
-    var cz = LH(2780);
+    GB(34842);
+    var gy = GB(2814);
 
-    function ez(HH) {
+    function ry(BB) {
       let {
-        wallet: BH,
-        close: LH
-      } = HH;
+        wallet: OB,
+        close: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)();
-      return (0, XH.jsxs)("div", {
+        t: YB
+      } = (0, oB.H)();
+      return (0, PB.jsxs)("div", {
         className: "NewPlayerDealGiftNotice",
-        children: [(0, XH.jsxs)("div", {
+        children: [(0, PB.jsxs)("div", {
           className: "NewPlayerDealGiftNoticeRows",
-          children: [(0, XH.jsx)("span", {
-            children: AH("newPlayerDeal:giftable")
-          }), (0, XH.jsx)(wh.e, {
-            amount: (0, vh.e)(BH)
-          }), (0, XH.jsx)("span", {
-            children: AH("newPlayerDeal:ungiftable")
-          }), (0, XH.jsx)(wh.e, {
-            amount: BH.ungiftable
+          children: [(0, PB.jsx)("span", {
+            children: YB("newPlayerDeal:giftable")
+          }), (0, PB.jsx)(bo.b, {
+            amount: (0, Ao.b)(OB)
+          }), (0, PB.jsx)("span", {
+            children: YB("newPlayerDeal:ungiftable")
+          }), (0, PB.jsx)(bo.b, {
+            amount: OB.ungiftable
           })]
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "NewPlayerDealGiftNoticeWhy",
-          children: AH("newPlayerDeal:ungiftableWhy")
-        }), (0, XH.jsx)(CH.u, {
+          children: YB("newPlayerDeal:ungiftableWhy")
+        }), (0, PB.jsx)(JB.q, {
           className: "NewPlayerDealGiftNoticeOk",
-          onClick: LH,
-          children: AH("general:ok")
+          onClick: GB,
+          children: YB("general:ok")
         })]
       })
     }
 
-    function qz(HH) {
-      rB.NotificationProvider.showCustomPopup({
-        body: BH => (0, XH.jsx)(ez, {
-          wallet: HH,
-          close: BH
+    function Xy(BB) {
+      DO.NotificationProvider.showCustomPopup({
+        body: OB => (0, PB.jsx)(ry, {
+          wallet: BB,
+          close: OB
         }),
         middleScreenPopupClassName: "NewPlayerDealGiftNoticePopup",
         disableExitButton: !0
       })
     }
-    const gz = {
+    const wy = {
       kind: "board"
     };
-    let Nz = !1;
+    let Ey = !1;
 
-    function Rz(HH) {
-      return "found" === HH.status || "error" === HH.status && "store:giftRecipientLookupFailed" === HH.error ? HH.name : null
-    }(0, zB.t)(pH.prefetchBillingOfferings);
-    const jz = (0, AH.memo)((function(HH) {
-      var BH;
+    function cy(BB) {
+      return "found" === BB.status || "error" === BB.status && "store:giftRecipientLookupFailed" === BB.error ? BB.name : null
+    }(0, yO.x)(xB.prefetchBillingOfferings);
+    const hy = (0, YB.memo)((function(BB) {
+      var OB;
       let {
-        show: rH
-      } = HH;
+        show: DB
+      } = BB;
       const {
-        t: tH
-      } = (0, hH.B)(), {
-        userContext: zH
-      } = (0, uH.e)(), CH = (0, DH.usePurchasesAllowed)(), EH = zH !== oH.NULL_USER_CONTEXT, GH = oh(zH, rH), [YH, QH] = (0, WH.b)(), {
-        page: MH,
-        urlMode: xH,
-        goTo: vH
-      } = (0, Ih.h)(), PH = function(HH) {
-        return "superRank" === HH.kind ? "superRank" : "pack" === HH.kind ? HH.pack : null
-      }(MH), {
-        openEverythingMenuName: TH,
-        gameState: UH
-      } = (0, OH.m)(["openEverythingMenuName", "gameState"]), VH = null !== TH;
-      ! function(HH, BH) {
-        const [rH] = (0, AH.useState)(Kh.l), [SH, hH] = (0, AH.useState)(!1);
-        rH && BH && !SH && hH(!0);
-        const tH = (0, aA.y)(),
-          zH = rH && SH && HH && !tH;
-        (0, AH.useEffect)((() => {
-          if (!zH) return;
-          let HH = null,
-            BH = null,
-            AH = null;
-          const rH = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, yH.getBillingClient)().purchaseUnderWay,
-            SH = () => {
-              var LH;
-              null === (LH = AH) || void 0 === LH || LH(), AH = null, null !== HH && (clearTimeout(HH), HH = null), null !== BH && (clearTimeout(BH), BH = null)
+        t: jB
+      } = (0, oB.H)(), {
+        userContext: yB
+      } = (0, pB.d)(), JB = (0, aB.usePurchasesAllowed)(), MB = yB !== KB.NULL_USER_CONTEXT, zB = mo(yB, DB), [lB, qB] = (0, ZB.e)(), {
+        page: NB,
+        urlMode: RB,
+        goTo: WB
+      } = (0, Io.f)(), AB = function(BB) {
+        return "superRank" === BB.kind ? "superRank" : "pack" === BB.kind ? BB.pack : null
+      }(NB), {
+        openEverythingMenuName: VB,
+        gameState: SB
+      } = (0, UB.o)(["openEverythingMenuName", "gameState"]), nB = null !== VB;
+      ! function(BB, OB) {
+        const [DB] = (0, YB.useState)(Lo.h), [QB, oB] = (0, YB.useState)(!1);
+        DB && OB && !QB && oB(!0);
+        const jB = (0, CY.s)(),
+          yB = DB && QB && BB && !jB;
+        (0, YB.useEffect)((() => {
+          if (!yB) return;
+          let BB = null,
+            OB = null,
+            YB = null;
+          const DB = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, tB.getBillingClient)().purchaseUnderWay,
+            QB = () => {
+              var GB;
+              null === (GB = YB) || void 0 === GB || GB(), YB = null, null !== BB && (clearTimeout(BB), BB = null), null !== OB && (clearTimeout(OB), OB = null)
             },
-            hH = () => {
-              (0, fh.q)(!1), (0, fh.m)(!1), SH(), HH = setTimeout((() => {
-                HH = null, AH = (0, lh.d)((() => {
-                  AH = null, rH() ? hH() : ((0, fh.q)(!0), BH = setTimeout((() => {
-                    BH = null, AH = (0, lh.d)((() => {
-                      AH = null, rH() ? hH() : (0, fh.m)(!0)
+            oB = () => {
+              (0, Fo.k)(!1), (0, Fo.i)(!1), QB(), BB = setTimeout((() => {
+                BB = null, YB = (0, io.b)((() => {
+                  YB = null, DB() ? oB() : ((0, Fo.k)(!0), OB = setTimeout((() => {
+                    OB = null, YB = (0, io.b)((() => {
+                      YB = null, DB() ? oB() : (0, Fo.i)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => LH(5069))).then((HH => {
-                    HH.startBackgroundGameSetup()
-                  }), (HH => {
-                    console.warn("Background game setup: its chunk failed to load", HH)
+                  }), 3e3), Promise.resolve().then((() => GB(5082))).then((BB => {
+                    BB.startBackgroundGameSetup()
+                  }), (BB => {
+                    console.warn("Background game setup: its chunk failed to load", BB)
                   })))
                 }))
               }), 2e3)
             };
-          for (const LH of ch) window.addEventListener(LH, hH, {
+          for (const GB of go) window.addEventListener(GB, oB, {
             capture: !0,
             passive: !0
           });
-          return hH(), () => {
-            for (const HH of ch) window.removeEventListener(HH, hH, {
+          return oB(), () => {
+            for (const BB of go) window.removeEventListener(BB, oB, {
               capture: !0
             });
-            SH(), (0, fh.q)(!1), (0, fh.m)(!1)
+            QB(), (0, Fo.k)(!1), (0, Fo.i)(!1)
           }
-        }), [zH])
-      }(rH && VH, "pack" === MH.kind);
-      const bH = "landingPage" === UH;
-      (0, AH.useEffect)((() => {
-        VH && (0, pH.prefetchBillingOfferings)()
-      }), [VH]), (0, AH.useEffect)((() => {
-        VH && !rH && bH && (0, eh.s)()
-      }), [VH, rH, bH]);
-      const [kH, mH] = (0, AH.useState)(0), [IH, fH] = (0, AH.useState)(null), [lH, KH] = (0, AH.useState)(null), [cH, eH] = (0, AH.useState)(null), [qH, gH] = (0, AH.useState)(null), [RH, nH] = (0, AH.useState)(0), FH = (0, AH.useRef)(null), wH = (0, AH.useRef)(null), ZH = (0, AH.useRef)(null), dH = (0, AH.useRef)(!1), aH = (0, zB.G)(), sH = (0, AH.useRef)(0);
+        }), [yB])
+      }(DB && nB, "pack" === NB.kind);
+      const fB = "landingPage" === SB;
+      (0, YB.useEffect)((() => {
+        nB && (0, xB.prefetchBillingOfferings)()
+      }), [nB]), (0, YB.useEffect)((() => {
+        nB && !DB && fB && (0, ro.v)()
+      }), [nB, DB, fB]);
+      const [kB, dB] = (0, YB.useState)(0), [uB, mB] = (0, YB.useState)(null), [IB, FB] = (0, YB.useState)(null), [iB, LB] = (0, YB.useState)(null), [gB, rB] = (0, YB.useState)(null), [wB, cB] = (0, YB.useState)(0), hB = (0, YB.useRef)(null), eB = (0, YB.useRef)(null), TB = (0, YB.useRef)(null), bB = (0, YB.useRef)(!1), CB = (0, yO.G)(), HB = (0, YB.useRef)(0);
 
-      function JH() {
-        mH((HH => HH + 1))
-      }(0, AH.useEffect)((() => {
-        if (rH) {
-          if (Nz = !0, (0, zB.j)(), aH && aH.seq !== sH.current) {
-            var HH;
-            sH.current = aH.seq, "loginResume" !== aH.source && (0, zB.z)();
-            const BH = (0, zB.d)(aH);
-            xH || vH(BH), gH(null !== (HH = aH.highlight) && void 0 !== HH ? HH : null);
-            const LH = "newPlayerDeal" === aH.source || "loginResume" === aH.source && void 0 !== aH.highlight && (0, Iz.h)(zH).includes(aH.highlight);
-            nH((HH => LH ? HH + 1 : 0)), KH(null), "gift" === aH.mode && aH.giftRecipientName ? GH.choose(aH.giftRecipientName, "prefilled") : GH.clear(), "gift" !== aH.mode || aH.giftRecipientName || JH()
+      function vB() {
+        dB((BB => BB + 1))
+      }(0, YB.useEffect)((() => {
+        if (DB) {
+          if (Ey = !0, (0, yO.n)(), CB && CB.seq !== HB.current) {
+            var BB;
+            HB.current = CB.seq, "loginResume" !== CB.source && (0, yO.B)();
+            const OB = (0, yO.d)(CB);
+            RB || WB(OB), rB(null !== (BB = CB.highlight) && void 0 !== BB ? BB : null);
+            const GB = "newPlayerDeal" === CB.source || "loginResume" === CB.source && void 0 !== CB.highlight && (0, Iy.g)(yB).includes(CB.highlight);
+            cB((BB => GB ? BB + 1 : 0)), FB(null), "gift" === CB.mode && CB.giftRecipientName ? zB.choose(CB.giftRecipientName, "prefilled") : zB.clear(), "gift" !== CB.mode || CB.giftRecipientName || vB()
           }
-        } else nH(0)
-      }), [rH, aH]), (0, zB.C)(rH, aH, (HH => {
-        (0, WB.reportAnalyticsClick)({
+        } else cB(0)
+      }), [DB, CB]), (0, yO.E)(DB, CB, (BB => {
+        (0, ZO.reportAnalyticsClick)({
           id: "store.open",
-          value: HH
+          value: BB
         })
       }));
-      const iH = (0, Iz.S)(),
-        HB = null !== qH && null === iH && null === (0, Iz.j)((0, Iz.e)(zH)) && (0, Iz.h)(zH).includes(qH);
-      (0, AH.useEffect)((() => {
-        if (!qH) return;
-        const HH = setTimeout((() => {
-          gH(null)
-        }), HB ? 15e3 : 4e3);
+      const sB = (0, Iy.S)(),
+        BO = null !== gB && null === sB && null === (0, Iy.h)((0, Iy.c)(yB)) && (0, Iy.g)(yB).includes(gB);
+      (0, YB.useEffect)((() => {
+        if (!gB) return;
+        const BB = setTimeout((() => {
+          rB(null)
+        }), BO ? 15e3 : 4e3);
         return () => {
-          clearTimeout(HH)
+          clearTimeout(BB)
         }
-      }), [qH, HB]), (0, AH.useLayoutEffect)((() => {
-        const HH = FH.current;
-        if (!rH || !HH) return wH.current = null, void(ZH.current = null);
-        var BH;
-        if (PH) wH.current = PH, null === (BH = HH.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === BH || BH.focus();
-        else if (wH.current) {
-          const BH = ZH.current;
-          null !== BH && (HH.scrollTop = BH);
-          const LH = HH.querySelector(`[data-store-item="${wH.current}"]`);
-          if (LH) {
-            const AH = LH.getBoundingClientRect(),
-              rH = HH.getBoundingClientRect();
-            LH.focus({
-              preventScroll: null !== BH && AH.bottom > rH.top && AH.top < rH.bottom
+      }), [gB, BO]), (0, YB.useLayoutEffect)((() => {
+        const BB = hB.current;
+        if (!DB || !BB) return eB.current = null, void(TB.current = null);
+        var OB;
+        if (AB) eB.current = AB, null === (OB = BB.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === OB || OB.focus();
+        else if (eB.current) {
+          const OB = TB.current;
+          null !== OB && (BB.scrollTop = OB);
+          const GB = BB.querySelector(`[data-store-item="${eB.current}"]`);
+          if (GB) {
+            const YB = GB.getBoundingClientRect(),
+              DB = BB.getBoundingClientRect();
+            GB.focus({
+              preventScroll: null !== OB && YB.bottom > DB.top && YB.top < DB.bottom
             })
           }
-          wH.current = null
+          eB.current = null
         }
-      }), [PH, rH]), (0, AH.useEffect)((() => {
-        KH(null)
-      }), [GH.query]), (0, AH.useEffect)((() => {
-        if (!cH) return;
-        const HH = setTimeout((() => {
-          eH(null)
+      }), [AB, DB]), (0, YB.useEffect)((() => {
+        FB(null)
+      }), [zB.query]), (0, YB.useEffect)((() => {
+        if (!iB) return;
+        const BB = setTimeout((() => {
+          LB(null)
         }), 8e3);
         return () => {
-          clearTimeout(HH)
+          clearTimeout(BB)
         }
-      }), [cH]);
-      const BB = zH.superRankInfo,
-        LB = zH.isLoggedIn() || (0, DH.guestsMayBuy)(),
-        AB = zH.getOwnedCosmeticPacks(),
-        rB = (0, Oh.p)(GH.query),
-        SB = (0, Oh.e)({
-          mode: rB,
-          loggedIn: EH ? LB : null,
-          superRankInfo: BB,
-          soldTierId: (0, jH.v)(Date.now()).product.tierId,
+      }), [iB]);
+      const OO = yB.superRankInfo,
+        GO = yB.isLoggedIn() || (0, aB.guestsMayBuy)(),
+        YO = yB.getOwnedCosmeticPacks(),
+        DO = (0, fo.q)(zB.query),
+        QO = (0, fo.i)({
+          mode: DO,
+          loggedIn: MB ? GO : null,
+          superRankInfo: OO,
+          soldTierId: (0, EB.x)(Date.now()).product.tierId,
           now: Date.now(),
-          ownedPacks: AB,
-          packs: Qh.o,
-          recipient: GH.recipient
+          ownedPacks: YO,
+          packs: Zo.u,
+          recipient: zB.recipient
         });
-      (0, AH.useEffect)((() => {
-        if (!LB || !rH) return;
-        const HH = (0, Iz.h)(zH),
-          BH = (0, zB.z)((BH => !HH.includes(BH.item))),
-          LH = BH && (0, Oh.l)(BH, Qh.o);
-        BH && LH && ((0, WB.reportAnalyticsClick)({
+      (0, YB.useEffect)((() => {
+        if (!GO || !DB) return;
+        const BB = (0, Iy.g)(yB),
+          OB = (0, yO.B)((OB => !BB.includes(OB.item))),
+          GB = OB && (0, fo.n)(OB, Zo.u);
+        OB && GB && ((0, ZO.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: BH.item
-        }), (0, zB.k)(LH))
-      }), [LB, rH]);
-      const hB = rH && "gift" === rB,
-        tB = (0, AH.useRef)(hB);
-      tB.current = hB;
-      const CB = "none" !== GH.recipient.status,
-        EB = (0, AH.useRef)(!1);
-      (0, AH.useEffect)((() => {
-        hB ? CB && !EB.current && (EB.current = !0, async function(HH) {
-          var BH;
-          if ("gift" === (null === (BH = (0, cz.k)()) || void 0 === BH ? void 0 : BH.show)) return void qz(cz.e);
-          const LH = await (0, vh.g)();
-          null !== LH && LH.ungiftable > 0 && HH() && qz(LH)
-        }((() => tB.current))) : EB.current = !1
-      }), [hB, CB]);
-      const XB = (0, Oh.s)({
-        superRankDaysLeft: SB.superRankDaysLeft,
-        openedThisSession: Nz || rH,
-        seenNewItems: (0, zB.h)()
+          value: OB.item
+        }), (0, yO.p)(GB))
+      }), [GO, DB]);
+      const oO = DB && "gift" === DO,
+        jO = (0, YB.useRef)(oO);
+      jO.current = oO;
+      const JO = "none" !== zB.recipient.status,
+        MO = (0, YB.useRef)(!1);
+      (0, YB.useEffect)((() => {
+        oO ? JO && !MO.current && (MO.current = !0, async function(BB) {
+          var OB;
+          if ("gift" === (null === (OB = (0, gy.j)()) || void 0 === OB ? void 0 : OB.show)) return void Xy(gy.b);
+          const GB = await (0, Ao.f)();
+          null !== GB && GB.ungiftable > 0 && BB() && Xy(GB)
+        }((() => jO.current))) : MO.current = !1
+      }), [oO, JO]);
+      const PO = (0, fo.t)({
+        superRankDaysLeft: QO.superRankDaysLeft,
+        openedThisSession: Ey || DB,
+        seenNewItems: (0, yO.j)()
       });
-      (0, AH.useEffect)((() => {
-        (0, zB.v)(XB)
-      }), [XB]);
-      const GB = "self" === rB,
-        YB = mz(rH, rH && GB && "board" === MH.kind);
-      if (!rH || !CH) return null;
-      const uB = QH > YH && YH <= 700,
-        QB = !uB && QH <= 420,
-        MB = "gift" === rB ? Rz(GH.recipient) : null,
-        xB = null !== IH,
-        vB = "gift" === rB ? {
-          name: MB,
-          cosmetics: GH.recipientCosmetics,
+      (0, YB.useEffect)((() => {
+        (0, yO.A)(PO)
+      }), [PO]);
+      const zO = "self" === DO,
+        lO = uy(DB, DB && zO && "board" === NB.kind);
+      if (!DB || !JB) return null;
+      const pO = qB > lB && lB <= 700,
+        qO = !pO && qB <= 420,
+        NO = "gift" === DO ? cy(zB.recipient) : null,
+        RO = null !== uB,
+        WO = "gift" === DO ? {
+          name: NO,
+          cosmetics: zB.recipientCosmetics,
           gift: !0
         } : {
-          name: EH && zH.getPlayerName() || null,
-          cosmetics: zH.getPlayerCosmetics(),
+          name: MB && yB.getPlayerName() || null,
+          cosmetics: yB.getPlayerCosmetics(),
           gift: !1
         };
 
-      function PB(HH) {
-        (0, xh.d)(HH, "gift" === rB ? GH.query.trim() : null)
+      function AO(BB) {
+        (0, Wo.e)(BB, "gift" === DO ? zB.query.trim() : null)
       }
 
-      function TB(HH, BH) {
-        (0, WB.reportAnalyticsClick)({
+      function VO(BB, OB) {
+        (0, ZO.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${BH?"gift":"self"}:${HH}`
-        }), BH && (GH.recordGift(BH.name, HH), UB(BH))
+          value: `${OB?"gift":"self"}:${BB}`
+        }), OB && (zB.recordGift(OB.name, BB), SO(OB))
       }
 
-      function UB(HH) {
-        ! function(HH) {
+      function SO(BB) {
+        ! function(BB) {
           try {
-            WL.e.setItem(bh, (0, Oh.A)(mh(), HH))
+            ZG.g.setItem(ko, (0, fo.E)(uo(), BB))
           } catch {}
         }({
-          name: HH.name,
-          cosmetics: HH.cosmetics
-        }), vH(gz), eH((BH => {
-          var LH;
+          name: BB.name,
+          cosmetics: BB.cosmetics
+        }), WB(wy), LB((OB => {
+          var GB;
           return {
-            name: HH.name,
-            seq: (null !== (LH = null === BH || void 0 === BH ? void 0 : BH.seq) && void 0 !== LH ? LH : 0) + 1
+            name: BB.name,
+            seq: (null !== (GB = null === OB || void 0 === OB ? void 0 : OB.seq) && void 0 !== GB ? GB : 0) + 1
           }
         }))
       }
-      async function VB(HH) {
-        var BH, LH;
-        if (dH.current) return;
-        if (!LB) return void PB(HH);
-        KH(null), gH(null);
-        const AH = "gift" === rB ? {
-          name: Rz(GH.recipient),
-          cosmetics: GH.recipientCosmetics
+      async function nO(BB) {
+        var OB, GB;
+        if (bB.current) return;
+        if (!GO) return void AO(BB);
+        FB(null), rB(null);
+        const YB = "gift" === DO ? {
+          name: cy(zB.recipient),
+          cosmetics: zB.recipientCosmetics
         } : null;
-        if (AH && !AH.name) return void JH();
-        const rH = "superRank" === HH ? (0, jH.v)(Date.now()).id : (0, Wh.b)(HH);
-        dH.current = !0;
-        const SH = await (0, Vh.b)(rH, null !== (BH = null === AH || void 0 === AH ? void 0 : AH.name) && void 0 !== BH ? BH : null);
-        if (dH.current = !1, !SH) return;
-        fH(HH);
-        const hH = await vh.h.purchase(rH, null !== (LH = null === AH || void 0 === AH ? void 0 : AH.name) && void 0 !== LH ? LH : null);
-        fH(null), hH ? KH(hH) : (TB(HH, AH), AH || (await (0, Ph.flushClientAnalyticsEvents)(), (0, Mh.refreshWithoutConfirmation)("superRank" === HH ? "/super-rank-welcome" : `/pack-welcome/${HH}`)))
+        if (YB && !YB.name) return void vB();
+        const DB = "superRank" === BB ? (0, EB.x)(Date.now()).id : (0, No.b)(BB);
+        bB.current = !0;
+        const QB = await (0, Uo.d)(DB, null !== (OB = null === YB || void 0 === YB ? void 0 : YB.name) && void 0 !== OB ? OB : null);
+        if (bB.current = !1, !QB) return;
+        mB(BB);
+        const oB = await Ao.h.purchase(DB, null !== (GB = null === YB || void 0 === YB ? void 0 : YB.name) && void 0 !== GB ? GB : null);
+        mB(null), oB ? FB(oB) : (VO(BB, YB), YB || (await (0, Vo.flushClientAnalyticsEvents)(), (0, Ro.refreshWithoutConfirmation)("superRank" === BB ? "/super-rank-welcome" : `/pack-welcome/${BB}`)))
       }
-      const OB = SH()("Store", {
-        StoreGift: "gift" === rB,
-        StorePortrait: uB,
-        StoreCompact: QB
+      const UO = QB()("Store", {
+        StoreGift: "gift" === DO,
+        StorePortrait: pO,
+        StoreCompact: qO
       });
-      if ("pack" === MH.kind) {
-        const HH = MH.pack,
-          BH = SB.packs.find((BH => BH.pack === HH));
-        return (0, XH.jsx)("div", {
-          ref: FH,
+      if ("pack" === NB.kind) {
+        const BB = NB.pack,
+          OB = QO.packs.find((OB => OB.pack === BB));
+        return (0, PB.jsx)("div", {
+          ref: hB,
           className: "CosmeticShopContainer",
-          children: (0, XH.jsx)(Uh.g, {
-            pack: HH,
+          children: (0, PB.jsx)(no.f, {
+            pack: BB,
             onBack: () => {
-              vH(gz)
+              WB(wy)
             },
-            onPurchased: BH => {
-              TB(HH, BH ? {
-                name: BH,
+            onPurchased: OB => {
+              VO(BB, OB ? {
+                name: OB,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === rB && MB && BH && (0, XH.jsxs)(XH.Fragment, {
-              children: [(0, XH.jsx)(At, {
-                state: BH.state,
-                item: HH,
-                price: (bB = HH, "superRank" === bB ? (0, jH.v)(Date.now()).price : (0, Wh.f)(bB)),
-                busy: xB,
+            giftCta: "gift" === DO && NO && OB && (0, PB.jsxs)(PB.Fragment, {
+              children: [(0, PB.jsx)(Qj, {
+                state: OB.state,
+                item: BB,
+                price: (fO = BB, "superRank" === fO ? (0, EB.x)(Date.now()).price : (0, No.c)(fO)),
+                busy: RO,
                 onAct: () => {
-                  VB(HH)
+                  nO(BB)
                 },
                 onNeedRecipient: () => {
-                  vH(gz), JH()
+                  WB(wy), vB()
                 },
                 onLogin: () => {
-                  PB(HH)
+                  AO(BB)
                 },
-                highlight: qH === HH
-              }), lH && (0, XH.jsx)("span", {
+                highlight: gB === BB
+              }), IB && (0, PB.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: tH(lH)
+                children: jB(IB)
               })]
             }),
-            ownedPacks: AB,
-            startAsGift: "gift" === rB,
-            initialGiftRecipient: "gift" === rB ? null !== MB && void 0 !== MB ? MB : GH.query.trim() : "",
-            highlightCta: qH === HH
-          }, HH)
+            ownedPacks: YO,
+            startAsGift: "gift" === DO,
+            initialGiftRecipient: "gift" === DO ? null !== NO && void 0 !== NO ? NO : zB.query.trim() : "",
+            highlightCta: gB === BB
+          }, BB)
         })
       }
-      var bB;
-      return "superRank" === MH.kind ? (0, XH.jsx)("div", {
-        ref: FH,
-        className: SH()(OB, "StoreDetailView"),
-        children: (0, XH.jsx)(hz, {
-          state: SB.superRank.state,
-          daysLeft: SB.superRankDaysLeft,
-          wearer: vB,
-          mode: rB,
-          giftName: MB,
-          busy: xB,
-          highlight: "superRank" === qH,
-          purchaseError: lH,
+      var fO;
+      return "superRank" === NB.kind ? (0, PB.jsx)("div", {
+        ref: hB,
+        className: QB()(UO, "StoreDetailView"),
+        children: (0, PB.jsx)(yy, {
+          state: QO.superRank.state,
+          daysLeft: QO.superRankDaysLeft,
+          wearer: WO,
+          mode: DO,
+          giftName: NO,
+          busy: RO,
+          highlight: "superRank" === gB,
+          purchaseError: IB,
           onBack: () => {
-            vH(gz)
+            WB(wy)
           },
           onChooseRecipient: () => {
-            vH(gz), JH()
+            WB(wy), vB()
           },
           onAct: () => {
-            VB("superRank")
+            nO("superRank")
           },
           onLogin: () => {
-            PB("superRank")
+            AO("superRank")
           }
         })
-      }) : (0, XH.jsxs)("div", {
-        ref: FH,
-        className: OB,
-        onScroll: HH => {
-          ZH.current = HH.currentTarget.scrollTop
+      }) : (0, PB.jsxs)("div", {
+        ref: hB,
+        className: UO,
+        onScroll: BB => {
+          TB.current = BB.currentTarget.scrollTop
         },
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, XH.jsx)(Fh, {
-            selfName: EH ? zH.getPlayerName() : "",
-            giftRecipient: GH,
-            suggestionsVersion: null !== (BH = null === cH || void 0 === cH ? void 0 : cH.seq) && void 0 !== BH ? BH : 0,
-            pulseSignal: kH,
-            disabled: xB || !EH
+          children: (0, PB.jsx)(eo, {
+            selfName: MB ? yB.getPlayerName() : "",
+            giftRecipient: zB,
+            suggestionsVersion: null !== (OB = null === iB || void 0 === iB ? void 0 : iB.seq) && void 0 !== OB ? OB : 0,
+            pulseSignal: kB,
+            disabled: RO || !MB
           })
-        }), cH && (0, XH.jsxs)("div", {
+        }), iB && (0, PB.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            eH(null)
+            LB(null)
           },
-          children: [(0, XH.jsx)(Th.e, {
-            showSignal: cH.seq
-          }), Oh.d, " ", tH("store:giftSent", {
-            name: cH.name
+          children: [(0, PB.jsx)(So.c, {
+            showSignal: iB.seq
+          }), fo.e, " ", jB("store:giftSent", {
+            name: iB.name
           })]
-        }, cH.seq), !cH && lH && (0, XH.jsx)("div", {
+        }, iB.seq), !iB && IB && (0, PB.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: tH(lH)
-        }), GB && YB.claimFailed, (0, XH.jsx)(rz, {
-          layout: SB,
-          mountAtOnce: null !== wH.current,
-          bundleGift: "gift" === rB ? {
-            recipientName: MB,
-            lookingUp: "pending" === GH.recipient.status,
-            busy: xB,
-            onNeedRecipient: JH,
-            onSent: HH => {
-              (0, WB.reportAnalyticsClick)({
+          children: jB(IB)
+        }), zO && lO.claimFailed, (0, PB.jsx)(oy, {
+          layout: QO,
+          mountAtOnce: null !== eB.current,
+          bundleGift: "gift" === DO ? {
+            recipientName: NO,
+            lookingUp: "pending" === zB.recipient.status,
+            busy: RO,
+            onNeedRecipient: vB,
+            onSent: BB => {
+              (0, ZO.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), UB({
-                name: HH,
-                cosmetics: GH.recipientCosmetics
+              }), SO({
+                name: BB,
+                cosmetics: zB.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, Oh.v)(BB),
-          busy: xB,
-          highlightItem: qH,
-          onOpen: function(HH) {
-            (0, WB.reportAnalyticsClick)({
+          superRankTotalDays: (0, fo.x)(OO),
+          busy: RO,
+          highlightItem: gB,
+          onOpen: function(BB) {
+            (0, ZO.reportAnalyticsClick)({
               id: "store.item_open",
-              value: HH
-            }), vH((0, zB.g)(HH))
+              value: BB
+            }), WB((0, yO.f)(BB))
           },
-          onAct: VB,
-          onNeedRecipient: JH,
-          onLogin: PB,
-          dailyDropTile: GB && YB.tile,
-          rankWearer: vB,
-          dealBanner: "self" === rB && null !== iH && (0, XH.jsx)(Kz, {
-            view: iH,
-            highlight: qH,
-            scrollSignal: RH,
+          onAct: nO,
+          onNeedRecipient: vB,
+          onLogin: AO,
+          dailyDropTile: zO && lO.tile,
+          rankWearer: WO,
+          dealBanner: "self" === DO && null !== sB && (0, PB.jsx)(Ly, {
+            view: sB,
+            highlight: gB,
+            scrollSignal: wB,
             onScrolledIntoView: () => {
-              nH(0)
+              cB(0)
             }
           })
-        }), "gift" !== rB && !(0, NH.c)(Date.now()) && (0, XH.jsx)(Ez, {}), YB.reveal]
+        }), "gift" !== DO && !(0, XB.c)(Date.now()) && (0, PB.jsx)(zy, {}), lO.reveal]
       })
     }));
-    var nz = LH(2926),
-      Fz = LH(9537),
-      Dz = LH(9356),
-      wz = LH(3015),
-      Zz = LH(2820),
-      dz = LH(2877),
-      az = LH(2893),
-      sz = LH(2895),
-      Jz = LH(2968),
-      iz = LH(2954),
-      pz = LH(2513),
-      yz = LH(2587),
-      HC = LH(2536),
-      BC = LH(2108),
-      LC = LH(2899),
-      AC = LH(2596);
+    var ay = GB(2956),
+      ey = GB(9506),
+      Ty = GB(9344),
+      by = GB(3066),
+      Cy = GB(2861),
+      Hy = GB(2914),
+      vy = GB(2928),
+      sy = GB(2932),
+      xy = GB(3004),
+      ty = GB(2991),
+      BJ = GB(2535),
+      OJ = GB(2604),
+      GJ = GB(2560),
+      YJ = GB(2139),
+      DJ = GB(2936),
+      QJ = GB(2613);
 
-    function rC(HH) {
+    function oJ(BB) {
       let {
-        show: BH
-      } = HH;
-      return BH ? (0, XH.jsx)(SC, {}) : null
+        show: OB
+      } = BB;
+      return OB ? (0, PB.jsx)(jJ, {}) : null
     }
 
-    function SC() {
+    function jJ() {
       const {
-        t: HH
-      } = (0, hH.B)(), {
-        followsLeader: BH
-      } = (0, Zz.g)(), {
-        loading: LH,
-        friends: rH,
-        requests: zH,
-        invites: EH
-      } = (0, aH.l)(), {
-        userContext: GH
-      } = (0, uH.e)(), [YH, QH] = (0, AH.useState)(AC.i);
-      (0, AH.useEffect)((() => {
-        (0, AC.e)()
+        t: BB
+      } = (0, oB.H)(), {
+        followsLeader: OB
+      } = (0, Cy.d)(), {
+        loading: GB,
+        friends: DB,
+        requests: yB,
+        invites: MB
+      } = (0, CB.h)(), {
+        userContext: zB
+      } = (0, pB.d)(), [lB, qB] = (0, YB.useState)(QJ.i);
+      (0, YB.useEffect)((() => {
+        (0, QJ.b)()
       }), []);
-      const WH = zH.map((HH => HH.name)),
+      const ZB = yB.map((BB => BB.name)),
         {
-          state: MH,
-          recentRequesters: xH
-        } = (0, iz.n)(),
-        vH = new Map([...("loaded" === MH.status ? MH.recentPlayers : []).map((HH => [HH.preview.name, HH])), ...xH.map((HH => [HH.name, HH]))]),
-        PH = (0, AH.useRef)(null),
-        [VH, OH] = (0, AH.useState)(""),
-        [bH, kH] = (0, AH.useState)("Enter"),
-        [mH, oH] = (0, AH.useState)(null);
+          state: NB,
+          recentRequesters: RB
+        } = (0, ty.k)(),
+        WB = new Map([...("loaded" === NB.status ? NB.recentPlayers : []).map((BB => [BB.preview.name, BB])), ...RB.map((BB => [BB.name, BB]))]),
+        AB = (0, YB.useRef)(null),
+        [nB, UB] = (0, YB.useState)(""),
+        [fB, kB] = (0, YB.useState)("Enter"),
+        [dB, KB] = (0, YB.useState)(null);
 
-      function IH() {
-        VH && (kH("Loading"), (0, HC.j)(VH, "social_menu").then((HH => {
-          if (PH.current) switch (HH.kind) {
+      function uB() {
+        nB && (kB("Loading"), (0, GJ.e)(nB, "social_menu").then((BB => {
+          if (AB.current) switch (BB.kind) {
             case "sent":
-              kH("Success");
+              kB("Success");
               break;
             case "becameFriends":
-              kH("BecameFriends");
+              kB("BecameFriends");
               break;
             case "failed":
-              oH(HH.message), kH("Error")
+              KB(BB.message), kB("Error")
           }
         })))
       }
-      return (0, AH.useEffect)((() => {
-        if ("Enter" === bH || "Loading" === bH) return;
-        const HH = setTimeout((() => {
-          PH.current.value = "", OH(""), kH("Enter")
-        }), "Success" === bH ? 1e3 : 4e3);
+      return (0, YB.useEffect)((() => {
+        if ("Enter" === fB || "Loading" === fB) return;
+        const BB = setTimeout((() => {
+          AB.current.value = "", UB(""), kB("Enter")
+        }), "Success" === fB ? 1e3 : 4e3);
         return () => {
-          clearTimeout(HH)
+          clearTimeout(BB)
         }
-      }), [bH]), (0, XH.jsx)("div", {
+      }), [fB]), (0, PB.jsx)("div", {
         className: "SocialMenu",
-        children: (0, XH.jsxs)("div", {
+        children: (0, PB.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, XH.jsxs)("div", {
+            children: [(0, PB.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, XH.jsx)(sz.b, {
-                label: HH("socialBar:addFriend")
-              }), (0, XH.jsxs)("div", {
+              children: [(0, PB.jsx)(sy.d, {
+                label: BB("socialBar:addFriend")
+              }), (0, PB.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, XH.jsxs)("div", {
-                  className: SH()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${bH}`]: !0
+                children: [(0, PB.jsxs)("div", {
+                  className: QB()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${fB}`]: !0
                   }),
-                  children: ["Loading" === bH && (0, XH.jsx)(UH.d, {}), "Success" === bH && (0, XH.jsx)(tH.c, {
+                  children: ["Loading" === fB && (0, PB.jsx)(SB.b, {}), "Success" === fB && (0, PB.jsx)(jB.b, {
                     name: "check"
-                  }), "BecameFriends" === bH && (0, XH.jsx)(XH.Fragment, {
-                    children: HH("socialBar:nowFriends", {
-                      playerName: VH
+                  }), "BecameFriends" === fB && (0, PB.jsx)(PB.Fragment, {
+                    children: BB("socialBar:nowFriends", {
+                      playerName: nB
                     })
-                  }), "Error" === bH && mH && (0, XH.jsx)(XH.Fragment, {
-                    children: HH(mH.translationKey, mH.params)
+                  }), "Error" === fB && dB && (0, PB.jsx)(PB.Fragment, {
+                    children: BB(dB.translationKey, dB.params)
                   })]
-                }), (0, XH.jsxs)("div", {
+                }), (0, PB.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, XH.jsx)(TH.e, {
+                  children: [(0, PB.jsx)(VB.b, {
                     className: "PlayerSearchInput",
-                    placeholderText: HH("socialBar:enterPlayerName"),
-                    domRef: PH,
-                    onValueChange: HH => {
-                      OH((0, KH.n)(HH)), PH.current.value = (0, KH.n)(HH)
+                    placeholderText: BB("socialBar:enterPlayerName"),
+                    domRef: AB,
+                    onValueChange: BB => {
+                      UB((0, FB.u)(BB)), AB.current.value = (0, FB.u)(BB)
                     },
                     onEnter: () => {
-                      VH && (0, WB.reportAnalyticsClick)({
+                      nB && (0, ZO.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), IH()
+                      }), uB()
                     }
-                  }), (0, XH.jsxs)(CH.i, {
+                  }), (0, PB.jsxs)(JB.f, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      IH()
+                      uB()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, XH.jsx)(tH.c, {
+                    children: [(0, PB.jsx)(jB.b, {
                       name: "user-plus"
-                    }), " ", HH("socialBar:sendRequest")]
+                    }), " ", BB("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, XH.jsx)(LC.d, {
+              }), (0, PB.jsx)(DJ.e, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), EH.length > 0 && (0, XH.jsxs)("div", {
+            }), MB.length > 0 && (0, PB.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, XH.jsx)(sz.b, {
-                label: HH("socialBar:invites"),
-                meta: EH.length
-              }), EH.map((BH => (0, XH.jsxs)("div", {
+              children: [(0, PB.jsx)(sy.d, {
+                label: BB("socialBar:invites"),
+                meta: MB.length
+              }), MB.map((OB => (0, PB.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, XH.jsx)("div", {
+                children: [(0, PB.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, XH.jsx)(pz.b, {
-                    invite: BH
+                  children: (0, PB.jsx)(BJ.c, {
+                    invite: OB
                   })
-                }), (0, XH.jsx)("div", {
+                }), (0, PB.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, XH.jsx)(pz.d, {
-                    invite: BH
+                  children: (0, PB.jsx)(BJ.d, {
+                    invite: OB
                   })
-                }), (0, XH.jsx)(CH.u, {
+                }), (0, PB.jsx)(JB.q, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, yz.g)(BH)
+                    (0, OJ.d)(OB)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${BH.destination.kind}`
+                    value: `social_menu:${OB.destination.kind}`
                   },
-                  children: HH("general:join")
-                }), (0, XH.jsx)(YB.g, {
-                  tooltipInner: (0, XH.jsx)(XH.Fragment, {
-                    children: HH("general:decline")
+                  children: BB("general:join")
+                }), (0, PB.jsx)(lO.g, {
+                  tooltipInner: (0, PB.jsx)(PB.Fragment, {
+                    children: BB("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, XH.jsx)(CH.m, {
+                  children: (0, PB.jsx)(JB.j, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === YH || void 0 === YH ? void 0 : YH.kind) && YH.inviteId === BH.id,
+                    padDefaultFocus: "invite" === (null === lB || void 0 === lB ? void 0 : lB.kind) && lB.inviteId === OB.id,
                     onClick: () => {
-                      aH.d.declineInvite(BH.id)
+                      CB.b.declineInvite(OB.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${BH.destination.kind}`
+                      value: `social_menu:${OB.destination.kind}`
                     },
-                    children: (0, XH.jsx)(tH.c, {
+                    children: (0, PB.jsx)(jB.b, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, BH.id)))]
-            }), (0, XH.jsxs)("div", {
-              className: SH()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !LH && 0 === zH.length
+              }, OB.id)))]
+            }), (0, PB.jsxs)("div", {
+              className: QB()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !GB && 0 === yB.length
               }),
-              children: [(0, XH.jsx)(sz.b, {
-                label: (0, XH.jsxs)(XH.Fragment, {
-                  children: [(0, XH.jsx)(tH.c, {
-                    name: BC.g
-                  }), " ", HH("socialBar:requests")]
+              children: [(0, PB.jsx)(sy.d, {
+                label: (0, PB.jsxs)(PB.Fragment, {
+                  children: [(0, PB.jsx)(jB.b, {
+                    name: YJ.e
+                  }), " ", BB("socialBar:requests")]
                 }),
-                meta: (0, XH.jsxs)(XH.Fragment, {
-                  children: [zH.length, zH.length === uB.l && (0, XH.jsx)("span", {
+                meta: (0, PB.jsxs)(PB.Fragment, {
+                  children: [yB.length, yB.length === pO.q && (0, PB.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: HH("socialBar:limitReached")
+                    children: BB("socialBar:limitReached")
                   })]
                 })
-              }), LH && (0, XH.jsx)("div", {
+              }), GB && (0, PB.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, XH.jsx)(UH.d, {})
-              }), !LH && 0 === zH.length && (0, XH.jsx)("div", {
+                children: (0, PB.jsx)(SB.b, {})
+              }), !GB && 0 === yB.length && (0, PB.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: HH("socialBar:noFriendRequests")
-              }), !LH && zH.length > 0 && (0, XH.jsx)("div", {
+                children: BB("socialBar:noFriendRequests")
+              }), !GB && yB.length > 0 && (0, PB.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, XH.jsx)(vS.e, {
+                children: (0, PB.jsx)(WQ.b, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [zH],
-                  children: zH.map(((BH, LH) => {
-                    const AH = vH.get(BH.name);
-                    return (0, XH.jsxs)(az.d, {
-                      playerSocialPreview: BH,
-                      zIndex: zH.length - LH,
-                      padDefaultFocus: (0, AC.g)(YH, BH.name, LH),
-                      status: AH && (0, XH.jsx)(Jz.e, {
-                        gameNameWithVariation: AH.gameNameWithVariation,
-                        isPrivateLobby: AH.isPrivateLobby
+                  observerUpdateDeps: [yB],
+                  children: yB.map(((OB, GB) => {
+                    const YB = WB.get(OB.name);
+                    return (0, PB.jsxs)(vy.e, {
+                      playerSocialPreview: OB,
+                      zIndex: yB.length - GB,
+                      padDefaultFocus: (0, QJ.h)(lB, OB.name, GB),
+                      status: YB && (0, PB.jsx)(xy.c, {
+                        gameNameWithVariation: YB.gameNameWithVariation,
+                        isPrivateLobby: YB.isPrivateLobby
                       }),
-                      children: [(0, XH.jsx)(YB.g, {
-                        tooltipInner: (0, XH.jsx)(XH.Fragment, {
-                          children: HH("general:accept")
+                      children: [(0, PB.jsx)(lO.g, {
+                        tooltipInner: (0, PB.jsx)(PB.Fragment, {
+                          children: BB("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, XH.jsx)(CH.i, {
+                        children: (0, PB.jsx)(JB.f, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            QH((0, AC.f)(WH, LH)), (0, HC.f)(BH.name, !0, {
+                            qB((0, QJ.f)(ZB, GB)), (0, GJ.c)(OB.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -9325,19 +9333,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, XH.jsx)(tH.c, {
+                          children: (0, PB.jsx)(jB.b, {
                             name: "check"
                           })
                         })
-                      }), (0, XH.jsx)(YB.g, {
-                        tooltipInner: (0, XH.jsx)(XH.Fragment, {
-                          children: HH("general:decline")
+                      }), (0, PB.jsx)(lO.g, {
+                        tooltipInner: (0, PB.jsx)(PB.Fragment, {
+                          children: BB("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, XH.jsx)(CH.m, {
+                        children: (0, PB.jsx)(JB.j, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            QH((0, AC.f)(WH, LH)), (0, HC.f)(BH.name, !1, {
+                            qB((0, QJ.f)(ZB, GB)), (0, GJ.c)(OB.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -9345,62 +9353,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, XH.jsx)(tH.c, {
+                          children: (0, PB.jsx)(jB.b, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${BH.name}_${BH.isError}`)
+                    }, `${OB.name}_${OB.isError}`)
                   }))
                 })
               })]
-            }), (0, XH.jsx)(Jz.k, {})]
-          }), (0, XH.jsxs)("div", {
+            }), (0, PB.jsx)(xy.j, {})]
+          }), (0, PB.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, XH.jsxs)("div", {
+            children: [(0, PB.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, XH.jsx)(sz.b, {
-                label: HH("socialBar:party")
-              }), (0, XH.jsx)(dz.b, {})]
-            }), (0, XH.jsxs)("div", {
+              children: [(0, PB.jsx)(sy.d, {
+                label: BB("socialBar:party")
+              }), (0, PB.jsx)(Hy.d, {})]
+            }), (0, PB.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, XH.jsx)(sz.b, {
-                label: (0, XH.jsxs)(XH.Fragment, {
-                  children: [(0, XH.jsx)(tH.c, {
-                    name: BC.e
-                  }), " ", HH("socialBar:friends")]
+              children: [(0, PB.jsx)(sy.d, {
+                label: (0, PB.jsxs)(PB.Fragment, {
+                  children: [(0, PB.jsx)(jB.b, {
+                    name: YJ.b
+                  }), " ", BB("socialBar:friends")]
                 }),
-                meta: (0, XH.jsxs)(XH.Fragment, {
-                  children: [rH.length, rH.length >= (0, uB.b)(GH.getPlayerRanks()) && (0, XH.jsx)("span", {
+                meta: (0, PB.jsxs)(PB.Fragment, {
+                  children: [DB.length, DB.length >= (0, pO.e)(zB.getPlayerRanks()) && (0, PB.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: HH("socialBar:limitReached")
+                    children: BB("socialBar:limitReached")
                   })]
                 })
-              }), LH && (0, XH.jsx)("div", {
+              }), GB && (0, PB.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, XH.jsx)(UH.d, {})
-              }), !LH && 0 === rH.length && (0, XH.jsx)("div", {
+                children: (0, PB.jsx)(SB.b, {})
+              }), !GB && 0 === DB.length && (0, PB.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: HH("socialBar:noFriends")
-              }), !LH && rH.length > 0 && (0, XH.jsx)("div", {
+                children: BB("socialBar:noFriends")
+              }), !GB && DB.length > 0 && (0, PB.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, XH.jsx)(vS.e, {
+                children: (0, PB.jsx)(WQ.b, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [rH],
-                  children: rH.map(((HH, LH) => (0, XH.jsx)(az.d, {
-                    playerSocialPreview: HH,
+                  observerUpdateDeps: [DB],
+                  children: DB.map(((BB, GB) => (0, PB.jsx)(vy.e, {
+                    playerSocialPreview: BB,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: HH => {
-                      aH.d.removeFriendFromState(HH)
+                    onFriendRemoved: BB => {
+                      CB.b.removeFriendFromState(BB)
                     },
-                    zIndex: rH.length - LH,
-                    children: (0, XH.jsx)(az.c, {
-                      friend: HH,
-                      followsLeader: BH,
+                    zIndex: DB.length - GB,
+                    children: (0, PB.jsx)(vy.d, {
+                      friend: BB,
+                      followsLeader: OB,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${HH.name}_${HH.isError}`)))
+                  }, `${BB.name}_${BB.isError}`)))
                 })
               })]
             })]
@@ -9408,834 +9416,834 @@ export const modules = {
         })
       })
     }
-    var hC = LH(2724),
-      tC = LH(4002),
-      zC = LH(1904),
-      CC = LH(3998),
-      EC = LH(4011);
+    var yJ = GB(2753),
+      JJ = GB(4065),
+      MJ = GB(1938),
+      PJ = GB(4062),
+      zJ = GB(4067);
 
-    function XC(HH) {
+    function lJ(BB) {
       let {
-        count: BH,
-        claiming: LH
-      } = HH;
+        count: OB,
+        claiming: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)();
-      return 0 === BH ? null : (0, XH.jsx)(CH.u, {
+        t: YB
+      } = (0, oB.H)();
+      return 0 === OB ? null : (0, PB.jsx)(JB.q, {
         className: "SeasonPassClaimAllButton",
-        loading: LH,
+        loading: GB,
         onClick: () => {
-          tC.d.claimAll().catch((HH => {
-            console.error("Failed to claim all season pass rewards", HH)
+          JJ.g.claimAll().catch((BB => {
+            console.error("Failed to claim all season pass rewards", BB)
           }))
         },
-        children: AH("seasonPass:claimAll", {
-          count: BH
+        children: YB("seasonPass:claimAll", {
+          count: OB
         })
       })
     }
 
-    function GC(HH) {
+    function pJ(BB) {
       let {
-        view: BH,
-        claiming: LH
-      } = HH;
+        view: OB,
+        claiming: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)(), {
-        userContext: rH
-      } = (0, uH.e)(), {
-        config: SH,
-        state: zH,
-        tier: CH,
-        xpIntoTier: EH,
-        xpForNextTier: GH
-      } = BH, YH = Date.now(), QH = (0, EC.l)(BH, YH), WH = CH >= SH.tierCount, MH = QH && !WH && GH > 0, xH = GH > 0 && !WH ? Math.min(100, EH / GH * 100) : 100, vH = zH.xpToday >= SH.maxXpPerDay, PH = null !== BH.xpBoost && BH.xpBoost.endsAtMs > YH && !vH ? BH.xpBoost : null;
-      return (0, XH.jsxs)("header", {
+        t: YB
+      } = (0, oB.H)(), {
+        userContext: DB
+      } = (0, pB.d)(), {
+        config: QB,
+        state: yB,
+        tier: JB,
+        xpIntoTier: MB,
+        xpForNextTier: zB
+      } = OB, lB = Date.now(), qB = (0, zJ.h)(OB, lB), ZB = JB >= QB.tierCount, NB = qB && !ZB && zB > 0, RB = zB > 0 && !ZB ? Math.min(100, MB / zB * 100) : 100, WB = yB.xpToday >= QB.maxXpPerDay, AB = null !== OB.xpBoost && OB.xpBoost.endsAtMs > lB && !WB ? OB.xpBoost : null;
+      return (0, PB.jsxs)("header", {
         className: "SeasonPassHeader",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "SeasonPassHeaderTitleBlock",
-          children: (0, XH.jsx)("h1", {
+          children: (0, PB.jsx)("h1", {
             className: "SeasonPassHeaderTitle",
-            children: AH("seasonPass:title", {
-              season: zH.seasonNumber
+            children: YB("seasonPass:title", {
+              season: yB.seasonNumber
             })
           })
-        }), (0, XH.jsxs)("div", {
+        }), (0, PB.jsxs)("div", {
           className: "SeasonPassHeaderProgress",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "SeasonPassHeaderProgressRow",
-            children: [(0, XH.jsx)("span", {
+            children: [(0, PB.jsx)("span", {
               className: "SeasonPassHeaderTierBadge",
-              title: AH("seasonPass:tier"),
-              "aria-label": `${AH("seasonPass:tier")} ${CH}`,
-              children: CH
-            }), (0, XH.jsxs)("div", {
+              title: YB("seasonPass:tier"),
+              "aria-label": `${YB("seasonPass:tier")} ${JB}`,
+              children: JB
+            }), (0, PB.jsxs)("div", {
               className: "SeasonPassHeaderBar",
               role: "progressbar",
               "aria-valuemin": 0,
               "aria-valuemax": 100,
-              "aria-valuenow": Math.round(xH),
-              children: [(0, XH.jsx)("div", {
+              "aria-valuenow": Math.round(RB),
+              children: [(0, PB.jsx)("div", {
                 className: "SeasonPassHeaderBarFill",
                 style: {
-                  width: `${xH}%`
+                  width: `${RB}%`
                 }
-              }), (0, XH.jsxs)("span", {
+              }), (0, PB.jsxs)("span", {
                 className: "SeasonPassHeaderBarText SmallTextBold",
-                children: [WH && AH("seasonPass:passComplete"), MH && AH("seasonPass:xpProgress", {
-                  xp: EH,
-                  xpForNextTier: GH
+                children: [ZB && YB("seasonPass:passComplete"), NB && YB("seasonPass:xpProgress", {
+                  xp: MB,
+                  xpForNextTier: zB
                 })]
               })]
-            }), MH && (0, XH.jsxs)(XH.Fragment, {
-              children: [(0, XH.jsx)(tH.c, {
+            }), NB && (0, PB.jsxs)(PB.Fragment, {
+              children: [(0, PB.jsx)(jB.b, {
                 className: "SeasonPassHeaderNextArrow",
                 name: "caret-right"
-              }), (0, XH.jsx)("span", {
+              }), (0, PB.jsx)("span", {
                 className: "SeasonPassHeaderNextTier",
-                children: CH + 1
+                children: JB + 1
               })]
             })]
-          }), (0, XH.jsxs)("div", {
+          }), (0, PB.jsxs)("div", {
             className: "SeasonPassHeaderFootnotes",
-            children: [(0, XH.jsxs)("span", {
+            children: [(0, PB.jsxs)("span", {
               className: "SeasonPassHeaderTimeLeft",
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "hourglass"
-              }), " ", QH ? AH("seasonPass:endsIn", {
-                time: (0, CC.c)((BH.endsAtMs - YH) / 6e4)
-              }) : (0, zt.c)(BH.claimEndsAtMs, AH, YH)]
-            }), QH && !WH && (0, XH.jsx)("span", {
-              className: vH ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
-              children: vH ? AH("seasonPass:dailyCapReached") : AH("seasonPass:dailyXp", {
-                xp: zH.xpToday,
-                cap: SH.maxXpPerDay
+              }), " ", qB ? YB("seasonPass:endsIn", {
+                time: (0, PJ.e)((OB.endsAtMs - lB) / 6e4)
+              }) : (0, Mj.c)(OB.claimEndsAtMs, YB, lB)]
+            }), qB && !ZB && (0, PB.jsx)("span", {
+              className: WB ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
+              children: WB ? YB("seasonPass:dailyCapReached") : YB("seasonPass:dailyXp", {
+                xp: yB.xpToday,
+                cap: QB.maxXpPerDay
               })
-            }), QH && !WH && PH && (0, XH.jsxs)("span", {
+            }), qB && !ZB && AB && (0, PB.jsxs)("span", {
               className: "SeasonPassHeaderBoost",
-              children: [(0, XH.jsx)(tH.c, {
+              children: [(0, PB.jsx)(jB.b, {
                 name: "angles-up"
-              }), " ", AH("seasonPass:xpBoostActive", {
-                multiplier: PH.multiplier,
-                time: (0, CC.c)(Math.ceil((PH.endsAtMs - YH) / 6e4))
+              }), " ", YB("seasonPass:xpBoostActive", {
+                multiplier: AB.multiplier,
+                time: (0, PJ.e)(Math.ceil((AB.endsAtMs - lB) / 6e4))
               })]
-            }), QH && !WH && !vH && !PH && (0, XH.jsx)("span", {
+            }), qB && !ZB && !WB && !AB && (0, PB.jsx)("span", {
               className: "SeasonPassHeaderHint",
-              children: AH("seasonPass:playToEarn")
-            }), rH.type === zC.d.ANONYMOUS && (0, XH.jsx)("span", {
+              children: YB("seasonPass:playToEarn")
+            }), DB.type === MJ.b.ANONYMOUS && (0, PB.jsx)("span", {
               className: "SeasonPassHeaderGuest",
-              children: AH("seasonPass:logInToKeep")
+              children: YB("seasonPass:logInToKeep")
             })]
           })]
-        }), (0, XH.jsx)(XC, {
-          count: BH.claimable.length,
-          claiming: LH
+        }), (0, PB.jsx)(lJ, {
+          count: OB.claimable.length,
+          claiming: GB
         })]
       })
     }
-    var YC = LH(3431),
-      uC = LH(3436);
+    var qJ = GB(3494),
+      ZJ = GB(3497);
 
-    function QC(HH) {
-      return null !== (0, zt.t)(HH) || null !== (0, zt.q)(HH)
+    function NJ(BB) {
+      return null !== (0, Mj.s)(BB) || null !== (0, Mj.l)(BB)
     }
-    let WC = null;
+    let RJ = null;
 
-    function MC() {
-      var HH;
-      null === (HH = WC) || void 0 === HH || HH.tearDownNotification()
+    function WJ() {
+      var BB;
+      null === (BB = RJ) || void 0 === BB || BB.tearDownNotification()
     }
 
-    function xC(HH) {
+    function AJ(BB) {
       let {
-        reward: BH
-      } = HH;
+        reward: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)(), {
-        userContext: AH
-      } = (0, uH.e)(), rH = (0, zt.t)(BH);
-      return (0, XH.jsxs)("div", {
+        t: GB
+      } = (0, oB.H)(), {
+        userContext: YB
+      } = (0, pB.d)(), DB = (0, Mj.s)(OB);
+      return (0, PB.jsxs)("div", {
         className: "PromptGenericPopup SeasonPassRewardPreview",
-        children: [(0, XH.jsx)("div", {
+        children: [(0, PB.jsx)("div", {
           className: "PromptGenericPopupTitle SmallTextBold",
-          children: (0, zt.k)(BH, LH)
-        }), null !== rH && (0, XH.jsx)("div", {
+          children: (0, Mj.g)(OB, GB)
+        }), null !== DB && (0, PB.jsx)("div", {
           className: "SeasonPassRewardPreviewProfileEffect",
-          children: (0, XH.jsx)(YC.e, {
-            profileEffect: rH,
-            name: AH.getPlayerName(),
-            cosmetics: AH.getPlayerCosmetics()
+          children: (0, PB.jsx)(qJ.c, {
+            profileEffect: DB,
+            name: YB.getPlayerName(),
+            cosmetics: YB.getPlayerCosmetics()
           })
-        }), null === rH && (0, XH.jsx)(vC, {
-          reward: BH
+        }), null === DB && (0, PB.jsx)(VJ, {
+          reward: OB
         })]
       })
     }
 
-    function vC(HH) {
+    function VJ(BB) {
       let {
-        reward: BH
-      } = HH;
+        reward: OB
+      } = BB;
       const {
-        userContext: LH
-      } = (0, uH.e)(), rH = (0, AH.useRef)(null), {
-        previewEmote: SH,
-        playEmote: hH
-      } = (0, uC.e)(), tH = (0, AH.useMemo)((() => (0, zt.q)(BH)), [BH]), zH = tH.emote;
-      return (0, XH.jsx)("div", {
+        userContext: GB
+      } = (0, pB.d)(), DB = (0, YB.useRef)(null), {
+        previewEmote: QB,
+        playEmote: oB
+      } = (0, ZJ.c)(), jB = (0, YB.useMemo)((() => (0, Mj.l)(OB)), [OB]), yB = jB.emote;
+      return (0, PB.jsx)("div", {
         className: "SeasonPassRewardPreviewCharacter",
-        children: (0, XH.jsx)(AH.Suspense, {
-          fallback: (0, XH.jsx)(UH.d, {}),
-          children: (0, XH.jsx)(Zh.b, {
-            ref: rH,
+        children: (0, PB.jsx)(YB.Suspense, {
+          fallback: (0, PB.jsx)(SB.b, {}),
+          children: (0, PB.jsx)(Co.b, {
+            ref: DB,
             framing: "store",
-            forcedCosmetics: tH.cosmetics,
-            zE: SH.id,
-            emotePlaySeq: SH.seq,
+            forcedCosmetics: jB.cosmetics,
+            NM: QB.id,
+            emotePlaySeq: QB.seq,
             onReady: () => {
-              var HH, BH;
-              null === (HH = rH.current) || void 0 === HH || HH.resetCamera(), null === (BH = rH.current) || void 0 === BH || BH.setAllCosmetics(LH.getPlayerCosmetics())
+              var BB, OB;
+              null === (BB = DB.current) || void 0 === BB || BB.resetCamera(), null === (OB = DB.current) || void 0 === OB || OB.setAllCosmetics(GB.getPlayerCosmetics())
             },
             onDrawn: () => {
-              null !== zH && hH(zH)
+              null !== yB && oB(yB)
             }
           })
         })
       })
     }
 
-    function PC(HH) {
+    function SJ(BB) {
       let {
-        waitingCount: BH
-      } = HH;
+        waitingCount: OB
+      } = BB;
       const {
-        t: LH
-      } = (0, hH.B)();
-      return (0, DH.usePurchasesAllowed)() ? (0, XH.jsxs)("div", {
+        t: GB
+      } = (0, oB.H)();
+      return (0, aB.usePurchasesAllowed)() ? (0, PB.jsxs)("div", {
         className: "SeasonPassHyperUpsell",
-        children: [BH > 0 && (0, XH.jsx)("span", {
+        children: [OB > 0 && (0, PB.jsx)("span", {
           className: "SeasonPassHyperUpsellText",
-          children: 1 === BH ? LH("seasonPass:hyperRewardWaiting") : LH("seasonPass:hyperRewardsWaiting", {
-            count: BH
+          children: 1 === OB ? GB("seasonPass:hyperRewardWaiting") : GB("seasonPass:hyperRewardsWaiting", {
+            count: OB
           })
-        }), (0, XH.jsxs)("span", {
+        }), (0, PB.jsxs)("span", {
           className: "SeasonPassHyperUpsellButtonWrapper",
-          children: [(0, XH.jsxs)(CH.B, {
+          children: [(0, PB.jsxs)(JB.w, {
             className: "SeasonPassHyperUpsellButton",
             onClick: () => {
-              (0, zB.k)({
+              (0, yO.p)({
                 mode: "self",
                 source: "seasonPass",
                 openItem: "superRank"
               })
             },
-            children: [(0, XH.jsx)(jH.b, {}), " ", LH("homePage:getHyperRank")]
-          }), BH > 0 && (0, XH.jsx)("span", {
+            children: [(0, PB.jsx)(EB.c, {}), " ", GB("homePage:getHyperRank")]
+          }), OB > 0 && (0, PB.jsx)("span", {
             className: "SeasonPassHyperUpsellCount",
-            children: BH
+            children: OB
           })]
         })]
       }) : null
     }
-    var TC = LH(35040);
+    var nJ = GB(34848);
 
-    function UC(HH) {
+    function UJ(BB) {
       let {
-        stub: BH,
-        name: LH
-      } = HH;
+        stub: OB,
+        name: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, hH.B)();
-      return (0, XH.jsxs)("span", {
+        t: YB
+      } = (0, oB.H)();
+      return (0, PB.jsxs)("span", {
         className: "SeasonPassTrackLabelName",
-        children: [(0, XH.jsx)("span", {
+        children: [(0, PB.jsx)("span", {
           className: "SeasonPassTicketStub",
-          children: BH
-        }), (0, XH.jsxs)("span", {
+          children: OB
+        }), (0, PB.jsxs)("span", {
           className: "SeasonPassTicketBody",
-          children: [(0, XH.jsx)("span", {
+          children: [(0, PB.jsx)("span", {
             className: "SeasonPassTicketPass",
-            children: AH("seasonPass:trackTicketPass")
-          }), (0, XH.jsx)("span", {
+            children: YB("seasonPass:trackTicketPass")
+          }), (0, PB.jsx)("span", {
             className: "SeasonPassTicketName",
-            children: LH
+            children: GB
           })]
         })]
       })
     }
 
-    function VC(HH) {
-      var BH, LH;
+    function fJ(BB) {
+      var OB, GB;
       let {
-        view: rH,
-        claimingKeys: SH,
-        hyperWaitingCount: zH,
-        onClaim: CH
-      } = HH;
+        view: DB,
+        claimingKeys: QB,
+        hyperWaitingCount: yB,
+        onClaim: JB
+      } = BB;
       const {
-        t: EH
-      } = (0, hH.B)(), GH = (0, AH.useRef)(null), {
-        config: YH,
-        tier: uH,
-        xpIntoTier: QH,
-        xpForNextTier: WH,
-        state: MH
-      } = rH, xH = (0, EC.l)(rH), vH = (0, AH.useRef)(!1), PH = null !== (BH = null === (LH = rH.claimable[0]) || void 0 === LH ? void 0 : LH.tier) && void 0 !== BH ? BH : Math.min(uH + 1, YH.tierCount);
-      (0, AH.useLayoutEffect)((() => {
-        if (vH.current) return;
-        const HH = GH.current,
-          BH = HH.querySelector(`[data-tier="${PH}"]`).getBoundingClientRect(),
-          LH = HH.getBoundingClientRect();
-        HH.scrollLeft += BH.left - LH.left - .3 * HH.clientWidth, HH.scrollTop += BH.top - LH.top - .3 * HH.clientHeight
-      }), [PH]), (0, AH.useEffect)((() => {
-        const HH = GH.current;
+        t: MB
+      } = (0, oB.H)(), zB = (0, YB.useRef)(null), {
+        config: lB,
+        tier: pB,
+        xpIntoTier: qB,
+        xpForNextTier: ZB,
+        state: NB
+      } = DB, RB = (0, zJ.h)(DB), WB = (0, YB.useRef)(!1), AB = null !== (OB = null === (GB = DB.claimable[0]) || void 0 === GB ? void 0 : GB.tier) && void 0 !== OB ? OB : Math.min(pB + 1, lB.tierCount);
+      (0, YB.useLayoutEffect)((() => {
+        if (WB.current) return;
+        const BB = zB.current,
+          OB = BB.querySelector(`[data-tier="${AB}"]`).getBoundingClientRect(),
+          GB = BB.getBoundingClientRect();
+        BB.scrollLeft += OB.left - GB.left - .3 * BB.clientWidth, BB.scrollTop += OB.top - GB.top - .3 * BB.clientHeight
+      }), [AB]), (0, YB.useEffect)((() => {
+        const BB = zB.current;
 
-        function BH(BH) {
-          vH.current = !0, Math.abs(BH.deltaY) <= Math.abs(BH.deltaX) || HH.scrollWidth <= HH.clientWidth || (BH.preventDefault(), HH.scrollLeft += BH.deltaY)
+        function OB(OB) {
+          WB.current = !0, Math.abs(OB.deltaY) <= Math.abs(OB.deltaX) || BB.scrollWidth <= BB.clientWidth || (OB.preventDefault(), BB.scrollLeft += OB.deltaY)
         }
-        return HH.addEventListener("wheel", BH, {
+        return BB.addEventListener("wheel", OB, {
           passive: !1
         }), () => {
-          HH.removeEventListener("wheel", BH)
+          BB.removeEventListener("wheel", OB)
         }
       }), []);
-      const TH = WH > 0 ? QH / WH : 1;
-      return (0, XH.jsxs)("div", {
+      const VB = ZB > 0 ? qB / ZB : 1;
+      return (0, PB.jsxs)("div", {
         className: "SeasonPassTrack",
-        children: [(0, XH.jsxs)("div", {
+        children: [(0, PB.jsxs)("div", {
           className: "SeasonPassTrackLabels",
-          children: [(0, XH.jsxs)("div", {
+          children: [(0, PB.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelHyper",
-            children: [(0, XH.jsx)(UC, {
-              stub: (0, XH.jsx)(jH.b, {}),
-              name: EH("seasonPass:hyperTrack")
-            }), !MH.hasHyperRank && (0, XH.jsx)(PC, {
-              waitingCount: zH
+            children: [(0, PB.jsx)(UJ, {
+              stub: (0, PB.jsx)(EB.c, {}),
+              name: MB("seasonPass:hyperTrack")
+            }), !NB.hasHyperRank && (0, PB.jsx)(SJ, {
+              waitingCount: yB
             })]
-          }), (0, XH.jsxs)("div", {
+          }), (0, PB.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelFree",
-            children: [(0, XH.jsx)(UC, {
-              stub: (0, XH.jsx)(tH.c, {
+            children: [(0, PB.jsx)(UJ, {
+              stub: (0, PB.jsx)(jB.b, {
                 name: "star"
               }),
-              name: EH("seasonPass:freeTrack")
-            }), (0, XH.jsx)("span", {
+              name: MB("seasonPass:freeTrack")
+            }), (0, PB.jsx)("span", {
               className: "SeasonPassTrackLabelHint",
-              children: EH("seasonPass:freeTrackHint")
+              children: MB("seasonPass:freeTrackHint")
             })]
           })]
-        }), (0, XH.jsx)("div", {
+        }), (0, PB.jsx)("div", {
           className: "SeasonPassTrackScroller",
-          ref: GH,
+          ref: zB,
           onPointerDown: () => {
-            vH.current = !0
+            WB.current = !0
           },
-          children: (0, XH.jsx)("div", {
+          children: (0, PB.jsx)("div", {
             className: "SeasonPassTrackRow",
-            children: YH.tiers.map((HH => {
-              const BH = HH.tier,
-                LH = function(HH, BH, LH) {
-                  if (HH <= BH) return "reached";
-                  return LH && HH === BH + 1 ? "earning" : "locked"
-                }(BH, uH, xH),
-                AH = "earning" === LH;
-              return (0, XH.jsx)(OC, {
-                tierRewards: HH,
-                nodeState: LH,
-                progress: AH ? TH : 0,
-                freeState: rH.tileState({
-                  tier: BH,
+            children: lB.tiers.map((BB => {
+              const OB = BB.tier,
+                GB = function(BB, OB, GB) {
+                  if (BB <= OB) return "reached";
+                  return GB && BB === OB + 1 ? "earning" : "locked"
+                }(OB, pB, RB),
+                YB = "earning" === GB;
+              return (0, PB.jsx)(kJ, {
+                tierRewards: BB,
+                nodeState: GB,
+                progress: YB ? VB : 0,
+                freeState: DB.tileState({
+                  tier: OB,
                   track: "free"
                 }),
-                hyperState: rH.tileState({
-                  tier: BH,
+                hyperState: DB.tileState({
+                  tier: OB,
                   track: "hyper"
                 }),
-                freeClaiming: SH.has((0, EC.n)({
-                  tier: BH,
+                freeClaiming: QB.has((0, zJ.i)({
+                  tier: OB,
                   track: "free"
                 })),
-                hyperClaiming: SH.has((0, EC.n)({
-                  tier: BH,
+                hyperClaiming: QB.has((0, zJ.i)({
+                  tier: OB,
                   track: "hyper"
                 })),
-                hasHyperRank: MH.hasHyperRank,
-                onClaim: CH
-              }, BH)
+                hasHyperRank: NB.hasHyperRank,
+                onClaim: JB
+              }, OB)
             }))
           })
         })]
       })
     }
-    const OC = (0, AH.memo)((function(HH) {
+    const kJ = (0, YB.memo)((function(BB) {
       let {
-        tierRewards: BH,
-        nodeState: LH,
-        progress: AH,
-        freeState: rH,
-        hyperState: hH,
-        freeClaiming: tH,
-        hyperClaiming: zH,
-        hasHyperRank: CH,
-        onClaim: EH
-      } = HH;
+        tierRewards: OB,
+        nodeState: GB,
+        progress: YB,
+        freeState: DB,
+        hyperState: oB,
+        freeClaiming: jB,
+        hyperClaiming: yB,
+        hasHyperRank: JB,
+        onClaim: MB
+      } = BB;
       const {
-        tier: GH
-      } = BH;
-      return (0, XH.jsxs)("div", {
-        className: SH()("SeasonPassTrackColumn", {
-          SeasonPassTrackColumnLocked: "reached" !== LH
+        tier: zB
+      } = OB;
+      return (0, PB.jsxs)("div", {
+        className: QB()("SeasonPassTrackColumn", {
+          SeasonPassTrackColumnLocked: "reached" !== GB
         }),
-        "data-tier": GH,
-        children: [(0, XH.jsx)(bC, {
-          tier: GH,
+        "data-tier": zB,
+        children: [(0, PB.jsx)(dJ, {
+          tier: zB,
           track: "hyper",
-          reward: BH.hyper,
-          tileState: hH,
-          claiming: zH,
-          padlock: !CH && "claimed" !== hH,
-          onClaim: EH
-        }), (0, XH.jsxs)("div", {
+          reward: OB.hyper,
+          tileState: oB,
+          claiming: yB,
+          padlock: !JB && "claimed" !== oB,
+          onClaim: MB
+        }), (0, PB.jsxs)("div", {
           className: "SeasonPassTrackRoad",
-          children: [(0, XH.jsx)("span", {
-            className: SH()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
-              SeasonPassTrackRoadFilled: "reached" === LH
+          children: [(0, PB.jsx)("span", {
+            className: QB()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
+              SeasonPassTrackRoadFilled: "reached" === GB
             }),
-            children: "earning" === LH && (0, XH.jsx)("span", {
+            children: "earning" === GB && (0, PB.jsx)("span", {
               className: "SeasonPassTrackRoadProgress",
               style: {
-                "--seasonPassRoadProgress": 100 * AH + "%"
+                "--seasonPassRoadProgress": 100 * YB + "%"
               }
             })
-          }), (0, XH.jsx)("span", {
-            className: SH()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
-              SeasonPassTrackRoadFilled: "reached" === LH
+          }), (0, PB.jsx)("span", {
+            className: QB()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
+              SeasonPassTrackRoadFilled: "reached" === GB
             })
-          }), (0, XH.jsx)(TC.c, {
-            tier: GH,
-            state: LH,
-            progress: AH
+          }), (0, PB.jsx)(nJ.c, {
+            tier: zB,
+            state: GB,
+            progress: YB
           })]
-        }), (0, XH.jsx)(bC, {
-          tier: GH,
+        }), (0, PB.jsx)(dJ, {
+          tier: zB,
           track: "free",
-          reward: BH.free,
-          tileState: rH,
-          claiming: tH,
+          reward: OB.free,
+          tileState: DB,
+          claiming: jB,
           padlock: !1,
-          onClaim: EH
+          onClaim: MB
         })]
       })
     }));
 
-    function bC(HH) {
+    function dJ(BB) {
       let {
-        tier: BH,
-        track: LH,
-        reward: AH,
-        tileState: rH,
-        claiming: SH,
-        padlock: hH,
-        onClaim: tH
-      } = HH;
-      return AH ? (0, XH.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${LH}`,
-        children: (0, XH.jsx)(Yt.d, {
-          reward: AH,
-          tileState: rH,
-          track: LH,
+        tier: OB,
+        track: GB,
+        reward: YB,
+        tileState: DB,
+        claiming: QB,
+        padlock: oB,
+        onClaim: jB
+      } = BB;
+      return YB ? (0, PB.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${GB}`,
+        children: (0, PB.jsx)(qj.f, {
+          reward: YB,
+          tileState: DB,
+          track: GB,
           size: "large",
           onClaim: () => {
-            tH({
-              tier: BH,
-              track: LH
+            jB({
+              tier: OB,
+              track: GB
             })
           },
-          claiming: SH,
-          padlock: hH,
-          onPreview: QC(AH) ? () => {
-            ! function(HH) {
-              const BH = rB.NotificationProvider.showCustomPopup({
-                body: (0, XH.jsx)(xC, {
-                  reward: HH
+          claiming: QB,
+          padlock: oB,
+          onPreview: NJ(YB) ? () => {
+            ! function(BB) {
+              const OB = DO.NotificationProvider.showCustomPopup({
+                body: (0, PB.jsx)(AJ, {
+                  reward: BB
                 })
               });
-              WC = BH, BH.getResult().finally((() => {
-                WC === BH && (WC = null)
+              RJ = OB, OB.getResult().finally((() => {
+                RJ === OB && (RJ = null)
               }))
-            }(AH)
+            }(YB)
           } : void 0
         })
-      }) : (0, XH.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${LH}`
+      }) : (0, PB.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${GB}`
       })
     }
 
-    function kC(HH) {
+    function KJ(BB) {
       let {
-        show: BH
-      } = HH;
-      return BH ? (0, XH.jsx)(mC, {}) : null
+        show: OB
+      } = BB;
+      return OB ? (0, PB.jsx)(uJ, {}) : null
     }
 
-    function mC() {
+    function uJ() {
       const {
-        t: HH
-      } = (0, hH.B)(), BH = (0, tC.g)();
-      return (0, AH.useEffect)((() => MC), []), (0, XH.jsxs)("div", {
+        t: BB
+      } = (0, oB.H)(), OB = (0, JJ.h)();
+      return (0, YB.useEffect)((() => WJ), []), (0, PB.jsxs)("div", {
         className: "SeasonPassScreen",
-        children: ["loading" === BH.status && (0, XH.jsx)(UH.d, {}), "error" === BH.status && (0, XH.jsxs)("div", {
+        children: ["loading" === OB.status && (0, PB.jsx)(SB.b, {}), "error" === OB.status && (0, PB.jsxs)("div", {
           className: "SeasonPassScreenNotice",
-          children: [(0, XH.jsx)("p", {
+          children: [(0, PB.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: HH("seasonPass:errorLoad")
-          }), (0, XH.jsx)(CH.i, {
+            children: BB("seasonPass:errorLoad")
+          }), (0, PB.jsx)(JB.f, {
             className: "SeasonPassScreenRetry",
             onClick: () => {
-              tC.d.retry()
+              JJ.g.retry()
             },
-            children: HH("seasonPass:retry")
+            children: BB("seasonPass:retry")
           })]
-        }), "noSeason" === BH.status && (0, XH.jsx)("div", {
+        }), "noSeason" === OB.status && (0, PB.jsx)("div", {
           className: "SeasonPassScreenNotice",
-          children: (0, XH.jsx)("p", {
+          children: (0, PB.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: (0, zt.g)(HH)
+            children: (0, Mj.f)(BB)
           })
-        }), "loaded" === BH.status && (0, XH.jsx)(oC, {
-          view: BH.view,
-          claimingKeys: BH.claimingKeys
+        }), "loaded" === OB.status && (0, PB.jsx)(mJ, {
+          view: OB.view,
+          claimingKeys: OB.claimingKeys
         })]
       })
     }
 
-    function oC(HH) {
+    function mJ(BB) {
       let {
-        view: BH,
-        claimingKeys: LH
-      } = HH;
-      const AH = BH.config.tiers.filter((HH => "needsHyper" === BH.tileState({
-          tier: HH.tier,
+        view: OB,
+        claimingKeys: GB
+      } = BB;
+      const YB = OB.config.tiers.filter((BB => "needsHyper" === OB.tileState({
+          tier: BB.tier,
           track: "hyper"
         }))).length,
-        rH = LH.size > 0;
-      return (0, XH.jsxs)("div", {
+        DB = GB.size > 0;
+      return (0, PB.jsxs)("div", {
         className: "SeasonPassScreenLoaded",
-        children: [(0, XH.jsx)(GC, {
-          view: BH,
-          claiming: rH
-        }), (0, XH.jsx)(VC, {
-          view: BH,
-          claimingKeys: LH,
-          hyperWaitingCount: AH,
-          onClaim: IC
-        }), (0, XH.jsxs)("div", {
+        children: [(0, PB.jsx)(pJ, {
+          view: OB,
+          claiming: DB
+        }), (0, PB.jsx)(fJ, {
+          view: OB,
+          claimingKeys: GB,
+          hyperWaitingCount: YB,
+          onClaim: IJ
+        }), (0, PB.jsxs)("div", {
           className: "SeasonPassScreenActions",
-          children: [(0, XH.jsx)(XC, {
-            count: BH.claimable.length,
-            claiming: rH
-          }), !BH.state.hasHyperRank && (0, XH.jsx)(PC, {
-            waitingCount: AH
+          children: [(0, PB.jsx)(lJ, {
+            count: OB.claimable.length,
+            claiming: DB
+          }), !OB.state.hasHyperRank && (0, PB.jsx)(SJ, {
+            waitingCount: YB
           })]
         })]
       })
     }
 
-    function IC(HH) {
-      tC.d.claim(HH).catch((HH => {
-        console.error("Failed to claim season pass reward", HH)
+    function IJ(BB) {
+      JJ.g.claim(BB).catch((BB => {
+        console.error("Failed to claim season pass reward", BB)
       }))
     }
-    var fC = LH(5165);
-    var lC = LH(3251);
-    const KC = HH => {
+    var FJ = GB(5181);
+    var iJ = GB(3299);
+    const LJ = BB => {
         let {
-          action: BH,
-          padAction: LH
-        } = HH;
+          action: OB,
+          padAction: GB
+        } = BB;
         const {
-          isTouchScreen: AH
-        } = (0, OH.m)(["isTouchScreen"]), rH = (0, aA.y)();
-        return AH && !rH ? null : (0, XH.jsx)(jA.b, {
+          isTouchScreen: YB
+        } = (0, UB.o)(["isTouchScreen"]), DB = (0, CY.s)();
+        return YB && !DB ? null : (0, PB.jsx)(EY.c, {
           className: "EverythingMenuTabKey",
-          noaAction: BH,
+          noaAction: OB,
           padHidesKey: !0,
-          padMenuShortcut: LH
+          padMenuShortcut: GB
         })
       },
-      cC = (0, AH.memo)((function() {
+      gJ = (0, YB.memo)((function() {
         const {
-          t: HH
-        } = (0, hH.B)(), {
-          gameState: BH,
-          openEverythingMenuName: LH,
-          crosshairGameView: rH,
-          everythingMenuOverLoadingScreen: tH
-        } = (0, OH.m)(["gameState", "openEverythingMenuName", "crosshairGameView", "everythingMenuOverLoadingScreen"]), {
-          userContext: zH
-        } = (0, uH.e)(), EH = (0, Gr.k)(Date.now()), GH = (0, DH.usePurchasesAllowed)(), YH = (0, zB.K)(), {
-          view: QH
-        } = (0, YL.w)(), WH = "dot" === YH || null === YH && "ready" === (null === QH || void 0 === QH ? void 0 : QH.kind), xH = (HH, BH) => (0, XH.jsx)(KC, {
-          action: HH,
-          padAction: BH
-        }), [vH, PH] = (0, AH.useState)(null), TH = (0, AH.useRef)(null), UH = (0, AH.useRef)(null);
-        (0, AH.useEffect)((() => {
-          var HH;
-          const BH = null === (HH = UH.current) || void 0 === HH ? void 0 : HH.querySelector(".EverythingMenuTabActive");
-          null === BH || void 0 === BH || BH.scrollIntoView({
+          t: BB
+        } = (0, oB.H)(), {
+          gameState: OB,
+          openEverythingMenuName: GB,
+          crosshairGameView: DB,
+          everythingMenuOverLoadingScreen: jB
+        } = (0, UB.o)(["gameState", "openEverythingMenuName", "crosshairGameView", "everythingMenuOverLoadingScreen"]), {
+          userContext: yB
+        } = (0, pB.d)(), MB = (0, zD.h)(Date.now()), zB = (0, aB.usePurchasesAllowed)(), lB = (0, yO.I)(), {
+          view: qB
+        } = (0, lG.B)(), ZB = "dot" === lB || null === lB && "ready" === (null === qB || void 0 === qB ? void 0 : qB.kind), RB = (BB, OB) => (0, PB.jsx)(LJ, {
+          action: BB,
+          padAction: OB
+        }), [WB, AB] = (0, YB.useState)(null), VB = (0, YB.useRef)(null), SB = (0, YB.useRef)(null);
+        (0, YB.useEffect)((() => {
+          var BB;
+          const OB = null === (BB = SB.current) || void 0 === BB ? void 0 : BB.querySelector(".EverythingMenuTabActive");
+          null === OB || void 0 === OB || OB.scrollIntoView({
             block: "nearest",
             inline: "nearest"
           })
-        }), [LH]);
-        const VH = {
-            ..."inGame" === BH ? {} : (0, CH.db)({
+        }), [GB]);
+        const nB = {
+            ..."inGame" === OB ? {} : (0, JB.db)({
               focusOnClick: !1
             }),
-            ...Pr.c
+            ...AD.i
           },
-          bH = HH => {
-            const BH = (0, Tr.c)((BH => {
-              (0, CH.bb)(BH.currentTarget), OH.c.set({
-                openEverythingMenuName: HH
+          fB = BB => {
+            const OB = (0, VD.g)((OB => {
+              (0, JB.cb)(OB.currentTarget), UB.c.set({
+                openEverythingMenuName: BB
               })
             }), "pointerup");
             return {
-              ...VH,
-              onPointerDown: HH => {
-                VH.onPointerDown(HH), BH.onPointerDown(HH)
+              ...nB,
+              onPointerDown: BB => {
+                nB.onPointerDown(BB), OB.onPointerDown(BB)
               },
-              onPointerUp: HH => {
-                VH.onPointerUp(HH), BH.onPointerUp(HH)
+              onPointerUp: BB => {
+                nB.onPointerUp(BB), OB.onPointerUp(BB)
               },
-              onClick: BH.onClick
+              onClick: OB.onClick
             }
           },
-          kH = null !== LH;
-        (0, AH.useEffect)((() => {
-          LH === fB.o.CUSTOMISATION ? (0, WB.reportAnalyticsClick)({
+          kB = null !== GB;
+        (0, YB.useEffect)((() => {
+          GB === mO.p.CUSTOMISATION ? (0, ZO.reportAnalyticsClick)({
             id: "customise.open",
-            value: (0, Dh.g)()
-          }) : null === LH && OH.c.get("everythingMenuOverLoadingScreen") && OH.c.set({
+            value: (0, To.i)()
+          }) : null === GB && UB.c.get("everythingMenuOverLoadingScreen") && UB.c.set({
             everythingMenuOverLoadingScreen: !1
           })
-        }), [LH]);
-        const oH = LH !== fB.o.COSMETIC_SHOP && !rH;
-        async function IH() {
+        }), [GB]);
+        const KB = GB !== mO.p.COSMETIC_SHOP && !DB;
+        async function uB() {
           await async function() {
-            if (!vH) return;
-            await vH(), PH(null)
-          }(), OH.c.set({
+            if (!WB) return;
+            await WB(), AB(null)
+          }(), UB.c.set({
             openEverythingMenuName: null
           })
         }
-        const fH = (0, AH.useRef)(null),
-          lH = (0, AH.useCallback)((() => null !== fH.current && (0, Dz.f)(fH.current)), []);
+        const mB = (0, YB.useRef)(null),
+          IB = (0, YB.useCallback)((() => null !== mB.current && (0, Ty.f)(mB.current)), []);
 
-        function KH() {
-          lH() || IH()
-        }(0, AH.useEffect)((() => (0, Ch.z)(lH)), [lH]);
-        const cH = (0, AH.useMemo)((() => "inGame" === BH ? {
-            text: HH("settingsMenu:exitGame"),
+        function FB() {
+          IB() || uB()
+        }(0, YB.useEffect)((() => (0, Jo.w)(IB)), [IB]);
+        const iB = (0, YB.useMemo)((() => "inGame" === OB ? {
+            text: BB("settingsMenu:exitGame"),
             onClick: () => {
-              (0, Fz.e)()
+              (0, ey.c)()
             }
-          } : (0, mH.isDiscordClient)() ? {
-            text: HH("settingsMenu:exitGame"),
+          } : (0, dB.isDiscordClient)() ? {
+            text: BB("settingsMenu:exitGame"),
             onClick: () => {
-              IB.k.discordActivity().then((HH => {
-                HH.exit("User exited the game")
+              uO.i.discordActivity().then((BB => {
+                BB.exit("User exited the game")
               }))
             }
-          } : null), [BH, HH]),
-          eH = kH && !rH,
-          qH = "inGame" !== BH,
-          gH = eH && qH;
-        (0, AH.useLayoutEffect)((() => {
-          if (gH) return OH.c.set({
+          } : null), [OB, BB]),
+          LB = kB && !DB,
+          gB = "inGame" !== OB,
+          rB = LB && gB;
+        (0, YB.useLayoutEffect)((() => {
+          if (rB) return UB.c.set({
             menuCoversPage: !0
           }), () => {
-            OH.c.set({
+            UB.c.set({
               menuCoversPage: !1
             })
           }
-        }), [gH]);
-        const NH = (0, AH.useRef)(null);
-        ! function(HH, BH) {
-          (0, AH.useEffect)((() => {
-            var LH;
-            const AH = (0, fC.e)();
-            if (!BH || null === AH || !(0, fC.c)({
-                site: mH.siteUsed,
-                isMobileApp: (0, MH.isMobileApp)(),
-                isTouchScreen: OH.c.get("isTouchScreen")
+        }), [rB]);
+        const XB = (0, YB.useRef)(null);
+        ! function(BB, OB) {
+          (0, YB.useEffect)((() => {
+            var GB;
+            const YB = (0, FJ.g)();
+            if (!OB || null === YB || !(0, FJ.c)({
+                site: dB.siteUsed,
+                isMobileApp: (0, NB.isMobileApp)(),
+                isTouchScreen: UB.c.get("isTouchScreen")
               })) return;
-            const rH = null === (LH = HH.current) || void 0 === LH ? void 0 : LH.querySelector(".EverythingMenuBackButton");
-            return rH ? AH(rH) : void 0
-          }), [HH, BH])
-        }(NH, eH && !(0, Ch.n)(LH) && "inGame" === BH);
-        const RH = (0, XH.jsx)("div", {
+            const DB = null === (GB = BB.current) || void 0 === GB ? void 0 : GB.querySelector(".EverythingMenuBackButton");
+            return DB ? YB(DB) : void 0
+          }), [BB, OB])
+        }(XB, LB && !(0, Jo.m)(GB) && "inGame" === OB);
+        const wB = (0, PB.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: KH,
-          children: (0, XH.jsx)(CH.q, {
+          onClick: FB,
+          children: (0, PB.jsx)(JB.m, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, XH.jsx)(Ur.e, {
-          showing: kH,
+        return (0, PB.jsx)(SD.d, {
+          showing: kB,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: LH === fB.o.SHOP,
-          doGameplayStartStopOnShow: "inGame" === BH,
-          children: (0, XH.jsx)(Or.d, {
-            className: SH()("EverythingMenuContainer", {
-              EverythingMenuOverLoadingScreen: tH
+          keepsMovement: GB === mO.p.SHOP,
+          doGameplayStartStopOnShow: "inGame" === OB,
+          children: (0, PB.jsx)(UD.b, {
+            className: QB()("EverythingMenuContainer", {
+              EverythingMenuOverLoadingScreen: jB
             }),
-            show: eH,
-            children: (0, XH.jsx)(Vr.b, {
-              close: KH,
+            show: LB,
+            children: (0, PB.jsx)(nD.d, {
+              close: FB,
               togglePointerLock: !1,
-              children: (0, XH.jsxs)("div", {
+              children: (0, PB.jsxs)("div", {
                 className: "EverythingMenu",
-                ref: NH,
-                children: [!(0, Ch.n)(LH) && (0, XH.jsxs)("div", {
+                ref: XB,
+                children: [!(0, Jo.m)(GB) && (0, PB.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, XH.jsxs)("div", {
+                  children: [(0, PB.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [cH && (0, XH.jsx)(CH.e, {
+                    children: [iB && (0, PB.jsx)(JB.c, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        cH.onClick()
+                        iB.onClick()
                       },
-                      children: cH.text
-                    }), kH && GH && (0, XH.jsx)("div", {
-                      ...VH,
+                      children: iB.text
+                    }), kB && zB && (0, PB.jsx)("div", {
+                      ...nB,
                       className: "EverythingMenuWallet",
-                      title: HH("homePage:getPremiumCurrency"),
+                      title: BB("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, zB.k)({
+                        (0, yO.p)({
                           mode: "self",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, XH.jsx)(nz.g, {})
+                      children: (0, PB.jsx)(ay.f, {})
                     })]
-                  }), (0, XH.jsxs)("div", {
+                  }), (0, PB.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
-                    ref: UH,
+                    ref: SB,
                     "data-pad-tabs": "1",
-                    children: [(0, XH.jsxs)("div", {
-                      ...bH(fB.o.SETTINGS),
+                    children: [(0, PB.jsxs)("div", {
+                      ...fB(mO.p.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": LH === fB.o.SETTINGS ? "true" : void 0,
-                      className: SH()("EverythingMenuTab", {
-                        EverythingMenuTabActive: LH === fB.o.SETTINGS
+                      "data-pad-selected": GB === mO.p.SETTINGS ? "true" : void 0,
+                      className: QB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GB === mO.p.SETTINGS
                       }),
-                      children: [HH("general:settings"), xH("OpenSettings", "pause")]
-                    }), (0, XH.jsxs)("div", {
-                      ...bH(fB.o.CUSTOMISATION),
+                      children: [BB("general:settings"), RB("OpenSettings", "pause")]
+                    }), (0, PB.jsxs)("div", {
+                      ...fB(mO.p.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": LH === fB.o.CUSTOMISATION ? "true" : void 0,
-                      className: SH()("EverythingMenuTab", {
-                        EverythingMenuTabActive: LH === fB.o.CUSTOMISATION
+                      "data-pad-selected": GB === mO.p.CUSTOMISATION ? "true" : void 0,
+                      className: QB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GB === mO.p.CUSTOMISATION
                       }),
-                      children: [HH("general:player"), xH("OpenCharacterCustomization")]
-                    }), MH.featureFlags.useSocialFeatures && (0, XH.jsxs)("div", {
-                      ...bH(fB.o.SOCIAL),
+                      children: [BB("general:player"), RB("OpenCharacterCustomization")]
+                    }), NB.featureFlags.useSocialFeatures && (0, PB.jsxs)("div", {
+                      ...fB(mO.p.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": LH === fB.o.SOCIAL ? "true" : void 0,
-                      className: SH()("EverythingMenuTab", {
-                        EverythingMenuTabActive: LH === fB.o.SOCIAL
+                      "data-pad-selected": GB === mO.p.SOCIAL ? "true" : void 0,
+                      className: QB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GB === mO.p.SOCIAL
                       }),
-                      ...(0, WB.getAnalyticsClickAttributes)({
+                      ...(0, ZO.getAnalyticsClickAttributes)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, LH === fB.o.SOCIAL),
-                      children: [HH("socialBar:social"), (0, XH.jsx)(hC.d, {})]
-                    }), EH && (0, XH.jsx)("div", {
-                      ...bH(fB.o.SEASON_PASS),
+                      }, GB === mO.p.SOCIAL),
+                      children: [BB("socialBar:social"), (0, PB.jsx)(yJ.c, {})]
+                    }), MB && (0, PB.jsx)("div", {
+                      ...fB(mO.p.SEASON_PASS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": LH === fB.o.SEASON_PASS ? "true" : void 0,
-                      className: SH()("EverythingMenuTab", {
-                        EverythingMenuTabActive: LH === fB.o.SEASON_PASS
+                      "data-pad-selected": GB === mO.p.SEASON_PASS ? "true" : void 0,
+                      className: QB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GB === mO.p.SEASON_PASS
                       }),
-                      children: HH("seasonPass:title", {
-                        season: EH.seasonNumber
+                      children: BB("seasonPass:title", {
+                        season: MB.seasonNumber
                       })
-                    }), (0, YL.o)(QH) && (0, XH.jsxs)("div", {
-                      ...bH(fB.o.COSMETIC_SHOP),
+                    }), (0, lG.t)(qB) && (0, PB.jsxs)("div", {
+                      ...fB(mO.p.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": LH === fB.o.COSMETIC_SHOP ? "true" : void 0,
-                      className: SH()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: LH === fB.o.COSMETIC_SHOP
+                      "data-pad-selected": GB === mO.p.COSMETIC_SHOP ? "true" : void 0,
+                      className: QB()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: GB === mO.p.COSMETIC_SHOP
                       }),
-                      children: [(0, XH.jsx)("span", {
+                      children: [(0, PB.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: HH("store:title")
-                      }), "new" === YH && (0, XH.jsx)(wt, {}), WH && (0, XH.jsx)("span", {
+                        children: BB("store:title")
+                      }), "new" === lB && (0, PB.jsx)(bj, {}), ZB && (0, PB.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === BH && (0, XH.jsxs)("div", {
-                      ...bH(fB.o.LOBBY_LEADERBOARD),
+                    }), "inGame" === OB && (0, PB.jsxs)("div", {
+                      ...fB(mO.p.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": LH === fB.o.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: SH()("EverythingMenuTab", {
-                        EverythingMenuTabActive: LH === fB.o.LOBBY_LEADERBOARD
+                      "data-pad-selected": GB === mO.p.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: QB()("EverythingMenuTab", {
+                        EverythingMenuTabActive: GB === mO.p.LOBBY_LEADERBOARD
                       }),
-                      children: [HH("general:lobby"), xH("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [BB("general:lobby"), RB("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, XH.jsx)("div", {
+                  }), (0, PB.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: RH
+                    children: wB
                   })]
-                }), (0, Ch.n)(LH) && RH, (0, XH.jsxs)("div", {
-                  ref: fH,
+                }), (0, Jo.m)(GB) && wB, (0, PB.jsxs)("div", {
+                  ref: mB,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": qH ? "1" : "0.85"
+                    "--everythingMenuBodyBackgroundOpacity": gB ? "1" : "0.85"
                   },
-                  children: [(0, XH.jsx)(Er, {
-                    show: LH === fB.o.SETTINGS,
-                    setBeforeResumeCallback: PH
-                  }), (0, XH.jsx)(Mr, {
-                    show: LH === fB.o.CUSTOMISATION
-                  }), (0, XH.jsx)(AH.Suspense, {
+                  children: [(0, PB.jsx)(MD, {
+                    show: GB === mO.p.SETTINGS,
+                    setBeforeResumeCallback: AB
+                  }), (0, PB.jsx)(ND, {
+                    show: GB === mO.p.CUSTOMISATION
+                  }), (0, PB.jsx)(YB.Suspense, {
                     fallback: null,
-                    children: (0, XH.jsx)(Hh, {
-                      show: LH === fB.o.SHOP
+                    children: (0, PB.jsx)(Bo, {
+                      show: GB === mO.p.SHOP
                     })
-                  }), (0, XH.jsx)(Yh, {
-                    show: LH === fB.o.LOBBY_LEADERBOARD
-                  }), GH && (0, XH.jsx)(jz, {
-                    show: LH === fB.o.COSMETIC_SHOP
-                  }), !GH && (0, XH.jsx)(oz, {
-                    show: LH === fB.o.COSMETIC_SHOP
-                  }), (0, XH.jsx)(rC, {
-                    show: LH === fB.o.SOCIAL
-                  }), (0, XH.jsx)(kC, {
-                    show: LH === fB.o.SEASON_PASS
+                  }), (0, PB.jsx)(po, {
+                    show: GB === mO.p.LOBBY_LEADERBOARD
+                  }), zB && (0, PB.jsx)(hy, {
+                    show: GB === mO.p.COSMETIC_SHOP
+                  }), !zB && (0, PB.jsx)(my, {
+                    show: GB === mO.p.COSMETIC_SHOP
+                  }), (0, PB.jsx)(oJ, {
+                    show: GB === mO.p.SOCIAL
+                  }), (0, PB.jsx)(KJ, {
+                    show: GB === mO.p.SEASON_PASS
                   })]
-                }), !(0, MH.isMobileApp)() && (0, lC.k)() && (0, br.f)(zH.getPlayerRanks()) && (0, XH.jsx)(Or.d, {
-                  ref: TH,
+                }), !(0, NB.isMobileApp)() && (0, iJ.m)() && (0, fD.f)(yB.getPlayerRanks()) && (0, PB.jsx)(UD.b, {
+                  ref: VB,
                   className: "EverythingMenuBannerDiv",
-                  show: oH,
+                  show: KB,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, XH.jsx)(wz.b, {
+                  children: (0, PB.jsx)(by.e, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: TH
+                      parentRef: VB
                     },
-                    showing: kH && oH,
+                    showing: kB && KB,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -10247,262 +10255,262 @@ export const modules = {
         })
       }))
   },
-  35028: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => uH,
-      c: () => WH
+  34838: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => pB,
+      g: () => ZB
     });
-    LH(35030);
-    var AH = LH(45),
-      rH = LH(1038),
-      SH = LH.n(rH),
-      hH = LH(1123),
-      tH = LH(1455),
-      zH = LH(2795),
-      CH = LH(1315),
-      EH = LH(2580),
-      XH = LH(3392),
-      GH = LH(2406),
-      YH = LH(1225);
+    GB(34842);
+    var YB = GB(56),
+      DB = GB(1090),
+      QB = GB.n(DB),
+      oB = GB(1175),
+      jB = GB(1485),
+      yB = GB(2831),
+      JB = GB(1383),
+      MB = GB(2598),
+      PB = GB(3451),
+      zB = GB(2454),
+      lB = GB(1282);
 
-    function uH(HH) {
+    function pB(BB) {
       let {
-        endsAt: BH,
-        className: LH
-      } = HH;
-      return (0, YH.jsxs)("span", {
-        className: SH()("NewPlayerDealClock", LH),
-        children: [(0, YH.jsx)(CH.c, {
+        endsAt: OB,
+        className: GB
+      } = BB;
+      return (0, lB.jsxs)("span", {
+        className: QB()("NewPlayerDealClock", GB),
+        children: [(0, lB.jsx)(JB.b, {
           name: "hourglass"
-        }), (0, YH.jsx)(zH.i, {
-          toTime: BH
+        }), (0, lB.jsx)(yB.e, {
+          toTime: OB
         })]
       })
     }
 
-    function QH(HH) {
+    function qB(BB) {
       let {
-        offered: BH,
-        needsLogin: LH,
-        busy: AH,
-        highlight: rH,
-        onBuy: zH
-      } = HH;
+        offered: OB,
+        needsLogin: GB,
+        busy: YB,
+        highlight: DB,
+        onBuy: yB
+      } = BB;
       const {
-        t: CH
-      } = (0, hH.B)(), {
-        pack: uH
-      } = BH, QH = (0, XH.f)(BH.package);
-      return (0, YH.jsxs)("div", {
-        className: SH()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: rH
+        t: JB
+      } = (0, oB.H)(), {
+        pack: pB
+      } = OB, qB = (0, PB.g)(OB.package);
+      return (0, lB.jsxs)("div", {
+        className: QB()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: DB
         }),
-        children: [(0, YH.jsxs)("div", {
+        children: [(0, lB.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, YH.jsx)("img", {
-            src: GH.d[BH.tier],
+          children: [(0, lB.jsx)("img", {
+            src: zB.e[OB.tier],
             alt: "",
             draggable: !1
-          }), (0, YH.jsx)("span", {
+          }), (0, lB.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: CH("newPlayerDeal:tag")
+            children: JB("newPlayerDeal:tag")
           })]
-        }), (0, YH.jsx)("div", {
+        }), (0, lB.jsx)("div", {
           className: "NewPlayerDealPackText",
-          children: (0, YH.jsx)(EH.e, {
+          children: (0, lB.jsx)(MB.b, {
             className: "NewPlayerDealPackAmount",
-            amount: uH.gems
+            amount: pB.gems
           })
-        }), (0, YH.jsx)(tH.u, {
+        }), (0, lB.jsx)(jB.q, {
           className: "NewPlayerDealBuy",
-          loading: AH,
-          onClick: zH,
-          ariaLabel: CH("newPlayerDeal:buyLabel", {
-            amount: uH.gems.toLocaleString(),
-            price: QH
+          loading: YB,
+          onClick: yB,
+          ariaLabel: JB("newPlayerDeal:buyLabel", {
+            amount: pB.gems.toLocaleString(),
+            price: qB
           }),
-          children: CH(LH ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: QH
+          children: JB(GB ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: qB
           })
         })]
       })
     }
 
-    function WH(HH) {
+    function ZB(BB) {
       let {
-        view: BH,
-        needsLogin: LH,
-        busy: rH,
-        highlight: tH,
-        onBuy: zH
-      } = HH;
+        view: OB,
+        needsLogin: GB,
+        busy: DB,
+        highlight: jB,
+        onBuy: yB
+      } = BB;
       const {
-        t: CH
-      } = (0, hH.B)();
-      return (0, YH.jsxs)("div", {
-        className: SH()("NewPlayerDealPacks", BH.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [BH.packs.map(((HH, BH) => (0, YH.jsxs)(AH.Fragment, {
-          children: [BH > 0 && (0, YH.jsx)("div", {
+        t: JB
+      } = (0, oB.H)();
+      return (0, lB.jsxs)("div", {
+        className: QB()("NewPlayerDealPacks", OB.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [OB.packs.map(((BB, OB) => (0, lB.jsxs)(YB.Fragment, {
+          children: [OB > 0 && (0, lB.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, YH.jsx)("i", {})
-          }), (0, YH.jsx)(QH, {
-            offered: HH,
-            needsLogin: LH,
-            busy: rH,
-            highlight: tH === HH.pack.packageId,
+            children: (0, lB.jsx)("i", {})
+          }), (0, lB.jsx)(qB, {
+            offered: BB,
+            needsLogin: GB,
+            busy: DB,
+            highlight: jB === BB.pack.packageId,
             onBuy: () => {
-              zH(HH)
+              yB(BB)
             }
           })]
-        }, HH.pack.packageId))), (0, YH.jsx)("div", {
+        }, BB.pack.packageId))), (0, lB.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, YH.jsx)("span", {
+          children: (0, lB.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: CH("newPlayerDeal:limit")
+            children: JB("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35037: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => bH,
-      e: () => mH
+  34845: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => fB,
+      c: () => dB
     });
-    LH(35030);
-    var AH = LH(3388),
-      rH = LH(1475),
-      SH = LH(2397),
-      hH = LH(3376),
-      tH = LH(3356),
-      zH = LH(3382),
-      CH = LH(3340),
-      EH = LH(1123),
-      XH = LH(1352),
-      GH = LH(1061),
-      YH = LH(1455),
-      uH = LH(1315),
-      QH = LH(2580),
-      WH = LH(2930),
-      MH = LH(2771),
-      xH = LH(2780),
-      vH = LH(2789),
-      PH = LH(1225);
-    const TH = new zH.c(CH.getBillingClient, CH.addPurchaseRecordListener);
-    let UH = !1;
+    GB(34842);
+    var YB = GB(3442),
+      DB = GB(1516),
+      QB = GB(2444),
+      oB = GB(3435),
+      jB = GB(3409),
+      yB = GB(3437),
+      JB = GB(3396),
+      MB = GB(1175),
+      PB = GB(1400),
+      zB = GB(1112),
+      lB = GB(1485),
+      pB = GB(1383),
+      qB = GB(2598),
+      ZB = GB(2965),
+      NB = GB(2807),
+      RB = GB(2814),
+      WB = GB(2822),
+      AB = GB(1282);
+    const VB = new yB.d(JB.getBillingClient, JB.addPurchaseRecordListener);
+    let SB = !1;
 
-    function VH(HH, BH) {
-      null !== HH && (0, MH.q)(HH) || ((0, rH.reportAnalyticsClick)({
+    function nB(BB, OB) {
+      null !== BB && (0, NB.p)(BB) || ((0, DB.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${BH.pack.packageId}`
-      }), null !== HH && (0, MH.w)(HH), bH(BH.pack.gems))
+        value: `self:${OB.pack.packageId}`
+      }), null !== BB && (0, NB.r)(BB), fB(OB.pack.gems))
     }
 
-    function OH(HH, BH, LH) {
-      const rH = (0, MH.e)(BH);
-      switch (HH.kind) {
+    function UB(BB, OB, GB) {
+      const DB = (0, NB.c)(OB);
+      switch (BB.kind) {
         case "completed":
-          VH(rH, LH);
+          nB(DB, GB);
           break;
         case "pending":
-          SH = HH.intentId, hH = () => {
-            WH.h.refresh(), VH(rH, LH)
-          }, UH || (UH = !0, TH.listen()), TH.follow(SH, hH);
+          QB = BB.intentId, oB = () => {
+            ZB.h.refresh(), nB(DB, GB)
+          }, SB || (SB = !0, VB.listen()), VB.follow(QB, oB);
           break;
         case "unknownPackage":
-          (0, MH.N)(BH, null);
+          (0, NB.M)(OB, null);
           break;
         case "failed":
-          HH.errorKey === AH.c.newPlayerDealUnavailable && (0, MH.N)(BH, null)
+          BB.errorKey === YB.e.newPlayerDealUnavailable && (0, NB.M)(OB, null)
       }
-      var SH, hH
+      var QB, oB
     }
 
-    function bH(HH) {
-      XH.NotificationProvider.showCustomPopup({
-        body: BH => (0, PH.jsx)(kH, {
-          gems: HH,
-          close: BH
+    function fB(BB) {
+      PB.NotificationProvider.showCustomPopup({
+        body: OB => (0, AB.jsx)(kB, {
+          gems: BB,
+          close: OB
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function kH(HH) {
+    function kB(BB) {
       let {
-        gems: BH,
-        close: LH
-      } = HH;
+        gems: OB,
+        close: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, EH.B)();
-      return (0, PH.jsxs)("div", {
+        t: YB
+      } = (0, MB.H)();
+      return (0, AB.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, PH.jsxs)("div", {
+        children: [(0, AB.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, PH.jsx)(uH.c, {
+          children: [(0, AB.jsx)(pB.b, {
             name: "circle-check"
-          }), (0, PH.jsx)(QH.e, {
-            amount: BH
-          }), (0, PH.jsx)("span", {
-            children: AH("newPlayerDeal:added")
+          }), (0, AB.jsx)(qB.b, {
+            amount: OB
+          }), (0, AB.jsx)("span", {
+            children: YB("newPlayerDeal:added")
           })]
-        }), (0, PH.jsx)(YH.u, {
+        }), (0, AB.jsx)(lB.q, {
           className: "NewPlayerDealAddedOk",
-          onClick: LH,
-          children: AH("general:ok")
+          onClick: GB,
+          children: YB("general:ok")
         })]
       })
     }
 
-    function mH(HH) {
-      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hH.d;
+    function dB(BB) {
+      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oB.e;
       const {
-        userContext: LH
-      } = (0, GH.e)(), {
-        purchaseUnderWay: AH,
-        notice: rH,
-        buy: zH
-      } = (0, tH.c)(BH), CH = (0, xH.k)(), EH = LH.mayBuy() || (0, SH.guestsMayBuy)(), XH = null === CH ? !EH : CH.guest && !LH.isLoggedIn();
+        userContext: GB
+      } = (0, zB.d)(), {
+        purchaseUnderWay: YB,
+        notice: DB,
+        buy: yB
+      } = (0, jB.c)(OB), JB = (0, RB.j)(), MB = GB.mayBuy() || (0, QB.guestsMayBuy)(), PB = null === JB ? !MB : JB.guest && !GB.isLoggedIn();
       return {
-        purchaseUnderWay: AH,
-        notice: rH,
-        needsLogin: XH,
-        buyPack: function(AH, rH) {
-          (0, MH.F)("new_player_deal.buy", (0, vH.e)(AH.arm, HH, rH.pack.packageId)), null === CH ? zH(function(HH) {
+        purchaseUnderWay: YB,
+        notice: DB,
+        needsLogin: PB,
+        buyPack: function(YB, DB) {
+          (0, NB.D)("new_player_deal.buy", (0, WB.b)(YB.arm, BB, DB.pack.packageId)), null === JB ? yB(function(BB) {
             return {
-              sku: HH.pack.packageId,
-              tier: HH.tier,
-              amount: HH.pack.gems,
+              sku: BB.pack.packageId,
+              tier: BB.tier,
+              amount: BB.pack.gems,
               bonusPercent: 0,
-              package: HH.package
+              package: BB.package
             }
-          }(rH), null, {
+          }(DB), null, {
             followPending: !1
-          }).then((HH => {
-            OH(HH, LH, rH)
-          })) : XH ? BH(rH.pack.packageId, null) : VH((0, MH.e)(LH), rH)
+          }).then((BB => {
+            UB(BB, GB, DB)
+          })) : PB ? OB(DB.pack.packageId, null) : nB((0, NB.c)(GB), DB)
         }
       }
     }
   },
-  5367: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => WH
+  5377: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => ZB
     });
-    var AH = LH(1038),
-      rH = LH.n(AH),
-      SH = LH(5046),
-      hH = LH(1123),
-      tH = LH(1315),
-      zH = LH(1455),
-      CH = LH(1502),
-      EH = LH(1352),
-      XH = LH(2703),
-      GH = LH(1225);
-    const YH = {
+    var YB = GB(1090),
+      DB = GB.n(YB),
+      QB = GB(5061),
+      oB = GB(1175),
+      jB = GB(1383),
+      yB = GB(1485),
+      JB = GB(1540),
+      MB = GB(1400),
+      PB = GB(2719),
+      zB = GB(1282);
+    const lB = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -10530,406 +10538,406 @@ export const modules = {
       }
     };
 
-    function uH(HH) {
+    function pB(BB) {
       let {
-        platform: BH
-      } = HH;
-      const LH = "youtube" === BH;
-      return (0, GH.jsxs)("span", {
-        className: rH()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: LH
+        platform: OB
+      } = BB;
+      const GB = "youtube" === OB;
+      return (0, zB.jsxs)("span", {
+        className: DB()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: GB
         }),
-        children: [LH && (0, GH.jsx)(XH.d, {
+        children: [GB && (0, zB.jsx)(PB.c, {
           variant: "white"
-        }), !LH && (0, GH.jsx)(tH.c, {
-          name: YH[BH].icon,
+        }), !GB && (0, zB.jsx)(jB.b, {
+          name: lB[OB].icon,
           kit: "brands"
         })]
       })
     }
 
-    function QH(HH) {
+    function qB(BB) {
       let {
-        platform: BH,
-        link: LH,
-        editable: AH,
-        userContext: rH,
-        onLinksUpdated: XH
-      } = HH;
+        platform: OB,
+        link: GB,
+        editable: YB,
+        userContext: DB,
+        onLinksUpdated: PB
+      } = BB;
       const {
-        t: QH
-      } = (0, hH.B)(), WH = YH[BH];
-      if (!LH && !AH) return null;
+        t: qB
+      } = (0, oB.H)(), ZB = lB[OB];
+      if (!GB && !YB) return null;
 
-      function MH() {
-        var HH;
-        if (!rH || !XH) return;
-        EH.NotificationProvider.showInputPopup({
+      function NB() {
+        var BB;
+        if (!DB || !PB) return;
+        MB.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: WH.name
+              platform: ZB.name
             }
           },
-          prefixText: SH.w[BH],
+          prefixText: QB.r[OB],
           placeholderText: "playBloxd",
-          initialValue: null !== (HH = null === LH || void 0 === LH ? void 0 : LH.handle) && void 0 !== HH ? HH : "",
+          initialValue: null !== (BB = null === GB || void 0 === GB ? void 0 : GB.handle) && void 0 !== BB ? BB : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: LH ? "general:remove" : void 0
-        }).getResult().then((async HH => {
-          if ("notificationTornDown" !== HH && null !== HH) try {
-            "submit" === HH.type ? await CH.d.setSocialLink(rH, BH, HH.value) : await CH.d.clearSocialLink(rH, BH), XH()
-          } catch (LH) {
-            console.error("Failed to update social link", LH), EH.NotificationProvider.showAlertPopup({
-              title: LH.errorMessageForUser,
+          secondaryButtonText: GB ? "general:remove" : void 0
+        }).getResult().then((async BB => {
+          if ("notificationTornDown" !== BB && null !== BB) try {
+            "submit" === BB.type ? await JB.b.setSocialLink(DB, OB, BB.value) : await JB.b.clearSocialLink(DB, OB), PB()
+          } catch (GB) {
+            console.error("Failed to update social link", GB), MB.NotificationProvider.showAlertPopup({
+              title: GB.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (LH) {
-        const HH = `@${LH.handle}`;
-        return (0, GH.jsxs)("a", {
+      if (GB) {
+        const BB = `@${GB.handle}`;
+        return (0, zB.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: WH.color
+            background: ZB.color
           },
-          href: LH.profileUrl,
+          href: GB.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, GH.jsxs)("div", {
+          children: [(0, zB.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, GH.jsx)(uH, {
-              platform: BH
-            }), (0, GH.jsx)("span", {
+            children: [(0, zB.jsx)(pB, {
+              platform: OB
+            }), (0, zB.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, GH.jsx)("span", {
+              children: (0, zB.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: HH
+                children: BB
               })
             })]
-          }), AH && (0, GH.jsx)("button", {
+          }), YB && (0, zB.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, zH.db)({
+            ...(0, yB.db)({
               stopPropagation: !0
             }),
-            onClick: HH => {
-              HH.stopPropagation(), HH.preventDefault(), MH()
+            onClick: BB => {
+              BB.stopPropagation(), BB.preventDefault(), NB()
             },
-            children: (0, GH.jsx)(tH.c, {
+            children: (0, zB.jsx)(jB.b, {
               name: "pen-to-square"
             })
-          }), !AH && (0, GH.jsx)("span", {
+          }), !YB && (0, zB.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, GH.jsx)(tH.c, {
+            children: (0, zB.jsx)(jB.b, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, GH.jsxs)("button", {
+      return (0, zB.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: WH.color
+          background: ZB.color
         },
-        ...(0, zH.db)(),
+        ...(0, yB.db)(),
         onClick: () => {
-          MH()
+          NB()
         },
-        children: [(0, GH.jsx)(uH, {
-          platform: BH
-        }), (0, GH.jsxs)("span", {
+        children: [(0, zB.jsx)(pB, {
+          platform: OB
+        }), (0, zB.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, GH.jsx)("span", {
+          children: [(0, zB.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: WH.name
-          }), (0, GH.jsx)("span", {
+            children: ZB.name
+          }), (0, zB.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: QH("homePage:profileSocialLinkAdd")
+            children: qB("homePage:profileSocialLinkAdd")
           })]
-        }), (0, GH.jsx)("span", {
+        }), (0, zB.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, GH.jsx)(tH.c, {
+          children: (0, zB.jsx)(jB.b, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function WH(HH) {
+    function ZB(BB) {
       let {
-        socialLinks: BH,
-        editable: LH = !1,
-        userContext: AH,
-        onLinksUpdated: rH
-      } = HH;
-      if (!LH && 0 === BH.length) return null;
-      const hH = new Map(BH.map((HH => [HH.platform, HH]))),
-        tH = LH ? SH.s : BH.map((HH => HH.platform));
-      return (0, GH.jsx)("div", {
+        socialLinks: OB,
+        editable: GB = !1,
+        userContext: YB,
+        onLinksUpdated: DB
+      } = BB;
+      if (!GB && 0 === OB.length) return null;
+      const oB = new Map(OB.map((BB => [BB.platform, BB]))),
+        jB = GB ? QB.q : OB.map((BB => BB.platform));
+      return (0, zB.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, GH.jsx)("div", {
+        children: (0, zB.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: tH.map((HH => (0, GH.jsx)(QH, {
-            platform: HH,
-            link: hH.get(HH),
-            editable: LH,
-            userContext: AH,
-            onLinksUpdated: rH
-          }, HH)))
+          children: jB.map((BB => (0, zB.jsx)(qB, {
+            platform: BB,
+            link: oB.get(BB),
+            editable: GB,
+            userContext: YB,
+            onLinksUpdated: DB
+          }, BB)))
         })
       })
     }
   },
-  35020: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => SH
+  34834: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB
     });
-    var AH = LH(45),
-      rH = LH(3811);
+    var YB = GB(56),
+      DB = GB(3873);
 
-    function SH() {
-      const [HH, BH] = (0, AH.useState)(!1);
-      return (0, AH.useLayoutEffect)((() => {
-        let HH = !0;
-        return (0, rH.e)().then((() => {
-          HH && BH(!0)
+    function QB() {
+      const [BB, OB] = (0, YB.useState)(!1);
+      return (0, YB.useLayoutEffect)((() => {
+        let BB = !0;
+        return (0, DB.e)().then((() => {
+          BB && OB(!0)
         })), () => {
-          HH = !1
+          BB = !1
         }
-      }), []), HH
+      }), []), BB
     }
   },
-  34951: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => QH,
-      c: () => uH
+  34765: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => qB,
+      g: () => pB
     });
-    LH(34960);
-    var AH = LH(1038),
-      rH = LH.n(AH),
-      SH = LH(45),
-      hH = LH(34946);
+    GB(34769);
+    var YB = GB(1090),
+      DB = GB.n(YB),
+      QB = GB(56),
+      oB = GB(34757);
 
-    function tH(HH, BH) {
-      return Math.max(1, Math.round(HH * BH))
+    function jB(BB, OB) {
+      return Math.max(1, Math.round(BB * OB))
     }
 
-    function zH(HH, BH) {
-      const LH = BH * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        AH = function(HH, BH) {
-          if (HH.lines) return tH(HH.lineThickness, BH) % 2;
-          if (HH.dot) return tH(HH.dotSize, BH) % 2;
-          return CH(HH, BH) % 2
-        }(HH, BH),
-        rH = EH(HH.lineThickness * LH, AH),
-        SH = tH(HH.lineLength, LH),
-        hH = Math.round(HH.gap * LH),
-        zH = HH.outline > 0 ? tH(HH.outline, LH) : 0,
-        GH = [];
-      if (HH.lines && (GH.push({
-          x: rH + hH,
+    function yB(BB, OB) {
+      const GB = OB * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        YB = function(BB, OB) {
+          if (BB.lines) return jB(BB.lineThickness, OB) % 2;
+          if (BB.dot) return jB(BB.dotSize, OB) % 2;
+          return JB(BB, OB) % 2
+        }(BB, OB),
+        DB = MB(BB.lineThickness * GB, YB),
+        QB = jB(BB.lineLength, GB),
+        oB = Math.round(BB.gap * GB),
+        yB = BB.outline > 0 ? jB(BB.outline, GB) : 0,
+        zB = [];
+      if (BB.lines && (zB.push({
+          x: DB + oB,
           y: 0,
-          w: SH,
-          h: rH,
+          w: QB,
+          h: DB,
           arm: "right"
-        }), GH.push({
-          x: -hH - SH,
+        }), zB.push({
+          x: -oB - QB,
           y: 0,
-          w: SH,
-          h: rH,
+          w: QB,
+          h: DB,
           arm: "left"
-        }), GH.push({
+        }), zB.push({
           x: 0,
-          y: rH + hH,
-          w: rH,
-          h: SH,
+          y: DB + oB,
+          w: DB,
+          h: QB,
           arm: "down"
-        }), HH.tStyle || GH.push({
+        }), BB.tStyle || zB.push({
           x: 0,
-          y: -hH - SH,
-          w: rH,
-          h: SH,
+          y: -oB - QB,
+          w: DB,
+          h: QB,
           arm: "up"
-        }), 0 === hH && GH.push({
+        }), 0 === oB && zB.push({
           x: 0,
           y: 0,
-          w: rH,
-          h: rH
-        })), HH.dot) {
-        const BH = EH(HH.dotSize * LH, AH),
-          SH = HH.lines && 0 === hH && HH.dotSize > HH.lineThickness ? Math.max(BH, rH + 2) : BH,
-          tH = (rH - SH) / 2;
-        GH.push({
-          x: tH,
-          y: tH,
-          w: SH,
-          h: SH
+          w: DB,
+          h: DB
+        })), BB.dot) {
+        const OB = MB(BB.dotSize * GB, YB),
+          QB = BB.lines && 0 === oB && BB.dotSize > BB.lineThickness ? Math.max(OB, DB + 2) : OB,
+          jB = (DB - QB) / 2;
+        zB.push({
+          x: jB,
+          y: jB,
+          w: QB,
+          h: QB
         })
       }
-      const YH = GH.map((HH => ({
-        ...HH,
-        x: HH.x - zH,
-        y: HH.y - zH,
-        w: HH.w + 2 * zH,
-        h: HH.h + 2 * zH
+      const lB = zB.map((BB => ({
+        ...BB,
+        x: BB.x - yB,
+        y: BB.y - yB,
+        w: BB.w + 2 * yB,
+        h: BB.h + 2 * yB
       })));
-      let uH = null,
-        QH = null;
-      if (HH.circle) {
-        const BH = tH(HH.circleThickness, LH),
-          SH = function(HH, BH) {
-            return HH + (HH % 2 === BH ? 0 : 1)
-          }(CH(HH, LH), AH),
-          hH = (rH - SH) / 2;
-        uH = XH(hH, SH, BH), zH > 0 && (QH = XH(hH - zH, SH + 2 * zH, BH + 2 * zH))
+      let pB = null,
+        qB = null;
+      if (BB.circle) {
+        const OB = jB(BB.circleThickness, GB),
+          QB = function(BB, OB) {
+            return BB + (BB % 2 === OB ? 0 : 1)
+          }(JB(BB, GB), YB),
+          oB = (DB - QB) / 2;
+        pB = PB(oB, QB, OB), yB > 0 && (qB = PB(oB - yB, QB + 2 * yB, OB + 2 * yB))
       }
       return {
-        cell: rH,
-        fills: GH,
-        outlines: zH > 0 ? YH : [],
-        ring: uH,
-        ringOutline: QH
+        cell: DB,
+        fills: zB,
+        outlines: yB > 0 ? lB : [],
+        ring: pB,
+        ringOutline: qB
       }
     }
 
-    function CH(HH, BH) {
-      return Math.round(HH.circleRadius * BH * 2 + tH(HH.circleThickness, BH))
+    function JB(BB, OB) {
+      return Math.round(BB.circleRadius * OB * 2 + jB(BB.circleThickness, OB))
     }
 
-    function EH(HH, BH) {
-      return Math.max(2 - BH, 2 * Math.round((HH - BH) / 2) + BH)
+    function MB(BB, OB) {
+      return Math.max(2 - OB, 2 * Math.round((BB - OB) / 2) + OB)
     }
 
-    function XH(HH, BH, LH) {
-      const AH = 2 * LH >= BH - 1;
+    function PB(BB, OB, GB) {
+      const YB = 2 * GB >= OB - 1;
       return {
-        x: HH,
-        y: HH,
-        size: BH,
-        border: Math.min(LH, Math.floor(BH / 2)),
-        filled: AH
+        x: BB,
+        y: BB,
+        size: OB,
+        border: Math.min(GB, Math.floor(OB / 2)),
+        filled: YB
       }
     }
-    var GH = LH(1225);
-    const YH = 1.4;
+    var zB = GB(1282);
+    const lB = 1.4;
 
-    function uH(HH, BH) {
-      return HH && BH ? `scale(${YH})` : "scale(1)"
+    function pB(BB, OB) {
+      return BB && OB ? `scale(${lB})` : "scale(1)"
     }
 
-    function QH(HH) {
-      return "classic" === HH.settings.style ? (0, GH.jsx)(xH, {
-        ...HH
-      }) : (0, GH.jsx)(bH, {
-        ...HH
+    function qB(BB) {
+      return "classic" === BB.settings.style ? (0, zB.jsx)(RB, {
+        ...BB
+      }) : (0, zB.jsx)(fB, {
+        ...BB
       })
     }
-    const WH = .125;
+    const ZB = .125;
 
-    function MH(HH, BH) {
-      const LH = {};
-      if (HH.color !== hH.c.color && (LH.color = (0, hH.e)(HH.color)), HH.opacity !== hH.c.opacity && (LH.opacity = HH.opacity / 100), HH.outline !== hH.c.outline || HH.outlineColor !== hH.c.outlineColor) {
-        const BH = HH.outline,
-          AH = (0, hH.e)(HH.outlineColor);
-        LH.textShadow = BH > 0 ? `-${BH}px 0 ${AH}, 0 ${BH}px ${AH}, ${BH}px 0 ${AH}, 0 -${BH}px ${AH}` : "none"
+    function NB(BB, OB) {
+      const GB = {};
+      if (BB.color !== oB.d.color && (GB.color = (0, oB.l)(BB.color)), BB.opacity !== oB.d.opacity && (GB.opacity = BB.opacity / 100), BB.outline !== oB.d.outline || BB.outlineColor !== oB.d.outlineColor) {
+        const OB = BB.outline,
+          YB = (0, oB.l)(BB.outlineColor);
+        GB.textShadow = OB > 0 ? `-${OB}px 0 ${YB}, 0 ${OB}px ${YB}, ${OB}px 0 ${YB}, 0 -${OB}px ${YB}` : "none"
       }
-      if (HH.size !== hH.c.size) {
-        const AH = HH.size / 100;
-        LH.fontSize = BH ? `calc(max(1.3rem, 18px) * ${AH})` : `calc(1.3rem * ${AH})`, LH.marginTop = `-${WH}em`, LH.transformOrigin = `50% calc(50% + ${WH}em)`
+      if (BB.size !== oB.d.size) {
+        const YB = BB.size / 100;
+        GB.fontSize = OB ? `calc(max(1.3rem, 18px) * ${YB})` : `calc(1.3rem * ${YB})`, GB.marginTop = `-${ZB}em`, GB.transformOrigin = `50% calc(50% + ${ZB}em)`
       }
-      return LH
+      return GB
     }
 
-    function xH(HH) {
+    function RB(BB) {
       let {
-        settings: BH,
-        touch: LH,
-        inPreview: AH,
-        inEditor: SH,
-        pressed: hH = !1,
-        pressRef: tH
-      } = HH;
-      return (0, GH.jsx)("div", {
-        className: rH()("Crosshair", {
-          Touch: LH,
-          CrosshairInPreview: AH,
-          CrosshairInEditor: SH || AH
+        settings: OB,
+        touch: GB,
+        inPreview: YB,
+        inEditor: QB,
+        pressed: oB = !1,
+        pressRef: jB
+      } = BB;
+      return (0, zB.jsx)("div", {
+        className: DB()("Crosshair", {
+          Touch: GB,
+          CrosshairInPreview: YB,
+          CrosshairInEditor: QB || YB
         }),
-        ref: tH,
+        ref: jB,
         style: {
-          transform: uH(hH, BH.growOnClick),
-          ...MH(BH, LH)
+          transform: pB(oB, OB.growOnClick),
+          ...NB(OB, GB)
         },
         children: "+"
       })
     }
 
-    function vH(HH, BH) {
-      return HH / BH + "px"
+    function WB(BB, OB) {
+      return BB / OB + "px"
     }
 
-    function PH(HH, BH, LH, AH) {
+    function AB(BB, OB, GB, YB) {
       return {
-        ...VH(HH, BH, LH),
-        width: vH(HH.w, LH),
-        height: vH(HH.h, LH),
-        background: AH
+        ...nB(BB, OB, GB),
+        width: WB(BB.w, GB),
+        height: WB(BB.h, GB),
+        background: YB
       }
     }
 
-    function TH(HH, BH, LH) {
+    function VB(BB, OB, GB) {
       return {
-        left: vH(HH.x, BH),
-        top: vH(HH.y, BH),
-        width: vH(HH.size, BH),
-        height: vH(HH.size, BH),
-        borderWidth: vH(HH.border, BH),
-        borderColor: LH,
-        background: HH.filled ? LH : void 0
+        left: WB(BB.x, OB),
+        top: WB(BB.y, OB),
+        width: WB(BB.size, OB),
+        height: WB(BB.size, OB),
+        borderWidth: WB(BB.border, OB),
+        borderColor: GB,
+        background: BB.filled ? GB : void 0
       }
     }
-    const UH = {
+    const SB = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function VH(HH, BH, LH) {
-      const [AH, rH] = HH.arm ? UH[HH.arm] : [0, 0], SH = Math.round(BH * LH);
+    function nB(BB, OB, GB) {
+      const [YB, DB] = BB.arm ? SB[BB.arm] : [0, 0], QB = Math.round(OB * GB);
       return {
-        left: vH(HH.x + AH * SH, LH),
-        top: vH(HH.y + rH * SH, LH)
+        left: WB(BB.x + YB * QB, GB),
+        top: WB(BB.y + DB * QB, GB)
       }
     }
 
-    function OH(HH) {
-      return HH.arm ? {
-        "data-arm": HH.arm,
-        "data-x": HH.x,
-        "data-y": HH.y
+    function UB(BB) {
+      return BB.arm ? {
+        "data-arm": BB.arm,
+        "data-x": BB.x,
+        "data-y": BB.y
       } : {}
     }
 
-    function bH(HH) {
+    function fB(BB) {
       let {
-        settings: BH,
-        inPreview: LH,
-        inEditor: AH,
-        pressed: tH = !1,
-        spread: CH,
-        spreadRef: EH
-      } = HH;
-      const XH = (0, SH.useRef)(null),
+        settings: OB,
+        inPreview: GB,
+        inEditor: YB,
+        pressed: jB = !1,
+        spread: JB,
+        spreadRef: MB
+      } = BB;
+      const PB = (0, QB.useRef)(null),
         {
-          box: uH,
-          dpr: QH
-        } = function(HH) {
-          const [BH, LH] = (0, SH.useState)({
+          box: pB,
+          dpr: qB
+        } = function(BB) {
+          const [OB, GB] = (0, QB.useState)({
             box: {
               left: 0,
               top: 0,
@@ -10938,200 +10946,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, SH.useLayoutEffect)((() => {
-            const BH = HH.current;
-            if (!BH) return;
-            const AH = () => {
-              const HH = BH.getBoundingClientRect(),
-                AH = window.devicePixelRatio || 1;
-              LH((BH => BH.dpr === AH && BH.box.left === HH.left && BH.box.top === HH.top && BH.box.width === HH.width && BH.box.height === HH.height ? BH : {
+          return (0, QB.useLayoutEffect)((() => {
+            const OB = BB.current;
+            if (!OB) return;
+            const YB = () => {
+              const BB = OB.getBoundingClientRect(),
+                YB = window.devicePixelRatio || 1;
+              GB((OB => OB.dpr === YB && OB.box.left === BB.left && OB.box.top === BB.top && OB.box.width === BB.width && OB.box.height === BB.height ? OB : {
                 box: {
-                  left: HH.left,
-                  top: HH.top,
-                  width: HH.width,
-                  height: HH.height
+                  left: BB.left,
+                  top: BB.top,
+                  width: BB.width,
+                  height: BB.height
                 },
-                dpr: AH
+                dpr: YB
               }))
             };
-            AH();
-            const rH = new ResizeObserver(AH);
-            return rH.observe(BH), window.addEventListener("resize", AH), window.addEventListener("scroll", AH, !0), () => {
-              rH.disconnect(), window.removeEventListener("resize", AH), window.removeEventListener("scroll", AH, !0)
+            YB();
+            const DB = new ResizeObserver(YB);
+            return DB.observe(OB), window.addEventListener("resize", YB), window.addEventListener("scroll", YB, !0), () => {
+              DB.disconnect(), window.removeEventListener("resize", YB), window.removeEventListener("scroll", YB, !0)
             }
-          }), [HH]), BH
-        }(XH),
-        WH = (0, SH.useRef)(QH);
-      WH.current = QH;
-      const MH = zH(BH, QH, tH && BH.growOnClick ? YH : 1),
-        xH = function(HH, BH, LH) {
-          const AH = Math.round((HH.left + HH.width / 2) * LH - BH / 2),
-            rH = Math.round((HH.top + HH.height / 2) * LH - BH / 2);
+          }), [BB]), OB
+        }(PB),
+        ZB = (0, QB.useRef)(qB);
+      ZB.current = qB;
+      const NB = yB(OB, qB, jB && OB.growOnClick ? lB : 1),
+        RB = function(BB, OB, GB) {
+          const YB = Math.round((BB.left + BB.width / 2) * GB - OB / 2),
+            DB = Math.round((BB.top + BB.height / 2) * GB - OB / 2);
           return {
-            x: AH / LH - HH.left,
-            y: rH / LH - HH.top
+            x: YB / GB - BB.left,
+            y: DB / GB - BB.top
           }
-        }(uH, MH.cell, QH),
-        vH = (0, hH.e)(BH.color),
-        UH = (0, hH.e)(BH.outlineColor),
-        bH = (0, SH.useRef)(0);
-      (0, SH.useLayoutEffect)((() => {
-        if (EH) return EH.current = HH => {
-          var BH;
-          bH.current = HH, null === (BH = XH.current) || void 0 === BH || BH.querySelectorAll("[data-arm]").forEach((BH => {
-            Object.assign(BH.style, VH(function(HH) {
+        }(pB, NB.cell, qB),
+        WB = (0, oB.l)(OB.color),
+        SB = (0, oB.l)(OB.outlineColor),
+        fB = (0, QB.useRef)(0);
+      (0, QB.useLayoutEffect)((() => {
+        if (MB) return MB.current = BB => {
+          var OB;
+          fB.current = BB, null === (OB = PB.current) || void 0 === OB || OB.querySelectorAll("[data-arm]").forEach((OB => {
+            Object.assign(OB.style, nB(function(BB) {
               return {
-                x: Number(HH.dataset.x),
-                y: Number(HH.dataset.y),
-                arm: HH.dataset.arm
+                x: Number(BB.dataset.x),
+                y: Number(BB.dataset.y),
+                arm: BB.dataset.arm
               }
-            }(BH), HH, WH.current))
+            }(OB), BB, ZB.current))
           }))
         }, () => {
-          EH.current = null
+          MB.current = null
         }
-      }), [EH]);
-      const kH = null !== CH && void 0 !== CH ? CH : bH.current;
-      return (0, GH.jsx)("div", {
-        ref: XH,
-        className: rH()("CrosshairShapes", {
-          CrosshairInPreview: LH,
-          CrosshairInEditor: AH || LH,
-          CrosshairSpreads: void 0 !== EH
+      }), [MB]);
+      const kB = null !== JB && void 0 !== JB ? JB : fB.current;
+      return (0, zB.jsx)("div", {
+        ref: PB,
+        className: DB()("CrosshairShapes", {
+          CrosshairInPreview: GB,
+          CrosshairInEditor: YB || GB,
+          CrosshairSpreads: void 0 !== MB
         }),
-        children: (0, GH.jsx)("div", {
+        children: (0, zB.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: xH.x,
-            top: xH.y,
-            opacity: BH.opacity / 100
+            left: RB.x,
+            top: RB.y,
+            opacity: OB.opacity / 100
           },
-          children: (0, GH.jsxs)("div", {
+          children: (0, zB.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [MH.ringOutline && (0, GH.jsx)("div", {
+            children: [NB.ringOutline && (0, zB.jsx)("div", {
               className: "CrosshairRing",
-              style: TH(MH.ringOutline, QH, UH)
-            }), MH.outlines.map(((HH, BH) => (0, GH.jsx)("div", {
+              style: VB(NB.ringOutline, qB, SB)
+            }), NB.outlines.map(((BB, OB) => (0, zB.jsx)("div", {
               className: "CrosshairPart",
-              ...OH(HH),
-              style: PH(HH, kH, QH, UH)
-            }, `o${BH}`))), MH.ring && (0, GH.jsx)("div", {
+              ...UB(BB),
+              style: AB(BB, kB, qB, SB)
+            }, `o${OB}`))), NB.ring && (0, zB.jsx)("div", {
               className: "CrosshairRing",
-              style: TH(MH.ring, QH, vH)
-            }), MH.fills.map(((HH, BH) => (0, GH.jsx)("div", {
+              style: VB(NB.ring, qB, WB)
+            }), NB.fills.map(((BB, OB) => (0, zB.jsx)("div", {
               className: "CrosshairPart",
-              ...OH(HH),
-              style: PH(HH, kH, QH, vH)
-            }, `f${BH}`)))]
+              ...UB(BB),
+              style: AB(BB, kB, qB, WB)
+            }, `f${OB}`)))]
           })
         })
       })
     }
   },
-  34962: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => EH,
-      f: () => WH,
-      g: () => QH
+  34773: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => MB,
+      d: () => ZB,
+      g: () => qB
     });
-    var AH = LH(34946);
-    const rH = "XH1-",
-      SH = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      hH = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      tH = ["color", "outlineColor"],
-      zH = 1 + 3 * tH.length + hH.length + 1,
-      CH = Math.ceil(8 * zH / Math.log2(62)),
-      EH = rH.length + CH;
+    var YB = GB(34757);
+    const DB = "XH1-",
+      QB = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      oB = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      jB = ["color", "outlineColor"],
+      yB = 1 + 3 * jB.length + oB.length + 1,
+      JB = Math.ceil(8 * yB / Math.log2(62)),
+      MB = DB.length + JB;
 
-    function XH(HH) {
-      let BH = 90;
-      for (const LH of HH) BH = 31 * BH + LH & 255;
-      return BH
+    function PB(BB) {
+      let OB = 90;
+      for (const GB of BB) OB = 31 * OB + GB & 255;
+      return OB
     }
-    const GH = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      YH = BigInt(GH.length);
+    const zB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      lB = BigInt(zB.length);
 
-    function uH(HH, BH) {
-      let LH = 0n;
-      for (const rH of HH) {
-        const HH = GH.indexOf(rH);
-        if (HH < 0) return null;
-        LH = LH * YH + BigInt(HH)
+    function pB(BB, OB) {
+      let GB = 0n;
+      for (const DB of BB) {
+        const BB = zB.indexOf(DB);
+        if (BB < 0) return null;
+        GB = GB * lB + BigInt(BB)
       }
-      if (LH >> BigInt(8 * BH) !== 0n) return null;
-      const AH = [];
-      for (let rH = 0; rH < BH; rH++) AH.unshift(Number(0xffn & LH)), LH >>= 8n;
-      return AH
+      if (GB >> BigInt(8 * OB) !== 0n) return null;
+      const YB = [];
+      for (let DB = 0; DB < OB; DB++) YB.unshift(Number(0xffn & GB)), GB >>= 8n;
+      return YB
     }
 
-    function QH(HH) {
-      let BH = "shapes" === HH.style ? 1 : 0;
-      SH.forEach(((LH, AH) => {
-        HH[LH] && (BH |= 1 << AH + 1)
+    function qB(BB) {
+      let OB = "shapes" === BB.style ? 1 : 0;
+      QB.forEach(((GB, YB) => {
+        BB[GB] && (OB |= 1 << YB + 1)
       }));
-      const LH = [BH];
-      for (const rH of tH) {
-        const BH = (0, AH.d)(rH, HH[rH]);
-        LH.push(BH >> 16 & 255, BH >> 8 & 255, 255 & BH)
+      const GB = [OB];
+      for (const DB of jB) {
+        const OB = (0, YB.h)(DB, BB[DB]);
+        GB.push(OB >> 16 & 255, OB >> 8 & 255, 255 & OB)
       }
-      for (const rH of hH) {
+      for (const DB of oB) {
         const {
-          min: BH,
-          step: SH
-        } = AH.b[rH];
-        LH.push(Math.round(((0, AH.d)(rH, HH[rH]) - BH) / SH))
+          min: OB,
+          step: QB
+        } = YB.c[DB];
+        GB.push(Math.round(((0, YB.h)(DB, BB[DB]) - OB) / QB))
       }
-      return LH.push(XH(LH)), rH + function(HH, BH) {
-        let LH = 0n;
-        for (const rH of HH) LH = LH << 8n | BigInt(rH);
-        let AH = "";
-        for (let rH = 0; rH < BH; rH++) AH = GH[Number(LH % YH)] + AH, LH /= YH;
-        return AH
-      }(LH, CH)
+      return GB.push(PB(GB)), DB + function(BB, OB) {
+        let GB = 0n;
+        for (const DB of BB) GB = GB << 8n | BigInt(DB);
+        let YB = "";
+        for (let DB = 0; DB < OB; DB++) YB = zB[Number(GB % lB)] + YB, GB /= lB;
+        return YB
+      }(GB, JB)
     }
 
-    function WH(HH) {
-      for (const BH of HH.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${CH}})`, "gi"))) {
-        const HH = MH(uH(BH[1], zH));
-        if (HH) return HH
+    function ZB(BB) {
+      for (const OB of BB.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${JB}})`, "gi"))) {
+        const BB = NB(pB(OB[1], yB));
+        if (BB) return BB
       }
       return null
     }
 
-    function MH(HH) {
-      if (!HH || HH.length !== zH || XH(HH.slice(0, -1)) !== HH[HH.length - 1]) return null;
-      const BH = HH[0],
-        LH = {
-          ...AH.c,
-          style: 1 & BH ? "shapes" : "classic"
+    function NB(BB) {
+      if (!BB || BB.length !== yB || PB(BB.slice(0, -1)) !== BB[BB.length - 1]) return null;
+      const OB = BB[0],
+        GB = {
+          ...YB.d,
+          style: 1 & OB ? "shapes" : "classic"
         };
-      SH.forEach(((HH, AH) => {
-        LH[HH] = 0 !== (BH & 1 << AH + 1)
+      QB.forEach(((BB, YB) => {
+        GB[BB] = 0 !== (OB & 1 << YB + 1)
       }));
-      let rH = 1;
-      for (const AH of tH) LH[AH] = HH[rH] << 16 | HH[rH + 1] << 8 | HH[rH + 2], rH += 3;
-      for (const SH of hH) {
+      let DB = 1;
+      for (const YB of jB) GB[YB] = BB[DB] << 16 | BB[DB + 1] << 8 | BB[DB + 2], DB += 3;
+      for (const QB of oB) {
         const {
-          min: BH,
-          step: hH
-        } = AH.b[SH];
-        LH[SH] = (0, AH.d)(SH, BH + HH[rH] * hH), rH++
+          min: OB,
+          step: oB
+        } = YB.c[QB];
+        GB[QB] = (0, YB.h)(QB, OB + BB[DB] * oB), DB++
       }
-      return LH
+      return GB
     }
   },
-  34946: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      c: () => rH,
-      d: () => SH,
-      e: () => CH,
-      f: () => zH,
-      i: () => EH,
-      j: () => tH,
-      k: () => hH
+  34757: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => YB,
+      d: () => DB,
+      h: () => QB,
+      l: () => JB,
+      p: () => yB,
+      t: () => MB,
+      v: () => jB,
+      w: () => oB
     });
-    const AH = {
+    const YB = {
         opacity: {
           min: 5,
           max: 100,
@@ -11188,7 +11196,7 @@ export const modules = {
           step: 1
         }
       },
-      rH = Object.freeze({
+      DB = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -11209,150 +11217,150 @@ export const modules = {
         forGuns: !1
       });
 
-    function SH(HH, BH) {
-      var LH;
+    function QB(BB, OB) {
+      var GB;
       const {
-        min: SH,
-        max: hH,
-        step: tH
-      } = AH[HH];
-      if (!Number.isFinite(BH)) return rH[HH];
-      const zH = (null !== (LH = String(tH).split(".")[1]) && void 0 !== LH ? LH : "").length,
-        CH = Number((Math.round(BH / tH) * tH).toFixed(zH));
-      return Math.min(hH, Math.max(SH, CH))
+        min: QB,
+        max: oB,
+        step: jB
+      } = YB[BB];
+      if (!Number.isFinite(OB)) return DB[BB];
+      const yB = (null !== (GB = String(jB).split(".")[1]) && void 0 !== GB ? GB : "").length,
+        JB = Number((Math.round(OB / jB) * jB).toFixed(yB));
+      return Math.min(oB, Math.max(QB, JB))
     }
 
-    function hH(HH, BH, LH) {
-      const AH = "number" === typeof LH ? SH(BH, LH) : LH;
+    function oB(BB, OB, GB) {
+      const YB = "number" === typeof GB ? QB(OB, GB) : GB;
       return {
-        ...HH,
-        [BH]: AH
+        ...BB,
+        [OB]: YB
       }
     }
 
-    function tH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(rH).every((AH => LH.includes(AH) || HH[AH] === BH[AH]))
+    function jB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(DB).every((YB => GB.includes(YB) || BB[YB] === OB[YB]))
     }
 
-    function zH(HH) {
-      return tH(HH, rH)
+    function yB(BB) {
+      return jB(BB, DB)
     }
 
-    function CH(HH) {
-      return `#${HH.toString(16).padStart(6,"0")}`
+    function JB(BB) {
+      return `#${BB.toString(16).padStart(6,"0")}`
     }
 
-    function EH(HH) {
-      const BH = /^#?([0-9a-f]{6})$/i.exec(HH.trim());
-      return BH ? parseInt(BH[1], 16) : null
+    function MB(BB) {
+      const OB = /^#?([0-9a-f]{6})$/i.exec(BB.trim());
+      return OB ? parseInt(OB[1], 16) : null
     }
   },
-  34969: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => XH,
-      g: () => GH
+  34777: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => PB,
+      f: () => zB
     });
-    var AH = LH(45),
-      rH = LH(30),
-      SH = LH(34962),
-      hH = LH(34946);
-    const tH = "crosshairCode";
-    let zH = null;
-    const CH = new Set;
+    var YB = GB(56),
+      DB = GB(31),
+      QB = GB(34773),
+      oB = GB(34757);
+    const jB = "crosshairCode";
+    let yB = null;
+    const JB = new Set;
 
-    function EH() {
-      if (null === zH) {
-        var HH;
-        const BH = rH.e.getItem(tH);
-        zH = null !== (HH = "string" === typeof BH ? (0, SH.f)(BH) : null) && void 0 !== HH ? HH : hH.c
+    function MB() {
+      if (null === yB) {
+        var BB;
+        const OB = DB.g.getItem(jB);
+        yB = null !== (BB = "string" === typeof OB ? (0, QB.d)(OB) : null) && void 0 !== BB ? BB : oB.d
       }
-      return zH
+      return yB
     }
 
-    function XH(HH) {
-      zH = HH, (0, hH.f)(HH) ? rH.e.removeItem(tH) : rH.e.setItem(tH, (0, SH.g)(HH));
-      for (const BH of CH) BH()
+    function PB(BB) {
+      yB = BB, (0, oB.p)(BB) ? DB.g.removeItem(jB) : DB.g.setItem(jB, (0, QB.g)(BB));
+      for (const OB of JB) OB()
     }
 
-    function GH() {
-      const [HH, BH] = (0, AH.useState)(EH);
-      return (0, AH.useEffect)((() => {
-        const HH = () => {
-          BH(EH())
+    function zB() {
+      const [BB, OB] = (0, YB.useState)(MB);
+      return (0, YB.useEffect)((() => {
+        const BB = () => {
+          OB(MB())
         };
-        return HH(), LH = HH, CH.add(LH), () => {
-          CH.delete(LH)
+        return BB(), GB = BB, JB.add(GB), () => {
+          JB.delete(GB)
         };
-        var LH
-      }), []), HH
+        var GB
+      }), []), BB
     }
   },
-  34942: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => SH,
-      g: () => rH
+  34755: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB,
+      h: () => DB
     });
-    var AH = LH(15);
+    var YB = GB(16);
 
-    function rH(HH, BH) {
-      return HH && !BH
+    function DB(BB, OB) {
+      return BB && !OB
     }
 
-    function SH() {
-      return rH(AH.c.get("isTouchScreen"), AH.c.get("clientEscMenuOptions").touchActionButtons)
+    function QB() {
+      return DB(YB.c.get("isTouchScreen"), YB.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  5165: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => hH,
-      e: () => SH,
-      f: () => rH
+  5181: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => oB,
+      g: () => QB,
+      k: () => DB
     });
-    let AH = null;
+    let YB = null;
 
-    function rH(HH) {
-      AH = HH
+    function DB(BB) {
+      YB = BB
     }
 
-    function SH() {
-      return AH
+    function QB() {
+      return YB
     }
 
-    function hH(HH) {
-      return "bloxd" === HH.site && !HH.isMobileApp && !HH.isTouchScreen
+    function oB(BB) {
+      return "bloxd" === BB.site && !BB.isMobileApp && !BB.isTouchScreen
     }
   },
-  34901: (HH, BH, LH) => {
-    function AH(HH, BH) {
-      return HH && !BH
+  34717: (BB, OB, GB) => {
+    function YB(BB, OB) {
+      return BB && !OB
     }
-    LH.d(BH, {
-      c: () => AH
+    GB.d(OB, {
+      b: () => YB
     })
   },
-  34929: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH
+  34737: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB
     });
-    var AH = LH(1260);
+    var YB = GB(1308);
 
-    function rH() {
-      var HH, BH;
-      return null !== (HH = null === (BH = screen.orientation) || void 0 === BH ? void 0 : BH.type) && void 0 !== HH ? HH : innerWidth > innerHeight ? "landscape" : "portrait"
+    function DB() {
+      var BB, OB;
+      return null !== (BB = null === (OB = screen.orientation) || void 0 === OB ? void 0 : OB.type) && void 0 !== BB ? BB : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const SH = new class {
+    const QB = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && rH() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && DB() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = rH(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, AH.TQ)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = DB(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, YB.kq)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -11360,181 +11368,181 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const HH of this.resizers) HH()
+            for (const BB of this.resizers) BB()
           }
         }), 1e3)
       }
-      heldSizer(HH) {
-        let BH = !1;
+      heldSizer(BB) {
+        let OB = !1;
         return () => {
-          if (BH && this.isHeld()) return null;
-          const LH = HH();
-          return BH ||= null !== LH, LH
+          if (OB && this.isHeld()) return null;
+          const GB = BB();
+          return OB ||= null !== GB, GB
         }
       }
-      onRelease(HH) {
-        return this.resizers.add(HH), () => {
-          this.resizers.delete(HH)
+      onRelease(BB) {
+        return this.resizers.add(BB), () => {
+          this.resizers.delete(BB)
         }
       }
     }
   },
-  34867: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => xH,
-      e: () => CH,
-      i: () => QH,
-      m: () => uH
+  34683: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => RB,
+      e: () => JB,
+      f: () => qB,
+      g: () => pB
     });
-    var AH = LH(152),
-      rH = LH(1206),
-      SH = LH(1131),
-      hH = LH(1070),
-      tH = LH(1781);
-    const zH = {
+    var YB = GB(162),
+      DB = GB(1262),
+      QB = GB(1186),
+      oB = GB(1121),
+      jB = GB(1813);
+    const yB = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function CH(HH) {
-      return zH[HH]
+    function JB(BB) {
+      return yB[BB]
     }
 
-    function EH(HH) {
-      return (0, tH.e)(HH) ? "outdated" : HH instanceof AH.e ? 429 === HH.httpCode ? "busy" : "server" : "offline"
+    function MB(BB) {
+      return (0, jB.b)(BB) ? "outdated" : BB instanceof YB.d ? 429 === BB.httpCode ? "busy" : "server" : "offline"
     }
 
-    function XH(HH, BH, LH) {
-      return (0, hH.postJsonWithMetricsCookiesAndJsonResponse)(`${SH.clientSideServerUrls.indexUrl}${BH}`, LH, {
+    function PB(BB, OB, GB) {
+      return (0, oB.postJsonWithMetricsCookiesAndJsonResponse)(`${QB.clientSideServerUrls.indexUrl}${OB}`, GB, {
         retries: 3
-      }, HH.getMetricsCookies()).catch((HH => (console.error("Bad response from the server when trying to change name:", BH, HH), {
+      }, BB.getMetricsCookies()).catch((BB => (console.error("Bad response from the server when trying to change name:", OB, BB), {
         outcome: "failed",
-        failure: EH(HH)
+        failure: MB(BB)
       })))
     }
 
-    function GH(HH) {
-      return "outcome" in HH && "failed" === HH.outcome
+    function zB(BB) {
+      return "outcome" in BB && "failed" === BB.outcome
     }
 
-    function YH(HH) {
-      return console.error("Error when trying to get with new name from DB", HH), {
+    function lB(BB) {
+      return console.error("Error when trying to get with new name from DB", BB), {
         outcome: "refused",
-        message: HH
+        message: BB
       }
     }
-    async function uH(HH) {
-      const BH = await XH(HH, "/index/name/random", {});
-      return GH(BH) ? BH : "err" in BH ? YH(BH.err) : (HH.setPlayerName(BH.name), {
+    async function pB(BB) {
+      const OB = await PB(BB, "/index/name/random", {});
+      return zB(OB) ? OB : "err" in OB ? lB(OB.err) : (BB.setPlayerName(OB.name), {
         outcome: "changed",
-        name: BH.name
+        name: OB.name
       })
     }
-    async function QH(HH, BH) {
-      const LH = await XH(HH, "/index/name/update", {
-        name: BH
+    async function qB(BB, OB) {
+      const GB = await PB(BB, "/index/name/update", {
+        name: OB
       });
-      return GH(LH) ? LH : "err" in LH ? YH(LH.err) : LH.nameExists ? {
+      return zB(GB) ? GB : "err" in GB ? lB(GB.err) : GB.nameExists ? {
         outcome: "taken"
-      } : (HH.setPlayerName(BH), {
+      } : (BB.setPlayerName(OB), {
         outcome: "changed",
-        name: BH
+        name: OB
       })
     }
 
-    function WH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const AH = 1 === BH ? 1 : 10 ** (BH - 1),
-        SH = String(AH + Math.floor(LH() * (10 ** BH - AH)));
-      return `${HH.slice(0,rH.e-BH)}${SH}`
+    function ZB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const YB = 1 === OB ? 1 : 10 ** (OB - 1),
+        QB = String(YB + Math.floor(GB() * (10 ** OB - YB)));
+      return `${BB.slice(0,DB.l-OB)}${QB}`
     }
-    const MH = [1, 2, 3, 4];
-    async function xH(HH, BH) {
-      const LH = await QH(HH, BH);
-      if ("taken" !== LH.outcome) return LH;
-      for (const AH of MH) {
-        const LH = WH(BH, AH),
-          rH = await QH(HH, LH);
-        if ("taken" !== rH.outcome) return rH
+    const NB = [1, 2, 3, 4];
+    async function RB(BB, OB) {
+      const GB = await qB(BB, OB);
+      if ("taken" !== GB.outcome) return GB;
+      for (const YB of NB) {
+        const GB = ZB(OB, YB),
+          DB = await qB(BB, GB);
+        if ("taken" !== DB.outcome) return DB
       }
       return {
         outcome: "taken"
       }
     }
   },
-  34908: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => tH,
-      i: () => zH
+  34722: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => jB,
+      e: () => yB
     });
-    var AH = LH(15);
-    const rH = 24,
-      SH = "farNametags",
-      hH = 1e5;
+    var YB = GB(16);
+    const DB = 24,
+      QB = "farNametags",
+      oB = 1e5;
 
-    function tH() {
-      var HH;
-      return null === (HH = AH.c.get("showDistantNametags")) || void 0 === HH || HH
+    function jB() {
+      var BB;
+      return null === (BB = YB.c.get("showDistantNametags")) || void 0 === BB || BB
     }
 
-    function zH() {
-      var HH;
-      return null !== (HH = function() {
-        const HH = new URLSearchParams(window.location.search).get(SH),
-          BH = null === HH || "" === HH ? NaN : Number(HH);
-        return Number.isFinite(BH) && BH >= 0 ? Math.min(BH, hH) : null
-      }()) && void 0 !== HH ? HH : tH() ? 0 : rH
+    function yB() {
+      var BB;
+      return null !== (BB = function() {
+        const BB = new URLSearchParams(window.location.search).get(QB),
+          OB = null === BB || "" === BB ? NaN : Number(BB);
+        return Number.isFinite(OB) && OB >= 0 ? Math.min(OB, oB) : null
+      }()) && void 0 !== BB ? BB : jB() ? 0 : DB
     }
   },
-  34936: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => CH,
-      f: () => XH,
-      i: () => EH
+  34746: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => JB,
+      e: () => PB,
+      i: () => MB
     });
-    var AH = LH(241),
-      rH = LH(81),
-      SH = LH(114),
-      hH = LH(112),
-      tH = LH(635);
-    const zH = new Set(["mali_bifrost"]);
+    var YB = GB(258),
+      DB = GB(92),
+      QB = GB(118),
+      oB = GB(116),
+      jB = GB(656);
+    const yB = new Set(["mali_bifrost"]);
 
-    function CH() {
-      if (tH.g) return;
-      const HH = (0, rH.pageOperatingSystem)();
-      if ("android" !== HH && "windows" !== HH || (0, tH.e)("webgl_default")) return;
-      if ("windows" === HH) return HH => "qualcomm" === (0, rH.normaliseGpuVendor)((0, hH.b)(HH).vendor);
-      const BH = (0, SH.l)(),
-        LH = null === BH ? (0, AH.x)() : (0, AH.k)(BH.vendor, BH.renderer);
-      return null !== LH && zH.has(LH) ? HH => (0, AH.q)((0, hH.b)(HH).vendor, LH) : void 0
+    function JB() {
+      if (jB.f) return;
+      const BB = (0, DB.pageOperatingSystem)();
+      if ("android" !== BB && "windows" !== BB || (0, jB.c)("webgl_default")) return;
+      if ("windows" === BB) return BB => "qualcomm" === (0, DB.normaliseGpuVendor)((0, oB.e)(BB).vendor);
+      const OB = (0, QB.o)(),
+        GB = null === OB ? (0, YB.r)() : (0, YB.f)(OB.vendor, OB.renderer);
+      return null !== GB && yB.has(GB) ? BB => (0, YB.m)((0, oB.e)(BB).vendor, GB) : void 0
     }
 
-    function EH(HH, BH) {
-      return HH ? () => !0 : BH()
+    function MB(BB, OB) {
+      return BB ? () => !0 : OB()
     }
-    async function XH(HH) {
+    async function PB(BB) {
       try {
-        const BH = EH(HH, CH),
-          LH = navigator.gpu;
-        if (void 0 === BH || void 0 === LH) return !1;
-        const AH = await (0, hH.o)(LH, {
+        const OB = MB(BB, JB),
+          GB = navigator.gpu;
+        if (void 0 === OB || void 0 === GB) return !1;
+        const YB = await (0, oB.r)(GB, {
           seed: !1,
-          compatibility: BH
+          compatibility: OB
         });
-        return "string" !== typeof AH && AH.compatibility && !(0, hH.h)(AH.adapter)
-      } catch (BH) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", BH), !1
+        return "string" !== typeof YB && YB.compatibility && !(0, oB.k)(YB.adapter)
+      } catch (OB) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", OB), !1
       }
     }
   },
-  35008: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH,
-      f: () => hH
+  34815: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => DB,
+      g: () => oB
     });
-    const AH = [{
+    const YB = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -11716,79 +11724,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function rH(HH) {
-      let BH, LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof HH) {
-        if (!Number.isFinite(HH)) return "0";
-        if (Math.abs(HH) < 100) {
-          const BH = HH < 0 ? "-" : "",
-            LH = Math.abs(HH);
-          return LH >= 10 ? `${BH}${LH.toFixed(1).replace(/\.0$/,"")}` : `${BH}${LH.toFixed(2).replace(/\.?0+$/,"")}`
+    function DB(BB) {
+      let OB, GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof BB) {
+        if (!Number.isFinite(BB)) return "0";
+        if (Math.abs(BB) < 100) {
+          const OB = BB < 0 ? "-" : "",
+            GB = Math.abs(BB);
+          return GB >= 10 ? `${OB}${GB.toFixed(1).replace(/\.0$/,"")}` : `${OB}${GB.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        BH = BigInt(Math.floor(HH))
-      } else BH = HH;
-      const rH = BH < 0n ? -BH : BH,
-        SH = BH < 0n ? "-" : "",
-        hH = rH.toString();
-      if (hH.length <= LH) return `${SH}${hH}`;
-      const tH = 3 * Math.floor((hH.length - 1) / 3);
-      if (tH < 3) return `${SH}${hH}`;
-      if (tH > 3 * AH.length) {
-        const HH = hH[0],
-          BH = hH.slice(1, 3).replace(/0+$/, "");
-        return `${SH}${BH?`${HH}.${BH}`:HH}e${hH.length-1}`
+        OB = BigInt(Math.floor(BB))
+      } else OB = BB;
+      const DB = OB < 0n ? -OB : OB,
+        QB = OB < 0n ? "-" : "",
+        oB = DB.toString();
+      if (oB.length <= GB) return `${QB}${oB}`;
+      const jB = 3 * Math.floor((oB.length - 1) / 3);
+      if (jB < 3) return `${QB}${oB}`;
+      if (jB > 3 * YB.length) {
+        const BB = oB[0],
+          OB = oB.slice(1, 3).replace(/0+$/, "");
+        return `${QB}${OB?`${BB}.${OB}`:BB}e${oB.length-1}`
       }
       const {
-        threshold: zH,
-        suffix: CH
-      } = AH[AH.length - tH / 3], EH = rH / zH, XH = Number(1000n * (rH % zH) / zH), GH = Number(EH) + XH / 1e3;
-      let YH;
-      return YH = GH >= 100 ? Math.floor(GH).toString() : GH >= 10 ? GH.toFixed(1).replace(/\.0$/, "") : GH.toFixed(2).replace(/\.?0+$/, ""), `${SH}${YH}${CH}`
+        threshold: yB,
+        suffix: JB
+      } = YB[YB.length - jB / 3], MB = DB / yB, PB = Number(1000n * (DB % yB) / yB), zB = Number(MB) + PB / 1e3;
+      let lB;
+      return lB = zB >= 100 ? Math.floor(zB).toString() : zB >= 10 ? zB.toFixed(1).replace(/\.0$/, "") : zB.toFixed(2).replace(/\.?0+$/, ""), `${QB}${lB}${JB}`
     }
-    const SH = AH.map((HH => {
+    const QB = YB.map((BB => {
       let {
-        threshold: BH,
-        suffix: LH
-      } = HH;
+        threshold: OB,
+        suffix: GB
+      } = BB;
       return {
-        threshold: Number(BH),
-        suffix: LH
+        threshold: Number(OB),
+        suffix: GB
       }
-    })).filter((HH => {
+    })).filter((BB => {
       let {
-        threshold: BH
-      } = HH;
-      return Number.isFinite(BH)
+        threshold: OB
+      } = BB;
+      return Number.isFinite(OB)
     }));
 
-    function hH(HH) {
-      const BH = Math.abs(HH),
-        LH = HH < 0 ? "-" : "";
+    function oB(BB) {
+      const OB = Math.abs(BB),
+        GB = BB < 0 ? "-" : "";
       for (const {
-          threshold: AH,
-          suffix: rH
+          threshold: YB,
+          suffix: DB
         }
-        of SH)
-        if (BH >= AH) {
-          const HH = BH / AH;
-          if (HH >= 1e3) return `${LH}${BH.toExponential(2).replace("e+","e")}`;
-          let SH;
-          return SH = HH >= 100 ? Math.floor(HH).toString() : HH >= 10 ? HH.toFixed(1).replace(/\.0$/, "") : HH.toFixed(2).replace(/\.?0+$/, ""), `${LH}${SH}${rH}`
-        } return `${LH}${BH}`
+        of QB)
+        if (OB >= YB) {
+          const BB = OB / YB;
+          if (BB >= 1e3) return `${GB}${OB.toExponential(2).replace("e+","e")}`;
+          let QB;
+          return QB = BB >= 100 ? Math.floor(BB).toString() : BB >= 10 ? BB.toFixed(1).replace(/\.0$/, "") : BB.toFixed(2).replace(/\.?0+$/, ""), `${GB}${QB}${DB}`
+        } return `${GB}${OB}`
     }
   },
-  34996: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => EH,
-      f: () => GH,
-      h: () => XH,
-      k: () => hH,
-      o: () => CH,
-      q: () => zH
+  34799: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => MB,
+      f: () => zB,
+      g: () => PB,
+      h: () => oB,
+      i: () => JB,
+      m: () => yB
     });
-    var AH = LH(317);
-    const rH = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      SH = {
+    var YB = GB(353);
+    const DB = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      QB = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -11863,13 +11871,13 @@ export const modules = {
         }
       };
 
-    function hH(HH) {
-      var BH;
-      return null !== (BH = SH[HH]) && void 0 !== BH ? BH : {
+    function oB(BB) {
+      var OB;
+      return null !== (OB = QB[BB]) && void 0 !== OB ? OB : {
         translationKey: ""
       }
     }
-    const tH = {
+    const jB = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -11922,77 +11930,77 @@ export const modules = {
       }]
     };
 
-    function zH(HH) {
-      return rH.includes(HH)
+    function yB(BB) {
+      return DB.includes(BB)
     }
 
-    function CH(HH) {
-      var BH;
-      return !0 === (null === HH || void 0 === HH || null === (BH = HH.customAttributes) || void 0 === BH ? void 0 : BH.cannotEnchant)
+    function JB(BB) {
+      var OB;
+      return !0 === (null === BB || void 0 === BB || null === (OB = BB.customAttributes) || void 0 === OB ? void 0 : OB.cannotEnchant)
     }
 
-    function EH(HH, BH) {
+    function MB(BB, OB) {
       const {
-        max: LH
-      } = tH[HH].at(-1);
-      return BH <= LH
+        max: GB
+      } = jB[BB].at(-1);
+      return OB <= GB
     }
 
-    function XH(HH) {
-      const BH = Math.sin(HH / 80),
-        LH = HH => {
-          if (HH <= 0) return 0;
-          if (HH > 1) return 1;
-          let BH = 0;
-          const LH = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let AH = 0; AH < LH.length; AH++) {
-            BH += (AH % 2 === 0 ? 1 : -1) * LH[AH] * Math.pow(HH, 2 + AH) / (2 + AH)
+    function PB(BB) {
+      const OB = Math.sin(BB / 80),
+        GB = BB => {
+          if (BB <= 0) return 0;
+          if (BB > 1) return 1;
+          let OB = 0;
+          const GB = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let YB = 0; YB < GB.length; YB++) {
+            OB += (YB % 2 === 0 ? 1 : -1) * GB[YB] * Math.pow(BB, 2 + YB) / (2 + YB)
           }
-          return 72 * BH
+          return 72 * OB
         },
-        AH = .3 - .78 * BH,
-        rH = .5 - .78 * BH,
-        SH = .6 - .7 * BH,
-        hH = .8 - .6 * BH;
-      let tH = LH(AH),
-        zH = LH(rH) - tH,
-        CH = LH(SH) - zH - tH,
-        EH = LH(hH) - CH - zH - tH;
-      AH < .041 && (zH /= 1 - tH, CH /= 1 - tH, EH /= 1 - tH, tH = 0), rH < .041 && (tH /= 1 - zH, CH /= 1 - zH, EH /= 1 - zH, zH = 0), SH < .041 && (tH /= 1 - CH, zH /= 1 - CH, EH /= 1 - CH, CH = 0), hH < .041 && (tH /= 1 - EH, zH /= 1 - EH, CH /= 1 - EH, EH = 0);
+        YB = .3 - .78 * OB,
+        DB = .5 - .78 * OB,
+        QB = .6 - .7 * OB,
+        oB = .8 - .6 * OB;
+      let jB = GB(YB),
+        yB = GB(DB) - jB,
+        JB = GB(QB) - yB - jB,
+        MB = GB(oB) - JB - yB - jB;
+      YB < .041 && (yB /= 1 - jB, JB /= 1 - jB, MB /= 1 - jB, jB = 0), DB < .041 && (jB /= 1 - yB, JB /= 1 - yB, MB /= 1 - yB, yB = 0), QB < .041 && (jB /= 1 - JB, yB /= 1 - JB, MB /= 1 - JB, JB = 0), oB < .041 && (jB /= 1 - MB, yB /= 1 - MB, JB /= 1 - MB, MB = 0);
       return {
-        commonProb: tH,
-        uncommonProb: zH,
-        rareProb: CH,
-        epicProb: EH,
-        legendaryProb: 1 - (EH + CH + zH + tH)
+        commonProb: jB,
+        uncommonProb: yB,
+        rareProb: JB,
+        epicProb: MB,
+        legendaryProb: 1 - (MB + JB + yB + jB)
       }
     }
 
-    function GH(HH, BH) {
+    function zB(BB, OB) {
       const {
-        min: LH,
-        max: rH
-      } = tH[HH][BH], SH = AH.d.sampleUniformIntDistribution(LH, rH, "includeMax");
+        min: GB,
+        max: DB
+      } = jB[BB][OB], QB = YB.b.sampleUniformIntDistribution(GB, DB, "includeMax");
       return {
-        ...XH(SH),
-        level: SH
+        ...PB(QB),
+        level: QB
       }
     }
   },
-  34960: () => {},
-  35030: () => {},
-  13616: HH => {
-    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  34769: () => {},
+  34842: () => {},
+  13542: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  14791: HH => {
-    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  14703: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  16178: HH => {
-    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  16057: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  16699: HH => {
-    HH.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  16603: BB => {
+    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

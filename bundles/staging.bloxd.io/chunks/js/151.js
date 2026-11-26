@@ -1,386 +1,386 @@
 export const id = 151;
 export const ids = [151];
 export const modules = {
-  37012: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      WasmTextureWorker: () => xH
+  36849: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      WasmTextureWorker: () => RB
     });
-    var AH = LH(609),
-      rH = LH(3549),
-      SH = LH(37014),
-      hH = LH.n(SH);
+    var YB = GB(633),
+      DB = GB(3622),
+      QB = GB(36856),
+      oB = GB.n(QB);
 
-    function tH() {
-      return hH()('(()=>{var HH={d:(BH,LH)=>{for(var AH in LH)HH.o(LH,AH)&&!HH.o(BH,AH)&&Object.defineProperty(BH,AH,{enumerable:!0,get:LH[AH]})},o:(HH,BH)=>Object.prototype.hasOwnProperty.call(HH,BH),r:HH=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(HH,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(HH,"__esModule",{value:!0})}},BH={};HH.r(BH),HH.d(BH,{MB:()=>LH,qt:()=>AH,default:()=>fH,initSync:()=>IH,LC:()=>rH});class LH{__destroy_into_raw(){const HH=this.__wbg_ptr;return this.__wbg_ptr=0,hH.unregister(this),HH}free(){const HH=this.__destroy_into_raw();kH.Q539(HH,0)}TS(HH){const BH=function(HH,BH){const LH=BH(1*HH.length,1)>>>0;return uH().set(HH,LH/1),mH=HH.length,LH}(HH,kH.mUk3),LH=mH;return kH.YGwc(this.__wbg_ptr,BH,LH)>>>0}th(){const HH=kH.lMWV(this.__wbg_ptr);var BH=tH(HH[0],HH[1]).slice();return kH.XOA1(HH[0],4*HH[1],4),BH}At(){let HH,BH;try{const LH=kH.M9Hm(this.__wbg_ptr);return HH=LH[0],BH=LH[1],EH(LH[0],LH[1])}finally{kH.XOA1(HH,BH,1)}}It(){return kH.x6cJ(this.__wbg_ptr)>>>0}GC(){return kH.Eoya(this.__wbg_ptr)>>>0}su(){let HH,BH;try{const LH=kH.QQxx(this.__wbg_ptr);return HH=LH[0],BH=LH[1],EH(LH[0],LH[1])}finally{kH.XOA1(HH,BH,1)}}SW(){const HH=kH.jRfI(this.__wbg_ptr);var BH=tH(HH[0],HH[1]).slice();return kH.XOA1(HH[0],4*HH[1],4),BH}GW(){const HH=kH.MN0L(this.__wbg_ptr);var BH,LH,AH=(BH=HH[0],LH=HH[1],BH>>>=0,CH().subarray(BH/8,BH/8+LH)).slice();return kH.XOA1(HH[0],8*HH[1],8),AH}YW(){return kH.vEwW(this.__wbg_ptr)>>>0}MW(HH){const BH=kH.deDw(this.__wbg_ptr,HH);if(BH[1])throw vH(BH[0])}xW(){kH.fupm(this.__wbg_ptr)}PW(){kH.szxo(this.__wbg_ptr)}WW(){const HH=kH.MtT0(this.__wbg_ptr);if(HH[1])throw vH(HH[0])}UW(){return kH.kmKE(this.__wbg_ptr)>>>0}vW(){const HH=kH.gT9y(this.__wbg_ptr);if(HH[1])throw vH(HH[0])}VW(HH,BH){const LH=kH.VzB2(this.__wbg_ptr,HH,BH);if(LH[1])throw vH(LH[0])}OW(HH){let BH,LH;try{const SH=kH.mQRH(this.__wbg_ptr,HH);var AH=SH[0],rH=SH[1];if(SH[3])throw AH=0,rH=0,vH(SH[2]);return BH=AH,LH=rH,EH(AH,rH)}finally{kH.XOA1(BH,LH,1)}}bW(HH){return kH.pW6u(this.__wbg_ptr,HH)>>>0}kW(HH){return kH.PzyO(this.__wbg_ptr,HH)>>>0}uW(){const HH=kH.Jlzo(this.__wbg_ptr);var BH=tH(HH[0],HH[1]).slice();return kH.XOA1(HH[0],4*HH[1],4),BH}mW(){return 0!==kH.zNx3(this.__wbg_ptr)}constructor(HH,BH,LH,AH,rH,SH){const tH=xH(HH,kH.mUk3,kH.BY8A),zH=mH,EH=MH(BH,kH.mUk3),XH=mH,GH=function(HH,BH){const LH=BH(8*HH.length,8)>>>0;return CH().set(HH,LH/8),mH=HH.length,LH}(LH,kH.mUk3),YH=mH,uH=MH(AH,kH.mUk3),QH=mH,WH=MH(rH,kH.mUk3),PH=mH,TH=kH.dtUf(tH,zH,EH,XH,GH,YH,uH,QH,WH,PH,SH);if(TH[2])throw vH(TH[1]);return this.__wbg_ptr=TH[0],hH.register(this,this.__wbg_ptr,this),this}oW(){let HH,BH;try{const LH=kH.wlZF(this.__wbg_ptr);return HH=LH[0],BH=LH[1],EH(LH[0],LH[1])}finally{kH.XOA1(HH,BH,1)}}IW(HH,BH){const LH=xH(HH,kH.mUk3,kH.BY8A),AH=mH,rH=MH(BH,kH.mUk3),SH=mH,hH=kH.X0fx(this.__wbg_ptr,LH,AH,rH,SH);if(hH[1])throw vH(hH[0])}fW(){return kH.CWZp(this.__wbg_ptr)>>>0}lW(){return kH.KRJ5(this.__wbg_ptr)>>>0}TW(){return kH.CErp(this.__wbg_ptr)>>>0}QW(){return kH.x6H2(this.__wbg_ptr)>>>0}warnings(){let HH,BH;try{const LH=kH.oEe9(this.__wbg_ptr);return HH=LH[0],BH=LH[1],EH(LH[0],LH[1])}finally{kH.XOA1(HH,BH,1)}}}function AH(HH,BH){const LH=xH(HH,kH.mUk3,kH.BY8A),AH=mH,rH=kH.BlwL(LH,AH,BH);if(rH[1])throw vH(rH[0])}function rH(){kH.XodW()}function SH(){return{__proto__:null,uTiL:{__proto__:null,k5Q2:function(HH,BH){return function(HH){WH===QH.length&&QH.push(QH.length+1);const BH=WH;return WH=QH[BH],QH[BH]=HH,BH}(Error(EH(HH,BH)))},LHU4:function(HH,BH){throw new Error(EH(HH,BH))},uXwF:function(HH,BH){console.error(EH(HH,BH))}}}}Symbol.dispose&&(LH.prototype[Symbol.dispose]=LH.prototype.free);const hH="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((HH=>kH.Q539(HH,1)));function tH(HH,BH){return HH>>>=0,GH().subarray(HH/4,HH/4+BH)}let zH=null;function CH(){return null!==zH&&0!==zH.byteLength||(zH=new Float64Array(kH.memory.buffer)),zH}function EH(HH,BH){return function(HH,BH){UH+=BH,UH>=TH&&(PH=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),PH.decode(),UH=BH);return PH.decode(uH().subarray(HH,HH+BH))}(HH>>>0,BH)}let XH=null;function GH(){return null!==XH&&0!==XH.byteLength||(XH=new Uint32Array(kH.memory.buffer)),XH}let YH=null;function uH(){return null!==YH&&0!==YH.byteLength||(YH=new Uint8Array(kH.memory.buffer)),YH}let QH=new Array(1024).fill(void 0);QH.push(void 0,null,!0,!1);let WH=QH.length;function MH(HH,BH){const LH=BH(4*HH.length,4)>>>0;return GH().set(HH,LH/4),mH=HH.length,LH}function xH(HH,BH,LH){if(void 0===LH){const LH=VH.encode(HH),AH=BH(LH.length,1)>>>0;return uH().subarray(AH,AH+LH.length).set(LH),mH=LH.length,AH}let AH=HH.length,rH=BH(AH,1)>>>0;const SH=uH();let hH=0;for(;hH<AH;hH++){const BH=HH.charCodeAt(hH);if(BH>127)break;SH[rH+hH]=BH}if(hH!==AH){0!==hH&&(HH=HH.slice(hH)),rH=LH(rH,AH,AH=hH+3*HH.length,1)>>>0;const BH=uH().subarray(rH+hH,rH+AH);hH+=VH.encodeInto(HH,BH).written,rH=LH(rH,AH,hH,1)>>>0}return mH=hH,rH}function vH(HH){const BH=function(HH){return QH[HH]}(HH);return function(HH){HH<1028||(QH[HH]=WH,WH=HH)}(HH),BH}let PH=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});PH.decode();const TH=2146435072;let UH=0;const VH=new TextEncoder;"encodeInto"in VH||(VH.encodeInto=function(HH,BH){const LH=VH.encode(HH);return BH.set(LH),{read:HH.length,written:LH.length}});let OH,bH,kH,mH=0;function oH(HH,BH){return bH=HH,kH=HH.exports,OH=BH,zH=null,XH=null,YH=null,kH.x0z1(),kH}function IH(HH){if(void 0!==kH)return kH;void 0!==HH&&(Object.getPrototypeOf(HH)===Object.prototype?({module:HH}=HH):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const BH=SH();HH instanceof WebAssembly.Module||(HH=new WebAssembly.Module(HH));return oH(new WebAssembly.Instance(HH,BH),HH)}async function fH(HH){if(void 0!==kH)return kH;void 0!==HH&&(Object.getPrototypeOf(HH)===Object.prototype?({module_or_path:HH}=HH):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const BH=SH();("string"===typeof HH||"function"===typeof Request&&HH instanceof Request||"function"===typeof URL&&HH instanceof URL)&&(HH=fetch(HH));const{instance:LH,module:AH}=await async function(HH,BH){if("function"===typeof Response&&HH instanceof Response){if(!HH.ok)throw new Error(`failed to fetch Wasm: ${HH.status} ${HH.statusText} fetching \'${HH.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(HH,BH)}catch(LH){if(!function(HH){switch(HH){case"basic":case"cors":case"default":return!0}return!1}(HH.type)||"application/wasm"===HH.headers.get("Content-Type"))throw LH;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",LH)}const AH=await HH.arrayBuffer();return await WebAssembly.instantiate(AH,BH)}{const LH=await WebAssembly.instantiate(HH,BH);return LH instanceof WebAssembly.Instance?{instance:LH,module:HH}:LH}}(await HH,BH);return oH(LH,AH)}let lH=null,KH=null;function cH(HH){if(null!==KH)throw KH;if(null===lH)try{const{memory:LH}=IH({module:HH});lH={wasm:BH,memory:LH}}catch(LH){throw KH=function(HH,BH){return new Error(`${HH}: ${BH instanceof Error?`${BH.name}: ${BH.message}`:String(BH)}`,{cause:BH})}("instantiate",LH),KH}return lH}function eH(HH){return HH instanceof Error?HH.message:String(HH)}const qH=0,gH=1,NH=2,RH=3,jH=4;Error;function nH(HH){return`the texture module didn\'t load (${eH(HH)})`}function FH(HH){return""===HH?[]:HH.split("\\0")}const DH=self;let wH=null,ZH=null,dH=qH,aH=0;function sH(HH){const BH=performance.now();var LH,AH;(HH!==dH||BH-aH>=1e3)&&(dH=HH,aH=BH,DH.postMessage({type:"progress",stage:HH,wasmBytes:null!==(LH=null===(AH=ZH)||void 0===AH?void 0:AH.buffer.byteLength)&&void 0!==LH?LH:0}))}const{FileReaderSync:JH}=self;function iH(HH){return(new JH).readAsDataURL(new Blob([HH],{type:"image/png"}))}function pH(HH,BH){DH.postMessage({type:"sheet",sheet:HH,pixels:BH},[BH.buffer])}function yH(HH){let BH;sH(gH);try{BH=cH(HH.module)}catch(hH){return void DH.postMessage({type:"failed",reason:nH(hH),moduleLoad:!0})}ZH=BH.memory,sH(NH);const{assets:LH,layerCap:AH,warnings:rH,generator:SH}=function(HH,BH,LH,AH,rH,SH,hH){var tH;const{wasm:zH,memory:CH}=HH,{strings:EH,blocks:XH,numbers:GH,index:YH,armour:uH}=BH,QH=new zH.MB(EH,XH,GH,YH,uH,LH),WH=AH.sources.map((HH=>(null===SH||void 0===SH||SH(NH),QH.TS(HH)))),MH=new Uint32Array(2*AH.sourceOfName.length);for(const[mH,oH]of AH.sourceOfName.entries())MH[2*mH]=mH,MH[2*mH+1]=WH[oH];QH.IW(AH.names,MH),null===SH||void 0===SH||SH(RH),QH.VW(rH,null!==(tH=null===hH||void 0===hH?void 0:hH.layers)&&void 0!==tH?tH:0),null===SH||void 0===SH||SH(jH);const xH={};for(const[mH,oH]of FH(QH.oW()).entries())null===SH||void 0===SH||SH(jH),xH[oH]=QH.OW(mH);const vH={},PH=QH.th(),TH=new Map;for(const[mH,oH]of FH(QH.At()).entries()){const HH=PH[mH];TH.has(HH)||(null===SH||void 0===SH||SH(jH),TH.set(HH,QH.OW(HH))),vH[oH]=TH.get(HH)}QH.xW();const UH=Array.from(QH.uW()),VH=[],OH=[],bH=(HH,BH)=>new Uint8ClampedArray(CH.buffer,HH,BH).slice();if(hH){for(let HH=0;HH<UH.length;HH++)null===SH||void 0===SH||SH(jH),QH.MW(HH),QH.WW(),VH.push(hH.dataUrl(new Uint8Array(CH.buffer,QH.TW(),QH.lW()))),hH.onSheet(HH,bH(QH.QW(),QH.fW()));QH.PW()}const kH=QH.UW();for(let mH=kH;mH<kH+QH.GC();mH++)null===SH||void 0===SH||SH(jH),VH.push(QH.OW(mH)),OH.push(bH(QH.kW(mH),QH.bW(mH)));return{assets:{rotatedBlockTextures:xH,animatedBlockTextures:vH,blockAtlasArr:VH,blockAtlasPixels:OH,armourAtlas:QH.OW(QH.It()),imagesPerAtlas:UH,blockAtlasWidth:QH.YW()},layerCap:QH.mW()?rH:0,warnings:QH.warnings(),generator:QH}}(BH,HH.inputs,HH.isDefaultPack,{sources:HH.sources,names:HH.names,sourceOfName:HH.sourceOfName},HH.maxLayerWidth,sH,HH.sheetLayers>0?{layers:HH.sheetLayers,onSheet:pH,dataUrl:iH}:void 0);wH=SH,DH.postMessage({type:"required",assets:LH,layerCap:AH,warnings:rH},LH.blockAtlasPixels.map((HH=>HH.buffer)))}self.onmessageerror=()=>{DH.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=HH=>{let{data:BH}=HH;try{"required"===BH.type?yH(BH):function(){if(!wH)throw new Error("No required assets to follow");const{colours:HH,warnings:BH}=function(HH){return HH.vW(),{colours:{blocks:HH.su(),counts:HH.SW(),values:HH.GW()},warnings:HH.warnings()}}(wH);DH.postMessage({type:"optional",...HH,warnings:BH},[HH.counts.buffer,HH.values.buffer])}()}catch(LH){const HH=eH(LH),BH=LH instanceof WebAssembly.RuntimeError?`wasm trapped (${HH})`:HH;DH.postMessage({type:"failed",reason:BH,stack:LH instanceof Error?LH.stack:void 0})}}})();', "Worker", void 0, LH.p + "generation.worker.c4ce4818.worker.js")
+    function jB() {
+      return oB()('(()=>{var BB={d:(OB,GB)=>{for(var YB in GB)BB.o(GB,YB)&&!BB.o(OB,YB)&&Object.defineProperty(OB,YB,{enumerable:!0,get:GB[YB]})},o:(BB,OB)=>Object.prototype.hasOwnProperty.call(BB,OB),r:BB=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(BB,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(BB,"__esModule",{value:!0})}},OB={};BB.r(OB),BB.d(OB,{MB:()=>GB,sy:()=>YB,default:()=>mB,initSync:()=>uB,VP:()=>DB});class GB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,oB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();kB.NEUW(BB,0)}ID(BB){const OB=function(BB,OB){const GB=OB(1*BB.length,1)>>>0;return pB().set(BB,GB/1),dB=BB.length,GB}(BB,kB.DG88),GB=dB;return kB.d6In(this.__wbg_ptr,OB,GB)>>>0}So(){const BB=kB.nnsm(this.__wbg_ptr);var OB=jB(BB[0],BB[1]).slice();return kB.uiBk(BB[0],4*BB[1],4),OB}do(){let BB,OB;try{const GB=kB.LAIW(this.__wbg_ptr);return BB=GB[0],OB=GB[1],MB(GB[0],GB[1])}finally{kB.uiBk(BB,OB,1)}}io(){return kB.ggfF(this.__wbg_ptr)>>>0}To(){return kB.P0KA(this.__wbg_ptr)>>>0}oz(){let BB,OB;try{const GB=kB.Jatt(this.__wbg_ptr);return BB=GB[0],OB=GB[1],MB(GB[0],GB[1])}finally{kB.uiBk(BB,OB,1)}}uz(){const BB=kB.yVoD(this.__wbg_ptr);var OB=jB(BB[0],BB[1]).slice();return kB.uiBk(BB[0],4*BB[1],4),OB}cz(){const BB=kB.BxVb(this.__wbg_ptr);var OB,GB,YB=(OB=BB[0],GB=BB[1],OB>>>=0,JB().subarray(OB/8,OB/8+GB)).slice();return kB.uiBk(BB[0],8*BB[1],8),YB}op(){return kB.dhrx(this.__wbg_ptr)>>>0}RZ(BB){const OB=kB.uIW4(this.__wbg_ptr,BB);if(OB[1])throw WB(OB[0])}WZ(){kB.uVaX(this.__wbg_ptr)}VZ(){kB.SxN0(this.__wbg_ptr)}NZ(){const BB=kB.fWjm(this.__wbg_ptr);if(BB[1])throw WB(BB[0])}nZ(){return kB.XSG0(this.__wbg_ptr)>>>0}AZ(){const BB=kB.kKdn(this.__wbg_ptr);if(BB[1])throw WB(BB[0])}UZ(BB,OB){const GB=kB.buAo(this.__wbg_ptr,BB,OB);if(GB[1])throw WB(GB[0])}fZ(BB){let OB,GB;try{const QB=kB.HnHJ(this.__wbg_ptr,BB);var YB=QB[0],DB=QB[1];if(QB[3])throw YB=0,DB=0,WB(QB[2]);return OB=YB,GB=DB,MB(YB,DB)}finally{kB.uiBk(OB,GB,1)}}kZ(BB){return kB.W6d7(this.__wbg_ptr,BB)>>>0}dZ(BB){return kB.k9XB(this.__wbg_ptr,BB)>>>0}qZ(){const BB=kB.LA3T(this.__wbg_ptr);var OB=jB(BB[0],BB[1]).slice();return kB.uiBk(BB[0],4*BB[1],4),OB}KZ(){return 0!==kB.BGEC(this.__wbg_ptr)}constructor(BB,OB,GB,YB,DB,QB){const jB=RB(BB,kB.DG88,kB.U7M8),yB=dB,MB=NB(OB,kB.DG88),PB=dB,zB=function(BB,OB){const GB=OB(8*BB.length,8)>>>0;return JB().set(BB,GB/8),dB=BB.length,GB}(GB,kB.DG88),lB=dB,pB=NB(YB,kB.DG88),qB=dB,ZB=NB(DB,kB.DG88),AB=dB,VB=kB.vDOO(jB,yB,MB,PB,zB,lB,pB,qB,ZB,AB,QB);if(VB[2])throw WB(VB[1]);return this.__wbg_ptr=VB[0],oB.register(this,this.__wbg_ptr,this),this}uZ(){let BB,OB;try{const GB=kB.NY9t(this.__wbg_ptr);return BB=GB[0],OB=GB[1],MB(GB[0],GB[1])}finally{kB.uiBk(BB,OB,1)}}mZ(BB,OB){const GB=RB(BB,kB.DG88,kB.U7M8),YB=dB,DB=NB(OB,kB.DG88),QB=dB,oB=kB.g8nq(this.__wbg_ptr,GB,YB,DB,QB);if(oB[1])throw WB(oB[0])}IZ(){return kB.klnX(this.__wbg_ptr)>>>0}FZ(){return kB.ar7o(this.__wbg_ptr)>>>0}SZ(){return kB.Oa0w(this.__wbg_ptr)>>>0}ZZ(){return kB.jcz7(this.__wbg_ptr)>>>0}warnings(){let BB,OB;try{const GB=kB.S0OO(this.__wbg_ptr);return BB=GB[0],OB=GB[1],MB(GB[0],GB[1])}finally{kB.uiBk(BB,OB,1)}}}function YB(BB,OB){const GB=RB(BB,kB.DG88,kB.U7M8),YB=dB,DB=kB.YjQw(GB,YB,OB);if(DB[1])throw WB(DB[0])}function DB(){kB.p5tg()}function QB(){return{__proto__:null,JeCw:{__proto__:null,qKIi:function(BB,OB){return function(BB){ZB===qB.length&&qB.push(qB.length+1);const OB=ZB;return ZB=qB[OB],qB[OB]=BB,OB}(Error(MB(BB,OB)))},WD8i:function(BB,OB){throw new Error(MB(BB,OB))},EhNK:function(BB,OB){console.error(MB(BB,OB))}}}}Symbol.dispose&&(GB.prototype[Symbol.dispose]=GB.prototype.free);const oB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>kB.NEUW(BB,1)));function jB(BB,OB){return BB>>>=0,zB().subarray(BB/4,BB/4+OB)}let yB=null;function JB(){return null!==yB&&0!==yB.byteLength||(yB=new Float64Array(kB.memory.buffer)),yB}function MB(BB,OB){return function(BB,OB){SB+=OB,SB>=VB&&(AB=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),AB.decode(),SB=OB);return AB.decode(pB().subarray(BB,BB+OB))}(BB>>>0,OB)}let PB=null;function zB(){return null!==PB&&0!==PB.byteLength||(PB=new Uint32Array(kB.memory.buffer)),PB}let lB=null;function pB(){return null!==lB&&0!==lB.byteLength||(lB=new Uint8Array(kB.memory.buffer)),lB}let qB=new Array(1024).fill(void 0);qB.push(void 0,null,!0,!1);let ZB=qB.length;function NB(BB,OB){const GB=OB(4*BB.length,4)>>>0;return zB().set(BB,GB/4),dB=BB.length,GB}function RB(BB,OB,GB){if(void 0===GB){const GB=nB.encode(BB),YB=OB(GB.length,1)>>>0;return pB().subarray(YB,YB+GB.length).set(GB),dB=GB.length,YB}let YB=BB.length,DB=OB(YB,1)>>>0;const QB=pB();let oB=0;for(;oB<YB;oB++){const OB=BB.charCodeAt(oB);if(OB>127)break;QB[DB+oB]=OB}if(oB!==YB){0!==oB&&(BB=BB.slice(oB)),DB=GB(DB,YB,YB=oB+3*BB.length,1)>>>0;const OB=pB().subarray(DB+oB,DB+YB);oB+=nB.encodeInto(BB,OB).written,DB=GB(DB,YB,oB,1)>>>0}return dB=oB,DB}function WB(BB){const OB=function(BB){return qB[BB]}(BB);return function(BB){BB<1028||(qB[BB]=ZB,ZB=BB)}(BB),OB}let AB=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});AB.decode();const VB=2146435072;let SB=0;const nB=new TextEncoder;"encodeInto"in nB||(nB.encodeInto=function(BB,OB){const GB=nB.encode(BB);return OB.set(GB),{read:BB.length,written:GB.length}});let UB,fB,kB,dB=0;function KB(BB,OB){return fB=BB,kB=BB.exports,UB=OB,yB=null,PB=null,lB=null,kB.SttG(),kB}function uB(BB){if(void 0!==kB)return kB;void 0!==BB&&(Object.getPrototypeOf(BB)===Object.prototype?({module:BB}=BB):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const OB=QB();BB instanceof WebAssembly.Module||(BB=new WebAssembly.Module(BB));return KB(new WebAssembly.Instance(BB,OB),BB)}async function mB(BB){if(void 0!==kB)return kB;void 0!==BB&&(Object.getPrototypeOf(BB)===Object.prototype?({module_or_path:BB}=BB):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const OB=QB();("string"===typeof BB||"function"===typeof Request&&BB instanceof Request||"function"===typeof URL&&BB instanceof URL)&&(BB=fetch(BB));const{instance:GB,module:YB}=await async function(BB,OB){if("function"===typeof Response&&BB instanceof Response){if(!BB.ok)throw new Error(`failed to fetch Wasm: ${BB.status} ${BB.statusText} fetching \'${BB.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(BB,OB)}catch(GB){if(!function(BB){switch(BB){case"basic":case"cors":case"default":return!0}return!1}(BB.type)||"application/wasm"===BB.headers.get("Content-Type"))throw GB;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",GB)}const YB=await BB.arrayBuffer();return await WebAssembly.instantiate(YB,OB)}{const GB=await WebAssembly.instantiate(BB,OB);return GB instanceof WebAssembly.Instance?{instance:GB,module:BB}:GB}}(await BB,OB);return KB(GB,YB)}let IB=null,FB=null;function iB(BB){if(null!==FB)throw FB;if(null===IB)try{const{memory:GB}=uB({module:BB});IB={wasm:OB,memory:GB}}catch(GB){throw FB=function(BB,OB){return new Error(`${BB}: ${OB instanceof Error?`${OB.name}: ${OB.message}`:String(OB)}`,{cause:OB})}("instantiate",GB),FB}return IB}function LB(BB){return BB instanceof Error?BB.message:String(BB)}const gB=0,rB=1,XB=2,wB=3,EB=4;Error;function cB(BB){return`the texture module didn\'t load (${LB(BB)})`}function hB(BB){return""===BB?[]:BB.split("\\0")}const aB=self;let eB=null,TB=null,bB=gB,CB=0;function HB(BB){const OB=performance.now();var GB,YB;(BB!==bB||OB-CB>=1e3)&&(bB=BB,CB=OB,aB.postMessage({type:"progress",stage:BB,wasmBytes:null!==(GB=null===(YB=TB)||void 0===YB?void 0:YB.buffer.byteLength)&&void 0!==GB?GB:0}))}const{FileReaderSync:vB}=self;function sB(BB){return(new vB).readAsDataURL(new Blob([BB],{type:"image/png"}))}function xB(BB,OB){aB.postMessage({type:"sheet",sheet:BB,pixels:OB},[OB.buffer])}function tB(BB){let OB;HB(rB);try{OB=iB(BB.module)}catch(oB){return void aB.postMessage({type:"failed",reason:cB(oB),moduleLoad:!0})}TB=OB.memory,HB(XB);const{assets:GB,layerCap:YB,warnings:DB,generator:QB}=function(BB,OB,GB,YB,DB,QB,oB){var jB;const{wasm:yB,memory:JB}=BB,{strings:MB,blocks:PB,numbers:zB,index:lB,armour:pB}=OB,qB=new yB.MB(MB,PB,zB,lB,pB,GB),ZB=YB.sources.map((BB=>(null===QB||void 0===QB||QB(XB),qB.ID(BB)))),NB=new Uint32Array(2*YB.sourceOfName.length);for(const[dB,KB]of YB.sourceOfName.entries())NB[2*dB]=dB,NB[2*dB+1]=ZB[KB];qB.mZ(YB.names,NB),null===QB||void 0===QB||QB(wB),qB.UZ(DB,null!==(jB=null===oB||void 0===oB?void 0:oB.layers)&&void 0!==jB?jB:0),null===QB||void 0===QB||QB(EB);const RB={};for(const[dB,KB]of hB(qB.uZ()).entries())null===QB||void 0===QB||QB(EB),RB[KB]=qB.fZ(dB);const WB={},AB=qB.So(),VB=new Map;for(const[dB,KB]of hB(qB.do()).entries()){const BB=AB[dB];VB.has(BB)||(null===QB||void 0===QB||QB(EB),VB.set(BB,qB.fZ(BB))),WB[KB]=VB.get(BB)}qB.WZ();const SB=Array.from(qB.qZ()),nB=[],UB=[],fB=(BB,OB)=>new Uint8ClampedArray(JB.buffer,BB,OB).slice();if(oB){for(let BB=0;BB<SB.length;BB++)null===QB||void 0===QB||QB(EB),qB.RZ(BB),qB.NZ(),nB.push(oB.dataUrl(new Uint8Array(JB.buffer,qB.SZ(),qB.FZ()))),oB.onSheet(BB,fB(qB.ZZ(),qB.IZ()));qB.VZ()}const kB=qB.nZ();for(let dB=kB;dB<kB+qB.To();dB++)null===QB||void 0===QB||QB(EB),nB.push(qB.fZ(dB)),UB.push(fB(qB.dZ(dB),qB.kZ(dB)));return{assets:{rotatedBlockTextures:RB,animatedBlockTextures:WB,blockAtlasArr:nB,blockAtlasPixels:UB,armourAtlas:qB.fZ(qB.io()),imagesPerAtlas:SB,blockAtlasWidth:qB.op()},layerCap:qB.KZ()?DB:0,warnings:qB.warnings(),generator:qB}}(OB,BB.inputs,BB.isDefaultPack,{sources:BB.sources,names:BB.names,sourceOfName:BB.sourceOfName},BB.maxLayerWidth,HB,BB.sheetLayers>0?{layers:BB.sheetLayers,onSheet:xB,dataUrl:sB}:void 0);eB=QB,aB.postMessage({type:"required",assets:GB,layerCap:YB,warnings:DB},GB.blockAtlasPixels.map((BB=>BB.buffer)))}self.onmessageerror=()=>{aB.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=BB=>{let{data:OB}=BB;try{"required"===OB.type?tB(OB):function(){if(!eB)throw new Error("No required assets to follow");const{colours:BB,warnings:OB}=function(BB){return BB.AZ(),{colours:{blocks:BB.oz(),counts:BB.uz(),values:BB.cz()},warnings:BB.warnings()}}(eB);aB.postMessage({type:"optional",...BB,warnings:OB},[BB.counts.buffer,BB.values.buffer])}()}catch(GB){const BB=LB(GB),OB=GB instanceof WebAssembly.RuntimeError?`wasm trapped (${BB})`:BB;aB.postMessage({type:"failed",reason:OB,stack:GB instanceof Error?GB.stack:void 0})}}})();', "Worker", void 0, GB.p + "generation.worker.e68fcfc7.worker.js")
     }
-    var zH = LH(37018),
-      CH = LH(3583),
-      EH = LH(3597),
-      XH = LH(3590),
-      GH = LH(3555);
+    var yB = GB(36862),
+      JB = GB(3641),
+      MB = GB(3659),
+      PB = GB(3647),
+      zB = GB(3626);
 
-    function YH(HH) {
-      return "" === HH ? [] : HH.split("\0")
-    }
-
-    function uH(HH) {
-      if ("" !== HH)
-        for (const BH of HH.split("\n")) console.error(BH)
+    function lB(BB) {
+      return "" === BB ? [] : BB.split("\0")
     }
 
-    function QH(HH, BH) {
-      return async function(HH, BH) {
-        const LH = Object.keys(HH),
-          AH = [],
-          rH = new Map,
-          SH = new Uint32Array(LH.length);
-        for (const [hH, tH] of LH.entries()) {
+    function pB(BB) {
+      if ("" !== BB)
+        for (const OB of BB.split("\n")) console.error(OB)
+    }
+
+    function qB(BB, OB) {
+      return async function(BB, OB) {
+        const GB = Object.keys(BB),
+          YB = [],
+          DB = new Map,
+          QB = new Uint32Array(GB.length);
+        for (const [oB, jB] of GB.entries()) {
           const {
-            url: BH
-          } = HH[tH];
-          rH.has(BH) || (rH.set(BH, AH.length), AH.push(BH)), SH[hH] = rH.get(BH)
+            url: OB
+          } = BB[jB];
+          DB.has(OB) || (DB.set(OB, YB.length), YB.push(OB)), QB[oB] = DB.get(OB)
         }
         return {
-          sources: await BH(AH),
-          names: LH.join("\0"),
-          sourceOfName: SH
+          sources: await OB(YB),
+          names: GB.join("\0"),
+          sourceOfName: QB
         }
-      }(HH, (async HH => {
-        const LH = await async function(HH, BH) {
-          const LH = new AbortController,
-            AH = () => {
-              LH.abort()
+      }(BB, (async BB => {
+        const GB = await async function(BB, OB) {
+          const GB = new AbortController,
+            YB = () => {
+              GB.abort()
             };
-          BH.addEventListener("abort", AH);
+          OB.addEventListener("abort", YB);
           try {
-            const BH = await Promise.all(HH.map((async HH => {
+            const OB = await Promise.all(BB.map((async BB => {
               try {
-                const BH = await fetch(HH, {
-                  signal: LH.signal
+                const OB = await fetch(BB, {
+                  signal: GB.signal
                 });
-                if (!BH.ok) throw new Error(`HTTP ${BH.status}`);
-                return [HH, await BH.blob()]
-              } catch (BH) {
-                throw LH.abort(), new EH.t(EH.p.Fetch, `fetching ${HH} failed: ${(0,XH.d)(BH)}`)
+                if (!OB.ok) throw new Error(`HTTP ${OB.status}`);
+                return [BB, await OB.blob()]
+              } catch (OB) {
+                throw GB.abort(), new MB.p(MB.m.Fetch, `fetching ${BB} failed: ${(0,PB.e)(OB)}`)
               }
             })));
-            return new Map(BH)
+            return new Map(OB)
           } finally {
-            BH.removeEventListener("abort", AH)
+            OB.removeEventListener("abort", YB)
           }
-        }(HH.filter((HH => !HH.startsWith("data:"))), BH);
-        return Promise.all(HH.map((HH => {
-          var BH;
-          return (0, GH.h)(null !== (BH = LH.get(HH)) && void 0 !== BH ? BH : HH)
+        }(BB.filter((BB => !BB.startsWith("data:"))), OB);
+        return Promise.all(BB.map((BB => {
+          var OB;
+          return (0, zB.g)(null !== (OB = GB.get(BB)) && void 0 !== OB ? OB : BB)
         })))
       }))
     }
 
-    function WH(HH, BH) {
-      const LH = EH.t.from(HH, BH ? EH.p.Optional : EH.p.Error);
-      return LH.code !== EH.p.Fetch && LH.code !== EH.p.Error && (0, CH.h)(LH.message), LH
+    function ZB(BB, OB) {
+      const GB = MB.p.from(BB, OB ? MB.m.Optional : MB.m.Error);
+      return GB.code !== MB.m.Fetch && GB.code !== MB.m.Error && (0, JB.d)(GB.message), GB
     }
 
-    function MH(HH) {
-      return HH.message ? new Error(`the texture worker failed: ${HH.message}`) : new EH.t(EH.p.Load, "the texture worker failed to start")
+    function NB(BB) {
+      return BB.message ? new Error(`the texture worker failed: ${BB.message}`) : new MB.p(MB.m.Load, "the texture worker failed to start")
     }
-    class xH {
-      constructor(HH) {
-        this.worker = HH, this.failure = void 0, this.abandonStep = null, HH.addEventListener("error", (HH => {
-          HH.preventDefault(), this.failure ??= MH(HH)
+    class RB {
+      constructor(BB) {
+        this.worker = BB, this.failure = void 0, this.abandonStep = null, BB.addEventListener("error", (BB => {
+          BB.preventDefault(), this.failure ??= NB(BB)
         }))
       }
-      static async generateRequired(HH, BH, LH, SH) {
-        let hH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : EH.d,
-          CH = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const GH = (0, zH.m)();
-        if (null !== GH) throw WH(new EH.t(EH.p.Load, GH), !1);
-        let YH;
-        const MH = new AbortController;
+      static async generateRequired(BB, OB, GB, QB) {
+        let oB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : MB.c,
+          JB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const zB = (0, yB.h)();
+        if (null !== zB) throw ZB(new MB.p(MB.m.Load, zB), !1);
+        let lB;
+        const NB = new AbortController;
         try {
-          YH = new xH(function() {
+          lB = new RB(function() {
             try {
-              return new tH
-            } catch (HH) {
-              throw new EH.t(EH.p.Load, `the texture worker failed to start: ${(0,XH.d)(HH)}`)
+              return new jB
+            } catch (BB) {
+              throw new MB.p(MB.m.Load, `the texture worker failed to start: ${(0,PB.e)(BB)}`)
             }
           }());
-          const GH = (0, zH.d)().catch((HH => {
-              throw new EH.t(EH.p.Load, function(HH) {
-                return `the texture module didn't load (${(0,XH.d)(HH)})`
-              }(HH))
+          const zB = (0, yB.c)().catch((BB => {
+              throw new MB.p(MB.m.Load, function(BB) {
+                return `the texture module didn't load (${(0,PB.e)(BB)})`
+              }(BB))
             })),
-            WH = (async () => {
-              const SH = function(HH, BH, LH) {
-                const AH = [],
-                  rH = new Map,
-                  SH = HH => {
-                    let BH = rH.get(HH);
-                    return void 0 === BH && (BH = AH.length, AH.push(HH), rH.set(HH, BH)), BH
+            ZB = (async () => {
+              const QB = function(BB, OB, GB) {
+                const YB = [],
+                  DB = new Map,
+                  QB = BB => {
+                    let OB = DB.get(BB);
+                    return void 0 === OB && (OB = YB.length, YB.push(BB), DB.set(BB, OB)), OB
                   },
-                  hH = [],
-                  tH = [],
-                  zH = new Map,
-                  CH = (HH, BH) => {
-                    const LH = "object" === typeof HH && null !== HH && "animTextures" in HH ? HH.animTextures : void 0;
-                    if (!Array.isArray(LH) || !LH.every((HH => "string" === typeof HH))) throw new Error(`Block ${BH} has textureInfo the encoding doesn't cover`);
-                    hH.push(LH.length, ...LH.map(SH))
+                  oB = [],
+                  jB = [],
+                  yB = new Map,
+                  JB = (BB, OB) => {
+                    const GB = "object" === typeof BB && null !== BB && "animTextures" in BB ? BB.animTextures : void 0;
+                    if (!Array.isArray(GB) || !GB.every((BB => "string" === typeof BB))) throw new Error(`Block ${OB} has textureInfo the encoding doesn't cover`);
+                    oB.push(GB.length, ...GB.map(QB))
                   };
-                let EH = 0;
-                for (const YH in HH) {
-                  const BH = HH[YH];
-                  hH.push(SH(YH));
-                  const LH = (BH.transTex ? 1 : 0) | (BH.UY ? 2 : 0) | (BH.particlesIgnoreBlack ? 4 : 0),
-                    AH = "string" === typeof BH.itemTexture ? SH(BH.itemTexture) : 4294967295,
-                    rH = `${LH},${AH}`,
-                    XH = BH.textureInfo,
-                    GH = zH.get(XH);
-                  if ((null === GH || void 0 === GH ? void 0 : GH.fields) !== rH)
-                    if (zH.set(XH, {
-                        entry: EH++,
-                        fields: rH
-                      }), hH.push(1, LH, AH), "string" === typeof XH) hH.push(1, SH(XH));
-                    else if (Array.isArray(XH)) {
-                    hH.push(3, XH.length);
-                    for (const HH of XH) "string" === typeof HH ? hH.push(0, SH(HH)) : "number" === typeof HH ? (hH.push(2, tH.length), tH.push(HH)) : (hH.push(1), CH(HH, YH))
-                  } else XH ? (hH.push(2), CH(XH, YH)) : hH.push(0);
-                  else hH.push(0, GH.entry), EH++
+                let MB = 0;
+                for (const lB in BB) {
+                  const OB = BB[lB];
+                  oB.push(QB(lB));
+                  const GB = (OB.transTex ? 1 : 0) | (OB.fl ? 2 : 0) | (OB.particlesIgnoreBlack ? 4 : 0),
+                    YB = "string" === typeof OB.itemTexture ? QB(OB.itemTexture) : 4294967295,
+                    DB = `${GB},${YB}`,
+                    PB = OB.textureInfo,
+                    zB = yB.get(PB);
+                  if ((null === zB || void 0 === zB ? void 0 : zB.fields) !== DB)
+                    if (yB.set(PB, {
+                        entry: MB++,
+                        fields: DB
+                      }), oB.push(1, GB, YB), "string" === typeof PB) oB.push(1, QB(PB));
+                    else if (Array.isArray(PB)) {
+                    oB.push(3, PB.length);
+                    for (const BB of PB) "string" === typeof BB ? oB.push(0, QB(BB)) : "number" === typeof BB ? (oB.push(2, jB.length), jB.push(BB)) : (oB.push(1), JB(BB, lB))
+                  } else PB ? (oB.push(2), JB(PB, lB)) : oB.push(0);
+                  else oB.push(0, zB.entry), MB++
                 }
-                const XH = [];
-                for (const YH in BH) XH.push(SH(YH), BH[YH]);
-                const GH = new Uint32Array(LH.map(SH));
+                const PB = [];
+                for (const lB in OB) PB.push(QB(lB), OB[lB]);
+                const zB = new Uint32Array(GB.map(QB));
                 return {
-                  strings: AH.join("\0"),
-                  blocks: new Uint32Array(hH),
-                  numbers: new Float64Array(tH),
-                  index: new Uint32Array(XH),
-                  armour: GH
+                  strings: YB.join("\0"),
+                  blocks: new Uint32Array(oB),
+                  numbers: new Float64Array(jB),
+                  index: new Uint32Array(PB),
+                  armour: zB
                 }
-              }(HH, BH, AH.e.map(rH.k));
+              }(BB, OB, YB.d.map(DB.h));
               return {
-                inputs: SH,
-                sources: await QH(LH, MH.signal)
+                inputs: QB,
+                sources: await qB(GB, NB.signal)
               }
             })(),
-            [vH, {
-              inputs: PH,
-              sources: TH
-            }] = await Promise.all([GH, WH]),
-            UH = [PH.blocks.buffer, PH.numbers.buffer, PH.index.buffer, PH.armour.buffer, TH.sourceOfName.buffer];
-          for (const HH of TH.sources) UH.push(HH.buffer);
-          const VH = [],
+            [WB, {
+              inputs: AB,
+              sources: VB
+            }] = await Promise.all([zB, ZB]),
+            SB = [AB.blocks.buffer, AB.numbers.buffer, AB.index.buffer, AB.armour.buffer, VB.sourceOfName.buffer];
+          for (const BB of VB.sources) SB.push(BB.buffer);
+          const nB = [],
             {
-              assets: OH,
-              layerCap: bH,
-              warnings: kH
-            } = await YH.request({
+              assets: UB,
+              layerCap: fB,
+              warnings: kB
+            } = await lB.request({
               type: "required",
-              module: vH,
-              inputs: PH,
-              isDefaultPack: SH,
-              maxLayerWidth: hH,
-              sheetLayers: CH,
-              ...TH
-            }, UH, ((HH, BH) => {
-              VH[HH] = BH
+              module: WB,
+              inputs: AB,
+              isDefaultPack: QB,
+              maxLayerWidth: oB,
+              sheetLayers: JB,
+              ...VB
+            }, SB, ((BB, OB) => {
+              nB[BB] = OB
             }));
-          return CH > 0 && (OH.blockAtlasPixels = function(HH, BH) {
-            const LH = [];
-            for (let AH = 0; AH < BH; AH++) {
-              const rH = HH[AH];
-              if (void 0 === rH) throw new Error(`the texture worker's sheet ${AH} of ${BH} didn't arrive`);
-              LH.push(rH)
+          return JB > 0 && (UB.blockAtlasPixels = function(BB, OB) {
+            const GB = [];
+            for (let YB = 0; YB < OB; YB++) {
+              const DB = BB[YB];
+              if (void 0 === DB) throw new Error(`the texture worker's sheet ${YB} of ${OB} didn't arrive`);
+              GB.push(DB)
             }
-            return LH
-          }(VH, OH.imagesPerAtlas.length)), uH(kH), {
-            assets: OH,
-            layerCap: bH,
-            worker: YH
+            return GB
+          }(nB, UB.imagesPerAtlas.length)), pB(kB), {
+            assets: UB,
+            layerCap: fB,
+            worker: lB
           }
-        } catch (PH) {
-          var vH;
-          throw MH.abort(), null === (vH = YH) || void 0 === vH || vH.terminate(), WH(PH, !1)
+        } catch (AB) {
+          var WB;
+          throw NB.abort(), null === (WB = lB) || void 0 === WB || WB.terminate(), ZB(AB, !1)
         }
       }
       async generateOptional() {
-        let HH;
+        let BB;
         try {
-          HH = await this.request({
+          BB = await this.request({
             type: "optional"
           }, [])
-        } catch (BH) {
-          throw WH(BH, !0)
+        } catch (OB) {
+          throw ZB(OB, !0)
         } finally {
           this.terminate()
         }
-        return uH(HH.warnings),
-          function(HH) {
+        return pB(BB.warnings),
+          function(BB) {
             let {
-              blocks: BH,
-              counts: LH,
-              values: AH
-            } = HH;
-            const rH = {};
-            let SH = 0;
-            for (const [hH, tH] of YH(BH).entries()) {
-              const HH = [];
-              for (let BH = 0; BH < LH[hH]; BH++, SH += 3) HH.push([AH[SH], AH[SH + 1], AH[SH + 2]]);
-              rH[tH] = HH
+              blocks: OB,
+              counts: GB,
+              values: YB
+            } = BB;
+            const DB = {};
+            let QB = 0;
+            for (const [oB, jB] of lB(OB).entries()) {
+              const BB = [];
+              for (let OB = 0; OB < GB[oB]; OB++, QB += 3) BB.push([YB[QB], YB[QB + 1], YB[QB + 2]]);
+              DB[jB] = BB
             }
-            return rH
-          }(HH)
+            return DB
+          }(BB)
       }
       terminate() {
-        var HH;
-        this.worker.terminate(), null === (HH = this.abandonStep) || void 0 === HH || HH.call(this)
+        var BB;
+        this.worker.terminate(), null === (BB = this.abandonStep) || void 0 === BB || BB.call(this)
       }
-      request(HH, BH, LH) {
-        return new Promise(((AH, rH) => {
-          if (void 0 !== this.failure) return void rH(this.failure);
-          let SH = EH.u.None,
-            hH = 0,
-            tH = null;
-          const zH = () => {
-            var HH;
-            null === (HH = tH) || void 0 === HH || HH.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+      request(BB, OB, GB) {
+        return new Promise(((YB, DB) => {
+          if (void 0 !== this.failure) return void DB(this.failure);
+          let QB = MB.t.None,
+            oB = 0,
+            jB = null;
+          const yB = () => {
+            var BB;
+            null === (BB = jB) || void 0 === BB || BB.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            zH(), rH(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = BH => {
+            yB(), DB(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = OB => {
             let {
-              data: CH
-            } = BH;
-            var XH;
-            if ("progress" === CH.type) return SH = CH.stage, hH = CH.wasmBytes, void(null === (XH = tH) || void 0 === XH || XH.restart(SH === EH.u.Generating ? EH.h : EH.l));
-            "sheet" === CH.type && LH ? LH(CH.sheet, CH.pixels) : (zH(), "failed" === CH.type ? rH(CH.moduleLoad ? new EH.t(EH.p.Load, CH.reason) : function(HH, BH) {
+              data: JB
+            } = OB;
+            var PB;
+            if ("progress" === JB.type) return QB = JB.stage, oB = JB.wasmBytes, void(null === (PB = jB) || void 0 === PB || PB.restart(QB === MB.t.Generating ? MB.e : MB.i));
+            "sheet" === JB.type && GB ? GB(JB.sheet, JB.pixels) : (yB(), "failed" === JB.type ? DB(JB.moduleLoad ? new MB.p(MB.m.Load, JB.reason) : function(BB, OB) {
               let {
-                reason: LH,
-                stack: AH
-              } = HH;
-              const rH = new Error(vH(LH, BH));
-              void 0 !== AH && (rH.stack = AH);
-              return rH
-            }(CH, hH)) : CH.type !== HH.type ? rH(new Error(`the texture worker answered ${CH.type} to ${HH.type}`)) : AH(CH))
-          }, this.worker.onerror = HH => {
-            zH(), rH(MH(HH))
+                reason: GB,
+                stack: YB
+              } = BB;
+              const DB = new Error(WB(GB, OB));
+              void 0 !== YB && (DB.stack = YB);
+              return DB
+            }(JB, oB)) : JB.type !== BB.type ? DB(new Error(`the texture worker answered ${JB.type} to ${BB.type}`)) : YB(JB))
+          }, this.worker.onerror = BB => {
+            yB(), DB(NB(BB))
           }, this.worker.onmessageerror = () => {
-            zH(), rH(new Error("the texture worker's answer couldn't be read"))
+            yB(), DB(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(HH, BH), tH = (0, EH.y)((() => {
-              zH();
-              const BH = new EH.t("required" === HH.type ? `${EH.p.Stalled}${SH}` : EH.p.Optional, vH("the texture worker stopped responding", hH));
-              rH(BH)
+            this.worker.postMessage(BB, OB), jB = (0, MB.w)((() => {
+              yB();
+              const OB = new MB.p("required" === BB.type ? `${MB.m.Stalled}${QB}` : MB.m.Optional, WB("the texture worker stopped responding", oB));
+              DB(OB)
             }))
-          } catch (CH) {
-            zH(), rH(CH)
+          } catch (JB) {
+            yB(), DB(JB)
           }
         }))
       }
     }
 
-    function vH(HH, BH) {
-      return BH > 0 ? `${HH}, its module's memory ${Math.round(BH/2**20)} MiB` : HH
+    function WB(BB, OB) {
+      return OB > 0 ? `${BB}, its module's memory ${Math.round(OB/2**20)} MiB` : BB
     }
   },
-  37030: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => AH,
-      g: () => rH,
-      j: () => SH,
-      l: () => hH
+  36874: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => YB,
+      h: () => DB,
+      l: () => QB,
+      p: () => oB
     });
-    const AH = 1024,
-      rH = 1024 * AH;
+    const YB = 1024,
+      DB = 1024 * YB;
 
-    function SH(HH) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, HH / rH)))
+    function QB(BB) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, BB / DB)))
     }
 
-    function hH(HH) {
-      return (HH / rH).toFixed(1)
+    function oB(BB) {
+      return (BB / DB).toFixed(1)
     }
   },
-  37014: HH => {
-    HH.exports = function(HH, BH, LH, AH) {
-      var rH = self || window;
+  36856: BB => {
+    BB.exports = function(BB, OB, GB, YB) {
+      var DB = self || window;
       try {
         try {
-          var SH;
+          var QB;
           try {
-            SH = new rH.Blob([HH])
-          } catch (CH) {
-            (SH = new(rH.BlobBuilder || rH.WebKitBlobBuilder || rH.MozBlobBuilder || rH.MSBlobBuilder)).append(HH), SH = SH.getBlob()
+            QB = new DB.Blob([BB])
+          } catch (JB) {
+            (QB = new(DB.BlobBuilder || DB.WebKitBlobBuilder || DB.MozBlobBuilder || DB.MSBlobBuilder)).append(BB), QB = QB.getBlob()
           }
-          var hH = rH.URL || rH.webkitURL,
-            tH = hH.createObjectURL(SH),
-            zH = new rH[BH](tH, LH);
-          return hH.revokeObjectURL(tH), zH
-        } catch (CH) {
-          return new rH[BH]("data:application/javascript,".concat(encodeURIComponent(HH)), LH)
+          var oB = DB.URL || DB.webkitURL,
+            jB = oB.createObjectURL(QB),
+            yB = new DB[OB](jB, GB);
+          return oB.revokeObjectURL(jB), yB
+        } catch (JB) {
+          return new DB[OB]("data:application/javascript,".concat(encodeURIComponent(BB)), GB)
         }
-      } catch (CH) {
-        if (!AH) throw Error("Inline worker is not supported");
-        return new rH[BH](AH, LH)
+      } catch (JB) {
+        if (!YB) throw Error("Inline worker is not supported");
+        return new DB[OB](YB, GB)
       }
     }
   },
-  37083: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => yH,
-      e: () => AB,
-      i: () => JH,
-      k: () => BB,
-      l: () => iH,
-      m: () => pH
+  36912: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => tB,
+      g: () => YO,
+      h: () => vB,
+      j: () => OO,
+      m: () => sB,
+      o: () => xB
     });
-    var AH = LH(3168),
-      rH = LH(3178),
-      SH = LH(7172),
-      hH = LH(5143),
-      tH = LH(3176),
-      zH = LH(3171);
-    const CH = "bloxd-wasmDownloaded",
-      EH = 12;
+    var YB = GB(3206),
+      DB = GB(3224),
+      QB = GB(7161),
+      oB = GB(5165),
+      jB = GB(3219),
+      yB = GB(3210);
+    const JB = "bloxd-wasmDownloaded",
+      MB = 12;
 
-    function XH(HH) {
-      return HH.pathname.slice(HH.pathname.lastIndexOf("/") + 1)
+    function PB(BB) {
+      return BB.pathname.slice(BB.pathname.lastIndexOf("/") + 1)
     }
 
-    function GH() {
+    function zB() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const HH = JSON.parse(localStorage.getItem(CH) ?? "[]");
-        return Array.isArray(HH) ? HH.filter((HH => "string" === typeof HH)) : []
-      } catch (HH) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", HH), null
+        const BB = JSON.parse(localStorage.getItem(JB) ?? "[]");
+        return Array.isArray(BB) ? BB.filter((BB => "string" === typeof BB)) : []
+      } catch (BB) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", BB), null
       }
     }
-    const YH = Reflect.apply,
-      uH = "undefined" === typeof Worker ? void 0 : Worker,
-      QH = uH?.prototype.postMessage,
-      WH = uH?.prototype.terminate,
-      MH = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      xH = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      vH = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      PH = function() {
+    const lB = Reflect.apply,
+      pB = "undefined" === typeof Worker ? void 0 : Worker,
+      qB = pB?.prototype.postMessage,
+      ZB = pB?.prototype.terminate,
+      NB = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      RB = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      WB = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      AB = function() {
         try {
-          return (0, hH.h)(uH, "Worker", !0) && (0, hH.h)(QH, "postMessage") && (0, hH.h)(WH, "terminate") && (0, hH.h)(vH, "buffer") && void 0 !== MH && void 0 !== xH
+          return (0, oB.i)(pB, "Worker", !0) && (0, oB.i)(qB, "postMessage") && (0, oB.i)(ZB, "terminate") && (0, oB.i)(WB, "buffer") && void 0 !== NB && void 0 !== RB
         } catch {
           return !1
         }
       }();
-    let TH = !1;
+    let VB = !1;
 
-    function UH() {
-      return PH && !TH
+    function SB() {
+      return AB && !VB
     }
-    class VH {
+    class nB {
       worker = null;
       failed = !1;
       constructor() {
-        if (UH()) try {
-          this.worker = bH(), YH(MH, this.worker, ["error", () => {
+        if (SB()) try {
+          this.worker = fB(), lB(NB, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -388,125 +388,125 @@ export const modules = {
         }
       }
       take() {
-        const HH = this.worker;
-        if (this.worker = null, null !== HH && this.failed) throw YH(WH, HH, []), new Error("it did not run");
-        return HH
+        const BB = this.worker;
+        if (this.worker = null, null !== BB && this.failed) throw lB(ZB, BB, []), new Error("it did not run");
+        return BB
       }
       stop() {
-        const HH = this.worker;
-        this.worker = null, null !== HH && YH(WH, HH, [])
+        const BB = this.worker;
+        this.worker = null, null !== BB && lB(ZB, BB, [])
       }
     }
-    class OH {
+    class UB {
       decoded;
       worker;
       reject;
-      constructor(HH, BH, LH, AH, SH) {
+      constructor(BB, OB, GB, YB, QB) {
         try {
-          this.worker = SH?.take() ?? bH()
-        } catch (CH) {
-          throw TH = !0, new Error(`The zstd decoder's worker did not start: ${(0,tH.f)(CH)}`)
+          this.worker = QB?.take() ?? fB()
+        } catch (JB) {
+          throw VB = !0, new Error(`The zstd decoder's worker did not start: ${(0,jB.h)(JB)}`)
         }
-        const hH = this.worker;
-        this.decoded = (0, rH.i)(((BH, rH) => {
-          this.reject = rH;
-          const SH = (HH, BH) => {
-            YH(MH, hH, [HH, BH])
+        const oB = this.worker;
+        this.decoded = (0, DB.f)(((OB, DB) => {
+          this.reject = DB;
+          const QB = (BB, OB) => {
+            lB(NB, oB, [BB, OB])
           };
-          SH("message", (HH => {
-            AH();
+          QB("message", (BB => {
+            YB();
             try {
-              const AH = YH(xH, HH, []);
-              if (!0 === AH) BH();
+              const YB = lB(RB, BB, []);
+              if (!0 === YB) OB();
               else {
-                if ("string" === typeof AH) throw AH.startsWith(tH.c) && (TH = !0), new Error(AH);
-                LH(AH, YH(zH.z, AH, []))
+                if ("string" === typeof YB) throw YB.startsWith(jB.d) && (VB = !0), new Error(YB);
+                GB(YB, lB(yB.x, YB, []))
               }
-            } catch (CH) {
-              rH(CH)
+            } catch (JB) {
+              DB(JB)
             }
-          })), SH("error", (() => {
-            TH = !0, rH(new Error("The zstd decoder's worker did not run"))
-          })), SH("messageerror", (() => {
-            rH(new Error(`${HH}'s decoder sent a piece that could not be read`))
+          })), QB("error", (() => {
+            VB = !0, DB(new Error("The zstd decoder's worker did not run"))
+          })), QB("messageerror", (() => {
+            DB(new Error(`${BB}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, zH.W)(this.decoded), YH(QH, hH, [
-          [HH, BH]
+        })), (0, yB.X)(this.decoded), lB(qB, oB, [
+          [BB, OB]
         ])
       }
-      push(HH) {
-        YH(QH, this.worker, [HH, [YH(vH, HH, [])]])
+      push(BB) {
+        lB(qB, this.worker, [BB, [lB(WB, BB, [])]])
       }
       end() {
-        YH(QH, this.worker, [null])
+        lB(qB, this.worker, [null])
       }
       markWorkerFailed() {
-        TH = !0
+        VB = !0
       }
-      fail(HH) {
-        this.reject(HH), this.terminate()
+      fail(BB) {
+        this.reject(BB), this.terminate()
       }
       terminate() {
-        YH(WH, this.worker, [])
+        lB(ZB, this.worker, [])
       }
     }
 
-    function bH() {
-      if (globalThis.Worker !== uH) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(LH.p + LH.u(79), LH.b), {
+    function fB() {
+      if (globalThis.Worker !== pB) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(GB.p + GB.u(79), GB.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const kH = Reflect.apply,
-      mH = ArrayBuffer,
-      oH = "undefined" === typeof Response ? void 0 : Response,
-      IH = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      fH = function() {
-        let HH;
-        void 0 !== IH && new IH({
+    const kB = Reflect.apply,
+      dB = ArrayBuffer,
+      KB = "undefined" === typeof Response ? void 0 : Response,
+      uB = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      mB = function() {
+        let BB;
+        void 0 !== uB && new uB({
           __proto__: null,
-          start(BH) {
+          start(OB) {
             const {
-              enqueue: LH,
-              close: AH,
-              error: rH
-            } = Object.getPrototypeOf(BH);
-            HH = {
-              enqueue: LH,
-              close: AH,
-              error: rH
+              enqueue: GB,
+              close: YB,
+              error: DB
+            } = Object.getPrototypeOf(OB);
+            BB = {
+              enqueue: GB,
+              close: YB,
+              error: DB
             }
           }
         }, {
           __proto__: null
         });
-        return HH
+        return BB
       }(),
-      lH = function() {
+      IB = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== fH && (0, hH.h)(oH, "Response", !0) && (0, hH.h)(IH, "ReadableStream", !0) && (0, hH.h)(fH.enqueue, "enqueue") && (0, hH.h)(fH.close, "close") && (0, hH.h)(fH.error, "error") && (0, hH.h)(zH.$, "body") && (0, hH.h)(zH.R, "getReader") && (0, hH.h)(zH.X, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== mB && (0, oB.i)(KB, "Response", !0) && (0, oB.i)(uB, "ReadableStream", !0) && (0, oB.i)(mB.enqueue, "enqueue") && (0, oB.i)(mB.close, "close") && (0, oB.i)(mB.error, "error") && (0, oB.i)(yB.ab, "body") && (0, oB.i)(yB.P, "getReader") && (0, oB.i)(yB.Z, "read")
         } catch {
           return !1
         }
       }();
-    async function KH(HH, BH, LH, AH, SH, hH, CH) {
-      const EH = new mH(BH),
+    async function FB(BB, OB, GB, YB, QB, oB, JB) {
+      const MB = new dB(OB),
         {
-          controller: XH,
-          compiled: GH
-        } = function(HH) {
+          controller: PB,
+          compiled: zB
+        } = function(BB) {
           try {
-            let HH;
-            const BH = new IH({
+            let BB;
+            const OB = new uB({
                 __proto__: null,
-                start(BH) {
-                  HH = BH
+                start(OB) {
+                  BB = OB
                 }
               }, {
                 __proto__: null
               }),
-              LH = new oH(BH, {
+              GB = new KB(OB, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -514,374 +514,374 @@ export const modules = {
                 }
               });
             return {
-              controller: HH,
-              compiled: (0, zH.W)((0, zH.C)((0, zH.hb)(LH)))
+              controller: BB,
+              compiled: (0, yB.X)((0, yB.B)((0, yB.hb)(GB)))
             }
-          } catch (BH) {
-            throw new Error(`${HH} could not be streamed into a compile: ${(0,tH.f)(BH)}`)
+          } catch (OB) {
+            throw new Error(`${BB} could not be streamed into a compile: ${(0,jB.h)(OB)}`)
           }
-        }(HH),
+        }(BB),
         {
-          enqueue: YH,
-          close: uH,
-          error: QH
-        } = fH,
-        WH = HH => {
+          enqueue: lB,
+          close: pB,
+          error: qB
+        } = mB,
+        ZB = BB => {
           try {
-            kH(QH, XH, [HH])
+            kB(qB, PB, [BB])
           } catch {}
         };
-      let MH = 0;
-      const xH = (LH, AH) => {
-        if (MH + AH > BH) throw new Error(`${HH} decoded past its module's ${BH} bytes`);
-        kH(zH.cb, new zH.p(EH), [new zH.p(LH), MH]);
+      let NB = 0;
+      const RB = (GB, YB) => {
+        if (NB + YB > OB) throw new Error(`${BB} decoded past its module's ${OB} bytes`);
+        kB(yB.cb, new yB.k(MB), [new yB.k(GB), NB]);
         try {
-          kH(YH, XH, [new zH.p(EH, MH, AH)])
+          kB(lB, PB, [new yB.k(MB, NB, YB)])
         } catch {}
-        MH += AH
+        NB += YB
       };
-      let vH, PH;
+      let WB, AB;
       try {
-        vH = new OH(HH, BH, xH, AH, CH)
-      } catch (bH) {
-        throw WH(bH), bH
+        WB = new UB(BB, OB, RB, YB, JB)
+      } catch (fB) {
+        throw ZB(fB), fB
       }
-      const TH = HH => {
-        vH.fail(HH), void 0 !== PH && cH(PH)
+      const VB = BB => {
+        WB.fail(BB), void 0 !== AB && iB(AB)
       };
-      let UH = !1;
-      LH.addEventListener("abort", (() => {
-        UH && vH.markWorkerFailed(), TH(new Error(`${HH} stalled`))
+      let SB = !1;
+      GB.addEventListener("abort", (() => {
+        SB && WB.markWorkerFailed(), VB(new Error(`${BB} stalled`))
       }), {
         once: !0
-      }), (0, rH.u)(GH, (() => {}), TH);
+      }), (0, DB.s)(zB, (() => {}), VB);
       try {
-        let hH;
+        let oB;
         try {
-          hH = await fetch(HH, {
-            signal: LH
+          oB = await fetch(BB, {
+            signal: GB
           })
-        } catch (bH) {
-          throw new Error(`Fetching ${HH} failed: ${(0,tH.f)(bH)}`)
+        } catch (fB) {
+          throw new Error(`Fetching ${BB} failed: ${(0,jB.h)(fB)}`)
         }
         const {
-          ok: CH,
-          status: EH,
-          body: XH
-        } = function(HH, BH) {
+          ok: JB,
+          status: MB,
+          body: PB
+        } = function(BB, OB) {
           try {
             const {
-              ok: HH,
-              status: LH
-            } = BH;
+              ok: BB,
+              status: GB
+            } = OB;
             return {
-              ok: HH,
-              status: LH,
-              body: kH(zH.$, BH, [])
+              ok: BB,
+              status: GB,
+              body: kB(yB.ab, OB, [])
             }
           } catch {
-            throw new Error(`${HH} came in a response a page script made`)
+            throw new Error(`${BB} came in a response a page script made`)
           }
-        }(HH, hH);
-        if (!CH) throw new Error(`Fetching ${HH} failed: HTTP ${EH}`);
-        AH();
-        const GH = kH(zH.R, XH, []);
-        PH = GH;
-        const YH = () => {
-          cH(GH)
+        }(BB, oB);
+        if (!JB) throw new Error(`Fetching ${BB} failed: HTTP ${MB}`);
+        YB();
+        const zB = kB(yB.P, PB, []);
+        AB = zB;
+        const lB = () => {
+          iB(zB)
         };
-        for ((0, rH.u)(vH.decoded, YH, YH);;) {
-          let BH;
+        for ((0, DB.s)(WB.decoded, lB, lB);;) {
+          let OB;
           try {
-            BH = await kH(zH.X, GH, [])
-          } catch (bH) {
-            throw new Error(`Downloading ${HH} failed: ${(0,tH.f)(bH)}`)
+            OB = await kB(yB.Z, zB, [])
+          } catch (fB) {
+            throw new Error(`Downloading ${BB} failed: ${(0,jB.h)(fB)}`)
           }
-          if (BH.done) break;
-          AH(), vH.push(BH.value)
+          if (OB.done) break;
+          YB(), WB.push(OB.value)
         }
-        if (UH = !0, vH.end(), await vH.decoded, SH(), MH !== BH) throw new Error(`${HH} ended before its module did`)
-      } catch (bH) {
-        throw WH(bH), TH(bH), bH
+        if (SB = !0, WB.end(), await WB.decoded, QB(), NB !== OB) throw new Error(`${BB} ended before its module did`)
+      } catch (fB) {
+        throw ZB(fB), VB(fB), fB
       }
-      vH.terminate();
+      WB.terminate();
       try {
-        kH(uH, XH, [])
+        kB(pB, PB, [])
       } catch {}
-      const VH = await GH;
-      return void 0 !== hH && await (0, zH.A)(HH, new zH.p(EH), {
-        sha256: hH.sha256,
+      const nB = await zB;
+      return void 0 !== oB && await (0, yB.y)(BB, new yB.k(MB), {
+        sha256: oB.sha256,
         onMismatch: () => {}
-      }), VH
+      }), nB
     }
 
-    function cH(HH) {
+    function iB(BB) {
       try {
-        (0, zH.W)(HH.cancel())
+        (0, yB.X)(BB.cancel())
       } catch {}
     }
-    const eH = ".zst.bin",
-      qH = 1e3;
-    let gH = null;
+    const LB = ".zst.bin",
+      gB = 1e3;
+    let rB = null;
 
-    function NH(HH) {
-      return gH ??= function() {
-        const HH = new Map,
-          BH = "bloxd_wasm_webgpu:5163087,bloxd_wasm_webgl:5546226,bloxd_wasm_webgl1:4879736,bloxd_wasm_workers:203635,bloxd_wasm_models:478484,bloxd_wasm_client:3732760";
-        for (const LH of BH?.split(",") ?? []) {
-          const [BH = "", AH] = LH.split(":"), rH = Number(AH);
-          Number.isInteger(rH) && rH > 0 && HH.set(BH, rH)
+    function XB(BB) {
+      return rB ??= function() {
+        const BB = new Map,
+          OB = "bloxd_wasm_webgpu:5162719,bloxd_wasm_webgl:5545853,bloxd_wasm_webgl1:4879367,bloxd_wasm_workers:203635,bloxd_wasm_models:478484,bloxd_wasm_client:3732388";
+        for (const GB of OB?.split(",") ?? []) {
+          const [OB = "", YB] = GB.split(":"), DB = Number(YB);
+          Number.isInteger(DB) && DB > 0 && BB.set(OB, DB)
         }
-        return HH
-      }(), gH.get(HH)
+        return BB
+      }(), rB.get(BB)
     }
-    async function RH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const AH = NH(HH.name);
-      if (void 0 === AH) return jH(await nH(HH, BH, LH), "cold-wasm");
-      const SH = lH ? new VH : null;
-      let hH;
+    async function wB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const YB = XB(BB.name);
+      if (void 0 === YB) return EB(await cB(BB, OB, GB), "cold-wasm");
+      const QB = IB ? new nB : null;
+      let oB;
       try {
-        if (CH = HH.url(), GH()?.includes(XH(CH)) && await async function(HH) {
-            const BH = new AbortController;
-            let LH;
-            const AH = (0, rH.i)((HH => {
-              LH = setTimeout((() => {
-                BH.abort(), HH(null)
-              }), qH)
+        if (JB = BB.url(), zB()?.includes(PB(JB)) && await async function(BB) {
+            const OB = new AbortController;
+            let GB;
+            const YB = (0, DB.f)((BB => {
+              GB = setTimeout((() => {
+                OB.abort(), BB(null)
+              }), gB)
             }));
             try {
-              const LH = fetch(HH.href, {
+              const GB = fetch(BB.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: BH.signal
+                  signal: OB.signal
                 }),
-                SH = await (0, rH.s)([LH, AH]);
-              return !!SH?.ok && ((0, zH.W)(SH.body.cancel()), !0)
+                QB = await (0, DB.p)([GB, YB]);
+              return !!QB?.ok && ((0, yB.X)(QB.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(LH)
+              clearTimeout(GB)
             }
-          }(HH.url())) return SH?.stop(), await async function(HH, BH, LH, AH) {
-          let rH = !1;
-          const SH = LH && {
-            sha256: LH.sha256,
+          }(BB.url())) return QB?.stop(), await async function(BB, OB, GB, YB) {
+          let DB = !1;
+          const QB = GB && {
+            sha256: GB.sha256,
             onMismatch: () => {
-              rH = !0
+              DB = !0
             }
           };
           try {
-            return jH(await nH(HH, SH, AH), "warm")
-          } catch (hH) {
-            const AH = await FH(HH, BH, LH, null);
-            if (null === AH) throw rH && LH.onMismatch(), hH;
-            return console.warn(`${HH.url().href} from the HTTP cache failed: ${(0,tH.f)(hH)}: loaded its copy instead`), jH(AH, rH ? "warm-refused" : "warm-broken")
+            return EB(await cB(BB, QB, YB), "warm")
+          } catch (oB) {
+            const YB = await hB(BB, OB, GB, null);
+            if (null === YB) throw DB && GB.onMismatch(), oB;
+            return console.warn(`${BB.url().href} from the HTTP cache failed: ${(0,jB.h)(oB)}: loaded its copy instead`), EB(YB, DB ? "warm-refused" : "warm-broken")
           }
-        }(HH, AH, BH, LH);
-        hH = await FH(HH, AH, BH, SH)
+        }(BB, YB, OB, GB);
+        oB = await hB(BB, YB, OB, QB)
       } finally {
-        SH?.stop()
+        QB?.stop()
       }
-      var CH;
-      return null !== hH ? jH(hH, "cold-worker") : jH(await nH(HH, BH, LH), "cold-wasm")
+      var JB;
+      return null !== oB ? EB(oB, "cold-worker") : EB(await cB(BB, OB, GB), "cold-wasm")
     }
 
-    function jH(HH, BH) {
+    function EB(BB, OB) {
       return {
         __proto__: null,
-        module: HH,
-        path: BH
+        module: BB,
+        path: OB
       }
     }
 
-    function nH(HH, BH, LH) {
-      return void 0 === NH(HH.name) ? (0, zH.J)(HH.url(), BH, LH) : (0, zH.J)(HH.url(), BH, {
-        ...LH,
+    function cB(BB, OB, GB) {
+      return void 0 === XB(BB.name) ? (0, yB.G)(BB.url(), OB, GB) : (0, yB.G)(BB.url(), OB, {
+        ...GB,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(HH) {
-            const BH = GH();
-            if (null === BH) return;
-            const LH = XH(HH),
-              AH = BH.filter((HH => HH !== LH));
-            AH.push(LH);
+          ! function(BB) {
+            const OB = zB();
+            if (null === OB) return;
+            const GB = PB(BB),
+              YB = OB.filter((BB => BB !== GB));
+            YB.push(GB);
             try {
-              localStorage.setItem(CH, JSON.stringify(AH.slice(-EH)))
-            } catch (rH) {
-              console.warn(`Bloxd wasm: ${LH} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, rH)
+              localStorage.setItem(JB, JSON.stringify(YB.slice(-MB)))
+            } catch (DB) {
+              console.warn(`Bloxd wasm: ${GB} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, DB)
             }
-          }(HH.url()), LH.onDownloaded?.()
+          }(BB.url()), GB.onDownloaded?.()
         }
       })
     }
-    async function FH(HH, BH, LH, AH) {
-      if (!lH || !UH()) return null;
-      const rH = HH.url(),
-        SH = `${rH.href}${eH}`;
+    async function hB(BB, OB, GB, YB) {
+      if (!IB || !SB()) return null;
+      const DB = BB.url(),
+        QB = `${DB.href}${LB}`;
       try {
-        return await (0, zH.gb)(SH, ((HH, rH, hH) => KH(SH, BH, HH, rH, hH, LH, AH)))
-      } catch (hH) {
-        return console.warn(`${(0,tH.f)(hH)}: loading ${rH.href} instead`), null
+        return await (0, yB.gb)(QB, ((BB, DB, oB) => FB(QB, OB, BB, DB, oB, GB, YB)))
+      } catch (oB) {
+        return console.warn(`${(0,jB.h)(oB)}: loading ${DB.href} instead`), null
       }
     }
-    let DH = null,
-      wH = !1;
-    const ZH = new Map,
-      dH = new Map;
-    let aH = null;
+    let aB = null,
+      eB = !1;
+    const TB = new Map,
+      bB = new Map;
+    let CB = null;
 
-    function sH(HH) {
-      const BH = BH => HH.filter((HH => ZH.get(HH)?.state === BH)).length,
-        LH = BH("compiled");
-      return LH > 0 && LH === HH.length ? "compiled" : LH + BH("compiling") > 0 ? "compiling" : "none"
+    function HB(BB) {
+      const OB = OB => BB.filter((BB => TB.get(BB)?.state === OB)).length,
+        GB = OB("compiled");
+      return GB > 0 && GB === BB.length ? "compiled" : GB + OB("compiling") > 0 ? "compiling" : "none"
     }
 
-    function JH() {
-      return aH ?? sH([...ZH.keys()])
+    function vB() {
+      return CB ?? HB([...TB.keys()])
     }
 
-    function iH(HH, BH, LH) {
-      return null === DH ? DH = HB(HH, BH, LH?.memoryMaximumBytes) : HH !== DH.build ? console.warn(`Bloxd wasm: ${HH.name} was asked for after ${DH.build.name} started loading, which this thread keeps`) : BH.name !== DH.workers.name && console.warn(`Bloxd wasm: ${BH.name} was asked for workers after ${DH.workers.name}, which this thread keeps`), LH?.reloadFailedDownload && !wH && (0, AH.db)() && (wH = !0, DH = HB(DH.build, DH.workers, DH.memoryMaximumBytes)), DH.loaded
+    function sB(BB, OB, GB) {
+      return null === aB ? aB = BO(BB, OB, GB?.memoryMaximumBytes) : BB !== aB.build ? console.warn(`Bloxd wasm: ${BB.name} was asked for after ${aB.build.name} started loading, which this thread keeps`) : OB.name !== aB.workers.name && console.warn(`Bloxd wasm: ${OB.name} was asked for workers after ${aB.workers.name}, which this thread keeps`), GB?.reloadFailedDownload && !eB && (0, YB.$)() && (eB = !0, aB = BO(aB.build, aB.workers, aB.memoryMaximumBytes)), aB.loaded
     }
 
-    function pH(HH) {
-      return null === DH ? (0, rH.i)((HH => {
-        HH(!1)
-      })) : ((0, AH.$)() && (DH = HB(DH.build, DH.workers, HH ?? DH.memoryMaximumBytes)), DH.loaded)
+    function xB(BB) {
+      return null === aB ? (0, DB.f)((BB => {
+        BB(!1)
+      })) : ((0, YB._)() && (aB = BO(aB.build, aB.workers, BB ?? aB.memoryMaximumBytes)), aB.loaded)
     }
 
-    function yH(HH, BH) {
-      if (null !== DH) return (0, rH.g)([]);
-      const LH = HH.filter((HH => !ZH.has(HH.name))).map((HH => {
-        const LH = new AbortController,
-          AH = {
-            compiled: nH(HH, (0, SH.c)(HH.name), {
-              priority: BH,
-              xB: LH.signal,
+    function tB(BB, OB) {
+      if (null !== aB) return (0, DB.d)([]);
+      const GB = BB.filter((BB => !TB.has(BB.name))).map((BB => {
+        const GB = new AbortController,
+          YB = {
+            compiled: cB(BB, (0, QB.d)(BB.name), {
+              priority: OB,
+              rB: GB.signal,
               onDownloaded: () => {
-                AH.downloaded = !0
+                YB.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  AH.downloaded = !1, null !== DH && LH.abort()
+                  YB.downloaded = !1, null !== aB && GB.abort()
                 }
               }
             }),
-            cancel: LH,
+            cancel: GB,
             downloaded: !1,
             state: "compiling"
           };
-        return ZH.set(HH.name, AH), (0, rH.i)((BH => {
-          (0, rH.u)(AH.compiled, (() => {
-            AH.downloaded = !0, AH.state = "compiled", BH()
-          }), (rH => {
-            AH.state = "failed", LH.signal.aborted || console.warn(`Bloxd wasm: ${HH.name}'s compile ahead of the load failed: the load compiles it afresh`, rH), BH()
+        return TB.set(BB.name, YB), (0, DB.f)((OB => {
+          (0, DB.s)(YB.compiled, (() => {
+            YB.downloaded = !0, YB.state = "compiled", OB()
+          }), (DB => {
+            YB.state = "failed", GB.signal.aborted || console.warn(`Bloxd wasm: ${BB.name}'s compile ahead of the load failed: the load compiles it afresh`, DB), OB()
           }))
         }))
       }));
-      return (0, rH.g)(LH)
+      return (0, DB.d)(GB)
     }
 
-    function HB(HH, BH, LH) {
-      aH ??= sH(BH.name === HH.name ? [HH.name] : [HH.name, BH.name]);
-      const SH = (0, AH.K)((async () => {
-        (0, hH.x)(), dH.clear();
-        const LH = LB(HH),
-          AH = BH.name === HH.name ? LH : LB(BH);
+    function BO(BB, OB, GB) {
+      CB ??= HB(OB.name === BB.name ? [BB.name] : [BB.name, OB.name]);
+      const QB = (0, YB.F)((async () => {
+        (0, oB.w)(), bB.clear();
+        const GB = GO(BB),
+          YB = OB.name === BB.name ? GB : GO(OB);
         for (const {
-            cancel: HH
+            cancel: BB
           }
-          of ZH.values()) HH.abort();
-        ZH.clear(), await (0, rH.g)([LH, AH]);
-        const SH = await LH,
-          tH = await AH;
-        return (0, hH.x)(), {
-          module: SH,
-          workerModule: tH
+          of TB.values()) BB.abort();
+        TB.clear(), await (0, DB.d)([GB, YB]);
+        const QB = await GB,
+          jB = await YB;
+        return (0, oB.w)(), {
+          module: QB,
+          workerModule: jB
         }
-      }), HH, LH);
+      }), BB, GB);
       return {
-        build: HH,
-        workers: BH,
-        memoryMaximumBytes: LH,
-        loaded: SH
+        build: BB,
+        workers: OB,
+        memoryMaximumBytes: GB,
+        loaded: QB
       }
     }
 
-    function BB(HH) {
-      return dH.get(HH)
+    function OO(BB) {
+      return bB.get(BB)
     }
 
-    function LB(HH) {
-      const BH = performance.now(),
-        LH = ZH.get(HH.name);
-      ZH.delete(HH.name);
-      const AH = !0 === LH?.downloaded ? LH : void 0;
-      return void 0 !== LH && void 0 === AH && LH.cancel.abort(), (0, rH.i)(((LH, SH) => {
-        const hH = (AH, rH) => {
-            dH.set(HH.name, {
-              path: rH,
-              ms: performance.now() - BH
-            }), LH(AH)
+    function GO(BB) {
+      const OB = performance.now(),
+        GB = TB.get(BB.name);
+      TB.delete(BB.name);
+      const YB = !0 === GB?.downloaded ? GB : void 0;
+      return void 0 !== GB && void 0 === YB && GB.cancel.abort(), (0, DB.f)(((GB, QB) => {
+        const oB = (YB, DB) => {
+            bB.set(BB.name, {
+              path: DB,
+              ms: performance.now() - OB
+            }), GB(YB)
           },
-          tH = () => {
-            (0, rH.u)(rB(HH), (HH => {
+          jB = () => {
+            (0, DB.s)(DO(BB), (BB => {
               let {
-                module: BH,
-                path: LH
-              } = HH;
-              hH(BH, LH)
-            }), SH)
+                module: OB,
+                path: GB
+              } = BB;
+              oB(OB, GB)
+            }), QB)
           };
-        void 0 === AH ? tH() : (0, rH.u)(AH.compiled, (HH => {
-          hH(HH, "ahead")
-        }), tH)
+        void 0 === YB ? jB() : (0, DB.s)(YB.compiled, (BB => {
+          oB(BB, "ahead")
+        }), jB)
       }))
     }
-    async function AB(HH, BH) {
+    async function YO(BB, OB) {
       const {
-        module: LH
-      } = await rB(HH, {
-        retries: BH
+        module: GB
+      } = await DO(BB, {
+        retries: OB
       });
-      return LH
+      return GB
     }
-    async function rB(HH) {
-      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await RH(HH, (0, SH.c)(HH.name), BH)
+    async function DO(BB) {
+      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await wB(BB, (0, QB.d)(BB.name), OB)
     }
   },
-  7172: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => hH
+  7161: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB
     });
-    var AH = LH(3171);
-    const rH = {
-      bloxd_wasm: () => "1a9ca3a508835437adb51fd7003f50a214824ce5852e2706a91af532afe51adc",
-      bloxd_wasm_client: () => "9f302fa35bb62365f9d32f95a5401b1d28709799cd2ce60e443d8f43994a3e3d",
-      bloxd_wasm_workers: () => "fea049daed4444b474b0db1a8bf4826a6e48ef50100b13d23f4bea2aa2ef7dbb",
-      bloxd_wasm_models: () => "dafa53585131db414c9c059dee3ad89ee833dbd1a487c182d99120934368408f",
-      bloxd_wasm_webgpu: () => "f7305e0c5434bf6438e555b6ebd02438a4b33e9ec1a95ef795555746fdd24844",
-      bloxd_wasm_webgl: () => "ee0b380f26fef18564acf325d228b72d1e1361881cb2e2f9686c33d7b9b28c2e",
-      bloxd_wasm_webgl1: () => "0cfbcf815fae6493c502153cc3696123db8dd68ba708a3ebe5ed4c9bdf52dd9d",
-      bloxd_wasm_replay: () => "00749a68df89480806d66c2caa0106222009fc9d980e99c298088093c5266723",
-      bloxd_wasm_recorder: () => "fff4e7dd116ddac14614d11c6efe68b0beab86dd32f03cf09d2d291dd715dbc1",
-      bloxd_wasm_anim: () => "e06ab9bfc1a83b6498470d65996c60a55117dc9e341e17cb44260cad0fe8d434",
-      bloxd_wasm_textures: () => "bea12b411e2841e721547a8f34b2e2c8d67c134acf1aabfafa9f47d2dce32aca",
-      bloxd_wasm_shader_pack: () => "153845fdc736fc7d3f35302c98089348c2e3d0550da1ed6cc5e35905a2a723c3"
+    var YB = GB(3210);
+    const DB = {
+      bloxd_wasm: () => "bbd4532b4204ac6b037d21981a0077e27c49bf77bad5ade13596319f1c6101a5",
+      bloxd_wasm_client: () => "8365f73c3472844058a4a0f574b2102c245aef505acbb602a81be3847509c8fa",
+      bloxd_wasm_workers: () => "8409ee2ec92a1f5bf3cf7df6088eeb4c89a7f9ab0b6c537ab5e6bee5e1c85a52",
+      bloxd_wasm_models: () => "4297705d02ef7091b212436b1b1d90f181427336ab1bf97d3c1a2eebcb00ef44",
+      bloxd_wasm_webgpu: () => "feb1e82520617426b733fd3101371d0a4d1be5eea8eb5f7115ad8b481c5ecc2a",
+      bloxd_wasm_webgl: () => "ccc8a64ee7a944567fefa835e06af6da6175cc2ce9d8d4fb5fc2acb63861821b",
+      bloxd_wasm_webgl1: () => "ef3b6328394821ae9f35e9d6eb203b2d9872f6911c2948b8b5bd2bd784af58be",
+      bloxd_wasm_replay: () => "e6bfd69259d4961ba1c2eff287fb0493dd998b3af1045ea9988589f9c1c784a6",
+      bloxd_wasm_recorder: () => "61e54a37d20be582fb8a73e1f48e79e660cbedc06e1fc696d3d52ad467693eb7",
+      bloxd_wasm_anim: () => "412a9ead222a90865e84867e83bc25acfd52a0e1c584c793e1f272639ce5dc2c",
+      bloxd_wasm_textures: () => "43d7ae101efe7b39af19b5e650a2896a40d167bca827906978d39975a015e416",
+      bloxd_wasm_shader_pack: () => "072b43f08a8ed6ea1336897ed9d7881ce755636d8b8a8f34eaa208a897665b42"
     };
-    var SH = LH(5143);
+    var QB = GB(5165);
 
-    function hH(HH) {
-      const BH = Object.prototype.hasOwnProperty.call(rH, HH) ? rH[HH]() : void 0;
-      if (void 0 !== BH) return {
-        sha256: BH,
-        onMismatch: SH.v
+    function oB(BB) {
+      const OB = Object.prototype.hasOwnProperty.call(DB, BB) ? DB[BB]() : void 0;
+      if (void 0 !== OB) return {
+        sha256: OB,
+        onMismatch: QB.s
       };
-      throw new AH.j(`${HH} has no release digest, so this build refuses it`)
+      throw new YB.g(`${BB} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

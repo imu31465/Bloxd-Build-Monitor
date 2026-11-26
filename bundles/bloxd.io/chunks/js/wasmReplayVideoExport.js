@@ -1,77 +1,77 @@
 export const id = 78;
 export const ids = [72, 78, 108];
 export const modules = {
-  37853: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => XH,
-      g: () => GH
+  37685: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => PB,
+      c: () => zB
     });
-    var AH = LH(619),
-      rH = LH(30),
-      SH = LH(37809);
-    const hH = "replayFileKeptForReload",
-      tH = "replayFileKeptForReloadAt",
-      zH = "replayFileKeptForReloadTab",
-      CH = 3e5,
-      EH = 5e3;
-    async function XH(HH, BH) {
-      const LH = Date.now(),
-        SH = {
-          at: LH,
-          bytes: HH,
-          source: BH
+    var YB = GB(641),
+      DB = GB(31),
+      QB = GB(37641);
+    const oB = "replayFileKeptForReload",
+      jB = "replayFileKeptForReloadAt",
+      yB = "replayFileKeptForReloadTab",
+      JB = 3e5,
+      MB = 5e3;
+    async function PB(BB, OB) {
+      const GB = Date.now(),
+        QB = {
+          at: GB,
+          bytes: BB,
+          source: OB
         },
-        CH = await Promise.race([(async () => await rH.c.setItem(tH, LH) && rH.c.setItem(hH, SH))(), (0, AH.Q)(EH).then((() => !1))]);
-      CH || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
-      const XH = {
-        at: LH,
-        hX: CH
+        JB = await Promise.race([(async () => await DB.d.setItem(jB, GB) && DB.d.setItem(oB, QB))(), (0, YB.U)(MB).then((() => !1))]);
+      JB || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
+      const PB = {
+        at: GB,
+        GP: JB
       };
-      rH.f.setItem(zH, XH)
+      DB.i.setItem(yB, PB)
     }
-    async function GH() {
-      var HH;
-      const BH = rH.f.getItem(zH);
-      null !== BH && rH.f.removeItem(zH);
-      const LH = Date.now(),
-        AH = await rH.c.getItem(tH),
-        EH = null !== BH && LH - BH.at <= CH,
-        XH = null !== BH && AH === BH.at;
-      let GH = null;
-      if (null !== AH && (XH || ("number" !== typeof AH || LH - AH > CH)) && (GH = EH && XH && BH.hX ? await rH.c.getItem(hH) : null, await Promise.all([rH.c.removeItem(tH), rH.c.removeItem(hH)])), !EH) return null;
-      if ((null === (HH = GH) || void 0 === HH ? void 0 : HH.at) !== BH.at) throw new Error(SH.e.replayNotKept.text);
+    async function zB() {
+      var BB;
+      const OB = DB.i.getItem(yB);
+      null !== OB && DB.i.removeItem(yB);
+      const GB = Date.now(),
+        YB = await DB.d.getItem(jB),
+        MB = null !== OB && GB - OB.at <= JB,
+        PB = null !== OB && YB === OB.at;
+      let zB = null;
+      if (null !== YB && (PB || ("number" !== typeof YB || GB - YB > JB)) && (zB = MB && PB && OB.GP ? await DB.d.getItem(oB) : null, await Promise.all([DB.d.removeItem(jB), DB.d.removeItem(oB)])), !MB) return null;
+      if ((null === (BB = zB) || void 0 === BB ? void 0 : BB.at) !== OB.at) throw new Error(QB.e.replayNotKept.text);
       return {
-        bytes: GH.bytes,
-        source: GH.source
+        bytes: zB.bytes,
+        source: zB.source
       }
     }
   },
-  37844: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH,
-      i: () => SH,
-      m: () => rH
+  37682: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => YB,
+      g: () => QB,
+      k: () => DB
     });
-    const AH = [9];
+    const YB = [9];
 
-    function rH(HH) {
-      return AH.includes(HH)
+    function DB(BB) {
+      return YB.includes(BB)
     }
 
-    function SH(HH) {
-      return null !== HH && HH >= 3 && HH < AH[0]
+    function QB(BB) {
+      return null !== BB && BB >= 3 && BB < YB[0]
     }
   },
-  37809: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => hH,
-      i: () => CH,
-      j: () => zH
+  37641: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => oB,
+      h: () => JB,
+      j: () => yB
     });
-    var AH = LH(18);
-    const rH = 1500,
-      SH = 1e3,
-      hH = {
+    var YB = GB(25);
+    const DB = 1500,
+      QB = 1e3,
+      oB = {
         recordingStarted: {
           text: "Started recording",
           type: "Success"
@@ -162,29 +162,29 @@ export const modules = {
           type: "Error"
         }
       },
-      tH = new Set(Object.values(hH).filter((HH => "Error" === HH.type)).map((HH => HH.text)));
+      jB = new Set(Object.values(oB).filter((BB => "Error" === BB.type)).map((BB => BB.text)));
 
-    function zH(HH) {
-      return HH instanceof Error && tH.has(HH.message) ? HH.message : void 0
+    function yB(BB) {
+      return BB instanceof Error && jB.has(BB.message) ? BB.message : void 0
     }
 
-    function CH(HH) {
-      var BH;
-      const LH = null !== (BH = HH.timeoutMs) && void 0 !== BH ? BH : "Error" === HH.type ? rH : SH;
-      AH.k.AX("showBottomMessage", {
-        message: HH.text,
-        timeoutLength: LH,
-        type: HH.type
+    function JB(BB) {
+      var OB;
+      const GB = null !== (OB = BB.timeoutMs) && void 0 !== OB ? OB : "Error" === BB.type ? DB : QB;
+      YB.o.tM("showBottomMessage", {
+        message: BB.text,
+        timeoutLength: GB,
+        type: BB.type
       })
     }
   },
-  37864: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      f: () => rH
+  37692: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB,
+      c: () => DB
     });
-    const AH = "data-replay-ui-active",
-      rH = [{
+    const YB = "data-replay-ui-active",
+      DB = [{
         group: "middleTextTop",
         dataAttr: "data-replay-hide-middle-text-top",
         label: "Middle text top"
@@ -234,78 +234,78 @@ export const modules = {
         label: "Everything else"
       }]
   },
-  37869: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => CH,
-      f: () => XH,
-      i: () => EH
+  37694: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => JB,
+      f: () => PB,
+      i: () => MB
     });
-    var AH = LH(15),
-      rH = LH(18),
-      SH = LH(37864);
+    var YB = GB(16),
+      DB = GB(25),
+      QB = GB(37692);
 
-    function hH() {
-      const HH = {};
+    function oB() {
+      const BB = {};
       for (const {
-          group: BH
+          group: OB
         }
-        of SH.f) HH[BH] = !0;
-      return HH
+        of QB.c) BB[OB] = !0;
+      return BB
     }
-    let tH = hH();
+    let jB = oB();
 
-    function zH() {
-      rH.k.AX("replayViewer|uiVisibilityChanged")
-    }
-
-    function CH() {
-      return tH
+    function yB() {
+      DB.o.tM("replayViewer|uiVisibilityChanged")
     }
 
-    function EH(HH, BH) {
-      tH[HH] !== BH && (tH = {
-        ...tH,
-        [HH]: BH
-      }, "nametag" === HH && AH.c.set({
-        areNametagsHidden: !BH
-      }), zH())
+    function JB() {
+      return jB
     }
 
-    function XH() {
-      tH = hH(), AH.c.set({
+    function MB(BB, OB) {
+      jB[BB] !== OB && (jB = {
+        ...jB,
+        [BB]: OB
+      }, "nametag" === BB && YB.c.set({
+        areNametagsHidden: !OB
+      }), yB())
+    }
+
+    function PB() {
+      jB = oB(), YB.c.set({
         areNametagsHidden: !1
-      }), zH()
+      }), yB()
     }
   },
-  40224: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => IH
+  39965: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => uB
     });
-    var AH = LH(1807),
-      rH = LH(1352),
-      SH = LH(45),
-      hH = LH(1038),
-      tH = LH.n(hH),
-      zH = LH(1455),
-      CH = LH(81);
-    const EH = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
-      XH = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
+    var YB = GB(1834),
+      DB = GB(1400),
+      QB = GB(56),
+      oB = GB(1090),
+      jB = GB.n(oB),
+      yB = GB(1485),
+      JB = GB(92);
+    const MB = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
+      PB = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
 
-    function GH(HH) {
-      return "webm" === HH ? EH : XH
+    function zB(BB) {
+      return "webm" === BB ? MB : PB
     }
 
-    function YH(HH) {
-      for (const BH of HH)
-        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(BH)) return BH;
+    function lB(BB) {
+      for (const OB of BB)
+        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(OB)) return OB;
       return null
     }
 
-    function uH(HH) {
-      return null !== YH(GH(HH))
+    function pB(BB) {
+      return null !== lB(zB(BB))
     }
-    var QH = LH(1225);
-    const WH = [{
+    var qB = GB(1282);
+    const ZB = [{
       id: "webm",
       label: "WebM",
       description: "Usually less screen tearing, but may not play in all media players."
@@ -315,177 +315,177 @@ export const modules = {
       description: "Works in more players, but may show graphical glitches on some devices."
     }];
 
-    function MH() {
-      return uH("webm") ? "webm" : uH("mp4") ? "mp4" : "webm"
+    function NB() {
+      return pB("webm") ? "webm" : pB("mp4") ? "mp4" : "webm"
     }
 
-    function xH(HH) {
+    function RB(BB) {
       let {
-        cards: BH
-      } = HH;
-      return (0, QH.jsx)("div", {
+        cards: OB
+      } = BB;
+      return (0, qB.jsx)("div", {
         className: "ReplayVideoExportOptionCards",
-        children: BH.map((HH => (0, QH.jsxs)("div", {
+        children: OB.map((BB => (0, qB.jsxs)("div", {
           className: "ReplayVideoExportOptionColumn",
-          children: [(0, QH.jsx)("div", {
-            className: tH()("ReplayVideoExportOptionCard", {
-              Selected: HH.selected,
-              Disabled: HH.disabled
+          children: [(0, qB.jsx)("div", {
+            className: jB()("ReplayVideoExportOptionCard", {
+              Selected: BB.selected,
+              Disabled: BB.disabled
             }),
             onClick: () => {
-              HH.disabled || HH.onSelect()
+              BB.disabled || BB.onSelect()
             },
-            children: (0, QH.jsxs)("div", {
+            children: (0, qB.jsxs)("div", {
               className: "ReplayVideoExportOptionCardBody",
-              children: [(0, QH.jsx)("div", {
+              children: [(0, qB.jsx)("div", {
                 className: "ReplayVideoExportOptionCardLabel",
-                children: HH.label
-              }), (0, QH.jsx)("div", {
+                children: BB.label
+              }), (0, qB.jsx)("div", {
                 className: "ReplayVideoExportOptionCardDescription",
-                children: HH.description
+                children: BB.description
               })]
             })
-          }), HH.disabled && HH.disabledReason && (0, QH.jsx)("div", {
+          }), BB.disabled && BB.disabledReason && (0, qB.jsx)("div", {
             className: "ReplayVideoExportOptionError SmallTextLight",
-            children: HH.disabledReason
+            children: BB.disabledReason
           })]
-        }, HH.id)))
+        }, BB.id)))
       })
     }
-    const vH = (0, SH.memo)((function(HH) {
+    const WB = (0, QB.memo)((function(BB) {
       let {
-        hasPlaybackMark: BH,
-        canIncludeUi: LH,
-        includeUiDisabledReason: AH,
-        selectionRef: rH,
-        closePopup: hH
-      } = HH;
-      const tH = uH("webm") || uH("mp4"),
-        [EH, XH] = (0, SH.useState)(MH),
-        [GH, YH] = (0, SH.useState)(LH),
-        vH = tH && uH(EH);
-      if (!tH) {
-        const HH = (0, CH.isMobile)() ? "screen recording" : "OBS";
-        return (0, QH.jsxs)("div", {
+        hasPlaybackMark: OB,
+        canIncludeUi: GB,
+        includeUiDisabledReason: YB,
+        selectionRef: DB,
+        closePopup: oB
+      } = BB;
+      const jB = pB("webm") || pB("mp4"),
+        [MB, PB] = (0, QB.useState)(NB),
+        [zB, lB] = (0, QB.useState)(GB),
+        WB = jB && pB(MB);
+      if (!jB) {
+        const BB = (0, JB.isMobile)() ? "screen recording" : "OBS";
+        return (0, qB.jsxs)("div", {
           className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-          children: [(0, QH.jsx)("div", {
+          children: [(0, qB.jsx)("div", {
             className: "PromptPopupNotificationTitle SmallTextBold",
             children: "Can't export video"
-          }), (0, QH.jsx)("div", {
+          }), (0, qB.jsx)("div", {
             className: "PromptPopupNotificationSubtitle SmallTextLight",
-            children: `Your device does not support exporting. Try recording with an external software like ${HH}.`
-          }), (0, QH.jsx)("div", {
+            children: `Your device does not support exporting. Try recording with an external software like ${BB}.`
+          }), (0, qB.jsx)("div", {
             className: "PromptPopupNotificationBody",
-            children: (0, QH.jsx)(zH.O, {
+            children: (0, qB.jsx)(yB.Q, {
               className: "PromptPopupNotificationBodyButton",
               onClick: () => {
-                rH.options = null, hH()
+                DB.options = null, oB()
               },
               children: "Close"
             })
           })]
         })
       }
-      const PH = BH ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
-        TH = [{
+      const AB = OB ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
+        VB = [{
           id: "withoutUi",
           label: "Without UI",
           description: "Usually cleaner and sharper.",
-          selected: !GH,
+          selected: !zB,
           disabled: !1,
           disabledReason: null,
           onSelect: () => {
-            YH(!1)
+            lB(!1)
           }
         }, {
           id: "withUi",
           label: "With UI",
           description: "Includes HUD elements. May look worse on some devices.",
-          selected: GH,
-          disabled: !LH,
-          disabledReason: AH,
+          selected: zB,
+          disabled: !GB,
+          disabledReason: YB,
           onSelect: () => {
-            YH(!0)
+            lB(!0)
           }
         }],
-        UH = WH.map((HH => {
-          const BH = uH(HH.id);
+        SB = ZB.map((BB => {
+          const OB = pB(BB.id);
           return {
-            id: HH.id,
-            label: HH.label,
-            description: HH.description,
-            selected: EH === HH.id,
-            disabled: !BH,
+            id: BB.id,
+            label: BB.label,
+            description: BB.description,
+            selected: MB === BB.id,
+            disabled: !OB,
             disabledReason: "Your device doesn't support this format",
             onSelect: () => {
-              XH(HH.id)
+              PB(BB.id)
             }
           }
         }));
-      return (0, QH.jsxs)("div", {
+      return (0, qB.jsxs)("div", {
         className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-        children: [(0, QH.jsx)("div", {
+        children: [(0, qB.jsx)("div", {
           className: "PromptPopupNotificationTitle SmallTextBold",
           children: "Export video?"
-        }), (0, QH.jsx)("div", {
+        }), (0, qB.jsx)("div", {
           className: "PromptPopupNotificationSubtitle SmallTextLight",
-          children: PH
-        }), (0, QH.jsxs)("div", {
+          children: AB
+        }), (0, qB.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, QH.jsx)("div", {
+          children: [(0, qB.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "UI"
-          }), (0, QH.jsx)(xH, {
-            cards: TH
+          }), (0, qB.jsx)(RB, {
+            cards: VB
           })]
-        }), (0, QH.jsxs)("div", {
+        }), (0, qB.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, QH.jsx)("div", {
+          children: [(0, qB.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "Format"
-          }), (0, QH.jsx)(xH, {
-            cards: UH
+          }), (0, qB.jsx)(RB, {
+            cards: SB
           })]
-        }), (0, QH.jsxs)("div", {
+        }), (0, qB.jsxs)("div", {
           className: "PromptPopupNotificationBody",
-          children: [(0, QH.jsx)(zH.u, {
+          children: [(0, qB.jsx)(yB.q, {
             className: "PromptPopupNotificationBodyButton PromptPopupNotificationBodyPrimaryButton",
-            disabled: !vH,
+            disabled: !WB,
             onClick: () => {
-              rH.options = {
-                format: EH,
-                includeUi: LH && GH
-              }, hH()
+              DB.options = {
+                format: MB,
+                includeUi: GB && zB
+              }, oB()
             },
             children: "Export"
-          }), (0, QH.jsx)(zH.O, {
+          }), (0, qB.jsx)(yB.Q, {
             className: "PromptPopupNotificationBodyButton",
             onClick: () => {
-              rH.options = null, hH()
+              DB.options = null, oB()
             },
             children: "Cancel"
           })]
         })]
       })
     }));
-    var PH = LH(5335),
-      TH = LH(37864),
-      UH = LH(37869);
-    let VH = null;
+    var AB = GB(5353),
+      VB = GB(37692),
+      SB = GB(37694);
+    let nB = null;
 
-    function OH() {
+    function UB() {
       return function() {
-        const HH = (0, UH.d)();
+        const BB = (0, SB.c)();
         for (const {
-            group: BH,
-            dataAttr: LH
+            group: OB,
+            dataAttr: GB
           }
-          of TH.f)
-          if (LH && HH[BH]) return !0;
+          of VB.c)
+          if (GB && BB[OB]) return !0;
         return !1
       }() ? function() {
-        var HH;
-        return "function" === typeof(null === (HH = navigator.mediaDevices) || void 0 === HH ? void 0 : HH.getDisplayMedia)
+        var BB;
+        return "function" === typeof(null === (BB = navigator.mediaDevices) || void 0 === BB ? void 0 : BB.getDisplayMedia)
       }() ? {
         canIncludeUi: !0,
         includeUiDisabledReason: null
@@ -497,344 +497,344 @@ export const modules = {
         includeUiDisabledReason: "No UI to include"
       }
     }
-    async function bH(HH, BH, LH) {
-      return HH ? async function() {
-        const HH = await navigator.mediaDevices.getDisplayMedia({
+    async function fB(BB, OB, GB) {
+      return BB ? async function() {
+        const BB = await navigator.mediaDevices.getDisplayMedia({
           video: !0,
           audio: !1,
           preferCurrentTab: !0,
           selfBrowserSurface: "include"
         });
-        for (const BH of HH.getAudioTracks()) BH.stop(), HH.removeTrack(BH);
-        return HH
-      }(): BH().captureStream(Math.max(1, Math.round(LH)))
+        for (const OB of BB.getAudioTracks()) OB.stop(), BB.removeTrack(OB);
+        return BB
+      }(): OB().captureStream(Math.max(1, Math.round(GB)))
     }
-    var kH = LH(40018);
-    let mH = !1;
+    var kB = GB(39782);
+    let dB = !1;
 
-    function oH(HH) {
-      HH.holdInput(!1), (0, kH.h)(!1)
+    function KB(BB) {
+      BB.holdInput(!1), (0, kB.e)(!1)
     }
-    async function IH(HH) {
-      var BH, LH;
-      if ((0, kH.e)() || mH) return;
-      const SH = HH();
-      if (!SH) return;
-      mH = !0;
-      let hH = null;
-      const tH = SH.playbackMarkInTick,
+    async function uB(BB) {
+      var OB, GB;
+      if ((0, kB.b)() || dB) return;
+      const QB = BB();
+      if (!QB) return;
+      dB = !0;
+      let oB = null;
+      const jB = QB.playbackMarkInTick,
         {
-          canIncludeUi: zH,
-          includeUiDisabledReason: CH
-        } = OH();
+          canIncludeUi: yB,
+          includeUiDisabledReason: JB
+        } = UB();
       try {
-        hH = await async function(HH) {
+        oB = await async function(BB) {
           let {
-            hasPlaybackMark: BH,
-            canIncludeUi: LH,
-            includeUiDisabledReason: AH
-          } = HH;
-          const SH = {
+            hasPlaybackMark: OB,
+            canIncludeUi: GB,
+            includeUiDisabledReason: YB
+          } = BB;
+          const QB = {
               options: null
             },
-            hH = rH.NotificationProvider.showCustomPopup({
-              body: HH => (0, QH.jsx)(vH, {
-                hasPlaybackMark: BH,
-                canIncludeUi: LH,
-                includeUiDisabledReason: AH,
-                selectionRef: SH,
-                closePopup: HH
+            oB = DB.NotificationProvider.showCustomPopup({
+              body: BB => (0, qB.jsx)(WB, {
+                hasPlaybackMark: OB,
+                canIncludeUi: GB,
+                includeUiDisabledReason: YB,
+                selectionRef: QB,
+                closePopup: BB
               }),
               disableExitButton: !0,
               disablePressBackgroundToClose: !0,
               unlockPointerKey: "replayVideoExportOptions"
             });
-          return "notificationTornDown" === await hH.getResult() ? null : SH.options
+          return "notificationTornDown" === await oB.getResult() ? null : QB.options
         }({
-          hasPlaybackMark: null !== tH,
-          canIncludeUi: zH,
-          includeUiDisabledReason: CH
+          hasPlaybackMark: null !== jB,
+          canIncludeUi: yB,
+          includeUiDisabledReason: JB
         })
       } finally {
-        mH = !1
+        dB = !1
       }
-      if (!hH) return;
-      const EH = null !== (BH = null === (LH = SH.startFailure) || void 0 === LH ? void 0 : LH.call(SH)) && void 0 !== BH ? BH : null;
-      if (null !== EH) return void rH.NotificationProvider.showAlertPopup({
+      if (!oB) return;
+      const MB = null !== (OB = null === (GB = QB.startFailure) || void 0 === GB ? void 0 : GB.call(QB)) && void 0 !== OB ? OB : null;
+      if (null !== MB) return void DB.NotificationProvider.showAlertPopup({
         title: "Video export failed",
-        subtitle: EH
+        subtitle: MB
       });
-      if (! function(HH) {
-          return !(0, kH.e)() && ((0, kH.h)(!0), HH.holdInput(!0), !0)
-        }(SH)) return;
-      let XH = null;
+      if (! function(BB) {
+          return !(0, kB.b)() && ((0, kB.e)(!0), BB.holdInput(!0), !0)
+        }(QB)) return;
+      let PB = null;
       try {
-        XH = await bH(hH.includeUi, (() => SH.canvas()), SH.oN)
-      } catch (fH) {
-        return console.error("Failed to create video stream for export", fH), oH(SH), void rH.NotificationProvider.showAlertPopup({
+        PB = await fB(oB.includeUi, (() => QB.canvas()), QB.pI)
+      } catch (mB) {
+        return console.error("Failed to create video stream for export", mB), KB(QB), void DB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: fH instanceof Error ? fH.message : "Could not start capture."
+          subtitle: mB instanceof Error ? mB.message : "Could not start capture."
         })
       }
-      let uH = null;
-      const WH = [];
-      let MH = null,
-        xH = null;
+      let pB = null;
+      const ZB = [];
+      let NB = null,
+        RB = null;
       try {
-        var TH, UH, IH;
-        uH = SH.playbackSpeed(), SH.closeViewer(), SH.setPlaybackSpeed(1), SH.pause(), SH.seekToTick(null !== tH && void 0 !== tH ? tH : 0);
-        const HH = await async function() {
-          const HH = PH.Howler.masterGain;
-          if (!PH.Howler.ctx || !HH) return null;
-          await PH.Howler.ctx.resume();
-          const BH = PH.Howler.ctx.createMediaStreamDestination();
-          HH.connect(BH), VH = BH;
-          const [LH] = BH.stream.getAudioTracks();
-          return null !== LH && void 0 !== LH ? LH : null
+        var VB, SB, uB;
+        pB = QB.playbackSpeed(), QB.closeViewer(), QB.setPlaybackSpeed(1), QB.pause(), QB.seekToTick(null !== jB && void 0 !== jB ? jB : 0);
+        const BB = await async function() {
+          const BB = AB.Howler.masterGain;
+          if (!AB.Howler.ctx || !BB) return null;
+          await AB.Howler.ctx.resume();
+          const OB = AB.Howler.ctx.createMediaStreamDestination();
+          BB.connect(OB), nB = OB;
+          const [GB] = OB.stream.getAudioTracks();
+          return null !== GB && void 0 !== GB ? GB : null
         }();
-        xH = new MediaStream;
-        for (const AH of XH.getVideoTracks()) xH.addTrack(AH);
-        HH && xH.addTrack(HH);
-        const BH = function(HH) {
-          const BH = YH(GH(HH));
-          if (!BH) throw new Error(`No MediaRecorder mime type available for ${HH}`);
-          return BH
-        }(hH.format);
-        MH = new MediaRecorder(xH, {
-          mimeType: BH,
+        RB = new MediaStream;
+        for (const YB of PB.getVideoTracks()) RB.addTrack(YB);
+        BB && RB.addTrack(BB);
+        const OB = function(BB) {
+          const OB = lB(zB(BB));
+          if (!OB) throw new Error(`No MediaRecorder mime type available for ${BB}`);
+          return OB
+        }(oB.format);
+        NB = new MediaRecorder(RB, {
+          mimeType: OB,
           videoBitsPerSecond: 8e6
-        }), MH.ondataavailable = HH => {
-          HH.data.size > 0 && WH.push(HH.data)
+        }), NB.ondataavailable = BB => {
+          BB.data.size > 0 && ZB.push(BB.data)
         };
-        const LH = new Promise((HH => {
-          MH.onstop = () => {
-            HH()
+        const GB = new Promise((BB => {
+          NB.onstop = () => {
+            BB()
           }
         }));
-        await (null === (TH = SH.seekSettled) || void 0 === TH ? void 0 : TH.call(SH));
-        const [zH] = XH.getVideoTracks();
-        MH.start(250), SH.play();
-        const CH = await
-        function(HH, BH, LH) {
-          return new Promise((AH => {
-            let rH = !1;
-            const SH = HH => {
-                rH || (rH = !0, tH(), BH.removeEventListener("ended", hH), AH(HH))
+        await (null === (VB = QB.seekSettled) || void 0 === VB ? void 0 : VB.call(QB));
+        const [yB] = PB.getVideoTracks();
+        NB.start(250), QB.play();
+        const JB = await
+        function(BB, OB, GB) {
+          return new Promise((YB => {
+            let DB = !1;
+            const QB = BB => {
+                DB || (DB = !0, jB(), OB.removeEventListener("ended", oB), YB(BB))
               },
-              hH = () => {
-                SH("captureLost")
+              oB = () => {
+                QB("captureLost")
               },
-              tH = HH.watchPlayback((() => {
-                HH.isPlaying() || SH("completed")
+              jB = BB.watchPlayback((() => {
+                BB.isPlaying() || QB("completed")
               }));
-            BH.addEventListener("ended", hH), LH.onerror = () => {
-              SH("recorderError")
-            }, "ended" !== BH.readyState ? HH.isPlaying() || SH("completed") : SH("captureLost")
+            OB.addEventListener("ended", oB), GB.onerror = () => {
+              QB("recorderError")
+            }, "ended" !== OB.readyState ? BB.isPlaying() || QB("completed") : QB("captureLost")
           }))
-        }(SH, zH, MH);
-        if (SH.pause(), "inactive" !== MH.state && MH.stop(), await LH, "captureLost" === CH) return void rH.NotificationProvider.showAlertPopup({
+        }(QB, yB, NB);
+        if (QB.pause(), "inactive" !== NB.state && NB.stop(), await GB, "captureLost" === JB) return void DB.NotificationProvider.showAlertPopup({
           title: "Video export stopped",
           subtitle: "Screen sharing ended before the replay finished. Nothing was saved."
         });
-        if ("recorderError" === CH) return void rH.NotificationProvider.showAlertPopup({
+        if ("recorderError" === JB) return void DB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "The recorder encountered an error. Nothing was saved."
         });
-        const EH = null !== (UH = null === (IH = SH.playbackFailure) || void 0 === IH ? void 0 : IH.call(SH)) && void 0 !== UH ? UH : null;
-        if (null !== EH) return void rH.NotificationProvider.showAlertPopup({
+        const MB = null !== (SB = null === (uB = QB.playbackFailure) || void 0 === uB ? void 0 : uB.call(QB)) && void 0 !== SB ? SB : null;
+        if (null !== MB) return void DB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: `${EH} Nothing was saved.`
+          subtitle: `${MB} Nothing was saved.`
         });
-        const QH = new Blob(WH, {
-          type: BH
+        const qB = new Blob(ZB, {
+          type: OB
         });
-        QH.size > 0 ? (0, AH.e)(QH, function(HH, BH) {
-          const LH = function(HH) {
-            return "mp4" === HH ? "mp4" : "webm"
-          }(BH);
-          if (HH) return `${HH.replace(/\.bloxdreplay$/i,"")}.${LH}`;
-          return `bloxd-replay-${Date.now()}.${LH}`
-        }(SH.fileName(), hH.format)) : rH.NotificationProvider.showAlertPopup({
+        qB.size > 0 ? (0, YB.c)(qB, function(BB, OB) {
+          const GB = function(BB) {
+            return "mp4" === BB ? "mp4" : "webm"
+          }(OB);
+          if (BB) return `${BB.replace(/\.bloxdreplay$/i,"")}.${GB}`;
+          return `bloxd-replay-${Date.now()}.${GB}`
+        }(QB.fileName(), oB.format)) : DB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "No video data was captured. Try again."
         })
-      } catch (fH) {
-        console.error("Replay video export failed", fH), rH.NotificationProvider.showAlertPopup({
+      } catch (mB) {
+        console.error("Replay video export failed", mB), DB.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: fH instanceof Error ? fH.message : "Something went wrong while exporting."
+          subtitle: mB instanceof Error ? mB.message : "Something went wrong while exporting."
         })
       } finally {
-        if (MH && "inactive" !== MH.state) try {
-          MH.stop()
-        } catch (fH) {
-          console.error("Failed to stop MediaRecorder", fH)
+        if (NB && "inactive" !== NB.state) try {
+          NB.stop()
+        } catch (mB) {
+          console.error("Failed to stop MediaRecorder", mB)
         }! function() {
-          const HH = PH.Howler.masterGain;
-          if (VH && HH) {
+          const BB = AB.Howler.masterGain;
+          if (nB && BB) {
             try {
-              HH.disconnect(VH)
-            } catch (fH) {
-              console.error("Failed to disconnect Howler export tee", fH)
+              BB.disconnect(nB)
+            } catch (mB) {
+              console.error("Failed to disconnect Howler export tee", mB)
             }
-            VH = null
-          } else VH = null
+            nB = null
+          } else nB = null
         }();
-        for (const HH of XH.getTracks()) HH.stop();
-        if (xH)
-          for (const HH of xH.getTracks()) HH.stop();
-        null !== uH && SH.setPlaybackSpeed(uH), SH.pause(), oH(SH), SH.reopenViewer()
+        for (const BB of PB.getTracks()) BB.stop();
+        if (RB)
+          for (const BB of RB.getTracks()) BB.stop();
+        null !== pB && QB.setPlaybackSpeed(pB), QB.pause(), KB(QB), QB.reopenViewer()
       }
     }
   },
-  5335: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      Howl: () => rH.Howl,
-      Howler: () => rH.Howler,
-      musicOutput: () => WH,
-      readyAudioContext: () => MH
+  5353: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      Howl: () => DB.Howl,
+      Howler: () => DB.Howler,
+      musicOutput: () => ZB,
+      readyAudioContext: () => NB
     });
-    var AH, rH = LH(5343),
-      SH = LH(3811),
-      hH = LH(5067);
-    const tH = rH.Howler;
+    var YB, DB = GB(5362),
+      QB = GB(3873),
+      oB = GB(5073);
+    const jB = DB.Howler;
 
-    function zH() {
-      var HH, BH;
-      if (tH.ctx || !tH.usingWebAudio || "undefined" === typeof AudioContext || !(0, hH.i)()) return;
-      const LH = navigator.audioSession;
-      let AH;
-      "auto" === (null === LH || void 0 === LH ? void 0 : LH.type) && (LH.type = "ambient");
+    function yB() {
+      var BB, OB;
+      if (jB.ctx || !jB.usingWebAudio || "undefined" === typeof AudioContext || !(0, oB.h)()) return;
+      const GB = navigator.audioSession;
+      let YB;
+      "auto" === (null === GB || void 0 === GB ? void 0 : GB.type) && (GB.type = "ambient");
       try {
-        AH = new AudioContext({
+        YB = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const rH = AH.createGain();
-      rH.gain.setValueAtTime(tH._muted ? 0 : null !== (HH = tH._volume) && void 0 !== HH ? HH : 1, AH.currentTime), rH.connect(AH.destination), tH.ctx = AH, tH.masterGain = rH, null === (BH = tH._setup) || void 0 === BH || BH.call(tH)
+      const DB = YB.createGain();
+      DB.gain.setValueAtTime(jB._muted ? 0 : null !== (BB = jB._volume) && void 0 !== BB ? BB : 1, YB.currentTime), DB.connect(YB.destination), jB.ctx = YB, jB.masterGain = DB, null === (OB = jB._setup) || void 0 === OB || OB.call(jB)
     }
-    tH._mobileUnloaded = !0;
-    const CH = tH.volume.bind(rH.Howler);
-    tH.volume = function() {
-      return zH(), CH(...arguments)
+    jB._mobileUnloaded = !0;
+    const JB = jB.volume.bind(DB.Howler);
+    jB.volume = function() {
+      return yB(), JB(...arguments)
     };
-    const EH = tH.mute.bind(rH.Howler);
-    tH.mute = HH => (zH(), EH(HH));
-    const XH = rH.Howl.prototype,
-      GH = XH.init;
+    const MB = jB.mute.bind(DB.Howler);
+    jB.mute = BB => (yB(), MB(BB));
+    const PB = DB.Howl.prototype,
+      zB = PB.init;
 
-    function YH() {
-      for (; tH._html5AudioPool.length < tH.html5PoolSize;) {
-        const HH = new Audio;
-        HH._unlocked = !0, tH._releaseHtml5Audio(HH)
+    function lB() {
+      for (; jB._html5AudioPool.length < jB.html5PoolSize;) {
+        const BB = new Audio;
+        BB._unlocked = !0, jB._releaseHtml5Audio(BB)
       }
-      for (const BH of tH._howls)
-        if (!BH._webAudio)
-          for (const LH of BH._getSoundIds()) {
-            var HH;
-            const AH = null === (HH = BH._soundById(LH)) || void 0 === HH ? void 0 : HH._node;
-            AH && !AH._unlocked && (AH._unlocked = !0, AH.load())
+      for (const OB of jB._howls)
+        if (!OB._webAudio)
+          for (const GB of OB._getSoundIds()) {
+            var BB;
+            const YB = null === (BB = OB._soundById(GB)) || void 0 === BB ? void 0 : BB._node;
+            YB && !YB._unlocked && (YB._unlocked = !0, YB.load())
           }
     }
-    XH.init = function(HH) {
-      return zH(), GH.call(this, HH)
-    }, (0, hH.i)() && (tH._unlockAudio = () => {
-      const HH = tH.ctx;
-      if (tH._audioUnlocked || !HH) return;
-      tH.autoUnlock = !1;
-      const BH = HH.createBuffer(1, 1, 22050);
-      tH._scratchBuffer = BH;
-      const LH = new AbortController;
-      let AH = "afterPaint";
-      const rH = () => {
-          var AH;
-          if (tH._audioUnlocked) return;
-          null === (AH = tH._autoResume) || void 0 === AH || AH.call(tH);
-          const rH = HH.createBufferSource();
-          rH.buffer = BH, rH.connect(HH.destination), rH.start(0), HH.resume().catch((() => {})), rH.onended = () => {
-            rH.disconnect(0), tH._audioUnlocked = !0, LH.abort();
-            for (const HH of tH._howls) HH._emit("unlock")
+    PB.init = function(BB) {
+      return yB(), zB.call(this, BB)
+    }, (0, oB.h)() && (jB._unlockAudio = () => {
+      const BB = jB.ctx;
+      if (jB._audioUnlocked || !BB) return;
+      jB.autoUnlock = !1;
+      const OB = BB.createBuffer(1, 1, 22050);
+      jB._scratchBuffer = OB;
+      const GB = new AbortController;
+      let YB = "afterPaint";
+      const DB = () => {
+          var YB;
+          if (jB._audioUnlocked) return;
+          null === (YB = jB._autoResume) || void 0 === YB || YB.call(jB);
+          const DB = BB.createBufferSource();
+          DB.buffer = OB, DB.connect(BB.destination), DB.start(0), BB.resume().catch((() => {})), DB.onended = () => {
+            DB.disconnect(0), jB._audioUnlocked = !0, GB.abort();
+            for (const BB of jB._howls) BB._emit("unlock")
           }
         },
-        zH = () => {
-          YH(), rH()
+        yB = () => {
+          lB(), DB()
         },
-        CH = BH => {
-          if (YH(), "inTap" === AH) {
-            if ("running" === HH.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), rH()
-          } else "afterPaint" === AH && (AH = "queued", (0, SH.c)(BH.timeStamp, (() => {
-            AH = "inTap", rH()
+        JB = OB => {
+          if (lB(), "inTap" === YB) {
+            if ("running" === BB.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), DB()
+          } else "afterPaint" === YB && (YB = "queued", (0, QB.c)(OB.timeStamp, (() => {
+            YB = "inTap", DB()
           })))
         };
-      for (const SH of ["touchstart", "touchend"]) document.addEventListener(SH, zH, {
+      for (const QB of ["touchstart", "touchend"]) document.addEventListener(QB, yB, {
         capture: !0,
-        signal: LH.signal
+        signal: GB.signal
       });
-      for (const SH of hH.d) document.addEventListener(SH, CH, {
+      for (const QB of oB.c) document.addEventListener(QB, JB, {
         capture: !0,
-        signal: LH.signal
+        signal: GB.signal
       })
     });
-    let uH = 0;
-    const QH = null === (AH = tH._autoSuspend) || void 0 === AH ? void 0 : AH.bind(rH.Howler);
+    let pB = 0;
+    const qB = null === (YB = jB._autoSuspend) || void 0 === YB ? void 0 : YB.bind(DB.Howler);
 
-    function WH() {
-      MH();
+    function ZB() {
+      NB();
       const {
-        ctx: HH,
-        masterGain: BH
-      } = tH;
-      return HH && BH ? {
-        ctx: HH,
-        destination: BH,
-        holdAwake: HH => {
-          var BH, LH;
-          (uH += HH ? 1 : -1, HH) ? null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH): null === (LH = tH._autoSuspend) || void 0 === LH || LH.call(tH)
+        ctx: BB,
+        masterGain: OB
+      } = jB;
+      return BB && OB ? {
+        ctx: BB,
+        destination: OB,
+        holdAwake: BB => {
+          var OB, GB;
+          (pB += BB ? 1 : -1, BB) ? null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB): null === (GB = jB._autoSuspend) || void 0 === GB || GB.call(jB)
         },
         wake: () => {
-          var BH;
-          "running" !== HH.state && (null === (BH = tH._autoResume) || void 0 === BH || BH.call(tH), HH.resume().catch((() => {})))
+          var OB;
+          "running" !== BB.state && (null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB), BB.resume().catch((() => {})))
         }
       } : null
     }
 
-    function MH() {
-      var HH;
-      (tH.volume(), tH.ctx && tH.autoUnlock) && (null === (HH = tH._unlockAudio) || void 0 === HH || HH.call(tH))
+    function NB() {
+      var BB;
+      (jB.volume(), jB.ctx && jB.autoUnlock) && (null === (BB = jB._unlockAudio) || void 0 === BB || BB.call(jB))
     }
-    QH && (tH._autoSuspend = () => uH > 0 ? rH.Howler : QH())
+    qB && (jB._autoSuspend = () => pB > 0 ? DB.Howler : qB())
   },
-  54466: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      d: () => rH
+  53993: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB,
+      d: () => DB
     });
-    const AH = ["recording", "freecam", "keyframe"];
+    const YB = ["recording", "freecam", "keyframe"];
 
-    function rH() {
-      const HH = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(HH[1]) << 32n | BigInt(HH[0])
+    function DB() {
+      const BB = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(BB[1]) << 32n | BigInt(BB[0])
     }
   },
-  64081: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      HOLD_TIMEOUT_MS: () => CH,
-      ReplayViewer: () => XH
+  63857: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      HOLD_TIMEOUT_MS: () => JB,
+      ReplayViewer: () => PB
     });
-    var AH = LH(37809),
-      rH = LH(37853),
-      SH = LH(37844),
-      hH = LH(37869),
-      tH = LH(5265),
-      zH = LH(54466);
-    const CH = 1e4,
-      EH = new Set(["Cu"]);
-    class XH {
-      constructor(HH) {
-        var BH;
-        this.deps = HH, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (BH = HH.now) && void 0 !== BH ? BH : () => performance.now()
+    var YB = GB(37641),
+      DB = GB(37685),
+      QB = GB(37682),
+      oB = GB(37694),
+      jB = GB(5281),
+      yB = GB(53993);
+    const JB = 1e4,
+      MB = new Set(["zp"]);
+    class PB {
+      constructor(BB) {
+        var OB;
+        this.deps = BB, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (OB = BB.now) && void 0 !== OB ? OB : () => performance.now()
       }
       get inPlayback() {
         return this.playback
@@ -843,123 +843,123 @@ export const modules = {
         return this.lastView
       }
       get isOpen() {
-        return null !== this.lastView && this.lastView.state !== tH.hd.None
+        return null !== this.lastView && this.lastView.state !== jB.sd.None
       }
       get keyframes() {
         return this.deps.client.keyframes()
       }
-      get LX() {
+      get sJ() {
         return [...this.holds.keys()]
       }
       get savePending() {
         return null !== this.pendingSave
       }
       get saveRefusal() {
-        return this.cropping ? AH.e.cropBusy.text : null
+        return this.cropping ? YB.e.cropBusy.text : null
       }
       get cropping() {
         return this.cropAsked || this.cropRunning
       }
-      async open(HH, BH) {
-        var LH, SH, hH, zH;
+      async open(BB, OB) {
+        var GB, QB, oB, yB;
         const {
-          client: CH
+          client: JB
         } = this.deps;
         if (!this.playback) {
-          if (!CH.setPlayback(!0)) throw new Error(AH.e.cantOpen.text);
+          if (!JB.setPlayback(!0)) throw new Error(YB.e.cantOpen.text);
           this.playback = !0
         }
         this.hold("opening"), this.loadingOpens++;
-        const EH = this.epoch;
-        let XH;
+        const MB = this.epoch;
+        let PB;
         try {
-          XH = await CH.open(HH, (() => (0, rH.e)(HH, BH)))
+          PB = await JB.open(BB, (() => (0, DB.b)(BB, OB)))
         } finally {
           this.loadingOpens--
         }
-        if (EH !== this.epoch && "reloading" !== XH) throw new Error(AH.e.coreStopped.text);
-        if ("opening" !== XH) {
+        if (MB !== this.epoch && "reloading" !== PB) throw new Error(YB.e.coreStopped.text);
+        if ("opening" !== PB) {
           this.opening || 0 !== this.loadingOpens || this.release("opening");
-          const HH = function(HH) {
-            switch (HH) {
+          const BB = function(BB) {
+            switch (BB) {
               case "reloading":
                 return null;
               case "stopped":
-              case tH.$c.ModuleTrap:
-                return AH.e.coreStopped;
-              case tH.$c.ModuleLoad:
-                return AH.e.viewerLoadFailed;
-              case tH.$c.TooLarge:
-                return AH.e.cantOpen
+              case jB.jd.ModuleTrap:
+                return YB.e.coreStopped;
+              case jB.jd.ModuleLoad:
+                return YB.e.viewerLoadFailed;
+              case jB.jd.TooLarge:
+                return YB.e.cantOpen
             }
-          }(XH);
-          if (null === HH) return;
-          throw new Error(HH.text)
+          }(PB);
+          if (null === BB) return;
+          throw new Error(BB.text)
         }
-        return this.rejectSave(new Error(AH.e.saveClosed.text)), this.fileName = null !== (LH = null !== (SH = BH.fileName) && void 0 !== SH ? SH : null === (hH = BH.fileHandle) || void 0 === hH ? void 0 : hH.name) && void 0 !== LH ? LH : null, this.fileHandle = null !== (zH = BH.fileHandle) && void 0 !== zH ? zH : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((HH, BH) => {
+        return this.rejectSave(new Error(YB.e.saveClosed.text)), this.fileName = null !== (GB = null !== (QB = OB.fileName) && void 0 !== QB ? QB : null === (oB = OB.fileHandle) || void 0 === oB ? void 0 : oB.name) && void 0 !== GB ? GB : null, this.fileHandle = null !== (yB = OB.fileHandle) && void 0 !== yB ? yB : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((BB, OB) => {
           this.pendingOpen = {
-            resolve: HH,
-            reject: BH
+            resolve: BB,
+            reject: OB
           }
         }))
       }
       play() {
-        this.holds.has("Cu") || this.deps.client.play()
+        this.holds.has("zp") || this.deps.client.play()
       }
       pause() {
         this.deps.client.pause()
       }
       holdForShaderPackFailure() {
-        this.isOpen && this.pause(), this.hold("Cu")
+        this.isOpen && this.pause(), this.hold("zp")
       }
-      seek(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const LH = this.lastView;
-        null !== LH && (BH || HH < LH.IX) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(HH, BH)
+      seek(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const GB = this.lastView;
+        null !== GB && (OB || BB < GB.kP) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(BB, OB)
       }
-      setSpeed(HH) {
-        this.deps.client.setSpeed(HH)
+      setSpeed(BB) {
+        this.deps.client.setSpeed(BB)
       }
-      setCameraMode(HH) {
-        this.deps.client.setCameraMode(HH)
+      setCameraMode(BB) {
+        this.deps.client.setCameraMode(BB)
       }
       cycleCameraMode() {
-        const HH = this.lastView;
-        null !== HH && HH.state !== tH.hd.None && this.setCameraMode(zH.b[(zH.b.indexOf(HH.cameraMode) + 1) % zH.b.length])
+        const BB = this.lastView;
+        null !== BB && BB.state !== jB.sd.None && this.setCameraMode(yB.b[(yB.b.indexOf(BB.cameraMode) + 1) % yB.b.length])
       }
       addKeyframe() {
         this.edited(this.deps.client.addKeyframe())
       }
-      setKeyframe(HH) {
-        this.edited(this.deps.client.setKeyframe(HH))
+      setKeyframe(BB) {
+        this.edited(this.deps.client.setKeyframe(BB))
       }
-      moveKeyframe(HH, BH) {
-        this.edited(this.deps.client.moveKeyframe(HH, BH))
+      moveKeyframe(BB, OB) {
+        this.edited(this.deps.client.moveKeyframe(BB, OB))
       }
-      deleteKeyframes(HH, BH) {
-        this.edited(this.deps.client.deleteKeyframes(HH, BH))
+      deleteKeyframes(BB, OB) {
+        this.edited(this.deps.client.deleteKeyframes(BB, OB))
       }
-      setMark(HH) {
-        this.edited(this.deps.client.setMark(HH))
+      setMark(BB) {
+        this.edited(this.deps.client.setMark(BB))
       }
-      crop(HH, BH) {
-        return !(BH <= HH) && (null !== this.pendingSave ? (this.deps.notify(AH.e.saveBusy), !1) : !!this.deps.client.crop(HH, BH) && (this.cropAsked = !0, this.hold("crop"), !0))
+      crop(BB, OB) {
+        return !(OB <= BB) && (null !== this.pendingSave ? (this.deps.notify(YB.e.saveBusy), !1) : !!this.deps.client.crop(BB, OB) && (this.cropAsked = !0, this.hold("crop"), !0))
       }
       save() {
-        return null !== this.pendingSave ? Promise.reject(new Error(AH.e.saveBusy.text)) : new Promise(((HH, BH) => {
-          const LH = {
-            resolve: HH,
-            reject: BH
+        return null !== this.pendingSave ? Promise.reject(new Error(YB.e.saveBusy.text)) : new Promise(((BB, OB) => {
+          const GB = {
+            resolve: BB,
+            reject: OB
           };
-          this.pendingSave = LH, this.editsAtSave = this.edits, this.deps.client.save((0, zH.d)()).then((HH => {
-            this.pendingSave === LH && this.saveStarted(HH)
-          }), (HH => {
-            this.pendingSave === LH && this.rejectSave(HH instanceof Error ? HH : new Error(String(HH)))
+          this.pendingSave = GB, this.editsAtSave = this.edits, this.deps.client.save((0, yB.d)()).then((BB => {
+            this.pendingSave === GB && this.saveStarted(BB)
+          }), (BB => {
+            this.pendingSave === GB && this.rejectSave(BB instanceof Error ? BB : new Error(String(BB)))
           }))
         }))
       }
-      saveStarted(HH) {
-        switch (HH) {
+      saveStarted(BB) {
+        switch (BB) {
           case "sealing":
             return;
           case "busy":
@@ -970,40 +970,40 @@ export const modules = {
             return void this.saveFailed(!1)
         }
       }
-      markSaved(HH, BH) {
-        var LH, AH;
-        this.fileHandle = HH, this.fileName = null !== (LH = null !== (AH = null === HH || void 0 === HH ? void 0 : HH.name) && void 0 !== AH ? AH : BH) && void 0 !== LH ? LH : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+      markSaved(BB, OB) {
+        var GB, YB;
+        this.fileHandle = BB, this.fileName = null !== (GB = null !== (YB = null === BB || void 0 === BB ? void 0 : BB.name) && void 0 !== YB ? YB : OB) && void 0 !== GB ? GB : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
       }
       end() {
-        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(AH.e.coreStopped.text)), this.rejectSave(new Error(AH.e.saveClosed.text)), this.lastView = null, this.deps.onChange()
+        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(YB.e.coreStopped.text)), this.rejectSave(new Error(YB.e.saveClosed.text)), this.lastView = null, this.deps.onChange()
       }
       afterFrame() {
-        var HH, BH, LH;
-        const AH = this.deps.client.view(),
-          rH = AH !== this.lastView;
-        this.lastView = AH, this.opening && null !== AH && AH.state !== tH.hd.None && AH.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, hH.f)()), this.cropAsked ? (this.cropAsked = !1, null !== AH && AH.state === tH.hd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== AH && AH.state !== tH.hd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
-        const SH = 0 === this.settleFrames && 0 === (null !== (HH = null === (BH = (LH = this.deps).meshPending) || void 0 === BH ? void 0 : BH.call(LH)) && void 0 !== HH ? HH : 0);
-        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && SH && this.release("opening"), this.holds.has("seek") && SH && this.release("seek"), this.holds.has("crop") && !this.cropRunning && SH && this.release("crop");
-        const zH = this.now();
-        for (const [hH, tH] of this.holds) !EH.has(hH) && zH - tH >= CH && this.release(hH);
-        this.saveRefused && !this.cropping && this.saveFailed(!1), rH && this.deps.onChange()
+        var BB, OB, GB;
+        const YB = this.deps.client.view(),
+          DB = YB !== this.lastView;
+        this.lastView = YB, this.opening && null !== YB && YB.state !== jB.sd.None && YB.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, oB.f)()), this.cropAsked ? (this.cropAsked = !1, null !== YB && YB.state === jB.sd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== YB && YB.state !== jB.sd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+        const QB = 0 === this.settleFrames && 0 === (null !== (BB = null === (OB = (GB = this.deps).meshPending) || void 0 === OB ? void 0 : OB.call(GB)) && void 0 !== BB ? BB : 0);
+        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && QB && this.release("opening"), this.holds.has("seek") && QB && this.release("seek"), this.holds.has("crop") && !this.cropRunning && QB && this.release("crop");
+        const yB = this.now();
+        for (const [oB, jB] of this.holds) !MB.has(oB) && yB - jB >= JB && this.release(oB);
+        this.saveRefused && !this.cropping && this.saveFailed(!1), DB && this.deps.onChange()
       }
       cropped() {
-        (0, hH.f)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
+        (0, oB.f)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
       }
-      onFailed(HH) {
-        switch (HH.reason) {
-          case tH.$c.TooLarge:
+      onFailed(BB) {
+        switch (BB.reason) {
+          case jB.jd.TooLarge:
             break;
-          case tH.$c.Open:
-          case tH.$c.NothingStaged: {
+          case jB.jd.Open:
+          case jB.jd.NothingStaged: {
             this.opening = !1, this.release("opening");
-            const BH = (0, SH.i)(HH.version) ? AH.e.replayTooOld : AH.e.cantOpen;
-            null === this.pendingOpen && this.deps.notify(BH), this.settleOpen(new Error(BH.text));
+            const OB = (0, QB.g)(BB.version) ? YB.e.replayTooOld : YB.e.cantOpen;
+            null === this.pendingOpen && this.deps.notify(OB), this.settleOpen(new Error(OB.text));
             break
           }
-          case tH.$c.Crop:
-            if (HH.code === tH.Zc.Busy) {
+          case jB.jd.Crop:
+            if (BB.code === jB.fd.Busy) {
               this.cropBusy();
               break
             }
@@ -1011,166 +1011,166 @@ export const modules = {
               this.saveFailed(!1);
               break
             }
-            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(AH.e.cropFailed);
+            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(YB.e.cropFailed);
             break;
-          case tH.$c.ModuleTrap:
-          case tH.$c.ModuleLoad:
-          case tH.$c.Port:
-            this.moduleEnded(HH.reason === tH.$c.ModuleTrap ? AH.e.coreStopped : AH.e.cantOpen);
+          case jB.jd.ModuleTrap:
+          case jB.jd.ModuleLoad:
+          case jB.jd.Port:
+            this.moduleEnded(BB.reason === jB.jd.ModuleTrap ? YB.e.coreStopped : YB.e.cantOpen);
             break;
-          case tH.$c.NotLive:
+          case jB.jd.NotLive:
             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
             break;
           default:
-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${HH.reason})`), this.seekAsked = !1, this.release("seek")
+            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${BB.reason})`), this.seekAsked = !1, this.release("seek")
         }
         this.deps.onChange()
       }
-      moduleEnded(HH) {
-        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(HH), this.settleOpen(new Error(HH.text))
+      moduleEnded(BB) {
+        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(BB), this.settleOpen(new Error(BB.text))
       }
-      saveDone(HH) {
-        const BH = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === BH || void 0 === BH || BH.resolve(HH)
+      saveDone(BB) {
+        const OB = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === OB || void 0 === OB || OB.resolve(BB)
       }
-      saveFailed(HH) {
-        this.rejectSave(new Error(HH ? AH.e.saveBusy.text : "The replay couldn't be saved"))
+      saveFailed(BB) {
+        this.rejectSave(new Error(BB ? YB.e.saveBusy.text : "The replay couldn't be saved"))
       }
-      edited(HH) {
-        HH && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
+      edited(BB) {
+        BB && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
       }
       cropBusy() {
-        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(AH.e.cropBusy.text)) : this.deps.notify(AH.e.cropBusy)
+        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(YB.e.cropBusy.text)) : this.deps.notify(YB.e.cropBusy)
       }
       resetInFlight() {
         this.opening = !1, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0
       }
-      settleOpen(HH) {
-        const BH = this.pendingOpen;
-        this.pendingOpen = null, null === HH ? null === BH || void 0 === BH || BH.resolve() : null === BH || void 0 === BH || BH.reject(HH)
+      settleOpen(BB) {
+        const OB = this.pendingOpen;
+        this.pendingOpen = null, null === BB ? null === OB || void 0 === OB || OB.resolve() : null === OB || void 0 === OB || OB.reject(BB)
       }
-      rejectSave(HH) {
-        const BH = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === BH || void 0 === BH || BH.reject(HH)
+      rejectSave(BB) {
+        const OB = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === OB || void 0 === OB || OB.reject(BB)
       }
-      hold(HH) {
-        const BH = 0 === this.holds.size;
-        this.holds.set(HH, this.now()), BH && this.deps.setHoldDraws(!0)
+      hold(BB) {
+        const OB = 0 === this.holds.size;
+        this.holds.set(BB, this.now()), OB && this.deps.setHoldDraws(!0)
       }
-      release(HH) {
-        this.holds.delete(HH) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
+      release(BB) {
+        this.holds.delete(BB) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
       }
       releaseAll() {
         this.holds.size > 0 && (this.holds.clear(), this.deps.setHoldDraws(!1))
       }
     }
   },
-  64074: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      MESH_TAIL_MS: () => CH,
-      PLAY_START_TIMEOUT_MS: () => tH,
-      startWasmReplayVideoExport: () => XH
+  63849: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      MESH_TAIL_MS: () => JB,
+      PLAY_START_TIMEOUT_MS: () => jB,
+      startWasmReplayVideoExport: () => PB
     });
-    var AH = LH(40224),
-      rH = LH(64081),
-      SH = LH(5265),
-      hH = LH(2611);
-    const tH = rH.HOLD_TIMEOUT_MS + 5e3,
-      zH = 50,
-      CH = 200;
+    var YB = GB(39965),
+      DB = GB(63857),
+      QB = GB(5281),
+      oB = GB(2626);
+    const jB = DB.HOLD_TIMEOUT_MS + 5e3,
+      yB = 50,
+      JB = 200;
 
-    function EH(HH) {
-      var BH;
-      return (null === (BH = HH.view) || void 0 === BH ? void 0 : BH.state) === SH.hd.Cropping || HH.LX.includes("crop")
+    function MB(BB) {
+      var OB;
+      return (null === (OB = BB.view) || void 0 === OB ? void 0 : OB.state) === QB.sd.Cropping || BB.sJ.includes("crop")
     }
 
-    function XH(HH) {
-      return (0, AH.d)((() => function(HH) {
-        var BH, LH, AH, rH, XH, GH;
-        const YH = HH.viewer(),
-          uH = null !== (BH = null === YH || void 0 === YH ? void 0 : YH.view) && void 0 !== BH ? BH : null,
-          QH = HH.canvas();
-        if (!YH || !uH || uH.state === SH.hd.None || 0 === uH.totalTicks || !QH || EH(YH)) return null;
-        const WH = null !== (LH = HH.now) && void 0 !== LH ? LH : () => performance.now(),
-          MH = YH.id,
-          xH = () => {
-            const BH = HH.viewer();
-            return BH === YH && BH.id === MH && BH.isOpen ? BH : null
+    function PB(BB) {
+      return (0, YB.c)((() => function(BB) {
+        var OB, GB, YB, DB, PB, zB;
+        const lB = BB.viewer(),
+          pB = null !== (OB = null === lB || void 0 === lB ? void 0 : lB.view) && void 0 !== OB ? OB : null,
+          qB = BB.canvas();
+        if (!lB || !pB || pB.state === QB.sd.None || 0 === pB.totalTicks || !qB || MB(lB)) return null;
+        const ZB = null !== (GB = BB.now) && void 0 !== GB ? GB : () => performance.now(),
+          NB = lB.id,
+          RB = () => {
+            const OB = BB.viewer();
+            return OB === lB && OB.id === NB && OB.isOpen ? OB : null
           },
-          vH = Math.min(null !== (AH = null === (rH = uH.mark) || void 0 === rH ? void 0 : rH.outTick) && void 0 !== AH ? AH : 1 / 0, uH.totalTicks - 1);
-        let PH = null,
-          TH = !1;
-        const UH = () => {
-          var HH, BH;
-          return (null === (HH = xH()) || void 0 === HH || null === (BH = HH.view) || void 0 === BH ? void 0 : BH.state) === SH.hd.Playing
+          WB = Math.min(null !== (YB = null === (DB = pB.mark) || void 0 === DB ? void 0 : DB.outTick) && void 0 !== YB ? YB : 1 / 0, pB.totalTicks - 1);
+        let AB = null,
+          VB = !1;
+        const SB = () => {
+          var BB, OB;
+          return (null === (BB = RB()) || void 0 === BB || null === (OB = BB.view) || void 0 === OB ? void 0 : OB.state) === QB.sd.Playing
         };
         return {
-          oN: SH.wd,
-          playbackMarkInTick: null !== (XH = null === (GH = uH.mark) || void 0 === GH ? void 0 : GH.inTick) && void 0 !== XH ? XH : null,
+          pI: QB.Cd,
+          playbackMarkInTick: null !== (PB = null === (zB = pB.mark) || void 0 === zB ? void 0 : zB.inTick) && void 0 !== PB ? PB : null,
           startFailure: () => {
-            const HH = xH();
-            return null === HH ? "Another replay opened. Export it again from there." : EH(HH) ? "Wait for the crop to finish, then export again." : null
+            const BB = RB();
+            return null === BB ? "Another replay opened. Export it again from there." : MB(BB) ? "Wait for the crop to finish, then export again." : null
           },
           fileName: () => {
-            var HH, BH;
-            return null !== (HH = null === (BH = xH()) || void 0 === BH ? void 0 : BH.fileName) && void 0 !== HH ? HH : null
+            var BB, OB;
+            return null !== (BB = null === (OB = RB()) || void 0 === OB ? void 0 : OB.fileName) && void 0 !== BB ? BB : null
           },
           playbackSpeed: () => {
-            var HH, BH, LH;
-            return null !== (HH = null === (BH = xH()) || void 0 === BH || null === (LH = BH.view) || void 0 === LH ? void 0 : LH.speed) && void 0 !== HH ? HH : 1
+            var BB, OB, GB;
+            return null !== (BB = null === (OB = RB()) || void 0 === OB || null === (GB = OB.view) || void 0 === GB ? void 0 : GB.speed) && void 0 !== BB ? BB : 1
           },
-          setPlaybackSpeed: HH => {
-            var BH;
-            null === (BH = xH()) || void 0 === BH || BH.setSpeed(HH)
+          setPlaybackSpeed: BB => {
+            var OB;
+            null === (OB = RB()) || void 0 === OB || OB.setSpeed(BB)
           },
           play: () => {
-            var HH;
-            TH = !1, PH = WH(), null === (HH = xH()) || void 0 === HH || HH.play()
+            var BB;
+            VB = !1, AB = ZB(), null === (BB = RB()) || void 0 === BB || BB.play()
           },
           pause: () => {
-            var HH;
-            null === (HH = xH()) || void 0 === HH || HH.pause()
+            var BB;
+            null === (BB = RB()) || void 0 === BB || BB.pause()
           },
-          seekToTick: HH => {
-            var BH;
-            null === (BH = xH()) || void 0 === BH || BH.seek(HH, !0)
+          seekToTick: BB => {
+            var OB;
+            null === (OB = RB()) || void 0 === OB || OB.seek(BB, !0)
           },
-          seekSettled: () => new Promise((HH => {
-            const BH = setInterval((() => {
-              const LH = xH();
-              null === LH ? (clearInterval(BH), HH()) : LH.LX.includes("seek") || (clearInterval(BH), setTimeout(HH, CH))
-            }), zH)
+          seekSettled: () => new Promise((BB => {
+            const OB = setInterval((() => {
+              const GB = RB();
+              null === GB ? (clearInterval(OB), BB()) : GB.sJ.includes("seek") || (clearInterval(OB), setTimeout(BB, JB))
+            }), yB)
           })),
           isPlaying: () => {
-            var HH, BH, LH;
-            return null !== PH && null !== xH() && (!!UH() || !TH && (null !== (HH = null === (BH = xH()) || void 0 === BH || null === (LH = BH.view) || void 0 === LH ? void 0 : LH.IX) && void 0 !== HH ? HH : 0) < vH && WH() - PH < tH)
+            var BB, OB, GB;
+            return null !== AB && null !== RB() && (!!SB() || !VB && (null !== (BB = null === (OB = RB()) || void 0 === OB || null === (GB = OB.view) || void 0 === GB ? void 0 : GB.kP) && void 0 !== BB ? BB : 0) < WB && ZB() - AB < jB)
           },
-          watchPlayback: BH => {
-            const LH = HH.watchViewer((() => {
-                TH ||= null !== PH && UH(), BH()
+          watchPlayback: OB => {
+            const GB = BB.watchViewer((() => {
+                VB ||= null !== AB && SB(), OB()
               })),
-              AH = setTimeout(BH, tH + 1);
+              YB = setTimeout(OB, jB + 1);
             return () => {
-              clearTimeout(AH), LH()
+              clearTimeout(YB), GB()
             }
           },
           playbackFailure: () => {
-            var HH, BH;
-            const LH = xH();
-            return null === LH ? "The replay closed before the video finished." : (null !== (HH = null === (BH = LH.view) || void 0 === BH ? void 0 : BH.IX) && void 0 !== HH ? HH : 0) >= vH ? null : TH ? "The replay stopped before the video finished." : "The replay didn't start playing."
+            var BB, OB;
+            const GB = RB();
+            return null === GB ? "The replay closed before the video finished." : (null !== (BB = null === (OB = GB.view) || void 0 === OB ? void 0 : OB.kP) && void 0 !== BB ? BB : 0) >= WB ? null : VB ? "The replay stopped before the video finished." : "The replay didn't start playing."
           },
-          canvas: () => QH,
+          canvas: () => qB,
           closeViewer: () => {
-            HH.requestViewer("close")
+            BB.requestViewer("close")
           },
           reopenViewer: () => {
-            HH.requestViewer("open")
+            BB.requestViewer("open")
           },
-          holdInput: hH.g
+          holdInput: oB.g
         }
-      }(HH)))
+      }(BB)))
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

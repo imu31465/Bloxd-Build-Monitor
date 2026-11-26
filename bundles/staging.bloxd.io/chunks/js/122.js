@@ -1,89 +1,89 @@
 export const id = 122;
 export const ids = [122, 706];
 export const modules = {
-  5454: (HH, BH, LH) => {
-    var AH = LH(5462);
+  5460: (BB, OB, GB) => {
+    var YB = GB(5467);
 
-    function rH() {}
+    function DB() {}
 
-    function SH() {}
-    SH.resetWarningCache = rH, HH.exports = function() {
-      function HH(HH, BH, LH, rH, SH, hH) {
-        if (hH !== AH) {
-          var tH = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw tH.name = "Invariant Violation", tH
+    function QB() {}
+    QB.resetWarningCache = DB, BB.exports = function() {
+      function BB(BB, OB, GB, DB, QB, oB) {
+        if (oB !== YB) {
+          var jB = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw jB.name = "Invariant Violation", jB
         }
       }
 
-      function BH() {
-        return HH
+      function OB() {
+        return BB
       }
-      HH.isRequired = HH;
-      var LH = {
-        array: HH,
-        bigint: HH,
-        bool: HH,
-        func: HH,
-        number: HH,
-        object: HH,
-        string: HH,
-        symbol: HH,
-        any: HH,
-        arrayOf: BH,
-        element: HH,
-        elementType: HH,
-        instanceOf: BH,
-        node: HH,
-        objectOf: BH,
-        oneOf: BH,
-        oneOfType: BH,
-        shape: BH,
-        exact: BH,
-        checkPropTypes: SH,
-        resetWarningCache: rH
+      BB.isRequired = BB;
+      var GB = {
+        array: BB,
+        bigint: BB,
+        bool: BB,
+        func: BB,
+        number: BB,
+        object: BB,
+        string: BB,
+        symbol: BB,
+        any: BB,
+        arrayOf: OB,
+        element: BB,
+        elementType: BB,
+        instanceOf: OB,
+        node: BB,
+        objectOf: OB,
+        oneOf: OB,
+        oneOfType: OB,
+        shape: OB,
+        exact: OB,
+        checkPropTypes: QB,
+        resetWarningCache: DB
       };
-      return LH.PropTypes = LH, LH
+      return GB.PropTypes = GB, GB
     }
   },
-  5450: (HH, BH, LH) => {
-    HH.exports = LH(5454)()
+  5456: (BB, OB, GB) => {
+    BB.exports = GB(5460)()
   },
-  5462: HH => {
-    HH.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  5467: BB => {
+    BB.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  7147: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      default: () => EH
+  7132: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      default: () => MB
     });
-    var AH = LH(1509),
-      rH = LH(1455),
-      SH = LH(1123),
-      hH = LH(7149),
-      tH = LH(7129),
-      zH = LH(7111),
-      CH = LH(1225);
+    var YB = GB(1560),
+      DB = GB(1485),
+      QB = GB(1175),
+      oB = GB(7139),
+      jB = GB(7116),
+      yB = GB(7099),
+      JB = GB(1282);
 
-    function EH() {
+    function MB() {
       const {
-        t: HH
-      } = (0, SH.B)(), BH = (0, AH.useNavigatePreserveSearch)();
-      return (0, tH.d)(), (0, CH.jsxs)("div", {
+        t: BB
+      } = (0, QB.H)(), OB = (0, YB.useNavigatePreserveSearch)();
+      return (0, jB.c)(), (0, JB.jsxs)("div", {
         className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, CH.jsx)("div", {
+        children: [(0, JB.jsx)("div", {
           className: "ShaderPackPublishBack",
-          children: (0, CH.jsx)(rH.e, {
+          children: (0, JB.jsx)(DB.c, {
             onClick: () => {
-              BH(zH.P)
+              OB(yB.V)
             },
-            children: HH("shaderPackListing:backToPacks")
+            children: BB("shaderPackListing:backToPacks")
           })
-        }), (0, CH.jsx)("h1", {
+        }), (0, JB.jsx)("h1", {
           className: "ShaderPackPublishTitle",
-          children: HH("shaderPackListing:publishTitle")
-        }), (0, CH.jsx)(hH.ShaderPackPublishForm, {
+          children: BB("shaderPackListing:publishTitle")
+        }), (0, JB.jsx)(oB.ShaderPackPublishForm, {
           existing: null,
-          onPublished: HH => {
-            BH((0, zH.S)(HH.packId), {
+          onPublished: BB => {
+            OB((0, yB.$)(BB.packId), {
               replace: !0
             })
           }
@@ -91,131 +91,131 @@ export const modules = {
       })
     }
   },
-  7129: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => GH,
-      g: () => YH,
-      i: () => XH,
-      k: () => uH
+  7116: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => zB,
+      e: () => lB,
+      i: () => PB,
+      k: () => pB
     });
-    var AH = LH(45),
-      rH = LH(7114),
-      SH = LH(1502),
-      hH = LH(7111),
-      tH = LH(7138),
-      zH = LH(1061);
-    const CH = "shaderPackListingView",
-      EH = "shaderPackListingFilterOpen";
+    var YB = GB(56),
+      DB = GB(7107),
+      QB = GB(1540),
+      oB = GB(7099),
+      jB = GB(7122),
+      yB = GB(1112);
+    const JB = "shaderPackListingView",
+      MB = "shaderPackListingFilterOpen";
 
-    function XH() {
-      var HH;
-      const [BH, LH] = (0, tH.b)(CH, rH.L[0]);
-      return [null !== (HH = rH.L.find((HH => HH === BH))) && void 0 !== HH ? HH : rH.L[0], LH]
+    function PB() {
+      var BB;
+      const [OB, GB] = (0, jB.e)(JB, DB.F[0]);
+      return [null !== (BB = DB.F.find((BB => BB === OB))) && void 0 !== BB ? BB : DB.F[0], GB]
     }
 
-    function GH() {
-      (0, AH.useEffect)((() => () => {
-        window.location.pathname.startsWith(hH.P) || (0, hH.k)()
+    function zB() {
+      (0, YB.useEffect)((() => () => {
+        window.location.pathname.startsWith(oB.V) || (0, oB.g)()
       }), [])
     }
 
-    function YH() {
-      return (0, tH.b)(EH, !1)
+    function lB() {
+      return (0, jB.e)(MB, !1)
     }
 
-    function uH() {
+    function pB() {
       const {
-        userContext: HH,
-        isUserContextUpdating: BH
-      } = (0, zH.e)(), [LH, rH] = (0, AH.useState)(null), hH = (0, AH.useRef)(new Set);
+        userContext: BB,
+        isUserContextUpdating: OB
+      } = (0, yB.d)(), [GB, DB] = (0, YB.useState)(null), oB = (0, YB.useRef)(new Set);
 
-      function tH(HH, BH) {
-        rH((LH => {
-          const AH = new Set(LH);
-          return BH ? AH.add(HH) : AH.delete(HH), AH
+      function jB(BB, OB) {
+        DB((GB => {
+          const YB = new Set(GB);
+          return OB ? YB.add(BB) : YB.delete(BB), YB
         }))
       }
-      return (0, AH.useEffect)((() => {
-        if (BH) return;
-        let LH = !1;
-        return SH.d.getFavouriteShaderPacks(HH).then((HH => {
-          LH || rH(new Set(HH))
-        })).catch((HH => {
-          console.error("Failed to get favourite shader packs", HH), LH || rH(new Set)
+      return (0, YB.useEffect)((() => {
+        if (OB) return;
+        let GB = !1;
+        return QB.b.getFavouriteShaderPacks(BB).then((BB => {
+          GB || DB(new Set(BB))
+        })).catch((BB => {
+          console.error("Failed to get favourite shader packs", BB), GB || DB(new Set)
         })), () => {
-          LH = !0
+          GB = !0
         }
-      }), [HH, BH]), {
-        isFavourite: HH => null === LH ? null : LH.has(HH),
-        toggle: function(BH) {
-          if (null === LH || hH.current.has(BH)) return;
-          hH.current.add(BH);
-          const AH = !LH.has(BH);
-          tH(BH, AH), (AH ? SH.d.favouriteShaderPack(HH, BH) : SH.d.unfavouriteShaderPack(HH, BH)).catch((HH => {
-            console.error("Failed to change a favourite shader pack", HH), tH(BH, !AH)
+      }), [BB, OB]), {
+        isFavourite: BB => null === GB ? null : GB.has(BB),
+        toggle: function(OB) {
+          if (null === GB || oB.current.has(OB)) return;
+          oB.current.add(OB);
+          const YB = !GB.has(OB);
+          jB(OB, YB), (YB ? QB.b.favouriteShaderPack(BB, OB) : QB.b.unfavouriteShaderPack(BB, OB)).catch((BB => {
+            console.error("Failed to change a favourite shader pack", BB), jB(OB, !YB)
           })).finally((() => {
-            hH.current.delete(BH)
+            oB.current.delete(OB)
           }))
         }
       }
     }
   },
-  7111: (HH, BH, LH) => {
-    LH.d(BH, {
-      B: () => mH,
-      F: () => EH,
-      I: () => IH,
-      L: () => QH,
-      M: () => NH,
-      N: () => qH,
-      P: () => hH,
-      R: () => gH,
-      S: () => zH,
-      T: () => tH,
-      X: () => cH,
-      _: () => eH,
-      ab: () => vH,
-      bb: () => oH,
-      e: () => xH,
-      h: () => bH,
-      j: () => WH,
-      k: () => GH,
-      m: () => XH,
-      n: () => fH,
-      p: () => YH,
-      q: () => lH,
-      s: () => RH,
-      w: () => uH,
-      z: () => MH
+  7099: (BB, OB, GB) => {
+    GB.d(OB, {
+      $: () => yB,
+      C: () => dB,
+      E: () => MB,
+      H: () => uB,
+      L: () => qB,
+      P: () => XB,
+      R: () => gB,
+      V: () => oB,
+      X: () => rB,
+      ab: () => jB,
+      b: () => RB,
+      c: () => fB,
+      eb: () => iB,
+      f: () => ZB,
+      g: () => zB,
+      hb: () => LB,
+      ib: () => WB,
+      j: () => PB,
+      lb: () => KB,
+      n: () => mB,
+      p: () => lB,
+      q: () => IB,
+      u: () => wB,
+      x: () => pB,
+      y: () => NB
     });
-    var AH = LH(7114),
-      rH = LH(152),
-      SH = LH(4969);
-    const hH = "/shader-packs",
-      tH = `${hH}/publish`;
+    var YB = GB(7107),
+      DB = GB(162),
+      QB = GB(4975);
+    const oB = "/shader-packs",
+      jB = `${oB}/publish`;
 
-    function zH(HH) {
-      return `${hH}/${encodeURIComponent(HH)}`
+    function yB(BB) {
+      return `${oB}/${encodeURIComponent(BB)}`
     }
-    let CH = null;
+    let JB = null;
 
-    function EH(HH) {
-      CH = HH
-    }
-
-    function XH() {
-      return CH
+    function MB(BB) {
+      JB = BB
     }
 
-    function GH() {
-      CH = null
+    function PB() {
+      return JB
     }
 
-    function YH(HH) {
-      return HH.playerHasRank("developer") || HH.playerHasRank("admin")
+    function zB() {
+      JB = null
     }
-    const uH = ["terrain", "water", "models", "sunShadows", "strict"],
-      QH = {
+
+    function lB(BB) {
+      return BB.playerHasRank("developer") || BB.playerHasRank("admin")
+    }
+    const pB = ["terrain", "water", "models", "sunShadows", "strict"],
+      qB = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -223,89 +223,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function WH(HH, BH) {
-      return HH.withFeatures.includes(BH) ? "with" : HH.withoutFeatures.includes(BH) ? "without" : null
+    function ZB(BB, OB) {
+      return BB.withFeatures.includes(OB) ? "with" : BB.withoutFeatures.includes(OB) ? "without" : null
     }
 
-    function MH(HH) {
-      return null === HH ? "with" : "with" === HH ? "without" : null
+    function NB(BB) {
+      return null === BB ? "with" : "with" === BB ? "without" : null
     }
 
-    function xH(HH) {
-      return "with" === HH ? "only" : null === HH ? "include" : void 0
+    function RB(BB) {
+      return "with" === BB ? "only" : null === BB ? "include" : void 0
     }
 
-    function vH(HH, BH) {
-      const LH = WH(HH, BH),
-        AH = HH => HH.filter((HH => HH !== BH));
+    function WB(BB, OB) {
+      const GB = ZB(BB, OB),
+        YB = BB => BB.filter((BB => BB !== OB));
       return {
-        withFeatures: null === LH ? [...HH.withFeatures, BH] : AH(HH.withFeatures),
-        withoutFeatures: "with" === LH ? [...HH.withoutFeatures, BH] : AH(HH.withoutFeatures)
+        withFeatures: null === GB ? [...BB.withFeatures, OB] : YB(BB.withFeatures),
+        withoutFeatures: "with" === GB ? [...BB.withoutFeatures, OB] : YB(BB.withoutFeatures)
       }
     }
-    const PH = "section",
-      TH = "sort",
-      UH = "filters",
-      VH = "q",
-      OH = "banned",
-      bH = "popular",
-      kH = "strict";
+    const AB = "section",
+      VB = "sort",
+      SB = "filters",
+      nB = "q",
+      UB = "banned",
+      fB = "popular",
+      kB = "strict";
 
-    function mH(HH) {
-      var BH, LH, rH;
-      const hH = HH.get(PH),
-        tH = (null !== (BH = HH.get(UH)) && void 0 !== BH ? BH : kH).split(","),
-        zH = HH.get(OH);
+    function dB(BB) {
+      var OB, GB, DB;
+      const oB = BB.get(AB),
+        jB = (null !== (OB = BB.get(SB)) && void 0 !== OB ? OB : kB).split(","),
+        yB = BB.get(UB);
       return {
-        section: "favourites" === hH || "mine" === hH ? hH : "explore",
-        sort: null !== (LH = AH.B.find((BH => BH === HH.get(TH)))) && void 0 !== LH ? LH : bH,
-        withFeatures: uH.filter((HH => tH.includes(HH) && !tH.includes(`-${HH}`))),
-        withoutFeatures: uH.filter((HH => tH.includes(`-${HH}`))),
-        searchQuery: (null === (rH = HH.get(VH)) || void 0 === rH ? void 0 : rH.slice(0, AH.P)) || null,
-        pageNumber: (0, SH.g)(HH.get(SH.c)),
-        banned: "only" === zH ? "with" : "include" === zH ? null : "without"
+        section: "favourites" === oB || "mine" === oB ? oB : "explore",
+        sort: null !== (GB = YB.z.find((OB => OB === BB.get(VB)))) && void 0 !== GB ? GB : fB,
+        withFeatures: pB.filter((BB => jB.includes(BB) && !jB.includes(`-${BB}`))),
+        withoutFeatures: pB.filter((BB => jB.includes(`-${BB}`))),
+        searchQuery: (null === (DB = BB.get(nB)) || void 0 === DB ? void 0 : DB.slice(0, YB.M)) || null,
+        pageNumber: (0, QB.h)(BB.get(QB.d)),
+        banned: "only" === yB ? "with" : "include" === yB ? null : "without"
       }
     }
 
-    function oH(HH, BH) {
-      var LH;
-      const AH = KH(BH);
-      (0, SH.j)(HH, PH, "explore" === BH.section ? null : BH.section), (0, SH.j)(HH, TH, BH.sort === bH ? null : BH.sort), (0, SH.j)(HH, UH, AH === kH ? null : AH), (0, SH.j)(HH, VH, BH.searchQuery), (0, SH.j)(HH, OH, null !== (LH = xH(BH.banned)) && void 0 !== LH ? LH : null), (0, SH.m)(HH, BH.pageNumber)
+    function KB(BB, OB) {
+      var GB;
+      const YB = FB(OB);
+      (0, QB.i)(BB, AB, "explore" === OB.section ? null : OB.section), (0, QB.i)(BB, VB, OB.sort === fB ? null : OB.sort), (0, QB.i)(BB, SB, YB === kB ? null : YB), (0, QB.i)(BB, nB, OB.searchQuery), (0, QB.i)(BB, UB, null !== (GB = RB(OB.banned)) && void 0 !== GB ? GB : null), (0, QB.k)(BB, OB.pageNumber)
     }
 
-    function IH(HH) {
-      const BH = new URLSearchParams;
-      return oH(BH, {
+    function uB(BB) {
+      const OB = new URLSearchParams;
+      return KB(OB, {
         section: "explore",
-        sort: bH,
-        withFeatures: "strict" === HH ? [HH] : [HH, "strict"],
+        sort: fB,
+        withFeatures: "strict" === BB ? [BB] : [BB, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${hH}?${BH.toString()}`
+      }), `${oB}?${OB.toString()}`
     }
 
-    function fH(HH) {
-      return KH(HH) === kH
+    function mB(BB) {
+      return FB(BB) === kB
     }
 
-    function lH(HH) {
-      return null !== HH.searchQuery || "with" === HH.banned || KH(HH) !== kH
+    function IB(BB) {
+      return null !== BB.searchQuery || "with" === BB.banned || FB(BB) !== kB
     }
 
-    function KH(HH) {
-      return uH.flatMap((BH => {
-        const LH = WH(HH, BH);
-        return "with" === LH ? [BH] : "without" === LH ? [`-${BH}`] : []
+    function FB(BB) {
+      return pB.flatMap((OB => {
+        const GB = ZB(BB, OB);
+        return "with" === GB ? [OB] : "without" === GB ? [`-${OB}`] : []
       })).join(",")
     }
-    const cH = {
+    const iB = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      eH = {
+      LB = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -313,107 +313,107 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function qH(HH) {
-      return Math.round(100 * Math.max(0, 1 - 1 / HH))
+    function gB(BB) {
+      return Math.round(100 * Math.max(0, 1 - 1 / BB))
     }
 
-    function gH(HH, BH, LH, rH) {
-      const SH = [];
-      HH.isBanned && SH.push({
+    function rB(BB, OB, GB, DB) {
+      const QB = [];
+      BB.isBanned && QB.push({
         tone: "warning",
-        text: rH("shaderPackListing:ownerBanned"),
+        text: DB("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: hH
-      } = HH;
-      if (null === HH.brokenError || hH && !hH.error || SH.push({
+        pending: oB
+      } = BB;
+      if (null === BB.brokenError || oB && !oB.error || QB.push({
           tone: "warning",
-          text: rH("shaderPackListing:ownerBroken"),
-          detail: HH.brokenError
-        }), null !== hH && void 0 !== hH && hH.error) SH.push({
+          text: DB("shaderPackListing:ownerBroken"),
+          detail: BB.brokenError
+        }), null !== oB && void 0 !== oB && oB.error) QB.push({
         tone: "warning",
-        text: rH(BH ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, AH.o)(hH.error) ? null : hH.error
+        text: DB(OB ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, YB.n)(oB.error) ? null : oB.error
       });
-      else if (hH) {
-        const HH = null === hH.renderNotBefore ? 0 : hH.renderNotBefore - LH,
-          AH = String(Math.ceil(HH / 6e4)),
-          tH = rH(BH ? HH > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : HH > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: AH
+      else if (oB) {
+        const BB = null === oB.renderNotBefore ? 0 : oB.renderNotBefore - GB,
+          YB = String(Math.ceil(BB / 6e4)),
+          jB = DB(OB ? BB > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : BB > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: YB
           });
-        SH.push({
+        QB.push({
           tone: "info",
-          text: tH,
+          text: jB,
           detail: null
         })
       }
-      return HH.listed || SH.push({
+      return BB.listed || QB.push({
         tone: "info",
-        text: rH("shaderPackListing:ownerUnlisted"),
+        text: DB("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), SH
+      }), QB
     }
 
-    function NH(HH) {
-      return Math.max(1, Math.round(HH / 1024))
+    function XB(BB) {
+      return Math.max(1, Math.round(BB / 1024))
     }
 
-    function RH(HH, BH, LH) {
-      return HH instanceof rH.e && HH.errorMessageForUser ? HH.errorMessageForUser : BH(LH)
+    function wB(BB, OB, GB) {
+      return BB instanceof DB.d && BB.errorMessageForUser ? BB.errorMessageForUser : OB(GB)
     }
   },
-  7138: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH
+  7122: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB
     });
-    var AH = LH(45),
-      rH = LH(30);
+    var YB = GB(56),
+      DB = GB(31);
 
-    function SH(HH, BH) {
-      var LH;
-      const [SH, hH] = (0, AH.useState)(null !== (LH = rH.e.getItem(HH)) && void 0 !== LH ? LH : BH);
-      return [SH, BH => {
-        rH.e.setItem(HH, BH), hH(BH)
+    function QB(BB, OB) {
+      var GB;
+      const [QB, oB] = (0, YB.useState)(null !== (GB = DB.g.getItem(BB)) && void 0 !== GB ? GB : OB);
+      return [QB, OB => {
+        DB.g.setItem(BB, OB), oB(OB)
       }]
     }
   },
-  7209: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH,
-      e: () => SH
+  7198: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      e: () => QB
     });
-    var AH = LH(30);
-    const rH = "shaderPack";
-    async function SH() {
-      var HH;
-      let BH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (HH = await AH.c.getItem(rH, BH)) && void 0 !== HH ? HH : null
+    var YB = GB(31);
+    const DB = "shaderPack";
+    async function QB() {
+      var BB;
+      let OB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (BB = await YB.d.getItem(DB, OB)) && void 0 !== BB ? BB : null
     }
   },
-  7114: (HH, BH, LH) => {
-    LH.d(BH, {
-      B: () => SH,
-      F: () => tH,
-      H: () => hH,
-      L: () => AH,
-      M: () => GH,
-      P: () => EH,
-      Q: () => PH,
-      R: () => XH,
-      V: () => CH,
-      d: () => uH,
-      g: () => WH,
-      i: () => QH,
-      m: () => YH,
-      o: () => vH,
-      s: () => UH,
-      v: () => zH,
-      w: () => rH,
-      x: () => TH
+  7107: (BB, OB, GB) => {
+    GB.d(OB, {
+      B: () => jB,
+      E: () => oB,
+      F: () => YB,
+      I: () => zB,
+      M: () => MB,
+      Q: () => AB,
+      U: () => PB,
+      X: () => JB,
+      e: () => pB,
+      h: () => ZB,
+      i: () => qB,
+      l: () => lB,
+      n: () => WB,
+      q: () => SB,
+      r: () => yB,
+      t: () => DB,
+      x: () => VB,
+      z: () => QB
     });
-    const AH = ["forest", "desert", "water", "night", "cave"];
-    const rH = {
+    const YB = ["forest", "desert", "water", "night", "cave"];
+    const DB = {
         full: {
           width: 3840,
           height: 2160
@@ -427,49 +427,49 @@ export const modules = {
           height: 360
         }
       },
-      SH = ["popular", "updated", "newest"],
-      hH = 3,
-      tH = 32,
-      zH = 300;
+      QB = ["popular", "updated", "newest"],
+      oB = 3,
+      jB = 32,
+      yB = 300;
 
-    function CH(HH, BH) {
-      return HH.slice(0, BH).replace(/[\uD800-\uDBFF]$/, "")
+    function JB(BB, OB) {
+      return BB.slice(0, OB).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const EH = 64,
-      XH = 512,
-      GH = 18e5;
+    const MB = 64,
+      PB = 512,
+      zB = 18e5;
 
-    function YH(HH) {
-      const BH = HH,
-        LH = null === BH || void 0 === BH ? void 0 : BH.files;
-      return "number" === typeof(null === BH || void 0 === BH ? void 0 : BH.apiVersion) && "string" === typeof BH.name && (null === BH.author || "string" === typeof BH.author) && (void 0 === BH.keepCircleShadows || "boolean" === typeof BH.keepCircleShadows) && "object" === typeof LH && null !== LH && Object.values(LH).every((HH => "string" === typeof HH))
+    function lB(BB) {
+      const OB = BB,
+        GB = null === OB || void 0 === OB ? void 0 : OB.files;
+      return "number" === typeof(null === OB || void 0 === OB ? void 0 : OB.apiVersion) && "string" === typeof OB.name && (null === OB.author || "string" === typeof OB.author) && (void 0 === OB.keepCircleShadows || "boolean" === typeof OB.keepCircleShadows) && "object" === typeof GB && null !== GB && Object.values(GB).every((BB => "string" === typeof BB))
     }
-    const uH = "Bloxdhub",
-      QH = "https://bloxdhub.com/shaders";
+    const pB = "Bloxdhub",
+      qB = "https://bloxdhub.com/shaders";
 
-    function WH(HH) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(HH)}`
+    function ZB(BB) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(BB)}`
     }
-    const MH = "Screenshot generation failed.",
-      xH = "Its screenshots couldn't be generated:";
+    const NB = "Screenshot generation failed.",
+      RB = "Its screenshots couldn't be generated:";
 
-    function vH(HH) {
-      var BH;
-      return HH === MH || null !== (BH = null === HH || void 0 === HH ? void 0 : HH.startsWith(xH)) && void 0 !== BH && BH
-    }
-
-    function PH(HH, BH) {
-      return `shaderPacks/${HH}/${BH}.json`
+    function WB(BB) {
+      var OB;
+      return BB === NB || null !== (OB = null === BB || void 0 === BB ? void 0 : BB.startsWith(RB)) && void 0 !== OB && OB
     }
 
-    function TH(HH, BH, LH, AH) {
-      return null === BH.renderId ? UH(HH, BH.baselineVersion, LH, AH) : `${HH}/${function(HH,BH,LH,AH){return`shaderPacks/${HH}/${BH}/${LH}-${AH}.webp`}(BH.packId,BH.renderId,LH,AH)}`
+    function AB(BB, OB) {
+      return `shaderPacks/${BB}/${OB}.json`
     }
 
-    function UH(HH, BH, LH, AH) {
-      return `${HH}/${function(HH,BH,LH){return`shaderPacks/baseline/${HH}/${BH}-${LH}.webp`}(BH,LH,AH)}`
+    function VB(BB, OB, GB, YB) {
+      return null === OB.renderId ? SB(BB, OB.baselineVersion, GB, YB) : `${BB}/${function(BB,OB,GB,YB){return`shaderPacks/${BB}/${OB}/${GB}-${YB}.webp`}(OB.packId,OB.renderId,GB,YB)}`
+    }
+
+    function SB(BB, OB, GB, YB) {
+      return `${BB}/${function(BB,OB,GB){return`shaderPacks/baseline/${BB}/${OB}-${GB}.webp`}(OB,GB,YB)}`
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

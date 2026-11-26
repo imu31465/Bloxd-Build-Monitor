@@ -1,497 +1,497 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  37279: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      drawBlockIcon: () => xH,
-      drawBlockIconUrl: () => vH,
-      getDrawnBlockIcon: () => MH,
-      resetBlockIconDrawingForTests: () => uH
+  37071: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      drawBlockIcon: () => RB,
+      drawBlockIconUrl: () => WB,
+      getDrawnBlockIcon: () => NB,
+      resetBlockIconDrawingForTests: () => pB
     });
-    var AH = LH(37285);
-    const rH = {
+    var YB = GB(37078);
+    const DB = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      SH = {
+      QB = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      hH = {
+      oB = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const tH = 1e-6;
+    const jB = 1e-6;
 
-    function zH(HH, BH, LH, AH) {
+    function yB(BB, OB, GB, YB) {
       let {
-        origin: rH,
-        across: SH,
-        down: hH,
-        texture: zH,
-        rect: [CH, EH, XH, GH],
-        shade: YH
-      } = AH;
-      const uH = SH.x * hH.y - SH.y * hH.x;
-      if (Math.abs(uH) < 1e-9) return;
-      const QH = [rH.x, rH.x + SH.x, rH.x + hH.x, rH.x + SH.x + hH.x],
-        WH = [rH.y, rH.y + SH.y, rH.y + hH.y, rH.y + SH.y + hH.y],
-        MH = Math.max(0, Math.floor(Math.min(...QH))),
-        xH = Math.min(LH - 1, Math.ceil(Math.max(...QH))),
-        vH = Math.max(0, Math.floor(Math.min(...WH))),
-        PH = Math.min(LH - 1, Math.ceil(Math.max(...WH)));
-      for (let TH = vH; TH <= PH; TH++)
-        for (let AH = MH; AH <= xH; AH++) {
-          const QH = AH + .5 - rH.x,
-            WH = TH + .5 - rH.y,
-            MH = (QH * hH.y - WH * hH.x) / uH,
-            xH = (SH.x * WH - SH.y * QH) / uH;
-          if (MH < -tH || MH > 1 + tH || xH < -tH || xH > 1 + tH) continue;
-          const vH = TH * LH + AH;
-          BH[vH] = 1;
-          const PH = CH + Math.min(Math.max(MH, 0), 1) * (XH - CH),
-            UH = EH + Math.min(Math.max(xH, 0), 1) * (GH - EH),
-            VH = Math.min(zH.width - 1, Math.floor(PH * zH.width)),
-            OH = 4 * (Math.min(zH.height - 1, Math.floor(UH * zH.height)) * zH.width + VH),
-            bH = zH.pixels[OH + 3] / 255;
-          if (0 === bH) continue;
-          const kH = 4 * vH,
-            mH = HH[kH + 3] / 255 * (1 - bH),
-            oH = bH + mH;
-          for (let BH = 0; BH < 3; BH++) HH[kH + BH] = (zH.pixels[OH + BH] * YH * bH + HH[kH + BH] * mH) / oH;
-          HH[kH + 3] = 255 * oH
+        origin: DB,
+        across: QB,
+        down: oB,
+        texture: yB,
+        rect: [JB, MB, PB, zB],
+        shade: lB
+      } = YB;
+      const pB = QB.x * oB.y - QB.y * oB.x;
+      if (Math.abs(pB) < 1e-9) return;
+      const qB = [DB.x, DB.x + QB.x, DB.x + oB.x, DB.x + QB.x + oB.x],
+        ZB = [DB.y, DB.y + QB.y, DB.y + oB.y, DB.y + QB.y + oB.y],
+        NB = Math.max(0, Math.floor(Math.min(...qB))),
+        RB = Math.min(GB - 1, Math.ceil(Math.max(...qB))),
+        WB = Math.max(0, Math.floor(Math.min(...ZB))),
+        AB = Math.min(GB - 1, Math.ceil(Math.max(...ZB)));
+      for (let VB = WB; VB <= AB; VB++)
+        for (let YB = NB; YB <= RB; YB++) {
+          const qB = YB + .5 - DB.x,
+            ZB = VB + .5 - DB.y,
+            NB = (qB * oB.y - ZB * oB.x) / pB,
+            RB = (QB.x * ZB - QB.y * qB) / pB;
+          if (NB < -jB || NB > 1 + jB || RB < -jB || RB > 1 + jB) continue;
+          const WB = VB * GB + YB;
+          OB[WB] = 1;
+          const AB = JB + Math.min(Math.max(NB, 0), 1) * (PB - JB),
+            SB = MB + Math.min(Math.max(RB, 0), 1) * (zB - MB),
+            nB = Math.min(yB.width - 1, Math.floor(AB * yB.width)),
+            UB = 4 * (Math.min(yB.height - 1, Math.floor(SB * yB.height)) * yB.width + nB),
+            fB = yB.pixels[UB + 3] / 255;
+          if (0 === fB) continue;
+          const kB = 4 * WB,
+            dB = BB[kB + 3] / 255 * (1 - fB),
+            KB = fB + dB;
+          for (let OB = 0; OB < 3; OB++) BB[kB + OB] = (yB.pixels[UB + OB] * lB * fB + BB[kB + OB] * dB) / KB;
+          BB[kB + 3] = 255 * KB
         }
     }
-    var CH = LH(37294);
-    const EH = new Map,
-      XH = new Map,
-      GH = new Map,
-      YH = new Map;
+    var JB = GB(37083);
+    const MB = new Map,
+      PB = new Map,
+      zB = new Map,
+      lB = new Map;
 
-    function uH() {
-      EH.clear(), XH.clear(), GH.clear(), YH.clear()
+    function pB() {
+      MB.clear(), PB.clear(), zB.clear(), lB.clear()
     }
 
-    function QH(HH, BH, LH) {
-      return `${BH}|${LH}|${HH}`
+    function qB(BB, OB, GB) {
+      return `${OB}|${GB}|${BB}`
     }
 
-    function WH(HH, BH, LH) {
-      let AH = HH.get(BH);
-      return void 0 === AH && (AH = LH().catch((LH => {
-        throw HH.delete(BH), LH
-      })), HH.set(BH, AH)), AH
+    function ZB(BB, OB, GB) {
+      let YB = BB.get(OB);
+      return void 0 === YB && (YB = GB().catch((GB => {
+        throw BB.delete(OB), GB
+      })), BB.set(OB, YB)), YB
     }
 
-    function MH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return XH.get(QH(HH, BH, LH))
+    function NB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return PB.get(qB(BB, OB, GB))
     }
 
-    function xH(HH, BH, LH, AH) {
-      const rH = QH(HH, BH, LH);
-      return WH(EH, rH, (async () => {
-        const SH = await PH(AH(HH), BH, LH);
-        return XH.set(rH, SH), SH
+    function RB(BB, OB, GB, YB) {
+      const DB = qB(BB, OB, GB);
+      return ZB(MB, DB, (async () => {
+        const QB = await AB(YB(BB), OB, GB);
+        return PB.set(DB, QB), QB
       }))
     }
 
-    function vH(HH, BH, LH, AH) {
-      return WH(GH, QH(HH, BH, LH), (async () => {
-        var rH;
-        const SH = AH(HH);
-        return null !== (rH = await (0, CH.c)(SH, BH, LH)) && void 0 !== rH ? rH : (await PH(SH, BH, LH)).toDataURL()
+    function WB(BB, OB, GB, YB) {
+      return ZB(zB, qB(BB, OB, GB), (async () => {
+        var DB;
+        const QB = YB(BB);
+        return null !== (DB = await (0, JB.e)(QB, OB, GB)) && void 0 !== DB ? DB : (await AB(QB, OB, GB)).toDataURL()
       }))
     }
-    async function PH(HH, BH, LH) {
+    async function AB(BB, OB, GB) {
       let {
-        top: tH,
-        left: CH,
-        right: EH,
-        itemType: XH
-      } = HH;
-      const [GH, YH, uH] = await Promise.all([TH(tH), TH(CH), TH(EH)]), QH = function(HH, BH, LH, rH) {
-        const SH = (0, AH.f)(LH, rH),
-          hH = SH * AH.b.across,
-          tH = SH * AH.b.down,
-          CH = SH * AH.b.up,
-          EH = Math.max(...BH.boxes.map((HH => HH[4]))),
-          XH = LH / 2,
-          GH = tH + (LH - tH - tH - EH * CH) / 2,
-          YH = (HH, BH, LH) => ({
-            x: XH + (HH - LH) * hH,
-            y: GH - tH + (HH + LH) * tH + (EH - BH) * CH
+        top: jB,
+        left: JB,
+        right: MB,
+        itemType: PB
+      } = BB;
+      const [zB, lB, pB] = await Promise.all([VB(jB), VB(JB), VB(MB)]), qB = function(BB, OB, GB, DB) {
+        const QB = (0, YB.k)(GB, DB),
+          oB = QB * YB.d.across,
+          jB = QB * YB.d.down,
+          JB = QB * YB.d.up,
+          MB = Math.max(...OB.boxes.map((BB => BB[4]))),
+          PB = GB / 2,
+          zB = jB + (GB - jB - jB - MB * JB) / 2,
+          lB = (BB, OB, GB) => ({
+            x: PB + (BB - GB) * oB,
+            y: zB - jB + (BB + GB) * jB + (MB - OB) * JB
           }),
-          uH = (HH, LH, AH, rH, SH, hH) => ({
-            origin: HH,
+          pB = (BB, GB, YB, DB, QB, oB) => ({
+            origin: BB,
             across: {
-              x: LH.x - HH.x,
-              y: LH.y - HH.y
+              x: GB.x - BB.x,
+              y: GB.y - BB.y
             },
             down: {
-              x: AH.x - HH.x,
-              y: AH.y - HH.y
+              x: YB.x - BB.x,
+              y: YB.y - BB.y
             },
-            texture: rH,
-            rect: BH.cropFaces ? SH : [0, 0, 1, 1],
-            shade: hH
+            texture: DB,
+            rect: OB.cropFaces ? QB : [0, 0, 1, 1],
+            shade: oB
           }),
-          QH = new Uint8ClampedArray(LH * LH * 4),
-          WH = new Uint8Array(LH * LH),
-          MH = AH.e;
-        for (const [AH, xH, vH, PH, TH, UH] of BH.boxes) {
-          const BH = uH(YH(PH, TH, UH), YH(PH, TH, vH), YH(PH, xH, UH), HH.right, [1 - UH, 1 - TH, 1 - vH, 1 - xH], MH.right),
-            rH = uH(YH(AH, TH, UH), YH(PH, TH, UH), YH(AH, xH, UH), HH.left, [AH, 1 - TH, PH, 1 - xH], MH.left),
-            SH = uH(YH(AH, TH, vH), YH(PH, TH, vH), YH(AH, TH, UH), HH.top, [AH, vH, PH, UH], MH.top);
-          for (const HH of [BH, rH, SH]) zH(QH, WH, LH, HH)
+          qB = new Uint8ClampedArray(GB * GB * 4),
+          ZB = new Uint8Array(GB * GB),
+          NB = YB.g;
+        for (const [YB, RB, WB, AB, VB, SB] of OB.boxes) {
+          const OB = pB(lB(AB, VB, SB), lB(AB, VB, WB), lB(AB, RB, SB), BB.right, [1 - SB, 1 - VB, 1 - WB, 1 - RB], NB.right),
+            DB = pB(lB(YB, VB, SB), lB(AB, VB, SB), lB(YB, RB, SB), BB.left, [YB, 1 - VB, AB, 1 - RB], NB.left),
+            QB = pB(lB(YB, VB, WB), lB(AB, VB, WB), lB(YB, VB, SB), BB.top, [YB, WB, AB, SB], NB.top);
+          for (const BB of [OB, DB, QB]) yB(qB, ZB, GB, BB)
         }
-        return (0, AH.g)(QH, LH, rH, (HH => 1 === WH[HH])), QH
+        return (0, YB.n)(qB, GB, DB, (BB => 1 === ZB[BB])), qB
       }({
-        top: GH,
-        left: YH,
-        right: uH
-      }, function(HH) {
-        return "SlabBlock" === HH ? SH : "StairsBlock" === HH ? hH : rH
-      }(XH), BH, LH), WH = document.createElement("canvas");
-      WH.width = BH, WH.height = BH;
-      const MH = WH.getContext("2d");
-      if (!MH) throw new Error("Failed to get 2D context");
-      return MH.putImageData(new ImageData(QH, BH, BH), 0, 0), WH
+        top: zB,
+        left: lB,
+        right: pB
+      }, function(BB) {
+        return "SlabBlock" === BB ? QB : "StairsBlock" === BB ? oB : DB
+      }(PB), OB, GB), ZB = document.createElement("canvas");
+      ZB.width = OB, ZB.height = OB;
+      const NB = ZB.getContext("2d");
+      if (!NB) throw new Error("Failed to get 2D context");
+      return NB.putImageData(new ImageData(qB, OB, OB), 0, 0), ZB
     }
 
-    function TH(HH) {
-      return WH(YH, HH, (async () => {
-        const BH = await (0, CH.j)(HH),
-          LH = document.createElement("canvas");
-        LH.width = BH.width, LH.height = BH.height;
-        const AH = LH.getContext("2d");
-        if (!AH) throw new Error("Failed to get 2D context");
-        return AH.drawImage(BH, 0, 0), {
-          width: BH.width,
-          height: BH.height,
-          pixels: AH.getImageData(0, 0, BH.width, BH.height).data
+    function VB(BB) {
+      return ZB(lB, BB, (async () => {
+        const OB = await (0, JB.n)(BB),
+          GB = document.createElement("canvas");
+        GB.width = OB.width, GB.height = OB.height;
+        const YB = GB.getContext("2d");
+        if (!YB) throw new Error("Failed to get 2D context");
+        return YB.drawImage(OB, 0, 0), {
+          width: OB.width,
+          height: OB.height,
+          pixels: YB.getImageData(0, 0, OB.width, OB.height).data
         }
       }))
     }
   },
-  37294: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => mH,
-      f: () => oH,
-      g: () => TH,
-      j: () => vH,
-      m: () => UH
+  37083: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => dB,
+      i: () => KB,
+      k: () => VB,
+      n: () => WB,
+      q: () => SB
     });
-    var AH = LH(257),
-      rH = LH(81);
-    const SH = new(LH(37297).b)(new URL(LH.p + LH.u(3), LH.b), {
+    var YB = GB(271),
+      DB = GB(92);
+    const QB = new(GB(37085).d)(new URL(GB.p + GB.u(3), GB.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var hH = LH(1863),
-      tH = LH(2219);
-    const zH = 1e4,
-      CH = 3e4;
-    let EH = null,
-      XH = null,
-      GH = null,
-      YH = !1,
-      uH = 0;
-    const QH = new Map;
-    let WH = null;
-    const MH = new Map,
-      xH = new Map;
+    var oB = GB(1896),
+      jB = GB(2259);
+    const yB = 1e4,
+      JB = 3e4;
+    let MB = null,
+      PB = null,
+      zB = null,
+      lB = !1,
+      pB = 0;
+    const qB = new Map;
+    let ZB = null;
+    const NB = new Map,
+      RB = new Map;
 
-    function vH(HH) {
-      const BH = new Promise(((BH, LH) => {
-        const AH = new Image;
-        AH.crossOrigin = "anonymous", AH.fetchPriority = "high", AH.onload = () => {
-          BH(AH)
-        }, AH.onerror = () => {
-          LH(new Error(`A block icon's texture did not load: ${HH.slice(0,100)}`))
-        }, AH.src = HH
+    function WB(BB) {
+      const OB = new Promise(((OB, GB) => {
+        const YB = new Image;
+        YB.crossOrigin = "anonymous", YB.fetchPriority = "high", YB.onload = () => {
+          OB(YB)
+        }, YB.onerror = () => {
+          GB(new Error(`A block icon's texture did not load: ${BB.slice(0,100)}`))
+        }, YB.src = BB
       }));
-      return (0, tH.f)(BH)
+      return (0, jB.e)(OB)
     }
 
-    function PH(HH) {
-      var BH, LH;
-      YH || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${HH}`), YH = !0, null === (BH = EH) || void 0 === BH || BH.terminate(), EH = null, XH = null, MH.clear(), xH.clear();
-      for (const AH of QH.values()) AH(null);
-      QH.clear(), null === (LH = WH) || void 0 === LH || LH()
+    function AB(BB) {
+      var OB, GB;
+      lB || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${BB}`), lB = !0, null === (OB = MB) || void 0 === OB || OB.terminate(), MB = null, PB = null, NB.clear(), RB.clear();
+      for (const YB of qB.values()) YB(null);
+      qB.clear(), null === (GB = ZB) || void 0 === GB || GB()
     }
 
-    function TH() {
-      return null !== XH
+    function VB() {
+      return null !== PB
     }
 
-    function UH() {
-      return GH ??= async function() {
+    function SB() {
+      return zB ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === AH.e.ios_icon_worker_v1 && (0, rH.isWebKit)()) return;
+        if ("page" === YB.b.ios_icon_worker_v1 && (0, DB.isWebKit)()) return;
         try {
-          EH = await async function() {
-            return await SH.ready(), SH.start()
+          MB = await async function() {
+            return await QB.ready(), QB.start()
           }()
-        } catch (tH) {
-          return void PH(`did not start (${String(tH)})`)
+        } catch (jB) {
+          return void AB(`did not start (${String(jB)})`)
         }
-        let HH = () => {};
-        const BH = new Promise((BH => {
-          HH = BH
+        let BB = () => {};
+        const OB = new Promise((OB => {
+          BB = OB
         }));
-        EH.onmessage = BH => {
+        MB.onmessage = OB => {
           let {
-            data: LH
-          } = BH;
-          if ("started" === LH.type) XH = EH, HH();
-          else if ("failed" === LH.type) PH(`failed a draw (${LH.message})`);
+            data: GB
+          } = OB;
+          if ("started" === GB.type) PB = MB, BB();
+          else if ("failed" === GB.type) AB(`failed a draw (${GB.message})`);
           else {
-            var AH, rH;
-            null === (AH = QH.get(LH.id)) || void 0 === AH || AH(LH.url), QH.delete(LH.id), null === (rH = WH) || void 0 === rH || rH()
+            var YB, DB;
+            null === (YB = qB.get(GB.id)) || void 0 === YB || YB(GB.url), qB.delete(GB.id), null === (DB = ZB) || void 0 === DB || DB()
           }
-        }, EH.onerror = BH => {
-          BH.preventDefault(), PH(`stopped (${BH.message||"its script did not load or run"})`), HH()
+        }, MB.onerror = OB => {
+          OB.preventDefault(), AB(`stopped (${OB.message||"its script did not load or run"})`), BB()
         };
-        const LH = `did not start in ${CH/1e3} s`;
-        await (0, hH.j)(BH, CH, LH).catch((() => {
-          PH(LH)
+        const GB = `did not start in ${JB/1e3} s`;
+        await (0, oB.h)(OB, JB, GB).catch((() => {
+          AB(GB)
         }))
-      }(), GH
+      }(), zB
     }
 
-    function VH() {
-      if (null !== WH || 0 === QH.size) return;
-      const HH = new Promise((HH => {
-          WH = HH
+    function nB() {
+      if (null !== ZB || 0 === qB.size) return;
+      const BB = new Promise((BB => {
+          ZB = BB
         })),
-        BH = `did not answer in ${zH/1e3} s`;
-      (0, hH.j)(HH, zH, BH).then((() => {
-        WH = null, VH()
+        OB = `did not answer in ${yB/1e3} s`;
+      (0, oB.h)(BB, yB, OB).then((() => {
+        ZB = null, nB()
       }), (() => {
-        WH = null, PH(BH)
+        ZB = null, AB(OB)
       }))
     }
 
-    function OH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      HH.postMessage(BH, LH)
+    function UB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      BB.postMessage(OB, GB)
     }
 
-    function bH(HH, BH, LH, AH) {
-      let rH = BH.get(LH);
-      return void 0 === rH && (rH = AH().then((async BH => {
+    function fB(BB, OB, GB, YB) {
+      let DB = OB.get(GB);
+      return void 0 === DB && (DB = YB().then((async OB => {
         let {
-          image: LH,
-          request: AH
-        } = BH;
+          image: GB,
+          request: YB
+        } = OB;
         try {
-          const BH = await createImageBitmap(LH);
-          OH(HH, AH(BH), [BH])
-        } catch (rH) {
-          PH(`could not take an image (${String(rH)})`)
+          const OB = await createImageBitmap(GB);
+          UB(BB, YB(OB), [OB])
+        } catch (DB) {
+          AB(`could not take an image (${String(DB)})`)
         }
-      })), rH.catch((() => {
-        BH.get(LH) === rH && BH.delete(LH)
-      })), BH.set(LH, rH)), rH
+      })), DB.catch((() => {
+        OB.get(GB) === DB && OB.delete(GB)
+      })), OB.set(GB, DB)), DB
     }
-    async function kH(HH, BH) {
-      UH();
-      const LH = XH;
-      if (null === LH) return null;
-      if (await HH(LH), XH !== LH) return null;
-      const AH = ++uH;
-      return new Promise((HH => {
-        QH.set(AH, HH), OH(LH, BH(AH)), VH()
+    async function kB(BB, OB) {
+      SB();
+      const GB = PB;
+      if (null === GB) return null;
+      if (await BB(GB), PB !== GB) return null;
+      const YB = ++pB;
+      return new Promise((BB => {
+        qB.set(YB, BB), UB(GB, OB(YB)), nB()
       }))
     }
 
-    function mH(HH, BH, LH) {
-      return kH((BH => Promise.all([HH.top, HH.left, HH.right].map((HH => function(HH, BH) {
-        return bH(HH, MH, BH, (async () => ({
-          image: await vH(BH),
-          request: HH => ({
+    function dB(BB, OB, GB) {
+      return kB((OB => Promise.all([BB.top, BB.left, BB.right].map((BB => function(BB, OB) {
+        return fB(BB, NB, OB, (async () => ({
+          image: await WB(OB),
+          request: BB => ({
             type: "texture",
-            url: BH,
-            bitmap: HH
+            url: OB,
+            bitmap: BB
           })
         })))
-      }(BH, HH))))), (AH => ({
+      }(OB, BB))))), (YB => ({
         type: "draw",
-        id: AH,
-        ...HH,
-        size: BH,
-        outlineWidth: LH
+        id: YB,
+        ...BB,
+        size: OB,
+        outlineWidth: GB
       })))
     }
 
-    function oH(HH, BH, LH, AH) {
-      return kH((LH => function(HH, BH, LH) {
-        return bH(HH, xH, BH, (async () => {
+    function KB(BB, OB, GB, YB) {
+      return kB((GB => function(BB, OB, GB) {
+        return fB(BB, RB, OB, (async () => {
           const {
-            texture: HH,
-            ...AH
-          } = await LH();
+            texture: BB,
+            ...YB
+          } = await GB();
           return {
-            image: await vH(HH),
-            request: HH => ({
+            image: await WB(BB),
+            request: BB => ({
               type: "model",
-              name: BH,
-              bitmap: HH,
-              geometry: AH
+              name: OB,
+              bitmap: BB,
+              geometry: YB
             })
           }
         }))
-      }(LH, HH, BH)), (BH => ({
+      }(GB, BB, OB)), (OB => ({
         type: "drawModel",
-        id: BH,
-        name: HH,
-        size: LH,
-        outlineWidth: AH
+        id: OB,
+        name: BB,
+        size: GB,
+        outlineWidth: YB
       })))
     }
   },
-  37285: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      e: () => zH,
-      f: () => hH,
-      g: () => GH,
-      j: () => CH
+  37078: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => YB,
+      g: () => yB,
+      k: () => oB,
+      n: () => zB,
+      q: () => JB
     });
-    const AH = {
+    const YB = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      rH = .6,
-      SH = {
-        width: 2 * AH.across,
-        height: 2 * AH.down + AH.up
+      DB = .6,
+      QB = {
+        width: 2 * YB.across,
+        height: 2 * YB.down + YB.up
       };
 
-    function hH(HH, BH) {
-      const LH = BH > 0 ? BH + 1 : 0,
-        hH = HH * rH - BH / AH.across;
-      return Math.max(0, Math.min(hH, (HH - 2 * LH) / SH.height))
+    function oB(BB, OB) {
+      const GB = OB > 0 ? OB + 1 : 0,
+        oB = BB * DB - OB / YB.across;
+      return Math.max(0, Math.min(oB, (BB - 2 * GB) / QB.height))
     }
-    const tH = [15, 15, 15],
-      zH = {
+    const jB = [15, 15, 15],
+      yB = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function CH(HH, BH, LH, AH) {
+    function JB(BB, OB, GB, YB) {
       const {
-        vertices: rH,
-        uvs: tH,
-        indices: zH,
-        shades: CH
-      } = HH, EH = function(HH, BH) {
-        const LH = hH(HH, BH),
-          AH = SH.width * LH,
-          rH = SH.height * LH;
+        vertices: DB,
+        uvs: jB,
+        indices: yB,
+        shades: JB
+      } = BB, MB = function(BB, OB) {
+        const GB = oB(BB, OB),
+          YB = QB.width * GB,
+          DB = QB.height * GB;
         return {
-          left: (HH - AH) / 2,
-          top: (HH - rH) / 2,
-          width: AH,
-          height: rH
+          left: (BB - YB) / 2,
+          top: (BB - DB) / 2,
+          width: YB,
+          height: DB
         }
-      }(LH, AH), XH = new Float32Array(rH.length);
-      for (let SH = 0; SH < rH.length; SH += 3) XH[SH] = EH.left + rH[SH] * EH.width, XH[SH + 1] = EH.top + rH[SH + 1] * EH.height, XH[SH + 2] = rH[SH + 2];
-      const YH = new Float32Array(LH * LH).fill(-1 / 0),
-        uH = new Uint8ClampedArray(LH * LH * 4),
-        QH = 255 * HH.alphaCutoff;
-      for (let SH = 0; SH < zH.length; SH += 3) {
-        const [HH, AH, rH] = [zH[SH], zH[SH + 1], zH[SH + 2]], [hH, EH, GH] = [3 * HH, 3 * AH, 3 * rH], [WH, MH, xH, vH, PH, TH] = [XH[hH], XH[hH + 1], XH[EH], XH[EH + 1], XH[GH], XH[GH + 1]], UH = (xH - WH) * (TH - MH) - (PH - WH) * (vH - MH);
-        if (Math.abs(UH) < 1e-9) continue;
-        const VH = CH[SH / 3],
-          [OH, bH, kH, mH, oH, IH] = [tH[2 * HH], tH[2 * HH + 1], tH[2 * AH], tH[2 * AH + 1], tH[2 * rH], tH[2 * rH + 1]],
-          fH = Math.max(0, Math.floor(Math.min(WH, xH, PH))),
-          lH = Math.min(LH - 1, Math.ceil(Math.max(WH, xH, PH))),
-          KH = Math.max(0, Math.floor(Math.min(MH, vH, TH))),
-          cH = Math.min(LH - 1, Math.ceil(Math.max(MH, vH, TH)));
-        for (let SH = KH; SH <= cH; SH++)
-          for (let HH = fH; HH <= lH; HH++) {
-            const [AH, rH] = [HH + .5, SH + .5], tH = ((AH - WH) * (TH - MH) - (PH - WH) * (rH - MH)) / UH, zH = ((xH - WH) * (rH - MH) - (AH - WH) * (vH - MH)) / UH, CH = 1 - tH - zH;
-            if (CH < 0 || tH < 0 || zH < 0) continue;
-            const fH = CH * XH[hH + 2] + tH * XH[EH + 2] + zH * XH[GH + 2],
-              lH = SH * LH + HH;
-            if (fH <= YH[lH]) continue;
-            const KH = Math.max(0, Math.min(BH.width - 1, Math.floor((CH * OH + tH * kH + zH * oH) * BH.width))),
-              cH = 4 * (Math.max(0, Math.min(BH.height - 1, Math.floor((CH * bH + tH * mH + zH * IH) * BH.height))) * BH.width + KH);
-            BH.pixels[cH + 3] < QH || (YH[lH] = fH, uH[4 * lH] = BH.pixels[cH] * VH, uH[4 * lH + 1] = BH.pixels[cH + 1] * VH, uH[4 * lH + 2] = BH.pixels[cH + 2] * VH, uH[4 * lH + 3] = 255)
+      }(GB, YB), PB = new Float32Array(DB.length);
+      for (let QB = 0; QB < DB.length; QB += 3) PB[QB] = MB.left + DB[QB] * MB.width, PB[QB + 1] = MB.top + DB[QB + 1] * MB.height, PB[QB + 2] = DB[QB + 2];
+      const lB = new Float32Array(GB * GB).fill(-1 / 0),
+        pB = new Uint8ClampedArray(GB * GB * 4),
+        qB = 255 * BB.alphaCutoff;
+      for (let QB = 0; QB < yB.length; QB += 3) {
+        const [BB, YB, DB] = [yB[QB], yB[QB + 1], yB[QB + 2]], [oB, MB, zB] = [3 * BB, 3 * YB, 3 * DB], [ZB, NB, RB, WB, AB, VB] = [PB[oB], PB[oB + 1], PB[MB], PB[MB + 1], PB[zB], PB[zB + 1]], SB = (RB - ZB) * (VB - NB) - (AB - ZB) * (WB - NB);
+        if (Math.abs(SB) < 1e-9) continue;
+        const nB = JB[QB / 3],
+          [UB, fB, kB, dB, KB, uB] = [jB[2 * BB], jB[2 * BB + 1], jB[2 * YB], jB[2 * YB + 1], jB[2 * DB], jB[2 * DB + 1]],
+          mB = Math.max(0, Math.floor(Math.min(ZB, RB, AB))),
+          IB = Math.min(GB - 1, Math.ceil(Math.max(ZB, RB, AB))),
+          FB = Math.max(0, Math.floor(Math.min(NB, WB, VB))),
+          iB = Math.min(GB - 1, Math.ceil(Math.max(NB, WB, VB)));
+        for (let QB = FB; QB <= iB; QB++)
+          for (let BB = mB; BB <= IB; BB++) {
+            const [YB, DB] = [BB + .5, QB + .5], jB = ((YB - ZB) * (VB - NB) - (AB - ZB) * (DB - NB)) / SB, yB = ((RB - ZB) * (DB - NB) - (YB - ZB) * (WB - NB)) / SB, JB = 1 - jB - yB;
+            if (JB < 0 || jB < 0 || yB < 0) continue;
+            const mB = JB * PB[oB + 2] + jB * PB[MB + 2] + yB * PB[zB + 2],
+              IB = QB * GB + BB;
+            if (mB <= lB[IB]) continue;
+            const FB = Math.max(0, Math.min(OB.width - 1, Math.floor((JB * UB + jB * kB + yB * KB) * OB.width))),
+              iB = 4 * (Math.max(0, Math.min(OB.height - 1, Math.floor((JB * fB + jB * dB + yB * uB) * OB.height))) * OB.width + FB);
+            OB.pixels[iB + 3] < qB || (lB[IB] = mB, pB[4 * IB] = OB.pixels[iB] * nB, pB[4 * IB + 1] = OB.pixels[iB + 1] * nB, pB[4 * IB + 2] = OB.pixels[iB + 2] * nB, pB[4 * IB + 3] = 255)
           }
       }
-      return GH(uH, LH, AH), uH
+      return zB(pB, GB, YB), pB
     }
-    let EH = NaN,
-      XH = new Int32Array(0);
+    let MB = NaN,
+      PB = new Int32Array(0);
 
-    function GH(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BH => 0 !== HH[4 * BH + 3];
-      const rH = new Uint8Array(BH * BH);
-      for (let tH = 0; tH < BH * BH; tH++) rH[tH] = AH(tH) ? 1 : 0;
-      const SH = (HH, LH) => HH >= 0 && LH >= 0 && HH < BH && LH < BH && 0 === rH[LH * BH + HH],
-        hH = new Float32Array(BH * BH).fill(1 / 0),
-        zH = function(HH) {
-          if (HH !== EH) {
-            const BH = Math.ceil(HH + 1),
-              LH = [];
-            for (let AH = -BH; AH <= BH; AH++)
-              for (let rH = -BH; rH <= BH; rH++) {
-                const BH = rH * rH + AH * AH;
-                BH > 0 && BH < (HH + 1) ** 2 && LH.push(rH, AH, BH)
+    function zB(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : OB => 0 !== BB[4 * OB + 3];
+      const DB = new Uint8Array(OB * OB);
+      for (let jB = 0; jB < OB * OB; jB++) DB[jB] = YB(jB) ? 1 : 0;
+      const QB = (BB, GB) => BB >= 0 && GB >= 0 && BB < OB && GB < OB && 0 === DB[GB * OB + BB],
+        oB = new Float32Array(OB * OB).fill(1 / 0),
+        yB = function(BB) {
+          if (BB !== MB) {
+            const OB = Math.ceil(BB + 1),
+              GB = [];
+            for (let YB = -OB; YB <= OB; YB++)
+              for (let DB = -OB; DB <= OB; DB++) {
+                const OB = DB * DB + YB * YB;
+                OB > 0 && OB < (BB + 1) ** 2 && GB.push(DB, YB, OB)
               }
-            EH = HH, XH = Int32Array.from(LH)
+            MB = BB, PB = Int32Array.from(GB)
           }
-          return XH
-        }(LH);
-      for (let tH = 0; tH < BH; tH++)
-        for (let HH = 0; HH < BH; HH++) {
-          if (1 === rH[tH * BH + HH] && (SH(HH - 1, tH) || SH(HH + 1, tH) || SH(HH, tH - 1) || SH(HH, tH + 1)))
-            for (let LH = 0; LH < zH.length; LH += 3) {
-              const AH = HH + zH[LH],
-                rH = tH + zH[LH + 1];
-              if (AH >= 0 && rH >= 0 && AH < BH && rH < BH) {
-                const HH = rH * BH + AH;
-                hH[HH] = Math.min(hH[HH], zH[LH + 2])
+          return PB
+        }(GB);
+      for (let jB = 0; jB < OB; jB++)
+        for (let BB = 0; BB < OB; BB++) {
+          if (1 === DB[jB * OB + BB] && (QB(BB - 1, jB) || QB(BB + 1, jB) || QB(BB, jB - 1) || QB(BB, jB + 1)))
+            for (let GB = 0; GB < yB.length; GB += 3) {
+              const YB = BB + yB[GB],
+                DB = jB + yB[GB + 1];
+              if (YB >= 0 && DB >= 0 && YB < OB && DB < OB) {
+                const BB = DB * OB + YB;
+                oB[BB] = Math.min(oB[BB], yB[GB + 2])
               }
             }
         }
-      for (let CH = 0; CH < BH * BH; CH++) 1 !== rH[CH] && hH[CH] !== 1 / 0 && (HH.set(tH, 4 * CH), HH[4 * CH + 3] = Math.round(255 * Math.min(1, LH + 1 - Math.sqrt(hH[CH]))))
+      for (let JB = 0; JB < OB * OB; JB++) 1 !== DB[JB] && oB[JB] !== 1 / 0 && (BB.set(jB, 4 * JB), BB[4 * JB + 3] = Math.round(255 * Math.min(1, GB + 1 - Math.sqrt(oB[JB]))))
     }
   },
-  37297: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => rH
+  37085: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => DB
     });
-    const AH = {
-      wait: function(HH) {
-        return new Promise((BH => {
-          setTimeout(BH, HH)
+    const YB = {
+      wait: function(BB) {
+        return new Promise((OB => {
+          setTimeout(OB, BB)
         }))
       },
       stallMs: 2e4
     };
-    class rH {
-      constructor(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AH;
-        this.url = HH, this.options = BH, this.timing = LH, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = HH
+    class DB {
+      constructor(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : YB;
+        this.url = BB, this.options = OB, this.timing = GB, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = BB
       }
       ready() {
         if (null === this.fetched) {
-          const HH = new AbortController;
-          this.fetchAbort = HH, this.fetched = this.fetchWithRetries(HH.signal).then((BH => (this.fetchAbort === HH && (this.fetchAbort = null), BH)))
+          const BB = new AbortController;
+          this.fetchAbort = BB, this.fetched = this.fetchWithRetries(BB.signal).then((OB => (this.fetchAbort === BB && (this.fetchAbort = null), OB)))
         }
         return this.fetched
       }
@@ -507,51 +507,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(HH) {
-        for (let BH = 0;; BH++) {
-          const LH = new URL(this.url);
-          if (BH > 0 && LH.searchParams.set("cache-bust", `${Date.now()}-${BH}`), await this.fetchWhole(LH, HH)) return this.scriptUrl = LH, !0;
-          if (BH >= 3 || HH.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** BH), HH.aborted) return !1
+      async fetchWithRetries(BB) {
+        for (let OB = 0;; OB++) {
+          const GB = new URL(this.url);
+          if (OB > 0 && GB.searchParams.set("cache-bust", `${Date.now()}-${OB}`), await this.fetchWhole(GB, BB)) return this.scriptUrl = GB, !0;
+          if (OB >= 3 || BB.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** OB), BB.aborted) return !1
         }
       }
-      async fetchWhole(HH, BH) {
-        const LH = new AbortController;
-        let AH;
-        const rH = () => {
-            clearTimeout(AH), AH = setTimeout((() => {
-              LH.abort()
+      async fetchWhole(BB, OB) {
+        const GB = new AbortController;
+        let YB;
+        const DB = () => {
+            clearTimeout(YB), YB = setTimeout((() => {
+              GB.abort()
             }), this.timing.stallMs)
           },
-          SH = () => {
-            LH.abort()
+          QB = () => {
+            GB.abort()
           };
-        BH.addEventListener("abort", SH, {
+        OB.addEventListener("abort", QB, {
           once: !0
-        }), rH();
+        }), DB();
         try {
-          var hH;
-          const BH = await fetch(HH, {
-            signal: LH.signal
+          var oB;
+          const OB = await fetch(BB, {
+            signal: GB.signal
           });
-          if (!BH.ok) return !1;
-          const AH = null === (hH = BH.body) || void 0 === hH ? void 0 : hH.getReader();
-          if (!AH) return !1;
+          if (!OB.ok) return !1;
+          const YB = null === (oB = OB.body) || void 0 === oB ? void 0 : oB.getReader();
+          if (!YB) return !1;
           for (;;) {
             const {
-              done: HH
-            } = await AH.read();
-            if (HH) return !0;
-            rH()
+              done: BB
+            } = await YB.read();
+            if (BB) return !0;
+            DB()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(AH), BH.removeEventListener("abort", SH)
+          clearTimeout(YB), OB.removeEventListener("abort", QB)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

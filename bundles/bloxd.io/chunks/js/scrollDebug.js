@@ -1,25 +1,25 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  5158: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      MAX_LINES: () => tH,
-      MAX_SETTLE_MS: () => hH,
-      SETTLE_MS: () => SH,
-      ScrollDebugLog: () => PH,
-      changeText: () => WH,
-      elementText: () => xH,
-      fullStateText: () => QH,
-      startScrollDebug: () => TH,
-      touchedText: () => vH
+  5175: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      MAX_LINES: () => jB,
+      MAX_SETTLE_MS: () => oB,
+      SETTLE_MS: () => QB,
+      ScrollDebugLog: () => AB,
+      changeText: () => ZB,
+      elementText: () => RB,
+      fullStateText: () => qB,
+      startScrollDebug: () => VB,
+      touchedText: () => WB
     });
-    var AH = LH(15),
-      rH = LH(3105);
-    const SH = 300,
-      hH = 2e3,
-      tH = 40,
-      zH = 2,
-      CH = {
+    var YB = GB(16),
+      DB = GB(3136);
+    const QB = 300,
+      oB = 2e3,
+      jB = 40,
+      yB = 2,
+      JB = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      EH = Object.keys(CH),
-      XH = new Set(["scrollHeight", "innerHeight"]);
+      MB = Object.keys(JB),
+      PB = new Set(["scrollHeight", "innerHeight"]);
 
-    function GH(HH, BH) {
-      const LH = 10 ** BH;
-      return Math.round(HH * LH) / LH
+    function zB(BB, OB) {
+      const GB = 10 ** OB;
+      return Math.round(BB * GB) / GB
     }
 
-    function YH() {
-      const HH = window.visualViewport;
+    function lB() {
+      const BB = window.visualViewport;
       return {
-        vvOffsetTop: GH(HH.offsetTop, 1),
-        vvOffsetLeft: GH(HH.offsetLeft, 1),
-        vvPageTop: GH(HH.pageTop, 1),
-        vvPageLeft: GH(HH.pageLeft, 1),
-        vvHeight: GH(HH.height, 1),
-        vvScale: GH(HH.scale, 3),
-        scrollX: GH(window.scrollX, 1),
-        scrollY: GH(window.scrollY, 1),
+        vvOffsetTop: zB(BB.offsetTop, 1),
+        vvOffsetLeft: zB(BB.offsetLeft, 1),
+        vvPageTop: zB(BB.pageTop, 1),
+        vvPageLeft: zB(BB.pageLeft, 1),
+        vvHeight: zB(BB.height, 1),
+        vvScale: zB(BB.scale, 3),
+        scrollX: zB(window.scrollX, 1),
+        scrollY: zB(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function uH(HH, BH) {
-      return `${CH[HH]} ${BH}`
+    function pB(BB, OB) {
+      return `${JB[BB]} ${OB}`
     }
 
-    function QH(HH) {
-      return EH.map((BH => uH(BH, String(HH[BH])))).join(", ")
+    function qB(BB) {
+      return MB.map((OB => pB(OB, String(BB[OB])))).join(", ")
     }
 
-    function WH(HH, BH, LH, AH) {
-      return EH.flatMap((rH => {
-        const SH = HH[rH] !== BH[rH],
-          hH = LH[rH] < Math.min(HH[rH], BH[rH]) || AH[rH] > Math.max(HH[rH], BH[rH]);
-        if (!SH && !hH && !XH.has(rH)) return [];
-        return [uH(rH, `${SH?`${HH[rH]} -> ${BH[rH]}`:String(BH[rH])}${hH?` (via ${LH[rH]}..${AH[rH]})`:""}`)]
+    function ZB(BB, OB, GB, YB) {
+      return MB.flatMap((DB => {
+        const QB = BB[DB] !== OB[DB],
+          oB = GB[DB] < Math.min(BB[DB], OB[DB]) || YB[DB] > Math.max(BB[DB], OB[DB]);
+        if (!QB && !oB && !PB.has(DB)) return [];
+        return [pB(DB, `${QB?`${BB[DB]} -> ${OB[DB]}`:String(OB[DB])}${oB?` (via ${GB[DB]}..${YB[DB]})`:""}`)]
       })).join(", ")
     }
 
-    function MH(HH, BH, LH) {
-      return Object.fromEntries(EH.map((AH => [AH, LH(HH[AH], BH[AH])])))
+    function NB(BB, OB, GB) {
+      return Object.fromEntries(MB.map((YB => [YB, GB(BB[YB], OB[YB])])))
     }
 
-    function xH(HH) {
-      var BH;
-      const LH = (null !== (BH = HH.getAttribute("class")) && void 0 !== BH ? BH : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${HH.tagName.toLowerCase()}${LH?`.${LH}`:""}`
+    function RB(BB) {
+      var OB;
+      const GB = (null !== (OB = BB.getAttribute("class")) && void 0 !== OB ? OB : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${BB.tagName.toLowerCase()}${GB?`.${GB}`:""}`
     }
 
-    function vH(HH, BH) {
-      const LH = [];
-      for (let AH = HH.parentElement; null !== AH && LH.length < zH; AH = AH.parentElement) {
-        const HH = BH(AH);
-        "auto" !== HH && LH.push(`${HH} on ${xH(AH)}`)
+    function WB(BB, OB) {
+      const GB = [];
+      for (let YB = BB.parentElement; null !== YB && GB.length < yB; YB = YB.parentElement) {
+        const BB = OB(YB);
+        "auto" !== BB && GB.push(`${BB} on ${RB(YB)}`)
       }
-      return `${xH(HH)} touch-action ${BH(HH)}${LH.length>0?` (${LH.join(", ")})`:""}`
+      return `${RB(BB)} touch-action ${OB(BB)}${GB.length>0?` (${GB.join(", ")})`:""}`
     }
-    class PH {
-      constructor(HH) {
-        this.deps = HH, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const HH = this.deps.now(),
-            BH = HH - this.lastEventMs;
-          if (BH < SH && HH - this.burstStartMs < hH) return void(this.timer = setTimeout(this.settle, SH - BH));
+    class AB {
+      constructor(BB) {
+        this.deps = BB, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const BB = this.deps.now(),
+            OB = BB - this.lastEventMs;
+          if (OB < QB && BB - this.burstStartMs < oB) return void(this.timer = setTimeout(this.settle, QB - OB));
           this.timer = null;
-          const LH = this.deps.read(),
+          const GB = this.deps.read(),
             {
-              last: AH,
-              innerScrolled: rH,
-              burstTouch: zH
+              last: YB,
+              innerScrolled: DB,
+              burstTouch: yB
             } = this,
-            CH = MH(this.low, LH, Math.min),
-            XH = MH(this.high, LH, Math.max);
-          if (this.last = LH, this.low = LH, this.high = LH, this.innerScrolled = null, YH = CH, uH = XH, EH.every((HH => YH[HH] === uH[HH])) || !this.burstInGame || !this.deps.inGame()) return;
-          var YH, uH;
-          if (this.lines === tH) return this.capped = !0, void this.deps.log(`further changes unlogged: ${tH} lines logged`);
+            JB = NB(this.low, GB, Math.min),
+            PB = NB(this.high, GB, Math.max);
+          if (this.last = GB, this.low = GB, this.high = GB, this.innerScrolled = null, lB = JB, pB = PB, MB.every((BB => lB[BB] === pB[BB])) || !this.burstInGame || !this.deps.inGame()) return;
+          var lB, pB;
+          if (this.lines === jB) return this.capped = !0, void this.deps.log(`further changes unlogged: ${jB} lines logged`);
           this.lines++;
-          const QH = null === zH ? "no touch yet" : `touch on ${zH.text}, ${Math.round(this.burstStartMs-zH.atMs)} ms before`,
-            vH = null === rH ? "" : `; inner scroll ${xH(rH)} scrollTop ${GH(rH.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(HH-this.burstStartMs)} ms; ${QH}${vH}: ${WH(AH,LH,CH,XH)}`)
-        }, this.last = HH.read(), this.low = this.last, this.high = this.last, HH.log(`start: ${QH(this.last)}`)
+          const qB = null === yB ? "no touch yet" : `touch on ${yB.text}, ${Math.round(this.burstStartMs-yB.atMs)} ms before`,
+            WB = null === DB ? "" : `; inner scroll ${RB(DB)} scrollTop ${zB(DB.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(BB-this.burstStartMs)} ms; ${qB}${WB}: ${ZB(YB,GB,JB,PB)}`)
+        }, this.last = BB.read(), this.low = this.last, this.high = this.last, BB.log(`start: ${qB(this.last)}`)
       }
       moved() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const BH = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== HH && (null === BH || !HH.contains(BH.target))) return;
-        const LH = this.deps.now();
-        this.lastEventMs = LH, null === this.timer && (this.burstStartMs = LH, this.burstInGame = this.deps.inGame(), this.burstTouch = BH, this.timer = setTimeout(this.settle, SH));
-        const AH = this.deps.read();
-        this.low = MH(this.low, AH, Math.min), this.high = MH(this.high, AH, Math.max), this.innerScrolled = null !== HH && void 0 !== HH ? HH : this.innerScrolled
+        const OB = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== BB && (null === OB || !BB.contains(OB.target))) return;
+        const GB = this.deps.now();
+        this.lastEventMs = GB, null === this.timer && (this.burstStartMs = GB, this.burstInGame = this.deps.inGame(), this.burstTouch = OB, this.timer = setTimeout(this.settle, QB));
+        const YB = this.deps.read();
+        this.low = NB(this.low, YB, Math.min), this.high = NB(this.high, YB, Math.max), this.innerScrolled = null !== BB && void 0 !== BB ? BB : this.innerScrolled
       }
     }
 
-    function TH() {
-      let HH = null;
-      const BH = new PH({
-        read: YH,
-        inGame: () => "inGame" === AH.c.get("gameState"),
-        lastTouch: () => HH,
-        log: HH => {
-          (0, rH.j)("scroll", HH)
+    function VB() {
+      let BB = null;
+      const OB = new AB({
+        read: lB,
+        inGame: () => "inGame" === YB.c.get("gameState"),
+        lastTouch: () => BB,
+        log: BB => {
+          (0, DB.m)("scroll", BB)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (BH => {
-        if (BH.target instanceof Element) {
-          const LH = vH(BH.target, (HH => getComputedStyle(HH).touchAction));
-          HH = {
-            target: BH.target,
-            text: LH,
+      document.addEventListener("touchstart", (OB => {
+        if (OB.target instanceof Element) {
+          const GB = WB(OB.target, (BB => getComputedStyle(BB).touchAction));
+          BB = {
+            target: OB.target,
+            text: GB,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (HH => {
-        BH.moved(HH.target instanceof Element ? HH.target : null)
+      }), document.addEventListener("scroll", (BB => {
+        OB.moved(BB.target instanceof Element ? BB.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const LH = () => {
-        BH.moved()
+      const GB = () => {
+        OB.moved()
       };
-      window.addEventListener("resize", LH, {
+      window.addEventListener("resize", GB, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", LH, {
+      }), window.visualViewport.addEventListener("scroll", GB, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", LH, {
+      }), window.visualViewport.addEventListener("resize", GB, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

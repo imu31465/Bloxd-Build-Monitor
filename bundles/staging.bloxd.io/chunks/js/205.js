@@ -1,107 +1,107 @@
 export const id = 205;
 export const ids = [205];
 export const modules = {
-  38573: (HH, BH, LH) => {
-    var AH = LH(38577);
+  38383: (BB, OB, GB) => {
+    var YB = GB(38392);
 
-    function rH(HH) {
-      for (var BH, LH, rH = 0, SH = HH.length, hH = 0; hH < HH.length;) {
-        for (BH = HH[hH], LH = 0; hH < SH && HH[hH] === BH;) ++hH, ++LH;
-        rH += AH.log2(LH) / 7 | 0, rH += AH.log2(BH >>> 0) / 7 | 0, rH += 2
+    function DB(BB) {
+      for (var OB, GB, DB = 0, QB = BB.length, oB = 0; oB < BB.length;) {
+        for (OB = BB[oB], GB = 0; oB < QB && BB[oB] === OB;) ++oB, ++GB;
+        DB += YB.log2(GB) / 7 | 0, DB += YB.log2(OB >>> 0) / 7 | 0, DB += 2
       }
-      return rH
+      return DB
     }
-    BH.size = rH, BH.encode = function(HH, BH) {
-      BH || (BH = new Uint8Array(rH(HH)));
-      for (var LH, AH, SH = 0, hH = BH.length, tH = 0; tH < HH.length;) {
-        for (LH = HH[tH], AH = 0; tH < HH.length && HH[tH] === LH;) ++tH, ++AH;
-        for (; SH < hH && AH >= 128;) BH[SH++] = 128 + (127 & AH), AH >>>= 7;
-        if (SH >= hH) throw new Error("RLE buffer overflow");
-        for (BH[SH++] = AH, LH >>>= 0; SH < hH && LH >= 128;) BH[SH++] = 128 + (127 & LH), LH >>>= 7;
-        if (SH >= hH) throw new Error("RLE buffer overflow");
-        BH[SH++] = LH
+    OB.size = DB, OB.encode = function(BB, OB) {
+      OB || (OB = new Uint8Array(DB(BB)));
+      for (var GB, YB, QB = 0, oB = OB.length, jB = 0; jB < BB.length;) {
+        for (GB = BB[jB], YB = 0; jB < BB.length && BB[jB] === GB;) ++jB, ++YB;
+        for (; QB < oB && YB >= 128;) OB[QB++] = 128 + (127 & YB), YB >>>= 7;
+        if (QB >= oB) throw new Error("RLE buffer overflow");
+        for (OB[QB++] = YB, GB >>>= 0; QB < oB && GB >= 128;) OB[QB++] = 128 + (127 & GB), GB >>>= 7;
+        if (QB >= oB) throw new Error("RLE buffer overflow");
+        OB[QB++] = GB
       }
-      return BH
-    }, BH.decode = function(HH, BH) {
-      for (var LH, AH, rH, SH, hH = BH.length, tH = HH.length, zH = 0, CH = 0; CH < tH;) {
-        for (LH = 0, AH = 0; CH < tH && HH[CH] >= 128;) LH += (127 & HH[CH++]) << AH, AH += 7;
-        if (LH += HH[CH++] << AH, CH >= tH) throw new Error("RLE buffer underrun");
-        if (zH + LH > hH) throw new Error("Chunk buffer overflow");
-        for (rH = 0, AH = 0; CH < tH && HH[CH] >= 128;) rH += (127 & HH[CH++]) << AH, AH += 7;
-        if (CH >= tH) throw new Error("RLE buffer underrun");
-        for (rH += HH[CH++] << AH, SH = 0; SH < LH; ++SH) BH[zH++] = rH
+      return OB
+    }, OB.decode = function(BB, OB) {
+      for (var GB, YB, DB, QB, oB = OB.length, jB = BB.length, yB = 0, JB = 0; JB < jB;) {
+        for (GB = 0, YB = 0; JB < jB && BB[JB] >= 128;) GB += (127 & BB[JB++]) << YB, YB += 7;
+        if (GB += BB[JB++] << YB, JB >= jB) throw new Error("RLE buffer underrun");
+        if (yB + GB > oB) throw new Error("Chunk buffer overflow");
+        for (DB = 0, YB = 0; JB < jB && BB[JB] >= 128;) DB += (127 & BB[JB++]) << YB, YB += 7;
+        if (JB >= jB) throw new Error("RLE buffer underrun");
+        for (DB += BB[JB++] << YB, QB = 0; QB < GB; ++QB) OB[yB++] = DB
       }
-      return BH
+      return OB
     }
   },
-  38577: (HH, BH) => {
-    function LH(HH) {
-      var BH = 32;
-      return (HH &= -HH) && BH--, 65535 & HH && (BH -= 16), 16711935 & HH && (BH -= 8), 252645135 & HH && (BH -= 4), 858993459 & HH && (BH -= 2), 1431655765 & HH && (BH -= 1), BH
+  38392: (BB, OB) => {
+    function GB(BB) {
+      var OB = 32;
+      return (BB &= -BB) && OB--, 65535 & BB && (OB -= 16), 16711935 & BB && (OB -= 8), 252645135 & BB && (OB -= 4), 858993459 & BB && (OB -= 2), 1431655765 & BB && (OB -= 1), OB
     }
-    BH.INT_BITS = 32, BH.INT_MAX = 2147483647, BH.INT_MIN = -1 << 31, BH.sign = function(HH) {
-      return (HH > 0) - (HH < 0)
-    }, BH.abs = function(HH) {
-      var BH = HH >> 31;
-      return (HH ^ BH) - BH
-    }, BH.min = function(HH, BH) {
-      return BH ^ (HH ^ BH) & -(HH < BH)
-    }, BH.max = function(HH, BH) {
-      return HH ^ (HH ^ BH) & -(HH < BH)
-    }, BH.isPow2 = function(HH) {
-      return !(HH & HH - 1) && !!HH
-    }, BH.log2 = function(HH) {
-      var BH, LH;
-      return BH = (HH > 65535) << 4, BH |= LH = ((HH >>>= BH) > 255) << 3, BH |= LH = ((HH >>>= LH) > 15) << 2, (BH |= LH = ((HH >>>= LH) > 3) << 1) | (HH >>>= LH) >> 1
-    }, BH.log10 = function(HH) {
-      return HH >= 1e9 ? 9 : HH >= 1e8 ? 8 : HH >= 1e7 ? 7 : HH >= 1e6 ? 6 : HH >= 1e5 ? 5 : HH >= 1e4 ? 4 : HH >= 1e3 ? 3 : HH >= 100 ? 2 : HH >= 10 ? 1 : 0
-    }, BH.popCount = function(HH) {
-      return 16843009 * ((HH = (858993459 & (HH -= HH >>> 1 & 1431655765)) + (HH >>> 2 & 858993459)) + (HH >>> 4) & 252645135) >>> 24
-    }, BH.countTrailingZeros = LH, BH.nextPow2 = function(HH) {
-      return HH += 0 === HH, --HH, HH |= HH >>> 1, HH |= HH >>> 2, HH |= HH >>> 4, HH |= HH >>> 8, (HH |= HH >>> 16) + 1
-    }, BH.prevPow2 = function(HH) {
-      return HH |= HH >>> 1, HH |= HH >>> 2, HH |= HH >>> 4, HH |= HH >>> 8, (HH |= HH >>> 16) - (HH >>> 1)
-    }, BH.parity = function(HH) {
-      return HH ^= HH >>> 16, HH ^= HH >>> 8, HH ^= HH >>> 4, 27030 >>> (HH &= 15) & 1
+    OB.INT_BITS = 32, OB.INT_MAX = 2147483647, OB.INT_MIN = -1 << 31, OB.sign = function(BB) {
+      return (BB > 0) - (BB < 0)
+    }, OB.abs = function(BB) {
+      var OB = BB >> 31;
+      return (BB ^ OB) - OB
+    }, OB.min = function(BB, OB) {
+      return OB ^ (BB ^ OB) & -(BB < OB)
+    }, OB.max = function(BB, OB) {
+      return BB ^ (BB ^ OB) & -(BB < OB)
+    }, OB.isPow2 = function(BB) {
+      return !(BB & BB - 1) && !!BB
+    }, OB.log2 = function(BB) {
+      var OB, GB;
+      return OB = (BB > 65535) << 4, OB |= GB = ((BB >>>= OB) > 255) << 3, OB |= GB = ((BB >>>= GB) > 15) << 2, (OB |= GB = ((BB >>>= GB) > 3) << 1) | (BB >>>= GB) >> 1
+    }, OB.log10 = function(BB) {
+      return BB >= 1e9 ? 9 : BB >= 1e8 ? 8 : BB >= 1e7 ? 7 : BB >= 1e6 ? 6 : BB >= 1e5 ? 5 : BB >= 1e4 ? 4 : BB >= 1e3 ? 3 : BB >= 100 ? 2 : BB >= 10 ? 1 : 0
+    }, OB.popCount = function(BB) {
+      return 16843009 * ((BB = (858993459 & (BB -= BB >>> 1 & 1431655765)) + (BB >>> 2 & 858993459)) + (BB >>> 4) & 252645135) >>> 24
+    }, OB.countTrailingZeros = GB, OB.nextPow2 = function(BB) {
+      return BB += 0 === BB, --BB, BB |= BB >>> 1, BB |= BB >>> 2, BB |= BB >>> 4, BB |= BB >>> 8, (BB |= BB >>> 16) + 1
+    }, OB.prevPow2 = function(BB) {
+      return BB |= BB >>> 1, BB |= BB >>> 2, BB |= BB >>> 4, BB |= BB >>> 8, (BB |= BB >>> 16) - (BB >>> 1)
+    }, OB.parity = function(BB) {
+      return BB ^= BB >>> 16, BB ^= BB >>> 8, BB ^= BB >>> 4, 27030 >>> (BB &= 15) & 1
     };
-    var AH = new Array(256);
-    ! function(HH) {
-      for (var BH = 0; BH < 256; ++BH) {
-        var LH = BH,
-          AH = BH,
-          rH = 7;
-        for (LH >>>= 1; LH; LH >>>= 1) AH <<= 1, AH |= 1 & LH, --rH;
-        HH[BH] = AH << rH & 255
+    var YB = new Array(256);
+    ! function(BB) {
+      for (var OB = 0; OB < 256; ++OB) {
+        var GB = OB,
+          YB = OB,
+          DB = 7;
+        for (GB >>>= 1; GB; GB >>>= 1) YB <<= 1, YB |= 1 & GB, --DB;
+        BB[OB] = YB << DB & 255
       }
-    }(AH), BH.reverse = function(HH) {
-      return AH[255 & HH] << 24 | AH[HH >>> 8 & 255] << 16 | AH[HH >>> 16 & 255] << 8 | AH[HH >>> 24 & 255]
-    }, BH.interleave2 = function(HH, BH) {
-      return (HH = 1431655765 & ((HH = 858993459 & ((HH = 252645135 & ((HH = 16711935 & ((HH &= 65535) | HH << 8)) | HH << 4)) | HH << 2)) | HH << 1)) | (BH = 1431655765 & ((BH = 858993459 & ((BH = 252645135 & ((BH = 16711935 & ((BH &= 65535) | BH << 8)) | BH << 4)) | BH << 2)) | BH << 1)) << 1
-    }, BH.deinterleave2 = function(HH, BH) {
-      return (HH = 65535 & ((HH = 16711935 & ((HH = 252645135 & ((HH = 858993459 & ((HH = HH >>> BH & 1431655765) | HH >>> 1)) | HH >>> 2)) | HH >>> 4)) | HH >>> 16)) << 16 >> 16
-    }, BH.interleave3 = function(HH, BH, LH) {
-      return HH = 1227133513 & ((HH = 3272356035 & ((HH = 251719695 & ((HH = 4278190335 & ((HH &= 1023) | HH << 16)) | HH << 8)) | HH << 4)) | HH << 2), (HH |= (BH = 1227133513 & ((BH = 3272356035 & ((BH = 251719695 & ((BH = 4278190335 & ((BH &= 1023) | BH << 16)) | BH << 8)) | BH << 4)) | BH << 2)) << 1) | (LH = 1227133513 & ((LH = 3272356035 & ((LH = 251719695 & ((LH = 4278190335 & ((LH &= 1023) | LH << 16)) | LH << 8)) | LH << 4)) | LH << 2)) << 2
-    }, BH.deinterleave3 = function(HH, BH) {
-      return (HH = 1023 & ((HH = 4278190335 & ((HH = 251719695 & ((HH = 3272356035 & ((HH = HH >>> BH & 1227133513) | HH >>> 2)) | HH >>> 4)) | HH >>> 8)) | HH >>> 16)) << 22 >> 22
-    }, BH.nextCombination = function(HH) {
-      var BH = HH | HH - 1;
-      return BH + 1 | (~BH & -~BH) - 1 >>> LH(HH) + 1
+    }(YB), OB.reverse = function(BB) {
+      return YB[255 & BB] << 24 | YB[BB >>> 8 & 255] << 16 | YB[BB >>> 16 & 255] << 8 | YB[BB >>> 24 & 255]
+    }, OB.interleave2 = function(BB, OB) {
+      return (BB = 1431655765 & ((BB = 858993459 & ((BB = 252645135 & ((BB = 16711935 & ((BB &= 65535) | BB << 8)) | BB << 4)) | BB << 2)) | BB << 1)) | (OB = 1431655765 & ((OB = 858993459 & ((OB = 252645135 & ((OB = 16711935 & ((OB &= 65535) | OB << 8)) | OB << 4)) | OB << 2)) | OB << 1)) << 1
+    }, OB.deinterleave2 = function(BB, OB) {
+      return (BB = 65535 & ((BB = 16711935 & ((BB = 252645135 & ((BB = 858993459 & ((BB = BB >>> OB & 1431655765) | BB >>> 1)) | BB >>> 2)) | BB >>> 4)) | BB >>> 16)) << 16 >> 16
+    }, OB.interleave3 = function(BB, OB, GB) {
+      return BB = 1227133513 & ((BB = 3272356035 & ((BB = 251719695 & ((BB = 4278190335 & ((BB &= 1023) | BB << 16)) | BB << 8)) | BB << 4)) | BB << 2), (BB |= (OB = 1227133513 & ((OB = 3272356035 & ((OB = 251719695 & ((OB = 4278190335 & ((OB &= 1023) | OB << 16)) | OB << 8)) | OB << 4)) | OB << 2)) << 1) | (GB = 1227133513 & ((GB = 3272356035 & ((GB = 251719695 & ((GB = 4278190335 & ((GB &= 1023) | GB << 16)) | GB << 8)) | GB << 4)) | GB << 2)) << 2
+    }, OB.deinterleave3 = function(BB, OB) {
+      return (BB = 1023 & ((BB = 4278190335 & ((BB = 251719695 & ((BB = 3272356035 & ((BB = BB >>> OB & 1227133513) | BB >>> 2)) | BB >>> 4)) | BB >>> 8)) | BB >>> 16)) << 22 >> 22
+    }, OB.nextCombination = function(BB) {
+      var OB = BB | BB - 1;
+      return OB + 1 | (~OB & -~OB) - 1 >>> GB(BB) + 1
     }
   },
-  41088: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      emptyColumnHeight: () => vH,
-      loadHeatmapSchematic: () => PH,
-      readSchematicBlocks: () => TH
+  40816: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      emptyColumnHeight: () => WB,
+      loadHeatmapSchematic: () => AB,
+      readSchematicBlocks: () => VB
     });
-    var AH = LH(4121),
-      rH = LH.n(AH),
-      SH = LH(4099),
-      hH = LH(38573),
-      tH = LH(176),
-      zH = LH(9940),
-      CH = LH(40433);
-    const EH = [{
+    var YB = GB(4174),
+      DB = GB.n(YB),
+      QB = GB(4150),
+      oB = GB(38383),
+      jB = GB(192),
+      yB = GB(9927),
+      JB = GB(40190);
+    const MB = [{
         name: "x",
         type: "int"
       }, {
@@ -111,20 +111,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      XH = [{
+      PB = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: EH
+          fields: MB
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: EH
+          fields: MB
         }
       }, {
         name: "chunkData",
@@ -132,26 +132,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...EH, {
+            fields: [...MB, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      GH = rH().Type.forSchema({
+      zB = DB().Type.forSchema({
         type: "record",
-        fields: XH
+        fields: PB
       }),
-      YH = rH().Type.forSchema({
+      lB = DB().Type.forSchema({
         type: "record",
-        fields: [...XH, {
+        fields: [...PB, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...EH, {
+              fields: [...MB, {
                 name: "data",
                 type: "bytes"
               }]
@@ -161,222 +161,222 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: EH
+            fields: MB
           }
         }]
       }),
-      uH = 2,
-      QH = 6,
-      WH = 16,
-      MH = 4096,
-      xH = tH.g.xX,
-      vH = -2147483648;
-    async function PH(HH) {
-      const BH = await (0, CH.c)(),
-        LH = await TH(new Uint8Array(await HH.arrayBuffer()), (HH => BH.get(HH)));
+      pB = 2,
+      qB = 6,
+      ZB = 16,
+      NB = 4096,
+      RB = jB.f.pP,
+      WB = -2147483648;
+    async function AB(BB) {
+      const OB = await (0, JB.e)(),
+        GB = await VB(new Uint8Array(await BB.arrayBuffer()), (BB => OB.get(BB)));
       return {
-        surface: LH.surface,
-        topDown: VH(LH.columnTops)
+        surface: GB.surface,
+        topDown: nB(GB.columnTops)
       }
     }
-    async function TH(HH, BH) {
-      var LH;
-      if (HH.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const AH = new DataView(HH.buffer, HH.byteOffset, HH.byteLength).getUint32(0, !0);
-      if (AH > QH) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const rH = (AH >= uH ? YH : GH).decode(SH.rX.from(HH.subarray(4)), 0).value;
-      if (!rH) throw new Error("The file isn't a schematic.");
-      if (0 === rH.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const tH = null !== (LH = rH.pasteOffset) && void 0 !== LH ? LH : {
+    async function VB(BB, OB) {
+      var GB;
+      if (BB.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const YB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength).getUint32(0, !0);
+      if (YB > qB) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const DB = (YB >= pB ? lB : zB).decode(QB.BP.from(BB.subarray(4)), 0).value;
+      if (!DB) throw new Error("The file isn't a schematic.");
+      if (0 === DB.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const jB = null !== (GB = DB.pasteOffset) && void 0 !== GB ? GB : {
           x: 0,
           y: 0,
           z: 0
         },
-        zH = [tH.x, tH.y, tH.z].map((HH => Math.floor(HH / xH))),
-        CH = rH.chunkData.map((HH => ({
-          x: HH.x + zH[0],
-          y: HH.y + zH[1],
-          z: HH.z + zH[2],
-          rle: HH.rle
+        yB = [jB.x, jB.y, jB.z].map((BB => Math.floor(BB / RB))),
+        JB = DB.chunkData.map((BB => ({
+          x: BB.x + yB[0],
+          y: BB.y + yB[1],
+          z: BB.z + yB[2],
+          rle: BB.rle
         }))),
-        EH = new Map;
-      for (const [SH, GH] of CH.entries()) {
-        const HH = new Uint16Array(xH ** 3);
-        hH.decode(GH.rle, HH), EH.set(`${GH.x},${GH.y},${GH.z}`, HH), SH % WH === WH - 1 && await OH()
+        MB = new Map;
+      for (const [QB, zB] of JB.entries()) {
+        const BB = new Uint16Array(RB ** 3);
+        oB.decode(zB.rle, BB), MB.set(`${zB.x},${zB.y},${zB.z}`, BB), QB % ZB === ZB - 1 && await UB()
       }
-      const XH = (HH, BH, LH) => HH * xH * xH + BH * xH + LH,
-        MH = (HH, BH, LH) => {
-          var AH, rH;
-          const SH = Math.floor(HH / xH),
-            hH = Math.floor(BH / xH),
-            tH = Math.floor(LH / xH);
-          return null !== (AH = null === (rH = EH.get(`${SH},${hH},${tH}`)) || void 0 === rH ? void 0 : rH[XH(HH - SH * xH, BH - hH * xH, LH - tH * xH)]) && void 0 !== AH ? AH : 0
+      const PB = (BB, OB, GB) => BB * RB * RB + OB * RB + GB,
+        NB = (BB, OB, GB) => {
+          var YB, DB;
+          const QB = Math.floor(BB / RB),
+            oB = Math.floor(OB / RB),
+            jB = Math.floor(GB / RB);
+          return null !== (YB = null === (DB = MB.get(`${QB},${oB},${jB}`)) || void 0 === DB ? void 0 : DB[PB(BB - QB * RB, OB - oB * RB, GB - jB * RB)]) && void 0 !== YB ? YB : 0
         },
-        PH = new Map,
-        TH = [],
-        VH = [];
-      for (const [SH, hH] of CH.entries()) {
-        const HH = EH.get(`${hH.x},${hH.y},${hH.z}`),
-          LH = [hH.x * xH, hH.y * xH, hH.z * xH],
-          AH = (BH, AH, rH) => BH < 0 || AH < 0 || rH < 0 || BH >= xH || AH >= xH || rH >= xH ? MH(LH[0] + BH, LH[1] + AH, LH[2] + rH) : HH[XH(BH, AH, rH)],
-          rH = `${hH.x},${hH.z}`;
-        let tH = PH.get(rH);
-        void 0 === tH && (tH = {
-          chunkX: hH.x,
-          chunkZ: hH.z,
-          heights: new Int32Array(xH * xH).fill(vH),
-          colours: new Uint8Array(xH * xH * 3)
-        }, PH.set(rH, tH));
-        for (let SH = 0; SH < xH; SH++)
-          for (let rH = 0; rH < xH; rH++)
-            for (let hH = 0; hH < xH; hH++) {
-              const zH = HH[XH(SH, rH, hH)];
-              if (0 === zH) continue;
-              const CH = LH[0] + SH,
-                EH = LH[1] + rH,
-                GH = LH[2] + hH,
-                YH = BH(zH);
-              if (null === YH) continue;
-              const uH = hH * xH + SH;
-              EH > tH.heights[uH] && (tH.heights[uH] = EH, tH.colours.set(YH, 3 * uH));
-              !UH(zH) && (UH(AH(SH + 1, rH, hH)) || UH(AH(SH - 1, rH, hH)) || UH(AH(SH, rH + 1, hH)) || UH(AH(SH, rH - 1, hH)) || UH(AH(SH, rH, hH + 1)) || UH(AH(SH, rH, hH - 1))) && (TH.push(CH, EH, GH), VH.push(YH[0], YH[1], YH[2]))
+        AB = new Map,
+        VB = [],
+        nB = [];
+      for (const [QB, oB] of JB.entries()) {
+        const BB = MB.get(`${oB.x},${oB.y},${oB.z}`),
+          GB = [oB.x * RB, oB.y * RB, oB.z * RB],
+          YB = (OB, YB, DB) => OB < 0 || YB < 0 || DB < 0 || OB >= RB || YB >= RB || DB >= RB ? NB(GB[0] + OB, GB[1] + YB, GB[2] + DB) : BB[PB(OB, YB, DB)],
+          DB = `${oB.x},${oB.z}`;
+        let jB = AB.get(DB);
+        void 0 === jB && (jB = {
+          chunkX: oB.x,
+          chunkZ: oB.z,
+          heights: new Int32Array(RB * RB).fill(WB),
+          colours: new Uint8Array(RB * RB * 3)
+        }, AB.set(DB, jB));
+        for (let QB = 0; QB < RB; QB++)
+          for (let DB = 0; DB < RB; DB++)
+            for (let oB = 0; oB < RB; oB++) {
+              const yB = BB[PB(QB, DB, oB)];
+              if (0 === yB) continue;
+              const JB = GB[0] + QB,
+                MB = GB[1] + DB,
+                zB = GB[2] + oB,
+                lB = OB(yB);
+              if (null === lB) continue;
+              const pB = oB * RB + QB;
+              MB > jB.heights[pB] && (jB.heights[pB] = MB, jB.colours.set(lB, 3 * pB));
+              !SB(yB) && (SB(YB(QB + 1, DB, oB)) || SB(YB(QB - 1, DB, oB)) || SB(YB(QB, DB + 1, oB)) || SB(YB(QB, DB - 1, oB)) || SB(YB(QB, DB, oB + 1)) || SB(YB(QB, DB, oB - 1))) && (VB.push(JB, MB, zB), nB.push(lB[0], lB[1], lB[2]))
             }
-        SH % WH === WH - 1 && await OH()
+        QB % ZB === ZB - 1 && await UB()
       }
-      if (0 === TH.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === VB.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: rH.name,
+        name: DB.name,
         surface: {
-          positions: Int32Array.from(TH),
-          colours: Uint8Array.from(VH),
-          count: TH.length / 3
+          positions: Int32Array.from(VB),
+          colours: Uint8Array.from(nB),
+          count: VB.length / 3
         },
-        columnTops: [...PH.values()]
+        columnTops: [...AB.values()]
       }
     }
 
-    function UH(HH) {
-      if (0 === HH) return !0;
-      const BH = zH.g[HH];
-      return void 0 === BH || BH.UY || BH.transTex || !1 === BH.solid
+    function SB(BB) {
+      if (0 === BB) return !0;
+      const OB = yB.h[BB];
+      return void 0 === OB || OB.fl || OB.transTex || !1 === OB.solid
     }
 
-    function VH(HH) {
-      let BH = 1 / 0,
-        LH = -1 / 0,
-        AH = 1 / 0,
-        rH = -1 / 0;
+    function nB(BB) {
+      let OB = 1 / 0,
+        GB = -1 / 0,
+        YB = 1 / 0,
+        DB = -1 / 0;
       for (const {
-          chunkX: uH,
-          chunkZ: QH,
-          heights: WH
+          chunkX: pB,
+          chunkZ: qB,
+          heights: ZB
         }
-        of HH) WH.forEach(((HH, SH) => {
-        if (HH === vH) return;
-        const hH = uH * xH + SH % xH,
-          tH = QH * xH + Math.floor(SH / xH);
-        BH = Math.min(BH, hH), LH = Math.max(LH, hH), AH = Math.min(AH, tH), rH = Math.max(rH, tH)
+        of BB) ZB.forEach(((BB, QB) => {
+        if (BB === WB) return;
+        const oB = pB * RB + QB % RB,
+          jB = qB * RB + Math.floor(QB / RB);
+        OB = Math.min(OB, oB), GB = Math.max(GB, oB), YB = Math.min(YB, jB), DB = Math.max(DB, jB)
       }));
-      const SH = LH - BH + 1,
-        hH = rH - AH + 1,
-        tH = Math.max(1, Math.ceil(SH / MH), Math.ceil(hH / MH)),
-        zH = Math.ceil(SH / tH),
-        CH = Math.ceil(hH / tH),
-        EH = document.createElement("canvas");
-      EH.width = zH, EH.height = CH;
-      const XH = EH.getContext("2d");
-      if (!XH) throw new Error("Couldn't draw the schematic from above.");
-      const GH = XH.createImageData(zH, CH),
-        YH = new Int32Array(zH * CH).fill(vH);
+      const QB = GB - OB + 1,
+        oB = DB - YB + 1,
+        jB = Math.max(1, Math.ceil(QB / NB), Math.ceil(oB / NB)),
+        yB = Math.ceil(QB / jB),
+        JB = Math.ceil(oB / jB),
+        MB = document.createElement("canvas");
+      MB.width = yB, MB.height = JB;
+      const PB = MB.getContext("2d");
+      if (!PB) throw new Error("Couldn't draw the schematic from above.");
+      const zB = PB.createImageData(yB, JB),
+        lB = new Int32Array(yB * JB).fill(WB);
       for (const {
-          chunkX: uH,
-          chunkZ: QH,
-          heights: WH,
-          colours: MH
+          chunkX: pB,
+          chunkZ: qB,
+          heights: ZB,
+          colours: NB
         }
-        of HH) WH.forEach(((HH, BH) => {
-        const rH = uH * xH + BH % xH,
-          SH = QH * xH + Math.floor(BH / xH),
-          hH = Math.floor((SH - AH) / tH) * zH + Math.floor((LH - rH) / tH);
-        HH === vH || HH <= YH[hH] || (YH[hH] = HH, GH.data.set(MH.subarray(3 * BH, 3 * BH + 3), 4 * hH), GH.data[4 * hH + 3] = 255)
+        of BB) ZB.forEach(((BB, OB) => {
+        const DB = pB * RB + OB % RB,
+          QB = qB * RB + Math.floor(OB / RB),
+          oB = Math.floor((QB - YB) / jB) * yB + Math.floor((GB - DB) / jB);
+        BB === WB || BB <= lB[oB] || (lB[oB] = BB, zB.data.set(NB.subarray(3 * OB, 3 * OB + 3), 4 * oB), zB.data[4 * oB + 3] = 255)
       }));
-      return XH.putImageData(GH, 0, 0), {
-        maxX: LH,
-        minZ: AH,
-        width: zH * tH,
-        depth: CH * tH,
-        canvas: EH
+      return PB.putImageData(zB, 0, 0), {
+        maxX: GB,
+        minZ: YB,
+        width: yB * jB,
+        depth: JB * jB,
+        canvas: MB
       }
     }
 
-    function OH() {
-      return new Promise((HH => {
-        setTimeout(HH, 0)
+    function UB() {
+      return new Promise((BB => {
+        setTimeout(BB, 0)
       }))
     }
   },
-  40433: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH
+  40190: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => DB
     });
-    var AH = LH(40437);
-    async function rH() {
+    var YB = GB(40197);
+    async function DB() {
       const {
-        averageColors: HH
-      } = await LH.e(228).then((() => LH(35079)));
-      return new AH.c(HH)
+        averageColors: BB
+      } = await GB.e(228).then((() => GB(34878)));
+      return new YB.c(BB)
     }
   },
-  40437: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => tH,
-      f: () => hH
+  40197: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => jB,
+      e: () => oB
     });
-    var AH = LH(9940);
-    const rH = {
+    var YB = GB(9927);
+    const DB = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      SH = [150, 150, 150],
-      hH = -2147483648;
-    class tH {
-      constructor(HH) {
-        this.averages = HH, this.byId = new Map
+      QB = [150, 150, 150],
+      oB = -2147483648;
+    class jB {
+      constructor(BB) {
+        this.averages = BB, this.byId = new Map
       }
-      get(HH) {
-        var BH, LH, hH, tH, zH;
-        const CH = this.byId.get(HH);
-        if (void 0 !== CH) return CH;
-        const EH = null !== (BH = null === (LH = AH.g[HH]) || void 0 === LH ? void 0 : LH.name) && void 0 !== BH ? BH : "",
-          XH = EH.split("|")[0],
-          GH = null !== (hH = this.averages[EH]) && void 0 !== hH ? hH : this.averages[XH],
-          YH = null !== (tH = null !== (zH = null === GH || void 0 === GH ? void 0 : GH[0]) && void 0 !== zH ? zH : rH[XH]) && void 0 !== tH ? tH : 0 === (null === GH || void 0 === GH ? void 0 : GH.length) ? null : SH;
-        return this.byId.set(HH, YH), YH
+      get(BB) {
+        var OB, GB, oB, jB, yB;
+        const JB = this.byId.get(BB);
+        if (void 0 !== JB) return JB;
+        const MB = null !== (OB = null === (GB = YB.h[BB]) || void 0 === GB ? void 0 : GB.name) && void 0 !== OB ? OB : "",
+          PB = MB.split("|")[0],
+          zB = null !== (oB = this.averages[MB]) && void 0 !== oB ? oB : this.averages[PB],
+          lB = null !== (jB = null !== (yB = null === zB || void 0 === zB ? void 0 : zB[0]) && void 0 !== yB ? yB : DB[PB]) && void 0 !== jB ? jB : 0 === (null === zB || void 0 === zB ? void 0 : zB.length) ? null : QB;
+        return this.byId.set(BB, lB), lB
       }
       getDrawnIds() {
-        const HH = new Uint8Array(65536);
-        for (let BH = 1; BH < 65536; BH++) void 0 !== AH.g[BH] && null !== this.get(BH) && (HH[BH] = 1);
-        return HH
+        const BB = new Uint8Array(65536);
+        for (let OB = 1; OB < 65536; OB++) void 0 !== YB.h[OB] && null !== this.get(OB) && (BB[OB] = 1);
+        return BB
       }
-      drawPixel(HH, BH, LH, AH, rH, SH) {
-        const tH = function(HH, BH, LH) {
-            const AH = HH - BH + (HH - LH);
-            return Math.max(.65, Math.min(1.2, .97 + .055 * AH))
-          }(AH, rH === hH ? AH : rH, SH === hH ? AH : SH),
-          zH = this.get(LH);
-        HH[BH] = zH[0] * tH, HH[BH + 1] = zH[1] * tH, HH[BH + 2] = zH[2] * tH, HH[BH + 3] = 255
+      drawPixel(BB, OB, GB, YB, DB, QB) {
+        const jB = function(BB, OB, GB) {
+            const YB = BB - OB + (BB - GB);
+            return Math.max(.65, Math.min(1.2, .97 + .055 * YB))
+          }(YB, DB === oB ? YB : DB, QB === oB ? YB : QB),
+          yB = this.get(GB);
+        BB[OB] = yB[0] * jB, BB[OB + 1] = yB[1] * jB, BB[OB + 2] = yB[2] * jB, BB[OB + 3] = 255
       }
     }
   },
-  10030: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH,
-      f: () => SH
+  10027: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      g: () => QB
     });
-    var AH = LH(9979);
-    const rH = "Air",
-      SH = Object.freeze(new AH.f(rH, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var YB = GB(9974);
+    const DB = "Air",
+      QB = Object.freeze(new YB.g(DB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

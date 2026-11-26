@@ -1,30 +1,30 @@
-/*! For license information please see cwj32u.wasmMatchmaking.2c92509d.chunk.js.LICENSE.txt */
+/*! For license information please see gw4e3a.wasmMatchmaking.e6d6a2c1.chunk.js.LICENSE.txt */
 export const id = 74;
 export const ids = [74, 176];
 export const modules = {
-  37424: (HH, BH) => {
-    function LH(HH) {
-      if (HH && "object" === typeof HH) {
-        var BH = HH.which || HH.keyCode || HH.charCode;
-        BH && (HH = BH)
+  37206: (BB, OB) => {
+    function GB(BB) {
+      if (BB && "object" === typeof BB) {
+        var OB = BB.which || BB.keyCode || BB.charCode;
+        OB && (BB = OB)
       }
-      if ("number" === typeof HH) return hH[HH];
-      var LH, SH = String(HH);
-      return (LH = AH[SH.toLowerCase()]) ? LH : (LH = rH[SH.toLowerCase()]) || (1 === SH.length ? SH.charCodeAt(0) : void 0)
+      if ("number" === typeof BB) return oB[BB];
+      var GB, QB = String(BB);
+      return (GB = YB[QB.toLowerCase()]) ? GB : (GB = DB[QB.toLowerCase()]) || (1 === QB.length ? QB.charCodeAt(0) : void 0)
     }
-    LH.isEventKey = function(HH, BH) {
-      if (HH && "object" === typeof HH) {
-        var LH = HH.which || HH.keyCode || HH.charCode;
-        if (null === LH || void 0 === LH) return !1;
-        if ("string" === typeof BH) {
-          var SH;
-          if (SH = AH[BH.toLowerCase()]) return SH === LH;
-          if (SH = rH[BH.toLowerCase()]) return SH === LH
-        } else if ("number" === typeof BH) return BH === LH;
+    GB.isEventKey = function(BB, OB) {
+      if (BB && "object" === typeof BB) {
+        var GB = BB.which || BB.keyCode || BB.charCode;
+        if (null === GB || void 0 === GB) return !1;
+        if ("string" === typeof OB) {
+          var QB;
+          if (QB = YB[OB.toLowerCase()]) return QB === GB;
+          if (QB = DB[OB.toLowerCase()]) return QB === GB
+        } else if ("number" === typeof OB) return OB === GB;
         return !1
       }
     };
-    var AH = (BH = HH.exports = LH).code = BH.codes = {
+    var YB = (OB = BB.exports = GB).code = OB.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      rH = BH.aliases = {
+      DB = OB.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (SH = 97; SH < 123; SH++) AH[String.fromCharCode(SH)] = SH - 32;
-    for (var SH = 48; SH < 58; SH++) AH[SH - 48] = SH;
-    for (SH = 1; SH < 13; SH++) AH["f" + SH] = SH + 111;
-    for (SH = 0; SH < 10; SH++) AH["numpad " + SH] = SH + 96;
-    var hH = BH.names = BH.title = {};
-    for (SH in AH) hH[AH[SH]] = SH;
-    for (var tH in rH) AH[tH] = rH[tH]
+    for (QB = 97; QB < 123; QB++) YB[String.fromCharCode(QB)] = QB - 32;
+    for (var QB = 48; QB < 58; QB++) YB[QB - 48] = QB;
+    for (QB = 1; QB < 13; QB++) YB["f" + QB] = QB + 111;
+    for (QB = 0; QB < 10; QB++) YB["numpad " + QB] = QB + 96;
+    var oB = OB.names = OB.title = {};
+    for (QB in YB) oB[YB[QB]] = QB;
+    for (var jB in DB) YB[jB] = DB[jB]
   },
-  37578: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => hH
+  37378: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => oB
     });
-    var AH = LH(45);
-    const rH = AH.useLayoutEffect;
-    const SH = function(HH) {
-      var BH = (0, AH.useRef)(HH);
-      return rH((function() {
-        BH.current = HH
-      })), BH
+    var YB = GB(56);
+    const DB = YB.useLayoutEffect;
+    const QB = function(BB) {
+      var OB = (0, YB.useRef)(BB);
+      return DB((function() {
+        OB.current = BB
+      })), OB
     };
-    var hH = function(HH) {
-      var BH = SH(HH);
-      (0, AH.useEffect)((function() {
-        var HH = function(HH) {
-          var LH;
-          if (null != BH.current && (LH = BH.current(HH)), HH.defaultPrevented && (HH.returnValue = ""), "string" === typeof LH) return HH.returnValue = LH, LH
+    var oB = function(BB) {
+      var OB = QB(BB);
+      (0, YB.useEffect)((function() {
+        var BB = function(BB) {
+          var GB;
+          if (null != OB.current && (GB = OB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof GB) return BB.returnValue = GB, GB
         };
-        return window.addEventListener("beforeunload", HH),
+        return window.addEventListener("beforeunload", BB),
           function() {
-            window.removeEventListener("beforeunload", HH)
+            window.removeEventListener("beforeunload", BB)
           }
       }), [])
     }
   },
-  37461: HH => {
-    var BH, LH = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      AH = /OS X/.test(LH),
-      rH = /Opera/.test(LH),
-      SH = !/like Gecko/.test(LH) && !rH,
-      hH = HH.exports = {
-        0: AH ? "<menu>" : "<UNK>",
+  37244: BB => {
+    var OB, GB = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      YB = /OS X/.test(GB),
+      DB = /Opera/.test(GB),
+      QB = !/like Gecko/.test(GB) && !DB,
+      oB = BB.exports = {
+        0: YB ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: AH ? "<meta>" : "<menu>",
+        93: YB ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: AH && SH ? "-" : "<volume-mute>",
+        173: YB && QB ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: rH ? "`" : "<unicode>",
+        231: DB ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,308 +234,308 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (BH = 58; BH < 65; ++BH) hH[BH] = String.fromCharCode(BH);
-    for (BH = 48; BH < 58; ++BH) hH[BH] = BH - 48 + "";
-    for (BH = 65; BH < 91; ++BH) hH[BH] = String.fromCharCode(BH);
-    for (BH = 96; BH < 106; ++BH) hH[BH] = "<num-" + (BH - 96) + ">";
-    for (BH = 112; BH < 136; ++BH) hH[BH] = "F" + (BH - 111)
+    for (OB = 58; OB < 65; ++OB) oB[OB] = String.fromCharCode(OB);
+    for (OB = 48; OB < 58; ++OB) oB[OB] = OB - 48 + "";
+    for (OB = 65; OB < 91; ++OB) oB[OB] = String.fromCharCode(OB);
+    for (OB = 96; OB < 106; ++OB) oB[OB] = "<num-" + (OB - 96) + ">";
+    for (OB = 112; OB < 136; ++OB) oB[OB] = "F" + (OB - 111)
   },
-  37472: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => WH,
-      e: () => MH,
-      i: () => GH,
-      k: () => XH
+  37263: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => ZB,
+      e: () => NB,
+      h: () => zB,
+      l: () => PB
     });
-    var AH = LH(34986),
-      rH = LH(37474),
-      SH = LH(37479),
-      hH = LH(9412),
-      tH = LH(1450),
-      zH = LH(45),
-      CH = LH(69),
-      EH = LH(1225);
+    var YB = GB(34790),
+      DB = GB(37267),
+      QB = GB(37270),
+      oB = GB(9391),
+      jB = GB(1480),
+      yB = GB(56),
+      JB = GB(70),
+      MB = GB(1282);
 
-    function XH() {
-      var HH;
-      return (0, tH.e)(rH.b, (0, rH.p)()), (0, EH.jsx)(EH.Fragment, {
-        children: null === (HH = (0, rH.p)()) || void 0 === HH ? void 0 : HH.content
+    function PB() {
+      var BB;
+      return (0, jB.i)(DB.d, (0, DB.n)()), (0, MB.jsx)(MB.Fragment, {
+        children: null === (BB = (0, DB.n)()) || void 0 === BB ? void 0 : BB.content
       })
     }
 
-    function GH(HH) {
-      var BH;
+    function zB(BB) {
+      var OB;
       let {
-        show: LH
-      } = HH;
-      (0, tH.e)(rH.b, (0, rH.p)());
-      const CH = null === (BH = (0, rH.p)()) || void 0 === BH ? void 0 : BH.menu;
-      return (0, zH.useEffect)((() => {
-        var HH;
-        LH || (null === CH || void 0 === CH || null === (HH = CH.onClose) || void 0 === HH || HH.call(CH), (0, SH.r)())
-      }), [LH, CH]), (0, zH.useEffect)((() => LH ? (0, hH.e)(SH.A, SH.g) : void 0), [LH]), (0, EH.jsx)(AH.e, {
-        showing: LH,
+        show: GB
+      } = BB;
+      (0, jB.i)(DB.d, (0, DB.n)());
+      const JB = null === (OB = (0, DB.n)()) || void 0 === OB ? void 0 : OB.menu;
+      return (0, yB.useEffect)((() => {
+        var BB;
+        GB || (null === JB || void 0 === JB || null === (BB = JB.onClose) || void 0 === BB || BB.call(JB), (0, QB.u)())
+      }), [GB, JB]), (0, yB.useEffect)((() => GB ? (0, oB.d)(QB.D, QB.i) : void 0), [GB]), (0, MB.jsx)(YB.d, {
+        showing: GB,
         globallyUniqueKey: "clientGameMenu",
-        children: null === CH || void 0 === CH ? void 0 : CH.content
+        children: null === JB || void 0 === JB ? void 0 : JB.content
       })
     }
-    const YH = new Map,
-      uH = new Set;
+    const lB = new Map,
+      pB = new Set;
 
-    function QH(HH, BH) {
-      BH ? YH.set(HH, BH) : YH.delete(HH);
-      for (const LH of uH) LH()
+    function qB(BB, OB) {
+      OB ? lB.set(BB, OB) : lB.delete(BB);
+      for (const GB of pB) GB()
     }
 
-    function WH(HH) {
+    function ZB(BB) {
       let {
-        placement: BH = "bottom"
-      } = HH;
-      const LH = (0, zH.useRef)(null);
-      return (0, zH.useLayoutEffect)((() => {
-        const HH = LH.current;
-        return QH(BH, HH), () => {
-          YH.get(BH) === HH && QH(BH, null)
+        placement: OB = "bottom"
+      } = BB;
+      const GB = (0, yB.useRef)(null);
+      return (0, yB.useLayoutEffect)((() => {
+        const BB = GB.current;
+        return qB(OB, BB), () => {
+          lB.get(OB) === BB && qB(OB, null)
         }
-      }), [BH]), (0, EH.jsx)("div", {
-        ref: LH,
-        id: `clientGameHud-${BH}`,
+      }), [OB]), (0, MB.jsx)("div", {
+        ref: GB,
+        id: `clientGameHud-${OB}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function MH(HH) {
+    function NB(BB) {
       let {
-        children: BH,
-        placement: LH = "bottom"
-      } = HH;
-      const [AH, rH] = (0, zH.useState)((() => {
-        var HH;
-        return null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null
+        children: OB,
+        placement: GB = "bottom"
+      } = BB;
+      const [YB, DB] = (0, yB.useState)((() => {
+        var BB;
+        return null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null
       }));
-      return (0, zH.useEffect)((() => {
-        const HH = () => {
-          var HH;
-          rH(null !== (HH = YH.get(LH)) && void 0 !== HH ? HH : null)
+      return (0, yB.useEffect)((() => {
+        const BB = () => {
+          var BB;
+          DB(null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null)
         };
-        return uH.add(HH), HH(), () => {
-          uH.delete(HH)
+        return pB.add(BB), BB(), () => {
+          pB.delete(BB)
         }
-      }), [LH]), AH ? (0, CH.createPortal)(BH, AH) : null
+      }), [GB]), YB ? (0, JB.createPortal)(OB, YB) : null
     }
   },
-  9412: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => SH,
-      e: () => rH
+  9391: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => QB,
+      d: () => DB
     });
-    let AH = null;
-    const rH = function(HH) {
-        const BH = {
-          cycle: HH,
+    let YB = null;
+    const DB = function(BB) {
+        const OB = {
+          cycle: BB,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return AH = BH, () => {
-          AH === BH && (AH = null)
+        return YB = OB, () => {
+          YB === OB && (YB = null)
         }
       },
-      SH = () => {
-        var HH;
-        return null !== (HH = AH) && void 0 !== HH && HH.canCycle() ? AH.cycle : null
+      QB = () => {
+        var BB;
+        return null !== (BB = YB) && void 0 !== BB && BB.canCycle() ? YB.cycle : null
       }
   },
-  9634: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => SH,
-      f: () => rH
+  9614: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => QB,
+      d: () => DB
     });
-    let AH = !1;
+    let YB = !1;
 
-    function rH() {
-      AH = !0
+    function DB() {
+      YB = !0
     }
 
-    function SH() {
-      return AH
+    function QB() {
+      return YB
     }
   },
-  37330: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      InGameUi: () => TH.e,
-      LobbyLeaderboard: () => UH.b,
-      loadCharacterCustomisationUI: () => VH,
-      loadCharacterPreview: () => OH,
-      matchmakeAndPlay: () => oH,
-      matchmakeForAhead: () => tH.d,
-      setUpGame: () => bH
+  37120: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      InGameUi: () => VB.e,
+      LobbyLeaderboard: () => SB.d,
+      loadCharacterCustomisationUI: () => nB,
+      loadCharacterPreview: () => UB,
+      matchmakeAndPlay: () => KB,
+      matchmakeForAhead: () => jB.f,
+      setUpGame: () => fB
     });
-    var AH = LH(1188),
-      rH = LH(152),
-      SH = LH(15),
-      hH = LH(37336),
-      tH = LH(37339),
-      zH = LH(2036),
-      CH = LH(37368);
+    var YB = GB(1246),
+      DB = GB(162),
+      QB = GB(16),
+      oB = GB(37127),
+      jB = GB(37129),
+      yB = GB(2050),
+      JB = GB(37163);
 
-    function EH() {
-      return !1 !== zH.e.get("canCustomiseChar")
+    function MB() {
+      return !1 !== yB.e.get("canCustomiseChar")
     }
-    let XH = !1;
-    var GH = LH(1297),
-      YH = LH(1194),
-      uH = LH(225),
-      QH = LH(3961),
-      WH = LH(9634),
-      MH = LH(9631);
+    let PB = !1;
+    var zB = GB(1350),
+      lB = GB(1253),
+      pB = GB(244),
+      qB = GB(4018),
+      ZB = GB(9614),
+      NB = GB(9608);
 
-    function xH() {
-      (0, WH.c)() || (0, MH.loadWasmPlayAhead)().catch((HH => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", HH)
+    function RB() {
+      (0, ZB.c)() || (0, NB.loadWasmPlayAhead)().catch((BB => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", BB)
       }))
     }
-    var vH = LH(3811),
-      PH = LH(1812);
-    var TH = LH(37375),
-      UH = LH(37874);
+    var WB = GB(3873),
+      AB = GB(1837);
+    var VB = GB(37170),
+      SB = GB(37701);
 
-    function VH() {
-      return Promise.all([LH.e(170), LH.e(236)]).then((() => LH(44789)))
+    function nB() {
+      return Promise.all([GB.e(170), GB.e(236)]).then((() => GB(44444)))
     }
 
-    function OH() {
-      return Promise.all([LH.e(170), LH.e(237)]).then((() => LH(44796)))
+    function UB() {
+      return Promise.all([GB.e(170), GB.e(237)]).then((() => GB(44451)))
     }
 
-    function bH() {
-      return (0, MH.loadWasmPreviews)()
+    function fB() {
+      return (0, NB.loadWasmPreviews)()
     }
-    XH || (XH = !0, document.addEventListener("keydown", (HH => {
-        (0, CH.d)(HH, EH)
+    PB || (PB = !0, document.addEventListener("keydown", (BB => {
+        (0, JB.d)(BB, MB)
       }))),
-      function(HH) {
-        var BH;
-        return !0 !== (null === HH || void 0 === HH ? void 0 : HH.saveData) && !/2g$/.test(null !== (BH = null === HH || void 0 === HH ? void 0 : HH.effectiveType) && void 0 !== BH ? BH : "")
-      }(navigator.connection) && (0, QH.d)((() => {
-        (0, WH.c)() || Promise.all([LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(155), LH.e(70)]).then((() => LH(42355))).then((async HH => {
-          if ((0, WH.c)()) return;
-          const BH = HH.startLoadAheadOfJoin({
-            joinStarted: WH.c,
-            language: YH.g.get().getCurrentLanguageCode()
+      function(BB) {
+        var OB;
+        return !0 !== (null === BB || void 0 === BB ? void 0 : BB.saveData) && !/2g$/.test(null !== (OB = null === BB || void 0 === BB ? void 0 : BB.effectiveType) && void 0 !== OB ? OB : "")
+      }(navigator.connection) && (0, qB.e)((() => {
+        (0, ZB.c)() || Promise.all([GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(155), GB.e(70)]).then((() => GB(42053))).then((async BB => {
+          if ((0, ZB.c)()) return;
+          const OB = BB.startLoadAheadOfJoin({
+            joinStarted: ZB.c,
+            language: lB.e.get().getCurrentLanguageCode()
           });
-          (0, uH.d)((() => {
-            (0, WH.c)() || HH.probeWebgl2AheadOfJoin()
-          })), await BH, (0, uH.d)(xH)
-        }), (HH => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", HH)
+          (0, pB.b)((() => {
+            (0, ZB.c)() || BB.probeWebgl2AheadOfJoin()
+          })), await OB, (0, pB.b)(RB)
+        }), (BB => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", BB)
         }))
       }));
-    const kH = SH.c.get("router");
-    null === kH ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function HH(BH) {
-      if ((0, PH.c)(BH.state.location.pathname)) return void(0, MH.loadWasmPlay)().catch((() => {}));
-      const LH = BH.subscribe((AH => {
-        (0, PH.c)(AH.location.pathname) && (LH(), (0, vH.e)().then((() => {
-          HH(BH)
+    const kB = QB.c.get("router");
+    null === kB ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function BB(OB) {
+      if ((0, AB.c)(OB.state.location.pathname)) return void(0, NB.loadWasmPlay)().catch((() => {}));
+      const GB = OB.subscribe((YB => {
+        (0, AB.c)(YB.location.pathname) && (GB(), (0, WB.e)().then((() => {
+          BB(OB)
         })))
       }))
-    }(kH), (0, hH.b)();
-    const mH = (0, tH.b)((async function(HH, BH) {
+    }(kB), (0, oB.c)();
+    const dB = (0, jB.b)((async function(BB, OB) {
       let {
-        place: LH,
-        userContext: SH,
-        direct: hH,
-        matchedAt: tH,
-        rematch: zH
-      } = HH;
-      const CH = hH ? 1 / 0 : tH;
-      let EH;
+        place: GB,
+        userContext: QB,
+        direct: oB,
+        matchedAt: jB,
+        rematch: yB
+      } = BB;
+      const JB = oB ? 1 / 0 : jB;
+      let MB;
       try {
-        EH = await (0, MH.loadWasmPlay)()
-      } catch (XH) {
-        return console.error("The wasm client did not load:", XH), (0, GH.p)({
+        MB = await (0, NB.loadWasmPlay)()
+      } catch (PB) {
+        return console.error("The wasm client did not load:", PB), (0, zB.n)({
           websocketUrl: null
-        }), AH.e.errorWithCode(String(XH), rH.h.CONNECT_TO_GAME_SERVER, {
-          error: XH,
-          severity: BH.aborted ? "low" : "medium",
-          xB: BH.aborted
+        }), YB.c.errorWithCode(String(PB), DB.l.CONNECT_TO_GAME_SERVER, {
+          error: PB,
+          severity: OB.aborted ? "low" : "medium",
+          rB: OB.aborted
         })
       }
-      return EH.playWasmGame({
-        userContext: SH,
-        place: LH,
-        matchedAt: CH,
-        rematch: zH
-      }, BH)
+      return MB.playWasmGame({
+        userContext: QB,
+        place: GB,
+        matchedAt: JB,
+        rematch: yB
+      }, OB)
     }));
 
-    function oH() {
-      return (0, MH.loadWasmPlay)().catch((() => {})), mH(...arguments)
+    function KB() {
+      return (0, NB.loadWasmPlay)().catch((() => {})), dB(...arguments)
     }
   },
-  9631: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      loadWasmPlay: () => GH,
-      loadWasmPlayAhead: () => YH,
-      loadWasmPreviews: () => uH
+  9608: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      loadWasmPlay: () => zB,
+      loadWasmPlayAhead: () => lB,
+      loadWasmPreviews: () => pB
     });
-    var AH = LH(3503),
-      rH = LH(2413),
-      SH = LH(2215),
-      hH = LH(5062),
-      tH = LH(3892),
-      zH = LH(9634);
-    let CH = null;
+    var YB = GB(3573),
+      DB = GB(2457),
+      QB = GB(2250),
+      oB = GB(5065),
+      jB = GB(3944),
+      yB = GB(9614);
+    let JB = null;
 
-    function EH() {
-      return Promise.all([LH.e(86), LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(216), LH.e(243), LH.e(155), LH.e(101), LH.e(244), LH.e(75)]).then((() => LH(42e3)))
+    function MB() {
+      return Promise.all([GB.e(86), GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(216), GB.e(243), GB.e(155), GB.e(101), GB.e(244), GB.e(75)]).then((() => GB(41683)))
     }
 
-    function XH() {
-      Promise.all([LH.e(84), LH.e(87), LH.e(85), LH.e(86), LH.e(103), LH.e(100), LH.e(300), LH.e(207), LH.e(250), LH.e(274), LH.e(244), LH.e(54)]).then((() => LH(42318))).catch((() => {}))
+    function PB() {
+      Promise.all([GB.e(84), GB.e(87), GB.e(85), GB.e(86), GB.e(103), GB.e(100), GB.e(300), GB.e(207), GB.e(250), GB.e(274), GB.e(244), GB.e(54)]).then((() => GB(42017))).catch((() => {}))
     }
 
-    function GH() {
-      return hH.b.cancelDownloadForJoin(), (0, tH.e)(), (0, rH.f)(), (0, zH.f)(), (0, SH.g)(), XH(), Promise.all([LH.e(89), LH.e(103), LH.e(234), LH.e(233), LH.e(150), LH.e(155), LH.e(70)]).then((() => LH(42355))).then((HH => {
+    function zB() {
+      return oB.b.cancelDownloadForJoin(), (0, jB.d)(), (0, DB.h)(), (0, yB.d)(), (0, QB.j)(), PB(), Promise.all([GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(155), GB.e(70)]).then((() => GB(42053))).then((BB => {
         let {
-          startJoinLoad: BH
-        } = HH;
-        BH()
-      }), (() => {})), CH ??= EH().then((HH => (HH.startWasmPlay(), HH.followPageUiPack((HH => {
-        AH.b.showGamePack(HH)
-      })), HH)), (HH => {
-        throw CH = null, HH
-      })), CH
+          startJoinLoad: OB
+        } = BB;
+        OB()
+      }), (() => {})), JB ??= MB().then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
+        YB.c.showGamePack(BB)
+      })), BB)), (BB => {
+        throw JB = null, BB
+      })), JB
     }
 
-    function YH() {
-      return XH(), LH.e(124).then((() => LH(42361))).catch((() => {})), EH().then((() => {}))
+    function lB() {
+      return PB(), GB.e(124).then((() => GB(42056))).catch((() => {})), MB().then((() => {}))
     }
 
-    function uH() {
-      return EH().then((HH => {
-        HH.startWasmPreviews(), HH.prefetchWasmPreviews()
+    function pB() {
+      return MB().then((BB => {
+        BB.startWasmPreviews(), BB.prefetchWasmPreviews()
       }))
     }
   },
-  37702: (HH, BH, LH) => {
-    function AH(HH) {
-      return "fetch" === HH || "timeout" === HH || "integrity" === HH ? "download" : "browser"
+  37536: (BB, OB, GB) => {
+    function YB(BB) {
+      return "fetch" === BB || "timeout" === BB || "integrity" === BB ? "download" : "browser"
     }
-    LH.d(BH, {
-      d: () => rH,
-      e: () => zH,
-      g: () => EH,
-      h: () => tH,
-      l: () => hH,
-      n: () => CH,
-      o: () => AH,
-      r: () => SH
+    GB.d(OB, {
+      b: () => DB,
+      c: () => yB,
+      g: () => MB,
+      h: () => jB,
+      l: () => oB,
+      m: () => JB,
+      p: () => YB,
+      q: () => QB
     });
-    const rH = "https://discord.gg/playbloxd";
+    const DB = "https://discord.gg/playbloxd";
 
-    function SH(HH, BH) {
-      return "download" === HH ? {
+    function QB(BB, OB) {
+      return "download" === BB ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -543,18 +543,18 @@ export const modules = {
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
-      } : "memory" === HH || "noContext" === HH || "graphicsLost" === HH ? {
+      } : "memory" === BB || "noContext" === BB || "graphicsLost" === BB ? {
         icon: "face-dizzy",
-        title: `wasmUnsupported:${HH}Title`,
-        help: `wasmUnsupported:${HH}Help${BH?"App":""}`,
+        title: `wasmUnsupported:${BB}Title`,
+        help: `wasmUnsupported:${BB}Help${OB?"App":""}`,
         helpValues: {},
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
       } : {
         icon: "face-dizzy",
-        title: BH ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
-        help: BH ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === HH ? "noWebAssemblyHelp" : "help"),
+        title: OB ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
+        help: OB ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === BB ? "noWebAssemblyHelp" : "help"),
         helpValues: {},
         discordLink: !1,
         confirm: "general:ok",
@@ -562,14 +562,14 @@ export const modules = {
       }
     }
 
-    function hH(HH, BH) {
+    function oB(BB, OB) {
       return {
-        ...SH(HH, BH),
-        help: BH ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${HH}StillHelp`
+        ...QB(BB, OB),
+        help: OB ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${BB}StillHelp`
       }
     }
 
-    function tH() {
+    function jB() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:noContextTitle",
@@ -581,21 +581,21 @@ export const modules = {
       }
     }
 
-    function zH(HH, BH) {
+    function yB(BB, OB) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: BH ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: OB ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: HH.code
+          code: BB.code
         },
-        discordLink: BH,
+        discordLink: OB,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function CH() {
+    function JB() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -607,37 +607,37 @@ export const modules = {
       }
     }
 
-    function EH(HH, BH, LH) {
+    function MB(BB, OB, GB) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: LH ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: GB ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: HH.reason
+          reason: BB.reason
         },
-        discordLink: null === HH.name,
-        confirm: BH ? "general:reconnect" : HH.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === BB.name,
+        confirm: OB ? "general:reconnect" : BB.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  37146: (HH, BH, LH) => {
-    LH.d(BH, {
-      C: () => uH,
-      E: () => QH,
-      F: () => MH,
-      c: () => AH,
-      e: () => XH,
-      g: () => rH,
-      h: () => GH,
-      l: () => WH,
-      n: () => EH,
-      r: () => xH,
-      u: () => zH,
-      y: () => CH,
-      z: () => YH
+  36977: (BB, OB, GB) => {
+    GB.d(OB, {
+      B: () => lB,
+      C: () => pB,
+      F: () => qB,
+      G: () => NB,
+      b: () => YB,
+      e: () => PB,
+      f: () => DB,
+      h: () => zB,
+      i: () => ZB,
+      m: () => MB,
+      q: () => RB,
+      t: () => yB,
+      x: () => JB
     });
-    const AH = [{
+    const YB = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -654,64 +654,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function rH(HH, BH) {
+    function DB(BB, OB) {
       const {
-        numLines: LH,
-        charsPerLine: rH
-      } = AH[BH];
-      return vH(HH, LH, rH, !1)
+        numLines: GB,
+        charsPerLine: DB
+      } = YB[OB];
+      return WB(BB, GB, DB, !1)
     }
-    const SH = 7 / 8,
-      hH = .25,
-      tH = 8;
+    const QB = 7 / 8,
+      oB = .25,
+      jB = 8;
 
-    function zH(HH, BH) {
+    function yB(BB, OB) {
       return {
-        width: Math.min(HH, tH) - 2 * hH,
-        height: Math.min(BH, tH) - 2 * hH
+        width: Math.min(BB, jB) - 2 * oB,
+        height: Math.min(OB, jB) - 2 * oB
       }
     }
 
-    function CH(HH, BH, LH) {
-      const rH = zH(HH, BH),
+    function JB(BB, OB, GB) {
+      const DB = yB(BB, OB),
         {
-          numLines: hH,
-          charsPerLine: tH
-        } = AH[LH];
+          numLines: oB,
+          charsPerLine: jB
+        } = YB[GB];
       return {
-        numLines: Math.max(1, Math.floor(hH / SH * rH.height)),
-        charsPerLine: Math.max(1, Math.floor(tH * rH.width))
+        numLines: Math.max(1, Math.floor(oB / QB * DB.height)),
+        charsPerLine: Math.max(1, Math.floor(jB * DB.width))
       }
     }
 
-    function EH(HH, BH, LH, AH) {
+    function MB(BB, OB, GB, YB) {
       const {
-        numLines: rH,
-        charsPerLine: SH
-      } = CH(LH, AH, BH);
-      return vH(HH, rH, SH, !1)
+        numLines: DB,
+        charsPerLine: QB
+      } = JB(GB, YB, OB);
+      return WB(BB, DB, QB, !1)
     }
-    const XH = 32e3;
+    const PB = 32e3;
 
-    function GH(HH) {
-      return HH.slice(0, XH)
+    function zB(BB) {
+      return BB.slice(0, PB)
     }
-    const YH = 512e3,
-      uH = 64,
-      QH = YH;
+    const lB = 512e3,
+      pB = 64,
+      qB = lB;
 
-    function WH(HH, BH) {
-      const LH = Math.max(0, QH - BH),
-        AH = Math.min(YH, LH);
-      return HH.slice(0, AH)
+    function ZB(BB, OB) {
+      const GB = Math.max(0, qB - OB),
+        YB = Math.min(lB, GB);
+      return BB.slice(0, YB)
     }
-    const MH = {
+    const NB = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      qh: {
+      KJ: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -723,34 +723,34 @@ export const modules = {
       }
     };
 
-    function xH(HH, BH) {
+    function RB(BB, OB) {
       const {
-        numLines: LH,
-        charsPerLine: AH
-      } = MH[BH];
-      return vH(HH, LH, AH, !1)
+        numLines: GB,
+        charsPerLine: YB
+      } = NB[OB];
+      return WB(BB, GB, YB, !1)
     }
 
-    function vH(HH, BH, LH, AH, rH) {
-      (rH || AH) && (HH = HH.slice(0, null !== rH && void 0 !== rH ? rH : BH * LH));
-      const SH = HH.split("\n");
-      if (SH.length > BH && SH.splice(BH, SH.length - BH), !AH)
-        for (let hH = 0; hH < SH.length; hH++) {
-          const HH = SH[hH];
-          HH.length > LH && (SH[hH] = HH.substring(0, LH), SH.length < BH && SH.splice(hH + 1, 0, HH.substring(LH)))
+    function WB(BB, OB, GB, YB, DB) {
+      (DB || YB) && (BB = BB.slice(0, null !== DB && void 0 !== DB ? DB : OB * GB));
+      const QB = BB.split("\n");
+      if (QB.length > OB && QB.splice(OB, QB.length - OB), !YB)
+        for (let oB = 0; oB < QB.length; oB++) {
+          const BB = QB[oB];
+          BB.length > GB && (QB[oB] = BB.substring(0, GB), QB.length < OB && QB.splice(oB + 1, 0, BB.substring(GB)))
         }
-      return SH.join("\n")
+      return QB.join("\n")
     }
   },
-  10030: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH,
-      f: () => SH
+  10027: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      g: () => QB
     });
-    var AH = LH(9979);
-    const rH = "Air",
-      SH = Object.freeze(new AH.f(rH, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var YB = GB(9974);
+    const DB = "Air",
+      QB = Object.freeze(new YB.g(DB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

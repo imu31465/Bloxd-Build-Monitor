@@ -1,36 +1,36 @@
 export const id = 206;
 export const ids = [206];
 export const modules = {
-  41802: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      FORMER_BLOCK_IMAGE_NAMES: () => AH.b,
-      textureAnimationData: () => rH.u,
-      textureNameToIndex: () => rH.x
+  41493: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      FORMER_BLOCK_IMAGE_NAMES: () => YB.e,
+      textureAnimationData: () => DB.t,
+      textureNameToIndex: () => DB.u
     });
-    var AH = LH(39647),
-      rH = LH(9940)
+    var YB = GB(39417),
+      DB = GB(9927)
   },
-  10030: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH,
-      f: () => SH
+  10027: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      g: () => QB
     });
-    var AH = LH(9979);
-    const rH = "Air",
-      SH = Object.freeze(new AH.f(rH, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var YB = GB(9974);
+    const DB = "Air",
+      QB = Object.freeze(new YB.g(DB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39647: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      e: () => rH
+  39417: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => YB,
+      g: () => DB
     });
-    const AH = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((HH => [HH, `${HH}_block`])));
+    const YB = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((BB => [BB, `${BB}_block`])));
 
-    function rH(HH) {
-      var BH;
-      return null !== (BH = AH.get(HH)) && void 0 !== BH ? BH : HH
+    function DB(BB) {
+      var OB;
+      return null !== (OB = YB.get(BB)) && void 0 !== OB ? OB : BB
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,135 +1,135 @@
 export const id = 224;
 export const ids = [224];
 export const modules = {
-  37270: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      default: () => LB
+  37065: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      default: () => GO
     });
-    var AH = LH(45);
-    const rH = "newPlayerDeal",
-      SH = 36e5,
-      hH = [4, 12, 20, 20, 30];
-    const tH = 12 * SH;
+    var YB = GB(56);
+    const DB = "newPlayerDeal",
+      QB = 36e5,
+      oB = [4, 12, 20, 20, 30];
+    const jB = 12 * QB;
 
-    function zH(HH) {
-      return HH - tH
+    function yB(BB) {
+      return BB - jB
     }
 
-    function CH(HH, BH, LH) {
-      const AH = zH(LH);
-      return BH >= AH && BH < LH && (null === HH.lastShownAt || HH.lastShownAt < AH)
+    function JB(BB, OB, GB) {
+      const YB = yB(GB);
+      return OB >= YB && OB < GB && (null === BB.lastShownAt || BB.lastShownAt < YB)
     }
 
-    function EH(HH, BH) {
+    function MB(BB, OB) {
       const {
-        arrival: LH,
-        now: AH,
-        endsAt: rH,
-        playedOnDevice: tH
-      } = BH;
-      return !(AH >= rH || !tH) && (!(!CH(HH, AH, rH) && 0 !== HH.shownCount && null !== HH.lastShownAt) || "open" === LH && AH - HH.lastShownAt >= (zH = HH.shownCount, hH[Math.min(Math.max(zH, 1), hH.length) - 1] * SH));
-      var zH
+        arrival: GB,
+        now: YB,
+        endsAt: DB,
+        playedOnDevice: jB
+      } = OB;
+      return !(YB >= DB || !jB) && (!(!JB(BB, YB, DB) && 0 !== BB.shownCount && null !== BB.lastShownAt) || "open" === GB && YB - BB.lastShownAt >= (yB = BB.shownCount, oB[Math.min(Math.max(yB, 1), oB.length) - 1] * QB));
+      var yB
     }
-    var XH = LH(304),
-      GH = LH(1475),
-      YH = LH(15),
-      uH = LH(2397),
-      QH = LH(3337),
-      WH = LH(3340),
-      MH = LH(2027),
-      xH = LH(1131),
-      vH = LH(1070);
-    var PH = LH(1352),
-      TH = LH(30),
-      UH = LH(656),
-      VH = LH(2727),
-      OH = LH(1361),
-      bH = LH(2734),
-      kH = LH(2388),
-      mH = LH(1061),
-      oH = LH(2771),
-      IH = LH(2780),
-      fH = LH(3376),
-      lH = LH(1123),
-      KH = LH(1455),
-      cH = LH(3401),
-      eH = LH(35028),
-      qH = LH(2789),
-      gH = LH(35037),
-      NH = LH(1225);
+    var PB = GB(331),
+      zB = GB(1516),
+      lB = GB(16),
+      pB = GB(2444),
+      qB = GB(3393),
+      ZB = GB(3396),
+      NB = GB(2042),
+      RB = GB(1186),
+      WB = GB(1121);
+    var AB = GB(1400),
+      VB = GB(31),
+      SB = GB(677),
+      nB = GB(2756),
+      UB = GB(1403),
+      fB = GB(2763),
+      kB = GB(2437),
+      dB = GB(1112),
+      KB = GB(2807),
+      uB = GB(2814),
+      mB = GB(3435),
+      IB = GB(1175),
+      FB = GB(1485),
+      iB = GB(3458),
+      LB = GB(34838),
+      gB = GB(2822),
+      rB = GB(34845),
+      XB = GB(1282);
 
-    function RH(HH) {
+    function wB(BB) {
       let {
-        shownView: BH,
-        close: LH
-      } = HH;
+        shownView: OB,
+        close: GB
+      } = BB;
       const {
-        t: rH
-      } = (0, lH.B)(), SH = (0, oH.S)(), {
-        purchaseUnderWay: hH,
-        notice: tH,
-        needsLogin: zH,
-        buyPack: CH
-      } = (0, gH.e)("popup", ((HH, BH) => {
-        LH(!1), (0, fH.d)(HH, BH)
-      })), EH = null === SH;
-      (0, AH.useEffect)((() => {
-        EH && LH(!1)
-      }), [EH, LH]);
-      const XH = null !== SH && void 0 !== SH ? SH : BH;
-      return (0, NH.jsxs)("div", {
+        t: DB
+      } = (0, IB.H)(), QB = (0, KB.S)(), {
+        purchaseUnderWay: oB,
+        notice: jB,
+        needsLogin: yB,
+        buyPack: JB
+      } = (0, rB.c)("popup", ((BB, OB) => {
+        GB(!1), (0, mB.e)(BB, OB)
+      })), MB = null === QB;
+      (0, YB.useEffect)((() => {
+        MB && GB(!1)
+      }), [MB, GB]);
+      const PB = null !== QB && void 0 !== QB ? QB : OB;
+      return (0, XB.jsxs)("div", {
         className: "NewPlayerDealPopup",
-        children: [(0, NH.jsx)("div", {
+        children: [(0, XB.jsx)("div", {
           className: "NewPlayerDealPopupTitle",
-          children: rH("newPlayerDeal:title")
-        }), (0, NH.jsx)("div", {
+          children: DB("newPlayerDeal:title")
+        }), (0, XB.jsx)("div", {
           className: "NewPlayerDealPopupSub",
-          children: rH("newPlayerDeal:samePrice")
-        }), (0, NH.jsx)(eH.b, {
+          children: DB("newPlayerDeal:samePrice")
+        }), (0, XB.jsx)(LB.d, {
           className: "NewPlayerDealClockBig",
-          endsAt: XH.endsAt
-        }), (0, NH.jsx)(eH.c, {
-          view: XH,
-          needsLogin: zH,
-          busy: hH,
+          endsAt: PB.endsAt
+        }), (0, XB.jsx)(LB.g, {
+          view: PB,
+          needsLogin: yB,
+          busy: oB,
           highlight: null,
-          onBuy: HH => {
-            CH(XH, HH)
+          onBuy: BB => {
+            JB(PB, BB)
           }
-        }), (0, NH.jsx)(cH.e, {
-          notice: tH,
+        }), (0, XB.jsx)(iB.i, {
+          notice: jB,
           className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, NH.jsx)(cH.b, {
+        }), (0, XB.jsx)(iB.d, {
           className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, NH.jsx)(KH.i, {
+        }), (0, XB.jsx)(FB.f, {
           className: "NewPlayerDealNoThanks",
           onClick: () => {
-            LH(!0)
+            GB(!0)
           },
-          children: rH("newPlayerDeal:noThanks")
+          children: DB("newPlayerDeal:noThanks")
         })]
       })
     }
 
-    function jH(HH) {
+    function EB(BB) {
       let {
-        arm: BH,
-        children: LH
-      } = HH;
-      return (0, AH.useEffect)((() => {
-        (0, oH.J)(!0)
-      }), []), (0, oH.V)(BH, "popup"), LH
+        arm: OB,
+        children: GB
+      } = BB;
+      return (0, YB.useEffect)((() => {
+        (0, KB.I)(!0)
+      }), []), (0, KB.T)(OB, "popup"), GB
     }
 
-    function nH(HH) {
-      let BH = null;
-      PH.NotificationProvider.showCustomPopup({
-        body: LH => (0, NH.jsx)(jH, {
-          arm: HH.arm,
-          children: (0, NH.jsx)(RH, {
-            shownView: HH,
-            close: HH => {
-              BH ??= HH, LH()
+    function cB(BB) {
+      let OB = null;
+      AB.NotificationProvider.showCustomPopup({
+        body: GB => (0, XB.jsx)(EB, {
+          arm: BB.arm,
+          children: (0, XB.jsx)(wB, {
+            shownView: BB,
+            close: BB => {
+              OB ??= BB, GB()
             }
           })
         }),
@@ -137,477 +137,477 @@ export const modules = {
         middleScreenPopupClassName: "NewPlayerDealPopupPanel",
         disableExitButton: !0,
         unlockPointerKey: "NewPlayerDealPopup"
-      }).getResult().then((LH => {
-        (0, oH.J)(!1), !1 !== BH && "notificationTornDown" !== LH && (0, oH.F)("new_player_deal.close", (0, qH.e)(HH.arm, "popup"))
+      }).getResult().then((GB => {
+        (0, KB.I)(!1), !1 !== OB && "notificationTornDown" !== GB && (0, KB.D)("new_player_deal.close", (0, gB.b)(BB.arm, "popup"))
       }))
     }
-    const FH = 2500,
-      DH = 6e4;
-    const wH = 500,
-      ZH = 6e4;
+    const hB = 2500,
+      aB = 6e4;
+    const eB = 500,
+      TB = 6e4;
 
-    function dH(HH) {
-      const BH = Date.now() + ZH;
-      return new Promise((LH => {
-        const AH = () => {
-          HH() ? (0, bH.e)() || PH.NotificationProvider.hasPopup() || (0, OH.n)() || (0, oH.t)() || null !== YH.c.get("openEverythingMenuName") ? Date.now() > BH ? LH(!1) : setTimeout(AH, wH) : LH(!0) : LH(!1)
+    function bB(BB) {
+      const OB = Date.now() + TB;
+      return new Promise((GB => {
+        const YB = () => {
+          BB() ? (0, fB.g)() || AB.NotificationProvider.hasPopup() || (0, UB.k)() || (0, KB.q)() || null !== lB.c.get("openEverythingMenuName") ? Date.now() > OB ? GB(!1) : setTimeout(YB, eB) : GB(!0) : GB(!1)
         };
-        AH()
+        YB()
       }))
     }
-    const aH = "newPlayerDealPointerDeferred_";
-    let sH = !1,
-      JH = null;
+    const CB = "newPlayerDealPointerDeferred_";
+    let HB = !1,
+      vB = null;
 
-    function iH(HH, BH) {
-      var LH;
-      return (null === (LH = JH) || void 0 === LH ? void 0 : LH.accountId) === BH && JH.shownCount === HH.shownCount
+    function sB(BB, OB) {
+      var GB;
+      return (null === (GB = vB) || void 0 === GB ? void 0 : GB.accountId) === OB && vB.shownCount === BB.shownCount
     }
 
-    function pH(HH, BH, LH) {
-      return !!iH(BH, LH) && (JH = null, (0, oH.z)(LH), nH(HH), !0)
+    function xB(BB, OB, GB) {
+      return !!sB(OB, GB) && (vB = null, (0, KB.v)(GB), cB(BB), !0)
     }
-    async function yH(HH, BH, LH, AH) {
-      if (sH) return !1;
-      let rH;
-      sH = !0;
+    async function tB(BB, OB, GB, YB) {
+      if (HB) return !1;
+      let DB;
+      HB = !0;
       try {
-        rH = await async function(HH) {
+        DB = await async function(BB) {
           const {
-            newPlayerDeal: BH,
-            counted: LH
-          } = await (0, vH.postJsonWithMetricsCookiesAndJsonResponse)(`${xH.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
-            shownCount: HH
+            newPlayerDeal: OB,
+            counted: GB
+          } = await (0, WB.postJsonWithMetricsCookiesAndJsonResponse)(`${RB.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
+            shownCount: BB
           }, {
             retries: 1
           });
           return {
-            newPlayerDeal: BH,
-            counted: !0 === LH
+            newPlayerDeal: OB,
+            counted: !0 === GB
           }
-        }(BH.shownCount)
-      } catch (SH) {
-        return console.error("New player deal: counting a showing of its popup failed", SH), !1
+        }(OB.shownCount)
+      } catch (QB) {
+        return console.error("New player deal: counting a showing of its popup failed", QB), !1
       } finally {
-        sH = !1
+        HB = !1
       }
-      return (0, oH.N)(LH, rH.newPlayerDeal), rH.counted && null !== rH.newPlayerDeal && (JH = {
-        accountId: AH,
-        shownCount: rH.newPlayerDeal.shownCount
-      }, "landingPage" === YH.c.get("gameState") && pH(HH, rH.newPlayerDeal, AH)), !0
+      return (0, KB.M)(GB, DB.newPlayerDeal), DB.counted && null !== DB.newPlayerDeal && (vB = {
+        accountId: YB,
+        shownCount: DB.newPlayerDeal.shownCount
+      }, "landingPage" === lB.c.get("gameState") && xB(BB, DB.newPlayerDeal, YB)), !0
     }
-    let HB = null;
+    let BO = null;
 
-    function BB(HH, BH, LH, rH, SH) {
-      var hH;
+    function OO(BB, OB, GB, DB, QB) {
+      var oB;
       const {
-        gameState: tH
-      } = (0, YH.m)(["gameState"]), GH = "landingPage" === tH, {
-        pointing: uH
-      } = (0, VH.g)(), QH = (0, AH.useRef)(uH);
-      QH.current = uH;
-      const WH = (0, AH.useRef)(HH);
-      WH.current = HH;
-      const xH = (0, AH.useRef)(BH);
-      xH.current = BH;
-      const vH = (0, AH.useRef)(LH);
-      vH.current = LH;
-      const [PH, OH] = (0, AH.useState)(null), bH = (0, AH.useRef)(0), kH = (0, AH.useRef)(0), mH = (0, AH.useRef)(!1), oH = (0, AH.useCallback)((HH => {
-        "open" === function(HH) {
-          const BH = HH ? (0, UH.c)() : (0, UH.peekVisitSessionId)(),
-            LH = null !== BH && BH === HB ? "return" : "open";
-          return HB = BH, LH
-        }(HH) && (mH.current = !0), bH.current++, OH({
-          seq: bH.current,
-          kind: mH.current ? "open" : "return"
+        gameState: jB
+      } = (0, lB.o)(["gameState"]), zB = "landingPage" === jB, {
+        pointing: pB
+      } = (0, nB.h)(), qB = (0, YB.useRef)(pB);
+      qB.current = pB;
+      const ZB = (0, YB.useRef)(BB);
+      ZB.current = BB;
+      const RB = (0, YB.useRef)(OB);
+      RB.current = OB;
+      const WB = (0, YB.useRef)(GB);
+      WB.current = GB;
+      const [AB, UB] = (0, YB.useState)(null), fB = (0, YB.useRef)(0), kB = (0, YB.useRef)(0), dB = (0, YB.useRef)(!1), KB = (0, YB.useCallback)((BB => {
+        "open" === function(BB) {
+          const OB = BB ? (0, SB.getVisitSessionId)() : (0, SB.peekVisitSessionId)(),
+            GB = null !== OB && OB === BO ? "return" : "open";
+          return BO = OB, GB
+        }(BB) && (dB.current = !0), fB.current++, UB({
+          seq: fB.current,
+          kind: dB.current ? "open" : "return"
         })
       }), []);
-      (0, AH.useEffect)((() => {
-        if (!GH) return void OH(null);
-        oH(!0);
-        const HH = () => {
-          "visible" === document.visibilityState && oH(!0)
+      (0, YB.useEffect)((() => {
+        if (!zB) return void UB(null);
+        KB(!0);
+        const BB = () => {
+          "visible" === document.visibilityState && KB(!0)
         };
-        return document.addEventListener("visibilitychange", HH), () => {
-          document.removeEventListener("visibilitychange", HH)
+        return document.addEventListener("visibilitychange", BB), () => {
+          document.removeEventListener("visibilitychange", BB)
         }
-      }), [GH, oH]);
-      const IH = null !== (hH = null === HH || void 0 === HH ? void 0 : HH.endsAt) && void 0 !== hH ? hH : null;
-      (0, AH.useEffect)((() => {
-        if (!GH || null === IH) return;
-        const HH = zH(IH) - Date.now();
-        if (HH <= 0 || HH > MH.c) return;
-        const BH = setTimeout((() => {
-          oH(!1)
-        }), HH);
+      }), [zB, KB]);
+      const uB = null !== (oB = null === BB || void 0 === BB ? void 0 : BB.endsAt) && void 0 !== oB ? oB : null;
+      (0, YB.useEffect)((() => {
+        if (!zB || null === uB) return;
+        const BB = yB(uB) - Date.now();
+        if (BB <= 0 || BB > NB.b) return;
+        const OB = setTimeout((() => {
+          KB(!1)
+        }), BB);
         return () => {
-          clearTimeout(BH)
+          clearTimeout(OB)
         }
-      }), [GH, IH, oH]);
-      const fH = null !== HH && null !== rH && null === SH;
-      (0, AH.useEffect)((() => {
-        if (null === PH || !fH || kH.current >= PH.seq) return;
-        const HH = () => bH.current === PH.seq && "landingPage" === YH.c.get("gameState"),
-          BH = setTimeout((() => {
-            const BH = WH.current,
-              LH = xH.current;
-            if (null === BH || null === LH || !HH()) return;
-            kH.current = PH.seq;
-            const AH = Date.now(),
-              SH = iH(LH, rH);
-            if (!(SH || EH(LH, {
-                arrival: PH.kind,
-                now: AH,
-                endsAt: BH.endsAt,
-                playedOnDevice: TH.e.getItem(XH.Qb) > 0
-              }))) return void(mH.current = !1);
-            const hH = CH(LH, AH, BH.endsAt);
-            dH(HH).then((async HH => {
-              const BH = WH.current;
-              HH && null !== BH && xH.current === LH && (!QH.current || hH || function(HH, BH) {
-                return TH.e.getItem(aH + HH) === BH
-              }(rH, LH.shownCount) ? SH ? pH(BH, LH, rH) && (mH.current = !1) : await yH(BH, LH, vH.current, rH) && (mH.current = !1) : function(HH, BH) {
-                TH.e.setItem(aH + HH, BH)
-              }(rH, LH.shownCount))
+      }), [zB, uB, KB]);
+      const mB = null !== BB && null !== DB && null === QB;
+      (0, YB.useEffect)((() => {
+        if (null === AB || !mB || kB.current >= AB.seq) return;
+        const BB = () => fB.current === AB.seq && "landingPage" === lB.c.get("gameState"),
+          OB = setTimeout((() => {
+            const OB = ZB.current,
+              GB = RB.current;
+            if (null === OB || null === GB || !BB()) return;
+            kB.current = AB.seq;
+            const YB = Date.now(),
+              QB = sB(GB, DB);
+            if (!(QB || MB(GB, {
+                arrival: AB.kind,
+                now: YB,
+                endsAt: OB.endsAt,
+                playedOnDevice: VB.g.getItem(PB.Mb) > 0
+              }))) return void(dB.current = !1);
+            const oB = JB(GB, YB, OB.endsAt);
+            bB(BB).then((async BB => {
+              const OB = ZB.current;
+              BB && null !== OB && RB.current === GB && (!qB.current || oB || function(BB, OB) {
+                return VB.g.getItem(CB + BB) === OB
+              }(DB, GB.shownCount) ? QB ? xB(OB, GB, DB) && (dB.current = !1) : await tB(OB, GB, WB.current, DB) && (dB.current = !1) : function(BB, OB) {
+                VB.g.setItem(CB + BB, OB)
+              }(DB, GB.shownCount))
             }))
-          }), FH);
+          }), hB);
         return () => {
-          clearTimeout(BH)
+          clearTimeout(OB)
         }
-      }), [PH, fH, rH])
+      }), [AB, mB, DB])
     }
 
-    function LB() {
+    function GO() {
       const {
-        userContext: HH
-      } = (0, mH.e)(), BH = (0, uH.usePurchasesAllowed)(), [LH, SH] = (0, AH.useState)(IH.k);
-      (0, AH.useEffect)((() => (SH((0, IH.k)()), (0, IH.n)(SH))), []);
-      const hH = (0, oH.e)(HH);
-      ! function(HH, BH, LH) {
-        const [SH, hH] = (0, AH.useState)(0);
-        (0, AH.useEffect)((() => {
-          if (!BH || null === HH) return;
-          if (null !== LH) return void(0, oH.I)(HH, (0, IH.h)());
-          if (null !== (0, oH.j)(HH)) return;
-          let AH, SH = !1;
-          return (0, WH.getBillingClient)().getOfferings(rH).then((BH => {
+        userContext: BB
+      } = (0, dB.d)(), OB = (0, pB.usePurchasesAllowed)(), [GB, QB] = (0, YB.useState)(uB.j);
+      (0, YB.useEffect)((() => (QB((0, uB.j)()), (0, uB.l)(QB))), []);
+      const oB = (0, KB.c)(BB);
+      ! function(BB, OB, GB) {
+        const [QB, oB] = (0, YB.useState)(0);
+        (0, YB.useEffect)((() => {
+          if (!OB || null === BB) return;
+          if (null !== GB) return void(0, KB.G)(BB, (0, uB.e)());
+          if (null !== (0, KB.h)(BB)) return;
+          let YB, QB = !1;
+          return (0, ZB.getBillingClient)().getOfferings(DB).then((OB => {
             let {
-              offering: LH
-            } = BH;
-            (0, oH.I)(HH, null === LH ? [] : LH.packages.filter(QH.isPricedPackage))
-          }), (HH => {
-            console.error("New player deal: loading its prices failed", HH), SH || (AH = setTimeout((() => {
-              hH((HH => HH + 1))
-            }), DH))
+              offering: GB
+            } = OB;
+            (0, KB.G)(BB, null === GB ? [] : GB.packages.filter(qB.isPricedPackage))
+          }), (BB => {
+            console.error("New player deal: loading its prices failed", BB), QB || (YB = setTimeout((() => {
+              oB((BB => BB + 1))
+            }), aB))
           })), () => {
-            SH = !0, clearTimeout(AH)
+            QB = !0, clearTimeout(YB)
           }
-        }), [HH, BH, LH, SH])
-      }(hH, null !== (0, oH.l)(HH) && (BH || null !== LH), LH);
-      const tH = (0, oH.S)();
-      return BB(tH, (0, oH.l)(HH), HH, hH, LH),
+        }), [BB, OB, GB, QB])
+      }(oB, null !== (0, KB.i)(BB) && (OB || null !== GB), GB);
+      const jB = (0, KB.S)();
+      return OO(jB, (0, KB.i)(BB), BB, oB, GB),
         function() {
           const {
-            userContext: HH
-          } = (0, mH.e)(), {
-            gameState: BH
-          } = (0, YH.m)(["gameState"]);
-          (0, AH.useEffect)((() => {
-            if ("landingPage" !== BH || !HH.isLoggedIn() && !(0, uH.guestsMayBuy)()) return;
-            const LH = (0, oH.h)(HH),
-              AH = (0, kH.z)((HH => LH.includes(HH.item)));
-            null !== AH && ((0, GH.reportAnalyticsClick)({
+            userContext: BB
+          } = (0, dB.d)(), {
+            gameState: OB
+          } = (0, lB.o)(["gameState"]);
+          (0, YB.useEffect)((() => {
+            if ("landingPage" !== OB || !BB.isLoggedIn() && !(0, pB.guestsMayBuy)()) return;
+            const GB = (0, KB.g)(BB),
+              YB = (0, kB.B)((BB => GB.includes(BB.item)));
+            null !== YB && ((0, zB.reportAnalyticsClick)({
               id: "store.login_resume",
-              value: AH.item
-            }), (0, kH.k)({
+              value: YB.item
+            }), (0, kB.p)({
               mode: "self",
               source: "loginResume",
-              highlight: AH.item
+              highlight: YB.item
             }))
-          }), [HH, BH])
+          }), [BB, OB])
         }(),
-        function(HH, BH, LH) {
-          const rH = (0, AH.useRef)(null);
-          (0, AH.useEffect)((() => {
-            if (null === LH || null === HH || null === BH || rH.current === LH) return;
-            rH.current = LH;
-            const AH = HH.packs[0].pack;
-            switch (LH.show) {
+        function(BB, OB, GB) {
+          const DB = (0, YB.useRef)(null);
+          (0, YB.useEffect)((() => {
+            if (null === GB || null === BB || null === OB || DB.current === GB) return;
+            DB.current = GB;
+            const YB = BB.packs[0].pack;
+            switch (GB.show) {
               case "popup":
-                (0, oH.z)(BH), nH(HH);
+                (0, KB.v)(OB), cB(BB);
                 break;
               case "store":
-                (0, kH.k)({
+                (0, kB.p)({
                   mode: "self",
                   source: "newPlayerDeal"
                 });
                 break;
               case "resume":
-                (0, kH.k)({
+                (0, kB.p)({
                   mode: "self",
                   source: "loginResume",
-                  highlight: AH.packageId
+                  highlight: YB.packageId
                 });
                 break;
               case "bought":
-                (0, kH.k)({
+                (0, kB.p)({
                   mode: "self",
                   source: "newPlayerDeal"
-                }), (0, oH.w)(BH), (0, gH.d)(AH.gems);
+                }), (0, KB.r)(OB), (0, rB.b)(YB.gems);
                 break;
               case "gift":
-                (0, kH.k)({
+                (0, kB.p)({
                   mode: "gift",
                   source: "newPlayerDeal",
                   giftRecipientName: "Friend"
                 })
             }
-          }), [LH, HH, BH])
-        }(tH, hH, LH), null
+          }), [GB, BB, OB])
+        }(jB, oB, GB), null
     }
   },
-  35028: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => uH,
-      c: () => WH
+  34838: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => pB,
+      g: () => ZB
     });
-    LH(35030);
-    var AH = LH(45),
-      rH = LH(1038),
-      SH = LH.n(rH),
-      hH = LH(1123),
-      tH = LH(1455),
-      zH = LH(2795),
-      CH = LH(1315),
-      EH = LH(2580),
-      XH = LH(3392),
-      GH = LH(2406),
-      YH = LH(1225);
+    GB(34842);
+    var YB = GB(56),
+      DB = GB(1090),
+      QB = GB.n(DB),
+      oB = GB(1175),
+      jB = GB(1485),
+      yB = GB(2831),
+      JB = GB(1383),
+      MB = GB(2598),
+      PB = GB(3451),
+      zB = GB(2454),
+      lB = GB(1282);
 
-    function uH(HH) {
+    function pB(BB) {
       let {
-        endsAt: BH,
-        className: LH
-      } = HH;
-      return (0, YH.jsxs)("span", {
-        className: SH()("NewPlayerDealClock", LH),
-        children: [(0, YH.jsx)(CH.c, {
+        endsAt: OB,
+        className: GB
+      } = BB;
+      return (0, lB.jsxs)("span", {
+        className: QB()("NewPlayerDealClock", GB),
+        children: [(0, lB.jsx)(JB.b, {
           name: "hourglass"
-        }), (0, YH.jsx)(zH.i, {
-          toTime: BH
+        }), (0, lB.jsx)(yB.e, {
+          toTime: OB
         })]
       })
     }
 
-    function QH(HH) {
+    function qB(BB) {
       let {
-        offered: BH,
-        needsLogin: LH,
-        busy: AH,
-        highlight: rH,
-        onBuy: zH
-      } = HH;
+        offered: OB,
+        needsLogin: GB,
+        busy: YB,
+        highlight: DB,
+        onBuy: yB
+      } = BB;
       const {
-        t: CH
-      } = (0, hH.B)(), {
-        pack: uH
-      } = BH, QH = (0, XH.f)(BH.package);
-      return (0, YH.jsxs)("div", {
-        className: SH()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: rH
+        t: JB
+      } = (0, oB.H)(), {
+        pack: pB
+      } = OB, qB = (0, PB.g)(OB.package);
+      return (0, lB.jsxs)("div", {
+        className: QB()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: DB
         }),
-        children: [(0, YH.jsxs)("div", {
+        children: [(0, lB.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, YH.jsx)("img", {
-            src: GH.d[BH.tier],
+          children: [(0, lB.jsx)("img", {
+            src: zB.e[OB.tier],
             alt: "",
             draggable: !1
-          }), (0, YH.jsx)("span", {
+          }), (0, lB.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: CH("newPlayerDeal:tag")
+            children: JB("newPlayerDeal:tag")
           })]
-        }), (0, YH.jsx)("div", {
+        }), (0, lB.jsx)("div", {
           className: "NewPlayerDealPackText",
-          children: (0, YH.jsx)(EH.e, {
+          children: (0, lB.jsx)(MB.b, {
             className: "NewPlayerDealPackAmount",
-            amount: uH.gems
+            amount: pB.gems
           })
-        }), (0, YH.jsx)(tH.u, {
+        }), (0, lB.jsx)(jB.q, {
           className: "NewPlayerDealBuy",
-          loading: AH,
-          onClick: zH,
-          ariaLabel: CH("newPlayerDeal:buyLabel", {
-            amount: uH.gems.toLocaleString(),
-            price: QH
+          loading: YB,
+          onClick: yB,
+          ariaLabel: JB("newPlayerDeal:buyLabel", {
+            amount: pB.gems.toLocaleString(),
+            price: qB
           }),
-          children: CH(LH ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: QH
+          children: JB(GB ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: qB
           })
         })]
       })
     }
 
-    function WH(HH) {
+    function ZB(BB) {
       let {
-        view: BH,
-        needsLogin: LH,
-        busy: rH,
-        highlight: tH,
-        onBuy: zH
-      } = HH;
+        view: OB,
+        needsLogin: GB,
+        busy: DB,
+        highlight: jB,
+        onBuy: yB
+      } = BB;
       const {
-        t: CH
-      } = (0, hH.B)();
-      return (0, YH.jsxs)("div", {
-        className: SH()("NewPlayerDealPacks", BH.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [BH.packs.map(((HH, BH) => (0, YH.jsxs)(AH.Fragment, {
-          children: [BH > 0 && (0, YH.jsx)("div", {
+        t: JB
+      } = (0, oB.H)();
+      return (0, lB.jsxs)("div", {
+        className: QB()("NewPlayerDealPacks", OB.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [OB.packs.map(((BB, OB) => (0, lB.jsxs)(YB.Fragment, {
+          children: [OB > 0 && (0, lB.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, YH.jsx)("i", {})
-          }), (0, YH.jsx)(QH, {
-            offered: HH,
-            needsLogin: LH,
-            busy: rH,
-            highlight: tH === HH.pack.packageId,
+            children: (0, lB.jsx)("i", {})
+          }), (0, lB.jsx)(qB, {
+            offered: BB,
+            needsLogin: GB,
+            busy: DB,
+            highlight: jB === BB.pack.packageId,
             onBuy: () => {
-              zH(HH)
+              yB(BB)
             }
           })]
-        }, HH.pack.packageId))), (0, YH.jsx)("div", {
+        }, BB.pack.packageId))), (0, lB.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, YH.jsx)("span", {
+          children: (0, lB.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: CH("newPlayerDeal:limit")
+            children: JB("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35037: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => bH,
-      e: () => mH
+  34845: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => fB,
+      c: () => dB
     });
-    LH(35030);
-    var AH = LH(3388),
-      rH = LH(1475),
-      SH = LH(2397),
-      hH = LH(3376),
-      tH = LH(3356),
-      zH = LH(3382),
-      CH = LH(3340),
-      EH = LH(1123),
-      XH = LH(1352),
-      GH = LH(1061),
-      YH = LH(1455),
-      uH = LH(1315),
-      QH = LH(2580),
-      WH = LH(2930),
-      MH = LH(2771),
-      xH = LH(2780),
-      vH = LH(2789),
-      PH = LH(1225);
-    const TH = new zH.c(CH.getBillingClient, CH.addPurchaseRecordListener);
-    let UH = !1;
+    GB(34842);
+    var YB = GB(3442),
+      DB = GB(1516),
+      QB = GB(2444),
+      oB = GB(3435),
+      jB = GB(3409),
+      yB = GB(3437),
+      JB = GB(3396),
+      MB = GB(1175),
+      PB = GB(1400),
+      zB = GB(1112),
+      lB = GB(1485),
+      pB = GB(1383),
+      qB = GB(2598),
+      ZB = GB(2965),
+      NB = GB(2807),
+      RB = GB(2814),
+      WB = GB(2822),
+      AB = GB(1282);
+    const VB = new yB.d(JB.getBillingClient, JB.addPurchaseRecordListener);
+    let SB = !1;
 
-    function VH(HH, BH) {
-      null !== HH && (0, MH.q)(HH) || ((0, rH.reportAnalyticsClick)({
+    function nB(BB, OB) {
+      null !== BB && (0, NB.p)(BB) || ((0, DB.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${BH.pack.packageId}`
-      }), null !== HH && (0, MH.w)(HH), bH(BH.pack.gems))
+        value: `self:${OB.pack.packageId}`
+      }), null !== BB && (0, NB.r)(BB), fB(OB.pack.gems))
     }
 
-    function OH(HH, BH, LH) {
-      const rH = (0, MH.e)(BH);
-      switch (HH.kind) {
+    function UB(BB, OB, GB) {
+      const DB = (0, NB.c)(OB);
+      switch (BB.kind) {
         case "completed":
-          VH(rH, LH);
+          nB(DB, GB);
           break;
         case "pending":
-          SH = HH.intentId, hH = () => {
-            WH.h.refresh(), VH(rH, LH)
-          }, UH || (UH = !0, TH.listen()), TH.follow(SH, hH);
+          QB = BB.intentId, oB = () => {
+            ZB.h.refresh(), nB(DB, GB)
+          }, SB || (SB = !0, VB.listen()), VB.follow(QB, oB);
           break;
         case "unknownPackage":
-          (0, MH.N)(BH, null);
+          (0, NB.M)(OB, null);
           break;
         case "failed":
-          HH.errorKey === AH.c.newPlayerDealUnavailable && (0, MH.N)(BH, null)
+          BB.errorKey === YB.e.newPlayerDealUnavailable && (0, NB.M)(OB, null)
       }
-      var SH, hH
+      var QB, oB
     }
 
-    function bH(HH) {
-      XH.NotificationProvider.showCustomPopup({
-        body: BH => (0, PH.jsx)(kH, {
-          gems: HH,
-          close: BH
+    function fB(BB) {
+      PB.NotificationProvider.showCustomPopup({
+        body: OB => (0, AB.jsx)(kB, {
+          gems: BB,
+          close: OB
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function kH(HH) {
+    function kB(BB) {
       let {
-        gems: BH,
-        close: LH
-      } = HH;
+        gems: OB,
+        close: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, EH.B)();
-      return (0, PH.jsxs)("div", {
+        t: YB
+      } = (0, MB.H)();
+      return (0, AB.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, PH.jsxs)("div", {
+        children: [(0, AB.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, PH.jsx)(uH.c, {
+          children: [(0, AB.jsx)(pB.b, {
             name: "circle-check"
-          }), (0, PH.jsx)(QH.e, {
-            amount: BH
-          }), (0, PH.jsx)("span", {
-            children: AH("newPlayerDeal:added")
+          }), (0, AB.jsx)(qB.b, {
+            amount: OB
+          }), (0, AB.jsx)("span", {
+            children: YB("newPlayerDeal:added")
           })]
-        }), (0, PH.jsx)(YH.u, {
+        }), (0, AB.jsx)(lB.q, {
           className: "NewPlayerDealAddedOk",
-          onClick: LH,
-          children: AH("general:ok")
+          onClick: GB,
+          children: YB("general:ok")
         })]
       })
     }
 
-    function mH(HH) {
-      let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hH.d;
+    function dB(BB) {
+      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oB.e;
       const {
-        userContext: LH
-      } = (0, GH.e)(), {
-        purchaseUnderWay: AH,
-        notice: rH,
-        buy: zH
-      } = (0, tH.c)(BH), CH = (0, xH.k)(), EH = LH.mayBuy() || (0, SH.guestsMayBuy)(), XH = null === CH ? !EH : CH.guest && !LH.isLoggedIn();
+        userContext: GB
+      } = (0, zB.d)(), {
+        purchaseUnderWay: YB,
+        notice: DB,
+        buy: yB
+      } = (0, jB.c)(OB), JB = (0, RB.j)(), MB = GB.mayBuy() || (0, QB.guestsMayBuy)(), PB = null === JB ? !MB : JB.guest && !GB.isLoggedIn();
       return {
-        purchaseUnderWay: AH,
-        notice: rH,
-        needsLogin: XH,
-        buyPack: function(AH, rH) {
-          (0, MH.F)("new_player_deal.buy", (0, vH.e)(AH.arm, HH, rH.pack.packageId)), null === CH ? zH(function(HH) {
+        purchaseUnderWay: YB,
+        notice: DB,
+        needsLogin: PB,
+        buyPack: function(YB, DB) {
+          (0, NB.D)("new_player_deal.buy", (0, WB.b)(YB.arm, BB, DB.pack.packageId)), null === JB ? yB(function(BB) {
             return {
-              sku: HH.pack.packageId,
-              tier: HH.tier,
-              amount: HH.pack.gems,
+              sku: BB.pack.packageId,
+              tier: BB.tier,
+              amount: BB.pack.gems,
               bonusPercent: 0,
-              package: HH.package
+              package: BB.package
             }
-          }(rH), null, {
+          }(DB), null, {
             followPending: !1
-          }).then((HH => {
-            OH(HH, LH, rH)
-          })) : XH ? BH(rH.pack.packageId, null) : VH((0, MH.e)(LH), rH)
+          }).then((BB => {
+            UB(BB, GB, DB)
+          })) : PB ? OB(DB.pack.packageId, null) : nB((0, NB.c)(GB), DB)
         }
       }
     }
   },
-  35030: () => {}
+  34842: () => {}
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

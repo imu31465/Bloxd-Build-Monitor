@@ -1,502 +1,502 @@
 export const id = 274;
 export const ids = [274];
 export const modules = {
-  42352: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH,
-      f: () => hH
+  42048: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB,
+      e: () => oB
     });
-    var AH = LH(2010);
-    let rH = !1;
+    var YB = GB(2034);
+    let DB = !1;
 
-    function SH() {
-      rH = !0
+    function QB() {
+      DB = !0
     }
 
-    function hH() {
-      rH && (rH = !1, (0, AH.e)())
+    function oB() {
+      DB && (DB = !1, (0, YB.b)())
     }
   },
-  42343: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      h: () => SH,
-      j: () => tH
+  42045: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      e: () => QB,
+      i: () => jB
     });
-    var AH = LH(41898),
-      rH = LH(41911);
+    var YB = GB(41579),
+      DB = GB(41593);
 
-    function SH(HH) {
-      if (HH.queries.drawCensus() < AH.Gb.BYTES) return null;
-      const BH = HH.memoryData(HH.scratch(), AH.Gb.BYTES, 4, "the draw census");
-      return null === BH ? null : {
-        terrainOpaque: AH.Gb.terrainOpaque(BH, 0),
-        terrainTransparent: AH.Gb.terrainTransparent(BH, 0),
-        terrainPack: AH.Gb.terrainPack(BH, 0),
-        earthSky: AH.Gb.earthSky(BH, 0),
-        skyMeshes: AH.Gb.skyMeshes(BH, 0),
-        regular: AH.Gb.regular(BH, 0),
-        thin: AH.Gb.thin(BH, 0),
-        line: AH.Gb.line(BH, 0),
-        text: AH.Gb.text(BH, 0),
-        particles: AH.Gb.particles(BH, 0),
-        terrainParts: AH.Gb.terrainParts(BH, 0),
-        terrainCompiling: AH.Gb.terrainCompiling(BH, 0),
-        ringCopiesMax: AH.Gb.ringCopiesMax(BH, 0),
-        ringBusyWrites: AH.Gb.ringBusyWrites(BH, 0)
+    function QB(BB) {
+      if (BB.queries.drawCensus() < YB.Cb.BYTES) return null;
+      const OB = BB.memoryData(BB.scratch(), YB.Cb.BYTES, 4, "the draw census");
+      return null === OB ? null : {
+        terrainOpaque: YB.Cb.terrainOpaque(OB, 0),
+        terrainTransparent: YB.Cb.terrainTransparent(OB, 0),
+        terrainPack: YB.Cb.terrainPack(OB, 0),
+        earthSky: YB.Cb.earthSky(OB, 0),
+        skyMeshes: YB.Cb.skyMeshes(OB, 0),
+        regular: YB.Cb.regular(OB, 0),
+        thin: YB.Cb.thin(OB, 0),
+        line: YB.Cb.line(OB, 0),
+        text: YB.Cb.text(OB, 0),
+        particles: YB.Cb.particles(OB, 0),
+        terrainParts: YB.Cb.terrainParts(OB, 0),
+        terrainCompiling: YB.Cb.terrainCompiling(OB, 0),
+        ringCopiesMax: YB.Cb.ringCopiesMax(OB, 0),
+        ringBusyWrites: YB.Cb.ringBusyWrites(OB, 0)
       }
     }
 
-    function hH(HH) {
+    function oB(BB) {
       const {
-        terrainOpaque: BH,
-        terrainTransparent: LH,
-        earthSky: AH,
-        skyMeshes: rH,
-        regular: SH,
-        thin: hH,
-        line: tH,
-        text: zH,
-        particles: CH
-      } = HH;
-      return BH + LH + AH + rH + SH + hH + tH + zH + CH
+        terrainOpaque: OB,
+        terrainTransparent: GB,
+        earthSky: YB,
+        skyMeshes: DB,
+        regular: QB,
+        thin: oB,
+        line: jB,
+        text: yB,
+        particles: JB
+      } = BB;
+      return OB + GB + YB + DB + QB + oB + jB + yB + JB
     }
 
-    function tH() {
-      const HH = (0, rH.i)();
-      return !0 === (null === HH || void 0 === HH ? void 0 : HH.isCoreRunning) ? function(HH) {
-        const BH = SH(HH);
-        if (null === BH) return [];
+    function jB() {
+      const BB = (0, DB.j)();
+      return !0 === (null === BB || void 0 === BB ? void 0 : BB.isCoreRunning) ? function(BB) {
+        const OB = QB(BB);
+        if (null === OB) return [];
         const {
-          terrainOpaque: LH,
-          terrainTransparent: AH,
-          terrainPack: rH,
-          earthSky: tH,
-          skyMeshes: zH,
-          regular: CH,
-          thin: EH,
-          line: XH,
-          text: GH,
-          particles: YH
-        } = BH;
+          terrainOpaque: GB,
+          terrainTransparent: YB,
+          terrainPack: DB,
+          earthSky: jB,
+          skyMeshes: yB,
+          regular: JB,
+          thin: MB,
+          line: PB,
+          text: zB,
+          particles: lB
+        } = OB;
         return [{
           label: "Drawn",
-          value: `${hH(BH)}`
+          value: `${oB(OB)}`
         }, {
           label: "Terrain",
-          value: `${LH} opaque / ${AH} transparent (${rH} shader pack)`
+          value: `${GB} opaque / ${YB} transparent (${DB} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${CH} / ${EH}`
+          value: `${JB} / ${MB}`
         }, {
           label: "Text / Lines",
-          value: `${GH} / ${XH}`
+          value: `${zB} / ${PB}`
         }, {
           label: "Sky / Particles",
-          value: `${tH+zH} / ${YH}`
+          value: `${jB+yB} / ${lB}`
         }]
-      }(HH.api) : []
+      }(BB.api) : []
     }
   },
-  42330: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => uH,
-      d: () => GH,
-      e: () => YH
+  42031: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => pB,
+      h: () => zB,
+      k: () => lB
     });
-    var AH = LH(2018),
-      rH = LH(1245),
-      SH = LH(41911),
-      hH = LH(41933),
-      tH = LH(41940),
-      zH = LH(41954);
-    const CH = new rH.c;
-    let EH = !1;
+    var YB = GB(2038),
+      DB = GB(1296),
+      QB = GB(41593),
+      oB = GB(41616),
+      jB = GB(41624),
+      yB = GB(41637);
+    const JB = new DB.d;
+    let MB = !1;
 
-    function XH(HH) {
-      const BH = (0, SH.i)();
-      return null !== BH && +HH === BH.api.localId
+    function PB(BB) {
+      const OB = (0, QB.j)();
+      return null !== OB && +BB === OB.api.localId
     }
 
-    function GH() {
-      EH || (EH = !0, (0, zH.k)(hH.k, (HH => {
-        var BH, LH;
-        const AH = (0, tH.f)(hH.k, HH);
-        if (!(0, tH.c)(AH)) return;
-        const rH = AH;
-        XH(rH.fH) && YH(rH.lH, {
-          icon: rH.VA,
-          level: rH.bA,
-          displayName: null !== (BH = rH.KH) && void 0 !== BH ? BH : null,
-          durationMs: null !== (LH = rH.OA) && void 0 !== LH ? LH : null
+    function zB() {
+      MB || (MB = !0, (0, yB.g)(oB.n, (BB => {
+        var OB, GB;
+        const YB = (0, jB.h)(oB.n, BB);
+        if (!(0, jB.e)(YB)) return;
+        const DB = YB;
+        PB(DB.pY) && lB(DB.qY, {
+          icon: DB.NY,
+          level: DB.WY,
+          displayName: null !== (OB = DB.ZY) && void 0 !== OB ? OB : null,
+          durationMs: null !== (GB = DB.RY) && void 0 !== GB ? GB : null
         })
-      })), (0, zH.k)(hH.N, (HH => {
-        const BH = (0, tH.f)(hH.N, HH);
-        if (!(0, tH.c)(BH)) return;
-        const LH = BH;
-        XH(LH.fH) && AH.c.remove(LH.lH)
-      })), (0, zH.g)((() => {
-        AH.c.clear()
+      })), (0, yB.g)(oB.P, (BB => {
+        const OB = (0, jB.h)(oB.P, BB);
+        if (!(0, jB.e)(OB)) return;
+        const GB = OB;
+        PB(GB.pY) && YB.c.remove(GB.qY)
+      })), (0, yB.d)((() => {
+        YB.c.clear()
       })))
     }
 
-    function YH(HH, BH) {
-      AH.c.update(HH, BH), CH.forEach((BH => {
-        BH(HH)
+    function lB(BB, OB) {
+      YB.c.update(BB, OB), JB.forEach((OB => {
+        OB(BB)
       }))
     }
-    const uH = {
+    const pB = {
       localEffectUpdated: {
-        watch: HH => CH.add(HH)
+        watch: BB => JB.add(BB)
       }
     }
   },
-  42337: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => EH
+  42039: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => MB
     });
-    var AH = LH(5268),
-      rH = LH(5265),
-      SH = LH(41946),
-      hH = LH(41954);
-    const tH = new Set(AH.Q),
-      zH = AH.Q.map((HH => (new TextEncoder).encode(HH))),
-      CH = new Map;
+    var YB = GB(5287),
+      DB = GB(5281),
+      QB = GB(41630),
+      oB = GB(41637);
+    const jB = new Set(YB.R),
+      yB = YB.R.map((BB => (new TextEncoder).encode(BB))),
+      JB = new Map;
 
-    function EH(HH, BH) {
-      var LH;
-      return null === (LH = CH.get(HH)) || void 0 === LH ? void 0 : LH[BH]
-    }(0, hH.k)(AH.nc.NewOtherEntitySettings, (HH => {
-      HH.payloadKind === rH.jc.Msgpack && zH.some((BH => function(HH, BH) {
-        const LH = BH[0];
-        for (let AH = HH.indexOf(LH); - 1 !== AH && AH + BH.length <= HH.length; AH = HH.indexOf(LH, AH + 1)) {
-          let LH = 1;
-          for (; LH < BH.length && HH[AH + LH] === BH[LH];) LH++;
-          if (LH === BH.length) return !0
+    function MB(BB, OB) {
+      var GB;
+      return null === (GB = JB.get(BB)) || void 0 === GB ? void 0 : GB[OB]
+    }(0, oB.g)(YB.oc.NewOtherEntitySettings, (BB => {
+      BB.payloadKind === DB.sc.Msgpack && yB.some((OB => function(BB, OB) {
+        const GB = OB[0];
+        for (let YB = BB.indexOf(GB); - 1 !== YB && YB + OB.length <= BB.length; YB = BB.indexOf(GB, YB + 1)) {
+          let GB = 1;
+          for (; GB < OB.length && BB[YB + GB] === OB[GB];) GB++;
+          if (GB === OB.length) return !0
         }
         return !1
-      }(HH.payload, BH))) && function(HH) {
-        if (null === HH || "object" !== typeof HH || null === HH.settings || "object" !== typeof HH.settings) return;
-        const BH = String(HH.eId),
-          LH = HH.settings;
-        let AH = CH.get(BH);
-        for (const rH in LH) {
-          if (!tH.has(rH)) continue;
-          const HH = LH[rH];
-          null === HH || void 0 === HH ? AH && delete AH[rH] : (AH ??= {}, AH[rH] = HH)
+      }(BB.payload, OB))) && function(BB) {
+        if (null === BB || "object" !== typeof BB || null === BB.settings || "object" !== typeof BB.settings) return;
+        const OB = String(BB.eId),
+          GB = BB.settings;
+        let YB = JB.get(OB);
+        for (const DB in GB) {
+          if (!jB.has(DB)) continue;
+          const BB = GB[DB];
+          null === BB || void 0 === BB ? YB && delete YB[DB] : (YB ??= {}, YB[DB] = BB)
         }
-        AH && CH.set(BH, AH)
-      }((0, SH.e)(HH.payload))
-    })), (0, hH.g)((() => {
-      CH.clear()
+        YB && JB.set(OB, YB)
+      }((0, QB.b)(BB.payload))
+    })), (0, oB.d)((() => {
+      JB.clear()
     }))
   },
-  42327: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => YH,
-      f: () => CH,
-      j: () => XH
+  42023: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => lB,
+      d: () => JB,
+      f: () => PB
     });
-    var AH = LH(39919),
-      rH = LH(2003),
-      SH = LH(1245),
-      hH = LH(41933),
-      tH = LH(41940),
-      zH = LH(41954);
-    const CH = new AH.e;
-    let EH = {};
+    var YB = GB(39710),
+      DB = GB(2027),
+      QB = GB(1296),
+      oB = GB(41616),
+      jB = GB(41624),
+      yB = GB(41637);
+    const JB = new YB.c;
+    let MB = {};
 
-    function XH(HH) {
-      return EH[HH]
+    function PB(BB) {
+      return MB[BB]
     }
-    const GH = new SH.c;
+    const zB = new QB.d;
 
-    function YH(HH) {
-      return GH.add(HH)
+    function lB(BB) {
+      return zB.add(BB)
     }
 
-    function uH(HH) {
-      GH.callEach(HH, "a roster listener")
-    }(0, zH.k)(hH.Z, (HH => {
-      const BH = (0, tH.f)(hH.Z, HH);
-      if (void 0 === BH) return;
-      const LH = BH.RA.some((HH => {
+    function pB(BB) {
+      zB.callEach(BB, "a roster listener")
+    }(0, yB.g)(oB.X, (BB => {
+      const OB = (0, jB.h)(oB.X, BB);
+      if (void 0 === OB) return;
+      const GB = OB.YY.some((BB => {
           let {
-            jA: BH,
-            nA: LH
-          } = HH;
-          return null !== LH && CH.has(BH) && CH.getName(BH) !== LH
+            DY: OB,
+            QY: GB
+          } = BB;
+          return null !== GB && JB.has(OB) && JB.getName(OB) !== GB
         })),
         {
-          added: AH,
-          removed: SH,
-          settingChanges: zH
-        } = CH.apply(BH),
-        EH = new Set;
-      for (const rH of zH)
-        for (const HH in rH.settings) EH.add(HH);
-      const XH = LH || AH.length > 0 || SH.length > 0;
-      (XH || EH.has("hideNameSeed")) && function() {
-        const HH = new Map;
-        for (const BH of CH.ids()) {
-          const LH = CH.getName(BH),
-            AH = CH.getSetting(BH, "hideNameSeed");
-          void 0 !== LH && void 0 !== AH && null !== AH && HH.set(LH, AH)
+          added: YB,
+          removed: QB,
+          settingChanges: yB
+        } = JB.apply(OB),
+        MB = new Set;
+      for (const DB of yB)
+        for (const BB in DB.settings) MB.add(BB);
+      const PB = GB || YB.length > 0 || QB.length > 0;
+      (PB || MB.has("hideNameSeed")) && function() {
+        const BB = new Map;
+        for (const OB of JB.ids()) {
+          const GB = JB.getName(OB),
+            YB = JB.getSetting(OB, "hideNameSeed");
+          void 0 !== GB && void 0 !== YB && null !== YB && BB.set(GB, YB)
         }
-        rH.c.replaceAll(HH)
-      }(), uH({
+        DB.d.replaceAll(BB)
+      }(), pB({
         kind: "roster",
-        members: XH,
-        settings: EH
+        members: PB,
+        settings: MB
       })
-    })), (0, zH.k)(hH.K, (HH => {
-      const BH = (0, tH.f)(hH.K, HH);
-      if (void 0 !== BH) {
+    })), (0, yB.g)(oB.M, (BB => {
+      const OB = (0, jB.h)(oB.M, BB);
+      if (void 0 !== OB) {
         for (const {
-            Ah: HH,
-            rh: LH,
-            Sh: AH
+            nB: BB,
+            UB: GB,
+            fB: YB
           }
-          of BH) EH[HH] = {
-          ...EH[HH],
-          [LH]: AH
+          of OB) MB[BB] = {
+          ...MB[BB],
+          [GB]: YB
         };
-        uH({
+        pB({
           kind: "cosmetics",
-          updates: BH
+          updates: OB
         })
       }
-    })), (0, zH.g)((() => {
-      CH.clear(), EH = {}, rH.c.clear(), uH({
+    })), (0, yB.d)((() => {
+      JB.clear(), MB = {}, DB.d.clear(), pB({
         kind: "reset"
       })
-    })), (0, zH.j)((() => {
-      CH.clear(), uH({
+    })), (0, yB.e)((() => {
+      JB.clear(), pB({
         kind: "reset"
       })
     }))
   },
-  42339: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => mH,
-      e: () => WH,
-      g: () => lH,
-      k: () => KH
+  42042: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => dB,
+      f: () => ZB,
+      j: () => IB,
+      n: () => FB
     });
-    var AH = LH(1206),
-      rH = LH(609),
-      SH = LH(81),
-      hH = LH(5268),
-      tH = LH(41898),
-      zH = LH(41928),
-      CH = LH(41911),
-      EH = LH(42337),
-      XH = LH(42327),
-      GH = LH(41940),
-      YH = LH(41954);
+    var YB = GB(1262),
+      DB = GB(633),
+      QB = GB(92),
+      oB = GB(5287),
+      jB = GB(41579),
+      yB = GB(41611),
+      JB = GB(41593),
+      MB = GB(42039),
+      PB = GB(42023),
+      zB = GB(41624),
+      lB = GB(41637);
 
-    function uH(HH) {
+    function pB(BB) {
       let {
-        deadEId: BH,
-        killerEId: LH,
-        killerLifeformType: AH,
-        withItem: rH,
-        killstreak: SH
-      } = HH;
+        deadEId: OB,
+        killerEId: GB,
+        killerLifeformType: YB,
+        withItem: DB,
+        killstreak: QB
+      } = BB;
       return {
-        killer: PH({
-          eId: LH,
-          lifeformType: AH
+        killer: AB({
+          eId: GB,
+          lifeformType: YB
         }),
-        victim: PH({
-          eId: BH
+        victim: AB({
+          eId: OB
         }),
-        withItem: rH,
-        killstreak: SH
+        withItem: DB,
+        killstreak: QB
       }
     }
 
-    function QH(HH) {
+    function qB(BB) {
       let {
-        killer: BH,
-        victim: LH,
-        withItem: AH
-      } = HH;
+        killer: OB,
+        victim: GB,
+        withItem: YB
+      } = BB;
       return {
-        killer: PH(BH),
-        victim: PH(LH),
-        withItem: AH,
+        killer: AB(OB),
+        victim: AB(GB),
+        withItem: YB,
         killstreak: 0
       }
     }
 
-    function WH(HH) {
-      OH && kH((() => "killed" === HH.kind ? uH(HH.body) : QH(HH.body)))
+    function ZB(BB) {
+      UB && kB((() => "killed" === BB.kind ? pB(BB.body) : qB(BB.body)))
     }
-    const MH = "#2727f1",
-      xH = "#912c2c";
+    const NB = "#2727f1",
+      RB = "#912c2c";
 
-    function vH(HH, BH) {
-      var LH;
-      return XH.f.has(HH) ? null === (LH = XH.f.getSettings(HH)) || void 0 === LH ? void 0 : LH[BH] : (0, EH.d)(HH, BH)
+    function WB(BB, OB) {
+      var GB;
+      return PB.d.has(BB) ? null === (GB = PB.d.getSettings(BB)) || void 0 === GB ? void 0 : GB[OB] : (0, MB.c)(BB, OB)
     }
 
-    function PH(HH) {
-      var BH, LH, hH, tH, EH;
+    function AB(BB) {
+      var OB, GB, oB, jB, MB;
       let {
-        eId: GH,
-        name: YH,
-        colour: uH,
-        lifeformType: QH
-      } = HH;
-      if (void 0 === GH || null === GH || "" === GH) {
-        const HH = YH || null;
+        eId: zB,
+        name: lB,
+        colour: pB,
+        lifeformType: qB
+      } = BB;
+      if (void 0 === zB || null === zB || "" === zB) {
+        const BB = lB || null;
         return {
           id: null,
-          shownName: HH,
-          lifeformType: null === HH && null !== QH && void 0 !== QH ? QH : null,
-          colour: uH || null,
+          shownName: BB,
+          lifeformType: null === BB && null !== qB && void 0 !== qB ? qB : null,
+          colour: pB || null,
           local: !1,
           realName: null
         }
       }
-      const WH = String(GH),
-        PH = null === (BH = (0, CH.i)()) || void 0 === BH ? void 0 : BH.api,
-        TH = void 0 !== PH && String(PH.localId) === WH,
-        UH = null !== (LH = XH.f.getName(WH)) && void 0 !== LH ? LH : null,
-        VH = null !== (hH = vH(WH, "hideNameSeed")) && void 0 !== hH ? hH : null;
-      let OH = null === UH ? null : (0, AH.b)(UH, !SH.featureFlags.canSeeRealPlayerNames, VH) || null,
-        bH = null;
-      if (null === OH && void 0 !== PH) {
-        const HH = PH.getEntityType(WH);
-        "Player" !== HH && (OH = (0, zH.k)(PH, +WH) || null), bH = rH.j.includes(HH) ? HH : null
+      const ZB = String(zB),
+        AB = null === (OB = (0, JB.j)()) || void 0 === OB ? void 0 : OB.api,
+        VB = void 0 !== AB && String(AB.localId) === ZB,
+        SB = null !== (GB = PB.d.getName(ZB)) && void 0 !== GB ? GB : null,
+        nB = null !== (oB = WB(ZB, "hideNameSeed")) && void 0 !== oB ? oB : null;
+      let UB = null === SB ? null : (0, YB.e)(SB, !QB.featureFlags.canSeeRealPlayerNames, nB) || null,
+        fB = null;
+      if (null === UB && void 0 !== AB) {
+        const BB = AB.getEntityType(ZB);
+        "Player" !== BB && (UB = (0, yB.j)(AB, +ZB) || null), fB = DB.j.includes(BB) ? BB : null
       }
       return {
-        id: WH,
-        shownName: OH,
-        lifeformType: null === OH && null !== (tH = null !== (EH = bH) && void 0 !== EH ? EH : QH) && void 0 !== tH ? tH : null,
-        colour: uH || vH(WH, "killfeedColour") || (TH ? MH : xH),
-        local: TH,
-        realName: UH
+        id: ZB,
+        shownName: UB,
+        lifeformType: null === UB && null !== (jB = null !== (MB = fB) && void 0 !== MB ? MB : qB) && void 0 !== jB ? jB : null,
+        colour: pB || WB(ZB, "killfeedColour") || (VB ? NB : RB),
+        local: VB,
+        realName: SB
       }
     }
-    const TH = 32;
-    let UH = [],
-      VH = null,
-      OH = !1,
-      bH = !1;
+    const VB = 32;
+    let SB = [],
+      nB = null,
+      UB = !1,
+      fB = !1;
 
-    function kH(HH) {
-      null === VH ? (UH.length === TH && UH.shift(), UH.push(HH)) : VH(HH())
+    function kB(BB) {
+      null === nB ? (SB.length === VB && SB.shift(), SB.push(BB)) : nB(BB())
     }
 
-    function mH() {
-      bH || (bH = !0, (0, YH.k)(hH.nc.PlayerKilled, (HH => {
-        const BH = (0, GH.i)(HH);
-        (0, GH.c)(BH) && kH((() => uH(BH)))
-      })), (0, YH.k)(hH.nc.CustomKillfeed, (HH => {
-        const BH = (0, GH.i)(HH);
-        (0, GH.c)(BH) && (0, GH.c)(BH.killer) && (0, GH.c)(BH.victim) && kH((() => QH(BH)))
-      })), (0, YH.g)((() => {
-        UH = []
+    function dB() {
+      fB || (fB = !0, (0, lB.g)(oB.oc.PlayerKilled, (BB => {
+        const OB = (0, zB.l)(BB);
+        (0, zB.e)(OB) && kB((() => pB(OB)))
+      })), (0, lB.g)(oB.oc.CustomKillfeed, (BB => {
+        const OB = (0, zB.l)(BB);
+        (0, zB.e)(OB) && (0, zB.e)(OB.killer) && (0, zB.e)(OB.victim) && kB((() => qB(OB)))
+      })), (0, lB.d)((() => {
+        SB = []
       })))
     }
-    const oH = Object.freeze([0, 0, 0]),
-      IH = [0, 0, 0],
-      fH = [0, 0, 0],
-      lH = {
+    const KB = Object.freeze([0, 0, 0]),
+      uB = [0, 0, 0],
+      mB = [0, 0, 0],
+      IB = {
         kill: {
-          watch(HH) {
-            if (OH = !0, 0 === UH.length) return VH = HH, () => {
-              OH = !1, VH = null
+          watch(BB) {
+            if (UB = !0, 0 === SB.length) return nB = BB, () => {
+              UB = !1, nB = null
             };
-            const BH = setTimeout((() => {
-              const BH = UH;
-              UH = [], VH = HH;
-              for (const AH of BH) try {
-                HH(AH())
-              } catch (LH) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", LH)
+            const OB = setTimeout((() => {
+              const OB = SB;
+              SB = [], nB = BB;
+              for (const YB of OB) try {
+                BB(YB())
+              } catch (GB) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", GB)
               }
             }), 0);
             return () => {
-              clearTimeout(BH), OH = !1, VH = null
+              clearTimeout(OB), UB = !1, nB = null
             }
           }
         }
       },
-      KH = {
+      FB = {
         localPos() {
-          const HH = (0, CH.i)();
-          if (null === HH) return oH;
-          const BH = HH.api.apiView;
-          for (let LH = 0; LH < 3; LH++) IH[LH] = tH.y.localPos(BH, 0, LH);
-          return IH
+          const BB = (0, JB.j)();
+          if (null === BB) return KB;
+          const OB = BB.api.apiView;
+          for (let GB = 0; GB < 3; GB++) uB[GB] = jB.u.localPos(OB, 0, GB);
+          return uB
         },
         targetedBlockPos() {
-          const HH = (0, CH.i)();
-          if (null === HH || tH.y.targetBlockId(HH.api.apiView, 0) === tH.cd) return null;
-          for (let BH = 0; BH < 3; BH++) fH[BH] = tH.y.targetBlock(HH.api.apiView, 0, BH);
-          return fH
+          const BB = (0, JB.j)();
+          if (null === BB || jB.u.targetBlockId(BB.api.apiView, 0) === jB.fd) return null;
+          for (let OB = 0; OB < 3; OB++) mB[OB] = jB.u.targetBlock(BB.api.apiView, 0, OB);
+          return mB
         }
       }
   },
-  39919: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH
+  39710: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => YB
     });
-    class AH {
+    class YB {
       constructor() {
         this.members = new Map
       }
-      apply(HH) {
-        const BH = {
+      apply(BB) {
+        const OB = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const AH of HH.RA) {
-          let HH = this.members.get(AH.jA);
-          if (HH || (HH = {
+        for (const YB of BB.YY) {
+          let BB = this.members.get(YB.DY);
+          if (BB || (BB = {
               name: null,
               settings: {}
-            }, this.members.set(AH.jA, HH), BH.added.push(AH.jA)), null !== AH.nA && (HH.name = AH.nA), null !== AH.FA || AH.DA.length > 0) {
-            const LH = null === AH.FA ? {} : JSON.parse(AH.FA);
-            Object.assign(HH.settings, LH);
-            for (const BH of AH.DA) delete HH.settings[BH], LH[BH] = void 0;
-            BH.settingChanges.push({
-              playerId: AH.jA,
-              settings: LH
+            }, this.members.set(YB.DY, BB), OB.added.push(YB.DY)), null !== YB.QY && (BB.name = YB.QY), null !== YB.oY || YB.jY.length > 0) {
+            const GB = null === YB.oY ? {} : JSON.parse(YB.oY);
+            Object.assign(BB.settings, GB);
+            for (const OB of YB.jY) delete BB.settings[OB], GB[OB] = void 0;
+            OB.settingChanges.push({
+              playerId: YB.DY,
+              settings: GB
             })
           }
         }
-        for (const AH of HH.wA) {
-          const HH = this.members.get(AH);
-          var LH;
-          if (HH) this.members.delete(AH), BH.removed.push({
-            playerId: AH,
-            name: null !== (LH = HH.name) && void 0 !== LH ? LH : void 0
+        for (const YB of BB.yY) {
+          const BB = this.members.get(YB);
+          var GB;
+          if (BB) this.members.delete(YB), OB.removed.push({
+            playerId: YB,
+            name: null !== (GB = BB.name) && void 0 !== GB ? GB : void 0
           })
         }
-        return BH
+        return OB
       }
-      has(HH) {
-        return this.members.has(HH)
+      has(BB) {
+        return this.members.has(BB)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(HH) {
-        var BH, LH;
-        return null !== (BH = null === (LH = this.members.get(HH)) || void 0 === LH ? void 0 : LH.name) && void 0 !== BH ? BH : void 0
+      getName(BB) {
+        var OB, GB;
+        return null !== (OB = null === (GB = this.members.get(BB)) || void 0 === GB ? void 0 : GB.name) && void 0 !== OB ? OB : void 0
       }
-      getSettings(HH) {
-        var BH;
-        return null === (BH = this.members.get(HH)) || void 0 === BH ? void 0 : BH.settings
+      getSettings(BB) {
+        var OB;
+        return null === (OB = this.members.get(BB)) || void 0 === OB ? void 0 : OB.settings
       }
-      getSetting(HH, BH) {
-        var LH;
-        return null === (LH = this.members.get(HH)) || void 0 === LH ? void 0 : LH.settings[BH]
+      getSetting(BB, OB) {
+        var GB;
+        return null === (GB = this.members.get(BB)) || void 0 === GB ? void 0 : GB.settings[OB]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

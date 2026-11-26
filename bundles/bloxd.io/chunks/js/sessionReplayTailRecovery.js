@@ -1,560 +1,560 @@
 export const id = 64;
 export const ids = [64];
 export const modules = {
-  40811: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      recoverReplayTails: () => eH
+  40567: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      recoverReplayTails: () => LB
     });
-    var AH = LH(40735),
-      rH = LH(30),
-      SH = LH(40725),
-      hH = LH(40704),
-      tH = LH(40732),
-      zH = LH(1148);
-    const CH = 35e3;
-    async function EH(HH, BH, LH) {
-      const AH = {
-          token: HH.token,
-          sequence: BH
+    var YB = GB(40469),
+      DB = GB(31),
+      QB = GB(40457),
+      oB = GB(40432),
+      jB = GB(40464),
+      yB = GB(1200);
+    const JB = 35e3;
+    async function MB(BB, OB, GB) {
+      const YB = {
+          token: BB.token,
+          sequence: OB
         },
-        rH = (0, zH.u)(CH),
-        SH = void 0 === LH ? rH : (0, zH.o)([LH, rH]);
-      let hH = !1;
+        DB = (0, yB.t)(JB),
+        QB = void 0 === GB ? DB : (0, yB.p)([GB, DB]);
+      let oB = !1;
       try {
-        const BH = await fetch(HH.releaseUrl, {
+        const OB = await fetch(BB.releaseUrl, {
           method: "POST",
           headers: {
             "Content-Type": "text/plain"
           },
-          body: JSON.stringify(AH),
-          signal: SH
+          body: JSON.stringify(YB),
+          signal: QB
         });
-        if (503 === BH.status) {
+        if (503 === OB.status) {
           const {
-            reason: HH
-          } = await BH.json();
-          hH = "release_retrying" === HH || "shutting_down" === HH
+            reason: BB
+          } = await OB.json();
+          oB = "release_retrying" === BB || "shutting_down" === BB
         }
-        if (!BH.ok) throw new Error(`HTTP ${BH.status}`);
-        const LH = await BH.json();
-        return "stored" === LH.outcome ? LH.stored : null
-      } catch (tH) {
-        if (SH.aborted || hH) throw tH;
-        return console.warn(`Session replay couldn't ask the part joiner about video segment ${BH}; uploading it from the journal.`, tH), null
+        if (!OB.ok) throw new Error(`HTTP ${OB.status}`);
+        const GB = await OB.json();
+        return "stored" === GB.outcome ? GB.stored : null
+      } catch (jB) {
+        if (QB.aborted || oB) throw jB;
+        return console.warn(`Session replay couldn't ask the part joiner about video segment ${OB}; uploading it from the journal.`, jB), null
       }
     }
-    var XH = LH(40756),
-      GH = LH(40785),
-      YH = LH(5111),
-      uH = LH(40760);
-    async function QH(HH, BH, LH) {
-      if (!HH.mayStartUpload()) return "retryLater";
+    var PB = GB(40505),
+      zB = GB(40537),
+      lB = GB(5122),
+      pB = GB(40514);
+    async function qB(BB, OB, GB) {
+      if (!BB.mayStartUpload()) return "retryLater";
       const {
-        kind: AH,
-        sequence: rH,
-        contentType: SH
-      } = LH;
-      let hH;
+        kind: YB,
+        sequence: DB,
+        contentType: QB
+      } = GB;
+      let oB;
       try {
-        hH = await LH.bytes()
-      } catch (tH) {
-        return console.warn(`Session replay couldn't mux late ${AH} segment ${rH}; skipping it.`, tH), "refused"
+        oB = await GB.bytes()
+      } catch (jB) {
+        return console.warn(`Session replay couldn't mux late ${YB} segment ${DB}; skipping it.`, jB), "refused"
       }
       try {
-        const LH = HH.transportFor(BH),
-          tH = await LH.requestPutUrl({
-            uploadToken: BH.uploadToken,
-            kind: AH,
-            sequence: rH,
-            contentType: SH,
-            byteLength: hH.byteLength,
+        const GB = BB.transportFor(OB),
+          jB = await GB.requestPutUrl({
+            uploadToken: OB.uploadToken,
+            kind: YB,
+            sequence: DB,
+            contentType: QB,
+            byteLength: oB.byteLength,
             late: !0
           });
-        return "rejected" in tH ? (console.warn(`Session replay late ${AH} segment ${rH} refused: ${tH.reason}`), tH.retryable ? "retryLater" : "refused") : (await LH.put(tH.uploadUrl, hH, SH, tH.ifNoneMatch), "uploaded")
-      } catch (tH) {
-        return console.warn(`Session replay late ${AH} segment ${rH} upload failed; trying again later.`, tH), "retryLater"
+        return "rejected" in jB ? (console.warn(`Session replay late ${YB} segment ${DB} refused: ${jB.reason}`), jB.retryable ? "retryLater" : "refused") : (await GB.put(jB.uploadUrl, oB, QB, jB.ifNoneMatch), "uploaded")
+      } catch (jB) {
+        return console.warn(`Session replay late ${YB} segment ${DB} upload failed; trying again later.`, jB), "retryLater"
       }
     }
-    async function WH(HH, BH, LH) {
-      var AH;
-      const rH = HH.nowMs(),
-        SH = (null !== (AH = LH.domSegments) && void 0 !== AH ? AH : []).filter((HH => HH.endMs <= rH));
-      for (const hH of [...LH.videoSegments, ...LH.telemetrySegments, ...SH]) LH.endedAtMs = Math.max(LH.endedAtMs, hH.endMs);
-      for (const hH of (0, uH.i)({
-          uploadToken: BH.uploadToken,
-          manifest: LH,
+    async function ZB(BB, OB, GB) {
+      var YB;
+      const DB = BB.nowMs(),
+        QB = (null !== (YB = GB.domSegments) && void 0 !== YB ? YB : []).filter((BB => BB.endMs <= DB));
+      for (const oB of [...GB.videoSegments, ...GB.telemetrySegments, ...QB]) GB.endedAtMs = Math.max(GB.endedAtMs, oB.endMs);
+      for (const oB of (0, pB.g)({
+          uploadToken: OB.uploadToken,
+          manifest: GB,
           creatorGrants: [],
           late: !0
         })) {
-        const LH = await HH.postManifest(BH, hH);
-        if ("uploaded" !== LH) return LH
+        const GB = await BB.postManifest(OB, oB);
+        if ("uploaded" !== GB) return GB
       }
       return "uploaded"
     }
-    var MH = LH(40818),
-      xH = LH(40832),
-      vH = LH(40888),
-      PH = LH(40916),
-      TH = LH(40900);
-    class UH {
-      constructor(HH, BH, LH, AH, rH) {
-        this.frameDurationS = LH, this.onFragment = rH, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = BH, this.lastTimestampUs = BH;
-        const SH = HH => {
-          this.boxes.push(HH)
+    var NB = GB(40572),
+      RB = GB(40589),
+      WB = GB(40641),
+      AB = GB(40669),
+      VB = GB(40650);
+    class SB {
+      constructor(BB, OB, GB, YB, DB) {
+        this.frameDurationS = GB, this.onFragment = DB, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = OB, this.lastTimestampUs = OB;
+        const QB = BB => {
+          this.boxes.push(BB)
         };
-        this.output = new MH.d({
-          format: new xH.e({
+        this.output = new NB.e({
+          format: new RB.g({
             fastStart: "fragmented",
-            minimumFragmentDuration: AH,
-            onFtyp: SH,
-            onMoov: SH,
-            onMoof: SH,
-            onMdat: HH => {
-              SH(HH), this.fragmentDone()
+            minimumFragmentDuration: YB,
+            onFtyp: QB,
+            onMoov: QB,
+            onMoof: QB,
+            onMdat: BB => {
+              QB(BB), this.fragmentDone()
             }
           }),
-          target: new vH.g
-        }), this.source = new PH.j(HH), this.output.addVideoTrack(this.source), this.pending = this.output.start()
+          target: new WB.e
+        }), this.source = new AB.i(BB), this.output.addVideoTrack(this.source), this.pending = this.output.start()
       }
       get durationUs() {
         return this.lastTimestampUs - this.firstTimestampUs
       }
-      add(HH, BH) {
-        const LH = new Uint8Array(HH.byteLength);
-        HH.copyTo(LH), this.addData(LH, HH.type, HH.timestamp, BH)
+      add(BB, OB) {
+        const GB = new Uint8Array(BB.byteLength);
+        BB.copyTo(GB), this.addData(GB, BB.type, BB.timestamp, OB)
       }
-      addData(HH, BH, LH, AH) {
-        const rH = new TH.b(HH, BH, (LH - this.firstTimestampUs) / 1e6, this.frameDurationS),
-          SH = 0 === this.chunkCount++;
-        this.lastTimestampUs = Math.max(this.lastTimestampUs, LH), this.pending = this.pending.then((() => (this.addingTimestampUs = LH, this.source.add(rH, SH ? {
-          decoderConfig: AH
+      addData(BB, OB, GB, YB) {
+        const DB = new VB.d(BB, OB, (GB - this.firstTimestampUs) / 1e6, this.frameDurationS),
+          QB = 0 === this.chunkCount++;
+        this.lastTimestampUs = Math.max(this.lastTimestampUs, GB), this.pending = this.pending.then((() => (this.addingTimestampUs = GB, this.source.add(DB, QB ? {
+          decoderConfig: YB
         } : void 0))))
       }
       async finish() {
         await this.pending, this.addingTimestampUs = null, await this.output.finalize()
       }
       fragmentDone() {
-        var HH;
-        const BH = VH(this.boxes);
+        var BB;
+        const OB = nB(this.boxes);
         this.boxes = [], this.onFragment({
-          bytes: BH,
-          endUs: null !== (HH = this.addingTimestampUs) && void 0 !== HH ? HH : this.lastTimestampUs + 1e6 * this.frameDurationS
+          bytes: OB,
+          endUs: null !== (BB = this.addingTimestampUs) && void 0 !== BB ? BB : this.lastTimestampUs + 1e6 * this.frameDurationS
         })
       }
     }
 
-    function VH(HH) {
-      const BH = new Uint8Array(HH.reduce(((HH, BH) => HH + BH.byteLength), 0));
-      let LH = 0;
-      for (const AH of HH) BH.set(AH, LH), LH += AH.byteLength;
-      return BH
+    function nB(BB) {
+      const OB = new Uint8Array(BB.reduce(((BB, OB) => BB + OB.byteLength), 0));
+      let GB = 0;
+      for (const YB of BB) OB.set(YB, GB), GB += YB.byteLength;
+      return OB
     }
-    LH(40751);
+    GB(40497);
 
-    function OH(HH, BH, LH, AH) {
-      const rH = HH / 1e3 + LH;
+    function UB(BB, OB, GB, YB) {
+      const DB = BB / 1e3 + GB;
       return {
-        startMs: rH,
-        endMs: rH + BH / 1e3 + 1e3 / AH
+        startMs: DB,
+        endMs: DB + OB / 1e3 + 1e3 / YB
       }
     }
-    const bH = 2,
-      kH = 18e5;
+    const fB = 2,
+      kB = 18e5;
 
-    function mH(HH, BH) {
-      const LH = BH[BH.length - 1].timestampUs - HH.firstTimestampUs,
+    function dB(BB, OB) {
+      const GB = OB[OB.length - 1].timestampUs - BB.firstTimestampUs,
         {
-          startMs: AH,
-          endMs: rH
-        } = OH(HH.firstTimestampUs, LH, HH.epochOffsetMs, HH.fps);
+          startMs: YB,
+          endMs: DB
+        } = UB(BB.firstTimestampUs, GB, BB.epochOffsetMs, BB.fps);
       return {
-        startMs: Math.round(AH),
-        endMs: Math.round(rH),
-        width: HH.width,
-        height: HH.height,
-        codec: HH.codec
+        startMs: Math.round(YB),
+        endMs: Math.round(DB),
+        width: BB.width,
+        height: BB.height,
+        codec: BB.codec
       }
     }
-    async function oH(HH, BH) {
-      const LH = [],
-        AH = new UH(HH.containerCodec, HH.firstTimestampUs, 1 / HH.fps, bH, (HH => {
+    async function KB(BB, OB) {
+      const GB = [],
+        YB = new SB(BB.containerCodec, BB.firstTimestampUs, 1 / BB.fps, fB, (BB => {
           let {
-            bytes: BH
-          } = HH;
-          LH.push(BH)
+            bytes: OB
+          } = BB;
+          GB.push(OB)
         }));
-      for (const rH of BH) AH.addData(rH.data, rH.key ? "key" : "delta", rH.timestampUs, HH.decoderConfig);
-      return await AH.finish(), VH(LH).buffer
+      for (const DB of OB) YB.addData(DB.data, DB.key ? "key" : "delta", DB.timestampUs, BB.decoderConfig);
+      return await YB.finish(), nB(GB).buffer
     }
 
-    function IH(HH, BH, LH) {
-      var AH;
-      const rH = null === (AH = HH.videoProgress) || void 0 === AH ? void 0 : AH.find((HH => HH.segmentId === BH));
-      return void 0 !== rH && (null === LH || rH.partsLanded > LH.partsLanded) ? rH : LH
+    function uB(BB, OB, GB) {
+      var YB;
+      const DB = null === (YB = BB.videoProgress) || void 0 === YB ? void 0 : YB.find((BB => BB.segmentId === OB));
+      return void 0 !== DB && (null === GB || DB.partsLanded > GB.partsLanded) ? DB : GB
     }
-    const fH = 6e5;
-    async function lH(HH, BH) {
-      const LH = {
-        recordingId: BH.recordingId,
+    const mB = 6e5;
+    async function IB(BB, OB) {
+      const GB = {
+        recordingId: OB.recordingId,
         outcome: "nothing",
         videoSegments: 0,
         telemetrySegments: 0,
         domSegments: 0
       };
-      if (HH.nowMs() > HH.lateUploadUntilMs(BH) - fH) return {
-        ...LH,
+      if (BB.nowMs() > BB.lateUploadUntilMs(OB) - mB) return {
+        ...GB,
         outcome: "expired"
       };
-      const AH = new Set;
-      let rH;
+      const YB = new Set;
+      let DB;
       try {
-        rH = await async function(HH, BH, LH, AH) {
+        DB = await async function(BB, OB, GB, YB) {
           const {
-            partJoiner: rH
-          } = BH;
-          if (void 0 === rH) return LH;
-          const SH = HH.nowMs() > BH.manifest.endedAtMs + kH,
-            hH = new Map;
+            partJoiner: DB
+          } = OB;
+          if (void 0 === DB) return GB;
+          const QB = BB.nowMs() > OB.manifest.endedAtMs + kB,
+            oB = new Map;
           for (const {
-              header: zH,
-              sequence: CH,
-              progress: EH
+              header: yB,
+              sequence: JB,
+              progress: MB
             }
-            of LH.video)
-            if (null !== CH && null === IH(BH, zH.segmentId, EH)) {
-              let BH;
+            of GB.video)
+            if (null !== JB && null === uB(OB, yB.segmentId, MB)) {
+              let OB;
               try {
-                BH = await HH.releaseJoined(rH, CH)
-              } catch (tH) {
-                if (!SH) {
-                  AH.add(zH.segmentId);
+                OB = await BB.releaseJoined(DB, JB)
+              } catch (jB) {
+                if (!QB) {
+                  YB.add(yB.segmentId);
                   continue
                 }
-                console.warn(`Session replay's part joiner didn't answer about video segment ${CH} in time; uploading it from the journal.`, tH), BH = null
+                console.warn(`Session replay's part joiner didn't answer about video segment ${JB} in time; uploading it from the journal.`, jB), OB = null
               }
-              null !== BH && hH.set(zH.segmentId, BH)
+              null !== OB && oB.set(yB.segmentId, OB)
             } return {
-            ...LH,
-            joined: hH
+            ...GB,
+            joined: oB
           }
-        }(HH, BH, await HH.store.read(BH), AH)
-      } catch (MH) {
-        return console.warn(`Session replay couldn't read what an earlier page load left of ${BH.recordingId}; trying again later.`, MH), {
-          ...LH,
+        }(BB, OB, await BB.store.read(OB), YB)
+      } catch (NB) {
+        return console.warn(`Session replay couldn't read what an earlier page load left of ${OB.recordingId}; trying again later.`, NB), {
+          ...GB,
           outcome: "retryLater"
         }
       }
-      const SH = [],
-        hH = {
-          ...BH.manifest,
+      const QB = [],
+        oB = {
+          ...OB.manifest,
           videoSegments: [],
           telemetrySegments: [],
-          ...rH.dom.length + rH.domTails.length > 0 ? {
-            domSegments: SH
+          ...DB.dom.length + DB.domTails.length > 0 ? {
+            domSegments: QB
           } : {}
         },
-        tH = () => hH.videoSegments.length + hH.telemetrySegments.length + SH.length > 0,
-        zH = function(HH, BH) {
-          let LH = HH.video.reduce(((HH, BH) => {
+        jB = () => oB.videoSegments.length + oB.telemetrySegments.length + QB.length > 0,
+        yB = function(BB, OB) {
+          let GB = BB.video.reduce(((BB, OB) => {
             let {
-              sequence: LH
-            } = BH;
-            return null === LH ? HH : Math.max(HH, LH + 1)
-          }), BH.nextVideoSequence);
+              sequence: GB
+            } = OB;
+            return null === GB ? BB : Math.max(BB, GB + 1)
+          }), OB.nextVideoSequence);
           return {
-            segments: [...HH.video].sort(((HH, BH) => HH.header.segmentId - BH.header.segmentId)).map((AH => {
-              var rH, SH, hH;
+            segments: [...BB.video].sort(((BB, OB) => BB.header.segmentId - OB.header.segmentId)).map((YB => {
+              var DB, QB, oB;
               let {
-                header: tH,
-                sequence: zH,
-                progress: CH,
-                chunks: EH
-              } = AH;
-              const XH = IH(BH, tH.segmentId, CH),
-                GH = null === (rH = HH.joined) || void 0 === rH ? void 0 : rH.get(tH.segmentId),
-                YH = null !== zH && void 0 !== GH ? {
-                  sequence: zH,
-                  ...GH.meta
-                } : null !== zH && null !== XH ? {
-                  sequence: zH,
-                  ...XH.meta,
-                  startMs: Math.round(XH.meta.startMs),
-                  endMs: Math.round(XH.meta.endMs),
-                  parts: XH.partsLanded
+                header: jB,
+                sequence: yB,
+                progress: JB,
+                chunks: MB
+              } = YB;
+              const PB = uB(OB, jB.segmentId, JB),
+                zB = null === (DB = BB.joined) || void 0 === DB ? void 0 : DB.get(jB.segmentId),
+                lB = null !== yB && void 0 !== zB ? {
+                  sequence: yB,
+                  ...zB.meta
+                } : null !== yB && null !== PB ? {
+                  sequence: yB,
+                  ...PB.meta,
+                  startMs: Math.round(PB.meta.startMs),
+                  endMs: Math.round(PB.meta.endMs),
+                  parts: PB.partsLanded
                 } : null,
-                uH = null !== (SH = null !== (hH = null === GH || void 0 === GH ? void 0 : GH.completeUntilUs) && void 0 !== hH ? hH : null === XH || void 0 === XH ? void 0 : XH.completeUntilUs) && void 0 !== SH ? SH : null,
-                QH = function(HH) {
-                  const BH = [...HH].sort(((HH, BH) => HH.index - BH.index)),
-                    LH = [];
-                  for (const AH of BH) {
-                    if (0 === LH.length ? !AH.key : AH.index !== LH[0].index + LH.length) break;
-                    LH.push(AH)
+                pB = null !== (QB = null !== (oB = null === zB || void 0 === zB ? void 0 : zB.completeUntilUs) && void 0 !== oB ? oB : null === PB || void 0 === PB ? void 0 : PB.completeUntilUs) && void 0 !== QB ? QB : null,
+                qB = function(BB) {
+                  const OB = [...BB].sort(((BB, OB) => BB.index - OB.index)),
+                    GB = [];
+                  for (const YB of OB) {
+                    if (0 === GB.length ? !YB.key : YB.index !== GB[0].index + GB.length) break;
+                    GB.push(YB)
                   }
-                  return LH
-                }(null === uH ? EH : EH.filter((HH => HH.timestampUs >= uH))),
-                WH = 0 === QH.length ? null : {
-                  sequence: LH++,
+                  return GB
+                }(null === pB ? MB : MB.filter((BB => BB.timestampUs >= pB))),
+                ZB = 0 === qB.length ? null : {
+                  sequence: GB++,
                   header: {
-                    ...tH,
-                    firstTimestampUs: QH[0].timestampUs
+                    ...jB,
+                    firstTimestampUs: qB[0].timestampUs
                   },
-                  chunks: QH
+                  chunks: qB
                 };
               return {
-                segmentId: tH.segmentId,
-                landed: YH,
-                tail: WH
+                segmentId: jB.segmentId,
+                landed: lB,
+                tail: ZB
               }
             })),
-            nextSequence: LH
+            nextSequence: GB
           }
-        }(rH, BH),
-        CH = function(HH, BH) {
-          var LH;
-          let AH = HH.dom.reduce(((HH, BH) => {
+        }(DB, OB),
+        JB = function(BB, OB) {
+          var GB;
+          let YB = BB.dom.reduce(((BB, OB) => {
             let {
-              sequence: LH
-            } = BH;
-            return Math.max(HH, LH + 1)
-          }), null !== (LH = BH.nextDomSequence) && void 0 !== LH ? LH : 0);
-          const rH = [...HH.domTails].sort(((HH, BH) => HH.chunkIndex - BH.chunkIndex || HH.fromChar - BH.fromChar)),
-            SH = [];
-          for (const hH of rH) {
-            const HH = SH[SH.length - 1],
-              BH = (null === HH || void 0 === HH ? void 0 : HH.chunkIndex) === hH.chunkIndex;
-            hH.fromChar === (BH ? HH.text.length : 0) && (BH ? (HH.text += hH.text, HH.last = hH) : SH.push({
-              chunkIndex: hH.chunkIndex,
-              sequence: AH++,
-              text: hH.text,
-              last: hH
+              sequence: GB
+            } = OB;
+            return Math.max(BB, GB + 1)
+          }), null !== (GB = OB.nextDomSequence) && void 0 !== GB ? GB : 0);
+          const DB = [...BB.domTails].sort(((BB, OB) => BB.chunkIndex - OB.chunkIndex || BB.fromChar - OB.fromChar)),
+            QB = [];
+          for (const oB of DB) {
+            const BB = QB[QB.length - 1],
+              OB = (null === BB || void 0 === BB ? void 0 : BB.chunkIndex) === oB.chunkIndex;
+            oB.fromChar === (OB ? BB.text.length : 0) && (OB ? (BB.text += oB.text, BB.last = oB) : QB.push({
+              chunkIndex: oB.chunkIndex,
+              sequence: YB++,
+              text: oB.text,
+              last: oB
             }))
           }
           return {
-            tails: SH,
-            nextSequence: AH
+            tails: QB,
+            nextSequence: YB
           }
-        }(rH, BH),
-        EH = {
+        }(DB, OB),
+        MB = {
           videoSegmentIds: [],
           telemetrySequences: [],
           domSequences: [],
           domTailChunks: []
         };
-      let XH = !1;
-      const GH = async rH => {
-        if (tH()) {
-          const tH = await WH(HH, BH, hH);
-          if ("retryLater" === rH && "uploaded" === tH) try {
-            var SH;
-            const LH = CH.tails.find((HH => {
+      let PB = !1;
+      const zB = async DB => {
+        if (jB()) {
+          const jB = await ZB(BB, OB, oB);
+          if ("retryLater" === DB && "uploaded" === jB) try {
+            var QB;
+            const GB = JB.tails.find((BB => {
                 let {
-                  chunkIndex: BH
-                } = HH;
-                return !EH.domTailChunks.includes(BH)
+                  chunkIndex: OB
+                } = BB;
+                return !MB.domTailChunks.includes(OB)
               })),
-              AH = null !== (SH = null === LH || void 0 === LH ? void 0 : LH.sequence) && void 0 !== SH ? SH : CH.nextSequence;
-            await HH.store.forgetSent({
-              ...BH,
-              nextVideoSequence: zH.nextSequence,
-              nextDomSequence: AH
-            }, EH)
-          } catch (MH) {
-            console.warn(`Session replay couldn't drop what it sent of ${BH.recordingId} from its journal.`, MH)
+              YB = null !== (QB = null === GB || void 0 === GB ? void 0 : GB.sequence) && void 0 !== QB ? QB : JB.nextSequence;
+            await BB.store.forgetSent({
+              ...OB,
+              nextVideoSequence: yB.nextSequence,
+              nextDomSequence: YB
+            }, MB)
+          } catch (NB) {
+            console.warn(`Session replay couldn't drop what it sent of ${OB.recordingId} from its journal.`, NB)
           }
-          if ("refused" === tH && AH.size > 0) return {
-            ...LH,
+          if ("refused" === jB && YB.size > 0) return {
+            ...GB,
             outcome: "refused"
           }
         }
         return {
-          ...LH,
-          outcome: rH
+          ...GB,
+          outcome: DB
         }
       };
       for (const {
-          segmentId: WH,
-          landed: xH,
-          tail: vH
+          segmentId: ZB,
+          landed: RB,
+          tail: WB
         }
-        of zH.segments)
-        if (!AH.has(WH)) {
-          if (null !== xH && hH.videoSegments.push(xH), null !== vH) {
-            const AH = await QH(HH, BH, {
+        of yB.segments)
+        if (!YB.has(ZB)) {
+          if (null !== RB && oB.videoSegments.push(RB), null !== WB) {
+            const YB = await qB(BB, OB, {
               kind: "video",
-              sequence: vH.sequence,
+              sequence: WB.sequence,
               contentType: "video/mp4",
-              bytes: () => HH.mux(vH.header, vH.chunks)
+              bytes: () => BB.mux(WB.header, WB.chunks)
             });
-            if ("retryLater" === AH) return await GH(AH);
-            "refused" === AH ? XH = !0 : (hH.videoSegments.push({
-              sequence: vH.sequence,
-              ...mH(vH.header, vH.chunks)
-            }), LH.videoSegments++)
+            if ("retryLater" === YB) return await zB(YB);
+            "refused" === YB ? PB = !0 : (oB.videoSegments.push({
+              sequence: WB.sequence,
+              ...dB(WB.header, WB.chunks)
+            }), GB.videoSegments++)
           }
-          EH.videoSegmentIds.push(WH)
-        } const YH = [...rH.telemetry].sort(((HH, BH) => HH.sequence - BH.sequence));
-      for (const WH of YH) {
-        const AH = WH.landed ? "uploaded" : await QH(HH, BH, {
+          MB.videoSegmentIds.push(ZB)
+        } const lB = [...DB.telemetry].sort(((BB, OB) => BB.sequence - OB.sequence));
+      for (const ZB of lB) {
+        const YB = ZB.landed ? "uploaded" : await qB(BB, OB, {
           kind: "telemetry",
-          sequence: WH.sequence,
+          sequence: ZB.sequence,
           contentType: "application/octet-stream",
-          bytes: async () => WH.bytes
+          bytes: async () => ZB.bytes
         });
-        if ("retryLater" === AH) return await GH(AH);
-        EH.telemetrySequences.push(WH.sequence), "refused" !== AH ? (hH.telemetrySegments.push({
-          sequence: WH.sequence,
-          startMs: Math.round(WH.startMs),
-          endMs: Math.round(WH.endMs)
-        }), LH.telemetrySegments++) : XH = !0
+        if ("retryLater" === YB) return await zB(YB);
+        MB.telemetrySequences.push(ZB.sequence), "refused" !== YB ? (oB.telemetrySegments.push({
+          sequence: ZB.sequence,
+          startMs: Math.round(ZB.startMs),
+          endMs: Math.round(ZB.endMs)
+        }), GB.telemetrySegments++) : PB = !0
       }
-      const uH = [...rH.dom].sort(((HH, BH) => HH.sequence - BH.sequence));
+      const pB = [...DB.dom].sort(((BB, OB) => BB.sequence - OB.sequence));
       for (const {
-          sequence: WH,
-          chunk: xH,
-          bytes: vH
+          sequence: ZB,
+          chunk: RB,
+          bytes: WB
         }
-        of uH) {
-        const AH = null === vH ? "uploaded" : await QH(HH, BH, {
+        of pB) {
+        const YB = null === WB ? "uploaded" : await qB(BB, OB, {
           kind: "dom",
-          sequence: WH,
+          sequence: ZB,
           contentType: "application/octet-stream",
-          bytes: async () => vH
+          bytes: async () => WB
         });
-        if ("retryLater" === AH) return await GH(AH);
-        EH.domSequences.push(WH), SH.push({
-          sequence: WH,
-          ...xH
-        }), "uploaded" === AH && LH.domSegments++
+        if ("retryLater" === YB) return await zB(YB);
+        MB.domSequences.push(ZB), QB.push({
+          sequence: ZB,
+          ...RB
+        }), "uploaded" === YB && GB.domSegments++
       }
       for (const {
-          chunkIndex: WH,
-          sequence: xH,
-          text: vH,
-          last: PH
+          chunkIndex: ZB,
+          sequence: RB,
+          text: WB,
+          last: AB
         }
-        of CH.tails) {
-        let AH;
-        const rH = await QH(HH, BH, {
+        of JB.tails) {
+        let YB;
+        const DB = await qB(BB, OB, {
           kind: "dom",
-          sequence: xH,
+          sequence: RB,
           contentType: "application/octet-stream",
-          bytes: async () => (AH = await HH.packDom(vH), AH.bytes.buffer)
+          bytes: async () => (YB = await BB.packDom(WB), YB.bytes.buffer)
         });
-        if ("retryLater" === rH) return await GH(rH);
-        if (EH.domTailChunks.push(WH), "refused" === rH) {
-          XH = !0;
+        if ("retryLater" === DB) return await zB(DB);
+        if (MB.domTailChunks.push(ZB), "refused" === DB) {
+          PB = !0;
           continue
         }
         const {
-          bytes: hH,
-          inflatedBytes: tH
-        } = AH, {
-          startMs: zH,
-          endMs: CH,
-          summary: YH
-        } = PH;
-        SH.push({
-          sequence: xH,
-          startMs: zH,
-          endMs: CH,
-          byteLength: hH.byteLength,
+          bytes: oB,
+          inflatedBytes: jB
+        } = YB, {
+          startMs: yB,
+          endMs: JB,
+          summary: lB
+        } = AB;
+        QB.push({
+          sequence: RB,
+          startMs: yB,
+          endMs: JB,
+          byteLength: oB.byteLength,
           summary: {
-            ...YH,
-            size: tH
+            ...lB,
+            size: jB
           }
-        }), LH.domSegments++
+        }), GB.domSegments++
       }
-      return AH.size > 0 ? await GH("retryLater") : tH() ? {
-        ...LH,
-        outcome: await WH(HH, BH, hH)
-      } : XH ? {
-        ...LH,
+      return YB.size > 0 ? await zB("retryLater") : jB() ? {
+        ...GB,
+        outcome: await ZB(BB, OB, oB)
+      } : PB ? {
+        ...GB,
         outcome: "refused"
-      } : LH
+      } : GB
     }
-    var KH = LH(40745),
-      cH = LH(40769);
-    async function eH() {
-      const HH = "undefined" === typeof navigator ? void 0 : navigator.locks;
-      if (!GH.d.supported || void 0 === HH) return;
-      const BH = new GH.d,
-        LH = new KH.b,
-        zH = new SH.c,
-        CH = await async function(HH) {
-          const BH = [];
-          for (const AH of await HH.store.listRecordings()) {
-            let rH = {
-              recordingId: AH.recordingId,
+    var FB = GB(40482),
+      iB = GB(40520);
+    async function LB() {
+      const BB = "undefined" === typeof navigator ? void 0 : navigator.locks;
+      if (!zB.c.supported || void 0 === BB) return;
+      const OB = new zB.c,
+        GB = new FB.e,
+        yB = new QB.b,
+        JB = await async function(BB) {
+          const OB = [];
+          for (const YB of await BB.store.listRecordings()) {
+            let DB = {
+              recordingId: YB.recordingId,
               outcome: "live",
               videoSegments: 0,
               telemetrySegments: 0,
               domSegments: 0
             };
             try {
-              await HH.withLock(AH.recordingId, (async () => {
-                const BH = (await HH.store.listRecordings()).find((HH => {
+              await BB.withLock(YB.recordingId, (async () => {
+                const OB = (await BB.store.listRecordings()).find((BB => {
                   let {
-                    recordingId: BH
-                  } = HH;
-                  return BH === AH.recordingId
+                    recordingId: OB
+                  } = BB;
+                  return OB === YB.recordingId
                 }));
-                if (void 0 !== BH) {
+                if (void 0 !== OB) {
                   try {
-                    rH = await lH(HH, BH)
-                  } catch (LH) {
-                    console.warn(`Session replay couldn't recover what an earlier page load left of ${AH.recordingId}; forgetting it.`, LH), rH = {
-                      ...rH,
+                    DB = await IB(BB, OB)
+                  } catch (GB) {
+                    console.warn(`Session replay couldn't recover what an earlier page load left of ${YB.recordingId}; forgetting it.`, GB), DB = {
+                      ...DB,
                       outcome: "failed"
                     }
                   }
-                  "retryLater" !== rH.outcome && await HH.store.deleteRecording(AH.recordingId)
-                } else rH = {
-                  ...rH,
+                  "retryLater" !== DB.outcome && await BB.store.deleteRecording(YB.recordingId)
+                } else DB = {
+                  ...DB,
                   outcome: "nothing"
                 }
               }))
-            } catch (LH) {
-              console.warn(`Session replay couldn't forget ${AH.recordingId}'s journal.`, LH)
+            } catch (GB) {
+              console.warn(`Session replay couldn't forget ${YB.recordingId}'s journal.`, GB)
             }
-            BH.push(rH)
+            OB.push(DB)
           }
-          return BH
+          return OB
         }({
-          store: BH,
-          transportFor: HH => {
-            var BH;
-            return new cH.e((null !== (BH = HH.endpoints) && void 0 !== BH ? BH : (0, tH.c)()).segmentUploadUrl, {
-              relay: LH.for(HH)
+          store: OB,
+          transportFor: BB => {
+            var OB;
+            return new iB.f((null !== (OB = BB.endpoints) && void 0 !== OB ? OB : (0, jB.e)()).segmentUploadUrl, {
+              relay: GB.for(BB)
             })
           },
-          postManifest: (HH, BH) => {
-            var LH;
-            return (0, XH.e)((null !== (LH = HH.endpoints) && void 0 !== LH ? LH : (0, tH.c)()).manifestUrl, BH)
+          postManifest: (BB, OB) => {
+            var GB;
+            return (0, PB.c)((null !== (GB = BB.endpoints) && void 0 !== GB ? GB : (0, jB.e)()).manifestUrl, OB)
           },
-          withLock: async (BH, LH) => {
-            await HH.request((0, YH.u)(BH), {
+          withLock: async (OB, GB) => {
+            await BB.request((0, lB.u)(OB), {
               ifAvailable: !0
-            }, (async HH => {
-              null !== HH && await LH()
+            }, (async BB => {
+              null !== BB && await GB()
             }))
           },
-          mux: oH,
-          packDom: HH => zH.pack(HH).catch((() => (0, hH.c)(HH))),
-          releaseJoined: EH,
+          mux: KB,
+          packDom: BB => yB.pack(BB).catch((() => (0, oB.c)(BB))),
+          releaseJoined: MB,
           nowMs: Date.now,
-          lateUploadUntilMs: HH => {
-            var BH;
-            return null !== (BH = HH.lateUploadUntilMs) && void 0 !== BH ? BH : HH.expiresAtMs + AH.b
+          lateUploadUntilMs: BB => {
+            var OB;
+            return null !== (OB = BB.lateUploadUntilMs) && void 0 !== OB ? OB : BB.expiresAtMs + YB.c
           },
           mayStartUpload: () => !0
         }).finally((() => {
-          zH.close()
+          yB.close()
         }));
-      for (const AH of CH) "live" !== AH.outcome && console.info(`Session replay: ${AH.outcome} what an earlier page load left of ${AH.recordingId} (${AH.videoSegments} video, ${AH.telemetrySegments} telemetry, ${AH.domSegments} page recording).`);
-      0 === (await BH.listRecordings()).length && rH.e.removeItem(YH.m)
+      for (const YB of JB) "live" !== YB.outcome && console.info(`Session replay: ${YB.outcome} what an earlier page load left of ${YB.recordingId} (${YB.videoSegments} video, ${YB.telemetrySegments} telemetry, ${YB.domSegments} page recording).`);
+      0 === (await OB.listRecordings()).length && DB.g.removeItem(lB.m)
     }
   },
-  40891: () => {}
+  40648: () => {}
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

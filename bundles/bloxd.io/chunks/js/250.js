@@ -1,341 +1,341 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  40687: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH,
-      f: () => rH
+  40416: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => YB,
+      e: () => DB
     });
-    const AH = "The world isn't loaded, so no blocks can be seen.",
-      rH = "The world isn't loaded, so nothing in it can be seen."
+    const YB = "The world isn't loaded, so no blocks can be seen.",
+      DB = "The world isn't loaded, so nothing in it can be seen."
   },
-  40035: (HH, BH, LH) => {
-    function AH(HH) {
-      return !(!HH.lobbyLeaderboardInfo && !HH.lobbyManage)
+  39804: (BB, OB, GB) => {
+    function YB(BB) {
+      return !(!BB.lobbyLeaderboardInfo && !BB.lobbyManage)
     }
-    LH.d(BH, {
-      e: () => AH
+    GB.d(OB, {
+      b: () => YB
     })
   },
-  37659: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH,
-      d: () => AH
+  37495: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => DB,
+      f: () => YB
     });
-    const AH = 3,
-      rH = {
+    const YB = 3,
+      DB = {
         recording: !1,
         clipping: !1,
         hasClipBuffer: !1,
         seconds: 0
       }
   },
-  37667: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => SH,
-      g: () => rH
+  37500: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB,
+      h: () => DB
     });
-    let AH = () => null;
+    let YB = () => null;
 
-    function rH(HH) {
-      AH = HH
+    function DB(BB) {
+      YB = BB
     }
 
-    function SH(HH, BH) {
-      return AH(HH, BH)
+    function QB(BB, OB) {
+      return YB(BB, OB)
     }
   },
-  41922: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => QH,
-      f: () => vH,
-      j: () => xH,
-      l: () => WH
+  41602: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => qB,
+      d: () => WB,
+      h: () => RB,
+      k: () => ZB
     });
-    var AH = LH(18),
-      rH = LH(41928),
-      SH = LH(41911),
-      hH = LH(41933),
-      tH = LH(41920),
-      zH = LH(41940),
-      CH = LH(41954);
+    var YB = GB(25),
+      DB = GB(41611),
+      QB = GB(41593),
+      oB = GB(41616),
+      jB = GB(41600),
+      yB = GB(41624),
+      JB = GB(41637);
 
-    function EH(HH) {
-      var BH, LH;
-      const AH = (0, SH.i)();
-      return AH ? null === (BH = (0, rH.d)(AH.api, HH[0], HH[1], HH[2])) || void 0 === BH || null === (LH = BH.persisted) || void 0 === LH ? void 0 : LH.shared : void 0
+    function MB(BB) {
+      var OB, GB;
+      const YB = (0, QB.j)();
+      return YB ? null === (OB = (0, DB.c)(YB.api, BB[0], BB[1], BB[2])) || void 0 === OB || null === (GB = OB.persisted) || void 0 === GB ? void 0 : GB.shared : void 0
     }
 
-    function XH(HH) {
-      return `${HH[0]},${HH[1]},${HH[2]}`
+    function PB(BB) {
+      return `${BB[0]},${BB[1]},${BB[2]}`
     }
-    const GH = new Map;
-    let YH = null,
-      uH = 0;
+    const zB = new Map;
+    let lB = null,
+      pB = 0;
 
-    function QH() {
-      return uH
+    function qB() {
+      return pB
     }
 
-    function WH(HH) {
-      const BH = null !== YH && YH.key === XH(HH.pos) ? YH.type : null;
-      if (null === BH) return HH;
-      let LH = null;
-      if ("Iron" === BH) {
+    function ZB(BB) {
+      const OB = null !== lB && lB.key === PB(BB.pos) ? lB.type : null;
+      if (null === OB) return BB;
+      let GB = null;
+      if ("Iron" === OB) {
         const {
-          cachedPasskey: BH,
-          ...AH
-        } = MH(HH.pos);
-        LH = {
-          mh: null !== BH && void 0 !== BH ? BH : [0, 0, 0, 0],
-          ...AH
+          cachedPasskey: OB,
+          ...YB
+        } = NB(BB.pos);
+        GB = {
+          xy: null !== OB && void 0 !== OB ? OB : [0, 0, 0, 0],
+          ...YB
         }
       }
       return {
-        ...HH,
-        type: BH,
-        ironChest: LH
+        ...BB,
+        type: OB,
+        ironChest: GB
       }
     }
 
-    function MH(HH) {
-      const BH = EH(HH),
-        LH = null === BH || void 0 === BH ? void 0 : BH.ownerDbId,
-        AH = function(HH) {
-          var BH;
-          let LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EH(HH);
-          const AH = XH(HH),
-            rH = GH.get(AH);
-          return rH ? rH.lastOpened < (null !== (BH = null === LH || void 0 === LH ? void 0 : LH.passkeyLastUpdated) && void 0 !== BH ? BH : 0) ? (GH.delete(AH), null) : [...rH.mh] : null
-        }(HH, BH);
-      return void 0 === LH ? {
-        cachedPasskey: AH
+    function NB(BB) {
+      const OB = MB(BB),
+        GB = null === OB || void 0 === OB ? void 0 : OB.ownerDbId,
+        YB = function(BB) {
+          var OB;
+          let GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MB(BB);
+          const YB = PB(BB),
+            DB = zB.get(YB);
+          return DB ? DB.lastOpened < (null !== (OB = null === GB || void 0 === GB ? void 0 : GB.passkeyLastUpdated) && void 0 !== OB ? OB : 0) ? (zB.delete(YB), null) : [...DB.xy] : null
+        }(BB, OB);
+      return void 0 === GB ? {
+        cachedPasskey: YB
       } : {
-        ownerDbId: LH,
-        cachedPasskey: AH
+        ownerDbId: GB,
+        cachedPasskey: YB
       }
-    }(0, CH.k)(hH.d, (HH => {
-      const BH = (0, zH.f)(hH.d, HH);
-      if (!(0, zH.c)(BH) || BH.kL) return;
-      if (uH++, !BH.TL || null === BH.OL) return void(YH = null);
-      const LH = XH(BH.OL);
-      YH = {
-        key: LH,
-        type: BH.VL
-      }, null !== BH.bL && GH.set(LH, {
-        mh: [...BH.bL],
+    }(0, JB.g)(oB.d, (BB => {
+      const OB = (0, yB.h)(oB.d, BB);
+      if (!(0, yB.e)(OB) || OB.WO) return;
+      if (pB++, !OB.lO || null === OB.ZO) return void(lB = null);
+      const GB = PB(OB.ZO);
+      lB = {
+        key: GB,
+        type: OB.qO
+      }, null !== OB.RO && zB.set(GB, {
+        xy: [...OB.RO],
         lastOpened: Date.now()
       })
-    })), (0, CH.g)((() => {
-      GH.clear(), YH = null, uH++
-    })), (0, CH.j)((() => {
-      null !== YH && (YH = null, uH++, AH.k.AX("chestToggleFromServer", !1, !0))
+    })), (0, JB.d)((() => {
+      zB.clear(), lB = null, pB++
+    })), (0, JB.e)((() => {
+      null !== lB && (lB = null, pB++, YB.o.tM("chestToggleFromServer", !1, !0))
     }));
-    const xH = {
+    const RB = {
         boardEditRequested: {
-          watch: HH => (0, AH.m)("EditBoard", (BH => {
+          watch: BB => (0, YB.p)("EditBoard", (OB => {
             let {
-              pos: LH
-            } = BH;
-            if (null === LH) return void HH(null);
-            const AH = (0, SH.i)(),
-              rH = (0, SH.r)();
-            AH && rH && HH(rH.readBoardToEdit(AH.api, AH.chunks, LH))
+              pos: GB
+            } = OB;
+            if (null === GB) return void BB(null);
+            const YB = (0, QB.j)(),
+              DB = (0, QB.s)();
+            YB && DB && BB(DB.readBoardToEdit(YB.api, YB.chunks, GB))
           }))
         },
         ironChestOpenRequested: {
-          watch: HH => (0, AH.m)("OpenIronChest", (BH => {
+          watch: BB => (0, YB.p)("OpenIronChest", (OB => {
             let {
-              pos: LH
-            } = BH;
-            HH(function(HH) {
+              pos: GB
+            } = OB;
+            BB(function(BB) {
               return {
-                pos: HH,
-                ...MH(HH)
+                pos: BB,
+                ...NB(BB)
               }
-            }(LH))
+            }(GB))
           }))
         }
       },
-      vH = {
-        writeOnBoard(HH) {
-          var BH;
+      WB = {
+        writeOnBoard(BB) {
+          var OB;
           let {
-            pos: LH,
-            text: AH,
-            textSize: rH
-          } = HH;
-          null === (BH = (0, SH.i)()) || void 0 === BH || BH.send(tH.d.UpdateBoard, (0, tH.cb)({
-            kE: LH,
-            mE: AH,
-            oE: rH
+            pos: GB,
+            text: YB,
+            textSize: DB
+          } = BB;
+          null === (OB = (0, QB.j)()) || void 0 === OB || OB.send(jB.c.UpdateBoard, (0, jB.S)({
+            JJ: GB,
+            MJ: YB,
+            PJ: DB
           }))
         },
-        writeBook(HH) {
-          var BH;
+        writeBook(BB) {
+          var OB;
           let {
-            pages: LH,
-            title: AH,
-            published: rH
-          } = HH;
-          null === (BH = (0, SH.i)()) || void 0 === BH || BH.send(tH.d.UpdateBook, (0, tH.fb)({
-            eh: LH,
-            qh: AH,
-            gh: rH
+            pages: GB,
+            title: YB,
+            published: DB
+          } = BB;
+          null === (OB = (0, QB.j)()) || void 0 === OB || OB.send(jB.c.UpdateBook, (0, jB.V)({
+            dJ: GB,
+            KJ: YB,
+            uJ: DB
           }))
         },
-        writeNameTag(HH) {
-          var BH;
-          null === (BH = (0, SH.i)()) || void 0 === BH || BH.send(tH.d.UpdateNameTag, HH)
+        writeNameTag(BB) {
+          var OB;
+          null === (OB = (0, QB.j)()) || void 0 === OB || OB.send(jB.c.UpdateNameTag, BB)
         },
-        setCustomLobbyBlock(HH) {
+        setCustomLobbyBlock(BB) {
           let {
-            pos: BH,
-            blockName: LH
-          } = HH;
-          const AH = (0, SH.r)(),
-            rH = (0, SH.i)();
-          AH && rH && rH.send(tH.d.SetCustomLobbyBlock, (0, tH.O)({
-            ph: AH.blockIdOf(LH),
-            ih: BH
+            pos: OB,
+            blockName: GB
+          } = BB;
+          const YB = (0, QB.s)(),
+            DB = (0, QB.j)();
+          YB && DB && DB.send(jB.c.SetCustomLobbyBlock, (0, jB.E)({
+            SM: YB.blockIdOf(GB),
+            VM: OB
           }))
         }
       }
   },
-  41972: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => zH,
-      f: () => hH,
-      i: () => tH
+  41661: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => yB,
+      h: () => oB,
+      l: () => jB
     });
-    var AH = LH(41898),
-      rH = LH(5255),
-      SH = LH(41911);
+    var YB = GB(41579),
+      DB = GB(5274),
+      QB = GB(41593);
 
-    function hH() {
-      var HH;
-      const BH = null === (HH = (0, SH.i)()) || void 0 === HH ? void 0 : HH.api.localId;
-      return void 0 === BH || BH === AH.bd ? null : String(BH)
+    function oB() {
+      var BB;
+      const OB = null === (BB = (0, QB.j)()) || void 0 === BB ? void 0 : BB.api.localId;
+      return void 0 === OB || OB === YB.cd ? null : String(OB)
     }
 
-    function tH(HH) {
-      const BH = (0, SH.i)();
-      if (null !== BH) return HH(BH);
-      let LH = null;
-      const AH = (0, rH.r)((() => {
-        const BH = (0, SH.i)();
-        null !== BH && null === LH && (AH(), LH = HH(BH))
+    function jB(BB) {
+      const OB = (0, QB.j)();
+      if (null !== OB) return BB(OB);
+      let GB = null;
+      const YB = (0, DB.w)((() => {
+        const OB = (0, QB.j)();
+        null !== OB && null === GB && (YB(), GB = BB(OB))
       }));
       return () => {
-        var HH;
-        AH(), null === (HH = LH) || void 0 === HH || HH()
+        var BB;
+        YB(), null === (BB = GB) || void 0 === BB || BB()
       }
     }
 
-    function zH(HH, BH, LH) {
+    function yB(BB, OB, GB) {
       return {
         current: () => {
-          const LH = (0, SH.i)();
-          return null === LH ? BH : HH(LH)()
+          const GB = (0, QB.j)();
+          return null === GB ? OB : BB(GB)()
         },
-        watch: BH => tH((AH => {
-          const rH = HH(AH);
-          let SH = rH();
-          return BH(SH), LH((() => {
-            const HH = rH();
-            HH !== SH && (SH = HH, BH(HH))
+        watch: OB => jB((YB => {
+          const DB = BB(YB);
+          let QB = DB();
+          return OB(QB), GB((() => {
+            const BB = DB();
+            BB !== QB && (QB = BB, OB(BB))
           }))
         }))
       }
     }
   },
-  41968: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => CH
+  41652: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => JB
     });
-    var AH = LH(41911),
-      rH = LH(41972),
-      SH = LH(41981);
+    var YB = GB(41593),
+      DB = GB(41661),
+      QB = GB(41667);
 
-    function hH() {
-      var HH, BH;
-      return null !== (HH = null === (BH = (0, AH.i)()) || void 0 === BH ? void 0 : BH.itemBridgeSources) && void 0 !== HH ? HH : SH.c
+    function oB() {
+      var BB, OB;
+      return null !== (BB = null === (OB = (0, YB.j)()) || void 0 === OB ? void 0 : OB.itemBridgeSources) && void 0 !== BB ? BB : QB.c
     }
 
-    function tH(HH) {
+    function jB(BB) {
       return {
-        current: () => hH().states[HH].current(),
-        watch: BH => (0, rH.i)((LH => {
-          const AH = LH.itemBridgeSources.states[HH];
-          return BH(AH.current()), AH.watch(BH)
+        current: () => oB().states[BB].current(),
+        watch: OB => (0, DB.l)((GB => {
+          const YB = GB.itemBridgeSources.states[BB];
+          return OB(YB.current()), YB.watch(OB)
         }))
       }
     }
 
-    function zH(HH) {
+    function yB(BB) {
       return {
-        watch: BH => (0, rH.i)((LH => LH.itemBridgeSources.events[HH].watch(BH)))
+        watch: OB => (0, DB.l)((GB => GB.itemBridgeSources.events[BB].watch(OB)))
       }
     }
-    const CH = {
+    const JB = {
       states: {
-        inventory: tH("inventory"),
-        hotbar: tH("hotbar"),
-        crafting: tH("crafting"),
-        heldItemAim: tH("heldItemAim")
+        inventory: jB("inventory"),
+        hotbar: jB("hotbar"),
+        crafting: jB("crafting"),
+        heldItemAim: jB("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: zH("hotbarSlotRequested"),
-        hotbarScrolled: zH("hotbarScrolled"),
-        numberKeyPressed: zH("numberKeyPressed"),
-        inventoryDropRequested: zH("inventoryDropRequested"),
-        chestToggled: zH("chestToggled"),
-        chestRefreshed: zH("chestRefreshed"),
-        inventorySynced: zH("inventorySynced"),
-        enchantingTableOpened: zH("enchantingTableOpened")
+        hotbarSlotRequested: yB("hotbarSlotRequested"),
+        hotbarScrolled: yB("hotbarScrolled"),
+        numberKeyPressed: yB("numberKeyPressed"),
+        inventoryDropRequested: yB("inventoryDropRequested"),
+        chestToggled: yB("chestToggled"),
+        chestRefreshed: yB("chestRefreshed"),
+        inventorySynced: yB("inventorySynced"),
+        enchantingTableOpened: yB("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: HH => hH().commands.selectHotbarSlot(HH),
-        removeInventoryItem: HH => hH().commands.removeInventoryItem(HH),
-        swapInventorySlots: HH => hH().commands.swapInventorySlots(HH),
-        moveInventoryItem: HH => hH().commands.moveInventoryItem(HH),
-        quickMoveInventoryItem: HH => hH().commands.quickMoveInventoryItem(HH),
-        closeChest: HH => hH().commands.closeChest(HH),
-        focusCrafting: HH => hH().commands.focusCrafting(HH),
-        craftRecipe: HH => hH().commands.craftRecipe(HH),
-        salvageItem: HH => hH().commands.salvageItem(HH),
-        enchantItem: HH => hH().commands.enchantItem(HH)
+        selectHotbarSlot: BB => oB().commands.selectHotbarSlot(BB),
+        removeInventoryItem: BB => oB().commands.removeInventoryItem(BB),
+        swapInventorySlots: BB => oB().commands.swapInventorySlots(BB),
+        moveInventoryItem: BB => oB().commands.moveInventoryItem(BB),
+        quickMoveInventoryItem: BB => oB().commands.quickMoveInventoryItem(BB),
+        closeChest: BB => oB().commands.closeChest(BB),
+        focusCrafting: BB => oB().commands.focusCrafting(BB),
+        craftRecipe: BB => oB().commands.craftRecipe(BB),
+        salvageItem: BB => oB().commands.salvageItem(BB),
+        enchantItem: BB => oB().commands.enchantItem(BB)
       },
       queries: {
-        enchantingOffer: HH => hH().queries.enchantingOffer(HH)
+        enchantingOffer: BB => oB().queries.enchantingOffer(BB)
       }
     }
   },
-  41981: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => zH
+  41667: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => yB
     });
-    var AH = LH(40687),
-      rH = LH(37659);
+    var YB = GB(40416),
+      DB = GB(37495);
 
-    function SH(HH) {
+    function QB(BB) {
       return {
-        current: () => HH,
+        current: () => BB,
         watch: () => () => {}
       }
     }
 
-    function hH() {}
-    const tH = Object.freeze([0, 0, 0]),
-      zH = {
+    function oB() {}
+    const jB = Object.freeze([0, 0, 0]),
+      yB = {
         states: {
-          health: SH({
+          health: QB({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: SH({
+          inventory: QB({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -343,58 +343,58 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: SH({
+          hotbar: QB({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: SH({
+          stationItems: QB({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: SH({}),
-          creativeVisibility: SH({
+          itemInfo: QB({}),
+          creativeVisibility: QB({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: SH(null),
-          heldItemAim: SH({
+          aura: QB(null),
+          heldItemAim: QB({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: SH(!1),
-          gliderBoostFuel: SH(0),
-          flight: SH({
+          crouching: QB(!1),
+          gliderBoostFuel: QB(0),
+          flight: QB({
             canFly: !1,
             flying: !1
           }),
-          crafting: SH({
+          crafting: QB({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: SH({
+          players: QB({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: SH({}),
-          fullInventory: SH(!1),
-          crosshairTarget: SH({
+          lobbyLeaderboardRows: QB({}),
+          fullInventory: QB(!1),
+          crosshairTarget: QB({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: SH(!0),
-          freeCamera: SH({
+          localPlayerAlive: QB(!0),
+          freeCamera: QB({
             allowed: !1,
             movesFly: !1
           }),
-          replay: SH(null),
-          replayEdits: SH(null),
-          replayRecorder: SH(rH.c),
-          replayVideoExporting: SH(!1)
+          replay: QB(null),
+          replayEdits: QB(null),
+          replayRecorder: QB(DB.e),
+          replayVideoExporting: QB(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -459,87 +459,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: hH,
+          selectHotbarSlot: oB,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: hH,
-          setInventoryOpen: hH,
-          changeIronChestPasskey: hH,
-          dragReplayCamera: hH,
-          applyTemporaryThirdPerson: hH,
-          holdEmoteWheel: hH,
-          recordFlyingMiddleText: hH,
-          focusCrafting: hH,
+          closeChest: oB,
+          setInventoryOpen: oB,
+          changeIronChestPasskey: oB,
+          dragReplayCamera: oB,
+          applyTemporaryThirdPerson: oB,
+          holdEmoteWheel: oB,
+          recordFlyingMiddleText: oB,
+          focusCrafting: oB,
           craftRecipe: () => ({
-            ZC: 0,
-            fE: null,
+            vM: 0,
+            WJ: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: hH,
-          setShopOpen: hH,
-          buyShopItem: hH,
-          lobbyManage: hH,
+          enchantItem: oB,
+          setShopOpen: oB,
+          buyShopItem: oB,
+          lobbyManage: oB,
           sendChatMessage: () => !1,
-          ignorePlayer: hH,
-          reportPlayer: hH,
-          reportWorldCodeChat: hH,
-          requestDiscordReportKey: hH,
-          reportLobbyOrGame: hH,
-          playEmote: hH,
-          updateMyCosmetic: hH,
-          writeOnBoard: hH,
-          writeBook: hH,
-          writeNameTag: hH,
-          setCustomLobbyBlock: hH,
-          openIronChest: hH,
-          sendCodeCollab: hH,
-          clickCodeBlock: hH,
-          bindCustomButtonKeys: hH,
-          pressCustomButton: hH,
-          moveReplayFreecam: hH,
-          holdReplayFreecamVertical: hH,
-          respawn: hH,
-          wakeUp: hH,
-          requestLeaderboard: hH,
-          completeTask: hH,
-          setServerCookie: hH,
-          answerUiRequest: hH,
-          chooseRewardedAd: hH,
-          setCameraZoom: hH,
-          setFreeCameraMovesFly: hH,
-          setBlockHighlight: hH,
-          setCrosshairInteractPrompt: hH,
-          setLookSensitivity: hH,
-          replayAction: hH,
-          setReplayPlaying: hH,
-          seekReplay: hH,
-          setReplayCameraMode: hH,
-          syncReplayCameraMode: hH,
-          setReplayCameraKeyframe: hH,
-          moveReplayCameraKeyframe: hH,
-          deleteReplayCameraKeyframes: hH,
-          setReplayPlaybackMark: hH,
+          ignorePlayer: oB,
+          reportPlayer: oB,
+          reportWorldCodeChat: oB,
+          requestDiscordReportKey: oB,
+          reportLobbyOrGame: oB,
+          playEmote: oB,
+          updateMyCosmetic: oB,
+          writeOnBoard: oB,
+          writeBook: oB,
+          writeNameTag: oB,
+          setCustomLobbyBlock: oB,
+          openIronChest: oB,
+          sendCodeCollab: oB,
+          clickCodeBlock: oB,
+          bindCustomButtonKeys: oB,
+          pressCustomButton: oB,
+          moveReplayFreecam: oB,
+          holdReplayFreecamVertical: oB,
+          respawn: oB,
+          wakeUp: oB,
+          requestLeaderboard: oB,
+          completeTask: oB,
+          setServerCookie: oB,
+          answerUiRequest: oB,
+          chooseRewardedAd: oB,
+          setCameraZoom: oB,
+          setFreeCameraMovesFly: oB,
+          setBlockHighlight: oB,
+          setCrosshairInteractPrompt: oB,
+          setLookSensitivity: oB,
+          replayAction: oB,
+          setReplayPlaying: oB,
+          seekReplay: oB,
+          setReplayCameraMode: oB,
+          syncReplayCameraMode: oB,
+          setReplayCameraKeyframe: oB,
+          moveReplayCameraKeyframe: oB,
+          deleteReplayCameraKeyframes: oB,
+          setReplayPlaybackMark: oB,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: hH,
-          exportReplayVideo: hH,
-          toggleRecording: hH,
-          saveClip: hH,
-          setRecorderPrefs: hH,
-          setReplayViewerOpen: hH
+          holdReplayForShaderPackFailure: oB,
+          exportReplayVideo: oB,
+          toggleRecording: oB,
+          saveClip: oB,
+          setRecorderPrefs: oB,
+          setReplayViewerOpen: oB
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => AH.d,
-          worldCodeAiGameState: () => AH.f
+          worldCodeAiChunk: () => YB.d,
+          worldCodeAiGameState: () => YB.e
         },
         lookups: {
-          localPos: () => tH,
+          localPos: () => jB,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -557,316 +557,316 @@ export const modules = {
         }
       }
   },
-  41905: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => bH,
-      g: () => OH,
-      h: () => kH,
-      k: () => VH,
-      m: () => TH
+  41587: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => fB,
+      g: () => UB,
+      h: () => kB,
+      j: () => nB,
+      k: () => VB
     });
-    var AH = LH(40210),
-      rH = LH(1168),
-      SH = LH(2036),
-      hH = LH(2045),
-      tH = LH(3639),
-      zH = LH(37667),
-      CH = LH(1297),
-      EH = LH(41911),
-      XH = LH(5288),
-      GH = LH(2600),
-      YH = LH(41920),
-      uH = LH(41922),
-      QH = LH(41968);
-    let WH = null;
+    var YB = GB(39954),
+      DB = GB(1217),
+      QB = GB(2050),
+      oB = GB(2059),
+      jB = GB(3708),
+      yB = GB(37500),
+      JB = GB(1350),
+      MB = GB(41593),
+      PB = GB(5313),
+      zB = GB(2617),
+      lB = GB(41600),
+      pB = GB(41602),
+      qB = GB(41652);
+    let ZB = null;
 
-    function MH(HH) {
-      const BH = new Map,
-        LH = LH => {
-          if ("string" !== typeof LH) return;
-          let AH = BH.get(LH);
-          return void 0 === AH && (AH = HH(LH), void 0 !== AH && BH.set(LH, AH)), AH
+    function NB(BB) {
+      const OB = new Map,
+        GB = GB => {
+          if ("string" !== typeof GB) return;
+          let YB = OB.get(GB);
+          return void 0 === YB && (YB = BB(GB), void 0 !== YB && OB.set(GB, YB)), YB
         };
       return new Proxy({}, {
-        get: (HH, BH) => LH(BH),
-        has: (HH, BH) => void 0 !== LH(BH)
+        get: (BB, OB) => GB(OB),
+        has: (BB, OB) => void 0 !== GB(OB)
       })
     }
 
-    function xH(HH) {
-      const BH = (0, tH.e)(HH);
-      return void 0 !== BH && (0, tH.h)(BH) === HH
+    function RB(BB) {
+      const OB = (0, jB.c)(BB);
+      return void 0 !== OB && (0, jB.g)(OB) === BB
     }
 
-    function vH(HH) {
-      var BH;
-      const LH = null === (BH = (0, EH.i)()) || void 0 === BH ? void 0 : BH.tables;
-      if (void 0 === LH || !xH(HH)) return;
-      const AH = {
-          displayName: LH.getDisplayName(HH)
+    function WB(BB) {
+      var OB;
+      const GB = null === (OB = (0, MB.j)()) || void 0 === OB ? void 0 : OB.tables;
+      if (void 0 === GB || !RB(BB)) return;
+      const YB = {
+          displayName: GB.getDisplayName(BB)
         },
-        rH = LH.getItemStat(HH, "description");
-      void 0 !== rH && null !== rH && (AH.description = rH);
+        DB = GB.getItemStat(BB, "description");
+      void 0 !== DB && null !== DB && (YB.description = DB);
       const {
-        rootName: SH
-      } = LH.getMetaInfo(HH);
-      SH !== HH && (AH.rootName = SH);
-      const hH = LH.getItemStat(HH, "armourReduction");
-      return void 0 !== hH && null !== hH && (AH.armourReduction = hH), AH
-    }(0, EH.v)((HH => {
-      WH = HH
+        rootName: QB
+      } = GB.getMetaInfo(BB);
+      QB !== BB && (YB.rootName = QB);
+      const oB = GB.getItemStat(BB, "armourReduction");
+      return void 0 !== oB && null !== oB && (YB.armourReduction = oB), YB
+    }(0, MB.u)((BB => {
+      ZB = BB
     }));
-    const PH = (0, hH.h)("DisplayName", "Description");
+    const AB = (0, oB.g)("DisplayName", "Description");
 
-    function TH() {
-      return Boolean(SH.e.get("useInventory") && SH.e.get("useFullInventory"))
+    function VB() {
+      return Boolean(QB.e.get("useInventory") && QB.e.get("useFullInventory"))
     }
-    let UH = null;
-    const VH = {
+    let SB = null;
+    const nB = {
         inventory: function() {
-          const HH = QH.e.states.inventory;
-          let BH = null;
-          const LH = HH => {
-            var LH;
-            return null === HH.chest ? HH : ((null === (LH = BH) || void 0 === LH ? void 0 : LH.from) === HH && BH.chestVersion === (0, uH.e)() || (BH = {
-              from: HH,
-              chestVersion: (0, uH.e)(),
+          const BB = qB.c.states.inventory;
+          let OB = null;
+          const GB = BB => {
+            var GB;
+            return null === BB.chest ? BB : ((null === (GB = OB) || void 0 === GB ? void 0 : GB.from) === BB && OB.chestVersion === (0, pB.b)() || (OB = {
+              from: BB,
+              chestVersion: (0, pB.b)(),
               view: {
-                ...HH,
-                chest: (0, uH.l)(HH.chest)
+                ...BB,
+                chest: (0, pB.k)(BB.chest)
               }
-            }), BH.view)
+            }), OB.view)
           };
           return {
-            current: () => LH(HH.current()),
-            watch: BH => HH.watch((HH => {
-              BH(LH(HH))
+            current: () => GB(BB.current()),
+            watch: OB => BB.watch((BB => {
+              OB(GB(BB))
             }))
           }
         }(),
-        crafting: QH.e.states.crafting,
+        crafting: qB.c.states.crafting,
         stationItems: {
           current() {
-            var HH;
-            return (null === (HH = UH) || void 0 === HH ? void 0 : HH.namesVersion) !== (0, tH.j)() && (UH = {
-              namesVersion: (0, tH.j)(),
+            var BB;
+            return (null === (BB = SB) || void 0 === BB ? void 0 : BB.namesVersion) !== (0, jB.k)() && (SB = {
+              namesVersion: (0, jB.k)(),
               items: {
-                enchantable: MH((HH => {
-                  const BH = (0, tH.e)(HH);
-                  return void 0 !== BH && null !== WH && WH.enchantmentPerksOf(BH).length > 0 || void 0
+                enchantable: NB((BB => {
+                  const OB = (0, jB.c)(BB);
+                  return void 0 !== OB && null !== ZB && ZB.enchantmentPerksOf(OB).length > 0 || void 0
                 })),
-                salvageable: MH((HH => !(!xH(HH) || null === (0, zH.d)(HH)) || void 0))
+                salvageable: NB((BB => !(!RB(BB) || null === (0, yB.e)(BB)) || void 0))
               }
-            }), UH.items
+            }), SB.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let HH = null;
-          const BH = () => {
-            var BH;
-            return (null === (BH = HH) || void 0 === BH ? void 0 : BH.namesVersion) !== (0, tH.j)() && (HH = {
-              namesVersion: (0, tH.j)(),
-              infos: MH(vH)
-            }), HH.infos
+          let BB = null;
+          const OB = () => {
+            var OB;
+            return (null === (OB = BB) || void 0 === OB ? void 0 : OB.namesVersion) !== (0, jB.k)() && (BB = {
+              namesVersion: (0, jB.k)(),
+              infos: NB(WB)
+            }), BB.infos
           };
           return {
-            current: BH,
-            watch: LH => (0, hH.v)((AH => {
-              AH.some(PH) && (HH = null, LH(BH()))
+            current: OB,
+            watch: GB => (0, oB.n)((YB => {
+              YB.some(AB) && (BB = null, GB(OB()))
             }))
           }
         }(),
-        creativeVisibility: (0, hH.n)((function() {
-          const HH = {};
-          for (const rH of null !== (BH = null === (LH = WH) || void 0 === LH ? void 0 : LH.creativeItemIds()) && void 0 !== BH ? BH : []) {
-            var BH, LH, hH, zH;
-            const CH = (0, tH.h)(rH);
-            if (void 0 === CH) continue;
-            const EH = null !== (hH = SH.e.get((0, AH.d)(CH, "showInCreativeInven"))) && void 0 !== hH ? hH : null === (zH = WH) || void 0 === zH ? void 0 : zH.showInCreativeInvenOf(rH);
-            "boolean" === typeof EH && (HH[CH] = EH)
+        creativeVisibility: (0, oB.i)((function() {
+          const BB = {};
+          for (const DB of null !== (OB = null === (GB = ZB) || void 0 === GB ? void 0 : GB.creativeItemIds()) && void 0 !== OB ? OB : []) {
+            var OB, GB, oB, yB;
+            const JB = (0, jB.g)(DB);
+            if (void 0 === JB) continue;
+            const MB = null !== (oB = QB.e.get((0, YB.f)(JB, "showInCreativeInven"))) && void 0 !== oB ? oB : null === (yB = ZB) || void 0 === yB ? void 0 : yB.showInCreativeInvenOf(DB);
+            "boolean" === typeof MB && (BB[JB] = MB)
           }
           return {
-            publicLobby: (0, rH.N)((0, CH.c)().lobbyName),
-            shownInGame: HH
+            publicLobby: (0, DB.Q)((0, JB.c)().lobbyName),
+            shownInGame: BB
           }
-        }), ["connectedGameChanged"], (0, hH.h)("ShowInCreativeInven")),
-        fullInventory: (0, hH.n)(TH, [], (0, hH.l)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, oB.g)("ShowInCreativeInven")),
+        fullInventory: (0, oB.i)(VB, [], (0, oB.h)("useInventory", "useFullInventory"))
       },
-      OH = {
-        inventoryDropRequested: QH.e.events.inventoryDropRequested,
-        chestToggled: QH.e.events.chestToggled,
-        chestRefreshed: QH.e.events.chestRefreshed,
-        inventorySynced: QH.e.events.inventorySynced,
-        enchantingTableOpened: QH.e.events.enchantingTableOpened
+      UB = {
+        inventoryDropRequested: qB.c.events.inventoryDropRequested,
+        chestToggled: qB.c.events.chestToggled,
+        chestRefreshed: qB.c.events.chestRefreshed,
+        inventorySynced: qB.c.events.inventorySynced,
+        enchantingTableOpened: qB.c.events.enchantingTableOpened
       },
-      bH = {
-        removeInventoryItem: QH.e.commands.removeInventoryItem,
-        swapInventorySlots: QH.e.commands.swapInventorySlots,
-        moveInventoryItem: QH.e.commands.moveInventoryItem,
-        quickMoveInventoryItem: QH.e.commands.quickMoveInventoryItem,
-        closeChest: QH.e.commands.closeChest,
-        setInventoryOpen(HH) {
-          (0, XH.k)(GH.w.InventoryOpen, HH ? GH.w.InventoryOpen : 0)
+      fB = {
+        removeInventoryItem: qB.c.commands.removeInventoryItem,
+        swapInventorySlots: qB.c.commands.swapInventorySlots,
+        moveInventoryItem: qB.c.commands.moveInventoryItem,
+        quickMoveInventoryItem: qB.c.commands.quickMoveInventoryItem,
+        closeChest: qB.c.commands.closeChest,
+        setInventoryOpen(BB) {
+          (0, PB.m)(zB.y.InventoryOpen, BB ? zB.y.InventoryOpen : 0)
         },
-        focusCrafting: QH.e.commands.focusCrafting,
-        craftRecipe: QH.e.commands.craftRecipe,
-        salvageItem: QH.e.commands.salvageItem,
-        enchantItem: QH.e.commands.enchantItem,
-        changeIronChestPasskey(HH) {
-          var BH;
+        focusCrafting: qB.c.commands.focusCrafting,
+        craftRecipe: qB.c.commands.craftRecipe,
+        salvageItem: qB.c.commands.salvageItem,
+        enchantItem: qB.c.commands.enchantItem,
+        changeIronChestPasskey(BB) {
+          var OB;
           let {
-            pos: LH,
-            mh: AH
-          } = HH;
-          null === (BH = (0, EH.i)()) || void 0 === BH || BH.send(YH.d.ChangeIronChestPasskey, (0, YH.h)({
-            OL: LH,
-            mh: AH
+            pos: GB,
+            xy: YB
+          } = BB;
+          null === (OB = (0, MB.j)()) || void 0 === OB || OB.send(lB.c.ChangeIronChestPasskey, (0, lB.h)({
+            ZO: GB,
+            xy: YB
           }))
         },
-        openIronChest(HH) {
-          var BH;
+        openIronChest(BB) {
+          var OB;
           let {
-            pos: LH,
-            mh: AH
-          } = HH;
-          null === (BH = (0, EH.i)()) || void 0 === BH || BH.send(YH.d.OpenIronChest, (0, YH.E)({
-            OL: LH,
-            mh: AH
+            pos: GB,
+            xy: YB
+          } = BB;
+          null === (OB = (0, MB.j)()) || void 0 === OB || OB.send(lB.c.OpenIronChest, (0, lB.x)({
+            ZO: GB,
+            xy: YB
           }))
         }
       },
-      kH = {
-        enchantingOffer: QH.e.queries.enchantingOffer
+      kB = {
+        enchantingOffer: qB.c.queries.enchantingOffer
       }
   },
-  41962: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH,
-      f: () => EH,
-      h: () => hH,
-      j: () => rH,
-      m: () => tH,
-      o: () => CH
+  41646: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB,
+      c: () => MB,
+      d: () => oB,
+      h: () => DB,
+      j: () => jB,
+      k: () => JB
     });
-    class AH extends Error {
+    class YB extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function rH(HH) {
-      return HH instanceof RangeError && /call stack/i.test(HH.message) || HH instanceof Error && "InternalError" === HH.name && /recursion/i.test(HH.message)
+    function DB(BB) {
+      return BB instanceof RangeError && /call stack/i.test(BB.message) || BB instanceof Error && "InternalError" === BB.name && /recursion/i.test(BB.message)
     }
-    const SH = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const QB = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function hH(HH) {
-      var BH;
-      return HH instanceof WebAssembly.RuntimeError || HH instanceof AH || rH(HH) && SH.test(null !== (BH = HH.stack) && void 0 !== BH ? BH : "")
-    }
-
-    function tH(HH, BH) {
-      if (hH(HH)) throw HH;
-      console.error(BH, HH)
+    function oB(BB) {
+      var OB;
+      return BB instanceof WebAssembly.RuntimeError || BB instanceof YB || DB(BB) && QB.test(null !== (OB = BB.stack) && void 0 !== OB ? OB : "")
     }
 
-    function zH(HH, BH, LH, rH, SH) {
-      if (BH % rH !== 0 || BH + LH > HH.byteLength) throw new AH(`${SH}: ${LH} bytes at ${BH}, ${rH}-aligned, outside ${HH.byteLength} bytes of memory`)
+    function jB(BB, OB) {
+      if (oB(BB)) throw BB;
+      console.error(OB, BB)
     }
 
-    function CH(HH, BH, LH, AH, rH) {
-      return 0 === LH ? null : (zH(BH, LH, AH * HH.BYTES_PER_ELEMENT, HH.BYTES_PER_ELEMENT, rH), new HH(BH, LH, AH))
+    function yB(BB, OB, GB, DB, QB) {
+      if (OB % DB !== 0 || OB + GB > BB.byteLength) throw new YB(`${QB}: ${GB} bytes at ${OB}, ${DB}-aligned, outside ${BB.byteLength} bytes of memory`)
     }
 
-    function EH(HH, BH, LH, AH, rH) {
-      return 0 === BH ? null : (zH(HH, BH, LH, AH, rH), new DataView(HH, BH, LH))
+    function JB(BB, OB, GB, YB, DB) {
+      return 0 === GB ? null : (yB(OB, GB, YB * BB.BYTES_PER_ELEMENT, BB.BYTES_PER_ELEMENT, DB), new BB(OB, GB, YB))
+    }
+
+    function MB(BB, OB, GB, YB, DB) {
+      return 0 === OB ? null : (yB(BB, OB, GB, YB, DB), new DataView(BB, OB, GB))
     }
   },
-  41911: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH,
-      f: () => MH,
-      i: () => QH,
-      j: () => WH,
-      m: () => GH,
-      n: () => YH,
-      r: () => EH,
-      v: () => XH,
-      x: () => uH
+  41593: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => YB,
+      h: () => NB,
+      j: () => qB,
+      m: () => ZB,
+      p: () => zB,
+      r: () => lB,
+      s: () => MB,
+      u: () => PB,
+      v: () => pB
     });
-    class AH extends Error {
-      constructor(HH) {
-        super(`the join's code did not load: ${HH instanceof Error?HH.message:String(HH)}`, {
-          cause: HH
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === HH || void 0 === HH ? void 0 : HH.request
+    class YB extends Error {
+      constructor(BB) {
+        super(`the join's code did not load: ${BB instanceof Error?BB.message:String(BB)}`, {
+          cause: BB
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === BB || void 0 === BB ? void 0 : BB.request
       }
     }
-    let rH = null,
-      SH = null,
-      hH = null;
-    const tH = [];
-    let zH = null;
+    let DB = null,
+      QB = null,
+      oB = null;
+    const jB = [];
+    let yB = null;
 
-    function CH(HH, BH) {
+    function JB(BB, OB) {
       try {
-        HH(BH)
-      } catch (LH) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", LH)
+        BB(OB)
+      } catch (GB) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", GB)
       }
     }
 
-    function EH() {
-      return zH
+    function MB() {
+      return yB
     }
 
-    function XH(HH) {
-      tH.push(HH), null !== zH && CH(HH, zH)
+    function PB(BB) {
+      jB.push(BB), null !== yB && JB(BB, yB)
     }
 
-    function GH(HH) {
-      return rH ??= Promise.all([LH.e(84), LH.e(111), LH.e(86), LH.e(248), LH.e(89), LH.e(220), LH.e(170), LH.e(249), LH.e(109), LH.e(268), LH.e(238), LH.e(300), LH.e(49), LH.e(217), LH.e(233), LH.e(216), LH.e(207), LH.e(208), LH.e(101), LH.e(134), LH.e(274), LH.e(68)]).then((() => LH(46017))).then((BH => {
-        BH.loadAudio(HH), zH = BH;
-        for (const HH of tH) CH(HH, BH);
-        return BH
-      })).catch((HH => {
-        throw rH = null, HH
-      })), rH
+    function zB(BB) {
+      return DB ??= Promise.all([GB.e(84), GB.e(111), GB.e(86), GB.e(248), GB.e(89), GB.e(220), GB.e(170), GB.e(249), GB.e(109), GB.e(268), GB.e(238), GB.e(300), GB.e(49), GB.e(217), GB.e(233), GB.e(216), GB.e(207), GB.e(208), GB.e(101), GB.e(134), GB.e(274), GB.e(68)]).then((() => GB(45727))).then((OB => {
+        OB.loadAudio(BB), yB = OB;
+        for (const BB of jB) JB(BB, OB);
+        return OB
+      })).catch((BB => {
+        throw DB = null, BB
+      })), DB
     }
-    async function YH(HH, BH) {
+    async function lB(BB, OB) {
       try {
-        const LH = await GH(HH);
-        await LH.loadClientGame(BH)
-      } catch (LH) {
-        throw new AH(LH)
+        const GB = await zB(BB);
+        await GB.loadClientGame(OB)
+      } catch (GB) {
+        throw new YB(GB)
       }
     }
 
-    function uH(HH, BH) {
-      SH = {
-        running: HH,
-        shell: BH
+    function pB(BB, OB) {
+      QB = {
+        running: BB,
+        shell: OB
       }
     }
 
-    function QH() {
-      return hH
+    function qB() {
+      return oB
     }
-    async function WH(HH) {
-      const BH = SH;
-      if ((null === BH || void 0 === BH ? void 0 : BH.running) !== HH) throw new Error("the core's session has ended");
-      const LH = await GH(BH.shell.audio).catch((HH => {
-        throw new AH(HH)
+    async function ZB(BB) {
+      const OB = QB;
+      if ((null === OB || void 0 === OB ? void 0 : OB.running) !== BB) throw new Error("the core's session has ended");
+      const GB = await zB(OB.shell.audio).catch((BB => {
+        throw new YB(BB)
       }));
-      if (null !== hH) return hH;
-      if (SH !== BH || HH.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (hH = LH.startGameHost(HH, BH.shell), null === hH) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return hH
+      if (null !== oB) return oB;
+      if (QB !== OB || BB.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (oB = GB.startGameHost(BB, OB.shell), null === oB) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return oB
     }
 
-    function MH() {
-      null !== hH && (null !== zH ? zH.endGameHost(hH) : hH.closeGame()), hH = null, SH = null
+    function NB() {
+      null !== oB && (null !== yB ? yB.endGameHost(oB) : oB.closeGame()), oB = null, QB = null
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

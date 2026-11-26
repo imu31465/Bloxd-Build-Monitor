@@ -1,104 +1,104 @@
 export const id = 166;
 export const ids = [166];
 export const modules = {
-  7282: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      AdinPlaySdkAdaptor: () => EH
+  7280: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      AdinPlaySdkAdaptor: () => MB
     });
-    var AH = LH(1289),
-      rH = LH(1110),
-      SH = LH(202),
-      hH = LH(3209),
-      tH = LH(3218);
+    var YB = GB(1341),
+      DB = GB(1168),
+      QB = GB(224),
+      oB = GB(3262),
+      jB = GB(3268);
 
-    function zH(HH) {
-      let BH = 0;
-      HH("addEventListener", 2, ((HH, LH) => {
-        if (!LH) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
-        !1 === HH.gdprApplies && (0, hH.noteNoGdprChoiceComing)();
-        const AH = function(HH) {
-          const BH = "useractioncomplete" === HH.eventStatus || "tcloaded" === HH.eventStatus && !!HH.tcString;
-          return HH.gdprApplies && BH ? tH.e.every((BH => !0 === HH.purpose.consents[BH])) : null
-        }(HH);
-        if (null === AH) return;
-        const rH = ++BH;
-        if (!AH) return void(0, hH.updateAnalyticsConsent)(!1);
-        const SH = window.__tcfapi;
-        SH ? SH("getNonIABVendorConsents", 2, ((HH, LH) => {
-          var AH;
-          rH === BH && (0, hH.updateAnalyticsConsent)(LH && !0 === (null === (AH = HH.nonIabVendorConsents) || void 0 === AH ? void 0 : AH[5]))
+    function yB(BB) {
+      let OB = 0;
+      BB("addEventListener", 2, ((BB, GB) => {
+        if (!GB) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
+        !1 === BB.gdprApplies && (0, oB.noteNoGdprChoiceComing)();
+        const YB = function(BB) {
+          const OB = "useractioncomplete" === BB.eventStatus || "tcloaded" === BB.eventStatus && !!BB.tcString;
+          return BB.gdprApplies && OB ? jB.d.every((OB => !0 === BB.purpose.consents[OB])) : null
+        }(BB);
+        if (null === YB) return;
+        const DB = ++OB;
+        if (!YB) return void(0, oB.updateAnalyticsConsent)(!1);
+        const QB = window.__tcfapi;
+        QB ? QB("getNonIABVendorConsents", 2, ((BB, GB) => {
+          var YB;
+          DB === OB && (0, oB.updateAnalyticsConsent)(GB && !0 === (null === (YB = BB.nonIabVendorConsents) || void 0 === YB ? void 0 : YB[5]))
         })) : console.warn("TCF CMP reported a choice but its __tcfapi is gone, so our consent defaults stand")
       }))
     }
-    const CH = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
-    class EH extends AH.b {
+    const JB = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
+    class MB extends YB.c {
       constructor() {
-        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = CH
+        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = JB
       }
       static async setup() {
-        return (0, SH.canonicaliseZonesWhenIdle)(CH), (0, hH.setUpGtag)({
+        return (0, QB.canonicaliseZonesWhenIdle)(JB), (0, oB.setUpGtag)({
             tcfCmp: !0
-          }), await (0, rH.e)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"),
+          }), await (0, DB.b)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"),
           function() {
-            if (window.__tcfapi) return void zH(window.__tcfapi);
-            let HH = 0;
-            const BH = window.setInterval((() => {
-              HH++;
-              const LH = window.__tcfapi;
-              LH ? (window.clearInterval(BH), zH(LH)) : HH >= 150 && window.clearInterval(BH)
+            if (window.__tcfapi) return void yB(window.__tcfapi);
+            let BB = 0;
+            const OB = window.setInterval((() => {
+              BB++;
+              const GB = window.__tcfapi;
+              GB ? (window.clearInterval(OB), yB(GB)) : BB >= 150 && window.clearInterval(OB)
             }), 200)
-          }(), new EH
+          }(), new MB
       }
-      playRewarded(HH, BH) {
+      playRewarded(BB, OB) {
         if ("undefined" !== typeof window.aiptag.adplayer) {
           console.log("AD: Requesting AdInPlay preroll ad for rewarded placement");
-          const LH = "video_reward";
+          const GB = "video_reward";
           window.aiptag.cmd.player.push((function() {
             window.aiptag.adplayer.startPreRoll({
-              alias: LH
+              alias: GB
             })
-          })), window.adStartSoPause(HH, {
-            onFailCb: BH
+          })), window.adStartSoPause(BB, {
+            onFailCb: OB
           })
-        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), BH()
+        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), OB()
       }
-      playVideoAd(HH, BH) {
-        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (BH ? ` (alias: ${BH})` : "")), window.aiptag.cmd.player.push((function() {
+      playVideoAd(BB, OB) {
+        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (OB ? ` (alias: ${OB})` : "")), window.aiptag.cmd.player.push((function() {
           window.aiptag.adplayer.startPreRoll({
-            alias: BH
+            alias: OB
           })
-        })), window.adStartSoPause(HH)) : (HH(), console.error("AIP ad lib not loaded, no ad playing"))
+        })), window.adStartSoPause(BB)) : (BB(), console.error("AIP ad lib not loaded, no ad playing"))
       }
       willRequestBanner() {
         return "undefined" !== typeof window.aiptag.adplayer
       }
-      renderBanner(HH) {
+      renderBanner(BB) {
         if (!this.willRequestBanner()) return void console.log("AD: User has adblock, not requesting new banners");
         const {
-          divId: BH,
-          alias: LH
-        } = HH;
+          divId: OB,
+          alias: GB
+        } = BB;
         window.aiptag.cmd.display.push((function() {
           window.aipDisplayTag.display({
-            adUnitName: BH,
-            alias: LH
+            adUnitName: OB,
+            alias: GB
           })
-        })), console.log("AD: Requested aip banner", document.getElementById(HH.divId), LH ? `(alias: ${LH})` : "")
+        })), console.log("AD: Requested aip banner", document.getElementById(BB.divId), GB ? `(alias: ${GB})` : "")
       }
-      clearBanner(HH) {
+      clearBanner(BB) {
         "undefined" !== typeof window.aiptag.adplayer ? (window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.destroy(HH.divId)
-        })), console.log(`AD: Clearing aip banner ad ${HH.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
+          window.aipDisplayTag.destroy(BB.divId)
+        })), console.log(`AD: Clearing aip banner ad ${BB.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
       }
-      setBannerAutoRefreshEnabled(HH, BH) {
+      setBannerAutoRefreshEnabled(BB, OB) {
         window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.setAutoRefresh(HH.divId, BH)
+          window.aipDisplayTag.setAutoRefresh(BB.divId, OB)
         }))
       }
       newPageSession() {
         console.log("AD: Requesting new page session"), window.aiptag.cmd.display.push((function() {
-          window.__VM.push((function(HH, BH) {
-            BH.Instances.pageManager.newPageSession(!1)
+          window.__VM.push((function(BB, OB) {
+            OB.Instances.pageManager.newPageSession(!1)
           }))
         }))
       }
@@ -106,4 +106,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

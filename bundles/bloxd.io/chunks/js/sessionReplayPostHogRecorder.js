@@ -1,276 +1,276 @@
 export const id = 62;
 export const ids = [62];
 export const modules = {
-  40796: () => {
+  40555: () => {
     ! function() {
-      function HH(BH) {
-        return (HH = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(HH) {
-          return typeof HH
-        } : function(HH) {
-          return HH && "function" == typeof Symbol && HH.constructor === Symbol && HH !== Symbol.prototype ? "symbol" : typeof HH
-        })(BH)
+      function BB(OB) {
+        return (BB = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
+          return typeof BB
+        } : function(BB) {
+          return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
+        })(OB)
       }
 
-      function BH(BH, LH, AH) {
-        return (LH = function(BH) {
-          var LH = function(BH) {
-            if ("object" != HH(BH) || !BH) return BH;
-            var LH = BH[Symbol.toPrimitive];
-            if (void 0 !== LH) {
-              var AH = LH.call(BH, "string");
-              if ("object" != HH(AH)) return AH;
+      function OB(OB, GB, YB) {
+        return (GB = function(OB) {
+          var GB = function(OB) {
+            if ("object" != BB(OB) || !OB) return OB;
+            var GB = OB[Symbol.toPrimitive];
+            if (void 0 !== GB) {
+              var YB = GB.call(OB, "string");
+              if ("object" != BB(YB)) return YB;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(BH)
-          }(BH);
-          return "symbol" == HH(LH) ? LH : LH + ""
-        }(LH)) in BH ? Object.defineProperty(BH, LH, {
-          value: AH,
+            return String(OB)
+          }(OB);
+          return "symbol" == BB(GB) ? GB : GB + ""
+        }(GB)) in OB ? Object.defineProperty(OB, GB, {
+          value: YB,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : BH[LH] = AH, BH
+        }) : OB[GB] = YB, OB
       }
 
-      function LH(HH, BH) {
-        var LH = Object.keys(HH);
+      function GB(BB, OB) {
+        var GB = Object.keys(BB);
         if (Object.getOwnPropertySymbols) {
-          var AH = Object.getOwnPropertySymbols(HH);
-          BH && (AH = AH.filter((function(BH) {
-            return Object.getOwnPropertyDescriptor(HH, BH).enumerable
-          }))), LH.push.apply(LH, AH)
+          var YB = Object.getOwnPropertySymbols(BB);
+          OB && (YB = YB.filter((function(OB) {
+            return Object.getOwnPropertyDescriptor(BB, OB).enumerable
+          }))), GB.push.apply(GB, YB)
         }
-        return LH
+        return GB
       }
 
-      function AH(HH) {
-        for (var AH = 1; arguments.length > AH; AH++) {
-          var rH = null != arguments[AH] ? arguments[AH] : {};
-          AH % 2 ? LH(Object(rH), !0).forEach((function(LH) {
-            BH(HH, LH, rH[LH])
-          })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(HH, Object.getOwnPropertyDescriptors(rH)) : LH(Object(rH)).forEach((function(BH) {
-            Object.defineProperty(HH, BH, Object.getOwnPropertyDescriptor(rH, BH))
+      function YB(BB) {
+        for (var YB = 1; arguments.length > YB; YB++) {
+          var DB = null != arguments[YB] ? arguments[YB] : {};
+          YB % 2 ? GB(Object(DB), !0).forEach((function(GB) {
+            OB(BB, GB, DB[GB])
+          })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(BB, Object.getOwnPropertyDescriptors(DB)) : GB(Object(DB)).forEach((function(OB) {
+            Object.defineProperty(BB, OB, Object.getOwnPropertyDescriptor(DB, OB))
           }))
         }
-        return HH
+        return BB
       }
 
-      function rH(HH, BH, LH, AH, rH, SH, hH) {
+      function DB(BB, OB, GB, YB, DB, QB, oB) {
         try {
-          var tH = HH[SH](hH),
-            zH = tH.value
-        } catch (HH) {
-          return void LH(HH)
+          var jB = BB[QB](oB),
+            yB = jB.value
+        } catch (BB) {
+          return void GB(BB)
         }
-        tH.done ? BH(zH) : Promise.resolve(zH).then(AH, rH)
+        jB.done ? OB(yB) : Promise.resolve(yB).then(YB, DB)
       }
 
-      function SH(HH) {
+      function QB(BB) {
         return function() {
-          var BH = this,
-            LH = arguments;
-          return new Promise((function(AH, SH) {
-            var hH = HH.apply(BH, LH);
+          var OB = this,
+            GB = arguments;
+          return new Promise((function(YB, QB) {
+            var oB = BB.apply(OB, GB);
 
-            function tH(HH) {
-              rH(hH, AH, SH, tH, zH, "next", HH)
+            function jB(BB) {
+              DB(oB, YB, QB, jB, yB, "next", BB)
             }
 
-            function zH(HH) {
-              rH(hH, AH, SH, tH, zH, "throw", HH)
+            function yB(BB) {
+              DB(oB, YB, QB, jB, yB, "throw", BB)
             }
-            tH(void 0)
+            jB(void 0)
           }))
         }
       }
-      const hH = ["type"];
-      var tH = function(HH) {
-          return HH[HH.DomContentLoaded = 0] = "DomContentLoaded", HH[HH.Load = 1] = "Load", HH[HH.FullSnapshot = 2] = "FullSnapshot", HH[HH.IncrementalSnapshot = 3] = "IncrementalSnapshot", HH[HH.Meta = 4] = "Meta", HH[HH.Custom = 5] = "Custom", HH[HH.Plugin = 6] = "Plugin", HH
+      const oB = ["type"];
+      var jB = function(BB) {
+          return BB[BB.DomContentLoaded = 0] = "DomContentLoaded", BB[BB.Load = 1] = "Load", BB[BB.FullSnapshot = 2] = "FullSnapshot", BB[BB.IncrementalSnapshot = 3] = "IncrementalSnapshot", BB[BB.Meta = 4] = "Meta", BB[BB.Custom = 5] = "Custom", BB[BB.Plugin = 6] = "Plugin", BB
         }({}),
-        zH = function(HH) {
-          return HH[HH.Mutation = 0] = "Mutation", HH[HH.MouseMove = 1] = "MouseMove", HH[HH.MouseInteraction = 2] = "MouseInteraction", HH[HH.Scroll = 3] = "Scroll", HH[HH.ViewportResize = 4] = "ViewportResize", HH[HH.Input = 5] = "Input", HH[HH.TouchMove = 6] = "TouchMove", HH[HH.MediaInteraction = 7] = "MediaInteraction", HH[HH.StyleSheetRule = 8] = "StyleSheetRule", HH[HH.CanvasMutation = 9] = "CanvasMutation", HH[HH.Font = 10] = "Font", HH[HH.Log = 11] = "Log", HH[HH.Drag = 12] = "Drag", HH[HH.StyleDeclaration = 13] = "StyleDeclaration", HH[HH.Selection = 14] = "Selection", HH[HH.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", HH[HH.CustomElement = 16] = "CustomElement", HH
+        yB = function(BB) {
+          return BB[BB.Mutation = 0] = "Mutation", BB[BB.MouseMove = 1] = "MouseMove", BB[BB.MouseInteraction = 2] = "MouseInteraction", BB[BB.Scroll = 3] = "Scroll", BB[BB.ViewportResize = 4] = "ViewportResize", BB[BB.Input = 5] = "Input", BB[BB.TouchMove = 6] = "TouchMove", BB[BB.MediaInteraction = 7] = "MediaInteraction", BB[BB.StyleSheetRule = 8] = "StyleSheetRule", BB[BB.CanvasMutation = 9] = "CanvasMutation", BB[BB.Font = 10] = "Font", BB[BB.Log = 11] = "Log", BB[BB.Drag = 12] = "Drag", BB[BB.StyleDeclaration = 13] = "StyleDeclaration", BB[BB.Selection = 14] = "Selection", BB[BB.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", BB[BB.CustomElement = 16] = "CustomElement", BB
         }({}),
-        CH = function(HH) {
-          return HH[HH.MouseUp = 0] = "MouseUp", HH[HH.MouseDown = 1] = "MouseDown", HH[HH.Click = 2] = "Click", HH[HH.ContextMenu = 3] = "ContextMenu", HH[HH.DblClick = 4] = "DblClick", HH[HH.Focus = 5] = "Focus", HH[HH.Blur = 6] = "Blur", HH[HH.TouchStart = 7] = "TouchStart", HH[HH.TouchMove_Departed = 8] = "TouchMove_Departed", HH[HH.TouchEnd = 9] = "TouchEnd", HH[HH.TouchCancel = 10] = "TouchCancel", HH
+        JB = function(BB) {
+          return BB[BB.MouseUp = 0] = "MouseUp", BB[BB.MouseDown = 1] = "MouseDown", BB[BB.Click = 2] = "Click", BB[BB.ContextMenu = 3] = "ContextMenu", BB[BB.DblClick = 4] = "DblClick", BB[BB.Focus = 5] = "Focus", BB[BB.Blur = 6] = "Blur", BB[BB.TouchStart = 7] = "TouchStart", BB[BB.TouchMove_Departed = 8] = "TouchMove_Departed", BB[BB.TouchEnd = 9] = "TouchEnd", BB[BB.TouchCancel = 10] = "TouchCancel", BB
         }({}),
-        EH = function(HH) {
-          return HH[HH.Mouse = 0] = "Mouse", HH[HH.Pen = 1] = "Pen", HH[HH.Touch = 2] = "Touch", HH
+        MB = function(BB) {
+          return BB[BB.Mouse = 0] = "Mouse", BB[BB.Pen = 1] = "Pen", BB[BB.Touch = 2] = "Touch", BB
         }({}),
-        XH = function(HH) {
-          return HH[HH["2D"] = 0] = "2D", HH[HH.WebGL = 1] = "WebGL", HH[HH.WebGL2 = 2] = "WebGL2", HH
+        PB = function(BB) {
+          return BB[BB["2D"] = 0] = "2D", BB[BB.WebGL = 1] = "WebGL", BB[BB.WebGL2 = 2] = "WebGL2", BB
         }({}),
-        GH = function(HH) {
-          return HH[HH.Play = 0] = "Play", HH[HH.Pause = 1] = "Pause", HH[HH.Seeked = 2] = "Seeked", HH[HH.VolumeChange = 3] = "VolumeChange", HH[HH.RateChange = 4] = "RateChange", HH
+        zB = function(BB) {
+          return BB[BB.Play = 0] = "Play", BB[BB.Pause = 1] = "Pause", BB[BB.Seeked = 2] = "Seeked", BB[BB.VolumeChange = 3] = "VolumeChange", BB[BB.RateChange = 4] = "RateChange", BB
         }({}),
-        YH = function(HH) {
-          return HH[HH.Document = 0] = "Document", HH[HH.DocumentType = 1] = "DocumentType", HH[HH.Element = 2] = "Element", HH[HH.Text = 3] = "Text", HH[HH.CDATA = 4] = "CDATA", HH[HH.Comment = 5] = "Comment", HH
+        lB = function(BB) {
+          return BB[BB.Document = 0] = "Document", BB[BB.DocumentType = 1] = "DocumentType", BB[BB.Element = 2] = "Element", BB[BB.Text = 3] = "Text", BB[BB.CDATA = 4] = "CDATA", BB[BB.Comment = 5] = "Comment", BB
         }({});
 
-      function uH(HH, BH) {
-        return -1 !== HH.indexOf(BH)
+      function pB(BB, OB) {
+        return -1 !== BB.indexOf(OB)
       }
       "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
-      var QH = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
-      new RegExp(`^${QH.source}`, "i"), new RegExp(QH.source, "gi"), "0".repeat(32), "0".repeat(16);
-      var WH = {
+      var qB = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
+      new RegExp(`^${qB.source}`, "i"), new RegExp(qB.source, "gi"), "0".repeat(32), "0".repeat(16);
+      var ZB = {
           Node: ["childNodes", "parentNode", "parentElement", "textContent"],
           ShadowRoot: ["host", "styleSheets"],
           Element: ["shadowRoot"],
           MutationObserver: []
         },
-        MH = {
+        NB = {
           Node: ["contains", "getRootNode"],
           ShadowRoot: ["getSelection"],
           Element: ["querySelector", "querySelectorAll"],
           MutationObserver: ["constructor"]
         },
-        xH = {};
+        RB = {};
 
-      function vH(HH) {
-        if (xH[HH]) return xH[HH];
-        const BH = function(HH) {
-            var BH, LH;
-            const AH = null === (BH = globalThis) || void 0 === BH || null === (BH = BH.Zone) || void 0 === BH || null === (LH = BH.__symbol__) || void 0 === LH ? void 0 : LH.call(BH, HH);
-            return AH && globalThis[AH] ? globalThis[AH] : void 0
-          }(HH) || globalThis[HH],
-          LH = BH.prototype,
-          AH = HH in WH ? WH[HH] : void 0,
-          rH = Boolean(AH && AH.every((HH => {
-            var BH;
-            return Boolean(null === (BH = Object.getOwnPropertyDescriptor(LH, HH)) || void 0 === BH || null === (BH = BH.get) || void 0 === BH ? void 0 : BH.toString().includes("[native code]"))
+      function WB(BB) {
+        if (RB[BB]) return RB[BB];
+        const OB = function(BB) {
+            var OB, GB;
+            const YB = null === (OB = globalThis) || void 0 === OB || null === (OB = OB.Zone) || void 0 === OB || null === (GB = OB.__symbol__) || void 0 === GB ? void 0 : GB.call(OB, BB);
+            return YB && globalThis[YB] ? globalThis[YB] : void 0
+          }(BB) || globalThis[BB],
+          GB = OB.prototype,
+          YB = BB in ZB ? ZB[BB] : void 0,
+          DB = Boolean(YB && YB.every((BB => {
+            var OB;
+            return Boolean(null === (OB = Object.getOwnPropertyDescriptor(GB, BB)) || void 0 === OB || null === (OB = OB.get) || void 0 === OB ? void 0 : OB.toString().includes("[native code]"))
           }))),
-          SH = HH in MH ? MH[HH] : void 0,
-          hH = Boolean(SH && SH.every((HH => {
-            var BH;
-            return "function" == typeof LH[HH] && (null === (BH = LH[HH]) || void 0 === BH ? void 0 : BH.toString().includes("[native code]"))
+          QB = BB in NB ? NB[BB] : void 0,
+          oB = Boolean(QB && QB.every((BB => {
+            var OB;
+            return "function" == typeof GB[BB] && (null === (OB = GB[BB]) || void 0 === OB ? void 0 : OB.toString().includes("[native code]"))
           })));
-        if (rH && hH) return xH[HH] = BH.prototype, BH.prototype;
-        const tH = document.createElement("iframe");
-        tH.style.display = "none";
-        let zH = !1;
+        if (DB && oB) return RB[BB] = OB.prototype, OB.prototype;
+        const jB = document.createElement("iframe");
+        jB.style.display = "none";
+        let yB = !1;
         try {
-          document.body.appendChild(tH);
-          const AH = tH.contentWindow;
-          if (!AH) return BH.prototype;
-          const rH = AH[HH].prototype;
-          return rH ? (uH(CH = navigator.userAgent, "AppleWebKit") && !uH(CH, "Chrome") && (tH.classList.add("rr-block", "ph-no-capture"), tH.setAttribute("__rrwebUntaintedPrototype", HH), zH = !0), xH[HH] = rH) : LH
-        } catch (HH) {
-          return LH
+          document.body.appendChild(jB);
+          const YB = jB.contentWindow;
+          if (!YB) return OB.prototype;
+          const DB = YB[BB].prototype;
+          return DB ? (pB(JB = navigator.userAgent, "AppleWebKit") && !pB(JB, "Chrome") && (jB.classList.add("rr-block", "ph-no-capture"), jB.setAttribute("__rrwebUntaintedPrototype", BB), yB = !0), RB[BB] = DB) : GB
+        } catch (BB) {
+          return GB
         } finally {
-          !zH && tH.parentNode && document.body.removeChild(tH)
+          !yB && jB.parentNode && document.body.removeChild(jB)
         }
-        var CH
+        var JB
       }
-      var PH = Object.create(null);
+      var AB = Object.create(null);
 
-      function TH(HH, BH, LH) {
-        var AH;
-        const rH = PH[HH],
-          SH = rH[LH];
-        if (SH) return SH.call(BH);
-        const hH = vH(HH),
-          tH = null === (AH = Object.getOwnPropertyDescriptor(hH, LH)) || void 0 === AH ? void 0 : AH.get;
-        return tH ? (rH[LH] = tH, tH.call(BH)) : BH[LH]
+      function VB(BB, OB, GB) {
+        var YB;
+        const DB = AB[BB],
+          QB = DB[GB];
+        if (QB) return QB.call(OB);
+        const oB = WB(BB),
+          jB = null === (YB = Object.getOwnPropertyDescriptor(oB, GB)) || void 0 === YB ? void 0 : YB.get;
+        return jB ? (DB[GB] = jB, jB.call(OB)) : OB[GB]
       }
-      PH.Node = Object.create(null), PH.ShadowRoot = Object.create(null), PH.MutationObserver = Object.create(null), PH.Element = Object.create(null);
-      var UH, VH = {};
+      AB.Node = Object.create(null), AB.ShadowRoot = Object.create(null), AB.MutationObserver = Object.create(null), AB.Element = Object.create(null);
+      var SB, nB = {};
 
-      function OH(HH, BH, LH) {
-        const AH = `${HH}.${String(LH)}`;
-        if (VH[AH]) return VH[AH].bind(BH);
-        const rH = vH(HH)[LH];
-        return "function" != typeof rH ? BH[LH] : (VH[AH] = rH, rH.bind(BH))
-      }
-
-      function bH() {
-        return vH("MutationObserver").constructor
+      function UB(BB, OB, GB) {
+        const YB = `${BB}.${String(GB)}`;
+        if (nB[YB]) return nB[YB].bind(OB);
+        const DB = WB(BB)[GB];
+        return "function" != typeof DB ? OB[GB] : (nB[YB] = DB, DB.bind(OB))
       }
 
-      function kH(HH, BH, LH) {
+      function fB() {
+        return WB("MutationObserver").constructor
+      }
+
+      function kB(BB, OB, GB) {
         try {
-          if (!(BH in HH)) return () => {};
-          const AH = HH[BH],
-            rH = {
-              next: AH
+          if (!(OB in BB)) return () => {};
+          const YB = BB[OB],
+            DB = {
+              next: YB
             },
-            SH = LH((function() {
-              for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
-              return rH.next.apply(this, BH)
+            QB = GB((function() {
+              for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+              return DB.next.apply(this, OB)
             }));
-          return "function" == typeof SH && (SH.prototype = SH.prototype || {}, Object.defineProperties(SH, {
+          return "function" == typeof QB && (QB.prototype = QB.prototype || {}, Object.defineProperties(QB, {
             __rrweb_original__: {
               enumerable: !1,
-              value: AH
+              value: YB
             },
             __rrweb_layer__: {
               enumerable: !1,
-              value: rH
+              value: DB
             }
-          })), HH[BH] = SH, () => {
-            if (HH[BH] === SH) return void(HH[BH] = rH.next);
-            const LH = HH => {
-              var BH;
-              return "function" == typeof HH ? null !== (BH = HH.__rrweb_layer__) && void 0 !== BH ? BH : HH.__posthog_layer__ : void 0
+          })), BB[OB] = QB, () => {
+            if (BB[OB] === QB) return void(BB[OB] = DB.next);
+            const GB = BB => {
+              var OB;
+              return "function" == typeof BB ? null !== (OB = BB.__rrweb_layer__) && void 0 !== OB ? OB : BB.__posthog_layer__ : void 0
             };
-            let AH = HH[BH],
-              hH = LH(AH);
-            for (; hH;) {
-              if (hH.next === SH) return void(hH.next = rH.next);
-              AH = hH.next, hH = LH(AH)
+            let YB = BB[OB],
+              oB = GB(YB);
+            for (; oB;) {
+              if (oB.next === QB) return void(oB.next = DB.next);
+              YB = oB.next, oB = GB(YB)
             }
           }
-        } catch (HH) {
+        } catch (BB) {
           return () => {}
         }
       }
-      var mH = {
-        childNodes: HH => TH("Node", HH, "childNodes"),
-        parentNode: HH => TH("Node", HH, "parentNode"),
-        parentElement: HH => TH("Node", HH, "parentElement"),
-        textContent: HH => TH("Node", HH, "textContent"),
-        isConnected(HH) {
-          if (void 0 === UH) {
-            var BH;
-            const HH = null === (BH = Object.getOwnPropertyDescriptor(vH("Node"), "isConnected")) || void 0 === BH ? void 0 : BH.get;
-            UH = (null == HH ? void 0 : HH.toString().includes("[native code]")) ? HH : null
+      var dB = {
+        childNodes: BB => VB("Node", BB, "childNodes"),
+        parentNode: BB => VB("Node", BB, "parentNode"),
+        parentElement: BB => VB("Node", BB, "parentElement"),
+        textContent: BB => VB("Node", BB, "textContent"),
+        isConnected(BB) {
+          if (void 0 === SB) {
+            var OB;
+            const BB = null === (OB = Object.getOwnPropertyDescriptor(WB("Node"), "isConnected")) || void 0 === OB ? void 0 : OB.get;
+            SB = (null == BB ? void 0 : BB.toString().includes("[native code]")) ? BB : null
           }
-          return null == UH ? void 0 : UH.call(HH)
+          return null == SB ? void 0 : SB.call(BB)
         },
-        contains: (HH, BH) => OH("Node", HH, "contains")(BH),
-        getRootNode: HH => OH("Node", HH, "getRootNode")(),
-        host: HH => HH && "host" in HH ? TH("ShadowRoot", HH, "host") : null,
-        styleSheets: HH => HH.styleSheets,
-        shadowRoot: HH => HH && "shadowRoot" in HH ? TH("Element", HH, "shadowRoot") : null,
-        querySelector: (HH, BH) => OH("Element", HH, "querySelector")(BH),
-        querySelectorAll: (HH, BH) => OH("Element", HH, "querySelectorAll")(BH),
-        mutationObserver: bH,
-        patch: kH
+        contains: (BB, OB) => UB("Node", BB, "contains")(OB),
+        getRootNode: BB => UB("Node", BB, "getRootNode")(),
+        host: BB => BB && "host" in BB ? VB("ShadowRoot", BB, "host") : null,
+        styleSheets: BB => BB.styleSheets,
+        shadowRoot: BB => BB && "shadowRoot" in BB ? VB("Element", BB, "shadowRoot") : null,
+        querySelector: (BB, OB) => UB("Element", BB, "querySelector")(OB),
+        querySelectorAll: (BB, OB) => UB("Element", BB, "querySelectorAll")(OB),
+        mutationObserver: fB,
+        patch: kB
       };
 
-      function oH() {
+      function KB() {
         try {
           if ("undefined" != typeof performance && performance.now) return performance.now()
-        } catch (HH) {}
+        } catch (BB) {}
         return Date.now()
       }
-      var IH = 0,
-        fH = 0;
+      var uB = 0,
+        mB = 0;
 
-      function lH() {
-        IH += 1
+      function IB() {
+        uB += 1
       }
 
-      function KH() {
-        return IH
+      function FB() {
+        return uB
       }
 
-      function cH(HH, BH) {
-        return (BH !== IH || HH > 6e4) && (fH += 1, !0)
+      function iB(BB, OB) {
+        return (OB !== uB || BB > 6e4) && (mB += 1, !0)
       }
-      var eH = 0,
-        qH = 0,
-        gH = 0,
-        NH = {
+      var LB = 0,
+        gB = 0,
+        rB = 0,
+        XB = {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
@@ -278,15 +278,15 @@ export const modules = {
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
         },
-        RH = null,
-        jH = null,
-        nH = [],
-        FH = 0,
-        DH = 0,
-        wH = {
+        wB = null,
+        EB = null,
+        cB = [],
+        hB = 0,
+        aB = 0,
+        eB = {
           slowestBatchMs: 0
         },
-        ZH = {
+        TB = {
           deferredCount: 0,
           failedCount: 0,
           abandonedCount: 0,
@@ -294,1040 +294,1040 @@ export const modules = {
           slowestSliceMs: 0
         };
 
-      function dH(HH) {
-        var BH;
-        (eH += 1) > 1 || (NH = {
+      function bB(BB) {
+        var OB;
+        (LB += 1) > 1 || (XB = {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
           cssRuleCount: 0,
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
-        }, nH = [], FH = 0, jH = (BH = HH) && BH > 0 ? BH : null, qH = oH(), gH = IH)
+        }, cB = [], hB = 0, EB = (OB = BB) && OB > 0 ? OB : null, gB = KB(), rB = uB)
       }
 
-      function aH() {
-        return 0 === eH ? RH || {
+      function CB() {
+        return 0 === LB ? wB || {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
           cssRuleCount: 0,
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
-        } : (eH -= 1) > 0 ? NH : (NH.durationMs = oH() - qH, NH.deferredStylesheetCount = FH, ZH.deferredCount += FH, jH = null, cH(NH.durationMs, gH) ? NH : RH = NH)
+        } : (LB -= 1) > 0 ? XB : (XB.durationMs = KB() - gB, XB.deferredStylesheetCount = hB, TB.deferredCount += hB, EB = null, iB(XB.durationMs, rB) ? XB : wB = XB)
       }
 
-      function sH(HH, BH, LH) {
-        let AH = HH.length;
-        if (LH >= 32) return AH;
-        for (let rH = 0; HH.length > rH; rH++) {
-          const SH = HH[rH];
+      function HB(BB, OB, GB) {
+        let YB = BB.length;
+        if (GB >= 32) return YB;
+        for (let DB = 0; BB.length > DB; DB++) {
+          const QB = BB[DB];
           try {
-            const HH = SH.cssRules;
-            if (HH && HH.length) AH += sH(HH, BH, LH + 1);
-            else if (BH && SH.styleSheet) {
-              const HH = SH.styleSheet;
-              if (!BH.has(HH)) {
-                BH.add(HH);
-                const rH = HH.rules || HH.cssRules;
-                rH && (AH += sH(rH, BH, LH + 1))
+            const BB = QB.cssRules;
+            if (BB && BB.length) YB += HB(BB, OB, GB + 1);
+            else if (OB && QB.styleSheet) {
+              const BB = QB.styleSheet;
+              if (!OB.has(BB)) {
+                OB.add(BB);
+                const DB = BB.rules || BB.cssRules;
+                DB && (YB += HB(DB, OB, GB + 1))
               }
             }
-          } catch (HH) {}
+          } catch (BB) {}
         }
-        return AH
+        return YB
       }
 
-      function JH(HH) {
-        if (0 === eH) return;
-        const BH = sH(HH, null, 0);
-        NH.cssRuleCount += BH, DH > 0 && (NH.nonDeferrableCssRuleCount += BH)
+      function vB(BB) {
+        if (0 === LB) return;
+        const OB = HB(BB, null, 0);
+        XB.cssRuleCount += OB, aB > 0 && (XB.nonDeferrableCssRuleCount += OB)
       }
 
-      function iH(HH) {
-        DH += 1;
+      function sB(BB) {
+        aB += 1;
         try {
-          return HH()
+          return BB()
         } finally {
-          DH -= 1
+          aB -= 1
         }
       }
 
-      function pH(HH) {
-        eH > 0 && (NH.stylesheetMs += HH)
+      function xB(BB) {
+        LB > 0 && (XB.stylesheetMs += BB)
       }
 
-      function yH(HH) {
-        if (0 === eH || null === jH) return !1;
-        const BH = NH.cssRuleCount - NH.nonDeferrableCssRuleCount;
-        return BH >= jH || BH + function(HH) {
+      function tB(BB) {
+        if (0 === LB || null === EB) return !1;
+        const OB = XB.cssRuleCount - XB.nonDeferrableCssRuleCount;
+        return OB >= EB || OB + function(BB) {
           try {
-            const BH = HH && (HH.rules || HH.cssRules);
-            if (!BH) return 0;
-            const LH = new WeakSet;
-            return LH.add(HH), sH(BH, LH, 0)
-          } catch (HH) {
+            const OB = BB && (BB.rules || BB.cssRules);
+            if (!OB) return 0;
+            const GB = new WeakSet;
+            return GB.add(BB), HB(OB, GB, 0)
+          } catch (BB) {
             return 0
           }
-        }(HH) > jH
+        }(BB) > EB
       }
 
-      function HB() {
-        const HH = nH;
-        return nH = [], HH
+      function BO() {
+        const BB = cB;
+        return cB = [], BB
       }
 
-      function BB() {
-        ZH.failedCount += 1
+      function OO() {
+        TB.failedCount += 1
       }
 
-      function LB(HH) {
-        HH > 0 && (ZH.abandonedCount += HH)
+      function GO(BB) {
+        BB > 0 && (TB.abandonedCount += BB)
       }
 
-      function AB(HH) {
-        return AB = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(HH) {
-          return typeof HH
-        } : function(HH) {
-          return HH && "function" == typeof Symbol && HH.constructor === Symbol && HH !== Symbol.prototype ? "symbol" : typeof HH
-        }, AB(HH)
+      function YO(BB) {
+        return YO = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
+          return typeof BB
+        } : function(BB) {
+          return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
+        }, YO(BB)
       }
 
-      function rB(HH, BH, LH) {
-        return (BH = function(HH) {
-          var BH = function(HH) {
-            if ("object" != AB(HH) || !HH) return HH;
-            var BH = HH[Symbol.toPrimitive];
-            if (void 0 !== BH) {
-              var LH = BH.call(HH, "string");
-              if ("object" != AB(LH)) return LH;
+      function DO(BB, OB, GB) {
+        return (OB = function(BB) {
+          var OB = function(BB) {
+            if ("object" != YO(BB) || !BB) return BB;
+            var OB = BB[Symbol.toPrimitive];
+            if (void 0 !== OB) {
+              var GB = OB.call(BB, "string");
+              if ("object" != YO(GB)) return GB;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(HH)
-          }(HH);
-          return "symbol" == AB(BH) ? BH : BH + ""
-        }(BH)) in HH ? Object.defineProperty(HH, BH, {
-          value: LH,
+            return String(BB)
+          }(BB);
+          return "symbol" == YO(OB) ? OB : OB + ""
+        }(OB)) in BB ? Object.defineProperty(BB, OB, {
+          value: GB,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : HH[BH] = LH, HH
+        }) : BB[OB] = GB, BB
       }
 
-      function SB(HH) {
-        return HH.nodeType === HH.ELEMENT_NODE
+      function QO(BB) {
+        return BB.nodeType === BB.ELEMENT_NODE
       }
 
-      function hB(HH) {
-        const BH = HH && "host" in HH && "mode" in HH && mH.host(HH) || null;
-        return Boolean(BH && "shadowRoot" in BH && mH.shadowRoot(BH) === HH)
+      function oO(BB) {
+        const OB = BB && "host" in BB && "mode" in BB && dB.host(BB) || null;
+        return Boolean(OB && "shadowRoot" in OB && dB.shadowRoot(OB) === BB)
       }
 
-      function tB(HH) {
-        return "[object ShadowRoot]" === {}.toString.call(HH)
+      function jO(BB) {
+        return "[object ShadowRoot]" === {}.toString.call(BB)
       }
 
-      function zB(HH) {
-        return HH.includes(" background-clip: text;") && !HH.includes(" -webkit-background-clip: text;") && (HH = HH.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), HH
+      function yO(BB) {
+        return BB.includes(" background-clip: text;") && !BB.includes(" -webkit-background-clip: text;") && (BB = BB.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), BB
       }
 
-      function CB(HH) {
+      function JO(BB) {
         const {
-          cssText: BH
-        } = HH;
-        if (3 > BH.split('"').length) return BH;
-        const LH = ["@import", `url(${JSON.stringify(HH.href)})`];
-        return "" === HH.layerName ? LH.push("layer") : HH.layerName && LH.push(`layer(${HH.layerName})`), HH.supportsText && LH.push(`supports(${HH.supportsText})`), HH.media.length && LH.push(HH.media.mediaText), LH.join(" ") + ";"
+          cssText: OB
+        } = BB;
+        if (3 > OB.split('"').length) return OB;
+        const GB = ["@import", `url(${JSON.stringify(BB.href)})`];
+        return "" === BB.layerName ? GB.push("layer") : BB.layerName && GB.push(`layer(${BB.layerName})`), BB.supportsText && GB.push(`supports(${BB.supportsText})`), BB.media.length && GB.push(BB.media.mediaText), GB.join(" ") + ";"
       }
-      var EB = 0;
+      var MO = 0;
 
-      function XB(HH) {
-        const BH = 0 === EB,
-          LH = BH ? oH() : 0;
-        EB += 1;
+      function PO(BB) {
+        const OB = 0 === MO,
+          GB = OB ? KB() : 0;
+        MO += 1;
         try {
-          const BH = HH.rules || HH.cssRules;
-          if (!BH) return null;
-          JH(BH);
-          let LH = HH.href;
-          return !LH && HH.ownerNode && (LH = HH.ownerNode.baseURI), zB(Array.from(BH, (HH => GB(HH, LH))).join(""))
-        } catch (HH) {
+          const OB = BB.rules || BB.cssRules;
+          if (!OB) return null;
+          vB(OB);
+          let GB = BB.href;
+          return !GB && BB.ownerNode && (GB = BB.ownerNode.baseURI), yO(Array.from(OB, (BB => zO(BB, GB))).join(""))
+        } catch (BB) {
           return null
         } finally {
-          EB -= 1, BH && pH(oH() - LH)
+          MO -= 1, OB && xB(KB() - GB)
         }
       }
 
-      function GB(HH, BH) {
-        if (uB(HH)) {
-          let BH;
+      function zO(BB, OB) {
+        if (pO(BB)) {
+          let OB;
           try {
-            BH = XB(HH.styleSheet) || CB(HH)
-          } catch (LH) {
-            BH = HH.cssText
+            OB = PO(BB.styleSheet) || JO(BB)
+          } catch (GB) {
+            OB = BB.cssText
           }
           try {
-            var LH;
-            if (BH && (null === (LH = HH.styleSheet) || void 0 === LH ? void 0 : LH.href)) return IB(BH, HH.styleSheet.href)
-          } catch (HH) {}
-          return BH
+            var GB;
+            if (OB && (null === (GB = BB.styleSheet) || void 0 === GB ? void 0 : GB.href)) return uO(OB, BB.styleSheet.href)
+          } catch (BB) {}
+          return OB
         } {
-          let LH = HH.cssText;
-          return QB(HH) && HH.selectorText.includes(":") && (LH = YB(LH)), BH ? IB(LH, BH) : LH
+          let GB = BB.cssText;
+          return qO(BB) && BB.selectorText.includes(":") && (GB = lO(GB)), OB ? uO(GB, OB) : GB
         }
       }
 
-      function YB(HH) {
-        return HH.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2")
+      function lO(BB) {
+        return BB.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2")
       }
 
-      function uB(HH) {
-        return "styleSheet" in HH
+      function pO(BB) {
+        return "styleSheet" in BB
       }
 
-      function QB(HH) {
-        return "selectorText" in HH
+      function qO(BB) {
+        return "selectorText" in BB
       }
-      var WB = /^-?[A-Za-z_][\w-]*$/,
-        MB = /^-?[A-Za-z_][\w-]*(\.-?[A-Za-z_][\w-]*)*$/;
-      var xB = class {
+      var ZO = /^-?[A-Za-z_][\w-]*$/,
+        NO = /^-?[A-Za-z_][\w-]*(\.-?[A-Za-z_][\w-]*)*$/;
+      var RO = class {
         constructor() {
-          rB(this, "idNodeMap", new Map), rB(this, "nodeMetaMap", new WeakMap)
+          DO(this, "idNodeMap", new Map), DO(this, "nodeMetaMap", new WeakMap)
         }
-        getId(HH) {
-          var BH, LH;
-          return HH && null !== (BH = null === (LH = this.getMeta(HH)) || void 0 === LH ? void 0 : LH.id) && void 0 !== BH ? BH : -1
+        getId(BB) {
+          var OB, GB;
+          return BB && null !== (OB = null === (GB = this.getMeta(BB)) || void 0 === GB ? void 0 : GB.id) && void 0 !== OB ? OB : -1
         }
-        yAH(HH) {
-          return this.idNodeMap.get(HH) || null
+        yDB(BB) {
+          return this.idNodeMap.get(BB) || null
         }
         getIds() {
           return Array.from(this.idNodeMap.keys())
         }
-        getMeta(HH) {
-          return this.nodeMetaMap.get(HH) || null
+        getMeta(BB) {
+          return this.nodeMetaMap.get(BB) || null
         }
-        removeNodeFromMap(HH) {
-          const BH = this.getId(HH);
-          if (this.idNodeMap.delete(BH), HH.childNodes && HH.childNodes.forEach((HH => this.removeNodeFromMap(HH))), SB(HH)) {
-            const BH = mH.shadowRoot(HH);
-            BH && this.removeNodeFromMap(BH), "IFRAME" === HH.nodeName && HH.contentDocument && this.removeNodeFromMap(HH.contentDocument)
+        removeNodeFromMap(BB) {
+          const OB = this.getId(BB);
+          if (this.idNodeMap.delete(OB), BB.childNodes && BB.childNodes.forEach((BB => this.removeNodeFromMap(BB))), QO(BB)) {
+            const OB = dB.shadowRoot(BB);
+            OB && this.removeNodeFromMap(OB), "IFRAME" === BB.nodeName && BB.contentDocument && this.removeNodeFromMap(BB.contentDocument)
           }
         }
-        has(HH) {
-          return this.idNodeMap.has(HH)
+        has(BB) {
+          return this.idNodeMap.has(BB)
         }
-        hasNode(HH) {
-          return this.nodeMetaMap.has(HH)
+        hasNode(BB) {
+          return this.nodeMetaMap.has(BB)
         }
-        add(HH, BH) {
-          this.idNodeMap.set(BH.id, HH), this.nodeMetaMap.set(HH, BH)
+        add(BB, OB) {
+          this.idNodeMap.set(OB.id, BB), this.nodeMetaMap.set(BB, OB)
         }
-        replace(HH, BH) {
-          const LH = this.yAH(HH);
-          if (LH) {
-            const HH = this.nodeMetaMap.get(LH);
-            HH && this.nodeMetaMap.set(BH, HH)
+        replace(BB, OB) {
+          const GB = this.yDB(BB);
+          if (GB) {
+            const BB = this.nodeMetaMap.get(GB);
+            BB && this.nodeMetaMap.set(OB, BB)
           }
-          this.idNodeMap.set(HH, BH)
+          this.idNodeMap.set(BB, OB)
         }
         reset() {
           this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
         }
       };
 
-      function vB(HH) {
+      function WO(BB) {
         let {
-          element: BH,
-          maskInputOptions: LH,
-          tagName: AH,
-          type: rH,
-          value: SH,
-          maskInputFn: hH
-        } = HH, tH = SH || "";
-        const zH = rH && PB(rH);
-        return (LH[AH.toLowerCase()] || zH && LH[zH]) && (tH = hH ? hH(tH, BH) : "*".repeat(tH.length)), tH
+          element: OB,
+          maskInputOptions: GB,
+          tagName: YB,
+          type: DB,
+          value: QB,
+          maskInputFn: oB
+        } = BB, jB = QB || "";
+        const yB = DB && AO(DB);
+        return (GB[YB.toLowerCase()] || yB && GB[yB]) && (jB = oB ? oB(jB, OB) : "*".repeat(jB.length)), jB
       }
 
-      function PB(HH) {
-        return HH.toLowerCase()
+      function AO(BB) {
+        return BB.toLowerCase()
       }
-      var TB = new Set(["rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]);
+      var VO = new Set(["rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]);
 
-      function UB(HH) {
+      function SO(BB) {
         let {
-          element: BH,
-          name: LH,
-          value: AH,
-          maskAllElementAttributes: rH,
-          maskAttributeFn: SH,
-          isGenerated: hH = !1
-        } = HH;
-        return AH ? rH ? hH && TB.has(PB(LH)) ? AH : "*".repeat(AH.length) : SH ? SH(LH, AH, BH) : AH : AH
+          element: OB,
+          name: GB,
+          value: YB,
+          maskAllElementAttributes: DB,
+          maskAttributeFn: QB,
+          isGenerated: oB = !1
+        } = BB;
+        return YB ? DB ? oB && VO.has(AO(GB)) ? YB : "*".repeat(YB.length) : QB ? QB(GB, YB, OB) : YB : YB
       }
-      var VB = "__rrweb_original__";
+      var nO = "__rrweb_original__";
 
-      function OB(HH) {
+      function UO(BB) {
         try {
-          const BH = HH.type;
-          return HH.hasAttribute("data-rr-is-password") ? "password" : BH ? PB(BH) : null
-        } catch (HH) {
+          const OB = BB.type;
+          return BB.hasAttribute("data-rr-is-password") ? "password" : OB ? AO(OB) : null
+        } catch (BB) {
           return null
         }
       }
-      var bB = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
-        kB = /^(?:[a-z+]+:)?\/\//i,
-        mB = /^www\..*/i,
-        oB = /^(data:)([^,]*),(.*)/i;
+      var fO = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+        kO = /^(?:[a-z+]+:)?\/\//i,
+        dO = /^www\..*/i,
+        KO = /^(data:)([^,]*),(.*)/i;
 
-      function IB(HH, BH) {
-        return (HH || "").replace(bB, ((HH, LH, AH, rH, SH, hH) => {
-          const tH = AH || SH || hH,
-            zH = LH || rH || "";
-          if (!tH) return HH;
-          if (kB.test(tH) || mB.test(tH)) return `url(${zH}${tH}${zH})`;
-          if (oB.test(tH)) return `url(${zH}${tH}${zH})`;
-          if ("/" === tH[0]) return `url(${zH}${function(HH){let BH="";return BH=HH.indexOf("//")>-1?HH.split("/").slice(0,3).join("/"):HH.split("/")[0],BH=BH.split("?")[0],BH}(BH)+tH}${zH})`;
-          const CH = BH.split("/"),
-            EH = tH.split("/");
-          CH.pop();
-          for (const BH of EH) "." !== BH && (".." === BH ? CH.pop() : CH.push(BH));
-          return `url(${zH}${CH.join("/")}${zH})`
+      function uO(BB, OB) {
+        return (BB || "").replace(fO, ((BB, GB, YB, DB, QB, oB) => {
+          const jB = YB || QB || oB,
+            yB = GB || DB || "";
+          if (!jB) return BB;
+          if (kO.test(jB) || dO.test(jB)) return `url(${yB}${jB}${yB})`;
+          if (KO.test(jB)) return `url(${yB}${jB}${yB})`;
+          if ("/" === jB[0]) return `url(${yB}${function(BB){let OB="";return OB=BB.indexOf("//")>-1?BB.split("/").slice(0,3).join("/"):BB.split("/")[0],OB=OB.split("?")[0],OB}(OB)+jB}${yB})`;
+          const JB = OB.split("/"),
+            MB = jB.split("/");
+          JB.pop();
+          for (const OB of MB) "." !== OB && (".." === OB ? JB.pop() : JB.push(OB));
+          return `url(${yB}${JB.join("/")}${yB})`
         }))
       }
-      var fB, lB, KB = new Map,
-        cB = 1,
-        eB = new RegExp("[^a-z0-9-_:]");
+      var mO, IO, FO = new Map,
+        iO = 1,
+        LO = new RegExp("[^a-z0-9-_:]");
 
-      function qB() {
-        return cB++
+      function gO() {
+        return iO++
       }
-      var gB = !1,
-        NB = /^[^ \t\n\r\u000c]+/,
-        RB = /^[, \t\n\r\u000c]+/,
-        jB = new WeakMap;
+      var rO = !1,
+        XO = /^[^ \t\n\r\u000c]+/,
+        wO = /^[, \t\n\r\u000c]+/,
+        EO = new WeakMap;
 
-      function nB(HH, BH) {
-        return BH && "" !== BH.trim() ? FB(HH, BH) : BH
-      }
-
-      function FB(HH, BH) {
-        let LH = jB.get(HH);
-        if (LH || (LH = HH.createElement("a"), jB.set(HH, LH)), BH) {
-          if (BH.startsWith("blob:") || BH.startsWith("data:")) return BH
-        } else BH = "";
-        return LH.setAttribute("href", BH), LH.href
+      function cO(BB, OB) {
+        return OB && "" !== OB.trim() ? hO(BB, OB) : OB
       }
 
-      function DB(HH, BH) {
-        return (null == BH ? void 0 : BH.maxBase64ImageLength) ? function(HH, BH) {
-          return BH && HH.length > BH ? "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InN0cmlwZXMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgICAgIDxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iYmxhY2siLz4KICAgICAgPHBhdGggZD0iTTggMEgxNkwwIDE2VjhMOCAwWiIgZmlsbD0iIzJEMkQyRCIvPgogICAgICA8cGF0aCBkPSJNMTYgOFYxNkg4TDE2IDhaIiBmaWxsPSIjMkQyRDJEIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3RyaXBlcykiLz4KPC9zdmc+Cg==" : HH
-        }(HH, BH.maxBase64ImageLength) : HH
+      function hO(BB, OB) {
+        let GB = EO.get(BB);
+        if (GB || (GB = BB.createElement("a"), EO.set(BB, GB)), OB) {
+          if (OB.startsWith("blob:") || OB.startsWith("data:")) return OB
+        } else OB = "";
+        return GB.setAttribute("href", OB), GB.href
       }
 
-      function wB(HH, BH, LH, AH, rH, SH) {
-        if (!AH) return AH;
-        if ("src" === LH || "href" === LH && ("use" !== BH || "#" !== AH[0])) {
-          if ("link" === BH && rH) {
-            var hH;
-            const HH = null === (hH = rH.sheet) || void 0 === hH ? void 0 : hH.href;
-            if (HH) return HH
+      function aO(BB, OB) {
+        return (null == OB ? void 0 : OB.maxBase64ImageLength) ? function(BB, OB) {
+          return OB && BB.length > OB ? "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InN0cmlwZXMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgICAgIDxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iYmxhY2siLz4KICAgICAgPHBhdGggZD0iTTggMEgxNkwwIDE2VjhMOCAwWiIgZmlsbD0iIzJEMkQyRCIvPgogICAgICA8cGF0aCBkPSJNMTYgOFYxNkg4TDE2IDhaIiBmaWxsPSIjMkQyRDJEIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3RyaXBlcykiLz4KPC9zdmc+Cg==" : BB
+        }(BB, OB.maxBase64ImageLength) : BB
+      }
+
+      function eO(BB, OB, GB, YB, DB, QB) {
+        if (!YB) return YB;
+        if ("src" === GB || "href" === GB && ("use" !== OB || "#" !== YB[0])) {
+          if ("link" === OB && DB) {
+            var oB;
+            const BB = null === (oB = DB.sheet) || void 0 === oB ? void 0 : oB.href;
+            if (BB) return BB
           }
-          const LH = nB(HH, AH);
-          if (LH.startsWith("data:")) {
-            if ("img" === BH && rH) {
-              let HH = LH;
-              return ((null == SH ? void 0 : SH.type) || void 0 !== (null == SH ? void 0 : SH.quality)) && (HH = function(HH, BH, LH, AH) {
-                if (1e5 > BH.length) return BH;
-                if (!HH.complete || 0 === HH.naturalWidth) return BH;
-                if (HH.naturalWidth > 4096 || HH.naturalHeight > 4096) return BH;
-                const rH = KB.get(BH);
-                if (rH && rH.type === LH && rH.quality === AH) return rH.result;
+          const GB = cO(BB, YB);
+          if (GB.startsWith("data:")) {
+            if ("img" === OB && DB) {
+              let BB = GB;
+              return ((null == QB ? void 0 : QB.type) || void 0 !== (null == QB ? void 0 : QB.quality)) && (BB = function(BB, OB, GB, YB) {
+                if (1e5 > OB.length) return OB;
+                if (!BB.complete || 0 === BB.naturalWidth) return OB;
+                if (BB.naturalWidth > 4096 || BB.naturalHeight > 4096) return OB;
+                const DB = FO.get(OB);
+                if (DB && DB.type === GB && DB.quality === YB) return DB.result;
                 try {
-                  const rH = document.createElement("canvas");
-                  rH.width = HH.naturalWidth, rH.height = HH.naturalHeight;
-                  const SH = rH.getContext("2d");
-                  if (!SH) return BH;
-                  SH.drawImage(HH, 0, 0);
-                  const hH = rH.toDataURL(LH || "image/webp", null != AH ? AH : .4),
-                    tH = BH.length > hH.length ? hH : BH;
-                  if (KB.size >= 10) {
-                    const HH = KB.keys().next().value;
-                    void 0 !== HH && KB.delete(HH)
+                  const DB = document.createElement("canvas");
+                  DB.width = BB.naturalWidth, DB.height = BB.naturalHeight;
+                  const QB = DB.getContext("2d");
+                  if (!QB) return OB;
+                  QB.drawImage(BB, 0, 0);
+                  const oB = DB.toDataURL(GB || "image/webp", null != YB ? YB : .4),
+                    jB = OB.length > oB.length ? oB : OB;
+                  if (FO.size >= 10) {
+                    const BB = FO.keys().next().value;
+                    void 0 !== BB && FO.delete(BB)
                   }
-                  return KB.set(BH, {
-                    type: LH,
-                    quality: AH,
-                    result: tH
-                  }), tH
-                } catch (HH) {
-                  return BH
+                  return FO.set(OB, {
+                    type: GB,
+                    quality: YB,
+                    result: jB
+                  }), jB
+                } catch (BB) {
+                  return OB
                 }
-              }(rH, LH, SH.type, SH.quality)), DB(HH, SH)
+              }(DB, GB, QB.type, QB.quality)), aO(BB, QB)
             }
-            if ("image" === BH) return DB(LH, SH)
+            if ("image" === OB) return aO(GB, QB)
           }
-          return LH
+          return GB
         }
-        if ("xlink:href" === LH && "#" !== AH[0]) {
-          const LH = nB(HH, AH);
-          return "image" === BH && LH.startsWith("data:") ? DB(LH, SH) : LH
+        if ("xlink:href" === GB && "#" !== YB[0]) {
+          const GB = cO(BB, YB);
+          return "image" === OB && GB.startsWith("data:") ? aO(GB, QB) : GB
         }
-        return "background" !== LH || "table" !== BH && "td" !== BH && "th" !== BH ? "srcset" === LH ? function(HH, BH) {
-          if ("" === BH.trim()) return BH;
-          let LH = 0;
+        return "background" !== GB || "table" !== OB && "td" !== OB && "th" !== OB ? "srcset" === GB ? function(BB, OB) {
+          if ("" === OB.trim()) return OB;
+          let GB = 0;
 
-          function AH(HH) {
-            let AH;
-            const rH = HH.exec(BH.substring(LH));
-            return rH ? (AH = rH[0], LH += AH.length, AH) : ""
+          function YB(BB) {
+            let YB;
+            const DB = BB.exec(OB.substring(GB));
+            return DB ? (YB = DB[0], GB += YB.length, YB) : ""
           }
-          const rH = [];
-          for (; AH(RB), BH.length > LH;) {
-            let SH = AH(NB);
-            if ("," === SH.slice(-1)) SH = nB(HH, SH.substring(0, SH.length - 1)), rH.push(SH);
+          const DB = [];
+          for (; YB(wO), OB.length > GB;) {
+            let QB = YB(XO);
+            if ("," === QB.slice(-1)) QB = cO(BB, QB.substring(0, QB.length - 1)), DB.push(QB);
             else {
-              let AH = "";
-              SH = nB(HH, SH);
-              let hH = !1;
+              let YB = "";
+              QB = cO(BB, QB);
+              let oB = !1;
               for (;;) {
-                const HH = BH.charAt(LH);
-                if ("" === HH) {
-                  rH.push((SH + AH).trim());
+                const BB = OB.charAt(GB);
+                if ("" === BB) {
+                  DB.push((QB + YB).trim());
                   break
                 }
-                if (hH) ")" === HH && (hH = !1);
+                if (oB) ")" === BB && (oB = !1);
                 else {
-                  if ("," === HH) {
-                    LH += 1, rH.push((SH + AH).trim());
+                  if ("," === BB) {
+                    GB += 1, DB.push((QB + YB).trim());
                     break
                   }
-                  "(" === HH && (hH = !0)
+                  "(" === BB && (oB = !0)
                 }
-                AH += HH, LH += 1
+                YB += BB, GB += 1
               }
             }
           }
-          return rH.join(", ")
-        }(HH, AH) : "style" === LH ? IB(AH, FB(HH)) : "object" === BH && "data" === LH ? nB(HH, AH) : AH : nB(HH, AH)
+          return DB.join(", ")
+        }(BB, YB) : "style" === GB ? uO(YB, hO(BB)) : "object" === OB && "data" === GB ? cO(BB, YB) : YB : cO(BB, YB)
       }
 
-      function ZB(HH, BH, LH) {
-        return ("video" === HH || "audio" === HH) && "autoplay" === PB(BH)
+      function TO(BB, OB, GB) {
+        return ("video" === BB || "audio" === BB) && "autoplay" === AO(OB)
       }
 
-      function dB(HH) {
-        return "string" == typeof HH && PB(HH).split(/\s+/).includes("stylesheet")
+      function bO(BB) {
+        return "string" == typeof BB && AO(BB).split(/\s+/).includes("stylesheet")
       }
 
-      function aB(HH, BH, LH) {
-        if (!HH) return !1;
-        if (HH.nodeType !== HH.ELEMENT_NODE) return !!LH && aB(mH.parentNode(HH), BH, LH);
-        for (let AH = HH.classList.length; AH--;)
-          if (BH.test(HH.classList[AH])) return !0;
-        return !!LH && aB(mH.parentNode(HH), BH, LH)
+      function CO(BB, OB, GB) {
+        if (!BB) return !1;
+        if (BB.nodeType !== BB.ELEMENT_NODE) return !!GB && CO(dB.parentNode(BB), OB, GB);
+        for (let YB = BB.classList.length; YB--;)
+          if (OB.test(BB.classList[YB])) return !0;
+        return !!GB && CO(dB.parentNode(BB), OB, GB)
       }
 
-      function sB(HH, BH, LH, AH) {
-        let rH;
-        if (SB(HH)) {
-          if (rH = HH, !mH.childNodes(rH).length) return !1
+      function HO(BB, OB, GB, YB) {
+        let DB;
+        if (QO(BB)) {
+          if (DB = BB, !dB.childNodes(DB).length) return !1
         } else {
-          if (null === mH.parentElement(HH)) return !1;
-          rH = mH.parentElement(HH)
+          if (null === dB.parentElement(BB)) return !1;
+          DB = dB.parentElement(BB)
         }
         try {
-          if ("string" == typeof BH) {
-            if (AH) {
-              if (rH.closest(`.${BH}`)) return !0
-            } else if (rH.classList.contains(BH)) return !0
-          } else if (aB(rH, BH, AH)) return !0;
-          if (LH)
-            if (AH) {
-              if (rH.closest(LH)) return !0
-            } else if (rH.matches(LH)) return !0
-        } catch (HH) {}
+          if ("string" == typeof OB) {
+            if (YB) {
+              if (DB.closest(`.${OB}`)) return !0
+            } else if (DB.classList.contains(OB)) return !0
+          } else if (CO(DB, OB, YB)) return !0;
+          if (GB)
+            if (YB) {
+              if (DB.closest(GB)) return !0
+            } else if (DB.matches(GB)) return !0
+        } catch (BB) {}
         return !1
       }
 
-      function JB(HH, BH, LH) {
-        const AH = HH.removeEventListener;
-        "function" == typeof AH && AH.call(HH, BH, LH)
+      function vO(BB, OB, GB) {
+        const YB = BB.removeEventListener;
+        "function" == typeof YB && YB.call(BB, OB, GB)
       }
-      var iB = new Map;
+      var sO = new Map;
 
-      function pB(HH, BH) {
-        return Array.from(HH.styleSheets).find((HH => HH.href === BH))
+      function xO(BB, OB) {
+        return Array.from(BB.styleSheets).find((BB => BB.href === OB))
       }
 
-      function yB(HH) {
-        return null == HH ? "" : HH.toLowerCase()
+      function tO(BB) {
+        return null == BB ? "" : BB.toLowerCase()
       }
-      var HL = !1,
-        BL = !1;
+      var BG = !1,
+        OG = !1;
 
-      function LL(HH, BH) {
+      function GG(BB, OB) {
         const {
-          doc: LH,
-          mirror: AH,
-          blockClass: rH,
-          blockSelector: SH,
-          maskTextClass: hH,
-          maskTextSelector: tH,
-          skipChild: zH = !1,
-          inlineStylesheet: CH = !0,
-          maskInputOptions: EH = {},
-          maskTextFn: XH,
-          maskInputFn: GH,
-          maskAllElementAttributes: uH = !1,
-          maskAttributeFn: QH,
-          slimDOMOptions: WH,
-          dataURLOptions: MH = {},
-          inlineImages: xH = !1,
-          recordCanvas: vH = !1,
-          canvasMaskingConfigured: PH,
-          onSerialize: TH,
-          onIframeLoad: UH,
-          iframeLoadTimeout: VH = 5e3,
-          onIframeListenerRegistered: OH,
-          onStylesheetLoad: bH,
-          stylesheetLoadTimeout: kH = 5e3,
-          keepIframeSrcFn: oH = () => !1,
-          newlyAddedElement: IH = !1,
-          depth: fH = 0,
-          maxDepth: lH = 50
-        } = BH;
+          doc: GB,
+          mirror: YB,
+          blockClass: DB,
+          blockSelector: QB,
+          maskTextClass: oB,
+          maskTextSelector: jB,
+          skipChild: yB = !1,
+          inlineStylesheet: JB = !0,
+          maskInputOptions: MB = {},
+          maskTextFn: PB,
+          maskInputFn: zB,
+          maskAllElementAttributes: pB = !1,
+          maskAttributeFn: qB,
+          slimDOMOptions: ZB,
+          dataURLOptions: NB = {},
+          inlineImages: RB = !1,
+          recordCanvas: WB = !1,
+          canvasMaskingConfigured: AB,
+          onSerialize: VB,
+          onIframeLoad: SB,
+          iframeLoadTimeout: nB = 5e3,
+          onIframeListenerRegistered: UB,
+          onStylesheetLoad: fB,
+          stylesheetLoadTimeout: kB = 5e3,
+          keepIframeSrcFn: KB = () => !1,
+          newlyAddedElement: uB = !1,
+          depth: mB = 0,
+          maxDepth: IB = 50
+        } = OB;
         let {
-          needsMask: KH
-        } = BH, {
-          preserveWhiteSpace: cH = !0
-        } = BH;
-        if (fH >= lH) return BL = !0, HL || (HL = !0, console.warn(`[rrweb-snapshot] DOM tree depth exceeded max depth of ${lH}. Children beyond this depth will not be recorded. This may indicate deeply nested DOM structures.`)), null;
-        KH || (KH = sB(HH, hH, tH, void 0 === KH)), eH > 0 && (NH.nodeCount += 1);
-        const qH = function(HH, BH) {
+          needsMask: FB
+        } = OB, {
+          preserveWhiteSpace: iB = !0
+        } = OB;
+        if (mB >= IB) return OG = !0, BG || (BG = !0, console.warn(`[rrweb-snapshot] DOM tree depth exceeded max depth of ${IB}. Children beyond this depth will not be recorded. This may indicate deeply nested DOM structures.`)), null;
+        FB || (FB = HO(BB, oB, jB, void 0 === FB)), LB > 0 && (XB.nodeCount += 1);
+        const gB = function(BB, OB) {
           const {
-            doc: LH,
-            mirror: AH,
-            blockClass: rH,
-            blockSelector: SH,
-            needsMask: hH,
-            inlineStylesheet: tH,
-            maskInputOptions: zH = {},
-            maskTextFn: CH,
-            maskInputFn: EH,
-            maskAllElementAttributes: XH = !1,
-            maskAttributeFn: GH,
-            dataURLOptions: uH = {},
-            inlineImages: QH,
-            recordCanvas: WH,
-            canvasMaskingConfigured: MH,
-            keepIframeSrcFn: xH,
-            newlyAddedElement: vH = !1
-          } = BH, PH = function(HH, BH) {
-            if (!BH.hasNode(HH)) return;
-            const LH = BH.getId(HH);
-            return 1 === LH ? void 0 : LH
-          }(LH, AH);
-          switch (HH.nodeType) {
-            case HH.DOCUMENT_NODE:
-              return "CSS1Compat" !== HH.compatMode ? {
-                type: YH.Document,
+            doc: GB,
+            mirror: YB,
+            blockClass: DB,
+            blockSelector: QB,
+            needsMask: oB,
+            inlineStylesheet: jB,
+            maskInputOptions: yB = {},
+            maskTextFn: JB,
+            maskInputFn: MB,
+            maskAllElementAttributes: PB = !1,
+            maskAttributeFn: zB,
+            dataURLOptions: pB = {},
+            inlineImages: qB,
+            recordCanvas: ZB,
+            canvasMaskingConfigured: NB,
+            keepIframeSrcFn: RB,
+            newlyAddedElement: WB = !1
+          } = OB, AB = function(BB, OB) {
+            if (!OB.hasNode(BB)) return;
+            const GB = OB.getId(BB);
+            return 1 === GB ? void 0 : GB
+          }(GB, YB);
+          switch (BB.nodeType) {
+            case BB.DOCUMENT_NODE:
+              return "CSS1Compat" !== BB.compatMode ? {
+                type: lB.Document,
                 childNodes: [],
-                compatMode: HH.compatMode
+                compatMode: BB.compatMode
               } : {
-                type: YH.Document,
+                type: lB.Document,
                 childNodes: []
               };
-            case HH.DOCUMENT_TYPE_NODE:
+            case BB.DOCUMENT_TYPE_NODE:
               return {
-                type: YH.DocumentType, name: HH.name, publicId: HH.publicId, systemId: HH.systemId, rootId: PH
+                type: lB.DocumentType, name: BB.name, publicId: BB.publicId, systemId: BB.systemId, rootId: AB
               };
-            case HH.ELEMENT_NODE:
-              return function(HH, BH) {
+            case BB.ELEMENT_NODE:
+              return function(BB, OB) {
                 const {
-                  doc: LH,
-                  blockClass: AH,
-                  blockSelector: rH,
-                  inlineStylesheet: SH,
-                  maskInputOptions: hH = {},
-                  maskInputFn: tH,
-                  maskAllElementAttributes: zH = !1,
-                  maskAttributeFn: CH,
-                  dataURLOptions: EH = {},
-                  inlineImages: XH,
-                  recordCanvas: GH,
-                  canvasMaskingConfigured: uH,
-                  keepIframeSrcFn: QH,
-                  newlyAddedElement: WH = !1,
-                  rootId: MH
-                } = BH, xH = function(HH, BH, LH) {
+                  doc: GB,
+                  blockClass: YB,
+                  blockSelector: DB,
+                  inlineStylesheet: QB,
+                  maskInputOptions: oB = {},
+                  maskInputFn: jB,
+                  maskAllElementAttributes: yB = !1,
+                  maskAttributeFn: JB,
+                  dataURLOptions: MB = {},
+                  inlineImages: PB,
+                  recordCanvas: zB,
+                  canvasMaskingConfigured: pB,
+                  keepIframeSrcFn: qB,
+                  newlyAddedElement: ZB = !1,
+                  rootId: NB
+                } = OB, RB = function(BB, OB, GB) {
                   try {
-                    if ("string" == typeof BH) {
-                      if (HH.classList.contains(BH)) return !0
+                    if ("string" == typeof OB) {
+                      if (BB.classList.contains(OB)) return !0
                     } else
-                      for (let LH = HH.classList.length; LH--;)
-                        if (BH.test(HH.classList[LH])) return !0;
-                    if (LH) return HH.matches(LH)
-                  } catch (HH) {}
+                      for (let GB = BB.classList.length; GB--;)
+                        if (OB.test(BB.classList[GB])) return !0;
+                    if (GB) return BB.matches(GB)
+                  } catch (BB) {}
                   return !1
-                }(HH, AH, rH), vH = function(HH) {
-                  if (HH instanceof HTMLFormElement) return "form";
-                  const BH = PB(HH.tagName);
-                  return eB.test(BH) ? "div" : BH
-                }(HH), PH = new Set;
-                let TH = {};
-                const UH = HH.attributes.length;
-                for (let YH = 0; UH > YH; YH++) {
-                  const BH = HH.attributes[YH];
-                  ZB(vH, BH.name) || (TH[BH.name] = wB(LH, vH, PB(BH.name), BH.value, HH, EH))
+                }(BB, YB, DB), WB = function(BB) {
+                  if (BB instanceof HTMLFormElement) return "form";
+                  const OB = AO(BB.tagName);
+                  return LO.test(OB) ? "div" : OB
+                }(BB), AB = new Set;
+                let VB = {};
+                const SB = BB.attributes.length;
+                for (let lB = 0; SB > lB; lB++) {
+                  const OB = BB.attributes[lB];
+                  TO(WB, OB.name) || (VB[OB.name] = eO(GB, WB, AO(OB.name), OB.value, BB, MB))
                 }
-                if ("link" === vH && SH && !xH && dB(TH.rel)) {
-                  let BH = HH.sheet;
-                  if (!BH) {
-                    const AH = function(HH) {
-                      return HH.href
-                    }(HH);
-                    AH && (BH = pB(LH, AH), !BH && AH.includes(".css")) && (BH = pB(LH, window.location.origin + "/" + AH.replace(window.location.href, "")))
+                if ("link" === WB && QB && !RB && bO(VB.rel)) {
+                  let OB = BB.sheet;
+                  if (!OB) {
+                    const YB = function(BB) {
+                      return BB.href
+                    }(BB);
+                    YB && (OB = xO(GB, YB), !OB && YB.includes(".css")) && (OB = xO(GB, window.location.origin + "/" + YB.replace(window.location.href, "")))
                   }
-                  let AH = null;
-                  BH && (yH(BH) ? eH > 0 && (nH.push(HH), FH += 1) : AH = XB(BH)), AH && (delete TH.rel, delete TH.href, TH._cssText = AH)
+                  let YB = null;
+                  OB && (tB(OB) ? LB > 0 && (cB.push(BB), hB += 1) : YB = PO(OB)), YB && (delete VB.rel, delete VB.href, VB._cssText = YB)
                 }
-                var VH;
-                if ("style" === vH && HH.sheet && !(HH.innerText || mH.textContent(HH) || "").trim().length) {
-                  const BH = iH((() => XB(HH.sheet)));
-                  BH && (TH._cssText = BH)
+                var nB;
+                if ("style" === WB && BB.sheet && !(BB.innerText || dB.textContent(BB) || "").trim().length) {
+                  const OB = sB((() => PO(BB.sheet)));
+                  OB && (VB._cssText = OB)
                 }
-                if ("input" === vH || "textarea" === vH || "select" === vH) {
-                  const BH = HH.value,
-                    LH = HH.checked;
-                  "radio" !== TH.type && "checkbox" !== TH.type && "submit" !== TH.type && "button" !== TH.type && BH ? TH.value = vB({
-                    element: HH,
-                    type: OB(HH),
-                    tagName: vH,
-                    value: BH,
-                    maskInputOptions: hH,
-                    maskInputFn: tH
-                  }) : LH && (TH.checked = LH)
+                if ("input" === WB || "textarea" === WB || "select" === WB) {
+                  const OB = BB.value,
+                    GB = BB.checked;
+                  "radio" !== VB.type && "checkbox" !== VB.type && "submit" !== VB.type && "button" !== VB.type && OB ? VB.value = WO({
+                    element: BB,
+                    type: UO(BB),
+                    tagName: WB,
+                    value: OB,
+                    maskInputOptions: oB,
+                    maskInputFn: jB
+                  }) : GB && (VB.checked = GB)
                 }
-                if ("option" === vH && (HH.selected && !hH.select ? TH.selected = !0 : delete TH.selected), "dialog" === vH && HH.open) {
+                if ("option" === WB && (BB.selected && !oB.select ? VB.selected = !0 : delete VB.selected), "dialog" === WB && BB.open) {
                   try {
-                    TH.rr_open_mode = HH.matches("dialog:modal") ? "modal" : "non-modal"
-                  } catch (HH) {
-                    TH.rr_open_mode = "modal", TH.ph_rr_could_not_detect_modal = !0
+                    VB.rr_open_mode = BB.matches("dialog:modal") ? "modal" : "non-modal"
+                  } catch (BB) {
+                    VB.rr_open_mode = "modal", VB.ph_rr_could_not_detect_modal = !0
                   }
-                  PH.add("rr_open_mode")
+                  AB.add("rr_open_mode")
                 }
-                if ("canvas" === vH && GH && !(null == uH ? void 0 : uH())) try {
-                  if ("2d" === HH.__context)(function(HH) {
-                    const BH = HH.getContext("2d");
-                    if (!BH) return !0;
-                    for (let LH = 0; HH.width > LH; LH += 50)
-                      for (let AH = 0; HH.height > AH; AH += 50) {
-                        const rH = BH.getImageData,
-                          SH = VB in rH ? rH[VB] : rH;
-                        let hH;
+                if ("canvas" === WB && zB && !(null == pB ? void 0 : pB())) try {
+                  if ("2d" === BB.__context)(function(BB) {
+                    const OB = BB.getContext("2d");
+                    if (!OB) return !0;
+                    for (let GB = 0; BB.width > GB; GB += 50)
+                      for (let YB = 0; BB.height > YB; YB += 50) {
+                        const DB = OB.getImageData,
+                          QB = nO in DB ? DB[nO] : DB;
+                        let oB;
                         try {
-                          hH = SH.call(BH, LH, AH, Math.min(50, HH.width - LH), Math.min(50, HH.height - AH))
-                        } catch (HH) {
+                          oB = QB.call(OB, GB, YB, Math.min(50, BB.width - GB), Math.min(50, BB.height - YB))
+                        } catch (BB) {
                           return !1
                         }
-                        if (new Uint32Array(hH.data.buffer).some((HH => 0 !== HH))) return !1
+                        if (new Uint32Array(oB.data.buffer).some((BB => 0 !== BB))) return !1
                       }
                     return !0
-                  })(HH) || (TH.rr_dataURL = HH.toDataURL(EH.type, EH.quality));
-                  else if (!("__context" in HH)) {
-                    const BH = HH.toDataURL(EH.type, EH.quality),
-                      AH = LH.createElement("canvas");
-                    AH.width = HH.width, AH.height = HH.height, BH !== AH.toDataURL(EH.type, EH.quality) && (TH.rr_dataURL = BH)
+                  })(BB) || (VB.rr_dataURL = BB.toDataURL(MB.type, MB.quality));
+                  else if (!("__context" in BB)) {
+                    const OB = BB.toDataURL(MB.type, MB.quality),
+                      YB = GB.createElement("canvas");
+                    YB.width = BB.width, YB.height = BB.height, OB !== YB.toDataURL(MB.type, MB.quality) && (VB.rr_dataURL = OB)
                   }
-                } catch (HH) {
-                  "SecurityError" === (null == (VH = HH) ? void 0 : VH.name) ? gB || (gB = !0, console.warn("Cannot read canvas pixels, so this canvas is left out of the recording. A cross-origin image or video drawn into it taints it.", VH)): console.warn("Cannot read canvas pixels, so this canvas is left out of the recording.", VH)
+                } catch (BB) {
+                  "SecurityError" === (null == (nB = BB) ? void 0 : nB.name) ? rO || (rO = !0, console.warn("Cannot read canvas pixels, so this canvas is left out of the recording. A cross-origin image or video drawn into it taints it.", nB)): console.warn("Cannot read canvas pixels, so this canvas is left out of the recording.", nB)
                 }
-                let OH, bH = !1;
-                if ("img" === vH && XH) {
-                  fB || (fB = LH.createElement("canvas"), lB = fB.getContext("2d"));
-                  const BH = HH,
-                    AH = BH.currentSrc || BH.getAttribute("src") || "<unknown-src>",
-                    rH = BH.crossOrigin,
-                    SH = (BH, LH) => bH ? UB({
-                      element: HH,
-                      name: BH,
-                      value: LH,
-                      maskAllElementAttributes: zH,
-                      maskAttributeFn: CH
-                    }) : LH,
-                    hH = () => {
-                      JB(BH, "load", hH);
+                let UB, fB = !1;
+                if ("img" === WB && PB) {
+                  mO || (mO = GB.createElement("canvas"), IO = mO.getContext("2d"));
+                  const OB = BB,
+                    YB = OB.currentSrc || OB.getAttribute("src") || "<unknown-src>",
+                    DB = OB.crossOrigin,
+                    QB = (OB, GB) => fB ? SO({
+                      element: BB,
+                      name: OB,
+                      value: GB,
+                      maskAllElementAttributes: yB,
+                      maskAttributeFn: JB
+                    }) : GB,
+                    oB = () => {
+                      vO(OB, "load", oB);
                       try {
-                        fB.width = BH.naturalWidth, fB.height = BH.naturalHeight, lB.drawImage(BH, 0, 0);
-                        const HH = fB.toDataURL(EH.type, EH.quality);
-                        TH.rr_dataURL = SH("rr_dataURL", HH)
-                      } catch (HH) {
-                        if ("anonymous" !== BH.crossOrigin) return BH.crossOrigin = "anonymous", void(BH.complete && 0 !== BH.naturalWidth ? hH() : BH.addEventListener("load", hH));
-                        console.warn(`Cannot inline img src=${AH}! Error: ${HH}`)
+                        mO.width = OB.naturalWidth, mO.height = OB.naturalHeight, IO.drawImage(OB, 0, 0);
+                        const BB = mO.toDataURL(MB.type, MB.quality);
+                        VB.rr_dataURL = QB("rr_dataURL", BB)
+                      } catch (BB) {
+                        if ("anonymous" !== OB.crossOrigin) return OB.crossOrigin = "anonymous", void(OB.complete && 0 !== OB.naturalWidth ? oB() : OB.addEventListener("load", oB));
+                        console.warn(`Cannot inline img src=${YB}! Error: ${BB}`)
                       }
-                      "anonymous" === BH.crossOrigin && (rH ? TH.crossOrigin = SH("crossOrigin", rH) : BH.removeAttribute("crossorigin"))
+                      "anonymous" === OB.crossOrigin && (DB ? VB.crossOrigin = QB("crossOrigin", DB) : OB.removeAttribute("crossorigin"))
                     };
-                  BH.complete && 0 !== BH.naturalWidth ? hH() : BH.addEventListener("load", hH)
+                  OB.complete && 0 !== OB.naturalWidth ? oB() : OB.addEventListener("load", oB)
                 }
-                if ("audio" === vH || "video" === vH) {
-                  const BH = TH;
-                  BH.rr_mediaState = HH.paused ? "paused" : "played", PH.add("rr_mediaState"), BH.rr_mediaCurrentTime = HH.currentTime, BH.rr_mediaPlaybackRate = HH.playbackRate, BH.rr_mediaMuted = HH.muted, BH.rr_mediaLoop = HH.loop, BH.rr_mediaVolume = HH.volume
+                if ("audio" === WB || "video" === WB) {
+                  const OB = VB;
+                  OB.rr_mediaState = BB.paused ? "paused" : "played", AB.add("rr_mediaState"), OB.rr_mediaCurrentTime = BB.currentTime, OB.rr_mediaPlaybackRate = BB.playbackRate, OB.rr_mediaMuted = BB.muted, OB.rr_mediaLoop = BB.loop, OB.rr_mediaVolume = BB.volume
                 }
-                if (WH || (HH.scrollLeft && (TH.rr_scrollLeft = HH.scrollLeft), HH.scrollTop && (TH.rr_scrollTop = HH.scrollTop)), xH) {
-                  var kH, oH, IH;
+                if (ZB || (BB.scrollLeft && (VB.rr_scrollLeft = BB.scrollLeft), BB.scrollTop && (VB.rr_scrollTop = BB.scrollTop)), RB) {
+                  var kB, KB, uB;
                   const {
-                    width: BH,
-                    height: AH,
-                    left: rH,
-                    top: SH
-                  } = HH.getBoundingClientRect(), hH = null === (kH = LH.defaultView) || void 0 === kH ? void 0 : kH.getComputedStyle(HH);
-                  TH = {
-                    class: TH.class,
-                    rr_width: `${BH}px`,
-                    rr_height: `${AH}px`,
-                    rr_left: `${Math.floor(rH+((null===(oH=LH.defaultView)||void 0===oH?void 0:oH.scrollX)||0))}px`,
-                    rr_top: `${Math.floor(SH+((null===(IH=LH.defaultView)||void 0===IH?void 0:IH.scrollY)||0))}px`
-                  }, PH.add("rr_width"), PH.add("rr_height"), PH.add("rr_left"), PH.add("rr_top"), hH && (TH.rr_position = hH.position || "static", PH.add("rr_position"), hH.transform && "none" !== hH.transform && (TH.rr_transform = hH.transform, PH.add("rr_transform")), hH.display && hH.display.startsWith("inline") && (TH.rr_display = hH.display, PH.add("rr_display")))
+                    width: OB,
+                    height: YB,
+                    left: DB,
+                    top: QB
+                  } = BB.getBoundingClientRect(), oB = null === (kB = GB.defaultView) || void 0 === kB ? void 0 : kB.getComputedStyle(BB);
+                  VB = {
+                    class: VB.class,
+                    rr_width: `${OB}px`,
+                    rr_height: `${YB}px`,
+                    rr_left: `${Math.floor(DB+((null===(KB=GB.defaultView)||void 0===KB?void 0:KB.scrollX)||0))}px`,
+                    rr_top: `${Math.floor(QB+((null===(uB=GB.defaultView)||void 0===uB?void 0:uB.scrollY)||0))}px`
+                  }, AB.add("rr_width"), AB.add("rr_height"), AB.add("rr_left"), AB.add("rr_top"), oB && (VB.rr_position = oB.position || "static", AB.add("rr_position"), oB.transform && "none" !== oB.transform && (VB.rr_transform = oB.transform, AB.add("rr_transform")), oB.display && oB.display.startsWith("inline") && (VB.rr_display = oB.display, AB.add("rr_display")))
                 }
-                if ("iframe" !== vH || QH(TH.src) || (HH.contentDocument || (TH.rr_src = TH.src), delete TH.src), zH || CH)
-                  for (const [YH, mH] of Object.entries(TH)) "string" != typeof mH && null !== mH || (TH[YH] = UB({
-                    element: HH,
-                    name: YH,
-                    value: mH,
-                    maskAllElementAttributes: zH,
-                    maskAttributeFn: CH,
-                    isGenerated: PH.has(YH)
+                if ("iframe" !== WB || qB(VB.src) || (BB.contentDocument || (VB.rr_src = VB.src), delete VB.src), yB || JB)
+                  for (const [lB, dB] of Object.entries(VB)) "string" != typeof dB && null !== dB || (VB[lB] = SO({
+                    element: BB,
+                    name: lB,
+                    value: dB,
+                    maskAllElementAttributes: yB,
+                    maskAttributeFn: JB,
+                    isGenerated: AB.has(lB)
                   }));
-                bH = !0;
+                fB = !0;
                 try {
-                  customElements.get(vH) && (OH = !0)
-                } catch (HH) {}
+                  customElements.get(WB) && (UB = !0)
+                } catch (BB) {}
                 return {
-                  type: YH.Element,
-                  tagName: vH,
-                  attributes: TH,
+                  type: lB.Element,
+                  tagName: WB,
+                  attributes: VB,
                   childNodes: [],
-                  isSVG: (fH = HH, Boolean("svg" === fH.tagName || fH.ownerSVGElement) || void 0),
-                  needBlock: xH,
-                  rootId: MH,
-                  isCustom: OH
+                  isSVG: (mB = BB, Boolean("svg" === mB.tagName || mB.ownerSVGElement) || void 0),
+                  needBlock: RB,
+                  rootId: NB,
+                  isCustom: UB
                 };
-                var fH
-              }(HH, {
-                doc: LH,
-                blockClass: rH,
-                blockSelector: SH,
-                inlineStylesheet: tH,
-                maskInputOptions: zH,
-                maskInputFn: EH,
-                maskAllElementAttributes: XH,
-                maskAttributeFn: GH,
-                dataURLOptions: uH,
-                inlineImages: QH,
-                recordCanvas: WH,
-                canvasMaskingConfigured: MH,
-                keepIframeSrcFn: xH,
-                newlyAddedElement: vH,
-                rootId: PH
+                var mB
+              }(BB, {
+                doc: GB,
+                blockClass: DB,
+                blockSelector: QB,
+                inlineStylesheet: jB,
+                maskInputOptions: yB,
+                maskInputFn: MB,
+                maskAllElementAttributes: PB,
+                maskAttributeFn: zB,
+                dataURLOptions: pB,
+                inlineImages: qB,
+                recordCanvas: ZB,
+                canvasMaskingConfigured: NB,
+                keepIframeSrcFn: RB,
+                newlyAddedElement: WB,
+                rootId: AB
               });
-            case HH.TEXT_NODE:
-              return function(HH, BH) {
+            case BB.TEXT_NODE:
+              return function(BB, OB) {
                 const {
-                  needsMask: LH,
-                  maskTextFn: AH,
-                  rootId: rH
-                } = BH, SH = mH.parentNode(HH), hH = SH && SH.tagName;
-                let tH = mH.textContent(HH);
-                const zH = "STYLE" === hH || void 0,
-                  CH = "SCRIPT" === hH || void 0;
-                if (zH && tH) {
+                  needsMask: GB,
+                  maskTextFn: YB,
+                  rootId: DB
+                } = OB, QB = dB.parentNode(BB), oB = QB && QB.tagName;
+                let jB = dB.textContent(BB);
+                const yB = "STYLE" === oB || void 0,
+                  JB = "SCRIPT" === oB || void 0;
+                if (yB && jB) {
                   try {
-                    var EH;
-                    if (HH.nextSibling || HH.previousSibling);
-                    else if (yH(SH.sheet));
-                    else if (null === (EH = SH.sheet) || void 0 === EH ? void 0 : EH.cssRules) {
-                      const HH = XB(SH.sheet);
-                      HH && !/(?:^|[\s;{}])-?[a-zA-Z][\w-]*\s*:\s*;/.test(HH) && (tH = HH)
+                    var MB;
+                    if (BB.nextSibling || BB.previousSibling);
+                    else if (tB(QB.sheet));
+                    else if (null === (MB = QB.sheet) || void 0 === MB ? void 0 : MB.cssRules) {
+                      const BB = PO(QB.sheet);
+                      BB && !/(?:^|[\s;{}])-?[a-zA-Z][\w-]*\s*:\s*;/.test(BB) && (jB = BB)
                     }
-                  } catch (BH) {
-                    console.warn(`Cannot get CSS styles from text's parentNode. Error: ${BH}`, HH)
+                  } catch (OB) {
+                    console.warn(`Cannot get CSS styles from text's parentNode. Error: ${OB}`, BB)
                   }
-                  tH = IB(tH, FB(BH.doc))
+                  jB = uO(jB, hO(OB.doc))
                 }
-                return CH && (tH = "SCRIPT_PLACEHOLDER"), !zH && !CH && tH && LH && (tH = AH ? AH(tH, mH.parentElement(HH)) : tH.replace(/[\S]/g, "*")), {
-                  type: YH.Text,
-                  textContent: tH || "",
-                  isStyle: zH,
-                  rootId: rH
+                return JB && (jB = "SCRIPT_PLACEHOLDER"), !yB && !JB && jB && GB && (jB = YB ? YB(jB, dB.parentElement(BB)) : jB.replace(/[\S]/g, "*")), {
+                  type: lB.Text,
+                  textContent: jB || "",
+                  isStyle: yB,
+                  rootId: DB
                 }
-              }(HH, {
-                doc: LH,
-                needsMask: hH,
-                maskTextFn: CH,
-                rootId: PH
+              }(BB, {
+                doc: GB,
+                needsMask: oB,
+                maskTextFn: JB,
+                rootId: AB
               });
-            case HH.CDATA_SECTION_NODE:
+            case BB.CDATA_SECTION_NODE:
               return {
-                type: YH.CDATA, textContent: "", rootId: PH
+                type: lB.CDATA, textContent: "", rootId: AB
               };
-            case HH.COMMENT_NODE:
+            case BB.COMMENT_NODE:
               return {
-                type: YH.Comment, textContent: mH.textContent(HH) || "", rootId: PH
+                type: lB.Comment, textContent: dB.textContent(BB) || "", rootId: AB
               };
             default:
               return !1
           }
-        }(HH, {
-          doc: LH,
-          mirror: AH,
-          blockClass: rH,
-          blockSelector: SH,
-          needsMask: KH,
-          inlineStylesheet: CH,
-          maskInputOptions: EH,
-          maskTextFn: XH,
-          maskInputFn: GH,
-          maskAllElementAttributes: uH,
-          maskAttributeFn: QH,
-          dataURLOptions: MH,
-          inlineImages: xH,
-          recordCanvas: vH,
-          canvasMaskingConfigured: PH,
-          keepIframeSrcFn: oH,
-          newlyAddedElement: IH
+        }(BB, {
+          doc: GB,
+          mirror: YB,
+          blockClass: DB,
+          blockSelector: QB,
+          needsMask: FB,
+          inlineStylesheet: JB,
+          maskInputOptions: MB,
+          maskTextFn: PB,
+          maskInputFn: zB,
+          maskAllElementAttributes: pB,
+          maskAttributeFn: qB,
+          dataURLOptions: NB,
+          inlineImages: RB,
+          recordCanvas: WB,
+          canvasMaskingConfigured: AB,
+          keepIframeSrcFn: KB,
+          newlyAddedElement: uB
         });
-        if (!qH) return console.warn(HH, "not serialized"), null;
-        let gH;
-        gH = AH.hasNode(HH) ? AH.getId(HH) : function(HH, BH) {
-          if (BH.comment && HH.type === YH.Comment) return !0;
-          if (HH.type === YH.Element) {
-            if (BH.script && ("script" === HH.tagName || "link" === HH.tagName && ("preload" === HH.attributes.rel && "script" === HH.attributes.as || "modulepreload" === HH.attributes.rel) || "link" === HH.tagName && "prefetch" === HH.attributes.rel && "string" == typeof HH.attributes.href && "js" === function(HH) {
-                var BH;
-                let LH;
+        if (!gB) return console.warn(BB, "not serialized"), null;
+        let rB;
+        rB = YB.hasNode(BB) ? YB.getId(BB) : function(BB, OB) {
+          if (OB.comment && BB.type === lB.Comment) return !0;
+          if (BB.type === lB.Element) {
+            if (OB.script && ("script" === BB.tagName || "link" === BB.tagName && ("preload" === BB.attributes.rel && "script" === BB.attributes.as || "modulepreload" === BB.attributes.rel) || "link" === BB.tagName && "prefetch" === BB.attributes.rel && "string" == typeof BB.attributes.href && "js" === function(BB) {
+                var OB;
+                let GB;
                 try {
-                  LH = new URL(HH, window.location.href)
-                } catch (HH) {
+                  GB = new URL(BB, window.location.href)
+                } catch (BB) {
                   return null
                 }
-                const AH = LH.pathname.match(/\.([0-9a-z]+)(?:$)/i);
-                return null !== (BH = null == AH ? void 0 : AH[1]) && void 0 !== BH ? BH : null
-              }(HH.attributes.href))) return !0;
-            if (BH.headFavicon && ("link" === HH.tagName && "shortcut icon" === HH.attributes.rel || "meta" === HH.tagName && (yB(HH.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === yB(HH.attributes.name) || ["icon", "apple-touch-icon", "shortcut icon"].includes(yB(HH.attributes.rel))))) return !0;
-            if ("meta" === HH.tagName) {
-              if (BH.headMetaDescKeywords && yB(HH.attributes.name).match(/^description|keywords$/)) return !0;
-              if (BH.headMetaSocial && (yB(HH.attributes.property).match(/^(og|twitter|fb):/) || yB(HH.attributes.name).match(/^(og|twitter):/) || "pinterest" === yB(HH.attributes.name))) return !0;
-              if (BH.headMetaRobots && ["robots", "googlebot", "bingbot"].includes(yB(HH.attributes.name))) return !0;
-              if (BH.headMetaHttpEquiv && void 0 !== HH.attributes["http-equiv"]) return !0;
-              if (BH.headMetaAuthorship && (["author", "generator", "framework", "publisher", "progid"].includes(yB(HH.attributes.name)) || yB(HH.attributes.property).match(/^article:/) || yB(HH.attributes.property).match(/^product:/))) return !0;
-              if (BH.headMetaVerification && ["google-site-verification", "yandex-verification", "csrf-token", "p:domain_verify", "verify-v1", "verification", "shopify-checkout-api-token"].includes(yB(HH.attributes.name))) return !0
+                const YB = GB.pathname.match(/\.([0-9a-z]+)(?:$)/i);
+                return null !== (OB = null == YB ? void 0 : YB[1]) && void 0 !== OB ? OB : null
+              }(BB.attributes.href))) return !0;
+            if (OB.headFavicon && ("link" === BB.tagName && "shortcut icon" === BB.attributes.rel || "meta" === BB.tagName && (tO(BB.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === tO(BB.attributes.name) || ["icon", "apple-touch-icon", "shortcut icon"].includes(tO(BB.attributes.rel))))) return !0;
+            if ("meta" === BB.tagName) {
+              if (OB.headMetaDescKeywords && tO(BB.attributes.name).match(/^description|keywords$/)) return !0;
+              if (OB.headMetaSocial && (tO(BB.attributes.property).match(/^(og|twitter|fb):/) || tO(BB.attributes.name).match(/^(og|twitter):/) || "pinterest" === tO(BB.attributes.name))) return !0;
+              if (OB.headMetaRobots && ["robots", "googlebot", "bingbot"].includes(tO(BB.attributes.name))) return !0;
+              if (OB.headMetaHttpEquiv && void 0 !== BB.attributes["http-equiv"]) return !0;
+              if (OB.headMetaAuthorship && (["author", "generator", "framework", "publisher", "progid"].includes(tO(BB.attributes.name)) || tO(BB.attributes.property).match(/^article:/) || tO(BB.attributes.property).match(/^product:/))) return !0;
+              if (OB.headMetaVerification && ["google-site-verification", "yandex-verification", "csrf-token", "p:domain_verify", "verify-v1", "verification", "shopify-checkout-api-token"].includes(tO(BB.attributes.name))) return !0
             }
           }
           return !1
-        }(qH, WH) || !cH && qH.type === YH.Text && !qH.isStyle && !qH.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : qB();
-        const RH = Object.assign(qH, {
-          id: gH
+        }(gB, ZB) || !iB && gB.type === lB.Text && !gB.isStyle && !gB.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : gO();
+        const wB = Object.assign(gB, {
+          id: rB
         });
-        if (AH.add(HH, RH), -2 === gH) return null;
-        TH && TH(HH);
-        let jH = !zH;
-        if (RH.type === YH.Element) {
-          jH = jH && !RH.needBlock, delete RH.needBlock;
-          const BH = mH.shadowRoot(HH);
-          BH && tB(BH) && (RH.isShadowHost = !0)
+        if (YB.add(BB, wB), -2 === rB) return null;
+        VB && VB(BB);
+        let EB = !yB;
+        if (wB.type === lB.Element) {
+          EB = EB && !wB.needBlock, delete wB.needBlock;
+          const OB = dB.shadowRoot(BB);
+          OB && jO(OB) && (wB.isShadowHost = !0)
         }
-        if ((RH.type === YH.Document || RH.type === YH.Element) && jH) {
-          WH.headWhitespace && RH.type === YH.Element && "head" === RH.tagName && (cH = !1);
-          const BH = {
-            doc: LH,
-            mirror: AH,
-            blockClass: rH,
-            blockSelector: SH,
-            needsMask: KH,
-            maskTextClass: hH,
-            maskTextSelector: tH,
-            skipChild: zH,
-            inlineStylesheet: CH,
-            maskInputOptions: EH,
-            maskTextFn: XH,
-            maskInputFn: GH,
-            maskAllElementAttributes: uH,
-            maskAttributeFn: QH,
-            slimDOMOptions: WH,
-            dataURLOptions: MH,
-            inlineImages: xH,
-            recordCanvas: vH,
-            canvasMaskingConfigured: PH,
-            preserveWhiteSpace: cH,
-            onSerialize: TH,
-            onIframeLoad: UH,
-            iframeLoadTimeout: VH,
-            onIframeListenerRegistered: OH,
-            onStylesheetLoad: bH,
-            stylesheetLoadTimeout: kH,
-            keepIframeSrcFn: oH,
-            depth: fH + 1,
-            maxDepth: lH
+        if ((wB.type === lB.Document || wB.type === lB.Element) && EB) {
+          ZB.headWhitespace && wB.type === lB.Element && "head" === wB.tagName && (iB = !1);
+          const OB = {
+            doc: GB,
+            mirror: YB,
+            blockClass: DB,
+            blockSelector: QB,
+            needsMask: FB,
+            maskTextClass: oB,
+            maskTextSelector: jB,
+            skipChild: yB,
+            inlineStylesheet: JB,
+            maskInputOptions: MB,
+            maskTextFn: PB,
+            maskInputFn: zB,
+            maskAllElementAttributes: pB,
+            maskAttributeFn: qB,
+            slimDOMOptions: ZB,
+            dataURLOptions: NB,
+            inlineImages: RB,
+            recordCanvas: WB,
+            canvasMaskingConfigured: AB,
+            preserveWhiteSpace: iB,
+            onSerialize: VB,
+            onIframeLoad: SB,
+            iframeLoadTimeout: nB,
+            onIframeListenerRegistered: UB,
+            onStylesheetLoad: fB,
+            stylesheetLoadTimeout: kB,
+            keepIframeSrcFn: KB,
+            depth: mB + 1,
+            maxDepth: IB
           };
-          if (RH.type === YH.Element && "textarea" === RH.tagName && void 0 !== RH.attributes.value);
+          if (wB.type === lB.Element && "textarea" === wB.tagName && void 0 !== wB.attributes.value);
           else
-            for (const LH of Array.from(mH.childNodes(HH))) {
-              const HH = LL(LH, BH);
-              HH && RH.childNodes.push(HH)
+            for (const GB of Array.from(dB.childNodes(BB))) {
+              const BB = GG(GB, OB);
+              BB && wB.childNodes.push(BB)
             }
-          let IH = null;
-          if (SB(HH) && (IH = mH.shadowRoot(HH)))
-            for (const HH of Array.from(mH.childNodes(IH))) {
-              const LH = LL(HH, BH);
-              LH && (tB(IH) && (LH.isShadow = !0), RH.childNodes.push(LH))
+          let uB = null;
+          if (QO(BB) && (uB = dB.shadowRoot(BB)))
+            for (const BB of Array.from(dB.childNodes(uB))) {
+              const GB = GG(BB, OB);
+              GB && (jO(uB) && (GB.isShadow = !0), wB.childNodes.push(GB))
             }
         }
-        const DH = mH.parentNode(HH);
-        if (DH && hB(DH) && tB(DH) && (RH.isShadow = !0), RH.type === YH.Element && "iframe" === RH.tagName) {
-          const BH = function(HH, BH, LH) {
-            const AH = () => {},
-              rH = HH.contentWindow;
-            if (!rH) return AH;
-            let SH;
+        const aB = dB.parentNode(BB);
+        if (aB && oO(aB) && jO(aB) && (wB.isShadow = !0), wB.type === lB.Element && "iframe" === wB.tagName) {
+          const OB = function(BB, OB, GB) {
+            const YB = () => {},
+              DB = BB.contentWindow;
+            if (!DB) return YB;
+            let QB;
             try {
-              SH = rH.document.readyState
-            } catch (HH) {
-              return AH
+              QB = DB.document.readyState
+            } catch (BB) {
+              return YB
             }
-            const hH = () => BH();
-            if ("complete" !== SH) {
-              let AH = !1,
-                rH = null;
-              const SH = () => {
-                  AH || (AH = !0, null !== rH && (clearTimeout(rH), rH = null), JB(HH, "load", tH), HH.addEventListener("load", hH), BH())
+            const oB = () => OB();
+            if ("complete" !== QB) {
+              let YB = !1,
+                DB = null;
+              const QB = () => {
+                  YB || (YB = !0, null !== DB && (clearTimeout(DB), DB = null), vO(BB, "load", jB), BB.addEventListener("load", oB), OB())
                 },
-                tH = () => SH();
-              return rH = setTimeout(SH, LH), HH.addEventListener("load", tH), () => {
-                null !== rH && (clearTimeout(rH), rH = null), AH ? JB(HH, "load", hH) : (AH = !0, JB(HH, "load", tH))
+                jB = () => QB();
+              return DB = setTimeout(QB, GB), BB.addEventListener("load", jB), () => {
+                null !== DB && (clearTimeout(DB), DB = null), YB ? vO(BB, "load", oB) : (YB = !0, vO(BB, "load", jB))
               }
             }
-            const tH = "about:blank";
-            let zH;
+            const jB = "about:blank";
+            let yB;
             try {
-              zH = rH.location.href
-            } catch (HH) {
-              return AH
+              yB = DB.location.href
+            } catch (BB) {
+              return YB
             }
-            if (zH !== tH || HH.src === tH || "" === HH.src) {
-              const LH = setTimeout(BH, 0);
-              return HH.addEventListener("load", hH), () => {
-                clearTimeout(LH), JB(HH, "load", hH)
+            if (yB !== jB || BB.src === jB || "" === BB.src) {
+              const GB = setTimeout(OB, 0);
+              return BB.addEventListener("load", oB), () => {
+                clearTimeout(GB), vO(BB, "load", oB)
               }
             }
-            return HH.addEventListener("load", hH), () => {
-              JB(HH, "load", hH)
+            return BB.addEventListener("load", oB), () => {
+              vO(BB, "load", oB)
             }
-          }(HH, (() => {
-            const BH = HH.contentDocument;
-            if (BH && UH) {
-              const LH = LL(BH, {
-                doc: BH,
-                mirror: AH,
-                blockClass: rH,
-                blockSelector: SH,
-                needsMask: KH,
-                maskTextClass: hH,
-                maskTextSelector: tH,
+          }(BB, (() => {
+            const OB = BB.contentDocument;
+            if (OB && SB) {
+              const GB = GG(OB, {
+                doc: OB,
+                mirror: YB,
+                blockClass: DB,
+                blockSelector: QB,
+                needsMask: FB,
+                maskTextClass: oB,
+                maskTextSelector: jB,
                 skipChild: !1,
-                inlineStylesheet: CH,
-                maskInputOptions: EH,
-                maskTextFn: XH,
-                maskInputFn: GH,
-                maskAllElementAttributes: uH,
-                maskAttributeFn: QH,
-                slimDOMOptions: WH,
-                dataURLOptions: MH,
-                inlineImages: xH,
-                recordCanvas: vH,
-                canvasMaskingConfigured: PH,
-                preserveWhiteSpace: cH,
-                onSerialize: TH,
-                onIframeLoad: UH,
-                iframeLoadTimeout: VH,
-                onIframeListenerRegistered: OH,
-                onStylesheetLoad: bH,
-                stylesheetLoadTimeout: kH,
-                keepIframeSrcFn: oH,
-                depth: fH + 1,
-                maxDepth: lH
+                inlineStylesheet: JB,
+                maskInputOptions: MB,
+                maskTextFn: PB,
+                maskInputFn: zB,
+                maskAllElementAttributes: pB,
+                maskAttributeFn: qB,
+                slimDOMOptions: ZB,
+                dataURLOptions: NB,
+                inlineImages: RB,
+                recordCanvas: WB,
+                canvasMaskingConfigured: AB,
+                preserveWhiteSpace: iB,
+                onSerialize: VB,
+                onIframeLoad: SB,
+                iframeLoadTimeout: nB,
+                onIframeListenerRegistered: UB,
+                onStylesheetLoad: fB,
+                stylesheetLoadTimeout: kB,
+                keepIframeSrcFn: KB,
+                depth: mB + 1,
+                maxDepth: IB
               });
-              LH && UH(HH, LH)
+              GB && SB(BB, GB)
             }
-          }), VH);
-          null == OH || OH(HH, BH)
+          }), nB);
+          null == UB || UB(BB, OB)
         }
-        return RH.type === YH.Element && "link" === RH.tagName && dB(RH.attributes.rel) && function(BH, zH, YH) {
-          if (iB.has(BH)) return;
-          let OH;
+        return wB.type === lB.Element && "link" === wB.tagName && bO(wB.attributes.rel) && function(OB, yB, lB) {
+          if (sO.has(OB)) return;
+          let UB;
           try {
-            OH = BH.sheet
-          } catch (HH) {
+            UB = OB.sheet
+          } catch (BB) {
             return
           }
-          if (OH) return;
-          const mH = new AbortController;
-          let IH = !1;
-          const eH = () => {
-              if (!IH) {
-                IH = !0;
+          if (UB) return;
+          const dB = new AbortController;
+          let uB = !1;
+          const LB = () => {
+              if (!uB) {
+                uB = !0;
                 try {
                   (() => {
-                    if (bH) {
-                      const BH = LL(HH, {
-                        doc: LH,
-                        mirror: AH,
-                        blockClass: rH,
-                        blockSelector: SH,
-                        needsMask: KH,
-                        maskTextClass: hH,
-                        maskTextSelector: tH,
+                    if (fB) {
+                      const OB = GG(BB, {
+                        doc: GB,
+                        mirror: YB,
+                        blockClass: DB,
+                        blockSelector: QB,
+                        needsMask: FB,
+                        maskTextClass: oB,
+                        maskTextSelector: jB,
                         skipChild: !1,
-                        inlineStylesheet: CH,
-                        maskInputOptions: EH,
-                        maskTextFn: XH,
-                        maskInputFn: GH,
-                        maskAllElementAttributes: uH,
-                        maskAttributeFn: QH,
-                        slimDOMOptions: WH,
-                        dataURLOptions: MH,
-                        inlineImages: xH,
-                        recordCanvas: vH,
-                        canvasMaskingConfigured: PH,
-                        preserveWhiteSpace: cH,
-                        onSerialize: TH,
-                        onIframeLoad: UH,
-                        iframeLoadTimeout: VH,
-                        onStylesheetLoad: bH,
-                        stylesheetLoadTimeout: kH,
-                        keepIframeSrcFn: oH,
-                        depth: fH,
-                        maxDepth: lH
+                        inlineStylesheet: JB,
+                        maskInputOptions: MB,
+                        maskTextFn: PB,
+                        maskInputFn: zB,
+                        maskAllElementAttributes: pB,
+                        maskAttributeFn: qB,
+                        slimDOMOptions: ZB,
+                        dataURLOptions: NB,
+                        inlineImages: RB,
+                        recordCanvas: WB,
+                        canvasMaskingConfigured: AB,
+                        preserveWhiteSpace: iB,
+                        onSerialize: VB,
+                        onIframeLoad: SB,
+                        iframeLoadTimeout: nB,
+                        onStylesheetLoad: fB,
+                        stylesheetLoadTimeout: kB,
+                        keepIframeSrcFn: KB,
+                        depth: mB,
+                        maxDepth: IB
                       });
-                      BH && bH(HH, BH)
+                      OB && fB(BB, OB)
                     }
                   })()
                 } finally {
-                  iB.delete(BH), mH.abort()
+                  sO.delete(OB), dB.abort()
                 }
               }
             },
-            qH = setTimeout(eH, YH);
-          mH.signal.addEventListener("abort", (() => clearTimeout(qH)), {
+            gB = setTimeout(LB, lB);
+          dB.signal.addEventListener("abort", (() => clearTimeout(gB)), {
             once: !0
-          }), BH.addEventListener("load", eH, {
-            signal: mH.signal,
+          }), OB.addEventListener("load", LB, {
+            signal: dB.signal,
             once: !0
-          }), iB.set(BH, mH)
-        }(HH, 0, kH), RH
+          }), sO.set(OB, dB)
+        }(BB, 0, kB), wB
       }
 
-      function AL(HH) {
-        return !0 === HH || "all" === HH ? {
+      function YG(BB) {
+        return !0 === BB || "all" === BB ? {
           script: !0,
           comment: !0,
           headFavicon: !0,
@@ -1336,38 +1336,38 @@ export const modules = {
           headMetaRobots: !0,
           headMetaHttpEquiv: !0,
           headMetaVerification: !0,
-          headMetaAuthorship: "all" === HH,
-          headMetaDescKeywords: "all" === HH,
-          headTitleMutations: "all" === HH
-        } : !1 === HH ? {} : HH
+          headMetaAuthorship: "all" === BB,
+          headMetaDescKeywords: "all" === BB,
+          headTitleMutations: "all" === BB
+        } : !1 === BB ? {} : BB
       }
-      var rL = class HH {
+      var DG = class BB {
         constructor() {
-          rB(this, "parentElement", null), rB(this, "parentNode", null), rB(this, "ownerDocument", void 0), rB(this, "firstChild", null), rB(this, "lastChild", null), rB(this, "previousSibling", null), rB(this, "nextSibling", null), rB(this, "ELEMENT_NODE", 1), rB(this, "TEXT_NODE", 3), rB(this, "nodeType", void 0), rB(this, "nodeName", void 0), rB(this, "RRNodeType", void 0)
+          DO(this, "parentElement", null), DO(this, "parentNode", null), DO(this, "ownerDocument", void 0), DO(this, "firstChild", null), DO(this, "lastChild", null), DO(this, "previousSibling", null), DO(this, "nextSibling", null), DO(this, "ELEMENT_NODE", 1), DO(this, "TEXT_NODE", 3), DO(this, "nodeType", void 0), DO(this, "nodeName", void 0), DO(this, "RRNodeType", void 0)
         }
         get childNodes() {
-          const HH = [];
-          let BH = this.firstChild;
-          for (; BH;) HH.push(BH), BH = BH.nextSibling;
-          return HH
+          const BB = [];
+          let OB = this.firstChild;
+          for (; OB;) BB.push(OB), OB = OB.nextSibling;
+          return BB
         }
-        contains(BH) {
-          if (!(BH instanceof HH)) return !1;
-          if (BH.ownerDocument !== this.ownerDocument) return !1;
-          if (BH === this) return !0;
-          for (; BH.parentNode;) {
-            if (BH.parentNode === this) return !0;
-            BH = BH.parentNode
+        contains(OB) {
+          if (!(OB instanceof BB)) return !1;
+          if (OB.ownerDocument !== this.ownerDocument) return !1;
+          if (OB === this) return !0;
+          for (; OB.parentNode;) {
+            if (OB.parentNode === this) return !0;
+            OB = OB.parentNode
           }
           return !1
         }
-        appendChild(HH) {
+        appendChild(BB) {
           throw new Error("RRDomException: Failed to execute 'appendChild' on 'RRNode': This RRNode type does not support this method.")
         }
-        insertBefore(HH, BH) {
+        insertBefore(BB, OB) {
           throw new Error("RRDomException: Failed to execute 'insertBefore' on 'RRNode': This RRNode type does not support this method.")
         }
-        removeChild(HH) {
+        removeChild(BB) {
           throw new Error("RRDomException: Failed to execute 'removeChild' on 'RRNode': This RRNode type does not support this method.")
         }
         toString() {
@@ -1375,194 +1375,194 @@ export const modules = {
         }
       };
 
-      function SL(HH, BH) {
-        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
-        const AH = {
+      function QG(BB, OB) {
+        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
+        const YB = {
           capture: !0,
           passive: !0
         };
-        return LH.addEventListener(HH, BH, AH), () => hL(LH, HH, BH, AH)
+        return GB.addEventListener(BB, OB, YB), () => oG(GB, BB, OB, YB)
       }
 
-      function hL(HH, BH, LH, AH) {
-        tL((() => {
-          const rH = HH.removeEventListener;
-          "function" == typeof rH && (void 0 !== AH ? rH.call(HH, BH, LH, AH) : rH.call(HH, BH, LH))
+      function oG(BB, OB, GB, YB) {
+        jG((() => {
+          const DB = BB.removeEventListener;
+          "function" == typeof DB && (void 0 !== YB ? DB.call(BB, OB, GB, YB) : DB.call(BB, OB, GB))
         }))
       }
 
-      function tL(HH) {
+      function jG(BB) {
         try {
-          HH()
-        } catch (HH) {
-          if (!(HH instanceof DOMException && "SecurityError" === HH.name)) throw HH
+          BB()
+        } catch (BB) {
+          if (!(BB instanceof DOMException && "SecurityError" === BB.name)) throw BB
         }
       }
 
-      function zL(HH) {
-        HH.forEach((HH => {
-          if ("function" == typeof HH) try {
-            HH()
-          } catch (HH) {}
+      function yG(BB) {
+        BB.forEach((BB => {
+          if ("function" == typeof BB) try {
+            BB()
+          } catch (BB) {}
         }))
       }
-      var CL = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
-        EL = {
+      var JG = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
+        MG = {
           map: {},
-          getId: () => (console.warn(CL), -1),
-          yAH: () => (console.warn(CL), null),
+          getId: () => (console.warn(JG), -1),
+          yDB: () => (console.warn(JG), null),
           removeNodeFromMap() {
-            console.warn(CL)
+            console.warn(JG)
           },
-          has: () => (console.warn(CL), !1),
+          has: () => (console.warn(JG), !1),
           reset() {
-            console.warn(CL)
+            console.warn(JG)
           }
         };
 
-      function XL(HH, BH) {
-        let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-          AH = null,
-          rH = 0;
+      function PG(BB, OB) {
+        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+          YB = null,
+          DB = 0;
         return function() {
-          for (var SH = arguments.length, hH = new Array(SH), tH = 0; tH < SH; tH++) hH[tH] = arguments[tH];
-          const zH = Date.now();
-          rH || !1 !== LH.leading || (rH = zH);
-          const CH = BH - (zH - rH),
-            EH = this;
-          0 >= CH || CH > BH ? (AH && (clearTimeout(AH), AH = null), rH = zH, HH.apply(EH, hH)) : AH || !1 === LH.trailing || (AH = setTimeout((() => {
-            rH = !1 === LH.leading ? 0 : Date.now(), AH = null, HH.apply(EH, hH)
-          }), CH))
+          for (var QB = arguments.length, oB = new Array(QB), jB = 0; jB < QB; jB++) oB[jB] = arguments[jB];
+          const yB = Date.now();
+          DB || !1 !== GB.leading || (DB = yB);
+          const JB = OB - (yB - DB),
+            MB = this;
+          0 >= JB || JB > OB ? (YB && (clearTimeout(YB), YB = null), DB = yB, BB.apply(MB, oB)) : YB || !1 === GB.trailing || (YB = setTimeout((() => {
+            DB = !1 === GB.leading ? 0 : Date.now(), YB = null, BB.apply(MB, oB)
+          }), JB))
         }
       }
 
-      function GL(HH, BH, LH, AH) {
-        let rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
-        const SH = rH.Object.getOwnPropertyDescriptor(HH, BH),
-          hH = () => GL(HH, BH, SH || {}, !0);
-        if (AH) return rH.Object.defineProperty(HH, BH, LH), hH;
-        const tH = function(HH) {
-          let BH = "function" == typeof HH.setTimeout ? HH.setTimeout : void 0;
+      function zG(BB, OB, GB, YB) {
+        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
+        const QB = DB.Object.getOwnPropertyDescriptor(BB, OB),
+          oB = () => zG(BB, OB, QB || {}, !0);
+        if (YB) return DB.Object.defineProperty(BB, OB, GB), oB;
+        const jB = function(BB) {
+          let OB = "function" == typeof BB.setTimeout ? BB.setTimeout : void 0;
           try {
-            var LH, AH;
-            const rH = null === (LH = HH.Zone) || void 0 === LH || null === (AH = LH.__symbol__) || void 0 === AH ? void 0 : AH.call(LH, "setTimeout"),
-              SH = rH ? HH[rH] : void 0;
-            "function" == typeof SH && (BH = SH)
-          } catch (HH) {}
-          if (!BH) return () => {};
-          const rH = BH;
-          return BH => {
+            var GB, YB;
+            const DB = null === (GB = BB.Zone) || void 0 === GB || null === (YB = GB.__symbol__) || void 0 === YB ? void 0 : YB.call(GB, "setTimeout"),
+              QB = DB ? BB[DB] : void 0;
+            "function" == typeof QB && (OB = QB)
+          } catch (BB) {}
+          if (!OB) return () => {};
+          const DB = OB;
+          return OB => {
             try {
-              rH.call(HH, BH, 0)
-            } catch (HH) {}
+              DB.call(BB, OB, 0)
+            } catch (BB) {}
           }
-        }(rH);
-        return rH.Object.defineProperty(HH, BH, {
-          set(HH) {
-            if (tH((() => {
+        }(DB);
+        return DB.Object.defineProperty(BB, OB, {
+          set(BB) {
+            if (jB((() => {
                 try {
-                  LH.set.call(this, HH)
-                } catch (HH) {}
-              })), SH && SH.set) {
-              if (SH.get) try {
-                SH.get.call(this)
-              } catch (HH) {
+                  GB.set.call(this, BB)
+                } catch (BB) {}
+              })), QB && QB.set) {
+              if (QB.get) try {
+                QB.get.call(this)
+              } catch (BB) {
                 return
               }
-              SH.set.call(this, HH)
+              QB.set.call(this, BB)
             }
           }
-        }), hH
+        }), oB
       }
-      "undefined" != typeof window && window.Proxy && window.Reflect && (EL = new Proxy(EL, {
-        get: (HH, BH, LH) => ("map" === BH && console.warn(CL), Reflect.get(HH, BH, LH))
+      "undefined" != typeof window && window.Proxy && window.Reflect && (MG = new Proxy(MG, {
+        get: (BB, OB, GB) => ("map" === OB && console.warn(JG), Reflect.get(BB, OB, GB))
       }));
-      var YL = Date.now;
+      var lG = Date.now;
 
-      function uL(HH) {
-        var BH, LH, AH, rH;
-        const SH = HH.document;
+      function pG(BB) {
+        var OB, GB, YB, DB;
+        const QB = BB.document;
         return {
-          left: SH.scrollingElement ? SH.scrollingElement.scrollLeft : void 0 !== HH.pageXOffset ? HH.pageXOffset : SH.documentElement.scrollLeft || (null == SH ? void 0 : SH.body) && (null === (BH = mH.parentElement(SH.body)) || void 0 === BH ? void 0 : BH.scrollLeft) || (null == SH || null === (LH = SH.body) || void 0 === LH ? void 0 : LH.scrollLeft) || 0,
-          top: SH.scrollingElement ? SH.scrollingElement.scrollTop : void 0 !== HH.pageYOffset ? HH.pageYOffset : (null == SH ? void 0 : SH.documentElement.scrollTop) || (null == SH ? void 0 : SH.body) && (null === (AH = mH.parentElement(SH.body)) || void 0 === AH ? void 0 : AH.scrollTop) || (null == SH || null === (rH = SH.body) || void 0 === rH ? void 0 : rH.scrollTop) || 0
+          left: QB.scrollingElement ? QB.scrollingElement.scrollLeft : void 0 !== BB.pageXOffset ? BB.pageXOffset : QB.documentElement.scrollLeft || (null == QB ? void 0 : QB.body) && (null === (OB = dB.parentElement(QB.body)) || void 0 === OB ? void 0 : OB.scrollLeft) || (null == QB || null === (GB = QB.body) || void 0 === GB ? void 0 : GB.scrollLeft) || 0,
+          top: QB.scrollingElement ? QB.scrollingElement.scrollTop : void 0 !== BB.pageYOffset ? BB.pageYOffset : (null == QB ? void 0 : QB.documentElement.scrollTop) || (null == QB ? void 0 : QB.body) && (null === (YB = dB.parentElement(QB.body)) || void 0 === YB ? void 0 : YB.scrollTop) || (null == QB || null === (DB = QB.body) || void 0 === DB ? void 0 : DB.scrollTop) || 0
         }
       }
 
-      function QL() {
+      function qG() {
         return window.innerHeight || document.documentElement && document.documentElement.clientHeight || document.body && document.body.clientHeight
       }
 
-      function WL() {
+      function ZG() {
         return window.innerWidth || document.documentElement && document.documentElement.clientWidth || document.body && document.body.clientWidth
       }
 
-      function ML(HH) {
-        return HH ? HH.nodeType === HH.ELEMENT_NODE ? HH : mH.parentElement(HH) : null
+      function NG(BB) {
+        return BB ? BB.nodeType === BB.ELEMENT_NODE ? BB : dB.parentElement(BB) : null
       }
 
-      function xL(HH, BH, LH, AH) {
-        if (!HH) return !1;
-        const rH = ML(HH);
-        if (!rH) return !1;
+      function RG(BB, OB, GB, YB) {
+        if (!BB) return !1;
+        const DB = NG(BB);
+        if (!DB) return !1;
         try {
-          if ("string" == typeof BH) {
-            if (rH.classList.contains(BH)) return !0;
-            if (AH && null !== rH.closest("." + BH)) return !0
-          } else if (aB(rH, BH, AH)) return !0
-        } catch (HH) {}
-        if (LH) {
-          if (rH.matches(LH)) return !0;
-          if (AH && null !== rH.closest(LH)) return !0
+          if ("string" == typeof OB) {
+            if (DB.classList.contains(OB)) return !0;
+            if (YB && null !== DB.closest("." + OB)) return !0
+          } else if (CO(DB, OB, YB)) return !0
+        } catch (BB) {}
+        if (GB) {
+          if (DB.matches(GB)) return !0;
+          if (YB && null !== DB.closest(GB)) return !0
         }
         return !1
       }
 
-      function vL(HH, BH, LH) {
-        return !("TITLE" !== HH.tagName || !LH.headTitleMutations) || -2 === BH.getId(HH)
+      function WG(BB, OB, GB) {
+        return !("TITLE" !== BB.tagName || !GB.headTitleMutations) || -2 === OB.getId(BB)
       }
 
-      function PL(HH, BH) {
-        if (hB(HH)) return !1;
-        const LH = BH.getId(HH);
-        if (!BH.has(LH)) return !0;
-        const AH = mH.parentNode(HH);
-        return (!AH || AH.nodeType !== HH.DOCUMENT_NODE) && (!AH || PL(AH, BH))
+      function AG(BB, OB) {
+        if (oO(BB)) return !1;
+        const GB = OB.getId(BB);
+        if (!OB.has(GB)) return !0;
+        const YB = dB.parentNode(BB);
+        return (!YB || YB.nodeType !== BB.DOCUMENT_NODE) && (!YB || AG(YB, OB))
       }
 
-      function TL(HH) {
-        return Boolean(HH.changedTouches)
+      function VG(BB) {
+        return Boolean(BB.changedTouches)
       }
 
-      function UL(HH, BH) {
-        return Boolean("IFRAME" === HH.nodeName && BH.getMeta(HH))
+      function SG(BB, OB) {
+        return Boolean("IFRAME" === BB.nodeName && OB.getMeta(BB))
       }
 
-      function VL(HH, BH) {
-        return Boolean("LINK" === HH.nodeName && HH.nodeType === HH.ELEMENT_NODE && HH.getAttribute && "stylesheet" === HH.getAttribute("rel") && BH.getMeta(HH))
+      function nG(BB, OB) {
+        return Boolean("LINK" === BB.nodeName && BB.nodeType === BB.ELEMENT_NODE && BB.getAttribute && "stylesheet" === BB.getAttribute("rel") && OB.getMeta(BB))
       }
 
-      function OL(HH) {
-        return !!HH && (HH instanceof rL && "shadowRoot" in HH ? Boolean(HH.shadowRoot) : Boolean(mH.shadowRoot(HH)))
+      function UG(BB) {
+        return !!BB && (BB instanceof DG && "shadowRoot" in BB ? Boolean(BB.shadowRoot) : Boolean(dB.shadowRoot(BB)))
       }
-      /[1-9][0-9]{12}/.test(Date.now().toString()) || (YL = () => (new Date).getTime());
-      var bL = class {
+      /[1-9][0-9]{12}/.test(Date.now().toString()) || (lG = () => (new Date).getTime());
+      var fG = class {
         constructor() {
-          rB(this, "id", 1), rB(this, "styleIDMap", new WeakMap), rB(this, "idStyleMap", new Map)
+          DO(this, "id", 1), DO(this, "styleIDMap", new WeakMap), DO(this, "idStyleMap", new Map)
         }
-        getId(HH) {
-          var BH;
-          return null !== (BH = this.styleIDMap.get(HH)) && void 0 !== BH ? BH : -1
+        getId(BB) {
+          var OB;
+          return null !== (OB = this.styleIDMap.get(BB)) && void 0 !== OB ? OB : -1
         }
-        has(HH) {
-          return this.styleIDMap.has(HH)
+        has(BB) {
+          return this.styleIDMap.has(BB)
         }
-        add(HH, BH) {
-          if (this.has(HH)) return this.getId(HH);
-          let LH;
-          return LH = void 0 === BH ? this.id++ : BH, this.styleIDMap.set(HH, LH), this.idStyleMap.set(LH, HH), LH
+        add(BB, OB) {
+          if (this.has(BB)) return this.getId(BB);
+          let GB;
+          return GB = void 0 === OB ? this.id++ : OB, this.styleIDMap.set(BB, GB), this.idStyleMap.set(GB, BB), GB
         }
-        getStyle(HH) {
-          return this.idStyleMap.get(HH) || null
+        getStyle(BB) {
+          return this.idStyleMap.get(BB) || null
         }
         reset() {
           this.styleIDMap = new WeakMap, this.idStyleMap = new Map, this.id = 1
@@ -1572,97 +1572,97 @@ export const modules = {
         }
       };
 
-      function kL(HH) {
-        var BH;
-        let LH = null;
-        return "getRootNode" in HH && (null === (BH = mH.getRootNode(HH)) || void 0 === BH ? void 0 : BH.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && mH.host(mH.getRootNode(HH)) && (LH = mH.host(mH.getRootNode(HH))), LH
+      function kG(BB) {
+        var OB;
+        let GB = null;
+        return "getRootNode" in BB && (null === (OB = dB.getRootNode(BB)) || void 0 === OB ? void 0 : OB.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && dB.host(dB.getRootNode(BB)) && (GB = dB.host(dB.getRootNode(BB))), GB
       }
 
-      function mL(HH) {
-        const BH = HH.ownerDocument;
-        if (!BH) return !1;
-        if (mH.contains(BH, HH)) return !0;
-        const LH = mH.isConnected(HH);
-        return "boolean" == typeof LH ? LH : function(HH) {
-          const BH = HH.ownerDocument;
-          if (!BH) return !1;
-          const LH = function(HH) {
-            let BH, LH = HH;
-            for (; BH = kL(LH);) LH = BH;
-            return LH
-          }(HH);
-          return mH.contains(BH, LH)
-        }(HH)
+      function dG(BB) {
+        const OB = BB.ownerDocument;
+        if (!OB) return !1;
+        if (dB.contains(OB, BB)) return !0;
+        const GB = dB.isConnected(BB);
+        return "boolean" == typeof GB ? GB : function(BB) {
+          const OB = BB.ownerDocument;
+          if (!OB) return !1;
+          const GB = function(BB) {
+            let OB, GB = BB;
+            for (; OB = kG(GB);) GB = OB;
+            return GB
+          }(BB);
+          return dB.contains(OB, GB)
+        }(BB)
       }
 
-      function oL(HH) {
-        return "__ln" in HH
+      function KG(BB) {
+        return "__ln" in BB
       }
-      var IL, fL = class {
+      var uG, mG = class {
           constructor() {
-            rB(this, "length", 0), rB(this, "head", null), rB(this, "tail", null)
+            DO(this, "length", 0), DO(this, "head", null), DO(this, "tail", null)
           }
-          get(HH) {
-            if (HH >= this.length) throw new Error("Position outside of list range");
-            let BH = this.head;
-            for (let LH = 0; HH > LH; LH++) BH = (null == BH ? void 0 : BH.next) || null;
-            return BH
+          get(BB) {
+            if (BB >= this.length) throw new Error("Position outside of list range");
+            let OB = this.head;
+            for (let GB = 0; BB > GB; GB++) OB = (null == OB ? void 0 : OB.next) || null;
+            return OB
           }
-          addNode(HH) {
-            const BH = {
-              value: HH,
+          addNode(BB) {
+            const OB = {
+              value: BB,
               previous: null,
               next: null
             };
-            if (HH.__ln = BH, HH.previousSibling && oL(HH.previousSibling)) {
-              const LH = HH.previousSibling.__ln.next;
-              BH.next = LH, BH.previous = HH.previousSibling.__ln, HH.previousSibling.__ln.next = BH, LH && (LH.previous = BH)
-            } else if (HH.nextSibling && oL(HH.nextSibling) && HH.nextSibling.__ln.previous) {
-              const LH = HH.nextSibling.__ln.previous;
-              BH.previous = LH, BH.next = HH.nextSibling.__ln, HH.nextSibling.__ln.previous = BH, LH && (LH.next = BH)
-            } else this.head && (this.head.previous = BH), BH.next = this.head, this.head = BH;
-            null === BH.next && (this.tail = BH), this.length++
+            if (BB.__ln = OB, BB.previousSibling && KG(BB.previousSibling)) {
+              const GB = BB.previousSibling.__ln.next;
+              OB.next = GB, OB.previous = BB.previousSibling.__ln, BB.previousSibling.__ln.next = OB, GB && (GB.previous = OB)
+            } else if (BB.nextSibling && KG(BB.nextSibling) && BB.nextSibling.__ln.previous) {
+              const GB = BB.nextSibling.__ln.previous;
+              OB.previous = GB, OB.next = BB.nextSibling.__ln, BB.nextSibling.__ln.previous = OB, GB && (GB.next = OB)
+            } else this.head && (this.head.previous = OB), OB.next = this.head, this.head = OB;
+            null === OB.next && (this.tail = OB), this.length++
           }
-          removeNode(HH) {
-            const BH = HH.__ln;
-            this.head && (BH.previous ? (BH.previous.next = BH.next, BH.next ? BH.next.previous = BH.previous : this.tail = BH.previous) : (this.head = BH.next, this.head ? this.head.previous = null : this.tail = null), HH.__ln && delete HH.__ln, this.length--)
+          removeNode(BB) {
+            const OB = BB.__ln;
+            this.head && (OB.previous ? (OB.previous.next = OB.next, OB.next ? OB.next.previous = OB.previous : this.tail = OB.previous) : (this.head = OB.next, this.head ? this.head.previous = null : this.tail = null), BB.__ln && delete BB.__ln, this.length--)
           }
         },
-        lL = (HH, BH) => `${HH}@${BH}`,
-        KL = class {
+        IG = (BB, OB) => `${BB}@${OB}`,
+        FG = class {
           constructor() {
-            rB(this, "frozen", !1), rB(this, "locked", !1), rB(this, "texts", []), rB(this, "attributes", []), rB(this, "attributeMap", new WeakMap), rB(this, "generatedAttributes", new WeakMap), rB(this, "removes", []), rB(this, "mapRemoves", new Set), rB(this, "movedMap", {}), rB(this, "addedSet", new Set), rB(this, "movedSet", new Set), rB(this, "droppedSet", new Set), rB(this, "removesSubTreeCache", new Set), rB(this, "mutationCb", void 0), rB(this, "blockClass", void 0), rB(this, "blockSelector", void 0), rB(this, "maskTextClass", void 0), rB(this, "maskTextSelector", void 0), rB(this, "inlineStylesheet", void 0), rB(this, "maskInputOptions", void 0), rB(this, "maskTextFn", void 0), rB(this, "maskInputFn", void 0), rB(this, "maskAllElementAttributes", void 0), rB(this, "maskAttributeFn", void 0), rB(this, "keepIframeSrcFn", void 0), rB(this, "recordCanvas", void 0), rB(this, "canvasMaskingConfigured", void 0), rB(this, "inlineImages", void 0), rB(this, "slimDOMOptions", void 0), rB(this, "dataURLOptions", void 0), rB(this, "doc", void 0), rB(this, "mirror", void 0), rB(this, "iframeManager", void 0), rB(this, "stylesheetManager", void 0), rB(this, "shadowDomManager", void 0), rB(this, "canvasManager", void 0), rB(this, "processedNodeManager", void 0), rB(this, "unattachedDoc", void 0), rB(this, "canvasManagerReleased", !1), rB(this, "processMutations", (HH => {
-              HH.forEach(this.processMutation), this.emit()
-            })), rB(this, "emit", (() => {
+            DO(this, "frozen", !1), DO(this, "locked", !1), DO(this, "texts", []), DO(this, "attributes", []), DO(this, "attributeMap", new WeakMap), DO(this, "generatedAttributes", new WeakMap), DO(this, "removes", []), DO(this, "mapRemoves", new Set), DO(this, "movedMap", {}), DO(this, "addedSet", new Set), DO(this, "movedSet", new Set), DO(this, "droppedSet", new Set), DO(this, "removesSubTreeCache", new Set), DO(this, "mutationCb", void 0), DO(this, "blockClass", void 0), DO(this, "blockSelector", void 0), DO(this, "maskTextClass", void 0), DO(this, "maskTextSelector", void 0), DO(this, "inlineStylesheet", void 0), DO(this, "maskInputOptions", void 0), DO(this, "maskTextFn", void 0), DO(this, "maskInputFn", void 0), DO(this, "maskAllElementAttributes", void 0), DO(this, "maskAttributeFn", void 0), DO(this, "keepIframeSrcFn", void 0), DO(this, "recordCanvas", void 0), DO(this, "canvasMaskingConfigured", void 0), DO(this, "inlineImages", void 0), DO(this, "slimDOMOptions", void 0), DO(this, "dataURLOptions", void 0), DO(this, "doc", void 0), DO(this, "mirror", void 0), DO(this, "iframeManager", void 0), DO(this, "stylesheetManager", void 0), DO(this, "shadowDomManager", void 0), DO(this, "canvasManager", void 0), DO(this, "processedNodeManager", void 0), DO(this, "unattachedDoc", void 0), DO(this, "canvasManagerReleased", !1), DO(this, "processMutations", (BB => {
+              BB.forEach(this.processMutation), this.emit()
+            })), DO(this, "emit", (() => {
               if (this.frozen || this.locked) return;
-              const HH = oH(),
-                BH = KH();
+              const BB = KB(),
+                OB = FB();
               try {
                 this.processBufferedMutations()
               } finally {
-                LH = oH() - HH, AH = BH, eH > 0 || cH(LH, null != AH ? AH : IH) || LH > wH.slowestBatchMs && (wH.slowestBatchMs = LH)
+                GB = KB() - BB, YB = OB, LB > 0 || iB(GB, null != YB ? YB : uB) || GB > eB.slowestBatchMs && (eB.slowestBatchMs = GB)
               }
-              var LH, AH
-            })), rB(this, "processBufferedMutations", (() => {
-              const HH = [],
-                BH = new Set,
-                LH = new fL,
-                AH = HH => {
-                  let BH = HH,
-                    LH = -2;
-                  for (; - 2 === LH;) BH = BH && BH.nextSibling, LH = BH && this.mirror.getId(BH);
-                  return LH
+              var GB, YB
+            })), DO(this, "processBufferedMutations", (() => {
+              const BB = [],
+                OB = new Set,
+                GB = new mG,
+                YB = BB => {
+                  let OB = BB,
+                    GB = -2;
+                  for (; - 2 === GB;) OB = OB && OB.nextSibling, GB = OB && this.mirror.getId(OB);
+                  return GB
                 };
-              let rH;
-              const SH = SH => {
-                var hH;
-                const tH = mH.parentNode(SH);
-                if (!tH || !mL(SH) || "TEXTAREA" === tH.tagName) return;
-                if (this.isBlockedAtEmission(tH)) return;
-                const zH = hB(tH) ? this.mirror.getId(kL(SH)) : this.mirror.getId(tH),
-                  CH = AH(SH);
-                if (-1 === zH || -1 === CH) return LH.addNode(SH);
-                null !== (hH = rH) && void 0 !== hH || (rH = {
+              let DB;
+              const QB = QB => {
+                var oB;
+                const jB = dB.parentNode(QB);
+                if (!jB || !dG(QB) || "TEXTAREA" === jB.tagName) return;
+                if (this.isBlockedAtEmission(jB)) return;
+                const yB = oO(jB) ? this.mirror.getId(kG(QB)) : this.mirror.getId(jB),
+                  JB = YB(QB);
+                if (-1 === yB || -1 === JB) return GB.addNode(QB);
+                null !== (oB = DB) && void 0 !== oB || (DB = {
                   doc: this.doc,
                   mirror: this.mirror,
                   blockClass: this.blockClass,
@@ -1682,52 +1682,52 @@ export const modules = {
                   recordCanvas: this.recordCanvas,
                   canvasMaskingConfigured: this.canvasMaskingConfigured,
                   inlineImages: this.inlineImages,
-                  onSerialize: HH => {
-                    UL(HH, this.mirror) && this.iframeManager.addIframe(HH), VL(HH, this.mirror) && this.stylesheetManager.trackLinkElement(HH), OL(HH) && !xL(HH, this.blockClass, this.blockSelector, !0) && this.shadowDomManager.addShadowRoot(mH.shadowRoot(HH), this.doc)
+                  onSerialize: BB => {
+                    SG(BB, this.mirror) && this.iframeManager.addIframe(BB), nG(BB, this.mirror) && this.stylesheetManager.trackLinkElement(BB), UG(BB) && !RG(BB, this.blockClass, this.blockSelector, !0) && this.shadowDomManager.addShadowRoot(dB.shadowRoot(BB), this.doc)
                   },
-                  onIframeLoad: (HH, BH) => {
-                    this.iframeManager.attachIframe(HH, BH), this.shadowDomManager.observeAttachShadow(HH)
+                  onIframeLoad: (BB, OB) => {
+                    this.iframeManager.attachIframe(BB, OB), this.shadowDomManager.observeAttachShadow(BB)
                   },
-                  onIframeListenerRegistered: (HH, BH) => {
-                    this.iframeManager.registerLoadListenerDisposer(HH, BH)
+                  onIframeListenerRegistered: (BB, OB) => {
+                    this.iframeManager.registerLoadListenerDisposer(BB, OB)
                   },
-                  onStylesheetLoad: (HH, BH) => {
-                    this.stylesheetManager.attachLinkElement(HH, BH)
+                  onStylesheetLoad: (BB, OB) => {
+                    this.stylesheetManager.attachLinkElement(BB, OB)
                   }
                 });
-                const EH = LL(SH, rH);
-                EH && (HH.push({
-                  parentId: zH,
-                  nextId: CH,
-                  node: EH
-                }), BH.add(EH.id))
+                const MB = GG(QB, DB);
+                MB && (BB.push({
+                  parentId: yB,
+                  nextId: JB,
+                  node: MB
+                }), OB.add(MB.id))
               };
-              for (const zH of this.mapRemoves) this.mapRemoves.delete(zH), this.mirror.removeNodeFromMap(zH);
-              for (const zH of this.movedSet) eL(this.removesSubTreeCache, zH) && !this.movedSet.has(mH.parentNode(zH)) || SH(zH);
-              for (const zH of this.addedSet) qL(this.droppedSet, zH) || eL(this.removesSubTreeCache, zH) ? qL(this.movedSet, zH) ? SH(zH) : this.droppedSet.add(zH) : SH(zH);
-              let hH = null;
-              for (; LH.length;) {
-                let HH = null;
-                if (hH) {
-                  const BH = this.mirror.getId(mH.parentNode(hH.value)),
-                    LH = AH(hH.value); - 1 !== BH && -1 !== LH && (HH = hH)
+              for (const yB of this.mapRemoves) this.mapRemoves.delete(yB), this.mirror.removeNodeFromMap(yB);
+              for (const yB of this.movedSet) LG(this.removesSubTreeCache, yB) && !this.movedSet.has(dB.parentNode(yB)) || QB(yB);
+              for (const yB of this.addedSet) gG(this.droppedSet, yB) || LG(this.removesSubTreeCache, yB) ? gG(this.movedSet, yB) ? QB(yB) : this.droppedSet.add(yB) : QB(yB);
+              let oB = null;
+              for (; GB.length;) {
+                let BB = null;
+                if (oB) {
+                  const OB = this.mirror.getId(dB.parentNode(oB.value)),
+                    GB = YB(oB.value); - 1 !== OB && -1 !== GB && (BB = oB)
                 }
-                if (!HH) {
-                  let BH = LH.tail;
-                  for (; BH;) {
-                    const LH = BH;
-                    if (BH = BH.previous, LH) {
-                      const BH = this.mirror.getId(mH.parentNode(LH.value));
-                      if (-1 === AH(LH.value)) continue;
-                      if (-1 !== BH) {
-                        HH = LH;
+                if (!BB) {
+                  let OB = GB.tail;
+                  for (; OB;) {
+                    const GB = OB;
+                    if (OB = OB.previous, GB) {
+                      const OB = this.mirror.getId(dB.parentNode(GB.value));
+                      if (-1 === YB(GB.value)) continue;
+                      if (-1 !== OB) {
+                        BB = GB;
                         break
                       } {
-                        const BH = mH.parentNode(LH.value);
-                        if (BH && BH.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-                          const AH = mH.host(BH);
-                          if (-1 !== this.mirror.getId(AH)) {
-                            HH = LH;
+                        const OB = dB.parentNode(GB.value);
+                        if (OB && OB.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+                          const YB = dB.host(OB);
+                          if (-1 !== this.mirror.getId(YB)) {
+                            BB = GB;
                             break
                           }
                         }
@@ -1735,186 +1735,186 @@ export const modules = {
                     }
                   }
                 }
-                if (!HH) {
-                  for (; LH.head;) LH.removeNode(LH.head.value);
+                if (!BB) {
+                  for (; GB.head;) GB.removeNode(GB.head.value);
                   break
                 }
-                hH = HH.previous, LH.removeNode(HH.value), SH(HH.value)
+                oB = BB.previous, GB.removeNode(BB.value), QB(BB.value)
               }
-              const tH = {
-                texts: this.texts.filter((HH => !this.isBlockedAtEmission(HH.node))).map((HH => {
-                  const BH = HH.node,
-                    LH = mH.parentNode(BH);
-                  return LH && "TEXTAREA" === LH.tagName && this.genTextAreaValueMutation(LH), {
-                    id: this.mirror.getId(BH),
-                    value: HH.value
+              const jB = {
+                texts: this.texts.filter((BB => !this.isBlockedAtEmission(BB.node))).map((BB => {
+                  const OB = BB.node,
+                    GB = dB.parentNode(OB);
+                  return GB && "TEXTAREA" === GB.tagName && this.genTextAreaValueMutation(GB), {
+                    id: this.mirror.getId(OB),
+                    value: BB.value
                   }
-                })).filter((HH => !BH.has(HH.id))).filter((HH => this.mirror.has(HH.id))),
-                attributes: this.attributes.filter((HH => !this.isBlockedAtEmission(HH.node))).map((HH => {
+                })).filter((BB => !OB.has(BB.id))).filter((BB => this.mirror.has(BB.id))),
+                attributes: this.attributes.filter((BB => !this.isBlockedAtEmission(BB.node))).map((BB => {
                   const {
-                    attributes: BH
-                  } = HH;
-                  if (!this.maskAllElementAttributes && !this.maskAttributeFn && "string" == typeof BH.style) {
-                    const LH = JSON.stringify(HH.styleDiff),
-                      AH = JSON.stringify(HH._unchangedStyles);
-                    BH.style.length > LH.length && (LH + AH).split("var(").length === BH.style.split("var(").length && (BH.style = HH.styleDiff)
+                    attributes: OB
+                  } = BB;
+                  if (!this.maskAllElementAttributes && !this.maskAttributeFn && "string" == typeof OB.style) {
+                    const GB = JSON.stringify(BB.styleDiff),
+                      YB = JSON.stringify(BB._unchangedStyles);
+                    OB.style.length > GB.length && (GB + YB).split("var(").length === OB.style.split("var(").length && (OB.style = BB.styleDiff)
                   }
                   if (this.maskAllElementAttributes || this.maskAttributeFn)
-                    for (const [AH, rH] of Object.entries(BH))
-                      if ("string" == typeof rH || null === rH) {
-                        var LH;
-                        BH[AH] = UB({
-                          element: HH.node,
-                          name: AH,
-                          value: rH,
+                    for (const [YB, DB] of Object.entries(OB))
+                      if ("string" == typeof DB || null === DB) {
+                        var GB;
+                        OB[YB] = SO({
+                          element: BB.node,
+                          name: YB,
+                          value: DB,
                           maskAllElementAttributes: this.maskAllElementAttributes,
                           maskAttributeFn: this.maskAttributeFn,
-                          isGenerated: null === (LH = this.generatedAttributes.get(HH.node)) || void 0 === LH ? void 0 : LH.has(AH)
+                          isGenerated: null === (GB = this.generatedAttributes.get(BB.node)) || void 0 === GB ? void 0 : GB.has(YB)
                         })
                       } return {
-                    id: this.mirror.getId(HH.node),
-                    attributes: BH
+                    id: this.mirror.getId(BB.node),
+                    attributes: OB
                   }
-                })).filter((HH => !BH.has(HH.id))).filter((HH => this.mirror.has(HH.id))),
+                })).filter((BB => !OB.has(BB.id))).filter((BB => this.mirror.has(BB.id))),
                 removes: this.removes,
-                adds: HH
+                adds: BB
               };
-              this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.generatedAttributes = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, (tH.texts.length || tH.attributes.length || tH.removes.length || tH.adds.length) && this.mutationCb(tH)
-            })), rB(this, "bufferBelongsToIframe", (HH => this.doc === HH.contentDocument)), rB(this, "genTextAreaValueMutation", (HH => {
-              let BH = this.attributeMap.get(HH);
-              BH || (BH = {
-                node: HH,
+              this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.generatedAttributes = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, (jB.texts.length || jB.attributes.length || jB.removes.length || jB.adds.length) && this.mutationCb(jB)
+            })), DO(this, "bufferBelongsToIframe", (BB => this.doc === BB.contentDocument)), DO(this, "genTextAreaValueMutation", (BB => {
+              let OB = this.attributeMap.get(BB);
+              OB || (OB = {
+                node: BB,
                 attributes: {},
                 styleDiff: {},
                 _unchangedStyles: {}
-              }, this.attributes.push(BH), this.attributeMap.set(HH, BH));
-              const LH = Array.from(mH.childNodes(HH), (HH => mH.textContent(HH) || "")).join("");
-              BH.attributes.value = vB({
-                element: HH,
+              }, this.attributes.push(OB), this.attributeMap.set(BB, OB));
+              const GB = Array.from(dB.childNodes(BB), (BB => dB.textContent(BB) || "")).join("");
+              OB.attributes.value = WO({
+                element: BB,
                 maskInputOptions: this.maskInputOptions,
-                tagName: HH.tagName,
-                type: OB(HH),
-                value: LH,
+                tagName: BB.tagName,
+                type: UO(BB),
+                value: GB,
                 maskInputFn: this.maskInputFn
               })
-            })), rB(this, "processMutation", (HH => {
-              if (!vL(HH.target, this.mirror, this.slimDOMOptions)) switch (HH.type) {
+            })), DO(this, "processMutation", (BB => {
+              if (!WG(BB.target, this.mirror, this.slimDOMOptions)) switch (BB.type) {
                 case "characterData": {
-                  const BH = mH.textContent(HH.target);
-                  xL(HH.target, this.blockClass, this.blockSelector, !1) || BH === HH.oldValue || this.texts.push({
-                    value: sB(HH.target, this.maskTextClass, this.maskTextSelector, !0) && BH ? this.maskTextFn ? this.maskTextFn(BH, ML(HH.target)) : BH.replace(/[\S]/g, "*") : BH,
-                    node: HH.target
+                  const OB = dB.textContent(BB.target);
+                  RG(BB.target, this.blockClass, this.blockSelector, !1) || OB === BB.oldValue || this.texts.push({
+                    value: HO(BB.target, this.maskTextClass, this.maskTextSelector, !0) && OB ? this.maskTextFn ? this.maskTextFn(OB, NG(BB.target)) : OB.replace(/[\S]/g, "*") : OB,
+                    node: BB.target
                   });
                   break
                 }
                 case "attributes": {
-                  var BH;
-                  const AH = HH.target,
-                    rH = PB(AH.tagName),
-                    SH = HH.attributeName,
-                    hH = null !== (BH = HH.attributeNamespace) && void 0 !== BH ? BH : null;
-                  let tH = function(HH, BH, LH) {
-                      if (!LH) return BH;
-                      const AH = HH.getAttributeNodeNS(LH, BH);
-                      if (AH) return AH.name;
-                      if ("http://www.w3.org/1999/xlink" === LH) return `xlink:${BH}`;
-                      if ("http://www.w3.org/XML/1998/namespace" === LH) return `xml:${BH}`;
-                      if ("http://www.w3.org/2000/xmlns/" === LH) return "xmlns" === BH ? BH : `xmlns:${BH}`;
-                      const rH = HH.lookupPrefix(LH);
-                      return rH ? `${rH}:${BH}` : BH
-                    }(AH, SH, hH),
-                    zH = hH ? AH.getAttributeNS(hH, SH) : HH.target.getAttribute(SH);
-                  if ("value" === tH) {
-                    const HH = AH,
-                      BH = OB(HH);
-                    zH = vB({
-                      element: HH,
+                  var OB;
+                  const YB = BB.target,
+                    DB = AO(YB.tagName),
+                    QB = BB.attributeName,
+                    oB = null !== (OB = BB.attributeNamespace) && void 0 !== OB ? OB : null;
+                  let jB = function(BB, OB, GB) {
+                      if (!GB) return OB;
+                      const YB = BB.getAttributeNodeNS(GB, OB);
+                      if (YB) return YB.name;
+                      if ("http://www.w3.org/1999/xlink" === GB) return `xlink:${OB}`;
+                      if ("http://www.w3.org/XML/1998/namespace" === GB) return `xml:${OB}`;
+                      if ("http://www.w3.org/2000/xmlns/" === GB) return "xmlns" === OB ? OB : `xmlns:${OB}`;
+                      const DB = BB.lookupPrefix(GB);
+                      return DB ? `${DB}:${OB}` : OB
+                    }(YB, QB, oB),
+                    yB = oB ? YB.getAttributeNS(oB, QB) : BB.target.getAttribute(QB);
+                  if ("value" === jB) {
+                    const BB = YB,
+                      OB = UO(BB);
+                    yB = WO({
+                      element: BB,
                       maskInputOptions: this.maskInputOptions,
-                      tagName: AH.tagName,
-                      type: BH,
-                      value: zH,
+                      tagName: YB.tagName,
+                      type: OB,
+                      value: yB,
                       maskInputFn: this.maskInputFn
                     })
                   }
-                  if (xL(HH.target, this.blockClass, this.blockSelector, !1) || zH === HH.oldValue) return;
-                  let CH = this.attributeMap.get(HH.target);
-                  const EH = "iframe" === rH && "src" === tH;
-                  if (EH && !this.keepIframeSrcFn(zH) && AH.contentDocument) return;
-                  if ("type" === tH && "input" === rH && "password" === (HH.oldValue || "").toLowerCase() && AH.setAttribute("data-rr-is-password", "true"), !ZB(rH, tH)) {
-                    var LH;
-                    CH || (CH = {
-                      node: HH.target,
+                  if (RG(BB.target, this.blockClass, this.blockSelector, !1) || yB === BB.oldValue) return;
+                  let JB = this.attributeMap.get(BB.target);
+                  const MB = "iframe" === DB && "src" === jB;
+                  if (MB && !this.keepIframeSrcFn(yB) && YB.contentDocument) return;
+                  if ("type" === jB && "input" === DB && "password" === (BB.oldValue || "").toLowerCase() && YB.setAttribute("data-rr-is-password", "true"), !TO(DB, jB)) {
+                    var GB;
+                    JB || (JB = {
+                      node: BB.target,
                       attributes: {},
                       styleDiff: {},
                       _unchangedStyles: {}
-                    }, this.attributes.push(CH), this.attributeMap.set(HH.target, CH));
-                    const BH = wB(this.doc, rH, PB(tH), zH, AH, this.dataURLOptions);
-                    if (EH && !this.keepIframeSrcFn(zH) && (tH = "rr_src"), CH.attributes[tH] = BH, null === (LH = this.generatedAttributes.get(HH.target)) || void 0 === LH || LH.delete(tH), "style" === tH) {
+                    }, this.attributes.push(JB), this.attributeMap.set(BB.target, JB));
+                    const OB = eO(this.doc, DB, AO(jB), yB, YB, this.dataURLOptions);
+                    if (MB && !this.keepIframeSrcFn(yB) && (jB = "rr_src"), JB.attributes[jB] = OB, null === (GB = this.generatedAttributes.get(BB.target)) || void 0 === GB || GB.delete(jB), "style" === jB) {
                       if (!this.unattachedDoc) try {
                         this.unattachedDoc = document.implementation.createHTMLDocument()
-                      } catch (HH) {
+                      } catch (BB) {
                         this.unattachedDoc = this.doc
                       }
-                      const BH = this.unattachedDoc.createElement("span"),
-                        LH = AH.style;
-                      HH.oldValue && (BH.style.cssText = HH.oldValue);
-                      for (const HH of Array.from(LH)) {
-                        const AH = LH.getPropertyValue(HH),
-                          rH = LH.getPropertyPriority(HH);
-                        AH !== BH.style.getPropertyValue(HH) || rH !== BH.style.getPropertyPriority(HH) ? CH.styleDiff[HH] = "" === rH ? AH : [AH, rH] : CH._unchangedStyles[HH] = [AH, rH]
+                      const OB = this.unattachedDoc.createElement("span"),
+                        GB = YB.style;
+                      BB.oldValue && (OB.style.cssText = BB.oldValue);
+                      for (const BB of Array.from(GB)) {
+                        const YB = GB.getPropertyValue(BB),
+                          DB = GB.getPropertyPriority(BB);
+                        YB !== OB.style.getPropertyValue(BB) || DB !== OB.style.getPropertyPriority(BB) ? JB.styleDiff[BB] = "" === DB ? YB : [YB, DB] : JB._unchangedStyles[BB] = [YB, DB]
                       }
-                      for (const HH of Array.from(BH.style)) "" === LH.getPropertyValue(HH) && (CH.styleDiff[HH] = !1)
-                    } else if ("open" === tH && "dialog" === rH) {
-                      CH.attributes.rr_open_mode = AH.matches("dialog:modal") ? "modal" : "non-modal";
-                      let BH = this.generatedAttributes.get(HH.target);
-                      BH || (BH = new Set, this.generatedAttributes.set(HH.target, BH)), BH.add("rr_open_mode")
+                      for (const BB of Array.from(OB.style)) "" === GB.getPropertyValue(BB) && (JB.styleDiff[BB] = !1)
+                    } else if ("open" === jB && "dialog" === DB) {
+                      JB.attributes.rr_open_mode = YB.matches("dialog:modal") ? "modal" : "non-modal";
+                      let OB = this.generatedAttributes.get(BB.target);
+                      OB || (OB = new Set, this.generatedAttributes.set(BB.target, OB)), OB.add("rr_open_mode")
                     }
                   }
                   break
                 }
                 case "childList":
-                  if (xL(HH.target, this.blockClass, this.blockSelector, !0)) return;
-                  if ("TEXTAREA" === HH.target.tagName) return void this.genTextAreaValueMutation(HH.target);
-                  HH.addedNodes.forEach((BH => this.genAdds(BH, HH.target))), HH.removedNodes.forEach((BH => {
-                    const LH = this.mirror.getId(BH),
-                      AH = hB(HH.target) ? this.mirror.getId(mH.host(HH.target)) : this.mirror.getId(HH.target);
-                    xL(HH.target, this.blockClass, this.blockSelector, !1) || vL(BH, this.mirror, this.slimDOMOptions) || ! function(HH, BH) {
-                      return -1 !== BH.getId(HH)
-                    }(BH, this.mirror) || (this.addedSet.has(BH) ? (cL(this.addedSet, BH), this.droppedSet.add(BH)) : this.addedSet.has(HH.target) && -1 === LH || PL(HH.target, this.mirror) || (this.movedSet.has(BH) && this.movedMap[lL(LH, AH)] ? cL(this.movedSet, BH) : (this.removes.push({
-                      parentId: AH,
-                      id: LH,
-                      isShadow: !(!hB(HH.target) || !tB(HH.target)) || void 0
-                    }), function(HH, BH) {
-                      const LH = [HH];
-                      for (; LH.length;) {
-                        const HH = LH.pop();
-                        BH.has(HH) || (BH.add(HH), mH.childNodes(HH).forEach((HH => LH.push(HH))))
+                  if (RG(BB.target, this.blockClass, this.blockSelector, !0)) return;
+                  if ("TEXTAREA" === BB.target.tagName) return void this.genTextAreaValueMutation(BB.target);
+                  BB.addedNodes.forEach((OB => this.genAdds(OB, BB.target))), BB.removedNodes.forEach((OB => {
+                    const GB = this.mirror.getId(OB),
+                      YB = oO(BB.target) ? this.mirror.getId(dB.host(BB.target)) : this.mirror.getId(BB.target);
+                    RG(BB.target, this.blockClass, this.blockSelector, !1) || WG(OB, this.mirror, this.slimDOMOptions) || ! function(BB, OB) {
+                      return -1 !== OB.getId(BB)
+                    }(OB, this.mirror) || (this.addedSet.has(OB) ? (iG(this.addedSet, OB), this.droppedSet.add(OB)) : this.addedSet.has(BB.target) && -1 === GB || AG(BB.target, this.mirror) || (this.movedSet.has(OB) && this.movedMap[IG(GB, YB)] ? iG(this.movedSet, OB) : (this.removes.push({
+                      parentId: YB,
+                      id: GB,
+                      isShadow: !(!oO(BB.target) || !jO(BB.target)) || void 0
+                    }), function(BB, OB) {
+                      const GB = [BB];
+                      for (; GB.length;) {
+                        const BB = GB.pop();
+                        OB.has(BB) || (OB.add(BB), dB.childNodes(BB).forEach((BB => GB.push(BB))))
                       }
-                    }(BH, this.removesSubTreeCache))), this.mapRemoves.add(BH))
+                    }(OB, this.removesSubTreeCache))), this.mapRemoves.add(OB))
                   }))
               }
-            })), rB(this, "genAdds", ((HH, BH) => {
-              if (!this.processedNodeManager.inOtherBuffer(HH, this)) {
-                if (this.addedSet.has(HH)) return this.addedSet.delete(HH), void this.addedSet.add(HH);
-                if (!this.movedSet.has(HH)) {
-                  if (this.mirror.hasNode(HH)) {
-                    if (vL(HH, this.mirror, this.slimDOMOptions)) return;
-                    this.movedSet.add(HH);
-                    let LH = null;
-                    BH && this.mirror.hasNode(BH) && (LH = this.mirror.getId(BH)), LH && -1 !== LH && (this.movedMap[lL(this.mirror.getId(HH), LH)] = !0)
-                  } else this.addedSet.add(HH), this.droppedSet.delete(HH);
-                  if (!xL(HH, this.blockClass, this.blockSelector, !1)) {
-                    if (HH.nodeType === HH.TEXT_NODE) return;
-                    const BH = mH.childNodes(HH);
-                    for (let HH = 0, LH = BH.length; LH > HH; HH++) {
-                      const LH = BH[HH];
-                      LH && this.genAdds(LH)
+            })), DO(this, "genAdds", ((BB, OB) => {
+              if (!this.processedNodeManager.inOtherBuffer(BB, this)) {
+                if (this.addedSet.has(BB)) return this.addedSet.delete(BB), void this.addedSet.add(BB);
+                if (!this.movedSet.has(BB)) {
+                  if (this.mirror.hasNode(BB)) {
+                    if (WG(BB, this.mirror, this.slimDOMOptions)) return;
+                    this.movedSet.add(BB);
+                    let GB = null;
+                    OB && this.mirror.hasNode(OB) && (GB = this.mirror.getId(OB)), GB && -1 !== GB && (this.movedMap[IG(this.mirror.getId(BB), GB)] = !0)
+                  } else this.addedSet.add(BB), this.droppedSet.delete(BB);
+                  if (!RG(BB, this.blockClass, this.blockSelector, !1)) {
+                    if (BB.nodeType === BB.TEXT_NODE) return;
+                    const OB = dB.childNodes(BB);
+                    for (let BB = 0, GB = OB.length; GB > BB; BB++) {
+                      const GB = OB[BB];
+                      GB && this.genAdds(GB)
                     }
-                    if (OL(HH)) {
-                      const BH = mH.childNodes(mH.shadowRoot(HH));
-                      for (let LH = 0, AH = BH.length; AH > LH; LH++) {
-                        const AH = BH[LH];
-                        AH && (this.processedNodeManager.add(AH, this), this.genAdds(AH, HH))
+                    if (UG(BB)) {
+                      const OB = dB.childNodes(dB.shadowRoot(BB));
+                      for (let GB = 0, YB = OB.length; YB > GB; GB++) {
+                        const YB = OB[GB];
+                        YB && (this.processedNodeManager.add(YB, this), this.genAdds(YB, BB))
                       }
                     }
                   }
@@ -1922,9 +1922,9 @@ export const modules = {
               }
             }))
           }
-          init(HH) {
-            ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "maskAllElementAttributes", "maskAttributeFn", "keepIframeSrcFn", "recordCanvas", "canvasMaskingConfigured", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((BH => {
-              this[BH] = HH[BH]
+          init(BB) {
+            ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "maskAllElementAttributes", "maskAttributeFn", "keepIframeSrcFn", "recordCanvas", "canvasMaskingConfigured", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((OB => {
+              this[OB] = BB[OB]
             })), this.canvasManager.acquire()
           }
           freeze() {
@@ -1952,79 +1952,79 @@ export const modules = {
             return this.doc
           }
           destroy() {
-            for (const HH of this.mapRemoves) this.mapRemoves.delete(HH), this.mirror.removeNodeFromMap(HH)
+            for (const BB of this.mapRemoves) this.mapRemoves.delete(BB), this.mirror.removeNodeFromMap(BB)
           }
-          isBlockedAtEmission(HH) {
-            const BH = this.blockClass,
-              LH = BH && "string" != typeof BH && (BH.global || BH.sticky) ? new RegExp(BH) : null;
-            for (; HH;) {
-              if (LH && (LH.lastIndex = 0), xL(HH, LH || BH, this.blockSelector, !0)) return !0;
-              const AH = "getRootNode" in HH ? mH.getRootNode(HH) : null;
-              HH = (null == AH ? void 0 : AH.nodeType) === Node.DOCUMENT_FRAGMENT_NODE ? mH.host(AH) : null
+          isBlockedAtEmission(BB) {
+            const OB = this.blockClass,
+              GB = OB && "string" != typeof OB && (OB.global || OB.sticky) ? new RegExp(OB) : null;
+            for (; BB;) {
+              if (GB && (GB.lastIndex = 0), RG(BB, GB || OB, this.blockSelector, !0)) return !0;
+              const YB = "getRootNode" in BB ? dB.getRootNode(BB) : null;
+              BB = (null == YB ? void 0 : YB.nodeType) === Node.DOCUMENT_FRAGMENT_NODE ? dB.host(YB) : null
             }
             return !1
           }
         };
 
-      function cL(HH, BH) {
-        const LH = [BH];
-        for (; LH.length;) {
-          const BH = LH.pop();
-          if (HH.delete(BH), BH.nodeType === BH.TEXT_NODE) continue;
-          const AH = mH.childNodes(BH);
-          for (let HH = 0, rH = AH.length; rH > HH; HH++) {
-            const BH = AH[HH];
-            BH && LH.push(BH)
+      function iG(BB, OB) {
+        const GB = [OB];
+        for (; GB.length;) {
+          const OB = GB.pop();
+          if (BB.delete(OB), OB.nodeType === OB.TEXT_NODE) continue;
+          const YB = dB.childNodes(OB);
+          for (let BB = 0, DB = YB.length; DB > BB; BB++) {
+            const OB = YB[BB];
+            OB && GB.push(OB)
           }
         }
       }
 
-      function eL(HH, BH, LH) {
-        return 0 !== HH.size && function(HH, BH) {
-          const LH = mH.parentNode(BH);
-          return !!LH && HH.has(LH)
-        }(HH, BH)
+      function LG(BB, OB, GB) {
+        return 0 !== BB.size && function(BB, OB) {
+          const GB = dB.parentNode(OB);
+          return !!GB && BB.has(GB)
+        }(BB, OB)
       }
 
-      function qL(HH, BH) {
-        if (0 === HH.size) return !1;
-        let LH = mH.parentNode(BH);
-        for (; LH;) {
-          if (HH.has(LH)) return !0;
-          LH = mH.parentNode(LH)
+      function gG(BB, OB) {
+        if (0 === BB.size) return !1;
+        let GB = dB.parentNode(OB);
+        for (; GB;) {
+          if (BB.has(GB)) return !0;
+          GB = dB.parentNode(GB)
         }
         return !1
       }
-      var gL = function(HH) {
-          let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "rrweb";
-          return IL ? function() {
+      var rG = function(BB) {
+          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "rrweb";
+          return uG ? function() {
             try {
-              return HH(...arguments)
-            } catch (HH) {
-              if (IL && !0 === IL(HH, BH)) return;
-              throw HH
+              return BB(...arguments)
+            } catch (BB) {
+              if (uG && !0 === uG(BB, OB)) return;
+              throw BB
             }
-          } : HH
+          } : BB
         },
-        NL = [];
+        XG = [];
 
-      function RL(HH) {
+      function wG(BB) {
         try {
-          if ("composedPath" in HH) {
-            const BH = HH.composedPath();
-            if (BH.length) return BH[0]
-          } else if ("path" in HH && HH.path.length) return HH.path[0]
-        } catch (HH) {}
-        return HH && HH.target
+          if ("composedPath" in BB) {
+            const OB = BB.composedPath();
+            if (OB.length) return OB[0]
+          } else if ("path" in BB && BB.path.length) return BB.path[0]
+        } catch (BB) {}
+        return BB && BB.target
       }
 
-      function jL(HH, BH) {
-        const LH = new KL;
-        let AH;
-        LH.init(HH);
+      function EG(BB, OB) {
+        const GB = new FG;
+        let YB;
+        GB.init(BB);
         try {
-          AH = new(bH())(gL(LH.processMutations.bind(LH)));
-          const rH = {
+          YB = new(fB())(rG(GB.processMutations.bind(GB)));
+          const DB = {
             attributes: !0,
             attributeOldValue: !0,
             characterData: !0,
@@ -2032,979 +2032,979 @@ export const modules = {
             childList: !0,
             subtree: !0
           };
-          return HH.attributeFilter && HH.attributeFilter.length > 0 && (rH.attributeFilter = HH.attributeFilter), AH.observe(BH, rH), NL.push(LH), {
-            observer: AH,
-            buffer: LH
+          return BB.attributeFilter && BB.attributeFilter.length > 0 && (DB.attributeFilter = BB.attributeFilter), YB.observe(OB, DB), XG.push(GB), {
+            observer: YB,
+            buffer: GB
           }
-        } catch (HH) {
+        } catch (BB) {
           try {
-            null == AH || AH.disconnect(), LH.destroy(), LH.reset()
-          } catch (HH) {}
-          throw HH
+            null == YB || YB.disconnect(), GB.destroy(), GB.reset()
+          } catch (BB) {}
+          throw BB
         }
       }
 
-      function nL(HH) {
+      function cG(BB) {
         let {
-          scrollCb: BH,
-          doc: LH,
-          mirror: AH,
-          blockClass: rH,
-          blockSelector: SH,
-          sampling: hH
-        } = HH;
-        const tH = new Map,
-          zH = HH => {
-            const hH = RL(HH);
-            if (!hH || xL(hH, rH, SH, !0)) return;
-            const zH = AH.getId(hH);
-            let CH, EH;
-            if (hH === LH && LH.defaultView) {
-              const HH = uL(LH.defaultView);
-              CH = HH.left, EH = HH.top
-            } else CH = hH.scrollLeft, EH = hH.scrollTop;
-            const XH = `${CH},${EH}`;
-            tH.get(zH) !== XH && (tH.set(zH, XH), BH({
-              id: zH,
-              x: CH,
-              y: EH
+          scrollCb: OB,
+          doc: GB,
+          mirror: YB,
+          blockClass: DB,
+          blockSelector: QB,
+          sampling: oB
+        } = BB;
+        const jB = new Map,
+          yB = BB => {
+            const oB = wG(BB);
+            if (!oB || RG(oB, DB, QB, !0)) return;
+            const yB = YB.getId(oB);
+            let JB, MB;
+            if (oB === GB && GB.defaultView) {
+              const BB = pG(GB.defaultView);
+              JB = BB.left, MB = BB.top
+            } else JB = oB.scrollLeft, MB = oB.scrollTop;
+            const PB = `${JB},${MB}`;
+            jB.get(yB) !== PB && (jB.set(yB, PB), OB({
+              id: yB,
+              x: JB,
+              y: MB
             }))
           },
-          CH = [SL("scroll", gL(XL(gL((HH => zH(HH))), hH.scroll || 100)), LH)];
-        return "onscrollend" in LH && CH.push(SL("scrollend", gL(zH), LH)), () => CH.forEach((HH => HH()))
+          JB = [QG("scroll", rG(PG(rG((BB => yB(BB))), oB.scroll || 100)), GB)];
+        return "onscrollend" in GB && JB.push(QG("scrollend", rG(yB), GB)), () => JB.forEach((BB => BB()))
       }
 
-      function FL(HH, BH) {
-        for (let LH = NL.length - 1; LH >= 0; LH--) {
-          const AH = NL[LH];
-          if (!AH) continue;
-          let rH = AH.bufferBelongsToIframe(HH);
-          !rH && BH && BH.has(AH.bufferDoc()) && (rH = !0), rH && (AH.reset(), NL.splice(LH, 1))
+      function hG(BB, OB) {
+        for (let GB = XG.length - 1; GB >= 0; GB--) {
+          const YB = XG[GB];
+          if (!YB) continue;
+          let DB = YB.bufferBelongsToIframe(BB);
+          !DB && OB && OB.has(YB.bufferDoc()) && (DB = !0), DB && (YB.reset(), XG.splice(GB, 1))
         }
       }
-      var DL = ["INPUT", "TEXTAREA", "SELECT"],
-        wL = new WeakMap;
+      var aG = ["INPUT", "TEXTAREA", "SELECT"],
+        eG = new WeakMap;
 
-      function ZL(HH) {
-        return function HH(BH, LH) {
-          if (iL("CSSGroupingRule") && BH.parentRule instanceof CSSGroupingRule || iL("CSSMediaRule") && BH.parentRule instanceof CSSMediaRule || iL("CSSSupportsRule") && BH.parentRule instanceof CSSSupportsRule || iL("CSSConditionRule") && BH.parentRule instanceof CSSConditionRule) {
-            const AH = Array.from(BH.parentRule.cssRules).indexOf(BH);
-            return LH.unshift(AH), HH(BH.parentRule, LH)
+      function TG(BB) {
+        return function BB(OB, GB) {
+          if (sG("CSSGroupingRule") && OB.parentRule instanceof CSSGroupingRule || sG("CSSMediaRule") && OB.parentRule instanceof CSSMediaRule || sG("CSSSupportsRule") && OB.parentRule instanceof CSSSupportsRule || sG("CSSConditionRule") && OB.parentRule instanceof CSSConditionRule) {
+            const YB = Array.from(OB.parentRule.cssRules).indexOf(OB);
+            return GB.unshift(YB), BB(OB.parentRule, GB)
           }
-          if (BH.parentStyleSheet) {
-            const HH = Array.from(BH.parentStyleSheet.cssRules).indexOf(BH);
-            LH.unshift(HH)
+          if (OB.parentStyleSheet) {
+            const BB = Array.from(OB.parentStyleSheet.cssRules).indexOf(OB);
+            GB.unshift(BB)
           }
-          return LH
-        }(HH, [])
+          return GB
+        }(BB, [])
       }
 
-      function dL(HH, BH, LH) {
-        let AH, rH;
-        return HH ? (HH.ownerNode ? AH = BH.getId(HH.ownerNode) : rH = LH.getId(HH), {
-          styleId: rH,
-          id: AH
+      function bG(BB, OB, GB) {
+        let YB, DB;
+        return BB ? (BB.ownerNode ? YB = OB.getId(BB.ownerNode) : DB = GB.getId(BB), {
+          styleId: DB,
+          id: YB
         }) : {}
       }
 
-      function aL(HH, BH) {
+      function CG(BB, OB) {
         let {
-          mirror: LH,
-          stylesheetManager: AH
-        } = HH;
-        var rH, SH;
-        let hH = null;
-        hH = LH.getId("#document" === BH.nodeName ? BH : mH.host(BH));
-        const tH = "#document" === BH.nodeName ? null === (rH = BH.defaultView) || void 0 === rH ? void 0 : rH.Document : null === (SH = BH.ownerDocument) || void 0 === SH || null === (SH = SH.defaultView) || void 0 === SH ? void 0 : SH.ShadowRoot,
-          zH = (null == tH ? void 0 : tH.prototype) ? Object.getOwnPropertyDescriptor(null == tH ? void 0 : tH.prototype, "adoptedStyleSheets") : void 0;
-        return null !== hH && -1 !== hH && tH && zH ? (Object.defineProperty(BH, "adoptedStyleSheets", {
-          configurable: zH.configurable,
-          enumerable: zH.enumerable,
+          mirror: GB,
+          stylesheetManager: YB
+        } = BB;
+        var DB, QB;
+        let oB = null;
+        oB = GB.getId("#document" === OB.nodeName ? OB : dB.host(OB));
+        const jB = "#document" === OB.nodeName ? null === (DB = OB.defaultView) || void 0 === DB ? void 0 : DB.Document : null === (QB = OB.ownerDocument) || void 0 === QB || null === (QB = QB.defaultView) || void 0 === QB ? void 0 : QB.ShadowRoot,
+          yB = (null == jB ? void 0 : jB.prototype) ? Object.getOwnPropertyDescriptor(null == jB ? void 0 : jB.prototype, "adoptedStyleSheets") : void 0;
+        return null !== oB && -1 !== oB && jB && yB ? (Object.defineProperty(OB, "adoptedStyleSheets", {
+          configurable: yB.configurable,
+          enumerable: yB.enumerable,
           get() {
-            var HH;
-            return null === (HH = zH.get) || void 0 === HH ? void 0 : HH.call(this)
+            var BB;
+            return null === (BB = yB.get) || void 0 === BB ? void 0 : BB.call(this)
           },
-          set(HH) {
-            let BH;
+          set(BB) {
+            let OB;
             try {
-              var LH;
-              BH = null === (LH = zH.set) || void 0 === LH ? void 0 : LH.call(this, HH)
-            } catch (HH) {
-              if (HH && "object" == typeof HH && "NotAllowedError" === HH.name) return;
-              throw HH
+              var GB;
+              OB = null === (GB = yB.set) || void 0 === GB ? void 0 : GB.call(this, BB)
+            } catch (BB) {
+              if (BB && "object" == typeof BB && "NotAllowedError" === BB.name) return;
+              throw BB
             }
-            if (null !== hH && -1 !== hH) try {
-              AH.adoptStyleSheets(HH, hH)
-            } catch (HH) {}
-            return BH
+            if (null !== oB && -1 !== oB) try {
+              YB.adoptStyleSheets(BB, oB)
+            } catch (BB) {}
+            return OB
           }
-        }), gL((() => {
-          Object.defineProperty(BH, "adoptedStyleSheets", {
-            configurable: zH.configurable,
-            enumerable: zH.enumerable,
-            get: zH.get,
-            set: zH.set
+        }), rG((() => {
+          Object.defineProperty(OB, "adoptedStyleSheets", {
+            configurable: yB.configurable,
+            enumerable: yB.enumerable,
+            get: yB.get,
+            set: yB.set
           })
         }))) : () => {}
       }
-      var sL = new Set;
+      var HG = new Set;
 
-      function JL(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const LH = HH.doc.defaultView;
-        if (!LH) return () => {};
-        let rH, SH;
-        ! function(HH, BH) {
+      function vG(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const GB = BB.doc.defaultView;
+        if (!GB) return () => {};
+        let DB, QB;
+        ! function(BB, OB) {
           const {
-            mutationCb: LH,
-            mousemoveCb: AH,
-            mouseInteractionCb: rH,
-            scrollCb: SH,
-            viewportResizeCb: hH,
-            inputCb: tH,
-            mediaInteractionCb: zH,
-            styleSheetRuleCb: CH,
-            styleDeclarationCb: EH,
-            canvasMutationCb: XH,
-            fontCb: GH,
-            selectionCb: YH,
-            customElementCb: uH
-          } = HH;
-          HH.mutationCb = function() {
-            BH.mutation && BH.mutation(...arguments), LH(...arguments)
-          }, HH.mousemoveCb = function() {
-            BH.mousemove && BH.mousemove(...arguments), AH(...arguments)
-          }, HH.mouseInteractionCb = function() {
-            BH.mouseInteraction && BH.mouseInteraction(...arguments), rH(...arguments)
-          }, HH.scrollCb = function() {
-            BH.scroll && BH.scroll(...arguments), SH(...arguments)
-          }, HH.viewportResizeCb = function() {
-            BH.viewportResize && BH.viewportResize(...arguments), hH(...arguments)
-          }, HH.inputCb = function() {
-            BH.input && BH.input(...arguments), tH(...arguments)
-          }, HH.mediaInteractionCb = function() {
-            BH.mediaInteaction && BH.mediaInteaction(...arguments), zH(...arguments)
-          }, HH.styleSheetRuleCb = function() {
-            BH.styleSheetRule && BH.styleSheetRule(...arguments), CH(...arguments)
-          }, HH.styleDeclarationCb = function() {
-            BH.styleDeclaration && BH.styleDeclaration(...arguments), EH(...arguments)
-          }, HH.canvasMutationCb = function() {
-            BH.canvasMutation && BH.canvasMutation(...arguments), XH(...arguments)
-          }, HH.fontCb = function() {
-            BH.font && BH.font(...arguments), GH(...arguments)
-          }, HH.selectionCb = function() {
-            BH.selection && BH.selection(...arguments), YH(...arguments)
-          }, HH.customElementCb = function() {
-            BH.customElement && BH.customElement(...arguments), uH(...arguments)
+            mutationCb: GB,
+            mousemoveCb: YB,
+            mouseInteractionCb: DB,
+            scrollCb: QB,
+            viewportResizeCb: oB,
+            inputCb: jB,
+            mediaInteractionCb: yB,
+            styleSheetRuleCb: JB,
+            styleDeclarationCb: MB,
+            canvasMutationCb: PB,
+            fontCb: zB,
+            selectionCb: lB,
+            customElementCb: pB
+          } = BB;
+          BB.mutationCb = function() {
+            OB.mutation && OB.mutation(...arguments), GB(...arguments)
+          }, BB.mousemoveCb = function() {
+            OB.mousemove && OB.mousemove(...arguments), YB(...arguments)
+          }, BB.mouseInteractionCb = function() {
+            OB.mouseInteraction && OB.mouseInteraction(...arguments), DB(...arguments)
+          }, BB.scrollCb = function() {
+            OB.scroll && OB.scroll(...arguments), QB(...arguments)
+          }, BB.viewportResizeCb = function() {
+            OB.viewportResize && OB.viewportResize(...arguments), oB(...arguments)
+          }, BB.inputCb = function() {
+            OB.input && OB.input(...arguments), jB(...arguments)
+          }, BB.mediaInteractionCb = function() {
+            OB.mediaInteaction && OB.mediaInteaction(...arguments), yB(...arguments)
+          }, BB.styleSheetRuleCb = function() {
+            OB.styleSheetRule && OB.styleSheetRule(...arguments), JB(...arguments)
+          }, BB.styleDeclarationCb = function() {
+            OB.styleDeclaration && OB.styleDeclaration(...arguments), MB(...arguments)
+          }, BB.canvasMutationCb = function() {
+            OB.canvasMutation && OB.canvasMutation(...arguments), PB(...arguments)
+          }, BB.fontCb = function() {
+            OB.font && OB.font(...arguments), zB(...arguments)
+          }, BB.selectionCb = function() {
+            OB.selection && OB.selection(...arguments), lB(...arguments)
+          }, BB.customElementCb = function() {
+            OB.customElement && OB.customElement(...arguments), pB(...arguments)
           }
-        }(HH, BH);
-        const hH = [],
-          tH = gL((() => {
+        }(BB, OB);
+        const oB = [],
+          jB = rG((() => {
             try {
-              if (SH) try {
-                SH.destroy(), SH.reset()
+              if (QB) try {
+                QB.destroy(), QB.reset()
               } finally {
-                const HH = NL.indexOf(SH); - 1 !== HH && NL.splice(HH, 1)
+                const BB = XG.indexOf(QB); - 1 !== BB && XG.splice(BB, 1)
               }
-              HH.shadowDomManager.resetForDoc(HH.doc), null == rH || rH.disconnect()
+              BB.shadowDomManager.resetForDoc(BB.doc), null == DB || DB.disconnect()
             } finally {
-              zL(hH)
+              yG(oB)
             }
           })),
-          XH = (HH, BH) => {
-            const LH = gL((() => {
+          PB = (BB, OB) => {
+            const GB = rG((() => {
               try {
-                return BH()
-              } catch (BH) {
-                throw sL.add(HH), BH
+                return OB()
+              } catch (OB) {
+                throw HG.add(BB), OB
               }
             }))();
-            "function" == typeof LH && hH.push(LH)
+            "function" == typeof GB && oB.push(GB)
           };
         try {
-          if (HH.recordDOM && XH("mutation", (() => {
-              const BH = jL(HH, HH.doc);
-              rH = BH.observer, SH = BH.buffer
-            })), XH("move", (() => function(HH) {
+          if (BB.recordDOM && PB("mutation", (() => {
+              const OB = EG(BB, BB.doc);
+              DB = OB.observer, QB = OB.buffer
+            })), PB("move", (() => function(BB) {
               let {
-                mousemoveCb: BH,
-                sampling: LH,
-                doc: AH,
-                mirror: rH
-              } = HH;
-              if (!1 === LH.mousemove) return () => {};
-              const SH = "number" == typeof LH.mousemove ? LH.mousemove : 50,
-                hH = "number" == typeof LH.mousemoveCallback ? LH.mousemoveCallback : 500;
-              let tH, CH = [];
-              const EH = XL(gL((HH => {
-                  const LH = Date.now() - tH;
-                  BH(CH.map((HH => (HH.timeOffset -= LH, HH))), HH), CH = [], tH = null
-                })), hH),
-                XH = gL(XL(gL((HH => {
-                  const BH = RL(HH),
+                mousemoveCb: OB,
+                sampling: GB,
+                doc: YB,
+                mirror: DB
+              } = BB;
+              if (!1 === GB.mousemove) return () => {};
+              const QB = "number" == typeof GB.mousemove ? GB.mousemove : 50,
+                oB = "number" == typeof GB.mousemoveCallback ? GB.mousemoveCallback : 500;
+              let jB, JB = [];
+              const MB = PG(rG((BB => {
+                  const GB = Date.now() - jB;
+                  OB(JB.map((BB => (BB.timeOffset -= GB, BB))), BB), JB = [], jB = null
+                })), oB),
+                PB = rG(PG(rG((BB => {
+                  const OB = wG(BB),
                     {
-                      clientX: LH,
-                      clientY: AH
-                    } = TL(HH) ? HH.changedTouches[0] : HH;
-                  tH || (tH = YL()), CH.push({
-                    x: LH,
-                    y: AH,
-                    id: rH.getId(BH),
-                    timeOffset: YL() - tH
-                  }), EH("undefined" != typeof DragEvent && HH instanceof DragEvent ? zH.Drag : HH instanceof MouseEvent ? zH.MouseMove : zH.TouchMove)
-                })), SH, {
+                      clientX: GB,
+                      clientY: YB
+                    } = VG(BB) ? BB.changedTouches[0] : BB;
+                  jB || (jB = lG()), JB.push({
+                    x: GB,
+                    y: YB,
+                    id: DB.getId(OB),
+                    timeOffset: lG() - jB
+                  }), MB("undefined" != typeof DragEvent && BB instanceof DragEvent ? yB.Drag : BB instanceof MouseEvent ? yB.MouseMove : yB.TouchMove)
+                })), QB, {
                   trailing: !1
                 })),
-                GH = [SL("mousemove", XH, AH), SL("touchmove", XH, AH), SL("drag", XH, AH)];
-              return gL((() => {
-                GH.forEach((HH => HH()))
+                zB = [QG("mousemove", PB, YB), QG("touchmove", PB, YB), QG("drag", PB, YB)];
+              return rG((() => {
+                zB.forEach((BB => BB()))
               }))
-            }(HH))), XH("mouseInteraction", (() => function(HH) {
+            }(BB))), PB("mouseInteraction", (() => function(BB) {
               let {
-                mouseInteractionCb: BH,
-                doc: LH,
-                mirror: rH,
-                blockClass: SH,
-                blockSelector: hH,
-                sampling: tH
-              } = HH;
-              if (!1 === tH.mouseInteraction) return () => {};
-              const zH = !0 === tH.mouseInteraction || void 0 === tH.mouseInteraction ? {} : tH.mouseInteraction,
-                XH = [];
-              let GH = null;
-              return Object.keys(CH).filter((HH => Number.isNaN(Number(HH)) && !HH.endsWith("_Departed") && !1 !== zH[HH])).forEach((HH => {
-                let tH = PB(HH);
-                const zH = (HH => LH => {
-                  const tH = RL(LH);
-                  if (xL(tH, SH, hH, !0)) return;
-                  let zH = null,
-                    XH = HH;
-                  if ("pointerType" in LH) {
-                    switch (LH.pointerType) {
+                mouseInteractionCb: OB,
+                doc: GB,
+                mirror: DB,
+                blockClass: QB,
+                blockSelector: oB,
+                sampling: jB
+              } = BB;
+              if (!1 === jB.mouseInteraction) return () => {};
+              const yB = !0 === jB.mouseInteraction || void 0 === jB.mouseInteraction ? {} : jB.mouseInteraction,
+                PB = [];
+              let zB = null;
+              return Object.keys(JB).filter((BB => Number.isNaN(Number(BB)) && !BB.endsWith("_Departed") && !1 !== yB[BB])).forEach((BB => {
+                let jB = AO(BB);
+                const yB = (BB => GB => {
+                  const jB = wG(GB);
+                  if (RG(jB, QB, oB, !0)) return;
+                  let yB = null,
+                    PB = BB;
+                  if ("pointerType" in GB) {
+                    switch (GB.pointerType) {
                       case "mouse":
-                        zH = EH.Mouse;
+                        yB = MB.Mouse;
                         break;
                       case "touch":
-                        zH = EH.Touch;
+                        yB = MB.Touch;
                         break;
                       case "pen":
-                        zH = EH.Pen
+                        yB = MB.Pen
                     }
-                    zH === EH.Touch && (CH[HH] === CH.MouseDown ? XH = "TouchStart" : CH[HH] === CH.MouseUp && (XH = "TouchEnd"))
-                  } else TL(LH) && (zH = EH.Touch);
-                  null !== zH ? (GH = zH, (XH.startsWith("Touch") && zH === EH.Touch || XH.startsWith("Mouse") && zH === EH.Mouse) && (zH = null)) : CH[HH] === CH.Click && (zH = GH, GH = null);
-                  const YH = TL(LH) ? LH.changedTouches[0] : LH;
-                  if (!YH) return;
-                  const uH = rH.getId(tH),
+                    yB === MB.Touch && (JB[BB] === JB.MouseDown ? PB = "TouchStart" : JB[BB] === JB.MouseUp && (PB = "TouchEnd"))
+                  } else VG(GB) && (yB = MB.Touch);
+                  null !== yB ? (zB = yB, (PB.startsWith("Touch") && yB === MB.Touch || PB.startsWith("Mouse") && yB === MB.Mouse) && (yB = null)) : JB[BB] === JB.Click && (yB = zB, zB = null);
+                  const lB = VG(GB) ? GB.changedTouches[0] : GB;
+                  if (!lB) return;
+                  const pB = DB.getId(jB),
                     {
-                      clientX: QH,
-                      clientY: WH
-                    } = YH;
-                  gL(BH)(AH({
-                    type: CH[XH],
-                    id: uH,
-                    x: QH,
-                    y: WH
-                  }, null !== zH && {
-                    pointerType: zH
+                      clientX: qB,
+                      clientY: ZB
+                    } = lB;
+                  rG(OB)(YB({
+                    type: JB[PB],
+                    id: pB,
+                    x: qB,
+                    y: ZB
+                  }, null !== yB && {
+                    pointerType: yB
                   }))
-                })(HH);
-                if (window.PointerEvent) switch (CH[HH]) {
-                  case CH.MouseDown:
-                  case CH.MouseUp:
-                    tH = tH.replace("mouse", "pointer");
+                })(BB);
+                if (window.PointerEvent) switch (JB[BB]) {
+                  case JB.MouseDown:
+                  case JB.MouseUp:
+                    jB = jB.replace("mouse", "pointer");
                     break;
-                  case CH.TouchStart:
-                  case CH.TouchEnd:
+                  case JB.TouchStart:
+                  case JB.TouchEnd:
                     return
                 }
-                XH.push(SL(tH, zH, LH))
-              })), gL((() => {
-                XH.forEach((HH => HH()))
+                PB.push(QG(jB, yB, GB))
+              })), rG((() => {
+                PB.forEach((BB => BB()))
               }))
-            }(HH))), XH("scroll", (() => nL(HH))), XH("viewportResize", (() => function(HH, BH) {
+            }(BB))), PB("scroll", (() => cG(BB))), PB("viewportResize", (() => function(BB, OB) {
               let {
-                viewportResizeCb: LH
-              } = HH, {
-                win: AH
-              } = BH, rH = -1, SH = -1;
-              return SL("resize", gL(XL(gL((() => {
-                const HH = QL(),
-                  BH = WL();
-                rH === HH && SH === BH || (LH({
-                  width: Number(BH),
-                  height: Number(HH)
-                }), rH = HH, SH = BH)
-              })), 200)), AH)
-            }(HH, {
-              win: LH
-            }))), XH("input", (() => function(HH) {
+                viewportResizeCb: GB
+              } = BB, {
+                win: YB
+              } = OB, DB = -1, QB = -1;
+              return QG("resize", rG(PG(rG((() => {
+                const BB = qG(),
+                  OB = ZG();
+                DB === BB && QB === OB || (GB({
+                  width: Number(OB),
+                  height: Number(BB)
+                }), DB = BB, QB = OB)
+              })), 200)), YB)
+            }(BB, {
+              win: GB
+            }))), PB("input", (() => function(BB) {
               let {
-                inputCb: BH,
-                doc: LH,
-                mirror: rH,
-                blockClass: SH,
-                blockSelector: hH,
-                ignoreClass: tH,
-                ignoreSelector: zH,
-                maskInputOptions: CH,
-                maskInputFn: EH,
-                sampling: XH,
-                userTriggeredOnInput: GH
-              } = HH;
+                inputCb: OB,
+                doc: GB,
+                mirror: DB,
+                blockClass: QB,
+                blockSelector: oB,
+                ignoreClass: jB,
+                ignoreSelector: yB,
+                maskInputOptions: JB,
+                maskInputFn: MB,
+                sampling: PB,
+                userTriggeredOnInput: zB
+              } = BB;
 
-              function YH(HH) {
-                let BH = RL(HH);
-                const AH = HH.isTrusted,
-                  rH = LH.defaultView;
-                if (BH && rH && !(BH instanceof rH.HTMLElement)) return;
-                const XH = BH && BH.tagName;
-                if (BH && "OPTION" === XH && (BH = mH.parentElement(BH)), !BH || !XH || 0 > DL.indexOf(XH) || xL(BH, SH, hH, !0)) return;
-                if (BH.classList.contains(tH) || zH && BH.matches(zH)) return;
-                let YH = BH.value,
-                  QH = !1;
-                const WH = OB(BH) || "";
-                "radio" === WH || "checkbox" === WH ? QH = BH.checked : (CH[XH.toLowerCase()] || CH[WH]) && (YH = vB({
-                  element: BH,
-                  maskInputOptions: CH,
-                  tagName: XH,
-                  type: WH,
-                  value: YH,
-                  maskInputFn: EH
-                })), uH(BH, GH ? {
-                  text: YH,
-                  isChecked: QH,
-                  userTriggered: AH
+              function lB(BB) {
+                let OB = wG(BB);
+                const YB = BB.isTrusted,
+                  DB = GB.defaultView;
+                if (OB && DB && !(OB instanceof DB.HTMLElement)) return;
+                const PB = OB && OB.tagName;
+                if (OB && "OPTION" === PB && (OB = dB.parentElement(OB)), !OB || !PB || 0 > aG.indexOf(PB) || RG(OB, QB, oB, !0)) return;
+                if (OB.classList.contains(jB) || yB && OB.matches(yB)) return;
+                let lB = OB.value,
+                  qB = !1;
+                const ZB = UO(OB) || "";
+                "radio" === ZB || "checkbox" === ZB ? qB = OB.checked : (JB[PB.toLowerCase()] || JB[ZB]) && (lB = WO({
+                  element: OB,
+                  maskInputOptions: JB,
+                  tagName: PB,
+                  type: ZB,
+                  value: lB,
+                  maskInputFn: MB
+                })), pB(OB, zB ? {
+                  text: lB,
+                  isChecked: qB,
+                  userTriggered: YB
                 } : {
-                  text: YH,
-                  isChecked: QH
+                  text: lB,
+                  isChecked: qB
                 });
-                const MH = BH.name;
-                "radio" === WH && MH && QH && LH.querySelectorAll(`input[type="radio"][name="${MH}"]`).forEach((HH => {
-                  if (HH !== BH) {
-                    const BH = HH.value;
-                    uH(HH, GH ? {
-                      text: BH,
-                      isChecked: !QH,
+                const NB = OB.name;
+                "radio" === ZB && NB && qB && GB.querySelectorAll(`input[type="radio"][name="${NB}"]`).forEach((BB => {
+                  if (BB !== OB) {
+                    const OB = BB.value;
+                    pB(BB, zB ? {
+                      text: OB,
+                      isChecked: !qB,
                       userTriggered: !1
                     } : {
-                      text: BH,
-                      isChecked: !QH
+                      text: OB,
+                      isChecked: !qB
                     })
                   }
                 }))
               }
 
-              function uH(HH, LH) {
-                const SH = wL.get(HH);
-                if (!SH || SH.text !== LH.text || SH.isChecked !== LH.isChecked) {
-                  wL.set(HH, LH);
-                  const SH = rH.getId(HH);
-                  gL(BH)(AH(AH({}, LH), {}, {
-                    id: SH
+              function pB(BB, GB) {
+                const QB = eG.get(BB);
+                if (!QB || QB.text !== GB.text || QB.isChecked !== GB.isChecked) {
+                  eG.set(BB, GB);
+                  const QB = DB.getId(BB);
+                  rG(OB)(YB(YB({}, GB), {}, {
+                    id: QB
                   }))
                 }
               }
-              const QH = ("last" === XH.input ? ["change"] : ["input", "change"]).map((HH => SL(HH, gL(YH), LH))),
-                WH = LH.defaultView;
-              if (!WH) return () => {
-                QH.forEach((HH => HH()))
+              const qB = ("last" === PB.input ? ["change"] : ["input", "change"]).map((BB => QG(BB, rG(lB), GB))),
+                ZB = GB.defaultView;
+              if (!ZB) return () => {
+                qB.forEach((BB => BB()))
               };
-              const MH = WH.Object.getOwnPropertyDescriptor(WH.HTMLInputElement.prototype, "value");
-              return MH && MH.set && QH.push(...[
-                [WH.HTMLInputElement.prototype, "value"],
-                [WH.HTMLInputElement.prototype, "checked"],
-                [WH.HTMLSelectElement.prototype, "value"],
-                [WH.HTMLTextAreaElement.prototype, "value"],
-                [WH.HTMLSelectElement.prototype, "selectedIndex"],
-                [WH.HTMLOptionElement.prototype, "selected"]
-              ].map((HH => GL(HH[0], HH[1], {
+              const NB = ZB.Object.getOwnPropertyDescriptor(ZB.HTMLInputElement.prototype, "value");
+              return NB && NB.set && qB.push(...[
+                [ZB.HTMLInputElement.prototype, "value"],
+                [ZB.HTMLInputElement.prototype, "checked"],
+                [ZB.HTMLSelectElement.prototype, "value"],
+                [ZB.HTMLTextAreaElement.prototype, "value"],
+                [ZB.HTMLSelectElement.prototype, "selectedIndex"],
+                [ZB.HTMLOptionElement.prototype, "selected"]
+              ].map((BB => zG(BB[0], BB[1], {
                 set() {
-                  gL(YH)({
+                  rG(lB)({
                     target: this,
                     isTrusted: !1
                   })
                 }
-              }, !1, WH)))), gL((() => {
-                zL(QH)
+              }, !1, ZB)))), rG((() => {
+                yG(qB)
               }))
-            }(HH))), XH("mediaInteraction", (() => function(HH) {
+            }(BB))), PB("mediaInteraction", (() => function(BB) {
               let {
-                mediaInteractionCb: BH,
-                blockClass: LH,
-                blockSelector: AH,
-                mirror: rH,
-                sampling: SH,
-                doc: hH
-              } = HH;
-              const tH = gL((HH => XL(gL((SH => {
-                  const hH = RL(SH);
-                  if (!hH || xL(hH, LH, AH, !0)) return;
+                mediaInteractionCb: OB,
+                blockClass: GB,
+                blockSelector: YB,
+                mirror: DB,
+                sampling: QB,
+                doc: oB
+              } = BB;
+              const jB = rG((BB => PG(rG((QB => {
+                  const oB = wG(QB);
+                  if (!oB || RG(oB, GB, YB, !0)) return;
                   const {
-                    currentTime: tH,
-                    volume: zH,
-                    muted: CH,
-                    playbackRate: EH,
-                    loop: XH
-                  } = hH;
-                  BH({
-                    type: HH,
-                    id: rH.getId(hH),
-                    currentTime: tH,
-                    volume: zH,
-                    muted: CH,
-                    playbackRate: EH,
-                    loop: XH
+                    currentTime: jB,
+                    volume: yB,
+                    muted: JB,
+                    playbackRate: MB,
+                    loop: PB
+                  } = oB;
+                  OB({
+                    type: BB,
+                    id: DB.getId(oB),
+                    currentTime: jB,
+                    volume: yB,
+                    muted: JB,
+                    playbackRate: MB,
+                    loop: PB
                   })
-                })), SH.media || 500))),
-                zH = [SL("play", tH(GH.Play), hH), SL("pause", tH(GH.Pause), hH), SL("seeked", tH(GH.Seeked), hH), SL("volumechange", tH(GH.VolumeChange), hH), SL("ratechange", tH(GH.RateChange), hH)];
-              return gL((() => {
-                zH.forEach((HH => HH()))
+                })), QB.media || 500))),
+                yB = [QG("play", jB(zB.Play), oB), QG("pause", jB(zB.Pause), oB), QG("seeked", jB(zB.Seeked), oB), QG("volumechange", jB(zB.VolumeChange), oB), QG("ratechange", jB(zB.RateChange), oB)];
+              return rG((() => {
+                yB.forEach((BB => BB()))
               }))
-            }(HH))), HH.recordDOM) {
-            const BH = function(HH) {
-              const BH = new Map,
-                LH = new Set;
-              let AH = !0;
-              const rH = HH => {
-                  if (AH) try {
-                    HH()
-                  } catch (HH) {}
+            }(BB))), BB.recordDOM) {
+            const OB = function(BB) {
+              const OB = new Map,
+                GB = new Set;
+              let YB = !0;
+              const DB = BB => {
+                  if (YB) try {
+                    BB()
+                  } catch (BB) {}
                 },
-                SH = HH => {
-                  var LH;
-                  const AH = BH.get(HH);
-                  if (AH) {
-                    for (; null === (LH = AH[0]) || void 0 === LH ? void 0 : LH.ready;) {
-                      const HH = AH.shift();
-                      (null == HH ? void 0 : HH.emit) && rH(HH.emit)
+                QB = BB => {
+                  var GB;
+                  const YB = OB.get(BB);
+                  if (YB) {
+                    for (; null === (GB = YB[0]) || void 0 === GB ? void 0 : GB.ready;) {
+                      const BB = YB.shift();
+                      (null == BB ? void 0 : BB.emit) && DB(BB.emit)
                     }
-                    0 === AH.length && BH.delete(HH)
+                    0 === YB.length && OB.delete(BB)
                   }
                 };
               return {
-                queueMutation(HH, LH) {
-                  if (!HH) return void rH(LH);
-                  const AH = BH.get(HH);
-                  AH ? (AH.push({
-                    emit: LH,
+                queueMutation(BB, GB) {
+                  if (!BB) return void DB(GB);
+                  const YB = OB.get(BB);
+                  YB ? (YB.push({
+                    emit: GB,
                     ready: !0
-                  }), SH(HH)) : rH(LH)
+                  }), QB(BB)) : DB(GB)
                 },
-                queuePendingMutation(hH, tH, zH) {
-                  if (!AH) return () => {};
-                  let CH = BH.get(hH);
-                  CH || (CH = [], BH.set(hH, CH));
-                  const EH = {
-                    emit: tH,
+                queuePendingMutation(oB, jB, yB) {
+                  if (!YB) return () => {};
+                  let JB = OB.get(oB);
+                  JB || (JB = [], OB.set(oB, JB));
+                  const MB = {
+                    emit: jB,
                     ready: !1
                   };
-                  CH.push(EH);
-                  let XH, GH = !1,
-                    YH = !1;
-                  const uH = () => {
-                    GH || YH || (GH = !0, void 0 !== XH && LH.delete(XH), EH.ready = !0, EH.emit = void 0, SH(hH))
+                  JB.push(MB);
+                  let PB, zB = !1,
+                    lB = !1;
+                  const pB = () => {
+                    zB || lB || (zB = !0, void 0 !== PB && GB.delete(PB), MB.ready = !0, MB.emit = void 0, QB(oB))
                   };
                   try {
-                    XH = HH.setTimeout(uH, 5e3), GH || YH ? HH.clearTimeout(XH) : LH.add(XH)
-                  } catch (HH) {
-                    uH()
+                    PB = BB.setTimeout(pB, 5e3), zB || lB ? BB.clearTimeout(PB) : GB.add(PB)
+                  } catch (BB) {
+                    pB()
                   }
-                  return BH => {
-                    !YH && AH && (YH = !0, void 0 !== XH && (HH.clearTimeout(XH), LH.delete(XH)), GH ? BH && rH(zH) : (EH.ready = !0, BH || (EH.emit = void 0), SH(hH)))
+                  return OB => {
+                    !lB && YB && (lB = !0, void 0 !== PB && (BB.clearTimeout(PB), GB.delete(PB)), zB ? OB && DB(yB) : (MB.ready = !0, OB || (MB.emit = void 0), QB(oB)))
                   }
                 },
                 reset() {
-                  AH = !1, LH.forEach((BH => HH.clearTimeout(BH))), LH.clear(), BH.clear()
+                  YB = !1, GB.forEach((OB => BB.clearTimeout(OB))), GB.clear(), OB.clear()
                 }
               }
-            }(LH);
-            hH.push(BH.reset), XH("styleSheet", (() => function(HH, BH) {
+            }(GB);
+            oB.push(OB.reset), PB("styleSheet", (() => function(BB, OB) {
               let {
-                styleSheetRuleCb: LH,
-                mirror: AH,
-                stylesheetManager: rH
-              } = HH, {
-                win: SH,
-                mutationQueue: hH
-              } = BH;
-              if (!SH.CSSStyleSheet || !SH.CSSStyleSheet.prototype) return () => {};
-              const tH = SH.CSSStyleSheet.prototype.insertRule;
-              SH.CSSStyleSheet.prototype.insertRule = new Proxy(tH, {
-                apply: gL(((HH, BH, SH) => {
-                  const [tH] = SH, zH = HH.apply(BH, SH);
-                  rH.onCssomSheetMutation(BH);
+                styleSheetRuleCb: GB,
+                mirror: YB,
+                stylesheetManager: DB
+              } = BB, {
+                win: QB,
+                mutationQueue: oB
+              } = OB;
+              if (!QB.CSSStyleSheet || !QB.CSSStyleSheet.prototype) return () => {};
+              const jB = QB.CSSStyleSheet.prototype.insertRule;
+              QB.CSSStyleSheet.prototype.insertRule = new Proxy(jB, {
+                apply: rG(((BB, OB, QB) => {
+                  const [jB] = QB, yB = BB.apply(OB, QB);
+                  DB.onCssomSheetMutation(OB);
                   const {
-                    id: CH,
-                    styleId: EH
-                  } = dL(BH, AH, rH.styleMirror);
-                  return (CH && -1 !== CH || EH && -1 !== EH) && hH.queueMutation(BH, (() => LH({
-                    id: CH,
-                    styleId: EH,
+                    id: JB,
+                    styleId: MB
+                  } = bG(OB, YB, DB.styleMirror);
+                  return (JB && -1 !== JB || MB && -1 !== MB) && oB.queueMutation(OB, (() => GB({
+                    id: JB,
+                    styleId: MB,
                     adds: [{
-                      rule: tH,
-                      index: zH
+                      rule: jB,
+                      index: yB
                     }]
-                  }))), zH
+                  }))), yB
                 }), "host")
-              }), SH.CSSStyleSheet.prototype.addRule = function(HH, BH) {
-                let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
-                return SH.CSSStyleSheet.prototype.insertRule.apply(this, [`${HH} { ${BH} }`, LH])
+              }), QB.CSSStyleSheet.prototype.addRule = function(BB, OB) {
+                let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
+                return QB.CSSStyleSheet.prototype.insertRule.apply(this, [`${BB} { ${OB} }`, GB])
               };
-              const zH = SH.CSSStyleSheet.prototype.deleteRule;
-              let CH, EH;
-              SH.CSSStyleSheet.prototype.deleteRule = new Proxy(zH, {
-                apply: gL(((HH, BH, SH) => {
-                  const [tH] = SH, zH = HH.apply(BH, SH);
-                  rH.onCssomSheetMutation(BH);
+              const yB = QB.CSSStyleSheet.prototype.deleteRule;
+              let JB, MB;
+              QB.CSSStyleSheet.prototype.deleteRule = new Proxy(yB, {
+                apply: rG(((BB, OB, QB) => {
+                  const [jB] = QB, yB = BB.apply(OB, QB);
+                  DB.onCssomSheetMutation(OB);
                   const {
-                    id: CH,
-                    styleId: EH
-                  } = dL(BH, AH, rH.styleMirror);
-                  return (CH && -1 !== CH || EH && -1 !== EH) && hH.queueMutation(BH, (() => LH({
-                    id: CH,
-                    styleId: EH,
+                    id: JB,
+                    styleId: MB
+                  } = bG(OB, YB, DB.styleMirror);
+                  return (JB && -1 !== JB || MB && -1 !== MB) && oB.queueMutation(OB, (() => GB({
+                    id: JB,
+                    styleId: MB,
                     removes: [{
-                      index: tH
+                      index: jB
                     }]
-                  }))), zH
+                  }))), yB
                 }), "host")
-              }), SH.CSSStyleSheet.prototype.removeRule = function(HH) {
-                return SH.CSSStyleSheet.prototype.deleteRule.apply(this, [HH])
-              }, SH.CSSStyleSheet.prototype.replace && (CH = SH.CSSStyleSheet.prototype.replace, SH.CSSStyleSheet.prototype.replace = new Proxy(CH, {
-                apply: gL(((HH, BH, SH) => {
-                  const [tH] = SH, zH = HH.apply(BH, SH);
+              }), QB.CSSStyleSheet.prototype.removeRule = function(BB) {
+                return QB.CSSStyleSheet.prototype.deleteRule.apply(this, [BB])
+              }, QB.CSSStyleSheet.prototype.replace && (JB = QB.CSSStyleSheet.prototype.replace, QB.CSSStyleSheet.prototype.replace = new Proxy(JB, {
+                apply: rG(((BB, OB, QB) => {
+                  const [jB] = QB, yB = BB.apply(OB, QB);
                   try {
-                    const HH = null == zH ? void 0 : zH.then;
-                    if (BH.ownerNode || !zH || "function" != typeof HH) return zH;
-                    rH.onCssomSheetMutation(BH);
+                    const BB = null == yB ? void 0 : yB.then;
+                    if (OB.ownerNode || !yB || "function" != typeof BB) return yB;
+                    DB.onCssomSheetMutation(OB);
                     const {
-                      id: SH,
-                      styleId: CH
-                    } = dL(BH, AH, rH.styleMirror);
-                    if (!(SH && -1 !== SH || CH && -1 !== CH)) return zH;
-                    const EH = hH.queuePendingMutation(BH, (() => LH({
-                      id: SH,
-                      styleId: CH,
-                      replace: tH
+                      id: QB,
+                      styleId: JB
+                    } = bG(OB, YB, DB.styleMirror);
+                    if (!(QB && -1 !== QB || JB && -1 !== JB)) return yB;
+                    const MB = oB.queuePendingMutation(OB, (() => GB({
+                      id: QB,
+                      styleId: JB,
+                      replace: jB
                     })), (() => {
-                      const HH = XB(BH);
-                      null !== HH && LH({
-                        id: SH,
-                        styleId: CH,
-                        replace: HH
+                      const BB = PO(OB);
+                      null !== BB && GB({
+                        id: QB,
+                        styleId: JB,
+                        replace: BB
                       })
                     }));
                     try {
-                      HH.call(zH, (() => EH(!0)), (() => EH(!1)))
-                    } catch (LH) {
-                      EH(!1)
+                      BB.call(yB, (() => MB(!0)), (() => MB(!1)))
+                    } catch (GB) {
+                      MB(!1)
                     }
-                  } catch (LH) {}
-                  return zH
+                  } catch (GB) {}
+                  return yB
                 }), "host")
-              })), SH.CSSStyleSheet.prototype.replaceSync && (EH = SH.CSSStyleSheet.prototype.replaceSync, SH.CSSStyleSheet.prototype.replaceSync = new Proxy(EH, {
-                apply: gL(((HH, BH, SH) => {
-                  const [tH] = SH, zH = HH.apply(BH, SH);
-                  rH.onCssomSheetMutation(BH);
+              })), QB.CSSStyleSheet.prototype.replaceSync && (MB = QB.CSSStyleSheet.prototype.replaceSync, QB.CSSStyleSheet.prototype.replaceSync = new Proxy(MB, {
+                apply: rG(((BB, OB, QB) => {
+                  const [jB] = QB, yB = BB.apply(OB, QB);
+                  DB.onCssomSheetMutation(OB);
                   const {
-                    id: CH,
-                    styleId: EH
-                  } = dL(BH, AH, rH.styleMirror);
-                  return (CH && -1 !== CH || EH && -1 !== EH) && hH.queueMutation(BH, (() => LH({
-                    id: CH,
-                    styleId: EH,
-                    replaceSync: tH
-                  }))), zH
+                    id: JB,
+                    styleId: MB
+                  } = bG(OB, YB, DB.styleMirror);
+                  return (JB && -1 !== JB || MB && -1 !== MB) && oB.queueMutation(OB, (() => GB({
+                    id: JB,
+                    styleId: MB,
+                    replaceSync: jB
+                  }))), yB
                 }), "host")
               }));
-              const XH = {};
-              pL("CSSGroupingRule") ? XH.CSSGroupingRule = SH.CSSGroupingRule : (pL("CSSMediaRule") && (XH.CSSMediaRule = SH.CSSMediaRule), pL("CSSConditionRule") && (XH.CSSConditionRule = SH.CSSConditionRule), pL("CSSSupportsRule") && (XH.CSSSupportsRule = SH.CSSSupportsRule));
-              const GH = {};
-              return Object.entries(XH).forEach((HH => {
-                let [BH, SH] = HH;
-                GH[BH] = {
-                  insertRule: SH.prototype.insertRule,
-                  deleteRule: SH.prototype.deleteRule
-                }, SH.prototype.insertRule = new Proxy(GH[BH].insertRule, {
-                  apply: gL(((HH, BH, SH) => {
-                    const [tH] = SH, zH = HH.apply(BH, SH);
-                    rH.onCssomSheetMutation(BH.parentStyleSheet);
+              const PB = {};
+              xG("CSSGroupingRule") ? PB.CSSGroupingRule = QB.CSSGroupingRule : (xG("CSSMediaRule") && (PB.CSSMediaRule = QB.CSSMediaRule), xG("CSSConditionRule") && (PB.CSSConditionRule = QB.CSSConditionRule), xG("CSSSupportsRule") && (PB.CSSSupportsRule = QB.CSSSupportsRule));
+              const zB = {};
+              return Object.entries(PB).forEach((BB => {
+                let [OB, QB] = BB;
+                zB[OB] = {
+                  insertRule: QB.prototype.insertRule,
+                  deleteRule: QB.prototype.deleteRule
+                }, QB.prototype.insertRule = new Proxy(zB[OB].insertRule, {
+                  apply: rG(((BB, OB, QB) => {
+                    const [jB] = QB, yB = BB.apply(OB, QB);
+                    DB.onCssomSheetMutation(OB.parentStyleSheet);
                     const {
-                      id: CH,
-                      styleId: EH
-                    } = dL(BH.parentStyleSheet, AH, rH.styleMirror);
-                    if (BH.parentStyleSheet && (CH && -1 !== CH || EH && -1 !== EH)) {
-                      const HH = [...ZL(BH), zH];
-                      hH.queueMutation(BH.parentStyleSheet, (() => LH({
-                        id: CH,
-                        styleId: EH,
+                      id: JB,
+                      styleId: MB
+                    } = bG(OB.parentStyleSheet, YB, DB.styleMirror);
+                    if (OB.parentStyleSheet && (JB && -1 !== JB || MB && -1 !== MB)) {
+                      const BB = [...TG(OB), yB];
+                      oB.queueMutation(OB.parentStyleSheet, (() => GB({
+                        id: JB,
+                        styleId: MB,
                         adds: [{
-                          rule: tH,
-                          index: HH
+                          rule: jB,
+                          index: BB
                         }]
                       })))
                     }
-                    return zH
+                    return yB
                   }), "host")
-                }), SH.prototype.deleteRule = new Proxy(GH[BH].deleteRule, {
-                  apply: gL(((HH, BH, SH) => {
-                    const [tH] = SH, zH = HH.apply(BH, SH);
-                    rH.onCssomSheetMutation(BH.parentStyleSheet);
+                }), QB.prototype.deleteRule = new Proxy(zB[OB].deleteRule, {
+                  apply: rG(((BB, OB, QB) => {
+                    const [jB] = QB, yB = BB.apply(OB, QB);
+                    DB.onCssomSheetMutation(OB.parentStyleSheet);
                     const {
-                      id: CH,
-                      styleId: EH
-                    } = dL(BH.parentStyleSheet, AH, rH.styleMirror);
-                    if (BH.parentStyleSheet && (CH && -1 !== CH || EH && -1 !== EH)) {
-                      const HH = [...ZL(BH), tH];
-                      hH.queueMutation(BH.parentStyleSheet, (() => LH({
-                        id: CH,
-                        styleId: EH,
+                      id: JB,
+                      styleId: MB
+                    } = bG(OB.parentStyleSheet, YB, DB.styleMirror);
+                    if (OB.parentStyleSheet && (JB && -1 !== JB || MB && -1 !== MB)) {
+                      const BB = [...TG(OB), jB];
+                      oB.queueMutation(OB.parentStyleSheet, (() => GB({
+                        id: JB,
+                        styleId: MB,
                         removes: [{
-                          index: HH
+                          index: BB
                         }]
                       })))
                     }
-                    return zH
+                    return yB
                   }), "host")
                 })
-              })), gL((() => {
-                SH.CSSStyleSheet.prototype.insertRule = tH, SH.CSSStyleSheet.prototype.deleteRule = zH, CH && (SH.CSSStyleSheet.prototype.replace = CH), EH && (SH.CSSStyleSheet.prototype.replaceSync = EH), Object.entries(XH).forEach((HH => {
-                  let [BH, LH] = HH;
-                  LH.prototype.insertRule = GH[BH].insertRule, LH.prototype.deleteRule = GH[BH].deleteRule
+              })), rG((() => {
+                QB.CSSStyleSheet.prototype.insertRule = jB, QB.CSSStyleSheet.prototype.deleteRule = yB, JB && (QB.CSSStyleSheet.prototype.replace = JB), MB && (QB.CSSStyleSheet.prototype.replaceSync = MB), Object.entries(PB).forEach((BB => {
+                  let [OB, GB] = BB;
+                  GB.prototype.insertRule = zB[OB].insertRule, GB.prototype.deleteRule = zB[OB].deleteRule
                 }))
               }))
-            }(HH, {
-              win: LH,
-              mutationQueue: BH
-            }))), XH("adoptedStyleSheet", (() => aL(HH, HH.doc))), XH("styleDeclaration", (() => function(HH, BH) {
+            }(BB, {
+              win: GB,
+              mutationQueue: OB
+            }))), PB("adoptedStyleSheet", (() => CG(BB, BB.doc))), PB("styleDeclaration", (() => function(BB, OB) {
               let {
-                styleDeclarationCb: LH,
-                mirror: AH,
-                ignoreCSSAttributes: rH,
-                stylesheetManager: SH
-              } = HH, {
-                win: hH,
-                mutationQueue: tH
-              } = BH;
-              const zH = hH.CSSStyleDeclaration.prototype.setProperty;
-              hH.CSSStyleDeclaration.prototype.setProperty = new Proxy(zH, {
-                apply: gL(((HH, BH, hH) => {
-                  var zH;
-                  const [CH, EH, XH] = hH, GH = HH.apply(BH, hH);
-                  if (rH.has(CH)) return GH;
-                  const YH = null === (zH = BH.parentRule) || void 0 === zH ? void 0 : zH.parentStyleSheet;
-                  SH.onCssomSheetMutation(YH);
+                styleDeclarationCb: GB,
+                mirror: YB,
+                ignoreCSSAttributes: DB,
+                stylesheetManager: QB
+              } = BB, {
+                win: oB,
+                mutationQueue: jB
+              } = OB;
+              const yB = oB.CSSStyleDeclaration.prototype.setProperty;
+              oB.CSSStyleDeclaration.prototype.setProperty = new Proxy(yB, {
+                apply: rG(((BB, OB, oB) => {
+                  var yB;
+                  const [JB, MB, PB] = oB, zB = BB.apply(OB, oB);
+                  if (DB.has(JB)) return zB;
+                  const lB = null === (yB = OB.parentRule) || void 0 === yB ? void 0 : yB.parentStyleSheet;
+                  QB.onCssomSheetMutation(lB);
                   const {
-                    id: uH,
-                    styleId: QH
-                  } = dL(YH, AH, SH.styleMirror);
-                  if (uH && -1 !== uH || QH && -1 !== QH) {
-                    const HH = ZL(BH.parentRule);
-                    tH.queueMutation(YH, (() => LH({
-                      id: uH,
-                      styleId: QH,
+                    id: pB,
+                    styleId: qB
+                  } = bG(lB, YB, QB.styleMirror);
+                  if (pB && -1 !== pB || qB && -1 !== qB) {
+                    const BB = TG(OB.parentRule);
+                    jB.queueMutation(lB, (() => GB({
+                      id: pB,
+                      styleId: qB,
                       set: {
-                        property: CH,
-                        value: EH,
-                        priority: XH
+                        property: JB,
+                        value: MB,
+                        priority: PB
                       },
-                      index: HH
+                      index: BB
                     })))
                   }
-                  return GH
+                  return zB
                 }), "host")
               });
-              const CH = hH.CSSStyleDeclaration.prototype.removeProperty;
-              return hH.CSSStyleDeclaration.prototype.removeProperty = new Proxy(CH, {
-                apply: gL(((HH, BH, hH) => {
-                  var zH;
-                  const [CH] = hH, EH = HH.apply(BH, hH);
-                  if (rH.has(CH)) return EH;
-                  const XH = null === (zH = BH.parentRule) || void 0 === zH ? void 0 : zH.parentStyleSheet;
-                  SH.onCssomSheetMutation(XH);
+              const JB = oB.CSSStyleDeclaration.prototype.removeProperty;
+              return oB.CSSStyleDeclaration.prototype.removeProperty = new Proxy(JB, {
+                apply: rG(((BB, OB, oB) => {
+                  var yB;
+                  const [JB] = oB, MB = BB.apply(OB, oB);
+                  if (DB.has(JB)) return MB;
+                  const PB = null === (yB = OB.parentRule) || void 0 === yB ? void 0 : yB.parentStyleSheet;
+                  QB.onCssomSheetMutation(PB);
                   const {
-                    id: GH,
-                    styleId: YH
-                  } = dL(XH, AH, SH.styleMirror);
-                  if (GH && -1 !== GH || YH && -1 !== YH) {
-                    const HH = ZL(BH.parentRule);
-                    tH.queueMutation(XH, (() => LH({
-                      id: GH,
-                      styleId: YH,
+                    id: zB,
+                    styleId: lB
+                  } = bG(PB, YB, QB.styleMirror);
+                  if (zB && -1 !== zB || lB && -1 !== lB) {
+                    const BB = TG(OB.parentRule);
+                    jB.queueMutation(PB, (() => GB({
+                      id: zB,
+                      styleId: lB,
                       remove: {
-                        property: CH
+                        property: JB
                       },
-                      index: HH
+                      index: BB
                     })))
                   }
-                  return EH
+                  return MB
                 }), "host")
-              }), gL((() => {
-                hH.CSSStyleDeclaration.prototype.setProperty = zH, hH.CSSStyleDeclaration.prototype.removeProperty = CH
+              }), rG((() => {
+                oB.CSSStyleDeclaration.prototype.setProperty = yB, oB.CSSStyleDeclaration.prototype.removeProperty = JB
               }))
-            }(HH, {
-              win: LH,
-              mutationQueue: BH
-            }))), HH.collectFonts && XH("font", (() => function(HH) {
+            }(BB, {
+              win: GB,
+              mutationQueue: OB
+            }))), BB.collectFonts && PB("font", (() => function(BB) {
               let {
-                fontCb: BH,
-                doc: LH
-              } = HH;
-              const AH = LH.defaultView;
-              if (!AH) return () => {};
-              const rH = [],
-                SH = new WeakMap,
-                hH = AH.FontFace;
-              AH.FontFace = function(HH, BH, LH) {
-                const AH = new hH(HH, BH, LH);
-                return SH.set(AH, {
-                  family: HH,
-                  buffer: "string" != typeof BH,
-                  descriptors: LH,
-                  fontSource: "string" == typeof BH ? BH : JSON.stringify(Array.from(new Uint8Array(BH)))
-                }), AH
+                fontCb: OB,
+                doc: GB
+              } = BB;
+              const YB = GB.defaultView;
+              if (!YB) return () => {};
+              const DB = [],
+                QB = new WeakMap,
+                oB = YB.FontFace;
+              YB.FontFace = function(BB, OB, GB) {
+                const YB = new oB(BB, OB, GB);
+                return QB.set(YB, {
+                  family: BB,
+                  buffer: "string" != typeof OB,
+                  descriptors: GB,
+                  fontSource: "string" == typeof OB ? OB : JSON.stringify(Array.from(new Uint8Array(OB)))
+                }), YB
               };
-              const tH = kH(LH.fonts, "add", (function(HH) {
-                return function(LH) {
-                  return setTimeout(gL((() => {
-                    const HH = SH.get(LH);
-                    HH && (BH(HH), SH.delete(LH))
-                  })), 0), HH.apply(this, [LH])
+              const jB = kB(GB.fonts, "add", (function(BB) {
+                return function(GB) {
+                  return setTimeout(rG((() => {
+                    const BB = QB.get(GB);
+                    BB && (OB(BB), QB.delete(GB))
+                  })), 0), BB.apply(this, [GB])
                 }
               }));
-              return rH.push((() => {
-                AH.FontFace = hH
-              })), rH.push(tH), gL((() => {
-                rH.forEach((HH => HH()))
+              return DB.push((() => {
+                YB.FontFace = oB
+              })), DB.push(jB), rG((() => {
+                DB.forEach((BB => BB()))
               }))
-            }(HH)))
+            }(BB)))
           }
-          XH("selection", (() => function(HH) {
+          PB("selection", (() => function(BB) {
             const {
-              doc: BH,
-              mirror: LH,
-              blockClass: AH,
-              blockSelector: rH,
-              selectionCb: SH
-            } = HH;
-            let hH = !0;
-            const tH = gL((() => {
-              const HH = BH.getSelection();
-              if (!HH || hH && (null == HH ? void 0 : HH.isCollapsed)) return;
-              hH = HH.isCollapsed || !1;
-              const tH = [],
-                zH = HH.rangeCount || 0;
-              for (let BH = 0; zH > BH; BH++) {
+              doc: OB,
+              mirror: GB,
+              blockClass: YB,
+              blockSelector: DB,
+              selectionCb: QB
+            } = BB;
+            let oB = !0;
+            const jB = rG((() => {
+              const BB = OB.getSelection();
+              if (!BB || oB && (null == BB ? void 0 : BB.isCollapsed)) return;
+              oB = BB.isCollapsed || !1;
+              const jB = [],
+                yB = BB.rangeCount || 0;
+              for (let OB = 0; yB > OB; OB++) {
                 const {
-                  startContainer: SH,
-                  startOffset: hH,
-                  endContainer: zH,
-                  endOffset: CH
-                } = HH.getRangeAt(BH);
-                xL(SH, AH, rH, !0) || xL(zH, AH, rH, !0) || tH.push({
-                  start: LH.getId(SH),
-                  startOffset: hH,
-                  end: LH.getId(zH),
-                  endOffset: CH
+                  startContainer: QB,
+                  startOffset: oB,
+                  endContainer: yB,
+                  endOffset: JB
+                } = BB.getRangeAt(OB);
+                RG(QB, YB, DB, !0) || RG(yB, YB, DB, !0) || jB.push({
+                  start: GB.getId(QB),
+                  startOffset: oB,
+                  end: GB.getId(yB),
+                  endOffset: JB
                 })
               }
-              SH({
-                rW: tH
+              QB({
+                JZ: jB
               })
             }));
-            return tH(), SL("selectionchange", tH)
-          }(HH))), XH("customElement", (() => function(HH) {
+            return jB(), QG("selectionchange", jB)
+          }(BB))), PB("customElement", (() => function(BB) {
             let {
-              doc: BH,
-              customElementCb: LH
-            } = HH;
-            const AH = BH.defaultView;
-            return AH && AH.customElements ? kH(AH.customElements, "define", (function(HH) {
-              return function(BH, AH, rH) {
+              doc: OB,
+              customElementCb: GB
+            } = BB;
+            const YB = OB.defaultView;
+            return YB && YB.customElements ? kB(YB.customElements, "define", (function(BB) {
+              return function(OB, YB, DB) {
                 try {
-                  LH({
+                  GB({
                     define: {
-                      name: BH
+                      name: OB
                     }
                   })
-                } catch (HH) {
-                  console.warn(`Custom element callback failed for ${BH}`)
+                } catch (BB) {
+                  console.warn(`Custom element callback failed for ${OB}`)
                 }
-                return HH.apply(this, [BH, AH, rH])
+                return BB.apply(this, [OB, YB, DB])
               }
             })) : () => {}
-          }(HH)));
-          for (const BH of HH.plugins) XH(`plugin:${BH.name}`, (() => BH.observer(BH.callback, LH, BH.options)))
-        } catch (HH) {
+          }(BB)));
+          for (const OB of BB.plugins) PB(`plugin:${OB.name}`, (() => OB.observer(OB.callback, GB, OB.options)))
+        } catch (BB) {
           try {
-            tH()
-          } catch (HH) {}
-          throw HH
+            jB()
+          } catch (BB) {}
+          throw BB
         }
-        return tH
+        return jB
       }
 
-      function iL(HH) {
-        return void 0 !== window[HH]
+      function sG(BB) {
+        return void 0 !== window[BB]
       }
 
-      function pL(HH) {
-        return Boolean(void 0 !== window[HH] && window[HH].prototype && "insertRule" in window[HH].prototype && "deleteRule" in window[HH].prototype)
+      function xG(BB) {
+        return Boolean(void 0 !== window[BB] && window[BB].prototype && "insertRule" in window[BB].prototype && "deleteRule" in window[BB].prototype)
       }
-      var yL = class {
-          constructor(HH) {
-            rB(this, "generateIdFn", void 0), rB(this, "iframeRemoteIdToLocalIdMap", new WeakMap), rB(this, "iframeLocalIdToRemoteIdMap", new WeakMap), this.generateIdFn = HH
+      var tG = class {
+          constructor(BB) {
+            DO(this, "generateIdFn", void 0), DO(this, "iframeRemoteIdToLocalIdMap", new WeakMap), DO(this, "iframeLocalIdToRemoteIdMap", new WeakMap), this.generateIdFn = BB
           }
-          getId(HH, BH, LH, AH) {
-            if (0 > BH) return BH;
-            const rH = LH || this.getRemoteIdToLocalIdMap(HH),
-              SH = AH || this.getLocalIdToRemoteIdMap(HH);
-            let hH = rH.get(BH);
-            return void 0 === hH && (hH = this.generateIdFn(), rH.set(BH, hH), SH.set(hH, BH)), hH
+          getId(BB, OB, GB, YB) {
+            if (0 > OB) return OB;
+            const DB = GB || this.getRemoteIdToLocalIdMap(BB),
+              QB = YB || this.getLocalIdToRemoteIdMap(BB);
+            let oB = DB.get(OB);
+            return void 0 === oB && (oB = this.generateIdFn(), DB.set(OB, oB), QB.set(oB, OB)), oB
           }
-          getIds(HH, BH) {
-            const LH = this.getRemoteIdToLocalIdMap(HH),
-              AH = this.getLocalIdToRemoteIdMap(HH);
-            return BH.map((BH => this.getId(HH, BH, LH, AH)))
+          getIds(BB, OB) {
+            const GB = this.getRemoteIdToLocalIdMap(BB),
+              YB = this.getLocalIdToRemoteIdMap(BB);
+            return OB.map((OB => this.getId(BB, OB, GB, YB)))
           }
-          getRemoteId(HH, BH, LH) {
-            var AH;
-            return "number" != typeof BH || 0 > BH ? BH : null !== (AH = (LH || this.getLocalIdToRemoteIdMap(HH)).get(BH)) && void 0 !== AH ? AH : -1
+          getRemoteId(BB, OB, GB) {
+            var YB;
+            return "number" != typeof OB || 0 > OB ? OB : null !== (YB = (GB || this.getLocalIdToRemoteIdMap(BB)).get(OB)) && void 0 !== YB ? YB : -1
           }
-          getRemoteIds(HH, BH) {
-            const LH = this.getLocalIdToRemoteIdMap(HH);
-            return BH.map((BH => this.getRemoteId(HH, BH, LH)))
+          getRemoteIds(BB, OB) {
+            const GB = this.getLocalIdToRemoteIdMap(BB);
+            return OB.map((OB => this.getRemoteId(BB, OB, GB)))
           }
-          reset(HH) {
-            if (!HH) return this.iframeRemoteIdToLocalIdMap = new WeakMap, void(this.iframeLocalIdToRemoteIdMap = new WeakMap);
-            this.iframeRemoteIdToLocalIdMap.delete(HH), this.iframeLocalIdToRemoteIdMap.delete(HH)
+          reset(BB) {
+            if (!BB) return this.iframeRemoteIdToLocalIdMap = new WeakMap, void(this.iframeLocalIdToRemoteIdMap = new WeakMap);
+            this.iframeRemoteIdToLocalIdMap.delete(BB), this.iframeLocalIdToRemoteIdMap.delete(BB)
           }
-          getRemoteIdToLocalIdMap(HH) {
-            let BH = this.iframeRemoteIdToLocalIdMap.get(HH);
-            return BH || (BH = new Map, this.iframeRemoteIdToLocalIdMap.set(HH, BH)), BH
+          getRemoteIdToLocalIdMap(BB) {
+            let OB = this.iframeRemoteIdToLocalIdMap.get(BB);
+            return OB || (OB = new Map, this.iframeRemoteIdToLocalIdMap.set(BB, OB)), OB
           }
-          getLocalIdToRemoteIdMap(HH) {
-            let BH = this.iframeLocalIdToRemoteIdMap.get(HH);
-            return BH || (BH = new Map, this.iframeLocalIdToRemoteIdMap.set(HH, BH)), BH
+          getLocalIdToRemoteIdMap(BB) {
+            let OB = this.iframeLocalIdToRemoteIdMap.get(BB);
+            return OB || (OB = new Map, this.iframeLocalIdToRemoteIdMap.set(BB, OB)), OB
           }
         },
-        HA = class {
-          constructor(HH) {
-            rB(this, "iframes", new WeakMap), rB(this, "crossOriginIframeMap", new WeakMap), rB(this, "crossOriginIframeMirror", new yL(qB)), rB(this, "crossOriginIframeStyleMirror", void 0), rB(this, "crossOriginIframeRootIdMap", new WeakMap), rB(this, "mirror", void 0), rB(this, "mutationCb", void 0), rB(this, "wrappedEmit", void 0), rB(this, "loadListener", void 0), rB(this, "pageHideListener", void 0), rB(this, "stylesheetManager", void 0), rB(this, "recordCrossOriginIframes", void 0), rB(this, "messageHandler", void 0), rB(this, "nestedIframeListeners", new Map), rB(this, "attachedWindows", new WeakMap), rB(this, "attachedDocuments", new WeakMap), rB(this, "attachedIframes", new Map), rB(this, "loadListenerDisposers", new WeakMap), rB(this, "iframeElementsById", new Map), rB(this, "pageHideHandlers", new WeakMap), this.mutationCb = HH.mutationCb, this.wrappedEmit = HH.wrappedEmit, this.stylesheetManager = HH.stylesheetManager, this.recordCrossOriginIframes = HH.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new yL(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = HH.mirror, this.messageHandler = this.handleMessage.bind(this), this.recordCrossOriginIframes && window.addEventListener("message", this.messageHandler)
+        BY = class {
+          constructor(BB) {
+            DO(this, "iframes", new WeakMap), DO(this, "crossOriginIframeMap", new WeakMap), DO(this, "crossOriginIframeMirror", new tG(gO)), DO(this, "crossOriginIframeStyleMirror", void 0), DO(this, "crossOriginIframeRootIdMap", new WeakMap), DO(this, "mirror", void 0), DO(this, "mutationCb", void 0), DO(this, "wrappedEmit", void 0), DO(this, "loadListener", void 0), DO(this, "pageHideListener", void 0), DO(this, "stylesheetManager", void 0), DO(this, "recordCrossOriginIframes", void 0), DO(this, "messageHandler", void 0), DO(this, "nestedIframeListeners", new Map), DO(this, "attachedWindows", new WeakMap), DO(this, "attachedDocuments", new WeakMap), DO(this, "attachedIframes", new Map), DO(this, "loadListenerDisposers", new WeakMap), DO(this, "iframeElementsById", new Map), DO(this, "pageHideHandlers", new WeakMap), this.mutationCb = BB.mutationCb, this.wrappedEmit = BB.wrappedEmit, this.stylesheetManager = BB.stylesheetManager, this.recordCrossOriginIframes = BB.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new tG(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = BB.mirror, this.messageHandler = this.handleMessage.bind(this), this.recordCrossOriginIframes && window.addEventListener("message", this.messageHandler)
           }
-          addIframe(HH) {
-            this.iframes.set(HH, !0), HH.contentWindow && this.crossOriginIframeMap.set(HH.contentWindow, HH)
+          addIframe(BB) {
+            this.iframes.set(BB, !0), BB.contentWindow && this.crossOriginIframeMap.set(BB.contentWindow, BB)
           }
-          registerLoadListenerDisposer(HH, BH) {
-            let LH = this.loadListenerDisposers.get(HH);
-            LH || (LH = new Set, this.loadListenerDisposers.set(HH, LH)), LH.add(BH);
-            const AH = this.mirror.getId(HH); - 1 !== AH && this.iframeElementsById.set(AH, HH)
+          registerLoadListenerDisposer(BB, OB) {
+            let GB = this.loadListenerDisposers.get(BB);
+            GB || (GB = new Set, this.loadListenerDisposers.set(BB, GB)), GB.add(OB);
+            const YB = this.mirror.getId(BB); - 1 !== YB && this.iframeElementsById.set(YB, BB)
           }
-          getIframeElementById(HH) {
-            var BH, LH, AH;
-            return null !== (BH = null !== (LH = null === (AH = this.attachedIframes.get(HH)) || void 0 === AH ? void 0 : AH.element) && void 0 !== LH ? LH : this.iframeElementsById.get(HH)) && void 0 !== BH ? BH : null
+          getIframeElementById(BB) {
+            var OB, GB, YB;
+            return null !== (OB = null !== (GB = null === (YB = this.attachedIframes.get(BB)) || void 0 === YB ? void 0 : YB.element) && void 0 !== GB ? GB : this.iframeElementsById.get(BB)) && void 0 !== OB ? OB : null
           }
-          forgetIframeId(HH) {
-            this.attachedIframes.delete(HH), this.iframeElementsById.delete(HH)
+          forgetIframeId(BB) {
+            this.attachedIframes.delete(BB), this.iframeElementsById.delete(BB)
           }
-          disposeLoadListeners(HH) {
-            const BH = this.loadListenerDisposers.get(HH);
-            BH && (BH.forEach((HH => tL(HH))), this.loadListenerDisposers.delete(HH))
+          disposeLoadListeners(BB) {
+            const OB = this.loadListenerDisposers.get(BB);
+            OB && (OB.forEach((BB => jG(BB))), this.loadListenerDisposers.delete(BB))
           }
-          removePageHideListener(HH) {
-            const BH = this.pageHideHandlers.get(HH);
-            BH && (BH.forEach((HH => {
+          removePageHideListener(BB) {
+            const OB = this.pageHideHandlers.get(BB);
+            OB && (OB.forEach((BB => {
               let {
-                win: BH,
-                handler: LH
-              } = HH;
-              hL(BH, "pagehide", LH)
-            })), this.pageHideHandlers.delete(HH))
+                win: OB,
+                handler: GB
+              } = BB;
+              oG(OB, "pagehide", GB)
+            })), this.pageHideHandlers.delete(BB))
           }
-          addLoadListener(HH) {
-            this.loadListener = HH
+          addLoadListener(BB) {
+            this.loadListener = BB
           }
-          addPageHideListener(HH) {
-            this.pageHideListener = HH
+          addPageHideListener(BB) {
+            this.pageHideListener = BB
           }
           removeLoadListener() {
             this.loadListener = void 0
           }
-          trackIframeContent(HH, BH) {
-            const LH = this.mirror.getId(HH);
-            return this.attachedIframes.set(LH, {
-              element: HH,
-              content: BH
-            }), LH
+          trackIframeContent(BB, OB) {
+            const GB = this.mirror.getId(BB);
+            return this.attachedIframes.set(GB, {
+              element: BB,
+              content: OB
+            }), GB
           }
-          attachIframe(HH, BH) {
-            var LH;
-            const AH = this.trackIframeContent(HH, BH);
-            if (HH.contentDocument) {
-              let BH = this.attachedDocuments.get(HH);
-              BH || (BH = new Set, this.attachedDocuments.set(HH, BH)), BH.add(HH.contentDocument)
+          attachIframe(BB, OB) {
+            var GB;
+            const YB = this.trackIframeContent(BB, OB);
+            if (BB.contentDocument) {
+              let OB = this.attachedDocuments.get(BB);
+              OB || (OB = new Set, this.attachedDocuments.set(BB, OB)), OB.add(BB.contentDocument)
             }
             this.mutationCb({
               adds: [{
-                parentId: AH,
+                parentId: YB,
                 nextId: null,
-                node: BH
+                node: OB
               }],
               removes: [],
               texts: [],
               attributes: [],
               isAttachIframe: !0
             });
-            const rH = HH.contentWindow;
-            if (this.recordCrossOriginIframes && rH && !this.nestedIframeListeners.has(rH)) {
-              const BH = this.handleMessage.bind(this);
-              tL((() => {
-                rH.addEventListener("message", BH), this.nestedIframeListeners.set(rH, BH);
-                let LH = this.attachedWindows.get(HH);
-                LH || (LH = new Set, this.attachedWindows.set(HH, LH)), LH.add(rH)
+            const DB = BB.contentWindow;
+            if (this.recordCrossOriginIframes && DB && !this.nestedIframeListeners.has(DB)) {
+              const OB = this.handleMessage.bind(this);
+              jG((() => {
+                DB.addEventListener("message", OB), this.nestedIframeListeners.set(DB, OB);
+                let GB = this.attachedWindows.get(BB);
+                GB || (GB = new Set, this.attachedWindows.set(BB, GB)), GB.add(DB)
               }))
             }
-            tL((() => {
-              const BH = HH.contentWindow;
-              if (!BH) return;
-              let LH = this.pageHideHandlers.get(HH);
-              if (LH)
-                for (const HH of LH)
-                  if (HH.win === BH) return;
-              const AH = () => {
-                var BH;
-                null === (BH = this.pageHideListener) || void 0 === BH || BH.call(this, HH), HH.contentDocument && this.mirror.removeNodeFromMap(HH.contentDocument)
+            jG((() => {
+              const OB = BB.contentWindow;
+              if (!OB) return;
+              let GB = this.pageHideHandlers.get(BB);
+              if (GB)
+                for (const BB of GB)
+                  if (BB.win === OB) return;
+              const YB = () => {
+                var OB;
+                null === (OB = this.pageHideListener) || void 0 === OB || OB.call(this, BB), BB.contentDocument && this.mirror.removeNodeFromMap(BB.contentDocument)
               };
-              BH.addEventListener("pagehide", AH), LH || (LH = new Set, this.pageHideHandlers.set(HH, LH)), LH.add({
-                win: BH,
-                handler: AH
+              OB.addEventListener("pagehide", YB), GB || (GB = new Set, this.pageHideHandlers.set(BB, GB)), GB.add({
+                win: OB,
+                handler: YB
               })
-            })), null === (LH = this.loadListener) || void 0 === LH || LH.call(this, HH), HH.contentDocument && HH.contentDocument.adoptedStyleSheets && HH.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(HH.contentDocument.adoptedStyleSheets, this.mirror.getId(HH.contentDocument))
+            })), null === (GB = this.loadListener) || void 0 === GB || GB.call(this, BB), BB.contentDocument && BB.contentDocument.adoptedStyleSheets && BB.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(BB.contentDocument.adoptedStyleSheets, this.mirror.getId(BB.contentDocument))
           }
-          handleMessage(HH) {
-            const BH = HH;
-            if ("rrweb" !== BH.data.type || BH.origin !== BH.data.origin) return;
-            if (!HH.source) return;
-            const LH = this.crossOriginIframeMap.get(HH.source);
-            if (!LH) return;
-            const AH = this.transformCrossOriginEvent(LH, BH.data.event);
-            AH && this.wrappedEmit(AH, BH.data.isCheckout)
+          handleMessage(BB) {
+            const OB = BB;
+            if ("rrweb" !== OB.data.type || OB.origin !== OB.data.origin) return;
+            if (!BB.source) return;
+            const GB = this.crossOriginIframeMap.get(BB.source);
+            if (!GB) return;
+            const YB = this.transformCrossOriginEvent(GB, OB.data.event);
+            YB && this.wrappedEmit(YB, OB.data.isCheckout)
           }
-          transformCrossOriginEvent(HH, BH) {
-            switch (BH.type) {
-              case tH.FullSnapshot: {
-                this.crossOriginIframeMirror.reset(HH), this.crossOriginIframeStyleMirror.reset(HH), this.replaceIdOnNode(BH.data.node, HH);
-                const LH = BH.data.node.id;
-                return this.crossOriginIframeRootIdMap.set(HH, LH), this.patchRootIdOnNode(BH.data.node, LH), this.trackIframeContent(HH, BH.data.node), {
-                  timestamp: BH.timestamp,
-                  type: tH.IncrementalSnapshot,
+          transformCrossOriginEvent(BB, OB) {
+            switch (OB.type) {
+              case jB.FullSnapshot: {
+                this.crossOriginIframeMirror.reset(BB), this.crossOriginIframeStyleMirror.reset(BB), this.replaceIdOnNode(OB.data.node, BB);
+                const GB = OB.data.node.id;
+                return this.crossOriginIframeRootIdMap.set(BB, GB), this.patchRootIdOnNode(OB.data.node, GB), this.trackIframeContent(BB, OB.data.node), {
+                  timestamp: OB.timestamp,
+                  type: jB.IncrementalSnapshot,
                   data: {
-                    source: zH.Mutation,
+                    source: yB.Mutation,
                     adds: [{
-                      parentId: this.mirror.getId(HH),
+                      parentId: this.mirror.getId(BB),
                       nextId: null,
-                      node: BH.data.node
+                      node: OB.data.node
                     }],
                     removes: [],
                     texts: [],
@@ -3013,436 +3013,436 @@ export const modules = {
                   }
                 }
               }
-              case tH.Meta:
-              case tH.Load:
-              case tH.DomContentLoaded:
+              case jB.Meta:
+              case jB.Load:
+              case jB.DomContentLoaded:
                 return !1;
-              case tH.Plugin:
-                return BH;
-              case tH.Custom:
-                return this.replaceIds(BH.data.payload, HH, ["id", "parentId", "previousId", "nextId"]), BH;
-              case tH.IncrementalSnapshot:
-                switch (BH.data.source) {
-                  case zH.Mutation:
-                    return BH.data.adds.forEach((BH => {
-                      this.replaceIds(BH, HH, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(BH.node, HH);
-                      const LH = this.crossOriginIframeRootIdMap.get(HH);
-                      LH && this.patchRootIdOnNode(BH.node, LH)
-                    })), BH.data.removes.forEach((BH => {
-                      this.replaceIds(BH, HH, ["parentId", "id"])
-                    })), BH.data.attributes.forEach((BH => {
-                      this.replaceIds(BH, HH, ["id"])
-                    })), BH.data.texts.forEach((BH => {
-                      this.replaceIds(BH, HH, ["id"])
-                    })), BH;
-                  case zH.Drag:
-                  case zH.TouchMove:
-                  case zH.MouseMove:
-                    return BH.data.positions.forEach((BH => {
-                      this.replaceIds(BH, HH, ["id"])
-                    })), BH;
-                  case zH.ViewportResize:
+              case jB.Plugin:
+                return OB;
+              case jB.Custom:
+                return this.replaceIds(OB.data.payload, BB, ["id", "parentId", "previousId", "nextId"]), OB;
+              case jB.IncrementalSnapshot:
+                switch (OB.data.source) {
+                  case yB.Mutation:
+                    return OB.data.adds.forEach((OB => {
+                      this.replaceIds(OB, BB, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(OB.node, BB);
+                      const GB = this.crossOriginIframeRootIdMap.get(BB);
+                      GB && this.patchRootIdOnNode(OB.node, GB)
+                    })), OB.data.removes.forEach((OB => {
+                      this.replaceIds(OB, BB, ["parentId", "id"])
+                    })), OB.data.attributes.forEach((OB => {
+                      this.replaceIds(OB, BB, ["id"])
+                    })), OB.data.texts.forEach((OB => {
+                      this.replaceIds(OB, BB, ["id"])
+                    })), OB;
+                  case yB.Drag:
+                  case yB.TouchMove:
+                  case yB.MouseMove:
+                    return OB.data.positions.forEach((OB => {
+                      this.replaceIds(OB, BB, ["id"])
+                    })), OB;
+                  case yB.ViewportResize:
                     return !1;
-                  case zH.MediaInteraction:
-                  case zH.MouseInteraction:
-                  case zH.Scroll:
-                  case zH.CanvasMutation:
-                  case zH.Input:
-                    return this.replaceIds(BH.data, HH, ["id"]), BH;
-                  case zH.StyleSheetRule:
-                  case zH.StyleDeclaration:
-                    return this.replaceIds(BH.data, HH, ["id"]), this.replaceStyleIds(BH.data, HH, ["styleId"]), BH;
-                  case zH.Font:
-                    return BH;
-                  case zH.Selection:
-                    return BH.data.rW.forEach((BH => {
-                      this.replaceIds(BH, HH, ["start", "end"])
-                    })), BH;
-                  case zH.AdoptedStyleSheet:
-                    var LH;
-                    return this.replaceIds(BH.data, HH, ["id"]), this.replaceStyleIds(BH.data, HH, ["styleIds"]), null === (LH = BH.data.styles) || void 0 === LH || LH.forEach((BH => {
-                      this.replaceStyleIds(BH, HH, ["styleId"])
-                    })), BH
+                  case yB.MediaInteraction:
+                  case yB.MouseInteraction:
+                  case yB.Scroll:
+                  case yB.CanvasMutation:
+                  case yB.Input:
+                    return this.replaceIds(OB.data, BB, ["id"]), OB;
+                  case yB.StyleSheetRule:
+                  case yB.StyleDeclaration:
+                    return this.replaceIds(OB.data, BB, ["id"]), this.replaceStyleIds(OB.data, BB, ["styleId"]), OB;
+                  case yB.Font:
+                    return OB;
+                  case yB.Selection:
+                    return OB.data.JZ.forEach((OB => {
+                      this.replaceIds(OB, BB, ["start", "end"])
+                    })), OB;
+                  case yB.AdoptedStyleSheet:
+                    var GB;
+                    return this.replaceIds(OB.data, BB, ["id"]), this.replaceStyleIds(OB.data, BB, ["styleIds"]), null === (GB = OB.data.styles) || void 0 === GB || GB.forEach((OB => {
+                      this.replaceStyleIds(OB, BB, ["styleId"])
+                    })), OB
                 }
             }
             return !1
           }
-          replace(HH, BH, LH, AH) {
-            for (const rH of AH)(Array.isArray(BH[rH]) || "number" == typeof BH[rH]) && (BH[rH] = Array.isArray(BH[rH]) ? HH.getIds(LH, BH[rH]) : HH.getId(LH, BH[rH]));
-            return BH
+          replace(BB, OB, GB, YB) {
+            for (const DB of YB)(Array.isArray(OB[DB]) || "number" == typeof OB[DB]) && (OB[DB] = Array.isArray(OB[DB]) ? BB.getIds(GB, OB[DB]) : BB.getId(GB, OB[DB]));
+            return OB
           }
-          replaceIds(HH, BH, LH) {
-            return this.replace(this.crossOriginIframeMirror, HH, BH, LH)
+          replaceIds(BB, OB, GB) {
+            return this.replace(this.crossOriginIframeMirror, BB, OB, GB)
           }
-          replaceStyleIds(HH, BH, LH) {
-            return this.replace(this.crossOriginIframeStyleMirror, HH, BH, LH)
+          replaceStyleIds(BB, OB, GB) {
+            return this.replace(this.crossOriginIframeStyleMirror, BB, OB, GB)
           }
-          replaceIdOnNode(HH, BH) {
-            this.replaceIds(HH, BH, ["id", "rootId"]), "childNodes" in HH && HH.childNodes.forEach((HH => {
-              this.replaceIdOnNode(HH, BH)
+          replaceIdOnNode(BB, OB) {
+            this.replaceIds(BB, OB, ["id", "rootId"]), "childNodes" in BB && BB.childNodes.forEach((BB => {
+              this.replaceIdOnNode(BB, OB)
             }))
           }
-          patchRootIdOnNode(HH, BH) {
-            HH.type === YH.Document || HH.rootId || (HH.rootId = BH), "childNodes" in HH && HH.childNodes.forEach((HH => {
-              this.patchRootIdOnNode(HH, BH)
+          patchRootIdOnNode(BB, OB) {
+            BB.type === lB.Document || BB.rootId || (BB.rootId = OB), "childNodes" in BB && BB.childNodes.forEach((BB => {
+              this.patchRootIdOnNode(BB, OB)
             }))
           }
-          removeIframeById(HH) {
-            const BH = this.attachedIframes.get(HH),
-              LH = (null == BH ? void 0 : BH.element) || this.iframeElementsById.get(HH) || this.mirror.yAH(HH);
-            if (this.iframeElementsById.delete(HH), LH) {
-              const HH = LH.contentWindow,
-                BH = this.attachedWindows.get(LH);
-              BH && (BH.forEach((HH => {
-                const BH = this.nestedIframeListeners.get(HH);
-                BH && (hL(HH, "message", BH), this.nestedIframeListeners.delete(HH)), this.crossOriginIframeMap.delete(HH)
-              })), this.attachedWindows.delete(LH)), HH && this.nestedIframeListeners.has(HH) && (hL(HH, "message", this.nestedIframeListeners.get(HH)), this.nestedIframeListeners.delete(HH)), HH && this.crossOriginIframeMap.delete(HH), this.iframes.delete(LH), this.disposeLoadListeners(LH), this.removePageHideListener(LH);
-              const AH = this.attachedDocuments.get(LH);
-              AH && (AH.forEach((HH => {
-                tL((() => this.mirror.removeNodeFromMap(HH)))
-              })), tL((() => FL(LH, AH))), this.attachedDocuments.delete(LH))
+          removeIframeById(BB) {
+            const OB = this.attachedIframes.get(BB),
+              GB = (null == OB ? void 0 : OB.element) || this.iframeElementsById.get(BB) || this.mirror.yDB(BB);
+            if (this.iframeElementsById.delete(BB), GB) {
+              const BB = GB.contentWindow,
+                OB = this.attachedWindows.get(GB);
+              OB && (OB.forEach((BB => {
+                const OB = this.nestedIframeListeners.get(BB);
+                OB && (oG(BB, "message", OB), this.nestedIframeListeners.delete(BB)), this.crossOriginIframeMap.delete(BB)
+              })), this.attachedWindows.delete(GB)), BB && this.nestedIframeListeners.has(BB) && (oG(BB, "message", this.nestedIframeListeners.get(BB)), this.nestedIframeListeners.delete(BB)), BB && this.crossOriginIframeMap.delete(BB), this.iframes.delete(GB), this.disposeLoadListeners(GB), this.removePageHideListener(GB);
+              const YB = this.attachedDocuments.get(GB);
+              YB && (YB.forEach((BB => {
+                jG((() => this.mirror.removeNodeFromMap(BB)))
+              })), jG((() => hG(GB, YB))), this.attachedDocuments.delete(GB))
             }
-            BH && this.attachedIframes.delete(HH)
+            OB && this.attachedIframes.delete(BB)
           }
           cleanupDetachedIframes() {
             if (0 === this.attachedIframes.size) return;
-            const HH = [];
-            this.attachedIframes.forEach(((BH, LH) => {
-              this.mirror.has(LH) || HH.push(LH)
-            })), HH.forEach((HH => this.removeIframeById(HH)))
+            const BB = [];
+            this.attachedIframes.forEach(((OB, GB) => {
+              this.mirror.has(GB) || BB.push(GB)
+            })), BB.forEach((BB => this.removeIframeById(BB)))
           }
           reattachIframes() {
-            this.attachedIframes.forEach(((HH, BH) => {
+            this.attachedIframes.forEach(((BB, OB) => {
               let {
-                content: LH
-              } = HH;
-              this.mirror.has(BH) ? this.mutationCb({
+                content: GB
+              } = BB;
+              this.mirror.has(OB) ? this.mutationCb({
                 adds: [{
-                  parentId: BH,
+                  parentId: OB,
                   nextId: null,
-                  node: LH
+                  node: GB
                 }],
                 removes: [],
                 texts: [],
                 attributes: [],
                 isAttachIframe: !0
-              }) : this.attachedIframes.delete(BH)
+              }) : this.attachedIframes.delete(OB)
             }))
           }
           destroy() {
-            this.recordCrossOriginIframes && hL(window, "message", this.messageHandler), this.nestedIframeListeners.forEach(((HH, BH) => {
-              hL(BH, "message", HH)
+            this.recordCrossOriginIframes && oG(window, "message", this.messageHandler), this.nestedIframeListeners.forEach(((BB, OB) => {
+              oG(OB, "message", BB)
             })), this.nestedIframeListeners.clear();
-            const HH = new Set;
-            this.iframeElementsById.forEach((BH => HH.add(BH))), this.attachedIframes.forEach((BH => {
+            const BB = new Set;
+            this.iframeElementsById.forEach((OB => BB.add(OB))), this.attachedIframes.forEach((OB => {
               let {
-                element: LH
-              } = BH;
-              return HH.add(LH)
-            })), HH.forEach((HH => {
-              this.disposeLoadListeners(HH), this.removePageHideListener(HH)
+                element: GB
+              } = OB;
+              return BB.add(GB)
+            })), BB.forEach((BB => {
+              this.disposeLoadListeners(BB), this.removePageHideListener(BB)
             })), this.crossOriginIframeMirror.reset(), this.crossOriginIframeStyleMirror.reset(), this.attachedIframes.clear(), this.crossOriginIframeMap = new WeakMap, this.iframes = new WeakMap, this.crossOriginIframeRootIdMap = new WeakMap, this.loadListenerDisposers = new WeakMap, this.pageHideHandlers = new WeakMap, this.attachedDocuments = new WeakMap, this.attachedWindows = new WeakMap, this.iframeElementsById = new Map
           }
         },
-        BA = class {
-          constructor(HH) {
-            rB(this, "shadowDoms", new WeakSet), rB(this, "mutationCb", void 0), rB(this, "scrollCb", void 0), rB(this, "bypassOptions", void 0), rB(this, "mirror", void 0), rB(this, "restoreHandlers", []), this.mutationCb = HH.mutationCb, this.scrollCb = HH.scrollCb, this.bypassOptions = HH.bypassOptions, this.mirror = HH.mirror, this.init()
+        OY = class {
+          constructor(BB) {
+            DO(this, "shadowDoms", new WeakSet), DO(this, "mutationCb", void 0), DO(this, "scrollCb", void 0), DO(this, "bypassOptions", void 0), DO(this, "mirror", void 0), DO(this, "restoreHandlers", []), this.mutationCb = BB.mutationCb, this.scrollCb = BB.scrollCb, this.bypassOptions = BB.bypassOptions, this.mirror = BB.mirror, this.init()
           }
           init() {
             this.reset(), this.patchAttachShadow(Element, document)
           }
-          addShadowRoot(HH, BH) {
-            var LH, rH;
-            if (!tB(HH)) return;
-            if (this.shadowDoms.has(HH)) return;
-            this.shadowDoms.add(HH);
-            const SH = null !== (LH = null === (rH = mH.host(HH)) || void 0 === rH ? void 0 : rH.ownerDocument) && void 0 !== LH ? LH : BH,
+          addShadowRoot(BB, OB) {
+            var GB, DB;
+            if (!jO(BB)) return;
+            if (this.shadowDoms.has(BB)) return;
+            this.shadowDoms.add(BB);
+            const QB = null !== (GB = null === (DB = dB.host(BB)) || void 0 === DB ? void 0 : DB.ownerDocument) && void 0 !== GB ? GB : OB,
               {
-                observer: hH,
-                buffer: tH
-              } = jL(AH(AH({}, this.bypassOptions), {}, {
-                doc: SH,
+                observer: oB,
+                buffer: jB
+              } = EG(YB(YB({}, this.bypassOptions), {}, {
+                doc: QB,
                 mutationCb: this.mutationCb,
                 mirror: this.mirror,
                 shadowDomManager: this
-              }), HH);
+              }), BB);
             this.restoreHandlers.push({
-              doc: SH,
+              doc: QB,
               handler() {
-                hH.disconnect(), tH.destroy(), tH.releaseCanvasManager();
-                const HH = NL.indexOf(tH); - 1 !== HH && NL.splice(HH, 1)
+                oB.disconnect(), jB.destroy(), jB.releaseCanvasManager();
+                const BB = XG.indexOf(jB); - 1 !== BB && XG.splice(BB, 1)
               }
             }), this.restoreHandlers.push({
-              doc: SH,
-              handler: nL(AH(AH({}, this.bypassOptions), {}, {
+              doc: QB,
+              handler: cG(YB(YB({}, this.bypassOptions), {}, {
                 scrollCb: this.scrollCb,
-                doc: HH,
+                doc: BB,
                 mirror: this.mirror
               }))
             }), setTimeout((() => {
-              HH.adoptedStyleSheets && HH.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(HH.adoptedStyleSheets, this.mirror.getId(mH.host(HH))), this.restoreHandlers.push({
-                doc: SH,
-                handler: aL({
+              BB.adoptedStyleSheets && BB.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(BB.adoptedStyleSheets, this.mirror.getId(dB.host(BB))), this.restoreHandlers.push({
+                doc: QB,
+                handler: CG({
                   mirror: this.mirror,
                   stylesheetManager: this.bypassOptions.stylesheetManager
-                }, HH)
+                }, BB)
               })
             }), 0)
           }
-          observeAttachShadow(HH) {
-            tL((() => {
-              const BH = HH.contentWindow,
-                LH = HH.contentDocument;
-              BH && LH && this.patchAttachShadow(BH.Element, LH)
+          observeAttachShadow(BB) {
+            jG((() => {
+              const OB = BB.contentWindow,
+                GB = BB.contentDocument;
+              OB && GB && this.patchAttachShadow(OB.Element, GB)
             }))
           }
-          patchAttachShadow(HH, BH) {
-            const LH = this;
+          patchAttachShadow(BB, OB) {
+            const GB = this;
             this.restoreHandlers.push({
-              doc: BH,
-              handler: kH(HH.prototype, "attachShadow", (function(HH) {
-                return function(AH) {
-                  const rH = HH.call(this, AH),
-                    SH = mH.shadowRoot(this);
-                  return SH && mL(this) && LH.addShadowRoot(SH, BH), rH
+              doc: OB,
+              handler: kB(BB.prototype, "attachShadow", (function(BB) {
+                return function(YB) {
+                  const DB = BB.call(this, YB),
+                    QB = dB.shadowRoot(this);
+                  return QB && dG(this) && GB.addShadowRoot(QB, OB), DB
                 }
               }))
             })
           }
           reset() {
-            this.restoreHandlers.forEach((HH => {
+            this.restoreHandlers.forEach((BB => {
               let {
-                handler: BH
-              } = HH;
+                handler: OB
+              } = BB;
               try {
-                BH()
-              } catch (BH) {}
+                OB()
+              } catch (OB) {}
             })), this.restoreHandlers = [], this.shadowDoms = new WeakSet
           }
-          resetForDoc(HH) {
-            const BH = [];
-            for (const LH of this.restoreHandlers)
-              if (LH.doc === HH) try {
-                LH.handler()
-              } catch (HH) {} else BH.push(LH);
-            this.restoreHandlers = BH
+          resetForDoc(BB) {
+            const OB = [];
+            for (const GB of this.restoreHandlers)
+              if (GB.doc === BB) try {
+                GB.handler()
+              } catch (BB) {} else OB.push(GB);
+            this.restoreHandlers = OB
           }
         },
-        LA = "skip-frame";
+        GY = "skip-frame";
 
-      function AA(HH) {
-        if ("object" != typeof HH || null === HH) return !1;
+      function YY(BB) {
+        if ("object" != typeof BB || null === BB) return !1;
         const {
-          x: BH,
-          y: LH,
-          width: AH,
-          height: rH
-        } = HH;
-        return Number.isFinite(BH) && Number.isFinite(LH) && Number.isFinite(AH) && Number.isFinite(rH) && AH >= 0 && rH >= 0
+          x: OB,
+          y: GB,
+          width: YB,
+          height: DB
+        } = BB;
+        return Number.isFinite(OB) && Number.isFinite(GB) && Number.isFinite(YB) && Number.isFinite(DB) && YB >= 0 && DB >= 0
       }
-      for (var rA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", SA = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256), hA = 0; 64 > hA; hA++) SA[rA.charCodeAt(hA)] = hA;
-      var tA = function(HH) {
-          var BH, LH = new Uint8Array(HH),
-            AH = LH.length,
-            rH = "";
-          for (BH = 0; AH > BH; BH += 3) rH += rA[LH[BH] >> 2], rH += rA[(3 & LH[BH]) << 4 | LH[BH + 1] >> 4], rH += rA[(15 & LH[BH + 1]) << 2 | LH[BH + 2] >> 6], rH += rA[63 & LH[BH + 2]];
-          return AH % 3 == 2 ? rH = rH.substring(0, rH.length - 1) + "=" : AH % 3 == 1 && (rH = rH.substring(0, rH.length - 2) + "=="), rH
+      for (var DY = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", QY = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256), oY = 0; 64 > oY; oY++) QY[DY.charCodeAt(oY)] = oY;
+      var jY = function(BB) {
+          var OB, GB = new Uint8Array(BB),
+            YB = GB.length,
+            DB = "";
+          for (OB = 0; YB > OB; OB += 3) DB += DY[GB[OB] >> 2], DB += DY[(3 & GB[OB]) << 4 | GB[OB + 1] >> 4], DB += DY[(15 & GB[OB + 1]) << 2 | GB[OB + 2] >> 6], DB += DY[63 & GB[OB + 2]];
+          return YB % 3 == 2 ? DB = DB.substring(0, DB.length - 1) + "=" : YB % 3 == 1 && (DB = DB.substring(0, DB.length - 2) + "=="), DB
         },
-        zA = !1,
-        CA = new Map,
-        EA = (HH, BH, LH) => {
-          if (!HH || !YA(HH, BH) && "object" != typeof HH) return;
-          const AH = function(HH, BH) {
-            let LH = CA.get(HH);
-            return LH || (LH = new Map, CA.set(HH, LH)), LH.has(BH) || LH.set(BH, []), LH.get(BH)
-          }(LH, HH.constructor.name);
-          let rH = AH.indexOf(HH);
-          return -1 === rH && (rH = AH.length, AH.push(HH)), rH
+        yY = !1,
+        JY = new Map,
+        MY = (BB, OB, GB) => {
+          if (!BB || !lY(BB, OB) && "object" != typeof BB) return;
+          const YB = function(BB, OB) {
+            let GB = JY.get(BB);
+            return GB || (GB = new Map, JY.set(BB, GB)), GB.has(OB) || GB.set(OB, []), GB.get(OB)
+          }(GB, BB.constructor.name);
+          let DB = YB.indexOf(BB);
+          return -1 === DB && (DB = YB.length, YB.push(BB)), DB
         };
 
-      function XA(HH, BH, LH, AH) {
-        if (HH instanceof Array) return HH.map((HH => XA(HH, BH, LH, AH)));
-        if (null === HH) return HH;
-        if (HH instanceof Float32Array || HH instanceof Float64Array || HH instanceof Int32Array || HH instanceof Uint32Array || HH instanceof Uint8Array || HH instanceof Uint16Array || HH instanceof Int16Array || HH instanceof Int8Array || HH instanceof Uint8ClampedArray) return {
-          rr_type: HH.constructor.name,
-          args: [Object.values(HH)]
+      function PY(BB, OB, GB, YB) {
+        if (BB instanceof Array) return BB.map((BB => PY(BB, OB, GB, YB)));
+        if (null === BB) return BB;
+        if (BB instanceof Float32Array || BB instanceof Float64Array || BB instanceof Int32Array || BB instanceof Uint32Array || BB instanceof Uint8Array || BB instanceof Uint16Array || BB instanceof Int16Array || BB instanceof Int8Array || BB instanceof Uint8ClampedArray) return {
+          rr_type: BB.constructor.name,
+          args: [Object.values(BB)]
         };
-        if (HH instanceof ArrayBuffer) return {
-          rr_type: HH.constructor.name,
-          base64: tA(HH)
+        if (BB instanceof ArrayBuffer) return {
+          rr_type: BB.constructor.name,
+          base64: jY(BB)
         };
-        if (HH instanceof DataView) return {
-          rr_type: HH.constructor.name,
-          args: [XA(HH.buffer, BH, LH, AH), HH.byteOffset, HH.byteLength]
+        if (BB instanceof DataView) return {
+          rr_type: BB.constructor.name,
+          args: [PY(BB.buffer, OB, GB, YB), BB.byteOffset, BB.byteLength]
         };
-        if (HH instanceof HTMLImageElement) {
-          const BH = HH.constructor.name,
+        if (BB instanceof HTMLImageElement) {
+          const OB = BB.constructor.name,
             {
-              src: LH
-            } = HH;
+              src: GB
+            } = BB;
           return {
-            rr_type: BH,
-            src: LH
+            rr_type: OB,
+            src: GB
           }
         }
-        if (HH instanceof HTMLCanvasElement) {
-          const BH = "HTMLImageElement";
-          let LH;
+        if (BB instanceof HTMLCanvasElement) {
+          const OB = "HTMLImageElement";
+          let GB;
           try {
-            LH = HH.toDataURL(AH.type, AH.quality)
-          } catch (HH) {
-            throw function(HH) {
-              "SecurityError" === (null == HH ? void 0 : HH.name) ? zA || (zA = !0, console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read. A cross-origin image or video drawn into it taints it.", HH)): console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read.", HH)
-            }(HH), HH
+            GB = BB.toDataURL(YB.type, YB.quality)
+          } catch (BB) {
+            throw function(BB) {
+              "SecurityError" === (null == BB ? void 0 : BB.name) ? yY || (yY = !0, console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read. A cross-origin image or video drawn into it taints it.", BB)): console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read.", BB)
+            }(BB), BB
           }
           return {
-            rr_type: BH,
-            src: LH
+            rr_type: OB,
+            src: GB
           }
         }
-        return HH instanceof ImageData ? {
-          rr_type: HH.constructor.name,
-          args: [XA(HH.data, BH, LH, AH), HH.width, HH.height]
-        } : YA(HH, BH) || "object" == typeof HH ? {
-          rr_type: HH.constructor.name,
-          index: EA(HH, BH, LH)
-        } : HH
+        return BB instanceof ImageData ? {
+          rr_type: BB.constructor.name,
+          args: [PY(BB.data, OB, GB, YB), BB.width, BB.height]
+        } : lY(BB, OB) || "object" == typeof BB ? {
+          rr_type: BB.constructor.name,
+          index: MY(BB, OB, GB)
+        } : BB
       }
-      var GA = (HH, BH, LH, AH) => HH.map((HH => XA(HH, BH, LH, AH))),
-        YA = (HH, BH) => {
-          const LH = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((HH => "function" == typeof BH[HH]));
-          return Boolean(LH.find((LH => HH instanceof BH[LH])))
+      var zY = (BB, OB, GB, YB) => BB.map((BB => PY(BB, OB, GB, YB))),
+        lY = (BB, OB) => {
+          const GB = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((BB => "function" == typeof OB[BB]));
+          return Boolean(GB.find((GB => BB instanceof OB[GB])))
         },
-        uA = ["webgl", "webgl2"];
+        pY = ["webgl", "webgl2"];
 
-      function QA(HH) {
-        return "nodeType" in HH
+      function qY(BB) {
+        return "nodeType" in BB
       }
 
-      function WA(HH, BH, LH, rH) {
-        const SH = [];
+      function ZY(BB, OB, GB, DB) {
+        const QB = [];
         try {
-          if (rH) {
-            const rH = function(HH, BH, LH) {
-              const rH = HH.GPUCanvasContext;
-              if ((null == rH ? void 0 : rH.prototype) && "function" == typeof rH.prototype.configure) return kH(rH.prototype, "configure", (function(rH) {
-                return function(SH) {
-                  const hH = function(HH) {
+          if (DB) {
+            const DB = function(BB, OB, GB) {
+              const DB = BB.GPUCanvasContext;
+              if ((null == DB ? void 0 : DB.prototype) && "function" == typeof DB.prototype.configure) return kB(DB.prototype, "configure", (function(DB) {
+                return function(QB) {
+                  const oB = function(BB) {
                     const {
-                      canvas: BH
-                    } = HH;
-                    return BH && "object" == typeof BH ? BH : null
+                      canvas: OB
+                    } = BB;
+                    return OB && "object" == typeof OB ? OB : null
                   }(this);
-                  if (!hH || QA(hH) && xL(hH, BH, LH, !0)) return rH.call(this, SH);
-                  QA(hH) && !("__context" in hH) && (hH.__context = "webgpu");
-                  const tH = function(HH) {
-                    const BH = HH.GPUTextureUsage;
-                    return BH ? BH.COPY_SRC | BH.RENDER_ATTACHMENT : null
-                  }(HH);
-                  return rH.call(this, null !== tH && SH ? AH(AH({}, SH), {}, {
-                    usage: "number" == typeof SH.usage ? SH.usage | tH : tH
-                  }) : SH)
+                  if (!oB || qY(oB) && RG(oB, OB, GB, !0)) return DB.call(this, QB);
+                  qY(oB) && !("__context" in oB) && (oB.__context = "webgpu");
+                  const jB = function(BB) {
+                    const OB = BB.GPUTextureUsage;
+                    return OB ? OB.COPY_SRC | OB.RENDER_ATTACHMENT : null
+                  }(BB);
+                  return DB.call(this, null !== jB && QB ? YB(YB({}, QB), {}, {
+                    usage: "number" == typeof QB.usage ? QB.usage | jB : jB
+                  }) : QB)
                 }
               }))
-            }(HH, BH, LH);
-            rH && SH.push(rH)
+            }(BB, OB, GB);
+            DB && QB.push(DB)
           }
-          const hH = kH(HH.HTMLCanvasElement.prototype, "getContext", (function(HH) {
-            return function(AH) {
-              const SH = function(HH) {
-                return "experimental-webgl" === HH ? "webgl" : HH
-              }(AH);
-              for (var hH = arguments.length, tH = new Array(hH > 1 ? hH - 1 : 0), zH = 1; zH < hH; zH++) tH[zH - 1] = arguments[zH];
-              if (!xL(this, BH, LH, !0) && ("__context" in this || (this.__context = SH), rH && uA.includes(SH)))
-                if (tH[0] && "object" == typeof tH[0]) {
-                  const HH = tH[0];
-                  HH.preserveDrawingBuffer || (HH.preserveDrawingBuffer = !0)
-                } else tH.splice(0, 1, {
+          const oB = kB(BB.HTMLCanvasElement.prototype, "getContext", (function(BB) {
+            return function(YB) {
+              const QB = function(BB) {
+                return "experimental-webgl" === BB ? "webgl" : BB
+              }(YB);
+              for (var oB = arguments.length, jB = new Array(oB > 1 ? oB - 1 : 0), yB = 1; yB < oB; yB++) jB[yB - 1] = arguments[yB];
+              if (!RG(this, OB, GB, !0) && ("__context" in this || (this.__context = QB), DB && pY.includes(QB)))
+                if (jB[0] && "object" == typeof jB[0]) {
+                  const BB = jB[0];
+                  BB.preserveDrawingBuffer || (BB.preserveDrawingBuffer = !0)
+                } else jB.splice(0, 1, {
                   preserveDrawingBuffer: !0
                 });
-              return HH.apply(this, [AH, ...tH])
+              return BB.apply(this, [YB, ...jB])
             }
           }));
-          SH.push(hH)
-        } catch (HH) {
+          QB.push(oB)
+        } catch (BB) {
           console.warn("failed to patch HTMLCanvasElement.prototype.getContext")
         }
         return () => {
-          SH.forEach((HH => HH()))
+          QB.forEach((BB => BB()))
         }
       }
 
-      function MA(HH, BH, LH, AH, rH, SH, hH) {
-        const tH = [],
-          zH = Object.getOwnPropertyNames(HH);
-        for (const CH of zH)
-          if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(CH)) try {
-            if ("function" != typeof HH[CH]) continue;
-            const zH = kH(HH, CH, (function(HH) {
+      function NY(BB, OB, GB, YB, DB, QB, oB) {
+        const jB = [],
+          yB = Object.getOwnPropertyNames(BB);
+        for (const JB of yB)
+          if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(JB)) try {
+            if ("function" != typeof BB[JB]) continue;
+            const yB = kB(BB, JB, (function(BB) {
               return function() {
-                for (var tH = arguments.length, zH = new Array(tH), EH = 0; EH < tH; EH++) zH[EH] = arguments[EH];
-                const XH = HH.apply(this, zH);
-                if (EA(XH, SH, this), this.canvas && "tagName" in this.canvas && !xL(this.canvas, AH, rH, !0)) {
-                  let AH;
+                for (var jB = arguments.length, yB = new Array(jB), MB = 0; MB < jB; MB++) yB[MB] = arguments[MB];
+                const PB = BB.apply(this, yB);
+                if (MY(PB, QB, this), this.canvas && "tagName" in this.canvas && !RG(this.canvas, YB, DB, !0)) {
+                  let YB;
                   try {
-                    AH = GA(zH, SH, this, hH)
-                  } catch (HH) {}
-                  AH && LH(this.canvas, {
-                    type: BH,
-                    property: CH,
-                    args: AH
+                    YB = zY(yB, QB, this, oB)
+                  } catch (BB) {}
+                  YB && GB(this.canvas, {
+                    type: OB,
+                    property: JB,
+                    args: YB
                   })
                 }
-                return XH
+                return PB
               }
             }));
-            tH.push(zH)
-          } catch (SH) {
-            const hH = GL(HH, CH, {
-              set(HH) {
-                this.canvas && "tagName" in this.canvas && !xL(this.canvas, AH, rH, !0) && LH(this.canvas, {
-                  type: BH,
-                  property: CH,
-                  args: [HH],
+            jB.push(yB)
+          } catch (QB) {
+            const oB = zG(BB, JB, {
+              set(BB) {
+                this.canvas && "tagName" in this.canvas && !RG(this.canvas, YB, DB, !0) && GB(this.canvas, {
+                  type: OB,
+                  property: JB,
+                  args: [BB],
                   setter: !0
                 })
               }
             });
-            tH.push(hH)
+            jB.push(oB)
           }
-        return tH
+        return jB
       }
-      var xA = '(function() {\n\t//#region ../../../../../../setup-pnpm/node_modules/.bin/store/v11/links/@/base64-arraybuffer/1.0.2/f63fa6b5c318cf1c9f6bdd1d4292ad2f15f76f2ec78475025a2d44070e896fe9/node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js\n\tvar chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n\tvar lookup = typeof Uint8Array === "undefined" ? [] : /* @__PURE__ */ new Uint8Array(256);\n\tfor (var i = 0; i < chars.length; i++) lookup[chars.charCodeAt(i)] = i;\n\tvar encode = function(arraybuffer) {\n\t\tvar bytes = new Uint8Array(arraybuffer), i, len = bytes.length, base64 = "";\n\t\tfor (i = 0; i < len; i += 3) {\n\t\t\tbase64 += chars[bytes[i] >> 2];\n\t\t\tbase64 += chars[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];\n\t\t\tbase64 += chars[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];\n\t\t\tbase64 += chars[bytes[i + 2] & 63];\n\t\t}\n\t\tif (len % 3 === 2) base64 = base64.substring(0, base64.length - 1) + "=";\n\t\telse if (len % 3 === 1) base64 = base64.substring(0, base64.length - 2) + "==";\n\t\treturn base64;\n\t};\n\t//#endregion\n\t//#region ../rrweb/src/record/workers/image-bitmap-data-url-worker.ts\n\tconst lastFingerprintMap = /* @__PURE__ */ new Map();\n\tconst transparentFingerprintMap = /* @__PURE__ */ new Map();\n\tconst lastSentAtMap = /* @__PURE__ */ new Map();\n\tconst PROVIDER_KEYFRAME_INTERVAL_MS = 3e4;\n\tfunction hashPixels(data) {\n\t\tconst view = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >>> 2);\n\t\tlet primaryHash = 2166136261;\n\t\tlet secondaryHash = 2654435769;\n\t\tfor (let i = 0; i < view.length; i++) {\n\t\t\tprimaryHash ^= view[i];\n\t\t\tprimaryHash = Math.imul(primaryHash, 16777619);\n\t\t\tsecondaryHash ^= view[i];\n\t\t\tsecondaryHash = Math.imul(secondaryHash, 2246822507);\n\t\t}\n\t\treturn `${(primaryHash >>> 0).toString(16)}:${(secondaryHash >>> 0).toString(16)}`;\n\t}\n\tfunction frameFingerprint(width, height, data) {\n\t\treturn `${width}x${height}:${hashPixels(data)}`;\n\t}\n\tfunction transparentFingerprint(width, height) {\n\t\tconst pixelCount = width * height;\n\t\tlet hash = transparentFingerprintMap.get(pixelCount);\n\t\tif (hash === void 0) {\n\t\t\thash = hashPixels(new Uint8ClampedArray(pixelCount * 4));\n\t\t\ttransparentFingerprintMap.set(pixelCount, hash);\n\t\t}\n\t\treturn `${width}x${height}:${hash}`;\n\t}\n\tconst worker = self;\n\tlet reusableCanvas = null;\n\tlet reusableCtx = null;\n\tworker.onmessage = async function(e) {\n\t\tif ("resetFrameDedup" in e.data) {\n\t\t\tlastFingerprintMap.clear();\n\t\t\treturn;\n\t\t}\n\t\tif ("OffscreenCanvas" in globalThis) {\n\t\t\tconst { id, bitmap, width, height, displayWidth, displayHeight, dataURLOptions, maskRegions } = e.data;\n\t\t\ttry {\n\t\t\t\tif (!reusableCanvas || reusableCanvas.width !== width || reusableCanvas.height !== height) {\n\t\t\t\t\treusableCanvas = new OffscreenCanvas(width, height);\n\t\t\t\t\treusableCtx = reusableCanvas.getContext("2d", { willReadFrequently: true });\n\t\t\t\t}\n\t\t\t\tconst ctx = reusableCtx;\n\t\t\t\tctx.clearRect(0, 0, width, height);\n\t\t\t\tctx.drawImage(bitmap, 0, 0);\n\t\t\t\tbitmap.close();\n\t\t\t\tif (maskRegions) {\n\t\t\t\t\tctx.fillStyle = "black";\n\t\t\t\t\tfor (const region of maskRegions) ctx.fillRect(region.x, region.y, region.width, region.height);\n\t\t\t\t}\n\t\t\t\tconst fingerprint = frameFingerprint(width, height, ctx.getImageData(0, 0, width, height).data);\n\t\t\t\tif (fingerprint === (lastFingerprintMap.get(id) ?? transparentFingerprint(width, height))) {\n\t\t\t\t\tconst lastSentAt = lastSentAtMap.get(id);\n\t\t\t\t\tif (!(maskRegions !== void 0 && lastSentAt !== void 0 && Date.now() - lastSentAt >= PROVIDER_KEYFRAME_INTERVAL_MS)) return worker.postMessage({ id });\n\t\t\t\t}\n\t\t\t\tconst blob = await reusableCanvas.convertToBlob(dataURLOptions);\n\t\t\t\tconst arrayBuffer = await blob.arrayBuffer();\n\t\t\t\tworker.postMessage({\n\t\t\t\t\tid,\n\t\t\t\t\ttype: blob.type,\n\t\t\t\t\tbase64: encode(arrayBuffer),\n\t\t\t\t\tdisplayWidth,\n\t\t\t\t\tdisplayHeight\n\t\t\t\t});\n\t\t\t\tlastFingerprintMap.set(id, fingerprint);\n\t\t\t\tlastSentAtMap.set(id, Date.now());\n\t\t\t} catch {\n\t\t\t\tworker.postMessage({ id });\n\t\t\t}\n\t\t} else {\n\t\t\te.data.bitmap.close();\n\t\t\treturn worker.postMessage({ id: e.data.id });\n\t\t}\n\t};\n\t//#endregion\n})();\n',
-        vA = "undefined" != typeof self && self.Blob && new Blob(["(self.URL || self.webkitURL).revokeObjectURL(self.location.href);", xA], {
+      var RY = '(function() {\n\t//#region ../../../../../../setup-pnpm/node_modules/.bin/store/v11/links/@/base64-arraybuffer/1.0.2/f63fa6b5c318cf1c9f6bdd1d4292ad2f15f76f2ec78475025a2d44070e896fe9/node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js\n\tvar chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n\tvar lookup = typeof Uint8Array === "undefined" ? [] : /* @__PURE__ */ new Uint8Array(256);\n\tfor (var i = 0; i < chars.length; i++) lookup[chars.charCodeAt(i)] = i;\n\tvar encode = function(arraybuffer) {\n\t\tvar bytes = new Uint8Array(arraybuffer), i, len = bytes.length, base64 = "";\n\t\tfor (i = 0; i < len; i += 3) {\n\t\t\tbase64 += chars[bytes[i] >> 2];\n\t\t\tbase64 += chars[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];\n\t\t\tbase64 += chars[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];\n\t\t\tbase64 += chars[bytes[i + 2] & 63];\n\t\t}\n\t\tif (len % 3 === 2) base64 = base64.substring(0, base64.length - 1) + "=";\n\t\telse if (len % 3 === 1) base64 = base64.substring(0, base64.length - 2) + "==";\n\t\treturn base64;\n\t};\n\t//#endregion\n\t//#region ../rrweb/src/record/workers/image-bitmap-data-url-worker.ts\n\tconst lastFingerprintMap = /* @__PURE__ */ new Map();\n\tconst transparentFingerprintMap = /* @__PURE__ */ new Map();\n\tconst lastSentAtMap = /* @__PURE__ */ new Map();\n\tconst PROVIDER_KEYFRAME_INTERVAL_MS = 3e4;\n\tfunction hashPixels(data) {\n\t\tconst view = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >>> 2);\n\t\tlet primaryHash = 2166136261;\n\t\tlet secondaryHash = 2654435769;\n\t\tfor (let i = 0; i < view.length; i++) {\n\t\t\tprimaryHash ^= view[i];\n\t\t\tprimaryHash = Math.imul(primaryHash, 16777619);\n\t\t\tsecondaryHash ^= view[i];\n\t\t\tsecondaryHash = Math.imul(secondaryHash, 2246822507);\n\t\t}\n\t\treturn `${(primaryHash >>> 0).toString(16)}:${(secondaryHash >>> 0).toString(16)}`;\n\t}\n\tfunction frameFingerprint(width, height, data) {\n\t\treturn `${width}x${height}:${hashPixels(data)}`;\n\t}\n\tfunction transparentFingerprint(width, height) {\n\t\tconst pixelCount = width * height;\n\t\tlet hash = transparentFingerprintMap.get(pixelCount);\n\t\tif (hash === void 0) {\n\t\t\thash = hashPixels(new Uint8ClampedArray(pixelCount * 4));\n\t\t\ttransparentFingerprintMap.set(pixelCount, hash);\n\t\t}\n\t\treturn `${width}x${height}:${hash}`;\n\t}\n\tconst worker = self;\n\tlet reusableCanvas = null;\n\tlet reusableCtx = null;\n\tworker.onmessage = async function(e) {\n\t\tif ("resetFrameDedup" in e.data) {\n\t\t\tlastFingerprintMap.clear();\n\t\t\treturn;\n\t\t}\n\t\tif ("OffscreenCanvas" in globalThis) {\n\t\t\tconst { id, bitmap, width, height, displayWidth, displayHeight, dataURLOptions, maskRegions } = e.data;\n\t\t\ttry {\n\t\t\t\tif (!reusableCanvas || reusableCanvas.width !== width || reusableCanvas.height !== height) {\n\t\t\t\t\treusableCanvas = new OffscreenCanvas(width, height);\n\t\t\t\t\treusableCtx = reusableCanvas.getContext("2d", { willReadFrequently: true });\n\t\t\t\t}\n\t\t\t\tconst ctx = reusableCtx;\n\t\t\t\tctx.clearRect(0, 0, width, height);\n\t\t\t\tctx.drawImage(bitmap, 0, 0);\n\t\t\t\tbitmap.close();\n\t\t\t\tif (maskRegions) {\n\t\t\t\t\tctx.fillStyle = "black";\n\t\t\t\t\tfor (const region of maskRegions) ctx.fillRect(region.x, region.y, region.width, region.height);\n\t\t\t\t}\n\t\t\t\tconst fingerprint = frameFingerprint(width, height, ctx.getImageData(0, 0, width, height).data);\n\t\t\t\tif (fingerprint === (lastFingerprintMap.get(id) ?? transparentFingerprint(width, height))) {\n\t\t\t\t\tconst lastSentAt = lastSentAtMap.get(id);\n\t\t\t\t\tif (!(maskRegions !== void 0 && lastSentAt !== void 0 && Date.now() - lastSentAt >= PROVIDER_KEYFRAME_INTERVAL_MS)) return worker.postMessage({ id });\n\t\t\t\t}\n\t\t\t\tconst blob = await reusableCanvas.convertToBlob(dataURLOptions);\n\t\t\t\tconst arrayBuffer = await blob.arrayBuffer();\n\t\t\t\tworker.postMessage({\n\t\t\t\t\tid,\n\t\t\t\t\ttype: blob.type,\n\t\t\t\t\tbase64: encode(arrayBuffer),\n\t\t\t\t\tdisplayWidth,\n\t\t\t\t\tdisplayHeight\n\t\t\t\t});\n\t\t\t\tlastFingerprintMap.set(id, fingerprint);\n\t\t\t\tlastSentAtMap.set(id, Date.now());\n\t\t\t} catch {\n\t\t\t\tworker.postMessage({ id });\n\t\t\t}\n\t\t} else {\n\t\t\te.data.bitmap.close();\n\t\t\treturn worker.postMessage({ id: e.data.id });\n\t\t}\n\t};\n\t//#endregion\n})();\n',
+        WY = "undefined" != typeof self && self.Blob && new Blob(["(self.URL || self.webkitURL).revokeObjectURL(self.location.href);", RY], {
           type: "text/javascript;charset=utf-8"
         });
 
-      function PA(HH) {
-        let BH;
+      function AY(BB) {
+        let OB;
         try {
-          if (BH = vA && (self.URL || self.webkitURL).createObjectURL(vA), !BH) throw "";
-          const LH = new Worker(BH, {
-            name: null == HH ? void 0 : HH.name
+          if (OB = WY && (self.URL || self.webkitURL).createObjectURL(WY), !OB) throw "";
+          const GB = new Worker(OB, {
+            name: null == BB ? void 0 : BB.name
           });
-          return LH.addEventListener("error", (() => {
-            (self.URL || self.webkitURL).revokeObjectURL(BH)
-          })), LH
-        } catch (BH) {
-          return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(xA), {
-            name: null == HH ? void 0 : HH.name
+          return GB.addEventListener("error", (() => {
+            (self.URL || self.webkitURL).revokeObjectURL(OB)
+          })), GB
+        } catch (OB) {
+          return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(RY), {
+            name: null == BB ? void 0 : BB.name
           })
         }
       }
-      var TA = "A page CSP that omits blob: from worker-src or script-src blocks it";
+      var VY = "A page CSP that omits blob: from worker-src or script-src blocks it";
 
-      function UA(HH) {
-        for (var BH = arguments.length, LH = new Array(BH > 1 ? BH - 1 : 0), AH = 1; AH < BH; AH++) LH[AH - 1] = arguments[AH];
-        console.warn(`[replay] canvas capture: ${HH}`, ...LH)
+      function SY(BB) {
+        for (var OB = arguments.length, GB = new Array(OB > 1 ? OB - 1 : 0), YB = 1; YB < OB; YB++) GB[YB - 1] = arguments[YB];
+        console.warn(`[replay] canvas capture: ${BB}`, ...GB)
       }
-      var VA, OA, bA, kA = class {
+      var nY, UY, fY, kY = class {
           onFullSnapshot() {
-            var HH;
-            null === (HH = this.resetFrameDedup) || void 0 === HH || HH.call(this)
+            var BB;
+            null === (BB = this.resetFrameDedup) || void 0 === BB || BB.call(this)
           }
           acquire() {
             this.refCount += 1
@@ -3465,66 +3465,66 @@ export const modules = {
           unlock() {
             this.locked = !1
           }
-          constructor(HH) {
-            rB(this, "pendingCanvasMutations", new Map), rB(this, "rafStamps", {
+          constructor(BB) {
+            DO(this, "pendingCanvasMutations", new Map), DO(this, "rafStamps", {
               latestId: 0,
               invokeId: null
-            }), rB(this, "mirror", void 0), rB(this, "mutationCb", void 0), rB(this, "resetObservers", void 0), rB(this, "frozen", !1), rB(this, "locked", !1), rB(this, "rafIdTimestamp", null), rB(this, "rafIdFlush", null), rB(this, "refCount", 0), rB(this, "torndown", !1), rB(this, "resetFrameDedup", null), rB(this, "processMutation", ((HH, BH) => {
-              (this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(HH) || this.pendingCanvasMutations.set(HH, []), this.pendingCanvasMutations.get(HH).push(BH)
+            }), DO(this, "mirror", void 0), DO(this, "mutationCb", void 0), DO(this, "resetObservers", void 0), DO(this, "frozen", !1), DO(this, "locked", !1), DO(this, "rafIdTimestamp", null), DO(this, "rafIdFlush", null), DO(this, "refCount", 0), DO(this, "torndown", !1), DO(this, "resetFrameDedup", null), DO(this, "processMutation", ((BB, OB) => {
+              (this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(BB) || this.pendingCanvasMutations.set(BB, []), this.pendingCanvasMutations.get(BB).push(OB)
             }));
             const {
-              sampling: BH = "all",
-              win: LH,
-              blockClass: AH,
-              blockSelector: rH,
-              recordCanvas: SH,
-              dataURLOptions: hH,
-              resolutionScale: tH,
-              canvasMasking: zH
-            } = HH;
-            this.mutationCb = HH.mutationCb, this.mirror = HH.mirror, SH && "all" === BH && this.initCanvasMutationObserver(LH, AH, rH, hH), SH && "number" == typeof BH && this.initCanvasFPSObserver(BH, LH, AH, rH, {
-              dataURLOptions: hH,
-              resolutionScale: tH,
-              canvasMasking: zH
+              sampling: OB = "all",
+              win: GB,
+              blockClass: YB,
+              blockSelector: DB,
+              recordCanvas: QB,
+              dataURLOptions: oB,
+              resolutionScale: jB,
+              canvasMasking: yB
+            } = BB;
+            this.mutationCb = BB.mutationCb, this.mirror = BB.mirror, QB && "all" === OB && this.initCanvasMutationObserver(GB, YB, DB, oB), QB && "number" == typeof OB && this.initCanvasFPSObserver(OB, GB, YB, DB, {
+              dataURLOptions: oB,
+              resolutionScale: jB,
+              canvasMasking: yB
             })
           }
-          initCanvasFPSObserver(HH, BH, LH, AH, rH) {
-            var hH = this;
-            if (!("OffscreenCanvas" in BH)) return void UA("disabled because this browser does not support OffscreenCanvas");
-            const tH = "number" == typeof rH.resolutionScale && Number.isFinite(rH.resolutionScale) ? Math.min(1, Math.max(.1, rH.resolutionScale)) : 1,
-              zH = WA(BH, LH, AH, !0),
-              CH = new Map;
-            let EH;
+          initCanvasFPSObserver(BB, OB, GB, YB, DB) {
+            var oB = this;
+            if (!("OffscreenCanvas" in OB)) return void SY("disabled because this browser does not support OffscreenCanvas");
+            const jB = "number" == typeof DB.resolutionScale && Number.isFinite(DB.resolutionScale) ? Math.min(1, Math.max(.1, DB.resolutionScale)) : 1,
+              yB = ZY(OB, GB, YB, !0),
+              JB = new Map;
+            let MB;
             try {
-              EH = new PA
-            } catch (HH) {
-              return UA(`disabled because the encode worker did not start. ${TA}`, HH), void zH()
+              MB = new AY
+            } catch (BB) {
+              return SY(`disabled because the encode worker did not start. ${VY}`, BB), void yB()
             }
-            let GH = !1;
-            EH.onerror = HH => {
-              var BH;
-              GH = !0, UA(`stopped because the encode worker failed. ${TA}`, HH), cancelAnimationFrame(WH), null === (BH = EH.terminate) || void 0 === BH || BH.call(EH), this.resetFrameDedup = null
+            let zB = !1;
+            MB.onerror = BB => {
+              var OB;
+              zB = !0, SY(`stopped because the encode worker failed. ${VY}`, BB), cancelAnimationFrame(ZB), null === (OB = MB.terminate) || void 0 === OB || OB.call(MB), this.resetFrameDedup = null
             }, this.resetFrameDedup = () => {
-              EH.postMessage({
+              MB.postMessage({
                 resetFrameDedup: !0
               })
-            }, EH.onmessage = HH => {
+            }, MB.onmessage = BB => {
               const {
-                id: BH
-              } = HH.data;
-              if (CH.set(BH, !1), !("base64" in HH.data)) return;
+                id: OB
+              } = BB.data;
+              if (JB.set(OB, !1), !("base64" in BB.data)) return;
               const {
-                base64: LH,
-                type: AH,
-                displayWidth: rH,
-                displayHeight: SH
-              } = HH.data;
+                base64: GB,
+                type: YB,
+                displayWidth: DB,
+                displayHeight: QB
+              } = BB.data;
               this.mutationCb({
-                id: BH,
-                type: XH["2D"],
+                id: OB,
+                type: PB["2D"],
                 commands: [{
                   property: "clearRect",
-                  args: [0, 0, rH, SH]
+                  args: [0, 0, DB, QB]
                 }, {
                   property: "drawImage",
                   args: [{
@@ -3533,481 +3533,481 @@ export const modules = {
                       rr_type: "Blob",
                       data: [{
                         rr_type: "ArrayBuffer",
-                        base64: LH
+                        base64: GB
                       }],
-                      type: AH
+                      type: YB
                     }]
-                  }, 0, 0, rH, SH]
+                  }, 0, 0, DB, QB]
                 }],
-                displayWidth: rH,
-                displayHeight: SH
+                displayWidth: DB,
+                displayHeight: QB
               })
             };
-            let YH = !1,
-              uH = !1;
-            const QH = 1e3 / HH;
-            let WH, MH = 0;
-            const xH = HH => {
-              var zH;
-              GH || (MH && QH > HH - MH || (MH = HH, (() => {
-                const HH = [],
-                  rH = BH => {
+            let lB = !1,
+              pB = !1;
+            const qB = 1e3 / BB;
+            let ZB, NB = 0;
+            const RB = BB => {
+              var yB;
+              zB || (NB && qB > BB - NB || (NB = BB, (() => {
+                const BB = [],
+                  DB = OB => {
                     try {
-                      BH.querySelectorAll("canvas").forEach((BH => {
-                        xL(BH, LH, AH, !0) || HH.push(BH)
-                      })), BH.querySelectorAll("*").forEach((HH => {
-                        HH.shadowRoot && rH(HH.shadowRoot)
+                      OB.querySelectorAll("canvas").forEach((OB => {
+                        RG(OB, GB, YB, !0) || BB.push(OB)
+                      })), OB.querySelectorAll("*").forEach((BB => {
+                        BB.shadowRoot && DB(BB.shadowRoot)
                       }))
-                    } catch (HH) {}
+                    } catch (BB) {}
                   };
-                return rH(BH.document), HH
-              })().forEach((zH = SH((function*(HH) {
-                const BH = hH.mirror.getId(HH);
-                if (-1 !== BH && !CH.get(BH) && 0 !== HH.width && 0 !== HH.height) {
-                  CH.set(BH, !0);
+                return DB(OB.document), BB
+              })().forEach((yB = QB((function*(BB) {
+                const OB = oB.mirror.getId(BB);
+                if (-1 !== OB && !JB.get(OB) && 0 !== BB.width && 0 !== BB.height) {
+                  JB.set(OB, !0);
                   try {
-                    if (["webgl", "webgl2"].includes(HH.__context)) {
-                      var LH, AH;
-                      const rH = HH.getContext(HH.__context);
-                      if (null == rH || null === (LH = rH.isContextLost) || void 0 === LH ? void 0 : LH.call(rH)) return void CH.set(BH, !1);
-                      !1 === (null == rH || null === (AH = rH.getContextAttributes()) || void 0 === AH ? void 0 : AH.preserveDrawingBuffer) && rH.clear(rH.COLOR_BUFFER_BIT)
+                    if (["webgl", "webgl2"].includes(BB.__context)) {
+                      var GB, YB;
+                      const DB = BB.getContext(BB.__context);
+                      if (null == DB || null === (GB = DB.isContextLost) || void 0 === GB ? void 0 : GB.call(DB)) return void JB.set(OB, !1);
+                      !1 === (null == DB || null === (YB = DB.getContextAttributes()) || void 0 === YB ? void 0 : YB.preserveDrawingBuffer) && DB.clear(DB.COLOR_BUFFER_BIT)
                     }
-                    const SH = HH.clientWidth || HH.width,
-                      hH = HH.clientHeight || HH.height,
-                      zH = Math.max(1, Math.round(SH * tH)),
-                      XH = Math.max(1, Math.round(hH * tH)),
-                      GH = function(HH, BH, LH, AH, rH, SH) {
-                        if (!HH || "function" != typeof HH.regionsFn) return;
-                        let hH;
+                    const QB = BB.clientWidth || BB.width,
+                      oB = BB.clientHeight || BB.height,
+                      yB = Math.max(1, Math.round(QB * jB)),
+                      PB = Math.max(1, Math.round(oB * jB)),
+                      zB = function(BB, OB, GB, YB, DB, QB) {
+                        if (!BB || "function" != typeof BB.regionsFn) return;
+                        let oB;
                         try {
-                          hH = HH.regionsFn(BH)
-                        } catch (HH) {
-                          return LA
+                          oB = BB.regionsFn(OB)
+                        } catch (BB) {
+                          return GY
                         }
-                        if (void 0 === hH) return;
-                        if (!Array.isArray(hH) || !hH.every(AA)) return LA;
-                        const tH = LH / rH,
-                          zH = AH / SH;
-                        return hH.filter((HH => HH.width > 0 && HH.height > 0)).map((HH => {
-                          const BH = Math.floor(HH.x * tH),
-                            LH = Math.floor(HH.y * zH);
+                        if (void 0 === oB) return;
+                        if (!Array.isArray(oB) || !oB.every(YY)) return GY;
+                        const jB = GB / DB,
+                          yB = YB / QB;
+                        return oB.filter((BB => BB.width > 0 && BB.height > 0)).map((BB => {
+                          const OB = Math.floor(BB.x * jB),
+                            GB = Math.floor(BB.y * yB);
                           return {
-                            x: BH,
-                            y: LH,
-                            width: Math.ceil((HH.x + HH.width) * tH) - BH,
-                            height: Math.ceil((HH.y + HH.height) * zH) - LH
+                            x: OB,
+                            y: GB,
+                            width: Math.ceil((BB.x + BB.width) * jB) - OB,
+                            height: Math.ceil((BB.y + BB.height) * yB) - GB
                           }
                         }))
-                      }(rH.canvasMasking, HH, zH, XH, SH, hH);
-                    if ("skip-frame" === GH) return YH || (YH = !0, UA("dropped a frame because the mask provider did not return valid regions. A provider that always fails records no canvas frames at all")), void CH.set(BH, !1);
-                    const uH = yield createImageBitmap(HH, 1 > tH ? {
-                      resizeWidth: zH,
-                      resizeHeight: XH,
+                      }(DB.canvasMasking, BB, yB, PB, QB, oB);
+                    if ("skip-frame" === zB) return lB || (lB = !0, SY("dropped a frame because the mask provider did not return valid regions. A provider that always fails records no canvas frames at all")), void JB.set(OB, !1);
+                    const pB = yield createImageBitmap(BB, 1 > jB ? {
+                      resizeWidth: yB,
+                      resizeHeight: PB,
                       resizeQuality: "medium"
                     } : {
-                      resizeWidth: zH,
-                      resizeHeight: XH
+                      resizeWidth: yB,
+                      resizeHeight: PB
                     });
-                    EH.postMessage({
-                      id: BH,
-                      bitmap: uH,
-                      width: zH,
-                      height: XH,
-                      displayWidth: SH,
-                      displayHeight: hH,
-                      dataURLOptions: rH.dataURLOptions,
-                      maskRegions: GH
-                    }, [uH])
-                  } catch (HH) {
-                    uH || (uH = !0, UA("dropped a frame because the snapshot failed. A canvas that fails every frame records no canvas frames at all", HH)), CH.set(BH, !1)
+                    MB.postMessage({
+                      id: OB,
+                      bitmap: pB,
+                      width: yB,
+                      height: PB,
+                      displayWidth: QB,
+                      displayHeight: oB,
+                      dataURLOptions: DB.dataURLOptions,
+                      maskRegions: zB
+                    }, [pB])
+                  } catch (BB) {
+                    pB || (pB = !0, SY("dropped a frame because the snapshot failed. A canvas that fails every frame records no canvas frames at all", BB)), JB.set(OB, !1)
                   }
                 }
-              })), function(HH) {
-                return zH.apply(this, arguments)
-              }))), WH = requestAnimationFrame(xH))
+              })), function(BB) {
+                return yB.apply(this, arguments)
+              }))), ZB = requestAnimationFrame(RB))
             };
-            WH = requestAnimationFrame(xH), this.resetObservers = () => {
-              var HH;
-              zH(), cancelAnimationFrame(WH), null === (HH = EH.terminate) || void 0 === HH || HH.call(EH), this.resetFrameDedup = null
+            ZB = requestAnimationFrame(RB), this.resetObservers = () => {
+              var BB;
+              yB(), cancelAnimationFrame(ZB), null === (BB = MB.terminate) || void 0 === BB || BB.call(MB), this.resetFrameDedup = null
             }
           }
-          initCanvasMutationObserver(HH, BH, LH, AH) {
+          initCanvasMutationObserver(BB, OB, GB, YB) {
             this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher();
-            const rH = WA(HH, BH, LH, !1),
-              SH = function(HH, BH, LH, AH, rH) {
-                const SH = [],
-                  hH = Object.getOwnPropertyNames(BH.CanvasRenderingContext2D.prototype);
-                for (const tH of hH) try {
-                  if ("function" != typeof BH.CanvasRenderingContext2D.prototype[tH]) continue;
-                  const hH = kH(BH.CanvasRenderingContext2D.prototype, tH, (function(SH) {
+            const DB = ZY(BB, OB, GB, !1),
+              QB = function(BB, OB, GB, YB, DB) {
+                const QB = [],
+                  oB = Object.getOwnPropertyNames(OB.CanvasRenderingContext2D.prototype);
+                for (const jB of oB) try {
+                  if ("function" != typeof OB.CanvasRenderingContext2D.prototype[jB]) continue;
+                  const oB = kB(OB.CanvasRenderingContext2D.prototype, jB, (function(QB) {
                     return function() {
-                      for (var hH = arguments.length, zH = new Array(hH), CH = 0; CH < hH; CH++) zH[CH] = arguments[CH];
-                      return xL(this.canvas, LH, AH, !0) || setTimeout((() => {
-                        let LH;
+                      for (var oB = arguments.length, yB = new Array(oB), JB = 0; JB < oB; JB++) yB[JB] = arguments[JB];
+                      return RG(this.canvas, GB, YB, !0) || setTimeout((() => {
+                        let GB;
                         try {
-                          LH = GA(zH, BH, this, rH)
-                        } catch (HH) {
+                          GB = zY(yB, OB, this, DB)
+                        } catch (BB) {
                           return
                         }
-                        HH(this.canvas, {
-                          type: XH["2D"],
-                          property: tH,
-                          args: LH
+                        BB(this.canvas, {
+                          type: PB["2D"],
+                          property: jB,
+                          args: GB
                         })
-                      }), 0), SH.apply(this, zH)
+                      }), 0), QB.apply(this, yB)
                     }
                   }));
-                  SH.push(hH)
-                } catch (rH) {
-                  const hH = GL(BH.CanvasRenderingContext2D.prototype, tH, {
-                    set(BH) {
-                      xL(this.canvas, LH, AH, !0) || HH(this.canvas, {
-                        type: XH["2D"],
-                        property: tH,
-                        args: [BH],
+                  QB.push(oB)
+                } catch (DB) {
+                  const oB = zG(OB.CanvasRenderingContext2D.prototype, jB, {
+                    set(OB) {
+                      RG(this.canvas, GB, YB, !0) || BB(this.canvas, {
+                        type: PB["2D"],
+                        property: jB,
+                        args: [OB],
                         setter: !0
                       })
                     }
                   });
-                  SH.push(hH)
+                  QB.push(oB)
                 }
                 return () => {
-                  SH.forEach((HH => HH()))
+                  QB.forEach((BB => BB()))
                 }
-              }(this.processMutation.bind(this), HH, BH, LH, AH),
-              hH = function(HH, BH, LH, AH, rH) {
-                const SH = [];
-                return void 0 !== BH.WebGLRenderingContext && SH.push(...MA(BH.WebGLRenderingContext.prototype, XH.WebGL, HH, LH, AH, BH, rH)), void 0 !== BH.WebGL2RenderingContext && SH.push(...MA(BH.WebGL2RenderingContext.prototype, XH.WebGL2, HH, LH, AH, BH, rH)), () => {
-                  SH.forEach((HH => HH()))
+              }(this.processMutation.bind(this), BB, OB, GB, YB),
+              oB = function(BB, OB, GB, YB, DB) {
+                const QB = [];
+                return void 0 !== OB.WebGLRenderingContext && QB.push(...NY(OB.WebGLRenderingContext.prototype, PB.WebGL, BB, GB, YB, OB, DB)), void 0 !== OB.WebGL2RenderingContext && QB.push(...NY(OB.WebGL2RenderingContext.prototype, PB.WebGL2, BB, GB, YB, OB, DB)), () => {
+                  QB.forEach((BB => BB()))
                 }
-              }(this.processMutation.bind(this), HH, BH, LH, AH);
+              }(this.processMutation.bind(this), BB, OB, GB, YB);
             this.resetObservers = () => {
-              rH(), SH(), hH()
+              DB(), QB(), oB()
             }
           }
           startPendingCanvasMutationFlusher() {
             this.rafIdFlush = requestAnimationFrame((() => this.flushPendingCanvasMutations()))
           }
           startRAFTimestamping() {
-            const HH = BH => {
-              this.rafStamps.latestId = BH, this.rafIdTimestamp = requestAnimationFrame(HH)
+            const BB = OB => {
+              this.rafStamps.latestId = OB, this.rafIdTimestamp = requestAnimationFrame(BB)
             };
-            this.rafIdTimestamp = requestAnimationFrame(HH)
+            this.rafIdTimestamp = requestAnimationFrame(BB)
           }
           flushPendingCanvasMutations() {
-            this.pendingCanvasMutations.forEach(((HH, BH) => {
-              const LH = this.mirror.getId(BH);
-              this.flushPendingCanvasMutationFor(BH, LH)
+            this.pendingCanvasMutations.forEach(((BB, OB) => {
+              const GB = this.mirror.getId(OB);
+              this.flushPendingCanvasMutationFor(OB, GB)
             })), this.rafIdFlush = requestAnimationFrame((() => this.flushPendingCanvasMutations()))
           }
-          flushPendingCanvasMutationFor(HH, BH) {
+          flushPendingCanvasMutationFor(BB, OB) {
             if (this.frozen || this.locked) return;
-            const LH = this.pendingCanvasMutations.get(HH);
-            if (!LH || -1 === BH) return;
-            const AH = LH.map((HH => function(HH, BH) {
-                if (null == HH) return {};
-                var LH, AH, rH = function(HH, BH) {
-                  if (null == HH) return {};
-                  var LH = {};
-                  for (var AH in HH)
-                    if ({}.hasOwnProperty.call(HH, AH)) {
-                      if (BH.includes(AH)) continue;
-                      LH[AH] = HH[AH]
-                    } return LH
-                }(HH, BH);
+            const GB = this.pendingCanvasMutations.get(BB);
+            if (!GB || -1 === OB) return;
+            const YB = GB.map((BB => function(BB, OB) {
+                if (null == BB) return {};
+                var GB, YB, DB = function(BB, OB) {
+                  if (null == BB) return {};
+                  var GB = {};
+                  for (var YB in BB)
+                    if ({}.hasOwnProperty.call(BB, YB)) {
+                      if (OB.includes(YB)) continue;
+                      GB[YB] = BB[YB]
+                    } return GB
+                }(BB, OB);
                 if (Object.getOwnPropertySymbols) {
-                  var SH = Object.getOwnPropertySymbols(HH);
-                  for (AH = 0; SH.length > AH; AH++) BH.includes(LH = SH[AH]) || {}.propertyIsEnumerable.call(HH, LH) && (rH[LH] = HH[LH])
+                  var QB = Object.getOwnPropertySymbols(BB);
+                  for (YB = 0; QB.length > YB; YB++) OB.includes(GB = QB[YB]) || {}.propertyIsEnumerable.call(BB, GB) && (DB[GB] = BB[GB])
                 }
-                return rH
-              }(HH, hH))),
+                return DB
+              }(BB, oB))),
               {
-                type: rH
-              } = LH[0];
+                type: DB
+              } = GB[0];
             this.mutationCb({
-              id: BH,
-              type: rH,
-              commands: AH
-            }), this.pendingCanvasMutations.delete(HH)
+              id: OB,
+              type: DB,
+              commands: YB
+            }), this.pendingCanvasMutations.delete(BB)
           }
         },
-        mA = class {
-          constructor(HH) {
-            var BH;
-            rB(this, "trackedLinkElements", new WeakSet), rB(this, "pendingDeferredSheets", new Set), rB(this, "mutationCb", void 0), rB(this, "adoptedStyleSheetCb", void 0), rB(this, "maskAllElementAttributes", void 0), rB(this, "maskAttributeFn", void 0), rB(this, "styleMirror", new bL), this.mutationCb = HH.mutationCb, this.adoptedStyleSheetCb = HH.adoptedStyleSheetCb, this.maskAllElementAttributes = null !== (BH = HH.maskAllElementAttributes) && void 0 !== BH && BH, this.maskAttributeFn = HH.maskAttributeFn
+        dY = class {
+          constructor(BB) {
+            var OB;
+            DO(this, "trackedLinkElements", new WeakSet), DO(this, "pendingDeferredSheets", new Set), DO(this, "mutationCb", void 0), DO(this, "adoptedStyleSheetCb", void 0), DO(this, "maskAllElementAttributes", void 0), DO(this, "maskAttributeFn", void 0), DO(this, "styleMirror", new fG), this.mutationCb = BB.mutationCb, this.adoptedStyleSheetCb = BB.adoptedStyleSheetCb, this.maskAllElementAttributes = null !== (OB = BB.maskAllElementAttributes) && void 0 !== OB && OB, this.maskAttributeFn = BB.maskAttributeFn
           }
-          attachLinkElement(HH, BH) {
-            "_cssText" in BH.attributes && this.mutationCb({
+          attachLinkElement(BB, OB) {
+            "_cssText" in OB.attributes && this.mutationCb({
               adds: [],
               removes: [],
               texts: [],
               attributes: [{
-                id: BH.id,
-                attributes: BH.attributes
+                id: OB.id,
+                attributes: OB.attributes
               }]
-            }), this.trackLinkElement(HH)
+            }), this.trackLinkElement(BB)
           }
-          beginDeferredLinkInlining(HH, BH) {
-            if (-1 === BH || !HH.isConnected) return null;
-            let LH = null,
-              AH = null;
+          beginDeferredLinkInlining(BB, OB) {
+            if (-1 === OB || !BB.isConnected) return null;
+            let GB = null,
+              YB = null;
             try {
-              AH = HH.sheet, AH && (LH = function(HH) {
-                const BH = [];
-                let LH = !1,
-                  AH = null;
-                const rH = new Map;
+              YB = BB.sheet, YB && (GB = function(BB) {
+                const OB = [];
+                let GB = !1,
+                  YB = null;
+                const DB = new Map;
 
-                function SH(HH) {
-                  const rH = BH.pop();
-                  if ("group" === rH.kind) {
-                    if (null === HH) {
-                      for (; BH.length > 0 && "group" === BH[BH.length - 1].kind;) BH.pop();
-                      return void SH(null)
+                function QB(BB) {
+                  const DB = OB.pop();
+                  if ("group" === DB.kind) {
+                    if (null === BB) {
+                      for (; OB.length > 0 && "group" === OB[OB.length - 1].kind;) OB.pop();
+                      return void QB(null)
                     }
-                    const LH = BH[BH.length - 1];
-                    return LH.parts.push(HH), void(LH.index += 1)
+                    const GB = OB[OB.length - 1];
+                    return GB.parts.push(BB), void(GB.index += 1)
                   }
-                  if (!rH.importRule) return LH = !0, void(AH = HH);
-                  hH(BH[BH.length - 1], rH.importRule, HH)
+                  if (!DB.importRule) return GB = !0, void(YB = BB);
+                  oB(OB[OB.length - 1], DB.importRule, BB)
                 }
 
-                function hH(HH, BH, LH) {
+                function oB(BB, OB, GB) {
                   try {
-                    let rH;
+                    let DB;
                     try {
-                      rH = LH || CB(BH)
-                    } catch (HH) {
-                      rH = BH.cssText
+                      DB = GB || JO(OB)
+                    } catch (BB) {
+                      DB = OB.cssText
                     }
                     try {
-                      var AH;
-                      rH && (null === (AH = BH.styleSheet) || void 0 === AH ? void 0 : AH.href) && (rH = IB(rH, BH.styleSheet.href))
-                    } catch (HH) {}
-                    rH && HH.parts.push(rH), HH.index += 1
-                  } catch (HH) {
-                    SH(null)
+                      var YB;
+                      DB && (null === (YB = OB.styleSheet) || void 0 === YB ? void 0 : YB.href) && (DB = uO(DB, OB.styleSheet.href))
+                    } catch (BB) {}
+                    DB && BB.parts.push(DB), BB.index += 1
+                  } catch (BB) {
+                    QB(null)
                   }
                 }
 
-                function tH(HH) {
-                  const LH = HH.rules[HH.index];
-                  if ("sheet" === HH.kind && uB(LH)) {
-                    const AH = rH.get(LH);
-                    return null === AH ? (HH.parts.push(LH.cssText), void(HH.index += 1)) : AH ? void BH.push({
+                function jB(BB) {
+                  const GB = BB.rules[BB.index];
+                  if ("sheet" === BB.kind && pO(GB)) {
+                    const YB = DB.get(GB);
+                    return null === YB ? (BB.parts.push(GB.cssText), void(BB.index += 1)) : YB ? void OB.push({
                       kind: "sheet",
-                      sheet: AH.sheet,
-                      rules: AH.rules,
-                      sheetHref: AH.sheetHref,
+                      sheet: YB.sheet,
+                      rules: YB.rules,
+                      sheetHref: YB.sheetHref,
                       index: 0,
                       parts: [],
-                      importRule: LH
-                    }) : void hH(HH, LH, null)
+                      importRule: GB
+                    }) : void oB(BB, GB, null)
                   }
-                  if (function(HH, LH) {
+                  if (function(BB, GB) {
                       try {
-                        const AH = function(HH) {
-                          const BH = HH;
-                          if (!BH.cssRules || 0 === BH.cssRules.length) return null;
-                          if (BH.media && "string" == typeof BH.media.mediaText) return `@media ${BH.media.mediaText} {`;
-                          if (QB(HH)) {
-                            if ("number" == typeof BH.type && 1 !== BH.type) return null;
-                            const LH = BH.style ? BH.style.cssText : "";
-                            return `${HH.selectorText} {${LH?" "+LH:""}`
+                        const YB = function(BB) {
+                          const OB = BB;
+                          if (!OB.cssRules || 0 === OB.cssRules.length) return null;
+                          if (OB.media && "string" == typeof OB.media.mediaText) return `@media ${OB.media.mediaText} {`;
+                          if (qO(BB)) {
+                            if ("number" == typeof OB.type && 1 !== OB.type) return null;
+                            const GB = OB.style ? OB.style.cssText : "";
+                            return `${BB.selectorText} {${GB?" "+GB:""}`
                           }
-                          if ("containerName" in BH) return "string" != typeof BH.containerQuery || BH.containerName && !WB.test(BH.containerName) ? null : `@container ${BH.containerName?`${BH.containerName} `:""}${BH.containerQuery} {`;
-                          if ("string" == typeof BH.conditionText) {
-                            let AH = "";
+                          if ("containerName" in OB) return "string" != typeof OB.containerQuery || OB.containerName && !ZO.test(OB.containerName) ? null : `@container ${OB.containerName?`${OB.containerName} `:""}${OB.containerQuery} {`;
+                          if ("string" == typeof OB.conditionText) {
+                            let YB = "";
                             try {
-                              var LH;
-                              AH = (null === (LH = HH.constructor) || void 0 === LH ? void 0 : LH.name) || ""
-                            } catch (HH) {
+                              var GB;
+                              YB = (null === (GB = BB.constructor) || void 0 === GB ? void 0 : GB.name) || ""
+                            } catch (BB) {
                               return null
                             }
-                            return "" === AH || "Object" === AH || "CSSSupportsRule" === AH ? `@supports ${BH.conditionText} {` : null
+                            return "" === YB || "Object" === YB || "CSSSupportsRule" === YB ? `@supports ${OB.conditionText} {` : null
                           }
-                          return "string" == typeof BH.name ? "keyText" in BH.cssRules[0] ? WB.test(BH.name) ? `@keyframes ${BH.name} {` : null : "" === BH.name ? "@layer {" : MB.test(BH.name) ? `@layer ${BH.name} {` : null : null
-                        }(HH);
-                        if (null === AH) return !1;
-                        const rH = LH.sheetHref;
-                        return BH.push({
+                          return "string" == typeof OB.name ? "keyText" in OB.cssRules[0] ? ZO.test(OB.name) ? `@keyframes ${OB.name} {` : null : "" === OB.name ? "@layer {" : NO.test(OB.name) ? `@layer ${OB.name} {` : null : null
+                        }(BB);
+                        if (null === YB) return !1;
+                        const DB = GB.sheetHref;
+                        return OB.push({
                           kind: "group",
-                          rules: Array.from(HH.cssRules),
-                          sheetHref: rH,
+                          rules: Array.from(BB.cssRules),
+                          sheetHref: DB,
                           index: 0,
                           parts: [],
-                          prelude: rH ? IB(AH, rH) : AH,
-                          fixColons: "sheet" === LH.kind && QB(HH) && HH.selectorText.includes(":")
+                          prelude: DB ? uO(YB, DB) : YB,
+                          fixColons: "sheet" === GB.kind && qO(BB) && BB.selectorText.includes(":")
                         }), !0
-                      } catch (HH) {
+                      } catch (BB) {
                         return !1
                       }
-                    }(LH, HH)) return;
-                  let AH = LH.cssText;
-                  "sheet" === HH.kind && QB(LH) && LH.selectorText.includes(":") && (AH = YB(AH)), HH.parts.push(HH.sheetHref ? IB(AH, HH.sheetHref) : AH), HH.index += 1
+                    }(GB, BB)) return;
+                  let YB = GB.cssText;
+                  "sheet" === BB.kind && qO(GB) && GB.selectorText.includes(":") && (YB = lO(YB)), BB.parts.push(BB.sheetHref ? uO(YB, BB.sheetHref) : YB), BB.index += 1
                 }
-                return function(HH) {
+                return function(BB) {
                   try {
-                    const LH = HH.rules || HH.cssRules;
-                    if (!LH) return !1;
-                    JH(LH);
-                    let AH = HH.href;
-                    !AH && HH.ownerNode && (AH = HH.ownerNode.baseURI);
-                    const SH = Array.from(LH);
-                    return BH.push({
+                    const GB = BB.rules || BB.cssRules;
+                    if (!GB) return !1;
+                    vB(GB);
+                    let YB = BB.href;
+                    !YB && BB.ownerNode && (YB = BB.ownerNode.baseURI);
+                    const QB = Array.from(GB);
+                    return OB.push({
                         kind: "sheet",
-                        sheet: HH,
-                        rules: SH,
-                        sheetHref: AH,
+                        sheet: BB,
+                        rules: QB,
+                        sheetHref: YB,
                         index: 0,
                         parts: [],
                         importRule: null
                       }),
-                      function(HH, BH) {
-                        const LH = [{
-                          sheet: BH,
-                          rules: HH,
+                      function(BB, OB) {
+                        const GB = [{
+                          sheet: OB,
+                          rules: BB,
                           index: 0
                         }];
-                        for (; LH.length > 0;) {
-                          const BH = LH[LH.length - 1];
-                          if (BH.index >= BH.rules.length) {
-                            LH.pop();
+                        for (; GB.length > 0;) {
+                          const OB = GB[GB.length - 1];
+                          if (OB.index >= OB.rules.length) {
+                            GB.pop();
                             continue
                           }
-                          const AH = BH.rules[BH.index];
-                          if (BH.index += 1, !uB(AH) || rH.has(AH)) continue;
-                          let SH = null;
+                          const YB = OB.rules[OB.index];
+                          if (OB.index += 1, !pO(YB) || DB.has(YB)) continue;
+                          let QB = null;
                           try {
-                            SH = AH.styleSheet
-                          } catch (HH) {
-                            rH.set(AH, null);
+                            QB = YB.styleSheet
+                          } catch (BB) {
+                            DB.set(YB, null);
                             continue
                           }
-                          if (SH && !LH.some((HH => HH.sheet === SH))) try {
-                            const HH = SH.rules || SH.cssRules;
-                            if (!HH) continue;
-                            JH(HH);
-                            let BH = SH.href;
-                            !BH && SH.ownerNode && (BH = SH.ownerNode.baseURI);
-                            const hH = Array.from(HH);
-                            rH.set(AH, {
-                              sheet: SH,
-                              rules: hH,
-                              sheetHref: BH
-                            }), LH.push({
-                              sheet: SH,
-                              rules: hH,
+                          if (QB && !GB.some((BB => BB.sheet === QB))) try {
+                            const BB = QB.rules || QB.cssRules;
+                            if (!BB) continue;
+                            vB(BB);
+                            let OB = QB.href;
+                            !OB && QB.ownerNode && (OB = QB.ownerNode.baseURI);
+                            const oB = Array.from(BB);
+                            DB.set(YB, {
+                              sheet: QB,
+                              rules: oB,
+                              sheetHref: OB
+                            }), GB.push({
+                              sheet: QB,
+                              rules: oB,
                               index: 0
                             })
-                          } catch (HH) {}
+                          } catch (BB) {}
                         }
-                      }(SH, HH), !0
-                  } catch (HH) {
+                      }(QB, BB), !0
+                  } catch (BB) {
                     return !1
                   }
-                }(HH) || (LH = !0), {
-                  advance(HH) {
-                    if (LH) return !0;
-                    const rH = oH();
-                    let hH = HH > 0 ? HH : 1;
+                }(BB) || (GB = !0), {
+                  advance(BB) {
+                    if (GB) return !0;
+                    const DB = KB();
+                    let oB = BB > 0 ? BB : 1;
                     try {
-                      for (; !LH && hH > 0;) {
-                        const LH = BH[BH.length - 1];
-                        if (LH.index >= LH.rules.length) {
-                          let BH = null;
+                      for (; !GB && oB > 0;) {
+                        const GB = OB[OB.length - 1];
+                        if (GB.index >= GB.rules.length) {
+                          let OB = null;
                           try {
-                            if ("group" === LH.kind) {
-                              const HH = LH.prelude + LH.parts.join("") + "}";
-                              BH = LH.fixColons ? YB(HH) : HH
-                            } else BH = zB(LH.parts.join(""))
-                          } catch (HH) {}
-                          SH(BH)
+                            if ("group" === GB.kind) {
+                              const BB = GB.prelude + GB.parts.join("") + "}";
+                              OB = GB.fixColons ? lO(BB) : BB
+                            } else OB = yO(GB.parts.join(""))
+                          } catch (BB) {}
+                          QB(OB)
                         } else {
-                          hH -= 1;
+                          oB -= 1;
                           try {
-                            tH(LH)
-                          } catch (HH) {
-                            SH(null)
+                            jB(GB)
+                          } catch (BB) {
+                            QB(null)
                           }
                         }
                       }
-                    } catch (HH) {
-                      LH = !0, AH = null
+                    } catch (BB) {
+                      GB = !0, YB = null
                     } finally {
-                      pH(oH() - rH)
+                      xB(KB() - DB)
                     }
-                    return LH
+                    return GB
                   },
-                  text: () => LH ? AH : null,
+                  text: () => GB ? YB : null,
                   remainingRules() {
-                    if (LH) return 0;
-                    let HH = 0;
-                    for (const LH of BH) HH += LH.rules.length - LH.index;
-                    return HH
+                    if (GB) return 0;
+                    let BB = 0;
+                    for (const GB of OB) BB += GB.rules.length - GB.index;
+                    return BB
                   }
                 }
-              }(AH))
-            } catch (HH) {}
-            if (!LH || !AH) return BB(), null;
-            const rH = LH;
-            let SH = !1;
-            const hH = {
-              sheet: AH,
+              }(YB))
+            } catch (BB) {}
+            if (!GB || !YB) return OO(), null;
+            const DB = GB;
+            let QB = !1;
+            const oB = {
+              sheet: YB,
               invalidate() {
-                SH = !0
+                QB = !0
               }
             };
-            this.pendingDeferredSheets.add(hH);
-            let tH = !1;
+            this.pendingDeferredSheets.add(oB);
+            let jB = !1;
             return {
-              advance: LH => {
-                if (tH) return !0;
-                const zH = oH(),
-                  CH = KH();
-                let EH = !0;
+              advance: GB => {
+                if (jB) return !0;
+                const yB = KB(),
+                  JB = FB();
+                let MB = !0;
                 try {
-                  if (SH) return tH = !0, BB(), !0;
-                  if (!rH.advance(LH)) return EH = !1, !1;
-                  tH = !0;
-                  const hH = rH.text();
-                  if (!HH.isConnected) return !0;
-                  let zH = null;
+                  if (QB) return jB = !0, OO(), !0;
+                  if (!DB.advance(GB)) return MB = !1, !1;
+                  jB = !0;
+                  const oB = DB.text();
+                  if (!BB.isConnected) return !0;
+                  let yB = null;
                   try {
-                    zH = HH.sheet
-                  } catch (HH) {}
-                  return zH !== AH ? (BB(), !0) : hH ? (this.emitCssTextMutation(HH, BH, hH), !0) : (BB(), !0)
+                    yB = BB.sheet
+                  } catch (BB) {}
+                  return yB !== YB ? (OO(), !0) : oB ? (this.emitCssTextMutation(BB, OB, oB), !0) : (OO(), !0)
                 } finally {
-                  EH && this.pendingDeferredSheets.delete(hH), cH(XH = oH() - zH, null != (GH = CH) ? GH : IH) || (ZH.totalMs += XH, XH > ZH.slowestSliceMs && (ZH.slowestSliceMs = XH))
+                  MB && this.pendingDeferredSheets.delete(oB), iB(PB = KB() - yB, null != (zB = JB) ? zB : uB) || (TB.totalMs += PB, PB > TB.slowestSliceMs && (TB.slowestSliceMs = PB))
                 }
-                var XH, GH
+                var PB, zB
               },
-              remainingRules: () => rH.remainingRules(),
+              remainingRules: () => DB.remainingRules(),
               discard: () => {
-                this.pendingDeferredSheets.delete(hH)
+                this.pendingDeferredSheets.delete(oB)
               }
             }
           }
-          onCssomSheetMutation(HH) {
-            if (HH && 0 !== this.pendingDeferredSheets.size)
-              for (const BH of this.pendingDeferredSheets) BH.sheet === HH && (this.pendingDeferredSheets.delete(BH), BH.invalidate())
+          onCssomSheetMutation(BB) {
+            if (BB && 0 !== this.pendingDeferredSheets.size)
+              for (const OB of this.pendingDeferredSheets) OB.sheet === BB && (this.pendingDeferredSheets.delete(OB), OB.invalidate())
           }
-          inlineDeferredLinkElement(HH, BH) {
-            var LH;
-            null === (LH = this.beginDeferredLinkInlining(HH, BH)) || void 0 === LH || LH.advance(1 / 0)
+          inlineDeferredLinkElement(BB, OB) {
+            var GB;
+            null === (GB = this.beginDeferredLinkInlining(BB, OB)) || void 0 === GB || GB.advance(1 / 0)
           }
-          emitCssTextMutation(HH, BH, LH) {
+          emitCssTextMutation(BB, OB, GB) {
             this.mutationCb({
               adds: [],
               removes: [],
               texts: [],
               attributes: [{
-                id: BH,
+                id: OB,
                 attributes: {
-                  _cssText: UB({
-                    element: HH,
+                  _cssText: SO({
+                    element: BB,
                     name: "_cssText",
-                    value: LH,
+                    value: GB,
                     maskAllElementAttributes: this.maskAllElementAttributes,
                     maskAttributeFn: this.maskAttributeFn
                   })
@@ -4015,159 +4015,159 @@ export const modules = {
               }]
             })
           }
-          trackLinkElement(HH) {
-            this.trackedLinkElements.has(HH) || (this.trackedLinkElements.add(HH), this.trackStylesheetInLinkElement(HH))
+          trackLinkElement(BB) {
+            this.trackedLinkElements.has(BB) || (this.trackedLinkElements.add(BB), this.trackStylesheetInLinkElement(BB))
           }
-          adoptStyleSheets(HH, BH) {
-            if (0 === HH.length) return;
-            const LH = {
-                id: BH,
+          adoptStyleSheets(BB, OB) {
+            if (0 === BB.length) return;
+            const GB = {
+                id: OB,
                 styleIds: []
               },
-              AH = [];
-            for (const rH of HH) {
-              let HH;
-              if (this.styleMirror.has(rH)) HH = this.styleMirror.getId(rH);
+              YB = [];
+            for (const DB of BB) {
+              let BB;
+              if (this.styleMirror.has(DB)) BB = this.styleMirror.getId(DB);
               else {
-                const BH = this.styleMirror.add(rH);
-                HH = BH;
-                const LH = oH();
+                const OB = this.styleMirror.add(DB);
+                BB = OB;
+                const GB = KB();
                 try {
-                  iH((() => {
+                  sB((() => {
                     try {
-                      const HH = rH.rules || rH.cssRules;
-                      HH && JH(HH)
-                    } catch (HH) {}
-                    AH.push({
-                      styleId: BH,
-                      rules: Array.from(rH.rules || CSSRule, ((HH, BH) => ({
-                        rule: GB(HH, rH.href),
-                        index: BH
+                      const BB = DB.rules || DB.cssRules;
+                      BB && vB(BB)
+                    } catch (BB) {}
+                    YB.push({
+                      styleId: OB,
+                      rules: Array.from(DB.rules || CSSRule, ((BB, OB) => ({
+                        rule: zO(BB, DB.href),
+                        index: OB
                       })))
                     })
                   }))
                 } finally {
-                  pH(oH() - LH)
+                  xB(KB() - GB)
                 }
               }
-              LH.styleIds.push(HH)
+              GB.styleIds.push(BB)
             }
-            AH.length > 0 && (LH.styles = AH), this.adoptedStyleSheetCb(LH)
+            YB.length > 0 && (GB.styles = YB), this.adoptedStyleSheetCb(GB)
           }
           reset() {
-            this.styleMirror.reset(), this.trackedLinkElements = new WeakSet, this.pendingDeferredSheets.clear(), iB.forEach((HH => HH.abort())), iB.clear()
+            this.styleMirror.reset(), this.trackedLinkElements = new WeakSet, this.pendingDeferredSheets.clear(), sO.forEach((BB => BB.abort())), sO.clear()
           }
-          trackStylesheetInLinkElement(HH) {}
+          trackStylesheetInLinkElement(BB) {}
         },
-        oA = class {
+        KY = class {
           constructor() {
-            rB(this, "nodeMap", new WeakMap), rB(this, "active", !1)
+            DO(this, "nodeMap", new WeakMap), DO(this, "active", !1)
           }
-          inOtherBuffer(HH, BH) {
-            const LH = this.nodeMap.get(HH);
-            return LH && Array.from(LH).some((HH => HH !== BH))
+          inOtherBuffer(BB, OB) {
+            const GB = this.nodeMap.get(BB);
+            return GB && Array.from(GB).some((BB => BB !== OB))
           }
-          add(HH, BH) {
+          add(BB, OB) {
             this.active || (this.active = !0, requestAnimationFrame((() => {
               this.nodeMap = new WeakMap, this.active = !1
-            }))), this.nodeMap.set(HH, (this.nodeMap.get(HH) || new Set).add(BH))
+            }))), this.nodeMap.set(BB, (this.nodeMap.get(BB) || new Set).add(OB))
           }
           destroy() {}
         },
-        IA = !1;
+        uY = !1;
       try {
-        if (2 !== Array.from([1], (HH => 2 * HH))[0]) {
-          var fA;
-          const HH = document.createElement("iframe");
-          document.body.appendChild(HH), Array.from = (null === (fA = HH.contentWindow) || void 0 === fA ? void 0 : fA.Array.from) || Array.from, document.body.removeChild(HH)
+        if (2 !== Array.from([1], (BB => 2 * BB))[0]) {
+          var mY;
+          const BB = document.createElement("iframe");
+          document.body.appendChild(BB), Array.from = (null === (mY = BB.contentWindow) || void 0 === mY ? void 0 : mY.Array.from) || Array.from, document.body.removeChild(BB)
         }
-      } catch (HH) {
-        console.debug("Unable to override Array.from", HH)
+      } catch (BB) {
+        console.debug("Unable to override Array.from", BB)
       }
-      var lA = new xB,
-        KA = new Set([zH.Mutation, zH.MediaInteraction, zH.StyleSheetRule, zH.CanvasMutation, zH.Font, zH.Log, zH.StyleDeclaration, zH.AdoptedStyleSheet]);
+      var IY = new RO,
+        FY = new Set([yB.Mutation, yB.MediaInteraction, yB.StyleSheetRule, yB.CanvasMutation, yB.Font, yB.Log, yB.StyleDeclaration, yB.AdoptedStyleSheet]);
 
-      function cA(HH) {
-        const BH = window;
-        if ("function" == typeof BH.requestIdleCallback) {
-          const LH = BH.requestIdleCallback(HH, {
+      function iY(BB) {
+        const OB = window;
+        if ("function" == typeof OB.requestIdleCallback) {
+          const GB = OB.requestIdleCallback(BB, {
             timeout: 2e3
           });
           return {
             cancel() {
-              var HH;
-              return null === (HH = BH.cancelIdleCallback) || void 0 === HH ? void 0 : HH.call(BH, LH)
+              var BB;
+              return null === (BB = OB.cancelIdleCallback) || void 0 === BB ? void 0 : BB.call(OB, GB)
             }
           }
         }
-        const LH = setTimeout(HH, 250);
+        const GB = setTimeout(BB, 250);
         return {
-          cancel: () => clearTimeout(LH)
+          cancel: () => clearTimeout(GB)
         }
       }
 
-      function eA() {
-        let HH, BH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          LH = !1,
-          rH = !1;
+      function LY() {
+        let BB, OB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          GB = !1,
+          DB = !1;
         const {
-          emit: SH,
-          checkoutEveryNms: hH,
-          checkoutEveryNth: CH,
-          blockClass: EH = "rr-block",
-          blockSelector: XH = null,
-          ignoreClass: GH = "rr-ignore",
-          ignoreSelector: YH = null,
-          maskTextClass: uH = "rr-mask",
-          maskTextSelector: QH = null,
-          inlineStylesheet: WH = !0,
-          inlineStylesheetBudgetRules: MH,
-          maskAllInputs: xH,
-          maskInputOptions: vH,
-          slimDOMOptions: PH,
-          maskInputFn: TH,
-          maskTextFn: UH,
-          maskAllElementAttributes: VH = !1,
-          maskAttributeFn: OH,
-          hooks: bH,
-          packFn: kH,
-          sampling: oH = {},
-          dataURLOptions: IH = {},
-          canvasResolutionScale: fH,
-          canvasMasking: KH,
-          mousemoveWait: cH,
-          recordDOM: eH = !0,
-          recordCanvas: qH = !1,
-          recordCrossOriginIframes: gH = !1,
-          recordAfter: NH = ("DOMContentLoaded" === BH.recordAfter ? BH.recordAfter : "load"),
-          userTriggeredOnInput: RH = !1,
-          collectFonts: jH = !1,
-          inlineImages: nH = !1,
-          plugins: FH,
-          keepIframeSrcFn: DH = () => !1,
-          ignoreCSSAttributes: wH = new Set([]),
-          attributeFilter: ZH,
-          errorHandler: sH
-        } = BH;
-        ! function(HH) {
-          IL = HH
-        }(sH);
-        const JH = AH({
+          emit: QB,
+          checkoutEveryNms: oB,
+          checkoutEveryNth: JB,
+          blockClass: MB = "rr-block",
+          blockSelector: PB = null,
+          ignoreClass: zB = "rr-ignore",
+          ignoreSelector: lB = null,
+          maskTextClass: pB = "rr-mask",
+          maskTextSelector: qB = null,
+          inlineStylesheet: ZB = !0,
+          inlineStylesheetBudgetRules: NB,
+          maskAllInputs: RB,
+          maskInputOptions: WB,
+          slimDOMOptions: AB,
+          maskInputFn: VB,
+          maskTextFn: SB,
+          maskAllElementAttributes: nB = !1,
+          maskAttributeFn: UB,
+          hooks: fB,
+          packFn: kB,
+          sampling: KB = {},
+          dataURLOptions: uB = {},
+          canvasResolutionScale: mB,
+          canvasMasking: FB,
+          mousemoveWait: iB,
+          recordDOM: LB = !0,
+          recordCanvas: gB = !1,
+          recordCrossOriginIframes: rB = !1,
+          recordAfter: XB = ("DOMContentLoaded" === OB.recordAfter ? OB.recordAfter : "load"),
+          userTriggeredOnInput: wB = !1,
+          collectFonts: EB = !1,
+          inlineImages: cB = !1,
+          plugins: hB,
+          keepIframeSrcFn: aB = () => !1,
+          ignoreCSSAttributes: eB = new Set([]),
+          attributeFilter: TB,
+          errorHandler: HB
+        } = OB;
+        ! function(BB) {
+          uG = BB
+        }(HB);
+        const vB = YB({
             type: "image/webp",
             quality: .4,
             maxBase64ImageLength: 1048576
-          }, IH),
-          iH = !gH || window.parent === window;
-        let pH = !1;
-        if (!iH) try {
-          window.parent.document && (pH = !1)
-        } catch (BH) {
-          pH = !0
+          }, uB),
+          sB = !rB || window.parent === window;
+        let xB = !1;
+        if (!sB) try {
+          window.parent.document && (xB = !1)
+        } catch (OB) {
+          xB = !0
         }
-        if (iH && !SH) throw new Error("emit function is required");
-        if (!iH && !pH) return () => {};
-        void 0 !== cH && void 0 === oH.mousemove && (oH.mousemove = cH), lA.reset();
-        const yH = !0 === xH ? {
+        if (sB && !QB) throw new Error("emit function is required");
+        if (!sB && !xB) return () => {};
+        void 0 !== iB && void 0 === KB.mousemove && (KB.mousemove = iB), IY.reset();
+        const tB = !0 === RB ? {
             color: !0,
             date: !0,
             "datetime-local": !0,
@@ -4184,190 +4184,190 @@ export const modules = {
             textarea: !0,
             select: !0,
             password: !0
-          } : void 0 !== vH ? vH : {
+          } : void 0 !== WB ? WB : {
             password: !0
           },
-          BB = AL(void 0 !== PH && PH);
-        let AB;
+          OO = YG(void 0 !== AB && AB);
+        let YO;
         ! function() {
-          let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
-          "NodeList" in HH && !HH.NodeList.prototype.forEach && (HH.NodeList.prototype.forEach = [].forEach), "DOMTokenList" in HH && !HH.DOMTokenList.prototype.forEach && (HH.DOMTokenList.prototype.forEach = [].forEach)
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
+          "NodeList" in BB && !BB.NodeList.prototype.forEach && (BB.NodeList.prototype.forEach = [].forEach), "DOMTokenList" in BB && !BB.DOMTokenList.prototype.forEach && (BB.DOMTokenList.prototype.forEach = [].forEach)
         }();
-        let rB = 0;
-        const SB = new Map;
-        let hB, tB;
-        const zB = HH => {
-          for (const BH of FH || []) BH.eventProcessor && (HH = BH.eventProcessor(HH));
-          return kH && !pH && (HH = kH(HH)), HH
+        let DO = 0;
+        const QO = new Map;
+        let oO, jO;
+        const yO = BB => {
+          for (const OB of hB || []) OB.eventProcessor && (BB = OB.eventProcessor(BB));
+          return kB && !xB && (BB = kB(BB)), BB
         };
-        VA = (HH, BH) => {
-          var LH;
-          const AH = HH;
-          if (AH.timestamp = YL(), !(null === (LH = NL[0]) || void 0 === LH ? void 0 : LH.isFrozen()) || AH.type === tH.FullSnapshot || AH.type === tH.IncrementalSnapshot && KA.has(AH.data.source) || NL.forEach((HH => HH.unfreeze())), iH) null == SH || SH(zB(AH), BH);
-          else if (pH) {
-            const HH = {
+        nY = (BB, OB) => {
+          var GB;
+          const YB = BB;
+          if (YB.timestamp = lG(), !(null === (GB = XG[0]) || void 0 === GB ? void 0 : GB.isFrozen()) || YB.type === jB.FullSnapshot || YB.type === jB.IncrementalSnapshot && FY.has(YB.data.source) || XG.forEach((BB => BB.unfreeze())), sB) null == QB || QB(yO(YB), OB);
+          else if (xB) {
+            const BB = {
               type: "rrweb",
-              event: zB(AH),
+              event: yO(YB),
               origin: window.location.origin,
-              isCheckout: BH
+              isCheckout: OB
             };
-            window.parent.postMessage(HH, "*")
+            window.parent.postMessage(BB, "*")
           }
-          if (AH.type === tH.FullSnapshot) AB = AH, rB = 0;
-          else if (AH.type === tH.IncrementalSnapshot) {
-            if (AH.data.source === zH.Mutation && AH.data.isAttachIframe) return;
-            rB++, (CH && rB >= CH || hH && AH.timestamp - AB.timestamp > hH) && OA(!0)
+          if (YB.type === jB.FullSnapshot) YO = YB, DO = 0;
+          else if (YB.type === jB.IncrementalSnapshot) {
+            if (YB.data.source === yB.Mutation && YB.data.isAttachIframe) return;
+            DO++, (JB && DO >= JB || oB && YB.timestamp - YO.timestamp > oB) && UY(!0)
           }
         };
-        const CB = HH => {
-            if (HH.removes && HH.removes.length > 0) {
-              const BH = HH.adds.length > 0 ? new Set(HH.adds.map((HH => HH.node.id))) : null,
-                LH = new Set;
-              if (HH.adds.length > 0)
-                for (const AH of HH.adds) {
-                  const HH = lA.yAH(AH.node.id);
-                  HH && "IFRAME" === HH.nodeName && LH.add(HH)
+        const JO = BB => {
+            if (BB.removes && BB.removes.length > 0) {
+              const OB = BB.adds.length > 0 ? new Set(BB.adds.map((BB => BB.node.id))) : null,
+                GB = new Set;
+              if (BB.adds.length > 0)
+                for (const YB of BB.adds) {
+                  const BB = IY.yDB(YB.node.id);
+                  BB && "IFRAME" === BB.nodeName && GB.add(BB)
                 }
-              HH.removes.forEach((HH => {
+              BB.removes.forEach((BB => {
                 let {
-                  id: AH
-                } = HH;
-                if (BH && BH.has(AH)) return;
-                const rH = YB.getIframeElementById(AH);
-                rH && LH.has(rH) ? YB.forgetIframeId(AH) : (null == hB || hB(AH), YB.removeIframeById(AH))
-              })), null == tB || tB(), YB.cleanupDetachedIframes()
+                  id: YB
+                } = BB;
+                if (OB && OB.has(YB)) return;
+                const DB = lO.getIframeElementById(YB);
+                DB && GB.has(DB) ? lO.forgetIframeId(YB) : (null == oO || oO(YB), lO.removeIframeById(YB))
+              })), null == jO || jO(), lO.cleanupDetachedIframes()
             }
-            VA({
-              type: tH.IncrementalSnapshot,
-              data: AH({
-                source: zH.Mutation
-              }, HH)
+            nY({
+              type: jB.IncrementalSnapshot,
+              data: YB({
+                source: yB.Mutation
+              }, BB)
             })
           },
-          EB = HH => VA({
-            type: tH.IncrementalSnapshot,
-            data: AH({
-              source: zH.Scroll
-            }, HH)
+          MO = BB => nY({
+            type: jB.IncrementalSnapshot,
+            data: YB({
+              source: yB.Scroll
+            }, BB)
           }),
-          XB = HH => VA({
-            type: tH.IncrementalSnapshot,
-            data: AH({
-              source: zH.CanvasMutation
-            }, HH)
+          PO = BB => nY({
+            type: jB.IncrementalSnapshot,
+            data: YB({
+              source: yB.CanvasMutation
+            }, BB)
           }),
-          GB = new mA({
-            mutationCb: CB,
-            adoptedStyleSheetCb: HH => VA({
-              type: tH.IncrementalSnapshot,
-              data: AH({
-                source: zH.AdoptedStyleSheet
-              }, HH)
+          zO = new dY({
+            mutationCb: JO,
+            adoptedStyleSheetCb: BB => nY({
+              type: jB.IncrementalSnapshot,
+              data: YB({
+                source: yB.AdoptedStyleSheet
+              }, BB)
             }),
-            maskAllElementAttributes: VH,
-            maskAttributeFn: OH
+            maskAllElementAttributes: nB,
+            maskAttributeFn: UB
           }),
-          YB = new HA({
-            mirror: lA,
-            mutationCb: CB,
-            stylesheetManager: GB,
-            recordCrossOriginIframes: gH,
-            wrappedEmit: VA
+          lO = new BY({
+            mirror: IY,
+            mutationCb: JO,
+            stylesheetManager: zO,
+            recordCrossOriginIframes: rB,
+            wrappedEmit: nY
           });
-        for (const AH of FH || []) AH.getMirror && AH.getMirror({
-          nodeMirror: lA,
-          crossOriginIframeMirror: YB.crossOriginIframeMirror,
-          crossOriginIframeStyleMirror: YB.crossOriginIframeStyleMirror
+        for (const YB of hB || []) YB.getMirror && YB.getMirror({
+          nodeMirror: IY,
+          crossOriginIframeMirror: lO.crossOriginIframeMirror,
+          crossOriginIframeStyleMirror: lO.crossOriginIframeStyleMirror
         });
-        const uB = new oA,
-          QB = null == KH ? void 0 : KH.configured;
-        bA = new kA({
-          recordCanvas: qH,
-          mutationCb: XB,
+        const pO = new KY,
+          qO = null == FB ? void 0 : FB.configured;
+        fY = new kY({
+          recordCanvas: gB,
+          mutationCb: PO,
           win: window,
-          blockClass: EH,
-          blockSelector: XH,
-          mirror: lA,
-          sampling: oH.canvas,
-          dataURLOptions: JH,
-          resolutionScale: fH,
-          canvasMasking: KH
+          blockClass: MB,
+          blockSelector: PB,
+          mirror: IY,
+          sampling: KB.canvas,
+          dataURLOptions: vB,
+          resolutionScale: mB,
+          canvasMasking: FB
         });
-        const WB = new BA({
-          mutationCb: CB,
-          scrollCb: EB,
+        const ZO = new OY({
+          mutationCb: JO,
+          scrollCb: MO,
           bypassOptions: {
-            blockClass: EH,
-            blockSelector: XH,
-            maskTextClass: uH,
-            maskTextSelector: QH,
-            inlineStylesheet: WH,
-            maskInputOptions: yH,
-            dataURLOptions: JH,
-            maskTextFn: UH,
-            maskInputFn: TH,
-            maskAllElementAttributes: VH,
-            maskAttributeFn: OH,
-            recordCanvas: qH,
-            canvasMaskingConfigured: QB,
-            inlineImages: nH,
-            sampling: oH,
-            slimDOMOptions: BB,
-            iframeManager: YB,
-            stylesheetManager: GB,
-            canvasManager: bA,
-            keepIframeSrcFn: DH,
-            processedNodeManager: uB,
-            attributeFilter: ZH
+            blockClass: MB,
+            blockSelector: PB,
+            maskTextClass: pB,
+            maskTextSelector: qB,
+            inlineStylesheet: ZB,
+            maskInputOptions: tB,
+            dataURLOptions: vB,
+            maskTextFn: SB,
+            maskInputFn: VB,
+            maskAllElementAttributes: nB,
+            maskAttributeFn: UB,
+            recordCanvas: gB,
+            canvasMaskingConfigured: qO,
+            inlineImages: cB,
+            sampling: KB,
+            slimDOMOptions: OO,
+            iframeManager: lO,
+            stylesheetManager: zO,
+            canvasManager: fY,
+            keepIframeSrcFn: aB,
+            processedNodeManager: pO,
+            attributeFilter: TB
           },
-          mirror: lA
+          mirror: IY
         });
-        OA = function() {
-          let BH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (eH) {
-            dH(MH);
+        UY = function() {
+          let OB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (LB) {
+            bB(NB);
             try {
-              if (VA({
-                  type: tH.Meta,
+              if (nY({
+                  type: jB.Meta,
                   data: {
                     href: window.location.href,
-                    width: WL(),
-                    height: QL()
+                    width: ZG(),
+                    height: qG()
                   }
-                }, BH), LH) return;
-              null == HH || HH.cancel(), HH = void 0, GB.reset(), WB.init(), NL.forEach((HH => HH.lock()));
-              let AH = null,
-                rH = [];
+                }, OB), GB) return;
+              null == BB || BB.cancel(), BB = void 0, zO.reset(), ZO.init(), XG.forEach((BB => BB.lock()));
+              let YB = null,
+                DB = [];
               try {
-                AH = function(HH, BH) {
+                YB = function(BB, OB) {
                   const {
-                    mirror: LH = new xB,
-                    blockClass: AH = "rr-block",
-                    blockSelector: rH = null,
-                    maskTextClass: SH = "rr-mask",
-                    maskTextSelector: hH = null,
-                    inlineStylesheet: tH = !0,
-                    inlineImages: zH = !1,
-                    recordCanvas: CH = !1,
-                    canvasMaskingConfigured: EH,
-                    maskAllInputs: XH = !1,
-                    maskTextFn: GH,
-                    maskInputFn: YH,
-                    maskAllElementAttributes: uH = !1,
-                    maskAttributeFn: QH,
-                    slimDOM: WH = !1,
-                    dataURLOptions: MH,
-                    preserveWhiteSpace: xH,
-                    onSerialize: vH,
-                    onIframeLoad: PH,
-                    iframeLoadTimeout: TH,
-                    onIframeListenerRegistered: UH,
-                    onStylesheetLoad: VH,
-                    stylesheetLoadTimeout: OH,
-                    keepIframeSrcFn: bH = () => !1,
-                    maxDepth: kH,
-                    inlineStylesheetBudgetRules: mH
-                  } = BH || {}, oH = !0 === XH ? {
+                    mirror: GB = new RO,
+                    blockClass: YB = "rr-block",
+                    blockSelector: DB = null,
+                    maskTextClass: QB = "rr-mask",
+                    maskTextSelector: oB = null,
+                    inlineStylesheet: jB = !0,
+                    inlineImages: yB = !1,
+                    recordCanvas: JB = !1,
+                    canvasMaskingConfigured: MB,
+                    maskAllInputs: PB = !1,
+                    maskTextFn: zB,
+                    maskInputFn: lB,
+                    maskAllElementAttributes: pB = !1,
+                    maskAttributeFn: qB,
+                    slimDOM: ZB = !1,
+                    dataURLOptions: NB,
+                    preserveWhiteSpace: RB,
+                    onSerialize: WB,
+                    onIframeLoad: AB,
+                    iframeLoadTimeout: VB,
+                    onIframeListenerRegistered: SB,
+                    onStylesheetLoad: nB,
+                    stylesheetLoadTimeout: UB,
+                    keepIframeSrcFn: fB = () => !1,
+                    maxDepth: kB,
+                    inlineStylesheetBudgetRules: dB
+                  } = OB || {}, KB = !0 === PB ? {
                     color: !0,
                     date: !0,
                     "datetime-local": !0,
@@ -4384,1403 +4384,1403 @@ export const modules = {
                     textarea: !0,
                     select: !0,
                     password: !0
-                  } : !1 === XH ? {
+                  } : !1 === PB ? {
                     password: !0
-                  } : XH, IH = AL(WH);
-                  dH(mH);
+                  } : PB, uB = YG(ZB);
+                  bB(dB);
                   try {
-                    return LL(HH, {
-                      doc: HH,
-                      mirror: LH,
-                      blockClass: AH,
-                      blockSelector: rH,
-                      maskTextClass: SH,
-                      maskTextSelector: hH,
+                    return GG(BB, {
+                      doc: BB,
+                      mirror: GB,
+                      blockClass: YB,
+                      blockSelector: DB,
+                      maskTextClass: QB,
+                      maskTextSelector: oB,
                       skipChild: !1,
-                      inlineStylesheet: tH,
-                      maskInputOptions: oH,
-                      maskTextFn: GH,
-                      maskInputFn: YH,
-                      maskAllElementAttributes: uH,
-                      maskAttributeFn: QH,
-                      slimDOMOptions: IH,
-                      dataURLOptions: MH,
-                      inlineImages: zH,
-                      recordCanvas: CH,
-                      canvasMaskingConfigured: EH,
-                      preserveWhiteSpace: xH,
-                      onSerialize: vH,
-                      onIframeLoad: PH,
-                      iframeLoadTimeout: TH,
-                      onIframeListenerRegistered: UH,
-                      onStylesheetLoad: VH,
-                      stylesheetLoadTimeout: OH,
-                      keepIframeSrcFn: bH,
+                      inlineStylesheet: jB,
+                      maskInputOptions: KB,
+                      maskTextFn: zB,
+                      maskInputFn: lB,
+                      maskAllElementAttributes: pB,
+                      maskAttributeFn: qB,
+                      slimDOMOptions: uB,
+                      dataURLOptions: NB,
+                      inlineImages: yB,
+                      recordCanvas: JB,
+                      canvasMaskingConfigured: MB,
+                      preserveWhiteSpace: RB,
+                      onSerialize: WB,
+                      onIframeLoad: AB,
+                      iframeLoadTimeout: VB,
+                      onIframeListenerRegistered: SB,
+                      onStylesheetLoad: nB,
+                      stylesheetLoadTimeout: UB,
+                      keepIframeSrcFn: fB,
                       newlyAddedElement: !1,
-                      maxDepth: kH
+                      maxDepth: kB
                     })
                   } finally {
-                    aH()
+                    CB()
                   }
                 }(document, {
-                  mirror: lA,
-                  blockClass: EH,
-                  blockSelector: XH,
-                  maskTextClass: uH,
-                  maskTextSelector: QH,
-                  inlineStylesheet: WH,
-                  maskAllInputs: yH,
-                  inlineStylesheetBudgetRules: MH,
-                  maskTextFn: UH,
-                  maskInputFn: TH,
-                  maskAllElementAttributes: VH,
-                  maskAttributeFn: OH,
-                  slimDOM: BB,
-                  dataURLOptions: JH,
-                  recordCanvas: qH,
-                  canvasMaskingConfigured: QB,
-                  inlineImages: nH,
-                  onSerialize(HH) {
-                    UL(HH, lA) && YB.addIframe(HH), VL(HH, lA) && GB.trackLinkElement(HH), OL(HH) && WB.addShadowRoot(mH.shadowRoot(HH), document)
+                  mirror: IY,
+                  blockClass: MB,
+                  blockSelector: PB,
+                  maskTextClass: pB,
+                  maskTextSelector: qB,
+                  inlineStylesheet: ZB,
+                  maskAllInputs: tB,
+                  inlineStylesheetBudgetRules: NB,
+                  maskTextFn: SB,
+                  maskInputFn: VB,
+                  maskAllElementAttributes: nB,
+                  maskAttributeFn: UB,
+                  slimDOM: OO,
+                  dataURLOptions: vB,
+                  recordCanvas: gB,
+                  canvasMaskingConfigured: qO,
+                  inlineImages: cB,
+                  onSerialize(BB) {
+                    SG(BB, IY) && lO.addIframe(BB), nG(BB, IY) && zO.trackLinkElement(BB), UG(BB) && ZO.addShadowRoot(dB.shadowRoot(BB), document)
                   },
-                  onIframeLoad(HH, BH) {
-                    YB.attachIframe(HH, BH), WB.observeAttachShadow(HH)
+                  onIframeLoad(BB, OB) {
+                    lO.attachIframe(BB, OB), ZO.observeAttachShadow(BB)
                   },
-                  onIframeListenerRegistered(HH, BH) {
-                    YB.registerLoadListenerDisposer(HH, BH)
+                  onIframeListenerRegistered(BB, OB) {
+                    lO.registerLoadListenerDisposer(BB, OB)
                   },
-                  onStylesheetLoad(HH, BH) {
-                    GB.attachLinkElement(HH, BH)
+                  onStylesheetLoad(BB, OB) {
+                    zO.attachLinkElement(BB, OB)
                   },
-                  keepIframeSrcFn: DH
+                  keepIframeSrcFn: aB
                 })
               } finally {
-                rH = HB()
+                DB = BO()
               }
-              if (LH) return;
-              if (!AH) return console.warn("Failed to snapshot the document");
-              if (VA({
-                  type: tH.FullSnapshot,
+              if (GB) return;
+              if (!YB) return console.warn("Failed to snapshot the document");
+              if (nY({
+                  type: jB.FullSnapshot,
                   data: {
-                    node: AH,
-                    initialOffset: uL(window)
+                    node: YB,
+                    initialOffset: pG(window)
                   }
-                }, BH), LH) return;
-              if (NL.forEach((HH => HH.unlock())), bA.onFullSnapshot(), rH.length) {
-                const BH = function(HH, BH, LH) {
-                  let AH = !1,
-                    rH = null,
-                    SH = 0,
-                    hH = null;
-                  const tH = () => null !== hH || HH.length > SH,
-                    zH = () => {
-                      const LH = HH[SH];
-                      HH[SH] = null, SH += 1, LH && tL((() => {
-                        hH = BH.beginDeferredLinkInlining(LH, lA.getId(LH))
+                }, OB), GB) return;
+              if (XG.forEach((BB => BB.unlock())), fY.onFullSnapshot(), DB.length) {
+                const OB = function(BB, OB, GB) {
+                  let YB = !1,
+                    DB = null,
+                    QB = 0,
+                    oB = null;
+                  const jB = () => null !== oB || BB.length > QB,
+                    yB = () => {
+                      const GB = BB[QB];
+                      BB[QB] = null, QB += 1, GB && jG((() => {
+                        oB = OB.beginDeferredLinkInlining(GB, IY.getId(GB))
                       }))
                     },
-                    CH = () => {
-                      if (!hH) return;
-                      const HH = hH;
-                      let BH = !0;
-                      tL((() => {
-                        BH = HH.advance(200)
-                      })), BH && (hH = null)
+                    JB = () => {
+                      if (!oB) return;
+                      const BB = oB;
+                      let OB = !0;
+                      jG((() => {
+                        OB = BB.advance(200)
+                      })), OB && (oB = null)
                     },
-                    EH = HH => {
-                      if (rH = null, AH) return;
-                      let BH = 0;
+                    MB = BB => {
+                      if (DB = null, YB) return;
+                      let OB = 0;
                       do {
                         try {
-                          hH || zH(), CH()
-                        } catch (HH) {
-                          null == hH || hH.discard(), hH = null, LB(1)
+                          oB || yB(), JB()
+                        } catch (BB) {
+                          null == oB || oB.discard(), oB = null, GO(1)
                         }
-                        BH += 1
-                      } while (!AH && tH() && (HH ? !HH.didTimeout && HH.timeRemaining() > 5 : 10 > BH));
-                      AH || (tH() ? rH = cA(EH) : LH())
+                        OB += 1
+                      } while (!YB && jB() && (BB ? !BB.didTimeout && BB.timeRemaining() > 5 : 10 > OB));
+                      YB || (jB() ? DB = iY(MB) : GB())
                     };
-                  return rH = cA(EH), {
+                  return DB = iY(MB), {
                     cancel() {
-                      AH = !0, null == hH || hH.discard(), hH = null, null == rH || rH.cancel(), rH = null
+                      YB = !0, null == oB || oB.discard(), oB = null, null == DB || DB.cancel(), DB = null
                     },
                     flush() {
-                      if (AH) return;
-                      AH = !0, null == rH || rH.cancel(), rH = null;
-                      let BH = 0,
-                        EH = 0;
-                      for (; tH() && 50 > BH;) {
-                        hH || zH();
-                        const LH = hH;
-                        if (LH)
-                          if (Math.floor(LH.remainingRules() / 200) + 1 > 50 - BH) LH.discard(), hH = null, EH += 1;
+                      if (YB) return;
+                      YB = !0, null == DB || DB.cancel(), DB = null;
+                      let OB = 0,
+                        MB = 0;
+                      for (; jB() && 50 > OB;) {
+                        oB || yB();
+                        const GB = oB;
+                        if (GB)
+                          if (Math.floor(GB.remainingRules() / 200) + 1 > 50 - OB) GB.discard(), oB = null, MB += 1;
                           else {
                             try {
-                              CH()
-                            } catch (HH) {
-                              null == hH || hH.discard(), hH = null, EH += 1
+                              JB()
+                            } catch (BB) {
+                              null == oB || oB.discard(), oB = null, MB += 1
                             }
-                            BH += 1
+                            OB += 1
                           }
                       }
-                      if (tH() || EH > 0) {
-                        let BH = EH + (null !== hH ? 1 : 0);
-                        for (let LH = SH; HH.length > LH; LH++) null !== HH[LH] && (BH += 1);
-                        LB(BH), null == hH || hH.discard(), hH = null
+                      if (jB() || MB > 0) {
+                        let OB = MB + (null !== oB ? 1 : 0);
+                        for (let GB = QB; BB.length > GB; GB++) null !== BB[GB] && (OB += 1);
+                        GO(OB), null == oB || oB.discard(), oB = null
                       }
-                      LH()
+                      GB()
                     }
                   }
-                }(rH, GB, (() => {
-                  HH === BH && (HH = void 0)
+                }(DB, zO, (() => {
+                  BB === OB && (BB = void 0)
                 }));
-                HH = BH
+                BB = OB
               }
-              gH && YB.reattachIframes(), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && GB.adoptStyleSheets(document.adoptedStyleSheets, lA.getId(document))
+              rB && lO.reattachIframes(), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && zO.adoptStyleSheets(document.adoptedStyleSheets, IY.getId(document))
             } finally {
-              aH()
+              CB()
             }
           }
         };
         try {
-          const BH = [];
-          BH.push(SL("pagehide", (() => {
+          const OB = [];
+          OB.push(QG("pagehide", (() => {
             try {
-              null == HH || HH.flush()
-            } catch (BH) {}
-            HH = void 0
+              null == BB || BB.flush()
+            } catch (OB) {}
+            BB = void 0
           }), window));
-          for (const HH of ["visibilitychange", "freeze", "resume"]) BH.push(SL(HH, lH, document));
-          hB = HH => {
-            const LH = SB.get(HH);
-            LH && (LH.forEach((HH => {
-              tL(HH);
-              const LH = BH.indexOf(HH); - 1 !== LH && BH.splice(LH, 1)
-            })), SB.delete(HH))
-          }, tB = () => {
-            for (const [BH] of SB) {
-              const LH = lA.yAH(BH);
-              if (LH) try {
-                LH.contentDocument && LH.contentDocument.defaultView || null == hB || hB(BH)
-              } catch (HH) {
-                null == hB || hB(BH)
-              } else null == hB || hB(BH)
+          for (const BB of ["visibilitychange", "freeze", "resume"]) OB.push(QG(BB, IB, document));
+          oO = BB => {
+            const GB = QO.get(BB);
+            GB && (GB.forEach((BB => {
+              jG(BB);
+              const GB = OB.indexOf(BB); - 1 !== GB && OB.splice(GB, 1)
+            })), QO.delete(BB))
+          }, jO = () => {
+            for (const [OB] of QO) {
+              const GB = IY.yDB(OB);
+              if (GB) try {
+                GB.contentDocument && GB.contentDocument.defaultView || null == oO || oO(OB)
+              } catch (BB) {
+                null == oO || oO(OB)
+              } else null == oO || oO(OB)
             }
           };
-          const SH = HH => {
-            var BH;
-            return gL(JL)({
-              mutationCb: CB,
-              mousemoveCb: (HH, BH) => VA({
-                type: tH.IncrementalSnapshot,
+          const QB = BB => {
+            var OB;
+            return rG(vG)({
+              mutationCb: JO,
+              mousemoveCb: (BB, OB) => nY({
+                type: jB.IncrementalSnapshot,
                 data: {
-                  source: BH,
-                  positions: HH
+                  source: OB,
+                  positions: BB
                 }
               }),
-              mouseInteractionCb: HH => VA({
-                type: tH.IncrementalSnapshot,
-                data: AH({
-                  source: zH.MouseInteraction
-                }, HH)
+              mouseInteractionCb: BB => nY({
+                type: jB.IncrementalSnapshot,
+                data: YB({
+                  source: yB.MouseInteraction
+                }, BB)
               }),
-              scrollCb: EB,
-              viewportResizeCb: HH => VA({
-                type: tH.IncrementalSnapshot,
-                data: AH({
-                  source: zH.ViewportResize
-                }, HH)
+              scrollCb: MO,
+              viewportResizeCb: BB => nY({
+                type: jB.IncrementalSnapshot,
+                data: YB({
+                  source: yB.ViewportResize
+                }, BB)
               }),
-              inputCb: HH => VA({
-                type: tH.IncrementalSnapshot,
-                data: AH({
-                  source: zH.Input
-                }, HH)
+              inputCb: BB => nY({
+                type: jB.IncrementalSnapshot,
+                data: YB({
+                  source: yB.Input
+                }, BB)
               }),
-              mediaInteractionCb: HH => VA({
-                type: tH.IncrementalSnapshot,
-                data: AH({
-                  source: zH.MediaInteraction
-                }, HH)
+              mediaInteractionCb: BB => nY({
+                type: jB.IncrementalSnapshot,
+                data: YB({
+                  source: yB.MediaInteraction
+                }, BB)
               }),
-              styleSheetRuleCb: HH => VA({
-                type: tH.IncrementalSnapshot,
-                data: AH({
-                  source: zH.StyleSheetRule
-                }, HH)
+              styleSheetRuleCb: BB => nY({
+                type: jB.IncrementalSnapshot,
+                data: YB({
+                  source: yB.StyleSheetRule
+                }, BB)
               }),
-              styleDeclarationCb: HH => VA({
-                type: tH.IncrementalSnapshot,
-                data: AH({
-                  source: zH.StyleDeclaration
-                }, HH)
+              styleDeclarationCb: BB => nY({
+                type: jB.IncrementalSnapshot,
+                data: YB({
+                  source: yB.StyleDeclaration
+                }, BB)
               }),
-              canvasMutationCb: XB,
-              fontCb: HH => VA({
-                type: tH.IncrementalSnapshot,
-                data: AH({
-                  source: zH.Font
-                }, HH)
+              canvasMutationCb: PO,
+              fontCb: BB => nY({
+                type: jB.IncrementalSnapshot,
+                data: YB({
+                  source: yB.Font
+                }, BB)
               }),
-              selectionCb(HH) {
-                VA({
-                  type: tH.IncrementalSnapshot,
-                  data: AH({
-                    source: zH.Selection
-                  }, HH)
+              selectionCb(BB) {
+                nY({
+                  type: jB.IncrementalSnapshot,
+                  data: YB({
+                    source: yB.Selection
+                  }, BB)
                 })
               },
-              customElementCb(HH) {
-                VA({
-                  type: tH.IncrementalSnapshot,
-                  data: AH({
-                    source: zH.CustomElement
-                  }, HH)
+              customElementCb(BB) {
+                nY({
+                  type: jB.IncrementalSnapshot,
+                  data: YB({
+                    source: yB.CustomElement
+                  }, BB)
                 })
               },
-              blockClass: EH,
-              ignoreClass: GH,
-              ignoreSelector: YH,
-              maskTextClass: uH,
-              maskTextSelector: QH,
-              maskInputOptions: yH,
-              inlineStylesheet: WH,
-              sampling: oH,
-              recordDOM: eH,
-              recordCanvas: qH,
-              canvasMaskingConfigured: QB,
-              inlineImages: nH,
-              userTriggeredOnInput: RH,
-              collectFonts: jH,
-              doc: HH,
-              maskInputFn: TH,
-              maskTextFn: UH,
-              maskAllElementAttributes: VH,
-              maskAttributeFn: OH,
-              keepIframeSrcFn: DH,
-              blockSelector: XH,
-              slimDOMOptions: BB,
-              dataURLOptions: JH,
-              mirror: lA,
-              iframeManager: YB,
-              stylesheetManager: GB,
-              shadowDomManager: WB,
-              processedNodeManager: uB,
-              canvasManager: bA,
-              ignoreCSSAttributes: wH,
-              attributeFilter: ZH,
-              plugins: (null == FH || null === (BH = FH.filter((HH => HH.observer))) || void 0 === BH ? void 0 : BH.map((HH => ({
-                name: HH.name,
-                observer: HH.observer,
-                options: HH.options,
-                callback: BH => VA({
-                  type: tH.Plugin,
+              blockClass: MB,
+              ignoreClass: zB,
+              ignoreSelector: lB,
+              maskTextClass: pB,
+              maskTextSelector: qB,
+              maskInputOptions: tB,
+              inlineStylesheet: ZB,
+              sampling: KB,
+              recordDOM: LB,
+              recordCanvas: gB,
+              canvasMaskingConfigured: qO,
+              inlineImages: cB,
+              userTriggeredOnInput: wB,
+              collectFonts: EB,
+              doc: BB,
+              maskInputFn: VB,
+              maskTextFn: SB,
+              maskAllElementAttributes: nB,
+              maskAttributeFn: UB,
+              keepIframeSrcFn: aB,
+              blockSelector: PB,
+              slimDOMOptions: OO,
+              dataURLOptions: vB,
+              mirror: IY,
+              iframeManager: lO,
+              stylesheetManager: zO,
+              shadowDomManager: ZO,
+              processedNodeManager: pO,
+              canvasManager: fY,
+              ignoreCSSAttributes: eB,
+              attributeFilter: TB,
+              plugins: (null == hB || null === (OB = hB.filter((BB => BB.observer))) || void 0 === OB ? void 0 : OB.map((BB => ({
+                name: BB.name,
+                observer: BB.observer,
+                options: BB.options,
+                callback: OB => nY({
+                  type: jB.Plugin,
                   data: {
-                    plugin: HH.name,
-                    payload: BH
+                    plugin: BB.name,
+                    payload: OB
                   }
                 })
               })))) || []
-            }, bH)
+            }, fB)
           };
-          YB.addLoadListener((HH => {
+          lO.addLoadListener((BB => {
             try {
-              const LH = lA.getId(HH),
-                AH = SH(HH.contentDocument);
-              if ("function" == typeof AH && (BH.push(AH), -1 !== LH)) {
-                let HH = SB.get(LH);
-                HH || (HH = new Set, SB.set(LH, HH)), HH.add(AH)
+              const GB = IY.getId(BB),
+                YB = QB(BB.contentDocument);
+              if ("function" == typeof YB && (OB.push(YB), -1 !== GB)) {
+                let BB = QO.get(GB);
+                BB || (BB = new Set, QO.set(GB, BB)), BB.add(YB)
               }
-            } catch (BH) {
-              console.warn(BH)
+            } catch (OB) {
+              console.warn(OB)
             }
-          })), YB.addPageHideListener((HH => {
-            const BH = lA.getId(HH);
-            null == hB || hB(BH), FL(HH)
+          })), lO.addPageHideListener((BB => {
+            const OB = IY.getId(BB);
+            null == oO || oO(OB), hG(BB)
           }));
-          let hH = -1;
-          const CH = HH => VA({
-              type: tH.Custom,
+          let oB = -1;
+          const JB = BB => nY({
+              type: jB.Custom,
               data: {
                 tag: "rrweb/fullscreen",
-                payload: HH
+                payload: BB
               }
             }),
-            MH = () => {
-              var HH, BH, LH, AH;
-              const rH = document,
-                SH = null !== (HH = null !== (BH = null !== (LH = null !== (AH = rH.fullscreenElement) && void 0 !== AH ? AH : rH.webkitFullscreenElement) && void 0 !== LH ? LH : rH.mozFullScreenElement) && void 0 !== BH ? BH : rH.msFullscreenElement) && void 0 !== HH ? HH : null,
-                tH = SH ? lA.getId(SH) : -1;
-              tH !== hH && (-1 !== hH && CH({
-                id: hH,
+            NB = () => {
+              var BB, OB, GB, YB;
+              const DB = document,
+                QB = null !== (BB = null !== (OB = null !== (GB = null !== (YB = DB.fullscreenElement) && void 0 !== YB ? YB : DB.webkitFullscreenElement) && void 0 !== GB ? GB : DB.mozFullScreenElement) && void 0 !== OB ? OB : DB.msFullscreenElement) && void 0 !== BB ? BB : null,
+                jB = QB ? IY.getId(QB) : -1;
+              jB !== oB && (-1 !== oB && JB({
+                id: oB,
                 enter: !1
-              }), hH = tH, -1 !== tH && CH({
-                id: tH,
+              }), oB = jB, -1 !== jB && JB({
+                id: jB,
                 enter: !0
               }))
             },
-            xH = () => {
-              if (LH || rH) return;
-              if (rH = !0, OA(), LH) return;
-              const HH = SH(document);
-              LH ? "function" == typeof HH && zL([HH]) : ("function" == typeof HH && BH.push(HH), BH.push(SL("fullscreenchange", MH)), BH.push(SL("webkitfullscreenchange", MH)), BH.push(SL("mozfullscreenchange", MH)), BH.push(SL("MSFullscreenChange", MH)), IA = !0)
+            RB = () => {
+              if (GB || DB) return;
+              if (DB = !0, UY(), GB) return;
+              const BB = QB(document);
+              GB ? "function" == typeof BB && yG([BB]) : ("function" == typeof BB && OB.push(BB), OB.push(QG("fullscreenchange", NB)), OB.push(QG("webkitfullscreenchange", NB)), OB.push(QG("mozfullscreenchange", NB)), OB.push(QG("MSFullscreenChange", NB)), uY = !0)
             };
-          return ["interactive", "complete"].includes(document.readyState) ? xH() : (BH.push(SL("DOMContentLoaded", (() => {
-            VA({
-              type: tH.DomContentLoaded,
+          return ["interactive", "complete"].includes(document.readyState) ? RB() : (OB.push(QG("DOMContentLoaded", (() => {
+            nY({
+              type: jB.DomContentLoaded,
               data: {}
-            }), "DOMContentLoaded" === NH && setTimeout(xH, 0)
-          }))), BH.push(SL("load", (() => {
-            VA({
-              type: tH.Load,
+            }), "DOMContentLoaded" === XB && setTimeout(RB, 0)
+          }))), OB.push(QG("load", (() => {
+            nY({
+              type: jB.Load,
               data: {}
-            }), "load" === NH && xH()
+            }), "load" === XB && RB()
           }), window))), () => {
-            LH = !0;
+            GB = !0;
             try {
-              null == HH || HH.flush()
-            } catch (BH) {}
-            HH = void 0, zL(BH), uB.destroy(), YB.removeLoadListener(), YB.destroy(), SB.clear(), WB.reset(), lA.reset(), IA = !1, IL = void 0
+              null == BB || BB.flush()
+            } catch (OB) {}
+            BB = void 0, yG(OB), pO.destroy(), lO.removeLoadListener(), lO.destroy(), QO.clear(), ZO.reset(), IY.reset(), uY = !1, uG = void 0
           }
-        } catch (BH) {
-          console.warn(BH)
+        } catch (OB) {
+          console.warn(OB)
         }
       }
-      eA.addCustomEvent = (HH, BH) => {
-        if (!IA) throw new Error("please add custom event after start recording");
-        VA({
-          type: tH.Custom,
+      LY.addCustomEvent = (BB, OB) => {
+        if (!uY) throw new Error("please add custom event after start recording");
+        nY({
+          type: jB.Custom,
           data: {
-            tag: HH,
-            payload: BH
+            tag: BB,
+            payload: OB
           }
         })
-      }, eA.freezePage = () => {
-        NL.forEach((HH => HH.freeze()))
-      }, eA.takeFullSnapshot = HH => {
-        if (!IA) throw new Error("please take full snapshot after start recording");
-        OA(HH)
-      }, eA.isRecording = () => IA, eA.mirror = lA, "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
-      var qA = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
-      new RegExp(`^${qA.source}`, "i"), new RegExp(qA.source, "gi"), "0".repeat(32), "0".repeat(16);
-      var gA = Object.create(null);
+      }, LY.freezePage = () => {
+        XG.forEach((BB => BB.freeze()))
+      }, LY.takeFullSnapshot = BB => {
+        if (!uY) throw new Error("please take full snapshot after start recording");
+        UY(BB)
+      }, LY.isRecording = () => uY, LY.mirror = IY, "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
+      var gY = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
+      new RegExp(`^${gY.source}`, "i"), new RegExp(gY.source, "gi"), "0".repeat(32), "0".repeat(16);
+      var rY = Object.create(null);
 
-      function NA(HH) {
-        return NA = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(HH) {
-          return typeof HH
-        } : function(HH) {
-          return HH && "function" == typeof Symbol && HH.constructor === Symbol && HH !== Symbol.prototype ? "symbol" : typeof HH
-        }, NA(HH)
+      function XY(BB) {
+        return XY = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
+          return typeof BB
+        } : function(BB) {
+          return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
+        }, XY(BB)
       }
 
-      function RA(HH, BH, LH) {
-        return (BH = function(HH) {
-          var BH = function(HH) {
-            if ("object" != NA(HH) || !HH) return HH;
-            var BH = HH[Symbol.toPrimitive];
-            if (void 0 !== BH) {
-              var LH = BH.call(HH, "string");
-              if ("object" != NA(LH)) return LH;
+      function wY(BB, OB, GB) {
+        return (OB = function(BB) {
+          var OB = function(BB) {
+            if ("object" != XY(BB) || !BB) return BB;
+            var OB = BB[Symbol.toPrimitive];
+            if (void 0 !== OB) {
+              var GB = OB.call(BB, "string");
+              if ("object" != XY(GB)) return GB;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(HH)
-          }(HH);
-          return "symbol" == NA(BH) ? BH : BH + ""
-        }(BH)) in HH ? Object.defineProperty(HH, BH, {
-          value: LH,
+            return String(BB)
+          }(BB);
+          return "symbol" == XY(OB) ? OB : OB + ""
+        }(OB)) in BB ? Object.defineProperty(BB, OB, {
+          value: GB,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : HH[BH] = LH, HH
+        }) : BB[OB] = GB, BB
       }
-      gA.Node = Object.create(null), gA.ShadowRoot = Object.create(null), gA.MutationObserver = Object.create(null), gA.Element = Object.create(null);
-      var jA = class {
-          constructor(HH) {
-            RA(this, "fileName", void 0), RA(this, "functionName", void 0), RA(this, "lineNumber", void 0), RA(this, "columnNumber", void 0), this.fileName = HH.fileName || "", this.functionName = HH.functionName || "", this.lineNumber = HH.lineNumber, this.columnNumber = HH.columnNumber
+      rY.Node = Object.create(null), rY.ShadowRoot = Object.create(null), rY.MutationObserver = Object.create(null), rY.Element = Object.create(null);
+      var EY = class {
+          constructor(BB) {
+            wY(this, "fileName", void 0), wY(this, "functionName", void 0), wY(this, "lineNumber", void 0), wY(this, "columnNumber", void 0), this.fileName = BB.fileName || "", this.functionName = BB.functionName || "", this.lineNumber = BB.lineNumber, this.columnNumber = BB.columnNumber
           }
           toString() {
-            const HH = this.lineNumber || "",
-              BH = this.columnNumber || "";
-            return this.functionName ? `${this.functionName} (${this.fileName}:${HH}:${BH})` : `${this.fileName}:${HH}:${BH}`
+            const BB = this.lineNumber || "",
+              OB = this.columnNumber || "";
+            return this.functionName ? `${this.functionName} (${this.fileName}:${BB}:${OB})` : `${this.fileName}:${BB}:${OB}`
           }
         },
-        nA = /(^|@)\S+:\d+/,
-        FA = /^\s*at .*(\S+:\d+|\(native\))/m,
-        DA = /^(eval@)?(\[native code])?$/,
-        wA = {
-          parse(HH) {
-            return HH ? void 0 !== HH.stacktrace || void 0 !== HH["opera#sourceloc"] ? this.parseOpera(HH) : HH.stack && HH.stack.match(FA) ? this.parseV8OrIE(HH) : HH.stack ? this.parseFFOrSafari(HH) : [] : []
+        cY = /(^|@)\S+:\d+/,
+        hY = /^\s*at .*(\S+:\d+|\(native\))/m,
+        aY = /^(eval@)?(\[native code])?$/,
+        eY = {
+          parse(BB) {
+            return BB ? void 0 !== BB.stacktrace || void 0 !== BB["opera#sourceloc"] ? this.parseOpera(BB) : BB.stack && BB.stack.match(hY) ? this.parseV8OrIE(BB) : BB.stack ? this.parseFFOrSafari(BB) : [] : []
           },
-          extractLocation(HH) {
-            if (-1 === HH.indexOf(":")) return [HH];
-            const BH = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(HH.replace(/[()]/g, ""));
-            if (!BH) throw new Error(`Cannot parse given url: ${HH}`);
-            return [BH[1], BH[2] || void 0, BH[3] || void 0]
+          extractLocation(BB) {
+            if (-1 === BB.indexOf(":")) return [BB];
+            const OB = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(BB.replace(/[()]/g, ""));
+            if (!OB) throw new Error(`Cannot parse given url: ${BB}`);
+            return [OB[1], OB[2] || void 0, OB[3] || void 0]
           },
-          parseV8OrIE(HH) {
-            return HH.stack.split("\n").filter((function(HH) {
-              return !!HH.match(FA)
-            }), this).map((function(HH) {
-              HH.indexOf("(eval ") > -1 && (HH = HH.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(\),.*$)/g, ""));
-              let BH = HH.replace(/^\s+/, "").replace(/\(eval code/g, "(");
-              const LH = BH.match(/ (\((.+):(\d+):(\d+)\)$)/);
-              BH = LH ? BH.replace(LH[0], "") : BH;
-              const AH = BH.split(/\s+/).slice(1),
-                rH = this.extractLocation(LH ? LH[1] : AH.pop());
-              return new jA({
-                functionName: AH.join(" ") || void 0,
-                fileName: ["eval", "<anonymous>"].indexOf(rH[0]) > -1 ? void 0 : rH[0],
-                lineNumber: rH[1],
-                columnNumber: rH[2]
+          parseV8OrIE(BB) {
+            return BB.stack.split("\n").filter((function(BB) {
+              return !!BB.match(hY)
+            }), this).map((function(BB) {
+              BB.indexOf("(eval ") > -1 && (BB = BB.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(\),.*$)/g, ""));
+              let OB = BB.replace(/^\s+/, "").replace(/\(eval code/g, "(");
+              const GB = OB.match(/ (\((.+):(\d+):(\d+)\)$)/);
+              OB = GB ? OB.replace(GB[0], "") : OB;
+              const YB = OB.split(/\s+/).slice(1),
+                DB = this.extractLocation(GB ? GB[1] : YB.pop());
+              return new EY({
+                functionName: YB.join(" ") || void 0,
+                fileName: ["eval", "<anonymous>"].indexOf(DB[0]) > -1 ? void 0 : DB[0],
+                lineNumber: DB[1],
+                columnNumber: DB[2]
               })
             }), this)
           },
-          parseFFOrSafari(HH) {
-            return HH.stack.split("\n").filter((function(HH) {
-              return !HH.match(DA)
-            }), this).map((function(HH) {
-              if (HH.indexOf(" > eval") > -1 && (HH = HH.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), -1 === HH.indexOf("@") && -1 === HH.indexOf(":")) return new jA({
-                functionName: HH
+          parseFFOrSafari(BB) {
+            return BB.stack.split("\n").filter((function(BB) {
+              return !BB.match(aY)
+            }), this).map((function(BB) {
+              if (BB.indexOf(" > eval") > -1 && (BB = BB.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), -1 === BB.indexOf("@") && -1 === BB.indexOf(":")) return new EY({
+                functionName: BB
               });
               {
-                const BH = /((.*".+"[^@]*)?[^@]*)(?:@)/,
-                  LH = HH.match(BH),
-                  AH = LH && LH[1] ? LH[1] : void 0,
-                  rH = this.extractLocation(HH.replace(BH, ""));
-                return new jA({
-                  functionName: AH,
-                  fileName: rH[0],
-                  lineNumber: rH[1],
-                  columnNumber: rH[2]
+                const OB = /((.*".+"[^@]*)?[^@]*)(?:@)/,
+                  GB = BB.match(OB),
+                  YB = GB && GB[1] ? GB[1] : void 0,
+                  DB = this.extractLocation(BB.replace(OB, ""));
+                return new EY({
+                  functionName: YB,
+                  fileName: DB[0],
+                  lineNumber: DB[1],
+                  columnNumber: DB[2]
                 })
               }
             }), this)
           },
-          parseOpera(HH) {
-            return !HH.stacktrace || HH.message.indexOf("\n") > -1 && HH.message.split("\n").length > HH.stacktrace.split("\n").length ? this.parseOpera9(HH) : HH.stack ? this.parseOpera11(HH) : this.parseOpera10(HH)
+          parseOpera(BB) {
+            return !BB.stacktrace || BB.message.indexOf("\n") > -1 && BB.message.split("\n").length > BB.stacktrace.split("\n").length ? this.parseOpera9(BB) : BB.stack ? this.parseOpera11(BB) : this.parseOpera10(BB)
           },
-          parseOpera9(HH) {
-            const BH = /Line (\d+).*script (?:in )?(\S+)/i,
-              LH = HH.message.split("\n"),
-              AH = [];
-            for (let rH = 2, SH = LH.length; SH > rH; rH += 2) {
-              const HH = BH.exec(LH[rH]);
-              HH && AH.push(new jA({
-                fileName: HH[2],
-                lineNumber: parseFloat(HH[1])
+          parseOpera9(BB) {
+            const OB = /Line (\d+).*script (?:in )?(\S+)/i,
+              GB = BB.message.split("\n"),
+              YB = [];
+            for (let DB = 2, QB = GB.length; QB > DB; DB += 2) {
+              const BB = OB.exec(GB[DB]);
+              BB && YB.push(new EY({
+                fileName: BB[2],
+                lineNumber: parseFloat(BB[1])
               }))
             }
-            return AH
+            return YB
           },
-          parseOpera10(HH) {
-            const BH = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,
-              LH = HH.stacktrace.split("\n"),
-              AH = [];
-            for (let rH = 0, SH = LH.length; SH > rH; rH += 2) {
-              const HH = BH.exec(LH[rH]);
-              HH && AH.push(new jA({
-                functionName: HH[3] || void 0,
-                fileName: HH[2],
-                lineNumber: parseFloat(HH[1])
+          parseOpera10(BB) {
+            const OB = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,
+              GB = BB.stacktrace.split("\n"),
+              YB = [];
+            for (let DB = 0, QB = GB.length; QB > DB; DB += 2) {
+              const BB = OB.exec(GB[DB]);
+              BB && YB.push(new EY({
+                functionName: BB[3] || void 0,
+                fileName: BB[2],
+                lineNumber: parseFloat(BB[1])
               }))
             }
-            return AH
+            return YB
           },
-          parseOpera11(HH) {
-            return HH.stack.split("\n").filter((function(HH) {
-              return !!HH.match(nA) && !HH.match(/^Error created at/)
-            }), this).map((function(HH) {
-              const BH = HH.split("@"),
-                LH = this.extractLocation(BH.pop());
-              return new jA({
-                functionName: (BH.shift() || "").replace(/<anonymous function(: (\w+))?>/, "$2").replace(/\([^)]*\)/g, "") || void 0,
-                fileName: LH[0],
-                lineNumber: LH[1],
-                columnNumber: LH[2]
+          parseOpera11(BB) {
+            return BB.stack.split("\n").filter((function(BB) {
+              return !!BB.match(cY) && !BB.match(/^Error created at/)
+            }), this).map((function(BB) {
+              const OB = BB.split("@"),
+                GB = this.extractLocation(OB.pop());
+              return new EY({
+                functionName: (OB.shift() || "").replace(/<anonymous function(: (\w+))?>/, "$2").replace(/\([^)]*\)/g, "") || void 0,
+                fileName: GB[0],
+                lineNumber: GB[1],
+                columnNumber: GB[2]
               })
             }), this)
           }
         };
 
-      function ZA(HH) {
-        if (!HH || !HH.outerHTML) return "";
-        let BH = "";
-        for (; HH.parentElement;) {
-          let LH = HH.localName;
-          if (!LH) break;
-          LH = LH.toLowerCase();
-          const AH = HH.parentElement,
-            rH = [];
-          if (AH.children && AH.children.length > 0)
-            for (let HH = 0; AH.children.length > HH; HH++) {
-              const BH = AH.children[HH];
-              BH.localName && BH.localName.toLowerCase && BH.localName.toLowerCase() === LH && rH.push(BH)
+      function TY(BB) {
+        if (!BB || !BB.outerHTML) return "";
+        let OB = "";
+        for (; BB.parentElement;) {
+          let GB = BB.localName;
+          if (!GB) break;
+          GB = GB.toLowerCase();
+          const YB = BB.parentElement,
+            DB = [];
+          if (YB.children && YB.children.length > 0)
+            for (let BB = 0; YB.children.length > BB; BB++) {
+              const OB = YB.children[BB];
+              OB.localName && OB.localName.toLowerCase && OB.localName.toLowerCase() === GB && DB.push(OB)
             }
-          rH.length > 1 && (LH += `:eq(${rH.indexOf(HH)})`), BH = LH + (BH ? ">" + BH : ""), HH = AH
+          DB.length > 1 && (GB += `:eq(${DB.indexOf(BB)})`), OB = GB + (OB ? ">" + OB : ""), BB = YB
         }
-        return BH
+        return OB
       }
 
-      function dA(HH) {
-        return Array.isArray(HH)
+      function bY(BB) {
+        return Array.isArray(BB)
       }
 
-      function aA(HH) {
-        return "object" == typeof HH && null !== HH && !dA(HH)
+      function CY(BB) {
+        return "object" == typeof BB && null !== BB && !bY(BB)
       }
 
-      function sA(HH, BH) {
-        if (0 === BH) return !0;
-        const LH = Object.keys(HH);
-        for (const AH of LH)
-          if (aA(HH[AH]) && sA(HH[AH], BH - 1)) return !0;
+      function HY(BB, OB) {
+        if (0 === OB) return !0;
+        const GB = Object.keys(BB);
+        for (const YB of GB)
+          if (CY(BB[YB]) && HY(BB[YB], OB - 1)) return !0;
         return !1
       }
 
-      function JA(HH, BH) {
-        const LH = {
+      function vY(BB, OB) {
+        const GB = {
           numOfKeysLimit: 50,
           depthOfLimit: 4
         };
-        Object.assign(LH, BH);
-        const AH = [],
-          rH = [];
-        return JSON.stringify(HH, (function(HH, BH) {
-          if (AH.length > 0) {
-            const LH = AH.indexOf(this);
-            ~LH ? AH.splice(LH + 1) : AH.push(this), ~LH ? rH.splice(LH, 1 / 0, HH) : rH.push(HH), ~AH.indexOf(BH) && (BH = AH[0] === BH ? "[Circular ~]" : "[Circular ~." + rH.slice(0, AH.indexOf(BH)).join(".") + "]")
-          } else AH.push(BH);
-          if (null === BH) return BH;
-          if (void 0 === BH) return "undefined";
-          if (aA(SH = BH) && Object.keys(SH).length > LH.numOfKeysLimit || "function" == typeof SH || aA(SH) && sA(SH, LH.depthOfLimit)) return function(HH) {
-            let BH = HH.toString();
-            return LH.stringLengthLimit && BH.length > LH.stringLengthLimit && (BH = `${BH.slice(0,LH.stringLengthLimit)}...`), BH
-          }(BH);
-          var SH;
-          if ("bigint" == typeof BH) return BH.toString() + "n";
-          if (BH instanceof Event) {
-            const HH = {};
-            for (const LH in BH) {
-              const AH = BH[LH];
-              HH[LH] = dA(AH) ? ZA(AH.length ? AH[0] : null) : AH
+        Object.assign(GB, OB);
+        const YB = [],
+          DB = [];
+        return JSON.stringify(BB, (function(BB, OB) {
+          if (YB.length > 0) {
+            const GB = YB.indexOf(this);
+            ~GB ? YB.splice(GB + 1) : YB.push(this), ~GB ? DB.splice(GB, 1 / 0, BB) : DB.push(BB), ~YB.indexOf(OB) && (OB = YB[0] === OB ? "[Circular ~]" : "[Circular ~." + DB.slice(0, YB.indexOf(OB)).join(".") + "]")
+          } else YB.push(OB);
+          if (null === OB) return OB;
+          if (void 0 === OB) return "undefined";
+          if (CY(QB = OB) && Object.keys(QB).length > GB.numOfKeysLimit || "function" == typeof QB || CY(QB) && HY(QB, GB.depthOfLimit)) return function(BB) {
+            let OB = BB.toString();
+            return GB.stringLengthLimit && OB.length > GB.stringLengthLimit && (OB = `${OB.slice(0,GB.stringLengthLimit)}...`), OB
+          }(OB);
+          var QB;
+          if ("bigint" == typeof OB) return OB.toString() + "n";
+          if (OB instanceof Event) {
+            const BB = {};
+            for (const GB in OB) {
+              const YB = OB[GB];
+              BB[GB] = bY(YB) ? TY(YB.length ? YB[0] : null) : YB
             }
-            return HH
+            return BB
           }
-          return BH instanceof Node ? BH instanceof HTMLElement ? BH ? BH.outerHTML : "" : BH.nodeName : BH instanceof Error ? BH.stack ? BH.stack + "\nEnd of stack for Error object" : BH.name + ": " + BH.message : BH
+          return OB instanceof Node ? OB instanceof HTMLElement ? OB ? OB.outerHTML : "" : OB.nodeName : OB instanceof Error ? OB.stack ? OB.stack + "\nEnd of stack for Error object" : OB.name + ": " + OB.message : OB
         }))
       }
-      var iA = {
+      var sY = {
         level: ["assert", "clear", "count", "countReset", "debug", "dir", "dirxml", "error", "group", "groupCollapsed", "groupEnd", "info", "log", "table", "time", "timeEnd", "timeLog", "trace", "warn"],
         lengthThreshold: 1e3,
         logger: "console"
       };
 
-      function pA(HH, BH, LH) {
-        const AH = LH ? Object.assign({}, iA, LH) : iA,
-          rH = AH.logger;
-        if (!rH) return () => {};
-        let SH;
-        SH = "string" == typeof rH ? BH[rH] : rH;
-        let hH = 0,
-          tH = !1,
-          zH = !0;
-        const CH = [];
-        if (AH.level.includes("error")) {
-          const LH = BH => {
-            const LH = BH.message;
-            HH({
+      function xY(BB, OB, GB) {
+        const YB = GB ? Object.assign({}, sY, GB) : sY,
+          DB = YB.logger;
+        if (!DB) return () => {};
+        let QB;
+        QB = "string" == typeof DB ? OB[DB] : DB;
+        let oB = 0,
+          jB = !1,
+          yB = !0;
+        const JB = [];
+        if (YB.level.includes("error")) {
+          const GB = OB => {
+            const GB = OB.message;
+            BB({
               level: "error",
-              trace: wA.parse(BH.error).map((HH => HH.toString())),
-              payload: [JA(LH, AH.stringifyOptions)]
+              trace: eY.parse(OB.error).map((BB => BB.toString())),
+              payload: [vY(GB, YB.stringifyOptions)]
             })
           };
-          BH.addEventListener("error", LH), CH.push((() => {
-            BH.removeEventListener("error", LH)
+          OB.addEventListener("error", GB), JB.push((() => {
+            OB.removeEventListener("error", GB)
           }));
-          const rH = BH => {
-            let LH, rH;
-            BH.reason instanceof Error ? (LH = BH.reason, rH = [JA(`Uncaught (in promise) ${LH.name}: ${LH.message}`, AH.stringifyOptions)]) : (LH = new Error, rH = [JA("Uncaught (in promise)", AH.stringifyOptions), JA(BH.reason, AH.stringifyOptions)]), HH({
+          const DB = OB => {
+            let GB, DB;
+            OB.reason instanceof Error ? (GB = OB.reason, DB = [vY(`Uncaught (in promise) ${GB.name}: ${GB.message}`, YB.stringifyOptions)]) : (GB = new Error, DB = [vY("Uncaught (in promise)", YB.stringifyOptions), vY(OB.reason, YB.stringifyOptions)]), BB({
               level: "error",
-              trace: wA.parse(LH).map((HH => HH.toString())),
-              payload: rH
+              trace: eY.parse(GB).map((BB => BB.toString())),
+              payload: DB
             })
           };
-          BH.addEventListener("unhandledrejection", rH), CH.push((() => {
-            BH.removeEventListener("unhandledrejection", rH)
+          OB.addEventListener("unhandledrejection", DB), JB.push((() => {
+            OB.removeEventListener("unhandledrejection", DB)
           }))
         }
-        for (const XH of AH.level) CH.push(EH(SH, XH));
+        for (const PB of YB.level) JB.push(MB(QB, PB));
         return () => {
-          zH = !1, CH.forEach((HH => HH()))
+          yB = !1, JB.forEach((BB => BB()))
         };
 
-        function EH(BH, LH) {
-          return BH[LH] ? function(rH, SH) {
+        function MB(OB, GB) {
+          return OB[GB] ? function(DB, QB) {
             try {
-              if (!(SH in rH)) return () => {};
-              const CH = rH[SH],
-                EH = {
-                  next: CH
+              if (!(QB in DB)) return () => {};
+              const JB = DB[QB],
+                MB = {
+                  next: JB
                 },
-                XH = (rH => function() {
-                  for (var SH = arguments.length, CH = new Array(SH), EH = 0; EH < SH; EH++) CH[EH] = arguments[EH];
-                  if (rH.apply(BH, CH), zH && !("assert" === LH && CH[0] || tH)) {
-                    tH = !0;
+                PB = (DB => function() {
+                  for (var QB = arguments.length, JB = new Array(QB), MB = 0; MB < QB; MB++) JB[MB] = arguments[MB];
+                  if (DB.apply(OB, JB), yB && !("assert" === GB && JB[0] || jB)) {
+                    jB = !0;
                     try {
-                      const BH = wA.parse(new Error).map((HH => HH.toString())).splice(1),
-                        rH = ("assert" === LH ? CH.slice(1) : CH).map((HH => JA(HH, AH.stringifyOptions)));
-                      hH++, AH.lengthThreshold > hH ? HH({
-                        level: LH,
-                        trace: BH,
-                        payload: rH
-                      }) : hH === AH.lengthThreshold && HH({
+                      const OB = eY.parse(new Error).map((BB => BB.toString())).splice(1),
+                        DB = ("assert" === GB ? JB.slice(1) : JB).map((BB => vY(BB, YB.stringifyOptions)));
+                      oB++, YB.lengthThreshold > oB ? BB({
+                        level: GB,
+                        trace: OB,
+                        payload: DB
+                      }) : oB === YB.lengthThreshold && BB({
                         level: "warn",
                         trace: [],
-                        payload: [JA("The number of log records reached the threshold.")]
+                        payload: [vY("The number of log records reached the threshold.")]
                       })
-                    } catch (HH) {
-                      rH.apply(BH, ["rrweb logger error:", HH, ...CH])
+                    } catch (BB) {
+                      DB.apply(OB, ["rrweb logger error:", BB, ...JB])
                     } finally {
-                      tH = !1
+                      jB = !1
                     }
                   }
                 })((function() {
-                  for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
-                  return EH.next.apply(this, BH)
+                  for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+                  return MB.next.apply(this, OB)
                 }));
-              return "function" == typeof XH && (XH.prototype = XH.prototype || {}, Object.defineProperties(XH, {
+              return "function" == typeof PB && (PB.prototype = PB.prototype || {}, Object.defineProperties(PB, {
                 __rrweb_original__: {
                   enumerable: !1,
-                  value: CH
+                  value: JB
                 },
                 __rrweb_layer__: {
                   enumerable: !1,
-                  value: EH
+                  value: MB
                 }
-              })), rH[SH] = XH, () => {
-                if (rH[SH] === XH) return void(rH[SH] = EH.next);
-                const HH = HH => {
-                  var BH;
-                  return "function" == typeof HH ? null !== (BH = HH.__rrweb_layer__) && void 0 !== BH ? BH : HH.__posthog_layer__ : void 0
+              })), DB[QB] = PB, () => {
+                if (DB[QB] === PB) return void(DB[QB] = MB.next);
+                const BB = BB => {
+                  var OB;
+                  return "function" == typeof BB ? null !== (OB = BB.__rrweb_layer__) && void 0 !== OB ? OB : BB.__posthog_layer__ : void 0
                 };
-                let BH = rH[SH],
-                  LH = HH(BH);
-                for (; LH;) {
-                  if (LH.next === XH) return void(LH.next = EH.next);
-                  BH = LH.next, LH = HH(BH)
+                let OB = DB[QB],
+                  GB = BB(OB);
+                for (; GB;) {
+                  if (GB.next === PB) return void(GB.next = MB.next);
+                  OB = GB.next, GB = BB(OB)
                 }
               }
-            } catch (HH) {
+            } catch (BB) {
               return () => {}
             }
-          }(BH, LH) : () => {}
+          }(OB, GB) : () => {}
         }
       }
-      const yA = "u" > typeof window ? window : void 0,
-        Hr = "u" > typeof globalThis ? globalThis : yA,
-        Br = null == Hr ? void 0 : Hr.document,
-        Lr = null == Hr ? void 0 : Hr.location;
-      null != Hr && Hr.XMLHttpRequest && new Hr.XMLHttpRequest;
-      const Ar = "undefined" != typeof globalThis ? globalThis : yA;
-      Ar && "undefined" == typeof self && (Ar.self = Ar), Ar && "undefined" == typeof File && (Ar.File = function() {});
-      const rr = null != yA ? yA : {},
-        Sr = Object.prototype,
-        hr = Sr.hasOwnProperty,
-        tr = Sr.toString,
-        zr = Array.isArray || function(HH) {
-          return "[object Array]" === tr.call(HH)
+      const tY = "u" > typeof window ? window : void 0,
+        BD = "u" > typeof globalThis ? globalThis : tY,
+        OD = null == BD ? void 0 : BD.document,
+        GD = null == BD ? void 0 : BD.location;
+      null != BD && BD.XMLHttpRequest && new BD.XMLHttpRequest;
+      const YD = "undefined" != typeof globalThis ? globalThis : tY;
+      YD && "undefined" == typeof self && (YD.self = YD), YD && "undefined" == typeof File && (YD.File = function() {});
+      const DD = null != tY ? tY : {},
+        QD = Object.prototype,
+        oD = QD.hasOwnProperty,
+        jD = QD.toString,
+        yD = Array.isArray || function(BB) {
+          return "[object Array]" === jD.call(BB)
         },
-        Cr = HH => "function" == typeof HH,
-        Er = HH => HH === Object(HH) && !zr(HH),
-        Xr = HH => void 0 === HH,
-        Gr = HH => "[object String]" == tr.call(HH),
-        Yr = HH => null === HH,
-        ur = HH => Xr(HH) || Yr(HH),
-        Qr = HH => "[object Number]" == tr.call(HH) && HH == HH,
-        Wr = HH => "[object Boolean]" === tr.call(HH),
-        Mr = HH => HH instanceof FormData;
+        JD = BB => "function" == typeof BB,
+        MD = BB => BB === Object(BB) && !yD(BB),
+        PD = BB => void 0 === BB,
+        zD = BB => "[object String]" == jD.call(BB),
+        lD = BB => null === BB,
+        pD = BB => PD(BB) || lD(BB),
+        qD = BB => "[object Number]" == jD.call(BB) && BB == BB,
+        ZD = BB => "[object Boolean]" === jD.call(BB),
+        ND = BB => BB instanceof FormData;
 
-      function xr(HH, BH, LH, AH, rH) {
-        return BH > LH && (AH.warn("min cannot be greater than max."), BH = LH), Qr(HH) ? HH > LH ? (AH.warn(" cannot be  greater than max: " + LH + ". Using max value instead."), LH) : BH > HH ? (AH.warn(" cannot be less than min: " + BH + ". Using min value instead."), BH) : HH : (AH.warn(" must be a number. using max or fallback. max: " + LH + ", fallback: " + rH), xr(null != rH ? rH : LH, BH, LH, AH))
+      function RD(BB, OB, GB, YB, DB) {
+        return OB > GB && (YB.warn("min cannot be greater than max."), OB = GB), qD(BB) ? BB > GB ? (YB.warn(" cannot be  greater than max: " + GB + ". Using max value instead."), GB) : OB > BB ? (YB.warn(" cannot be less than min: " + OB + ". Using min value instead."), OB) : BB : (YB.warn(" must be a number. using max or fallback. max: " + GB + ", fallback: " + DB), RD(null != DB ? DB : GB, OB, GB, YB))
       }
-      var vr = class {
-        constructor(HH) {
-          this.C = {}, this.I = HH.I, this.R = xr(HH.bucketSize, 0, 100, HH.A), this.$ = xr(HH.refillRate, 0, this.R, HH.A), this.O = xr(HH.refillInterval, 0, 864e5, HH.A)
+      var WD = class {
+        constructor(BB) {
+          this.C = {}, this.I = BB.I, this.R = RD(BB.bucketSize, 0, 100, BB.A), this.$ = RD(BB.refillRate, 0, this.R, BB.A), this.O = RD(BB.refillInterval, 0, 864e5, BB.A)
         }
-        F(HH, BH) {
-          const LH = Math.floor((BH - HH.lastAccess) / this.O);
-          LH > 0 && (HH.tokens = Math.min(HH.tokens + LH * this.$, this.R), HH.lastAccess = HH.lastAccess + LH * this.O)
+        F(BB, OB) {
+          const GB = Math.floor((OB - BB.lastAccess) / this.O);
+          GB > 0 && (BB.tokens = Math.min(BB.tokens + GB * this.$, this.R), BB.lastAccess = BB.lastAccess + GB * this.O)
         }
-        consumeRateLimit(HH) {
-          var BH;
-          const LH = Date.now(),
-            AH = String(HH);
-          let rH = this.C[AH];
-          return rH ? this.F(rH, LH) : (rH = {
+        consumeRateLimit(BB) {
+          var OB;
+          const GB = Date.now(),
+            YB = String(BB);
+          let DB = this.C[YB];
+          return DB ? this.F(DB, GB) : (DB = {
             tokens: this.R,
-            lastAccess: LH
-          }, this.C[AH] = rH), 0 === rH.tokens || (rH.tokens--, 0 === rH.tokens && (null === (BH = this.I) || void 0 === BH || BH.call(this, HH)), 0 === rH.tokens)
+            lastAccess: GB
+          }, this.C[YB] = DB), 0 === DB.tokens || (DB.tokens--, 0 === DB.tokens && (null === (OB = this.I) || void 0 === OB || OB.call(this, BB)), 0 === DB.tokens)
         }
         stop() {
           this.C = {}
         }
       };
 
-      function Pr(HH) {
-        return HH ? HH.split("#")[0] : HH
+      function AD(BB) {
+        return BB ? BB.split("#")[0] : BB
       }
-      const Tr = "NativeGzipValidationError";
-      let Ur;
-      const Vr = HH => {
-          throw function(HH, BH) {
-            const LH = new Error(BH);
+      const VD = "NativeGzipValidationError";
+      let SD;
+      const nD = BB => {
+          throw function(BB, OB) {
+            const GB = new Error(OB);
             try {
-              Object.defineProperty(LH, "name", {
-                value: HH,
+              Object.defineProperty(GB, "name", {
+                value: BB,
                 writable: !0,
                 enumerable: !0,
                 configurable: !0
               })
-            } catch (HH) {}
-            return LH
-          }(Tr, `Native gzip produced invalid output: ${HH}`)
+            } catch (BB) {}
+            return GB
+          }(VD, `Native gzip produced invalid output: ${BB}`)
         },
-        Or = (br = SH((function*(HH, BH) {
-          18 > HH.size && Vr("too-short");
-          const LH = new Uint8Array(yield HH.slice(0, 10).arrayBuffer());
-          var AH;
-          (2 > (AH = LH).length || 31 !== AH[0] || 139 !== AH[1] || 8 !== LH[2]) && Vr("invalid-header");
-          const rH = new DataView(yield HH.slice(HH.size - 8).arrayBuffer());
-          rH.getUint32(0, !0) !== (HH => {
-            const BH = (() => {
-              if (Ur) return Ur;
-              Ur = [];
-              for (let HH = 0; 256 > HH; HH++) {
-                let BH = HH;
-                for (let HH = 0; 8 > HH; HH++) BH = 1 & BH ? 3988292384 ^ BH >>> 1 : BH >>> 1;
-                Ur[HH] = BH >>> 0
+        UD = (fD = QB((function*(BB, OB) {
+          18 > BB.size && nD("too-short");
+          const GB = new Uint8Array(yield BB.slice(0, 10).arrayBuffer());
+          var YB;
+          (2 > (YB = GB).length || 31 !== YB[0] || 139 !== YB[1] || 8 !== GB[2]) && nD("invalid-header");
+          const DB = new DataView(yield BB.slice(BB.size - 8).arrayBuffer());
+          DB.getUint32(0, !0) !== (BB => {
+            const OB = (() => {
+              if (SD) return SD;
+              SD = [];
+              for (let BB = 0; 256 > BB; BB++) {
+                let OB = BB;
+                for (let BB = 0; 8 > BB; BB++) OB = 1 & OB ? 3988292384 ^ OB >>> 1 : OB >>> 1;
+                SD[BB] = OB >>> 0
               }
-              return Ur
+              return SD
             })();
-            let LH = 4294967295;
-            for (let AH = 0; HH.length > AH; AH++) LH = BH[255 & (LH ^ HH[AH])] ^ LH >>> 8;
-            return (4294967295 ^ LH) >>> 0
-          })(BH) && Vr("invalid-crc");
-          const SH = BH.length >>> 0;
-          rH.getUint32(4, !0) !== SH && Vr("invalid-size")
-        })), function(HH, BH) {
-          return br.apply(this, arguments)
+            let GB = 4294967295;
+            for (let YB = 0; BB.length > YB; YB++) GB = OB[255 & (GB ^ BB[YB])] ^ GB >>> 8;
+            return (4294967295 ^ GB) >>> 0
+          })(OB) && nD("invalid-crc");
+          const QB = OB.length >>> 0;
+          DB.getUint32(4, !0) !== QB && nD("invalid-size")
+        })), function(BB, OB) {
+          return fD.apply(this, arguments)
         });
-      var br;
+      var fD;
 
-      function kr() {
-        return kr = SH((function*(HH) {
-          let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-            LH = arguments.length > 2 ? arguments[2] : void 0;
+      function kD() {
+        return kD = QB((function*(BB) {
+          let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+            GB = arguments.length > 2 ? arguments[2] : void 0;
           try {
-            const BH = (new TextEncoder).encode(HH),
-              LH = new globalThis.CompressionStream("gzip"),
-              rH = LH.writable.getWriter(),
-              hH = rH.write(BH).then((() => rH.close())).catch((AH = SH((function*(HH) {
+            const OB = (new TextEncoder).encode(BB),
+              GB = new globalThis.CompressionStream("gzip"),
+              DB = GB.writable.getWriter(),
+              oB = DB.write(OB).then((() => DB.close())).catch((YB = QB((function*(BB) {
                 try {
-                  yield rH.abort(HH)
-                } catch (HH) {}
-                throw HH
-              })), function(HH) {
-                return AH.apply(this, arguments)
+                  yield DB.abort(BB)
+                } catch (BB) {}
+                throw BB
+              })), function(BB) {
+                return YB.apply(this, arguments)
               })),
-              tH = new Response(LH.readable).blob(),
-              [zH] = yield Promise.all([tH, hH]);
-            return yield Or(zH, BH), zH
-          } catch (HH) {
-            if (null == LH ? void 0 : LH.rethrow) throw HH;
-            return BH && console.error("Failed to gzip compress data", HH), null
+              jB = new Response(GB.readable).blob(),
+              [yB] = yield Promise.all([jB, oB]);
+            return yield UD(yB, OB), yB
+          } catch (BB) {
+            if (null == GB ? void 0 : GB.rethrow) throw BB;
+            return OB && console.error("Failed to gzip compress data", BB), null
           }
-          var AH
-        })), kr.apply(this, arguments)
+          var YB
+        })), kD.apply(this, arguments)
       }
-      const mr = "0.9.4",
-        or = {
+      const dD = "0.9.4",
+        KD = {
           DEBUG: !1,
-          LIB_VERSION: mr,
+          LIB_VERSION: dD,
           LIB_NAME: "browser-common",
-          JS_SDK_VERSION: mr
+          JS_SDK_VERSION: dD
         },
-        Ir = function(HH) {
+        uD = function(BB) {
           let {
-            debugEnabled: BH
+            debugEnabled: OB
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          const LH = {
-            N(LH) {
-              let AH;
+          const GB = {
+            N(GB) {
+              let YB;
               try {
-                AH = typeof window > "u" ? void 0 : window
-              } catch (HH) {
+                YB = typeof window > "u" ? void 0 : window
+              } catch (BB) {
                 return
               }
-              for (var rH = arguments.length, SH = new Array(rH > 1 ? rH - 1 : 0), hH = 1; hH < rH; hH++) SH[hH - 1] = arguments[hH];
-              AH && (or.DEBUG || AH.POSTHOG_DEBUG || BH) && !Xr(AH.console) && AH.console && ("__rrweb_original__" in AH.console[LH] ? AH.console[LH].__rrweb_original__ : AH.console[LH])(HH, ...SH)
+              for (var DB = arguments.length, QB = new Array(DB > 1 ? DB - 1 : 0), oB = 1; oB < DB; oB++) QB[oB - 1] = arguments[oB];
+              YB && (KD.DEBUG || YB.POSTHOG_DEBUG || OB) && !PD(YB.console) && YB.console && ("__rrweb_original__" in YB.console[GB] ? YB.console[GB].__rrweb_original__ : YB.console[GB])(BB, ...QB)
             },
             debug() {
-              for (var HH = arguments.length, BH = new Array(HH), AH = 0; AH < HH; AH++) BH[AH] = arguments[AH];
-              LH.N("debug", ...BH)
+              for (var BB = arguments.length, OB = new Array(BB), YB = 0; YB < BB; YB++) OB[YB] = arguments[YB];
+              GB.N("debug", ...OB)
             },
             info() {
-              for (var HH = arguments.length, BH = new Array(HH), AH = 0; AH < HH; AH++) BH[AH] = arguments[AH];
-              LH.N("log", ...BH)
+              for (var BB = arguments.length, OB = new Array(BB), YB = 0; YB < BB; YB++) OB[YB] = arguments[YB];
+              GB.N("log", ...OB)
             },
             warn() {
-              for (var HH = arguments.length, BH = new Array(HH), AH = 0; AH < HH; AH++) BH[AH] = arguments[AH];
-              LH.N("warn", ...BH)
+              for (var BB = arguments.length, OB = new Array(BB), YB = 0; YB < BB; YB++) OB[YB] = arguments[YB];
+              GB.N("warn", ...OB)
             },
             error() {
-              for (var HH = arguments.length, BH = new Array(HH), AH = 0; AH < HH; AH++) BH[AH] = arguments[AH];
-              LH.N("error", ...BH)
+              for (var BB = arguments.length, OB = new Array(BB), YB = 0; YB < BB; YB++) OB[YB] = arguments[YB];
+              GB.N("error", ...OB)
             },
             critical() {
-              for (var BH = arguments.length, LH = new Array(BH), AH = 0; AH < BH; AH++) LH[AH] = arguments[AH];
-              console.error(HH, ...LH)
+              for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
+              console.error(BB, ...GB)
             },
-            uninitializedWarning(HH) {
-              LH.error(`You must initialize PostHog before calling ${HH}`)
+            uninitializedWarning(BB) {
+              GB.error(`You must initialize PostHog before calling ${BB}`)
             },
-            createLogger: (BH, LH) => Ir(`${HH} ${BH}`, LH)
+            createLogger: (OB, GB) => uD(`${BB} ${OB}`, GB)
           };
-          return LH
+          return GB
         },
-        fr = Ir("[PostHog.js]"),
-        lr = fr.createLogger;
+        mD = uD("[PostHog.js]"),
+        ID = mD.createLogger;
 
-      function Kr(HH, BH) {
-        if (!ur(HH))
-          if (zr(HH)) HH.forEach(BH);
-          else if (Mr(HH)) HH.forEach(((HH, LH) => BH(HH, LH)));
+      function FD(BB, OB) {
+        if (!pD(BB))
+          if (yD(BB)) BB.forEach(OB);
+          else if (ND(BB)) BB.forEach(((BB, GB) => OB(BB, GB)));
         else
-          for (const LH in HH) hr.call(HH, LH) && BH(HH[LH], LH)
+          for (const GB in BB) oD.call(BB, GB) && OB(BB[GB], GB)
       }
 
-      function cr(HH, BH, LH, AH) {
+      function iD(BB, OB, GB, YB) {
         const {
-          capture: rH = !1,
-          passive: SH = !0
-        } = null != AH ? AH : {};
-        null == HH || HH.addEventListener(BH, LH, {
-          capture: rH,
-          passive: SH
+          capture: DB = !1,
+          passive: QB = !0
+        } = null != YB ? YB : {};
+        null == BB || BB.addEventListener(OB, GB, {
+          capture: DB,
+          passive: QB
         })
       }
-      const er = ["localhost", "127.0.0.1"],
-        qr = HH => {
-          const BH = null == Br ? void 0 : Br.createElement("a");
-          return Xr(BH) ? null : (BH.href = HH, BH)
+      const LD = ["localhost", "127.0.0.1"],
+        gD = BB => {
+          const OB = null == OD ? void 0 : OD.createElement("a");
+          return PD(OB) ? null : (OB.href = BB, OB)
         },
-        gr = () => {},
-        Nr = HH => {
-          var BH;
-          if (Cr(HH)) return null !== (BH = HH.__posthog_layer__) && void 0 !== BH ? BH : HH.__rrweb_layer__
+        rD = () => {},
+        XD = BB => {
+          var OB;
+          if (JD(BB)) return null !== (OB = BB.__posthog_layer__) && void 0 !== OB ? OB : BB.__rrweb_layer__
         };
 
-      function Rr(HH, BH, LH) {
+      function wD(BB, OB, GB) {
         try {
-          if (!(BH in HH)) return gr;
-          const AH = {
-              next: HH[BH]
+          if (!(OB in BB)) return rD;
+          const YB = {
+              next: BB[OB]
             },
-            rH = LH((function() {
-              for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
-              return AH.next.apply(this, BH)
+            DB = GB((function() {
+              for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+              return YB.next.apply(this, OB)
             }));
-          return Cr(rH) && (rH.prototype = rH.prototype || {}, Object.defineProperties(rH, {
+          return JD(DB) && (DB.prototype = DB.prototype || {}, Object.defineProperties(DB, {
             __posthog_wrapped__: {
               enumerable: !1,
               value: !0
             },
             __posthog_layer__: {
               enumerable: !1,
-              value: AH
+              value: YB
             }
-          })), HH[BH] = rH, () => {
-            if (HH[BH] === rH) return void(HH[BH] = AH.next);
-            let LH = HH[BH],
-              SH = Nr(LH);
-            for (; SH;) {
-              if (SH.next === rH) return void(SH.next = AH.next);
-              LH = SH.next, SH = Nr(LH)
+          })), BB[OB] = DB, () => {
+            if (BB[OB] === DB) return void(BB[OB] = YB.next);
+            let GB = BB[OB],
+              QB = XD(GB);
+            for (; QB;) {
+              if (QB.next === DB) return void(QB.next = YB.next);
+              GB = QB.next, QB = XD(GB)
             }
           }
-        } catch (HH) {
-          return gr
+        } catch (BB) {
+          return rD
         }
       }
 
-      function jr(HH, BH) {
-        var LH;
-        const AH = function(HH) {
+      function ED(BB, OB) {
+        var GB;
+        const YB = function(BB) {
             try {
-              return "string" == typeof HH ? new URL(HH).hostname : "url" in HH ? new URL(HH.url).hostname : HH.hostname
-            } catch (HH) {
+              return "string" == typeof BB ? new URL(BB).hostname : "url" in BB ? new URL(BB.url).hostname : BB.hostname
+            } catch (BB) {
               return null
             }
-          }(HH),
-          rH = {
-            hostname: AH,
+          }(BB),
+          DB = {
+            hostname: YB,
             isHostDenied: !1
           };
-        if (!(null === (LH = BH.payloadHostDenyList) || void 0 === LH ? void 0 : LH.length) || !(null == AH ? void 0 : AH.trim().length)) return rH;
-        for (const SH of BH.payloadHostDenyList)
-          if (AH.endsWith(SH)) return {
-            hostname: AH,
+        if (!(null === (GB = OB.payloadHostDenyList) || void 0 === GB ? void 0 : GB.length) || !(null == YB ? void 0 : YB.trim().length)) return DB;
+        for (const QB of OB.payloadHostDenyList)
+          if (YB.endsWith(QB)) return {
+            hostname: YB,
             isHostDenied: !0
           };
-        return rH
+        return DB
       }
 
-      function nr(HH) {
-        var BH;
-        const LH = null == yA || null === (BH = yA.location) || void 0 === BH ? void 0 : BH.href;
-        return Xr(LH) ? void 0 : function(HH, BH) {
-          var LH;
-          const AH = null == HH || null === (LH = HH.config) || void 0 === LH ? void 0 : LH.get_current_url;
-          if (!Cr(AH)) return BH;
+      function cD(BB) {
+        var OB;
+        const GB = null == tY || null === (OB = tY.location) || void 0 === OB ? void 0 : OB.href;
+        return PD(GB) ? void 0 : function(BB, OB) {
+          var GB;
+          const YB = null == BB || null === (GB = BB.config) || void 0 === GB ? void 0 : GB.get_current_url;
+          if (!JD(YB)) return OB;
           try {
-            const HH = AH(BH);
-            return Gr(HH) && HH ? HH : BH
-          } catch (HH) {
-            return fr.error("Error in get_current_url, falling back to window.location.href", HH), BH
+            const BB = YB(OB);
+            return zD(BB) && BB ? BB : OB
+          } catch (BB) {
+            return mD.error("Error in get_current_url, falling back to window.location.href", BB), OB
           }
-        }(HH, LH)
+        }(BB, GB)
       }
-      const Fr = "$stored_person_properties",
-        Dr = new RegExp("^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$"),
-        wr = /(^|[^0-9A-Za-z_])([0-9][0-9 -]*[0-9])(?=$|[^0-9A-Za-z_])/g,
-        Zr = [16, 15, 14, 13],
-        dr = new RegExp("^(\\d{3}-?\\d{2}-?\\d{4})$"),
-        ar = new RegExp("(^|[^0-9])((?!000|666)[0-9]{3}-?(?!00)[0-9]{2}-?(?!0000)[0-9]{4})(?=$|([^0-9]))", "g"),
-        sr = /[0-9A-Za-z_]/;
+      const hD = "$stored_person_properties",
+        aD = new RegExp("^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$"),
+        eD = /(^|[^0-9A-Za-z_])([0-9][0-9 -]*[0-9])(?=$|[^0-9A-Za-z_])/g,
+        TD = [16, 15, 14, 13],
+        bD = new RegExp("^(\\d{3}-?\\d{2}-?\\d{4})$"),
+        CD = new RegExp("(^|[^0-9])((?!000|666)[0-9]{3}-?(?!00)[0-9]{2}-?(?!0000)[0-9]{4})(?=$|([^0-9]))", "g"),
+        HD = /[0-9A-Za-z_]/;
 
-      function Jr(HH) {
-        let BH = 0,
-          LH = !1;
-        for (let AH = HH.length - 1; AH >= 0; AH--) {
-          let rH = HH.charCodeAt(AH) - 48;
-          LH && (rH *= 2, rH > 9 && (rH -= 9)), BH += rH, LH = !LH
+      function vD(BB) {
+        let OB = 0,
+          GB = !1;
+        for (let YB = BB.length - 1; YB >= 0; YB--) {
+          let DB = BB.charCodeAt(YB) - 48;
+          GB && (DB *= 2, DB > 9 && (DB -= 9)), OB += DB, GB = !GB
         }
-        return BH % 10 == 0
+        return OB % 10 == 0
       }
-      const ir = 1e6;
+      const sD = 1e6;
 
-      function pr(HH) {
-        var BH;
-        return Math.min(ir, null !== (BH = HH.payloadSizeLimitBytes) && void 0 !== BH ? BH : ir)
+      function xD(BB) {
+        var OB;
+        return Math.min(sD, null !== (OB = BB.payloadSizeLimitBytes) && void 0 !== OB ? OB : sD)
       }
-      const yr = {
+      const tD = {
           initiatorTypes: ["audio", "beacon", "body", "css", "early-hint", "embed", "fetch", "frame", "iframe", "icon", "image", "img", "input", "link", "navigation", "object", "ping", "script", "track", "video", "xmlhttprequest"],
-          maskRequestFn: HH => HH,
+          maskRequestFn: BB => BB,
           recordHeaders: !1,
           recordBody: !1,
           recordInitialRequests: !1,
           recordPerformance: !1,
           performanceEntryTypeToObserve: ["first-input", "navigation", "paint", "resource"],
-          payloadSizeLimitBytes: ir,
+          payloadSizeLimitBytes: sD,
           payloadHostDenyList: [".lr-ingest.io", ".ingest.sentry.io", ".clarity.ms", "google-analytics.com", "analytics.google.com", "nr-data.net", "datadoghq.com", "datadoghq.eu", "ddog-gov.com", "segment.io", "rudderstack.com", "amplitude.com", "mixpanel.com", "hotjar.com", "hotjar.io", "fullstory.com"],
           streamNetworkBody: !1
         },
-        HS = ["authorization", "x-forwarded-for", "authorization", "cookie", "set-cookie", "x-api-key", "x-real-ip", "remote-addr", "forwarded", "proxy-authorization", "x-csrf-token", "x-csrftoken", "x-xsrf-token"],
-        BS = ["password", "secret", "passwd", "api_key", "apikey", "auth", "credentials", "mysql_pwd", "privatekey", "private_key", "token"],
-        LS = ["auth", "token", "secret", "session", "api-key", "apikey", "api_key", "credential", "password", "passwd", "cookie", "csrf", "xsrf"],
-        AS = HH => {
-          ur(HH) || Kr(Object.keys(HH), (BH => {
-            (HH => {
-              const BH = HH.toLowerCase();
-              return HS.includes(BH) || LS.some((HH => BH.includes(HH)))
-            })(BH) && (HH[BH] = "redacted")
+        BQ = ["authorization", "x-forwarded-for", "authorization", "cookie", "set-cookie", "x-api-key", "x-real-ip", "remote-addr", "forwarded", "proxy-authorization", "x-csrf-token", "x-csrftoken", "x-xsrf-token"],
+        OQ = ["password", "secret", "passwd", "api_key", "apikey", "auth", "credentials", "mysql_pwd", "privatekey", "private_key", "token"],
+        GQ = ["auth", "token", "secret", "session", "api-key", "apikey", "api_key", "credential", "password", "passwd", "cookie", "csrf", "xsrf"],
+        YQ = BB => {
+          pD(BB) || FD(Object.keys(BB), (OB => {
+            (BB => {
+              const OB = BB.toLowerCase();
+              return BQ.includes(OB) || GQ.some((BB => OB.includes(BB)))
+            })(OB) && (BB[OB] = "redacted")
           }))
         },
-        rS = ["/s/", "/e/", "/i/"];
+        DQ = ["/s/", "/e/", "/i/"];
 
-      function SS(HH, BH, LH, AH) {
-        if (ur(HH)) return HH;
-        let rH = (null == BH ? void 0 : BH["content-length"]) || function(HH) {
-          return new Blob([HH]).size
-        }(HH);
-        return Gr(rH) && (rH = parseInt(rH)), rH > LH ? `[SessionRecording] ${AH} body too large to record (${rH} bytes)` : HH
+      function QQ(BB, OB, GB, YB) {
+        if (pD(BB)) return BB;
+        let DB = (null == OB ? void 0 : OB["content-length"]) || function(BB) {
+          return new Blob([BB]).size
+        }(BB);
+        return zD(DB) && (DB = parseInt(DB)), DB > GB ? `[SessionRecording] ${YB} body too large to record (${DB} bytes)` : BB
       }
 
-      function hS(HH, BH) {
-        if (ur(HH)) return HH;
-        let LH = HH;
-        return function(HH) {
-          let BH = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          if (ur(HH)) return !1;
-          if (Gr(HH)) {
-            if (HH = HH.trim(), BH ? Dr.test((HH || "").replace(/[- ]/g, "")) : function(HH) {
-                let BH;
-                for (wr.lastIndex = 0; BH = wr.exec(HH);) {
-                  const HH = BH[2];
-                  if (!HH) continue;
-                  const LH = HH.replace(/[- ]/g, "");
-                  for (let BH = 0; LH.length > BH; BH++)
-                    for (const HH of Zr) {
-                      const AH = BH + HH;
-                      if (LH.length >= AH) {
-                        const HH = LH.slice(BH, AH);
-                        if (Dr.test(HH) && Jr(HH)) return !0
+      function oQ(BB, OB) {
+        if (pD(BB)) return BB;
+        let GB = BB;
+        return function(BB) {
+          let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          if (pD(BB)) return !1;
+          if (zD(BB)) {
+            if (BB = BB.trim(), OB ? aD.test((BB || "").replace(/[- ]/g, "")) : function(BB) {
+                let OB;
+                for (eD.lastIndex = 0; OB = eD.exec(BB);) {
+                  const BB = OB[2];
+                  if (!BB) continue;
+                  const GB = BB.replace(/[- ]/g, "");
+                  for (let OB = 0; GB.length > OB; OB++)
+                    for (const BB of TD) {
+                      const YB = OB + BB;
+                      if (GB.length >= YB) {
+                        const BB = GB.slice(OB, YB);
+                        if (aD.test(BB) && vD(BB)) return !0
                       }
                     }
                 }
                 return !1
-              }(HH)) return !1;
-            if (BH ? dr.test(HH) : function(HH) {
-                let BH;
-                for (ar.lastIndex = 0; BH = ar.exec(HH);) {
-                  const HH = BH[1],
-                    LH = BH[3];
-                  if (!(HH && LH && sr.test(HH) && sr.test(LH))) return !0
+              }(BB)) return !1;
+            if (OB ? bD.test(BB) : function(BB) {
+                let OB;
+                for (CD.lastIndex = 0; OB = CD.exec(BB);) {
+                  const BB = OB[1],
+                    GB = OB[3];
+                  if (!(BB && GB && HD.test(BB) && HD.test(GB))) return !0
                 }
                 return !1
-              }(HH)) return !1
+              }(BB)) return !1
           }
           return !0
-        }(LH, !1) || (LH = "[SessionRecording] " + BH + " body redacted"), Kr(BS, (HH => {
-          (null == LH ? void 0 : LH.length) && -1 !== (null == LH ? void 0 : LH.indexOf(HH)) && (LH = "[SessionRecording] " + BH + " body redacted as might contain: " + HH)
-        })), LH
+        }(GB, !1) || (GB = "[SessionRecording] " + OB + " body redacted"), FD(OQ, (BB => {
+          (null == GB ? void 0 : GB.length) && -1 !== (null == GB ? void 0 : GB.indexOf(BB)) && (GB = "[SessionRecording] " + OB + " body redacted as might contain: " + BB)
+        })), GB
       }
-      const tS = new WeakSet,
-        zS = lr("[Recorder]"),
-        CS = HH => "navigation" === HH.entryType,
-        ES = HH => "resource" === HH.entryType,
-        XS = () => {};
+      const jQ = new WeakSet,
+        yQ = ID("[Recorder]"),
+        JQ = BB => "navigation" === BB.entryType,
+        MQ = BB => "resource" === BB.entryType,
+        PQ = () => {};
 
-      function GS(HH, BH) {
-        var LH;
-        return CS(BH) && "complete" === (null === (LH = HH.document) || void 0 === LH ? void 0 : LH.readyState) && BH.loadEventEnd > 0
-      }
-
-      function YS(HH, BH) {
-        return BH.recordInitialRequests ? HH.performance.getEntries().filter((LH => GS(HH, LH) || ES(LH) && BH.initiatorTypes.includes(LH.initiatorType))) : BH.performanceEntryTypeToObserve.includes("navigation") ? function(HH) {
-          var BH;
-          return "complete" !== (null === (BH = HH.document) || void 0 === BH ? void 0 : BH.readyState) ? [] : HH.performance.getEntriesByType("navigation").filter((BH => GS(HH, BH)))
-        }(HH) : []
+      function zQ(BB, OB) {
+        var GB;
+        return JQ(OB) && "complete" === (null === (GB = BB.document) || void 0 === GB ? void 0 : GB.readyState) && OB.loadEventEnd > 0
       }
 
-      function uS(HH, BH) {
-        return !!BH && (Wr(BH) || BH[HH])
+      function lQ(BB, OB) {
+        return OB.recordInitialRequests ? BB.performance.getEntries().filter((GB => zQ(BB, GB) || MQ(GB) && OB.initiatorTypes.includes(GB.initiatorType))) : OB.performanceEntryTypeToObserve.includes("navigation") ? function(BB) {
+          var OB;
+          return "complete" !== (null === (OB = BB.document) || void 0 === OB ? void 0 : OB.readyState) ? [] : BB.performance.getEntriesByType("navigation").filter((OB => zQ(BB, OB)))
+        }(BB) : []
       }
 
-      function QS(HH) {
+      function pQ(BB, OB) {
+        return !!OB && (ZD(OB) || OB[BB])
+      }
+
+      function qQ(BB) {
         if ("undefined" == typeof Request) return !1;
-        if (HH instanceof Request) return !0;
+        if (BB instanceof Request) return !0;
         try {
-          return "[object Request]" === {}.toString.call(HH)
-        } catch (HH) {
+          return "[object Request]" === {}.toString.call(BB)
+        } catch (BB) {
           return !1
         }
       }
-      const WS = ["image/", "video/", "audio/", "font/", "application/octet-stream", "application/pdf", "application/zip", "application/wasm"];
+      const ZQ = ["image/", "video/", "audio/", "font/", "application/octet-stream", "application/pdf", "application/zip", "application/wasm"];
 
-      function MS(HH) {
+      function NQ(BB) {
         let {
-          type: BH,
-          recordBody: LH,
-          headers: AH,
-          url: rH
-        } = HH;
+          type: OB,
+          recordBody: GB,
+          headers: YB,
+          url: DB
+        } = BB;
 
-        function SH(HH) {
-          const BH = Object.keys(AH).find((HH => "content-type" === HH.toLowerCase())),
-            LH = BH && AH[BH];
-          return HH.some((HH => null == LH ? void 0 : LH.toLowerCase().includes(HH)))
+        function QB(BB) {
+          const OB = Object.keys(YB).find((BB => "content-type" === BB.toLowerCase())),
+            GB = OB && YB[OB];
+          return BB.some((BB => null == GB ? void 0 : GB.toLowerCase().includes(BB)))
         }
-        if (!LH) return !1;
-        if (function HH(BH) {
+        if (!GB) return !1;
+        if (function BB(OB) {
             try {
-              return "string" == typeof BH ? BH.startsWith("blob:") : BH instanceof URL ? "blob:" === BH.protocol : !!QS(BH) && HH(BH.url)
-            } catch (HH) {
+              return "string" == typeof OB ? OB.startsWith("blob:") : OB instanceof URL ? "blob:" === OB.protocol : !!qQ(OB) && BB(OB.url)
+            } catch (BB) {
               return !1
             }
-          }(rH)) return !1;
-        if (SH(WS)) return !1;
-        if (Wr(LH)) return !0;
-        if (zr(LH)) return SH(LH);
-        const hH = LH[BH];
-        return Wr(hH) ? hH : SH(hH)
+          }(DB)) return !1;
+        if (QB(ZQ)) return !1;
+        if (ZD(GB)) return !0;
+        if (yD(GB)) return QB(GB);
+        const oB = GB[OB];
+        return ZD(oB) ? oB : QB(oB)
       }
 
-      function xS(HH, BH, LH, AH, rH) {
-        return vS.apply(this, arguments)
+      function RQ(BB, OB, GB, YB, DB) {
+        return WQ.apply(this, arguments)
       }
 
-      function vS() {
-        return vS = SH((function*(HH, BH, LH, AH, rH) {
-          let SH = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          if (SH > 10) return zS.warn("Failed to get performance entry for request", {
-            url: LH,
-            initiatorType: BH
+      function WQ() {
+        return WQ = QB((function*(BB, OB, GB, YB, DB) {
+          let QB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          if (QB > 10) return yQ.warn("Failed to get performance entry for request", {
+            url: GB,
+            initiatorType: OB
           }), null;
-          const hH = function(HH, BH) {
-            for (let LH = HH.length - 1; LH >= 0; LH -= 1)
-              if (BH(HH[LH])) return HH[LH]
-          }(HH.performance.getEntriesByName(LH), (HH => ES(HH) && HH.initiatorType === BH && (Xr(AH) || HH.startTime >= AH) && (Xr(rH) || rH >= HH.startTime)));
-          return hH || (yield new Promise((HH => setTimeout(HH, 50 * SH))), xS(HH, BH, LH, AH, rH, SH + 1))
-        })), vS.apply(this, arguments)
+          const oB = function(BB, OB) {
+            for (let GB = BB.length - 1; GB >= 0; GB -= 1)
+              if (OB(BB[GB])) return BB[GB]
+          }(BB.performance.getEntriesByName(GB), (BB => MQ(BB) && BB.initiatorType === OB && (PD(YB) || BB.startTime >= YB) && (PD(DB) || DB >= BB.startTime)));
+          return oB || (yield new Promise((BB => setTimeout(BB, 50 * QB))), RQ(BB, OB, GB, YB, DB, QB + 1))
+        })), WQ.apply(this, arguments)
       }
 
-      function PS(HH) {
+      function AQ(BB) {
         let {
-          body: BH,
-          options: LH,
-          url: AH
-        } = HH;
-        if (ur(BH)) return null;
+          body: OB,
+          options: GB,
+          url: YB
+        } = BB;
+        if (pD(OB)) return null;
         const {
-          hostname: rH,
-          isHostDenied: SH
-        } = jr(AH, LH);
-        if (SH) return rH + " is in deny list";
-        if (Gr(BH)) return BH;
-        if ((HH => "u" > typeof Document && HH instanceof Document)(BH)) return BH.textContent;
-        if (Mr(BH)) return function(HH) {
-          let BH, LH, AH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "&";
-          const rH = [];
-          return Kr(HH, (function(HH, AH) {
-            Xr(HH) || Xr(AH) || "undefined" === AH || (BH = encodeURIComponent((HH => HH instanceof File)(HH) ? HH.name : HH.toString()), LH = encodeURIComponent(AH), rH[rH.length] = LH + "=" + BH)
-          })), rH.join(AH)
-        }(BH);
-        if (Er(BH)) try {
-          return JSON.stringify(BH)
-        } catch (BH) {
+          hostname: DB,
+          isHostDenied: QB
+        } = ED(YB, GB);
+        if (QB) return DB + " is in deny list";
+        if (zD(OB)) return OB;
+        if ((BB => "u" > typeof Document && BB instanceof Document)(OB)) return OB.textContent;
+        if (ND(OB)) return function(BB) {
+          let OB, GB, YB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "&";
+          const DB = [];
+          return FD(BB, (function(BB, YB) {
+            PD(BB) || PD(YB) || "undefined" === YB || (OB = encodeURIComponent((BB => BB instanceof File)(BB) ? BB.name : BB.toString()), GB = encodeURIComponent(YB), DB[DB.length] = GB + "=" + OB)
+          })), DB.join(YB)
+        }(OB);
+        if (MD(OB)) try {
+          return JSON.stringify(OB)
+        } catch (OB) {
           return "[SessionReplay] Failed to stringify response object"
         }
-        return "[SessionReplay] Cannot read body of type " + toString.call(BH)
+        return "[SessionReplay] Cannot read body of type " + toString.call(OB)
       }
 
-      function TS(HH, BH) {
+      function VQ(BB, OB) {
         let {
-          entry: LH,
-          method: rH,
-          status: SH,
-          networkRequest: hH,
-          isInitial: tH,
-          start: zH,
-          end: CH,
-          url: EH,
-          initiatorType: XH
-        } = BH;
-        zH = LH ? LH.startTime : zH, CH = LH ? LH.responseEnd : CH;
-        const GH = Math.floor(Date.now() - HH.performance.now()),
-          YH = Math.floor(GH + (zH || 0)),
-          uH = [AH(AH({}, LH ? JSON.parse(JSON.stringify(LH.toJSON())) : {
-            name: EH
+          entry: GB,
+          method: DB,
+          status: QB,
+          networkRequest: oB,
+          isInitial: jB,
+          start: yB,
+          end: JB,
+          url: MB,
+          initiatorType: PB
+        } = OB;
+        yB = GB ? GB.startTime : yB, JB = GB ? GB.responseEnd : JB;
+        const zB = Math.floor(Date.now() - BB.performance.now()),
+          lB = Math.floor(zB + (yB || 0)),
+          pB = [YB(YB({}, GB ? JSON.parse(JSON.stringify(GB.toJSON())) : {
+            name: MB
           }), {}, {
-            startTime: Xr(zH) ? void 0 : Math.round(zH),
-            endTime: Xr(CH) ? void 0 : Math.round(CH),
-            timeOrigin: GH,
-            timestamp: YH,
-            method: rH,
-            initiatorType: XH || (LH ? LH.initiatorType : void 0),
-            status: SH,
-            requestHeaders: hH.requestHeaders,
-            requestBody: hH.requestBody,
-            responseHeaders: hH.responseHeaders,
-            responseBody: hH.responseBody,
-            isInitial: tH
+            startTime: PD(yB) ? void 0 : Math.round(yB),
+            endTime: PD(JB) ? void 0 : Math.round(JB),
+            timeOrigin: zB,
+            timestamp: lB,
+            method: DB,
+            initiatorType: PB || (GB ? GB.initiatorType : void 0),
+            status: QB,
+            requestHeaders: oB.requestHeaders,
+            requestBody: oB.requestBody,
+            responseHeaders: oB.responseHeaders,
+            responseBody: oB.responseBody,
+            isInitial: jB
           })];
-        if ((HH => !Yr(HH) && ("navigation" === HH.entryType || "resource" === HH.entryType))(LH))
-          for (const AH of LH.serverTiming || []) uH.push({
-            timeOrigin: GH,
-            timestamp: YH,
-            startTime: Math.round(LH.startTime),
-            name: AH.name,
-            duration: AH.duration,
+        if ((BB => !lD(BB) && ("navigation" === BB.entryType || "resource" === BB.entryType))(GB))
+          for (const YB of GB.serverTiming || []) pB.push({
+            timeOrigin: zB,
+            timestamp: lB,
+            startTime: Math.round(GB.startTime),
+            name: YB.name,
+            duration: YB.duration,
             entryType: "serverTiming"
           });
-        return uH
+        return pB
       }
-      const US = ["video/", "audio/"];
+      const SQ = ["video/", "audio/"];
 
-      function VS(HH) {
-        return Er(HH) && Cr(HH.getReader) && Cr(HH.tee)
+      function nQ(BB) {
+        return MD(BB) && JD(BB.getReader) && JD(BB.tee)
       }
-      const OS = "[SessionReplay] Timeout while trying to read body",
-        bS = "[SessionReplay] Failed to read body";
+      const UQ = "[SessionReplay] Timeout while trying to read body",
+        fQ = "[SessionReplay] Failed to read body";
 
-      function kS(HH) {
-        return `${bS}: ${HH}`
-      }
-
-      function mS(HH) {
-        return `[SessionReplay] Body too large to record (> ${HH} bytes)`
+      function kQ(BB) {
+        return `${fQ}: ${BB}`
       }
 
-      function oS(HH, BH) {
-        if (!BH.streamNetworkBody) return function(HH) {
-          return new Promise((BH => {
-            const LH = setTimeout((() => BH(OS)), 500);
+      function dQ(BB) {
+        return `[SessionReplay] Body too large to record (> ${BB} bytes)`
+      }
+
+      function KQ(BB, OB) {
+        if (!OB.streamNetworkBody) return function(BB) {
+          return new Promise((OB => {
+            const GB = setTimeout((() => OB(UQ)), 500);
             try {
-              HH.clone().text().then((HH => BH(HH)), (HH => BH(kS(HH)))).finally((() => clearTimeout(LH)))
-            } catch (HH) {
-              clearTimeout(LH), BH(bS)
+              BB.clone().text().then((BB => OB(BB)), (BB => OB(kQ(BB)))).finally((() => clearTimeout(GB)))
+            } catch (BB) {
+              clearTimeout(GB), OB(fQ)
             }
           }))
-        }(HH);
-        const LH = pr(BH);
-        return function(HH, BH) {
+        }(BB);
+        const GB = xD(OB);
+        return function(BB, OB) {
           try {
-            var LH, AH;
-            const rH = null === (LH = HH.headers) || void 0 === LH || null === (AH = LH.get) || void 0 === AH ? void 0 : AH.call(LH, "content-length");
-            if (!rH) return !1;
-            const SH = parseInt(rH, 10);
-            return Number.isFinite(SH) && SH > BH
-          } catch (HH) {
+            var GB, YB;
+            const DB = null === (GB = BB.headers) || void 0 === GB || null === (YB = GB.get) || void 0 === YB ? void 0 : YB.call(GB, "content-length");
+            if (!DB) return !1;
+            const QB = parseInt(DB, 10);
+            return Number.isFinite(QB) && QB > OB
+          } catch (BB) {
             return !1
           }
-        }(HH, LH) ? Promise.resolve(mS(LH)) : function(HH, BH) {
-          return new Promise((LH => {
-            let AH, rH = !1;
+        }(BB, GB) ? Promise.resolve(dQ(GB)) : function(BB, OB) {
+          return new Promise((GB => {
+            let YB, DB = !1;
 
-            function SH() {
+            function QB() {
               try {
-                null == AH || AH.cancel().catch((() => {}))
-              } catch (HH) {}
+                null == YB || YB.cancel().catch((() => {}))
+              } catch (BB) {}
             }
 
-            function hH(HH) {
-              rH || (rH = !0, clearTimeout(tH), SH(), LH(HH))
+            function oB(BB) {
+              DB || (DB = !0, clearTimeout(jB), QB(), GB(BB))
             }
-            const tH = setTimeout((() => hH(OS)), 500);
-            let zH;
+            const jB = setTimeout((() => oB(UQ)), 500);
+            let yB;
             try {
-              zH = HH.clone()
-            } catch (HH) {
-              return void hH(bS)
+              yB = BB.clone()
+            } catch (BB) {
+              return void oB(fQ)
             }
-            const CH = zH.body;
-            if (!VS(CH) || "undefined" == typeof TextDecoder) {
+            const JB = yB.body;
+            if (!nQ(JB) || "undefined" == typeof TextDecoder) {
               try {
-                zH.text().then((HH => hH(HH)), (HH => hH(kS(HH))))
-              } catch (HH) {
-                hH(bS)
+                yB.text().then((BB => oB(BB)), (BB => oB(kQ(BB))))
+              } catch (BB) {
+                oB(fQ)
               }
               return
             }
             try {
-              AH = CH.getReader()
-            } catch (HH) {
-              return void hH(bS)
+              YB = JB.getReader()
+            } catch (BB) {
+              return void oB(fQ)
             }
-            const EH = [];
-            let XH = 0;
-            ! function HH() {
-              AH.read().then((LH => {
+            const MB = [];
+            let PB = 0;
+            ! function BB() {
+              YB.read().then((GB => {
                 let {
-                  done: AH,
-                  value: tH
-                } = LH;
-                if (rH) SH();
-                else if (AH) hH((new TextDecoder).decode(function(HH, BH) {
-                  const LH = new Uint8Array(BH);
-                  let AH = 0;
-                  for (const rH of HH) LH.set(rH, AH), AH += rH.byteLength;
-                  return LH
-                }(EH, XH)));
+                  done: YB,
+                  value: jB
+                } = GB;
+                if (DB) QB();
+                else if (YB) oB((new TextDecoder).decode(function(BB, OB) {
+                  const GB = new Uint8Array(OB);
+                  let YB = 0;
+                  for (const DB of BB) GB.set(DB, YB), YB += DB.byteLength;
+                  return GB
+                }(MB, PB)));
                 else {
-                  if (tH) {
-                    if (XH + tH.byteLength > BH) return void hH(mS(BH));
-                    XH += tH.byteLength, EH.push(tH)
+                  if (jB) {
+                    if (PB + jB.byteLength > OB) return void oB(dQ(OB));
+                    PB += jB.byteLength, MB.push(jB)
                   }
-                  HH()
+                  BB()
                 }
-              }), (HH => hH(kS(HH))))
+              }), (BB => oB(kQ(BB))))
             }()
           }))
-        }(HH, LH)
+        }(BB, GB)
       }
 
-      function IS(HH) {
-        return fS.apply(this, arguments)
+      function uQ(BB) {
+        return mQ.apply(this, arguments)
       }
 
-      function fS() {
-        return (fS = SH((function*(HH) {
+      function mQ() {
+        return (mQ = QB((function*(BB) {
           let {
-            r: BH,
-            options: LH,
-            url: AH
-          } = HH;
+            r: OB,
+            options: GB,
+            url: YB
+          } = BB;
           const {
-            hostname: rH,
-            isHostDenied: SH
-          } = jr(AH, LH);
-          return SH ? Promise.resolve(rH + " is in deny list") : oS(BH, LH)
+            hostname: DB,
+            isHostDenied: QB
+          } = ED(YB, GB);
+          return QB ? Promise.resolve(DB + " is in deny list") : KQ(OB, GB)
         }))).apply(this, arguments)
       }
 
-      function lS(HH) {
-        return KS.apply(this, arguments)
+      function IQ(BB) {
+        return FQ.apply(this, arguments)
       }
 
-      function KS() {
-        return (KS = SH((function*(HH) {
+      function FQ() {
+        return (FQ = QB((function*(BB) {
           let {
-            r: BH,
-            options: LH,
-            url: AH
-          } = HH;
-          const rH = function(HH) {
+            r: OB,
+            options: GB,
+            url: YB
+          } = BB;
+          const DB = function(BB) {
             let {
-              r: BH,
-              options: LH,
-              url: AH
-            } = HH;
-            var rH;
-            if ("chunked" === BH.headers.get("Transfer-Encoding")) return "Chunked Transfer-Encoding is not supported";
-            const SH = null === (rH = BH.headers.get("Content-Type")) || void 0 === rH ? void 0 : rH.toLowerCase(),
-              hH = US.some((HH => null == SH ? void 0 : SH.startsWith(HH)));
-            if (SH && hH) return `Content-Type ${SH} is not supported`;
+              r: OB,
+              options: GB,
+              url: YB
+            } = BB;
+            var DB;
+            if ("chunked" === OB.headers.get("Transfer-Encoding")) return "Chunked Transfer-Encoding is not supported";
+            const QB = null === (DB = OB.headers.get("Content-Type")) || void 0 === DB ? void 0 : DB.toLowerCase(),
+              oB = SQ.some((BB => null == QB ? void 0 : QB.startsWith(BB)));
+            if (QB && oB) return `Content-Type ${QB} is not supported`;
             const {
-              hostname: tH,
-              isHostDenied: zH
-            } = jr(AH, LH);
-            return zH ? tH + " is in deny list" : null
+              hostname: jB,
+              isHostDenied: yB
+            } = ED(YB, GB);
+            return yB ? jB + " is in deny list" : null
           }({
-            r: BH,
-            options: LH,
-            url: AH
+            r: OB,
+            options: GB,
+            url: YB
           });
-          return Yr(rH) ? oS(BH, LH) : Promise.resolve(rH)
+          return lD(DB) ? KQ(OB, GB) : Promise.resolve(DB)
         }))).apply(this, arguments)
       }
-      let cS = null;
+      let iQ = null;
 
-      function eS(HH, BH, LH) {
-        if (!("performance" in BH)) return () => {};
-        if (cS) return zS.warn("Network observer already initialised, doing nothing"), () => {};
-        const rH = LH ? Object.assign({}, yr, LH) : yr;
-        let hH = !0,
-          tH = !1;
-        const zH = BH => {
-            if (!hH) return;
-            const LH = [];
-            let SH = !1;
-            BH.requests.forEach((HH => {
-              const BH = "serverTiming" === HH.entryType;
-              if (BH && SH) return;
-              let AH;
+      function LQ(BB, OB, GB) {
+        if (!("performance" in OB)) return () => {};
+        if (iQ) return yQ.warn("Network observer already initialised, doing nothing"), () => {};
+        const DB = GB ? Object.assign({}, tD, GB) : tD;
+        let oB = !0,
+          jB = !1;
+        const yB = OB => {
+            if (!oB) return;
+            const GB = [];
+            let QB = !1;
+            OB.requests.forEach((BB => {
+              const OB = "serverTiming" === BB.entryType;
+              if (OB && QB) return;
+              let YB;
               try {
-                AH = rH.maskRequestFn(HH)
-              } catch (HH) {
-                return tH || (tH = !0, zS.warn("Network capture masking callback failed; dropping the record. Further masking failures will not be logged for this observer.")), void(BH || (SH = !0))
+                YB = DB.maskRequestFn(BB)
+              } catch (BB) {
+                return jB || (jB = !0, yQ.warn("Network capture masking callback failed; dropping the record. Further masking failures will not be logged for this observer.")), void(OB || (QB = !0))
               }
-              BH || (SH = !AH || (HH => !!HH && tS.has(HH))(AH)), AH && LH.push(AH)
-            })), LH.length > 0 && HH(AH(AH({}, BH), {}, {
-              requests: LH
+              OB || (QB = !YB || (BB => !!BB && jQ.has(BB))(YB)), YB && GB.push(YB)
+            })), GB.length > 0 && BB(YB(YB({}, OB), {}, {
+              requests: GB
             }))
           },
-          CH = function(HH, BH, LH) {
+          JB = function(BB, OB, GB) {
             try {
-              HH({
-                requests: YS(BH, LH).flatMap((HH => TS(BH, {
-                  entry: HH,
+              BB({
+                requests: lQ(OB, GB).flatMap((BB => VQ(OB, {
+                  entry: BB,
                   method: void 0,
                   status: void 0,
                   networkRequest: {},
@@ -5788,582 +5788,582 @@ export const modules = {
                 }))),
                 isInitial: !0
               })
-            } catch (HH) {
-              zS.error("Failed to capture initial performance entries for network capture", HH)
+            } catch (BB) {
+              yQ.error("Failed to capture initial performance entries for network capture", BB)
             }
-            const AH = BH.PerformanceObserver,
-              rH = null == AH ? void 0 : AH.supportedEntryTypes;
-            if (!AH || !zr(rH)) return;
-            const SH = rH.filter((HH => LH.performanceEntryTypeToObserve.includes(HH)));
-            if (!SH.length) return;
-            const hH = new AH((AH => {
-              HH({
-                requests: AH.getEntries().filter((HH => CS(HH) || ES(HH) && LH.initiatorTypes.includes(HH.initiatorType) && (HH => !LH.recordBody && !LH.recordHeaders || "xmlhttprequest" !== HH.initiatorType && "fetch" !== HH.initiatorType)(HH))).flatMap((HH => TS(BH, {
-                  entry: HH,
+            const YB = OB.PerformanceObserver,
+              DB = null == YB ? void 0 : YB.supportedEntryTypes;
+            if (!YB || !yD(DB)) return;
+            const QB = DB.filter((BB => GB.performanceEntryTypeToObserve.includes(BB)));
+            if (!QB.length) return;
+            const oB = new YB((YB => {
+              BB({
+                requests: YB.getEntries().filter((BB => JQ(BB) || MQ(BB) && GB.initiatorTypes.includes(BB.initiatorType) && (BB => !GB.recordBody && !GB.recordHeaders || "xmlhttprequest" !== BB.initiatorType && "fetch" !== BB.initiatorType)(BB))).flatMap((BB => VQ(OB, {
+                  entry: BB,
                   method: void 0,
                   status: void 0,
                   networkRequest: {}
                 })))
               })
             }));
-            return hH.observe({
-              entryTypes: SH
+            return oB.observe({
+              entryTypes: QB
             }), () => {
-              hH.disconnect()
+              oB.disconnect()
             }
-          }(zH, BH, rH),
-          EH = rH.recordHeaders || rH.recordBody;
-        if (!CH && !EH) return hH = !1, XS;
-        let XH = () => {},
-          GH = () => {};
-        return EH && (XH = function(HH, BH, LH) {
-          if (!LH.initiatorTypes.includes("xmlhttprequest")) return () => {};
-          const AH = uS("request", LH.recordHeaders),
-            rH = uS("response", LH.recordHeaders),
-            SH = Rr(BH.XMLHttpRequest.prototype, "open", (SH => function(hH, tH) {
-              let zH = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-                CH = arguments.length > 3 ? arguments[3] : void 0,
-                EH = arguments.length > 4 ? arguments[4] : void 0;
-              const XH = this;
+          }(yB, OB, DB),
+          MB = DB.recordHeaders || DB.recordBody;
+        if (!JB && !MB) return oB = !1, PQ;
+        let PB = () => {},
+          zB = () => {};
+        return MB && (PB = function(BB, OB, GB) {
+          if (!GB.initiatorTypes.includes("xmlhttprequest")) return () => {};
+          const YB = pQ("request", GB.recordHeaders),
+            DB = pQ("response", GB.recordHeaders),
+            QB = wD(OB.XMLHttpRequest.prototype, "open", (QB => function(oB, jB) {
+              let yB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+                JB = arguments.length > 3 ? arguments[3] : void 0,
+                MB = arguments.length > 4 ? arguments[4] : void 0;
+              const PB = this;
               try {
-                const SH = new Request(tH),
-                  zH = {};
-                let CH, EH;
-                const GH = {},
-                  YH = XH.setRequestHeader.bind(XH);
-                XH.setRequestHeader = (HH, BH) => (GH[HH] = BH, YH(HH, BH)), AH && (zH.requestHeaders = GH);
-                const uH = XH.send.bind(XH);
-                XH.send = HH => (MS({
+                const QB = new Request(jB),
+                  yB = {};
+                let JB, MB;
+                const zB = {},
+                  lB = PB.setRequestHeader.bind(PB);
+                PB.setRequestHeader = (BB, OB) => (zB[BB] = OB, lB(BB, OB)), YB && (yB.requestHeaders = zB);
+                const pB = PB.send.bind(PB);
+                PB.send = BB => (NQ({
                   type: "request",
-                  headers: GH,
-                  url: tH,
-                  recordBody: LH.recordBody
-                }) && (zH.requestBody = PS({
-                  body: HH,
-                  options: LH,
-                  url: tH
-                })), CH = BH.performance.now(), uH(HH));
-                const QH = () => {
-                    XH.removeEventListener("readystatechange", WH), XH.removeEventListener("error", QH), XH.removeEventListener("abort", QH), XH.removeEventListener("timeout", QH)
+                  headers: zB,
+                  url: jB,
+                  recordBody: GB.recordBody
+                }) && (yB.requestBody = AQ({
+                  body: BB,
+                  options: GB,
+                  url: jB
+                })), JB = OB.performance.now(), pB(BB));
+                const qB = () => {
+                    PB.removeEventListener("readystatechange", ZB), PB.removeEventListener("error", qB), PB.removeEventListener("abort", qB), PB.removeEventListener("timeout", qB)
                   },
-                  WH = () => {
-                    if (XH.readyState !== XH.DONE) return;
-                    QH(), EH = BH.performance.now();
-                    const AH = {};
-                    XH.getAllResponseHeaders().trim().split(/[\r\n]+/).forEach((HH => {
-                      const BH = HH.split(": "),
-                        LH = BH.shift(),
-                        rH = BH.join(": ");
-                      LH && (AH[LH] = rH)
-                    })), rH && (zH.responseHeaders = AH), MS({
+                  ZB = () => {
+                    if (PB.readyState !== PB.DONE) return;
+                    qB(), MB = OB.performance.now();
+                    const YB = {};
+                    PB.getAllResponseHeaders().trim().split(/[\r\n]+/).forEach((BB => {
+                      const OB = BB.split(": "),
+                        GB = OB.shift(),
+                        DB = OB.join(": ");
+                      GB && (YB[GB] = DB)
+                    })), DB && (yB.responseHeaders = YB), NQ({
                       type: "response",
-                      headers: AH,
-                      url: tH,
-                      recordBody: LH.recordBody
-                    }) && (zH.responseBody = PS({
-                      body: XH.response,
-                      options: LH,
-                      url: tH
-                    })), xS(BH, "xmlhttprequest", SH.url, CH, EH).then((LH => {
-                      HH({
-                        requests: TS(BH, {
-                          entry: LH,
-                          method: hH,
-                          status: null == XH ? void 0 : XH.status,
-                          networkRequest: zH,
-                          start: CH,
-                          end: EH,
-                          url: tH.toString(),
+                      headers: YB,
+                      url: jB,
+                      recordBody: GB.recordBody
+                    }) && (yB.responseBody = AQ({
+                      body: PB.response,
+                      options: GB,
+                      url: jB
+                    })), RQ(OB, "xmlhttprequest", QB.url, JB, MB).then((GB => {
+                      BB({
+                        requests: VQ(OB, {
+                          entry: GB,
+                          method: oB,
+                          status: null == PB ? void 0 : PB.status,
+                          networkRequest: yB,
+                          start: JB,
+                          end: MB,
+                          url: jB.toString(),
                           initiatorType: "xmlhttprequest"
                         })
                       })
                     })).catch((() => {}))
                   };
-                XH.addEventListener("readystatechange", WH), XH.addEventListener("error", QH), XH.addEventListener("abort", QH), XH.addEventListener("timeout", QH)
-              } catch (HH) {
-                zS.error("Failed to instrument XHR for network capture", HH)
+                PB.addEventListener("readystatechange", ZB), PB.addEventListener("error", qB), PB.addEventListener("abort", qB), PB.addEventListener("timeout", qB)
+              } catch (BB) {
+                yQ.error("Failed to instrument XHR for network capture", BB)
               }
-              SH.call(XH, hH, tH.toString(), zH, CH, EH)
+              QB.call(PB, oB, jB.toString(), yB, JB, MB)
             }));
           return () => {
-            SH()
+            QB()
           }
-        }(zH, BH, rH), GH = !0 === rH.captureFetchSynchronously ? function(HH, BH, LH) {
-          if (!LH.initiatorTypes.includes("fetch")) return () => {};
-          const AH = uS("request", LH.recordHeaders),
-            rH = uS("response", LH.recordHeaders),
-            hH = Rr(BH, "fetch", (hH => function(tH, zH) {
-              let CH;
+        }(yB, OB, DB), zB = !0 === DB.captureFetchSynchronously ? function(BB, OB, GB) {
+          if (!GB.initiatorTypes.includes("fetch")) return () => {};
+          const YB = pQ("request", GB.recordHeaders),
+            DB = pQ("response", GB.recordHeaders),
+            oB = wD(OB, "fetch", (oB => function(jB, yB) {
+              let JB;
               try {
-                CH = new Request(tH, zH)
-              } catch (HH) {
-                zS.error("Failed to instrument fetch for network capture", HH);
+                JB = new Request(jB, yB)
+              } catch (BB) {
+                yQ.error("Failed to instrument fetch for network capture", BB);
                 try {
-                  return Promise.resolve(hH(tH, zH))
-                } catch (HH) {
-                  return new Promise(((LH, AH) => AH(HH)))
+                  return Promise.resolve(oB(jB, yB))
+                } catch (BB) {
+                  return new Promise(((GB, YB) => YB(BB)))
                 }
               }
-              const EH = {};
-              let XH, GH;
-              const YH = SH((function*() {
+              const MB = {};
+              let PB, zB;
+              const lB = QB((function*() {
                   try {
-                    const HH = {};
-                    CH.headers.forEach(((BH, LH) => {
-                      HH[LH] = BH
-                    })), AH && (EH.requestHeaders = HH), !VS(null == zH ? void 0 : zH.body) && MS({
+                    const BB = {};
+                    JB.headers.forEach(((OB, GB) => {
+                      BB[GB] = OB
+                    })), YB && (MB.requestHeaders = BB), !nQ(null == yB ? void 0 : yB.body) && NQ({
                       type: "request",
-                      headers: HH,
-                      url: tH,
-                      recordBody: LH.recordBody
-                    }) && (EH.requestBody = yield IS({
-                      r: CH,
-                      options: LH,
-                      url: tH
+                      headers: BB,
+                      url: jB,
+                      recordBody: GB.recordBody
+                    }) && (MB.requestBody = yield uQ({
+                      r: JB,
+                      options: GB,
+                      url: jB
                     }))
-                  } catch (HH) {
-                    zS.error("Failed to record fetch request for network capture", HH)
+                  } catch (BB) {
+                    yQ.error("Failed to record fetch request for network capture", BB)
                   }
                 }))(),
-                uH = (QH = SH((function*(HH) {
+                pB = (qB = QB((function*(BB) {
                   try {
-                    const BH = {};
-                    HH.headers.forEach(((HH, LH) => {
-                      BH[LH] = HH
-                    })), rH && (EH.responseHeaders = BH), MS({
+                    const OB = {};
+                    BB.headers.forEach(((BB, GB) => {
+                      OB[GB] = BB
+                    })), DB && (MB.responseHeaders = OB), NQ({
                       type: "response",
-                      headers: BH,
-                      url: tH,
-                      recordBody: LH.recordBody
-                    }) && (EH.responseBody = yield lS({
-                      r: HH,
-                      options: LH,
-                      url: tH
+                      headers: OB,
+                      url: jB,
+                      recordBody: GB.recordBody
+                    }) && (MB.responseBody = yield IQ({
+                      r: BB,
+                      options: GB,
+                      url: jB
                     }))
-                  } catch (HH) {
-                    zS.error("Failed to record fetch response for network capture", HH)
+                  } catch (BB) {
+                    yQ.error("Failed to record fetch response for network capture", BB)
                   }
-                })), function(HH) {
-                  return QH.apply(this, arguments)
+                })), function(BB) {
+                  return qB.apply(this, arguments)
                 });
-              var QH;
+              var qB;
               try {
-                XH = BH.performance.now()
-              } catch (HH) {}
-              let WH;
+                PB = OB.performance.now()
+              } catch (BB) {}
+              let ZB;
               try {
-                WH = QS(tH) ? hH(CH) : hH(tH, zH)
-              } catch (HH) {
-                WH = new Promise(((LH, AH) => AH(HH)))
+                ZB = qQ(jB) ? oB(JB) : oB(jB, yB)
+              } catch (BB) {
+                ZB = new Promise(((GB, YB) => YB(BB)))
               }
-              const MH = Promise.resolve(WH).then((HH => {
+              const NB = Promise.resolve(ZB).then((BB => {
                 try {
-                  GH = BH.performance.now()
-                } catch (HH) {}
+                  zB = OB.performance.now()
+                } catch (BB) {}
                 return {
                   status: "fulfilled",
-                  response: HH
+                  response: BB
                 }
-              }), (HH => ({
+              }), (BB => ({
                 status: "rejected",
-                error: HH
+                error: BB
               })));
-              return SH((function*() {
-                let LH;
+              return QB((function*() {
+                let GB;
                 try {
-                  yield YH;
-                  const HH = yield MH;
-                  if ("rejected" === HH.status) throw HH.error;
-                  return LH = HH.response, yield uH(LH), LH
+                  yield lB;
+                  const BB = yield NB;
+                  if ("rejected" === BB.status) throw BB.error;
+                  return GB = BB.response, yield pB(GB), GB
                 } finally {
-                  (AH = LH, xS(BH, "fetch", CH.url, XH, GH).then((LH => {
-                    HH({
-                      requests: TS(BH, {
-                        entry: LH,
-                        method: CH.method,
-                        status: null == AH ? void 0 : AH.status,
-                        networkRequest: EH,
-                        start: XH,
-                        end: GH,
-                        url: CH.url,
+                  (YB = GB, RQ(OB, "fetch", JB.url, PB, zB).then((GB => {
+                    BB({
+                      requests: VQ(OB, {
+                        entry: GB,
+                        method: JB.method,
+                        status: null == YB ? void 0 : YB.status,
+                        networkRequest: MB,
+                        start: PB,
+                        end: zB,
+                        url: JB.url,
                         initiatorType: "fetch"
                       })
                     })
                   }))).catch((() => {}))
                 }
-                var AH
+                var YB
               }))()
             }));
           return () => {
-            hH()
+            oB()
           }
-        }(zH, BH, rH) : function(HH, BH, LH) {
-          if (!LH.initiatorTypes.includes("fetch")) return () => {};
-          const AH = uS("request", LH.recordHeaders),
-            rH = uS("response", LH.recordHeaders),
-            hH = Rr(BH, "fetch", (hH => function() {
-              var tH = SH((function*(SH, tH) {
-                let zH, CH;
+        }(yB, OB, DB) : function(BB, OB, GB) {
+          if (!GB.initiatorTypes.includes("fetch")) return () => {};
+          const YB = pQ("request", GB.recordHeaders),
+            DB = pQ("response", GB.recordHeaders),
+            oB = wD(OB, "fetch", (oB => function() {
+              var jB = QB((function*(QB, jB) {
+                let yB, JB;
                 try {
-                  zH = new Request(SH, tH)
-                } catch (HH) {
-                  return zS.error("Failed to instrument fetch for network capture", HH), hH(SH, tH)
+                  yB = new Request(QB, jB)
+                } catch (BB) {
+                  return yQ.error("Failed to instrument fetch for network capture", BB), oB(QB, jB)
                 }
-                const EH = {};
-                let XH, GH;
+                const MB = {};
+                let PB, zB;
                 try {
                   try {
-                    const HH = {};
-                    zH.headers.forEach(((BH, LH) => {
-                      HH[LH] = BH
-                    })), AH && (EH.requestHeaders = HH), !VS(null == tH ? void 0 : tH.body) && MS({
+                    const BB = {};
+                    yB.headers.forEach(((OB, GB) => {
+                      BB[GB] = OB
+                    })), YB && (MB.requestHeaders = BB), !nQ(null == jB ? void 0 : jB.body) && NQ({
                       type: "request",
-                      headers: HH,
-                      url: SH,
-                      recordBody: LH.recordBody
-                    }) && (EH.requestBody = yield IS({
-                      r: zH,
-                      options: LH,
-                      url: SH
+                      headers: BB,
+                      url: QB,
+                      recordBody: GB.recordBody
+                    }) && (MB.requestBody = yield uQ({
+                      r: yB,
+                      options: GB,
+                      url: QB
                     }))
-                  } catch (HH) {
-                    zS.error("Failed to record fetch request for network capture", HH)
+                  } catch (BB) {
+                    yQ.error("Failed to record fetch request for network capture", BB)
                   }
-                  XH = BH.performance.now(), CH = QS(SH) ? yield hH(zH): yield hH(SH, tH), GH = BH.performance.now();
+                  PB = OB.performance.now(), JB = qQ(QB) ? yield oB(yB): yield oB(QB, jB), zB = OB.performance.now();
                   try {
-                    const HH = {};
-                    CH.headers.forEach(((BH, LH) => {
-                      HH[LH] = BH
-                    })), rH && (EH.responseHeaders = HH), MS({
+                    const BB = {};
+                    JB.headers.forEach(((OB, GB) => {
+                      BB[GB] = OB
+                    })), DB && (MB.responseHeaders = BB), NQ({
                       type: "response",
-                      headers: HH,
-                      url: SH,
-                      recordBody: LH.recordBody
-                    }) && (EH.responseBody = yield lS({
-                      r: CH,
-                      options: LH,
-                      url: SH
+                      headers: BB,
+                      url: QB,
+                      recordBody: GB.recordBody
+                    }) && (MB.responseBody = yield IQ({
+                      r: JB,
+                      options: GB,
+                      url: QB
                     }))
-                  } catch (HH) {
-                    zS.error("Failed to record fetch response for network capture", HH)
+                  } catch (BB) {
+                    yQ.error("Failed to record fetch response for network capture", BB)
                   }
-                  return CH
+                  return JB
                 } finally {
-                  xS(BH, "fetch", zH.url, XH, GH).then((LH => {
-                    HH({
-                      requests: TS(BH, {
-                        entry: LH,
-                        method: zH.method,
-                        status: null == CH ? void 0 : CH.status,
-                        networkRequest: EH,
-                        start: XH,
-                        end: GH,
-                        url: zH.url,
+                  RQ(OB, "fetch", yB.url, PB, zB).then((GB => {
+                    BB({
+                      requests: VQ(OB, {
+                        entry: GB,
+                        method: yB.method,
+                        status: null == JB ? void 0 : JB.status,
+                        networkRequest: MB,
+                        start: PB,
+                        end: zB,
+                        url: yB.url,
                         initiatorType: "fetch"
                       })
                     })
                   })).catch((() => {}))
                 }
               }));
-              return function(HH, BH) {
-                return tH.apply(this, arguments)
+              return function(BB, OB) {
+                return jB.apply(this, arguments)
               }
             }()));
           return () => {
-            hH()
+            oB()
           }
-        }(zH, BH, rH)), cS = () => {
-          hH = !1, null == CH || CH(), XH(), GH(), cS = null
-        }, cS
+        }(yB, OB, DB)), iQ = () => {
+          oB = !1, null == JB || JB(), PB(), zB(), iQ = null
+        }, iQ
       }
-      const qS = "$replay_override_sampling",
-        gS = "$replay_override_linked_flag",
-        NS = "$replay_override_url_trigger",
-        RS = "$replay_override_event_trigger",
-        jS = "$session_is_sampled",
-        nS = "$session_recording_url_trigger_activated_session",
-        FS = "$session_recording_event_trigger_activated_session",
-        DS = "$posthog_sr_group_event_trigger_",
-        wS = "$posthog_sr_group_url_trigger_",
-        ZS = "$sess_rec_flush_size",
-        dS = "$sdk_debug_replay_event_trigger_status",
-        aS = "$sdk_debug_replay_linked_flag_trigger_status",
-        sS = "$sdk_debug_replay_matched_recording_trigger_groups",
-        JS = "$sdk_debug_replay_pending_trigger_conditions",
-        iS = "$sdk_debug_replay_remote_trigger_matching_config",
-        pS = "$sdk_debug_replay_trigger_groups_count",
-        yS = "$sdk_debug_replay_url_trigger_status",
-        Hh = "$sdk_debug_rrweb_attached",
-        Bh = "$sdk_debug_rrweb_start_attempted",
-        Lh = "$session_recording_start_reason",
-        Ah = "disabled",
-        rh = "sampled",
-        Sh = "active",
-        hh = "buffering",
-        th = "paused",
-        zh = "rrweb_error",
-        Ch = "trigger_activated",
-        Eh = "trigger_pending",
-        Xh = "trigger_disabled";
+      const gQ = "$replay_override_sampling",
+        rQ = "$replay_override_linked_flag",
+        XQ = "$replay_override_url_trigger",
+        wQ = "$replay_override_event_trigger",
+        EQ = "$session_is_sampled",
+        cQ = "$session_recording_url_trigger_activated_session",
+        hQ = "$session_recording_event_trigger_activated_session",
+        aQ = "$posthog_sr_group_event_trigger_",
+        eQ = "$posthog_sr_group_url_trigger_",
+        TQ = "$sess_rec_flush_size",
+        bQ = "$sdk_debug_replay_event_trigger_status",
+        CQ = "$sdk_debug_replay_linked_flag_trigger_status",
+        HQ = "$sdk_debug_replay_matched_recording_trigger_groups",
+        vQ = "$sdk_debug_replay_pending_trigger_conditions",
+        sQ = "$sdk_debug_replay_remote_trigger_matching_config",
+        xQ = "$sdk_debug_replay_trigger_groups_count",
+        tQ = "$sdk_debug_replay_url_trigger_status",
+        Bo = "$sdk_debug_rrweb_attached",
+        Oo = "$sdk_debug_rrweb_start_attempted",
+        Go = "$session_recording_start_reason",
+        Yo = "disabled",
+        Do = "sampled",
+        Qo = "active",
+        oo = "buffering",
+        jo = "paused",
+        yo = "rrweb_error",
+        Jo = "trigger_activated",
+        Mo = "trigger_pending",
+        Po = "trigger_disabled";
 
-      function Gh(HH, BH, LH, AH, rH, SH) {
-        return 0 === BH ? Xh : (null == HH ? void 0 : HH.get_property(LH ? AH + LH : rH)) === SH ? Ch : Eh
+      function zo(BB, OB, GB, YB, DB, QB) {
+        return 0 === OB ? Po : (null == BB ? void 0 : BB.get_property(GB ? YB + GB : DB)) === QB ? Jo : Mo
       }
 
-      function Yh(HH, BH, LH) {
-        return BH.some((BH => {
-          var AH;
-          return "regex" === BH.matching && (null !== (AH = null == LH ? void 0 : LH.get(BH.url)) && void 0 !== AH ? AH : new RegExp(BH.url)).test(HH)
+      function po(BB, OB, GB) {
+        return OB.some((OB => {
+          var YB;
+          return "regex" === OB.matching && (null !== (YB = null == GB ? void 0 : GB.get(OB.url)) && void 0 !== YB ? YB : new RegExp(OB.url)).test(BB)
         }))
       }
 
-      function uh(HH) {
-        return HH.includes("trigger_activated") ? Ch : HH.includes("trigger_pending") ? Eh : Xh
+      function qo(BB) {
+        return BB.includes("trigger_activated") ? Jo : BB.includes("trigger_pending") ? Mo : Po
       }
 
-      function Qh(HH) {
-        const BH = new Set(HH);
-        switch (BH.delete(Xh), BH.size) {
+      function Zo(BB) {
+        const OB = new Set(BB);
+        switch (OB.delete(Po), OB.size) {
           case 0:
-            return Xh;
+            return Po;
           case 1:
-            return Array.from(BH)[0];
+            return Array.from(OB)[0];
           default:
-            return Eh
+            return Mo
         }
       }
-      var Wh = class {
-          constructor(HH) {
-            this.q = HH
+      var No = class {
+          constructor(BB) {
+            this.q = BB
           }
-          triggerStatus(HH) {
-            return uh(this.q.map((BH => BH.triggerStatus(HH))))
+          triggerStatus(BB) {
+            return qo(this.q.map((OB => OB.triggerStatus(BB))))
           }
-          triggerStatusNoSideEffects(HH) {
-            return uh(this.q.map((BH => BH.triggerStatusNoSideEffects(HH))))
-          }
-          stop() {
-            this.q.forEach((HH => HH.stop()))
-          }
-        },
-        Mh = class {
-          constructor(HH) {
-            this.q = HH
-          }
-          triggerStatus(HH) {
-            return Qh(this.q.map((BH => BH.triggerStatus(HH))))
-          }
-          triggerStatusNoSideEffects(HH) {
-            return Qh(this.q.map((BH => BH.triggerStatusNoSideEffects(HH))))
+          triggerStatusNoSideEffects(BB) {
+            return qo(this.q.map((OB => OB.triggerStatusNoSideEffects(BB))))
           }
           stop() {
-            this.q.forEach((HH => HH.stop()))
+            this.q.forEach((BB => BB.stop()))
           }
         },
-        xh = class {
+        Ro = class {
+          constructor(BB) {
+            this.q = BB
+          }
+          triggerStatus(BB) {
+            return Zo(this.q.map((OB => OB.triggerStatus(BB))))
+          }
+          triggerStatusNoSideEffects(BB) {
+            return Zo(this.q.map((OB => OB.triggerStatusNoSideEffects(BB))))
+          }
+          stop() {
+            this.q.forEach((BB => BB.stop()))
+          }
+        },
+        Wo = class {
           triggerStatus() {
             return this.triggerStatusNoSideEffects()
           }
           triggerStatusNoSideEffects() {
-            return Ch
+            return Jo
           }
           stop() {}
         };
-      const vh = HH => "sessionRecording" in HH;
-      var Ph = class {
-          constructor(HH, BH) {
-            this._instance = HH, this.j = [], this.B = [], this.H = new Map, this.U = new Map, this.W = "", this.urlBlocked = !1, this.V = BH
+      const Ao = BB => "sessionRecording" in BB;
+      var Vo = class {
+          constructor(BB, OB) {
+            this._instance = BB, this.j = [], this.B = [], this.H = new Map, this.U = new Map, this.W = "", this.urlBlocked = !1, this.V = OB
           }
-          onConfig(HH) {
-            var BH, LH;
-            this.j = (vh(HH) ? Er(HH.sessionRecording) ? null === (BH = HH.sessionRecording) || void 0 === BH ? void 0 : BH.urlTriggers : [] : null == HH ? void 0 : HH.urlTriggers) || [], this.B = (vh(HH) ? Er(HH.sessionRecording) ? null === (LH = HH.sessionRecording) || void 0 === LH ? void 0 : LH.urlBlocklist : [] : null == HH ? void 0 : HH.urlBlocklist) || [], this.G()
+          onConfig(BB) {
+            var OB, GB;
+            this.j = (Ao(BB) ? MD(BB.sessionRecording) ? null === (OB = BB.sessionRecording) || void 0 === OB ? void 0 : OB.urlTriggers : [] : null == BB ? void 0 : BB.urlTriggers) || [], this.B = (Ao(BB) ? MD(BB.sessionRecording) ? null === (GB = BB.sessionRecording) || void 0 === GB ? void 0 : GB.urlBlocklist : [] : null == BB ? void 0 : BB.urlBlocklist) || [], this.G()
           }
           G() {
             this.H.clear(), this.U.clear();
-            for (const HH of this.j)
-              if ("regex" === HH.matching && !this.H.has(HH.url)) try {
-                this.H.set(HH.url, new RegExp(HH.url))
-              } catch (BH) {
-                fr.error("Invalid URL trigger regex pattern:", HH.url, BH)
+            for (const BB of this.j)
+              if ("regex" === BB.matching && !this.H.has(BB.url)) try {
+                this.H.set(BB.url, new RegExp(BB.url))
+              } catch (OB) {
+                mD.error("Invalid URL trigger regex pattern:", BB.url, OB)
               }
-            for (const HH of this.B)
-              if ("regex" === HH.matching && !this.U.has(HH.url)) try {
-                this.U.set(HH.url, new RegExp(HH.url))
-              } catch (BH) {
-                fr.error("Invalid URL blocklist regex pattern:", HH.url, BH)
+            for (const BB of this.B)
+              if ("regex" === BB.matching && !this.U.has(BB.url)) try {
+                this.U.set(BB.url, new RegExp(BB.url))
+              } catch (OB) {
+                mD.error("Invalid URL blocklist regex pattern:", BB.url, OB)
               }
           }
-          onRemoteConfig(HH) {
-            this.onConfig(HH)
+          onRemoteConfig(BB) {
+            this.onConfig(BB)
           }
-          Z(HH) {
-            return Gh(this._instance, this.j.length, this.V, wS, nS, HH)
+          Z(BB) {
+            return zo(this._instance, this.j.length, this.V, eQ, cQ, BB)
           }
-          triggerStatus(HH) {
-            const BH = this.triggerStatusNoSideEffects(HH);
+          triggerStatus(BB) {
+            const OB = this.triggerStatusNoSideEffects(BB);
             return this._instance.register_for_session({
-              [yS]: BH
-            }), BH
+              [tQ]: OB
+            }), OB
           }
-          triggerStatusNoSideEffects(HH) {
-            return this.Z(HH)
+          triggerStatusNoSideEffects(BB) {
+            return this.Z(BB)
           }
           isCurrentUrlBlocked() {
-            const HH = nr(this._instance);
-            if (!HH) return !1;
+            const BB = cD(this._instance);
+            if (!BB) return !1;
             try {
-              return Yh(HH, this.B, this.U)
-            } catch (HH) {
+              return po(BB, this.B, this.U)
+            } catch (BB) {
               return !0
             }
           }
-          checkUrlBlocklist(HH, BH) {
-            const LH = nr(this._instance);
-            if (!LH) return;
-            if (LH === this.W) return;
-            this.W = LH;
-            const AH = this.urlBlocked,
-              rH = Yh(LH, this.B, this.U);
-            AH && rH || (rH && !AH ? HH() : !rH && AH && BH())
+          checkUrlBlocklist(BB, OB) {
+            const GB = cD(this._instance);
+            if (!GB) return;
+            if (GB === this.W) return;
+            this.W = GB;
+            const YB = this.urlBlocked,
+              DB = po(GB, this.B, this.U);
+            YB && DB || (DB && !YB ? BB() : !DB && YB && OB())
           }
-          checkUrlTriggerConditions(HH, BH, LH, AH) {
-            const rH = nr(this._instance);
-            if (!rH) return;
-            if (rH === this.W) return;
-            this.W = rH;
-            const SH = this.urlBlocked,
-              hH = Yh(rH, this.B, this.U);
-            hH && !SH ? HH() : !hH && SH && BH();
-            const tH = this.Z(AH) === Ch,
-              zH = Yh(rH, this.j, this.H);
-            !tH && zH && LH("url", rH)
+          checkUrlTriggerConditions(BB, OB, GB, YB) {
+            const DB = cD(this._instance);
+            if (!DB) return;
+            if (DB === this.W) return;
+            this.W = DB;
+            const QB = this.urlBlocked,
+              oB = po(DB, this.B, this.U);
+            oB && !QB ? BB() : !oB && QB && OB();
+            const jB = this.Z(YB) === Jo,
+              yB = po(DB, this.j, this.H);
+            !jB && yB && GB("url", DB)
           }
           stop() {
             this.W = ""
           }
         },
-        Th = class {
-          constructor(HH) {
-            this._instance = HH, this.linkedFlag = null, this.linkedFlagSeen = !1, this.J = () => {}
+        So = class {
+          constructor(BB) {
+            this._instance = BB, this.linkedFlag = null, this.linkedFlagSeen = !1, this.J = () => {}
           }
           triggerStatus() {
-            const HH = this.triggerStatusNoSideEffects();
+            const BB = this.triggerStatusNoSideEffects();
             return this._instance.register_for_session({
-              [aS]: HH
-            }), HH
+              [CQ]: BB
+            }), BB
           }
           triggerStatusNoSideEffects() {
-            let HH = Eh;
-            return ur(this.linkedFlag) && (HH = Xh), this.linkedFlagSeen && (HH = Ch), HH
+            let BB = Mo;
+            return pD(this.linkedFlag) && (BB = Po), this.linkedFlagSeen && (BB = Jo), BB
           }
-          onConfig(HH, BH) {
-            var LH;
-            if (this.linkedFlag = (vh(HH) ? Er(HH.sessionRecording) ? null === (LH = HH.sessionRecording) || void 0 === LH ? void 0 : LH.linkedFlag : null : null == HH ? void 0 : HH.linkedFlag) || null, !ur(this.linkedFlag) && !this.linkedFlagSeen) {
-              const HH = Gr(this.linkedFlag) ? this.linkedFlag : this.linkedFlag.flag,
-                LH = Gr(this.linkedFlag) ? null : this.linkedFlag.variant;
-              this.J = this._instance.onFeatureFlags(((AH, rH) => {
-                let SH = !1;
-                if (Er(rH) && HH in rH) {
-                  const BH = rH[HH];
-                  SH = Wr(BH) ? !0 === BH : LH ? BH === LH : !!BH
+          onConfig(BB, OB) {
+            var GB;
+            if (this.linkedFlag = (Ao(BB) ? MD(BB.sessionRecording) ? null === (GB = BB.sessionRecording) || void 0 === GB ? void 0 : GB.linkedFlag : null : null == BB ? void 0 : BB.linkedFlag) || null, !pD(this.linkedFlag) && !this.linkedFlagSeen) {
+              const BB = zD(this.linkedFlag) ? this.linkedFlag : this.linkedFlag.flag,
+                GB = zD(this.linkedFlag) ? null : this.linkedFlag.variant;
+              this.J = this._instance.onFeatureFlags(((YB, DB) => {
+                let QB = !1;
+                if (MD(DB) && BB in DB) {
+                  const OB = DB[BB];
+                  QB = ZD(OB) ? !0 === OB : GB ? OB === GB : !!OB
                 }
-                const hH = SH && !this.linkedFlagSeen;
-                this.linkedFlagSeen = SH, hH && BH(HH, LH)
+                const oB = QB && !this.linkedFlagSeen;
+                this.linkedFlagSeen = QB, oB && OB(BB, GB)
               }))
             }
           }
-          onRemoteConfig(HH, BH) {
-            this.onConfig(HH, BH)
+          onRemoteConfig(BB, OB) {
+            this.onConfig(BB, OB)
           }
           stop() {
             this.J()
           }
         },
-        Uh = class {
-          constructor(HH, BH) {
-            this._instance = HH, this.K = [], this.V = BH
+        no = class {
+          constructor(BB, OB) {
+            this._instance = BB, this.K = [], this.V = OB
           }
-          onConfig(HH) {
-            var BH;
-            this.K = (vh(HH) ? Er(HH.sessionRecording) ? null === (BH = HH.sessionRecording) || void 0 === BH ? void 0 : BH.eventTriggers : [] : null == HH ? void 0 : HH.eventTriggers) || []
+          onConfig(BB) {
+            var OB;
+            this.K = (Ao(BB) ? MD(BB.sessionRecording) ? null === (OB = BB.sessionRecording) || void 0 === OB ? void 0 : OB.eventTriggers : [] : null == BB ? void 0 : BB.eventTriggers) || []
           }
-          onRemoteConfig(HH) {
-            this.onConfig(HH)
+          onRemoteConfig(BB) {
+            this.onConfig(BB)
           }
-          X(HH) {
-            return Gh(this._instance, this.K.length, this.V, DS, FS, HH)
+          X(BB) {
+            return zo(this._instance, this.K.length, this.V, aQ, hQ, BB)
           }
-          triggerStatus(HH) {
-            const BH = this.triggerStatusNoSideEffects(HH);
+          triggerStatus(BB) {
+            const OB = this.triggerStatusNoSideEffects(BB);
             return this._instance.register_for_session({
-              [dS]: BH
-            }), BH
+              [bQ]: OB
+            }), OB
           }
-          triggerStatusNoSideEffects(HH) {
-            return this.X(HH)
+          triggerStatusNoSideEffects(BB) {
+            return this.X(BB)
           }
-          checkEventTriggerConditions(HH, BH, LH) {
+          checkEventTriggerConditions(BB, OB, GB) {
             if (0 === this.K.length) return;
-            const AH = this.X(LH) === Ch,
-              rH = this.K.includes(HH);
-            !AH && rH && BH("event", HH)
+            const YB = this.X(GB) === Jo,
+              DB = this.K.includes(BB);
+            !YB && DB && OB("event", BB)
           }
           stop() {}
         },
-        Vh = class {
-          constructor(HH, BH, LH) {
-            if (this._instance = HH, this.group = BH, this.Y = new Ph(HH, BH.id), this.tt = new Uh(HH, BH.id), this.et = new Th(HH), BH.conditions.events && BH.conditions.events.length > 0 || BH.conditions.urls && BH.conditions.urls.length > 0 || BH.conditions.flag) {
-              const HH = (BH.conditions.events || []).map((HH => HH.name)),
-                AH = {
-                  urlTriggers: BH.conditions.urls || [],
-                  eventTriggers: HH,
-                  linkedFlag: BH.conditions.flag || null,
+        Uo = class {
+          constructor(BB, OB, GB) {
+            if (this._instance = BB, this.group = OB, this.Y = new Vo(BB, OB.id), this.tt = new no(BB, OB.id), this.et = new So(BB), OB.conditions.events && OB.conditions.events.length > 0 || OB.conditions.urls && OB.conditions.urls.length > 0 || OB.conditions.flag) {
+              const BB = (OB.conditions.events || []).map((BB => BB.name)),
+                YB = {
+                  urlTriggers: OB.conditions.urls || [],
+                  eventTriggers: BB,
+                  linkedFlag: OB.conditions.flag || null,
                   urlBlocklist: []
                 };
-              this.Y.onConfig(AH), this.tt.onConfig(AH), this.et.onConfig(AH, LH);
-              const rH = [this.tt, this.Y, this.et];
-              this.nt = "any" === BH.conditions.matchType ? new Wh(rH) : new Mh(rH)
-            } else this.nt = new xh
+              this.Y.onConfig(YB), this.tt.onConfig(YB), this.et.onConfig(YB, GB);
+              const DB = [this.tt, this.Y, this.et];
+              this.nt = "any" === OB.conditions.matchType ? new No(DB) : new Ro(DB)
+            } else this.nt = new Wo
           }
-          triggerStatus(HH) {
-            return this.nt.triggerStatus(HH)
+          triggerStatus(BB) {
+            return this.nt.triggerStatus(BB)
           }
-          triggerStatusNoSideEffects(HH) {
-            return this.nt.triggerStatusNoSideEffects(HH)
+          triggerStatusNoSideEffects(BB) {
+            return this.nt.triggerStatusNoSideEffects(BB)
           }
-          getPendingTriggerConditions(HH) {
-            return "trigger_pending" !== this.triggerStatusNoSideEffects(HH) ? [] : [{
+          getPendingTriggerConditions(BB) {
+            return "trigger_pending" !== this.triggerStatusNoSideEffects(BB) ? [] : [{
               label: "URL condition not matched",
-              status: this.Y.triggerStatusNoSideEffects(HH)
+              status: this.Y.triggerStatusNoSideEffects(BB)
             }, {
               label: "event condition not matched",
-              status: this.tt.triggerStatusNoSideEffects(HH)
+              status: this.tt.triggerStatusNoSideEffects(BB)
             }, {
               label: "linked flag condition not matched",
               status: this.et.triggerStatusNoSideEffects()
-            }].filter((HH => {
+            }].filter((BB => {
               let {
-                status: BH
-              } = HH;
-              return BH === Eh
-            })).map((HH => {
+                status: OB
+              } = BB;
+              return OB === Mo
+            })).map((BB => {
               let {
-                label: BH
-              } = HH;
-              return BH
+                label: OB
+              } = BB;
+              return OB
             }))
           }
-          checkEventTriggerConditions(HH, BH, LH) {
-            this.tt.checkEventTriggerConditions(HH, BH, LH)
+          checkEventTriggerConditions(BB, OB, GB) {
+            this.tt.checkEventTriggerConditions(BB, OB, GB)
           }
-          checkUrlTriggerConditions(HH, BH, LH, AH) {
-            this.Y.checkUrlTriggerConditions(HH, BH, LH, AH)
+          checkUrlTriggerConditions(BB, OB, GB, YB) {
+            this.Y.checkUrlTriggerConditions(BB, OB, GB, YB)
           }
-          activateTrigger(HH, BH) {
-            var LH;
-            const AH = "url" === HH ? wS + this.group.id : DS + this.group.id;
-            null === (LH = this._instance.persistence) || void 0 === LH || LH.register({
-              [AH]: BH
+          activateTrigger(BB, OB) {
+            var GB;
+            const YB = "url" === BB ? eQ + this.group.id : aQ + this.group.id;
+            null === (GB = this._instance.persistence) || void 0 === GB || GB.register({
+              [YB]: OB
             })
           }
           stop() {
@@ -6371,368 +6371,368 @@ export const modules = {
           }
         };
 
-      function Oh(HH) {
-        if (HH.rrwebError) return zh;
-        if (!HH.receivedFlags) return hh;
-        if (!HH.isRecordingEnabled) return Ah;
-        if (HH.urlTriggerMatching.urlBlocked) return th;
-        const BH = !0 === HH.isSampled,
-          LH = new Wh([HH.eventTriggerMatching, HH.urlTriggerMatching, HH.linkedFlagMatching]).triggerStatus(HH.sessionId);
-        return BH ? rh : "trigger_activated" === LH ? Sh : "trigger_pending" === LH ? hh : !1 === HH.isSampled ? Ah : Sh
+      function fo(BB) {
+        if (BB.rrwebError) return yo;
+        if (!BB.receivedFlags) return oo;
+        if (!BB.isRecordingEnabled) return Yo;
+        if (BB.urlTriggerMatching.urlBlocked) return jo;
+        const OB = !0 === BB.isSampled,
+          GB = new No([BB.eventTriggerMatching, BB.urlTriggerMatching, BB.linkedFlagMatching]).triggerStatus(BB.sessionId);
+        return OB ? Do : "trigger_activated" === GB ? Qo : "trigger_pending" === GB ? oo : !1 === BB.isSampled ? Yo : Qo
       }
 
-      function bh(HH) {
-        if (HH.rrwebError) return zh;
-        if (!HH.receivedFlags) return hh;
-        if (!HH.isRecordingEnabled) return Ah;
-        if (HH.urlTriggerMatching.urlBlocked) return th;
-        const BH = new Mh([HH.eventTriggerMatching, HH.urlTriggerMatching, HH.linkedFlagMatching]).triggerStatus(HH.sessionId),
-          LH = BH !== Xh,
-          AH = Wr(HH.isSampled);
-        return LH && "trigger_pending" === BH ? hh : LH && "trigger_disabled" === BH || AH && !HH.isSampled ? Ah : !0 === HH.isSampled ? rh : Sh
+      function ko(BB) {
+        if (BB.rrwebError) return yo;
+        if (!BB.receivedFlags) return oo;
+        if (!BB.isRecordingEnabled) return Yo;
+        if (BB.urlTriggerMatching.urlBlocked) return jo;
+        const OB = new Ro([BB.eventTriggerMatching, BB.urlTriggerMatching, BB.linkedFlagMatching]).triggerStatus(BB.sessionId),
+          GB = OB !== Po,
+          YB = ZD(BB.isSampled);
+        return GB && "trigger_pending" === OB ? oo : GB && "trigger_disabled" === OB || YB && !BB.isSampled ? Yo : !0 === BB.isSampled ? Do : Qo
       }
 
-      function kh() {
-        const HH = [];
-        return function(BH, LH) {
-          if (Er(LH) || zr(LH)) {
-            for (; HH.length > 0 && HH[HH.length - 1] !== this;) HH.pop();
-            return HH.includes(LH) ? "[Circular]" : (HH.push(LH), LH)
+      function Ko() {
+        const BB = [];
+        return function(OB, GB) {
+          if (MD(GB) || yD(GB)) {
+            for (; BB.length > 0 && BB[BB.length - 1] !== this;) BB.pop();
+            return BB.includes(GB) ? "[Circular]" : (BB.push(GB), GB)
           }
-          return LH
+          return GB
         }
       }
 
-      function mh(HH) {
+      function uo(BB) {
         try {
-          const BH = JSON.stringify(HH, kh());
-          return BH ? new Blob([BH]).size : 0
-        } catch (HH) {
+          const OB = JSON.stringify(BB, Ko());
+          return OB ? new Blob([OB]).size : 0
+        } catch (BB) {
           return -1
         }
       }
 
-      function oh(HH) {
-        if (Yr(HH)) return 4;
-        if (Xr(HH)) return 0;
-        switch (typeof HH) {
+      function mo(BB) {
+        if (lD(BB)) return 4;
+        if (PD(BB)) return 0;
+        switch (typeof BB) {
           case "string":
-            return HH.length + 2;
+            return BB.length + 2;
           case "number":
-            return String(HH).length;
+            return String(BB).length;
           case "boolean":
-            return HH ? 4 : 5;
+            return BB ? 4 : 5;
           case "object": {
-            if (zr(HH)) {
-              let BH = 2;
-              for (let LH = 0; HH.length > LH; LH++) {
-                LH > 0 && (BH += 1);
-                const AH = HH[LH];
-                BH += Xr(AH) || Yr(AH) ? 4 : oh(AH)
+            if (yD(BB)) {
+              let OB = 2;
+              for (let GB = 0; BB.length > GB; GB++) {
+                GB > 0 && (OB += 1);
+                const YB = BB[GB];
+                OB += PD(YB) || lD(YB) ? 4 : mo(YB)
               }
-              return BH
+              return OB
             }
-            const BH = HH;
-            let LH = 2,
-              AH = !0;
-            for (const HH in BH) {
-              if (!{}.hasOwnProperty.call(BH, HH)) continue;
-              const rH = BH[HH];
-              Xr(rH) || (AH || (LH += 1), AH = !1, LH += HH.length + 3 + oh(rH))
+            const OB = BB;
+            let GB = 2,
+              YB = !0;
+            for (const BB in OB) {
+              if (!{}.hasOwnProperty.call(OB, BB)) continue;
+              const DB = OB[BB];
+              PD(DB) || (YB || (GB += 1), YB = !1, GB += BB.length + 3 + mo(DB))
             }
-            return LH
+            return GB
           }
           default:
             return 0
         }
       }
 
-      function Ih(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6606028.8;
-        if (HH.size >= BH && HH.data.length > 1) {
-          const BH = Math.floor(HH.data.length / 2),
-            LH = HH.sizes.slice(0, BH),
-            AH = HH.sizes.slice(BH);
-          return [Ih({
-            size: LH.reduce(((HH, BH) => HH + BH), 0),
-            data: HH.data.slice(0, BH),
-            sizes: LH,
-            sessionId: HH.sessionId,
-            windowId: HH.windowId
-          }), Ih({
-            size: AH.reduce(((HH, BH) => HH + BH), 0),
-            data: HH.data.slice(BH),
-            sizes: AH,
-            sessionId: HH.sessionId,
-            windowId: HH.windowId
-          })].flatMap((HH => HH))
+      function Io(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6606028.8;
+        if (BB.size >= OB && BB.data.length > 1) {
+          const OB = Math.floor(BB.data.length / 2),
+            GB = BB.sizes.slice(0, OB),
+            YB = BB.sizes.slice(OB);
+          return [Io({
+            size: GB.reduce(((BB, OB) => BB + OB), 0),
+            data: BB.data.slice(0, OB),
+            sizes: GB,
+            sessionId: BB.sessionId,
+            windowId: BB.windowId
+          }), Io({
+            size: YB.reduce(((BB, OB) => BB + OB), 0),
+            data: BB.data.slice(OB),
+            sizes: YB,
+            sessionId: BB.sessionId,
+            windowId: BB.windowId
+          })].flatMap((BB => BB))
         }
-        return [HH]
+        return [BB]
       }
-      var fh = Uint8Array,
-        lh = Uint16Array,
-        Kh = Uint32Array,
-        ch = new fh([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]),
-        eh = new fh([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]),
-        qh = new fh([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]),
-        gh = function(HH, BH) {
-          for (var LH = new lh(31), AH = 0; 31 > AH; ++AH) LH[AH] = BH += 1 << HH[AH - 1];
-          var rH = new Kh(LH[30]);
-          for (AH = 1; 30 > AH; ++AH)
-            for (var SH = LH[AH]; LH[AH + 1] > SH; ++SH) rH[SH] = SH - LH[AH] << 5 | AH;
-          return [LH, rH]
+      var Fo = Uint8Array,
+        io = Uint16Array,
+        Lo = Uint32Array,
+        go = new Fo([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]),
+        ro = new Fo([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]),
+        Xo = new Fo([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]),
+        wo = function(BB, OB) {
+          for (var GB = new io(31), YB = 0; 31 > YB; ++YB) GB[YB] = OB += 1 << BB[YB - 1];
+          var DB = new Lo(GB[30]);
+          for (YB = 1; 30 > YB; ++YB)
+            for (var QB = GB[YB]; GB[YB + 1] > QB; ++QB) DB[QB] = QB - GB[YB] << 5 | YB;
+          return [GB, DB]
         },
-        Nh = gh(ch, 2),
-        Rh = Nh[1];
-      Nh[0][28] = 258, Rh[258] = 28;
-      for (var jh = gh(eh, 0)[1], nh = new lh(32768), Fh = 0; 32768 > Fh; ++Fh) {
-        var Dh = (43690 & Fh) >>> 1 | (21845 & Fh) << 1;
-        nh[Fh] = ((65280 & (Dh = (61680 & (Dh = (52428 & Dh) >>> 2 | (13107 & Dh) << 2)) >>> 4 | (3855 & Dh) << 4)) >>> 8 | (255 & Dh) << 8) >>> 1
+        Eo = wo(go, 2),
+        co = Eo[1];
+      Eo[0][28] = 258, co[258] = 28;
+      for (var ho = wo(ro, 0)[1], ao = new io(32768), eo = 0; 32768 > eo; ++eo) {
+        var To = (43690 & eo) >>> 1 | (21845 & eo) << 1;
+        ao[eo] = ((65280 & (To = (61680 & (To = (52428 & To) >>> 2 | (13107 & To) << 2)) >>> 4 | (3855 & To) << 4)) >>> 8 | (255 & To) << 8) >>> 1
       }
-      var wh = function(HH, BH, LH) {
-          for (var AH = HH.length, rH = 0, SH = new lh(BH); AH > rH; ++rH) ++SH[HH[rH] - 1];
-          var hH, tH = new lh(BH);
-          for (rH = 0; BH > rH; ++rH) tH[rH] = tH[rH - 1] + SH[rH - 1] << 1;
-          if (LH) {
-            hH = new lh(1 << BH);
-            var zH = 15 - BH;
-            for (rH = 0; AH > rH; ++rH)
-              if (HH[rH])
-                for (var CH = rH << 4 | HH[rH], EH = BH - HH[rH], XH = tH[HH[rH] - 1]++ << EH, GH = XH | (1 << EH) - 1; GH >= XH; ++XH) hH[nh[XH] >>> zH] = CH
+      var bo = function(BB, OB, GB) {
+          for (var YB = BB.length, DB = 0, QB = new io(OB); YB > DB; ++DB) ++QB[BB[DB] - 1];
+          var oB, jB = new io(OB);
+          for (DB = 0; OB > DB; ++DB) jB[DB] = jB[DB - 1] + QB[DB - 1] << 1;
+          if (GB) {
+            oB = new io(1 << OB);
+            var yB = 15 - OB;
+            for (DB = 0; YB > DB; ++DB)
+              if (BB[DB])
+                for (var JB = DB << 4 | BB[DB], MB = OB - BB[DB], PB = jB[BB[DB] - 1]++ << MB, zB = PB | (1 << MB) - 1; zB >= PB; ++PB) oB[ao[PB] >>> yB] = JB
           } else
-            for (hH = new lh(AH), rH = 0; AH > rH; ++rH) hH[rH] = nh[tH[HH[rH] - 1]++] >>> 15 - HH[rH];
-          return hH
+            for (oB = new io(YB), DB = 0; YB > DB; ++DB) oB[DB] = ao[jB[BB[DB] - 1]++] >>> 15 - BB[DB];
+          return oB
         },
-        Zh = new fh(288);
-      for (Fh = 0; 144 > Fh; ++Fh) Zh[Fh] = 8;
-      for (Fh = 144; 256 > Fh; ++Fh) Zh[Fh] = 9;
-      for (Fh = 256; 280 > Fh; ++Fh) Zh[Fh] = 7;
-      for (Fh = 280; 288 > Fh; ++Fh) Zh[Fh] = 8;
-      var dh = new fh(32);
-      for (Fh = 0; 32 > Fh; ++Fh) dh[Fh] = 5;
-      var ah = wh(Zh, 9, 0),
-        sh = wh(dh, 5, 0),
-        Jh = function(HH) {
-          return (HH / 8 | 0) + (7 & HH && 1)
+        Co = new Fo(288);
+      for (eo = 0; 144 > eo; ++eo) Co[eo] = 8;
+      for (eo = 144; 256 > eo; ++eo) Co[eo] = 9;
+      for (eo = 256; 280 > eo; ++eo) Co[eo] = 7;
+      for (eo = 280; 288 > eo; ++eo) Co[eo] = 8;
+      var Ho = new Fo(32);
+      for (eo = 0; 32 > eo; ++eo) Ho[eo] = 5;
+      var vo = bo(Co, 9, 0),
+        so = bo(Ho, 5, 0),
+        xo = function(BB) {
+          return (BB / 8 | 0) + (7 & BB && 1)
         },
-        ih = function(HH, BH, LH) {
-          (null == BH || 0 > BH) && (BH = 0), (null == LH || LH > HH.length) && (LH = HH.length);
-          var AH = new(HH instanceof lh ? lh : HH instanceof Kh ? Kh : fh)(LH - BH);
-          return AH.set(HH.subarray(BH, LH)), AH
+        to = function(BB, OB, GB) {
+          (null == OB || 0 > OB) && (OB = 0), (null == GB || GB > BB.length) && (GB = BB.length);
+          var YB = new(BB instanceof io ? io : BB instanceof Lo ? Lo : Fo)(GB - OB);
+          return YB.set(BB.subarray(OB, GB)), YB
         },
-        ph = function(HH, BH, LH) {
-          var AH = BH / 8 | 0;
-          HH[AH] |= LH <<= 7 & BH, HH[AH + 1] |= LH >>> 8
+        Bj = function(BB, OB, GB) {
+          var YB = OB / 8 | 0;
+          BB[YB] |= GB <<= 7 & OB, BB[YB + 1] |= GB >>> 8
         },
-        yh = function(HH, BH, LH) {
-          var AH = BH / 8 | 0;
-          HH[AH] |= LH <<= 7 & BH, HH[AH + 1] |= LH >>> 8, HH[AH + 2] |= LH >>> 16
+        Oj = function(BB, OB, GB) {
+          var YB = OB / 8 | 0;
+          BB[YB] |= GB <<= 7 & OB, BB[YB + 1] |= GB >>> 8, BB[YB + 2] |= GB >>> 16
         },
-        Ht = function(HH, BH) {
-          for (var LH = [], AH = 0; HH.length > AH; ++AH) HH[AH] && LH.push({
-            s: AH,
-            f: HH[AH]
+        Gj = function(BB, OB) {
+          for (var GB = [], YB = 0; BB.length > YB; ++YB) BB[YB] && GB.push({
+            s: YB,
+            f: BB[YB]
           });
-          var rH = LH.length,
-            SH = LH.slice();
-          if (!rH) return [new fh(0), 0];
-          if (1 == rH) {
-            var hH = new fh(LH[0].s + 1);
-            return hH[LH[0].s] = 1, [hH, 1]
+          var DB = GB.length,
+            QB = GB.slice();
+          if (!DB) return [new Fo(0), 0];
+          if (1 == DB) {
+            var oB = new Fo(GB[0].s + 1);
+            return oB[GB[0].s] = 1, [oB, 1]
           }
-          LH.sort((function(HH, BH) {
-            return HH.f - BH.f
-          })), LH.push({
+          GB.sort((function(BB, OB) {
+            return BB.f - OB.f
+          })), GB.push({
             s: -1,
             f: 25001
           });
-          var tH = LH[0],
-            zH = LH[1],
-            CH = 0,
-            EH = 1,
-            XH = 2;
-          for (LH[0] = {
+          var jB = GB[0],
+            yB = GB[1],
+            JB = 0,
+            MB = 1,
+            PB = 2;
+          for (GB[0] = {
               s: -1,
-              f: tH.f + zH.f,
-              l: tH,
-              r: zH
-            }; EH != rH - 1;) tH = LH[LH[XH].f > LH[CH].f ? CH++ : XH++], zH = LH[CH != EH && LH[XH].f > LH[CH].f ? CH++ : XH++], LH[EH++] = {
+              f: jB.f + yB.f,
+              l: jB,
+              r: yB
+            }; MB != DB - 1;) jB = GB[GB[PB].f > GB[JB].f ? JB++ : PB++], yB = GB[JB != MB && GB[PB].f > GB[JB].f ? JB++ : PB++], GB[MB++] = {
             s: -1,
-            f: tH.f + zH.f,
-            l: tH,
-            r: zH
+            f: jB.f + yB.f,
+            l: jB,
+            r: yB
           };
-          var GH = SH[0].s;
-          for (AH = 1; rH > AH; ++AH) SH[AH].s > GH && (GH = SH[AH].s);
-          var YH = new lh(GH + 1),
-            uH = Bt(LH[EH - 1], YH, 0);
-          if (uH > BH) {
-            AH = 0;
-            var QH = 0,
-              WH = uH - BH,
-              MH = 1 << WH;
-            for (SH.sort((function(HH, BH) {
-                return YH[BH.s] - YH[HH.s] || HH.f - BH.f
-              })); rH > AH; ++AH) {
-              var xH = SH[AH].s;
-              if (BH >= YH[xH]) break;
-              QH += MH - (1 << uH - YH[xH]), YH[xH] = BH
+          var zB = QB[0].s;
+          for (YB = 1; DB > YB; ++YB) QB[YB].s > zB && (zB = QB[YB].s);
+          var lB = new io(zB + 1),
+            pB = Yj(GB[MB - 1], lB, 0);
+          if (pB > OB) {
+            YB = 0;
+            var qB = 0,
+              ZB = pB - OB,
+              NB = 1 << ZB;
+            for (QB.sort((function(BB, OB) {
+                return lB[OB.s] - lB[BB.s] || BB.f - OB.f
+              })); DB > YB; ++YB) {
+              var RB = QB[YB].s;
+              if (OB >= lB[RB]) break;
+              qB += NB - (1 << pB - lB[RB]), lB[RB] = OB
             }
-            for (QH >>>= WH; QH > 0;) {
-              var vH = SH[AH].s;
-              BH > YH[vH] ? QH -= 1 << BH - YH[vH]++ - 1 : ++AH
+            for (qB >>>= ZB; qB > 0;) {
+              var WB = QB[YB].s;
+              OB > lB[WB] ? qB -= 1 << OB - lB[WB]++ - 1 : ++YB
             }
-            for (; AH >= 0 && QH; --AH) {
-              var PH = SH[AH].s;
-              YH[PH] == BH && (--YH[PH], ++QH)
+            for (; YB >= 0 && qB; --YB) {
+              var AB = QB[YB].s;
+              lB[AB] == OB && (--lB[AB], ++qB)
             }
-            uH = BH
+            pB = OB
           }
-          return [new fh(YH), uH]
+          return [new Fo(lB), pB]
         },
-        Bt = function(HH, BH, LH) {
-          return -1 == HH.s ? Math.max(Bt(HH.l, BH, LH + 1), Bt(HH.r, BH, LH + 1)) : BH[HH.s] = LH
+        Yj = function(BB, OB, GB) {
+          return -1 == BB.s ? Math.max(Yj(BB.l, OB, GB + 1), Yj(BB.r, OB, GB + 1)) : OB[BB.s] = GB
         },
-        Lt = function(HH) {
-          for (var BH = HH.length; BH && !HH[--BH];);
-          for (var LH = new lh(++BH), AH = 0, rH = HH[0], SH = 1, hH = function(HH) {
-              LH[AH++] = HH
-            }, tH = 1; BH >= tH; ++tH)
-            if (HH[tH] == rH && tH != BH) ++SH;
+        Dj = function(BB) {
+          for (var OB = BB.length; OB && !BB[--OB];);
+          for (var GB = new io(++OB), YB = 0, DB = BB[0], QB = 1, oB = function(BB) {
+              GB[YB++] = BB
+            }, jB = 1; OB >= jB; ++jB)
+            if (BB[jB] == DB && jB != OB) ++QB;
             else {
-              if (!rH && SH > 2) {
-                for (; SH > 138; SH -= 138) hH(32754);
-                SH > 2 && (hH(SH > 10 ? SH - 11 << 5 | 28690 : SH - 3 << 5 | 12305), SH = 0)
-              } else if (SH > 3) {
-                for (hH(rH), --SH; SH > 6; SH -= 6) hH(8304);
-                SH > 2 && (hH(SH - 3 << 5 | 8208), SH = 0)
+              if (!DB && QB > 2) {
+                for (; QB > 138; QB -= 138) oB(32754);
+                QB > 2 && (oB(QB > 10 ? QB - 11 << 5 | 28690 : QB - 3 << 5 | 12305), QB = 0)
+              } else if (QB > 3) {
+                for (oB(DB), --QB; QB > 6; QB -= 6) oB(8304);
+                QB > 2 && (oB(QB - 3 << 5 | 8208), QB = 0)
               }
-              for (; SH--;) hH(rH);
-              SH = 1, rH = HH[tH]
-            } return [LH.subarray(0, AH), BH]
+              for (; QB--;) oB(DB);
+              QB = 1, DB = BB[jB]
+            } return [GB.subarray(0, YB), OB]
         },
-        At = function(HH, BH) {
-          for (var LH = 0, AH = 0; BH.length > AH; ++AH) LH += HH[AH] * BH[AH];
-          return LH
+        Qj = function(BB, OB) {
+          for (var GB = 0, YB = 0; OB.length > YB; ++YB) GB += BB[YB] * OB[YB];
+          return GB
         },
-        rt = function(HH, BH, LH) {
-          var AH = LH.length,
-            rH = Jh(BH + 2);
-          HH[rH] = 255 & AH, HH[rH + 1] = AH >>> 8, HH[rH + 2] = 255 ^ HH[rH], HH[rH + 3] = 255 ^ HH[rH + 1];
-          for (var SH = 0; AH > SH; ++SH) HH[rH + SH + 4] = LH[SH];
-          return 8 * (rH + 4 + AH)
+        oj = function(BB, OB, GB) {
+          var YB = GB.length,
+            DB = xo(OB + 2);
+          BB[DB] = 255 & YB, BB[DB + 1] = YB >>> 8, BB[DB + 2] = 255 ^ BB[DB], BB[DB + 3] = 255 ^ BB[DB + 1];
+          for (var QB = 0; YB > QB; ++QB) BB[DB + QB + 4] = GB[QB];
+          return 8 * (DB + 4 + YB)
         },
-        St = function(HH, BH, LH, AH, rH, SH, hH, tH, zH, CH, EH) {
-          ph(BH, EH++, LH), ++rH[256];
-          for (var XH = Ht(rH, 15), GH = XH[0], YH = XH[1], uH = Ht(SH, 15), QH = uH[0], WH = uH[1], MH = Lt(GH), xH = MH[0], vH = MH[1], PH = Lt(QH), TH = PH[0], UH = PH[1], VH = new lh(19), OH = 0; xH.length > OH; ++OH) VH[31 & xH[OH]]++;
-          for (OH = 0; TH.length > OH; ++OH) VH[31 & TH[OH]]++;
-          for (var bH = Ht(VH, 7), kH = bH[0], mH = bH[1], oH = 19; oH > 4 && !kH[qh[oH - 1]]; --oH);
-          var IH, fH, lH, KH, cH = CH + 5 << 3,
-            eH = At(rH, Zh) + At(SH, dh) + hH,
-            qH = At(rH, GH) + At(SH, QH) + hH + 14 + 3 * oH + At(VH, kH) + (2 * VH[16] + 3 * VH[17] + 7 * VH[18]);
-          if (eH >= cH && qH >= cH) return rt(BH, EH, HH.subarray(zH, zH + CH));
-          if (ph(BH, EH, 1 + (eH > qH)), EH += 2, eH > qH) {
-            IH = wh(GH, YH, 0), fH = GH, lH = wh(QH, WH, 0), KH = QH;
-            var gH = wh(kH, mH, 0);
-            for (ph(BH, EH, vH - 257), ph(BH, EH + 5, UH - 1), ph(BH, EH + 10, oH - 4), EH += 14, OH = 0; oH > OH; ++OH) ph(BH, EH + 3 * OH, kH[qh[OH]]);
-            EH += 3 * oH;
-            for (var NH = [xH, TH], RH = 0; 2 > RH; ++RH) {
-              var jH = NH[RH];
-              for (OH = 0; jH.length > OH; ++OH) ph(BH, EH, gH[nH = 31 & jH[OH]]), EH += kH[nH], nH > 15 && (ph(BH, EH, jH[OH] >>> 5 & 127), EH += jH[OH] >>> 12)
+        jj = function(BB, OB, GB, YB, DB, QB, oB, jB, yB, JB, MB) {
+          Bj(OB, MB++, GB), ++DB[256];
+          for (var PB = Gj(DB, 15), zB = PB[0], lB = PB[1], pB = Gj(QB, 15), qB = pB[0], ZB = pB[1], NB = Dj(zB), RB = NB[0], WB = NB[1], AB = Dj(qB), VB = AB[0], SB = AB[1], nB = new io(19), UB = 0; RB.length > UB; ++UB) nB[31 & RB[UB]]++;
+          for (UB = 0; VB.length > UB; ++UB) nB[31 & VB[UB]]++;
+          for (var fB = Gj(nB, 7), kB = fB[0], dB = fB[1], KB = 19; KB > 4 && !kB[Xo[KB - 1]]; --KB);
+          var uB, mB, IB, FB, iB = JB + 5 << 3,
+            LB = Qj(DB, Co) + Qj(QB, Ho) + oB,
+            gB = Qj(DB, zB) + Qj(QB, qB) + oB + 14 + 3 * KB + Qj(nB, kB) + (2 * nB[16] + 3 * nB[17] + 7 * nB[18]);
+          if (LB >= iB && gB >= iB) return oj(OB, MB, BB.subarray(yB, yB + JB));
+          if (Bj(OB, MB, 1 + (LB > gB)), MB += 2, LB > gB) {
+            uB = bo(zB, lB, 0), mB = zB, IB = bo(qB, ZB, 0), FB = qB;
+            var rB = bo(kB, dB, 0);
+            for (Bj(OB, MB, WB - 257), Bj(OB, MB + 5, SB - 1), Bj(OB, MB + 10, KB - 4), MB += 14, UB = 0; KB > UB; ++UB) Bj(OB, MB + 3 * UB, kB[Xo[UB]]);
+            MB += 3 * KB;
+            for (var XB = [RB, VB], wB = 0; 2 > wB; ++wB) {
+              var EB = XB[wB];
+              for (UB = 0; EB.length > UB; ++UB) Bj(OB, MB, rB[cB = 31 & EB[UB]]), MB += kB[cB], cB > 15 && (Bj(OB, MB, EB[UB] >>> 5 & 127), MB += EB[UB] >>> 12)
             }
-          } else IH = ah, fH = Zh, lH = sh, KH = dh;
-          for (OH = 0; tH > OH; ++OH)
-            if (AH[OH] > 255) {
-              var nH;
-              yh(BH, EH, IH[257 + (nH = AH[OH] >>> 18 & 31)]), EH += fH[nH + 257], nH > 7 && (ph(BH, EH, AH[OH] >>> 23 & 31), EH += ch[nH]);
-              var FH = 31 & AH[OH];
-              yh(BH, EH, lH[FH]), EH += KH[FH], FH > 3 && (yh(BH, EH, AH[OH] >>> 5 & 8191), EH += eh[FH])
-            } else yh(BH, EH, IH[AH[OH]]), EH += fH[AH[OH]];
-          return yh(BH, EH, IH[256]), EH + fH[256]
+          } else uB = vo, mB = Co, IB = so, FB = Ho;
+          for (UB = 0; jB > UB; ++UB)
+            if (YB[UB] > 255) {
+              var cB;
+              Oj(OB, MB, uB[257 + (cB = YB[UB] >>> 18 & 31)]), MB += mB[cB + 257], cB > 7 && (Bj(OB, MB, YB[UB] >>> 23 & 31), MB += go[cB]);
+              var hB = 31 & YB[UB];
+              Oj(OB, MB, IB[hB]), MB += FB[hB], hB > 3 && (Oj(OB, MB, YB[UB] >>> 5 & 8191), MB += ro[hB])
+            } else Oj(OB, MB, uB[YB[UB]]), MB += mB[YB[UB]];
+          return Oj(OB, MB, uB[256]), MB + mB[256]
         },
-        ht = new Kh([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]),
-        tt = (new fh(0), function() {
-          for (var HH = new Kh(256), BH = 0; 256 > BH; ++BH) {
-            for (var LH = BH, AH = 9; --AH;) LH = (1 & LH && 3988292384) ^ LH >>> 1;
-            HH[BH] = LH
+        yj = new Lo([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]),
+        Jj = (new Fo(0), function() {
+          for (var BB = new Lo(256), OB = 0; 256 > OB; ++OB) {
+            for (var GB = OB, YB = 9; --YB;) GB = (1 & GB && 3988292384) ^ GB >>> 1;
+            BB[OB] = GB
           }
-          return HH
+          return BB
         }()),
-        zt = function(HH, BH, LH) {
-          for (; LH; ++BH) HH[BH] = LH, LH >>>= 8
+        Mj = function(BB, OB, GB) {
+          for (; GB; ++OB) BB[OB] = GB, GB >>>= 8
         };
 
-      function Ct(HH, BH) {
-        var LH = "";
-        if (!BH && "undefined" != typeof TextDecoder) return (new TextDecoder).decode(HH);
-        for (var AH = 0; HH.length > AH;) {
-          var rH = HH[AH++];
-          128 > rH || BH ? LH += String.fromCharCode(rH) : 224 > rH ? LH += String.fromCharCode((31 & rH) << 6 | 63 & HH[AH++]) : 240 > rH ? LH += String.fromCharCode((15 & rH) << 12 | (63 & HH[AH++]) << 6 | 63 & HH[AH++]) : (rH = ((15 & rH) << 18 | (63 & HH[AH++]) << 12 | (63 & HH[AH++]) << 6 | 63 & HH[AH++]) - 65536, LH += String.fromCharCode(55296 | rH >> 10, 56320 | 1023 & rH))
+      function Pj(BB, OB) {
+        var GB = "";
+        if (!OB && "undefined" != typeof TextDecoder) return (new TextDecoder).decode(BB);
+        for (var YB = 0; BB.length > YB;) {
+          var DB = BB[YB++];
+          128 > DB || OB ? GB += String.fromCharCode(DB) : 224 > DB ? GB += String.fromCharCode((31 & DB) << 6 | 63 & BB[YB++]) : 240 > DB ? GB += String.fromCharCode((15 & DB) << 12 | (63 & BB[YB++]) << 6 | 63 & BB[YB++]) : (DB = ((15 & DB) << 18 | (63 & BB[YB++]) << 12 | (63 & BB[YB++]) << 6 | 63 & BB[YB++]) - 65536, GB += String.fromCharCode(55296 | DB >> 10, 56320 | 1023 & DB))
         }
-        return LH
+        return GB
       }
-      var Et = class {
-        constructor(HH) {
-          let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          var LH, AH, rH, SH;
-          this._rrweb = HH, this.it = BH, this.rt = {}, this.ot = Date.now(), this.st = -1 / 0, this.ut = () => {
-            const HH = Date.now(),
-              BH = HH - this.ot;
-            BH > 0 ? (this.ct = Math.min(this.dt, this.ct + BH / 1e3 * this.ht), this.ot = HH) : this.ot = HH
-          }, this.ft = HH => {
-            if (!this.rt[HH]) {
-              var BH, LH;
-              this.rt[HH] = !0;
-              const AH = this.vt(HH);
-              null === (BH = (LH = this.it).onBlockedNode) || void 0 === BH || BH.call(LH, HH, AH)
+      var zj = class {
+        constructor(BB) {
+          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          var GB, YB, DB, QB;
+          this._rrweb = BB, this.it = OB, this.rt = {}, this.ot = Date.now(), this.st = -1 / 0, this.ut = () => {
+            const BB = Date.now(),
+              OB = BB - this.ot;
+            OB > 0 ? (this.ct = Math.min(this.dt, this.ct + OB / 1e3 * this.ht), this.ot = BB) : this.ot = BB
+          }, this.ft = BB => {
+            if (!this.rt[BB]) {
+              var OB, GB;
+              this.rt[BB] = !0;
+              const YB = this.vt(BB);
+              null === (OB = (GB = this.it).onBlockedNode) || void 0 === OB || OB.call(GB, BB, YB)
             }
-          }, this.yt = HH => {
-            const BH = this.vt(HH);
-            if ("svg" !== (null == BH ? void 0 : BH.nodeName) && BH instanceof Element) {
-              const HH = BH.closest("svg");
-              if (HH) return [this._rrweb.mirror.getId(HH), HH]
+          }, this.yt = BB => {
+            const OB = this.vt(BB);
+            if ("svg" !== (null == OB ? void 0 : OB.nodeName) && OB instanceof Element) {
+              const BB = OB.closest("svg");
+              if (BB) return [this._rrweb.mirror.getId(BB), BB]
             }
-            return [HH, BH]
-          }, this.vt = HH => this._rrweb.mirror.yAH(HH), this.bt = HH => {
-            var BH, LH, AH, rH, SH, hH, tH, zH;
-            return (null !== (BH = null === (LH = HH.removes) || void 0 === LH ? void 0 : LH.length) && void 0 !== BH ? BH : 0) + (null !== (AH = null === (rH = HH.attributes) || void 0 === rH ? void 0 : rH.length) && void 0 !== AH ? AH : 0) + (null !== (SH = null === (hH = HH.texts) || void 0 === hH ? void 0 : hH.length) && void 0 !== SH ? SH : 0) + (null !== (tH = null === (zH = HH.adds) || void 0 === zH ? void 0 : zH.length) && void 0 !== tH ? tH : 0)
-          }, this.throttleMutations = HH => {
-            if (3 !== HH.type || 0 !== HH.data.source) return HH;
-            const BH = HH.data,
-              LH = this.bt(BH);
-            if (BH.attributes) {
-              const HH = BH.attributes.length;
-              BH.attributes = BH.attributes.filter((HH => {
-                const [BH] = this.yt(HH.id);
-                return !this.wt.consumeRateLimit(BH) && HH
+            return [BB, OB]
+          }, this.vt = BB => this._rrweb.mirror.yDB(BB), this.bt = BB => {
+            var OB, GB, YB, DB, QB, oB, jB, yB;
+            return (null !== (OB = null === (GB = BB.removes) || void 0 === GB ? void 0 : GB.length) && void 0 !== OB ? OB : 0) + (null !== (YB = null === (DB = BB.attributes) || void 0 === DB ? void 0 : DB.length) && void 0 !== YB ? YB : 0) + (null !== (QB = null === (oB = BB.texts) || void 0 === oB ? void 0 : oB.length) && void 0 !== QB ? QB : 0) + (null !== (jB = null === (yB = BB.adds) || void 0 === yB ? void 0 : yB.length) && void 0 !== jB ? jB : 0)
+          }, this.throttleMutations = BB => {
+            if (3 !== BB.type || 0 !== BB.data.source) return BB;
+            const OB = BB.data,
+              GB = this.bt(OB);
+            if (OB.attributes) {
+              const BB = OB.attributes.length;
+              OB.attributes = OB.attributes.filter((BB => {
+                const [OB] = this.yt(BB.id);
+                return !this.wt.consumeRateLimit(OB) && BB
               }));
-              const LH = HH - BH.attributes.length;
-              var AH, rH;
-              LH > 0 && (null === (AH = (rH = this.it).onDroppedAttributeMutations) || void 0 === AH || AH.call(rH, LH))
+              const GB = BB - OB.attributes.length;
+              var YB, DB;
+              GB > 0 && (null === (YB = (DB = this.it).onDroppedAttributeMutations) || void 0 === YB || YB.call(DB, GB))
             }
-            const SH = this.bt(BH);
-            if (0 === SH && LH !== SH) return;
-            if (this.kt) return HH;
+            const QB = this.bt(OB);
+            if (0 === QB && GB !== QB) return;
+            if (this.kt) return BB;
             this.ut();
-            const hH = oh(HH);
-            var tH, zH;
-            return hH > this.ct ? (null === (tH = (zH = this.it).onDroppedOversizedMutation) || void 0 === tH || tH.call(zH, hH), void this._t()) : (this.ct -= hH, HH)
+            const oB = mo(BB);
+            var jB, yB;
+            return oB > this.ct ? (null === (jB = (yB = this.it).onDroppedOversizedMutation) || void 0 === jB || jB.call(yB, oB), void this._t()) : (this.ct -= oB, BB)
           }, this._t = () => {
             if (this.St) return;
-            const HH = Math.max(0, this.xt - (Date.now() - this.st));
+            const BB = Math.max(0, this.xt - (Date.now() - this.st));
             this.St = setTimeout((() => {
-              var HH, BH;
-              this.St = void 0, this.st = Date.now(), null === (HH = (BH = this.it).requestFullSnapshot) || void 0 === HH || HH.call(BH)
-            }), HH)
-          }, this.wt = new vr({
-            bucketSize: null !== (LH = this.it.bucketSize) && void 0 !== LH ? LH : 100,
-            refillRate: null !== (AH = this.it.refillRate) && void 0 !== AH ? AH : 10,
+              var BB, OB;
+              this.St = void 0, this.st = Date.now(), null === (BB = (OB = this.it).requestFullSnapshot) || void 0 === BB || BB.call(OB)
+            }), BB)
+          }, this.wt = new WD({
+            bucketSize: null !== (GB = this.it.bucketSize) && void 0 !== GB ? GB : 100,
+            refillRate: null !== (YB = this.it.refillRate) && void 0 !== YB ? YB : 10,
             refillInterval: 1e3,
             I: this.ft,
-            A: fr
-          }), this.dt = null !== (rH = this.it.bytesBucketSize) && void 0 !== rH ? rH : 0, this.ht = null !== (SH = this.it.bytesRefillRate) && void 0 !== SH ? SH : 25600, this.kt = !Number.isFinite(this.dt) || 0 >= this.dt, this.ct = this.dt;
-          const hH = this.it.resyncIntervalMs;
-          this.xt = Qr(hH) && Number.isFinite(hH) && hH > 0 ? hH : 3e5
+            A: mD
+          }), this.dt = null !== (DB = this.it.bytesBucketSize) && void 0 !== DB ? DB : 0, this.ht = null !== (QB = this.it.bytesRefillRate) && void 0 !== QB ? QB : 25600, this.kt = !Number.isFinite(this.dt) || 0 >= this.dt, this.ct = this.dt;
+          const oB = this.it.resyncIntervalMs;
+          this.xt = qD(oB) && Number.isFinite(oB) && oB > 0 ? oB : 3e5
         }
         reset() {
           this.rt = {}, this.St && (clearTimeout(this.St), this.St = void 0), this.st = Date.now()
@@ -6741,422 +6741,422 @@ export const modules = {
           this.wt.stop(), this.reset(), this.ct = this.dt, this.ot = Date.now(), this.st = -1 / 0
         }
       };
-      Math.trunc || (Math.trunc = function(HH) {
-        return 0 > HH ? Math.ceil(HH) : Math.floor(HH)
-      }), Number.isInteger || (Number.isInteger = function(HH) {
-        return Qr(HH) && isFinite(HH) && Math.floor(HH) === HH
-      }), yA && !Xr(yA.crypto) && crypto;
-      let Xt = null;
-      const Gt = {
+      Math.trunc || (Math.trunc = function(BB) {
+        return 0 > BB ? Math.ceil(BB) : Math.floor(BB)
+      }), Number.isInteger || (Number.isInteger = function(BB) {
+        return qD(BB) && isFinite(BB) && Math.floor(BB) === BB
+      }), tY && !PD(tY.crypto) && crypto;
+      let lj = null;
+      const pj = {
         At() {
-          if (!Yr(Xt)) return Xt;
-          if (Xt = !0, Xr(yA)) Xt = !1;
+          if (!lD(lj)) return lj;
+          if (lj = !0, PD(tY)) lj = !1;
           else try {
-            const HH = "__support__";
-            Gt.$t(HH, "xyz"), '"xyz"' !== Gt.Ot(HH) && (Xt = !1), Gt.Pt(HH)
-          } catch (HH) {
-            Xt = !1
+            const BB = "__support__";
+            pj.$t(BB, "xyz"), '"xyz"' !== pj.Ot(BB) && (lj = !1), pj.Pt(BB)
+          } catch (BB) {
+            lj = !1
           }
-          return Xt
+          return lj
         },
-        Lt(HH) {
-          fr.error("sessionStorage error: ", HH)
+        Lt(BB) {
+          mD.error("sessionStorage error: ", BB)
         },
-        Ot(HH) {
+        Ot(BB) {
           try {
-            return null == yA ? void 0 : yA.sessionStorage.getItem(HH)
-          } catch (HH) {
-            Gt.Lt(HH)
+            return null == tY ? void 0 : tY.sessionStorage.getItem(BB)
+          } catch (BB) {
+            pj.Lt(BB)
           }
           return null
         },
-        Dt(HH) {
+        Dt(BB) {
           try {
-            return JSON.parse(Gt.Ot(HH)) || null
-          } catch (HH) {}
+            return JSON.parse(pj.Ot(BB)) || null
+          } catch (BB) {}
           return null
         },
-        $t(HH, BH) {
+        $t(BB, OB) {
           try {
-            return null == yA || yA.sessionStorage.setItem(HH, JSON.stringify(BH)), !0
-          } catch (HH) {
-            Gt.Lt(HH)
+            return null == tY || tY.sessionStorage.setItem(BB, JSON.stringify(OB)), !0
+          } catch (BB) {
+            pj.Lt(BB)
           }
           return !1
         },
-        Pt(HH) {
+        Pt(BB) {
           try {
-            null == yA || yA.sessionStorage.removeItem(HH)
-          } catch (HH) {
-            Gt.Lt(HH)
+            null == tY || tY.sessionStorage.removeItem(BB)
+          } catch (BB) {
+            pj.Lt(BB)
           }
         }
       };
-      or.DEBUG = !1, or.LIB_VERSION = "1.438.7", or.LIB_NAME = "web";
-      var Yt = or,
-        ut = class {
-          constructor(HH) {
-            if (!HH.persistence) throw new Error("it is not valid to not have persistence and be this far into setting up the application");
-            this.Ft = HH.get_property.bind(HH), this.Nt = HH.persistence.set_property.bind(HH.persistence)
+      KD.DEBUG = !1, KD.LIB_VERSION = "1.438.7", KD.LIB_NAME = "web";
+      var qj = KD,
+        Zj = class {
+          constructor(BB) {
+            if (!BB.persistence) throw new Error("it is not valid to not have persistence and be this far into setting up the application");
+            this.Ft = BB.get_property.bind(BB), this.Nt = BB.persistence.set_property.bind(BB.persistence)
           }
-          trackSize(HH, BH) {
-            this.Nt(ZS, {
-              sessionId: HH,
-              size: this.currentTrackedSize(HH) + BH
+          trackSize(BB, OB) {
+            this.Nt(TQ, {
+              sessionId: BB,
+              size: this.currentTrackedSize(BB) + OB
             })
           }
-          currentTrackedSize(HH) {
-            const BH = this.Ft(ZS);
-            return Er(LH = BH) && Gr(LH.sessionId) && Qr(LH.size) && BH.sessionId === HH ? BH.size : 0;
-            var LH
+          currentTrackedSize(BB) {
+            const OB = this.Ft(TQ);
+            return MD(GB = OB) && zD(GB.sessionId) && qD(GB.size) && OB.sessionId === BB ? OB.size : 0;
+            var GB
           }
         };
 
-      function Qt(HH, BH) {
-        return function(HH) {
-          let BH = 0;
-          for (let LH = 0; HH.length > LH; LH++) BH = (BH << 5) - BH + HH.charCodeAt(LH), BH |= 0;
-          return Math.abs(BH)
-        }(HH) % 100 < xr(100 * BH, 0, 100, fr)
+      function Nj(BB, OB) {
+        return function(BB) {
+          let OB = 0;
+          for (let GB = 0; BB.length > GB; GB++) OB = (OB << 5) - OB + BB.charCodeAt(GB), OB |= 0;
+          return Math.abs(OB)
+        }(BB) % 100 < RD(100 * OB, 0, 100, mD)
       }
-      const Wt = (HH, BH) => {
-          if (!(HH => {
+      const Rj = (BB, OB) => {
+          if (!(BB => {
               try {
-                new RegExp(HH)
-              } catch (HH) {
+                new RegExp(BB)
+              } catch (BB) {
                 return !1
               }
               return !0
-            })(BH)) return !1;
+            })(OB)) return !1;
           try {
-            return new RegExp(BH).test(HH)
-          } catch (HH) {
+            return new RegExp(OB).test(BB)
+          } catch (BB) {
             return !1
           }
         },
-        Mt = HH => HH.toLowerCase(),
-        xt = {
-          exact: (HH, BH) => BH.some((BH => HH.some((HH => BH === HH)))),
-          is_not: (HH, BH) => BH.every((BH => HH.every((HH => BH !== HH)))),
-          regex: (HH, BH) => BH.some((BH => HH.some((HH => Wt(BH, HH))))),
-          not_regex: (HH, BH) => BH.every((BH => HH.every((HH => !Wt(BH, HH))))),
-          icontains: (HH, BH) => BH.map(Mt).some((BH => HH.map(Mt).some((HH => BH.includes(HH))))),
-          not_icontains: (HH, BH) => BH.map(Mt).every((BH => HH.map(Mt).every((HH => !BH.includes(HH))))),
-          gt: (HH, BH) => BH.some((BH => {
-            const LH = parseFloat(BH);
-            return !isNaN(LH) && HH.some((HH => LH > parseFloat(HH)))
+        Wj = BB => BB.toLowerCase(),
+        Aj = {
+          exact: (BB, OB) => OB.some((OB => BB.some((BB => OB === BB)))),
+          is_not: (BB, OB) => OB.every((OB => BB.every((BB => OB !== BB)))),
+          regex: (BB, OB) => OB.some((OB => BB.some((BB => Rj(OB, BB))))),
+          not_regex: (BB, OB) => OB.every((OB => BB.every((BB => !Rj(OB, BB))))),
+          icontains: (BB, OB) => OB.map(Wj).some((OB => BB.map(Wj).some((BB => OB.includes(BB))))),
+          not_icontains: (BB, OB) => OB.map(Wj).every((OB => BB.map(Wj).every((BB => !OB.includes(BB))))),
+          gt: (BB, OB) => OB.some((OB => {
+            const GB = parseFloat(OB);
+            return !isNaN(GB) && BB.some((BB => GB > parseFloat(BB)))
           })),
-          lt: (HH, BH) => BH.some((BH => {
-            const LH = parseFloat(BH);
-            return !isNaN(LH) && HH.some((HH => LH < parseFloat(HH)))
+          lt: (BB, OB) => OB.some((OB => {
+            const GB = parseFloat(OB);
+            return !isNaN(GB) && BB.some((BB => GB < parseFloat(BB)))
           }))
         },
-        vt = new Set(["is_not", "not_icontains", "not_regex"]);
+        Vj = new Set(["is_not", "not_icontains", "not_regex"]);
 
-      function Pt(HH, BH, LH) {
-        return !HH || 0 === HH.length || HH.every((HH => {
-          const AH = "person" === HH.type ? LH : BH,
-            rH = null == AH ? void 0 : AH[HH.key],
-            SH = HH.operator || "exact";
-          if (Xr(rH) || Yr(rH)) return vt.has(SH);
-          const hH = xt[SH];
-          return !!hH && !Xr(HH.value) && !Yr(HH.value) && hH(zr(HH.value) ? HH.value.map(String) : [String(HH.value)], zr(rH) ? rH.map(String) : [String(rH)])
+      function Sj(BB, OB, GB) {
+        return !BB || 0 === BB.length || BB.every((BB => {
+          const YB = "person" === BB.type ? GB : OB,
+            DB = null == YB ? void 0 : YB[BB.key],
+            QB = BB.operator || "exact";
+          if (PD(DB) || lD(DB)) return Vj.has(QB);
+          const oB = Aj[QB];
+          return !!oB && !PD(BB.value) && !lD(BB.value) && oB(yD(BB.value) ? BB.value.map(String) : [String(BB.value)], yD(DB) ? DB.map(String) : [String(DB)])
         }))
       }
-      const Tt = lr("[SessionRecording]");
+      const nj = ID("[SessionRecording]");
 
-      function Ut(HH, BH) {
-        return BH ? HH : "!" + HH
+      function Uj(BB, OB) {
+        return OB ? BB : "!" + BB
       }
 
-      function Vt(HH, BH) {
-        return HH === BH || HH !== "!" + BH && null
+      function fj(BB, OB) {
+        return BB === OB || BB !== "!" + OB && null
       }
-      var Ot = class {
-          constructor(HH, BH, LH, AH, rH, SH, hH) {
-            this._instance = HH, this.Y = BH, this.tt = LH, this.et = AH, this.qt = rH, this.jt = SH, this.Bt = hH, this.zt = null, this.Ht = bh
+      var kj = class {
+          constructor(BB, OB, GB, YB, DB, QB, oB) {
+            this._instance = BB, this.Y = OB, this.tt = GB, this.et = YB, this.qt = DB, this.jt = QB, this.Bt = oB, this.zt = null, this.Ht = ko
           }
-          onRemoteConfig(HH) {
-            this.zt = Qr(HH.sampleRate) ? HH.sampleRate : null, "any" === HH.triggerMatchType ? (this.Ut = new Wh([this.tt, this.Y]), this.Ht = Oh) : (this.Ut = new Mh([this.tt, this.Y]), this.Ht = bh), this._instance.register_for_session({
-              [iS]: HH.triggerMatchType
-            }), this.Y.onConfig(HH), this.tt.onConfig(HH), this.et.onConfig(HH, ((HH, BH) => {
+          onRemoteConfig(BB) {
+            this.zt = qD(BB.sampleRate) ? BB.sampleRate : null, "any" === BB.triggerMatchType ? (this.Ut = new No([this.tt, this.Y]), this.Ht = fo) : (this.Ut = new Ro([this.tt, this.Y]), this.Ht = ko), this._instance.register_for_session({
+              [sQ]: BB.triggerMatchType
+            }), this.Y.onConfig(BB), this.tt.onConfig(BB), this.et.onConfig(BB, ((BB, OB) => {
               this.qt("linked_flag_matched", {
-                flag: HH,
-                variant: BH
+                flag: BB,
+                variant: OB
               }), this.Bt()
             }))
           }
-          getStatus(HH) {
+          getStatus(BB) {
             return this.Ht({
               receivedFlags: !0,
               isRecordingEnabled: !0,
-              isSampled: HH.isSampled,
-              rrwebError: HH.rrwebError,
-              urlTriggerMatching: HH.urlTriggerMatching,
-              eventTriggerMatching: HH.eventTriggerMatching,
-              linkedFlagMatching: HH.linkedFlagMatching,
-              sessionId: HH.sessionId
+              isSampled: BB.isSampled,
+              rrwebError: BB.rrwebError,
+              urlTriggerMatching: BB.urlTriggerMatching,
+              eventTriggerMatching: BB.eventTriggerMatching,
+              linkedFlagMatching: BB.linkedFlagMatching,
+              sessionId: BB.sessionId
             })
           }
-          getMinimumDuration(HH) {
-            const BH = this._instance.get_property("$session_recording_remote_config"),
-              LH = null == BH ? void 0 : BH.minimumDurationMilliseconds;
-            return Qr(LH) ? LH : null
+          getMinimumDuration(BB) {
+            const OB = this._instance.get_property("$session_recording_remote_config"),
+              GB = null == OB ? void 0 : OB.minimumDurationMilliseconds;
+            return qD(GB) ? GB : null
           }
-          checkUrlTriggers(HH, BH, LH, AH) {
-            this.Y.checkUrlTriggerConditions(BH, LH, AH, HH)
+          checkUrlTriggers(BB, OB, GB, YB) {
+            this.Y.checkUrlTriggerConditions(OB, GB, YB, BB)
           }
-          setupEventTriggerListeners(HH, BH, LH) {
-            if (0 !== this.tt.K.length && ur(this.Wt)) return this.Wt = HH((HH => {
+          setupEventTriggerListeners(BB, OB, GB) {
+            if (0 !== this.tt.K.length && pD(this.Wt)) return this.Wt = BB((BB => {
               try {
-                this.tt.checkEventTriggerConditions(HH.event, LH, BH)
-              } catch (HH) {
-                Tt.error("Could not activate event trigger", HH)
+                this.tt.checkEventTriggerConditions(BB.event, GB, OB)
+              } catch (BB) {
+                nj.error("Could not activate event trigger", BB)
               }
             })), this.Wt
           }
-          makeSamplingDecisions(HH) {
-            var BH;
-            const LH = this.zt;
-            var AH, rH;
-            if (!Qr(LH)) return null === (AH = this._instance.persistence) || void 0 === AH || AH.unregister("$session_is_sampled"), void(null === (rH = this._instance.persistence) || void 0 === rH || rH.unregister("$replay_sample_rate"));
-            const SH = this._instance.get_property(jS),
-              hH = this._instance.get_property("$replay_sample_rate"),
-              tH = Vt(SH, HH),
-              zH = Qr(hH) && hH !== LH,
-              CH = Xr(hH) && SH === HH,
-              EH = zH || CH || !Wr(tH),
-              XH = EH ? Qt(HH, LH) : tH;
-            EH && (XH ? this.qt("sampled") : Tt.warn(`Sample rate (${LH}) has determined that this sessionId (${HH}) will not be sent to the server.`)), null === (BH = this._instance.persistence) || void 0 === BH || BH.register({
-              $session_is_sampled: Ut(HH, XH),
-              $replay_sample_rate: Yr(hH) && SH === HH ? null : LH
+          makeSamplingDecisions(BB) {
+            var OB;
+            const GB = this.zt;
+            var YB, DB;
+            if (!qD(GB)) return null === (YB = this._instance.persistence) || void 0 === YB || YB.unregister("$session_is_sampled"), void(null === (DB = this._instance.persistence) || void 0 === DB || DB.unregister("$replay_sample_rate"));
+            const QB = this._instance.get_property(EQ),
+              oB = this._instance.get_property("$replay_sample_rate"),
+              jB = fj(QB, BB),
+              yB = qD(oB) && oB !== GB,
+              JB = PD(oB) && QB === BB,
+              MB = yB || JB || !ZD(jB),
+              PB = MB ? Nj(BB, GB) : jB;
+            MB && (PB ? this.qt("sampled") : nj.warn(`Sample rate (${GB}) has determined that this sessionId (${BB}) will not be sent to the server.`)), null === (OB = this._instance.persistence) || void 0 === OB || OB.register({
+              $session_is_sampled: Uj(BB, PB),
+              $replay_sample_rate: lD(oB) && QB === BB ? null : GB
             })
           }
-          ensureSamplingDecision(HH) {
-            if (!Qr(this.zt)) return;
-            const BH = this._instance.get_property(jS);
-            Wr(Vt(BH, HH)) || this.makeSamplingDecisions(HH)
+          ensureSamplingDecision(BB) {
+            if (!qD(this.zt)) return;
+            const OB = this._instance.get_property(EQ);
+            ZD(fj(OB, BB)) || this.makeSamplingDecisions(BB)
           }
           onFlushComplete() {}
           clearConditionalRecordingPersistence() {
-            var HH, BH, LH, AH, rH;
-            null === (HH = this._instance.persistence) || void 0 === HH || HH.unregister("$session_recording_event_trigger_activated_session"), null === (BH = this._instance.persistence) || void 0 === BH || BH.unregister("$session_recording_url_trigger_activated_session"), null === (LH = this._instance.persistence) || void 0 === LH || LH.unregister("$session_is_sampled"), null === (AH = this._instance.persistence) || void 0 === AH || AH.unregister("$replay_sample_rate"), null === (rH = this._instance.persistence) || void 0 === rH || rH.unregister("$session_past_minimum_duration")
+            var BB, OB, GB, YB, DB;
+            null === (BB = this._instance.persistence) || void 0 === BB || BB.unregister("$session_recording_event_trigger_activated_session"), null === (OB = this._instance.persistence) || void 0 === OB || OB.unregister("$session_recording_url_trigger_activated_session"), null === (GB = this._instance.persistence) || void 0 === GB || GB.unregister("$session_is_sampled"), null === (YB = this._instance.persistence) || void 0 === YB || YB.unregister("$replay_sample_rate"), null === (DB = this._instance.persistence) || void 0 === DB || DB.unregister("$session_past_minimum_duration")
           }
-          updateActiveTriggers(HH) {}
-          hasPendingTriggers(HH) {
-            var BH;
-            return (null === (BH = this.Ut) || void 0 === BH ? void 0 : BH.triggerStatus(HH)) === Eh
+          updateActiveTriggers(BB) {}
+          hasPendingTriggers(BB) {
+            var OB;
+            return (null === (OB = this.Ut) || void 0 === OB ? void 0 : OB.triggerStatus(BB)) === Mo
           }
-          getPendingTriggerConditions(HH) {
+          getPendingTriggerConditions(BB) {
             return [{
               label: "URL condition not matched",
-              status: this.Y.triggerStatusNoSideEffects(HH)
+              status: this.Y.triggerStatusNoSideEffects(BB)
             }, {
               label: "event condition not matched",
-              status: this.tt.triggerStatusNoSideEffects(HH)
+              status: this.tt.triggerStatusNoSideEffects(BB)
             }, {
               label: "linked flag condition not matched",
               status: this.et.triggerStatusNoSideEffects()
-            }].filter((HH => {
+            }].filter((BB => {
               let {
-                status: BH
-              } = HH;
-              return BH === Eh
-            })).map((HH => {
+                status: OB
+              } = BB;
+              return OB === Mo
+            })).map((BB => {
               let {
-                label: BH
-              } = HH;
-              return BH
+                label: OB
+              } = BB;
+              return OB
             }))
           }
           stop() {
-            var HH;
-            null === (HH = this.Wt) || void 0 === HH || HH.call(this), this.Wt = void 0, this.tt.stop(), this.Y.stop(), this.et.stop()
+            var BB;
+            null === (BB = this.Wt) || void 0 === BB || BB.call(this), this.Wt = void 0, this.tt.stop(), this.Y.stop(), this.et.stop()
           }
         },
-        bt = class {
-          constructor(HH, BH, LH, AH, rH) {
-            this._instance = HH, this.Y = BH, this.qt = LH, this.Vt = AH, this.Bt = rH, this.Gt = [], this.Qt = new Map, this.Zt = !1
+        dj = class {
+          constructor(BB, OB, GB, YB, DB) {
+            this._instance = BB, this.Y = OB, this.qt = GB, this.Vt = YB, this.Bt = DB, this.Gt = [], this.Qt = new Map, this.Zt = !1
           }
-          onRemoteConfig(HH) {
-            HH.triggerGroups && 0 !== HH.triggerGroups.length ? (this.Jt(HH.triggerGroups), this._instance.register_for_session({
-              [iS]: "v2_trigger_groups",
-              [pS]: HH.triggerGroups.length
-            }), this.Y.onConfig(HH)) : Tt.warn("[V2Strategy] No trigger groups configured")
+          onRemoteConfig(BB) {
+            BB.triggerGroups && 0 !== BB.triggerGroups.length ? (this.Jt(BB.triggerGroups), this._instance.register_for_session({
+              [sQ]: "v2_trigger_groups",
+              [xQ]: BB.triggerGroups.length
+            }), this.Y.onConfig(BB)) : nj.warn("[V2Strategy] No trigger groups configured")
           }
-          getStatus(HH) {
-            return function(HH) {
-              if (HH.rrwebError) return zh;
-              if (!HH.receivedFlags) return hh;
-              if (!HH.isRecordingEnabled) return Ah;
-              if (HH.urlTriggerMatching.urlBlocked) return th;
-              const BH = HH.triggerGroupMatchers,
-                LH = HH.triggerGroupSamplingResults;
-              if (0 === BH.length) return Ah;
-              let AH = !1,
-                rH = !1;
-              for (const SH of BH) {
-                const BH = SH.triggerStatus(HH.sessionId);
-                if ("trigger_activated" === BH) {
-                  const HH = SH.group.id,
-                    BH = LH.get(HH);
-                  Xr(BH) ? fr.warn("[V2 Triggers] Group activated but no sampling decision found", {
-                    groupId: HH
-                  }) : !0 === BH && (rH = !0)
-                } else "trigger_pending" === BH && (AH = !0)
+          getStatus(BB) {
+            return function(BB) {
+              if (BB.rrwebError) return yo;
+              if (!BB.receivedFlags) return oo;
+              if (!BB.isRecordingEnabled) return Yo;
+              if (BB.urlTriggerMatching.urlBlocked) return jo;
+              const OB = BB.triggerGroupMatchers,
+                GB = BB.triggerGroupSamplingResults;
+              if (0 === OB.length) return Yo;
+              let YB = !1,
+                DB = !1;
+              for (const QB of OB) {
+                const OB = QB.triggerStatus(BB.sessionId);
+                if ("trigger_activated" === OB) {
+                  const BB = QB.group.id,
+                    OB = GB.get(BB);
+                  PD(OB) ? mD.warn("[V2 Triggers] Group activated but no sampling decision found", {
+                    groupId: BB
+                  }) : !0 === OB && (DB = !0)
+                } else "trigger_pending" === OB && (YB = !0)
               }
-              return rH ? rh : AH ? hh : Ah
+              return DB ? Do : YB ? oo : Yo
             }({
               receivedFlags: !0,
               isRecordingEnabled: !0,
-              isSampled: HH.isSampled,
-              rrwebError: HH.rrwebError,
-              urlTriggerMatching: HH.urlTriggerMatching,
-              eventTriggerMatching: HH.eventTriggerMatching,
-              linkedFlagMatching: HH.linkedFlagMatching,
-              sessionId: HH.sessionId,
+              isSampled: BB.isSampled,
+              rrwebError: BB.rrwebError,
+              urlTriggerMatching: BB.urlTriggerMatching,
+              eventTriggerMatching: BB.eventTriggerMatching,
+              linkedFlagMatching: BB.linkedFlagMatching,
+              sessionId: BB.sessionId,
               triggerGroupMatchers: this.Gt,
               triggerGroupSamplingResults: this.Qt,
-              minimumDuration: this.getMinimumDuration(HH.sessionId)
+              minimumDuration: this.getMinimumDuration(BB.sessionId)
             })
           }
-          getMinimumDuration(HH) {
-            let BH = null;
-            for (const LH of this.Gt)
-              if ("trigger_activated" === LH.triggerStatus(HH)) {
-                const HH = LH.group.minDurationMs;
-                Qr(HH) && (Yr(BH) || BH > HH) && (BH = HH)
-              } return BH
+          getMinimumDuration(BB) {
+            let OB = null;
+            for (const GB of this.Gt)
+              if ("trigger_activated" === GB.triggerStatus(BB)) {
+                const BB = GB.group.minDurationMs;
+                qD(BB) && (lD(OB) || OB > BB) && (OB = BB)
+              } return OB
           }
-          checkUrlTriggers(HH, BH, LH, AH) {
-            this.Y.checkUrlBlocklist(BH, LH);
-            for (const rH of this.Gt) rH.checkUrlTriggerConditions(BH, LH, (BH => {
-              this.Kt(rH, void 0) && (rH.activateTrigger(BH, HH), this.updateActiveTriggers(HH), this.Bt(BH))
-            }), HH)
+          checkUrlTriggers(BB, OB, GB, YB) {
+            this.Y.checkUrlBlocklist(OB, GB);
+            for (const DB of this.Gt) DB.checkUrlTriggerConditions(OB, GB, (OB => {
+              this.Kt(DB, void 0) && (DB.activateTrigger(OB, BB), this.updateActiveTriggers(BB), this.Bt(OB))
+            }), BB)
           }
-          setupEventTriggerListeners(HH, BH, LH) {
-            return this.Wt = HH((HH => {
-              var LH;
-              if (this.Zt) return Tt.info("[SessionRecorder] Stopping trigger checks - initial buffer flushed"), null === (LH = this.Wt) || void 0 === LH || LH.call(this), void(this.Wt = void 0);
+          setupEventTriggerListeners(BB, OB, GB) {
+            return this.Wt = BB((BB => {
+              var GB;
+              if (this.Zt) return nj.info("[SessionRecorder] Stopping trigger checks - initial buffer flushed"), null === (GB = this.Wt) || void 0 === GB || GB.call(this), void(this.Wt = void 0);
               try {
-                for (const LH of this.Gt) LH.checkEventTriggerConditions(HH.event, (AH => {
-                  if (!this.Kt(LH, HH.properties)) return;
-                  const rH = (LH.group.conditions.events || []).filter((BH => BH.name === HH.event)),
-                    SH = this._instance.get_property(Fr);
-                  rH.some((BH => !BH.properties || 0 === BH.properties.length || Pt(BH.properties, HH.properties, SH))) && (LH.activateTrigger(AH, BH), this.updateActiveTriggers(BH), this.Bt(AH))
-                }), BH)
-              } catch (HH) {
-                Tt.error("Could not activate event trigger for trigger groups", HH)
+                for (const GB of this.Gt) GB.checkEventTriggerConditions(BB.event, (YB => {
+                  if (!this.Kt(GB, BB.properties)) return;
+                  const DB = (GB.group.conditions.events || []).filter((OB => OB.name === BB.event)),
+                    QB = this._instance.get_property(hD);
+                  DB.some((OB => !OB.properties || 0 === OB.properties.length || Sj(OB.properties, BB.properties, QB))) && (GB.activateTrigger(YB, OB), this.updateActiveTriggers(OB), this.Bt(YB))
+                }), OB)
+              } catch (BB) {
+                nj.error("Could not activate event trigger for trigger groups", BB)
               }
             })), this.Wt
           }
-          makeSamplingDecisions(HH) {
-            for (const LH of this.Gt) {
-              var BH;
-              const AH = LH.group,
-                rH = AH.id,
-                SH = AH.sampleRate,
-                hH = "$posthog_sr_group_sampling_" + rH,
-                tH = this._instance.get_property(hH);
-              let zH = null,
-                CH = !1,
-                EH = !1,
-                XH = !1;
-              if (Er(tH)) {
-                const BH = tH.sessionId,
-                  LH = tH.sampleRate,
-                  AH = tH.sampled;
-                CH = "string" == typeof BH && BH !== HH, EH = Qr(LH) && LH !== SH, zH = BH === HH && Qr(LH) && LH === SH && Wr(AH) ? AH : null
-              } else zH = tH === HH || null, CH = "string" == typeof tH && tH !== HH, XH = tH === HH;
-              const GH = CH || EH || XH || !Wr(zH),
-                YH = GH ? Qt(HH + rH, SH) : zH;
-              GH && this.Vt("triggerGroupSamplingDecisionMade", {
-                group_id: rH,
-                group_name: AH.name,
-                sampleRate: SH,
-                isSampled: YH
-              }), this.Qt.set(rH, YH), null === (BH = this._instance.persistence) || void 0 === BH || BH.register({
-                [hH]: {
-                  sessionId: HH,
-                  sampleRate: SH,
-                  sampled: YH
+          makeSamplingDecisions(BB) {
+            for (const GB of this.Gt) {
+              var OB;
+              const YB = GB.group,
+                DB = YB.id,
+                QB = YB.sampleRate,
+                oB = "$posthog_sr_group_sampling_" + DB,
+                jB = this._instance.get_property(oB);
+              let yB = null,
+                JB = !1,
+                MB = !1,
+                PB = !1;
+              if (MD(jB)) {
+                const OB = jB.sessionId,
+                  GB = jB.sampleRate,
+                  YB = jB.sampled;
+                JB = "string" == typeof OB && OB !== BB, MB = qD(GB) && GB !== QB, yB = OB === BB && qD(GB) && GB === QB && ZD(YB) ? YB : null
+              } else yB = jB === BB || null, JB = "string" == typeof jB && jB !== BB, PB = jB === BB;
+              const zB = JB || MB || PB || !ZD(yB),
+                lB = zB ? Nj(BB + DB, QB) : yB;
+              zB && this.Vt("triggerGroupSamplingDecisionMade", {
+                group_id: DB,
+                group_name: YB.name,
+                sampleRate: QB,
+                isSampled: lB
+              }), this.Qt.set(DB, lB), null === (OB = this._instance.persistence) || void 0 === OB || OB.register({
+                [oB]: {
+                  sessionId: BB,
+                  sampleRate: QB,
+                  sampled: lB
                 }
               })
             }
-            this.updateActiveTriggers(HH)
+            this.updateActiveTriggers(BB)
           }
-          ensureSamplingDecision(HH) {}
+          ensureSamplingDecision(BB) {}
           onFlushComplete() {
             this.Zt = !0
           }
           clearConditionalRecordingPersistence() {
-            var HH, BH, LH;
-            null === (HH = this._instance.persistence) || void 0 === HH || HH.unregister("$session_is_sampled"), null === (BH = this._instance.persistence) || void 0 === BH || BH.unregister("$replay_sample_rate"), null === (LH = this._instance.persistence) || void 0 === LH || LH.unregister("$session_past_minimum_duration");
-            for (const hH of this.Gt) {
-              var AH, rH, SH;
-              const HH = hH.group.id;
-              null === (AH = this._instance.persistence) || void 0 === AH || AH.unregister("$posthog_sr_group_event_trigger_" + HH), null === (rH = this._instance.persistence) || void 0 === rH || rH.unregister("$posthog_sr_group_url_trigger_" + HH), null === (SH = this._instance.persistence) || void 0 === SH || SH.unregister("$posthog_sr_group_sampling_" + HH)
+            var BB, OB, GB;
+            null === (BB = this._instance.persistence) || void 0 === BB || BB.unregister("$session_is_sampled"), null === (OB = this._instance.persistence) || void 0 === OB || OB.unregister("$replay_sample_rate"), null === (GB = this._instance.persistence) || void 0 === GB || GB.unregister("$session_past_minimum_duration");
+            for (const oB of this.Gt) {
+              var YB, DB, QB;
+              const BB = oB.group.id;
+              null === (YB = this._instance.persistence) || void 0 === YB || YB.unregister("$posthog_sr_group_event_trigger_" + BB), null === (DB = this._instance.persistence) || void 0 === DB || DB.unregister("$posthog_sr_group_url_trigger_" + BB), null === (QB = this._instance.persistence) || void 0 === QB || QB.unregister("$posthog_sr_group_sampling_" + BB)
             }
           }
-          updateActiveTriggers(HH) {
-            const BH = [];
-            for (const LH of this.Gt) {
-              const AH = LH.group,
-                rH = AH.id,
-                SH = "trigger_activated" === LH.triggerStatus(HH),
-                hH = !0 === this.Qt.get(rH);
-              SH && BH.push({
-                id: rH,
-                name: AH.name,
+          updateActiveTriggers(BB) {
+            const OB = [];
+            for (const GB of this.Gt) {
+              const YB = GB.group,
+                DB = YB.id,
+                QB = "trigger_activated" === GB.triggerStatus(BB),
+                oB = !0 === this.Qt.get(DB);
+              QB && OB.push({
+                id: DB,
+                name: YB.name,
                 matched: !0,
-                sampled: hH
+                sampled: oB
               })
             }
             this._instance.register_for_session({
-              [sS]: BH
+              [HQ]: OB
             })
           }
-          hasPendingTriggers(HH) {
-            for (const BH of this.Gt)
-              if ("trigger_pending" === BH.triggerStatus(HH)) return !0;
+          hasPendingTriggers(BB) {
+            for (const OB of this.Gt)
+              if ("trigger_pending" === OB.triggerStatus(BB)) return !0;
             return !1
           }
-          getPendingTriggerConditions(HH) {
-            return this.Gt.flatMap((BH => "trigger_pending" !== BH.triggerStatusNoSideEffects(HH) ? [] : BH.getPendingTriggerConditions(HH).map((HH => `trigger group "${BH.group.name}": ${HH}`))))
+          getPendingTriggerConditions(BB) {
+            return this.Gt.flatMap((OB => "trigger_pending" !== OB.triggerStatusNoSideEffects(BB) ? [] : OB.getPendingTriggerConditions(BB).map((BB => `trigger group "${OB.group.name}": ${BB}`))))
           }
           stop() {
-            var HH;
-            null === (HH = this.Wt) || void 0 === HH || HH.call(this), this.Wt = void 0, this.Gt.forEach((HH => HH.stop())), this.Gt = [], this.Qt.clear(), this.Y.stop()
+            var BB;
+            null === (BB = this.Wt) || void 0 === BB || BB.call(this), this.Wt = void 0, this.Gt.forEach((BB => BB.stop())), this.Gt = [], this.Qt.clear(), this.Y.stop()
           }
-          Kt(HH, BH) {
-            const LH = HH.group.conditions.properties;
-            return !LH || 0 === LH.length || Pt(LH, BH, this._instance.get_property(Fr))
+          Kt(BB, OB) {
+            const GB = BB.group.conditions.properties;
+            return !GB || 0 === GB.length || Sj(GB, OB, this._instance.get_property(hD))
           }
-          Jt(HH) {
-            this.Gt.forEach((HH => HH.stop())), this.Gt = [], this.Qt.clear();
-            for (const BH of HH) {
-              const HH = new Vh(this._instance, BH, ((HH, LH) => {
+          Jt(BB) {
+            this.Gt.forEach((BB => BB.stop())), this.Gt = [], this.Qt.clear();
+            for (const OB of BB) {
+              const BB = new Uo(this._instance, OB, ((BB, GB) => {
                 this.qt("linked_flag_matched", {
-                  flag: HH,
-                  variant: LH,
-                  group_id: BH.id,
-                  group_name: BH.name
+                  flag: BB,
+                  variant: GB,
+                  group_id: OB.id,
+                  group_name: OB.name
                 }), this.Bt()
               }));
-              this.Gt.push(HH)
+              this.Gt.push(BB)
             }
           }
         };
-      const kt = ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "irclid", "_kx"],
-        mt = 1e5,
-        ot = /^[A-Za-z0-9]*[A-Za-z][A-Za-z0-9]*$/,
-        It = [],
-        ft = () => !1,
-        lt = "@type @id actionStatus availability bestRating contentRating encodingFormat eventAttendanceMode eventStatus highPrice inLanguage isAccessibleForFree isFamilyFriendly itemCondition itemListOrder lowPrice maximumAttendeeCapacity nonprofitStatus numberOfItems offerCount position price priceCurrency priceValidUntil publicAccess ratingCount ratingValue reviewCount smokingAllowed worstRating".split(" "),
-        Kt = "Action BorrowAction ReadAction SearchAction SeekToAction SolveMathAction WatchAction".split(" "),
-        ct = "AutoDealer Bakery BarOrPub CafeOrCoffeeShop CollegeOrUniversity Corporation DaySpa Dentist EducationalOrganization Electrician FoodEstablishment GovernmentOrganization HealthClub Hotel LegalService Library LibrarySystem LocalBusiness Locksmith LodgingBusiness MedicalBusiness NGO OnlineStore Organization PerformingGroup Pharmacy Physician Plumber RealEstateAgent Restaurant School SportsOrganization Store".split(" "),
-        et = "Accommodation AdministrativeArea Country Place State".split(" "),
-        qt = {
+      const Kj = ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "irclid", "_kx"],
+        uj = 1e5,
+        mj = /^[A-Za-z0-9]*[A-Za-z][A-Za-z0-9]*$/,
+        Ij = [],
+        Fj = () => !1,
+        ij = "@type @id actionStatus availability bestRating contentRating encodingFormat eventAttendanceMode eventStatus highPrice inLanguage isAccessibleForFree isFamilyFriendly itemCondition itemListOrder lowPrice maximumAttendeeCapacity nonprofitStatus numberOfItems offerCount position price priceCurrency priceValidUntil publicAccess ratingCount ratingValue reviewCount smokingAllowed worstRating".split(" "),
+        Lj = "Action BorrowAction ReadAction SearchAction SeekToAction SolveMathAction WatchAction".split(" "),
+        gj = "AutoDealer Bakery BarOrPub CafeOrCoffeeShop CollegeOrUniversity Corporation DaySpa Dentist EducationalOrganization Electrician FoodEstablishment GovernmentOrganization HealthClub Hotel LegalService Library LibrarySystem LocalBusiness Locksmith LodgingBusiness MedicalBusiness NGO OnlineStore Organization PerformingGroup Pharmacy Physician Plumber RealEstateAgent Restaurant School SportsOrganization Store".split(" "),
+        rj = "Accommodation AdministrativeArea Country Place State".split(" "),
+        Xj = {
           AggregateOffer: {
             offers: ["Offer"]
           },
@@ -7177,8 +7177,8 @@ export const modules = {
             educationalUse: !0,
             interactivityType: !0,
             aggregateRating: ["AggregateRating"],
-            potentialAction: Kt,
-            publisher: ct
+            potentialAction: Lj,
+            publisher: gj
           },
           Event: {
             startDate: !0,
@@ -7191,10 +7191,10 @@ export const modules = {
             itemListElement: ["ListItem"]
           },
           ListItem: {
-            item: It
+            item: Ij
           },
           Offer: {
-            seller: ct
+            seller: gj
           },
           Organization: {
             name: !0,
@@ -7228,7 +7228,7 @@ export const modules = {
             productionDate: !0,
             releaseDate: !0,
             brand: ["Brand", "Organization"],
-            manufacturer: ct,
+            manufacturer: gj,
             offers: ["Offer", "AggregateOffer"],
             aggregateRating: ["AggregateRating"]
           },
@@ -7236,416 +7236,416 @@ export const modules = {
             name: !0,
             serviceType: !0,
             category: !0,
-            provider: ct,
-            areaServed: et,
+            provider: gj,
+            areaServed: rj,
             offers: ["AggregateOffer", "Offer"],
             aggregateRating: ["AggregateRating"]
           },
           OfferCatalog: {
             name: !0,
-            itemListElement: It
+            itemListElement: Ij
           }
         },
-        gt = [
-          ["3DModel AboutPage Answer Article AudioObject Blog BlogPosting Book Clip CollectionPage Comment ContactPage Course CreativeWorkSeason CreativeWorkSeries DataCatalog DataDownload DataFeed Dataset DiscussionForumPosting Episode FAQPage Game HowTo HowToDirection HowToSection HowToStep HowToTip ImageObject LearningResource MediaObject Message MobileApplication Movie MusicPlaylist MusicRecording NewsArticle Photograph PodcastEpisode PodcastSeries ProfilePage QAPage Question Quiz Recipe Review ScholarlyArticle SearchResultsPage SiteNavigationElement SocialMediaPosting SoftwareApplication TVEpisode TVSeries TechArticle VacationRental VideoGame VideoObject WebApplication WebPage WebPageElement WebSite".split(" "), qt.CreativeWork],
-          ["BroadcastEvent BusinessEvent EducationEvent Festival MusicEvent SportsEvent TheaterEvent".split(" "), qt.Event],
-          [ct, qt.Organization],
-          [et, qt.Place],
-          ["Car IndividualProduct ProductGroup ProductModel".split(" "), qt.Product]
+        wj = [
+          ["3DModel AboutPage Answer Article AudioObject Blog BlogPosting Book Clip CollectionPage Comment ContactPage Course CreativeWorkSeason CreativeWorkSeries DataCatalog DataDownload DataFeed Dataset DiscussionForumPosting Episode FAQPage Game HowTo HowToDirection HowToSection HowToStep HowToTip ImageObject LearningResource MediaObject Message MobileApplication Movie MusicPlaylist MusicRecording NewsArticle Photograph PodcastEpisode PodcastSeries ProfilePage QAPage Question Quiz Recipe Review ScholarlyArticle SearchResultsPage SiteNavigationElement SocialMediaPosting SoftwareApplication TVEpisode TVSeries TechArticle VacationRental VideoGame VideoObject WebApplication WebPage WebPageElement WebSite".split(" "), Xj.CreativeWork],
+          ["BroadcastEvent BusinessEvent EducationEvent Festival MusicEvent SportsEvent TheaterEvent".split(" "), Xj.Event],
+          [gj, Xj.Organization],
+          [rj, Xj.Place],
+          ["Car IndividualProduct ProductGroup ProductModel".split(" "), Xj.Product]
         ];
 
-      function Nt(HH, BH) {
-        return hr.call(HH, BH) ? HH[BH] : void 0
+      function Ej(BB, OB) {
+        return oD.call(BB, OB) ? BB[OB] : void 0
       }
 
-      function Rt(HH) {
-        const BH = typeof HH;
-        return Yr(HH) || "string" === BH || "number" === BH || "boolean" === BH
+      function cj(BB) {
+        const OB = typeof BB;
+        return lD(BB) || "string" === OB || "number" === OB || "boolean" === OB
       }
 
-      function jt(HH, BH) {
-        return BH && function(HH) {
-          return Gr(HH) && /^(https?:\/\/|\/|\.\.?\/)/i.test(HH.trim())
-        }(HH) ? BH(HH.trim()) || void 0 : HH
+      function hj(BB, OB) {
+        return OB && function(BB) {
+          return zD(BB) && /^(https?:\/\/|\/|\.\.?\/)/i.test(BB.trim())
+        }(BB) ? OB(BB.trim()) || void 0 : BB
       }
 
-      function nt(HH, BH) {
-        return zr(HH) && HH.every(Rt) ? HH.map((HH => jt(HH, BH))).filter((HH => !Xr(HH))) : Rt(HH) ? jt(HH, BH) : void 0
+      function aj(BB, OB) {
+        return yD(BB) && BB.every(cj) ? BB.map((BB => hj(BB, OB))).filter((BB => !PD(BB))) : cj(BB) ? hj(BB, OB) : void 0
       }
 
-      function Ft(HH, BH) {
-        if ("string" != typeof HH) return;
-        const LH = HH.trim(),
-          AH = LH.indexOf("#"),
-          rH = 0 > AH ? LH : LH.slice(AH + 1);
-        if (rH && !(0 > AH && (/^[a-z][a-z\d+.-]*:/i.test(LH) || LH.includes("/") || LH.includes("?")))) try {
-          return BH(rH) ? rH : void 0
-        } catch (HH) {
+      function ej(BB, OB) {
+        if ("string" != typeof BB) return;
+        const GB = BB.trim(),
+          YB = GB.indexOf("#"),
+          DB = 0 > YB ? GB : GB.slice(YB + 1);
+        if (DB && !(0 > YB && (/^[a-z][a-z\d+.-]*:/i.test(GB) || GB.includes("/") || GB.includes("?")))) try {
+          return OB(DB) ? DB : void 0
+        } catch (BB) {
           return
         }
       }
 
-      function Dt(HH) {
-        if (hr.call(qt, HH)) return qt[HH];
-        for (const [BH, LH] of gt)
-          if (BH.includes(HH)) return LH
+      function Tj(BB) {
+        if (oD.call(Xj, BB)) return Xj[BB];
+        for (const [OB, GB] of wj)
+          if (OB.includes(BB)) return GB
       }
 
-      function wt(HH, BH, LH) {
-        Object.defineProperty(HH, BH, {
+      function bj(BB, OB, GB) {
+        Object.defineProperty(BB, OB, {
           configurable: !0,
           enumerable: !0,
-          value: LH,
+          value: GB,
           writable: !0
         })
       }
 
-      function Zt(HH, BH, LH, AH) {
-        if (zr(HH)) {
-          const rH = HH.map((HH => Zt(HH, BH, LH, AH))).filter((HH => !Xr(HH)));
-          return rH.length ? rH : void 0
+      function Cj(BB, OB, GB, YB) {
+        if (yD(BB)) {
+          const DB = BB.map((BB => Cj(BB, OB, GB, YB))).filter((BB => !PD(BB)));
+          return DB.length ? DB : void 0
         }
-        return dt(HH, BH, LH, AH) || void 0
+        return Hj(BB, OB, GB, YB) || void 0
       }
 
-      function dt(HH, BH, LH, AH) {
-        if (!Er(HH) || ! function(HH) {
-            return HH.remainingNodes ? (HH.remainingNodes--, !0) : (HH.exceeded = !0, !1)
-          }(LH)) return null;
-        const rH = Nt(HH, "@type"),
-          SH = function(HH) {
-            const BH = new Set,
-              LH = "string" == typeof HH ? [HH] : zr(HH) ? HH : [],
-              AH = [];
-            for (const rH of LH) {
-              if ("string" != typeof rH) continue;
-              const HH = rH.replace(/^https?:\/\/schema\.org\//, "");
-              if (100 >= HH.length && ot.test(HH) && !BH.has(HH) && (BH.add(HH), AH.push(HH), 20 === AH.length)) break
+      function Hj(BB, OB, GB, YB) {
+        if (!MD(BB) || ! function(BB) {
+            return BB.remainingNodes ? (BB.remainingNodes--, !0) : (BB.exceeded = !0, !1)
+          }(GB)) return null;
+        const DB = Ej(BB, "@type"),
+          QB = function(BB) {
+            const OB = new Set,
+              GB = "string" == typeof BB ? [BB] : yD(BB) ? BB : [],
+              YB = [];
+            for (const DB of GB) {
+              if ("string" != typeof DB) continue;
+              const BB = DB.replace(/^https?:\/\/schema\.org\//, "");
+              if (100 >= BB.length && mj.test(BB) && !OB.has(BB) && (OB.add(BB), YB.push(BB), 20 === YB.length)) break
             }
-            return AH
-          }(rH),
-          hH = SH.filter((HH => !!Dt(HH) && (!AH || !AH.length || AH.includes(HH)))),
-          tH = {};
-        for (const CH of lt) {
-          const AH = "@type" === CH ? SH.length ? "string" == typeof rH ? SH[0] : SH : void 0 : "@id" === CH ? Ft(Nt(HH, CH), BH) : nt(Nt(HH, CH), LH.maskUrl);
-          Xr(AH) || wt(tH, CH, AH)
+            return YB
+          }(DB),
+          oB = QB.filter((BB => !!Tj(BB) && (!YB || !YB.length || YB.includes(BB)))),
+          jB = {};
+        for (const JB of ij) {
+          const YB = "@type" === JB ? QB.length ? "string" == typeof DB ? QB[0] : QB : void 0 : "@id" === JB ? ej(Ej(BB, JB), OB) : aj(Ej(BB, JB), GB.maskUrl);
+          PD(YB) || bj(jB, JB, YB)
         }
-        for (const CH of hH) {
-          const AH = Dt(CH);
-          for (const rH of Object.keys(AH)) {
-            const SH = Nt(HH, rH),
-              hH = AH[rH];
-            if (!0 === hH) {
-              const HH = nt(SH, LH.maskUrl);
-              Xr(HH) || wt(tH, rH, HH)
+        for (const JB of oB) {
+          const YB = Tj(JB);
+          for (const DB of Object.keys(YB)) {
+            const QB = Ej(BB, DB),
+              oB = YB[DB];
+            if (!0 === oB) {
+              const BB = aj(QB, GB.maskUrl);
+              PD(BB) || bj(jB, DB, BB)
             } else {
-              const HH = Zt(SH, BH, LH, hH);
-              Xr(HH) || wt(tH, rH, HH)
+              const BB = Cj(QB, OB, GB, oB);
+              PD(BB) || bj(jB, DB, BB)
             }
           }
         }
-        const zH = Zt(Nt(HH, "@graph"), BH, LH);
-        return Xr(zH) || wt(tH, "@graph", zH), Object.keys(tH).length ? tH : null
+        const yB = Cj(Ej(BB, "@graph"), OB, GB);
+        return PD(yB) || bj(jB, "@graph", yB), Object.keys(jB).length ? jB : null
       }
 
-      function st(HH, BH, LH) {
-        if (!Er(HH)) return null;
-        const rH = Nt(HH, "@context");
-        if ("string" != typeof rH || !/^https?:\/\/schema\.org\/?$/.test(rH)) return null;
-        const SH = dt(HH, BH, LH);
-        return SH ? AH({
+      function vj(BB, OB, GB) {
+        if (!MD(BB)) return null;
+        const DB = Ej(BB, "@context");
+        if ("string" != typeof DB || !/^https?:\/\/schema\.org\/?$/.test(DB)) return null;
+        const QB = Hj(BB, OB, GB);
+        return QB ? YB({
           "@context": "https://schema.org"
-        }, SH) : null
+        }, QB) : null
       }
 
-      function Jt(HH) {
-        var BH;
-        return "SCRIPT" === HH.nodeName && "application/ld+json" === (null === (BH = HH.getAttribute("type")) || void 0 === BH ? void 0 : BH.trim().toLowerCase())
+      function sj(BB) {
+        var OB;
+        return "SCRIPT" === BB.nodeName && "application/ld+json" === (null === (OB = BB.getAttribute("type")) || void 0 === OB ? void 0 : OB.trim().toLowerCase())
       }
 
-      function it(HH, BH, LH) {
-        if ("string" == typeof BH ? HH.classList.contains(BH) : BH && Array.from(HH.classList).some((HH => (BH.lastIndex = 0, BH.test(HH))))) return !0;
+      function xj(BB, OB, GB) {
+        if ("string" == typeof OB ? BB.classList.contains(OB) : OB && Array.from(BB.classList).some((BB => (OB.lastIndex = 0, OB.test(BB))))) return !0;
         try {
-          return !!LH && HH.matches(LH)
-        } catch (HH) {
+          return !!GB && BB.matches(GB)
+        } catch (BB) {
           return !1
         }
       }
 
-      function pt(HH, BH, LH) {
-        for (let AH = HH; AH;) {
-          if (it(AH, BH, LH)) return !0;
-          const HH = AH.parentNode;
-          AH = AH.parentElement || (HH && HH.nodeType === HH.DOCUMENT_FRAGMENT_NODE ? HH.host : null)
+      function tj(BB, OB, GB) {
+        for (let YB = BB; YB;) {
+          if (xj(YB, OB, GB)) return !0;
+          const BB = YB.parentNode;
+          YB = YB.parentElement || (BB && BB.nodeType === BB.DOCUMENT_FRAGMENT_NODE ? BB.host : null)
         }
         return !1
       }
 
-      function yt(HH) {
-        return Jt(HH) ? [HH] : HH.nodeType !== HH.ELEMENT_NODE ? [] : Array.from(HH.querySelectorAll("script")).filter(Jt)
+      function By(BB) {
+        return sj(BB) ? [BB] : BB.nodeType !== BB.ELEMENT_NODE ? [] : Array.from(BB.querySelectorAll("script")).filter(sj)
       }
 
-      function Hz(HH) {
-        return Er(HH) ? HH.network_timing : HH
+      function Oy(BB) {
+        return MD(BB) ? BB.network_timing : BB
       }
-      const Bz = lr("[SessionRecording]"),
-        Lz = [1, 2, 3, 4, 5, 6, 7, 12],
-        Az = HH => ({
-          rrwebMethod: HH,
+      const Gy = ID("[SessionRecording]"),
+        Yy = [1, 2, 3, 4, 5, 6, 7, 12],
+        Dy = BB => ({
+          rrwebMethod: BB,
           enqueuedAt: Date.now(),
           attempt: 1
         });
 
-      function rz() {
-        var HH;
-        return null == rr || null === (HH = rr.__PosthogExtensions__) || void 0 === HH ? void 0 : HH.rrweb
+      function Qy() {
+        var BB;
+        return null == DD || null === (BB = DD.__PosthogExtensions__) || void 0 === BB ? void 0 : BB.rrweb
       }
 
-      function Sz() {
-        var HH;
-        return null === (HH = rz()) || void 0 === HH ? void 0 : HH.record
+      function oy() {
+        var BB;
+        return null === (BB = Qy()) || void 0 === BB ? void 0 : BB.record
       }
 
-      function hz(HH) {
+      function jy(BB) {
         try {
-          return JSON.stringify(HH)
-        } catch (BH) {
-          if (BH instanceof RangeError) throw BH;
-          return JSON.stringify(HH, kh())
+          return JSON.stringify(BB)
+        } catch (OB) {
+          if (OB instanceof RangeError) throw OB;
+          return JSON.stringify(BB, Ko())
         }
       }
 
-      function tz(HH) {
-        return Ct(function(HH, BH) {
-          void 0 === BH && (BH = {});
-          var LH = function() {
-              var HH = 4294967295;
+      function yy(BB) {
+        return Pj(function(BB, OB) {
+          void 0 === OB && (OB = {});
+          var GB = function() {
+              var BB = 4294967295;
               return {
-                p(BH) {
-                  for (var LH = HH, AH = 0; BH.length > AH; ++AH) LH = tt[255 & LH ^ BH[AH]] ^ LH >>> 8;
-                  HH = LH
+                p(OB) {
+                  for (var GB = BB, YB = 0; OB.length > YB; ++YB) GB = Jj[255 & GB ^ OB[YB]] ^ GB >>> 8;
+                  BB = GB
                 },
-                d: () => 4294967295 ^ HH
+                d: () => 4294967295 ^ BB
               }
             }(),
-            AH = HH.length;
-          LH.p(HH);
-          var rH, SH, hH, tH, zH = (tH = 10 + ((rH = BH).filename && rH.filename.length + 1 || 0), function(HH, BH, LH, AH, rH, SH) {
-              var hH = HH.length,
-                tH = new fh(AH + hH + 5 * (1 + Math.floor(hH / 7e3)) + 8),
-                zH = tH.subarray(AH, tH.length - 8),
-                CH = 0;
-              if (!BH || 8 > hH)
-                for (var EH = 0; hH >= EH; EH += 65535) {
-                  var XH = EH + 65535;
-                  hH > XH ? CH = rt(zH, CH, HH.subarray(EH, XH)) : (zH[EH] = SH, CH = rt(zH, CH, HH.subarray(EH, hH)))
+            YB = BB.length;
+          GB.p(BB);
+          var DB, QB, oB, jB, yB = (jB = 10 + ((DB = OB).filename && DB.filename.length + 1 || 0), function(BB, OB, GB, YB, DB, QB) {
+              var oB = BB.length,
+                jB = new Fo(YB + oB + 5 * (1 + Math.floor(oB / 7e3)) + 8),
+                yB = jB.subarray(YB, jB.length - 8),
+                JB = 0;
+              if (!OB || 8 > oB)
+                for (var MB = 0; oB >= MB; MB += 65535) {
+                  var PB = MB + 65535;
+                  oB > PB ? JB = oj(yB, JB, BB.subarray(MB, PB)) : (yB[MB] = QB, JB = oj(yB, JB, BB.subarray(MB, oB)))
                 } else {
-                  for (var GH = ht[BH - 1], YH = GH >>> 13, uH = 8191 & GH, QH = (1 << LH) - 1, WH = new lh(32768), MH = new lh(QH + 1), xH = Math.ceil(LH / 3), vH = 2 * xH, PH = function(BH) {
-                      return (HH[BH] ^ HH[BH + 1] << xH ^ HH[BH + 2] << vH) & QH
-                    }, TH = new Kh(25e3), UH = new lh(288), VH = new lh(32), OH = 0, bH = 0, kH = (EH = 0, 0), mH = 0, oH = 0; hH > EH; ++EH) {
-                    var IH = PH(EH),
-                      fH = 32767 & EH,
-                      lH = MH[IH];
-                    if (WH[fH] = lH, MH[IH] = fH, EH >= mH) {
-                      var KH = hH - EH;
-                      if ((OH > 7e3 || kH > 24576) && KH > 423) {
-                        CH = St(HH, zH, 0, TH, UH, VH, bH, kH, oH, EH - oH, CH), kH = OH = bH = 0, oH = EH;
-                        for (var cH = 0; 286 > cH; ++cH) UH[cH] = 0;
-                        for (cH = 0; 30 > cH; ++cH) VH[cH] = 0
+                  for (var zB = yj[OB - 1], lB = zB >>> 13, pB = 8191 & zB, qB = (1 << GB) - 1, ZB = new io(32768), NB = new io(qB + 1), RB = Math.ceil(GB / 3), WB = 2 * RB, AB = function(OB) {
+                      return (BB[OB] ^ BB[OB + 1] << RB ^ BB[OB + 2] << WB) & qB
+                    }, VB = new Lo(25e3), SB = new io(288), nB = new io(32), UB = 0, fB = 0, kB = (MB = 0, 0), dB = 0, KB = 0; oB > MB; ++MB) {
+                    var uB = AB(MB),
+                      mB = 32767 & MB,
+                      IB = NB[uB];
+                    if (ZB[mB] = IB, NB[uB] = mB, MB >= dB) {
+                      var FB = oB - MB;
+                      if ((UB > 7e3 || kB > 24576) && FB > 423) {
+                        JB = jj(BB, yB, 0, VB, SB, nB, fB, kB, KB, MB - KB, JB), kB = UB = fB = 0, KB = MB;
+                        for (var iB = 0; 286 > iB; ++iB) SB[iB] = 0;
+                        for (iB = 0; 30 > iB; ++iB) nB[iB] = 0
                       }
-                      var eH = 2,
-                        qH = 0,
-                        gH = uH,
-                        NH = fH - lH & 32767;
-                      if (KH > 2 && IH == PH(EH - NH))
-                        for (var RH = Math.min(YH, KH) - 1, jH = Math.min(32767, EH), nH = Math.min(258, KH); jH >= NH && --gH && fH != lH;) {
-                          if (HH[EH + eH] == HH[EH + eH - NH]) {
-                            for (var FH = 0; nH > FH && HH[EH + FH] == HH[EH + FH - NH]; ++FH);
-                            if (FH > eH) {
-                              if (eH = FH, qH = NH, FH > RH) break;
-                              var DH = Math.min(NH, FH - 2),
-                                wH = 0;
-                              for (cH = 0; DH > cH; ++cH) {
-                                var ZH = EH - NH + cH + 32768 & 32767,
-                                  dH = ZH - WH[ZH] + 32768 & 32767;
-                                dH > wH && (wH = dH, lH = ZH)
+                      var LB = 2,
+                        gB = 0,
+                        rB = pB,
+                        XB = mB - IB & 32767;
+                      if (FB > 2 && uB == AB(MB - XB))
+                        for (var wB = Math.min(lB, FB) - 1, EB = Math.min(32767, MB), cB = Math.min(258, FB); EB >= XB && --rB && mB != IB;) {
+                          if (BB[MB + LB] == BB[MB + LB - XB]) {
+                            for (var hB = 0; cB > hB && BB[MB + hB] == BB[MB + hB - XB]; ++hB);
+                            if (hB > LB) {
+                              if (LB = hB, gB = XB, hB > wB) break;
+                              var aB = Math.min(XB, hB - 2),
+                                eB = 0;
+                              for (iB = 0; aB > iB; ++iB) {
+                                var TB = MB - XB + iB + 32768 & 32767,
+                                  bB = TB - ZB[TB] + 32768 & 32767;
+                                bB > eB && (eB = bB, IB = TB)
                               }
                             }
                           }
-                          NH += (fH = lH) - (lH = WH[fH]) + 32768 & 32767
+                          XB += (mB = IB) - (IB = ZB[mB]) + 32768 & 32767
                         }
-                      if (qH) {
-                        TH[kH++] = 268435456 | Rh[eH] << 18 | jh[qH];
-                        var aH = 31 & Rh[eH],
-                          sH = 31 & jh[qH];
-                        bH += ch[aH] + eh[sH], ++UH[257 + aH], ++VH[sH], mH = EH + eH, ++OH
-                      } else TH[kH++] = HH[EH], ++UH[HH[EH]]
+                      if (gB) {
+                        VB[kB++] = 268435456 | co[LB] << 18 | ho[gB];
+                        var CB = 31 & co[LB],
+                          HB = 31 & ho[gB];
+                        fB += go[CB] + ro[HB], ++SB[257 + CB], ++nB[HB], dB = MB + LB, ++UB
+                      } else VB[kB++] = BB[MB], ++SB[BB[MB]]
                     }
                   }
-                  CH = St(HH, zH, SH, TH, UH, VH, bH, kH, oH, EH - oH, CH)
+                  JB = jj(BB, yB, QB, VB, SB, nB, fB, kB, KB, MB - KB, JB)
                 }
-              return ih(tH, 0, AH + Jh(CH) + 8)
-            }(SH = HH, null == (hH = BH).level ? 6 : hH.level, null == hH.mem ? Math.ceil(1.5 * Math.max(8, Math.min(13, Math.log(SH.length)))) : 12 + hH.mem, tH, 0, !0)),
-            CH = zH.length;
-          return function(HH, BH) {
-            var LH = BH.filename;
-            if (HH[0] = 31, HH[1] = 139, HH[2] = 8, HH[8] = 2 > BH.level ? 4 : 9 == BH.level ? 2 : 0, HH[9] = 3, 0 != BH.mtime && zt(HH, 4, Math.floor(new Date(BH.mtime || Date.now()) / 1e3)), LH) {
-              HH[3] = 8;
-              for (var AH = 0; LH.length >= AH; ++AH) HH[AH + 10] = LH.charCodeAt(AH)
+              return to(jB, 0, YB + xo(JB) + 8)
+            }(QB = BB, null == (oB = OB).level ? 6 : oB.level, null == oB.mem ? Math.ceil(1.5 * Math.max(8, Math.min(13, Math.log(QB.length)))) : 12 + oB.mem, jB, 0, !0)),
+            JB = yB.length;
+          return function(BB, OB) {
+            var GB = OB.filename;
+            if (BB[0] = 31, BB[1] = 139, BB[2] = 8, BB[8] = 2 > OB.level ? 4 : 9 == OB.level ? 2 : 0, BB[9] = 3, 0 != OB.mtime && Mj(BB, 4, Math.floor(new Date(OB.mtime || Date.now()) / 1e3)), GB) {
+              BB[3] = 8;
+              for (var YB = 0; GB.length >= YB; ++YB) BB[YB + 10] = GB.charCodeAt(YB)
             }
-          }(zH, BH), zt(zH, CH - 8, LH.d()), zt(zH, CH - 4, AH), zH
-        }(function(HH) {
-          var BH = HH.length;
-          if ("undefined" != typeof TextEncoder) return (new TextEncoder).encode(HH);
-          for (var LH = new fh(HH.length + (HH.length >>> 1)), AH = 0, rH = function(HH) {
-              LH[AH++] = HH
-            }, SH = 0; BH > SH; ++SH) {
-            if (AH + 5 > LH.length) {
-              var hH = new fh(AH + 8 + (BH - SH << 1));
-              hH.set(LH), LH = hH
+          }(yB, OB), Mj(yB, JB - 8, GB.d()), Mj(yB, JB - 4, YB), yB
+        }(function(BB) {
+          var OB = BB.length;
+          if ("undefined" != typeof TextEncoder) return (new TextEncoder).encode(BB);
+          for (var GB = new Fo(BB.length + (BB.length >>> 1)), YB = 0, DB = function(BB) {
+              GB[YB++] = BB
+            }, QB = 0; OB > QB; ++QB) {
+            if (YB + 5 > GB.length) {
+              var oB = new Fo(YB + 8 + (OB - QB << 1));
+              oB.set(GB), GB = oB
             }
-            var tH = HH.charCodeAt(SH);
-            128 > tH ? rH(tH) : 2048 > tH ? (rH(192 | tH >>> 6), rH(128 | 63 & tH)) : tH > 55295 && 57344 > tH ? (rH(240 | (tH = 65536 + (1047552 & tH) | 1023 & HH.charCodeAt(++SH)) >>> 18), rH(128 | tH >>> 12 & 63), rH(128 | tH >>> 6 & 63), rH(128 | 63 & tH)) : (rH(224 | tH >>> 12), rH(128 | tH >>> 6 & 63), rH(128 | 63 & tH))
+            var jB = BB.charCodeAt(QB);
+            128 > jB ? DB(jB) : 2048 > jB ? (DB(192 | jB >>> 6), DB(128 | 63 & jB)) : jB > 55295 && 57344 > jB ? (DB(240 | (jB = 65536 + (1047552 & jB) | 1023 & BB.charCodeAt(++QB)) >>> 18), DB(128 | jB >>> 12 & 63), DB(128 | jB >>> 6 & 63), DB(128 | 63 & jB)) : (DB(224 | jB >>> 12), DB(128 | jB >>> 6 & 63), DB(128 | 63 & jB))
           }
-          return ih(LH, 0, AH)
-        }(hz(HH))), !0)
+          return to(GB, 0, YB)
+        }(jy(BB))), !0)
       }
 
-      function zz(HH) {
-        return Cz.apply(this, arguments)
+      function Jy(BB) {
+        return My.apply(this, arguments)
       }
 
-      function Cz() {
-        return Cz = SH((function*(HH) {
-          const BH = yield function(HH) {
-            return kr.apply(this, arguments)
-          }(hz(HH), Yt.DEBUG, {
+      function My() {
+        return My = QB((function*(BB) {
+          const OB = yield function(BB) {
+            return kD.apply(this, arguments)
+          }(jy(BB), qj.DEBUG, {
             rethrow: !0
           });
-          return Ct(new Uint8Array(yield BH.arrayBuffer()), !0)
-        })), Cz.apply(this, arguments)
+          return Pj(new Uint8Array(yield OB.arrayBuffer()), !0)
+        })), My.apply(this, arguments)
       }
-      let Ez, Xz;
-      const Gz = "undefined" != typeof globalThis && "CompressionStream" in globalThis && "TextEncoder" in globalThis && "Response" in globalThis && "function" == typeof Response.prototype.blob;
-      let Yz = !1;
+      let Py, zy;
+      const ly = "undefined" != typeof globalThis && "CompressionStream" in globalThis && "TextEncoder" in globalThis && "Response" in globalThis && "function" == typeof Response.prototype.blob;
+      let py = !1;
 
-      function uz(HH) {
-        var BH;
-        return zr(HH) && 0 === HH.length ? (Ez = null !== (BH = Ez) && void 0 !== BH ? BH : tz([]), Ez) : tz(HH)
-      }
-
-      function Qz(HH) {
-        return Wz.apply(this, arguments)
+      function qy(BB) {
+        var OB;
+        return yD(BB) && 0 === BB.length ? (Py = null !== (OB = Py) && void 0 !== OB ? OB : yy([]), Py) : yy(BB)
       }
 
-      function Wz() {
-        return (Wz = SH((function*(HH) {
-          var BH;
-          return zr(HH) && 0 === HH.length ? Ez || (Xz = null !== (BH = Xz) && void 0 !== BH ? BH : zz([]).then((HH => (Ez = HH, HH))).catch((HH => {
-            throw Ez = void 0, Xz = void 0, HH
-          })), Xz) : zz(HH)
+      function Zy(BB) {
+        return Ny.apply(this, arguments)
+      }
+
+      function Ny() {
+        return (Ny = QB((function*(BB) {
+          var OB;
+          return yD(BB) && 0 === BB.length ? Py || (zy = null !== (OB = zy) && void 0 !== OB ? OB : Jy([]).then((BB => (Py = BB, BB))).catch((BB => {
+            throw Py = void 0, zy = void 0, BB
+          })), zy) : Jy(BB)
         }))).apply(this, arguments)
       }
 
-      function Mz(HH) {
-        return Gz && !Yz && function(HH) {
-          return 2 === HH.type || 3 === HH.type && (0 === HH.data.source || 8 === HH.data.source)
-        }(HH)
+      function Ry(BB) {
+        return ly && !py && function(BB) {
+          return 2 === BB.type || 3 === BB.type && (0 === BB.data.source || 8 === BB.data.source)
+        }(BB)
       }
 
-      function xz(HH) {
+      function Wy(BB) {
         return {
-          event: HH,
-          size: oh(HH)
+          event: BB,
+          size: mo(BB)
         }
       }
 
-      function vz(HH, BH) {
-        return AH(AH({}, HH), {}, {
-          data: BH,
+      function Ay(BB, OB) {
+        return YB(YB({}, BB), {}, {
+          data: OB,
           cv: "2024-10"
         })
       }
 
-      function Pz(HH, BH) {
-        return AH(AH({}, HH), {}, {
+      function Vy(BB, OB) {
+        return YB(YB({}, BB), {}, {
           cv: "2024-10",
-          data: AH(AH({}, HH.data), BH)
+          data: YB(YB({}, BB.data), OB)
         })
       }
 
-      function Tz(HH) {
+      function Sy(BB) {
         try {
-          if (2 === HH.type) return xz(vz(HH, tz(HH.data)));
-          if (3 === HH.type && 0 === HH.data.source) return xz(Pz(HH, {
-            texts: uz(HH.data.texts),
-            attributes: uz(HH.data.attributes),
-            removes: uz(HH.data.removes),
-            adds: uz(HH.data.adds)
+          if (2 === BB.type) return Wy(Ay(BB, yy(BB.data)));
+          if (3 === BB.type && 0 === BB.data.source) return Wy(Vy(BB, {
+            texts: qy(BB.data.texts),
+            attributes: qy(BB.data.attributes),
+            removes: qy(BB.data.removes),
+            adds: qy(BB.data.adds)
           }));
-          if (3 === HH.type && 8 === HH.data.source) return xz(Pz(HH, {
-            adds: HH.data.adds ? tz(HH.data.adds) : void 0,
-            removes: HH.data.removes ? tz(HH.data.removes) : void 0
+          if (3 === BB.type && 8 === BB.data.source) return Wy(Vy(BB, {
+            adds: BB.data.adds ? yy(BB.data.adds) : void 0,
+            removes: BB.data.removes ? yy(BB.data.removes) : void 0
           }))
-        } catch (HH) {
-          Bz.warn("could not compress event - will use uncompressed event", HH)
+        } catch (BB) {
+          Gy.warn("could not compress event - will use uncompressed event", BB)
         }
         return {
-          event: HH,
-          size: mh(HH)
+          event: BB,
+          size: uo(BB)
         }
       }
 
-      function Uz() {
-        return (Uz = SH((function*(HH) {
+      function ny() {
+        return (ny = QB((function*(BB) {
           try {
-            if (2 === HH.type) return xz(vz(HH, yield zz(HH.data)));
-            if (3 === HH.type && 0 === HH.data.source) {
-              const [BH, LH, AH, rH] = yield Promise.all([Qz(HH.data.texts), Qz(HH.data.attributes), Qz(HH.data.removes), Qz(HH.data.adds)]);
-              return xz(Pz(HH, {
-                texts: BH,
-                attributes: LH,
-                removes: AH,
-                adds: rH
+            if (2 === BB.type) return Wy(Ay(BB, yield Jy(BB.data)));
+            if (3 === BB.type && 0 === BB.data.source) {
+              const [OB, GB, YB, DB] = yield Promise.all([Zy(BB.data.texts), Zy(BB.data.attributes), Zy(BB.data.removes), Zy(BB.data.adds)]);
+              return Wy(Vy(BB, {
+                texts: OB,
+                attributes: GB,
+                removes: YB,
+                adds: DB
               }))
             }
-            if (3 === HH.type && 8 === HH.data.source) {
-              const [BH, LH] = yield Promise.all([HH.data.adds ? zz(HH.data.adds) : void 0, HH.data.removes ? zz(HH.data.removes) : void 0]);
-              return xz(Pz(HH, {
-                adds: BH,
-                removes: LH
+            if (3 === BB.type && 8 === BB.data.source) {
+              const [OB, GB] = yield Promise.all([BB.data.adds ? Jy(BB.data.adds) : void 0, BB.data.removes ? Jy(BB.data.removes) : void 0]);
+              return Wy(Vy(BB, {
+                adds: OB,
+                removes: GB
               }))
             }
-          } catch (BH) {
-            return (HH => {
-              if (!HH || "object" != typeof HH) return !1;
-              const BH = "name" in HH ? String(HH.name) : "";
-              return (HH => !(!HH || "object" != typeof HH) && "NotReadableError" === ("name" in HH ? String(HH.name) : ""))(HH) || BH === Tr
-            })(BH) && (Yz = !0), Bz.warn("could not compress event asynchronously - trying synchronous compression", BH), Tz(HH)
+          } catch (OB) {
+            return (BB => {
+              if (!BB || "object" != typeof BB) return !1;
+              const OB = "name" in BB ? String(BB.name) : "";
+              return (BB => !(!BB || "object" != typeof BB) && "NotReadableError" === ("name" in BB ? String(BB.name) : ""))(BB) || OB === VD
+            })(OB) && (py = !0), Gy.warn("could not compress event asynchronously - trying synchronous compression", OB), Sy(BB)
           }
           return {
-            event: HH,
-            size: mh(HH)
+            event: BB,
+            size: uo(BB)
           }
         }))).apply(this, arguments)
       }
 
-      function Vz(HH, BH) {
-        return 5 === HH.type && HH.data.tag === BH
+      function Uy(BB, OB) {
+        return 5 === BB.type && BB.data.tag === OB
       }
 
-      function Oz(HH) {
-        return Vz(HH, "sessionIdle")
+      function fy(BB) {
+        return Uy(BB, "sessionIdle")
       }
 
-      function bz(HH) {
-        return Vz(HH, "$session_ending")
+      function ky(BB) {
+        return Uy(BB, "$session_ending")
       }
 
-      function kz(HH) {
-        return Vz(HH, "$session_starting")
+      function dy(BB) {
+        return Uy(BB, "$session_starting")
       }
-      var mz = class {
+      var Ky = class {
         get sessionId() {
           return this.Xt
         }
@@ -7657,73 +7657,73 @@ export const modules = {
           return this._instance.config.session_recording.session_idle_threshold_ms || 3e5
         }
         get ee() {
-          return Vt(this._instance.get_property(jS), this.sessionId)
+          return fj(this._instance.get_property(EQ), this.sessionId)
         }
         get zt() {
-          var HH;
-          const BH = null === (HH = this.ne) || void 0 === HH ? void 0 : HH.sampleRate;
-          return Qr(BH) ? BH : null
+          var BB;
+          const OB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.sampleRate;
+          return qD(OB) ? OB : null
         }
         get ie() {
-          var HH, BH;
-          return null !== (HH = null === (BH = this.re) || void 0 === BH ? void 0 : BH.getMinimumDuration(this.sessionId)) && void 0 !== HH ? HH : null
+          var BB, OB;
+          return null !== (BB = null === (OB = this.re) || void 0 === OB ? void 0 : OB.getMinimumDuration(this.sessionId)) && void 0 !== BB ? BB : null
         }
-        constructor(HH, BH) {
-          this._instance = HH, this.oe = "/s/", this._forceAllowLocalhostNetworkCapture = !1, this.se = void 0, this.ae = !1, this.le = Date.now(), this.ue = !1, this.ce = [], this.de = "unknown", this.he = 0, this.fe = 0, this.ve = 0, this.pe = 0, this.me = 0, this.ge = !1, this.ye = !1, this.be = !1, this.we = !1, this.ke = !1, this._e = !1, this.Se = !1, this.xe = !1, this.Ce = !1, this.Ie = !1, this.Me = !1, this.Te = void 0, this.Re = void 0, this.Ee = !1, this.Ae = [], this.$e = 0, this.Oe = 0, this.Pe = !1, this.Le = void 0, this.Wt = void 0, this.De = void 0, this.Fe = void 0, this.Ne = void 0, this.qe = (HH, BH, LH) => {
-            var AH, rH, SH, hH;
-            if (!LH) return;
-            if (HH === this.Xt && BH === this.je) return;
-            const tH = !LH.noSessionId && (LH.activityTimeout || LH.sessionPastMaximumLength),
-              zH = this.Xt,
-              CH = this.je;
-            var EH;
-            if (tH && this.Vt("$session_ending", {
-                currentSessionId: zH,
-                currentWindowId: CH,
-                nextSessionId: HH,
-                nextWindowId: BH,
-                changeReason: LH,
+        constructor(BB, OB) {
+          this._instance = BB, this.oe = "/s/", this._forceAllowLocalhostNetworkCapture = !1, this.se = void 0, this.ae = !1, this.le = Date.now(), this.ue = !1, this.ce = [], this.de = "unknown", this.he = 0, this.fe = 0, this.ve = 0, this.pe = 0, this.me = 0, this.ge = !1, this.ye = !1, this.be = !1, this.we = !1, this.ke = !1, this._e = !1, this.Se = !1, this.xe = !1, this.Ce = !1, this.Ie = !1, this.Me = !1, this.Te = void 0, this.Re = void 0, this.Ee = !1, this.Ae = [], this.$e = 0, this.Oe = 0, this.Pe = !1, this.Le = void 0, this.Wt = void 0, this.De = void 0, this.Fe = void 0, this.Ne = void 0, this.qe = (BB, OB, GB) => {
+            var YB, DB, QB, oB;
+            if (!GB) return;
+            if (BB === this.Xt && OB === this.je) return;
+            const jB = !GB.noSessionId && (GB.activityTimeout || GB.sessionPastMaximumLength),
+              yB = this.Xt,
+              JB = this.je;
+            var MB;
+            if (jB && this.Vt("$session_ending", {
+                currentSessionId: yB,
+                currentWindowId: JB,
+                nextSessionId: BB,
+                nextWindowId: OB,
+                changeReason: GB,
                 lastActivityTimestamp: this.le,
-                flushed_size: null === (EH = this.Be) || void 0 === EH ? void 0 : EH.currentTrackedSize(zH)
-              }), null === (AH = this._instance.persistence) || void 0 === AH || AH.unregister("$debug_first_full_snapshot_timestamp"), null === (rH = rz()) || void 0 === rH || null === (SH = rH.resetMaxDepthState) || void 0 === SH || SH.call(rH), this.Vt("$session_id_change", {
-                sessionId: HH,
-                windowId: BH,
-                changeReason: LH
-              }), this.ze(), !(!1 === this.de && this.isStarted || this.Xt === HH && this.je === BH)) {
-              const BH = this.Xt !== HH && !1 !== this.de;
-              this.de = "unknown", this.He(BH)
+                flushed_size: null === (MB = this.Be) || void 0 === MB ? void 0 : MB.currentTrackedSize(yB)
+              }), null === (YB = this._instance.persistence) || void 0 === YB || YB.unregister("$debug_first_full_snapshot_timestamp"), null === (DB = Qy()) || void 0 === DB || null === (QB = DB.resetMaxDepthState) || void 0 === QB || QB.call(DB), this.Vt("$session_id_change", {
+                sessionId: BB,
+                windowId: OB,
+                changeReason: GB
+              }), this.ze(), !(!1 === this.de && this.isStarted || this.Xt === BB && this.je === OB)) {
+              const OB = this.Xt !== BB && !1 !== this.de;
+              this.de = "unknown", this.He(OB)
             }
-            tH && this.Vt("$session_starting", {
-              previousSessionId: zH,
-              previousWindowId: CH,
-              nextSessionId: HH,
-              nextWindowId: BH,
-              changeReason: LH,
+            jB && this.Vt("$session_starting", {
+              previousSessionId: yB,
+              previousWindowId: JB,
+              nextSessionId: BB,
+              nextWindowId: OB,
+              changeReason: GB,
               lastActivityTimestamp: this.le
-            }), null === (hH = this.re) || void 0 === hH || hH.makeSamplingDecisions(HH)
+            }), null === (oB = this.re) || void 0 === oB || oB.makeSamplingDecisions(BB)
           }, this.Ue = !1, this.We = () => {
-            var HH;
-            return (null === (HH = this._instance.persistence) || void 0 === HH ? void 0 : HH.props.$session_past_minimum_duration) === this.Xt
+            var BB;
+            return (null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.props.$session_past_minimum_duration) === this.Xt
           }, this.Ve = () => {
-            var HH, BH;
+            var BB, OB;
             if (0 === this.Rt.data.length) return null;
-            const LH = null === (HH = this.Rt.data[0]) || void 0 === HH ? void 0 : HH.timestamp,
-              AH = null === (BH = this.Rt.data[this.Rt.data.length - 1]) || void 0 === BH ? void 0 : BH.timestamp;
-            return Qr(LH) && Qr(AH) ? AH - LH : null
+            const GB = null === (BB = this.Rt.data[0]) || void 0 === BB ? void 0 : BB.timestamp,
+              YB = null === (OB = this.Rt.data[this.Rt.data.length - 1]) || void 0 === OB ? void 0 : OB.timestamp;
+            return qD(GB) && qD(YB) ? YB - GB : null
           }, this.Ge = () => {
-            var HH, BH;
-            const LH = this.ie;
-            if (!Qr(LH)) return !1;
-            if (null === (HH = null === (BH = this._instance.config.session_recording) || void 0 === BH ? void 0 : BH.strictMinimumDuration) || void 0 === HH || !HH) {
-              const HH = this.Qe;
-              return Qr(HH) && HH >= 0 && LH > HH
+            var BB, OB;
+            const GB = this.ie;
+            if (!qD(GB)) return !1;
+            if (null === (BB = null === (OB = this._instance.config.session_recording) || void 0 === OB ? void 0 : OB.strictMinimumDuration) || void 0 === BB || !BB) {
+              const BB = this.Qe;
+              return qD(BB) && BB >= 0 && GB > BB
             }
             if (this.We()) return !1;
-            const AH = this.Ve();
-            return !!Yr(AH) || LH > AH || (null === (rH = this._instance.persistence) || void 0 === rH || rH.register({
+            const YB = this.Ve();
+            return !!lD(YB) || GB > YB || (null === (DB = this._instance.persistence) || void 0 === DB || DB.register({
               $session_past_minimum_duration: this.Xt
             }), !1);
-            var rH
+            var DB
           }, this.Ze = () => {
             "buffering" !== this.status ? (this.ge && this.ye && this.Je && (this.Ke(void 0), this.be && (this.be = !1, this.jt())), this.Xe(), this.Ye(!0)) : this.tn()
           }, this.en = () => {
@@ -7733,314 +7733,314 @@ export const modules = {
           }, this.rn = () => {
             this.Vt("browser online", {})
           }, this.sn = () => {
-            (null == Br ? void 0 : Br.visibilityState) && ("visible" === Br.visibilityState && (this.Je = !0), this.Vt("window " + Br.visibilityState, {}))
-          }, this.Je = null == BH || BH;
+            (null == OD ? void 0 : OD.visibilityState) && ("visible" === OD.visibilityState && (this.Je = !0), this.Vt("window " + OD.visibilityState, {}))
+          }, this.Je = null == OB || OB;
           const {
-            sessionId: LH,
-            windowId: AH,
-            sessionStartTimestamp: rH
+            sessionId: GB,
+            windowId: YB,
+            sessionStartTimestamp: DB
           } = this.Yt.checkAndGetSessionAndWindowId();
-          this.Xt = LH, this.je = AH, this._sessionStartTimestamp = rH, this.et = new Th(this._instance), this.Y = new Ph(this._instance), this.tt = new Uh(this._instance), this.Rt = this.tn(), this.an = "ph_replay_pending_buffer_" + JSON.stringify([this._instance.config.persistence_name || this._instance.config.token, this._instance.config.token]), this.Yt.sessionTimeoutMs > this.te || Bz.warn(`session_idle_threshold_ms (${this.te}) is greater than the session timeout (${this.Yt.sessionTimeoutMs}). Session will never be detected as idle`), this.Be = new ut(this._instance)
+          this.Xt = GB, this.je = YB, this._sessionStartTimestamp = DB, this.et = new So(this._instance), this.Y = new Vo(this._instance), this.tt = new no(this._instance), this.Rt = this.tn(), this.an = "ph_replay_pending_buffer_" + JSON.stringify([this._instance.config.persistence_name || this._instance.config.token, this._instance.config.token]), this.Yt.sessionTimeoutMs > this.te || Gy.warn(`session_idle_threshold_ms (${this.te}) is greater than the session timeout (${this.Yt.sessionTimeoutMs}). Session will never be detected as idle`), this.Be = new Zj(this._instance)
         }
-        setDocumentWasEverVisible(HH) {
-          HH && (this.Je = !0)
+        setDocumentWasEverVisible(BB) {
+          BB && (this.Je = !0)
         }
         get ln() {
-          var HH, BH, LH, AH, rH, SH, hH, tH, zH;
-          const CH = null === (HH = this.ne) || void 0 === HH ? void 0 : HH.masking,
-            EH = {
-              maskAllInputs: null === (BH = this._instance.config.session_recording) || void 0 === BH ? void 0 : BH.maskAllInputs,
-              maskTextSelector: null === (LH = this._instance.config.session_recording) || void 0 === LH ? void 0 : LH.maskTextSelector,
-              blockSelector: null === (AH = this._instance.config.session_recording) || void 0 === AH ? void 0 : AH.blockSelector,
-              maskAllElementAttributes: null === (rH = this._instance.config.session_recording) || void 0 === rH ? void 0 : rH.maskAllElementAttributes
+          var BB, OB, GB, YB, DB, QB, oB, jB, yB;
+          const JB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.masking,
+            MB = {
+              maskAllInputs: null === (OB = this._instance.config.session_recording) || void 0 === OB ? void 0 : OB.maskAllInputs,
+              maskTextSelector: null === (GB = this._instance.config.session_recording) || void 0 === GB ? void 0 : GB.maskTextSelector,
+              blockSelector: null === (YB = this._instance.config.session_recording) || void 0 === YB ? void 0 : YB.blockSelector,
+              maskAllElementAttributes: null === (DB = this._instance.config.session_recording) || void 0 === DB ? void 0 : DB.maskAllElementAttributes
             },
-            XH = null !== (SH = null == EH ? void 0 : EH.maskAllInputs) && void 0 !== SH ? SH : null == CH ? void 0 : CH.maskAllInputs,
-            GH = null !== (hH = null == EH ? void 0 : EH.maskTextSelector) && void 0 !== hH ? hH : null == CH ? void 0 : CH.maskTextSelector,
-            YH = null !== (tH = null == EH ? void 0 : EH.blockSelector) && void 0 !== tH ? tH : null == CH ? void 0 : CH.blockSelector,
-            uH = null !== (zH = null == EH ? void 0 : EH.maskAllElementAttributes) && void 0 !== zH ? zH : null == CH ? void 0 : CH.maskAllElementAttributes;
-          return Xr(XH) && Xr(GH) && Xr(YH) && Xr(uH) ? void 0 : {
-            maskAllInputs: null == XH || XH,
-            maskTextSelector: GH,
-            blockSelector: YH,
-            maskAllElementAttributes: uH
+            PB = null !== (QB = null == MB ? void 0 : MB.maskAllInputs) && void 0 !== QB ? QB : null == JB ? void 0 : JB.maskAllInputs,
+            zB = null !== (oB = null == MB ? void 0 : MB.maskTextSelector) && void 0 !== oB ? oB : null == JB ? void 0 : JB.maskTextSelector,
+            lB = null !== (jB = null == MB ? void 0 : MB.blockSelector) && void 0 !== jB ? jB : null == JB ? void 0 : JB.blockSelector,
+            pB = null !== (yB = null == MB ? void 0 : MB.maskAllElementAttributes) && void 0 !== yB ? yB : null == JB ? void 0 : JB.maskAllElementAttributes;
+          return PD(PB) && PD(zB) && PD(lB) && PD(pB) ? void 0 : {
+            maskAllInputs: null == PB || PB,
+            maskTextSelector: zB,
+            blockSelector: lB,
+            maskAllElementAttributes: pB
           }
         }
         un() {
-          var HH;
+          var BB;
           if (this.xe) return;
-          const BH = null === (HH = this.ne) || void 0 === HH ? void 0 : HH.masking;
-          if (ur(BH)) return;
-          const LH = this._instance.config.session_recording,
-            AH = ["maskAllInputs", "maskTextSelector", "blockSelector", "maskAllElementAttributes"].filter((HH => {
-              const AH = null == LH ? void 0 : LH[HH],
-                rH = BH[HH];
-              return !Xr(AH) && AH !== rH
+          const OB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.masking;
+          if (pD(OB)) return;
+          const GB = this._instance.config.session_recording,
+            YB = ["maskAllInputs", "maskTextSelector", "blockSelector", "maskAllElementAttributes"].filter((BB => {
+              const YB = null == GB ? void 0 : GB[BB],
+                DB = OB[BB];
+              return !PD(YB) && YB !== DB
             }));
-          0 !== AH.length && (this.xe = !0, Bz.warn('Session recording masking is configured both in `posthog.init` and in your project settings, and they differ. The `session_recording` options in `posthog.init` take precedence, so the project ("Privacy and masking") setting is ignored for: ' + AH.join(", ") + ". Remove these masking options from `posthog.init` to use the project setting instead. See https://posthog.com/docs/session-replay/privacy", {
+          0 !== YB.length && (this.xe = !0, Gy.warn('Session recording masking is configured both in `posthog.init` and in your project settings, and they differ. The `session_recording` options in `posthog.init` take precedence, so the project ("Privacy and masking") setting is ignored for: ' + YB.join(", ") + ". Remove these masking options from `posthog.init` to use the project setting instead. See https://posthog.com/docs/session-replay/privacy", {
             client: {
-              maskAllInputs: null == LH ? void 0 : LH.maskAllInputs,
-              maskTextSelector: null == LH ? void 0 : LH.maskTextSelector,
-              blockSelector: null == LH ? void 0 : LH.blockSelector,
-              maskAllElementAttributes: null == LH ? void 0 : LH.maskAllElementAttributes
+              maskAllInputs: null == GB ? void 0 : GB.maskAllInputs,
+              maskTextSelector: null == GB ? void 0 : GB.maskTextSelector,
+              blockSelector: null == GB ? void 0 : GB.blockSelector,
+              maskAllElementAttributes: null == GB ? void 0 : GB.maskAllElementAttributes
             },
-            project: BH
+            project: OB
           }))
         }
         get cn() {
-          var HH;
-          return xr(null === (HH = this._instance.config.session_recording.canvasCapture) || void 0 === HH ? void 0 : HH.resolutionScale, .1, 1, lr("canvas recording resolution scale"), 1)
+          var BB;
+          return RD(null === (BB = this._instance.config.session_recording.canvasCapture) || void 0 === BB ? void 0 : BB.resolutionScale, .1, 1, ID("canvas recording resolution scale"), 1)
         }
         get dn() {
-          var HH, BH, LH, AH, rH, SH, hH;
-          const tH = this._instance.config.session_recording.captureCanvas,
-            zH = null === (HH = this.ne) || void 0 === HH ? void 0 : HH.canvasRecording,
-            CH = null !== (BH = null !== (LH = null == tH ? void 0 : tH.recordCanvas) && void 0 !== LH ? LH : null == zH ? void 0 : zH.enabled) && void 0 !== BH && BH,
-            EH = null !== (AH = null !== (rH = null == tH ? void 0 : tH.canvasFps) && void 0 !== rH ? rH : null == zH ? void 0 : zH.fps) && void 0 !== AH ? AH : 4;
-          let XH = null !== (SH = null !== (hH = null == tH ? void 0 : tH.canvasQuality) && void 0 !== hH ? hH : null == zH ? void 0 : zH.quality) && void 0 !== SH ? SH : .4;
-          if ("string" == typeof XH) {
-            const HH = parseFloat(XH);
-            XH = isNaN(HH) ? .4 : HH
+          var BB, OB, GB, YB, DB, QB, oB;
+          const jB = this._instance.config.session_recording.captureCanvas,
+            yB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.canvasRecording,
+            JB = null !== (OB = null !== (GB = null == jB ? void 0 : jB.recordCanvas) && void 0 !== GB ? GB : null == yB ? void 0 : yB.enabled) && void 0 !== OB && OB,
+            MB = null !== (YB = null !== (DB = null == jB ? void 0 : jB.canvasFps) && void 0 !== DB ? DB : null == yB ? void 0 : yB.fps) && void 0 !== YB ? YB : 4;
+          let PB = null !== (QB = null !== (oB = null == jB ? void 0 : jB.canvasQuality) && void 0 !== oB ? oB : null == yB ? void 0 : yB.quality) && void 0 !== QB ? QB : .4;
+          if ("string" == typeof PB) {
+            const BB = parseFloat(PB);
+            PB = isNaN(BB) ? .4 : BB
           }
           return {
-            enabled: CH,
-            fps: xr(EH, 0, 12, lr("canvas recording fps"), 4),
-            quality: xr(XH, 0, 1, lr("canvas recording quality"), .4)
+            enabled: JB,
+            fps: RD(MB, 0, 12, ID("canvas recording fps"), 4),
+            quality: RD(PB, 0, 1, ID("canvas recording quality"), .4)
           }
         }
         get hn() {
-          var HH;
-          const BH = !!(null === (HH = this.ne) || void 0 === HH ? void 0 : HH.consoleLogRecordingEnabled),
-            LH = this._instance.config.enable_recording_console_log;
-          return null != LH ? LH : BH
+          var BB;
+          const OB = !!(null === (BB = this.ne) || void 0 === BB ? void 0 : BB.consoleLogRecordingEnabled),
+            GB = this._instance.config.enable_recording_console_log;
+          return null != GB ? GB : OB
         }
-        get EX() {
-          var HH, BH, LH;
-          const AH = null === (HH = this.ne) || void 0 === HH ? void 0 : HH.networkPayloadCapture,
-            rH = {
-              recordHeaders: null === (BH = this._instance.config.session_recording) || void 0 === BH ? void 0 : BH.recordHeaders,
-              recordBody: null === (LH = this._instance.config.session_recording) || void 0 === LH ? void 0 : LH.recordBody
+        get oP() {
+          var BB, OB, GB;
+          const YB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.networkPayloadCapture,
+            DB = {
+              recordHeaders: null === (OB = this._instance.config.session_recording) || void 0 === OB ? void 0 : OB.recordHeaders,
+              recordBody: null === (GB = this._instance.config.session_recording) || void 0 === GB ? void 0 : GB.recordBody
             },
-            SH = (null == rH ? void 0 : rH.recordHeaders) || (null == AH ? void 0 : AH.recordHeaders),
-            hH = (null == rH ? void 0 : rH.recordBody) || (null == AH ? void 0 : AH.recordBody),
-            tH = Hz(this._instance.config.capture_performance),
-            zH = Hz(null == AH ? void 0 : AH.capturePerformance),
-            CH = !!(Wr(tH) ? tH : zH);
-          return SH || hH || CH ? {
-            recordHeaders: SH,
-            recordBody: hH,
-            recordPerformance: CH
+            QB = (null == DB ? void 0 : DB.recordHeaders) || (null == YB ? void 0 : YB.recordHeaders),
+            oB = (null == DB ? void 0 : DB.recordBody) || (null == YB ? void 0 : YB.recordBody),
+            jB = Oy(this._instance.config.capture_performance),
+            yB = Oy(null == YB ? void 0 : YB.capturePerformance),
+            JB = !!(ZD(jB) ? jB : yB);
+          return QB || oB || JB ? {
+            recordHeaders: QB,
+            recordBody: oB,
+            recordPerformance: JB
           } : void 0
         }
         vn() {
-          var HH, BH;
-          const LH = [],
-            rH = null === (HH = rr.__PosthogExtensions__) || void 0 === HH || null === (HH = HH.rrwebPlugins) || void 0 === HH ? void 0 : HH.getRecordConsolePlugin;
-          rH && this.hn && LH.push(rH());
-          const SH = null === (BH = rr.__PosthogExtensions__) || void 0 === BH || null === (BH = BH.rrwebPlugins) || void 0 === BH ? void 0 : BH.getRecordNetworkPlugin;
-          if (this.EX && Cr(SH))
-            if (!er.includes(Lr.hostname) || this._forceAllowLocalhostNetworkCapture) {
-              const HH = Cr(this._instance.requestRouter.isIngestionEndpoint) ? this._instance.requestRouter.isIngestionEndpoint.bind(this._instance.requestRouter) : void 0;
-              LH.push(SH(AH(AH({}, ((HH, BH, LH) => {
-                const rH = {
-                    payloadSizeLimitBytes: yr.payloadSizeLimitBytes,
-                    performanceEntryTypeToObserve: [...yr.performanceEntryTypeToObserve],
-                    payloadHostDenyList: [...BH.payloadHostDenyList || [], ...yr.payloadHostDenyList]
+          var BB, OB;
+          const GB = [],
+            DB = null === (BB = DD.__PosthogExtensions__) || void 0 === BB || null === (BB = BB.rrwebPlugins) || void 0 === BB ? void 0 : BB.getRecordConsolePlugin;
+          DB && this.hn && GB.push(DB());
+          const QB = null === (OB = DD.__PosthogExtensions__) || void 0 === OB || null === (OB = OB.rrwebPlugins) || void 0 === OB ? void 0 : OB.getRecordNetworkPlugin;
+          if (this.oP && JD(QB))
+            if (!LD.includes(GD.hostname) || this._forceAllowLocalhostNetworkCapture) {
+              const BB = JD(this._instance.requestRouter.isIngestionEndpoint) ? this._instance.requestRouter.isIngestionEndpoint.bind(this._instance.requestRouter) : void 0;
+              GB.push(QB(YB(YB({}, ((BB, OB, GB) => {
+                const DB = {
+                    payloadSizeLimitBytes: tD.payloadSizeLimitBytes,
+                    performanceEntryTypeToObserve: [...tD.performanceEntryTypeToObserve],
+                    payloadHostDenyList: [...OB.payloadHostDenyList || [], ...tD.payloadHostDenyList]
                   },
-                  SH = !1 !== HH.session_recording.recordHeaders && BH.recordHeaders,
-                  hH = !1 !== HH.session_recording.recordBody && BH.recordBody,
-                  tH = !1 !== HH.capture_performance && BH.recordPerformance,
-                  zH = (HH => {
-                    const BH = pr(HH);
-                    return HH => ((null == HH ? void 0 : HH.requestBody) && (HH.requestBody = SS(HH.requestBody, HH.requestHeaders, BH, "Request")), (null == HH ? void 0 : HH.responseBody) && (HH.responseBody = SS(HH.responseBody, HH.responseHeaders, BH, "Response")), HH)
-                  })(rH),
-                  CH = BH => {
-                    return zH(((HH, BH, LH) => {
-                      var AH;
-                      if (null == LH ? void 0 : LH(HH.name)) return;
-                      const rH = qr(HH.name);
-                      let SH = 0 === BH.indexOf("http") ? null === (AH = qr(BH)) || void 0 === AH ? void 0 : AH.pathname : BH;
-                      "/" === SH && (SH = "");
-                      const hH = null == rH ? void 0 : rH.pathname.replace(SH || "", "");
-                      return rH && hH && rS.some((HH => 0 === hH.indexOf(HH))) ? void 0 : HH
-                    })((AS((AH = BH).requestHeaders), AS(AH.responseHeaders), AH), HH.api_host, LH));
-                    var AH
+                  QB = !1 !== BB.session_recording.recordHeaders && OB.recordHeaders,
+                  oB = !1 !== BB.session_recording.recordBody && OB.recordBody,
+                  jB = !1 !== BB.capture_performance && OB.recordPerformance,
+                  yB = (BB => {
+                    const OB = xD(BB);
+                    return BB => ((null == BB ? void 0 : BB.requestBody) && (BB.requestBody = QQ(BB.requestBody, BB.requestHeaders, OB, "Request")), (null == BB ? void 0 : BB.responseBody) && (BB.responseBody = QQ(BB.responseBody, BB.responseHeaders, OB, "Response")), BB)
+                  })(DB),
+                  JB = OB => {
+                    return yB(((BB, OB, GB) => {
+                      var YB;
+                      if (null == GB ? void 0 : GB(BB.name)) return;
+                      const DB = gD(BB.name);
+                      let QB = 0 === OB.indexOf("http") ? null === (YB = gD(OB)) || void 0 === YB ? void 0 : YB.pathname : OB;
+                      "/" === QB && (QB = "");
+                      const oB = null == DB ? void 0 : DB.pathname.replace(QB || "", "");
+                      return DB && oB && DQ.some((BB => 0 === oB.indexOf(BB))) ? void 0 : BB
+                    })((YQ((YB = OB).requestHeaders), YQ(YB.responseHeaders), YB), BB.api_host, GB));
+                    var YB
                   },
-                  EH = Cr(HH.session_recording.maskNetworkRequestFn);
-                return EH && Cr(HH.session_recording.maskCapturedNetworkRequestFn) ? fr.warn("Both `maskNetworkRequestFn` and `maskCapturedNetworkRequestFn` are defined. `maskNetworkRequestFn` will be ignored.") : EH && (HH.session_recording.maskCapturedNetworkRequestFn = BH => {
-                  const LH = HH.session_recording.maskNetworkRequestFn({
-                    url: BH.name
+                  MB = JD(BB.session_recording.maskNetworkRequestFn);
+                return MB && JD(BB.session_recording.maskCapturedNetworkRequestFn) ? mD.warn("Both `maskNetworkRequestFn` and `maskCapturedNetworkRequestFn` are defined. `maskNetworkRequestFn` will be ignored.") : MB && (BB.session_recording.maskCapturedNetworkRequestFn = OB => {
+                  const GB = BB.session_recording.maskNetworkRequestFn({
+                    url: OB.name
                   });
-                  return !LH && BH.isInitial ? LH : AH(AH({}, BH), {}, {
-                    name: null == LH ? void 0 : LH.url
+                  return !GB && OB.isInitial ? GB : YB(YB({}, OB), {}, {
+                    name: null == GB ? void 0 : GB.url
                   })
-                }), rH.maskRequestFn = Cr(HH.session_recording.maskCapturedNetworkRequestFn) ? BH => {
-                  var LH, AH;
-                  const rH = CH(BH);
-                  if (!rH) return;
-                  const SH = rH.isInitial ? {
+                }), DB.maskRequestFn = JD(BB.session_recording.maskCapturedNetworkRequestFn) ? OB => {
+                  var GB, YB;
+                  const DB = JB(OB);
+                  if (!DB) return;
+                  const QB = DB.isInitial ? {
                       name: "",
-                      entryType: rH.entryType,
-                      startTime: rH.startTime,
-                      duration: rH.duration,
-                      endTime: rH.endTime,
-                      timeOrigin: rH.timeOrigin,
-                      timestamp: rH.timestamp,
+                      entryType: DB.entryType,
+                      startTime: DB.startTime,
+                      duration: DB.duration,
+                      endTime: DB.endTime,
+                      timeOrigin: DB.timeOrigin,
+                      timestamp: DB.timestamp,
                       isInitial: !0
                     } : void 0,
-                    hH = null === (LH = (AH = HH.session_recording).maskCapturedNetworkRequestFn) || void 0 === LH ? void 0 : LH.call(AH, rH);
-                  return ur(hH) && SH ? (tS.add(SH), SH) : null != hH ? hH : void 0
-                } : HH => function(HH) {
-                  if (!Xr(HH)) return HH.requestBody = hS(HH.requestBody, "Request"), HH.responseBody = hS(HH.responseBody, "Response"), HH
-                }(CH(HH)), AH(AH(AH({}, yr), rH), {}, {
-                  recordHeaders: SH,
-                  recordBody: hH,
-                  recordPerformance: tH,
-                  recordInitialRequests: tH,
-                  streamNetworkBody: !0 === HH.session_recording.streamNetworkBody
+                    oB = null === (GB = (YB = BB.session_recording).maskCapturedNetworkRequestFn) || void 0 === GB ? void 0 : GB.call(YB, DB);
+                  return pD(oB) && QB ? (jQ.add(QB), QB) : null != oB ? oB : void 0
+                } : BB => function(BB) {
+                  if (!PD(BB)) return BB.requestBody = oQ(BB.requestBody, "Request"), BB.responseBody = oQ(BB.responseBody, "Response"), BB
+                }(JB(BB)), YB(YB(YB({}, tD), DB), {}, {
+                  recordHeaders: QB,
+                  recordBody: oB,
+                  recordPerformance: jB,
+                  recordInitialRequests: jB,
+                  streamNetworkBody: !0 === BB.session_recording.streamNetworkBody
                 })
-              })(this._instance.config, this.EX, HH)), {}, {
+              })(this._instance.config, this.oP, BB)), {}, {
                 captureFetchSynchronously: !0 === this._instance.config.__preview_replay_sync_fetch
               })))
-            } else Bz.info("NetworkCapture not started because we are on localhost.");
-          return LH
+            } else Gy.info("NetworkCapture not started because we are on localhost.");
+          return GB
         }
-        pn(HH) {
-          return this._instance.config.disable_capture_url_hashes ? Pr(HH) : HH
+        pn(BB) {
+          return this._instance.config.disable_capture_url_hashes ? AD(BB) : BB
         }
-        mn(HH) {
-          const BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? Pr(HH) : this.pn(HH),
-            LH = this._instance.config.mask_personal_data_properties ? [...kt, ...this._instance.config.custom_personal_data_properties || []] : [];
-          return this.gn(function(HH, BH) {
-            if (!HH || !BH || !BH.length) return HH;
-            const LH = HH.split("#"),
-              AH = LH[1],
-              rH = (LH[0] || "").split("?"),
-              SH = rH[1],
-              hH = rH[0],
-              tH = (SH || "").split("&"),
-              zH = [];
-            for (let EH = 0; tH.length > EH; EH++) {
-              const HH = tH[EH].split("=");
-              zr(HH) && (BH.includes(HH[0]) ? zH.push(HH[0] + "=<masked>") : zH.push(tH[EH]))
+        mn(BB) {
+          const OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? AD(BB) : this.pn(BB),
+            GB = this._instance.config.mask_personal_data_properties ? [...Kj, ...this._instance.config.custom_personal_data_properties || []] : [];
+          return this.gn(function(BB, OB) {
+            if (!BB || !OB || !OB.length) return BB;
+            const GB = BB.split("#"),
+              YB = GB[1],
+              DB = (GB[0] || "").split("?"),
+              QB = DB[1],
+              oB = DB[0],
+              jB = (QB || "").split("&"),
+              yB = [];
+            for (let MB = 0; jB.length > MB; MB++) {
+              const BB = jB[MB].split("=");
+              yD(BB) && (OB.includes(BB[0]) ? yB.push(BB[0] + "=<masked>") : yB.push(jB[MB]))
             }
-            let CH = hH;
-            return null != SH && (CH += "?" + zH.join("&")), null != AH && (CH += "#" + AH), CH
-          }(BH, LH))
+            let JB = oB;
+            return null != QB && (JB += "?" + yB.join("&")), null != YB && (JB += "#" + YB), JB
+          }(OB, GB))
         }
-        gn(HH) {
-          const BH = this._instance.config.session_recording;
-          if (BH.maskCapturedNetworkRequestFn) {
-            var LH;
-            const AH = BH.maskCapturedNetworkRequestFn({
-              name: HH
+        gn(BB) {
+          const OB = this._instance.config.session_recording;
+          if (OB.maskCapturedNetworkRequestFn) {
+            var GB;
+            const YB = OB.maskCapturedNetworkRequestFn({
+              name: BB
             });
-            return null !== (LH = null == AH ? void 0 : AH.name) && void 0 !== LH ? LH : null == AH ? void 0 : AH.url
+            return null !== (GB = null == YB ? void 0 : YB.name) && void 0 !== GB ? GB : null == YB ? void 0 : YB.url
           }
-          if (BH.maskNetworkRequestFn) {
-            const LH = BH.maskNetworkRequestFn({
-              url: HH
+          if (OB.maskNetworkRequestFn) {
+            const GB = OB.maskNetworkRequestFn({
+              url: BB
             });
-            return null == LH ? void 0 : LH.url
+            return null == GB ? void 0 : GB.url
           }
-          return HH
+          return BB
         }
-        yn(HH) {
+        yn(BB) {
           try {
-            return HH.rrwebMethod(), !0
-          } catch (BH) {
+            return BB.rrwebMethod(), !0
+          } catch (OB) {
             return 10 > this.ce.length ? this.ce.push({
-              enqueuedAt: HH.enqueuedAt || Date.now(),
-              attempt: HH.attempt + 1,
-              rrwebMethod: HH.rrwebMethod
-            }) : Bz.warn("could not emit queued rrweb event.", BH, HH), !1
+              enqueuedAt: BB.enqueuedAt || Date.now(),
+              attempt: BB.attempt + 1,
+              rrwebMethod: BB.rrwebMethod
+            }) : Gy.warn("could not emit queued rrweb event.", OB, BB), !1
           }
         }
-        Vt(HH, BH) {
-          return this.yn(Az((() => Sz().addCustomEvent(HH, BH))))
+        Vt(BB, OB) {
+          return this.yn(Dy((() => oy().addCustomEvent(BB, OB))))
         }
         bn() {
-          var HH;
-          return this.ae && !0 === (null === (HH = this._instance.config.session_recording) || void 0 === HH ? void 0 : HH.captureJsonLd) && !this.Y.urlBlocked && !0 !== this.de
+          var BB;
+          return this.ae && !0 === (null === (BB = this._instance.config.session_recording) || void 0 === BB ? void 0 : BB.captureJsonLd) && !this.Y.urlBlocked && !0 !== this.de
         }
-        wn(HH) {
+        wn(BB) {
           if (!this.bn()) return !1;
           try {
-            const BH = Sz();
-            return !!BH && (BH.addCustomEvent("$json_ld", HH), this.bn())
-          } catch (HH) {
+            const OB = oy();
+            return !!OB && (OB.addCustomEvent("$json_ld", BB), this.bn())
+          } catch (BB) {
             return !1
           }
         }
         kn() {
-          let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
           Promise.resolve().then((() => {
-            var BH;
-            return null === (BH = this._n) || void 0 === BH ? void 0 : BH.scan(HH)
+            var OB;
+            return null === (OB = this._n) || void 0 === OB ? void 0 : OB.scan(BB)
           }))
         }
         Sn() {
           try {
-            if (this._instance.config.capture_pageview || !yA) return;
-            const HH = new URL(yA.location.href),
-              BH = this.mn(HH.origin + HH.pathname + HH.search);
-            this.xn !== BH && (this.xn = BH, this.Vt("$url_changed", {
-              href: BH
+            if (this._instance.config.capture_pageview || !tY) return;
+            const BB = new URL(tY.location.href),
+              OB = this.mn(BB.origin + BB.pathname + BB.search);
+            this.xn !== OB && (this.xn = OB, this.Vt("$url_changed", {
+              href: OB
             }))
-          } catch (HH) {}
+          } catch (BB) {}
         }
         Cn() {
           if (this.ce.length) {
-            const HH = [...this.ce];
-            this.ce = [], HH.forEach((HH => {
-              Date.now() - HH.enqueuedAt > 2e3 || this.yn(HH)
+            const BB = [...this.ce];
+            this.ce = [], BB.forEach((BB => {
+              Date.now() - BB.enqueuedAt > 2e3 || this.yn(BB)
             }))
           }
         }
         jt() {
-          return this.yn(Az((() => Sz().takeFullSnapshot())))
+          return this.yn(Dy((() => oy().takeFullSnapshot())))
         }
         get In() {
-          var HH, BH, LH;
-          if ((null === (HH = this.re) || void 0 === HH ? void 0 : HH.hasPendingTriggers(this.sessionId)) && !["sampled", "active"].includes(this.status)) {
-            var AH;
-            const HH = null === (AH = this._instance.config.session_recording) || void 0 === AH ? void 0 : AH.trigger_pending_buffer_interval_millis;
-            return Qr(HH) && Number.isFinite(HH) && HH >= 1e3 && 36e5 >= HH ? HH : 6e4
+          var BB, OB, GB;
+          if ((null === (BB = this.re) || void 0 === BB ? void 0 : BB.hasPendingTriggers(this.sessionId)) && !["sampled", "active"].includes(this.status)) {
+            var YB;
+            const BB = null === (YB = this._instance.config.session_recording) || void 0 === YB ? void 0 : YB.trigger_pending_buffer_interval_millis;
+            return qD(BB) && Number.isFinite(BB) && BB >= 1e3 && 36e5 >= BB ? BB : 6e4
           }
-          return null !== (BH = null === (LH = this._instance.config.session_recording) || void 0 === LH ? void 0 : LH.full_snapshot_interval_millis) && void 0 !== BH ? BH : 3e5
+          return null !== (OB = null === (GB = this._instance.config.session_recording) || void 0 === GB ? void 0 : GB.full_snapshot_interval_millis) && void 0 !== OB ? OB : 3e5
         }
         Mn() {
           if (this.Tn && clearInterval(this.Tn), !0 === this.de) return;
-          const HH = this.In;
-          HH && (this.Tn = setInterval((() => {
+          const BB = this.In;
+          BB && (this.Tn = setInterval((() => {
             this.jt()
-          }), HH))
+          }), BB))
         }
-        Bt(HH) {
-          "event" === HH && this.Rn(), !this.Y.urlBlocked && ["sampled", "active"].includes(this.status) && this.Mn()
+        Bt(BB) {
+          "event" === BB && this.Rn(), !this.Y.urlBlocked && ["sampled", "active"].includes(this.status) && this.Mn()
         }
         En() {
-          var HH;
-          this.Y.urlBlocked || (this.Y.urlBlocked = !0, null === (HH = this._n) || void 0 === HH || HH.scan(), clearInterval(this.Tn), Bz.info("recording paused due to URL blocker"), this.Vt("recording paused", {
+          var BB;
+          this.Y.urlBlocked || (this.Y.urlBlocked = !0, null === (BB = this._n) || void 0 === BB || BB.scan(), clearInterval(this.Tn), Gy.info("recording paused due to URL blocker"), this.Vt("recording paused", {
             reason: "url blocker"
           }))
         }
         An() {
-          var HH;
-          this.Y.urlBlocked && (null === (HH = this._n) || void 0 === HH || HH.scan(), this.Y.urlBlocked = !1, this.jt(), this.kn(), this.Mn(), this.Vt("recording resumed", {
+          var BB;
+          this.Y.urlBlocked && (null === (BB = this._n) || void 0 === BB || BB.scan(), this.Y.urlBlocked = !1, this.jt(), this.kn(), this.Mn(), this.Vt("recording resumed", {
             reason: "left blocked url"
-          }), Bz.info("recording resumed"))
+          }), Gy.info("recording resumed"))
         }
-        $n(HH, BH) {
-          var LH;
-          if ("event" === HH && this.Rn(), !this.ue && (null === (LH = this.re) || void 0 === LH ? void 0 : LH.hasPendingTriggers(this.sessionId))) {
+        $n(BB, OB) {
+          var GB;
+          if ("event" === BB && this.Rn(), !this.ue && (null === (GB = this.re) || void 0 === GB ? void 0 : GB.hasPendingTriggers(this.sessionId))) {
             this.ue = !0;
             try {
-              var AH, rH;
-              const LH = "url" === HH ? nS : FS;
-              null === (AH = this._instance.persistence) || void 0 === AH || AH.register({
-                [LH]: this.sessionId
-              }), null === (rH = this.re) || void 0 === rH || rH.updateActiveTriggers(this.sessionId), this.Bt(), this.Ye(), this.qt(HH + "_trigger_matched", {
-                ["url" === HH ? "matchedUrl" : "matchedEvent"]: BH
+              var YB, DB;
+              const GB = "url" === BB ? cQ : hQ;
+              null === (YB = this._instance.persistence) || void 0 === YB || YB.register({
+                [GB]: this.sessionId
+              }), null === (DB = this.re) || void 0 === DB || DB.updateActiveTriggers(this.sessionId), this.Bt(), this.Ye(), this.qt(BB + "_trigger_matched", {
+                ["url" === BB ? "matchedUrl" : "matchedEvent"]: OB
               })
             } finally {
               this.ue = !1
@@ -8051,95 +8051,95 @@ export const modules = {
           return !!this.se
         }
         get ne() {
-          const HH = this._instance.get_property("$session_recording_remote_config");
-          if (!HH) return;
-          let BH;
+          const BB = this._instance.get_property("$session_recording_remote_config");
+          if (!BB) return;
+          let OB;
           try {
-            BH = Er(HH) ? HH : JSON.parse(HH)
-          } catch (HH) {
-            return void Bz.warn("persisted remote config for session recording is invalid and will be ignored", HH)
+            OB = MD(BB) ? BB : JSON.parse(BB)
+          } catch (BB) {
+            return void Gy.warn("persisted remote config for session recording is invalid and will be ignored", BB)
           }
           if (!this.isStarted && !this.Ue) {
-            var LH;
-            const AH = null !== (LH = BH.cache_timestamp) && void 0 !== LH ? LH : Date.now();
-            if (Date.now() - AH > 36e5) return void Bz.info("persisted remote config for session recording is stale and will be ignored", {
-              cacheTimestamp: AH,
-              persistedConfig: HH
+            var GB;
+            const YB = null !== (GB = OB.cache_timestamp) && void 0 !== GB ? GB : Date.now();
+            if (Date.now() - YB > 36e5) return void Gy.info("persisted remote config for session recording is stale and will be ignored", {
+              cacheTimestamp: YB,
+              persistedConfig: BB
             })
           }
-          return BH
+          return OB
         }
-        On(HH, BH, LH) {
-          this._instance.get_property(HH) && (BH(), LH())
+        On(BB, OB, GB) {
+          this._instance.get_property(BB) && (OB(), GB())
         }
-        start(HH) {
-          var BH, LH;
-          const AH = this.ne;
-          if (!AH) return void Bz.info("remote config must be stored in persistence before recording can start");
+        start(BB) {
+          var OB, GB;
+          const YB = this.ne;
+          if (!YB) return void Gy.info("remote config must be stored in persistence before recording can start");
           if (!this.isStarted) {
-            const HH = !1 !== this.de && !this.we;
-            this.Ke(HH ? "no_interaction_since_recording_started" : void 0), this.we = !1, this.ye = HH, this.be = !1
+            const BB = !1 !== this.de && !this.we;
+            this.Ke(BB ? "no_interaction_since_recording_started" : void 0), this.we = !1, this.ye = BB, this.be = !1
           }
           this.Pe && (this.Pn(), this.tn());
           const {
-            sessionId: rH,
-            windowId: SH,
-            sessionStartTimestamp: hH
+            sessionId: DB,
+            windowId: QB,
+            sessionStartTimestamp: oB
           } = this.Yt.checkAndGetSessionAndWindowId();
-          this.Xt = rH, this.je = SH, this._sessionStartTimestamp = hH, this.Ln(), null === (BH = this._instance.persistence) || void 0 === BH || BH.unregister("$debug_first_full_snapshot_timestamp"), (null == AH ? void 0 : AH.endpoint) && (this.oe = null == AH ? void 0 : AH.endpoint), this.re = 2 === (null == AH ? void 0 : AH.version) && (null == AH ? void 0 : AH.triggerGroups) && AH.triggerGroups.length > 0 ? new bt(this._instance, this.Y, this.qt.bind(this), this.Vt.bind(this), this.Bt.bind(this)) : new Ot(this._instance, this.Y, this.tt, this.et, this.qt.bind(this), this.jt.bind(this), this.Bt.bind(this)), this.re.onRemoteConfig(AH), null === (LH = this.Wt) || void 0 === LH || LH.call(this), this.Wt = this.re.setupEventTriggerListeners(this._instance.on.bind(this._instance, "eventCaptured"), this.sessionId, ((HH, BH) => this.$n(HH, BH))), this.On(qS, (() => {
+          this.Xt = DB, this.je = QB, this._sessionStartTimestamp = oB, this.Ln(), null === (OB = this._instance.persistence) || void 0 === OB || OB.unregister("$debug_first_full_snapshot_timestamp"), (null == YB ? void 0 : YB.endpoint) && (this.oe = null == YB ? void 0 : YB.endpoint), this.re = 2 === (null == YB ? void 0 : YB.version) && (null == YB ? void 0 : YB.triggerGroups) && YB.triggerGroups.length > 0 ? new dj(this._instance, this.Y, this.qt.bind(this), this.Vt.bind(this), this.Bt.bind(this)) : new kj(this._instance, this.Y, this.tt, this.et, this.qt.bind(this), this.jt.bind(this), this.Bt.bind(this)), this.re.onRemoteConfig(YB), null === (GB = this.Wt) || void 0 === GB || GB.call(this), this.Wt = this.re.setupEventTriggerListeners(this._instance.on.bind(this._instance, "eventCaptured"), this.sessionId, ((BB, OB) => this.$n(BB, OB))), this.On(gQ, (() => {
             this.overrideSampling()
           }), (() => {
-            var HH;
-            return null === (HH = this._instance.persistence) || void 0 === HH ? void 0 : HH.unregister(qS)
-          })), this.On(gS, (() => {
+            var BB;
+            return null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.unregister(gQ)
+          })), this.On(rQ, (() => {
             this.overrideLinkedFlag()
           }), (() => {
-            var HH;
-            return null === (HH = this._instance.persistence) || void 0 === HH ? void 0 : HH.unregister(gS)
-          })), this.On(RS, (() => {
+            var BB;
+            return null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.unregister(rQ)
+          })), this.On(wQ, (() => {
             this.overrideTrigger("event")
           }), (() => {
-            var HH;
-            return null === (HH = this._instance.persistence) || void 0 === HH ? void 0 : HH.unregister(RS)
-          })), this.On(NS, (() => {
+            var BB;
+            return null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.unregister(wQ)
+          })), this.On(XQ, (() => {
             this.overrideTrigger("url")
           }), (() => {
-            var HH;
-            return null === (HH = this._instance.persistence) || void 0 === HH ? void 0 : HH.unregister(NS)
-          })), this.re.makeSamplingDecisions(this.sessionId), this.Dn(), this.ke || (cr(yA, "beforeunload", this.Ze), cr(yA, "pagehide", this.en), cr(yA, "offline", this.nn), cr(yA, "online", this.rn), cr(Br, "visibilitychange", this.sn), !this.De && Cr(this.Yt.onSessionId) && (this.De = this.Yt.onSessionId(this.qe)), !this.Fe && Cr(this.Yt.on) ? this.Fe = this.Yt.on("forcedIdleReset", (() => {
-            this.ze(), this.de = "unknown", this.stop(), this.Ne = this.Yt.onSessionId(((HH, BH, LH) => {
-              var AH;
-              null === (AH = this.Ne) || void 0 === AH || AH.call(this), this.Ne = void 0, this.qe(HH, BH, LH)
+            var BB;
+            return null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.unregister(XQ)
+          })), this.re.makeSamplingDecisions(this.sessionId), this.Dn(), this.ke || (iD(tY, "beforeunload", this.Ze), iD(tY, "pagehide", this.en), iD(tY, "offline", this.nn), iD(tY, "online", this.rn), iD(OD, "visibilitychange", this.sn), !this.De && JD(this.Yt.onSessionId) && (this.De = this.Yt.onSessionId(this.qe)), !this.Fe && JD(this.Yt.on) ? this.Fe = this.Yt.on("forcedIdleReset", (() => {
+            this.ze(), this.de = "unknown", this.stop(), this.Ne = this.Yt.onSessionId(((BB, OB, GB) => {
+              var YB;
+              null === (YB = this.Ne) || void 0 === YB || YB.call(this), this.Ne = void 0, this.qe(BB, OB, GB)
             }))
-          })) : Cr(this.Yt.on) || Bz.warn("bundled core has no SessionIdManager.on (requires posthog-js >= 1.268.6); recording will start but skip forced-idle-reset handling"), ur(this.Le) && (this.Le = this._instance.on("eventCaptured", (HH => {
+          })) : JD(this.Yt.on) || Gy.warn("bundled core has no SessionIdManager.on (requires posthog-js >= 1.268.6); recording will start but skip forced-idle-reset handling"), pD(this.Le) && (this.Le = this._instance.on("eventCaptured", (BB => {
             try {
-              if ("$pageview" === HH.event) {
-                const BH = (null == HH ? void 0 : HH.properties.$current_url) ? this.mn(HH.properties.$current_url) : "";
-                if (!BH) return;
+              if ("$pageview" === BB.event) {
+                const OB = (null == BB ? void 0 : BB.properties.$current_url) ? this.mn(BB.properties.$current_url) : "";
+                if (!OB) return;
                 this.Vt("$pageview", {
-                  href: BH
+                  href: OB
                 })
               }
-            } catch (HH) {
-              Bz.error("Could not add $pageview to rrweb session", HH)
+            } catch (BB) {
+              Gy.error("Could not add $pageview to rrweb session", BB)
             }
-          }))), "active" === this.status && this.qt(HH || "recording_initialized"))
+          }))), "active" === this.status && this.qt(BB || "recording_initialized"))
         }
         Fn() {
-          var HH, BH, LH, AH, rH, SH;
-          null == yA || yA.removeEventListener("beforeunload", this.Ze), null == yA || yA.removeEventListener("pagehide", this.en), null == yA || yA.removeEventListener("offline", this.nn), null == yA || yA.removeEventListener("online", this.rn), null == Br || Br.removeEventListener("visibilitychange", this.sn), clearInterval(this.Tn), this.Nn(), null === (HH = this.Le) || void 0 === HH || HH.call(this), this.Le = void 0, null === (BH = this.Wt) || void 0 === BH || BH.call(this), this.Wt = void 0, null === (LH = this.De) || void 0 === LH || LH.call(this), this.De = void 0, null === (AH = this.Fe) || void 0 === AH || AH.call(this), this.Fe = void 0, null === (rH = this.Ne) || void 0 === rH || rH.call(this), this.Ne = void 0, null === (SH = this.re) || void 0 === SH || SH.stop(), this.qn(), this.Pn()
+          var BB, OB, GB, YB, DB, QB;
+          null == tY || tY.removeEventListener("beforeunload", this.Ze), null == tY || tY.removeEventListener("pagehide", this.en), null == tY || tY.removeEventListener("offline", this.nn), null == tY || tY.removeEventListener("online", this.rn), null == OD || OD.removeEventListener("visibilitychange", this.sn), clearInterval(this.Tn), this.Nn(), null === (BB = this.Le) || void 0 === BB || BB.call(this), this.Le = void 0, null === (OB = this.Wt) || void 0 === OB || OB.call(this), this.Wt = void 0, null === (GB = this.De) || void 0 === GB || GB.call(this), this.De = void 0, null === (YB = this.Fe) || void 0 === YB || YB.call(this), this.Fe = void 0, null === (DB = this.Ne) || void 0 === DB || DB.call(this), this.Ne = void 0, null === (QB = this.re) || void 0 === QB || QB.stop(), this.qn(), this.Pn()
         }
         Pn() {
           this.Oe += 1, this.Ae = [], this.$e = 0, this.jn = void 0, this.Pe = !1
         }
         qn() {
-          var HH, BH;
-          null === (HH = this.Bn) || void 0 === HH || HH.stop(), this.ce = [], null === (BH = this._n) || void 0 === BH || BH.stop(), this._n = void 0, this.ae = !1;
+          var BB, OB;
+          null === (BB = this.Bn) || void 0 === BB || BB.stop(), this.ce = [], null === (OB = this._n) || void 0 === OB || OB.stop(), this._n = void 0, this.ae = !1;
           try {
-            var LH;
-            null === (LH = this.se) || void 0 === LH || LH.call(this)
-          } catch (HH) {
-            Bz.warn("could not stop rrweb", HH)
+            var GB;
+            null === (GB = this.se) || void 0 === GB || GB.call(this)
+          } catch (BB) {
+            Gy.warn("could not stop rrweb", BB)
           }
           this.se = void 0
         }
@@ -8147,17 +8147,17 @@ export const modules = {
           if (!this.jn || 0 === this.$e) return !1;
           if (this.Pe) return !0;
           this.Pe = !0, this.Hn = void 0;
-          const HH = this.Oe;
+          const BB = this.Oe;
           return this.Nn(), this.qn(), this.jn.catch((() => {})).then((() => {
-            HH === this.Oe && (this.Pe = !1, this.Ye(), this.tn(), this.Un(), this.Fn(), Bz.info("stopped"))
+            BB === this.Oe && (this.Pe = !1, this.Ye(), this.tn(), this.Un(), this.Fn(), Gy.info("stopped"))
           })).catch((() => {
-            this.Pe = !1, this.Un(), this.Fn(), Bz.info("stopped")
+            this.Pe = !1, this.Un(), this.Fn(), Gy.info("stopped")
           })), !0
         }
         stop() {
           if (this.qn(), this.Ue) this.Xe();
           else if (this.zn()) return;
-          this.Ye(), this.tn(), this.Un(), this.Fn(), Bz.info("stopped")
+          this.Ye(), this.tn(), this.Un(), this.Fn(), Gy.info("stopped")
         }
         Un() {
           this.Ke(void 0, {
@@ -8167,205 +8167,205 @@ export const modules = {
         flushBeforeIdentityReset() {
           (this.isStarted || this.Pe) && (this.Xe(), this.Ye())
         }
-        He(HH) {
+        He(BB) {
           this.Ue = !0, this.le = Date.now();
           try {
-            var BH, LH;
-            this.stop(), this.Wn = void 0, this.me = 0, this.fe = 0, this.ve = 0, this.pe = 0, null === (BH = rz()) || void 0 === BH || null === (LH = BH.resetSnapshotCostState) || void 0 === LH || LH.call(BH), this.start("session_id_changed")
+            var OB, GB;
+            this.stop(), this.Wn = void 0, this.me = 0, this.fe = 0, this.ve = 0, this.pe = 0, null === (OB = Qy()) || void 0 === OB || null === (GB = OB.resetSnapshotCostState) || void 0 === GB || GB.call(OB), this.start("session_id_changed")
           } finally {
             this.Ue = !1
           }
-          this.Ke(HH ? "no_interaction_since_session_rotated" : void 0), this.ye = !1
+          this.Ke(BB ? "no_interaction_since_session_rotated" : void 0), this.ye = !1
         }
-        Ke(HH) {
+        Ke(BB) {
           let {
-            preserveLogDedup: BH = !1
+            preserveLogDedup: OB = !1
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (this.ge = !Xr(HH), this.Hn = HH, Xr(HH)) return void(BH || (this.Vn = void 0));
+          if (this.ge = !PD(BB), this.Hn = BB, PD(BB)) return void(OB || (this.Vn = void 0));
           if (this.Ue) return;
-          const LH = `${this.sessionId}:${HH}`;
-          LH !== this.Vn && (this.Vn = LH, Bz.info(`holding buffer: ${HH}. nothing is uploaded until the user interacts with the page`))
+          const GB = `${this.sessionId}:${BB}`;
+          GB !== this.Vn && (this.Vn = GB, Gy.info(`holding buffer: ${BB}. nothing is uploaded until the user interacts with the page`))
         }
         Rn() {
           this.isStarted || (this.we = !0), this.ge && (this.Ke(void 0), this.ye = !1, this.be && (this.be = !1, this.jt()), this.Gn())
         }
         discard() {
           let {
-            discardProducerEvents: HH = !1
+            discardProducerEvents: BB = !1
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          this.ge = !0, HH && (this.tn(), this.qn()), this.tn(), this.Fn(), this.tn(), this.Un(), Bz.info("discarded")
+          this.ge = !0, BB && (this.tn(), this.qn()), this.tn(), this.Fn(), this.tn(), this.Un(), Gy.info("discarded")
         }
-        Qn(HH, BH, LH, AH, rH) {
-          if (-1 === LH) return this.me += 1, void Bz.warn("could not stringify event - dropping it to keep the rest of the recording");
-          const SH = {
-            $snapshot_bytes: LH,
-            $snapshot_data: BH,
-            $session_id: AH,
-            $window_id: rH
+        Qn(BB, OB, GB, YB, DB) {
+          if (-1 === GB) return this.me += 1, void Gy.warn("could not stringify event - dropping it to keep the rest of the recording");
+          const QB = {
+            $snapshot_bytes: GB,
+            $snapshot_data: OB,
+            $session_id: YB,
+            $window_id: DB
           };
-          "disabled" !== this.status ? (this.Zn(HH, AH), this.Jn(SH)) : this.tn()
+          "disabled" !== this.status ? (this.Zn(BB, YB), this.Jn(QB)) : this.tn()
         }
         Kn() {
           try {
             this.Xn()
-          } catch (HH) {
-            this.Se || (this.Se = !0, Bz.error("could not track full snapshot cost", HH))
+          } catch (BB) {
+            this.Se || (this.Se = !0, Gy.error("could not track full snapshot cost", BB))
           }
         }
         Xn() {
-          var HH, BH;
-          const LH = null === (HH = rz()) || void 0 === HH || null === (BH = HH.getLastSnapshotCost) || void 0 === BH ? void 0 : BH.call(HH);
-          LH && LH !== this.Wn && (this.Wn = LH, 500 > LH.durationMs || Bz.warn("full snapshot was slow, the page may have been unresponsive while it ran", {
-            durationMs: Math.round(LH.durationMs),
-            stylesheetMs: Math.round(LH.stylesheetMs),
-            nodeCount: LH.nodeCount,
-            cssRuleCount: LH.cssRuleCount,
-            nonDeferrableCssRuleCount: LH.nonDeferrableCssRuleCount,
-            deferredStylesheetCount: LH.deferredStylesheetCount
+          var BB, OB;
+          const GB = null === (BB = Qy()) || void 0 === BB || null === (OB = BB.getLastSnapshotCost) || void 0 === OB ? void 0 : OB.call(BB);
+          GB && GB !== this.Wn && (this.Wn = GB, 500 > GB.durationMs || Gy.warn("full snapshot was slow, the page may have been unresponsive while it ran", {
+            durationMs: Math.round(GB.durationMs),
+            stylesheetMs: Math.round(GB.stylesheetMs),
+            nodeCount: GB.nodeCount,
+            cssRuleCount: GB.cssRuleCount,
+            nonDeferrableCssRuleCount: GB.nonDeferrableCssRuleCount,
+            deferredStylesheetCount: GB.deferredStylesheetCount
           }))
         }
-        Zn(HH, BH) {
-          2 !== HH.type ? 3 === HH.type && (Xr(this.Te) || this.Te === BH || this.Re === BH || (this.Re = BH, Bz.info("incremental snapshot for a session with no full snapshot - requesting one", {
-            sessionId: BH
-          }), this.jt())) : this.Te = BH
+        Zn(BB, OB) {
+          2 !== BB.type ? 3 === BB.type && (PD(this.Te) || this.Te === OB || this.Re === OB || (this.Re = OB, Gy.info("incremental snapshot for a session with no full snapshot - requesting one", {
+            sessionId: OB
+          }), this.jt())) : this.Te = OB
         }
-        Yn(HH) {
-          HH.counted && HH.generation === this.Oe && (this.$e = Math.max(0, this.$e - 1)), HH.counted = !1, this.Ae = this.Ae.filter((BH => BH !== HH))
+        Yn(BB) {
+          BB.counted && BB.generation === this.Oe && (this.$e = Math.max(0, this.$e - 1)), BB.counted = !1, this.Ae = this.Ae.filter((OB => OB !== BB))
         }
-        ti(HH, BH, LH) {
-          HH.processed || HH.generation !== this.Oe || (HH.processed = !0, this.Qn(HH.event, BH, LH, HH.targetSessionId, HH.targetWindowId))
+        ti(BB, OB, GB) {
+          BB.processed || BB.generation !== this.Oe || (BB.processed = !0, this.Qn(BB.event, OB, GB, BB.targetSessionId, BB.targetWindowId))
         }
-        ei(HH) {
+        ei(BB) {
           try {
-            let BH, LH = HH.event;
-            if (HH.compressionEnabled) try {
+            let OB, GB = BB.event;
+            if (BB.compressionEnabled) try {
               ({
-                event: LH,
-                size: BH
-              } = Tz(HH.event))
-            } catch (HH) {
-              Bz.warn("could not process queued compression event - will use uncompressed event", HH)
+                event: GB,
+                size: OB
+              } = Sy(BB.event))
+            } catch (BB) {
+              Gy.warn("could not process queued compression event - will use uncompressed event", BB)
             }
-            Xr(BH) && (BH = mh(HH.event));
+            PD(OB) && (OB = uo(BB.event));
             try {
-              this.ti(HH, LH, BH)
-            } catch (HH) {
-              Bz.warn("could not capture queued compression event", HH)
+              this.ti(BB, GB, OB)
+            } catch (BB) {
+              Gy.warn("could not capture queued compression event", BB)
             }
           } finally {
-            this.Yn(HH)
+            this.Yn(BB)
           }
         }
         Xe() {
-          [...this.Ae].forEach((HH => {
+          [...this.Ae].forEach((BB => {
             try {
-              this.ei(HH)
-            } catch (HH) {
-              Bz.warn("could not drain queued compression event", HH)
+              this.ei(BB)
+            } catch (BB) {
+              Gy.warn("could not drain queued compression event", BB)
             }
           }))
         }
-        ni(HH, BH, LH, AH) {
-          var rH = this;
-          const hH = {
-            event: HH,
-            compressionEnabled: BH,
-            targetSessionId: LH,
-            targetWindowId: AH,
+        ni(BB, OB, GB, YB) {
+          var DB = this;
+          const oB = {
+            event: BB,
+            compressionEnabled: OB,
+            targetSessionId: GB,
+            targetWindowId: YB,
             generation: this.Oe,
             processed: !1,
             counted: !0
           };
-          this.Ae.push(hH), this.$e += 1;
-          const tH = (zH = SH((function*() {
+          this.Ae.push(oB), this.$e += 1;
+          const jB = (yB = QB((function*() {
             try {
-              if (hH.processed) return;
-              let LH, AH;
+              if (oB.processed) return;
+              let GB, YB;
               try {
-                const rH = BH ? Mz(HH) ? yield function(HH) {
-                  return Uz.apply(this, arguments)
-                }(HH): Tz(HH): {
-                  event: HH,
-                  size: mh(HH)
+                const DB = OB ? Ry(BB) ? yield function(BB) {
+                  return ny.apply(this, arguments)
+                }(BB): Sy(BB): {
+                  event: BB,
+                  size: uo(BB)
                 };
-                LH = rH.event, AH = rH.size
-              } catch (BH) {
-                Bz.warn("could not process queued compression event - will use uncompressed event", BH), LH = HH, AH = mh(HH)
+                GB = DB.event, YB = DB.size
+              } catch (OB) {
+                Gy.warn("could not process queued compression event - will use uncompressed event", OB), GB = BB, YB = uo(BB)
               }
-              rH.ti(hH, LH, AH)
+              DB.ti(oB, GB, YB)
             } finally {
-              rH.Yn(hH)
+              DB.Yn(oB)
             }
           })), function() {
-            return zH.apply(this, arguments)
+            return yB.apply(this, arguments)
           });
-          var zH;
-          this.jn = this.jn ? this.jn.catch((() => {})).then(tH) : tH()
+          var yB;
+          this.jn = this.jn ? this.jn.catch((() => {})).then(jB) : jB()
         }
-        onRRwebEmit(HH) {
-          var BH, LH, AH, rH, SH, hH, tH, zH, CH, EH, XH, GH;
+        onRRwebEmit(BB) {
+          var OB, GB, YB, DB, QB, oB, jB, yB, JB, MB, PB, zB;
           if (!this._instance.sessionManager) return;
-          if (this.Cn(), !HH || !Er(HH)) return;
-          if (4 === HH.type) {
-            const BH = this.mn(HH.data.href);
-            if (this.xn = BH, !BH) return;
-            HH.data.href = BH
+          if (this.Cn(), !BB || !MD(BB)) return;
+          if (4 === BB.type) {
+            const OB = this.mn(BB.data.href);
+            if (this.xn = OB, !OB) return;
+            BB.data.href = OB
           } else this.Sn();
-          if (null === (BH = this.re) || void 0 === BH || BH.checkUrlTriggers(this.sessionId, (() => this.En()), (() => this.An()), ((HH, BH) => this.$n(HH, BH))), this.Y.urlBlocked && (5 !== (EH = HH).type || "recording paused" !== EH.data.tag)) return;
-          2 === HH.type && (this.Kn(), Promise.resolve().then((() => this.Kn())), this.Mn(), null === (XH = this.Bn) || void 0 === XH || XH.reset(), null === (GH = this._instance.persistence) || void 0 === GH || GH.register_once({
-            $debug_first_full_snapshot_timestamp: HH.timestamp
+          if (null === (OB = this.re) || void 0 === OB || OB.checkUrlTriggers(this.sessionId, (() => this.En()), (() => this.An()), ((BB, OB) => this.$n(BB, OB))), this.Y.urlBlocked && (5 !== (MB = BB).type || "recording paused" !== MB.data.tag)) return;
+          2 === BB.type && (this.Kn(), Promise.resolve().then((() => this.Kn())), this.Mn(), null === (PB = this.Bn) || void 0 === PB || PB.reset(), null === (zB = this._instance.persistence) || void 0 === zB || zB.register_once({
+            $debug_first_full_snapshot_timestamp: BB.timestamp
           }, void 0));
-          const YH = 2 === HH.type && (null === (LH = this.re) || void 0 === LH ? void 0 : LH.hasPendingTriggers(this.sessionId));
-          YH && this.ii();
-          const uH = this.Bn ? this.Bn.throttleMutations(HH) : HH;
-          if (!uH) return void(!0 === this.de && this.he++);
-          const QH = function(HH) {
-              const BH = HH;
-              if (BH && Er(BH) && 6 === BH.type && Er(BH.data) && "rrweb/console@1" === BH.data.plugin) {
-                BH.data.payload.payload.length > 10 && (BH.data.payload.payload = BH.data.payload.payload.slice(0, 10), BH.data.payload.payload.push("...[truncated]"));
-                const LH = [];
-                for (let HH = 0; BH.data.payload.payload.length > HH; HH++) LH.push(BH.data.payload.payload[HH] && BH.data.payload.payload[HH].length > 2e3 ? BH.data.payload.payload[HH].slice(0, 2e3) + "...[truncated]" : BH.data.payload.payload[HH]);
-                return BH.data.payload.payload = LH, HH
+          const lB = 2 === BB.type && (null === (GB = this.re) || void 0 === GB ? void 0 : GB.hasPendingTriggers(this.sessionId));
+          lB && this.ii();
+          const pB = this.Bn ? this.Bn.throttleMutations(BB) : BB;
+          if (!pB) return void(!0 === this.de && this.he++);
+          const qB = function(BB) {
+              const OB = BB;
+              if (OB && MD(OB) && 6 === OB.type && MD(OB.data) && "rrweb/console@1" === OB.data.plugin) {
+                OB.data.payload.payload.length > 10 && (OB.data.payload.payload = OB.data.payload.payload.slice(0, 10), OB.data.payload.payload.push("...[truncated]"));
+                const GB = [];
+                for (let BB = 0; OB.data.payload.payload.length > BB; BB++) GB.push(OB.data.payload.payload[BB] && OB.data.payload.payload[BB].length > 2e3 ? OB.data.payload.payload[BB].slice(0, 2e3) + "...[truncated]" : OB.data.payload.payload[BB]);
+                return OB.data.payload.payload = GB, BB
               }
-              return HH
-            }(uH),
-            WH = function(HH) {
-              return bz(HH) ? HH.data.payload : null
-            }(QH),
-            MH = function(HH) {
-              return kz(HH) ? HH.data.payload : null
-            }(QH),
-            xH = function(HH) {
-              return Oz(HH) ? HH.data.payload : null
-            }(QH);
-          WH || MH ? (null == WH ? void 0 : WH.lastActivityTimestamp) && (QH.timestamp = WH.lastActivityTimestamp) : (null == xH ? void 0 : xH.sessionId) || this.ri(QH);
-          const vH = null !== (AH = null !== (rH = null !== (SH = null == WH ? void 0 : WH.currentSessionId) && void 0 !== SH ? SH : null == MH ? void 0 : MH.nextSessionId) && void 0 !== rH ? rH : null == xH ? void 0 : xH.sessionId) && void 0 !== AH ? AH : this.Xt,
-            PH = null !== (hH = null !== (tH = null !== (zH = null == WH ? void 0 : WH.currentWindowId) && void 0 !== zH ? zH : null == MH ? void 0 : MH.nextWindowId) && void 0 !== tH ? tH : null == xH ? void 0 : xH.windowId) && void 0 !== hH ? hH : this.je;
-          if (!0 === this.de && ! function(HH) {
-              return Oz(HH) || bz(HH) || kz(HH)
-            }(QH)) return void(function(HH) {
-            return 2 === HH.type || 4 === HH.type || 3 === HH.type && 9 !== HH.data.source
-          }(QH) && this.he++);
-          2 === QH.type && (this.he = 0), xH && (QH.timestamp = xH.lastActivityTimestamp + xH.threshold);
-          const TH = this.ae;
-          this.ae = !0, YH ? this.kn(!0) : TH || this.kn();
-          const UH = null === (CH = this._instance.config.session_recording.compress_events) || void 0 === CH || CH;
-          if (5 === QH.type && "$json_ld" === QH.data.tag) {
-            let BH;
+              return BB
+            }(pB),
+            ZB = function(BB) {
+              return ky(BB) ? BB.data.payload : null
+            }(qB),
+            NB = function(BB) {
+              return dy(BB) ? BB.data.payload : null
+            }(qB),
+            RB = function(BB) {
+              return fy(BB) ? BB.data.payload : null
+            }(qB);
+          ZB || NB ? (null == ZB ? void 0 : ZB.lastActivityTimestamp) && (qB.timestamp = ZB.lastActivityTimestamp) : (null == RB ? void 0 : RB.sessionId) || this.ri(qB);
+          const WB = null !== (YB = null !== (DB = null !== (QB = null == ZB ? void 0 : ZB.currentSessionId) && void 0 !== QB ? QB : null == NB ? void 0 : NB.nextSessionId) && void 0 !== DB ? DB : null == RB ? void 0 : RB.sessionId) && void 0 !== YB ? YB : this.Xt,
+            AB = null !== (oB = null !== (jB = null !== (yB = null == ZB ? void 0 : ZB.currentWindowId) && void 0 !== yB ? yB : null == NB ? void 0 : NB.nextWindowId) && void 0 !== jB ? jB : null == RB ? void 0 : RB.windowId) && void 0 !== oB ? oB : this.je;
+          if (!0 === this.de && ! function(BB) {
+              return fy(BB) || ky(BB) || dy(BB)
+            }(qB)) return void(function(BB) {
+            return 2 === BB.type || 4 === BB.type || 3 === BB.type && 9 !== BB.data.source
+          }(qB) && this.he++);
+          2 === qB.type && (this.he = 0), RB && (qB.timestamp = RB.lastActivityTimestamp + RB.threshold);
+          const VB = this.ae;
+          this.ae = !0, lB ? this.kn(!0) : VB || this.kn();
+          const SB = null === (JB = this._instance.config.session_recording.compress_events) || void 0 === JB || JB;
+          if (5 === qB.type && "$json_ld" === qB.data.tag) {
+            let OB;
             try {
-              BH = yA ? this.mn(yA.location.href) : void 0
-            } catch (HH) {}
-            QH.data.href = BH
+              OB = tY ? this.mn(tY.location.href) : void 0
+            } catch (BB) {}
+            qB.data.href = OB
           }
-          if (this.$e > 0 || UH && Mz(QH)) return void this.ni(QH, UH, vH, PH);
+          if (this.$e > 0 || SB && Ry(qB)) return void this.ni(qB, SB, WB, AB);
           const {
-            event: VH,
-            size: OH
-          } = UH ? Tz(QH) : {
-            event: QH,
-            size: mh(QH)
+            event: nB,
+            size: UB
+          } = SB ? Sy(qB) : {
+            event: qB,
+            size: uo(qB)
           };
-          this.Qn(QH, VH, OH, vH, PH)
+          this.Qn(qB, nB, UB, WB, AB)
         }
         get status() {
           return this.re ? this.re.getStatus({
@@ -8377,19 +8377,19 @@ export const modules = {
             eventTriggerMatching: this.tt,
             linkedFlagMatching: this.et,
             remoteConfig: this.ne
-          }) : Ah
+          }) : Yo
         }
-        log(HH) {
-          let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "log";
-          var LH;
-          null === (LH = this._instance.sessionRecording) || void 0 === LH || LH.onRRwebEmit({
+        log(BB) {
+          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "log";
+          var GB;
+          null === (GB = this._instance.sessionRecording) || void 0 === GB || GB.onRRwebEmit({
             type: 6,
             data: {
               plugin: "rrweb/console@1",
               payload: {
-                level: BH,
+                level: OB,
                 trace: [],
-                payload: [JSON.stringify(HH)]
+                payload: [JSON.stringify(BB)]
               }
             },
             timestamp: Date.now()
@@ -8399,24 +8399,24 @@ export const modules = {
           this.et.linkedFlagSeen = !0, this.jt(), this.Rn(), this.qt("linked_flag_overridden")
         }
         overrideSampling() {
-          var HH;
-          null === (HH = this._instance.persistence) || void 0 === HH || HH.register({
+          var BB;
+          null === (BB = this._instance.persistence) || void 0 === BB || BB.register({
             $session_is_sampled: this.sessionId,
             $replay_sample_rate: null
           }), this.jt(), this.Rn(), this.qt("sampling_overridden")
         }
-        overrideTrigger(HH) {
-          this.$n(HH), this.Rn()
+        overrideTrigger(BB) {
+          this.$n(BB), this.Rn()
         }
         oi() {
           try {
-            var HH;
-            const BH = null == yA || null === (HH = yA.location) || void 0 === HH ? void 0 : HH.href;
-            if (!BH) return;
-            const LH = this.mn(BH);
-            if (!LH) return;
-            return new URL(LH).hostname || void 0
-          } catch (HH) {
+            var BB;
+            const OB = null == tY || null === (BB = tY.location) || void 0 === BB ? void 0 : BB.href;
+            if (!OB) return;
+            const GB = this.mn(OB);
+            if (!GB) return;
+            return new URL(GB).hostname || void 0
+          } catch (BB) {
             return
           }
         }
@@ -8429,64 +8429,64 @@ export const modules = {
           }), 2e3))
         }
         ai() {
-          return this.Te !== this.Rt.sessionId && 0 !== this.Rt.data.length && this.Rt.data.every((HH => 5 === (null == HH ? void 0 : HH.type) && !bz(HH) && !kz(HH)))
+          return this.Te !== this.Rt.sessionId && 0 !== this.Rt.data.length && this.Rt.data.every((BB => 5 === (null == BB ? void 0 : BB.type) && !ky(BB) && !dy(BB)))
         }
         li() {
-          var HH, BH;
-          return null !== (HH = null === (BH = this.re) || void 0 === BH ? void 0 : BH.getPendingTriggerConditions(this.sessionId)) && void 0 !== HH ? HH : []
+          var BB, OB;
+          return null !== (BB = null === (OB = this.re) || void 0 === OB ? void 0 : OB.getPendingTriggerConditions(this.sessionId)) && void 0 !== BB ? BB : []
         }
-        ui(HH) {
-          if ("buffering" !== HH) return Xr(this.ci) || this._instance.register_for_session({
-            [JS]: []
+        ui(BB) {
+          if ("buffering" !== BB) return PD(this.ci) || this._instance.register_for_session({
+            [vQ]: []
           }), void(this.ci = void 0);
-          const BH = this.li();
-          if (0 === BH.length) return Xr(this.ci) || this._instance.register_for_session({
-            [JS]: []
+          const OB = this.li();
+          if (0 === OB.length) return PD(this.ci) || this._instance.register_for_session({
+            [vQ]: []
           }), void(this.ci = void 0);
-          const LH = BH.join(", "),
-            AH = `${this.sessionId}:${LH}`;
-          AH !== this.ci && (this.ci = AH, this._instance.register_for_session({
-            [JS]: BH
-          }), Bz.info(`buffering: ${LH}`))
+          const GB = OB.join(", "),
+            YB = `${this.sessionId}:${GB}`;
+          YB !== this.ci && (this.ci = YB, this._instance.register_for_session({
+            [vQ]: OB
+          }), Gy.info(`buffering: ${GB}`))
         }
         di() {
-          var HH;
-          return "memory" !== this._instance.config.persistence && !0 !== (null === (HH = this._instance.persistence) || void 0 === HH ? void 0 : HH.hi) && Gt.At()
+          var BB;
+          return "memory" !== this._instance.config.persistence && !0 !== (null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.hi) && pj.At()
         }
         fi() {
-          0 !== this.Rt.data.length && this.Rt.size !== this.pi && 943718.4 >= this.Rt.size && this.di() && (this.pi = this.Rt.size, Gt.$t(this.an, this.Rt))
+          0 !== this.Rt.data.length && this.Rt.size !== this.pi && 943718.4 >= this.Rt.size && this.di() && (this.pi = this.Rt.size, pj.$t(this.an, this.Rt))
         }
         Ln() {
           if (this.Ee || !this.di()) return;
           this.Ee = !0;
-          const HH = Gt.Dt(this.an);
-          Gt.Pt(this.an), Er(HH) && zr(HH.data) && 0 !== HH.data.length && zr(HH.sizes) && HH.sizes.length === HH.data.length && Qr(HH.size) && HH.sessionId === this.Xt && HH.windowId === this.je && (this.Rt.data.length > 0 || (this.Rt = HH))
+          const BB = pj.Dt(this.an);
+          pj.Pt(this.an), MD(BB) && yD(BB.data) && 0 !== BB.data.length && yD(BB.sizes) && BB.sizes.length === BB.data.length && qD(BB.size) && BB.sessionId === this.Xt && BB.windowId === this.je && (this.Rt.data.length > 0 || (this.Rt = BB))
         }
         Ye() {
-          let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          var BH;
+          let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          var OB;
           if (this.Nn(), this.ge) return this.Rt;
-          if (this.ai()) return this.Rt.size > 943718.4 ? this.tn() : (HH && this.fi(), this.Rt);
-          const LH = this.Rt;
-          null === (BH = this.re) || void 0 === BH || BH.ensureSamplingDecision(this.sessionId);
-          const rH = this.Ge(),
-            SH = this.status;
-          if (this.ui(SH), "buffering" === SH || "paused" === SH || "disabled" === SH || rH) return !HH || "active" !== SH && "sampled" !== SH || this.fi(), this.Gn(), this.Rt;
-          if (this.Rt !== LH) return this.Rt;
-          if (LH.data.length > 0) {
-            var hH;
-            const HH = this.oi();
-            Ih(LH).forEach((BH => {
+          if (this.ai()) return this.Rt.size > 943718.4 ? this.tn() : (BB && this.fi(), this.Rt);
+          const GB = this.Rt;
+          null === (OB = this.re) || void 0 === OB || OB.ensureSamplingDecision(this.sessionId);
+          const DB = this.Ge(),
+            QB = this.status;
+          if (this.ui(QB), "buffering" === QB || "paused" === QB || "disabled" === QB || DB) return !BB || "active" !== QB && "sampled" !== QB || this.fi(), this.Gn(), this.Rt;
+          if (this.Rt !== GB) return this.Rt;
+          if (GB.data.length > 0) {
+            var oB;
+            const BB = this.oi();
+            Io(GB).forEach((OB => {
               try {
-                var LH;
-                null === (LH = this.Be) || void 0 === LH || LH.trackSize(BH.sessionId, BH.size), this.mi(AH(AH(AH(AH({
-                  $snapshot_bytes: BH.size,
-                  $snapshot_data: BH.data,
-                  $session_id: BH.sessionId,
-                  $window_id: BH.windowId,
-                  $lib: Yt.LIB_NAME,
-                  $lib_version: Yt.LIB_VERSION,
-                  $snapshot_host: HH
+                var GB;
+                null === (GB = this.Be) || void 0 === GB || GB.trackSize(OB.sessionId, OB.size), this.mi(YB(YB(YB(YB({
+                  $snapshot_bytes: OB.size,
+                  $snapshot_data: OB.data,
+                  $session_id: OB.sessionId,
+                  $window_id: OB.windowId,
+                  $lib: qj.LIB_NAME,
+                  $lib_version: qj.LIB_VERSION,
+                  $snapshot_host: BB
                 }, this.fe > 0 ? {
                   $sdk_debug_replay_throttled_mutations_dropped: this.fe
                 } : {}), this.ve > 0 ? {
@@ -8496,27 +8496,27 @@ export const modules = {
                 } : {}), this.me > 0 ? {
                   $sdk_debug_replay_unstringifiable_events_dropped: this.me
                 } : {}))
-              } catch (HH) {
-                Bz.warn("could not capture snapshot chunk - skipping it", HH)
+              } catch (BB) {
+                Gy.warn("could not capture snapshot chunk - skipping it", BB)
               }
-            })), Xr(this.pi) || (Gt.Pt(this.an), this.pi = void 0), null === (hH = this.re) || void 0 === hH || hH.onFlushComplete()
+            })), PD(this.pi) || (pj.Pt(this.an), this.pi = void 0), null === (oB = this.re) || void 0 === oB || oB.onFlushComplete()
           }
           return this.tn()
         }
-        Jn(HH) {
-          var BH;
-          const LH = 2 + ((null === (BH = this.Rt) || void 0 === BH ? void 0 : BH.data.length) || 0),
-            AH = HH.$session_id,
-            rH = this.Rt.sessionId !== AH;
-          if (rH || !0 !== this.de && !this.ge && this.Rt.size + HH.$snapshot_bytes + LH > 943718.4) {
-            const BH = this.Xt;
-            if (this.Rt = this.Ye(), this.Xt !== BH) return;
-            rH && this.Rt.data.length > 0 && (this.Rt = this.tn()), this.Rt.sessionId = AH, this.Rt.windowId = HH.$window_id
+        Jn(BB) {
+          var OB;
+          const GB = 2 + ((null === (OB = this.Rt) || void 0 === OB ? void 0 : OB.data.length) || 0),
+            YB = BB.$session_id,
+            DB = this.Rt.sessionId !== YB;
+          if (DB || !0 !== this.de && !this.ge && this.Rt.size + BB.$snapshot_bytes + GB > 943718.4) {
+            const OB = this.Xt;
+            if (this.Rt = this.Ye(), this.Xt !== OB) return;
+            DB && this.Rt.data.length > 0 && (this.Rt = this.tn()), this.Rt.sessionId = YB, this.Rt.windowId = BB.$window_id
           }
-          this.ge && (this.be || this.Rt.size + HH.$snapshot_bytes + LH > 943718.4) ? this.be = !0 : (this.Rt.size += HH.$snapshot_bytes, this.Rt.data.push(HH.$snapshot_data), this.Rt.sizes.push(HH.$snapshot_bytes), !0 === this.de || this.ge || this.Gn())
+          this.ge && (this.be || this.Rt.size + BB.$snapshot_bytes + GB > 943718.4) ? this.be = !0 : (this.Rt.size += BB.$snapshot_bytes, this.Rt.data.push(BB.$snapshot_data), this.Rt.sizes.push(BB.$snapshot_bytes), !0 === this.de || this.ge || this.Gn())
         }
-        mi(HH) {
-          this._instance.capture("$snapshot", HH, {
+        mi(BB) {
+          this._instance.capture("$snapshot", BB, {
             _url: this._instance.requestRouter.endpointFor("api", this.oe),
             _noTruncate: !0,
             _batchKey: "recordings",
@@ -8524,18 +8524,18 @@ export const modules = {
           })
         }
         get Qe() {
-          var HH, BH;
-          const LH = null === (HH = this.Rt) || void 0 === HH ? void 0 : HH.data[(null === (BH = this.Rt) || void 0 === BH ? void 0 : BH.data.length) - 1];
-          return LH ? LH.timestamp - this._sessionStartTimestamp : null
+          var BB, OB;
+          const GB = null === (BB = this.Rt) || void 0 === BB ? void 0 : BB.data[(null === (OB = this.Rt) || void 0 === OB ? void 0 : OB.data.length) - 1];
+          return GB ? GB.timestamp - this._sessionStartTimestamp : null
         }
         ii() {
           if (!this.Rt || 0 === this.Rt.data.length) return this.tn();
-          let HH = -1;
-          for (let BH = this.Rt.data.length - 1; BH >= 0; BH--)
-            if (4 === this.Rt.data[BH].type) {
-              HH = BH;
+          let BB = -1;
+          for (let OB = this.Rt.data.length - 1; OB >= 0; OB--)
+            if (4 === this.Rt.data[OB].type) {
+              BB = OB;
               break
-            } return 0 > HH ? this.tn() : (this.Rt.data = this.Rt.data.slice(HH), this.Rt.sizes = this.Rt.sizes.slice(HH), this.Rt.size = this.Rt.sizes.reduce(((HH, BH) => HH + BH), 0), this.Rt)
+            } return 0 > BB ? this.tn() : (this.Rt.data = this.Rt.data.slice(BB), this.Rt.sizes = this.Rt.sizes.slice(BB), this.Rt.size = this.Rt.sizes.reduce(((BB, OB) => BB + OB), 0), this.Rt)
         }
         tn() {
           return this.Rt = {
@@ -8546,21 +8546,21 @@ export const modules = {
             windowId: this.je
           }, this.Rt
         }
-        qt(HH, BH) {
+        qt(BB, OB) {
           this._instance.register_for_session({
-            [Lh]: HH
-          }), Bz.info(HH.replace("_", " "), BH), "session_id_changed" !== HH && this.Vt("$recording_started", AH({
-            reason: HH
-          }, BH))
+            [Go]: BB
+          }), Gy.info(BB.replace("_", " "), OB), "session_id_changed" !== BB && this.Vt("$recording_started", YB({
+            reason: BB
+          }, OB))
         }
-        gi(HH) {
-          var BH;
-          return 3 === HH.type && -1 !== Lz.indexOf(null === (BH = HH.data) || void 0 === BH ? void 0 : BH.source)
+        gi(BB) {
+          var OB;
+          return 3 === BB.type && -1 !== Yy.indexOf(null === (OB = BB.data) || void 0 === OB ? void 0 : OB.source)
         }
-        ri(HH) {
-          const BH = this.gi(HH);
-          BH || !0 === this.de || HH.timestamp - this.le > this.te && (this.de = !0, clearInterval(this.Tn), this.Vt("sessionIdle", {
-            eventTimestamp: HH.timestamp,
+        ri(BB) {
+          const OB = this.gi(BB);
+          OB || !0 === this.de || BB.timestamp - this.le > this.te && (this.de = !0, clearInterval(this.Tn), this.Vt("sessionIdle", {
+            eventTimestamp: BB.timestamp,
             lastActivityTimestamp: this.le,
             threshold: this.te,
             bufferLength: this.Rt.data.length,
@@ -8569,55 +8569,55 @@ export const modules = {
             windowId: this.je
           }), this.Ye());
           const {
-            windowId: LH,
-            sessionId: AH
-          } = this.Yt.checkAndGetSessionAndWindowId(!BH, HH.timestamp);
-          let rH = !1;
-          if (BH && (this.le = HH.timestamp, this.de)) {
-            const BH = "unknown" === this.de;
-            this.de = !1, BH || (this.Vt("sessionNoLongerIdle", {
+            windowId: GB,
+            sessionId: YB
+          } = this.Yt.checkAndGetSessionAndWindowId(!OB, BB.timestamp);
+          let DB = !1;
+          if (OB && (this.le = BB.timestamp, this.de)) {
+            const OB = "unknown" === this.de;
+            this.de = !1, OB || (this.Vt("sessionNoLongerIdle", {
               reason: "user activity",
-              type: HH.type
-            }), rH = !0)
+              type: BB.type
+            }), DB = !0)
           }
-          const SH = this.Xt !== AH,
-            hH = this.je !== LH;
-          if (this.je = LH, this.Xt = AH, SH || hH) {
-            const HH = SH && !1 !== this.de;
-            HH && (this.de = "unknown"), this.He(HH)
-          } else if (BH && this.Rn(), rH) {
-            var tH;
-            const HH = ["sampled", "active"].includes(this.status) || (null === (tH = this.re) || void 0 === tH ? void 0 : tH.hasPendingTriggers(this.sessionId));
-            this.he > 0 && HH && this.jt(), this.kn(), this.Mn()
+          const QB = this.Xt !== YB,
+            oB = this.je !== GB;
+          if (this.je = GB, this.Xt = YB, QB || oB) {
+            const BB = QB && !1 !== this.de;
+            BB && (this.de = "unknown"), this.He(BB)
+          } else if (OB && this.Rn(), DB) {
+            var jB;
+            const BB = ["sampled", "active"].includes(this.status) || (null === (jB = this.re) || void 0 === jB ? void 0 : jB.hasPendingTriggers(this.sessionId));
+            this.he > 0 && BB && this.jt(), this.kn(), this.Mn()
           }
         }
         ze() {
-          var HH;
-          null === (HH = this.re) || void 0 === HH || HH.clearConditionalRecordingPersistence()
+          var BB;
+          null === (BB = this.re) || void 0 === BB || BB.clearConditionalRecordingPersistence()
         }
         get sdkDebugProperties() {
-          var HH;
+          var BB;
           return {
             $recording_status: this.status,
             $sdk_debug_replay_flush_hold_reason: this.Hn,
             $sdk_debug_replay_internal_buffer_length: this.Rt.data.length,
             $sdk_debug_replay_internal_buffer_size: this.Rt.size,
             $sdk_debug_session_start: this._sessionStartTimestamp,
-            $sdk_debug_replay_flushed_size: null === (HH = this.Be) || void 0 === HH ? void 0 : HH.currentTrackedSize(this.sessionId),
+            $sdk_debug_replay_flushed_size: null === (BB = this.Be) || void 0 === BB ? void 0 : BB.currentTrackedSize(this.sessionId),
             $sdk_debug_replay_rrweb_error: this.ke,
-            [Hh]: this.yi,
-            [Bh]: this._e
+            [Bo]: this.yi,
+            [Oo]: this._e
           }
         }
         get yi() {
-          var HH, BH, LH;
-          return !!this.se && (null === (HH = null === (BH = Sz()) || void 0 === BH || null === (LH = BH.isRecording) || void 0 === LH ? void 0 : LH.call(BH)) || void 0 === HH || HH)
+          var BB, OB, GB;
+          return !!this.se && (null === (BB = null === (OB = oy()) || void 0 === OB || null === (GB = OB.isRecording) || void 0 === GB ? void 0 : GB.call(OB)) || void 0 === BB || BB)
         }
         Dn() {
-          var HH;
+          var BB;
           if (this.se) return;
           this._e = !0;
-          const BH = {
+          const OB = {
               blockClass: "ph-no-capture",
               blockSelector: void 0,
               ignoreClass: "ph-ignore-input",
@@ -8639,136 +8639,136 @@ export const modules = {
               sampling: void 0,
               attributeFilter: void 0
             },
-            LH = this._instance.config.session_recording;
-          for (const [EH, XH] of Object.entries(LH || {}))
-            if (EH in BH)
-              if ("maskInputOptions" === EH) BH.maskInputOptions = AH({
+            GB = this._instance.config.session_recording;
+          for (const [MB, PB] of Object.entries(GB || {}))
+            if (MB in OB)
+              if ("maskInputOptions" === MB) OB.maskInputOptions = YB({
                 password: !0
-              }, XH);
-              else if ("sampling" === EH) {
-            const HH = null != XH ? XH : {},
-              LH = {};
-            Xr(HH.mousemove) || (LH.mousemove = HH.mousemove), Xr(HH.mouseInteraction) || (LH.mouseInteraction = HH.mouseInteraction), BH.sampling = LH
-          } else BH[EH] = XH;
-          var rH, SH, hH, tH;
-          !0 === (null == LH ? void 0 : LH.captureJsonLd) && !0 !== BH.slimDOMOptions && "all" !== BH.slimDOMOptions && (BH.slimDOMOptions = AH(AH({}, BH.slimDOMOptions), {}, {
+              }, PB);
+              else if ("sampling" === MB) {
+            const BB = null != PB ? PB : {},
+              GB = {};
+            PD(BB.mousemove) || (GB.mousemove = BB.mousemove), PD(BB.mouseInteraction) || (GB.mouseInteraction = BB.mouseInteraction), OB.sampling = GB
+          } else OB[MB] = PB;
+          var DB, QB, oB, jB;
+          !0 === (null == GB ? void 0 : GB.captureJsonLd) && !0 !== OB.slimDOMOptions && "all" !== OB.slimDOMOptions && (OB.slimDOMOptions = YB(YB({}, OB.slimDOMOptions), {}, {
             script: !0
-          })), this.dn && this.dn.enabled && (BH.recordCanvas = !0, BH.sampling = AH(AH({}, BH.sampling), {}, {
+          })), this.dn && this.dn.enabled && (OB.recordCanvas = !0, OB.sampling = YB(YB({}, OB.sampling), {}, {
             canvas: this.dn.fps
-          }), BH.dataURLOptions = {
+          }), OB.dataURLOptions = {
             type: "image/webp",
             quality: this.dn.quality
-          }, BH.canvasResolutionScale = this.cn, BH.canvasMasking = {
+          }, OB.canvasResolutionScale = this.cn, OB.canvasMasking = {
             configured: () => {
-              var HH;
-              return Cr(null === (HH = this._instance.config.session_recording) || void 0 === HH || null === (HH = HH.canvasCapture) || void 0 === HH ? void 0 : HH.maskRegionsFn)
+              var BB;
+              return JD(null === (BB = this._instance.config.session_recording) || void 0 === BB || null === (BB = BB.canvasCapture) || void 0 === BB ? void 0 : BB.maskRegionsFn)
             },
-            regionsFn: HH => {
-              var BH;
-              const LH = null === (BH = this._instance.config.session_recording) || void 0 === BH || null === (BH = BH.canvasCapture) || void 0 === BH ? void 0 : BH.maskRegionsFn;
-              if (Cr(LH)) try {
-                var AH;
-                return null !== (AH = LH(HH)) && void 0 !== AH ? AH : null
-              } catch (HH) {
-                return this.Ie || (this.Ie = !0, Bz.warn("canvasCapture.maskRegionsFn threw, canvas frames will be skipped", HH)), null
+            regionsFn: BB => {
+              var OB;
+              const GB = null === (OB = this._instance.config.session_recording) || void 0 === OB || null === (OB = OB.canvasCapture) || void 0 === OB ? void 0 : OB.maskRegionsFn;
+              if (JD(GB)) try {
+                var YB;
+                return null !== (YB = GB(BB)) && void 0 !== YB ? YB : null
+              } catch (BB) {
+                return this.Ie || (this.Ie = !0, Gy.warn("canvasCapture.maskRegionsFn threw, canvas frames will be skipped", BB)), null
               }
             }
-          }), this.ln && (BH.maskAllInputs = null === (rH = this.ln.maskAllInputs) || void 0 === rH || rH, BH.maskTextSelector = null !== (SH = this.ln.maskTextSelector) && void 0 !== SH ? SH : void 0, BH.blockSelector = null !== (hH = this.ln.blockSelector) && void 0 !== hH ? hH : void 0, BH.maskAllElementAttributes = null !== (tH = this.ln.maskAllElementAttributes) && void 0 !== tH && tH), BH.maskAllElementAttributes && BH.maskAttributeFn && (BH.maskAttributeFn = void 0, this.Ce || (this.Ce = !0, Bz.warn('`maskAllElementAttributes` and `maskAttributeFn` are mutually exclusive, and `maskAttributeFn` is being ignored. Remove one of the two. Note that `maskAllElementAttributes` can also come from your project\'s "Privacy and masking" settings. See https://posthog.com/docs/session-replay/privacy'))), this.un();
-          const zH = Sz();
-          if (!zH) return void Bz.error("_startRecorder was called but rrwebRecord is not available. This indicates something has gone wrong.");
-          this.Bn = null !== (HH = this.Bn) && void 0 !== HH ? HH : new Et(zH, {
+          }), this.ln && (OB.maskAllInputs = null === (DB = this.ln.maskAllInputs) || void 0 === DB || DB, OB.maskTextSelector = null !== (QB = this.ln.maskTextSelector) && void 0 !== QB ? QB : void 0, OB.blockSelector = null !== (oB = this.ln.blockSelector) && void 0 !== oB ? oB : void 0, OB.maskAllElementAttributes = null !== (jB = this.ln.maskAllElementAttributes) && void 0 !== jB && jB), OB.maskAllElementAttributes && OB.maskAttributeFn && (OB.maskAttributeFn = void 0, this.Ce || (this.Ce = !0, Gy.warn('`maskAllElementAttributes` and `maskAttributeFn` are mutually exclusive, and `maskAttributeFn` is being ignored. Remove one of the two. Note that `maskAllElementAttributes` can also come from your project\'s "Privacy and masking" settings. See https://posthog.com/docs/session-replay/privacy'))), this.un();
+          const yB = oy();
+          if (!yB) return void Gy.error("_startRecorder was called but rrwebRecord is not available. This indicates something has gone wrong.");
+          this.Bn = null !== (BB = this.Bn) && void 0 !== BB ? BB : new zj(yB, {
             refillRate: this._instance.config.session_recording.__mutationThrottlerRefillRate,
             bucketSize: this._instance.config.session_recording.__mutationThrottlerBucketSize,
-            onBlockedNode: (HH, BH) => {
-              const LH = `Too many mutations on node '${HH}'. Rate limiting. This could be due to SVG animations or something similar`;
-              Bz.info(LH, {
-                node: BH
-              }), this.log("[SessionRecording] " + LH, "warn")
+            onBlockedNode: (BB, OB) => {
+              const GB = `Too many mutations on node '${BB}'. Rate limiting. This could be due to SVG animations or something similar`;
+              Gy.info(GB, {
+                node: OB
+              }), this.log("[SessionRecording] " + GB, "warn")
             },
-            onDroppedAttributeMutations: HH => this.fe += HH,
+            onDroppedAttributeMutations: BB => this.fe += BB,
             bytesRefillRate: this._instance.config.session_recording.__mutationBytesRefillRate,
             bytesBucketSize: this._instance.config.session_recording.__mutationBytesBucketSize,
             resyncIntervalMs: this.In,
-            onDroppedOversizedMutation: HH => {
-              0 === this.ve && this.log("[SessionRecording] Dropped an oversized DOM mutation to keep the recording playable. The recording will resync with a full snapshot.", "warn"), this.ve += 1, this.pe += HH
+            onDroppedOversizedMutation: BB => {
+              0 === this.ve && this.log("[SessionRecording] Dropped an oversized DOM mutation to keep the recording playable. The recording will resync with a full snapshot.", "warn"), this.ve += 1, this.pe += BB
             },
             requestFullSnapshot: () => this.jt()
           });
-          const CH = this.vn();
-          if (this.se = zH(AH(AH({
-              emit: HH => {
-                this.onRRwebEmit(HH)
+          const JB = this.vn();
+          if (this.se = yB(YB(YB({
+              emit: BB => {
+                this.onRRwebEmit(BB)
               },
-              plugins: CH,
-              errorHandler: (HH, BH) => "rrweb" === BH && (this.Me || (this.Me = !0, Bz.error("rrweb internal error - recording will continue but may be incomplete", HH)), !0)
-            }, BH), {}, {
+              plugins: JB,
+              errorHandler: (BB, OB) => "rrweb" === OB && (this.Me || (this.Me = !0, Gy.error("rrweb internal error - recording will continue but may be incomplete", BB)), !0)
+            }, OB), {}, {
               recordAfter: "DOMContentLoaded"
-            })), !this.se) return this.ke = !0, void Bz.error("rrweb failed to start - Loss of recording data is possible. Check the browser console for rrweb errors.");
-          this.ke = !1, !0 === (null == LH ? void 0 : LH.captureJsonLd) && Br && (null == yA ? void 0 : yA.MutationObserver) && !this._n && (this._n = function(HH, BH, LH) {
-            const AH = new WeakMap,
-              rH = LH.getCaptureState || (() => !0);
-            let SH = mt;
-            const hH = function(HH, BH) {
-                const LH = BH.attributeFilter;
-                return BH.maskAllElementAttributes || BH.maskAttributeFn || (null == LH ? void 0 : LH.length) && !LH.includes("id") ? ft : LH => {
-                  const AH = HH.getElementById(LH);
-                  return !!AH && "SCRIPT" !== AH.nodeName && (!BH.isRecordedElement || BH.isRecordedElement(AH)) && !pt(AH, BH.blockClass, BH.blockSelector)
+            })), !this.se) return this.ke = !0, void Gy.error("rrweb failed to start - Loss of recording data is possible. Check the browser console for rrweb errors.");
+          this.ke = !1, !0 === (null == GB ? void 0 : GB.captureJsonLd) && OD && (null == tY ? void 0 : tY.MutationObserver) && !this._n && (this._n = function(BB, OB, GB) {
+            const YB = new WeakMap,
+              DB = GB.getCaptureState || (() => !0);
+            let QB = uj;
+            const oB = function(BB, OB) {
+                const GB = OB.attributeFilter;
+                return OB.maskAllElementAttributes || OB.maskAttributeFn || (null == GB ? void 0 : GB.length) && !GB.includes("id") ? Fj : GB => {
+                  const YB = BB.getElementById(GB);
+                  return !!YB && "SCRIPT" !== YB.nodeName && (!OB.isRecordedElement || OB.isRecordedElement(YB)) && !tj(YB, OB.blockClass, OB.blockSelector)
                 }
-              }(HH, LH),
-              tH = BH => {
+              }(BB, GB),
+              jB = OB => {
                 try {
-                  const tH = rH();
-                  if (!SH || !1 === tH || !BH.isConnected || BH.ownerDocument !== HH || function(HH, BH) {
-                      return pt(HH, BH.blockClass, BH.blockSelector) || pt(HH, BH.maskTextClass, BH.maskTextSelector)
-                    }(BH, LH)) return;
-                  const zH = function(HH) {
-                    let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ft,
-                      LH = arguments.length > 2 ? arguments[2] : void 0;
-                    if (!HH || HH.length > mt) return null;
+                  const jB = DB();
+                  if (!QB || !1 === jB || !OB.isConnected || OB.ownerDocument !== BB || function(BB, OB) {
+                      return tj(BB, OB.blockClass, OB.blockSelector) || tj(BB, OB.maskTextClass, OB.maskTextSelector)
+                    }(OB, GB)) return;
+                  const yB = function(BB) {
+                    let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fj,
+                      GB = arguments.length > 2 ? arguments[2] : void 0;
+                    if (!BB || BB.length > uj) return null;
                     try {
-                      const AH = JSON.parse(HH),
-                        rH = {
-                          maskUrl: LH,
+                      const YB = JSON.parse(BB),
+                        DB = {
+                          maskUrl: GB,
                           remainingNodes: 2048,
                           exceeded: !1
                         },
-                        SH = zr(AH) ? AH.map((HH => st(HH, BH, rH))) : st(AH, BH, rH);
-                      if (rH.exceeded || Yr(SH) || zr(SH) && (!SH.length || SH.some(Yr))) return null;
-                      const hH = JSON.stringify(SH);
-                      return hH.length > 2e4 ? null : [SH, hH]
-                    } catch (HH) {
+                        QB = yD(YB) ? YB.map((BB => vj(BB, OB, DB))) : vj(YB, OB, DB);
+                      if (DB.exceeded || lD(QB) || yD(QB) && (!QB.length || QB.some(lD))) return null;
+                      const oB = JSON.stringify(QB);
+                      return oB.length > 2e4 ? null : [QB, oB]
+                    } catch (BB) {
                       return null
                     }
-                  }(BH.text, hH, LH.maskUrl);
-                  if (!zH) return void AH.delete(BH);
-                  const [CH, EH] = zH;
-                  if (Yr(tH)) return void AH.set(BH, EH);
-                  if (AH.get(BH) !== EH) {
-                    if (EH.length > SH) return void(SH = 0);
-                    LH.emit(CH) && (AH.set(BH, EH), SH -= EH.length)
+                  }(OB.text, oB, GB.maskUrl);
+                  if (!yB) return void YB.delete(OB);
+                  const [JB, MB] = yB;
+                  if (lD(jB)) return void YB.set(OB, MB);
+                  if (YB.get(OB) !== MB) {
+                    if (MB.length > QB) return void(QB = 0);
+                    GB.emit(JB) && (YB.set(OB, MB), QB -= MB.length)
                   }
-                } catch (HH) {
+                } catch (BB) {
                   return
                 }
               };
             try {
-              const LH = new BH((HH => {
+              const GB = new OB((BB => {
                 try {
-                  if (!SH || !1 === rH()) return;
-                  const BH = HH => {
-                    for (const BH of yt(HH)) tH(BH)
+                  if (!QB || !1 === DB()) return;
+                  const OB = BB => {
+                    for (const OB of By(BB)) jB(OB)
                   };
-                  for (const LH of HH)
-                    if ("childList" === LH.type) Jt(LH.target) && tH(LH.target), LH.addedNodes.forEach(BH);
-                    else if ("characterData" === LH.type) {
-                    const HH = LH.target.parentNode;
-                    HH && Jt(HH) && tH(HH)
-                  } else "attributes" === LH.type && Jt(LH.target) && tH(LH.target)
-                } catch (HH) {
+                  for (const GB of BB)
+                    if ("childList" === GB.type) sj(GB.target) && jB(GB.target), GB.addedNodes.forEach(OB);
+                    else if ("characterData" === GB.type) {
+                    const BB = GB.target.parentNode;
+                    BB && sj(BB) && jB(BB)
+                  } else "attributes" === GB.type && sj(GB.target) && jB(GB.target)
+                } catch (BB) {
                   return
                 }
               }));
-              return LH.observe(HH, {
+              return GB.observe(BB, {
                 attributes: !0,
                 attributeFilter: ["type"],
                 characterData: !0,
@@ -8776,79 +8776,79 @@ export const modules = {
                 subtree: !0
               }), {
                 scan() {
-                  let BH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                  SH && !1 !== rH() && yt(HH.documentElement).forEach((HH => {
-                    BH && AH.delete(HH), tH(HH)
+                  let OB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                  QB && !1 !== DB() && By(BB.documentElement).forEach((BB => {
+                    OB && YB.delete(BB), jB(BB)
                   }))
                 },
-                stop: () => LH.disconnect()
+                stop: () => GB.disconnect()
               }
-            } catch (HH) {
+            } catch (BB) {
               return {
                 scan() {},
                 stop() {}
               }
             }
-          }(Br, yA.MutationObserver, {
-            maskUrl: HH => this.mn(HH),
-            attributeFilter: BH.attributeFilter,
-            blockClass: BH.blockClass,
-            blockSelector: BH.blockSelector,
-            isRecordedElement: HH => zH.mirror.getId(HH) > 0,
-            maskAllElementAttributes: BH.maskAllElementAttributes,
-            maskAttributeFn: BH.maskAttributeFn,
-            maskTextClass: BH.maskTextClass,
-            maskTextSelector: BH.maskTextSelector,
+          }(OD, tY.MutationObserver, {
+            maskUrl: BB => this.mn(BB),
+            attributeFilter: OB.attributeFilter,
+            blockClass: OB.blockClass,
+            blockSelector: OB.blockSelector,
+            isRecordedElement: BB => yB.mirror.getId(BB) > 0,
+            maskAllElementAttributes: OB.maskAllElementAttributes,
+            maskAttributeFn: OB.maskAttributeFn,
+            maskTextClass: OB.maskTextClass,
+            maskTextSelector: OB.maskTextSelector,
             getCaptureState: () => {
-              var HH;
-              return !0 !== (null === (HH = this._instance.config.session_recording) || void 0 === HH ? void 0 : HH.captureJsonLd) || this.Y.urlBlocked || this.Y.isCurrentUrlBlocked() ? null : this.bn()
+              var BB;
+              return !0 !== (null === (BB = this._instance.config.session_recording) || void 0 === BB ? void 0 : BB.captureJsonLd) || this.Y.urlBlocked || this.Y.isCurrentUrlBlocked() ? null : this.bn()
             },
-            emit: HH => this.wn(HH)
-          }), this.Y.isCurrentUrlBlocked() && this._n.scan()), this.le = Date.now(), this.de = Wr(this.de) ? this.de : "unknown", this.tryAddCustomEvent("$remote_config_received", this.ne), this.Vt("$session_options", {
-            sessionRecordingOptions: BH,
-            activePlugins: CH.map((HH => null == HH ? void 0 : HH.name))
+            emit: BB => this.wn(BB)
+          }), this.Y.isCurrentUrlBlocked() && this._n.scan()), this.le = Date.now(), this.de = ZD(this.de) ? this.de : "unknown", this.tryAddCustomEvent("$remote_config_received", this.ne), this.Vt("$session_options", {
+            sessionRecordingOptions: OB,
+            activePlugins: JB.map((BB => null == BB ? void 0 : BB.name))
           }), this.Vt("$posthog_config", {
             config: this._instance.config
           })
         }
-        tryAddCustomEvent(HH, BH) {
-          return this.Vt(HH, BH)
+        tryAddCustomEvent(BB, OB) {
+          return this.Vt(BB, OB)
         }
       };
-      rr.__PosthogExtensions__ = rr.__PosthogExtensions__ || {}, rr.__PosthogExtensions__.rrwebPlugins = {
-        getRecordConsolePlugin: HH => ({
+      DD.__PosthogExtensions__ = DD.__PosthogExtensions__ || {}, DD.__PosthogExtensions__.rrwebPlugins = {
+        getRecordConsolePlugin: BB => ({
           name: "rrweb/console@1",
-          observer: pA,
-          options: HH
+          observer: xY,
+          options: BB
         }),
-        getRecordNetworkPlugin: HH => ({
+        getRecordNetworkPlugin: BB => ({
           name: "rrweb/network@1",
-          observer: eS,
-          options: HH
+          observer: LQ,
+          options: BB
         })
-      }, rr.__PosthogExtensions__.rrweb = {
-        record: eA,
+      }, DD.__PosthogExtensions__.rrweb = {
+        record: LY,
         version: "v2",
-        wasMaxDepthReached: () => BL,
+        wasMaxDepthReached: () => OG,
         resetMaxDepthState() {
-          BL = !1, HL = !1
+          OG = !1, BG = !1
         },
-        getLastSnapshotCost: () => RH,
-        getMutationCost: () => AH({}, wH),
-        getDeferredStylesheetStats: () => AH({}, ZH),
-        getDiscardedDurationSamples: () => fH,
-        getObserverInitFailures: () => sL.size ? Array.from(sL) : void 0,
+        getLastSnapshotCost: () => wB,
+        getMutationCost: () => YB({}, eB),
+        getDeferredStylesheetStats: () => YB({}, TB),
+        getDiscardedDurationSamples: () => mB,
+        getObserverInitFailures: () => HG.size ? Array.from(HG) : void 0,
         resetSnapshotCostState() {
-          eH = 0, qH = 0, gH = 0, IH = 0, fH = 0, NH = {
+          LB = 0, gB = 0, rB = 0, uB = 0, mB = 0, XB = {
             durationMs: 0,
             stylesheetMs: 0,
             nodeCount: 0,
             cssRuleCount: 0,
             nonDeferrableCssRuleCount: 0,
             deferredStylesheetCount: 0
-          }, RH = null, jH = null, nH = [], FH = 0, DH = 0, wH = {
+          }, wB = null, EB = null, cB = [], hB = 0, aB = 0, eB = {
             slowestBatchMs: 0
-          }, ZH = {
+          }, TB = {
             deferredCount: 0,
             failedCount: 0,
             abandonedCount: 0,
@@ -8856,9 +8856,9 @@ export const modules = {
             slowestSliceMs: 0
           }
         }
-      }, rr.__PosthogExtensions__.initSessionRecording = (HH, BH) => new mz(HH, BH)
+      }, DD.__PosthogExtensions__.initSessionRecording = (BB, OB) => new Ky(BB, OB)
     }()
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

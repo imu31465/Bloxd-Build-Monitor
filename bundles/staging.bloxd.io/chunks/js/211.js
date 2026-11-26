@@ -1,84 +1,84 @@
 export const id = 211;
 export const ids = [211, 212];
 export const modules = {
-  34819: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      reportJsMainStall: () => tH,
-      resetJsMainStallReport: () => zH
+  34624: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      reportJsMainStall: () => jB,
+      resetJsMainStallReport: () => yB
     });
-    var AH = LH(34821),
-      rH = LH(1826),
-      SH = LH(34825);
-    let hH = !1;
+    var YB = GB(34626),
+      DB = GB(1856),
+      QB = GB(34631);
+    let oB = !1;
 
-    function tH(HH, BH, LH, tH) {
-      hH || (hH = !0, (0, rH.reportClientError)("wasm_load", (0, SH.e)(HH, BH, LH, tH, (0, SH.h)()), "JS-mainStall", !0, AH.CAPPED_COUNTS_VISIT_CAP))
+    function jB(BB, OB, GB, jB) {
+      oB || (oB = !0, (0, DB.reportClientError)("wasm_load", (0, QB.b)(BB, OB, GB, jB, (0, QB.d)()), "JS-mainStall", !0, YB.CAPPED_COUNTS_VISIT_CAP))
     }
 
-    function zH() {
-      hH = !1
+    function yB() {
+      oB = !1
     }
   },
-  34825: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => tH,
-      h: () => hH
+  34631: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => jB,
+      d: () => oB
     });
-    var AH = LH(241),
-      rH = LH(114),
-      SH = LH(34828);
+    var YB = GB(258),
+      DB = GB(118),
+      QB = GB(34637);
 
-    function hH() {
-      var HH, BH, LH;
-      return null !== (HH = (0, AH.o)(null !== (BH = null === (LH = (0, rH.l)()) || void 0 === LH ? void 0 : LH.renderer) && void 0 !== BH ? BH : null, (0, rH.i)())) && void 0 !== HH ? HH : "unknown"
+    function oB() {
+      var BB, OB, GB;
+      return null !== (BB = (0, YB.j)(null !== (OB = null === (GB = (0, DB.o)()) || void 0 === GB ? void 0 : GB.renderer) && void 0 !== OB ? OB : null, (0, DB.m)())) && void 0 !== BB ? BB : "unknown"
     }
 
-    function tH(HH, BH, LH, AH, rH) {
-      const hH = null === BH ? "untimed" : `${Math.round(BH)} ms`;
-      return `frames stalled, ${LH}, gpu ${(0,SH.c)(rH)}, blocking ${hH}, drawn ${Math.round(HH)} ms apart, timers ${AH.timers}, timer gap ${Math.round(AH.longestGapMs)} ms`
+    function jB(BB, OB, GB, YB, DB) {
+      const oB = null === OB ? "untimed" : `${Math.round(OB)} ms`;
+      return `frames stalled, ${GB}, gpu ${(0,QB.c)(DB)}, blocking ${oB}, drawn ${Math.round(BB)} ms apart, timers ${YB.timers}, timer gap ${Math.round(YB.longestGapMs)} ms`
     }
   },
-  34821: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      CAPPED_COUNTS_VISIT_CAP: () => SH,
-      reportCappedWasmFailure: () => zH,
-      reportUncappedWasmFailure: () => tH,
-      reportWasmCrash: () => rH,
-      reportWasmFailure: () => hH
+  34626: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      CAPPED_COUNTS_VISIT_CAP: () => QB,
+      reportCappedWasmFailure: () => yB,
+      reportUncappedWasmFailure: () => jB,
+      reportWasmCrash: () => DB,
+      reportWasmFailure: () => oB
     });
-    var AH = LH(1826);
+    var YB = GB(1856);
 
-    function rH(HH) {
-      (0, AH.reportClientError)("wasm_load", HH.message, HH.code)
+    function DB(BB) {
+      (0, YB.reportClientError)("wasm_load", BB.message, BB.code)
     }
-    const SH = AH.MAX_ERRORS_PER_VISIT - 4;
+    const QB = YB.MAX_ERRORS_PER_VISIT - 4;
 
-    function hH(HH, BH, LH, rH) {
-      (0, AH.reportClientError)(HH, BH, LH, !1, AH.MAX_ERRORS_PER_VISIT, {
-        context: rH
+    function oB(BB, OB, GB, DB) {
+      (0, YB.reportClientError)(BB, OB, GB, !1, YB.MAX_ERRORS_PER_VISIT, {
+        context: DB
       })
     }
 
-    function tH(HH, BH, LH, rH) {
-      (0, AH.reportClientError)(HH, BH, LH, !1, 1 / 0, {
-        context: rH
+    function jB(BB, OB, GB, DB) {
+      (0, YB.reportClientError)(BB, OB, GB, !1, 1 / 0, {
+        context: DB
       })
     }
 
-    function zH(HH, BH, LH, rH) {
-      (0, AH.reportClientError)(HH, BH, LH, !1, SH, {
-        context: rH
+    function yB(BB, OB, GB, DB) {
+      (0, YB.reportClientError)(BB, OB, GB, !1, QB, {
+        context: DB
       })
     }
   },
-  34828: (HH, BH, LH) => {
-    function AH(HH) {
-      return String(HH).replace(/\d/g, (HH => String.fromCharCode(97 + Number(HH))))
+  34637: (BB, OB, GB) => {
+    function YB(BB) {
+      return String(BB).replace(/\d/g, (BB => String.fromCharCode(97 + Number(BB))))
     }
-    LH.d(BH, {
-      c: () => AH
+    GB.d(OB, {
+      c: () => YB
     })
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,18 +1,18 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  40261: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      makeSmp2ClientGame: () => SH
+  40007: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      makeSmp2ClientGame: () => QB
     });
-    const AH = "smp2FirstSpawn";
-    var rH = LH(1689);
+    const YB = "smp2FirstSpawn";
+    var DB = GB(1723);
 
-    function SH() {
-      let HH = !1;
+    function QB() {
+      let BB = !1;
       return {
-        onReceivedMessageFromServer: BH => {
-          BH !== AH || HH || (HH = !0, (0, rH.f)({
+        onReceivedMessageFromServer: OB => {
+          OB !== YB || BB || (BB = !0, (0, DB.h)({
             id: "smp2.first_spawn"
           }))
         }
@@ -21,4 +21,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

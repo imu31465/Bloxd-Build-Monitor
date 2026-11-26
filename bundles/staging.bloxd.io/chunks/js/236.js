@@ -1,86 +1,86 @@
 export const id = 236;
 export const ids = [236, 237];
 export const modules = {
-  44789: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      CharacterCustomisationUI: () => CB
+  44444: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      CharacterCustomisationUI: () => JO
     });
-    var AH = LH(45),
-      rH = LH(2800),
-      SH = LH(3865),
-      hH = LH(3847),
-      tH = LH(1061),
-      zH = LH(1038),
-      CH = LH.n(zH),
-      EH = LH(1182),
-      XH = LH(597),
-      GH = LH(1123),
-      YH = LH(2339),
-      uH = LH(1565),
-      QH = LH(2760);
-    const WH = EH.r.filter((HH => !uH.k.includes(HH)));
+    var YB = GB(56),
+      DB = GB(2839),
+      QB = GB(3915),
+      oB = GB(3903),
+      jB = GB(1112),
+      yB = GB(1090),
+      JB = GB.n(yB),
+      MB = GB(1238),
+      PB = GB(615),
+      zB = GB(1175),
+      lB = GB(2392),
+      pB = GB(1611),
+      qB = GB(2787);
+    const ZB = MB.t.filter((BB => !pB.l.includes(BB)));
 
-    function MH(HH, BH) {
-      return WH.includes(HH) && "string" === typeof BH && (0, QH.e)(HH, BH)
+    function NB(BB, OB) {
+      return ZB.includes(BB) && "string" === typeof OB && (0, qB.e)(BB, OB)
     }
 
-    function xH(HH) {
-      const BH = {};
-      for (const LH of WH) {
-        const AH = HH[LH];
-        void 0 !== AH && MH(LH, AH) && (BH[LH] = AH)
+    function RB(BB) {
+      const OB = {};
+      for (const GB of ZB) {
+        const YB = BB[GB];
+        void 0 !== YB && NB(GB, YB) && (OB[GB] = YB)
       }
-      return BH
+      return OB
     }
 
-    function vH(HH) {
-      return 0 === Object.keys(HH).length
+    function WB(BB) {
+      return 0 === Object.keys(BB).length
     }
 
-    function PH(HH, BH) {
-      return Object.entries(HH).every((HH => {
-        let [LH, AH] = HH;
-        return BH[LH] === AH
+    function AB(BB, OB) {
+      return Object.entries(BB).every((BB => {
+        let [GB, YB] = BB;
+        return OB[GB] === YB
       }))
     }
-    var TH = LH(2347),
-      UH = LH(3436),
-      VH = LH(2051),
-      OH = LH(1455),
-      bH = LH(2388),
-      kH = LH(2486),
-      mH = LH(15),
-      oH = LH(2936),
-      IH = LH(1502),
-      fH = LH(1070),
-      lH = LH(1922);
-    class KH {
+    var VB = GB(2397),
+      SB = GB(3497),
+      nB = GB(2063),
+      UB = GB(1485),
+      fB = GB(2437),
+      kB = GB(2516),
+      dB = GB(16),
+      KB = GB(2974),
+      uB = GB(1540),
+      mB = GB(1121),
+      IB = GB(1964);
+    class FB {
       constructor() {
         this.slots = new Map, this.before = new Map, this.accountId = null
       }
-      moveTo(HH) {
-        null !== HH && HH !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = HH)
+      moveTo(BB) {
+        null !== BB && BB !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = BB)
       }
-      isFor(HH) {
-        return null === this.accountId || this.accountId === HH
+      isFor(BB) {
+        return null === this.accountId || this.accountId === BB
       }
-      overlay(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return HH.map(((HH, LH) => {
-          var AH, rH;
-          return null !== (AH = null !== (rH = this.slots.get(LH)) && void 0 !== rH ? rH : BH.get(LH)) && void 0 !== AH ? AH : HH
+      overlay(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return BB.map(((BB, GB) => {
+          var YB, DB;
+          return null !== (YB = null !== (DB = this.slots.get(GB)) && void 0 !== DB ? DB : OB.get(GB)) && void 0 !== YB ? YB : BB
         }))
       }
     }
-    class cH extends oH.b {
+    class iB extends KB.c {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new KH;
-        super("saved outfits", (async BH => {
-          const LH = HH.isFor(BH.whamm),
-            AH = new Map(HH.slots),
-            rH = await IH.d.getSavedOutfits(BH);
-          return LH ? HH.overlay(rH, AH) : rH
-        })), this.unsaved = HH, this.started = !1, this.sending = !1
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new FB;
+        super("saved outfits", (async OB => {
+          const GB = BB.isFor(OB.whamm),
+            YB = new Map(BB.slots),
+            DB = await uB.b.getSavedOutfits(OB);
+          return GB ? BB.overlay(DB, YB) : DB
+        })), this.unsaved = BB, this.started = !1, this.sending = !1
       }
       ensureLoaded() {
         if (this.started) {
@@ -88,792 +88,792 @@ export const modules = {
         } else this.started = !0, this.watchAccount();
         this.refresh()
       }
-      save(HH, BH) {
-        var LH, AH;
-        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(HH)) || this.unsaved.before.set(HH, null !== (LH = null === (AH = this.getState().data) || void 0 === AH ? void 0 : AH[HH]) && void 0 !== LH ? LH : {});
-        this.unsaved.slots.set(HH, BH), this.update((LH => LH.map(((LH, AH) => AH === HH ? BH : LH)))), this.sending || this.sendUnsaved()
+      save(BB, OB) {
+        var GB, YB;
+        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(BB)) || this.unsaved.before.set(BB, null !== (GB = null === (YB = this.getState().data) || void 0 === YB ? void 0 : YB[BB]) && void 0 !== GB ? GB : {});
+        this.unsaved.slots.set(BB, OB), this.update((GB => GB.map(((GB, YB) => YB === BB ? OB : GB)))), this.sending || this.sendUnsaved()
       }
-      clear(HH) {
-        this.save(HH, {})
+      clear(BB) {
+        this.save(BB, {})
       }
       async sendUnsaved() {
         this.sending = !0;
-        let HH = !1;
+        let BB = !1;
         for (; this.unsaved.slots.size > 0;) {
-          const LH = new Map(this.unsaved.slots);
-          let AH = this.getState().accountId;
+          const GB = new Map(this.unsaved.slots);
+          let YB = this.getState().accountId;
           try {
-            const HH = await fH.userContextManager.getCurrentUserContext();
-            if (AH = HH.whamm, this.unsaved.moveTo(HH.whamm), 0 === this.unsaved.slots.size) {
+            const BB = await mB.userContextManager.getCurrentUserContext();
+            if (YB = BB.whamm, this.unsaved.moveTo(BB.whamm), 0 === this.unsaved.slots.size) {
               this.refresh();
               break
             }
             const {
-              accountId: BH,
-              data: rH
+              accountId: OB,
+              data: DB
             } = this.getState();
-            let SH = rH;
-            BH === HH.whamm && null !== SH || (SH = this.unsaved.overlay(await IH.d.getSavedOutfits(HH)), this.refresh()), await IH.d.setSavedOutfits(HH, SH), this.unsaved.isFor(HH.whamm) && SH.forEach(((HH, BH) => {
-              const AH = this.unsaved.slots.get(BH);
-              void 0 === AH || AH === LH.get(BH) ? this.unsaved.before.delete(BH) : this.unsaved.before.set(BH, HH)
+            let QB = DB;
+            OB === BB.whamm && null !== QB || (QB = this.unsaved.overlay(await uB.b.getSavedOutfits(BB)), this.refresh()), await uB.b.setSavedOutfits(BB, QB), this.unsaved.isFor(BB.whamm) && QB.forEach(((BB, OB) => {
+              const YB = this.unsaved.slots.get(OB);
+              void 0 === YB || YB === GB.get(OB) ? this.unsaved.before.delete(OB) : this.unsaved.before.set(OB, BB)
             }))
-          } catch (BH) {
-            if (console.error("Failed to save outfits", BH), this.getState().accountId === AH && [...this.unsaved.slots].every((HH => {
-                let [BH, AH] = HH;
-                return LH.get(BH) === AH
+          } catch (OB) {
+            if (console.error("Failed to save outfits", OB), this.getState().accountId === YB && [...this.unsaved.slots].every((BB => {
+                let [OB, YB] = BB;
+                return GB.get(OB) === YB
               }))) {
-              const BH = [...LH.values()].every(vH);
-              lH.h.showMessage({
-                translationKey: BH ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
+              const OB = [...GB.values()].every(WB);
+              IB.d.showMessage({
+                translationKey: OB ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
               });
-              const AH = new Map(this.unsaved.before);
-              this.unsaved.before.clear(), this.update((HH => HH.map(((HH, BH) => {
-                var LH;
-                return null !== (LH = AH.get(BH)) && void 0 !== LH ? LH : HH
-              })))), HH = !0
+              const YB = new Map(this.unsaved.before);
+              this.unsaved.before.clear(), this.update((BB => BB.map(((BB, OB) => {
+                var GB;
+                return null !== (GB = YB.get(OB)) && void 0 !== GB ? GB : BB
+              })))), BB = !0
             }
           }
-          for (const [HH, BH] of LH) this.unsaved.slots.get(HH) === BH && this.unsaved.slots.delete(HH)
+          for (const [BB, OB] of GB) this.unsaved.slots.get(BB) === OB && this.unsaved.slots.delete(BB)
         }
-        this.sending = !1, HH && this.refresh()
+        this.sending = !1, BB && this.refresh()
       }
     }
-    const eH = new cH;
-    var qH = LH(317),
-      gH = LH(44796),
-      NH = LH(1556),
-      RH = LH(2464),
-      jH = LH(3319),
-      nH = LH(3431),
-      FH = LH(2406),
-      DH = LH(1315);
-    LH(35016), LH(3442);
+    const LB = new iB;
+    var gB = GB(353),
+      rB = GB(44451),
+      XB = GB(1606),
+      wB = GB(2496),
+      EB = GB(3370),
+      cB = GB(3494),
+      hB = GB(2454),
+      aB = GB(1383);
+    GB(34828), GB(3506);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var wH = LH(2397),
-      ZH = LH(3454),
-      dH = LH(3458),
-      aH = LH(1365),
-      sH = LH(2530),
-      JH = LH(1352),
-      iH = LH(1225);
+    var eB = GB(2444),
+      TB = GB(3516),
+      bB = GB(3521),
+      CB = GB(1405),
+      HB = GB(2554),
+      vB = GB(1400),
+      sB = GB(1282);
 
-    function pH(HH) {
+    function xB(BB) {
       let {
-        wornOutfit: BH,
-        onApply: LH,
-        onOverwrite: rH,
-        onDelete: SH
-      } = HH;
+        wornOutfit: OB,
+        onApply: GB,
+        onOverwrite: DB,
+        onDelete: QB
+      } = BB;
       const {
-        t: hH
-      } = (0, GH.B)(), {
-        accountId: zH,
-        data: EH
-      } = (0, oH.h)(eH, !1), {
-        userContext: XH
-      } = (0, tH.e)();
-      async function YH(HH, BH) {
-        const LH = await JH.NotificationProvider.showPromptPopup({
+        t: oB
+      } = (0, zB.H)(), {
+        accountId: yB,
+        data: MB
+      } = (0, KB.h)(LB, !1), {
+        userContext: PB
+      } = (0, jB.d)();
+      async function lB(BB, OB) {
+        const GB = await vB.NotificationProvider.showPromptPopup({
             title: "homePage:deleteOutfitConfirm",
             confirmText: "general:delete",
             cancelText: "general:cancel",
             destructive: !0
           }).getResult(),
           {
-            accountId: AH,
-            data: rH
-          } = eH.getState();
-        var hH, tH;
-        !0 === LH && AH === zH && null !== rH && (PH(hH = rH[HH], tH = BH) && PH(tH, hH)) && (eH.clear(HH), SH(HH))
+            accountId: YB,
+            data: DB
+          } = LB.getState();
+        var oB, jB;
+        !0 === GB && YB === yB && null !== DB && (AB(oB = DB[BB], jB = OB) && AB(jB, oB)) && (LB.clear(BB), QB(BB))
       }
-      return (0, AH.useEffect)((() => {
-        eH.ensureLoaded()
-      }), []), null === EH || zH !== XH.whamm ? null : (0, iH.jsxs)("div", {
+      return (0, YB.useEffect)((() => {
+        LB.ensureLoaded()
+      }), []), null === MB || yB !== PB.whamm ? null : (0, sB.jsxs)("div", {
         className: "CosmeticPackGroup SavedOutfits",
-        children: [(0, iH.jsx)("div", {
+        children: [(0, sB.jsx)("div", {
           className: "CosmeticPackGroupLabel",
-          children: (0, iH.jsx)("span", {
+          children: (0, sB.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: hH("homePage:myOutfits")
+            children: oB("homePage:myOutfits")
           })
-        }), (0, iH.jsx)("div", {
+        }), (0, sB.jsx)("div", {
           className: "CharacterPresetsGrid SavedOutfitsGrid",
-          children: EH.map(((HH, AH) => {
-            const SH = vH(HH);
-            return (0, iH.jsxs)("div", {
-              className: CH()("SavedOutfitSlot", {
-                SavedOutfitSlotFilled: !SH
+          children: MB.map(((BB, YB) => {
+            const QB = WB(BB);
+            return (0, sB.jsxs)("div", {
+              className: JB()("SavedOutfitSlot", {
+                SavedOutfitSlotFilled: !QB
               }),
-              children: [(0, iH.jsxs)("div", {
-                ...(0, OH.db)(),
-                role: SH ? "button" : "link",
+              children: [(0, sB.jsxs)("div", {
+                ...(0, UB.db)(),
+                role: QB ? "button" : "link",
                 "data-pad-focusable": !0,
-                className: CH()("CharacterPresetCard SavedOutfitCard", {
-                  SavedOutfitCardEmpty: SH,
-                  CharacterPresetCardActive: !SH && PH(HH, BH)
+                className: JB()("CharacterPresetCard SavedOutfitCard", {
+                  SavedOutfitCardEmpty: QB,
+                  CharacterPresetCardActive: !QB && AB(BB, OB)
                 }),
                 onClick: () => {
-                  SH ? eH.save(AH, BH) : LH(HH)
+                  QB ? LB.save(YB, OB) : GB(BB)
                 },
-                children: [SH && (0, iH.jsxs)(iH.Fragment, {
-                  children: [(0, iH.jsx)(DH.c, {
+                children: [QB && (0, sB.jsxs)(sB.Fragment, {
+                  children: [(0, sB.jsx)(aB.b, {
                     name: "plus"
-                  }), hH("homePage:saveOutfit")]
-                }), !SH && (0, iH.jsxs)(iH.Fragment, {
-                  children: [(0, iH.jsx)("div", {
+                  }), oB("homePage:saveOutfit")]
+                }), !QB && (0, sB.jsxs)(sB.Fragment, {
+                  children: [(0, sB.jsx)("div", {
                     className: "SavedOutfitCardPicture",
-                    children: (0, iH.jsx)(sH.c, {
-                      cosmetics: HH
+                    children: (0, sB.jsx)(HB.b, {
+                      cosmetics: BB
                     })
-                  }), (0, iH.jsx)(OH.W, {
+                  }), (0, sB.jsx)(UB.Z, {
                     padSecondaryLabelKey: "homePage:saveOutfit",
                     stopPropagation: !0,
                     onClick: () => {
-                      PH(BH, HH) || (eH.save(AH, BH), rH(AH, HH))
+                      AB(OB, BB) || (LB.save(YB, OB), DB(YB, BB))
                     },
-                    children: hH("general:save")
+                    children: oB("general:save")
                   })]
                 })]
-              }), !SH && (0, iH.jsx)("button", {
+              }), !QB && (0, sB.jsx)("button", {
                 type: "button",
                 className: "SavedOutfitDeleteButton",
                 "data-pad-destructive": !0,
-                "aria-label": hH("general:delete"),
-                title: hH("general:delete"),
+                "aria-label": oB("general:delete"),
+                title: oB("general:delete"),
                 onClick: () => {
-                  YH(AH, HH)
+                  lB(YB, BB)
                 },
-                children: (0, iH.jsx)(DH.c, {
+                children: (0, sB.jsx)(aB.b, {
                   name: "trash-can"
                 })
               })]
-            }, AH)
+            }, YB)
           }))
         })]
       })
     }
-    var yH = LH(37264),
-      HB = LH(2746),
-      BB = LH(2752);
+    var tB = GB(37063),
+      BO = GB(2775),
+      OO = GB(2782);
 
-    function LB(HH, BH, LH) {
-      return null !== HH && !(0, HB.f)(BB.b, BH, LH, HH.collected, HH.ownedPacks)
+    function GO(BB, OB, GB) {
+      return null !== BB && !(0, BO.e)(OO.e, OB, GB, BB.collected, BB.ownedPacks)
     }
 
-    function AB(HH) {
+    function YO(BB) {
       let {
-        locked: BH,
-        children: LH
-      } = HH;
-      return BH ? (0, iH.jsx)(rB, {
-        children: LH
-      }) : LH
+        locked: OB,
+        children: GB
+      } = BB;
+      return OB ? (0, sB.jsx)(DO, {
+        children: GB
+      }) : GB
     }
 
-    function rB(HH) {
-      var BH;
+    function DO(BB) {
+      var OB;
       let {
-        children: LH
-      } = HH;
+        children: GB
+      } = BB;
       const {
-        t: AH
-      } = (0, GH.B)(), {
-        userContext: rH
-      } = (0, tH.e)(), SH = null !== (BH = rH.dailyDrop) && void 0 !== BH && BH.hidden ? AH("dailyDrop:lockedFromHidden") : AH("dailyDrop:lockedFrom");
-      return (0, iH.jsx)(aH.g, {
-        tooltipInner: (0, iH.jsx)(iH.Fragment, {
-          children: SH
+        t: YB
+      } = (0, zB.H)(), {
+        userContext: DB
+      } = (0, jB.d)(), QB = null !== (OB = DB.dailyDrop) && void 0 !== OB && OB.hidden ? YB("dailyDrop:lockedFromHidden") : YB("dailyDrop:lockedFrom");
+      return (0, sB.jsx)(CB.g, {
+        tooltipInner: (0, sB.jsx)(sB.Fragment, {
+          children: QB
         }),
-        children: LH
+        children: GB
       })
     }
 
-    function SB(HH, BH, LH) {
-      return (0, YH.k)(HH, BH).purchasable && !(0, RH.y)(HH, BH, LH)
+    function QO(BB, OB, GB) {
+      return (0, lB.p)(BB, OB).purchasable && !(0, wB.x)(BB, OB, GB)
     }
 
-    function hB(HH, BH) {
-      return Object.entries(HH).some((HH => {
-        let [LH, AH] = HH;
-        return SB(LH, AH, BH)
+    function oO(BB, OB) {
+      return Object.entries(BB).some((BB => {
+        let [GB, YB] = BB;
+        return QO(GB, YB, OB)
       }))
     }
 
-    function tB(HH) {
-      var BH;
+    function jO(BB) {
+      var OB;
       let {
-        pack: LH,
-        ownedPacks: AH,
-        showStoreLink: rH = !1,
-        children: SH
-      } = HH;
+        pack: GB,
+        ownedPacks: YB,
+        showStoreLink: DB = !1,
+        children: QB
+      } = BB;
       const {
-        t: hH
-      } = (0, GH.B)(), tH = NH.b[LH], zH = tH.purchasable && !AH.includes(LH) && NH.o.includes(LH), EH = jH.j[LH];
-      return (0, iH.jsxs)("div", {
-        className: CH()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: zH
+        t: oB
+      } = (0, zB.H)(), jB = XB.d[GB], yB = jB.purchasable && !YB.includes(GB) && XB.u.includes(GB), MB = EB.k[GB];
+      return (0, sB.jsxs)("div", {
+        className: JB()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: yB
         }),
-        children: [EH && (0, iH.jsx)(EH, {}), (0, iH.jsxs)("div", {
+        children: [MB && (0, sB.jsx)(MB, {}), (0, sB.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, iH.jsx)("span", {
+          children: [(0, sB.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: null !== (BH = tH.displayName) && void 0 !== BH ? BH : LH
-          }), (zH || rH) && (0, iH.jsxs)(OH.G, {
+            children: null !== (OB = jB.displayName) && void 0 !== OB ? OB : GB
+          }), (yB || DB) && (0, sB.jsxs)(UB.H, {
             onClick: () => {
-              zH ? (0, jH.i)(LH) : (0, bH.k)({
+              yB ? (0, EB.i)(GB) : (0, fB.p)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, iH.jsx)(DH.c, {
+            children: [(0, sB.jsx)(aB.b, {
               name: "store"
-            }), " ", hH("general:viewInShop")]
+            }), " ", oB("general:viewInShop")]
           })]
-        }), zH && "bee" === LH && (0, iH.jsx)(jH.c, {}), SH]
+        }), yB && "bee" === GB && (0, sB.jsx)(EB.e, {}), QB]
       })
     }
 
-    function zB(HH) {
+    function yO(BB) {
       let {
-        equippedEmoteIds: BH,
-        ownedPacks: LH,
-        canBuy: AH,
-        onUpdateLoadout: rH,
-        onEmoteSelected: SH,
-        onEquipPreviewSkin: hH
-      } = HH;
+        equippedEmoteIds: OB,
+        ownedPacks: GB,
+        canBuy: YB,
+        onUpdateLoadout: DB,
+        onEmoteSelected: QB,
+        onEquipPreviewSkin: oB
+      } = BB;
       const {
-        t: tH
-      } = (0, GH.B)(), zH = new Set(BH), XH = new Map, uH = Object.keys(YH.d.emote).sort(((HH, BH) => {
-        var LH, AH, rH, SH;
-        return (null !== (LH = null === (AH = (0, YH.h)("emote", HH)) || void 0 === AH ? void 0 : AH.clientIdx) && void 0 !== LH ? LH : 0) - (null !== (rH = null === (SH = (0, YH.h)("emote", BH)) || void 0 === SH ? void 0 : SH.clientIdx) && void 0 !== rH ? rH : 0)
-      })).filter((HH => {
-        const BH = (0, YH.k)("emote", HH),
-          rH = (0, RH.y)("emote", HH, LH);
-        return !(BH.purchasable && !rH && !AH) && (BH.clientSelectable || rH)
+        t: jB
+      } = (0, zB.H)(), yB = new Set(OB), PB = new Map, pB = Object.keys(lB.h.emote).sort(((BB, OB) => {
+        var GB, YB, DB, QB;
+        return (null !== (GB = null === (YB = (0, lB.n)("emote", BB)) || void 0 === YB ? void 0 : YB.clientIdx) && void 0 !== GB ? GB : 0) - (null !== (DB = null === (QB = (0, lB.n)("emote", OB)) || void 0 === QB ? void 0 : QB.clientIdx) && void 0 !== DB ? DB : 0)
+      })).filter((BB => {
+        const OB = (0, lB.p)("emote", BB),
+          DB = (0, wB.x)("emote", BB, GB);
+        return !(OB.purchasable && !DB && !YB) && (OB.clientSelectable || DB)
       }));
-      for (const CH of uH) {
-        const HH = (0, YH.h)("emote", CH).cosmeticPack;
-        XH.has(HH) || XH.set(HH, []), XH.get(HH).push(CH)
+      for (const JB of pB) {
+        const BB = (0, lB.n)("emote", JB).cosmeticPack;
+        PB.has(BB) || PB.set(BB, []), PB.get(BB).push(JB)
       }
-      const QH = Array.from(XH.keys());
-      return (0, iH.jsxs)("div", {
+      const qB = Array.from(PB.keys());
+      return (0, sB.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, iH.jsxs)("div", {
+        children: [!1, (0, sB.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, iH.jsx)("span", {
+          children: [(0, sB.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: tH("emotes:equippedCount", {
-              count: BH.length,
-              max: EH.l
+            children: jB("emotes:equippedCount", {
+              count: OB.length,
+              max: MB.j
             })
-          }), (0, iH.jsx)("span", {
+          }), (0, sB.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: tH("emotes:loadoutHint")
+            children: jB("emotes:loadoutHint")
           })]
-        }), QH.map((HH => {
-          const AH = XH.get(HH);
-          return (0, iH.jsx)(tB, {
-            pack: HH,
-            ownedPacks: LH,
-            children: (0, iH.jsx)("div", {
+        }), qB.map((BB => {
+          const YB = PB.get(BB);
+          return (0, sB.jsx)(jO, {
+            pack: BB,
+            ownedPacks: GB,
+            children: (0, sB.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: AH.map((HH => {
-                var AH;
-                const hH = BH.indexOf(HH),
-                  XH = -1 !== hH,
-                  GH = BH.length >= EH.l,
-                  YH = SB("emote", HH, LH),
-                  uH = YH || !XH && GH,
-                  QH = (0, TH.i)(HH);
-                return (0, iH.jsxs)("div", {
-                  className: CH()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: XH
+              children: YB.map((BB => {
+                var YB;
+                const oB = OB.indexOf(BB),
+                  PB = -1 !== oB,
+                  zB = OB.length >= MB.j,
+                  lB = QO("emote", BB, GB),
+                  pB = lB || !PB && zB,
+                  qB = (0, VB.k)(BB);
+                return (0, sB.jsxs)("div", {
+                  className: JB()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: PB
                   }),
                   onClick: () => {
-                    SH(HH)
+                    QB(BB)
                   },
-                  children: [(0, iH.jsxs)("div", {
+                  children: [(0, sB.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, iH.jsx)("div", {
+                    children: [(0, sB.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(${(0,ZH.d)("emote",HH)})`
+                        backgroundImage: `url(${(0,TB.f)("emote",BB)})`
                       },
                       "aria-hidden": !0
-                    }), (0, iH.jsx)("span", {
+                    }), (0, sB.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (AH = null === QH || void 0 === QH ? void 0 : QH.displayName) && void 0 !== AH ? AH : HH
+                      children: null !== (YB = null === qB || void 0 === qB ? void 0 : qB.displayName) && void 0 !== YB ? YB : BB
                     })]
-                  }), (0, iH.jsxs)("div", {
+                  }), (0, sB.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [XH && (0, iH.jsx)("span", {
+                    children: [PB && (0, sB.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: hH + 1
-                    }), YH && (0, iH.jsx)(DH.c, {
+                      children: oB + 1
+                    }), lB && (0, sB.jsx)(aB.b, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, iH.jsx)(aH.g, {
-                      tooltipInner: (0, iH.jsx)(iH.Fragment, {
-                        children: tH(XH ? "general:remove" : "general:add")
+                    }), (0, sB.jsx)(CB.g, {
+                      tooltipInner: (0, sB.jsx)(sB.Fragment, {
+                        children: jB(PB ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, iH.jsx)("div", {
-                        className: CH()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: uH,
-                          EmoteCustomPartToggleEquipped: XH
+                      children: (0, sB.jsx)("div", {
+                        className: JB()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: pB,
+                          EmoteCustomPartToggleEquipped: PB
                         }),
-                        onClick: LH => {
-                          LH.stopPropagation(), uH || function(HH) {
-                            zH.has(HH) ? rH(BH.filter((BH => BH !== HH))) : BH.length >= EH.l || rH([...BH, HH])
-                          }(HH)
+                        onClick: GB => {
+                          GB.stopPropagation(), pB || function(BB) {
+                            yB.has(BB) ? DB(OB.filter((OB => OB !== BB))) : OB.length >= MB.j || DB([...OB, BB])
+                          }(BB)
                         },
-                        children: (0, iH.jsx)(DH.c, {
-                          name: XH ? "minus" : "plus",
+                        children: (0, sB.jsx)(aB.b, {
+                          name: PB ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, HH)
+                }, BB)
               }))
             })
-          }, HH)
+          }, BB)
         }))]
       })
     }
-    const CB = (0, AH.memo)((function(HH) {
+    const JO = (0, YB.memo)((function(BB) {
       let {
-        selectedTab: BH
-      } = HH;
-      const LH = "characters" === BH ? "skin" : BH,
+        selectedTab: OB
+      } = BB;
+      const GB = "characters" === OB ? "skin" : OB,
         {
-          t: zH
-        } = (0, GH.B)(),
+          t: yB
+        } = (0, zB.H)(),
         {
-          userContext: WH,
-          isUserContextUpdating: MH
-        } = (0, tH.e)(),
-        vH = (0, rH.e)(),
+          userContext: ZB,
+          isUserContextUpdating: NB
+        } = (0, jB.d)(),
+        WB = (0, DB.c)(),
         {
-          gameState: TH
-        } = (0, mH.m)(["gameState"]),
-        [oH, IH] = (0, AH.useState)({}),
-        fH = (0, AH.useRef)(oH);
-      fH.current = oH;
-      const [lH, KH] = (0, AH.useState)({}), [cH, jH] = (0, AH.useState)(null), {
-        previewEmote: ZH,
-        triggerEmote: aH
-      } = (0, UH.e)(), sH = (0, AH.useRef)(EH.r.reduce(((HH, BH) => (HH[BH] = (0, QH.d)(BH), HH)), {})), JH = (0, AH.useRef)(!1), HB = (0, AH.useRef)(null), BB = (0, AH.useRef)(ZH);
-      BB.current = ZH;
-      const rB = (0, AH.useRef)(null),
-        CB = (0, AH.useRef)(null);
+          gameState: VB
+        } = (0, dB.o)(["gameState"]),
+        [KB, uB] = (0, YB.useState)({}),
+        mB = (0, YB.useRef)(KB);
+      mB.current = KB;
+      const [IB, FB] = (0, YB.useState)({}), [iB, EB] = (0, YB.useState)(null), {
+        previewEmote: TB,
+        triggerEmote: CB
+      } = (0, SB.c)(), HB = (0, YB.useRef)(MB.t.reduce(((BB, OB) => (BB[OB] = (0, qB.d)(OB), BB)), {})), vB = (0, YB.useRef)(!1), BO = (0, YB.useRef)(null), OO = (0, YB.useRef)(TB);
+      OO.current = TB;
+      const DO = (0, YB.useRef)(null),
+        JO = (0, YB.useRef)(null);
 
-      function EB() {
-        null !== rB.current && (clearTimeout(rB.current), rB.current = null);
-        const HH = CB.current;
-        null !== HH && (CB.current = null, (0, yH.d)(WH, [
-          ["emote", HH]
+      function MO() {
+        null !== DO.current && (clearTimeout(DO.current), DO.current = null);
+        const BB = JO.current;
+        null !== BB && (JO.current = null, (0, tB.d)(ZB, [
+          ["emote", BB]
         ]))
       }
 
-      function XB(HH, BH, LH) {
-        var AH, rH, SH;
-        sH.current = {
-          ...sH.current,
-          [HH]: BH
-        }, vH(), LH && ((0, yH.d)(WH, [
-          [HH, BH]
-        ]), jH(null));
-        const hH = (0, YH.h)(HH, BH);
-        if (null !== hH && void 0 !== hH && hH.colourGroup && null !== (AH = NH.b[hH.cosmeticPack].colourGroups) && void 0 !== AH && null !== (rH = AH[hH.colourGroup]) && void 0 !== rH && rH.showSwatchSelector) {
-          const LH = (0, YH.f)(BH);
-          LH && KH((BH => ({
-            ...BH,
-            [`${hH.cosmeticPack}_${HH}_${hH.colourGroup}`]: parseInt(LH[1])
+      function PO(BB, OB, GB) {
+        var YB, DB, QB;
+        HB.current = {
+          ...HB.current,
+          [BB]: OB
+        }, WB(), GB && ((0, tB.d)(ZB, [
+          [BB, OB]
+        ]), EB(null));
+        const oB = (0, lB.n)(BB, OB);
+        if (null !== oB && void 0 !== oB && oB.colourGroup && null !== (YB = XB.d[oB.cosmeticPack].colourGroups) && void 0 !== YB && null !== (DB = YB[oB.colourGroup]) && void 0 !== DB && DB.showSwatchSelector) {
+          const GB = (0, lB.l)(OB);
+          GB && FB((OB => ({
+            ...OB,
+            [`${oB.cosmeticPack}_${BB}_${oB.colourGroup}`]: parseInt(GB[1])
           })))
         }
-        null !== (SH = HB.current) && void 0 !== SH && SH.isReady() && HB.current.updateCosmetic(HH, BH)
+        null !== (QB = BO.current) && void 0 !== QB && QB.isReady() && BO.current.updateCosmetic(BB, OB)
       }
 
-      function GB(HH) {
-        IH((BH => {
-          const LH = {
-            ...BH
+      function zO(BB) {
+        uB((OB => {
+          const GB = {
+            ...OB
           };
-          return delete LH[HH], LH
+          return delete GB[BB], GB
         }))
       }
 
-      function YB(HH, BH) {
+      function lO(BB, OB) {
         let {
-          undoable: LH
-        } = BH;
-        Object.keys(oH).length > 0 && IH({});
-        const AH = Object.entries(HH).filter((HH => {
-          let [BH, LH] = HH;
-          return sH.current[BH] !== LH && !SB(BH, LH, uB) && !LB(QB, BH, LH)
+          undoable: GB
+        } = OB;
+        Object.keys(KB).length > 0 && uB({});
+        const YB = Object.entries(BB).filter((BB => {
+          let [OB, GB] = BB;
+          return HB.current[OB] !== GB && !QO(OB, GB, pO) && !GO(qO, OB, GB)
         }));
-        LH ? AH.length > 0 && jH({
+        GB ? YB.length > 0 && EB({
           kind: "worn",
-          outfit: xH(sH.current)
-        }) : jH(null);
-        for (const [rH, SH] of AH) XB(rH, SH, !1);
-        AH.length > 0 && (0, yH.d)(WH, AH)
-      }(0, VH.b)("cosmeticsUpdated", (HH => {
-        let BH = !1;
+          outfit: RB(HB.current)
+        }) : EB(null);
+        for (const [DB, QB] of YB) PO(DB, QB, !1);
+        YB.length > 0 && (0, tB.d)(ZB, YB)
+      }(0, nB.b)("cosmeticsUpdated", (BB => {
+        let OB = !1;
         for (const {
-            local: LH,
-            rh: AH,
-            Sh: rH
+            local: GB,
+            UB: YB,
+            fB: DB
           }
-          of HH) {
-          if (!LH) return;
-          BH = !0, JH.current || XB(AH, rH, !1), vH()
+          of BB) {
+          if (!GB) return;
+          OB = !0, vB.current || PO(YB, DB, !1), WB()
         }
-        BH && (JH.current = !0)
-      })), (0, AH.useEffect)((() => {
-        if (!MH) {
-          for (const [HH, BH] of Object.entries(WH.getPlayerCosmetics())) XB(HH, BH, !1);
-          vH()
+        OB && (vB.current = !0)
+      })), (0, YB.useEffect)((() => {
+        if (!NB) {
+          for (const [BB, OB] of Object.entries(ZB.getPlayerCosmetics())) PO(BB, OB, !1);
+          WB()
         }
-      }), [MH]), (0, AH.useEffect)((() => () => {
-        EB()
+      }), [NB]), (0, YB.useEffect)((() => () => {
+        MO()
       }), []);
-      const uB = WH.getOwnedCosmeticPacks(),
-        QB = function(HH, BH) {
-          return null === HH ? null : {
-            collected: new Set(HH.collected),
-            ownedPacks: BH
+      const pO = ZB.getOwnedCosmeticPacks(),
+        qO = function(BB, OB) {
+          return null === BB ? null : {
+            collected: new Set(BB.collected),
+            ownedPacks: OB
           }
-        }(WH.dailyDrop, uB),
-        WB = (0, wH.usePurchasesAllowed)(),
-        MB = Object.keys(YH.d[LH]).filter((HH => {
-          const BH = (0, YH.k)(LH, HH),
-            AH = (0, RH.y)(LH, HH, uB);
-          return !(BH.purchasable && !AH && !WB) && (BH.clientSelectable || AH)
-        })).sort(((HH, BH) => {
-          var AH, rH, SH, hH;
-          return (null !== (AH = null === (rH = (0, YH.h)(LH, HH)) || void 0 === rH ? void 0 : rH.clientIdx) && void 0 !== AH ? AH : 0) - (null !== (SH = null === (hH = (0, YH.h)(LH, BH)) || void 0 === hH ? void 0 : hH.clientIdx) && void 0 !== SH ? SH : 0)
+        }(ZB.dailyDrop, pO),
+        ZO = (0, eB.usePurchasesAllowed)(),
+        NO = Object.keys(lB.h[GB]).filter((BB => {
+          const OB = (0, lB.p)(GB, BB),
+            YB = (0, wB.x)(GB, BB, pO);
+          return !(OB.purchasable && !YB && !ZO) && (OB.clientSelectable || YB)
+        })).sort(((BB, OB) => {
+          var YB, DB, QB, oB;
+          return (null !== (YB = null === (DB = (0, lB.n)(GB, BB)) || void 0 === DB ? void 0 : DB.clientIdx) && void 0 !== YB ? YB : 0) - (null !== (QB = null === (oB = (0, lB.n)(GB, OB)) || void 0 === oB ? void 0 : oB.clientIdx) && void 0 !== QB ? QB : 0)
         })),
-        xB = new Map;
-      for (const AH of MB) {
-        var vB;
-        const HH = null === (vB = (0, YH.h)(LH, AH)) || void 0 === vB ? void 0 : vB.cosmeticPack;
-        xB.has(HH) || xB.set(HH, []), xB.get(HH).push(AH)
+        RO = new Map;
+      for (const YB of NO) {
+        var WO;
+        const BB = null === (WO = (0, lB.n)(GB, YB)) || void 0 === WO ? void 0 : WO.cosmeticPack;
+        RO.has(BB) || RO.set(BB, []), RO.get(BB).push(YB)
       }
-      const PB = function(HH, BH) {
-          const LH = new Set,
-            AH = new Set;
-          for (const [rH, SH] of Object.entries(YH.d[HH])) {
-            if (void 0 === SH.colourGroup) continue;
-            const hH = `${SH.cosmeticPack}_${SH.colourGroup}`;
-            (SB(HH, rH, BH) ? AH : LH).add(hH)
+      const AO = function(BB, OB) {
+          const GB = new Set,
+            YB = new Set;
+          for (const [DB, QB] of Object.entries(lB.h[BB])) {
+            if (void 0 === QB.colourGroup) continue;
+            const oB = `${QB.cosmeticPack}_${QB.colourGroup}`;
+            (QO(BB, DB, OB) ? YB : GB).add(oB)
           }
-          return new Set([...LH].filter((HH => AH.has(HH))))
-        }(LH, uB),
-        TB = new Map;
-      for (const [AH, rH] of xB) {
-        const HH = [],
-          BH = new Map;
-        for (const AH of rH) {
-          var UB, VB;
-          const rH = null !== (UB = null === (VB = (0, YH.h)(LH, AH)) || void 0 === VB ? void 0 : VB.colourGroup) && void 0 !== UB ? UB : null;
-          BH.has(rH) || (BH.set(rH, []), HH.push(rH)), BH.get(rH).push(AH)
+          return new Set([...GB].filter((BB => YB.has(BB))))
+        }(GB, pO),
+        VO = new Map;
+      for (const [YB, DB] of RO) {
+        const BB = [],
+          OB = new Map;
+        for (const YB of DB) {
+          var SO, nO;
+          const DB = null !== (SO = null === (nO = (0, lB.n)(GB, YB)) || void 0 === nO ? void 0 : nO.colourGroup) && void 0 !== SO ? SO : null;
+          OB.has(DB) || (OB.set(DB, []), BB.push(DB)), OB.get(DB).push(YB)
         }
-        const SH = HH.map((HH => {
-          var rH;
-          const SH = BH.get(HH),
-            hH = HH ? null === (rH = NH.b[AH].colourGroups) || void 0 === rH ? void 0 : rH[HH] : void 0,
-            tH = !0 === (null === hH || void 0 === hH ? void 0 : hH.showSwatchSelector) && !PB.has(`${AH}_${HH}`);
-          if (tH && hH) {
-            var zH;
-            const BH = null !== (zH = lH[`${AH}_${LH}_${HH}`]) && void 0 !== zH ? zH : (0, NH.d)(hH.colours);
+        const QB = BB.map((BB => {
+          var DB;
+          const QB = OB.get(BB),
+            oB = BB ? null === (DB = XB.d[YB].colourGroups) || void 0 === DB ? void 0 : DB[BB] : void 0,
+            jB = !0 === (null === oB || void 0 === oB ? void 0 : oB.showSwatchSelector) && !AO.has(`${YB}_${BB}`);
+          if (jB && oB) {
+            var yB;
+            const OB = null !== (yB = IB[`${YB}_${GB}_${BB}`]) && void 0 !== yB ? yB : (0, XB.i)(oB.colours);
             return {
-              groupName: HH,
-              showSwatch: tH,
-              cosmetics: SH.filter((HH => {
-                const LH = (0, YH.f)(HH);
-                return !LH || BH.toString() === LH[1].toString()
+              groupName: BB,
+              showSwatch: jB,
+              cosmetics: QB.filter((BB => {
+                const GB = (0, lB.l)(BB);
+                return !GB || OB.toString() === GB[1].toString()
               }))
             }
           }
           return {
-            groupName: HH,
-            cosmetics: SH,
-            showSwatch: tH
+            groupName: BB,
+            cosmetics: QB,
+            showSwatch: jB
           }
         }));
-        TB.set(AH, SH)
+        VO.set(YB, QB)
       }
-      const OB = Array.from(xB.keys()),
-        bB = new Map;
-      for (const [AH, rH] of Object.entries(uH.c)) {
-        const HH = NH.b[rH.cosmeticPack],
-          BH = (0, RH.x)(rH.cosmetics, uB),
-          LH = NH.i.some((HH => (0, NH.c)(HH) === AH));
-        (HH.clientSelectable || LH || BH) && ((!HH.purchasable || BH || WB) && (bB.has(rH.cosmeticPack) || bB.set(rH.cosmeticPack, []), bB.get(rH.cosmeticPack).push([AH, rH])))
+      const UO = Array.from(RO.keys()),
+        fO = new Map;
+      for (const [YB, DB] of Object.entries(pB.d)) {
+        const BB = XB.d[DB.cosmeticPack],
+          OB = (0, wB.v)(DB.cosmetics, pO),
+          GB = XB.q.some((BB => (0, XB.h)(BB) === YB));
+        (BB.clientSelectable || GB || OB) && ((!BB.purchasable || OB || ZO) && (fO.has(DB.cosmeticPack) || fO.set(DB.cosmeticPack, []), fO.get(DB.cosmeticPack).push([YB, DB])))
       }
-      const kB = Array.from(bB.keys());
-      return (0, iH.jsxs)("div", {
+      const kO = Array.from(fO.keys());
+      return (0, sB.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === LH || "nameColour" === LH) && !(0, XH.b)(WH.getPlayerRanks()) && (0, iH.jsxs)("div", {
+        children: [("cape" === GB || "nameColour" === GB) && !(0, PB.e)(ZB.getPlayerRanks()) && (0, sB.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, iH.jsx)(DH.c, {
+          children: [(0, sB.jsx)(aB.b, {
             name: "bolt"
-          }), zH((0, kH.u)(Date.now()).unlockWithKey), WB && (0, iH.jsx)(OH.u, {
+          }), yB((0, kB.u)(Date.now()).unlockWithKey), ZO && (0, sB.jsx)(UB.q, {
             onClick: () => {
-              (0, bH.k)({
+              (0, fB.p)({
                 mode: "self",
                 source: "characterCustomisation",
                 openItem: "superRank"
               })
             },
-            children: zH("general:getItNow")
+            children: yB("general:getItNow")
           })]
-        }), (0, iH.jsxs)("div", {
+        }), (0, sB.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === BH && (0, iH.jsxs)("div", {
+          children: ["characters" === OB && (0, sB.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, (0, iH.jsx)(pH, {
-              wornOutfit: xH(sH.current),
-              onApply: HH => {
-                YB(HH, {
+            children: [!1, (0, sB.jsx)(xB, {
+              wornOutfit: RB(HB.current),
+              onApply: BB => {
+                lO(BB, {
                   undoable: !0
                 })
               },
-              onOverwrite: (HH, BH) => {
-                jH({
+              onOverwrite: (BB, OB) => {
+                EB({
                   kind: "slot",
-                  slot: HH,
-                  outfit: BH
+                  slot: BB,
+                  outfit: OB
                 })
               },
-              onDelete: HH => {
-                jH((BH => "slot" === (null === BH || void 0 === BH ? void 0 : BH.kind) && BH.slot === HH ? null : BH))
+              onDelete: BB => {
+                EB((OB => "slot" === (null === OB || void 0 === OB ? void 0 : OB.kind) && OB.slot === BB ? null : OB))
               }
-            }), kB.map((HH => {
-              const BH = bB.get(HH);
-              return (0, iH.jsx)(tB, {
-                pack: HH,
-                ownedPacks: uB,
-                showStoreLink: !NH.m.includes(HH) && BH.some((HH => {
+            }), kO.map((BB => {
+              const OB = fO.get(BB);
+              return (0, sB.jsx)(jO, {
+                pack: BB,
+                ownedPacks: pO,
+                showStoreLink: !XB.s.includes(BB) && OB.some((BB => {
                   let [, {
-                    cosmetics: BH
-                  }] = HH;
-                  return hB(BH, uB)
+                    cosmetics: OB
+                  }] = BB;
+                  return oO(OB, pO)
                 })),
-                children: (0, iH.jsx)("div", {
+                children: (0, sB.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: BH.map((HH => {
-                    let [BH, {
-                      cosmetics: LH
-                    }] = HH;
-                    const AH = hB(LH, uB),
-                      rH = !AH && function(HH, BH) {
-                        return Object.entries(BH).some((BH => {
-                          let [LH, AH] = BH;
-                          return LB(HH, LH, AH)
+                  children: OB.map((BB => {
+                    let [OB, {
+                      cosmetics: GB
+                    }] = BB;
+                    const YB = oO(GB, pO),
+                      DB = !YB && function(BB, OB) {
+                        return Object.entries(OB).some((OB => {
+                          let [GB, YB] = OB;
+                          return GO(BB, GB, YB)
                         }))
-                      }(QB, LH),
-                      SH = AH || rH,
-                      hH = PH(LH, oH),
-                      tH = !hH && PH(LH, sH.current);
-                    return (0, iH.jsx)(AB, {
-                      locked: rH,
-                      children: (0, iH.jsxs)("div", {
+                      }(qO, GB),
+                      QB = YB || DB,
+                      oB = AB(GB, KB),
+                      jB = !oB && AB(GB, HB.current);
+                    return (0, sB.jsx)(YO, {
+                      locked: DB,
+                      children: (0, sB.jsxs)("div", {
                         "data-pad-focusable": !0,
-                        className: CH()("CharacterPresetCard", {
-                          CharacterPresetCardActive: tH,
-                          CharacterPresetCardTryingOn: hH
+                        className: JB()("CharacterPresetCard", {
+                          CharacterPresetCardActive: jB,
+                          CharacterPresetCardTryingOn: oB
                         }),
                         onClick: () => {
-                          SH ? function(HH) {
-                            PH(HH, oH) ? IH({}) : IH({
-                              ...HH
+                          QB ? function(BB) {
+                            AB(BB, KB) ? uB({}) : uB({
+                              ...BB
                             })
-                          }(LH) : YB(LH, {
+                          }(GB) : lO(GB, {
                             undoable: !0
                           })
                         },
-                        children: [(0, iH.jsx)("div", {
+                        children: [(0, sB.jsx)("div", {
                           className: "CharacterPresetCardPreview",
                           style: {
-                            backgroundImage: `url(${(0,FH.i)(BH)})`
+                            backgroundImage: `url(${(0,hB.j)(OB)})`
                           }
-                        }), SH && (0, iH.jsx)(DH.c, {
+                        }), QB && (0, sB.jsx)(aB.b, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
                       })
-                    }, BH)
+                    }, OB)
                   }))
                 })
-              }, HH)
+              }, BB)
             }))]
-          }), "emote" === BH && (0, iH.jsx)(zB, {
-            equippedEmoteIds: (0, QH.g)(sH.current.emote),
-            ownedPacks: uB,
-            canBuy: WB,
-            onUpdateLoadout: HH => {
-              const BH = (0, QH.k)(HH);
-              var LH;
-              sH.current = {
-                ...sH.current,
-                emote: BH
-              }, WH.setPlayerCosmetics("emote", BH), vH(), LH = BH, CB.current = LH, null !== rB.current && clearTimeout(rB.current), rB.current = setTimeout(EB, 350)
+          }), "emote" === OB && (0, sB.jsx)(yO, {
+            equippedEmoteIds: (0, qB.g)(HB.current.emote),
+            ownedPacks: pO,
+            canBuy: ZO,
+            onUpdateLoadout: BB => {
+              const OB = (0, qB.i)(BB);
+              var GB;
+              HB.current = {
+                ...HB.current,
+                emote: OB
+              }, ZB.setPlayerCosmetics("emote", OB), WB(), GB = OB, JO.current = GB, null !== DO.current && clearTimeout(DO.current), DO.current = setTimeout(MO, 350)
             },
-            onEmoteSelected: aH,
+            onEmoteSelected: CB,
             onEquipPreviewSkin: () => {
-              ! function(HH, BH) {
-                for (const LH of EH.r)(0, uH.g)(LH) && HH(LH, "skin" === LH ? "skin_preview" : `${LH}_none`, !1);
-                BH()
-              }(XB, vH)
+              ! function(BB, OB) {
+                for (const GB of MB.t)(0, pB.h)(GB) && BB(GB, "skin" === GB ? "skin_preview" : `${GB}_none`, !1);
+                OB()
+              }(PO, WB)
             }
-          }), "characters" !== BH && "emote" !== BH && (0, iH.jsxs)("div", {
+          }), "characters" !== OB && "emote" !== OB && (0, sB.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, OB.map((HH => {
-              const BH = TB.get(HH);
-              return (0, iH.jsx)(tB, {
-                pack: HH,
-                ownedPacks: uB,
-                children: BH.map((BH => {
-                  var AH;
+            children: [!1, UO.map((BB => {
+              const OB = VO.get(BB);
+              return (0, sB.jsx)(jO, {
+                pack: BB,
+                ownedPacks: pO,
+                children: OB.map((OB => {
+                  var YB;
                   let {
-                    groupName: rH,
-                    cosmetics: SH,
-                    showSwatch: hH
-                  } = BH;
-                  const tH = rH ? null === (AH = NH.b[HH].colourGroups) || void 0 === AH ? void 0 : AH[rH] : void 0,
-                    zH = `${HH}_${LH}_${rH}`;
-                  return (0, iH.jsxs)("div", {
+                    groupName: DB,
+                    cosmetics: QB,
+                    showSwatch: oB
+                  } = OB;
+                  const jB = DB ? null === (YB = XB.d[BB].colourGroups) || void 0 === YB ? void 0 : YB[DB] : void 0,
+                    yB = `${BB}_${GB}_${DB}`;
+                  return (0, sB.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [hH && tH && (0, iH.jsx)("div", {
+                    children: [oB && jB && (0, sB.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...tH.colours.map(((HH, BH) => ({
-                        color: HH,
-                        index: BH
-                      })))].sort(((HH, BH) => HH.color.order - BH.color.order)).map((BH => {
-                        var AH;
+                      children: [...jB.colours.map(((BB, OB) => ({
+                        color: BB,
+                        index: OB
+                      })))].sort(((BB, OB) => BB.color.order - OB.color.order)).map((OB => {
+                        var YB;
                         let {
-                          color: SH,
-                          index: hH
-                        } = BH;
-                        return (0, iH.jsx)("div", {
-                          className: CH()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (AH = lH[zH]) && void 0 !== AH ? AH : (0, NH.d)(tH.colours)) === hH
+                          color: QB,
+                          index: oB
+                        } = OB;
+                        return (0, sB.jsx)("div", {
+                          className: JB()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (YB = IB[yB]) && void 0 !== YB ? YB : (0, XB.i)(jB.colours)) === oB
                           }),
                           style: {
-                            backgroundColor: `rgb(${SH.rbg.join(",")})`
+                            backgroundColor: `rgb(${QB.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var BH;
-                            KH((HH => ({
-                              ...HH,
-                              [zH]: hH
+                            var OB;
+                            FB((BB => ({
+                              ...BB,
+                              [yB]: oB
                             })));
-                            const AH = oH[LH],
-                              SH = AH ? (0, YH.h)(LH, AH) : null,
-                              tH = (null === SH || void 0 === SH ? void 0 : SH.cosmeticPack) === HH,
-                              CH = tH ? AH : sH.current[LH],
-                              EH = tH ? SH : (0, YH.h)(LH, CH);
-                            if ((null === EH || void 0 === EH ? void 0 : EH.cosmeticPack) !== HH) return;
-                            if ((null !== (BH = null === EH || void 0 === EH ? void 0 : EH.colourGroup) && void 0 !== BH ? BH : null) !== rH) return;
-                            const XH = (0, YH.f)(CH);
-                            if (XH) {
-                              const HH = `${LH}_${XH[0]}_${hH}`;
-                              SB(LH, HH, uB) || LB(QB, LH, HH) ? IH((BH => ({
-                                ...BH,
-                                [LH]: HH
-                              }))) : (tH && GB(LH), XB(LH, HH, !0))
+                            const YB = KB[GB],
+                              QB = YB ? (0, lB.n)(GB, YB) : null,
+                              jB = (null === QB || void 0 === QB ? void 0 : QB.cosmeticPack) === BB,
+                              JB = jB ? YB : HB.current[GB],
+                              MB = jB ? QB : (0, lB.n)(GB, JB);
+                            if ((null === MB || void 0 === MB ? void 0 : MB.cosmeticPack) !== BB) return;
+                            if ((null !== (OB = null === MB || void 0 === MB ? void 0 : MB.colourGroup) && void 0 !== OB ? OB : null) !== DB) return;
+                            const PB = (0, lB.l)(JB);
+                            if (PB) {
+                              const BB = `${GB}_${PB[0]}_${oB}`;
+                              QO(GB, BB, pO) || GO(qO, GB, BB) ? uB((OB => ({
+                                ...OB,
+                                [GB]: BB
+                              }))) : (jB && zO(GB), PO(GB, BB, !0))
                             }
                           }
-                        }, SH.rbg.join())
+                        }, QB.rbg.join())
                       }))
-                    }), SH.map((HH => {
-                      const BH = HH === sH.current[LH],
-                        AH = oH[LH] === HH,
-                        rH = SB(LH, HH, uB),
-                        SH = !rH && LB(QB, LH, HH),
-                        hH = rH || SH;
-                      let tH = !0;
-                      return hH || BH || ("cape" !== LH || (0, qH.Td)(WH.getPlayerRanks(), HH)) && ("nameColour" !== LH || (0, XH.b)(WH.getPlayerRanks())) || (tH = !1), (0, iH.jsx)(AB, {
-                        locked: SH,
-                        children: (0, iH.jsxs)("div", {
-                          className: CH()("CharCustomPartWrapper", {
-                            SelectedCharCustomPartWrapper: BH && !AH,
-                            TryingOnCharCustomPartWrapper: AH,
-                            DisabledCharCustomPartWrapper: !tH,
-                            CharCustomPartWrapperProfileEffect: "profileEffect" === LH
+                    }), QB.map((BB => {
+                      const OB = BB === HB.current[GB],
+                        YB = KB[GB] === BB,
+                        DB = QO(GB, BB, pO),
+                        QB = !DB && GO(qO, GB, BB),
+                        oB = DB || QB;
+                      let jB = !0;
+                      return oB || OB || ("cape" !== GB || (0, gB.ne)(ZB.getPlayerRanks(), BB)) && ("nameColour" !== GB || (0, PB.e)(ZB.getPlayerRanks())) || (jB = !1), (0, sB.jsx)(YO, {
+                        locked: QB,
+                        children: (0, sB.jsxs)("div", {
+                          className: JB()("CharCustomPartWrapper", {
+                            SelectedCharCustomPartWrapper: OB && !YB,
+                            TryingOnCharCustomPartWrapper: YB,
+                            DisabledCharCustomPartWrapper: !jB,
+                            CharCustomPartWrapperProfileEffect: "profileEffect" === GB
                           }),
                           onClick: () => {
-                            if (tH)
-                              if (hH) IH((BH => {
-                                if (BH[LH] === HH) {
-                                  const HH = {
-                                    ...BH
+                            if (jB)
+                              if (oB) uB((OB => {
+                                if (OB[GB] === BB) {
+                                  const BB = {
+                                    ...OB
                                   };
-                                  return delete HH[LH], HH
+                                  return delete BB[GB], BB
                                 }
                                 return {
-                                  ...BH,
-                                  [LH]: HH
+                                  ...OB,
+                                  [GB]: BB
                                 }
                               }));
                               else {
-                                var BH;
-                                if (oH[LH] && GB(LH), HH === sH.current[LH]) return;
-                                null !== (BH = HB.current) && void 0 !== BH && BH.isReady() && XB(LH, HH, !0)
+                                var OB;
+                                if (KB[GB] && zO(GB), BB === HB.current[GB]) return;
+                                null !== (OB = BO.current) && void 0 !== OB && OB.isReady() && PO(GB, BB, !0)
                               }
                           },
-                          children: ["profileEffect" === LH ? (0, iH.jsx)(nH.e, {
-                            profileEffect: HH,
-                            name: WH.getPlayerName(),
-                            cosmetics: WH.getPlayerCosmetics()
-                          }) : (0, iH.jsx)(dH.e, {
-                            rh: LH,
-                            Sh: HH
-                          }), hH && (0, iH.jsx)(DH.c, {
+                          children: ["profileEffect" === GB ? (0, sB.jsx)(cB.c, {
+                            profileEffect: BB,
+                            name: ZB.getPlayerName(),
+                            cosmetics: ZB.getPlayerCosmetics()
+                          }) : (0, sB.jsx)(bB.e, {
+                            UB: GB,
+                            fB: BB
+                          }), oB && (0, sB.jsx)(aB.b, {
                             name: "lock",
                             className: "LockedCosmeticIcon"
                           })]
                         })
-                      }, HH)
+                      }, BB)
                     }))]
-                  }, null !== rH && void 0 !== rH ? rH : "ungrouped")
+                  }, null !== DB && void 0 !== DB ? DB : "ungrouped")
                 }))
-              }, HH)
+              }, BB)
             }))]
-          }), cH && (0, iH.jsxs)(OH.i, {
+          }), iB && (0, sB.jsxs)(UB.f, {
             className: "CharCustomisationUndo",
             onClick: () => {
-              "worn" === cH.kind ? YB(cH.outfit, {
+              "worn" === iB.kind ? lO(iB.outfit, {
                 undoable: !1
-              }) : (eH.save(cH.slot, cH.outfit), jH(null))
+              }) : (LB.save(iB.slot, iB.outfit), EB(null))
             },
-            children: [(0, iH.jsx)(DH.c, {
+            children: [(0, sB.jsx)(aB.b, {
               name: "rotate-left"
-            }), zH("general:undo")]
-          }), (0, iH.jsx)(gH.CharacterPreview, {
-            ref: HB,
-            forcedCosmetics: oH,
-            zE: ZH.id,
-            emotePlaySeq: ZH.seq,
+            }), yB("general:undo")]
+          }), (0, sB.jsx)(rB.CharacterPreview, {
+            ref: BO,
+            forcedCosmetics: KB,
+            NM: TB.id,
+            emotePlaySeq: TB.seq,
             onReady: () => {
-              for (const HH of EH.r) XB(HH, sH.current[HH], !1)
+              for (const BB of MB.t) PO(BB, HB.current[BB], !1)
             },
-            onDrawn: HH => {
-              var BH, LH;
-              const AH = null === (BH = HB.current) || void 0 === BH || null === (LH = BH.getDevTools()) || void 0 === LH ? void 0 : LH.canvas(),
-                rH = (HH, BH) => 0 === Object.keys(fH.current).length && JSON.stringify(WH.getPlayerCosmetics()) === HH && BB.current.seq === BH.seq && null === BB.current.id,
-                tH = JSON.stringify(WH.getPlayerCosmetics()),
-                zH = BB.current;
-              if (!SH.r || !HH || void 0 === AH || !rH(tH, zH)) return;
-              const CH = (0, hH.f)(WH);
-              (0, hH.c)(AH, CH, (() => rH(tH, zH))).catch((HH => {
-                console.warn("[loading-character] couldn't keep your picture from Customise", HH)
+            onDrawn: BB => {
+              var OB, GB;
+              const YB = null === (OB = BO.current) || void 0 === OB || null === (GB = OB.getDevTools()) || void 0 === GB ? void 0 : GB.canvas(),
+                DB = (BB, OB) => 0 === Object.keys(mB.current).length && JSON.stringify(ZB.getPlayerCosmetics()) === BB && OO.current.seq === OB.seq && null === OO.current.id,
+                jB = JSON.stringify(ZB.getPlayerCosmetics()),
+                yB = OO.current;
+              if (!QB.p || !BB || void 0 === YB || !DB(jB, yB)) return;
+              const JB = (0, oB.e)(ZB);
+              (0, oB.d)(YB, JB, (() => DB(jB, yB))).catch((BB => {
+                console.warn("[loading-character] couldn't keep your picture from Customise", BB)
               }))
             }
           })]
@@ -881,339 +881,339 @@ export const modules = {
       })
     }))
   },
-  44796: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      CharacterPreview: () => WH
+  44451: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      CharacterPreview: () => ZB
     });
-    var AH = LH(45),
-      rH = LH(3018),
-      SH = LH(1182),
-      hH = LH(2760),
-      tH = LH(35016),
-      zH = LH(3991),
-      CH = LH(37112),
-      EH = LH(37135),
-      XH = LH(37157),
-      GH = LH(1225);
+    var YB = GB(56),
+      DB = GB(3072),
+      QB = GB(1238),
+      oB = GB(2787),
+      jB = GB(34828),
+      yB = GB(4056),
+      JB = GB(36948),
+      MB = GB(36963),
+      PB = GB(36991),
+      zB = GB(1282);
 
-    function YH(HH) {
+    function lB(BB) {
       let {
-        nametag: BH
-      } = HH;
-      const LH = (0, AH.useRef)(null),
+        nametag: OB
+      } = BB;
+      const GB = (0, YB.useRef)(null),
         {
-          height: SH
-        } = (0, rH.c)(LH),
-        [hH, tH] = (0, AH.useState)(!1),
+          height: QB
+        } = (0, DB.e)(GB),
+        [oB, jB] = (0, YB.useState)(!1),
         {
-          name: zH,
-          ranks: YH,
-          nameColour: uH
-        } = BH;
-      return (0, AH.useEffect)((() => {
-        let HH = !0;
-        return XH.h.untilLoadedFor(zH).then((() => {
-          HH && tH(!0)
+          name: yB,
+          ranks: lB,
+          nameColour: pB
+        } = OB;
+      return (0, YB.useEffect)((() => {
+        let BB = !0;
+        return PB.k.untilLoadedFor(yB).then((() => {
+          BB && jB(!0)
         })), () => {
-          HH = !1
+          BB = !1
         }
-      }), [zH]), (0, AH.useEffect)((() => {
-        if (!hH || SH <= 0) return;
-        const HH = LH.current,
-          BH = (0, CH.d)(HH),
-          AH = () => {
-            const LH = (0, EH.e)({
-              name: zH,
-              ranks: YH,
-              colour: uH,
+      }), [yB]), (0, YB.useEffect)((() => {
+        if (!oB || QB <= 0) return;
+        const BB = GB.current,
+          OB = (0, JB.e)(BB),
+          YB = () => {
+            const GB = (0, MB.d)({
+              name: yB,
+              ranks: lB,
+              colour: pB,
               player: !1
-            }, BH, XH.o, {
+            }, OB, PB.s, {
               nameAsGiven: !0
             });
-            if (null === LH) return HH.width = 0, void(HH.height = 0);
-            const AH = SH * devicePixelRatio / LH.height;
-            HH.width = Math.ceil(LH.width * AH), HH.height = Math.ceil(LH.height * AH), BH.scale(AH, AH), LH.draw(BH)
+            if (null === GB) return BB.width = 0, void(BB.height = 0);
+            const YB = QB * devicePixelRatio / GB.height;
+            BB.width = Math.ceil(GB.width * YB), BB.height = Math.ceil(GB.height * YB), OB.scale(YB, YB), GB.draw(OB)
           };
-        return AH(), (0, XH.g)(AH)
-      }), [hH, SH, zH, YH, uH]), (0, GH.jsx)("canvas", {
-        ref: LH,
+        return YB(), (0, PB.h)(YB)
+      }), [oB, QB, yB, lB, pB]), (0, zB.jsx)("canvas", {
+        ref: GB,
         className: "CharacterPreviewNametag",
         role: "img",
-        "aria-label": zH,
+        "aria-label": yB,
         style: {
-          visibility: hH ? void 0 : "hidden"
+          visibility: oB ? void 0 : "hidden"
         }
       })
     }
-    let uH = null;
-    const QH = .6 * Math.PI,
-      WH = (0, AH.memo)((0, AH.forwardRef)((function(HH, BH) {
+    let pB = null;
+    const qB = .6 * Math.PI,
+      ZB = (0, YB.memo)((0, YB.forwardRef)((function(BB, OB) {
         let {
-          onReady: LH,
-          onDrawn: CH,
-          owner: EH = "other",
-          framing: XH = "player",
-          forcedCosmetics: WH,
-          zE: MH,
-          emotePlaySeq: xH,
-          turntableFromYaw: vH = null,
-          nametag: PH
-        } = HH;
-        const TH = (0, AH.useRef)(null),
+          onReady: GB,
+          onDrawn: JB,
+          owner: MB = "other",
+          framing: PB = "player",
+          forcedCosmetics: ZB,
+          NM: NB,
+          emotePlaySeq: RB,
+          turntableFromYaw: WB = null,
+          nametag: AB
+        } = BB;
+        const VB = (0, YB.useRef)(null),
           {
-            width: UH,
-            height: VH
-          } = (0, rH.c)(TH),
-          OH = (0, AH.useRef)(null),
-          bH = (0, AH.useRef)({}),
-          kH = (0, AH.useRef)({}),
-          [mH, oH] = (0, AH.useState)(!1),
-          IH = (0, AH.useRef)(LH);
-        IH.current = LH;
-        const fH = (0, AH.useRef)(CH);
-        fH.current = CH;
-        const lH = (0, AH.useRef)(null),
-          KH = (0, AH.useRef)(!1),
-          cH = (0, AH.useRef)(!1),
-          eH = (0, AH.useCallback)((() => {
-            const HH = OH.current;
-            if (!HH || !fH.current || KH.current || !cH.current) return;
-            const BH = {};
-            lH.current = BH, queueMicrotask((() => {
-              if (lH.current !== BH) return;
-              const LH = Promise.all(SH.r.map((BH => HH.untilDrawn(BH)))).then((() => !0), (HH => (console.error("Failed to draw the character preview", HH), !1))),
-                AH = new Promise((HH => {
+            width: SB,
+            height: nB
+          } = (0, DB.e)(VB),
+          UB = (0, YB.useRef)(null),
+          fB = (0, YB.useRef)({}),
+          kB = (0, YB.useRef)({}),
+          [dB, KB] = (0, YB.useState)(!1),
+          uB = (0, YB.useRef)(GB);
+        uB.current = GB;
+        const mB = (0, YB.useRef)(JB);
+        mB.current = JB;
+        const IB = (0, YB.useRef)(null),
+          FB = (0, YB.useRef)(!1),
+          iB = (0, YB.useRef)(!1),
+          LB = (0, YB.useCallback)((() => {
+            const BB = UB.current;
+            if (!BB || !mB.current || FB.current || !iB.current) return;
+            const OB = {};
+            IB.current = OB, queueMicrotask((() => {
+              if (IB.current !== OB) return;
+              const GB = Promise.all(QB.t.map((OB => BB.untilDrawn(OB)))).then((() => !0), (BB => (console.error("Failed to draw the character preview", BB), !1))),
+                YB = new Promise((BB => {
                   setTimeout((() => {
-                    HH(!1)
+                    BB(!1)
                   }), 1e4)
                 }));
-              Promise.race([LH, AH]).then((LH => {
-                var AH;
-                OH.current !== HH || lH.current !== BH || KH.current || (KH.current = !0, null === (AH = fH.current) || void 0 === AH || AH.call(fH, LH))
+              Promise.race([GB, YB]).then((GB => {
+                var YB;
+                UB.current !== BB || IB.current !== OB || FB.current || (FB.current = !0, null === (YB = mB.current) || void 0 === YB || YB.call(mB, GB))
               }))
             }))
           }), []);
-        return (0, AH.useImperativeHandle)(BH, (() => {
-          const HH = (HH, BH) => {
-            var LH;
-            (bH.current[HH] = BH, null !== WH && void 0 !== WH && WH[HH]) || (null === (LH = OH.current) || void 0 === LH || LH.setCosmetic(HH, BH), eH())
+        return (0, YB.useImperativeHandle)(OB, (() => {
+          const BB = (BB, OB) => {
+            var GB;
+            (fB.current[BB] = OB, null !== ZB && void 0 !== ZB && ZB[BB]) || (null === (GB = UB.current) || void 0 === GB || GB.setCosmetic(BB, OB), LB())
           };
           return {
-            updateCosmetic: HH,
-            setAllCosmetics(BH) {
-              for (const AH of SH.r) {
-                var LH;
-                HH(AH, null !== (LH = BH[AH]) && void 0 !== LH ? LH : (0, hH.d)(AH))
+            updateCosmetic: BB,
+            setAllCosmetics(OB) {
+              for (const YB of QB.t) {
+                var GB;
+                BB(YB, null !== (GB = OB[YB]) && void 0 !== GB ? GB : (0, oB.d)(YB))
               }
             },
             isReady() {
-              var HH, BH;
-              return null !== (HH = null === (BH = OH.current) || void 0 === BH ? void 0 : BH.isReady()) && void 0 !== HH && HH
+              var BB, OB;
+              return null !== (BB = null === (OB = UB.current) || void 0 === OB ? void 0 : OB.isReady()) && void 0 !== BB && BB
             },
             resetCamera() {
-              var HH;
-              null === (HH = OH.current) || void 0 === HH || HH.resetCamera()
+              var BB;
+              null === (BB = UB.current) || void 0 === BB || BB.resetCamera()
             },
-            setOrbit(HH) {
-              var BH;
-              null === (BH = OH.current) || void 0 === BH || BH.setOrbit(HH)
+            setOrbit(BB) {
+              var OB;
+              null === (OB = UB.current) || void 0 === OB || OB.setOrbit(BB)
             },
-            turnCamera(HH) {
-              var BH;
-              const LH = tH.e[XH];
-              null === (BH = OH.current) || void 0 === BH || BH.setOrbit({
-                ...LH,
-                yaw: LH.yaw + HH
+            turnCamera(BB) {
+              var OB;
+              const GB = jB.b[PB];
+              null === (OB = UB.current) || void 0 === OB || OB.setOrbit({
+                ...GB,
+                yaw: GB.yaw + BB
               })
             },
-            async ensureReadyForCapture(HH) {
-              var BH;
-              await (null === (BH = OH.current) || void 0 === BH ? void 0 : BH.untilDrawn(HH))
+            async ensureReadyForCapture(BB) {
+              var OB;
+              await (null === (OB = UB.current) || void 0 === OB ? void 0 : OB.untilDrawn(BB))
             },
             getDevTools() {
-              var HH;
-              return null !== (HH = OH.current) && void 0 !== HH && HH.isReady() ? OH.current.dev : null
+              var BB;
+              return null !== (BB = UB.current) && void 0 !== BB && BB.isReady() ? UB.current.dev : null
             }
           }
-        }), [WH, XH, eH]), (0, AH.useEffect)((() => {
-          const HH = zH.d.register(EH),
-            BH = tH.h.openCharacter(TH.current, XH);
-          OH.current = BH, uH = BH;
-          let LH = !0;
-          return BH.ready.then((() => {
-            LH && (oH(!0), IH.current())
-          })).catch((HH => {
-            console.error("Failed to set up the character preview", HH)
+        }), [ZB, PB, LB]), (0, YB.useEffect)((() => {
+          const BB = yB.c.register(MB),
+            OB = jB.g.openCharacter(VB.current, PB);
+          UB.current = OB, pB = OB;
+          let GB = !0;
+          return OB.ready.then((() => {
+            GB && (KB(!0), uB.current())
+          })).catch((BB => {
+            console.error("Failed to set up the character preview", BB)
           })), () => {
-            LH = !1, HH(), uH === BH && (BH.resetCamera(), uH = null), BH.close(), OH.current = null
+            GB = !1, BB(), pB === OB && (OB.resetCamera(), pB = null), OB.close(), UB.current = null
           }
-        }), []), (0, AH.useEffect)((() => {
-          UH <= 0 || VH <= 0 || OH.current.resize(UH, VH)
-        }), [UH, VH]), (0, AH.useEffect)((() => {
-          if (!mH) return;
-          const HH = kH.current;
-          for (const BH of SH.r) {
-            const LH = null === WH || void 0 === WH ? void 0 : WH[BH],
-              AH = HH[BH];
-            LH && LH !== AH ? OH.current.setCosmetic(BH, LH) : !LH && AH && bH.current[BH] && OH.current.setCosmetic(BH, bH.current[BH])
+        }), []), (0, YB.useEffect)((() => {
+          SB <= 0 || nB <= 0 || UB.current.resize(SB, nB)
+        }), [SB, nB]), (0, YB.useEffect)((() => {
+          if (!dB) return;
+          const BB = kB.current;
+          for (const OB of QB.t) {
+            const GB = null === ZB || void 0 === ZB ? void 0 : ZB[OB],
+              YB = BB[OB];
+            GB && GB !== YB ? UB.current.setCosmetic(OB, GB) : !GB && YB && fB.current[OB] && UB.current.setCosmetic(OB, fB.current[OB])
           }
-          kH.current = {
-            ...WH
-          }, cH.current = !0, eH()
-        }), [WH, mH, eH]), (0, AH.useEffect)((() => {
-          mH && OH.current.playEmote(null !== MH && void 0 !== MH ? MH : null)
-        }), [MH, xH, mH]), (0, AH.useEffect)((() => {
-          if (!mH || null === vH) return;
-          const HH = OH.current,
+          kB.current = {
+            ...ZB
+          }, iB.current = !0, LB()
+        }), [ZB, dB, LB]), (0, YB.useEffect)((() => {
+          dB && UB.current.playEmote(null !== NB && void 0 !== NB ? NB : null)
+        }), [NB, RB, dB]), (0, YB.useEffect)((() => {
+          if (!dB || null === WB) return;
+          const BB = UB.current,
             {
-              pitch: BH,
-              radius: LH
-            } = tH.e[XH];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return HH.setOrbit({
-            yaw: vH + QH,
-            pitch: BH,
-            radius: LH
+              pitch: OB,
+              radius: GB
+            } = jB.b[PB];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return BB.setOrbit({
+            yaw: WB + qB,
+            pitch: OB,
+            radius: GB
           }), () => {
-            uH === HH && HH.resetCamera()
+            pB === BB && BB.resetCamera()
           };
-          const AH = performance.now();
-          let rH = 0;
-          const SH = hH => {
-            HH.setOrbit({
-              yaw: vH + (hH - AH) / 6e3 * 2 * Math.PI,
-              pitch: BH,
-              radius: LH
-            }), rH = requestAnimationFrame(SH)
+          const YB = performance.now();
+          let DB = 0;
+          const QB = oB => {
+            BB.setOrbit({
+              yaw: WB + (oB - YB) / 6e3 * 2 * Math.PI,
+              pitch: OB,
+              radius: GB
+            }), DB = requestAnimationFrame(QB)
           };
-          return rH = requestAnimationFrame(SH), () => {
-            cancelAnimationFrame(rH), uH === HH && HH.resetCamera()
+          return DB = requestAnimationFrame(QB), () => {
+            cancelAnimationFrame(DB), pB === BB && BB.resetCamera()
           }
-        }), [mH, vH]), (0, GH.jsxs)(GH.Fragment, {
-          children: [(0, GH.jsx)("div", {
+        }), [dB, WB]), (0, zB.jsxs)(zB.Fragment, {
+          children: [(0, zB.jsx)("div", {
             className: "CharCustomisationPreview",
-            ref: TH
-          }), PH && (0, GH.jsx)(YH, {
-            nametag: PH
+            ref: VB
+          }), AB && (0, zB.jsx)(lB, {
+            nametag: AB
           })]
         })
       })))
   },
-  37264: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH
+  37063: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB
     });
-    var AH = LH(1998),
-      rH = LH(1502);
-    const SH = new class {
+    var YB = GB(2023),
+      DB = GB(1540);
+    const QB = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(HH, BH) {
-        HH !== this.userContext && this.sendHeld(), this.userContext = HH;
-        for (const [AH, rH] of BH) this.pending.set(AH, rH);
+      save(BB, OB) {
+        BB !== this.userContext && this.sendHeld(), this.userContext = BB;
+        for (const [YB, DB] of OB) this.pending.set(YB, DB);
         if (null !== this.timer) return;
-        const LH = this.lastSentAt + 1100 - Date.now();
-        LH <= 0 ? this.send(HH) : (this.timer = setTimeout((() => {
+        const GB = this.lastSentAt + 1100 - Date.now();
+        GB <= 0 ? this.send(BB) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), LH), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), GB), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(HH) {
-        const BH = Array.from(this.pending, (HH => {
-          let [BH, LH] = HH;
+      send(BB) {
+        const OB = Array.from(this.pending, (BB => {
+          let [OB, GB] = BB;
           return {
-            rh: BH,
-            Sh: LH
+            UB: OB,
+            fB: GB
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), rH.d.updateCosmetics(HH, BH).catch((HH => {
-          console.error("Failed to update cosmetics", HH)
+        this.pending.clear(), this.lastSentAt = Date.now(), DB.b.updateCosmetics(BB, OB).catch((BB => {
+          console.error("Failed to update cosmetics", BB)
         }))
       }
     };
 
-    function hH(HH, BH) {
-      for (const [LH, AH] of BH) HH.setPlayerCosmetics(LH, AH);
-      if (null === AH.gameBridge.latest("connectedGame").websocketUrl) SH.save(HH, BH);
+    function oB(BB, OB) {
+      for (const [GB, YB] of OB) BB.setPlayerCosmetics(GB, YB);
+      if (null === YB.gameBridge.latest("connectedGame").websocketUrl) QB.save(BB, OB);
       else
-        for (const [LH, rH] of BH) AH.gameBridge.send("updateMyCosmetic", {
-          rh: LH,
-          Sh: rH
+        for (const [GB, DB] of OB) YB.gameBridge.send("updateMyCosmetic", {
+          UB: GB,
+          fB: DB
         })
     }
   },
-  37112: (HH, BH, LH) => {
-    function AH(HH, BH, LH) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(HH, BH).getContext("2d", LH);
-      const AH = document.createElement("canvas");
-      return AH.width = HH, AH.height = BH, AH.getContext("2d", LH)
+  36948: (BB, OB, GB) => {
+    function YB(BB, OB, GB) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(BB, OB).getContext("2d", GB);
+      const YB = document.createElement("canvas");
+      return YB.width = BB, YB.height = OB, YB.getContext("2d", GB)
     }
 
-    function rH(HH, BH) {
-      return HH.getContext("2d", BH)
+    function DB(BB, OB) {
+      return BB.getContext("2d", OB)
     }
-    LH.d(BH, {
-      d: () => rH,
-      h: () => AH
+    GB.d(OB, {
+      e: () => DB,
+      f: () => YB
     })
   },
-  37162: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => EH,
-      h: () => zH,
-      k: () => tH,
-      l: () => CH
+  36997: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => MB,
+      g: () => yB,
+      k: () => jB,
+      o: () => JB
     });
-    var AH = LH(2010);
-    let rH = null,
-      SH = 0;
-    const hH = new Set;
+    var YB = GB(2034);
+    let DB = null,
+      QB = 0;
+    const oB = new Set;
 
-    function tH() {
-      return rH
+    function jB() {
+      return DB
     }
 
-    function zH() {
-      return SH
+    function yB() {
+      return QB
     }
 
-    function CH(HH) {
-      rH = HH, SH++, (0, AH.e)();
-      for (const BH of hH) BH()
+    function JB(BB) {
+      DB = BB, QB++, (0, YB.b)();
+      for (const OB of oB) OB()
     }
 
-    function EH(HH) {
-      hH.add(HH)
+    function MB(BB) {
+      oB.add(BB)
     }
   },
-  37177: (HH, BH, LH) => {
-    function AH() {
-      return LH(37184)
+  37009: (BB, OB, GB) => {
+    function YB() {
+      return GB(37013)
     }
 
-    function rH() {
-      return LH(37187)
+    function DB() {
+      return GB(37018)
     }
 
-    function SH(HH) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(HH)
+    function QB(BB) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(BB)
     }
-    LH.d(BH, {
-      e: () => SH,
-      h: () => AH,
-      k: () => rH
+    GB.d(OB, {
+      b: () => QB,
+      c: () => YB,
+      e: () => DB
     })
   },
-  37184: (HH, BH, LH) => {
-    HH.exports = LH.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  37013: (BB, OB, GB) => {
+    BB.exports = GB.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  37187: (HH, BH, LH) => {
-    HH.exports = LH.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  37018: (BB, OB, GB) => {
+    BB.exports = GB.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

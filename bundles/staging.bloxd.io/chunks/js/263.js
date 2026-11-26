@@ -1,95 +1,95 @@
 export const id = 263;
 export const ids = [263];
 export const modules = {
-  64115: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      DEVTOOLS_SHADERS: () => SH,
-      registerDevtoolsShader: () => hH
+  63894: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      DEVTOOLS_SHADERS: () => QB,
+      registerDevtoolsShader: () => oB
     });
-    var AH = LH(41138),
-      rH = LH(38086);
-    const SH = {
-      devtoolsNormal: function(HH) {
+    var YB = GB(40864),
+      DB = GB(37910);
+    const QB = {
+      devtoolsNormal: function(BB) {
         return {
-          vertex: `\n\t\t\t${(0,rH.d)(HH,"position","vec3")}\n\t\t\t${(0,rH.d)(HH,"normal","vec3")}\n\t\t\t${(0,rH.yb)(HH,"worldViewProjection","mat4")}\n\t\t\t${(0,rH.yb)(HH,"world","mat4")}\n\t\t\t${(0,rH.Eb)(HH,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,rH.Hb)(HH,`\n\t\t\t\t${(0,rH.j)(HH)} = ${(0,rH.Cb)(HH,"worldViewProjection")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"position"),"1.0")};\n\t\t\t\t${(0,rH.Mb)(HH,"vNormal")} = normalize((${(0,rH.Cb)(HH,"world")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,rH.Eb)(HH,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,rH.T)(HH,`\n\t\t\t\t\n\t\t\t\t${(0,rH.C)(HH,"vec3","normalColor",`abs(${(0,rH.U)(HH,"vNormal")})`)}\n\t\t\t\t${(0,rH.P)(HH)} = ${(0,rH.l)(HH,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,DB.e)(BB,"position","vec3")}\n\t\t\t${(0,DB.e)(BB,"normal","vec3")}\n\t\t\t${(0,DB.xb)(BB,"worldViewProjection","mat4")}\n\t\t\t${(0,DB.xb)(BB,"world","mat4")}\n\t\t\t${(0,DB.Eb)(BB,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,DB.Hb)(BB,`\n\t\t\t\t${(0,DB.g)(BB)} = ${(0,DB.Ab)(BB,"worldViewProjection")} * ${(0,DB.h)(BB,"vec4",(0,DB.Lb)(BB,"position"),"1.0")};\n\t\t\t\t${(0,DB.Nb)(BB,"vNormal")} = normalize((${(0,DB.Ab)(BB,"world")} * ${(0,DB.h)(BB,"vec4",(0,DB.Lb)(BB,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,DB.Eb)(BB,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,DB.H)(BB,`\n\t\t\t\t\n\t\t\t\t${(0,DB.t)(BB,"vec3","normalColor",`abs(${(0,DB.I)(BB,"vNormal")})`)}\n\t\t\t\t${(0,DB.D)(BB)} = ${(0,DB.h)(BB,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
         }
       },
-      devtoolsWhite: function(HH) {
+      devtoolsWhite: function(BB) {
         return {
-          vertex: `\n\t\t\t${(0,rH.d)(HH,"position","vec3")}\n\t\t\t${(0,rH.yb)(HH,"worldViewProjection","mat4")}\n\n\t\t\t${(0,rH.Hb)(HH,`\n\t\t\t\t${(0,rH.j)(HH)} = ${(0,rH.Cb)(HH,"worldViewProjection")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,rH.T)(HH,`\n\t\t\t\t${(0,rH.P)(HH)} = ${(0,rH.l)(HH,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,DB.e)(BB,"position","vec3")}\n\t\t\t${(0,DB.xb)(BB,"worldViewProjection","mat4")}\n\n\t\t\t${(0,DB.Hb)(BB,`\n\t\t\t\t${(0,DB.g)(BB)} = ${(0,DB.Ab)(BB,"worldViewProjection")} * ${(0,DB.h)(BB,"vec4",(0,DB.Lb)(BB,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,DB.H)(BB,`\n\t\t\t\t${(0,DB.D)(BB)} = ${(0,DB.h)(BB,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
         }
       },
-      devtoolsDepth: function(HH) {
+      devtoolsDepth: function(BB) {
         return {
-          vertex: `\n\t\t\t${(0,rH.d)(HH,"position","vec3")}\n\t\t\t${(0,rH.yb)(HH,"worldViewProjection","mat4")}\n\t\t\t${(0,rH.yb)(HH,"world","mat4")}\n\t\t\t${(0,rH.yb)(HH,"cameraPosition","vec3")}\n\t\t\t${(0,rH.Eb)(HH,"vDepth","float","mediump")}\n\n\t\t\t${(0,rH.Hb)(HH,`\n\t\t\t\t${(0,rH.j)(HH)} = ${(0,rH.Cb)(HH,"worldViewProjection")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"position"),"1.0")};\n\t\t\t\t${(0,rH.C)(HH,"vec3","worldPosition",`(${(0,rH.Cb)(HH,"world")} * ${(0,rH.l)(HH,"vec4",(0,rH.Lb)(HH,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,rH.Mb)(HH,"vDepth")} = distance(worldPosition, ${(0,rH.Cb)(HH,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,rH.Eb)(HH,"vDepth","float","mediump")}\n\t\t\t${(0,rH.yb)(HH,"maxDepth","float")}\n\t\t\t${(0,rH.yb)(HH,"minDepth","float")}\n\n\t\t\t${(0,rH.T)(HH,`\n\t\t\t\t\n\t\t\t\t${(0,rH.C)(HH,"float","normalizedDepth",`clamp((${(0,rH.U)(HH,"vDepth")} - ${(0,rH.Cb)(HH,"minDepth")}) / (${(0,rH.Cb)(HH,"maxDepth")} - ${(0,rH.Cb)(HH,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,rH.C)(HH,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,rH.P)(HH)} = ${(0,rH.l)(HH,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,DB.e)(BB,"position","vec3")}\n\t\t\t${(0,DB.xb)(BB,"worldViewProjection","mat4")}\n\t\t\t${(0,DB.xb)(BB,"world","mat4")}\n\t\t\t${(0,DB.xb)(BB,"cameraPosition","vec3")}\n\t\t\t${(0,DB.Eb)(BB,"vDepth","float","mediump")}\n\n\t\t\t${(0,DB.Hb)(BB,`\n\t\t\t\t${(0,DB.g)(BB)} = ${(0,DB.Ab)(BB,"worldViewProjection")} * ${(0,DB.h)(BB,"vec4",(0,DB.Lb)(BB,"position"),"1.0")};\n\t\t\t\t${(0,DB.t)(BB,"vec3","worldPosition",`(${(0,DB.Ab)(BB,"world")} * ${(0,DB.h)(BB,"vec4",(0,DB.Lb)(BB,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,DB.Nb)(BB,"vDepth")} = distance(worldPosition, ${(0,DB.Ab)(BB,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,DB.Eb)(BB,"vDepth","float","mediump")}\n\t\t\t${(0,DB.xb)(BB,"maxDepth","float")}\n\t\t\t${(0,DB.xb)(BB,"minDepth","float")}\n\n\t\t\t${(0,DB.H)(BB,`\n\t\t\t\t\n\t\t\t\t${(0,DB.t)(BB,"float","normalizedDepth",`clamp((${(0,DB.I)(BB,"vDepth")} - ${(0,DB.Ab)(BB,"minDepth")}) / (${(0,DB.Ab)(BB,"maxDepth")} - ${(0,DB.Ab)(BB,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,DB.t)(BB,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,DB.D)(BB)} = ${(0,DB.h)(BB,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
         }
       }
     };
 
-    function hH(HH, BH) {
+    function oB(BB, OB) {
       const {
-        vertex: LH,
-        fragment: rH
-      } = SH[HH](BH), hH = AH.c.GetShadersStore(BH);
-      hH[`${HH}VertexShader`] = LH, hH[`${HH}FragmentShader`] = rH
+        vertex: GB,
+        fragment: DB
+      } = QB[BB](OB), oB = YB.b.GetShadersStore(OB);
+      oB[`${BB}VertexShader`] = GB, oB[`${BB}FragmentShader`] = DB
     }
   },
-  38086: (HH, BH, LH) => {
-    LH.d(BH, {
-      $: () => rH,
-      C: () => EH,
-      Cb: () => IH,
-      Eb: () => WH,
-      G: () => OH,
-      Hb: () => vH,
-      J: () => lH,
-      Lb: () => kH,
-      M: () => SH,
-      Mb: () => mH,
-      P: () => eH,
-      R: () => cH,
-      T: () => PH,
-      U: () => oH,
-      V: () => fH,
-      Z: () => NH,
-      bb: () => KH,
-      c: () => AH,
-      d: () => QH,
-      eb: () => jH,
-      fb: () => FH,
-      g: () => bH,
-      ib: () => VH,
-      j: () => xH,
-      kb: () => UH,
-      l: () => zH,
-      nb: () => nH,
-      o: () => qH,
-      ob: () => DH,
-      pb: () => RH,
-      q: () => gH,
-      rb: () => TH,
-      t: () => GH,
-      ub: () => CH,
-      x: () => YH,
-      yb: () => MH,
-      z: () => XH
+  37910: (BB, OB, GB) => {
+    GB.d(OB, {
+      $: () => hB,
+      A: () => IB,
+      Ab: () => uB,
+      C: () => QB,
+      D: () => LB,
+      Eb: () => ZB,
+      F: () => iB,
+      H: () => AB,
+      Hb: () => WB,
+      I: () => KB,
+      L: () => mB,
+      Lb: () => kB,
+      Nb: () => dB,
+      O: () => XB,
+      S: () => DB,
+      V: () => FB,
+      X: () => EB,
+      bb: () => nB,
+      c: () => YB,
+      cb: () => SB,
+      e: () => qB,
+      f: () => fB,
+      g: () => RB,
+      gb: () => cB,
+      h: () => yB,
+      i: () => gB,
+      kb: () => aB,
+      l: () => rB,
+      m: () => zB,
+      nb: () => wB,
+      q: () => lB,
+      r: () => PB,
+      rb: () => VB,
+      t: () => MB,
+      tb: () => JB,
+      w: () => UB,
+      xb: () => NB
     });
-    const AH = {
+    const YB = {
       GLSL: 0,
       WGSL: 1
     };
 
-    function rH(HH) {
-      return HH === AH.WGSL
+    function DB(BB) {
+      return BB === YB.WGSL
     }
 
-    function SH(HH, BH, LH) {
-      return rH(HH) ? LH : BH
+    function QB(BB, OB, GB) {
+      return DB(BB) ? GB : OB
     }
-    const hH = new Map([
+    const oB = new Map([
       ["int", "i32"],
       ["float", "f32"],
       ["vec2", "vec2f"],
@@ -100,185 +100,185 @@ export const modules = {
       ["mat4", "mat4x4f"]
     ]);
 
-    function tH(HH, BH) {
-      if (!rH(HH)) return BH;
-      const LH = hH.get(BH);
-      if (!LH) throw new Error(`No WGSL name for shader type "${BH}"`);
-      return LH
+    function jB(BB, OB) {
+      if (!DB(BB)) return OB;
+      const GB = oB.get(OB);
+      if (!GB) throw new Error(`No WGSL name for shader type "${OB}"`);
+      return GB
     }
 
-    function zH(HH, BH) {
-      for (var LH = arguments.length, AH = new Array(LH > 2 ? LH - 2 : 0), rH = 2; rH < LH; rH++) AH[rH - 2] = arguments[rH];
-      return `${tH(HH,BH)}(${AH.join(", ")})`
+    function yB(BB, OB) {
+      for (var GB = arguments.length, YB = new Array(GB > 2 ? GB - 2 : 0), DB = 2; DB < GB; DB++) YB[DB - 2] = arguments[DB];
+      return `${jB(BB,OB)}(${YB.join(", ")})`
     }
 
-    function CH(HH, BH) {
-      return zH(HH, "int", BH)
+    function JB(BB, OB) {
+      return yB(BB, "int", OB)
     }
 
-    function EH(HH, BH, LH, AH, SH) {
-      return rH(HH) ? `var ${LH}: ${tH(HH,BH)} = ${AH};` : `${uH(HH,SH)}${BH} ${LH} = ${AH};`
+    function MB(BB, OB, GB, YB, QB) {
+      return DB(BB) ? `var ${GB}: ${jB(BB,OB)} = ${YB};` : `${pB(BB,QB)}${OB} ${GB} = ${YB};`
     }
 
-    function XH(HH, BH, LH) {
-      return rH(HH) ? `var ${LH}: ${tH(HH,BH)};` : `${BH} ${LH};`
+    function PB(BB, OB, GB) {
+      return DB(BB) ? `var ${GB}: ${jB(BB,OB)};` : `${OB} ${GB};`
     }
 
-    function GH(HH, BH, LH, AH) {
-      return rH(HH) ? `const ${LH}: ${tH(HH,BH)} = ${AH};` : `const ${BH} ${LH} = ${AH};`
+    function zB(BB, OB, GB, YB) {
+      return DB(BB) ? `const ${GB}: ${jB(BB,OB)} = ${YB};` : `const ${OB} ${GB} = ${YB};`
     }
 
-    function YH(HH, BH, LH, AH, SH) {
-      if (rH(HH)) {
-        return `fn ${LH}(${AH.map((BH=>`${BH.name}: ${tH(HH,BH.type)}`)).join(", ")}) -> ${tH(HH,BH)} {${SH}}`
+    function lB(BB, OB, GB, YB, QB) {
+      if (DB(BB)) {
+        return `fn ${GB}(${YB.map((OB=>`${OB.name}: ${jB(BB,OB.type)}`)).join(", ")}) -> ${jB(BB,OB)} {${QB}}`
       }
-      return `${BH} ${LH}(${AH.map((HH=>`${HH.type} ${HH.name}`)).join(", ")}) {${SH}}`
+      return `${OB} ${GB}(${YB.map((BB=>`${BB.type} ${BB.name}`)).join(", ")}) {${QB}}`
     }
 
-    function uH(HH, BH) {
-      return !BH || rH(HH) ? "" : `${BH} `
+    function pB(BB, OB) {
+      return !OB || DB(BB) ? "" : `${OB} `
     }
 
-    function QH(HH, BH, LH, AH) {
-      return rH(HH) ? `attribute ${BH}: ${tH(HH,LH)};` : `attribute ${uH(HH,AH)}${LH} ${BH};`
+    function qB(BB, OB, GB, YB) {
+      return DB(BB) ? `attribute ${OB}: ${jB(BB,GB)};` : `attribute ${pB(BB,YB)}${GB} ${OB};`
     }
 
-    function WH(HH, BH, LH, AH) {
-      return rH(HH) ? `varying ${BH}: ${tH(HH,LH)};` : `varying ${uH(HH,AH)}${LH} ${BH};`
+    function ZB(BB, OB, GB, YB) {
+      return DB(BB) ? `varying ${OB}: ${jB(BB,GB)};` : `varying ${pB(BB,YB)}${GB} ${OB};`
     }
 
-    function MH(HH, BH, LH) {
-      return rH(HH) ? `uniform ${BH}: ${tH(HH,LH)};` : `uniform ${LH} ${BH};`
+    function NB(BB, OB, GB) {
+      return DB(BB) ? `uniform ${OB}: ${jB(BB,GB)};` : `uniform ${GB} ${OB};`
     }
 
-    function xH(HH) {
-      return rH(HH) ? "vertexOutputs.position" : "gl_Position"
+    function RB(BB) {
+      return DB(BB) ? "vertexOutputs.position" : "gl_Position"
     }
 
-    function vH(HH, BH) {
-      return rH(HH) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${BH}}` : `void main() {${BH}}`
+    function WB(BB, OB) {
+      return DB(BB) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${OB}}` : `void main() {${OB}}`
     }
 
-    function PH(HH, BH) {
-      return rH(HH) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${BH}}` : `void main() {${BH}}`
+    function AB(BB, OB) {
+      return DB(BB) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${OB}}` : `void main() {${OB}}`
     }
 
-    function TH(HH, BH, LH) {
-      if (rH(HH)) {
-        return [`var ${BH}Sampler: sampler;`, `var ${BH}: ${"2dArray"===LH?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
+    function VB(BB, OB, GB) {
+      if (DB(BB)) {
+        return [`var ${OB}Sampler: sampler;`, `var ${OB}: ${"2dArray"===GB?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
       }
-      return `uniform highp ${"2dArray"===LH?"sampler2DArray":"sampler2D"} ${BH};`
+      return `uniform highp ${"2dArray"===GB?"sampler2DArray":"sampler2D"} ${OB};`
     }
 
-    function UH(HH, BH, LH) {
-      return rH(HH) ? `textureSample(${BH}, ${BH}Sampler, ${LH})` : `texture2D(${BH}, ${LH})`
+    function SB(BB, OB, GB) {
+      return DB(BB) ? `textureSample(${OB}, ${OB}Sampler, ${GB})` : `texture2D(${OB}, ${GB})`
     }
 
-    function VH(HH, BH, LH, AH, SH) {
-      if (rH(HH)) {
-        return `${SH?"textureSampleLevel":"textureSample"}(${BH}, ${BH}Sampler, ${LH}, ${CH(HH,`round(${AH})`)}${SH?`, ${SH}`:""})`
+    function nB(BB, OB, GB, YB, QB) {
+      if (DB(BB)) {
+        return `${QB?"textureSampleLevel":"textureSample"}(${OB}, ${OB}Sampler, ${GB}, ${JB(BB,`round(${YB})`)}${QB?`, ${QB}`:""})`
       }
-      const hH = zH(HH, "vec3", LH, AH);
-      return SH ? `textureLod(${BH}, ${hH}, ${SH})` : `texture(${BH}, ${hH})`
+      const oB = yB(BB, "vec3", GB, YB);
+      return QB ? `textureLod(${OB}, ${oB}, ${QB})` : `texture(${OB}, ${oB})`
     }
 
-    function OH(HH) {
-      return rH(HH) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
+    function UB(BB) {
+      return DB(BB) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
     }
 
-    function bH(HH) {
-      return rH(HH) ? {
+    function fB(BB) {
+      return DB(BB) ? {
         "!varying vMainUV1: vec2f;": "centroid varying vMainUV1: vec2f;"
       } : {
         "!varying vec2 vMainUV1;": "#ifdef WEBGL2\ncentroid varying vec2 vMainUV1;\n#else\nvarying vec2 vMainUV1;\n#endif"
       }
     }
 
-    function kH(HH, BH) {
-      return rH(HH) ? `vertexInputs.${BH}` : BH
+    function kB(BB, OB) {
+      return DB(BB) ? `vertexInputs.${OB}` : OB
     }
 
-    function mH(HH, BH) {
-      return rH(HH) ? `vertexOutputs.${BH}` : BH
+    function dB(BB, OB) {
+      return DB(BB) ? `vertexOutputs.${OB}` : OB
     }
 
-    function oH(HH, BH) {
-      return rH(HH) ? `fragmentInputs.${BH}` : BH
+    function KB(BB, OB) {
+      return DB(BB) ? `fragmentInputs.${OB}` : OB
     }
 
-    function IH(HH, BH) {
-      return rH(HH) ? `uniforms.${BH}` : BH
+    function uB(BB, OB) {
+      return DB(BB) ? `uniforms.${OB}` : OB
     }
 
-    function fH(HH, BH, LH) {
-      return rH(HH) ? `frame.${BH}` : LH
+    function mB(BB, OB, GB) {
+      return DB(BB) ? `frame.${OB}` : GB
     }
 
-    function lH(HH) {
-      return rH(HH) ? "scene.vEyePosition" : "vEyePosition"
+    function IB(BB) {
+      return DB(BB) ? "scene.vEyePosition" : "vEyePosition"
     }
 
-    function KH(HH) {
-      return rH(HH) ? "mesh.visibility" : "visibility"
+    function FB(BB) {
+      return DB(BB) ? "mesh.visibility" : "visibility"
     }
 
-    function cH(HH) {
-      return rH(HH) ? "fragmentInputs.position" : "gl_FragCoord"
+    function iB(BB) {
+      return DB(BB) ? "fragmentInputs.position" : "gl_FragCoord"
     }
 
-    function eH(HH) {
-      return rH(HH) ? "fragmentOutputs.color" : "gl_FragColor"
+    function LB(BB) {
+      return DB(BB) ? "fragmentOutputs.color" : "gl_FragColor"
     }
 
-    function qH(HH, BH) {
-      return rH(HH) ? `dpdx(${BH})` : `dFdx(${BH})`
+    function gB(BB, OB) {
+      return DB(BB) ? `dpdx(${OB})` : `dFdx(${OB})`
     }
 
-    function gH(HH, BH) {
-      return rH(HH) ? `dpdy(${BH})` : `dFdy(${BH})`
+    function rB(BB, OB) {
+      return DB(BB) ? `dpdy(${OB})` : `dFdy(${OB})`
     }
 
-    function NH(HH, BH) {
-      return rH(HH) ? `inverseSqrt(${BH})` : `inversesqrt(${BH})`
+    function XB(BB, OB) {
+      return DB(BB) ? `inverseSqrt(${OB})` : `inversesqrt(${OB})`
     }
 
-    function RH(HH, BH, LH, AH) {
-      return rH(HH) ? `select(${AH}, ${LH}, ${BH})` : `((${BH}) ? (${LH}) : (${AH}))`
+    function wB(BB, OB, GB, YB) {
+      return DB(BB) ? `select(${YB}, ${GB}, ${OB})` : `((${OB}) ? (${GB}) : (${YB}))`
     }
 
-    function jH(HH, BH, LH) {
-      return rH(HH) ? `((${BH}) - (${LH}) * floor((${BH}) / (${LH})))` : `mod(${BH}, ${LH})`
+    function EB(BB, OB, GB) {
+      return DB(BB) ? `((${OB}) - (${GB}) * floor((${OB}) / (${GB})))` : `mod(${OB}, ${GB})`
     }
 
-    function nH(HH, BH, LH) {
-      return rH(HH) ? `${BH} = vec4f(${LH}, ${BH}.a);` : `${BH}.rgb = ${LH};`
+    function cB(BB, OB, GB) {
+      return DB(BB) ? `${OB} = vec4f(${GB}, ${OB}.a);` : `${OB}.rgb = ${GB};`
     }
 
-    function FH(HH, BH, LH) {
-      return rH(HH) ? `${BH} = vec4f(${BH}.rgb * (${LH}), ${BH}.a);` : `${BH}.rgb *= ${LH};`
+    function hB(BB, OB, GB) {
+      return DB(BB) ? `${OB} = vec4f(${OB}.rgb * (${GB}), ${OB}.a);` : `${OB}.rgb *= ${GB};`
     }
 
-    function DH(HH, BH, LH) {
-      return rH(HH) ? `${BH} = vec4f(${LH}, ${BH}.w);` : `${BH}.xyz = ${LH};`
+    function aB(BB, OB, GB) {
+      return DB(BB) ? `${OB} = vec4f(${GB}, ${OB}.w);` : `${OB}.xyz = ${GB};`
     }
   },
-  41138: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => AH
+  40864: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB
     });
-    class AH {
+    class YB {
       static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? AH.ShadersRepository : AH.ShadersRepositoryWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? YB.ShadersRepository : YB.ShadersRepositoryWGSL
       }
       static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? AH.ShadersStore : AH.ShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? YB.ShadersStore : YB.ShadersStoreWGSL
       }
       static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? AH.IncludesShadersStore : AH.IncludesShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? YB.IncludesShadersStore : YB.IncludesShadersStoreWGSL
       }
     }
-    AH.ShadersRepository = "src/Shaders/", AH.ShadersStore = {}, AH.IncludesShadersStore = {}, AH.ShadersRepositoryWGSL = "src/ShadersWGSL/", AH.ShadersStoreWGSL = {}, AH.IncludesShadersStoreWGSL = {}
+    YB.ShadersRepository = "src/Shaders/", YB.ShadersStore = {}, YB.IncludesShadersStore = {}, YB.ShadersRepositoryWGSL = "src/ShadersWGSL/", YB.ShadersStoreWGSL = {}, YB.IncludesShadersStoreWGSL = {}
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

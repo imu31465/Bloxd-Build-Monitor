@@ -1,585 +1,585 @@
-/*! For license information please see cwj32u.229.477f7df9.chunk.js.LICENSE.txt */
+/*! For license information please see gw4e3a.229.ba721621.chunk.js.LICENSE.txt */
 export const id = 229;
 export const ids = [229];
 export const modules = {
-  40708: (HH, BH, LH) => {
-    function AH() {
+  40436: (BB, OB, GB) => {
+    function YB() {
       return "object" === typeof process && "object" === typeof process.versions && "undefined" !== typeof process.versions.node
     }
 
-    function rH(HH) {
-      return HH instanceof Uint8Array && (!AH() || !Buffer.isBuffer(HH))
+    function DB(BB) {
+      return BB instanceof Uint8Array && (!YB() || !Buffer.isBuffer(BB))
     }
 
-    function SH(HH) {
-      return HH instanceof ArrayBuffer
+    function QB(BB) {
+      return BB instanceof ArrayBuffer
     }
 
-    function hH(HH) {
-      return !!AH() && Buffer.isBuffer(HH)
+    function oB(BB) {
+      return !!YB() && Buffer.isBuffer(BB)
     }
-    var tH = LH(40712).d,
-      zH = LH(40716).d,
-      CH = "Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";
-    BH.c = function(HH) {
-      if (!rH(HH) && !SH(HH) && !hH(HH)) throw new TypeError(CH);
-      var BH = !1,
-        LH = !1;
-      rH(HH) ? BH = !0 : SH(HH) && (LH = !0, HH = new Uint8Array(HH));
-      var AH, tH, EH, XH = new zH(HH),
-        GH = XH.maxCompressedLength();
-      if (BH ? (AH = new Uint8Array(GH), EH = XH.compressToBuffer(AH)) : LH ? (AH = new ArrayBuffer(GH), tH = new Uint8Array(AH), EH = XH.compressToBuffer(tH)) : (AH = Buffer.alloc(GH), EH = XH.compressToBuffer(AH)), !AH.slice) {
-        var YH = new Uint8Array(Array.prototype.slice.call(AH, 0, EH));
-        if (BH) return YH;
-        if (LH) return YH.buffer;
+    var jB = GB(40440).e,
+      yB = GB(40449).b,
+      JB = "Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";
+    OB.e = function(BB) {
+      if (!DB(BB) && !QB(BB) && !oB(BB)) throw new TypeError(JB);
+      var OB = !1,
+        GB = !1;
+      DB(BB) ? OB = !0 : QB(BB) && (GB = !0, BB = new Uint8Array(BB));
+      var YB, jB, MB, PB = new yB(BB),
+        zB = PB.maxCompressedLength();
+      if (OB ? (YB = new Uint8Array(zB), MB = PB.compressToBuffer(YB)) : GB ? (YB = new ArrayBuffer(zB), jB = new Uint8Array(YB), MB = PB.compressToBuffer(jB)) : (YB = Buffer.alloc(zB), MB = PB.compressToBuffer(YB)), !YB.slice) {
+        var lB = new Uint8Array(Array.prototype.slice.call(YB, 0, MB));
+        if (OB) return lB;
+        if (GB) return lB.buffer;
         throw new Error("Not implemented")
       }
-      return AH.slice(0, EH)
+      return YB.slice(0, MB)
     }
   },
-  40716: (HH, BH) => {
-    var LH = new Array(15);
+  40449: (BB, OB) => {
+    var GB = new Array(15);
 
-    function AH(HH, BH) {
-      return 506832829 * HH >>> BH
+    function YB(BB, OB) {
+      return 506832829 * BB >>> OB
     }
 
-    function rH(HH, BH) {
-      return HH[BH] + (HH[BH + 1] << 8) + (HH[BH + 2] << 16) + (HH[BH + 3] << 24)
+    function DB(BB, OB) {
+      return BB[OB] + (BB[OB + 1] << 8) + (BB[OB + 2] << 16) + (BB[OB + 3] << 24)
     }
 
-    function SH(HH, BH, LH) {
-      return HH[BH] === HH[LH] && HH[BH + 1] === HH[LH + 1] && HH[BH + 2] === HH[LH + 2] && HH[BH + 3] === HH[LH + 3]
+    function QB(BB, OB, GB) {
+      return BB[OB] === BB[GB] && BB[OB + 1] === BB[GB + 1] && BB[OB + 2] === BB[GB + 2] && BB[OB + 3] === BB[GB + 3]
     }
 
-    function hH(HH, BH, LH, AH, rH) {
-      return LH <= 60 ? (AH[rH] = LH - 1 << 2, rH += 1) : LH < 256 ? (AH[rH] = 240, AH[rH + 1] = LH - 1, rH += 2) : (AH[rH] = 244, AH[rH + 1] = LH - 1 & 255, AH[rH + 2] = LH - 1 >>> 8, rH += 3),
-        function(HH, BH, LH, AH, rH) {
-          var SH;
-          for (SH = 0; SH < rH; SH++) LH[AH + SH] = HH[BH + SH]
-        }(HH, BH, AH, rH, LH), rH + LH
+    function oB(BB, OB, GB, YB, DB) {
+      return GB <= 60 ? (YB[DB] = GB - 1 << 2, DB += 1) : GB < 256 ? (YB[DB] = 240, YB[DB + 1] = GB - 1, DB += 2) : (YB[DB] = 244, YB[DB + 1] = GB - 1 & 255, YB[DB + 2] = GB - 1 >>> 8, DB += 3),
+        function(BB, OB, GB, YB, DB) {
+          var QB;
+          for (QB = 0; QB < DB; QB++) GB[YB + QB] = BB[OB + QB]
+        }(BB, OB, YB, DB, GB), DB + GB
     }
 
-    function tH(HH, BH, LH, AH) {
-      return AH < 12 && LH < 2048 ? (HH[BH] = 1 + (AH - 4 << 2) + (LH >>> 8 << 5), HH[BH + 1] = 255 & LH, BH + 2) : (HH[BH] = 2 + (AH - 1 << 2), HH[BH + 1] = 255 & LH, HH[BH + 2] = LH >>> 8, BH + 3)
+    function jB(BB, OB, GB, YB) {
+      return YB < 12 && GB < 2048 ? (BB[OB] = 1 + (YB - 4 << 2) + (GB >>> 8 << 5), BB[OB + 1] = 255 & GB, OB + 2) : (BB[OB] = 2 + (YB - 1 << 2), BB[OB + 1] = 255 & GB, BB[OB + 2] = GB >>> 8, OB + 3)
     }
 
-    function zH(HH, BH, LH, AH) {
-      for (; AH >= 68;) BH = tH(HH, BH, LH, 64), AH -= 64;
-      return AH > 64 && (BH = tH(HH, BH, LH, 60), AH -= 60), tH(HH, BH, LH, AH)
+    function yB(BB, OB, GB, YB) {
+      for (; YB >= 68;) OB = jB(BB, OB, GB, 64), YB -= 64;
+      return YB > 64 && (OB = jB(BB, OB, GB, 60), YB -= 60), jB(BB, OB, GB, YB)
     }
 
-    function CH(HH, BH, tH, CH, EH) {
-      for (var XH = 1; 1 << XH <= tH && XH <= 14;) XH += 1;
-      var GH = 32 - (XH -= 1);
-      "undefined" === typeof LH[XH] && (LH[XH] = new Uint16Array(1 << XH));
-      var YH, uH = LH[XH];
-      for (YH = 0; YH < uH.length; YH++) uH[YH] = 0;
-      var QH, WH, MH, xH, vH, PH, TH, UH, VH, OH, bH = BH + tH,
-        kH = BH,
-        mH = BH,
-        oH = !0;
-      if (tH >= 15)
-        for (QH = bH - 15, MH = AH(rH(HH, BH += 1), GH); oH;) {
-          PH = 32, xH = BH;
+    function JB(BB, OB, jB, JB, MB) {
+      for (var PB = 1; 1 << PB <= jB && PB <= 14;) PB += 1;
+      var zB = 32 - (PB -= 1);
+      "undefined" === typeof GB[PB] && (GB[PB] = new Uint16Array(1 << PB));
+      var lB, pB = GB[PB];
+      for (lB = 0; lB < pB.length; lB++) pB[lB] = 0;
+      var qB, ZB, NB, RB, WB, AB, VB, SB, nB, UB, fB = OB + jB,
+        kB = OB,
+        dB = OB,
+        KB = !0;
+      if (jB >= 15)
+        for (qB = fB - 15, NB = YB(DB(BB, OB += 1), zB); KB;) {
+          AB = 32, RB = OB;
           do {
-            if (WH = MH, TH = PH >>> 5, PH += 1, xH = (BH = xH) + TH, BH > QH) {
-              oH = !1;
+            if (ZB = NB, VB = AB >>> 5, AB += 1, RB = (OB = RB) + VB, OB > qB) {
+              KB = !1;
               break
             }
-            MH = AH(rH(HH, xH), GH), vH = kH + uH[WH], uH[WH] = BH - kH
-          } while (!SH(HH, BH, vH));
-          if (!oH) break;
-          EH = hH(HH, mH, BH - mH, CH, EH);
+            NB = YB(DB(BB, RB), zB), WB = kB + pB[ZB], pB[ZB] = OB - kB
+          } while (!QB(BB, OB, WB));
+          if (!KB) break;
+          MB = oB(BB, dB, OB - dB, JB, MB);
           do {
-            for (UH = BH, VH = 4; BH + VH < bH && HH[BH + VH] === HH[vH + VH];) VH += 1;
-            if (BH += VH, EH = zH(CH, EH, UH - vH, VH), mH = BH, BH >= QH) {
-              oH = !1;
+            for (SB = OB, nB = 4; OB + nB < fB && BB[OB + nB] === BB[WB + nB];) nB += 1;
+            if (OB += nB, MB = yB(JB, MB, SB - WB, nB), dB = OB, OB >= qB) {
+              KB = !1;
               break
             }
-            uH[AH(rH(HH, BH - 1), GH)] = BH - 1 - kH, vH = kH + uH[OH = AH(rH(HH, BH), GH)], uH[OH] = BH - kH
-          } while (SH(HH, BH, vH));
-          if (!oH) break;
-          MH = AH(rH(HH, BH += 1), GH)
+            pB[YB(DB(BB, OB - 1), zB)] = OB - 1 - kB, WB = kB + pB[UB = YB(DB(BB, OB), zB)], pB[UB] = OB - kB
+          } while (QB(BB, OB, WB));
+          if (!KB) break;
+          NB = YB(DB(BB, OB += 1), zB)
         }
-      return mH < bH && (EH = hH(HH, mH, bH - mH, CH, EH)), EH
+      return dB < fB && (MB = oB(BB, dB, fB - dB, JB, MB)), MB
     }
 
-    function EH(HH) {
-      this.array = HH
+    function MB(BB) {
+      this.array = BB
     }
-    EH.prototype.maxCompressedLength = function() {
-      var HH = this.array.length;
-      return 32 + HH + Math.floor(HH / 6)
-    }, EH.prototype.compressToBuffer = function(HH) {
-      var BH, LH = this.array,
-        AH = LH.length,
-        rH = 0,
-        SH = 0;
-      for (SH = function(HH, BH, LH) {
+    MB.prototype.maxCompressedLength = function() {
+      var BB = this.array.length;
+      return 32 + BB + Math.floor(BB / 6)
+    }, MB.prototype.compressToBuffer = function(BB) {
+      var OB, GB = this.array,
+        YB = GB.length,
+        DB = 0,
+        QB = 0;
+      for (QB = function(BB, OB, GB) {
           do {
-            BH[LH] = 127 & HH, (HH >>>= 7) > 0 && (BH[LH] += 128), LH += 1
-          } while (HH > 0);
-          return LH
-        }(AH, HH, SH); rH < AH;) SH = CH(LH, rH, BH = Math.min(AH - rH, 65536), HH, SH), rH += BH;
-      return SH
-    }, BH.d = EH
+            OB[GB] = 127 & BB, (BB >>>= 7) > 0 && (OB[GB] += 128), GB += 1
+          } while (BB > 0);
+          return GB
+        }(YB, BB, QB); DB < YB;) QB = JB(GB, DB, OB = Math.min(YB - DB, 65536), BB, QB), DB += OB;
+      return QB
+    }, OB.b = MB
   },
-  40712: (HH, BH) => {
-    var LH = [0, 255, 65535, 16777215, 4294967295];
+  40440: (BB, OB) => {
+    var GB = [0, 255, 65535, 16777215, 4294967295];
 
-    function AH(HH, BH, LH, AH, rH) {
-      var SH;
-      for (SH = 0; SH < rH; SH++) LH[AH + SH] = HH[BH + SH]
+    function YB(BB, OB, GB, YB, DB) {
+      var QB;
+      for (QB = 0; QB < DB; QB++) GB[YB + QB] = BB[OB + QB]
     }
 
-    function rH(HH, BH, LH, AH) {
-      var rH;
-      for (rH = 0; rH < AH; rH++) HH[BH + rH] = HH[BH - LH + rH]
+    function DB(BB, OB, GB, YB) {
+      var DB;
+      for (DB = 0; DB < YB; DB++) BB[OB + DB] = BB[OB - GB + DB]
     }
 
-    function SH(HH) {
-      this.array = HH, this.pos = 0
+    function QB(BB) {
+      this.array = BB, this.pos = 0
     }
-    SH.prototype.readUncompressedLength = function() {
-      for (var HH, BH, LH = 0, AH = 0; AH < 32 && this.pos < this.array.length;) {
-        if (HH = this.array[this.pos], this.pos += 1, (BH = 127 & HH) << AH >>> AH !== BH) return -1;
-        if (LH |= BH << AH, HH < 128) return LH;
-        AH += 7
+    QB.prototype.readUncompressedLength = function() {
+      for (var BB, OB, GB = 0, YB = 0; YB < 32 && this.pos < this.array.length;) {
+        if (BB = this.array[this.pos], this.pos += 1, (OB = 127 & BB) << YB >>> YB !== OB) return -1;
+        if (GB |= OB << YB, BB < 128) return GB;
+        YB += 7
       }
       return -1
-    }, SH.prototype.uncompressToBuffer = function(HH) {
-      for (var BH, SH, hH, tH, zH = this.array, CH = zH.length, EH = this.pos, XH = 0; EH < zH.length;)
-        if (BH = zH[EH], EH += 1, 0 === (3 & BH)) {
-          if ((SH = 1 + (BH >>> 2)) > 60) {
-            if (EH + 3 >= CH) return !1;
-            hH = SH - 60, SH = 1 + ((SH = zH[EH] + (zH[EH + 1] << 8) + (zH[EH + 2] << 16) + (zH[EH + 3] << 24)) & LH[hH]), EH += hH
+    }, QB.prototype.uncompressToBuffer = function(BB) {
+      for (var OB, QB, oB, jB, yB = this.array, JB = yB.length, MB = this.pos, PB = 0; MB < yB.length;)
+        if (OB = yB[MB], MB += 1, 0 === (3 & OB)) {
+          if ((QB = 1 + (OB >>> 2)) > 60) {
+            if (MB + 3 >= JB) return !1;
+            oB = QB - 60, QB = 1 + ((QB = yB[MB] + (yB[MB + 1] << 8) + (yB[MB + 2] << 16) + (yB[MB + 3] << 24)) & GB[oB]), MB += oB
           }
-          if (EH + SH > CH) return !1;
-          AH(zH, EH, HH, XH, SH), EH += SH, XH += SH
+          if (MB + QB > JB) return !1;
+          YB(yB, MB, BB, PB, QB), MB += QB, PB += QB
         } else {
-          switch (3 & BH) {
+          switch (3 & OB) {
             case 1:
-              SH = 4 + (BH >>> 2 & 7), tH = zH[EH] + (BH >>> 5 << 8), EH += 1;
+              QB = 4 + (OB >>> 2 & 7), jB = yB[MB] + (OB >>> 5 << 8), MB += 1;
               break;
             case 2:
-              if (EH + 1 >= CH) return !1;
-              SH = 1 + (BH >>> 2), tH = zH[EH] + (zH[EH + 1] << 8), EH += 2;
+              if (MB + 1 >= JB) return !1;
+              QB = 1 + (OB >>> 2), jB = yB[MB] + (yB[MB + 1] << 8), MB += 2;
               break;
             case 3:
-              if (EH + 3 >= CH) return !1;
-              SH = 1 + (BH >>> 2), tH = zH[EH] + (zH[EH + 1] << 8) + (zH[EH + 2] << 16) + (zH[EH + 3] << 24), EH += 4
+              if (MB + 3 >= JB) return !1;
+              QB = 1 + (OB >>> 2), jB = yB[MB] + (yB[MB + 1] << 8) + (yB[MB + 2] << 16) + (yB[MB + 3] << 24), MB += 4
           }
-          if (0 === tH || tH > XH) return !1;
-          rH(HH, XH, tH, SH), XH += SH
+          if (0 === jB || jB > PB) return !1;
+          DB(BB, PB, jB, QB), PB += QB
         } return !0
-    }, BH.d = SH
+    }, OB.e = QB
   },
-  37014: HH => {
-    HH.exports = function(HH, BH, LH, AH) {
-      var rH = self || window;
+  36856: BB => {
+    BB.exports = function(BB, OB, GB, YB) {
+      var DB = self || window;
       try {
         try {
-          var SH;
+          var QB;
           try {
-            SH = new rH.Blob([HH])
-          } catch (CH) {
-            (SH = new(rH.BlobBuilder || rH.WebKitBlobBuilder || rH.MozBlobBuilder || rH.MSBlobBuilder)).append(HH), SH = SH.getBlob()
+            QB = new DB.Blob([BB])
+          } catch (JB) {
+            (QB = new(DB.BlobBuilder || DB.WebKitBlobBuilder || DB.MozBlobBuilder || DB.MSBlobBuilder)).append(BB), QB = QB.getBlob()
           }
-          var hH = rH.URL || rH.webkitURL,
-            tH = hH.createObjectURL(SH),
-            zH = new rH[BH](tH, LH);
-          return hH.revokeObjectURL(tH), zH
-        } catch (CH) {
-          return new rH[BH]("data:application/javascript,".concat(encodeURIComponent(HH)), LH)
+          var oB = DB.URL || DB.webkitURL,
+            jB = oB.createObjectURL(QB),
+            yB = new DB[OB](jB, GB);
+          return oB.revokeObjectURL(jB), yB
+        } catch (JB) {
+          return new DB[OB]("data:application/javascript,".concat(encodeURIComponent(BB)), GB)
         }
-      } catch (CH) {
-        if (!AH) throw Error("Inline worker is not supported");
-        return new rH[BH](AH, LH)
+      } catch (JB) {
+        if (!YB) throw Error("Inline worker is not supported");
+        return new DB[OB](YB, GB)
       }
     }
   },
-  40838: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH,
-      h: () => rH,
-      j: () => CH,
-      n: () => YH,
-      o: () => hH,
-      q: () => uH
+  40591: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB,
+      e: () => DB,
+      g: () => JB,
+      k: () => lB,
+      n: () => oB,
+      q: () => pB
     });
-    var AH = LH(40847);
-    const rH = [96e3, 88200, 64e3, 48e3, 44100, 32e3, 24e3, 22050, 16e3, 12e3, 11025, 8e3, 7350],
-      SH = [-1, 1, 2, 3, 4, 5, 6, 8],
-      hH = HH => {
-        if (!HH || HH.byteLength < 2) throw new TypeError("AAC description must be at least 2 bytes long.");
-        const BH = new AH.e(HH),
-          LH = tH(BH),
+    var YB = GB(40594);
+    const DB = [96e3, 88200, 64e3, 48e3, 44100, 32e3, 24e3, 22050, 16e3, 12e3, 11025, 8e3, 7350],
+      QB = [-1, 1, 2, 3, 4, 5, 6, 8],
+      oB = BB => {
+        if (!BB || BB.byteLength < 2) throw new TypeError("AAC description must be at least 2 bytes long.");
+        const OB = new YB.e(BB),
+          GB = jB(OB),
           {
-            frequencyIndex: rH,
-            sampleRate: hH
-          } = zH(BH),
-          CH = BH.readBits(4);
-        let EH = null;
-        CH >= 1 && CH <= 7 && (EH = SH[CH]);
-        let XH = LH,
-          GH = !1,
-          YH = hH;
-        if (5 === LH || 29 === LH) GH = 29 === LH, YH = zH(BH).sampleRate, XH = tH(BH), 22 === XH && BH.skipBits(4);
+            frequencyIndex: DB,
+            sampleRate: oB
+          } = yB(OB),
+          JB = OB.readBits(4);
+        let MB = null;
+        JB >= 1 && JB <= 7 && (MB = QB[JB]);
+        let PB = GB,
+          zB = !1,
+          lB = oB;
+        if (5 === GB || 29 === GB) zB = 29 === GB, lB = yB(OB).sampleRate, PB = jB(OB), 22 === PB && OB.skipBits(4);
         else
-          for (; BH.getBitsLeft() > 15;) {
-            const HH = BH.pos;
-            if (695 === BH.readBits(11)) {
-              5 === tH(BH) && BH.readBits(1) && (YH = zH(BH).sampleRate, BH.getBitsLeft() > 11 && 1352 === BH.readBits(11) && (GH = !!BH.readBits(1)));
+          for (; OB.getBitsLeft() > 15;) {
+            const BB = OB.pos;
+            if (695 === OB.readBits(11)) {
+              5 === jB(OB) && OB.readBits(1) && (lB = yB(OB).sampleRate, OB.getBitsLeft() > 11 && 1352 === OB.readBits(11) && (zB = !!OB.readBits(1)));
               break
             }
-            BH.pos = HH + 1
+            OB.pos = BB + 1
           }
-        return null !== EH && EH > 1 && (GH = !1), {
-          objectType: LH,
-          coreObjectType: XH,
-          frequencyIndex: rH,
-          channelConfiguration: CH,
-          outputSampleRate: YH,
-          outputNumberOfChannels: GH && 1 === EH ? 2 : EH
+        return null !== MB && MB > 1 && (zB = !1), {
+          objectType: GB,
+          coreObjectType: PB,
+          frequencyIndex: DB,
+          channelConfiguration: JB,
+          outputSampleRate: lB,
+          outputNumberOfChannels: zB && 1 === MB ? 2 : MB
         }
       },
-      tH = HH => {
-        const BH = HH.readBits(5);
-        return 31 === BH ? 32 + HH.readBits(6) : BH
+      jB = BB => {
+        const OB = BB.readBits(5);
+        return 31 === OB ? 32 + BB.readBits(6) : OB
       },
-      zH = HH => {
-        const BH = HH.readBits(4);
-        return 15 === BH ? {
-          frequencyIndex: BH,
-          sampleRate: HH.readBits(24)
+      yB = BB => {
+        const OB = BB.readBits(4);
+        return 15 === OB ? {
+          frequencyIndex: OB,
+          sampleRate: BB.readBits(24)
         } : {
-          frequencyIndex: BH,
-          sampleRate: BH < rH.length ? rH[BH] : null
+          frequencyIndex: OB,
+          sampleRate: OB < DB.length ? DB[OB] : null
         }
       },
-      CH = HH => {
-        const BH = 5 === HH.objectType || 29 === HH.objectType,
-          LH = 29 === HH.objectType,
-          rH = BH ? HH.outputSampleRate / 2 : HH.outputSampleRate,
-          hH = LH ? 1 : HH.outputNumberOfChannels,
-          tH = SH.indexOf(hH);
-        if (-1 === tH) throw new TypeError(`Unsupported number of channels: ${HH.outputNumberOfChannels}`);
-        let zH = 16;
-        HH.objectType >= 32 && (zH += 6), 15 === GH(rH) && (zH += 24), BH && (zH += 9, 15 === GH(HH.outputSampleRate) && (zH += 24));
-        const CH = Math.ceil(zH / 8),
-          YH = new Uint8Array(CH),
-          uH = new AH.e(YH);
-        return EH(uH, HH.objectType), XH(uH, rH), uH.writeBits(4, tH), BH && (XH(uH, HH.outputSampleRate), EH(uH, 2)), uH.writeBits(3, 0), YH
+      JB = BB => {
+        const OB = 5 === BB.objectType || 29 === BB.objectType,
+          GB = 29 === BB.objectType,
+          DB = OB ? BB.outputSampleRate / 2 : BB.outputSampleRate,
+          oB = GB ? 1 : BB.outputNumberOfChannels,
+          jB = QB.indexOf(oB);
+        if (-1 === jB) throw new TypeError(`Unsupported number of channels: ${BB.outputNumberOfChannels}`);
+        let yB = 16;
+        BB.objectType >= 32 && (yB += 6), 15 === zB(DB) && (yB += 24), OB && (yB += 9, 15 === zB(BB.outputSampleRate) && (yB += 24));
+        const JB = Math.ceil(yB / 8),
+          lB = new Uint8Array(JB),
+          pB = new YB.e(lB);
+        return MB(pB, BB.objectType), PB(pB, DB), pB.writeBits(4, jB), OB && (PB(pB, BB.outputSampleRate), MB(pB, 2)), pB.writeBits(3, 0), lB
       },
-      EH = (HH, BH) => {
-        BH < 32 ? HH.writeBits(5, BH) : (HH.writeBits(5, 31), HH.writeBits(6, BH - 32))
+      MB = (BB, OB) => {
+        OB < 32 ? BB.writeBits(5, OB) : (BB.writeBits(5, 31), BB.writeBits(6, OB - 32))
       },
-      XH = (HH, BH) => {
-        const LH = GH(BH);
-        HH.writeBits(4, LH), 15 === LH && HH.writeBits(24, BH)
+      PB = (BB, OB) => {
+        const GB = zB(OB);
+        BB.writeBits(4, GB), 15 === GB && BB.writeBits(24, OB)
       },
-      GH = HH => {
-        const BH = rH.indexOf(HH);
-        return -1 === BH ? 15 : BH
+      zB = BB => {
+        const OB = DB.indexOf(BB);
+        return -1 === OB ? 15 : OB
       },
-      YH = HH => {
-        const BH = new Uint8Array(7),
-          LH = new AH.e(BH),
+      lB = BB => {
+        const OB = new Uint8Array(7),
+          GB = new YB.e(OB),
           {
-            coreObjectType: rH,
-            frequencyIndex: SH,
-            channelConfiguration: hH
-          } = HH,
-          tH = rH - 1;
-        return LH.writeBits(12, 4095), LH.writeBits(1, 0), LH.writeBits(2, 0), LH.writeBits(1, 1), LH.writeBits(2, tH), LH.writeBits(4, SH), LH.writeBits(1, 0), LH.writeBits(3, hH), LH.writeBits(1, 0), LH.writeBits(1, 0), LH.writeBits(1, 0), LH.writeBits(1, 0), LH.skipBits(13), LH.writeBits(11, 2047), LH.writeBits(2, 0), {
-          header: BH,
-          bitstream: LH
+            coreObjectType: DB,
+            frequencyIndex: QB,
+            channelConfiguration: oB
+          } = BB,
+          jB = DB - 1;
+        return GB.writeBits(12, 4095), GB.writeBits(1, 0), GB.writeBits(2, 0), GB.writeBits(1, 1), GB.writeBits(2, jB), GB.writeBits(4, QB), GB.writeBits(1, 0), GB.writeBits(3, oB), GB.writeBits(1, 0), GB.writeBits(1, 0), GB.writeBits(1, 0), GB.writeBits(1, 0), GB.skipBits(13), GB.writeBits(11, 2047), GB.writeBits(2, 0), {
+          header: OB,
+          bitstream: GB
         }
       },
-      uH = (HH, BH) => {
-        HH.pos = 30, HH.writeBits(13, BH)
+      pB = (BB, OB) => {
+        BB.pos = 30, BB.writeBits(13, OB)
       }
   },
-  40847: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH
+  40594: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => YB
     });
-    class AH {
-      constructor(HH) {
-        this.bytes = HH, this.pos = 0
+    class YB {
+      constructor(BB) {
+        this.bytes = BB, this.pos = 0
       }
-      seekToByte(HH) {
-        this.pos = 8 * HH
+      seekToByte(BB) {
+        this.pos = 8 * BB
       }
       readBit() {
-        const HH = Math.floor(this.pos / 8),
-          BH = this.bytes[HH] ?? 0,
-          LH = 7 - (7 & this.pos),
-          AH = (BH & 1 << LH) >> LH;
-        return this.pos++, AH
+        const BB = Math.floor(this.pos / 8),
+          OB = this.bytes[BB] ?? 0,
+          GB = 7 - (7 & this.pos),
+          YB = (OB & 1 << GB) >> GB;
+        return this.pos++, YB
       }
-      readBits(HH) {
-        if (1 === HH) return this.readBit();
-        let BH = 0;
-        for (let LH = 0; LH < HH; LH++) BH <<= 1, BH |= this.readBit();
-        return BH
+      readBits(BB) {
+        if (1 === BB) return this.readBit();
+        let OB = 0;
+        for (let GB = 0; GB < BB; GB++) OB <<= 1, OB |= this.readBit();
+        return OB
       }
-      writeBits(HH, BH) {
-        const LH = this.pos + HH;
-        for (let AH = this.pos; AH < LH; AH++) {
-          const HH = Math.floor(AH / 8);
-          let rH = this.bytes[HH];
-          const SH = 7 - (7 & AH);
-          rH &= ~(1 << SH), rH |= (BH & 1 << LH - AH - 1) >> LH - AH - 1 << SH, this.bytes[HH] = rH
+      writeBits(BB, OB) {
+        const GB = this.pos + BB;
+        for (let YB = this.pos; YB < GB; YB++) {
+          const BB = Math.floor(YB / 8);
+          let DB = this.bytes[BB];
+          const QB = 7 - (7 & YB);
+          DB &= ~(1 << QB), DB |= (OB & 1 << GB - YB - 1) >> GB - YB - 1 << QB, this.bytes[BB] = DB
         }
-        this.pos = LH
+        this.pos = GB
       }
-      copyBits(HH, BH) {
-        let LH = 0;
-        for (; LH < HH - 7; LH += 8) this.writeBits(8, BH.readBits(8));
-        const AH = HH - LH;
-        AH > 0 && this.writeBits(AH, BH.readBits(AH))
+      copyBits(BB, OB) {
+        let GB = 0;
+        for (; GB < BB - 7; GB += 8) this.writeBits(8, OB.readBits(8));
+        const YB = BB - GB;
+        YB > 0 && this.writeBits(YB, OB.readBits(YB))
       }
       readAlignedByte() {
         if (this.pos % 8 !== 0) throw new Error("Bitstream is not byte-aligned.");
-        const HH = this.pos / 8,
-          BH = this.bytes[HH] ?? 0;
-        return this.pos += 8, BH
+        const BB = this.pos / 8,
+          OB = this.bytes[BB] ?? 0;
+        return this.pos += 8, OB
       }
-      skipBits(HH) {
-        this.pos += HH
+      skipBits(BB) {
+        this.pos += BB
       }
       getBitsLeft() {
         return 8 * this.bytes.length - this.pos
       }
       clone() {
-        const HH = new AH(this.bytes);
-        return HH.pos = this.pos, HH
+        const BB = new YB(this.bytes);
+        return BB.pos = this.pos, BB
       }
     }
   },
-  40858: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => yH,
-      d: () => zH,
-      f: () => HB,
-      i: () => JH,
-      l: () => CH,
-      p: () => DH,
-      q: () => uB,
-      s: () => MH,
-      t: () => xH,
-      x: () => iH,
-      z: () => TH,
-      A: () => gH,
-      B: () => sH,
-      F: () => FH,
-      D: () => vH,
-      G: () => mH,
-      J: () => uH,
-      L: () => kH,
-      O: () => jH,
-      Q: () => GH,
-      S: () => YH,
-      W: () => pH,
-      X: () => XB,
-      _: () => LB,
-      bb: () => aH,
-      db: () => wH,
-      fb: () => dH,
-      jb: () => PH,
-      nb: () => qH
+  40603: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => tB,
+      g: () => yB,
+      k: () => BO,
+      n: () => vB,
+      o: () => JB,
+      p: () => aB,
+      r: () => pO,
+      v: () => NB,
+      z: () => RB,
+      C: () => sB,
+      E: () => VB,
+      G: () => rB,
+      I: () => HB,
+      N: () => hB,
+      K: () => WB,
+      O: () => dB,
+      Q: () => pB,
+      U: () => kB,
+      Y: () => EB,
+      $: () => zB,
+      bb: () => lB,
+      fb: () => xB,
+      hb: () => PO,
+      kb: () => GO,
+      nb: () => CB,
+      rb: () => eB,
+      sb: () => bB,
+      ub: () => AB,
+      wb: () => gB
     });
-    var AH = LH(40849),
-      rH = LH(40820),
-      SH = LH(40866);
-    const hH = [48e3, 44100, 32e3],
-      tH = [24e3, 22050, 16e3];
-    var zH, CH, EH = LH(40847),
-      XH = LH(40872);
-    ! function(HH) {
-      HH[HH.NON_IDR_SLICE = 1] = "NON_IDR_SLICE", HH[HH.SLICE_DPA = 2] = "SLICE_DPA", HH[HH.SLICE_DPB = 3] = "SLICE_DPB", HH[HH.SLICE_DPC = 4] = "SLICE_DPC", HH[HH.IDR = 5] = "IDR", HH[HH.SEI = 6] = "SEI", HH[HH.SPS = 7] = "SPS", HH[HH.PPS = 8] = "PPS", HH[HH.AUD = 9] = "AUD", HH[HH.SPS_EXT = 13] = "SPS_EXT"
-    }(zH || (zH = {})),
-    function(HH) {
-      HH[HH.RASL_N = 8] = "RASL_N", HH[HH.RASL_R = 9] = "RASL_R", HH[HH.BLA_W_LP = 16] = "BLA_W_LP", HH[HH.RSV_IRAP_VCL23 = 23] = "RSV_IRAP_VCL23", HH[HH.VPS_NUT = 32] = "VPS_NUT", HH[HH.SPS_NUT = 33] = "SPS_NUT", HH[HH.PPS_NUT = 34] = "PPS_NUT", HH[HH.AUD_NUT = 35] = "AUD_NUT", HH[HH.PREFIX_SEI_NUT = 39] = "PREFIX_SEI_NUT", HH[HH.SUFFIX_SEI_NUT = 40] = "SUFFIX_SEI_NUT"
-    }(CH || (CH = {}));
-    const GH = function*(HH) {
-        let BH = 0,
-          LH = -1;
-        for (; BH < HH.length - 2;) {
-          const AH = HH.indexOf(0, BH);
-          if (-1 === AH || AH >= HH.length - 2) break;
-          BH = AH;
-          let rH = 0;
-          BH + 3 < HH.length && 0 === HH[BH + 1] && 0 === HH[BH + 2] && 1 === HH[BH + 3] ? rH = 4 : 0 === HH[BH + 1] && 1 === HH[BH + 2] && (rH = 3), 0 !== rH ? (-1 !== LH && BH > LH && (yield {
-            offset: LH,
-            length: BH - LH
-          }), LH = BH + rH, BH = LH) : BH++
-        } - 1 !== LH && LH < HH.length && (yield {
-          offset: LH,
-          length: HH.length - LH
+    var YB = GB(40599),
+      DB = GB(40574),
+      QB = GB(40610);
+    const oB = [48e3, 44100, 32e3],
+      jB = [24e3, 22050, 16e3];
+    var yB, JB, MB = GB(40594),
+      PB = GB(40619);
+    ! function(BB) {
+      BB[BB.NON_IDR_SLICE = 1] = "NON_IDR_SLICE", BB[BB.SLICE_DPA = 2] = "SLICE_DPA", BB[BB.SLICE_DPB = 3] = "SLICE_DPB", BB[BB.SLICE_DPC = 4] = "SLICE_DPC", BB[BB.IDR = 5] = "IDR", BB[BB.SEI = 6] = "SEI", BB[BB.SPS = 7] = "SPS", BB[BB.PPS = 8] = "PPS", BB[BB.AUD = 9] = "AUD", BB[BB.SPS_EXT = 13] = "SPS_EXT"
+    }(yB || (yB = {})),
+    function(BB) {
+      BB[BB.RASL_N = 8] = "RASL_N", BB[BB.RASL_R = 9] = "RASL_R", BB[BB.BLA_W_LP = 16] = "BLA_W_LP", BB[BB.RSV_IRAP_VCL23 = 23] = "RSV_IRAP_VCL23", BB[BB.VPS_NUT = 32] = "VPS_NUT", BB[BB.SPS_NUT = 33] = "SPS_NUT", BB[BB.PPS_NUT = 34] = "PPS_NUT", BB[BB.AUD_NUT = 35] = "AUD_NUT", BB[BB.PREFIX_SEI_NUT = 39] = "PREFIX_SEI_NUT", BB[BB.SUFFIX_SEI_NUT = 40] = "SUFFIX_SEI_NUT"
+    }(JB || (JB = {}));
+    const zB = function*(BB) {
+        let OB = 0,
+          GB = -1;
+        for (; OB < BB.length - 2;) {
+          const YB = BB.indexOf(0, OB);
+          if (-1 === YB || YB >= BB.length - 2) break;
+          OB = YB;
+          let DB = 0;
+          OB + 3 < BB.length && 0 === BB[OB + 1] && 0 === BB[OB + 2] && 1 === BB[OB + 3] ? DB = 4 : 0 === BB[OB + 1] && 1 === BB[OB + 2] && (DB = 3), 0 !== DB ? (-1 !== GB && OB > GB && (yield {
+            offset: GB,
+            length: OB - GB
+          }), GB = OB + DB, OB = GB) : OB++
+        } - 1 !== GB && GB < BB.length && (yield {
+          offset: GB,
+          length: BB.length - GB
         })
       },
-      YH = function*(HH, BH) {
-        let LH = 0;
-        const AH = new DataView(HH.buffer, HH.byteOffset, HH.byteLength);
-        for (; LH + BH <= HH.length;) {
-          let HH;
-          1 === BH ? HH = AH.getUint8(LH) : 2 === BH ? HH = AH.getUint16(LH, !1) : 3 === BH ? HH = (0, rH.pb)(AH, LH, !1) : ((0, rH.J)(4 === BH), HH = AH.getUint32(LH, !1)), LH += BH, yield {
-            offset: LH,
-            length: HH
-          }, LH += HH
+      lB = function*(BB, OB) {
+        let GB = 0;
+        const YB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
+        for (; GB + OB <= BB.length;) {
+          let BB;
+          1 === OB ? BB = YB.getUint8(GB) : 2 === OB ? BB = YB.getUint16(GB, !1) : 3 === OB ? BB = (0, DB.Ab)(YB, GB, !1) : ((0, DB.Q)(4 === OB), BB = YB.getUint32(GB, !1)), GB += OB, yield {
+            offset: GB,
+            length: BB
+          }, GB += BB
         }
       },
-      uH = HH => 31 & HH,
-      QH = HH => {
-        const BH = [],
-          LH = HH.length;
-        for (let AH = 0; AH < LH; AH++) AH + 2 < LH && 0 === HH[AH] && 0 === HH[AH + 1] && 3 === HH[AH + 2] ? (BH.push(0, 0), AH += 2) : BH.push(HH[AH]);
-        return new Uint8Array(BH)
+      pB = BB => 31 & BB,
+      qB = BB => {
+        const OB = [],
+          GB = BB.length;
+        for (let YB = 0; YB < GB; YB++) YB + 2 < GB && 0 === BB[YB] && 0 === BB[YB + 1] && 3 === BB[YB + 2] ? (OB.push(0, 0), YB += 2) : OB.push(BB[YB]);
+        return new Uint8Array(OB)
       },
-      WH = new Uint8Array([0, 0, 0, 1]),
-      MH = HH => {
-        const BH = HH.reduce(((HH, BH) => HH + WH.byteLength + BH.byteLength), 0),
-          LH = new Uint8Array(BH);
-        let AH = 0;
-        for (const rH of HH) LH.set(WH, AH), AH += WH.byteLength, LH.set(rH, AH), AH += rH.byteLength;
-        return LH
+      ZB = new Uint8Array([0, 0, 0, 1]),
+      NB = BB => {
+        const OB = BB.reduce(((BB, OB) => BB + ZB.byteLength + OB.byteLength), 0),
+          GB = new Uint8Array(OB);
+        let YB = 0;
+        for (const DB of BB) GB.set(ZB, YB), YB += ZB.byteLength, GB.set(DB, YB), YB += DB.byteLength;
+        return GB
       },
-      xH = (HH, BH) => {
-        const LH = HH.reduce(((HH, LH) => HH + BH + LH.byteLength), 0),
-          AH = new Uint8Array(LH);
-        let SH = 0;
-        for (const hH of HH) {
-          const HH = new DataView(AH.buffer, AH.byteOffset, AH.byteLength);
-          switch (BH) {
+      RB = (BB, OB) => {
+        const GB = BB.reduce(((BB, GB) => BB + OB + GB.byteLength), 0),
+          YB = new Uint8Array(GB);
+        let QB = 0;
+        for (const oB of BB) {
+          const BB = new DataView(YB.buffer, YB.byteOffset, YB.byteLength);
+          switch (OB) {
             case 1:
-              HH.setUint8(SH, hH.byteLength);
+              BB.setUint8(QB, oB.byteLength);
               break;
             case 2:
-              HH.setUint16(SH, hH.byteLength, !1);
+              BB.setUint16(QB, oB.byteLength, !1);
               break;
             case 3:
-              (0, rH.Qc)(HH, SH, hH.byteLength, !1);
+              (0, DB.sd)(BB, QB, oB.byteLength, !1);
               break;
             case 4:
-              HH.setUint32(SH, hH.byteLength, !1)
+              BB.setUint32(QB, oB.byteLength, !1)
           }
-          SH += BH, AH.set(hH, SH), SH += hH.byteLength
+          QB += OB, YB.set(oB, QB), QB += oB.byteLength
         }
-        return AH
+        return YB
       },
-      vH = HH => {
+      WB = BB => {
         try {
-          const BH = [],
-            LH = [],
-            AH = [];
-          for (const rH of GH(HH)) {
-            const SH = HH.subarray(rH.offset, rH.offset + rH.length),
-              hH = uH(SH[0]);
-            hH === zH.SPS ? BH.push(SH) : hH === zH.PPS ? LH.push(SH) : hH === zH.SPS_EXT && AH.push(SH)
+          const OB = [],
+            GB = [],
+            YB = [];
+          for (const DB of zB(BB)) {
+            const QB = BB.subarray(DB.offset, DB.offset + DB.length),
+              oB = pB(QB[0]);
+            oB === yB.SPS ? OB.push(QB) : oB === yB.PPS ? GB.push(QB) : oB === yB.SPS_EXT && YB.push(QB)
           }
-          if (0 === BH.length) return null;
-          if (0 === LH.length) return null;
-          const SH = BH[0],
-            hH = VH(SH);
-          (0, rH.J)(null !== hH);
-          const tH = 100 === hH.profileIdc || 110 === hH.profileIdc || 122 === hH.profileIdc || 144 === hH.profileIdc;
+          if (0 === OB.length) return null;
+          if (0 === GB.length) return null;
+          const QB = OB[0],
+            oB = nB(QB);
+          (0, DB.Q)(null !== oB);
+          const jB = 100 === oB.profileIdc || 110 === oB.profileIdc || 122 === oB.profileIdc || 144 === oB.profileIdc;
           return {
             configurationVersion: 1,
-            avcProfileIndication: hH.profileIdc,
-            profileCompatibility: hH.constraintFlags,
-            avcLevelIndication: hH.levelIdc,
+            avcProfileIndication: oB.profileIdc,
+            profileCompatibility: oB.constraintFlags,
+            avcLevelIndication: oB.levelIdc,
             lengthSizeMinusOne: 3,
-            sequenceParameterSets: BH,
-            pictureParameterSets: LH,
-            chromaFormat: tH ? hH.chromaFormatIdc : null,
-            bitDepthLumaMinus8: tH ? hH.bitDepthLumaMinus8 : null,
-            bitDepthChromaMinus8: tH ? hH.bitDepthChromaMinus8 : null,
-            sequenceParameterSetExt: tH ? AH : null
+            sequenceParameterSets: OB,
+            pictureParameterSets: GB,
+            chromaFormat: jB ? oB.chromaFormatIdc : null,
+            bitDepthLumaMinus8: jB ? oB.bitDepthLumaMinus8 : null,
+            bitDepthChromaMinus8: jB ? oB.bitDepthChromaMinus8 : null,
+            sequenceParameterSetExt: jB ? YB : null
           }
-        } catch (BH) {
-          return SH.c._error("Error building AVC Decoder Configuration Record:", BH), null
+        } catch (OB) {
+          return QB.e._error("Error building AVC Decoder Configuration Record:", OB), null
         }
       },
-      PH = HH => {
-        const BH = [];
-        BH.push(HH.configurationVersion), BH.push(HH.avcProfileIndication), BH.push(HH.profileCompatibility), BH.push(HH.avcLevelIndication), BH.push(252 | 3 & HH.lengthSizeMinusOne), BH.push(224 | 31 & HH.sequenceParameterSets.length);
-        for (const LH of HH.sequenceParameterSets) {
-          const HH = LH.byteLength;
-          BH.push(HH >> 8), BH.push(255 & HH);
-          for (let AH = 0; AH < HH; AH++) BH.push(LH[AH])
+      AB = BB => {
+        const OB = [];
+        OB.push(BB.configurationVersion), OB.push(BB.avcProfileIndication), OB.push(BB.profileCompatibility), OB.push(BB.avcLevelIndication), OB.push(252 | 3 & BB.lengthSizeMinusOne), OB.push(224 | 31 & BB.sequenceParameterSets.length);
+        for (const GB of BB.sequenceParameterSets) {
+          const BB = GB.byteLength;
+          OB.push(BB >> 8), OB.push(255 & BB);
+          for (let YB = 0; YB < BB; YB++) OB.push(GB[YB])
         }
-        BH.push(HH.pictureParameterSets.length);
-        for (const LH of HH.pictureParameterSets) {
-          const HH = LH.byteLength;
-          BH.push(HH >> 8), BH.push(255 & HH);
-          for (let AH = 0; AH < HH; AH++) BH.push(LH[AH])
+        OB.push(BB.pictureParameterSets.length);
+        for (const GB of BB.pictureParameterSets) {
+          const BB = GB.byteLength;
+          OB.push(BB >> 8), OB.push(255 & BB);
+          for (let YB = 0; YB < BB; YB++) OB.push(GB[YB])
         }
-        if ((100 === HH.avcProfileIndication || 110 === HH.avcProfileIndication || 122 === HH.avcProfileIndication || 144 === HH.avcProfileIndication) && null !== HH.chromaFormat) {
-          (0, rH.J)(null !== HH.bitDepthLumaMinus8), (0, rH.J)(null !== HH.bitDepthChromaMinus8), (0, rH.J)(null !== HH.sequenceParameterSetExt), BH.push(252 | 3 & HH.chromaFormat), BH.push(248 | 7 & HH.bitDepthLumaMinus8), BH.push(248 | 7 & HH.bitDepthChromaMinus8), BH.push(HH.sequenceParameterSetExt.length);
-          for (const LH of HH.sequenceParameterSetExt) {
-            const HH = LH.byteLength;
-            BH.push(HH >> 8), BH.push(255 & HH);
-            for (let AH = 0; AH < HH; AH++) BH.push(LH[AH])
+        if ((100 === BB.avcProfileIndication || 110 === BB.avcProfileIndication || 122 === BB.avcProfileIndication || 144 === BB.avcProfileIndication) && null !== BB.chromaFormat) {
+          (0, DB.Q)(null !== BB.bitDepthLumaMinus8), (0, DB.Q)(null !== BB.bitDepthChromaMinus8), (0, DB.Q)(null !== BB.sequenceParameterSetExt), OB.push(252 | 3 & BB.chromaFormat), OB.push(248 | 7 & BB.bitDepthLumaMinus8), OB.push(248 | 7 & BB.bitDepthChromaMinus8), OB.push(BB.sequenceParameterSetExt.length);
+          for (const GB of BB.sequenceParameterSetExt) {
+            const BB = GB.byteLength;
+            OB.push(BB >> 8), OB.push(255 & BB);
+            for (let YB = 0; YB < BB; YB++) OB.push(GB[YB])
           }
         }
-        return new Uint8Array(BH)
+        return new Uint8Array(OB)
       },
-      TH = HH => {
+      VB = BB => {
         try {
-          const BH = (0, rH.ed)(HH);
-          let LH = 0;
-          const AH = BH.getUint8(LH++),
-            SH = BH.getUint8(LH++),
-            hH = BH.getUint8(LH++),
-            tH = BH.getUint8(LH++),
-            zH = 3 & BH.getUint8(LH++),
-            CH = 31 & BH.getUint8(LH++),
-            EH = [];
-          for (let rH = 0; rH < CH; rH++) {
-            const AH = BH.getUint16(LH, !1);
-            LH += 2, EH.push(HH.subarray(LH, LH + AH)), LH += AH
+          const OB = (0, DB.Gd)(BB);
+          let GB = 0;
+          const YB = OB.getUint8(GB++),
+            QB = OB.getUint8(GB++),
+            oB = OB.getUint8(GB++),
+            jB = OB.getUint8(GB++),
+            yB = 3 & OB.getUint8(GB++),
+            JB = 31 & OB.getUint8(GB++),
+            MB = [];
+          for (let DB = 0; DB < JB; DB++) {
+            const YB = OB.getUint16(GB, !1);
+            GB += 2, MB.push(BB.subarray(GB, GB + YB)), GB += YB
           }
-          const XH = BH.getUint8(LH++),
-            GH = [];
-          for (let rH = 0; rH < XH; rH++) {
-            const AH = BH.getUint16(LH, !1);
-            LH += 2, GH.push(HH.subarray(LH, LH + AH)), LH += AH
+          const PB = OB.getUint8(GB++),
+            zB = [];
+          for (let DB = 0; DB < PB; DB++) {
+            const YB = OB.getUint16(GB, !1);
+            GB += 2, zB.push(BB.subarray(GB, GB + YB)), GB += YB
           }
-          const YH = {
-            configurationVersion: AH,
-            avcProfileIndication: SH,
-            profileCompatibility: hH,
-            avcLevelIndication: tH,
-            lengthSizeMinusOne: zH,
-            sequenceParameterSets: EH,
-            pictureParameterSets: GH,
+          const lB = {
+            configurationVersion: YB,
+            avcProfileIndication: QB,
+            profileCompatibility: oB,
+            avcLevelIndication: jB,
+            lengthSizeMinusOne: yB,
+            sequenceParameterSets: MB,
+            pictureParameterSets: zB,
             chromaFormat: null,
             bitDepthLumaMinus8: null,
             bitDepthChromaMinus8: null,
             sequenceParameterSetExt: null
           };
-          if ((100 === SH || 110 === SH || 122 === SH || 144 === SH) && LH + 4 <= HH.length) {
-            const AH = 3 & BH.getUint8(LH++),
-              rH = 7 & BH.getUint8(LH++),
-              SH = 7 & BH.getUint8(LH++),
-              hH = BH.getUint8(LH++);
-            YH.chromaFormat = AH, YH.bitDepthLumaMinus8 = rH, YH.bitDepthChromaMinus8 = SH;
-            const tH = [];
-            for (let zH = 0; zH < hH; zH++) {
-              const AH = BH.getUint16(LH, !1);
-              LH += 2, tH.push(HH.subarray(LH, LH + AH)), LH += AH
+          if ((100 === QB || 110 === QB || 122 === QB || 144 === QB) && GB + 4 <= BB.length) {
+            const YB = 3 & OB.getUint8(GB++),
+              DB = 7 & OB.getUint8(GB++),
+              QB = 7 & OB.getUint8(GB++),
+              oB = OB.getUint8(GB++);
+            lB.chromaFormat = YB, lB.bitDepthLumaMinus8 = DB, lB.bitDepthChromaMinus8 = QB;
+            const jB = [];
+            for (let yB = 0; yB < oB; yB++) {
+              const YB = OB.getUint16(GB, !1);
+              GB += 2, jB.push(BB.subarray(GB, GB + YB)), GB += YB
             }
-            YH.sequenceParameterSetExt = tH
+            lB.sequenceParameterSetExt = jB
           }
-          return YH
-        } catch (BH) {
-          return SH.c._error("Error deserializing AVC Decoder Configuration Record:", BH), null
+          return lB
+        } catch (OB) {
+          return QB.e._error("Error deserializing AVC Decoder Configuration Record:", OB), null
         }
       },
-      UH = {
+      SB = {
         1: {
           num: 1,
           den: 1
@@ -645,497 +645,497 @@ export const modules = {
           den: 1
         }
       },
-      VH = HH => {
+      nB = BB => {
         try {
-          const BH = QH(HH),
-            LH = new EH.e(BH);
-          LH.skipBits(1), LH.skipBits(2);
-          if (7 !== LH.readBits(5)) return null;
-          const SH = LH.readAlignedByte(),
-            hH = LH.readAlignedByte(),
-            tH = LH.readAlignedByte();
-          (0, rH.qc)(LH);
-          let zH = 1,
-            CH = 0,
-            XH = 0,
-            GH = 0;
-          if (100 === SH || 110 === SH || 122 === SH || 244 === SH || 44 === SH || 83 === SH || 86 === SH || 118 === SH || 128 === SH) {
-            zH = (0, rH.qc)(LH), 3 === zH && (GH = LH.readBits(1)), CH = (0, rH.qc)(LH), XH = (0, rH.qc)(LH), LH.skipBits(1);
-            if (LH.readBits(1))
-              for (let HH = 0; HH < (3 !== zH ? 8 : 12); HH++) {
-                if (LH.readBits(1)) {
-                  const BH = HH < 6 ? 16 : 64;
-                  let AH = 8,
-                    SH = 8;
-                  for (let HH = 0; HH < BH; HH++) {
-                    if (0 !== SH) {
-                      SH = (AH + (0, rH.uc)(LH) + 256) % 256
+          const OB = qB(BB),
+            GB = new MB.e(OB);
+          GB.skipBits(1), GB.skipBits(2);
+          if (7 !== GB.readBits(5)) return null;
+          const QB = GB.readAlignedByte(),
+            oB = GB.readAlignedByte(),
+            jB = GB.readAlignedByte();
+          (0, DB.Qc)(GB);
+          let yB = 1,
+            JB = 0,
+            PB = 0,
+            zB = 0;
+          if (100 === QB || 110 === QB || 122 === QB || 244 === QB || 44 === QB || 83 === QB || 86 === QB || 118 === QB || 128 === QB) {
+            yB = (0, DB.Qc)(GB), 3 === yB && (zB = GB.readBits(1)), JB = (0, DB.Qc)(GB), PB = (0, DB.Qc)(GB), GB.skipBits(1);
+            if (GB.readBits(1))
+              for (let BB = 0; BB < (3 !== yB ? 8 : 12); BB++) {
+                if (GB.readBits(1)) {
+                  const OB = BB < 6 ? 16 : 64;
+                  let YB = 8,
+                    QB = 8;
+                  for (let BB = 0; BB < OB; BB++) {
+                    if (0 !== QB) {
+                      QB = (YB + (0, DB.Uc)(GB) + 256) % 256
                     }
-                    AH = 0 === SH ? AH : SH
+                    YB = 0 === QB ? YB : QB
                   }
                 }
               }
-          }(0, rH.qc)(LH);
-          const YH = (0, rH.qc)(LH);
-          if (0 === YH)(0, rH.qc)(LH);
-          else if (1 === YH) {
-            LH.skipBits(1), (0, rH.uc)(LH), (0, rH.uc)(LH);
-            const HH = (0, rH.qc)(LH);
-            for (let BH = 0; BH < HH; BH++)(0, rH.uc)(LH)
-          }(0, rH.qc)(LH), LH.skipBits(1);
-          const uH = (0, rH.qc)(LH),
-            WH = (0, rH.qc)(LH),
-            MH = 16 * (uH + 1),
-            xH = 16 * (WH + 1);
-          let vH = MH,
-            PH = xH;
-          const TH = LH.readBits(1);
-          TH || LH.skipBits(1), LH.skipBits(1);
-          if (LH.readBits(1)) {
-            const HH = (0, rH.qc)(LH),
-              BH = (0, rH.qc)(LH),
-              AH = (0, rH.qc)(LH),
-              SH = (0, rH.qc)(LH);
-            let hH, tH;
-            if (0 === (0 === GH ? zH : 0)) hH = 1, tH = 2 - TH;
+          }(0, DB.Qc)(GB);
+          const lB = (0, DB.Qc)(GB);
+          if (0 === lB)(0, DB.Qc)(GB);
+          else if (1 === lB) {
+            GB.skipBits(1), (0, DB.Uc)(GB), (0, DB.Uc)(GB);
+            const BB = (0, DB.Qc)(GB);
+            for (let OB = 0; OB < BB; OB++)(0, DB.Uc)(GB)
+          }(0, DB.Qc)(GB), GB.skipBits(1);
+          const pB = (0, DB.Qc)(GB),
+            ZB = (0, DB.Qc)(GB),
+            NB = 16 * (pB + 1),
+            RB = 16 * (ZB + 1);
+          let WB = NB,
+            AB = RB;
+          const VB = GB.readBits(1);
+          VB || GB.skipBits(1), GB.skipBits(1);
+          if (GB.readBits(1)) {
+            const BB = (0, DB.Qc)(GB),
+              OB = (0, DB.Qc)(GB),
+              YB = (0, DB.Qc)(GB),
+              QB = (0, DB.Qc)(GB);
+            let oB, jB;
+            if (0 === (0 === zB ? yB : 0)) oB = 1, jB = 2 - VB;
             else {
-              hH = 3 === zH ? 1 : 2, tH = (1 === zH ? 2 : 1) * (2 - TH)
+              oB = 3 === yB ? 1 : 2, jB = (1 === yB ? 2 : 1) * (2 - VB)
             }
-            vH -= hH * (HH + BH), PH -= tH * (AH + SH)
+            WB -= oB * (BB + OB), AB -= jB * (YB + QB)
           }
-          let VH = 2,
-            bH = 2,
-            kH = 2,
-            mH = 0,
-            oH = {
+          let nB = 2,
+            fB = 2,
+            kB = 2,
+            dB = 0,
+            KB = {
               num: 1,
               den: 1
             },
-            IH = null,
-            fH = null,
-            lH = null,
-            KH = null;
-          const cH = LH.pos;
-          if (LH.readBits(1)) {
-            if (LH.readBits(1)) {
-              const HH = LH.readBits(8);
-              if (255 === HH) oH = {
-                num: LH.readBits(16),
-                den: LH.readBits(16)
+            uB = null,
+            mB = null,
+            IB = null,
+            FB = null;
+          const iB = GB.pos;
+          if (GB.readBits(1)) {
+            if (GB.readBits(1)) {
+              const BB = GB.readBits(8);
+              if (255 === BB) KB = {
+                num: GB.readBits(16),
+                den: GB.readBits(16)
               };
               else {
-                const BH = UH[HH];
-                BH && (oH = BH)
+                const OB = SB[BB];
+                OB && (KB = OB)
               }
             }
-            LH.readBits(1) && LH.skipBits(1);
-            if (LH.readBits(1)) {
-              LH.skipBits(3), mH = LH.readBits(1);
-              LH.readBits(1) && (VH = LH.readBits(8), bH = LH.readBits(8), kH = LH.readBits(8))
+            GB.readBits(1) && GB.skipBits(1);
+            if (GB.readBits(1)) {
+              GB.skipBits(3), dB = GB.readBits(1);
+              GB.readBits(1) && (nB = GB.readBits(8), fB = GB.readBits(8), kB = GB.readBits(8))
             }
-            LH.readBits(1) && ((0, rH.qc)(LH), (0, rH.qc)(LH));
-            LH.readBits(1) && (LH.skipBits(32), LH.skipBits(32), LH.skipBits(1));
-            const HH = LH.readBits(1);
-            HH && OH(LH);
-            const BH = LH.readBits(1);
-            BH && OH(LH), (HH || BH) && LH.skipBits(1), LH.skipBits(1), lH = LH.pos, KH = LH.readBits(1), KH && (LH.skipBits(1), (0, rH.qc)(LH), (0, rH.qc)(LH), (0, rH.qc)(LH), (0, rH.qc)(LH), IH = (0, rH.qc)(LH), fH = (0, rH.qc)(LH))
+            GB.readBits(1) && ((0, DB.Qc)(GB), (0, DB.Qc)(GB));
+            GB.readBits(1) && (GB.skipBits(32), GB.skipBits(32), GB.skipBits(1));
+            const BB = GB.readBits(1);
+            BB && UB(GB);
+            const OB = GB.readBits(1);
+            OB && UB(GB), (BB || OB) && GB.skipBits(1), GB.skipBits(1), IB = GB.pos, FB = GB.readBits(1), FB && (GB.skipBits(1), (0, DB.Qc)(GB), (0, DB.Qc)(GB), (0, DB.Qc)(GB), (0, DB.Qc)(GB), uB = (0, DB.Qc)(GB), mB = (0, DB.Qc)(GB))
           }
-          if (null === IH) {
-            (0, rH.J)(null === fH);
-            if (44 !== SH && 86 !== SH && 100 !== SH && 110 !== SH && 122 !== SH && 244 !== SH || !(16 & hH)) {
-              const HH = uH + 1,
-                BH = (2 - TH) * (WH + 1),
-                LH = AH.d.find((HH => HH.level >= tH)) ?? (0, rH.Xb)(AH.d),
-                SH = Math.min(Math.floor(LH.maxDpbMbs / (HH * BH)), 16);
-              IH = SH, fH = SH
-            } else IH = 0, fH = 0
+          if (null === uB) {
+            (0, DB.Q)(null === mB);
+            if (44 !== QB && 86 !== QB && 100 !== QB && 110 !== QB && 122 !== QB && 244 !== QB || !(16 & oB)) {
+              const BB = pB + 1,
+                OB = (2 - VB) * (ZB + 1),
+                GB = YB.f.find((BB => BB.level >= jB)) ?? (0, DB.sc)(YB.f),
+                QB = Math.min(Math.floor(GB.maxDpbMbs / (BB * OB)), 16);
+              uB = QB, mB = QB
+            } else uB = 0, mB = 0
           }
-          return (0, rH.J)(null !== fH), {
-            emulationUnpreventedBytes: BH,
-            profileIdc: SH,
-            constraintFlags: hH,
-            levelIdc: tH,
-            frameMbsOnlyFlag: TH,
-            chromaFormatIdc: zH,
-            bitDepthLumaMinus8: CH,
-            bitDepthChromaMinus8: XH,
-            codedWidth: MH,
-            codedHeight: xH,
-            displayWidth: vH,
-            displayHeight: PH,
-            pixelAspectRatio: oH,
-            colourPrimaries: VH,
-            matrixCoefficients: kH,
-            transferCharacteristics: bH,
-            fullRangeFlag: mH,
-            numReorderFrames: IH,
-            maxDecFrameBuffering: fH,
-            vuiParametersFlagBitOffset: cH,
-            bitstreamRestrictionFlagBitOffset: lH,
-            bitstreamRestrictionFlag: KH
+          return (0, DB.Q)(null !== mB), {
+            emulationUnpreventedBytes: OB,
+            profileIdc: QB,
+            constraintFlags: oB,
+            levelIdc: jB,
+            frameMbsOnlyFlag: VB,
+            chromaFormatIdc: yB,
+            bitDepthLumaMinus8: JB,
+            bitDepthChromaMinus8: PB,
+            codedWidth: NB,
+            codedHeight: RB,
+            displayWidth: WB,
+            displayHeight: AB,
+            pixelAspectRatio: KB,
+            colourPrimaries: nB,
+            matrixCoefficients: kB,
+            transferCharacteristics: fB,
+            fullRangeFlag: dB,
+            numReorderFrames: uB,
+            maxDecFrameBuffering: mB,
+            vuiParametersFlagBitOffset: iB,
+            bitstreamRestrictionFlagBitOffset: IB,
+            bitstreamRestrictionFlag: FB
           }
-        } catch (BH) {
-          return SH.c._error("Error parsing AVC SPS:", BH), null
+        } catch (OB) {
+          return QB.e._error("Error parsing AVC SPS:", OB), null
         }
       },
-      OH = HH => {
-        const BH = (0, rH.qc)(HH);
-        HH.skipBits(4), HH.skipBits(4);
-        for (let LH = 0; LH <= BH; LH++)(0, rH.qc)(HH), (0, rH.qc)(HH), HH.skipBits(1);
-        HH.skipBits(5), HH.skipBits(5), HH.skipBits(5), HH.skipBits(5)
+      UB = BB => {
+        const OB = (0, DB.Qc)(BB);
+        BB.skipBits(4), BB.skipBits(4);
+        for (let GB = 0; GB <= OB; GB++)(0, DB.Qc)(BB), (0, DB.Qc)(BB), BB.skipBits(1);
+        BB.skipBits(5), BB.skipBits(5), BB.skipBits(5), BB.skipBits(5)
       },
-      bH = (HH, BH) => {
-        if (BH.description) {
-          const LH = 3 & (0, rH.id)(BH.description)[21];
-          return YH(HH, LH + 1)
+      fB = (BB, OB) => {
+        if (OB.description) {
+          const GB = 3 & (0, DB.Id)(OB.description)[21];
+          return lB(BB, GB + 1)
         }
-        return GH(HH)
+        return zB(BB)
       },
-      kH = HH => HH >> 1 & 63,
-      mH = HH => {
+      kB = BB => BB >> 1 & 63,
+      dB = BB => {
         try {
-          const BH = [],
-            LH = [],
-            AH = [],
-            hH = [];
-          for (const rH of GH(HH)) {
-            const SH = HH.subarray(rH.offset, rH.offset + rH.length),
-              tH = kH(SH[0]);
-            tH === CH.VPS_NUT ? BH.push(SH) : tH === CH.SPS_NUT ? LH.push(SH) : tH === CH.PPS_NUT ? AH.push(SH) : tH !== CH.PREFIX_SEI_NUT && tH !== CH.SUFFIX_SEI_NUT || hH.push(SH)
+          const OB = [],
+            GB = [],
+            YB = [],
+            oB = [];
+          for (const DB of zB(BB)) {
+            const QB = BB.subarray(DB.offset, DB.offset + DB.length),
+              jB = kB(QB[0]);
+            jB === JB.VPS_NUT ? OB.push(QB) : jB === JB.SPS_NUT ? GB.push(QB) : jB === JB.PPS_NUT ? YB.push(QB) : jB !== JB.PREFIX_SEI_NUT && jB !== JB.SUFFIX_SEI_NUT || oB.push(QB)
           }
-          if (0 === LH.length || 0 === AH.length) return null;
-          const tH = (HH => {
+          if (0 === GB.length || 0 === YB.length) return null;
+          const jB = (BB => {
             try {
-              const BH = new EH.e(QH(HH));
-              BH.skipBits(16), BH.readBits(4);
-              const LH = BH.readBits(3),
-                AH = BH.readBits(1),
+              const OB = new MB.e(qB(BB));
+              OB.skipBits(16), OB.readBits(4);
+              const GB = OB.readBits(3),
+                YB = OB.readBits(1),
                 {
-                  general_profile_space: SH,
-                  general_tier_flag: hH,
-                  general_profile_idc: tH,
-                  general_profile_compatibility_flags: zH,
-                  general_constraint_indicator_flags: CH,
-                  general_level_idc: XH
-                } = oH(BH, LH);
-              (0, rH.qc)(BH);
-              const GH = (0, rH.qc)(BH);
-              let YH = 0;
-              3 === GH && (YH = BH.readBits(1));
-              const uH = (0, rH.qc)(BH),
-                WH = (0, rH.qc)(BH);
-              let MH = uH,
-                xH = WH;
-              if (BH.readBits(1)) {
-                const HH = (0, rH.qc)(BH),
-                  LH = (0, rH.qc)(BH),
-                  AH = (0, rH.qc)(BH),
-                  SH = (0, rH.qc)(BH);
-                let hH = 1,
-                  tH = 1;
-                const zH = 0 === YH ? GH : 0;
-                1 === zH ? (hH = 2, tH = 2) : 2 === zH && (hH = 2, tH = 1), MH -= (HH + LH) * hH, xH -= (AH + SH) * tH
+                  general_profile_space: QB,
+                  general_tier_flag: oB,
+                  general_profile_idc: jB,
+                  general_profile_compatibility_flags: yB,
+                  general_constraint_indicator_flags: JB,
+                  general_level_idc: PB
+                } = KB(OB, GB);
+              (0, DB.Qc)(OB);
+              const zB = (0, DB.Qc)(OB);
+              let lB = 0;
+              3 === zB && (lB = OB.readBits(1));
+              const pB = (0, DB.Qc)(OB),
+                ZB = (0, DB.Qc)(OB);
+              let NB = pB,
+                RB = ZB;
+              if (OB.readBits(1)) {
+                const BB = (0, DB.Qc)(OB),
+                  GB = (0, DB.Qc)(OB),
+                  YB = (0, DB.Qc)(OB),
+                  QB = (0, DB.Qc)(OB);
+                let oB = 1,
+                  jB = 1;
+                const yB = 0 === lB ? zB : 0;
+                1 === yB ? (oB = 2, jB = 2) : 2 === yB && (oB = 2, jB = 1), NB -= (BB + GB) * oB, RB -= (YB + QB) * jB
               }
-              const vH = (0, rH.qc)(BH),
-                PH = (0, rH.qc)(BH);
-              (0, rH.qc)(BH);
-              const TH = BH.readBits(1);
-              let UH = 0;
-              for (let HH = TH ? 0 : LH; HH <= LH; HH++)(0, rH.qc)(BH), UH = (0, rH.qc)(BH), (0, rH.qc)(BH);
-              (0, rH.qc)(BH), (0, rH.qc)(BH), (0, rH.qc)(BH), (0, rH.qc)(BH), (0, rH.qc)(BH), (0, rH.qc)(BH), BH.readBits(1) && BH.readBits(1) && IH(BH), BH.skipBits(1), BH.skipBits(1), BH.readBits(1) && (BH.skipBits(4), BH.skipBits(4), (0, rH.qc)(BH), (0, rH.qc)(BH), BH.skipBits(1));
-              const VH = (0, rH.qc)(BH);
-              if (fH(BH, VH), BH.readBits(1)) {
-                const HH = (0, rH.qc)(BH);
-                for (let LH = 0; LH < HH; LH++)(0, rH.qc)(BH), BH.skipBits(1)
+              const WB = (0, DB.Qc)(OB),
+                AB = (0, DB.Qc)(OB);
+              (0, DB.Qc)(OB);
+              const VB = OB.readBits(1);
+              let SB = 0;
+              for (let BB = VB ? 0 : GB; BB <= GB; BB++)(0, DB.Qc)(OB), SB = (0, DB.Qc)(OB), (0, DB.Qc)(OB);
+              (0, DB.Qc)(OB), (0, DB.Qc)(OB), (0, DB.Qc)(OB), (0, DB.Qc)(OB), (0, DB.Qc)(OB), (0, DB.Qc)(OB), OB.readBits(1) && OB.readBits(1) && uB(OB), OB.skipBits(1), OB.skipBits(1), OB.readBits(1) && (OB.skipBits(4), OB.skipBits(4), (0, DB.Qc)(OB), (0, DB.Qc)(OB), OB.skipBits(1));
+              const nB = (0, DB.Qc)(OB);
+              if (mB(OB, nB), OB.readBits(1)) {
+                const BB = (0, DB.Qc)(OB);
+                for (let GB = 0; GB < BB; GB++)(0, DB.Qc)(OB), OB.skipBits(1)
               }
-              BH.skipBits(1), BH.skipBits(1);
-              let OH = 2,
-                bH = 2,
-                kH = 2,
-                mH = 0,
-                lH = 0,
-                cH = {
+              OB.skipBits(1), OB.skipBits(1);
+              let UB = 2,
+                fB = 2,
+                kB = 2,
+                dB = 0,
+                IB = 0,
+                iB = {
                   num: 1,
                   den: 1
                 };
-              if (BH.readBits(1)) {
-                const HH = KH(BH, LH);
-                cH = HH.pixelAspectRatio, OH = HH.colourPrimaries, bH = HH.transferCharacteristics, kH = HH.matrixCoefficients, mH = HH.fullRangeFlag, lH = HH.minSpatialSegmentationIdc
+              if (OB.readBits(1)) {
+                const BB = FB(OB, GB);
+                iB = BB.pixelAspectRatio, UB = BB.colourPrimaries, fB = BB.transferCharacteristics, kB = BB.matrixCoefficients, dB = BB.fullRangeFlag, IB = BB.minSpatialSegmentationIdc
               }
               return {
-                displayWidth: MH,
-                displayHeight: xH,
-                pixelAspectRatio: cH,
-                colourPrimaries: OH,
-                transferCharacteristics: bH,
-                matrixCoefficients: kH,
-                fullRangeFlag: mH,
-                maxDecFrameBuffering: UH + 1,
-                spsMaxSubLayersMinus1: LH,
-                spsTemporalIdNestingFlag: AH,
-                generalProfileSpace: SH,
-                generalTierFlag: hH,
-                generalProfileIdc: tH,
-                generalProfileCompatibilityFlags: zH,
-                generalConstraintIndicatorFlags: CH,
-                generalLevelIdc: XH,
-                chromaFormatIdc: GH,
-                bitDepthLumaMinus8: vH,
-                bitDepthChromaMinus8: PH,
-                minSpatialSegmentationIdc: lH
+                displayWidth: NB,
+                displayHeight: RB,
+                pixelAspectRatio: iB,
+                colourPrimaries: UB,
+                transferCharacteristics: fB,
+                matrixCoefficients: kB,
+                fullRangeFlag: dB,
+                maxDecFrameBuffering: SB + 1,
+                spsMaxSubLayersMinus1: GB,
+                spsTemporalIdNestingFlag: YB,
+                generalProfileSpace: QB,
+                generalTierFlag: oB,
+                generalProfileIdc: jB,
+                generalProfileCompatibilityFlags: yB,
+                generalConstraintIndicatorFlags: JB,
+                generalLevelIdc: PB,
+                chromaFormatIdc: zB,
+                bitDepthLumaMinus8: WB,
+                bitDepthChromaMinus8: AB,
+                minSpatialSegmentationIdc: IB
               }
-            } catch (BH) {
-              return SH.c._error("Error parsing HEVC SPS:", BH), null
+            } catch (OB) {
+              return QB.e._error("Error parsing HEVC SPS:", OB), null
             }
-          })(LH[0]);
-          if (!tH) return null;
-          let zH = 0;
-          if (AH.length > 0) {
-            const HH = AH[0],
-              BH = new EH.e(QH(HH));
-            BH.skipBits(16), (0, rH.qc)(BH), (0, rH.qc)(BH), BH.skipBits(1), BH.skipBits(1), BH.skipBits(3), BH.skipBits(1), BH.skipBits(1), (0, rH.qc)(BH), (0, rH.qc)(BH), (0, rH.uc)(BH), BH.skipBits(1), BH.skipBits(1), BH.readBits(1) && (0, rH.qc)(BH), (0, rH.uc)(BH), (0, rH.uc)(BH), BH.skipBits(1), BH.skipBits(1), BH.skipBits(1), BH.skipBits(1);
-            const LH = BH.readBits(1),
-              SH = BH.readBits(1);
-            zH = LH || SH ? LH && !SH ? 2 : !LH && SH ? 3 : 0 : 0
+          })(GB[0]);
+          if (!jB) return null;
+          let yB = 0;
+          if (YB.length > 0) {
+            const BB = YB[0],
+              OB = new MB.e(qB(BB));
+            OB.skipBits(16), (0, DB.Qc)(OB), (0, DB.Qc)(OB), OB.skipBits(1), OB.skipBits(1), OB.skipBits(3), OB.skipBits(1), OB.skipBits(1), (0, DB.Qc)(OB), (0, DB.Qc)(OB), (0, DB.Uc)(OB), OB.skipBits(1), OB.skipBits(1), OB.readBits(1) && (0, DB.Qc)(OB), (0, DB.Uc)(OB), (0, DB.Uc)(OB), OB.skipBits(1), OB.skipBits(1), OB.skipBits(1), OB.skipBits(1);
+            const GB = OB.readBits(1),
+              QB = OB.readBits(1);
+            yB = GB || QB ? GB && !QB ? 2 : !GB && QB ? 3 : 0 : 0
           }
-          const XH = [...BH.length ? [{
+          const PB = [...OB.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: CH.VPS_NUT,
-            nalUnits: BH
-          }] : [], ...LH.length ? [{
+            nalUnitType: JB.VPS_NUT,
+            nalUnits: OB
+          }] : [], ...GB.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: CH.SPS_NUT,
-            nalUnits: LH
-          }] : [], ...AH.length ? [{
+            nalUnitType: JB.SPS_NUT,
+            nalUnits: GB
+          }] : [], ...YB.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: CH.PPS_NUT,
-            nalUnits: AH
-          }] : [], ...hH.length ? [{
+            nalUnitType: JB.PPS_NUT,
+            nalUnits: YB
+          }] : [], ...oB.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: kH(hH[0][0]),
-            nalUnits: hH
+            nalUnitType: kB(oB[0][0]),
+            nalUnits: oB
           }] : []];
           return {
             configurationVersion: 1,
-            generalProfileSpace: tH.generalProfileSpace,
-            generalTierFlag: tH.generalTierFlag,
-            generalProfileIdc: tH.generalProfileIdc,
-            generalProfileCompatibilityFlags: tH.generalProfileCompatibilityFlags,
-            generalConstraintIndicatorFlags: tH.generalConstraintIndicatorFlags,
-            generalLevelIdc: tH.generalLevelIdc,
-            minSpatialSegmentationIdc: tH.minSpatialSegmentationIdc,
-            parallelismType: zH,
-            chromaFormatIdc: tH.chromaFormatIdc,
-            bitDepthLumaMinus8: tH.bitDepthLumaMinus8,
-            bitDepthChromaMinus8: tH.bitDepthChromaMinus8,
+            generalProfileSpace: jB.generalProfileSpace,
+            generalTierFlag: jB.generalTierFlag,
+            generalProfileIdc: jB.generalProfileIdc,
+            generalProfileCompatibilityFlags: jB.generalProfileCompatibilityFlags,
+            generalConstraintIndicatorFlags: jB.generalConstraintIndicatorFlags,
+            generalLevelIdc: jB.generalLevelIdc,
+            minSpatialSegmentationIdc: jB.minSpatialSegmentationIdc,
+            parallelismType: yB,
+            chromaFormatIdc: jB.chromaFormatIdc,
+            bitDepthLumaMinus8: jB.bitDepthLumaMinus8,
+            bitDepthChromaMinus8: jB.bitDepthChromaMinus8,
             avgFrameRate: 0,
             constantFrameRate: 0,
-            numTemporalLayers: tH.spsMaxSubLayersMinus1 + 1,
-            temporalIdNested: tH.spsTemporalIdNestingFlag,
+            numTemporalLayers: jB.spsMaxSubLayersMinus1 + 1,
+            temporalIdNested: jB.spsTemporalIdNestingFlag,
             lengthSizeMinusOne: 3,
-            arrays: XH
+            arrays: PB
           }
-        } catch (BH) {
-          return SH.c._error("Error building HEVC Decoder Configuration Record:", BH), null
+        } catch (OB) {
+          return QB.e._error("Error building HEVC Decoder Configuration Record:", OB), null
         }
       },
-      oH = (HH, BH) => {
-        const LH = HH.readBits(2),
-          AH = HH.readBits(1),
-          rH = HH.readBits(5);
-        let SH = 0;
-        for (let EH = 0; EH < 32; EH++) SH = SH << 1 | HH.readBits(1);
-        const hH = new Uint8Array(6);
-        for (let EH = 0; EH < 6; EH++) hH[EH] = HH.readBits(8);
-        const tH = HH.readBits(8),
-          zH = [],
-          CH = [];
-        for (let EH = 0; EH < BH; EH++) zH.push(HH.readBits(1)), CH.push(HH.readBits(1));
-        if (BH > 0)
-          for (let EH = BH; EH < 8; EH++) HH.skipBits(2);
-        for (let EH = 0; EH < BH; EH++) zH[EH] && HH.skipBits(88), CH[EH] && HH.skipBits(8);
+      KB = (BB, OB) => {
+        const GB = BB.readBits(2),
+          YB = BB.readBits(1),
+          DB = BB.readBits(5);
+        let QB = 0;
+        for (let MB = 0; MB < 32; MB++) QB = QB << 1 | BB.readBits(1);
+        const oB = new Uint8Array(6);
+        for (let MB = 0; MB < 6; MB++) oB[MB] = BB.readBits(8);
+        const jB = BB.readBits(8),
+          yB = [],
+          JB = [];
+        for (let MB = 0; MB < OB; MB++) yB.push(BB.readBits(1)), JB.push(BB.readBits(1));
+        if (OB > 0)
+          for (let MB = OB; MB < 8; MB++) BB.skipBits(2);
+        for (let MB = 0; MB < OB; MB++) yB[MB] && BB.skipBits(88), JB[MB] && BB.skipBits(8);
         return {
-          general_profile_space: LH,
-          general_tier_flag: AH,
-          general_profile_idc: rH,
-          general_profile_compatibility_flags: SH,
-          general_constraint_indicator_flags: hH,
-          general_level_idc: tH
+          general_profile_space: GB,
+          general_tier_flag: YB,
+          general_profile_idc: DB,
+          general_profile_compatibility_flags: QB,
+          general_constraint_indicator_flags: oB,
+          general_level_idc: jB
         }
       },
-      IH = HH => {
-        for (let BH = 0; BH < 4; BH++)
-          for (let LH = 0; LH < (3 === BH ? 2 : 6); LH++) {
-            if (HH.readBits(1)) {
-              const LH = Math.min(64, 1 << 4 + (BH << 1));
-              BH > 1 && (0, rH.uc)(HH);
-              for (let BH = 0; BH < LH; BH++)(0, rH.uc)(HH)
-            } else(0, rH.qc)(HH)
+      uB = BB => {
+        for (let OB = 0; OB < 4; OB++)
+          for (let GB = 0; GB < (3 === OB ? 2 : 6); GB++) {
+            if (BB.readBits(1)) {
+              const GB = Math.min(64, 1 << 4 + (OB << 1));
+              OB > 1 && (0, DB.Uc)(BB);
+              for (let OB = 0; OB < GB; OB++)(0, DB.Uc)(BB)
+            } else(0, DB.Qc)(BB)
           }
       },
-      fH = (HH, BH) => {
-        const LH = [];
-        for (let AH = 0; AH < BH; AH++) LH[AH] = lH(HH, AH, BH, LH)
+      mB = (BB, OB) => {
+        const GB = [];
+        for (let YB = 0; YB < OB; YB++) GB[YB] = IB(BB, YB, OB, GB)
       },
-      lH = (HH, BH, LH, AH) => {
-        let SH = 0,
-          hH = 0,
-          tH = 0;
-        if (0 !== BH && (hH = HH.readBits(1)), hH) {
-          if (BH === LH) {
-            tH = BH - ((0, rH.qc)(HH) + 1)
-          } else tH = BH - 1;
-          HH.readBits(1), (0, rH.qc)(HH);
-          const hH = AH[tH] ?? 0;
-          for (let BH = 0; BH <= hH; BH++) {
-            HH.readBits(1) || HH.readBits(1)
+      IB = (BB, OB, GB, YB) => {
+        let QB = 0,
+          oB = 0,
+          jB = 0;
+        if (0 !== OB && (oB = BB.readBits(1)), oB) {
+          if (OB === GB) {
+            jB = OB - ((0, DB.Qc)(BB) + 1)
+          } else jB = OB - 1;
+          BB.readBits(1), (0, DB.Qc)(BB);
+          const oB = YB[jB] ?? 0;
+          for (let OB = 0; OB <= oB; OB++) {
+            BB.readBits(1) || BB.readBits(1)
           }
-          SH = AH[tH]
+          QB = YB[jB]
         } else {
-          const BH = (0, rH.qc)(HH),
-            LH = (0, rH.qc)(HH);
-          for (let AH = 0; AH < BH; AH++)(0, rH.qc)(HH), HH.readBits(1);
-          for (let AH = 0; AH < LH; AH++)(0, rH.qc)(HH), HH.readBits(1);
-          SH = BH + LH
+          const OB = (0, DB.Qc)(BB),
+            GB = (0, DB.Qc)(BB);
+          for (let YB = 0; YB < OB; YB++)(0, DB.Qc)(BB), BB.readBits(1);
+          for (let YB = 0; YB < GB; YB++)(0, DB.Qc)(BB), BB.readBits(1);
+          QB = OB + GB
         }
-        return SH
+        return QB
       },
-      KH = (HH, BH) => {
-        let LH = 2,
-          AH = 2,
-          SH = 2,
-          hH = 0,
-          tH = 0,
-          zH = {
+      FB = (BB, OB) => {
+        let GB = 2,
+          YB = 2,
+          QB = 2,
+          oB = 0,
+          jB = 0,
+          yB = {
             num: 1,
             den: 1
           };
-        if (HH.readBits(1)) {
-          const BH = HH.readBits(8);
-          if (255 === BH) zH = {
-            num: HH.readBits(16),
-            den: HH.readBits(16)
+        if (BB.readBits(1)) {
+          const OB = BB.readBits(8);
+          if (255 === OB) yB = {
+            num: BB.readBits(16),
+            den: BB.readBits(16)
           };
           else {
-            const HH = UH[BH];
-            HH && (zH = HH)
+            const BB = SB[OB];
+            BB && (yB = BB)
           }
         }
-        return HH.readBits(1) && HH.readBits(1), HH.readBits(1) && (HH.readBits(3), hH = HH.readBits(1), HH.readBits(1) && (LH = HH.readBits(8), AH = HH.readBits(8), SH = HH.readBits(8))), HH.readBits(1) && ((0, rH.qc)(HH), (0, rH.qc)(HH)), HH.readBits(1), HH.readBits(1), HH.readBits(1), HH.readBits(1) && ((0, rH.qc)(HH), (0, rH.qc)(HH), (0, rH.qc)(HH), (0, rH.qc)(HH)), HH.readBits(1) && (HH.readBits(32), HH.readBits(32), HH.readBits(1) && (0, rH.qc)(HH), HH.readBits(1) && cH(HH, !0, BH)), HH.readBits(1) && (HH.readBits(1), HH.readBits(1), HH.readBits(1), tH = (0, rH.qc)(HH), (0, rH.qc)(HH), (0, rH.qc)(HH), (0, rH.qc)(HH), (0, rH.qc)(HH)), {
-          pixelAspectRatio: zH,
-          colourPrimaries: LH,
-          transferCharacteristics: AH,
-          matrixCoefficients: SH,
-          fullRangeFlag: hH,
-          minSpatialSegmentationIdc: tH
+        return BB.readBits(1) && BB.readBits(1), BB.readBits(1) && (BB.readBits(3), oB = BB.readBits(1), BB.readBits(1) && (GB = BB.readBits(8), YB = BB.readBits(8), QB = BB.readBits(8))), BB.readBits(1) && ((0, DB.Qc)(BB), (0, DB.Qc)(BB)), BB.readBits(1), BB.readBits(1), BB.readBits(1), BB.readBits(1) && ((0, DB.Qc)(BB), (0, DB.Qc)(BB), (0, DB.Qc)(BB), (0, DB.Qc)(BB)), BB.readBits(1) && (BB.readBits(32), BB.readBits(32), BB.readBits(1) && (0, DB.Qc)(BB), BB.readBits(1) && iB(BB, !0, OB)), BB.readBits(1) && (BB.readBits(1), BB.readBits(1), BB.readBits(1), jB = (0, DB.Qc)(BB), (0, DB.Qc)(BB), (0, DB.Qc)(BB), (0, DB.Qc)(BB), (0, DB.Qc)(BB)), {
+          pixelAspectRatio: yB,
+          colourPrimaries: GB,
+          transferCharacteristics: YB,
+          matrixCoefficients: QB,
+          fullRangeFlag: oB,
+          minSpatialSegmentationIdc: jB
         }
       },
-      cH = (HH, BH, LH) => {
-        let AH = !1,
-          SH = !1,
-          hH = !1;
-        BH && (AH = 1 === HH.readBits(1), SH = 1 === HH.readBits(1), (AH || SH) && (hH = 1 === HH.readBits(1), hH && (HH.readBits(8), HH.readBits(5), HH.readBits(1), HH.readBits(5)), HH.readBits(4), HH.readBits(4), hH && HH.readBits(4), HH.readBits(5), HH.readBits(5), HH.readBits(5)));
-        for (let tH = 0; tH <= LH; tH++) {
-          let BH = !0;
-          1 === HH.readBits(1) || (BH = 1 === HH.readBits(1));
-          let LH = !1;
-          BH ? (0, rH.qc)(HH) : LH = 1 === HH.readBits(1);
-          let tH = 1;
-          if (!LH) {
-            tH = (0, rH.qc)(HH) + 1
+      iB = (BB, OB, GB) => {
+        let YB = !1,
+          QB = !1,
+          oB = !1;
+        OB && (YB = 1 === BB.readBits(1), QB = 1 === BB.readBits(1), (YB || QB) && (oB = 1 === BB.readBits(1), oB && (BB.readBits(8), BB.readBits(5), BB.readBits(1), BB.readBits(5)), BB.readBits(4), BB.readBits(4), oB && BB.readBits(4), BB.readBits(5), BB.readBits(5), BB.readBits(5)));
+        for (let jB = 0; jB <= GB; jB++) {
+          let OB = !0;
+          1 === BB.readBits(1) || (OB = 1 === BB.readBits(1));
+          let GB = !1;
+          OB ? (0, DB.Qc)(BB) : GB = 1 === BB.readBits(1);
+          let jB = 1;
+          if (!GB) {
+            jB = (0, DB.Qc)(BB) + 1
           }
-          AH && eH(HH, tH, hH), SH && eH(HH, tH, hH)
+          YB && LB(BB, jB, oB), QB && LB(BB, jB, oB)
         }
       },
-      eH = (HH, BH, LH) => {
-        for (let AH = 0; AH < BH; AH++)(0, rH.qc)(HH), (0, rH.qc)(HH), LH && ((0, rH.qc)(HH), (0, rH.qc)(HH)), HH.readBits(1)
+      LB = (BB, OB, GB) => {
+        for (let YB = 0; YB < OB; YB++)(0, DB.Qc)(BB), (0, DB.Qc)(BB), GB && ((0, DB.Qc)(BB), (0, DB.Qc)(BB)), BB.readBits(1)
       },
-      qH = HH => {
-        const BH = [];
-        BH.push(HH.configurationVersion), BH.push((3 & HH.generalProfileSpace) << 6 | (1 & HH.generalTierFlag) << 5 | 31 & HH.generalProfileIdc), BH.push(HH.generalProfileCompatibilityFlags >>> 24 & 255), BH.push(HH.generalProfileCompatibilityFlags >>> 16 & 255), BH.push(HH.generalProfileCompatibilityFlags >>> 8 & 255), BH.push(255 & HH.generalProfileCompatibilityFlags), BH.push(...HH.generalConstraintIndicatorFlags), BH.push(255 & HH.generalLevelIdc), BH.push(240 | HH.minSpatialSegmentationIdc >> 8 & 15), BH.push(255 & HH.minSpatialSegmentationIdc), BH.push(252 | 3 & HH.parallelismType), BH.push(252 | 3 & HH.chromaFormatIdc), BH.push(248 | 7 & HH.bitDepthLumaMinus8), BH.push(248 | 7 & HH.bitDepthChromaMinus8), BH.push(HH.avgFrameRate >> 8 & 255), BH.push(255 & HH.avgFrameRate), BH.push((3 & HH.constantFrameRate) << 6 | (7 & HH.numTemporalLayers) << 3 | (1 & HH.temporalIdNested) << 2 | 3 & HH.lengthSizeMinusOne), BH.push(255 & HH.arrays.length);
-        for (const LH of HH.arrays) {
-          BH.push((1 & LH.arrayCompleteness) << 7 | 63 & LH.nalUnitType), BH.push(LH.nalUnits.length >> 8 & 255), BH.push(255 & LH.nalUnits.length);
-          for (const HH of LH.nalUnits) {
-            BH.push(HH.length >> 8 & 255), BH.push(255 & HH.length);
-            for (let LH = 0; LH < HH.length; LH++) BH.push(HH[LH])
+      gB = BB => {
+        const OB = [];
+        OB.push(BB.configurationVersion), OB.push((3 & BB.generalProfileSpace) << 6 | (1 & BB.generalTierFlag) << 5 | 31 & BB.generalProfileIdc), OB.push(BB.generalProfileCompatibilityFlags >>> 24 & 255), OB.push(BB.generalProfileCompatibilityFlags >>> 16 & 255), OB.push(BB.generalProfileCompatibilityFlags >>> 8 & 255), OB.push(255 & BB.generalProfileCompatibilityFlags), OB.push(...BB.generalConstraintIndicatorFlags), OB.push(255 & BB.generalLevelIdc), OB.push(240 | BB.minSpatialSegmentationIdc >> 8 & 15), OB.push(255 & BB.minSpatialSegmentationIdc), OB.push(252 | 3 & BB.parallelismType), OB.push(252 | 3 & BB.chromaFormatIdc), OB.push(248 | 7 & BB.bitDepthLumaMinus8), OB.push(248 | 7 & BB.bitDepthChromaMinus8), OB.push(BB.avgFrameRate >> 8 & 255), OB.push(255 & BB.avgFrameRate), OB.push((3 & BB.constantFrameRate) << 6 | (7 & BB.numTemporalLayers) << 3 | (1 & BB.temporalIdNested) << 2 | 3 & BB.lengthSizeMinusOne), OB.push(255 & BB.arrays.length);
+        for (const GB of BB.arrays) {
+          OB.push((1 & GB.arrayCompleteness) << 7 | 63 & GB.nalUnitType), OB.push(GB.nalUnits.length >> 8 & 255), OB.push(255 & GB.nalUnits.length);
+          for (const BB of GB.nalUnits) {
+            OB.push(BB.length >> 8 & 255), OB.push(255 & BB.length);
+            for (let GB = 0; GB < BB.length; GB++) OB.push(BB[GB])
           }
         }
-        return new Uint8Array(BH)
+        return new Uint8Array(OB)
       },
-      gH = HH => {
+      rB = BB => {
         try {
-          const BH = (0, rH.ed)(HH);
-          let LH = 0;
-          const AH = BH.getUint8(LH++),
-            SH = BH.getUint8(LH++),
-            hH = SH >> 6 & 3,
-            tH = SH >> 5 & 1,
-            zH = 31 & SH,
-            CH = BH.getUint32(LH, !1);
-          LH += 4;
-          const EH = HH.subarray(LH, LH + 6);
-          LH += 6;
-          const XH = BH.getUint8(LH++),
-            GH = (15 & BH.getUint8(LH++)) << 8 | BH.getUint8(LH++),
-            YH = 3 & BH.getUint8(LH++),
-            uH = 3 & BH.getUint8(LH++),
-            QH = 7 & BH.getUint8(LH++),
-            WH = 7 & BH.getUint8(LH++),
-            MH = BH.getUint16(LH, !1);
-          LH += 2;
-          const xH = BH.getUint8(LH++),
-            vH = xH >> 6 & 3,
-            PH = xH >> 3 & 7,
-            TH = xH >> 2 & 1,
-            UH = 3 & xH,
-            VH = BH.getUint8(LH++),
-            OH = [];
-          for (let rH = 0; rH < VH; rH++) {
-            const AH = BH.getUint8(LH++),
-              rH = AH >> 7 & 1,
-              SH = 63 & AH,
-              hH = BH.getUint16(LH, !1);
-            LH += 2;
-            const tH = [];
-            for (let zH = 0; zH < hH; zH++) {
-              const AH = BH.getUint16(LH, !1);
-              LH += 2, tH.push(HH.subarray(LH, LH + AH)), LH += AH
+          const OB = (0, DB.Gd)(BB);
+          let GB = 0;
+          const YB = OB.getUint8(GB++),
+            QB = OB.getUint8(GB++),
+            oB = QB >> 6 & 3,
+            jB = QB >> 5 & 1,
+            yB = 31 & QB,
+            JB = OB.getUint32(GB, !1);
+          GB += 4;
+          const MB = BB.subarray(GB, GB + 6);
+          GB += 6;
+          const PB = OB.getUint8(GB++),
+            zB = (15 & OB.getUint8(GB++)) << 8 | OB.getUint8(GB++),
+            lB = 3 & OB.getUint8(GB++),
+            pB = 3 & OB.getUint8(GB++),
+            qB = 7 & OB.getUint8(GB++),
+            ZB = 7 & OB.getUint8(GB++),
+            NB = OB.getUint16(GB, !1);
+          GB += 2;
+          const RB = OB.getUint8(GB++),
+            WB = RB >> 6 & 3,
+            AB = RB >> 3 & 7,
+            VB = RB >> 2 & 1,
+            SB = 3 & RB,
+            nB = OB.getUint8(GB++),
+            UB = [];
+          for (let DB = 0; DB < nB; DB++) {
+            const YB = OB.getUint8(GB++),
+              DB = YB >> 7 & 1,
+              QB = 63 & YB,
+              oB = OB.getUint16(GB, !1);
+            GB += 2;
+            const jB = [];
+            for (let yB = 0; yB < oB; yB++) {
+              const YB = OB.getUint16(GB, !1);
+              GB += 2, jB.push(BB.subarray(GB, GB + YB)), GB += YB
             }
-            OH.push({
-              arrayCompleteness: rH,
-              nalUnitType: SH,
-              nalUnits: tH
+            UB.push({
+              arrayCompleteness: DB,
+              nalUnitType: QB,
+              nalUnits: jB
             })
           }
           return {
-            configurationVersion: AH,
-            generalProfileSpace: hH,
-            generalTierFlag: tH,
-            generalProfileIdc: zH,
-            generalProfileCompatibilityFlags: CH,
-            generalConstraintIndicatorFlags: EH,
-            generalLevelIdc: XH,
-            minSpatialSegmentationIdc: GH,
-            parallelismType: YH,
-            chromaFormatIdc: uH,
-            bitDepthLumaMinus8: QH,
-            bitDepthChromaMinus8: WH,
-            avgFrameRate: MH,
-            constantFrameRate: vH,
-            numTemporalLayers: PH,
-            temporalIdNested: TH,
-            lengthSizeMinusOne: UH,
-            arrays: OH
+            configurationVersion: YB,
+            generalProfileSpace: oB,
+            generalTierFlag: jB,
+            generalProfileIdc: yB,
+            generalProfileCompatibilityFlags: JB,
+            generalConstraintIndicatorFlags: MB,
+            generalLevelIdc: PB,
+            minSpatialSegmentationIdc: zB,
+            parallelismType: lB,
+            chromaFormatIdc: pB,
+            bitDepthLumaMinus8: qB,
+            bitDepthChromaMinus8: ZB,
+            avgFrameRate: NB,
+            constantFrameRate: WB,
+            numTemporalLayers: AB,
+            temporalIdNested: VB,
+            lengthSizeMinusOne: SB,
+            arrays: UB
           }
-        } catch (BH) {
-          return SH.c._error("Error deserializing HEVC Decoder Configuration Record:", BH), null
+        } catch (OB) {
+          return QB.e._error("Error deserializing HEVC Decoder Configuration Record:", OB), null
         }
       };
-    var NH;
-    ! function(HH) {
-      HH[HH.audAllowed = 0] = "audAllowed", HH[HH.beforeFirstVcl = 1] = "beforeFirstVcl", HH[HH.afterFirstVcl = 2] = "afterFirstVcl", HH[HH.eoBitstreamAllowed = 3] = "eoBitstreamAllowed", HH[HH.noMoreDataAllowed = 4] = "noMoreDataAllowed"
-    }(NH || (NH = {}));
-    const RH = {
+    var XB;
+    ! function(BB) {
+      BB[BB.audAllowed = 0] = "audAllowed", BB[BB.beforeFirstVcl = 1] = "beforeFirstVcl", BB[BB.afterFirstVcl = 2] = "afterFirstVcl", BB[BB.eoBitstreamAllowed = 3] = "eoBitstreamAllowed", BB[BB.noMoreDataAllowed = 4] = "noMoreDataAllowed"
+    }(XB || (XB = {}));
+    const wB = {
         1: {
           colourPrimaries: 5,
           transferCharacteristics: 6,
@@ -1167,648 +1167,648 @@ export const modules = {
           matrixCoefficients: 0
         }
       },
-      jH = HH => {
-        const BH = new EH.e(HH);
-        if (2 !== BH.readBits(2)) return null;
-        const LH = BH.readBits(1),
-          SH = (BH.readBits(1) << 1) + LH;
-        3 === SH && BH.skipBits(1);
-        if (1 === BH.readBits(1)) return null;
-        if (0 !== BH.readBits(1)) return null;
-        BH.skipBits(2);
-        if (4817730 !== BH.readBits(24)) return null;
-        let hH = 8;
-        if (SH >= 2) {
-          hH = BH.readBits(1) ? 12 : 10
+      EB = BB => {
+        const OB = new MB.e(BB);
+        if (2 !== OB.readBits(2)) return null;
+        const GB = OB.readBits(1),
+          QB = (OB.readBits(1) << 1) + GB;
+        3 === QB && OB.skipBits(1);
+        if (1 === OB.readBits(1)) return null;
+        if (0 !== OB.readBits(1)) return null;
+        OB.skipBits(2);
+        if (4817730 !== OB.readBits(24)) return null;
+        let oB = 8;
+        if (QB >= 2) {
+          oB = OB.readBits(1) ? 12 : 10
         }
-        const tH = BH.readBits(3);
-        let zH = 0,
-          CH = 0;
-        if (7 !== tH) {
-          if (CH = BH.readBits(1), 1 === SH || 3 === SH) {
-            const HH = BH.readBits(1),
-              LH = BH.readBits(1);
-            zH = HH || LH ? HH && !LH ? 2 : 1 : 3, BH.skipBits(1)
-          } else zH = 1
-        } else zH = 3, CH = 1;
-        const XH = (BH.readBits(16) + 1) * (BH.readBits(16) + 1);
-        let GH = (0, rH.Xb)(AH.t).level;
-        for (const rH of AH.t)
-          if (XH <= rH.maxPictureSize) {
-            GH = rH.level;
+        const jB = OB.readBits(3);
+        let yB = 0,
+          JB = 0;
+        if (7 !== jB) {
+          if (JB = OB.readBits(1), 1 === QB || 3 === QB) {
+            const BB = OB.readBits(1),
+              GB = OB.readBits(1);
+            yB = BB || GB ? BB && !GB ? 2 : 1 : 3, OB.skipBits(1)
+          } else yB = 1
+        } else yB = 3, JB = 1;
+        const PB = (OB.readBits(16) + 1) * (OB.readBits(16) + 1);
+        let zB = (0, DB.sc)(YB.u).level;
+        for (const DB of YB.u)
+          if (PB <= DB.maxPictureSize) {
+            zB = DB.level;
             break
-          } const YH = RH[tH];
+          } const lB = wB[jB];
         return {
-          profile: SH,
-          level: GH,
-          bitDepth: hH,
-          chromaSubsampling: zH,
-          videoFullRangeFlag: CH,
-          colourPrimaries: YH?.colourPrimaries ?? 2,
-          transferCharacteristics: YH?.transferCharacteristics ?? 2,
-          matrixCoefficients: YH?.matrixCoefficients ?? 2
+          profile: QB,
+          level: zB,
+          bitDepth: oB,
+          chromaSubsampling: yB,
+          videoFullRangeFlag: JB,
+          colourPrimaries: lB?.colourPrimaries ?? 2,
+          transferCharacteristics: lB?.transferCharacteristics ?? 2,
+          matrixCoefficients: lB?.matrixCoefficients ?? 2
         }
       },
-      nH = function*(HH) {
-        const BH = new EH.e(HH),
-          LH = () => {
-            let HH = 0;
-            for (let LH = 0; LH < 8; LH++) {
-              const AH = BH.readAlignedByte();
-              if (HH += (127 & AH) * 2 ** (7 * LH), !(128 & AH)) break;
-              if (7 === LH && 128 & AH) return null
+      cB = function*(BB) {
+        const OB = new MB.e(BB),
+          GB = () => {
+            let BB = 0;
+            for (let GB = 0; GB < 8; GB++) {
+              const YB = OB.readAlignedByte();
+              if (BB += (127 & YB) * 2 ** (7 * GB), !(128 & YB)) break;
+              if (7 === GB && 128 & YB) return null
             }
-            return HH > 2 ** 32 - 1 ? null : HH
+            return BB > 2 ** 32 - 1 ? null : BB
           };
-        for (; BH.getBitsLeft() >= 8;) {
-          BH.skipBits(1);
-          const AH = BH.readBits(4),
-            SH = BH.readBits(1),
-            hH = BH.readBits(1);
-          let tH;
-          if (BH.skipBits(1), SH && BH.skipBits(8), hH) {
-            const HH = LH();
-            if (null === HH) return;
-            tH = HH
-          } else tH = Math.floor(BH.getBitsLeft() / 8);
-          (0, rH.J)(BH.pos % 8 === 0), yield {
-            type: AH,
-            data: HH.subarray(BH.pos / 8, BH.pos / 8 + tH)
-          }, BH.skipBits(8 * tH)
+        for (; OB.getBitsLeft() >= 8;) {
+          OB.skipBits(1);
+          const YB = OB.readBits(4),
+            QB = OB.readBits(1),
+            oB = OB.readBits(1);
+          let jB;
+          if (OB.skipBits(1), QB && OB.skipBits(8), oB) {
+            const BB = GB();
+            if (null === BB) return;
+            jB = BB
+          } else jB = Math.floor(OB.getBitsLeft() / 8);
+          (0, DB.Q)(OB.pos % 8 === 0), yield {
+            type: YB,
+            data: BB.subarray(OB.pos / 8, OB.pos / 8 + jB)
+          }, OB.skipBits(8 * jB)
         }
       },
-      FH = HH => {
+      hB = BB => {
         for (const {
-            type: BH,
-            data: LH
+            type: OB,
+            data: GB
           }
-          of nH(HH)) {
-          if (1 !== BH) continue;
-          const HH = new EH.e(LH),
-            AH = HH.readBits(3),
-            rH = (HH.readBits(1), HH.readBits(1));
-          let SH = 0,
-            hH = 0,
-            tH = 0;
-          if (rH) SH = HH.readBits(5);
+          of cB(BB)) {
+          if (1 !== OB) continue;
+          const BB = new MB.e(GB),
+            YB = BB.readBits(3),
+            DB = (BB.readBits(1), BB.readBits(1));
+          let QB = 0,
+            oB = 0,
+            jB = 0;
+          if (DB) QB = BB.readBits(5);
           else {
-            let BH = 0;
-            if (HH.readBits(1)) {
-              HH.skipBits(32), HH.skipBits(32);
-              if (HH.readBits(1)) {
-                let BH = 0;
-                for (; BH < 32 && !HH.readBits(1);) BH++;
-                BH < 32 && HH.skipBits(BH)
+            let OB = 0;
+            if (BB.readBits(1)) {
+              BB.skipBits(32), BB.skipBits(32);
+              if (BB.readBits(1)) {
+                let OB = 0;
+                for (; OB < 32 && !BB.readBits(1);) OB++;
+                OB < 32 && BB.skipBits(OB)
               }
-              BH = HH.readBits(1), BH && (tH = HH.readBits(5), HH.skipBits(32), HH.skipBits(5), HH.skipBits(5))
+              OB = BB.readBits(1), OB && (jB = BB.readBits(5), BB.skipBits(32), BB.skipBits(5), BB.skipBits(5))
             }
-            const LH = HH.readBits(1),
-              AH = HH.readBits(5);
-            for (let rH = 0; rH <= AH; rH++) {
-              HH.skipBits(12);
-              const AH = HH.readBits(5);
-              if (0 === rH && (SH = AH), AH > 7) {
-                const BH = HH.readBits(1);
-                0 === rH && (hH = BH)
+            const GB = BB.readBits(1),
+              YB = BB.readBits(5);
+            for (let DB = 0; DB <= YB; DB++) {
+              BB.skipBits(12);
+              const YB = BB.readBits(5);
+              if (0 === DB && (QB = YB), YB > 7) {
+                const OB = BB.readBits(1);
+                0 === DB && (oB = OB)
               }
-              if (BH) {
-                if (HH.readBits(1)) {
-                  const BH = tH + 1;
-                  HH.skipBits(BH), HH.skipBits(BH), HH.skipBits(1)
+              if (OB) {
+                if (BB.readBits(1)) {
+                  const OB = jB + 1;
+                  BB.skipBits(OB), BB.skipBits(OB), BB.skipBits(1)
                 }
               }
-              if (LH) {
-                HH.readBits(1) && HH.skipBits(4)
+              if (GB) {
+                BB.readBits(1) && BB.skipBits(4)
               }
             }
           }
-          const zH = HH.readBits(4),
-            CH = HH.readBits(4),
-            XH = zH + 1;
-          HH.skipBits(XH);
-          const GH = CH + 1;
-          HH.skipBits(GH);
-          let YH = 0;
-          if (YH = rH ? 0 : HH.readBits(1), YH && (HH.skipBits(4), HH.skipBits(3)), HH.skipBits(1), HH.skipBits(1), HH.skipBits(1), !rH) {
-            HH.skipBits(1), HH.skipBits(1), HH.skipBits(1), HH.skipBits(1);
-            const BH = HH.readBits(1);
-            BH && (HH.skipBits(1), HH.skipBits(1));
-            let LH = 0;
-            if (LH = HH.readBits(1) ? 2 : HH.readBits(1), LH > 0) {
-              HH.readBits(1) || HH.skipBits(1)
+          const yB = BB.readBits(4),
+            JB = BB.readBits(4),
+            PB = yB + 1;
+          BB.skipBits(PB);
+          const zB = JB + 1;
+          BB.skipBits(zB);
+          let lB = 0;
+          if (lB = DB ? 0 : BB.readBits(1), lB && (BB.skipBits(4), BB.skipBits(3)), BB.skipBits(1), BB.skipBits(1), BB.skipBits(1), !DB) {
+            BB.skipBits(1), BB.skipBits(1), BB.skipBits(1), BB.skipBits(1);
+            const OB = BB.readBits(1);
+            OB && (BB.skipBits(1), BB.skipBits(1));
+            let GB = 0;
+            if (GB = BB.readBits(1) ? 2 : BB.readBits(1), GB > 0) {
+              BB.readBits(1) || BB.skipBits(1)
             }
-            BH && HH.skipBits(3)
+            OB && BB.skipBits(3)
           }
-          HH.skipBits(1), HH.skipBits(1), HH.skipBits(1);
-          const uH = HH.readBits(1);
-          let QH = 8;
-          if (2 === AH && uH) {
-            QH = HH.readBits(1) ? 12 : 10
-          } else AH <= 2 && (QH = uH ? 10 : 8);
-          let WH = 0;
-          1 !== AH && (WH = HH.readBits(1));
-          let MH = 2,
-            xH = 2,
-            vH = 2;
-          HH.readBits(1) && (MH = HH.readBits(8), xH = HH.readBits(8), vH = HH.readBits(8));
-          let PH = 0,
-            TH = 1,
-            UH = 1,
-            VH = 0;
-          return WH ? PH = HH.readBits(1) : 1 === MH && 13 === xH && 0 === vH ? (PH = 1, TH = 0, UH = 0) : (PH = HH.readBits(1), 0 === AH ? (TH = 1, UH = 1) : 1 === AH ? (TH = 0, UH = 0) : 12 === QH ? (TH = HH.readBits(1), UH = TH ? HH.readBits(1) : 0) : (TH = 1, UH = 0), TH && UH && (VH = HH.readBits(2))), {
-            profile: AH,
-            level: SH,
-            tier: hH,
-            bitDepth: QH,
-            monochrome: WH,
-            chromaSubsamplingX: TH,
-            chromaSubsamplingY: UH,
-            chromaSamplePosition: VH,
-            videoFullRangeFlag: PH,
-            colourPrimaries: MH,
-            transferCharacteristics: xH,
-            matrixCoefficients: vH
+          BB.skipBits(1), BB.skipBits(1), BB.skipBits(1);
+          const pB = BB.readBits(1);
+          let qB = 8;
+          if (2 === YB && pB) {
+            qB = BB.readBits(1) ? 12 : 10
+          } else YB <= 2 && (qB = pB ? 10 : 8);
+          let ZB = 0;
+          1 !== YB && (ZB = BB.readBits(1));
+          let NB = 2,
+            RB = 2,
+            WB = 2;
+          BB.readBits(1) && (NB = BB.readBits(8), RB = BB.readBits(8), WB = BB.readBits(8));
+          let AB = 0,
+            VB = 1,
+            SB = 1,
+            nB = 0;
+          return ZB ? AB = BB.readBits(1) : 1 === NB && 13 === RB && 0 === WB ? (AB = 1, VB = 0, SB = 0) : (AB = BB.readBits(1), 0 === YB ? (VB = 1, SB = 1) : 1 === YB ? (VB = 0, SB = 0) : 12 === qB ? (VB = BB.readBits(1), SB = VB ? BB.readBits(1) : 0) : (VB = 1, SB = 0), VB && SB && (nB = BB.readBits(2))), {
+            profile: YB,
+            level: QB,
+            tier: oB,
+            bitDepth: qB,
+            monochrome: ZB,
+            chromaSubsamplingX: VB,
+            chromaSubsamplingY: SB,
+            chromaSamplePosition: nB,
+            videoFullRangeFlag: AB,
+            colourPrimaries: NB,
+            transferCharacteristics: RB,
+            matrixCoefficients: WB
           }
         }
         return null
       },
-      DH = HH => 2 !== HH.colourPrimaries || 2 !== HH.transferCharacteristics || 2 !== HH.matrixCoefficients,
-      wH = HH => {
-        const BH = (0, rH.ed)(HH),
-          LH = BH.getUint8(9),
-          AH = BH.getUint16(10, !0),
-          SH = BH.getUint32(12, !0),
-          hH = BH.getInt16(16, !0),
-          tH = BH.getUint8(18);
-        let zH = null;
-        return tH && (zH = HH.subarray(19, 21 + LH)), {
-          outputChannelCount: LH,
-          preSkip: AH,
-          inputSampleRate: SH,
-          outputGain: hH,
-          channelMappingFamily: tH,
-          channelMappingTable: zH
+      aB = BB => 2 !== BB.colourPrimaries || 2 !== BB.transferCharacteristics || 2 !== BB.matrixCoefficients,
+      eB = BB => {
+        const OB = (0, DB.Gd)(BB),
+          GB = OB.getUint8(9),
+          YB = OB.getUint16(10, !0),
+          QB = OB.getUint32(12, !0),
+          oB = OB.getInt16(16, !0),
+          jB = OB.getUint8(18);
+        let yB = null;
+        return jB && (yB = BB.subarray(19, 21 + GB)), {
+          outputChannelCount: GB,
+          preSkip: YB,
+          inputSampleRate: QB,
+          outputGain: oB,
+          channelMappingFamily: jB,
+          channelMappingTable: yB
         }
       },
-      ZH = [480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960],
-      dH = HH => {
-        const BH = HH[0] >> 3,
-          LH = 3 & HH[0];
-        let AH;
-        return AH = 0 === LH ? 1 : 1 === LH || 2 === LH ? 2 : 63 & HH[1], {
-          durationInSamples: ZH[BH] * AH
+      TB = [480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960],
+      bB = BB => {
+        const OB = BB[0] >> 3,
+          GB = 3 & BB[0];
+        let YB;
+        return YB = 0 === GB ? 1 : 1 === GB || 2 === GB ? 2 : 63 & BB[1], {
+          durationInSamples: TB[OB] * YB
         }
       },
-      aH = HH => {
-        if (HH.length < 7) throw new Error("Setup header is too short.");
-        if (5 !== HH[0]) throw new Error("Wrong packet type in Setup header.");
-        if ("vorbis" !== String.fromCharCode(...HH.slice(1, 7))) throw new Error("Invalid packet signature in Setup header.");
-        const BH = HH.length,
-          LH = new Uint8Array(BH);
-        for (let EH = 0; EH < BH; EH++) LH[EH] = HH[BH - 1 - EH];
-        const AH = new EH.e(LH);
-        let rH = 0;
-        for (; AH.getBitsLeft() > 97;)
-          if (1 === AH.readBits(1)) {
-            rH = AH.pos;
+      CB = BB => {
+        if (BB.length < 7) throw new Error("Setup header is too short.");
+        if (5 !== BB[0]) throw new Error("Wrong packet type in Setup header.");
+        if ("vorbis" !== String.fromCharCode(...BB.slice(1, 7))) throw new Error("Invalid packet signature in Setup header.");
+        const OB = BB.length,
+          GB = new Uint8Array(OB);
+        for (let MB = 0; MB < OB; MB++) GB[MB] = BB[OB - 1 - MB];
+        const YB = new MB.e(GB);
+        let DB = 0;
+        for (; YB.getBitsLeft() > 97;)
+          if (1 === YB.readBits(1)) {
+            DB = YB.pos;
             break
-          } if (0 === rH) throw new Error("Invalid Setup header: framing bit not found.");
-        let SH = 0,
-          hH = !1,
-          tH = 0;
-        for (; AH.getBitsLeft() >= 97;) {
-          const HH = AH.pos,
-            BH = AH.readBits(8),
-            LH = AH.readBits(16),
-            rH = AH.readBits(16);
-          if (BH > 63 || 0 !== LH || 0 !== rH) {
-            AH.pos = HH;
+          } if (0 === DB) throw new Error("Invalid Setup header: framing bit not found.");
+        let QB = 0,
+          oB = !1,
+          jB = 0;
+        for (; YB.getBitsLeft() >= 97;) {
+          const BB = YB.pos,
+            OB = YB.readBits(8),
+            GB = YB.readBits(16),
+            DB = YB.readBits(16);
+          if (OB > 63 || 0 !== GB || 0 !== DB) {
+            YB.pos = BB;
             break
           }
-          if (AH.skipBits(1), SH++, SH > 64) break;
-          AH.clone().readBits(6) + 1 === SH && (hH = !0, tH = SH)
+          if (YB.skipBits(1), QB++, QB > 64) break;
+          YB.clone().readBits(6) + 1 === QB && (oB = !0, jB = QB)
         }
-        if (!hH) throw new Error("Invalid Setup header: mode header not found.");
-        if (tH > 63) throw new Error(`Unsupported mode count: ${tH}.`);
-        const zH = tH;
-        AH.pos = 0, AH.skipBits(rH);
-        const CH = Array(zH).fill(0);
-        for (let EH = zH - 1; EH >= 0; EH--) AH.skipBits(40), CH[EH] = AH.readBits(1);
+        if (!oB) throw new Error("Invalid Setup header: mode header not found.");
+        if (jB > 63) throw new Error(`Unsupported mode count: ${jB}.`);
+        const yB = jB;
+        YB.pos = 0, YB.skipBits(DB);
+        const JB = Array(yB).fill(0);
+        for (let MB = yB - 1; MB >= 0; MB--) YB.skipBits(40), JB[MB] = YB.readBits(1);
         return {
-          modeBlockflags: CH
+          modeBlockflags: JB
         }
       },
-      sH = (HH, BH, LH) => {
-        switch (HH) {
+      HB = (BB, OB, GB) => {
+        switch (BB) {
           case "avc":
-            for (const HH of ((HH, BH) => {
-                if (BH.description) {
-                  const LH = 3 & (0, rH.id)(BH.description)[4];
-                  return YH(HH, LH + 1)
+            for (const BB of ((BB, OB) => {
+                if (OB.description) {
+                  const GB = 3 & (0, DB.Id)(OB.description)[4];
+                  return lB(BB, GB + 1)
                 }
-                return GH(HH)
-              })(LH, BH)) {
-              const BH = LH[HH.offset],
-                AH = uH(BH);
-              if (AH >= zH.NON_IDR_SLICE && AH <= zH.SLICE_DPC) return "delta";
-              if (AH === zH.IDR) return "key";
-              if (AH === zH.SEI && !(0, rH.vb)()) {
-                const BH = LH.subarray(HH.offset, HH.offset + HH.length),
-                  AH = QH(BH);
-                let SH = 1;
+                return zB(BB)
+              })(GB, OB)) {
+              const OB = GB[BB.offset],
+                YB = pB(OB);
+              if (YB >= yB.NON_IDR_SLICE && YB <= yB.SLICE_DPC) return "delta";
+              if (YB === yB.IDR) return "key";
+              if (YB === yB.SEI && !(0, DB.Kb)()) {
+                const OB = GB.subarray(BB.offset, BB.offset + BB.length),
+                  YB = qB(OB);
+                let QB = 1;
                 do {
-                  let HH = 0;
+                  let BB = 0;
                   for (;;) {
-                    const BH = AH[SH++];
-                    if (void 0 === BH) break;
-                    if (HH += BH, BH < 255) break
+                    const OB = YB[QB++];
+                    if (void 0 === OB) break;
+                    if (BB += OB, OB < 255) break
                   }
-                  let BH = 0;
+                  let OB = 0;
                   for (;;) {
-                    const HH = AH[SH++];
-                    if (void 0 === HH) break;
-                    if (BH += HH, HH < 255) break
+                    const BB = YB[QB++];
+                    if (void 0 === BB) break;
+                    if (OB += BB, BB < 255) break
                   }
-                  if (HH === 6) {
-                    const HH = new EH.e(AH);
-                    HH.pos = 8 * SH;
-                    const BH = (0, rH.qc)(HH),
-                      LH = HH.readBits(1);
-                    if (0 === BH && 1 === LH) return "key"
+                  if (BB === 6) {
+                    const BB = new MB.e(YB);
+                    BB.pos = 8 * QB;
+                    const OB = (0, DB.Qc)(BB),
+                      GB = BB.readBits(1);
+                    if (0 === OB && 1 === GB) return "key"
                   }
-                  SH += BH
-                } while (SH < AH.length - 1)
+                  QB += OB
+                } while (QB < YB.length - 1)
               }
             }
             return "delta";
           case "hevc":
-            for (const HH of bH(LH, BH)) {
-              const BH = kH(LH[HH.offset]);
-              if (BH < CH.BLA_W_LP) return "delta";
-              if (BH <= CH.RSV_IRAP_VCL23) return "key"
+            for (const BB of fB(GB, OB)) {
+              const OB = kB(GB[BB.offset]);
+              if (OB < JB.BLA_W_LP) return "delta";
+              if (OB <= JB.RSV_IRAP_VCL23) return "key"
             }
             return "delta";
           case "vp8":
-            return 0 === (1 & LH[0]) ? "key" : "delta";
+            return 0 === (1 & GB[0]) ? "key" : "delta";
           case "vp9": {
-            const HH = new EH.e(LH);
-            if (2 !== HH.readBits(2)) return null;
-            const BH = HH.readBits(1);
-            3 === (HH.readBits(1) << 1) + BH && HH.skipBits(1);
-            if (HH.readBits(1)) return null;
-            return 0 === HH.readBits(1) ? "key" : "delta"
+            const BB = new MB.e(GB);
+            if (2 !== BB.readBits(2)) return null;
+            const OB = BB.readBits(1);
+            3 === (BB.readBits(1) << 1) + OB && BB.skipBits(1);
+            if (BB.readBits(1)) return null;
+            return 0 === BB.readBits(1) ? "key" : "delta"
           }
           case "av1": {
-            let HH = !1;
+            let BB = !1;
             for (const {
-                type: BH,
-                data: AH
+                type: OB,
+                data: YB
               }
-              of nH(LH))
-              if (1 === BH) {
-                const BH = new EH.e(AH);
-                BH.skipBits(4), HH = !!BH.readBits(1)
-              } else if (3 === BH || 6 === BH || 7 === BH) {
-              if (HH) return "key";
-              const BH = new EH.e(AH);
-              if (BH.readBits(1)) return null;
-              return 0 === BH.readBits(2) ? "key" : "delta"
+              of cB(GB))
+              if (1 === OB) {
+                const OB = new MB.e(YB);
+                OB.skipBits(4), BB = !!OB.readBits(1)
+              } else if (3 === OB || 6 === OB || 7 === OB) {
+              if (BB) return "key";
+              const OB = new MB.e(YB);
+              if (OB.readBits(1)) return null;
+              return 0 === OB.readBits(2) ? "key" : "delta"
             }
             return null
           }
           case "prores":
             return "key";
           default:
-            (0, rH.G)(HH), (0, rH.J)(!1)
+            (0, DB.M)(BB), (0, DB.Q)(!1)
         }
       };
-    var JH;
-    ! function(HH) {
-      HH[HH.STREAMINFO = 0] = "STREAMINFO", HH[HH.VORBIS_COMMENT = 4] = "VORBIS_COMMENT", HH[HH.PICTURE = 6] = "PICTURE"
-    }(JH || (JH = {}));
-    const iH = (HH, BH, LH) => {
-        const AH = [HH],
-          SH = rH.$c.encode(XH.e);
-        let hH = new Uint8Array(4 + SH.length),
-          tH = new DataView(hH.buffer);
-        tH.setUint32(0, SH.length, !0), hH.set(SH, 4), AH.push(hH);
-        const zH = [],
-          CH = (HH, BH) => {
-            const LH = `${HH}=${BH}`,
-              SH = rH.$c.encode(LH);
-            hH = new Uint8Array(4 + SH.length), tH = new DataView(hH.buffer), tH.setUint32(0, SH.length, !0), hH.set(SH, 4), AH.push(hH), zH.push(HH)
+    var vB;
+    ! function(BB) {
+      BB[BB.STREAMINFO = 0] = "STREAMINFO", BB[BB.VORBIS_COMMENT = 4] = "VORBIS_COMMENT", BB[BB.PICTURE = 6] = "PICTURE"
+    }(vB || (vB = {}));
+    const sB = (BB, OB, GB) => {
+        const YB = [BB],
+          QB = DB.Bd.encode(PB.c);
+        let oB = new Uint8Array(4 + QB.length),
+          jB = new DataView(oB.buffer);
+        jB.setUint32(0, QB.length, !0), oB.set(QB, 4), YB.push(oB);
+        const yB = [],
+          JB = (BB, OB) => {
+            const GB = `${BB}=${OB}`,
+              QB = DB.Bd.encode(GB);
+            oB = new Uint8Array(4 + QB.length), jB = new DataView(oB.buffer), jB.setUint32(0, QB.length, !0), oB.set(QB, 4), YB.push(oB), yB.push(BB)
           };
         for (const {
-            key: XH,
-            value: QH
+            key: PB,
+            value: qB
           }
-          of(0, rH.Vb)(BH)) switch (XH) {
+          of(0, DB.rc)(OB)) switch (PB) {
           case "title":
-            CH("TITLE", QH);
+            JB("TITLE", qB);
             break;
           case "description":
-            CH("DESCRIPTION", QH);
+            JB("DESCRIPTION", qB);
             break;
           case "artist":
-            CH("ARTIST", QH);
+            JB("ARTIST", qB);
             break;
           case "album":
-            CH("ALBUM", QH);
+            JB("ALBUM", qB);
             break;
           case "albumArtist":
-            CH("ALBUMARTIST", QH);
+            JB("ALBUMARTIST", qB);
             break;
           case "genre":
-            CH("GENRE", QH);
+            JB("GENRE", qB);
             break;
           case "date":
-            CH("DATE", QH.toISOString().slice(0, 10));
+            JB("DATE", qB.toISOString().slice(0, 10));
             break;
           case "comment":
-            CH("COMMENT", QH);
+            JB("COMMENT", qB);
             break;
           case "lyrics":
-            CH("LYRICS", QH);
+            JB("LYRICS", qB);
             break;
           case "trackNumber":
-            CH("TRACKNUMBER", QH.toString());
+            JB("TRACKNUMBER", qB.toString());
             break;
           case "tracksTotal":
-            CH("TRACKTOTAL", QH.toString());
+            JB("TRACKTOTAL", qB.toString());
             break;
           case "discNumber":
-            CH("DISCNUMBER", QH.toString());
+            JB("DISCNUMBER", qB.toString());
             break;
           case "discsTotal":
-            CH("DISCTOTAL", QH.toString());
+            JB("DISCTOTAL", qB.toString());
             break;
           case "beatsPerMinute":
-            CH("BPM", QH.toString());
+            JB("BPM", qB.toString());
             break;
           case "images":
-            if (!LH) break;
-            for (const HH of QH) {
-              const BH = "coverFront" === HH.kind ? 3 : "coverBack" === HH.kind ? 4 : 0,
-                LH = new Uint8Array(HH.mimeType.length);
-              for (let rH = 0; rH < HH.mimeType.length; rH++) LH[rH] = HH.mimeType.charCodeAt(rH);
-              const AH = rH.$c.encode(HH.description ?? ""),
-                SH = new Uint8Array(8 + LH.length + 4 + AH.length + 16 + 4 + HH.data.length),
-                hH = (0, rH.ed)(SH);
-              hH.setUint32(0, BH, !1), hH.setUint32(4, LH.length, !1), SH.set(LH, 8), hH.setUint32(8 + LH.length, AH.length, !1), SH.set(AH, 12 + LH.length), hH.setUint32(28 + LH.length + AH.length, HH.data.length, !1), SH.set(HH.data, 32 + LH.length + AH.length);
-              CH("METADATA_BLOCK_PICTURE", (0, rH.R)(SH))
+            if (!GB) break;
+            for (const BB of qB) {
+              const OB = "coverFront" === BB.kind ? 3 : "coverBack" === BB.kind ? 4 : 0,
+                GB = new Uint8Array(BB.mimeType.length);
+              for (let DB = 0; DB < BB.mimeType.length; DB++) GB[DB] = BB.mimeType.charCodeAt(DB);
+              const YB = DB.Bd.encode(BB.description ?? ""),
+                QB = new Uint8Array(8 + GB.length + 4 + YB.length + 16 + 4 + BB.data.length),
+                oB = (0, DB.Gd)(QB);
+              oB.setUint32(0, OB, !1), oB.setUint32(4, GB.length, !1), QB.set(GB, 8), oB.setUint32(8 + GB.length, YB.length, !1), QB.set(YB, 12 + GB.length), oB.setUint32(28 + GB.length + YB.length, BB.data.length, !1), QB.set(BB.data, 32 + GB.length + YB.length);
+              JB("METADATA_BLOCK_PICTURE", (0, DB.V)(QB))
             }
             break;
           case "raw":
             break;
           default:
-            (0, rH.G)(XH)
+            (0, DB.M)(PB)
         }
-        if (BH.raw)
-          for (const rH in BH.raw) {
-            const HH = BH.raw[rH] ?? BH.raw[rH.toLowerCase()];
-            if ("vendor" !== rH && null != HH && !zH.includes(rH))
-              if ("string" === typeof HH) CH(rH, HH);
-              else if (Array.isArray(HH)) {
-              if (HH.every((HH => "string" === typeof HH)))
-                for (const BH of HH) CH(rH, BH)
+        if (OB.raw)
+          for (const DB in OB.raw) {
+            const BB = OB.raw[DB] ?? OB.raw[DB.toLowerCase()];
+            if ("vendor" !== DB && null != BB && !yB.includes(DB))
+              if ("string" === typeof BB) JB(DB, BB);
+              else if (Array.isArray(BB)) {
+              if (BB.every((BB => "string" === typeof BB)))
+                for (const OB of BB) JB(DB, OB)
             }
           }
-        const EH = new Uint8Array(4);
-        (0, rH.ed)(EH).setUint32(0, zH.length, !0), AH.splice(2, 0, EH);
-        const GH = AH.reduce(((HH, BH) => HH + BH.length), 0),
-          YH = new Uint8Array(GH);
-        let uH = 0;
-        for (const rH of AH) YH.set(rH, uH), uH += rH.length;
-        return YH
+        const MB = new Uint8Array(4);
+        (0, DB.Gd)(MB).setUint32(0, yB.length, !0), YB.splice(2, 0, MB);
+        const zB = YB.reduce(((BB, OB) => BB + OB.length), 0),
+          lB = new Uint8Array(zB);
+        let pB = 0;
+        for (const DB of YB) lB.set(DB, pB), pB += DB.length;
+        return lB
       },
-      pH = HH => {
-        if (HH.length < 7) return null;
-        if (11 !== HH[0] || 119 !== HH[1]) return null;
-        const BH = new EH.e(HH);
-        BH.skipBits(16), BH.skipBits(16);
-        const LH = BH.readBits(2);
-        if (3 === LH) return null;
-        const AH = BH.readBits(6),
-          rH = BH.readBits(5);
-        if (rH > 8) return null;
-        const SH = BH.readBits(3),
-          hH = BH.readBits(3);
-        0 !== (1 & hH) && 1 !== hH && BH.skipBits(2), 0 !== (4 & hH) && BH.skipBits(2), 2 === hH && BH.skipBits(2);
+      xB = BB => {
+        if (BB.length < 7) return null;
+        if (11 !== BB[0] || 119 !== BB[1]) return null;
+        const OB = new MB.e(BB);
+        OB.skipBits(16), OB.skipBits(16);
+        const GB = OB.readBits(2);
+        if (3 === GB) return null;
+        const YB = OB.readBits(6),
+          DB = OB.readBits(5);
+        if (DB > 8) return null;
+        const QB = OB.readBits(3),
+          oB = OB.readBits(3);
+        0 !== (1 & oB) && 1 !== oB && OB.skipBits(2), 0 !== (4 & oB) && OB.skipBits(2), 2 === oB && OB.skipBits(2);
         return {
-          fscod: LH,
-          bsid: rH,
-          bsmod: SH,
-          acmod: hH,
-          lfeon: BH.readBits(1),
-          bitRateCode: Math.floor(AH / 2)
+          fscod: GB,
+          bsid: DB,
+          bsmod: QB,
+          acmod: oB,
+          lfeon: OB.readBits(1),
+          bitRateCode: Math.floor(YB / 2)
         }
       },
-      yH = new Uint8Array([5, 4, 65, 67, 45, 51]),
-      HB = new Uint8Array([5, 4, 69, 65, 67, 51]),
-      BB = [1, 2, 3, 6],
-      LB = HH => {
-        if (HH.length < 6) return null;
-        if (11 !== HH[0] || 119 !== HH[1]) return null;
-        const BH = new EH.e(HH);
-        BH.skipBits(16);
-        const LH = BH.readBits(2);
-        if (BH.skipBits(3), 0 !== LH && 2 !== LH) return null;
-        const AH = BH.readBits(11),
-          rH = BH.readBits(2);
-        let SH, zH = 0;
-        3 === rH ? (zH = BH.readBits(2), SH = 3) : SH = BH.readBits(2);
-        const CH = BH.readBits(3),
-          XH = BH.readBits(1),
-          GH = BH.readBits(5);
-        if (GH < 11 || GH > 16) return null;
-        const YH = BB[SH];
-        let uH;
-        uH = rH < 3 ? hH[rH] / 1e3 : tH[zH] / 1e3;
+      tB = new Uint8Array([5, 4, 65, 67, 45, 51]),
+      BO = new Uint8Array([5, 4, 69, 65, 67, 51]),
+      OO = [1, 2, 3, 6],
+      GO = BB => {
+        if (BB.length < 6) return null;
+        if (11 !== BB[0] || 119 !== BB[1]) return null;
+        const OB = new MB.e(BB);
+        OB.skipBits(16);
+        const GB = OB.readBits(2);
+        if (OB.skipBits(3), 0 !== GB && 2 !== GB) return null;
+        const YB = OB.readBits(11),
+          DB = OB.readBits(2);
+        let QB, yB = 0;
+        3 === DB ? (yB = OB.readBits(2), QB = 3) : QB = OB.readBits(2);
+        const JB = OB.readBits(3),
+          PB = OB.readBits(1),
+          zB = OB.readBits(5);
+        if (zB < 11 || zB > 16) return null;
+        const lB = OO[QB];
+        let pB;
+        pB = DB < 3 ? oB[DB] / 1e3 : jB[yB] / 1e3;
         return {
-          dataRate: Math.round((AH + 1) * uH / (16 * YH)),
+          dataRate: Math.round((YB + 1) * pB / (16 * lB)),
           substreams: [{
-            fscod: rH,
-            fscod2: zH,
-            bsid: GH,
+            fscod: DB,
+            fscod2: yB,
+            bsid: zB,
             bsmod: 0,
-            acmod: CH,
-            lfeon: XH,
+            acmod: JB,
+            lfeon: PB,
             numDepSub: 0,
             chanLoc: 0
           }]
         }
       },
-      AB = [0, 8e3, 16e3, 32e3, 0, 0, 11025, 22050, 44100, 0, 0, 12e3, 24e3, 48e3, 96e3, 192e3],
-      rB = [32e3, 56e3, 64e3, 96e3, 112e3, 128e3, 192e3, 224e3, 256e3, 32e4, 384e3, 448e3, 512e3, 576e3, 64e4, 768e3, 96e4, 1024e3, 1152e3, 128e4, 1344e3, 1408e3, 1411200, 1472e3, 1536e3, 192e4, 2048e3, 3072e3, 384e4, 0, 0, 0],
-      SB = [16, 16, 20, 20, 0, 24, 24, 0],
-      hB = [1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 6, 6, 7, 8, 8],
-      tB = [1, 2, 2, 2, 2, 3, 18, 19, 6, 7, 518, 323, 83, 519, 582, 535],
-      zB = [32e3, 44100, 48e3, 0],
-      CB = [8e3, 16e3, 32e3, 64e3, 128e3, 22050, 44100, 88200, 176400, 352800, 12e3, 24e3, 48e3, 96e3, 192e3, 384e3],
-      EB = [512, 1024, 2048, 4096],
-      XB = HH => {
-        const BH = GB(HH),
-          LH = (0, rH.ed)(HH);
-        let AH = BH ? 4 * Math.ceil(BH.frameSize / 4) : 0,
-          SH = null;
-        for (; AH + 4 <= HH.length && 1683496997 === LH.getUint32(AH);) {
-          const BH = YB(HH.subarray(AH));
-          if (!BH) break;
-          SH ??= BH, AH += BH.frameSize
+      YO = [0, 8e3, 16e3, 32e3, 0, 0, 11025, 22050, 44100, 0, 0, 12e3, 24e3, 48e3, 96e3, 192e3],
+      DO = [32e3, 56e3, 64e3, 96e3, 112e3, 128e3, 192e3, 224e3, 256e3, 32e4, 384e3, 448e3, 512e3, 576e3, 64e4, 768e3, 96e4, 1024e3, 1152e3, 128e4, 1344e3, 1408e3, 1411200, 1472e3, 1536e3, 192e4, 2048e3, 3072e3, 384e4, 0, 0, 0],
+      QO = [16, 16, 20, 20, 0, 24, 24, 0],
+      oO = [1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 6, 6, 7, 8, 8],
+      jO = [1, 2, 2, 2, 2, 3, 18, 19, 6, 7, 518, 323, 83, 519, 582, 535],
+      yO = [32e3, 44100, 48e3, 0],
+      JO = [8e3, 16e3, 32e3, 64e3, 128e3, 22050, 44100, 88200, 176400, 352800, 12e3, 24e3, 48e3, 96e3, 192e3, 384e3],
+      MO = [512, 1024, 2048, 4096],
+      PO = BB => {
+        const OB = zO(BB),
+          GB = (0, DB.Gd)(BB);
+        let YB = OB ? 4 * Math.ceil(OB.frameSize / 4) : 0,
+          QB = null;
+        for (; YB + 4 <= BB.length && 1683496997 === GB.getUint32(YB);) {
+          const OB = lO(BB.subarray(YB));
+          if (!OB) break;
+          QB ??= OB, YB += OB.frameSize
         }
-        if (BH) return {
-          frameSize: SH ? AH : BH.frameSize,
-          sampleRate: BH.sampleRate,
-          numberOfChannels: BH.numberOfChannels,
-          sampleCount: BH.sampleCount,
-          channelLayout: BH.channelLayout,
-          pcmResolution: BH.pcmResolution,
-          bitRate: BH.bitRate,
-          core: BH,
-          hasExtensions: null !== SH
+        if (OB) return {
+          frameSize: QB ? YB : OB.frameSize,
+          sampleRate: OB.sampleRate,
+          numberOfChannels: OB.numberOfChannels,
+          sampleCount: OB.sampleCount,
+          channelLayout: OB.channelLayout,
+          pcmResolution: OB.pcmResolution,
+          bitRate: OB.bitRate,
+          core: OB,
+          hasExtensions: null !== QB
         };
-        if (!SH?.asset) return null;
+        if (!QB?.asset) return null;
         const {
-          asset: hH
-        } = SH;
+          asset: oB
+        } = QB;
         return {
-          frameSize: AH,
-          sampleRate: hH.sampleRate,
-          numberOfChannels: hH.numberOfChannels,
-          sampleCount: hH.sampleCount,
-          channelLayout: hH.channelLayout,
-          pcmResolution: hH.pcmResolution,
+          frameSize: YB,
+          sampleRate: oB.sampleRate,
+          numberOfChannels: oB.numberOfChannels,
+          sampleCount: oB.sampleCount,
+          channelLayout: oB.channelLayout,
+          pcmResolution: oB.pcmResolution,
           bitRate: 0,
           core: null,
           hasExtensions: !0
         }
       },
-      GB = HH => {
-        if (HH.length < 18) return null;
-        if (127 !== HH[0] || 254 !== HH[1] || 128 !== HH[2] || 1 !== HH[3]) return null;
-        const BH = new EH.e(HH);
-        if (BH.skipBits(32), BH.skipBits(1), 31 !== BH.readBits(5)) return null;
-        const LH = BH.readBits(1),
-          AH = BH.readBits(7) + 1;
-        if (AH % 8 !== 0) return null;
-        const rH = BH.readBits(14) + 1;
-        if (rH < 96) return null;
-        const SH = BH.readBits(6);
-        if (SH >= hB.length) return null;
-        const hH = AB[BH.readBits(4)];
-        if (0 === hH) return null;
-        const tH = rB[BH.readBits(5)];
-        if (0 !== BH.readBits(1)) return null;
-        BH.skipBits(4), BH.skipBits(5);
-        const zH = BH.readBits(2);
-        if (3 === zH) return null;
-        BH.skipBits(1), LH && BH.skipBits(16), BH.skipBits(7);
-        const CH = SB[BH.readBits(3)];
-        if (0 === CH) return null;
-        const XH = 0 !== zH;
+      zO = BB => {
+        if (BB.length < 18) return null;
+        if (127 !== BB[0] || 254 !== BB[1] || 128 !== BB[2] || 1 !== BB[3]) return null;
+        const OB = new MB.e(BB);
+        if (OB.skipBits(32), OB.skipBits(1), 31 !== OB.readBits(5)) return null;
+        const GB = OB.readBits(1),
+          YB = OB.readBits(7) + 1;
+        if (YB % 8 !== 0) return null;
+        const DB = OB.readBits(14) + 1;
+        if (DB < 96) return null;
+        const QB = OB.readBits(6);
+        if (QB >= oO.length) return null;
+        const oB = YO[OB.readBits(4)];
+        if (0 === oB) return null;
+        const jB = DO[OB.readBits(5)];
+        if (0 !== OB.readBits(1)) return null;
+        OB.skipBits(4), OB.skipBits(5);
+        const yB = OB.readBits(2);
+        if (3 === yB) return null;
+        OB.skipBits(1), GB && OB.skipBits(16), OB.skipBits(7);
+        const JB = QO[OB.readBits(3)];
+        if (0 === JB) return null;
+        const PB = 0 !== yB;
         return {
-          frameSize: rH,
-          sampleRate: hH,
-          numberOfChannels: hB[SH] + (XH ? 1 : 0),
-          sampleCount: 32 * AH,
-          channelLayout: tB[SH] | (XH ? 8 : 0),
-          amode: SH,
-          lfePresent: XH,
-          bitRate: tH,
-          pcmResolution: CH
+          frameSize: DB,
+          sampleRate: oB,
+          numberOfChannels: oO[QB] + (PB ? 1 : 0),
+          sampleCount: 32 * YB,
+          channelLayout: jO[QB] | (PB ? 8 : 0),
+          amode: QB,
+          lfePresent: PB,
+          bitRate: jB,
+          pcmResolution: JB
         }
       },
-      YB = HH => {
-        if (HH.length < 10) return null;
-        if (100 !== HH[0] || 88 !== HH[1] || 32 !== HH[2] || 37 !== HH[3]) return null;
-        const BH = new EH.e(HH);
-        BH.skipBits(32), BH.skipBits(8);
-        const LH = BH.readBits(2),
-          AH = BH.readBits(1),
-          SH = 8 + 4 * AH,
-          hH = 16 + 4 * AH;
-        BH.skipBits(SH);
-        const tH = BH.readBits(hH) + 1,
-          zH = {
-            frameSize: tH,
+      lO = BB => {
+        if (BB.length < 10) return null;
+        if (100 !== BB[0] || 88 !== BB[1] || 32 !== BB[2] || 37 !== BB[3]) return null;
+        const OB = new MB.e(BB);
+        OB.skipBits(32), OB.skipBits(8);
+        const GB = OB.readBits(2),
+          YB = OB.readBits(1),
+          QB = 8 + 4 * YB,
+          oB = 16 + 4 * YB;
+        OB.skipBits(QB);
+        const jB = OB.readBits(oB) + 1,
+          yB = {
+            frameSize: jB,
             asset: null
           };
-        if (!BH.readBits(1)) return zH;
-        const CH = zB[BH.readBits(2)],
-          XH = 512 * (BH.readBits(3) + 1);
-        BH.readBits(1) && BH.skipBits(36);
-        const GH = BH.readBits(3) + 1,
-          YH = BH.readBits(3) + 1,
-          uH = [];
-        for (let rH = 0; rH < GH; rH++) uH.push(BH.readBits(LH + 1));
-        for (const EH of uH) BH.skipBits(8 * (0, rH.kc)(EH));
-        if (BH.readBits(1)) {
-          BH.skipBits(2);
-          const HH = BH.readBits(2) + 1 << 2,
-            LH = BH.readBits(2) + 1;
-          BH.skipBits(LH * HH)
+        if (!OB.readBits(1)) return yB;
+        const JB = yO[OB.readBits(2)],
+          PB = 512 * (OB.readBits(3) + 1);
+        OB.readBits(1) && OB.skipBits(36);
+        const zB = OB.readBits(3) + 1,
+          lB = OB.readBits(3) + 1,
+          pB = [];
+        for (let DB = 0; DB < zB; DB++) pB.push(OB.readBits(GB + 1));
+        for (const MB of pB) OB.skipBits(8 * (0, DB.Jc)(MB));
+        if (OB.readBits(1)) {
+          OB.skipBits(2);
+          const BB = OB.readBits(2) + 1 << 2,
+            GB = OB.readBits(2) + 1;
+          OB.skipBits(GB * BB)
         }
-        for (let rH = 0; rH < YH; rH++) BH.skipBits(hH);
-        BH.skipBits(9), BH.skipBits(3), BH.readBits(1) && BH.skipBits(4), BH.readBits(1) && BH.skipBits(24), BH.readBits(1) && BH.skipBits(8 * (BH.readBits(10) + 1));
-        const QH = BH.readBits(5) + 1,
-          WH = CB[BH.readBits(4)],
-          MH = BH.readBits(8) + 1;
-        let xH = 0;
-        if (BH.readBits(1) && (MH > 2 && BH.skipBits(1), MH > 6 && BH.skipBits(1), BH.readBits(1))) {
-          const HH = BH.readBits(2) + 1 << 2;
-          xH = BH.readBits(HH)
+        for (let DB = 0; DB < lB; DB++) OB.skipBits(oB);
+        OB.skipBits(9), OB.skipBits(3), OB.readBits(1) && OB.skipBits(4), OB.readBits(1) && OB.skipBits(24), OB.readBits(1) && OB.skipBits(8 * (OB.readBits(10) + 1));
+        const qB = OB.readBits(5) + 1,
+          ZB = JO[OB.readBits(4)],
+          NB = OB.readBits(8) + 1;
+        let RB = 0;
+        if (OB.readBits(1) && (NB > 2 && OB.skipBits(1), NB > 6 && OB.skipBits(1), OB.readBits(1))) {
+          const BB = OB.readBits(2) + 1 << 2;
+          RB = OB.readBits(BB)
         }
-        return 0 === CH || BH.getBitsLeft() < 0 ? zH : {
-          frameSize: tH,
+        return 0 === JB || OB.getBitsLeft() < 0 ? yB : {
+          frameSize: jB,
           asset: {
-            sampleRate: WH,
-            numberOfChannels: MH,
-            sampleCount: Math.round(XH * WH / CH),
-            channelLayout: xH,
-            pcmResolution: QH
+            sampleRate: ZB,
+            numberOfChannels: NB,
+            sampleCount: Math.round(PB * ZB / JB),
+            channelLayout: RB,
+            pcmResolution: qB
           }
         }
       },
-      uB = HH => {
-        const BH = new Uint8Array(20),
-          LH = (0, rH.ed)(BH);
-        LH.setUint32(0, HH.sampleRate), LH.setUint32(4, HH.bitRate), LH.setUint32(8, HH.bitRate), BH[12] = HH.pcmResolution;
-        const AH = HH.core && !HH.hasExtensions ? 1 : 0,
-          SH = new EH.e(BH);
-        return SH.seekToByte(13), SH.writeBits(2, Math.max(EB.indexOf(HH.sampleCount), 0)), SH.writeBits(5, AH), SH.writeBits(1, HH.core?.lfePresent ? 1 : 0), SH.writeBits(6, HH.core?.amode ?? 0), SH.writeBits(14, HH.core ? HH.core.frameSize - 1 : 0), SH.writeBits(1, 0), SH.writeBits(3, 0), SH.writeBits(16, HH.channelLayout), SH.writeBits(1, 0), SH.writeBits(1, 0), SH.writeBits(1, 0), SH.writeBits(5, 0), BH
+      pO = BB => {
+        const OB = new Uint8Array(20),
+          GB = (0, DB.Gd)(OB);
+        GB.setUint32(0, BB.sampleRate), GB.setUint32(4, BB.bitRate), GB.setUint32(8, BB.bitRate), OB[12] = BB.pcmResolution;
+        const YB = BB.core && !BB.hasExtensions ? 1 : 0,
+          QB = new MB.e(OB);
+        return QB.seekToByte(13), QB.writeBits(2, Math.max(MO.indexOf(BB.sampleCount), 0)), QB.writeBits(5, YB), QB.writeBits(1, BB.core?.lfePresent ? 1 : 0), QB.writeBits(6, BB.core?.amode ?? 0), QB.writeBits(14, BB.core ? BB.core.frameSize - 1 : 0), QB.writeBits(1, 0), QB.writeBits(3, 0), QB.writeBits(16, BB.channelLayout), QB.writeBits(1, 0), QB.writeBits(1, 0), QB.writeBits(1, 0), QB.writeBits(5, 0), OB
       }
   },
-  40849: (HH, BH, LH) => {
-    LH.d(BH, {
-      B: () => UH,
-      E: () => TH,
-      I: () => PH,
-      L: () => IH,
-      O: () => oH,
-      P: () => mH,
-      S: () => kH,
-      U: () => NH,
-      W: () => RH,
-      X: () => qH,
-      c: () => zH,
-      d: () => EH,
-      f: () => tH,
-      h: () => OH,
-      k: () => hH,
-      n: () => CH,
-      r: () => SH,
-      t: () => GH,
-      v: () => VH,
-      y: () => vH
+  40599: (BB, OB, GB) => {
+    GB.d(OB, {
+      A: () => WB,
+      C: () => SB,
+      F: () => VB,
+      H: () => AB,
+      L: () => uB,
+      O: () => KB,
+      P: () => dB,
+      S: () => kB,
+      V: () => XB,
+      X: () => wB,
+      Y: () => gB,
+      e: () => yB,
+      f: () => MB,
+      g: () => jB,
+      k: () => UB,
+      n: () => oB,
+      q: () => JB,
+      t: () => QB,
+      u: () => zB,
+      y: () => nB
     });
-    var AH = LH(40858),
-      rH = LH(40820);
-    const SH = ["avc", "hevc", "vp9", "av1", "vp8", "prores"],
-      hH = ["pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", "pcm-u8", "pcm-s8", "ulaw", "alaw"],
-      tH = ["aac", "opus", "mp3", "vorbis", "flac", "ac3", "eac3", "dts"],
-      zH = [...tH, ...hH],
-      CH = ["webvtt"],
-      EH = [{
+    var YB = GB(40603),
+      DB = GB(40574);
+    const QB = ["avc", "hevc", "vp9", "av1", "vp8", "prores"],
+      oB = ["pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", "pcm-u8", "pcm-s8", "ulaw", "alaw"],
+      jB = ["aac", "opus", "mp3", "vorbis", "flac", "ac3", "eac3", "dts"],
+      yB = [...jB, ...oB],
+      JB = ["webvtt"],
+      MB = [{
         maxMacroblocks: 99,
         maxBitrate: 64e3,
         maxDpbMbs: 396,
@@ -1904,7 +1904,7 @@ export const modules = {
         maxDpbMbs: 696320,
         level: 62
       }],
-      XH = [{
+      PB = [{
         maxPictureSize: 36864,
         maxBitrate: 128e3,
         tier: "L",
@@ -2010,7 +2010,7 @@ export const modules = {
         tier: "H",
         level: 186
       }],
-      GH = [{
+      zB = [{
         maxPictureSize: 36864,
         maxBitrate: 2e5,
         level: 10
@@ -2067,7 +2067,7 @@ export const modules = {
         maxBitrate: 48e7,
         level: 62
       }],
-      YH = [{
+      lB = [{
         maxPictureSize: 147456,
         maxBitrate: 15e5,
         tier: "M",
@@ -2188,11 +2188,11 @@ export const modules = {
         tier: "H",
         level: 19
       }],
-      uH = ".01.01.01.01.00",
-      QH = ".0.110.01.01.01.0",
-      WH = ["ap4x", "ap4h", "apch", "apcn", "apcs", "apco"],
-      MH = ["dtsc", "dtsh", "dtsl", "dtse"],
-      xH = [{
+      pB = ".01.01.01.01.00",
+      qB = ".0.110.01.01.01.0",
+      ZB = ["ap4x", "ap4h", "apch", "apcn", "apcs", "apco"],
+      NB = ["dtsc", "dtsh", "dtsl", "dtse"],
+      RB = [{
         fourCc: "apco",
         bitrate: 45e6,
         alpha: !1
@@ -2217,451 +2217,451 @@ export const modules = {
         bitrate: 5e8,
         alpha: !0
       }],
-      vH = (HH, BH, LH, AH, SH) => {
-        if ("avc" === HH) {
-          const HH = 100,
-            SH = Math.ceil(BH / 16) * Math.ceil(LH / 16),
-            hH = EH.find((HH => SH <= HH.maxMacroblocks && AH <= HH.maxBitrate)) ?? (0, rH.Xb)(EH),
-            tH = hH ? hH.level : 0;
-          return `avc1.${HH.toString(16).padStart(2,"0")}${"00"}${tH.toString(16).padStart(2,"0")}`
+      WB = (BB, OB, GB, YB, QB) => {
+        if ("avc" === BB) {
+          const BB = 100,
+            QB = Math.ceil(OB / 16) * Math.ceil(GB / 16),
+            oB = MB.find((BB => QB <= BB.maxMacroblocks && YB <= BB.maxBitrate)) ?? (0, DB.sc)(MB),
+            jB = oB ? oB.level : 0;
+          return `avc1.${BB.toString(16).padStart(2,"0")}${"00"}${jB.toString(16).padStart(2,"0")}`
         }
-        if ("hevc" === HH) {
-          const HH = "",
-            SH = 1,
-            hH = "6",
-            tH = BH * LH,
-            zH = XH.find((HH => tH <= HH.maxPictureSize && AH <= HH.maxBitrate)) ?? (0, rH.Xb)(XH),
-            CH = "B0";
-          return `hev1.${HH}${SH}.${hH}.${zH.tier}${zH.level}.${CH}`
+        if ("hevc" === BB) {
+          const BB = "",
+            QB = 1,
+            oB = "6",
+            jB = OB * GB,
+            yB = PB.find((BB => jB <= BB.maxPictureSize && YB <= BB.maxBitrate)) ?? (0, DB.sc)(PB),
+            JB = "B0";
+          return `hev1.${BB}${QB}.${oB}.${yB.tier}${yB.level}.${JB}`
         }
-        if ("vp8" === HH) return "vp8";
-        if ("vp9" === HH) {
-          const HH = BH * LH,
-            SH = "08";
-          return `vp09.${"00"}.${(GH.find((BH=>HH<=BH.maxPictureSize&&AH<=BH.maxBitrate))??(0,rH.Xb)(GH)).level.toString().padStart(2,"0")}.${SH}`
+        if ("vp8" === BB) return "vp8";
+        if ("vp9" === BB) {
+          const BB = OB * GB,
+            QB = "08";
+          return `vp09.${"00"}.${(zB.find((OB=>BB<=OB.maxPictureSize&&YB<=OB.maxBitrate))??(0,DB.sc)(zB)).level.toString().padStart(2,"0")}.${QB}`
         }
-        if ("av1" === HH) {
-          const HH = 0,
-            SH = BH * LH,
-            hH = YH.find((HH => SH <= HH.maxPictureSize && AH <= HH.maxBitrate)) ?? (0, rH.Xb)(YH),
-            tH = "08";
-          return `av01.${HH}.${hH.level.toString().padStart(2,"0")}${hH.tier}.${tH}`
+        if ("av1" === BB) {
+          const BB = 0,
+            QB = OB * GB,
+            oB = lB.find((BB => QB <= BB.maxPictureSize && YB <= BB.maxBitrate)) ?? (0, DB.sc)(lB),
+            jB = "08";
+          return `av01.${BB}.${oB.level.toString().padStart(2,"0")}${oB.tier}.${jB}`
         }
-        if ("prores" === HH) {
-          const HH = 2073600,
-            rH = Math.pow(BH * LH / HH, .95),
-            hH = xH.filter((HH => HH.alpha === SH));
-          let tH = hH[0].fourCc,
-            zH = 1 / 0;
+        if ("prores" === BB) {
+          const BB = 2073600,
+            DB = Math.pow(OB * GB / BB, .95),
+            oB = RB.filter((BB => BB.alpha === QB));
+          let jB = oB[0].fourCc,
+            yB = 1 / 0;
           for (const {
-              fourCc: BH,
-              bitrate: LH
+              fourCc: OB,
+              bitrate: GB
             }
-            of hH) {
-            const HH = Math.abs(LH * rH - AH);
-            HH < zH && (zH = HH, tH = BH)
+            of oB) {
+            const BB = Math.abs(GB * DB - YB);
+            BB < yB && (yB = BB, jB = OB)
           }
-          return tH
+          return jB
         }
-        throw (0, rH.G)(HH), new TypeError(`Unhandled codec '${String(HH)}'.`)
+        throw (0, DB.M)(BB), new TypeError(`Unhandled codec '${String(BB)}'.`)
       },
-      PH = HH => {
-        const BH = HH.split(".");
-        return [1, 1, Number(BH[1]), 2, 1, Number(BH[2]), 3, 1, Number(BH[3]), 4, 1, BH[4] ? Number(BH[4]) : 1]
+      AB = BB => {
+        const OB = BB.split(".");
+        return [1, 1, Number(OB[1]), 2, 1, Number(OB[2]), 3, 1, Number(OB[3]), 4, 1, OB[4] ? Number(OB[4]) : 1]
       },
-      TH = HH => {
-        const BH = HH.split("."),
-          LH = Number(BH[1]),
-          AH = BH[2],
-          rH = (LH << 5) + Number(AH.slice(0, -1)),
-          SH = "H" === AH.slice(-1) ? 1 : 0,
-          hH = Number(BH[3]);
-        return [129, rH, (SH << 7) + ((8 === hH ? 0 : 1) << 6) + ((12 === hH ? 1 : 0) << 5) + ((BH[4] ? Number(BH[4]) : 0) << 4) + ((BH[5] ? Number(BH[5][0]) : 1) << 3) + ((BH[5] ? Number(BH[5][1]) : 1) << 2) + (BH[5] ? Number(BH[5][2]) : 0), 0]
+      VB = BB => {
+        const OB = BB.split("."),
+          GB = Number(OB[1]),
+          YB = OB[2],
+          DB = (GB << 5) + Number(YB.slice(0, -1)),
+          QB = "H" === YB.slice(-1) ? 1 : 0,
+          oB = Number(OB[3]);
+        return [129, DB, (QB << 7) + ((8 === oB ? 0 : 1) << 6) + ((12 === oB ? 1 : 0) << 5) + ((OB[4] ? Number(OB[4]) : 0) << 4) + ((OB[5] ? Number(OB[5][0]) : 1) << 3) + ((OB[5] ? Number(OB[5][1]) : 1) << 2) + (OB[5] ? Number(OB[5][2]) : 0), 0]
       },
-      UH = HH => {
+      SB = BB => {
         const {
-          codec: BH,
-          codecDescription: LH,
-          colorSpace: SH,
-          avcCodecInfo: hH,
-          hevcCodecInfo: tH,
-          vp9CodecInfo: zH,
-          av1CodecInfo: CH,
-          proresFormat: EH
-        } = HH;
-        if ("avc" === BH) {
-          if ((0, rH.J)(null !== HH.avcType), hH) {
-            const BH = new Uint8Array([hH.avcProfileIndication, hH.profileCompatibility, hH.avcLevelIndication]);
-            return `avc${HH.avcType}.${(0,rH.T)(BH)}`
+          codec: OB,
+          codecDescription: GB,
+          colorSpace: QB,
+          avcCodecInfo: oB,
+          hevcCodecInfo: jB,
+          vp9CodecInfo: yB,
+          av1CodecInfo: JB,
+          proresFormat: MB
+        } = BB;
+        if ("avc" === OB) {
+          if ((0, DB.Q)(null !== BB.avcType), oB) {
+            const OB = new Uint8Array([oB.avcProfileIndication, oB.profileCompatibility, oB.avcLevelIndication]);
+            return `avc${BB.avcType}.${(0,DB.X)(OB)}`
           }
-          if (!LH || LH.byteLength < 4) throw new TypeError("AVC decoder description is not provided or is not at least 4 bytes long.");
-          return `avc${HH.avcType}.${(0,rH.T)(LH.subarray(1,4))}`
+          if (!GB || GB.byteLength < 4) throw new TypeError("AVC decoder description is not provided or is not at least 4 bytes long.");
+          return `avc${BB.avcType}.${(0,DB.X)(GB.subarray(1,4))}`
         }
-        if ("hevc" === BH) {
-          let HH, BH, AH, SH, hH, zH;
-          if (tH) HH = tH.generalProfileSpace, BH = tH.generalProfileIdc, AH = (0, rH.vc)(tH.generalProfileCompatibilityFlags), SH = tH.generalTierFlag, hH = tH.generalLevelIdc, zH = [...tH.generalConstraintIndicatorFlags];
+        if ("hevc" === OB) {
+          let BB, OB, YB, QB, oB, yB;
+          if (jB) BB = jB.generalProfileSpace, OB = jB.generalProfileIdc, YB = (0, DB.Xc)(jB.generalProfileCompatibilityFlags), QB = jB.generalTierFlag, oB = jB.generalLevelIdc, yB = [...jB.generalConstraintIndicatorFlags];
           else {
-            if (!LH || LH.byteLength < 23) throw new TypeError("HEVC decoder description is not provided or is not at least 23 bytes long.");
-            const tH = (0, rH.ed)(LH),
-              CH = tH.getUint8(1);
-            HH = CH >> 6 & 3, BH = 31 & CH, AH = (0, rH.vc)(tH.getUint32(2)), SH = CH >> 5 & 1, hH = tH.getUint8(12), zH = [];
-            for (let HH = 0; HH < 6; HH++) zH.push(tH.getUint8(6 + HH))
+            if (!GB || GB.byteLength < 23) throw new TypeError("HEVC decoder description is not provided or is not at least 23 bytes long.");
+            const jB = (0, DB.Gd)(GB),
+              JB = jB.getUint8(1);
+            BB = JB >> 6 & 3, OB = 31 & JB, YB = (0, DB.Xc)(jB.getUint32(2)), QB = JB >> 5 & 1, oB = jB.getUint8(12), yB = [];
+            for (let BB = 0; BB < 6; BB++) yB.push(jB.getUint8(6 + BB))
           }
-          let CH = "hev1.";
-          for (CH += ["", "A", "B", "C"][HH] + BH, CH += ".", CH += AH.toString(16).toUpperCase(), CH += ".", CH += 0 === SH ? "L" : "H", CH += hH; zH.length > 0 && 0 === zH[zH.length - 1];) zH.pop();
-          return zH.length > 0 && (CH += ".", CH += zH.map((HH => HH.toString(16).toUpperCase())).join(".")), CH
+          let JB = "hev1.";
+          for (JB += ["", "A", "B", "C"][BB] + OB, JB += ".", JB += YB.toString(16).toUpperCase(), JB += ".", JB += 0 === QB ? "L" : "H", JB += oB; yB.length > 0 && 0 === yB[yB.length - 1];) yB.pop();
+          return yB.length > 0 && (JB += ".", JB += yB.map((BB => BB.toString(16).toUpperCase())).join(".")), JB
         }
-        if ("vp8" === BH) return "vp8";
-        if ("vp9" === BH) {
-          if (!zH) {
-            const BH = HH.width * HH.height;
-            let LH = (0, rH.Xb)(GH).level;
-            for (const HH of GH)
-              if (BH <= HH.maxPictureSize) {
-                LH = HH.level;
+        if ("vp8" === OB) return "vp8";
+        if ("vp9" === OB) {
+          if (!yB) {
+            const OB = BB.width * BB.height;
+            let GB = (0, DB.sc)(zB).level;
+            for (const BB of zB)
+              if (OB <= BB.maxPictureSize) {
+                GB = BB.level;
                 break
-              } return `vp09.00.${LH.toString().padStart(2,"0")}.08`
+              } return `vp09.00.${GB.toString().padStart(2,"0")}.08`
           }
-          let BH = `vp09.${zH.profile.toString().padStart(2,"0")}.${zH.level.toString().padStart(2,"0")}.${zH.bitDepth.toString().padStart(2,"0")}.${zH.chromaSubsampling.toString().padStart(2,"0")}`;
-          return BH += `.${zH.colourPrimaries.toString().padStart(2,"0")}.${zH.transferCharacteristics.toString().padStart(2,"0")}.${zH.matrixCoefficients.toString().padStart(2,"0")}.${zH.videoFullRangeFlag.toString().padStart(2,"0")}`, BH.endsWith(uH) && (BH = BH.slice(0, -15)), BH
+          let OB = `vp09.${yB.profile.toString().padStart(2,"0")}.${yB.level.toString().padStart(2,"0")}.${yB.bitDepth.toString().padStart(2,"0")}.${yB.chromaSubsampling.toString().padStart(2,"0")}`;
+          return OB += `.${yB.colourPrimaries.toString().padStart(2,"0")}.${yB.transferCharacteristics.toString().padStart(2,"0")}.${yB.matrixCoefficients.toString().padStart(2,"0")}.${yB.videoFullRangeFlag.toString().padStart(2,"0")}`, OB.endsWith(pB) && (OB = OB.slice(0, -15)), OB
         }
-        if ("av1" === BH) {
-          if (!CH) {
-            const BH = HH.width * HH.height;
-            let LH = (0, rH.Xb)(GH).level;
-            for (const HH of GH)
-              if (BH <= HH.maxPictureSize) {
-                LH = HH.level;
+        if ("av1" === OB) {
+          if (!JB) {
+            const OB = BB.width * BB.height;
+            let GB = (0, DB.sc)(zB).level;
+            for (const BB of zB)
+              if (OB <= BB.maxPictureSize) {
+                GB = BB.level;
                 break
-              } return `av01.0.${LH.toString().padStart(2,"0")}M.08`
+              } return `av01.0.${GB.toString().padStart(2,"0")}M.08`
           }
-          const BH = CH.profile,
-            LH = CH.level.toString().padStart(2, "0"),
-            hH = CH.tier ? "H" : "M",
-            tH = CH.bitDepth.toString().padStart(2, "0"),
-            zH = CH.monochrome ? "1" : "0",
-            EH = 100 * CH.chromaSubsamplingX + 10 * CH.chromaSubsamplingY + 1 * (CH.chromaSubsamplingX && CH.chromaSubsamplingY ? CH.chromaSamplePosition : 0);
-          let XH, YH, uH, WH;
-          (0, AH.p)(CH) ? (XH = CH.colourPrimaries, YH = CH.transferCharacteristics, uH = CH.matrixCoefficients, WH = CH.videoFullRangeFlag) : (XH = SH?.primaries ? rH.g[SH.primaries] : 1, YH = SH?.transfer ? rH.v[SH.transfer] : 1, uH = SH?.matrix ? rH.p[SH.matrix] : 1, WH = SH?.fullRange ? 1 : 0);
-          let MH = `av01.${BH}.${LH}${hH}.${tH}`;
-          return MH += `.${zH}.${EH.toString().padStart(3,"0")}`, MH += `.${XH.toString().padStart(2,"0")}`, MH += `.${YH.toString().padStart(2,"0")}`, MH += `.${uH.toString().padStart(2,"0")}`, MH += `.${WH}`, MH.endsWith(QH) && (MH = MH.slice(0, -17)), MH
+          const OB = JB.profile,
+            GB = JB.level.toString().padStart(2, "0"),
+            oB = JB.tier ? "H" : "M",
+            jB = JB.bitDepth.toString().padStart(2, "0"),
+            yB = JB.monochrome ? "1" : "0",
+            MB = 100 * JB.chromaSubsamplingX + 10 * JB.chromaSubsamplingY + 1 * (JB.chromaSubsamplingX && JB.chromaSubsamplingY ? JB.chromaSamplePosition : 0);
+          let PB, lB, pB, ZB;
+          (0, YB.p)(JB) ? (PB = JB.colourPrimaries, lB = JB.transferCharacteristics, pB = JB.matrixCoefficients, ZB = JB.videoFullRangeFlag) : (PB = QB?.primaries ? DB.g[QB.primaries] : 1, lB = QB?.transfer ? DB.z[QB.transfer] : 1, pB = QB?.matrix ? DB.r[QB.matrix] : 1, ZB = QB?.fullRange ? 1 : 0);
+          let NB = `av01.${OB}.${GB}${oB}.${jB}`;
+          return NB += `.${yB}.${MB.toString().padStart(3,"0")}`, NB += `.${PB.toString().padStart(2,"0")}`, NB += `.${lB.toString().padStart(2,"0")}`, NB += `.${pB.toString().padStart(2,"0")}`, NB += `.${ZB}`, NB.endsWith(qB) && (NB = NB.slice(0, -17)), NB
         }
-        if ("prores" === BH) return EH ?? "apch";
-        throw null !== BH && (0, rH.G)(BH), new TypeError(`Unhandled codec '${BH}'.`)
+        if ("prores" === OB) return MB ?? "apch";
+        throw null !== OB && (0, DB.M)(OB), new TypeError(`Unhandled codec '${OB}'.`)
       },
-      VH = (HH, BH, LH) => {
-        if ("aac" === HH) return BH >= 2 && LH <= 24e3 ? "mp4a.40.29" : LH <= 24e3 ? "mp4a.40.5" : "mp4a.40.2";
-        if ("mp3" === HH) return "mp3";
-        if ("opus" === HH) return "opus";
-        if ("vorbis" === HH) return "vorbis";
-        if ("flac" === HH) return "flac";
-        if ("ac3" === HH) return "ac-3";
-        if ("eac3" === HH) return "ec-3";
-        if ("dts" === HH) return "dtsc";
-        if (hH.includes(HH)) return HH;
-        throw new TypeError(`Unhandled codec '${HH}'.`)
+      nB = (BB, OB, GB) => {
+        if ("aac" === BB) return OB >= 2 && GB <= 24e3 ? "mp4a.40.29" : GB <= 24e3 ? "mp4a.40.5" : "mp4a.40.2";
+        if ("mp3" === BB) return "mp3";
+        if ("opus" === BB) return "opus";
+        if ("vorbis" === BB) return "vorbis";
+        if ("flac" === BB) return "flac";
+        if ("ac3" === BB) return "ac-3";
+        if ("eac3" === BB) return "ec-3";
+        if ("dts" === BB) return "dtsc";
+        if (oB.includes(BB)) return BB;
+        throw new TypeError(`Unhandled codec '${BB}'.`)
       },
-      OH = 48e3,
-      bH = /^pcm-([usf])(\d+)(be)?$/,
-      kH = HH => {
-        if ((0, rH.J)(hH.includes(HH)), "ulaw" === HH) return {
+      UB = 48e3,
+      fB = /^pcm-([usf])(\d+)(be)?$/,
+      kB = BB => {
+        if ((0, DB.Q)(oB.includes(BB)), "ulaw" === BB) return {
           dataType: "ulaw",
           sampleSize: 1,
           littleEndian: !0,
           silentValue: 255
         };
-        if ("alaw" === HH) return {
+        if ("alaw" === BB) return {
           dataType: "alaw",
           sampleSize: 1,
           littleEndian: !0,
           silentValue: 213
         };
-        const BH = bH.exec(HH);
-        let LH;
-        (0, rH.J)(BH), LH = "u" === BH[1] ? "unsigned" : "s" === BH[1] ? "signed" : "float";
+        const OB = fB.exec(BB);
+        let GB;
+        (0, DB.Q)(OB), GB = "u" === OB[1] ? "unsigned" : "s" === OB[1] ? "signed" : "float";
         return {
-          dataType: LH,
-          sampleSize: Number(BH[2]) / 8,
-          littleEndian: "be" !== BH[3],
-          silentValue: "pcm-u8" === HH ? 128 : 0
+          dataType: GB,
+          sampleSize: Number(OB[2]) / 8,
+          littleEndian: "be" !== OB[3],
+          silentValue: "pcm-u8" === BB ? 128 : 0
         }
       },
-      mH = HH => HH.startsWith("avc1") || HH.startsWith("avc3") ? "avc" : HH.startsWith("hev1") || HH.startsWith("hvc1") ? "hevc" : "vp8" === HH ? "vp8" : HH.startsWith("vp09") ? "vp9" : HH.startsWith("av01") ? "av1" : WH.includes(HH) ? "prores" : "mp3" === HH || "mp4a.69" === HH || "mp4a.6B" === HH || "mp4a.6b" === HH || "mp4a.40.34" === HH ? "mp3" : HH.startsWith("mp4a.40.") || "mp4a.67" === HH ? "aac" : "opus" === HH || "Opus" === HH ? "opus" : "vorbis" === HH ? "vorbis" : "flac" === HH ? "flac" : "ac-3" === HH || "ac3" === HH ? "ac3" : "ec-3" === HH || "eac3" === HH ? "eac3" : MH.includes(HH) ? "dts" : "ulaw" === HH ? "ulaw" : "alaw" === HH ? "alaw" : bH.test(HH) ? HH : "webvtt" === HH ? "webvtt" : null,
-      oH = HH => "avc" === HH ? {
+      dB = BB => BB.startsWith("avc1") || BB.startsWith("avc3") ? "avc" : BB.startsWith("hev1") || BB.startsWith("hvc1") ? "hevc" : "vp8" === BB ? "vp8" : BB.startsWith("vp09") ? "vp9" : BB.startsWith("av01") ? "av1" : ZB.includes(BB) ? "prores" : "mp3" === BB || "mp4a.69" === BB || "mp4a.6B" === BB || "mp4a.6b" === BB || "mp4a.40.34" === BB ? "mp3" : BB.startsWith("mp4a.40.") || "mp4a.67" === BB ? "aac" : "opus" === BB || "Opus" === BB ? "opus" : "vorbis" === BB ? "vorbis" : "flac" === BB ? "flac" : "ac-3" === BB || "ac3" === BB ? "ac3" : "ec-3" === BB || "eac3" === BB ? "eac3" : NB.includes(BB) ? "dts" : "ulaw" === BB ? "ulaw" : "alaw" === BB ? "alaw" : fB.test(BB) ? BB : "webvtt" === BB ? "webvtt" : null,
+      KB = BB => "avc" === BB ? {
         avc: {
           format: "avc"
         }
-      } : "hevc" === HH ? {
+      } : "hevc" === BB ? {
         hevc: {
           format: "hevc"
         }
       } : {},
-      IH = HH => "aac" === HH ? {
+      uB = BB => "aac" === BB ? {
         aac: {
           format: "aac"
         }
-      } : "opus" === HH ? {
+      } : "opus" === BB ? {
         opus: {
           format: "opus"
         }
       } : {},
-      fH = ["avc1", "avc3", "hev1", "hvc1", "vp8", "vp09", "av01", ...WH],
-      lH = /^(avc1|avc3)\.[0-9a-fA-F]{6}$/,
-      KH = /^(hev1|hvc1)\.(?:[ABC]?\d+)\.[0-9a-fA-F]{1,8}\.[LH]\d+(?:\.[0-9a-fA-F]{1,2}){0,6}$/,
-      cH = /^vp09(?:\.\d{2}){3}(?:(?:\.\d{2}){5})?$/,
-      eH = /^av01\.\d\.\d{2}[MH]\.\d{2}(?:\.\d\.\d{3}\.\d{2}\.\d{2}\.\d{2}\.\d)?$/,
-      qH = (HH, BH) => {
-        if (!HH) throw new TypeError("Video chunk metadata must be provided.");
-        if ("object" !== typeof HH) throw new TypeError("Video chunk metadata must be an object.");
-        if (!HH.decoderConfig) throw new TypeError("Video chunk metadata must include a decoder configuration.");
-        if ("object" !== typeof HH.decoderConfig) throw new TypeError("Video chunk metadata decoder configuration must be an object.");
-        if ("string" !== typeof HH.decoderConfig.codec) throw new TypeError("Video chunk metadata decoder configuration must specify a codec string.");
-        if (!fH.some((BH => HH.decoderConfig.codec.startsWith(BH)))) throw new TypeError("Video chunk metadata decoder configuration codec string must be a valid video codec string as specified in the Mediabunny Codec Registry.");
-        if (!Number.isInteger(HH.decoderConfig.codedWidth) || HH.decoderConfig.codedWidth <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedWidth (positive integer).");
-        if (!Number.isInteger(HH.decoderConfig.codedHeight) || HH.decoderConfig.codedHeight <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedHeight (positive integer).");
-        if (void 0 !== HH.decoderConfig.displayAspectWidth && (!Number.isInteger(HH.decoderConfig.displayAspectWidth) || HH.decoderConfig.displayAspectWidth <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectWidth, when defined, must be a positive integer.");
-        if (void 0 !== HH.decoderConfig.displayAspectHeight && (!Number.isInteger(HH.decoderConfig.displayAspectHeight) || HH.decoderConfig.displayAspectHeight <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectHeight, when defined, must be a positive integer.");
-        if (void 0 !== HH.decoderConfig.displayAspectWidth !== (void 0 !== HH.decoderConfig.displayAspectHeight)) throw new TypeError("Video chunk metadata decoder configuration must specify both displayAspectWidth and displayAspectHeight, or neither.");
-        if (void 0 !== HH.decoderConfig.description && !(0, rH.ub)(HH.decoderConfig.description)) throw new TypeError("Video chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
-        if (void 0 !== HH.decoderConfig.colorSpace) {
+      mB = ["avc1", "avc3", "hev1", "hvc1", "vp8", "vp09", "av01", ...ZB],
+      IB = /^(avc1|avc3)\.[0-9a-fA-F]{6}$/,
+      FB = /^(hev1|hvc1)\.(?:[ABC]?\d+)\.[0-9a-fA-F]{1,8}\.[LH]\d+(?:\.[0-9a-fA-F]{1,2}){0,6}$/,
+      iB = /^vp09(?:\.\d{2}){3}(?:(?:\.\d{2}){5})?$/,
+      LB = /^av01\.\d\.\d{2}[MH]\.\d{2}(?:\.\d\.\d{3}\.\d{2}\.\d{2}\.\d{2}\.\d)?$/,
+      gB = (BB, OB) => {
+        if (!BB) throw new TypeError("Video chunk metadata must be provided.");
+        if ("object" !== typeof BB) throw new TypeError("Video chunk metadata must be an object.");
+        if (!BB.decoderConfig) throw new TypeError("Video chunk metadata must include a decoder configuration.");
+        if ("object" !== typeof BB.decoderConfig) throw new TypeError("Video chunk metadata decoder configuration must be an object.");
+        if ("string" !== typeof BB.decoderConfig.codec) throw new TypeError("Video chunk metadata decoder configuration must specify a codec string.");
+        if (!mB.some((OB => BB.decoderConfig.codec.startsWith(OB)))) throw new TypeError("Video chunk metadata decoder configuration codec string must be a valid video codec string as specified in the Mediabunny Codec Registry.");
+        if (!Number.isInteger(BB.decoderConfig.codedWidth) || BB.decoderConfig.codedWidth <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedWidth (positive integer).");
+        if (!Number.isInteger(BB.decoderConfig.codedHeight) || BB.decoderConfig.codedHeight <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedHeight (positive integer).");
+        if (void 0 !== BB.decoderConfig.displayAspectWidth && (!Number.isInteger(BB.decoderConfig.displayAspectWidth) || BB.decoderConfig.displayAspectWidth <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectWidth, when defined, must be a positive integer.");
+        if (void 0 !== BB.decoderConfig.displayAspectHeight && (!Number.isInteger(BB.decoderConfig.displayAspectHeight) || BB.decoderConfig.displayAspectHeight <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectHeight, when defined, must be a positive integer.");
+        if (void 0 !== BB.decoderConfig.displayAspectWidth !== (void 0 !== BB.decoderConfig.displayAspectHeight)) throw new TypeError("Video chunk metadata decoder configuration must specify both displayAspectWidth and displayAspectHeight, or neither.");
+        if (void 0 !== BB.decoderConfig.description && !(0, DB.Gb)(BB.decoderConfig.description)) throw new TypeError("Video chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
+        if (void 0 !== BB.decoderConfig.colorSpace) {
           const {
-            colorSpace: BH
-          } = HH.decoderConfig;
-          if ("object" !== typeof BH) throw new TypeError("Video chunk metadata decoder configuration colorSpace, when provided, must be an object.");
-          const LH = Object.keys(rH.g);
-          if (null != BH.primaries && !LH.includes(BH.primaries)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace primaries, when defined, must be one of ${LH.join(", ")}.`);
-          const AH = Object.keys(rH.v);
-          if (null != BH.transfer && !AH.includes(BH.transfer)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace transfer, when defined, must be one of ${AH.join(", ")}.`);
-          const SH = Object.keys(rH.p);
-          if (null != BH.matrix && !SH.includes(BH.matrix)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace matrix, when defined, must be one of ${SH.join(", ")}.`);
-          if (null != BH.fullRange && "boolean" !== typeof BH.fullRange) throw new TypeError("Video chunk metadata decoder configuration colorSpace fullRange, when defined, must be a boolean.")
+            colorSpace: OB
+          } = BB.decoderConfig;
+          if ("object" !== typeof OB) throw new TypeError("Video chunk metadata decoder configuration colorSpace, when provided, must be an object.");
+          const GB = Object.keys(DB.g);
+          if (null != OB.primaries && !GB.includes(OB.primaries)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace primaries, when defined, must be one of ${GB.join(", ")}.`);
+          const YB = Object.keys(DB.z);
+          if (null != OB.transfer && !YB.includes(OB.transfer)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace transfer, when defined, must be one of ${YB.join(", ")}.`);
+          const QB = Object.keys(DB.r);
+          if (null != OB.matrix && !QB.includes(OB.matrix)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace matrix, when defined, must be one of ${QB.join(", ")}.`);
+          if (null != OB.fullRange && "boolean" !== typeof OB.fullRange) throw new TypeError("Video chunk metadata decoder configuration colorSpace fullRange, when defined, must be a boolean.")
         }
-        if (HH.decoderConfig.codec.startsWith("avc1") || HH.decoderConfig.codec.startsWith("avc3")) {
-          if (!lH.test(HH.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for AVC must be a valid AVC codec string as specified in Section 3.4 of RFC 6381.")
-        } else if (HH.decoderConfig.codec.startsWith("hev1") || HH.decoderConfig.codec.startsWith("hvc1")) {
-          if (!KH.test(HH.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for HEVC must be a valid HEVC codec string as specified in Section E.3 of ISO 14496-15.")
-        } else if (HH.decoderConfig.codec.startsWith("vp8")) {
-          if ("vp8" !== HH.decoderConfig.codec) throw new TypeError('Video chunk metadata decoder configuration codec string for VP8 must be "vp8".')
-        } else if (HH.decoderConfig.codec.startsWith("vp09")) {
-          if (!cH.test(HH.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for VP9 must be a valid VP9 codec string as specified in Section "Codecs Parameter String" of https://www.webmproject.org/vp9/mp4/.')
-        } else if (HH.decoderConfig.codec.startsWith("av01")) {
-          if (!eH.test(HH.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for AV1 must be a valid AV1 codec string as specified in Section "Codecs Parameter String" of https://aomediacodec.github.io/av1-isobmff/.')
-        } else if (WH.some((BH => HH.decoderConfig.codec.startsWith(BH))) && !WH.some((BH => HH.decoderConfig.codec === BH))) throw new TypeError(`Video chunk metadata decoder configuration codec string for ProRes must be one of the valid ProRes four-character codes: ${WH.join(", ")}.`);
-        if (null !== BH && mH(HH.decoderConfig.codec) !== BH) throw new TypeError(`Video chunk metadata decoder configuration codec string '${HH.decoderConfig.codec}' does not fit to the track codec '${BH}'.`)
+        if (BB.decoderConfig.codec.startsWith("avc1") || BB.decoderConfig.codec.startsWith("avc3")) {
+          if (!IB.test(BB.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for AVC must be a valid AVC codec string as specified in Section 3.4 of RFC 6381.")
+        } else if (BB.decoderConfig.codec.startsWith("hev1") || BB.decoderConfig.codec.startsWith("hvc1")) {
+          if (!FB.test(BB.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for HEVC must be a valid HEVC codec string as specified in Section E.3 of ISO 14496-15.")
+        } else if (BB.decoderConfig.codec.startsWith("vp8")) {
+          if ("vp8" !== BB.decoderConfig.codec) throw new TypeError('Video chunk metadata decoder configuration codec string for VP8 must be "vp8".')
+        } else if (BB.decoderConfig.codec.startsWith("vp09")) {
+          if (!iB.test(BB.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for VP9 must be a valid VP9 codec string as specified in Section "Codecs Parameter String" of https://www.webmproject.org/vp9/mp4/.')
+        } else if (BB.decoderConfig.codec.startsWith("av01")) {
+          if (!LB.test(BB.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for AV1 must be a valid AV1 codec string as specified in Section "Codecs Parameter String" of https://aomediacodec.github.io/av1-isobmff/.')
+        } else if (ZB.some((OB => BB.decoderConfig.codec.startsWith(OB))) && !ZB.some((OB => BB.decoderConfig.codec === OB))) throw new TypeError(`Video chunk metadata decoder configuration codec string for ProRes must be one of the valid ProRes four-character codes: ${ZB.join(", ")}.`);
+        if (null !== OB && dB(BB.decoderConfig.codec) !== OB) throw new TypeError(`Video chunk metadata decoder configuration codec string '${BB.decoderConfig.codec}' does not fit to the track codec '${OB}'.`)
       },
-      gH = ["mp4a", "mp3", "opus", "vorbis", "flac", "ulaw", "alaw", "pcm", "ac-3", "ec-3", "dts"],
-      NH = (HH, BH) => {
-        if (!HH) throw new TypeError("Audio chunk metadata must be provided.");
-        if ("object" !== typeof HH) throw new TypeError("Audio chunk metadata must be an object.");
-        if (!HH.decoderConfig) throw new TypeError("Audio chunk metadata must include a decoder configuration.");
-        if ("object" !== typeof HH.decoderConfig) throw new TypeError("Audio chunk metadata decoder configuration must be an object.");
-        if ("string" !== typeof HH.decoderConfig.codec) throw new TypeError("Audio chunk metadata decoder configuration must specify a codec string.");
-        if (!gH.some((BH => HH.decoderConfig.codec.startsWith(BH)))) throw new TypeError("Audio chunk metadata decoder configuration codec string must be a valid audio codec string as specified in the Mediabunny Codec Registry.");
-        if (!Number.isInteger(HH.decoderConfig.sampleRate) || HH.decoderConfig.sampleRate <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid sampleRate (positive integer).");
-        if (!Number.isInteger(HH.decoderConfig.numberOfChannels) || HH.decoderConfig.numberOfChannels <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid numberOfChannels (positive integer).");
-        if (void 0 !== HH.decoderConfig.description && !(0, rH.ub)(HH.decoderConfig.description)) throw new TypeError("Audio chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
-        if (HH.decoderConfig.codec.startsWith("mp4a") && "mp4a.69" !== HH.decoderConfig.codec && "mp4a.6B" !== HH.decoderConfig.codec && "mp4a.6b" !== HH.decoderConfig.codec) {
-          if (!["mp4a.40.2", "mp4a.40.02", "mp4a.40.5", "mp4a.40.05", "mp4a.40.29", "mp4a.67"].includes(HH.decoderConfig.codec)) throw new TypeError("Audio chunk metadata decoder configuration codec string for AAC must be a valid AAC codec string as specified in https://www.w3.org/TR/webcodecs-aac-codec-registration/.")
-        } else if (HH.decoderConfig.codec.startsWith("mp3") || HH.decoderConfig.codec.startsWith("mp4a")) {
-          if ("mp3" !== HH.decoderConfig.codec && "mp4a.69" !== HH.decoderConfig.codec && "mp4a.6B" !== HH.decoderConfig.codec && "mp4a.6b" !== HH.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for MP3 must be "mp3", "mp4a.69" or "mp4a.6B".')
-        } else if (HH.decoderConfig.codec.startsWith("opus")) {
-          if ("opus" !== HH.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Opus must be "opus".');
-          if (HH.decoderConfig.description && HH.decoderConfig.description.byteLength < 18) throw new TypeError("Audio chunk metadata decoder configuration description, when specified, is expected to be an Identification Header as specified in Section 5.1 of RFC 7845.")
-        } else if (HH.decoderConfig.codec.startsWith("vorbis")) {
-          if ("vorbis" !== HH.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Vorbis must be "vorbis".');
-          if (!HH.decoderConfig.description) throw new TypeError("Audio chunk metadata decoder configuration for Vorbis must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-vorbis-codec-registration/.")
-        } else if (HH.decoderConfig.codec.startsWith("flac")) {
-          if ("flac" !== HH.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for FLAC must be "flac".');
-          const BH = 42;
-          if (!HH.decoderConfig.description || HH.decoderConfig.description.byteLength < BH) throw new TypeError("Audio chunk metadata decoder configuration for FLAC must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-flac-codec-registration/.")
-        } else if (HH.decoderConfig.codec.startsWith("ac-3") || HH.decoderConfig.codec.startsWith("ac3")) {
-          if ("ac-3" !== HH.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for AC-3 must be "ac-3".')
-        } else if (HH.decoderConfig.codec.startsWith("ec-3") || HH.decoderConfig.codec.startsWith("eac3")) {
-          if ("ec-3" !== HH.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for EC-3 must be "ec-3".')
-        } else if (HH.decoderConfig.codec.startsWith("dts")) {
-          if (!MH.includes(HH.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for DTS must be one of the following four-character codes: ${MH.join(", ")}.`)
-        } else if ((HH.decoderConfig.codec.startsWith("pcm") || HH.decoderConfig.codec.startsWith("ulaw") || HH.decoderConfig.codec.startsWith("alaw")) && !hH.includes(HH.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for PCM must be one of the supported PCM codecs (${hH.join(", ")}).`);
-        if (null !== BH && mH(HH.decoderConfig.codec) !== BH) throw new TypeError(`Audio chunk metadata decoder configuration codec string '${HH.decoderConfig.codec}' does not fit to the track codec '${BH}'.`)
+      rB = ["mp4a", "mp3", "opus", "vorbis", "flac", "ulaw", "alaw", "pcm", "ac-3", "ec-3", "dts"],
+      XB = (BB, OB) => {
+        if (!BB) throw new TypeError("Audio chunk metadata must be provided.");
+        if ("object" !== typeof BB) throw new TypeError("Audio chunk metadata must be an object.");
+        if (!BB.decoderConfig) throw new TypeError("Audio chunk metadata must include a decoder configuration.");
+        if ("object" !== typeof BB.decoderConfig) throw new TypeError("Audio chunk metadata decoder configuration must be an object.");
+        if ("string" !== typeof BB.decoderConfig.codec) throw new TypeError("Audio chunk metadata decoder configuration must specify a codec string.");
+        if (!rB.some((OB => BB.decoderConfig.codec.startsWith(OB)))) throw new TypeError("Audio chunk metadata decoder configuration codec string must be a valid audio codec string as specified in the Mediabunny Codec Registry.");
+        if (!Number.isInteger(BB.decoderConfig.sampleRate) || BB.decoderConfig.sampleRate <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid sampleRate (positive integer).");
+        if (!Number.isInteger(BB.decoderConfig.numberOfChannels) || BB.decoderConfig.numberOfChannels <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid numberOfChannels (positive integer).");
+        if (void 0 !== BB.decoderConfig.description && !(0, DB.Gb)(BB.decoderConfig.description)) throw new TypeError("Audio chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
+        if (BB.decoderConfig.codec.startsWith("mp4a") && "mp4a.69" !== BB.decoderConfig.codec && "mp4a.6B" !== BB.decoderConfig.codec && "mp4a.6b" !== BB.decoderConfig.codec) {
+          if (!["mp4a.40.2", "mp4a.40.02", "mp4a.40.5", "mp4a.40.05", "mp4a.40.29", "mp4a.67"].includes(BB.decoderConfig.codec)) throw new TypeError("Audio chunk metadata decoder configuration codec string for AAC must be a valid AAC codec string as specified in https://www.w3.org/TR/webcodecs-aac-codec-registration/.")
+        } else if (BB.decoderConfig.codec.startsWith("mp3") || BB.decoderConfig.codec.startsWith("mp4a")) {
+          if ("mp3" !== BB.decoderConfig.codec && "mp4a.69" !== BB.decoderConfig.codec && "mp4a.6B" !== BB.decoderConfig.codec && "mp4a.6b" !== BB.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for MP3 must be "mp3", "mp4a.69" or "mp4a.6B".')
+        } else if (BB.decoderConfig.codec.startsWith("opus")) {
+          if ("opus" !== BB.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Opus must be "opus".');
+          if (BB.decoderConfig.description && BB.decoderConfig.description.byteLength < 18) throw new TypeError("Audio chunk metadata decoder configuration description, when specified, is expected to be an Identification Header as specified in Section 5.1 of RFC 7845.")
+        } else if (BB.decoderConfig.codec.startsWith("vorbis")) {
+          if ("vorbis" !== BB.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Vorbis must be "vorbis".');
+          if (!BB.decoderConfig.description) throw new TypeError("Audio chunk metadata decoder configuration for Vorbis must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-vorbis-codec-registration/.")
+        } else if (BB.decoderConfig.codec.startsWith("flac")) {
+          if ("flac" !== BB.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for FLAC must be "flac".');
+          const OB = 42;
+          if (!BB.decoderConfig.description || BB.decoderConfig.description.byteLength < OB) throw new TypeError("Audio chunk metadata decoder configuration for FLAC must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-flac-codec-registration/.")
+        } else if (BB.decoderConfig.codec.startsWith("ac-3") || BB.decoderConfig.codec.startsWith("ac3")) {
+          if ("ac-3" !== BB.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for AC-3 must be "ac-3".')
+        } else if (BB.decoderConfig.codec.startsWith("ec-3") || BB.decoderConfig.codec.startsWith("eac3")) {
+          if ("ec-3" !== BB.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for EC-3 must be "ec-3".')
+        } else if (BB.decoderConfig.codec.startsWith("dts")) {
+          if (!NB.includes(BB.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for DTS must be one of the following four-character codes: ${NB.join(", ")}.`)
+        } else if ((BB.decoderConfig.codec.startsWith("pcm") || BB.decoderConfig.codec.startsWith("ulaw") || BB.decoderConfig.codec.startsWith("alaw")) && !oB.includes(BB.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for PCM must be one of the supported PCM codecs (${oB.join(", ")}).`);
+        if (null !== OB && dB(BB.decoderConfig.codec) !== OB) throw new TypeError(`Audio chunk metadata decoder configuration codec string '${BB.decoderConfig.codec}' does not fit to the track codec '${OB}'.`)
       },
-      RH = HH => {
-        if (!HH) throw new TypeError("Subtitle metadata must be provided.");
-        if ("object" !== typeof HH) throw new TypeError("Subtitle metadata must be an object.");
-        if (!HH.config) throw new TypeError("Subtitle metadata must include a config object.");
-        if ("object" !== typeof HH.config) throw new TypeError("Subtitle metadata config must be an object.");
-        if ("string" !== typeof HH.config.description) throw new TypeError("Subtitle metadata config description must be a string.")
+      wB = BB => {
+        if (!BB) throw new TypeError("Subtitle metadata must be provided.");
+        if ("object" !== typeof BB) throw new TypeError("Subtitle metadata must be an object.");
+        if (!BB.config) throw new TypeError("Subtitle metadata must include a config object.");
+        if ("object" !== typeof BB.config) throw new TypeError("Subtitle metadata config must be an object.");
+        if ("string" !== typeof BB.config.description) throw new TypeError("Subtitle metadata config description must be a string.")
       }
   },
-  40902: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => GH,
-      f: () => XH,
-      j: () => MH,
-      l: () => zH,
-      o: () => xH,
-      r: () => CH,
-      t: () => hH
+  40657: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => zB,
+      g: () => PB,
+      j: () => NB,
+      l: () => yB,
+      p: () => RB,
+      t: () => JB,
+      w: () => oB
     });
-    var AH = LH(40849),
-      rH = LH(40820),
-      SH = LH(40907);
+    var YB = GB(40599),
+      DB = GB(40574),
+      QB = GB(40660);
     new Map, new Map;
-    const hH = HH => {
-        if (!HH || "object" !== typeof HH) throw new TypeError("Encoding config must be an object.");
-        if (!AH.r.includes(HH.codec)) throw new TypeError(`Invalid video codec '${HH.codec}'. Must be one of: ${AH.r.join(", ")}.`);
-        const BH = HH.bitrate;
-        if (void 0 === HH.quality && void 0 === BH) throw new TypeError("config.quality must be provided.");
-        if (void 0 !== HH.quality && void 0 !== BH) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
-        if (void 0 !== HH.quality && !(HH.quality instanceof GH)) throw new TypeError("config.quality, when provided, must be a Quality.");
-        if (void 0 !== BH && !(BH instanceof GH) && (!Number.isInteger(BH) || BH <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
-        if (void 0 !== HH.keyFrameInterval && (!Number.isFinite(HH.keyFrameInterval) || HH.keyFrameInterval < 0)) throw new TypeError("config.keyFrameInterval, when provided, must be a non-negative number.");
-        if (void 0 !== HH.sizeChangeBehavior && !["deny", "passThrough", "fill", "contain", "cover"].includes(HH.sizeChangeBehavior)) throw new TypeError("config.sizeChangeBehavior, when provided, must be 'deny', 'passThrough', 'fill', 'contain' or 'cover'.");
-        if (void 0 !== HH.transform) {
-          if ("object" !== typeof HH.transform || !HH.transform) throw new TypeError("config.transform, when provided, must be an object.");
-          if (void 0 !== HH.transform.width && (!Number.isInteger(HH.transform.width) || HH.transform.width <= 0)) throw new TypeError("config.transform.width, when provided, must be a positive integer.");
-          if (void 0 !== HH.transform.height && (!Number.isInteger(HH.transform.height) || HH.transform.height <= 0)) throw new TypeError("config.transform.height, when provided, must be a positive integer.");
-          if (void 0 !== HH.transform.fit && !["fill", "contain", "cover"].includes(HH.transform.fit)) throw new TypeError('config.transform.fit, when provided, must be one of "fill", "contain", or "cover".');
-          if (void 0 !== HH.transform.width && void 0 !== HH.transform.height && void 0 === HH.transform.fit && !["fill", "contain", "cover"].includes(HH.sizeChangeBehavior)) throw new TypeError("When both config.transform.width and config.transform.height are provided, config.transform.fit must also be provided.");
-          if (void 0 !== HH.transform.fit && ["fill", "contain", "cover"].includes(HH.sizeChangeBehavior) && HH.transform.fit !== HH.sizeChangeBehavior) throw new TypeError("config.transform.fit, when provided, cannot differ from config.sizeChangeBehavior when config.sizeChangeBehavior is 'fill', 'contain' or 'cover', as sizeChangeBehavior already determines the fitting algorithm.");
-          if (void 0 !== HH.transform.rotate && ![0, 90, 180, 270].includes(HH.transform.rotate)) throw new TypeError("config.transform.rotate, when provided, must be 0, 90, 180 or 270.");
-          if (void 0 !== HH.transform.flip && "boolean" !== typeof HH.transform.flip) throw new TypeError("config.transform.flip, when provided, must be a boolean.");
-          if (void 0 !== HH.transform.crop && (0, SH.i)(HH.transform.crop, "config.transform."), void 0 !== HH.transform.process && "function" !== typeof HH.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.");
-          if (void 0 !== HH.transform.frameRate && (!Number.isFinite(HH.transform.frameRate) || HH.transform.frameRate <= 0)) throw new TypeError("config.transform.frameRate, when provided, must be a finite positive number.");
-          if (void 0 !== HH.transform.force && "boolean" !== typeof HH.transform.force) throw new TypeError("config.transform.force, when provided, must be a boolean.")
+    const oB = BB => {
+        if (!BB || "object" !== typeof BB) throw new TypeError("Encoding config must be an object.");
+        if (!YB.t.includes(BB.codec)) throw new TypeError(`Invalid video codec '${BB.codec}'. Must be one of: ${YB.t.join(", ")}.`);
+        const OB = BB.bitrate;
+        if (void 0 === BB.quality && void 0 === OB) throw new TypeError("config.quality must be provided.");
+        if (void 0 !== BB.quality && void 0 !== OB) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
+        if (void 0 !== BB.quality && !(BB.quality instanceof zB)) throw new TypeError("config.quality, when provided, must be a Quality.");
+        if (void 0 !== OB && !(OB instanceof zB) && (!Number.isInteger(OB) || OB <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
+        if (void 0 !== BB.keyFrameInterval && (!Number.isFinite(BB.keyFrameInterval) || BB.keyFrameInterval < 0)) throw new TypeError("config.keyFrameInterval, when provided, must be a non-negative number.");
+        if (void 0 !== BB.sizeChangeBehavior && !["deny", "passThrough", "fill", "contain", "cover"].includes(BB.sizeChangeBehavior)) throw new TypeError("config.sizeChangeBehavior, when provided, must be 'deny', 'passThrough', 'fill', 'contain' or 'cover'.");
+        if (void 0 !== BB.transform) {
+          if ("object" !== typeof BB.transform || !BB.transform) throw new TypeError("config.transform, when provided, must be an object.");
+          if (void 0 !== BB.transform.width && (!Number.isInteger(BB.transform.width) || BB.transform.width <= 0)) throw new TypeError("config.transform.width, when provided, must be a positive integer.");
+          if (void 0 !== BB.transform.height && (!Number.isInteger(BB.transform.height) || BB.transform.height <= 0)) throw new TypeError("config.transform.height, when provided, must be a positive integer.");
+          if (void 0 !== BB.transform.fit && !["fill", "contain", "cover"].includes(BB.transform.fit)) throw new TypeError('config.transform.fit, when provided, must be one of "fill", "contain", or "cover".');
+          if (void 0 !== BB.transform.width && void 0 !== BB.transform.height && void 0 === BB.transform.fit && !["fill", "contain", "cover"].includes(BB.sizeChangeBehavior)) throw new TypeError("When both config.transform.width and config.transform.height are provided, config.transform.fit must also be provided.");
+          if (void 0 !== BB.transform.fit && ["fill", "contain", "cover"].includes(BB.sizeChangeBehavior) && BB.transform.fit !== BB.sizeChangeBehavior) throw new TypeError("config.transform.fit, when provided, cannot differ from config.sizeChangeBehavior when config.sizeChangeBehavior is 'fill', 'contain' or 'cover', as sizeChangeBehavior already determines the fitting algorithm.");
+          if (void 0 !== BB.transform.rotate && ![0, 90, 180, 270].includes(BB.transform.rotate)) throw new TypeError("config.transform.rotate, when provided, must be 0, 90, 180 or 270.");
+          if (void 0 !== BB.transform.flip && "boolean" !== typeof BB.transform.flip) throw new TypeError("config.transform.flip, when provided, must be a boolean.");
+          if (void 0 !== BB.transform.crop && (0, QB.m)(BB.transform.crop, "config.transform."), void 0 !== BB.transform.process && "function" !== typeof BB.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.");
+          if (void 0 !== BB.transform.frameRate && (!Number.isFinite(BB.transform.frameRate) || BB.transform.frameRate <= 0)) throw new TypeError("config.transform.frameRate, when provided, must be a finite positive number.");
+          if (void 0 !== BB.transform.force && "boolean" !== typeof BB.transform.force) throw new TypeError("config.transform.force, when provided, must be a boolean.")
         }
-        if (void 0 !== HH.onEncodedPacket && "function" !== typeof HH.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
-        if (void 0 !== HH.onEncoderConfig && "function" !== typeof HH.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
-        if (void 0 !== HH.onEncodedSample && "function" !== typeof HH.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
-        tH(HH.codec, HH)
+        if (void 0 !== BB.onEncodedPacket && "function" !== typeof BB.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
+        if (void 0 !== BB.onEncoderConfig && "function" !== typeof BB.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
+        if (void 0 !== BB.onEncodedSample && "function" !== typeof BB.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
+        jB(BB.codec, BB)
       },
-      tH = (HH, BH) => {
-        if (!BH || "object" !== typeof BH) throw new TypeError("Encoding options must be an object.");
-        if (void 0 !== BH.alpha && !["discard", "keep"].includes(BH.alpha)) throw new TypeError("options.alpha, when provided, must be 'discard' or 'keep'.");
-        const LH = BH.bitrateMode;
-        if (void 0 !== LH && !["constant", "variable"].includes(LH)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if (void 0 !== BH.latencyMode && !["quality", "realtime"].includes(BH.latencyMode)) throw new TypeError("latencyMode, when provided, must be 'quality' or 'realtime'.");
-        if (void 0 !== BH.fullCodecString && "string" !== typeof BH.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
-        if (void 0 !== BH.fullCodecString && (0, AH.P)(BH.fullCodecString) !== HH) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${HH}).`);
-        if (void 0 !== BH.hardwareAcceleration && !["no-preference", "prefer-hardware", "prefer-software"].includes(BH.hardwareAcceleration)) throw new TypeError("hardwareAcceleration, when provided, must be 'no-preference', 'prefer-hardware' or 'prefer-software'.");
-        if (void 0 !== BH.scalabilityMode && "string" !== typeof BH.scalabilityMode) throw new TypeError("scalabilityMode, when provided, must be a string.");
-        if (void 0 !== BH.contentHint && "string" !== typeof BH.contentHint) throw new TypeError("contentHint, when provided, must be a string.")
+      jB = (BB, OB) => {
+        if (!OB || "object" !== typeof OB) throw new TypeError("Encoding options must be an object.");
+        if (void 0 !== OB.alpha && !["discard", "keep"].includes(OB.alpha)) throw new TypeError("options.alpha, when provided, must be 'discard' or 'keep'.");
+        const GB = OB.bitrateMode;
+        if (void 0 !== GB && !["constant", "variable"].includes(GB)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if (void 0 !== OB.latencyMode && !["quality", "realtime"].includes(OB.latencyMode)) throw new TypeError("latencyMode, when provided, must be 'quality' or 'realtime'.");
+        if (void 0 !== OB.fullCodecString && "string" !== typeof OB.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
+        if (void 0 !== OB.fullCodecString && (0, YB.P)(OB.fullCodecString) !== BB) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${BB}).`);
+        if (void 0 !== OB.hardwareAcceleration && !["no-preference", "prefer-hardware", "prefer-software"].includes(OB.hardwareAcceleration)) throw new TypeError("hardwareAcceleration, when provided, must be 'no-preference', 'prefer-hardware' or 'prefer-software'.");
+        if (void 0 !== OB.scalabilityMode && "string" !== typeof OB.scalabilityMode) throw new TypeError("scalabilityMode, when provided, must be a string.");
+        if (void 0 !== OB.contentHint && "string" !== typeof OB.contentHint) throw new TypeError("contentHint, when provided, must be a string.")
       },
-      zH = HH => {
-        const BH = HH.bitrateMode,
-          LH = HH.quality._toVideoRateControl(HH.codec, HH.width, HH.height, BH),
-          SH = (BH, LH, rH) => ({
-            codec: HH.fullCodecString ?? (0, AH.y)(HH.codec, HH.width, HH.height, rH, "keep" === HH.alpha),
-            width: HH.width,
-            height: HH.height,
-            displayWidth: HH.squarePixelWidth,
-            displayHeight: HH.squarePixelHeight,
-            bitrate: BH,
-            bitrateMode: LH,
-            alpha: HH.alpha ?? "discard",
-            framerate: HH.framerate,
-            latencyMode: HH.latencyMode,
-            hardwareAcceleration: HH.hardwareAcceleration,
-            scalabilityMode: HH.scalabilityMode,
-            contentHint: HH.contentHint,
-            ...(0, AH.O)(HH.codec)
+      yB = BB => {
+        const OB = BB.bitrateMode,
+          GB = BB.quality._toVideoRateControl(BB.codec, BB.width, BB.height, OB),
+          QB = (OB, GB, DB) => ({
+            codec: BB.fullCodecString ?? (0, YB.A)(BB.codec, BB.width, BB.height, DB, "keep" === BB.alpha),
+            width: BB.width,
+            height: BB.height,
+            displayWidth: BB.squarePixelWidth,
+            displayHeight: BB.squarePixelHeight,
+            bitrate: OB,
+            bitrateMode: GB,
+            alpha: BB.alpha ?? "discard",
+            framerate: BB.framerate,
+            latencyMode: BB.latencyMode,
+            hardwareAcceleration: BB.hardwareAcceleration,
+            scalabilityMode: BB.scalabilityMode,
+            contentHint: BB.contentHint,
+            ...(0, YB.O)(BB.codec)
           }),
-          hH = [];
-        return null !== LH.quantizer && hH.push({
-          config: SH(void 0, "quantizer", LH.bitrate),
-          quantizer: LH.quantizer
-        }), "quantizer" !== LH.bitrateMode && hH.push({
-          config: SH(LH.bitrate, LH.bitrateMode, LH.bitrate),
+          oB = [];
+        return null !== GB.quantizer && oB.push({
+          config: QB(void 0, "quantizer", GB.bitrate),
+          quantizer: GB.quantizer
+        }), "quantizer" !== GB.bitrateMode && oB.push({
+          config: QB(GB.bitrate, GB.bitrateMode, GB.bitrate),
           quantizer: null
-        }), (0, rH.J)(hH.length > 0), hH
+        }), (0, DB.Q)(oB.length > 0), oB
       },
-      CH = HH => {
-        if (!HH || "object" !== typeof HH) throw new TypeError("Encoding config must be an object.");
-        if (!AH.c.includes(HH.codec)) throw new TypeError(`Invalid audio codec '${HH.codec}'. Must be one of: ${AH.c.join(", ")}.`);
-        const BH = HH.bitrate;
-        if (void 0 === HH.quality && void 0 === BH && !AH.k.includes(HH.codec) && "flac" !== HH.codec) throw new TypeError("config.quality must be provided for compressed audio codecs.");
-        if (void 0 !== HH.quality && void 0 !== BH) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
-        if (void 0 !== HH.quality && !(HH.quality instanceof GH)) throw new TypeError("config.quality, when provided, must be a Quality.");
-        if (void 0 !== BH && !(BH instanceof GH) && (!Number.isInteger(BH) || BH <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
-        if (void 0 !== HH.transform) {
-          if ("object" !== typeof HH.transform || !HH.transform) throw new TypeError("config.transform, when provided, must be an object.");
-          if (void 0 !== HH.transform.numberOfChannels && (!Number.isInteger(HH.transform.numberOfChannels) || HH.transform.numberOfChannels <= 0)) throw new TypeError("config.transform.numberOfChannels, when provided, must be a positive integer.");
-          if (void 0 !== HH.transform.sampleRate && (!Number.isInteger(HH.transform.sampleRate) || HH.transform.sampleRate <= 0)) throw new TypeError("config.transform.sampleRate, when provided, must be a positive integer.");
-          if (void 0 !== HH.transform.sampleFormat && !["u8", "s16", "s32", "f32"].includes(HH.transform.sampleFormat)) throw new TypeError("config.transform.sampleFormat, when provided, must be one of: u8, s16, s32, f32.");
-          if (void 0 !== HH.transform.process && "function" !== typeof HH.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.")
+      JB = BB => {
+        if (!BB || "object" !== typeof BB) throw new TypeError("Encoding config must be an object.");
+        if (!YB.e.includes(BB.codec)) throw new TypeError(`Invalid audio codec '${BB.codec}'. Must be one of: ${YB.e.join(", ")}.`);
+        const OB = BB.bitrate;
+        if (void 0 === BB.quality && void 0 === OB && !YB.n.includes(BB.codec) && "flac" !== BB.codec) throw new TypeError("config.quality must be provided for compressed audio codecs.");
+        if (void 0 !== BB.quality && void 0 !== OB) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
+        if (void 0 !== BB.quality && !(BB.quality instanceof zB)) throw new TypeError("config.quality, when provided, must be a Quality.");
+        if (void 0 !== OB && !(OB instanceof zB) && (!Number.isInteger(OB) || OB <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
+        if (void 0 !== BB.transform) {
+          if ("object" !== typeof BB.transform || !BB.transform) throw new TypeError("config.transform, when provided, must be an object.");
+          if (void 0 !== BB.transform.numberOfChannels && (!Number.isInteger(BB.transform.numberOfChannels) || BB.transform.numberOfChannels <= 0)) throw new TypeError("config.transform.numberOfChannels, when provided, must be a positive integer.");
+          if (void 0 !== BB.transform.sampleRate && (!Number.isInteger(BB.transform.sampleRate) || BB.transform.sampleRate <= 0)) throw new TypeError("config.transform.sampleRate, when provided, must be a positive integer.");
+          if (void 0 !== BB.transform.sampleFormat && !["u8", "s16", "s32", "f32"].includes(BB.transform.sampleFormat)) throw new TypeError("config.transform.sampleFormat, when provided, must be one of: u8, s16, s32, f32.");
+          if (void 0 !== BB.transform.process && "function" !== typeof BB.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.")
         }
-        if (void 0 !== HH.onEncodedPacket && "function" !== typeof HH.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
-        if (void 0 !== HH.onEncoderConfig && "function" !== typeof HH.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
-        if (void 0 !== HH.onEncodedSample && "function" !== typeof HH.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
-        EH(HH.codec, HH)
+        if (void 0 !== BB.onEncodedPacket && "function" !== typeof BB.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
+        if (void 0 !== BB.onEncoderConfig && "function" !== typeof BB.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
+        if (void 0 !== BB.onEncodedSample && "function" !== typeof BB.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
+        MB(BB.codec, BB)
       },
-      EH = (HH, BH) => {
-        if (!BH || "object" !== typeof BH) throw new TypeError("Encoding options must be an object.");
-        const LH = BH.bitrateMode;
-        if (void 0 !== LH && !["constant", "variable"].includes(LH)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if (void 0 !== BH.fullCodecString && "string" !== typeof BH.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
-        if (void 0 !== BH.fullCodecString && (0, AH.P)(BH.fullCodecString) !== HH) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${HH}).`)
+      MB = (BB, OB) => {
+        if (!OB || "object" !== typeof OB) throw new TypeError("Encoding options must be an object.");
+        const GB = OB.bitrateMode;
+        if (void 0 !== GB && !["constant", "variable"].includes(GB)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if (void 0 !== OB.fullCodecString && "string" !== typeof OB.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
+        if (void 0 !== OB.fullCodecString && (0, YB.P)(OB.fullCodecString) !== BB) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${BB}).`)
       },
-      XH = HH => {
-        const BH = HH.bitrateMode;
+      PB = BB => {
+        const OB = BB.bitrateMode;
         return {
-          codec: HH.fullCodecString ?? (0, AH.v)(HH.codec, HH.numberOfChannels, HH.sampleRate),
-          numberOfChannels: HH.numberOfChannels,
-          sampleRate: HH.sampleRate,
-          bitrate: HH.quality?._toAudioBitrate(HH.codec),
-          bitrateMode: HH.quality?._bitrateMode ?? BH,
-          ...(0, AH.L)(HH.codec)
+          codec: BB.fullCodecString ?? (0, YB.y)(BB.codec, BB.numberOfChannels, BB.sampleRate),
+          numberOfChannels: BB.numberOfChannels,
+          sampleRate: BB.sampleRate,
+          bitrate: BB.quality?._toAudioBitrate(BB.codec),
+          bitrateMode: BB.quality?._bitrateMode ?? OB,
+          ...(0, YB.L)(BB.codec)
         }
       };
-    class GH {
-      constructor(HH) {
-        if ("number" !== typeof HH && "string" !== typeof HH || (HH = {
-            quality: HH
-          }), !HH || "object" !== typeof HH) throw new TypeError("options must be an object.");
-        if (void 0 !== HH.bitrateMode && !["constant", "variable"].includes(HH.bitrateMode)) throw new TypeError("options.bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if ("quality" in HH) {
-          if ("string" === typeof HH.quality ? !(HH.quality in YH) : "number" !== typeof HH.quality || Number.isNaN(HH.quality)) throw new TypeError("options.quality must be a number, or one of 'very-low', 'low', 'medium', 'high' or 'very-high'.");
-          if (void 0 !== HH.preferBitrate && "boolean" !== typeof HH.preferBitrate) throw new TypeError("options.preferBitrate, when provided, must be a boolean.");
-          if ("bitrate" in HH || "quantizer" in HH) throw new TypeError("options.quality cannot be combined with options.bitrate or options.quantizer.");
-          this._quality = "string" === typeof HH.quality ? YH[HH.quality] : HH.quality, this._preferBitrate = HH.preferBitrate ?? !1, this._bitrate = void 0, this._quantizer = void 0
+    class zB {
+      constructor(BB) {
+        if ("number" !== typeof BB && "string" !== typeof BB || (BB = {
+            quality: BB
+          }), !BB || "object" !== typeof BB) throw new TypeError("options must be an object.");
+        if (void 0 !== BB.bitrateMode && !["constant", "variable"].includes(BB.bitrateMode)) throw new TypeError("options.bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if ("quality" in BB) {
+          if ("string" === typeof BB.quality ? !(BB.quality in lB) : "number" !== typeof BB.quality || Number.isNaN(BB.quality)) throw new TypeError("options.quality must be a number, or one of 'very-low', 'low', 'medium', 'high' or 'very-high'.");
+          if (void 0 !== BB.preferBitrate && "boolean" !== typeof BB.preferBitrate) throw new TypeError("options.preferBitrate, when provided, must be a boolean.");
+          if ("bitrate" in BB || "quantizer" in BB) throw new TypeError("options.quality cannot be combined with options.bitrate or options.quantizer.");
+          this._quality = "string" === typeof BB.quality ? lB[BB.quality] : BB.quality, this._preferBitrate = BB.preferBitrate ?? !1, this._bitrate = void 0, this._quantizer = void 0
         } else {
-          if (void 0 !== HH.bitrate && (!Number.isInteger(HH.bitrate) || HH.bitrate <= 0)) throw new TypeError("options.bitrate, when provided, must be a positive integer.");
-          if (void 0 !== HH.quantizer && (!Number.isInteger(HH.quantizer) || HH.quantizer < 0)) throw new TypeError("options.quantizer, when provided, must be a non-negative integer.");
-          if (void 0 === HH.bitrate && void 0 === HH.quantizer) throw new TypeError("At least one of options.bitrate or options.quantizer must be set.");
-          if ("preferBitrate" in HH) throw new TypeError("options.preferBitrate can only be combined with options.quality.");
-          this._quality = void 0, this._preferBitrate = !1, this._bitrate = HH.bitrate, this._quantizer = HH.quantizer
+          if (void 0 !== BB.bitrate && (!Number.isInteger(BB.bitrate) || BB.bitrate <= 0)) throw new TypeError("options.bitrate, when provided, must be a positive integer.");
+          if (void 0 !== BB.quantizer && (!Number.isInteger(BB.quantizer) || BB.quantizer < 0)) throw new TypeError("options.quantizer, when provided, must be a non-negative integer.");
+          if (void 0 === BB.bitrate && void 0 === BB.quantizer) throw new TypeError("At least one of options.bitrate or options.quantizer must be set.");
+          if ("preferBitrate" in BB) throw new TypeError("options.preferBitrate can only be combined with options.quality.");
+          this._quality = void 0, this._preferBitrate = !1, this._bitrate = BB.bitrate, this._quantizer = BB.quantizer
         }
-        this._bitrateMode = HH.bitrateMode
+        this._bitrateMode = BB.bitrateMode
       }
-      _toVideoRateControl(HH, BH, LH, AH) {
-        const SH = uH[HH];
-        let hH, tH = null,
-          zH = this._bitrateMode ?? AH ?? "variable";
+      _toVideoRateControl(BB, OB, GB, YB) {
+        const QB = pB[BB];
+        let oB, jB = null,
+          yB = this._bitrateMode ?? YB ?? "variable";
         if (void 0 !== this._quantizer) {
-          if (SH)
-            if (this._quantizer < SH.min || this._quantizer > SH.max) {
-              if (void 0 === this._bitrate) throw new Error(`Quantizer ${this._quantizer} is out of range for codec '${HH}'; must be between ${SH.min} and ${SH.max}.`)
-            } else tH = this._quantizer, void 0 === this._bitrate && (zH = "quantizer");
-          else if (void 0 === this._bitrate) throw new Error(`Codec '${HH}' does not support quantizer-based encoding. Provide a bitrate in the Quality to define a fallback.`)
-        } else void 0 === this._bitrate && SH && !this._preferBitrate && ((0, rH.J)(void 0 !== this._quality), tH = (0, rH._)(Math.round((0, rH._b)(SH.worst, SH.best, this._quality)), SH.min, SH.max));
-        if (void 0 !== this._bitrate) hH = this._bitrate;
+          if (QB)
+            if (this._quantizer < QB.min || this._quantizer > QB.max) {
+              if (void 0 === this._bitrate) throw new Error(`Quantizer ${this._quantizer} is out of range for codec '${BB}'; must be between ${QB.min} and ${QB.max}.`)
+            } else jB = this._quantizer, void 0 === this._bitrate && (yB = "quantizer");
+          else if (void 0 === this._bitrate) throw new Error(`Codec '${BB}' does not support quantizer-based encoding. Provide a bitrate in the Quality to define a fallback.`)
+        } else void 0 === this._bitrate && QB && !this._preferBitrate && ((0, DB.Q)(void 0 !== this._quality), jB = (0, DB.cb)(Math.round((0, DB.vc)(QB.worst, QB.best, this._quality)), QB.min, QB.max));
+        if (void 0 !== this._bitrate) oB = this._bitrate;
         else {
-          let AH = this._quality;
-          void 0 === AH && ((0, rH.J)(null !== tH && SH), AH = (0, rH._)((tH - SH.worst) / (SH.best - SH.worst), 0, 1)), hH = WH(HH, BH, LH, QH(AH))
+          let YB = this._quality;
+          void 0 === YB && ((0, DB.Q)(null !== jB && QB), YB = (0, DB.cb)((jB - QB.worst) / (QB.best - QB.worst), 0, 1)), oB = ZB(BB, OB, GB, qB(YB))
         }
         return {
-          quantizer: tH,
-          bitrate: hH,
-          bitrateMode: zH
+          quantizer: jB,
+          bitrate: oB,
+          bitrateMode: yB
         }
       }
-      _toVideoBitrate(HH, BH, LH) {
-        return void 0 !== this._bitrate ? this._bitrate : ((0, rH.J)(void 0 !== this._quality), WH(HH, BH, LH, QH(this._quality)))
+      _toVideoBitrate(BB, OB, GB) {
+        return void 0 !== this._bitrate ? this._bitrate : ((0, DB.Q)(void 0 !== this._quality), ZB(BB, OB, GB, qB(this._quality)))
       }
-      _toAudioBitrate(HH) {
-        if (AH.k.includes(HH) || "flac" === HH) return;
+      _toAudioBitrate(BB) {
+        if (YB.n.includes(BB) || "flac" === BB) return;
         if (void 0 !== this._bitrate) return this._bitrate;
         if (void 0 === this._quality) throw new Error("This Quality defines neither a quality level nor a bitrate and therefore cannot be used for audio encoding.");
-        const BH = QH(this._quality),
-          LH = {
+        const OB = qB(this._quality),
+          GB = {
             aac: 128e3,
             opus: 64e3,
             mp3: 16e4,
@@ -2669,26 +2669,26 @@ export const modules = {
             ac3: 384e3,
             eac3: 192e3,
             dts: 768e3
-          } [HH];
-        if (!LH) throw new Error(`Unhandled codec: ${HH}`);
-        let rH = LH * BH;
-        if ("aac" === HH) {
-          rH = [96e3, 128e3, 16e4, 192e3].reduce(((HH, BH) => Math.abs(BH - rH) < Math.abs(HH - rH) ? BH : HH))
-        } else if ("opus" === HH || "vorbis" === HH) rH = Math.max(6e3, rH);
-        else if ("mp3" === HH) {
-          rH = [8e3, 16e3, 24e3, 32e3, 4e4, 48e3, 64e3, 8e4, 96e3, 112e3, 128e3, 16e4, 192e3, 224e3, 256e3, 32e4].reduce(((HH, BH) => Math.abs(BH - rH) < Math.abs(HH - rH) ? BH : HH))
+          } [BB];
+        if (!GB) throw new Error(`Unhandled codec: ${BB}`);
+        let DB = GB * OB;
+        if ("aac" === BB) {
+          DB = [96e3, 128e3, 16e4, 192e3].reduce(((BB, OB) => Math.abs(OB - DB) < Math.abs(BB - DB) ? OB : BB))
+        } else if ("opus" === BB || "vorbis" === BB) DB = Math.max(6e3, DB);
+        else if ("mp3" === BB) {
+          DB = [8e3, 16e3, 24e3, 32e3, 4e4, 48e3, 64e3, 8e4, 96e3, 112e3, 128e3, 16e4, 192e3, 224e3, 256e3, 32e4].reduce(((BB, OB) => Math.abs(OB - DB) < Math.abs(BB - DB) ? OB : BB))
         }
-        return 1e3 * Math.round(rH / 1e3)
+        return 1e3 * Math.round(DB / 1e3)
       }
     }
-    const YH = {
+    const lB = {
         "very-low": 0,
         low: .25,
         medium: .5,
         high: .75,
         "very-high": 1
       },
-      uH = {
+      pB = {
         avc: {
           min: 0,
           max: 51,
@@ -2714,94 +2714,94 @@ export const modules = {
           best: 80
         }
       },
-      QH = HH => .3 * Math.exp(2.5538 * HH),
-      WH = (HH, BH, LH, AH) => {
-        const rH = BH * LH,
-          SH = 3e6,
-          hH = SH * Math.pow(rH / 2073600, .95) * {
+      qB = BB => .3 * Math.exp(2.5538 * BB),
+      ZB = (BB, OB, GB, YB) => {
+        const DB = OB * GB,
+          QB = 3e6,
+          oB = QB * Math.pow(DB / 2073600, .95) * {
             avc: 1,
             hevc: .6,
             vp9: .6,
             av1: .4,
             vp8: 1.2,
             prores: 73.33333333333333
-          } [HH] * AH;
-        return 1e3 * Math.ceil(hH / 1e3)
+          } [BB] * YB;
+        return 1e3 * Math.ceil(oB / 1e3)
       },
-      MH = (HH, BH) => "avc" === HH ? {
+      NB = (BB, OB) => "avc" === BB ? {
         avc: {
-          quantizer: BH
+          quantizer: OB
         }
-      } : "hevc" === HH ? {
+      } : "hevc" === BB ? {
         hevc: {
-          quantizer: BH
+          quantizer: OB
         }
-      } : "vp9" === HH ? {
+      } : "vp9" === BB ? {
         vp9: {
-          quantizer: BH
+          quantizer: OB
         }
-      } : "av1" === HH ? {
+      } : "av1" === BB ? {
         av1: {
-          quantizer: BH
+          quantizer: OB
         }
-      } : void(0, rH.J)(!1),
-      xH = (HH, BH) => void 0 !== HH ? HH : void 0 !== BH ? BH instanceof GH ? BH : new GH({
-        bitrate: BH
+      } : void(0, DB.Q)(!1),
+      RB = (BB, OB) => void 0 !== BB ? BB : void 0 !== OB ? OB instanceof zB ? OB : new zB({
+        bitrate: OB
       }) : void 0
   },
-  40866: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => SH
+  40610: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB
     });
-    var AH, rH = LH(40820);
-    ! function(HH) {
-      HH[HH.Silent = 0] = "Silent", HH[HH.Errors = 1] = "Errors", HH[HH.Warnings = 2] = "Warnings", HH[HH.Info = 3] = "Info"
-    }(AH || (AH = {}));
-    class SH {
+    var YB, DB = GB(40574);
+    ! function(BB) {
+      BB[BB.Silent = 0] = "Silent", BB[BB.Errors = 1] = "Errors", BB[BB.Warnings = 2] = "Warnings", BB[BB.Info = 3] = "Info"
+    }(YB || (YB = {}));
+    class QB {
       constructor() {}
       static get level() {
-        return SH._level
+        return QB._level
       }
-      static set level(HH) {
-        if (HH !== AH.Silent && HH !== AH.Errors && HH !== AH.Warnings && HH !== AH.Info) throw new TypeError("Invalid log level. Use one of the values of the LogLevel enum.");
-        SH._level = HH
+      static set level(BB) {
+        if (BB !== YB.Silent && BB !== YB.Errors && BB !== YB.Warnings && BB !== YB.Info) throw new TypeError("Invalid log level. Use one of the values of the LogLevel enum.");
+        QB._level = BB
       }
       static get _emitter() {
-        return SH._emitterInstance ??= new rH.l
+        return QB._emitterInstance ??= new DB.m
       }
-      static on(HH, BH, LH) {
-        return SH._emitter.on(HH, BH, LH)
+      static on(BB, OB, GB) {
+        return QB._emitter.on(BB, OB, GB)
       }
       static _error() {
-        for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
-        SH._emitter._emit("error", BH), SH._level >= AH.Errors && console.error(...BH)
+        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+        QB._emitter._emit("error", OB), QB._level >= YB.Errors && console.error(...OB)
       }
       static _warn() {
-        for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
-        SH._emitter._emit("warn", BH), SH._level >= AH.Warnings && console.warn(...BH)
+        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+        QB._emitter._emit("warn", OB), QB._level >= YB.Warnings && console.warn(...OB)
       }
       static _info() {
-        for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
-        SH._emitter._emit("info", BH), SH._level >= AH.Info && console.info(...BH)
+        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+        QB._emitter._emit("info", OB), QB._level >= YB.Info && console.info(...OB)
       }
     }
-    SH._level = AH.Info, SH._emitterInstance = null
+    QB._level = YB.Info, QB._emitterInstance = null
   },
-  40916: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => CH,
-      h: () => EH,
-      j: () => zH,
-      n: () => XH,
-      p: () => hH
+  40669: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => JB,
+      e: () => MB,
+      i: () => yB,
+      l: () => PB,
+      m: () => oB
     });
-    LH(40838);
-    var AH = LH(40849);
-    LH(40820), LH(40879);
-    var rH = LH(40900);
-    LH(40907), LH(40902);
-    LH(40858), LH(40866), "function" === typeof SuppressedError && SuppressedError;
-    class SH {
+    GB(40591);
+    var YB = GB(40599);
+    GB(40574), GB(40627);
+    var DB = GB(40650);
+    GB(40660), GB(40657);
+    GB(40603), GB(40610), "function" === typeof SuppressedError && SuppressedError;
+    class QB {
       constructor() {
         this._connectedTrack = null, this._closingPromise = null, this._closed = !1, this._nominalBitrate = null
       }
@@ -2813,123 +2813,123 @@ export const modules = {
         if (this._closed) throw new Error("Source is closed.")
       }
       async _start() {}
-      async _flushAndClose(HH) {}
+      async _flushAndClose(BB) {}
       close() {
         if (this._closingPromise) return;
-        const HH = this._connectedTrack;
-        if (!HH) throw new Error("Cannot call close without connecting the source to an output track.");
-        if ("pending" === HH.output.state) throw new Error("Cannot call close before output has been started.");
+        const BB = this._connectedTrack;
+        if (!BB) throw new Error("Cannot call close without connecting the source to an output track.");
+        if ("pending" === BB.output.state) throw new Error("Cannot call close before output has been started.");
         this._closingPromise = (async () => {
-          await this._flushAndClose(!1), this._closed = !0, "finalizing" !== HH.output.state && "finalized" !== HH.output.state && HH.output._muxer.onTrackClose(HH)
+          await this._flushAndClose(!1), this._closed = !0, "finalizing" !== BB.output.state && "finalized" !== BB.output.state && BB.output._muxer.onTrackClose(BB)
         })()
       }
-      async _flushOrWaitForOngoingClose(HH) {
+      async _flushOrWaitForOngoingClose(BB) {
         return this._closingPromise ??= (async () => {
-          await this._flushAndClose(HH), this._closed = !0
+          await this._flushAndClose(BB), this._closed = !0
         })()
       }
     }
-    class hH extends SH {
-      constructor(HH) {
-        if (super(), !AH.r.includes(HH)) throw new TypeError(`Invalid video codec '${HH}'. Must be one of: ${AH.r.join(", ")}.`);
-        this._codec = HH
+    class oB extends QB {
+      constructor(BB) {
+        if (super(), !YB.t.includes(BB)) throw new TypeError(`Invalid video codec '${BB}'. Must be one of: ${YB.t.join(", ")}.`);
+        this._codec = BB
       }
     }
-    const tH = (HH, BH) => {
-      if (HH.metadata.hasOnlyKeyPackets && "key" !== BH.type) throw new Error("Cannot add non-key packets to a hasOnlyKeyPackets video track.")
+    const jB = (BB, OB) => {
+      if (BB.metadata.hasOnlyKeyPackets && "key" !== OB.type) throw new Error("Cannot add non-key packets to a hasOnlyKeyPackets video track.")
     };
-    class zH extends hH {
-      constructor(HH) {
-        super(HH)
+    class yB extends oB {
+      constructor(BB) {
+        super(BB)
       }
-      add(HH, BH) {
-        if (!(HH instanceof rH.b)) throw new TypeError("packet must be an EncodedPacket.");
-        if (HH.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
-        if (void 0 !== BH && (!BH || "object" !== typeof BH)) throw new TypeError("meta, when provided, must be an object.");
-        return this._ensureValidAdd(), tH(this._connectedTrack, HH), this._connectedTrack.output._muxer.addEncodedVideoPacket(this._connectedTrack, HH, BH)
-      }
-    }
-    class CH extends SH {
-      constructor(HH) {
-        if (super(), !AH.c.includes(HH)) throw new TypeError(`Invalid audio codec '${HH}'. Must be one of: ${AH.c.join(", ")}.`);
-        this._codec = HH
+      add(BB, OB) {
+        if (!(BB instanceof DB.d)) throw new TypeError("packet must be an EncodedPacket.");
+        if (BB.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
+        if (void 0 !== OB && (!OB || "object" !== typeof OB)) throw new TypeError("meta, when provided, must be an object.");
+        return this._ensureValidAdd(), jB(this._connectedTrack, BB), this._connectedTrack.output._muxer.addEncodedVideoPacket(this._connectedTrack, BB, OB)
       }
     }
-    class EH extends CH {
-      constructor(HH) {
-        super(HH)
-      }
-      add(HH, BH) {
-        if (!(HH instanceof rH.b)) throw new TypeError("packet must be an EncodedPacket.");
-        if (HH.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
-        if (void 0 !== BH && (!BH || "object" !== typeof BH)) throw new TypeError("meta, when provided, must be an object.");
-        return this._ensureValidAdd(), this._connectedTrack.output._muxer.addEncodedAudioPacket(this._connectedTrack, HH, BH)
+    class JB extends QB {
+      constructor(BB) {
+        if (super(), !YB.e.includes(BB)) throw new TypeError(`Invalid audio codec '${BB}'. Must be one of: ${YB.e.join(", ")}.`);
+        this._codec = BB
       }
     }
-    class XH extends SH {
-      constructor(HH) {
-        if (super(), !AH.n.includes(HH)) throw new TypeError(`Invalid subtitle codec '${HH}'. Must be one of: ${AH.n.join(", ")}.`);
-        this._codec = HH
+    class MB extends JB {
+      constructor(BB) {
+        super(BB)
+      }
+      add(BB, OB) {
+        if (!(BB instanceof DB.d)) throw new TypeError("packet must be an EncodedPacket.");
+        if (BB.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
+        if (void 0 !== OB && (!OB || "object" !== typeof OB)) throw new TypeError("meta, when provided, must be an object.");
+        return this._ensureValidAdd(), this._connectedTrack.output._muxer.addEncodedAudioPacket(this._connectedTrack, BB, OB)
+      }
+    }
+    class PB extends QB {
+      constructor(BB) {
+        if (super(), !YB.q.includes(BB)) throw new TypeError(`Invalid subtitle codec '${BB}'. Must be one of: ${YB.q.join(", ")}.`);
+        this._codec = BB
       }
     }
   },
-  40825: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH,
-      g: () => zH,
-      h: () => rH,
-      k: () => tH,
-      l: () => hH,
-      o: () => CH
+  40581: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => QB,
+      f: () => yB,
+      h: () => DB,
+      l: () => jB,
+      n: () => oB,
+      p: () => JB
     });
-    var AH = LH(40820);
-    class rH {
-      constructor(HH, BH) {
-        if (this.data = HH, this.mimeType = BH, !(HH instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if ("string" !== typeof BH) throw new TypeError("mimeType must be a string.")
+    var YB = GB(40574);
+    class DB {
+      constructor(BB, OB) {
+        if (this.data = BB, this.mimeType = OB, !(BB instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if ("string" !== typeof OB) throw new TypeError("mimeType must be a string.")
       }
     }
-    class SH {
-      constructor(HH, BH, LH, AH) {
-        if (this.data = HH, this.mimeType = BH, this.name = LH, this.description = AH, !(HH instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if (void 0 !== BH && "string" !== typeof BH) throw new TypeError("mimeType, when provided, must be a string.");
-        if (void 0 !== LH && "string" !== typeof LH) throw new TypeError("name, when provided, must be a string.");
-        if (void 0 !== AH && "string" !== typeof AH) throw new TypeError("description, when provided, must be a string.")
+    class QB {
+      constructor(BB, OB, GB, YB) {
+        if (this.data = BB, this.mimeType = OB, this.name = GB, this.description = YB, !(BB instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if (void 0 !== OB && "string" !== typeof OB) throw new TypeError("mimeType, when provided, must be a string.");
+        if (void 0 !== GB && "string" !== typeof GB) throw new TypeError("name, when provided, must be a string.");
+        if (void 0 !== YB && "string" !== typeof YB) throw new TypeError("description, when provided, must be a string.")
       }
     }
-    const hH = HH => {
-        if (!HH || "object" !== typeof HH) throw new TypeError("tags must be an object.");
-        if (void 0 !== HH.title && "string" !== typeof HH.title) throw new TypeError("tags.title, when provided, must be a string.");
-        if (void 0 !== HH.description && "string" !== typeof HH.description) throw new TypeError("tags.description, when provided, must be a string.");
-        if (void 0 !== HH.artist && "string" !== typeof HH.artist) throw new TypeError("tags.artist, when provided, must be a string.");
-        if (void 0 !== HH.album && "string" !== typeof HH.album) throw new TypeError("tags.album, when provided, must be a string.");
-        if (void 0 !== HH.albumArtist && "string" !== typeof HH.albumArtist) throw new TypeError("tags.albumArtist, when provided, must be a string.");
-        if (void 0 !== HH.trackNumber && (!Number.isInteger(HH.trackNumber) || HH.trackNumber <= 0)) throw new TypeError("tags.trackNumber, when provided, must be a positive integer.");
-        if (void 0 !== HH.tracksTotal && (!Number.isInteger(HH.tracksTotal) || HH.tracksTotal <= 0)) throw new TypeError("tags.tracksTotal, when provided, must be a positive integer.");
-        if (void 0 !== HH.discNumber && (!Number.isInteger(HH.discNumber) || HH.discNumber <= 0)) throw new TypeError("tags.discNumber, when provided, must be a positive integer.");
-        if (void 0 !== HH.discsTotal && (!Number.isInteger(HH.discsTotal) || HH.discsTotal <= 0)) throw new TypeError("tags.discsTotal, when provided, must be a positive integer.");
-        if (void 0 !== HH.genre && "string" !== typeof HH.genre) throw new TypeError("tags.genre, when provided, must be a string.");
-        if (void 0 !== HH.date && (!(HH.date instanceof Date) || Number.isNaN(HH.date.getTime()))) throw new TypeError("tags.date, when provided, must be a valid Date.");
-        if (void 0 !== HH.beatsPerMinute && (!Number.isInteger(HH.beatsPerMinute) || HH.beatsPerMinute <= 0)) throw new TypeError("tags.beatsPerMinute, when provided, must be a positive integer.");
-        if (void 0 !== HH.lyrics && "string" !== typeof HH.lyrics) throw new TypeError("tags.lyrics, when provided, must be a string.");
-        if (void 0 !== HH.images) {
-          if (!Array.isArray(HH.images)) throw new TypeError("tags.images, when provided, must be an array.");
-          for (const BH of HH.images) {
-            if (!BH || "object" !== typeof BH) throw new TypeError("Each image in tags.images must be an object.");
-            if (!(BH.data instanceof Uint8Array)) throw new TypeError("Each image.data must be a Uint8Array.");
-            if ("string" !== typeof BH.mimeType) throw new TypeError("Each image.mimeType must be a string.");
-            if (!["coverFront", "coverBack", "unknown"].includes(BH.kind)) throw new TypeError("Each image.kind must be 'coverFront', 'coverBack', or 'unknown'.")
+    const oB = BB => {
+        if (!BB || "object" !== typeof BB) throw new TypeError("tags must be an object.");
+        if (void 0 !== BB.title && "string" !== typeof BB.title) throw new TypeError("tags.title, when provided, must be a string.");
+        if (void 0 !== BB.description && "string" !== typeof BB.description) throw new TypeError("tags.description, when provided, must be a string.");
+        if (void 0 !== BB.artist && "string" !== typeof BB.artist) throw new TypeError("tags.artist, when provided, must be a string.");
+        if (void 0 !== BB.album && "string" !== typeof BB.album) throw new TypeError("tags.album, when provided, must be a string.");
+        if (void 0 !== BB.albumArtist && "string" !== typeof BB.albumArtist) throw new TypeError("tags.albumArtist, when provided, must be a string.");
+        if (void 0 !== BB.trackNumber && (!Number.isInteger(BB.trackNumber) || BB.trackNumber <= 0)) throw new TypeError("tags.trackNumber, when provided, must be a positive integer.");
+        if (void 0 !== BB.tracksTotal && (!Number.isInteger(BB.tracksTotal) || BB.tracksTotal <= 0)) throw new TypeError("tags.tracksTotal, when provided, must be a positive integer.");
+        if (void 0 !== BB.discNumber && (!Number.isInteger(BB.discNumber) || BB.discNumber <= 0)) throw new TypeError("tags.discNumber, when provided, must be a positive integer.");
+        if (void 0 !== BB.discsTotal && (!Number.isInteger(BB.discsTotal) || BB.discsTotal <= 0)) throw new TypeError("tags.discsTotal, when provided, must be a positive integer.");
+        if (void 0 !== BB.genre && "string" !== typeof BB.genre) throw new TypeError("tags.genre, when provided, must be a string.");
+        if (void 0 !== BB.date && (!(BB.date instanceof Date) || Number.isNaN(BB.date.getTime()))) throw new TypeError("tags.date, when provided, must be a valid Date.");
+        if (void 0 !== BB.beatsPerMinute && (!Number.isInteger(BB.beatsPerMinute) || BB.beatsPerMinute <= 0)) throw new TypeError("tags.beatsPerMinute, when provided, must be a positive integer.");
+        if (void 0 !== BB.lyrics && "string" !== typeof BB.lyrics) throw new TypeError("tags.lyrics, when provided, must be a string.");
+        if (void 0 !== BB.images) {
+          if (!Array.isArray(BB.images)) throw new TypeError("tags.images, when provided, must be an array.");
+          for (const OB of BB.images) {
+            if (!OB || "object" !== typeof OB) throw new TypeError("Each image in tags.images must be an object.");
+            if (!(OB.data instanceof Uint8Array)) throw new TypeError("Each image.data must be a Uint8Array.");
+            if ("string" !== typeof OB.mimeType) throw new TypeError("Each image.mimeType must be a string.");
+            if (!["coverFront", "coverBack", "unknown"].includes(OB.kind)) throw new TypeError("Each image.kind must be 'coverFront', 'coverBack', or 'unknown'.")
           }
         }
-        if (void 0 !== HH.comment && "string" !== typeof HH.comment) throw new TypeError("tags.comment, when provided, must be a string.");
-        if (void 0 !== HH.raw) {
-          if (!HH.raw || "object" !== typeof HH.raw) throw new TypeError("tags.raw, when provided, must be an object.");
-          for (const BH of Object.values(HH.raw))
-            if (null !== BH && "string" !== typeof BH && (!Array.isArray(BH) || !BH.every((HH => "string" === typeof HH))) && !(BH instanceof Uint8Array) && !(BH instanceof rH) && !(BH instanceof SH) && !(0, AH.Nb)(BH)) throw new TypeError("Each value in tags.raw must be a string, string array, Uint8Array, RichImageData, AttachedFile, Record<string, string>, or null.")
+        if (void 0 !== BB.comment && "string" !== typeof BB.comment) throw new TypeError("tags.comment, when provided, must be a string.");
+        if (void 0 !== BB.raw) {
+          if (!BB.raw || "object" !== typeof BB.raw) throw new TypeError("tags.raw, when provided, must be an object.");
+          for (const OB of Object.values(BB.raw))
+            if (null !== OB && "string" !== typeof OB && (!Array.isArray(OB) || !OB.every((BB => "string" === typeof BB))) && !(OB instanceof Uint8Array) && !(OB instanceof DB) && !(OB instanceof QB) && !(0, YB.ec)(OB)) throw new TypeError("Each value in tags.raw must be a string, string array, Uint8Array, RichImageData, AttachedFile, Record<string, string>, or null.")
         }
       },
-      tH = HH => void 0 === HH.title && void 0 === HH.description && void 0 === HH.artist && void 0 === HH.album && void 0 === HH.albumArtist && void 0 === HH.trackNumber && void 0 === HH.tracksTotal && void 0 === HH.discNumber && void 0 === HH.discsTotal && void 0 === HH.genre && void 0 === HH.beatsPerMinute && void 0 === HH.date && void 0 === HH.lyrics && (!HH.images || 0 === HH.images.length) && void 0 === HH.comment && (void 0 === HH.raw || 0 === Object.keys(HH.raw).length),
-      zH = {
+      jB = BB => void 0 === BB.title && void 0 === BB.description && void 0 === BB.artist && void 0 === BB.album && void 0 === BB.albumArtist && void 0 === BB.trackNumber && void 0 === BB.tracksTotal && void 0 === BB.discNumber && void 0 === BB.discsTotal && void 0 === BB.genre && void 0 === BB.beatsPerMinute && void 0 === BB.date && void 0 === BB.lyrics && (!BB.images || 0 === BB.images.length) && void 0 === BB.comment && (void 0 === BB.raw || 0 === Object.keys(BB.raw).length),
+      yB = {
         default: !0,
         primary: !0,
         forced: !1,
@@ -2938,257 +2938,257 @@ export const modules = {
         hearingImpaired: !1,
         visuallyImpaired: !1
       },
-      CH = HH => {
-        if (!HH || "object" !== typeof HH) throw new TypeError("disposition must be an object.");
-        if (void 0 !== HH.default && "boolean" !== typeof HH.default) throw new TypeError("disposition.default must be a boolean.");
-        if (void 0 !== HH.primary && "boolean" !== typeof HH.primary) throw new TypeError("disposition.primary must be a boolean.");
-        if (void 0 !== HH.forced && "boolean" !== typeof HH.forced) throw new TypeError("disposition.forced must be a boolean.");
-        if (void 0 !== HH.original && "boolean" !== typeof HH.original) throw new TypeError("disposition.original must be a boolean.");
-        if (void 0 !== HH.commentary && "boolean" !== typeof HH.commentary) throw new TypeError("disposition.commentary must be a boolean.");
-        if (void 0 !== HH.hearingImpaired && "boolean" !== typeof HH.hearingImpaired) throw new TypeError("disposition.hearingImpaired must be a boolean.");
-        if (void 0 !== HH.visuallyImpaired && "boolean" !== typeof HH.visuallyImpaired) throw new TypeError("disposition.visuallyImpaired must be a boolean.")
+      JB = BB => {
+        if (!BB || "object" !== typeof BB) throw new TypeError("disposition must be an object.");
+        if (void 0 !== BB.default && "boolean" !== typeof BB.default) throw new TypeError("disposition.default must be a boolean.");
+        if (void 0 !== BB.primary && "boolean" !== typeof BB.primary) throw new TypeError("disposition.primary must be a boolean.");
+        if (void 0 !== BB.forced && "boolean" !== typeof BB.forced) throw new TypeError("disposition.forced must be a boolean.");
+        if (void 0 !== BB.original && "boolean" !== typeof BB.original) throw new TypeError("disposition.original must be a boolean.");
+        if (void 0 !== BB.commentary && "boolean" !== typeof BB.commentary) throw new TypeError("disposition.commentary must be a boolean.");
+        if (void 0 !== BB.hearingImpaired && "boolean" !== typeof BB.hearingImpaired) throw new TypeError("disposition.hearingImpaired must be a boolean.");
+        if (void 0 !== BB.visuallyImpaired && "boolean" !== typeof BB.visuallyImpaired) throw new TypeError("disposition.visuallyImpaired must be a boolean.")
       }
   },
-  40820: (HH, BH, LH) => {
-    function AH(HH) {
-      if (!HH) throw new Error("Assertion failed.")
+  40574: (BB, OB, GB) => {
+    function YB(BB) {
+      if (!BB) throw new Error("Assertion failed.")
     }
-    LH.d(BH, {
-      $: () => NB,
-      $b: () => YB,
-      $c: () => mH,
-      Ac: () => pH,
-      B: () => kB,
-      Bb: () => AB,
-      C: () => bB,
-      Dc: () => iH,
-      Ec: () => YH,
-      Fb: () => oH,
-      Fc: () => gB,
-      G: () => nH,
-      Gb: () => xH,
-      J: () => AH,
-      Jc: () => wH,
-      Kb: () => VB,
-      Mc: () => ZH,
-      N: () => NH,
-      Nb: () => FB,
-      Ob: () => WB,
-      Pb: () => MH,
-      Qc: () => DH,
-      R: () => PB,
-      Rb: () => zB,
-      Sb: () => OB,
-      T: () => qH,
-      Uc: () => mB,
-      Vb: () => xB,
-      X: () => zH,
-      Xb: () => WH,
-      Yc: () => kH,
-      _: () => dH,
-      _b: () => aH,
-      ac: () => sH,
-      bc: () => uH,
-      d: () => eH,
-      db: () => MB,
-      dd: () => jB,
-      eb: () => KH,
-      ed: () => VH,
-      fc: () => hH,
-      g: () => IH,
-      gb: () => QH,
-      h: () => hB,
-      hc: () => UB,
-      ib: () => SB,
-      id: () => UH,
-      jb: () => CH,
-      kc: () => BB,
-      l: () => nB,
-      ld: () => TB,
-      m: () => tH,
-      mc: () => RH,
-      nb: () => jH,
-      nd: () => oB,
-      ob: () => yH,
-      p: () => lH,
-      pb: () => FH,
-      qb: () => HB,
-      qc: () => vH,
-      qd: () => RB,
-      t: () => SH,
-      tb: () => vB,
-      u: () => rB,
-      ub: () => cH,
-      uc: () => PH,
-      ud: () => TH,
-      v: () => fH,
-      vb: () => GB,
-      vc: () => gH,
-      w: () => bH,
-      wb: () => uB,
-      wc: () => XH,
-      x: () => JH,
-      zb: () => EB
+    GB.d(OB, {
+      Ab: () => hB,
+      Bb: () => BO,
+      Bd: () => dB,
+      C: () => fB,
+      Cc: () => HB,
+      D: () => vB,
+      Eb: () => WO,
+      Ec: () => pB,
+      F: () => kO,
+      Fc: () => oB,
+      Fd: () => EO,
+      Gb: () => iB,
+      Gc: () => SO,
+      Gd: () => nB,
+      Id: () => SB,
+      J: () => fO,
+      Jc: () => OO,
+      Kb: () => zO,
+      Ld: () => VO,
+      M: () => cB,
+      Nb: () => pO,
+      Nc: () => wB,
+      Pd: () => KO,
+      Q: () => YB,
+      Qc: () => WB,
+      Qd: () => wO,
+      Rb: () => MO,
+      Sd: () => VB,
+      U: () => XB,
+      Ub: () => YO,
+      Uc: () => AB,
+      V: () => AO,
+      X: () => gB,
+      Xc: () => rB,
+      Yb: () => KB,
+      Yc: () => PB,
+      Zb: () => RB,
+      _: () => yB,
+      _c: () => xB,
+      ac: () => nO,
+      cb: () => bB,
+      cd: () => sB,
+      d: () => LB,
+      ec: () => hO,
+      fd: () => lB,
+      g: () => uB,
+      gb: () => XO,
+      gc: () => ZO,
+      hd: () => rO,
+      j: () => oO,
+      kb: () => NO,
+      kc: () => NB,
+      lc: () => yO,
+      ld: () => eB,
+      m: () => cO,
+      mb: () => FB,
+      oc: () => UO,
+      od: () => TB,
+      p: () => jB,
+      qb: () => qB,
+      r: () => IB,
+      rc: () => RO,
+      s: () => QB,
+      sc: () => ZB,
+      sd: () => aB,
+      ub: () => QO,
+      vb: () => JB,
+      vc: () => CB,
+      vd: () => dO,
+      w: () => DO,
+      yb: () => EB,
+      z: () => mB,
+      zb: () => tB,
+      zc: () => lO,
+      zd: () => kB
     });
-    const rH = Math.PI / 180,
-      SH = 180 / Math.PI,
-      hH = HH => {
-        const BH = (HH % 360 + 360) % 360;
-        if (0 === BH || 90 === BH || 180 === BH || 270 === BH) return BH;
-        throw new Error(`Invalid rotation ${HH}.`)
+    const DB = Math.PI / 180,
+      QB = 180 / Math.PI,
+      oB = BB => {
+        const OB = (BB % 360 + 360) % 360;
+        if (0 === OB || 90 === OB || 180 === OB || 270 === OB) return OB;
+        throw new Error(`Invalid rotation ${BB}.`)
       },
-      tH = [1, 0, 0, 0, 1, 0, 0, 0, 1],
-      zH = (HH, BH, LH) => {
-        const [AH, rH, , SH, hH] = HH, tH = Math.abs(AH) * BH + Math.abs(SH) * LH, zH = Math.abs(rH) * BH + Math.abs(hH) * LH;
-        return uH(uH(GH(-BH / 2, -LH / 2), HH), GH(tH / 2, zH / 2))
+      jB = [1, 0, 0, 0, 1, 0, 0, 0, 1],
+      yB = (BB, OB, GB) => {
+        const [YB, DB, , QB, oB] = BB, jB = Math.abs(YB) * OB + Math.abs(QB) * GB, yB = Math.abs(DB) * OB + Math.abs(oB) * GB;
+        return pB(pB(zB(-OB / 2, -GB / 2), BB), zB(jB / 2, yB / 2))
       },
-      CH = HH => {
-        const [BH, LH] = HH, AH = Math.atan2(LH, EH(HH) ? -BH : BH);
-        return hH(iH(AH * SH, 90))
+      JB = BB => {
+        const [OB, GB] = BB, YB = Math.atan2(GB, MB(BB) ? -OB : OB);
+        return oB(sB(YB * QB, 90))
       },
-      EH = HH => {
-        const [BH, LH, , AH, rH] = HH;
-        return BH * rH - LH * AH < 0
+      MB = BB => {
+        const [OB, GB, , YB, DB] = BB;
+        return OB * DB - GB * YB < 0
       },
-      XH = HH => {
-        const BH = HH * rH,
-          LH = Math.round(Math.cos(BH)),
-          AH = Math.round(Math.sin(BH));
-        return [LH, AH, 0, -AH, LH, 0, 0, 0, 1]
+      PB = BB => {
+        const OB = BB * DB,
+          GB = Math.round(Math.cos(OB)),
+          YB = Math.round(Math.sin(OB));
+        return [GB, YB, 0, -YB, GB, 0, 0, 0, 1]
       },
-      GH = (HH, BH) => [1, 0, 0, 0, 1, 0, HH, BH, 1],
-      YH = (HH, BH) => [HH, 0, 0, 0, BH, 0, 0, 0, 1],
-      uH = (HH, BH) => {
-        const LH = new Array(9);
-        for (let AH = 0; AH < 3; AH++)
-          for (let rH = 0; rH < 3; rH++) LH[3 * AH + rH] = HH[3 * AH] * BH[rH] + HH[3 * AH + 1] * BH[3 + rH] + HH[3 * AH + 2] * BH[6 + rH];
-        return LH
+      zB = (BB, OB) => [1, 0, 0, 0, 1, 0, BB, OB, 1],
+      lB = (BB, OB) => [BB, 0, 0, 0, OB, 0, 0, 0, 1],
+      pB = (BB, OB) => {
+        const GB = new Array(9);
+        for (let YB = 0; YB < 3; YB++)
+          for (let DB = 0; DB < 3; DB++) GB[3 * YB + DB] = BB[3 * YB] * OB[DB] + BB[3 * YB + 1] * OB[3 + DB] + BB[3 * YB + 2] * OB[6 + DB];
+        return GB
       },
-      QH = (HH, BH, LH, AH) => ({
-        rotation: hH(HH + (BH ? -LH : LH)),
-        flip: BH !== AH
+      qB = (BB, OB, GB, YB) => ({
+        rotation: oB(BB + (OB ? -GB : GB)),
+        flip: OB !== YB
       }),
-      WH = HH => HH && HH[HH.length - 1],
-      MH = HH => HH >= 0 && HH < 2 ** 32,
-      xH = HH => HH >= -(2 ** 31) && HH < 2 ** 31,
-      vH = HH => {
-        let BH = 0;
-        for (; 0 === HH.readBits(1) && BH < 32;) BH++;
-        if (BH >= 32) throw new Error("Invalid exponential-Golomb code.");
-        return (1 << BH) - 1 + HH.readBits(BH)
+      ZB = BB => BB && BB[BB.length - 1],
+      NB = BB => BB >= 0 && BB < 2 ** 32,
+      RB = BB => BB >= -(2 ** 31) && BB < 2 ** 31,
+      WB = BB => {
+        let OB = 0;
+        for (; 0 === BB.readBits(1) && OB < 32;) OB++;
+        if (OB >= 32) throw new Error("Invalid exponential-Golomb code.");
+        return (1 << OB) - 1 + BB.readBits(OB)
       },
-      PH = HH => {
-        const BH = vH(HH);
-        return 0 === (1 & BH) ? -(BH >> 1) : BH + 1 >> 1
+      AB = BB => {
+        const OB = WB(BB);
+        return 0 === (1 & OB) ? -(OB >> 1) : OB + 1 >> 1
       },
-      TH = (HH, BH, LH, AH) => {
-        for (let rH = BH; rH < LH; rH++) {
-          const BH = Math.floor(rH / 8);
-          let SH = HH[BH];
-          const hH = 7 - (7 & rH);
-          SH &= ~(1 << hH), SH |= (AH & 1 << LH - rH - 1) >> LH - rH - 1 << hH, HH[BH] = SH
+      VB = (BB, OB, GB, YB) => {
+        for (let DB = OB; DB < GB; DB++) {
+          const OB = Math.floor(DB / 8);
+          let QB = BB[OB];
+          const oB = 7 - (7 & DB);
+          QB &= ~(1 << oB), QB |= (YB & 1 << GB - DB - 1) >> GB - DB - 1 << oB, BB[OB] = QB
         }
       },
-      UH = HH => HH.constructor === Uint8Array ? HH : ArrayBuffer.isView(HH) ? new Uint8Array(HH.buffer, HH.byteOffset, HH.byteLength) : new Uint8Array(HH),
-      VH = HH => HH.constructor === DataView ? HH : ArrayBuffer.isView(HH) ? new DataView(HH.buffer, HH.byteOffset, HH.byteLength) : new DataView(HH),
-      OH = "undefined" !== typeof globalThis.TextEncoder ? globalThis.TextEncoder : class {
+      SB = BB => BB.constructor === Uint8Array ? BB : ArrayBuffer.isView(BB) ? new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength) : new Uint8Array(BB),
+      nB = BB => BB.constructor === DataView ? BB : ArrayBuffer.isView(BB) ? new DataView(BB.buffer, BB.byteOffset, BB.byteLength) : new DataView(BB),
+      UB = "undefined" !== typeof globalThis.TextEncoder ? globalThis.TextEncoder : class {
         constructor() {
           this.encoding = "utf-8"
         }
         encode() {
-          let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-          const BH = new Uint8Array(3 * HH.length);
-          let LH = 0;
-          for (let AH = 0; AH < HH.length; AH++) {
-            let rH = HH.charCodeAt(AH);
-            if (rH < 128) BH[LH++] = rH;
-            else if (rH < 2048) BH[LH++] = 192 | rH >> 6, BH[LH++] = 128 | 63 & rH;
-            else if (rH < 55296 || rH > 57343) BH[LH++] = 224 | rH >> 12, BH[LH++] = 128 | rH >> 6 & 63, BH[LH++] = 128 | 63 & rH;
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+          const OB = new Uint8Array(3 * BB.length);
+          let GB = 0;
+          for (let YB = 0; YB < BB.length; YB++) {
+            let DB = BB.charCodeAt(YB);
+            if (DB < 128) OB[GB++] = DB;
+            else if (DB < 2048) OB[GB++] = 192 | DB >> 6, OB[GB++] = 128 | 63 & DB;
+            else if (DB < 55296 || DB > 57343) OB[GB++] = 224 | DB >> 12, OB[GB++] = 128 | DB >> 6 & 63, OB[GB++] = 128 | 63 & DB;
             else {
-              const SH = AH + 1 < HH.length ? HH.charCodeAt(AH + 1) : 0;
-              rH < 56320 && SH >= 56320 && SH <= 57343 ? (rH = 65536 + (rH - 55296 << 10) + (SH - 56320), AH++, BH[LH++] = 240 | rH >> 18, BH[LH++] = 128 | rH >> 12 & 63, BH[LH++] = 128 | rH >> 6 & 63, BH[LH++] = 128 | 63 & rH) : (BH[LH++] = 239, BH[LH++] = 191, BH[LH++] = 189)
+              const QB = YB + 1 < BB.length ? BB.charCodeAt(YB + 1) : 0;
+              DB < 56320 && QB >= 56320 && QB <= 57343 ? (DB = 65536 + (DB - 55296 << 10) + (QB - 56320), YB++, OB[GB++] = 240 | DB >> 18, OB[GB++] = 128 | DB >> 12 & 63, OB[GB++] = 128 | DB >> 6 & 63, OB[GB++] = 128 | 63 & DB) : (OB[GB++] = 239, OB[GB++] = 191, OB[GB++] = 189)
             }
           }
-          return BH.slice(0, LH)
+          return OB.slice(0, GB)
         }
       },
-      bH = "undefined" !== typeof globalThis.TextDecoder ? globalThis.TextDecoder : class {
+      fB = "undefined" !== typeof globalThis.TextDecoder ? globalThis.TextDecoder : class {
         constructor() {
-          let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "utf-8";
-          const BH = HH.trim().toLowerCase();
-          if ("utf-8" === BH || "utf8" === BH || "unicode-1-1-utf-8" === BH) this.encoding = "utf-8";
-          else if ("utf-16le" === BH || "utf-16" === BH) this.encoding = "utf-16le";
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "utf-8";
+          const OB = BB.trim().toLowerCase();
+          if ("utf-8" === OB || "utf8" === OB || "unicode-1-1-utf-8" === OB) this.encoding = "utf-8";
+          else if ("utf-16le" === OB || "utf-16" === OB) this.encoding = "utf-16le";
           else {
-            if ("utf-16be" !== BH) throw new RangeError(`The encoding label provided ('${HH}') is invalid.`);
+            if ("utf-16be" !== OB) throw new RangeError(`The encoding label provided ('${BB}') is invalid.`);
             this.encoding = "utf-16be"
           }
         }
-        decode(HH) {
-          const BH = HH ? UH(HH) : new Uint8Array(0),
-            LH = [];
+        decode(BB) {
+          const OB = BB ? SB(BB) : new Uint8Array(0),
+            GB = [];
           if ("utf-8" === this.encoding) {
-            let HH = BH.length >= 3 && 239 === BH[0] && 187 === BH[1] && 191 === BH[2] ? 3 : 0;
-            for (; HH < BH.length;) {
-              const AH = BH[HH];
-              if (AH < 128) {
-                LH.push(AH), HH++;
+            let BB = OB.length >= 3 && 239 === OB[0] && 187 === OB[1] && 191 === OB[2] ? 3 : 0;
+            for (; BB < OB.length;) {
+              const YB = OB[BB];
+              if (YB < 128) {
+                GB.push(YB), BB++;
                 continue
               }
-              let rH, SH;
-              if (AH >= 194 && AH < 224) rH = 1, SH = 31 & AH;
-              else if (AH >= 224 && AH < 240) rH = 2, SH = 15 & AH;
+              let DB, QB;
+              if (YB >= 194 && YB < 224) DB = 1, QB = 31 & YB;
+              else if (YB >= 224 && YB < 240) DB = 2, QB = 15 & YB;
               else {
-                if (!(AH >= 240 && AH < 245)) {
-                  LH.push(65533), HH++;
+                if (!(YB >= 240 && YB < 245)) {
+                  GB.push(65533), BB++;
                   continue
                 }
-                rH = 3, SH = 7 & AH
+                DB = 3, QB = 7 & YB
               }
-              let hH = 224 === AH ? 160 : 240 === AH ? 144 : 128,
-                tH = 237 === AH ? 159 : 244 === AH ? 143 : 191,
-                zH = 1;
-              for (; zH <= rH; zH++) {
-                const LH = HH + zH < BH.length ? BH[HH + zH] : 0;
-                if (LH < hH || LH > tH) break;
-                SH = SH << 6 | 63 & LH, hH = 128, tH = 191
+              let oB = 224 === YB ? 160 : 240 === YB ? 144 : 128,
+                jB = 237 === YB ? 159 : 244 === YB ? 143 : 191,
+                yB = 1;
+              for (; yB <= DB; yB++) {
+                const GB = BB + yB < OB.length ? OB[BB + yB] : 0;
+                if (GB < oB || GB > jB) break;
+                QB = QB << 6 | 63 & GB, oB = 128, jB = 191
               }
-              HH += zH, zH <= rH ? LH.push(65533) : SH >= 65536 ? (SH -= 65536, LH.push(55296 | SH >> 10, 56320 | 1023 & SH)) : LH.push(SH)
+              BB += yB, yB <= DB ? GB.push(65533) : QB >= 65536 ? (QB -= 65536, GB.push(55296 | QB >> 10, 56320 | 1023 & QB)) : GB.push(QB)
             }
           } else {
-            const HH = "utf-16le" === this.encoding,
-              AH = HH ? 255 : 254,
-              rH = HH ? 254 : 255;
-            let SH = BH.length >= 2 && BH[0] === AH && BH[1] === rH ? 2 : 0;
-            for (; SH + 1 < BH.length;) {
-              const AH = HH ? BH[SH] | BH[SH + 1] << 8 : BH[SH] << 8 | BH[SH + 1];
-              if (SH += 2, AH >= 55296 && AH <= 56319) {
-                const rH = SH + 1 < BH.length ? HH ? BH[SH] | BH[SH + 1] << 8 : BH[SH] << 8 | BH[SH + 1] : -1;
-                rH >= 56320 && rH <= 57343 ? (LH.push(AH, rH), SH += 2) : LH.push(65533)
-              } else AH >= 56320 && AH <= 57343 ? LH.push(65533) : LH.push(AH)
+            const BB = "utf-16le" === this.encoding,
+              YB = BB ? 255 : 254,
+              DB = BB ? 254 : 255;
+            let QB = OB.length >= 2 && OB[0] === YB && OB[1] === DB ? 2 : 0;
+            for (; QB + 1 < OB.length;) {
+              const YB = BB ? OB[QB] | OB[QB + 1] << 8 : OB[QB] << 8 | OB[QB + 1];
+              if (QB += 2, YB >= 55296 && YB <= 56319) {
+                const DB = QB + 1 < OB.length ? BB ? OB[QB] | OB[QB + 1] << 8 : OB[QB] << 8 | OB[QB + 1] : -1;
+                DB >= 56320 && DB <= 57343 ? (GB.push(YB, DB), QB += 2) : GB.push(65533)
+              } else YB >= 56320 && YB <= 57343 ? GB.push(65533) : GB.push(YB)
             }
-            SH < BH.length && LH.push(65533)
+            QB < OB.length && GB.push(65533)
           }
-          let AH = "";
-          for (let rH = 0; rH < LH.length; rH += 8192) AH += String.fromCharCode(...LH.slice(rH, rH + 8192));
-          return AH
+          let YB = "";
+          for (let DB = 0; DB < GB.length; DB += 8192) YB += String.fromCharCode(...GB.slice(DB, DB + 8192));
+          return YB
         }
       },
-      kH = new bH,
-      mH = new OH,
-      oH = HH => {
-        for (let BH = 0; BH < HH.length; BH++) {
-          if (HH.charCodeAt(BH) > 255) return !1
+      kB = new fB,
+      dB = new UB,
+      KB = BB => {
+        for (let OB = 0; OB < BB.length; OB++) {
+          if (BB.charCodeAt(OB) > 255) return !1
         }
         return !0
       },
-      IH = {
+      uB = {
         bt709: 1,
         bt470bg: 5,
         smpte170m: 6,
         bt2020: 9,
         smpte432: 12
       },
-      fH = {
+      mB = {
         bt709: 1,
         smpte170m: 6,
         linear: 8,
@@ -3196,148 +3196,148 @@ export const modules = {
         pq: 16,
         hlg: 18
       },
-      lH = {
+      IB = {
         rgb: 0,
         bt709: 1,
         bt470bg: 5,
         smpte170m: 6,
         "bt2020-ncl": 9
       },
-      KH = HH => !HH || null == HH.primaries && null == HH.transfer && null == HH.matrix && null == HH.fullRange,
-      cH = HH => HH instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && HH instanceof SharedArrayBuffer || ArrayBuffer.isView(HH);
-    class eH {
+      FB = BB => !BB || null == BB.primaries && null == BB.transfer && null == BB.matrix && null == BB.fullRange,
+      iB = BB => BB instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && BB instanceof SharedArrayBuffer || ArrayBuffer.isView(BB);
+    class LB {
       constructor() {
         this.currentPromise = Promise.resolve(), this.pending = 0
       }
       async acquire() {
-        let HH;
-        const BH = new Promise((BH => {
-            let LH = !1;
-            HH = () => {
-              LH || (BH(), this.pending--, LH = !0)
+        let BB;
+        const OB = new Promise((OB => {
+            let GB = !1;
+            BB = () => {
+              GB || (OB(), this.pending--, GB = !0)
             }
           })),
-          LH = this.currentPromise;
-        return this.currentPromise = BH, this.pending++, await LH, HH
+          GB = this.currentPromise;
+        return this.currentPromise = OB, this.pending++, await GB, BB
       }
     }
-    const qH = HH => [...HH].map((HH => HH.toString(16).padStart(2, "0"))).join(""),
-      gH = HH => (HH = (HH = (HH = (HH = (HH = HH >> 1 & 1431655765 | (1431655765 & HH) << 1) >> 2 & 858993459 | (858993459 & HH) << 2) >> 4 & 252645135 | (252645135 & HH) << 4) >> 8 & 16711935 | (16711935 & HH) << 8) >> 16 & 65535 | (65535 & HH) << 16) >>> 0,
-      NH = (HH, BH, LH) => {
-        let AH = 0,
-          rH = HH.length - 1,
-          SH = -1;
-        for (; AH <= rH;) {
-          const hH = AH + (rH - AH + 1) / 2 | 0;
-          LH(HH[hH]) <= BH ? (SH = hH, AH = hH + 1) : rH = hH - 1
+    const gB = BB => [...BB].map((BB => BB.toString(16).padStart(2, "0"))).join(""),
+      rB = BB => (BB = (BB = (BB = (BB = (BB = BB >> 1 & 1431655765 | (1431655765 & BB) << 1) >> 2 & 858993459 | (858993459 & BB) << 2) >> 4 & 252645135 | (252645135 & BB) << 4) >> 8 & 16711935 | (16711935 & BB) << 8) >> 16 & 65535 | (65535 & BB) << 16) >>> 0,
+      XB = (BB, OB, GB) => {
+        let YB = 0,
+          DB = BB.length - 1,
+          QB = -1;
+        for (; YB <= DB;) {
+          const oB = YB + (DB - YB + 1) / 2 | 0;
+          GB(BB[oB]) <= OB ? (QB = oB, YB = oB + 1) : DB = oB - 1
         }
-        return SH
+        return QB
       },
-      RH = () => {
-        let HH, BH;
+      wB = () => {
+        let BB, OB;
         return {
-          promise: new Promise(((LH, AH) => {
-            HH = LH, BH = AH
+          promise: new Promise(((GB, YB) => {
+            BB = GB, OB = YB
           })),
-          resolve: HH,
-          reject: BH
+          resolve: BB,
+          reject: OB
         }
       },
-      jH = (HH, BH) => {
-        for (let LH = HH.length - 1; LH >= 0; LH--)
-          if (BH(HH[LH])) return LH;
+      EB = (BB, OB) => {
+        for (let GB = BB.length - 1; GB >= 0; GB--)
+          if (OB(BB[GB])) return GB;
         return -1
       },
-      nH = HH => {
-        throw new Error(`Unexpected value: ${HH}`)
+      cB = BB => {
+        throw new Error(`Unexpected value: ${BB}`)
       },
-      FH = (HH, BH, LH) => {
-        const AH = HH.getUint8(BH),
-          rH = HH.getUint8(BH + 1),
-          SH = HH.getUint8(BH + 2);
-        return LH ? AH | rH << 8 | SH << 16 : AH << 16 | rH << 8 | SH
+      hB = (BB, OB, GB) => {
+        const YB = BB.getUint8(OB),
+          DB = BB.getUint8(OB + 1),
+          QB = BB.getUint8(OB + 2);
+        return GB ? YB | DB << 8 | QB << 16 : YB << 16 | DB << 8 | QB
       },
-      DH = (HH, BH, LH, AH) => {
-        LH >>>= 0, LH &= 16777215, AH ? (HH.setUint8(BH, 255 & LH), HH.setUint8(BH + 1, LH >>> 8 & 255), HH.setUint8(BH + 2, LH >>> 16 & 255)) : (HH.setUint8(BH, LH >>> 16 & 255), HH.setUint8(BH + 1, LH >>> 8 & 255), HH.setUint8(BH + 2, 255 & LH))
+      aB = (BB, OB, GB, YB) => {
+        GB >>>= 0, GB &= 16777215, YB ? (BB.setUint8(OB, 255 & GB), BB.setUint8(OB + 1, GB >>> 8 & 255), BB.setUint8(OB + 2, GB >>> 16 & 255)) : (BB.setUint8(OB, GB >>> 16 & 255), BB.setUint8(OB + 1, GB >>> 8 & 255), BB.setUint8(OB + 2, 255 & GB))
       },
-      wH = (HH, BH, LH, AH) => {
-        (LH = dH(LH, -8388608, 8388607)) < 0 && (LH = LH + 16777216 & 16777215), DH(HH, BH, LH, AH)
+      eB = (BB, OB, GB, YB) => {
+        (GB = bB(GB, -8388608, 8388607)) < 0 && (GB = GB + 16777216 & 16777215), aB(BB, OB, GB, YB)
       },
-      ZH = (HH, BH, LH, AH) => {
-        AH ? (HH.setUint32(BH + 0, LH, !0), HH.setInt32(BH + 4, Math.floor(LH / 2 ** 32), !0)) : (HH.setInt32(BH + 0, Math.floor(LH / 2 ** 32), !0), HH.setUint32(BH + 4, LH, !0))
+      TB = (BB, OB, GB, YB) => {
+        YB ? (BB.setUint32(OB + 0, GB, !0), BB.setInt32(OB + 4, Math.floor(GB / 2 ** 32), !0)) : (BB.setInt32(OB + 0, Math.floor(GB / 2 ** 32), !0), BB.setUint32(OB + 4, GB, !0))
       },
-      dH = (HH, BH, LH) => Math.max(BH, Math.min(LH, HH)),
-      aH = (HH, BH, LH) => HH + (BH - HH) * LH,
-      sH = (HH, BH) => HH - Math.floor(HH / BH) * BH,
-      JH = "und",
-      iH = (HH, BH) => Math.round(HH / BH) * BH,
-      pH = (HH, BH) => Math.round(HH * BH) / BH,
-      yH = (HH, BH) => Math.floor(HH * BH) / BH,
-      HB = HH => {
-        let BH = 0;
-        for (; HH;) BH++, HH >>= 1;
-        return BH
+      bB = (BB, OB, GB) => Math.max(OB, Math.min(GB, BB)),
+      CB = (BB, OB, GB) => BB + (OB - BB) * GB,
+      HB = (BB, OB) => BB - Math.floor(BB / OB) * OB,
+      vB = "und",
+      sB = (BB, OB) => Math.round(BB / OB) * OB,
+      xB = (BB, OB) => Math.round(BB * OB) / OB,
+      tB = (BB, OB) => Math.floor(BB * OB) / OB,
+      BO = BB => {
+        let OB = 0;
+        for (; BB;) OB++, BB >>= 1;
+        return OB
       },
-      BB = HH => {
-        let BH = 0;
-        for (; 0 !== HH;) HH &= HH - 1, BH++;
-        return BH
+      OO = BB => {
+        let OB = 0;
+        for (; 0 !== BB;) BB &= BB - 1, OB++;
+        return OB
       },
-      LB = /^[a-z]{3}$/,
-      AB = HH => LB.test(HH),
-      rB = 1e6 * (1 + Number.EPSILON),
-      SB = (HH, BH) => {
-        const LH = HH < 0 ? -1 : 1;
-        let AH = 0,
-          rH = 1,
-          SH = 1,
-          hH = 0,
-          tH = HH = Math.abs(HH);
+      GO = /^[a-z]{3}$/,
+      YO = BB => GO.test(BB),
+      DO = 1e6 * (1 + Number.EPSILON),
+      QO = (BB, OB) => {
+        const GB = BB < 0 ? -1 : 1;
+        let YB = 0,
+          DB = 1,
+          QB = 1,
+          oB = 0,
+          jB = BB = Math.abs(BB);
         for (;;) {
-          const HH = Math.floor(tH),
-            zH = HH * SH + AH,
-            CH = HH * hH + rH;
-          if (CH > BH) return {
-            num: LH * SH,
-            den: hH
+          const BB = Math.floor(jB),
+            yB = BB * QB + YB,
+            JB = BB * oB + DB;
+          if (JB > OB) return {
+            num: GB * QB,
+            den: oB
           };
-          if (AH = SH, rH = hH, SH = zH, hH = CH, tH = 1 / (tH - HH), !isFinite(tH)) break
+          if (YB = QB, DB = oB, QB = yB, oB = JB, jB = 1 / (jB - BB), !isFinite(jB)) break
         }
         return {
-          num: LH * SH,
-          den: hH
+          num: GB * QB,
+          den: oB
         }
       };
-    class hB {
+    class oO {
       constructor() {
         this.currentPromise = Promise.resolve()
       }
-      call(HH) {
-        return this.currentPromise = this.currentPromise.then(HH)
+      call(BB) {
+        return this.currentPromise = this.currentPromise.then(BB)
       }
     }
-    let tB = null;
-    const zB = () => null !== tB ? tB : tB = !("undefined" === typeof navigator || !(navigator.vendor?.match(/apple/i) || /AppleWebKit/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent) || /\b(iPad|iPhone|iPod)\b/.test(navigator.userAgent)));
-    let CB = null;
-    const EB = () => null !== CB ? CB : CB = "undefined" !== typeof navigator && navigator.userAgent?.includes("Firefox");
-    let XB = null;
-    const GB = () => null !== XB ? XB : XB = !("undefined" === typeof navigator || !navigator.vendor?.includes("Google Inc") && !/Chrome/.test(navigator.userAgent));
-    const YB = HH => "undefined" === typeof globalThis.isSecureContext || globalThis.isSecureContext ? `${HH} is not available in this environment.` : `${HH} is not available in this environment; this may be because this page is running in an insecure context. Try serving your page over HTTPS or use localhost.`,
-      uB = HH => HH instanceof DOMException && "QuotaExceededError" === HH.name && /reclaimed/i.test(HH.message),
-      QB = (async () => {})().constructor,
-      WB = HH => HH instanceof QB || HH instanceof Promise || "function" === typeof HH?.then,
-      MB = (HH, BH) => -1 !== HH ? HH : BH,
-      xB = function*(HH) {
-        for (const BH in HH) {
-          const LH = HH[BH];
-          void 0 !== LH && (yield {
-            key: BH,
-            value: LH
+    let jO = null;
+    const yO = () => null !== jO ? jO : jO = !("undefined" === typeof navigator || !(navigator.vendor?.match(/apple/i) || /AppleWebKit/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent) || /\b(iPad|iPhone|iPod)\b/.test(navigator.userAgent)));
+    let JO = null;
+    const MO = () => null !== JO ? JO : JO = "undefined" !== typeof navigator && navigator.userAgent?.includes("Firefox");
+    let PO = null;
+    const zO = () => null !== PO ? PO : PO = !("undefined" === typeof navigator || !navigator.vendor?.includes("Google Inc") && !/Chrome/.test(navigator.userAgent));
+    const lO = BB => "undefined" === typeof globalThis.isSecureContext || globalThis.isSecureContext ? `${BB} is not available in this environment.` : `${BB} is not available in this environment; this may be because this page is running in an insecure context. Try serving your page over HTTPS or use localhost.`,
+      pO = BB => BB instanceof DOMException && "QuotaExceededError" === BB.name && /reclaimed/i.test(BB.message),
+      qO = (async () => {})().constructor,
+      ZO = BB => BB instanceof qO || BB instanceof Promise || "function" === typeof BB?.then,
+      NO = (BB, OB) => -1 !== BB ? BB : OB,
+      RO = function*(BB) {
+        for (const OB in BB) {
+          const GB = BB[OB];
+          void 0 !== GB && (yield {
+            key: OB,
+            value: GB
           })
         }
       },
-      vB = HH => {
-        switch (HH.toLowerCase()) {
+      WO = BB => {
+        switch (BB.toLowerCase()) {
           case "image/jpeg":
           case "image/jpg":
             return ".jpg";
@@ -3362,218 +3362,218 @@ export const modules = {
             return null
         }
       },
-      PB = HH => {
-        let BH = "";
-        for (let LH = 0; LH < HH.length; LH++) BH += String.fromCharCode(HH[LH]);
-        return btoa(BH)
+      AO = BB => {
+        let OB = "";
+        for (let GB = 0; GB < BB.length; GB++) OB += String.fromCharCode(BB[GB]);
+        return btoa(OB)
       },
-      TB = (HH, BH) => {
-        if (HH.length !== BH.length) return !1;
-        for (let LH = 0; LH < HH.length; LH++)
-          if (HH[LH] !== BH[LH]) return !1;
+      VO = (BB, OB) => {
+        if (BB.length !== OB.length) return !1;
+        for (let GB = 0; GB < BB.length; GB++)
+          if (BB[GB] !== OB[GB]) return !1;
         return !0
       },
-      UB = () => {
+      SO = () => {
         Symbol.dispose ??= Symbol("Symbol.dispose")
       },
-      VB = HH => "number" === typeof HH && !Number.isNaN(HH),
-      OB = (HH, BH) => {
-        if (BH.includes("://")) return BH;
-        if (HH.includes("://")) {
-          const BH = HH.indexOf("?"); - 1 !== BH && (HH = HH.slice(0, BH))
+      nO = BB => "number" === typeof BB && !Number.isNaN(BB),
+      UO = (BB, OB) => {
+        if (OB.includes("://")) return OB;
+        if (BB.includes("://")) {
+          const OB = BB.indexOf("?"); - 1 !== OB && (BB = BB.slice(0, OB))
         }
-        let LH;
-        if (BH.startsWith("/")) {
-          const AH = HH.indexOf("://");
-          if (-1 === AH) LH = BH;
+        let GB;
+        if (OB.startsWith("/")) {
+          const YB = BB.indexOf("://");
+          if (-1 === YB) GB = OB;
           else {
-            const rH = HH.indexOf("/", AH + 3);
-            LH = -1 === rH ? HH + BH : HH.slice(0, rH) + BH
+            const DB = BB.indexOf("/", YB + 3);
+            GB = -1 === DB ? BB + OB : BB.slice(0, DB) + OB
           }
         } else {
-          const AH = HH.lastIndexOf("/");
-          LH = -1 === AH ? BH : HH.slice(0, AH + 1) + BH
+          const YB = BB.lastIndexOf("/");
+          GB = -1 === YB ? OB : BB.slice(0, YB + 1) + OB
         }
-        let AH = "";
-        const rH = LH.indexOf("://");
-        if (-1 !== rH) {
-          const HH = LH.indexOf("/", rH + 3); - 1 !== HH && (AH = LH.slice(0, HH), LH = LH.slice(HH))
+        let YB = "";
+        const DB = GB.indexOf("://");
+        if (-1 !== DB) {
+          const BB = GB.indexOf("/", DB + 3); - 1 !== BB && (YB = GB.slice(0, BB), GB = GB.slice(BB))
         }
-        const SH = LH.split("/"),
-          hH = [];
-        for (const tH of SH) ".." === tH ? hH.pop() : "." !== tH && hH.push(tH);
-        return AH + hH.join("/")
+        const QB = GB.split("/"),
+          oB = [];
+        for (const jB of QB) ".." === jB ? oB.pop() : "." !== jB && oB.push(jB);
+        return YB + oB.join("/")
       },
-      bB = (HH, BH) => {
-        let LH = -1,
-          AH = 1 / 0;
-        for (let rH = 0; rH < HH.length; rH++) {
-          const SH = BH(HH[rH]);
-          SH < AH && (AH = SH, LH = rH)
+      fO = (BB, OB) => {
+        let GB = -1,
+          YB = 1 / 0;
+        for (let DB = 0; DB < BB.length; DB++) {
+          const QB = OB(BB[DB]);
+          QB < YB && (YB = QB, GB = DB)
         }
-        return LH
+        return GB
       },
-      kB = (HH, BH) => {
-        let LH = -1,
-          AH = -1 / 0;
-        for (let rH = 0; rH < HH.length; rH++) {
-          const SH = BH(HH[rH]);
-          SH > AH && (AH = SH, LH = rH)
+      kO = (BB, OB) => {
+        let GB = -1,
+          YB = -1 / 0;
+        for (let DB = 0; DB < BB.length; DB++) {
+          const QB = OB(BB[DB]);
+          QB > YB && (YB = QB, GB = DB)
         }
-        return LH
+        return GB
       },
-      mB = HH => {
-        AH(Number.isInteger(HH.num)), AH(Number.isInteger(HH.den)), AH(0 !== HH.den);
-        let BH = Math.abs(HH.num),
-          LH = Math.abs(HH.den);
-        for (; 0 !== LH;) {
-          const HH = BH % LH;
-          BH = LH, LH = HH
+      dO = BB => {
+        YB(Number.isInteger(BB.num)), YB(Number.isInteger(BB.den)), YB(0 !== BB.den);
+        let OB = Math.abs(BB.num),
+          GB = Math.abs(BB.den);
+        for (; 0 !== GB;) {
+          const BB = OB % GB;
+          OB = GB, GB = BB
         }
-        const rH = BH || 1;
+        const DB = OB || 1;
         return {
-          num: HH.num / rH,
-          den: HH.den / rH
+          num: BB.num / DB,
+          den: BB.den / DB
         }
       },
-      oB = (HH, BH) => {
-        if ("object" !== typeof HH || !HH) throw new TypeError(`${BH} must be an object.`);
-        if (!Number.isInteger(HH.left) || HH.left < 0) throw new TypeError(`${BH}.left must be a non-negative integer.`);
-        if (!Number.isInteger(HH.top) || HH.top < 0) throw new TypeError(`${BH}.top must be a non-negative integer.`);
-        if (!Number.isInteger(HH.width) || HH.width < 0) throw new TypeError(`${BH}.width must be a non-negative integer.`);
-        if (!Number.isInteger(HH.height) || HH.height < 0) throw new TypeError(`${BH}.height must be a non-negative integer.`)
+      KO = (BB, OB) => {
+        if ("object" !== typeof BB || !BB) throw new TypeError(`${OB} must be an object.`);
+        if (!Number.isInteger(BB.left) || BB.left < 0) throw new TypeError(`${OB}.left must be a non-negative integer.`);
+        if (!Number.isInteger(BB.top) || BB.top < 0) throw new TypeError(`${OB}.top must be a non-negative integer.`);
+        if (!Number.isInteger(BB.width) || BB.width < 0) throw new TypeError(`${OB}.width must be a non-negative integer.`);
+        if (!Number.isInteger(BB.height) || BB.height < 0) throw new TypeError(`${OB}.height must be a non-negative integer.`)
       };
-    let IB, fB = 1;
-    const lB = new Map,
-      KB = new Map,
-      cB = () => "undefined" === typeof window,
-      eB = () => {
-        const HH = new Map,
-          BH = new Map;
-        self.onmessage = LH => {
-          const AH = LH.data;
-          switch (AH.type) {
+    let uO, mO = 1;
+    const IO = new Map,
+      FO = new Map,
+      iO = () => "undefined" === typeof window,
+      LO = () => {
+        const BB = new Map,
+          OB = new Map;
+        self.onmessage = GB => {
+          const YB = GB.data;
+          switch (YB.type) {
             case "set-timeout": {
-              const BH = setTimeout((() => {
-                HH.delete(AH.timerId), self.postMessage({
+              const OB = setTimeout((() => {
+                BB.delete(YB.timerId), self.postMessage({
                   type: "fire",
-                  timerId: AH.timerId
+                  timerId: YB.timerId
                 })
-              }), AH.delay);
-              HH.set(AH.timerId, BH)
+              }), YB.delay);
+              BB.set(YB.timerId, OB)
             }
             break;
             case "set-interval": {
-              const HH = setInterval((() => {
+              const BB = setInterval((() => {
                 self.postMessage({
                   type: "fire",
-                  timerId: AH.timerId
+                  timerId: YB.timerId
                 })
-              }), AH.delay);
-              BH.set(AH.timerId, HH)
+              }), YB.delay);
+              OB.set(YB.timerId, BB)
             }
             break;
             case "clear-timeout": {
-              const BH = HH.get(AH.timerId);
-              void 0 !== BH && (clearTimeout(BH), HH.delete(AH.timerId))
+              const OB = BB.get(YB.timerId);
+              void 0 !== OB && (clearTimeout(OB), BB.delete(YB.timerId))
             }
             break;
             case "clear-interval": {
-              const HH = BH.get(AH.timerId);
-              void 0 !== HH && (clearInterval(HH), BH.delete(AH.timerId))
+              const BB = OB.get(YB.timerId);
+              void 0 !== BB && (clearInterval(BB), OB.delete(YB.timerId))
             }
           }
         }
       },
-      qB = () => {
-        if (IB) return IB;
-        const HH = `(${eB.toString()})();`,
-          BH = URL.createObjectURL(new Blob([HH], {
+      gO = () => {
+        if (uO) return uO;
+        const BB = `(${LO.toString()})();`,
+          OB = URL.createObjectURL(new Blob([BB], {
             type: "text/javascript"
           }));
-        return IB = new Worker(BH), URL.revokeObjectURL(BH), IB.onmessage = HH => {
-          const BH = HH.data,
-            LH = lB.get(BH.timerId);
-          if (LH) return lB.delete(BH.timerId), void LH();
-          const AH = KB.get(BH.timerId);
-          AH && AH()
-        }, IB
+        return uO = new Worker(OB), URL.revokeObjectURL(OB), uO.onmessage = BB => {
+          const OB = BB.data,
+            GB = IO.get(OB.timerId);
+          if (GB) return IO.delete(OB.timerId), void GB();
+          const YB = FO.get(OB.timerId);
+          YB && YB()
+        }, uO
       },
-      gB = (HH, BH) => {
-        if (cB()) return {
-          id: setInterval(HH, BH)
+      rO = (BB, OB) => {
+        if (iO()) return {
+          id: setInterval(BB, OB)
         };
-        const LH = fB++;
-        return KB.set(LH, (() => {
-          HH()
-        })), qB().postMessage({
+        const GB = mO++;
+        return FO.set(GB, (() => {
+          BB()
+        })), gO().postMessage({
           type: "set-interval",
-          timerId: LH,
-          delay: BH
+          timerId: GB,
+          delay: OB
         }), {
-          id: LH
+          id: GB
         }
       },
-      NB = HH => {
-        cB() ? clearInterval(HH.id) : (AH("number" === typeof HH.id), KB.delete(HH.id), qB().postMessage({
+      XO = BB => {
+        iO() ? clearInterval(BB.id) : (YB("number" === typeof BB.id), FO.delete(BB.id), gO().postMessage({
           type: "clear-interval",
-          timerId: HH.id
+          timerId: BB.id
         }))
       },
-      RB = HH => new Promise((BH => setTimeout(BH, HH))),
-      jB = HH => Array.isArray(HH) ? HH : [HH];
-    class nB {
+      wO = BB => new Promise((OB => setTimeout(OB, BB))),
+      EO = BB => Array.isArray(BB) ? BB : [BB];
+    class cO {
       constructor() {
         this._listeners = new Map
       }
-      on(HH, BH, LH) {
-        this._listeners.has(HH) || this._listeners.set(HH, new Set);
-        const AH = {
-          EX: BH,
-          once: LH?.once ?? !1
+      on(BB, OB, GB) {
+        this._listeners.has(BB) || this._listeners.set(BB, new Set);
+        const YB = {
+          oP: OB,
+          once: GB?.once ?? !1
         };
-        return this._listeners.get(HH).add(AH), () => {
-          this._listeners.get(HH)?.delete(AH)
+        return this._listeners.get(BB).add(YB), () => {
+          this._listeners.get(BB)?.delete(YB)
         }
       }
       _emit() {
-        for (var HH = arguments.length, BH = new Array(HH), LH = 0; LH < HH; LH++) BH[LH] = arguments[LH];
-        const [AH, rH] = BH, SH = this._listeners.get(AH);
-        if (SH)
-          for (const tH of SH) {
+        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+        const [YB, DB] = OB, QB = this._listeners.get(YB);
+        if (QB)
+          for (const jB of QB) {
             try {
-              tH.EX(rH)
-            } catch (hH) {
-              console.error(hH)
+              jB.oP(DB)
+            } catch (oB) {
+              console.error(oB)
             }
-            tH.once && SH.delete(tH)
+            jB.once && QB.delete(jB)
           }
       }
     }
-    const FB = HH => null !== HH && "object" === typeof HH && Object.getPrototypeOf(HH) === Object.prototype && Object.values(HH).every((HH => "string" === typeof HH))
+    const hO = BB => null !== BB && "object" === typeof BB && Object.getPrototypeOf(BB) === Object.prototype && Object.values(BB).every((BB => "string" === typeof BB))
   },
-  40832: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => qL,
-      d: () => gL,
-      e: () => eL,
-      i: () => KL,
-      k: () => RL
+  40589: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => gG,
+      e: () => rG,
+      g: () => LG,
+      i: () => FG,
+      j: () => wG
     });
-    var AH = LH(40838),
-      rH = LH(40849);
-    var SH;
-    ! function(HH) {
-      HH[HH.FrameCount = 1] = "FrameCount", HH[HH.FileSize = 2] = "FileSize", HH[HH.Toc = 4] = "Toc"
-    }(SH || (SH = {}));
-    var hH = LH(40866),
-      tH = LH(40820);
-    class zH {
-      constructor(HH, BH, LH, AH, rH) {
-        this.bytes = HH, this.view = BH, this.offset = LH, this.start = AH, this.end = rH, this.bufferPos = AH - LH
+    var YB = GB(40591),
+      DB = GB(40599);
+    var QB;
+    ! function(BB) {
+      BB[BB.FrameCount = 1] = "FrameCount", BB[BB.FileSize = 2] = "FileSize", BB[BB.Toc = 4] = "Toc"
+    }(QB || (QB = {}));
+    var oB = GB(40610),
+      jB = GB(40574);
+    class yB {
+      constructor(BB, OB, GB, YB, DB) {
+        this.bytes = BB, this.view = OB, this.offset = GB, this.start = YB, this.end = DB, this.bufferPos = YB - GB
       }
-      static tempFromBytes(HH) {
-        return new zH(HH, (0, tH.ed)(HH), 0, 0, HH.length)
+      static tempFromBytes(BB) {
+        return new yB(BB, (0, jB.Gd)(BB), 0, 0, BB.length)
       }
       get length() {
         return this.end - this.start
@@ -3581,501 +3581,501 @@ export const modules = {
       get filePos() {
         return this.offset + this.bufferPos
       }
-      set filePos(HH) {
-        this.bufferPos = HH - this.offset
+      set filePos(BB) {
+        this.bufferPos = BB - this.offset
       }
       get remainingLength() {
         return Math.max(this.end - this.filePos, 0)
       }
-      skip(HH) {
-        this.bufferPos += HH
+      skip(BB) {
+        this.bufferPos += BB
       }
-      slice(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.end - HH;
-        if (HH < this.start || HH + BH > this.end) throw new RangeError("Slicing outside of original slice.");
-        return new zH(this.bytes, this.view, this.offset, HH, HH + BH)
+      slice(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.end - BB;
+        if (BB < this.start || BB + OB > this.end) throw new RangeError("Slicing outside of original slice.");
+        return new yB(this.bytes, this.view, this.offset, BB, BB + OB)
       }
     }
-    const CH = (HH, BH) => {
-        if (HH.filePos < HH.start || HH.filePos + BH > HH.end) throw new RangeError(`Tried reading [${HH.filePos}, ${HH.filePos+BH}), but slice is [${HH.start}, ${HH.end}). This is likely an internal error, please report it alongside the file that caused it.`)
+    const JB = (BB, OB) => {
+        if (BB.filePos < BB.start || BB.filePos + OB > BB.end) throw new RangeError(`Tried reading [${BB.filePos}, ${BB.filePos+OB}), but slice is [${BB.start}, ${BB.end}). This is likely an internal error, please report it alongside the file that caused it.`)
       },
-      EH = (HH, BH) => {
-        CH(HH, BH);
-        const LH = HH.bytes.subarray(HH.bufferPos, HH.bufferPos + BH);
-        return HH.bufferPos += BH, LH
+      MB = (BB, OB) => {
+        JB(BB, OB);
+        const GB = BB.bytes.subarray(BB.bufferPos, BB.bufferPos + OB);
+        return BB.bufferPos += OB, GB
       };
-    var XH, GH;
-    ! function(HH) {
-      HH[HH.Unsynchronisation = 128] = "Unsynchronisation", HH[HH.ExtendedHeader = 64] = "ExtendedHeader", HH[HH.ExperimentalIndicator = 32] = "ExperimentalIndicator", HH[HH.Footer = 16] = "Footer"
-    }(XH || (XH = {})),
-    function(HH) {
-      HH[HH.ISO_8859_1 = 0] = "ISO_8859_1", HH[HH.UTF_16_WITH_BOM = 1] = "UTF_16_WITH_BOM", HH[HH.UTF_16_BE_NO_BOM = 2] = "UTF_16_BE_NO_BOM", HH[HH.UTF_8 = 3] = "UTF_8"
-    }(GH || (GH = {}));
-    var YH = LH(40825);
-    class uH {
-      constructor(HH) {
-        this.mutex = new tH.d, this.trackTimestampInfo = new WeakMap, this.output = HH
+    var PB, zB;
+    ! function(BB) {
+      BB[BB.Unsynchronisation = 128] = "Unsynchronisation", BB[BB.ExtendedHeader = 64] = "ExtendedHeader", BB[BB.ExperimentalIndicator = 32] = "ExperimentalIndicator", BB[BB.Footer = 16] = "Footer"
+    }(PB || (PB = {})),
+    function(BB) {
+      BB[BB.ISO_8859_1 = 0] = "ISO_8859_1", BB[BB.UTF_16_WITH_BOM = 1] = "UTF_16_WITH_BOM", BB[BB.UTF_16_BE_NO_BOM = 2] = "UTF_16_BE_NO_BOM", BB[BB.UTF_8 = 3] = "UTF_8"
+    }(zB || (zB = {}));
+    var lB = GB(40581);
+    class pB {
+      constructor(BB) {
+        this.mutex = new jB.d, this.trackTimestampInfo = new WeakMap, this.output = BB
       }
-      onTrackClose(HH) {}
-      validateTimestamp(HH, BH, LH) {
-        let AH = this.trackTimestampInfo.get(HH);
-        if (AH) {
-          if (LH && (AH.maxTimestampBeforeLastKeyPacket = AH.maxTimestamp), null !== AH.maxTimestampBeforeLastKeyPacket && BH < AH.maxTimestampBeforeLastKeyPacket) throw new Error(`Timestamps cannot be smaller than the largest timestamp of the previous GOP (a GOP begins with a key packet and ends right before the next key packet). Got ${BH}s, but largest timestamp is ${AH.maxTimestampBeforeLastKeyPacket}s.`);
-          AH.maxTimestamp = Math.max(AH.maxTimestamp, BH)
+      onTrackClose(BB) {}
+      validateTimestamp(BB, OB, GB) {
+        let YB = this.trackTimestampInfo.get(BB);
+        if (YB) {
+          if (GB && (YB.maxTimestampBeforeLastKeyPacket = YB.maxTimestamp), null !== YB.maxTimestampBeforeLastKeyPacket && OB < YB.maxTimestampBeforeLastKeyPacket) throw new Error(`Timestamps cannot be smaller than the largest timestamp of the previous GOP (a GOP begins with a key packet and ends right before the next key packet). Got ${OB}s, but largest timestamp is ${YB.maxTimestampBeforeLastKeyPacket}s.`);
+          YB.maxTimestamp = Math.max(YB.maxTimestamp, OB)
         } else {
-          if (!LH) throw new Error("First packet must be a key packet.");
-          AH = {
-            maxTimestamp: BH,
+          if (!GB) throw new Error("First packet must be a key packet.");
+          YB = {
+            maxTimestamp: OB,
             maxTimestampBeforeLastKeyPacket: null
-          }, this.trackTimestampInfo.set(HH, AH)
+          }, this.trackTimestampInfo.set(BB, YB)
         }
       }
     }
-    var QH = LH(40858),
-      WH = LH(40847);
-    var MH = LH(40879),
-      xH = LH(40872);
-    class vH {
-      constructor(HH) {
-        this.writer = HH, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap
+    var qB = GB(40603),
+      ZB = GB(40594);
+    var NB = GB(40627),
+      RB = GB(40619);
+    class WB {
+      constructor(BB) {
+        this.writer = BB, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap
       }
-      writeU32(HH) {
-        this.helperView.setUint32(0, HH, !1), this.writer.write(this.helper.subarray(0, 4))
+      writeU32(BB) {
+        this.helperView.setUint32(0, BB, !1), this.writer.write(this.helper.subarray(0, 4))
       }
-      writeU64(HH) {
-        this.helperView.setUint32(0, Math.floor(HH / 2 ** 32), !1), this.helperView.setUint32(4, HH, !1), this.writer.write(this.helper.subarray(0, 8))
+      writeU64(BB) {
+        this.helperView.setUint32(0, Math.floor(BB / 2 ** 32), !1), this.helperView.setUint32(4, BB, !1), this.writer.write(this.helper.subarray(0, 8))
       }
-      writeAscii(HH) {
-        for (let BH = 0; BH < HH.length; BH++) this.helperView.setUint8(BH % 8, HH.charCodeAt(BH)), BH % 8 === 7 && this.writer.write(this.helper);
-        HH.length % 8 !== 0 && this.writer.write(this.helper.subarray(0, HH.length % 8))
+      writeAscii(BB) {
+        for (let OB = 0; OB < BB.length; OB++) this.helperView.setUint8(OB % 8, BB.charCodeAt(OB)), OB % 8 === 7 && this.writer.write(this.helper);
+        BB.length % 8 !== 0 && this.writer.write(this.helper.subarray(0, BB.length % 8))
       }
-      writeBox(HH) {
-        if (this.offsets.set(HH, this.writer.getPos()), HH.contents && !HH.children) this.writeBoxHeader(HH, HH.size ?? HH.contents.byteLength + 8), this.writer.write(HH.contents);
+      writeBox(BB) {
+        if (this.offsets.set(BB, this.writer.getPos()), BB.contents && !BB.children) this.writeBoxHeader(BB, BB.size ?? BB.contents.byteLength + 8), this.writer.write(BB.contents);
         else {
-          const BH = this.writer.getPos();
-          if (this.writeBoxHeader(HH, 0), HH.contents && this.writer.write(HH.contents), HH.children)
-            for (const rH of HH.children) rH && this.writeBox(rH);
-          const LH = this.writer.getPos(),
-            AH = HH.size ?? LH - BH;
-          this.writer.seek(BH), this.writeBoxHeader(HH, AH), this.writer.seek(LH)
+          const OB = this.writer.getPos();
+          if (this.writeBoxHeader(BB, 0), BB.contents && this.writer.write(BB.contents), BB.children)
+            for (const DB of BB.children) DB && this.writeBox(DB);
+          const GB = this.writer.getPos(),
+            YB = BB.size ?? GB - OB;
+          this.writer.seek(OB), this.writeBoxHeader(BB, YB), this.writer.seek(GB)
         }
       }
-      writeBoxHeader(HH, BH) {
-        this.writeU32(HH.largeSize ? 1 : BH), this.writeAscii(HH.type), HH.largeSize && this.writeU64(BH)
+      writeBoxHeader(BB, OB) {
+        this.writeU32(BB.largeSize ? 1 : OB), this.writeAscii(BB.type), BB.largeSize && this.writeU64(OB)
       }
-      measureBoxHeader(HH) {
-        return 8 + (HH.largeSize ? 8 : 0)
+      measureBoxHeader(BB) {
+        return 8 + (BB.largeSize ? 8 : 0)
       }
-      patchBox(HH) {
-        const BH = this.offsets.get(HH);
-        (0, tH.J)(void 0 !== BH);
-        const LH = this.writer.getPos();
-        this.writer.seek(BH), this.writeBox(HH), this.writer.seek(LH)
+      patchBox(BB) {
+        const OB = this.offsets.get(BB);
+        (0, jB.Q)(void 0 !== OB);
+        const GB = this.writer.getPos();
+        this.writer.seek(OB), this.writeBox(BB), this.writer.seek(GB)
       }
-      measureBox(HH) {
-        if (HH.contents && !HH.children) {
-          return this.measureBoxHeader(HH) + HH.contents.byteLength
+      measureBox(BB) {
+        if (BB.contents && !BB.children) {
+          return this.measureBoxHeader(BB) + BB.contents.byteLength
         } {
-          let BH = this.measureBoxHeader(HH);
-          if (HH.contents && (BH += HH.contents.byteLength), HH.children)
-            for (const LH of HH.children) LH && (BH += this.measureBox(LH));
-          return BH
+          let OB = this.measureBoxHeader(BB);
+          if (BB.contents && (OB += BB.contents.byteLength), BB.children)
+            for (const GB of BB.children) GB && (OB += this.measureBox(GB));
+          return OB
         }
       }
     }
-    const PH = new Uint8Array(8),
-      TH = new DataView(PH.buffer),
-      UH = HH => [(HH % 256 + 256) % 256],
-      VH = HH => (TH.setUint16(0, HH, !1), [PH[0], PH[1]]),
-      OH = HH => (TH.setInt16(0, HH, !1), [PH[0], PH[1]]),
-      bH = HH => (TH.setUint32(0, HH, !1), [PH[1], PH[2], PH[3]]),
-      kH = HH => (TH.setUint32(0, HH, !1), [PH[0], PH[1], PH[2], PH[3]]),
-      mH = HH => (TH.setInt32(0, HH, !1), [PH[0], PH[1], PH[2], PH[3]]),
-      oH = HH => (TH.setUint32(0, Math.floor(HH / 2 ** 32), !1), TH.setUint32(4, HH, !1), [PH[0], PH[1], PH[2], PH[3], PH[4], PH[5], PH[6], PH[7]]),
-      IH = HH => (TH.setInt32(0, Math.floor(HH / 2 ** 32), !1), TH.setUint32(4, HH, !1), [PH[0], PH[1], PH[2], PH[3], PH[4], PH[5], PH[6], PH[7]]),
-      fH = HH => (TH.setInt16(0, 256 * HH, !1), [PH[0], PH[1]]),
-      lH = HH => (TH.setInt32(0, 65536 * HH, !1), [PH[0], PH[1], PH[2], PH[3]]),
-      KH = HH => (TH.setInt32(0, 2 ** 30 * HH, !1), [PH[0], PH[1], PH[2], PH[3]]),
-      cH = (HH, BH) => {
-        const LH = [];
-        let AH = HH;
+    const AB = new Uint8Array(8),
+      VB = new DataView(AB.buffer),
+      SB = BB => [(BB % 256 + 256) % 256],
+      nB = BB => (VB.setUint16(0, BB, !1), [AB[0], AB[1]]),
+      UB = BB => (VB.setInt16(0, BB, !1), [AB[0], AB[1]]),
+      fB = BB => (VB.setUint32(0, BB, !1), [AB[1], AB[2], AB[3]]),
+      kB = BB => (VB.setUint32(0, BB, !1), [AB[0], AB[1], AB[2], AB[3]]),
+      dB = BB => (VB.setInt32(0, BB, !1), [AB[0], AB[1], AB[2], AB[3]]),
+      KB = BB => (VB.setUint32(0, Math.floor(BB / 2 ** 32), !1), VB.setUint32(4, BB, !1), [AB[0], AB[1], AB[2], AB[3], AB[4], AB[5], AB[6], AB[7]]),
+      uB = BB => (VB.setInt32(0, Math.floor(BB / 2 ** 32), !1), VB.setUint32(4, BB, !1), [AB[0], AB[1], AB[2], AB[3], AB[4], AB[5], AB[6], AB[7]]),
+      mB = BB => (VB.setInt16(0, 256 * BB, !1), [AB[0], AB[1]]),
+      IB = BB => (VB.setInt32(0, 65536 * BB, !1), [AB[0], AB[1], AB[2], AB[3]]),
+      FB = BB => (VB.setInt32(0, 2 ** 30 * BB, !1), [AB[0], AB[1], AB[2], AB[3]]),
+      iB = (BB, OB) => {
+        const GB = [];
+        let YB = BB;
         do {
-          let HH = 127 & AH;
-          AH >>= 7, LH.length > 0 && (HH |= 128), LH.push(HH), void 0 !== BH && BH--
-        } while (AH > 0 || BH);
-        return LH.reverse()
+          let BB = 127 & YB;
+          YB >>= 7, GB.length > 0 && (BB |= 128), GB.push(BB), void 0 !== OB && OB--
+        } while (YB > 0 || OB);
+        return GB.reverse()
       },
-      eH = function(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const LH = Array(HH.length).fill(null).map(((BH, LH) => HH.charCodeAt(LH)));
-        return BH && LH.push(0), LH
+      LB = function(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const GB = Array(BB.length).fill(null).map(((OB, GB) => BB.charCodeAt(GB)));
+        return OB && GB.push(0), GB
       },
-      qH = HH => [lH(HH[0]), lH(HH[1]), KH(HH[2]), lH(HH[3]), lH(HH[4]), KH(HH[5]), lH(HH[6]), lH(HH[7]), KH(HH[8])],
-      gH = (HH, BH, LH) => ({
-        type: HH,
-        contents: BH && new Uint8Array(BH.flat(10)),
-        children: LH
+      gB = BB => [IB(BB[0]), IB(BB[1]), FB(BB[2]), IB(BB[3]), IB(BB[4]), FB(BB[5]), IB(BB[6]), IB(BB[7]), FB(BB[8])],
+      rB = (BB, OB, GB) => ({
+        type: BB,
+        contents: OB && new Uint8Array(OB.flat(10)),
+        children: GB
       }),
-      NH = (HH, BH, LH, AH, rH) => gH(HH, [UH(BH), bH(LH), AH ?? []], rH),
-      RH = () => gH("styp", [eH("iso5"), kH(0), eH("iso5"), eH("iso6"), eH("mp41"), eH("cmfc"), eH("dash")]),
-      jH = (HH, BH) => {
-        const LH = Math.max(0, HH.minWrittenTimestamp);
-        let AH = Math.max(0, HH.maxWrittenEndTimestamp - LH);
-        return Number.isFinite(AH) || (AH = 0), NH("sidx", 1, 0, [kH(1), kH(EL), oH(GL(LH, EL)), oH(0), VH(0), VH(1), kH(2147483647 & BH), kH(GL(AH, EL)), kH(0)])
+      XB = (BB, OB, GB, YB, DB) => rB(BB, [SB(OB), fB(GB), YB ?? []], DB),
+      wB = () => rB("styp", [LB("iso5"), kB(0), LB("iso5"), LB("iso6"), LB("mp41"), LB("cmfc"), LB("dash")]),
+      EB = (BB, OB) => {
+        const GB = Math.max(0, BB.minWrittenTimestamp);
+        let YB = Math.max(0, BB.maxWrittenEndTimestamp - GB);
+        return Number.isFinite(YB) || (YB = 0), XB("sidx", 1, 0, [kB(1), kB(MG), KB(zG(GB, MG)), KB(0), nB(0), nB(1), kB(2147483647 & OB), kB(zG(YB, MG)), kB(0)])
       },
-      nH = HH => ({
+      cB = BB => ({
         type: "mdat",
-        largeSize: HH
+        largeSize: BB
       }),
-      FH = HH => gH("moov", void 0, [DH(HH.creationTime, HH.trackDatas), ...HH.trackDatas.map((BH => wH(BH, HH.creationTime))), HH.isFragmented ? fB(HH.trackDatas) : null, ZB(HH)]),
-      DH = (HH, BH) => {
-        const LH = Math.max(0, ...BH.map((HH => Math.max(0, GL(YL(HH), EL) + GL(HH.startTimestampOffset ?? 0, EL))))),
-          AH = Math.max(0, ...BH.map((HH => HH.track.id))) + 1,
-          rH = !(0, tH.Pb)(HH) || !(0, tH.Pb)(LH),
-          SH = rH ? oH : kH;
-        return NH("mvhd", +rH, 0, [SH(HH), SH(HH), kH(EL), SH(LH), lH(1), fH(1), Array(10).fill(0), qH(tH.m), Array(24).fill(0), kH(AH)])
+      hB = BB => rB("moov", void 0, [aB(BB.creationTime, BB.trackDatas), ...BB.trackDatas.map((OB => eB(OB, BB.creationTime))), BB.isFragmented ? mO(BB.trackDatas) : null, TO(BB)]),
+      aB = (BB, OB) => {
+        const GB = Math.max(0, ...OB.map((BB => Math.max(0, zG(lG(BB), MG) + zG(BB.startTimestampOffset ?? 0, MG))))),
+          YB = Math.max(0, ...OB.map((BB => BB.track.id))) + 1,
+          DB = !(0, jB.kc)(BB) || !(0, jB.kc)(GB),
+          QB = DB ? KB : kB;
+        return XB("mvhd", +DB, 0, [QB(BB), QB(BB), kB(MG), QB(GB), IB(1), mB(1), Array(10).fill(0), gB(jB.p), Array(24).fill(0), kB(YB)])
       },
-      wH = (HH, BH) => {
-        const LH = XL(HH),
-          AH = null !== HH.startTimestampOffset && 0 !== HH.startTimestampOffset;
-        return gH("trak", void 0, [ZH(HH, BH), AH ? dH(HH) : null, aH(HH, BH), void 0 !== LH.name ? gH("udta", void 0, [gH("name", [...tH.$c.encode(LH.name)])]) : null])
+      eB = (BB, OB) => {
+        const GB = PG(BB),
+          YB = null !== BB.startTimestampOffset && 0 !== BB.startTimestampOffset;
+        return rB("trak", void 0, [TB(BB, OB), YB ? bB(BB) : null, CB(BB, OB), void 0 !== GB.name ? rB("udta", void 0, [rB("name", [...jB.Bd.encode(GB.name)])]) : null])
       },
-      ZH = (HH, BH) => {
-        const LH = Math.max(0, GL(YL(HH), EL) + GL(HH.startTimestampOffset ?? 0, EL)),
-          AH = !(0, tH.Pb)(BH) || !(0, tH.Pb)(LH),
-          rH = AH ? oH : kH;
-        let SH;
-        if ("video" === HH.type && HH.track.metadata.transformationMatrix) SH = HH.track.metadata.transformationMatrix;
-        else if ("video" === HH.type) {
+      TB = (BB, OB) => {
+        const GB = Math.max(0, zG(lG(BB), MG) + zG(BB.startTimestampOffset ?? 0, MG)),
+          YB = !(0, jB.kc)(OB) || !(0, jB.kc)(GB),
+          DB = YB ? KB : kB;
+        let QB;
+        if ("video" === BB.type && BB.track.metadata.transformationMatrix) QB = BB.track.metadata.transformationMatrix;
+        else if ("video" === BB.type) {
           const {
-            rotation: BH,
-            flip: LH
-          } = HH.track.metadata, AH = (0, tH.bc)((0, tH.wc)(BH ?? 0), (0, tH.Ec)(LH ? -1 : 1, 1));
-          SH = (0, tH.X)(AH, HH.info.width, HH.info.height)
-        } else SH = tH.m;
-        let hH = 2;
-        !1 !== HH.track.metadata.disposition?.default && (hH |= 1);
-        const zH = "video" === HH.type ? 0 : "audio" === HH.type ? 1 : "subtitle" === HH.type ? 2 : (0, tH.G)(HH);
-        return NH("tkhd", +AH, hH, [rH(BH), rH(BH), kH(HH.track.id), kH(0), rH(LH), Array(8).fill(0), VH(0), VH(zH), fH("audio" === HH.type ? 1 : 0), VH(0), qH(SH), lH("video" === HH.type ? HH.info.width : 0), lH("video" === HH.type ? HH.info.height : 0)])
+            rotation: OB,
+            flip: GB
+          } = BB.track.metadata, YB = (0, jB.Ec)((0, jB.Yc)(OB ?? 0), (0, jB.fd)(GB ? -1 : 1, 1));
+          QB = (0, jB._)(YB, BB.info.width, BB.info.height)
+        } else QB = jB.p;
+        let oB = 2;
+        !1 !== BB.track.metadata.disposition?.default && (oB |= 1);
+        const yB = "video" === BB.type ? 0 : "audio" === BB.type ? 1 : "subtitle" === BB.type ? 2 : (0, jB.M)(BB);
+        return XB("tkhd", +YB, oB, [DB(OB), DB(OB), kB(BB.track.id), kB(0), DB(GB), Array(8).fill(0), nB(0), nB(yB), mB("audio" === BB.type ? 1 : 0), nB(0), gB(QB), IB("video" === BB.type ? BB.info.width : 0), IB("video" === BB.type ? BB.info.height : 0)])
       },
-      dH = HH => {
-        const BH = HH.startTimestampOffset;
-        if ((0, tH.J)(null !== BH), BH > 0) {
-          const LH = GL(BH, EL),
-            AH = GL(YL(HH), EL),
-            rH = !(0, tH.Pb)(LH) || !(0, tH.Pb)(AH),
-            SH = rH ? oH : kH,
-            hH = rH ? IH : mH;
-          return gH("edts", void 0, [NH("elst", rH ? 1 : 0, 0, [kH(2), SH(LH), hH(-1), lH(1), SH(AH), hH(0), lH(1)])])
+      bB = BB => {
+        const OB = BB.startTimestampOffset;
+        if ((0, jB.Q)(null !== OB), OB > 0) {
+          const GB = zG(OB, MG),
+            YB = zG(lG(BB), MG),
+            DB = !(0, jB.kc)(GB) || !(0, jB.kc)(YB),
+            QB = DB ? KB : kB,
+            oB = DB ? uB : dB;
+          return rB("edts", void 0, [XB("elst", DB ? 1 : 0, 0, [kB(2), QB(GB), oB(-1), IB(1), QB(YB), oB(0), IB(1)])])
         } {
-          const LH = GL(-BH, HH.timescale),
-            AH = Math.max(0, GL(YL(HH), EL) + GL(BH, EL)),
-            rH = !(0, tH.Gb)(LH) || !(0, tH.Pb)(AH),
-            SH = rH ? oH : kH,
-            hH = rH ? IH : mH;
-          return gH("edts", void 0, [NH("elst", rH ? 1 : 0, 0, [kH(1), SH(AH), hH(LH), lH(1)])])
+          const GB = zG(-OB, BB.timescale),
+            YB = Math.max(0, zG(lG(BB), MG) + zG(OB, MG)),
+            DB = !(0, jB.Zb)(GB) || !(0, jB.kc)(YB),
+            QB = DB ? KB : kB,
+            oB = DB ? uB : dB;
+          return rB("edts", void 0, [XB("elst", DB ? 1 : 0, 0, [kB(1), QB(YB), oB(GB), IB(1)])])
         }
       },
-      aH = (HH, BH) => gH("mdia", void 0, [sH(HH, BH), pH(!0, JH[HH.type], iH[HH.type]), yH(HH)]),
-      sH = (HH, BH) => {
-        const LH = GL(YL(HH), HH.timescale),
-          AH = !(0, tH.Pb)(BH) || !(0, tH.Pb)(LH),
-          rH = AH ? oH : kH;
-        return NH("mdhd", +AH, 0, [rH(BH), rH(BH), kH(HH.timescale), rH(LH), VH(hL(HH.track.metadata.languageCode ?? tH.x)), VH(0)])
+      CB = (BB, OB) => rB("mdia", void 0, [HB(BB, OB), xB(!0, vB[BB.type], sB[BB.type]), tB(BB)]),
+      HB = (BB, OB) => {
+        const GB = zG(lG(BB), BB.timescale),
+          YB = !(0, jB.kc)(OB) || !(0, jB.kc)(GB),
+          DB = YB ? KB : kB;
+        return XB("mdhd", +YB, 0, [DB(OB), DB(OB), kB(BB.timescale), DB(GB), nB(oG(BB.track.metadata.languageCode ?? jB.D)), nB(0)])
       },
-      JH = {
+      vB = {
         video: "vide",
         audio: "soun",
         subtitle: "text"
       },
-      iH = {
+      sB = {
         video: "MediabunnyVideoHandler",
         audio: "MediabunnySoundHandler",
         subtitle: "MediabunnyTextHandler"
       },
-      pH = function(HH, BH, LH) {
-        let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "\0\0\0\0";
-        return NH("hdlr", 0, 0, [HH ? eH("mhlr") : kH(0), eH(BH), eH(AH), kH(0), kH(0), eH(LH, !0)])
+      xB = function(BB, OB, GB) {
+        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "\0\0\0\0";
+        return XB("hdlr", 0, 0, [BB ? LB("mhlr") : kB(0), LB(OB), LB(YB), kB(0), kB(0), LB(GB, !0)])
       },
-      yH = HH => gH("minf", void 0, [HB[HH.type](), BB(), rB(HH)]),
-      HB = {
-        video: () => NH("vmhd", 0, 1, [VH(0), VH(0), VH(0), VH(0)]),
-        audio: () => NH("smhd", 0, 0, [VH(0), VH(0)]),
-        subtitle: () => NH("nmhd", 0, 0)
+      tB = BB => rB("minf", void 0, [BO[BB.type](), OO(), DO(BB)]),
+      BO = {
+        video: () => XB("vmhd", 0, 1, [nB(0), nB(0), nB(0), nB(0)]),
+        audio: () => XB("smhd", 0, 0, [nB(0), nB(0)]),
+        subtitle: () => XB("nmhd", 0, 0)
       },
-      BB = () => gH("dinf", void 0, [LB()]),
-      LB = () => NH("dref", 0, 0, [kH(1)], [AB()]),
-      AB = () => NH("url ", 0, 1),
-      rB = HH => {
-        const BH = HH.compositionTimeOffsetTable.length > 1 || HH.compositionTimeOffsetTable.some((HH => 0 !== HH.sampleCompositionTimeOffset));
-        return gH("stbl", void 0, [SB(HH), VB(HH), BH ? oB(HH) : null, BH ? IB(HH) : null, bB(HH), kB(HH), mB(HH), OB(HH)])
+      OO = () => rB("dinf", void 0, [GO()]),
+      GO = () => XB("dref", 0, 0, [kB(1)], [YO()]),
+      YO = () => XB("url ", 0, 1),
+      DO = BB => {
+        const OB = BB.compositionTimeOffsetTable.length > 1 || BB.compositionTimeOffsetTable.some((BB => 0 !== BB.sampleCompositionTimeOffset));
+        return rB("stbl", void 0, [QO(BB), nO(BB), OB ? KO(BB) : null, OB ? uO(BB) : null, fO(BB), kO(BB), dO(BB), UO(BB)])
       },
-      SB = HH => {
-        let BH;
-        if ("video" === HH.type) BH = hB(HL(HH.track.source._codec, HH.info.decoderConfig.codec), HH);
-        else if ("audio" === HH.type) {
-          const LH = LL(HH.track.source._codec, HH.info.decoderConfig.codec, HH.muxer.isQuickTime);
-          (0, tH.J)(LH), BH = XB(LH, HH)
-        } else "subtitle" === HH.type && (BH = UB(rL[HH.track.source._codec], HH));
-        return (0, tH.J)(BH), NH("stsd", 0, 0, [kH(1)], [BH])
+      QO = BB => {
+        let OB;
+        if ("video" === BB.type) OB = oO(BG(BB.track.source._codec, BB.info.decoderConfig.codec), BB);
+        else if ("audio" === BB.type) {
+          const GB = GG(BB.track.source._codec, BB.info.decoderConfig.codec, BB.muxer.isQuickTime);
+          (0, jB.Q)(GB), OB = PO(GB, BB)
+        } else "subtitle" === BB.type && (OB = SO(DG[BB.track.source._codec], BB));
+        return (0, jB.Q)(OB), XB("stsd", 0, 0, [kB(1)], [OB])
       },
-      hB = (HH, BH) => gH(HH, [Array(6).fill(0), VH(1), VH(0), VH(0), Array(12).fill(0), VH(BH.info.width), VH(BH.info.height), kH(4718592), kH(4718592), kH(0), VH(1), UH(xH.e.length), eH(xH.e), Array(31 - xH.e.length).fill(0), VH(BH.info.hasAlphaChannel ? 32 : 24), OH(65535)], [BL[BH.track.source._codec]?.(BH) ?? null, zB(BH), (0, tH.eb)(BH.info.decoderConfig.colorSpace) ? null : CB(BH), tB(BH)]),
-      tB = HH => 0 === HH.avgBitrate && 0 === HH.maxBitrate ? null : gH("btrt", [kH(0), kH(HH.maxBitrate), kH(HH.avgBitrate)]),
-      zB = HH => HH.info.pixelAspectRatio.num === HH.info.pixelAspectRatio.den ? null : gH("pasp", [kH(HH.info.pixelAspectRatio.num), kH(HH.info.pixelAspectRatio.den)]),
-      CB = HH => {
-        const BH = HH.info.decoderConfig.colorSpace;
-        return gH("colr", [eH(HH.muxer.isQuickTime ? "nclc" : "nclx"), VH(null != BH?.primaries ? tH.g[BH.primaries] : 2), VH(null != BH?.transfer ? tH.v[BH.transfer] : 2), VH(null != BH?.matrix ? tH.p[BH.matrix] : 2), HH.muxer.isQuickTime ? [] : UH((BH?.fullRange ? 1 : 0) << 7)])
+      oO = (BB, OB) => rB(BB, [Array(6).fill(0), nB(1), nB(0), nB(0), Array(12).fill(0), nB(OB.info.width), nB(OB.info.height), kB(4718592), kB(4718592), kB(0), nB(1), SB(RB.c.length), LB(RB.c), Array(31 - RB.c.length).fill(0), nB(OB.info.hasAlphaChannel ? 32 : 24), UB(65535)], [OG[OB.track.source._codec]?.(OB) ?? null, yO(OB), (0, jB.mb)(OB.info.decoderConfig.colorSpace) ? null : JO(OB), jO(OB)]),
+      jO = BB => 0 === BB.avgBitrate && 0 === BB.maxBitrate ? null : rB("btrt", [kB(0), kB(BB.maxBitrate), kB(BB.avgBitrate)]),
+      yO = BB => BB.info.pixelAspectRatio.num === BB.info.pixelAspectRatio.den ? null : rB("pasp", [kB(BB.info.pixelAspectRatio.num), kB(BB.info.pixelAspectRatio.den)]),
+      JO = BB => {
+        const OB = BB.info.decoderConfig.colorSpace;
+        return rB("colr", [LB(BB.muxer.isQuickTime ? "nclc" : "nclx"), nB(null != OB?.primaries ? jB.g[OB.primaries] : 2), nB(null != OB?.transfer ? jB.z[OB.transfer] : 2), nB(null != OB?.matrix ? jB.r[OB.matrix] : 2), BB.muxer.isQuickTime ? [] : SB((OB?.fullRange ? 1 : 0) << 7)])
       },
-      EB = HH => {
-        if (!HH.info.decoderConfig) return null;
-        const BH = HH.info.decoderConfig,
-          LH = BH.codec.split("."),
-          AH = Number(LH[1]),
-          rH = Number(LH[2]),
-          SH = (Number(LH[3]) << 4) + ((LH[4] ? Number(LH[4]) : 1) << 1) + (LH[8] ? Number(LH[8]) : Number(BH.colorSpace?.fullRange ?? 0)),
-          hH = LH[5] ? Number(LH[5]) : BH.colorSpace?.primaries ? tH.g[BH.colorSpace.primaries] : 1,
-          zH = LH[6] ? Number(LH[6]) : BH.colorSpace?.transfer ? tH.v[BH.colorSpace.transfer] : 1,
-          CH = LH[7] ? Number(LH[7]) : BH.colorSpace?.matrix ? tH.p[BH.colorSpace.matrix] : 1;
-        return NH("vpcC", 1, 0, [UH(AH), UH(rH), UH(SH), UH(hH), UH(zH), UH(CH), VH(0)])
+      MO = BB => {
+        if (!BB.info.decoderConfig) return null;
+        const OB = BB.info.decoderConfig,
+          GB = OB.codec.split("."),
+          YB = Number(GB[1]),
+          DB = Number(GB[2]),
+          QB = (Number(GB[3]) << 4) + ((GB[4] ? Number(GB[4]) : 1) << 1) + (GB[8] ? Number(GB[8]) : Number(OB.colorSpace?.fullRange ?? 0)),
+          oB = GB[5] ? Number(GB[5]) : OB.colorSpace?.primaries ? jB.g[OB.colorSpace.primaries] : 1,
+          yB = GB[6] ? Number(GB[6]) : OB.colorSpace?.transfer ? jB.z[OB.colorSpace.transfer] : 1,
+          JB = GB[7] ? Number(GB[7]) : OB.colorSpace?.matrix ? jB.r[OB.colorSpace.matrix] : 1;
+        return XB("vpcC", 1, 0, [SB(YB), SB(DB), SB(QB), SB(oB), SB(yB), SB(JB), nB(0)])
       },
-      XB = (HH, BH) => {
-        let LH, AH = 0,
-          SH = 16;
-        const hH = rH.k.includes(BH.track.source._codec);
-        if (hH) {
-          const HH = BH.track.source._codec,
+      PO = (BB, OB) => {
+        let GB, YB = 0,
+          QB = 16;
+        const oB = DB.n.includes(OB.track.source._codec);
+        if (oB) {
+          const BB = OB.track.source._codec,
             {
-              sampleSize: LH
-            } = (0, rH.S)(HH);
-          SH = 8 * LH, SH > 16 && (AH = 1)
+              sampleSize: GB
+            } = (0, DB.S)(BB);
+          QB = 8 * GB, QB > 16 && (YB = 1)
         }
-        if (BH.muxer.isQuickTime && (AH = 1), 0 === AH) LH = [Array(6).fill(0), VH(1), VH(AH), VH(0), kH(0), VH(BH.info.numberOfChannels), VH(SH), VH(0), VH(0), VH(BH.info.sampleRate < 65536 ? BH.info.sampleRate : 0), VH(0)];
+        if (OB.muxer.isQuickTime && (YB = 1), 0 === YB) GB = [Array(6).fill(0), nB(1), nB(YB), nB(0), kB(0), nB(OB.info.numberOfChannels), nB(QB), nB(0), nB(0), nB(OB.info.sampleRate < 65536 ? OB.info.sampleRate : 0), nB(0)];
         else {
-          const HH = hH ? 0 : -2;
-          LH = [Array(6).fill(0), VH(1), VH(AH), VH(0), kH(0), VH(BH.info.numberOfChannels), VH(Math.min(SH, 16)), OH(HH), VH(0), VH(BH.info.sampleRate < 65536 ? BH.info.sampleRate : 0), VH(0), hH ? [kH(1), kH(SH / 8), kH(BH.info.numberOfChannels * SH / 8)] : [kH(0), kH(0), kH(0)], kH(2)]
+          const BB = oB ? 0 : -2;
+          GB = [Array(6).fill(0), nB(1), nB(YB), nB(0), kB(0), nB(OB.info.numberOfChannels), nB(Math.min(QB, 16)), UB(BB), nB(0), nB(OB.info.sampleRate < 65536 ? OB.info.sampleRate : 0), nB(0), oB ? [kB(1), kB(QB / 8), kB(OB.info.numberOfChannels * QB / 8)] : [kB(0), kB(0), kB(0)], kB(2)]
         }
-        return gH(HH, LH, [AL(BH.track.source._codec, BH.muxer.isQuickTime)?.(BH) ?? null, tB(BH)])
+        return rB(BB, GB, [YG(OB.track.source._codec, OB.muxer.isQuickTime)?.(OB) ?? null, jO(OB)])
       },
-      GB = HH => {
-        let BH;
-        switch (HH.track.source._codec) {
+      zO = BB => {
+        let OB;
+        switch (BB.track.source._codec) {
           case "aac":
-            BH = 64;
+            OB = 64;
             break;
           case "mp3":
-            BH = 107;
+            OB = 107;
             break;
           case "vorbis":
-            BH = 221;
+            OB = 221;
             break;
           default:
-            throw new Error(`Unhandled audio codec: ${HH.track.source._codec}`)
+            throw new Error(`Unhandled audio codec: ${BB.track.source._codec}`)
         }
-        let LH = [...UH(BH), ...UH(21), ...bH(0), ...kH(HH.maxBitrate), ...kH(HH.avgBitrate)];
-        if (HH.info.decoderConfig.description) {
-          const BH = (0, tH.id)(HH.info.decoderConfig.description);
-          LH = [...LH, ...UH(5), ...cH(BH.byteLength), ...BH]
+        let GB = [...SB(OB), ...SB(21), ...fB(0), ...kB(BB.maxBitrate), ...kB(BB.avgBitrate)];
+        if (BB.info.decoderConfig.description) {
+          const OB = (0, jB.Id)(BB.info.decoderConfig.description);
+          GB = [...GB, ...SB(5), ...iB(OB.byteLength), ...OB]
         }
-        return LH = [...VH(1), ...UH(0), ...UH(4), ...cH(LH.length), ...LH, ...UH(6), ...UH(1), ...UH(2)], LH = [...UH(3), ...cH(LH.length), ...LH], NH("esds", 0, 0, LH)
+        return GB = [...nB(1), ...SB(0), ...SB(4), ...iB(GB.length), ...GB, ...SB(6), ...SB(1), ...SB(2)], GB = [...SB(3), ...iB(GB.length), ...GB], XB("esds", 0, 0, GB)
       },
-      YB = HH => gH("wave", void 0, [uB(HH), QB(HH), gH("\0\0\0\0")]),
-      uB = HH => gH("frma", [eH(LL(HH.track.source._codec, HH.info.decoderConfig.codec, HH.muxer.isQuickTime))]),
-      QB = HH => {
+      lO = BB => rB("wave", void 0, [pO(BB), qO(BB), rB("\0\0\0\0")]),
+      pO = BB => rB("frma", [LB(GG(BB.track.source._codec, BB.info.decoderConfig.codec, BB.muxer.isQuickTime))]),
+      qO = BB => {
         const {
-          littleEndian: BH
-        } = (0, rH.S)(HH.track.source._codec);
-        return gH("enda", [VH(+BH)])
+          littleEndian: OB
+        } = (0, DB.S)(BB.track.source._codec);
+        return rB("enda", [nB(+OB)])
       },
-      WB = HH => {
-        let BH = HH.info.numberOfChannels,
-          LH = 3840,
-          AH = HH.info.sampleRate,
-          rH = 0,
-          SH = 0,
-          hH = new Uint8Array(0);
-        const zH = HH.info.decoderConfig?.description;
-        if (zH) {
-          (0, tH.J)(zH.byteLength >= 18);
-          const HH = (0, tH.id)(zH),
-            CH = (0, QH.db)(HH);
-          BH = CH.outputChannelCount, LH = CH.preSkip, AH = CH.inputSampleRate, rH = CH.outputGain, SH = CH.channelMappingFamily, CH.channelMappingTable && (hH = CH.channelMappingTable)
+      ZO = BB => {
+        let OB = BB.info.numberOfChannels,
+          GB = 3840,
+          YB = BB.info.sampleRate,
+          DB = 0,
+          QB = 0,
+          oB = new Uint8Array(0);
+        const yB = BB.info.decoderConfig?.description;
+        if (yB) {
+          (0, jB.Q)(yB.byteLength >= 18);
+          const BB = (0, jB.Id)(yB),
+            JB = (0, qB.rb)(BB);
+          OB = JB.outputChannelCount, GB = JB.preSkip, YB = JB.inputSampleRate, DB = JB.outputGain, QB = JB.channelMappingFamily, JB.channelMappingTable && (oB = JB.channelMappingTable)
         }
-        return gH("dOps", [UH(0), UH(BH), VH(LH), kH(AH), OH(rH), UH(SH), ...hH])
+        return rB("dOps", [SB(0), SB(OB), nB(GB), kB(YB), UB(DB), SB(QB), ...oB])
       },
-      MB = HH => {
-        const BH = HH.info.decoderConfig?.description;
-        (0, tH.J)(BH);
-        const LH = (0, tH.id)(BH);
-        return NH("dfLa", 0, 0, [...LH.subarray(4)])
+      NO = BB => {
+        const OB = BB.info.decoderConfig?.description;
+        (0, jB.Q)(OB);
+        const GB = (0, jB.Id)(OB);
+        return XB("dfLa", 0, 0, [...GB.subarray(4)])
       },
-      xB = HH => {
+      RO = BB => {
         const {
-          littleEndian: BH,
-          sampleSize: LH
-        } = (0, rH.S)(HH.track.source._codec);
-        return NH("pcmC", 0, 0, [UH(+BH), UH(8 * LH)])
+          littleEndian: OB,
+          sampleSize: GB
+        } = (0, DB.S)(BB.track.source._codec);
+        return XB("pcmC", 0, 0, [SB(+OB), SB(8 * GB)])
       },
-      vB = HH => {
-        (0, tH.J)(HH.info.primingPacket);
-        const BH = (0, QH.W)(HH.info.primingPacket.data);
-        if (!BH) throw new Error("Couldn't extract AC-3 frame info from the audio packet. Ensure the packets contain valid AC-3 sync frames (as specified in ETSI TS 102 366).");
-        const LH = new Uint8Array(3),
-          AH = new WH.e(LH);
-        return AH.writeBits(2, BH.fscod), AH.writeBits(5, BH.bsid), AH.writeBits(3, BH.bsmod), AH.writeBits(3, BH.acmod), AH.writeBits(1, BH.lfeon), AH.writeBits(5, BH.bitRateCode), AH.writeBits(5, 0), gH("dac3", [...LH])
+      WO = BB => {
+        (0, jB.Q)(BB.info.primingPacket);
+        const OB = (0, qB.fb)(BB.info.primingPacket.data);
+        if (!OB) throw new Error("Couldn't extract AC-3 frame info from the audio packet. Ensure the packets contain valid AC-3 sync frames (as specified in ETSI TS 102 366).");
+        const GB = new Uint8Array(3),
+          YB = new ZB.e(GB);
+        return YB.writeBits(2, OB.fscod), YB.writeBits(5, OB.bsid), YB.writeBits(3, OB.bsmod), YB.writeBits(3, OB.acmod), YB.writeBits(1, OB.lfeon), YB.writeBits(5, OB.bitRateCode), YB.writeBits(5, 0), rB("dac3", [...GB])
       },
-      PB = HH => {
-        (0, tH.J)(HH.info.primingPacket);
-        const BH = (0, QH._)(HH.info.primingPacket.data);
-        if (!BH) throw new Error("Couldn't extract E-AC-3 frame info from the audio packet. Ensure the packets contain valid E-AC-3 sync frames (as specified in ETSI TS 102 366).");
-        let LH = 16;
-        for (const hH of BH.substreams) LH += 23, hH.numDepSub > 0 ? LH += 9 : LH += 1;
-        const AH = Math.ceil(LH / 8),
-          rH = new Uint8Array(AH),
-          SH = new WH.e(rH);
-        SH.writeBits(13, BH.dataRate), SH.writeBits(3, BH.substreams.length - 1);
-        for (const hH of BH.substreams) SH.writeBits(2, hH.fscod), SH.writeBits(5, hH.bsid), SH.writeBits(1, 0), SH.writeBits(1, 0), SH.writeBits(3, hH.bsmod), SH.writeBits(3, hH.acmod), SH.writeBits(1, hH.lfeon), SH.writeBits(3, 0), SH.writeBits(4, hH.numDepSub), hH.numDepSub > 0 ? SH.writeBits(9, hH.chanLoc) : SH.writeBits(1, 0);
-        return gH("dec3", [...rH])
+      AO = BB => {
+        (0, jB.Q)(BB.info.primingPacket);
+        const OB = (0, qB.kb)(BB.info.primingPacket.data);
+        if (!OB) throw new Error("Couldn't extract E-AC-3 frame info from the audio packet. Ensure the packets contain valid E-AC-3 sync frames (as specified in ETSI TS 102 366).");
+        let GB = 16;
+        for (const oB of OB.substreams) GB += 23, oB.numDepSub > 0 ? GB += 9 : GB += 1;
+        const YB = Math.ceil(GB / 8),
+          DB = new Uint8Array(YB),
+          QB = new ZB.e(DB);
+        QB.writeBits(13, OB.dataRate), QB.writeBits(3, OB.substreams.length - 1);
+        for (const oB of OB.substreams) QB.writeBits(2, oB.fscod), QB.writeBits(5, oB.bsid), QB.writeBits(1, 0), QB.writeBits(1, 0), QB.writeBits(3, oB.bsmod), QB.writeBits(3, oB.acmod), QB.writeBits(1, oB.lfeon), QB.writeBits(3, 0), QB.writeBits(4, oB.numDepSub), oB.numDepSub > 0 ? QB.writeBits(9, oB.chanLoc) : QB.writeBits(1, 0);
+        return rB("dec3", [...DB])
       },
-      TB = HH => {
-        (0, tH.J)(HH.info.primingPacket);
-        const BH = (0, QH.X)(HH.info.primingPacket.data);
-        if (!BH) throw new Error("Couldn't extract DTS frame info from the audio packet. Ensure the packets contain valid DTS frames as specified in ETSI TS 102 114.");
-        return gH("ddts", [...(0, QH.q)(BH)])
+      VO = BB => {
+        (0, jB.Q)(BB.info.primingPacket);
+        const OB = (0, qB.hb)(BB.info.primingPacket.data);
+        if (!OB) throw new Error("Couldn't extract DTS frame info from the audio packet. Ensure the packets contain valid DTS frames as specified in ETSI TS 102 114.");
+        return rB("ddts", [...(0, qB.r)(OB)])
       },
-      UB = (HH, BH) => gH(HH, [Array(6).fill(0), VH(1)], [SL[BH.track.source._codec](BH), tB(BH)]),
-      VB = HH => NH("stts", 0, 0, [kH(HH.timeToSampleTable.length), HH.timeToSampleTable.map((HH => [kH(HH.sampleCount), kH(HH.sampleDelta)]))]),
-      OB = HH => {
-        if (HH.samples.every((HH => "key" === HH.type))) return null;
-        const BH = [...HH.samples.entries()].filter((HH => {
-          let [, BH] = HH;
-          return "key" === BH.type
+      SO = (BB, OB) => rB(BB, [Array(6).fill(0), nB(1)], [QG[OB.track.source._codec](OB), jO(OB)]),
+      nO = BB => XB("stts", 0, 0, [kB(BB.timeToSampleTable.length), BB.timeToSampleTable.map((BB => [kB(BB.sampleCount), kB(BB.sampleDelta)]))]),
+      UO = BB => {
+        if (BB.samples.every((BB => "key" === BB.type))) return null;
+        const OB = [...BB.samples.entries()].filter((BB => {
+          let [, OB] = BB;
+          return "key" === OB.type
         }));
-        return NH("stss", 0, 0, [kH(BH.length), BH.map((HH => {
-          let [BH] = HH;
-          return kH(BH + 1)
+        return XB("stss", 0, 0, [kB(OB.length), OB.map((BB => {
+          let [OB] = BB;
+          return kB(OB + 1)
         }))])
       },
-      bB = HH => NH("stsc", 0, 0, [kH(HH.compactlyCodedChunkTable.length), HH.compactlyCodedChunkTable.map((HH => [kH(HH.firstChunk), kH(HH.samplesPerChunk), kH(1)]))]),
-      kB = HH => {
-        if ("audio" === HH.type && HH.info.requiresPcmTransformation) {
+      fO = BB => XB("stsc", 0, 0, [kB(BB.compactlyCodedChunkTable.length), BB.compactlyCodedChunkTable.map((BB => [kB(BB.firstChunk), kB(BB.samplesPerChunk), kB(1)]))]),
+      kO = BB => {
+        if ("audio" === BB.type && BB.info.requiresPcmTransformation) {
           const {
-            sampleSize: BH
-          } = (0, rH.S)(HH.track.source._codec);
-          return NH("stsz", 0, 0, [kH(BH * HH.info.numberOfChannels), kH(HH.samples.reduce(((BH, LH) => BH + GL(LH.duration, HH.timescale)), 0))])
+            sampleSize: OB
+          } = (0, DB.S)(BB.track.source._codec);
+          return XB("stsz", 0, 0, [kB(OB * BB.info.numberOfChannels), kB(BB.samples.reduce(((OB, GB) => OB + zG(GB.duration, BB.timescale)), 0))])
         }
-        return NH("stsz", 0, 0, [kH(0), kH(HH.samples.length), HH.samples.map((HH => kH(HH.size)))])
+        return XB("stsz", 0, 0, [kB(0), kB(BB.samples.length), BB.samples.map((BB => kB(BB.size)))])
       },
-      mB = HH => HH.finalizedChunks.length > 0 && (0, tH.Xb)(HH.finalizedChunks).offset >= 2 ** 32 ? NH("co64", 0, 0, [kH(HH.finalizedChunks.length), HH.finalizedChunks.map((HH => oH(HH.offset)))]) : NH("stco", 0, 0, [kH(HH.finalizedChunks.length), HH.finalizedChunks.map((HH => kH(HH.offset)))]),
-      oB = HH => NH("ctts", 1, 0, [kH(HH.compositionTimeOffsetTable.length), HH.compositionTimeOffsetTable.map((HH => [kH(HH.sampleCount), mH(HH.sampleCompositionTimeOffset)]))]),
-      IB = HH => {
-        let BH = 1 / 0,
-          LH = -1 / 0,
-          AH = 1 / 0,
-          rH = -1 / 0;
-        (0, tH.J)(HH.compositionTimeOffsetTable.length > 0), (0, tH.J)(HH.samples.length > 0);
-        for (let hH = 0; hH < HH.compositionTimeOffsetTable.length; hH++) {
-          const AH = HH.compositionTimeOffsetTable[hH];
-          BH = Math.min(BH, AH.sampleCompositionTimeOffset), LH = Math.max(LH, AH.sampleCompositionTimeOffset)
+      dO = BB => BB.finalizedChunks.length > 0 && (0, jB.sc)(BB.finalizedChunks).offset >= 2 ** 32 ? XB("co64", 0, 0, [kB(BB.finalizedChunks.length), BB.finalizedChunks.map((BB => KB(BB.offset)))]) : XB("stco", 0, 0, [kB(BB.finalizedChunks.length), BB.finalizedChunks.map((BB => kB(BB.offset)))]),
+      KO = BB => XB("ctts", 1, 0, [kB(BB.compositionTimeOffsetTable.length), BB.compositionTimeOffsetTable.map((BB => [kB(BB.sampleCount), dB(BB.sampleCompositionTimeOffset)]))]),
+      uO = BB => {
+        let OB = 1 / 0,
+          GB = -1 / 0,
+          YB = 1 / 0,
+          DB = -1 / 0;
+        (0, jB.Q)(BB.compositionTimeOffsetTable.length > 0), (0, jB.Q)(BB.samples.length > 0);
+        for (let oB = 0; oB < BB.compositionTimeOffsetTable.length; oB++) {
+          const YB = BB.compositionTimeOffsetTable[oB];
+          OB = Math.min(OB, YB.sampleCompositionTimeOffset), GB = Math.max(GB, YB.sampleCompositionTimeOffset)
         }
-        for (let hH = 0; hH < HH.samples.length; hH++) {
-          const BH = HH.samples[hH];
-          AH = Math.min(AH, GL(BH.timestamp, HH.timescale)), rH = Math.max(rH, GL(BH.timestamp + BH.duration, HH.timescale))
+        for (let oB = 0; oB < BB.samples.length; oB++) {
+          const OB = BB.samples[oB];
+          YB = Math.min(YB, zG(OB.timestamp, BB.timescale)), DB = Math.max(DB, zG(OB.timestamp + OB.duration, BB.timescale))
         }
-        const SH = Math.max(-BH, 0);
-        return rH >= 2 ** 31 ? null : NH("cslg", 0, 0, [mH(SH), mH(BH), mH(LH), mH(AH), mH(rH)])
+        const QB = Math.max(-OB, 0);
+        return DB >= 2 ** 31 ? null : XB("cslg", 0, 0, [dB(QB), dB(OB), dB(GB), dB(YB), dB(DB)])
       },
-      fB = HH => gH("mvex", void 0, HH.map(lB)),
-      lB = HH => NH("trex", 0, 0, [kH(HH.track.id), kH(1), kH(0), kH(0), kH(0)]),
-      KB = (HH, BH) => gH("moof", void 0, [cB(HH), ...BH.map(qB)]),
-      cB = HH => NH("mfhd", 0, 0, [kH(HH)]),
-      eB = HH => {
-        let BH = 0,
-          LH = 0;
-        const AH = "delta" === HH.type;
-        return LH |= +AH, BH |= AH ? 1 : 2, BH << 24 | LH << 16
+      mO = BB => rB("mvex", void 0, BB.map(IO)),
+      IO = BB => XB("trex", 0, 0, [kB(BB.track.id), kB(1), kB(0), kB(0), kB(0)]),
+      FO = (BB, OB) => rB("moof", void 0, [iO(BB), ...OB.map(gO)]),
+      iO = BB => XB("mfhd", 0, 0, [kB(BB)]),
+      LO = BB => {
+        let OB = 0,
+          GB = 0;
+        const YB = "delta" === BB.type;
+        return GB |= +YB, OB |= YB ? 1 : 2, OB << 24 | GB << 16
       },
-      qB = HH => gH("traf", void 0, [gB(HH), NB(HH), RB(HH)]),
-      gB = HH => {
-        (0, tH.J)(HH.currentChunk);
-        let BH = 0;
-        BH |= 8, BH |= 16, BH |= 32, BH |= 131072;
-        const LH = HH.currentChunk.samples[1] ?? HH.currentChunk.samples[0],
-          AH = {
-            duration: LH.timescaleUnitsToNextSample,
-            size: LH.size,
-            flags: eB(LH)
+      gO = BB => rB("traf", void 0, [rO(BB), XO(BB), wO(BB)]),
+      rO = BB => {
+        (0, jB.Q)(BB.currentChunk);
+        let OB = 0;
+        OB |= 8, OB |= 16, OB |= 32, OB |= 131072;
+        const GB = BB.currentChunk.samples[1] ?? BB.currentChunk.samples[0],
+          YB = {
+            duration: GB.timescaleUnitsToNextSample,
+            size: GB.size,
+            flags: LO(GB)
           };
-        return NH("tfhd", 0, 131128, [kH(HH.track.id), kH(AH.duration), kH(AH.size), kH(AH.flags)])
+        return XB("tfhd", 0, 131128, [kB(BB.track.id), kB(YB.duration), kB(YB.size), kB(YB.flags)])
       },
-      NB = HH => ((0, tH.J)(HH.currentChunk), NH("tfdt", 1, 0, [oH(GL(HH.currentChunk.startTimestamp, HH.timescale))])),
-      RB = HH => {
-        (0, tH.J)(HH.currentChunk);
-        const BH = HH.currentChunk.samples.map((HH => HH.timescaleUnitsToNextSample)),
-          LH = HH.currentChunk.samples.map((HH => HH.size)),
-          AH = HH.currentChunk.samples.map(eB),
-          rH = HH.currentChunk.samples.map((BH => GL(BH.timestamp - BH.decodeTimestamp, HH.timescale))),
-          SH = new Set(BH),
-          hH = new Set(LH),
-          zH = new Set(AH),
-          CH = new Set(rH),
-          EH = 2 === zH.size && AH[0] !== AH[1],
-          XH = SH.size > 1,
-          GH = hH.size > 1,
-          YH = !EH && zH.size > 1,
-          uH = CH.size > 1 || [...CH].some((HH => 0 !== HH));
-        let QH = 0;
-        return QH |= 1, QH |= 4 * +EH, QH |= 256 * +XH, QH |= 512 * +GH, QH |= 1024 * +YH, QH |= 2048 * +uH, NH("trun", 1, QH, [kH(HH.currentChunk.samples.length), kH(HH.currentChunk.offset - HH.currentChunk.moofOffset || 0), EH ? kH(AH[0]) : [], HH.currentChunk.samples.map(((HH, SH) => [XH ? kH(BH[SH]) : [], GH ? kH(LH[SH]) : [], YH ? kH(AH[SH]) : [], uH ? mH(rH[SH]) : []]))])
+      XO = BB => ((0, jB.Q)(BB.currentChunk), XB("tfdt", 1, 0, [KB(zG(BB.currentChunk.startTimestamp, BB.timescale))])),
+      wO = BB => {
+        (0, jB.Q)(BB.currentChunk);
+        const OB = BB.currentChunk.samples.map((BB => BB.timescaleUnitsToNextSample)),
+          GB = BB.currentChunk.samples.map((BB => BB.size)),
+          YB = BB.currentChunk.samples.map(LO),
+          DB = BB.currentChunk.samples.map((OB => zG(OB.timestamp - OB.decodeTimestamp, BB.timescale))),
+          QB = new Set(OB),
+          oB = new Set(GB),
+          yB = new Set(YB),
+          JB = new Set(DB),
+          MB = 2 === yB.size && YB[0] !== YB[1],
+          PB = QB.size > 1,
+          zB = oB.size > 1,
+          lB = !MB && yB.size > 1,
+          pB = JB.size > 1 || [...JB].some((BB => 0 !== BB));
+        let qB = 0;
+        return qB |= 1, qB |= 4 * +MB, qB |= 256 * +PB, qB |= 512 * +zB, qB |= 1024 * +lB, qB |= 2048 * +pB, XB("trun", 1, qB, [kB(BB.currentChunk.samples.length), kB(BB.currentChunk.offset - BB.currentChunk.moofOffset || 0), MB ? kB(YB[0]) : [], BB.currentChunk.samples.map(((BB, QB) => [PB ? kB(OB[QB]) : [], zB ? kB(GB[QB]) : [], lB ? kB(YB[QB]) : [], pB ? dB(DB[QB]) : []]))])
       },
-      jB = HH => NH("tfra", 1, 0, [kH(HH.track.id), kH(63), kH(HH.finalizedChunks.length), HH.finalizedChunks.map((BH => [oH(GL(BH.samples[0].timestamp, HH.timescale)), oH(BH.moofOffset), kH(BH.trafIndex + 1), kH(1), kH(1)]))]),
-      nB = () => NH("mfro", 0, 0, [kH(0)]),
-      FB = () => gH("vtte"),
-      DB = (HH, BH, LH, AH, rH) => gH("vttc", void 0, [null !== rH ? gH("vsid", [mH(rH)]) : null, null !== LH ? gH("iden", [...tH.$c.encode(LH)]) : null, null !== BH ? gH("ctim", [...tH.$c.encode((0, MH.f)(BH))]) : null, null !== AH ? gH("sttg", [...tH.$c.encode(AH)]) : null, gH("payl", [...tH.$c.encode(HH)])]),
-      wB = HH => gH("vtta", [...tH.$c.encode(HH)]),
-      ZB = HH => {
-        const BH = [],
-          LH = HH.format._options.metadataFormat ?? "auto",
-          AH = HH.output._metadataTags;
-        if ("mdir" === LH || "auto" === LH && !HH.isQuickTime) {
-          const HH = iB(AH);
-          HH && BH.push(HH)
-        } else if ("mdta" === LH) {
-          const HH = pB(AH);
-          HH && BH.push(HH)
-        } else("udta" === LH || "auto" === LH && HH.isQuickTime) && dB(BH, HH.output._metadataTags);
-        return 0 === BH.length ? null : gH("udta", void 0, BH)
+      EO = BB => XB("tfra", 1, 0, [kB(BB.track.id), kB(63), kB(BB.finalizedChunks.length), BB.finalizedChunks.map((OB => [KB(zG(OB.samples[0].timestamp, BB.timescale)), KB(OB.moofOffset), kB(OB.trafIndex + 1), kB(1), kB(1)]))]),
+      cO = () => XB("mfro", 0, 0, [kB(0)]),
+      hO = () => rB("vtte"),
+      aO = (BB, OB, GB, YB, DB) => rB("vttc", void 0, [null !== DB ? rB("vsid", [dB(DB)]) : null, null !== GB ? rB("iden", [...jB.Bd.encode(GB)]) : null, null !== OB ? rB("ctim", [...jB.Bd.encode((0, NB.e)(OB))]) : null, null !== YB ? rB("sttg", [...jB.Bd.encode(YB)]) : null, rB("payl", [...jB.Bd.encode(BB)])]),
+      eO = BB => rB("vtta", [...jB.Bd.encode(BB)]),
+      TO = BB => {
+        const OB = [],
+          GB = BB.format._options.metadataFormat ?? "auto",
+          YB = BB.output._metadataTags;
+        if ("mdir" === GB || "auto" === GB && !BB.isQuickTime) {
+          const BB = sO(YB);
+          BB && OB.push(BB)
+        } else if ("mdta" === GB) {
+          const BB = xO(YB);
+          BB && OB.push(BB)
+        } else("udta" === GB || "auto" === GB && BB.isQuickTime) && bO(OB, BB.output._metadataTags);
+        return 0 === OB.length ? null : rB("udta", void 0, OB)
       },
-      dB = (HH, BH) => {
+      bO = (BB, OB) => {
         for (const {
-            key: LH,
-            value: AH
+            key: GB,
+            value: YB
           }
-          of(0, tH.Vb)(BH)) switch (LH) {
+          of(0, jB.rc)(OB)) switch (GB) {
           case "title":
-            HH.push(aB("\xa9nam", AH));
+            BB.push(CO("\xa9nam", YB));
             break;
           case "description":
-            HH.push(aB("\xa9des", AH));
+            BB.push(CO("\xa9des", YB));
             break;
           case "artist":
-            HH.push(aB("\xa9ART", AH));
+            BB.push(CO("\xa9ART", YB));
             break;
           case "album":
-            HH.push(aB("\xa9alb", AH));
+            BB.push(CO("\xa9alb", YB));
             break;
           case "albumArtist":
-            HH.push(aB("albr", AH));
+            BB.push(CO("albr", YB));
             break;
           case "genre":
-            HH.push(aB("\xa9gen", AH));
+            BB.push(CO("\xa9gen", YB));
             break;
           case "date":
-            HH.push(aB("\xa9day", AH.toISOString().slice(0, 10)));
+            BB.push(CO("\xa9day", YB.toISOString().slice(0, 10)));
             break;
           case "comment":
-            HH.push(aB("\xa9cmt", AH));
+            BB.push(CO("\xa9cmt", YB));
             break;
           case "lyrics":
-            HH.push(aB("\xa9lyr", AH));
+            BB.push(CO("\xa9lyr", YB));
             break;
           case "raw":
           case "discNumber":
@@ -4086,112 +4086,112 @@ export const modules = {
           case "images":
             break;
           default:
-            (0, tH.G)(LH)
+            (0, jB.M)(GB)
         }
-        if (BH.raw)
-          for (const LH in BH.raw) {
-            const AH = BH.raw[LH];
-            null == AH || 4 !== LH.length || HH.some((HH => HH.type === LH)) || ("string" === typeof AH ? HH.push(aB(LH, AH)) : AH instanceof Uint8Array && HH.push(gH(LH, Array.from(AH))))
+        if (OB.raw)
+          for (const GB in OB.raw) {
+            const YB = OB.raw[GB];
+            null == YB || 4 !== GB.length || BB.some((BB => BB.type === GB)) || ("string" === typeof YB ? BB.push(CO(GB, YB)) : YB instanceof Uint8Array && BB.push(rB(GB, Array.from(YB))))
           }
       },
-      aB = (HH, BH) => {
-        const LH = tH.$c.encode(BH);
-        return gH(HH, [VH(LH.length), VH(hL("und")), Array.from(LH)])
+      CO = (BB, OB) => {
+        const GB = jB.Bd.encode(OB);
+        return rB(BB, [nB(GB.length), nB(oG("und")), Array.from(GB)])
       },
-      sB = {
+      HO = {
         "image/jpeg": 13,
         "image/png": 14,
         "image/bmp": 27
       },
-      JB = (HH, BH) => {
-        const LH = [];
+      vO = (BB, OB) => {
+        const GB = [];
         for (const {
-            key: AH,
-            value: rH
+            key: YB,
+            value: DB
           }
-          of(0, tH.Vb)(HH)) switch (AH) {
+          of(0, jB.rc)(BB)) switch (YB) {
           case "title":
-            LH.push({
-              key: BH ? "title" : "\xa9nam",
-              value: yB(rH)
+            GB.push({
+              key: OB ? "title" : "\xa9nam",
+              value: tO(DB)
             });
             break;
           case "description":
-            LH.push({
-              key: BH ? "description" : "\xa9des",
-              value: yB(rH)
+            GB.push({
+              key: OB ? "description" : "\xa9des",
+              value: tO(DB)
             });
             break;
           case "artist":
-            LH.push({
-              key: BH ? "artist" : "\xa9ART",
-              value: yB(rH)
+            GB.push({
+              key: OB ? "artist" : "\xa9ART",
+              value: tO(DB)
             });
             break;
           case "album":
-            LH.push({
-              key: BH ? "album" : "\xa9alb",
-              value: yB(rH)
+            GB.push({
+              key: OB ? "album" : "\xa9alb",
+              value: tO(DB)
             });
             break;
           case "albumArtist":
-            LH.push({
-              key: BH ? "album_artist" : "aART",
-              value: yB(rH)
+            GB.push({
+              key: OB ? "album_artist" : "aART",
+              value: tO(DB)
             });
             break;
           case "comment":
-            LH.push({
-              key: BH ? "comment" : "\xa9cmt",
-              value: yB(rH)
+            GB.push({
+              key: OB ? "comment" : "\xa9cmt",
+              value: tO(DB)
             });
             break;
           case "genre":
-            LH.push({
-              key: BH ? "genre" : "\xa9gen",
-              value: yB(rH)
+            GB.push({
+              key: OB ? "genre" : "\xa9gen",
+              value: tO(DB)
             });
             break;
           case "beatsPerMinute":
-            BH || LH.push({
+            OB || GB.push({
               key: "tmpo",
-              value: gH("data", [kH(21), kH(0), VH(rH)])
+              value: rB("data", [kB(21), kB(0), nB(DB)])
             });
             break;
           case "lyrics":
-            LH.push({
-              key: BH ? "lyrics" : "\xa9lyr",
-              value: yB(rH)
+            GB.push({
+              key: OB ? "lyrics" : "\xa9lyr",
+              value: tO(DB)
             });
             break;
           case "date":
-            LH.push({
-              key: BH ? "date" : "\xa9day",
-              value: yB(rH.toISOString().slice(0, 10))
+            GB.push({
+              key: OB ? "date" : "\xa9day",
+              value: tO(DB.toISOString().slice(0, 10))
             });
             break;
           case "images":
-            for (const HH of rH) "coverFront" === HH.kind && LH.push({
+            for (const BB of DB) "coverFront" === BB.kind && GB.push({
               key: "covr",
-              value: gH("data", [kH(sB[HH.mimeType] ?? 0), kH(0), Array.from(HH.data)])
+              value: rB("data", [kB(HO[BB.mimeType] ?? 0), kB(0), Array.from(BB.data)])
             });
             break;
           case "trackNumber":
-            if (BH) {
-              const BH = void 0 !== HH.tracksTotal ? `${rH}/${HH.tracksTotal}` : rH.toString();
-              LH.push({
+            if (OB) {
+              const OB = void 0 !== BB.tracksTotal ? `${DB}/${BB.tracksTotal}` : DB.toString();
+              GB.push({
                 key: "track",
-                value: yB(BH)
+                value: tO(OB)
               })
-            } else LH.push({
+            } else GB.push({
               key: "trkn",
-              value: gH("data", [kH(0), kH(0), VH(0), VH(rH), VH(HH.tracksTotal ?? 0), VH(0)])
+              value: rB("data", [kB(0), kB(0), nB(0), nB(DB), nB(BB.tracksTotal ?? 0), nB(0)])
             });
             break;
           case "discNumber":
-            BH || LH.push({
+            OB || GB.push({
               key: "disc",
-              value: gH("data", [kH(0), kH(0), VH(0), VH(rH), VH(HH.discsTotal ?? 0), VH(0)])
+              value: rB("data", [kB(0), kB(0), nB(0), nB(DB), nB(BB.discsTotal ?? 0), nB(0)])
             });
             break;
           case "tracksTotal":
@@ -4199,40 +4199,40 @@ export const modules = {
           case "raw":
             break;
           default:
-            (0, tH.G)(AH)
+            (0, jB.M)(YB)
         }
-        if (HH.raw)
-          for (const AH in HH.raw) {
-            const rH = HH.raw[AH];
-            null == rH || !BH && 4 !== AH.length || LH.some((HH => HH.key === AH)) || ("string" === typeof rH ? LH.push({
-              key: AH,
-              value: yB(rH)
-            }) : rH instanceof Uint8Array ? LH.push({
-              key: AH,
-              value: gH("data", [kH(0), kH(0), Array.from(rH)])
-            }) : rH instanceof YH.h && LH.push({
-              key: AH,
-              value: gH("data", [kH(sB[rH.mimeType] ?? 0), kH(0), Array.from(rH.data)])
+        if (BB.raw)
+          for (const YB in BB.raw) {
+            const DB = BB.raw[YB];
+            null == DB || !OB && 4 !== YB.length || GB.some((BB => BB.key === YB)) || ("string" === typeof DB ? GB.push({
+              key: YB,
+              value: tO(DB)
+            }) : DB instanceof Uint8Array ? GB.push({
+              key: YB,
+              value: rB("data", [kB(0), kB(0), Array.from(DB)])
+            }) : DB instanceof lB.h && GB.push({
+              key: YB,
+              value: rB("data", [kB(HO[DB.mimeType] ?? 0), kB(0), Array.from(DB.data)])
             }))
           }
-        return LH
+        return GB
       },
-      iB = HH => {
-        const BH = JB(HH, !1);
-        return 0 === BH.length ? null : NH("meta", 0, 0, void 0, [pH(!1, "mdir", "", "appl"), gH("ilst", void 0, BH.map((HH => gH(HH.key, void 0, [HH.value]))))])
+      sO = BB => {
+        const OB = vO(BB, !1);
+        return 0 === OB.length ? null : XB("meta", 0, 0, void 0, [xB(!1, "mdir", "", "appl"), rB("ilst", void 0, OB.map((BB => rB(BB.key, void 0, [BB.value]))))])
       },
-      pB = HH => {
-        const BH = JB(HH, !0);
-        return 0 === BH.length ? null : gH("meta", void 0, [pH(!1, "mdta", ""), NH("keys", 0, 0, [kH(BH.length)], BH.map((HH => gH("mdta", [...tH.$c.encode(HH.key)])))), gH("ilst", void 0, BH.map(((HH, BH) => {
-          const LH = String.fromCharCode(...kH(BH + 1));
-          return gH(LH, void 0, [HH.value])
+      xO = BB => {
+        const OB = vO(BB, !0);
+        return 0 === OB.length ? null : rB("meta", void 0, [xB(!1, "mdta", ""), XB("keys", 0, 0, [kB(OB.length)], OB.map((BB => rB("mdta", [...jB.Bd.encode(BB.key)])))), rB("ilst", void 0, OB.map(((BB, OB) => {
+          const GB = String.fromCharCode(...kB(OB + 1));
+          return rB(GB, void 0, [BB.value])
         })))])
       },
-      yB = HH => gH("data", [kH(1), kH(0), ...tH.$c.encode(HH)]),
-      HL = (HH, BH) => {
-        switch (HH) {
+      tO = BB => rB("data", [kB(1), kB(0), ...jB.Bd.encode(BB)]),
+      BG = (BB, OB) => {
+        switch (BB) {
           case "avc":
-            return BH.startsWith("avc3") ? "avc3" : "avc1";
+            return OB.startsWith("avc3") ? "avc3" : "avc1";
           case "hevc":
             return "hvc1";
           case "vp8":
@@ -4242,19 +4242,19 @@ export const modules = {
           case "av1":
             return "av01";
           case "prores":
-            return BH
+            return OB
         }
       },
-      BL = {
-        avc: HH => HH.info.decoderConfig && gH("avcC", [...(0, tH.id)(HH.info.decoderConfig.description)]),
-        hevc: HH => HH.info.decoderConfig && gH("hvcC", [...(0, tH.id)(HH.info.decoderConfig.description)]),
-        vp8: EB,
-        vp9: EB,
-        av1: HH => gH("av1C", (0, rH.E)(HH.info.decoderConfig.codec)),
+      OG = {
+        avc: BB => BB.info.decoderConfig && rB("avcC", [...(0, jB.Id)(BB.info.decoderConfig.description)]),
+        hevc: BB => BB.info.decoderConfig && rB("hvcC", [...(0, jB.Id)(BB.info.decoderConfig.description)]),
+        vp8: MO,
+        vp9: MO,
+        av1: BB => rB("av1C", (0, DB.F)(BB.info.decoderConfig.codec)),
         prores: null
       },
-      LL = (HH, BH, LH) => {
-        switch (HH) {
+      GG = (BB, OB, GB) => {
+        switch (BB) {
           case "aac":
           case "mp3":
           case "vorbis":
@@ -4276,9 +4276,9 @@ export const modules = {
           case "eac3":
             return "ec-3";
           case "dts":
-            return BH
+            return OB
         }
-        if (LH) switch (HH) {
+        if (GB) switch (BB) {
           case "pcm-s16":
             return "sowt";
           case "pcm-s16be":
@@ -4295,7 +4295,7 @@ export const modules = {
           case "pcm-f64":
           case "pcm-f64be":
             return "fl64"
-        } else switch (HH) {
+        } else switch (BB) {
           case "pcm-s16":
           case "pcm-s16be":
           case "pcm-s24":
@@ -4310,24 +4310,24 @@ export const modules = {
             return "fpcm"
         }
       },
-      AL = (HH, BH) => {
-        switch (HH) {
+      YG = (BB, OB) => {
+        switch (BB) {
           case "aac":
           case "mp3":
           case "vorbis":
-            return GB;
+            return zO;
           case "opus":
-            return WB;
+            return ZO;
           case "flac":
-            return MB;
+            return NO;
           case "ac3":
-            return vB;
+            return WO;
           case "eac3":
-            return PB;
+            return AO;
           case "dts":
-            return TB
+            return VO
         }
-        if (BH) switch (HH) {
+        if (OB) switch (BB) {
           case "pcm-s24":
           case "pcm-s24be":
           case "pcm-s32":
@@ -4336,8 +4336,8 @@ export const modules = {
           case "pcm-f32be":
           case "pcm-f64":
           case "pcm-f64be":
-            return YB
-        } else switch (HH) {
+            return lO
+        } else switch (BB) {
           case "pcm-s16":
           case "pcm-s16be":
           case "pcm-s24":
@@ -4348,192 +4348,192 @@ export const modules = {
           case "pcm-f32be":
           case "pcm-f64":
           case "pcm-f64be":
-            return xB
+            return RO
         }
         return null
       },
-      rL = {
+      DG = {
         webvtt: "wvtt"
       },
-      SL = {
-        webvtt: HH => gH("vttC", [...tH.$c.encode(HH.info.config.description)])
+      QG = {
+        webvtt: BB => rB("vttC", [...jB.Bd.encode(BB.info.config.description)])
       },
-      hL = HH => {
-        (0, tH.J)(3 === HH.length);
-        let BH = 0;
-        for (let LH = 0; LH < 3; LH++) BH <<= 5, BH += HH.charCodeAt(LH) - 96;
-        return BH
+      oG = BB => {
+        (0, jB.Q)(3 === BB.length);
+        let OB = 0;
+        for (let GB = 0; GB < 3; GB++) OB <<= 5, OB += BB.charCodeAt(GB) - 96;
+        return OB
       };
-    var tL = LH(40881),
-      zL = LH(40888);
-    const CL = HH => {
-        const BH = HH.filePos,
-          LH = EH(HH, 9),
-          AH = new WH.e(LH);
-        if (4095 !== AH.readBits(12)) return null;
-        AH.skipBits(1);
-        if (0 !== AH.readBits(2)) return null;
-        const rH = AH.readBits(1),
-          SH = AH.readBits(2) + 1,
-          hH = AH.readBits(4);
-        if (15 === hH) return null;
-        AH.skipBits(1);
-        const tH = AH.readBits(3);
-        if (0 === tH) throw new Error("ADTS frames with channel configuration 0 are not supported.");
-        AH.skipBits(1), AH.skipBits(1), AH.skipBits(1), AH.skipBits(1);
-        const zH = AH.readBits(13);
-        AH.skipBits(11);
-        const CH = AH.readBits(2) + 1;
-        if (1 !== CH) throw new Error("ADTS frames with more than one AAC frame are not supported.");
-        let XH = null;
-        return 1 === rH ? HH.filePos -= 2 : XH = AH.readBits(16), {
-          objectType: SH,
-          samplingFrequencyIndex: hH,
-          channelConfiguration: tH,
-          frameLength: zH,
-          numberOfAacFrames: CH,
-          crcCheck: XH,
-          startPos: BH
+    var jG = GB(40633),
+      yG = GB(40641);
+    const JG = BB => {
+        const OB = BB.filePos,
+          GB = MB(BB, 9),
+          YB = new ZB.e(GB);
+        if (4095 !== YB.readBits(12)) return null;
+        YB.skipBits(1);
+        if (0 !== YB.readBits(2)) return null;
+        const DB = YB.readBits(1),
+          QB = YB.readBits(2) + 1,
+          oB = YB.readBits(4);
+        if (15 === oB) return null;
+        YB.skipBits(1);
+        const jB = YB.readBits(3);
+        if (0 === jB) throw new Error("ADTS frames with channel configuration 0 are not supported.");
+        YB.skipBits(1), YB.skipBits(1), YB.skipBits(1), YB.skipBits(1);
+        const yB = YB.readBits(13);
+        YB.skipBits(11);
+        const JB = YB.readBits(2) + 1;
+        if (1 !== JB) throw new Error("ADTS frames with more than one AAC frame are not supported.");
+        let PB = null;
+        return 1 === DB ? BB.filePos -= 2 : PB = YB.readBits(16), {
+          objectType: QB,
+          samplingFrequencyIndex: oB,
+          channelConfiguration: jB,
+          frameLength: yB,
+          numberOfAacFrames: JB,
+          crcCheck: PB,
+          startPos: OB
         }
       },
-      EL = 57600,
-      XL = HH => {
-        const BH = {},
-          LH = HH.track;
-        return void 0 !== LH.metadata.name && (BH.name = LH.metadata.name), BH
+      MG = 57600,
+      PG = BB => {
+        const OB = {},
+          GB = BB.track;
+        return void 0 !== GB.metadata.name && (OB.name = GB.metadata.name), OB
       },
-      GL = function(HH, BH) {
-        const LH = HH * BH;
-        return !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Math.round(LH) : LH
+      zG = function(BB, OB) {
+        const GB = BB * OB;
+        return !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Math.round(GB) : GB
       },
-      YL = HH => {
-        if (0 === HH.samples.length) return 0;
-        let BH = 1 / 0,
-          LH = -1 / 0;
-        for (let AH = 0; AH < HH.samples.length; AH++) {
-          const rH = HH.samples[AH];
-          rH.timestamp < BH && (BH = rH.timestamp), rH.timestamp + rH.duration > LH && (LH = rH.timestamp + rH.duration)
+      lG = BB => {
+        if (0 === BB.samples.length) return 0;
+        let OB = 1 / 0,
+          GB = -1 / 0;
+        for (let YB = 0; YB < BB.samples.length; YB++) {
+          const DB = BB.samples[YB];
+          DB.timestamp < OB && (OB = DB.timestamp), DB.timestamp + DB.duration > GB && (GB = DB.timestamp + DB.duration)
         }
-        return BH === 1 / 0 ? 0 : LH - BH
+        return OB === 1 / 0 ? 0 : GB - OB
       };
-    class uL extends uH {
-      constructor(HH, BH) {
-        super(HH), this.writer = null, this.boxWriter = null, this.initWriter = null, this.initBoxWriter = null, this.auxTarget = new zL.d, this.auxWriter = new tL.e(this.auxTarget, !1), this.auxBoxWriter = new vH(this.auxWriter), this.mdat = null, this.ftypSize = null, this.trackDatas = [], this.allTracksKnown = (0, tH.mc)(), this.creationTime = Math.floor(Date.now() / 1e3) + 2082844800, this.finalizedChunks = [], this.wroteFragmentedHeader = !1, this.nextFragmentNumber = 1, this.maxWrittenTimestamp = -1 / 0, this.minWrittenTimestamp = 1 / 0, this.maxWrittenEndTimestamp = -1 / 0, this.segmentHeaderSize = null, this.format = BH, this.formatOptions = {
-          ...BH._options
-        }, this.isQuickTime = BH instanceof gL, this.isCmaf = BH instanceof qL, this.minimumFragmentDuration = this.formatOptions.minimumFragmentDuration ?? (BH instanceof qL ? 1 / 0 : 1), this.auxWriter.start()
+    class pG extends pB {
+      constructor(BB, OB) {
+        super(BB), this.writer = null, this.boxWriter = null, this.initWriter = null, this.initBoxWriter = null, this.auxTarget = new yG.b, this.auxWriter = new jG.e(this.auxTarget, !1), this.auxBoxWriter = new WB(this.auxWriter), this.mdat = null, this.ftypSize = null, this.trackDatas = [], this.allTracksKnown = (0, jB.Nc)(), this.creationTime = Math.floor(Date.now() / 1e3) + 2082844800, this.finalizedChunks = [], this.wroteFragmentedHeader = !1, this.nextFragmentNumber = 1, this.maxWrittenTimestamp = -1 / 0, this.minWrittenTimestamp = 1 / 0, this.maxWrittenEndTimestamp = -1 / 0, this.segmentHeaderSize = null, this.format = OB, this.formatOptions = {
+          ...OB._options
+        }, this.isQuickTime = OB instanceof rG, this.isCmaf = OB instanceof gG, this.minimumFragmentDuration = this.formatOptions.minimumFragmentDuration ?? (OB instanceof gG ? 1 / 0 : 1), this.auxWriter.start()
       }
       async start() {
-        const HH = await this.mutex.acquire();
-        if (this.isCmaf ? (this.fastStart = "fragmented", this.isFragmented = !0) : (this.writer = await this.output._getRootWriter((HH => void 0 !== this.formatOptions.fastStart ? "fragmented" === this.formatOptions.fastStart : HH instanceof zL.d)), this.boxWriter = new vH(this.writer), this.fastStart = this.formatOptions.fastStart ?? (this.writer.target instanceof zL.d && "in-memory"), this.isFragmented = "fragmented" === this.fastStart), this.isCmaf) {
+        const BB = await this.mutex.acquire();
+        if (this.isCmaf ? (this.fastStart = "fragmented", this.isFragmented = !0) : (this.writer = await this.output._getRootWriter((BB => void 0 !== this.formatOptions.fastStart ? "fragmented" === this.formatOptions.fastStart : BB instanceof yG.b)), this.boxWriter = new WB(this.writer), this.fastStart = this.formatOptions.fastStart ?? (this.writer.target instanceof yG.b && "in-memory"), this.isFragmented = "fragmented" === this.fastStart), this.isCmaf) {
           if (!this.output._hasInitTarget()) throw new Error("CMAF outputs require the initTarget field in OutputOptions to be set; the init segment will be written to it.");
-          const HH = await this.output._getInitTarget(),
-            BH = new tL.e(HH, !0);
-          BH.start(), this.initWriter = BH, this.initBoxWriter = new vH(BH)
+          const BB = await this.output._getInitTarget(),
+            OB = new jG.e(BB, !0);
+          OB.start(), this.initWriter = OB, this.initBoxWriter = new WB(OB)
         }
-        const BH = this.output.tracks.some((HH => HH.isVideoTrack() && "avc" === HH.source._codec));
+        const OB = this.output.tracks.some((BB => BB.isVideoTrack() && "avc" === BB.source._codec));
         {
-          const HH = this.initBoxWriter ?? this.boxWriter;
-          if ((0, tH.J)(HH), this.formatOptions.onFtyp && HH.writer.startTrackingWrites(), HH.writeBox((HH => {
-              const BH = 512;
-              return HH.isQuickTime ? gH("ftyp", [eH("qt  "), kH(BH), eH("qt  ")]) : HH.fragmented ? HH.cmaf ? gH("ftyp", [eH("iso5"), kH(BH), eH("iso5"), eH("iso6"), eH("mp41"), eH("cmfc"), eH("dash")]) : gH("ftyp", [eH("iso5"), kH(BH), eH("iso5"), eH("iso6"), eH("mp41")]) : gH("ftyp", [eH("isom"), kH(BH), eH("isom"), HH.holdsAvc ? eH("avc1") : [], eH("mp41")])
+          const BB = this.initBoxWriter ?? this.boxWriter;
+          if ((0, jB.Q)(BB), this.formatOptions.onFtyp && BB.writer.startTrackingWrites(), BB.writeBox((BB => {
+              const OB = 512;
+              return BB.isQuickTime ? rB("ftyp", [LB("qt  "), kB(OB), LB("qt  ")]) : BB.fragmented ? BB.cmaf ? rB("ftyp", [LB("iso5"), kB(OB), LB("iso5"), LB("iso6"), LB("mp41"), LB("cmfc"), LB("dash")]) : rB("ftyp", [LB("iso5"), kB(OB), LB("iso5"), LB("iso6"), LB("mp41")]) : rB("ftyp", [LB("isom"), kB(OB), LB("isom"), BB.holdsAvc ? LB("avc1") : [], LB("mp41")])
             })({
               isQuickTime: this.isQuickTime,
-              holdsAvc: BH,
+              holdsAvc: OB,
               fragmented: this.isFragmented,
               cmaf: this.isCmaf
             })), this.formatOptions.onFtyp) {
             const {
-              data: BH,
-              start: LH
-            } = HH.writer.stopTrackingWrites();
-            this.formatOptions.onFtyp(BH, LH)
+              data: OB,
+              start: GB
+            } = BB.writer.stopTrackingWrites();
+            this.formatOptions.onFtyp(OB, GB)
           }
-          this.ftypSize = HH.writer.getPos(), this.isCmaf && await this.initWriter.flush()
+          this.ftypSize = BB.writer.getPos(), this.isCmaf && await this.initWriter.flush()
         }
         if ("in-memory" === this.fastStart);
         else if ("reserve" === this.fastStart) {
-          for (const LH of this.output.tracks)
-            if (void 0 === LH.metadata.maximumPacketCount) throw new Error("All tracks must specify maximumPacketCount in their metadata when using fastStart: 'reserve'.")
-        } else this.isFragmented || ((0, tH.J)(this.writer), (0, tH.J)(this.boxWriter), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = nH(!0), this.boxWriter.writeBox(this.mdat));
+          for (const GB of this.output.tracks)
+            if (void 0 === GB.metadata.maximumPacketCount) throw new Error("All tracks must specify maximumPacketCount in their metadata when using fastStart: 'reserve'.")
+        } else this.isFragmented || ((0, jB.Q)(this.writer), (0, jB.Q)(this.boxWriter), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = cB(!0), this.boxWriter.writeBox(this.mdat));
         await (this.writer?.flush());
-        for (const LH of this.output.tracks) LH.isVideoTrack() && LH.metadata.decoderConfig ? this.getVideoTrackData(LH, LH.metadata.primingPacket ?? null, {
-          decoderConfig: LH.metadata.decoderConfig
-        }) : LH.isAudioTrack() && LH.metadata.decoderConfig && this.getAudioTrackData(LH, LH.metadata.primingPacket ?? null, {
-          decoderConfig: LH.metadata.decoderConfig
+        for (const GB of this.output.tracks) GB.isVideoTrack() && GB.metadata.decoderConfig ? this.getVideoTrackData(GB, GB.metadata.primingPacket ?? null, {
+          decoderConfig: GB.metadata.decoderConfig
+        }) : GB.isAudioTrack() && GB.metadata.decoderConfig && this.getAudioTrackData(GB, GB.metadata.primingPacket ?? null, {
+          decoderConfig: GB.metadata.decoderConfig
         });
-        HH()
+        BB()
       }
       allTracksAreKnown() {
-        for (const HH of this.output.tracks)
-          if (!HH.source._closed && !this.trackDatas.some((BH => BH.track === HH))) return !1;
+        for (const BB of this.output.tracks)
+          if (!BB.source._closed && !this.trackDatas.some((OB => OB.track === BB))) return !1;
         return !0
       }
       async getMimeType() {
         await this.allTracksKnown.promise;
-        const HH = this.trackDatas.map((HH => {
-          if ("video" === HH.type) return HH.info.decoderConfig.codec;
-          if ("audio" === HH.type) return HH.info.decoderConfig.codec;
+        const BB = this.trackDatas.map((BB => {
+          if ("video" === BB.type) return BB.info.decoderConfig.codec;
+          if ("audio" === BB.type) return BB.info.decoderConfig.codec;
           return {
             webvtt: "wvtt"
-          } [HH.track.source._codec]
+          } [BB.track.source._codec]
         }));
-        return (HH => {
-          let BH = (HH.hasVideo ? "video/" : HH.hasAudio ? "audio/" : "application/") + (HH.isQuickTime ? "quicktime" : "mp4");
-          HH.codecStrings.length > 0 && (BH += `; codecs="${[...new Set(HH.codecStrings)].join(", ")}"`);
-          return BH
+        return (BB => {
+          let OB = (BB.hasVideo ? "video/" : BB.hasAudio ? "audio/" : "application/") + (BB.isQuickTime ? "quicktime" : "mp4");
+          BB.codecStrings.length > 0 && (OB += `; codecs="${[...new Set(BB.codecStrings)].join(", ")}"`);
+          return OB
         })({
           isQuickTime: this.isQuickTime,
-          hasVideo: this.trackDatas.some((HH => "video" === HH.type)),
-          hasAudio: this.trackDatas.some((HH => "audio" === HH.type)),
-          codecStrings: HH
+          hasVideo: this.trackDatas.some((BB => "video" === BB.type)),
+          hasAudio: this.trackDatas.some((BB => "audio" === BB.type)),
+          codecStrings: BB
         })
       }
-      getVideoTrackData(HH, BH, LH) {
-        const AH = this.trackDatas.find((BH => BH.track === HH));
-        if (AH) return AH;
-        (0, rH.X)(LH, HH.source._codec), (0, tH.J)(LH), (0, tH.J)(LH.decoderConfig);
-        const SH = {
-          ...LH.decoderConfig
+      getVideoTrackData(BB, OB, GB) {
+        const YB = this.trackDatas.find((OB => OB.track === BB));
+        if (YB) return YB;
+        (0, DB.Y)(GB, BB.source._codec), (0, jB.Q)(GB), (0, jB.Q)(GB.decoderConfig);
+        const QB = {
+          ...GB.decoderConfig
         };
-        (0, tH.J)(void 0 !== SH.codedWidth), (0, tH.J)(void 0 !== SH.codedHeight);
-        let hH = !1;
-        if ("avc" !== HH.source._codec || SH.description) {
-          if ("hevc" === HH.source._codec && !SH.description) {
-            if (!BH) throw new Error("No HEVC description provided; you must therefore provide a priming packet.");
-            const HH = (0, QH.G)(BH.data);
-            if (!HH) throw new Error("Couldn't extract an HEVCDecoderConfigurationRecord from the HEVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.265) when not providing a description, or provide a description (must be an HEVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in HEVC format.");
-            SH.description = (0, QH.nb)(HH), hH = !0
+        (0, jB.Q)(void 0 !== QB.codedWidth), (0, jB.Q)(void 0 !== QB.codedHeight);
+        let oB = !1;
+        if ("avc" !== BB.source._codec || QB.description) {
+          if ("hevc" === BB.source._codec && !QB.description) {
+            if (!OB) throw new Error("No HEVC description provided; you must therefore provide a priming packet.");
+            const BB = (0, qB.O)(OB.data);
+            if (!BB) throw new Error("Couldn't extract an HEVCDecoderConfigurationRecord from the HEVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.265) when not providing a description, or provide a description (must be an HEVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in HEVC format.");
+            QB.description = (0, qB.wb)(BB), oB = !0
           }
         } else {
-          if (!BH) throw new Error("No AVC description provided; you must therefore provide a priming packet.");
-          const HH = (0, QH.D)(BH.data);
-          if (!HH) throw new Error("Couldn't extract an AVCDecoderConfigurationRecord from the AVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.264) when not providing a description, or provide a description (must be an AVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in AVCC format.");
-          SH.description = (0, QH.jb)(HH), hH = !0
+          if (!OB) throw new Error("No AVC description provided; you must therefore provide a priming packet.");
+          const BB = (0, qB.K)(OB.data);
+          if (!BB) throw new Error("Couldn't extract an AVCDecoderConfigurationRecord from the AVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.264) when not providing a description, or provide a description (must be an AVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in AVCC format.");
+          QB.description = (0, qB.ub)(BB), oB = !0
         }
-        const zH = (0, tH.ib)(1 / (HH.metadata.frameRate ?? EL), 1e6).den,
-          CH = SH.displayAspectWidth,
-          EH = SH.displayAspectHeight,
-          XH = void 0 === CH || void 0 === EH ? {
+        const yB = (0, jB.ub)(1 / (BB.metadata.frameRate ?? MG), 1e6).den,
+          JB = QB.displayAspectWidth,
+          MB = QB.displayAspectHeight,
+          PB = void 0 === JB || void 0 === MB ? {
             num: 1,
             den: 1
-          } : (0, tH.Uc)({
-            num: CH * SH.codedHeight,
-            den: EH * SH.codedWidth
+          } : (0, jB.vd)({
+            num: JB * QB.codedHeight,
+            den: MB * QB.codedWidth
           }),
-          GH = "ap4h" === SH.codec || "ap4x" === SH.codec,
-          YH = {
+          zB = "ap4h" === QB.codec || "ap4x" === QB.codec,
+          lB = {
             muxer: this,
-            track: HH,
+            track: BB,
             type: "video",
             info: {
-              width: SH.codedWidth,
-              height: SH.codedHeight,
-              pixelAspectRatio: XH,
-              decoderConfig: SH,
-              requiresAnnexBTransformation: hH,
-              hasAlphaChannel: GH
+              width: QB.codedWidth,
+              height: QB.codedHeight,
+              pixelAspectRatio: PB,
+              decoderConfig: QB,
+              requiresAnnexBTransformation: oB,
+              hasAlphaChannel: zB
             },
-            timescale: zH,
+            timescale: yB,
             samples: [],
             sampleQueue: [],
             timestampProcessingQueue: [],
@@ -4546,50 +4546,50 @@ export const modules = {
             currentChunk: null,
             compactlyCodedChunkTable: [],
             closed: !1,
-            avgBitrate: HH.source._nominalBitrate ?? HH.metadata.averageBitrate ?? 0,
-            maxBitrate: HH.source._nominalBitrate ?? HH.metadata.bitrate ?? 0
+            avgBitrate: BB.source._nominalBitrate ?? BB.metadata.averageBitrate ?? 0,
+            maxBitrate: BB.source._nominalBitrate ?? BB.metadata.bitrate ?? 0
           };
-        return this.trackDatas.push(YH), this.trackDatas.sort(((HH, BH) => HH.track.id - BH.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), YH
+        return this.trackDatas.push(lB), this.trackDatas.sort(((BB, OB) => BB.track.id - OB.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), lB
       }
-      getAudioTrackData(HH, BH, LH) {
-        const SH = this.trackDatas.find((BH => BH.track === HH));
-        if (SH) return SH;
-        (0, rH.U)(LH, HH.source._codec), (0, tH.J)(LH), (0, tH.J)(LH.decoderConfig);
-        const hH = {
-          ...LH.decoderConfig
+      getAudioTrackData(BB, OB, GB) {
+        const QB = this.trackDatas.find((OB => OB.track === BB));
+        if (QB) return QB;
+        (0, DB.V)(GB, BB.source._codec), (0, jB.Q)(GB), (0, jB.Q)(GB.decoderConfig);
+        const oB = {
+          ...GB.decoderConfig
         };
-        let CH = !1;
-        if ("aac" === HH.source._codec && !hH.description) {
-          if (!BH) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
-          const HH = CL(zH.tempFromBytes(BH.data));
-          if (!HH) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
-          const LH = AH.h[HH.samplingFrequencyIndex],
-            rH = AH.e[HH.channelConfiguration];
-          if (void 0 === LH || void 0 === rH) throw new Error("Invalid ADTS frame header.");
-          hH.description = (0, AH.j)({
-            objectType: HH.objectType,
-            outputSampleRate: LH,
-            outputNumberOfChannels: rH
-          }), CH = !0
+        let JB = !1;
+        if ("aac" === BB.source._codec && !oB.description) {
+          if (!OB) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
+          const BB = JG(yB.tempFromBytes(OB.data));
+          if (!BB) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
+          const GB = YB.e[BB.samplingFrequencyIndex],
+            DB = YB.d[BB.channelConfiguration];
+          if (void 0 === GB || void 0 === DB) throw new Error("Invalid ADTS frame header.");
+          oB.description = (0, YB.g)({
+            objectType: BB.objectType,
+            outputSampleRate: GB,
+            outputNumberOfChannels: DB
+          }), JB = !0
         }
-        if (!BH) {
-          if ("ac3" === HH.source._codec || "eac3" === HH.source._codec) throw new Error("AC-3/E-AC-3 require a priming packet.");
-          if ("dts" === HH.source._codec) throw new Error("DTS requires a priming packet.")
+        if (!OB) {
+          if ("ac3" === BB.source._codec || "eac3" === BB.source._codec) throw new Error("AC-3/E-AC-3 require a priming packet.");
+          if ("dts" === BB.source._codec) throw new Error("DTS requires a priming packet.")
         }
-        const EH = {
+        const MB = {
           muxer: this,
-          track: HH,
+          track: BB,
           type: "audio",
           info: {
-            numberOfChannels: LH.decoderConfig.numberOfChannels,
-            sampleRate: LH.decoderConfig.sampleRate,
-            decoderConfig: hH,
-            requiresPcmTransformation: !this.isFragmented && rH.k.includes(HH.source._codec),
+            numberOfChannels: GB.decoderConfig.numberOfChannels,
+            sampleRate: GB.decoderConfig.sampleRate,
+            decoderConfig: oB,
+            requiresPcmTransformation: !this.isFragmented && DB.n.includes(BB.source._codec),
             expectedNextPcmPacketTimestamp: null,
-            requiresAdtsStripping: CH,
-            primingPacket: BH
+            requiresAdtsStripping: JB,
+            primingPacket: OB
           },
-          timescale: hH.sampleRate,
+          timescale: oB.sampleRate,
           samples: [],
           sampleQueue: [],
           timestampProcessingQueue: [],
@@ -4602,21 +4602,21 @@ export const modules = {
           currentChunk: null,
           compactlyCodedChunkTable: [],
           closed: !1,
-          avgBitrate: HH.source._nominalBitrate ?? HH.metadata.averageBitrate ?? 0,
-          maxBitrate: HH.source._nominalBitrate ?? HH.metadata.bitrate ?? 0
+          avgBitrate: BB.source._nominalBitrate ?? BB.metadata.averageBitrate ?? 0,
+          maxBitrate: BB.source._nominalBitrate ?? BB.metadata.bitrate ?? 0
         };
-        return this.trackDatas.push(EH), this.trackDatas.sort(((HH, BH) => HH.track.id - BH.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), EH
+        return this.trackDatas.push(MB), this.trackDatas.sort(((BB, OB) => BB.track.id - OB.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), MB
       }
-      getSubtitleTrackData(HH, BH) {
-        const LH = this.trackDatas.find((BH => BH.track === HH));
-        if (LH) return LH;
-        (0, rH.W)(BH), (0, tH.J)(BH), (0, tH.J)(BH.config);
-        const AH = {
+      getSubtitleTrackData(BB, OB) {
+        const GB = this.trackDatas.find((OB => OB.track === BB));
+        if (GB) return GB;
+        (0, DB.X)(OB), (0, jB.Q)(OB), (0, jB.Q)(OB.config);
+        const YB = {
           muxer: this,
-          track: HH,
+          track: BB,
           type: "subtitle",
           info: {
-            config: BH.config
+            config: OB.config
           },
           timescale: 1e3,
           samples: [],
@@ -4631,618 +4631,618 @@ export const modules = {
           currentChunk: null,
           compactlyCodedChunkTable: [],
           closed: !1,
-          avgBitrate: HH.source._nominalBitrate ?? HH.metadata.averageBitrate ?? 0,
-          maxBitrate: HH.source._nominalBitrate ?? HH.metadata.bitrate ?? 0,
+          avgBitrate: BB.source._nominalBitrate ?? BB.metadata.averageBitrate ?? 0,
+          maxBitrate: BB.source._nominalBitrate ?? BB.metadata.bitrate ?? 0,
           lastCueEndTimestamp: null,
           cueQueue: [],
           nextSourceId: 0,
           cueToSourceId: new WeakMap
         };
-        return this.trackDatas.push(AH), this.trackDatas.sort(((HH, BH) => HH.track.id - BH.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), AH
+        return this.trackDatas.push(YB), this.trackDatas.sort(((BB, OB) => BB.track.id - OB.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), YB
       }
-      async addEncodedVideoPacket(HH, BH, LH) {
-        const AH = await this.mutex.acquire();
+      async addEncodedVideoPacket(BB, OB, GB) {
+        const YB = await this.mutex.acquire();
         try {
-          const AH = this.getVideoTrackData(HH, BH, LH);
-          let rH = BH.data;
-          if (AH.info.requiresAnnexBTransformation) {
-            const HH = [...(0, QH.Q)(rH)].map((HH => rH.subarray(HH.offset, HH.offset + HH.length)));
-            if (0 === HH.length) throw new Error("Failed to transform packet data. Make sure all packets are provided in Annex B format, as specified in ITU-T-REC-H.264 and ITU-T-REC-H.265.");
-            rH = (0, QH.t)(HH, 4)
+          const YB = this.getVideoTrackData(BB, OB, GB);
+          let DB = OB.data;
+          if (YB.info.requiresAnnexBTransformation) {
+            const BB = [...(0, qB.$)(DB)].map((BB => DB.subarray(BB.offset, BB.offset + BB.length)));
+            if (0 === BB.length) throw new Error("Failed to transform packet data. Make sure all packets are provided in Annex B format, as specified in ITU-T-REC-H.264 and ITU-T-REC-H.265.");
+            DB = (0, qB.z)(BB, 4)
           }
-          this.validateTimestamp(AH.track, BH.timestamp, "key" === BH.type);
-          const SH = this.createSampleForTrack(AH, rH, BH.timestamp, BH.duration, BH.type);
-          await this.registerSample(AH, SH)
+          this.validateTimestamp(YB.track, OB.timestamp, "key" === OB.type);
+          const QB = this.createSampleForTrack(YB, DB, OB.timestamp, OB.duration, OB.type);
+          await this.registerSample(YB, QB)
         } finally {
-          AH()
+          YB()
         }
       }
-      async addEncodedAudioPacket(HH, BH, LH) {
-        const AH = await this.mutex.acquire();
+      async addEncodedAudioPacket(BB, OB, GB) {
+        const YB = await this.mutex.acquire();
         try {
-          const AH = this.getAudioTrackData(HH, BH, LH);
-          let SH = BH.data;
-          if (AH.info.requiresAdtsStripping) {
-            const HH = CL(zH.tempFromBytes(SH));
-            if (!HH) throw new Error("Expected ADTS frame, didn't get one.");
-            const BH = null === HH.crcCheck ? 7 : 9;
-            SH = SH.subarray(BH)
+          const YB = this.getAudioTrackData(BB, OB, GB);
+          let QB = OB.data;
+          if (YB.info.requiresAdtsStripping) {
+            const BB = JG(yB.tempFromBytes(QB));
+            if (!BB) throw new Error("Expected ADTS frame, didn't get one.");
+            const OB = null === BB.crcCheck ? 7 : 9;
+            QB = QB.subarray(OB)
           }
-          this.validateTimestamp(AH.track, BH.timestamp, "key" === BH.type);
-          let hH = BH.timestamp,
-            tH = BH.duration;
-          if (AH.info.requiresPcmTransformation) {
-            const HH = (0, rH.S)(AH.info.decoderConfig.codec).sampleSize * AH.info.numberOfChannels;
-            if (tH = SH.byteLength / HH / AH.info.sampleRate, null !== AH.info.expectedNextPcmPacketTimestamp) {
-              const HH = hH - AH.info.expectedNextPcmPacketTimestamp;
-              if (HH < .01) hH = AH.info.expectedNextPcmPacketTimestamp;
+          this.validateTimestamp(YB.track, OB.timestamp, "key" === OB.type);
+          let oB = OB.timestamp,
+            jB = OB.duration;
+          if (YB.info.requiresPcmTransformation) {
+            const BB = (0, DB.S)(YB.info.decoderConfig.codec).sampleSize * YB.info.numberOfChannels;
+            if (jB = QB.byteLength / BB / YB.info.sampleRate, null !== YB.info.expectedNextPcmPacketTimestamp) {
+              const BB = oB - YB.info.expectedNextPcmPacketTimestamp;
+              if (BB < .01) oB = YB.info.expectedNextPcmPacketTimestamp;
               else {
-                const BH = await this.padWithSilence(AH, AH.info.expectedNextPcmPacketTimestamp, HH);
-                hH = AH.info.expectedNextPcmPacketTimestamp + BH
+                const OB = await this.padWithSilence(YB, YB.info.expectedNextPcmPacketTimestamp, BB);
+                oB = YB.info.expectedNextPcmPacketTimestamp + OB
               }
             }
-            AH.info.expectedNextPcmPacketTimestamp = hH + tH
+            YB.info.expectedNextPcmPacketTimestamp = oB + jB
           }
-          const CH = this.createSampleForTrack(AH, SH, hH, tH, BH.type);
-          await this.registerSample(AH, CH)
+          const JB = this.createSampleForTrack(YB, QB, oB, jB, OB.type);
+          await this.registerSample(YB, JB)
         } finally {
-          AH()
+          YB()
         }
       }
-      async padWithSilence(HH, BH, LH) {
-        const AH = GL(LH, HH.timescale);
-        if (LH = AH / HH.timescale, AH > 0) {
+      async padWithSilence(BB, OB, GB) {
+        const YB = zG(GB, BB.timescale);
+        if (GB = YB / BB.timescale, YB > 0) {
           const {
-            sampleSize: SH,
-            silentValue: hH
-          } = (0, rH.S)(HH.info.decoderConfig.codec), tH = AH * HH.info.numberOfChannels, zH = new Uint8Array(SH * tH).fill(hH), CH = this.createSampleForTrack(HH, new Uint8Array(zH.buffer), BH, LH, "key");
-          await this.registerSample(HH, CH)
+            sampleSize: QB,
+            silentValue: oB
+          } = (0, DB.S)(BB.info.decoderConfig.codec), jB = YB * BB.info.numberOfChannels, yB = new Uint8Array(QB * jB).fill(oB), JB = this.createSampleForTrack(BB, new Uint8Array(yB.buffer), OB, GB, "key");
+          await this.registerSample(BB, JB)
         }
-        return LH
+        return GB
       }
-      async addSubtitleCue(HH, BH, LH) {
-        const AH = await this.mutex.acquire();
+      async addSubtitleCue(BB, OB, GB) {
+        const YB = await this.mutex.acquire();
         try {
-          const AH = this.getSubtitleTrackData(HH, LH);
-          this.validateTimestamp(AH.track, BH.timestamp, !0), "webvtt" === HH.source._codec && (AH.cueQueue.push(BH), await this.processWebVTTCues(AH, BH.timestamp))
+          const YB = this.getSubtitleTrackData(BB, GB);
+          this.validateTimestamp(YB.track, OB.timestamp, !0), "webvtt" === BB.source._codec && (YB.cueQueue.push(OB), await this.processWebVTTCues(YB, OB.timestamp))
         } finally {
-          AH()
+          YB()
         }
       }
-      async processWebVTTCues(HH, BH) {
-        for (; HH.cueQueue.length > 0;) {
-          HH.lastCueEndTimestamp ??= Math.min(0, HH.cueQueue[0].timestamp);
-          const LH = new Set([]);
-          for (const CH of HH.cueQueue)(0, tH.J)(CH.timestamp <= BH), (0, tH.J)(HH.lastCueEndTimestamp <= CH.timestamp + CH.duration), LH.add(Math.max(CH.timestamp, HH.lastCueEndTimestamp)), LH.add(CH.timestamp + CH.duration);
-          const AH = [...LH].sort(((HH, BH) => HH - BH)),
-            rH = AH[0],
-            SH = AH[1] ?? rH;
-          if (BH < SH) break;
-          if (HH.lastCueEndTimestamp < rH) {
+      async processWebVTTCues(BB, OB) {
+        for (; BB.cueQueue.length > 0;) {
+          BB.lastCueEndTimestamp ??= Math.min(0, BB.cueQueue[0].timestamp);
+          const GB = new Set([]);
+          for (const JB of BB.cueQueue)(0, jB.Q)(JB.timestamp <= OB), (0, jB.Q)(BB.lastCueEndTimestamp <= JB.timestamp + JB.duration), GB.add(Math.max(JB.timestamp, BB.lastCueEndTimestamp)), GB.add(JB.timestamp + JB.duration);
+          const YB = [...GB].sort(((BB, OB) => BB - OB)),
+            DB = YB[0],
+            QB = YB[1] ?? DB;
+          if (OB < QB) break;
+          if (BB.lastCueEndTimestamp < DB) {
             this.auxWriter.seek(0);
-            const BH = FB();
-            this.auxBoxWriter.writeBox(BH);
-            const LH = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
-              AH = this.createSampleForTrack(HH, LH, HH.lastCueEndTimestamp, rH - HH.lastCueEndTimestamp, "key");
-            await this.registerSample(HH, AH), HH.lastCueEndTimestamp = rH
+            const OB = hO();
+            this.auxBoxWriter.writeBox(OB);
+            const GB = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
+              YB = this.createSampleForTrack(BB, GB, BB.lastCueEndTimestamp, DB - BB.lastCueEndTimestamp, "key");
+            await this.registerSample(BB, YB), BB.lastCueEndTimestamp = DB
           }
           this.auxWriter.seek(0);
-          for (let BH = 0; BH < HH.cueQueue.length; BH++) {
-            const LH = HH.cueQueue[BH];
-            if (LH.timestamp >= SH) break;
-            MH.i.lastIndex = 0;
-            const AH = MH.i.test(LH.text),
-              hH = LH.timestamp + LH.duration;
-            let tH = HH.cueToSourceId.get(LH);
-            if (void 0 === tH && SH < hH && (tH = HH.nextSourceId++, HH.cueToSourceId.set(LH, tH)), LH.notes) {
-              const HH = wB(LH.notes);
-              this.auxBoxWriter.writeBox(HH)
+          for (let OB = 0; OB < BB.cueQueue.length; OB++) {
+            const GB = BB.cueQueue[OB];
+            if (GB.timestamp >= QB) break;
+            NB.h.lastIndex = 0;
+            const YB = NB.h.test(GB.text),
+              oB = GB.timestamp + GB.duration;
+            let jB = BB.cueToSourceId.get(GB);
+            if (void 0 === jB && QB < oB && (jB = BB.nextSourceId++, BB.cueToSourceId.set(GB, jB)), GB.notes) {
+              const BB = eO(GB.notes);
+              this.auxBoxWriter.writeBox(BB)
             }
-            const zH = DB(LH.text, AH ? rH : null, LH.identifier ?? null, LH.settings ?? null, tH ?? null);
-            this.auxBoxWriter.writeBox(zH), hH === SH && HH.cueQueue.splice(BH--, 1)
+            const yB = aO(GB.text, YB ? DB : null, GB.identifier ?? null, GB.settings ?? null, jB ?? null);
+            this.auxBoxWriter.writeBox(yB), oB === QB && BB.cueQueue.splice(OB--, 1)
           }
-          const hH = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
-            zH = this.createSampleForTrack(HH, hH, rH, SH - rH, "key");
-          await this.registerSample(HH, zH), HH.lastCueEndTimestamp = SH
+          const oB = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
+            yB = this.createSampleForTrack(BB, oB, DB, QB - DB, "key");
+          await this.registerSample(BB, yB), BB.lastCueEndTimestamp = QB
         }
       }
-      createSampleForTrack(HH, BH, LH, AH, rH) {
+      createSampleForTrack(BB, OB, GB, YB, DB) {
         return {
-          timestamp: LH,
-          decodeTimestamp: LH,
-          duration: AH,
-          data: BH,
-          size: BH.byteLength,
-          type: rH,
-          timescaleUnitsToNextSample: GL(AH, HH.timescale)
+          timestamp: GB,
+          decodeTimestamp: GB,
+          duration: YB,
+          data: OB,
+          size: OB.byteLength,
+          type: DB,
+          timescaleUnitsToNextSample: zG(YB, BB.timescale)
         }
       }
-      processTimestamps(HH, BH) {
-        if (0 === HH.timestampProcessingQueue.length) return;
-        if ("audio" === HH.type && HH.info.requiresPcmTransformation) {
-          (0, tH.J)(!this.isFragmented), HH.startTimestampOffset ??= HH.timestampProcessingQueue[0].timestamp;
-          let BH = 0;
-          for (let LH = 0; LH < HH.timestampProcessingQueue.length; LH++) {
-            const AH = HH.timestampProcessingQueue[LH];
-            BH += GL(AH.duration, HH.timescale)
+      processTimestamps(BB, OB) {
+        if (0 === BB.timestampProcessingQueue.length) return;
+        if ("audio" === BB.type && BB.info.requiresPcmTransformation) {
+          (0, jB.Q)(!this.isFragmented), BB.startTimestampOffset ??= BB.timestampProcessingQueue[0].timestamp;
+          let OB = 0;
+          for (let GB = 0; GB < BB.timestampProcessingQueue.length; GB++) {
+            const YB = BB.timestampProcessingQueue[GB];
+            OB += zG(YB.duration, BB.timescale)
           }
-          if (0 === HH.timeToSampleTable.length) HH.timeToSampleTable.push({
-            sampleCount: BH,
+          if (0 === BB.timeToSampleTable.length) BB.timeToSampleTable.push({
+            sampleCount: OB,
             sampleDelta: 1
           });
           else {
-            (0, tH.Xb)(HH.timeToSampleTable).sampleCount += BH
+            (0, jB.sc)(BB.timeToSampleTable).sampleCount += OB
           }
-          return void(HH.timestampProcessingQueue.length = 0)
+          return void(BB.timestampProcessingQueue.length = 0)
         }
-        const LH = HH.timestampProcessingQueue.map((HH => HH.timestamp)).sort(((HH, BH) => HH - BH));
-        this.isFragmented ? HH.startTimestampOffset ??= Math.min(LH[0], 0) : HH.startTimestampOffset ??= LH[0];
-        for (let AH = 0; AH < HH.timestampProcessingQueue.length; AH++) {
-          const BH = HH.timestampProcessingQueue[AH];
-          BH.decodeTimestamp = LH[AH];
-          const rH = GL(BH.timestamp - BH.decodeTimestamp, HH.timescale),
-            SH = GL(BH.duration, HH.timescale);
-          if (null !== HH.lastTimescaleUnits) {
-            (0, tH.J)(HH.lastSample);
-            const LH = GL(BH.decodeTimestamp, HH.timescale, !1),
-              AH = Math.round(LH - HH.lastTimescaleUnits);
-            if ((0, tH.J)(AH >= 0), HH.lastTimescaleUnits += AH, HH.lastSample.timescaleUnitsToNextSample = AH, !this.isFragmented) {
-              let BH = (0, tH.Xb)(HH.timeToSampleTable);
-              if ((0, tH.J)(BH), 1 === BH.sampleCount) {
-                BH.sampleDelta = AH;
-                const LH = HH.timeToSampleTable[HH.timeToSampleTable.length - 2];
-                LH && LH.sampleDelta === AH && (LH.sampleCount++, HH.timeToSampleTable.pop(), BH = LH)
-              } else BH.sampleDelta !== AH && (BH.sampleCount--, HH.timeToSampleTable.push(BH = {
+        const GB = BB.timestampProcessingQueue.map((BB => BB.timestamp)).sort(((BB, OB) => BB - OB));
+        this.isFragmented ? BB.startTimestampOffset ??= Math.min(GB[0], 0) : BB.startTimestampOffset ??= GB[0];
+        for (let YB = 0; YB < BB.timestampProcessingQueue.length; YB++) {
+          const OB = BB.timestampProcessingQueue[YB];
+          OB.decodeTimestamp = GB[YB];
+          const DB = zG(OB.timestamp - OB.decodeTimestamp, BB.timescale),
+            QB = zG(OB.duration, BB.timescale);
+          if (null !== BB.lastTimescaleUnits) {
+            (0, jB.Q)(BB.lastSample);
+            const GB = zG(OB.decodeTimestamp, BB.timescale, !1),
+              YB = Math.round(GB - BB.lastTimescaleUnits);
+            if ((0, jB.Q)(YB >= 0), BB.lastTimescaleUnits += YB, BB.lastSample.timescaleUnitsToNextSample = YB, !this.isFragmented) {
+              let OB = (0, jB.sc)(BB.timeToSampleTable);
+              if ((0, jB.Q)(OB), 1 === OB.sampleCount) {
+                OB.sampleDelta = YB;
+                const GB = BB.timeToSampleTable[BB.timeToSampleTable.length - 2];
+                GB && GB.sampleDelta === YB && (GB.sampleCount++, BB.timeToSampleTable.pop(), OB = GB)
+              } else OB.sampleDelta !== YB && (OB.sampleCount--, BB.timeToSampleTable.push(OB = {
                 sampleCount: 1,
-                sampleDelta: AH
+                sampleDelta: YB
               }));
-              BH.sampleDelta === SH ? BH.sampleCount++ : HH.timeToSampleTable.push({
+              OB.sampleDelta === QB ? OB.sampleCount++ : BB.timeToSampleTable.push({
                 sampleCount: 1,
-                sampleDelta: SH
+                sampleDelta: QB
               });
-              const LH = (0, tH.Xb)(HH.compositionTimeOffsetTable);
-              (0, tH.J)(LH), LH.sampleCompositionTimeOffset === rH ? LH.sampleCount++ : HH.compositionTimeOffsetTable.push({
+              const GB = (0, jB.sc)(BB.compositionTimeOffsetTable);
+              (0, jB.Q)(GB), GB.sampleCompositionTimeOffset === DB ? GB.sampleCount++ : BB.compositionTimeOffsetTable.push({
                 sampleCount: 1,
-                sampleCompositionTimeOffset: rH
+                sampleCompositionTimeOffset: DB
               })
             }
-          } else HH.lastTimescaleUnits = GL(BH.decodeTimestamp, HH.timescale, !1), this.isFragmented || (HH.timeToSampleTable.push({
+          } else BB.lastTimescaleUnits = zG(OB.decodeTimestamp, BB.timescale, !1), this.isFragmented || (BB.timeToSampleTable.push({
             sampleCount: 1,
-            sampleDelta: SH
-          }), HH.compositionTimeOffsetTable.push({
+            sampleDelta: QB
+          }), BB.compositionTimeOffsetTable.push({
             sampleCount: 1,
-            sampleCompositionTimeOffset: rH
+            sampleCompositionTimeOffset: DB
           }));
-          HH.lastSample = BH
+          BB.lastSample = OB
         }
-        if (HH.timestampProcessingQueue.length = 0, (0, tH.J)(HH.lastSample), (0, tH.J)(null !== HH.lastTimescaleUnits), void 0 !== BH && 0 === HH.lastSample.timescaleUnitsToNextSample) {
-          (0, tH.J)("key" === BH.type);
-          const LH = GL(BH.timestamp, HH.timescale, !1),
-            AH = Math.round(LH - HH.lastTimescaleUnits);
-          HH.lastSample.timescaleUnitsToNextSample = AH
+        if (BB.timestampProcessingQueue.length = 0, (0, jB.Q)(BB.lastSample), (0, jB.Q)(null !== BB.lastTimescaleUnits), void 0 !== OB && 0 === BB.lastSample.timescaleUnitsToNextSample) {
+          (0, jB.Q)("key" === OB.type);
+          const GB = zG(OB.timestamp, BB.timescale, !1),
+            YB = Math.round(GB - BB.lastTimescaleUnits);
+          BB.lastSample.timescaleUnitsToNextSample = YB
         }
       }
-      async registerSample(HH, BH) {
-        "key" === BH.type && this.processTimestamps(HH, BH), HH.timestampProcessingQueue.push(BH), this.isFragmented ? (HH.sampleQueue.push(BH), await this.interleaveSamples()) : "reserve" === this.fastStart ? await this.registerSampleFastStartReserve(HH, BH) : await this.addSampleToTrack(HH, BH)
+      async registerSample(BB, OB) {
+        "key" === OB.type && this.processTimestamps(BB, OB), BB.timestampProcessingQueue.push(OB), this.isFragmented ? (BB.sampleQueue.push(OB), await this.interleaveSamples()) : "reserve" === this.fastStart ? await this.registerSampleFastStartReserve(BB, OB) : await this.addSampleToTrack(BB, OB)
       }
-      async addSampleToTrack(HH, BH) {
-        if (!this.isFragmented && (HH.samples.push(BH), "reserve" === this.fastStart)) {
-          const BH = HH.track.metadata.maximumPacketCount;
-          if ((0, tH.J)(void 0 !== BH), HH.samples.length > BH) throw new Error(`Track #${HH.track.id} has already reached the maximum packet count (${BH}). Either add less packets or increase the maximum packet count.`)
+      async addSampleToTrack(BB, OB) {
+        if (!this.isFragmented && (BB.samples.push(OB), "reserve" === this.fastStart)) {
+          const OB = BB.track.metadata.maximumPacketCount;
+          if ((0, jB.Q)(void 0 !== OB), BB.samples.length > OB) throw new Error(`Track #${BB.track.id} has already reached the maximum packet count (${OB}). Either add less packets or increase the maximum packet count.`)
         }
-        let LH = !1;
-        if (HH.currentChunk) {
-          HH.currentChunk.startTimestamp = Math.min(HH.currentChunk.startTimestamp, BH.timestamp);
-          const AH = BH.timestamp - HH.currentChunk.startTimestamp;
+        let GB = !1;
+        if (BB.currentChunk) {
+          BB.currentChunk.startTimestamp = Math.min(BB.currentChunk.startTimestamp, OB.timestamp);
+          const YB = OB.timestamp - BB.currentChunk.startTimestamp;
           if (this.isFragmented) {
-            const rH = this.trackDatas.every((LH => {
-              if (HH === LH) return "key" === BH.type;
-              const AH = LH.sampleQueue[0];
-              return AH ? "key" === AH.type : LH.closed
+            const DB = this.trackDatas.every((GB => {
+              if (BB === GB) return "key" === OB.type;
+              const YB = GB.sampleQueue[0];
+              return YB ? "key" === YB.type : GB.closed
             }));
-            AH >= this.minimumFragmentDuration && rH && BH.timestamp > this.maxWrittenTimestamp && (LH = !0, await this.finalizeFragment())
-          } else LH = AH >= .5
-        } else LH = !0;
-        LH && (HH.currentChunk && await this.finalizeCurrentChunk(HH), HH.currentChunk = {
-          startTimestamp: BH.timestamp,
+            YB >= this.minimumFragmentDuration && DB && OB.timestamp > this.maxWrittenTimestamp && (GB = !0, await this.finalizeFragment())
+          } else GB = YB >= .5
+        } else GB = !0;
+        GB && (BB.currentChunk && await this.finalizeCurrentChunk(BB), BB.currentChunk = {
+          startTimestamp: OB.timestamp,
           samples: [],
           offset: null,
           moofOffset: null,
           trafIndex: null
-        }), (0, tH.J)(HH.currentChunk), HH.currentChunk.samples.push(BH), this.isFragmented && (this.maxWrittenTimestamp = Math.max(this.maxWrittenTimestamp, BH.timestamp), this.maxWrittenEndTimestamp = Math.max(this.maxWrittenEndTimestamp, BH.timestamp + BH.duration), this.minWrittenTimestamp = Math.min(this.minWrittenTimestamp, BH.timestamp))
+        }), (0, jB.Q)(BB.currentChunk), BB.currentChunk.samples.push(OB), this.isFragmented && (this.maxWrittenTimestamp = Math.max(this.maxWrittenTimestamp, OB.timestamp), this.maxWrittenEndTimestamp = Math.max(this.maxWrittenEndTimestamp, OB.timestamp + OB.duration), this.minWrittenTimestamp = Math.min(this.minWrittenTimestamp, OB.timestamp))
       }
-      async finalizeCurrentChunk(HH) {
-        if ((0, tH.J)(!this.isFragmented), (0, tH.J)(this.writer), !HH.currentChunk) return;
-        HH.finalizedChunks.push(HH.currentChunk), this.finalizedChunks.push(HH.currentChunk);
-        let BH = HH.currentChunk.samples.length;
-        if ("audio" === HH.type && HH.info.requiresPcmTransformation && (BH = HH.currentChunk.samples.reduce(((BH, LH) => BH + GL(LH.duration, HH.timescale)), 0)), 0 !== HH.compactlyCodedChunkTable.length && (0, tH.Xb)(HH.compactlyCodedChunkTable).samplesPerChunk === BH || HH.compactlyCodedChunkTable.push({
-            firstChunk: HH.finalizedChunks.length,
-            samplesPerChunk: BH
+      async finalizeCurrentChunk(BB) {
+        if ((0, jB.Q)(!this.isFragmented), (0, jB.Q)(this.writer), !BB.currentChunk) return;
+        BB.finalizedChunks.push(BB.currentChunk), this.finalizedChunks.push(BB.currentChunk);
+        let OB = BB.currentChunk.samples.length;
+        if ("audio" === BB.type && BB.info.requiresPcmTransformation && (OB = BB.currentChunk.samples.reduce(((OB, GB) => OB + zG(GB.duration, BB.timescale)), 0)), 0 !== BB.compactlyCodedChunkTable.length && (0, jB.sc)(BB.compactlyCodedChunkTable).samplesPerChunk === OB || BB.compactlyCodedChunkTable.push({
+            firstChunk: BB.finalizedChunks.length,
+            samplesPerChunk: OB
           }), "in-memory" !== this.fastStart) {
-          HH.currentChunk.offset = this.writer.getPos();
-          for (const BH of HH.currentChunk.samples)(0, tH.J)(BH.data), this.writer.write(BH.data), BH.data = null;
+          BB.currentChunk.offset = this.writer.getPos();
+          for (const OB of BB.currentChunk.samples)(0, jB.Q)(OB.data), this.writer.write(OB.data), OB.data = null;
           await this.writer.flush()
-        } else HH.currentChunk.offset = 0
+        } else BB.currentChunk.offset = 0
       }
       async interleaveSamples() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if ((0, tH.J)(this.isFragmented), HH || this.allTracksAreKnown()) HH: for (;;) {
-          let BH = null,
-            LH = 1 / 0;
-          for (const rH of this.trackDatas) {
-            if (!HH && 0 === rH.sampleQueue.length && !rH.closed) break HH;
-            rH.sampleQueue.length > 0 && rH.sampleQueue[0].timestamp < LH && (BH = rH, LH = rH.sampleQueue[0].timestamp)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if ((0, jB.Q)(this.isFragmented), BB || this.allTracksAreKnown()) BB: for (;;) {
+          let OB = null,
+            GB = 1 / 0;
+          for (const DB of this.trackDatas) {
+            if (!BB && 0 === DB.sampleQueue.length && !DB.closed) break BB;
+            DB.sampleQueue.length > 0 && DB.sampleQueue[0].timestamp < GB && (OB = DB, GB = DB.sampleQueue[0].timestamp)
           }
-          if (!BH) break;
-          const AH = BH.sampleQueue.shift();
-          await this.addSampleToTrack(BH, AH)
+          if (!OB) break;
+          const YB = OB.sampleQueue.shift();
+          await this.addSampleToTrack(OB, YB)
         }
       }
       async finalizeFragment() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : !this.isCmaf;
-        if ((0, tH.J)(this.isFragmented), !this.wroteFragmentedHeader) {
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : !this.isCmaf;
+        if ((0, jB.Q)(this.isFragmented), !this.wroteFragmentedHeader) {
           this.wroteFragmentedHeader = !0;
-          const HH = this.initBoxWriter ?? this.boxWriter;
-          (0, tH.J)(HH), this.formatOptions.onMoov && HH.writer.startTrackingWrites(), this.ensureOneEnabledTrack();
-          const BH = FH(this);
-          if (HH.writeBox(BH), this.formatOptions.onMoov) {
+          const BB = this.initBoxWriter ?? this.boxWriter;
+          (0, jB.Q)(BB), this.formatOptions.onMoov && BB.writer.startTrackingWrites(), this.ensureOneEnabledTrack();
+          const OB = hB(this);
+          if (BB.writeBox(OB), this.formatOptions.onMoov) {
             const {
-              data: BH,
-              start: LH
-            } = HH.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(BH, LH)
+              data: OB,
+              start: GB
+            } = BB.writer.stopTrackingWrites();
+            this.formatOptions.onMoov(OB, GB)
           }
           if (this.isCmaf) {
-            (0, tH.J)(this.initWriter), await this.initWriter.flush(), await this.initWriter.finalize(), this.writer = await this.output._getRootWriter(!0), this.boxWriter = new vH(this.writer);
-            const HH = this.boxWriter.measureBox(RH()),
-              BH = this.boxWriter.measureBox(jH(this, 0));
-            this.segmentHeaderSize = HH + BH, this.writer.seek(this.segmentHeaderSize)
+            (0, jB.Q)(this.initWriter), await this.initWriter.flush(), await this.initWriter.finalize(), this.writer = await this.output._getRootWriter(!0), this.boxWriter = new WB(this.writer);
+            const BB = this.boxWriter.measureBox(wB()),
+              OB = this.boxWriter.measureBox(EB(this, 0));
+            this.segmentHeaderSize = BB + OB, this.writer.seek(this.segmentHeaderSize)
           }
-        }(0, tH.J)(this.writer), (0, tH.J)(this.boxWriter);
-        const BH = this.trackDatas.filter((HH => HH.currentChunk));
-        if (0 === BH.length) return void(HH && await this.writer.flush());
-        const LH = this.nextFragmentNumber++,
-          AH = KB(LH, BH),
-          rH = this.writer.getPos(),
-          SH = rH + this.boxWriter.measureBox(AH);
-        let hH = SH + 8,
-          zH = 1 / 0;
-        for (let YH = 0; YH < BH.length; YH++) {
-          const HH = BH[YH];
-          (0, tH.J)(HH.currentChunk), (0, tH.J)(null !== HH.startTimestampOffset), HH.currentChunk.offset = hH, HH.currentChunk.moofOffset = rH, HH.currentChunk.trafIndex = YH, HH.currentChunk.startTimestamp -= HH.startTimestampOffset;
-          for (const BH of HH.currentChunk.samples) hH += BH.size, BH.timestamp -= HH.startTimestampOffset, BH.decodeTimestamp -= HH.startTimestampOffset;
-          zH = Math.min(zH, HH.currentChunk.startTimestamp)
+        }(0, jB.Q)(this.writer), (0, jB.Q)(this.boxWriter);
+        const OB = this.trackDatas.filter((BB => BB.currentChunk));
+        if (0 === OB.length) return void(BB && await this.writer.flush());
+        const GB = this.nextFragmentNumber++,
+          YB = FO(GB, OB),
+          DB = this.writer.getPos(),
+          QB = DB + this.boxWriter.measureBox(YB);
+        let oB = QB + 8,
+          yB = 1 / 0;
+        for (let lB = 0; lB < OB.length; lB++) {
+          const BB = OB[lB];
+          (0, jB.Q)(BB.currentChunk), (0, jB.Q)(null !== BB.startTimestampOffset), BB.currentChunk.offset = oB, BB.currentChunk.moofOffset = DB, BB.currentChunk.trafIndex = lB, BB.currentChunk.startTimestamp -= BB.startTimestampOffset;
+          for (const OB of BB.currentChunk.samples) oB += OB.size, OB.timestamp -= BB.startTimestampOffset, OB.decodeTimestamp -= BB.startTimestampOffset;
+          yB = Math.min(yB, BB.currentChunk.startTimestamp)
         }
-        const CH = hH - SH,
-          EH = CH >= 2 ** 32;
-        if (EH)
-          for (const tH of BH) tH.currentChunk.offset += 8;
+        const JB = oB - QB,
+          MB = JB >= 2 ** 32;
+        if (MB)
+          for (const jB of OB) jB.currentChunk.offset += 8;
         this.formatOptions.onMoof && this.writer.startTrackingWrites();
-        const XH = KB(LH, BH);
-        if (this.boxWriter.writeBox(XH), this.formatOptions.onMoof) {
+        const PB = FO(GB, OB);
+        if (this.boxWriter.writeBox(PB), this.formatOptions.onMoof) {
           const {
-            data: HH,
-            start: BH
+            data: BB,
+            start: OB
           } = this.writer.stopTrackingWrites();
-          this.formatOptions.onMoof(HH, BH, zH)
-        }(0, tH.J)(this.writer.getPos() === SH), this.formatOptions.onMdat && this.writer.startTrackingWrites();
-        const GH = nH(EH);
-        GH.size = CH, this.boxWriter.writeBox(GH), this.writer.seek(SH + (EH ? 16 : 8));
-        for (const tH of BH)
-          for (const HH of tH.currentChunk.samples) this.writer.write(HH.data), HH.data = null;
+          this.formatOptions.onMoof(BB, OB, yB)
+        }(0, jB.Q)(this.writer.getPos() === QB), this.formatOptions.onMdat && this.writer.startTrackingWrites();
+        const zB = cB(MB);
+        zB.size = JB, this.boxWriter.writeBox(zB), this.writer.seek(QB + (MB ? 16 : 8));
+        for (const jB of OB)
+          for (const BB of jB.currentChunk.samples) this.writer.write(BB.data), BB.data = null;
         if (this.formatOptions.onMdat) {
           const {
-            data: HH,
-            start: BH
+            data: BB,
+            start: OB
           } = this.writer.stopTrackingWrites();
-          this.formatOptions.onMdat(HH, BH)
+          this.formatOptions.onMdat(BB, OB)
         }
-        for (const tH of BH) tH.finalizedChunks.push(tH.currentChunk), this.finalizedChunks.push(tH.currentChunk), tH.currentChunk = null;
-        HH && await this.writer.flush()
+        for (const jB of OB) jB.finalizedChunks.push(jB.currentChunk), this.finalizedChunks.push(jB.currentChunk), jB.currentChunk = null;
+        BB && await this.writer.flush()
       }
-      async registerSampleFastStartReserve(HH, BH) {
-        this.allTracksAreKnown() ? (this.mdat || await this.createFastStartReserveMdat(), await this.addSampleToTrack(HH, BH)) : HH.sampleQueue.push(BH)
+      async registerSampleFastStartReserve(BB, OB) {
+        this.allTracksAreKnown() ? (this.mdat || await this.createFastStartReserveMdat(), await this.addSampleToTrack(BB, OB)) : BB.sampleQueue.push(OB)
       }
       async createFastStartReserveMdat() {
-        (0, tH.J)(this.writer), (0, tH.J)(this.boxWriter), this.ensureOneEnabledTrack();
-        const HH = FH(this),
-          BH = this.boxWriter.measureBox(HH) + this.computeSampleTableSizeUpperBound() + 4096;
-        (0, tH.J)(null !== this.ftypSize), this.writer.seek(this.ftypSize + BH), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = nH(!0), this.boxWriter.writeBox(this.mdat);
-        for (const LH of this.trackDatas) {
-          for (const HH of LH.sampleQueue) await this.addSampleToTrack(LH, HH);
-          LH.sampleQueue.length = 0
+        (0, jB.Q)(this.writer), (0, jB.Q)(this.boxWriter), this.ensureOneEnabledTrack();
+        const BB = hB(this),
+          OB = this.boxWriter.measureBox(BB) + this.computeSampleTableSizeUpperBound() + 4096;
+        (0, jB.Q)(null !== this.ftypSize), this.writer.seek(this.ftypSize + OB), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = cB(!0), this.boxWriter.writeBox(this.mdat);
+        for (const GB of this.trackDatas) {
+          for (const BB of GB.sampleQueue) await this.addSampleToTrack(GB, BB);
+          GB.sampleQueue.length = 0
         }
       }
       computeSampleTableSizeUpperBound() {
-        (0, tH.J)("reserve" === this.fastStart);
-        let HH = 0;
-        for (const BH of this.trackDatas) {
-          const LH = BH.track.metadata.maximumPacketCount;
-          (0, tH.J)(void 0 !== LH), HH += 8 * Math.ceil(2 / 3 * LH), HH += 4 * LH, HH += 8 * Math.ceil(2 / 3 * LH), HH += 12 * Math.ceil(2 / 3 * LH), HH += 4 * LH, HH += 8 * LH
+        (0, jB.Q)("reserve" === this.fastStart);
+        let BB = 0;
+        for (const OB of this.trackDatas) {
+          const GB = OB.track.metadata.maximumPacketCount;
+          (0, jB.Q)(void 0 !== GB), BB += 8 * Math.ceil(2 / 3 * GB), BB += 4 * GB, BB += 8 * Math.ceil(2 / 3 * GB), BB += 12 * Math.ceil(2 / 3 * GB), BB += 4 * GB, BB += 8 * GB
         }
-        return HH
+        return BB
       }
-      async onTrackClose(HH) {
-        const BH = await this.mutex.acquire(),
-          LH = this.trackDatas.find((BH => BH.track === HH));
-        LH && (LH.closed = !0, "subtitle" === LH.type && "webvtt" === HH.source._codec && await this.processWebVTTCues(LH, 1 / 0), this.processTimestamps(LH)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), this.isFragmented && await this.interleaveSamples(), BH()
+      async onTrackClose(BB) {
+        const OB = await this.mutex.acquire(),
+          GB = this.trackDatas.find((OB => OB.track === BB));
+        GB && (GB.closed = !0, "subtitle" === GB.type && "webvtt" === BB.source._codec && await this.processWebVTTCues(GB, 1 / 0), this.processTimestamps(GB)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), this.isFragmented && await this.interleaveSamples(), OB()
       }
       ensureOneEnabledTrack() {
-        for (const HH of ["video", "audio", "subtitle"]) {
-          const BH = this.trackDatas.filter((BH => BH.type === HH));
-          if (0 === BH.length) continue;
-          if (!BH.some((HH => !1 !== HH.track.metadata.disposition?.default))) {
-            const HH = BH[0];
-            HH.track.metadata.disposition = {
-              ...HH.track.metadata.disposition,
+        for (const BB of ["video", "audio", "subtitle"]) {
+          const OB = this.trackDatas.filter((OB => OB.type === BB));
+          if (0 === OB.length) continue;
+          if (!OB.some((BB => !1 !== BB.track.metadata.disposition?.default))) {
+            const BB = OB[0];
+            BB.track.metadata.disposition = {
+              ...BB.track.metadata.disposition,
               default: !0
             }
           }
         }
       }
       async forceFragmentFinalization() {
-        (0, tH.J)(this.isFragmented);
-        const HH = await this.mutex.acquire();
+        (0, jB.Q)(this.isFragmented);
+        const BB = await this.mutex.acquire();
         try {
-          for (const HH of this.trackDatas) "subtitle" === HH.type && "webvtt" === HH.track.source._codec && await this.processWebVTTCues(HH, 1 / 0), this.processTimestamps(HH);
+          for (const BB of this.trackDatas) "subtitle" === BB.type && "webvtt" === BB.track.source._codec && await this.processWebVTTCues(BB, 1 / 0), this.processTimestamps(BB);
           await this.interleaveSamples(!0), await this.finalizeFragment()
         } finally {
-          HH()
+          BB()
         }
       }
       async finalize() {
-        const HH = await this.mutex.acquire();
+        const BB = await this.mutex.acquire();
         this.allTracksKnown.resolve(), this.ensureOneEnabledTrack(), this.mdat || "reserve" !== this.fastStart || await this.createFastStartReserveMdat();
-        for (const LH of this.trackDatas) LH.closed = !0, "subtitle" === LH.type && "webvtt" === LH.track.source._codec && await this.processWebVTTCues(LH, 1 / 0), this.processTimestamps(LH);
+        for (const GB of this.trackDatas) GB.closed = !0, "subtitle" === GB.type && "webvtt" === GB.track.source._codec && await this.processWebVTTCues(GB, 1 / 0), this.processTimestamps(GB);
         if (this.isFragmented) await this.interleaveSamples(!0), await this.finalizeFragment(!1);
         else
-          for (const LH of this.trackDatas) {
-            await this.finalizeCurrentChunk(LH);
-            const HH = YL(LH);
-            if (HH > 0) {
-              let BH = 0;
-              for (const HH of LH.samples) BH += HH.size;
-              LH.avgBitrate = Math.round(8 * BH / HH)
-            } else LH.avgBitrate = 0;
-            let BH = 0,
-              AH = 0,
-              rH = 0;
-            for (let SH = 0; SH < LH.samples.length; SH++) {
-              const HH = LH.samples[SH];
-              for (AH += HH.size; HH.decodeTimestamp - LH.samples[BH].decodeTimestamp >= 1;) AH -= LH.samples[BH].size, BH++;
-              rH = Math.max(rH, AH)
+          for (const GB of this.trackDatas) {
+            await this.finalizeCurrentChunk(GB);
+            const BB = lG(GB);
+            if (BB > 0) {
+              let OB = 0;
+              for (const BB of GB.samples) OB += BB.size;
+              GB.avgBitrate = Math.round(8 * OB / BB)
+            } else GB.avgBitrate = 0;
+            let OB = 0,
+              YB = 0,
+              DB = 0;
+            for (let QB = 0; QB < GB.samples.length; QB++) {
+              const BB = GB.samples[QB];
+              for (YB += BB.size; BB.decodeTimestamp - GB.samples[OB].decodeTimestamp >= 1;) YB -= GB.samples[OB].size, OB++;
+              DB = Math.max(DB, YB)
             }
-            if (LH.maxBitrate = 8 * rH, null !== LH.startTimestampOffset)
-              for (let SH = 0; SH < LH.samples.length; SH++) {
-                const HH = LH.samples[SH];
-                HH.timestamp -= LH.startTimestampOffset, HH.decodeTimestamp -= LH.startTimestampOffset
+            if (GB.maxBitrate = 8 * DB, null !== GB.startTimestampOffset)
+              for (let QB = 0; QB < GB.samples.length; QB++) {
+                const BB = GB.samples[QB];
+                BB.timestamp -= GB.startTimestampOffset, BB.decodeTimestamp -= GB.startTimestampOffset
               }
           }
-        if ((0, tH.J)(this.writer), (0, tH.J)(this.boxWriter), "in-memory" === this.fastStart) {
-          let HH;
-          this.mdat = nH(!1);
-          for (let LH = 0; LH < 2; LH++) {
-            const BH = FH(this),
-              LH = this.boxWriter.measureBox(BH);
-            HH = this.boxWriter.measureBox(this.mdat);
-            let AH = this.writer.getPos() + LH + HH;
-            for (const rH of this.finalizedChunks) {
-              rH.offset = AH;
+        if ((0, jB.Q)(this.writer), (0, jB.Q)(this.boxWriter), "in-memory" === this.fastStart) {
+          let BB;
+          this.mdat = cB(!1);
+          for (let GB = 0; GB < 2; GB++) {
+            const OB = hB(this),
+              GB = this.boxWriter.measureBox(OB);
+            BB = this.boxWriter.measureBox(this.mdat);
+            let YB = this.writer.getPos() + GB + BB;
+            for (const DB of this.finalizedChunks) {
+              DB.offset = YB;
               for (const {
-                  data: BH
+                  data: OB
                 }
-                of rH.samples)(0, tH.J)(BH), AH += BH.byteLength, HH += BH.byteLength
+                of DB.samples)(0, jB.Q)(OB), YB += OB.byteLength, BB += OB.byteLength
             }
-            if (AH < 2 ** 32) break;
-            HH >= 2 ** 32 && (this.mdat.largeSize = !0)
+            if (YB < 2 ** 32) break;
+            BB >= 2 ** 32 && (this.mdat.largeSize = !0)
           }
           this.formatOptions.onMoov && this.writer.startTrackingWrites();
-          const BH = FH(this);
-          if (this.boxWriter.writeBox(BH), this.formatOptions.onMoov) {
+          const OB = hB(this);
+          if (this.boxWriter.writeBox(OB), this.formatOptions.onMoov) {
             const {
-              data: HH,
-              start: BH
+              data: BB,
+              start: OB
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(HH, BH)
+            this.formatOptions.onMoov(BB, OB)
           }
-          this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat.size = HH, this.boxWriter.writeBox(this.mdat);
-          for (const LH of this.finalizedChunks)
-            for (const HH of LH.samples)(0, tH.J)(HH.data), this.writer.write(HH.data), HH.data = null;
+          this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat.size = BB, this.boxWriter.writeBox(this.mdat);
+          for (const GB of this.finalizedChunks)
+            for (const BB of GB.samples)(0, jB.Q)(BB.data), this.writer.write(BB.data), BB.data = null;
           if (this.formatOptions.onMdat) {
             const {
-              data: HH,
-              start: BH
+              data: BB,
+              start: OB
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMdat(HH, BH)
+            this.formatOptions.onMdat(BB, OB)
           }
         } else if (this.isFragmented)
           if (this.isCmaf) {
-            const HH = null !== this.segmentHeaderSize ? this.writer.getPos() - this.segmentHeaderSize : 0;
-            this.writer.seek(0), this.boxWriter.writeBox(RH()), this.boxWriter.writeBox(jH(this, HH))
+            const BB = null !== this.segmentHeaderSize ? this.writer.getPos() - this.segmentHeaderSize : 0;
+            this.writer.seek(0), this.boxWriter.writeBox(wB()), this.boxWriter.writeBox(EB(this, BB))
           } else {
-            const HH = this.writer.getPos(),
-              LH = (BH = this.trackDatas, gH("mfra", void 0, [...BH.map(jB), nB()]));
-            this.boxWriter.writeBox(LH);
-            const AH = this.writer.getPos() - HH;
-            this.writer.seek(this.writer.getPos() - 4), this.boxWriter.writeU32(AH)
+            const BB = this.writer.getPos(),
+              GB = (OB = this.trackDatas, rB("mfra", void 0, [...OB.map(EO), cO()]));
+            this.boxWriter.writeBox(GB);
+            const YB = this.writer.getPos() - BB;
+            this.writer.seek(this.writer.getPos() - 4), this.boxWriter.writeU32(YB)
           }
         else {
-          (0, tH.J)(this.mdat);
-          const HH = this.boxWriter.offsets.get(this.mdat);
-          (0, tH.J)(void 0 !== HH);
-          const BH = this.writer.getPos() - HH;
-          if (this.mdat.size = BH, this.mdat.largeSize = BH >= 2 ** 32, this.boxWriter.patchBox(this.mdat), this.formatOptions.onMdat) {
+          (0, jB.Q)(this.mdat);
+          const BB = this.boxWriter.offsets.get(this.mdat);
+          (0, jB.Q)(void 0 !== BB);
+          const OB = this.writer.getPos() - BB;
+          if (this.mdat.size = OB, this.mdat.largeSize = OB >= 2 ** 32, this.boxWriter.patchBox(this.mdat), this.formatOptions.onMdat) {
             const {
-              data: HH,
-              start: BH
+              data: BB,
+              start: OB
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMdat(HH, BH)
+            this.formatOptions.onMdat(BB, OB)
           }
-          const LH = FH(this);
+          const GB = hB(this);
           if ("reserve" === this.fastStart) {
-            (0, tH.J)(null !== this.ftypSize), this.writer.seek(this.ftypSize), this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(LH);
-            const HH = this.boxWriter.offsets.get(this.mdat) - this.writer.getPos();
+            (0, jB.Q)(null !== this.ftypSize), this.writer.seek(this.ftypSize), this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(GB);
+            const BB = this.boxWriter.offsets.get(this.mdat) - this.writer.getPos();
             this.boxWriter.writeBox({
               type: "free",
-              size: HH
+              size: BB
             })
-          } else this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(LH);
+          } else this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(GB);
           if (this.formatOptions.onMoov) {
             const {
-              data: HH,
-              start: BH
+              data: BB,
+              start: OB
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(HH, BH)
+            this.formatOptions.onMoov(BB, OB)
           }
         }
-        var BH;
-        HH()
+        var OB;
+        BB()
       }
     }
-    class QL {
-      constructor(HH) {
-        this.value = HH
+    class qG {
+      constructor(BB) {
+        this.value = BB
       }
     }
-    class WL {
-      constructor(HH) {
-        this.value = HH
+    class ZG {
+      constructor(BB) {
+        this.value = BB
       }
     }
-    class ML {
-      constructor(HH) {
-        this.value = HH
+    class NG {
+      constructor(BB) {
+        this.value = BB
       }
     }
-    class xL {
-      constructor(HH) {
-        this.value = HH
+    class RG {
+      constructor(BB) {
+        this.value = BB
       }
     }
-    var vL;
-    ! function(HH) {
-      HH[HH.EBML = 440786851] = "EBML", HH[HH.EBMLVersion = 17030] = "EBMLVersion", HH[HH.EBMLReadVersion = 17143] = "EBMLReadVersion", HH[HH.EBMLMaxIDLength = 17138] = "EBMLMaxIDLength", HH[HH.EBMLMaxSizeLength = 17139] = "EBMLMaxSizeLength", HH[HH.DocType = 17026] = "DocType", HH[HH.DocTypeVersion = 17031] = "DocTypeVersion", HH[HH.DocTypeReadVersion = 17029] = "DocTypeReadVersion", HH[HH.Void = 236] = "Void", HH[HH.Segment = 408125543] = "Segment", HH[HH.SeekHead = 290298740] = "SeekHead", HH[HH.Seek = 19899] = "Seek", HH[HH.SeekID = 21419] = "SeekID", HH[HH.SeekPosition = 21420] = "SeekPosition", HH[HH.Duration = 17545] = "Duration", HH[HH.Info = 357149030] = "Info", HH[HH.TimestampScale = 2807729] = "TimestampScale", HH[HH.MuxingApp = 19840] = "MuxingApp", HH[HH.WritingApp = 22337] = "WritingApp", HH[HH.Tracks = 374648427] = "Tracks", HH[HH.TrackEntry = 174] = "TrackEntry", HH[HH.TrackNumber = 215] = "TrackNumber", HH[HH.TrackUID = 29637] = "TrackUID", HH[HH.TrackType = 131] = "TrackType", HH[HH.FlagEnabled = 185] = "FlagEnabled", HH[HH.FlagDefault = 136] = "FlagDefault", HH[HH.FlagForced = 21930] = "FlagForced", HH[HH.FlagOriginal = 21934] = "FlagOriginal", HH[HH.FlagHearingImpaired = 21931] = "FlagHearingImpaired", HH[HH.FlagVisualImpaired = 21932] = "FlagVisualImpaired", HH[HH.FlagCommentary = 21935] = "FlagCommentary", HH[HH.FlagLacing = 156] = "FlagLacing", HH[HH.Name = 21358] = "Name", HH[HH.Language = 2274716] = "Language", HH[HH.LanguageBCP47 = 2274717] = "LanguageBCP47", HH[HH.CodecID = 134] = "CodecID", HH[HH.CodecPrivate = 25506] = "CodecPrivate", HH[HH.CodecDelay = 22186] = "CodecDelay", HH[HH.SeekPreRoll = 22203] = "SeekPreRoll", HH[HH.DefaultDuration = 2352003] = "DefaultDuration", HH[HH.Video = 224] = "Video", HH[HH.PixelWidth = 176] = "PixelWidth", HH[HH.PixelHeight = 186] = "PixelHeight", HH[HH.DisplayWidth = 21680] = "DisplayWidth", HH[HH.DisplayHeight = 21690] = "DisplayHeight", HH[HH.DisplayUnit = 21682] = "DisplayUnit", HH[HH.AlphaMode = 21440] = "AlphaMode", HH[HH.Audio = 225] = "Audio", HH[HH.SamplingFrequency = 181] = "SamplingFrequency", HH[HH.Channels = 159] = "Channels", HH[HH.BitDepth = 25188] = "BitDepth", HH[HH.SimpleBlock = 163] = "SimpleBlock", HH[HH.BlockGroup = 160] = "BlockGroup", HH[HH.Block = 161] = "Block", HH[HH.BlockAdditions = 30113] = "BlockAdditions", HH[HH.BlockMore = 166] = "BlockMore", HH[HH.BlockAdditional = 165] = "BlockAdditional", HH[HH.BlockAddID = 238] = "BlockAddID", HH[HH.BlockDuration = 155] = "BlockDuration", HH[HH.ReferenceBlock = 251] = "ReferenceBlock", HH[HH.Cluster = 524531317] = "Cluster", HH[HH.Timestamp = 231] = "Timestamp", HH[HH.Cues = 475249515] = "Cues", HH[HH.CuePoint = 187] = "CuePoint", HH[HH.CueTime = 179] = "CueTime", HH[HH.CueTrackPositions = 183] = "CueTrackPositions", HH[HH.CueTrack = 247] = "CueTrack", HH[HH.CueClusterPosition = 241] = "CueClusterPosition", HH[HH.Colour = 21936] = "Colour", HH[HH.MatrixCoefficients = 21937] = "MatrixCoefficients", HH[HH.TransferCharacteristics = 21946] = "TransferCharacteristics", HH[HH.Primaries = 21947] = "Primaries", HH[HH.Range = 21945] = "Range", HH[HH.Projection = 30320] = "Projection", HH[HH.ProjectionType = 30321] = "ProjectionType", HH[HH.ProjectionPoseYaw = 30323] = "ProjectionPoseYaw", HH[HH.ProjectionPosePitch = 30324] = "ProjectionPosePitch", HH[HH.ProjectionPoseRoll = 30325] = "ProjectionPoseRoll", HH[HH.Attachments = 423732329] = "Attachments", HH[HH.AttachedFile = 24999] = "AttachedFile", HH[HH.FileDescription = 18046] = "FileDescription", HH[HH.FileName = 18030] = "FileName", HH[HH.FileMediaType = 18016] = "FileMediaType", HH[HH.FileData = 18012] = "FileData", HH[HH.FileUID = 18094] = "FileUID", HH[HH.Chapters = 272869232] = "Chapters", HH[HH.Tags = 307544935] = "Tags", HH[HH.Tag = 29555] = "Tag", HH[HH.Targets = 25536] = "Targets", HH[HH.TargetTypeValue = 26826] = "TargetTypeValue", HH[HH.TargetType = 25546] = "TargetType", HH[HH.TagTrackUID = 25541] = "TagTrackUID", HH[HH.TagEditionUID = 25545] = "TagEditionUID", HH[HH.TagChapterUID = 25540] = "TagChapterUID", HH[HH.TagAttachmentUID = 25542] = "TagAttachmentUID", HH[HH.SimpleTag = 26568] = "SimpleTag", HH[HH.TagName = 17827] = "TagName", HH[HH.TagLanguage = 17530] = "TagLanguage", HH[HH.TagString = 17543] = "TagString", HH[HH.TagBinary = 17541] = "TagBinary", HH[HH.ContentEncodings = 28032] = "ContentEncodings", HH[HH.ContentEncoding = 25152] = "ContentEncoding", HH[HH.ContentEncodingOrder = 20529] = "ContentEncodingOrder", HH[HH.ContentEncodingScope = 20530] = "ContentEncodingScope", HH[HH.ContentCompression = 20532] = "ContentCompression", HH[HH.ContentCompAlgo = 16980] = "ContentCompAlgo", HH[HH.ContentCompSettings = 16981] = "ContentCompSettings", HH[HH.ContentEncryption = 20533] = "ContentEncryption"
-    }(vL || (vL = {}));
-    vL.EBML, vL.Segment, vL.SeekHead, vL.Info, vL.Cluster, vL.Tracks, vL.Cues, vL.Attachments, vL.Chapters, vL.Tags;
-    const PL = HH => HH < 256 ? 1 : HH < 65536 ? 2 : HH < 1 << 24 ? 3 : HH < 2 ** 32 ? 4 : HH < 2 ** 40 ? 5 : 6,
-      TL = HH => HH < 256n ? 1 : HH < 65536n ? 2 : HH < 1n << 24n ? 3 : HH < 1n << 32n ? 4 : HH < 1n << 40n ? 5 : HH < 1n << 48n ? 6 : HH < 1n << 56n ? 7 : 8,
-      UL = HH => HH >= -64 && HH < 64 ? 1 : HH >= -8192 && HH < 8192 ? 2 : HH >= -1048576 && HH < 1 << 20 ? 3 : HH >= -(1 << 27) && HH < 1 << 27 ? 4 : HH >= -(2 ** 34) && HH < 2 ** 34 ? 5 : 6;
-    class VL {
-      constructor(HH) {
-        this.writer = HH, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap, this.dataOffsets = new WeakMap
+    var WG;
+    ! function(BB) {
+      BB[BB.EBML = 440786851] = "EBML", BB[BB.EBMLVersion = 17030] = "EBMLVersion", BB[BB.EBMLReadVersion = 17143] = "EBMLReadVersion", BB[BB.EBMLMaxIDLength = 17138] = "EBMLMaxIDLength", BB[BB.EBMLMaxSizeLength = 17139] = "EBMLMaxSizeLength", BB[BB.DocType = 17026] = "DocType", BB[BB.DocTypeVersion = 17031] = "DocTypeVersion", BB[BB.DocTypeReadVersion = 17029] = "DocTypeReadVersion", BB[BB.Void = 236] = "Void", BB[BB.Segment = 408125543] = "Segment", BB[BB.SeekHead = 290298740] = "SeekHead", BB[BB.Seek = 19899] = "Seek", BB[BB.SeekID = 21419] = "SeekID", BB[BB.SeekPosition = 21420] = "SeekPosition", BB[BB.Duration = 17545] = "Duration", BB[BB.Info = 357149030] = "Info", BB[BB.TimestampScale = 2807729] = "TimestampScale", BB[BB.MuxingApp = 19840] = "MuxingApp", BB[BB.WritingApp = 22337] = "WritingApp", BB[BB.Tracks = 374648427] = "Tracks", BB[BB.TrackEntry = 174] = "TrackEntry", BB[BB.TrackNumber = 215] = "TrackNumber", BB[BB.TrackUID = 29637] = "TrackUID", BB[BB.TrackType = 131] = "TrackType", BB[BB.FlagEnabled = 185] = "FlagEnabled", BB[BB.FlagDefault = 136] = "FlagDefault", BB[BB.FlagForced = 21930] = "FlagForced", BB[BB.FlagOriginal = 21934] = "FlagOriginal", BB[BB.FlagHearingImpaired = 21931] = "FlagHearingImpaired", BB[BB.FlagVisualImpaired = 21932] = "FlagVisualImpaired", BB[BB.FlagCommentary = 21935] = "FlagCommentary", BB[BB.FlagLacing = 156] = "FlagLacing", BB[BB.Name = 21358] = "Name", BB[BB.Language = 2274716] = "Language", BB[BB.LanguageBCP47 = 2274717] = "LanguageBCP47", BB[BB.CodecID = 134] = "CodecID", BB[BB.CodecPrivate = 25506] = "CodecPrivate", BB[BB.CodecDelay = 22186] = "CodecDelay", BB[BB.SeekPreRoll = 22203] = "SeekPreRoll", BB[BB.DefaultDuration = 2352003] = "DefaultDuration", BB[BB.Video = 224] = "Video", BB[BB.PixelWidth = 176] = "PixelWidth", BB[BB.PixelHeight = 186] = "PixelHeight", BB[BB.DisplayWidth = 21680] = "DisplayWidth", BB[BB.DisplayHeight = 21690] = "DisplayHeight", BB[BB.DisplayUnit = 21682] = "DisplayUnit", BB[BB.AlphaMode = 21440] = "AlphaMode", BB[BB.Audio = 225] = "Audio", BB[BB.SamplingFrequency = 181] = "SamplingFrequency", BB[BB.Channels = 159] = "Channels", BB[BB.BitDepth = 25188] = "BitDepth", BB[BB.SimpleBlock = 163] = "SimpleBlock", BB[BB.BlockGroup = 160] = "BlockGroup", BB[BB.Block = 161] = "Block", BB[BB.BlockAdditions = 30113] = "BlockAdditions", BB[BB.BlockMore = 166] = "BlockMore", BB[BB.BlockAdditional = 165] = "BlockAdditional", BB[BB.BlockAddID = 238] = "BlockAddID", BB[BB.BlockDuration = 155] = "BlockDuration", BB[BB.ReferenceBlock = 251] = "ReferenceBlock", BB[BB.Cluster = 524531317] = "Cluster", BB[BB.Timestamp = 231] = "Timestamp", BB[BB.Cues = 475249515] = "Cues", BB[BB.CuePoint = 187] = "CuePoint", BB[BB.CueTime = 179] = "CueTime", BB[BB.CueTrackPositions = 183] = "CueTrackPositions", BB[BB.CueTrack = 247] = "CueTrack", BB[BB.CueClusterPosition = 241] = "CueClusterPosition", BB[BB.Colour = 21936] = "Colour", BB[BB.MatrixCoefficients = 21937] = "MatrixCoefficients", BB[BB.TransferCharacteristics = 21946] = "TransferCharacteristics", BB[BB.Primaries = 21947] = "Primaries", BB[BB.Range = 21945] = "Range", BB[BB.Projection = 30320] = "Projection", BB[BB.ProjectionType = 30321] = "ProjectionType", BB[BB.ProjectionPoseYaw = 30323] = "ProjectionPoseYaw", BB[BB.ProjectionPosePitch = 30324] = "ProjectionPosePitch", BB[BB.ProjectionPoseRoll = 30325] = "ProjectionPoseRoll", BB[BB.Attachments = 423732329] = "Attachments", BB[BB.AttachedFile = 24999] = "AttachedFile", BB[BB.FileDescription = 18046] = "FileDescription", BB[BB.FileName = 18030] = "FileName", BB[BB.FileMediaType = 18016] = "FileMediaType", BB[BB.FileData = 18012] = "FileData", BB[BB.FileUID = 18094] = "FileUID", BB[BB.Chapters = 272869232] = "Chapters", BB[BB.Tags = 307544935] = "Tags", BB[BB.Tag = 29555] = "Tag", BB[BB.Targets = 25536] = "Targets", BB[BB.TargetTypeValue = 26826] = "TargetTypeValue", BB[BB.TargetType = 25546] = "TargetType", BB[BB.TagTrackUID = 25541] = "TagTrackUID", BB[BB.TagEditionUID = 25545] = "TagEditionUID", BB[BB.TagChapterUID = 25540] = "TagChapterUID", BB[BB.TagAttachmentUID = 25542] = "TagAttachmentUID", BB[BB.SimpleTag = 26568] = "SimpleTag", BB[BB.TagName = 17827] = "TagName", BB[BB.TagLanguage = 17530] = "TagLanguage", BB[BB.TagString = 17543] = "TagString", BB[BB.TagBinary = 17541] = "TagBinary", BB[BB.ContentEncodings = 28032] = "ContentEncodings", BB[BB.ContentEncoding = 25152] = "ContentEncoding", BB[BB.ContentEncodingOrder = 20529] = "ContentEncodingOrder", BB[BB.ContentEncodingScope = 20530] = "ContentEncodingScope", BB[BB.ContentCompression = 20532] = "ContentCompression", BB[BB.ContentCompAlgo = 16980] = "ContentCompAlgo", BB[BB.ContentCompSettings = 16981] = "ContentCompSettings", BB[BB.ContentEncryption = 20533] = "ContentEncryption"
+    }(WG || (WG = {}));
+    WG.EBML, WG.Segment, WG.SeekHead, WG.Info, WG.Cluster, WG.Tracks, WG.Cues, WG.Attachments, WG.Chapters, WG.Tags;
+    const AG = BB => BB < 256 ? 1 : BB < 65536 ? 2 : BB < 1 << 24 ? 3 : BB < 2 ** 32 ? 4 : BB < 2 ** 40 ? 5 : 6,
+      VG = BB => BB < 256n ? 1 : BB < 65536n ? 2 : BB < 1n << 24n ? 3 : BB < 1n << 32n ? 4 : BB < 1n << 40n ? 5 : BB < 1n << 48n ? 6 : BB < 1n << 56n ? 7 : 8,
+      SG = BB => BB >= -64 && BB < 64 ? 1 : BB >= -8192 && BB < 8192 ? 2 : BB >= -1048576 && BB < 1 << 20 ? 3 : BB >= -(1 << 27) && BB < 1 << 27 ? 4 : BB >= -(2 ** 34) && BB < 2 ** 34 ? 5 : 6;
+    class nG {
+      constructor(BB) {
+        this.writer = BB, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap, this.dataOffsets = new WeakMap
       }
-      writeByte(HH) {
-        this.helperView.setUint8(0, HH), this.writer.write(this.helper.subarray(0, 1))
+      writeByte(BB) {
+        this.helperView.setUint8(0, BB), this.writer.write(this.helper.subarray(0, 1))
       }
-      writeFloat32(HH) {
-        this.helperView.setFloat32(0, HH, !1), this.writer.write(this.helper.subarray(0, 4))
+      writeFloat32(BB) {
+        this.helperView.setFloat32(0, BB, !1), this.writer.write(this.helper.subarray(0, 4))
       }
-      writeFloat64(HH) {
-        this.helperView.setFloat64(0, HH, !1), this.writer.write(this.helper)
+      writeFloat64(BB) {
+        this.helperView.setFloat64(0, BB, !1), this.writer.write(this.helper)
       }
-      writeUnsignedInt(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PL(HH),
-          LH = 0;
-        switch (BH) {
+      writeUnsignedInt(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AG(BB),
+          GB = 0;
+        switch (OB) {
           case 6:
-            this.helperView.setUint8(LH++, HH / 2 ** 40 | 0);
+            this.helperView.setUint8(GB++, BB / 2 ** 40 | 0);
           case 5:
-            this.helperView.setUint8(LH++, HH / 2 ** 32 | 0);
+            this.helperView.setUint8(GB++, BB / 2 ** 32 | 0);
           case 4:
-            this.helperView.setUint8(LH++, HH >> 24);
+            this.helperView.setUint8(GB++, BB >> 24);
           case 3:
-            this.helperView.setUint8(LH++, HH >> 16);
+            this.helperView.setUint8(GB++, BB >> 16);
           case 2:
-            this.helperView.setUint8(LH++, HH >> 8);
+            this.helperView.setUint8(GB++, BB >> 8);
           case 1:
-            this.helperView.setUint8(LH++, HH);
+            this.helperView.setUint8(GB++, BB);
             break;
           default:
-            throw new Error("Bad unsigned int size " + BH)
+            throw new Error("Bad unsigned int size " + OB)
         }
-        this.writer.write(this.helper.subarray(0, LH))
+        this.writer.write(this.helper.subarray(0, GB))
       }
-      writeUnsignedBigInt(HH) {
-        let BH = 0;
-        for (let LH = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TL(HH)) - 1; LH >= 0; LH--) this.helperView.setUint8(BH++, Number(HH >> BigInt(8 * LH) & 0xffn));
-        this.writer.write(this.helper.subarray(0, BH))
+      writeUnsignedBigInt(BB) {
+        let OB = 0;
+        for (let GB = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VG(BB)) - 1; GB >= 0; GB--) this.helperView.setUint8(OB++, Number(BB >> BigInt(8 * GB) & 0xffn));
+        this.writer.write(this.helper.subarray(0, OB))
       }
-      writeSignedInt(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UL(HH);
-        HH < 0 && (HH += 2 ** (8 * BH)), this.writeUnsignedInt(HH, BH)
+      writeSignedInt(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SG(BB);
+        BB < 0 && (BB += 2 ** (8 * OB)), this.writeUnsignedInt(BB, OB)
       }
-      writeVarInt(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (HH => {
-            if (HH < 127) return 1;
-            if (HH < 16383) return 2;
-            if (HH < 2097151) return 3;
-            if (HH < 268435455) return 4;
-            if (HH < 2 ** 35 - 1) return 5;
-            if (HH < 2 ** 42 - 1) return 6;
-            throw new Error("EBML varint size not supported " + HH)
-          })(HH),
-          LH = 0;
-        switch (BH) {
+      writeVarInt(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (BB => {
+            if (BB < 127) return 1;
+            if (BB < 16383) return 2;
+            if (BB < 2097151) return 3;
+            if (BB < 268435455) return 4;
+            if (BB < 2 ** 35 - 1) return 5;
+            if (BB < 2 ** 42 - 1) return 6;
+            throw new Error("EBML varint size not supported " + BB)
+          })(BB),
+          GB = 0;
+        switch (OB) {
           case 1:
-            this.helperView.setUint8(LH++, 128 | HH);
+            this.helperView.setUint8(GB++, 128 | BB);
             break;
           case 2:
-            this.helperView.setUint8(LH++, 64 | HH >> 8), this.helperView.setUint8(LH++, HH);
+            this.helperView.setUint8(GB++, 64 | BB >> 8), this.helperView.setUint8(GB++, BB);
             break;
           case 3:
-            this.helperView.setUint8(LH++, 32 | HH >> 16), this.helperView.setUint8(LH++, HH >> 8), this.helperView.setUint8(LH++, HH);
+            this.helperView.setUint8(GB++, 32 | BB >> 16), this.helperView.setUint8(GB++, BB >> 8), this.helperView.setUint8(GB++, BB);
             break;
           case 4:
-            this.helperView.setUint8(LH++, 16 | HH >> 24), this.helperView.setUint8(LH++, HH >> 16), this.helperView.setUint8(LH++, HH >> 8), this.helperView.setUint8(LH++, HH);
+            this.helperView.setUint8(GB++, 16 | BB >> 24), this.helperView.setUint8(GB++, BB >> 16), this.helperView.setUint8(GB++, BB >> 8), this.helperView.setUint8(GB++, BB);
             break;
           case 5:
-            this.helperView.setUint8(LH++, 8 | HH / 2 ** 32 & 7), this.helperView.setUint8(LH++, HH >> 24), this.helperView.setUint8(LH++, HH >> 16), this.helperView.setUint8(LH++, HH >> 8), this.helperView.setUint8(LH++, HH);
+            this.helperView.setUint8(GB++, 8 | BB / 2 ** 32 & 7), this.helperView.setUint8(GB++, BB >> 24), this.helperView.setUint8(GB++, BB >> 16), this.helperView.setUint8(GB++, BB >> 8), this.helperView.setUint8(GB++, BB);
             break;
           case 6:
-            this.helperView.setUint8(LH++, 4 | HH / 2 ** 40 & 3), this.helperView.setUint8(LH++, HH / 2 ** 32 | 0), this.helperView.setUint8(LH++, HH >> 24), this.helperView.setUint8(LH++, HH >> 16), this.helperView.setUint8(LH++, HH >> 8), this.helperView.setUint8(LH++, HH);
+            this.helperView.setUint8(GB++, 4 | BB / 2 ** 40 & 3), this.helperView.setUint8(GB++, BB / 2 ** 32 | 0), this.helperView.setUint8(GB++, BB >> 24), this.helperView.setUint8(GB++, BB >> 16), this.helperView.setUint8(GB++, BB >> 8), this.helperView.setUint8(GB++, BB);
             break;
           default:
-            throw new Error("Bad EBML varint size " + BH)
+            throw new Error("Bad EBML varint size " + OB)
         }
-        this.writer.write(this.helper.subarray(0, LH))
+        this.writer.write(this.helper.subarray(0, GB))
       }
-      writeAsciiString(HH) {
-        this.writer.write(new Uint8Array(HH.split("").map((HH => HH.charCodeAt(0)))))
+      writeAsciiString(BB) {
+        this.writer.write(new Uint8Array(BB.split("").map((BB => BB.charCodeAt(0)))))
       }
-      writeEBML(HH) {
-        if (null !== HH)
-          if (HH instanceof Uint8Array) this.writer.write(HH);
-          else if (Array.isArray(HH))
-          for (const BH of HH) this.writeEBML(BH);
-        else if (this.offsets.set(HH, this.writer.getPos()), this.writeUnsignedInt(HH.id), Array.isArray(HH.data)) {
-          const BH = this.writer.getPos(),
-            LH = -1 === HH.size ? 1 : HH.size ?? 4; - 1 === HH.size ? this.writeByte(255) : this.writer.seek(this.writer.getPos() + LH);
-          const AH = this.writer.getPos();
-          if (this.dataOffsets.set(HH, AH), this.writeEBML(HH.data), -1 !== HH.size) {
-            const HH = this.writer.getPos() - AH,
-              rH = this.writer.getPos();
-            this.writer.seek(BH), this.writeVarInt(HH, LH), this.writer.seek(rH)
+      writeEBML(BB) {
+        if (null !== BB)
+          if (BB instanceof Uint8Array) this.writer.write(BB);
+          else if (Array.isArray(BB))
+          for (const OB of BB) this.writeEBML(OB);
+        else if (this.offsets.set(BB, this.writer.getPos()), this.writeUnsignedInt(BB.id), Array.isArray(BB.data)) {
+          const OB = this.writer.getPos(),
+            GB = -1 === BB.size ? 1 : BB.size ?? 4; - 1 === BB.size ? this.writeByte(255) : this.writer.seek(this.writer.getPos() + GB);
+          const YB = this.writer.getPos();
+          if (this.dataOffsets.set(BB, YB), this.writeEBML(BB.data), -1 !== BB.size) {
+            const BB = this.writer.getPos() - YB,
+              DB = this.writer.getPos();
+            this.writer.seek(OB), this.writeVarInt(BB, GB), this.writer.seek(DB)
           }
-        } else if ("number" === typeof HH.data) {
-          const BH = HH.size ?? PL(HH.data);
-          this.writeVarInt(BH), this.writeUnsignedInt(HH.data, BH)
-        } else if ("bigint" === typeof HH.data) {
-          const BH = HH.size ?? TL(HH.data);
-          this.writeVarInt(BH), this.writeUnsignedBigInt(HH.data, BH)
-        } else if ("string" === typeof HH.data) this.writeVarInt(HH.data.length), this.writeAsciiString(HH.data);
-        else if (HH.data instanceof Uint8Array) this.writeVarInt(HH.data.byteLength, HH.size), this.writer.write(HH.data);
-        else if (HH.data instanceof QL) this.writeVarInt(4), this.writeFloat32(HH.data.value);
-        else if (HH.data instanceof WL) this.writeVarInt(8), this.writeFloat64(HH.data.value);
-        else if (HH.data instanceof ML) {
-          const BH = HH.size ?? UL(HH.data.value);
-          this.writeVarInt(BH), this.writeSignedInt(HH.data.value, BH)
-        } else if (HH.data instanceof xL) {
-          const BH = tH.$c.encode(HH.data.value);
-          this.writeVarInt(BH.length), this.writer.write(BH)
-        } else(0, tH.G)(HH.data)
+        } else if ("number" === typeof BB.data) {
+          const OB = BB.size ?? AG(BB.data);
+          this.writeVarInt(OB), this.writeUnsignedInt(BB.data, OB)
+        } else if ("bigint" === typeof BB.data) {
+          const OB = BB.size ?? VG(BB.data);
+          this.writeVarInt(OB), this.writeUnsignedBigInt(BB.data, OB)
+        } else if ("string" === typeof BB.data) this.writeVarInt(BB.data.length), this.writeAsciiString(BB.data);
+        else if (BB.data instanceof Uint8Array) this.writeVarInt(BB.data.byteLength, BB.size), this.writer.write(BB.data);
+        else if (BB.data instanceof qG) this.writeVarInt(4), this.writeFloat32(BB.data.value);
+        else if (BB.data instanceof ZG) this.writeVarInt(8), this.writeFloat64(BB.data.value);
+        else if (BB.data instanceof NG) {
+          const OB = BB.size ?? SG(BB.data.value);
+          this.writeVarInt(OB), this.writeSignedInt(BB.data.value, OB)
+        } else if (BB.data instanceof RG) {
+          const OB = jB.Bd.encode(BB.data.value);
+          this.writeVarInt(OB.length), this.writer.write(OB)
+        } else(0, jB.M)(BB.data)
       }
     }
-    const OL = {
+    const UG = {
       avc: "V_MPEG4/ISO/AVC",
       hevc: "V_MPEGH/ISO/HEVC",
       vp8: "V_VP8",
@@ -5268,365 +5268,365 @@ export const modules = {
       "pcm-f64": "A_PCM/FLOAT/IEEE",
       webvtt: "S_TEXT/WEBVTT"
     };
-    const bL = {
+    const fG = {
       video: 1,
       audio: 2,
       subtitle: 17
     };
-    class kL extends uH {
-      constructor(HH, BH) {
-        super(HH), this.trackDatas = [], this.allTracksKnown = (0, tH.mc)(), this.segment = null, this.segmentInfo = null, this.seekHead = null, this.tracksElement = null, this.tagsElement = null, this.attachmentsElement = null, this.segmentDuration = null, this.cues = null, this.currentCluster = null, this.currentClusterStartMsTimestamp = null, this.currentClusterMaxMsTimestamp = null, this.trackDatasInCurrentCluster = new Map, this.startTimestamp = 1 / 0, this.endTimestamp = -1 / 0, this.warnedAboutTooNegativeTimestamp = !1, this.format = BH
+    class kG extends pB {
+      constructor(BB, OB) {
+        super(BB), this.trackDatas = [], this.allTracksKnown = (0, jB.Nc)(), this.segment = null, this.segmentInfo = null, this.seekHead = null, this.tracksElement = null, this.tagsElement = null, this.attachmentsElement = null, this.segmentDuration = null, this.cues = null, this.currentCluster = null, this.currentClusterStartMsTimestamp = null, this.currentClusterMaxMsTimestamp = null, this.trackDatasInCurrentCluster = new Map, this.startTimestamp = 1 / 0, this.endTimestamp = -1 / 0, this.warnedAboutTooNegativeTimestamp = !1, this.format = OB
       }
       async start() {
-        const HH = await this.mutex.acquire();
-        this.writer = await this.output._getRootWriter(!!this.format._options.appendOnly), this.ebmlWriter = new VL(this.writer), this.writeEBMLHeader(), this.createSegmentInfo(), this.createCues(), await this.writer.flush();
-        for (const BH of this.output.tracks) BH.isVideoTrack() && BH.metadata.decoderConfig ? this.getVideoTrackData(BH, BH.metadata.primingPacket ?? null, {
-          decoderConfig: BH.metadata.decoderConfig
-        }) : BH.isAudioTrack() && BH.metadata.decoderConfig && this.getAudioTrackData(BH, BH.metadata.primingPacket ?? null, {
-          decoderConfig: BH.metadata.decoderConfig
+        const BB = await this.mutex.acquire();
+        this.writer = await this.output._getRootWriter(!!this.format._options.appendOnly), this.ebmlWriter = new nG(this.writer), this.writeEBMLHeader(), this.createSegmentInfo(), this.createCues(), await this.writer.flush();
+        for (const OB of this.output.tracks) OB.isVideoTrack() && OB.metadata.decoderConfig ? this.getVideoTrackData(OB, OB.metadata.primingPacket ?? null, {
+          decoderConfig: OB.metadata.decoderConfig
+        }) : OB.isAudioTrack() && OB.metadata.decoderConfig && this.getAudioTrackData(OB, OB.metadata.primingPacket ?? null, {
+          decoderConfig: OB.metadata.decoderConfig
         });
-        HH()
+        BB()
       }
       writeEBMLHeader() {
         this.format._options.onEbmlHeader && this.writer.startTrackingWrites();
-        const HH = {
-          id: vL.EBML,
+        const BB = {
+          id: WG.EBML,
           data: [{
-            id: vL.EBMLVersion,
+            id: WG.EBMLVersion,
             data: 1
           }, {
-            id: vL.EBMLReadVersion,
+            id: WG.EBMLReadVersion,
             data: 1
           }, {
-            id: vL.EBMLMaxIDLength,
+            id: WG.EBMLMaxIDLength,
             data: 4
           }, {
-            id: vL.EBMLMaxSizeLength,
+            id: WG.EBMLMaxSizeLength,
             data: 8
           }, {
-            id: vL.DocType,
-            data: this.format instanceof RL ? "webm" : "matroska"
+            id: WG.DocType,
+            data: this.format instanceof wG ? "webm" : "matroska"
           }, {
-            id: vL.DocTypeVersion,
+            id: WG.DocTypeVersion,
             data: 4
           }, {
-            id: vL.DocTypeReadVersion,
+            id: WG.DocTypeReadVersion,
             data: 2
           }]
         };
-        if (this.ebmlWriter.writeEBML(HH), this.format._options.onEbmlHeader) {
+        if (this.ebmlWriter.writeEBML(BB), this.format._options.onEbmlHeader) {
           const {
-            data: HH,
-            start: BH
+            data: BB,
+            start: OB
           } = this.writer.stopTrackingWrites();
-          this.format._options.onEbmlHeader(HH, BH)
+          this.format._options.onEbmlHeader(BB, OB)
         }
       }
-      maybeCreateSeekHead(HH) {
+      maybeCreateSeekHead(BB) {
         if (this.format._options.appendOnly) return;
-        const BH = new Uint8Array([28, 83, 187, 107]),
-          LH = new Uint8Array([21, 73, 169, 102]),
-          AH = new Uint8Array([22, 84, 174, 107]),
-          rH = new Uint8Array([25, 65, 164, 105]),
-          SH = new Uint8Array([18, 84, 195, 103]),
-          hH = {
-            id: vL.SeekHead,
+        const OB = new Uint8Array([28, 83, 187, 107]),
+          GB = new Uint8Array([21, 73, 169, 102]),
+          YB = new Uint8Array([22, 84, 174, 107]),
+          DB = new Uint8Array([25, 65, 164, 105]),
+          QB = new Uint8Array([18, 84, 195, 103]),
+          oB = {
+            id: WG.SeekHead,
             data: [{
-              id: vL.Seek,
+              id: WG.Seek,
               data: [{
-                id: vL.SeekID,
-                data: LH
+                id: WG.SeekID,
+                data: GB
               }, {
-                id: vL.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: HH ? this.ebmlWriter.offsets.get(this.segmentInfo) - this.segmentDataOffset : 0
+                data: BB ? this.ebmlWriter.offsets.get(this.segmentInfo) - this.segmentDataOffset : 0
               }]
             }, {
-              id: vL.Seek,
+              id: WG.Seek,
               data: [{
-                id: vL.SeekID,
-                data: AH
+                id: WG.SeekID,
+                data: YB
               }, {
-                id: vL.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: HH ? this.ebmlWriter.offsets.get(this.tracksElement) - this.segmentDataOffset : 0
+                data: BB ? this.ebmlWriter.offsets.get(this.tracksElement) - this.segmentDataOffset : 0
               }]
             }, this.attachmentsElement ? {
-              id: vL.Seek,
+              id: WG.Seek,
               data: [{
-                id: vL.SeekID,
-                data: rH
+                id: WG.SeekID,
+                data: DB
               }, {
-                id: vL.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: HH ? this.ebmlWriter.offsets.get(this.attachmentsElement) - this.segmentDataOffset : 0
+                data: BB ? this.ebmlWriter.offsets.get(this.attachmentsElement) - this.segmentDataOffset : 0
               }]
             } : null, this.tagsElement ? {
-              id: vL.Seek,
+              id: WG.Seek,
               data: [{
-                id: vL.SeekID,
-                data: SH
+                id: WG.SeekID,
+                data: QB
               }, {
-                id: vL.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: HH ? this.ebmlWriter.offsets.get(this.tagsElement) - this.segmentDataOffset : 0
+                data: BB ? this.ebmlWriter.offsets.get(this.tagsElement) - this.segmentDataOffset : 0
               }]
             } : null, {
-              id: vL.Seek,
+              id: WG.Seek,
               data: [{
-                id: vL.SeekID,
-                data: BH
+                id: WG.SeekID,
+                data: OB
               }, {
-                id: vL.SeekPosition,
+                id: WG.SeekPosition,
                 size: 5,
-                data: HH ? this.ebmlWriter.offsets.get(this.cues) - this.segmentDataOffset : 0
+                data: BB ? this.ebmlWriter.offsets.get(this.cues) - this.segmentDataOffset : 0
               }]
             }]
           };
-        this.seekHead = hH
+        this.seekHead = oB
       }
       createSegmentInfo() {
-        const HH = {
-          id: vL.Duration,
-          data: new WL(0)
+        const BB = {
+          id: WG.Duration,
+          data: new ZG(0)
         };
-        this.segmentDuration = HH;
-        const BH = {
-          id: vL.Info,
+        this.segmentDuration = BB;
+        const OB = {
+          id: WG.Info,
           data: [{
-            id: vL.TimestampScale,
+            id: WG.TimestampScale,
             data: 1e6
           }, {
-            id: vL.MuxingApp,
-            data: xH.e
+            id: WG.MuxingApp,
+            data: RB.c
           }, {
-            id: vL.WritingApp,
-            data: xH.e
-          }, this.format._options.appendOnly ? null : HH]
+            id: WG.WritingApp,
+            data: RB.c
+          }, this.format._options.appendOnly ? null : BB]
         };
-        this.segmentInfo = BH
+        this.segmentInfo = OB
       }
       createTracks() {
-        const HH = {
-          id: vL.Tracks,
+        const BB = {
+          id: WG.Tracks,
           data: []
         };
-        this.tracksElement = HH;
-        for (const BH of this.trackDatas) {
-          let LH = OL[BH.track.source._codec];
-          (0, tH.J)(LH), "audio" === BH.type && "dts" === BH.track.source._codec && ("dtse" === BH.info.decoderConfig.codec ? LH = "A_DTS/EXPRESS" : "dtsl" === BH.info.decoderConfig.codec && (LH = "A_DTS/LOSSLESS"));
-          let AH = 0;
-          if ("audio" === BH.type && "opus" === BH.track.source._codec) {
-            AH = 8e7;
-            const HH = BH.info.decoderConfig.description;
-            if (HH) {
-              const BH = (0, tH.id)(HH),
-                LH = (0, QH.db)(BH);
-              AH = Math.round(LH.preSkip / rH.h * 1e9)
+        this.tracksElement = BB;
+        for (const OB of this.trackDatas) {
+          let GB = UG[OB.track.source._codec];
+          (0, jB.Q)(GB), "audio" === OB.type && "dts" === OB.track.source._codec && ("dtse" === OB.info.decoderConfig.codec ? GB = "A_DTS/EXPRESS" : "dtsl" === OB.info.decoderConfig.codec && (GB = "A_DTS/LOSSLESS"));
+          let YB = 0;
+          if ("audio" === OB.type && "opus" === OB.track.source._codec) {
+            YB = 8e7;
+            const BB = OB.info.decoderConfig.description;
+            if (BB) {
+              const OB = (0, jB.Id)(BB),
+                GB = (0, qB.rb)(OB);
+              YB = Math.round(GB.preSkip / DB.k * 1e9)
             }
           }
-          HH.data.push({
-            id: vL.TrackEntry,
+          BB.data.push({
+            id: WG.TrackEntry,
             data: [{
-              id: vL.TrackNumber,
-              data: BH.track.id
+              id: WG.TrackNumber,
+              data: OB.track.id
             }, {
-              id: vL.TrackUID,
-              data: BH.track.id
+              id: WG.TrackUID,
+              data: OB.track.id
             }, {
-              id: vL.TrackType,
-              data: bL[BH.type]
-            }, !1 === BH.track.metadata.disposition?.default ? {
-              id: vL.FlagDefault,
+              id: WG.TrackType,
+              data: fG[OB.type]
+            }, !1 === OB.track.metadata.disposition?.default ? {
+              id: WG.FlagDefault,
               data: 0
-            } : null, BH.track.metadata.disposition?.forced ? {
-              id: vL.FlagForced,
+            } : null, OB.track.metadata.disposition?.forced ? {
+              id: WG.FlagForced,
               data: 1
-            } : null, BH.track.metadata.disposition?.hearingImpaired ? {
-              id: vL.FlagHearingImpaired,
+            } : null, OB.track.metadata.disposition?.hearingImpaired ? {
+              id: WG.FlagHearingImpaired,
               data: 1
-            } : null, BH.track.metadata.disposition?.visuallyImpaired ? {
-              id: vL.FlagVisualImpaired,
+            } : null, OB.track.metadata.disposition?.visuallyImpaired ? {
+              id: WG.FlagVisualImpaired,
               data: 1
-            } : null, BH.track.metadata.disposition?.original ? {
-              id: vL.FlagOriginal,
+            } : null, OB.track.metadata.disposition?.original ? {
+              id: WG.FlagOriginal,
               data: 1
-            } : null, BH.track.metadata.disposition?.commentary ? {
-              id: vL.FlagCommentary,
+            } : null, OB.track.metadata.disposition?.commentary ? {
+              id: WG.FlagCommentary,
               data: 1
             } : null, {
-              id: vL.FlagLacing,
+              id: WG.FlagLacing,
               data: 0
             }, {
-              id: vL.Language,
-              data: BH.track.metadata.languageCode ?? tH.x
+              id: WG.Language,
+              data: OB.track.metadata.languageCode ?? jB.D
             }, {
-              id: vL.CodecID,
-              data: LH
-            }, BH.codecPrivate ? {
-              id: vL.CodecPrivate,
-              data: (0, tH.id)(BH.codecPrivate)
-            } : null, AH > 0 ? {
-              id: vL.SeekPreRoll,
-              data: AH
-            } : null, void 0 !== BH.track.metadata.name ? {
-              id: vL.Name,
-              data: new xL(BH.track.metadata.name)
-            } : null, "video" === BH.type ? this.videoSpecificTrackInfo(BH) : null, "audio" === BH.type ? this.audioSpecificTrackInfo(BH) : null, "subtitle" === BH.type ? this.subtitleSpecificTrackInfo(BH) : null]
+              id: WG.CodecID,
+              data: GB
+            }, OB.codecPrivate ? {
+              id: WG.CodecPrivate,
+              data: (0, jB.Id)(OB.codecPrivate)
+            } : null, YB > 0 ? {
+              id: WG.SeekPreRoll,
+              data: YB
+            } : null, void 0 !== OB.track.metadata.name ? {
+              id: WG.Name,
+              data: new RG(OB.track.metadata.name)
+            } : null, "video" === OB.type ? this.videoSpecificTrackInfo(OB) : null, "audio" === OB.type ? this.audioSpecificTrackInfo(OB) : null, "subtitle" === OB.type ? this.subtitleSpecificTrackInfo(OB) : null]
           })
         }
       }
-      videoSpecificTrackInfo(HH) {
+      videoSpecificTrackInfo(BB) {
         const {
-          frameRate: BH,
-          transformationMatrix: LH
-        } = HH.track.metadata, AH = [BH ? {
-          id: vL.DefaultDuration,
-          data: 1e9 / BH
+          frameRate: OB,
+          transformationMatrix: GB
+        } = BB.track.metadata, YB = [OB ? {
+          id: WG.DefaultDuration,
+          data: 1e9 / OB
         } : null];
-        let rH, SH, hH;
-        if (LH) {
-          rH = (0, tH.jb)(LH);
-          const HH = (0, tH.bc)((0, tH.wc)(-rH), LH);
-          SH = Math.sign(HH[0]), hH = Math.sign(HH[4]), -1 === hH && (hH = 1, SH = -SH, rH = (0, tH.fc)(rH + 180))
-        } else rH = HH.track.metadata.rotation ?? 0, SH = HH.track.metadata.flip ? -1 : 1, hH = 1;
-        const zH = rH ? (0, tH.fc)(-1 === SH ? rH : -rH) : 0,
-          CH = Math.round(Math.acos(SH) * tH.t),
-          EH = Math.round(Math.acos(hH) * tH.t),
-          XH = !!HH.info.aspectRatio && HH.info.aspectRatio.num * HH.info.height !== HH.info.aspectRatio.den * HH.info.width,
-          GH = HH.info.decoderConfig.colorSpace,
-          YH = {
-            id: vL.Video,
+        let DB, QB, oB;
+        if (GB) {
+          DB = (0, jB.vb)(GB);
+          const BB = (0, jB.Ec)((0, jB.Yc)(-DB), GB);
+          QB = Math.sign(BB[0]), oB = Math.sign(BB[4]), -1 === oB && (oB = 1, QB = -QB, DB = (0, jB.Fc)(DB + 180))
+        } else DB = BB.track.metadata.rotation ?? 0, QB = BB.track.metadata.flip ? -1 : 1, oB = 1;
+        const yB = DB ? (0, jB.Fc)(-1 === QB ? DB : -DB) : 0,
+          JB = Math.round(Math.acos(QB) * jB.s),
+          MB = Math.round(Math.acos(oB) * jB.s),
+          PB = !!BB.info.aspectRatio && BB.info.aspectRatio.num * BB.info.height !== BB.info.aspectRatio.den * BB.info.width,
+          zB = BB.info.decoderConfig.colorSpace,
+          lB = {
+            id: WG.Video,
             data: [{
-              id: vL.PixelWidth,
-              data: HH.info.width
+              id: WG.PixelWidth,
+              data: BB.info.width
             }, {
-              id: vL.PixelHeight,
-              data: HH.info.height
-            }, XH ? {
-              id: vL.DisplayWidth,
-              data: HH.info.aspectRatio.num
-            } : null, XH ? {
-              id: vL.DisplayHeight,
-              data: HH.info.aspectRatio.den
-            } : null, XH ? {
-              id: vL.DisplayUnit,
+              id: WG.PixelHeight,
+              data: BB.info.height
+            }, PB ? {
+              id: WG.DisplayWidth,
+              data: BB.info.aspectRatio.num
+            } : null, PB ? {
+              id: WG.DisplayHeight,
+              data: BB.info.aspectRatio.den
+            } : null, PB ? {
+              id: WG.DisplayUnit,
               data: 3
-            } : null, HH.info.alphaMode ? {
-              id: vL.AlphaMode,
+            } : null, BB.info.alphaMode ? {
+              id: WG.AlphaMode,
               data: 1
-            } : null, (0, tH.eb)(GH) ? null : {
-              id: vL.Colour,
+            } : null, (0, jB.mb)(zB) ? null : {
+              id: WG.Colour,
               data: [{
-                id: vL.MatrixCoefficients,
-                data: null != GH?.matrix ? tH.p[GH.matrix] : 2
+                id: WG.MatrixCoefficients,
+                data: null != zB?.matrix ? jB.r[zB.matrix] : 2
               }, {
-                id: vL.TransferCharacteristics,
-                data: null != GH?.transfer ? tH.v[GH.transfer] : 2
+                id: WG.TransferCharacteristics,
+                data: null != zB?.transfer ? jB.z[zB.transfer] : 2
               }, {
-                id: vL.Primaries,
-                data: null != GH?.primaries ? tH.g[GH.primaries] : 2
+                id: WG.Primaries,
+                data: null != zB?.primaries ? jB.g[zB.primaries] : 2
               }, {
-                id: vL.Range,
-                data: null != GH?.fullRange ? GH.fullRange ? 2 : 1 : 0
+                id: WG.Range,
+                data: null != zB?.fullRange ? zB.fullRange ? 2 : 1 : 0
               }]
-            }, zH || CH || EH ? {
-              id: vL.Projection,
+            }, yB || JB || MB ? {
+              id: WG.Projection,
               data: [{
-                id: vL.ProjectionType,
+                id: WG.ProjectionType,
                 data: 0
-              }, CH ? {
-                id: vL.ProjectionPoseYaw,
-                data: new QL(CH)
-              } : null, EH ? {
-                id: vL.ProjectionPosePitch,
-                data: new QL(EH)
-              } : null, zH ? {
-                id: vL.ProjectionPoseRoll,
-                data: new QL((zH + 180) % 360 - 180)
+              }, JB ? {
+                id: WG.ProjectionPoseYaw,
+                data: new qG(JB)
+              } : null, MB ? {
+                id: WG.ProjectionPosePitch,
+                data: new qG(MB)
+              } : null, yB ? {
+                id: WG.ProjectionPoseRoll,
+                data: new qG((yB + 180) % 360 - 180)
               } : null]
             } : null]
           };
-        return AH.push(YH), AH
+        return YB.push(lB), YB
       }
-      audioSpecificTrackInfo(HH) {
-        const BH = rH.k.includes(HH.track.source._codec) ? (0, rH.S)(HH.track.source._codec) : null;
+      audioSpecificTrackInfo(BB) {
+        const OB = DB.n.includes(BB.track.source._codec) ? (0, DB.S)(BB.track.source._codec) : null;
         return [{
-          id: vL.Audio,
+          id: WG.Audio,
           data: [{
-            id: vL.SamplingFrequency,
-            data: new QL(HH.info.sampleRate)
+            id: WG.SamplingFrequency,
+            data: new qG(BB.info.sampleRate)
           }, {
-            id: vL.Channels,
-            data: HH.info.numberOfChannels
-          }, BH ? {
-            id: vL.BitDepth,
-            data: 8 * BH.sampleSize
+            id: WG.Channels,
+            data: BB.info.numberOfChannels
+          }, OB ? {
+            id: WG.BitDepth,
+            data: 8 * OB.sampleSize
           } : null]
         }]
       }
-      subtitleSpecificTrackInfo(HH) {
+      subtitleSpecificTrackInfo(BB) {
         return []
       }
       maybeCreateTags() {
-        const HH = [],
-          BH = (BH, LH) => {
-            HH.push({
-              id: vL.SimpleTag,
+        const BB = [],
+          OB = (OB, GB) => {
+            BB.push({
+              id: WG.SimpleTag,
               data: [{
-                id: vL.TagName,
-                data: new xL(BH)
-              }, "string" === typeof LH ? {
-                id: vL.TagString,
-                data: new xL(LH)
+                id: WG.TagName,
+                data: new RG(OB)
+              }, "string" === typeof GB ? {
+                id: WG.TagString,
+                data: new RG(GB)
               } : {
-                id: vL.TagBinary,
-                data: LH
+                id: WG.TagBinary,
+                data: GB
               }]
             })
           },
-          LH = this.output._metadataTags,
-          AH = new Set;
+          GB = this.output._metadataTags,
+          YB = new Set;
         for (const {
-            key: rH,
-            value: SH
+            key: DB,
+            value: QB
           }
-          of(0, tH.Vb)(LH)) switch (rH) {
+          of(0, jB.rc)(GB)) switch (DB) {
           case "title":
-            BH("TITLE", SH), AH.add("TITLE");
+            OB("TITLE", QB), YB.add("TITLE");
             break;
           case "description":
-            BH("DESCRIPTION", SH), AH.add("DESCRIPTION");
+            OB("DESCRIPTION", QB), YB.add("DESCRIPTION");
             break;
           case "artist":
-            BH("ARTIST", SH), AH.add("ARTIST");
+            OB("ARTIST", QB), YB.add("ARTIST");
             break;
           case "album":
-            BH("ALBUM", SH), AH.add("ALBUM");
+            OB("ALBUM", QB), YB.add("ALBUM");
             break;
           case "albumArtist":
-            BH("ALBUM_ARTIST", SH), AH.add("ALBUM_ARTIST");
+            OB("ALBUM_ARTIST", QB), YB.add("ALBUM_ARTIST");
             break;
           case "genre":
-            BH("GENRE", SH), AH.add("GENRE");
+            OB("GENRE", QB), YB.add("GENRE");
             break;
           case "beatsPerMinute":
-            BH("BPM", SH.toString()), AH.add("BPM");
+            OB("BPM", QB.toString()), YB.add("BPM");
             break;
           case "comment":
-            BH("COMMENT", SH), AH.add("COMMENT");
+            OB("COMMENT", QB), YB.add("COMMENT");
             break;
           case "lyrics":
-            BH("LYRICS", SH), AH.add("LYRICS");
+            OB("LYRICS", QB), YB.add("LYRICS");
             break;
           case "date":
-            BH("DATE", SH.toISOString().slice(0, 10)), AH.add("DATE");
+            OB("DATE", QB.toISOString().slice(0, 10)), YB.add("DATE");
             break;
           case "trackNumber":
-            BH("PART_NUMBER", void 0 !== LH.tracksTotal ? `${SH}/${LH.tracksTotal}` : SH.toString()), AH.add("PART_NUMBER");
+            OB("PART_NUMBER", void 0 !== GB.tracksTotal ? `${QB}/${GB.tracksTotal}` : QB.toString()), YB.add("PART_NUMBER");
             break;
           case "discNumber":
-            BH("DISC", void 0 !== LH.discsTotal ? `${SH}/${LH.discsTotal}` : SH.toString()), AH.add("DISC");
+            OB("DISC", void 0 !== GB.discsTotal ? `${QB}/${GB.discsTotal}` : QB.toString()), YB.add("DISC");
             break;
           case "tracksTotal":
           case "discsTotal":
@@ -5634,543 +5634,543 @@ export const modules = {
           case "raw":
             break;
           default:
-            (0, tH.G)(rH)
+            (0, jB.M)(DB)
         }
-        if (LH.raw)
-          for (const rH in LH.raw) {
-            const HH = LH.raw[rH];
-            null == HH || AH.has(rH) || ("string" === typeof HH || HH instanceof Uint8Array) && BH(rH, HH)
+        if (GB.raw)
+          for (const DB in GB.raw) {
+            const BB = GB.raw[DB];
+            null == BB || YB.has(DB) || ("string" === typeof BB || BB instanceof Uint8Array) && OB(DB, BB)
           }
-        0 !== HH.length && (this.tagsElement = {
-          id: vL.Tags,
+        0 !== BB.length && (this.tagsElement = {
+          id: WG.Tags,
           data: [{
-            id: vL.Tag,
+            id: WG.Tag,
             data: [{
-              id: vL.Targets,
+              id: WG.Targets,
               data: [{
-                id: vL.TargetTypeValue,
+                id: WG.TargetTypeValue,
                 data: 50
               }, {
-                id: vL.TargetType,
+                id: WG.TargetType,
                 data: "MOVIE"
               }]
-            }, ...HH]
+            }, ...BB]
           }]
         })
       }
       maybeCreateAttachments() {
-        const HH = this.output._metadataTags,
-          BH = [],
-          LH = new Set,
-          AH = HH.images ?? [];
-        for (const rH of AH) {
-          let HH, AH = rH.name;
-          if (void 0 === AH) {
-            AH = ("coverFront" === rH.kind ? "cover" : "coverBack" === rH.kind ? "back" : "image") + ((0, tH.tb)(rH.mimeType) ?? "")
+        const BB = this.output._metadataTags,
+          OB = [],
+          GB = new Set,
+          YB = BB.images ?? [];
+        for (const DB of YB) {
+          let BB, YB = DB.name;
+          if (void 0 === YB) {
+            YB = ("coverFront" === DB.kind ? "cover" : "coverBack" === DB.kind ? "back" : "image") + ((0, jB.Eb)(DB.mimeType) ?? "")
           }
           for (;;) {
-            HH = 0n;
-            for (let BH = 0; BH < 8; BH++) HH <<= 8n, HH |= BigInt(Math.floor(256 * Math.random()));
-            if (0n !== HH && !LH.has(HH)) break
+            BB = 0n;
+            for (let OB = 0; OB < 8; OB++) BB <<= 8n, BB |= BigInt(Math.floor(256 * Math.random()));
+            if (0n !== BB && !GB.has(BB)) break
           }
-          LH.add(HH), BH.push({
-            id: vL.AttachedFile,
-            data: [void 0 !== rH.description ? {
-              id: vL.FileDescription,
-              data: new xL(rH.description)
+          GB.add(BB), OB.push({
+            id: WG.AttachedFile,
+            data: [void 0 !== DB.description ? {
+              id: WG.FileDescription,
+              data: new RG(DB.description)
             } : null, {
-              id: vL.FileName,
-              data: new xL(AH)
+              id: WG.FileName,
+              data: new RG(YB)
             }, {
-              id: vL.FileMediaType,
-              data: rH.mimeType
+              id: WG.FileMediaType,
+              data: DB.mimeType
             }, {
-              id: vL.FileData,
-              data: rH.data
+              id: WG.FileData,
+              data: DB.data
             }, {
-              id: vL.FileUID,
-              data: HH
+              id: WG.FileUID,
+              data: BB
             }]
           })
         }
-        for (const [rH, SH] of Object.entries(HH.raw ?? {})) {
-          if (!(SH instanceof YH.e)) continue;
-          /^\d+$/.test(rH) && (AH.find((HH => HH.mimeType === SH.mimeType && (0, tH.ld)(HH.data, SH.data))) || BH.push({
-            id: vL.AttachedFile,
-            data: [void 0 !== SH.description ? {
-              id: vL.FileDescription,
-              data: new xL(SH.description)
+        for (const [DB, QB] of Object.entries(BB.raw ?? {})) {
+          if (!(QB instanceof lB.e)) continue;
+          /^\d+$/.test(DB) && (YB.find((BB => BB.mimeType === QB.mimeType && (0, jB.Ld)(BB.data, QB.data))) || OB.push({
+            id: WG.AttachedFile,
+            data: [void 0 !== QB.description ? {
+              id: WG.FileDescription,
+              data: new RG(QB.description)
             } : null, {
-              id: vL.FileName,
-              data: new xL(SH.name ?? "")
+              id: WG.FileName,
+              data: new RG(QB.name ?? "")
             }, {
-              id: vL.FileMediaType,
-              data: SH.mimeType ?? ""
+              id: WG.FileMediaType,
+              data: QB.mimeType ?? ""
             }, {
-              id: vL.FileData,
-              data: SH.data
+              id: WG.FileData,
+              data: QB.data
             }, {
-              id: vL.FileUID,
-              data: BigInt(rH)
+              id: WG.FileUID,
+              data: BigInt(DB)
             }]
           }))
         }
-        0 !== BH.length && (this.attachmentsElement = {
-          id: vL.Attachments,
-          data: BH
+        0 !== OB.length && (this.attachmentsElement = {
+          id: WG.Attachments,
+          data: OB
         })
       }
       createSegment() {
         this.createTracks(), this.maybeCreateTags(), this.maybeCreateAttachments(), this.maybeCreateSeekHead(!1);
-        const HH = {
-          id: vL.Segment,
+        const BB = {
+          id: WG.Segment,
           size: this.format._options.appendOnly ? -1 : 6,
           data: [this.seekHead, this.segmentInfo, this.tracksElement, this.attachmentsElement, this.tagsElement]
         };
-        if (this.segment = HH, this.format._options.onSegmentHeader && this.writer.startTrackingWrites(), this.ebmlWriter.writeEBML(HH), this.format._options.onSegmentHeader) {
+        if (this.segment = BB, this.format._options.onSegmentHeader && this.writer.startTrackingWrites(), this.ebmlWriter.writeEBML(BB), this.format._options.onSegmentHeader) {
           const {
-            data: HH,
-            start: BH
+            data: BB,
+            start: OB
           } = this.writer.stopTrackingWrites();
-          this.format._options.onSegmentHeader(HH, BH)
+          this.format._options.onSegmentHeader(BB, OB)
         }
       }
       createCues() {
         this.cues = {
-          id: vL.Cues,
+          id: WG.Cues,
           data: []
         }
       }
       get segmentDataOffset() {
-        return (0, tH.J)(this.segment), this.ebmlWriter.dataOffsets.get(this.segment)
+        return (0, jB.Q)(this.segment), this.ebmlWriter.dataOffsets.get(this.segment)
       }
       allTracksAreKnown() {
-        for (const HH of this.output.tracks)
-          if (!HH.source._closed && !this.trackDatas.some((BH => BH.track === HH))) return !1;
+        for (const BB of this.output.tracks)
+          if (!BB.source._closed && !this.trackDatas.some((OB => OB.track === BB))) return !1;
         return !0
       }
       async getMimeType() {
         await this.allTracksKnown.promise;
-        const HH = this.trackDatas.map((HH => {
-          if ("video" === HH.type) return HH.info.decoderConfig.codec;
-          if ("audio" === HH.type) return HH.info.decoderConfig.codec;
+        const BB = this.trackDatas.map((BB => {
+          if ("video" === BB.type) return BB.info.decoderConfig.codec;
+          if ("audio" === BB.type) return BB.info.decoderConfig.codec;
           return {
             webvtt: "wvtt"
-          } [HH.track.source._codec]
+          } [BB.track.source._codec]
         }));
-        return (HH => {
-          let BH = (HH.hasVideo ? "video/" : HH.hasAudio ? "audio/" : "application/") + (HH.isWebM ? "webm" : "x-matroska");
-          HH.codecStrings.length > 0 && (BH += `; codecs="${[...new Set(HH.codecStrings.filter(Boolean))].join(", ")}"`);
-          return BH
+        return (BB => {
+          let OB = (BB.hasVideo ? "video/" : BB.hasAudio ? "audio/" : "application/") + (BB.isWebM ? "webm" : "x-matroska");
+          BB.codecStrings.length > 0 && (OB += `; codecs="${[...new Set(BB.codecStrings.filter(Boolean))].join(", ")}"`);
+          return OB
         })({
-          isWebM: this.format instanceof RL,
-          hasVideo: this.trackDatas.some((HH => "video" === HH.type)),
-          hasAudio: this.trackDatas.some((HH => "audio" === HH.type)),
-          codecStrings: HH
+          isWebM: this.format instanceof wG,
+          hasVideo: this.trackDatas.some((BB => "video" === BB.type)),
+          hasAudio: this.trackDatas.some((BB => "audio" === BB.type)),
+          codecStrings: BB
         })
       }
-      getVideoTrackData(HH, BH, LH) {
-        const AH = this.trackDatas.find((BH => BH.track === HH));
-        if (AH) return AH;
-        (0, rH.X)(LH, HH.source._codec), (0, tH.J)(LH), (0, tH.J)(LH.decoderConfig), (0, tH.J)(void 0 !== LH.decoderConfig.codedWidth), (0, tH.J)(void 0 !== LH.decoderConfig.codedHeight);
-        const SH = LH.decoderConfig.displayAspectWidth,
-          hH = LH.decoderConfig.displayAspectHeight,
-          zH = void 0 === SH || void 0 === hH ? null : (0, tH.Uc)({
-            num: SH,
-            den: hH
+      getVideoTrackData(BB, OB, GB) {
+        const YB = this.trackDatas.find((OB => OB.track === BB));
+        if (YB) return YB;
+        (0, DB.Y)(GB, BB.source._codec), (0, jB.Q)(GB), (0, jB.Q)(GB.decoderConfig), (0, jB.Q)(void 0 !== GB.decoderConfig.codedWidth), (0, jB.Q)(void 0 !== GB.decoderConfig.codedHeight);
+        const QB = GB.decoderConfig.displayAspectWidth,
+          oB = GB.decoderConfig.displayAspectHeight,
+          yB = void 0 === QB || void 0 === oB ? null : (0, jB.vd)({
+            num: QB,
+            den: oB
           }),
-          CH = {
-            track: HH,
+          JB = {
+            track: BB,
             type: "video",
             info: {
-              width: LH.decoderConfig.codedWidth,
-              height: LH.decoderConfig.codedHeight,
-              aspectRatio: zH,
-              decoderConfig: LH.decoderConfig,
-              alphaMode: HH.metadata.canBeTransparent || (BH ? !!BH.sideData.alpha : null)
+              width: GB.decoderConfig.codedWidth,
+              height: GB.decoderConfig.codedHeight,
+              aspectRatio: yB,
+              decoderConfig: GB.decoderConfig,
+              alphaMode: BB.metadata.canBeTransparent || (OB ? !!OB.sideData.alpha : null)
             },
             chunkQueue: [],
             lastWrittenMsTimestamp: null,
-            codecPrivate: LH.decoderConfig.description ?? null,
+            codecPrivate: GB.decoderConfig.description ?? null,
             closed: !1
           };
-        return "vp9" === HH.source._codec ? CH.codecPrivate = new Uint8Array((0, rH.I)(CH.info.decoderConfig.codec)) : "av1" === HH.source._codec ? CH.codecPrivate = new Uint8Array((0, rH.E)(CH.info.decoderConfig.codec)) : "prores" === HH.source._codec && (CH.codecPrivate = tH.$c.encode(LH.decoderConfig.codec)), this.trackDatas.push(CH), this.trackDatas.sort(((HH, BH) => HH.track.id - BH.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), CH
+        return "vp9" === BB.source._codec ? JB.codecPrivate = new Uint8Array((0, DB.H)(JB.info.decoderConfig.codec)) : "av1" === BB.source._codec ? JB.codecPrivate = new Uint8Array((0, DB.F)(JB.info.decoderConfig.codec)) : "prores" === BB.source._codec && (JB.codecPrivate = jB.Bd.encode(GB.decoderConfig.codec)), this.trackDatas.push(JB), this.trackDatas.sort(((BB, OB) => BB.track.id - OB.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), JB
       }
-      getAudioTrackData(HH, BH, LH) {
-        const SH = this.trackDatas.find((BH => BH.track === HH));
-        if (SH) return SH;
-        (0, rH.U)(LH, HH.source._codec), (0, tH.J)(LH), (0, tH.J)(LH.decoderConfig);
-        const hH = {
-          ...LH.decoderConfig
+      getAudioTrackData(BB, OB, GB) {
+        const QB = this.trackDatas.find((OB => OB.track === BB));
+        if (QB) return QB;
+        (0, DB.V)(GB, BB.source._codec), (0, jB.Q)(GB), (0, jB.Q)(GB.decoderConfig);
+        const oB = {
+          ...GB.decoderConfig
         };
-        let CH = !1;
-        if ("aac" === HH.source._codec && !hH.description) {
-          if (!BH) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
-          const HH = CL(zH.tempFromBytes(BH.data));
-          if (!HH) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
-          const LH = AH.h[HH.samplingFrequencyIndex],
-            rH = AH.e[HH.channelConfiguration];
-          if (void 0 === LH || void 0 === rH) throw new Error("Invalid ADTS frame header.");
-          hH.description = (0, AH.j)({
-            objectType: HH.objectType,
-            outputSampleRate: LH,
-            outputNumberOfChannels: rH
-          }), CH = !0
+        let JB = !1;
+        if ("aac" === BB.source._codec && !oB.description) {
+          if (!OB) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
+          const BB = JG(yB.tempFromBytes(OB.data));
+          if (!BB) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
+          const GB = YB.e[BB.samplingFrequencyIndex],
+            DB = YB.d[BB.channelConfiguration];
+          if (void 0 === GB || void 0 === DB) throw new Error("Invalid ADTS frame header.");
+          oB.description = (0, YB.g)({
+            objectType: BB.objectType,
+            outputSampleRate: GB,
+            outputNumberOfChannels: DB
+          }), JB = !0
         }
-        const EH = {
-          track: HH,
+        const MB = {
+          track: BB,
           type: "audio",
           info: {
-            numberOfChannels: LH.decoderConfig.numberOfChannels,
-            sampleRate: LH.decoderConfig.sampleRate,
-            decoderConfig: hH,
-            requiresAdtsStripping: CH
+            numberOfChannels: GB.decoderConfig.numberOfChannels,
+            sampleRate: GB.decoderConfig.sampleRate,
+            decoderConfig: oB,
+            requiresAdtsStripping: JB
           },
           chunkQueue: [],
           lastWrittenMsTimestamp: null,
-          codecPrivate: hH.description ?? null,
+          codecPrivate: oB.description ?? null,
           closed: !1
         };
-        return this.trackDatas.push(EH), this.trackDatas.sort(((HH, BH) => HH.track.id - BH.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), EH
+        return this.trackDatas.push(MB), this.trackDatas.sort(((BB, OB) => BB.track.id - OB.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), MB
       }
-      getSubtitleTrackData(HH, BH) {
-        const LH = this.trackDatas.find((BH => BH.track === HH));
-        if (LH) return LH;
-        (0, rH.W)(BH), (0, tH.J)(BH), (0, tH.J)(BH.config);
-        const AH = {
-          track: HH,
+      getSubtitleTrackData(BB, OB) {
+        const GB = this.trackDatas.find((OB => OB.track === BB));
+        if (GB) return GB;
+        (0, DB.X)(OB), (0, jB.Q)(OB), (0, jB.Q)(OB.config);
+        const YB = {
+          track: BB,
           type: "subtitle",
           info: {
-            config: BH.config
+            config: OB.config
           },
           chunkQueue: [],
           lastWrittenMsTimestamp: null,
-          codecPrivate: tH.$c.encode(BH.config.description),
+          codecPrivate: jB.Bd.encode(OB.config.description),
           closed: !1
         };
-        return this.trackDatas.push(AH), this.trackDatas.sort(((HH, BH) => HH.track.id - BH.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), AH
+        return this.trackDatas.push(YB), this.trackDatas.sort(((BB, OB) => BB.track.id - OB.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), YB
       }
-      async addEncodedVideoPacket(HH, BH, LH) {
-        const AH = await this.mutex.acquire();
+      async addEncodedVideoPacket(BB, OB, GB) {
+        const YB = await this.mutex.acquire();
         try {
-          const AH = this.getVideoTrackData(HH, BH, LH);
-          AH.info.alphaMode ??= !!BH.sideData.alpha;
-          let rH = BH.data;
-          if ("prores" === HH.source._codec) {
-            if (rH.byteLength < 8) throw new Error("ProRes packet too small, expected at least 8 bytes.");
-            rH = rH.subarray(8)
+          const YB = this.getVideoTrackData(BB, OB, GB);
+          YB.info.alphaMode ??= !!OB.sideData.alpha;
+          let DB = OB.data;
+          if ("prores" === BB.source._codec) {
+            if (DB.byteLength < 8) throw new Error("ProRes packet too small, expected at least 8 bytes.");
+            DB = DB.subarray(8)
           }
-          const SH = "key" === BH.type;
-          this.validateTimestamp(AH.track, BH.timestamp, SH);
-          let hH = BH.timestamp,
-            zH = BH.duration;
-          void 0 !== HH.metadata.frameRate && (hH = (0, tH.Ac)(hH, HH.metadata.frameRate), zH = (0, tH.Ac)(zH, HH.metadata.frameRate));
-          const CH = AH.info.alphaMode ? BH.sideData.alpha ?? null : null,
-            EH = this.createInternalChunk(rH, hH, zH, BH.type, CH);
-          "vp9" === HH.source._codec && this.fixVP9ColorSpace(AH, EH), AH.chunkQueue.push(EH), await this.interleaveChunks()
+          const QB = "key" === OB.type;
+          this.validateTimestamp(YB.track, OB.timestamp, QB);
+          let oB = OB.timestamp,
+            yB = OB.duration;
+          void 0 !== BB.metadata.frameRate && (oB = (0, jB._c)(oB, BB.metadata.frameRate), yB = (0, jB._c)(yB, BB.metadata.frameRate));
+          const JB = YB.info.alphaMode ? OB.sideData.alpha ?? null : null,
+            MB = this.createInternalChunk(DB, oB, yB, OB.type, JB);
+          "vp9" === BB.source._codec && this.fixVP9ColorSpace(YB, MB), YB.chunkQueue.push(MB), await this.interleaveChunks()
         } finally {
-          AH()
+          YB()
         }
       }
-      async addEncodedAudioPacket(HH, BH, LH) {
-        const AH = await this.mutex.acquire();
+      async addEncodedAudioPacket(BB, OB, GB) {
+        const YB = await this.mutex.acquire();
         try {
-          const AH = this.getAudioTrackData(HH, BH, LH);
-          let rH = BH.data;
-          if (AH.info.requiresAdtsStripping) {
-            const HH = CL(zH.tempFromBytes(rH));
-            if (!HH) throw new Error("Expected ADTS frame, didn't get one.");
-            const BH = null === HH.crcCheck ? 7 : 9;
-            rH = rH.subarray(BH)
+          const YB = this.getAudioTrackData(BB, OB, GB);
+          let DB = OB.data;
+          if (YB.info.requiresAdtsStripping) {
+            const BB = JG(yB.tempFromBytes(DB));
+            if (!BB) throw new Error("Expected ADTS frame, didn't get one.");
+            const OB = null === BB.crcCheck ? 7 : 9;
+            DB = DB.subarray(OB)
           }
-          const SH = "key" === BH.type;
-          this.validateTimestamp(AH.track, BH.timestamp, SH);
-          const hH = this.createInternalChunk(rH, BH.timestamp, BH.duration, BH.type);
-          AH.chunkQueue.push(hH), await this.interleaveChunks()
+          const QB = "key" === OB.type;
+          this.validateTimestamp(YB.track, OB.timestamp, QB);
+          const oB = this.createInternalChunk(DB, OB.timestamp, OB.duration, OB.type);
+          YB.chunkQueue.push(oB), await this.interleaveChunks()
         } finally {
-          AH()
+          YB()
         }
       }
-      async addSubtitleCue(HH, BH, LH) {
-        const AH = await this.mutex.acquire();
+      async addSubtitleCue(BB, OB, GB) {
+        const YB = await this.mutex.acquire();
         try {
-          const AH = this.getSubtitleTrackData(HH, LH);
-          this.validateTimestamp(AH.track, BH.timestamp, !0);
-          let rH = BH.text;
-          const SH = Math.round(1e3 * BH.timestamp);
-          MH.i.lastIndex = 0, rH = rH.replace(MH.i, (HH => {
-            const BH = (0, MH.j)(HH.slice(1, -1)) - SH;
-            return `<${(0,MH.f)(BH)}>`
+          const YB = this.getSubtitleTrackData(BB, GB);
+          this.validateTimestamp(YB.track, OB.timestamp, !0);
+          let DB = OB.text;
+          const QB = Math.round(1e3 * OB.timestamp);
+          NB.h.lastIndex = 0, DB = DB.replace(NB.h, (BB => {
+            const OB = (0, NB.j)(BB.slice(1, -1)) - QB;
+            return `<${(0,NB.e)(OB)}>`
           }));
-          const hH = tH.$c.encode(rH),
-            zH = `${BH.settings??""}\n${BH.identifier??""}\n${BH.notes??""}`,
-            CH = this.createInternalChunk(hH, BH.timestamp, BH.duration, "key", zH.trim() ? tH.$c.encode(zH) : null);
-          AH.chunkQueue.push(CH), await this.interleaveChunks()
+          const oB = jB.Bd.encode(DB),
+            yB = `${OB.settings??""}\n${OB.identifier??""}\n${OB.notes??""}`,
+            JB = this.createInternalChunk(oB, OB.timestamp, OB.duration, "key", yB.trim() ? jB.Bd.encode(yB) : null);
+          YB.chunkQueue.push(JB), await this.interleaveChunks()
         } finally {
-          AH()
+          YB()
         }
       }
       async interleaveChunks() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (HH || this.allTracksAreKnown()) {
-          HH: for (;;) {
-            let BH = null,
-              LH = 1 / 0;
-            for (const rH of this.trackDatas) {
-              if (!HH && 0 === rH.chunkQueue.length && !rH.closed) break HH;
-              rH.chunkQueue.length > 0 && rH.chunkQueue[0].timestamp < LH && (BH = rH, LH = rH.chunkQueue[0].timestamp)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (BB || this.allTracksAreKnown()) {
+          BB: for (;;) {
+            let OB = null,
+              GB = 1 / 0;
+            for (const DB of this.trackDatas) {
+              if (!BB && 0 === DB.chunkQueue.length && !DB.closed) break BB;
+              DB.chunkQueue.length > 0 && DB.chunkQueue[0].timestamp < GB && (OB = DB, GB = DB.chunkQueue[0].timestamp)
             }
-            if (!BH) break;
-            const AH = BH.chunkQueue.shift();
-            this.writeBlock(BH, AH)
+            if (!OB) break;
+            const YB = OB.chunkQueue.shift();
+            this.writeBlock(OB, YB)
           }
-          HH || await this.writer.flush()
+          BB || await this.writer.flush()
         }
       }
-      fixVP9ColorSpace(HH, BH) {
-        if ("key" !== BH.type) return;
-        if (!HH.info.decoderConfig.colorSpace || !HH.info.decoderConfig.colorSpace.matrix) return;
-        const LH = new WH.e(BH.data);
-        LH.skipBits(2);
-        const AH = LH.readBits(1),
-          rH = (LH.readBits(1) << 1) + AH;
-        3 === rH && LH.skipBits(1);
-        if (LH.readBits(1)) return;
-        if (0 !== LH.readBits(1)) return;
-        LH.skipBits(2);
-        if (4817730 !== LH.readBits(24)) return;
-        rH >= 2 && LH.skipBits(1);
-        const SH = {
+      fixVP9ColorSpace(BB, OB) {
+        if ("key" !== OB.type) return;
+        if (!BB.info.decoderConfig.colorSpace || !BB.info.decoderConfig.colorSpace.matrix) return;
+        const GB = new ZB.e(OB.data);
+        GB.skipBits(2);
+        const YB = GB.readBits(1),
+          DB = (GB.readBits(1) << 1) + YB;
+        3 === DB && GB.skipBits(1);
+        if (GB.readBits(1)) return;
+        if (0 !== GB.readBits(1)) return;
+        GB.skipBits(2);
+        if (4817730 !== GB.readBits(24)) return;
+        DB >= 2 && GB.skipBits(1);
+        const QB = {
           rgb: 7,
           bt709: 2,
           bt470bg: 1,
           smpte170m: 3
-        } [HH.info.decoderConfig.colorSpace.matrix];
-        (0, tH.ud)(BH.data, LH.pos, LH.pos + 3, SH)
+        } [BB.info.decoderConfig.colorSpace.matrix];
+        (0, jB.Sd)(OB.data, GB.pos, GB.pos + 3, QB)
       }
-      createInternalChunk(HH, BH, LH, AH) {
+      createInternalChunk(BB, OB, GB, YB) {
         return {
-          data: HH,
-          type: AH,
-          timestamp: BH,
-          duration: LH,
+          data: BB,
+          type: YB,
+          timestamp: OB,
+          duration: GB,
           additions: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
         }
       }
-      writeBlock(HH, BH) {
+      writeBlock(BB, OB) {
         this.segment || this.createSegment();
-        const LH = Math.round(1e3 * BH.timestamp),
-          AH = this.trackDatas.every((LH => {
-            if (HH === LH) return "key" === BH.type;
-            const AH = LH.chunkQueue[0];
-            return AH ? "key" === AH.type : LH.closed
+        const GB = Math.round(1e3 * OB.timestamp),
+          YB = this.trackDatas.every((GB => {
+            if (BB === GB) return "key" === OB.type;
+            const YB = GB.chunkQueue[0];
+            return YB ? "key" === YB.type : GB.closed
           }));
-        let rH = !1;
+        let DB = !1;
         if (this.currentCluster) {
-          (0, tH.J)(null !== this.currentClusterStartMsTimestamp), (0, tH.J)(null !== this.currentClusterMaxMsTimestamp);
-          const HH = LH - this.currentClusterStartMsTimestamp;
-          rH = AH && LH > this.currentClusterMaxMsTimestamp && HH >= 1e3 * (this.format._options.minimumClusterDuration ?? 1) || HH > 32767
-        } else rH = !0;
-        rH && this.createNewCluster(LH);
-        const SH = LH - this.currentClusterStartMsTimestamp;
-        if (SH < -32768) {
+          (0, jB.Q)(null !== this.currentClusterStartMsTimestamp), (0, jB.Q)(null !== this.currentClusterMaxMsTimestamp);
+          const BB = GB - this.currentClusterStartMsTimestamp;
+          DB = YB && GB > this.currentClusterMaxMsTimestamp && BB >= 1e3 * (this.format._options.minimumClusterDuration ?? 1) || BB > 32767
+        } else DB = !0;
+        DB && this.createNewCluster(GB);
+        const QB = GB - this.currentClusterStartMsTimestamp;
+        if (QB < -32768) {
           if (!this.warnedAboutTooNegativeTimestamp) {
-            const HH = this.format instanceof RL ? "WebM" : "Matroska";
-            hH.c._warn(`Packets had to be discarded because their timestamp is too negative to represent in ${HH}.`), this.warnedAboutTooNegativeTimestamp = !0
+            const BB = this.format instanceof wG ? "WebM" : "Matroska";
+            oB.e._warn(`Packets had to be discarded because their timestamp is too negative to represent in ${BB}.`), this.warnedAboutTooNegativeTimestamp = !0
           }
           return
         }
-        const zH = new Uint8Array(4),
-          CH = new DataView(zH.buffer);
-        CH.setUint8(0, 128 | HH.track.id), CH.setInt16(1, SH, !1);
-        const EH = Math.round(1e3 * BH.duration);
-        if (!!BH.additions || "subtitle" === HH.type) {
-          const AH = {
-            id: vL.BlockGroup,
+        const yB = new Uint8Array(4),
+          JB = new DataView(yB.buffer);
+        JB.setUint8(0, 128 | BB.track.id), JB.setInt16(1, QB, !1);
+        const MB = Math.round(1e3 * OB.duration);
+        if (!!OB.additions || "subtitle" === BB.type) {
+          const YB = {
+            id: WG.BlockGroup,
             data: [{
-              id: vL.Block,
-              data: [zH, BH.data]
-            }, "delta" === BH.type ? {
-              id: vL.ReferenceBlock,
-              data: new ML(HH.lastWrittenMsTimestamp - LH)
-            } : null, BH.additions ? {
-              id: vL.BlockAdditions,
+              id: WG.Block,
+              data: [yB, OB.data]
+            }, "delta" === OB.type ? {
+              id: WG.ReferenceBlock,
+              data: new NG(BB.lastWrittenMsTimestamp - GB)
+            } : null, OB.additions ? {
+              id: WG.BlockAdditions,
               data: [{
-                id: vL.BlockMore,
+                id: WG.BlockMore,
                 data: [{
-                  id: vL.BlockAddID,
+                  id: WG.BlockAddID,
                   data: 1
                 }, {
-                  id: vL.BlockAdditional,
-                  data: BH.additions
+                  id: WG.BlockAdditional,
+                  data: OB.additions
                 }]
               }]
-            } : null, EH > 0 ? {
-              id: vL.BlockDuration,
-              data: EH
+            } : null, MB > 0 ? {
+              id: WG.BlockDuration,
+              data: MB
             } : null]
           };
-          this.ebmlWriter.writeEBML(AH)
+          this.ebmlWriter.writeEBML(YB)
         } else {
-          CH.setUint8(3, Number("key" === BH.type) << 7);
-          const HH = {
-            id: vL.SimpleBlock,
-            data: [zH, BH.data]
+          JB.setUint8(3, Number("key" === OB.type) << 7);
+          const BB = {
+            id: WG.SimpleBlock,
+            data: [yB, OB.data]
           };
-          this.ebmlWriter.writeEBML(HH)
+          this.ebmlWriter.writeEBML(BB)
         }
-        this.startTimestamp = Math.min(this.startTimestamp, LH), this.endTimestamp = Math.max(this.endTimestamp, LH + EH), HH.lastWrittenMsTimestamp = LH, this.trackDatasInCurrentCluster.has(HH) || this.trackDatasInCurrentCluster.set(HH, {
-          firstMsTimestamp: LH
-        }), this.currentClusterMaxMsTimestamp = Math.max(this.currentClusterMaxMsTimestamp, LH)
+        this.startTimestamp = Math.min(this.startTimestamp, GB), this.endTimestamp = Math.max(this.endTimestamp, GB + MB), BB.lastWrittenMsTimestamp = GB, this.trackDatasInCurrentCluster.has(BB) || this.trackDatasInCurrentCluster.set(BB, {
+          firstMsTimestamp: GB
+        }), this.currentClusterMaxMsTimestamp = Math.max(this.currentClusterMaxMsTimestamp, GB)
       }
-      createNewCluster(HH) {
-        HH = Math.max(0, HH), this.currentCluster && this.finalizeCurrentCluster(), this.format._options.onCluster && this.writer.startTrackingWrites(), this.currentCluster = {
-          id: vL.Cluster,
+      createNewCluster(BB) {
+        BB = Math.max(0, BB), this.currentCluster && this.finalizeCurrentCluster(), this.format._options.onCluster && this.writer.startTrackingWrites(), this.currentCluster = {
+          id: WG.Cluster,
           size: this.format._options.appendOnly ? -1 : 5,
           data: [{
-            id: vL.Timestamp,
-            data: HH
+            id: WG.Timestamp,
+            data: BB
           }]
-        }, this.ebmlWriter.writeEBML(this.currentCluster), this.currentClusterStartMsTimestamp = HH, this.currentClusterMaxMsTimestamp = HH, this.trackDatasInCurrentCluster.clear()
+        }, this.ebmlWriter.writeEBML(this.currentCluster), this.currentClusterStartMsTimestamp = BB, this.currentClusterMaxMsTimestamp = BB, this.trackDatasInCurrentCluster.clear()
       }
       finalizeCurrentCluster() {
-        if ((0, tH.J)(this.currentCluster), !this.format._options.appendOnly) {
-          const HH = this.writer.getPos() - this.ebmlWriter.dataOffsets.get(this.currentCluster),
-            BH = this.writer.getPos();
-          this.writer.seek(this.ebmlWriter.offsets.get(this.currentCluster) + 4), this.ebmlWriter.writeVarInt(HH, 5), this.writer.seek(BH)
+        if ((0, jB.Q)(this.currentCluster), !this.format._options.appendOnly) {
+          const BB = this.writer.getPos() - this.ebmlWriter.dataOffsets.get(this.currentCluster),
+            OB = this.writer.getPos();
+          this.writer.seek(this.ebmlWriter.offsets.get(this.currentCluster) + 4), this.ebmlWriter.writeVarInt(BB, 5), this.writer.seek(OB)
         }
         if (this.format._options.onCluster) {
-          (0, tH.J)(null !== this.currentClusterStartMsTimestamp);
+          (0, jB.Q)(null !== this.currentClusterStartMsTimestamp);
           const {
-            data: HH,
-            start: BH
+            data: BB,
+            start: OB
           } = this.writer.stopTrackingWrites();
-          this.format._options.onCluster(HH, BH, this.currentClusterStartMsTimestamp / 1e3)
+          this.format._options.onCluster(BB, OB, this.currentClusterStartMsTimestamp / 1e3)
         }
-        const HH = this.ebmlWriter.offsets.get(this.currentCluster) - this.segmentDataOffset,
-          BH = new Map;
-        for (const [AH, {
-            firstMsTimestamp: rH
-          }] of this.trackDatasInCurrentCluster) BH.has(rH) || BH.set(rH, []), BH.get(rH).push(AH);
-        const LH = [...BH.entries()].sort(((HH, BH) => HH[0] - BH[0]));
-        for (const [AH, rH] of LH)(0, tH.J)(this.cues), this.cues.data.push({
-          id: vL.CuePoint,
+        const BB = this.ebmlWriter.offsets.get(this.currentCluster) - this.segmentDataOffset,
+          OB = new Map;
+        for (const [YB, {
+            firstMsTimestamp: DB
+          }] of this.trackDatasInCurrentCluster) OB.has(DB) || OB.set(DB, []), OB.get(DB).push(YB);
+        const GB = [...OB.entries()].sort(((BB, OB) => BB[0] - OB[0]));
+        for (const [YB, DB] of GB)(0, jB.Q)(this.cues), this.cues.data.push({
+          id: WG.CuePoint,
           data: [{
-            id: vL.CueTime,
-            data: Math.max(0, AH)
-          }, ...rH.map((BH => ({
-            id: vL.CueTrackPositions,
+            id: WG.CueTime,
+            data: Math.max(0, YB)
+          }, ...DB.map((OB => ({
+            id: WG.CueTrackPositions,
             data: [{
-              id: vL.CueTrack,
-              data: BH.track.id
+              id: WG.CueTrack,
+              data: OB.track.id
             }, {
-              id: vL.CueClusterPosition,
-              data: HH
+              id: WG.CueClusterPosition,
+              data: BB
             }]
           })))]
         })
       }
-      async onTrackClose(HH) {
-        const BH = await this.mutex.acquire(),
-          LH = this.trackDatas.find((BH => BH.track === HH));
-        LH && (LH.closed = !0), this.allTracksAreKnown() && this.allTracksKnown.resolve(), await this.interleaveChunks(), BH()
+      async onTrackClose(BB) {
+        const OB = await this.mutex.acquire(),
+          GB = this.trackDatas.find((OB => OB.track === BB));
+        GB && (GB.closed = !0), this.allTracksAreKnown() && this.allTracksKnown.resolve(), await this.interleaveChunks(), OB()
       }
       async finalize() {
-        const HH = await this.mutex.acquire();
+        const BB = await this.mutex.acquire();
         this.allTracksKnown.resolve();
-        for (const BH of this.trackDatas) BH.closed = !0;
-        if (this.segment || this.createSegment(), await this.interleaveChunks(!0), this.currentCluster && this.finalizeCurrentCluster(), (0, tH.J)(this.cues), this.ebmlWriter.writeEBML(this.cues), !this.format._options.appendOnly) {
-          const HH = this.writer.getPos() - this.segmentDataOffset;
-          this.writer.seek(this.ebmlWriter.offsets.get(this.segment) + 4), this.ebmlWriter.writeVarInt(HH, 6);
-          const BH = this.startTimestamp === 1 / 0 ? 0 : this.endTimestamp;
-          this.segmentDuration.data = new WL(BH), this.writer.seek(this.ebmlWriter.offsets.get(this.segmentDuration)), this.ebmlWriter.writeEBML(this.segmentDuration), (0, tH.J)(this.seekHead), this.writer.seek(this.ebmlWriter.offsets.get(this.seekHead)), this.maybeCreateSeekHead(!0), this.ebmlWriter.writeEBML(this.seekHead)
+        for (const OB of this.trackDatas) OB.closed = !0;
+        if (this.segment || this.createSegment(), await this.interleaveChunks(!0), this.currentCluster && this.finalizeCurrentCluster(), (0, jB.Q)(this.cues), this.ebmlWriter.writeEBML(this.cues), !this.format._options.appendOnly) {
+          const BB = this.writer.getPos() - this.segmentDataOffset;
+          this.writer.seek(this.ebmlWriter.offsets.get(this.segment) + 4), this.ebmlWriter.writeVarInt(BB, 6);
+          const OB = this.startTimestamp === 1 / 0 ? 0 : this.endTimestamp;
+          this.segmentDuration.data = new ZG(OB), this.writer.seek(this.ebmlWriter.offsets.get(this.segmentDuration)), this.ebmlWriter.writeEBML(this.segmentDuration), (0, jB.Q)(this.seekHead), this.writer.seek(this.ebmlWriter.offsets.get(this.seekHead)), this.maybeCreateSeekHead(!0), this.ebmlWriter.writeEBML(this.seekHead)
         }
-        HH()
+        BB()
       }
     }
-    const mL = new Uint32Array(256);
-    for (let jL = 0; jL < 256; jL++) {
-      let HH = jL << 24;
-      for (let BH = 0; BH < 8; BH++) HH = 2147483648 & HH ? HH << 1 ^ 79764919 : HH << 1;
-      mL[jL] = HH >>> 0 & 4294967295
+    const dG = new Uint32Array(256);
+    for (let EG = 0; EG < 256; EG++) {
+      let BB = EG << 24;
+      for (let OB = 0; OB < 8; OB++) BB = 2147483648 & BB ? BB << 1 ^ 79764919 : BB << 1;
+      dG[EG] = BB >>> 0 & 4294967295
     }
     new Uint8Array([9, 240]), new Uint8Array([70, 1]);
-    const oL = new Uint32Array(256);
-    for (let jL = 0; jL < 256; jL++) {
-      let HH = jL << 24;
-      for (let BH = 0; BH < 8; BH++) HH = 2147483648 & HH ? HH << 1 ^ 79764919 : HH << 1;
-      oL[jL] = HH >>> 0 & 4294967295
+    const KG = new Uint32Array(256);
+    for (let EG = 0; EG < 256; EG++) {
+      let BB = EG << 24;
+      for (let OB = 0; OB < 8; OB++) BB = 2147483648 & BB ? BB << 1 ^ 79764919 : BB << 1;
+      KG[EG] = BB >>> 0 & 4294967295
     }
-    const IL = HH => {
-        let BH = 4294967295;
-        for (let LH = 0; LH < HH.length; LH++) {
-          const AH = HH[LH];
-          BH = (BH << 8 ^ oL[BH >>> 24 ^ AH]) >>> 0
+    const uG = BB => {
+        let OB = 4294967295;
+        for (let GB = 0; GB < BB.length; GB++) {
+          const YB = BB[GB];
+          OB = (OB << 8 ^ KG[OB >>> 24 ^ YB]) >>> 0
         }
-        return BH
+        return OB
       },
-      fL = new Uint8Array(16);
+      mG = new Uint8Array(16);
     {
-      const HH = (0, tH.ed)(fL);
-      fL[0] = 0, HH.setUint16(1, 45069, !1), HH.setUint16(3, 1, !1), fL[5] = 193, fL[6] = 0, fL[7] = 0, HH.setUint16(8, 1, !1), HH.setUint16(10, 61440, !1), HH.setUint32(12, IL(fL.subarray(0, 12)), !1)
+      const BB = (0, jB.Gd)(mG);
+      mG[0] = 0, BB.setUint16(1, 45069, !1), BB.setUint16(3, 1, !1), mG[5] = 193, mG[6] = 0, mG[7] = 0, BB.setUint16(8, 1, !1), BB.setUint16(10, 61440, !1), BB.setUint32(12, uG(mG.subarray(0, 12)), !1)
     }
-    var lL;
-    LH(40900);
-    ! function(HH) {
-      HH[HH.PCM = 1] = "PCM", HH[HH.IEEE_FLOAT = 3] = "IEEE_FLOAT", HH[HH.ALAW = 6] = "ALAW", HH[HH.MULAW = 7] = "MULAW", HH[HH.EXTENSIBLE = 65534] = "EXTENSIBLE"
-    }(lL || (lL = {}));
-    LH(40902), LH(40916), LH(40818);
-    class KL {
+    var IG;
+    GB(40650);
+    ! function(BB) {
+      BB[BB.PCM = 1] = "PCM", BB[BB.IEEE_FLOAT = 3] = "IEEE_FLOAT", BB[BB.ALAW = 6] = "ALAW", BB[BB.MULAW = 7] = "MULAW", BB[BB.EXTENSIBLE = 65534] = "EXTENSIBLE"
+    }(IG || (IG = {}));
+    GB(40657), GB(40669), GB(40572);
+    class FG {
       get supportsVideoRotationMetadata() {
         return this.supportsVideoTransformationMetadata
       }
       getSupportedVideoCodecs() {
-        return this.getSupportedCodecs().filter((HH => rH.r.includes(HH)))
+        return this.getSupportedCodecs().filter((BB => DB.t.includes(BB)))
       }
       getSupportedAudioCodecs() {
-        return this.getSupportedCodecs().filter((HH => rH.c.includes(HH)))
+        return this.getSupportedCodecs().filter((BB => DB.e.includes(BB)))
       }
       getSupportedSubtitleCodecs() {
-        return this.getSupportedCodecs().filter((HH => rH.n.includes(HH)))
+        return this.getSupportedCodecs().filter((BB => DB.q.includes(BB)))
       }
-      _codecUnsupportedHint(HH) {
+      _codecUnsupportedHint(BB) {
         return ""
       }
       _isFragmentedIsobmff() {
         return !1
       }
     }
-    class cL extends KL {
+    class iG extends FG {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (!HH || "object" !== typeof HH) throw new TypeError("options must be an object.");
-        if (void 0 !== HH.fastStart && ![!1, "in-memory", "reserve", "fragmented"].includes(HH.fastStart)) throw new TypeError("options.fastStart, when provided, must be false, 'in-memory', 'reserve', or 'fragmented'.");
-        if (void 0 !== HH.minimumFragmentDuration && (!(0, tH.Kb)(HH.minimumFragmentDuration) || HH.minimumFragmentDuration < 0)) throw new TypeError("options.minimumFragmentDuration, when provided, must be a non-negative number.");
-        if (void 0 !== HH.onFtyp && "function" !== typeof HH.onFtyp) throw new TypeError("options.onFtyp, when provided, must be a function.");
-        if (void 0 !== HH.onMoov && "function" !== typeof HH.onMoov) throw new TypeError("options.onMoov, when provided, must be a function.");
-        if (void 0 !== HH.onMdat && "function" !== typeof HH.onMdat) throw new TypeError("options.onMdat, when provided, must be a function.");
-        if (void 0 !== HH.onMoof && "function" !== typeof HH.onMoof) throw new TypeError("options.onMoof, when provided, must be a function.");
-        if (void 0 !== HH.metadataFormat && !["mdir", "mdta", "udta", "auto"].includes(HH.metadataFormat)) throw new TypeError("options.metadataFormat, when provided, must be either 'auto', 'mdir', 'mdta', or 'udta'.");
-        super(), this._options = HH
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (!BB || "object" !== typeof BB) throw new TypeError("options must be an object.");
+        if (void 0 !== BB.fastStart && ![!1, "in-memory", "reserve", "fragmented"].includes(BB.fastStart)) throw new TypeError("options.fastStart, when provided, must be false, 'in-memory', 'reserve', or 'fragmented'.");
+        if (void 0 !== BB.minimumFragmentDuration && (!(0, jB.ac)(BB.minimumFragmentDuration) || BB.minimumFragmentDuration < 0)) throw new TypeError("options.minimumFragmentDuration, when provided, must be a non-negative number.");
+        if (void 0 !== BB.onFtyp && "function" !== typeof BB.onFtyp) throw new TypeError("options.onFtyp, when provided, must be a function.");
+        if (void 0 !== BB.onMoov && "function" !== typeof BB.onMoov) throw new TypeError("options.onMoov, when provided, must be a function.");
+        if (void 0 !== BB.onMdat && "function" !== typeof BB.onMdat) throw new TypeError("options.onMdat, when provided, must be a function.");
+        if (void 0 !== BB.onMoof && "function" !== typeof BB.onMoof) throw new TypeError("options.onMoof, when provided, must be a function.");
+        if (void 0 !== BB.metadataFormat && !["mdir", "mdta", "udta", "auto"].includes(BB.metadataFormat)) throw new TypeError("options.metadataFormat, when provided, must be either 'auto', 'mdir', 'mdta', or 'udta'.");
+        super(), this._options = BB
       }
       getSupportedTrackCounts() {
-        const HH = 2 ** 32 - 1;
+        const BB = 2 ** 32 - 1;
         return {
           video: {
             min: 0,
-            max: HH
+            max: BB
           },
           audio: {
             min: 0,
-            max: HH
+            max: BB
           },
           subtitle: {
             min: 0,
-            max: HH
+            max: BB
           },
           total: {
             min: 0,
-            max: HH
+            max: BB
           }
         }
       }
@@ -6183,16 +6183,16 @@ export const modules = {
       get negativeTimestampSupport() {
         return "full"
       }
-      _createMuxer(HH) {
-        return new uL(HH, this)
+      _createMuxer(BB) {
+        return new pG(BB, this)
       }
       _isFragmentedIsobmff() {
         return "fragmented" === this._options.fastStart
       }
     }
-    class eL extends cL {
-      constructor(HH) {
-        super(HH)
+    class LG extends iG {
+      constructor(BB) {
+        super(BB)
       }
       get _name() {
         return "MP4"
@@ -6204,15 +6204,15 @@ export const modules = {
         return "video/mp4"
       }
       getSupportedCodecs() {
-        return [...rH.r, ...rH.f, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...rH.n]
+        return [...DB.t, ...DB.g, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...DB.q]
       }
-      _codecUnsupportedHint(HH) {
-        return (new gL).getSupportedCodecs().includes(HH) ? " Switching to MOV will grant support for this codec." : ""
+      _codecUnsupportedHint(BB) {
+        return (new rG).getSupportedCodecs().includes(BB) ? " Switching to MOV will grant support for this codec." : ""
       }
     }
-    class qL extends cL {
-      constructor(HH) {
-        super(HH)
+    class gG extends iG {
+      constructor(BB) {
+        super(BB)
       }
       get _name() {
         return "CMAF"
@@ -6224,12 +6224,12 @@ export const modules = {
         return "video/mp4"
       }
       getSupportedCodecs() {
-        return [...rH.r, ...rH.f, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...rH.n]
+        return [...DB.t, ...DB.g, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...DB.q]
       }
     }
-    class gL extends cL {
-      constructor(HH) {
-        super(HH)
+    class rG extends iG {
+      constructor(BB) {
+        super(BB)
       }
       get _name() {
         return "MOV"
@@ -6241,47 +6241,47 @@ export const modules = {
         return "video/quicktime"
       }
       getSupportedCodecs() {
-        return [...rH.r, ...rH.c]
+        return [...DB.t, ...DB.e]
       }
-      _codecUnsupportedHint(HH) {
-        return (new eL).getSupportedCodecs().includes(HH) ? " Switching to MP4 will grant support for this codec." : ""
+      _codecUnsupportedHint(BB) {
+        return (new LG).getSupportedCodecs().includes(BB) ? " Switching to MP4 will grant support for this codec." : ""
       }
     }
-    class NL extends KL {
+    class XG extends FG {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (!HH || "object" !== typeof HH) throw new TypeError("options must be an object.");
-        if (void 0 !== HH.appendOnly && "boolean" !== typeof HH.appendOnly) throw new TypeError("options.appendOnly, when provided, must be a boolean.");
-        if (void 0 !== HH.minimumClusterDuration && (!(0, tH.Kb)(HH.minimumClusterDuration) || HH.minimumClusterDuration < 0)) throw new TypeError("options.minimumClusterDuration, when provided, must be a non-negative number.");
-        if (void 0 !== HH.onEbmlHeader && "function" !== typeof HH.onEbmlHeader) throw new TypeError("options.onEbmlHeader, when provided, must be a function.");
-        if (void 0 !== HH.onSegmentHeader && "function" !== typeof HH.onSegmentHeader) throw new TypeError("options.onHeader, when provided, must be a function.");
-        if (void 0 !== HH.onCluster && "function" !== typeof HH.onCluster) throw new TypeError("options.onCluster, when provided, must be a function.");
-        super(), this._options = HH
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (!BB || "object" !== typeof BB) throw new TypeError("options must be an object.");
+        if (void 0 !== BB.appendOnly && "boolean" !== typeof BB.appendOnly) throw new TypeError("options.appendOnly, when provided, must be a boolean.");
+        if (void 0 !== BB.minimumClusterDuration && (!(0, jB.ac)(BB.minimumClusterDuration) || BB.minimumClusterDuration < 0)) throw new TypeError("options.minimumClusterDuration, when provided, must be a non-negative number.");
+        if (void 0 !== BB.onEbmlHeader && "function" !== typeof BB.onEbmlHeader) throw new TypeError("options.onEbmlHeader, when provided, must be a function.");
+        if (void 0 !== BB.onSegmentHeader && "function" !== typeof BB.onSegmentHeader) throw new TypeError("options.onHeader, when provided, must be a function.");
+        if (void 0 !== BB.onCluster && "function" !== typeof BB.onCluster) throw new TypeError("options.onCluster, when provided, must be a function.");
+        super(), this._options = BB
       }
-      _createMuxer(HH) {
-        return new kL(HH, this)
+      _createMuxer(BB) {
+        return new kG(BB, this)
       }
       get _name() {
         return "Matroska"
       }
       getSupportedTrackCounts() {
-        const HH = 127;
+        const BB = 127;
         return {
           video: {
             min: 0,
-            max: HH
+            max: BB
           },
           audio: {
             min: 0,
-            max: HH
+            max: BB
           },
           subtitle: {
             min: 0,
-            max: HH
+            max: BB
           },
           total: {
             min: 0,
-            max: HH
+            max: BB
           }
         }
       }
@@ -6292,7 +6292,7 @@ export const modules = {
         return "video/x-matroska"
       }
       getSupportedCodecs() {
-        return [...rH.r, ...rH.f, ...rH.k.filter((HH => !["pcm-s8", "pcm-f32be", "pcm-f64be", "ulaw", "alaw"].includes(HH))), ...rH.n]
+        return [...DB.t, ...DB.g, ...DB.n.filter((BB => !["pcm-s8", "pcm-f32be", "pcm-f64be", "ulaw", "alaw"].includes(BB))), ...DB.q]
       }
       get supportsVideoTransformationMetadata() {
         return !1
@@ -6304,12 +6304,12 @@ export const modules = {
         return "prefer-non-negative"
       }
     }
-    class RL extends NL {
-      constructor(HH) {
-        super(HH)
+    class wG extends XG {
+      constructor(BB) {
+        super(BB)
       }
       getSupportedCodecs() {
-        return [...rH.r.filter((HH => ["vp8", "vp9", "av1"].includes(HH))), ...rH.c.filter((HH => ["opus", "vorbis"].includes(HH))), ...rH.n]
+        return [...DB.t.filter((BB => ["vp8", "vp9", "av1"].includes(BB))), ...DB.e.filter((BB => ["opus", "vorbis"].includes(BB))), ...DB.q]
       }
       get _name() {
         return "WebM"
@@ -6320,28 +6320,28 @@ export const modules = {
       get mimeType() {
         return "video/webm"
       }
-      _codecUnsupportedHint(HH) {
-        return (new NL).getSupportedCodecs().includes(HH) ? " Switching to MKV will grant support for this codec." : ""
+      _codecUnsupportedHint(BB) {
+        return (new XG).getSupportedCodecs().includes(BB) ? " Switching to MKV will grant support for this codec." : ""
       }
     }
   },
-  40818: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => vH
+  40572: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => WB
     });
-    var AH = LH(40820),
-      rH = LH(40825),
-      SH = LH(40832),
-      hH = LH(40916),
-      tH = LH(40888),
-      zH = LH(40881),
-      CH = LH(40866),
-      EH = LH(40900),
-      XH = LH(40849);
-    const GH = ["video", "audio", "subtitle"];
-    class YH {
-      constructor(HH, BH, LH, AH, rH) {
-        this.id = HH, this.output = BH, this.type = LH, this.source = AH, this.metadata = rH
+    var YB = GB(40574),
+      DB = GB(40581),
+      QB = GB(40589),
+      oB = GB(40669),
+      jB = GB(40641),
+      yB = GB(40633),
+      JB = GB(40610),
+      MB = GB(40650),
+      PB = GB(40599);
+    const zB = ["video", "audio", "subtitle"];
+    class lB {
+      constructor(BB, OB, GB, YB, DB) {
+        this.id = BB, this.output = OB, this.type = GB, this.source = YB, this.metadata = DB
       }
       isVideoTrack() {
         return "video" === this.type
@@ -6352,95 +6352,95 @@ export const modules = {
       isSubtitleTrack() {
         return "subtitle" === this.type
       }
-      canBePairedWith(HH) {
-        if (!(HH instanceof YH)) throw new TypeError("other must be an OutputTrack.");
-        if (this === HH) return !1;
-        const BH = (0, AH.dd)(this.metadata.group),
-          LH = (0, AH.dd)(HH.metadata.group);
-        for (const AH of BH) {
-          if (this.type !== HH.type && LH.some((HH => AH === HH))) return !0;
-          if (LH.some((HH => AH._pairedGroups.has(HH)))) return !0
+      canBePairedWith(BB) {
+        if (!(BB instanceof lB)) throw new TypeError("other must be an OutputTrack.");
+        if (this === BB) return !1;
+        const OB = (0, YB.Fd)(this.metadata.group),
+          GB = (0, YB.Fd)(BB.metadata.group);
+        for (const YB of OB) {
+          if (this.type !== BB.type && GB.some((BB => YB === BB))) return !0;
+          if (GB.some((BB => YB._pairedGroups.has(BB)))) return !0
         }
         return !1
       }
     }
-    class uH extends YH {
-      constructor(HH, BH, LH, AH) {
-        super(HH, BH, "video", LH, AH)
+    class pB extends lB {
+      constructor(BB, OB, GB, YB) {
+        super(BB, OB, "video", GB, YB)
       }
     }
-    class QH extends YH {
-      constructor(HH, BH, LH, AH) {
-        super(HH, BH, "audio", LH, AH)
+    class qB extends lB {
+      constructor(BB, OB, GB, YB) {
+        super(BB, OB, "audio", GB, YB)
       }
     }
-    class WH extends YH {
-      constructor(HH, BH, LH, AH) {
-        super(HH, BH, "subtitle", LH, AH)
+    class ZB extends lB {
+      constructor(BB, OB, GB, YB) {
+        super(BB, OB, "subtitle", GB, YB)
       }
     }
-    class MH {
+    class NB {
       constructor() {
         this._pairedGroups = new Set
       }
-      pairWith(HH) {
-        if (!(HH instanceof MH)) throw new TypeError("other must be an OutputTrackGroup.");
-        if (this === HH) throw new TypeError("Cannot pair a group with itself.");
-        this._pairedGroups.add(HH), HH._pairedGroups.add(this)
+      pairWith(BB) {
+        if (!(BB instanceof NB)) throw new TypeError("other must be an OutputTrackGroup.");
+        if (this === BB) throw new TypeError("Cannot pair a group with itself.");
+        this._pairedGroups.add(BB), BB._pairedGroups.add(this)
       }
     }
-    const xH = HH => {
-      if (!HH || "object" !== typeof HH) throw new TypeError("metadata must be an object.");
-      if (void 0 !== HH.languageCode && !(0, AH.Bb)(HH.languageCode)) throw new TypeError("metadata.languageCode, when provided, must be a three-letter, ISO 639-2/T language code.");
-      if (void 0 !== HH.name && "string" !== typeof HH.name) throw new TypeError("metadata.name, when provided, must be a string.");
-      if (void 0 !== HH.disposition && (0, rH.o)(HH.disposition), void 0 !== HH.maximumPacketCount && (!Number.isInteger(HH.maximumPacketCount) || HH.maximumPacketCount < 0)) throw new TypeError("metadata.maximumPacketCount, when provided, must be a non-negative integer.");
-      if (void 0 !== HH.bitrate && (!Number.isFinite(HH.bitrate) || HH.bitrate < 0)) throw new TypeError("metadata.bitrate, when provided, must be a non-negative number.");
-      if (void 0 !== HH.averageBitrate && (!Number.isFinite(HH.averageBitrate) || HH.averageBitrate < 0)) throw new TypeError("metadata.averageBitrate, when provided, must be a non-negative number.");
-      if (void 0 !== HH.group && !(HH.group instanceof MH) && (!Array.isArray(HH.group) || HH.group.some((HH => !(HH instanceof MH))))) throw new TypeError("metadata.group, when provided, must be an OutputTrackGroup instance or an array of OutputTrackGroup instances.")
+    const RB = BB => {
+      if (!BB || "object" !== typeof BB) throw new TypeError("metadata must be an object.");
+      if (void 0 !== BB.languageCode && !(0, YB.Ub)(BB.languageCode)) throw new TypeError("metadata.languageCode, when provided, must be a three-letter, ISO 639-2/T language code.");
+      if (void 0 !== BB.name && "string" !== typeof BB.name) throw new TypeError("metadata.name, when provided, must be a string.");
+      if (void 0 !== BB.disposition && (0, DB.p)(BB.disposition), void 0 !== BB.maximumPacketCount && (!Number.isInteger(BB.maximumPacketCount) || BB.maximumPacketCount < 0)) throw new TypeError("metadata.maximumPacketCount, when provided, must be a non-negative integer.");
+      if (void 0 !== BB.bitrate && (!Number.isFinite(BB.bitrate) || BB.bitrate < 0)) throw new TypeError("metadata.bitrate, when provided, must be a non-negative number.");
+      if (void 0 !== BB.averageBitrate && (!Number.isFinite(BB.averageBitrate) || BB.averageBitrate < 0)) throw new TypeError("metadata.averageBitrate, when provided, must be a non-negative number.");
+      if (void 0 !== BB.group && !(BB.group instanceof NB) && (!Array.isArray(BB.group) || BB.group.some((BB => !(BB instanceof NB))))) throw new TypeError("metadata.group, when provided, must be an OutputTrackGroup instance or an array of OutputTrackGroup instances.")
     };
-    class vH extends AH.l {
+    class WB extends YB.m {
       get target() {
-        const HH = "Output.target cannot be used when using PathedTarget with an async callback. Use the 'target' event instead.";
-        if (this._rootTargetPromise) throw new TypeError(HH);
-        const BH = this._getRootTarget();
-        if ((0, AH.Ob)(BH)) throw new TypeError(HH);
-        return BH
+        const BB = "Output.target cannot be used when using PathedTarget with an async callback. Use the 'target' event instead.";
+        if (this._rootTargetPromise) throw new TypeError(BB);
+        const OB = this._getRootTarget();
+        if ((0, YB.gc)(OB)) throw new TypeError(BB);
+        return OB
       }
-      constructor(HH) {
-        if (super(), this.state = "pending", this.defaultTrackGroup = new MH, this.tracks = [], this._onFinalize = null, this._unfinalizedTargets = new Set, this._rootWriterPromise = null, this._startPromise = null, this._cancelPromise = null, this._finalizePromise = null, this._mutex = new AH.d, this._metadataTags = {}, this._rootTarget = null, this._rootTargetPromise = null, this._firstMediaStreamTimestamp = null, !HH || "object" !== typeof HH) throw new TypeError("options must be an object.");
-        if (!(HH.format instanceof SH.i)) throw new TypeError("options.format must be an OutputFormat.");
-        if (!(HH.target instanceof tH.m || HH.target instanceof tH.i)) throw new TypeError("options.target must be a Target or a PathedTarget.");
-        if (HH.target instanceof tH.m && this._rememberTarget(HH.target), void 0 !== HH.initTarget && !(HH.initTarget instanceof tH.m) && "function" !== typeof HH.initTarget) throw new Error("options.initTarget, when provided, must be a Target or a function that returns or resolves to a Target.");
-        if (void 0 !== HH.onFinalize && "function" !== typeof HH.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
-        this.format = HH.format, this.fX = HH.target, this._onFinalize = HH.onFinalize ?? null, this._initTarget = HH.initTarget ?? null, this._initTarget instanceof tH.m && this._rememberTarget(this._initTarget), this._muxer = HH.format._createMuxer(this)
+      constructor(BB) {
+        if (super(), this.state = "pending", this.defaultTrackGroup = new NB, this.tracks = [], this._onFinalize = null, this._unfinalizedTargets = new Set, this._rootWriterPromise = null, this._startPromise = null, this._cancelPromise = null, this._finalizePromise = null, this._mutex = new YB.d, this._metadataTags = {}, this._rootTarget = null, this._rootTargetPromise = null, this._firstMediaStreamTimestamp = null, !BB || "object" !== typeof BB) throw new TypeError("options must be an object.");
+        if (!(BB.format instanceof QB.i)) throw new TypeError("options.format must be an OutputFormat.");
+        if (!(BB.target instanceof jB.i || BB.target instanceof jB.g)) throw new TypeError("options.target must be a Target or a PathedTarget.");
+        if (BB.target instanceof jB.i && this._rememberTarget(BB.target), void 0 !== BB.initTarget && !(BB.initTarget instanceof jB.i) && "function" !== typeof BB.initTarget) throw new Error("options.initTarget, when provided, must be a Target or a function that returns or resolves to a Target.");
+        if (void 0 !== BB.onFinalize && "function" !== typeof BB.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
+        this.format = BB.format, this.dP = BB.target, this._onFinalize = BB.onFinalize ?? null, this._initTarget = BB.initTarget ?? null, this._initTarget instanceof jB.i && this._rememberTarget(this._initTarget), this._muxer = BB.format._createMuxer(this)
       }
-      _getTargetValidated(HH) {
-        (0, AH.J)(this.fX instanceof tH.i);
-        const BH = this.fX.getTarget(HH),
-          LH = HH => {
-            if (!(HH instanceof tH.m)) throw new TypeError("getTarget must return a Target.");
-            return HH
+      _getTargetValidated(BB) {
+        (0, YB.Q)(this.dP instanceof jB.g);
+        const OB = this.dP.getTarget(BB),
+          GB = BB => {
+            if (!(BB instanceof jB.i)) throw new TypeError("getTarget must return a Target.");
+            return BB
           };
-        return (0, AH.Ob)(BH) ? BH.then(LH) : LH(BH)
+        return (0, YB.gc)(OB) ? OB.then(GB) : GB(OB)
       }
-      async _getTarget(HH) {
-        (0, AH.J)(this.fX instanceof tH.i);
-        const BH = await this._getTargetValidated(HH);
+      async _getTarget(BB) {
+        (0, YB.Q)(this.dP instanceof jB.g);
+        const OB = await this._getTargetValidated(BB);
         return this._emit("target", {
-          target: BH,
-          request: HH,
-          isRoot: HH.isRoot
-        }), "canceled" === this.state ? await BH._close() : this._rememberTarget(BH), BH
+          target: OB,
+          request: BB,
+          isRoot: BB.isRoot
+        }), "canceled" === this.state ? await OB._close() : this._rememberTarget(OB), OB
       }
-      _rememberTarget(HH) {
-        this._unfinalizedTargets.add(HH), HH.on("finalized", (() => this._unfinalizedTargets.delete(HH)), {
+      _rememberTarget(BB) {
+        this._unfinalizedTargets.add(BB), BB.on("finalized", (() => this._unfinalizedTargets.delete(BB)), {
           once: !0
         })
       }
       async _getInitTarget() {
-        if ((0, AH.J)(null !== this._initTarget), this._initTarget instanceof tH.m) return this._initTarget;
-        const HH = await this._initTarget();
-        return "canceled" === this.state ? await HH._close() : this._rememberTarget(HH), HH
+        if ((0, YB.Q)(null !== this._initTarget), this._initTarget instanceof jB.i) return this._initTarget;
+        const BB = await this._initTarget();
+        return "canceled" === this.state ? await BB._close() : this._rememberTarget(BB), BB
       }
       _hasInitTarget() {
         return null !== this._initTarget
@@ -6448,129 +6448,129 @@ export const modules = {
       _getRootTarget() {
         if (this._rootTarget) return this._rootTarget;
         if (this._rootTargetPromise) return this._rootTargetPromise;
-        if (this.fX instanceof tH.m) return this._emit("target", {
-          target: this.fX,
+        if (this.dP instanceof jB.i) return this._emit("target", {
+          target: this.dP,
           request: null,
           isRoot: !0
-        }), this._rootTarget = this.fX, this.fX;
-        const HH = {
-            path: this.fX.rootPath,
+        }), this._rootTarget = this.dP, this.dP;
+        const BB = {
+            path: this.dP.rootPath,
             isRoot: !0,
             mimeType: this.format.mimeType
           },
-          BH = this._getTargetValidated(HH),
-          LH = BH => ("canceled" === this.state ? BH._close() : this._rememberTarget(BH), this._emit("target", {
-            target: BH,
-            request: HH,
+          OB = this._getTargetValidated(BB),
+          GB = OB => ("canceled" === this.state ? OB._close() : this._rememberTarget(OB), this._emit("target", {
+            target: OB,
+            request: BB,
             isRoot: !0
-          }), this._rootTarget = BH, BH);
-        return (0, AH.Ob)(BH) ? this._rootTargetPromise = BH.then(LH) : LH(BH)
+          }), this._rootTarget = OB, OB);
+        return (0, YB.gc)(OB) ? this._rootTargetPromise = OB.then(GB) : GB(OB)
       }
-      _getRootWriter(HH) {
+      _getRootWriter(BB) {
         return this._rootWriterPromise ??= (async () => {
-          const BH = await this._getRootTarget(),
-            LH = new zH.e(BH, "boolean" === typeof HH ? HH : HH(BH));
-          return LH.start(), LH
+          const OB = await this._getRootTarget(),
+            GB = new yB.e(OB, "boolean" === typeof BB ? BB : BB(OB));
+          return GB.start(), GB
         })()
       }
-      addVideoTrack(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(HH instanceof hH.p)) throw new TypeError("source must be a VideoSource.");
-        if (xH(BH), void 0 !== BH.rotation && ![0, 90, 180, 270].includes(BH.rotation)) throw new TypeError(`Invalid video rotation: ${BH.rotation}. Has to be 0, 90, 180 or 270.`);
-        if (void 0 !== BH.flip && "boolean" !== typeof BH.flip) throw new TypeError("metadata.flip, when provided, must be a boolean.");
-        if (void 0 !== BH.transformationMatrix && (!Array.isArray(BH.transformationMatrix) || 9 !== BH.transformationMatrix.length || !BH.transformationMatrix.every((HH => Number.isFinite(HH))))) throw new TypeError("metadata.transformationMatrix, when provided, must be an array of 9 finite numbers.");
-        if (void 0 !== BH.frameRate && (!Number.isFinite(BH.frameRate) || BH.frameRate <= 0)) throw new TypeError(`Invalid video frame rate: ${BH.frameRate}. Must be a positive number.`);
-        if (void 0 !== BH.hasOnlyKeyPackets && "boolean" !== typeof BH.hasOnlyKeyPackets) throw new TypeError("metadata.hasOnlyKeyPackets, when provided, must be a boolean.");
-        if (void 0 !== BH.canBeTransparent && "boolean" !== typeof BH.canBeTransparent) throw new TypeError("metadata.canBeTransparent, when provided, must be a boolean.");
-        if (void 0 !== BH.decoderConfig && (0, XH.X)({
-            decoderConfig: BH.decoderConfig
-          }, HH._codec), void 0 !== BH.primingPacket) {
-          if (!(BH.primingPacket instanceof EH.b)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
-          if (void 0 === BH.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
+      addVideoTrack(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(BB instanceof oB.m)) throw new TypeError("source must be a VideoSource.");
+        if (RB(OB), void 0 !== OB.rotation && ![0, 90, 180, 270].includes(OB.rotation)) throw new TypeError(`Invalid video rotation: ${OB.rotation}. Has to be 0, 90, 180 or 270.`);
+        if (void 0 !== OB.flip && "boolean" !== typeof OB.flip) throw new TypeError("metadata.flip, when provided, must be a boolean.");
+        if (void 0 !== OB.transformationMatrix && (!Array.isArray(OB.transformationMatrix) || 9 !== OB.transformationMatrix.length || !OB.transformationMatrix.every((BB => Number.isFinite(BB))))) throw new TypeError("metadata.transformationMatrix, when provided, must be an array of 9 finite numbers.");
+        if (void 0 !== OB.frameRate && (!Number.isFinite(OB.frameRate) || OB.frameRate <= 0)) throw new TypeError(`Invalid video frame rate: ${OB.frameRate}. Must be a positive number.`);
+        if (void 0 !== OB.hasOnlyKeyPackets && "boolean" !== typeof OB.hasOnlyKeyPackets) throw new TypeError("metadata.hasOnlyKeyPackets, when provided, must be a boolean.");
+        if (void 0 !== OB.canBeTransparent && "boolean" !== typeof OB.canBeTransparent) throw new TypeError("metadata.canBeTransparent, when provided, must be a boolean.");
+        if (void 0 !== OB.decoderConfig && (0, PB.Y)({
+            decoderConfig: OB.decoderConfig
+          }, BB._codec), void 0 !== OB.primingPacket) {
+          if (!(OB.primingPacket instanceof MB.d)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
+          if (void 0 === OB.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
         }
-        const LH = {
-          ...BH
+        const GB = {
+          ...OB
         };
-        return LH.group ??= this.defaultTrackGroup, this._addTrack(new uH(this.tracks.length + 1, this, HH, LH))
+        return GB.group ??= this.defaultTrackGroup, this._addTrack(new pB(this.tracks.length + 1, this, BB, GB))
       }
-      addAudioTrack(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(HH instanceof hH.e)) throw new TypeError("source must be an AudioSource.");
-        if (xH(BH), void 0 !== BH.decoderConfig && (0, XH.U)({
-            decoderConfig: BH.decoderConfig
-          }, HH._codec), void 0 !== BH.primingPacket) {
-          if (!(BH.primingPacket instanceof EH.b)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
-          if (void 0 === BH.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
+      addAudioTrack(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(BB instanceof oB.b)) throw new TypeError("source must be an AudioSource.");
+        if (RB(OB), void 0 !== OB.decoderConfig && (0, PB.V)({
+            decoderConfig: OB.decoderConfig
+          }, BB._codec), void 0 !== OB.primingPacket) {
+          if (!(OB.primingPacket instanceof MB.d)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
+          if (void 0 === OB.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
         }
-        const LH = {
-          ...BH
+        const GB = {
+          ...OB
         };
-        return LH.group ??= this.defaultTrackGroup, this._addTrack(new QH(this.tracks.length + 1, this, HH, LH))
+        return GB.group ??= this.defaultTrackGroup, this._addTrack(new qB(this.tracks.length + 1, this, BB, GB))
       }
-      addSubtitleTrack(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(HH instanceof hH.n)) throw new TypeError("source must be a SubtitleSource.");
-        xH(BH);
-        const LH = {
-          ...BH
+      addSubtitleTrack(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(BB instanceof oB.l)) throw new TypeError("source must be a SubtitleSource.");
+        RB(OB);
+        const GB = {
+          ...OB
         };
-        return LH.group ??= this.defaultTrackGroup, this._addTrack(new WH(this.tracks.length + 1, this, HH, LH))
+        return GB.group ??= this.defaultTrackGroup, this._addTrack(new ZB(this.tracks.length + 1, this, BB, GB))
       }
-      setMetadataTags(HH) {
-        if ((0, rH.l)(HH), "pending" !== this.state) throw new Error("Cannot set metadata tags after output has been started or canceled.");
-        this._metadataTags = HH
+      setMetadataTags(BB) {
+        if ((0, DB.n)(BB), "pending" !== this.state) throw new Error("Cannot set metadata tags after output has been started or canceled.");
+        this._metadataTags = BB
       }
-      _addTrack(HH) {
+      _addTrack(BB) {
         if ("pending" !== this.state) throw new Error("Cannot add track after output has been started or canceled.");
-        if (HH.source._connectedTrack) throw new Error("Source is already used for a track.");
-        const BH = this.format.getSupportedTrackCounts(),
-          LH = this.tracks.reduce(((BH, LH) => BH + (LH.type === HH.type ? 1 : 0)), 0),
-          AH = BH[HH.type].max;
-        if (LH === AH) throw new Error(0 === AH ? `${this.format._name} does not support ${HH.type} tracks.` : `${this.format._name} does not support more than ${AH} ${HH.type} track` + (1 === AH ? "" : "s") + ".");
-        const rH = BH.total.max;
-        if (this.tracks.length === rH) throw new Error(`${this.format._name} does not support more than ${rH} tracks` + (1 === rH ? "" : "s") + " in total.");
-        if (HH.isVideoTrack()) {
-          const BH = this.format.getSupportedVideoCodecs();
-          if (0 === BH.length) throw new Error(`${this.format._name} does not support video tracks.` + this.format._codecUnsupportedHint(HH.source._codec));
-          if (!BH.includes(HH.source._codec)) throw new Error(`Codec '${HH.source._codec}' cannot be contained within ${this.format._name}. Supported video codecs are: ${BH.map((HH=>`'${HH}'`)).join(", ")}.` + this.format._codecUnsupportedHint(HH.source._codec))
-        } else if (HH.isAudioTrack()) {
-          const BH = this.format.getSupportedAudioCodecs();
-          if (0 === BH.length) throw new Error(`${this.format._name} does not support audio tracks.` + this.format._codecUnsupportedHint(HH.source._codec));
-          if (!BH.includes(HH.source._codec)) throw new Error(`Codec '${HH.source._codec}' cannot be contained within ${this.format._name}. Supported audio codecs are: ${BH.map((HH=>`'${HH}'`)).join(", ")}.` + this.format._codecUnsupportedHint(HH.source._codec))
-        } else if (HH.isSubtitleTrack()) {
-          const BH = this.format.getSupportedSubtitleCodecs();
-          if (0 === BH.length) throw new Error(`${this.format._name} does not support subtitle tracks.` + this.format._codecUnsupportedHint(HH.source._codec));
-          if (!BH.includes(HH.source._codec)) throw new Error(`Codec '${HH.source._codec}' cannot be contained within ${this.format._name}. Supported subtitle codecs are: ${BH.map((HH=>`'${HH}'`)).join(", ")}.` + this.format._codecUnsupportedHint(HH.source._codec))
+        if (BB.source._connectedTrack) throw new Error("Source is already used for a track.");
+        const OB = this.format.getSupportedTrackCounts(),
+          GB = this.tracks.reduce(((OB, GB) => OB + (GB.type === BB.type ? 1 : 0)), 0),
+          YB = OB[BB.type].max;
+        if (GB === YB) throw new Error(0 === YB ? `${this.format._name} does not support ${BB.type} tracks.` : `${this.format._name} does not support more than ${YB} ${BB.type} track` + (1 === YB ? "" : "s") + ".");
+        const DB = OB.total.max;
+        if (this.tracks.length === DB) throw new Error(`${this.format._name} does not support more than ${DB} tracks` + (1 === DB ? "" : "s") + " in total.");
+        if (BB.isVideoTrack()) {
+          const OB = this.format.getSupportedVideoCodecs();
+          if (0 === OB.length) throw new Error(`${this.format._name} does not support video tracks.` + this.format._codecUnsupportedHint(BB.source._codec));
+          if (!OB.includes(BB.source._codec)) throw new Error(`Codec '${BB.source._codec}' cannot be contained within ${this.format._name}. Supported video codecs are: ${OB.map((BB=>`'${BB}'`)).join(", ")}.` + this.format._codecUnsupportedHint(BB.source._codec))
+        } else if (BB.isAudioTrack()) {
+          const OB = this.format.getSupportedAudioCodecs();
+          if (0 === OB.length) throw new Error(`${this.format._name} does not support audio tracks.` + this.format._codecUnsupportedHint(BB.source._codec));
+          if (!OB.includes(BB.source._codec)) throw new Error(`Codec '${BB.source._codec}' cannot be contained within ${this.format._name}. Supported audio codecs are: ${OB.map((BB=>`'${BB}'`)).join(", ")}.` + this.format._codecUnsupportedHint(BB.source._codec))
+        } else if (BB.isSubtitleTrack()) {
+          const OB = this.format.getSupportedSubtitleCodecs();
+          if (0 === OB.length) throw new Error(`${this.format._name} does not support subtitle tracks.` + this.format._codecUnsupportedHint(BB.source._codec));
+          if (!OB.includes(BB.source._codec)) throw new Error(`Codec '${BB.source._codec}' cannot be contained within ${this.format._name}. Supported subtitle codecs are: ${OB.map((BB=>`'${BB}'`)).join(", ")}.` + this.format._codecUnsupportedHint(BB.source._codec))
         }
-        return this.tracks.push(HH), HH.source._connectedTrack = HH, HH
+        return this.tracks.push(BB), BB.source._connectedTrack = BB, BB
       }
       hasEnoughTracks() {
-        const HH = this.format.getSupportedTrackCounts();
-        for (const LH of GH) {
-          if (this.tracks.reduce(((HH, BH) => HH + (BH.type === LH ? 1 : 0)), 0) < HH[LH].min) return !1
+        const BB = this.format.getSupportedTrackCounts();
+        for (const GB of zB) {
+          if (this.tracks.reduce(((BB, OB) => BB + (OB.type === GB ? 1 : 0)), 0) < BB[GB].min) return !1
         }
-        const BH = HH.total.min;
-        return !(this.tracks.length < BH)
+        const OB = BB.total.min;
+        return !(this.tracks.length < OB)
       }
       async start() {
-        const HH = this.format.getSupportedTrackCounts();
-        for (const LH of GH) {
-          const BH = this.tracks.reduce(((HH, BH) => HH + (BH.type === LH ? 1 : 0)), 0),
-            AH = HH[LH].min;
-          if (BH < AH) throw new Error(AH === HH[LH].max ? `${this.format._name} requires exactly ${AH} ${LH} track${1===AH?"":"s"}.` : `${this.format._name} requires at least ${AH} ${LH} track${1===AH?"":"s"}.`)
+        const BB = this.format.getSupportedTrackCounts();
+        for (const GB of zB) {
+          const OB = this.tracks.reduce(((BB, OB) => BB + (OB.type === GB ? 1 : 0)), 0),
+            YB = BB[GB].min;
+          if (OB < YB) throw new Error(YB === BB[GB].max ? `${this.format._name} requires exactly ${YB} ${GB} track${1===YB?"":"s"}.` : `${this.format._name} requires at least ${YB} ${GB} track${1===YB?"":"s"}.`)
         }
-        const BH = HH.total.min;
-        if (this.tracks.length < BH) throw new Error(BH === HH.total.max ? `${this.format._name} requires exactly ${BH} track` + (1 === BH ? "" : "s") + "." : `${this.format._name} requires at least ${BH} track` + (1 === BH ? "" : "s") + ".");
+        const OB = BB.total.min;
+        if (this.tracks.length < OB) throw new Error(OB === BB.total.max ? `${this.format._name} requires exactly ${OB} track` + (1 === OB ? "" : "s") + "." : `${this.format._name} requires at least ${OB} track` + (1 === OB ? "" : "s") + ".");
         if ("canceled" === this.state) throw new Error("Output has been canceled.");
-        return this._startPromise ? (CH.c._warn("Output has already been started."), this._startPromise) : this._startPromise = (async () => {
+        return this._startPromise ? (JB.e._warn("Output has already been started."), this._startPromise) : this._startPromise = (async () => {
           this.state = "started";
-          const HH = this._mutex.acquire();
+          const BB = this._mutex.acquire();
           try {
             await this._muxer.start();
-            const HH = this.tracks.map((HH => HH.source._start()));
-            await Promise.all(HH)
+            const BB = this.tracks.map((BB => BB.source._start()));
+            await Promise.all(BB)
           } finally {
-            (await HH)()
+            (await BB)()
           }
         })()
       }
@@ -6580,69 +6580,69 @@ export const modules = {
       async cancel() {
         return "canceled" === this.state ? this._cancelPromise ?? void 0 : "finalizing" !== this.state && "finalized" !== this.state ? this._cancelPromise = (async () => {
           this.state = "canceled";
-          const HH = await this._mutex.acquire();
+          const BB = await this._mutex.acquire();
           try {
-            const HH = this.tracks.map((HH => HH.source._flushOrWaitForOngoingClose(!0)));
-            await Promise.all(HH), await Promise.all([...this._unfinalizedTargets].map((HH => HH._close()))), this._unfinalizedTargets.clear()
+            const BB = this.tracks.map((BB => BB.source._flushOrWaitForOngoingClose(!0)));
+            await Promise.all(BB), await Promise.all([...this._unfinalizedTargets].map((BB => BB._close()))), this._unfinalizedTargets.clear()
           } finally {
-            HH()
+            BB()
           }
-        })() : void("finalized" === this.state && CH.c._warn("Output has already been finalized."))
+        })() : void("finalized" === this.state && JB.e._warn("Output has already been finalized."))
       }
       async finalize() {
         if ("pending" === this.state) throw new Error("Cannot finalize before starting.");
         if ("canceled" === this.state) throw new Error("Cannot finalize after canceling.");
-        return this._finalizePromise ? (CH.c._warn("Output has already been finalized."), this._finalizePromise) : this._finalizePromise = (async () => {
+        return this._finalizePromise ? (JB.e._warn("Output has already been finalized."), this._finalizePromise) : this._finalizePromise = (async () => {
           this.state = "finalizing";
-          const HH = await this._mutex.acquire();
+          const BB = await this._mutex.acquire();
           try {
-            const HH = this.tracks.map((HH => HH.source._flushOrWaitForOngoingClose(!1)));
-            if (await Promise.all(HH), await this._muxer.finalize(), this._rootWriterPromise) {
-              const HH = await this._rootWriterPromise;
-              HH.finalized || (await HH.flush(), await HH.finalize())
+            const BB = this.tracks.map((BB => BB.source._flushOrWaitForOngoingClose(!1)));
+            if (await Promise.all(BB), await this._muxer.finalize(), this._rootWriterPromise) {
+              const BB = await this._rootWriterPromise;
+              BB.finalized || (await BB.flush(), await BB.finalize())
             }
             this._onFinalize && await this._onFinalize(), this.state = "finalized"
-          } catch (BH) {
-            throw this.state = "canceled", BH
+          } catch (OB) {
+            throw this.state = "canceled", OB
           } finally {
-            await Promise.all([...this._unfinalizedTargets].map((HH => HH._close().catch((() => {}))))), this._unfinalizedTargets.clear(), HH()
+            await Promise.all([...this._unfinalizedTargets].map((BB => BB._close().catch((() => {}))))), this._unfinalizedTargets.clear(), BB()
           }
         })()
       }
     }
   },
-  40900: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH,
-      c: () => rH
+  40650: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB,
+      e: () => DB
     });
-    var AH = LH(40820);
-    const rH = new Uint8Array(0);
-    class SH {
-      constructor(HH, BH, LH, AH) {
-        let SH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          hH = arguments.length > 5 ? arguments[5] : void 0,
-          tH = arguments.length > 6 ? arguments[6] : void 0;
-        if (this.data = HH, this.type = BH, this.timestamp = LH, this.duration = AH, this.sequenceNumber = SH, HH === rH && void 0 === hH) throw new Error("Internal error: byteLength must be explicitly provided when constructing metadata-only packets.");
-        if (void 0 === hH && (hH = HH.byteLength), !(HH instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if ("key" !== BH && "delta" !== BH) throw new TypeError('type must be either "key" or "delta".');
-        if (!Number.isFinite(LH)) throw new TypeError("timestamp must be a number.");
-        if (!Number.isFinite(AH) || AH < 0) throw new TypeError("duration must be a non-negative number.");
-        if (!Number.isFinite(SH)) throw new TypeError("sequenceNumber must be a number.");
-        if (!Number.isInteger(hH) || hH < 0) throw new TypeError("byteLength must be a non-negative integer.");
-        if (void 0 !== tH && ("object" !== typeof tH || !tH)) throw new TypeError("sideData, when provided, must be an object.");
-        if (void 0 !== tH?.alpha && !(tH.alpha instanceof Uint8Array)) throw new TypeError("sideData.alpha, when provided, must be a Uint8Array.");
-        if (void 0 !== tH?.alphaByteLength && (!Number.isInteger(tH.alphaByteLength) || tH.alphaByteLength < 0)) throw new TypeError("sideData.alphaByteLength, when provided, must be a non-negative integer.");
-        this.byteLength = hH, this.sideData = tH ?? {}, this.sideData.alpha && void 0 === this.sideData.alphaByteLength && (this.sideData.alphaByteLength = this.sideData.alpha.byteLength)
+    var YB = GB(40574);
+    const DB = new Uint8Array(0);
+    class QB {
+      constructor(BB, OB, GB, YB) {
+        let QB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          oB = arguments.length > 5 ? arguments[5] : void 0,
+          jB = arguments.length > 6 ? arguments[6] : void 0;
+        if (this.data = BB, this.type = OB, this.timestamp = GB, this.duration = YB, this.sequenceNumber = QB, BB === DB && void 0 === oB) throw new Error("Internal error: byteLength must be explicitly provided when constructing metadata-only packets.");
+        if (void 0 === oB && (oB = BB.byteLength), !(BB instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if ("key" !== OB && "delta" !== OB) throw new TypeError('type must be either "key" or "delta".');
+        if (!Number.isFinite(GB)) throw new TypeError("timestamp must be a number.");
+        if (!Number.isFinite(YB) || YB < 0) throw new TypeError("duration must be a non-negative number.");
+        if (!Number.isFinite(QB)) throw new TypeError("sequenceNumber must be a number.");
+        if (!Number.isInteger(oB) || oB < 0) throw new TypeError("byteLength must be a non-negative integer.");
+        if (void 0 !== jB && ("object" !== typeof jB || !jB)) throw new TypeError("sideData, when provided, must be an object.");
+        if (void 0 !== jB?.alpha && !(jB.alpha instanceof Uint8Array)) throw new TypeError("sideData.alpha, when provided, must be a Uint8Array.");
+        if (void 0 !== jB?.alphaByteLength && (!Number.isInteger(jB.alphaByteLength) || jB.alphaByteLength < 0)) throw new TypeError("sideData.alphaByteLength, when provided, must be a non-negative integer.");
+        this.byteLength = oB, this.sideData = jB ?? {}, this.sideData.alpha && void 0 === this.sideData.alphaByteLength && (this.sideData.alphaByteLength = this.sideData.alpha.byteLength)
       }
       get isMetadataOnly() {
-        return this.data === rH
+        return this.data === DB
       }
       get microsecondTimestamp() {
-        return Math.trunc(AH.u * this.timestamp)
+        return Math.trunc(YB.w * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(AH.u * this.duration)
+        return Math.trunc(YB.w * this.duration)
       }
       toEncodedVideoChunk() {
         if (this.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");
@@ -6655,13 +6655,13 @@ export const modules = {
         })
       }
       alphaToEncodedVideoChunk() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.type;
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.type;
         if (!this.sideData.alpha) throw new TypeError("This packet does not contain alpha side data.");
         if (this.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");
         if ("undefined" === typeof EncodedVideoChunk) throw new Error("EncodedVideoChunk is not available in this environment.");
         return new EncodedVideoChunk({
           data: this.sideData.alpha,
-          type: HH,
+          type: BB,
           timestamp: this.microsecondTimestamp,
           duration: this.microsecondDuration
         })
@@ -6676,104 +6676,104 @@ export const modules = {
           duration: this.microsecondDuration
         })
       }
-      static fromEncodedChunk(HH, BH) {
-        if (!(HH instanceof EncodedVideoChunk || HH instanceof EncodedAudioChunk)) throw new TypeError("chunk must be an EncodedVideoChunk or EncodedAudioChunk.");
-        const LH = new Uint8Array(HH.byteLength);
-        return HH.copyTo(LH), new SH(LH, HH.type, HH.timestamp / 1e6, (HH.duration ?? 0) / 1e6, void 0, void 0, BH)
+      static fromEncodedChunk(BB, OB) {
+        if (!(BB instanceof EncodedVideoChunk || BB instanceof EncodedAudioChunk)) throw new TypeError("chunk must be an EncodedVideoChunk or EncodedAudioChunk.");
+        const GB = new Uint8Array(BB.byteLength);
+        return BB.copyTo(GB), new QB(GB, BB.type, BB.timestamp / 1e6, (BB.duration ?? 0) / 1e6, void 0, void 0, OB)
       }
-      clone(HH) {
-        if (void 0 !== HH && ("object" !== typeof HH || null === HH)) throw new TypeError("options, when provided, must be an object.");
-        if (void 0 !== HH?.data && !(HH.data instanceof Uint8Array)) throw new TypeError("options.data, when provided, must be a Uint8Array.");
-        if (void 0 !== HH?.type && "key" !== HH.type && "delta" !== HH.type) throw new TypeError('options.type, when provided, must be either "key" or "delta".');
-        if (void 0 !== HH?.timestamp && !Number.isFinite(HH.timestamp)) throw new TypeError("options.timestamp, when provided, must be a number.");
-        if (void 0 !== HH?.duration && !Number.isFinite(HH.duration)) throw new TypeError("options.duration, when provided, must be a number.");
-        if (void 0 !== HH?.sequenceNumber && !Number.isFinite(HH.sequenceNumber)) throw new TypeError("options.sequenceNumber, when provided, must be a number.");
-        if (void 0 !== HH?.sideData && ("object" !== typeof HH.sideData || null === HH.sideData)) throw new TypeError("options.sideData, when provided, must be an object.");
-        return new SH(HH?.data ?? this.data, HH?.type ?? this.type, HH?.timestamp ?? this.timestamp, HH?.duration ?? this.duration, HH?.sequenceNumber ?? this.sequenceNumber, this.byteLength, HH?.sideData ?? this.sideData)
+      clone(BB) {
+        if (void 0 !== BB && ("object" !== typeof BB || null === BB)) throw new TypeError("options, when provided, must be an object.");
+        if (void 0 !== BB?.data && !(BB.data instanceof Uint8Array)) throw new TypeError("options.data, when provided, must be a Uint8Array.");
+        if (void 0 !== BB?.type && "key" !== BB.type && "delta" !== BB.type) throw new TypeError('options.type, when provided, must be either "key" or "delta".');
+        if (void 0 !== BB?.timestamp && !Number.isFinite(BB.timestamp)) throw new TypeError("options.timestamp, when provided, must be a number.");
+        if (void 0 !== BB?.duration && !Number.isFinite(BB.duration)) throw new TypeError("options.duration, when provided, must be a number.");
+        if (void 0 !== BB?.sequenceNumber && !Number.isFinite(BB.sequenceNumber)) throw new TypeError("options.sequenceNumber, when provided, must be a number.");
+        if (void 0 !== BB?.sideData && ("object" !== typeof BB.sideData || null === BB.sideData)) throw new TypeError("options.sideData, when provided, must be an object.");
+        return new QB(BB?.data ?? this.data, BB?.type ?? this.type, BB?.timestamp ?? this.timestamp, BB?.duration ?? this.duration, BB?.sequenceNumber ?? this.sequenceNumber, this.byteLength, BB?.sideData ?? this.sideData)
       }
     }
   },
-  40907: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => lH,
-      e: () => YH,
-      f: () => jH,
-      g: () => NH,
-      i: () => TH
+  40660: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => IB,
+      e: () => lB,
+      h: () => EB,
+      i: () => XB,
+      m: () => VB
     });
-    var AH = LH(40820),
-      rH = LH(40866),
-      SH = function(HH, BH, LH) {
-        if (null !== BH && void 0 !== BH) {
-          if ("object" !== typeof BH && "function" !== typeof BH) throw new TypeError("Object expected.");
-          var AH, rH;
-          if (LH) {
+    var YB = GB(40574),
+      DB = GB(40610),
+      QB = function(BB, OB, GB) {
+        if (null !== OB && void 0 !== OB) {
+          if ("object" !== typeof OB && "function" !== typeof OB) throw new TypeError("Object expected.");
+          var YB, DB;
+          if (GB) {
             if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-            AH = BH[Symbol.asyncDispose]
+            YB = OB[Symbol.asyncDispose]
           }
-          if (void 0 === AH) {
+          if (void 0 === YB) {
             if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-            AH = BH[Symbol.dispose], LH && (rH = AH)
+            YB = OB[Symbol.dispose], GB && (DB = YB)
           }
-          if ("function" !== typeof AH) throw new TypeError("Object not disposable.");
-          rH && (AH = function() {
+          if ("function" !== typeof YB) throw new TypeError("Object not disposable.");
+          DB && (YB = function() {
             try {
-              rH.call(this)
-            } catch (HH) {
-              return Promise.reject(HH)
+              DB.call(this)
+            } catch (BB) {
+              return Promise.reject(BB)
             }
-          }), HH.stack.push({
-            value: BH,
-            dispose: AH,
-            async: LH
+          }), BB.stack.push({
+            value: OB,
+            dispose: YB,
+            async: GB
           })
-        } else LH && HH.stack.push({
+        } else GB && BB.stack.push({
           async: !0
         });
-        return BH
+        return OB
       },
-      hH = function(HH) {
-        return function(BH) {
-          function LH(LH) {
-            BH.error = BH.hasError ? new HH(LH, BH.error, "An error was suppressed during disposal.") : LH, BH.hasError = !0
+      oB = function(BB) {
+        return function(OB) {
+          function GB(GB) {
+            OB.error = OB.hasError ? new BB(GB, OB.error, "An error was suppressed during disposal.") : GB, OB.hasError = !0
           }
-          var AH, rH = 0;
-          return function HH() {
-            for (; AH = BH.stack.pop();) try {
-              if (!AH.async && 1 === rH) return rH = 0, BH.stack.push(AH), Promise.resolve().then(HH);
-              if (AH.dispose) {
-                var SH = AH.dispose.call(AH.value);
-                if (AH.async) return rH |= 2, Promise.resolve(SH).then(HH, (function(BH) {
-                  return LH(BH), HH()
+          var YB, DB = 0;
+          return function BB() {
+            for (; YB = OB.stack.pop();) try {
+              if (!YB.async && 1 === DB) return DB = 0, OB.stack.push(YB), Promise.resolve().then(BB);
+              if (YB.dispose) {
+                var QB = YB.dispose.call(YB.value);
+                if (YB.async) return DB |= 2, Promise.resolve(QB).then(BB, (function(OB) {
+                  return GB(OB), BB()
                 }))
-              } else rH |= 1
-            } catch (hH) {
-              LH(hH)
+              } else DB |= 1
+            } catch (oB) {
+              GB(oB)
             }
-            if (1 === rH) return BH.hasError ? Promise.reject(BH.error) : Promise.resolve();
-            if (BH.hasError) throw BH.error
+            if (1 === DB) return OB.hasError ? Promise.reject(OB.error) : Promise.resolve();
+            if (OB.hasError) throw OB.error
           }()
         }
-      }("function" === typeof SuppressedError ? SuppressedError : function(HH, BH, LH) {
-        var AH = new Error(LH);
-        return AH.name = "SuppressedError", AH.error = HH, AH.suppressed = BH, AH
+      }("function" === typeof SuppressedError ? SuppressedError : function(BB, OB, GB) {
+        var YB = new Error(GB);
+        return YB.name = "SuppressedError", YB.error = BB, YB.suppressed = OB, YB
       });
-    (0, AH.hc)();
-    let tH = -1 / 0,
-      zH = -1 / 0,
-      CH = null;
-    "undefined" !== typeof FinalizationRegistry && (CH = new FinalizationRegistry((HH => {
-      const BH = performance.now();
-      "video" === HH.type ? (BH - tH >= 1e3 && (rH.c._error("A VideoSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your VideoSamples as soon as you're done using them."), tH = BH), "undefined" !== typeof VideoFrame && HH.data instanceof VideoFrame && HH.data.close()) : (BH - zH >= 1e3 && (rH.c._error("An AudioSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your AudioSamples as soon as you're done using them."), zH = BH), "undefined" !== typeof AudioData && HH.data instanceof AudioData && HH.data.close())
+    (0, YB.Gc)();
+    let jB = -1 / 0,
+      yB = -1 / 0,
+      JB = null;
+    "undefined" !== typeof FinalizationRegistry && (JB = new FinalizationRegistry((BB => {
+      const OB = performance.now();
+      "video" === BB.type ? (OB - jB >= 1e3 && (DB.e._error("A VideoSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your VideoSamples as soon as you're done using them."), jB = OB), "undefined" !== typeof VideoFrame && BB.data instanceof VideoFrame && BB.data.close()) : (OB - yB >= 1e3 && (DB.e._error("An AudioSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your AudioSamples as soon as you're done using them."), yB = OB), "undefined" !== typeof AudioData && BB.data instanceof AudioData && BB.data.close())
     })));
-    class EH {
+    class MB {
       constructor() {
         this._referenceCount = 0, this._lastAllocationBuffer = null
       }
     }
-    const XH = ["I420", "I420P10", "I420P12", "I420A", "I420AP10", "I420AP12", "I422", "I422P10", "I422P12", "I422A", "I422AP10", "I422AP12", "I444", "I444P10", "I444P12", "I444A", "I444AP10", "I444AP12", "NV12", "RGBA", "RGBX", "BGRA", "BGRX"],
-      GH = new Set(XH);
-    class YH {
+    const PB = ["I420", "I420P10", "I420P12", "I420A", "I420AP10", "I420AP12", "I422", "I422P10", "I422P12", "I422A", "I422AP10", "I422AP12", "I444", "I444P10", "I444P12", "I444A", "I444AP10", "I444AP12", "NV12", "RGBA", "RGBX", "BGRA", "BGRX"],
+      zB = new Set(PB);
+    class lB {
       get codedWidth() {
         return this.visibleRect.width
       }
@@ -6787,39 +6787,39 @@ export const modules = {
         return this.rotation % 180 === 0 ? this.squarePixelHeight : this.squarePixelWidth
       }
       get microsecondTimestamp() {
-        return Math.trunc(AH.u * this.timestamp)
+        return Math.trunc(YB.w * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(AH.u * this.duration)
+        return Math.trunc(YB.w * this.duration)
       }
       get hasAlpha() {
         return this.format && this.format.includes("A")
       }
-      constructor(HH, BH) {
-        if (this._closed = !1, HH instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && HH instanceof SharedArrayBuffer || ArrayBuffer.isView(HH)) {
-          if (!BH || "object" !== typeof BH) throw new TypeError("init must be an object.");
-          if (void 0 === BH.format || !GH.has(BH.format)) throw new TypeError("init.format must be one of: " + XH.join(", "));
-          if (!Number.isInteger(BH.codedWidth) || BH.codedWidth <= 0) throw new TypeError("init.codedWidth must be a positive integer.");
-          if (!Number.isInteger(BH.codedHeight) || BH.codedHeight <= 0) throw new TypeError("init.codedHeight must be a positive integer.");
-          if (void 0 !== BH.rotation && ![0, 90, 180, 270].includes(BH.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== BH.flip && "boolean" !== typeof BH.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(BH.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== BH.duration && (!Number.isFinite(BH.duration) || BH.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (void 0 !== BH.layout) {
-            if (!Array.isArray(BH.layout)) throw new TypeError("init.layout, when provided, must be an array.");
-            for (const HH of BH.layout) {
-              if (!HH || "object" !== typeof HH || Array.isArray(HH)) throw new TypeError("Each entry in init.layout must be an object.");
-              if (!Number.isInteger(HH.offset) || HH.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
-              if (!Number.isInteger(HH.stride) || HH.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
+      constructor(BB, OB) {
+        if (this._closed = !1, BB instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && BB instanceof SharedArrayBuffer || ArrayBuffer.isView(BB)) {
+          if (!OB || "object" !== typeof OB) throw new TypeError("init must be an object.");
+          if (void 0 === OB.format || !zB.has(OB.format)) throw new TypeError("init.format must be one of: " + PB.join(", "));
+          if (!Number.isInteger(OB.codedWidth) || OB.codedWidth <= 0) throw new TypeError("init.codedWidth must be a positive integer.");
+          if (!Number.isInteger(OB.codedHeight) || OB.codedHeight <= 0) throw new TypeError("init.codedHeight must be a positive integer.");
+          if (void 0 !== OB.rotation && ![0, 90, 180, 270].includes(OB.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== OB.flip && "boolean" !== typeof OB.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(OB.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== OB.duration && (!Number.isFinite(OB.duration) || OB.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (void 0 !== OB.layout) {
+            if (!Array.isArray(OB.layout)) throw new TypeError("init.layout, when provided, must be an array.");
+            for (const BB of OB.layout) {
+              if (!BB || "object" !== typeof BB || Array.isArray(BB)) throw new TypeError("Each entry in init.layout must be an object.");
+              if (!Number.isInteger(BB.offset) || BB.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
+              if (!Number.isInteger(BB.stride) || BB.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
             }
           }
-          if (void 0 !== BH.visibleRect && (0, AH.nd)(BH.visibleRect, "init.visibleRect"), void 0 !== BH.displayWidth && (!Number.isInteger(BH.displayWidth) || BH.displayWidth <= 0)) throw new TypeError("init.displayWidth, when provided, must be a positive integer.");
-          if (void 0 !== BH.displayHeight && (!Number.isInteger(BH.displayHeight) || BH.displayHeight <= 0)) throw new TypeError("init.displayHeight, when provided, must be a positive integer.");
-          if (void 0 !== BH.displayWidth !== (void 0 !== BH.displayHeight)) throw new TypeError("init.displayWidth and init.displayHeight must be either both provided or both omitted.");
-          this.format = BH.format, this.rotation = BH.rotation ?? 0, this.flip = BH.flip ?? !1, this.timestamp = BH.timestamp, this.duration = BH.duration ?? 0;
-          const LH = BH.layout ?? VH(BH.format, BH.codedWidth, BH.codedHeight);
-          let rH = BH.colorSpace ?? null;
-          null === rH && (rH = "RGBA" === this.format || "RGBX" === this.format || "BGRA" === this.format || "BGRX" === this.format ? {
+          if (void 0 !== OB.visibleRect && (0, YB.Pd)(OB.visibleRect, "init.visibleRect"), void 0 !== OB.displayWidth && (!Number.isInteger(OB.displayWidth) || OB.displayWidth <= 0)) throw new TypeError("init.displayWidth, when provided, must be a positive integer.");
+          if (void 0 !== OB.displayHeight && (!Number.isInteger(OB.displayHeight) || OB.displayHeight <= 0)) throw new TypeError("init.displayHeight, when provided, must be a positive integer.");
+          if (void 0 !== OB.displayWidth !== (void 0 !== OB.displayHeight)) throw new TypeError("init.displayWidth and init.displayHeight must be either both provided or both omitted.");
+          this.format = OB.format, this.rotation = OB.rotation ?? 0, this.flip = OB.flip ?? !1, this.timestamp = OB.timestamp, this.duration = OB.duration ?? 0;
+          const GB = OB.layout ?? nB(OB.format, OB.codedWidth, OB.codedHeight);
+          let DB = OB.colorSpace ?? null;
+          null === DB && (DB = "RGBA" === this.format || "RGBX" === this.format || "BGRA" === this.format || "BGRX" === this.format ? {
             primaries: "bt709",
             transfer: "iec61966-2-1",
             matrix: "rgb",
@@ -6830,106 +6830,106 @@ export const modules = {
             matrix: "bt709",
             fullRange: !1
           }), this.visibleRect = {
-            left: BH.visibleRect?.left ?? 0,
-            top: BH.visibleRect?.top ?? 0,
-            width: BH.visibleRect?.width ?? BH.codedWidth,
-            height: BH.visibleRect?.height ?? BH.codedHeight
-          }, void 0 !== BH.displayWidth ? (this.squarePixelWidth = this.rotation % 180 === 0 ? BH.displayWidth : BH.displayHeight, this.squarePixelHeight = this.rotation % 180 === 0 ? BH.displayHeight : BH.displayWidth) : (this.squarePixelWidth = this.visibleRect.width, this.squarePixelHeight = this.visibleRect.height), this._data = BH._doNotCopy ? (0, AH.id)(HH) : (0, AH.id)(HH).slice(), this._layout = LH, this.colorSpace = new xH(rH)
-        } else if ("undefined" !== typeof VideoFrame && HH instanceof VideoFrame) {
-          if (void 0 !== BH?.rotation && ![0, 90, 180, 270].includes(BH.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== BH?.flip && "boolean" !== typeof BH.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (void 0 !== BH?.timestamp && !Number.isFinite(BH?.timestamp)) throw new TypeError("init.timestamp, when provided, must be a number.");
-          if (void 0 !== BH?.duration && (!Number.isFinite(BH.duration) || BH.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          void 0 !== BH?.visibleRect && (0, AH.nd)(BH.visibleRect, "init.visibleRect"), this._data = HH, this._layout = null, this.format = HH.format, this.visibleRect = {
-            left: HH.visibleRect?.x ?? 0,
-            top: HH.visibleRect?.y ?? 0,
-            width: HH.visibleRect?.width ?? HH.codedWidth,
-            height: HH.visibleRect?.height ?? HH.codedHeight
-          }, this.rotation = BH?.rotation ?? 0, this.flip = BH?.flip ?? !1, this.squarePixelWidth = HH.displayWidth, this.squarePixelHeight = HH.displayHeight, this.timestamp = BH?.timestamp ?? HH.timestamp / 1e6, this.duration = BH?.duration ?? (HH.duration ?? 0) / 1e6, this.colorSpace = new xH(HH.colorSpace)
-        } else if ("undefined" !== typeof HTMLImageElement && HH instanceof HTMLImageElement || "undefined" !== typeof SVGImageElement && HH instanceof SVGImageElement || "undefined" !== typeof ImageBitmap && HH instanceof ImageBitmap || "undefined" !== typeof HTMLVideoElement && HH instanceof HTMLVideoElement || "undefined" !== typeof HTMLCanvasElement && HH instanceof HTMLCanvasElement || "undefined" !== typeof OffscreenCanvas && HH instanceof OffscreenCanvas) {
-          if (!BH || "object" !== typeof BH) throw new TypeError("init must be an object.");
-          if (void 0 !== BH.rotation && ![0, 90, 180, 270].includes(BH.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== BH.flip && "boolean" !== typeof BH.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(BH.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== BH.duration && (!Number.isFinite(BH.duration) || BH.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (void 0 !== BH.visibleRect && (0, AH.nd)(BH.visibleRect, "init.visibleRect"), "undefined" !== typeof VideoFrame) return new YH(new VideoFrame(HH, {
-            timestamp: Math.trunc(BH.timestamp * AH.u),
-            duration: Math.trunc((BH.duration ?? 0) * AH.u) || void 0,
-            visibleRect: BH.visibleRect && {
-              x: BH.visibleRect.left,
-              y: BH.visibleRect.top,
-              width: BH.visibleRect.width,
-              height: BH.visibleRect.height
+            left: OB.visibleRect?.left ?? 0,
+            top: OB.visibleRect?.top ?? 0,
+            width: OB.visibleRect?.width ?? OB.codedWidth,
+            height: OB.visibleRect?.height ?? OB.codedHeight
+          }, void 0 !== OB.displayWidth ? (this.squarePixelWidth = this.rotation % 180 === 0 ? OB.displayWidth : OB.displayHeight, this.squarePixelHeight = this.rotation % 180 === 0 ? OB.displayHeight : OB.displayWidth) : (this.squarePixelWidth = this.visibleRect.width, this.squarePixelHeight = this.visibleRect.height), this._data = OB._doNotCopy ? (0, YB.Id)(BB) : (0, YB.Id)(BB).slice(), this._layout = GB, this.colorSpace = new RB(DB)
+        } else if ("undefined" !== typeof VideoFrame && BB instanceof VideoFrame) {
+          if (void 0 !== OB?.rotation && ![0, 90, 180, 270].includes(OB.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== OB?.flip && "boolean" !== typeof OB.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (void 0 !== OB?.timestamp && !Number.isFinite(OB?.timestamp)) throw new TypeError("init.timestamp, when provided, must be a number.");
+          if (void 0 !== OB?.duration && (!Number.isFinite(OB.duration) || OB.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          void 0 !== OB?.visibleRect && (0, YB.Pd)(OB.visibleRect, "init.visibleRect"), this._data = BB, this._layout = null, this.format = BB.format, this.visibleRect = {
+            left: BB.visibleRect?.x ?? 0,
+            top: BB.visibleRect?.y ?? 0,
+            width: BB.visibleRect?.width ?? BB.codedWidth,
+            height: BB.visibleRect?.height ?? BB.codedHeight
+          }, this.rotation = OB?.rotation ?? 0, this.flip = OB?.flip ?? !1, this.squarePixelWidth = BB.displayWidth, this.squarePixelHeight = BB.displayHeight, this.timestamp = OB?.timestamp ?? BB.timestamp / 1e6, this.duration = OB?.duration ?? (BB.duration ?? 0) / 1e6, this.colorSpace = new RB(BB.colorSpace)
+        } else if ("undefined" !== typeof HTMLImageElement && BB instanceof HTMLImageElement || "undefined" !== typeof SVGImageElement && BB instanceof SVGImageElement || "undefined" !== typeof ImageBitmap && BB instanceof ImageBitmap || "undefined" !== typeof HTMLVideoElement && BB instanceof HTMLVideoElement || "undefined" !== typeof HTMLCanvasElement && BB instanceof HTMLCanvasElement || "undefined" !== typeof OffscreenCanvas && BB instanceof OffscreenCanvas) {
+          if (!OB || "object" !== typeof OB) throw new TypeError("init must be an object.");
+          if (void 0 !== OB.rotation && ![0, 90, 180, 270].includes(OB.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== OB.flip && "boolean" !== typeof OB.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(OB.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== OB.duration && (!Number.isFinite(OB.duration) || OB.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (void 0 !== OB.visibleRect && (0, YB.Pd)(OB.visibleRect, "init.visibleRect"), "undefined" !== typeof VideoFrame) return new lB(new VideoFrame(BB, {
+            timestamp: Math.trunc(OB.timestamp * YB.w),
+            duration: Math.trunc((OB.duration ?? 0) * YB.w) || void 0,
+            visibleRect: OB.visibleRect && {
+              x: OB.visibleRect.left,
+              y: OB.visibleRect.top,
+              width: OB.visibleRect.width,
+              height: OB.visibleRect.height
             }
-          }), BH);
-          let LH = 0,
-            rH = 0;
-          if ("naturalWidth" in HH ? (LH = HH.naturalWidth, rH = HH.naturalHeight) : "videoWidth" in HH ? (LH = HH.videoWidth, rH = HH.videoHeight) : "width" in HH && (LH = Number(HH.width), rH = Number(HH.height)), !LH || !rH) throw new TypeError("Could not determine dimensions.");
-          const SH = BH.visibleRect ?? {
+          }), OB);
+          let GB = 0,
+            DB = 0;
+          if ("naturalWidth" in BB ? (GB = BB.naturalWidth, DB = BB.naturalHeight) : "videoWidth" in BB ? (GB = BB.videoWidth, DB = BB.videoHeight) : "width" in BB && (GB = Number(BB.width), DB = Number(BB.height)), !GB || !DB) throw new TypeError("Could not determine dimensions.");
+          const QB = OB.visibleRect ?? {
               left: 0,
               top: 0,
-              width: LH,
-              height: rH
+              width: GB,
+              height: DB
             },
-            hH = new OffscreenCanvas(SH.width, SH.height),
-            tH = hH.getContext("2d", {
-              alpha: (0, AH.zb)(),
+            oB = new OffscreenCanvas(QB.width, QB.height),
+            jB = oB.getContext("2d", {
+              alpha: (0, YB.Rb)(),
               willReadFrequently: !0
             });
-          if (!tH) throw new Error("OffscreenCanvas must have support for the '2d' context in order to create a VideoSample from this data.");
-          tH.drawImage(HH, -SH.left, -SH.top), this._data = hH, this._layout = null, this.format = "RGBX", this.visibleRect = {
+          if (!jB) throw new Error("OffscreenCanvas must have support for the '2d' context in order to create a VideoSample from this data.");
+          jB.drawImage(BB, -QB.left, -QB.top), this._data = oB, this._layout = null, this.format = "RGBX", this.visibleRect = {
             left: 0,
             top: 0,
-            width: SH.width,
-            height: SH.height
-          }, this.squarePixelWidth = SH.width, this.squarePixelHeight = SH.height, this.rotation = BH.rotation ?? 0, this.flip = BH.flip ?? !1, this.timestamp = BH.timestamp, this.duration = BH.duration ?? 0, this.colorSpace = new xH({
+            width: QB.width,
+            height: QB.height
+          }, this.squarePixelWidth = QB.width, this.squarePixelHeight = QB.height, this.rotation = OB.rotation ?? 0, this.flip = OB.flip ?? !1, this.timestamp = OB.timestamp, this.duration = OB.duration ?? 0, this.colorSpace = new RB({
             matrix: "rgb",
             primaries: "bt709",
             transfer: "iec61966-2-1",
             fullRange: !0
           })
         } else {
-          if (!(HH instanceof EH)) throw new TypeError("Invalid data type: Must be a BufferSource, CanvasImageSource, or VideoSampleResource.");
-          if (!BH || "object" !== typeof BH) throw new TypeError("init must be an object.");
-          if (void 0 !== BH.rotation && ![0, 90, 180, 270].includes(BH.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== BH.flip && "boolean" !== typeof BH.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(BH.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== BH.duration && (!Number.isFinite(BH.duration) || BH.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (this._data = HH, HH._referenceCount++, this.format = HH.getFormat(), null !== this.format && !XH.includes(this.format)) throw new TypeError("getFormat() must return a VideoSamplePixelFormat or null.");
+          if (!(BB instanceof MB)) throw new TypeError("Invalid data type: Must be a BufferSource, CanvasImageSource, or VideoSampleResource.");
+          if (!OB || "object" !== typeof OB) throw new TypeError("init must be an object.");
+          if (void 0 !== OB.rotation && ![0, 90, 180, 270].includes(OB.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== OB.flip && "boolean" !== typeof OB.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(OB.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== OB.duration && (!Number.isFinite(OB.duration) || OB.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (this._data = BB, BB._referenceCount++, this.format = BB.getFormat(), null !== this.format && !PB.includes(this.format)) throw new TypeError("getFormat() must return a VideoSamplePixelFormat or null.");
           if (this.visibleRect = {
               left: 0,
               top: 0,
-              width: HH.getCodedWidth(),
-              height: HH.getCodedHeight()
+              width: BB.getCodedWidth(),
+              height: BB.getCodedHeight()
             }, !Number.isInteger(this.visibleRect.width) || this.visibleRect.width <= 0) throw new TypeError("getCodedWidth() must return a positive integer.");
           if (!Number.isInteger(this.visibleRect.height) || this.visibleRect.height <= 0) throw new TypeError("getCodedHeight() must return a positive integer.");
-          if (this.squarePixelWidth = HH.getSquarePixelWidth(), !Number.isInteger(this.squarePixelWidth) || this.squarePixelWidth <= 0) throw new TypeError("getSquarePixelWidth() must return a positive integer.");
-          if (this.squarePixelHeight = HH.getSquarePixelHeight(), !Number.isInteger(this.squarePixelHeight) || this.squarePixelHeight <= 0) throw new TypeError("getSquarePixelHeight() must return a positive integer.");
-          this.rotation = BH.rotation ?? 0, this.flip = BH.flip ?? !1, this.timestamp = BH.timestamp, this.duration = BH.duration ?? 0, this.colorSpace = HH.getColorSpace()
+          if (this.squarePixelWidth = BB.getSquarePixelWidth(), !Number.isInteger(this.squarePixelWidth) || this.squarePixelWidth <= 0) throw new TypeError("getSquarePixelWidth() must return a positive integer.");
+          if (this.squarePixelHeight = BB.getSquarePixelHeight(), !Number.isInteger(this.squarePixelHeight) || this.squarePixelHeight <= 0) throw new TypeError("getSquarePixelHeight() must return a positive integer.");
+          this.rotation = OB.rotation ?? 0, this.flip = OB.flip ?? !1, this.timestamp = OB.timestamp, this.duration = OB.duration ?? 0, this.colorSpace = BB.getColorSpace()
         }
-        this.encodeOptions = BH?.encodeOptions ?? {}, this.pixelAspectRatio = (0, AH.Uc)({
+        this.encodeOptions = OB?.encodeOptions ?? {}, this.pixelAspectRatio = (0, YB.vd)({
           num: this.squarePixelWidth * this.codedHeight,
           den: this.squarePixelHeight * this.codedWidth
-        }), CH?.register(this, {
+        }), JB?.register(this, {
           type: "video",
           data: this._data
         }, this)
       }
       clone() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        return (0, AH.J)(null !== this._data), this._data instanceof EH ? new YH(this._data, {
+        return (0, YB.Q)(null !== this._data), this._data instanceof MB ? new lB(this._data, {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: this.rotation,
           flip: this.flip,
           encodeOptions: this.encodeOptions
-        }) : vH(this._data) ? new YH(this._data.clone(), {
+        }) : WB(this._data) ? new lB(this._data.clone(), {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: this.rotation,
           flip: this.flip,
           encodeOptions: this.encodeOptions
-        }) : this._data instanceof Uint8Array ? ((0, AH.J)(this._layout), new YH(this._data, {
+        }) : this._data instanceof Uint8Array ? ((0, YB.Q)(this._layout), new lB(this._data, {
           format: this.format,
           layout: this._layout,
           codedWidth: this.codedWidth,
@@ -6944,7 +6944,7 @@ export const modules = {
           displayHeight: this.displayHeight,
           encodeOptions: this.encodeOptions,
           _doNotCopy: !0
-        })) : new YH(this._data, {
+        })) : new lB(this._data, {
           format: this.format,
           codedWidth: this.codedWidth,
           codedHeight: this.codedHeight,
@@ -6960,129 +6960,129 @@ export const modules = {
         })
       }
       close() {
-        this._closed || (CH?.unregister(this), this._data instanceof EH ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : vH(this._data) ? this._data.close() : this._data = null, this._closed = !0)
+        this._closed || (JB?.unregister(this), this._data instanceof MB ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : WB(this._data) ? this._data.close() : this._data = null, this._closed = !0)
       }
       allocationSize() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (UH(HH), this._closed) throw new Error("VideoSample is closed.");
-        if (null == (HH.format ?? this.format)) throw new Error("Cannot get allocation size when format is null.");
-        if (vH(this._data)) return this._data.allocationSize(HH);
-        return bH(this, HH).allocationSize
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (SB(BB), this._closed) throw new Error("VideoSample is closed.");
+        if (null == (BB.format ?? this.format)) throw new Error("Cannot get allocation size when format is null.");
+        if (WB(this._data)) return this._data.allocationSize(BB);
+        return fB(this, BB).allocationSize
       }
-      async copyTo(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(0, AH.ub)(HH)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
-        if (UH(BH), this._closed) throw new Error("VideoSample is closed.");
-        if (null == (BH.format ?? this.format)) throw new Error("Cannot copy video sample data when format is null.");
-        if ((0, AH.J)(null !== this._data), vH(this._data)) return this._data.copyTo(HH, BH);
-        if (BH.format && !["RGBA", "RGBX", "BGRA", "BGRX"].includes(this.format) && ["RGBA", "RGBX", "BGRA", "BGRX"].includes(BH.format)) {
-          if (!(this._data instanceof EH)) {
+      async copyTo(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(0, YB.Gb)(BB)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
+        if (SB(OB), this._closed) throw new Error("VideoSample is closed.");
+        if (null == (OB.format ?? this.format)) throw new Error("Cannot copy video sample data when format is null.");
+        if ((0, YB.Q)(null !== this._data), WB(this._data)) return this._data.copyTo(BB, OB);
+        if (OB.format && !["RGBA", "RGBX", "BGRA", "BGRX"].includes(this.format) && ["RGBA", "RGBX", "BGRA", "BGRX"].includes(OB.format)) {
+          if (!(this._data instanceof MB)) {
             if ("undefined" === typeof VideoFrame) throw new Error("For this sample, converting from a non-RGB to an RGB format requires VideoFrame to be defined.");
-            const LH = this.toVideoFrame(),
-              AH = await LH.copyTo(HH, BH);
-            return LH.close(), AH
+            const GB = this.toVideoFrame(),
+              YB = await GB.copyTo(BB, OB);
+            return GB.close(), YB
           } {
-            const LH = {
+            const GB = {
               stack: [],
               error: void 0,
               hasError: !1
             };
             try {
-              const AH = SH(LH, await this._data.toRgbSample({
+              const YB = QB(GB, await this._data.toRgbSample({
                 timestamp: this.timestamp,
                 duration: this.duration,
                 rotation: this.rotation,
                 flip: this.flip
-              }, BH.colorSpace ?? "srgb"), !1);
-              if (!(AH instanceof YH)) throw new TypeError("toRgbSample() must return a VideoSample.");
-              if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(AH.format)) throw new Error(`Sample returned by toRgbSample was expected to have an RGB format, got '${AH.format}' instead.`);
-              return await AH.copyTo(HH, BH)
-            } catch (GH) {
-              LH.error = GH, LH.hasError = !0
+              }, OB.colorSpace ?? "srgb"), !1);
+              if (!(YB instanceof lB)) throw new TypeError("toRgbSample() must return a VideoSample.");
+              if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(YB.format)) throw new Error(`Sample returned by toRgbSample was expected to have an RGB format, got '${YB.format}' instead.`);
+              return await YB.copyTo(BB, OB)
+            } catch (zB) {
+              GB.error = zB, GB.hasError = !0
             } finally {
-              hH(LH)
+              oB(GB)
             }
           }
         }
-        const LH = bH(this, BH);
-        (0, AH.J)(this.format);
-        const rH = (0, AH.id)(HH);
-        if (rH.byteLength < LH.allocationSize) throw new TypeError(`Destination buffer too small. Required: ${LH.allocationSize}, Available: ${rH.byteLength}`);
-        const tH = OH(this.format);
-        let zH;
-        if (this._data instanceof EH) {
-          let HH = this._data.getDataPlanes();
-          if ((0, AH.Ob)(HH) && (HH = await HH), !Array.isArray(HH) || HH.some((HH => !(HH.data instanceof Uint8Array) || !Number.isInteger(HH.stride) || HH.stride < 0))) throw new TypeError('getDataPlanes() must return an array of objects with a Uint8Array "data" property and a non-negative integer "stride" property.');
-          zH = HH
-        } else if (this._data instanceof Uint8Array)(0, AH.J)(this._layout), (0, AH.J)(this._layout.length === tH.length), zH = this._layout.map(((HH, BH) => {
-          const LH = Math.ceil(this.codedHeight / tH[BH].heightDivisor);
+        const GB = fB(this, OB);
+        (0, YB.Q)(this.format);
+        const DB = (0, YB.Id)(BB);
+        if (DB.byteLength < GB.allocationSize) throw new TypeError(`Destination buffer too small. Required: ${GB.allocationSize}, Available: ${DB.byteLength}`);
+        const jB = UB(this.format);
+        let yB;
+        if (this._data instanceof MB) {
+          let BB = this._data.getDataPlanes();
+          if ((0, YB.gc)(BB) && (BB = await BB), !Array.isArray(BB) || BB.some((BB => !(BB.data instanceof Uint8Array) || !Number.isInteger(BB.stride) || BB.stride < 0))) throw new TypeError('getDataPlanes() must return an array of objects with a Uint8Array "data" property and a non-negative integer "stride" property.');
+          yB = BB
+        } else if (this._data instanceof Uint8Array)(0, YB.Q)(this._layout), (0, YB.Q)(this._layout.length === jB.length), yB = this._layout.map(((BB, OB) => {
+          const GB = Math.ceil(this.codedHeight / jB[OB].heightDivisor);
           return {
-            data: this._data.subarray(HH.offset, HH.offset + HH.stride * LH),
-            stride: HH.stride
+            data: this._data.subarray(BB.offset, BB.offset + BB.stride * GB),
+            stride: BB.stride
           }
         }));
         else {
-          const HH = this._data.getContext("2d");
-          (0, AH.J)(HH);
-          const BH = HH.getImageData(0, 0, this.codedWidth, this.codedHeight);
-          zH = [{
-            data: (0, AH.id)(BH.data),
+          const BB = this._data.getContext("2d");
+          (0, YB.Q)(BB);
+          const OB = BB.getImageData(0, 0, this.codedWidth, this.codedHeight);
+          yB = [{
+            data: (0, YB.Id)(OB.data),
             stride: 4 * this.codedWidth
           }]
         }
-        const CH = [],
-          XH = tH.length;
-        for (let AH = 0; AH < XH; AH++) {
-          const HH = LH.computedLayouts[AH],
-            BH = zH[AH].stride,
-            SH = zH[AH].data;
-          let hH = HH.sourceTop * BH;
-          hH += HH.sourceLeftBytes;
-          let tH = HH.destinationOffset;
-          const EH = HH.sourceWidthBytes,
-            XH = {
-              offset: tH,
-              stride: HH.destinationStride
+        const JB = [],
+          PB = jB.length;
+        for (let YB = 0; YB < PB; YB++) {
+          const BB = GB.computedLayouts[YB],
+            OB = yB[YB].stride,
+            QB = yB[YB].data;
+          let oB = BB.sourceTop * OB;
+          oB += BB.sourceLeftBytes;
+          let jB = BB.destinationOffset;
+          const MB = BB.sourceWidthBytes,
+            PB = {
+              offset: jB,
+              stride: BB.destinationStride
             };
-          for (let LH = 0; LH < HH.sourceHeight; LH++) {
-            if (hH + EH > SH.byteLength) throw new Error("Source buffer OOB read.");
-            if (tH + EH > rH.byteLength) throw new Error("Destination buffer OOB write.");
-            const LH = SH.subarray(hH, hH + EH);
-            rH.set(LH, tH), hH += BH, tH += HH.destinationStride
+          for (let GB = 0; GB < BB.sourceHeight; GB++) {
+            if (oB + MB > QB.byteLength) throw new Error("Source buffer OOB read.");
+            if (jB + MB > DB.byteLength) throw new Error("Destination buffer OOB write.");
+            const GB = QB.subarray(oB, oB + MB);
+            DB.set(GB, jB), oB += OB, jB += BB.destinationStride
           }
-          CH.push(XH)
+          JB.push(PB)
         }
-        if (void 0 !== BH.format) {
-          const HH = this.format.startsWith("RGB") !== BH.format.startsWith("RGB"),
-            AH = this.format.includes("X") && BH.format.includes("A");
-          if (HH || AH)
-            for (let BH = 0; BH < LH.allocationSize; BH += 4) {
-              if (HH) {
-                const HH = rH[BH],
-                  LH = rH[BH + 2];
-                rH[BH] = LH, rH[BH + 2] = HH
+        if (void 0 !== OB.format) {
+          const BB = this.format.startsWith("RGB") !== OB.format.startsWith("RGB"),
+            YB = this.format.includes("X") && OB.format.includes("A");
+          if (BB || YB)
+            for (let OB = 0; OB < GB.allocationSize; OB += 4) {
+              if (BB) {
+                const BB = DB[OB],
+                  GB = DB[OB + 2];
+                DB[OB] = GB, DB[OB + 2] = BB
               }
-              AH && (rH[BH + 3] = 255)
+              YB && (DB[OB + 3] = 255)
             }
         }
-        return CH
+        return JB
       }
       toVideoFrame() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        if ((0, AH.J)(null !== this._data), this._data instanceof EH) {
+        if ((0, YB.Q)(null !== this._data), this._data instanceof MB) {
           if (null === this.format) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if format is null.");
-          const HH = this._data.getDataPlanes();
-          if ((0, AH.Ob)(HH)) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if getDataPlanes() returns a promise.");
-          const BH = HH.reduce(((HH, BH) => HH + BH.data.byteLength), 0),
-            LH = new Uint8Array(BH);
-          let rH = 0;
-          const SH = [];
-          for (const AH of HH) LH.set(AH.data, rH), SH.push(rH), rH += AH.data.byteLength;
-          return new VideoFrame(LH, {
+          const BB = this._data.getDataPlanes();
+          if ((0, YB.gc)(BB)) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if getDataPlanes() returns a promise.");
+          const OB = BB.reduce(((BB, OB) => BB + OB.data.byteLength), 0),
+            GB = new Uint8Array(OB);
+          let DB = 0;
+          const QB = [];
+          for (const YB of BB) GB.set(YB.data, DB), QB.push(DB), DB += YB.data.byteLength;
+          return new VideoFrame(GB, {
             format: this.format,
-            layout: HH.map(((HH, BH) => ({
-              offset: SH[BH],
-              stride: HH.stride
+            layout: BB.map(((BB, OB) => ({
+              offset: QB[OB],
+              stride: BB.stride
             }))),
             codedWidth: this.codedWidth,
             codedHeight: this.codedHeight,
@@ -7094,10 +7094,10 @@ export const modules = {
             displayHeight: this.squarePixelHeight
           })
         }
-        return vH(this._data) ? new VideoFrame(this._data, {
+        return WB(this._data) ? new VideoFrame(this._data, {
           timestamp: this.microsecondTimestamp,
           duration: this.microsecondDuration || void 0
-        }) : this._data instanceof Uint8Array ? ((0, AH.J)(this._layout), new VideoFrame(this._data, {
+        }) : this._data instanceof Uint8Array ? ((0, YB.Q)(this._layout), new VideoFrame(this._data, {
           format: this.format,
           codedWidth: this.codedWidth,
           codedHeight: this.codedHeight,
@@ -7113,244 +7113,244 @@ export const modules = {
           duration: this.microsecondDuration || void 0
         })
       }
-      draw(HH, BH, LH, AH, rH, SH, hH, tH, zH) {
-        let CH = 0,
-          EH = 0,
-          XH = this.displayWidth,
-          GH = this.displayHeight,
-          YH = 0,
-          uH = 0,
-          QH = this.displayWidth,
-          WH = this.displayHeight;
-        if (void 0 !== SH ? (CH = BH, EH = LH, XH = AH, GH = rH, YH = SH, uH = hH, void 0 !== tH ? (QH = tH, WH = zH) : (QH = XH, WH = GH)) : (YH = BH, uH = LH, void 0 !== AH && (QH = AH, WH = rH)), !("undefined" !== typeof CanvasRenderingContext2D && HH instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && HH instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
-        if (!Number.isFinite(CH)) throw new TypeError("sx must be a number.");
-        if (!Number.isFinite(EH)) throw new TypeError("sy must be a number.");
-        if (!Number.isFinite(XH) || XH < 0) throw new TypeError("sWidth must be a non-negative number.");
-        if (!Number.isFinite(GH) || GH < 0) throw new TypeError("sHeight must be a non-negative number.");
-        if (!Number.isFinite(YH)) throw new TypeError("dx must be a number.");
-        if (!Number.isFinite(uH)) throw new TypeError("dy must be a number.");
-        if (!Number.isFinite(QH) || QH < 0) throw new TypeError("dWidth must be a non-negative number.");
-        if (!Number.isFinite(WH) || WH < 0) throw new TypeError("dHeight must be a non-negative number.");
+      draw(BB, OB, GB, YB, DB, QB, oB, jB, yB) {
+        let JB = 0,
+          MB = 0,
+          PB = this.displayWidth,
+          zB = this.displayHeight,
+          lB = 0,
+          pB = 0,
+          qB = this.displayWidth,
+          ZB = this.displayHeight;
+        if (void 0 !== QB ? (JB = OB, MB = GB, PB = YB, zB = DB, lB = QB, pB = oB, void 0 !== jB ? (qB = jB, ZB = yB) : (qB = PB, ZB = zB)) : (lB = OB, pB = GB, void 0 !== YB && (qB = YB, ZB = DB)), !("undefined" !== typeof CanvasRenderingContext2D && BB instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && BB instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
+        if (!Number.isFinite(JB)) throw new TypeError("sx must be a number.");
+        if (!Number.isFinite(MB)) throw new TypeError("sy must be a number.");
+        if (!Number.isFinite(PB) || PB < 0) throw new TypeError("sWidth must be a non-negative number.");
+        if (!Number.isFinite(zB) || zB < 0) throw new TypeError("sHeight must be a non-negative number.");
+        if (!Number.isFinite(lB)) throw new TypeError("dx must be a number.");
+        if (!Number.isFinite(pB)) throw new TypeError("dy must be a number.");
+        if (!Number.isFinite(qB) || qB < 0) throw new TypeError("dWidth must be a non-negative number.");
+        if (!Number.isFinite(ZB) || ZB < 0) throw new TypeError("dHeight must be a non-negative number.");
         if (this._closed) throw new Error("VideoSample is closed.");
         ({
-          sx: CH,
-          sy: EH,
-          sWidth: XH,
-          sHeight: GH
-        } = this._unmapSourceRegion(CH, EH, XH, GH, this.rotation, this.flip));
-        const MH = this.toCanvasImageSource();
-        HH.save();
-        const xH = YH + QH / 2,
-          vH = uH + WH / 2;
-        HH.translate(xH, vH), this.flip && HH.scale(-1, 1), HH.rotate(this.rotation * Math.PI / 180);
-        const PH = this.rotation % 180 === 0 ? 1 : QH / WH;
-        HH.scale(1 / PH, PH), HH.drawImage(MH, CH, EH, XH, GH, -QH / 2, -WH / 2, QH, WH), HH.restore()
+          sx: JB,
+          sy: MB,
+          sWidth: PB,
+          sHeight: zB
+        } = this._unmapSourceRegion(JB, MB, PB, zB, this.rotation, this.flip));
+        const NB = this.toCanvasImageSource();
+        BB.save();
+        const RB = lB + qB / 2,
+          WB = pB + ZB / 2;
+        BB.translate(RB, WB), this.flip && BB.scale(-1, 1), BB.rotate(this.rotation * Math.PI / 180);
+        const AB = this.rotation % 180 === 0 ? 1 : qB / ZB;
+        BB.scale(1 / AB, AB), BB.drawImage(NB, JB, MB, PB, zB, -qB / 2, -ZB / 2, qB, ZB), BB.restore()
       }
-      drawWithFit(HH, BH) {
-        if (!("undefined" !== typeof CanvasRenderingContext2D && HH instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && HH instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
-        if (!BH || "object" !== typeof BH) throw new TypeError("options must be an object.");
-        if (!["fill", "contain", "cover"].includes(BH.fit)) throw new TypeError("options.fit must be 'fill', 'contain', or 'cover'.");
-        if (void 0 !== BH.rotation && ![0, 90, 180, 270].includes(BH.rotation)) throw new TypeError("options.rotation, when provided, must be 0, 90, 180, or 270.");
-        if (void 0 !== BH.flip && "boolean" !== typeof BH.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
-        void 0 !== BH.crop && TH(BH.crop, "options.");
-        const LH = HH.canvas.width,
-          AH = HH.canvas.height,
-          rH = BH.rotation ?? this.rotation,
-          SH = BH.flip ?? this.flip,
-          [hH, tH] = rH % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
-        let zH, CH, EH, XH, GH = BH.crop;
-        GH && (GH = PH(GH, hH, tH));
+      drawWithFit(BB, OB) {
+        if (!("undefined" !== typeof CanvasRenderingContext2D && BB instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && BB instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
+        if (!OB || "object" !== typeof OB) throw new TypeError("options must be an object.");
+        if (!["fill", "contain", "cover"].includes(OB.fit)) throw new TypeError("options.fit must be 'fill', 'contain', or 'cover'.");
+        if (void 0 !== OB.rotation && ![0, 90, 180, 270].includes(OB.rotation)) throw new TypeError("options.rotation, when provided, must be 0, 90, 180, or 270.");
+        if (void 0 !== OB.flip && "boolean" !== typeof OB.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
+        void 0 !== OB.crop && VB(OB.crop, "options.");
+        const GB = BB.canvas.width,
+          YB = BB.canvas.height,
+          DB = OB.rotation ?? this.rotation,
+          QB = OB.flip ?? this.flip,
+          [oB, jB] = DB % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
+        let yB, JB, MB, PB, zB = OB.crop;
+        zB && (zB = AB(zB, oB, jB));
         const {
-          sx: YH,
-          sy: uH,
-          sWidth: QH,
-          sHeight: WH
-        } = this._unmapSourceRegion(BH.crop?.left ?? 0, BH.crop?.top ?? 0, BH.crop?.width ?? hH, BH.crop?.height ?? tH, rH, SH);
-        if ("fill" === BH.fit) zH = 0, CH = 0, EH = LH, XH = AH;
+          sx: lB,
+          sy: pB,
+          sWidth: qB,
+          sHeight: ZB
+        } = this._unmapSourceRegion(OB.crop?.left ?? 0, OB.crop?.top ?? 0, OB.crop?.width ?? oB, OB.crop?.height ?? jB, DB, QB);
+        if ("fill" === OB.fit) yB = 0, JB = 0, MB = GB, PB = YB;
         else {
-          const [HH, rH] = BH.crop ? [BH.crop.width, BH.crop.height] : [hH, tH], SH = "contain" === BH.fit ? Math.min(LH / HH, AH / rH) : Math.max(LH / HH, AH / rH);
-          EH = HH * SH, XH = rH * SH, zH = (LH - EH) / 2, CH = (AH - XH) / 2
+          const [BB, DB] = OB.crop ? [OB.crop.width, OB.crop.height] : [oB, jB], QB = "contain" === OB.fit ? Math.min(GB / BB, YB / DB) : Math.max(GB / BB, YB / DB);
+          MB = BB * QB, PB = DB * QB, yB = (GB - MB) / 2, JB = (YB - PB) / 2
         }
-        HH.save();
-        const MH = rH % 180 === 0 ? 1 : EH / XH;
-        HH.translate(LH / 2, AH / 2), SH && HH.scale(-1, 1), HH.rotate(rH * Math.PI / 180), HH.scale(1 / MH, MH), HH.translate(-LH / 2, -AH / 2), HH.drawImage(this.toCanvasImageSource(), YH, uH, QH, WH, zH, CH, EH, XH), HH.restore()
+        BB.save();
+        const NB = DB % 180 === 0 ? 1 : MB / PB;
+        BB.translate(GB / 2, YB / 2), QB && BB.scale(-1, 1), BB.rotate(DB * Math.PI / 180), BB.scale(1 / NB, NB), BB.translate(-GB / 2, -YB / 2), BB.drawImage(this.toCanvasImageSource(), lB, pB, qB, ZB, yB, JB, MB, PB), BB.restore()
       }
-      _unmapSourceRegion(HH, BH, LH, AH, rH, SH) {
-        if (SH) {
-          HH = (rH % 180 === 0 ? this.squarePixelWidth : this.squarePixelHeight) - HH - LH
+      _unmapSourceRegion(BB, OB, GB, YB, DB, QB) {
+        if (QB) {
+          BB = (DB % 180 === 0 ? this.squarePixelWidth : this.squarePixelHeight) - BB - GB
         }
-        return 90 === rH ? [HH, BH, LH, AH] = [BH, this.squarePixelHeight - HH - LH, AH, LH] : 180 === rH ? [HH, BH] = [this.squarePixelWidth - HH - LH, this.squarePixelHeight - BH - AH] : 270 === rH && ([HH, BH, LH, AH] = [this.squarePixelWidth - BH - AH, HH, AH, LH]), {
-          sx: HH,
-          sy: BH,
-          sWidth: LH,
-          sHeight: AH
+        return 90 === DB ? [BB, OB, GB, YB] = [OB, this.squarePixelHeight - BB - GB, YB, GB] : 180 === DB ? [BB, OB] = [this.squarePixelWidth - BB - GB, this.squarePixelHeight - OB - YB] : 270 === DB && ([BB, OB, GB, YB] = [this.squarePixelWidth - OB - YB, BB, YB, GB]), {
+          sx: BB,
+          sy: OB,
+          sWidth: GB,
+          sHeight: YB
         }
       }
-      _drawWithFitAndMipmapping(HH, BH, LH) {
-        const AH = HH.width,
-          rH = HH.height,
-          [SH, hH] = LH.rotation % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth],
-          tH = LH.crop ? LH.crop.width : SH,
-          zH = LH.crop ? LH.crop.height : hH;
-        let CH = 0;
-        2 * AH < tH && 2 * rH < zH && (CH = Math.floor(Math.log2(Math.min(tH / AH, zH / rH))));
-        const EH = AH * 2 ** CH,
-          XH = rH * 2 ** CH,
+      _drawWithFitAndMipmapping(BB, OB, GB) {
+        const YB = BB.width,
+          DB = BB.height,
+          [QB, oB] = GB.rotation % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth],
+          jB = GB.crop ? GB.crop.width : QB,
+          yB = GB.crop ? GB.crop.height : oB;
+        let JB = 0;
+        2 * YB < jB && 2 * DB < yB && (JB = Math.floor(Math.log2(Math.min(jB / YB, yB / DB))));
+        const MB = YB * 2 ** JB,
+          PB = DB * 2 ** JB,
           {
-            canvas: GH,
-            context: YH,
-            isNew: uH
-          } = CH > 0 ? MH(EH, XH) : {
-            canvas: HH,
-            context: BH,
-            isNew: LH.targetIsFresh
+            canvas: zB,
+            context: lB,
+            isNew: pB
+          } = JB > 0 ? NB(MB, PB) : {
+            canvas: BB,
+            context: OB,
+            isNew: GB.targetIsFresh
           };
-        YH.imageSmoothingQuality = "high", LH.fillBlack ? (YH.fillStyle = "black", YH.fillRect(0, 0, EH, XH)) : uH || YH.clearRect(0, 0, EH, XH), this.drawWithFit(YH, {
-          fit: LH.fit,
-          rotation: LH.rotation,
-          flip: LH.flip,
-          crop: LH.crop
-        }), YH.globalCompositeOperation = "copy";
-        for (let QH = CH; QH > 1; QH--) {
-          const HH = AH * 2 ** QH,
-            BH = rH * 2 ** QH;
-          YH.drawImage(GH, 0, 0, HH, BH, 0, 0, HH / 2, BH / 2)
+        lB.imageSmoothingQuality = "high", GB.fillBlack ? (lB.fillStyle = "black", lB.fillRect(0, 0, MB, PB)) : pB || lB.clearRect(0, 0, MB, PB), this.drawWithFit(lB, {
+          fit: GB.fit,
+          rotation: GB.rotation,
+          flip: GB.flip,
+          crop: GB.crop
+        }), lB.globalCompositeOperation = "copy";
+        for (let qB = JB; qB > 1; qB--) {
+          const BB = YB * 2 ** qB,
+            OB = DB * 2 ** qB;
+          lB.drawImage(zB, 0, 0, BB, OB, 0, 0, BB / 2, OB / 2)
         }
-        YH.globalCompositeOperation = "source-over", CH > 0 && (BH.imageSmoothingQuality = "high", BH.globalCompositeOperation = "copy", BH.drawImage(GH, 0, 0, 2 * AH, 2 * rH, 0, 0, AH, rH), BH.globalCompositeOperation = "source-over")
+        lB.globalCompositeOperation = "source-over", JB > 0 && (OB.imageSmoothingQuality = "high", OB.globalCompositeOperation = "copy", OB.drawImage(zB, 0, 0, 2 * YB, 2 * DB, 0, 0, YB, DB), OB.globalCompositeOperation = "source-over")
       }
       toCanvasImageSource() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        if ((0, AH.J)(null !== this._data), this._data instanceof EH || this._data instanceof Uint8Array) {
-          const HH = this.toVideoFrame();
-          return queueMicrotask((() => HH.close())), HH
+        if ((0, YB.Q)(null !== this._data), this._data instanceof MB || this._data instanceof Uint8Array) {
+          const BB = this.toVideoFrame();
+          return queueMicrotask((() => BB.close())), BB
         }
         return this._data
       }
-      async transform(HH) {
-        if (!HH || "object" !== typeof HH) throw new TypeError("options must be an object.");
-        if (void 0 !== HH.width && (!Number.isInteger(HH.width) || HH.width <= 0)) throw new TypeError("options.width, when provided, must be a positive integer.");
-        if (void 0 !== HH.height && (!Number.isInteger(HH.height) || HH.height <= 0)) throw new TypeError("options.height, when provided, must be a positive integer.");
-        if (void 0 !== HH.roundDimensionsTo && (!Number.isInteger(HH.roundDimensionsTo) || HH.roundDimensionsTo <= 0)) throw new TypeError("options.roundDimensionsTo, when provided, must be a positive integer.");
-        if (void 0 !== HH.fit && !["fill", "contain", "cover"].includes(HH.fit)) throw new TypeError('options.fit, when provided, must be one of "fill", "contain", or "cover".');
-        if (void 0 !== HH.width && void 0 !== HH.height && void 0 === HH.fit) throw new TypeError("When both options.width and options.height are provided, options.fit must also be provided.");
-        if (void 0 !== HH.rotate && ![0, 90, 180, 270].includes(HH.rotate)) throw new TypeError("options.rotate, when provided, must be 0, 90, 180 or 270.");
-        if (void 0 !== HH.flip && "boolean" !== typeof HH.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
-        if (void 0 !== HH.crop && TH(HH.crop, "options."), void 0 !== HH.alpha && !["keep", "discard"].includes(HH.alpha)) throw new TypeError("options.alpha, when provided, must be 'keep' or 'discard'.");
+      async transform(BB) {
+        if (!BB || "object" !== typeof BB) throw new TypeError("options must be an object.");
+        if (void 0 !== BB.width && (!Number.isInteger(BB.width) || BB.width <= 0)) throw new TypeError("options.width, when provided, must be a positive integer.");
+        if (void 0 !== BB.height && (!Number.isInteger(BB.height) || BB.height <= 0)) throw new TypeError("options.height, when provided, must be a positive integer.");
+        if (void 0 !== BB.roundDimensionsTo && (!Number.isInteger(BB.roundDimensionsTo) || BB.roundDimensionsTo <= 0)) throw new TypeError("options.roundDimensionsTo, when provided, must be a positive integer.");
+        if (void 0 !== BB.fit && !["fill", "contain", "cover"].includes(BB.fit)) throw new TypeError('options.fit, when provided, must be one of "fill", "contain", or "cover".');
+        if (void 0 !== BB.width && void 0 !== BB.height && void 0 === BB.fit) throw new TypeError("When both options.width and options.height are provided, options.fit must also be provided.");
+        if (void 0 !== BB.rotate && ![0, 90, 180, 270].includes(BB.rotate)) throw new TypeError("options.rotate, when provided, must be 0, 90, 180 or 270.");
+        if (void 0 !== BB.flip && "boolean" !== typeof BB.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
+        if (void 0 !== BB.crop && VB(BB.crop, "options."), void 0 !== BB.alpha && !["keep", "discard"].includes(BB.alpha)) throw new TypeError("options.alpha, when provided, must be 'keep' or 'discard'.");
         const {
-          rotation: BH,
-          flip: LH
-        } = (0, AH.gb)(this.rotation, this.flip, HH.rotate ?? 0, HH.flip ?? !1), [rH, SH] = BH % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
-        let hH = HH.crop;
-        hH && (hH = PH(hH, rH, SH));
-        const tH = hH ? hH.width : rH,
-          zH = hH ? hH.height : SH,
-          CH = tH / zH;
-        let EH, XH;
-        void 0 !== HH.width && void 0 === HH.height ? (EH = HH.width, XH = EH / CH) : void 0 === HH.width && void 0 !== HH.height ? (XH = HH.height, EH = XH * CH) : void 0 !== HH.width && void 0 !== HH.height ? (EH = HH.width, XH = HH.height) : (EH = tH, XH = zH), EH = (0, AH.Dc)(EH, HH.roundDimensionsTo ?? 1), XH = (0, AH.Dc)(XH, HH.roundDimensionsTo ?? 1);
-        const GH = {
-          width: EH,
-          height: XH,
-          fit: HH.fit ?? "fill",
-          rotation: BH,
-          flip: LH,
-          crop: hH ?? {
+          rotation: OB,
+          flip: GB
+        } = (0, YB.qb)(this.rotation, this.flip, BB.rotate ?? 0, BB.flip ?? !1), [DB, QB] = OB % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
+        let oB = BB.crop;
+        oB && (oB = AB(oB, DB, QB));
+        const jB = oB ? oB.width : DB,
+          yB = oB ? oB.height : QB,
+          JB = jB / yB;
+        let MB, PB;
+        void 0 !== BB.width && void 0 === BB.height ? (MB = BB.width, PB = MB / JB) : void 0 === BB.width && void 0 !== BB.height ? (PB = BB.height, MB = PB * JB) : void 0 !== BB.width && void 0 !== BB.height ? (MB = BB.width, PB = BB.height) : (MB = jB, PB = yB), MB = (0, YB.cd)(MB, BB.roundDimensionsTo ?? 1), PB = (0, YB.cd)(PB, BB.roundDimensionsTo ?? 1);
+        const zB = {
+          width: MB,
+          height: PB,
+          fit: BB.fit ?? "fill",
+          rotation: OB,
+          flip: GB,
+          crop: oB ?? {
             left: 0,
             top: 0,
-            width: rH,
-            height: SH
+            width: DB,
+            height: QB
           },
-          alpha: HH.alpha ?? "keep"
+          alpha: BB.alpha ?? "keep"
         };
-        for (const YH of uH) {
-          let HH = YH(this, GH);
-          if ((0, AH.Ob)(HH) && (HH = await HH), null !== HH) return HH
+        for (const lB of pB) {
+          let BB = lB(this, zB);
+          if ((0, YB.gc)(BB) && (BB = await BB), null !== BB) return BB
         }
         const {
-          canvas: QH,
-          context: WH,
-          isNew: xH
-        } = MH(GH.width, GH.height);
-        return this._drawWithFitAndMipmapping(QH, WH, {
-          fit: GH.fit,
-          rotation: GH.rotation,
-          flip: GH.flip,
-          crop: GH.crop,
-          targetIsFresh: xH,
-          fillBlack: "discard" === GH.alpha
-        }), new YH(QH, {
+          canvas: qB,
+          context: ZB,
+          isNew: RB
+        } = NB(zB.width, zB.height);
+        return this._drawWithFitAndMipmapping(qB, ZB, {
+          fit: zB.fit,
+          rotation: zB.rotation,
+          flip: zB.flip,
+          crop: zB.crop,
+          targetIsFresh: RB,
+          fillBlack: "discard" === zB.alpha
+        }), new lB(qB, {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: 0,
           flip: !1
         })
       }
-      setRotation(HH) {
-        if (![0, 90, 180, 270].includes(HH)) throw new TypeError("newRotation must be 0, 90, 180, or 270.");
-        this.rotation = HH
+      setRotation(BB) {
+        if (![0, 90, 180, 270].includes(BB)) throw new TypeError("newRotation must be 0, 90, 180, or 270.");
+        this.rotation = BB
       }
-      setFlip(HH) {
-        if ("boolean" !== typeof HH) throw new TypeError("newFlip must be a boolean.");
-        this.flip = HH
+      setFlip(BB) {
+        if ("boolean" !== typeof BB) throw new TypeError("newFlip must be a boolean.");
+        this.flip = BB
       }
-      setTimestamp(HH) {
-        if (!Number.isFinite(HH)) throw new TypeError("newTimestamp must be a number.");
-        this.timestamp = HH
+      setTimestamp(BB) {
+        if (!Number.isFinite(BB)) throw new TypeError("newTimestamp must be a number.");
+        this.timestamp = BB
       }
-      setDuration(HH) {
-        if (!Number.isFinite(HH) || HH < 0) throw new TypeError("newDuration must be a non-negative number.");
-        this.duration = HH
+      setDuration(BB) {
+        if (!Number.isFinite(BB) || BB < 0) throw new TypeError("newDuration must be a non-negative number.");
+        this.duration = BB
       }
-      setEncodeOptions(HH) {
-        if (!HH || "object" !== typeof HH) throw new TypeError("newEncodeOptions must be an object.");
-        this.encodeOptions = HH
+      setEncodeOptions(BB) {
+        if (!BB || "object" !== typeof BB) throw new TypeError("newEncodeOptions must be an object.");
+        this.encodeOptions = BB
       } [Symbol.dispose]() {
         this.close()
       }
     }
-    const uH = [],
-      QH = [];
-    let WH = 0;
-    const MH = (HH, BH) => {
-      for (const AH of QH)
-        if (AH.canvas.width === HH && AH.canvas.height === BH) return AH.age = WH++, {
-          canvas: AH.canvas,
-          context: AH.context,
+    const pB = [],
+      qB = [];
+    let ZB = 0;
+    const NB = (BB, OB) => {
+      for (const YB of qB)
+        if (YB.canvas.width === BB && YB.canvas.height === OB) return YB.age = ZB++, {
+          canvas: YB.canvas,
+          context: YB.context,
           isNew: !1
         };
-      let LH;
-      if ("undefined" !== typeof OffscreenCanvas) LH = new OffscreenCanvas(HH, BH);
+      let GB;
+      if ("undefined" !== typeof OffscreenCanvas) GB = new OffscreenCanvas(BB, OB);
       else {
         if ("undefined" === typeof window || "undefined" === typeof document) throw new Error("Cannot transform VideoSamples in this environment. Either run in an environment with OffscreenCanvas or HTMLCanvasElement, or supply a custom VideoSample transformer using registerVideoSampleTransformer().");
-        LH = document.createElement("canvas"), LH.width = HH, LH.height = BH
+        GB = document.createElement("canvas"), GB.width = BB, GB.height = OB
       }
-      const rH = LH.getContext("2d", {
+      const DB = GB.getContext("2d", {
         alpha: !0,
         willReadFrequently: !1
       });
-      if (!rH) throw new Error("The '2d' canvas context is required to transform VideoSamples. Register a custom transformer using registerVideoSampleTransformer to work around this limitation.");
-      return QH.length >= 3 && QH.splice((0, AH.C)(QH, (HH => HH.age)), 1), QH.push({
-        canvas: LH,
-        context: rH,
-        age: WH++
+      if (!DB) throw new Error("The '2d' canvas context is required to transform VideoSamples. Register a custom transformer using registerVideoSampleTransformer to work around this limitation.");
+      return qB.length >= 3 && qB.splice((0, YB.J)(qB, (BB => BB.age)), 1), qB.push({
+        canvas: GB,
+        context: DB,
+        age: ZB++
       }), {
-        canvas: LH,
-        context: rH,
+        canvas: GB,
+        context: DB,
         isNew: !0
       }
     };
-    class xH {
-      constructor(HH) {
-        if (void 0 !== HH) {
-          if (!HH || "object" !== typeof HH) throw new TypeError("init.colorSpace, when provided, must be an object.");
-          const BH = Object.keys(AH.g);
-          if (null != HH.primaries && !BH.includes(HH.primaries)) throw new TypeError(`init.colorSpace.primaries, when provided, must be one of ${BH.join(", ")}.`);
-          const LH = Object.keys(AH.v);
-          if (null != HH.transfer && !LH.includes(HH.transfer)) throw new TypeError(`init.colorSpace.transfer, when provided, must be one of ${LH.join(", ")}.`);
-          const rH = Object.keys(AH.p);
-          if (null != HH.matrix && !rH.includes(HH.matrix)) throw new TypeError(`init.colorSpace.matrix, when provided, must be one of ${rH.join(", ")}.`);
-          if (null != HH.fullRange && "boolean" !== typeof HH.fullRange) throw new TypeError("init.colorSpace.fullRange, when provided, must be a boolean.")
+    class RB {
+      constructor(BB) {
+        if (void 0 !== BB) {
+          if (!BB || "object" !== typeof BB) throw new TypeError("init.colorSpace, when provided, must be an object.");
+          const OB = Object.keys(YB.g);
+          if (null != BB.primaries && !OB.includes(BB.primaries)) throw new TypeError(`init.colorSpace.primaries, when provided, must be one of ${OB.join(", ")}.`);
+          const GB = Object.keys(YB.z);
+          if (null != BB.transfer && !GB.includes(BB.transfer)) throw new TypeError(`init.colorSpace.transfer, when provided, must be one of ${GB.join(", ")}.`);
+          const DB = Object.keys(YB.r);
+          if (null != BB.matrix && !DB.includes(BB.matrix)) throw new TypeError(`init.colorSpace.matrix, when provided, must be one of ${DB.join(", ")}.`);
+          if (null != BB.fullRange && "boolean" !== typeof BB.fullRange) throw new TypeError("init.colorSpace.fullRange, when provided, must be a boolean.")
         }
-        this.primaries = HH?.primaries ?? null, this.transfer = HH?.transfer ?? null, this.matrix = HH?.matrix ?? null, this.fullRange = HH?.fullRange ?? null
+        this.primaries = BB?.primaries ?? null, this.transfer = BB?.transfer ?? null, this.matrix = BB?.matrix ?? null, this.fullRange = BB?.fullRange ?? null
       }
       toJSON() {
         return {
@@ -7361,114 +7361,114 @@ export const modules = {
         }
       }
     }
-    const vH = HH => "undefined" !== typeof VideoFrame && HH instanceof VideoFrame,
-      PH = (HH, BH, LH) => {
-        const rH = Math.min(HH.left, BH),
-          SH = Math.min(HH.top, LH),
-          hH = Math.min(HH.width, BH - rH),
-          tH = Math.min(HH.height, LH - SH);
-        return (0, AH.J)(hH >= 0), (0, AH.J)(tH >= 0), {
-          left: rH,
-          top: SH,
-          width: hH,
-          height: tH
+    const WB = BB => "undefined" !== typeof VideoFrame && BB instanceof VideoFrame,
+      AB = (BB, OB, GB) => {
+        const DB = Math.min(BB.left, OB),
+          QB = Math.min(BB.top, GB),
+          oB = Math.min(BB.width, OB - DB),
+          jB = Math.min(BB.height, GB - QB);
+        return (0, YB.Q)(oB >= 0), (0, YB.Q)(jB >= 0), {
+          left: DB,
+          top: QB,
+          width: oB,
+          height: jB
         }
       },
-      TH = (HH, BH) => {
-        if (!HH || "object" !== typeof HH) throw new TypeError(BH + "crop, when provided, must be an object.");
-        if (!Number.isInteger(HH.left) || HH.left < 0) throw new TypeError(BH + "crop.left must be a non-negative integer.");
-        if (!Number.isInteger(HH.top) || HH.top < 0) throw new TypeError(BH + "crop.top must be a non-negative integer.");
-        if (!Number.isInteger(HH.width) || HH.width < 0) throw new TypeError(BH + "crop.width must be a non-negative integer.");
-        if (!Number.isInteger(HH.height) || HH.height < 0) throw new TypeError(BH + "crop.height must be a non-negative integer.")
+      VB = (BB, OB) => {
+        if (!BB || "object" !== typeof BB) throw new TypeError(OB + "crop, when provided, must be an object.");
+        if (!Number.isInteger(BB.left) || BB.left < 0) throw new TypeError(OB + "crop.left must be a non-negative integer.");
+        if (!Number.isInteger(BB.top) || BB.top < 0) throw new TypeError(OB + "crop.top must be a non-negative integer.");
+        if (!Number.isInteger(BB.width) || BB.width < 0) throw new TypeError(OB + "crop.width must be a non-negative integer.");
+        if (!Number.isInteger(BB.height) || BB.height < 0) throw new TypeError(OB + "crop.height must be a non-negative integer.")
       },
-      UH = HH => {
-        if (!HH || "object" !== typeof HH) throw new TypeError("options must be an object.");
-        if (void 0 !== HH.colorSpace && !["display-p3", "srgb"].includes(HH.colorSpace)) throw new TypeError("options.colorSpace, when provided, must be 'display-p3' or 'srgb'.");
-        if (void 0 !== HH.format && "string" !== typeof HH.format) throw new TypeError("options.format, when provided, must be a string.");
-        if (void 0 !== HH.layout) {
-          if (!Array.isArray(HH.layout)) throw new TypeError("options.layout, when provided, must be an array.");
-          for (const BH of HH.layout) {
-            if (!BH || "object" !== typeof BH) throw new TypeError("Each entry in options.layout must be an object.");
-            if (!Number.isInteger(BH.offset) || BH.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
-            if (!Number.isInteger(BH.stride) || BH.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
+      SB = BB => {
+        if (!BB || "object" !== typeof BB) throw new TypeError("options must be an object.");
+        if (void 0 !== BB.colorSpace && !["display-p3", "srgb"].includes(BB.colorSpace)) throw new TypeError("options.colorSpace, when provided, must be 'display-p3' or 'srgb'.");
+        if (void 0 !== BB.format && "string" !== typeof BB.format) throw new TypeError("options.format, when provided, must be a string.");
+        if (void 0 !== BB.layout) {
+          if (!Array.isArray(BB.layout)) throw new TypeError("options.layout, when provided, must be an array.");
+          for (const OB of BB.layout) {
+            if (!OB || "object" !== typeof OB) throw new TypeError("Each entry in options.layout must be an object.");
+            if (!Number.isInteger(OB.offset) || OB.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
+            if (!Number.isInteger(OB.stride) || OB.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
           }
         }
-        if (void 0 !== HH.rect) {
-          if (!HH.rect || "object" !== typeof HH.rect) throw new TypeError("options.rect, when provided, must be an object.");
-          if (void 0 !== HH.rect.x && (!Number.isInteger(HH.rect.x) || HH.rect.x < 0)) throw new TypeError("options.rect.x, when provided, must be a non-negative integer.");
-          if (void 0 !== HH.rect.y && (!Number.isInteger(HH.rect.y) || HH.rect.y < 0)) throw new TypeError("options.rect.y, when provided, must be a non-negative integer.");
-          if (void 0 !== HH.rect.width && (!Number.isInteger(HH.rect.width) || HH.rect.width < 0)) throw new TypeError("options.rect.width, when provided, must be a non-negative integer.");
-          if (void 0 !== HH.rect.height && (!Number.isInteger(HH.rect.height) || HH.rect.height < 0)) throw new TypeError("options.rect.height, when provided, must be a non-negative integer.")
+        if (void 0 !== BB.rect) {
+          if (!BB.rect || "object" !== typeof BB.rect) throw new TypeError("options.rect, when provided, must be an object.");
+          if (void 0 !== BB.rect.x && (!Number.isInteger(BB.rect.x) || BB.rect.x < 0)) throw new TypeError("options.rect.x, when provided, must be a non-negative integer.");
+          if (void 0 !== BB.rect.y && (!Number.isInteger(BB.rect.y) || BB.rect.y < 0)) throw new TypeError("options.rect.y, when provided, must be a non-negative integer.");
+          if (void 0 !== BB.rect.width && (!Number.isInteger(BB.rect.width) || BB.rect.width < 0)) throw new TypeError("options.rect.width, when provided, must be a non-negative integer.");
+          if (void 0 !== BB.rect.height && (!Number.isInteger(BB.rect.height) || BB.rect.height < 0)) throw new TypeError("options.rect.height, when provided, must be a non-negative integer.")
         }
       },
-      VH = (HH, BH, LH) => {
-        const AH = OH(HH),
-          rH = [];
-        let SH = 0;
-        for (const hH of AH) {
-          const HH = Math.ceil(BH / hH.widthDivisor),
-            AH = Math.ceil(LH / hH.heightDivisor),
-            tH = HH * hH.sampleBytes,
-            zH = tH * AH;
-          rH.push({
-            offset: SH,
-            stride: tH
-          }), SH += zH
+      nB = (BB, OB, GB) => {
+        const YB = UB(BB),
+          DB = [];
+        let QB = 0;
+        for (const oB of YB) {
+          const BB = Math.ceil(OB / oB.widthDivisor),
+            YB = Math.ceil(GB / oB.heightDivisor),
+            jB = BB * oB.sampleBytes,
+            yB = jB * YB;
+          DB.push({
+            offset: QB,
+            stride: jB
+          }), QB += yB
         }
-        return rH
+        return DB
       },
-      OH = HH => {
-        const BH = (HH, BH, LH, AH, rH) => {
-          const SH = [{
-            sampleBytes: HH,
+      UB = BB => {
+        const OB = (BB, OB, GB, YB, DB) => {
+          const QB = [{
+            sampleBytes: BB,
             widthDivisor: 1,
             heightDivisor: 1
           }, {
-            sampleBytes: BH,
-            widthDivisor: LH,
-            heightDivisor: AH
+            sampleBytes: OB,
+            widthDivisor: GB,
+            heightDivisor: YB
           }, {
-            sampleBytes: BH,
-            widthDivisor: LH,
-            heightDivisor: AH
+            sampleBytes: OB,
+            widthDivisor: GB,
+            heightDivisor: YB
           }];
-          return rH && SH.push({
-            sampleBytes: HH,
+          return DB && QB.push({
+            sampleBytes: BB,
             widthDivisor: 1,
             heightDivisor: 1
-          }), SH
+          }), QB
         };
-        switch (HH) {
+        switch (BB) {
           case "I420":
-            return BH(1, 1, 2, 2, !1);
+            return OB(1, 1, 2, 2, !1);
           case "I420P10":
           case "I420P12":
-            return BH(2, 2, 2, 2, !1);
+            return OB(2, 2, 2, 2, !1);
           case "I420A":
-            return BH(1, 1, 2, 2, !0);
+            return OB(1, 1, 2, 2, !0);
           case "I420AP10":
           case "I420AP12":
-            return BH(2, 2, 2, 2, !0);
+            return OB(2, 2, 2, 2, !0);
           case "I422":
-            return BH(1, 1, 2, 1, !1);
+            return OB(1, 1, 2, 1, !1);
           case "I422P10":
           case "I422P12":
-            return BH(2, 2, 2, 1, !1);
+            return OB(2, 2, 2, 1, !1);
           case "I422A":
-            return BH(1, 1, 2, 1, !0);
+            return OB(1, 1, 2, 1, !0);
           case "I422AP10":
           case "I422AP12":
-            return BH(2, 2, 2, 1, !0);
+            return OB(2, 2, 2, 1, !0);
           case "I444":
-            return BH(1, 1, 1, 1, !1);
+            return OB(1, 1, 1, 1, !1);
           case "I444P10":
           case "I444P12":
-            return BH(2, 2, 1, 1, !1);
+            return OB(2, 2, 1, 1, !1);
           case "I444A":
-            return BH(1, 1, 1, 1, !0);
+            return OB(1, 1, 1, 1, !0);
           case "I444AP10":
           case "I444AP12":
-            return BH(2, 2, 1, 1, !0);
+            return OB(2, 2, 1, 1, !0);
           case "NV12":
             return [{
               sampleBytes: 1,
@@ -7489,64 +7489,64 @@ export const modules = {
               heightDivisor: 1
             }];
           default:
-            (0, AH.G)(HH), (0, AH.J)(!1)
+            (0, YB.M)(BB), (0, YB.Q)(!1)
         }
       },
-      bH = (HH, BH) => {
-        const LH = {
+      fB = (BB, OB) => {
+        const GB = {
             left: 0,
             top: 0,
-            width: HH.codedWidth,
-            height: HH.codedHeight
+            width: BB.codedWidth,
+            height: BB.codedHeight
           },
-          AH = BH.rect,
-          rH = kH(LH, AH, HH.codedWidth, HH.codedHeight, HH.format),
-          SH = BH.layout;
-        let hH;
-        if (BH.format && BH.format !== HH.format) {
-          if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(BH.format)) throw new Error("NotSupportedError: Invalid destination format.");
-          hH = BH.format
-        } else hH = HH.format;
-        return oH(rH, hH, SH)
+          YB = OB.rect,
+          DB = kB(GB, YB, BB.codedWidth, BB.codedHeight, BB.format),
+          QB = OB.layout;
+        let oB;
+        if (OB.format && OB.format !== BB.format) {
+          if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(OB.format)) throw new Error("NotSupportedError: Invalid destination format.");
+          oB = OB.format
+        } else oB = BB.format;
+        return KB(DB, oB, QB)
       },
-      kH = (HH, BH, LH, AH, rH) => {
-        const SH = {
-          ...HH
+      kB = (BB, OB, GB, YB, DB) => {
+        const QB = {
+          ...BB
         };
-        if (void 0 !== BH) {
-          if (0 === BH.width || 0 === BH.height) throw new TypeError("visibleRect dimensions cannot be zero.");
-          if ((BH.x || 0) + (BH.width || 0) > LH) throw new TypeError("visibleRect exceeds codedWidth.");
-          if ((BH.y || 0) + (BH.height || 0) > AH) throw new TypeError("visibleRect exceeds codedHeight.");
-          SH.x = BH.x || 0, SH.y = BH.y || 0, SH.width = BH.width || 0, SH.height = BH.height || 0
+        if (void 0 !== OB) {
+          if (0 === OB.width || 0 === OB.height) throw new TypeError("visibleRect dimensions cannot be zero.");
+          if ((OB.x || 0) + (OB.width || 0) > GB) throw new TypeError("visibleRect exceeds codedWidth.");
+          if ((OB.y || 0) + (OB.height || 0) > YB) throw new TypeError("visibleRect exceeds codedHeight.");
+          QB.x = OB.x || 0, QB.y = OB.y || 0, QB.width = OB.width || 0, QB.height = OB.height || 0
         }
-        if (!mH(rH, SH)) throw new TypeError("visibleRect alignment is invalid for the format.");
-        return SH
+        if (!dB(DB, QB)) throw new TypeError("visibleRect alignment is invalid for the format.");
+        return QB
       },
-      mH = (HH, BH) => {
-        if (null === HH) return !0;
-        const LH = OH(HH);
-        for (let AH = 0; AH < LH.length; AH++) {
-          const HH = LH[AH],
-            rH = HH.widthDivisor,
-            SH = HH.heightDivisor;
-          if ((BH.x || 0) % rH !== 0) return !1;
-          if ((BH.y || 0) % SH !== 0) return !1
+      dB = (BB, OB) => {
+        if (null === BB) return !0;
+        const GB = UB(BB);
+        for (let YB = 0; YB < GB.length; YB++) {
+          const BB = GB[YB],
+            DB = BB.widthDivisor,
+            QB = BB.heightDivisor;
+          if ((OB.x || 0) % DB !== 0) return !1;
+          if ((OB.y || 0) % QB !== 0) return !1
         }
         return !0
       },
-      oH = (HH, BH, LH) => {
-        const AH = OH(BH),
-          rH = AH.length;
-        if (void 0 !== LH && LH.length !== rH) throw new TypeError(`Layout must have ${rH} planes.`);
-        let SH = 0;
-        const hH = [],
-          tH = [];
-        for (let zH = 0; zH < rH; zH++) {
-          const BH = AH[zH],
-            rH = BH.sampleBytes,
-            CH = BH.widthDivisor,
-            EH = BH.heightDivisor,
-            XH = {
+      KB = (BB, OB, GB) => {
+        const YB = UB(OB),
+          DB = YB.length;
+        if (void 0 !== GB && GB.length !== DB) throw new TypeError(`Layout must have ${DB} planes.`);
+        let QB = 0;
+        const oB = [],
+          jB = [];
+        for (let yB = 0; yB < DB; yB++) {
+          const OB = YB[yB],
+            DB = OB.sampleBytes,
+            JB = OB.widthDivisor,
+            MB = OB.heightDivisor,
+            PB = {
               destinationOffset: 0,
               destinationStride: 0,
               sourceTop: 0,
@@ -7554,200 +7554,200 @@ export const modules = {
               sourceLeftBytes: 0,
               sourceWidthBytes: 0
             };
-          if (XH.sourceTop = Math.ceil(Math.trunc(HH.y || 0) / EH), XH.sourceHeight = Math.ceil(Math.trunc(HH.height || 0) / EH), XH.sourceLeftBytes = Math.floor(Math.trunc(HH.x || 0) / CH) * rH, XH.sourceWidthBytes = Math.floor(Math.trunc(HH.width || 0) / CH) * rH, void 0 !== LH) {
-            const HH = LH[zH];
-            if (HH.stride < XH.sourceWidthBytes) throw new TypeError(`Stride for plane ${zH} is too small.`);
-            XH.destinationOffset = HH.offset, XH.destinationStride = HH.stride
-          } else XH.destinationOffset = SH, XH.destinationStride = XH.sourceWidthBytes;
-          const GH = XH.destinationStride * XH.sourceHeight + XH.destinationOffset;
-          if (GH > 4294967295) throw new TypeError("Allocation size exceeds limit.");
-          tH.push(GH), SH = Math.max(SH, GH);
-          for (let HH = 0; HH < zH; HH++) {
-            const BH = hH[HH];
-            if (!(tH[zH] <= BH.destinationOffset || tH[HH] <= XH.destinationOffset)) throw new TypeError("Planes overlap.")
+          if (PB.sourceTop = Math.ceil(Math.trunc(BB.y || 0) / MB), PB.sourceHeight = Math.ceil(Math.trunc(BB.height || 0) / MB), PB.sourceLeftBytes = Math.floor(Math.trunc(BB.x || 0) / JB) * DB, PB.sourceWidthBytes = Math.floor(Math.trunc(BB.width || 0) / JB) * DB, void 0 !== GB) {
+            const BB = GB[yB];
+            if (BB.stride < PB.sourceWidthBytes) throw new TypeError(`Stride for plane ${yB} is too small.`);
+            PB.destinationOffset = BB.offset, PB.destinationStride = BB.stride
+          } else PB.destinationOffset = QB, PB.destinationStride = PB.sourceWidthBytes;
+          const zB = PB.destinationStride * PB.sourceHeight + PB.destinationOffset;
+          if (zB > 4294967295) throw new TypeError("Allocation size exceeds limit.");
+          jB.push(zB), QB = Math.max(QB, zB);
+          for (let BB = 0; BB < yB; BB++) {
+            const OB = oB[BB];
+            if (!(jB[yB] <= OB.destinationOffset || jB[BB] <= PB.destinationOffset)) throw new TypeError("Planes overlap.")
           }
-          hH.push(XH)
+          oB.push(PB)
         }
         return {
-          allocationSize: SH,
-          computedLayouts: hH
+          allocationSize: QB,
+          computedLayouts: oB
         }
       },
-      IH = new Set(["f32", "f32-planar", "s16", "s16-planar", "s32", "s32-planar", "u8", "u8-planar"]);
-    class fH {
+      uB = new Set(["f32", "f32-planar", "s16", "s16-planar", "s32", "s32-planar", "u8", "u8-planar"]);
+    class mB {
       constructor() {
         this._referenceCount = 0
       }
     }
-    class lH {
+    class IB {
       get microsecondTimestamp() {
-        return Math.trunc(AH.u * this.timestamp)
+        return Math.trunc(YB.w * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(AH.u * this.duration)
+        return Math.trunc(YB.w * this.duration)
       }
-      constructor(HH) {
-        if (this._closed = !1, gH(HH)) {
-          if (null === HH.format) throw new TypeError("AudioData with null format is not supported.");
-          this._data = HH, this.format = HH.format, this.sampleRate = HH.sampleRate, this.numberOfFrames = HH.numberOfFrames, this.numberOfChannels = HH.numberOfChannels, this.timestamp = HH.timestamp / 1e6, this.duration = HH.numberOfFrames / HH.sampleRate
-        } else if (HH instanceof fH) {
-          if (this._data = HH, HH._referenceCount++, this.format = HH.getFormat(), !IH.has(this.format)) throw new TypeError("getFormat() must return an AudioSampleFormat.");
-          if (this.sampleRate = HH.getSampleRate(), !Number.isInteger(this.sampleRate) || this.sampleRate <= 0) throw new TypeError("getSampleRate() must return a positive integer.");
-          if (this.numberOfFrames = HH.getNumberOfFrames(), !Number.isInteger(this.numberOfFrames) || this.numberOfFrames < 0) throw new TypeError("getNumberOfFrames() must return a non-negative integer.");
-          if (this.numberOfChannels = HH.getNumberOfChannels(), !Number.isInteger(this.numberOfChannels) || this.numberOfChannels <= 0) throw new TypeError("getNumberOfChannels() must return a positive integer.");
-          if (this.timestamp = HH.getTimestamp(), !Number.isFinite(this.timestamp)) throw new TypeError("getTimestamp() must return a finite number.");
+      constructor(BB) {
+        if (this._closed = !1, rB(BB)) {
+          if (null === BB.format) throw new TypeError("AudioData with null format is not supported.");
+          this._data = BB, this.format = BB.format, this.sampleRate = BB.sampleRate, this.numberOfFrames = BB.numberOfFrames, this.numberOfChannels = BB.numberOfChannels, this.timestamp = BB.timestamp / 1e6, this.duration = BB.numberOfFrames / BB.sampleRate
+        } else if (BB instanceof mB) {
+          if (this._data = BB, BB._referenceCount++, this.format = BB.getFormat(), !uB.has(this.format)) throw new TypeError("getFormat() must return an AudioSampleFormat.");
+          if (this.sampleRate = BB.getSampleRate(), !Number.isInteger(this.sampleRate) || this.sampleRate <= 0) throw new TypeError("getSampleRate() must return a positive integer.");
+          if (this.numberOfFrames = BB.getNumberOfFrames(), !Number.isInteger(this.numberOfFrames) || this.numberOfFrames < 0) throw new TypeError("getNumberOfFrames() must return a non-negative integer.");
+          if (this.numberOfChannels = BB.getNumberOfChannels(), !Number.isInteger(this.numberOfChannels) || this.numberOfChannels <= 0) throw new TypeError("getNumberOfChannels() must return a positive integer.");
+          if (this.timestamp = BB.getTimestamp(), !Number.isFinite(this.timestamp)) throw new TypeError("getTimestamp() must return a finite number.");
           this.duration = this.numberOfFrames / this.sampleRate
         } else {
-          if (!HH || "object" !== typeof HH) throw new TypeError("Invalid AudioDataInit: must be an object.");
-          if (!IH.has(HH.format)) throw new TypeError("Invalid AudioDataInit: invalid format.");
-          if (!Number.isFinite(HH.sampleRate) || HH.sampleRate <= 0) throw new TypeError("Invalid AudioDataInit: sampleRate must be > 0.");
-          if (!Number.isInteger(HH.numberOfChannels) || 0 === HH.numberOfChannels) throw new TypeError("Invalid AudioDataInit: numberOfChannels must be an integer > 0.");
-          if (!Number.isFinite(HH?.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          const BH = HH.data.byteLength / (KH(HH.format) * HH.numberOfChannels);
-          if (!Number.isInteger(BH)) throw new TypeError("Invalid AudioDataInit: data size is not a multiple of frame size.");
-          let LH;
-          if (this.format = HH.format, this.sampleRate = HH.sampleRate, this.numberOfFrames = BH, this.numberOfChannels = HH.numberOfChannels, this.timestamp = HH.timestamp, this.duration = BH / HH.sampleRate, HH.data instanceof ArrayBuffer) LH = new Uint8Array(HH.data);
+          if (!BB || "object" !== typeof BB) throw new TypeError("Invalid AudioDataInit: must be an object.");
+          if (!uB.has(BB.format)) throw new TypeError("Invalid AudioDataInit: invalid format.");
+          if (!Number.isFinite(BB.sampleRate) || BB.sampleRate <= 0) throw new TypeError("Invalid AudioDataInit: sampleRate must be > 0.");
+          if (!Number.isInteger(BB.numberOfChannels) || 0 === BB.numberOfChannels) throw new TypeError("Invalid AudioDataInit: numberOfChannels must be an integer > 0.");
+          if (!Number.isFinite(BB?.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          const OB = BB.data.byteLength / (FB(BB.format) * BB.numberOfChannels);
+          if (!Number.isInteger(OB)) throw new TypeError("Invalid AudioDataInit: data size is not a multiple of frame size.");
+          let GB;
+          if (this.format = BB.format, this.sampleRate = BB.sampleRate, this.numberOfFrames = OB, this.numberOfChannels = BB.numberOfChannels, this.timestamp = BB.timestamp, this.duration = OB / BB.sampleRate, BB.data instanceof ArrayBuffer) GB = new Uint8Array(BB.data);
           else {
-            if (!ArrayBuffer.isView(HH.data)) throw new TypeError("Invalid AudioDataInit: data is not a BufferSource.");
-            LH = new Uint8Array(HH.data.buffer, HH.data.byteOffset, HH.data.byteLength)
+            if (!ArrayBuffer.isView(BB.data)) throw new TypeError("Invalid AudioDataInit: data is not a BufferSource.");
+            GB = new Uint8Array(BB.data.buffer, BB.data.byteOffset, BB.data.byteLength)
           }
-          const AH = this.numberOfFrames * this.numberOfChannels * KH(this.format);
-          if (LH.byteLength < AH) throw new TypeError("Invalid AudioDataInit: insufficient data size.");
-          this._data = LH
+          const YB = this.numberOfFrames * this.numberOfChannels * FB(this.format);
+          if (GB.byteLength < YB) throw new TypeError("Invalid AudioDataInit: insufficient data size.");
+          this._data = GB
         }
-        CH?.register(this, {
+        JB?.register(this, {
           type: "audio",
           data: this._data
         }, this)
       }
-      allocationSize(HH) {
-        if (!HH || "object" !== typeof HH) throw new TypeError("options must be an object.");
-        if (!Number.isInteger(HH.planeIndex) || HH.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
-        if (void 0 !== HH.format && !IH.has(HH.format)) throw new TypeError("Invalid format.");
-        if (void 0 !== HH.frameOffset && (!Number.isInteger(HH.frameOffset) || HH.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
-        if (void 0 !== HH.frameCount && (!Number.isInteger(HH.frameCount) || HH.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
+      allocationSize(BB) {
+        if (!BB || "object" !== typeof BB) throw new TypeError("options must be an object.");
+        if (!Number.isInteger(BB.planeIndex) || BB.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
+        if (void 0 !== BB.format && !uB.has(BB.format)) throw new TypeError("Invalid format.");
+        if (void 0 !== BB.frameOffset && (!Number.isInteger(BB.frameOffset) || BB.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
+        if (void 0 !== BB.frameCount && (!Number.isInteger(BB.frameCount) || BB.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
         if (this._closed) throw new Error("AudioSample is closed.");
-        const BH = HH.format ?? this.format,
-          LH = HH.frameOffset ?? 0;
-        if (LH >= this.numberOfFrames) throw new RangeError("frameOffset out of range");
-        const AH = void 0 !== HH.frameCount ? HH.frameCount : this.numberOfFrames - LH;
-        if (AH > this.numberOfFrames - LH) throw new RangeError("frameCount out of range");
-        const rH = KH(BH),
-          SH = cH(BH);
-        if (SH && HH.planeIndex >= this.numberOfChannels) throw new RangeError("planeIndex out of range");
-        if (!SH && 0 !== HH.planeIndex) throw new RangeError("planeIndex out of range");
-        return (SH ? AH : AH * this.numberOfChannels) * rH
+        const OB = BB.format ?? this.format,
+          GB = BB.frameOffset ?? 0;
+        if (GB >= this.numberOfFrames) throw new RangeError("frameOffset out of range");
+        const YB = void 0 !== BB.frameCount ? BB.frameCount : this.numberOfFrames - GB;
+        if (YB > this.numberOfFrames - GB) throw new RangeError("frameCount out of range");
+        const DB = FB(OB),
+          QB = iB(OB);
+        if (QB && BB.planeIndex >= this.numberOfChannels) throw new RangeError("planeIndex out of range");
+        if (!QB && 0 !== BB.planeIndex) throw new RangeError("planeIndex out of range");
+        return (QB ? YB : YB * this.numberOfChannels) * DB
       }
-      copyTo(HH, BH) {
-        if (!(0, AH.ub)(HH)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
-        if (!BH || "object" !== typeof BH) throw new TypeError("options must be an object.");
-        if (!Number.isInteger(BH.planeIndex) || BH.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
-        if (void 0 !== BH.format && !IH.has(BH.format)) throw new TypeError("Invalid format.");
-        if (void 0 !== BH.frameOffset && (!Number.isInteger(BH.frameOffset) || BH.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
-        if (void 0 !== BH.frameCount && (!Number.isInteger(BH.frameCount) || BH.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
+      copyTo(BB, OB) {
+        if (!(0, YB.Gb)(BB)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
+        if (!OB || "object" !== typeof OB) throw new TypeError("options must be an object.");
+        if (!Number.isInteger(OB.planeIndex) || OB.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
+        if (void 0 !== OB.format && !uB.has(OB.format)) throw new TypeError("Invalid format.");
+        if (void 0 !== OB.frameOffset && (!Number.isInteger(OB.frameOffset) || OB.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
+        if (void 0 !== OB.frameCount && (!Number.isInteger(OB.frameCount) || OB.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
         if (this._closed) throw new Error("AudioSample is closed.");
         const {
-          format: LH,
-          frameCount: rH,
-          frameOffset: SH
-        } = BH;
+          format: GB,
+          frameCount: DB,
+          frameOffset: QB
+        } = OB;
         let {
-          planeIndex: hH
-        } = BH, tH = this.format;
-        const zH = LH ?? this.format;
-        if (!zH) throw new Error("Destination format not determined");
-        const CH = this.numberOfFrames,
-          EH = this.numberOfChannels,
-          XH = SH ?? 0;
-        if (XH >= CH) throw new RangeError("frameOffset out of range");
-        const GH = void 0 !== rH ? rH : CH - XH;
-        if (GH > CH - XH) throw new RangeError("frameCount out of range");
-        const YH = KH(zH),
-          uH = cH(zH);
-        if (uH && hH >= EH) throw new RangeError("planeIndex out of range");
-        if (!uH && 0 !== hH) throw new RangeError("planeIndex out of range");
-        const QH = (uH ? GH : GH * EH) * YH;
-        if (HH.byteLength < QH) throw new RangeError("Destination buffer is too small");
-        const WH = (0, AH.ed)(HH),
-          MH = qH(zH);
-        if (gH(this._data)) {
-          if ((0, AH.Rb)() && EH > 2 && zH !== tH) return void RH(this._data, WH, tH, zH, EH, hH, XH, GH);
+          planeIndex: oB
+        } = OB, jB = this.format;
+        const yB = GB ?? this.format;
+        if (!yB) throw new Error("Destination format not determined");
+        const JB = this.numberOfFrames,
+          MB = this.numberOfChannels,
+          PB = QB ?? 0;
+        if (PB >= JB) throw new RangeError("frameOffset out of range");
+        const zB = void 0 !== DB ? DB : JB - PB;
+        if (zB > JB - PB) throw new RangeError("frameCount out of range");
+        const lB = FB(yB),
+          pB = iB(yB);
+        if (pB && oB >= MB) throw new RangeError("planeIndex out of range");
+        if (!pB && 0 !== oB) throw new RangeError("planeIndex out of range");
+        const qB = (pB ? zB : zB * MB) * lB;
+        if (BB.byteLength < qB) throw new RangeError("Destination buffer is too small");
+        const ZB = (0, YB.Gd)(BB),
+          NB = gB(yB);
+        if (rB(this._data)) {
+          if ((0, YB.lc)() && MB > 2 && yB !== jB) return void wB(this._data, ZB, jB, yB, MB, oB, PB, zB);
           try {
-            return void this._data.copyTo(HH, {
-              planeIndex: hH,
-              frameOffset: XH,
-              frameCount: GH,
-              format: zH
+            return void this._data.copyTo(BB, {
+              planeIndex: oB,
+              frameOffset: PB,
+              frameCount: zB,
+              format: yB
             })
-          } catch (VH) {
-            if ("f32-planar" === zH) throw VH;
-            tH = "f32-planar"
+          } catch (nB) {
+            if ("f32-planar" === yB) throw nB;
+            jB = "f32-planar"
           }
         }
-        const xH = eH(tH),
-          vH = KH(tH),
-          PH = cH(tH);
-        let TH;
-        if (this._data instanceof fH) {
-          const HH = HH => {
-            const BH = this._data.getDataPlane(HH);
-            if (!(BH instanceof Uint8Array)) throw new TypeError("getDataPlane() must return a Uint8Array.");
-            const LH = CH * vH * (PH ? 1 : EH);
-            if (BH.byteLength !== LH) throw new TypeError(`Data plane ${HH} has invalid size. Expected exactly ${LH} bytes, got ${BH.byteLength} bytes.`);
-            return BH
+        const RB = LB(jB),
+          WB = FB(jB),
+          AB = iB(jB);
+        let VB;
+        if (this._data instanceof mB) {
+          const BB = BB => {
+            const OB = this._data.getDataPlane(BB);
+            if (!(OB instanceof Uint8Array)) throw new TypeError("getDataPlane() must return a Uint8Array.");
+            const GB = JB * WB * (AB ? 1 : MB);
+            if (OB.byteLength !== GB) throw new TypeError(`Data plane ${BB} has invalid size. Expected exactly ${GB} bytes, got ${OB.byteLength} bytes.`);
+            return OB
           };
-          if (PH)
-            if (uH) TH = HH(hH), hH = 0;
+          if (AB)
+            if (pB) VB = BB(oB), oB = 0;
             else {
-              TH = new Uint8Array(CH * vH * EH);
-              for (let BH = 0; BH < EH; BH++) {
-                const LH = HH(BH);
-                TH.set(LH, BH * CH * vH)
+              VB = new Uint8Array(JB * WB * MB);
+              for (let OB = 0; OB < MB; OB++) {
+                const GB = BB(OB);
+                VB.set(GB, OB * JB * WB)
               }
             }
-          else TH = HH(0)
-        } else if (this._data instanceof Uint8Array) TH = this._data;
-        else if ((0, AH.J)("f32-planar" === tH), uH) TH = new Uint8Array(this._data.allocationSize({
+          else VB = BB(0)
+        } else if (this._data instanceof Uint8Array) VB = this._data;
+        else if ((0, YB.Q)("f32-planar" === jB), pB) VB = new Uint8Array(this._data.allocationSize({
           format: "f32-planar",
-          planeIndex: hH
-        })), this._data.copyTo(TH, {
+          planeIndex: oB
+        })), this._data.copyTo(VB, {
           format: "f32-planar",
-          planeIndex: hH
-        }), hH = 0;
+          planeIndex: oB
+        }), oB = 0;
         else {
-          TH = new Uint8Array(this._data.allocationSize({
+          VB = new Uint8Array(this._data.allocationSize({
             format: "f32-planar",
             planeIndex: 0
-          }) * EH);
-          for (let HH = 0; HH < EH; HH++) this._data.copyTo(TH.subarray(HH * CH * vH, (HH + 1) * CH * vH), {
+          }) * MB);
+          for (let BB = 0; BB < MB; BB++) this._data.copyTo(VB.subarray(BB * JB * WB, (BB + 1) * JB * WB), {
             format: "f32-planar",
-            planeIndex: HH
+            planeIndex: BB
           })
         }
-        const UH = (0, AH.ed)(TH);
-        for (let AH = 0; AH < GH; AH++)
-          if (uH) {
-            let HH;
-            HH = PH ? (hH * CH + (AH + XH)) * vH : ((AH + XH) * EH + hH) * vH;
-            MH(WH, AH * YH, xH(UH, HH))
+        const SB = (0, YB.Gd)(VB);
+        for (let YB = 0; YB < zB; YB++)
+          if (pB) {
+            let BB;
+            BB = AB ? (oB * JB + (YB + PB)) * WB : ((YB + PB) * MB + oB) * WB;
+            NB(ZB, YB * lB, RB(SB, BB))
           } else
-            for (let HH = 0; HH < EH; HH++) {
-              let BH;
-              BH = PH ? (HH * CH + (AH + XH)) * vH : ((AH + XH) * EH + HH) * vH;
-              MH(WH, (AH * EH + HH) * YH, xH(UH, BH))
+            for (let BB = 0; BB < MB; BB++) {
+              let OB;
+              OB = AB ? (BB * JB + (YB + PB)) * WB : ((YB + PB) * MB + BB) * WB;
+              NB(ZB, (YB * MB + BB) * lB, RB(SB, OB))
             }
       }
       clone() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        if (this._data instanceof fH) {
-          const HH = new lH(this._data);
-          return HH.setTimestamp(this.timestamp), HH
+        if (this._data instanceof mB) {
+          const BB = new IB(this._data);
+          return BB.setTimestamp(this.timestamp), BB
         }
-        if (gH(this._data)) {
-          const HH = new lH(this._data.clone());
-          return HH.setTimestamp(this.timestamp), HH
+        if (rB(this._data)) {
+          const BB = new IB(this._data.clone());
+          return BB.setTimestamp(this.timestamp), BB
         }
-        return new lH({
+        return new IB({
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfFrames: this.numberOfFrames,
@@ -7756,46 +7756,46 @@ export const modules = {
           data: this._data
         })
       }
-      trim(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.numberOfFrames;
-        if (!Number.isInteger(HH) || HH < 0) throw new TypeError("startFrame must be a non-negative integer.");
-        if (!Number.isInteger(BH) || BH < 0) throw new TypeError("endFrame must be a non-negative integer.");
-        if (HH > this.numberOfFrames) throw new RangeError("startFrame out of range.");
-        if (BH > this.numberOfFrames) throw new RangeError("endFrame out of range.");
-        if (BH < HH) throw new RangeError("endFrame must not be less than startFrame.");
+      trim(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.numberOfFrames;
+        if (!Number.isInteger(BB) || BB < 0) throw new TypeError("startFrame must be a non-negative integer.");
+        if (!Number.isInteger(OB) || OB < 0) throw new TypeError("endFrame must be a non-negative integer.");
+        if (BB > this.numberOfFrames) throw new RangeError("startFrame out of range.");
+        if (OB > this.numberOfFrames) throw new RangeError("endFrame out of range.");
+        if (OB < BB) throw new RangeError("endFrame must not be less than startFrame.");
         if (this._closed) throw new Error("AudioSample is closed.");
-        const LH = BH - HH,
-          AH = KH(this.format);
-        let rH;
-        if (cH(this.format)) {
-          const BH = LH * AH;
-          if (rH = new Uint8Array(BH * this.numberOfChannels), LH > 0)
-            for (let AH = 0; AH < this.numberOfChannels; AH++) this.copyTo(rH.subarray(AH * BH, (AH + 1) * BH), {
-              planeIndex: AH,
+        const GB = OB - BB,
+          YB = FB(this.format);
+        let DB;
+        if (iB(this.format)) {
+          const OB = GB * YB;
+          if (DB = new Uint8Array(OB * this.numberOfChannels), GB > 0)
+            for (let YB = 0; YB < this.numberOfChannels; YB++) this.copyTo(DB.subarray(YB * OB, (YB + 1) * OB), {
+              planeIndex: YB,
               format: this.format,
-              frameOffset: HH,
-              frameCount: LH
+              frameOffset: BB,
+              frameCount: GB
             })
-        } else rH = new Uint8Array(LH * this.numberOfChannels * AH), LH > 0 && this.copyTo(rH, {
+        } else DB = new Uint8Array(GB * this.numberOfChannels * YB), GB > 0 && this.copyTo(DB, {
           planeIndex: 0,
           format: this.format,
-          frameOffset: HH,
-          frameCount: LH
+          frameOffset: BB,
+          frameCount: GB
         });
-        return new lH({
-          data: rH,
+        return new IB({
+          data: DB,
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfChannels: this.numberOfChannels,
-          timestamp: this.timestamp + HH / this.sampleRate
+          timestamp: this.timestamp + BB / this.sampleRate
         })
       }
       close() {
-        this._closed || (CH?.unregister(this), this._data instanceof fH ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : gH(this._data) ? this._data.close() : this._data = new Uint8Array(0), this._closed = !0)
+        this._closed || (JB?.unregister(this), this._data instanceof mB ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : rB(this._data) ? this._data.close() : this._data = new Uint8Array(0), this._closed = !0)
       }
       toAudioData() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        return this._data instanceof fH ? this._createAudioDataFromData() : gH(this._data) ? this._data.timestamp === this.microsecondTimestamp ? this._data.clone() : this._createAudioDataFromData() : new AudioData({
+        return this._data instanceof mB ? this._createAudioDataFromData() : rB(this._data) ? this._data.timestamp === this.microsecondTimestamp ? this._data.clone() : this._createAudioDataFromData() : new AudioData({
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfFrames: this.numberOfFrames,
@@ -7805,14 +7805,14 @@ export const modules = {
         })
       }
       _createAudioDataFromData() {
-        if (cH(this.format)) {
-          const HH = this.allocationSize({
+        if (iB(this.format)) {
+          const BB = this.allocationSize({
               planeIndex: 0,
               format: this.format
             }),
-            BH = new ArrayBuffer(HH * this.numberOfChannels);
-          for (let LH = 0; LH < this.numberOfChannels; LH++) this.copyTo(new Uint8Array(BH, LH * HH, HH), {
-            planeIndex: LH,
+            OB = new ArrayBuffer(BB * this.numberOfChannels);
+          for (let GB = 0; GB < this.numberOfChannels; GB++) this.copyTo(new Uint8Array(OB, GB * BB, BB), {
+            planeIndex: GB,
             format: this.format
           });
           return new AudioData({
@@ -7821,14 +7821,14 @@ export const modules = {
             numberOfFrames: this.numberOfFrames,
             numberOfChannels: this.numberOfChannels,
             timestamp: this.microsecondTimestamp,
-            data: BH
+            data: OB
           })
         } {
-          const HH = new ArrayBuffer(this.allocationSize({
+          const BB = new ArrayBuffer(this.allocationSize({
             planeIndex: 0,
             format: this.format
           }));
-          return this.copyTo(HH, {
+          return this.copyTo(BB, {
             planeIndex: 0,
             format: this.format
           }), new AudioData({
@@ -7837,83 +7837,83 @@ export const modules = {
             numberOfFrames: this.numberOfFrames,
             numberOfChannels: this.numberOfChannels,
             timestamp: this.microsecondTimestamp,
-            data: HH
+            data: BB
           })
         }
       }
       toAudioBuffer() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        const HH = new AudioBuffer({
+        const BB = new AudioBuffer({
             numberOfChannels: this.numberOfChannels,
             length: this.numberOfFrames,
             sampleRate: this.sampleRate
           }),
-          BH = new Float32Array(this.allocationSize({
+          OB = new Float32Array(this.allocationSize({
             planeIndex: 0,
             format: "f32-planar"
           }) / 4);
-        for (let LH = 0; LH < this.numberOfChannels; LH++) this.copyTo(BH, {
-          planeIndex: LH,
+        for (let GB = 0; GB < this.numberOfChannels; GB++) this.copyTo(OB, {
+          planeIndex: GB,
           format: "f32-planar"
-        }), HH.copyToChannel(BH, LH);
-        return HH
+        }), BB.copyToChannel(OB, GB);
+        return BB
       }
-      setTimestamp(HH) {
-        if (!Number.isFinite(HH)) throw new TypeError("newTimestamp must be a number.");
-        this.timestamp = HH
+      setTimestamp(BB) {
+        if (!Number.isFinite(BB)) throw new TypeError("newTimestamp must be a number.");
+        this.timestamp = BB
       } [Symbol.dispose]() {
         this.close()
       }
-      static * _fromAudioBuffer(HH, BH) {
-        if (!(HH instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
-        const LH = HH.numberOfChannels,
-          AH = HH.sampleRate,
-          rH = HH.length,
-          SH = Math.floor(24e4 / LH);
-        let hH = 0,
-          tH = rH;
-        for (; tH > 0;) {
-          const rH = Math.min(SH, tH),
-            zH = new Float32Array(LH * rH);
-          for (let BH = 0; BH < LH; BH++) HH.copyFromChannel(zH.subarray(BH * rH, (BH + 1) * rH), BH, hH);
-          yield new lH({
+      static * _fromAudioBuffer(BB, OB) {
+        if (!(BB instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
+        const GB = BB.numberOfChannels,
+          YB = BB.sampleRate,
+          DB = BB.length,
+          QB = Math.floor(24e4 / GB);
+        let oB = 0,
+          jB = DB;
+        for (; jB > 0;) {
+          const DB = Math.min(QB, jB),
+            yB = new Float32Array(GB * DB);
+          for (let OB = 0; OB < GB; OB++) BB.copyFromChannel(yB.subarray(OB * DB, (OB + 1) * DB), OB, oB);
+          yield new IB({
             format: "f32-planar",
-            sampleRate: AH,
-            numberOfFrames: rH,
-            numberOfChannels: LH,
-            timestamp: BH + hH / AH,
-            data: zH
-          }), hH += rH, tH -= rH
+            sampleRate: YB,
+            numberOfFrames: DB,
+            numberOfChannels: GB,
+            timestamp: OB + oB / YB,
+            data: yB
+          }), oB += DB, jB -= DB
         }
       }
-      static fromAudioBuffer(HH, BH) {
-        if (!(HH instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
-        const LH = HH.numberOfChannels,
-          AH = HH.sampleRate,
-          rH = HH.length,
-          SH = Math.floor(24e4 / LH);
-        let hH = 0,
-          tH = rH;
-        const zH = [];
-        for (; tH > 0;) {
-          const rH = Math.min(SH, tH),
-            CH = new Float32Array(LH * rH);
-          for (let BH = 0; BH < LH; BH++) HH.copyFromChannel(CH.subarray(BH * rH, (BH + 1) * rH), BH, hH);
-          const EH = new lH({
+      static fromAudioBuffer(BB, OB) {
+        if (!(BB instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
+        const GB = BB.numberOfChannels,
+          YB = BB.sampleRate,
+          DB = BB.length,
+          QB = Math.floor(24e4 / GB);
+        let oB = 0,
+          jB = DB;
+        const yB = [];
+        for (; jB > 0;) {
+          const DB = Math.min(QB, jB),
+            JB = new Float32Array(GB * DB);
+          for (let OB = 0; OB < GB; OB++) BB.copyFromChannel(JB.subarray(OB * DB, (OB + 1) * DB), OB, oB);
+          const MB = new IB({
             format: "f32-planar",
-            sampleRate: AH,
-            numberOfFrames: rH,
-            numberOfChannels: LH,
-            timestamp: BH + hH / AH,
-            data: CH
+            sampleRate: YB,
+            numberOfFrames: DB,
+            numberOfChannels: GB,
+            timestamp: OB + oB / YB,
+            data: JB
           });
-          zH.push(EH), hH += rH, tH -= rH
+          yB.push(MB), oB += DB, jB -= DB
         }
-        return zH
+        return yB
       }
     }
-    const KH = HH => {
-        switch (HH) {
+    const FB = BB => {
+        switch (BB) {
           case "u8":
           case "u8-planar":
             return 1;
@@ -7929,8 +7929,8 @@ export const modules = {
             throw new Error("Unknown AudioSampleFormat")
         }
       },
-      cH = HH => {
-        switch (HH) {
+      iB = BB => {
+        switch (BB) {
           case "u8-planar":
           case "s16-planar":
           case "s32-planar":
@@ -7940,41 +7940,41 @@ export const modules = {
             return !1
         }
       },
-      eH = HH => {
-        switch (HH) {
+      LB = BB => {
+        switch (BB) {
           case "u8":
           case "u8-planar":
-            return (HH, BH) => (HH.getUint8(BH) - 128) / 128;
+            return (BB, OB) => (BB.getUint8(OB) - 128) / 128;
           case "s16":
           case "s16-planar":
-            return (HH, BH) => HH.getInt16(BH, !0) / 32768;
+            return (BB, OB) => BB.getInt16(OB, !0) / 32768;
           case "s32":
           case "s32-planar":
-            return (HH, BH) => HH.getInt32(BH, !0) / 2147483648;
+            return (BB, OB) => BB.getInt32(OB, !0) / 2147483648;
           case "f32":
           case "f32-planar":
-            return (HH, BH) => HH.getFloat32(BH, !0)
+            return (BB, OB) => BB.getFloat32(OB, !0)
         }
       },
-      qH = HH => {
-        switch (HH) {
+      gB = BB => {
+        switch (BB) {
           case "u8":
           case "u8-planar":
-            return (HH, BH, LH) => HH.setUint8(BH, (0, AH._)(Math.round(128 * LH) + 128, 0, 255));
+            return (BB, OB, GB) => BB.setUint8(OB, (0, YB.cb)(Math.round(128 * GB) + 128, 0, 255));
           case "s16":
           case "s16-planar":
-            return (HH, BH, LH) => HH.setInt16(BH, (0, AH._)(Math.round(32768 * LH), -32768, 32767), !0);
+            return (BB, OB, GB) => BB.setInt16(OB, (0, YB.cb)(Math.round(32768 * GB), -32768, 32767), !0);
           case "s32":
           case "s32-planar":
-            return (HH, BH, LH) => HH.setInt32(BH, (0, AH._)(Math.round(2147483648 * LH), -2147483648, 2147483647), !0);
+            return (BB, OB, GB) => BB.setInt32(OB, (0, YB.cb)(Math.round(2147483648 * GB), -2147483648, 2147483647), !0);
           case "f32":
           case "f32-planar":
-            return (HH, BH, LH) => HH.setFloat32(BH, LH, !0)
+            return (BB, OB, GB) => BB.setFloat32(OB, GB, !0)
         }
       },
-      gH = HH => "undefined" !== typeof AudioData && HH instanceof AudioData,
-      NH = HH => {
-        switch (HH) {
+      rB = BB => "undefined" !== typeof AudioData && BB instanceof AudioData,
+      XB = BB => {
+        switch (BB) {
           case "u8-planar":
             return "u8";
           case "s16-planar":
@@ -7984,228 +7984,228 @@ export const modules = {
           case "f32-planar":
             return "f32";
           default:
-            return HH
+            return BB
         }
       },
-      RH = (HH, BH, LH, rH, SH, hH, tH, zH) => {
-        const CH = eH(LH),
-          EH = qH(rH),
-          XH = KH(LH),
-          GH = KH(rH),
-          YH = cH(LH);
-        if (cH(rH))
-          if (YH) {
-            const rH = new ArrayBuffer(zH * XH),
-              SH = (0, AH.ed)(rH);
-            HH.copyTo(rH, {
-              planeIndex: hH,
-              frameOffset: tH,
-              frameCount: zH,
-              format: LH
+      wB = (BB, OB, GB, DB, QB, oB, jB, yB) => {
+        const JB = LB(GB),
+          MB = gB(DB),
+          PB = FB(GB),
+          zB = FB(DB),
+          lB = iB(GB);
+        if (iB(DB))
+          if (lB) {
+            const DB = new ArrayBuffer(yB * PB),
+              QB = (0, YB.Gd)(DB);
+            BB.copyTo(DB, {
+              planeIndex: oB,
+              frameOffset: jB,
+              frameCount: yB,
+              format: GB
             });
-            for (let HH = 0; HH < zH; HH++) {
-              EH(BH, HH * GH, CH(SH, HH * XH))
+            for (let BB = 0; BB < yB; BB++) {
+              MB(OB, BB * zB, JB(QB, BB * PB))
             }
           } else {
-            const rH = new ArrayBuffer(zH * SH * XH),
-              YH = (0, AH.ed)(rH);
-            HH.copyTo(rH, {
+            const DB = new ArrayBuffer(yB * QB * PB),
+              lB = (0, YB.Gd)(DB);
+            BB.copyTo(DB, {
               planeIndex: 0,
-              frameOffset: tH,
-              frameCount: zH,
-              format: LH
+              frameOffset: jB,
+              frameCount: yB,
+              format: GB
             });
-            for (let HH = 0; HH < zH; HH++) {
-              EH(BH, HH * GH, CH(YH, (HH * SH + hH) * XH))
+            for (let BB = 0; BB < yB; BB++) {
+              MB(OB, BB * zB, JB(lB, (BB * QB + oB) * PB))
             }
           }
-        else if (YH) {
-          const rH = new ArrayBuffer(zH * XH),
-            hH = (0, AH.ed)(rH);
-          for (let AH = 0; AH < SH; AH++) {
-            HH.copyTo(rH, {
-              planeIndex: AH,
-              frameOffset: tH,
-              frameCount: zH,
-              format: LH
+        else if (lB) {
+          const DB = new ArrayBuffer(yB * PB),
+            oB = (0, YB.Gd)(DB);
+          for (let YB = 0; YB < QB; YB++) {
+            BB.copyTo(DB, {
+              planeIndex: YB,
+              frameOffset: jB,
+              frameCount: yB,
+              format: GB
             });
-            for (let HH = 0; HH < zH; HH++) {
-              EH(BH, (HH * SH + AH) * GH, CH(hH, HH * XH))
+            for (let BB = 0; BB < yB; BB++) {
+              MB(OB, (BB * QB + YB) * zB, JB(oB, BB * PB))
             }
           }
         } else {
-          const rH = new ArrayBuffer(zH * SH * XH),
-            hH = (0, AH.ed)(rH);
-          HH.copyTo(rH, {
+          const DB = new ArrayBuffer(yB * QB * PB),
+            oB = (0, YB.Gd)(DB);
+          BB.copyTo(DB, {
             planeIndex: 0,
-            frameOffset: tH,
-            frameCount: zH,
-            format: LH
+            frameOffset: jB,
+            frameCount: yB,
+            format: GB
           });
-          for (let HH = 0; HH < zH; HH++)
-            for (let LH = 0; LH < SH; LH++) {
-              const AH = HH * SH + LH;
-              EH(BH, AH * GH, CH(hH, AH * XH))
+          for (let BB = 0; BB < yB; BB++)
+            for (let GB = 0; GB < QB; GB++) {
+              const YB = BB * QB + GB;
+              MB(OB, YB * zB, JB(oB, YB * PB))
             }
         }
       },
-      jH = (HH, BH) => {
-        const LH = HH.allocationSize({
-            format: BH,
+      EB = (BB, OB) => {
+        const GB = BB.allocationSize({
+            format: OB,
             planeIndex: 0
           }),
-          AH = new ArrayBuffer(LH);
-        return HH.copyTo(AH, {
-          format: BH,
+          YB = new ArrayBuffer(GB);
+        return BB.copyTo(YB, {
+          format: OB,
           planeIndex: 0
-        }), new lH({
-          data: AH,
-          format: BH,
-          numberOfChannels: HH.numberOfChannels,
-          sampleRate: HH.sampleRate,
-          timestamp: HH.timestamp,
-          duration: HH.duration
+        }), new IB({
+          data: YB,
+          format: OB,
+          numberOfChannels: BB.numberOfChannels,
+          sampleRate: BB.sampleRate,
+          timestamp: BB.timestamp,
+          duration: BB.duration
         })
       }
   },
-  40879: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => hH,
-      f: () => CH,
-      i: () => SH,
-      j: () => zH
+  40627: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      e: () => JB,
+      h: () => QB,
+      j: () => yB
     });
-    const AH = /(?:(.+?)\n)?((?:\d{2}:)?\d{2}:\d{2}.\d{3})\s+-->\s+((?:\d{2}:)?\d{2}:\d{2}.\d{3})/g,
-      rH = /^WEBVTT(.|\n)*?\n{2}/,
-      SH = /<(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})>/g;
-    class hH {
-      constructor(HH) {
-        this.preambleText = null, this.preambleEmitted = !1, this.options = HH
+    const YB = /(?:(.+?)\n)?((?:\d{2}:)?\d{2}:\d{2}.\d{3})\s+-->\s+((?:\d{2}:)?\d{2}:\d{2}.\d{3})/g,
+      DB = /^WEBVTT(.|\n)*?\n{2}/,
+      QB = /<(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})>/g;
+    class oB {
+      constructor(BB) {
+        this.preambleText = null, this.preambleEmitted = !1, this.options = BB
       }
-      parse(HH) {
-        let BH;
-        if (HH = HH.replaceAll("\r\n", "\n").replaceAll("\r", "\n"), AH.lastIndex = 0, !this.preambleText) {
-          if (!rH.test(HH)) throw new Error("WebVTT preamble incorrect.");
-          BH = AH.exec(HH);
-          const LH = HH.slice(0, BH?.index ?? HH.length).trimEnd();
-          if (!LH) throw new Error("No WebVTT preamble provided.");
-          this.preambleText = LH, BH && (HH = HH.slice(BH.index), AH.lastIndex = 0)
+      parse(BB) {
+        let OB;
+        if (BB = BB.replaceAll("\r\n", "\n").replaceAll("\r", "\n"), YB.lastIndex = 0, !this.preambleText) {
+          if (!DB.test(BB)) throw new Error("WebVTT preamble incorrect.");
+          OB = YB.exec(BB);
+          const GB = BB.slice(0, OB?.index ?? BB.length).trimEnd();
+          if (!GB) throw new Error("No WebVTT preamble provided.");
+          this.preambleText = GB, OB && (BB = BB.slice(OB.index), YB.lastIndex = 0)
         }
-        for (; BH = AH.exec(HH);) {
-          const LH = HH.slice(0, BH.index),
-            rH = BH[1],
-            SH = BH.index + BH[0].length,
-            hH = HH.indexOf("\n", SH) + 1,
-            tH = HH.slice(SH, hH).trim();
-          let CH = HH.indexOf("\n\n", SH); - 1 === CH && (CH = HH.length);
-          const EH = zH(BH[2]),
-            XH = zH(BH[3]) - EH,
-            GH = HH.slice(hH, CH).trim();
-          HH = HH.slice(CH).trimStart(), AH.lastIndex = 0;
-          const YH = {
-              timestamp: EH / 1e3,
-              duration: XH / 1e3,
-              text: GH,
-              identifier: rH,
-              settings: tH,
-              notes: LH
+        for (; OB = YB.exec(BB);) {
+          const GB = BB.slice(0, OB.index),
+            DB = OB[1],
+            QB = OB.index + OB[0].length,
+            oB = BB.indexOf("\n", QB) + 1,
+            jB = BB.slice(QB, oB).trim();
+          let JB = BB.indexOf("\n\n", QB); - 1 === JB && (JB = BB.length);
+          const MB = yB(OB[2]),
+            PB = yB(OB[3]) - MB,
+            zB = BB.slice(oB, JB).trim();
+          BB = BB.slice(JB).trimStart(), YB.lastIndex = 0;
+          const lB = {
+              timestamp: MB / 1e3,
+              duration: PB / 1e3,
+              text: zB,
+              identifier: DB,
+              settings: jB,
+              notes: GB
             },
-            uH = {};
-          this.preambleEmitted || (uH.config = {
+            pB = {};
+          this.preambleEmitted || (pB.config = {
             description: this.preambleText
-          }, this.preambleEmitted = !0), this.options.output(YH, uH)
+          }, this.preambleEmitted = !0), this.options.output(lB, pB)
         }
       }
     }
-    const tH = /(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})/,
-      zH = HH => {
-        const BH = tH.exec(HH);
-        if (!BH) throw new Error("Expected match.");
-        return 36e5 * Number(BH[1] || "0") + 6e4 * Number(BH[2]) + 1e3 * Number(BH[3]) + Number(BH[4])
+    const jB = /(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})/,
+      yB = BB => {
+        const OB = jB.exec(BB);
+        if (!OB) throw new Error("Expected match.");
+        return 36e5 * Number(OB[1] || "0") + 6e4 * Number(OB[2]) + 1e3 * Number(OB[3]) + Number(OB[4])
       },
-      CH = HH => {
-        const BH = Math.floor(HH / 36e5),
-          LH = Math.floor(HH % 36e5 / 6e4),
-          AH = Math.floor(HH % 6e4 / 1e3),
-          rH = HH % 1e3;
-        return BH.toString().padStart(2, "0") + ":" + LH.toString().padStart(2, "0") + ":" + AH.toString().padStart(2, "0") + "." + rH.toString().padStart(3, "0")
+      JB = BB => {
+        const OB = Math.floor(BB / 36e5),
+          GB = Math.floor(BB % 36e5 / 6e4),
+          YB = Math.floor(BB % 6e4 / 1e3),
+          DB = BB % 1e3;
+        return OB.toString().padStart(2, "0") + ":" + GB.toString().padStart(2, "0") + ":" + YB.toString().padStart(2, "0") + "." + DB.toString().padStart(3, "0")
       }
   },
-  40888: (HH, BH, LH) => {
-    var AH;
-    LH.d(BH, {
-      d: () => CH,
-      g: () => EH,
-      i: () => GH,
-      m: () => hH
+  40641: (BB, OB, GB) => {
+    var YB;
+    GB.d(OB, {
+      b: () => JB,
+      e: () => MB,
+      g: () => zB,
+      i: () => oB
     });
-    var rH = LH(40891),
-      SH = LH(40820);
-    "undefined" !== typeof(AH || (AH = LH.t(rH, 2))) && (AH || (AH = LH.t(rH, 2)));
-    class hH extends SH.l {
+    var DB = GB(40648),
+      QB = GB(40574);
+    "undefined" !== typeof(YB || (YB = GB.t(DB, 2))) && (YB || (YB = GB.t(DB, 2)));
+    class oB extends QB.m {
       constructor() {
         super(...arguments), this._writerAcquired = !1, this._monotonicity = null, this.onwrite = null
       }
-      _setMonotonicity(HH) {
-        !1 !== this._monotonicity && (this._monotonicity = HH)
+      _setMonotonicity(BB) {
+        !1 !== this._monotonicity && (this._monotonicity = BB)
       }
-      _dispatchWrite(HH, BH) {
-        this.onwrite?.(HH, BH), this._emit("write", {
-          start: HH,
-          end: BH
+      _dispatchWrite(BB, OB) {
+        this.onwrite?.(BB, OB), this._emit("write", {
+          start: BB,
+          end: OB
         })
       }
-      slice(HH) {
-        if (!Number.isInteger(HH) || HH < 0) throw new TypeError("offset must be a non-negative integer.");
-        return new XH(this, HH)
+      slice(BB) {
+        if (!Number.isInteger(BB) || BB < 0) throw new TypeError("offset must be a non-negative integer.");
+        return new PB(this, BB)
       }
     }
-    const tH = 65536,
-      zH = 2 ** 32;
-    class CH extends hH {
+    const jB = 65536,
+      yB = 2 ** 32;
+    class JB extends oB {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (super(), this.buffer = null, this._maxPos = 0, !HH || "object" !== typeof HH) throw new TypeError("BufferTarget options, when provided, must be an object.");
-        if (void 0 !== HH.onFinalize && "function" !== typeof HH.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
-        if (this._options = HH, this._supportsResize = "resize" in new ArrayBuffer(0), this._supportsResize) try {
-          this._buffer = new ArrayBuffer(tH, {
-            maxByteLength: zH
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (super(), this.buffer = null, this._maxPos = 0, !BB || "object" !== typeof BB) throw new TypeError("BufferTarget options, when provided, must be an object.");
+        if (void 0 !== BB.onFinalize && "function" !== typeof BB.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
+        if (this._options = BB, this._supportsResize = "resize" in new ArrayBuffer(0), this._supportsResize) try {
+          this._buffer = new ArrayBuffer(jB, {
+            maxByteLength: yB
           })
         } catch {
-          this._buffer = new ArrayBuffer(tH), this._supportsResize = !1
-        } else this._buffer = new ArrayBuffer(tH);
+          this._buffer = new ArrayBuffer(jB), this._supportsResize = !1
+        } else this._buffer = new ArrayBuffer(jB);
         this._bytes = new Uint8Array(this._buffer)
       }
-      _ensureSize(HH) {
-        let BH = this._buffer.byteLength;
-        for (; BH < HH;) BH *= 2;
-        if (BH !== this._buffer.byteLength) {
-          if (BH > zH) throw new Error("ArrayBuffer exceeded maximum size of 4294967296 bytes. Please consider using another target.");
-          if (this._supportsResize) this._buffer.resize(BH);
+      _ensureSize(BB) {
+        let OB = this._buffer.byteLength;
+        for (; OB < BB;) OB *= 2;
+        if (OB !== this._buffer.byteLength) {
+          if (OB > yB) throw new Error("ArrayBuffer exceeded maximum size of 4294967296 bytes. Please consider using another target.");
+          if (this._supportsResize) this._buffer.resize(OB);
           else {
-            const HH = new ArrayBuffer(BH),
-              LH = new Uint8Array(HH);
-            LH.set(this._bytes, 0), this._buffer = HH, this._bytes = LH
+            const BB = new ArrayBuffer(OB),
+              GB = new Uint8Array(BB);
+            GB.set(this._bytes, 0), this._buffer = BB, this._bytes = GB
           }
         }
       }
       _start() {}
-      _write(HH, BH) {
-        this._ensureSize(BH + HH.byteLength), this._bytes.set(HH, BH), this._maxPos = Math.max(this._maxPos, BH + HH.byteLength), this._dispatchWrite(BH, BH + HH.byteLength)
+      _write(BB, OB) {
+        this._ensureSize(OB + BB.byteLength), this._bytes.set(BB, OB), this._maxPos = Math.max(this._maxPos, OB + BB.byteLength), this._dispatchWrite(OB, OB + BB.byteLength)
       }
       async _flush() {}
       async _finalize() {
         this.buffer = this._buffer.slice(0, this._maxPos), this._options.onFinalize && await this._options.onFinalize(this.buffer), this._emit("finalized")
       }
       async _close() {}
-      _getSlice(HH, BH) {
-        return this._bytes.slice(HH, BH)
+      _getSlice(BB, OB) {
+        return this._bytes.slice(BB, OB)
       }
     }
-    class EH extends hH {
+    class MB extends oB {
       _start() {}
-      _write(HH, BH) {
-        this._dispatchWrite(BH, BH + HH.byteLength)
+      _write(BB, OB) {
+        this._dispatchWrite(OB, OB + BB.byteLength)
       }
       async _flush() {}
       async _finalize() {
@@ -8213,13 +8213,13 @@ export const modules = {
       }
       async _close() {}
     }
-    class XH extends hH {
-      constructor(HH, BH) {
-        super(), this._baseTarget = HH, this._offset = BH
+    class PB extends oB {
+      constructor(BB, OB) {
+        super(), this._baseTarget = BB, this._offset = OB
       }
       _start() {}
-      _write(HH, BH) {
-        this._baseTarget._write(HH, this._offset + BH), this._dispatchWrite(BH, BH + HH.byteLength)
+      _write(BB, OB) {
+        this._baseTarget._write(BB, this._offset + OB), this._dispatchWrite(OB, OB + BB.byteLength)
       }
       _flush() {
         return this._baseTarget._flush()
@@ -8228,81 +8228,81 @@ export const modules = {
         this._emit("finalized")
       }
       async _close() {}
-      _setMonotonicity(HH) {
-        super._setMonotonicity(HH), this._baseTarget._setMonotonicity(HH)
+      _setMonotonicity(BB) {
+        super._setMonotonicity(BB), this._baseTarget._setMonotonicity(BB)
       }
     }
-    class GH {
-      constructor(HH, BH) {
-        if (this.rootPath = HH, this.getTarget = BH, "string" !== typeof HH) throw new TypeError("rootPath must be a string.");
-        if ("function" !== typeof BH) throw new TypeError("getTarget must be a function.")
+    class zB {
+      constructor(BB, OB) {
+        if (this.rootPath = BB, this.getTarget = OB, "string" !== typeof BB) throw new TypeError("rootPath must be a string.");
+        if ("function" !== typeof OB) throw new TypeError("getTarget must be a function.")
       }
     }
   },
-  40872: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH
+  40619: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => YB
     });
-    const AH = "Mediabunny v1.61.3"
+    const YB = "Mediabunny v1.61.3"
   },
-  40881: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH
+  40633: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => DB
     });
-    var AH = LH(40820);
-    class rH {
-      constructor(HH, BH) {
-        if (this.finalized = !1, this.started = !1, this.pos = 0, this.trackedWrites = null, this.trackedStart = -1, this.trackedEnd = -1, HH._writerAcquired) throw new Error("Can't have multiple Writers for the same Target.");
-        this.target = HH, HH._setMonotonicity(BH), HH._writerAcquired = !0
+    var YB = GB(40574);
+    class DB {
+      constructor(BB, OB) {
+        if (this.finalized = !1, this.started = !1, this.pos = 0, this.trackedWrites = null, this.trackedStart = -1, this.trackedEnd = -1, BB._writerAcquired) throw new Error("Can't have multiple Writers for the same Target.");
+        this.target = BB, BB._setMonotonicity(OB), BB._writerAcquired = !0
       }
       start() {
-        (0, AH.J)(!this.started), this.target._start(), this.started = !0
+        (0, YB.Q)(!this.started), this.target._start(), this.started = !0
       }
-      write(HH) {
-        (0, AH.J)(this.started && !this.finalized), this.maybeTrackWrites(HH), this.target._write(HH, this.pos), this.pos += HH.byteLength
+      write(BB) {
+        (0, YB.Q)(this.started && !this.finalized), this.maybeTrackWrites(BB), this.target._write(BB, this.pos), this.pos += BB.byteLength
       }
-      seek(HH) {
-        this.pos = HH
+      seek(BB) {
+        this.pos = BB
       }
       getPos() {
         return this.pos
       }
       async flush() {
-        return (0, AH.J)(this.started && !this.finalized), this.target._flush()
+        return (0, YB.Q)(this.started && !this.finalized), this.target._flush()
       }
       async finalize() {
-        (0, AH.J)(this.started && !this.finalized), await this.target._finalize(), this.finalized = !0
+        (0, YB.Q)(this.started && !this.finalized), await this.target._finalize(), this.finalized = !0
       }
-      maybeTrackWrites(HH) {
+      maybeTrackWrites(BB) {
         if (!this.trackedWrites) return;
-        let BH = this.getPos();
-        if (BH < this.trackedStart) {
-          if (BH + HH.byteLength <= this.trackedStart) return;
-          HH = HH.subarray(this.trackedStart - BH), BH = 0
+        let OB = this.getPos();
+        if (OB < this.trackedStart) {
+          if (OB + BB.byteLength <= this.trackedStart) return;
+          BB = BB.subarray(this.trackedStart - OB), OB = 0
         }
-        const LH = BH + HH.byteLength - this.trackedStart;
-        let AH = this.trackedWrites.byteLength;
-        for (; AH < LH;) AH *= 2;
-        if (AH !== this.trackedWrites.byteLength) {
-          const HH = new Uint8Array(AH);
-          HH.set(this.trackedWrites, 0), this.trackedWrites = HH
+        const GB = OB + BB.byteLength - this.trackedStart;
+        let YB = this.trackedWrites.byteLength;
+        for (; YB < GB;) YB *= 2;
+        if (YB !== this.trackedWrites.byteLength) {
+          const BB = new Uint8Array(YB);
+          BB.set(this.trackedWrites, 0), this.trackedWrites = BB
         }
-        this.trackedWrites.set(HH, BH - this.trackedStart), this.trackedEnd = Math.max(this.trackedEnd, BH + HH.byteLength)
+        this.trackedWrites.set(BB, OB - this.trackedStart), this.trackedEnd = Math.max(this.trackedEnd, OB + BB.byteLength)
       }
       startTrackingWrites() {
         this.trackedWrites = new Uint8Array(1024), this.trackedStart = this.getPos(), this.trackedEnd = this.trackedStart
       }
       stopTrackingWrites() {
         if (!this.trackedWrites) throw new Error("Internal error: Can't get tracked writes since nothing was tracked.");
-        const HH = {
+        const BB = {
           data: this.trackedWrites.subarray(0, this.trackedEnd - this.trackedStart),
           start: this.trackedStart,
           end: this.trackedEnd
         };
-        return this.trackedWrites = null, HH
+        return this.trackedWrites = null, BB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

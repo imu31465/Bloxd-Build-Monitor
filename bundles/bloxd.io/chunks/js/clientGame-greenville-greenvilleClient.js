@@ -1,30 +1,30 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  34986: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH
+  34790: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB
     });
-    var AH = LH(4947),
-      rH = LH(4951);
+    var YB = GB(4949),
+      DB = GB(4956);
 
-    function SH(HH) {
+    function QB(BB) {
       let {
-        children: BH,
-        showing: LH,
-        globallyUniqueKey: SH,
-        alwaysMountChildren: hH = !1,
-        doGameplayStartStopOnShow: tH = !0,
-        keepsMovement: zH = !1
-      } = HH;
-      return (0, rH.c)(!0, LH, SH, zH), (0, AH.e)(tH, LH), LH || hH ? BH : null
+        children: OB,
+        showing: GB,
+        globallyUniqueKey: QB,
+        alwaysMountChildren: oB = !1,
+        doGameplayStartStopOnShow: jB = !0,
+        keepsMovement: yB = !1
+      } = BB;
+      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
     }
   },
-  37565: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH
+  37361: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB
     });
-    const AH = [{
+    const YB = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -41,58 +41,58 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function rH(HH, BH, LH) {
-      const rH = Math.abs(HH - BH),
-        SH = Date.now() - LH;
-      for (const hH of AH)
-        if (HH < hH.maxDist) return rH >= hH.hardUpdateDist || SH > hH.timeBetweenSoftChecks && rH >= hH.softUpdateDist;
+    function DB(BB, OB, GB) {
+      const DB = Math.abs(BB - OB),
+        QB = Date.now() - GB;
+      for (const oB of YB)
+        if (BB < oB.maxDist) return DB >= oB.hardUpdateDist || QB > oB.timeBetweenSoftChecks && DB >= oB.softUpdateDist;
       return !1
     }
   },
-  39361: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      h: () => tH
+  39151: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      g: () => jB
     });
-    var AH = LH(317),
-      rH = LH(35006),
-      SH = LH(3639);
+    var YB = GB(353),
+      DB = GB(34813),
+      QB = GB(3708);
 
-    function hH(HH) {
-      const BH = (0, SH.e)(HH);
-      return (0, AH.Yb)(HH, void 0 === BH ? void 0 : (0, rH.displayNameOf)(BH))
+    function oB(BB) {
+      const OB = (0, QB.c)(BB);
+      return (0, YB.bc)(BB, void 0 === OB ? void 0 : (0, DB.displayNameOf)(OB))
     }
 
-    function tH(HH, BH) {
-      return HH(hH(BH))
+    function jB(BB, OB) {
+      return BB(oB(OB))
     }
   },
-  39370: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      e: () => SH
+  39154: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      f: () => QB
     });
-    const AH = new WeakMap;
+    const YB = new WeakMap;
 
-    function rH(HH) {
-      let BH = AH.get(HH);
-      return BH || (BH = {
-        hidden: HH.hidden,
+    function DB(BB) {
+      let OB = YB.get(BB);
+      return OB || (OB = {
+        hidden: BB.hidden,
         x: NaN,
         y: NaN
-      }, AH.set(HH, BH)), BH
+      }, YB.set(BB, OB)), OB
     }
 
-    function SH(HH, BH) {
-      const LH = rH(HH);
-      LH.hidden !== BH && (LH.hidden = BH, HH.hidden = BH)
+    function QB(BB, OB) {
+      const GB = DB(BB);
+      GB.hidden !== OB && (GB.hidden = OB, BB.hidden = OB)
     }
 
-    function hH(HH, BH, LH) {
-      const AH = rH(HH);
-      AH.x === BH && AH.y === LH || (AH.x = BH, AH.y = LH, HH.style.translate = `${BH}vw ${LH}vh`)
+    function oB(BB, OB, GB) {
+      const YB = DB(BB);
+      YB.x === OB && YB.y === GB || (YB.x = OB, YB.y = GB, BB.style.translate = `${OB}vw ${GB}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

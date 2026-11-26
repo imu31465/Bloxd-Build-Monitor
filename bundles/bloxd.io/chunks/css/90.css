@@ -6148,11 +6148,22 @@ html[data-app-covered] .WholeAppWrapper .StoreCta .StoreCtaLabelPending:after {
   stroke-linejoin: round
 }
 
-.StoreCharacterCard .StoreCharacterLink .StoreCharacterTier {
-  align-self: center;
+.StoreCharacterCard .StoreCharacterLink .StoreCharacterTierLine {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .2rem .6rem;
+  justify-content: center;
   margin-top: .2rem;
   position: relative;
   z-index: 3
+}
+
+.StoreCharacterCard .StoreCharacterLink .StoreCharacterTierLine .StoreCharacterAnimated {
+  align-items: center;
+  color: #fff;
+  display: inline-flex;
+  gap: .3rem
 }
 
 @media(hover:hover) {

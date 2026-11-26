@@ -1,29 +1,29 @@
 export const id = 669;
 export const ids = [669];
 export const modules = {
-  64206: (HH, BH, LH) => {
-    function AH(HH, BH) {
-      for (const LH of HH._frameGraph._tasks)
-        if (LH?._config && LH._colorAttachment && (LH._config.rt === BH.scRT || LH._config.rst === BH.scRT)) return LH
+  63977: (BB, OB, GB) => {
+    function YB(BB, OB) {
+      for (const GB of BB._frameGraph._tasks)
+        if (GB?._config && GB._colorAttachment && (GB._config.rt === OB.scRT || GB._config.rst === OB.scRT)) return GB
     }
 
-    function rH(HH, BH) {
-      const LH = HH._renderingContexts[HH._renderingContexts.length - 1];
-      if (!LH?._frameGraph) return;
-      const rH = AH(BH, HH);
-      if (!rH) return;
-      if (1 === HH.msaaSamples) return void(rH._config.clr = !1);
-      const SH = rH.enabled;
-      rH._config.clr = !0, rH.enabled = !1, BH._beforeRender.unshift((() => {
-        const BH = AH(LH, HH),
-          hH = BH?._config.rst === HH.scRT && BH._config.rt._colorView;
-        rH.enabled = !!hH && SH, rH._config.clr = !hH, hH && (rH._colorAttachment.view = hH)
+    function DB(BB, OB) {
+      const GB = BB._renderingContexts[BB._renderingContexts.length - 1];
+      if (!GB?._frameGraph) return;
+      const DB = YB(OB, BB);
+      if (!DB) return;
+      if (1 === BB.msaaSamples) return void(DB._config.clr = !1);
+      const QB = DB.enabled;
+      DB._config.clr = !0, DB.enabled = !1, OB._beforeRender.unshift((() => {
+        const OB = YB(GB, BB),
+          oB = OB?._config.rst === BB.scRT && OB._config.rt._colorView;
+        DB.enabled = !!oB && QB, DB._config.clr = !oB, oB && (DB._colorAttachment.view = oB)
       }))
     }
-    LH.r(BH), LH.d(BH, {
-      configureSwapchainOverlayScene: () => rH
+    GB.r(OB), GB.d(OB, {
+      configureSwapchainOverlayScene: () => DB
     })
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

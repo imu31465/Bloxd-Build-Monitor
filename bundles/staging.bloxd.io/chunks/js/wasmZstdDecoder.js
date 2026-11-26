@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var HH = __webpack_require__.u,
-        BH = __webpack_require__.e,
-        LH = {},
-        AH = {};
-      __webpack_require__.u = function(BH) {
-        return HH(BH) + (LH.hasOwnProperty(BH) ? "?" + LH[BH] : "")
-      }, __webpack_require__.e = function(rH) {
-        return BH(rH).catch((function(BH) {
-          var SH = AH.hasOwnProperty(rH) ? AH[rH] : 4;
-          if (SH < 1) {
-            var hH = HH(rH);
-            if (BH.message = "Loading chunk " + rH + " failed after 4 retries.\n(" + hH + ")", BH.request = hH, LH[rH] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete AH[rH]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === BH.code) {
-              var tH = __webpack_require__.miniCssF(rH);
-              BH.message = BH.message.replace("Loading chunk", "Loading CSS chunk").replace(hH, tH), BH.request = tH
+      var BB = __webpack_require__.u,
+        OB = __webpack_require__.e,
+        GB = {},
+        YB = {};
+      __webpack_require__.u = function(OB) {
+        return BB(OB) + (GB.hasOwnProperty(OB) ? "?" + GB[OB] : "")
+      }, __webpack_require__.e = function(DB) {
+        return OB(DB).catch((function(OB) {
+          var QB = YB.hasOwnProperty(DB) ? YB[DB] : 4;
+          if (QB < 1) {
+            var oB = BB(DB);
+            if (OB.message = "Loading chunk " + DB + " failed after 4 retries.\n(" + oB + ")", OB.request = oB, GB[DB] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete YB[DB]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === OB.code) {
+              var jB = __webpack_require__.miniCssF(DB);
+              OB.message = OB.message.replace("Loading chunk", "Loading CSS chunk").replace(oB, jB), OB.request = jB
             }
-            throw BH
+            throw OB
           }
-          return new Promise((function(HH) {
-            var BH = 4 - SH + 1;
+          return new Promise((function(BB) {
+            var OB = 4 - QB + 1;
             setTimeout((function() {
-              var BH = "cache-bust=" + Date.now();
-              LH[rH] = BH, AH[rH] = SH - 1, HH(__webpack_require__.e(rH))
-            }), function(HH) {
-              return 500 * Math.pow(2, HH)
-            }(BH))
+              var OB = "cache-bust=" + Date.now();
+              GB[DB] = OB, YB[DB] = QB - 1, BB(__webpack_require__.e(DB))
+            }), function(BB) {
+              return 500 * Math.pow(2, BB)
+            }(OB))
           }))
         }))
       }
     }
   })();
 
-  function HH(HH) {
-    return HH instanceof Error ? HH.message : String(HH)
+  function BB(BB) {
+    return BB instanceof Error ? BB.message : String(BB)
   }
-  const BH = ArrayBuffer,
-    LH = Uint8Array,
-    AH = Uint16Array,
-    rH = Int16Array,
-    SH = Int32Array,
-    hH = (HH, BH, AH) => {
-      if (LH.prototype.slice) return LH.prototype.slice.call(HH, BH, AH);
-      (null == BH || BH < 0) && (BH = 0), (null == AH || AH > HH.length) && (AH = HH.length);
-      const rH = new LH(AH - BH);
-      return rH.set(HH.subarray(BH, AH)), rH
+  const OB = ArrayBuffer,
+    GB = Uint8Array,
+    YB = Uint16Array,
+    DB = Int16Array,
+    QB = Int32Array,
+    oB = (BB, OB, YB) => {
+      if (GB.prototype.slice) return GB.prototype.slice.call(BB, OB, YB);
+      (null == OB || OB < 0) && (OB = 0), (null == YB || YB > BB.length) && (YB = BB.length);
+      const DB = new GB(YB - OB);
+      return DB.set(BB.subarray(OB, YB)), DB
     },
-    tH = (HH, BH, AH, rH) => {
-      if (LH.prototype.fill) return LH.prototype.fill.call(HH, BH, AH, rH);
-      for ((null == AH || AH < 0) && (AH = 0), (null == rH || rH > HH.length) && (rH = HH.length); AH < rH; ++AH) HH[AH] = BH;
-      return HH
+    jB = (BB, OB, YB, DB) => {
+      if (GB.prototype.fill) return GB.prototype.fill.call(BB, OB, YB, DB);
+      for ((null == YB || YB < 0) && (YB = 0), (null == DB || DB > BB.length) && (DB = BB.length); YB < DB; ++YB) BB[YB] = OB;
+      return BB
     },
-    zH = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    CH = (HH, BH, LH) => {
-      const AH = new Error(BH || zH[HH]);
-      if (AH.code = HH, Error.captureStackTrace && Error.captureStackTrace(AH, CH), !LH) throw AH;
-      return AH
+    yB = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    JB = (BB, OB, GB) => {
+      const YB = new Error(OB || yB[BB]);
+      if (YB.code = BB, Error.captureStackTrace && Error.captureStackTrace(YB, JB), !GB) throw YB;
+      return YB
     },
-    EH = (HH, BH, LH) => {
-      let AH = 0,
-        rH = 0;
-      for (; AH < LH; ++AH) rH |= HH[BH++] << (AH << 3);
-      return rH
+    MB = (BB, OB, GB) => {
+      let YB = 0,
+        DB = 0;
+      for (; YB < GB; ++YB) DB |= BB[OB++] << (YB << 3);
+      return DB
     },
-    XH = (HH, BH) => {
-      const AH = HH[0] | HH[1] << 8 | HH[2] << 16;
-      if (3126568 == AH && 253 == HH[3]) {
-        const AH = HH[4],
-          rH = AH >> 5 & 1,
-          hH = AH >> 2 & 1,
-          tH = 3 & AH,
-          zH = AH >> 6;
-        8 & AH && CH(0);
-        let XH = 6 - rH;
-        const GH = 3 == tH ? 4 : tH,
-          YH = EH(HH, XH, GH);
-        XH += GH;
-        const uH = zH ? 1 << zH : rH,
-          QH = EH(HH, XH, uH) + (1 == zH && 256);
-        let WH = QH;
-        if (!rH) {
-          const BH = 1 << 10 + (HH[5] >> 3);
-          WH = BH + (BH >> 3) * (7 & HH[5])
+    PB = (BB, OB) => {
+      const YB = BB[0] | BB[1] << 8 | BB[2] << 16;
+      if (3126568 == YB && 253 == BB[3]) {
+        const YB = BB[4],
+          DB = YB >> 5 & 1,
+          oB = YB >> 2 & 1,
+          jB = 3 & YB,
+          yB = YB >> 6;
+        8 & YB && JB(0);
+        let PB = 6 - DB;
+        const zB = 3 == jB ? 4 : jB,
+          lB = MB(BB, PB, zB);
+        PB += zB;
+        const pB = yB ? 1 << yB : DB,
+          qB = MB(BB, PB, pB) + (1 == yB && 256);
+        let ZB = qB;
+        if (!DB) {
+          const OB = 1 << 10 + (BB[5] >> 3);
+          ZB = OB + (OB >> 3) * (7 & BB[5])
         }
-        WH > 2145386496 && CH(1);
-        const MH = new LH((1 == BH ? QH || WH : BH ? 0 : WH) + 12);
-        return MH[0] = 1, MH[4] = 4, MH[8] = 8, {
-          b: XH + uH,
+        ZB > 2145386496 && JB(1);
+        const NB = new GB((1 == OB ? qB || ZB : OB ? 0 : ZB) + 12);
+        return NB[0] = 1, NB[4] = 4, NB[8] = 8, {
+          b: PB + pB,
           y: 0,
           l: 0,
-          d: YH,
-          w: BH && 1 != BH ? BH : MH.subarray(12),
-          e: WH,
-          o: new SH(MH.buffer, 0, 3),
-          u: QH,
-          c: hH,
-          m: Math.min(131072, WH)
+          d: lB,
+          w: OB && 1 != OB ? OB : NB.subarray(12),
+          e: ZB,
+          o: new QB(NB.buffer, 0, 3),
+          u: qB,
+          c: oB,
+          m: Math.min(131072, ZB)
         }
       }
-      if (25481893 == (AH >> 4 | HH[3] << 20)) return 8 + (((rH = HH)[hH = 4] | rH[hH + 1] << 8 | rH[hH + 2] << 16 | rH[hH + 3] << 24) >>> 0);
-      var rH, hH;
-      CH(0)
+      if (25481893 == (YB >> 4 | BB[3] << 20)) return 8 + (((DB = BB)[oB = 4] | DB[oB + 1] << 8 | DB[oB + 2] << 16 | DB[oB + 3] << 24) >>> 0);
+      var DB, oB;
+      JB(0)
     },
-    GH = HH => {
-      let BH = 0;
-      for (; 1 << BH <= HH; ++BH);
-      return BH - 1
+    zB = BB => {
+      let OB = 0;
+      for (; 1 << OB <= BB; ++OB);
+      return OB - 1
     },
-    YH = (HH, SH, hH) => {
-      let tH = 4 + (SH << 3);
-      const zH = 5 + (15 & HH[SH]);
-      zH > hH && CH(3);
-      const EH = 1 << zH;
-      let XH = EH,
-        YH = -1,
-        uH = -1,
-        QH = -1,
-        WH = EH;
-      const MH = new BH(512 + (EH << 2)),
-        xH = new rH(MH, 0, 256),
-        vH = new AH(MH, 0, 256),
-        PH = new AH(MH, 512, EH),
-        TH = 512 + (EH << 1),
-        UH = new LH(MH, TH, EH),
-        VH = new LH(MH, TH + EH);
-      for (; YH < 255 && XH > 0;) {
-        const BH = GH(XH + 1),
-          LH = tH >> 3,
-          AH = (1 << BH + 1) - 1;
-        let rH = (HH[LH] | HH[LH + 1] << 8 | HH[LH + 2] << 16) >> (7 & tH) & AH;
-        const SH = (1 << BH) - 1,
-          hH = AH - XH - 1,
-          zH = rH & SH;
-        if (zH < hH ? (tH += BH, rH = zH) : (tH += BH + 1, rH > SH && (rH -= hH)), xH[++YH] = --rH, -1 == rH ? (XH += rH, UH[--WH] = YH) : XH -= rH, !rH)
+    lB = (BB, QB, oB) => {
+      let jB = 4 + (QB << 3);
+      const yB = 5 + (15 & BB[QB]);
+      yB > oB && JB(3);
+      const MB = 1 << yB;
+      let PB = MB,
+        lB = -1,
+        pB = -1,
+        qB = -1,
+        ZB = MB;
+      const NB = new OB(512 + (MB << 2)),
+        RB = new DB(NB, 0, 256),
+        WB = new YB(NB, 0, 256),
+        AB = new YB(NB, 512, MB),
+        VB = 512 + (MB << 1),
+        SB = new GB(NB, VB, MB),
+        nB = new GB(NB, VB + MB);
+      for (; lB < 255 && PB > 0;) {
+        const OB = zB(PB + 1),
+          GB = jB >> 3,
+          YB = (1 << OB + 1) - 1;
+        let DB = (BB[GB] | BB[GB + 1] << 8 | BB[GB + 2] << 16) >> (7 & jB) & YB;
+        const QB = (1 << OB) - 1,
+          oB = YB - PB - 1,
+          yB = DB & QB;
+        if (yB < oB ? (jB += OB, DB = yB) : (jB += OB + 1, DB > QB && (DB -= oB)), RB[++lB] = --DB, -1 == DB ? (PB += DB, SB[--ZB] = lB) : PB -= DB, !DB)
           do {
-            const BH = tH >> 3;
-            uH = (HH[BH] | HH[BH + 1] << 8) >> (7 & tH) & 3, tH += 2, YH += uH
-          } while (3 == uH)
-      }(YH > 255 || XH) && CH(0);
-      let OH = 0;
-      const bH = (EH >> 1) + (EH >> 3) + 3,
-        kH = EH - 1;
-      for (let BH = 0; BH <= YH; ++BH) {
-        const HH = xH[BH];
-        if (HH < 1) vH[BH] = -HH;
+            const OB = jB >> 3;
+            pB = (BB[OB] | BB[OB + 1] << 8) >> (7 & jB) & 3, jB += 2, lB += pB
+          } while (3 == pB)
+      }(lB > 255 || PB) && JB(0);
+      let UB = 0;
+      const fB = (MB >> 1) + (MB >> 3) + 3,
+        kB = MB - 1;
+      for (let OB = 0; OB <= lB; ++OB) {
+        const BB = RB[OB];
+        if (BB < 1) WB[OB] = -BB;
         else
-          for (QH = 0; QH < HH; ++QH) {
-            UH[OH] = BH;
+          for (qB = 0; qB < BB; ++qB) {
+            SB[UB] = OB;
             do {
-              OH = OH + bH & kH
-            } while (OH >= WH)
+              UB = UB + fB & kB
+            } while (UB >= ZB)
           }
       }
-      for (OH && CH(0), QH = 0; QH < EH; ++QH) {
-        const HH = vH[UH[QH]]++,
-          BH = VH[QH] = zH - GH(HH);
-        PH[QH] = (HH << BH) - EH
+      for (UB && JB(0), qB = 0; qB < MB; ++qB) {
+        const BB = WB[SB[qB]]++,
+          OB = nB[qB] = yB - zB(BB);
+        AB[qB] = (BB << OB) - MB
       }
-      return [tH + 7 >> 3, {
-        b: zH,
-        s: UH,
-        n: VH,
-        t: PH
+      return [jB + 7 >> 3, {
+        b: yB,
+        s: SB,
+        n: nB,
+        t: AB
       }]
     },
-    uH = YH(new LH([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    QH = YH(new LH([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    WH = YH(new LH([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    MH = (HH, BH) => {
-      const LH = HH.length,
-        AH = new SH(LH);
-      for (let rH = 0; rH < LH; ++rH) AH[rH] = BH, BH += 1 << HH[rH];
-      return AH
+    pB = lB(new GB([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    qB = lB(new GB([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    ZB = lB(new GB([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    NB = (BB, OB) => {
+      const GB = BB.length,
+        YB = new QB(GB);
+      for (let DB = 0; DB < GB; ++DB) YB[DB] = OB, OB += 1 << BB[DB];
+      return YB
     },
-    xH = new LH(new SH([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    vH = MH(xH, 0),
-    PH = new LH(new SH([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    TH = MH(PH, 3),
-    UH = (HH, BH, LH) => {
-      const AH = HH.length,
-        rH = BH.length,
-        SH = HH[AH - 1],
-        hH = (1 << LH.b) - 1,
-        tH = -LH.b;
-      SH || CH(0);
-      let zH = 0,
-        EH = LH.b,
-        XH = (AH << 3) - 8 + GH(SH) - EH,
-        YH = -1;
-      for (; XH > tH && YH < rH;) {
-        const AH = XH >> 3;
-        zH = (zH << EH | (HH[AH] | HH[AH + 1] << 8 | HH[AH + 2] << 16) >> (7 & XH)) & hH, BH[++YH] = LH.s[zH], XH -= EH = LH.n[zH]
+    RB = new GB(new QB([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    WB = NB(RB, 0),
+    AB = new GB(new QB([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    VB = NB(AB, 3),
+    SB = (BB, OB, GB) => {
+      const YB = BB.length,
+        DB = OB.length,
+        QB = BB[YB - 1],
+        oB = (1 << GB.b) - 1,
+        jB = -GB.b;
+      QB || JB(0);
+      let yB = 0,
+        MB = GB.b,
+        PB = (YB << 3) - 8 + zB(QB) - MB,
+        lB = -1;
+      for (; PB > jB && lB < DB;) {
+        const YB = PB >> 3;
+        yB = (yB << MB | (BB[YB] | BB[YB + 1] << 8 | BB[YB + 2] << 16) >> (7 & PB)) & oB, OB[++lB] = GB.s[yB], PB -= MB = GB.n[yB]
       }
-      XH == tH && YH + 1 == rH || CH(0)
+      PB == jB && lB + 1 == DB || JB(0)
     },
-    VH = (HH, BH, LH) => {
-      let AH = 6;
-      const rH = BH.length + 3 >> 2,
-        SH = rH << 1,
-        hH = rH + SH;
-      UH(HH.subarray(AH, AH += HH[0] | HH[1] << 8), BH.subarray(0, rH), LH), UH(HH.subarray(AH, AH += HH[2] | HH[3] << 8), BH.subarray(rH, SH), LH), UH(HH.subarray(AH, AH += HH[4] | HH[5] << 8), BH.subarray(SH, hH), LH), UH(HH.subarray(AH), BH.subarray(hH), LH)
+    nB = (BB, OB, GB) => {
+      let YB = 6;
+      const DB = OB.length + 3 >> 2,
+        QB = DB << 1,
+        oB = DB + QB;
+      SB(BB.subarray(YB, YB += BB[0] | BB[1] << 8), OB.subarray(0, DB), GB), SB(BB.subarray(YB, YB += BB[2] | BB[3] << 8), OB.subarray(DB, QB), GB), SB(BB.subarray(YB, YB += BB[4] | BB[5] << 8), OB.subarray(QB, oB), GB), SB(BB.subarray(YB), OB.subarray(oB), GB)
     },
-    OH = (HH, BH, rH) => {
-      let SH = BH.b;
-      const zH = HH[SH],
-        EH = zH >> 1 & 3;
-      BH.l = 1 & zH;
-      const XH = zH >> 3 | HH[SH + 1] << 5 | HH[SH + 2] << 13,
-        MH = (SH += 3) + XH;
-      if (1 == EH) {
-        if (SH >= HH.length) return;
-        return BH.b = SH + 1, rH ? (tH(rH, HH[SH], BH.y, BH.y += XH), rH) : tH(new LH(XH), HH[SH])
+    UB = (BB, OB, DB) => {
+      let QB = OB.b;
+      const yB = BB[QB],
+        MB = yB >> 1 & 3;
+      OB.l = 1 & yB;
+      const PB = yB >> 3 | BB[QB + 1] << 5 | BB[QB + 2] << 13,
+        NB = (QB += 3) + PB;
+      if (1 == MB) {
+        if (QB >= BB.length) return;
+        return OB.b = QB + 1, DB ? (jB(DB, BB[QB], OB.y, OB.y += PB), DB) : jB(new GB(PB), BB[QB])
       }
-      if (!(MH > HH.length)) {
-        if (0 == EH) return BH.b = MH, rH ? (rH.set(HH.subarray(SH, MH), BH.y), BH.y += XH, rH) : hH(HH, SH, MH);
-        if (2 == EH) {
-          const zH = HH[SH],
-            EH = 3 & zH,
-            XH = zH >> 2 & 3;
-          let OH = zH >> 4,
-            bH = 0,
-            kH = 0;
-          EH < 2 ? 1 & XH ? OH |= HH[++SH] << 4 | (2 & XH && HH[++SH] << 12) : OH = zH >> 3 : (kH = XH, XH < 2 ? (OH |= (63 & HH[++SH]) << 4, bH = HH[SH] >> 6 | HH[++SH] << 2) : 2 == XH ? (OH |= HH[++SH] << 4 | (3 & HH[++SH]) << 12, bH = HH[SH] >> 2 | HH[++SH] << 6) : (OH |= HH[++SH] << 4 | (63 & HH[++SH]) << 12, bH = HH[SH] >> 6 | HH[++SH] << 2 | HH[++SH] << 10)), ++SH;
-          let mH = rH ? rH.subarray(BH.y, BH.y + BH.m) : new LH(BH.m),
-            oH = mH.length - OH;
-          if (oH < 0 && CH(0), 0 == EH) mH.set(HH.subarray(SH, SH += OH), oH);
-          else if (1 == EH) tH(mH, HH[SH++], oH);
+      if (!(NB > BB.length)) {
+        if (0 == MB) return OB.b = NB, DB ? (DB.set(BB.subarray(QB, NB), OB.y), OB.y += PB, DB) : oB(BB, QB, NB);
+        if (2 == MB) {
+          const yB = BB[QB],
+            MB = 3 & yB,
+            PB = yB >> 2 & 3;
+          let UB = yB >> 4,
+            fB = 0,
+            kB = 0;
+          MB < 2 ? 1 & PB ? UB |= BB[++QB] << 4 | (2 & PB && BB[++QB] << 12) : UB = yB >> 3 : (kB = PB, PB < 2 ? (UB |= (63 & BB[++QB]) << 4, fB = BB[QB] >> 6 | BB[++QB] << 2) : 2 == PB ? (UB |= BB[++QB] << 4 | (3 & BB[++QB]) << 12, fB = BB[QB] >> 2 | BB[++QB] << 6) : (UB |= BB[++QB] << 4 | (63 & BB[++QB]) << 12, fB = BB[QB] >> 6 | BB[++QB] << 2 | BB[++QB] << 10)), ++QB;
+          let dB = DB ? DB.subarray(OB.y, OB.y + OB.m) : new GB(OB.m),
+            KB = dB.length - UB;
+          if (KB < 0 && JB(0), 0 == MB) dB.set(BB.subarray(QB, QB += UB), KB);
+          else if (1 == MB) jB(dB, BB[QB++], KB);
           else {
-            let rH = BH.h;
-            if (2 == EH) {
-              const hH = ((HH, BH) => {
-                let rH = 0,
-                  SH = -1;
-                const hH = new LH(292),
-                  zH = HH[BH],
-                  EH = hH.subarray(0, 256),
-                  XH = hH.subarray(256, 268),
-                  uH = new AH(hH.buffer, 268);
-                if (zH < 128) {
-                  const [LH, AH] = YH(HH, BH + 1, 6), rH = LH << 3, hH = HH[BH += zH];
-                  hH || CH(0);
-                  let tH = 0,
-                    XH = 0,
-                    uH = AH.b,
-                    QH = uH,
-                    WH = (++BH << 3) - 8 + GH(hH);
-                  for (; SH > 254 && CH(0), WH -= uH, !(WH < rH);) {
-                    let BH = WH >> 3;
-                    if (tH += (HH[BH] | HH[BH + 1] << 8) >> (7 & WH) & (1 << uH) - 1, EH[++SH] = AH.s[tH], WH -= QH, WH < rH) break;
-                    BH = WH >> 3, XH += (HH[BH] | HH[BH + 1] << 8) >> (7 & WH) & (1 << QH) - 1, EH[++SH] = AH.s[XH], uH = AH.n[tH], tH = AH.t[tH], QH = AH.n[XH], XH = AH.t[XH]
-                  }++SH > 255 && CH(0)
+            let DB = OB.h;
+            if (2 == MB) {
+              const oB = ((BB, OB) => {
+                let DB = 0,
+                  QB = -1;
+                const oB = new GB(292),
+                  yB = BB[OB],
+                  MB = oB.subarray(0, 256),
+                  PB = oB.subarray(256, 268),
+                  pB = new YB(oB.buffer, 268);
+                if (yB < 128) {
+                  const [GB, YB] = lB(BB, OB + 1, 6), DB = GB << 3, oB = BB[OB += yB];
+                  oB || JB(0);
+                  let jB = 0,
+                    PB = 0,
+                    pB = YB.b,
+                    qB = pB,
+                    ZB = (++OB << 3) - 8 + zB(oB);
+                  for (; QB > 254 && JB(0), ZB -= pB, !(ZB < DB);) {
+                    let OB = ZB >> 3;
+                    if (jB += (BB[OB] | BB[OB + 1] << 8) >> (7 & ZB) & (1 << pB) - 1, MB[++QB] = YB.s[jB], ZB -= qB, ZB < DB) break;
+                    OB = ZB >> 3, PB += (BB[OB] | BB[OB + 1] << 8) >> (7 & ZB) & (1 << qB) - 1, MB[++QB] = YB.s[PB], pB = YB.n[jB], jB = YB.t[jB], qB = YB.n[PB], PB = YB.t[PB]
+                  }++QB > 255 && JB(0)
                 } else {
-                  for (SH = zH - 127; rH < SH; rH += 2) {
-                    const LH = HH[++BH];
-                    EH[rH] = LH >> 4, EH[rH + 1] = 15 & LH
-                  }++BH
+                  for (QB = yB - 127; DB < QB; DB += 2) {
+                    const GB = BB[++OB];
+                    MB[DB] = GB >> 4, MB[DB + 1] = 15 & GB
+                  }++OB
                 }
-                let QH = 0;
-                for (rH = 0; rH < SH; ++rH) {
-                  const HH = EH[rH];
-                  HH > 11 && CH(0), QH += HH && 1 << HH - 1
+                let qB = 0;
+                for (DB = 0; DB < QB; ++DB) {
+                  const BB = MB[DB];
+                  BB > 11 && JB(0), qB += BB && 1 << BB - 1
                 }
-                const WH = GH(QH) + 1,
-                  MH = 1 << WH,
-                  xH = MH - QH;
-                for (xH & xH - 1 && CH(0), EH[SH++] = GH(xH) + 1, rH = 0; rH < SH; ++rH) {
-                  const HH = EH[rH];
-                  ++XH[EH[rH] = HH && WH + 1 - HH]
+                const ZB = zB(qB) + 1,
+                  NB = 1 << ZB,
+                  RB = NB - qB;
+                for (RB & RB - 1 && JB(0), MB[QB++] = zB(RB) + 1, DB = 0; DB < QB; ++DB) {
+                  const BB = MB[DB];
+                  ++PB[MB[DB] = BB && ZB + 1 - BB]
                 }
-                const vH = new LH(MH << 1),
-                  PH = vH.subarray(0, MH),
-                  TH = vH.subarray(MH);
-                for (uH[WH] = 0, rH = WH; rH > 0; --rH) {
-                  const HH = uH[rH];
-                  tH(TH, rH, HH, uH[rH - 1] = HH + XH[rH] * (1 << WH - rH))
+                const WB = new GB(NB << 1),
+                  AB = WB.subarray(0, NB),
+                  VB = WB.subarray(NB);
+                for (pB[ZB] = 0, DB = ZB; DB > 0; --DB) {
+                  const BB = pB[DB];
+                  jB(VB, DB, BB, pB[DB - 1] = BB + PB[DB] * (1 << ZB - DB))
                 }
-                for (uH[0] != MH && CH(0), rH = 0; rH < SH; ++rH) {
-                  const HH = EH[rH];
-                  if (HH) {
-                    const BH = uH[HH];
-                    tH(PH, rH, BH, uH[HH] = BH + (1 << WH - HH))
+                for (pB[0] != NB && JB(0), DB = 0; DB < QB; ++DB) {
+                  const BB = MB[DB];
+                  if (BB) {
+                    const OB = pB[BB];
+                    jB(AB, DB, OB, pB[BB] = OB + (1 << ZB - BB))
                   }
                 }
-                return [BH, {
-                  n: TH,
-                  b: WH,
-                  s: PH
+                return [OB, {
+                  n: VB,
+                  b: ZB,
+                  s: AB
                 }]
-              })(HH, SH);
-              bH += SH - (SH = hH[0]), BH.h = rH = hH[1]
-            } else rH || CH(0);
-            (kH ? VH : UH)(HH.subarray(SH, SH += bH), mH.subarray(oH), rH)
+              })(BB, QB);
+              fB += QB - (QB = oB[0]), OB.h = DB = oB[1]
+            } else DB || JB(0);
+            (kB ? nB : SB)(BB.subarray(QB, QB += fB), dB.subarray(KB), DB)
           }
-          let IH = HH[SH++];
-          if (IH) {
-            255 == IH ? IH = 32512 + (HH[SH++] | HH[SH++] << 8) : IH > 127 && (IH = IH - 128 << 8 | HH[SH++]);
-            const tH = HH[SH++];
-            3 & tH && CH(0);
-            const zH = [QH, WH, uH];
-            for (let rH = 2; rH > -1; --rH) {
-              const hH = tH >> 2 + (rH << 1) & 3;
-              if (1 == hH) {
-                const BH = new LH([0, 0, HH[SH++]]);
-                zH[rH] = {
-                  s: BH.subarray(2, 3),
-                  n: BH.subarray(0, 1),
-                  t: new AH(BH.buffer, 0, 1),
+          let uB = BB[QB++];
+          if (uB) {
+            255 == uB ? uB = 32512 + (BB[QB++] | BB[QB++] << 8) : uB > 127 && (uB = uB - 128 << 8 | BB[QB++]);
+            const jB = BB[QB++];
+            3 & jB && JB(0);
+            const yB = [qB, ZB, pB];
+            for (let DB = 2; DB > -1; --DB) {
+              const oB = jB >> 2 + (DB << 1) & 3;
+              if (1 == oB) {
+                const OB = new GB([0, 0, BB[QB++]]);
+                yB[DB] = {
+                  s: OB.subarray(2, 3),
+                  n: OB.subarray(0, 1),
+                  t: new YB(OB.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == hH ? [SH, zH[rH]] = YH(HH, SH, 9 - (1 & rH)) : 3 == hH && (BH.t || CH(0), zH[rH] = BH.t[rH])
+              } else 2 == oB ? [QB, yB[DB]] = lB(BB, QB, 9 - (1 & DB)) : 3 == oB && (OB.t || JB(0), yB[DB] = OB.t[DB])
             }
-            const [EH, XH, UH] = BH.t = zH, VH = HH[MH - 1];
-            VH || CH(0);
-            let OH = (MH << 3) - 8 + GH(VH) - UH.b,
-              bH = OH >> 3,
-              kH = 0,
-              fH = (HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << UH.b) - 1;
-            bH = (OH -= XH.b) >> 3;
-            let lH = (HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << XH.b) - 1;
-            bH = (OH -= EH.b) >> 3;
-            let KH = (HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << EH.b) - 1;
-            for (++IH; --IH;) {
-              const LH = UH.s[fH],
-                AH = UH.n[fH],
-                rH = EH.s[KH],
-                SH = EH.n[KH],
-                hH = XH.s[lH],
-                tH = XH.n[lH];
-              bH = (OH -= hH) >> 3;
-              const zH = 1 << hH;
-              let GH = zH + ((HH[bH] | HH[bH + 1] << 8 | HH[bH + 2] << 16 | HH[bH + 3] << 24) >>> (7 & OH) & zH - 1);
-              bH = (OH -= PH[rH]) >> 3;
-              let YH = TH[rH] + ((HH[bH] | HH[bH + 1] << 8 | HH[bH + 2] << 16) >> (7 & OH) & (1 << PH[rH]) - 1);
-              bH = (OH -= xH[LH]) >> 3;
-              const uH = vH[LH] + ((HH[bH] | HH[bH + 1] << 8 | HH[bH + 2] << 16) >> (7 & OH) & (1 << xH[LH]) - 1);
-              if ((OH < 0 || oH + uH > mH.length || kH + uH + YH > mH.length) && CH(0), bH = (OH -= AH) >> 3, fH = UH.t[fH] + ((HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << AH) - 1), bH = (OH -= SH) >> 3, KH = EH.t[KH] + ((HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << SH) - 1), bH = (OH -= tH) >> 3, lH = XH.t[lH] + ((HH[bH] | HH[bH + 1] << 8) >> (7 & OH) & (1 << tH) - 1), GH > 3) BH.o[2] = BH.o[1], BH.o[1] = BH.o[0], BH.o[0] = GH -= 3;
+            const [MB, PB, SB] = OB.t = yB, nB = BB[NB - 1];
+            nB || JB(0);
+            let UB = (NB << 3) - 8 + zB(nB) - SB.b,
+              fB = UB >> 3,
+              kB = 0,
+              mB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << SB.b) - 1;
+            fB = (UB -= PB.b) >> 3;
+            let IB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << PB.b) - 1;
+            fB = (UB -= MB.b) >> 3;
+            let FB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << MB.b) - 1;
+            for (++uB; --uB;) {
+              const GB = SB.s[mB],
+                YB = SB.n[mB],
+                DB = MB.s[FB],
+                QB = MB.n[FB],
+                oB = PB.s[IB],
+                jB = PB.n[IB];
+              fB = (UB -= oB) >> 3;
+              const yB = 1 << oB;
+              let zB = yB + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16 | BB[fB + 3] << 24) >>> (7 & UB) & yB - 1);
+              fB = (UB -= AB[DB]) >> 3;
+              let lB = VB[DB] + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16) >> (7 & UB) & (1 << AB[DB]) - 1);
+              fB = (UB -= RB[GB]) >> 3;
+              const pB = WB[GB] + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16) >> (7 & UB) & (1 << RB[GB]) - 1);
+              if ((UB < 0 || KB + pB > dB.length || kB + pB + lB > dB.length) && JB(0), fB = (UB -= YB) >> 3, mB = SB.t[mB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << YB) - 1), fB = (UB -= QB) >> 3, FB = MB.t[FB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << QB) - 1), fB = (UB -= jB) >> 3, IB = PB.t[IB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << jB) - 1), zB > 3) OB.o[2] = OB.o[1], OB.o[1] = OB.o[0], OB.o[0] = zB -= 3;
               else {
-                const HH = GH - (0 != uH);
-                HH ? (GH = 3 == HH ? BH.o[0] - 1 : BH.o[HH], HH > 1 && (BH.o[2] = BH.o[1]), BH.o[1] = BH.o[0], BH.o[0] = GH) : GH = BH.o[0]
+                const BB = zB - (0 != pB);
+                BB ? (zB = 3 == BB ? OB.o[0] - 1 : OB.o[BB], BB > 1 && (OB.o[2] = OB.o[1]), OB.o[1] = OB.o[0], OB.o[0] = zB) : zB = OB.o[0]
               }
-              for (let HH = 0; HH < uH; ++HH) mH[kH + HH] = mH[oH + HH];
-              kH += uH, oH += uH;
-              let QH = kH - GH;
-              if (QH < 0) {
-                let HH = -QH;
-                const LH = BH.e + QH;
-                LH < 0 && CH(4), HH > YH && (HH = YH);
-                for (let AH = 0; AH < HH; ++AH) mH[kH + AH] = BH.w[LH + AH];
-                kH += HH, YH -= HH, QH = 0
+              for (let BB = 0; BB < pB; ++BB) dB[kB + BB] = dB[KB + BB];
+              kB += pB, KB += pB;
+              let qB = kB - zB;
+              if (qB < 0) {
+                let BB = -qB;
+                const GB = OB.e + qB;
+                GB < 0 && JB(4), BB > lB && (BB = lB);
+                for (let YB = 0; YB < BB; ++YB) dB[kB + YB] = OB.w[GB + YB];
+                kB += BB, lB -= BB, qB = 0
               }
-              for (let HH = 0; HH < YH; ++HH) mH[kH + HH] = mH[QH + HH];
-              kH += YH
+              for (let BB = 0; BB < lB; ++BB) dB[kB + BB] = dB[qB + BB];
+              kB += lB
             }
-            if (kH != oH)
-              for (; oH < mH.length;) mH[kH++] = mH[oH++];
-            else kH = mH.length;
-            rH ? BH.y += kH : mH = hH(mH, 0, kH)
-          } else if (rH) {
-            if (BH.y += OH, oH)
-              for (let HH = 0; HH < OH; ++HH) mH[HH] = mH[oH + HH]
-          } else oH && (mH = hH(mH, oH));
-          return BH.b = MH, mH
+            if (kB != KB)
+              for (; KB < dB.length;) dB[kB++] = dB[KB++];
+            else kB = dB.length;
+            DB ? OB.y += kB : dB = oB(dB, 0, kB)
+          } else if (DB) {
+            if (OB.y += UB, KB)
+              for (let BB = 0; BB < UB; ++BB) dB[BB] = dB[KB + BB]
+          } else KB && (dB = oB(dB, KB));
+          return OB.b = NB, dB
         }
-        CH(2)
+        JB(2)
       }
     };
-  class bH {
+  class fB {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    LX = 0;
+    sJ = 0;
     needed = 18;
     size;
-    constructor(HH) {
-      this.size = HH
+    constructor(BB) {
+      this.size = BB
     }
-    push(HH) {
+    push(BB) {
       if (this.done) return;
-      if (this.parts.push(HH), this.LX += HH.length, this.LX < this.needed) return;
-      const BH = ((HH, BH) => {
-        if (1 == HH.length) return HH[0];
-        const AH = new LH(BH);
-        for (let LH = 0, rH = 0; LH < HH.length; ++LH) {
-          const BH = HH[LH];
-          AH.set(BH, rH), rH += BH.length
+      if (this.parts.push(BB), this.sJ += BB.length, this.sJ < this.needed) return;
+      const OB = ((BB, OB) => {
+        if (1 == BB.length) return BB[0];
+        const YB = new GB(OB);
+        for (let GB = 0, DB = 0; GB < BB.length; ++GB) {
+          const OB = BB[GB];
+          YB.set(OB, DB), DB += OB.length
         }
-        return AH
-      })(this.parts, this.LX);
-      let AH = this.st;
-      if (!AH) {
-        const HH = XH(BH, new LH(0));
-        "number" != typeof HH && HH.u === this.size || CH(0, `not a zstd frame of ${this.size} bytes`), AH = this.st = XH(BH, 1), AH.e = 0, this.output = AH.w
+        return YB
+      })(this.parts, this.sJ);
+      let YB = this.st;
+      if (!YB) {
+        const BB = PB(OB, new GB(0));
+        "number" != typeof BB && BB.u === this.size || JB(0, `not a zstd frame of ${this.size} bytes`), YB = this.st = PB(OB, 1), YB.e = 0, this.output = YB.w
       }
       for (;;) {
-        const HH = BH.length - AH.b;
-        if (HH < 3) {
+        const BB = OB.length - YB.b;
+        if (BB < 3) {
           this.needed = 3;
           break
         }
-        const LH = BH[AH.b],
-          rH = LH >> 1 & 3;
-        3 == rH && CH(2);
-        const SH = LH >> 3 | BH[AH.b + 1] << 5 | BH[AH.b + 2] << 13;
-        SH > AH.m && CH(0), 0 == rH && AH.y + SH > AH.u && CH(0);
-        const hH = 1 == rH ? 4 : 3 + SH;
-        if (HH < hH) {
-          this.needed = hH;
+        const GB = OB[YB.b],
+          DB = GB >> 1 & 3;
+        3 == DB && JB(2);
+        const QB = GB >> 3 | OB[YB.b + 1] << 5 | OB[YB.b + 2] << 13;
+        QB > YB.m && JB(0), 0 == DB && YB.y + QB > YB.u && JB(0);
+        const oB = 1 == DB ? 4 : 3 + QB;
+        if (BB < oB) {
+          this.needed = oB;
           break
         }
-        if (OH(BH, AH, AH.w) || CH(5), AH.e = AH.y, (AH.y > AH.u || AH.l && AH.y != AH.u) && CH(0), AH.l) {
+        if (UB(OB, YB, YB.w) || JB(5), YB.e = YB.y, (YB.y > YB.u || YB.l && YB.y != YB.u) && JB(0), YB.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = AH.y;
-      const rH = BH.subarray(AH.b);
-      this.parts = rH.length ? [rH] : [], this.LX = rH.length, AH.b = 0
+      this.decoded = YB.y;
+      const DB = OB.subarray(YB.b);
+      this.parts = DB.length ? [DB] : [], this.sJ = DB.length, YB.b = 0
     }
   }
-  class kH {
+  class kB {
     post;
     href = "";
-    GX = null;
+    yP = null;
     given = 0;
     stopped = !1;
-    constructor(HH) {
-      this.post = HH
+    constructor(BB) {
+      this.post = BB
     }
-    take(BH) {
+    take(OB) {
       if (!this.stopped) try {
-        this.answer(BH)
-      } catch (LH) {
-        this.stop(LH instanceof RangeError ? `out of memory decoding ${this.href}: ${HH(LH)}` : `${this.href} did not decode: ${HH(LH)}`)
+        this.answer(OB)
+      } catch (GB) {
+        this.stop(GB instanceof RangeError ? `out of memory decoding ${this.href}: ${BB(GB)}` : `${this.href} did not decode: ${BB(GB)}`)
       }
     }
-    answer(HH) {
-      if (null === this.GX) {
-        const [BH, LH] = HH;
-        return this.href = BH, void(this.GX = new bH(LH))
+    answer(BB) {
+      if (null === this.yP) {
+        const [OB, GB] = BB;
+        return this.href = OB, void(this.yP = new fB(GB))
       }
-      if (null === HH) return void this.stop(`${this.href} ended before its module did`);
-      const BH = this.GX;
-      BH.push(HH);
+      if (null === BB) return void this.stop(`${this.href} ended before its module did`);
+      const OB = this.yP;
+      OB.push(BB);
       const {
-        output: LH,
-        decoded: AH
-      } = BH;
-      if (null !== LH && AH > this.given) {
-        const HH = LH.slice(this.given, AH).buffer;
-        this.given = AH, this.post(HH, [HH])
+        output: GB,
+        decoded: YB
+      } = OB;
+      if (null !== GB && YB > this.given) {
+        const BB = GB.slice(this.given, YB).buffer;
+        this.given = YB, this.post(BB, [BB])
       }
-      BH.done && this.stop(!0)
+      OB.done && this.stop(!0)
     }
-    stop(HH) {
-      this.stopped = !0, this.post(HH)
+    stop(BB) {
+      this.stopped = !0, this.post(BB)
     }
   }
-  const mH = globalThis.WorkerGlobalScope;
-  if (void 0 !== mH && globalThis instanceof mH) {
-    const HH = globalThis,
-      BH = new kH((function(BH) {
-        let LH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        HH.postMessage(BH, LH)
+  const dB = globalThis.WorkerGlobalScope;
+  if (void 0 !== dB && globalThis instanceof dB) {
+    const BB = globalThis,
+      OB = new kB((function(OB) {
+        let GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        BB.postMessage(OB, GB)
       }));
-    HH.addEventListener("message", (HH => {
+    BB.addEventListener("message", (BB => {
       let {
-        data: LH
-      } = HH;
-      BH.take(LH)
+        data: GB
+      } = BB;
+      OB.take(GB)
     }))
   }
 })();

@@ -1,31 +1,31 @@
 export const id = 614;
 export const ids = [614];
 export const modules = {
-  45226: (HH, BH, LH) => {
-    LH.d(BH, {
-      parseShaderPack: () => AH
+  44881: (BB, OB, GB) => {
+    GB.d(OB, {
+      parseShaderPack: () => YB
     });
 
-    function AH(HH) {
-      var BH, LH;
-      const AH = HH.get("shaderPackUrl"),
-        rH = null !== (BH = HH.get("shaderPackMode")) && void 0 !== BH ? BH : "strict";
-      if (null === AH) {
-        if (HH.has("shaderPackMode")) throw new Error("shaderPackMode= needs shaderPackUrl=");
+    function YB(BB) {
+      var OB, GB;
+      const YB = BB.get("shaderPackUrl"),
+        DB = null !== (OB = BB.get("shaderPackMode")) && void 0 !== OB ? OB : "strict";
+      if (null === YB) {
+        if (BB.has("shaderPackMode")) throw new Error("shaderPackMode= needs shaderPackUrl=");
         return null
       }
-      if ("lite" !== HH.get("renderer")) throw new Error("shaderPackUrl= needs renderer=lite: shader packs run on Lite only");
-      if (! function(HH) {
-          return "strict" === HH || "allow" === HH
-        }(rH)) throw new Error(`Unknown shaderPackMode "${rH}" - use strict or allow`);
-      const SH = (null !== (LH = HH.get("variants")) && void 0 !== LH ? LH : "").split(",").find((HH => HH.trim().startsWith("liteShaderPack")));
-      if (void 0 !== SH) throw new Error(`shaderPackUrl= runs its own pack: drop variants=${SH.trim()}`);
+      if ("lite" !== BB.get("renderer")) throw new Error("shaderPackUrl= needs renderer=lite: shader packs run on Lite only");
+      if (! function(BB) {
+          return "strict" === BB || "allow" === BB
+        }(DB)) throw new Error(`Unknown shaderPackMode "${DB}" - use strict or allow`);
+      const QB = (null !== (GB = BB.get("variants")) && void 0 !== GB ? GB : "").split(",").find((BB => BB.trim().startsWith("liteShaderPack")));
+      if (void 0 !== QB) throw new Error(`shaderPackUrl= runs its own pack: drop variants=${QB.trim()}`);
       return {
-        url: AH,
-        mode: rH
+        url: YB,
+        mode: DB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

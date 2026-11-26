@@ -1,373 +1,373 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  41856: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      startWasmPadGameplay: () => NH
+  41543: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      startWasmPadGameplay: () => XB
     });
-    LH(41860);
-    var AH = LH(41864),
-      rH = LH(41884),
-      SH = LH(2036),
-      hH = LH(41898),
-      tH = LH(5268),
-      zH = LH(5255),
-      CH = LH(41905),
-      EH = LH(41911),
-      XH = LH(5279),
-      GH = LH(41985),
-      YH = LH(2605),
-      uH = LH(9543),
-      QH = LH(41871),
-      WH = LH(9522),
-      MH = LH(40035);
-    const xH = HH => {
-        const BH = XH.c.indexOf(HH);
-        if (BH < 0) throw new Error(`No core action "${HH}"`);
-        return BH
+    GB(41548);
+    var YB = GB(41553),
+      DB = GB(41562),
+      QB = GB(2050),
+      oB = GB(41579),
+      jB = GB(5287),
+      yB = GB(5274),
+      JB = GB(41587),
+      MB = GB(41593),
+      PB = GB(5305),
+      zB = GB(41675),
+      lB = GB(2619),
+      pB = GB(9518),
+      qB = GB(41555),
+      ZB = GB(9490),
+      NB = GB(39804);
+    const RB = BB => {
+        const OB = PB.c.indexOf(BB);
+        if (OB < 0) throw new Error(`No core action "${BB}"`);
+        return OB
       },
-      vH = xH("primary-fire"),
-      PH = xH("alt-fire"),
-      TH = xH("mid-fire"),
-      UH = xH("jump"),
-      VH = xH("ReloadGun"),
-      OH = xH("SwapCameraZoom"),
-      bH = xH("TouchAction1"),
-      kH = {
-        SpecialAction1: xH("SpecialAction1"),
-        SpecialAction2: xH("SpecialAction2")
+      WB = RB("primary-fire"),
+      AB = RB("alt-fire"),
+      VB = RB("mid-fire"),
+      SB = RB("jump"),
+      nB = RB("ReloadGun"),
+      UB = RB("SwapCameraZoom"),
+      fB = RB("TouchAction1"),
+      kB = {
+        SpecialAction1: RB("SpecialAction1"),
+        SpecialAction2: RB("SpecialAction2")
       },
-      mH = (HH, BH) => {
-        (0, YH.w)(tH.M.PadAction, HH, 0, 0, (0, YH.u)(BH, performance.now()))
+      dB = (BB, OB) => {
+        (0, lB.o)(jB.Q.PadAction, BB, 0, 0, (0, lB.m)(OB, performance.now()))
       },
-      oH = HH => {
-        mH(HH, hH.xd.Down)
+      KB = BB => {
+        dB(BB, oB.zd.Down)
       },
-      IH = HH => {
-        mH(HH, 0)
+      uB = BB => {
+        dB(BB, 0)
       },
-      fH = HH => {
-        oH(HH), IH(HH)
+      mB = BB => {
+        KB(BB), uB(BB)
       },
-      lH = () => {
-        const HH = (0, EH.i)();
-        return null !== HH && void 0 !== HH && HH.isCoreRunning ? HH : null
+      IB = () => {
+        const BB = (0, MB.j)();
+        return null !== BB && void 0 !== BB && BB.isCoreRunning ? BB : null
       },
-      KH = HH => hH.y.playerFlags(HH.api.apiView, 0),
-      cH = HH => null !== HH && hH.y.targetBlockId(HH.api.apiView, 0) !== hH.cd,
-      eH = () => {
-        const HH = (0, uH.d)(),
-          BH = new QH.b;
-        let LH = !1;
-        const AH = (HH, BH) => {
-            (0, YH.w)(tH.M.PadLook, hH.Hd.Rate, HH, BH, 0)
+      FB = BB => oB.u.playerFlags(BB.api.apiView, 0),
+      iB = BB => null !== BB && oB.u.targetBlockId(BB.api.apiView, 0) !== oB.fd,
+      LB = () => {
+        const BB = (0, pB.b)(),
+          OB = new qB.d;
+        let GB = !1;
+        const YB = (BB, OB) => {
+            (0, lB.o)(jB.Q.PadLook, oB.Fd.Rate, BB, OB, 0)
           },
-          rH = () => {
-            LH = !1, BH.reset(), AH(0, 0)
+          DB = () => {
+            GB = !1, OB.reset(), YB(0, 0)
           };
         return {
-          update: (rH, SH, zH) => {
-            LH || (HH.discardPending(), LH = !0);
-            const CH = (0, QH.q)(BH, rH, SH, zH, performance.now());
-            AH(CH.yawRadPerSec, CH.pitchRadPerSec);
-            const EH = HH.drainLookDelta();
-            0 === EH.lq && 0 === EH.Fq || (0, YH.w)(tH.M.PadLook, hH.Hd.Gyro, EH.lq, EH.Fq, 0)
+          update: (DB, QB, yB) => {
+            GB || (BB.discardPending(), GB = !0);
+            const JB = (0, qB.q)(OB, DB, QB, yB, performance.now());
+            YB(JB.yawRadPerSec, JB.pitchRadPerSec);
+            const MB = BB.drainLookDelta();
+            0 === MB.Rm && 0 === MB.Wm || (0, lB.o)(jB.Q.PadLook, oB.Fd.Gyro, MB.Rm, MB.Wm, 0)
           },
-          release: rH,
-          uninstall: rH
+          release: DB,
+          uninstall: DB
         }
       },
-      qH = () => {
-        const HH = lH();
-        return null !== HH && 0 !== (KH(HH) & hH.Md.PadSneakToggled)
+      gB = () => {
+        const BB = IB();
+        return null !== BB && 0 !== (FB(BB) & oB.Id.PadSneakToggled)
       },
-      gH = () => {
-        const HH = (HH => {
-          const BH = HH => function() {
-            return (0, GH.c)(), HH(...arguments)
+      rB = () => {
+        const BB = (BB => {
+          const OB = BB => function() {
+            return (0, zB.d)(), BB(...arguments)
           };
           return {
-            primaryFireDown: BH((HH => (mH(vH, hH.xd.Down | (HH ? hH.xd.Repeat : 0)), 0))),
-            primaryFireUp: BH((() => {
-              IH(vH)
+            primaryFireDown: OB((BB => (dB(WB, oB.zd.Down | (BB ? oB.zd.Repeat : 0)), 0))),
+            primaryFireUp: OB((() => {
+              uB(WB)
             })),
-            altFireDown: BH((() => (oH(PH), 0))),
-            altFireUp: BH((() => {
-              IH(PH)
+            altFireDown: OB((() => (KB(AB), 0))),
+            altFireUp: OB((() => {
+              uB(AB)
             })),
-            jumpDown: BH((() => {
-              fH(UH)
+            jumpDown: OB((() => {
+              mB(SB)
             })),
-            specialActionDown: BH((HH => {
-              oH(kH[HH])
+            specialActionDown: OB((BB => {
+              KB(kB[BB])
             })),
-            specialActionUp: BH((HH => {
-              IH(kH[HH])
+            specialActionUp: OB((BB => {
+              uB(kB[BB])
             })),
-            reloadGun: BH((() => {
-              fH(VH)
+            reloadGun: OB((() => {
+              mB(nB)
             })),
-            dropItem: BH((HH => {
-              mH(hH.Ad.Drop, hH.xd.Down | (HH ? hH.xd.Stack : 0))
+            dropItem: OB((BB => {
+              dB(oB.Cd.Drop, oB.zd.Down | (BB ? oB.zd.Stack : 0))
             })),
-            swapCameraZoom: BH((() => {
-              fH(OH)
+            swapCameraZoom: OB((() => {
+              mB(UB)
             })),
-            pickBlock: BH((() => (fH(TH), cH(HH()))))
+            pickBlock: OB((() => (mB(VB), iB(BB()))))
           }
-        })(lH);
-        let BH = !1,
-          LH = null;
-        const AH = () => {
-          var HH;
-          null === (HH = LH) || void 0 === HH || HH(), LH = null
+        })(IB);
+        let OB = !1,
+          GB = null;
+        const YB = () => {
+          var BB;
+          null === (BB = GB) || void 0 === BB || BB(), GB = null
         };
         return {
-          bodies: () => HH,
-          look: eH(),
-          move: (HH, LH) => {
-            var rH;
-            AH();
+          bodies: () => BB,
+          look: LB(),
+          move: (BB, GB) => {
+            var DB;
+            YB();
             const {
-              bits: SH,
-              flips: tH
-            } = (HH => {
-              if (null === HH) return {
-                bits: hH.Ed.Peek,
+              bits: QB,
+              flips: jB
+            } = (BB => {
+              if (null === BB) return {
+                bits: oB.Ed.Peek,
                 flips: 0
               };
-              const BH = HH.sneakHeld ? hH.Ed.SneakHeld : 0;
-              return "hold" === HH.mode ? {
-                bits: BH | hH.Ed.SneakHoldMode,
-                flips: HH.sneakTogglePressed ? 1 : 0
+              const OB = BB.sneakHeld ? oB.Ed.SneakHeld : 0;
+              return "hold" === BB.mode ? {
+                bits: OB | oB.Ed.SneakHoldMode,
+                flips: BB.sneakTogglePressed ? 1 : 0
               } : {
-                bits: BH,
-                flips: HH.sneakPressed || HH.sneakTogglePressed ? 1 : 0
+                bits: OB,
+                flips: BB.sneakPressed || BB.sneakTogglePressed ? 1 : 0
               }
-            })(LH);
-            null !== (rH = lH()) && void 0 !== rH && rH.padMove(HH.x, HH.y, HH.magnitude, HH.headingOffset, (HH => hH.Ed.Active | (HH.jumpHeld ? hH.Ed.JumpHeld : 0) | (HH.jumpPressed ? hH.Ed.JumpPressed : 0) | (HH.running ? hH.Ed.Running : 0) | (HH.sprintHeld ? hH.Ed.SprintHeld : 0))(HH) | SH, tH) && (BH = !0), (0, WH.h)(qH())
+            })(GB);
+            null !== (DB = IB()) && void 0 !== DB && DB.padMove(BB.x, BB.y, BB.magnitude, BB.headingOffset, (BB => oB.Ed.Active | (BB.jumpHeld ? oB.Ed.JumpHeld : 0) | (BB.jumpPressed ? oB.Ed.JumpPressed : 0) | (BB.running ? oB.Ed.Running : 0) | (BB.sprintHeld ? oB.Ed.SprintHeld : 0))(BB) | QB, jB) && (OB = !0), (0, ZB.h)(gB())
           },
           stopMoving: () => {
-            var HH;
-            BH && (BH = !(null !== (HH = lH()) && void 0 !== HH && HH.padMove(0, 0, 0, 0, 0, 0)), AH(), LH = (0, zH.v)((() => {
-              AH(), (0, WH.h)(qH())
+            var BB;
+            OB && (OB = !(null !== (BB = IB()) && void 0 !== BB && BB.padMove(0, 0, 0, 0, 0, 0)), YB(), GB = (0, yB.z)((() => {
+              YB(), (0, ZB.h)(gB())
             })))
           },
-          uninstall: AH,
-          deviceChanged: HH => {
-            var LH;
-            "touch" === HH ? ((0, WH.h)(!1), null !== (LH = lH()) && void 0 !== LH && LH.padMove(0, 0, 0, 0, hH.Ed.EndToggle, 0) && (BH = !1)) : "gamepad" === HH && (0, WH.h)(qH())
+          uninstall: YB,
+          deviceChanged: BB => {
+            var GB;
+            "touch" === BB ? ((0, ZB.h)(!1), null !== (GB = IB()) && void 0 !== GB && GB.padMove(0, 0, 0, 0, oB.Ed.EndToggle, 0) && (OB = !1)) : "gamepad" === BB && (0, ZB.h)(gB())
           },
-          hasPlayer: () => null !== lH(),
+          hasPlayer: () => null !== IB(),
           isPlayerDead: () => {
-            var HH;
-            return !1 === (null === (HH = lH()) || void 0 === HH ? void 0 : HH.localPlayerAlive())
+            var BB;
+            return !1 === (null === (BB = IB()) || void 0 === BB ? void 0 : BB.localPlayerAlive())
           },
           isReplayMode: () => {
-            const HH = lH();
-            return null !== HH && 0 !== (KH(HH) & hH.Md.Replay)
+            const BB = IB();
+            return null !== BB && 0 !== (FB(BB) & oB.Id.Replay)
           },
           isFreeCameraOn: () => {
-            const HH = lH();
-            return null !== HH && 0 !== (KH(HH) & hH.Md.FreeCam)
+            const BB = IB();
+            return null !== BB && 0 !== (FB(BB) & oB.Id.FreeCam)
           },
-          targetsBlock: () => cH(lH()),
+          targetsBlock: () => iB(IB()),
           selectedSlotEmpty: () => {
-            var HH;
-            return !(null !== (HH = lH()) && void 0 !== HH && HH.items.LX())
+            var BB;
+            return !(null !== (BB = IB()) && void 0 !== BB && BB.items.sJ())
           },
-          pickBlockAllowed: () => !!SH.e.get("creative") && !!SH.e.get("canPickBlocks"),
-          scrollHotbar: HH => {
-            mH(hH.Ad.Hotbar, hH.xd.Down | (HH > 0 ? hH.xd.Next : 0))
+          pickBlockAllowed: () => !!QB.e.get("creative") && !!QB.e.get("canPickBlocks"),
+          scrollHotbar: BB => {
+            dB(oB.Cd.Hotbar, oB.zd.Down | (BB > 0 ? oB.zd.Next : 0))
           },
-          hasFullInventory: CH.m,
-          hasLobbyTab: () => (0, MH.e)({
-            lobbyLeaderboardInfo: SH.e.get("lobbyLeaderboardInfo"),
-            lobbyManage: SH.e.get("lobbyManage")
+          hasFullInventory: JB.k,
+          hasLobbyTab: () => (0, NB.b)({
+            lobbyLeaderboardInfo: QB.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: QB.e.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var HH, BH, LH, AH;
-            const rH = lH();
+            var BB, OB, GB, YB;
+            const DB = IB();
             return {
-              holdingGun: !1 !== (null === rH || void 0 === rH ? void 0 : rH.localPlayerAlive()) && "Gun" === (null === rH || void 0 === rH || null === (HH = rH.items.LX()) || void 0 === HH || null === (BH = HH.typeObj) || void 0 === BH ? void 0 : BH.type),
-              customButtons: null !== (LH = SH.e.get("customButtons")) && void 0 !== LH ? LH : null,
-              touchscreenActionButton: null !== (AH = SH.e.get("touchscreenActionButton")) && void 0 !== AH ? AH : null
+              holdingGun: !1 !== (null === DB || void 0 === DB ? void 0 : DB.localPlayerAlive()) && "Gun" === (null === DB || void 0 === DB || null === (BB = DB.items.sJ()) || void 0 === BB || null === (OB = BB.typeObj) || void 0 === OB ? void 0 : OB.type),
+              customButtons: null !== (GB = QB.e.get("customButtons")) && void 0 !== GB ? GB : null,
+              touchscreenActionButton: null !== (YB = QB.e.get("touchscreenActionButton")) && void 0 !== YB ? YB : null
             }
           },
-          pressTouchButton: HH => {
-            HH ? oH(bH) : IH(bH)
+          pressTouchButton: BB => {
+            BB ? KB(fB) : uB(fB)
           }
         }
       },
-      NH = () => {
-        const HH = (0, rH.d)(gH()),
-          BH = (0, AH.e)(),
-          LH = null;
+      XB = () => {
+        const BB = (0, DB.e)(rB()),
+          OB = (0, YB.b)(),
+          GB = null;
         return () => {
-          HH(), BH(), null === LH || void 0 === LH || LH()
+          BB(), OB(), null === GB || void 0 === GB || GB()
         }
       }
   },
-  5255: (HH, BH, LH) => {
-    LH.d(BH, {
-      D: () => oH,
-      F: () => xH,
-      J: () => hH,
-      L: () => tH,
-      P: () => bH,
-      c: () => OH,
-      d: () => PH,
-      e: () => fH,
-      g: () => IH,
-      k: () => MH,
-      n: () => UH,
-      p: () => vH,
-      r: () => TH,
-      v: () => kH,
-      z: () => mH
+  5274: (BB, OB, GB) => {
+    GB.d(OB, {
+      C: () => dB,
+      E: () => KB,
+      I: () => RB,
+      M: () => oB,
+      O: () => jB,
+      P: () => fB,
+      d: () => UB,
+      e: () => AB,
+      i: () => mB,
+      m: () => uB,
+      o: () => NB,
+      s: () => SB,
+      v: () => WB,
+      w: () => VB,
+      z: () => kB
     });
-    var AH = LH(5260);
-    const rH = {
+    var YB = GB(5276);
+    const DB = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let SH = rH;
+    let QB = DB;
 
-    function hH(HH) {
-      SH = null !== HH && void 0 !== HH ? HH : rH
+    function oB(BB) {
+      QB = null !== BB && void 0 !== BB ? BB : DB
     }
 
-    function tH() {
-      return SH
+    function jB() {
+      return QB
     }
-    const zH = new Set,
-      CH = new Set;
-    let EH = -1;
-    const XH = new Set,
-      GH = new Set;
-    let YH = 0,
-      uH = 0;
-    const QH = new Set,
-      WH = new Set;
+    const yB = new Set,
+      JB = new Set;
+    let MB = -1;
+    const PB = new Set,
+      zB = new Set;
+    let lB = 0,
+      pB = 0;
+    const qB = new Set,
+      ZB = new Set;
 
-    function MH(HH) {
-      return zH.add(HH), () => {
-        zH.delete(HH)
+    function NB(BB) {
+      return yB.add(BB), () => {
+        yB.delete(BB)
       }
     }
 
-    function xH(HH, BH) {
-      for (const AH of zH) try {
-        AH(HH)
-      } catch (LH) {
-        BH(LH)
+    function RB(BB, OB) {
+      for (const YB of yB) try {
+        YB(BB)
+      } catch (GB) {
+        OB(GB)
       }
     }
 
-    function vH(HH) {
-      return CH.add(HH), () => {
-        CH.delete(HH)
+    function WB(BB) {
+      return JB.add(BB), () => {
+        JB.delete(BB)
       }
     }
 
-    function PH(HH, BH) {
-      const LH = EH < 0 ? 0 : HH - EH;
-      EH = HH;
-      for (const rH of CH) try {
-        rH(LH)
-      } catch (AH) {
-        BH(AH)
+    function AB(BB, OB) {
+      const GB = MB < 0 ? 0 : BB - MB;
+      MB = BB;
+      for (const DB of JB) try {
+        DB(GB)
+      } catch (YB) {
+        OB(YB)
       }
     }
 
-    function TH(HH) {
-      return XH.add(HH), () => {
-        XH.delete(HH)
+    function VB(BB) {
+      return PB.add(BB), () => {
+        PB.delete(BB)
       }
     }
 
-    function UH(HH) {
-      return GH.add(HH), () => {
-        GH.delete(HH)
+    function SB(BB) {
+      return zB.add(BB), () => {
+        zB.delete(BB)
       }
     }
-    let VH = 0;
+    let nB = 0;
 
-    function OH(HH) {
-      VH += HH
+    function UB(BB) {
+      nB += BB
     }
 
-    function bH() {
-      const HH = VH;
-      return VH = 0, HH
+    function fB() {
+      const BB = nB;
+      return nB = 0, BB
     }
 
-    function kH(HH) {
-      return QH.add(HH), () => {
-        QH.delete(HH)
-      }
-    }
-
-    function mH(HH) {
-      return WH.add(HH), () => {
-        WH.delete(HH)
+    function kB(BB) {
+      return qB.add(BB), () => {
+        qB.delete(BB)
       }
     }
 
-    function oH() {
-      YH = 0, uH = 0, EH = -1
+    function dB(BB) {
+      return ZB.add(BB), () => {
+        ZB.delete(BB)
+      }
     }
 
-    function IH(HH, BH) {
-      if ("paced" === HH) return uH += BH, null;
-      if ("drawn" !== HH && "skipped" !== HH) return null;
-      const LH = BH + uH;
-      return uH = 0, LH
+    function KB() {
+      lB = 0, pB = 0, MB = -1
     }
 
-    function fH(HH, BH, LH, rH) {
-      const SH = (0, AH.e)(BH),
-        hH = HH > 0 ? performance.now() : 0;
-      for (let AH = 0; AH < HH; AH++)
-        for (const HH of QH) try {
-          HH()
-        } catch (tH) {
-          rH(tH)
+    function uB(BB, OB) {
+      if ("paced" === BB) return pB += OB, null;
+      if ("drawn" !== BB && "skipped" !== BB) return null;
+      const GB = OB + pB;
+      return pB = 0, GB
+    }
+
+    function mB(BB, OB, GB, DB) {
+      const QB = (0, YB.k)(OB),
+        oB = BB > 0 ? performance.now() : 0;
+      for (let YB = 0; YB < BB; YB++)
+        for (const BB of qB) try {
+          BB()
+        } catch (jB) {
+          DB(jB)
         }
-      if (HH > 0 && OH(performance.now() - hH), null !== LH) {
-        for (const HH of XH) try {
-          HH(LH)
-        } catch (tH) {
-          rH(tH)
+      if (BB > 0 && UB(performance.now() - oB), null !== GB) {
+        for (const BB of PB) try {
+          BB(GB)
+        } catch (jB) {
+          DB(jB)
         }
-        YH += LH
+        lB += GB
       }
-      if ("drawn" === BH) {
-        const HH = YH;
-        YH = 0;
-        for (const BH of GH) try {
-          BH(HH)
-        } catch (tH) {
-          rH(tH)
+      if ("drawn" === OB) {
+        const BB = lB;
+        lB = 0;
+        for (const OB of zB) try {
+          OB(BB)
+        } catch (jB) {
+          DB(jB)
         }
       }
-      for (const AH of WH) try {
-        AH(HH, SH)
-      } catch (tH) {
-        rH(tH)
+      for (const YB of ZB) try {
+        YB(BB, QB)
+      } catch (jB) {
+        DB(jB)
       }
     }
   },
-  5279: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => rH,
-      f: () => SH,
-      i: () => hH,
-      j: () => AH,
-      k: () => tH
+  5305: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => DB,
+      d: () => QB,
+      g: () => oB,
+      i: () => YB,
+      l: () => jB
     });
-    const AH = {
+    const YB = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      rH = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      SH = {
+      DB = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      QB = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      hH = {
+      oB = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      tH = [16]
+      jB = [16]
   },
-  41985: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => hH,
-      d: () => SH,
-      g: () => rH
+  41675: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      f: () => QB,
+      j: () => DB
     });
-    let AH = null;
+    let YB = null;
 
-    function rH(HH) {
-      AH = HH
+    function DB(BB) {
+      YB = BB
     }
 
-    function SH(HH) {
-      AH === HH && (AH = null)
+    function QB(BB) {
+      YB === BB && (YB = null)
     }
 
-    function hH() {
-      var HH;
-      null === (HH = AH) || void 0 === HH || HH()
+    function oB() {
+      var BB;
+      null === (BB = YB) || void 0 === BB || BB()
     }
   },
-  5288: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => tH,
-      g: () => hH,
-      k: () => CH
+  5313: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => jB,
+      i: () => oB,
+      m: () => JB
     });
-    var AH = LH(2600),
-      rH = LH(2605);
-    const SH = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var YB = GB(2617),
+      DB = GB(2619);
+    const QB = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function hH(HH) {
-      return HH instanceof HTMLElement && (!!(HH.isContentEditable || HH instanceof HTMLTextAreaElement || HH instanceof HTMLSelectElement) || HH instanceof HTMLInputElement && !SH.has(HH.type))
+    function oB(BB) {
+      return BB instanceof HTMLElement && (!!(BB.isContentEditable || BB instanceof HTMLTextAreaElement || BB instanceof HTMLSelectElement) || BB instanceof HTMLInputElement && !QB.has(BB.type))
     }
 
-    function tH(HH) {
-      let BH = null;
-      const LH = LH => {
-          const rH = hH(LH);
-          rH !== BH && (BH = rH, HH(AH.g.UiCapture, AH.w.Keyboard, 0, 0, rH ? AH.w.Keyboard : 0))
+    function jB(BB) {
+      let OB = null;
+      const GB = GB => {
+          const DB = oB(GB);
+          DB !== OB && (OB = DB, BB(YB.f.UiCapture, YB.y.Keyboard, 0, 0, DB ? YB.y.Keyboard : 0))
         },
-        rH = HH => {
-          LH(HH.target)
+        DB = BB => {
+          GB(BB.target)
         },
-        SH = HH => {
-          LH(HH.relatedTarget)
+        QB = BB => {
+          GB(BB.relatedTarget)
         },
-        tH = () => {
-          LH(document.activeElement)
+        jB = () => {
+          GB(document.activeElement)
         },
-        zH = {
+        yB = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", rH, zH), document.addEventListener("focusout", SH, zH), document.addEventListener("keydown", tH, zH), LH(document.activeElement), () => {
-        document.removeEventListener("focusin", rH, zH), document.removeEventListener("focusout", SH, zH), document.removeEventListener("keydown", tH, zH)
+      return document.addEventListener("focusin", DB, yB), document.addEventListener("focusout", QB, yB), document.addEventListener("keydown", jB, yB), GB(document.activeElement), () => {
+        document.removeEventListener("focusin", DB, yB), document.removeEventListener("focusout", QB, yB), document.removeEventListener("keydown", jB, yB)
       }
     }
-    const zH = new Map;
+    const yB = new Map;
 
-    function CH(HH, BH) {
-      var LH;
-      let AH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      zH.set(AH, (null !== (LH = zH.get(AH)) && void 0 !== LH ? LH : 0) & ~HH | BH & HH);
-      let SH = 0;
-      for (const rH of zH.values()) SH |= rH;
-      return (0, rH.E)(HH, SH & HH)
+    function JB(BB, OB) {
+      var GB;
+      let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      yB.set(YB, (null !== (GB = yB.get(YB)) && void 0 !== GB ? GB : 0) & ~BB | OB & BB);
+      let QB = 0;
+      for (const DB of yB.values()) QB |= DB;
+      return (0, DB.u)(BB, QB & BB)
     }
   },
-  37798: (HH, BH, LH) => {
-    function AH(HH) {
-      return HH.includes("Leaf Bed")
+  37633: (BB, OB, GB) => {
+    function YB(BB) {
+      return BB.includes("Leaf Bed")
     }
 
-    function rH(HH) {
-      return / Bed(?: Head)?(?:\||$)/.test(HH) && !AH(HH)
+    function DB(BB) {
+      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
     }
 
-    function SH(HH) {
-      return HH.includes(" Strongbed")
+    function QB(BB) {
+      return BB.includes(" Strongbed")
     }
 
-    function hH(HH) {
-      return AH(HH) || rH(HH) || SH(HH)
+    function oB(BB) {
+      return YB(BB) || DB(BB) || QB(BB)
     }
-    LH.d(BH, {
-      d: () => hH,
-      h: () => AH,
-      l: () => SH,
-      m: () => rH
+    GB.d(OB, {
+      b: () => oB,
+      d: () => YB,
+      f: () => QB,
+      i: () => DB
     })
   },
-  37793: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => CH
+  37627: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => JB
     });
-    var AH = LH(37798),
-      rH = LH(9940);
-    const SH = [],
-      hH = [],
-      tH = [],
-      zH = [];
-    for (const EH of Object.keys(rH.l))(0, AH.h)(EH) ? SH.push(EH) : (0, AH.m)(EH) && hH.push(EH), (0, AH.l)(EH) && tH.push(EH), (EH.includes(" Bed Head") || EH.includes(" Strongbed Head")) && zH.push(EH);
-    const CH = {
-      leafBeds: SH,
-      woolBeds: hH,
-      strongBeds: tH,
-      beds: [...SH, ...hH, ...tH],
-      bedHeads: zH,
+    var YB = GB(37633),
+      DB = GB(9927);
+    const QB = [],
+      oB = [],
+      jB = [],
+      yB = [];
+    for (const MB of Object.keys(DB.n))(0, YB.d)(MB) ? QB.push(MB) : (0, YB.i)(MB) && oB.push(MB), (0, YB.f)(MB) && jB.push(MB), (MB.includes(" Bed Head") || MB.includes(" Strongbed Head")) && yB.push(MB);
+    const JB = {
+      leafBeds: QB,
+      woolBeds: oB,
+      strongBeds: jB,
+      beds: [...QB, ...oB, ...jB],
+      bedHeads: yB,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  7007: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => hH,
-      e: () => rH,
-      h: () => zH,
-      i: () => SH,
-      m: () => CH,
-      o: () => AH,
-      p: () => tH
+  6991: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => oB,
+      h: () => DB,
+      j: () => yB,
+      k: () => QB,
+      n: () => JB,
+      o: () => YB,
+      p: () => jB
     });
-    let AH = function(HH) {
-        return HH[HH.DEFAULT = 0] = "DEFAULT", HH[HH.BOAT = 1] = "BOAT", HH[HH.GLIDER = 2] = "GLIDER", HH[HH.BALLOON = 3] = "BALLOON", HH[HH.SLEEPING = 4] = "SLEEPING", HH[HH.RIDING_MOB = 5] = "RIDING_MOB", HH[HH.CAR = 6] = "CAR", HH[HH.HOVERCRAFT = 7] = "HOVERCRAFT", HH
+    let YB = function(BB) {
+        return BB[BB.DEFAULT = 0] = "DEFAULT", BB[BB.BOAT = 1] = "BOAT", BB[BB.GLIDER = 2] = "GLIDER", BB[BB.BALLOON = 3] = "BALLOON", BB[BB.SLEEPING = 4] = "SLEEPING", BB[BB.RIDING_MOB = 5] = "RIDING_MOB", BB[BB.CAR = 6] = "CAR", BB[BB.HOVERCRAFT = 7] = "HOVERCRAFT", BB
       }({}),
-      rH = function(HH) {
-        return HH[HH.WOOD = 0] = "WOOD", HH[HH.OBSIDIAN = 1] = "OBSIDIAN", HH[HH.SPEED = 2] = "SPEED", HH
+      DB = function(BB) {
+        return BB[BB.WOOD = 0] = "WOOD", BB[BB.OBSIDIAN = 1] = "OBSIDIAN", BB[BB.SPEED = 2] = "SPEED", BB
       }({}),
-      SH = function(HH) {
-        return HH[HH.WOOD = 0] = "WOOD", HH[HH.IRON = 1] = "IRON", HH[HH.GOLD = 2] = "GOLD", HH[HH.DIAMOND = 3] = "DIAMOND", HH
+      QB = function(BB) {
+        return BB[BB.WOOD = 0] = "WOOD", BB[BB.IRON = 1] = "IRON", BB[BB.GOLD = 2] = "GOLD", BB[BB.DIAMOND = 3] = "DIAMOND", BB
       }({}),
-      hH = function(HH) {
-        return HH[HH.YELLOW = 0] = "YELLOW", HH[HH.WHITE = 1] = "WHITE", HH[HH.RED = 2] = "RED", HH[HH.PURPLE = 3] = "PURPLE", HH[HH.PINK = 4] = "PINK", HH[HH.ORANGE = 5] = "ORANGE", HH[HH.MAGENTA = 6] = "MAGENTA", HH[HH.LIME = 7] = "LIME", HH[HH.LIGHT_GRAY = 8] = "LIGHT_GRAY", HH[HH.LIGHT_BLUE = 9] = "LIGHT_BLUE", HH[HH.GREEN = 10] = "GREEN", HH[HH.GRAY = 11] = "GRAY", HH[HH.CYAN = 12] = "CYAN", HH[HH.BROWN = 13] = "BROWN", HH[HH.BLUE = 14] = "BLUE", HH[HH.BLACK = 15] = "BLACK", HH
+      oB = function(BB) {
+        return BB[BB.YELLOW = 0] = "YELLOW", BB[BB.WHITE = 1] = "WHITE", BB[BB.RED = 2] = "RED", BB[BB.PURPLE = 3] = "PURPLE", BB[BB.PINK = 4] = "PINK", BB[BB.ORANGE = 5] = "ORANGE", BB[BB.MAGENTA = 6] = "MAGENTA", BB[BB.LIME = 7] = "LIME", BB[BB.LIGHT_GRAY = 8] = "LIGHT_GRAY", BB[BB.LIGHT_BLUE = 9] = "LIGHT_BLUE", BB[BB.GREEN = 10] = "GREEN", BB[BB.GRAY = 11] = "GRAY", BB[BB.CYAN = 12] = "CYAN", BB[BB.BROWN = 13] = "BROWN", BB[BB.BLUE = 14] = "BLUE", BB[BB.BLACK = 15] = "BLACK", BB
       }({}),
-      tH = function(HH) {
-        return HH[HH.ROTATION_1 = 0] = "ROTATION_1", HH[HH.ROTATION_2 = 1] = "ROTATION_2", HH[HH.ROTATION_3 = 2] = "ROTATION_3", HH[HH.ROTATION_4 = 3] = "ROTATION_4", HH
+      jB = function(BB) {
+        return BB[BB.ROTATION_1 = 0] = "ROTATION_1", BB[BB.ROTATION_2 = 1] = "ROTATION_2", BB[BB.ROTATION_3 = 2] = "ROTATION_3", BB[BB.ROTATION_4 = 3] = "ROTATION_4", BB
       }({}),
-      zH = function(HH) {
-        return HH[HH.KART = 0] = "KART", HH[HH.OFF_ROADER = 1] = "OFF_ROADER", HH[HH.CAR = 2] = "CAR", HH[HH.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", HH[HH.ARMORED_CAR = 4] = "ARMORED_CAR", HH[HH.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", HH[HH.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", HH[HH.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", HH
+      yB = function(BB) {
+        return BB[BB.KART = 0] = "KART", BB[BB.OFF_ROADER = 1] = "OFF_ROADER", BB[BB.CAR = 2] = "CAR", BB[BB.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", BB[BB.ARMORED_CAR = 4] = "ARMORED_CAR", BB[BB.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", BB[BB.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", BB[BB.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", BB
       }({});
-    AH.DEFAULT, AH.BOAT, rH.SPEED, AH.GLIDER, SH.DIAMOND, AH.BALLOON, hH.BLACK, AH.SLEEPING, tH.ROTATION_4, AH.RIDING_MOB, AH.CAR, zH.MOONSTONE_MINING_DRILL, AH.HOVERCRAFT;
-    let CH = function(HH) {
-      return HH[HH.NORMAL = 0] = "NORMAL", HH[HH.GLIDING = 1] = "GLIDING", HH[HH.FLOATING = 2] = "FLOATING", HH
+    YB.DEFAULT, YB.BOAT, DB.SPEED, YB.GLIDER, QB.DIAMOND, YB.BALLOON, oB.BLACK, YB.SLEEPING, jB.ROTATION_4, YB.RIDING_MOB, YB.CAR, yB.MOONSTONE_MINING_DRILL, YB.HOVERCRAFT;
+    let JB = function(BB) {
+      return BB[BB.NORMAL = 0] = "NORMAL", BB[BB.GLIDING = 1] = "GLIDING", BB[BB.FLOATING = 2] = "FLOATING", BB
     }({})
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

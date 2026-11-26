@@ -1,20 +1,20 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  5180: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      reportCarriedGlLossWait: () => rH
+  5195: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      reportCarriedGlLossWait: () => DB
     });
-    var AH = LH(4806);
+    var YB = GB(4830);
 
-    function rH(HH) {
+    function DB(BB) {
       try {
-        (0, AH.e)(HH.message, HH.code, void 0, {}, {})
-      } catch (BH) {
-        console.warn("Couldn't report the last page's WebGL context wait", BH)
+        (0, YB.e)(BB.message, BB.code, void 0, {}, {})
+      } catch (OB) {
+        console.warn("Couldn't report the last page's WebGL context wait", OB)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

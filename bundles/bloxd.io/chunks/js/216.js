@@ -1,241 +1,241 @@
 export const id = 216;
 export const ids = [216];
 export const modules = {
-  34915: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => iH,
-      i: () => IB,
-      k: () => oB,
-      m: () => lB,
-      n: () => uB,
-      q: () => WB,
-      s: () => MB,
-      v: () => vB,
-      x: () => fB,
-      z: () => xB
+  34725: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => sB,
+      f: () => uO,
+      h: () => KO,
+      l: () => IO,
+      p: () => pO,
+      r: () => ZO,
+      s: () => NO,
+      v: () => WO,
+      z: () => mO,
+      A: () => RO
     });
-    var AH = LH(241),
-      rH = LH(15),
-      SH = LH(81),
-      hH = LH(1659),
-      tH = LH(4835),
-      zH = LH(3195),
-      CH = LH(3200),
-      EH = LH(30);
+    var YB = GB(258),
+      DB = GB(16),
+      QB = GB(92),
+      oB = GB(1699),
+      jB = GB(4851),
+      yB = GB(3249),
+      JB = GB(3255),
+      MB = GB(31);
     const {
-      windows: XH,
-      target: GH,
-      stepDown: YH,
-      stepUp: uH,
-      noGain: QH,
-      probe: WH
-    } = CH.b, MH = 1e3 / 60 * 1.08, xH = 1e3 / 55, vH = 1e3 / 45, PH = 1e3 / 30 * .92, TH = 1e3 / 30 * 1.08;
-    class UH {
+      windows: PB,
+      target: zB,
+      stepDown: lB,
+      stepUp: pB,
+      noGain: qB,
+      probe: ZB
+    } = JB.d, NB = 1e3 / 60 * 1.08, RB = 1e3 / 55, WB = 1e3 / 45, AB = 1e3 / 30 * .92, VB = 1e3 / 30 * 1.08;
+    class SB {
       constructor() {
         this.lastMs = -1, this.runBand = -1, this.runLength = 0, this.votes60 = 0, this.votesMid = 0, this.sumMidMs = 0, this.votes30 = 0, this.steadyVotes30 = 0, this.steadyFastAfter30 = 0, this.capRuledOut = !1
       }
-      frame(HH, BH) {
-        const LH = HH - this.lastMs;
-        this.lastMs = HH;
-        const AH = function(HH) {
-          if (HH <= 0 || HH > 100) return -1;
-          if (HH <= MH) return 0;
-          if (HH >= xH && HH <= vH) return 1;
-          return HH >= PH && HH <= TH ? 2 : -1
-        }(LH);
-        0 === AH && 2 === this.runBand && BH && (this.steadyFastAfter30++, this.capRuledOut ||= this.steadyVotes30 >= 60 && this.steadyFastAfter30 >= .1 * this.steadyVotes30), AH !== this.runBand && (this.runBand = AH, this.runLength = 0), AH < 0 || ++this.runLength < 3 || (0 === AH ? this.votes60++ : 1 === AH ? (this.votesMid++, this.sumMidMs += LH) : (this.votes30++, BH && this.steadyVotes30++))
+      frame(BB, OB) {
+        const GB = BB - this.lastMs;
+        this.lastMs = BB;
+        const YB = function(BB) {
+          if (BB <= 0 || BB > 100) return -1;
+          if (BB <= NB) return 0;
+          if (BB >= RB && BB <= WB) return 1;
+          return BB >= AB && BB <= VB ? 2 : -1
+        }(GB);
+        0 === YB && 2 === this.runBand && OB && (this.steadyFastAfter30++, this.capRuledOut ||= this.steadyVotes30 >= 60 && this.steadyFastAfter30 >= .1 * this.steadyVotes30), YB !== this.runBand && (this.runBand = YB, this.runLength = 0), YB < 0 || ++this.runLength < 3 || (0 === YB ? this.votes60++ : 1 === YB ? (this.votesMid++, this.sumMidMs += GB) : (this.votes30++, OB && this.steadyVotes30++))
       }
       hz() {
         return this.votes60 >= 60 ? 60 : this.votesMid >= 60 ? 1e3 * this.votesMid / this.sumMidMs : this.votes30 >= 60 && !this.capRuledOut ? 30 : 60
       }
     }
 
-    function VH(HH, BH, LH) {
+    function nB(BB, OB, GB) {
       const {
-        fast: AH,
-        masked: rH,
-        longFrame: SH,
-        paced: hH
-      } = HH;
-      return !SH && (AH && !hH || BH) ? rH && !LH ? "hold" : "rise" : rH ? HH.dropping ? "break" : "hold" : (SH ? AH || BH : AH && !LH) ? "hold" : "break"
+        fast: YB,
+        masked: DB,
+        longFrame: QB,
+        paced: oB
+      } = BB;
+      return !QB && (YB && !oB || OB) ? DB && !GB ? "hold" : "rise" : DB ? BB.dropping ? "break" : "hold" : (QB ? YB || OB : YB && !GB) ? "hold" : "break"
     }
-    const OH = XH.windowMs,
-      bH = XH.settleMs,
-      kH = XH.graceMs,
-      mH = XH.minIntervals,
-      oH = 1e3 * mH / OH,
-      IH = Math.floor(1e4 / OH),
-      fH = QH.backoffMs,
-      lH = QH.maxMs;
-    class KH {
-      constructor(HH, BH) {
+    const UB = PB.windowMs,
+      fB = PB.settleMs,
+      kB = PB.graceMs,
+      dB = PB.minIntervals,
+      KB = 1e3 * dB / UB,
+      uB = Math.floor(1e4 / UB),
+      mB = qB.backoffMs,
+      IB = qB.maxMs;
+    class FB {
+      constructor(BB, OB) {
         let {
-          lowest: LH,
-          startStep: AH = 0,
-          noGain: rH = null,
-          upWait: SH = null,
-          probeShare: hH = 0
-        } = BH;
-        this.hooks = HH, this.step = void 0, this.lowest = void 0, this.phase = {
+          lowest: GB,
+          startStep: YB = 0,
+          noGain: DB = null,
+          upWait: QB = null,
+          probeShare: oB = 0
+        } = OB;
+        this.hooks = BB, this.step = void 0, this.lowest = void 0, this.phase = {
           kind: "watch"
-        }, this.noGain = void 0, this.downUntilMs = void 0, this.downBackoffMs = void 0, this.noGainFps = void 0, this.keptFps = void 0, this.lenientUpFps = void 0, this.lenientUpAtMs = void 0, this.upFailures = void 0, this.upUntilMs = void 0, this.probeFailures = void 0, this.probeUntilMs = void 0, this.climbing = void 0, this.climbed = null, this.cleanRun = 0, this.dropRun = 0, this.dropRunMasked = !1, this.dropRunFpsSum = 0, this.dropRunClean = 0, this.dropRunCleanFpsSum = 0, this.probeShare = void 0, this.probeQuiet = 0, this.baseFps = new Float64Array(WH.baseWindows), this.baseCount = 0, this.baseNext = 0, this.refresh = new UH, this.wasMeasuring = !1, this.lastFrameMs = -1, this.resizedMs = Number.NEGATIVE_INFINITY, this.quietUntilMs = 0, this.graceUntilMs = 0, this.windowStartMs = -1, this.lastDrawnMs = 0, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = !1, this.slowStartMs = -1, this.slowIntervals = 0, this.slowMasked = !1, this.log = [], this.windows = [], this.lastTargetFps = GH.maxFps, this.lowest = LH, this.probeShare = hH, this.step = Math.min(AH, LH), this.noGain = rH, this.climbing = this.step > 0;
-        const tH = LH + 1;
-        this.downUntilMs = new Array(tH).fill(0), this.downBackoffMs = new Array(tH).fill(0), this.noGainFps = new Array(tH).fill(0), this.noGainFps[0] = null === rH ? 0 : rH.fps, this.keptFps = new Array(tH).fill(0), this.lenientUpFps = new Array(tH).fill(0), this.lenientUpAtMs = new Array(tH).fill(0), this.upFailures = new Array(tH).fill(0), this.upUntilMs = new Array(tH).fill(0), this.probeFailures = new Array(tH).fill(0), this.probeUntilMs = new Array(tH).fill(0), null !== SH && SH.step >= 0 && SH.step < tH && (this.upUntilMs[SH.step] = SH.untilMs)
+        }, this.noGain = void 0, this.downUntilMs = void 0, this.downBackoffMs = void 0, this.noGainFps = void 0, this.keptFps = void 0, this.lenientUpFps = void 0, this.lenientUpAtMs = void 0, this.upFailures = void 0, this.upUntilMs = void 0, this.probeFailures = void 0, this.probeUntilMs = void 0, this.climbing = void 0, this.climbed = null, this.cleanRun = 0, this.dropRun = 0, this.dropRunMasked = !1, this.dropRunFpsSum = 0, this.dropRunClean = 0, this.dropRunCleanFpsSum = 0, this.probeShare = void 0, this.probeQuiet = 0, this.baseFps = new Float64Array(ZB.baseWindows), this.baseCount = 0, this.baseNext = 0, this.refresh = new SB, this.wasMeasuring = !1, this.lastFrameMs = -1, this.resizedMs = Number.NEGATIVE_INFINITY, this.quietUntilMs = 0, this.graceUntilMs = 0, this.windowStartMs = -1, this.lastDrawnMs = 0, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = !1, this.slowStartMs = -1, this.slowIntervals = 0, this.slowMasked = !1, this.log = [], this.windows = [], this.lastTargetFps = zB.maxFps, this.lowest = GB, this.probeShare = oB, this.step = Math.min(YB, GB), this.noGain = DB, this.climbing = this.step > 0;
+        const jB = GB + 1;
+        this.downUntilMs = new Array(jB).fill(0), this.downBackoffMs = new Array(jB).fill(0), this.noGainFps = new Array(jB).fill(0), this.noGainFps[0] = null === DB ? 0 : DB.fps, this.keptFps = new Array(jB).fill(0), this.lenientUpFps = new Array(jB).fill(0), this.lenientUpAtMs = new Array(jB).fill(0), this.upFailures = new Array(jB).fill(0), this.upUntilMs = new Array(jB).fill(0), this.probeFailures = new Array(jB).fill(0), this.probeUntilMs = new Array(jB).fill(0), null !== QB && QB.step >= 0 && QB.step < jB && (this.upUntilMs[QB.step] = QB.untilMs)
       }
       currentStep() {
         return this.step
       }
-      frame(HH, BH, LH) {
-        let AH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (this.refresh.frame(HH, LH && !AH), !LH) return void this.leave(HH);
-        const rH = HH - this.lastFrameMs,
-          SH = this.resizeStall(HH);
-        if (rH > 2e3 && !SH && this.leave(this.lastFrameMs), !this.wasMeasuring) return this.wasMeasuring = !0, this.lastFrameMs = HH, this.quietUntilMs = Math.max(this.quietUntilMs, HH + kH), this.graceUntilMs = HH + kH, this.windowStartMs = -1, void(this.slowStartMs = -1);
-        rH > 500 && (this.hitch(HH), SH && (this.slowStartMs = -1)), this.lastFrameMs = HH, HH >= this.quietUntilMs && this.countWindow(HH, BH, AH) || BH && HH >= this.graceUntilMs && this.countSlow(HH, AH)
+      frame(BB, OB, GB) {
+        let YB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (this.refresh.frame(BB, GB && !YB), !GB) return void this.leave(BB);
+        const DB = BB - this.lastFrameMs,
+          QB = this.resizeStall(BB);
+        if (DB > 2e3 && !QB && this.leave(this.lastFrameMs), !this.wasMeasuring) return this.wasMeasuring = !0, this.lastFrameMs = BB, this.quietUntilMs = Math.max(this.quietUntilMs, BB + kB), this.graceUntilMs = BB + kB, this.windowStartMs = -1, void(this.slowStartMs = -1);
+        DB > 500 && (this.hitch(BB), QB && (this.slowStartMs = -1)), this.lastFrameMs = BB, BB >= this.quietUntilMs && this.countWindow(BB, OB, YB) || OB && BB >= this.graceUntilMs && this.countSlow(BB, YB)
       }
-      countWindow(HH, BH, LH) {
-        if (this.windowStartMs < 0) return !!BH && (this.windowStartMs = HH, this.lastDrawnMs = HH, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = LH, !1);
-        if (this.windowMasked ||= LH, !BH) return this.windowHeld++, !1;
-        this.windowIntervals++, this.windowMaxIntervalMs = Math.max(this.windowMaxIntervalMs, HH - this.lastDrawnMs), this.lastDrawnMs = HH;
-        const AH = HH - this.windowStartMs;
-        if (AH < OH) return !1;
-        const rH = this.windowIntervals,
-          SH = 1e3 * rH / AH,
-          hH = this.windowHeld,
-          tH = this.windowMaxIntervalMs,
-          zH = this.windowMasked;
-        if (this.windowStartMs = -1, rH < mH) return !1;
+      countWindow(BB, OB, GB) {
+        if (this.windowStartMs < 0) return !!OB && (this.windowStartMs = BB, this.lastDrawnMs = BB, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = GB, !1);
+        if (this.windowMasked ||= GB, !OB) return this.windowHeld++, !1;
+        this.windowIntervals++, this.windowMaxIntervalMs = Math.max(this.windowMaxIntervalMs, BB - this.lastDrawnMs), this.lastDrawnMs = BB;
+        const YB = BB - this.windowStartMs;
+        if (YB < UB) return !1;
+        const DB = this.windowIntervals,
+          QB = 1e3 * DB / YB,
+          oB = this.windowHeld,
+          jB = this.windowMaxIntervalMs,
+          yB = this.windowMasked;
+        if (this.windowStartMs = -1, DB < dB) return !1;
         this.slowStartMs = -1;
-        const CH = this.targetFps();
-        return this.decide(SH, 1, {
-          fast: SH >= CH * GH.cleanShare,
-          dropping: SH < CH * GH.dropShare,
-          masked: zH,
-          longFrame: tH > GH.cleanMaxIntervalMs,
-          paced: hH > GH.maxHeldFrames && SH < .999 * CH
-        }, HH), !0
+        const JB = this.targetFps();
+        return this.decide(QB, 1, {
+          fast: QB >= JB * zB.cleanShare,
+          dropping: QB < JB * zB.dropShare,
+          masked: yB,
+          longFrame: jB > zB.cleanMaxIntervalMs,
+          paced: oB > zB.maxHeldFrames && QB < .999 * JB
+        }, BB), !0
       }
       targetFps() {
-        return this.lastTargetFps = Math.min(GH.maxFps, this.refresh.hz()), this.lastTargetFps
+        return this.lastTargetFps = Math.min(zB.maxFps, this.refresh.hz()), this.lastTargetFps
       }
-      countSlow(HH, BH) {
-        if (this.slowStartMs < 0) return this.slowStartMs = HH, this.slowIntervals = 0, void(this.slowMasked = BH);
-        this.slowMasked ||= BH, this.slowIntervals++;
-        const LH = HH - this.slowStartMs;
-        if (LH < 1e4) return;
-        const AH = 1e3 * this.slowIntervals / LH,
-          rH = this.slowMasked;
-        this.slowStartMs = -1, this.countSlow(HH, BH), AH < oH && (this.windowStartMs = -1, this.decide(AH, IH, {
+      countSlow(BB, OB) {
+        if (this.slowStartMs < 0) return this.slowStartMs = BB, this.slowIntervals = 0, void(this.slowMasked = OB);
+        this.slowMasked ||= OB, this.slowIntervals++;
+        const GB = BB - this.slowStartMs;
+        if (GB < 1e4) return;
+        const YB = 1e3 * this.slowIntervals / GB,
+          DB = this.slowMasked;
+        this.slowStartMs = -1, this.countSlow(BB, OB), YB < KB && (this.windowStartMs = -1, this.decide(YB, uB, {
           fast: !1,
           dropping: !0,
-          masked: rH,
+          masked: DB,
           longFrame: !1,
           paced: !1
-        }, HH))
+        }, BB))
       }
-      resizeStall(HH) {
-        return this.lastFrameMs - this.resizedMs <= bH && HH - this.lastFrameMs <= 15e3
+      resizeStall(BB) {
+        return this.lastFrameMs - this.resizedMs <= fB && BB - this.lastFrameMs <= 15e3
       }
-      paused(HH) {
-        this.refresh.frame(HH, !1), HH - this.lastFrameMs > 2e3 && (this.quietUntilMs = Math.max(this.quietUntilMs, HH + kH), this.graceUntilMs = HH + kH), this.lastFrameMs = HH, this.slowStartMs = -1, this.hitch(HH)
+      paused(BB) {
+        this.refresh.frame(BB, !1), BB - this.lastFrameMs > 2e3 && (this.quietUntilMs = Math.max(this.quietUntilMs, BB + kB), this.graceUntilMs = BB + kB), this.lastFrameMs = BB, this.slowStartMs = -1, this.hitch(BB)
       }
-      resized(HH) {
-        this.resizedMs = HH, this.hitch(HH)
+      resized(BB) {
+        this.resizedMs = BB, this.hitch(BB)
       }
       hidden() {
         this.leave(this.lastFrameMs)
       }
-      leave(HH) {
-        this.wasMeasuring && (this.wasMeasuring = !1, this.left(HH))
+      leave(BB) {
+        this.wasMeasuring && (this.wasMeasuring = !1, this.left(BB))
       }
-      hitch(HH) {
-        this.windowStartMs = -1, this.quietUntilMs = Math.max(this.quietUntilMs, HH + bH)
+      hitch(BB) {
+        this.windowStartMs = -1, this.quietUntilMs = Math.max(this.quietUntilMs, BB + fB)
       }
-      left(HH) {
+      left(BB) {
         this.windowStartMs = -1, this.slowStartMs = -1, this.cleanRun = 0, this.probeQuiet = 0, this.resetDropRun();
-        const BH = this.phase;
-        "watch" !== BH.kind && (this.phase = {
+        const OB = this.phase;
+        "watch" !== OB.kind && (this.phase = {
           kind: "watch"
-        }, "down" === BH.kind && (this.downUntilMs[BH.from] = HH + fH, this.noGainFps[BH.from] = 0, 0 === BH.from && null !== this.noGain && (this.noGain = {
+        }, "down" === OB.kind && (this.downUntilMs[OB.from] = BB + mB, this.noGainFps[OB.from] = 0, 0 === OB.from && null !== this.noGain && (this.noGain = {
           ...this.noGain,
-          untilMs: Math.min(this.noGain.untilMs, HH + fH)
-        })), this.setStep(BH.from, 0, HH, "left"), "up" === BH.kind && (this.climbed = BH.fromClimbed))
+          untilMs: Math.min(this.noGain.untilMs, BB + mB)
+        })), this.setStep(OB.from, 0, BB, "left"), "up" === OB.kind && (this.climbed = OB.fromClimbed))
       }
-      decide(HH, BH, LH, AH) {
+      decide(BB, OB, GB, YB) {
         const {
-          dropping: rH,
-          masked: SH
-        } = LH;
+          dropping: DB,
+          masked: QB
+        } = GB;
         128 === this.windows.length && this.windows.shift(), this.windows.push({
-          atMs: AH,
+          atMs: YB,
           step: this.step,
-          fps: Math.round(10 * HH) / 10,
-          windows: BH,
-          masked: SH,
-          dropping: rH
+          fps: Math.round(10 * BB) / 10,
+          windows: OB,
+          masked: QB,
+          dropping: DB
         });
-        const hH = this.phase;
-        switch (hH.kind) {
+        const oB = this.phase;
+        switch (oB.kind) {
           case "watch": {
-            SH || 1 !== BH || (this.baseFps[this.baseNext] = HH, this.baseNext = (this.baseNext + 1) % this.baseFps.length, this.baseCount = Math.min(this.baseCount + 1, this.baseFps.length));
-            const hH = !rH && this.keptAfterDip(this.step) && HH >= this.keptFps[this.step] * uH.recoverGain;
-            return void this.watch(HH, BH, VH(LH, hH, !1), rH, SH, AH)
+            QB || 1 !== OB || (this.baseFps[this.baseNext] = BB, this.baseNext = (this.baseNext + 1) % this.baseFps.length, this.baseCount = Math.min(this.baseCount + 1, this.baseFps.length));
+            const oB = !DB && this.keptAfterDip(this.step) && BB >= this.keptFps[this.step] * pB.recoverGain;
+            return void this.watch(BB, OB, nB(GB, oB, !1), DB, QB, YB)
           }
           case "down": {
-            if (hH.judged += BH, hH.fpsSum += HH * BH, hH.minFps = Math.min(hH.minFps, HH), SH || (hH.clean += BH, hH.cleanFpsSum += HH * BH, hH.cleanMinFps = Math.min(hH.cleanMinFps, HH)), hH.judged < YH.judgeWindows) return;
-            const LH = hH.clean > 0 ? hH.cleanFpsSum / hH.clean : hH.fpsSum / hH.judged;
-            if (LH >= hH.fromFps * YH.keepGain) {
-              const HH = hH.clean > 0 ? hH.cleanMinFps : hH.minFps;
-              this.keepDown(hH.from, hH.fromFps, LH, Math.min(HH, hH.fromFps * YH.keepGain), AH)
-            } else this.noGainFrom(hH, LH, AH);
+            if (oB.judged += OB, oB.fpsSum += BB * OB, oB.minFps = Math.min(oB.minFps, BB), QB || (oB.clean += OB, oB.cleanFpsSum += BB * OB, oB.cleanMinFps = Math.min(oB.cleanMinFps, BB)), oB.judged < lB.judgeWindows) return;
+            const GB = oB.clean > 0 ? oB.cleanFpsSum / oB.clean : oB.fpsSum / oB.judged;
+            if (GB >= oB.fromFps * lB.keepGain) {
+              const BB = oB.clean > 0 ? oB.cleanMinFps : oB.minFps;
+              this.keepDown(oB.from, oB.fromFps, GB, Math.min(BB, oB.fromFps * lB.keepGain), YB)
+            } else this.noGainFrom(oB, GB, YB);
             return
           }
           case "up": {
-            const BH = this.keptAfterDip(hH.from),
-              tH = VH(LH, BH && !rH, !0);
-            if ("hold" === tH && (hH.maskedHolds += SH ? 1 : 0, ++hH.holds <= uH.trialHoldWindows)) return;
-            if ("rise" !== tH) return SH || "hold" === tH && hH.maskedHolds > 0 ? this.spoilTrial(hH, HH, AH) : this.failTrialOf(hH, HH, AH), void(this.climbed = hH.fromClimbed);
-            if (hH.fpsSum += HH, SH || (hH.cleanJudged++, hH.cleanFpsSum += HH), ++hH.judged >= uH.trialWindows) {
-              const LH = hH.cleanJudged > 0,
-                rH = LH ? hH.cleanFpsSum / hH.cleanJudged : hH.fpsSum / hH.judged;
-              if (BH && !this.probeBarMet(rH, hH.baseFps)) return LH ? this.failTrialOf(hH, HH, AH) : this.spoilTrial(hH, HH, AH), void(this.climbed = hH.fromClimbed);
+            const OB = this.keptAfterDip(oB.from),
+              jB = nB(GB, OB && !DB, !0);
+            if ("hold" === jB && (oB.maskedHolds += QB ? 1 : 0, ++oB.holds <= pB.trialHoldWindows)) return;
+            if ("rise" !== jB) return QB || "hold" === jB && oB.maskedHolds > 0 ? this.spoilTrial(oB, BB, YB) : this.failTrialOf(oB, BB, YB), void(this.climbed = oB.fromClimbed);
+            if (oB.fpsSum += BB, QB || (oB.cleanJudged++, oB.cleanFpsSum += BB), ++oB.judged >= pB.trialWindows) {
+              const GB = oB.cleanJudged > 0,
+                DB = GB ? oB.cleanFpsSum / oB.cleanJudged : oB.fpsSum / oB.judged;
+              if (OB && !this.probeBarMet(DB, oB.baseFps)) return GB ? this.failTrialOf(oB, BB, YB) : this.spoilTrial(oB, BB, YB), void(this.climbed = oB.fromClimbed);
               this.watchAt(this.step), this.climbed = {
-                from: hH.from,
+                from: oB.from,
                 heldWindows: 0,
-                below: hH.fromClimbed
-              }, this.lenientUpFps[this.step] = BH ? hH.fpsSum / hH.judged : 0, this.lenientUpAtMs[this.step] = AH, this.record(AH, HH, "up_kept")
+                below: oB.fromClimbed
+              }, this.lenientUpFps[this.step] = OB ? oB.fpsSum / oB.judged : 0, this.lenientUpAtMs[this.step] = YB, this.record(YB, BB, "up_kept")
             }
             return
           }
         }
       }
-      watch(HH, BH, LH, AH, rH, SH) {
-        const hH = this.climbed;
-        null !== hH && !AH && !rH && ++hH.heldWindows >= uH.heldWindows && (this.climbed = null, this.record(SH, HH, "LX"), this.hooks.LX(this.step)), AH ? (this.dropRun += BH, this.dropRunFpsSum += HH * BH, this.dropRunMasked ||= rH, rH || (this.dropRunClean += BH, this.dropRunCleanFpsSum += HH * BH)) : this.resetDropRun(), "hold" !== LH && (this.cleanRun = "rise" === LH ? this.cleanRun + 1 : 0), AH ? this.probeQuiet = 0 : rH || this.probeQuiet++;
-        const tH = null !== this.climbed ? uH : YH;
-        if (this.dropRun >= (this.dropRunMasked ? tH.maskedWindows : tH.dropWindows)) {
-          const BH = this.dropRunClean > 0 ? this.dropRunCleanFpsSum / this.dropRunClean : this.dropRunFpsSum / this.dropRun,
-            LH = this.dropRunClean >= YH.dropWindows && BH < this.noGainFps[this.step] * QH.heavierShare;
+      watch(BB, OB, GB, YB, DB, QB) {
+        const oB = this.climbed;
+        null !== oB && !YB && !DB && ++oB.heldWindows >= pB.heldWindows && (this.climbed = null, this.record(QB, BB, "sJ"), this.hooks.sJ(this.step)), YB ? (this.dropRun += OB, this.dropRunFpsSum += BB * OB, this.dropRunMasked ||= DB, DB || (this.dropRunClean += OB, this.dropRunCleanFpsSum += BB * OB)) : this.resetDropRun(), "hold" !== GB && (this.cleanRun = "rise" === GB ? this.cleanRun + 1 : 0), YB ? this.probeQuiet = 0 : DB || this.probeQuiet++;
+        const jB = null !== this.climbed ? pB : lB;
+        if (this.dropRun >= (this.dropRunMasked ? jB.maskedWindows : jB.dropWindows)) {
+          const OB = this.dropRunClean > 0 ? this.dropRunCleanFpsSum / this.dropRunClean : this.dropRunFpsSum / this.dropRun,
+            GB = this.dropRunClean >= lB.dropWindows && OB < this.noGainFps[this.step] * qB.heavierShare;
           this.resetDropRun();
-          const AH = this.climbed;
-          return void(null !== AH ? (this.failUp(this.step, AH.from, HH, SH), this.climbed = AH.below) : this.step < this.lowest && (LH || this.waitOver(SH)) && (this.climbing = !1, this.phase = {
+          const YB = this.climbed;
+          return void(null !== YB ? (this.failUp(this.step, YB.from, BB, QB), this.climbed = YB.below) : this.step < this.lowest && (GB || this.waitOver(QB)) && (this.climbing = !1, this.phase = {
             kind: "down",
             from: this.step,
-            fromFps: BH,
-            early: !this.waitOver(SH),
+            fromFps: OB,
+            early: !this.waitOver(QB),
             judged: 0,
             fpsSum: 0,
             minFps: 1 / 0,
             clean: 0,
             cleanFpsSum: 0,
             cleanMinFps: 1 / 0
-          }, this.setStep(this.step + 1, BH, SH, "down")))
+          }, this.setStep(this.step + 1, OB, QB, "down")))
         }
-        const zH = this.step - 1;
-        zH < 0 || SH < this.upUntilMs[zH] || (this.cleanRun >= (this.climbing ? uH.climbWindows : uH.cleanWindows) ? this.tryUp(HH, SH, "up") : this.probeShare > 0 && this.keptAfterDip(this.step) && this.probeQuiet >= WH.windows && this.baseCount > 0 && SH >= this.probeUntilMs[zH] && this.tryUp(HH, SH, "probe"))
+        const yB = this.step - 1;
+        yB < 0 || QB < this.upUntilMs[yB] || (this.cleanRun >= (this.climbing ? pB.climbWindows : pB.cleanWindows) ? this.tryUp(BB, QB, "up") : this.probeShare > 0 && this.keptAfterDip(this.step) && this.probeQuiet >= ZB.windows && this.baseCount > 0 && QB >= this.probeUntilMs[yB] && this.tryUp(BB, QB, "probe"))
       }
-      tryUp(HH, BH, LH) {
-        const AH = this.probeShare > 0 ? this.baseMedian() : 0;
+      tryUp(BB, OB, GB) {
+        const YB = this.probeShare > 0 ? this.baseMedian() : 0;
         this.phase = {
           kind: "up",
           from: this.step,
@@ -244,402 +244,402 @@ export const modules = {
           holds: 0,
           maskedHolds: 0,
           fromClimbed: this.climbed,
-          baseFps: AH,
-          probe: "probe" === LH,
+          baseFps: YB,
+          probe: "probe" === GB,
           cleanJudged: 0,
           cleanFpsSum: 0
-        }, this.setStep(this.step - 1, HH, BH, LH)
+        }, this.setStep(this.step - 1, BB, OB, GB)
       }
-      probeBarMet(HH, BH) {
-        return 0 === this.probeShare || 0 === BH || HH >= Math.min(BH, this.lastTargetFps) * this.probeShare
+      probeBarMet(BB, OB) {
+        return 0 === this.probeShare || 0 === OB || BB >= Math.min(OB, this.lastTargetFps) * this.probeShare
       }
       baseMedian() {
-        const HH = Array.from(this.baseFps.subarray(0, this.baseCount)).sort(((HH, BH) => HH - BH)),
-          BH = HH.length >> 1;
-        return 0 === HH.length ? 0 : HH.length % 2 === 1 ? HH[BH] : (HH[BH - 1] + HH[BH]) / 2
+        const BB = Array.from(this.baseFps.subarray(0, this.baseCount)).sort(((BB, OB) => BB - OB)),
+          OB = BB.length >> 1;
+        return 0 === BB.length ? 0 : BB.length % 2 === 1 ? BB[OB] : (BB[OB - 1] + BB[OB]) / 2
       }
-      waitOver(HH) {
-        return !(0 === this.step && null !== this.noGain && HH < this.noGain.untilMs) && HH >= this.downUntilMs[this.step]
+      waitOver(BB) {
+        return !(0 === this.step && null !== this.noGain && BB < this.noGain.untilMs) && BB >= this.downUntilMs[this.step]
       }
-      keptAfterDip(HH) {
-        return this.keptFps[HH] > 0
+      keptAfterDip(BB) {
+        return this.keptFps[BB] > 0
       }
-      keepDown(HH, BH, LH, AH, rH) {
-        this.watchAt(this.step), this.keptFps[this.step] = AH;
-        const SH = this.lenientUpFps[HH];
-        SH > 0 && rH - this.lenientUpAtMs[HH] < uH.lenientFailMs && BH * uH.recoverGain >= SH && this.failTrial(HH, rH), this.downBackoffMs[HH] = 0, this.noGainFps[HH] = 0, this.record(rH, LH, "down_kept"), 0 === HH && null !== this.noGain && (this.noGain = null, this.hooks.noGain(null)), this.hooks.hX(this.step)
+      keepDown(BB, OB, GB, YB, DB) {
+        this.watchAt(this.step), this.keptFps[this.step] = YB;
+        const QB = this.lenientUpFps[BB];
+        QB > 0 && DB - this.lenientUpAtMs[BB] < pB.lenientFailMs && OB * pB.recoverGain >= QB && this.failTrial(BB, DB), this.downBackoffMs[BB] = 0, this.noGainFps[BB] = 0, this.record(DB, GB, "down_kept"), 0 === BB && null !== this.noGain && (this.noGain = null, this.hooks.noGain(null)), this.hooks.GP(this.step)
       }
-      noGainFrom(HH, BH, LH) {
-        var AH, rH;
+      noGainFrom(BB, OB, GB) {
+        var YB, DB;
         let {
-          from: SH,
-          fromFps: hH,
-          early: tH
-        } = HH;
-        const zH = 0 === SH ? null !== (AH = null === (rH = this.noGain) || void 0 === rH ? void 0 : rH.backoffMs) && void 0 !== AH ? AH : 0 : this.downBackoffMs[SH],
-          CH = 0 === zH ? fH : tH ? zH : Math.min(2 * zH, lH),
-          EH = Math.max(hH, BH);
-        this.downBackoffMs[SH] = CH, this.downUntilMs[SH] = LH + CH, this.noGainFps[SH] = EH, 0 === SH && (this.noGain = {
-          untilMs: LH + CH,
-          backoffMs: CH,
-          fps: EH
-        }, this.hooks.noGain(this.noGain)), this.watchAt(SH), this.setStep(SH, BH, LH, "no_gain")
+          from: QB,
+          fromFps: oB,
+          early: jB
+        } = BB;
+        const yB = 0 === QB ? null !== (YB = null === (DB = this.noGain) || void 0 === DB ? void 0 : DB.backoffMs) && void 0 !== YB ? YB : 0 : this.downBackoffMs[QB],
+          JB = 0 === yB ? mB : jB ? yB : Math.min(2 * yB, IB),
+          MB = Math.max(oB, OB);
+        this.downBackoffMs[QB] = JB, this.downUntilMs[QB] = GB + JB, this.noGainFps[QB] = MB, 0 === QB && (this.noGain = {
+          untilMs: GB + JB,
+          backoffMs: JB,
+          fps: MB
+        }, this.hooks.noGain(this.noGain)), this.watchAt(QB), this.setStep(QB, OB, GB, "no_gain")
       }
-      spoilTrial(HH, BH, LH) {
-        HH.probe && (this.probeUntilMs[this.step] = LH + uH.failWaitsMs[0]), this.watchAt(HH.from), this.setStep(HH.from, BH, LH, "spoiled")
+      spoilTrial(BB, OB, GB) {
+        BB.probe && (this.probeUntilMs[this.step] = GB + pB.failWaitsMs[0]), this.watchAt(BB.from), this.setStep(BB.from, OB, GB, "spoiled")
       }
-      failTrialOf(HH, BH, LH) {
-        if (!HH.probe) return void this.failUp(this.step, HH.from, BH, LH);
-        const AH = uH.failWaitsMs;
-        this.climbing = !1, this.lenientUpFps[this.step] = 0, this.probeUntilMs[this.step] = LH + AH[Math.min(++this.probeFailures[this.step], AH.length) - 1], this.watchAt(HH.from), this.setStep(HH.from, BH, LH, "up_failed")
+      failTrialOf(BB, OB, GB) {
+        if (!BB.probe) return void this.failUp(this.step, BB.from, OB, GB);
+        const YB = pB.failWaitsMs;
+        this.climbing = !1, this.lenientUpFps[this.step] = 0, this.probeUntilMs[this.step] = GB + YB[Math.min(++this.probeFailures[this.step], YB.length) - 1], this.watchAt(BB.from), this.setStep(BB.from, OB, GB, "up_failed")
       }
-      failUp(HH, BH, LH, AH) {
-        this.failTrial(HH, AH), this.watchAt(BH), this.setStep(BH, LH, AH, "up_failed")
+      failUp(BB, OB, GB, YB) {
+        this.failTrial(BB, YB), this.watchAt(OB), this.setStep(OB, GB, YB, "up_failed")
       }
-      failTrial(HH, BH) {
-        this.climbing = !1, this.lenientUpFps[HH] = 0;
-        const LH = uH.failWaitsMs;
-        this.upUntilMs[HH] = BH + LH[Math.min(++this.upFailures[HH], LH.length) - 1], this.hooks.upFailed(HH)
+      failTrial(BB, OB) {
+        this.climbing = !1, this.lenientUpFps[BB] = 0;
+        const GB = pB.failWaitsMs;
+        this.upUntilMs[BB] = OB + GB[Math.min(++this.upFailures[BB], GB.length) - 1], this.hooks.upFailed(BB)
       }
-      watchAt(HH) {
+      watchAt(BB) {
         this.phase = {
           kind: "watch"
-        }, this.climbed = HH === this.step ? this.climbed : null, this.cleanRun = 0, this.probeQuiet = 0, this.resetDropRun()
+        }, this.climbed = BB === this.step ? this.climbed : null, this.cleanRun = 0, this.probeQuiet = 0, this.resetDropRun()
       }
       resetDropRun() {
         this.dropRun = 0, this.dropRunFpsSum = 0, this.dropRunMasked = !1, this.dropRunClean = 0, this.dropRunCleanFpsSum = 0
       }
-      setStep(HH, BH, LH, AH) {
-        const rH = HH !== this.step;
-        rH && (this.climbed = null, this.baseCount = 0, this.baseNext = 0), this.step = HH, this.record(LH, BH, AH), rH && (this.slowStartMs = -1, this.resized(LH), this.hooks.changed(HH))
+      setStep(BB, OB, GB, YB) {
+        const DB = BB !== this.step;
+        DB && (this.climbed = null, this.baseCount = 0, this.baseNext = 0), this.step = BB, this.record(GB, OB, YB), DB && (this.slowStartMs = -1, this.resized(GB), this.hooks.changed(BB))
       }
-      record(HH, BH, LH) {
+      record(BB, OB, GB) {
         64 === this.log.length && this.log.shift(), this.log.push({
-          atMs: HH,
+          atMs: BB,
           step: this.step,
-          fps: Math.round(10 * BH) / 10,
+          fps: Math.round(10 * OB) / 10,
           targetFps: Math.round(10 * this.lastTargetFps) / 10,
-          why: LH
+          why: GB
         })
       }
     }
-    var cH = LH(34924),
-      eH = LH(3206),
-      qH = LH(34929);
-    const gH = "autoGraphics",
-      NH = "autoGraphicsProbe",
-      RH = 6048e5,
-      jH = "startScale";
+    var iB = GB(34732),
+      LB = GB(3257),
+      gB = GB(34737);
+    const rB = "autoGraphics",
+      XB = "autoGraphicsProbe",
+      wB = 6048e5,
+      EB = "startScale";
 
-    function nH() {
-      return (0, zH.U)(rH.c.get("clientEscMenuOptions").pixelScale) * (0, zH.O)()
+    function cB() {
+      return (0, yB.Q)(DB.c.get("clientEscMenuOptions").pixelScale) * (0, yB.L)()
     }
 
-    function FH() {
-      return (0, zH.x)(nH())
+    function hB() {
+      return (0, yB.v)(cB())
     }
-    let DH = null;
+    let aB = null;
 
-    function wH() {
-      if (null === DH) {
-        const HH = new URLSearchParams(window.location.search).get("stepProbe"),
-          BH = Number(null !== HH && void 0 !== HH ? HH : ""),
+    function eB() {
+      if (null === aB) {
+        const BB = new URLSearchParams(window.location.search).get("stepProbe"),
+          OB = Number(null !== BB && void 0 !== BB ? BB : ""),
           {
-            keepShare: LH,
-            weakKeepShare: AH
-          } = CH.b.probe;
-        DH = 1 === BH ? (0, eH.h)() ? AH : LH : BH > .5 && BH < 1 ? BH : 0, null !== HH && 0 !== BH && 0 === DH && console.warn(`?stepProbe=${HH} is not 0, 1 or a share over 0.5 and under 1: the probe is off`)
+            keepShare: GB,
+            weakKeepShare: YB
+          } = JB.d.probe;
+        aB = 1 === OB ? (0, LB.e)() ? YB : GB : OB > .5 && OB < 1 ? OB : 0, null !== BB && 0 !== OB && 0 === aB && console.warn(`?stepProbe=${BB} is not 0, 1 or a share over 0.5 and under 1: the probe is off`)
       }
-      return DH
+      return aB
     }
 
-    function ZH() {
-      return wH() > 0 ? NH : gH
+    function TB() {
+      return eB() > 0 ? XB : rB
     }
 
-    function dH() {
-      const HH = EH.e.getItem(ZH());
-      return "object" !== typeof HH || null === HH || "string" !== typeof HH.gpu ? null : HH
+    function bB() {
+      const BB = MB.g.getItem(TB());
+      return "object" !== typeof BB || null === BB || "string" !== typeof BB.gpu ? null : BB
     }
 
-    function aH(HH) {
+    function CB(BB) {
       return {
-        untilEpochMs: Date.now() + (HH.untilMs - performance.now()),
-        backoffMs: HH.backoffMs,
-        fps: HH.fps
+        untilEpochMs: Date.now() + (BB.untilMs - performance.now()),
+        backoffMs: BB.backoffMs,
+        fps: BB.fps
       }
     }
 
-    function sH(HH) {
-      return void 0 === HH || "number" !== typeof HH.fps ? null : {
-        untilMs: performance.now() + (HH.untilEpochMs - Date.now()),
-        backoffMs: HH.backoffMs,
-        fps: HH.fps
+    function HB(BB) {
+      return void 0 === BB || "number" !== typeof BB.fps ? null : {
+        untilMs: performance.now() + (BB.untilEpochMs - Date.now()),
+        backoffMs: BB.backoffMs,
+        fps: BB.fps
       }
     }
-    let JH = null;
+    let vB = null;
 
-    function iH() {
-      if (null === JH) {
-        const HH = new URLSearchParams(window.location.search).get("msaa");
-        JH = rH.c.get("clientEscMenuOptions").antiAliasing && ("0" === HH || "1" !== HH && !(0, tH.e)("antiAliasing") && (0, eH.h)())
+    function sB() {
+      if (null === vB) {
+        const BB = new URLSearchParams(window.location.search).get("msaa");
+        vB = DB.c.get("clientEscMenuOptions").antiAliasing && ("0" === BB || "1" !== BB && !(0, jB.e)("antiAliasing") && (0, LB.e)())
       }
-      return JH
+      return vB
     }
 
-    function pH(HH) {
-      const BH = "number" === typeof HH ? Date.now() - HH : -1;
-      return BH >= 0 && BH < RH
+    function xB(BB) {
+      const OB = "number" === typeof BB ? Date.now() - BB : -1;
+      return OB >= 0 && OB < wB
     }
-    let yH = null;
+    let tB = null;
 
-    function HB() {
-      return yH ??= (0, SH.getDeviceDefaultPixelScale)(), BB(yH)
+    function BO() {
+      return tB ??= (0, QB.getDeviceDefaultPixelScale)(), OO(tB)
     }
 
-    function BB(HH) {
-      const BH = rH.c.get("clientEscMenuOptions");
-      return BH.pixelSmoothing && !(0, tH.e)("pixelScale") && BH.pixelScale === HH
+    function OO(BB) {
+      const OB = DB.c.get("clientEscMenuOptions");
+      return OB.pixelSmoothing && !(0, jB.e)("pixelScale") && OB.pixelScale === BB
     }
-    let LB = null,
-      AB = 0;
+    let GO = null,
+      YO = 0;
 
-    function rB() {
-      if (null === LB || AB !== nH()) {
-        var HH;
-        AB = nH();
-        const BH = Number(null !== (HH = new URLSearchParams(window.location.search).get(jH)) && void 0 !== HH ? HH : ""),
-          LH = FH();
-        if (BH > 0 && BH <= 1) LB = (0, zH.I)(LH, LH[0] / BH);
+    function DO() {
+      if (null === GO || YO !== cB()) {
+        var BB;
+        YO = cB();
+        const OB = Number(null !== (BB = new URLSearchParams(window.location.search).get(EB)) && void 0 !== BB ? BB : ""),
+          GB = hB();
+        if (OB > 0 && OB <= 1) GO = (0, yB.G)(GB, GB[0] / OB);
         else {
-          const HH = dH(),
-            BH = SB(LH, nH()),
-            AH = !(0, eH.m)() && pH(null === HH || void 0 === HH ? void 0 : HH.heldAt) && (null === HH || void 0 === HH ? void 0 : HH.heldTarget) === nH() ? null === HH || void 0 === HH ? void 0 : HH.heldN : void 0;
-          LB = "number" === typeof AH ? Math.min(BH, (0, zH.I)(LH, AH)) : BH
+          const BB = bB(),
+            OB = QO(GB, cB()),
+            YB = !(0, LB.j)() && xB(null === BB || void 0 === BB ? void 0 : BB.heldAt) && (null === BB || void 0 === BB ? void 0 : BB.heldTarget) === cB() ? null === BB || void 0 === BB ? void 0 : BB.heldN : void 0;
+          GO = "number" === typeof YB ? Math.min(OB, (0, yB.G)(GB, YB)) : OB
         }
       }
-      return LB
+      return GO
     }
 
-    function SB(HH, BH) {
-      return (0, zH.I)(HH, (0, zH.M)(BH))
+    function QO(BB, OB) {
+      return (0, yB.G)(BB, (0, yB.H)(OB))
     }
 
-    function hB(HH, BH, LH) {
-      const AH = HH.length - 1;
-      return !(0, SH.isMobile)() || wH() > 0 && (0, eH.h)() ? AH : Math.min(AH, Math.max(LH, SB(HH, BH) + CH.b.pixels.mobileRungsBelowStart))
+    function oO(BB, OB, GB) {
+      const YB = BB.length - 1;
+      return !(0, QB.isMobile)() || eB() > 0 && (0, LB.e)() ? YB : Math.min(YB, Math.max(GB, QO(BB, OB) + JB.d.pixels.mobileRungsBelowStart))
     }
 
-    function tB(HH, BH) {
-      var LH;
-      const AH = BH.indexOf(null !== (LH = HH.failedUpN) && void 0 !== LH ? LH : -1);
-      return AH >= 0 && pH(HH.failedUpAt) ? {
-        step: AH,
-        untilMs: performance.now() + CH.b.stepUp.failWaitsMs[0]
+    function jO(BB, OB) {
+      var GB;
+      const YB = OB.indexOf(null !== (GB = BB.failedUpN) && void 0 !== GB ? GB : -1);
+      return YB >= 0 && xB(BB.failedUpAt) ? {
+        step: YB,
+        untilMs: performance.now() + JB.d.stepUp.failWaitsMs[0]
       } : null
     }
-    let zB = null,
-      CB = !1,
-      EB = "";
-    const XB = new Set;
+    let yO = null,
+      JO = !1,
+      MO = "";
+    const PO = new Set;
 
-    function GB() {
-      for (const HH of XB) HH()
+    function zO() {
+      for (const BB of PO) BB()
     }
 
-    function YB() {
-      return CB ? null : (UB(), null === zB ? (null !== yH || null !== (0, SH.peekGpuVendor)() ? HB() : BB(1)) ? rB() : null : HB() ? zB.currentStep() : null)
+    function lO() {
+      return JO ? null : (SO(), null === yO ? (null !== tB || null !== (0, QB.peekGpuVendor)() ? BO() : OO(1)) ? DO() : null : BO() ? yO.currentStep() : null)
     }
 
-    function uB() {
-      const HH = YB();
-      if (null === HH) return null;
-      const BH = FH(),
-        LH = BH[Math.min(HH, BH.length - 1)];
-      return LH === QB() ? null : LH
+    function pO() {
+      const BB = lO();
+      if (null === BB) return null;
+      const OB = hB(),
+        GB = OB[Math.min(BB, OB.length - 1)];
+      return GB === qO() ? null : GB
     }
 
-    function QB() {
-      return (0, zH.E)(rH.c.get("clientEscMenuOptions").pixelScale, (0, zH.O)())
+    function qO() {
+      return (0, yB.C)(DB.c.get("clientEscMenuOptions").pixelScale, (0, yB.L)())
     }
 
-    function WB() {
-      return null !== zB && null !== uB()
+    function ZO() {
+      return null !== yO && null !== pO()
     }
 
-    function MB() {
-      if (null === zB) return !1;
-      const HH = uB();
-      return null !== HH && HH > QB()
+    function NO() {
+      if (null === yO) return !1;
+      const BB = pO();
+      return null !== BB && BB > qO()
     }
 
-    function xB(HH) {
-      return XB.add(HH), () => {
-        XB.delete(HH)
+    function RO(BB) {
+      return PO.add(BB), () => {
+        PO.delete(BB)
       }
     }
 
-    function vB(HH, BH, LH) {
-      var rH;
-      if (null !== zB || CB || (0, eH.m)()) return;
-      const SH = (0, cH.b)(HH, BH, LH);
-      null !== SH && ((0, eH.n)(SH.vendor), "" !== SH.renderer && (0, AH.t)(SH.vendor, SH.renderer)), EB = `${HH}:${(null===SH||void 0===SH?void 0:SH.renderer)||(null===SH||void 0===SH?void 0:SH.vendor)||""}`, (null === (rH = dH()) || void 0 === rH ? void 0 : rH.gpu) !== EB && (EH.e.setItem(ZH(), {
-        gpu: EB
-      }), LB = null), TB(), document.addEventListener("visibilitychange", (() => {
+    function WO(BB, OB, GB) {
+      var DB;
+      if (null !== yO || JO || (0, LB.j)()) return;
+      const QB = (0, iB.b)(BB, OB, GB);
+      null !== QB && ((0, LB.n)(QB.vendor), "" !== QB.renderer && (0, YB.q)(QB.vendor, QB.renderer)), MO = `${BB}:${(null===QB||void 0===QB?void 0:QB.renderer)||(null===QB||void 0===QB?void 0:QB.vendor)||""}`, (null === (DB = bB()) || void 0 === DB ? void 0 : DB.gpu) !== MO && (MB.g.setItem(TB(), {
+        gpu: MO
+      }), GO = null), VO(), document.addEventListener("visibilitychange", (() => {
         if (document.hidden) try {
-          var HH;
-          null === (HH = zB) || void 0 === HH || HH.hidden()
-        } catch (BH) {
-          fB(), console.error("The quality steps stopped", BH)
+          var BB;
+          null === (BB = yO) || void 0 === BB || BB.hidden()
+        } catch (OB) {
+          mO(), console.error("The quality steps stopped", OB)
         }
       }))
     }
-    let PB = 0;
+    let AO = 0;
 
-    function TB() {
-      var HH;
-      const BH = null !== (HH = dH()) && void 0 !== HH ? HH : {
-          gpu: EB
+    function VO() {
+      var BB;
+      const OB = null !== (BB = bB()) && void 0 !== BB ? BB : {
+          gpu: MO
         },
-        LH = FH();
-      PB = nH();
-      const AH = rB();
-      zB = new KH({
-          changed: GB,
-          hX: () => {
-            VB({
+        GB = hB();
+      AO = cB();
+      const YB = DO();
+      yO = new FB({
+          changed: zO,
+          GP: () => {
+            nO({
               heldN: void 0
             })
           },
-          LX: HH => {
-            var BH;
-            const LH = FH()[HH],
-              AH = {
-                heldN: LH,
+          sJ: BB => {
+            var OB;
+            const GB = hB()[BB],
+              YB = {
+                heldN: GB,
                 heldAt: Date.now(),
-                heldTarget: nH()
+                heldTarget: cB()
               };
-            (null === (BH = dH()) || void 0 === BH ? void 0 : BH.failedUpN) === LH && (AH.failedUpN = void 0), VB(AH)
+            (null === (OB = bB()) || void 0 === OB ? void 0 : OB.failedUpN) === GB && (YB.failedUpN = void 0), nO(YB)
           },
-          upFailed: HH => {
-            VB({
-              failedUpN: FH()[HH],
+          upFailed: BB => {
+            nO({
+              failedUpN: hB()[BB],
               failedUpAt: Date.now()
             })
           },
-          noGain: HH => {
-            VB({
-              noGain: null === HH ? void 0 : aH(HH)
+          noGain: BB => {
+            nO({
+              noGain: null === BB ? void 0 : CB(BB)
             })
           }
         }, {
-          lowest: hB(LH, PB, AH),
-          startStep: AH,
-          noGain: sH(BH.noGain),
-          upWait: tB(BH, LH),
-          probeShare: wH()
+          lowest: oO(GB, AO, YB),
+          startStep: YB,
+          noGain: HB(OB.noGain),
+          upWait: jO(OB, GB),
+          probeShare: eB()
         }),
-        function(HH) {
-          const BH = {
+        function(BB) {
+          const OB = {
             get step() {
-              return HH.currentStep()
+              return BB.currentStep()
             },
             get n() {
-              var HH;
-              return null !== (HH = uB()) && void 0 !== HH ? HH : QB()
+              var BB;
+              return null !== (BB = pO()) && void 0 !== BB ? BB : qO()
             },
             get scale() {
-              var HH;
-              return FH()[0] / (null !== (HH = uB()) && void 0 !== HH ? HH : QB())
+              var BB;
+              return hB()[0] / (null !== (BB = pO()) && void 0 !== BB ? BB : qO())
             },
             get msaaOff() {
-              return iH()
+              return sB()
             },
             get probeShare() {
-              return wH()
+              return eB()
             },
-            log: HH.log,
-            windows: HH.windows
+            log: BB.log,
+            windows: BB.windows
           };
           Object.defineProperty(window, "__qualitySteps", {
-            value: BH,
+            value: OB,
             configurable: !0
           })
-        }(zB), GB()
+        }(yO), zO()
     }
 
-    function UB() {
-      null !== zB && nH() !== PB && (LB = null, TB())
+    function SO() {
+      null !== yO && cB() !== AO && (GO = null, VO())
     }
 
-    function VB(HH) {
-      EH.e.setItem(ZH(), {
-        ...dH(),
-        ...HH,
-        gpu: EB
+    function nO(BB) {
+      MB.g.setItem(TB(), {
+        ...bB(),
+        ...BB,
+        gpu: MO
       })
     }
-    let OB = 0,
-      bB = 0,
-      kB = 0,
-      mB = !1;
+    let UO = 0,
+      fO = 0,
+      kO = 0,
+      dO = !1;
 
-    function oB() {
-      OB++
+    function KO() {
+      UO++
     }
 
-    function IB(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      UB(), null !== zB && (HH - kB >= 1e3 && (mB = OB - bB > CH.b.sceneChange.meshesPerSecond, bB = OB, kB = HH), qH.e.isHeld() ? zB.paused(HH) : zB.frame(HH, BH, LH && !document.hidden && HB(), mB || AH > 0 || (0, hH.t)()))
+    function uO(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      SO(), null !== yO && (BB - kO >= 1e3 && (dO = UO - fO > JB.d.sceneChange.meshesPerSecond, fO = UO, kO = BB), gB.b.isHeld() ? yO.paused(BB) : yO.frame(BB, OB, GB && !document.hidden && BO(), dO || YB > 0 || (0, oB.r)()))
     }
 
-    function fB() {
-      if (!CB) {
-        CB = !0, null !== zB && (zB = null, VB({
+    function mO() {
+      if (!JO) {
+        JO = !0, null !== yO && (yO = null, nO({
           noGain: void 0
         }));
         try {
-          GB()
-        } catch (HH) {
-          console.error("The quality steps' resize to the player's n failed", HH)
+          zO()
+        } catch (BB) {
+          console.error("The quality steps' resize to the player's n failed", BB)
         }
       }
     }
 
-    function lB() {
-      var HH;
-      null === (HH = zB) || void 0 === HH || HH.resized(performance.now())
+    function IO() {
+      var BB;
+      null === (BB = yO) || void 0 === BB || BB.resized(performance.now())
     }
   },
-  34924: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => SH
+  34732: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB
     });
-    var AH = LH(81),
-      rH = LH(114);
+    var YB = GB(92),
+      DB = GB(118);
 
-    function SH(HH, BH, LH) {
-      if ("webgpu" === HH) return LH ? ((0, AH.seedGpuVendor)(LH), {
-        vendor: LH,
+    function QB(BB, OB, GB) {
+      if ("webgpu" === BB) return GB ? ((0, YB.seedGpuVendor)(GB), {
+        vendor: GB,
         renderer: ""
       }) : null;
       try {
-        const LH = "webgl" === HH ? BH.getContext("webgl2") : BH.getContext("webgl");
-        "webgl" === HH && LH && (0, rH.F)(LH);
-        const SH = null === LH || void 0 === LH ? void 0 : LH.getExtension("WEBGL_debug_renderer_info");
-        if (LH && SH) {
-          const HH = String(LH.getParameter(SH.UNMASKED_VENDOR_WEBGL)),
-            BH = String(LH.getParameter(SH.UNMASKED_RENDERER_WEBGL));
-          return (0, AH.seedGpuVendor)(HH), (0, rH.L)(HH, BH), {
-            vendor: HH,
-            renderer: BH
+        const GB = "webgl" === BB ? OB.getContext("webgl2") : OB.getContext("webgl");
+        "webgl" === BB && GB && (0, DB.G)(GB);
+        const QB = null === GB || void 0 === GB ? void 0 : GB.getExtension("WEBGL_debug_renderer_info");
+        if (GB && QB) {
+          const BB = String(GB.getParameter(QB.UNMASKED_VENDOR_WEBGL)),
+            OB = String(GB.getParameter(QB.UNMASKED_RENDERER_WEBGL));
+          return (0, YB.seedGpuVendor)(BB), (0, DB.N)(BB, OB), {
+            vendor: BB,
+            renderer: OB
           }
         }
-        LH && (0, rH.L)(String(LH.getParameter(LH.VENDOR)), String(LH.getParameter(LH.RENDERER)))
+        GB && (0, DB.N)(String(GB.getParameter(GB.VENDOR)), String(GB.getParameter(GB.RENDERER)))
       } catch {}
       return null
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

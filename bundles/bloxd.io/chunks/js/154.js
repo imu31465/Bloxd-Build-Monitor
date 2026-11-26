@@ -1,132 +1,132 @@
 export const id = 154;
 export const ids = [154];
 export const modules = {
-  7187: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => PH,
-      h: () => TH,
-      l: () => xH,
-      p: () => MH
+  7176: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => AB,
+      g: () => VB,
+      h: () => RB,
+      l: () => NB
     });
-    var AH = LH(7189);
-    const rH = 6,
-      SH = 3,
-      hH = 1,
-      tH = 2,
-      zH = 4,
-      CH = 8,
-      EH = 16,
-      XH = 32,
-      GH = 64,
-      YH = 128,
-      uH = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var YB = GB(7179);
+    const DB = 6,
+      QB = 3,
+      oB = 1,
+      jB = 2,
+      yB = 4,
+      JB = 8,
+      MB = 16,
+      PB = 32,
+      zB = 64,
+      lB = 128,
+      pB = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function QH(HH) {
-      if (!HH) return 0;
-      const BH = uH.indexOf(HH);
-      if (BH <= 0) throw new Error(`"${HH}" is not a shader pack hook function`);
-      return BH
+    function qB(BB) {
+      if (!BB) return 0;
+      const OB = pB.indexOf(BB);
+      if (OB <= 0) throw new Error(`"${BB}" is not a shader pack hook function`);
+      return OB
     }
 
-    function WH(HH) {
-      if (0 === HH) return null;
-      const BH = uH[HH];
-      if (void 0 === BH) throw new Error(`${HH} is not a shader pack hook function id`);
-      return BH
+    function ZB(BB) {
+      if (0 === BB) return null;
+      const OB = pB[BB];
+      if (void 0 === OB) throw new Error(`${BB} is not a shader pack hook function id`);
+      return OB
     }
 
-    function MH(HH) {
-      const BH = AH.d.length;
+    function NB(BB) {
+      const OB = YB.e.length;
       return {
-        strict: HH >= BH,
-        program: AH.d[HH % BH]
+        strict: BB >= OB,
+        program: YB.e[BB % OB]
       }
     }
 
-    function xH(HH) {
-      return Number(HH.strict) * AH.d.length + AH.d.indexOf(HH.program)
+    function RB(BB) {
+      return Number(BB.strict) * YB.e.length + YB.e.indexOf(BB.program)
     }
 
-    function vH(HH) {
-      return "" === HH ? [] : HH.split(" ")
+    function WB(BB) {
+      return "" === BB ? [] : BB.split(" ")
     }
 
-    function PH(HH) {
-      const BH = {
-        variantFlags: new Uint8Array(rH),
-        hooks: new Uint8Array(rH * SH),
-        moduleCodes: Array(rH).fill(""),
-        reads: Array(2 * rH).fill("")
+    function AB(BB) {
+      const OB = {
+        variantFlags: new Uint8Array(DB),
+        hooks: new Uint8Array(DB * QB),
+        moduleCodes: Array(DB).fill(""),
+        reads: Array(2 * DB).fill("")
       };
-      for (const LH of HH) {
-        const HH = xH(LH.key),
-          AH = (HH, BH) => null === LH.hooks.surface || LH.reads.fragment.includes(HH) ? 0 : BH;
-        BH.variantFlags[HH] = (LH.sceneDepth ? hH : 0) | (LH.movesVertices ? tH : 0) | (LH.sunShadow ? zH : 0) | (LH.airShadow ? CH : 0) | (LH.discards ? EH : 0) | AH("localPosition", XH) | AH("enchantSpeed", GH) | AH("enchantTier", YH), BH.hooks[HH * SH] = QH(LH.hooks.vertex), BH.hooks[HH * SH + 1] = QH(LH.hooks.surface), BH.hooks[HH * SH + 2] = QH(LH.hooks.light), BH.moduleCodes[HH] = LH.moduleCode, BH.reads[2 * HH] = LH.reads.vertex.join(" "), BH.reads[2 * HH + 1] = LH.reads.fragment.join(" ")
+      for (const GB of BB) {
+        const BB = RB(GB.key),
+          YB = (BB, OB) => null === GB.hooks.surface || GB.reads.fragment.includes(BB) ? 0 : OB;
+        OB.variantFlags[BB] = (GB.sceneDepth ? oB : 0) | (GB.movesVertices ? jB : 0) | (GB.sunShadow ? yB : 0) | (GB.airShadow ? JB : 0) | (GB.discards ? MB : 0) | YB("localPosition", PB) | YB("enchantSpeed", zB) | YB("enchantTier", lB), OB.hooks[BB * QB] = qB(GB.hooks.vertex), OB.hooks[BB * QB + 1] = qB(GB.hooks.surface), OB.hooks[BB * QB + 2] = qB(GB.hooks.light), OB.moduleCodes[BB] = GB.moduleCode, OB.reads[2 * BB] = GB.reads.vertex.join(" "), OB.reads[2 * BB + 1] = GB.reads.fragment.join(" ")
       }
-      return BH
+      return OB
     }
 
-    function TH(HH) {
+    function VB(BB) {
       const {
-        hooks: BH,
-        moduleCodes: LH,
-        reads: AH
-      } = HH;
-      return Array.from(HH.variantFlags, ((HH, rH) => {
-        const XH = rH * SH;
+        hooks: OB,
+        moduleCodes: GB,
+        reads: YB
+      } = BB;
+      return Array.from(BB.variantFlags, ((BB, DB) => {
+        const PB = DB * QB;
         return {
-          key: MH(rH),
+          key: NB(DB),
           hooks: {
-            vertex: WH(BH[XH]),
-            surface: WH(BH[XH + 1]),
-            light: WH(BH[XH + 2])
+            vertex: ZB(OB[PB]),
+            surface: ZB(OB[PB + 1]),
+            light: ZB(OB[PB + 2])
           },
-          moduleCode: LH[rH],
-          sceneDepth: 0 !== (HH & hH),
-          sunShadow: 0 !== (HH & zH),
-          airShadow: 0 !== (HH & CH),
-          movesVertices: 0 !== (HH & tH),
-          discards: 0 !== (HH & EH),
+          moduleCode: GB[DB],
+          sceneDepth: 0 !== (BB & oB),
+          sunShadow: 0 !== (BB & yB),
+          airShadow: 0 !== (BB & JB),
+          movesVertices: 0 !== (BB & jB),
+          discards: 0 !== (BB & MB),
           reads: {
-            vertex: vH(AH[2 * rH]),
-            fragment: vH(AH[2 * rH + 1])
+            vertex: WB(YB[2 * DB]),
+            fragment: WB(YB[2 * DB + 1])
           }
         }
       }))
     }
   },
-  42020: (HH, BH, LH) => {
-    LH.d(BH, {
-      A: () => hH,
-      D: () => QH,
-      H: () => YH,
-      L: () => uH,
-      d: () => rH,
-      g: () => AH,
-      k: () => GH,
-      o: () => EH,
-      r: () => WH,
-      v: () => SH,
-      w: () => tH,
-      y: () => zH
+  41714: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB,
+      e: () => YB,
+      f: () => zB,
+      g: () => MB,
+      j: () => ZB,
+      k: () => QB,
+      n: () => jB,
+      o: () => yB,
+      p: () => oB,
+      t: () => qB,
+      w: () => lB,
+      z: () => pB
     });
-    const AH = 3,
-      rH = 0,
-      SH = 1,
-      hH = 2,
-      tH = {
+    const YB = 3,
+      DB = 0,
+      QB = 1,
+      oB = 2,
+      jB = {
         uniform: 3,
-        aG: 4,
+        sz: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      zH = 10,
-      CH = "BloxdPackInputs",
-      EH = "bloxdPackInputs",
-      XH = [{
+      yB = 10,
+      JB = "BloxdPackInputs",
+      MB = "bloxdPackInputs",
+      PB = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      GH = 80;
+      zB = 80;
 
-    function YH() {
-      const HH = XH.map((HH => {
+    function lB() {
+      const BB = PB.map((BB => {
         let {
-          name: BH,
-          type: LH
-        } = HH;
-        return `    ${BH}: ${LH},\n`
+          name: OB,
+          type: GB
+        } = BB;
+        return `    ${OB}: ${GB},\n`
       })).join("");
-      return `struct ${CH} {\n${HH}}\n@group(${AH}) @binding(${rH}) var<uniform> ${EH}: ${CH};\n`
+      return `struct ${JB} {\n${BB}}\n@group(${YB}) @binding(${DB}) var<uniform> ${MB}: ${JB};\n`
     }
 
-    function uH(HH, BH) {
-      const LH = new DataView(HH, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, GH),
-        [AH, rH, SH, hH, tH, zH] = XH;
-      LH.setFloat32(AH.offset, BH.seconds, !0), LH.setUint32(rH.offset, BH.lit ? 1 : 0, !0);
-      for (let CH = 0; CH < 3; CH++) LH.setInt32(SH.offset + 4 * CH, BH.renderOffset[CH], !0), LH.setFloat32(hH.offset + 4 * CH, BH.QBH[CH], !0), LH.setFloat32(tH.offset + 4 * CH, BH.eyePosition[CH], !0), LH.setFloat32(zH.offset + 4 * CH, BH.shadowDirection[CH], !0)
+    function pB(BB, OB) {
+      const GB = new DataView(BB, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, zB),
+        [YB, DB, QB, oB, jB, yB] = PB;
+      GB.setFloat32(YB.offset, OB.seconds, !0), GB.setUint32(DB.offset, OB.lit ? 1 : 0, !0);
+      for (let JB = 0; JB < 3; JB++) GB.setInt32(QB.offset + 4 * JB, OB.renderOffset[JB], !0), GB.setFloat32(oB.offset + 4 * JB, OB.nOB[JB], !0), GB.setFloat32(jB.offset + 4 * JB, OB.eyePosition[JB], !0), GB.setFloat32(yB.offset + 4 * JB, OB.shadowDirection[JB], !0)
     }
 
-    function QH(HH) {
-      const BH = new Uint32Array(Math.max(1, HH.length));
-      return HH.forEach(((HH, LH) => {
+    function qB(BB) {
+      const OB = new Uint32Array(Math.max(1, BB.length));
+      return BB.forEach(((BB, GB) => {
         let {
-          id: AH,
-          rotation: rH
-        } = HH;
-        BH[LH] = 65535 & AH | (3 & rH) << 16
-      })), BH
+          id: YB,
+          rotation: DB
+        } = BB;
+        OB[GB] = 65535 & YB | (3 & DB) << 16
+      })), OB
     }
-    const WH = {
+    const ZB = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  7189: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => AH,
-      g: () => hH,
-      i: () => tH,
-      j: () => rH,
-      k: () => SH
+  7179: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => YB,
+      g: () => oB,
+      k: () => jB,
+      o: () => DB,
+      r: () => QB
     });
-    const AH = ["terrain", "liquid", "model"];
+    const YB = ["terrain", "liquid", "model"];
 
-    function rH() {
-      const HH = [];
-      for (const BH of [!1, !0])
-        for (const LH of AH) HH.push({
-          strict: BH,
-          program: LH
+    function DB() {
+      const BB = [];
+      for (const OB of [!1, !0])
+        for (const GB of YB) BB.push({
+          strict: OB,
+          program: GB
         });
-      return HH
+      return BB
     }
 
-    function SH(HH) {
-      return `${HH.strict?"strict":"allow"}.${HH.program}`
+    function QB(BB) {
+      return `${BB.strict?"strict":"allow"}.${BB.program}`
     }
 
-    function hH(HH) {
-      return !HH.hooks.vertex && !HH.hooks.surface && !HH.hooks.light
+    function oB(BB) {
+      return !BB.hooks.vertex && !BB.hooks.surface && !BB.hooks.light
     }
 
-    function tH(HH, BH) {
-      return "off" !== BH && (null === HH || HH.some((HH => HH.key.strict === ("strict" === BH) && !hH(HH))))
+    function jB(BB, OB) {
+      return "off" !== OB && (null === BB || BB.some((BB => BB.key.strict === ("strict" === OB) && !oB(BB))))
     }
   },
-  44787: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      SHADER_PACK_INPUTS_BINDING: () => SH.d,
-      SHADER_PACK_INPUTS_GROUP: () => SH.g,
-      SHADER_PACK_INPUTS_SIZE: () => SH.k,
-      SHADER_PACK_INPUTS_VAR: () => SH.o,
-      SHADER_PACK_MODES: () => SH.r,
-      SHADER_PACK_PROGRAMS: () => AH.d,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => SH.v,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => SH.w,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => SH.y,
-      SHADER_PACK_TEXTURES_BINDING: () => SH.A,
-      encodeTextureLayers: () => SH.D,
-      flattenVariants: () => rH.e,
-      isVariantOff: () => AH.g,
-      packRunsIn: () => AH.i,
-      shaderPackInputsWgsl: () => SH.H,
-      shaderPackVariantKeys: () => AH.j,
-      variantKeyId: () => AH.k,
-      writeShaderPackInputs: () => SH.L
+  44442: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      SHADER_PACK_INPUTS_BINDING: () => QB.b,
+      SHADER_PACK_INPUTS_GROUP: () => QB.e,
+      SHADER_PACK_INPUTS_SIZE: () => QB.f,
+      SHADER_PACK_INPUTS_VAR: () => QB.g,
+      SHADER_PACK_MODES: () => QB.j,
+      SHADER_PACK_PROGRAMS: () => YB.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => QB.k,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => QB.n,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => QB.o,
+      SHADER_PACK_TEXTURES_BINDING: () => QB.p,
+      encodeTextureLayers: () => QB.t,
+      flattenVariants: () => DB.d,
+      isVariantOff: () => YB.g,
+      packRunsIn: () => YB.k,
+      shaderPackInputsWgsl: () => QB.w,
+      shaderPackVariantKeys: () => YB.o,
+      variantKeyId: () => YB.r,
+      writeShaderPackInputs: () => QB.z
     });
-    var AH = LH(7189),
-      rH = LH(7187),
-      SH = LH(42020)
+    var YB = GB(7179),
+      DB = GB(7176),
+      QB = GB(41714)
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,109 +1,109 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  42420: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      CapeMaterialPlugin: () => PH,
-      HueTintMaterialPlugin: () => TH,
-      LifeformMaterialPlugin: () => UH,
-      OverlayMaterialPlugin: () => VH
+  42124: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      CapeMaterialPlugin: () => AB,
+      HueTintMaterialPlugin: () => VB,
+      LifeformMaterialPlugin: () => SB,
+      OverlayMaterialPlugin: () => nB
     });
-    var AH = LH(42424),
-      rH = LH(38878);
-    class SH extends((0, AH.f)(rH.e)) {}(0, AH.g)(rH.e, SH);
-    var hH = LH(38176);
-    class tH extends((0, AH.f)(hH.d)) {}(0, AH.g)(hH.d, tH);
-    var zH = LH(38713);
-    class CH extends((0, AH.f)(zH.h)) {}(0, AH.g)(zH.h, CH);
-    var EH = LH(38194),
-      XH = LH(41538),
-      GH = LH(38192);
-    class YH extends((0, AH.f)(GH.f)) {
-      constructor(HH, BH, LH) {
-        super(HH, BH, LH), (0, EH.k)(HH)
+    var YB = GB(42129),
+      DB = GB(38682);
+    class QB extends((0, YB.e)(DB.e)) {}(0, YB.h)(DB.e, QB);
+    var oB = GB(38005);
+    class jB extends((0, YB.e)(oB.f)) {}(0, YB.h)(oB.f, jB);
+    var yB = GB(38531);
+    class JB extends((0, YB.e)(yB.f)) {}(0, YB.h)(yB.f, JB);
+    var MB = GB(38025),
+      PB = GB(41258),
+      zB = GB(38019);
+    class lB extends((0, YB.e)(zB.f)) {
+      constructor(BB, OB, GB) {
+        super(BB, OB, GB), (0, MB.j)(BB)
       }
-      dispose(HH) {
-        (0, EH.o)(this._material), super.dispose(HH)
+      dispose(BB) {
+        (0, MB.m)(this._material), super.dispose(BB)
       }
-    }(0, AH.g)(GH.f, YH), (0, GH.h)({
-      disableUnusedSpecularTerm: AH.d,
-      isLightingDisabled: HH => HH instanceof XH.StandardMaterial && HH.disableLighting
+    }(0, YB.h)(zB.f, lB), (0, zB.g)({
+      disableUnusedSpecularTerm: YB.b,
+      isLightingDisabled: BB => BB instanceof PB.StandardMaterial && BB.disableLighting
     });
-    var uH = LH(39607);
-    class QH extends((0, AH.f)(uH.i)) {}(0, AH.g)(uH.i, QH);
-    var WH = LH(39726),
-      MH = LH(38077),
-      xH = LH(39019),
-      vH = LH(38190);
-    class PH extends((0, AH.f)(WH.e)) {}(0, AH.g)(WH.e, PH);
-    class TH extends((0, AH.f)(MH.e)) {}(0, AH.g)(MH.e, TH);
-    class UH extends((0, AH.f)(xH.l)) {}(0, AH.g)(xH.l, UH);
-    class VH extends((0, AH.f)(vH.d)) {}(0, AH.g)(vH.d, VH)
+    var pB = GB(39376);
+    class qB extends((0, YB.e)(pB.d)) {}(0, YB.h)(pB.d, qB);
+    var ZB = GB(39497),
+      NB = GB(37899),
+      RB = GB(38801),
+      WB = GB(38011);
+    class AB extends((0, YB.e)(ZB.d)) {}(0, YB.h)(ZB.d, AB);
+    class VB extends((0, YB.e)(NB.d)) {}(0, YB.h)(NB.d, VB);
+    class SB extends((0, YB.e)(RB.l)) {}(0, YB.h)(RB.l, SB);
+    class nB extends((0, YB.e)(WB.c)) {}(0, YB.h)(WB.c, nB)
   },
-  45030: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      addBabylonLights: () => mB,
-      createSceneParticleSystem: () => lB,
-      default: () => cB
+  44687: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      addBabylonLights: () => dO,
+      createSceneParticleSystem: () => IO,
+      default: () => iO
     });
-    var AH = LH(45032),
-      rH = (LH(41264), LH(42418), LH(41784), LH(45039)),
-      SH = LH(38071),
-      hH = LH(37961),
-      tH = LH(45055),
-      zH = LH(45060),
-      CH = LH(38135),
-      EH = (LH(42424), LH(45065)),
-      XH = LH(45062),
-      GH = LH(39640),
-      YH = LH(45067),
-      uH = LH(41138),
-      QH = LH(39624);
-    const WH = "gpuParticles",
-      MH = "gpuParticlesSummed",
-      xH = QH.x,
-      vH = HH => HH / 4,
-      PH = (HH, BH, LH, AH) => Array.from({
-        length: BH
-      }, ((rH, SH) => `(${((HH,BH,LH)=>0===BH?`${HH} < 1`:BH===LH-1?`${HH} >= ${BH}`:`${HH} == ${BH}`)(HH,SH,BH)} ? ${LH(SH)} : ${AH})`)).join("\n\t\t+ "),
-      TH = (HH, BH, LH) => `vec4 ${HH}(int i) {\n\treturn ${PH("i",LH,(HH=>`gpuParticleSystem[${BH+HH}]`),"vec4(0.0)")};\n}\n`,
-      UH = `\n${TH("colorPositionsAt",vH(xH.colorPositions),QH.b/4)}\n${TH("color1At",vH(xH.color1),QH.b)}\n${TH("color2At",vH(xH.color2),QH.b)}\n${TH("velocityAt",vH(xH.EW),QH.b)}\n${TH("remapStopAt",vH(xH.remap),QH.b)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${PH("j",4,(HH=>`v[${HH}]`),"0.0")};\n}\n`,
-      VH = (HH, BH, LH, AH) => HH ? `${LH}(${AH})` : `gpuParticleSystem[${BH} + ${AH}]`,
-      OH = HH => `gpuParticleSystem[${HH>>2}].${"xyzw"[3&HH]}`,
-      bH = HH => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${QH.b}\n#define COLOR_POSITIONS ${vH(xH.colorPositions)}\n#define COLOR1 ${vH(xH.color1)}\n#define COLOR2 ${vH(xH.color2)}\n#define VELOCITY ${vH(xH.EW)}\n#define REMAP ${vH(xH.remap)}\n#define RECORDS_PER_ROW ${QH.n}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${QH.r/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${OH(xH.gravity)}, ${OH(xH.gravity+1)}, ${OH(xH.gravity+2)}); }\nint colorCount() { return int(${OH(xH.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${vH(xH.colorDead)}]; }\nint velocityCount() { return int(${OH(xH.velocityCount)}); }\nint remapCount() { return int(${OH(xH.remapCount)}); }\n${HH?UH:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${HH?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${VH(HH,"COLOR1","color1At","i")}, ${VH(HH,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${VH(HH,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${VH(HH,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${VH(HH,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${VH(HH,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${VH(HH,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${VH(HH,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${VH(HH,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
-      kH = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    uH.c.ShadersStore[`${WH}VertexShader`] = bH(!1), uH.c.ShadersStore[`${WH}PixelShader`] = kH, uH.c.ShadersStore[`${MH}VertexShader`] = bH(!0), uH.c.ShadersStore[`${MH}PixelShader`] = kH;
-    const mH = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      oH = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var IH = LH(39619),
-      fH = LH(45075);
-    class lH extends IH.b {
-      constructor(HH, BH, LH, AH) {
-        super(HH, BH, LH), this.renderer = LH, this.NQ = AH, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(QH.r), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, fH.c)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (HH, BH) => {
+    var YB = GB(44689),
+      DB = (GB(40974), GB(42118), GB(41472), GB(44699)),
+      QB = GB(37885),
+      oB = GB(37771),
+      jB = GB(44709),
+      yB = GB(44712),
+      JB = GB(37962),
+      MB = (GB(42129), GB(44726)),
+      PB = GB(44718),
+      zB = GB(39412),
+      lB = GB(44732),
+      pB = GB(40864),
+      qB = GB(39388);
+    const ZB = "gpuParticles",
+      NB = "gpuParticlesSummed",
+      RB = qB.v,
+      WB = BB => BB / 4,
+      AB = (BB, OB, GB, YB) => Array.from({
+        length: OB
+      }, ((DB, QB) => `(${((BB,OB,GB)=>0===OB?`${BB} < 1`:OB===GB-1?`${BB} >= ${OB}`:`${BB} == ${OB}`)(BB,QB,OB)} ? ${GB(QB)} : ${YB})`)).join("\n\t\t+ "),
+      VB = (BB, OB, GB) => `vec4 ${BB}(int i) {\n\treturn ${AB("i",GB,(BB=>`gpuParticleSystem[${OB+BB}]`),"vec4(0.0)")};\n}\n`,
+      SB = `\n${VB("colorPositionsAt",WB(RB.colorPositions),qB.b/4)}\n${VB("color1At",WB(RB.color1),qB.b)}\n${VB("color2At",WB(RB.color2),qB.b)}\n${VB("velocityAt",WB(RB.lZ),qB.b)}\n${VB("remapStopAt",WB(RB.remap),qB.b)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${AB("j",4,(BB=>`v[${BB}]`),"0.0")};\n}\n`,
+      nB = (BB, OB, GB, YB) => BB ? `${GB}(${YB})` : `gpuParticleSystem[${OB} + ${YB}]`,
+      UB = BB => `gpuParticleSystem[${BB>>2}].${"xyzw"[3&BB]}`,
+      fB = BB => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${qB.b}\n#define COLOR_POSITIONS ${WB(RB.colorPositions)}\n#define COLOR1 ${WB(RB.color1)}\n#define COLOR2 ${WB(RB.color2)}\n#define VELOCITY ${WB(RB.lZ)}\n#define REMAP ${WB(RB.remap)}\n#define RECORDS_PER_ROW ${qB.j}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${qB.n/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${UB(RB.gravity)}, ${UB(RB.gravity+1)}, ${UB(RB.gravity+2)}); }\nint colorCount() { return int(${UB(RB.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${WB(RB.colorDead)}]; }\nint velocityCount() { return int(${UB(RB.velocityCount)}); }\nint remapCount() { return int(${UB(RB.remapCount)}); }\n${BB?SB:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${BB?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${nB(BB,"COLOR1","color1At","i")}, ${nB(BB,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${nB(BB,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${nB(BB,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${nB(BB,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${nB(BB,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${nB(BB,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${nB(BB,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${nB(BB,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
+      kB = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    pB.b.ShadersStore[`${ZB}VertexShader`] = fB(!1), pB.b.ShadersStore[`${ZB}PixelShader`] = kB, pB.b.ShadersStore[`${NB}VertexShader`] = fB(!0), pB.b.ShadersStore[`${NB}PixelShader`] = kB;
+    const dB = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      KB = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var uB = GB(39385),
+      mB = GB(44735);
+    class IB extends uB.b {
+      constructor(BB, OB, GB, YB) {
+        super(BB, OB, GB), this.renderer = GB, this.eq = YB, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(qB.n), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, mB.g)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (BB, OB) => {
           const {
-            engine: LH
-          } = this, AH = LH._gl;
-          LH._bindTextureDirectly(AH.TEXTURE_2D, this.records, !0), LH._unpackFlipY(!1);
-          const rH = this.ring.recordBits;
-          for (let SH = HH; SH < BH;) {
-            const HH = Math.floor(SH / QH.n),
-              LH = Math.min(BH, (HH + 1) * QH.n);
-            AH.texSubImage2D(AH.TEXTURE_2D, 0, SH % QH.n * 4, HH, 4 * (LH - SH), 1, AH.RGBA_INTEGER, AH.UNSIGNED_INT, rH, SH * QH.c), SH = LH
+            engine: GB
+          } = this, YB = GB._gl;
+          GB._bindTextureDirectly(YB.TEXTURE_2D, this.records, !0), GB._unpackFlipY(!1);
+          const DB = this.ring.recordBits;
+          for (let QB = BB; QB < OB;) {
+            const BB = Math.floor(QB / qB.j),
+              GB = Math.min(OB, (BB + 1) * qB.j);
+            YB.texSubImage2D(YB.TEXTURE_2D, 0, QB % qB.j * 4, BB, 4 * (GB - QB), 1, YB.RGBA_INTEGER, YB.UNSIGNED_INT, DB, QB * qB.d), QB = GB
           }
-          LH._bindTextureDirectly(AH.TEXTURE_2D, null)
-        }, this.id = HH;
-        const rH = AH.Iu();
-        this.engine = rH;
-        const SH = Math.max(1, BH),
-          hH = Math.min(SH, QH.n);
-        this.records = rH.createRawTexture(null, 4 * hH, Math.ceil(SH / hH), EH.c.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, EH.c.TEXTURE_NEAREST_SAMPLINGMODE, null, EH.c.TEXTURETYPE_UNSIGNED_INTEGER)
+          GB._bindTextureDirectly(YB.TEXTURE_2D, null)
+        }, this.id = BB;
+        const DB = YB.Lp();
+        this.engine = DB;
+        const QB = Math.max(1, OB),
+          oB = Math.min(QB, qB.j);
+        this.records = DB.createRawTexture(null, 4 * oB, Math.ceil(QB / oB), MB.b.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, MB.b.TEXTURE_NEAREST_SAMPLINGMODE, null, MB.b.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.NQ.getAnimationRatio() || 1;
-        const BH = this.NQ.getFrameId();
-        if (BH === this.animatedFrame) return !1;
-        const LH = super.animate(HH);
-        return LH && (this.animatedFrame = BH, this.ring.takeUploads(this.uploadSlots)), LH
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.eq.getAnimationRatio() || 1;
+        const OB = this.eq.getFrameId();
+        if (OB === this.animatedFrame) return !1;
+        const GB = super.animate(BB);
+        return GB && (this.animatedFrame = OB, this.ring.takeUploads(this.uploadSlots)), GB
       }
       render() {
         return this.renderer.render(this)
@@ -112,779 +112,779 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(HH) {
-        (0, fH.d)(this, this.uniforms, this.uniformBits, HH);
-        for (const LH of QH.t) this.uniforms[LH] = this.uniformBits[LH];
-        var BH;
-        (0, fH.f)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (BH = this.ramp) || void 0 === BH || BH.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = XH.b.CreateRGBATexture(this.rampTexels.texels, QH.k, 1, this.NQ, !1, !1, EH.c.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(BB) {
+        (0, mB.j)(this, this.uniforms, this.uniformBits, BB);
+        for (const GB of qB.r) this.uniforms[GB] = this.uniformBits[GB];
+        var OB;
+        (0, mB.k)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (OB = this.ramp) || void 0 === OB || OB.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = PB.d.CreateRGBATexture(this.rampTexels.texels, qB.h, 1, this.eq, !1, !1, MB.b.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var HH;
-        this.records.dispose(), null === (HH = this.ramp) || void 0 === HH || HH.dispose(), this.ramp = null
+        var BB;
+        this.records.dispose(), null === (BB = this.ramp) || void 0 === BB || BB.dispose(), this.ramp = null
       }
     }
-    const KH = "the context was lost before the programs linked";
-    class cH {
-      constructor(HH, BH) {
-        this.NQ = HH, this.reportFailure = BH, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = WH, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, YH.e)(), this.engine = HH.Iu(), this.whiteRamp = XH.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, HH, !1, !1, EH.c.TEXTURE_NEAREST_SAMPLINGMODE);
-        const LH = this.linkPair(WH),
-          AH = null !== LH && LH !== KH ? this.linkPair(MH) : LH;
-        null === AH && null !== LH ? (console.warn(`GPU particles link their fallback here: ${LH}`), this.reportFailure(LH, !0)) : null !== AH && this.fail(AH === KH ? KH : null !== LH && void 0 !== LH ? LH : AH)
+    const FB = "the context was lost before the programs linked";
+    class iB {
+      constructor(BB, OB) {
+        this.eq = BB, this.reportFailure = OB, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = ZB, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, lB.c)(), this.engine = BB.Lp(), this.whiteRamp = PB.d.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, BB, !1, !1, MB.b.TEXTURE_NEAREST_SAMPLINGMODE);
+        const GB = this.linkPair(ZB),
+          YB = null !== GB && GB !== FB ? this.linkPair(NB) : GB;
+        null === YB && null !== GB ? (console.warn(`GPU particles link their fallback here: ${GB}`), this.reportFailure(GB, !0)) : null !== YB && this.fail(YB === FB ? FB : null !== GB && void 0 !== GB ? GB : YB)
       }
-      XF(HH, BH) {
-        const LH = QH.n * this.engine.getCaps().maxTextureSize;
-        BH > LH && this.warnOnce(`capacity:${HH}`, `particle system ${HH} holds ${LH} particles, not ${BH}: its records texture's limit`);
-        const AH = new lH(HH, Math.min(BH, LH), this, this.NQ);
-        return this.NQ.addParticleSystem(AH), AH
+      gL(BB, OB) {
+        const GB = qB.j * this.engine.getCaps().maxTextureSize;
+        OB > GB && this.warnOnce(`capacity:${BB}`, `particle system ${BB} holds ${GB} particles, not ${OB}: its records texture's limit`);
+        const YB = new IB(BB, Math.min(OB, GB), this, this.eq);
+        return this.eq.addParticleSystem(YB), YB
       }
-      canDraw(HH) {
-        var BH, LH;
-        if (this.failed || null === (BH = HH.texture) || void 0 === BH || null === (LH = BH.mirror) || void 0 === LH || !LH.isReady()) return !1;
-        for (const AH of (0, GH.k)(HH.blendMode))
-          if (!this.effectFor(AH).isReady()) return !1;
+      canDraw(BB) {
+        var OB, GB;
+        if (this.failed || null === (OB = BB.texture) || void 0 === OB || null === (GB = OB.mirror) || void 0 === GB || !GB.isReady()) return !1;
+        for (const YB of (0, zB.o)(BB.blendMode))
+          if (!this.effectFor(YB).isReady()) return !1;
         return !0
       }
-      disposeStopped(HH) {
-        this.NQ._toBeDisposed.push(HH)
+      disposeStopped(BB) {
+        this.eq._toBeDisposed.push(BB)
       }
-      remove(HH) {
-        this.NQ.removeParticleSystem(HH), HH.releaseGl()
+      remove(BB) {
+        this.eq.removeParticleSystem(BB), BB.releaseGl()
       }
-      render(HH) {
-        var BH;
-        if (!HH.isReady() || !HH.hasLiveParticles()) return 0;
+      render(BB) {
+        var OB;
+        if (!BB.isReady() || !BB.hasLiveParticles()) return 0;
         const {
-          engine: LH,
-          NQ: AH,
-          frame: rH
+          engine: GB,
+          eq: YB,
+          frame: DB
         } = this;
-        HH.prepareDraw(this.warnOnce), HH.drawOffset(rH, 0), rH[3] = HH.drawTime();
-        const SH = HH.ring.drawStart(),
-          hH = HH.ring.drawCount(),
-          tH = null !== (BH = HH.ramp) && void 0 !== BH ? BH : this.whiteRamp;
-        LH.setState(!1);
-        for (const zH of (0, GH.k)(HH.blendMode)) {
-          const BH = this.effectFor(zH);
-          LH.enableEffect(BH), BH.setTexture("gpuParticleTexture", HH.texture.mirror), BH.setTexture("gpuParticleRampTexture", tH), BH._bindTexture("gpuParticleRecords", HH.records), BH.setMatrix("gpuParticleView", AH.getViewMatrix()), BH.setMatrix("gpuParticleProjection", AH.getProjectionMatrix()), BH.setFloatArray4("gpuParticleSystem", HH.uniforms), BH.setFloat4("gpuParticleFrame", rH[0], rH[1], rH[2], rH[3]), BH.setFloat2("gpuParticleRange", SH, hH), BH.setFloat("gpuParticleRamp", HH.uniforms[QH.x.ramp]), LH.bindBuffers(this.vertexBuffers, null, BH), LH.setAlphaMode((0, GH.j)(zH)), LH.drawArraysType(EH.c.MATERIAL_TriangleStripDrawMode, 0, 4, hH), BH._bindTexture("gpuParticleRecords", null)
+        BB.prepareDraw(this.warnOnce), BB.drawOffset(DB, 0), DB[3] = BB.drawTime();
+        const QB = BB.ring.drawStart(),
+          oB = BB.ring.drawCount(),
+          jB = null !== (OB = BB.ramp) && void 0 !== OB ? OB : this.whiteRamp;
+        GB.setState(!1);
+        for (const yB of (0, zB.o)(BB.blendMode)) {
+          const OB = this.effectFor(yB);
+          GB.enableEffect(OB), OB.setTexture("gpuParticleTexture", BB.texture.mirror), OB.setTexture("gpuParticleRampTexture", jB), OB._bindTexture("gpuParticleRecords", BB.records), OB.setMatrix("gpuParticleView", YB.getViewMatrix()), OB.setMatrix("gpuParticleProjection", YB.getProjectionMatrix()), OB.setFloatArray4("gpuParticleSystem", BB.uniforms), OB.setFloat4("gpuParticleFrame", DB[0], DB[1], DB[2], DB[3]), OB.setFloat2("gpuParticleRange", QB, oB), OB.setFloat("gpuParticleRamp", BB.uniforms[qB.v.ramp]), GB.bindBuffers(this.vertexBuffers, null, OB), GB.setAlphaMode((0, zB.k)(yB)), GB.drawArraysType(MB.b.MATERIAL_TriangleStripDrawMode, 0, 4, oB), OB._bindTexture("gpuParticleRecords", null)
         }
-        return LH.setAlphaMode(EH.c.ALPHA_DISABLE), hH
+        return GB.setAlphaMode(MB.b.ALPHA_DISABLE), oB
       }
-      linkPair(HH) {
-        this.shader = HH, this.pairFailure = null, this.linkingPair = !0;
+      linkPair(BB) {
+        this.shader = BB, this.pairFailure = null, this.linkingPair = !0;
         try {
-          return this.effect = this.createEffect(HH, ""), this.multiplyEffect = this.createEffect(HH, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
+          return this.effect = this.createEffect(BB, ""), this.multiplyEffect = this.createEffect(BB, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
         } finally {
           this.linkingPair = !1
         }
       }
-      awaitLink(HH) {
-        const BH = HH.getPipelineContext(),
-          LH = this.gl();
-        LH && null === this.pairFailure && (!BH || BH.isParallelCompiled && !BH.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : BH.isParallelCompiled && BH.program && (LH.getProgramParameter(BH.program, LH.LINK_STATUS) || this.programFailed(function(HH, BH, LH) {
-          if (HH.isContextLost()) return KH;
-          for (const [AH, rH] of [
-              ["VERTEX SHADER", BH.vertexShader],
-              ["FRAGMENT SHADER", BH.fragmentShader]
+      awaitLink(BB) {
+        const OB = BB.getPipelineContext(),
+          GB = this.gl();
+        GB && null === this.pairFailure && (!OB || OB.isParallelCompiled && !OB.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : OB.isParallelCompiled && OB.program && (GB.getProgramParameter(OB.program, GB.LINK_STATUS) || this.programFailed(function(BB, OB, GB) {
+          if (BB.isContextLost()) return FB;
+          for (const [YB, DB] of [
+              ["VERTEX SHADER", OB.vertexShader],
+              ["FRAGMENT SHADER", OB.fragmentShader]
             ]) {
-            const BH = rH && !HH.getShaderParameter(rH, HH.COMPILE_STATUS) ? HH.getShaderInfoLog(rH) : null;
-            if (BH) return `${AH} ${BH}`
+            const OB = DB && !BB.getShaderParameter(DB, BB.COMPILE_STATUS) ? BB.getShaderInfoLog(DB) : null;
+            if (OB) return `${YB} ${OB}`
           }
-          return HH.getProgramInfoLog(LH) || "a program did not link"
-        }(LH, BH, BH.program))))
+          return BB.getProgramInfoLog(GB) || "a program did not link"
+        }(GB, OB, OB.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(HH) {
-        return HH === GH.e ? this.multiplyEffect : this.effect
+      effectFor(BB) {
+        return BB === zB.d ? this.multiplyEffect : this.effect
       }
-      createEffect(HH, BH) {
-        return this.engine.createEffect(HH, [], mH, oH, BH, void 0, void 0, ((BH, LH) => {
-          var AH;
-          HH === this.shader && this.programFailed(null !== (AH = this.gl()) && void 0 !== AH && AH.isContextLost() ? KH : function(HH) {
-            const BH = HH.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(BH) ? "a program failed, its log not in this browser's stack" : BH.replace(/^Error: /, "")
-          }(LH))
+      createEffect(BB, OB) {
+        return this.engine.createEffect(BB, [], dB, KB, OB, void 0, void 0, ((OB, GB) => {
+          var YB;
+          BB === this.shader && this.programFailed(null !== (YB = this.gl()) && void 0 !== YB && YB.isContextLost() ? FB : function(BB) {
+            const OB = BB.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(OB) ? "a program failed, its log not in this browser's stack" : OB.replace(/^Error: /, "")
+          }(GB))
         }))
       }
-      programFailed(HH) {
-        this.linkingPair ? this.pairFailure ??= HH : this.fail(HH)
+      programFailed(BB) {
+        this.linkingPair ? this.pairFailure ??= BB : this.fail(BB)
       }
-      fail(HH) {
+      fail(BB) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${HH}`), this.reportFailure(HH, !1);
-          for (const HH of this.NQ.dU.slice()) HH instanceof lH && HH.disposeOnStop && HH.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${BB}`), this.reportFailure(BB, !1);
+          for (const BB of this.eq.rW.slice()) BB instanceof IB && BB.disposeOnStop && BB.dispose()
         }
       }
     }
-    var eH = LH(41106);
-    class qH extends eH.b {
+    var LB = GB(40825);
+    class gB extends LB.c {
       createEffect() {
-        const HH = super.createEffect(...arguments);
-        return NH(HH), gH.has(HH) || (gH.add(HH), HH.onCompileObservable.add((() => {
-          NH(HH)
-        }))), HH
+        const BB = super.createEffect(...arguments);
+        return XB(BB), rB.has(BB) || (rB.add(BB), BB.onCompileObservable.add((() => {
+          XB(BB)
+        }))), BB
       }
     }
-    const gH = new WeakSet;
+    const rB = new WeakSet;
 
-    function NH(HH) {
-      HH._vertexSourceCodeBeforeMigration = "", HH._fragmentSourceCodeBeforeMigration = ""
+    function XB(BB) {
+      BB._vertexSourceCodeBeforeMigration = "", BB._fragmentSourceCodeBeforeMigration = ""
     }
-    var RH = LH(41478),
-      jH = LH(42414),
-      nH = LH(41231),
-      FH = LH(41454),
-      DH = LH(41448),
-      wH = LH(41374),
-      ZH = LH(42463),
-      dH = LH(38362),
-      aH = LH(45083),
-      sH = LH(45086),
-      JH = LH(45095),
-      iH = LH(41398),
-      pH = LH(3150),
-      yH = LH(38261),
-      HB = LH(41595),
-      BB = LH(38319),
-      LB = LH(38280);
+    var wB = GB(41213),
+      EB = GB(42111),
+      cB = GB(40950),
+      hB = GB(41180),
+      aB = GB(41171),
+      eB = GB(41089),
+      TB = GB(42169),
+      bB = GB(38193),
+      CB = GB(44737),
+      HB = GB(44746),
+      vB = GB(44748),
+      sB = GB(41112),
+      xB = GB(3187),
+      tB = GB(38094),
+      BO = GB(41307),
+      OO = GB(38156),
+      GO = GB(38108);
 
-    function AB(HH) {
-      if (HH.visibility < 1 || !HH.isVisible || !HH.isEnabled() || HH.metadata[LB.g] || !HH.isReady()) return !0;
-      const BH = HH.jU;
-      if (!BH || 0 === BH.length) return !0;
-      for (let LH = 0; LH < BH.length; LH++) {
-        const AH = BH[LH],
-          rH = AH.eu();
-        if (!rH || !rH.isReadyForSubMesh(HH, AH, !1)) return !0
+    function YO(BB) {
+      if (BB.visibility < 1 || !BB.isVisible || !BB.isEnabled() || BB.metadata[GO.e] || !BB.isReady()) return !0;
+      const OB = BB.iW;
+      if (!OB || 0 === OB.length) return !0;
+      for (let GB = 0; GB < OB.length; GB++) {
+        const YB = OB[GB],
+          DB = YB.cp();
+        if (!DB || !DB.isReadyForSubMesh(BB, YB, !1)) return !0
       }
       return !1
     }
-    class rB {
-      constructor(HH, BH) {
-        this.bG = HH, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, BH.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class DO {
+      constructor(BB, OB) {
+        this.kz = BB, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, OB.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      PX(HH) {
-        var BH;
-        const LH = this.armed;
-        if (this.armed = !1, this.vis = null, !LH) return !1;
+      ZP(BB) {
+        var OB;
+        const GB = this.armed;
+        if (this.armed = !1, this.vis = null, !GB) return !1;
         this.culled = 0;
         const {
-          bG: AH
-        } = this, rH = null === (BH = AH.vU) || void 0 === BH ? void 0 : BH.visibility;
-        if (!rH || !HH || AH.mX.yu) return !1;
-        if (!(AH.cX.brH[0] >= BB.f)) return !1;
-        const SH = HH.getProjectionMatrix().m;
-        if (0 !== SH[15]) return !1;
-        const hH = AH.DG,
-          tH = HH.globalPosition,
-          zH = this.eye;
-        return zH[0] = tH.x + hH[0], zH[1] = tH.y + hH[1], zH[2] = tH.z + hH[2], !!rH.eyeClear(zH[0], zH[1], zH[2], HH.minZ, SH, AH.cX) && (this.vis = rH, this.passable.clear(), this.count = 0, !0)
+          kz: YB
+        } = this, DB = null === (OB = YB.pW) || void 0 === OB ? void 0 : OB.visibility;
+        if (!DB || !BB || YB.UP.Dq) return !1;
+        if (!(YB.mP.gDB[0] >= OO.e)) return !1;
+        const QB = BB.getProjectionMatrix().m;
+        if (0 !== QB[15]) return !1;
+        const oB = YB.Tz,
+          jB = BB.globalPosition,
+          yB = this.eye;
+        return yB[0] = jB.x + oB[0], yB[1] = jB.y + oB[1], yB[2] = jB.z + oB[2], !!DB.eyeClear(yB[0], yB[1], yB[2], BB.minZ, QB, YB.mP) && (this.vis = DB, this.passable.clear(), this.count = 0, !0)
       }
-      see(HH, BH) {
-        const LH = this.count++;
-        if (LH === this.cellSlots.length) {
-          const HH = new Int32Array(2 * LH);
-          HH.set(this.cellSlots), this.cellSlots = HH
+      see(BB, OB) {
+        const GB = this.count++;
+        if (GB === this.cellSlots.length) {
+          const BB = new Int32Array(2 * GB);
+          BB.set(this.cellSlots), this.cellSlots = BB
         }
-        this.cellSlots[LH] = BH, this.meshes[LH] = HH
+        this.cellSlots[GB] = OB, this.meshes[GB] = BB
       }
-      seeThrough(HH) {
-        this.passable.add(HH)
+      seeThrough(BB) {
+        this.passable.add(BB)
       }
-      finish(HH, BH) {
+      finish(BB, OB) {
         const {
-          vis: LH,
-          eye: AH,
-          meshes: rH,
-          count: SH,
-          cellSlots: hH
+          vis: GB,
+          eye: YB,
+          meshes: DB,
+          count: QB,
+          cellSlots: oB
         } = this, {
-          cX: tH
-        } = this.bG, [zH, CH] = tH.brH, EH = null !== LH && LH.update(AH[0], AH[1], AH[2], tH.vX, zH, CH, this.passable);
-        let XH = 0;
-        for (let GH = 0; GH < SH; GH++) {
-          const AH = rH[GH];
-          if (EH) {
-            const HH = 3 * hH[GH];
-            if (HH >= 0 && !LH.isDrawn(BH[HH], BH[HH + 1], BH[HH + 2])) {
-              XH++;
+          mP: jB
+        } = this.kz, [yB, JB] = jB.gDB, MB = null !== GB && GB.update(YB[0], YB[1], YB[2], jB.qP, yB, JB, this.passable);
+        let PB = 0;
+        for (let zB = 0; zB < QB; zB++) {
+          const YB = DB[zB];
+          if (MB) {
+            const BB = 3 * oB[zB];
+            if (BB >= 0 && !GB.isDrawn(OB[BB], OB[BB + 1], OB[BB + 2])) {
+              PB++;
               continue
             }
           }
-          iH.i.prototype.push.call(HH, AH)
+          sB.d.prototype.push.call(BB, YB)
         }
-        rH.fill(null, 0, SH), this.count = 0, this.vis = null, this.culled = XH
+        DB.fill(null, 0, QB), this.count = 0, this.vis = null, this.culled = PB
       }
     }
-    var SB = LH(38304),
-      hB = LH(38269),
-      tB = LH(41573),
-      zB = LH(45102),
-      CB = LH(41578),
-      EB = LH(41498);
-    let XB = 1;
-    const GB = new WeakSet;
+    var QO = GB(38146),
+      oO = GB(38100),
+      jO = GB(41283),
+      yO = GB(44751),
+      JO = GB(41287),
+      MO = GB(41220);
+    let PO = 1;
+    const zO = new WeakSet;
 
-    function YB() {
-      return XB
+    function lO() {
+      return PO
     }
 
-    function uB() {
-      XB = XB >= 1073741823 ? 1 : XB + 1
+    function pO() {
+      PO = PO >= 1073741823 ? 1 : PO + 1
     }
 
-    function QB(HH) {
-      const BH = HH.metadata;
-      if (!BH || !0 !== BH[yH.n]) return;
-      const LH = BH[yH.t],
-        AH = null === LH || void 0 === LH ? void 0 : LH._noaStamps;
-      if (!LH || !AH) return;
-      const rH = LH.entries.indexOf(HH);
-      rH >= 0 && (AH[rH] = 0)
+    function qO(BB) {
+      const OB = BB.metadata;
+      if (!OB || !0 !== OB[tB.q]) return;
+      const GB = OB[tB.t],
+        YB = null === GB || void 0 === GB ? void 0 : GB._noaStamps;
+      if (!GB || !YB) return;
+      const DB = GB.entries.indexOf(BB);
+      DB >= 0 && (YB[DB] = 0)
     }
 
-    function WB(HH) {
-      const BH = HH.jU;
-      for (let LH = 0; LH < BH.length; LH++) {
-        const HH = BH[LH].eu();
-        if (HH && !HH.isFrozen) return !1
+    function ZO(BB) {
+      const OB = BB.iW;
+      for (let GB = 0; GB < OB.length; GB++) {
+        const BB = OB[GB].cp();
+        if (BB && !BB.isFrozen) return !1
       }
-      for (let LH = 0; LH < BH.length; LH++) {
-        const HH = BH[LH].eu();
-        HH && GB.add(HH)
+      for (let GB = 0; GB < OB.length; GB++) {
+        const BB = OB[GB].cp();
+        BB && zO.add(BB)
       }
       return !0
     }
-    let MB = !1;
-    const xB = new WeakSet;
+    let NO = !1;
+    const RO = new WeakSet;
 
-    function vB(HH, BH) {
-      const LH = HH[BH];
-      if ("function" !== typeof LH) throw new Error(`terrainDrawState: Babylon has no ${BH} to hook`);
-      return LH
+    function WO(BB, OB) {
+      const GB = BB[OB];
+      if ("function" !== typeof GB) throw new Error(`terrainDrawState: Babylon has no ${OB} to hook`);
+      return GB
     }
 
-    function PB(HH, BH, LH, AH, rH) {
-      const SH = LH.cX.vX,
-        hH = new Map;
-      let tH = 0;
-      const zH = new rB(LH, HH),
-        CH = new SB.d(SH, HH.Iu());
-      ! function(HH) {
-        if (xB.has(HH) || (xB.add(HH), HH.onContextLostObservable.add(uB), HH.ou.add(uB)), MB) return;
-        MB = !0;
-        const BH = zB.e.prototype,
-          LH = vB(BH, "_markSubMeshesAsDirty");
-        Object.assign(BH, {
-          _markSubMeshesAsDirty(HH) {
-            LH.call(this, HH), QB(this)
+    function AO(BB, OB, GB, YB, DB) {
+      const QB = GB.mP.qP,
+        oB = new Map;
+      let jB = 0;
+      const yB = new DO(GB, BB),
+        JB = new QO.d(QB, BB.Lp());
+      ! function(BB) {
+        if (RO.has(BB) || (RO.add(BB), BB.onContextLostObservable.add(pO), BB.ip.add(pO)), NO) return;
+        NO = !0;
+        const OB = yO.b.prototype,
+          GB = WO(OB, "_markSubMeshesAsDirty");
+        Object.assign(OB, {
+          _markSubMeshesAsDirty(BB) {
+            GB.call(this, BB), qO(this)
           }
         });
-        const AH = vB(EB.b.prototype, "_syncParentEnabledState");
-        Object.assign(EB.b.prototype, {
+        const YB = WO(MO.b.prototype, "_syncParentEnabledState");
+        Object.assign(MO.b.prototype, {
           _syncParentEnabledState() {
-            AH.call(this), QB(this)
+            YB.call(this), qO(this)
           }
         });
-        const rH = vB(CB.d.prototype, "resetDrawCache");
-        CB.d.prototype.resetDrawCache = function(HH, BH) {
-          rH.call(this, HH, BH), QB(this.getMesh())
+        const DB = WO(JO.c.prototype, "resetDrawCache");
+        JO.c.prototype.resetDrawCache = function(BB, OB) {
+          DB.call(this, BB, OB), qO(this.getMesh())
         };
-        const SH = tB.c.prototype,
-          hH = vB(SH, "markDirty");
-        SH.markDirty = function(HH) {
-          hH.call(this, HH), GB.has(this) && uB()
+        const QB = jO.b.prototype,
+          oB = WO(QB, "markDirty");
+        QB.markDirty = function(BB) {
+          oB.call(this, BB), zO.has(this) && pO()
         };
-        const tH = vB(SH, "_markAllSubMeshesAsDirty");
-        Object.assign(SH, {
-          _markAllSubMeshesAsDirty(HH) {
-            tH.call(this, HH), GB.has(this) && uB()
+        const jB = WO(QB, "_markAllSubMeshesAsDirty");
+        Object.assign(QB, {
+          _markAllSubMeshesAsDirty(BB) {
+            jB.call(this, BB), zO.has(this) && pO()
           }
         })
-      }(HH.Iu());
-      let EH = new Float64Array(384),
-        XH = new Int32Array(64),
-        GH = new Uint8Array(64),
-        YH = new Float64Array(64),
-        uH = new Int32Array(192),
-        QH = 0;
-      const WH = [],
-        MH = new Float64Array(24),
-        xH = () => {
-          const HH = WH.pop();
-          return void 0 !== HH ? (XH[HH] = 0, HH) : (QH === XH.length && (EH = TB(EH, new Float64Array(2 * EH.length)), XH = TB(XH, new Int32Array(2 * XH.length)), GH = TB(GH, new Uint8Array(2 * GH.length)), YH = TB(YH, new Float64Array(2 * YH.length)), uH = TB(uH, new Int32Array(2 * uH.length))), QH++)
+      }(BB.Lp());
+      let MB = new Float64Array(384),
+        PB = new Int32Array(64),
+        zB = new Uint8Array(64),
+        lB = new Float64Array(64),
+        pB = new Int32Array(192),
+        qB = 0;
+      const ZB = [],
+        NB = new Float64Array(24),
+        RB = () => {
+          const BB = ZB.pop();
+          return void 0 !== BB ? (PB[BB] = 0, BB) : (qB === PB.length && (MB = VO(MB, new Float64Array(2 * MB.length)), PB = VO(PB, new Int32Array(2 * PB.length)), zB = VO(zB, new Uint8Array(2 * zB.length)), lB = VO(lB, new Float64Array(2 * lB.length)), pB = VO(pB, new Int32Array(2 * pB.length))), qB++)
         },
-        vH = HH => {
-          const BH = 6 * HH._noaSlot,
-            LH = HH.KrH[0],
-            AH = HH.KrH[1];
-          EH[BH] = LH.x, EH[BH + 1] = LH.y, EH[BH + 2] = LH.z, EH[BH + 3] = AH.x, EH[BH + 4] = AH.y, EH[BH + 5] = AH.z
+        WB = BB => {
+          const OB = 6 * BB._noaSlot,
+            GB = BB.aDB[0],
+            YB = BB.aDB[1];
+          MB[OB] = GB.x, MB[OB + 1] = GB.y, MB[OB + 2] = GB.z, MB[OB + 3] = YB.x, MB[OB + 4] = YB.y, MB[OB + 5] = YB.z
         },
-        PH = (HH, BH, LH) => {
-          if (!LH) return zH.see(HH, -1), !1;
-          const AH = AB(HH);
-          return AH && zH.seeThrough(YH[BH]), zH.see(HH, BH), !AH
+        AB = (BB, OB, GB) => {
+          if (!GB) return yB.see(BB, -1), !1;
+          const YB = YO(BB);
+          return YB && yB.seeThrough(lB[OB]), yB.see(BB, OB), !YB
         };
-      let TH = -1;
-      return HH.getActiveMeshCandidates = () => {
-        const LH = HH.frustumPlanes,
-          AH = BH._selectionContent;
-        AH.reset(), (LH => {
-          const AH = HH.frustumPlanes;
-          tH = tH + 1 | 0 || 1;
-          const rH = BH.blocks,
-            SH = zH.PX(HH.activeCamera),
-            hH = SH && !0;
-          if (hH) {
-            const BH = HH.Iu().currentRenderPassId;
-            BH !== TH && (TH = BH, uB())
+      let VB = -1;
+      return BB.getActiveMeshCandidates = () => {
+        const GB = BB.frustumPlanes,
+          YB = OB._selectionContent;
+        YB.reset(), (GB => {
+          const YB = BB.frustumPlanes;
+          jB = jB + 1 | 0 || 1;
+          const DB = OB.blocks,
+            QB = yB.ZP(BB.activeCamera),
+            oB = QB && !0;
+          if (oB) {
+            const OB = BB.Lp().currentRenderPassId;
+            OB !== VB && (VB = OB, pO())
           }
-          const CH = YB(),
-            YH = hH && !1;
-          rH.length > 0 && function(HH, BH) {
-            for (let LH = 0; LH < 6; LH++) {
-              const AH = HH[LH],
-                rH = AH.normal;
-              BH[4 * LH] = rH.x, BH[4 * LH + 1] = rH.y, BH[4 * LH + 2] = rH.z, BH[4 * LH + 3] = AH.d
+          const JB = lO(),
+            lB = oB && !1;
+          DB.length > 0 && function(BB, OB) {
+            for (let GB = 0; GB < 6; GB++) {
+              const YB = BB[GB],
+                DB = YB.normal;
+              OB[4 * GB] = DB.x, OB[4 * GB + 1] = DB.y, OB[4 * GB + 2] = DB.z, OB[4 * GB + 3] = YB.d
             }
-          }(AH, MH);
-          const QH = EH,
-            WH = XH,
-            xH = GH;
-          for (let HH = 0; HH < rH.length; HH++) {
-            const BH = rH[HH];
-            if (!HB.b.IsInFrustum(BH.KrH, AH)) continue;
-            const EH = BH.entries;
+          }(YB, NB);
+          const qB = MB,
+            ZB = PB,
+            RB = zB;
+          for (let BB = 0; BB < DB.length; BB++) {
+            const OB = DB[BB];
+            if (!BO.c.IsInFrustum(OB.aDB, YB)) continue;
+            const MB = OB.entries;
             {
-              const HH = BH._noaSlots,
-                AH = BH._noaStamps,
-                rH = BH._noaTerrain;
-              for (let BH = 0; BH < EH.length; BH++) {
-                const XH = HH[BH];
-                if (WH[XH] !== tH && (WH[XH] = tH, xH[XH] = UB(QH, 6 * XH, MH) ? 1 : 0), 0 === xH[XH]) continue;
-                const GH = EH[BH];
-                if (hH && AH[BH] === CH) YH && 1 === rH[BH] && AB(GH) && 0, zH.see(GH, 1 === rH[BH] ? XH : -1);
-                else if (hH) {
-                  AH[BH] = CH;
-                  const HH = !0 === GH.metadata[hB.l];
-                  rH[BH] = HH ? 1 : 0;
-                  const LH = PH(GH, XH, HH);
-                  !HH || LH && WB(GH) || (AH[BH] = 0)
-                } else SH ? PH(GH, XH, !0 === GH.metadata[hB.l]) : iH.i.prototype.push.call(LH, GH)
+              const BB = OB._noaSlots,
+                YB = OB._noaStamps,
+                DB = OB._noaTerrain;
+              for (let OB = 0; OB < MB.length; OB++) {
+                const PB = BB[OB];
+                if (ZB[PB] !== jB && (ZB[PB] = jB, RB[PB] = SO(qB, 6 * PB, NB) ? 1 : 0), 0 === RB[PB]) continue;
+                const zB = MB[OB];
+                if (oB && YB[OB] === JB) lB && 1 === DB[OB] && YO(zB) && 0, yB.see(zB, 1 === DB[OB] ? PB : -1);
+                else if (oB) {
+                  YB[OB] = JB;
+                  const BB = !0 === zB.metadata[oO.k];
+                  DB[OB] = BB ? 1 : 0;
+                  const GB = AB(zB, PB, BB);
+                  !BB || GB && ZO(zB) || (YB[OB] = 0)
+                } else QB ? AB(zB, PB, !0 === zB.metadata[oO.k]) : sB.d.prototype.push.call(GB, zB)
               }
               continue
             }
           }
-          SH && zH.finish(LH, uH)
-        })(AH), CH.apply(AH, HH.activeCamera);
-        const SH = BH.lrH;
-        for (let HH = 0; HH < SH.length; HH++) {
-          const BH = SH[HH];
-          BH.isEnabled() && iH.i.prototype.push.call(AH, BH)
+          QB && yB.finish(GB, pB)
+        })(YB), JB.apply(YB, BB.activeCamera);
+        const QB = OB.hDB;
+        for (let BB = 0; BB < QB.length; BB++) {
+          const OB = QB[BB];
+          OB.isEnabled() && sB.d.prototype.push.call(YB, OB)
         }
-        return rH(AH, LH), AH
+        return DB(YB, GB), YB
       }, {
-        crH: () => zH.culled,
-        QrH: (HH, BH) => {
-          const rH = Math.floor(BH[0] / SH),
-            tH = Math.floor(BH[1] / SH),
-            zH = Math.floor(BH[2] / SH),
-            CH = `${rH}|${tH}|${zH}`;
-          let EH = hH.get(CH);
-          if (!EH) {
-            const HH = [0, 0, 0];
-            LH.TLH([rH * SH - 1, tH * SH - 1, zH * SH - 1], null, HH), EH = Object.assign(AH(HH, SH + 2), {
-              erH: CH,
-              qrH: 0,
+        eDB: () => yB.culled,
+        UDB: (BB, OB) => {
+          const DB = Math.floor(OB[0] / QB),
+            jB = Math.floor(OB[1] / QB),
+            yB = Math.floor(OB[2] / QB),
+            JB = `${DB}|${jB}|${yB}`;
+          let MB = oB.get(JB);
+          if (!MB) {
+            const BB = [0, 0, 0];
+            GB.IGB([DB * QB - 1, jB * QB - 1, yB * QB - 1], null, BB), MB = Object.assign(YB(BB, QB + 2), {
+              TDB: JB,
+              bDB: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: xH()
-            }), vH(EH), YH[EH._noaSlot] = (0, pH.e)(rH, tH, zH), uH[3 * EH._noaSlot] = rH, uH[3 * EH._noaSlot + 1] = tH, uH[3 * EH._noaSlot + 2] = zH, hH.set(CH, EH)
+              _noaSlot: RB()
+            }), WB(MB), lB[MB._noaSlot] = (0, xB.i)(DB, jB, yB), pB[3 * MB._noaSlot] = DB, pB[3 * MB._noaSlot + 1] = jB, pB[3 * MB._noaSlot + 2] = yB, oB.set(JB, MB)
           }
-          EH.qrH++, HH.metadata[yH.u] = EH
+          MB.bDB++, BB.metadata[tB.u] = MB
         },
-        gR: HH => {
-          const BH = HH.metadata[yH.u];
-          BH && (BH.qrH--, BH.qrH <= 0 && (hH.delete(BH.erH), WH.push(BH._noaSlot)), HH.metadata[yH.u] = null)
+        sF: BB => {
+          const OB = BB.metadata[tB.u];
+          OB && (OB.bDB--, OB.bDB <= 0 && (oB.delete(OB.TDB), ZB.push(OB._noaSlot)), BB.metadata[tB.u] = null)
         },
-        frH: (HH, BH) => {
-          const LH = HH,
-            AH = BH.metadata[yH.u];
-          (LH._noaSlots ??= []).push(AH._noaSlot), (LH._noaStamps ??= []).push(0), (LH._noaTerrain ??= []).push(0), LH.entries.push(BH)
+        cDB: (BB, OB) => {
+          const GB = BB,
+            YB = OB.metadata[tB.u];
+          (GB._noaSlots ??= []).push(YB._noaSlot), (GB._noaStamps ??= []).push(0), (GB._noaTerrain ??= []).push(0), GB.entries.push(OB)
         },
-        removeEntry: (HH, BH) => {
-          const LH = HH,
-            AH = LH.entries,
-            rH = AH.indexOf(BH);
-          if (rH < 0) return;
-          const SH = LH._noaSlots,
-            hH = LH._noaStamps,
-            tH = LH._noaTerrain,
-            zH = AH.length - 1;
-          AH[rH] = AH[zH], SH[rH] = SH[zH], hH[rH] = hH[zH], tH[rH] = tH[zH], AH.pop(), SH.pop(), hH.pop(), tH.pop()
+        removeEntry: (BB, OB) => {
+          const GB = BB,
+            YB = GB.entries,
+            DB = YB.indexOf(OB);
+          if (DB < 0) return;
+          const QB = GB._noaSlots,
+            oB = GB._noaStamps,
+            jB = GB._noaTerrain,
+            yB = YB.length - 1;
+          YB[DB] = YB[yB], QB[DB] = QB[yB], oB[DB] = oB[yB], jB[DB] = jB[yB], YB.pop(), QB.pop(), oB.pop(), jB.pop()
         },
-        rBH: HH => {
-          for (const BH of hH.values()) {
-            BH.OrH.grH(HH), BH.VrH.grH(HH);
-            for (const LH of BH.KrH) LH.grH(HH);
-            vH(BH)
+        POB: BB => {
+          for (const OB of oB.values()) {
+            OB.LDB.CDB(BB), OB.iDB.CDB(BB);
+            for (const GB of OB.aDB) GB.CDB(BB);
+            WB(OB)
           }
         }
       }
     }
 
-    function TB(HH, BH) {
-      return BH.set(HH), BH
+    function VO(BB, OB) {
+      return OB.set(BB), OB
     }
 
-    function UB(HH, BH, LH) {
-      const AH = HH[BH],
-        rH = HH[BH + 1],
-        SH = HH[BH + 2],
-        hH = HH[BH + 3],
-        tH = HH[BH + 4],
-        zH = HH[BH + 5];
-      for (let CH = 0; CH < 24; CH += 4) {
-        const HH = LH[CH],
-          BH = LH[CH + 1],
-          EH = LH[CH + 2];
-        if (!(HH * (HH >= 0 ? hH : AH) + BH * (BH >= 0 ? tH : rH) + EH * (EH >= 0 ? zH : SH) + LH[CH + 3] >= 0)) return !1
+    function SO(BB, OB, GB) {
+      const YB = BB[OB],
+        DB = BB[OB + 1],
+        QB = BB[OB + 2],
+        oB = BB[OB + 3],
+        jB = BB[OB + 4],
+        yB = BB[OB + 5];
+      for (let JB = 0; JB < 24; JB += 4) {
+        const BB = GB[JB],
+          OB = GB[JB + 1],
+          MB = GB[JB + 2];
+        if (!(BB * (BB >= 0 ? oB : YB) + OB * (OB >= 0 ? jB : DB) + MB * (MB >= 0 ? yB : QB) + GB[JB + 3] >= 0)) return !1
       }
       return !0
     }
-    var VB = LH(38623);
-    class OB {
-      constructor(HH, BH) {
-        var LH = HH.NQ;
-        LH.SrH(new JH.c(LH));
-        var AH = new aH.d(zH);
-        LH.RrH = AH, AH.blocks = [];
-        var rH, SH = {},
-          tH = [];
-        this.textPlanes = tH, this.crH = () => rH.crH(), this.rBH = HH => {
-          EH(AH, HH), rH.rBH(HH)
-        }, this.QrH = (BH, LH, hH) => {
-          if (!BH.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!BH.metadata[yH.t] && !BH.metadata[yH.k]) {
-            if (!LH) {
-              var zH = AH.lrH;
-              if (BH.metadata[yH.B] && !BH.parent) {
-                zH = tH;
-                var EH = BH.jF().nrH;
-                BH.metadata[yH.C] = EH.center.length() + EH.radius, BH.fu = !0
+    var nO = GB(38440);
+    class UO {
+      constructor(BB, OB) {
+        var GB = BB.eq;
+        GB.pDB(new vB.b(GB));
+        var YB = new CB.d(yB);
+        GB.vDB = YB, YB.blocks = [];
+        var DB, QB = {},
+          jB = [];
+        this.textPlanes = jB, this.eDB = () => DB.eDB(), this.POB = BB => {
+          MB(YB, BB), DB.POB(BB)
+        }, this.UDB = (OB, GB, oB) => {
+          if (!OB.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!OB.metadata[tB.t] && !OB.metadata[tB.o]) {
+            if (!GB) {
+              var yB = YB.hDB;
+              if (OB.metadata[tB.A] && !OB.parent) {
+                yB = jB;
+                var MB = OB.Gw().xDB;
+                OB.metadata[tB.D] = MB.center.length() + MB.radius, OB.rp = !0
               }
-              return zH.push(BH), BH.metadata[yH.e] = zH, void(BH.metadata[yH.k] = !0)
+              return yB.push(OB), OB.metadata[tB.h] = yB, void(OB.metadata[tB.o] = !0)
             }
-            var GH = Math.floor(hH[0] / CH),
-              YH = Math.floor(hH[1] / CH),
-              uH = Math.floor(hH[2] / CH),
-              QH = GH + "|" + YH + "|" + uH,
-              WH = SH[QH];
-            if (!WH) {
-              var MH = [GH * CH, YH * CH, uH * CH],
-                xH = [0, 0, 0];
-              HH.bG.TLH(MH, null, xH), WH = XH(xH, CH), AH.blocks.push(WH), SH[QH] = WH, WH.erH = QH
+            var zB = Math.floor(oB[0] / JB),
+              lB = Math.floor(oB[1] / JB),
+              pB = Math.floor(oB[2] / JB),
+              qB = zB + "|" + lB + "|" + pB,
+              ZB = QB[qB];
+            if (!ZB) {
+              var NB = [zB * JB, lB * JB, pB * JB],
+                RB = [0, 0, 0];
+              BB.kz.IGB(NB, null, RB), ZB = PB(RB, JB), YB.blocks.push(ZB), QB[qB] = ZB, ZB.TDB = qB
             }
-            rH.QrH(BH, hH), rH.frH(WH, BH), WH.qrH = (WH.qrH || 0) + 1, BH.metadata[yH.t] = WH, BH.metadata[yH.n] = !0, BH.fu = !0
+            DB.UDB(OB, oB), DB.cDB(ZB, OB), ZB.bDB = (ZB.bDB || 0) + 1, OB.metadata[tB.t] = ZB, OB.metadata[tB.q] = !0, OB.rp = !0
           }
-        }, this.gR = HH => {
-          if (HH.metadata) {
-            HH.metadata[yH.k] && ((0, pH.k)(HH.metadata[yH.e], HH), HH.metadata[yH.k] = !1), HH.metadata[yH.e] === tH && (HH.fu = !1), HH.metadata[yH.e] = void 0, HH.metadata[yH.C] = void 0;
-            var BH = HH.metadata[yH.t];
-            BH && BH.entries && (HH.metadata[yH.n] && rH.removeEntry(BH, HH), BH.qrH--, BH.qrH <= 0 && (delete SH[BH.erH], (0, pH.k)(AH.blocks, BH))), rH.gR(HH), HH.metadata[yH.t] = null, HH.metadata[yH.n] = !1
+        }, this.sF = BB => {
+          if (BB.metadata) {
+            BB.metadata[tB.o] && ((0, xB.p)(BB.metadata[tB.h], BB), BB.metadata[tB.o] = !1), BB.metadata[tB.h] === jB && (BB.rp = !1), BB.metadata[tB.h] = void 0, BB.metadata[tB.D] = void 0;
+            var OB = BB.metadata[tB.t];
+            OB && OB.entries && (BB.metadata[tB.q] && DB.removeEntry(OB, BB), OB.bDB--, OB.bDB <= 0 && (delete QB[OB.TDB], (0, xB.p)(YB.blocks, OB))), DB.sF(BB), BB.metadata[tB.t] = null, BB.metadata[tB.q] = !1
           }
-        }, this.RHH = function(HH) {
-          let BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (HH.metadata[yH.t]) {
-            if (HH.metadata[yH.n] === BH) return;
-            var LH = HH.metadata[yH.t];
-            LH && LH.entries && (BH ? rH.frH(LH, HH) : rH.removeEntry(LH, HH)), HH.metadata[yH.n] = BH
+        }, this.EBB = function(BB) {
+          let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (BB.metadata[tB.t]) {
+            if (BB.metadata[tB.q] === OB) return;
+            var GB = BB.metadata[tB.t];
+            GB && GB.entries && (OB ? DB.cDB(GB, BB) : DB.removeEntry(GB, BB)), BB.metadata[tB.q] = OB
           } else {
-            if (HH.metadata[yH.k] === BH) return;
-            var SH = HH.metadata[yH.e] || AH.lrH;
-            BH ? SH.push(HH) : (0, pH.k)(SH, HH), HH.metadata[yH.k] = BH
+            if (BB.metadata[tB.o] === OB) return;
+            var QB = BB.metadata[tB.h] || YB.hDB;
+            OB ? QB.push(BB) : (0, xB.p)(QB, BB), BB.metadata[tB.o] = OB
           }
         };
-        var zH = () => {},
-          CH = BH * HH.bG.cX.vX,
-          EH = (HH, BH) => {
-            HH.blocks.forEach((HH => {
-              HH.OrH.grH(BH), HH.VrH.grH(BH), HH.KrH.forEach((HH => HH.grH(BH))), HH.blocks && EH(HH, BH)
+        var yB = () => {},
+          JB = OB * BB.kz.mP.qP,
+          MB = (BB, OB) => {
+            BB.blocks.forEach((BB => {
+              BB.LDB.CDB(OB), BB.iDB.CDB(OB), BB.aDB.forEach((BB => BB.CDB(OB))), BB.blocks && MB(BB, OB)
             }))
           },
-          XH = (HH, BH) => {
-            var LH = new hH.lu(HH[0], HH[1], HH[2]),
-              AH = new hH.lu(HH[0] + BH, HH[1] + BH, HH[2] + BH);
-            return new sH.d(LH, AH, void 0, void 0, void 0, zH)
+          PB = (BB, OB) => {
+            var GB = new oB.Xp(BB[0], BB[1], BB[2]),
+              YB = new oB.Xp(BB[0] + OB, BB[1] + OB, BB[2] + OB);
+            return new HB.b(GB, YB, void 0, void 0, void 0, yB)
           };
-        rH = PB(LH, AH, HH.bG, XH, ((HH, BH) => {
-          for (var LH = 0; LH < tH.length; LH++) {
-            var AH = tH[LH];
-            AH.isEnabled(!1) && ((0, VB.d)(AH, BH) && iH.i.prototype.push.call(HH, AH))
+        DB = AO(GB, YB, BB.kz, PB, ((BB, OB) => {
+          for (var GB = 0; GB < jB.length; GB++) {
+            var YB = jB[GB];
+            YB.isEnabled(!1) && ((0, nO.c)(YB, OB) && sB.d.prototype.push.call(BB, YB))
           }
         }))
       }
     }
 
-    function bB(HH) {
+    function fO(BB) {
       const {
-        holderPosition: BH,
-        holderRotation: LH,
-        R_: AH,
-        fov: rH,
-        near: SH,
-        far: hH
-      } = HH.model.N_, tH = HH.srH;
-      tH.position.SBH(BH[0], BH[1], BH[2]), tH.rotation.SBH(LH[0], LH[1], LH[2]);
-      const zH = HH.camera;
-      zH.position.SBH(AH[0], AH[1], AH[2]), zH.fov = rH, zH.minZ = SH, zH.maxZ = hH
+        holderPosition: OB,
+        holderRotation: GB,
+        q_: YB,
+        fov: DB,
+        near: QB,
+        far: oB
+      } = BB.model.p_, jB = BB.QQB;
+      jB.position.zOB(OB[0], OB[1], OB[2]), jB.rotation.zOB(GB[0], GB[1], GB[2]);
+      const yB = BB.camera;
+      yB.position.zOB(YB[0], YB[1], YB[2]), yB.fov = DB, yB.minZ = QB, yB.maxZ = oB
     }
 
-    function kB(HH) {
-      const BH = HH.Iu(),
-        LH = BH,
-        AH = LH._gl;
-      if (!AH || LH.hQ < 2 || BH.WrH || AH.getParameter(AH.DEPTH_BITS) < 24) return !1;
-      const rH = HH._renderingManager,
-        SH = rH.getRenderingGroup(-1),
-        hH = rH.getRenderingGroup(0),
-        tH = FH.c.prototype.render;
-      return SH.render = function(HH, BH, LH, AH, rH, SH, zH, CH, EH) {
-        (HH || hH._empty) && tH.call(this, HH, BH, LH, AH, rH, SH, zH, CH, EH)
-      }, hH.render = function(HH, LH, rH, hH) {
-        let zH = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          CH = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          XH = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          GH = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          YH = arguments.length > 8 ? arguments[8] : void 0;
-        HH ? tH.call(this, HH, LH, rH, hH, zH, CH, XH, GH, YH) : (BH.setAlphaMode(EH.c.ALPHA_DISABLE), tH.call(this, null, !1, !1, hH, zH, CH, XH, !1), SH._empty || (AH.depthRange(1, 1), tH.call(SH, null, LH, rH, hH, zH, CH, XH, GH, YH), AH.depthRange(0, 1)), tH.call(this, null, LH, rH, hH, !1, !1, !1, GH, YH))
+    function kO(BB) {
+      const OB = BB.Lp(),
+        GB = OB,
+        YB = GB._gl;
+      if (!YB || GB.Pq < 2 || OB.fDB || YB.getParameter(YB.DEPTH_BITS) < 24) return !1;
+      const DB = BB._renderingManager,
+        QB = DB.getRenderingGroup(-1),
+        oB = DB.getRenderingGroup(0),
+        jB = hB.e.prototype.render;
+      return QB.render = function(BB, OB, GB, YB, DB, QB, yB, JB, MB) {
+        (BB || oB._empty) && jB.call(this, BB, OB, GB, YB, DB, QB, yB, JB, MB)
+      }, oB.render = function(BB, GB, DB, oB) {
+        let yB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          JB = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          PB = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          zB = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          lB = arguments.length > 8 ? arguments[8] : void 0;
+        BB ? jB.call(this, BB, GB, DB, oB, yB, JB, PB, zB, lB) : (OB.setAlphaMode(MB.b.ALPHA_DISABLE), jB.call(this, null, !1, !1, oB, yB, JB, PB, !1), QB._empty || (YB.depthRange(1, 1), jB.call(QB, null, GB, DB, oB, yB, JB, PB, zB, lB), YB.depthRange(0, 1)), jB.call(this, null, GB, DB, oB, !1, !1, !1, zB, lB))
       }, !0
     }
 
-    function mB(HH, BH) {
-      return [BH, dH.e].map(((BH, LH) => {
-        const AH = new rH.e("light", hH.lu.FromArray(BH), HH);
-        return AH.diffuse = SH.Color3.FromArray([1, 1, 1]), AH.specular = SH.Color3.FromArray([1, 1, 1]), AH.intensity = dH.d[LH], AH
+    function dO(BB, OB) {
+      return [OB, bB.g].map(((OB, GB) => {
+        const YB = new DB.b("light", oB.Xp.FromArray(OB), BB);
+        return YB.diffuse = QB.Color3.FromArray([1, 1, 1]), YB.specular = QB.Color3.FromArray([1, 1, 1]), YB.intensity = bB.e[GB], YB
       }))
     }
-    class oB extends zH.d {
+    class KO extends yB.d {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(HH) {
-        var BH;
-        this.heldTexture = HH, this.particleTexture = null !== (BH = null === HH || void 0 === HH ? void 0 : HH.mirror) && void 0 !== BH ? BH : null
+      set texture(BB) {
+        var OB;
+        this.heldTexture = BB, this.particleTexture = null !== (OB = null === BB || void 0 === BB ? void 0 : BB.mirror) && void 0 !== OB ? OB : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let HH = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          BH = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          LH = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        HH && (this.particleTexture = null, (0, CH.y)(this.heldTexture), this.heldTexture = null), super.dispose(HH, BH, LH)
+        let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          GB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        BB && (this.particleTexture = null, (0, JB.w)(this.heldTexture), this.heldTexture = null), super.dispose(BB, OB, GB)
       }
     }
 
-    function IB(HH, BH, LH, AH) {
-      return BH && !BH.failed ? BH.XF(LH, AH) : new oB(LH, AH, HH)
+    function uO(BB, OB, GB, YB) {
+      return OB && !OB.failed ? OB.gL(GB, YB) : new KO(GB, YB, BB)
     }
-    const fB = new WeakMap;
+    const mO = new WeakMap;
 
-    function lB(HH, BH, LH) {
-      var AH;
-      let rH = null !== (AH = fB.get(HH)) && void 0 !== AH ? AH : null;
-      return !rH && HH.Iu().hQ >= 2 && (rH = new cH(HH, (BH => {
-        console.error(`Particle programs failed in scene ${HH.uid}: ${BH}`)
-      })), fB.set(HH, rH)), IB(HH, rH, BH, LH)
+    function IO(BB, OB, GB) {
+      var YB;
+      let DB = null !== (YB = mO.get(BB)) && void 0 !== YB ? YB : null;
+      return !DB && BB.Lp().Pq >= 2 && (DB = new iB(BB, (OB => {
+        console.error(`Particle programs failed in scene ${BB.uid}: ${OB}`)
+      })), mO.set(BB, DB)), uO(BB, DB, OB, GB)
     }
-    const KB = AH.e.Zero();
-    const cB = {
-      lAH: function(HH, BH) {
-        return new qH(HH, BH.mAH, {
-          preserveDrawingBuffer: BH.preserveDrawingBuffer,
+    const FO = YB.b.Zero();
+    const iO = {
+      hYB: function(BB, OB) {
+        return new gB(BB, OB.XYB, {
+          preserveDrawingBuffer: OB.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      yrH: function(HH, BH) {
-        ! function(HH, BH, LH) {
-          const AH = new wH.e(HH.engine);
-          HH.NQ = AH, AH.detachControl(), AH.autoClear = !1, DH.c.MIN_RENDERINGGROUPS = -1;
-          for (let SH = DH.c.MIN_RENDERINGGROUPS; SH <= 1; SH++) AH.setRenderingOrder(SH, FH.c.PainterSortCompare, FH.c.PainterSortCompare, FH.c.PainterSortCompare);
-          AH.setRenderingAutoClearDepthStencil(0, !1), nH.e.Enabled = !1, HH.ZrH = new OB(HH, Math.round(BH.drH)), HH.srH = new jH.c("camHolder", AH), HH.camera = new RH.b("camera", new hH.lu(0, 0, 0), AH), HH.camera.parent = HH.srH, bB(HH), (0, dH.g)(HH, ((HH, BH, LH) => (0, ZH.g)(BH, LH, HH.NQ))), AH.clearColor = SH.d.FromArray(BH.clearColor), AH.ambientColor = SH.Color3.FromArray(BH.ambientColor);
-          const rH = LH(AH, BH.irH);
-          AH.onNewLightAddedObservable.add((HH => {
-            rH.some((BH => BH === HH)) || console.error(`Light "${HH.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), AH.skipPointerMovePicking = !0
-        }(HH, BH, mB), kB(HH.NQ)
+      yQB: function(BB, OB) {
+        ! function(BB, OB, GB) {
+          const YB = new eB.b(BB.engine);
+          BB.eq = YB, YB.detachControl(), YB.autoClear = !1, aB.b.MIN_RENDERINGGROUPS = -1;
+          for (let QB = aB.b.MIN_RENDERINGGROUPS; QB <= 1; QB++) YB.setRenderingOrder(QB, hB.e.PainterSortCompare, hB.e.PainterSortCompare, hB.e.PainterSortCompare);
+          YB.setRenderingAutoClearDepthStencil(0, !1), cB.b.Enabled = !1, BB.GQB = new UO(BB, Math.round(OB.YQB)), BB.QQB = new EB.e("camHolder", YB), BB.camera = new wB.c("camera", new oB.Xp(0, 0, 0), YB), BB.camera.parent = BB.QQB, fO(BB), (0, bB.h)(BB, ((BB, OB, GB) => (0, TB.h)(OB, GB, BB.eq))), YB.clearColor = QB.e.FromArray(OB.clearColor), YB.ambientColor = QB.Color3.FromArray(OB.ambientColor);
+          const DB = GB(YB, OB.jQB);
+          YB.onNewLightAddedObservable.add((BB => {
+            DB.some((OB => OB === BB)) || console.error(`Light "${BB.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), YB.skipPointerMovePicking = !0
+        }(BB, OB, dO), kO(BB.eq)
       },
-      arH: bB,
-      setBabylonFog: function(HH, BH, LH, AH) {
-        const rH = HH.NQ;
-        rH.fogMode = 3, rH.fogStart = BH, rH.fogEnd = LH, rH.fogColor.set(AH[0], AH[1], AH[2])
+      DQB: fO,
+      setBabylonFog: function(BB, OB, GB, YB) {
+        const DB = BB.eq;
+        DB.fogMode = 3, DB.fogStart = OB, DB.fogEnd = GB, DB.fogColor.set(YB[0], YB[1], YB[2])
       },
-      BSH: function(HH, BH, LH) {
-        return HH.engine.hQ >= 2 && !HH.LSH && (HH.LSH = new cH(HH.NQ, HH.ASH)), IB(HH.NQ, HH.LSH, BH, LH)
+      MQB: function(BB, OB, GB) {
+        return BB.engine.Pq >= 2 && !BB.PQB && (BB.PQB = new iB(BB.eq, BB.zQB)), uO(BB.eq, BB.PQB, OB, GB)
       },
-      SSH: function(HH, BH) {
-        HH.NQ.dU.forEach((LH => {
-          if (LH instanceof lH) return void LH.rBH(BH, HH.bG.DG);
-          const AH = LH;
-          if (AH.emitter.getConnectedParticleSystems)
-            for (const HH of AH._particles) HH.position.set(HH.position.x - BH[0], HH.position.y - BH[1], HH.position.z - BH[2]);
+      pQB: function(BB, OB) {
+        BB.eq.rW.forEach((GB => {
+          if (GB instanceof IB) return void GB.POB(OB, BB.kz.Tz);
+          const YB = GB;
+          if (YB.emitter.getConnectedParticleSystems)
+            for (const BB of YB._particles) BB.position.set(BB.position.x - OB[0], BB.position.y - OB[1], BB.position.z - OB[2]);
           else {
-            if (!AH.worldOffset) throw new Error("Particle system has no world offset");
-            AH.worldOffset.x = -HH.bG.DG[0], AH.worldOffset.y = -HH.bG.DG[1], AH.worldOffset.z = -HH.bG.DG[2]
+            if (!YB.worldOffset) throw new Error("Particle system has no world offset");
+            YB.worldOffset.x = -BB.kz.Tz[0], YB.worldOffset.y = -BB.kz.Tz[1], YB.worldOffset.z = -BB.kz.Tz[2]
           }
         }))
       },
-      linesFromArrays: function(HH, BH, LH) {
-        const AH = new tH.e(BH, HH.NQ, null, void 0, void 0, !1);
-        return (0, ZH.f)(BH, LH, HH.NQ, AH), AH
+      linesFromArrays: function(BB, OB, GB) {
+        const YB = new jB.d(OB, BB.eq, null, void 0, void 0, !1);
+        return (0, TB.g)(OB, GB, BB.eq, YB), YB
       },
-      RQ: QB,
-      rSH: function(HH, BH) {
-        return KB.origin.Tm(BH.origin), KB.direction.Tm(BH.direction), KB.length = BH.length, KB.epsilon = BH.epsilon, KB.rSH(HH, !1, void 0, !1, void 0, !0).pickedPoint
+      Tq: qO,
+      lQB: function(BB, OB) {
+        return FO.origin.IU(OB.origin), FO.direction.IU(OB.direction), FO.length = OB.length, FO.epsilon = OB.epsilon, FO.lQB(BB, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  42424: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => nH,
-      f: () => xH,
-      g: () => aH
+  42129: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => cB,
+      e: () => RB,
+      h: () => CB
     });
-    var AH = LH(41538),
-      rH = LH(42427),
-      SH = LH(42472),
-      hH = LH(42434),
-      tH = LH(38681),
-      zH = LH(38687),
-      CH = LH(38695),
-      EH = LH(38697),
-      XH = LH(38131),
-      GH = LH(38135),
-      YH = LH(42439),
-      uH = LH(38098),
-      QH = LH(38118),
-      WH = LH(38086);
+    var YB = GB(41258),
+      DB = GB(42131),
+      QB = GB(42177),
+      oB = GB(42133),
+      jB = GB(38494),
+      yB = GB(38504),
+      JB = GB(38513),
+      MB = GB(38515),
+      PB = GB(37958),
+      zB = GB(37962),
+      lB = GB(42140),
+      pB = GB(37919),
+      qB = GB(37946),
+      ZB = GB(37910);
 
-    function MH(HH, BH) {
-      return Object.assign((function(HH, LH, AH, rH) {
-        return BH(this.featureState, HH, LH, AH, rH)
+    function NB(BB, OB) {
+      return Object.assign((function(BB, GB, YB, DB) {
+        return OB(this.featureState, BB, GB, YB, DB)
       }), {
-        EX: HH
+        oP: BB
       })
     }
 
-    function xH(HH) {
-      const BH = class extends YH.e {
-          constructor(BH, LH) {
-            const AH = (0, QH.V)(BH),
-              rH = AH && (0, QH.s)(AH, HH.name);
-            for (var SH = arguments.length, hH = new Array(SH > 2 ? SH - 2 : 0), tH = 2; tH < SH; tH++) hH[tH - 2] = arguments[tH];
-            super(BH, HH.name, HH.priority, rH ? rH.defines : HH.defines(...hH), !1), this.featureState = void 0, this.featureState = LH, this._pluginManager._addPlugin(this), this._enable(!0), (0, QH.v)(this._material, HH, this.featureState, this._pluginDefineNames)
+    function RB(BB) {
+      const OB = class extends lB.c {
+          constructor(OB, GB) {
+            const YB = (0, qB.U)(OB),
+              DB = YB && (0, qB.A)(YB, BB.name);
+            for (var QB = arguments.length, oB = new Array(QB > 2 ? QB - 2 : 0), jB = 2; jB < QB; jB++) oB[jB - 2] = arguments[jB];
+            super(OB, BB.name, BB.priority, DB ? DB.defines : BB.defines(...oB), !1), this.featureState = void 0, this.featureState = GB, this._pluginManager._addPlugin(this), this._enable(!0), (0, qB.B)(this._material, BB, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return HH.className
+            return BB.className
           }
-          isCompatible(HH) {
-            return HH === WH.c.GLSL || HH === WH.c.WGSL
+          isCompatible(BB) {
+            return BB === ZB.c.GLSL || BB === ZB.c.WGSL
           }
         },
-        LH = (0, uH.h)(HH);
-      for (const [AH, rH] of Object.entries(uH.d)) {
-        const SH = HH[AH];
-        if (SH) {
-          const HH = LH[AH];
-          Object.defineProperty(BH.prototype, rH, {
-            value: MH(SH, HH),
+        GB = (0, pB.i)(BB);
+      for (const [YB, DB] of Object.entries(pB.d)) {
+        const QB = BB[YB];
+        if (QB) {
+          const BB = GB[YB];
+          Object.defineProperty(OB.prototype, DB, {
+            value: NB(QB, BB),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return BH
+      return OB
     }
-    class vH extends(xH(tH.c)) {}
-    var PH = LH(41106),
-      TH = LH(42445),
-      UH = LH(42449);
+    class WB extends(RB(jB.e)) {}
+    var AB = GB(40825),
+      VB = GB(42148),
+      SB = GB(42154);
 
-    function VH(HH, BH, LH) {
-      return (0, UH.d)(LH, BH.urls, (() => async function(HH, BH, LH) {
+    function nB(BB, OB, GB) {
+      return (0, SB.i)(GB, OB.urls, (() => async function(BB, OB, GB) {
         const {
-          width: AH
-        } = HH[0].getSize(), rH = HH.map(((HH, LH) => {
-          var rH;
-          const SH = Math.round(HH.getSize().height / AH),
-            hH = null === BH || void 0 === BH ? void 0 : BH[LH];
+          width: YB
+        } = BB[0].getSize(), DB = BB.map(((BB, GB) => {
+          var DB;
+          const QB = Math.round(BB.getSize().height / YB),
+            oB = null === OB || void 0 === OB ? void 0 : OB[GB];
           return {
-            pixels: hH && hH.byteLength === AH * AH * SH * 4 ? hH : null !== (rH = OH.get(HH.getInternalTexture())) && void 0 !== rH ? rH : HH._readPixelsSync(),
-            layers: SH
+            pixels: oB && oB.byteLength === YB * YB * QB * 4 ? oB : null !== (DB = UB.get(BB.getInternalTexture())) && void 0 !== DB ? DB : BB._readPixelsSync(),
+            layers: QB
           }
-        })), SH = Math.min(LH.Iu().getCaps().texture2DArrayMaxLayerCount, 256), tH = (0, UH.c)(rH, AH, SH).map((HH => {
+        })), QB = Math.min(GB.Lp().getCaps().texture2DArrayMaxLayerCount, 256), jB = (0, SB.e)(DB, YB, QB).map((BB => {
           let {
-            pixels: BH,
-            layers: rH
-          } = HH;
+            pixels: OB,
+            layers: DB
+          } = BB;
           return {
-            atlas: new TH.c(BH, AH, AH, rH, PH.b.TEXTUREFORMAT_RGBA, LH, !0, !1, hH.d.NEAREST_NEAREST_MIPLINEAR),
-            layers: rH
+            atlas: new VB.e(OB, YB, YB, DB, AB.c.TEXTUREFORMAT_RGBA, GB, !0, !1, oB.e.NEAREST_NEAREST_MIPLINEAR),
+            layers: DB
           }
         }));
-        return HH.forEach(((HH, BH) => {
-          const AH = HH.getInternalTexture();
-          OH.has(AH) || (! function(HH, BH) {
-            const LH = BH.createRawTexture(new Uint8Array(4), 1, 1, PH.b.TEXTUREFORMAT_RGBA, !1, !1, hH.d.NEAREST_SAMPLINGMODE);
-            HH._hardwareTexture.release(), BH.unbindAllTextures(), LH._swapAndDie(HH, !1)
-          }(AH, LH.Iu()), OH.set(AH, rH[BH].pixels))
-        })), tH
-      }(HH, BH.pixels, LH)))
+        return BB.forEach(((BB, OB) => {
+          const YB = BB.getInternalTexture();
+          UB.has(YB) || (! function(BB, OB) {
+            const GB = OB.createRawTexture(new Uint8Array(4), 1, 1, AB.c.TEXTUREFORMAT_RGBA, !1, !1, oB.e.NEAREST_SAMPLINGMODE);
+            BB._hardwareTexture.release(), OB.unbindAllTextures(), GB._swapAndDie(BB, !1)
+          }(YB, GB.Lp()), UB.set(YB, DB[OB].pixels))
+        })), jB
+      }(BB, OB.pixels, GB)))
     }
-    const OH = new WeakMap;
-    var bH = LH(38705);
-    class kH extends(xH(zH.g)) {
-      constructor(HH, BH) {
-        super(HH, BH), this.loaded = new Set, this.mirrors = void 0, this.mirrors = BH.textures.map((HH => HH.mirror)), BH.useWebGL2 && !BH.imagesPerAtlas.length && BH.textureAtlases.splice(0, BH.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((HH, BH) => {
-          HH.onLoadObservable.add((HH => {
-            this.setTextureArrayData(HH, BH).catch((HH => {
-              console.error(`Failed to build the texture arrays, at atlas ${BH}`, HH)
+    const UB = new WeakMap;
+    var fB = GB(38522);
+    class kB extends(RB(yB.f)) {
+      constructor(BB, OB) {
+        super(BB, OB), this.loaded = new Set, this.mirrors = void 0, this.mirrors = OB.textures.map((BB => BB.mirror)), OB.useWebGL2 && !OB.imagesPerAtlas.length && OB.textureAtlases.splice(0, OB.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((BB, OB) => {
+          BB.onLoadObservable.add((BB => {
+            this.setTextureArrayData(BB, OB).catch((BB => {
+              console.error(`Failed to build the texture arrays, at atlas ${OB}`, BB)
             }))
           }))
-        })), (0, bH.l)(BH, HH.shaderLanguage)
+        })), (0, fB.k)(OB, BB.shaderLanguage)
       }
-      async setTextureArrayData(HH, BH) {
-        const LH = this.featureState,
+      async setTextureArrayData(BB, OB) {
+        const GB = this.featureState,
           {
-            width: AH,
-            height: rH
-          } = HH.getSize(),
-          SH = this._material.shaderLanguage;
-        if (!LH.useWebGL2) return void(0, bH.f)(this._material, LH, BH, AH, Math.round(rH / AH), SH);
-        if (this.loaded.add(BH), this.loaded.size < this.mirrors.length) return;
-        const hH = await VH(this.mirrors, LH.sources, this._material.yN());
-        (0, bH.b)(this._material, LH, hH, AH, SH)
+            width: YB,
+            height: DB
+          } = BB.getSize(),
+          QB = this._material.shaderLanguage;
+        if (!GB.useWebGL2) return void(0, fB.g)(this._material, GB, OB, YB, Math.round(DB / YB), QB);
+        if (this.loaded.add(OB), this.loaded.size < this.mirrors.length) return;
+        const oB = await nB(this.mirrors, GB.sources, this._material.JF());
+        (0, fB.d)(this._material, GB, oB, YB, QB)
       }
     }
-    var mH = LH(42455),
-      oH = LH(41588),
-      IH = LH(37961),
-      fH = LH(42458),
-      lH = LH(41703),
-      KH = LH(41578),
-      cH = LH(42414),
-      eH = LH(38339),
-      qH = LH(42463);
-    class gH extends mH.b {
+    var dB = GB(42160),
+      KB = GB(41300),
+      uB = GB(37771),
+      mB = GB(42167),
+      IB = GB(41423),
+      FB = GB(41287),
+      iB = GB(42111),
+      LB = GB(38169),
+      gB = GB(42169);
+    class rB extends dB.d {
       getData() {
         return null
       }
@@ -893,334 +893,334 @@ export const modules = {
         super._rebuild()
       }
     }
-    const NH = {
-      Mesh: fH.c,
-      TransformNode: cH.c,
-      rX: mH.b,
-      VertexBuffer: mH.e,
-      BoundingInfo: oH.d,
-      lu: IH.lu,
-      ArenaBuffer: gH,
-      SubMesh: KH.d,
-      VertexData: lH.b,
-      MirroredGeometry: qH.c,
-      meshFromArrays: qH.f,
-      plainMeshFromArrays: qH.g
+    const XB = {
+      Mesh: mB.b,
+      TransformNode: iB.e,
+      BP: dB.d,
+      VertexBuffer: dB.g,
+      BoundingInfo: KB.e,
+      Xp: uB.Xp,
+      ArenaBuffer: rB,
+      SubMesh: FB.c,
+      VertexData: IB.e,
+      MirroredGeometry: gB.d,
+      meshFromArrays: gB.g,
+      plainMeshFromArrays: gB.h
     };
-    (0, eH.d)(NH);
-    var RH = LH(38194);
-    class jH extends(xH(EH.h)) {
-      constructor(HH, BH) {
-        if (super(HH, BH), HH instanceof AH.StandardMaterial && BH.dirLightCount > 0) {
-          const BH = HH,
-            LH = BH._blockDirtyMechanism;
-          BH._blockDirtyMechanism = !0, HH.disableLighting = !0, BH._blockDirtyMechanism = LH;
-          const AH = (0, QH.V)(HH);
-          AH && (AH.disableLighting = !0, (0, QH.T)(AH))
-        }(0, RH.k)(HH)
+    (0, LB.d)(XB);
+    var wB = GB(38025);
+    class EB extends(RB(MB.f)) {
+      constructor(BB, OB) {
+        if (super(BB, OB), BB instanceof YB.StandardMaterial && OB.dirLightCount > 0) {
+          const OB = BB,
+            GB = OB._blockDirtyMechanism;
+          OB._blockDirtyMechanism = !0, BB.disableLighting = !0, OB._blockDirtyMechanism = GB;
+          const YB = (0, qB.U)(BB);
+          YB && (YB.disableLighting = !0, (0, qB.S)(YB))
+        }(0, wB.j)(BB)
       }
-      dispose(HH) {
-        (0, RH.o)(this._material), super.dispose(HH)
+      dispose(BB) {
+        (0, wB.m)(this._material), super.dispose(BB)
       }
     }
 
-    function nH(HH, BH) {
-      if (!(BH instanceof AH.StandardMaterial) || BH.specularTexture) return;
+    function cB(BB, OB) {
+      if (!(OB instanceof YB.StandardMaterial) || OB.specularTexture) return;
       const {
-        r: LH,
-        g: rH,
-        b: SH
-      } = BH.specularColor;
-      0 === LH && 0 === rH && 0 === SH && (HH.SPECULARTERM = !1)
-    }(0, EH.d)({
-      disableUnusedSpecularTerm: nH
+        r: GB,
+        g: DB,
+        b: QB
+      } = OB.specularColor;
+      0 === GB && 0 === DB && 0 === QB && (BB.SPECULARTERM = !1)
+    }(0, MB.e)({
+      disableUnusedSpecularTerm: cB
     });
-    var FH = LH(38141),
-      DH = LH(38353);
-    const wH = new RegExp(`^#define ${CH.d}\\s*$`, "m");
-    class ZH extends(xH(CH.j)) {
-      constructor(HH, BH) {
-        super(HH, BH), this.Mu = !1, BH.ditherOnlyWhileFading && (DH.c.add(HH), this.prewarmDitherTwins(HH))
+    var hB = GB(37966),
+      aB = GB(38183);
+    const eB = new RegExp(`^#define ${JB.d}\\s*$`, "m");
+    class TB extends(RB(JB.i)) {
+      constructor(BB, OB) {
+        super(BB, OB), this.Vp = !1, OB.ditherOnlyWhileFading && (aB.e.add(BB), this.prewarmDitherTwins(BB))
       }
-      prewarmDitherTwins(HH) {
-        const BH = new WeakSet;
-        HH.onEffectCreatedObservable.add((LH => {
+      prewarmDitherTwins(BB) {
+        const OB = new WeakSet;
+        BB.onEffectCreatedObservable.add((GB => {
           let {
-            effect: AH,
-            subMesh: rH
-          } = LH;
-          if (this.featureState.prewarmingDither || BH.has(AH)) return;
-          BH.add(AH);
-          const SH = null === rH || void 0 === rH ? void 0 : rH.getMesh();
-          SH && !wH.test(AH.defines) && HH.yN().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(SH) || BH.delete(AH)
+            effect: YB,
+            subMesh: DB
+          } = GB;
+          if (this.featureState.prewarmingDither || OB.has(YB)) return;
+          OB.add(YB);
+          const QB = null === DB || void 0 === DB ? void 0 : DB.getMesh();
+          QB && !eB.test(YB.defines) && BB.JF().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(QB) || OB.delete(YB)
           }))
         }))
       }
-      prewarmDither(HH) {
-        if (this.Mu || HH.mV()) return !1;
-        const BH = new KH.d(0, 0, 0, 0, 0, HH, void 0, !1, !1);
+      prewarmDither(BB) {
+        if (this.Vp || BB.lV()) return !1;
+        const OB = new FB.c(0, 0, 0, 0, 0, BB, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(HH, BH)
+          this._material.isReadyForSubMesh(BB, OB)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== BH.effect
+        return null !== OB.effect
       }
-      dispose(HH) {
-        this.Mu = !0, super.dispose(HH)
+      dispose(BB) {
+        this.Vp = !0, super.dispose(BB)
       }
     }
-    const dH = new Map;
+    const bB = new Map;
 
-    function aH(HH, BH) {
-      dH.set(HH, BH)
+    function CB(BB, OB) {
+      bB.set(BB, OB)
     }
-    aH(tH.c, vH), aH(zH.g, kH), aH(CH.j, ZH), aH(EH.h, jH), (0, XH.d)({
-      create: (HH, BH) => {
-        const LH = new AH.StandardMaterial(HH.name, BH);
-        return (0, FH.m)(HH, LH), LH.detailMap._pluginDefineNames
+    CB(jB.e, WB), CB(yB.f, kB), CB(JB.i, TB), CB(MB.f, EB), (0, PB.c)({
+      create: (BB, OB) => {
+        const GB = new YB.StandardMaterial(BB.name, OB);
+        return (0, hB.n)(BB, GB), GB.detailMap._pluginDefineNames
       },
-      write: (HH, BH, LH) => {
-        (0, FH.P)(HH.mirror, BH, LH)
+      write: (BB, OB, GB) => {
+        (0, hB.M)(BB.mirror, OB, GB)
       },
-      addFeature: (HH, BH, LH) => {
-        const AH = dH.get(BH.feature);
-        if (!AH) throw new Error(`${BH.feature.name} has no plugin class (registerPluginClass)`);
-        new AH(HH.mirror, BH.state, ...LH)
+      addFeature: (BB, OB, GB) => {
+        const YB = bB.get(OB.feature);
+        if (!YB) throw new Error(`${OB.feature.name} has no plugin class (registerPluginClass)`);
+        new YB(BB.mirror, OB.state, ...GB)
       },
-      texture: (HH, BH, LH) => {
+      texture: (BB, OB, GB) => {
         let {
-          url: AH,
-          noMipmap: rH,
-          invertY: SH,
-          samplingMode: tH,
-          data: zH,
-          sets: CH
-        } = LH;
-        if (!zH) {
-          const LH = new hH.d(AH, BH, rH, SH, tH);
-          return Object.assign(LH, CH), void(0, GH.H)(HH, LH)
+          url: YB,
+          noMipmap: DB,
+          invertY: QB,
+          samplingMode: jB,
+          data: yB,
+          sets: JB
+        } = GB;
+        if (!yB) {
+          const GB = new oB.e(YB, OB, DB, QB, jB);
+          return Object.assign(GB, JB), void(0, zB.D)(BB, GB)
         }
-        const EH = {},
-          XH = new Promise(((HH, BH) => {
-            EH.onLoad = HH, EH.onError = (HH, LH) => {
-              BH(new Error(`${zH.context}: ${(null===LH||void 0===LH?void 0:LH.message)||HH||"Failed to load texture"}`))
+        const MB = {},
+          PB = new Promise(((BB, OB) => {
+            MB.onLoad = BB, MB.onError = (BB, GB) => {
+              OB(new Error(`${yB.context}: ${(null===GB||void 0===GB?void 0:GB.message)||BB||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: YH,
-            bytes: uH,
-            label: QH
-          } = zH,
-          WH = {
-            noMipmap: rH,
+            mimeType: lB,
+            bytes: pB,
+            label: qB
+          } = yB,
+          ZB = {
+            noMipmap: DB,
             invertY: !1,
-            samplingMode: tH,
-            ...EH,
-            mimeType: YH,
+            samplingMode: jB,
+            ...MB,
+            mimeType: lB,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          MH = new hH.d(null, BH, WH);
-        FH.o.set(MH, XH), Object.assign(MH, CH), MH.updateURL(AH, uH);
-        const xH = MH.getInternalTexture();
-        xH && (xH.label = QH), HH.uvSet = MH.coordinatesIndex, HH.matrix.set((0, FH.K)(MH)), (0, GH.H)(HH, MH)
+          NB = new oB.e(null, OB, ZB);
+        hB.o.set(NB, PB), Object.assign(NB, JB), NB.updateURL(YB, pB);
+        const RB = NB.getInternalTexture();
+        RB && (RB.label = qB), BB.uvSet = NB.coordinatesIndex, BB.matrix.set((0, hB.E)(NB)), (0, zB.D)(BB, NB)
       },
-      cube: (HH, BH, LH) => {
+      cube: (BB, OB, GB) => {
         let {
-          rootUrl: AH,
-          files: SH,
-          noMipmap: tH,
-          luminance: zH
-        } = LH;
+          rootUrl: YB,
+          files: QB,
+          noMipmap: jB,
+          luminance: yB
+        } = GB;
         const {
-          samplingMode: CH
-        } = HH.sampler, EH = CH === (0, GH.w)(tH) ? null : () => {
-          (0, FH.G)(XH, CH)
-        }, XH = new rH.e(AH, BH, null, tH, SH, EH, null, (0, GH.s)(zH));
-        XH.coordinatesMode = hH.d.SKYBOX_MODE, (0, GH.H)(HH, XH)
+          samplingMode: JB
+        } = BB.sampler, MB = JB === (0, zB.v)(jB) ? null : () => {
+          (0, hB.D)(PB, JB)
+        }, PB = new DB.e(YB, OB, null, jB, QB, MB, null, (0, zB.u)(yB));
+        PB.coordinatesMode = oB.e.SKYBOX_MODE, (0, zB.D)(BB, PB)
       },
-      canvas: (HH, BH, LH) => {
+      canvas: (BB, OB, GB) => {
         let {
-          width: AH,
-          height: rH,
-          mipmaps: tH,
-          samplingMode: zH,
-          hasAlpha: CH = !1,
-          wrap: EH = hH.d.CLAMP_ADDRESSMODE
-        } = LH;
-        const XH = new SH.e(BH, {
-          width: AH,
-          height: rH
-        }, HH, tH, zH);
-        XH.hasAlpha = CH, XH.wrapU = EH, XH.wrapV = EH;
-        const GH = (0, FH.x)(XH);
-        return (0, FH.y)(GH, XH), GH
+          width: YB,
+          height: DB,
+          mipmaps: jB,
+          samplingMode: yB,
+          hasAlpha: JB = !1,
+          wrap: MB = oB.e.CLAMP_ADDRESSMODE
+        } = GB;
+        const PB = new QB.c(OB, {
+          width: YB,
+          height: DB
+        }, BB, jB, yB);
+        PB.hasAlpha = JB, PB.wrapU = MB, PB.wrapV = MB;
+        const zB = (0, hB.u)(PB);
+        return (0, hB.x)(zB, PB), zB
       }
     })
   },
-  42463: (HH, BH, LH) => {
-    LH.d(BH, {
-      c: () => EH,
-      f: () => XH,
-      g: () => GH
+  42169: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => MB,
+      g: () => PB,
+      h: () => zB
     });
-    var AH = LH(42455),
-      rH = LH(41356),
-      SH = LH(41588),
-      hH = LH(41706),
-      tH = LH(42458),
-      zH = LH(41703),
-      CH = LH(38251);
-    class EH extends hH.d {
+    var YB = GB(42160),
+      DB = GB(41067),
+      QB = GB(41300),
+      oB = GB(41426),
+      jB = GB(42167),
+      yB = GB(41423),
+      JB = GB(38087);
+    class MB extends oB.d {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (HH, BH) => {
-          this.releaseUnlessInstanced(BH)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (BB, OB) => {
+          this.releaseUnlessInstanced(OB)
         }, this.onLinked = null
       }
-      link(HH) {
-        var BH;
-        (0, CH.r)(HH), this.model = HH, null === (BH = this.onLinked) || void 0 === BH || BH.call(this, HH)
+      link(BB) {
+        var OB;
+        (0, JB.k)(BB), this.model = BB, null === (OB = this.onLinked) || void 0 === OB || OB.call(this, BB)
       }
       relink() {
         this.release();
-        const HH = [];
-        for (const rH of Object.values(this._vertexBuffers))
-          if (!rH.getIsInstanced()) {
+        const BB = [];
+        for (const DB of Object.values(this._vertexBuffers))
+          if (!DB.getIsInstanced()) {
             const {
-              byteOffset: BH,
-              byteStride: LH,
-              type: AH,
-              normalized: SH
-            } = rH;
-            HH.push({
-              kind: rH.getKind(),
-              data: rH.getData(),
-              offset: BH,
-              stride: LH,
-              components: rH.getSize(),
-              glType: AH,
-              isNormalized: SH
+              byteOffset: OB,
+              byteStride: GB,
+              type: YB,
+              normalized: QB
+            } = DB;
+            BB.push({
+              kind: DB.getKind(),
+              data: DB.getData(),
+              offset: OB,
+              stride: GB,
+              components: DB.getSize(),
+              glType: YB,
+              isNormalized: QB
             })
-          } const BH = this._indices.length ? this._indices : null,
+          } const OB = this._indices.length ? this._indices : null,
           {
-            minimum: LH,
-            maximum: AH
+            minimum: GB,
+            maximum: YB
           } = this.extend;
-        this.link(new CH.h(HH, BH, this.getTotalVertices(), new Float64Array(LH.xrH()), new Float64Array(AH.xrH())))
+        this.link(new JB.e(BB, OB, this.getTotalVertices(), new Float64Array(GB.dDB()), new Float64Array(YB.dDB())))
       }
-      copy(HH) {
-        if (!this.model) return super.copy(HH);
-        const BH = new EH(HH, this.yN()),
-          LH = this.vrH(void 0, !0);
-        LH && BH.setIndices(LH);
-        let hH = !1;
-        for (const SH in this._vertexBuffers) {
-          const HH = this._vertexBuffers[SH],
-            LH = HH.getData();
-          if (!LH) continue;
-          const tH = HH.getSize(),
+      copy(BB) {
+        if (!this.model) return super.copy(BB);
+        const OB = new MB(BB, this.JF()),
+          GB = this.KDB(void 0, !0);
+        GB && OB.setIndices(GB);
+        let oB = !1;
+        for (const QB in this._vertexBuffers) {
+          const BB = this._vertexBuffers[QB],
+            GB = BB.getData();
+          if (!GB) continue;
+          const jB = BB.getSize(),
             {
-              type: zH,
-              byteOffset: CH,
-              byteStride: EH,
-              normalized: XH
-            } = HH;
-          hH ||= HH.isUpdatable();
-          const GH = HH.getIsInstanced() ? (LH instanceof Array ? 4 * LH.length : LH.byteLength) / EH : this.getTotalVertices(),
-            YH = (0, rH.r)(LH, tH, zH, CH, EH, GH, !0),
-            uH = {
-              updatable: HH.isUpdatable(),
-              stride: tH,
-              type: zH,
-              normalized: XH,
+              type: yB,
+              byteOffset: JB,
+              byteStride: MB,
+              normalized: PB
+            } = BB;
+          oB ||= BB.isUpdatable();
+          const zB = BB.getIsInstanced() ? (GB instanceof Array ? 4 * GB.length : GB.byteLength) / MB : this.getTotalVertices(),
+            lB = (0, DB.v)(GB, jB, yB, JB, MB, zB, !0),
+            pB = {
+              updatable: BB.isUpdatable(),
+              stride: jB,
+              type: yB,
+              normalized: PB,
               takeBufferOwnership: !0,
-              instanced: HH.getIsInstanced()
+              instanced: BB.getIsInstanced()
             };
-          BH.setVerticesBuffer(new AH.e(this.Iu(), YH, SH, uH), GH)
+          OB.setVerticesBuffer(new YB.g(this.Lp(), lB, QB, pB), zB)
         }
-        return BH._updatable = hH, BH._boundingInfo = new SH.d(this.extend.minimum, this.extend.maximum), BH.relink(), BH
+        return OB._updatable = oB, OB._boundingInfo = new QB.e(this.extend.minimum, this.extend.maximum), OB.relink(), OB
       }
-      static mergeMeshes(HH, BH, LH, AH, rH, SH) {
-        const zH = HH[0].yN(),
-          CH = new tH.c(HH[0].name + "_merged", zH),
-          XH = new EH(hH.d.RandomId(), zH, void 0, !1, CH);
+      static mergeMeshes(BB, OB, GB, YB, DB, QB) {
+        const yB = BB[0].JF(),
+          JB = new jB.b(BB[0].name + "_merged", yB),
+          PB = new MB(oB.d.RandomId(), yB, void 0, !1, JB);
         try {
-          if (!tH.c.MergeMeshes(HH, BH, LH, CH, rH, SH)) return CH.dispose(), null
-        } catch (GH) {
-          throw CH.dispose(), GH
+          if (!jB.b.MergeMeshes(BB, OB, GB, JB, DB, QB)) return JB.dispose(), null
+        } catch (zB) {
+          throw JB.dispose(), zB
         }
-        return XH.relink(), CH
+        return PB.relink(), JB
       }
-      removeVerticesData(HH) {
-        this.releaseUnlessInstanced(HH), super.removeVerticesData(HH)
+      removeVerticesData(BB) {
+        this.releaseUnlessInstanced(BB), super.removeVerticesData(BB)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(HH) {
-        var BH;
-        HH && null !== (BH = this.getVertexBuffer(HH)) && void 0 !== BH && BH.getIsInstanced() || this.release()
+      releaseUnlessInstanced(BB) {
+        var OB;
+        BB && null !== (OB = this.getVertexBuffer(BB)) && void 0 !== OB && OB.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, CH.z)(this.model), this.model = null)
+        this.model && ((0, JB.q)(this.model), this.model = null)
       }
     }
 
-    function XH(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new tH.c(HH, LH);
-      const rH = (0, CH.p)(BH),
+    function PB(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new jB.b(BB, GB);
+      const DB = (0, JB.j)(OB),
         {
-          positions: SH,
-          normals: XH,
-          uvs: GH,
-          indices: YH,
-          named: uH = {}
-        } = BH,
-        QH = new zH.b;
-      QH.positions = SH, QH.normals = null !== XH && void 0 !== XH ? XH : null, QH.uvs = null !== GH && void 0 !== GH ? GH : null, QH.indices = YH;
-      const WH = new EH(hH.d.RandomId(), LH, QH, !1, AH);
+          positions: QB,
+          normals: PB,
+          uvs: zB,
+          indices: lB,
+          named: pB = {}
+        } = OB,
+        qB = new yB.e;
+      qB.positions = QB, qB.normals = null !== PB && void 0 !== PB ? PB : null, qB.uvs = null !== zB && void 0 !== zB ? zB : null, qB.indices = lB;
+      const ZB = new MB(oB.d.RandomId(), GB, qB, !1, YB);
       for (const {
-          kind: hH,
-          components: tH
+          kind: oB,
+          components: jB
         }
-        of rH.vertexAttributes) hH in uH && AH.setVerticesData(hH, uH[hH], !1, tH);
-      return WH.link(rH), AH
+        of DB.vertexAttributes) oB in pB && YB.setVerticesData(oB, pB[oB], !1, jB);
+      return ZB.link(DB), YB
     }
 
-    function GH(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const rH = new tH.c(HH, LH),
+    function zB(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const DB = new jB.b(BB, GB),
         {
-          positions: SH,
-          normals: hH,
-          uvs: CH,
-          indices: EH
-        } = BH;
-      return Object.assign(new zH.b, {
-        positions: SH,
-        normals: hH,
-        uvs: CH,
-        indices: EH
-      }).applyToMesh(rH, AH), rH
+          positions: QB,
+          normals: oB,
+          uvs: JB,
+          indices: MB
+        } = OB;
+      return Object.assign(new yB.e, {
+        positions: QB,
+        normals: oB,
+        uvs: JB,
+        indices: MB
+      }).applyToMesh(DB, YB), DB
     }
   },
-  39624: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH,
-      c: () => hH,
-      g: () => SH,
-      k: () => rH,
-      n: () => tH,
-      r: () => CH,
-      t: () => EH,
-      x: () => zH
+  39388: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB,
+      d: () => oB,
+      f: () => QB,
+      h: () => DB,
+      j: () => jB,
+      n: () => JB,
+      r: () => MB,
+      v: () => yB
     });
-    const AH = 16,
-      rH = 256,
-      SH = {
+    const YB = 16,
+      DB = 256,
+      QB = {
         position: 0,
         time: 3,
         direction: 4,
@@ -1229,9 +1229,9 @@ export const modules = {
         seed: 9,
         colour: 12
       },
-      hH = 16,
-      tH = 256,
-      zH = {
+      oB = 16,
+      jB = 256,
+      yB = {
         gravity: 0,
         colorCount: 3,
         colorDead: 4,
@@ -1239,28 +1239,28 @@ export const modules = {
         remapCount: 9,
         ramp: 10,
         colorPositions: 12,
-        color1: 12 + AH,
-        color2: 12 + 5 * AH,
-        EW: 12 + 9 * AH,
-        remap: 12 + 13 * AH
+        color1: 12 + YB,
+        color2: 12 + 5 * YB,
+        lZ: 12 + 9 * YB,
+        remap: 12 + 13 * YB
       },
-      CH = 12 + 17 * AH,
-      EH = [zH.colorCount, zH.velocityCount, zH.remapCount, zH.ramp]
+      JB = 12 + 17 * YB,
+      MB = [yB.colorCount, yB.velocityCount, yB.remapCount, yB.ramp]
   },
-  39619: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => WH,
-      e: () => vH
+  39385: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => ZB,
+      f: () => WB
     });
-    var AH = LH(38002),
-      rH = LH(37961),
-      SH = LH(38135),
-      hH = LH(39624);
-    class tH {
-      constructor(HH) {
-        this.aX = HH, this.records = void 0, this.recordBits = void 0, this.deaths = void 0, this.cursor = 0, this.highWater = 0, this.uploadFrom = -1, this.uploadTo = 0, this.wrapTo = 0;
-        const BH = Math.max(1, HH);
-        this.records = new Float32Array(BH * hH.c), this.recordBits = new Uint32Array(this.records.buffer), this.deaths = new Float64Array(BH).fill(-1 / 0)
+    var YB = GB(37807),
+      DB = GB(37771),
+      QB = GB(37962),
+      oB = GB(39388);
+    class jB {
+      constructor(BB) {
+        this.CP = BB, this.records = void 0, this.recordBits = void 0, this.deaths = void 0, this.cursor = 0, this.highWater = 0, this.uploadFrom = -1, this.uploadTo = 0, this.wrapTo = 0;
+        const OB = Math.max(1, BB);
+        this.records = new Float32Array(OB * oB.d), this.recordBits = new Uint32Array(this.records.buffer), this.deaths = new Float64Array(OB).fill(-1 / 0)
       }
       restart() {
         this.cursor = 0, this.highWater = 0
@@ -1268,30 +1268,30 @@ export const modules = {
       clear() {
         this.deaths.fill(-1 / 0), this.restart(), this.uploadFrom = -1, this.wrapTo = 0
       }
-      freeSlot(HH) {
-        const BH = this.aX;
-        for (let LH = 0; LH < BH; LH++) {
-          const LH = this.cursor;
-          if (this.cursor = LH + 1 === BH ? 0 : LH + 1, this.deaths[LH] <= HH) return LH
+      freeSlot(BB) {
+        const OB = this.CP;
+        for (let GB = 0; GB < OB; GB++) {
+          const GB = this.cursor;
+          if (this.cursor = GB + 1 === OB ? 0 : GB + 1, this.deaths[GB] <= BB) return GB
         }
         return -1
       }
-      written(HH, BH) {
-        this.deaths[HH] = BH, HH >= this.highWater && (this.highWater = HH + 1), this.uploadFrom < 0 ? (this.uploadFrom = HH, this.uploadTo = HH + 1) : HH >= this.uploadFrom && 0 === this.wrapTo ? this.uploadTo = Math.max(this.uploadTo, HH + 1) : this.wrapTo = Math.max(this.wrapTo, HH + 1)
+      written(BB, OB) {
+        this.deaths[BB] = OB, BB >= this.highWater && (this.highWater = BB + 1), this.uploadFrom < 0 ? (this.uploadFrom = BB, this.uploadTo = BB + 1) : BB >= this.uploadFrom && 0 === this.wrapTo ? this.uploadTo = Math.max(this.uploadTo, BB + 1) : this.wrapTo = Math.max(this.wrapTo, BB + 1)
       }
-      shiftTimes(HH) {
-        const BH = this.records,
-          LH = this.highWater * hH.c;
-        for (let AH = hH.g.time; AH < LH; AH += hH.c) BH[AH] -= HH;
+      shiftTimes(BB) {
+        const OB = this.records,
+          GB = this.highWater * oB.d;
+        for (let YB = oB.f.time; YB < GB; YB += oB.d) OB[YB] -= BB;
         this.highWater > 0 && (this.uploadFrom = 0, this.uploadTo = this.highWater, this.wrapTo = 0)
       }
-      takeUploads(HH) {
-        this.uploadFrom >= 0 && (HH(this.uploadFrom, this.uploadTo), this.wrapTo > 0 && HH(0, this.wrapTo)), this.uploadFrom = -1, this.wrapTo = 0
+      takeUploads(BB) {
+        this.uploadFrom >= 0 && (BB(this.uploadFrom, this.uploadTo), this.wrapTo > 0 && BB(0, this.wrapTo)), this.uploadFrom = -1, this.wrapTo = 0
       }
-      liveCount(HH) {
-        let BH = 0;
-        for (let LH = 0; LH < this.highWater; LH++) this.deaths[LH] > HH && BH++;
-        return BH
+      liveCount(BB) {
+        let OB = 0;
+        for (let GB = 0; GB < this.highWater; GB++) this.deaths[GB] > BB && OB++;
+        return OB
       }
       drawCount() {
         return this.highWater
@@ -1300,107 +1300,107 @@ export const modules = {
         return this.cursor < this.highWater ? this.cursor : 0
       }
     }
-    var zH = LH(38071),
-      CH = LH(39627),
-      EH = LH(39633),
-      XH = LH(39640);
-    class GH {
+    var yB = GB(37885),
+      JB = GB(39394),
+      MB = GB(39403),
+      PB = GB(39412);
+    class zB {
       constructor() {
-        this.particleEmitterType = new EH.b, this.texture = null, this.blendMode = XH.g, this.emitRate = 10, this.manualEmitCount = -1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minSize = 1, this.maxSize = 1, this.updateSpeed = .01, this.gravity = rH.lu.Zero(), this.worldOffset = new rH.lu(0, 0, 0), this.color1 = new zH.d(1, 1, 1, 1), this.color2 = new zH.d(1, 1, 1, 1), this.colorDead = new zH.d(0, 0, 0, 1), this.useRampGradients = !1, this.disposeOnStop = !1, this.colorGradients = null, this.velocityGradients = null, this.colorRemapGradients = null, this.rampGradients = null
+        this.particleEmitterType = new MB.e, this.texture = null, this.blendMode = PB.g, this.emitRate = 10, this.manualEmitCount = -1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minSize = 1, this.maxSize = 1, this.updateSpeed = .01, this.gravity = DB.Xp.Zero(), this.worldOffset = new DB.Xp(0, 0, 0), this.color1 = new yB.e(1, 1, 1, 1), this.color2 = new yB.e(1, 1, 1, 1), this.colorDead = new yB.e(0, 0, 0, 1), this.useRampGradients = !1, this.disposeOnStop = !1, this.colorGradients = null, this.velocityGradients = null, this.colorRemapGradients = null, this.rampGradients = null
       }
       get direction1() {
-        var HH;
-        return null !== (HH = YH(this).direction1) && void 0 !== HH ? HH : rH.lu.Zero()
+        var BB;
+        return null !== (BB = lB(this).direction1) && void 0 !== BB ? BB : DB.Xp.Zero()
       }
-      set direction1(HH) {
-        const BH = YH(this);
-        BH.direction1 && (BH.direction1 = HH)
+      set direction1(BB) {
+        const OB = lB(this);
+        OB.direction1 && (OB.direction1 = BB)
       }
       get direction2() {
-        var HH;
-        return null !== (HH = YH(this).direction2) && void 0 !== HH ? HH : rH.lu.Zero()
+        var BB;
+        return null !== (BB = lB(this).direction2) && void 0 !== BB ? BB : DB.Xp.Zero()
       }
-      set direction2(HH) {
-        const BH = YH(this);
-        BH.direction2 && (BH.direction2 = HH)
+      set direction2(BB) {
+        const OB = lB(this);
+        OB.direction2 && (OB.direction2 = BB)
       }
       get minEmitBox() {
-        var HH;
-        return null !== (HH = YH(this).minEmitBox) && void 0 !== HH ? HH : rH.lu.Zero()
+        var BB;
+        return null !== (BB = lB(this).minEmitBox) && void 0 !== BB ? BB : DB.Xp.Zero()
       }
-      set minEmitBox(HH) {
-        const BH = YH(this);
-        BH.minEmitBox && (BH.minEmitBox = HH)
+      set minEmitBox(BB) {
+        const OB = lB(this);
+        OB.minEmitBox && (OB.minEmitBox = BB)
       }
       get maxEmitBox() {
-        var HH;
-        return null !== (HH = YH(this).maxEmitBox) && void 0 !== HH ? HH : rH.lu.Zero()
+        var BB;
+        return null !== (BB = lB(this).maxEmitBox) && void 0 !== BB ? BB : DB.Xp.Zero()
       }
-      set maxEmitBox(HH) {
-        const BH = YH(this);
-        BH.maxEmitBox && (BH.maxEmitBox = HH)
+      set maxEmitBox(BB) {
+        const OB = lB(this);
+        OB.maxEmitBox && (OB.maxEmitBox = BB)
       }
-      createBoxEmitter(HH, BH, LH, AH) {
-        const rH = new EH.b;
-        return this.particleEmitterType = rH, rH.direction1 = HH, rH.direction2 = BH, rH.minEmitBox = LH, rH.maxEmitBox = AH, rH
+      createBoxEmitter(BB, OB, GB, YB) {
+        const DB = new MB.e;
+        return this.particleEmitterType = DB, DB.direction1 = BB, DB.direction2 = OB, DB.minEmitBox = GB, DB.maxEmitBox = YB, DB
       }
-      addColorGradient(HH, BH, LH) {
-        return this.colorGradients ??= [], this.colorGradients.push(new CH.e(HH, BH, LH)), this.colorGradients.sort(uH), this
+      addColorGradient(BB, OB, GB) {
+        return this.colorGradients ??= [], this.colorGradients.push(new JB.b(BB, OB, GB)), this.colorGradients.sort(pB), this
       }
-      removeColorGradient(HH) {
-        return QH(this.colorGradients, HH), this
+      removeColorGradient(BB) {
+        return qB(this.colorGradients, BB), this
       }
       getColorGradients() {
         return this.colorGradients
       }
-      addVelocityGradient(HH, BH, LH) {
-        return this.velocityGradients ??= [], this.velocityGradients.push(new CH.m(HH, BH, LH)), this.velocityGradients.sort(uH), this
+      addVelocityGradient(BB, OB, GB) {
+        return this.velocityGradients ??= [], this.velocityGradients.push(new JB.g(BB, OB, GB)), this.velocityGradients.sort(pB), this
       }
       getVelocityGradients() {
         return this.velocityGradients
       }
-      addColorRemapGradient(HH, BH, LH) {
-        return this.colorRemapGradients ??= [], this.colorRemapGradients.push(new CH.m(HH, BH, LH)), this.colorRemapGradients.sort(uH), this
+      addColorRemapGradient(BB, OB, GB) {
+        return this.colorRemapGradients ??= [], this.colorRemapGradients.push(new JB.g(BB, OB, GB)), this.colorRemapGradients.sort(pB), this
       }
       getColorRemapGradients() {
         return this.colorRemapGradients
       }
-      addRampGradient(HH, BH) {
-        return this.rampGradients ??= [], this.rampGradients.push(new CH.i(HH, BH)), this.rampGradients.sort(uH), this
+      addRampGradient(BB, OB) {
+        return this.rampGradients ??= [], this.rampGradients.push(new JB.d(BB, OB)), this.rampGradients.sort(pB), this
       }
-      removeRampGradient(HH) {
-        return QH(this.rampGradients, HH), this
+      removeRampGradient(BB) {
+        return qB(this.rampGradients, BB), this
       }
       getRampGradients() {
         return this.rampGradients
       }
     }
 
-    function YH(HH) {
-      return HH.particleEmitterType
+    function lB(BB) {
+      return BB.particleEmitterType
     }
 
-    function uH(HH, BH) {
-      return HH.gradient < BH.gradient ? -1 : HH.gradient > BH.gradient ? 1 : 0
+    function pB(BB, OB) {
+      return BB.gradient < OB.gradient ? -1 : BB.gradient > OB.gradient ? 1 : 0
     }
 
-    function QH(HH, BH) {
-      const LH = HH ? HH.findIndex((HH => HH.gradient === BH)) : -1;
-      LH >= 0 && HH.splice(LH, 1)
+    function qB(BB, OB) {
+      const GB = BB ? BB.findIndex((BB => BB.gradient === OB)) : -1;
+      GB >= 0 && BB.splice(GB, 1)
     }
-    class WH extends GH {
-      constructor(HH, BH, LH) {
-        super(), this.name = HH, this.host = LH, this.onDispose = MH, this.onAnimationEnd = null, this.ring = void 0, this.emitterValue = rH.lu.Zero(), this.emitterDisposed = null, this.time = 0, this.epoch = 0, this.anchor = [0, 0, 0], this.shift = [0, 0, 0], this.liveUntil = -1 / 0, this.newPartsExcess = 0, this.started = !1, this.stopped = !1, this.alive = !1, this.Mu = !1, this.emitterMatrix = new rH.Matrix, this.inverseEmitterMatrix = new rH.Matrix, this.spawned = {
-          position: new rH.lu,
-          direction: new rH.lu
-        }, this.ring = new tH(BH)
+    class ZB extends zB {
+      constructor(BB, OB, GB) {
+        super(), this.name = BB, this.host = GB, this.onDispose = NB, this.onAnimationEnd = null, this.ring = void 0, this.emitterValue = DB.Xp.Zero(), this.emitterDisposed = null, this.time = 0, this.epoch = 0, this.anchor = [0, 0, 0], this.shift = [0, 0, 0], this.liveUntil = -1 / 0, this.newPartsExcess = 0, this.started = !1, this.stopped = !1, this.alive = !1, this.Vp = !1, this.emitterMatrix = new DB.Matrix, this.inverseEmitterMatrix = new DB.Matrix, this.spawned = {
+          position: new DB.Xp,
+          direction: new DB.Xp
+        }, this.ring = new jB(OB)
       }
       get emitter() {
         return this.emitterValue
       }
-      set emitter(HH) {
-        var BH;
-        null === (BH = this.emitterDisposed) || void 0 === BH || BH.remove(), this.emitterDisposed = null, this.emitterValue = HH, HH && PH(HH) && (this.emitterDisposed = HH.uR.add((() => {
+      set emitter(BB) {
+        var OB;
+        null === (OB = this.emitterDisposed) || void 0 === OB || OB.remove(), this.emitterDisposed = null, this.emitterValue = BB, BB && AB(BB) && (this.emitterDisposed = BB.lF.add((() => {
           this.emitterDisposed = null, this.dispose()
         })))
       }
@@ -1420,12 +1420,12 @@ export const modules = {
         return this.started && !this.stopped
       }
       isReady() {
-        return !this.Mu && null !== this.emitterValue && this.host.canDraw(this)
+        return !this.Vp && null !== this.emitterValue && this.host.canDraw(this)
       }
       dispose() {
-        var HH;
-        let BH = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this.Mu || (this.Mu = !0, null === (HH = this.emitterDisposed) || void 0 === HH || HH.remove(), this.emitterDisposed = null, BH && ((0, SH.y)(this.texture), this.texture = null), this.host.remove(this), this.onDispose())
+        var BB;
+        let OB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this.Vp || (this.Vp = !0, null === (BB = this.emitterDisposed) || void 0 === BB || BB.remove(), this.emitterDisposed = null, OB && ((0, QB.w)(this.texture), this.texture = null), this.host.remove(this), this.onDispose())
       }
       reset() {
         this.liveUntil = -1 / 0, this.alive = !1, this.ring.clear()
@@ -1433,258 +1433,258 @@ export const modules = {
       getActiveCount() {
         return this.ring.liveCount(this.time)
       }
-      animateIfActive(HH) {
-        const BH = this.emitter;
-        return !!BH && !(PH(BH) && !BH.isEnabled()) && this.animate(HH)
+      animateIfActive(BB) {
+        const OB = this.emitter;
+        return !!OB && !(AB(OB) && !OB.isEnabled()) && this.animate(BB)
       }
-      animate(HH) {
+      animate(BB) {
         if (!this.started) return !1;
         if (!this.isReady()) return this.endIfSpent(), !1;
-        const BH = this.updateSpeed * HH;
-        let LH;
-        return this.manualEmitCount > -1 ? (LH = this.manualEmitCount, this.newPartsExcess = 0, this.manualEmitCount = 0) : (LH = this.emitRate * BH | 0, this.newPartsExcess += this.emitRate * BH - LH), this.newPartsExcess > 1 && (LH += this.newPartsExcess | 0, this.newPartsExcess -= this.newPartsExcess | 0), this.stopped && (LH = 0), this.alive = this.liveUntil > this.time, this.time += BH, this.time - this.epoch > 4096 && (this.ring.shiftTimes(this.time - this.epoch), this.epoch = this.time), LH > 0 && this.spawn(LH), !(this.stopped && !this.alive && this.end()) && (0 === this.manualEmitCount && this.disposeOnStop && (this.stopped = !0), !0)
+        const OB = this.updateSpeed * BB;
+        let GB;
+        return this.manualEmitCount > -1 ? (GB = this.manualEmitCount, this.newPartsExcess = 0, this.manualEmitCount = 0) : (GB = this.emitRate * OB | 0, this.newPartsExcess += this.emitRate * OB - GB), this.newPartsExcess > 1 && (GB += this.newPartsExcess | 0, this.newPartsExcess -= this.newPartsExcess | 0), this.stopped && (GB = 0), this.alive = this.liveUntil > this.time, this.time += OB, this.time - this.epoch > 4096 && (this.ring.shiftTimes(this.time - this.epoch), this.epoch = this.time), GB > 0 && this.spawn(GB), !(this.stopped && !this.alive && this.end()) && (0 === this.manualEmitCount && this.disposeOnStop && (this.stopped = !0), !0)
       }
       endIfSpent() {
-        this.started && this.stopped && !this.Mu && !this.hasLiveParticles() && (this.manualEmitCount > 0 && (this.manualEmitCount = 0), this.end())
+        this.started && this.stopped && !this.Vp && !this.hasLiveParticles() && (this.manualEmitCount > 0 && (this.manualEmitCount = 0), this.end())
       }
       end() {
-        var HH;
-        return this.started = !1, null === (HH = this.onAnimationEnd) || void 0 === HH || HH.call(this), !!this.Mu || !!this.disposeOnStop && (this.host.disposeStopped(this), !0)
+        var BB;
+        return this.started = !1, null === (BB = this.onAnimationEnd) || void 0 === BB || BB.call(this), !!this.Vp || !!this.disposeOnStop && (this.host.disposeStopped(this), !0)
       }
       hasLiveParticles() {
         return this.liveUntil > this.time
       }
-      drawOffset(HH, BH) {
-        HH[BH] = this.anchor[0] + this.shift[0] + this.worldOffset.x, HH[BH + 1] = this.anchor[1] + this.shift[1] + this.worldOffset.y, HH[BH + 2] = this.anchor[2] + this.shift[2] + this.worldOffset.z
+      drawOffset(BB, OB) {
+        BB[OB] = this.anchor[0] + this.shift[0] + this.worldOffset.x, BB[OB + 1] = this.anchor[1] + this.shift[1] + this.worldOffset.y, BB[OB + 2] = this.anchor[2] + this.shift[2] + this.worldOffset.z
       }
       drawTime() {
         return this.time - this.epoch
       }
-      rBH(HH, BH) {
-        this.emitterValue && PH(this.emitterValue) ? (this.shift[0] -= HH[0], this.shift[1] -= HH[1], this.shift[2] -= HH[2]) : this.worldOffset.set(-BH[0], -BH[1], -BH[2])
+      POB(BB, OB) {
+        this.emitterValue && AB(this.emitterValue) ? (this.shift[0] -= BB[0], this.shift[1] -= BB[1], this.shift[2] -= BB[2]) : this.worldOffset.set(-OB[0], -OB[1], -OB[2])
       }
-      spawn(HH) {
-        var BH, LH;
-        const SH = this.emitterValue,
-          tH = PH(SH) ? SH.getWorldMatrix() : rH.Matrix.TranslationToRef(SH.x, SH.y, SH.z, this.emitterMatrix);
-        tH.invertToRef(this.inverseEmitterMatrix);
+      spawn(BB) {
+        var OB, GB;
+        const QB = this.emitterValue,
+          jB = AB(QB) ? QB.getWorldMatrix() : DB.Matrix.TranslationToRef(QB.x, QB.y, QB.z, this.emitterMatrix);
+        jB.invertToRef(this.inverseEmitterMatrix);
         const {
-          position: zH,
-          direction: CH
-        } = this.spawned, EH = this.spawned, XH = this.ring, GH = this.liveUntil <= this.time;
-        GH && (this.epoch = this.time, this.shift[0] = this.shift[1] = this.shift[2] = 0, XH.restart());
+          position: yB,
+          direction: JB
+        } = this.spawned, MB = this.spawned, PB = this.ring, zB = this.liveUntil <= this.time;
+        zB && (this.epoch = this.time, this.shift[0] = this.shift[1] = this.shift[2] = 0, PB.restart());
         const {
-          records: YH,
-          recordBits: uH
-        } = XH, QH = hH.g, WH = null === (BH = this.getColorGradients()) || void 0 === BH ? void 0 : BH[0], MH = WH ? WH.color1 : this.color1, xH = WH ? null !== (LH = WH.color2) && void 0 !== LH ? LH : WH.color1 : this.color2;
-        for (let rH = 0; rH < HH; rH++) {
-          const HH = XH.freeSlot(this.time);
-          if (HH < 0) break;
-          const BH = (0, AH.RandomRange)(this.minLifeTime, this.maxLifeTime),
-            LH = (0, AH.RandomRange)(this.minEmitPower, this.maxEmitPower);
-          this.particleEmitterType.startPositionFunction(tH, zH, EH, !1), this.particleEmitterType.startDirectionFunction(tH, CH, EH, !1, this.inverseEmitterMatrix), 0 === LH ? CH.set(0, 0, 0) : CH.scaleInPlace(LH);
-          const SH = (0, AH.RandomRange)(this.minSize, this.maxSize);
-          GH && 0 === rH && (this.anchor[0] = zH.x, this.anchor[1] = zH.y, this.anchor[2] = zH.z);
-          const WH = HH * hH.c;
-          YH[WH + QH.position] = zH.x - this.anchor[0] - this.shift[0], YH[WH + QH.position + 1] = zH.y - this.anchor[1] - this.shift[1], YH[WH + QH.position + 2] = zH.z - this.anchor[2] - this.shift[2], YH[WH + QH.time] = this.time - this.epoch, YH[WH + QH.direction] = CH.x, YH[WH + QH.direction + 1] = CH.y, YH[WH + QH.direction + 2] = CH.z, YH[WH + QH.lifeTime] = BH, YH[WH + QH.size] = SH, uH[WH + QH.seed] = 4294967296 * Math.random() >>> 0;
-          const vH = Math.random();
-          YH[WH + QH.colour] = MH.r + (xH.r - MH.r) * vH, YH[WH + QH.colour + 1] = MH.g + (xH.g - MH.g) * vH, YH[WH + QH.colour + 2] = MH.b + (xH.b - MH.b) * vH, YH[WH + QH.colour + 3] = MH.a + (xH.a - MH.a) * vH;
-          const PH = this.time + BH;
-          PH > this.liveUntil && (this.liveUntil = PH), XH.written(HH, PH)
+          records: lB,
+          recordBits: pB
+        } = PB, qB = oB.f, ZB = null === (OB = this.getColorGradients()) || void 0 === OB ? void 0 : OB[0], NB = ZB ? ZB.color1 : this.color1, RB = ZB ? null !== (GB = ZB.color2) && void 0 !== GB ? GB : ZB.color1 : this.color2;
+        for (let DB = 0; DB < BB; DB++) {
+          const BB = PB.freeSlot(this.time);
+          if (BB < 0) break;
+          const OB = (0, YB.RandomRange)(this.minLifeTime, this.maxLifeTime),
+            GB = (0, YB.RandomRange)(this.minEmitPower, this.maxEmitPower);
+          this.particleEmitterType.startPositionFunction(jB, yB, MB, !1), this.particleEmitterType.startDirectionFunction(jB, JB, MB, !1, this.inverseEmitterMatrix), 0 === GB ? JB.set(0, 0, 0) : JB.scaleInPlace(GB);
+          const QB = (0, YB.RandomRange)(this.minSize, this.maxSize);
+          zB && 0 === DB && (this.anchor[0] = yB.x, this.anchor[1] = yB.y, this.anchor[2] = yB.z);
+          const ZB = BB * oB.d;
+          lB[ZB + qB.position] = yB.x - this.anchor[0] - this.shift[0], lB[ZB + qB.position + 1] = yB.y - this.anchor[1] - this.shift[1], lB[ZB + qB.position + 2] = yB.z - this.anchor[2] - this.shift[2], lB[ZB + qB.time] = this.time - this.epoch, lB[ZB + qB.direction] = JB.x, lB[ZB + qB.direction + 1] = JB.y, lB[ZB + qB.direction + 2] = JB.z, lB[ZB + qB.lifeTime] = OB, lB[ZB + qB.size] = QB, pB[ZB + qB.seed] = 4294967296 * Math.random() >>> 0;
+          const WB = Math.random();
+          lB[ZB + qB.colour] = NB.r + (RB.r - NB.r) * WB, lB[ZB + qB.colour + 1] = NB.g + (RB.g - NB.g) * WB, lB[ZB + qB.colour + 2] = NB.b + (RB.b - NB.b) * WB, lB[ZB + qB.colour + 3] = NB.a + (RB.a - NB.a) * WB;
+          const AB = this.time + OB;
+          AB > this.liveUntil && (this.liveUntil = AB), PB.written(BB, AB)
         }
       }
     }
 
-    function MH() {}
-    const xH = 5;
+    function NB() {}
+    const RB = 5;
 
-    function vH(HH, BH) {
-      const LH = [];
-      let AH = 0;
-      for (const rH of HH) rH.isReady() || (AH++, LH.length < xH && LH.push(`${BH} particle system ${rH.name}`));
-      return AH > LH.length && LH.push(`${AH-LH.length} more ${BH} particle systems`), LH
+    function WB(BB, OB) {
+      const GB = [];
+      let YB = 0;
+      for (const DB of BB) DB.isReady() || (YB++, GB.length < RB && GB.push(`${OB} particle system ${DB.name}`));
+      return YB > GB.length && GB.push(`${YB-GB.length} more ${OB} particle systems`), GB
     }
 
-    function PH(HH) {
-      return void 0 !== HH.position
+    function AB(BB) {
+      return void 0 !== BB.position
     }
   },
-  45075: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => WH,
-      c: () => tH,
-      d: () => hH,
-      f: () => CH
+  44735: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => ZB,
+      g: () => jB,
+      j: () => oB,
+      k: () => JB
     });
-    var AH = LH(38071),
-      rH = LH(39627),
-      SH = LH(39624);
+    var YB = GB(37885),
+      DB = GB(39394),
+      QB = GB(39388);
 
-    function hH(HH, BH, LH, AH) {
-      const rH = SH.x;
-      BH.fill(0), HH.gravity.toArray(BH, rH.gravity), HH.colorDead.toArray(BH, rH.colorDead), LH[rH.ramp] = HH.useRampGradients ? 1 : 0;
-      const hH = HH.getColorGradients(),
-        tH = GH(HH, hH, "colour", AH);
-      LH[rH.colorCount] = tH;
-      for (let SH = 0; SH < tH; SH++) {
-        var zH;
-        const HH = hH[YH(hH, SH)];
-        BH[rH.colorPositions + SH] = HH.gradient, HH.color1.toArray(BH, rH.color1 + 4 * SH), (null !== (zH = HH.color2) && void 0 !== zH ? zH : HH.color1).toArray(BH, rH.color2 + 4 * SH)
+    function oB(BB, OB, GB, YB) {
+      const DB = QB.v;
+      OB.fill(0), BB.gravity.toArray(OB, DB.gravity), BB.colorDead.toArray(OB, DB.colorDead), GB[DB.ramp] = BB.useRampGradients ? 1 : 0;
+      const oB = BB.getColorGradients(),
+        jB = zB(BB, oB, "colour", YB);
+      GB[DB.colorCount] = jB;
+      for (let QB = 0; QB < jB; QB++) {
+        var yB;
+        const BB = oB[lB(oB, QB)];
+        OB[DB.colorPositions + QB] = BB.gradient, BB.color1.toArray(OB, DB.color1 + 4 * QB), (null !== (yB = BB.color2) && void 0 !== yB ? yB : BB.color1).toArray(OB, DB.color2 + 4 * QB)
       }
-      const CH = HH.getVelocityGradients(),
-        EH = GH(HH, CH, "EW", AH);
-      LH[rH.velocityCount] = EH;
-      for (let SH = 0; SH < EH; SH++) xH(BH, rH.EW + 4 * SH, CH[YH(CH, SH)]);
-      const XH = HH.useRampGradients ? HH.getColorRemapGradients() : null,
-        uH = GH(HH, XH, "colour remap", AH);
-      LH[rH.remapCount] = uH;
-      for (let SH = 0; SH < uH; SH++) xH(BH, rH.remap + 4 * SH, XH[YH(XH, SH)])
+      const JB = BB.getVelocityGradients(),
+        MB = zB(BB, JB, "lZ", YB);
+      GB[DB.velocityCount] = MB;
+      for (let QB = 0; QB < MB; QB++) RB(OB, DB.lZ + 4 * QB, JB[lB(JB, QB)]);
+      const PB = BB.useRampGradients ? BB.getColorRemapGradients() : null,
+        pB = zB(BB, PB, "colour remap", YB);
+      GB[DB.remapCount] = pB;
+      for (let QB = 0; QB < pB; QB++) RB(OB, DB.remap + 4 * QB, PB[lB(PB, QB)])
     }
 
-    function tH() {
+    function jB() {
       return {
         key: [],
-        texels: new Uint8Array(4 * SH.k)
+        texels: new Uint8Array(4 * QB.h)
       }
     }
-    const zH = [];
+    const yB = [];
 
-    function CH(HH, BH) {
-      return EH(HH, zH), !MH(zH, BH.key) && (BH.key.length = 0, BH.key.push(...zH), BH.key.length > 0 && function(HH, BH) {
-        for (let LH = 0; LH < SH.k; LH++) rH.o.GetCurrentGradient(LH / SH.k, HH, ((HH, BH, LH) => {
-          AH.Color3.LerpToRef(HH.color, BH.color, LH, XH)
-        })), BH[4 * LH] = 255 * XH.r, BH[4 * LH + 1] = 255 * XH.g, BH[4 * LH + 2] = 255 * XH.b, BH[4 * LH + 3] = 255
-      }(HH.getRampGradients(), BH.texels), !0)
+    function JB(BB, OB) {
+      return MB(BB, yB), !NB(yB, OB.key) && (OB.key.length = 0, OB.key.push(...yB), OB.key.length > 0 && function(BB, OB) {
+        for (let GB = 0; GB < QB.h; GB++) DB.h.GetCurrentGradient(GB / QB.h, BB, ((BB, OB, GB) => {
+          YB.Color3.LerpToRef(BB.color, OB.color, GB, PB)
+        })), OB[4 * GB] = 255 * PB.r, OB[4 * GB + 1] = 255 * PB.g, OB[4 * GB + 2] = 255 * PB.b, OB[4 * GB + 3] = 255
+      }(BB.getRampGradients(), OB.texels), !0)
     }
 
-    function EH(HH, BH) {
-      BH.length = 0;
-      const LH = HH.useRampGradients ? HH.getRampGradients() : null;
-      if (null !== LH && void 0 !== LH && LH.length) {
-        BH.push(LH.length);
-        for (const HH of LH) BH.push(HH.gradient, HH.color.r, HH.color.g, HH.color.b)
+    function MB(BB, OB) {
+      OB.length = 0;
+      const GB = BB.useRampGradients ? BB.getRampGradients() : null;
+      if (null !== GB && void 0 !== GB && GB.length) {
+        OB.push(GB.length);
+        for (const BB of GB) OB.push(BB.gradient, BB.color.r, BB.color.g, BB.color.b)
       }
     }
-    const XH = new AH.Color3;
+    const PB = new YB.Color3;
 
-    function GH(HH, BH, LH, AH) {
-      return BH ? BH.length > SH.b ? (AH(`particleStops:${LH}`, `GPU particles use the first 2 and last ${SH.b-2} of more than ${SH.b} ${LH} gradient stops (${HH.name})`), SH.b) : BH.length : 0
+    function zB(BB, OB, GB, YB) {
+      return OB ? OB.length > QB.b ? (YB(`particleStops:${GB}`, `GPU particles use the first 2 and last ${QB.b-2} of more than ${QB.b} ${GB} gradient stops (${BB.name})`), QB.b) : OB.length : 0
     }
 
-    function YH(HH, BH) {
-      return BH < 2 || HH.length <= SH.b ? BH : HH.length - SH.b + BH
+    function lB(BB, OB) {
+      return OB < 2 || BB.length <= QB.b ? OB : BB.length - QB.b + OB
     }
-    const uH = new Float32Array(SH.r),
-      QH = new Uint32Array(uH.buffer);
+    const pB = new Float32Array(QB.n),
+      qB = new Uint32Array(pB.buffer);
 
-    function WH(HH, BH, LH) {
-      return hH(HH, uH, QH, LH), BH && MH(QH, BH) ? null : QH.slice()
+    function ZB(BB, OB, GB) {
+      return oB(BB, pB, qB, GB), OB && NB(qB, OB) ? null : qB.slice()
     }
 
-    function MH(HH, BH) {
-      if (HH.length !== BH.length) return !1;
-      for (let LH = 0; LH < HH.length; LH++)
-        if (HH[LH] !== BH[LH]) return !1;
+    function NB(BB, OB) {
+      if (BB.length !== OB.length) return !1;
+      for (let GB = 0; GB < BB.length; GB++)
+        if (BB[GB] !== OB[GB]) return !1;
       return !0
     }
 
-    function xH(HH, BH, LH) {
-      var AH;
-      HH[BH] = LH.gradient, HH[BH + 1] = LH.factor1, HH[BH + 2] = null !== (AH = LH.factor2) && void 0 !== AH ? AH : LH.factor1
+    function RB(BB, OB, GB) {
+      var YB;
+      BB[OB] = GB.gradient, BB[OB + 1] = GB.factor1, BB[OB + 2] = null !== (YB = GB.factor2) && void 0 !== YB ? YB : GB.factor1
     }
   },
-  42449: (HH, BH, LH) => {
-    function AH(HH, BH, LH) {
-      const AH = BH * BH * 4,
-        rH = HH[0].layers,
-        SH = rH * (HH.length - 1) + HH[HH.length - 1].layers,
-        hH = new Uint8Array(SH * AH);
-      HH.forEach(((BH, LH) => {
-        const SH = LH + 1 < HH.length ? Math.min(BH.layers, rH) : BH.layers;
-        hH.set(new Uint8Array(BH.pixels.buffer, BH.pixels.byteOffset, SH * AH), LH * rH * AH)
+  42154: (BB, OB, GB) => {
+    function YB(BB, OB, GB) {
+      const YB = OB * OB * 4,
+        DB = BB[0].layers,
+        QB = DB * (BB.length - 1) + BB[BB.length - 1].layers,
+        oB = new Uint8Array(QB * YB);
+      BB.forEach(((OB, GB) => {
+        const QB = GB + 1 < BB.length ? Math.min(OB.layers, DB) : OB.layers;
+        oB.set(new Uint8Array(OB.pixels.buffer, OB.pixels.byteOffset, QB * YB), GB * DB * YB)
       }));
-      const tH = Math.max(1, Math.min(SH, LH || SH));
-      if (tH === SH) return [{
-        pixels: hH,
-        layers: SH
+      const jB = Math.max(1, Math.min(QB, GB || QB));
+      if (jB === QB) return [{
+        pixels: oB,
+        layers: QB
       }];
-      const zH = [];
-      for (let CH = 0; CH < SH; CH += tH) {
-        const HH = Math.min(SH, CH + tH);
-        zH.push({
-          pixels: hH.slice(CH * AH, HH * AH),
-          layers: HH - CH
+      const yB = [];
+      for (let JB = 0; JB < QB; JB += jB) {
+        const BB = Math.min(QB, JB + jB);
+        yB.push({
+          pixels: oB.slice(JB * YB, BB * YB),
+          layers: BB - JB
         })
       }
-      return zH
+      return yB
     }
-    LH.d(BH, {
-      c: () => AH,
-      d: () => SH
+    GB.d(OB, {
+      e: () => YB,
+      i: () => QB
     });
-    const rH = new WeakMap;
+    const DB = new WeakMap;
 
-    function SH(HH, BH, LH) {
-      var AH, SH;
-      const hH = null !== (AH = rH.get(HH)) && void 0 !== AH ? AH : new Map;
-      rH.set(HH, hH);
-      const tH = null !== (SH = hH.get(BH[0])) && void 0 !== SH ? SH : [];
-      hH.set(BH[0], tH);
-      const zH = tH.find((HH => HH.urls.length === BH.length && HH.urls.every(((HH, LH) => HH === BH[LH]))));
-      if (zH) return zH.built;
-      const CH = {
-        urls: [...BH],
-        built: LH()
+    function QB(BB, OB, GB) {
+      var YB, QB;
+      const oB = null !== (YB = DB.get(BB)) && void 0 !== YB ? YB : new Map;
+      DB.set(BB, oB);
+      const jB = null !== (QB = oB.get(OB[0])) && void 0 !== QB ? QB : [];
+      oB.set(OB[0], jB);
+      const yB = jB.find((BB => BB.urls.length === OB.length && BB.urls.every(((BB, GB) => BB === OB[GB]))));
+      if (yB) return yB.built;
+      const JB = {
+        urls: [...OB],
+        built: GB()
       };
-      return tH.push(CH), CH.built.catch((() => {
-        tH.splice(tH.indexOf(CH), 1)
-      })), CH.built
+      return jB.push(JB), JB.built.catch((() => {
+        jB.splice(jB.indexOf(JB), 1)
+      })), JB.built
     }
   },
-  39640: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => SH,
-      g: () => rH,
-      j: () => zH,
-      k: () => XH
+  39412: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => QB,
+      g: () => DB,
+      k: () => yB,
+      o: () => PB
     });
-    var AH = LH(38067);
-    const rH = 0,
-      SH = 3,
-      hH = 4,
-      tH = new Map([
-        [rH, AH.c.ALPHA_ONEONE],
-        [1, AH.c.ALPHA_COMBINE],
-        [2, AH.c.ALPHA_ADD],
-        [SH, AH.c.ALPHA_MULTIPLY],
-        [-1, AH.c.ALPHA_SUBTRACT]
+    var YB = GB(37880);
+    const DB = 0,
+      QB = 3,
+      oB = 4,
+      jB = new Map([
+        [DB, YB.d.ALPHA_ONEONE],
+        [1, YB.d.ALPHA_COMBINE],
+        [2, YB.d.ALPHA_ADD],
+        [QB, YB.d.ALPHA_MULTIPLY],
+        [-1, YB.d.ALPHA_SUBTRACT]
       ]);
 
-    function zH(HH) {
-      var BH;
-      return null !== (BH = tH.get(HH)) && void 0 !== BH ? BH : HH
+    function yB(BB) {
+      var OB;
+      return null !== (OB = jB.get(BB)) && void 0 !== OB ? OB : BB
     }
-    const CH = [SH, 2],
-      EH = new Map;
+    const JB = [QB, 2],
+      MB = new Map;
 
-    function XH(HH) {
-      if (HH === hH) return CH;
-      let BH = EH.get(HH);
-      return BH || (BH = [HH], EH.set(HH, BH)), BH
+    function PB(BB) {
+      if (BB === oB) return JB;
+      let OB = MB.get(BB);
+      return OB || (OB = [BB], MB.set(BB, OB)), OB
     }
   },
-  45067: (HH, BH, LH) => {
-    function AH() {
-      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const BH = new Set;
-      return (LH, AH) => {
-        BH.has(LH) || (BH.add(LH), console.warn(HH + AH))
+  44732: (BB, OB, GB) => {
+    function YB() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const OB = new Set;
+      return (GB, YB) => {
+        OB.has(GB) || (OB.add(GB), console.warn(BB + YB))
       }
     }
-    LH.d(BH, {
-      e: () => AH
+    GB.d(OB, {
+      c: () => YB
     })
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

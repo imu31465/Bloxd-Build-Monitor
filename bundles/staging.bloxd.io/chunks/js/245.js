@@ -1,240 +1,240 @@
-/*! For license information please see cwj32u.245.24eb3540.chunk.js.LICENSE.txt */
+/*! For license information please see gw4e3a.245.43b52b60.chunk.js.LICENSE.txt */
 export const id = 245;
 export const ids = [245];
 export const modules = {
-  40621: (HH, BH, LH) => {
-    HH.exports = rH;
-    var AH = LH(330);
+  40342: (BB, OB, GB) => {
+    BB.exports = DB;
+    var YB = GB(363);
 
-    function rH(HH, BH) {
-      if (!(this instanceof rH)) return new rH(HH, BH);
-      var LH = AH.create();
-      AH.add(LH, HH, BH), this.base = AH.min(AH.create(), HH, LH), this.vec = AH.clone(BH), this.max = AH.max(AH.create(), HH, LH), this.mag = AH.length(this.vec)
+    function DB(BB, OB) {
+      if (!(this instanceof DB)) return new DB(BB, OB);
+      var GB = YB.create();
+      YB.add(GB, BB, OB), this.base = YB.min(YB.create(), BB, GB), this.vec = YB.clone(OB), this.max = YB.max(YB.create(), BB, GB), this.mag = YB.length(this.vec)
     }
-    var SH = rH.prototype;
-    SH.width = function() {
+    var QB = DB.prototype;
+    QB.width = function() {
       return this.vec[0]
-    }, SH.height = function() {
+    }, QB.height = function() {
       return this.vec[1]
-    }, SH.depth = function() {
+    }, QB.depth = function() {
       return this.vec[2]
-    }, SH.x0 = function() {
+    }, QB.x0 = function() {
       return this.base[0]
-    }, SH.y0 = function() {
+    }, QB.y0 = function() {
       return this.base[1]
-    }, SH.z0 = function() {
+    }, QB.z0 = function() {
       return this.base[2]
-    }, SH.x1 = function() {
+    }, QB.x1 = function() {
       return this.max[0]
-    }, SH.y1 = function() {
+    }, QB.y1 = function() {
       return this.max[1]
-    }, SH.z1 = function() {
+    }, QB.z1 = function() {
       return this.max[2]
-    }, SH.translate = function(HH) {
-      return AH.add(this.max, this.max, HH), AH.add(this.base, this.base, HH), this
-    }, SH.setPosition = function(HH) {
-      return AH.add(this.max, HH, this.vec), AH.copy(this.base, HH), this
-    }, SH.expand = function(HH) {
-      var BH = AH.create(),
-        LH = AH.create();
-      return AH.max(BH, HH.max, this.max), AH.min(LH, HH.base, this.base), AH.subtract(BH, BH, LH), new rH(LH, BH)
-    }, SH.intersects = function(HH) {
-      return !(HH.base[0] > this.max[0]) && (!(HH.base[1] > this.max[1]) && (!(HH.base[2] > this.max[2]) && (!(HH.max[0] < this.base[0]) && (!(HH.max[1] < this.base[1]) && !(HH.max[2] < this.base[2])))))
-    }, SH.touches = function(HH) {
-      var BH = this.union(HH);
-      return null !== BH && (0 == BH.width() || 0 == BH.height() || 0 == BH.depth())
-    }, SH.union = function(HH) {
-      if (!this.intersects(HH)) return null;
-      var BH = Math.max(HH.base[0], this.base[0]),
-        LH = Math.max(HH.base[1], this.base[1]),
-        AH = Math.max(HH.base[2], this.base[2]);
-      return new rH([BH, LH, AH], [Math.min(HH.max[0], this.max[0]) - BH, Math.min(HH.max[1], this.max[1]) - LH, Math.min(HH.max[2], this.max[2]) - AH])
+    }, QB.translate = function(BB) {
+      return YB.add(this.max, this.max, BB), YB.add(this.base, this.base, BB), this
+    }, QB.setPosition = function(BB) {
+      return YB.add(this.max, BB, this.vec), YB.copy(this.base, BB), this
+    }, QB.expand = function(BB) {
+      var OB = YB.create(),
+        GB = YB.create();
+      return YB.max(OB, BB.max, this.max), YB.min(GB, BB.base, this.base), YB.subtract(OB, OB, GB), new DB(GB, OB)
+    }, QB.intersects = function(BB) {
+      return !(BB.base[0] > this.max[0]) && (!(BB.base[1] > this.max[1]) && (!(BB.base[2] > this.max[2]) && (!(BB.max[0] < this.base[0]) && (!(BB.max[1] < this.base[1]) && !(BB.max[2] < this.base[2])))))
+    }, QB.touches = function(BB) {
+      var OB = this.union(BB);
+      return null !== OB && (0 == OB.width() || 0 == OB.height() || 0 == OB.depth())
+    }, QB.union = function(BB) {
+      if (!this.intersects(BB)) return null;
+      var OB = Math.max(BB.base[0], this.base[0]),
+        GB = Math.max(BB.base[1], this.base[1]),
+        YB = Math.max(BB.base[2], this.base[2]);
+      return new DB([OB, GB, YB], [Math.min(BB.max[0], this.max[0]) - OB, Math.min(BB.max[1], this.max[1]) - GB, Math.min(BB.max[2], this.max[2]) - YB])
     }
   },
-  40612: HH => {
-    HH.exports = function(HH, BH, LH, AH, rH, SH) {
-      var hH = +BH[0],
-        tH = +BH[1],
-        zH = +BH[2],
-        CH = +LH[0],
-        EH = +LH[1],
-        XH = +LH[2],
-        GH = Math.sqrt(CH * CH + EH * EH + XH * XH);
-      if (0 === GH) throw new Error("Can't raycast along a zero vector");
-      return function(HH, BH, LH, AH, rH, SH, hH, tH, zH, CH) {
-        for (var EH = 0, XH = Math.floor, GH = 0 | XH(BH), YH = 0 | XH(LH), uH = 0 | XH(AH), QH = rH > 0 ? 1 : -1, WH = SH > 0 ? 1 : -1, MH = hH > 0 ? 1 : -1, xH = Math.abs(1 / rH), vH = Math.abs(1 / SH), PH = Math.abs(1 / hH), TH = xH < 1 / 0 ? xH * (QH > 0 ? GH + 1 - BH : BH - GH) : 1 / 0, UH = vH < 1 / 0 ? vH * (WH > 0 ? YH + 1 - LH : LH - YH) : 1 / 0, VH = PH < 1 / 0 ? PH * (MH > 0 ? uH + 1 - AH : AH - uH) : 1 / 0, OH = -1; EH <= tH;) {
-          var bH = HH(GH, YH, uH);
-          if (bH) return zH && (zH[0] = BH + EH * rH, zH[1] = LH + EH * SH, zH[2] = AH + EH * hH), CH && (CH[0] = CH[1] = CH[2] = 0, 0 === OH && (CH[0] = -QH), 1 === OH && (CH[1] = -WH), 2 === OH && (CH[2] = -MH)), bH;
-          TH < UH ? TH < VH ? (GH += QH, EH = TH, TH += xH, OH = 0) : (uH += MH, EH = VH, VH += PH, OH = 2) : UH < VH ? (YH += WH, EH = UH, UH += vH, OH = 1) : (uH += MH, EH = VH, VH += PH, OH = 2)
+  40334: BB => {
+    BB.exports = function(BB, OB, GB, YB, DB, QB) {
+      var oB = +OB[0],
+        jB = +OB[1],
+        yB = +OB[2],
+        JB = +GB[0],
+        MB = +GB[1],
+        PB = +GB[2],
+        zB = Math.sqrt(JB * JB + MB * MB + PB * PB);
+      if (0 === zB) throw new Error("Can't raycast along a zero vector");
+      return function(BB, OB, GB, YB, DB, QB, oB, jB, yB, JB) {
+        for (var MB = 0, PB = Math.floor, zB = 0 | PB(OB), lB = 0 | PB(GB), pB = 0 | PB(YB), qB = DB > 0 ? 1 : -1, ZB = QB > 0 ? 1 : -1, NB = oB > 0 ? 1 : -1, RB = Math.abs(1 / DB), WB = Math.abs(1 / QB), AB = Math.abs(1 / oB), VB = RB < 1 / 0 ? RB * (qB > 0 ? zB + 1 - OB : OB - zB) : 1 / 0, SB = WB < 1 / 0 ? WB * (ZB > 0 ? lB + 1 - GB : GB - lB) : 1 / 0, nB = AB < 1 / 0 ? AB * (NB > 0 ? pB + 1 - YB : YB - pB) : 1 / 0, UB = -1; MB <= jB;) {
+          var fB = BB(zB, lB, pB);
+          if (fB) return yB && (yB[0] = OB + MB * DB, yB[1] = GB + MB * QB, yB[2] = YB + MB * oB), JB && (JB[0] = JB[1] = JB[2] = 0, 0 === UB && (JB[0] = -qB), 1 === UB && (JB[1] = -ZB), 2 === UB && (JB[2] = -NB)), fB;
+          VB < SB ? VB < nB ? (zB += qB, MB = VB, VB += RB, UB = 0) : (pB += NB, MB = nB, nB += AB, UB = 2) : SB < nB ? (lB += ZB, MB = SB, SB += WB, UB = 1) : (pB += NB, MB = nB, nB += AB, UB = 2)
         }
-        return zH && (zH[0] = BH + EH * rH, zH[1] = LH + EH * SH, zH[2] = AH + EH * hH), CH && (CH[0] = CH[1] = CH[2] = 0), 0
-      }(HH, hH, tH, zH, CH /= GH, EH /= GH, XH /= GH, AH = "undefined" === typeof AH ? 64 : +AH, rH, SH)
+        return yB && (yB[0] = OB + MB * DB, yB[1] = GB + MB * QB, yB[2] = YB + MB * oB), JB && (JB[0] = JB[1] = JB[2] = 0), 0
+      }(BB, oB, jB, yB, JB /= zB, MB /= zB, PB /= zB, YB = "undefined" === typeof YB ? 64 : +YB, DB, QB)
     }
   },
-  40038: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => tH,
-      f: () => SH
+  39813: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => jB,
+      e: () => QB
     });
-    var AH = LH(4477);
-    let rH = null;
+    var YB = GB(4505);
+    let DB = null;
 
-    function SH(HH) {
-      return null !== rH && HH === rH
+    function QB(BB) {
+      return null !== DB && BB === DB
     }
 
-    function hH() {
-      this.Qp = !1, this.stopPropagation = !1, this.kp = !1, this.disabled = !1
+    function oB() {
+      this.IH = !1, this.stopPropagation = !1, this.iH = !1, this.disabled = !1
     }
-    class tH {
-      constructor(HH, BH) {
+    class jB {
+      constructor(BB, OB) {
         this.version = "0.7.0";
-        var LH = Object.assign({}, new hH, BH || {});
-        this.element = HH || document, this.Qp = !!LH.Qp, this.stopPropagation = !!LH.stopPropagation, this.kp = !!LH.kp, this.disabled = !!LH.disabled, this.filterEvents = (HH, BH) => !0, this.ignoreEvent = HH => !1, this.down = new AH.EventEmitter, this.up = new AH.EventEmitter, this.state = {}, this.mp = {
+        var GB = Object.assign({}, new oB, OB || {});
+        this.element = BB || document, this.IH = !!GB.IH, this.stopPropagation = !!GB.stopPropagation, this.iH = !!GB.iH, this.disabled = !!GB.disabled, this.filterEvents = (BB, OB) => !0, this.ignoreEvent = BB => !1, this.down = new YB.EventEmitter, this.up = new YB.EventEmitter, this.state = {}, this.gH = {
           dx: 0,
           dy: 0,
-          uLH: 0,
-          QLH: 0,
-          WLH: 0
+          UGB: 0,
+          fGB: 0,
+          kGB: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? CH(this) : document.addEventListener("DOMContentLoaded", (HH => {
-          CH(this)
+        }, "loading" !== document.readyState ? JB(this) : document.addEventListener("DOMContentLoaded", (BB => {
+          JB(this)
         }), {
           once: !0
         })
       }
-      bind(HH) {
-        for (var BH = arguments.length, LH = new Array(BH > 1 ? BH - 1 : 0), AH = 1; AH < BH; AH++) LH[AH - 1] = arguments[AH];
-        LH.forEach((BH => {
-          var LH = this._keyBindmap[BH] || [];
-          LH.includes(HH) || (LH.push(HH), this._keyBindmap[BH] = LH)
-        })), this.state[HH] = !!this.state[HH], this.pressCount[HH] = this.pressCount[HH] || 0, this.releaseCount[HH] = this.releaseCount[HH] || 0
+      bind(BB) {
+        for (var OB = arguments.length, GB = new Array(OB > 1 ? OB - 1 : 0), YB = 1; YB < OB; YB++) GB[YB - 1] = arguments[YB];
+        GB.forEach((OB => {
+          var GB = this._keyBindmap[OB] || [];
+          GB.includes(BB) || (GB.push(BB), this._keyBindmap[OB] = GB)
+        })), this.state[BB] = !!this.state[BB], this.pressCount[BB] = this.pressCount[BB] || 0, this.releaseCount[BB] = this.releaseCount[BB] || 0
       }
-      unbind(HH) {
-        for (var BH in this._keyBindmap) {
-          var LH = this._keyBindmap[BH],
-            AH = LH.indexOf(HH);
-          AH > -1 && LH.splice(AH, 1)
+      unbind(BB) {
+        for (var OB in this._keyBindmap) {
+          var GB = this._keyBindmap[OB],
+            YB = GB.indexOf(BB);
+          YB > -1 && GB.splice(YB, 1)
         }
       }
       getBindings() {
-        var HH = {};
-        for (var BH in this._keyBindmap) {
-          this._keyBindmap[BH].forEach((LH => {
-            HH[LH] = HH[LH] || [], HH[LH].push(BH)
+        var BB = {};
+        for (var OB in this._keyBindmap) {
+          this._keyBindmap[OB].forEach((GB => {
+            BB[GB] = BB[GB] || [], BB[GB].push(OB)
           }))
         }
-        return HH
+        return BB
       }
-      IX() {
-        zH(this.mp), zH(this.pressCount), zH(this.releaseCount)
+      kP() {
+        yB(this.gH), yB(this.pressCount), yB(this.releaseCount)
       }
     }
 
-    function zH(HH) {
-      for (var BH in HH) HH[BH] = 0
+    function yB(BB) {
+      for (var OB in BB) BB[OB] = 0
     }
 
-    function CH(HH) {
-      window.addEventListener("keydown", WH.bind(null, HH, !0), !1), window.addEventListener("keyup", WH.bind(null, HH, !1), !1);
-      var BH = {
+    function JB(BB) {
+      window.addEventListener("keydown", ZB.bind(null, BB, !0), !1), window.addEventListener("keyup", ZB.bind(null, BB, !1), !1);
+      var OB = {
         passive: !0
       };
-      HH.element.addEventListener("touchstart", YH.bind(void 0, HH), {
+      BB.element.addEventListener("touchstart", lB.bind(void 0, BB), {
         passive: !1
-      }), HH.element.addEventListener("touchend", QH.bind(void 0, HH), BH), HH.element.addEventListener("mousedown", MH.bind(null, HH, !0), BH), window.document.addEventListener("mouseup", MH.bind(null, HH, !1), BH), HH.element.addEventListener("touchmove", xH.bind(null, HH), BH), HH.element.addEventListener("mousemove", xH.bind(null, HH), BH), window.PointerEvent, HH.element.addEventListener("wheel", vH.bind(null, HH), BH), HH.element.addEventListener("contextmenu", PH.bind(null, HH), !1), window.addEventListener("blur", VH.bind(null, HH), !1)
+      }), BB.element.addEventListener("touchend", qB.bind(void 0, BB), OB), BB.element.addEventListener("mousedown", NB.bind(null, BB, !0), OB), window.document.addEventListener("mouseup", NB.bind(null, BB, !1), OB), BB.element.addEventListener("touchmove", RB.bind(null, BB), OB), BB.element.addEventListener("mousemove", RB.bind(null, BB), OB), window.PointerEvent, BB.element.addEventListener("wheel", WB.bind(null, BB), OB), BB.element.addEventListener("contextmenu", AB.bind(null, BB), !1), window.addEventListener("blur", nB.bind(null, BB), !1)
     }
-    var EH = 0,
-      XH = 0,
-      GH = null;
+    var MB = 0,
+      PB = 0,
+      zB = null;
 
-    function YH(HH, BH) {
-      BH.preventDefault(), uH(BH)
+    function lB(BB, OB) {
+      OB.preventDefault(), pB(OB)
     }
 
-    function uH(HH) {
-      let BH = !1;
-      for (let LH = 0; LH < HH.touches.length; ++LH)
-        if (HH.touches[LH].identifier === GH) {
-          BH = !0;
+    function pB(BB) {
+      let OB = !1;
+      for (let GB = 0; GB < BB.touches.length; ++GB)
+        if (BB.touches[GB].identifier === zB) {
+          OB = !0;
           break
-        } if (!BH) {
-        const BH = HH.changedTouches[0];
-        EH = BH.clientX, XH = BH.clientY, GH = BH.identifier
+        } if (!OB) {
+        const OB = BB.changedTouches[0];
+        MB = OB.clientX, PB = OB.clientY, zB = OB.identifier
       }
     }
 
-    function QH(HH, BH) {
-      for (var LH = BH.changedTouches, AH = 0; AH < LH.length; ++AH) LH[AH].identifier === GH && (GH = null)
+    function qB(BB, OB) {
+      for (var GB = OB.changedTouches, YB = 0; YB < GB.length; ++YB) GB[YB].identifier === zB && (zB = null)
     }
 
-    function WH(HH, BH, LH) {
-      if (!HH.ignoreEvent(LH)) try {
-        OH(HH, LH), BH && LH.isTrusted && !LH.repeat && HH._keyStates[LH.code] && bH(HH, LH.code)
+    function ZB(BB, OB, GB) {
+      if (!BB.ignoreEvent(GB)) try {
+        UB(BB, GB), OB && GB.isTrusted && !GB.repeat && BB._keyStates[GB.code] && fB(BB, GB.code)
       } finally {
-        kH(LH.code, BH, HH, LH)
+        kB(GB.code, OB, BB, GB)
       }
     }
 
-    function MH(HH, BH, LH) {
-      if (!HH.ignoreEvent(LH)) try {
-        OH(HH, LH)
+    function NB(BB, OB, GB) {
+      if (!BB.ignoreEvent(GB)) try {
+        UB(BB, GB)
       } finally {
-        ! function(HH, BH, LH) {
-          if ("pointerId" in LH)
-            if (BH) {
-              if (null !== HH._touches.currID) return;
-              HH._touches.currID = LH.pointerId
+        ! function(BB, OB, GB) {
+          if ("pointerId" in GB)
+            if (OB) {
+              if (null !== BB._touches.currID) return;
+              BB._touches.currID = GB.pointerId
             } else {
-              if (HH._touches.currID !== LH.pointerId) return;
-              HH._touches.currID = null
-            } var AH = "button" in LH ? LH.button + 1 : 1;
-          kH("Mouse" + AH, BH, HH, LH)
-        }(HH, BH, LH)
+              if (BB._touches.currID !== GB.pointerId) return;
+              BB._touches.currID = null
+            } var YB = "button" in GB ? GB.button + 1 : 1;
+          kB("Mouse" + YB, OB, BB, GB)
+        }(BB, OB, GB)
       }
     }
 
-    function xH(HH, BH) {
-      var LH = BH.movementX || BH.mozMovementX || 0,
-        AH = BH.movementY || BH.mozMovementY || 0;
-      if (BH.touches && 0 === (LH | AH)) {
-        var rH = function(HH) {
-          uH(HH);
-          for (let BH = 0; BH < HH.changedTouches.length; ++BH)
-            if (HH.changedTouches[BH].identifier == GH) {
-              const LH = HH.changedTouches[BH],
-                AH = [LH.clientX - EH, LH.clientY - XH];
-              return EH = LH.clientX, XH = LH.clientY, AH
-            } return console.error(`Did not find touch id ${GH}`), [0, 0]
-        }(BH);
-        LH = rH[0], AH = rH[1]
+    function RB(BB, OB) {
+      var GB = OB.movementX || OB.mozMovementX || 0,
+        YB = OB.movementY || OB.mozMovementY || 0;
+      if (OB.touches && 0 === (GB | YB)) {
+        var DB = function(BB) {
+          pB(BB);
+          for (let OB = 0; OB < BB.changedTouches.length; ++OB)
+            if (BB.changedTouches[OB].identifier == zB) {
+              const GB = BB.changedTouches[OB],
+                YB = [GB.clientX - MB, GB.clientY - PB];
+              return MB = GB.clientX, PB = GB.clientY, YB
+            } return console.error(`Did not find touch id ${zB}`), [0, 0]
+        }(OB);
+        GB = DB[0], YB = DB[1]
       }
-      HH.mp.dx += LH, HH.mp.dy += AH
+      BB.gH.dx += GB, BB.gH.dy += YB
     }
 
-    function vH(HH, BH) {
-      OH(HH, BH);
-      var LH = 1;
-      switch (BH.deltaMode) {
+    function WB(BB, OB) {
+      UB(BB, OB);
+      var GB = 1;
+      switch (OB.deltaMode) {
         case 0:
-          LH = 1;
+          GB = 1;
           break;
         case 1:
-          LH = 12;
+          GB = 12;
           break;
         case 2:
-          LH = HH.element.clientHeight || window.innerHeight
+          GB = BB.element.clientHeight || window.innerHeight
       }
-      HH.mp.uLH += (BH.deltaX || 0) * LH, HH.mp.QLH += (BH.deltaY || 0) * LH, HH.mp.WLH += (BH.deltaZ || 0) * LH
+      BB.gH.UGB += (OB.deltaX || 0) * GB, BB.gH.fGB += (OB.deltaY || 0) * GB, BB.gH.kGB += (OB.deltaZ || 0) * GB
     }
 
-    function PH(HH, BH) {
-      if (!HH.kp) return BH.preventDefault(), !1
+    function AB(BB, OB) {
+      if (!BB.iH) return OB.preventDefault(), !1
     }
-    var TH = {
+    var VB = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function UH(HH, BH) {
-      return !!HH[TH[BH]] || ("AltRight" === BH || "ControlLeft" === BH) && "function" === typeof HH.getModifierState && !0 === HH.getModifierState("AltGraph")
+    function SB(BB, OB) {
+      return !!BB[VB[OB]] || ("AltRight" === OB || "ControlLeft" === OB) && "function" === typeof BB.getModifierState && !0 === BB.getModifierState("AltGraph")
     }
 
-    function VH(HH, BH) {
-      for (var LH in HH._modifiersHeldThroughBlur = {}, TH) HH._keyStates[LH] && (HH._modifiersHeldThroughBlur[LH] = !0);
-      BH && BH.isTrusted && function() {
+    function nB(BB, OB) {
+      for (var GB in BB._modifiersHeldThroughBlur = {}, VB) BB._keyStates[GB] && (BB._modifiersHeldThroughBlur[GB] = !0);
+      OB && OB.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (HH) {
+        } catch (BB) {
           return !0
         }
-      }() && (clearTimeout(HH._blurRelease), HH._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(BB._blurRelease), BB._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var BH in HH._modifiersHeldThroughBlur = {}, HH._keyStates) HH._keyStates[BH] && !/^Mouse\d/.test(BH) && bH(HH, BH)
+          for (var OB in BB._modifiersHeldThroughBlur = {}, BB._keyStates) BB._keyStates[OB] && !/^Mouse\d/.test(OB) && fB(BB, OB)
       }), 0))
     }
 
-    function OH(HH, BH) {
-      var LH = HH._modifiersHeldThroughBlur;
-      if (LH && BH.isTrusted && document.hasFocus())
-        for (var AH in LH) delete LH[AH], HH._keyStates[AH] && AH !== BH.code && (UH(BH, AH) || bH(HH, AH))
+    function UB(BB, OB) {
+      var GB = BB._modifiersHeldThroughBlur;
+      if (GB && OB.isTrusted && document.hasFocus())
+        for (var YB in GB) delete GB[YB], BB._keyStates[YB] && YB !== OB.code && (SB(OB, YB) || fB(BB, YB))
     }
 
-    function bH(HH, BH) {
-      const LH = {
-          code: BH,
+    function fB(BB, OB) {
+      const GB = {
+          code: OB,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        AH = rH;
-      rH = LH;
+        YB = DB;
+      DB = GB;
       try {
-        kH(BH, !1, HH, LH)
+        kB(OB, !1, BB, GB)
       } finally {
-        rH = AH
+        DB = YB
       }
     }
 
-    function kH(HH, BH, LH, AH) {
-      var rH = LH._keyBindmap[HH];
-      rH && (mH(LH._keyStates[HH], BH) && (LH._keyStates[HH] = BH, rH.forEach((HH => {
-        (!LH.filterEvents || LH.filterEvents(AH, HH)) && function(HH, BH, LH, AH) {
-          var rH = BH ? LH.pressCount : LH.releaseCount;
-          rH[HH] = (rH[HH] || 0) + 1;
-          var SH = LH._bindPressCount[HH] || 0;
-          (SH += BH ? 1 : -1) < 0 && (SH = 0);
-          LH._bindPressCount[HH] = SH;
-          var hH = LH.state[HH];
-          if (mH(hH, SH)) {
-            LH.state[HH] = SH > 0;
-            var tH = BH ? LH.down : LH.up;
-            LH.disabled || tH.emit(HH, AH)
+    function kB(BB, OB, GB, YB) {
+      var DB = GB._keyBindmap[BB];
+      DB && (dB(GB._keyStates[BB], OB) && (GB._keyStates[BB] = OB, DB.forEach((BB => {
+        (!GB.filterEvents || GB.filterEvents(YB, BB)) && function(BB, OB, GB, YB) {
+          var DB = OB ? GB.pressCount : GB.releaseCount;
+          DB[BB] = (DB[BB] || 0) + 1;
+          var QB = GB._bindPressCount[BB] || 0;
+          (QB += OB ? 1 : -1) < 0 && (QB = 0);
+          GB._bindPressCount[BB] = QB;
+          var oB = GB.state[BB];
+          if (dB(oB, QB)) {
+            GB.state[BB] = QB > 0;
+            var jB = OB ? GB.down : GB.up;
+            GB.disabled || jB.emit(BB, YB)
           }
-        }(HH, BH, LH, AH)
-      }))), "button" in AH || (LH.Qp && !AH.defaultPrevented && AH.preventDefault(), LH.stopPropagation && AH.stopPropagation()))
+        }(BB, OB, GB, YB)
+      }))), "button" in YB || (GB.IH && !YB.defaultPrevented && YB.preventDefault(), GB.stopPropagation && YB.stopPropagation()))
     }
 
-    function mH(HH, BH) {
-      return HH ? !BH : BH
+    function dB(BB, OB) {
+      return BB ? !OB : OB
     }
   },
-  37424: (HH, BH) => {
-    function LH(HH) {
-      if (HH && "object" === typeof HH) {
-        var BH = HH.which || HH.keyCode || HH.charCode;
-        BH && (HH = BH)
+  37206: (BB, OB) => {
+    function GB(BB) {
+      if (BB && "object" === typeof BB) {
+        var OB = BB.which || BB.keyCode || BB.charCode;
+        OB && (BB = OB)
       }
-      if ("number" === typeof HH) return hH[HH];
-      var LH, SH = String(HH);
-      return (LH = AH[SH.toLowerCase()]) ? LH : (LH = rH[SH.toLowerCase()]) || (1 === SH.length ? SH.charCodeAt(0) : void 0)
+      if ("number" === typeof BB) return oB[BB];
+      var GB, QB = String(BB);
+      return (GB = YB[QB.toLowerCase()]) ? GB : (GB = DB[QB.toLowerCase()]) || (1 === QB.length ? QB.charCodeAt(0) : void 0)
     }
-    LH.isEventKey = function(HH, BH) {
-      if (HH && "object" === typeof HH) {
-        var LH = HH.which || HH.keyCode || HH.charCode;
-        if (null === LH || void 0 === LH) return !1;
-        if ("string" === typeof BH) {
-          var SH;
-          if (SH = AH[BH.toLowerCase()]) return SH === LH;
-          if (SH = rH[BH.toLowerCase()]) return SH === LH
-        } else if ("number" === typeof BH) return BH === LH;
+    GB.isEventKey = function(BB, OB) {
+      if (BB && "object" === typeof BB) {
+        var GB = BB.which || BB.keyCode || BB.charCode;
+        if (null === GB || void 0 === GB) return !1;
+        if ("string" === typeof OB) {
+          var QB;
+          if (QB = YB[OB.toLowerCase()]) return QB === GB;
+          if (QB = DB[OB.toLowerCase()]) return QB === GB
+        } else if ("number" === typeof OB) return OB === GB;
         return !1
       }
     };
-    var AH = (BH = HH.exports = LH).code = BH.codes = {
+    var YB = (OB = BB.exports = GB).code = OB.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      rH = BH.aliases = {
+      DB = OB.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (SH = 97; SH < 123; SH++) AH[String.fromCharCode(SH)] = SH - 32;
-    for (var SH = 48; SH < 58; SH++) AH[SH - 48] = SH;
-    for (SH = 1; SH < 13; SH++) AH["f" + SH] = SH + 111;
-    for (SH = 0; SH < 10; SH++) AH["numpad " + SH] = SH + 96;
-    var hH = BH.names = BH.title = {};
-    for (SH in AH) hH[AH[SH]] = SH;
-    for (var tH in rH) AH[tH] = rH[tH]
+    for (QB = 97; QB < 123; QB++) YB[String.fromCharCode(QB)] = QB - 32;
+    for (var QB = 48; QB < 58; QB++) YB[QB - 48] = QB;
+    for (QB = 1; QB < 13; QB++) YB["f" + QB] = QB + 111;
+    for (QB = 0; QB < 10; QB++) YB["numpad " + QB] = QB + 96;
+    var oB = OB.names = OB.title = {};
+    for (QB in YB) oB[YB[QB]] = QB;
+    for (var jB in DB) YB[jB] = DB[jB]
   },
-  40601: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => AH
+  40329: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB
     });
-    class AH {
+    class YB {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.qD = !1, this.RD = !1, this.oN = 30, this.mD = 0, this.jD = 100, this.ZW = !1, this.fullscreen = !1, this.Dv = function(HH) {}, this.nD = function(HH, BH, LH) {}, this.KX = function() {}, this.Av = function() {}, this.ZD = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(HH) {}, this._data = new rH(BH),
-          function(HH) {
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.pE = !1, this.qE = !1, this.pI = 30, this.OE = 0, this.ZE = 100, this.bZ = !1, this.fullscreen = !1, this.yR = function(BB) {}, this.WE = function(BB, OB, GB) {}, this.uP = function() {}, this.vN = function() {}, this.kE = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(BB) {}, this._data = new DB(OB),
+          function(BB) {
             if ("loading" === document.readyState) {
-              var BH = () => {
-                document.removeEventListener("readystatechange", BH), HH()
+              var OB = () => {
+                document.removeEventListener("readystatechange", OB), BB()
               };
-              document.addEventListener("readystatechange", BH)
-            } else setTimeout(HH, 0)
+              document.addEventListener("readystatechange", OB)
+            } else setTimeout(BB, 0)
           }((() => {
-            ! function(HH) {
-              var BH = HH._data,
-                LH = BH.nowObject.now();
-              BH.lastTickStarted = LH, BH.lastFrameStarted = LH, BH.lastRenderStarted = LH, BH.frameCB = () => function(HH) {
-                var BH = HH._data;
-                requestAnimationFrame(BH.frameCB), tH(HH);
-                var LH = BH.nowObject.now(),
-                  AH = LH - BH.lastFrameStarted;
-                if (BH.lastFrameStarted = LH, HH.mD > 0) {
-                  BH.renderAccum += AH;
-                  var rH = 1e3 / HH.mD;
-                  if (BH.renderAccum < rH) return;
-                  BH.renderAccum -= rH, BH.renderAccum > rH && (BH.renderAccum = rH)
+            ! function(BB) {
+              var OB = BB._data,
+                GB = OB.nowObject.now();
+              OB.lastTickStarted = GB, OB.lastFrameStarted = GB, OB.lastRenderStarted = GB, OB.frameCB = () => function(BB) {
+                var OB = BB._data;
+                requestAnimationFrame(OB.frameCB), jB(BB);
+                var GB = OB.nowObject.now(),
+                  YB = GB - OB.lastFrameStarted;
+                if (OB.lastFrameStarted = GB, BB.OE > 0) {
+                  OB.renderAccum += YB;
+                  var DB = 1e3 / BB.OE;
+                  if (OB.renderAccum < DB) return;
+                  OB.renderAccum -= DB, OB.renderAccum > DB && (OB.renderAccum = DB)
                 }
-                var SH = LH - BH.lastRenderStarted;
-                BH.lastRenderStarted = LH;
-                var hH = 1e3 / HH.oN,
-                  zH = (LH - BH.lastTickStarted) / hH;
-                zH < 0 && (zH = 0);
-                HH.nD(SH, zH, hH), setTimeout(tH, 0, HH, !0)
-              }(HH), BH.intervalCB = () => tH(HH), requestAnimationFrame(BH.frameCB), BH.pollTime > 0 && (BH.intervalID = setInterval(BH.intervalCB, Math.max(BH.pollTime, 1e3 / HH.oN / 2)))
+                var QB = GB - OB.lastRenderStarted;
+                OB.lastRenderStarted = GB;
+                var oB = 1e3 / BB.pI,
+                  yB = (GB - OB.lastTickStarted) / oB;
+                yB < 0 && (yB = 0);
+                BB.WE(QB, yB, oB), setTimeout(jB, 0, BB, !0)
+              }(BB), OB.intervalCB = () => jB(BB), requestAnimationFrame(OB.frameCB), OB.pollTime > 0 && (OB.intervalID = setInterval(OB.intervalCB, Math.max(OB.pollTime, 1e3 / BB.pI / 2)))
             }(this),
-            function(HH, BH) {
-              if (!BH) return;
-              var LH = !1,
-                AH = !1,
-                rH = HH => {
-                  if (!!HH !== (LH = BH === document.pointerLockElement))
-                    if (HH) {
-                      var AH = BH.requestPointerLock();
-                      AH && AH.catch && AH.catch((HH => {}))
+            function(BB, OB) {
+              if (!OB) return;
+              var GB = !1,
+                YB = !1,
+                DB = BB => {
+                  if (!!BB !== (GB = OB === document.pointerLockElement))
+                    if (BB) {
+                      var YB = OB.requestPointerLock();
+                      YB && YB.catch && YB.catch((BB => {}))
                     } else document.exitPointerLock()
                 },
-                SH = HH => {
-                  !!HH !== (AH = BH === document.fullscreenElement) && (HH ? BH.requestFullscreen ? BH.requestFullscreen() : BH.webkitRequestFullscreen && BH.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                QB = BB => {
+                  !!BB !== (YB = OB === document.fullscreenElement) && (BB ? OB.requestFullscreen ? OB.requestFullscreen() : OB.webkitRequestFullscreen && OB.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (AH => {
-                LH = BH === document.pointerLockElement, HH.ZD(LH)
-              })), document.addEventListener("fullscreenchange", (LH => {
-                AH = BH === document.fullscreenElement, HH.onFullscreenChanged(AH)
-              })), document.addEventListener("pointerlockerror", (AH => {
-                LH = BH === document.pointerLockElement, HH.onPointerLockError(AH)
-              })), Object.defineProperty(HH, "ZW", {
-                get: () => LH,
-                set: rH
-              }), Object.defineProperty(HH, "fullscreen", {
-                get: () => AH,
-                set: SH
-              }), BH.addEventListener("click", (BH => {
-                HH.qD && rH(!0), HH.RD && SH(!0)
+              document.addEventListener("pointerlockchange", (YB => {
+                GB = OB === document.pointerLockElement, BB.kE(GB)
+              })), document.addEventListener("fullscreenchange", (GB => {
+                YB = OB === document.fullscreenElement, BB.onFullscreenChanged(YB)
+              })), document.addEventListener("pointerlockerror", (YB => {
+                GB = OB === document.pointerLockElement, BB.onPointerLockError(YB)
+              })), Object.defineProperty(BB, "bZ", {
+                get: () => GB,
+                set: DB
+              }), Object.defineProperty(BB, "fullscreen", {
+                get: () => YB,
+                set: QB
+              }), OB.addEventListener("click", (OB => {
+                BB.pE && DB(!0), BB.qE && QB(!0)
               }));
-              var hH = () => HH.Av();
+              var oB = () => BB.vN();
               if (window.ResizeObserver) {
-                new ResizeObserver(hH).observe(BH)
-              } else window.addEventListener("resize", hH)
-            }(this, HH), this.KX()
+                new ResizeObserver(oB).observe(OB)
+              } else window.addEventListener("resize", oB)
+            }(this, BB), this.uP()
           }))
       }
     }
 
-    function rH() {
-      let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = HH, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function DB() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = BB, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var SH = 3,
-      hH = 20;
+    var QB = 3,
+      oB = 20;
 
-    function tH(HH) {
-      for (var BH = HH._data, LH = 1e3 / HH.oN, AH = BH.nowObject.now() + hH, rH = 0; BH.nowObject.now() >= BH.lastTickStarted + LH && BH.nowObject.now() < AH && ++rH <= SH;) HH.Dv(LH), BH.lastTickStarted += LH;
-      var tH = 5 * (LH + 5),
-        zH = BH.nowObject.now();
-      if (zH - BH.lastTickStarted > tH)
-        for (; zH >= BH.lastTickStarted + LH;) BH.lastTickStarted += LH
+    function jB(BB) {
+      for (var OB = BB._data, GB = 1e3 / BB.pI, YB = OB.nowObject.now() + oB, DB = 0; OB.nowObject.now() >= OB.lastTickStarted + GB && OB.nowObject.now() < YB && ++DB <= QB;) BB.yR(GB), OB.lastTickStarted += GB;
+      var jB = 5 * (GB + 5),
+        yB = OB.nowObject.now();
+      if (yB - OB.lastTickStarted > jB)
+        for (; yB >= OB.lastTickStarted + GB;) OB.lastTickStarted += GB
     }
   },
-  37578: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => hH
+  37378: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => oB
     });
-    var AH = LH(45);
-    const rH = AH.useLayoutEffect;
-    const SH = function(HH) {
-      var BH = (0, AH.useRef)(HH);
-      return rH((function() {
-        BH.current = HH
-      })), BH
+    var YB = GB(56);
+    const DB = YB.useLayoutEffect;
+    const QB = function(BB) {
+      var OB = (0, YB.useRef)(BB);
+      return DB((function() {
+        OB.current = BB
+      })), OB
     };
-    var hH = function(HH) {
-      var BH = SH(HH);
-      (0, AH.useEffect)((function() {
-        var HH = function(HH) {
-          var LH;
-          if (null != BH.current && (LH = BH.current(HH)), HH.defaultPrevented && (HH.returnValue = ""), "string" === typeof LH) return HH.returnValue = LH, LH
+    var oB = function(BB) {
+      var OB = QB(BB);
+      (0, YB.useEffect)((function() {
+        var BB = function(BB) {
+          var GB;
+          if (null != OB.current && (GB = OB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof GB) return BB.returnValue = GB, GB
         };
-        return window.addEventListener("beforeunload", HH),
+        return window.addEventListener("beforeunload", BB),
           function() {
-            window.removeEventListener("beforeunload", HH)
+            window.removeEventListener("beforeunload", BB)
           }
       }), [])
     }
   },
-  37461: HH => {
-    var BH, LH = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      AH = /OS X/.test(LH),
-      rH = /Opera/.test(LH),
-      SH = !/like Gecko/.test(LH) && !rH,
-      hH = HH.exports = {
-        0: AH ? "<menu>" : "<UNK>",
+  37244: BB => {
+    var OB, GB = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      YB = /OS X/.test(GB),
+      DB = /Opera/.test(GB),
+      QB = !/like Gecko/.test(GB) && !DB,
+      oB = BB.exports = {
+        0: YB ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: AH ? "<meta>" : "<menu>",
+        93: YB ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: AH && SH ? "-" : "<volume-mute>",
+        173: YB && QB ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: rH ? "`" : "<unicode>",
+        231: DB ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (BH = 58; BH < 65; ++BH) hH[BH] = String.fromCharCode(BH);
-    for (BH = 48; BH < 58; ++BH) hH[BH] = BH - 48 + "";
-    for (BH = 65; BH < 91; ++BH) hH[BH] = String.fromCharCode(BH);
-    for (BH = 96; BH < 106; ++BH) hH[BH] = "<num-" + (BH - 96) + ">";
-    for (BH = 112; BH < 136; ++BH) hH[BH] = "F" + (BH - 111)
+    for (OB = 58; OB < 65; ++OB) oB[OB] = String.fromCharCode(OB);
+    for (OB = 48; OB < 58; ++OB) oB[OB] = OB - 48 + "";
+    for (OB = 65; OB < 91; ++OB) oB[OB] = String.fromCharCode(OB);
+    for (OB = 96; OB < 106; ++OB) oB[OB] = "<num-" + (OB - 96) + ">";
+    for (OB = 112; OB < 136; ++OB) oB[OB] = "F" + (OB - 111)
   },
-  39903: (HH, BH, LH) => {
-    function AH(HH, BH, LH, AH, rH) {
-      var SH = {};
-      return Object.keys(AH).forEach((function(HH) {
-        SH[HH] = AH[HH]
-      })), SH.enumerable = !!SH.enumerable, SH.configurable = !!SH.configurable, ("value" in SH || SH.initializer) && (SH.writable = !0), SH = LH.slice().reverse().reduce((function(LH, AH) {
-        return AH(HH, BH, LH) || LH
-      }), SH), rH && void 0 !== SH.initializer && (SH.value = SH.initializer ? SH.initializer.call(rH) : void 0, SH.initializer = void 0), void 0 === SH.initializer && (Object.defineProperty(HH, BH, SH), SH = null), SH
+  39686: (BB, OB, GB) => {
+    function YB(BB, OB, GB, YB, DB) {
+      var QB = {};
+      return Object.keys(YB).forEach((function(BB) {
+        QB[BB] = YB[BB]
+      })), QB.enumerable = !!QB.enumerable, QB.configurable = !!QB.configurable, ("value" in QB || QB.initializer) && (QB.writable = !0), QB = GB.slice().reverse().reduce((function(GB, YB) {
+        return YB(BB, OB, GB) || GB
+      }), QB), DB && void 0 !== QB.initializer && (QB.value = QB.initializer ? QB.initializer.call(DB) : void 0, QB.initializer = void 0), void 0 === QB.initializer && (Object.defineProperty(BB, OB, QB), QB = null), QB
     }
-    LH.d(BH, {
-      b: () => AH
+    GB.d(OB, {
+      b: () => YB
     })
   },
-  39899: (HH, BH, LH) => {
-    function AH(HH, BH, LH, AH) {
-      LH && Object.defineProperty(HH, BH, {
-        enumerable: LH.enumerable,
-        configurable: LH.configurable,
-        writable: LH.writable,
-        value: LH.initializer ? LH.initializer.call(AH) : void 0
+  39684: (BB, OB, GB) => {
+    function YB(BB, OB, GB, YB) {
+      GB && Object.defineProperty(BB, OB, {
+        enumerable: GB.enumerable,
+        configurable: GB.configurable,
+        writable: GB.writable,
+        value: GB.initializer ? GB.initializer.call(YB) : void 0
       })
     }
-    LH.d(BH, {
-      c: () => AH
+    GB.d(OB, {
+      d: () => YB
     })
   },
-  39588: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => SH
+  39358: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB
     });
-    var AH = LH(39595);
-    const rH = (HH, BH, LH) => HH ? HH.getClassName && "Mesh" === HH.getClassName() ? null : !HH.getClassName || "SubMesh" !== HH.getClassName() && "PhysicsBody" !== HH.getClassName() ? HH.clone ? HH.clone() : Array.isArray(HH) ? HH.slice() : LH && "object" === typeof HH ? {
-      ...HH
-    } : null : HH.clone(BH) : null;
-    class SH {
-      static DeepCopy(HH, BH, LH, SH) {
-        let hH = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const tH = function(HH) {
-          const BH = [];
+    var YB = GB(39366);
+    const DB = (BB, OB, GB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : GB && "object" === typeof BB ? {
+      ...BB
+    } : null : BB.clone(OB) : null;
+    class QB {
+      static DeepCopy(BB, OB, GB, QB) {
+        let oB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const jB = function(BB) {
+          const OB = [];
           do {
-            const LH = Object.getOwnPropertyNames(HH);
-            for (const HH of LH) - 1 === BH.indexOf(HH) && BH.push(HH)
-          } while (HH = Object.getPrototypeOf(HH));
-          return BH
-        }(HH);
-        for (const CH of tH) {
-          if ("_" === CH[0] && (!SH || -1 === SH.indexOf(CH))) continue;
-          if (CH.endsWith("Observable")) continue;
-          if (LH && -1 !== LH.indexOf(CH)) continue;
-          const tH = HH[CH],
-            EH = typeof tH;
-          if ("function" !== EH) try {
-            if ("object" === EH)
-              if (tH instanceof Uint8Array) BH[CH] = Uint8Array.from(tH);
-              else if (tH instanceof Array) {
-              if (BH[CH] = [], tH.length > 0)
-                if ("object" == typeof tH[0])
-                  for (let HH = 0; HH < tH.length; HH++) {
-                    const LH = rH(tH[HH], BH, hH); - 1 === BH[CH].indexOf(LH) && BH[CH].push(LH)
-                  } else BH[CH] = tH.slice(0)
-            } else BH[CH] = rH(tH, BH, hH);
-            else BH[CH] = tH
-          } catch (zH) {
-            AH.e.Warn(zH.message)
+            const GB = Object.getOwnPropertyNames(BB);
+            for (const BB of GB) - 1 === OB.indexOf(BB) && OB.push(BB)
+          } while (BB = Object.getPrototypeOf(BB));
+          return OB
+        }(BB);
+        for (const JB of jB) {
+          if ("_" === JB[0] && (!QB || -1 === QB.indexOf(JB))) continue;
+          if (JB.endsWith("Observable")) continue;
+          if (GB && -1 !== GB.indexOf(JB)) continue;
+          const jB = BB[JB],
+            MB = typeof jB;
+          if ("function" !== MB) try {
+            if ("object" === MB)
+              if (jB instanceof Uint8Array) OB[JB] = Uint8Array.from(jB);
+              else if (jB instanceof Array) {
+              if (OB[JB] = [], jB.length > 0)
+                if ("object" == typeof jB[0])
+                  for (let BB = 0; BB < jB.length; BB++) {
+                    const GB = DB(jB[BB], OB, oB); - 1 === OB[JB].indexOf(GB) && OB[JB].push(GB)
+                  } else OB[JB] = jB.slice(0)
+            } else OB[JB] = DB(jB, OB, oB);
+            else OB[JB] = jB
+          } catch (yB) {
+            YB.b.Warn(yB.message)
           }
         }
       }
     }
   },
-  39627: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH,
-      i: () => SH,
-      m: () => hH,
-      o: () => tH
+  39394: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB,
+      d: () => QB,
+      g: () => oB,
+      h: () => jB
     });
-    var AH = LH(38074);
-    class rH {
-      constructor(HH, BH, LH) {
-        this.gradient = HH, this.color1 = BH, this.color2 = LH
+    var YB = GB(37894);
+    class DB {
+      constructor(BB, OB, GB) {
+        this.gradient = BB, this.color1 = OB, this.color2 = GB
       }
-      getColorToRef(HH) {
-        this.color2 ? AH.g.LerpToRef(this.color1, this.color2, Math.random(), HH) : HH.Tm(this.color1)
-      }
-    }
-    class SH {
-      constructor(HH, BH) {
-        this.gradient = HH, this.color = BH
+      getColorToRef(BB) {
+        this.color2 ? YB.g.LerpToRef(this.color1, this.color2, Math.random(), BB) : BB.IU(this.color1)
       }
     }
-    class hH {
-      constructor(HH, BH, LH) {
-        this.gradient = HH, this.factor1 = BH, this.factor2 = LH
+    class QB {
+      constructor(BB, OB) {
+        this.gradient = BB, this.color = OB
+      }
+    }
+    class oB {
+      constructor(BB, OB, GB) {
+        this.gradient = BB, this.factor1 = OB, this.factor2 = GB
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class tH {
-      static GetCurrentGradient(HH, BH, LH) {
-        if (BH[0].gradient > HH) return void LH(BH[0], BH[0], 1);
-        for (let rH = 0; rH < BH.length - 1; rH++) {
-          const AH = BH[rH],
-            SH = BH[rH + 1];
-          if (HH >= AH.gradient && HH <= SH.gradient) {
-            return void LH(AH, SH, (HH - AH.gradient) / (SH.gradient - AH.gradient))
+    class jB {
+      static GetCurrentGradient(BB, OB, GB) {
+        if (OB[0].gradient > BB) return void GB(OB[0], OB[0], 1);
+        for (let DB = 0; DB < OB.length - 1; DB++) {
+          const YB = OB[DB],
+            QB = OB[DB + 1];
+          if (BB >= YB.gradient && BB <= QB.gradient) {
+            return void GB(YB, QB, (BB - YB.gradient) / (QB.gradient - YB.gradient))
           }
         }
-        const AH = BH.length - 1;
-        LH(BH[AH], BH[AH], 1)
+        const YB = OB.length - 1;
+        GB(OB[YB], OB[YB], 1)
       }
     }
   },
-  39595: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH
+  39366: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB
     });
-    class AH {
-      static _CheckLimit(HH, BH) {
-        let LH = AH._LogLimitOutputs[HH];
-        return LH ? LH.current++ : (LH = {
-          limit: BH,
+    class YB {
+      static _CheckLimit(BB, OB) {
+        let GB = YB._LogLimitOutputs[BB];
+        return GB ? GB.current++ : (GB = {
+          limit: OB,
           current: 1
-        }, AH._LogLimitOutputs[HH] = LH), LH.current <= LH.limit
+        }, YB._LogLimitOutputs[BB] = GB), GB.current <= GB.limit
       }
-      static _GenerateLimitMessage(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const LH = AH._LogLimitOutputs[HH];
-        if (!LH || !AH.MessageLimitReached) return;
-        const rH = this._Levels[BH];
-        LH.current === LH.limit && AH[rH.name](AH.MessageLimitReached.replace(/%LIMIT%/g, "" + LH.limit).replace(/%TYPE%/g, rH.name ?? ""))
+      static _GenerateLimitMessage(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const GB = YB._LogLimitOutputs[BB];
+        if (!GB || !YB.MessageLimitReached) return;
+        const DB = this._Levels[OB];
+        GB.current === GB.limit && YB[DB.name](YB.MessageLimitReached.replace(/%LIMIT%/g, "" + GB.limit).replace(/%TYPE%/g, DB.name ?? ""))
       }
-      static _AddLogEntry(HH) {
-        AH._LogCache = HH + AH._LogCache, AH.OnNewCacheEntry && AH.OnNewCacheEntry(HH)
+      static _AddLogEntry(BB) {
+        YB._LogCache = BB + YB._LogCache, YB.OnNewCacheEntry && YB.OnNewCacheEntry(BB)
       }
-      static _FormatMessage(HH) {
-        const BH = HH => HH < 10 ? "0" + HH : "" + HH,
-          LH = new Date;
-        return "[" + BH(LH.getHours()) + ":" + BH(LH.getMinutes()) + ":" + BH(LH.getSeconds()) + "]: " + HH
+      static _FormatMessage(BB) {
+        const OB = BB => BB < 10 ? "0" + BB : "" + BB,
+          GB = new Date;
+        return "[" + OB(GB.getHours()) + ":" + OB(GB.getMinutes()) + ":" + OB(GB.getSeconds()) + "]: " + BB
       }
-      static _LogDisabled(HH, BH) {}
+      static _LogDisabled(BB, OB) {}
       static _LogEnabled() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          BH = arguments.length > 1 ? arguments[1] : void 0,
-          LH = arguments.length > 2 ? arguments[2] : void 0;
-        const rH = Array.isArray(BH) ? BH[0] : BH;
-        if (void 0 !== LH && !AH._CheckLimit(rH, LH)) return;
-        const SH = AH._FormatMessage(rH),
-          hH = this._Levels[HH],
-          tH = Array.isArray(BH) ? BH.slice(1) : [];
-        hH.logFunc && hH.logFunc("BJS - " + SH, ...tH);
-        const zH = `<div style='color:${hH.color}'>${SH}</div><br>`;
-        AH._AddLogEntry(zH), AH._GenerateLimitMessage(rH, HH)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          OB = arguments.length > 1 ? arguments[1] : void 0,
+          GB = arguments.length > 2 ? arguments[2] : void 0;
+        const DB = Array.isArray(OB) ? OB[0] : OB;
+        if (void 0 !== GB && !YB._CheckLimit(DB, GB)) return;
+        const QB = YB._FormatMessage(DB),
+          oB = this._Levels[BB],
+          jB = Array.isArray(OB) ? OB.slice(1) : [];
+        oB.logFunc && oB.logFunc("BJS - " + QB, ...jB);
+        const yB = `<div style='color:${oB.color}'>${QB}</div><br>`;
+        YB._AddLogEntry(yB), YB._GenerateLimitMessage(DB, BB)
       }
       static get LogCache() {
-        return AH._LogCache
+        return YB._LogCache
       }
       static ClearLogCache() {
-        AH._LogCache = "", AH._LogLimitOutputs = {}, AH.errorsCount = 0
+        YB._LogCache = "", YB._LogLimitOutputs = {}, YB.errorsCount = 0
       }
-      static set LogLevels(HH) {
-        AH.Log = AH._LogDisabled, AH.Warn = AH._LogDisabled, AH.Error = AH._LogDisabled;
-        const BH = [AH.MessageLogLevel, AH.WarningLogLevel, AH.ErrorLogLevel];
-        for (const LH of BH)
-          if ((HH & LH) === LH) {
-            const HH = this._Levels[LH];
-            AH[HH.name] = AH._LogEnabled.bind(AH, LH)
+      static set LogLevels(BB) {
+        YB.Log = YB._LogDisabled, YB.Warn = YB._LogDisabled, YB.Error = YB._LogDisabled;
+        const OB = [YB.MessageLogLevel, YB.WarningLogLevel, YB.ErrorLogLevel];
+        for (const GB of OB)
+          if ((BB & GB) === GB) {
+            const BB = this._Levels[GB];
+            YB[BB.name] = YB._LogEnabled.bind(YB, GB)
           }
       }
     }
-    AH.NoneLogLevel = 0, AH.MessageLogLevel = 1, AH.WarningLogLevel = 2, AH.ErrorLogLevel = 4, AH.AllLogLevel = 7, AH.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", AH._LogCache = "", AH._LogLimitOutputs = {}, AH._Levels = [{}, {
+    YB.NoneLogLevel = 0, YB.MessageLogLevel = 1, YB.WarningLogLevel = 2, YB.ErrorLogLevel = 4, YB.AllLogLevel = 7, YB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", YB._LogCache = "", YB._LogLimitOutputs = {}, YB._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], AH.errorsCount = 0, AH.Log = AH._LogEnabled.bind(AH, AH.MessageLogLevel), AH.Warn = AH._LogEnabled.bind(AH, AH.WarningLogLevel), AH.Error = AH._LogEnabled.bind(AH, AH.ErrorLogLevel)
+    }], YB.errorsCount = 0, YB.Log = YB._LogEnabled.bind(YB, YB.MessageLogLevel), YB.Warn = YB._LogEnabled.bind(YB, YB.WarningLogLevel), YB.Error = YB._LogEnabled.bind(YB, YB.ErrorLogLevel)
   },
-  39633: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => hH
+  39403: (BB, OB, GB) => {
+    GB.d(OB, {
+      e: () => oB
     });
-    var AH = LH(37963),
-      rH = LH(38002),
-      SH = LH(39588);
-    class hH {
+    var YB = GB(37778),
+      DB = GB(37807),
+      QB = GB(39358);
+    class oB {
       constructor() {
-        this.direction1 = new AH.o(0, 1, 0), this.direction2 = new AH.o(0, 1, 0), this.minEmitBox = new AH.o(-.5, -.5, -.5), this.maxEmitBox = new AH.o(.5, .5, .5)
+        this.direction1 = new YB.r(0, 1, 0), this.direction2 = new YB.r(0, 1, 0), this.minEmitBox = new YB.r(-.5, -.5, -.5), this.maxEmitBox = new YB.r(.5, .5, .5)
       }
-      startDirectionFunction(HH, BH, LH, SH) {
-        const hH = (0, rH.RandomRange)(this.direction1.x, this.direction2.x),
-          tH = (0, rH.RandomRange)(this.direction1.y, this.direction2.y),
-          zH = (0, rH.RandomRange)(this.direction1.z, this.direction2.z);
-        if (SH) return BH.x = hH, BH.y = tH, void(BH.z = zH);
-        AH.o.TransformNormalFromFloatsToRef(hH, tH, zH, HH, BH)
+      startDirectionFunction(BB, OB, GB, QB) {
+        const oB = (0, DB.RandomRange)(this.direction1.x, this.direction2.x),
+          jB = (0, DB.RandomRange)(this.direction1.y, this.direction2.y),
+          yB = (0, DB.RandomRange)(this.direction1.z, this.direction2.z);
+        if (QB) return OB.x = oB, OB.y = jB, void(OB.z = yB);
+        YB.r.TransformNormalFromFloatsToRef(oB, jB, yB, BB, OB)
       }
-      startPositionFunction(HH, BH, LH, SH) {
-        const hH = (0, rH.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          tH = (0, rH.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          zH = (0, rH.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (SH) return BH.x = hH, BH.y = tH, void(BH.z = zH);
-        AH.o.TransformCoordinatesFromFloatsToRef(hH, tH, zH, HH, BH)
+      startPositionFunction(BB, OB, GB, QB) {
+        const oB = (0, DB.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          jB = (0, DB.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          yB = (0, DB.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (QB) return OB.x = oB, OB.y = jB, void(OB.z = yB);
+        YB.r.TransformCoordinatesFromFloatsToRef(oB, jB, yB, BB, OB)
       }
       clone() {
-        const HH = new hH;
-        return SH.d.DeepCopy(this, HH), HH
+        const BB = new oB;
+        return QB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(HH) {
-        HH.setVector3("direction1", this.direction1), HH.setVector3("direction2", this.direction2), HH.setVector3("minEmitBox", this.minEmitBox), HH.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(BB) {
+        BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2), BB.setVector3("minEmitBox", this.minEmitBox), BB.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(HH) {
-        HH.addUniform("direction1", 3), HH.addUniform("direction2", 3), HH.addUniform("minEmitBox", 3), HH.addUniform("maxEmitBox", 3)
+      buildUniformLayout(BB) {
+        BB.addUniform("direction1", 3), BB.addUniform("direction2", 3), BB.addUniform("minEmitBox", 3), BB.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const HH = {};
-        return HH.type = this.getClassName(), HH.direction1 = this.direction1.xrH(), HH.direction2 = this.direction2.xrH(), HH.minEmitBox = this.minEmitBox.xrH(), HH.maxEmitBox = this.maxEmitBox.xrH(), HH
+        const BB = {};
+        return BB.type = this.getClassName(), BB.direction1 = this.direction1.dDB(), BB.direction2 = this.direction2.dDB(), BB.minEmitBox = this.minEmitBox.dDB(), BB.maxEmitBox = this.maxEmitBox.dDB(), BB
       }
-      parse(HH) {
-        AH.o.FromArrayToRef(HH.direction1, 0, this.direction1), AH.o.FromArrayToRef(HH.direction2, 0, this.direction2), AH.o.FromArrayToRef(HH.minEmitBox, 0, this.minEmitBox), AH.o.FromArrayToRef(HH.maxEmitBox, 0, this.maxEmitBox)
+      parse(BB) {
+        YB.r.FromArrayToRef(BB.direction1, 0, this.direction1), YB.r.FromArrayToRef(BB.direction2, 0, this.direction2), YB.r.FromArrayToRef(BB.minEmitBox, 0, this.minEmitBox), YB.r.FromArrayToRef(BB.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  39580: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => tH,
-      g: () => hH
+  39356: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => jB,
+      f: () => oB
     });
-    var AH = LH(37963),
-      rH = LH(38002),
-      SH = LH(39588);
-    class hH {
+    var YB = GB(37778),
+      DB = GB(37807),
+      QB = GB(39358);
+    class oB {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          rH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = HH, this.height = BH, this.radiusRange = LH, this.directionRandomizer = rH, this._tempVector = AH.o.Zero()
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          DB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = BB, this.height = OB, this.radiusRange = GB, this.directionRandomizer = DB, this._tempVector = YB.r.Zero()
       }
-      startDirectionFunction(HH, BH, LH, SH, hH) {
-        LH.position.subtractToRef(HH.getTranslation(), this._tempVector), this._tempVector.normalize(), AH.o.TransformNormalToRef(this._tempVector, hH, this._tempVector);
-        const tH = (0, rH.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let zH = Math.atan2(this._tempVector.x, this._tempVector.z);
-        zH += (0, rH.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = tH, this._tempVector.x = Math.sin(zH), this._tempVector.z = Math.cos(zH), this._tempVector.normalize(), SH ? BH.Tm(this._tempVector) : AH.o.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, HH, BH)
+      startDirectionFunction(BB, OB, GB, QB, oB) {
+        GB.position.subtractToRef(BB.getTranslation(), this._tempVector), this._tempVector.normalize(), YB.r.TransformNormalToRef(this._tempVector, oB, this._tempVector);
+        const jB = (0, DB.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let yB = Math.atan2(this._tempVector.x, this._tempVector.z);
+        yB += (0, DB.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = jB, this._tempVector.x = Math.sin(yB), this._tempVector.z = Math.cos(yB), this._tempVector.normalize(), QB ? OB.IU(this._tempVector) : YB.r.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, BB, OB)
       }
-      startPositionFunction(HH, BH, LH, SH) {
-        const hH = (0, rH.RandomRange)(-this.height / 2, this.height / 2),
-          tH = (0, rH.RandomRange)(0, 2 * Math.PI),
-          zH = (0, rH.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          CH = Math.sqrt(zH) * this.radius,
-          EH = CH * Math.cos(tH),
-          XH = CH * Math.sin(tH);
-        SH ? BH.SBH(EH, hH, XH) : AH.o.TransformCoordinatesFromFloatsToRef(EH, hH, XH, HH, BH)
+      startPositionFunction(BB, OB, GB, QB) {
+        const oB = (0, DB.RandomRange)(-this.height / 2, this.height / 2),
+          jB = (0, DB.RandomRange)(0, 2 * Math.PI),
+          yB = (0, DB.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          JB = Math.sqrt(yB) * this.radius,
+          MB = JB * Math.cos(jB),
+          PB = JB * Math.sin(jB);
+        QB ? OB.zOB(MB, oB, PB) : YB.r.TransformCoordinatesFromFloatsToRef(MB, oB, PB, BB, OB)
       }
       clone() {
-        const HH = new hH(this.radius, this.directionRandomizer);
-        return SH.d.DeepCopy(this, HH), HH
+        const BB = new oB(this.radius, this.directionRandomizer);
+        return QB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(HH) {
-        HH.setFloat("radius", this.radius), HH.setFloat("height", this.height), HH.setFloat("radiusRange", this.radiusRange), HH.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(BB) {
+        BB.setFloat("radius", this.radius), BB.setFloat("height", this.height), BB.setFloat("radiusRange", this.radiusRange), BB.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(HH) {
-        HH.addUniform("radius", 1), HH.addUniform("height", 1), HH.addUniform("radiusRange", 1), HH.addUniform("directionRandomizer", 1)
+      buildUniformLayout(BB) {
+        BB.addUniform("radius", 1), BB.addUniform("height", 1), BB.addUniform("radiusRange", 1), BB.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const HH = {};
-        return HH.type = this.getClassName(), HH.radius = this.radius, HH.height = this.height, HH.radiusRange = this.radiusRange, HH.directionRandomizer = this.directionRandomizer, HH
+        const BB = {};
+        return BB.type = this.getClassName(), BB.radius = this.radius, BB.height = this.height, BB.radiusRange = this.radiusRange, BB.directionRandomizer = this.directionRandomizer, BB
       }
-      parse(HH) {
-        this.radius = HH.radius, this.height = HH.height, this.radiusRange = HH.radiusRange, this.directionRandomizer = HH.directionRandomizer
+      parse(BB) {
+        this.radius = BB.radius, this.height = BB.height, this.radiusRange = BB.radiusRange, this.directionRandomizer = BB.directionRandomizer
       }
     }
-    class tH extends hH {
+    class jB extends oB {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          rH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new AH.o(0, 1, 0),
-          SH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new AH.o(0, 1, 0);
-        super(HH, BH, LH), this.direction1 = rH, this.direction2 = SH
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          DB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new YB.r(0, 1, 0),
+          QB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new YB.r(0, 1, 0);
+        super(BB, OB, GB), this.direction1 = DB, this.direction2 = QB
       }
-      startDirectionFunction(HH, BH, LH, SH) {
-        const hH = (0, rH.RandomRange)(this.direction1.x, this.direction2.x),
-          tH = (0, rH.RandomRange)(this.direction1.y, this.direction2.y),
-          zH = (0, rH.RandomRange)(this.direction1.z, this.direction2.z);
-        SH ? BH.SBH(hH, tH, zH) : AH.o.TransformNormalFromFloatsToRef(hH, tH, zH, HH, BH)
+      startDirectionFunction(BB, OB, GB, QB) {
+        const oB = (0, DB.RandomRange)(this.direction1.x, this.direction2.x),
+          jB = (0, DB.RandomRange)(this.direction1.y, this.direction2.y),
+          yB = (0, DB.RandomRange)(this.direction1.z, this.direction2.z);
+        QB ? OB.zOB(oB, jB, yB) : YB.r.TransformNormalFromFloatsToRef(oB, jB, yB, BB, OB)
       }
       clone() {
-        const HH = new tH(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return SH.d.DeepCopy(this, HH), HH
+        const BB = new jB(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return QB.b.DeepCopy(this, BB), BB
       }
-      applyToShader(HH) {
-        HH.setFloat("radius", this.radius), HH.setFloat("height", this.height), HH.setFloat("radiusRange", this.radiusRange), HH.setVector3("direction1", this.direction1), HH.setVector3("direction2", this.direction2)
+      applyToShader(BB) {
+        BB.setFloat("radius", this.radius), BB.setFloat("height", this.height), BB.setFloat("radiusRange", this.radiusRange), BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(HH) {
-        HH.addUniform("radius", 1), HH.addUniform("height", 1), HH.addUniform("radiusRange", 1), HH.addUniform("direction1", 3), HH.addUniform("direction2", 3)
+      buildUniformLayout(BB) {
+        BB.addUniform("radius", 1), BB.addUniform("height", 1), BB.addUniform("radiusRange", 1), BB.addUniform("direction1", 3), BB.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const HH = super.serialize();
-        return HH.direction1 = this.direction1.xrH(), HH.direction2 = this.direction2.xrH(), HH
+        const BB = super.serialize();
+        return BB.direction1 = this.direction1.dDB(), BB.direction2 = this.direction2.dDB(), BB
       }
-      parse(HH) {
-        super.parse(HH), AH.o.FromArrayToRef(HH.direction1, 0, this.direction1), AH.o.FromArrayToRef(HH.direction2, 0, this.direction2)
+      parse(BB) {
+        super.parse(BB), YB.r.FromArrayToRef(BB.direction1, 0, this.direction1), YB.r.FromArrayToRef(BB.direction2, 0, this.direction2)
       }
     }
   },
-  39723: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => XH
+  39494: (BB, OB, GB) => {
+    GB.d(OB, {
+      c: () => PB
     });
-    const AH = .5 * (Math.sqrt(3) - 1),
-      rH = (3 - Math.sqrt(3)) / 6,
-      SH = 1 / 3,
-      hH = 1 / 6,
-      tH = (Math.sqrt(5) - 1) / 4,
-      zH = (5 - Math.sqrt(5)) / 20,
-      CH = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      EH = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const XH = class {
+    const YB = .5 * (Math.sqrt(3) - 1),
+      DB = (3 - Math.sqrt(3)) / 6,
+      QB = 1 / 3,
+      oB = 1 / 6,
+      jB = (Math.sqrt(5) - 1) / 4,
+      yB = (5 - Math.sqrt(5)) / 20,
+      JB = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      MB = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const PB = class {
       constructor() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const BH = "function" == typeof HH ? HH : function(HH) {
-          let BH = 0,
-            LH = 0,
-            AH = 0,
-            rH = 1;
-          const SH = function() {
-            let HH = 4022871197;
-            return function(BH) {
-              BH = BH.toString();
-              for (let LH = 0; LH < BH.length; LH++) {
-                HH += BH.charCodeAt(LH);
-                let AH = .02519603282416938 * HH;
-                HH = AH >>> 0, AH -= HH, AH *= HH, HH = AH >>> 0, AH -= HH, HH += 4294967296 * AH
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const OB = "function" == typeof BB ? BB : function(BB) {
+          let OB = 0,
+            GB = 0,
+            YB = 0,
+            DB = 1;
+          const QB = function() {
+            let BB = 4022871197;
+            return function(OB) {
+              OB = OB.toString();
+              for (let GB = 0; GB < OB.length; GB++) {
+                BB += OB.charCodeAt(GB);
+                let YB = .02519603282416938 * BB;
+                BB = YB >>> 0, YB -= BB, YB *= BB, BB = YB >>> 0, YB -= BB, BB += 4294967296 * YB
               }
-              return 2.3283064365386963e-10 * (HH >>> 0)
+              return 2.3283064365386963e-10 * (BB >>> 0)
             }
           }();
-          BH = SH(" "), LH = SH(" "), AH = SH(" "), BH -= SH(HH), BH < 0 && (BH += 1);
-          LH -= SH(HH), LH < 0 && (LH += 1);
-          AH -= SH(HH), AH < 0 && (AH += 1);
+          OB = QB(" "), GB = QB(" "), YB = QB(" "), OB -= QB(BB), OB < 0 && (OB += 1);
+          GB -= QB(BB), GB < 0 && (GB += 1);
+          YB -= QB(BB), YB < 0 && (YB += 1);
           return function() {
-            const HH = 2091639 * BH + 2.3283064365386963e-10 * rH;
-            return BH = LH, LH = AH, AH = HH - (rH = 0 | HH)
+            const BB = 2091639 * OB + 2.3283064365386963e-10 * DB;
+            return OB = GB, GB = YB, YB = BB - (DB = 0 | BB)
           }
-        }(HH);
-        this.p = function(HH) {
-          const BH = new Uint8Array(256);
-          for (let LH = 0; LH < 256; LH++) BH[LH] = LH;
-          for (let LH = 0; LH < 255; LH++) {
-            const AH = LH + ~~(HH() * (256 - LH)),
-              rH = BH[LH];
-            BH[LH] = BH[AH], BH[AH] = rH
+        }(BB);
+        this.p = function(BB) {
+          const OB = new Uint8Array(256);
+          for (let GB = 0; GB < 256; GB++) OB[GB] = GB;
+          for (let GB = 0; GB < 255; GB++) {
+            const YB = GB + ~~(BB() * (256 - GB)),
+              DB = OB[GB];
+            OB[GB] = OB[YB], OB[YB] = DB
           }
-          return BH
-        }(BH), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let LH = 0; LH < 512; LH++) this.perm[LH] = this.p[255 & LH], this.permMod12[LH] = this.perm[LH] % 12
+          return OB
+        }(OB), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let GB = 0; GB < 512; GB++) this.perm[GB] = this.p[255 & GB], this.permMod12[GB] = this.perm[GB] % 12
       }
-      noise2D(HH, BH) {
-        const LH = this.permMod12,
-          SH = this.perm;
-        let hH = 0,
-          tH = 0,
-          zH = 0;
-        const EH = (HH + BH) * AH,
-          XH = Math.floor(HH + EH),
-          GH = Math.floor(BH + EH),
-          YH = (XH + GH) * rH,
-          uH = HH - (XH - YH),
-          QH = BH - (GH - YH);
-        let WH, MH;
-        uH > QH ? (WH = 1, MH = 0) : (WH = 0, MH = 1);
-        const xH = uH - WH + rH,
-          vH = QH - MH + rH,
-          PH = uH - 1 + 2 * rH,
-          TH = QH - 1 + 2 * rH,
-          UH = 255 & XH,
-          VH = 255 & GH;
-        let OH = .5 - uH * uH - QH * QH;
-        if (OH >= 0) {
-          const HH = 3 * LH[UH + SH[VH]];
-          OH *= OH, hH = OH * OH * (CH[HH] * uH + CH[HH + 1] * QH)
+      noise2D(BB, OB) {
+        const GB = this.permMod12,
+          QB = this.perm;
+        let oB = 0,
+          jB = 0,
+          yB = 0;
+        const MB = (BB + OB) * YB,
+          PB = Math.floor(BB + MB),
+          zB = Math.floor(OB + MB),
+          lB = (PB + zB) * DB,
+          pB = BB - (PB - lB),
+          qB = OB - (zB - lB);
+        let ZB, NB;
+        pB > qB ? (ZB = 1, NB = 0) : (ZB = 0, NB = 1);
+        const RB = pB - ZB + DB,
+          WB = qB - NB + DB,
+          AB = pB - 1 + 2 * DB,
+          VB = qB - 1 + 2 * DB,
+          SB = 255 & PB,
+          nB = 255 & zB;
+        let UB = .5 - pB * pB - qB * qB;
+        if (UB >= 0) {
+          const BB = 3 * GB[SB + QB[nB]];
+          UB *= UB, oB = UB * UB * (JB[BB] * pB + JB[BB + 1] * qB)
         }
-        let bH = .5 - xH * xH - vH * vH;
-        if (bH >= 0) {
-          const HH = 3 * LH[UH + WH + SH[VH + MH]];
-          bH *= bH, tH = bH * bH * (CH[HH] * xH + CH[HH + 1] * vH)
+        let fB = .5 - RB * RB - WB * WB;
+        if (fB >= 0) {
+          const BB = 3 * GB[SB + ZB + QB[nB + NB]];
+          fB *= fB, jB = fB * fB * (JB[BB] * RB + JB[BB + 1] * WB)
         }
-        let kH = .5 - PH * PH - TH * TH;
-        if (kH >= 0) {
-          const HH = 3 * LH[UH + 1 + SH[VH + 1]];
-          kH *= kH, zH = kH * kH * (CH[HH] * PH + CH[HH + 1] * TH)
+        let kB = .5 - AB * AB - VB * VB;
+        if (kB >= 0) {
+          const BB = 3 * GB[SB + 1 + QB[nB + 1]];
+          kB *= kB, yB = kB * kB * (JB[BB] * AB + JB[BB + 1] * VB)
         }
-        return 70 * (hH + tH + zH)
+        return 70 * (oB + jB + yB)
       }
-      noise3D(HH, BH, LH) {
-        const AH = this.permMod12,
-          rH = this.perm;
-        let tH, zH, EH, XH;
-        const GH = (HH + BH + LH) * SH,
-          YH = Math.floor(HH + GH),
-          uH = Math.floor(BH + GH),
-          QH = Math.floor(LH + GH),
-          WH = (YH + uH + QH) * hH,
-          MH = HH - (YH - WH),
-          xH = BH - (uH - WH),
-          vH = LH - (QH - WH);
-        let PH, TH, UH, VH, OH, bH;
-        MH >= xH ? xH >= vH ? (PH = 1, TH = 0, UH = 0, VH = 1, OH = 1, bH = 0) : MH >= vH ? (PH = 1, TH = 0, UH = 0, VH = 1, OH = 0, bH = 1) : (PH = 0, TH = 0, UH = 1, VH = 1, OH = 0, bH = 1) : xH < vH ? (PH = 0, TH = 0, UH = 1, VH = 0, OH = 1, bH = 1) : MH < vH ? (PH = 0, TH = 1, UH = 0, VH = 0, OH = 1, bH = 1) : (PH = 0, TH = 1, UH = 0, VH = 1, OH = 1, bH = 0);
-        const kH = MH - PH + hH,
-          mH = xH - TH + hH,
-          oH = vH - UH + hH,
-          IH = MH - VH + 2 * hH,
-          fH = xH - OH + 2 * hH,
-          lH = vH - bH + 2 * hH,
-          KH = MH - 1 + .5,
-          cH = xH - 1 + .5,
-          eH = vH - 1 + .5,
-          qH = 255 & YH,
-          gH = 255 & uH,
-          NH = 255 & QH;
-        let RH = .6 - MH * MH - xH * xH - vH * vH;
-        if (RH < 0) tH = 0;
+      noise3D(BB, OB, GB) {
+        const YB = this.permMod12,
+          DB = this.perm;
+        let jB, yB, MB, PB;
+        const zB = (BB + OB + GB) * QB,
+          lB = Math.floor(BB + zB),
+          pB = Math.floor(OB + zB),
+          qB = Math.floor(GB + zB),
+          ZB = (lB + pB + qB) * oB,
+          NB = BB - (lB - ZB),
+          RB = OB - (pB - ZB),
+          WB = GB - (qB - ZB);
+        let AB, VB, SB, nB, UB, fB;
+        NB >= RB ? RB >= WB ? (AB = 1, VB = 0, SB = 0, nB = 1, UB = 1, fB = 0) : NB >= WB ? (AB = 1, VB = 0, SB = 0, nB = 1, UB = 0, fB = 1) : (AB = 0, VB = 0, SB = 1, nB = 1, UB = 0, fB = 1) : RB < WB ? (AB = 0, VB = 0, SB = 1, nB = 0, UB = 1, fB = 1) : NB < WB ? (AB = 0, VB = 1, SB = 0, nB = 0, UB = 1, fB = 1) : (AB = 0, VB = 1, SB = 0, nB = 1, UB = 1, fB = 0);
+        const kB = NB - AB + oB,
+          dB = RB - VB + oB,
+          KB = WB - SB + oB,
+          uB = NB - nB + 2 * oB,
+          mB = RB - UB + 2 * oB,
+          IB = WB - fB + 2 * oB,
+          FB = NB - 1 + .5,
+          iB = RB - 1 + .5,
+          LB = WB - 1 + .5,
+          gB = 255 & lB,
+          rB = 255 & pB,
+          XB = 255 & qB;
+        let wB = .6 - NB * NB - RB * RB - WB * WB;
+        if (wB < 0) jB = 0;
         else {
-          const HH = 3 * AH[qH + rH[gH + rH[NH]]];
-          RH *= RH, tH = RH * RH * (CH[HH] * MH + CH[HH + 1] * xH + CH[HH + 2] * vH)
+          const BB = 3 * YB[gB + DB[rB + DB[XB]]];
+          wB *= wB, jB = wB * wB * (JB[BB] * NB + JB[BB + 1] * RB + JB[BB + 2] * WB)
         }
-        let jH = .6 - kH * kH - mH * mH - oH * oH;
-        if (jH < 0) zH = 0;
+        let EB = .6 - kB * kB - dB * dB - KB * KB;
+        if (EB < 0) yB = 0;
         else {
-          const HH = 3 * AH[qH + PH + rH[gH + TH + rH[NH + UH]]];
-          jH *= jH, zH = jH * jH * (CH[HH] * kH + CH[HH + 1] * mH + CH[HH + 2] * oH)
+          const BB = 3 * YB[gB + AB + DB[rB + VB + DB[XB + SB]]];
+          EB *= EB, yB = EB * EB * (JB[BB] * kB + JB[BB + 1] * dB + JB[BB + 2] * KB)
         }
-        let nH = .6 - IH * IH - fH * fH - lH * lH;
-        if (nH < 0) EH = 0;
+        let cB = .6 - uB * uB - mB * mB - IB * IB;
+        if (cB < 0) MB = 0;
         else {
-          const HH = 3 * AH[qH + VH + rH[gH + OH + rH[NH + bH]]];
-          nH *= nH, EH = nH * nH * (CH[HH] * IH + CH[HH + 1] * fH + CH[HH + 2] * lH)
+          const BB = 3 * YB[gB + nB + DB[rB + UB + DB[XB + fB]]];
+          cB *= cB, MB = cB * cB * (JB[BB] * uB + JB[BB + 1] * mB + JB[BB + 2] * IB)
         }
-        let FH = .6 - KH * KH - cH * cH - eH * eH;
-        if (FH < 0) XH = 0;
+        let hB = .6 - FB * FB - iB * iB - LB * LB;
+        if (hB < 0) PB = 0;
         else {
-          const HH = 3 * AH[qH + 1 + rH[gH + 1 + rH[NH + 1]]];
-          FH *= FH, XH = FH * FH * (CH[HH] * KH + CH[HH + 1] * cH + CH[HH + 2] * eH)
+          const BB = 3 * YB[gB + 1 + DB[rB + 1 + DB[XB + 1]]];
+          hB *= hB, PB = hB * hB * (JB[BB] * FB + JB[BB + 1] * iB + JB[BB + 2] * LB)
         }
-        return 32 * (tH + zH + EH + XH)
+        return 32 * (jB + yB + MB + PB)
       }
-      noise4D(HH, BH, LH, AH) {
-        const rH = this.perm;
-        let SH, hH, CH, XH, GH;
-        const YH = (HH + BH + LH + AH) * tH,
-          uH = Math.floor(HH + YH),
-          QH = Math.floor(BH + YH),
-          WH = Math.floor(LH + YH),
-          MH = Math.floor(AH + YH),
-          xH = (uH + QH + WH + MH) * zH,
-          vH = HH - (uH - xH),
-          PH = BH - (QH - xH),
-          TH = LH - (WH - xH),
-          UH = AH - (MH - xH);
-        let VH = 0,
-          OH = 0,
-          bH = 0,
-          kH = 0;
-        vH > PH ? VH++ : OH++, vH > TH ? VH++ : bH++, vH > UH ? VH++ : kH++, PH > TH ? OH++ : bH++, PH > UH ? OH++ : kH++, TH > UH ? bH++ : kH++;
-        const mH = VH >= 3 ? 1 : 0,
-          oH = OH >= 3 ? 1 : 0,
-          IH = bH >= 3 ? 1 : 0,
-          fH = kH >= 3 ? 1 : 0,
-          lH = VH >= 2 ? 1 : 0,
-          KH = OH >= 2 ? 1 : 0,
-          cH = bH >= 2 ? 1 : 0,
-          eH = kH >= 2 ? 1 : 0,
-          qH = VH >= 1 ? 1 : 0,
-          gH = OH >= 1 ? 1 : 0,
-          NH = bH >= 1 ? 1 : 0,
-          RH = kH >= 1 ? 1 : 0,
-          jH = vH - mH + zH,
-          nH = PH - oH + zH,
-          FH = TH - IH + zH,
-          DH = UH - fH + zH,
-          wH = vH - lH + 2 * zH,
-          ZH = PH - KH + 2 * zH,
-          dH = TH - cH + 2 * zH,
-          aH = UH - eH + 2 * zH,
-          sH = vH - qH + 3 * zH,
-          JH = PH - gH + 3 * zH,
-          iH = TH - NH + 3 * zH,
-          pH = UH - RH + 3 * zH,
-          yH = vH - 1 + 4 * zH,
-          HB = PH - 1 + 4 * zH,
-          BB = TH - 1 + 4 * zH,
-          LB = UH - 1 + 4 * zH,
-          AB = 255 & uH,
-          rB = 255 & QH,
-          SB = 255 & WH,
-          hB = 255 & MH;
-        let tB = .6 - vH * vH - PH * PH - TH * TH - UH * UH;
-        if (tB < 0) SH = 0;
+      noise4D(BB, OB, GB, YB) {
+        const DB = this.perm;
+        let QB, oB, JB, PB, zB;
+        const lB = (BB + OB + GB + YB) * jB,
+          pB = Math.floor(BB + lB),
+          qB = Math.floor(OB + lB),
+          ZB = Math.floor(GB + lB),
+          NB = Math.floor(YB + lB),
+          RB = (pB + qB + ZB + NB) * yB,
+          WB = BB - (pB - RB),
+          AB = OB - (qB - RB),
+          VB = GB - (ZB - RB),
+          SB = YB - (NB - RB);
+        let nB = 0,
+          UB = 0,
+          fB = 0,
+          kB = 0;
+        WB > AB ? nB++ : UB++, WB > VB ? nB++ : fB++, WB > SB ? nB++ : kB++, AB > VB ? UB++ : fB++, AB > SB ? UB++ : kB++, VB > SB ? fB++ : kB++;
+        const dB = nB >= 3 ? 1 : 0,
+          KB = UB >= 3 ? 1 : 0,
+          uB = fB >= 3 ? 1 : 0,
+          mB = kB >= 3 ? 1 : 0,
+          IB = nB >= 2 ? 1 : 0,
+          FB = UB >= 2 ? 1 : 0,
+          iB = fB >= 2 ? 1 : 0,
+          LB = kB >= 2 ? 1 : 0,
+          gB = nB >= 1 ? 1 : 0,
+          rB = UB >= 1 ? 1 : 0,
+          XB = fB >= 1 ? 1 : 0,
+          wB = kB >= 1 ? 1 : 0,
+          EB = WB - dB + yB,
+          cB = AB - KB + yB,
+          hB = VB - uB + yB,
+          aB = SB - mB + yB,
+          eB = WB - IB + 2 * yB,
+          TB = AB - FB + 2 * yB,
+          bB = VB - iB + 2 * yB,
+          CB = SB - LB + 2 * yB,
+          HB = WB - gB + 3 * yB,
+          vB = AB - rB + 3 * yB,
+          sB = VB - XB + 3 * yB,
+          xB = SB - wB + 3 * yB,
+          tB = WB - 1 + 4 * yB,
+          BO = AB - 1 + 4 * yB,
+          OO = VB - 1 + 4 * yB,
+          GO = SB - 1 + 4 * yB,
+          YO = 255 & pB,
+          DO = 255 & qB,
+          QO = 255 & ZB,
+          oO = 255 & NB;
+        let jO = .6 - WB * WB - AB * AB - VB * VB - SB * SB;
+        if (jO < 0) QB = 0;
         else {
-          const HH = rH[AB + rH[rB + rH[SB + rH[hB]]]] % 32 * 4;
-          tB *= tB, SH = tB * tB * (EH[HH] * vH + EH[HH + 1] * PH + EH[HH + 2] * TH + EH[HH + 3] * UH)
+          const BB = DB[YO + DB[DO + DB[QO + DB[oO]]]] % 32 * 4;
+          jO *= jO, QB = jO * jO * (MB[BB] * WB + MB[BB + 1] * AB + MB[BB + 2] * VB + MB[BB + 3] * SB)
         }
-        let zB = .6 - jH * jH - nH * nH - FH * FH - DH * DH;
-        if (zB < 0) hH = 0;
+        let yO = .6 - EB * EB - cB * cB - hB * hB - aB * aB;
+        if (yO < 0) oB = 0;
         else {
-          const HH = rH[AB + mH + rH[rB + oH + rH[SB + IH + rH[hB + fH]]]] % 32 * 4;
-          zB *= zB, hH = zB * zB * (EH[HH] * jH + EH[HH + 1] * nH + EH[HH + 2] * FH + EH[HH + 3] * DH)
+          const BB = DB[YO + dB + DB[DO + KB + DB[QO + uB + DB[oO + mB]]]] % 32 * 4;
+          yO *= yO, oB = yO * yO * (MB[BB] * EB + MB[BB + 1] * cB + MB[BB + 2] * hB + MB[BB + 3] * aB)
         }
-        let CB = .6 - wH * wH - ZH * ZH - dH * dH - aH * aH;
-        if (CB < 0) CH = 0;
+        let JO = .6 - eB * eB - TB * TB - bB * bB - CB * CB;
+        if (JO < 0) JB = 0;
         else {
-          const HH = rH[AB + lH + rH[rB + KH + rH[SB + cH + rH[hB + eH]]]] % 32 * 4;
-          CB *= CB, CH = CB * CB * (EH[HH] * wH + EH[HH + 1] * ZH + EH[HH + 2] * dH + EH[HH + 3] * aH)
+          const BB = DB[YO + IB + DB[DO + FB + DB[QO + iB + DB[oO + LB]]]] % 32 * 4;
+          JO *= JO, JB = JO * JO * (MB[BB] * eB + MB[BB + 1] * TB + MB[BB + 2] * bB + MB[BB + 3] * CB)
         }
-        let EB = .6 - sH * sH - JH * JH - iH * iH - pH * pH;
-        if (EB < 0) XH = 0;
+        let MO = .6 - HB * HB - vB * vB - sB * sB - xB * xB;
+        if (MO < 0) PB = 0;
         else {
-          const HH = rH[AB + qH + rH[rB + gH + rH[SB + NH + rH[hB + RH]]]] % 32 * 4;
-          EB *= EB, XH = EB * EB * (EH[HH] * sH + EH[HH + 1] * JH + EH[HH + 2] * iH + EH[HH + 3] * pH)
+          const BB = DB[YO + gB + DB[DO + rB + DB[QO + XB + DB[oO + wB]]]] % 32 * 4;
+          MO *= MO, PB = MO * MO * (MB[BB] * HB + MB[BB + 1] * vB + MB[BB + 2] * sB + MB[BB + 3] * xB)
         }
-        let XB = .6 - yH * yH - HB * HB - BB * BB - LB * LB;
-        if (XB < 0) GH = 0;
+        let PO = .6 - tB * tB - BO * BO - OO * OO - GO * GO;
+        if (PO < 0) zB = 0;
         else {
-          const HH = rH[AB + 1 + rH[rB + 1 + rH[SB + 1 + rH[hB + 1]]]] % 32 * 4;
-          XB *= XB, GH = XB * XB * (EH[HH] * yH + EH[HH + 1] * HB + EH[HH + 2] * BB + EH[HH + 3] * LB)
+          const BB = DB[YO + 1 + DB[DO + 1 + DB[QO + 1 + DB[oO + 1]]]] % 32 * 4;
+          PO *= PO, zB = PO * PO * (MB[BB] * tB + MB[BB + 1] * BO + MB[BB + 2] * OO + MB[BB + 3] * GO)
         }
-        return 27 * (SH + hH + CH + XH + GH)
+        return 27 * (QB + oB + JB + PB + zB)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

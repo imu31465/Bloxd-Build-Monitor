@@ -1,34 +1,34 @@
 export const id = 272;
 export const ids = [272];
 export const modules = {
-  42396: (HH, BH, LH) => {
-    LH.d(BH, {
-      b: () => hH,
-      c: () => EH,
-      e: () => CH
+  42093: (BB, OB, GB) => {
+    GB.d(OB, {
+      d: () => oB,
+      h: () => MB,
+      l: () => JB
     });
-    var AH, rH = LH(38002),
-      SH = LH(37963);
-    ! function(HH) {
-      HH[HH.CW = 0] = "CW", HH[HH.CCW = 1] = "CCW"
-    }(AH || (AH = {}));
-    class hH {
-      static Interpolate(HH, BH, LH, AH, rH) {
-        if (0 === HH) return 0;
-        const SH = 1 - 3 * AH + 3 * BH,
-          hH = 3 * AH - 6 * BH,
-          tH = 3 * BH;
-        let zH = HH;
-        for (let CH = 0; CH < 5; CH++) {
-          const BH = zH * zH;
-          zH -= (SH * (BH * zH) + hH * BH + tH * zH - HH) * (1 / (3 * SH * BH + 2 * hH * zH + tH)), zH = Math.min(1, Math.max(0, zH))
+    var YB, DB = GB(37807),
+      QB = GB(37778);
+    ! function(BB) {
+      BB[BB.CW = 0] = "CW", BB[BB.CCW = 1] = "CCW"
+    }(YB || (YB = {}));
+    class oB {
+      static Interpolate(BB, OB, GB, YB, DB) {
+        if (0 === BB) return 0;
+        const QB = 1 - 3 * YB + 3 * OB,
+          oB = 3 * YB - 6 * OB,
+          jB = 3 * OB;
+        let yB = BB;
+        for (let JB = 0; JB < 5; JB++) {
+          const OB = yB * yB;
+          yB -= (QB * (OB * yB) + oB * OB + jB * yB - BB) * (1 / (3 * QB * OB + 2 * oB * yB + jB)), yB = Math.min(1, Math.max(0, yB))
         }
-        return 3 * Math.pow(1 - zH, 2) * zH * LH + 3 * (1 - zH) * Math.pow(zH, 2) * rH + Math.pow(zH, 3)
+        return 3 * Math.pow(1 - yB, 2) * yB * GB + 3 * (1 - yB) * Math.pow(yB, 2) * DB + Math.pow(yB, 3)
       }
     }
-    class tH {
-      constructor(HH) {
-        this._radians = HH, this._radians < 0 && (this._radians += 2 * Math.PI)
+    class jB {
+      constructor(BB) {
+        this._radians = BB, this._radians < 0 && (this._radians += 2 * Math.PI)
       }
       degrees() {
         return 180 * this._radians / Math.PI
@@ -36,242 +36,242 @@ export const modules = {
       radians() {
         return this._radians
       }
-      static BetweenTwoPoints(HH, BH) {
-        const LH = BH.subtract(HH),
-          AH = Math.atan2(LH.y, LH.x);
-        return new tH(AH)
+      static BetweenTwoPoints(BB, OB) {
+        const GB = OB.subtract(BB),
+          YB = Math.atan2(GB.y, GB.x);
+        return new jB(YB)
       }
-      static BetweenTwoVectors(HH, BH) {
-        let LH = HH.lengthSquared() * BH.lengthSquared();
-        if (0 === LH) return new tH(Math.PI / 2);
-        LH = Math.sqrt(LH);
-        let AH = HH.dot(BH) / LH;
-        AH = (0, rH.Clamp)(AH, -1, 1);
-        const SH = Math.acos(AH);
-        return new tH(SH)
+      static BetweenTwoVectors(BB, OB) {
+        let GB = BB.lengthSquared() * OB.lengthSquared();
+        if (0 === GB) return new jB(Math.PI / 2);
+        GB = Math.sqrt(GB);
+        let YB = BB.dot(OB) / GB;
+        YB = (0, DB.Clamp)(YB, -1, 1);
+        const QB = Math.acos(YB);
+        return new jB(QB)
       }
-      static FromRadians(HH) {
-        return new tH(HH)
+      static FromRadians(BB) {
+        return new jB(BB)
       }
-      static FromDegrees(HH) {
-        return new tH(HH * Math.PI / 180)
-      }
-    }
-    class zH {
-      constructor(HH, BH, LH) {
-        this.startPoint = HH, this.midPoint = BH, this.endPoint = LH;
-        const AH = Math.pow(BH.x, 2) + Math.pow(BH.y, 2),
-          rH = (Math.pow(HH.x, 2) + Math.pow(HH.y, 2) - AH) / 2,
-          hH = (AH - Math.pow(LH.x, 2) - Math.pow(LH.y, 2)) / 2,
-          zH = (HH.x - BH.x) * (BH.y - LH.y) - (BH.x - LH.x) * (HH.y - BH.y);
-        this.centerPoint = new SH.n((rH * (BH.y - LH.y) - hH * (HH.y - BH.y)) / zH, ((HH.x - BH.x) * hH - (BH.x - LH.x) * rH) / zH), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = tH.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const CH = this.startAngle.degrees();
-        let EH = tH.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          XH = tH.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        EH - CH > 180 && (EH -= 360), EH - CH < -180 && (EH += 360), XH - EH > 180 && (XH -= 360), XH - EH < -180 && (XH += 360), this.orientation = EH - CH < 0 ? 0 : 1, this.angle = tH.FromDegrees(0 === this.orientation ? CH - XH : XH - CH)
+      static FromDegrees(BB) {
+        return new jB(BB * Math.PI / 180)
       }
     }
-    class CH {
-      constructor(HH, BH) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new SH.n(HH, BH))
+    class yB {
+      constructor(BB, OB, GB) {
+        this.startPoint = BB, this.midPoint = OB, this.endPoint = GB;
+        const YB = Math.pow(OB.x, 2) + Math.pow(OB.y, 2),
+          DB = (Math.pow(BB.x, 2) + Math.pow(BB.y, 2) - YB) / 2,
+          oB = (YB - Math.pow(GB.x, 2) - Math.pow(GB.y, 2)) / 2,
+          yB = (BB.x - OB.x) * (OB.y - GB.y) - (OB.x - GB.x) * (BB.y - OB.y);
+        this.centerPoint = new QB.o((DB * (OB.y - GB.y) - oB * (BB.y - OB.y)) / yB, ((BB.x - OB.x) * oB - (OB.x - GB.x) * DB) / yB), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = jB.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const JB = this.startAngle.degrees();
+        let MB = jB.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          PB = jB.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        MB - JB > 180 && (MB -= 360), MB - JB < -180 && (MB += 360), PB - MB > 180 && (PB -= 360), PB - MB < -180 && (PB += 360), this.orientation = MB - JB < 0 ? 0 : 1, this.angle = jB.FromDegrees(0 === this.orientation ? JB - PB : PB - JB)
       }
-      addLineTo(HH, BH) {
-        if (this.closed) return this;
-        const LH = new SH.n(HH, BH),
-          AH = this._points[this._points.length - 1];
-        return this._points.push(LH), this._length += LH.subtract(AH).length(), this
+    }
+    class JB {
+      constructor(BB, OB) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new QB.o(BB, OB))
       }
-      addArcTo(HH, BH, LH, AH) {
-        let rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addLineTo(BB, OB) {
         if (this.closed) return this;
-        const hH = this._points[this._points.length - 1],
-          tH = new SH.n(HH, BH),
-          CH = new SH.n(LH, AH),
-          EH = new zH(hH, tH, CH);
-        let XH = EH.angle.radians() / rH;
-        0 === EH.orientation && (XH *= -1);
-        let GH = EH.startAngle.radians() + XH;
-        for (let SH = 0; SH < rH; SH++) {
-          const HH = Math.cos(GH) * EH.radius + EH.centerPoint.x,
-            BH = Math.sin(GH) * EH.radius + EH.centerPoint.y;
-          this.addLineTo(HH, BH), GH += XH
+        const GB = new QB.o(BB, OB),
+          YB = this._points[this._points.length - 1];
+        return this._points.push(GB), this._length += GB.subtract(YB).length(), this
+      }
+      addArcTo(BB, OB, GB, YB) {
+        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const oB = this._points[this._points.length - 1],
+          jB = new QB.o(BB, OB),
+          JB = new QB.o(GB, YB),
+          MB = new yB(oB, jB, JB);
+        let PB = MB.angle.radians() / DB;
+        0 === MB.orientation && (PB *= -1);
+        let zB = MB.startAngle.radians() + PB;
+        for (let QB = 0; QB < DB; QB++) {
+          const BB = Math.cos(zB) * MB.radius + MB.centerPoint.x,
+            OB = Math.sin(zB) * MB.radius + MB.centerPoint.y;
+          this.addLineTo(BB, OB), zB += PB
         }
         return this
       }
-      addQuadraticCurveTo(HH, BH, LH, AH) {
-        let rH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addQuadraticCurveTo(BB, OB, GB, YB) {
+        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
         if (this.closed) return this;
-        const SH = (HH, BH, LH, AH) => (1 - HH) * (1 - HH) * BH + 2 * HH * (1 - HH) * LH + HH * HH * AH,
-          hH = this._points[this._points.length - 1];
-        for (let tH = 0; tH <= rH; tH++) {
-          const zH = tH / rH,
-            CH = SH(zH, hH.x, HH, LH),
-            EH = SH(zH, hH.y, BH, AH);
-          this.addLineTo(CH, EH)
+        const QB = (BB, OB, GB, YB) => (1 - BB) * (1 - BB) * OB + 2 * BB * (1 - BB) * GB + BB * BB * YB,
+          oB = this._points[this._points.length - 1];
+        for (let jB = 0; jB <= DB; jB++) {
+          const yB = jB / DB,
+            JB = QB(yB, oB.x, BB, GB),
+            MB = QB(yB, oB.y, OB, YB);
+          this.addLineTo(JB, MB)
         }
         return this
       }
-      addBezierCurveTo(HH, BH, LH, AH, rH, SH) {
-        let hH = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+      addBezierCurveTo(BB, OB, GB, YB, DB, QB) {
+        let oB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
         if (this.closed) return this;
-        const tH = (HH, BH, LH, AH, rH) => (1 - HH) * (1 - HH) * (1 - HH) * BH + 3 * HH * (1 - HH) * (1 - HH) * LH + 3 * HH * HH * (1 - HH) * AH + HH * HH * HH * rH,
-          zH = this._points[this._points.length - 1];
-        for (let CH = 0; CH <= hH; CH++) {
-          const EH = CH / hH,
-            XH = tH(EH, zH.x, HH, LH, rH),
-            GH = tH(EH, zH.y, BH, AH, SH);
-          this.addLineTo(XH, GH)
+        const jB = (BB, OB, GB, YB, DB) => (1 - BB) * (1 - BB) * (1 - BB) * OB + 3 * BB * (1 - BB) * (1 - BB) * GB + 3 * BB * BB * (1 - BB) * YB + BB * BB * BB * DB,
+          yB = this._points[this._points.length - 1];
+        for (let JB = 0; JB <= oB; JB++) {
+          const MB = JB / oB,
+            PB = jB(MB, yB.x, BB, GB, DB),
+            zB = jB(MB, yB.y, OB, YB, QB);
+          this.addLineTo(PB, zB)
         }
         return this
       }
-      isPointInside(HH) {
-        let BH = !1;
-        const LH = this._points.length;
-        for (let AH = LH - 1, rH = 0; rH < LH; AH = rH++) {
-          let LH = this._points[AH],
-            SH = this._points[rH],
-            hH = SH.x - LH.x,
-            tH = SH.y - LH.y;
-          if (Math.abs(tH) > Number.EPSILON) {
-            if (tH < 0 && (LH = this._points[rH], hH = -hH, SH = this._points[AH], tH = -tH), HH.y < LH.y || HH.y > SH.y) continue;
-            if (HH.y === LH.y && HH.x === LH.x) return !0;
+      isPointInside(BB) {
+        let OB = !1;
+        const GB = this._points.length;
+        for (let YB = GB - 1, DB = 0; DB < GB; YB = DB++) {
+          let GB = this._points[YB],
+            QB = this._points[DB],
+            oB = QB.x - GB.x,
+            jB = QB.y - GB.y;
+          if (Math.abs(jB) > Number.EPSILON) {
+            if (jB < 0 && (GB = this._points[DB], oB = -oB, QB = this._points[YB], jB = -jB), BB.y < GB.y || BB.y > QB.y) continue;
+            if (BB.y === GB.y && BB.x === GB.x) return !0;
             {
-              const AH = tH * (HH.x - LH.x) - hH * (HH.y - LH.y);
-              if (0 === AH) return !0;
-              if (AH < 0) continue;
-              BH = !BH
+              const YB = jB * (BB.x - GB.x) - oB * (BB.y - GB.y);
+              if (0 === YB) return !0;
+              if (YB < 0) continue;
+              OB = !OB
             }
           } else {
-            if (HH.y !== LH.y) continue;
-            if (SH.x <= HH.x && HH.x <= LH.x || LH.x <= HH.x && HH.x <= SH.x) return !0
+            if (BB.y !== GB.y) continue;
+            if (QB.x <= BB.x && BB.x <= GB.x || GB.x <= BB.x && BB.x <= QB.x) return !0
           }
         }
-        return BH
+        return OB
       }
       close() {
         return this.closed = !0, this
       }
       length() {
-        let HH = this._length;
+        let BB = this._length;
         if (this.closed) {
-          const BH = this._points[this._points.length - 1];
-          HH += this._points[0].subtract(BH).length()
+          const OB = this._points[this._points.length - 1];
+          BB += this._points[0].subtract(OB).length()
         }
-        return HH
+        return BB
       }
       area() {
-        const HH = this._points.length;
-        let BH = 0;
-        for (let LH = HH - 1, AH = 0; AH < HH; LH = AH++) BH += this._points[LH].x * this._points[AH].y - this._points[AH].x * this._points[LH].y;
-        return .5 * BH
+        const BB = this._points.length;
+        let OB = 0;
+        for (let GB = BB - 1, YB = 0; YB < BB; GB = YB++) OB += this._points[GB].x * this._points[YB].y - this._points[YB].x * this._points[GB].y;
+        return .5 * OB
       }
       getPoints() {
         return this._points
       }
-      getPointAtLengthPosition(HH) {
-        if (HH < 0 || HH > 1) return SH.n.Zero();
-        const BH = HH * this.length();
-        let LH = 0;
-        for (let AH = 0; AH < this._points.length; AH++) {
-          const HH = (AH + 1) % this._points.length,
-            rH = this._points[AH],
-            hH = this._points[HH].subtract(rH),
-            tH = hH.length() + LH;
-          if (BH >= LH && BH <= tH) {
-            const HH = hH.normalize(),
-              AH = BH - LH;
-            return new SH.n(rH.x + HH.x * AH, rH.y + HH.y * AH)
+      getPointAtLengthPosition(BB) {
+        if (BB < 0 || BB > 1) return QB.o.Zero();
+        const OB = BB * this.length();
+        let GB = 0;
+        for (let YB = 0; YB < this._points.length; YB++) {
+          const BB = (YB + 1) % this._points.length,
+            DB = this._points[YB],
+            oB = this._points[BB].subtract(DB),
+            jB = oB.length() + GB;
+          if (OB >= GB && OB <= jB) {
+            const BB = oB.normalize(),
+              YB = OB - GB;
+            return new QB.o(DB.x + BB.x * YB, DB.y + BB.y * YB)
           }
-          LH = tH
+          GB = jB
         }
-        return SH.n.Zero()
+        return QB.o.Zero()
       }
-      static StartingAt(HH, BH) {
-        return new CH(HH, BH)
+      static StartingAt(BB, OB) {
+        return new JB(BB, OB)
       }
     }
-    class EH {
-      static CreateQuadraticBezier(HH, BH, LH, AH) {
-        AH = AH > 2 ? AH : 3;
-        const rH = [],
-          hH = (HH, BH, LH, AH) => (1 - HH) * (1 - HH) * BH + 2 * HH * (1 - HH) * LH + HH * HH * AH;
-        for (let tH = 0; tH <= AH; tH++) rH.push(new SH.o(hH(tH / AH, HH.x, BH.x, LH.x), hH(tH / AH, HH.y, BH.y, LH.y), hH(tH / AH, HH.z, BH.z, LH.z)));
-        return new EH(rH)
+    class MB {
+      static CreateQuadraticBezier(BB, OB, GB, YB) {
+        YB = YB > 2 ? YB : 3;
+        const DB = [],
+          oB = (BB, OB, GB, YB) => (1 - BB) * (1 - BB) * OB + 2 * BB * (1 - BB) * GB + BB * BB * YB;
+        for (let jB = 0; jB <= YB; jB++) DB.push(new QB.r(oB(jB / YB, BB.x, OB.x, GB.x), oB(jB / YB, BB.y, OB.y, GB.y), oB(jB / YB, BB.z, OB.z, GB.z)));
+        return new MB(DB)
       }
-      static CreateCubicBezier(HH, BH, LH, AH, rH) {
-        rH = rH > 3 ? rH : 4;
-        const hH = [],
-          tH = (HH, BH, LH, AH, rH) => (1 - HH) * (1 - HH) * (1 - HH) * BH + 3 * HH * (1 - HH) * (1 - HH) * LH + 3 * HH * HH * (1 - HH) * AH + HH * HH * HH * rH;
-        for (let zH = 0; zH <= rH; zH++) hH.push(new SH.o(tH(zH / rH, HH.x, BH.x, LH.x, AH.x), tH(zH / rH, HH.y, BH.y, LH.y, AH.y), tH(zH / rH, HH.z, BH.z, LH.z, AH.z)));
-        return new EH(hH)
+      static CreateCubicBezier(BB, OB, GB, YB, DB) {
+        DB = DB > 3 ? DB : 4;
+        const oB = [],
+          jB = (BB, OB, GB, YB, DB) => (1 - BB) * (1 - BB) * (1 - BB) * OB + 3 * BB * (1 - BB) * (1 - BB) * GB + 3 * BB * BB * (1 - BB) * YB + BB * BB * BB * DB;
+        for (let yB = 0; yB <= DB; yB++) oB.push(new QB.r(jB(yB / DB, BB.x, OB.x, GB.x, YB.x), jB(yB / DB, BB.y, OB.y, GB.y, YB.y), jB(yB / DB, BB.z, OB.z, GB.z, YB.z)));
+        return new MB(oB)
       }
-      static CreateHermiteSpline(HH, BH, LH, AH, rH) {
-        const hH = [],
-          tH = 1 / rH;
-        for (let zH = 0; zH <= rH; zH++) hH.push(SH.o.Hermite(HH, BH, LH, AH, zH * tH));
-        return new EH(hH)
+      static CreateHermiteSpline(BB, OB, GB, YB, DB) {
+        const oB = [],
+          jB = 1 / DB;
+        for (let yB = 0; yB <= DB; yB++) oB.push(QB.r.Hermite(BB, OB, GB, YB, yB * jB));
+        return new MB(oB)
       }
-      static CreateCatmullRomSpline(HH, BH, LH) {
-        const AH = [],
-          rH = 1 / BH;
-        let hH = 0;
-        if (LH) {
-          const LH = HH.length;
-          for (let tH = 0; tH < LH; tH++) {
-            hH = 0;
-            for (let zH = 0; zH < BH; zH++) AH.push(SH.o.CatmullRom(HH[tH % LH], HH[(tH + 1) % LH], HH[(tH + 2) % LH], HH[(tH + 3) % LH], hH)), hH += rH
+      static CreateCatmullRomSpline(BB, OB, GB) {
+        const YB = [],
+          DB = 1 / OB;
+        let oB = 0;
+        if (GB) {
+          const GB = BB.length;
+          for (let jB = 0; jB < GB; jB++) {
+            oB = 0;
+            for (let yB = 0; yB < OB; yB++) YB.push(QB.r.CatmullRom(BB[jB % GB], BB[(jB + 1) % GB], BB[(jB + 2) % GB], BB[(jB + 3) % GB], oB)), oB += DB
           }
-          AH.push(AH[0])
+          YB.push(YB[0])
         } else {
-          const LH = [];
-          LH.push(HH[0].clone()), LH.push(...HH), LH.push(HH[HH.length - 1].clone());
-          let tH = 0;
-          for (; tH < LH.length - 3; tH++) {
-            hH = 0;
-            for (let HH = 0; HH < BH; HH++) AH.push(SH.o.CatmullRom(LH[tH], LH[tH + 1], LH[tH + 2], LH[tH + 3], hH)), hH += rH
+          const GB = [];
+          GB.push(BB[0].clone()), GB.push(...BB), GB.push(BB[BB.length - 1].clone());
+          let jB = 0;
+          for (; jB < GB.length - 3; jB++) {
+            oB = 0;
+            for (let BB = 0; BB < OB; BB++) YB.push(QB.r.CatmullRom(GB[jB], GB[jB + 1], GB[jB + 2], GB[jB + 3], oB)), oB += DB
           }
-          tH--, AH.push(SH.o.CatmullRom(LH[tH], LH[tH + 1], LH[tH + 2], LH[tH + 3], hH))
+          jB--, YB.push(QB.r.CatmullRom(GB[jB], GB[jB + 1], GB[jB + 2], GB[jB + 3], oB))
         }
-        return new EH(AH)
+        return new MB(YB)
       }
-      static ArcThru3Points(HH, BH, LH) {
-        let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          rH = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          hH = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const tH = [],
-          zH = BH.subtract(HH),
-          CH = LH.subtract(BH),
-          XH = HH.subtract(LH),
-          GH = SH.o.Cross(zH, CH),
-          YH = GH.length();
-        if (YH < Math.pow(10, -8)) return new EH(tH);
-        const uH = zH.lengthSquared(),
-          QH = CH.lengthSquared(),
-          WH = XH.lengthSquared(),
-          MH = GH.lengthSquared(),
-          xH = .5 * zH.length() * CH.length() * XH.length() / YH,
-          vH = -.5 * QH * SH.o.Dot(zH, XH) / MH,
-          PH = -.5 * WH * SH.o.Dot(zH, CH) / MH,
-          TH = -.5 * uH * SH.o.Dot(CH, XH) / MH,
-          UH = HH.scale(vH).add(BH.scale(PH)).add(LH.scale(TH)),
-          VH = HH.subtract(UH).normalize(),
-          OH = SH.o.Cross(GH, VH).normalize();
-        if (hH) {
-          const BH = 2 * Math.PI / AH;
-          for (let HH = 0; HH <= 2 * Math.PI; HH += BH) tH.push(UH.add(VH.scale(xH * Math.cos(HH)).add(OH.scale(xH * Math.sin(HH)))));
-          tH.push(HH)
+      static ArcThru3Points(BB, OB, GB) {
+        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          DB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          oB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const jB = [],
+          yB = OB.subtract(BB),
+          JB = GB.subtract(OB),
+          PB = BB.subtract(GB),
+          zB = QB.r.Cross(yB, JB),
+          lB = zB.length();
+        if (lB < Math.pow(10, -8)) return new MB(jB);
+        const pB = yB.lengthSquared(),
+          qB = JB.lengthSquared(),
+          ZB = PB.lengthSquared(),
+          NB = zB.lengthSquared(),
+          RB = .5 * yB.length() * JB.length() * PB.length() / lB,
+          WB = -.5 * qB * QB.r.Dot(yB, PB) / NB,
+          AB = -.5 * ZB * QB.r.Dot(yB, JB) / NB,
+          VB = -.5 * pB * QB.r.Dot(JB, PB) / NB,
+          SB = BB.scale(WB).add(OB.scale(AB)).add(GB.scale(VB)),
+          nB = BB.subtract(SB).normalize(),
+          UB = QB.r.Cross(zB, nB).normalize();
+        if (oB) {
+          const OB = 2 * Math.PI / YB;
+          for (let BB = 0; BB <= 2 * Math.PI; BB += OB) jB.push(SB.add(nB.scale(RB * Math.cos(BB)).add(UB.scale(RB * Math.sin(BB)))));
+          jB.push(BB)
         } else {
-          const BH = 1 / AH;
-          let SH, hH = 0;
+          const OB = 1 / YB;
+          let QB, oB = 0;
           do {
-            SH = UH.add(VH.scale(xH * Math.cos(hH)).add(OH.scale(xH * Math.sin(hH)))), tH.push(SH), hH += BH
-          } while (!SH.equalsWithEpsilon(LH, xH * BH * 1.1));
-          tH.push(LH), rH && tH.push(HH)
+            QB = SB.add(nB.scale(RB * Math.cos(oB)).add(UB.scale(RB * Math.sin(oB)))), jB.push(QB), oB += OB
+          } while (!QB.equalsWithEpsilon(GB, RB * OB * 1.1));
+          jB.push(GB), DB && jB.push(BB)
         }
-        return new EH(tH)
+        return new MB(jB)
       }
-      constructor(HH) {
-        this._length = 0, this._points = HH, this._length = this._computeLength(HH)
+      constructor(BB) {
+        this._length = 0, this._points = BB, this._length = this._computeLength(BB)
       }
       getPoints() {
         return this._points
@@ -279,121 +279,121 @@ export const modules = {
       length() {
         return this._length
       }
-      continue (HH) {
-        const BH = this._points[this._points.length - 1],
-          LH = this._points.slice(),
-          AH = HH.getPoints();
-        for (let rH = 1; rH < AH.length; rH++) LH.push(AH[rH].subtract(AH[0]).add(BH));
-        return new EH(LH)
+      continue (BB) {
+        const OB = this._points[this._points.length - 1],
+          GB = this._points.slice(),
+          YB = BB.getPoints();
+        for (let DB = 1; DB < YB.length; DB++) GB.push(YB[DB].subtract(YB[0]).add(OB));
+        return new MB(GB)
       }
-      _computeLength(HH) {
-        let BH = 0;
-        for (let LH = 1; LH < HH.length; LH++) BH += HH[LH].subtract(HH[LH - 1]).length();
-        return BH
+      _computeLength(BB) {
+        let OB = 0;
+        for (let GB = 1; GB < BB.length; GB++) OB += BB[GB].subtract(BB[GB - 1]).length();
+        return OB
       }
     }
   },
-  39588: (HH, BH, LH) => {
-    LH.d(BH, {
-      d: () => SH
+  39358: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => QB
     });
-    var AH = LH(39595);
-    const rH = (HH, BH, LH) => HH ? HH.getClassName && "Mesh" === HH.getClassName() ? null : !HH.getClassName || "SubMesh" !== HH.getClassName() && "PhysicsBody" !== HH.getClassName() ? HH.clone ? HH.clone() : Array.isArray(HH) ? HH.slice() : LH && "object" === typeof HH ? {
-      ...HH
-    } : null : HH.clone(BH) : null;
-    class SH {
-      static DeepCopy(HH, BH, LH, SH) {
-        let hH = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const tH = function(HH) {
-          const BH = [];
+    var YB = GB(39366);
+    const DB = (BB, OB, GB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : GB && "object" === typeof BB ? {
+      ...BB
+    } : null : BB.clone(OB) : null;
+    class QB {
+      static DeepCopy(BB, OB, GB, QB) {
+        let oB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const jB = function(BB) {
+          const OB = [];
           do {
-            const LH = Object.getOwnPropertyNames(HH);
-            for (const HH of LH) - 1 === BH.indexOf(HH) && BH.push(HH)
-          } while (HH = Object.getPrototypeOf(HH));
-          return BH
-        }(HH);
-        for (const CH of tH) {
-          if ("_" === CH[0] && (!SH || -1 === SH.indexOf(CH))) continue;
-          if (CH.endsWith("Observable")) continue;
-          if (LH && -1 !== LH.indexOf(CH)) continue;
-          const tH = HH[CH],
-            EH = typeof tH;
-          if ("function" !== EH) try {
-            if ("object" === EH)
-              if (tH instanceof Uint8Array) BH[CH] = Uint8Array.from(tH);
-              else if (tH instanceof Array) {
-              if (BH[CH] = [], tH.length > 0)
-                if ("object" == typeof tH[0])
-                  for (let HH = 0; HH < tH.length; HH++) {
-                    const LH = rH(tH[HH], BH, hH); - 1 === BH[CH].indexOf(LH) && BH[CH].push(LH)
-                  } else BH[CH] = tH.slice(0)
-            } else BH[CH] = rH(tH, BH, hH);
-            else BH[CH] = tH
-          } catch (zH) {
-            AH.e.Warn(zH.message)
+            const GB = Object.getOwnPropertyNames(BB);
+            for (const BB of GB) - 1 === OB.indexOf(BB) && OB.push(BB)
+          } while (BB = Object.getPrototypeOf(BB));
+          return OB
+        }(BB);
+        for (const JB of jB) {
+          if ("_" === JB[0] && (!QB || -1 === QB.indexOf(JB))) continue;
+          if (JB.endsWith("Observable")) continue;
+          if (GB && -1 !== GB.indexOf(JB)) continue;
+          const jB = BB[JB],
+            MB = typeof jB;
+          if ("function" !== MB) try {
+            if ("object" === MB)
+              if (jB instanceof Uint8Array) OB[JB] = Uint8Array.from(jB);
+              else if (jB instanceof Array) {
+              if (OB[JB] = [], jB.length > 0)
+                if ("object" == typeof jB[0])
+                  for (let BB = 0; BB < jB.length; BB++) {
+                    const GB = DB(jB[BB], OB, oB); - 1 === OB[JB].indexOf(GB) && OB[JB].push(GB)
+                  } else OB[JB] = jB.slice(0)
+            } else OB[JB] = DB(jB, OB, oB);
+            else OB[JB] = jB
+          } catch (yB) {
+            YB.b.Warn(yB.message)
           }
         }
       }
     }
   },
-  39595: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => AH
+  39366: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => YB
     });
-    class AH {
-      static _CheckLimit(HH, BH) {
-        let LH = AH._LogLimitOutputs[HH];
-        return LH ? LH.current++ : (LH = {
-          limit: BH,
+    class YB {
+      static _CheckLimit(BB, OB) {
+        let GB = YB._LogLimitOutputs[BB];
+        return GB ? GB.current++ : (GB = {
+          limit: OB,
           current: 1
-        }, AH._LogLimitOutputs[HH] = LH), LH.current <= LH.limit
+        }, YB._LogLimitOutputs[BB] = GB), GB.current <= GB.limit
       }
-      static _GenerateLimitMessage(HH) {
-        let BH = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const LH = AH._LogLimitOutputs[HH];
-        if (!LH || !AH.MessageLimitReached) return;
-        const rH = this._Levels[BH];
-        LH.current === LH.limit && AH[rH.name](AH.MessageLimitReached.replace(/%LIMIT%/g, "" + LH.limit).replace(/%TYPE%/g, rH.name ?? ""))
+      static _GenerateLimitMessage(BB) {
+        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const GB = YB._LogLimitOutputs[BB];
+        if (!GB || !YB.MessageLimitReached) return;
+        const DB = this._Levels[OB];
+        GB.current === GB.limit && YB[DB.name](YB.MessageLimitReached.replace(/%LIMIT%/g, "" + GB.limit).replace(/%TYPE%/g, DB.name ?? ""))
       }
-      static _AddLogEntry(HH) {
-        AH._LogCache = HH + AH._LogCache, AH.OnNewCacheEntry && AH.OnNewCacheEntry(HH)
+      static _AddLogEntry(BB) {
+        YB._LogCache = BB + YB._LogCache, YB.OnNewCacheEntry && YB.OnNewCacheEntry(BB)
       }
-      static _FormatMessage(HH) {
-        const BH = HH => HH < 10 ? "0" + HH : "" + HH,
-          LH = new Date;
-        return "[" + BH(LH.getHours()) + ":" + BH(LH.getMinutes()) + ":" + BH(LH.getSeconds()) + "]: " + HH
+      static _FormatMessage(BB) {
+        const OB = BB => BB < 10 ? "0" + BB : "" + BB,
+          GB = new Date;
+        return "[" + OB(GB.getHours()) + ":" + OB(GB.getMinutes()) + ":" + OB(GB.getSeconds()) + "]: " + BB
       }
-      static _LogDisabled(HH, BH) {}
+      static _LogDisabled(BB, OB) {}
       static _LogEnabled() {
-        let HH = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          BH = arguments.length > 1 ? arguments[1] : void 0,
-          LH = arguments.length > 2 ? arguments[2] : void 0;
-        const rH = Array.isArray(BH) ? BH[0] : BH;
-        if (void 0 !== LH && !AH._CheckLimit(rH, LH)) return;
-        const SH = AH._FormatMessage(rH),
-          hH = this._Levels[HH],
-          tH = Array.isArray(BH) ? BH.slice(1) : [];
-        hH.logFunc && hH.logFunc("BJS - " + SH, ...tH);
-        const zH = `<div style='color:${hH.color}'>${SH}</div><br>`;
-        AH._AddLogEntry(zH), AH._GenerateLimitMessage(rH, HH)
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          OB = arguments.length > 1 ? arguments[1] : void 0,
+          GB = arguments.length > 2 ? arguments[2] : void 0;
+        const DB = Array.isArray(OB) ? OB[0] : OB;
+        if (void 0 !== GB && !YB._CheckLimit(DB, GB)) return;
+        const QB = YB._FormatMessage(DB),
+          oB = this._Levels[BB],
+          jB = Array.isArray(OB) ? OB.slice(1) : [];
+        oB.logFunc && oB.logFunc("BJS - " + QB, ...jB);
+        const yB = `<div style='color:${oB.color}'>${QB}</div><br>`;
+        YB._AddLogEntry(yB), YB._GenerateLimitMessage(DB, BB)
       }
       static get LogCache() {
-        return AH._LogCache
+        return YB._LogCache
       }
       static ClearLogCache() {
-        AH._LogCache = "", AH._LogLimitOutputs = {}, AH.errorsCount = 0
+        YB._LogCache = "", YB._LogLimitOutputs = {}, YB.errorsCount = 0
       }
-      static set LogLevels(HH) {
-        AH.Log = AH._LogDisabled, AH.Warn = AH._LogDisabled, AH.Error = AH._LogDisabled;
-        const BH = [AH.MessageLogLevel, AH.WarningLogLevel, AH.ErrorLogLevel];
-        for (const LH of BH)
-          if ((HH & LH) === LH) {
-            const HH = this._Levels[LH];
-            AH[HH.name] = AH._LogEnabled.bind(AH, LH)
+      static set LogLevels(BB) {
+        YB.Log = YB._LogDisabled, YB.Warn = YB._LogDisabled, YB.Error = YB._LogDisabled;
+        const OB = [YB.MessageLogLevel, YB.WarningLogLevel, YB.ErrorLogLevel];
+        for (const GB of OB)
+          if ((BB & GB) === GB) {
+            const BB = this._Levels[GB];
+            YB[BB.name] = YB._LogEnabled.bind(YB, GB)
           }
       }
     }
-    AH.NoneLogLevel = 0, AH.MessageLogLevel = 1, AH.WarningLogLevel = 2, AH.ErrorLogLevel = 4, AH.AllLogLevel = 7, AH.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", AH._LogCache = "", AH._LogLimitOutputs = {}, AH._Levels = [{}, {
+    YB.NoneLogLevel = 0, YB.MessageLogLevel = 1, YB.WarningLogLevel = 2, YB.ErrorLogLevel = 4, YB.AllLogLevel = 7, YB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", YB._LogCache = "", YB._LogLimitOutputs = {}, YB._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +405,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], AH.errorsCount = 0, AH.Log = AH._LogEnabled.bind(AH, AH.MessageLogLevel), AH.Warn = AH._LogEnabled.bind(AH, AH.WarningLogLevel), AH.Error = AH._LogEnabled.bind(AH, AH.ErrorLogLevel)
+    }], YB.errorsCount = 0, YB.Log = YB._LogEnabled.bind(YB, YB.MessageLogLevel), YB.Warn = YB._LogEnabled.bind(YB, YB.WarningLogLevel), YB.Error = YB._LogEnabled.bind(YB, YB.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);

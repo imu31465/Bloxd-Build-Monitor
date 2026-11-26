@@ -1,31 +1,31 @@
 export const id = 69;
 export const ids = [69];
 export const modules = {
-  41946: (HH, BH, LH) => {
-    LH.d(BH, {
-      e: () => rH,
-      g: () => EH
+  41630: (BB, OB, GB) => {
+    GB.d(OB, {
+      b: () => DB,
+      e: () => MB
     });
-    const AH = new TextDecoder;
+    const YB = new TextDecoder;
 
-    function rH(HH) {
-      const BH = new SH(HH),
-        LH = BH.value();
-      if (BH.at !== HH.length) throw new Error(`msgpack: ${HH.length-BH.at} bytes after the value`);
-      return LH
+    function DB(BB) {
+      const OB = new QB(BB),
+        GB = OB.value();
+      if (OB.at !== BB.length) throw new Error(`msgpack: ${BB.length-OB.at} bytes after the value`);
+      return GB
     }
-    class SH {
-      constructor(HH) {
-        this.bytes = HH, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(HH.buffer, HH.byteOffset, HH.byteLength)
+    class QB {
+      constructor(BB) {
+        this.bytes = BB, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(BB.buffer, BB.byteOffset, BB.byteLength)
       }
       value() {
-        const HH = this.u8();
-        if (HH <= 127) return HH;
-        if (HH >= 224) return HH - 256;
-        if (HH >= 128 && HH <= 143) return this.map(15 & HH);
-        if (HH >= 144 && HH <= 159) return this.array(15 & HH);
-        if (HH >= 160 && HH <= 191) return this.str(31 & HH);
-        switch (HH) {
+        const BB = this.u8();
+        if (BB <= 127) return BB;
+        if (BB >= 224) return BB - 256;
+        if (BB >= 128 && BB <= 143) return this.map(15 & BB);
+        if (BB >= 144 && BB <= 159) return this.array(15 & BB);
+        if (BB >= 160 && BB <= 191) return this.str(31 & BB);
+        switch (BB) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${HH.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${BB.toString(16)} at ${this.at-1}`)
         }
       }
-      take(HH) {
-        const BH = this.at;
-        if (BH + HH > this.bytes.length) throw new Error(`msgpack: ${HH} bytes past the end at ${BH}`);
-        return this.at = BH + HH, BH
+      take(BB) {
+        const OB = this.at;
+        if (OB + BB > this.bytes.length) throw new Error(`msgpack: ${BB} bytes past the end at ${OB}`);
+        return this.at = OB + BB, OB
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,323 +106,323 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(HH) {
-        const BH = this.take(8);
-        return HH ? this.view.getBigInt64(BH, !1) : this.view.getBigUint64(BH, !1)
+      int64(BB) {
+        const OB = this.take(8);
+        return BB ? this.view.getBigInt64(OB, !1) : this.view.getBigUint64(OB, !1)
       }
-      str(HH) {
-        const BH = this.take(HH),
-          LH = this.bytes;
-        if (HH < 16) {
-          let rH = "";
-          for (let SH = BH; SH < BH + HH; SH++) {
-            const hH = LH[SH];
-            if (hH >= 128) return AH.decode(LH.subarray(BH, BH + HH));
-            rH += String.fromCharCode(hH)
+      str(BB) {
+        const OB = this.take(BB),
+          GB = this.bytes;
+        if (BB < 16) {
+          let DB = "";
+          for (let QB = OB; QB < OB + BB; QB++) {
+            const oB = GB[QB];
+            if (oB >= 128) return YB.decode(GB.subarray(OB, OB + BB));
+            DB += String.fromCharCode(oB)
           }
-          return rH
+          return DB
         }
-        return AH.decode(LH.subarray(BH, BH + HH))
+        return YB.decode(GB.subarray(OB, OB + BB))
       }
-      bin(HH) {
-        const BH = this.take(HH);
-        return this.bytes.subarray(BH, BH + HH)
+      bin(BB) {
+        const OB = this.take(BB);
+        return this.bytes.subarray(OB, OB + BB)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(HH) {
+      array(BB) {
         this.enter();
-        const BH = [];
-        for (let LH = 0; LH < HH; LH++) BH.push(this.value());
-        return this.depth--, BH
+        const OB = [];
+        for (let GB = 0; GB < BB; GB++) OB.push(this.value());
+        return this.depth--, OB
       }
-      map(HH) {
+      map(BB) {
         this.enter();
-        const BH = {};
-        for (let LH = 0; LH < HH; LH++) {
-          const HH = this.value(),
-            LH = this.value();
-          BH["__proto__" === HH ? "__proto_" : String(HH)] = LH
+        const OB = {};
+        for (let GB = 0; GB < BB; GB++) {
+          const BB = this.value(),
+            GB = this.value();
+          OB["__proto__" === BB ? "__proto_" : String(BB)] = GB
         }
-        return this.depth--, BH
+        return this.depth--, OB
       }
-      ext(HH) {
-        const BH = this.view.getInt8(this.take(1)),
-          LH = this.take(HH);
-        if (0 !== BH) {
-          if (-1 === BH) {
-            if (1 === HH) return new Date(NaN);
-            if (4 === HH) return new Date(1e3 * this.view.getUint32(LH, !1));
-            if (8 === HH) {
-              const HH = this.view.getUint32(LH, !1),
-                BH = HH >>> 2,
-                AH = 4294967296 * (3 & HH) + this.view.getUint32(LH + 4, !1);
-              return new Date(1e3 * AH + BH / 1e6)
+      ext(BB) {
+        const OB = this.view.getInt8(this.take(1)),
+          GB = this.take(BB);
+        if (0 !== OB) {
+          if (-1 === OB) {
+            if (1 === BB) return new Date(NaN);
+            if (4 === BB) return new Date(1e3 * this.view.getUint32(GB, !1));
+            if (8 === BB) {
+              const BB = this.view.getUint32(GB, !1),
+                OB = BB >>> 2,
+                YB = 4294967296 * (3 & BB) + this.view.getUint32(GB + 4, !1);
+              return new Date(1e3 * YB + OB / 1e6)
             }
-            if (12 === HH) {
-              const HH = this.view.getUint32(LH, !1),
-                BH = 4294967296 * this.view.getInt32(LH + 4, !1) + this.view.getUint32(LH + 8, !1);
-              return new Date(1e3 * BH + HH / 1e6)
+            if (12 === BB) {
+              const BB = this.view.getUint32(GB, !1),
+                OB = 4294967296 * this.view.getInt32(GB + 4, !1) + this.view.getUint32(GB + 8, !1);
+              return new Date(1e3 * OB + BB / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${BH} of ${HH} bytes`)
+          throw new Error(`msgpack: ext type ${OB} of ${BB} bytes`)
         }
       }
     }
-    const hH = new TextEncoder,
-      tH = -(2n ** 63n),
-      zH = 2n ** 63n - 1n,
-      CH = 2n ** 64n - 1n;
+    const oB = new TextEncoder,
+      jB = -(2n ** 63n),
+      yB = 2n ** 63n - 1n,
+      JB = 2n ** 64n - 1n;
 
-    function EH(HH) {
-      const BH = new XH;
-      return BH.value(HH, 0), BH.bytes()
+    function MB(BB) {
+      const OB = new PB;
+      return OB.value(BB, 0), OB.bytes()
     }
-    class XH {
+    class PB {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(HH, BH) {
-        if (BH > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof HH) {
+      value(BB, OB) {
+        if (OB > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof BB) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(HH ? 195 : 194);
+            return void this.u8(BB ? 195 : 194);
           case "number":
-            return void this.number(HH);
+            return void this.number(BB);
           case "bigint":
-            return void this.bigint(HH);
+            return void this.bigint(BB);
           case "string":
-            return void this.string(HH);
+            return void this.string(BB);
           case "object":
-            if (null === HH) this.u8(192);
-            else if (HH instanceof Uint8Array) this.head(HH.length, 196, -1, 197, 198), this.room(HH.length), this.buf.set(HH, this.at), this.at += HH.length;
-            else if (Array.isArray(HH)) {
-              this.head(HH.length, 220, 144, 220, 221);
-              for (const LH of HH) this.value(LH, BH + 1)
+            if (null === BB) this.u8(192);
+            else if (BB instanceof Uint8Array) this.head(BB.length, 196, -1, 197, 198), this.room(BB.length), this.buf.set(BB, this.at), this.at += BB.length;
+            else if (Array.isArray(BB)) {
+              this.head(BB.length, 220, 144, 220, 221);
+              for (const GB of BB) this.value(GB, OB + 1)
             } else {
-              var LH, AH;
-              if (Object.getPrototypeOf(HH) !== Object.prototype && null !== Object.getPrototypeOf(HH)) throw new Error(`msgpack: can't encode a ${null!==(LH=null===(AH=HH.constructor)||void 0===AH?void 0:AH.name)&&void 0!==LH?LH:"object"}`);
+              var GB, YB;
+              if (Object.getPrototypeOf(BB) !== Object.prototype && null !== Object.getPrototypeOf(BB)) throw new Error(`msgpack: can't encode a ${null!==(GB=null===(YB=BB.constructor)||void 0===YB?void 0:YB.name)&&void 0!==GB?GB:"object"}`);
               {
-                const LH = Object.keys(HH);
-                this.head(LH.length, 222, 128, 222, 223);
-                for (const AH of LH) this.string(AH), this.value(HH[AH], BH + 1)
+                const GB = Object.keys(BB);
+                this.head(GB.length, 222, 128, 222, 223);
+                for (const YB of GB) this.string(YB), this.value(BB[YB], OB + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof HH)
+            throw new Error("msgpack: can't encode a " + typeof BB)
         }
       }
-      number(HH) {
-        Number.isInteger(HH) && HH >= -2147483648 && HH <= 4294967295 ? HH >= 0 ? HH < 128 ? this.u8(HH) : HH < 256 ? (this.u8(204), this.u8(HH)) : HH < 65536 ? (this.u8(205), this.u16(HH)) : (this.u8(206), this.u32(HH)) : HH >= -32 ? this.u8(HH + 256) : HH >= -128 ? (this.u8(208), this.u8(HH + 256)) : HH >= -32768 ? (this.u8(209), this.u16(HH + 65536)) : (this.u8(210), this.u32(HH >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, HH, !1), this.at += 8)
+      number(BB) {
+        Number.isInteger(BB) && BB >= -2147483648 && BB <= 4294967295 ? BB >= 0 ? BB < 128 ? this.u8(BB) : BB < 256 ? (this.u8(204), this.u8(BB)) : BB < 65536 ? (this.u8(205), this.u16(BB)) : (this.u8(206), this.u32(BB)) : BB >= -32 ? this.u8(BB + 256) : BB >= -128 ? (this.u8(208), this.u8(BB + 256)) : BB >= -32768 ? (this.u8(209), this.u16(BB + 65536)) : (this.u8(210), this.u32(BB >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, BB, !1), this.at += 8)
       }
-      bigint(HH) {
-        const BH = HH >= tH && HH <= zH;
-        if (!BH && (HH < 0n || HH > CH)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(BH ? 211 : 207), this.room(8), BH ? this.view.setBigInt64(this.at, HH, !1) : this.view.setBigUint64(this.at, HH, !1), this.at += 8
+      bigint(BB) {
+        const OB = BB >= jB && BB <= yB;
+        if (!OB && (BB < 0n || BB > JB)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(OB ? 211 : 207), this.room(8), OB ? this.view.setBigInt64(this.at, BB, !1) : this.view.setBigUint64(this.at, BB, !1), this.at += 8
       }
-      string(HH) {
-        const BH = hH.encode(HH);
-        this.head(BH.length, 217, 160, 218, 219), this.room(BH.length), this.buf.set(BH, this.at), this.at += BH.length
+      string(BB) {
+        const OB = oB.encode(BB);
+        this.head(OB.length, 217, 160, 218, 219), this.room(OB.length), this.buf.set(OB, this.at), this.at += OB.length
       }
-      head(HH, BH, LH, AH, rH) {
-        LH >= 0 && HH < (160 === LH ? 32 : 16) ? this.u8(LH | HH) : BH !== AH && HH < 256 ? (this.u8(BH), this.u8(HH)) : HH < 65536 ? (this.u8(AH), this.u16(HH)) : (this.u8(rH), this.u32(HH))
+      head(BB, OB, GB, YB, DB) {
+        GB >= 0 && BB < (160 === GB ? 32 : 16) ? this.u8(GB | BB) : OB !== YB && BB < 256 ? (this.u8(OB), this.u8(BB)) : BB < 65536 ? (this.u8(YB), this.u16(BB)) : (this.u8(DB), this.u32(BB))
       }
-      room(HH) {
-        if (this.at + HH <= this.buf.length) return;
-        let BH = 2 * this.buf.length;
-        for (; BH < this.at + HH;) BH *= 2;
-        const LH = new Uint8Array(BH);
-        LH.set(this.buf.subarray(0, this.at)), this.buf = LH, this.view = new DataView(LH.buffer)
+      room(BB) {
+        if (this.at + BB <= this.buf.length) return;
+        let OB = 2 * this.buf.length;
+        for (; OB < this.at + BB;) OB *= 2;
+        const GB = new Uint8Array(OB);
+        GB.set(this.buf.subarray(0, this.at)), this.buf = GB, this.view = new DataView(GB.buffer)
       }
-      u8(HH) {
-        this.room(1), this.buf[this.at++] = HH
+      u8(BB) {
+        this.room(1), this.buf[this.at++] = BB
       }
-      u16(HH) {
-        this.room(2), this.view.setUint16(this.at, HH, !1), this.at += 2
+      u16(BB) {
+        this.room(2), this.view.setUint16(this.at, BB, !1), this.at += 2
       }
-      u32(HH) {
-        this.room(4), this.view.setUint32(this.at, HH, !1), this.at += 4
+      u32(BB) {
+        this.room(4), this.view.setUint32(this.at, BB, !1), this.at += 4
       }
     }
   },
-  54546: (HH, BH, LH) => {
-    LH.r(BH), LH.d(BH, {
-      joinRoom: () => XH,
-      leaveHeldSeat: () => MH,
-      resumeRoom: () => YH
+  54057: (BB, OB, GB) => {
+    GB.r(OB), GB.d(OB, {
+      joinRoom: () => PB,
+      leaveHeldSeat: () => NB,
+      resumeRoom: () => lB
     });
-    var AH = LH(152),
-      rH = LH(1148),
-      SH = LH(37366),
-      hH = LH(41946),
-      tH = LH(5265),
-      zH = LH(42006),
-      CH = LH(42228);
-    const EH = Uint8Array.of(13, ...(0, hH.g)(AH.f));
-    async function XH(HH, BH) {
-      let LH = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var YB = GB(162),
+      DB = GB(1200),
+      QB = GB(37160),
+      oB = GB(41630),
+      jB = GB(5281),
+      yB = GB(41692),
+      JB = GB(41916);
+    const MB = Uint8Array.of(13, ...(0, oB.e)(YB.g));
+    async function PB(BB, OB) {
+      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await GH(HH, BH, LH)
-      } catch (rH) {
-        var AH;
-        const SH = await (null === (AH = BH.optionsAfterRefusal) || void 0 === AH ? void 0 : AH.call(BH, rH));
-        if (!SH) throw rH;
-        return GH(HH, {
-          ...BH,
-          joinOptions: SH
+        return await zB(BB, OB, GB)
+      } catch (DB) {
+        var YB;
+        const QB = await (null === (YB = OB.optionsAfterRefusal) || void 0 === YB ? void 0 : YB.call(OB, DB));
+        if (!QB) throw DB;
+        return zB(BB, {
+          ...OB,
+          joinOptions: QB
         }, {
-          ...LH,
+          ...GB,
           early: void 0
         })
       }
     }
-    async function GH(HH, BH, LH) {
-      var AH;
+    async function zB(BB, OB, GB) {
+      var YB;
       const {
-        signal: SH
-      } = LH, hH = () => (0, CH.h)(BH.endpoint, BH.roomName, BH.joinOptions, LH), {
-        early: tH
-      } = LH, zH = tH ? null !== (AH = await tH.take(SH)) && void 0 !== AH ? AH : await tH.reserveInstead(hH, SH) : await hH();
-      return (0, rH.t)(SH), WH(HH, BH.endpoint, zH, LH, !1)
+        signal: QB
+      } = GB, oB = () => (0, JB.i)(OB.endpoint, OB.roomName, OB.joinOptions, GB), {
+        early: jB
+      } = GB, yB = jB ? null !== (YB = await jB.take(QB)) && void 0 !== YB ? YB : await jB.reserveInstead(oB, QB) : await oB();
+      return (0, DB.r)(QB), ZB(BB, OB.endpoint, yB, GB, !1)
     }
-    async function YH(HH, BH, LH, AH) {
-      let SH = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const hH = await (0, CH.f)(BH, LH, AH, SH);
-      return (0, rH.t)(SH.signal), WH(HH, BH, hH, SH, !0)
-    }
-
-    function uH(HH, BH, LH) {
-      const AH = (0, CH.l)(HH, BH);
-      return LH.createSocket ? LH.createSocket(AH) : new WebSocket(AH)
+    async function lB(BB, OB, GB, YB) {
+      let QB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const oB = await (0, JB.g)(OB, GB, YB, QB);
+      return (0, DB.r)(QB.signal), ZB(BB, OB, oB, QB, !0)
     }
 
-    function QH(HH, BH, LH) {
-      var AH;
-      let rH = !1;
-      return (null !== (AH = HH.setTimer) && void 0 !== AH ? AH : (HH, BH) => {
-        setTimeout(HH, BH)
+    function pB(BB, OB, GB) {
+      const YB = (0, JB.k)(BB, OB);
+      return GB.createSocket ? GB.createSocket(YB) : new WebSocket(YB)
+    }
+
+    function qB(BB, OB, GB) {
+      var YB;
+      let DB = !1;
+      return (null !== (YB = BB.setTimer) && void 0 !== YB ? YB : (BB, OB) => {
+        setTimeout(BB, OB)
       })((() => {
-        rH || BH()
-      }), LH), () => {
-        rH = !0
+        DB || OB()
+      }), GB), () => {
+        DB = !0
       }
     }
-    async function WH(HH, BH, LH, AH, hH) {
+    async function ZB(BB, OB, GB, YB, oB) {
       const {
-        signal: CH
-      } = AH, XH = uH(BH, LH, AH);
-      let GH = !1,
-        YH = null,
-        WH = null;
-      const MH = [];
-      let xH = !1,
-        vH = !1;
-      const PH = HH => {
-        var BH;
-        vH = !0, null === (BH = WH) || void 0 === BH || BH.reject(new zH.d("the room socket closed before the resume", "closed", HH.code))
+        signal: JB
+      } = YB, PB = pB(OB, GB, YB);
+      let zB = !1,
+        lB = null,
+        ZB = null;
+      const NB = [];
+      let RB = !1,
+        WB = !1;
+      const AB = BB => {
+        var OB;
+        WB = !0, null === (OB = ZB) || void 0 === OB || OB.reject(new yB.d("the room socket closed before the resume", "closed", BB.code))
       };
-      hH && XH.addEventListener("close", PH);
-      const TH = (HH, BH) => {
-          var LH;
-          if (HH === (hH ? tH.C.Resumed : tH.C.Activated)) xH = !0, null === (LH = WH) || void 0 === LH || LH.resolve();
-          else if (!hH || HH !== tH.C.ResumeRefused && HH !== tH.C.Activated)
-            if (HH === tH.C.Error) {
-              var AH;
-              null === (AH = WH) || void 0 === AH || AH.reject(new zH.d(`the room refused the join (code ${BH})`, "roomError", BH))
+      oB && PB.addEventListener("close", AB);
+      const VB = (BB, OB) => {
+          var GB;
+          if (BB === (oB ? jB.E.Resumed : jB.E.Activated)) RB = !0, null === (GB = ZB) || void 0 === GB || GB.resolve();
+          else if (!oB || BB !== jB.E.ResumeRefused && BB !== jB.E.Activated)
+            if (BB === jB.E.Error) {
+              var YB;
+              null === (YB = ZB) || void 0 === YB || YB.reject(new yB.d(`the room refused the join (code ${OB})`, "roomError", OB))
             } else {
-              var rH;
-              null === (rH = WH) || void 0 === rH || rH.reject(new zH.d("the room socket closed before the join", "closed", BH, null, GH))
+              var DB;
+              null === (DB = ZB) || void 0 === DB || DB.reject(new yB.d("the room socket closed before the join", "closed", OB, null, zB))
             }
           else {
-            var SH;
-            null === (SH = WH) || void 0 === SH || SH.reject(new zH.o("the core refused the resume: it held no game"))
+            var QB;
+            null === (QB = ZB) || void 0 === QB || QB.reject(new yB.m("the core refused the resume: it held no game"))
           }
         },
-        UH = HH.onConnection(((HH, BH, LH) => {
-          null === YH ? MH.push([HH, BH, LH]) : HH === YH && TH(BH, LH)
+        SB = BB.onConnection(((BB, OB, GB) => {
+          null === lB ? NB.push([BB, OB, GB]) : BB === lB && VB(OB, GB)
         })),
-        VH = HH.attachSocket(XH);
-      if (null === VH) throw UH(), new zH.d("the core could not take the room socket", "attach");
-      var OH;
-      (YH = VH, hH) && (null === (OH = AH.onAttached) || void 0 === OH || OH.call(AH));
-      const bH = hH ? null : new SH.b((() => {
-        var BH, LH;
-        null === (BH = HH.flushNet) || void 0 === BH || BH.call(HH), null === (LH = WH) || void 0 === LH || LH.reject(new SH.c(GH ? "socket" : "socket_unopened"))
+        nB = BB.attachSocket(PB);
+      if (null === nB) throw SB(), new yB.d("the core could not take the room socket", "attach");
+      var UB;
+      (lB = nB, oB) && (null === (UB = YB.onAttached) || void 0 === UB || UB.call(YB));
+      const fB = oB ? null : new QB.c((() => {
+        var OB, GB;
+        null === (OB = BB.flushNet) || void 0 === OB || OB.call(BB), null === (GB = ZB) || void 0 === GB || GB.reject(new QB.d(zB ? "socket" : "socket_unopened"))
       }));
-      XH.addEventListener("open", (() => {
-        GH = !0, null === bH || void 0 === bH || bH.socketOpened()
+      PB.addEventListener("open", (() => {
+        zB = !0, null === fB || void 0 === fB || fB.socketOpened()
       }), {
         once: !0
       });
-      let kH = !1;
-      const mH = () => {
-        if (kH) return;
-        if (kH = !0, UH(), hH && (XH.removeEventListener("close", PH), !xH && !(null !== CH && void 0 !== CH && CH.aborted && (0, rH.g)(CH) instanceof zH.q))) return void(vH || HH.closeSocket(VH));
-        xH && HH.leaveRoom(VH) || HH.sendRaw(VH, zH.m) ? QH(AH, (() => {
-          HH.closeSocket(VH)
-        }), zH.f) : HH.closeSocket(VH)
+      let kB = !1;
+      const dB = () => {
+        if (kB) return;
+        if (kB = !0, SB(), oB && (PB.removeEventListener("close", AB), !RB && !(null !== JB && void 0 !== JB && JB.aborted && (0, DB.i)(JB) instanceof yB.o))) return void(WB || BB.closeSocket(nB));
+        RB && BB.leaveRoom(nB) || BB.sendRaw(nB, yB.h) ? qB(YB, (() => {
+          BB.closeSocket(nB)
+        }), yB.f) : BB.closeSocket(nB)
       };
       try {
-        await new Promise(((BH, LH) => {
-          const AH = () => {
-            var BH;
-            hH && (null === (BH = HH.flushNet) || void 0 === BH || BH.call(HH));
-            LH((0, rH.g)(CH))
+        await new Promise(((OB, GB) => {
+          const YB = () => {
+            var OB;
+            oB && (null === (OB = BB.flushNet) || void 0 === OB || OB.call(BB));
+            GB((0, DB.i)(JB))
           };
-          null === CH || void 0 === CH || CH.addEventListener("abort", AH, {
+          null === JB || void 0 === JB || JB.addEventListener("abort", YB, {
             once: !0
-          }), WH = {
+          }), ZB = {
             resolve: () => {
-              null === CH || void 0 === CH || CH.removeEventListener("abort", AH), BH()
+              null === JB || void 0 === JB || JB.removeEventListener("abort", YB), OB()
             },
-            reject: HH => {
-              null === CH || void 0 === CH || CH.removeEventListener("abort", AH), LH(HH)
+            reject: BB => {
+              null === JB || void 0 === JB || JB.removeEventListener("abort", YB), GB(BB)
             }
           };
-          for (const [HH, rH, SH] of MH.splice(0)) HH === YH && TH(rH, SH)
-        })), null === bH || void 0 === bH || bH.answered()
-      } catch (oH) {
-        throw mH(), oH
+          for (const [BB, DB, QB] of NB.splice(0)) BB === lB && VB(DB, QB)
+        })), null === fB || void 0 === fB || fB.answered()
+      } catch (KB) {
+        throw dB(), KB
       } finally {
-        null === bH || void 0 === bH || bH.stop()
+        null === fB || void 0 === fB || fB.stop()
       }
-      hH && XH.removeEventListener("close", PH);
+      oB && PB.removeEventListener("close", AB);
       return {
-        conn: VH,
-        seat: LH,
-        leave: mH,
+        conn: nB,
+        seat: GB,
+        leave: dB,
         detach: () => {
-          kH = !0, UH()
+          kB = !0, SB()
         },
-        endJoinAd: () => !kH && HH.sendRaw(VH, EH)
+        endJoinAd: () => !kB && BB.sendRaw(nB, MB)
       }
     }
-    async function MH(HH, BH, LH) {
-      let AH = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function NB(BB, OB, GB) {
+      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const rH = uH(HH, await (0, CH.f)(HH, BH, LH, AH), AH);
-        rH.binaryType = "arraybuffer", await new Promise((HH => {
-          const BH = QH(AH, (() => {
-            rH.close(), HH()
-          }), zH.f);
-          rH.addEventListener("open", (() => {
-            rH.send(zH.m)
-          })), rH.addEventListener("close", (() => {
-            BH(), HH()
+        const DB = pB(BB, await (0, JB.g)(BB, OB, GB, YB), YB);
+        DB.binaryType = "arraybuffer", await new Promise((BB => {
+          const OB = qB(YB, (() => {
+            DB.close(), BB()
+          }), yB.f);
+          DB.addEventListener("open", (() => {
+            DB.send(yB.h)
+          })), DB.addEventListener("close", (() => {
+            OB(), BB()
           }))
         }))
-      } catch (rH) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", rH)
+      } catch (DB) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", DB)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const HH in modules) Object.freeze(modules[HH]);
+for (const BB in modules) Object.freeze(modules[BB]);
